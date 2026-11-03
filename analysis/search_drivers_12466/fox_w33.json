@@ -1,0 +1,99 @@
+{
+ "fox_preserves_alternating_sum": true,
+ "fox_is_a_braid_rep": true,
+ "matrix_rep_matches_fox": true,
+ "invariant_alternating_forms_dim": 1,
+ "form_nondegenerate": true,
+ "sigma_is_a_transvection": true,
+ "a_vectors_as_colourings": {
+  "1": [
+   0,
+   0,
+   2,
+   2,
+   2,
+   2
+  ],
+  "2": [
+   0,
+   2,
+   2,
+   0,
+   0,
+   0
+  ],
+  "3": [
+   0,
+   0,
+   2,
+   2,
+   0,
+   0
+  ],
+  "4": [
+   0,
+   0,
+   0,
+   2,
+   2,
+   0
+  ],
+  "5": [
+   0,
+   0,
+   0,
+   0,
+   2,
+   2
+  ]
+ },
+ "path_commutation_matches": true,
+ "linear_similitude_exists": true,
+ "intertwines_each_generator_same_sign": {
+  "1": true,
+  "2": true,
+  "3": true,
+  "4": true,
+  "5": true
+ },
+ "intertwines_each_generator_inverse_sign": {
+  "1": false,
+  "2": false,
+  "3": false,
+  "4": false,
+  "5": false
+ },
+ "caps_map_to_L0": true,
+ "cap_colourings_mod_const": 9,
+ "plat_fox_nullity_eq_1_plus_d__and_jones_eq_d": {
+  "(True, True)": 150
+ },
+ "bad": [],
+ "general_strands_fox_vs_jones": {
+  "2": {
+   "tests": 60,
+   "agree": 60,
+   "dims": {
+    "0": 60
+   }
+  },
+  "4": {
+   "tests": 60,
+   "agree": 60,
+   "dims": {
+    "1": 19,
+    "0": 41
+   }
+  },
+  "8": {
+   "tests": 60,
+   "agree": 60,
+   "dims": {
+    "3": 13,
+    "1": 25,
+    "2": 17,
+    "0": 5
+   }
+  }
+ }
+}

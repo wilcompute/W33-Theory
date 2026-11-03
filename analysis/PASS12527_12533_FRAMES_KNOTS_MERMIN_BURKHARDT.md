@@ -1,7 +1,7 @@
-# Passes 12527–12533: orthonormal frames, knots, Mermin squares and the Burkhardt quartic
+# Passes 12527–12533: orthonormal frames, knots, tricolourings, parafermions, Mermin squares and the Burkhardt quartic
 
 Claude track. Producer: `analysis/w33_pass12527_to_12533_frames_knots_burkhardt.py`. Test: `tests/test_w33_pass12527_to_12533.py`. Drivers in `analysis/search_drivers_12466`: `frame_orbits.py`, `verify_frame_set.py`, `frame_family.py`, `knots_w33.py`, `knots_overlap.py`,
-`mermin_even.py`, `burkhardt_totals.py`, `tomography_subset.py`, `tomography_orbits.py`, `hyperoval_dfs.c`, `export_dfs.py`, `recheck_highs.py`. Continues `PASS12518_12525_HYPEROVAL_FLOOR_HESSE_DICTIONARY.md`.
+`mermin_even.py`, `burkhardt_totals.py`, `tomography_subset.py`, `tomography_orbits.py`, `hyperoval_dfs.c`, `export_dfs.py`, `recheck_highs.py`, `highs_control_q9.py`, `heavy_highs.py`, `fox_w33.py`, `fox_general_p.py`, `parafermion_w33.py`. Continues `PASS12518_12525_HYPEROVAL_FLOOR_HESSE_DICTIONARY.md`.
 
 Labels: **[E]** exact computation or proof, **[N]** numerical with a stated tolerance, **[I]** interpretation. Nothing here derives particles, forces or constants.
 
@@ -24,6 +24,8 @@ Work in Q(4,q) as Σ xᵢ² = 0, dual to W(3,q). The monomial group 2⁴:S₅ st
 | 11 | 112 | 84 | no |
 | 13 | **160** | 168 | **yes** |
 | 17 | 320 | 288 | no |
+| 19 | 560 | none recorded | |
+| 23 | 640 | none recorded | |
 
 `frame_family.py` scanned the monomial orbits that are themselves even, for primes to 23, and found some at each. There is no formula yet, and q = 13's improvement is a single data point. So frames are the right object at q = 5 and useful at q = 13, and **they are not the general "double-six" object I was looking for**: they miss the minima at q = 3, 7, 9.
 
@@ -82,15 +84,44 @@ So **a minimal even line set of W(3,3) = a six-coordinate S₆-symmetric present
 
 ## 12532: second solvers
 
-- **HiGHS** (`recheck_highs.py`) reproduces the star verdicts at q = 3 and 5.
-- **`hyperoval_dfs.c`,** a from-scratch exhaustive search with no solver code, reproduces them too, **including the exact solution counts** (1 at q = 3, 5 at q = 5). At q = 7 it had not finished a case in the time I gave it, so that is still open; status under `second_solver`.
-- A Mantel-based pruning bound I added made no difference to node counts at q = 5. It is sound and it does not help.
+- **HiGHS** (`recheck_highs.py`), an unrelated MILP solver: q = 3 and 5 reproduced; **q = 7, W = 38: all 24 star classes infeasible, 0 unknown (726 s); q = 9, W = 46: all 511 infeasible, 0 unknown (607 s).** Control: class 24380's optimum is exactly 48, proved in 1.6 s. The LP relaxation is trivial (11 in every class sampled), so this is not a Farkas certificate.
+- **Heavy cases with HiGHS** (`heavy_highs.py`, same case list): q = 3, 5 reproduced, and **q = 7, W = 38: all 34 infeasible**. q = 9 and q = 7, W = 40 are reported under `heavy_status`.
+- **`hyperoval_dfs.c`,** a from-scratch exhaustive search with no solver code, reproduces q = 3 and 5 **including the exact solution counts** (1 and 5). At q = 7 it finished no case in hours, so I stopped it. A Mantel-based pruning bound I added did not change node counts at q = 5. It is sound and it does not help.
+- **CaDiCaL** also stalled at q = 7.
 
-**So q = 7 and q = 9 still rest on CP-SAT alone**, except for the solver-free orbit count at q = 7.
+So the hyperoval floors at q = 7 and q = 9 now rest on **two unrelated solvers**. Neither produces a checked proof certificate.
+
+## 12533: W(3,3) points are Fox tricolourings of 6 points, and Z₃ parafermion monomials
+
+This is the most elementary reading of 12528, and it needs no topology.
+
+**Classical ingredients.** Przytycki: the number of Fox tricolourings of a link is 3|V(e^{iπ/3})|². Fradkin–Kadanoff: Z₃ parafermions, αᵢαⱼ = ωαⱼαᵢ for i < j. Hutter–Loss: parafermion braiding generates the qudit Clifford group and is not universal. Corpus: `tricolo`, `przytycki` and `fox color` have 0 hits, and `parafermion` has one, a May audit marking this as not computed.
+
+**[E] The dictionary** (`fox_w33.py`). Colour 6 strands by F₃. The crossing rule (a, b) → (b, 2b − a) preserves constants and the alternating sum, so it acts on
+
+> V = {c ∈ F₃⁶ : Σ(−1)ⁱcᵢ = 0} / ⟨(1,…,1)⟩, of dimension 4.
+
+On V: the rule is a B₆ representation with a **unique invariant alternating form up to scale**, which is non-degenerate, and each σᵢ is a transvection. A linear similitude V → F₃⁴ intertwines all five generators with the W(3,3) transvections T_{pᵢ}, with the same sign. The colourings with c₁ = c₂, c₃ = c₄, c₅ = c₆ map exactly onto the line L₀ of 12528.
+
+**The closed form (`parafermion_w33.py`).** With uᵢ = (−1)ⁱcᵢ,
+
+> ω(c, c′) = Σ_{i<j} (uᵢu′ⱼ − uⱼu′ᵢ),
+
+which is Fox-invariant with constants in its radical. This is the commutation rule of six parafermions. **[N]** With explicit Fradkin–Kadanoff matrices on 27 dims: gᵢgⱼ = ω^e gⱼgᵢ for i < j with one constant e; zero-charge monomials M_c = Π gᵢ^{uᵢ} commute with the total charge Q; commutators match the closed form; the constant colouring is a scalar on each 9-dim charge sector, so **"mod constants" is "fixed total charge"**; and the 81 classes are unitary and trace-orthonormal on a sector, a two-qutrit Pauli group.
+
+**The triangle [N].** The TL₆ generator Rᵢ = A + (√3/A)Πᵢ, with Πᵢ any eigenprojector of the neighbouring bilinear M(aᵢ), acts on monomials by the Fox rule (the inverse convention; the same mirror issue as Cui–Wang in 12520), for all 5 generators and all 3 eigenprojector choices. The Πᵢ satisfy TL. So:
+
+> **SU(2)₄ braid generators = Z₃ parafermion exchanges = Fox tricolouring moves, and W(3,3) points = colourings = Pauli operators.**
+
+Since the caps are L₀ and constants are always colourings, this proves the count directly: a colouring of a plat closure is a boundary colouring extending over both caps, so **#colourings = 3^(1 + dim(L₀ ∩ βL₀))**, with no Birman–Hilden or Lickorish–Millett needed. Through Przytycki this recovers |V| = √3^d. Tested on the diagram by independent arc linear algebra: 150/150 at 6 strands, and colourings versus Jones 60/60 at each of 2, 4, 8 strands.
+
+**[E] Other primes** (`fox_general_p.py`, p = 3, 5, 7, 11). The form is invariant and non-degenerate, the caps are isotropic, and #p-colourings = p^(1 + dim(L₀ ∩ βL₀)) on 120/120 words at each p. A control Lagrangian disagrees 41–54 times. So W(3,p) is the Fox p-colouring space of 6 points for each odd prime. The Jones link is special to p = 3, since at p = 5 the analogue would involve the Kauffman polynomial (Jones, Rong), which I did not test.
+
+**Honest scope.** The ingredients are classical, and this may be folklore among people who work on these invariants. I did not find it stated, and the join to W(3,3) and its 216 codewords is what is added. It is Clifford-only: braiding here is classically simulable and **not universal**. Nothing here shows that W(3,3) describes physical anyons.
 
 ## Heavy runs
 
-The non-hyperoval case at q = 9, W = 48 and q = 7, W = 40 is still open; status under `heavy_status` in the 12518 producer. Each case at q = 9 is taking over 20 minutes, so uniqueness among *all* minimal sets is not settled.
+The non-hyperoval case is reported under `heavy_status`. CP-SAT's chain was stopped after 2 of 42 cases in hours, and HiGHS replaced it. Uniqueness among *all* minimal sets is not settled until q = 9, W = 48 and q = 7, W = 40 are all INFEASIBLE.
 
 ## Sources
 
@@ -98,5 +129,8 @@ The non-hyperoval case at q = 9, W = 48 and q = 7, W = 40 is still open; status 
 - W. B. R. Lickorish, K. C. Millett, *Some evaluations of link polynomials*, Comment. Math. Helv. 61 (1986).
 - N. M. Dunfield, W. P. Thurston, *Finite covers of random 3-manifolds*, Invent. Math. 166 (2006), arXiv:math/0502567.
 - Jost, Lewark, *Signs of knot polynomial evaluations from a topological perspective*, arXiv:2601.16588.
+- J. H. Przytycki, *3-coloring and other elementary invariants of knots*, Banach Center Publ. 42 (1998).
+- A. Hutter, D. Loss, *Quantum computing with parafermions*, Phys. Rev. B 93 (2016), arXiv:1511.02704.
+- E. Fradkin, L. P. Kadanoff, Nucl. Phys. B 170 (1980).
 - Burkhardt quartic: arXiv:2308.15271; B. Hunt, *The geometry of some special arithmetic quotients*, not read in full.
 - Corpus: Pass 11869; Pass 12507–12526; `2026-11-02_route_minimum_cubic_tomography.md`.

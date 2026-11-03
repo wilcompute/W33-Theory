@@ -1,0 +1,38 @@
+{
+ "3": {
+  "form_invariant": true,
+  "nondegenerate": true,
+  "caps_isotropic": true,
+  "plat_tests": 120,
+  "plat_agree": 120,
+  "other_lagrangian_is_isotropic": true,
+  "control_mismatches": 54
+ },
+ "5": {
+  "form_invariant": true,
+  "nondegenerate": true,
+  "caps_isotropic": true,
+  "plat_tests": 120,
+  "plat_agree": 120,
+  "other_lagrangian_is_isotropic": true,
+  "control_mismatches": 50
+ },
+ "7": {
+  "form_invariant": true,
+  "nondegenerate": true,
+  "caps_isotropic": true,
+  "plat_tests": 120,
+  "plat_agree": 120,
+  "other_lagrangian_is_isotropic": true,
+  "control_mismatches": 41
+ },
+ "11": {
+  "form_invariant": true,
+  "nondegenerate": true,
+  "caps_isotropic": true,
+  "plat_tests": 120,
+  "plat_agree": 120,
+  "other_lagrangian_is_isotropic": true,
+  "control_mismatches": 54
+ }
+}

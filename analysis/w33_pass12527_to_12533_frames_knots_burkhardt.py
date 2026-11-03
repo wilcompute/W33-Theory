@@ -5,7 +5,8 @@
 12529 -- q = 2: contextual iff |S| = 2 mod 4; q = 4: contextuality is not specific to even sets.
 12530 -- the 216 totals are A5 root stars; F becomes const * sigma_4 under v_i -> e_0 - e_i, for all 216.
 12531 -- no tested subset of the 36 simplices is tight or detects the lines.
-12532 -- HiGHS and a from-scratch search reproduce q = 3, 5; q = 7, 9 still rest on CP-SAT.
+12532 -- HiGHS independently confirms the hyperoval floors at q = 7, 9; a from-scratch search reproduces q = 3, 5.
+12533 -- W(3,3) points = Fox tricolourings of 6 points = zero-charge Z_3 parafermion monomials; the TL6 generators act by the Fox rule.
 """
 
 import json
@@ -72,7 +73,26 @@ def main():
     dfs = (D / "dfs_controls.out").read_text()
     checks["12532: the from-scratch search reproduces q = 3, 5 with exact solution counts"] = "q3W8 DONE total_solutions 0" in dfs and "q3W10 DONE total_solutions 1" in dfs and "q5W18 DONE total_solutions 0" in dfs and "q5W20 DONE total_solutions 5" in dfs
     log7 = D / "dfs_q7_W38.log"
-    res["second_solver"] = dict(dfs_q7_W38_cases_finished=(sum(1 for x in log7.read_text().splitlines() if x.startswith("case")) if log7.exists() else None), highs_q7=load("recheck_highs_q7_W38_0_1.json") or "pending", q9="CP-SAT only")
+    res["second_solver"] = dict(dfs_q7_W38_cases_finished=(sum(1 for x in log7.read_text().splitlines() if x.startswith("case")) if log7.exists() else None), highs="see the 12532 checks", cadical_q7="stopped: no case finished")
+    h7a, h7b, h9, hc9 = load("recheck_highs_q7_W38_0_1.json"), load("recheck_highs_q7_W38_1_24.json"), load("recheck_highs_q9_W46_0_511.json"), load("highs_control_q9.json")
+    checks["12532: HiGHS: q = 7, W = 38 all 24 infeasible; q = 9, W = 46 all 511 infeasible; class 24380 has optimum 48"] = (
+        h7a["infeasible"] + h7b["infeasible"] == 24 and not h7a["unknown"] + h7b["unknown"] and h9["infeasible"] == 511 and not h9["unknown"] and not h9["feasible"] and hc9["class_24380_min_weight"] == 48 and hc9["class_24380_status"] == 0)
+    hh7 = load("heavy_highs_q7_W38.json"); res["heavy_highs"] = {f"q{q}_W{W}": (lambda r: "pending" if r is None else dict(cases=r["cases"], infeasible=r["infeasible"], unknown=r["unknown"], feasible=[f["weight"] for f in r["feasible"]]))(load(f"heavy_highs_q{q}_W{W}.json")) for q, W in ((7, 38), (7, 40), (9, 46), (9, 48))}
+    res["heavy_status"] = res["heavy_highs"]
+    checks["12532: HiGHS heavy cases: q = 7, W = 38 all 34 infeasible"] = hh7["infeasible"] == hh7["cases"] == 34 and not hh7["unknown"] and not hh7["feasible"]
+    fx, pf, fp = load("fox_w33.json"), load("parafermion_w33.json"), load("fox_general_p.json"); res.update(fox=fx, parafermion=pf, fox_general_p=fp)
+    checks["12533: Fox is a B6 rep on V, unique invariant form, non-degenerate, transvections; a similitude intertwines all 5 generators; caps map onto L0"] = (
+        fx["fox_preserves_alternating_sum"] and fx["fox_is_a_braid_rep"] and fx["invariant_alternating_forms_dim"] == 1 and fx["form_nondegenerate"] and fx["sigma_is_a_transvection"] and fx["linear_similitude_exists"]
+        and all(fx["intertwines_each_generator_same_sign"].values()) and fx["caps_map_to_L0"] and fx["cap_colourings_mod_const"] == 9)
+    checks["12533: diagram colourings = 3^(1 + d) and Jones = sqrt3^d on 150/150; colourings vs Jones 60/60 at 2, 4, 8 strands"] = (
+        fx["plat_fox_nullity_eq_1_plus_d__and_jones_eq_d"] == {"(True, True)": 150} and all(v["agree"] == v["tests"] == 60 for v in fx["general_strands_fox_vs_jones"].values()))
+    checks["12533: explicit parafermions: constant commutation exponent, charge-sector Pauli group of 81 trace-orthonormal classes, closed form matches"] = (
+        len(pf["g_i_g_j_constant_exponent_for_i_lt_j"]) == 1 and pf["closed_form_fox_invariant"] and pf["constants_in_radical"] and pf["zero_charge_monomials_commute_with_Q"] and pf["commutators_match_closed_form"]
+        and pf["sector_dims"] == [9, 9, 9] and pf["constant_colouring_is_scalar_on_a_sector"] and pf["81_classes_trace_orthonormal"] and pf["each_is_unitary_on_sector"])
+    checks["12533: the triangle: TL6 generators from bilinear eigenprojectors act by the (inverse) Fox rule, all 5 generators and all 3 projectors; TL holds"] = (
+        all(v == ["inverse"] * 3 for v in pf["TL_generator_acts_on_monomials_by"].values()) and pf["neighbouring_bilinear_eigenprojectors_satisfy_TL"])
+    checks["12533: p = 3, 5, 7, 11: form invariant, non-degenerate, caps isotropic, 120/120 colouring counts; control Lagrangian disagrees"] = all(
+        v["form_invariant"] and v["nondegenerate"] and v["caps_isotropic"] and v["plat_agree"] == v["plat_tests"] == 120 and v["other_lagrangian_is_isotropic"] and v["control_mismatches"] > 0 for v in fp.values())
     checks = {k: bool(v) for k, v in checks.items()}
     res["checks"] = checks
     res["all_checks_pass"] = all(checks.values())

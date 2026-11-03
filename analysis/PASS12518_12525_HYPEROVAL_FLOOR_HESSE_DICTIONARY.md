@@ -225,7 +225,7 @@ The q = 3 row is inside PSp(4,3) (in PGSp(4,3) the order doubles to 240 with the
 
 **Correction to Pass 12501.** "Stabiliser of order 480" was the stabiliser inside GL(2,9).2 only, which omits the similitude and Frobenius. The full stabiliser in PΓSp(4,9) has order 1920.
 
-**Second solver.** `recheck_cadical.py` uses CaDiCaL, a CDCL SAT solver sharing no code with CP-SAT. It reproduces the star verdicts at q = 3 and q = 5 (W = 8 and 18 UNSAT; W = 10 and 20 SAT in exactly one class, matching CP-SAT). At q = 7, W = 38 it **finished no case in several hours** under CPU contention, and I stopped it, so there is no second-solver result at q = 7 or q = 9. **It is not a proof certificate**, and the q = 9 theorem still rests on CP-SAT alone.
+**Second solver.** `recheck_cadical.py` uses CaDiCaL, a CDCL SAT solver sharing no code with CP-SAT. It reproduces the star verdicts at q = 3 and q = 5 (W = 8 and 18 UNSAT; W = 10 and 20 SAT in exactly one class, matching CP-SAT). At q = 7, W = 38 it **finished no case in several hours** under CPU contention, and I stopped it, so there is no second-solver result at q = 7 or q = 9. *(Later, Pass 12532: HiGHS confirms the hyperoval floors at q = 7 and q = 9.)* **It is not a proof certificate**, and the q = 9 theorem still rests on CP-SAT alone.
 
 **q = 9 uniqueness (computer proof by CP-SAT).** GAP's numbers predicted in advance that if the 48-set is unique up to symmetry, exactly one star class is feasible at W = 48, with (normal forms) × (sets per normal form) = 3,586,680 · 48 / 820 / 729 = 288. `classify_q9.py` found **510 classes INFEASIBLE, 0 unknown, and one feasible class with 288 normal forms and exactly 1 set each**, the same class 24380 as the positive control of 12518. So:
 

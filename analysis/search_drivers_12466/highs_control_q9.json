@@ -1,0 +1,72 @@
+{
+ "class_24380_min_weight": 48,
+ "class_24380_status": 0,
+ "seconds": 1.6,
+ "lp_relaxation_min_weight": [
+  {
+   "rep": 200,
+   "status": 0,
+   "lp_min": 11.0
+  },
+  {
+   "rep": 1580,
+   "status": 0,
+   "lp_min": 11.0
+  },
+  {
+   "rep": 6742,
+   "status": 0,
+   "lp_min": 11.0
+  },
+  {
+   "rep": 3562,
+   "status": 0,
+   "lp_min": 11.0
+  },
+  {
+   "rep": 2172,
+   "status": 0,
+   "lp_min": 11.0
+  },
+  {
+   "rep": 112,
+   "status": 0,
+   "lp_min": 11.0
+  },
+  {
+   "rep": 861,
+   "status": 0,
+   "lp_min": 11.0
+  },
+  {
+   "rep": 173,
+   "status": 0,
+   "lp_min": 11.0
+  },
+  {
+   "rep": 1127,
+   "status": 0,
+   "lp_min": 11.0
+  },
+  {
+   "rep": 2163,
+   "status": 0,
+   "lp_min": 11.0
+  },
+  {
+   "rep": 1079,
+   "status": 0,
+   "lp_min": 11.0
+  },
+  {
+   "rep": 1102,
+   "status": 0,
+   "lp_min": 11.0
+  },
+  {
+   "rep": 24380,
+   "status": 0,
+   "lp_min": 11.0
+  }
+ ]
+}

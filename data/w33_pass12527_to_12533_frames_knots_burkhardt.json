@@ -432,8 +432,8 @@
   },
   "larger_q_frame_status": {
     "19": 560,
-    "23": "pending",
-    "25": "pending",
+    "23": 640,
+    "25": 640,
     "29": "pending"
   },
   "knots": {
@@ -1144,21 +1144,225 @@
     }
   },
   "second_solver": {
-    "dfs_q7_W38_cases_finished": 0,
-    "highs_q7": {
-      "q": 7,
-      "W": 38,
-      "classes": 24,
-      "range": [
-        0,
-        1
-      ],
-      "infeasible": 1,
-      "feasible": [],
+    "dfs_q7_W38_cases_finished": 1,
+    "highs": "see the 12532 checks",
+    "cadical_q7": "stopped: no case finished"
+  },
+  "heavy_highs": {
+    "q7_W38": {
+      "cases": 34,
+      "infeasible": 34,
       "unknown": [],
-      "seconds": 26.6
+      "feasible": []
     },
-    "q9": "CP-SAT only"
+    "q7_W40": "pending",
+    "q9_W46": "pending",
+    "q9_W48": "pending"
+  },
+  "heavy_status": {
+    "q7_W38": {
+      "cases": 34,
+      "infeasible": 34,
+      "unknown": [],
+      "feasible": []
+    },
+    "q7_W40": "pending",
+    "q9_W46": "pending",
+    "q9_W48": "pending"
+  },
+  "fox": {
+    "fox_preserves_alternating_sum": true,
+    "fox_is_a_braid_rep": true,
+    "matrix_rep_matches_fox": true,
+    "invariant_alternating_forms_dim": 1,
+    "form_nondegenerate": true,
+    "sigma_is_a_transvection": true,
+    "a_vectors_as_colourings": {
+      "1": [
+        0,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      "2": [
+        0,
+        2,
+        2,
+        0,
+        0,
+        0
+      ],
+      "3": [
+        0,
+        0,
+        2,
+        2,
+        0,
+        0
+      ],
+      "4": [
+        0,
+        0,
+        0,
+        2,
+        2,
+        0
+      ],
+      "5": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        2
+      ]
+    },
+    "path_commutation_matches": true,
+    "linear_similitude_exists": true,
+    "intertwines_each_generator_same_sign": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true
+    },
+    "intertwines_each_generator_inverse_sign": {
+      "1": false,
+      "2": false,
+      "3": false,
+      "4": false,
+      "5": false
+    },
+    "caps_map_to_L0": true,
+    "cap_colourings_mod_const": 9,
+    "plat_fox_nullity_eq_1_plus_d__and_jones_eq_d": {
+      "(True, True)": 150
+    },
+    "bad": [],
+    "general_strands_fox_vs_jones": {
+      "2": {
+        "tests": 60,
+        "agree": 60,
+        "dims": {
+          "0": 60
+        }
+      },
+      "4": {
+        "tests": 60,
+        "agree": 60,
+        "dims": {
+          "1": 19,
+          "0": 41
+        }
+      },
+      "8": {
+        "tests": 60,
+        "agree": 60,
+        "dims": {
+          "3": 13,
+          "1": 25,
+          "2": 17,
+          "0": 5
+        }
+      }
+    }
+  },
+  "parafermion": {
+    "g_i_g_j_constant_exponent_for_i_lt_j": [
+      2
+    ],
+    "closed_form_fox_invariant": true,
+    "constants_in_radical": true,
+    "closed_form_chain_pattern": {
+      "1,2": 1,
+      "1,3": 0,
+      "1,4": 0,
+      "1,5": 0,
+      "2,3": 2,
+      "2,4": 0,
+      "2,5": 0,
+      "3,4": 2,
+      "3,5": 0,
+      "4,5": 2
+    },
+    "zero_charge_monomials_commute_with_Q": true,
+    "commutators_match_closed_form": true,
+    "sector_dims": [
+      9,
+      9,
+      9
+    ],
+    "constant_colouring_is_scalar_on_a_sector": true,
+    "81_classes_trace_orthonormal": true,
+    "each_is_unitary_on_sector": true,
+    "TL_generator_acts_on_monomials_by": {
+      "1": [
+        "inverse",
+        "inverse",
+        "inverse"
+      ],
+      "2": [
+        "inverse",
+        "inverse",
+        "inverse"
+      ],
+      "3": [
+        "inverse",
+        "inverse",
+        "inverse"
+      ],
+      "4": [
+        "inverse",
+        "inverse",
+        "inverse"
+      ],
+      "5": [
+        "inverse",
+        "inverse",
+        "inverse"
+      ]
+    },
+    "neighbouring_bilinear_eigenprojectors_satisfy_TL": true
+  },
+  "fox_general_p": {
+    "3": {
+      "form_invariant": true,
+      "nondegenerate": true,
+      "caps_isotropic": true,
+      "plat_tests": 120,
+      "plat_agree": 120,
+      "other_lagrangian_is_isotropic": true,
+      "control_mismatches": 54
+    },
+    "5": {
+      "form_invariant": true,
+      "nondegenerate": true,
+      "caps_isotropic": true,
+      "plat_tests": 120,
+      "plat_agree": 120,
+      "other_lagrangian_is_isotropic": true,
+      "control_mismatches": 50
+    },
+    "7": {
+      "form_invariant": true,
+      "nondegenerate": true,
+      "caps_isotropic": true,
+      "plat_tests": 120,
+      "plat_agree": 120,
+      "other_lagrangian_is_isotropic": true,
+      "control_mismatches": 41
+    },
+    "11": {
+      "form_invariant": true,
+      "nondegenerate": true,
+      "caps_isotropic": true,
+      "plat_tests": 120,
+      "plat_agree": 120,
+      "other_lagrangian_is_isotropic": true,
+      "control_mismatches": 54
+    }
   },
   "checks": {
     "12527: q = 5: the weight-2 shell has 20 points, line intersections 0 and 2, and is even in the separately built W(3,5)": true,
@@ -1177,7 +1381,14 @@
     "12530: F = const * sigma_4 under v_i -> e_0 - e_i for all 216 totals": true,
     "12531: negative within the tested subsets: no sample up to k = 12 and no proper orbit union is tight or detects the lines": true,
     "12532: HiGHS reproduces the star verdicts at q = 3, 5": true,
-    "12532: the from-scratch search reproduces q = 3, 5 with exact solution counts": true
+    "12532: the from-scratch search reproduces q = 3, 5 with exact solution counts": true,
+    "12532: HiGHS: q = 7, W = 38 all 24 infeasible; q = 9, W = 46 all 511 infeasible; class 24380 has optimum 48": true,
+    "12532: HiGHS heavy cases: q = 7, W = 38 all 34 infeasible": true,
+    "12533: Fox is a B6 rep on V, unique invariant form, non-degenerate, transvections; a similitude intertwines all 5 generators; caps map onto L0": true,
+    "12533: diagram colourings = 3^(1 + d) and Jones = sqrt3^d on 150/150; colourings vs Jones 60/60 at 2, 4, 8 strands": true,
+    "12533: explicit parafermions: constant commutation exponent, charge-sector Pauli group of 81 trace-orthonormal classes, closed form matches": true,
+    "12533: the triangle: TL6 generators from bilinear eigenprojectors act by the (inverse) Fox rule, all 5 generators and all 3 projectors; TL holds": true,
+    "12533: p = 3, 5, 7, 11: form invariant, non-degenerate, caps isotropic, 120/120 colouring counts; control Lagrangian disagrees": true
   },
   "all_checks_pass": true
 }
