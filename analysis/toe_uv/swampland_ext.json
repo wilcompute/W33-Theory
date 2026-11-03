@@ -1,0 +1,129 @@
+{
+ "extra_massless_bosons": [
+  {
+   "nb": 4,
+   "extra_massless_bosons": 0,
+   "m1_bound": 0.007646400022220202
+  },
+  {
+   "nb": 5,
+   "extra_massless_bosons": 1,
+   "m1_bound": 0.005293641934586392
+  },
+  {
+   "nb": 6,
+   "extra_massless_bosons": 2,
+   "m1_bound": 0.0028405528187044
+  },
+  {
+   "nb": 7,
+   "extra_massless_bosons": 3,
+   "massless_lightest": "AdS3 even at m1 = 0",
+   "m1_bound": null
+  },
+  {
+   "nb": 8,
+   "extra_massless_bosons": 4,
+   "massless_lightest": "AdS3 even at m1 = 0",
+   "m1_bound": null
+  }
+ ],
+ "minimal_Lambda_for_m1": [
+  {
+   "m1": 0.001,
+   "Lambda14_min": 0.0006536169502537134,
+   "ratio": 0.6536169502537134
+  },
+  {
+   "m1": 0.002,
+   "Lambda14_min": 0.0009695684482952136,
+   "ratio": 0.4847842241476068
+  },
+  {
+   "m1": 0.004,
+   "Lambda14_min": 0.0014564814144315064,
+   "ratio": 0.3641203536078766
+  },
+  {
+   "m1": 0.00765,
+   "Lambda14_min": 0.0022407632762419063,
+   "ratio": 0.2929102321884845
+  }
+ ],
+ "dark_dimension_bulk_nuR": [
+  {
+   "m_KK_eV": 0.1,
+   "R_um": 1.9729999999999999,
+   "m1_bound_meV": 7.646400024578741,
+   "sum_meV": 69.90452035323536
+  },
+  {
+   "m_KK_eV": 0.03,
+   "R_um": 6.576666666666667,
+   "m1_bound_meV": 7.658449292093659,
+   "sum_meV": 69.92636940793119
+  },
+  {
+   "m_KK_eV": 0.01,
+   "R_um": 19.73,
+   "m1_bound_meV": 7.135818034578689,
+   "sum_meV": 68.98792963988933
+  },
+  {
+   "m_KK_eV": 0.006,
+   "R_um": 32.88333333333333,
+   "m1_bound_meV": 6.282175616430982,
+   "sum_meV": 67.49830021520084
+  },
+  {
+   "m_KK_eV": 0.003,
+   "R_um": 65.76666666666667,
+   "m1_bound_meV": 5.015636511812864,
+   "sum_meV": 65.39858776738525
+  },
+  {
+   "m_KK_eV": 0.001,
+   "R_um": 197.3,
+   "m1_bound_meV": 3.2191334893889887,
+   "sum_meV": 62.686005302834594
+  },
+  {
+   "m_KK_eV": 0.0003,
+   "R_um": 657.6666666666667,
+   "m1_bound_meV": 1.5833785461868557,
+   "sum_meV": 60.53633947524858
+  }
+ ],
+ "dark_dimension_graviton_only": [
+  {
+   "m_KK_eV": 0.01,
+   "R_um": 19.73,
+   "min_density_at_m1_0": -30.84078896196569,
+   "AdS3_at_m1_0": true
+  },
+  {
+   "m_KK_eV": 0.006,
+   "R_um": 32.88333333333333,
+   "min_density_at_m1_0": -31.551083019984816,
+   "AdS3_at_m1_0": true
+  },
+  {
+   "m_KK_eV": 0.003,
+   "R_um": 65.76666666666667,
+   "min_density_at_m1_0": -31.894323185577782,
+   "AdS3_at_m1_0": true
+  },
+  {
+   "m_KK_eV": 0.001,
+   "R_um": 197.3,
+   "min_density_at_m1_0": -32.00657934147574,
+   "AdS3_at_m1_0": true
+  },
+  {
+   "m_KK_eV": 0.0003,
+   "R_um": 657.6666666666667,
+   "min_density_at_m1_0": -32.020062465699134,
+   "AdS3_at_m1_0": true
+  }
+ ]
+}

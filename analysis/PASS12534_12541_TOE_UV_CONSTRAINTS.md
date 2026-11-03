@@ -141,7 +141,21 @@ So the tension is real but depends strongly on what "the top mass" means. A fina
 
 So, conditional on the conjecture and with no additional light fermions, **at most 2 extra massless bosonic degrees of freedom are allowed**, i.e. at most one massless dark photon. Extra light fermions would offset this. Given a lightest neutrino mass, it also gives Λ¼ ≥ 0.65 m₁ at 1 meV, falling to 0.29 m₁ at 7.65 meV, so **a massive lightest neutrino requires Λ > 0**. That relation is in the earlier literature; it does not derive Λ.
 
-**Dark dimension.** `swampland_ext.py` adds a bulk graviton tower (5 dof per level) and a bulk right-handed tower (4 dof per flavour per level, masses approximated by √(mᵢ² + n²m_KK²)). See `swampland_ext.json`. Anchordoqui, Antoniadis and Cunat already noted that the neutrino tower offsets the graviton tower. Results are in the status section below.
+**Dark dimension.** `swampland_ext.py` adds a bulk graviton tower (5 dof per level) and a bulk right-handed tower (4 dof per flavour per level, masses approximated by √(mᵢ² + n²m_KK²)). Anchordoqui, Antoniadis and Cunat already noted that the neutrino tower offsets the graviton tower. The numbers here:
+
+| m_KK (eV) | R (μm) | m₁ bound (meV) | Σm_ν bound (meV) |
+|---|---|---|---|
+| 0.1 | 2.0 | 7.65 | 69.9 |
+| 0.03 | 6.6 | 7.66 | 69.9 |
+| 0.01 | 20 | 7.14 | 69.0 |
+| 0.006 | 33 | 6.28 | 67.5 |
+| 0.003 | 66 | 5.02 | 65.4 |
+| 0.001 | 197 | 3.22 | 62.7 |
+| 0.0003 | 658 | 1.58 | 60.5 |
+
+- **With right-handed neutrinos in the bulk**, the conjecture and the dark dimension are compatible. For R up to about 7 μm, which covers the 0.1 to 10 μm range usually quoted, the bound is unchanged. It tightens only at radii beyond existing short-range gravity limits.
+- **With the graviton tower alone** (right-handed neutrinos on the brane), there is an AdS₃ at m₁ = 0 for every m_KK tested. The sign is what matters, not the magnitude: the size of the negative density comes from short circles and depends on my cut of 60 KK levels and my grid, so do not read anything into it. So **under this conjecture a dark dimension needs bulk fermions**, which agrees with Anchordoqui et al.
+- The KK masses are an approximation, a true bulk spectrum is the solution of a non-algebraic equation, and I ignored the radion and graviphoton zero modes. So this is an estimate, not a precision bound.
 
 ## How to kill all of this
 

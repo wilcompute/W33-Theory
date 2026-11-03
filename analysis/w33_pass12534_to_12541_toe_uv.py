@@ -63,6 +63,9 @@ def main():
         ex = load("swampland_ext.json"); res["swampland_ext"] = ex
         r_ = {x["nb"]: x for x in ex["extra_massless_bosons"]}
         checks["12539: extra massless bosons: bounds 7.65, 5.29, 2.84 meV for 0, 1, 2; AdS3 at m1 = 0 for 3 or more"] = abs(r_[4]["m1_bound"] * 1e3 - 7.65) < 0.02 and abs(r_[5]["m1_bound"] * 1e3 - 5.29) < 0.02 and abs(r_[6]["m1_bound"] * 1e3 - 2.84) < 0.02 and r_[7]["m1_bound"] is None and r_[8]["m1_bound"] is None
+        dd = {round(x["m_KK_eV"], 4): x for x in ex["dark_dimension_bulk_nuR"]}
+        checks["12539: bulk right-handed tower leaves the m1 bound near 7.65 meV for m_KK >= 0.03 eV and tightens it below that; graviton tower alone has AdS3 at m1 = 0 at every m_KK"] = (
+            abs(dd[0.1]["m1_bound_meV"] - 7.65) < 0.05 and abs(dd[0.03]["m1_bound_meV"] - 7.65) < 0.05 and dd[0.001]["m1_bound_meV"] < dd[0.01]["m1_bound_meV"] < 7.65 and all(x["AdS3_at_m1_0"] for x in ex["dark_dimension_graviton_only"]))
     checks = {x: bool(v) for x, v in checks.items()}
     res["checks"] = checks
     res["all_checks_pass"] = all(checks.values())
