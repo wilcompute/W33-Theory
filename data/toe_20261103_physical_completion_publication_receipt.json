@@ -1,0 +1,134 @@
+{
+  "status": "PASS_PUBLISHED_PHYSICS_PACKET_AND_MASTER_SYNC_VERIFICATION",
+  "utc": "2026-11-03T17:22:48.744254+00:00",
+  "science_commit": "aae4f41f5dcf15398f6ac5d7eae2fad9a2fd35a4",
+  "integration_parent": "b5b4db003ef31b2cf7529c95b96251855435ad2f",
+  "software": {
+    "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26340-SP0",
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0",
+    "matplotlib": "3.10.8",
+    "pytest": "9.0.3"
+  },
+  "local_master_equals_GitHub_master_at_verification": true,
+  "published_blob_sha256": {
+    "analysis/toe_20261103_supergravity_vacuum_completion.py": "a0a77554fb23b2f1963549fe2dacf663eea111c3a073df7dac66a8633359e04b",
+    "data/toe_20261103_supergravity_vacuum_completion.json": "b0b5e42c26e9c47ba8a9985153bcb43985c174115beb2fb446daf80cbda569dd",
+    "analysis/toe_20261103_dark_radiative_stability.py": "e56459920038902b640eab0a0b7f1d25805862b88619bc8ebdcd8f2ebe4ffde6",
+    "data/toe_20261103_dark_radiative_stability.json": "964bcc09874366bc8ad7e7d8175109d4a723c87f7569b8ec32aa47336d84d76d",
+    "analysis/toe_20261103_chiral_mirror_benchmark.py": "576a5564fcec8a9e3b618ada6d3d8f404bfb1581c5771820edf715dfc482d2ee",
+    "data/toe_20261103_chiral_mirror_benchmark.json": "288327a2dceb1017bf46afd5652e45e6fec28c178bdb9818c4b5973c8f4d4d73",
+    "analysis/toe_20261103_sterile_anomaly_operators.py": "767a1c690c0212416f769d93d64d1195325c94ba168f4dbf3ec47bd1d4454218",
+    "data/toe_20261103_sterile_anomaly_operators.json": "1971b03f3f07c5b25c916ce9c39b866539924cf491f60b8eba6cef2e6054085d",
+    "analysis/toe_20261103_gravity_entanglement_models.py": "4bdf962ddc0a69503528e749fb0121dc76150250e3c21fa4d55bddbd2087d7ff",
+    "data/toe_20261103_gravity_entanglement_models.json": "20c2b946469fa2610eedde86003f47a7b92de178d024b3aa9d864e6146044931",
+    "analysis/toe_20261103_abelian_uv_matching.py": "9341ffe673e8c2bb9254a0ce428e32e4e6191131f46349d69b8e91ce27eb38fe",
+    "data/toe_20261103_abelian_uv_matching.json": "6af8c65966da8b3c479e2d232c434b0bd80855d137fd8a1b703fc61289aa053f",
+    "analysis/toe_20261103_physical_completion_validation.py": "106818c231c611a346cdcc33bcf61ddb428753934298a7b373d91d812ff875eb",
+    "data/toe_20261103_physical_completion_validation.json": "0b4593f968d19d43be0ec802c7550c6e0408e3064012fe8535ed78b8c6342b84",
+    "tests/test_toe_20261103_physical_completion.py": "d31e6b1794a600d9114c903eaef8968defd1a98ad58a424940c0f6f412224fc3",
+    "analysis/2026-11-03_toe_physical_completion.md": "b42def8973d8f7d80372f043b5a00eb817713a2ab0bc2bf648de7e59c6811d66",
+    "analysis/toe_20261103_server_physics_controls.js": "07573515523fc875864d948d00a04ec1e7fc3dbd5ca396b080f01baf55561375",
+    "data/toe_20261103_server_physics_controls.json": "2104c40427103a340f309497371de0f352f03c70a1a5aae624e138ee240274bd",
+    "analysis/toe_20261103_physical_completion_figure.py": "f4c0b5fd40b4c268b1fdfe385685930e830de1a93ce0ecdef08afbbb04130930",
+    "artifacts/toe_20261103_physical_completion.png": "40b4b8c4ba5c07349c539333aa246ce1c5aa56d7ab411c36710c37167f85ad6e",
+    "artifacts/toe_20261103_physical_completion.svg": "b1045158f45588d6776abd0ac2a35047ce7e6e8b58b4824ea781785cbee1274d",
+    "RESULTS_INDEX.md": "ce728ad99302801658818b8f7ffdb1bbe7b54073baca556a59eedd9ae1fac160",
+    "TOPICAL_ALIASES.md": "6b0d982f8f41ea83a39b8dc20ffe3506ad3a6be06ee6485e0ea7d941de7b6bba",
+    "data/toe_20261103_physical_completion_guard_audit.json": "6cc588a22d7eaf319029bf0a357cc614a4d05bb1a715af128ea6ed5ca2dce983",
+    "data/toe_20261103_physical_completion_publication_manifest.json": "c809ec61f144fc24e93e59c73257e496592f8f726efbfdbb8b560e82766de4b7"
+  },
+  "all_owned_scientific_work_matches_published_blobs": true,
+  "parent_science_artifacts_preserved": 50,
+  "incoming_science_files_preserved": 105,
+  "protected_unrelated_files_preserved": 9,
+  "frozen_input_hashes_preserved": true,
+  "actual_pytest_stdout": "....................................                                     [100%]\n36 passed in 17.69s\n",
+  "all_six_producers_exit_zero": true,
+  "independent_server": {
+    "status": "PASS_INDEPENDENT_SERVER_PHYSICS_CONTROLS",
+    "sterile_charge_box": 200,
+    "sterile_integer_solutions": [
+      "-15,12,12",
+      "-18,10,17",
+      "3,3,3"
+    ],
+    "bounded_enumeration_is_not_the_global_proof": true,
+    "mirror_integer_velocity_numerator": [
+      [
+        25,
+        0,
+        12,
+        16
+      ],
+      [
+        0,
+        25,
+        16,
+        -12
+      ],
+      [
+        12,
+        16,
+        25,
+        0
+      ],
+      [
+        16,
+        -12,
+        0,
+        25
+      ]
+    ],
+    "mirror_primitive_minors": [
+      5,
+      4,
+      -3,
+      -3,
+      -4,
+      -5
+    ],
+    "mirror_characteristic_identity": "U K U=225 K, V=U/15",
+    "independent_Dovekie_negative_branch_CW_mass_cap_eV": 0.01764947061571905,
+    "PPT_trace_moment_checks": 24,
+    "scope": "Independent V8 server arithmetic, with no Python producer imports. It corroborates the declared benchmarks; no complete TOE or empirical discovery."
+  },
+  "final_configured_guard_exit_codes": {
+    "stale-boundaries": 0,
+    "shifted-adjacency-descendants": 0,
+    "tag-540-check": 1,
+    "pass-namespace-collision-guard": 1,
+    "s-min-formula-guard": 0,
+    "topical-aliases": 0,
+    "certificate-digests": 0,
+    "novelty-claims": 0,
+    "rediscovery": 0,
+    "search-power": 0,
+    "guard-selftests": 0,
+    "regex-deadends": 0,
+    "retraction-propagation": 0,
+    "stdlib-shadow": 0,
+    "heredoc-regex": 0,
+    "cert-prose-vs-data": 0,
+    "convention-fixed-form": 0,
+    "key-nearmiss": 124,
+    "certificate-rediscovery": 0,
+    "order-coincidence": 0,
+    "spectral-overreach": 0,
+    "hardcoded-keys": 0,
+    "constant-claims": 0
+  },
+  "earlier_guard_run_count": 2,
+  "guard_candidates": {
+    "certificate_branch_2": "Read the actual pass4107 router certificate: branches0..3 label router IDs and parallel SWAP cells. The present branch2 labels a standard gaugino branch of the declared Sp theory. No novelty is claimed for the label2.",
+    "alpha_30_100": "The checker associates the actual source loop Mp in[10,30,100] with a nearby alpha variable. The code sets alpha=1/Mp^2, so its values are1/100,1/900,1/10000; it asserts no alpha=30 or100 result. The Planck masses are supplied benchmark inputs, not novelty claims.",
+    "guard_scope": "20 of23 configured entries exited0. tag-540-check and namespace schema fail on inherited corpus/index material; key-nearmiss exceeded90seconds. Earlier stale-boundaries/topical timeouts are retained in earlier_runs; their final executions passed."
+  },
+  "publication_repair": "The first cached diff whitespace check caught trailing spaces in Matplotlib SVG path lines before any science commit. The exporter now normalizes SVG trailing whitespace; no mathematical model changed. Incoming parallel commit b5b4db003 was reviewed and retained before publication.",
+  "figure": "PNG visually inspected; normalized SVG parses as XML with no trailing whitespace. PNG re-export was byte-identical after the SVG whitespace repair.",
+  "commit_hook_note": "Configured guard entries were run directly and their failures/timeouts retained. Existing Windows Bash/CMD hook launcher is unreliable; normal commits/pushes were used without --no-verify.",
+  "limits": "No single UV action, observed positive vacuum energy, derived mass scales,4D SM regulator or solved TOE. No completed whole-week/PDF coverage claim. Local/external sources credited; broad search timeouts not treated as absence proofs."
+}
