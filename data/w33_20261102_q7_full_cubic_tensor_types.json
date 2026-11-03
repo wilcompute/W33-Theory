@@ -1,0 +1,49 @@
+{
+  "status": "PASS_FULL_Q7_CUBIC_TENSOR_TYPE_RECONSTRUCTION",
+  "q": 7,
+  "point_count": 400,
+  "full_route_orbit": 720300,
+  "distinct_point_triple_total": 10586800,
+  "distinct_triple_orbit_types": {
+    "line": {
+      "count": 22400,
+      "moment": "93/28",
+      "float": 3.3214285714285716,
+      "symmetry_stabilizer_order": 6174
+    },
+    "two_edges": {
+      "count": 548800,
+      "moment": "-117/343",
+      "float": -0.34110787172011664,
+      "symmetry_stabilizer_order": 252
+    },
+    "one_edge": {
+      "count": 3292800,
+      "moment": "57/1372",
+      "float": 0.04154518950437318,
+      "symmetry_stabilizer_order": 42
+    },
+    "nonisotropic_line": {
+      "count": 137200,
+      "moment": "-142/343",
+      "float": -0.4139941690962099,
+      "symmetry_stabilizer_order": 1008
+    },
+    "independent": {
+      "count": 6585600,
+      "moment": "1/196",
+      "float": 0.00510204081632653,
+      "symmetry_stabilizer_order": 21
+    }
+  },
+  "global_weighted_cubic_sum": "800",
+  "global_cubic_sum_expected_from_centering": "800",
+  "all_distinct_index_tensor_entries_specified_by_five_orbit_types": true,
+  "coincident_triple_moment": "6",
+  "two_coincident_adjacent": "9/14",
+  "two_coincident_nonadjacent": "-6/49",
+  "line_moment_distinct_from_all_nonlines": true,
+  "line_reconstruction": "For DISTINCT a,b,c, T_abc=93/28 iff all three lie on an isotropic W(3,7) line.",
+  "orbit_transitivity_basis": "Witt symplectic extension lemma; for independent nonorthogonal triples at q=7 odd relabeling flips the square class of the product of pairings because -1 is nonsquare in GF7. Other edge-incidence classes transport by matching pairings/scalings. Projectively dependent triples lie on isotropic or nonisotropic lines; line stabilizers act as PGL2(7).",
+  "caveats": "Five-orbit transitivity argument assumes full PSp4(7) automorphism action, not only a random walk. 720300 full line-support orbit enumerated exactly. Not a field-theory or physical dynamics result."
+}

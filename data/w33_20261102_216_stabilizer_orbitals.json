@@ -1,0 +1,109 @@
+{
+  "group_order": 25920,
+  "route_orbit_size": 216,
+  "stabilizer_size": 120,
+  "pair_orbital_rank": 10,
+  "stabilizer_orbits": [
+    {
+      "size": 20,
+      "dots": [
+        4
+      ],
+      "squared_dots": [
+        16
+      ]
+    },
+    {
+      "size": 20,
+      "dots": [
+        4
+      ],
+      "squared_dots": [
+        16
+      ]
+    },
+    {
+      "size": 60,
+      "dots": [
+        -4
+      ],
+      "squared_dots": [
+        16
+      ]
+    },
+    {
+      "size": 5,
+      "dots": [
+        -8
+      ],
+      "squared_dots": [
+        64
+      ]
+    },
+    {
+      "size": 30,
+      "dots": [
+        8
+      ],
+      "squared_dots": [
+        64
+      ]
+    },
+    {
+      "size": 30,
+      "dots": [
+        -8
+      ],
+      "squared_dots": [
+        64
+      ]
+    },
+    {
+      "size": 30,
+      "dots": [
+        -8
+      ],
+      "squared_dots": [
+        64
+      ]
+    },
+    {
+      "size": 10,
+      "dots": [
+        16
+      ],
+      "squared_dots": [
+        256
+      ]
+    },
+    {
+      "size": 10,
+      "dots": [
+        16
+      ],
+      "squared_dots": [
+        256
+      ]
+    },
+    {
+      "size": 1,
+      "dots": [
+        40
+      ],
+      "squared_dots": [
+        1600
+      ]
+    }
+  ],
+  "squared_gram_distinct_eigenvalues": {
+    "0": 15,
+    "576": 15,
+    "768": 81,
+    "2304": 80,
+    "3168": 24,
+    "14400": 1
+  },
+  "rank_six_multiplicity_free": false,
+  "blind_15D_eigenspace_irreducible_under_PSp43": false,
+  "scope": "if orbital rank 6, full complex permutation algebra is commutative and eigenmodules irreducible; no theorem about 99D physical unmeasured state operators or optical decoherence"
+}

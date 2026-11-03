@@ -1,0 +1,122 @@
+{
+  "q7_cubic": {
+    "q7_exact_single_coordinate_cubic": 6,
+    "q5_exact_single_coordinate_cubic": 120,
+    "q3_single_coordinate_cubic": 0,
+    "seed_distinct_sampled": 1516,
+    "triple_examples": {
+      "collinear": {
+        "index": [
+          0,
+          1,
+          2
+        ],
+        "nonuniform_walk_mean": 6.892367906066537,
+        "nonuniform_walk_sd": 18.157232402604187
+      },
+      "two_edges": {
+        "index": [
+          0,
+          1,
+          57
+        ],
+        "nonuniform_walk_mean": 0.913894324853229,
+        "nonuniform_walk_sd": 18.33170189119331
+      },
+      "zero_edge_nonisotropic_line": {
+        "index": [
+          0,
+          8,
+          9
+        ],
+        "nonuniform_walk_mean": -0.17221135029354206,
+        "nonuniform_walk_sd": 15.539158628539838
+      }
+    },
+    "scope": "exact marginal cubics; triple probes are correlated/nonuniform random walks, NOT full q7 cubic census"
+  },
+  "albert": {
+    "dimension": 27,
+    "reducible_control": "N(a,b,c,x)=a*(b*c-x.x)",
+    "control_adjoint_identity_tests": 12,
+    "basepoint": [
+      1,
+      1,
+      1
+    ],
+    "basepoint_trace_form": "diag(1,1,1,2*I_24)",
+    "attempted_deformation": "N_lambda=a*(b*c-x.x)+lambda*C_route(x)",
+    "lambda_test": 2,
+    "zero_scalar_input_x_squared": 1260,
+    "iteration_a_component": -1058158080000,
+    "expected_a_component": 0,
+    "forbidden_nonzero_lambda_for_this_trace_form": true,
+    "scope": "reducible degree-three cubic norm exists, but naive addition of route cubic breaks adjoint identity; DOES NOT exclude exceptional 27D alternatives"
+  },
+  "continuum_cover": {
+    "bridge_edge": [
+      0,
+      1
+    ],
+    "cover_family": [
+      {
+        "layers": 3,
+        "vertices": 120,
+        "first_gap": 0.0053054717606036365,
+        "exact_analytic_rayleigh_upper_bound": 0.0062499999999999995,
+        "connected": true
+      },
+      {
+        "layers": 5,
+        "vertices": 200,
+        "first_gap": 0.0024261372876503307,
+        "exact_analytic_rayleigh_upper_bound": 0.0028790958567710525,
+        "connected": true
+      },
+      {
+        "layers": 9,
+        "vertices": 360,
+        "first_gap": 0.0008181027396050874,
+        "exact_analytic_rayleigh_upper_bound": 0.0009748148203375916,
+        "connected": true
+      },
+      {
+        "layers": 15,
+        "vertices": 600,
+        "first_gap": 0.000301921306392469,
+        "exact_analytic_rayleigh_upper_bound": 0.0003602272598224964,
+        "connected": true
+      }
+    ],
+    "derived_bound": "lambda_2(normalized L_m) <= (2-2cos(2pi/m))/480 = O(m^-2)",
+    "scope": "a connected artificial cyclic voltage cover of W33, not a 3+1D continuum or Lorentz invariant"
+  },
+  "echo": {
+    "trials_per_noise": 12,
+    "reproducible_seed": 20261102,
+    "results": [
+      {
+        "diagonal_noise_sigma_over_J": 0.0,
+        "mean_entanglement_fidelity": 1.0,
+        "min_entanglement_fidelity": 1.0
+      },
+      {
+        "diagonal_noise_sigma_over_J": 0.01,
+        "mean_entanglement_fidelity": 0.9994952233111446,
+        "min_entanglement_fidelity": 0.9990986227245966
+      },
+      {
+        "diagonal_noise_sigma_over_J": 0.05,
+        "mean_entanglement_fidelity": 0.9867718418115645,
+        "min_entanglement_fidelity": 0.9830566303090356
+      },
+      {
+        "diagonal_noise_sigma_over_J": 0.1,
+        "mean_entanglement_fidelity": 0.954868526727644,
+        "min_entanglement_fidelity": 0.9330116675036507
+      }
+    ],
+    "scope": "one-particle 40-mode static Gaussian onsite disorder; not genuine hardware or gravitational dynamics"
+  },
+  "status": "PASS_FOUR_INDEPENDENT_FRONTIERS_WITH_BOUNDED_SCOPE"
+}

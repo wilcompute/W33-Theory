@@ -1,0 +1,20 @@
+{
+  "group_generators": 8,
+  "stabilizer_orbital_rank": 10,
+  "blind_module_dimension": 15,
+  "complex_irreducibility_from_numeric_commutant": true,
+  "commutant_numerical_dimension": 1,
+  "constraint_rank": 224,
+  "smallest_singular_values": [
+    2.593917014324593,
+    2.593917014324587,
+    2.5328093907263955,
+    2.5328093907263938,
+    2.0171253033104173,
+    1.8132240861748856,
+    1.8132240861748843,
+    1.5894937200885357e-15
+  ],
+  "numerical_threshold": 1e-08,
+  "scope": "high-confidence floating matrix linear-algebra certificate; exact rational modular proof still required for formal theorem"
+}

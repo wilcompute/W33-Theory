@@ -1,0 +1,31 @@
+{
+  "status": "PASS_EXACT_ABSOLUTE_IRREDUCIBILITY",
+  "group_order": 25920,
+  "module_dimension": 15,
+  "field_checks": [
+    {
+      "prime": 101,
+      "modular_nullity_of_K": 15,
+      "commutant_matrix_shape": [
+        1800,
+        225
+      ],
+      "centralizer_rank_mod_prime": 224,
+      "centralizer_dimension_mod_prime": 1,
+      "absolutely_irreducible_certified": true
+    },
+    {
+      "prime": 103,
+      "modular_nullity_of_K": 15,
+      "commutant_matrix_shape": [
+        1800,
+        225
+      ],
+      "centralizer_rank_mod_prime": 224,
+      "centralizer_dimension_mod_prime": 1,
+      "absolutely_irreducible_certified": true
+    }
+  ],
+  "logic": "Kernel of exact K (rank201), induced transvection permutations; solve X R_g=R_g X over F_p. Rank224 of 225 constraints leaves scalars only. Because p does not divide |G| and rational kernel dimension agrees, a 1D modular commutant bounds complex commutant dimension by 1.",
+  "scope": "irreducible outcome-kernel PSp(4,3) representation; does not imply POVM informational completeness or physical protection"
+}

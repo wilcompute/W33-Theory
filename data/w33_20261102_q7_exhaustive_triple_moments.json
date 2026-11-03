@@ -1,0 +1,67 @@
+{
+  "status": "PASS_FULL_ORBIT",
+  "q": 7,
+  "orbit_supports": 720300,
+  "expected_full_orbit": 720300,
+  "exact_exhaustive_for_generated_suborbit": true,
+  "run_seconds": 194.654,
+  "seed_40_lines": 40,
+  "point_triples": {
+    "line": {
+      "points": [
+        0,
+        1,
+        2
+      ],
+      "integer_sum": 2392425,
+      "orbit_average_fraction": "93/28",
+      "orbit_average_float": 3.3214285714285716,
+      "number_of_graph_edges": 3
+    },
+    "two_edges": {
+      "points": [
+        0,
+        1,
+        57
+      ],
+      "integer_sum": -245700,
+      "orbit_average_fraction": "-117/343",
+      "orbit_average_float": -0.34110787172011664,
+      "number_of_graph_edges": 2
+    },
+    "nonisotropic_line": {
+      "points": [
+        0,
+        8,
+        9
+      ],
+      "integer_sum": -298200,
+      "orbit_average_fraction": "-142/343",
+      "orbit_average_float": -0.4139941690962099,
+      "number_of_graph_edges": 0
+    },
+    "independent": {
+      "points": [
+        0,
+        8,
+        16
+      ],
+      "integer_sum": 3675,
+      "orbit_average_fraction": "1/196",
+      "orbit_average_float": 0.00510204081632653,
+      "number_of_graph_edges": 0
+    },
+    "one_edge": {
+      "points": [
+        0,
+        1,
+        106
+      ],
+      "integer_sum": 29925,
+      "orbit_average_fraction": "57/1372",
+      "orbit_average_float": 0.04154518950437318,
+      "number_of_graph_edges": 1
+    }
+  },
+  "scope": "exact moment of enumerated 40-line PSp transvection orbit, not all 400-choose-3 tensor entries"
+}

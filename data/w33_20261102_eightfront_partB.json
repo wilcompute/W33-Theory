@@ -1,0 +1,107 @@
+{
+  "optical_noise": {
+    "scenarios": [
+      {
+        "label": "ideal",
+        "per_active_two_rail_transmission": 1.0,
+        "detector_efficiency": 1.0,
+        "detector_dark_click_probability_per_output_per_shot": 0.0,
+        "angle_sigma": 0.0,
+        "phase_sigma": 0.0,
+        "extra_crosstalk_sigma": 0.0,
+        "n_trials": 3,
+        "mean_single_photon_survival": 0.9999999999999996,
+        "worst_case_single_photon_survival": 0.999999999999998,
+        "mean_conditional_total_variation": 1.0907460353200848e-15,
+        "max_conditional_total_variation": 1.6126423113549393e-15,
+        "mean_expected_detector_clicks_per_shot": 0.9999999999999996
+      },
+      {
+        "label": "loss_only",
+        "per_active_two_rail_transmission": 0.999,
+        "detector_efficiency": 0.85,
+        "detector_dark_click_probability_per_output_per_shot": 0.0,
+        "angle_sigma": 0.0,
+        "phase_sigma": 0.0,
+        "extra_crosstalk_sigma": 0.0,
+        "n_trials": 3,
+        "mean_single_photon_survival": 0.8886627672773301,
+        "worst_case_single_photon_survival": 0.8680940333774559,
+        "mean_conditional_total_variation": 0.026123095100224175,
+        "max_conditional_total_variation": 0.031527493051824125,
+        "mean_expected_detector_clicks_per_shot": 0.7553633521857307
+      },
+      {
+        "label": "calibration",
+        "per_active_two_rail_transmission": 0.999,
+        "detector_efficiency": 0.85,
+        "detector_dark_click_probability_per_output_per_shot": 1e-06,
+        "angle_sigma": 0.001,
+        "phase_sigma": 0.001,
+        "extra_crosstalk_sigma": 0.0,
+        "n_trials": 3,
+        "mean_single_photon_survival": 0.8886705039582123,
+        "worst_case_single_photon_survival": 0.8679345624999831,
+        "mean_conditional_total_variation": 0.027277099797063057,
+        "max_conditional_total_variation": 0.033323804403874245,
+        "mean_expected_detector_clicks_per_shot": 0.7555851729945523
+      },
+      {
+        "label": "phase_crosstalk",
+        "per_active_two_rail_transmission": 0.999,
+        "detector_efficiency": 0.85,
+        "detector_dark_click_probability_per_output_per_shot": 1e-06,
+        "angle_sigma": 0.001,
+        "phase_sigma": 0.001,
+        "extra_crosstalk_sigma": 0.0004,
+        "n_trials": 3,
+        "mean_single_photon_survival": 0.8886765221033186,
+        "worst_case_single_photon_survival": 0.8679555020211396,
+        "mean_conditional_total_variation": 0.02735164109119073,
+        "max_conditional_total_variation": 0.033615142736526576,
+        "mean_expected_detector_clicks_per_shot": 0.755590288412777
+      },
+      {
+        "label": "harsh_loss",
+        "per_active_two_rail_transmission": 0.995,
+        "detector_efficiency": 0.85,
+        "detector_dark_click_probability_per_output_per_shot": 1e-06,
+        "angle_sigma": 0.001,
+        "phase_sigma": 0.001,
+        "extra_crosstalk_sigma": 0.001,
+        "n_trials": 3,
+        "mean_single_photon_survival": 0.5756689161826838,
+        "worst_case_single_photon_survival": 0.514092018651984,
+        "mean_conditional_total_variation": 0.1295898294748055,
+        "max_conditional_total_variation": 0.1624269507879033,
+        "mean_expected_detector_clicks_per_shot": 0.48953408943670246
+      }
+    ],
+    "scope": "loss/phase/angle/crosstalk and dark counts are illustrative noise assumptions; normalized expected click counts NOT physical multi-click heralding or hardware characterization"
+  },
+  "detector_twirling": {
+    "systematic_detector_gain_std_before": 0.07415146074284133,
+    "mean_gain": 0.9934308703946108,
+    "symmetry_twirl_gain_std_after": 0.0026804598072472765,
+    "number_of_symmetry_walk_samples": 750,
+    "max_residual_gain_offset": 0.008483587963900474,
+    "scope": "hypothetical reconfigurable physical output switching by route automorphisms; mere software relabeling cannot remove detector bias"
+  },
+  "simplex_coarse_fine": {
+    "status": "EXPLICIT_6_VECTOR_SIMPLEX_WITNESS",
+    "route_indices": [
+      0,
+      26,
+      102,
+      147,
+      173,
+      208
+    ],
+    "simplex_gram_diagonal": 40,
+    "simplex_gram_offdiag": -8,
+    "simplex_sum_POVM": "sum_{six} E_s = (2/15) P5",
+    "simplex_projector_rank": 5,
+    "scope": "local six-frame verification, distinct from pre-existing full 36-simplex partition; sequential coarse-fine instrument still requires implementation"
+  },
+  "status": "PASS_MESH_TWIRL_AND_SIMPLEX_EXPLORATION"
+}
