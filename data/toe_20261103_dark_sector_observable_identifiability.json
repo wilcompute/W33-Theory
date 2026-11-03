@@ -1,0 +1,44 @@
+{
+  "status": "PASS_EXACT_TWO_OBSERVABLES_AND_TWO_SCALES_IDENTIFIABILITY",
+  "beta_source": "analysis/toe_uv/class_fit_dovekie.json free_neg.p.cp",
+  "fit_beta": 0.05299751293406564,
+  "fit_scalar_excursion_today_minus_recombination_Mpl": 0.2795940882598428,
+  "mass_log_ratio_recombination_over_today": 0.014817791308839309,
+  "mass_ratio_recombination_over_today": 1.0149281190426924,
+  "massless_fifth_force_enhancement_over_newton": 0.00561747275439291,
+  "jacobian_map": "(beta,DeltaPhi)->(D=beta*DeltaPhi,g=2*beta\u00b2)",
+  "exact_jacobian_determinant": "-4*beta**2",
+  "inversion_massless": {
+    "beta_abs": 0.05299751293406564,
+    "DeltaPhi_abs": 0.2795940882598428,
+    "degeneracy": "Simultaneous sign flip (beta, DeltaPhi)->(-beta,-DeltaPhi) leaves these two observables invariant"
+  },
+  "one_scale_massive_underdetermination": "If scalar has unknown Compton scale mu, one g(k) gives one equation in (beta,mu), even when D is known. Three unknowns beta,DeltaPhi,mu but only two observables.",
+  "two_scale_massive_yukawa_control": {
+    "hypothetical_mu_h_per_Mpc": 0.03,
+    "k_samples": [
+      {
+        "k_h_per_Mpc": 0.05,
+        "g_eff_minus_1": 0.004130494672347728,
+        "G_eff_over_G": 1.0041304946723477,
+        "suppression_relative_to_massless": 0.7352941176470588
+      },
+      {
+        "k_h_per_Mpc": 0.2,
+        "g_eff_minus_1": 0.005493860884491843,
+        "G_eff_over_G": 1.0054938608844919,
+        "suppression_relative_to_massless": 0.9779951100244498
+      }
+    ],
+    "inverse_growth_identity": "1/g(k)=1/(2 beta\u00b2)+mu\u00b2/(2 beta\u00b2 k\u00b2)",
+    "recovered_beta": 0.05299751293406564,
+    "recovered_mu": 0.030000000000000002,
+    "recovered_excursion": 0.2795940882598428
+  },
+  "absolute_G_precision_needed_for_10percent_beta_measurement_rough_linear_1sigma": 0.0011234945508785822,
+  "scope": "This is an *identifiability and precision-target theorem* under linear unscreened Yukawa growth, not a new observational fit. The finite range mu=0.03 h/Mpc is a toy example; an ordinary rolling quintessence field with mphi~H0 is nearly massless on these subhorizon scales. Nonlinear screening, baryonic bias and relativistic observations can spoil this simple inversion.",
+  "literature": [
+    "Amendola PhysRevD69 103524 (2004)",
+    "Yang et al Eur Phys J C 86 1115 (2026)"
+  ]
+}
