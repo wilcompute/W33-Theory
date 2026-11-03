@@ -1,0 +1,61 @@
+{
+ "fixed_point_residual": "0",
+ "rows": {
+  "m_KK all moduli free": {
+   "b_squared": "3/2",
+   "w_eff_exact": "1",
+   "rho_c_slope_exact": "-6",
+   "chi_N_num": 2.439194244114396,
+   "chi_N_exact": 2.449489742783178,
+   "rho_c_slope_num": -5.987390640806989
+  },
+  "m_KK fixed volume n=1": {
+   "b_squared": "1/2",
+   "w_eff_exact": "1/3",
+   "rho_c_slope_exact": "-4",
+   "chi_N_num": 1.4142135623730956,
+   "chi_N_exact": 1.4142135623730951,
+   "rho_c_slope_num": -4.0
+  },
+  "m_KK fixed volume n=2": {
+   "b_squared": "2/3",
+   "w_eff_exact": "4/9",
+   "rho_c_slope_exact": "-13/3",
+   "chi_N_num": 1.6329931618554516,
+   "chi_N_exact": 1.632993161855452,
+   "rho_c_slope_num": -4.333333333333333
+  },
+  "m_KK fixed volume n=3": {
+   "b_squared": "3/4",
+   "w_eff_exact": "1/2",
+   "rho_c_slope_exact": "-9/2",
+   "chi_N_num": 1.732050807568877,
+   "chi_N_exact": 1.7320508075688772,
+   "rho_c_slope_num": -4.5
+  },
+  "m_KK fixed volume n=6": {
+   "b_squared": "6/7",
+   "w_eff_exact": "4/7",
+   "rho_c_slope_exact": "-33/7",
+   "chi_N_num": 1.851640199545103,
+   "chi_N_exact": 1.8516401995451028,
+   "rho_c_slope_num": -4.714285714285714
+  },
+  "M_D, n=0 (one extra dimension)": {
+   "b_squared": "1/6",
+   "w_eff_exact": "1/9",
+   "rho_c_slope_exact": "-10/3",
+   "chi_N_num": 0.816496580927726,
+   "chi_N_exact": 0.816496580927726,
+   "rho_c_slope_num": -3.3333333333333335
+  },
+  "fitted c'=0.05": {
+   "b_squared": "1/400",
+   "w_eff_exact": "1/600",
+   "rho_c_slope_exact": "-601/200",
+   "chi_N_num": 0.1,
+   "chi_N_exact": 0.1,
+   "rho_c_slope_num": -3.005
+  }
+ }
+}

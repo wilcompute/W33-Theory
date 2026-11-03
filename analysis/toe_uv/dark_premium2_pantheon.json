@@ -1,0 +1,12 @@
+{
+ "dataset": "pantheon",
+ "n": 20000,
+ "real_ceiling_gain": 5.220095650342955,
+ "real_free_gain": 18.28112086998044,
+ "p_ceiling": 0.1321,
+ "p_free": 0.11005,
+ "mean_ceiling": 2.4611263157689196,
+ "mean_free": 12.233026443848953,
+ "q99_ceiling": 11.47381468774857,
+ "n_bins": 13
+}

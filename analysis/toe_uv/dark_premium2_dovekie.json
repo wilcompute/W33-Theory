@@ -1,0 +1,12 @@
+{
+ "dataset": "dovekie",
+ "n": 20000,
+ "real_ceiling_gain": 7.961782567614364,
+ "real_free_gain": 19.061899527545393,
+ "p_ceiling": 0.0383,
+ "p_free": 0.07405,
+ "mean_ceiling": 2.3220089117649643,
+ "mean_free": 11.920072859837433,
+ "q99_ceiling": 10.991343422363032,
+ "n_bins": 13
+}

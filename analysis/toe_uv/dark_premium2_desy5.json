@@ -1,0 +1,12 @@
+{
+ "dataset": "desy5",
+ "n": 20000,
+ "real_ceiling_gain": 14.831627703352751,
+ "real_free_gain": 24.604668608081965,
+ "p_ceiling": 0.0017,
+ "p_free": 0.012,
+ "mean_ceiling": 2.3291487387707828,
+ "mean_free": 11.899031768543304,
+ "q99_ceiling": 11.198175981311403,
+ "n_bins": 13
+}
