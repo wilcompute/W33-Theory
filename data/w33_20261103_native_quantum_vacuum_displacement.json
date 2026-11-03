@@ -1,0 +1,108 @@
+{
+  "status": "PASS_NATIVE29_HOLOMORPHIC_THRESHOLD_AND_QUANTUM_DISPLACEMENT",
+  "variables": [
+    "t",
+    "z",
+    "r",
+    "q",
+    "l",
+    "k",
+    "S",
+    "T"
+  ],
+  "neutral_tree_superpotential": "S*(r - 1) + T*(q - 1) + k*l + z*(-k*l + q*r - t**2)",
+  "charged_flavor_matrix": [
+    [
+      "0",
+      "t",
+      "k + 1",
+      "3 - r"
+    ],
+    [
+      "-t",
+      "0",
+      "q + 2",
+      "5 - l"
+    ],
+    [
+      "-k - 1",
+      "-q - 2",
+      "0",
+      "t"
+    ],
+    [
+      "r - 3",
+      "l - 5",
+      "-t",
+      "0"
+    ]
+  ],
+  "exact_charged_Hessian_factorization": "diag(I4,I4,Omega,Omega)^T Hcharged diag(I4,I4,Omega,Omega)=Mflavor tensor Omega",
+  "mass_Pfaffian": "k*l - 5*k + l - q*r + 3*q - 2*r + t**2 + 1",
+  "charged_Hessian_determinant": "P^8",
+  "mass_Pfaffian_at_classical_vacuum": 2,
+  "holomorphic_matching": "Lambda_Sp_Nf2^7=C_H*Lambda_SU4^9/t^2; Lambda_pure^9=C_m*P*Lambda_Sp_Nf2^7. Thus Lambda_pure^9=C*Lambda_SU4^9*P/t^2. Nonzero scheme/threshold constants absorbed in epsilon.",
+  "quantum_superpotential": "Wneutral+3 epsilon*(P/t^2)^(1/3)",
+  "expansion": "phi=phi0+epsilon*d1+epsilon^2*d2+O(epsilon^3), in the branch analytic near P/t^2=2. The three gaugino branches multiply epsilon by the three cube roots of unity.",
+  "classical_neutral_VEV": [
+    1,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0
+  ],
+  "first_order_displacement": [
+    "0",
+    "-2**(1/3)/2",
+    "0",
+    "0",
+    "5*2**(1/3)/2",
+    "-2**(1/3)/2",
+    "2*2**(1/3)",
+    "-2**(1/3)/2"
+  ],
+  "second_order_displacement": [
+    "5*2**(2/3)/8",
+    "-5*2**(2/3)/3",
+    "0",
+    "0",
+    "-20*2**(2/3)/3",
+    "4*2**(2/3)/3",
+    "-5*2**(2/3)/6",
+    "10*2**(2/3)/3"
+  ],
+  "F_residual_coefficients_orders_0_1_2_all_zero": true,
+  "exact_effective_critical_curve": {
+    "parameter": "b",
+    "coordinates": {
+      "t": "sqrt(5*b**2 + 1)",
+      "z": "b*(5*b**2 + 1)*(-(10*b + 2)/(5*b**2 + 1) + 1)/(-5*b**2 - 2*b + 1)",
+      "r": "1",
+      "q": "1",
+      "l": "5*b",
+      "k": "-b",
+      "S": "-b*(5*b**2 + 1)*(-(10*b + 2)/(5*b**2 + 1) + 1)/(-5*b**2 - 2*b + 1) + 3*b*(5*b**2 + 1)/(-5*b**2 - 2*b + 1)",
+      "T": "-b*(5*b**2 + 1)*(-(10*b + 2)/(5*b**2 + 1) + 1)/(-5*b**2 - 2*b + 1) - 2*b*(5*b**2 + 1)/(-5*b**2 - 2*b + 1)"
+    },
+    "mass_Pfaffian": "2+10*b",
+    "Higgs_modulus_squared": "1+5*b^2",
+    "epsilon_cubed": "-4*b**3*(5*b + 1)**2*(5*b**2 + 1)**4/(5*b**2 + 2*b - 1)**3",
+    "eliminated_polynomial": "62500*b**13 + 25000*b**12 + 52500*b**11 + 20000*b**10 + 17000*b**9 + 6000*b**8 + 2600*b**7 + 125*b**6*epsilon**3 + 800*b**6 + 150*b**5*epsilon**3 + 180*b**5 - 15*b**4*epsilon**3 + 40*b**4 - 52*b**3*epsilon**3 + 4*b**3 + 3*b**2*epsilon**3 + 6*b*epsilon**3 - epsilon**3",
+    "polynomial_degree": 13,
+    "all8_effective_F_equations_identically_zero": true,
+    "exclusions": "t=0, P=0 and1-2b-5b^2=0 are excluded from this massive Higgs patch. Squaring/cubing removes branch labels: solutions must be assigned to a consistent gaugino cube-root branch.",
+    "weak_branch": "b=2^(-2/3)*epsilon+O(epsilon^2), three gaugino branches near b=0. Other algebraic roots are not automatically weakly coupled or additional physical vacua.",
+    "scope": "Exact parametrized stationarity of the supplied holomorphic effective superpotential, with an algebraic scale relation; not proof of the complete finite-coupling UV dynamics."
+  },
+  "Higgs_modulus": "t=1+(5/2)*2^(-4/3)*epsilon^2+O(epsilon^3); the radial shift starts at second order, while previously zero singlet coordinates shift already at first order.",
+  "exact_constraints": "r=q=1 enforced by S,T for every epsilon; F_z gives t^2=1-l*k. Unbroken USp4 remains on this singlet ansatz.",
+  "classical_gauge_moment": "chi=t Omega implies chi chi-dagger=|t|^2 I4. All other ansatz fields are SU4 singlets; charged fundamentals remain zero.",
+  "derivation": "Exact full16-coordinate Hessian factorization, Pfaffian identity, tree neutral restriction and all8 formal F equations through epsilon^2. Pure-gauge superpotential and holomorphic matching are supplied standard dynamics, not derived from finite geometry.",
+  "assumptions": "Canonical classical K\u00e4hler potential, supplied4D global N=1 SU4 gauge theory, the explicit native29 mass deformation, all heavy scales above Lambda, nonzero t and P, and standard Wilsonian holomorphic threshold matching. Fields/masses are in the common input mass unit.",
+  "ownership": "Prior native29 stabilization owns the deformed model. Prior Nov3 effective audit owns the undeformed1/t matching and ADS obstruction. This computes the different deformed mass Pfaffian and its controlled quantum displacement.",
+  "reference": "https://arxiv.org/abs/hep-th/9505006",
+  "boundary": "Exact algebraic stationarity in the declared holomorphic EFT and explicit weak-coupling series through second order. No global UV solution, convergence bound, measured scale prediction or TOE."
+}

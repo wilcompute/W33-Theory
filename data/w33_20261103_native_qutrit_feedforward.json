@@ -1,0 +1,3157 @@
+{
+  "status": "PASS_ALL_81_NATIVE_QUTRIT_BRANCHES_CORRECTED",
+  "gates": [
+    {
+      "parent_holonomy_index": 4,
+      "measurement_direction_order": [
+        8,
+        4,
+        0
+      ],
+      "branches": [
+        {
+          "outcomes": [
+            0,
+            0,
+            0
+          ],
+          "logical_byproduct": [
+            0,
+            0
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            6,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            -4
+          ]
+        },
+        {
+          "outcomes": [
+            0,
+            0,
+            1
+          ],
+          "logical_byproduct": [
+            0,
+            1
+          ],
+          "phase_numerator": [
+            -24,
+            -24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            0,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            6
+          ],
+          "imaginary_times3_numerator": [
+            -4,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            0,
+            0,
+            2
+          ],
+          "logical_byproduct": [
+            0,
+            2
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            6
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            -4,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            0,
+            1,
+            0
+          ],
+          "logical_byproduct": [
+            0,
+            2
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            6
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            -4,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            0,
+            1,
+            1
+          ],
+          "logical_byproduct": [
+            0,
+            0
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            6,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            -4
+          ]
+        },
+        {
+          "outcomes": [
+            0,
+            1,
+            2
+          ],
+          "logical_byproduct": [
+            0,
+            1
+          ],
+          "phase_numerator": [
+            -24,
+            -24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            0,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            6
+          ],
+          "imaginary_times3_numerator": [
+            -4,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            0,
+            2,
+            0
+          ],
+          "logical_byproduct": [
+            0,
+            1
+          ],
+          "phase_numerator": [
+            -24,
+            -24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            0,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            6
+          ],
+          "imaginary_times3_numerator": [
+            -4,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            0,
+            2,
+            1
+          ],
+          "logical_byproduct": [
+            0,
+            2
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            6
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            -4,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            0,
+            2,
+            2
+          ],
+          "logical_byproduct": [
+            0,
+            0
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            6,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            -4
+          ]
+        },
+        {
+          "outcomes": [
+            1,
+            0,
+            0
+          ],
+          "logical_byproduct": [
+            0,
+            0
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            6,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            -4
+          ]
+        },
+        {
+          "outcomes": [
+            1,
+            0,
+            1
+          ],
+          "logical_byproduct": [
+            0,
+            1
+          ],
+          "phase_numerator": [
+            -24,
+            -24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            0,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            6
+          ],
+          "imaginary_times3_numerator": [
+            -4,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            1,
+            0,
+            2
+          ],
+          "logical_byproduct": [
+            0,
+            2
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            6
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            -4,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            1,
+            1,
+            0
+          ],
+          "logical_byproduct": [
+            0,
+            2
+          ],
+          "phase_numerator": [
+            -24,
+            -24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            0,
+            0,
+            0,
+            0,
+            -6,
+            0,
+            0,
+            0,
+            0
+          ],
+          "imaginary_times3_numerator": [
+            -4,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            -4
+          ]
+        },
+        {
+          "outcomes": [
+            1,
+            1,
+            1
+          ],
+          "logical_byproduct": [
+            0,
+            0
+          ],
+          "phase_numerator": [
+            -24,
+            -24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -6
+          ],
+          "imaginary_times3_numerator": [
+            -4,
+            0,
+            0,
+            0,
+            -4,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            1,
+            1,
+            2
+          ],
+          "logical_byproduct": [
+            0,
+            1
+          ],
+          "phase_numerator": [
+            -24,
+            24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            -6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            -4,
+            0,
+            0,
+            0,
+            -4
+          ]
+        },
+        {
+          "outcomes": [
+            1,
+            2,
+            0
+          ],
+          "logical_byproduct": [
+            0,
+            1
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            6,
+            0,
+            0,
+            0,
+            -6,
+            0,
+            0,
+            0,
+            -6
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            1,
+            2,
+            1
+          ],
+          "logical_byproduct": [
+            0,
+            2
+          ],
+          "phase_numerator": [
+            -24,
+            24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            -6,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            -6
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            1,
+            2,
+            2
+          ],
+          "logical_byproduct": [
+            0,
+            0
+          ],
+          "phase_numerator": [
+            -24,
+            24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            -6,
+            0,
+            0,
+            0,
+            -6,
+            0,
+            0,
+            0,
+            6
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            2,
+            0,
+            0
+          ],
+          "logical_byproduct": [
+            0,
+            0
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            6,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            -4
+          ]
+        },
+        {
+          "outcomes": [
+            2,
+            0,
+            1
+          ],
+          "logical_byproduct": [
+            0,
+            1
+          ],
+          "phase_numerator": [
+            -24,
+            -24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            0,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            6
+          ],
+          "imaginary_times3_numerator": [
+            -4,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            2,
+            0,
+            2
+          ],
+          "logical_byproduct": [
+            0,
+            2
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            6
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            -4,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            2,
+            1,
+            0
+          ],
+          "logical_byproduct": [
+            0,
+            2
+          ],
+          "phase_numerator": [
+            -24,
+            24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            -6,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            -6
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            2,
+            1,
+            1
+          ],
+          "logical_byproduct": [
+            0,
+            0
+          ],
+          "phase_numerator": [
+            -24,
+            24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            -6,
+            0,
+            0,
+            0,
+            -6,
+            0,
+            0,
+            0,
+            6
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            2,
+            1,
+            2
+          ],
+          "logical_byproduct": [
+            0,
+            1
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            6,
+            0,
+            0,
+            0,
+            -6,
+            0,
+            0,
+            0,
+            -6
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            2,
+            2,
+            0
+          ],
+          "logical_byproduct": [
+            0,
+            1
+          ],
+          "phase_numerator": [
+            -24,
+            24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            -6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            -4,
+            0,
+            0,
+            0,
+            -4
+          ]
+        },
+        {
+          "outcomes": [
+            2,
+            2,
+            1
+          ],
+          "logical_byproduct": [
+            0,
+            2
+          ],
+          "phase_numerator": [
+            -24,
+            -24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            0,
+            0,
+            0,
+            0,
+            -6,
+            0,
+            0,
+            0,
+            0
+          ],
+          "imaginary_times3_numerator": [
+            -4,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            -4
+          ]
+        },
+        {
+          "outcomes": [
+            2,
+            2,
+            2
+          ],
+          "logical_byproduct": [
+            0,
+            0
+          ],
+          "phase_numerator": [
+            -24,
+            -24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -6
+          ],
+          "imaginary_times3_numerator": [
+            -4,
+            0,
+            0,
+            0,
+            -4,
+            0,
+            0,
+            0,
+            2
+          ]
+        }
+      ],
+      "exact_normalized_branch_unitaries": 27,
+      "branch_probability": "1/27 independent of logical input",
+      "correction": "Apply I3 tensor X^(-rA) to align the final code, then logical (X^a Z^b)^dagger on the first qutrit using this outcome lookup.",
+      "Choi_max_error": 6.661713674735786e-16,
+      "readout_fidelity_counts_by_wrong_trits": {
+        "0": 27,
+        "1": 0,
+        "2": 54,
+        "3": 0
+      },
+      "readout_entanglement_fidelity": "sum_k n_k/27*(1-epsilon)^(3-k)*(epsilon/2)^k",
+      "readout_code_leak_probability": "epsilon"
+    },
+    {
+      "parent_holonomy_index": 5,
+      "measurement_direction_order": [
+        8,
+        4,
+        0
+      ],
+      "branches": [
+        {
+          "outcomes": [
+            0,
+            0,
+            0
+          ],
+          "logical_byproduct": [
+            0,
+            2
+          ],
+          "phase_numerator": [
+            -24,
+            24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            6,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            -4
+          ]
+        },
+        {
+          "outcomes": [
+            0,
+            0,
+            1
+          ],
+          "logical_byproduct": [
+            0,
+            0
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            0,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            6
+          ],
+          "imaginary_times3_numerator": [
+            -4,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            0,
+            0,
+            2
+          ],
+          "logical_byproduct": [
+            0,
+            1
+          ],
+          "phase_numerator": [
+            -24,
+            24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            6
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            -4,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            0,
+            1,
+            0
+          ],
+          "logical_byproduct": [
+            0,
+            1
+          ],
+          "phase_numerator": [
+            -24,
+            24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            6
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            -4,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            0,
+            1,
+            1
+          ],
+          "logical_byproduct": [
+            0,
+            2
+          ],
+          "phase_numerator": [
+            -24,
+            24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            6,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            -4
+          ]
+        },
+        {
+          "outcomes": [
+            0,
+            1,
+            2
+          ],
+          "logical_byproduct": [
+            0,
+            0
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            0,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            6
+          ],
+          "imaginary_times3_numerator": [
+            -4,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            0,
+            2,
+            0
+          ],
+          "logical_byproduct": [
+            0,
+            0
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            0,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            6
+          ],
+          "imaginary_times3_numerator": [
+            -4,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            0,
+            2,
+            1
+          ],
+          "logical_byproduct": [
+            0,
+            1
+          ],
+          "phase_numerator": [
+            -24,
+            24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            6
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            -4,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            0,
+            2,
+            2
+          ],
+          "logical_byproduct": [
+            0,
+            2
+          ],
+          "phase_numerator": [
+            -24,
+            24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            6,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            -4
+          ]
+        },
+        {
+          "outcomes": [
+            1,
+            0,
+            0
+          ],
+          "logical_byproduct": [
+            0,
+            2
+          ],
+          "phase_numerator": [
+            -24,
+            24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            6,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            -4
+          ]
+        },
+        {
+          "outcomes": [
+            1,
+            0,
+            1
+          ],
+          "logical_byproduct": [
+            0,
+            0
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            0,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            6
+          ],
+          "imaginary_times3_numerator": [
+            -4,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            1,
+            0,
+            2
+          ],
+          "logical_byproduct": [
+            0,
+            1
+          ],
+          "phase_numerator": [
+            -24,
+            24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            6
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            -4,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            1,
+            1,
+            0
+          ],
+          "logical_byproduct": [
+            0,
+            1
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            0,
+            0,
+            0,
+            0,
+            -6,
+            0,
+            0,
+            0,
+            0
+          ],
+          "imaginary_times3_numerator": [
+            -4,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            -4
+          ]
+        },
+        {
+          "outcomes": [
+            1,
+            1,
+            1
+          ],
+          "logical_byproduct": [
+            0,
+            2
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -6
+          ],
+          "imaginary_times3_numerator": [
+            -4,
+            0,
+            0,
+            0,
+            -4,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            1,
+            1,
+            2
+          ],
+          "logical_byproduct": [
+            0,
+            0
+          ],
+          "phase_numerator": [
+            -24,
+            -24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            -6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            -4,
+            0,
+            0,
+            0,
+            -4
+          ]
+        },
+        {
+          "outcomes": [
+            1,
+            2,
+            0
+          ],
+          "logical_byproduct": [
+            0,
+            0
+          ],
+          "phase_numerator": [
+            -24,
+            24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            6,
+            0,
+            0,
+            0,
+            -6,
+            0,
+            0,
+            0,
+            -6
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            1,
+            2,
+            1
+          ],
+          "logical_byproduct": [
+            0,
+            1
+          ],
+          "phase_numerator": [
+            -24,
+            -24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            -6,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            -6
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            1,
+            2,
+            2
+          ],
+          "logical_byproduct": [
+            0,
+            2
+          ],
+          "phase_numerator": [
+            -24,
+            -24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            -6,
+            0,
+            0,
+            0,
+            -6,
+            0,
+            0,
+            0,
+            6
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            2,
+            0,
+            0
+          ],
+          "logical_byproduct": [
+            0,
+            2
+          ],
+          "phase_numerator": [
+            -24,
+            24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            6,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            -4
+          ]
+        },
+        {
+          "outcomes": [
+            2,
+            0,
+            1
+          ],
+          "logical_byproduct": [
+            0,
+            0
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            0,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            6
+          ],
+          "imaginary_times3_numerator": [
+            -4,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            2,
+            0,
+            2
+          ],
+          "logical_byproduct": [
+            0,
+            1
+          ],
+          "phase_numerator": [
+            -24,
+            24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            6
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            -4,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            2,
+            1,
+            0
+          ],
+          "logical_byproduct": [
+            0,
+            1
+          ],
+          "phase_numerator": [
+            -24,
+            -24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            -6,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            -6
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            2,
+            1,
+            1
+          ],
+          "logical_byproduct": [
+            0,
+            2
+          ],
+          "phase_numerator": [
+            -24,
+            -24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            -6,
+            0,
+            0,
+            0,
+            -6,
+            0,
+            0,
+            0,
+            6
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            2,
+            1,
+            2
+          ],
+          "logical_byproduct": [
+            0,
+            0
+          ],
+          "phase_numerator": [
+            -24,
+            24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            6,
+            0,
+            0,
+            0,
+            -6,
+            0,
+            0,
+            0,
+            -6
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            2,
+            2,
+            0
+          ],
+          "logical_byproduct": [
+            0,
+            0
+          ],
+          "phase_numerator": [
+            -24,
+            -24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            -6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            -4,
+            0,
+            0,
+            0,
+            -4
+          ]
+        },
+        {
+          "outcomes": [
+            2,
+            2,
+            1
+          ],
+          "logical_byproduct": [
+            0,
+            1
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            0,
+            0,
+            0,
+            0,
+            -6,
+            0,
+            0,
+            0,
+            0
+          ],
+          "imaginary_times3_numerator": [
+            -4,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            -4
+          ]
+        },
+        {
+          "outcomes": [
+            2,
+            2,
+            2
+          ],
+          "logical_byproduct": [
+            0,
+            2
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -6
+          ],
+          "imaginary_times3_numerator": [
+            -4,
+            0,
+            0,
+            0,
+            -4,
+            0,
+            0,
+            0,
+            2
+          ]
+        }
+      ],
+      "exact_normalized_branch_unitaries": 27,
+      "branch_probability": "1/27 independent of logical input",
+      "correction": "Apply I3 tensor X^(-rA) to align the final code, then logical (X^a Z^b)^dagger on the first qutrit using this outcome lookup.",
+      "Choi_max_error": 4.965068306494546e-16,
+      "readout_fidelity_counts_by_wrong_trits": {
+        "0": 27,
+        "1": 0,
+        "2": 54,
+        "3": 0
+      },
+      "readout_entanglement_fidelity": "sum_k n_k/27*(1-epsilon)^(3-k)*(epsilon/2)^k",
+      "readout_code_leak_probability": "epsilon"
+    },
+    {
+      "parent_holonomy_index": 10,
+      "measurement_direction_order": [
+        23,
+        4,
+        0
+      ],
+      "branches": [
+        {
+          "outcomes": [
+            0,
+            0,
+            0
+          ],
+          "logical_byproduct": [
+            0,
+            0
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            4,
+            -2,
+            4,
+            4,
+            4,
+            -2,
+            -2,
+            4,
+            4
+          ],
+          "imaginary_times3_numerator": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "outcomes": [
+            0,
+            0,
+            1
+          ],
+          "logical_byproduct": [
+            1,
+            0
+          ],
+          "phase_numerator": [
+            -24,
+            -24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            4,
+            -2,
+            -2,
+            -2,
+            4,
+            -2,
+            -2,
+            -2,
+            4
+          ],
+          "imaginary_times3_numerator": [
+            0,
+            -2,
+            -2,
+            -2,
+            0,
+            -2,
+            -2,
+            -2,
+            0
+          ]
+        },
+        {
+          "outcomes": [
+            0,
+            0,
+            2
+          ],
+          "logical_byproduct": [
+            2,
+            0
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            4,
+            4,
+            -2,
+            -2,
+            4,
+            4,
+            4,
+            -2,
+            4
+          ],
+          "imaginary_times3_numerator": [
+            0,
+            0,
+            2,
+            2,
+            0,
+            0,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "outcomes": [
+            0,
+            1,
+            0
+          ],
+          "logical_byproduct": [
+            2,
+            0
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            4,
+            4,
+            -2,
+            -2,
+            4,
+            4,
+            4,
+            -2,
+            4
+          ],
+          "imaginary_times3_numerator": [
+            0,
+            0,
+            2,
+            2,
+            0,
+            0,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "outcomes": [
+            0,
+            1,
+            1
+          ],
+          "logical_byproduct": [
+            0,
+            0
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            4,
+            -2,
+            4,
+            4,
+            4,
+            -2,
+            -2,
+            4,
+            4
+          ],
+          "imaginary_times3_numerator": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "outcomes": [
+            0,
+            1,
+            2
+          ],
+          "logical_byproduct": [
+            1,
+            0
+          ],
+          "phase_numerator": [
+            -24,
+            -24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            4,
+            -2,
+            -2,
+            -2,
+            4,
+            -2,
+            -2,
+            -2,
+            4
+          ],
+          "imaginary_times3_numerator": [
+            0,
+            -2,
+            -2,
+            -2,
+            0,
+            -2,
+            -2,
+            -2,
+            0
+          ]
+        },
+        {
+          "outcomes": [
+            0,
+            2,
+            0
+          ],
+          "logical_byproduct": [
+            1,
+            0
+          ],
+          "phase_numerator": [
+            -24,
+            -24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            4,
+            -2,
+            -2,
+            -2,
+            4,
+            -2,
+            -2,
+            -2,
+            4
+          ],
+          "imaginary_times3_numerator": [
+            0,
+            -2,
+            -2,
+            -2,
+            0,
+            -2,
+            -2,
+            -2,
+            0
+          ]
+        },
+        {
+          "outcomes": [
+            0,
+            2,
+            1
+          ],
+          "logical_byproduct": [
+            2,
+            0
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            4,
+            4,
+            -2,
+            -2,
+            4,
+            4,
+            4,
+            -2,
+            4
+          ],
+          "imaginary_times3_numerator": [
+            0,
+            0,
+            2,
+            2,
+            0,
+            0,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "outcomes": [
+            0,
+            2,
+            2
+          ],
+          "logical_byproduct": [
+            0,
+            0
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            4,
+            -2,
+            4,
+            4,
+            4,
+            -2,
+            -2,
+            4,
+            4
+          ],
+          "imaginary_times3_numerator": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "outcomes": [
+            1,
+            0,
+            0
+          ],
+          "logical_byproduct": [
+            0,
+            0
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            4,
+            -2,
+            4,
+            4,
+            4,
+            -2,
+            -2,
+            4,
+            4
+          ],
+          "imaginary_times3_numerator": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "outcomes": [
+            1,
+            0,
+            1
+          ],
+          "logical_byproduct": [
+            1,
+            0
+          ],
+          "phase_numerator": [
+            -24,
+            -24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            4,
+            -2,
+            -2,
+            -2,
+            4,
+            -2,
+            -2,
+            -2,
+            4
+          ],
+          "imaginary_times3_numerator": [
+            0,
+            -2,
+            -2,
+            -2,
+            0,
+            -2,
+            -2,
+            -2,
+            0
+          ]
+        },
+        {
+          "outcomes": [
+            1,
+            0,
+            2
+          ],
+          "logical_byproduct": [
+            2,
+            0
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            4,
+            4,
+            -2,
+            -2,
+            4,
+            4,
+            4,
+            -2,
+            4
+          ],
+          "imaginary_times3_numerator": [
+            0,
+            0,
+            2,
+            2,
+            0,
+            0,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "outcomes": [
+            1,
+            1,
+            0
+          ],
+          "logical_byproduct": [
+            2,
+            0
+          ],
+          "phase_numerator": [
+            -24,
+            -24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            -2,
+            -2,
+            4,
+            4,
+            -2,
+            -2,
+            -2,
+            4,
+            -2
+          ],
+          "imaginary_times3_numerator": [
+            -2,
+            -2,
+            0,
+            0,
+            -2,
+            -2,
+            -2,
+            0,
+            -2
+          ]
+        },
+        {
+          "outcomes": [
+            1,
+            1,
+            1
+          ],
+          "logical_byproduct": [
+            0,
+            0
+          ],
+          "phase_numerator": [
+            -24,
+            -24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            -2,
+            4,
+            -2,
+            -2,
+            -2,
+            4,
+            4,
+            -2,
+            -2
+          ],
+          "imaginary_times3_numerator": [
+            -2,
+            0,
+            -2,
+            -2,
+            -2,
+            0,
+            0,
+            -2,
+            -2
+          ]
+        },
+        {
+          "outcomes": [
+            1,
+            1,
+            2
+          ],
+          "logical_byproduct": [
+            1,
+            0
+          ],
+          "phase_numerator": [
+            -24,
+            24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2
+          ],
+          "imaginary_times3_numerator": [
+            -2,
+            2,
+            2,
+            2,
+            -2,
+            2,
+            2,
+            2,
+            -2
+          ]
+        },
+        {
+          "outcomes": [
+            1,
+            2,
+            0
+          ],
+          "logical_byproduct": [
+            1,
+            0
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            -2,
+            4,
+            4,
+            4,
+            -2,
+            4,
+            4,
+            4,
+            -2
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            1,
+            2,
+            1
+          ],
+          "logical_byproduct": [
+            2,
+            0
+          ],
+          "phase_numerator": [
+            -24,
+            24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            2,
+            -2,
+            -2,
+            2,
+            2,
+            2,
+            -2,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            1,
+            2,
+            2
+          ],
+          "logical_byproduct": [
+            0,
+            0
+          ],
+          "phase_numerator": [
+            -24,
+            24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            -2,
+            2,
+            2,
+            2,
+            -2,
+            -2,
+            2,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            2,
+            0,
+            0
+          ],
+          "logical_byproduct": [
+            0,
+            0
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            4,
+            -2,
+            4,
+            4,
+            4,
+            -2,
+            -2,
+            4,
+            4
+          ],
+          "imaginary_times3_numerator": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "outcomes": [
+            2,
+            0,
+            1
+          ],
+          "logical_byproduct": [
+            1,
+            0
+          ],
+          "phase_numerator": [
+            -24,
+            -24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            4,
+            -2,
+            -2,
+            -2,
+            4,
+            -2,
+            -2,
+            -2,
+            4
+          ],
+          "imaginary_times3_numerator": [
+            0,
+            -2,
+            -2,
+            -2,
+            0,
+            -2,
+            -2,
+            -2,
+            0
+          ]
+        },
+        {
+          "outcomes": [
+            2,
+            0,
+            2
+          ],
+          "logical_byproduct": [
+            2,
+            0
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            4,
+            4,
+            -2,
+            -2,
+            4,
+            4,
+            4,
+            -2,
+            4
+          ],
+          "imaginary_times3_numerator": [
+            0,
+            0,
+            2,
+            2,
+            0,
+            0,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "outcomes": [
+            2,
+            1,
+            0
+          ],
+          "logical_byproduct": [
+            2,
+            0
+          ],
+          "phase_numerator": [
+            -24,
+            24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            2,
+            -2,
+            -2,
+            2,
+            2,
+            2,
+            -2,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            2,
+            1,
+            1
+          ],
+          "logical_byproduct": [
+            0,
+            0
+          ],
+          "phase_numerator": [
+            -24,
+            24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            -2,
+            2,
+            2,
+            2,
+            -2,
+            -2,
+            2,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            2,
+            1,
+            2
+          ],
+          "logical_byproduct": [
+            1,
+            0
+          ],
+          "phase_numerator": [
+            48,
+            0
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            -2,
+            4,
+            4,
+            4,
+            -2,
+            4,
+            4,
+            4,
+            -2
+          ],
+          "imaginary_times3_numerator": [
+            2,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "outcomes": [
+            2,
+            2,
+            0
+          ],
+          "logical_byproduct": [
+            1,
+            0
+          ],
+          "phase_numerator": [
+            -24,
+            24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2
+          ],
+          "imaginary_times3_numerator": [
+            -2,
+            2,
+            2,
+            2,
+            -2,
+            2,
+            2,
+            2,
+            -2
+          ]
+        },
+        {
+          "outcomes": [
+            2,
+            2,
+            1
+          ],
+          "logical_byproduct": [
+            2,
+            0
+          ],
+          "phase_numerator": [
+            -24,
+            -24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            -2,
+            -2,
+            4,
+            4,
+            -2,
+            -2,
+            -2,
+            4,
+            -2
+          ],
+          "imaginary_times3_numerator": [
+            -2,
+            -2,
+            0,
+            0,
+            -2,
+            -2,
+            -2,
+            0,
+            -2
+          ]
+        },
+        {
+          "outcomes": [
+            2,
+            2,
+            2
+          ],
+          "logical_byproduct": [
+            0,
+            0
+          ],
+          "phase_numerator": [
+            -24,
+            -24
+          ],
+          "phase_denominator": 48,
+          "real_sqrt3_numerator": [
+            -2,
+            4,
+            -2,
+            -2,
+            -2,
+            4,
+            4,
+            -2,
+            -2
+          ],
+          "imaginary_times3_numerator": [
+            -2,
+            0,
+            -2,
+            -2,
+            -2,
+            0,
+            0,
+            -2,
+            -2
+          ]
+        }
+      ],
+      "exact_normalized_branch_unitaries": 27,
+      "branch_probability": "1/27 independent of logical input",
+      "correction": "Apply I3 tensor X^(-rA) to align the final code, then logical (X^a Z^b)^dagger on the first qutrit using this outcome lookup.",
+      "Choi_max_error": 5.551115123125783e-17,
+      "readout_fidelity_counts_by_wrong_trits": {
+        "0": 27,
+        "1": 0,
+        "2": 54,
+        "3": 0
+      },
+      "readout_entanglement_fidelity": "sum_k n_k/27*(1-epsilon)^(3-k)*(epsilon/2)^k",
+      "readout_code_leak_probability": "epsilon"
+    }
+  ],
+  "deterministic_projective_gate_group": 216,
+  "total_measurement_branches": 81,
+  "postselection_required": false,
+  "exact_arithmetic": "Integer projector numerators (A+i sqrt3 B)/6; exact unitarity and byproduct equalities for every branch. The floating Choi sum is an additional independent check.",
+  "noise_assumptions": "Each trit independently misreported with probability epsilon, each other value epsilon/2. True quantum projective measurements and Pauli corrections ideal. Code leakage and entanglement fidelity use the full9D output.",
+  "ownership": "Native120 projector and postselected28-holonomy owners are imported, not rediscovered. General degenerate-projection holonomies: Oi2014.",
+  "reference": "https://arxiv.org/abs/1402.1104",
+  "boundary": "Deterministic ideal Clifford channel with physical Pauli feedforward as an added control resource. No non-Clifford universality, loss tolerance, fault-tolerance threshold or experimental realization."
+}

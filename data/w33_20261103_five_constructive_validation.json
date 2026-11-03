@@ -1,0 +1,125 @@
+{
+  "status": "PASS_SIX_REGENERATED_PRODUCERS_AND_INDEPENDENT_PYTEST",
+  "utc": "2026-11-03T03:17:07.381826+00:00",
+  "producers": [
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/w33_20261103_changed_embedding_matter_completion.py"
+      ],
+      "exit_code": 0,
+      "stdout": "MIXED_RANK 95 witness_residual 0\nPASS_CHANGED_EMBEDDING_MIXED_CUBIC_AND_ANOMALY_FREE_MATTER 95\n",
+      "stderr": "",
+      "seconds": 4.924
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/w33_20261103_native_singlet_stabilization.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_NATIVE_29_FIELD_LOCAL_STABILIZATION 24\n",
+      "stderr": "",
+      "seconds": 6.253
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/w33_20261103_native_qutrit_feedforward.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_ALL_81_NATIVE_QUTRIT_BRANCHES_CORRECTED [{'0': 27, '1': 0, '2': 54, '3': 0}, {'0': 27, '1': 0, '2': 54, '3': 0}, {'0': 27, '1': 0, '2': 54, '3': 0}]\n",
+      "stderr": "",
+      "seconds": 3.11
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/w33_20261103_kagome_tunneling_bounds.py"
+      ],
+      "exit_code": 0,
+      "stdout": "EXACT_KAGOME 4 4 12 19657590887/45916502400000\nEXACT_KAGOME 4 6 18 23259766347797390440995449137/2645785072959855023554560000000000\nPASS_KAGOME_LEADING_TUNNELING_BOUND_AND_DISTANCE_ONE\n",
+      "stderr": "",
+      "seconds": 3.506
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/w33_20261103_deck_twist_interfaces.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_EXPLICIT_NONINVERTIBLE_DECK_TWIST_INTERFACES 6 5\n",
+      "stderr": "",
+      "seconds": 0.553
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/w33_20261103_native_quantum_vacuum_displacement.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_NATIVE29_HOLOMORPHIC_THRESHOLD_AND_QUANTUM_DISPLACEMENT k*l - 5*k + l - q*r + 3*q - 2*r + t**2 + 1 ['0', '-2**(1/3)/2', '0', '0', '5*2**(1/3)/2', '-2**(1/3)/2', '2*2**(1/3)', '-2**(1/3)/2']\n",
+      "stderr": "",
+      "seconds": 4.376
+    }
+  ],
+  "pytest": {
+    "command": [
+      "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+      "-m",
+      "pytest",
+      "-q",
+      "--noconftest",
+      "tests/test_w33_20261103_five_constructive_fronts.py"
+    ],
+    "exit_code": 0,
+    "stdout": "..............................                                           [100%]\n30 passed in 8.26s\n",
+    "stderr": "",
+    "seconds": 11.719
+  },
+  "input_raw_sha256": {
+    "data/w33_20261102_clifford_native_cubic_repair.json": "37006d1f2bead76d4dc98204e7eda2d4af69485621368563074a5bbb29cee7b6",
+    "data/w33_20261103_native_projector_holonomic_qutrit.json": "82d204b6d93fd73457e4de3bd1554511712de4d2a7b8b6b9c8b0ac0a31e4e30d",
+    "data/w33_20261103_all_quartet_tunneling.json": "1e8a4745cd95c5dd089af15314eae30444fa9f2c24c26a5c7ce94112f5b4ee94",
+    "data/w33_20261102_chiral_surface_development.json": "a0514be5ea7d05c71c91bc76e20fbcf199e893efad39451d66b24ddea0004bc8",
+    "data/w33_20261102_deck_monodromy_network.json": "1a3e6f4bb9a06bfa8f7491097b7d60cc617b5bfcd8aa904828de4730d0628dbb",
+    "data/w33_20261103_deck_cocycle_symmetry_selection.json": "5fa7fb786d48b8f71fe5163baf44ff8d6b335c27c6a37886a09eeb2686f7df19",
+    "data/w33_20261103_vacuum_effective_quantum_audit.json": "691701bf728c6c42da93db2b95fc53e9d67057eb8a6e5e0862a38bbe3052e5fd"
+  },
+  "earlier_run": "Initial replay: all5 producers passed,25 tests passed and one wording-only test failed because it searched for a word absent from a metadata sentence. That check was replaced with a symbolic scaling-gradient calculation before this replay. No scientific certificate changed for that test repair.",
+  "independent_server": {
+    "status": "PASS_INDEPENDENT_SERVER_MODULAR_4X6_TUNNELING",
+    "geometry": "Independent coordinate-neighbor construction on the V8 server; no Python producer import",
+    "active_vertices": 18,
+    "edges": 36,
+    "subsets": 262144,
+    "checks": [
+      {
+        "prime": 1000000007,
+        "computed_residue": 223769066,
+        "certificate_residue": 223769066
+      },
+      {
+        "prime": 1000000009,
+        "computed_residue": 578613365,
+        "certificate_residue": 578613365
+      }
+    ],
+    "scope": "Two independent prime congruences corroborate the exact rational; not by themselves a uniqueness proof of that rational."
+  },
+  "generated_raw_sha256": {
+    "data/w33_20261103_changed_embedding_matter_completion.json": "4f9207dc4331c7c77bdc45408fe2ab4229a96b38e181b26cbe2ad8df63b14c10",
+    "data/w33_20261103_native_singlet_stabilization.json": "3ef4950261546503831f6e0fafa602b5c241fd3e3a894b973e5552597f720013",
+    "data/w33_20261103_native_qutrit_feedforward.json": "129a473b486f46af9075968bd6745d3ec0fbde7f15e1469ced8088c1c676e1f7",
+    "data/w33_20261103_kagome_tunneling_bounds.json": "8cc49ae966cbeba591dde521d83152126d8301e6d3978e97b120d080be83d02b",
+    "data/w33_20261103_deck_twist_interfaces.json": "da9b9c77cedc1c1f5edc919dcdb850242b4a117ec8236aa818ea50d545673895",
+    "data/w33_20261103_native_quantum_vacuum_displacement.json": "7fb5cfa9a8d493e2fb791d172adbaaca36ece2436a2d98b34ffe79569db9d00b"
+  },
+  "scope": "Five declared-model investigations with exact arithmetic and independent checks. Global repository conftest intentionally excluded; no all-repository test or completed TOE claim."
+}

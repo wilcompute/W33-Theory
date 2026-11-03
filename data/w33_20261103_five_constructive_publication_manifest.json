@@ -1,0 +1,132 @@
+{
+  "status": "VERIFIED_FIVE_CONSTRUCTIVE_NATIVE_FRONTS",
+  "utc": "2026-11-03T03:24:04.445261+00:00",
+  "integration_head": "60ae56bf344f561b17525c2d5a8a8b136cd1e2bf",
+  "artifact_raw_sha256": {
+    "analysis/w33_20261103_changed_embedding_matter_completion.py": "984f0d2913b4123cc3e26f4cff5c71c3b0655bb38fa42519aa40caaa25b97324",
+    "data/w33_20261103_changed_embedding_matter_completion.json": "4f9207dc4331c7c77bdc45408fe2ab4229a96b38e181b26cbe2ad8df63b14c10",
+    "analysis/w33_20261103_native_singlet_stabilization.py": "6b6d2d53969af2f31291b4eb0bc5679644ef113e87aa8f2f7a6b45d8f74d8843",
+    "data/w33_20261103_native_singlet_stabilization.json": "3ef4950261546503831f6e0fafa602b5c241fd3e3a894b973e5552597f720013",
+    "analysis/w33_20261103_native_qutrit_feedforward.py": "00653b94989e0af9b36e1a641a29591e9801d6ab924c097290133d93b2fe282c",
+    "data/w33_20261103_native_qutrit_feedforward.json": "129a473b486f46af9075968bd6745d3ec0fbde7f15e1469ced8088c1c676e1f7",
+    "analysis/w33_20261103_kagome_tunneling_bounds.py": "cb0d66c69d820f798e7208a265bb81dd01b7e6939d52890ec408321ac5f67048",
+    "data/w33_20261103_kagome_tunneling_bounds.json": "8cc49ae966cbeba591dde521d83152126d8301e6d3978e97b120d080be83d02b",
+    "analysis/w33_20261103_deck_twist_interfaces.py": "00446c78b649ea1881e5705b5747b5b4bbe2548c01010fa160dd19b06d38e004",
+    "data/w33_20261103_deck_twist_interfaces.json": "da9b9c77cedc1c1f5edc919dcdb850242b4a117ec8236aa818ea50d545673895",
+    "analysis/w33_20261103_native_quantum_vacuum_displacement.py": "51663e560db58f14da78b8aeb02d4de96b1b43501ff78e5d83298f4cb1bb7065",
+    "data/w33_20261103_native_quantum_vacuum_displacement.json": "7fb5cfa9a8d493e2fb791d172adbaaca36ece2436a2d98b34ffe79569db9d00b",
+    "analysis/w33_20261103_five_constructive_validation.py": "3d4c8dbbf1a445a30e24705a14edb06a95753b33e97ac5045720ab2327a3ffc3",
+    "data/w33_20261103_five_constructive_validation.json": "c982791873c61518ef1ffa063787f3510d973b12debb3365061109d8908bc8b2",
+    "tests/test_w33_20261103_five_constructive_fronts.py": "8a2e2e6b0be4fbdf09c151ac5870e7872a4d6b65c86e704ed406afa8cd5624e8",
+    "analysis/2026-11-03_five_constructive_fronts.md": "9e93ac7835223cf3d60e91c014d875338ee0915555ebe1da90ee155860ab6546",
+    "analysis/w33_20261103_kagome_server_crosscheck.js": "e033f523661b88cbd659157e56fec6c08bb8aa05563bf4b1d91168490b0d619f",
+    "data/w33_20261103_kagome_server_crosscheck.json": "7c21bd0c8b90f6efd333fa37e5e836c6e3301f8514761f95a7c564db180c102b",
+    "RESULTS_INDEX.md": "656d3e142bef77fa15e3348481201fa906f8c06c4a17eff4f4b6e21579cff55f",
+    "TOPICAL_ALIASES.md": "7893b6164853fc57999fff8d5c4cc65dbf75ce62336be4ce407db7853282e156",
+    "data/w33_20261103_five_constructive_guard_audit.json": "8d320c7bbfc1172878a8b875f96648ce0781f1d81f847db7ca0b2d9fa1c6e510"
+  },
+  "preserved_unrelated_raw_sha256": {
+    ".mcp.json": "12a6b5758cc12212fb7788cecc3d2f3e2e8e9660f9e45a98bdc46f0974e388b3",
+    "analysis/w33_pass10956_albert_spin8_halfspin_normalizer.py": "970484379ebad8825a7782fa58458988b9925862b05eb7f5dfbf723d763e5aef",
+    "data/w33_20261009_toe22_scale_nogo.json": "82dbb4a48d2f9f5c0631bc0912b380e18760c039336e7dd4c4801d7d80d1bfdc",
+    "data/w33_20261009_toe22_two_boson_quantum_selector.json": "8dc1270712e753a04cff78365537018a9f88bdaf693f1d1fe6e968022397a0ad",
+    "data/w33_20261009_toe26_e6_sector_charge_dynamics.json": "581dd36c156de2f22093635c4c7ea9c56173a2153860e88822b29d20ff83403e",
+    "data/w33_20261013_toe61_charge_gap.json": "1eec3c3cf0ae96c95ad483a1918c457fe843bac83c3c27fe4fc8d93a85fa3cc0",
+    "data/w33_pass10956_albert_spin8_halfspin_normalizer.json": "38f9662ad9d4b179d97c02a3ab72a0c3ccd90b5e9bb7910e092776350e93db5d",
+    "data/w33_pass11949_axiflavon_quality_fails.json": "4c41fc7de9d19ca15e672436df6f503896853fffad12c564a188d24fc37270ef",
+    "papers/photonic_hardware_atlas/main.tex": "c337c768dbf59701a5bcafae906903ad544a45aa36204b7c039f68ddb088b70d"
+  },
+  "unchanged_parent_science_artifacts": {
+    "analysis/w33_20261103_native_projector_holonomic_qutrit.py": "d7a8b5cf2f6eed21c726360277618eef3c3af89a7af414708b8fc561700a54d2",
+    "data/w33_20261103_native_projector_holonomic_qutrit.json": "82d204b6d93fd73457e4de3bd1554511712de4d2a7b8b6b9c8b0ac0a31e4e30d",
+    "analysis/w33_20261103_vacuum_effective_quantum_audit.py": "61d4ec30f535f99937d4df75cba9f0e5ba060e557bedde49feb1c9f2c0b4529b",
+    "data/w33_20261103_vacuum_effective_quantum_audit.json": "691701bf728c6c42da93db2b95fc53e9d67057eb8a6e5e0862a38bbe3052e5fd",
+    "analysis/w33_20261103_wd5_native_klein_intertwiner.py": "128618fa5fc2c1158dc04093e2b3a4b8b6af617c592cb9075a1bd767038e0889",
+    "data/w33_20261103_wd5_native_klein_intertwiner.json": "2332183cce20cb114ca9d035fa97838aad15d3b3e4b9dad269b506ffe7707bcc",
+    "analysis/w33_20261103_all_quartet_tunneling.py": "0eccb518dd2ce094e71b524b4080d30a15140cf7f25e5db616a66e3652eb05a5",
+    "data/w33_20261103_all_quartet_tunneling.json": "1e8a4745cd95c5dd089af15314eae30444fa9f2c24c26a5c7ce94112f5b4ee94",
+    "analysis/w33_20261103_induced_cubic_compression.py": "af3cd25c66a4d7473b8b37ebd06103d73c5b818a7b2528c1250e42f67bda77f8",
+    "data/w33_20261103_induced_cubic_compression.json": "55dbacf828cf431c1902959210a2950e1cc4a5b575520efe97c0e9cc9fcf3b5e",
+    "analysis/w33_20261103_deck_cocycle_symmetry_selection.py": "6068034a868aefb82d4c2d5f8504cae3ab13efa03ae608231cac46ec8fa8f4d5",
+    "data/w33_20261103_deck_cocycle_symmetry_selection.json": "5fa7fb786d48b8f71fe5163baf44ff8d6b335c27c6a37886a09eeb2686f7df19",
+    "analysis/w33_20261103_gauge_global_form_audit.py": "fcbb2fb47096b1fa2e385ba32caefb091a1f7859ffffaa8ef1c285bfae54f144",
+    "data/w33_20261103_gauge_global_form_audit.json": "d4d4050929f0c6b61d38aca5184c8e67047ffe04383e63d68afaa9fbbd412f98",
+    "analysis/w33_20261103_clifford_yang_monopole_controls.py": "5b4835eeca40788f88f9818ce6f070c382b4ba4ea5ac0f4e2a82bf0564a208f4",
+    "data/w33_20261103_clifford_yang_monopole_controls.json": "6e251a430285067d92402321fcadb4c6823421edb86fd46024faa6b662c26225",
+    "analysis/w33_20261103_native_eight_validation.py": "088718ccc31e6b81b2556504347e4a8715d5e5b6aaae9c6248dc944428b26350",
+    "data/w33_20261103_native_eight_validation.json": "5e20f4939ce0ef393133ad310695339b68798580f25f376f1a290dd79aaddeee",
+    "analysis/2026-11-03_native_eight_investigations.md": "cb8fe8b18cf5dd84b463898a6c170fc12cbae66490f7484c969dbea20c06b2bd",
+    "tests/test_w33_20261103_native_eight_investigations.py": "eaf66d4cc4165d394b37937dc906318b31b4a0d97eb6dd2e1beea07f8af920fa",
+    "data/w33_20261103_native_eight_guard_audit.json": "3d6675eaba3416970ab92afa2bc5c0feb217648434d7c6af5b1da3ac577edd3d",
+    "analysis/w33_20261103_product_cover_coupling_tradeoff.py": "552f0af20f6aa6dde1a6ac48d14a2ccda079eeabb6983d655d5955ed8f3b0bb1",
+    "data/w33_20261103_product_cover_coupling_tradeoff.json": "cc52d8a97c3b0430ba07fc839b35a2e6b10b7335d583b6667c9009d39178d434",
+    "analysis/w33_20261103_product_cover_independent_gap.g": "57d8e0fd17743a8fe6778210a0ab21080d9432113a2945f311253f0acb7fec9e",
+    "data/w33_20261103_product_cover_gap_input.g": "b5da8bc548d19bc030f555b2a2b5daf38377b3ccec8fca7c4d3c775f3e82b9dd",
+    "data/w33_20261103_product_cover_gap_verification.json": "d6034d74fa57fbc8d1755a6c6c0c6d003760bf1fa7d1cc264b16d20099e39182",
+    "data/w33_20261103_product_cover_validation.json": "396fdc5217400ebf8ccb1bc074e8a001d61679b32b80bd3c271ec719ebd8ebe9",
+    "analysis/2026-11-03_product_cover_coupling_tradeoff.md": "17e16119cd5030d1b3bbe57989bfbd0af7def40cfe689de6c19aa203556fa4fc",
+    "data/w33_20261103_product_cover_guard_audit.json": "18c4d7b0a2a0693f162c7b71f43d4923e789b6b82a30569ecd496169631e78a6"
+  },
+  "parent_input_raw_sha256": {
+    "data/w33_20261102_clifford_native_cubic_repair.json": "37006d1f2bead76d4dc98204e7eda2d4af69485621368563074a5bbb29cee7b6",
+    "data/w33_20261103_native_projector_holonomic_qutrit.json": "82d204b6d93fd73457e4de3bd1554511712de4d2a7b8b6b9c8b0ac0a31e4e30d",
+    "data/w33_20261103_all_quartet_tunneling.json": "1e8a4745cd95c5dd089af15314eae30444fa9f2c24c26a5c7ce94112f5b4ee94",
+    "data/w33_20261102_chiral_surface_development.json": "a0514be5ea7d05c71c91bc76e20fbcf199e893efad39451d66b24ddea0004bc8",
+    "data/w33_20261102_deck_monodromy_network.json": "1a3e6f4bb9a06bfa8f7491097b7d60cc617b5bfcd8aa904828de4730d0628dbb",
+    "data/w33_20261103_deck_cocycle_symmetry_selection.json": "5fa7fb786d48b8f71fe5163baf44ff8d6b335c27c6a37886a09eeb2686f7df19",
+    "data/w33_20261103_vacuum_effective_quantum_audit.json": "691701bf728c6c42da93db2b95fc53e9d67057eb8a6e5e0862a38bbe3052e5fd"
+  },
+  "validation": "PASS_SIX_REGENERATED_PRODUCERS_AND_INDEPENDENT_PYTEST",
+  "pytest": "30 passed; actual isolated --noconftest run retained",
+  "independent_server": {
+    "status": "PASS_INDEPENDENT_SERVER_MODULAR_4X6_TUNNELING",
+    "geometry": "Independent coordinate-neighbor construction on the V8 server; no Python producer import",
+    "active_vertices": 18,
+    "edges": 36,
+    "subsets": 262144,
+    "checks": [
+      {
+        "prime": 1000000007,
+        "computed_residue": 223769066,
+        "certificate_residue": 223769066
+      },
+      {
+        "prime": 1000000009,
+        "computed_residue": 578613365,
+        "certificate_residue": 578613365
+      }
+    ],
+    "scope": "Two independent prime congruences corroborate the exact rational; not by themselves a uniqueness proof of that rational."
+  },
+  "all_guards_passed": false,
+  "guard_limitations": [
+    {
+      "id": "tag-540-check",
+      "exit_code": 1
+    },
+    {
+      "id": "pass-namespace-collision-guard",
+      "exit_code": 1
+    }
+  ],
+  "results": {
+    "mixed_invariant_dimension": 1,
+    "anomaly_free_added_matter": true,
+    "stabilized_fields": 29,
+    "Hessian_rank": 24,
+    "physical_chiral_flat_directions": 0,
+    "deterministic_corrected_qutrit_branches": 81,
+    "ground_code_distance": 1,
+    "kagome_larger_torus": [
+      4,
+      6
+    ],
+    "diagonal_interface_cochain_data": 6,
+    "ambient_diagonal_interface_classes": 5,
+    "exact_effective_quantum_stationarity_equations": 8,
+    "eliminated_scale_polynomial_degree": 13,
+    "quantum_displacement_series_order": 2
+  },
+  "scope": "Changed embedding, explicit added mass/scale inputs, exact holomorphic EFT critical curve and second-order quantum displacement, leading-order thermodynamic bound, ideal feedforward and supplied DW interface data. No complete TOE, full fixed-h thermodynamic proof, global UV solution, full-interface classification or completed week/PDF reading claim.",
+  "publication": "Normal master push with explicit owned files; Git CLI fallback because GitKraken unavailable."
+}

@@ -1,0 +1,72 @@
+{
+  "status": "PASS_NATIVE_29_FIELD_LOCAL_STABILIZATION",
+  "model": "Original native27 in changed SU4 embedding plus two gauge singlet chiral multiplets S,T; no extra16-matter extension assumed.",
+  "superpotential": "-x0*x10*x13 + x0*x11*x12 + x0*x14*x9 + x0*x15*x22 - x0*x16*x21 - x1*x12*x8 + x1*x13*x7 - x1*x14*x6 + x1*x15*x23 - x1*x17*x21 + x10*x17*x25 + x10*x17 - x10*x19*x23 + x10*x2*x8 + 3*x10*x23 - x10*x4*x6 + x11*x17*x26 + 2*x11*x17 - x11*x2*x7 - x11*x20*x23 + 5*x11*x23 + x11*x3*x6 + x12*x18*x25 + x12*x18 - x12*x19*x24 + 3*x12*x24 + x12*x4*x5 + x13*x18*x26 + 2*x13*x18 - x13*x20*x24 + 5*x13*x24 - x13*x3*x5 + x14*x19*x26 + x14*x2*x5 - x14*x20*x25 + x15*x2*x24 + x15*x25*x3 + x15*x26*x4 + x15*x3 + 2*x15*x4 + x16*x23*x5 + x16*x24*x6 + x16*x25*x7 + x16*x26*x8 + x16*x7 + 2*x16*x8 - x17*x22*x5 + x17*x24*x9 - x18*x2*x21 - x18*x22*x6 - x18*x23*x9 - x19*x21*x3 - x19*x22*x7 + x19*x27 - x20*x21*x4 - x20*x22*x8 + x20*x25 + 3*x21*x3 + 5*x21*x4 + 3*x22*x7 + 5*x22*x8 + x26*x28 - x27 - x28 - x3*x8*x9 + x4*x7*x9",
+  "quadratic_mu_matrix": [
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      5
+    ]
+  ],
+  "deformation": "sum_i (u_i p_i+2 u_i q_i+3 v_i p_i+5 v_i q_i) +u5 v4+ S(u4-1)+T(v5-1), i=0..3; coefficients expressed in supplied common mass units.",
+  "dimensionful_restore": "u5 v4 coefficient m0; entries of mu have mass dimension1; multipliers kappaS*S*(u4-vscale)+kappaT*T*(v5-vscale), kappas dimension1. Example uses vscale=m0=kappas=1 and mu=[[1,2],[3,5]].",
+  "VEV_model": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+  ],
+  "all_F_zero": true,
+  "D_flat_witness": "chi chi-dagger=I4; nonzero u4,v5 are SU4 singlets, so every traceless Hermitian SU4 moment vanishes.",
+  "exact_Hessian_rank": 24,
+  "Hessian_kernel_dimension": 5,
+  "complex_gauge_tangent_rank": 5,
+  "Hessian_kernel_equals_complex_gauge_orbit": true,
+  "charged_Hessian_rank": 16,
+  "charged_Hessian_determinant": 256,
+  "unbroken_gauge_group": "USp4",
+  "local_physical_chiral_flat_directions": 0,
+  "invariance": "All15 sl4 infinitesimal variations of every new term vanish identically; terms are SU4 invariant and hence invariant under the actual seven Clifford generators.",
+  "classical_scope": "At F=D=0 the scalar potential is nonnegative and the quotient chiral Hessian is nonsingular. This is a locally isolated classical supersymmetric vacuum modulo gauge. Unbroken gauge multiplets remain; no classification of other vacua.",
+  "quantum_completion": {
+    "assumptions": "All chiral masses and Higgs scale parametrically above the strong scale, standard4D N=1 Sp dynamics, nonsingular local gauge quotient.",
+    "low_energy": "pure USp4 SYM with dual Coxeter number3",
+    "gaugino_branches": 3,
+    "conclusion": "Holomorphic nondegeneracy permits a small nonperturbative displacement of each local classical branch in the weak-coupling regime; a calculation of the full finite-coupling UV vacuum is not supplied.",
+    "mass_deformed_mesonic_benchmark": "W=2 sqrt(Lambda_low^8/M)+m M +X(t-v); finite critical mesons obey M^3=Lambda_low^8/m^2. X balances the t derivative. Three solutions for nonzero parameters, with W_MM=3m/(2M) nonzero.",
+    "meson_critical_polynomial": "m^2 M^3-Lambda_low^8",
+    "same_as_native_pure_cubic": false
+  },
+  "ownership": "Nov2 conditional vacuum and Nov3 exact F-flat chart own the undeformed branch and its ADS obstruction. Multiplier stabilization and Sp SQCD mass deformations are established methods; explicit native29 benchmark checked here.",
+  "reference": "https://arxiv.org/abs/hep-th/9505006",
+  "boundary": "The scale and mass matrix are added inputs. This does not derive the physical vacuum, measured constants, Standard Model, gravity or a TOE."
+}

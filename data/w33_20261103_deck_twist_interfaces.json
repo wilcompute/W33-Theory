@@ -1,0 +1,90 @@
+{
+  "status": "PASS_EXPLICIT_NONINVERTIBLE_DECK_TWIST_INTERFACES",
+  "bulk_twists": [
+    120,
+    127
+  ],
+  "ratio_code": 7,
+  "maximal_diagonal_subgroup": [
+    0,
+    3,
+    5,
+    6
+  ],
+  "character": "chi(g)=g0+g1+g2 mod2; H=ker chi",
+  "beta_formula": "For a=(x xor y,x,y), b=(u xor v,u,v): beta(a,b)=i^(x*v)*(-1)^(x*y*u+y*u*v)",
+  "beta_i_exponents": [
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      2
+    ],
+    [
+      0,
+      2,
+      1,
+      1
+    ]
+  ],
+  "exact_coboundary_checks": 64,
+  "folded_group": "C2^3 x C2^3 with associator omega120 times inverse(omega127)",
+  "algebra": "A=sum_(h in H) e_(h,h); e_h e_k=beta(h,k)e_(h xor k). Exact delta beta equals folded associator on diagonal H.",
+  "algebra_dimension_in_input_pointed_category": 4,
+  "Lagrangian_full_center_dimension_in_folded_bulk": 64,
+  "full_diagonal_obstruction": "Every g outside H has ratio omega(g,g,g)=-1; a normalized U1 coboundary on its C2 subgroup equals+1 on(g,g,g). Thus no subgroup containing g admits this diagonal interface.",
+  "admissible_diagonal_subgroups": [
+    [
+      0
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      0,
+      3,
+      5,
+      6
+    ]
+  ],
+  "diagonal_subgroup_cochain_gauge_data": 6,
+  "ambient_equivalence_classes_among_diagonal_subgroups": 5,
+  "torsion": "On H, multiply beta by zeta(a,b)=(-1)^(x_a*y_b). Its commutator on3,5 is-1, so these are two distinct cochain-gauge choices. They are NOT distinct after ambient folded-group twisted conjugation: conjugation by(1,0) multiplies by a slant2-cocycle in the nontrivial H2 class. The explicit1-cochain below identifies its ratio with zeta.",
+  "ambient_conjugation_element": [
+    1,
+    0
+  ],
+  "ambient_conjugation_ratio_gauge_i_exponents": {
+    "0": 0,
+    "3": 0,
+    "5": 0,
+    "6": 0
+  },
+  "no_invertible_interface": "Bulk topological spin multisets differ, so these ribbon categories cannot be equivalent; an invertible topological interface is excluded.",
+  "native_geometry": "H is exactly the free translation V4 in the native16-vertex deck action. The four branch-inertia elements1,2,4,7 lie outside H and each fix4 vertices. Actual exported permutations checked as a set.",
+  "source_recent": "https://arxiv.org/html/2610.36029v1",
+  "source_classification": "https://arxiv.org/abs/1706.03611",
+  "ownership": "Prior deck-monodromy and cocycle-symmetry producers own the covering, meridians and classes120/127. The subgroup/cochain construction is standard; this explicit cochain and native ramification connection are the present audit.",
+  "boundary": "Mathematical DW interface data for extra supplied topological phases. A4-invariant bulk classes and stable H do not by themselves establish an A4-equivariant interface: defect coherence is not constructed. No native Hamiltonian or laboratory phase inferred."
+}
