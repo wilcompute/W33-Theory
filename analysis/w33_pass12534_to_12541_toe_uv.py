@@ -6,6 +6,8 @@
 12537 -- NNLO: lambda(M_Pl) = 0 needs M_t = 171.04 +- 0.37; pulls 3.0, 2.1, 1.2 sigma by measurement.
 12538 -- no-fit gravity: an apparent hit at M_t = 172.74 is killed by scheme dependence; Lambda* must be known to about 1%.
 12539 -- no-AdS3: at most 2 extra massless bosonic dof.
+12540 -- regulator spread at one scheme: Lambda* 91% for SM matter, exponents 5% and 0.4%: 1% in Lambda* is not reachable.
+12541 -- DESI: lam = sqrt 2 excluded about 4.4 sigma, sqrt(2/3) about 1.5 sigma; three generations not selected.
 """
 
 import json
@@ -66,6 +68,19 @@ def main():
         dd = {round(x["m_KK_eV"], 4): x for x in ex["dark_dimension_bulk_nuR"]}
         checks["12539: bulk right-handed tower leaves the m1 bound near 7.65 meV for m_KK >= 0.03 eV and tightens it below that; graviton tower alone has AdS3 at m1 = 0 at every m_KK"] = (
             abs(dd[0.1]["m1_bound_meV"] - 7.65) < 0.05 and abs(dd[0.03]["m1_bound_meV"] - 7.65) < 0.05 and dd[0.001]["m1_bound_meV"] < dd[0.01]["m1_bound_meV"] < 7.65 and all(x["AdS3_at_m1_0"] for x in ex["dark_dimension_graviton_only"]))
+    fr, qd, ng = load("frg_regulators.json"), load("quintessence_desi.json"), load("ngen_scan.json")
+    res.update(frg=fr, quintessence=qd, ngen=ng)
+    pu = fr["pure"]["('opt',)"][0]
+    checks["12540: control: pure gravity optimised g* = 0.7073, lam* = 0.1932; SM optimised within 5% of Eichhorn-Held's (3.29, -4.51)"] = abs(pu["g"] - 0.7073) < 2e-3 and abs(pu["Lam"] - 0.1932) < 1e-3 and abs(fr["SM"]["('opt',)"][0]["g"] / 3.29 - 1) < 0.05 and abs(fr["SM"]["('opt',)"][0]["Lam"] / -4.51 - 1) < 0.05
+    su = fr["summary"]["SM"]
+    checks["12540: SM matter over 5 regulators: Lambda* spread near 91%, far above 1%"] = su["n"] == 5 and abs(su["spread_frac_Lam"] - 0.91) < 0.02
+    th = [sorted(abs(complex(str(x).replace(" ", ""))) for x in v[0]["theta"]) for k_, v in fr["SM"].items()]
+    checks["12540: SM critical exponents stable: theta_1 within 2.0-2.2 and theta_2 within 3.9-4.0 for all regulators"] = all(2.0 < t[0] < 2.2 and 3.9 < t[1] < 4.0 for t in th)
+    lc, cp = qd["LCDM"], qd["CPL"]
+    checks["12541: control: LCDM Omega_m near 0.30; w0wa near the published -0.42, -1.75; improves LCDM"] = abs(lc["om"] - 0.303) < 0.005 and abs(cp["w0"] + 0.42) < 0.21 and abs(cp["wa"] + 1.75) < 0.58 and cp["delta_chi2"] < -5
+    q_ = {round(x["lam"], 3): x for x in qd["quintessence"]}
+    checks["12541: Delta chi2 rises monotonically with lam, about +2.2 at 0.816 and +19.7 at 1.414; quintessence never beats LCDM"] = abs(q_[0.816]["delta_chi2_vs_LCDM"] - 2.19) < 0.1 and abs(q_[1.414]["delta_chi2_vs_LCDM"] - 19.66) < 0.2 and all(x["delta_chi2_vs_LCDM"] > 0 for x in qd["quintessence"]) and all(a_["delta_chi2_vs_LCDM"] < b_["delta_chi2_vs_LCDM"] for a_, b_ in zip(qd["quintessence"], qd["quintessence"][1:]))
+    checks["12541: generations: the constraints allow 3, 4, 5 and do not select 3"] = ng["allowed_by_all"] == [3, 4, 5]
     checks = {x: bool(v) for x, v in checks.items()}
     res["checks"] = checks
     res["all_checks_pass"] = all(checks.values())

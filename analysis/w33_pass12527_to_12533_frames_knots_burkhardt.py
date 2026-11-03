@@ -104,6 +104,9 @@ def main():
         tm["module_dimension"] == 5 and tm["module_invariant_under_all_R"] and len(tm["displaced_parities_acting_as_plus_one_on_module"]) == 1 and all(tm["centre_commutes_with_all_Pi"]) and tm["centre_parity_plus_one_dimension"] == 5)
     checks["12537: exactly the 5 non-crossing bipartite matchings are lines; 2 codewords contain all 5; colour-size census of the 40 points"] = (
         cp["matchings"]["bipartite"] == 6 and cp["matchings"]["bipartite_are_lines"] == 5 and cp["matchings"]["bipartite_noncrossing"] == 5 and cp["codewords_by_number_of_matching_lines"]["5"] == 2 and sum(cp["points_by_colour_class_sizes"].values()) == 40)
+    tr = load("codeword_triangle.json"); res["triangle"] = tr
+    checks["12537: triangles of codewords: one orbit of 720, stabiliser 36, from 2160 pairs sharing 5 lines; caps stabiliser order 12"] = (
+        tr["triples_summing_to_zero"] == 720 and tr["triangle_orbit_size"] == 720 and tr["triangle_stabiliser_order"] == 36 and tr["pairwise_intersection_counts"]["5"] == 2160 and tr["caps_stabiliser_order"] == 12)
     checks = {k: bool(v) for k, v in checks.items()}
     res["checks"] = checks
     res["all_checks_pass"] = all(checks.values())

@@ -875,6 +875,592 @@
       }
     ]
   },
+  "frg": {
+    "pure": {
+      "('opt',)": [
+        {
+          "g": 0.70732,
+          "Lam": 0.1932,
+          "gLam": 0.136654224,
+          "eta": -1.9999895973592872,
+          "theta": [
+            "(1.475-3.043j)",
+            "(1.475+3.043j)"
+          ]
+        }
+      ],
+      "('exp', 1)": [
+        {
+          "g": 0.2723,
+          "Lam": 0.35904,
+          "gLam": 0.097766592,
+          "eta": -2.000016765810305,
+          "theta": [
+            "(1.422-4.307j)",
+            "(1.422+4.307j)"
+          ]
+        }
+      ],
+      "('exp', 2)": [
+        {
+          "g": 0.40666,
+          "Lam": 0.33738,
+          "gLam": 0.13719895080000002,
+          "eta": -2.0000249914656645,
+          "theta": [
+            "(1.549-3.101j)",
+            "(1.549+3.101j)"
+          ]
+        }
+      ],
+      "('exp', 3)": [
+        {
+          "g": 0.41975,
+          "Lam": 0.34307,
+          "gLam": 0.1440036325,
+          "eta": -2.0000237181905876,
+          "theta": [
+            "(1.646-3.142j)",
+            "(1.646+3.142j)"
+          ]
+        }
+      ],
+      "('exp', 5)": [
+        {
+          "g": 0.39695,
+          "Lam": 0.36221,
+          "gLam": 0.1437792595,
+          "eta": -1.9999600354337093,
+          "theta": [
+            "(1.92-3.427j)",
+            "(1.92+3.427j)"
+          ]
+        }
+      ]
+    },
+    "SM": {
+      "('opt',)": [
+        {
+          "g": 3.21724,
+          "Lam": -4.39314,
+          "gLam": -14.133785733599998,
+          "eta": -1.999999404405938,
+          "theta": [
+            "(2.083+0j)",
+            "(3.926+0j)"
+          ]
+        }
+      ],
+      "('exp', 1)": [
+        {
+          "g": 1.66389,
+          "Lam": -10.88922,
+          "gLam": -18.1184642658,
+          "eta": -2.0000047457224075,
+          "theta": [
+            "(2.033+0j)",
+            "(3.918+0j)"
+          ]
+        }
+      ],
+      "('exp', 2)": [
+        {
+          "g": 1.66982,
+          "Lam": -7.4787,
+          "gLam": -12.488082834,
+          "eta": -1.9999975176944031,
+          "theta": [
+            "(2.132+0j)",
+            "(3.916+0j)"
+          ]
+        }
+      ],
+      "('exp', 3)": [
+        {
+          "g": 1.65283,
+          "Lam": -8.56937,
+          "gLam": -14.1637118171,
+          "eta": -2.00000293408849,
+          "theta": [
+            "(2.139+0j)",
+            "(3.91+0j)"
+          ]
+        }
+      ],
+      "('exp', 5)": [
+        {
+          "g": 1.68307,
+          "Lam": -12.34692,
+          "gLam": -20.780730644400002,
+          "eta": -1.999998998444907,
+          "theta": [
+            "(2.112+0j)",
+            "(3.913+0j)"
+          ]
+        }
+      ]
+    },
+    "SM_3nuR": {
+      "('opt',)": [
+        {
+          "g": 4.17995,
+          "Lam": -6.23769,
+          "gLam": -26.073232315499997,
+          "eta": -1.9999986245172054,
+          "theta": [
+            "(2.099+0j)",
+            "(3.949+0j)"
+          ]
+        }
+      ],
+      "('exp', 1)": [
+        {
+          "g": 1.89872,
+          "Lam": -13.56629,
+          "gLam": -25.7585861488,
+          "eta": -2.0000036697281605,
+          "theta": [
+            "(2.043+0j)",
+            "(3.937+0j)"
+          ]
+        }
+      ],
+      "('exp', 2)": [
+        {
+          "g": 1.86637,
+          "Lam": -9.12226,
+          "gLam": -17.025512396200003,
+          "eta": -1.9999968133888801,
+          "theta": [
+            "(2.147+0j)",
+            "(3.934+0j)"
+          ]
+        }
+      ],
+      "('exp', 3)": [
+        {
+          "g": 1.82351,
+          "Lam": -10.32364,
+          "gLam": -18.825260776399997,
+          "eta": -1.9999958909942233,
+          "theta": [
+            "(2.158+0j)",
+            "(3.926+0j)"
+          ]
+        }
+      ],
+      "('exp', 5)": [
+        {
+          "g": 1.84102,
+          "Lam": -14.76426,
+          "gLam": -27.1812979452,
+          "eta": -1.999996597968819,
+          "theta": [
+            "(2.128+0j)",
+            "(3.925+0j)"
+          ]
+        }
+      ]
+    },
+    "SM_3nuR_axion_dm": {
+      "('opt',)": [
+        {
+          "g": 5.25753,
+          "Lam": -7.65454,
+          "gLam": -40.2439736862,
+          "eta": -1.999999613954241,
+          "theta": [
+            "(2.113+0j)",
+            "(3.956+0j)"
+          ]
+        }
+      ],
+      "('exp', 1)": [
+        {
+          "g": 2.1035,
+          "Lam": -14.64438,
+          "gLam": -30.804453329999998,
+          "eta": -1.999998767756243,
+          "theta": [
+            "(2.048+0j)",
+            "(3.939+0j)"
+          ]
+        }
+      ],
+      "('exp', 2)": [
+        {
+          "g": 2.04875,
+          "Lam": -9.75566,
+          "gLam": -19.986908425000003,
+          "eta": -1.9999974309781623,
+          "theta": [
+            "(2.159+0j)",
+            "(3.935+0j)"
+          ]
+        }
+      ],
+      "('exp', 3)": [
+        {
+          "g": 1.98931,
+          "Lam": -10.97032,
+          "gLam": -21.823367279199996,
+          "eta": -1.9999959391889184,
+          "theta": [
+            "(2.172+0j)",
+            "(3.926+0j)"
+          ]
+        }
+      ],
+      "('exp', 5)": [
+        {
+          "g": 2.00294,
+          "Lam": -15.6395,
+          "gLam": -31.324980130000004,
+          "eta": -2.000001185911069,
+          "theta": [
+            "(2.14+0j)",
+            "(3.924+0j)"
+          ]
+        }
+      ]
+    },
+    "summary": {
+      "pure": {
+        "n": 5,
+        "g": [
+          0.2723,
+          0.70732
+        ],
+        "Lam": [
+          0.1932,
+          0.36221
+        ],
+        "gLam": [
+          0.097766592,
+          0.1440036325
+        ],
+        "spread_Lam": 0.16900999999999997,
+        "spread_frac_Lam": 0.5298451313561978,
+        "spread_frac_gLam": 0.35059792285447794
+      },
+      "SM": {
+        "n": 5,
+        "g": [
+          1.65283,
+          3.21724
+        ],
+        "Lam": [
+          -12.34692,
+          -4.39314
+        ],
+        "gLam": [
+          -20.780730644400002,
+          -12.488082834
+        ],
+        "spread_Lam": 7.953780000000001,
+        "spread_frac_Lam": 0.9105154044373113,
+        "spread_frac_gLam": 0.5203407915571263
+      },
+      "SM_3nuR": {
+        "n": 5,
+        "g": [
+          1.82351,
+          4.17995
+        ],
+        "Lam": [
+          -14.76426,
+          -6.23769
+        ],
+        "gLam": [
+          -27.1812979452,
+          -17.025512396200003
+        ],
+        "spread_Lam": 8.52657,
+        "spread_frac_Lam": 0.7892905450313565,
+        "spread_frac_gLam": 0.442079124516372
+      },
+      "SM_3nuR_axion_dm": {
+        "n": 5,
+        "g": [
+          1.98931,
+          5.25753
+        ],
+        "Lam": [
+          -15.6395,
+          -7.65454
+        ],
+        "gLam": [
+          -40.2439736862,
+          -19.986908425000003
+        ],
+        "spread_Lam": 7.98496,
+        "spread_frac_Lam": 0.6805626581026994,
+        "spread_frac_gLam": 0.7024742627159145
+      }
+    }
+  },
+  "quintessence": {
+    "LCDM": {
+      "chi2": 16.266395002082096,
+      "om": 0.30140927189437217,
+      "h": 0.6836969217783772
+    },
+    "CPL": {
+      "chi2": 7.3433198712314764,
+      "om": 0.34997919580504266,
+      "h": 0.6387521711201837,
+      "w0": -0.45349347513250615,
+      "wa": -1.6193432250865079,
+      "delta_chi2": -8.92307513085062,
+      "published_w0": -0.42,
+      "published_wa": -1.75
+    },
+    "quintessence": [
+      {
+        "lam": 0.2,
+        "chi2": 16.303723772522034,
+        "delta_chi2_vs_LCDM": 0.0373287704399381,
+        "om": 0.30221433353514066,
+        "h": 0.6827038103303756,
+        "w0": -0.9939208744815328,
+        "wa_approx": -0.009225589753661279
+      },
+      {
+        "lam": 0.4,
+        "chi2": 16.47528192384369,
+        "delta_chi2_vs_LCDM": 0.20888692176159296,
+        "om": 0.3046206499746423,
+        "h": 0.6797775688851799,
+        "w0": -0.975745680701233,
+        "wa_approx": -0.03666325518540492
+      },
+      {
+        "lam": 0.6,
+        "chi2": 17.007360602550357,
+        "delta_chi2_vs_LCDM": 0.740965600468261,
+        "om": 0.3086633193116359,
+        "h": 0.6749289400053532,
+        "w0": -0.945658983799551,
+        "wa_approx": -0.08158902181880223
+      },
+      {
+        "lam": 0.7,
+        "chi2": 17.526923516853422,
+        "delta_chi2_vs_LCDM": 1.2605285147713268,
+        "om": 0.3114052388072596,
+        "h": 0.6717325675886825,
+        "w0": -0.9262540380955566,
+        "wa_approx": -0.11022974267423158
+      },
+      {
+        "lam": 0.816,
+        "chi2": 18.45870721958841,
+        "delta_chi2_vs_LCDM": 2.1923122175063128,
+        "om": 0.31495592115307225,
+        "h": 0.6675422295359894,
+        "w0": -0.9001426962284241,
+        "wa_approx": -0.14831304634422637
+      },
+      {
+        "lam": 1.0,
+        "chi2": 21.01198025016811,
+        "delta_chi2_vs_LCDM": 4.745585248086016,
+        "om": 0.3220980265245307,
+        "h": 0.6594874314167538,
+        "w0": -0.8511343425311794,
+        "wa_approx": -0.2183618733649786
+      },
+      {
+        "lam": 1.2,
+        "chi2": 26.113761449178128,
+        "delta_chi2_vs_LCDM": 9.847366447096032,
+        "om": 0.3318167606621426,
+        "h": 0.6489289563176132,
+        "w0": -0.7877392972436876,
+        "wa_approx": -0.3059139746985622
+      },
+      {
+        "lam": 1.414,
+        "chi2": 35.925688458778,
+        "delta_chi2_vs_LCDM": 19.659293456695902,
+        "om": 0.34464452342109875,
+        "h": 0.6356496301293956,
+        "w0": -0.7089856033000671,
+        "wa_approx": -0.4091977356202028
+      },
+      {
+        "lam": 1.7,
+        "chi2": 61.13000365893687,
+        "delta_chi2_vs_LCDM": 44.86360865685478,
+        "om": 0.36660891335925583,
+        "h": 0.6146966087477745,
+        "w0": -0.5881946666689185,
+        "wa_approx": -0.5535588489593173
+      }
+    ]
+  },
+  "ngen": {
+    "rows": [
+      {
+        "N_g": 0,
+        "b3": -11.0,
+        "b2": -7.166666666666666,
+        "QCD_AF": true,
+        "SU2_AF": true,
+        "nonperturbative_below_1e19_at": null,
+        "gY": 0.3608340839855296,
+        "g2": 0.4127501248731865,
+        "g3": 0.40343976206416043,
+        "lam_at_top": -0.1295420050798378,
+        "dona_II": true,
+        "dona_II_nuR": true,
+        "dona_Ia": true,
+        "dona_Ia_nuR": true,
+        "CP_violation_allowed": false
+      },
+      {
+        "N_g": 1,
+        "b3": -9.666666666666666,
+        "b2": -5.833333333333333,
+        "QCD_AF": true,
+        "SU2_AF": true,
+        "nonperturbative_below_1e19_at": null,
+        "gY": 0.3894920084480294,
+        "g2": 0.4378406614577022,
+        "g3": 0.4266367691364575,
+        "lam_at_top": -0.08469183896684553,
+        "dona_II": true,
+        "dona_II_nuR": true,
+        "dona_Ia": true,
+        "dona_Ia_nuR": true,
+        "CP_violation_allowed": false
+      },
+      {
+        "N_g": 2,
+        "b3": -8.333333333333334,
+        "b2": -4.5,
+        "QCD_AF": true,
+        "SU2_AF": true,
+        "nonperturbative_below_1e19_at": null,
+        "gY": 0.42629487564072965,
+        "g2": 0.46815935348932763,
+        "g3": 0.4543381626127297,
+        "lam_at_top": -0.04534860734008943,
+        "dona_II": true,
+        "dona_II_nuR": true,
+        "dona_Ia": true,
+        "dona_Ia_nuR": true,
+        "CP_violation_allowed": false
+      },
+      {
+        "N_g": 3,
+        "b3": -7.0,
+        "b2": -3.166666666666666,
+        "QCD_AF": true,
+        "SU2_AF": true,
+        "nonperturbative_below_1e19_at": null,
+        "gY": 0.4760200795975569,
+        "g2": 0.5058229372541333,
+        "g3": 0.48821278272553414,
+        "lam_at_top": -0.011023984345531644,
+        "dona_II": true,
+        "dona_II_nuR": true,
+        "dona_Ia": true,
+        "dona_Ia_nuR": true,
+        "CP_violation_allowed": true
+      },
+      {
+        "N_g": 4,
+        "b3": -5.666666666666667,
+        "b2": -1.833333333333333,
+        "QCD_AF": true,
+        "SU2_AF": true,
+        "nonperturbative_below_1e19_at": null,
+        "gY": 0.5485953816684811,
+        "g2": 0.5543860853436667,
+        "g3": 0.530942223934096,
+        "lam_at_top": 0.01900965782942038,
+        "dona_II": true,
+        "dona_II_nuR": true,
+        "dona_Ia": true,
+        "dona_Ia_nuR": true,
+        "CP_violation_allowed": true
+      },
+      {
+        "N_g": 5,
+        "b3": -4.333333333333334,
+        "b2": -0.5,
+        "QCD_AF": true,
+        "SU2_AF": true,
+        "nonperturbative_below_1e19_at": null,
+        "gY": 0.6695044023418827,
+        "g2": 0.6204086203832316,
+        "g3": 0.5871737610226084,
+        "lam_at_top": 0.04633640277295159,
+        "dona_II": true,
+        "dona_II_nuR": true,
+        "dona_Ia": false,
+        "dona_Ia_nuR": false,
+        "CP_violation_allowed": true
+      },
+      {
+        "N_g": 6,
+        "b3": -3.0,
+        "b2": 0.8333333333333339,
+        "QCD_AF": true,
+        "SU2_AF": false,
+        "nonperturbative_below_1e19_at": null,
+        "gY": 0.9379810080086971,
+        "g2": 0.7178029009699786,
+        "g3": 0.6658576229875829,
+        "lam_at_top": 0.07598294977905168,
+        "dona_II": false,
+        "dona_II_nuR": false,
+        "dona_Ia": false,
+        "dona_Ia_nuR": false,
+        "CP_violation_allowed": true
+      },
+      {
+        "N_g": 7,
+        "b3": -1.6666666666666679,
+        "b2": 2.166666666666666,
+        "QCD_AF": true,
+        "SU2_AF": false,
+        "nonperturbative_below_1e19_at": 9.96799921728207e+18,
+        "gY": 5.99999999999994,
+        "g2": 0.8840749516312815,
+        "g3": 0.7875736374132333,
+        "lam_at_top": null,
+        "dona_II": false,
+        "dona_II_nuR": false,
+        "dona_Ia": false,
+        "dona_Ia_nuR": false,
+        "CP_violation_allowed": true
+      },
+      {
+        "N_g": 8,
+        "b3": -0.3333333333333339,
+        "b2": 3.5,
+        "QCD_AF": true,
+        "SU2_AF": false,
+        "nonperturbative_below_1e19_at": 8.21143565528177e+16,
+        "gY": 6.000000000000037,
+        "g2": 1.0945779975952765,
+        "g3": 1.02486656377606,
+        "lam_at_top": null,
+        "dona_II": false,
+        "dona_II_nuR": false,
+        "dona_Ia": false,
+        "dona_Ia_nuR": false,
+        "CP_violation_allowed": true
+      }
+    ],
+    "allowed_by_all": [
+      3,
+      4,
+      5
+    ]
+  },
   "checks": {
     "control: two-loop RGEs reproduce Buttazzo eq. 61 (g within 3e-4, y_t within 1e-3, lambda within 1e-3) and its slopes": true,
     "control: the Casimir code gives bounds near the published 7.7 and 2.5 meV": true,
@@ -893,7 +1479,13 @@
     "12538: the hit: SM + 3 nu_R + axion + DM, Gaussian, M_t 172.74, M_H 128.82; SM has no top fixed point in 1L-II": true,
     "12538: the kill: the same SM matter gives M_t 171.87 (1L-Ia), 167.94 (full-Ia), none in type II; dM_t/dLambda about -37; about 2% of the region within 1 GeV": true,
     "12539: extra massless bosons: bounds 7.65, 5.29, 2.84 meV for 0, 1, 2; AdS3 at m1 = 0 for 3 or more": true,
-    "12539: bulk right-handed tower leaves the m1 bound near 7.65 meV for m_KK >= 0.03 eV and tightens it below that; graviton tower alone has AdS3 at m1 = 0 at every m_KK": true
+    "12539: bulk right-handed tower leaves the m1 bound near 7.65 meV for m_KK >= 0.03 eV and tightens it below that; graviton tower alone has AdS3 at m1 = 0 at every m_KK": true,
+    "12540: control: pure gravity optimised g* = 0.7073, lam* = 0.1932; SM optimised within 5% of Eichhorn-Held's (3.29, -4.51)": true,
+    "12540: SM matter over 5 regulators: Lambda* spread near 91%, far above 1%": true,
+    "12540: SM critical exponents stable: theta_1 within 2.0-2.2 and theta_2 within 3.9-4.0 for all regulators": true,
+    "12541: control: LCDM Omega_m near 0.30; w0wa near the published -0.42, -1.75; improves LCDM": true,
+    "12541: Delta chi2 rises monotonically with lam, about +2.2 at 0.816 and +19.7 at 1.414; quintessence never beats LCDM": true,
+    "12541: generations: the constraints allow 3, 4, 5 and do not select 3": true
   },
   "all_checks_pass": true
 }

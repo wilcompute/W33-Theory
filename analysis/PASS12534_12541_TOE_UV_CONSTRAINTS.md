@@ -1,6 +1,6 @@
 # Passes 12534–12541: an attempt on the theory of everything from outside W(3,3)
 
-Claude track. Producer: `analysis/w33_pass12534_to_12541_toe_uv.py`. Test: `tests/test_w33_pass12534_to_12541.py`. Drivers in `analysis/toe_uv`: `sm_rge.py`, `swampland_casimir.py`, `as_fixedpoint.py`, `criticality.py`, `mpp_k.py`, `nnlo_top.py`, `matter_scan.py`, `scheme_test.py`, `swampland_ext.py`.
+Claude track. Producer: `analysis/w33_pass12534_to_12541_toe_uv.py`. Test: `tests/test_w33_pass12534_to_12541.py`. Drivers in `analysis/toe_uv`: `sm_rge.py`, `swampland_casimir.py`, `as_fixedpoint.py`, `criticality.py`, `mpp_k.py`, `nnlo_top.py`, `matter_scan.py`, `scheme_test.py`, `swampland_ext.py`, `frg_regulators.py`, `quintessence_desi.py`, `ngen_scan.py`.
 
 Labels: **[E]** exact, **[N]** numerical with a stated control, **[I]** interpretation, **[C]** conjecture of the mechanism being tested.
 
@@ -157,6 +157,56 @@ So, conditional on the conjecture and with no additional light fermions, **at mo
 - **With the graviton tower alone** (right-handed neutrinos on the brane), there is an AdS₃ at m₁ = 0 for every m_KK tested. The sign is what matters, not the magnitude: the size of the negative density comes from short circles and depends on my cut of 60 KK levels and my grid, so do not read anything into it. So **under this conjecture a dark dimension needs bulk fermions**, which agrees with Anchordoqui et al.
 - The KK masses are an approximation, a true bulk spectrum is the solution of a non-algebraic equation, and I ignored the radion and graviphoton zero modes. So this is an estimate, not a precision bound.
 
+## 12540: is 1% in Λ* reachable?  Measured, one scheme, regulator varied
+
+**[N]** `frg_regulators.py`: the Einstein–Hilbert flow in Feynman–de Donder gauge, with the regulator as the only change. Threshold functions by quadrature; matter added as massless, using Doná et al.'s coefficients. **Controls:** pure gravity with the optimised regulator gives g* = 0.7073, λ* = 0.1932, as quoted in the literature. The exponential regulator with s = 1 gives 0.272, 0.359, which I recall as near a published value, from memory only. SM matter with the optimised regulator gives (3.22, −4.39), within about 3% of Eichhorn–Held's (3.29, −4.51). It does not match Doná's Table 3 (1.73, −2.35), which uses a different matter treatment.
+
+A first version had the wrong λ flow (Φ¹₂ for Φ²₁). The control caught it: β_λ was 2.8 at the literature point. All numbers here are from the corrected code.
+
+| 5 regulators (optimised, exponential s = 1, 2, 3, 5) | pure gravity | SM | SM + 3ν_R + axion + DM |
+|---|---|---|---|
+| g* | 0.27 – 0.71 | 1.65 – 3.22 | 1.99 – 5.26 |
+| Λ* | 0.19 – 0.36 | **−12.3 – −4.4** | −15.6 – −7.7 |
+| g*Λ* | 0.10 – 0.14 | −20.8 – −12.5 | −40.2 – −20.0 |
+| Spread in Λ* | 53% | **91%** | 68% |
+| θ (SM) | | **2.03 – 2.14; 3.91 – 3.93** | |
+
+**The answer: no.** 12538 needs Λ* to about 1% for M_t to 1 GeV. The regulator alone moves it by 91%. The critical exponents are stable, to 5% and 0.4%, as expected for near-physical quantities, and they are the only robust output here. A caveat in the other direction: Λ* is not physical on its own, and the f functions would change with the regulator as well, so a consistent calculation could cancel part of this. The published f functions exist for one regulator, so I could not test that cancellation.
+
+**So:** this route can't predict the top mass at the Einstein–Hilbert level, and M_t = 172.74 of 12538 was already not a prediction. η = −2 at the fixed point is automatic (β_g = 0).
+
+## 12541: DESI against the swampland, and generations
+
+**[N] Exponential quintessence against DESI DR2** (`quintessence_desi.py`). V ∝ exp(−λφ/M_Pl), thawing, flat, against the 13 published BAO numbers plus a compressed CMB (θ*, and an ω_m prior of 0.1430 ± 0.0011 I chose as Planck-like, since the paper's own covariance was not available). **Controls:** ΛCDM gives Ω_m = 0.301 (published about 0.303). The w₀wₐ fit gives −0.45, −1.62 (published −0.42 ± 0.21, −1.75 ± 0.58), Δχ² = −8.9 against ΛCDM (published 3.1σ, about −12, so my compression is weaker).
+
+| λ | Δχ² vs ΛCDM | w₀ | note |
+|---|---|---|---|
+| 0.4 | +0.2 | −0.976 | |
+| 0.7 | +1.3 | −0.926 | |
+| **0.816** | **+2.2** | −0.900 | √(2/3), the TCC value |
+| 1.0 | +4.7 | −0.851 | |
+| 1.2 | +9.8 | −0.788 | |
+| **1.414** | **+19.7** | −0.709 | √2, the strong de Sitter value |
+| 1.7 | +44.9 | −0.588 | |
+
+Three conclusions, for BAO + CMB only, no supernovae, no curvature, and a single exponential:
+
+1. **λ = √2 is excluded at about 4.4σ.** λ = √(2/3) survives, at about 1.5σ. The 95% limit is near λ ≈ 0.95. These agree in order with the published λ = 0.698 (+0.173, −0.202) and λ < 0.85.
+2. **Single exponential quintessence never beats ΛCDM** here. It is not what the w₀wₐ preference is seeing: its w₀ rises while wₐ stays small, and the fit wants wₐ ≈ −1.6.
+3. So if the DESI preference is real, it is **not** this simplest swampland model. Andriot et al. find that curvature weakens constraints; I did not test that.
+
+**[N] Does anything here select three generations? No** (`ngen_scan.py`, a toy: extra generations massless, so it tests UV constraints only).
+
+| N_g | constraint result | λ(10¹⁹ GeV) |
+|---|---|---|
+| 0, 1, 2 | **fail** CP violation (Kobayashi–Maskawa) | −0.13, −0.085, −0.045 |
+| **3** | allowed | −0.011 |
+| 4 | allowed | +0.019 |
+| 5 | allowed in scheme II; **fails** Doná's positivity in scheme Ia | +0.046 |
+| 6, 7, 8 | fail SU(2) asymptotic freedom and positivity; 7, 8 also hit a g_Y pole near or below M_Pl | |
+
+**The constraints allow 3, 4 and 5.** N_g = 3 has the smallest |λ(M_Pl)|, but λ = 0 falls between 3 and 4, and I would not read anything into that, because the couplings were set to the measured values with N_g = 3 physics in the first place. It is a null, as expected, and N_g > 3 light generations are excluded by experiment rather than by these principles.
+
 ## How to kill all of this
 
 | measurement | decides | killed if |
@@ -172,7 +222,7 @@ So, conditional on the conjecture and with no additional light fermions, **at mo
 | target | status |
 |---|---|
 | Gauge group SU(3)×SU(2)×U(1) | **Unexplained** by anything here. It is input |
-| Three generations | **Unexplained** |
+| Three generations | **Unexplained**: the constraints here allow 3, 4 and 5 |
 | g_Y | Fit (f_g) |
 | g₂, g₃ | Free |
 | y_t | Fit, or wrong by 9 GeV on branch A |
@@ -182,6 +232,7 @@ So, conditional on the conjecture and with no additional light fermions, **at mo
 | CKM | Partial claims in arXiv:2507.18304, not checked here |
 | ν | Dirac + NO preferred, conditional on two unproven programmes |
 | Λ | **Input.** The window relates it to m_ν and does not derive it |
+| Dark energy dynamics | Strong dS slope excluded by DESI + CMB in the simplest model; not explained |
 | Dark matter, baryogenesis, inflation, strong CP | **Not addressed** |
 
 **What would count as a real step:** one consistent gravity calculation fixing Λ* to about 1%, which would make M_t a prediction, or deriving the matter content. I did neither, and 12538 shows why the published ingredients cannot yet do it.
@@ -197,4 +248,7 @@ So, conditional on the conjecture and with no additional light fermions, **at mo
 - P. Doná, A. Eichhorn, R. Percacci, *Matter matters in asymptotically safe quantum gravity*, arXiv:1311.2898.
 - L. Anchordoqui, I. Antoniadis, J. Cunat, Phys. Rev. D 109 (2024) 016028; M. Montero, C. Vafa, I. Valenzuela, dark dimension (not read in full).
 - ATLAS+CMS: top mass Run 1 combination, 172.52 ± 0.33 GeV; preliminary pole-mass combination, LHCTop WG, Nov 2025.
+- D. F. Litim, *Fixed points of quantum gravity*, hep-th/0312114.
+- M. Reuter, F. Saueressig, O. Lauscher: Einstein-Hilbert flow equations, recalled from memory and checked by the control.
+- Bedroya, Vafa (TCC); Andriot et al. (exponential quintessence, not read in full); arXiv:2510.21627 and arXiv:1811.05434 for published slope limits.
 - C. D. Froggatt, H. B. Nielsen, *Standard Model criticality prediction*, Phys. Lett. B 368 (1996).

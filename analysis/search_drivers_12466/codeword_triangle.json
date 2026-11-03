@@ -1,0 +1,34 @@
+{
+ "triples_summing_to_zero": 720,
+ "pairwise_intersection_counts": {
+  "1": 6480,
+  "2": 7020,
+  "3": 4320,
+  "4": 3240,
+  "5": 2160
+ },
+ "this_triangle": {
+  "sizes": [
+   10,
+   10,
+   10
+  ],
+  "common_A_B": 5,
+  "common_A_D": 5,
+  "common_B_D": 5
+ },
+ "triangle_stabiliser_order": 36,
+ "triangle_orbit_size": 720,
+ "orbit_times_stabiliser": 25920,
+ "caps_stabiliser_order": 12,
+ "caps_stabiliser_element_orders": {
+  "1": 1,
+  "2": 7,
+  "3": 2,
+  "6": 2
+ },
+ "caps_point_coverage": {
+  "2": 6,
+  "1": 8
+ }
+}
