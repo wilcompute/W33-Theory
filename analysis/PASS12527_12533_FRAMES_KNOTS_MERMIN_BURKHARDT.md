@@ -135,7 +135,7 @@ CP-SAT's chain was stopped after 2 of 42 cases in hours. HiGHS (`heavy_highs.py`
 
 > **The minimum even line set of W(3,9) has 48 lines, on two solvers for each half, and every minimal even set is a hyperoval, in a single orbit of 3,586,680 sets.**
 
-The uniqueness half combines HiGHS (no heavy set at W = 48) with CP-SAT (one star class at W = 48). No proof certificate exists. q = 7, W = 40 is still running, so the same statement for q = 7 covers hyperovals only; status under `heavy_status`.
+The uniqueness half combines HiGHS (no heavy set at W = 48) with CP-SAT (one star class at W = 48). No proof certificate exists. **q = 7, W = 40: all 34 infeasible, none unknown (14,919 s).** So every minimal even line set of W(3,7) is a hyperoval, and by 12522 it is a cube-family set: **all minimal even sets of W(3,7) form one orbit of 720,300 cubes, stabiliser D₁₆ × S₄.** The hyperoval half is CP-SAT by enumeration, plus exclusion for one class; the count is confirmed by a solver-free orbit enumeration; the heavy half is HiGHS alone at W = 40.
 
 ## Sources
 

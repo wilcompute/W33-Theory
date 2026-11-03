@@ -107,6 +107,8 @@ def main():
     tr = load("codeword_triangle.json"); res["triangle"] = tr
     checks["12537: triangles of codewords: one orbit of 720, stabiliser 36, from 2160 pairs sharing 5 lines; caps stabiliser order 12"] = (
         tr["triples_summing_to_zero"] == 720 and tr["triangle_orbit_size"] == 720 and tr["triangle_stabiliser_order"] == 36 and tr["pairwise_intersection_counts"]["5"] == 2160 and tr["caps_stabiliser_order"] == 12)
+    hq740 = load("heavy_highs_q7_W40.json")
+    checks["12532: HiGHS heavy cases: q = 7, W = 40 all 34 infeasible, none unknown: every minimal even set of W(3,7) is a hyperoval"] = hq740["infeasible"] == hq740["cases"] == 34 and not hq740["unknown"] and not hq740["feasible"]
     checks = {k: bool(v) for k, v in checks.items()}
     res["checks"] = checks
     res["all_checks_pass"] = all(checks.values())

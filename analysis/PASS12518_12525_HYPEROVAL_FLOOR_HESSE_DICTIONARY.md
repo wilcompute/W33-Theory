@@ -156,7 +156,7 @@ feasible value 28.
 - **Counting.** Sets through a fixed line: 343·(168·1 + 1·42) = 72,030, so 72,030·400/40 = 720,300 in total. The two classes contribute 4 : 1, matching the 32 + 8 lines of a cube.
 - **Independent cross-check** (`cube_stabiliser_q7.py`). Direct orbit enumeration of one cube under transvections and a similitude, with no solver involved, returns exactly 720,300, so the orbit is everything. 276,595,200 / 720,300 = 384.
 
-**q = 7 minimum.** All 34 heavy cases at W = 38 are INFEASIBLE, so the star and heavy halves together give the minimum 40 by the same method as q = 9. Whether a *heavy* 40-line set exists is reported under `heavy_status` (`q7_W40`). Until that is all INFEASIBLE, this theorem covers hyperovals, not every minimal even set.
+**q = 7 minimum.** All 34 heavy cases at W = 38 are INFEASIBLE, so the star and heavy halves together give the minimum 40 by the same method as q = 9. Whether a *heavy* 40-line set exists is reported under `heavy_status` (`q7_W40`). Until that is all INFEASIBLE, this theorem covers hyperovals, not every minimal even set. *(Later, Pass 12532: HiGHS finds all 34 cases INFEASIBLE, so every minimal even set of W(3,7) is a cube.)*
 
 ## 12523: the 216 minimal codewords are the synthematic totals of the 36 double-sixes
 

@@ -1155,7 +1155,12 @@
       "unknown": [],
       "feasible": []
     },
-    "q7_W40": "pending",
+    "q7_W40": {
+      "cases": 34,
+      "infeasible": 34,
+      "unknown": [],
+      "feasible": []
+    },
     "q9_W46": {
       "cases": 42,
       "infeasible": 42,
@@ -1176,7 +1181,12 @@
       "unknown": [],
       "feasible": []
     },
-    "q7_W40": "pending",
+    "q7_W40": {
+      "cases": 34,
+      "infeasible": 34,
+      "unknown": [],
+      "feasible": []
+    },
     "q9_W46": {
       "cases": 42,
       "infeasible": 42,
@@ -1637,7 +1647,8 @@
     "12537: the odd state has W = -1/3, sum-negativity 1/3, Weyl overlaps 1/4; stabiliser states have W >= 0; parity measurement reaches it with probability 1/2": true,
     "12537: the TL6 vacuum module has dimension 5 and exactly one displaced parity acts as +1 on it, commuting with all projectors, +1 eigenspace of dimension 5": true,
     "12537: exactly the 5 non-crossing bipartite matchings are lines; 2 codewords contain all 5; colour-size census of the 40 points": true,
-    "12537: triangles of codewords: one orbit of 720, stabiliser 36, from 2160 pairs sharing 5 lines; caps stabiliser order 12": true
+    "12537: triangles of codewords: one orbit of 720, stabiliser 36, from 2160 pairs sharing 5 lines; caps stabiliser order 12": true,
+    "12532: HiGHS heavy cases: q = 7, W = 40 all 34 infeasible, none unknown: every minimal even set of W(3,7) is a hyperoval": true
   },
   "all_checks_pass": true
 }
