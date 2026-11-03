@@ -1,0 +1,125 @@
+{
+  "status": "PASS_CRITICAL_PORTAL_4D_TRUE_SPARSE_LOW_EIGENVALUE_TEST",
+  "input_model": "4D periodic base L sites per axis, mass sector W33 graph Lap eigenvalue 10; H= L\u00b2 [Delta_base +10 diag(xi)], Bernoulli xi with probability (4/13)/L\u00b2. True spectral low eigenvalue from scipy ARPACK eigsh.",
+  "rows": [
+    {
+      "L": 4,
+      "sample": 20261103,
+      "N4": 256,
+      "N_portals": 8,
+      "mean_field_constant_Rayleigh_mass_squared": 5.0,
+      "lowest_actual_sparse_mass_squared": 2.0134947611226917,
+      "lowest_over_constant_Rayleigh": 0.40269895222453833,
+      "local_Green4_zero_mode_removed": 0.1470726376488095,
+      "dilute_single_defect_Tmatrix_approx_mass_squared": 1.2453516124665467
+    },
+    {
+      "L": 4,
+      "sample": 20261104,
+      "N4": 256,
+      "N_portals": 3,
+      "mean_field_constant_Rayleigh_mass_squared": 1.875,
+      "lowest_actual_sparse_mass_squared": 0.7654433834480211,
+      "lowest_over_constant_Rayleigh": 0.4082364711722779,
+      "local_Green4_zero_mode_removed": 0.1470726376488095,
+      "dilute_single_defect_Tmatrix_approx_mass_squared": 1.2453516124665467
+    },
+    {
+      "L": 6,
+      "sample": 20261103,
+      "N4": 1296,
+      "N_portals": 15,
+      "mean_field_constant_Rayleigh_mass_squared": 4.166666666666667,
+      "lowest_actual_sparse_mass_squared": 1.6924514164924698,
+      "lowest_over_constant_Rayleigh": 0.4061883399581927,
+      "local_Green4_zero_mode_removed": 0.1511697332588536,
+      "dilute_single_defect_Tmatrix_approx_mass_squared": 1.2250373629819575
+    },
+    {
+      "L": 6,
+      "sample": 20261104,
+      "N4": 1296,
+      "N_portals": 12,
+      "mean_field_constant_Rayleigh_mass_squared": 3.3333333333333335,
+      "lowest_actual_sparse_mass_squared": 1.347139515744634,
+      "lowest_over_constant_Rayleigh": 0.40414185472339015,
+      "local_Green4_zero_mode_removed": 0.1511697332588536,
+      "dilute_single_defect_Tmatrix_approx_mass_squared": 1.2250373629819575
+    },
+    {
+      "L": 9,
+      "sample": 20261103,
+      "N4": 6561,
+      "N_portals": 27,
+      "mean_field_constant_Rayleigh_mass_squared": 3.3333333333333335,
+      "lowest_actual_sparse_mass_squared": 1.330705020400787,
+      "lowest_over_constant_Rayleigh": 0.3992115061202361,
+      "local_Green4_zero_mode_removed": 0.153223003508191,
+      "dilute_single_defect_Tmatrix_approx_mass_squared": 1.215104091766903
+    },
+    {
+      "L": 9,
+      "sample": 20261104,
+      "N4": 6561,
+      "N_portals": 25,
+      "mean_field_constant_Rayleigh_mass_squared": 3.0864197530864197,
+      "lowest_actual_sparse_mass_squared": 1.2203354968127524,
+      "lowest_over_constant_Rayleigh": 0.3953887009673318,
+      "local_Green4_zero_mode_removed": 0.153223003508191,
+      "dilute_single_defect_Tmatrix_approx_mass_squared": 1.215104091766903
+    },
+    {
+      "L": 12,
+      "sample": 20261103,
+      "N4": 20736,
+      "N_portals": 46,
+      "mean_field_constant_Rayleigh_mass_squared": 3.1944444444444446,
+      "lowest_actual_sparse_mass_squared": 1.2610333744598468,
+      "lowest_over_constant_Rayleigh": 0.394758273743952,
+      "local_Green4_zero_mode_removed": 0.15396515761529944,
+      "dilute_single_defect_Tmatrix_approx_mass_squared": 1.2115532326619107
+    },
+    {
+      "L": 12,
+      "sample": 20261104,
+      "N4": 20736,
+      "N_portals": 34,
+      "mean_field_constant_Rayleigh_mass_squared": 2.361111111111111,
+      "lowest_actual_sparse_mass_squared": 0.9277974109077278,
+      "lowest_over_constant_Rayleigh": 0.3929494916785671,
+      "local_Green4_zero_mode_removed": 0.15396515761529944,
+      "dilute_single_defect_Tmatrix_approx_mass_squared": 1.2115532326619107
+    },
+    {
+      "L": 16,
+      "sample": 20261103,
+      "N4": 65536,
+      "N_portals": 92,
+      "mean_field_constant_Rayleigh_mass_squared": 3.59375,
+      "lowest_actual_sparse_mass_squared": 1.4097419103740516,
+      "lowest_over_constant_Rayleigh": 0.39227600984321437,
+      "local_Green4_zero_mode_removed": 0.15438693985920163,
+      "dilute_single_defect_Tmatrix_approx_mass_squared": 1.2095444359785514
+    },
+    {
+      "L": 16,
+      "sample": 20261104,
+      "N4": 65536,
+      "N_portals": 65,
+      "mean_field_constant_Rayleigh_mass_squared": 2.5390625,
+      "lowest_actual_sparse_mass_squared": 0.997498814143781,
+      "lowest_over_constant_Rayleigh": 0.3928610714166276,
+      "local_Green4_zero_mode_removed": 0.15438693985920163,
+      "dilute_single_defect_Tmatrix_approx_mass_squared": 1.2095444359785514
+    }
+  ],
+  "mean_field_mass_squared_40_over_13": 3.076923076923077,
+  "spectral_obstruction": "The constant field Rayleigh quotient equals 10 Nportal/L\u00b2. It is an upper bound on the physical ground eigenvalue, NOT an exact mass. Local wavefunctions can avoid large site potentials. The single-defect finite-size T-matrix approx c*10/(1+10*G_L) is motivated by resolvent resummation but not proven for this random finite-density graph.",
+  "Green_lattice": "G_L=(1/L\u2074) sum_(k nonzero) [8-2sum_mu cos(2pi k_mu/L)]^-1.",
+  "scale_scope": "This is an actual sparse eigenvalue test in 4D, but it is a *single separated internal carrier mode* and not the full 40xL\u2074 W33 operator; independent gate disorder on internal edges and inter-mode mixing are omitted. 2 disorder samples per size are far from a thermodynamic limit or rigorous strong resolvent convergence.",
+  "physical_boundary": "The stabilized physical mass relies on an externally chosen parent length R and the postulated codimension-two portal branching; no microscopic local gauge action, quantum radiative stability, Lorentzian structure or Standard Model spectrum derived.",
+  "related_prior": [
+    "https://link.springer.com/article/10.1007/s00440-024-01320-1",
+    "https://link.springer.com/article/10.1007/s00205-023-01847-y"
+  ]
+}

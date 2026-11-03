@@ -1,0 +1,214 @@
+{
+  "status": "PASS_TWO_W33_EIGEN_SECTORS_4D_LOCAL_GREEN_SCREENING",
+  "source_scripts": [
+    "analysis/toe_20261103_pascal_portal_sparse_spectrum.py",
+    "analysis/toe_20261103_pascal_codim_two_portal_bridge.py"
+  ],
+  "comparison_rows": [
+    {
+      "L": 4,
+      "sample": 20261103,
+      "W33_internal_sector_dimension": 24,
+      "bare_internal_eigenvalue": 10,
+      "actual_physical_squared_mass": 2.0134947611226917,
+      "constant_trial_squared_mass": 5.0,
+      "resummed_local_Green_predicted_squared_mass": 2.023696370258138,
+      "relative_to_actual_prediction_error": 0.005066618166792837
+    },
+    {
+      "L": 4,
+      "sample": 20261104,
+      "W33_internal_sector_dimension": 24,
+      "bare_internal_eigenvalue": 10,
+      "actual_physical_squared_mass": 0.7654433834480211,
+      "constant_trial_squared_mass": 1.875,
+      "resummed_local_Green_predicted_squared_mass": 0.7588861388468019,
+      "relative_to_actual_prediction_error": -0.008566596489058926
+    },
+    {
+      "L": 6,
+      "sample": 20261103,
+      "W33_internal_sector_dimension": 24,
+      "bare_internal_eigenvalue": 10,
+      "actual_physical_squared_mass": 1.6924514164924698,
+      "constant_trial_squared_mass": 4.166666666666667,
+      "resummed_local_Green_predicted_squared_mass": 1.6589047623714008,
+      "relative_to_actual_prediction_error": -0.019821339504440778
+    },
+    {
+      "L": 6,
+      "sample": 20261104,
+      "W33_internal_sector_dimension": 24,
+      "bare_internal_eigenvalue": 10,
+      "actual_physical_squared_mass": 1.347139515744634,
+      "constant_trial_squared_mass": 3.3333333333333335,
+      "resummed_local_Green_predicted_squared_mass": 1.3271238098971208,
+      "relative_to_actual_prediction_error": -0.014857930907363742
+    },
+    {
+      "L": 9,
+      "sample": 20261103,
+      "W33_internal_sector_dimension": 24,
+      "bare_internal_eigenvalue": 10,
+      "actual_physical_squared_mass": 1.330705020400787,
+      "constant_trial_squared_mass": 3.3333333333333335,
+      "resummed_local_Green_predicted_squared_mass": 1.3163627660808115,
+      "relative_to_actual_prediction_error": -0.010777936582561282
+    },
+    {
+      "L": 9,
+      "sample": 20261104,
+      "W33_internal_sector_dimension": 24,
+      "bare_internal_eigenvalue": 10,
+      "actual_physical_squared_mass": 1.2203354968127524,
+      "constant_trial_squared_mass": 3.0864197530864197,
+      "resummed_local_Green_predicted_squared_mass": 1.2188544130377883,
+      "relative_to_actual_prediction_error": -0.0012136693383355702
+    },
+    {
+      "L": 12,
+      "sample": 20261103,
+      "W33_internal_sector_dimension": 24,
+      "bare_internal_eigenvalue": 10,
+      "actual_physical_squared_mass": 1.2610333744598468,
+      "constant_trial_squared_mass": 3.1944444444444446,
+      "resummed_local_Green_predicted_squared_mass": 1.2578278352983032,
+      "relative_to_actual_prediction_error": -0.002541993912664367
+    },
+    {
+      "L": 12,
+      "sample": 20261104,
+      "W33_internal_sector_dimension": 24,
+      "bare_internal_eigenvalue": 10,
+      "actual_physical_squared_mass": 0.9277974109077278,
+      "constant_trial_squared_mass": 2.361111111111111,
+      "resummed_local_Green_predicted_squared_mass": 0.9296988347857024,
+      "relative_to_actual_prediction_error": 0.0020493955421951936
+    },
+    {
+      "L": 16,
+      "sample": 20261103,
+      "W33_internal_sector_dimension": 24,
+      "bare_internal_eigenvalue": 10,
+      "actual_physical_squared_mass": 1.4097419103740516,
+      "constant_trial_squared_mass": 3.59375,
+      "resummed_local_Green_predicted_squared_mass": 1.4127101029593236,
+      "relative_to_actual_prediction_error": 0.002105486517375704
+    },
+    {
+      "L": 16,
+      "sample": 20261104,
+      "W33_internal_sector_dimension": 24,
+      "bare_internal_eigenvalue": 10,
+      "actual_physical_squared_mass": 0.997498814143781,
+      "constant_trial_squared_mass": 2.5390625,
+      "resummed_local_Green_predicted_squared_mass": 0.9981103988299569,
+      "relative_to_actual_prediction_error": 0.0006131182087677971
+    },
+    {
+      "L": 6,
+      "sample": 20261103,
+      "W33_internal_sector_dimension": 15,
+      "bare_internal_eigenvalue": 16,
+      "actual_physical_squared_mass": 1.9943664533358372,
+      "constant_trial_squared_mass": 6.666666666666667,
+      "resummed_local_Green_predicted_squared_mass": 1.9500500155625187,
+      "relative_to_actual_prediction_error": -0.022220809871322043
+    },
+    {
+      "L": 6,
+      "sample": 20261104,
+      "W33_internal_sector_dimension": 15,
+      "bare_internal_eigenvalue": 16,
+      "actual_physical_squared_mass": 1.5864216884756512,
+      "constant_trial_squared_mass": 5.333333333333333,
+      "resummed_local_Green_predicted_squared_mass": 1.5600400124500147,
+      "relative_to_actual_prediction_error": -0.016629674327628484
+    },
+    {
+      "L": 9,
+      "sample": 20261103,
+      "W33_internal_sector_dimension": 15,
+      "bare_internal_eigenvalue": 16,
+      "actual_physical_squared_mass": 1.564382701134947,
+      "constant_trial_squared_mass": 5.333333333333333,
+      "resummed_local_Green_predicted_squared_mass": 1.545191416364999,
+      "relative_to_actual_prediction_error": -0.012267640620178748
+    },
+    {
+      "L": 9,
+      "sample": 20261104,
+      "W33_internal_sector_dimension": 15,
+      "bare_internal_eigenvalue": 16,
+      "actual_physical_squared_mass": 1.4324694185245854,
+      "constant_trial_squared_mass": 4.938271604938271,
+      "resummed_local_Green_predicted_squared_mass": 1.4307327929305547,
+      "relative_to_actual_prediction_error": -0.0012123299608165108
+    },
+    {
+      "L": 12,
+      "sample": 20261103,
+      "W33_internal_sector_dimension": 15,
+      "bare_internal_eigenvalue": 16,
+      "actual_physical_squared_mass": 1.4797881550455656,
+      "constant_trial_squared_mass": 5.111111111111111,
+      "resummed_local_Green_predicted_squared_mass": 1.4757314662720877,
+      "relative_to_actual_prediction_error": -0.0027413983276227496
+    },
+    {
+      "L": 12,
+      "sample": 20261104,
+      "W33_internal_sector_dimension": 15,
+      "bare_internal_eigenvalue": 16,
+      "actual_physical_squared_mass": 1.0879594681445366,
+      "constant_trial_squared_mass": 3.7777777777777777,
+      "resummed_local_Green_predicted_squared_mass": 1.090758040288065,
+      "relative_to_actual_prediction_error": 0.0025723128714539734
+    },
+    {
+      "L": 16,
+      "sample": 20261103,
+      "W33_internal_sector_dimension": 15,
+      "bare_internal_eigenvalue": 16,
+      "actual_physical_squared_mass": 1.6526513897618385,
+      "constant_trial_squared_mass": 5.75,
+      "resummed_local_Green_predicted_squared_mass": 1.656969295769024,
+      "relative_to_actual_prediction_error": 0.002612714353392987
+    },
+    {
+      "L": 16,
+      "sample": 20261104,
+      "W33_internal_sector_dimension": 15,
+      "bare_internal_eigenvalue": 16,
+      "actual_physical_squared_mass": 1.1697095682452863,
+      "constant_trial_squared_mass": 4.0625,
+      "resummed_local_Green_predicted_squared_mass": 1.1706848285324627,
+      "relative_to_actual_prediction_error": 0.0008337627678291476
+    }
+  ],
+  "maximum_relative_Tmatrix_error_18_sample_eigenvalues": 0.022220809871322043,
+  "four_D_green_function_samples": {
+    "L16": 0.15438693985920163,
+    "L32": 0.15479635753345736
+  },
+  "L32_Green_approximated_two_sector_gap": {
+    "10": {
+      "m2": 1.2076008882972535,
+      "constant_field_upper_mass2": 3.076923076923077,
+      "local_renormalization_factor": 0.3924702886966074
+    },
+    "16": {
+      "m2": 1.41600306229216,
+      "constant_field_upper_mass2": 4.923076923076923,
+      "local_renormalization_factor": 0.287625622028095
+    }
+  },
+  "screened_mass_squared_ratio_15sector_to_24sector": 1.172575373216857,
+  "math": "On a periodic 4D lattice, dilute site portal potential H_L=L\u00b2(Delta+lambda diag xi), p_L=(4/13)/L\u00b2. For isolated impurities the point scatterer T-matrix at low k is T=lambda/(1+lambda G4), G4=(1/L\u2074)sum_{k !=0} 1/(8-2sum cos k_mu). The guessed homogenized gap is c*T, not c*lambda. This is checked against actual sparse eigenvalues for two internal W33 Laplacian sectors lambda=10 multiplicity24 and lambda=16 multiplicity15.",
+  "critical_warning": "The agreement is an observed finite-size numeric test and a perturbative impurity-resolvent heuristic, NOT proof of the random operator continuum limit or of a universal renormalized coupling. Both sectors here are mathematically independent because portal masks are scalars on the same internal graph. Random spatial disorder and source covariance, finite lattice, physical 4D Lorentzian theory and quantum gauge matter remain open.",
+  "physics_scope": "The construction supplies a conditional dimensionless ratio between the two internal masses and the parent base length, not a prediction of any observed particle mass. c=4/13 and critical portal density are additional microscopic selection postulates. Even if the continuum limit holds, the absolute length R remains external.",
+  "originality": "The underlying point impurity screening and homogenization are established methods; applying them to this hypothetical W33*4D portal action is the new research test, not a general theorem of quantum gravity.",
+  "prior_research": [
+    "https://link.springer.com/article/10.1007/s00440-024-01320-1"
+  ]
+}

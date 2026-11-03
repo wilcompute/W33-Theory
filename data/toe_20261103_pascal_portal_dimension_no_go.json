@@ -1,0 +1,260 @@
+{
+  "status": "PASS_Q_AND_SPACETIME_DIMENSION_UNDERDETERMINATION_OF_PORTAL_DENSITY",
+  "rows": [
+    {
+      "q": 2,
+      "dimension_d": 2,
+      "base_resolution_L": 81,
+      "line_selector_fraction_c": 0.42857142857142855,
+      "mean_effective_mass_squared": 4.285714285714286,
+      "standard_deviation_mass_squared_for_Bernoulli_portals": 6.546322890252505,
+      "coefficient_of_variation": 1.5274753410589177,
+      "asymptotic_std_scaling": "L^((2-d)/2)"
+    },
+    {
+      "q": 2,
+      "dimension_d": 3,
+      "base_resolution_L": 81,
+      "line_selector_fraction_c": 0.42857142857142855,
+      "mean_effective_mass_squared": 4.285714285714286,
+      "standard_deviation_mass_squared_for_Bernoulli_portals": 0.7273692100280562,
+      "coefficient_of_variation": 0.1697194823398798,
+      "asymptotic_std_scaling": "L^((2-d)/2)"
+    },
+    {
+      "q": 2,
+      "dimension_d": 4,
+      "base_resolution_L": 81,
+      "line_selector_fraction_c": 0.42857142857142855,
+      "mean_effective_mass_squared": 4.285714285714286,
+      "standard_deviation_mass_squared_for_Bernoulli_portals": 0.08081880111422844,
+      "coefficient_of_variation": 0.018857720259986638,
+      "asymptotic_std_scaling": "L^((2-d)/2)"
+    },
+    {
+      "q": 2,
+      "dimension_d": 5,
+      "base_resolution_L": 81,
+      "line_selector_fraction_c": 0.42857142857142855,
+      "mean_effective_mass_squared": 4.285714285714286,
+      "standard_deviation_mass_squared_for_Bernoulli_portals": 0.008979866790469828,
+      "coefficient_of_variation": 0.0020953022511096264,
+      "asymptotic_std_scaling": "L^((2-d)/2)"
+    },
+    {
+      "q": 2,
+      "dimension_d": 6,
+      "base_resolution_L": 81,
+      "line_selector_fraction_c": 0.42857142857142855,
+      "mean_effective_mass_squared": 4.285714285714286,
+      "standard_deviation_mass_squared_for_Bernoulli_portals": 0.0009977629767188698,
+      "coefficient_of_variation": 0.00023281136123440296,
+      "asymptotic_std_scaling": "L^((2-d)/2)"
+    },
+    {
+      "q": 3,
+      "dimension_d": 2,
+      "base_resolution_L": 81,
+      "line_selector_fraction_c": 0.3076923076923077,
+      "mean_effective_mass_squared": 3.076923076923077,
+      "standard_deviation_mass_squared_for_Bernoulli_portals": 5.54687189139071,
+      "coefficient_of_variation": 1.8027333647019808,
+      "asymptotic_std_scaling": "L^((2-d)/2)"
+    },
+    {
+      "q": 3,
+      "dimension_d": 3,
+      "base_resolution_L": 81,
+      "line_selector_fraction_c": 0.3076923076923077,
+      "mean_effective_mass_squared": 3.076923076923077,
+      "standard_deviation_mass_squared_for_Bernoulli_portals": 0.6163190990434123,
+      "coefficient_of_variation": 0.20030370718910898,
+      "asymptotic_std_scaling": "L^((2-d)/2)"
+    },
+    {
+      "q": 3,
+      "dimension_d": 4,
+      "base_resolution_L": 81,
+      "line_selector_fraction_c": 0.3076923076923077,
+      "mean_effective_mass_squared": 3.076923076923077,
+      "standard_deviation_mass_squared_for_Bernoulli_portals": 0.06847989989371246,
+      "coefficient_of_variation": 0.02225596746545655,
+      "asymptotic_std_scaling": "L^((2-d)/2)"
+    },
+    {
+      "q": 3,
+      "dimension_d": 5,
+      "base_resolution_L": 81,
+      "line_selector_fraction_c": 0.3076923076923077,
+      "mean_effective_mass_squared": 3.076923076923077,
+      "standard_deviation_mass_squared_for_Bernoulli_portals": 0.007608877765968052,
+      "coefficient_of_variation": 0.002472885273939617,
+      "asymptotic_std_scaling": "L^((2-d)/2)"
+    },
+    {
+      "q": 3,
+      "dimension_d": 6,
+      "base_resolution_L": 81,
+      "line_selector_fraction_c": 0.3076923076923077,
+      "mean_effective_mass_squared": 3.076923076923077,
+      "standard_deviation_mass_squared_for_Bernoulli_portals": 0.0008454308628853391,
+      "coefficient_of_variation": 0.0002747650304377352,
+      "asymptotic_std_scaling": "L^((2-d)/2)"
+    },
+    {
+      "q": 5,
+      "dimension_d": 2,
+      "base_resolution_L": 81,
+      "line_selector_fraction_c": 0.1935483870967742,
+      "mean_effective_mass_squared": 1.935483870967742,
+      "standard_deviation_mass_squared_for_Bernoulli_portals": 4.39934855918675,
+      "coefficient_of_variation": 2.272996755579821,
+      "asymptotic_std_scaling": "L^((2-d)/2)"
+    },
+    {
+      "q": 5,
+      "dimension_d": 3,
+      "base_resolution_L": 81,
+      "line_selector_fraction_c": 0.1935483870967742,
+      "mean_effective_mass_squared": 1.935483870967742,
+      "standard_deviation_mass_squared_for_Bernoulli_portals": 0.4888165065763055,
+      "coefficient_of_variation": 0.2525551950644245,
+      "asymptotic_std_scaling": "L^((2-d)/2)"
+    },
+    {
+      "q": 5,
+      "dimension_d": 4,
+      "base_resolution_L": 81,
+      "line_selector_fraction_c": 0.1935483870967742,
+      "mean_effective_mass_squared": 1.935483870967742,
+      "standard_deviation_mass_squared_for_Bernoulli_portals": 0.05431294517514506,
+      "coefficient_of_variation": 0.028061688340491612,
+      "asymptotic_std_scaling": "L^((2-d)/2)"
+    },
+    {
+      "q": 5,
+      "dimension_d": 5,
+      "base_resolution_L": 81,
+      "line_selector_fraction_c": 0.1935483870967742,
+      "mean_effective_mass_squared": 1.935483870967742,
+      "standard_deviation_mass_squared_for_Bernoulli_portals": 0.006034771686127229,
+      "coefficient_of_variation": 0.003117965371165735,
+      "asymptotic_std_scaling": "L^((2-d)/2)"
+    },
+    {
+      "q": 5,
+      "dimension_d": 6,
+      "base_resolution_L": 81,
+      "line_selector_fraction_c": 0.1935483870967742,
+      "mean_effective_mass_squared": 1.935483870967742,
+      "standard_deviation_mass_squared_for_Bernoulli_portals": 0.0006705301873474698,
+      "coefficient_of_variation": 0.0003464405967961927,
+      "asymptotic_std_scaling": "L^((2-d)/2)"
+    },
+    {
+      "q": 7,
+      "dimension_d": 2,
+      "base_resolution_L": 81,
+      "line_selector_fraction_c": 0.14035087719298245,
+      "mean_effective_mass_squared": 1.4035087719298245,
+      "standard_deviation_mass_squared_for_Bernoulli_portals": 3.7463031758060574,
+      "coefficient_of_variation": 2.669241012761816,
+      "asymptotic_std_scaling": "L^((2-d)/2)"
+    },
+    {
+      "q": 7,
+      "dimension_d": 3,
+      "base_resolution_L": 81,
+      "line_selector_fraction_c": 0.14035087719298245,
+      "mean_effective_mass_squared": 1.4035087719298245,
+      "standard_deviation_mass_squared_for_Bernoulli_portals": 0.4162559084228952,
+      "coefficient_of_variation": 0.29658233475131285,
+      "asymptotic_std_scaling": "L^((2-d)/2)"
+    },
+    {
+      "q": 7,
+      "dimension_d": 4,
+      "base_resolution_L": 81,
+      "line_selector_fraction_c": 0.14035087719298245,
+      "mean_effective_mass_squared": 1.4035087719298245,
+      "standard_deviation_mass_squared_for_Bernoulli_portals": 0.046250656491432805,
+      "coefficient_of_variation": 0.03295359275014587,
+      "asymptotic_std_scaling": "L^((2-d)/2)"
+    },
+    {
+      "q": 7,
+      "dimension_d": 5,
+      "base_resolution_L": 81,
+      "line_selector_fraction_c": 0.14035087719298245,
+      "mean_effective_mass_squared": 1.4035087719298245,
+      "standard_deviation_mass_squared_for_Bernoulli_portals": 0.0051389618323814225,
+      "coefficient_of_variation": 0.003661510305571764,
+      "asymptotic_std_scaling": "L^((2-d)/2)"
+    },
+    {
+      "q": 7,
+      "dimension_d": 6,
+      "base_resolution_L": 81,
+      "line_selector_fraction_c": 0.14035087719298245,
+      "mean_effective_mass_squared": 1.4035087719298245,
+      "standard_deviation_mass_squared_for_Bernoulli_portals": 0.0005709957591534915,
+      "coefficient_of_variation": 0.0004068344783968627,
+      "asymptotic_std_scaling": "L^((2-d)/2)"
+    },
+    {
+      "q": 11,
+      "dimension_d": 2,
+      "base_resolution_L": 81,
+      "line_selector_fraction_c": 0.09022556390977443,
+      "mean_effective_mass_squared": 0.9022556390977443,
+      "standard_deviation_mass_squared_for_Bernoulli_portals": 3.003736392325534,
+      "coefficient_of_variation": 3.3291411681608003,
+      "asymptotic_std_scaling": "L^((2-d)/2)"
+    },
+    {
+      "q": 11,
+      "dimension_d": 3,
+      "base_resolution_L": 81,
+      "line_selector_fraction_c": 0.09022556390977443,
+      "mean_effective_mass_squared": 0.9022556390977443,
+      "standard_deviation_mass_squared_for_Bernoulli_portals": 0.33374848803617047,
+      "coefficient_of_variation": 0.36990457424008893,
+      "asymptotic_std_scaling": "L^((2-d)/2)"
+    },
+    {
+      "q": 11,
+      "dimension_d": 4,
+      "base_resolution_L": 81,
+      "line_selector_fraction_c": 0.09022556390977443,
+      "mean_effective_mass_squared": 0.9022556390977443,
+      "standard_deviation_mass_squared_for_Bernoulli_portals": 0.037083165337352265,
+      "coefficient_of_variation": 0.041100508248898764,
+      "asymptotic_std_scaling": "L^((2-d)/2)"
+    },
+    {
+      "q": 11,
+      "dimension_d": 5,
+      "base_resolution_L": 81,
+      "line_selector_fraction_c": 0.09022556390977443,
+      "mean_effective_mass_squared": 0.9022556390977443,
+      "standard_deviation_mass_squared_for_Bernoulli_portals": 0.004120351704150252,
+      "coefficient_of_variation": 0.00456672313876653,
+      "asymptotic_std_scaling": "L^((2-d)/2)"
+    },
+    {
+      "q": 11,
+      "dimension_d": 6,
+      "base_resolution_L": 81,
+      "line_selector_fraction_c": 0.09022556390977443,
+      "mean_effective_mass_squared": 0.9022556390977443,
+      "standard_deviation_mass_squared_for_Bernoulli_portals": 0.00045781685601669475,
+      "coefficient_of_variation": 0.0005074136820851701,
+      "asymptotic_std_scaling": "L^((2-d)/2)"
+    }
+  ],
+  "selection_fraction": "c(q)=[(q+1)(q\u00b2+1)]/([4 2]_q)=(q+1)/(q\u00b2+q+1). For q=3, c=4/13; the q=3 input does not arise uniquely from this fraction.",
+  "variance_formula": "For independent xi_x~Bernoulli(c/L\u00b2) on d-dimensional L^d cells and H_L=L\u00b2(Delta+lambda diag xi), normalized constant trial internal coefficient M_L=lambda L\u00b2 * L^-d *sum xi. E[M_L]=lambda c, Var[M_L]=lambda\u00b2 c (1-c/L\u00b2) L^(2-d). Thus concentration of this specific constant-trial coefficient requires d>2, not uniquely d=4.",
+  "dimension_claim": "The critical codimension-two density law does NOT select four-dimensional spacetime. Every d>=3 has concentration of that constant trial energy; actual operator gaps require additional spectral/homogenization checks and can still differ or vanish.",
+  "gauge_and_gravity_gap": "Independent physical requirements such as local Lorentz signature, chiral anomaly index in d=4, gauge dynamics and Einstein equations must select dimension and the correct continuum limit; counts alone do not.",
+  "status_scope": "Exact elementary variance and Gaussian-binomial formulas. No claim of spacetime dimensional selection, unique q, or derived fundamental coupling."
+}

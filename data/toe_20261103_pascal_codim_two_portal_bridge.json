@@ -1,0 +1,277 @@
+{
+  "status": "PASS_CRITICAL_CODIMENSION_TWO_PASCAL_PORTAL_QUADRATIC_FORM",
+  "hypothesis": "At four-dimensional lattice scale a=R/L, base links have physical kinetic coefficient a^-2. A fiber edge is available at each base site independently with probability p_L=c/L^2 (one of L^2 branches), and if available has physical strength a^-2. The average fiber coefficient is c/R\u00b2. A q=3 symplectic-isotropic 2-subspace selector sets c=(40/130)=4/13 only if added as a separate microscopic rule.",
+  "symplectic_selector_fraction_c": 0.3076923076923077,
+  "W33_internal_Laplacian_eigenspaces": {
+    "0": 1,
+    "10": 24,
+    "16": 15
+  },
+  "Bernoulli_portal_trials": [
+    {
+      "L": 3,
+      "base_sites": 81,
+      "portal_probability": 0.03418803418803419,
+      "expected_portal_count": 2.769230769230769,
+      "measured_portal_count_mean": 2.817142857142857,
+      "predicted_effective_c": 0.3076923076923077,
+      "measured_effective_c": 0.31301587301587297,
+      "predicted_effective_c_std": 0.18171189423478035,
+      "measured_effective_c_std": 0.17984089631517944,
+      "smooth_profile_mean_integrated": 0.3377777777777778,
+      "smooth_profile_std_integrated": 0.20009100252296846,
+      "positive_low_mode_W33_24sector_mass_squared_in_unit_R": 3.076923076923077,
+      "positive_high_mode_W33_15sector_mass_squared_in_unit_R": 4.923076923076923
+    },
+    {
+      "L": 9,
+      "base_sites": 6561,
+      "portal_probability": 0.003798670465337132,
+      "expected_portal_count": 24.923076923076923,
+      "measured_portal_count_mean": 24.837142857142858,
+      "predicted_effective_c": 0.3076923076923077,
+      "measured_effective_c": 0.30663139329805994,
+      "predicted_effective_c_std": 0.06151618135119335,
+      "measured_effective_c_std": 0.06261598643338036,
+      "smooth_profile_mean_integrated": 0.2971289829223736,
+      "smooth_profile_std_integrated": 0.06859562619884549,
+      "positive_low_mode_W33_24sector_mass_squared_in_unit_R": 3.076923076923077,
+      "positive_high_mode_W33_15sector_mass_squared_in_unit_R": 4.923076923076923
+    },
+    {
+      "L": 27,
+      "base_sites": 531441,
+      "portal_probability": 0.00042207449614857024,
+      "expected_portal_count": 224.30769230769232,
+      "measured_portal_count_mean": 223.83714285714285,
+      "predicted_effective_c": 0.3076923076923077,
+      "measured_effective_c": 0.3070468351949834,
+      "predicted_effective_c_std": 0.020540115609905197,
+      "measured_effective_c_std": 0.019987400329543322,
+      "smooth_profile_mean_integrated": 0.3026068610361459,
+      "smooth_profile_std_integrated": 0.020671067110468073,
+      "positive_low_mode_W33_24sector_mass_squared_in_unit_R": 3.076923076923077,
+      "positive_high_mode_W33_15sector_mass_squared_in_unit_R": 4.923076923076923
+    },
+    {
+      "L": 81,
+      "base_sites": 43046721,
+      "portal_probability": 4.6897166238730025e-05,
+      "expected_portal_count": 2018.7692307692307,
+      "measured_portal_count_mean": 2015.2257142857143,
+      "predicted_effective_c": 0.3076923076923077,
+      "measured_effective_c": 0.30715221982711693,
+      "predicted_effective_c_std": 0.006847989989371247,
+      "measured_effective_c_std": 0.007046389178352363,
+      "smooth_profile_mean_integrated": 0.3065546726912401,
+      "smooth_profile_std_integrated": 0.00918584432676079,
+      "positive_low_mode_W33_24sector_mass_squared_in_unit_R": 3.076923076923077,
+      "positive_high_mode_W33_15sector_mass_squared_in_unit_R": 4.923076923076923
+    },
+    {
+      "L": 243,
+      "base_sites": 3486784401,
+      "portal_probability": 5.210796248747781e-06,
+      "expected_portal_count": 18168.923076923078,
+      "measured_portal_count_mean": 18165.402857142857,
+      "predicted_effective_c": 0.3076923076923077,
+      "measured_effective_c": 0.3076326924612247,
+      "predicted_effective_c_std": 0.002282710909499982,
+      "measured_effective_c_std": 0.0022081650785793945,
+      "smooth_profile_mean_integrated": 0.30726406596418593,
+      "smooth_profile_std_integrated": 0.0022406858844398734,
+      "positive_low_mode_W33_24sector_mass_squared_in_unit_R": 3.076923076923077,
+      "positive_high_mode_W33_15sector_mass_squared_in_unit_R": 4.923076923076923
+    }
+  ],
+  "q3_mod3_Pascal_support_critical_comparison": [
+    {
+      "m": 1,
+      "L": 3,
+      "mod3_Pascal_fractal_dimension": 1.6309297535714573,
+      "single_Pascal_support_count": 6,
+      "pure_fractal_effective_mass_coefficient": 0.6666666666666666,
+      "two_Pascal_products_count": 36,
+      "two_fractals_effective_mass_coefficient": 4.0,
+      "critical_two_dimensional_support_count": 9,
+      "critical_effective_mass_coefficient": 1.0
+    },
+    {
+      "m": 2,
+      "L": 9,
+      "mod3_Pascal_fractal_dimension": 1.6309297535714573,
+      "single_Pascal_support_count": 36,
+      "pure_fractal_effective_mass_coefficient": 0.4444444444444444,
+      "two_Pascal_products_count": 1296,
+      "two_fractals_effective_mass_coefficient": 16.0,
+      "critical_two_dimensional_support_count": 81,
+      "critical_effective_mass_coefficient": 1.0
+    },
+    {
+      "m": 3,
+      "L": 27,
+      "mod3_Pascal_fractal_dimension": 1.6309297535714573,
+      "single_Pascal_support_count": 216,
+      "pure_fractal_effective_mass_coefficient": 0.2962962962962962,
+      "two_Pascal_products_count": 46656,
+      "two_fractals_effective_mass_coefficient": 64.0,
+      "critical_two_dimensional_support_count": 729,
+      "critical_effective_mass_coefficient": 1.0
+    },
+    {
+      "m": 4,
+      "L": 81,
+      "mod3_Pascal_fractal_dimension": 1.6309297535714573,
+      "single_Pascal_support_count": 1296,
+      "pure_fractal_effective_mass_coefficient": 0.19753086419753083,
+      "two_Pascal_products_count": 1679616,
+      "two_fractals_effective_mass_coefficient": 256.0,
+      "critical_two_dimensional_support_count": 6561,
+      "critical_effective_mass_coefficient": 1.0
+    },
+    {
+      "m": 5,
+      "L": 243,
+      "mod3_Pascal_fractal_dimension": 1.6309297535714573,
+      "single_Pascal_support_count": 7776,
+      "pure_fractal_effective_mass_coefficient": 0.13168724279835387,
+      "two_Pascal_products_count": 60466176,
+      "two_fractals_effective_mass_coefficient": 1024.0,
+      "critical_two_dimensional_support_count": 59049,
+      "critical_effective_mass_coefficient": 1.0
+    },
+    {
+      "m": 6,
+      "L": 729,
+      "mod3_Pascal_fractal_dimension": 1.6309297535714573,
+      "single_Pascal_support_count": 46656,
+      "pure_fractal_effective_mass_coefficient": 0.08779149519890257,
+      "two_Pascal_products_count": 2176782336,
+      "two_fractals_effective_mass_coefficient": 4096.0,
+      "critical_two_dimensional_support_count": 531441,
+      "critical_effective_mass_coefficient": 1.0
+    },
+    {
+      "m": 7,
+      "L": 2187,
+      "mod3_Pascal_fractal_dimension": 1.6309297535714573,
+      "single_Pascal_support_count": 279936,
+      "pure_fractal_effective_mass_coefficient": 0.05852766346593505,
+      "two_Pascal_products_count": 78364164096,
+      "two_fractals_effective_mass_coefficient": 16384.0,
+      "critical_two_dimensional_support_count": 4782969,
+      "critical_effective_mass_coefficient": 1.0
+    },
+    {
+      "m": 8,
+      "L": 6561,
+      "mod3_Pascal_fractal_dimension": 1.6309297535714573,
+      "single_Pascal_support_count": 1679616,
+      "pure_fractal_effective_mass_coefficient": 0.03901844231062336,
+      "two_Pascal_products_count": 2821109907456,
+      "two_fractals_effective_mass_coefficient": 65536.0,
+      "critical_two_dimensional_support_count": 43046721,
+      "critical_effective_mass_coefficient": 1.0
+    }
+  ],
+  "one_portal_among_9_per_level_example": [
+    {
+      "level": 1,
+      "base_linear_resolution": 3,
+      "portal_access_probability": 0.03418803418803419,
+      "physical_internal_gap_squared_24sector": 3.076923076923077,
+      "base_first_physical_laplacian_eigenvalue": 26.999999999999996,
+      "dimensionless_internal_to_base_mass_ratio": 0.33757978902788893
+    },
+    {
+      "level": 2,
+      "base_linear_resolution": 9,
+      "portal_access_probability": 0.003798670465337132,
+      "physical_internal_gap_squared_24sector": 3.076923076923077,
+      "base_first_physical_laplacian_eigenvalue": 37.900800214725564,
+      "dimensionless_internal_to_base_mass_ratio": 0.2849273440053571
+    },
+    {
+      "level": 3,
+      "base_linear_resolution": 27,
+      "portal_access_probability": 0.00042207449614857024,
+      "physical_internal_gap_squared_24sector": 3.076923076923077,
+      "base_first_physical_laplacian_eigenvalue": 39.30057869461689,
+      "dimensionless_internal_to_base_mass_ratio": 0.27980717505001595
+    },
+    {
+      "level": 4,
+      "base_linear_resolution": 81,
+      "portal_access_probability": 4.689716623873003e-05,
+      "physical_internal_gap_squared_24sector": 3.076923076923077,
+      "base_first_physical_laplacian_eigenvalue": 39.45862599623306,
+      "dimensionless_internal_to_base_mass_ratio": 0.27924624395864805
+    },
+    {
+      "level": 5,
+      "base_linear_resolution": 243,
+      "portal_access_probability": 5.21079624874778e-06,
+      "physical_internal_gap_squared_24sector": 3.076923076923077,
+      "base_first_physical_laplacian_eigenvalue": 39.47621814469156,
+      "dimensionless_internal_to_base_mass_ratio": 0.2791840154950529
+    },
+    {
+      "level": 6,
+      "base_linear_resolution": 729,
+      "portal_access_probability": 5.789773609719756e-07,
+      "physical_internal_gap_squared_24sector": 3.076923076923077,
+      "base_first_physical_laplacian_eigenvalue": 39.4781732150767,
+      "dimensionless_internal_to_base_mass_ratio": 0.27917710241987614
+    }
+  ],
+  "heat_trace_internal": [
+    {
+      "diffusion_time_internal_units": 0.001,
+      "heat_trace": 39.52310581080931,
+      "internal_heat_spectral_dimension_at_t": 0.023975975935751834
+    },
+    {
+      "diffusion_time_internal_units": 0.01,
+      "heat_trace": 35.4982548673562,
+      "internal_heat_spectral_dimension_at_t": 0.2375753350445906
+    },
+    {
+      "diffusion_time_internal_units": 0.03,
+      "heat_trace": 28.061388173453345,
+      "internal_heat_spectral_dimension_at_t": 0.6976940377577832
+    },
+    {
+      "diffusion_time_internal_units": 0.05,
+      "heat_trace": 22.296670294861528,
+      "internal_heat_spectral_dimension_at_t": 1.1365208632858739
+    },
+    {
+      "diffusion_time_internal_units": 0.1,
+      "heat_trace": 12.857554358034447,
+      "internal_heat_spectral_dimension_at_t": 2.1270955018660027
+    },
+    {
+      "diffusion_time_internal_units": 0.2,
+      "heat_trace": 4.859479857354198,
+      "internal_heat_spectral_dimension_at_t": 3.4788412070592067
+    },
+    {
+      "diffusion_time_internal_units": 0.4,
+      "heat_trace": 1.4644986924272294,
+      "internal_heat_spectral_dimension_at_t": 2.6190680011665144
+    },
+    {
+      "diffusion_time_internal_units": 1,
+      "heat_trace": 1.0010912863419204,
+      "internal_heat_spectral_dimension_at_t": 0.021822168934948188
+    }
+  ],
+  "mathematical_result": "In a unit physical 4-torus with L^4 cells, weighted internal fiber quadratic form has contribution a^4 sum_x a^-2 xi_x Q_I(f(x)), xi_x independent Bernoulli(c/L\u00b2). For fixed bounded smooth fiber profile Q_I(f), E[form] approaches c int_T4 Q_I(f) d^4x and Var[form]=O(L^-2). For constant profile Q_I=1, exact Var = c(1-c/L\u00b2)/L\u00b2. This gives convergence in probability of that quadratic form for such test functions, not convergence of the full random operator or its spectrum.",
+  "selection_mechanism": "Codimension-two portal density 1/L\u00b2 cancels the L\u00b2 ultraviolet factor of the internal graph Laplacian. A hierarchical q=3 selection with one active portal among 3\u00b2 child options each refinement generates this scaling without level-by-level retuning. Selector factor 4/13 can be inherited from q-Gaussian symplectic lines, but both choice of a 2-of-4 dimensional portal and its dynamics are additional postulates.",
+  "null_models": "A raw mod-3 Pascal triangle with branching 6 and scale factor 3 has Hausdorff D=log_3 6<2; its portal coefficient (6/9)^m dies out. Two independent mod-3 Pascal fractal supports have D=2log_3 6>2, producing divergent coefficient 4^m under the same normalization. Thus the ordinary Pascal fractal does NOT by itself solve scale selection.",
+  "hard_limitations": "A spatially fixed two-dimensional portal is localized and breaks bulk homogeneity; the independent randomized model averages it over the 4D bulk but injects a stochastic microdynamical postulate. Pointwise gates get arbitrarily strong as a->0; concentration of smooth quadratic forms does not prove strong-resolvent spectral convergence, uniform locality, Lorentzian dynamics or radiative stability. The parent physical length R and field normalization still have to come from a proper action; this is a conditional scale RATIO mechanism, not derived particle masses or gravity.",
+  "sources": [
+    "https://oeis.org/A153459",
+    "https://pressbooks.howardcc.edu/jrip1/chapter/fee-fi-fo-fum-deriving-e-latex-theta%CE%B8-and-latex-pi%CF%80-from-pascals-triangle/"
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "status": "PASS_SYMPLECTIC_NINE_OF_EIGHTYONE_DIGIT_RULE_AND_SINGULARITY_FIREWALL",
+  "symplectic_isotropic_2planes_q3": 40,
+  "accepted_digit_vectors_per_lagrangian_plane": 9,
+  "all_digit_vectors_F3_4": 81,
+  "single_refinement_portal_fraction": 0.1111111111111111,
+  "refinement_gate_density_at_L3m": "(9/81)^m=3^(-2m)=1/L\u00b2",
+  "fixed_Lagrangian_plane_samples": [
+    {
+      "m": 1,
+      "L": 3,
+      "all_4D_cells": 81,
+      "symplectic_digit_rule_accepted_cells": 9,
+      "fraction": 0.1111111111111111,
+      "smooth_profile_cos_first_free_coordinate_mean": 1.0,
+      "smooth_profile_cos_first_fixed_coordinate_mean": 1.3,
+      "4D_volume_mean": 1.0,
+      "discrepancy_from_homogeneous_4D_volume": 0.3
+    },
+    {
+      "m": 2,
+      "L": 9,
+      "all_4D_cells": 6561,
+      "symplectic_digit_rule_accepted_cells": 81,
+      "fraction": 0.012345679012345678,
+      "smooth_profile_cos_first_free_coordinate_mean": 1.0,
+      "smooth_profile_cos_first_fixed_coordinate_mean": 1.3,
+      "4D_volume_mean": 1.0,
+      "discrepancy_from_homogeneous_4D_volume": 0.3
+    },
+    {
+      "m": 3,
+      "L": 27,
+      "all_4D_cells": 531441,
+      "symplectic_digit_rule_accepted_cells": 729,
+      "fraction": 0.0013717421124828531,
+      "smooth_profile_cos_first_free_coordinate_mean": 1.0,
+      "smooth_profile_cos_first_fixed_coordinate_mean": 1.3,
+      "4D_volume_mean": 1.0,
+      "discrepancy_from_homogeneous_4D_volume": 0.3
+    },
+    {
+      "m": 4,
+      "L": 81,
+      "all_4D_cells": 43046721,
+      "symplectic_digit_rule_accepted_cells": 6561,
+      "fraction": 0.00015241579027587258,
+      "smooth_profile_cos_first_free_coordinate_mean": 1.0,
+      "smooth_profile_cos_first_fixed_coordinate_mean": 1.3,
+      "4D_volume_mean": 1.0,
+      "discrepancy_from_homogeneous_4D_volume": 0.3
+    }
+  ],
+  "regular_distributed_grid_samples": [
+    {
+      "L": 9,
+      "step_in_lattice_sites": 3,
+      "all_sites": 6561,
+      "portal_count": 81,
+      "portal_density": 0.012345679012345678,
+      "smooth_profile_mean": 1.0,
+      "bulk_profile_mean": 1.0
+    },
+    {
+      "L": 16,
+      "step_in_lattice_sites": 4,
+      "all_sites": 65536,
+      "portal_count": 256,
+      "portal_density": 0.00390625,
+      "smooth_profile_mean": 1.0,
+      "bulk_profile_mean": 1.0
+    },
+    {
+      "L": 25,
+      "step_in_lattice_sites": 5,
+      "all_sites": 390625,
+      "portal_count": 625,
+      "portal_density": 0.0016,
+      "smooth_profile_mean": 1.0,
+      "bulk_profile_mean": 1.0
+    },
+    {
+      "L": 36,
+      "step_in_lattice_sites": 6,
+      "all_sites": 1679616,
+      "portal_count": 1296,
+      "portal_density": 0.0007716049382716049,
+      "smooth_profile_mean": 1.0,
+      "bulk_profile_mean": 1.0
+    },
+    {
+      "L": 49,
+      "step_in_lattice_sites": 7,
+      "all_sites": 5764801,
+      "portal_count": 2401,
+      "portal_density": 0.00041649312786339027,
+      "smooth_profile_mean": 1.0,
+      "bulk_profile_mean": 1.0
+    },
+    {
+      "L": 81,
+      "step_in_lattice_sites": 9,
+      "all_sites": 43046721,
+      "portal_count": 6561,
+      "portal_density": 0.00015241579027587258,
+      "smooth_profile_mean": 1.0,
+      "bulk_profile_mean": 1.0
+    },
+    {
+      "L": 121,
+      "step_in_lattice_sites": 11,
+      "all_sites": 214358881,
+      "portal_count": 14641,
+      "portal_density": 6.830134553650706e-05,
+      "smooth_profile_mean": 1.0,
+      "bulk_profile_mean": 1.0
+    }
+  ],
+  "theorem": "Selecting the 9 vectors in a fixed Lagrangian 2-plane S\u2282F3^4 at each ternary digit level gives exactly 9^m=L\u00b2 accepted points among 81^m=L\u2074. It is supported on a two-dimensional coordinate subtorus, not equidistributed in 4D. Its smooth average on f(x)=1+0.3cos(2\u03c0x_2) equals 1.3 while the 4D bulk integral is exactly 1. Therefore exact combinatorial critical density does NOT ensure the averaged bulk-mass limit of an independent random portal ensemble.",
+  "distributed_alternative": "At L=s\u00b2, selecting each coordinate x_mu divisible by s gives s^4=L\u00b2 portals evenly spaced in all four axes, so fixed smooth Fourier modes eventually average to their bulk mean. This uses a new global scale s=\u221aL and does not follow from a fixed W33 isotropic plane.",
+  "open_mechanism": "Construct a local, translation-compatible, gauge-covariant dynamical rule that redistributes q-adic symplectic portals across 4D without inserting a coarse scale by hand. An actual periodic graph spectrum, Lorentzian causal rule and chiral fermionic action remain open.",
+  "prior_art_and_repo": "Earlier W33 symplectic points/lines and q-Pascal subspace counts, and Cioranescu-Murat homogenization of critical holes. Our result is a falsifier of the proposed gate-density argument, not a proven TOE.",
+  "literature": [
+    "https://www.tandfonline.com/doi/abs/10.1080/03605302.2018.1531425",
+    "https://www.sciencedirect.com/science/article/abs/pii/S0362546X23002286"
+  ]
+}

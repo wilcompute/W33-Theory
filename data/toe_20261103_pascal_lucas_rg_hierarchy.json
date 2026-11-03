@@ -1,0 +1,171 @@
+{
+  "status": "PASS_LUCAS_PASCAL_FRACTAL_AND_RG_HIERARCHY_UNDERDETERMINATION",
+  "p_prime_fractal_rows": [
+    {
+      "p": 2,
+      "branch_count_per_refinement": 3,
+      "Hausdorff_box_dimension": 1.5849625007211563,
+      "dimension_product_two_independent_copies": 3.1699250014423126,
+      "codimension_vs_two_support": 0.4150374992788437,
+      "finite_depth_checks": [
+        {
+          "depth": 1,
+          "L": 2,
+          "actual_nonzero_binomials_mod_p": 3,
+          "theoretical_branch_product": 3,
+          "critical_L_squared": 4,
+          "relative_bulk_two_dimensional_density": 0.75
+        },
+        {
+          "depth": 2,
+          "L": 4,
+          "actual_nonzero_binomials_mod_p": 9,
+          "theoretical_branch_product": 9,
+          "critical_L_squared": 16,
+          "relative_bulk_two_dimensional_density": 0.5625
+        },
+        {
+          "depth": 3,
+          "L": 8,
+          "actual_nonzero_binomials_mod_p": 27,
+          "theoretical_branch_product": 27,
+          "critical_L_squared": 64,
+          "relative_bulk_two_dimensional_density": 0.421875
+        }
+      ]
+    },
+    {
+      "p": 3,
+      "branch_count_per_refinement": 6,
+      "Hausdorff_box_dimension": 1.6309297535714573,
+      "dimension_product_two_independent_copies": 3.2618595071429146,
+      "codimension_vs_two_support": 0.3690702464285427,
+      "finite_depth_checks": [
+        {
+          "depth": 1,
+          "L": 3,
+          "actual_nonzero_binomials_mod_p": 6,
+          "theoretical_branch_product": 6,
+          "critical_L_squared": 9,
+          "relative_bulk_two_dimensional_density": 0.6666666666666666
+        },
+        {
+          "depth": 2,
+          "L": 9,
+          "actual_nonzero_binomials_mod_p": 36,
+          "theoretical_branch_product": 36,
+          "critical_L_squared": 81,
+          "relative_bulk_two_dimensional_density": 0.4444444444444444
+        },
+        {
+          "depth": 3,
+          "L": 27,
+          "actual_nonzero_binomials_mod_p": 216,
+          "theoretical_branch_product": 216,
+          "critical_L_squared": 729,
+          "relative_bulk_two_dimensional_density": 0.2962962962962963
+        }
+      ]
+    },
+    {
+      "p": 5,
+      "branch_count_per_refinement": 15,
+      "Hausdorff_box_dimension": 1.6826061944859854,
+      "dimension_product_two_independent_copies": 3.3652123889719707,
+      "codimension_vs_two_support": 0.31739380551401464,
+      "finite_depth_checks": [
+        {
+          "depth": 1,
+          "L": 5,
+          "actual_nonzero_binomials_mod_p": 15,
+          "theoretical_branch_product": 15,
+          "critical_L_squared": 25,
+          "relative_bulk_two_dimensional_density": 0.6
+        },
+        {
+          "depth": 2,
+          "L": 25,
+          "actual_nonzero_binomials_mod_p": 225,
+          "theoretical_branch_product": 225,
+          "critical_L_squared": 625,
+          "relative_bulk_two_dimensional_density": 0.36
+        },
+        {
+          "depth": 3,
+          "L": 125,
+          "actual_nonzero_binomials_mod_p": 3375,
+          "theoretical_branch_product": 3375,
+          "critical_L_squared": 15625,
+          "relative_bulk_two_dimensional_density": 0.216
+        }
+      ]
+    }
+  ],
+  "RG_transmutation": {
+    "gauge_beta_assumption": "SU3 with 3 light Dirac fundamental flavors at one-loop: b0=11-2*Nf/3=9; NOT derived from W33 or q-Pascal.",
+    "formula": "Lambda/mu=exp[-8*pi\u00b2/(b0*g(mu)\u00b2)] with fixed beta-function convention; one-loop asymptotic freedom, neglect thresholds.",
+    "coupling_sensitivity_table": [
+      {
+        "SU3_Nf3_one_loop_g_uv": 0.3,
+        "Lambda_over_mu_reference": 4.6347611552386226e-43,
+        "log_scale_ratio": -97.47757433174675,
+        "lnLambda_sensitivity_to_ln_g": 194.9551486634935
+      },
+      {
+        "SU3_Nf3_one_loop_g_uv": 0.35,
+        "Lambda_over_mu_reference": 7.897497331091764e-32,
+        "log_scale_ratio": -71.61617706005885,
+        "lnLambda_sensitivity_to_ln_g": 143.2323541201177
+      },
+      {
+        "SU3_Nf3_one_loop_g_uv": 0.4,
+        "Lambda_over_mu_reference": 1.538651941253792e-24,
+        "log_scale_ratio": -54.83113556160754,
+        "lnLambda_sensitivity_to_ln_g": 109.66227112321508
+      },
+      {
+        "SU3_Nf3_one_loop_g_uv": 0.45,
+        "Lambda_over_mu_reference": 1.5307386508254056e-19,
+        "log_scale_ratio": -43.32336636966522,
+        "lnLambda_sensitivity_to_ln_g": 86.64673273933045
+      },
+      {
+        "SU3_Nf3_one_loop_g_uv": 0.5,
+        "Lambda_over_mu_reference": 5.751350682196822e-16,
+        "log_scale_ratio": -35.09192675942883,
+        "lnLambda_sensitivity_to_ln_g": 70.18385351885766
+      },
+      {
+        "SU3_Nf3_one_loop_g_uv": 0.55,
+        "Lambda_over_mu_reference": 2.539618431071957e-13,
+        "log_scale_ratio": -29.00159236316432,
+        "lnLambda_sensitivity_to_ln_g": 58.00318472632864
+      },
+      {
+        "SU3_Nf3_one_loop_g_uv": 0.6,
+        "Lambda_over_mu_reference": 2.6091968143201064e-11,
+        "log_scale_ratio": -24.369393582936688,
+        "lnLambda_sensitivity_to_ln_g": 48.738787165873376
+      },
+      {
+        "SU3_Nf3_one_loop_g_uv": 0.7,
+        "Lambda_over_mu_reference": 1.676379618232884e-08,
+        "log_scale_ratio": -17.90404426501471,
+        "lnLambda_sensitivity_to_ln_g": 35.80808853002942
+      }
+    ],
+    "tempting_unjustified_g2_equals_inverse_40": {
+      "g2_assumed": 0.025,
+      "scale_ratio": 3.9600301299105647e-153
+    },
+    "rigorous_underdetermination": "For any desired ratio R in (0,1), choose g\u00b2=8*pi\u00b2/(b0*ln(1/R)). Thus the one-loop RG mechanism generates a hierarchy from a dimensionless input but does not predict its value without UV coupling boundary conditions. The dimensionful parent mu and scheme are external.",
+    "source": "https://qft.org/courses/qft-ii/18-dimensional-transmutation-and-mass-gaps/"
+  },
+  "interpretation": "For p=3, Pascal mod-3 support is a 6-branch self-similar subset of a 9-cell refined triangle, with Hausdorff D=log_3 6=1.63093. It does not supply a codimension-two portal in 4D by itself. Even a two-copy support has D=3.26186, not exactly 4. An explicit candidate microscopic selection rule is required. Independently, logarithmic RG running can produce exponentially separated physical scales, but the UV coupling / renormalization condition is a free input unless a microscopic action selects it.",
+  "classification": "Known Lucas theorem and textbook asymptotic-freedom RG, new integration as a falsifier of an otherwise attractive TOE scale hypothesis. No claimed original theorem or physical TOE.",
+  "sources": [
+    "https://oeis.org/A153459",
+    "https://qft.org/courses/qft-ii/18-dimensional-transmutation-and-mass-gaps/",
+    "https://ir.cwi.nl/pub/28797/28797.pdf"
+  ]
+}
