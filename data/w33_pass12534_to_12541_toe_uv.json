@@ -1,0 +1,453 @@
+{
+  "control": {
+    "got": {
+      "g1": 0.6153268046281498,
+      "g2": 0.505394686748701,
+      "g3": 0.4873098910763293,
+      "yt": 0.3831709966020987,
+      "lam": -0.015084524989297665
+    },
+    "published": {
+      "g1": 0.6154,
+      "g2": 0.5055,
+      "g3": 0.4873,
+      "yt": 0.3825,
+      "lam": -0.0143
+    },
+    "dlam_dmt": -0.006525332946347344,
+    "dlam_dmh": 0.002850548455290494
+  },
+  "swampland": {
+    "old": [
+      {
+        "kind": "Dirac",
+        "order": "NO",
+        "status": "no AdS3 only below the bound",
+        "bound": 0.008337129026971443,
+        "sum_at_bound": 0.071048577328619
+      },
+      {
+        "kind": "Majorana",
+        "order": "NO",
+        "status": "AdS3 for every m0 tested (0 to 0.2 eV)",
+        "bound": null,
+        "m0_zero_value": -2.159791150377945e-10
+      },
+      {
+        "kind": "Dirac",
+        "order": "IO",
+        "status": "no AdS3 only below the bound",
+        "bound": 0.002835512068452196,
+        "sum_at_bound": 0.10224170540900561
+      },
+      {
+        "kind": "Majorana",
+        "order": "IO",
+        "status": "AdS3 for every m0 tested (0 to 0.2 eV)",
+        "bound": null,
+        "m0_zero_value": -9.879262385772066e-09
+      }
+    ],
+    "current": [
+      {
+        "kind": "Dirac",
+        "order": "NO",
+        "status": "no AdS3 only below the bound",
+        "bound": 0.0076466173005961344,
+        "sum_at_bound": 0.06990491425472717
+      },
+      {
+        "kind": "Majorana",
+        "order": "NO",
+        "status": "AdS3 for every m0 tested (0 to 0.2 eV)",
+        "bound": null,
+        "m0_zero_value": -2.2411652225564838e-10
+      },
+      {
+        "kind": "Dirac",
+        "order": "IO",
+        "status": "no AdS3 only below the bound",
+        "bound": 0.0025356391998096165,
+        "sum_at_bound": 0.10158787832947995
+      },
+      {
+        "kind": "Majorana",
+        "order": "IO",
+        "status": "AdS3 for every m0 tested (0 to 0.2 eV)",
+        "bound": null,
+        "m0_zero_value": -9.755997975328078e-09
+      }
+    ],
+    "sum_floor_NO_eV": 0.05878431004734465,
+    "sum_floor_IO_eV": 0.09892232664659655,
+    "desi_95_eV": 0.0642,
+    "m1_max_from_DESI_NO_eV": 0.0042491002304771396
+  },
+  "asymptotic_safety": {
+    "k_1e19": {
+      "k_tr": 1e+19,
+      "gY_kt": 0.47602007959376097,
+      "g2_kt": 0.5058229372513278,
+      "g3_kt": 0.48821278271169505,
+      "yt_kt_measured": 0.38149328013887407,
+      "lam_kt_measured": -0.011023984370604444,
+      "f_g": 0.009805357297098033,
+      "f0": 0.00011957752801339066,
+      "A": {
+        "f_y": 0.00011676552286392125,
+        "mt": 181.95873385212218,
+        "yb_low": 0.015499999969007784,
+        "yt_low": 0.9850601602177993,
+        "yt_kt": 0.4343139520229242,
+        "yb_kt": 0.005545305885122296
+      },
+      "fB": -0.0004513117040718512,
+      "table_B": {
+        "t": 0.055498102272068306,
+        "G": 0.22659511617645053,
+        "F": -0.07126828769233089,
+        "third_gen_b": 0.060100809360245616,
+        "up_light": -0.08324715340810246,
+        "down_light": 0.14334796276834808,
+        "charged_lepton": -0.6119690911531537,
+        "dirac_neutrino": 0.0678162573761979
+      }
+    },
+    "analytic_branch_A": {
+      "dirac_neutrino": "+G/6",
+      "down_light": "+G/2",
+      "up_light": "-G/2",
+      "charged_lepton": "-G/2 - 7G/3",
+      "tau_fixed_point": "y_tau^2 = 17/9 G",
+      "values": {
+        "dirac": 0.03776585269607509,
+        "down_light": 0.11329755808822527,
+        "up_light": -0.11329755808822527,
+        "lepton": -0.6420194958332766
+      }
+    },
+    "k_tr_scan": [
+      {
+        "k_tr": 1000000000000000.0,
+        "Mt_A": null,
+        "yb_low": null,
+        "f_y": 9.182978668769519e-05,
+        "no_solution": true,
+        "t_B": 0.05786905175138392,
+        "third_gen_b_B": 0.01813318150729759,
+        "dirac_B": 0.04102331354722369,
+        "down_light_B": 0.10493675913437348
+      },
+      {
+        "k_tr": 1e+16,
+        "Mt_A": 177.1900181291386,
+        "yb_low": 0.015499999950497022,
+        "f_y": 9.738115395164494e-05,
+        "no_solution": false,
+        "t_B": 0.057247299011845984,
+        "third_gen_b_B": 0.027668037366343462,
+        "dirac_B": 0.047069007750151964,
+        "down_light_B": 0.11353898588411243
+      },
+      {
+        "k_tr": 1e+17,
+        "Mt_A": null,
+        "yb_low": null,
+        "f_y": 0.00010394502371212968,
+        "no_solution": true,
+        "t_B": 0.05664831824914077,
+        "third_gen_b_B": 0.0377725668299686,
+        "dirac_B": 0.05350587034454944,
+        "down_light_B": 0.12274504420367975
+      },
+      {
+        "k_tr": 3e+17,
+        "Mt_A": null,
+        "yb_low": null,
+        "f_y": 0.00010703931681411845,
+        "no_solution": true,
+        "t_B": 0.05636899027428652,
+        "third_gen_b_B": 0.042822799949461865,
+        "dirac_B": 0.0567330284367845,
+        "down_light_B": 0.12737628536089163
+      },
+      {
+        "k_tr": 1e+18,
+        "Mt_A": null,
+        "yb_low": null,
+        "f_y": 0.00011031864443945969,
+        "no_solution": true,
+        "t_B": 0.05606681515573221,
+        "third_gen_b_B": 0.04854597865341617,
+        "dirac_B": 0.06039739334681021,
+        "down_light_B": 0.1326462013870145
+      },
+      {
+        "k_tr": 3e+18,
+        "Mt_A": null,
+        "yb_low": null,
+        "f_y": 0.00011336505085945685,
+        "no_solution": true,
+        "t_B": 0.055794144904355,
+        "third_gen_b_B": 0.05395403720319655,
+        "dirac_B": 0.06386643058764187,
+        "down_light_B": 0.13764525455972904
+      },
+      {
+        "k_tr": 1e+19,
+        "Mt_A": 181.95873385212218,
+        "yb_low": 0.015499999969007784,
+        "f_y": 0.00011676552286392125,
+        "no_solution": false,
+        "t_B": 0.055498102272068306,
+        "third_gen_b_B": 0.060100809360245616,
+        "dirac_B": 0.0678162573761979,
+        "down_light_B": 0.14334796276834808
+      },
+      {
+        "k_tr": 3e+19,
+        "Mt_A": 182.7128821977038,
+        "yb_low": 0.01549999987287785,
+        "f_y": 0.00011993048373292699,
+        "no_solution": false,
+        "t_B": 0.05523000943511894,
+        "third_gen_b_B": 0.06592627085788519,
+        "dirac_B": 0.07156585195614958,
+        "down_light_B": 0.14877128501056358
+      },
+      {
+        "k_tr": 1e+20,
+        "Mt_A": 183.53881462129095,
+        "yb_low": 0.015499998462205726,
+        "f_y": 0.0001234638483895302,
+        "no_solution": false,
+        "t_B": 0.054937901899198255,
+        "third_gen_b_B": 0.07256712945686,
+        "dirac_B": 0.07584703725417245,
+        "down_light_B": 0.1549739823056574
+      },
+      {
+        "k_tr": 1e+21,
+        "Mt_A": 185.117752924282,
+        "yb_low": 0.015500000000002347,
+        "f_y": 0.00013047484525146246,
+        "no_solution": false,
+        "t_B": 0.05438220655984398,
+        "third_gen_b_B": 0.08609766290023985,
+        "dirac_B": 0.08458954521341522,
+        "down_light_B": 0.1676709727400058
+      }
+    ],
+    "higgs_at_measured_Mt": [
+      {
+        "f_lam": 0.005,
+        "lam_MP": null,
+        "MH": null,
+        "note": "no real fixed point"
+      },
+      {
+        "f_lam": 0.01,
+        "lam_MP": null,
+        "MH": null,
+        "note": "no real fixed point"
+      },
+      {
+        "f_lam": 0.02,
+        "lam_MP": -0.00516957294167722,
+        "MH": 127.15630839424436
+      },
+      {
+        "f_lam": 0.052,
+        "lam_MP": -0.0013387929264010831,
+        "MH": 128.36446466463644
+      },
+      {
+        "f_lam": 0.1,
+        "lam_MP": -0.0006393189029951904,
+        "MH": 128.57929796798788
+      },
+      {
+        "f_lam": 0.2,
+        "lam_MP": -0.0003063903892385302,
+        "MH": 128.68094443858232
+      },
+      {
+        "f_lam": 1.0,
+        "lam_MP": -5.9330512178728e-05,
+        "MH": 128.75612290654885
+      },
+      {
+        "f_lam": 100.0,
+        "lam_MP": -5.887018099598059e-07,
+        "MH": 128.7739661975705
+      }
+    ],
+    "Mt_for_lambda_MP_zero_at_measured_MH": 170.85774983291188
+  },
+  "criticality": {
+    "scan": [
+      {
+        "k": 1e+16,
+        "converged": true,
+        "Mt": 166.57404451871847,
+        "MH": 116.98231155779472,
+        "dMt": -5.995955481281527,
+        "dMH": -8.217688442205286,
+        "pull_Mt": -10.373377001467576,
+        "pull_MH": -74.70625856550261,
+        "residual": [
+          -1.302284739464546e-11,
+          -1.716371175215233e-13
+        ]
+      },
+      {
+        "k": 1e+17,
+        "converged": true,
+        "Mt": 169.14069402100972,
+        "MH": 121.85059473418181,
+        "dMt": -3.4293059789902713,
+        "dMH": -3.3494052658181914,
+        "pull_Mt": -5.932913258697135,
+        "pull_MH": -30.449138780165377,
+        "residual": [
+          8.010583163594806e-11,
+          1.1148003211889473e-12
+        ]
+      },
+      {
+        "k": 1e+18,
+        "converged": true,
+        "Mt": 171.56432184687657,
+        "MH": 126.70067844831594,
+        "dMt": -1.0056781531234265,
+        "dMH": 1.5006784483159379,
+        "pull_Mt": -1.739885937621943,
+        "pull_MH": 13.642531348326708,
+        "residual": [
+          2.918433500236333e-12,
+          1.4671460961644407e-13
+        ]
+      },
+      {
+        "k": 1e+19,
+        "converged": true,
+        "Mt": 173.86708939150404,
+        "MH": 131.53633030879448,
+        "dMt": 1.297089391504045,
+        "dMH": 6.336330308794473,
+        "pull_Mt": 2.2440455578232257,
+        "pull_MH": 57.60300280722248,
+        "residual": [
+          -3.568459930298291e-09,
+          3.0380560848131924e-11
+        ]
+      },
+      {
+        "k": 1.22e+19,
+        "converged": true,
+        "Mt": 174.06093913391487,
+        "MH": 131.95345655859964,
+        "dMt": 1.4909391339148783,
+        "dMH": 6.753456558599638,
+        "pull_Mt": 2.5794177042547006,
+        "pull_MH": 61.39505962363307,
+        "residual": [
+          -6.249731068791063e-09,
+          4.607636486352859e-11
+        ]
+      },
+      {
+        "k": 2.4e+18,
+        "converged": true,
+        "Mt": 172.45299194796883,
+        "MH": 128.54064531349403,
+        "dMt": -0.11700805203116715,
+        "dMH": 3.340645313494022,
+        "pull_Mt": -0.202431228803455,
+        "pull_MH": 30.369502849945658,
+        "residual": [
+          -7.675262335415933e-14,
+          -1.6219348345335584e-14
+        ]
+      },
+      {
+        "k": 1e+20,
+        "converged": true,
+        "Mt": 176.06845324910742,
+        "MH": 136.36416838548197,
+        "dMt": 3.4984532491074276,
+        "dMH": 11.164168385481972,
+        "pull_Mt": 6.052542349304436,
+        "pull_MH": 101.49243986801793,
+        "residual": [
+          -1.0118693833131506e-10,
+          2.2247161964473062e-13
+        ]
+      },
+      {
+        "k": 1e+21,
+        "converged": true,
+        "Mt": 178.18565754968697,
+        "MH": 141.193035508709,
+        "dMt": 5.615657549686972,
+        "dMH": 15.993035508708985,
+        "pull_Mt": 9.715437857385492,
+        "pull_MH": 145.3912318973544,
+        "residual": [
+          -4.637090739611805e-09,
+          7.680854107273494e-12
+        ]
+      }
+    ],
+    "measured_at_1e19": {
+      "lam": -0.011023984370604444,
+      "beta_lam": 0.0001586990545517236
+    },
+    "measured_beta_lam_min": {
+      "abs_beta": 9.841568952302086e-07,
+      "log10k": 17.55,
+      "lam_there": -0.011297533414662553
+    }
+  },
+  "mpp": {
+    "0.1171": {
+      "k": 5.858239094604188e+17,
+      "Mt": 170.47563501344646,
+      "MH": 125.20000090262681,
+      "dMt": -2.094364986553529
+    },
+    "0.118": {
+      "k": 4.9002708776363366e+17,
+      "Mt": 170.82742760653227,
+      "MH": 125.20000104014306,
+      "dMt": -1.742572393467725
+    },
+    "0.1189": {
+      "k": 4.103461932134576e+17,
+      "Mt": 171.17900464687918,
+      "MH": 125.20000111718211,
+      "dMt": -1.3909953531208146
+    },
+    "heterotic_5.27e17": {
+      "Mt": 170.90312225571094,
+      "MH": 125.35310489707318,
+      "dMt": -1.666877744289053,
+      "dMH": 0.15310489707317743
+    }
+  },
+  "checks": {
+    "control: two-loop RGEs reproduce Buttazzo eq. 61 (g within 3e-4, y_t within 1e-3, lambda within 1e-3) and its slopes": true,
+    "control: the Casimir code gives bounds near the published 7.7 and 2.5 meV": true,
+    "12534: Majorana has AdS3 at every mass tested, for both orderings; Dirac NO and IO have upper bounds": true,
+    "12534: NO window [58.8, 69.9] meV contains DESI's 64.2 meV limit; the IO floor exceeds it": true,
+    "12535: branch A predicts M_t = 182.0 GeV at k = 1e19, reproducing the paper and missing 172.57 by over 9 GeV": true,
+    "12535: lowering k_tr to 1e16 still leaves M_t above 177 GeV": true,
+    "12535: relevance table branch B, b and Dirac and light-down IR-attractive to zero; up and leptons relevant": true,
+    "12535: analytic branch A: Dirac +G/6, down +G/2, up -G/2, lepton -17G/6": true,
+    "12535: branch B far-UV y_t* near the frontier's 0.25": true,
+    "12535: fixed-point Higgs 127-129 GeV at measured M_t, above 125.20": true,
+    "12536: critical points never hit both masses: M_t within 1 GeV and M_H within 1 GeV are not simultaneous": true,
+    "12536: M_H = 125.20 at criticality needs M_t near 170.8; lambda(1e19) = 0 needs M_t near 170.9": true
+  },
+  "all_checks_pass": true
+}

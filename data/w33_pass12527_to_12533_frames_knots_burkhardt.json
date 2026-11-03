@@ -434,7 +434,7 @@
     "19": 560,
     "23": 640,
     "25": 640,
-    "29": "pending"
+    "29": 1440
   },
   "knots": {
     "path": [
@@ -1156,8 +1156,18 @@
       "feasible": []
     },
     "q7_W40": "pending",
-    "q9_W46": "pending",
-    "q9_W48": "pending"
+    "q9_W46": {
+      "cases": 42,
+      "infeasible": 42,
+      "unknown": [],
+      "feasible": []
+    },
+    "q9_W48": {
+      "cases": 42,
+      "infeasible": 42,
+      "unknown": [],
+      "feasible": []
+    }
   },
   "heavy_status": {
     "q7_W38": {
@@ -1167,8 +1177,18 @@
       "feasible": []
     },
     "q7_W40": "pending",
-    "q9_W46": "pending",
-    "q9_W48": "pending"
+    "q9_W46": {
+      "cases": 42,
+      "infeasible": 42,
+      "unknown": [],
+      "feasible": []
+    },
+    "q9_W48": {
+      "cases": 42,
+      "infeasible": 42,
+      "unknown": [],
+      "feasible": []
+    }
   },
   "fox": {
     "fox_preserves_alternating_sum": true,
@@ -1364,6 +1384,195 @@
       "control_mismatches": 54
     }
   },
+  "kauffman": {
+    "trefoil_at_golden_vs_formula": [
+      -0.9999999999999998,
+      -0.9999999999999998
+    ],
+    "trefoil_at_minus1": -3.0,
+    "figure8_at_minus1": 1.0,
+    "unknot_twist": 1.0,
+    "two_unlinked": 1.8571428571428572,
+    "reidemeister2_invariance": [
+      1.8571428571428572,
+      1.8571428571428572
+    ],
+    "tests": {
+      "golden": [
+        150,
+        150
+      ],
+      "at_minus1": [
+        150,
+        150
+      ]
+    },
+    "r5_histogram": {
+      "1": 72,
+      "2": 30,
+      "0": 48
+    },
+    "bad": []
+  },
+  "magic": {
+    "stabiliser_states": 12,
+    "min_W_on_stabiliser_states": -3.2381504884900397e-16,
+    "odd_state_is_parity_odd": true,
+    "odd_state_W": [
+      -0.333333,
+      0.166667,
+      0.166667,
+      0.166667,
+      0.166667,
+      0.166667,
+      0.166667,
+      0.166667,
+      0.166667
+    ],
+    "sum_negativity": 0.33333333333333326,
+    "weyl_orbit_overlaps": [
+      0.25
+    ],
+    "prob_of_odd_outcome_from_stabiliser_states": [
+      0.0,
+      0.5
+    ],
+    "post_measurement_min_W": -0.3333333333333333,
+    "two_qutrit_mirror_W_min": -0.05555555555555555,
+    "two_qutrit_mirror_sum_negativity": 0.8888888888888884
+  },
+  "tl_module": {
+    "cap_rank": 1,
+    "cap_in_P4": true,
+    "module_dimension": 5,
+    "module_invariant_under_all_R": true,
+    "parity_on_module_values": "[(-0.5+0j), (1+0j)]",
+    "parity_commutes_with_Pi": [
+      true,
+      false,
+      false,
+      true,
+      false
+    ],
+    "centre_commutes_with_all_Pi": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "centre_parity_plus_one_dimension": 5,
+    "displaced_parities_acting_as_plus_one_on_module": [
+      [
+        2,
+        0,
+        2,
+        2
+      ]
+    ],
+    "TL_words_gram_abs_rounded": [
+      [
+        1.0,
+        0.5774,
+        0.5774,
+        0.3333,
+        0.5774
+      ],
+      [
+        0.5774,
+        1.0,
+        0.3333,
+        0.5774,
+        1.0
+      ],
+      [
+        0.5774,
+        0.3333,
+        1.0,
+        0.5774,
+        1.0
+      ],
+      [
+        0.3333,
+        0.5774,
+        0.5774,
+        1.0,
+        1.7321
+      ],
+      [
+        0.5774,
+        1.0,
+        1.0,
+        1.7321,
+        3.0
+      ]
+    ],
+    "TL_words_rank": 4,
+    "TL_gram_powers_of_sqrt3": [
+      -2.0,
+      -1.0,
+      -0.0,
+      1.0,
+      2.0
+    ]
+  },
+  "colour_patterns": {
+    "points_by_colour_class_sizes": {
+      "(4, 2)": 9,
+      "(4, 1, 1)": 6,
+      "(3, 2, 1)": 18,
+      "(2, 2, 2)": 6,
+      "(3, 3)": 1
+    },
+    "parity_preserving_strand_perms_preserve_commutation": {
+      "True": 6,
+      "False": 30
+    },
+    "matchings": {
+      "total": 15,
+      "bipartite": 6,
+      "bipartite_are_lines": 5,
+      "bipartite_noncrossing": 5
+    },
+    "codewords_by_number_of_matching_lines": {
+      "0": 52,
+      "1": 88,
+      "2": 56,
+      "3": 12,
+      "4": 6,
+      "5": 2
+    },
+    "covered_points_colour_profiles": {
+      "(((2, 2, 2), 3), ((3, 2, 1), 8), ((4, 1, 1), 2), ((4, 2), 7))": 12,
+      "(((2, 2, 2), 1), ((3, 2, 1), 11), ((3, 3), 1), ((4, 1, 1), 3), ((4, 2), 4))": 6,
+      "(((2, 2, 2), 4), ((3, 2, 1), 7), ((3, 3), 1), ((4, 1, 1), 3), ((4, 2), 5))": 12,
+      "(((2, 2, 2), 4), ((3, 2, 1), 8), ((3, 3), 1), ((4, 1, 1), 3), ((4, 2), 4))": 12,
+      "(((2, 2, 2), 5), ((3, 2, 1), 4), ((3, 3), 1), ((4, 1, 1), 2), ((4, 2), 8))": 6,
+      "(((2, 2, 2), 1), ((3, 2, 1), 10), ((3, 3), 1), ((4, 1, 1), 3), ((4, 2), 5))": 12,
+      "(((2, 2, 2), 1), ((3, 2, 1), 11), ((4, 1, 1), 4), ((4, 2), 4))": 12,
+      "(((2, 2, 2), 1), ((3, 2, 1), 12), ((4, 1, 1), 4), ((4, 2), 3))": 6,
+      "(((2, 2, 2), 2), ((3, 2, 1), 12), ((3, 3), 1), ((4, 1, 1), 2), ((4, 2), 3))": 6,
+      "(((2, 2, 2), 3), ((3, 2, 1), 11), ((4, 1, 1), 2), ((4, 2), 4))": 12,
+      "(((2, 2, 2), 2), ((3, 2, 1), 12), ((4, 1, 1), 3), ((4, 2), 3))": 4,
+      "(((2, 2, 2), 2), ((3, 2, 1), 10), ((3, 3), 1), ((4, 1, 1), 2), ((4, 2), 5))": 6,
+      "(((2, 2, 2), 3), ((3, 2, 1), 9), ((4, 1, 1), 5), ((4, 2), 3))": 6,
+      "(((2, 2, 2), 5), ((3, 2, 1), 10), ((3, 3), 1), ((4, 1, 1), 2), ((4, 2), 2))": 6,
+      "(((2, 2, 2), 3), ((3, 2, 1), 8), ((4, 1, 1), 5), ((4, 2), 4))": 12,
+      "(((2, 2, 2), 5), ((3, 2, 1), 8), ((3, 3), 1), ((4, 1, 1), 2), ((4, 2), 4))": 6,
+      "(((2, 2, 2), 2), ((3, 2, 1), 9), ((3, 3), 1), ((4, 1, 1), 2), ((4, 2), 6))": 12,
+      "(((2, 2, 2), 4), ((3, 2, 1), 6), ((4, 1, 1), 4), ((4, 2), 6))": 3,
+      "(((2, 2, 2), 3), ((3, 2, 1), 8), ((3, 3), 1), ((4, 1, 1), 4), ((4, 2), 4))": 9,
+      "(((2, 2, 2), 2), ((3, 2, 1), 8), ((3, 3), 1), ((4, 1, 1), 2), ((4, 2), 7))": 3,
+      "(((2, 2, 2), 5), ((3, 2, 1), 12), ((4, 2), 3))": 1,
+      "(((2, 2, 2), 3), ((3, 2, 1), 9), ((4, 1, 1), 2), ((4, 2), 6))": 12,
+      "(((2, 2, 2), 4), ((3, 2, 1), 10), ((3, 3), 1), ((4, 1, 1), 3), ((4, 2), 2))": 12,
+      "(((2, 2, 2), 2), ((3, 2, 1), 9), ((4, 1, 1), 3), ((4, 2), 6))": 2,
+      "(((2, 2, 2), 4), ((3, 2, 1), 7), ((4, 1, 1), 4), ((4, 2), 5))": 12,
+      "(((2, 2, 2), 4), ((3, 2, 1), 10), ((4, 1, 1), 4), ((4, 2), 2))": 6,
+      "(((2, 2, 2), 4), ((3, 2, 1), 8), ((4, 1, 1), 4), ((4, 2), 4))": 6,
+      "(((2, 2, 2), 5), ((3, 2, 1), 6), ((4, 2), 9))": 2
+    }
+  },
   "checks": {
     "12527: q = 5: the weight-2 shell has 20 points, line intersections 0 and 2, and is even in the separately built W(3,5)": true,
     "12527: q = 13: one orbit of size 160 of a Hamming-weight-4 vector, even in the separately built W(3,13), coverage 0/2/4, below 168": true,
@@ -1388,7 +1597,12 @@
     "12533: diagram colourings = 3^(1 + d) and Jones = sqrt3^d on 150/150; colourings vs Jones 60/60 at 2, 4, 8 strands": true,
     "12533: explicit parafermions: constant commutation exponent, charge-sector Pauli group of 81 trace-orthonormal classes, closed form matches": true,
     "12533: the triangle: TL6 generators from bilinear eigenprojectors act by the (inverse) Fox rule, all 5 generators and all 3 projectors; TL holds": true,
-    "12533: p = 3, 5, 7, 11: form invariant, non-degenerate, caps isotropic, 120/120 colouring counts; control Lagrangian disagrees": true
+    "12533: p = 3, 5, 7, 11: form invariant, non-degenerate, caps isotropic, 120/120 colouring counts; control Lagrangian disagrees": true,
+    "12532: HiGHS heavy cases: q = 9, W = 46 and W = 48 all 42 infeasible, none unknown: the minimum is 48 and every minimal set is a hyperoval": true,
+    "12537: Q at the golden ratio matches 5-colourings 150/150, Q(-1) matches 3-colourings 150/150; trefoil controls": true,
+    "12537: the odd state has W = -1/3, sum-negativity 1/3, Weyl overlaps 1/4; stabiliser states have W >= 0; parity measurement reaches it with probability 1/2": true,
+    "12537: the TL6 vacuum module has dimension 5 and exactly one displaced parity acts as +1 on it, commuting with all projectors, +1 eigenspace of dimension 5": true,
+    "12537: exactly the 5 non-crossing bipartite matchings are lines; 2 codewords contain all 5; colour-size census of the 40 points": true
   },
   "all_checks_pass": true
 }

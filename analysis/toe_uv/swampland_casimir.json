@@ -1,0 +1,66 @@
+{
+ "old": [
+  {
+   "kind": "Dirac",
+   "order": "NO",
+   "status": "no AdS3 only below the bound",
+   "bound": 0.008337129026971443,
+   "sum_at_bound": 0.071048577328619
+  },
+  {
+   "kind": "Majorana",
+   "order": "NO",
+   "status": "AdS3 for every m0 tested (0 to 0.2 eV)",
+   "bound": null,
+   "m0_zero_value": -2.159791150377945e-10
+  },
+  {
+   "kind": "Dirac",
+   "order": "IO",
+   "status": "no AdS3 only below the bound",
+   "bound": 0.002835512068452196,
+   "sum_at_bound": 0.10224170540900561
+  },
+  {
+   "kind": "Majorana",
+   "order": "IO",
+   "status": "AdS3 for every m0 tested (0 to 0.2 eV)",
+   "bound": null,
+   "m0_zero_value": -9.879262385772066e-09
+  }
+ ],
+ "current": [
+  {
+   "kind": "Dirac",
+   "order": "NO",
+   "status": "no AdS3 only below the bound",
+   "bound": 0.0076466173005961344,
+   "sum_at_bound": 0.06990491425472717
+  },
+  {
+   "kind": "Majorana",
+   "order": "NO",
+   "status": "AdS3 for every m0 tested (0 to 0.2 eV)",
+   "bound": null,
+   "m0_zero_value": -2.2411652225564838e-10
+  },
+  {
+   "kind": "Dirac",
+   "order": "IO",
+   "status": "no AdS3 only below the bound",
+   "bound": 0.0025356391998096165,
+   "sum_at_bound": 0.10158787832947995
+  },
+  {
+   "kind": "Majorana",
+   "order": "IO",
+   "status": "AdS3 for every m0 tested (0 to 0.2 eV)",
+   "bound": null,
+   "m0_zero_value": -9.755997975328078e-09
+  }
+ ],
+ "sum_floor_NO_eV": 0.05878431004734465,
+ "sum_floor_IO_eV": 0.09892232664659655,
+ "desi_95_eV": 0.0642,
+ "m1_max_from_DESI_NO_eV": 0.0042491002304771396
+}

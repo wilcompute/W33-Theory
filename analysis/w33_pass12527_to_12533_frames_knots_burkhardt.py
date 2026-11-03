@@ -93,6 +93,17 @@ def main():
         all(v == ["inverse"] * 3 for v in pf["TL_generator_acts_on_monomials_by"].values()) and pf["neighbouring_bilinear_eigenprojectors_satisfy_TL"])
     checks["12533: p = 3, 5, 7, 11: form invariant, non-degenerate, caps isotropic, 120/120 colouring counts; control Lagrangian disagrees"] = all(
         v["form_invariant"] and v["nondegenerate"] and v["caps_isotropic"] and v["plat_agree"] == v["plat_tests"] == 120 and v["other_lagrangian_is_isotropic"] and v["control_mismatches"] > 0 for v in fp.values())
+    hq946, hq948 = load("heavy_highs_q9_W46.json"), load("heavy_highs_q9_W48.json")
+    checks["12532: HiGHS heavy cases: q = 9, W = 46 and W = 48 all 42 infeasible, none unknown: the minimum is 48 and every minimal set is a hyperoval"] = all(h["infeasible"] == h["cases"] == 42 and not h["unknown"] and not h["feasible"] for h in (hq946, hq948))
+    kg, mc, tm, cp = load("kauffman_golden.json"), load("magic_colour.json"), load("tl_module_even_weil.json"), load("colour_patterns.json"); res.update(kauffman=kg, magic=mc, tl_module=tm, colour_patterns=cp)
+    checks["12537: Q at the golden ratio matches 5-colourings 150/150, Q(-1) matches 3-colourings 150/150; trefoil controls"] = (
+        kg["tests"] == {"golden": [150, 150], "at_minus1": [150, 150]} and abs(kg["trefoil_at_golden_vs_formula"][0] - kg["trefoil_at_golden_vs_formula"][1]) < 1e-9 and abs(kg["trefoil_at_minus1"] + 3) < 1e-9)
+    checks["12537: the odd state has W = -1/3, sum-negativity 1/3, Weyl overlaps 1/4; stabiliser states have W >= 0; parity measurement reaches it with probability 1/2"] = (
+        min(mc["odd_state_W"]) == -0.333333 and abs(mc["sum_negativity"] - 1 / 3) < 1e-9 and mc["weyl_orbit_overlaps"] == [0.25] and mc["min_W_on_stabiliser_states"] > -1e-9 and mc["prob_of_odd_outcome_from_stabiliser_states"] == [0.0, 0.5])
+    checks["12537: the TL6 vacuum module has dimension 5 and exactly one displaced parity acts as +1 on it, commuting with all projectors, +1 eigenspace of dimension 5"] = (
+        tm["module_dimension"] == 5 and tm["module_invariant_under_all_R"] and len(tm["displaced_parities_acting_as_plus_one_on_module"]) == 1 and all(tm["centre_commutes_with_all_Pi"]) and tm["centre_parity_plus_one_dimension"] == 5)
+    checks["12537: exactly the 5 non-crossing bipartite matchings are lines; 2 codewords contain all 5; colour-size census of the 40 points"] = (
+        cp["matchings"]["bipartite"] == 6 and cp["matchings"]["bipartite_are_lines"] == 5 and cp["matchings"]["bipartite_noncrossing"] == 5 and cp["codewords_by_number_of_matching_lines"]["5"] == 2 and sum(cp["points_by_colour_class_sizes"].values()) == 40)
     checks = {k: bool(v) for k, v in checks.items()}
     res["checks"] = checks
     res["all_checks_pass"] = all(checks.values())

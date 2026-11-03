@@ -1,0 +1,27 @@
+{
+ "stabiliser_states": 12,
+ "min_W_on_stabiliser_states": -3.2381504884900397e-16,
+ "odd_state_is_parity_odd": true,
+ "odd_state_W": [
+  -0.333333,
+  0.166667,
+  0.166667,
+  0.166667,
+  0.166667,
+  0.166667,
+  0.166667,
+  0.166667,
+  0.166667
+ ],
+ "sum_negativity": 0.33333333333333326,
+ "weyl_orbit_overlaps": [
+  0.25
+ ],
+ "prob_of_odd_outcome_from_stabiliser_states": [
+  0.0,
+  0.5
+ ],
+ "post_measurement_min_W": -0.3333333333333333,
+ "two_qutrit_mirror_W_min": -0.05555555555555555,
+ "two_qutrit_mirror_sum_negativity": 0.8888888888888884
+}

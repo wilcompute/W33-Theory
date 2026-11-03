@@ -1,0 +1,14 @@
+{
+ "q": 9,
+ "W": 48,
+ "cases": 42,
+ "range": [
+  0,
+  42
+ ],
+ "maxz": 2,
+ "infeasible": 42,
+ "feasible": [],
+ "unknown": [],
+ "seconds": 4433.5
+}

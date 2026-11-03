@@ -1,0 +1,75 @@
+{
+ "cap_rank": 1,
+ "cap_in_P4": true,
+ "module_dimension": 5,
+ "module_invariant_under_all_R": true,
+ "parity_on_module_values": "[(-0.5+0j), (1+0j)]",
+ "parity_commutes_with_Pi": [
+  true,
+  false,
+  false,
+  true,
+  false
+ ],
+ "centre_commutes_with_all_Pi": [
+  true,
+  true,
+  true,
+  true,
+  true
+ ],
+ "centre_parity_plus_one_dimension": 5,
+ "displaced_parities_acting_as_plus_one_on_module": [
+  [
+   2,
+   0,
+   2,
+   2
+  ]
+ ],
+ "TL_words_gram_abs_rounded": [
+  [
+   1.0,
+   0.5774,
+   0.5774,
+   0.3333,
+   0.5774
+  ],
+  [
+   0.5774,
+   1.0,
+   0.3333,
+   0.5774,
+   1.0
+  ],
+  [
+   0.5774,
+   0.3333,
+   1.0,
+   0.5774,
+   1.0
+  ],
+  [
+   0.3333,
+   0.5774,
+   0.5774,
+   1.0,
+   1.7321
+  ],
+  [
+   0.5774,
+   1.0,
+   1.0,
+   1.7321,
+   3.0
+  ]
+ ],
+ "TL_words_rank": 4,
+ "TL_gram_powers_of_sqrt3": [
+  -2.0,
+  -1.0,
+  -0.0,
+  1.0,
+  2.0
+ ]
+}

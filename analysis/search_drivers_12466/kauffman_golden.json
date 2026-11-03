@@ -1,0 +1,30 @@
+{
+ "trefoil_at_golden_vs_formula": [
+  -0.9999999999999998,
+  -0.9999999999999998
+ ],
+ "trefoil_at_minus1": -3.0,
+ "figure8_at_minus1": 1.0,
+ "unknot_twist": 1.0,
+ "two_unlinked": 1.8571428571428572,
+ "reidemeister2_invariance": [
+  1.8571428571428572,
+  1.8571428571428572
+ ],
+ "tests": {
+  "golden": [
+   150,
+   150
+  ],
+  "at_minus1": [
+   150,
+   150
+  ]
+ },
+ "r5_histogram": {
+  "1": 72,
+  "2": 30,
+  "0": 48
+ },
+ "bad": []
+}

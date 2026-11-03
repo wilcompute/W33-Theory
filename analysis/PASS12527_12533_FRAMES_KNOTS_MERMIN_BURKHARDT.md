@@ -1,7 +1,7 @@
 # Passes 12527–12533: orthonormal frames, knots, tricolourings, parafermions, Mermin squares and the Burkhardt quartic
 
 Claude track. Producer: `analysis/w33_pass12527_to_12533_frames_knots_burkhardt.py`. Test: `tests/test_w33_pass12527_to_12533.py`. Drivers in `analysis/search_drivers_12466`: `frame_orbits.py`, `verify_frame_set.py`, `frame_family.py`, `knots_w33.py`, `knots_overlap.py`,
-`mermin_even.py`, `burkhardt_totals.py`, `tomography_subset.py`, `tomography_orbits.py`, `hyperoval_dfs.c`, `export_dfs.py`, `recheck_highs.py`, `highs_control_q9.py`, `heavy_highs.py`, `fox_w33.py`, `fox_general_p.py`, `parafermion_w33.py`. Continues `PASS12518_12525_HYPEROVAL_FLOOR_HESSE_DICTIONARY.md`.
+`mermin_even.py`, `burkhardt_totals.py`, `tomography_subset.py`, `tomography_orbits.py`, `hyperoval_dfs.c`, `export_dfs.py`, `recheck_highs.py`, `highs_control_q9.py`, `heavy_highs.py`, `fox_w33.py`, `fox_general_p.py`, `parafermion_w33.py`, `kauffman_golden.py`, `magic_colour.py`, `tl_module_even_weil.py`, `colour_patterns.py`. Continues `PASS12518_12525_HYPEROVAL_FLOOR_HESSE_DICTIONARY.md`.
 
 Labels: **[E]** exact computation or proof, **[N]** numerical with a stated tolerance, **[I]** interpretation. Nothing here derives particles, forces or constants.
 
@@ -119,9 +119,23 @@ Since the caps are L₀ and constants are always colourings, this proves the cou
 
 **Honest scope.** The ingredients are classical, and this may be folklore among people who work on these invariants. I did not find it stated, and the join to W(3,3) and its 216 codewords is what is added. It is Clifford-only: braiding here is classically simulable and **not universal**. Nothing here shows that W(3,3) describes physical anyons.
 
-## Heavy runs
+## 12537: the same space, three more ways
 
-The non-hyperoval case is reported under `heavy_status`. CP-SAT's chain was stopped after 2 of 42 cases in hours, and HiGHS replaced it. Uniqueness among *all* minimal sets is not settled until q = 9, W = 48 and q = 7, W = 40 are all INFEASIBLE.
+**[N] p = 5 and the golden ratio** (`kauffman_golden.py`). The Brandt–Lickorish–Millett–Ho polynomial Q, by its skein relation on descending diagrams with no colouring input. **|Q((√5 − 1)/2)| = √5^r with r from Fox 5-colourings, 150/150**, and **Q(−1) = (−3)^s with s from Fox 3-colourings, 150/150**. These are classical theorems (Jones, Rong, Lickorish–Millett), used here as a check that links W(3,5) to the golden-ratio evaluation as W(3,3) is linked to Jones at e^{iπ/3}. I first recalled the F₃ formula at x = 1. The trefoil refutes that, and I corrected the point rather than the data.
+
+**[N] Where the Clifford picture stops** (`magic_colour.py`). Parity is colour negation on one factor. Its unitary is Clifford, but measuring it is not: the odd sector of a qutrit is (|1⟩ − |2⟩)/√2, with Wigner function −1/3 at one point and ⅙ at the other eight, sum-negativity ⅓, the "strange state" of Veitch et al. Its 9 Weyl images have overlap ¼: it is the Hesse SIC fiducial of 12521. All 12 stabiliser states have W ≥ 0 (control), and a stabiliser state that is not a parity eigenstate reaches it with probability ½. So **one parity measurement leaves the stabiliser polytope**, and braiding alone cannot. I did not show that this resource is enough for universality here; for qutrits that is what magic-state distillation results suggest.
+
+**[N] The TL₆ vacuum module is the even Weil sector** (`tl_module_even_weil.py`). The module generated from the cap has dimension 5 = C₃ and is invariant under all braid generators. **Exactly one of the 81 displaced parities acts as +1 on it**, it commutes with all TL projectors, and its +1 eigenspace has dimension 5. So the module is the C⁵ of the Burkhardt quartic of 12530: the knot, parafermion and Burkhardt threads live on one space.
+
+**[E] Colour patterns: mostly negative** (`colour_patterns.py`). The 40 points by colour-class sizes: (3,2,1) 18, (4,2) 9, (4,1,1) 6, (2,2,2) 6, (3,3) 1. Codeword profiles over these types show no simple rule, which is expected, since colour-class type is not braid-invariant. Only 6 of the 36 parity-preserving strand permutations preserve commutation. Of the 6 bipartite matchings of the strands, **exactly the 5 non-crossing ones are lines**, the TL basis, and 2 codewords contain all 5. I did not establish what those 2 codewords mean.
+
+## Heavy runs, and the q = 9 theorem
+
+CP-SAT's chain was stopped after 2 of 42 cases in hours. HiGHS (`heavy_highs.py`, same case list, positive control via q = 3, 5): **q = 9, W = 46: all 42 infeasible (3108 s). q = 9, W = 48: all 42 infeasible (4434 s).** So:
+
+> **The minimum even line set of W(3,9) has 48 lines, on two solvers for each half, and every minimal even set is a hyperoval, in a single orbit of 3,586,680 sets.**
+
+The uniqueness half combines HiGHS (no heavy set at W = 48) with CP-SAT (one star class at W = 48). No proof certificate exists. q = 7, W = 40 is still running, so the same statement for q = 7 covers hyperovals only; status under `heavy_status`.
 
 ## Sources
 
@@ -132,5 +146,6 @@ The non-hyperoval case is reported under `heavy_status`. CP-SAT's chain was stop
 - J. H. Przytycki, *3-coloring and other elementary invariants of knots*, Banach Center Publ. 42 (1998).
 - A. Hutter, D. Loss, *Quantum computing with parafermions*, Phys. Rev. B 93 (2016), arXiv:1511.02704.
 - E. Fradkin, L. P. Kadanoff, Nucl. Phys. B 170 (1980).
+- V. Veitch, S. A. H. Mousavian, D. Gottesman, J. Emerson, *The resource theory of stabilizer quantum computation*, New J. Phys. 16 (2014).
 - Burkhardt quartic: arXiv:2308.15271; B. Hunt, *The geometry of some special arithmetic quotients*, not read in full.
 - Corpus: Pass 11869; Pass 12507–12526; `2026-11-02_route_minimum_cubic_tomography.md`.
