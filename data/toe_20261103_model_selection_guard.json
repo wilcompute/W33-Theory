@@ -1,0 +1,63 @@
+{
+  "status": "PASS_CLASS_DOV_CUSTOM_MODEL_SELECTION_GUARD",
+  "data_source": "analysis/toe_uv/class_fit_dovekie.json",
+  "fading_bestfit_chi2": 2227.0637415963324,
+  "LCDM_bestfit_chi2": 2237.7172540773618,
+  "CPL_bestfit_chi2": 2225.8391126308907,
+  "fading_minus_LCDM_delta_chi2": -10.653512481029338,
+  "group_contributions_fading_minus_LCDM_same_joint_fit": {
+    "cmb": -1.4953584289461332,
+    "pri": -0.3125825055349065,
+    "bao": -3.775385305212131,
+    "sn": -5.070186241335932
+  },
+  "number_added_scalar_parameters_assumed": 2,
+  "delta_AIC_fading_minus_LCDM": -6.653512481029338,
+  "BIC_independent_observation_threshold_for_fading_preference": 205.76942391380715,
+  "N_sensitivity": [
+    {
+      "illustrative_independent_N": 50,
+      "delta_BIC_fading_minus_LCDM": -2.8294664701730463,
+      "delta_AICc_fading_minus_LCDM": -4.820179147696004
+    },
+    {
+      "illustrative_independent_N": 100,
+      "delta_BIC_fading_minus_LCDM": -1.4431721090531546,
+      "delta_AICc_fading_minus_LCDM": -5.870903785377164
+    },
+    {
+      "illustrative_independent_N": 206,
+      "delta_BIC_fading_minus_LCDM": 0.0022398565498242817,
+      "delta_AICc_fading_minus_LCDM": -6.300801699747129
+    },
+    {
+      "illustrative_independent_N": 615,
+      "delta_BIC_fading_minus_LCDM": 2.189732054583697,
+      "delta_AICc_fading_minus_LCDM": -6.540505823167206
+    },
+    {
+      "illustrative_independent_N": 1800,
+      "delta_BIC_fading_minus_LCDM": 4.337571406739174,
+      "delta_AICc_fading_minus_LCDM": -6.615453821811461
+    },
+    {
+      "illustrative_independent_N": 2300,
+      "delta_BIC_fading_minus_LCDM": 4.827816322805145,
+      "delta_AICc_fading_minus_LCDM": -6.623775480488249
+    },
+    {
+      "illustrative_independent_N": 5000,
+      "delta_BIC_fading_minus_LCDM": 6.380873901803138,
+      "delta_AICc_fading_minus_LCDM": -6.639876234176659
+    }
+  ],
+  "fading_minus_CPL_delta_chi2_same_parameter_count": 1.2246289654417524,
+  "decision_boundary": "DeltaBIC=DeltaChi2+2 ln(N), with 2 extra parameters. For N>exp(-DeltaChi2/2) the Schwarz BIC selects LCDM, but Planck likelihood bins and SN covariance do NOT correspond to a well-defined simple independent N; raw bin count cannot be adopted as a physical Bayes factor.",
+  "holdout_validation": "NOT_PERFORMED: all probe contributions are evaluated at the same jointly fitted parameters. Removing one group without reoptimizing and testing its held-out likelihood would be leakage, not out-of-sample evidence.",
+  "source_confounds": "CPL fit and fading fit share same nominal extra parameter count, but their priors differ and the patched CLASS scalar baseline differed from native CLASS by .29 chi2; no posterior prior volume is provided, so neither \u0394AIC nor \u0394BIC is an actual Bayesian evidence measurement.",
+  "scope": "Descriptive AIC/AICc/BIC sensitivity and within-fit chi2 split; no new data, likelihood refit, posterior, CV, Bayes factor or 5sigma claim.",
+  "references": [
+    "https://doi.org/10.1038/s41550-025-02669-6",
+    "https://journals.aps.org/prd/abstract/10.1103/dqxw-yp1j"
+  ]
+}

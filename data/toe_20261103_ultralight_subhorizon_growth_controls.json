@@ -1,0 +1,850 @@
+{
+  "status": "PASS_FIVE_MODE_SUBHORIZON_TWO_FLUID_BENCHMARK",
+  "source_data": {
+    "h": 0.678194607660839,
+    "Omega_b": 0.048534407842725974,
+    "Omega_chi": 0.2626662752496019,
+    "Omega_rad": 9.2e-05,
+    "beta": 0.05299751293406564,
+    "Dx": 0.2795940882598428,
+    "H0_eV": 1.4466702631054442e-33,
+    "mchi_eV": 1e-20
+  },
+  "results": [
+    {
+      "k_h_per_Mpc": 0.05,
+      "coupled": {
+        "99.0": {
+          "delta_c": 0.01,
+          "growth_rate_c": 1.0,
+          "delta_b": 0.01,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 1.0
+        },
+        "3.0": {
+          "delta_c": 0.24797437474891182,
+          "growth_rate_c": 0.9849280592056732,
+          "delta_b": 0.24674325002586467,
+          "baryon_to_chi_bias": 0.9950352744137626,
+          "growth_rate_b": 0.9837321395215423
+        },
+        "1.0": {
+          "delta_c": 0.47814616658109954,
+          "growth_rate_c": 0.8801071165568964,
+          "delta_b": 0.475318644726206,
+          "baryon_to_chi_bias": 0.9940864905911277,
+          "growth_rate_b": 0.8784775863231306
+        },
+        "0.5": {
+          "delta_c": 0.6064897448700807,
+          "growth_rate_c": 0.7638012505439677,
+          "delta_b": 0.6025967072455177,
+          "baryon_to_chi_bias": 0.993581033055395,
+          "growth_rate_b": 0.7618906775508324
+        },
+        "0.0": {
+          "delta_c": 0.7894521570778582,
+          "growth_rate_c": 0.5287213145172905,
+          "delta_b": 0.7837156690628189,
+          "baryon_to_chi_bias": 0.9927335837091473,
+          "growth_rate_b": 0.52644073181146
+        }
+      },
+      "uncoupled_ultralight": {
+        "99.0": {
+          "delta_c": 0.01,
+          "growth_rate_c": 1.0,
+          "delta_b": 0.01,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 1.0
+        },
+        "3.0": {
+          "delta_c": 0.24576147269475804,
+          "growth_rate_c": 0.9808735225008185,
+          "delta_b": 0.24576147269475804,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.9808735225008185
+        },
+        "1.0": {
+          "delta_c": 0.47232327210849157,
+          "growth_rate_c": 0.8746072020982526,
+          "delta_b": 0.47232327210849157,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.8746072020982526
+        },
+        "0.5": {
+          "delta_c": 0.5981186731803918,
+          "growth_rate_c": 0.7579458327671251,
+          "delta_b": 0.5981186731803918,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.7579458327671251
+        },
+        "0.0": {
+          "delta_c": 0.776772813427078,
+          "growth_rate_c": 0.5234898446863527,
+          "delta_b": 0.776772813427078,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.5234898446863527
+        }
+      },
+      "pressureless_uncoupled": {
+        "99.0": {
+          "delta_c": 0.01,
+          "growth_rate_c": 1.0,
+          "delta_b": 0.01,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 1.0
+        },
+        "3.0": {
+          "delta_c": 0.24576147269475804,
+          "growth_rate_c": 0.9808735225008185,
+          "delta_b": 0.24576147269475804,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.9808735225008185
+        },
+        "1.0": {
+          "delta_c": 0.47232327210849157,
+          "growth_rate_c": 0.8746072020982526,
+          "delta_b": 0.47232327210849157,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.8746072020982526
+        },
+        "0.5": {
+          "delta_c": 0.5981186731803918,
+          "growth_rate_c": 0.7579458327671251,
+          "delta_b": 0.5981186731803918,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.7579458327671251
+        },
+        "0.0": {
+          "delta_c": 0.776772813427078,
+          "growth_rate_c": 0.5234898446863527,
+          "delta_b": 0.776772813427078,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.5234898446863527
+        }
+      },
+      "z0_chi_growth_ratio_to_uncoupled_ultralight": 1.0163231042997496,
+      "z0_chi_growth_ratio_to_pressureless": 1.0163231042997496,
+      "z0_chi_bias": 0.9927335837091473,
+      "z0_kJeans_h_per_Mpc": 1025.1619250701249
+    },
+    {
+      "k_h_per_Mpc": 0.2,
+      "coupled": {
+        "99.0": {
+          "delta_c": 0.01,
+          "growth_rate_c": 1.0,
+          "delta_b": 0.01,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 1.0
+        },
+        "3.0": {
+          "delta_c": 0.24797437524278051,
+          "growth_rate_c": 0.9849280631505654,
+          "delta_b": 0.2467432500854949,
+          "baryon_to_chi_bias": 0.9950352726725078,
+          "growth_rate_b": 0.9837321400066333
+        },
+        "1.0": {
+          "delta_c": 0.47814617019109457,
+          "growth_rate_c": 0.8801071303157307,
+          "delta_b": 0.4753186451615967,
+          "baryon_to_chi_bias": 0.9940864839963733,
+          "growth_rate_b": 0.8784775879628388
+        },
+        "0.5": {
+          "delta_c": 0.606489752430436,
+          "growth_rate_c": 0.7638012711105994,
+          "delta_b": 0.6025967081432975,
+          "baryon_to_chi_bias": 0.9935810221499413,
+          "growth_rate_b": 0.761890679897641
+        },
+        "0.0": {
+          "delta_c": 0.7894521749918452,
+          "growth_rate_c": 0.5287213437668454,
+          "delta_b": 0.7837156710936231,
+          "baryon_to_chi_bias": 0.992733563754788,
+          "growth_rate_b": 0.5264407347606577
+        }
+      },
+      "uncoupled_ultralight": {
+        "99.0": {
+          "delta_c": 0.01,
+          "growth_rate_c": 1.0,
+          "delta_b": 0.01,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 1.0
+        },
+        "3.0": {
+          "delta_c": 0.2457614726947403,
+          "growth_rate_c": 0.9808735225008154,
+          "delta_b": 0.24576147269474732,
+          "baryon_to_chi_bias": 1.0000000000000286,
+          "growth_rate_b": 0.9808735225008012
+        },
+        "1.0": {
+          "delta_c": 0.4723232721084571,
+          "growth_rate_c": 0.8746072020982517,
+          "delta_b": 0.4723232721084662,
+          "baryon_to_chi_bias": 1.0000000000000193,
+          "growth_rate_b": 0.8746072020982417
+        },
+        "0.5": {
+          "delta_c": 0.5981186731803482,
+          "growth_rate_c": 0.7579458327671247,
+          "delta_b": 0.5981186731803582,
+          "baryon_to_chi_bias": 1.0000000000000167,
+          "growth_rate_b": 0.7579458327671168
+        },
+        "0.0": {
+          "delta_c": 0.7767728134270215,
+          "growth_rate_c": 0.5234898446863526,
+          "delta_b": 0.7767728134270323,
+          "baryon_to_chi_bias": 1.0000000000000138,
+          "growth_rate_b": 0.523489844686348
+        }
+      },
+      "pressureless_uncoupled": {
+        "99.0": {
+          "delta_c": 0.01,
+          "growth_rate_c": 1.0,
+          "delta_b": 0.01,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 1.0
+        },
+        "3.0": {
+          "delta_c": 0.24576147269475804,
+          "growth_rate_c": 0.9808735225008185,
+          "delta_b": 0.24576147269475804,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.9808735225008185
+        },
+        "1.0": {
+          "delta_c": 0.47232327210849157,
+          "growth_rate_c": 0.8746072020982526,
+          "delta_b": 0.47232327210849157,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.8746072020982526
+        },
+        "0.5": {
+          "delta_c": 0.5981186731803918,
+          "growth_rate_c": 0.7579458327671251,
+          "delta_b": 0.5981186731803918,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.7579458327671251
+        },
+        "0.0": {
+          "delta_c": 0.776772813427078,
+          "growth_rate_c": 0.5234898446863527,
+          "delta_b": 0.776772813427078,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.5234898446863527
+        }
+      },
+      "z0_chi_growth_ratio_to_uncoupled_ultralight": 1.016323127361891,
+      "z0_chi_growth_ratio_to_pressureless": 1.016323127361817,
+      "z0_chi_bias": 0.992733563754788,
+      "z0_kJeans_h_per_Mpc": 1025.1619250701249
+    },
+    {
+      "k_h_per_Mpc": 1.0,
+      "coupled": {
+        "99.0": {
+          "delta_c": 0.01,
+          "growth_rate_c": 1.0,
+          "delta_b": 0.01,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 1.0
+        },
+        "3.0": {
+          "delta_c": 0.2479743752636661,
+          "growth_rate_c": 0.9849280634014302,
+          "delta_b": 0.24674325008278908,
+          "baryon_to_chi_bias": 0.9950352725777896,
+          "growth_rate_b": 0.9837321400277602
+        },
+        "1.0": {
+          "delta_c": 0.4781461704011624,
+          "growth_rate_c": 0.8801071311959182,
+          "delta_b": 0.4753186451741603,
+          "baryon_to_chi_bias": 0.9940864835859088,
+          "growth_rate_b": 0.8784775880612005
+        },
+        "0.5": {
+          "delta_c": 0.6064897528876543,
+          "growth_rate_c": 0.7638012724267275,
+          "delta_b": 0.6025967081803496,
+          "baryon_to_chi_bias": 0.9935810214619969,
+          "growth_rate_b": 0.7618906800428051
+        },
+        "0.0": {
+          "delta_c": 0.7894521761036479,
+          "growth_rate_c": 0.528721345638869,
+          "delta_b": 0.78371567119579,
+          "baryon_to_chi_bias": 0.9927335624861147,
+          "growth_rate_b": 0.5264407349464042
+        }
+      },
+      "uncoupled_ultralight": {
+        "99.0": {
+          "delta_c": 0.01,
+          "growth_rate_c": 1.0,
+          "delta_b": 0.01,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 1.0
+        },
+        "3.0": {
+          "delta_c": 0.24576147268367315,
+          "growth_rate_c": 0.9808735224991851,
+          "delta_b": 0.2457614726879949,
+          "baryon_to_chi_bias": 1.000000000017585,
+          "growth_rate_b": 0.9808735224904919
+        },
+        "1.0": {
+          "delta_c": 0.4723232720868943,
+          "growth_rate_c": 0.8746072020978884,
+          "delta_b": 0.4723232720926621,
+          "baryon_to_chi_bias": 1.0000000000122116,
+          "growth_rate_b": 0.8746072020914065
+        },
+        "0.5": {
+          "delta_c": 0.5981186731530019,
+          "growth_rate_c": 0.7579458327669947,
+          "delta_b": 0.5981186731593069,
+          "baryon_to_chi_bias": 1.0000000000105413,
+          "growth_rate_b": 0.7579458327618903
+        },
+        "0.0": {
+          "delta_c": 0.7767728133914936,
+          "growth_rate_c": 0.5234898446863712,
+          "delta_b": 0.7767728133983898,
+          "baryon_to_chi_bias": 1.000000000008878,
+          "growth_rate_b": 0.5234898446832276
+        }
+      },
+      "pressureless_uncoupled": {
+        "99.0": {
+          "delta_c": 0.01,
+          "growth_rate_c": 1.0,
+          "delta_b": 0.01,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 1.0
+        },
+        "3.0": {
+          "delta_c": 0.24576147269475804,
+          "growth_rate_c": 0.9808735225008185,
+          "delta_b": 0.24576147269475804,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.9808735225008185
+        },
+        "1.0": {
+          "delta_c": 0.47232327210849157,
+          "growth_rate_c": 0.8746072020982526,
+          "delta_b": 0.47232327210849157,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.8746072020982526
+        },
+        "0.5": {
+          "delta_c": 0.5981186731803918,
+          "growth_rate_c": 0.7579458327671251,
+          "delta_b": 0.5981186731803918,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.7579458327671251
+        },
+        "0.0": {
+          "delta_c": 0.776772813427078,
+          "growth_rate_c": 0.5234898446863527,
+          "delta_b": 0.776772813427078,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.5234898446863527
+        }
+      },
+      "z0_chi_growth_ratio_to_uncoupled_ultralight": 1.0163231288396855,
+      "z0_chi_growth_ratio_to_pressureless": 1.0163231287931271,
+      "z0_chi_bias": 0.9927335624861147,
+      "z0_kJeans_h_per_Mpc": 1025.1619250701249
+    },
+    {
+      "k_h_per_Mpc": 10.0,
+      "coupled": {
+        "99.0": {
+          "delta_c": 0.01,
+          "growth_rate_c": 1.0,
+          "delta_b": 0.01,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 1.0
+        },
+        "3.0": {
+          "delta_c": 0.2479742678717905,
+          "growth_rate_c": 0.9849280472989566,
+          "delta_b": 0.24674318475555498,
+          "baryon_to_chi_bias": 0.9950354400607727,
+          "growth_rate_b": 0.9837320406800418
+        },
+        "1.0": {
+          "delta_c": 0.47814596034604706,
+          "growth_rate_c": 0.880107127378463,
+          "delta_b": 0.4753184919113764,
+          "baryon_to_chi_bias": 0.9940865997641717,
+          "growth_rate_b": 0.8784775221636423
+        },
+        "0.5": {
+          "delta_c": 0.6064894860044884,
+          "growth_rate_c": 0.763801270937494,
+          "delta_b": 0.6025965037934705,
+          "baryon_to_chi_bias": 0.9935811216833047,
+          "growth_rate_b": 0.7618906296452449
+        },
+        "0.0": {
+          "delta_c": 0.7894518285249962,
+          "growth_rate_c": 0.5287213457043259,
+          "delta_b": 0.7837153926989746,
+          "baryon_to_chi_bias": 0.9927336467929405,
+          "growth_rate_b": 0.5264407048696574
+        }
+      },
+      "uncoupled_ultralight": {
+        "99.0": {
+          "delta_c": 0.01,
+          "growth_rate_c": 1.0,
+          "delta_b": 0.01,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 1.0
+        },
+        "3.0": {
+          "delta_c": 0.24576136184520075,
+          "growth_rate_c": 0.9808735061714748,
+          "delta_b": 0.24576140506308958,
+          "baryon_to_chi_bias": 1.0000001758530654,
+          "growth_rate_b": 0.9808734192342311
+        },
+        "1.0": {
+          "delta_c": 0.4723230561339221,
+          "growth_rate_c": 0.8746071984594148,
+          "delta_b": 0.4723231138135643,
+          "baryon_to_chi_bias": 1.0000001221190484,
+          "growth_rate_b": 0.8746071336357661
+        },
+        "0.5": {
+          "delta_c": 0.5981183992780684,
+          "growth_rate_c": 0.7579458314658654,
+          "delta_b": 0.5981184623286573,
+          "baryon_to_chi_bias": 1.000000105414896,
+          "growth_rate_b": 0.7579457804201115
+        },
+        "0.0": {
+          "delta_c": 0.7767724575808035,
+          "growth_rate_c": 0.523489844869364,
+          "delta_b": 0.7767725265418491,
+          "baryon_to_chi_bias": 1.0000000887789533,
+          "growth_rate_b": 0.5234898134335234
+        }
+      },
+      "pressureless_uncoupled": {
+        "99.0": {
+          "delta_c": 0.01,
+          "growth_rate_c": 1.0,
+          "delta_b": 0.01,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 1.0
+        },
+        "3.0": {
+          "delta_c": 0.24576147269475804,
+          "growth_rate_c": 0.9808735225008185,
+          "delta_b": 0.24576147269475804,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.9808735225008185
+        },
+        "1.0": {
+          "delta_c": 0.47232327210849157,
+          "growth_rate_c": 0.8746072020982526,
+          "delta_b": 0.47232327210849157,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.8746072020982526
+        },
+        "0.5": {
+          "delta_c": 0.5981186731803918,
+          "growth_rate_c": 0.7579458327671251,
+          "delta_b": 0.5981186731803918,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.7579458327671251
+        },
+        "0.0": {
+          "delta_c": 0.776772813427078,
+          "growth_rate_c": 0.5234898446863527,
+          "delta_b": 0.776772813427078,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.5234898446863527
+        }
+      },
+      "z0_chi_growth_ratio_to_uncoupled_ultralight": 1.0163231469144536,
+      "z0_chi_growth_ratio_to_pressureless": 1.016322681328121,
+      "z0_chi_bias": 0.9927336467929405,
+      "z0_kJeans_h_per_Mpc": 1025.1619250701249
+    },
+    {
+      "k_h_per_Mpc": 100.0,
+      "coupled": {
+        "99.0": {
+          "delta_c": 0.01,
+          "growth_rate_c": 1.0,
+          "delta_b": 0.01,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 1.0
+        },
+        "3.0": {
+          "delta_c": 0.24690207614160828,
+          "growth_rate_c": 0.9847672273368727,
+          "delta_b": 0.2460906944791958,
+          "baryon_to_chi_bias": 0.9967137511555507,
+          "growth_rate_b": 0.9827379105638406
+        },
+        "1.0": {
+          "delta_c": 0.47604888907959786,
+          "growth_rate_c": 0.8800688081770126,
+          "delta_b": 0.4737879590675655,
+          "baryon_to_chi_bias": 0.9952506348320574,
+          "growth_rate_b": 0.8778179338218115
+        },
+        "0.5": {
+          "delta_c": 0.6038250427378236,
+          "growth_rate_c": 0.7637859997509241,
+          "delta_b": 0.6005555254735992,
+          "baryon_to_chi_bias": 0.9945853235079488,
+          "growth_rate_b": 0.7613861299041459
+        },
+        "0.0": {
+          "delta_c": 0.7859815909334301,
+          "growth_rate_c": 0.528721322866713,
+          "delta_b": 0.7809344821290997,
+          "baryon_to_chi_bias": 0.9935785915821049,
+          "growth_rate_b": 0.5261395710845396
+        }
+      },
+      "uncoupled_ultralight": {
+        "99.0": {
+          "delta_c": 0.01,
+          "growth_rate_c": 1.0,
+          "delta_b": 0.01,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 1.0
+        },
+        "3.0": {
+          "delta_c": 0.24465484880781585,
+          "growth_rate_c": 0.9807105730764318,
+          "delta_b": 0.24508600106737483,
+          "baryon_to_chi_bias": 1.0017622878175518,
+          "growth_rate_b": 0.9798401691185887
+        },
+        "1.0": {
+          "delta_c": 0.47016735509773183,
+          "growth_rate_c": 0.8745710554653611,
+          "delta_b": 0.47074258845896366,
+          "baryon_to_chi_bias": 1.001223465123631,
+          "growth_rate_b": 0.8739219644690139
+        },
+        "0.5": {
+          "delta_c": 0.5953845531222614,
+          "growth_rate_c": 0.7579330012181591,
+          "delta_b": 0.5960132861353926,
+          "baryon_to_chi_bias": 1.0010560116311955,
+          "growth_rate_b": 0.7574218650848432
+        },
+        "0.0": {
+          "delta_c": 0.7732207685952195,
+          "growth_rate_c": 0.52349177901333,
+          "delta_b": 0.7739083701838195,
+          "baryon_to_chi_bias": 1.0008892694254052,
+          "growth_rate_b": 0.5231770055078511
+        }
+      },
+      "pressureless_uncoupled": {
+        "99.0": {
+          "delta_c": 0.01,
+          "growth_rate_c": 1.0,
+          "delta_b": 0.01,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 1.0
+        },
+        "3.0": {
+          "delta_c": 0.24576147269475804,
+          "growth_rate_c": 0.9808735225008185,
+          "delta_b": 0.24576147269475804,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.9808735225008185
+        },
+        "1.0": {
+          "delta_c": 0.47232327210849157,
+          "growth_rate_c": 0.8746072020982526,
+          "delta_b": 0.47232327210849157,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.8746072020982526
+        },
+        "0.5": {
+          "delta_c": 0.5981186731803918,
+          "growth_rate_c": 0.7579458327671251,
+          "delta_b": 0.5981186731803918,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.7579458327671251
+        },
+        "0.0": {
+          "delta_c": 0.776772813427078,
+          "growth_rate_c": 0.5234898446863527,
+          "delta_b": 0.776772813427078,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.5234898446863527
+        }
+      },
+      "z0_chi_growth_ratio_to_uncoupled_ultralight": 1.0165034655773595,
+      "z0_chi_growth_ratio_to_pressureless": 1.0118551748299782,
+      "z0_chi_bias": 0.9935785915821049,
+      "z0_kJeans_h_per_Mpc": 1025.1619250701249
+    },
+    {
+      "k_h_per_Mpc": 300.0,
+      "coupled": {
+        "99.0": {
+          "delta_c": 0.01,
+          "growth_rate_c": 1.0,
+          "delta_b": 0.01,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 1.0
+        },
+        "3.0": {
+          "delta_c": 0.17167521807966651,
+          "growth_rate_c": 0.9744035130878833,
+          "delta_b": 0.1987155456687791,
+          "baryon_to_chi_bias": 1.1575086252493614,
+          "growth_rate_b": 0.8989117603465782
+        },
+        "1.0": {
+          "delta_c": 0.32985293436865654,
+          "growth_rate_c": 0.8787083371580009,
+          "delta_b": 0.3642185644307301,
+          "baryon_to_chi_bias": 1.1041847031855268,
+          "growth_rate_b": 0.8210765587803203
+        },
+        "0.5": {
+          "delta_c": 0.41831933173146696,
+          "growth_rate_c": 0.7638322836949879,
+          "delta_b": 0.45504763842278434,
+          "baryon_to_chi_bias": 1.0877996877153515,
+          "growth_rate_b": 0.717767359975085
+        },
+        "0.0": {
+          "delta_c": 0.5446206651037584,
+          "growth_rate_c": 0.5294452592525238,
+          "delta_b": 0.583477276208123,
+          "baryon_to_chi_bias": 1.071346193036876,
+          "growth_rate_b": 0.4999958260283073
+        }
+      },
+      "uncoupled_ultralight": {
+        "99.0": {
+          "delta_c": 0.01,
+          "growth_rate_c": 1.0,
+          "delta_b": 0.01,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 1.0
+        },
+        "3.0": {
+          "delta_c": 0.1674494083059245,
+          "growth_rate_c": 0.9704864428699604,
+          "delta_b": 0.1962452285906981,
+          "baryon_to_chi_bias": 1.1719672859766967,
+          "growth_rate_b": 0.8925675684673166
+        },
+        "1.0": {
+          "delta_c": 0.3207439770604838,
+          "growth_rate_c": 0.8735792480922219,
+          "delta_b": 0.35811400572139535,
+          "baryon_to_chi_bias": 1.1165104610954693,
+          "growth_rate_b": 0.8148246822837709
+        },
+        "0.5": {
+          "delta_c": 0.4061403688829599,
+          "growth_rate_c": 0.7583151304877623,
+          "delta_b": 0.44664140934243823,
+          "baryon_to_chi_bias": 1.0997217798636258,
+          "growth_rate_b": 0.7119927634739747
+        },
+        "0.0": {
+          "delta_c": 0.5276156414497483,
+          "growth_rate_c": 0.5244495703760842,
+          "delta_b": 0.5715369157785236,
+          "baryon_to_chi_bias": 1.0832448299070347,
+          "growth_rate_b": 0.495933824773766
+        }
+      },
+      "pressureless_uncoupled": {
+        "99.0": {
+          "delta_c": 0.01,
+          "growth_rate_c": 1.0,
+          "delta_b": 0.01,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 1.0
+        },
+        "3.0": {
+          "delta_c": 0.24576147269475804,
+          "growth_rate_c": 0.9808735225008185,
+          "delta_b": 0.24576147269475804,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.9808735225008185
+        },
+        "1.0": {
+          "delta_c": 0.47232327210849157,
+          "growth_rate_c": 0.8746072020982526,
+          "delta_b": 0.47232327210849157,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.8746072020982526
+        },
+        "0.5": {
+          "delta_c": 0.5981186731803918,
+          "growth_rate_c": 0.7579458327671251,
+          "delta_b": 0.5981186731803918,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.7579458327671251
+        },
+        "0.0": {
+          "delta_c": 0.776772813427078,
+          "growth_rate_c": 0.5234898446863527,
+          "delta_b": 0.776772813427078,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.5234898446863527
+        }
+      },
+      "z0_chi_growth_ratio_to_uncoupled_ultralight": 1.032229946040426,
+      "z0_chi_growth_ratio_to_pressureless": 0.7011325006354465,
+      "z0_chi_bias": 1.071346193036876,
+      "z0_kJeans_h_per_Mpc": 1025.1619250701249
+    },
+    {
+      "k_h_per_Mpc": 500.0,
+      "coupled": {
+        "99.0": {
+          "delta_c": 0.01,
+          "growth_rate_c": 1.0,
+          "delta_b": 0.01,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 1.0
+        },
+        "3.0": {
+          "delta_c": -0.003734947772493587,
+          "growth_rate_c": -1.3858805121802178,
+          "delta_b": 0.04961718579789095,
+          "baryon_to_chi_bias": -13.284572856226236,
+          "growth_rate_b": 0.1822556649514908
+        },
+        "1.0": {
+          "delta_c": 0.0010787007741099221,
+          "growth_rate_c": 8.034197559322141,
+          "delta_b": 0.05649184659448327,
+          "baryon_to_chi_bias": 52.37026611119,
+          "growth_rate_b": 0.19330539102496144
+        },
+        "0.5": {
+          "delta_c": 0.0037066072489402107,
+          "growth_rate_c": 2.5466738401202287,
+          "delta_b": 0.05969562259562118,
+          "baryon_to_chi_bias": 16.105192319118594,
+          "growth_rate_b": 0.18746958635075822
+        },
+        "0.0": {
+          "delta_c": 0.007419058060447329,
+          "growth_rate_c": 1.138043254573646,
+          "delta_b": 0.06397707343891217,
+          "baryon_to_chi_bias": 8.6233417932107,
+          "growth_rate_b": 0.14862466498995838
+        }
+      },
+      "uncoupled_ultralight": {
+        "99.0": {
+          "delta_c": 0.01,
+          "growth_rate_c": 1.0,
+          "delta_b": 0.01,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 1.0
+        },
+        "3.0": {
+          "delta_c": -0.004182223978215395,
+          "growth_rate_c": -1.2033065860672072,
+          "delta_b": 0.04752435126994586,
+          "baryon_to_chi_bias": -11.36341609571687,
+          "growth_rate_b": 0.1641582211204364
+        },
+        "1.0": {
+          "delta_c": 0.0003609031990125991,
+          "growth_rate_c": 22.22478280636166,
+          "delta_b": 0.05347818628354659,
+          "baryon_to_chi_bias": 148.1787538316602,
+          "growth_rate_b": 0.1779738229297389
+        },
+        "0.5": {
+          "delta_c": 0.0027777154899441586,
+          "growth_rate_c": 3.1079023904252714,
+          "delta_b": 0.05627879386661414,
+          "baryon_to_chi_bias": 20.260820112914278,
+          "growth_rate_b": 0.17430281200519013
+        },
+        "0.0": {
+          "delta_c": 0.006151866945861459,
+          "growth_rate_c": 1.2403498180431298,
+          "delta_b": 0.06004297602636119,
+          "baryon_to_chi_bias": 9.760122667599932,
+          "growth_rate_b": 0.1396118407569137
+        }
+      },
+      "pressureless_uncoupled": {
+        "99.0": {
+          "delta_c": 0.01,
+          "growth_rate_c": 1.0,
+          "delta_b": 0.01,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 1.0
+        },
+        "3.0": {
+          "delta_c": 0.24576147269475804,
+          "growth_rate_c": 0.9808735225008185,
+          "delta_b": 0.24576147269475804,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.9808735225008185
+        },
+        "1.0": {
+          "delta_c": 0.47232327210849157,
+          "growth_rate_c": 0.8746072020982526,
+          "delta_b": 0.47232327210849157,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.8746072020982526
+        },
+        "0.5": {
+          "delta_c": 0.5981186731803918,
+          "growth_rate_c": 0.7579458327671251,
+          "delta_b": 0.5981186731803918,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.7579458327671251
+        },
+        "0.0": {
+          "delta_c": 0.776772813427078,
+          "growth_rate_c": 0.5234898446863527,
+          "delta_b": 0.776772813427078,
+          "baryon_to_chi_bias": 1.0,
+          "growth_rate_b": 0.5234898446863527
+        }
+      },
+      "z0_chi_growth_ratio_to_uncoupled_ultralight": 1.2059848052205266,
+      "z0_chi_growth_ratio_to_pressureless": 0.009551129921392152,
+      "z0_chi_bias": 8.6233417932107,
+      "z0_kJeans_h_per_Mpc": 1025.1619250701249
+    }
+  ],
+  "mass_ratio_recombination_to_today": 1.0149281190426924,
+  "model": "Newtonian N=ln a ODE: chi delta_NN +(2+H_N/H-beta*x_N)delta_N+ k^4/(4a^4mchi\u00b2 H\u00b2)delta=3/2*(Omega_b delta_b+Omega_chi[1+2beta\u00b2 S(k)]delta_chi); baryons same equation without fifth force or quantum pressure.",
+  "clock_interpolation": "phi/Mpl = Dx*(a^pclock-1)/(1-a_rec^pclock), pclock=1; fit endpoint values exact but trajectory is supplied, not best-fit CLASS scalar solution.",
+  "dark_energy_background": "LCDM-like constant Omega_DE plus variable chi density. Not a covariantly conserved two-scalar Friedmann/Klein-Gordon solution; force and friction are an exploratory closure.",
+  "limitations": "The large-k initial conditions omit radiation transfer/ULA suppression. The toy ODE is NOT CLASS, not a full Boltzmann code, not a real Lyman-alpha emulator or RSD/lensing likelihood, no baryon feedback, relativistic scalar perturbations or quantum correction to field x. Growth on k~100 h/Mpc not physically interpretable without its earlier transfer function.",
+  "sources": [
+    "https://doi.org/10.1103/PhysRevD.105.123529",
+    "https://doi.org/10.1088/1475-7516/2026/09/051"
+  ]
+}

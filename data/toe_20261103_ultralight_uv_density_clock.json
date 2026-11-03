@@ -1,0 +1,84 @@
+{
+  "status": "PASS_WKB_MEDIUM_MASS_AND_VISIBLE_UV_FIREWALL",
+  "input_fit": "analysis/toe_uv/class_fit_dovekie.json free_neg",
+  "beta": 0.05299751293406564,
+  "delta_phi_rec_to_today_Mpl": 0.2795940882598428,
+  "exact_WKB_invariant": "n(a)*a^3=constant, rho_chi=n*m; chi_envelope=sqrt(2n/m)\u221da^(-3/2)*m^(-1/2); for m=m0 exp(-beta x), rho_N=-(3+beta x_N)rho.",
+  "mass_ratio_rec_over_today": 1.0149281190426924,
+  "field_envelope_correction_rec_to_constant_mass_dust": 0.9926184825571602,
+  "adiabatic_moduli_density_curvature_in_H0_squared_today": 0.002213280967068761,
+  "curvature_ad_sqrt_in_H0_units": 0.04704552015940265,
+  "fixed_chi_field_quadratic_curvature_in_H0_squared_today": 0.004426561934137522,
+  "subtlety": "Fixed field amplitude chi and fixed comoving adiabatic number are different ensembles. The effective smooth-fluid restoring curvature is b\u00b2rho/Mpl\u00b2, half the naive average fixed-chi field derivative 2b\u00b2rho/Mpl\u00b2.",
+  "one_real_boson_renormalized_Coleman_Weinberg_x_second_derivative_factor": "-8*beta**2",
+  "one_loop_mchi_1e_minus20_eV_curvature_over_H0_squared": 2.8667129390561878e-74,
+  "one_loop_scalar_technical_naturalness_cap_eV": 0.024302667682479615,
+  "eV_to_GeV_thresholds_illustrative": [
+    {
+      "one_loop_beta": 59,
+      "g_at_1e16_GeV": 0.3,
+      "Landau_pole_GeV_one_loop": 2.8689609713072652e+22,
+      "pole_above_reduced_Planck_mass": true,
+      "largest_g_at_1e16_for_pole_above_planck": 0.49349231143777456
+    },
+    {
+      "one_loop_beta": 59,
+      "g_at_1e16_GeV": 0.4,
+      "Landau_pole_GeV_one_loop": 4.290126618751134e+19,
+      "pole_above_reduced_Planck_mass": true,
+      "largest_g_at_1e16_for_pole_above_planck": 0.49349231143777456
+    },
+    {
+      "one_loop_beta": 59,
+      "g_at_1e16_GeV": 0.5,
+      "Landau_pole_GeV_one_loop": 2.1124229176011197e+18,
+      "pole_above_reduced_Planck_mass": false,
+      "largest_g_at_1e16_for_pole_above_planck": 0.49349231143777456
+    },
+    {
+      "one_loop_beta": 59,
+      "g_at_1e16_GeV": 0.6,
+      "Landau_pole_GeV_one_loop": 4.115581061317046e+17,
+      "pole_above_reduced_Planck_mass": false,
+      "largest_g_at_1e16_for_pole_above_planck": 0.49349231143777456
+    },
+    {
+      "one_loop_beta": 102,
+      "g_at_1e16_GeV": 0.3,
+      "Landau_pole_GeV_one_loop": 5.436889759910581e+19,
+      "pole_above_reduced_Planck_mass": true,
+      "largest_g_at_1e16_for_pole_above_planck": 0.37532397803063644
+    },
+    {
+      "one_loop_beta": 102,
+      "g_at_1e16_GeV": 0.4,
+      "Landau_pole_GeV_one_loop": 1.2622188787743473e+18,
+      "pole_above_reduced_Planck_mass": false,
+      "largest_g_at_1e16_for_pole_above_planck": 0.37532397803063644
+    },
+    {
+      "one_loop_beta": 102,
+      "g_at_1e16_GeV": 0.5,
+      "Landau_pole_GeV_one_loop": 2.2116998566520918e+17,
+      "pole_above_reduced_Planck_mass": false,
+      "largest_g_at_1e16_for_pole_above_planck": 0.37532397803063644
+    },
+    {
+      "one_loop_beta": 102,
+      "g_at_1e16_GeV": 0.6,
+      "Landau_pole_GeV_one_loop": 8.586924250704152e+16,
+      "pole_above_reduced_Planck_mass": false,
+      "largest_g_at_1e16_for_pole_above_planck": 0.37532397803063644
+    }
+  ],
+  "clock_prior_constraint_source": "analysis/toe_uv/dd_clocks.json older background fit and laboratory alpha clock input; do NOT apply its numerical kappa_max as a new CLASS likelihood or universal matter coupling bound",
+  "older_fit_kappa_alpha_upper_bound": 1.0006684632849394e-07,
+  "allowed_beta_alpha_over_beta_dark_using_older_fit_clock": 1.888142306847255e-06,
+  "landau_beta_coefficients_source": "Uncommitted local analysis/2026-11-03_toe_mechanism_completion.md: bBL=59 nonsupersymmetric above vectorlike thresholds, bBL=102 in separately declared supersymmetric version; couplings normalized according to those inputs. Gauge thresholds, kinetic mixing and unification are NOT computed.",
+  "limitations": "Adiabatic WKB/density response and Coleman-Weinberg second derivative exact under declared action; one-loop subtraction scheme is chosen; gravity/SUSY-breaking and axion-specific shift protection unsolved. Clock bound is reused from a different fitted background; Landau poles in simple one-loop single-coefficient approximation, only above relevant thresholds.",
+  "external_sources": [
+    "https://doi.org/10.1103/PhysRevD.105.123529",
+    "https://doi.org/10.1103/PhysRevD.94.103526",
+    "https://doi.org/10.1103/PhysRevD.57.7027"
+  ]
+}

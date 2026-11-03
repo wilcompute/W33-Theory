@@ -1,0 +1,71 @@
+{
+  "status": "PASS_EXACT_ANOMALIES_AND_CONDITIONAL_DIRAC_MESSENGER_FLOOR",
+  "standard_model_per_generation_anomalies_quark_norm": {
+    "gravity": -3,
+    "cubic": -27
+  },
+  "mixed_Y_squared_Q_and_Y_Q_squared": [
+    0,
+    0
+  ],
+  "three_generation_SM_linear_and_cubic": [
+    -9,
+    -81
+  ],
+  "exotic_left_singlet_Q_charges": [
+    -15,
+    12,
+    12
+  ],
+  "singlet_linear_cubic": [
+    9,
+    81
+  ],
+  "vectorlike_messenger_Q_charges": [
+    -3,
+    3,
+    -3,
+    3,
+    -3,
+    3,
+    -6,
+    6
+  ],
+  "Witten_SU2_number_doublets": 12,
+  "three_neutrino_mass_input_eV": 0.05,
+  "higgs_mass_reference_GeV": 125.0,
+  "higgs_VEV_convention_GeV": 174.0,
+  "heavy_messenger_scale_input_GeV": 1e+16,
+  "naturalness_cases": [
+    {
+      "sterile_mixing_or_suppression_max": 1,
+      "minimum_left_Yukawa_for_0p05eV": 2.8735632183908045e-13,
+      "minimum_Higgs_mass_squared_threshold_at_M1e16_GeV_squared": 104580.75666610699,
+      "minimum_threshold_over_higgs_mass_squared": 6.693168426630847,
+      "largest_M_for_threshold_less_mh_squared_GeV": 3865308156197778.5
+    },
+    {
+      "sterile_mixing_or_suppression_max": 0.1,
+      "minimum_left_Yukawa_for_0p05eV": 2.8735632183908043e-12,
+      "minimum_Higgs_mass_squared_threshold_at_M1e16_GeV_squared": 10458075.666610697,
+      "minimum_threshold_over_higgs_mass_squared": 669.3168426630846,
+      "largest_M_for_threshold_less_mh_squared_GeV": 386530815619777.94
+    },
+    {
+      "sterile_mixing_or_suppression_max": 0.01,
+      "minimum_left_Yukawa_for_0p05eV": 2.8735632183908046e-11,
+      "minimum_Higgs_mass_squared_threshold_at_M1e16_GeV_squared": 1045807566.6610699,
+      "minimum_threshold_over_higgs_mass_squared": 66931.68426630847,
+      "largest_M_for_threshold_less_mh_squared_GeV": 38653081561977.79
+    }
+  ],
+  "derivation": "In minimal rank-one Dirac messenger mnu=v*yL*epsilon with |epsilon|<=1. One-loop unsuppressed threshold |delta mH\u00b2|~|yL|\u00b2 M\u00b2/(8 pi\u00b2); hence M<=sqrt(8 pi\u00b2)*mh*v*epsilon/mnu to satisfy the chosen no-tuning benchmark. Eigenvalues/partner cancellations can evade it.",
+  "holomorphy": "Phi-dagger is not a chiral holomorphic superfield; a SUSY completion requires independent oppositely charged chiral scalars and an audited D-flat F-flat breaking sector.",
+  "provenance": "Prior sterile anomaly class: data/toe_20261103_sterile_anomaly_operators.json. Uncommitted local mechanism_neutrino_messengers.py contains a tree full rank chain and 1e16 GeV Higgs threshold; this independent threshold lower bound uses no uncommitted code and does not claim the anomalous charge spectrum as new.",
+  "scope": "A necessary condition under a single-entry rank-one Yukawa and no cancellation; not a universal see-saw bound, not a 3-generation mixing prediction, no physical continuum regulator/gauge measure tested.",
+  "external_prior": [
+    "https://doi.org/10.1103/PhysRevD.57.7027",
+    "https://link.springer.com/article/10.1007/JHEP07%282026%29271",
+    "https://arxiv.org/abs/2610.09093"
+  ]
+}
