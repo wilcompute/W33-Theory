@@ -1,0 +1,121 @@
+{
+  "absolute_scale_boundary": "All conductances were set to 1. This yields relative impedance/time ratios only. No absolute physical meter, Planck unit, light speed, graviton or 4D spacetime is selected.",
+  "base3_box_dimension": 1.6309297535714573,
+  "candidate_asymptotic_ratio": "unknown; data suggest a ratio around 2.1-2.2, but 15/7 is not established for this graph",
+  "classifications": "Numerical experiment on a specified graph family, not original claim about Pascal fractals or a physical theory.",
+  "construction": "First 3^n Pascal rows with binomial(n,k) nonzero mod 3; connect triangular nearest neighbors; one unit conductance per edge.",
+  "control_interpretation": "The same unit-edge network without Pascal deletions has corner resistance growing approximately linearly in refinement depth (logarithmically in side length); this is not the Pascal 15/7 multiplicative scaling.",
+  "data": [
+    {
+      "edges": 9,
+      "effective_resistance": 1.1111111111111112,
+      "energy_identity_error": 2.220446049250313e-16,
+      "level": 1,
+      "residual_l_infinity": 2.220446049250313e-16,
+      "root_to_corner_graph_distance": 2,
+      "vertices": 6
+    },
+    {
+      "edges": 63,
+      "effective_resistance": 3.4946236559139594,
+      "energy_identity_error": 3.064215547965432e-14,
+      "level": 2,
+      "residual_l_infinity": 8.881784197001252e-15,
+      "root_to_corner_graph_distance": 8,
+      "vertices": 36
+    },
+    {
+      "edges": 387,
+      "effective_resistance": 8.603232258823468,
+      "energy_identity_error": 2.5579538487363607e-13,
+      "level": 3,
+      "residual_l_infinity": 2.631228568361621e-14,
+      "root_to_corner_graph_distance": 26,
+      "vertices": 216
+    },
+    {
+      "edges": 2331,
+      "effective_resistance": 19.55073305587822,
+      "energy_identity_error": 7.901235221652314e-12,
+      "level": 4,
+      "residual_l_infinity": 7.078782005009998e-13,
+      "root_to_corner_graph_distance": 80,
+      "vertices": 1296
+    },
+    {
+      "edges": 13995,
+      "effective_resistance": 43.00988375677709,
+      "energy_identity_error": 2.739355409175914e-10,
+      "level": 5,
+      "residual_l_infinity": 1.1723955140041653e-11,
+      "root_to_corner_graph_distance": 242,
+      "vertices": 7776
+    },
+    {
+      "edges": 83979,
+      "effective_resistance": 93.27959427282028,
+      "energy_identity_error": 7.997428497219516e-09,
+      "level": 6,
+      "residual_l_infinity": 1.5562151567394267e-10,
+      "root_to_corner_graph_distance": 728,
+      "vertices": 46656
+    }
+  ],
+  "independent_checks": "Kirchhoff residual and dissipated energy = effective resistance for every n.",
+  "observed_consecutive_resistance_ratios": [
+    3.145161290322563,
+    2.4618480002171905,
+    2.2724869523110924,
+    2.1999115651494985,
+    2.168794382247596
+  ],
+  "possible_dynamic_scaling": "If a positive limiting resistance multiplier r exists, proposed walk dimension is log_3(6*r), spectral dimension 2 log(6)/log(6*r). Both require proof of r and appropriate random-walk convergence.",
+  "regular_triangular_lattice_negative_control": [
+    {
+      "edges": 9,
+      "effective_resistance": 1.1111111111111112,
+      "energy_identity_error": 2.220446049250313e-16,
+      "level": 1,
+      "residual_l_infinity": 2.220446049250313e-16,
+      "root_to_corner_graph_distance": 2,
+      "vertices": 6
+    },
+    {
+      "edges": 108,
+      "effective_resistance": 2.3230765130057556,
+      "energy_identity_error": 7.105427357601002e-15,
+      "level": 2,
+      "residual_l_infinity": 3.552713678800501e-15,
+      "root_to_corner_graph_distance": 8,
+      "vertices": 45
+    },
+    {
+      "edges": 1053,
+      "effective_resistance": 3.5344893238601998,
+      "energy_identity_error": 1.2079226507921703e-13,
+      "level": 3,
+      "residual_l_infinity": 6.417089082333405e-14,
+      "root_to_corner_graph_distance": 26,
+      "vertices": 378
+    },
+    {
+      "edges": 9720,
+      "effective_resistance": 4.745882978661845,
+      "energy_identity_error": 6.217248937900877e-15,
+      "level": 4,
+      "residual_l_infinity": 5.88418203051333e-14,
+      "root_to_corner_graph_distance": 80,
+      "vertices": 3321
+    },
+    {
+      "edges": 88209,
+      "effective_resistance": 5.957276381043111,
+      "energy_identity_error": 1.2704504115390591e-11,
+      "level": 5,
+      "residual_l_infinity": 4.303668532656957e-12,
+      "root_to_corner_graph_distance": 242,
+      "vertices": 29646
+    }
+  ],
+  "status": "PASS_SPARSE_LAPLACIAN_KIRCHHOFF_ENERGY"
+}

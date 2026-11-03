@@ -1,0 +1,67 @@
+{
+  "dimensional_boundary": "The RG factor 15/7 and the Pascal spatial magnification 3 determine relative scaling; neither defines an absolute meter or Einstein action.",
+  "exact_recursion": "c_(n+1)=c_n*(9*c_n+7)/(15*c_n^2+31*c_n+15)",
+  "exact_reduction": {
+    "current_from_top_with_bottom_pair_grounded": "2*c*(9*c + 7)/(15*c**2 + 31*c + 15)",
+    "interblock_unit_edges": 9,
+    "outer_triangle_effective_conductance": "c*(9*c + 7)/(15*c**2 + 31*c + 15)",
+    "port_count": 18,
+    "reflected_orbits": 10,
+    "symbolic_schur_reduction_exact": true,
+    "unknown_orbits": 8
+  },
+  "exact_series": [
+    {
+      "conductance_exact": "3/5",
+      "level": 1,
+      "resistance_exact": "10/9",
+      "resistance_float": 1.1111111111111112
+    },
+    {
+      "conductance_exact": "62/325",
+      "level": 2,
+      "resistance_exact": "325/93",
+      "resistance_float": 3.4946236559139785
+    },
+    {
+      "conductance_exact": "175646/2266685",
+      "level": 3,
+      "resistance_exact": "2266685/263469",
+      "resistance_float": 8.603232258823619
+    },
+    {
+      "conductance_exact": "3064602730414/89872844856925",
+      "level": 4,
+      "resistance_exact": "89872844856925/4596904095621",
+      "resistance_float": 19.550733055870722
+    },
+    {
+      "conductance_exact": "2012498069227591700877621214/129835962026479361852672530765",
+      "level": 5,
+      "resistance_exact": "129835962026479361852672530765/3018747103841387551316431821",
+      "resistance_float": 43.00988375649677
+    },
+    {
+      "conductance_exact": "1865513696569979470509936528945417570369212642018387045134/261021541067033029887240310921681568355477057355704395895325",
+      "level": 6,
+      "resistance_exact": "261021541067033029887240310921681568355477057355704395895325/2798270544854969205764904793418126355553818963027580567701",
+      "resistance_float": 93.27959426473592
+    }
+  ],
+  "existing_prior_art": "The SG3 resistance scaling 15/7 is established in fractal electrical-network literature; the present particular cell-neighbor recursion and W33 no-go juxtaposition are this project-specific audit, not proof of priority.",
+  "graph_proof": "Lucas digit support: in barycentric coordinates (i,j,h) with i+j+h=3^n-1, each base-3 digit triple sums to 2. There are six choices per digit, invariant under S3. Six depth-(n-1) blocks have 9 unit connecting edges (3 in each triangular direction), all joining block corners. Each block reduces by its S3-invariant three-port Dirichlet response to a triangle with edge conductance c_n. Exact rational Schur reduction of the 18-port gluing circuit gives the recurrence.",
+  "initial_conductance": "3/5",
+  "literature": [
+    "https://doi.org/10.1016/0016-0032(89)90047-1",
+    "https://doi.org/10.1109/ICICES.2013.6508276"
+  ],
+  "observed_ratios": [
+    3.1451612903225805,
+    2.4618480002172203,
+    2.272486952310181,
+    2.199911565136004,
+    2.168794382073766
+  ],
+  "rigorous_asymptotic": "For c_n>0, c_(n+1)/c_n<1, so c_n decreases to the only nonnegative fixed point 0. Thus R_(n+1)/R_n=c_n/c_(n+1) tends to 15/7.",
+  "status": "PASS_EXACT_THREE_PORT_SCHUR_REDUCTION"
+}

@@ -1,0 +1,136 @@
+{
+  "family_obstruction": "Every W(3,q) point-collinearity graph has diameter 2 and at most three distinct graph-Laplacian eigenvalues; rescaling alone cannot manufacture the unbounded Laplace spectrum of a smooth compact 4-manifold.",
+  "four_dimensional_global_no_go": {
+    "all_positive_time": true,
+    "claim": "For the unweighted W33 collinearity graph, d_s(t)<4 for all t>0.",
+    "exponential_inequality_certified_by_rational_series": true,
+    "proof": "Each of 24(5t-1)exp(-10t) and 15(8t-1)exp(-16t) is bounded above by 12/e^3 and 15/(2e^3). Their sum is 39/(2e^3)<1; this is equivalent to d_s(t)<4."
+  },
+  "heat_trace": "1+24 exp(-10t)+15 exp(-16t)",
+  "pascal_mod3": {
+    "Lucas_theorem": "binomial(n,k) nonzero modulo 3 iff every base-3 digit k_i <= n_i",
+    "box_dimension": "log(6)/log(3)",
+    "box_dimension_numeric": 1.6309297535714573,
+    "continuum_warning": "Unbounded graph diameter and nonintegral box dimension are promising properties of a refinement family but neither produces a 4D Lorentzian continuum nor a physical meter.",
+    "exact_nonzero_count": "6^m for 0<=n<3^m",
+    "triangular_nearest_neighbor_graph_tests": [
+      {
+        "all_pairs_diameter_exact": 2,
+        "connected": true,
+        "dimension_ratio": 1.6309297535714573,
+        "distance_from_top_to_farthest": 2,
+        "level": 1,
+        "nonzero_pascal_entries": 6,
+        "row_count": 3,
+        "undirected_edges": 9
+      },
+      {
+        "all_pairs_diameter_exact": 8,
+        "connected": true,
+        "dimension_ratio": 1.6309297535714573,
+        "distance_from_top_to_farthest": 8,
+        "level": 2,
+        "nonzero_pascal_entries": 36,
+        "row_count": 9,
+        "undirected_edges": 63
+      },
+      {
+        "all_pairs_diameter_exact": 26,
+        "connected": true,
+        "dimension_ratio": 1.6309297535714575,
+        "distance_from_top_to_farthest": 26,
+        "level": 3,
+        "nonzero_pascal_entries": 216,
+        "row_count": 27,
+        "undirected_edges": 387
+      },
+      {
+        "all_pairs_diameter_exact": null,
+        "connected": true,
+        "dimension_ratio": 1.6309297535714573,
+        "distance_from_top_to_farthest": 80,
+        "level": 4,
+        "nonzero_pascal_entries": 1296,
+        "row_count": 81,
+        "undirected_edges": 2331
+      }
+    ]
+  },
+  "peak": {
+    "dimension_peak_numeric": 3.7184824400084318,
+    "numeric_only": true,
+    "t_peak_numeric": 0.258799449225414
+  },
+  "prior_art_scope": "Lucas congruences, Pascal fractal dimension, W(3,q) SRG spectra, graph heat-trace and dimensional transmutation are established mathematics/physics. The concise global ds<4 inequality is a project-specific derived bound; novelty in literature is not claimed.",
+  "samples": [
+    {
+      "dimension": 1.1365208632858737,
+      "time": 0.05
+    },
+    {
+      "dimension": 2.1270955018660027,
+      "time": 0.1
+    },
+    {
+      "dimension": 2.928638817180578,
+      "time": 0.15
+    },
+    {
+      "dimension": 3.478841207059206,
+      "time": 0.2
+    },
+    {
+      "dimension": 3.713070450575685,
+      "time": 0.25
+    },
+    {
+      "dimension": 3.6036286254268264,
+      "time": 0.3
+    },
+    {
+      "dimension": 2.619068001166514,
+      "time": 0.4
+    },
+    {
+      "dimension": 1.455006624781363,
+      "time": 0.5
+    },
+    {
+      "dimension": 0.3042655588796037,
+      "time": 0.7
+    },
+    {
+      "dimension": 0.021822168934948188,
+      "time": 1.0
+    }
+  ],
+  "scale_identifiability": "Laplacian heat time t and Pascal dilation factor 3 are dimensionless. Absolute lengths require a physical reference/coupling and a measured mapping; assigning physical size is not a deduction from graph topology.",
+  "spectral_dimension": "480t(exp(-10t)+exp(-16t))/(1+24exp(-10t)+15exp(-16t))",
+  "status": "PASS_EXACT_COMBINATORICS_AND_ANALYTIC_BOUND",
+  "w33": {
+    "adjacency_eigenvalues": {
+      "-4": 15,
+      "12": 1,
+      "2": 24
+    },
+    "checked_pair_types": {
+      "adjacent": 480,
+      "diagonal": 40,
+      "nonadjacent": 1080
+    },
+    "degree": 12,
+    "edges": 240,
+    "laplacian_eigenvalues": {
+      "0": 1,
+      "10": 24,
+      "16": 15
+    },
+    "srg": [
+      40,
+      12,
+      2,
+      4
+    ],
+    "vertices": 40
+  }
+}
