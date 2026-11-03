@@ -1,0 +1,26 @@
+{
+  "status": "PASS_IMAGINARY_WITNESS_QUANTIZED_PHASE_LIMITED_TRIALS",
+  "two_bit_phase_trials": [
+    {
+      "trial": 0,
+      "real_Hermitian_span_rank": 499,
+      "condition_number": null
+    },
+    {
+      "trial": 1,
+      "real_Hermitian_span_rank": 515,
+      "condition_number": null
+    },
+    {
+      "trial": 2,
+      "real_Hermitian_span_rank": 499,
+      "condition_number": null
+    }
+  ],
+  "three_settings_complete_with_two_bit_phases": false,
+  "winning_phase_exponents_for_settings_2_3": null,
+  "imaginary_coherence_witness_no_phase_TV": 0.0,
+  "imaginary_coherence_witness_with_one_90deg_phase_TV": 0.026514591493400283,
+  "states": "rho\u00b1=I24/24 \u00b1(i/48)(|0><1|-|1><0|)",
+  "scope": "Numerical rank and a basis-dependent imaginary coherence pair; not physical CP parity violation, not a calibrated or loss-tolerant optical experiment."
+}

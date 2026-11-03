@@ -1,0 +1,102 @@
+{
+  "status": "PASS_NATIVE_ZM3_BLOCH_DIFFUSION_TENSOR",
+  "edge_voltages": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      7
+    ]
+  ],
+  "base_vertex_count": 40,
+  "cover_layers_dims": 3,
+  "low_momentum_quadratic_tensor": [
+    [
+      0.0017447903993440793,
+      2.6169504951351925e-11,
+      -5.137701870263938e-12
+    ],
+    [
+      2.6169504951351925e-11,
+      0.0017447905517543284,
+      2.5547259989920135e-12
+    ],
+    [
+      -5.137701870263938e-12,
+      2.5547259989920135e-12,
+      0.0017447904284121258
+    ]
+  ],
+  "diffusion_eigenvalues": [
+    0.0017447903940976408,
+    0.0017447904292683732,
+    0.0017447905561445195
+  ],
+  "metric_condition_number": 1.0000000928746968,
+  "small_k_max_relative_quadratic_error": 6.77016719662463e-06,
+  "cover_bloch_examples": {
+    "5": {
+      "axis_first_band": [
+        0.0024261372876496655,
+        0.002426137287650252,
+        0.0024261372876502613
+      ],
+      "axis_mean_gap": 0.0024261372876500597,
+      "mixed_first_band": [
+        0.004837581812515687,
+        0.004855391569121075,
+        0.0048732483654943225
+      ],
+      "axis_rescaled_m2": [
+        0.06065343219124164,
+        0.060653432191256296,
+        0.06065343219125653
+      ]
+    },
+    "9": {
+      "axis_first_band": [
+        0.0008181027396052708,
+        0.0008181027396047575,
+        0.0008181027396051762
+      ],
+      "axis_mean_gap": 0.0008181027396050681,
+      "mixed_first_band": [
+        0.0016345337711493905,
+        0.0016365573857185641,
+        0.0016385627602261157
+      ],
+      "axis_rescaled_m2": [
+        0.06626632190802693,
+        0.06626632190798534,
+        0.06626632190801927
+      ]
+    },
+    "17": {
+      "axis_first_band": [
+        0.00023578465625560325,
+        0.00023578465625447126,
+        0.00023578465625527875
+      ],
+      "axis_mean_gap": 0.00023578465625511777,
+      "mixed_first_band": [
+        0.0004714304219495469,
+        0.00047159846790507986,
+        0.00047176430379464694
+      ],
+      "axis_rescaled_m2": [
+        0.06814176565786934,
+        0.0681417656575422,
+        0.06814176565777555
+      ]
+    }
+  },
+  "low_k_modes_directions": 3,
+  "acoustic_quadratic": "lambda0(k)=k.T D k + O(|k|^4) for conjugation-symmetric spectrum",
+  "scope": "three independent voltage directions on same 40-vertex W33 cell; quadratic nonrelativistic/Laplacian dispersion, no Minkowski signature or physical speed and time"
+}

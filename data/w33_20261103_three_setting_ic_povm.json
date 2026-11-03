@@ -1,0 +1,70 @@
+{
+  "status": "COMPLETE_IF_RANK_576_ELSE_PARTIAL",
+  "rank_one_effects_per_setting": 216,
+  "individual_operator_span": 201,
+  "complex_hermitian_dimension": 576,
+  "algebraic_lower_bound_on_settings": 3,
+  "full_unitary_results": [
+    {
+      "settings": 1,
+      "effects": 216,
+      "operator_rank": 201,
+      "hermitian_dimension": 576,
+      "null_dimension": 375,
+      "nonzero_condition_ratio": 5.000000000000001,
+      "max_operator_isometry": 2.3314683517128287e-15
+    },
+    {
+      "settings": 2,
+      "effects": 432,
+      "operator_rank": 401,
+      "hermitian_dimension": 576,
+      "null_dimension": 175,
+      "nonzero_condition_ratio": 23.047180738070185,
+      "max_operator_isometry": 1.4432950308089436e-15
+    },
+    {
+      "settings": 3,
+      "effects": 648,
+      "operator_rank": 576,
+      "hermitian_dimension": 576,
+      "null_dimension": 0,
+      "nonzero_condition_ratio": 197.86405710335225,
+      "max_operator_isometry": 1.4432899768506401e-15
+    },
+    {
+      "settings": 4,
+      "effects": 864,
+      "operator_rank": 576,
+      "hermitian_dimension": 576,
+      "null_dimension": 0,
+      "nonzero_condition_ratio": 32.2398388440208,
+      "max_operator_isometry": 1.8873798812509748e-15
+    }
+  ],
+  "phase_only_control": [
+    {
+      "settings": 1,
+      "rank": 201,
+      "blind_dim": 375
+    },
+    {
+      "settings": 2,
+      "rank": 401,
+      "blind_dim": 175
+    },
+    {
+      "settings": 3,
+      "rank": 576,
+      "blind_dim": 0
+    },
+    {
+      "settings": 4,
+      "rank": 576,
+      "blind_dim": 0
+    }
+  ],
+  "three_settings_informationally_complete": true,
+  "physical_requirements": "Three independently calibrated 24-mode complex unitary pre-rotations before the existing 216-output Naimark receiver; no claim of cheap implementation or robust inversion",
+  "scope": "Numerical rank/conditioning with seeded Haar unitaries. Reuse same 216-outcome POVM; new full complex measurement only after orientations. Not a SIC or hardware experiment."
+}

@@ -1,0 +1,67 @@
+{
+  "status": "PASS_EXACT_SEED_THIRD_MOMENTS_WITH_GROUP_ORBIT_CONDITIONAL",
+  "q": 9,
+  "points": 820,
+  "hyperoval_lines": 48,
+  "twice_covered_points": 240,
+  "field_square_elements": [
+    1,
+    2,
+    3,
+    6
+  ],
+  "minus_one_is_square": true,
+  "three_point_types": {
+    "independent_minus": {
+      "triple_count": 31881600,
+      "sum_for_seed": 58213440,
+      "orbit_average": "493/270",
+      "float": 1.825925925925926
+    },
+    "independent_plus": {
+      "triple_count": 31881600,
+      "sum_for_seed": 58213440,
+      "orbit_average": "493/270",
+      "float": 1.825925925925926
+    },
+    "isotropic_line": {
+      "triple_count": 98400,
+      "sum_for_seed": 161480960,
+      "orbit_average": "24616/15",
+      "float": 1641.0666666666666
+    },
+    "nonisotropic_line_minus": {
+      "triple_count": 398520,
+      "sum_for_seed": -50825240,
+      "orbit_average": "-30991/243",
+      "float": -127.53497942386831
+    },
+    "nonisotropic_line_plus": {
+      "triple_count": 398520,
+      "sum_for_seed": -50825240,
+      "orbit_average": "-30991/243",
+      "float": -127.53497942386831
+    },
+    "one_edge": {
+      "triple_count": 23911200,
+      "sum_for_seed": 173971200,
+      "orbit_average": "1768/243",
+      "float": 7.275720164609053
+    },
+    "two_edges": {
+      "triple_count": 2988900,
+      "sum_for_seed": -348611520,
+      "orbit_average": "-141712/1215",
+      "float": -116.63539094650206
+    }
+  },
+  "three_point_type_count": 7,
+  "all_distinct_triplets": 91558740,
+  "global_cubic_checksum": "1617040",
+  "single_point_cubic_moment": "5916",
+  "single_point_variance": "348",
+  "projective_transitivity_conditional": true,
+  "line_unique_coefficient": true,
+  "elapsed_seconds": 265.48,
+  "scope": "Every class sum from a single known seed is EXACT. Interpreting as a single full-orbit tensor coefficient requires independently verifying G-transitivity on each of the seven classified triple types; the q9 support orbit size is from parallel Pass12525."
+}

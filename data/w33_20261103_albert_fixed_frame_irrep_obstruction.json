@@ -1,0 +1,26 @@
+{
+  "status": "PASS_FIXED_ALBERT_JORDAN_FRAME_PSp4_3_NO_GO",
+  "PSp4_3_order": 25920,
+  "point_stabilizer_order": 648,
+  "point_stabilizer_orbit_sizes": [
+    1,
+    12,
+    27
+  ],
+  "point_permutation_rank": 3,
+  "point_adjacency_spectrum": {
+    "12": 1,
+    "2": 24,
+    "-4": 15
+  },
+  "positive_24D_module_absolutely_irreducible": true,
+  "reason": "A rank-three transitive permutation action has commutant spanned by I,A,J; the three distinct eigenspaces 1+15+24 each occur with multiplicity 1, hence are absolutely irreducible.",
+  "Albert_dimension": 27,
+  "fixed_frame_Peirce_offdiag_dimensions": [
+    8,
+    8,
+    8
+  ],
+  "no_go": "There is no PSp4(3)-equivariant embedding of the irreducible 24D route carrier as the off-diagonal 8+8+8 sum of a Jordan frame fixed pointwise by PSp4(3); the Peirce blocks would be proper nonzero invariant submodules.",
+  "scope": "Only embeddings preserving a labelled Jordan frame, or a frame set (PSp4(3) simple so cannot permute 3 labels nontrivially). Non-frame exceptional Jordan embeddings and symmetry-breaking actions are NOT excluded; existing repo clock Albert construction is independent and not invalidated."
+}

@@ -1,0 +1,32 @@
+{
+  "status": "PASS_EXACT_Q9_SEED_CUBIC_FULL_ORBIT_BY_WITT_TRANSITIVITY",
+  "group_order_PSp4_9": 1721606400,
+  "route_seed_count": 48,
+  "parallel_route_full_orbit_size": 3586680,
+  "point_count": 820,
+  "point_triple_count": 91558740,
+  "orbit_type_moments": {
+    "independent_minus": "493/270",
+    "independent_plus": "493/270",
+    "isotropic_line": "24616/15",
+    "nonisotropic_line_minus": "-30991/243",
+    "nonisotropic_line_plus": "-30991/243",
+    "one_edge": "1768/243",
+    "two_edges": "-141712/1215"
+  },
+  "point_triple_class_stabilizers": {
+    "independent_minus": 54,
+    "independent_plus": 54,
+    "isotropic_line": 17496,
+    "nonisotropic_line_minus": 4320,
+    "nonisotropic_line_plus": 4320,
+    "one_edge": 72,
+    "two_edges": 576
+  },
+  "global_triple_checksum": "1617040",
+  "isotropic_line_moment": "24616/15",
+  "isotropic_line_value_unique": true,
+  "reconstructs_isotropic_lines": "T_abc=24616/15 precisely when distinct a,b,c are on a W(3,9) totally isotropic line.",
+  "seven_orbit_proof": "PSp symplectic Witt extension for independent projective frames; projective scaling Gram-matching determined by square class of omega12 omega23 omega31; nonisotropic 2space stabilizer induces PSL2(9), split into two square-class orbits since -1 is square; isotropic line stabilizer induces PGL2(9). Exactly 7 classes.",
+  "scope": "Exact finite geometry by group-theoretic transitivity and exhaustive 91,558,740 triple classification on a single known 48-line hyperoval; depends on the parallel full-hyperoval orbit statement, not a proof there are no distinct non-hyperoval 48-line minima. Not physical TOE."
+}

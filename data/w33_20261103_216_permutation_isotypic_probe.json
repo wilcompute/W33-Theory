@@ -1,0 +1,155 @@
+{
+  "status": "PASS_EXACT_RANK10_ORBITALS_NUMERIC_MODULE_SPLITS",
+  "group_order": 25920,
+  "route_orbit": 216,
+  "stabilizer": 120,
+  "orbitals_count": 10,
+  "orbital_sizes": [
+    1,
+    5,
+    10,
+    10,
+    20,
+    20,
+    30,
+    30,
+    30,
+    60
+  ],
+  "all_orbital_matrices_G_equivariant_exact": true,
+  "orbital_noncommutativity_with_K_detected": true,
+  "K_eigenspace_split_by_generic_G_commuting_hermitian": [
+    {
+      "squared_gram_eigenvalue": 0,
+      "eigenspace_dim": 15,
+      "generic_selfadjoint_centralizer_eigenblocks": [
+        {
+          "value": 59.94584979683916,
+          "dimension": 15
+        }
+      ]
+    },
+    {
+      "squared_gram_eigenvalue": 576,
+      "eigenspace_dim": 15,
+      "generic_selfadjoint_centralizer_eigenblocks": [
+        {
+          "value": 12.284253835926723,
+          "dimension": 15
+        }
+      ]
+    },
+    {
+      "squared_gram_eigenvalue": 768,
+      "eigenspace_dim": 81,
+      "generic_selfadjoint_centralizer_eigenblocks": [
+        {
+          "value": -21.92879699648895,
+          "dimension": 81
+        }
+      ]
+    },
+    {
+      "squared_gram_eigenvalue": 2304,
+      "eigenspace_dim": 80,
+      "generic_selfadjoint_centralizer_eigenblocks": [
+        {
+          "value": -18.37810397474368,
+          "dimension": 20
+        },
+        {
+          "value": 18.2404196283045,
+          "dimension": 60
+        }
+      ]
+    },
+    {
+      "squared_gram_eigenvalue": 3168,
+      "eigenspace_dim": 24,
+      "generic_selfadjoint_centralizer_eigenblocks": [
+        {
+          "value": 23.15440782750054,
+          "dimension": 24
+        }
+      ]
+    },
+    {
+      "squared_gram_eigenvalue": 14400,
+      "eigenspace_dim": 1,
+      "generic_selfadjoint_centralizer_eigenblocks": [
+        {
+          "value": 64.12312452125836,
+          "dimension": 1
+        }
+      ]
+    }
+  ],
+  "off_diagonal_equivariant_couplings_between_K_eigenspaces": [
+    {
+      "lambda_a": 0,
+      "lambda_b": 576,
+      "frobenius_coupling": 188.00370552366186
+    }
+  ],
+  "real20_complex_structure_evidence": {
+    "20": {
+      "commutant_skew_norm": 2.660345157270873e-15,
+      "complex_structure_scale_sq": -4.695913523955742e-32,
+      "J_squared_scalar_residual": 2.7574355567895888e-31,
+      "complex_type_candidate": false
+    },
+    "60": {
+      "commutant_skew_norm": 165.5740253184265,
+      "complex_structure_scale_sq": 456.9126310024491,
+      "J_squared_scalar_residual": 4.718003765447065e-12,
+      "complex_type_candidate": true
+    },
+    "0": {
+      "commutant_skew_norm": 9.557042406964062e-14,
+      "complex_structure_scale_sq": 5.8824633386670135e-28,
+      "J_squared_scalar_residual": 5.767069860955985e-28,
+      "complex_type_candidate": false
+    },
+    "576": {
+      "commutant_skew_norm": 9.493131974633767e-14,
+      "complex_structure_scale_sq": 5.85322660628904e-28,
+      "J_squared_scalar_residual": 7.468666586704342e-28,
+      "complex_type_candidate": false
+    },
+    "768": {
+      "commutant_skew_norm": 1.405747865592001e-14,
+      "complex_structure_scale_sq": -1.0401775039821878e-31,
+      "J_squared_scalar_residual": 1.1584592824291733e-30,
+      "complex_type_candidate": false
+    },
+    "3168": {
+      "commutant_skew_norm": 3.826546977819509e-15,
+      "complex_structure_scale_sq": -2.9202962218961805e-32,
+      "J_squared_scalar_residual": 4.307372225789543e-31,
+      "complex_type_candidate": false
+    },
+    "14400": {
+      "commutant_skew_norm": 2.1994458781157735e-16,
+      "complex_structure_scale_sq": -4.8375621707604657e-32,
+      "J_squared_scalar_residual": 0.0,
+      "complex_type_candidate": false
+    }
+  },
+  "isomorphism_of_two_15D_eigenspaces_evidence": {
+    "intertwiner_singular_min": 48.54234803456165,
+    "intertwiner_singular_max": 48.54234803456179,
+    "fifteen_modules_equivalent_numeric": true
+  },
+  "proposed_complex_irrep_dimensions": [
+    1,
+    24,
+    81,
+    20,
+    30,
+    30,
+    15,
+    15
+  ],
+  "complex_commutant_dimension_checksum": 10,
+  "scope": "eigenblock dimensions are high-confidence floating numerical invariants, need rational modular idempotents/character-table identification; the full K eigenspaces are not automatically irreducible"
+}
