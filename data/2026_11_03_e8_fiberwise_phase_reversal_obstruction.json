@@ -1,0 +1,28 @@
+{
+  "base_complement_triangles": 3240,
+  "boundary": "Only excludes base-fixing maps k_f -> alpha_f-k_f. It does not exclude E8 Weyl automorphisms which permute the 40 base fibers, nor alternative non-phase-realized symmetries. It proves a combinatorial chirality/graph-gluing obstruction, not a chiral fermion spectrum or CP violation.",
+  "coupled_fiber_pairs": 540,
+  "e8_root_count": 240,
+  "fibers": 40,
+  "no_go": "Every coupled pair demands opposite parity for alpha_a and alpha_b. The base complement W33 has 3240 triangles, hence is not bipartite. No phase choices alpha_f can make all 40 base-fixing fiberwise reversals preserve E8 adjacency.",
+  "oriented_triangle_holonomy_mod6_counts": {
+    "1": 1440,
+    "3": 360,
+    "5": 1440
+  },
+  "prior_repository_context": "Related absolute chirality, Z12 cocycle and Coxeter reversal obstructions existed in analysis/BT746_absolute_chirality_z12.md, analysis/w33_pass7163_7170_e8_hexagonal_lift.py and analysis/BT1758_BT1760_execution_summary.md; this checks a narrow elementary parity condition on simultaneous base-fixing C6 reflection.",
+  "relative_phase_shift_constraint": "For each coupled fiber pair (a,b), root edges have cyclic phase differences D={s,s+1}; reversing each hexagon with k->alpha_f-k requires alpha_b-alpha_a=2s+1 mod 6 (odd).",
+  "required_edge_shift_counts_mod6": {
+    "1": 156,
+    "3": 210,
+    "5": 174
+  },
+  "status": "PASS_BASE_FIXING_FIBERWISE_E8_REFLECTION_OBSTRUCTION",
+  "uniform_c6_phase_shift_automorphisms_verified": 6,
+  "witness_first_triangle": [
+    0,
+    2,
+    3,
+    5
+  ]
+}
