@@ -1,0 +1,82 @@
+{
+  "status": "PASS_Q13_TRANSVECTION_EVEN_SET_TRADES",
+  "original_line_count": 160,
+  "distinct_transvection_centers": 2380,
+  "nonzero_transvection_parameters": [
+    1,
+    2,
+    5
+  ],
+  "total_tested_transvections": 7140,
+  "trade_summary": [
+    {
+      "c": 1,
+      "max_overlap": 24,
+      "max_overlap_count": 64,
+      "min_nonzero_xor_weight": 272,
+      "overlap_histogram": {
+        "12": 4,
+        "13": 272,
+        "14": 160,
+        "15": 176,
+        "16": 160,
+        "17": 816,
+        "18": 336,
+        "19": 320,
+        "20": 72,
+        "24": 64
+      }
+    },
+    {
+      "c": 2,
+      "max_overlap": 24,
+      "max_overlap_count": 44,
+      "min_nonzero_xor_weight": 272,
+      "overlap_histogram": {
+        "12": 32,
+        "13": 352,
+        "14": 144,
+        "15": 160,
+        "16": 160,
+        "17": 736,
+        "18": 368,
+        "19": 320,
+        "20": 64,
+        "24": 44
+      }
+    },
+    {
+      "c": 5,
+      "max_overlap": 24,
+      "max_overlap_count": 64,
+      "min_nonzero_xor_weight": 272,
+      "overlap_histogram": {
+        "12": 4,
+        "13": 272,
+        "14": 160,
+        "15": 176,
+        "16": 160,
+        "17": 816,
+        "18": 336,
+        "19": 320,
+        "20": 72,
+        "24": 64
+      }
+    }
+  ],
+  "best_distinct_symmetric_difference": {
+    "c": 1,
+    "center": 2,
+    "overlap": 24,
+    "xor_weight": 272,
+    "center_point": [
+      1,
+      1,
+      0,
+      0
+    ]
+  },
+  "improved_upper_bound": false,
+  "exact_invariance": "For incidence mod 2, N(s XOR t)=Ns+Nt=0, so each nonempty difference is an even line set.",
+  "scope": "Complete all 2380 centers at three nonzero transvection parameters c; not the full Sp4(13) orbit, no global min-weight proof. Already known existence of 160-line set credited to parallel Pass12527."
+}

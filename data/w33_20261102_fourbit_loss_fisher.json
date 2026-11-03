@@ -1,0 +1,113 @@
+{
+  "status": "PASS_CALIBRATED_LOSS_AND_PHASE_DRIFT_FISHER_BENCHMARK",
+  "logical_complex_dimension": 24,
+  "trace_free_real_parameters": 575,
+  "outcomes_per_setting": 216,
+  "settings": 3,
+  "phase_bit_depth": 4,
+  "four_bit_candidate_exact_masks": {
+    "bits": 4,
+    "trial": 13,
+    "min_eigenvalue": 8.987376129419122e-06,
+    "phase_mask_1": [
+      11,
+      14,
+      4,
+      3,
+      9,
+      13,
+      3,
+      10,
+      6,
+      11,
+      5,
+      6,
+      8,
+      6,
+      0,
+      2,
+      15,
+      12,
+      10,
+      9,
+      13,
+      8,
+      3,
+      5
+    ],
+    "phase_mask_2": [
+      11,
+      1,
+      15,
+      8,
+      13,
+      2,
+      14,
+      13,
+      6,
+      7,
+      0,
+      5,
+      3,
+      7,
+      0,
+      6,
+      7,
+      10,
+      8,
+      10,
+      11,
+      12,
+      2,
+      6
+    ],
+    "condition_estimate": 192.58520216254675
+  },
+  "detector_efficiency_fisher_cases": [
+    {
+      "profile": "ideal",
+      "mean_detection_efficiency": 1.0,
+      "min_fisher_eigen_per_one_launched_photon_per_setting": 0.001941273243951813,
+      "launch_photons_per_setting_for_0p01_sd_CRB": 5151259,
+      "launch_photons_per_setting_for_0p05_sd_CRB": 206051
+    },
+    {
+      "profile": "uniform_0p70",
+      "mean_detection_efficiency": 0.7,
+      "min_fisher_eigen_per_one_launched_photon_per_setting": 0.0013588912707674266,
+      "launch_photons_per_setting_for_0p01_sd_CRB": 7358941,
+      "launch_photons_per_setting_for_0p05_sd_CRB": 294358
+    },
+    {
+      "profile": "variable_0p35_to_0p90",
+      "mean_detection_efficiency": 0.6265852351075601,
+      "min_fisher_eigen_per_one_launched_photon_per_setting": 0.0011438955463874982,
+      "launch_photons_per_setting_for_0p01_sd_CRB": 8742057,
+      "launch_photons_per_setting_for_0p05_sd_CRB": 349683
+    }
+  ],
+  "calibrated_phase_drift_controls": [
+    {
+      "independent_rms_phase_drift_radians": 0,
+      "calibrated_min_fisher_eigen": 0.001941273243951813,
+      "full_effect_frame_condition_upper_bound_from_scalar_sector": 192.58520216268155
+    },
+    {
+      "independent_rms_phase_drift_radians": 0.01,
+      "calibrated_min_fisher_eigen": 0.0019264369674432342,
+      "full_effect_frame_condition_upper_bound_from_scalar_sector": 193.3253683955834
+    },
+    {
+      "independent_rms_phase_drift_radians": 0.05,
+      "calibrated_min_fisher_eigen": 0.001638240051098144,
+      "full_effect_frame_condition_upper_bound_from_scalar_sector": 209.6416062777931
+    },
+    {
+      "independent_rms_phase_drift_radians": 0.1,
+      "calibrated_min_fisher_eigen": 0.0015152923498254417,
+      "full_effect_frame_condition_upper_bound_from_scalar_sector": 217.980694981191
+    }
+  ],
+  "formula": "At rho=I24/24 each port has p=1/216. For trace-free coordinates, F_per_setting=sum_s eta_s (d p_s d p_s^T)/p_s + (d p_no_click d p_no_click^T)/p_no_click; sum over three phase settings. The no-click bin preserves multinomial normalization. 0.01 SD numbers are necessary local Cramer-Rao conditions for unbiased estimators.",
+  "scope": "Efficiency and drift are simulated; phase drift is re-calibrated, not estimator mismatch. No dark counts/crosstalk, readout bias, experimental fidelities, photonic loss geometry or real detector timing. Known quantum metrology principles not claimed novel."
+}

@@ -1,0 +1,40 @@
+{
+  "status": "PASS_EXACT_WEAKLY_SYMMETRIC_216_ROUTE_CLASSICAL_CHANNEL",
+  "signal_dimension": 24,
+  "input_route_alphabet": 216,
+  "output_detector_ports": 216,
+  "conditional_probability": "P(t|s)=(Z_s dot Z_t)^2/14400",
+  "single_row_numerators_histogram": {
+    "16": 100,
+    "64": 95,
+    "256": 20,
+    "1600": 1
+  },
+  "conditional_shannon_entropy_bits": 6.8089082812420685,
+  "uniform_output_entropy_bits": 7.754887502163468,
+  "matched_route_prepare_measure_mutual_information_bits": 0.9459792209213997,
+  "matched_route_alphabet_classical_channel_capacity_bits_per_detected_photon": 0.9459792209213997,
+  "Holevo_bound_bits_per_signal_log2_24": 4.584962500721156,
+  "Holevo_ratio_of_fixed_channel_capacity_to_general_upper_bound": 0.20632212821208665,
+  "simulated_source_samples": [
+    {
+      "source_route": 160,
+      "shots": 1,
+      "same_route_detected": 0,
+      "unique_detector_ports": 1
+    },
+    {
+      "source_route": 146,
+      "shots": 10,
+      "same_route_detected": 1,
+      "unique_detector_ports": 10
+    },
+    {
+      "source_route": 158,
+      "shots": 100,
+      "same_route_detected": 10,
+      "unique_detector_ports": 66
+    }
+  ],
+  "scope": "Capacity theorem only for 216 specified frame-state inputs under this ONE fixed 216-outcome POVM (a weakly symmetric classical channel); not the arbitrary-ensemble accessible information/capacity of a 24D quantum channel. No photon loss or collective coding. Fewer than one useful classical bit per detected photon is possible despite >7 bits of raw detector label."
+}

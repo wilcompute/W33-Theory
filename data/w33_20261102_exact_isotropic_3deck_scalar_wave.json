@@ -1,0 +1,168 @@
+{
+  "status": "PASS_EXACT_POSITIVE_ISOTROPIC_3DECK_METRIC",
+  "voltage_edges": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      7
+    ]
+  ],
+  "point_count": 40,
+  "normal_laplacian_gap_at_0": "5/6",
+  "pseudoinverse_zero_mean": "Lplus=(21/20)I+(3/40)A",
+  "dipole_A_cross": [
+    [
+      -2,
+      0,
+      0
+    ],
+    [
+      0,
+      -2,
+      0
+    ],
+    [
+      0,
+      0,
+      -2
+    ]
+  ],
+  "effective_resistance_matrix": [
+    [
+      "39/20",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "39/20",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "39/20"
+    ]
+  ],
+  "exact_low_band_quadratic_tensor": [
+    [
+      "67/38400",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "67/38400",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "67/38400"
+    ]
+  ],
+  "isotropic_squared_wave_speed": "67/38400",
+  "isotropic_dimensionless_wave_speed": 0.041770703449507125,
+  "wave_action": "Local real scalar action: S=integral dt [sum_v (partial_t phi_v)^2/2 - sum_(v,w)edge(phi_v-phi_w)^2/24]. EL equation d_t^2 phi + (I-A_cover/12) phi=0.",
+  "small_k_numeric_controls": [
+    {
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "k": 0.003,
+      "lowest_laplacian_eigenvalue": 1.5703113568458093e-08,
+      "scalar_wave_speed_ratio": 0.9999996360105398
+    },
+    {
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "k": 0.01,
+      "lowest_laplacian_eigenvalue": 1.7447778971079014e-07,
+      "scalar_wave_speed_ratio": 0.9999960540888077
+    },
+    {
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "k": 0.03,
+      "lowest_laplacian_eigenvalue": 1.5702009792028183e-06,
+      "scalar_wave_speed_ratio": 0.9999644902599788
+    },
+    {
+      "direction": [
+        1,
+        1,
+        1
+      ],
+      "k": 0.003,
+      "lowest_laplacian_eigenvalue": 1.5703121157630645e-08,
+      "scalar_wave_speed_ratio": 0.9999998776558937
+    },
+    {
+      "direction": [
+        1,
+        1,
+        1
+      ],
+      "k": 0.01,
+      "lowest_laplacian_eigenvalue": 1.7447871312080725e-07,
+      "scalar_wave_speed_ratio": 0.9999987002856479
+    },
+    {
+      "direction": [
+        1,
+        1,
+        1
+      ],
+      "k": 0.03,
+      "lowest_laplacian_eigenvalue": 1.5702757438018635e-06,
+      "scalar_wave_speed_ratio": 0.9999882964654404
+    },
+    {
+      "direction": [
+        1,
+        2,
+        -1
+      ],
+      "k": 0.003,
+      "lowest_laplacian_eigenvalue": 1.5703119569778745e-08,
+      "scalar_wave_speed_ratio": 0.9999998270974179
+    },
+    {
+      "direction": [
+        1,
+        2,
+        -1
+      ],
+      "k": 0.01,
+      "lowest_laplacian_eigenvalue": 1.7447848190721782e-07,
+      "scalar_wave_speed_ratio": 0.9999980377023406
+    },
+    {
+      "direction": [
+        1,
+        2,
+        -1
+      ],
+      "k": 0.03,
+      "lowest_laplacian_eigenvalue": 1.5702570485847368e-06,
+      "scalar_wave_speed_ratio": 0.999982343672103
+    }
+  ],
+  "analytical_obstruction": "The lowest isolated eigenvalue is even analytic in k by H(-k)=H(k).conjugate, hence no nonanalytic or linear Dirac branch in the native spinless Laplacian eigenvalue. Scalar wave omega=sqrt(lambda0) has acoustic |k| from a freely chosen second-order action.",
+  "scope": "Exact rational k^2 coefficient; selected 3 deck directions, kinetic action and speed normalization are external choices. Does not derive chirality, photons, Lorentz covariance or physical c. Repo earlier TOE36 already noted square-root wave propagation; new element is the exact rational metric and dipole-resistance derivation."
+}

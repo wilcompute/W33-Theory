@@ -1,0 +1,307 @@
+{
+  "status": "PASS_EXACT_SIGNATURE_NO_GO_AND_NUMERIC_4BIT_WITNESS",
+  "theorem": "For a real rank-one POVM with n input modes, m settings including an all-zero reference, and b-bit phase masks, modes share modulo-2^(b-1) signatures in at most 2^((b-1)(m-1)) classes. Every pair in a class has an undetectable imaginary Hermitian coherence. Minimum blindness is sum binomial(group sizes,2), balanced by pigeonhole.",
+  "rigorous_upper_bounds": {
+    "1": {
+      "bits": 1,
+      "settings": 3,
+      "modes": 24,
+      "signature_capacity": 1,
+      "forced_blind_imaginary_pairs": 276,
+      "hermitian_rank_upper_bound": 300,
+      "full_IC_excluded_by_collision": true
+    },
+    "2": {
+      "bits": 2,
+      "settings": 3,
+      "modes": 24,
+      "signature_capacity": 4,
+      "forced_blind_imaginary_pairs": 60,
+      "hermitian_rank_upper_bound": 516,
+      "full_IC_excluded_by_collision": true
+    },
+    "3": {
+      "bits": 3,
+      "settings": 3,
+      "modes": 24,
+      "signature_capacity": 16,
+      "forced_blind_imaginary_pairs": 8,
+      "hermitian_rank_upper_bound": 568,
+      "full_IC_excluded_by_collision": true
+    },
+    "4": {
+      "bits": 4,
+      "settings": 3,
+      "modes": 24,
+      "signature_capacity": 64,
+      "forced_blind_imaginary_pairs": 0,
+      "hermitian_rank_upper_bound": 576,
+      "full_IC_excluded_by_collision": false
+    },
+    "5": {
+      "bits": 5,
+      "settings": 3,
+      "modes": 24,
+      "signature_capacity": 256,
+      "forced_blind_imaginary_pairs": 0,
+      "hermitian_rank_upper_bound": 576,
+      "full_IC_excluded_by_collision": false
+    },
+    "6": {
+      "bits": 6,
+      "settings": 3,
+      "modes": 24,
+      "signature_capacity": 1024,
+      "forced_blind_imaginary_pairs": 0,
+      "hermitian_rank_upper_bound": 576,
+      "full_IC_excluded_by_collision": false
+    }
+  },
+  "four_bit_search_count": 45,
+  "candidate_winners": 45,
+  "four_bit_min_eigenvalue_trials": [
+    {
+      "trial": 0,
+      "min_eigenvalue": 6.972265839916504e-06
+    },
+    {
+      "trial": 1,
+      "min_eigenvalue": 5.339373239843612e-06
+    },
+    {
+      "trial": 2,
+      "min_eigenvalue": 7.323460564351082e-06
+    },
+    {
+      "trial": 3,
+      "min_eigenvalue": 4.4566612315431714e-06
+    },
+    {
+      "trial": 4,
+      "min_eigenvalue": 5.088994222271476e-06
+    },
+    {
+      "trial": 5,
+      "min_eigenvalue": 7.204615497962565e-06
+    },
+    {
+      "trial": 6,
+      "min_eigenvalue": 8.929013219631517e-06
+    },
+    {
+      "trial": 7,
+      "min_eigenvalue": 5.615157741871558e-06
+    },
+    {
+      "trial": 8,
+      "min_eigenvalue": 5.922218407065677e-06
+    },
+    {
+      "trial": 9,
+      "min_eigenvalue": 6.7071143687753495e-06
+    },
+    {
+      "trial": 10,
+      "min_eigenvalue": 5.003861424011989e-06
+    },
+    {
+      "trial": 11,
+      "min_eigenvalue": 8.038627416286763e-06
+    },
+    {
+      "trial": 12,
+      "min_eigenvalue": 7.4884878274563445e-06
+    },
+    {
+      "trial": 13,
+      "min_eigenvalue": 8.987376129419122e-06
+    },
+    {
+      "trial": 14,
+      "min_eigenvalue": 7.210067152284071e-06
+    },
+    {
+      "trial": 15,
+      "min_eigenvalue": 6.8561219567931785e-06
+    },
+    {
+      "trial": 16,
+      "min_eigenvalue": 4.468347860549783e-06
+    },
+    {
+      "trial": 17,
+      "min_eigenvalue": 7.690079315947117e-06
+    },
+    {
+      "trial": 18,
+      "min_eigenvalue": 4.098353110816899e-06
+    },
+    {
+      "trial": 19,
+      "min_eigenvalue": 5.744767568007952e-06
+    },
+    {
+      "trial": 20,
+      "min_eigenvalue": 5.643036046053754e-06
+    },
+    {
+      "trial": 21,
+      "min_eigenvalue": 4.722515566442328e-06
+    },
+    {
+      "trial": 22,
+      "min_eigenvalue": 5.6224580969860814e-06
+    },
+    {
+      "trial": 23,
+      "min_eigenvalue": 5.306458019145322e-06
+    },
+    {
+      "trial": 24,
+      "min_eigenvalue": 5.300260226899896e-06
+    },
+    {
+      "trial": 25,
+      "min_eigenvalue": 4.854115089183773e-06
+    },
+    {
+      "trial": 26,
+      "min_eigenvalue": 5.6300093151443305e-06
+    },
+    {
+      "trial": 27,
+      "min_eigenvalue": 6.946211761521446e-06
+    },
+    {
+      "trial": 28,
+      "min_eigenvalue": 6.604340698844262e-06
+    },
+    {
+      "trial": 29,
+      "min_eigenvalue": 8.26598366706248e-06
+    },
+    {
+      "trial": 30,
+      "min_eigenvalue": 4.614247154623262e-06
+    },
+    {
+      "trial": 31,
+      "min_eigenvalue": 5.538850378088283e-06
+    },
+    {
+      "trial": 32,
+      "min_eigenvalue": 5.940457760547186e-06
+    },
+    {
+      "trial": 33,
+      "min_eigenvalue": 6.080728914735474e-06
+    },
+    {
+      "trial": 34,
+      "min_eigenvalue": 5.529406722720991e-06
+    },
+    {
+      "trial": 35,
+      "min_eigenvalue": 5.538437910237152e-06
+    },
+    {
+      "trial": 36,
+      "min_eigenvalue": 6.983068246376458e-06
+    },
+    {
+      "trial": 37,
+      "min_eigenvalue": 5.7114059809579275e-06
+    },
+    {
+      "trial": 38,
+      "min_eigenvalue": 5.271084031587595e-06
+    },
+    {
+      "trial": 39,
+      "min_eigenvalue": 7.468191259204883e-06
+    },
+    {
+      "trial": 40,
+      "min_eigenvalue": 4.1665796731596576e-06
+    },
+    {
+      "trial": 41,
+      "min_eigenvalue": 7.5042251588431706e-06
+    },
+    {
+      "trial": 42,
+      "min_eigenvalue": 6.53299137147055e-06
+    },
+    {
+      "trial": 43,
+      "min_eigenvalue": 5.956604734004955e-06
+    },
+    {
+      "trial": 44,
+      "min_eigenvalue": 4.378185829221932e-06
+    }
+  ],
+  "constructive_four_bit_candidate": {
+    "bits": 4,
+    "trial": 13,
+    "min_eigenvalue": 8.987376129419122e-06,
+    "phase_mask_1": [
+      11,
+      14,
+      4,
+      3,
+      9,
+      13,
+      3,
+      10,
+      6,
+      11,
+      5,
+      6,
+      8,
+      6,
+      0,
+      2,
+      15,
+      12,
+      10,
+      9,
+      13,
+      8,
+      3,
+      5
+    ],
+    "phase_mask_2": [
+      11,
+      1,
+      15,
+      8,
+      13,
+      2,
+      14,
+      13,
+      6,
+      7,
+      0,
+      5,
+      3,
+      7,
+      0,
+      6,
+      7,
+      10,
+      8,
+      10,
+      11,
+      12,
+      2,
+      6
+    ],
+    "condition_estimate": 192.58520216254675
+  },
+  "four_bit_hermitian_rank": 576,
+  "four_bit_full_rank_numeric_tolerance": 1e-10,
+  "minimum_detected_photons_per_setting_for_0p01_weak_axis_CRB": 5151259,
+  "measurement_basis": "24 orthonormal input modes from the existing 216x40 sign matrix positive-eigenspace eigendecomposition. This phase coordinate system is basis-dependent; calibrate before hardware.",
+  "scope": "Combinatorial non-IC obstruction exact independent of detector geometry; full rank of a four-bit numerical candidate computed double precision; finite detector loss and gain not yet included."
+}
