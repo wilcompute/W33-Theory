@@ -1,0 +1,147 @@
+{
+ "casimir": {
+  "1": {
+   "numeric": -0.07879706062703883,
+   "exact": -0.07879706062703883
+  },
+  "2": {
+   "numeric": -0.004924816289189927,
+   "exact": -0.004924816289189927
+  }
+ },
+ "casimir_scaling_ratio_l1_over_l2": 16.0,
+ "unsubtracted_grows_as_cutoff_falls": {
+  "0.02": -6.394615231160832,
+  "0.01": -35.806519812856905,
+  "0.005": -202.18531733685987
+ },
+ "V_over_mKK4_per_dof": 5.0558076632404144e-05,
+ "control_parallel_cap_eV": {
+  "free_c_neg": 0.017649470615719053,
+  "free_c_pos": 0.017042313092733134
+ },
+ "parallel_track_cap_eV": {
+  "free_c_neg": 0.017649470615719053,
+  "free_c_pos": 0.017042313092733134
+ },
+ "cap_at_full_planck_fit_eV": 0.017184581119204494,
+ "mKK_if_casimir_is_DE": {
+  "1": {
+   "mKK_eV": 0.02664773231832036,
+   "R_micron": 7.4050196107808155
+  },
+  "5": {
+   "mKK_eV": 0.017820412637483615,
+   "R_micron": 11.073087049900328
+  },
+  "20": {
+   "mKK_eV": 0.012600934619507113,
+   "R_micron": 15.65970988330693
+  }
+ },
+ "tower_natural_mass": {
+  "all moduli free": {
+   "b": 1.224744871391589,
+   "mu_max_over_H0": 7.049901348884446,
+   "shortfall_mass_to_1e5": 14184.59564910418,
+   "shortfall_mass_to_1e6": 141845.95649104178,
+   "shortfall_curvature_to_1e5": 201202753.7285852
+  },
+  "fixed volume n=1": {
+   "b": 0.7071067811865476,
+   "mu_max_over_H0": 4.070262441538741,
+   "shortfall_mass_to_1e5": 24568.440349068875,
+   "shortfall_mass_to_1e6": 245684.40349068874,
+   "shortfall_curvature_to_1e5": 603608261.1857555
+  },
+  "fixed volume n=6": {
+   "b": 0.9258200997725514,
+   "mu_max_over_H0": 5.3292244961963,
+   "shortfall_mass_to_1e5": 18764.456267769234,
+   "shortfall_mass_to_1e6": 187644.56267769233,
+   "shortfall_curvature_to_1e5": 352104819.02502406
+  }
+ },
+ "particle_caps": {
+  "Dirac b=0.7071 mu=1e0H0": {
+   "m_cap_eV": 0.004695276799813676,
+   "V_CW_over_rho_DE": 0.181085951584278
+  },
+  "Dirac b=0.7071 mu=1e5H0": {
+   "m_cap_eV": 1.4847768932357668,
+   "V_CW_over_rho_DE": 1810859515.8427804
+  },
+  "Dirac b=0.7071 mu=1e6H0": {
+   "m_cap_eV": 4.695276799813676,
+   "V_CW_over_rho_DE": 181085951584.27808
+  },
+  "Dirac b=0.7071 mu=1e7H0": {
+   "m_cap_eV": 14.847768932357669,
+   "V_CW_over_rho_DE": 18108595158427.81
+  },
+  "Dirac b=0.7071 mu=1e8H0": {
+   "m_cap_eV": 46.952767998136764,
+   "V_CW_over_rho_DE": 1810859515842781.0
+  },
+  "Dirac b=1.2247 mu=1e0H0": {
+   "m_cap_eV": 0.0035676871154366858,
+   "V_CW_over_rho_DE": 0.06036524928160791
+  },
+  "Dirac b=1.2247 mu=1e5H0": {
+   "m_cap_eV": 1.1282017263615998,
+   "V_CW_over_rho_DE": 603652492.8160793
+  },
+  "Dirac b=1.2247 mu=1e6H0": {
+   "m_cap_eV": 3.567687115436686,
+   "V_CW_over_rho_DE": 60365249281.60792
+  },
+  "Dirac b=1.2247 mu=1e7H0": {
+   "m_cap_eV": 11.282017263615998,
+   "V_CW_over_rho_DE": 6036524928160.793
+  },
+  "Dirac b=1.2247 mu=1e8H0": {
+   "m_cap_eV": 35.676871154366864,
+   "V_CW_over_rho_DE": 603652492816079.6
+  },
+  "real scalar b=0.7071 mu=1e0H0": {
+   "m_cap_eV": 0.006640124129392245,
+   "V_CW_over_rho_DE": 0.18108595158427815
+  },
+  "real scalar b=0.7071 mu=1e5H0": {
+   "m_cap_eV": 2.0997916195122106,
+   "V_CW_over_rho_DE": 1810859515.8427813
+  },
+  "real scalar b=0.7071 mu=1e6H0": {
+   "m_cap_eV": 6.640124129392245,
+   "V_CW_over_rho_DE": 181085951584.27808
+  },
+  "real scalar b=0.7071 mu=1e7H0": {
+   "m_cap_eV": 20.997916195122105,
+   "V_CW_over_rho_DE": 18108595158427.81
+  },
+  "real scalar b=0.7071 mu=1e8H0": {
+   "m_cap_eV": 66.40124129392245,
+   "V_CW_over_rho_DE": 1810859515842781.5
+  },
+  "real scalar b=1.2247 mu=1e0H0": {
+   "m_cap_eV": 0.005045471504954307,
+   "V_CW_over_rho_DE": 0.06036524928160791
+  },
+  "real scalar b=1.2247 mu=1e5H0": {
+   "m_cap_eV": 1.5955181825133138,
+   "V_CW_over_rho_DE": 603652492.8160793
+  },
+  "real scalar b=1.2247 mu=1e6H0": {
+   "m_cap_eV": 5.045471504954307,
+   "V_CW_over_rho_DE": 60365249281.6079
+  },
+  "real scalar b=1.2247 mu=1e7H0": {
+   "m_cap_eV": 15.955181825133138,
+   "V_CW_over_rho_DE": 6036524928160.793
+  },
+  "real scalar b=1.2247 mu=1e8H0": {
+   "m_cap_eV": 50.454715049543076,
+   "V_CW_over_rho_DE": 603652492816079.4
+  }
+ }
+}

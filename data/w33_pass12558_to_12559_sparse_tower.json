@@ -1,0 +1,368 @@
+{
+  "table": {
+    "pantheon": {
+      "exp_scatter": 1.0059665238709385,
+      "exp_vs_lcdm": -2.4245386403904376,
+      "free_neg": -8.507077777325321,
+      "free_pos": -6.758517171453377,
+      "c_neg": -0.8084142768642198,
+      "cp_neg": 0.05180967007839219,
+      "c_pos": 0.6512500407681039,
+      "cp_pos": 0.05380311362399774,
+      "gain_cp": 6.082539136934884,
+      "gain_cp_with_lens": 7.398079539511933,
+      "casimir_cost": 3.466581789414704,
+      "casimir": -3.291935382038673,
+      "cpl_vs_native": -8.858149824501197,
+      "w0": -0.8396329483816486,
+      "wa": -0.5813658978380144,
+      "S8_lcdm": 0.8059228873481169,
+      "S8_free": 0.8318224546253388,
+      "lens_lcdm": 21.51131645374621,
+      "lens_free": 20.19577605116916
+    },
+    "dovekie": {
+      "exp_scatter": 0.0723216164014957,
+      "exp_vs_lcdm": -3.7878024267383807,
+      "free_neg": -10.653512481029338,
+      "free_pos": -8.42073087884728,
+      "c_neg": -0.9014357644025587,
+      "cp_neg": 0.05299751293406564,
+      "c_pos": 0.6702467045244656,
+      "cp_pos": 0.05332644447000557,
+      "gain_cp": 6.8657100542909575,
+      "gain_cp_with_lens": 8.035081936477138,
+      "casimir_cost": 5.3816515244034235,
+      "casimir": -3.0390793544438566,
+      "cpl_vs_native": -12.270647131251735,
+      "w0": -0.8093548015222838,
+      "wa": -0.6853038517027648,
+      "S8_lcdm": 0.8067969580668223,
+      "S8_free": 0.8331275778072653,
+      "lens_lcdm": 21.3744563487899,
+      "lens_free": 20.20508446660372
+    },
+    "desy5": {
+      "exp_scatter": 0.44836141634732485,
+      "exp_vs_lcdm": -8.544830947866558,
+      "free_neg": -16.946841475030396,
+      "free_pos": -13.773219226379751,
+      "c_neg": -1.0377373454248167,
+      "cp_neg": 0.05529712169229763,
+      "c_pos": 0.8087978936453906,
+      "cp_pos": 0.05612299439197691,
+      "gain_cp": 8.402010527163839,
+      "gain_cp_with_lens": 8.740228306501585,
+      "casimir_cost": 10.897589740785406,
+      "casimir": -2.875629485594345,
+      "cpl_vs_native": -19.602304172230106,
+      "w0": -0.7596869922471857,
+      "wa": -0.8001452641274389,
+      "S8_lcdm": 0.8094494980113948,
+      "S8_free": 0.8370069388768762,
+      "lens_lcdm": 20.706621318431715,
+      "lens_free": 20.36840353909397
+    },
+    "none": {
+      "exp_scatter": 1.774681498427526,
+      "exp_vs_lcdm": 0.0,
+      "free_neg": -5.360851342068713,
+      "free_pos": -3.7551800626787326,
+      "c_neg": -0.974054535653359,
+      "cp_neg": 0.05445997736593184,
+      "c_pos": 0.4780390504908461,
+      "cp_pos": 0.051267212092426954,
+      "gain_cp": 5.360851342068713,
+      "gain_cp_with_lens": 6.522924982721232,
+      "casimir_cost": 0.02814284512840004,
+      "casimir": -3.7270372175503326,
+      "cpl_vs_native": -9.538810603656543,
+      "w0": -0.479480724421686,
+      "wa": -1.5450672781806727,
+      "S8_lcdm": 0.8042127716449418,
+      "S8_free": 0.8354909781349398,
+      "lens_lcdm": 21.481501829315622,
+      "lens_free": 20.319428188663103
+    }
+  },
+  "tower_loops": {
+    "casimir": {
+      "1": {
+        "numeric": -0.07879706062703883,
+        "exact": -0.07879706062703883
+      },
+      "2": {
+        "numeric": -0.004924816289189927,
+        "exact": -0.004924816289189927
+      }
+    },
+    "casimir_scaling_ratio_l1_over_l2": 16.0,
+    "unsubtracted_grows_as_cutoff_falls": {
+      "0.02": -6.394615231160832,
+      "0.01": -35.806519812856905,
+      "0.005": -202.18531733685987
+    },
+    "V_over_mKK4_per_dof": 5.0558076632404144e-05,
+    "control_parallel_cap_eV": {
+      "free_c_neg": 0.017649470615719053,
+      "free_c_pos": 0.017042313092733134
+    },
+    "parallel_track_cap_eV": {
+      "free_c_neg": 0.017649470615719053,
+      "free_c_pos": 0.017042313092733134
+    },
+    "cap_at_full_planck_fit_eV": 0.017184581119204494,
+    "mKK_if_casimir_is_DE": {
+      "1": {
+        "mKK_eV": 0.02664773231832036,
+        "R_micron": 7.4050196107808155
+      },
+      "5": {
+        "mKK_eV": 0.017820412637483615,
+        "R_micron": 11.073087049900328
+      },
+      "20": {
+        "mKK_eV": 0.012600934619507113,
+        "R_micron": 15.65970988330693
+      }
+    },
+    "tower_natural_mass": {
+      "all moduli free": {
+        "b": 1.224744871391589,
+        "mu_max_over_H0": 7.049901348884446,
+        "shortfall_mass_to_1e5": 14184.59564910418,
+        "shortfall_mass_to_1e6": 141845.95649104178,
+        "shortfall_curvature_to_1e5": 201202753.7285852
+      },
+      "fixed volume n=1": {
+        "b": 0.7071067811865476,
+        "mu_max_over_H0": 4.070262441538741,
+        "shortfall_mass_to_1e5": 24568.440349068875,
+        "shortfall_mass_to_1e6": 245684.40349068874,
+        "shortfall_curvature_to_1e5": 603608261.1857555
+      },
+      "fixed volume n=6": {
+        "b": 0.9258200997725514,
+        "mu_max_over_H0": 5.3292244961963,
+        "shortfall_mass_to_1e5": 18764.456267769234,
+        "shortfall_mass_to_1e6": 187644.56267769233,
+        "shortfall_curvature_to_1e5": 352104819.02502406
+      }
+    },
+    "particle_caps": {
+      "Dirac b=0.7071 mu=1e0H0": {
+        "m_cap_eV": 0.004695276799813676,
+        "V_CW_over_rho_DE": 0.181085951584278
+      },
+      "Dirac b=0.7071 mu=1e5H0": {
+        "m_cap_eV": 1.4847768932357668,
+        "V_CW_over_rho_DE": 1810859515.8427804
+      },
+      "Dirac b=0.7071 mu=1e6H0": {
+        "m_cap_eV": 4.695276799813676,
+        "V_CW_over_rho_DE": 181085951584.27808
+      },
+      "Dirac b=0.7071 mu=1e7H0": {
+        "m_cap_eV": 14.847768932357669,
+        "V_CW_over_rho_DE": 18108595158427.81
+      },
+      "Dirac b=0.7071 mu=1e8H0": {
+        "m_cap_eV": 46.952767998136764,
+        "V_CW_over_rho_DE": 1810859515842781.0
+      },
+      "Dirac b=1.2247 mu=1e0H0": {
+        "m_cap_eV": 0.0035676871154366858,
+        "V_CW_over_rho_DE": 0.06036524928160791
+      },
+      "Dirac b=1.2247 mu=1e5H0": {
+        "m_cap_eV": 1.1282017263615998,
+        "V_CW_over_rho_DE": 603652492.8160793
+      },
+      "Dirac b=1.2247 mu=1e6H0": {
+        "m_cap_eV": 3.567687115436686,
+        "V_CW_over_rho_DE": 60365249281.60792
+      },
+      "Dirac b=1.2247 mu=1e7H0": {
+        "m_cap_eV": 11.282017263615998,
+        "V_CW_over_rho_DE": 6036524928160.793
+      },
+      "Dirac b=1.2247 mu=1e8H0": {
+        "m_cap_eV": 35.676871154366864,
+        "V_CW_over_rho_DE": 603652492816079.6
+      },
+      "real scalar b=0.7071 mu=1e0H0": {
+        "m_cap_eV": 0.006640124129392245,
+        "V_CW_over_rho_DE": 0.18108595158427815
+      },
+      "real scalar b=0.7071 mu=1e5H0": {
+        "m_cap_eV": 2.0997916195122106,
+        "V_CW_over_rho_DE": 1810859515.8427813
+      },
+      "real scalar b=0.7071 mu=1e6H0": {
+        "m_cap_eV": 6.640124129392245,
+        "V_CW_over_rho_DE": 181085951584.27808
+      },
+      "real scalar b=0.7071 mu=1e7H0": {
+        "m_cap_eV": 20.997916195122105,
+        "V_CW_over_rho_DE": 18108595158427.81
+      },
+      "real scalar b=0.7071 mu=1e8H0": {
+        "m_cap_eV": 66.40124129392245,
+        "V_CW_over_rho_DE": 1810859515842781.5
+      },
+      "real scalar b=1.2247 mu=1e0H0": {
+        "m_cap_eV": 0.005045471504954307,
+        "V_CW_over_rho_DE": 0.06036524928160791
+      },
+      "real scalar b=1.2247 mu=1e5H0": {
+        "m_cap_eV": 1.5955181825133138,
+        "V_CW_over_rho_DE": 603652492.8160793
+      },
+      "real scalar b=1.2247 mu=1e6H0": {
+        "m_cap_eV": 5.045471504954307,
+        "V_CW_over_rho_DE": 60365249281.6079
+      },
+      "real scalar b=1.2247 mu=1e7H0": {
+        "m_cap_eV": 15.955181825133138,
+        "V_CW_over_rho_DE": 6036524928160.793
+      },
+      "real scalar b=1.2247 mu=1e8H0": {
+        "m_cap_eV": 50.454715049543076,
+        "V_CW_over_rho_DE": 603652492816079.4
+      }
+    }
+  },
+  "fraction": {
+    "dovekie": {
+      "f1_b005_control": {
+        "delta": -10.675784292397566,
+        "f": 1.0,
+        "b": 0.053,
+        "c": -0.9090399333664148,
+        "S8": 0.8333379212796773,
+        "failed": null
+      },
+      "b707_product005": {
+        "delta": -10.2053728278147,
+        "f": 0.07071135624381276,
+        "b": 0.7071,
+        "c": -0.7906993222778215,
+        "S8": 0.8256000492966735,
+        "failed": null
+      },
+      "b1225_product005": {
+        "delta": -9.640942836982049,
+        "f": 0.04082632481424023,
+        "b": 1.2247,
+        "c": -0.7595573279047135,
+        "S8": 0.8221451953059193,
+        "failed": null
+      },
+      "b707_f03": {
+        "delta": 396.2533770733853,
+        "f": 0.3,
+        "b": 0.7071,
+        "c": 0.4554353604781896,
+        "S8": 1.0398290865134305,
+        "failed": null
+      },
+      "b707_product003": {
+        "delta": -7.624930835423584,
+        "f": 0.04242681374628766,
+        "b": 0.7071,
+        "c": -0.7531814377202549,
+        "S8": 0.8128061471416954,
+        "failed": null
+      },
+      "b707_product007": {
+        "delta": -9.648963420655946,
+        "f": 0.09899589874133788,
+        "b": 0.7071,
+        "c": -0.9212342107184104,
+        "S8": 0.8396928361528891,
+        "failed": null
+      },
+      "single_delta": -10.653512481029338
+    },
+    "desy5": {
+      "f1_b005_control": {
+        "delta": -17.035608896154827,
+        "f": 1.0,
+        "b": 0.053,
+        "c": -1.0135936254148379,
+        "S8": 0.8345128199663884,
+        "failed": null
+      },
+      "b707_product005": {
+        "delta": -16.39903093676503,
+        "f": 0.07071135624381276,
+        "b": 0.7071,
+        "c": -0.9794197956627994,
+        "S8": 0.8250349222572626,
+        "failed": null
+      },
+      "b1225_product005": {
+        "delta": -15.662017519896835,
+        "f": 0.04082632481424023,
+        "b": 1.2247,
+        "c": -0.9442702429234711,
+        "S8": 0.8221972924756143,
+        "failed": null
+      },
+      "b707_f03": {
+        "delta": 423.74736753520483,
+        "f": 0.3,
+        "b": 0.7071,
+        "c": -0.7143065377655962,
+        "S8": 1.0630000099873094,
+        "failed": null
+      },
+      "b707_product003": {
+        "delta": -13.12117151065695,
+        "f": 0.04242681374628766,
+        "b": 0.7071,
+        "c": -0.8960657672703506,
+        "S8": 0.8128659028053208,
+        "failed": null
+      },
+      "b707_product007": {
+        "delta": -16.27810996818198,
+        "f": 0.09899589874133788,
+        "b": 0.7071,
+        "c": -1.0377351604164606,
+        "S8": 0.8405978415143842,
+        "failed": null
+      },
+      "single_delta": -16.946841475030396
+    }
+  },
+  "fraction_growth": {
+    "dovekie": {
+      "k": 0.2,
+      "ratio_today": 1.0538914470423373,
+      "ratio_a002": 1.094083215004781
+    },
+    "desy5": {
+      "k": 0.2,
+      "ratio_today": 1.0470906724514921,
+      "ratio_a002": 1.094040492876787
+    }
+  },
+  "checks": {
+    "12558: every sample: both branches within 0.1 in c and 0.01 in c' of Table I of arXiv:2507.03090": true,
+    "12558: phi -> -phi at c' = 0 makes the two exponential fits equal, so their difference measures fit scatter: at most 1.8, and the better branch is the reference": true,
+    "12558: the c' gain is 5 to 9 on all samples (2.3 to 2.9 sigma), and 6.5 to 8.8 with lensing added post hoc, which replaces the 9.7 quoted in Pass 12551 as the top of the range": true,
+    "12558: Casimir cost rises with the supernova sample: under 0.1 on DESI + CMB, 3.5, 5.4, 10.9 with Pantheon+, Dovekie, DES-SN5YR": true,
+    "12558: c' raises S8 by 0.024 to 0.032 at the best fit, the direction weak lensing can test": true,
+    "12559: Casimir direct sum equals -3 zeta(5)/(4 pi^2 l^4) within 1e-12; the l^-4 scaling is 16": true,
+    "12559: control: without the bulk subtraction the integral grows without limit as the cutoff falls, by over 5 at each halving": true,
+    "12559: control: the one-particle cap of aae4f41f5 reproduced to 1e-10": true,
+    "12559: natural tower modulus mass is at most 4.1 to 7.0 H0; to reach 1e5 H0 falls short by 1.4e4 to 2.5e4 in mass": true,
+    "12559: control: f = 1 through the two-fluid route returns the direct single-field fit within 0.1": true,
+    "12559: sparse tower with two fluids on full Planck, f b = 0.05: loses at most 0.6 at b = 1/sqrt 2 and at most 1.3 at b = sqrt(3/2) against the single-field fit, on both samples": true,
+    "12559: f = 0.3 at b = 1/sqrt 2 is rejected: worse than LCDM by over 100": true,
+    "12559: the product is what the data fix: f b = 0.03 and 0.07 are both worse than 0.05": true,
+    "12559: the two fluids separate: delta_coupled/delta_uncoupled at k = 0.2/Mpc exceeds 1.03 today and at a = 0.02; the lead shrinks by today, the opposite of what I first asserted": true
+  },
+  "all_checks_pass": true
+}

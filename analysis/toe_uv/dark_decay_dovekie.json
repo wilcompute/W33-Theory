@@ -1,0 +1,20 @@
+{
+ "dataset": "dovekie",
+ "LCDM": 1649.3624064429605,
+ "fading": -10.19000444823564,
+ "control_G0_equals_LCDM": 0.0,
+ "D1_free": {
+  "delta": -1.8998582221283868,
+  "F": 0.018374419257244458,
+  "G": 59.922211741152736,
+  "lost_rec_to_0": 0.018346133512843754,
+  "wbc": 0.14182194352184835,
+  "h": 0.6869608394122552
+ },
+ "D1_F1": {
+  "delta": 8.315888089782675e-05,
+  "G": 1.526735745939169e-05,
+  "lost_rec_to_0": 1.467700300739061e-05
+ },
+ "D1_note": "Gamma in units of H0; F is the decaying fraction of CDM at early times."
+}

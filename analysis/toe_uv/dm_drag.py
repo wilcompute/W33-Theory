@@ -23,7 +23,7 @@ fname = f"dm_drag_{ds}.json"
 def solve(M, wb, wbc, h, want=False, rtol=1e-7):
     """M: dict b, c, a, mu, eps, f, lam, lnM.  wbc at recombination."""
     b, c, a, mu, eps, f = M["b"], M.get("c", 0.0), M.get("a", 0.0), M.get("mu", 0.0), M.get("eps", 0.0), M.get("f", 1.0)
-    lam, wall = M.get("lam", 0.0), math.exp(M["lnM"]) if "lnM" in M else 0.0
+    lam, wall = M.get("lam", 0.0), M.get("wsign", 1.0) * math.exp(M["lnM"]) if "lnM" in M else 0.0
     h2 = h * h
     orr, ob, onu = L.OMEGA_R_H2 / h2, wb / h2, L.OMEGA_NU_H2 / h2
     oc_rec = (wbc - wb) / h2

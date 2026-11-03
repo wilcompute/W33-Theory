@@ -127,7 +127,7 @@ def run_class(p, kind="fading", extra="", binp=CLASSBIN, keep=None):
     dc = b[:, bc.index("comov. dist.")][::-1]
     info = dict(rd=float(re.search(r"comoving sound horizon rs = ([\d.]+)", r.stdout).group(1)), s8=float(re.search(r"sigma8=([\d.]+) for total", r.stdout).group(1)), H0=float(H[0]))
     crit = b[-1, bc.index("(.)rho_crit")]
-    info["om"] = float((b[-1, bc.index("(.)rho_cdm")] + b[-1, bc.index("(.)rho_b")]) / crit)
+    info["om"] = float((b[-1, bc.index("(.)rho_cdm")] + b[-1, bc.index("(.)rho_b")] + (b[-1, bc.index("(.)rho_idm")] if "(.)rho_idm" in bc else 0.0)) / crit)
     info["S8"] = info["s8"] * (info["om"] / 0.3) ** 0.5
     if "phi_scf" in bc:
         ph = b[:, bc.index("phi_scf")][::-1]
