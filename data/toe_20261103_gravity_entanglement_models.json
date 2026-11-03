@@ -1,0 +1,193 @@
+{
+  "status": "PASS_GRAVITY_ENTANGLEMENT_MODEL_AND_IDENTIFIABILITY_CONTROLS",
+  "equation": "d rho/dt=-i[J Z1 Z2,rho]+Gamma*(Z1 rho Z1-rho)+Gamma*(Z2 rho Z2-rho), initial |++><++|, hbar=1 in this equation.",
+  "exact_partial_transpose_eigenvalues": "(1+p^2+-2p cos(2Jt))/4 and (1-p^2+-2p sin(2Jt))/4, p=exp(-2Gamma t)",
+  "exact_negativity": "max(0,exp(-2Gamma t)/2*(abs(sin(2Jt))-sinh(2Gamma t)))",
+  "exact_all_time_threshold": "Gamma>=abs(J) gives no entanglement for this initial state at any time. Gamma<abs(J) gives entanglement at sufficiently short positive times, since sin(2|J|t)>sinh(2Gamma t) near0.",
+  "controls": [
+    {
+      "J": 1,
+      "gamma": 0.0,
+      "time": 0.001,
+      "negativity": 0.0009999993333334666
+    },
+    {
+      "J": 1,
+      "gamma": 0.0,
+      "time": 0.1,
+      "negativity": 0.09933466539753061
+    },
+    {
+      "J": 1,
+      "gamma": 0.0,
+      "time": 0.4,
+      "negativity": 0.3586780454497614
+    },
+    {
+      "J": 1,
+      "gamma": 0.0,
+      "time": 0.8,
+      "negativity": 0.49978680152075255
+    },
+    {
+      "J": 1,
+      "gamma": 0.0,
+      "time": 1.2,
+      "negativity": 0.3377315902755755
+    },
+    {
+      "J": 1,
+      "gamma": 0.25,
+      "time": 0.001,
+      "negativity": 0.0007496244169896337
+    },
+    {
+      "J": 1,
+      "gamma": 0.25,
+      "time": 0.1,
+      "negativity": 0.07069941110805392
+    },
+    {
+      "J": 1,
+      "gamma": 0.25,
+      "time": 0.4,
+      "negativity": 0.21124075777253157
+    },
+    {
+      "J": 1,
+      "gamma": 0.25,
+      "time": 0.8,
+      "negativity": 0.1973493528327012
+    },
+    {
+      "J": 1,
+      "gamma": 0.25,
+      "time": 1.2,
+      "negativity": 0.010649579597826482
+    },
+    {
+      "J": 1,
+      "gamma": 0.5,
+      "time": 0.001,
+      "negativity": 0.0004994995006664416
+    },
+    {
+      "J": 1,
+      "gamma": 0.5,
+      "time": 0.1,
+      "negativity": 0.044564410429263034
+    },
+    {
+      "J": 1,
+      "gamma": 0.5,
+      "time": 0.4,
+      "negativity": 0.10276132496716259
+    },
+    {
+      "J": 1,
+      "gamma": 0.5,
+      "time": 0.8,
+      "negativity": 0.025042815305443018
+    },
+    {
+      "J": 1,
+      "gamma": 0.5,
+      "time": 1.2,
+      "negativity": 0.0
+    },
+    {
+      "J": 1,
+      "gamma": 1.0,
+      "time": 0.001,
+      "negativity": 0.0
+    },
+    {
+      "J": 1,
+      "gamma": 1.0,
+      "time": 0.1,
+      "negativity": 0.0
+    },
+    {
+      "J": 1,
+      "gamma": 1.0,
+      "time": 0.4,
+      "negativity": 0.0
+    },
+    {
+      "J": 1,
+      "gamma": 1.0,
+      "time": 0.8,
+      "negativity": 0.0
+    },
+    {
+      "J": 1,
+      "gamma": 1.0,
+      "time": 1.2,
+      "negativity": 0.0
+    },
+    {
+      "J": 1,
+      "gamma": 1.5,
+      "time": 0.001,
+      "negativity": 0.0
+    },
+    {
+      "J": 1,
+      "gamma": 1.5,
+      "time": 0.1,
+      "negativity": 0.0
+    },
+    {
+      "J": 1,
+      "gamma": 1.5,
+      "time": 0.4,
+      "negativity": 0.0
+    },
+    {
+      "J": 1,
+      "gamma": 1.5,
+      "time": 0.8,
+      "negativity": 0.0
+    },
+    {
+      "J": 1,
+      "gamma": 1.5,
+      "time": 1.2,
+      "negativity": 0.0
+    }
+  ],
+  "explicit_local_measurement_feedback": [
+    {
+      "steps": 50,
+      "error_vs_continuous_generator": 0.0008953576399891464,
+      "negativity": 0.0
+    },
+    {
+      "steps": 200,
+      "error_vs_continuous_generator": 0.00022485124682568248,
+      "negativity": 0.0
+    },
+    {
+      "steps": 800,
+      "error_vs_continuous_generator": 5.6270692202145234e-05,
+      "negativity": 0.0
+    }
+  ],
+  "local_protocol": "Each step weakly measures Z1 with POVM effects(I+-sZ1)/2, s=2sqrt(gamma_measure*dt), and conditionally rotates Z2 by exp(-i result*f*sqrt(dt)Z2); then reverse1,2. At gamma_measure=f^2=J/2 the continuous generator has Gamma=J. Every finite-step map is LOCC and separable on the product input.",
+  "experimental_parameter_benchmark": {
+    "mass_each_kg": 1e-14,
+    "transverse_separation_m": 0.0002,
+    "arm_m": 0.00025,
+    "Newton_entangling_rate_inverse_seconds": -0.05938186958270255,
+    "ideal_first_maximal_entanglement_time_seconds": 13.226228290161957,
+    "classical_channel_noise_threshold_inverse_seconds": 0.05938186958270255
+  },
+  "spin_identifiability": "The entangling invariant is J=(V00-V01-V10+V11)/(4hbar). A massless quantum scalar with matched static1/r strength gives exactly the same two-mass Hamiltonian and all two-qubit observables. This particular experiment alone cannot identify mediator spin2.",
+  "additional_discriminator": "A minimal scalar coupled only to the stress-tensor trace has no tree-level coupling to classical Maxwell radiation, while linearized spin2 couples to its stress tensor. Matter-photon observables can therefore distinguish this specified scalar alternative; extra scalar-photon operators or quantum trace anomalies require separate treatment.",
+  "source_classical_channel": "https://arxiv.org/abs/1401.0946",
+  "source_recent_locality": "https://doi.org/10.1103/r8ry-sp35",
+  "source_debate": "https://arxiv.org/abs/2511.07348",
+  "source_photon": "https://arxiv.org/abs/2604.24496",
+  "interpretation": "A violation of the displayed noise/entanglement boundary rejects this specified Markovian classical-measurement-feedback model. It is not a theorem ruling out every classical-gravity, hybrid, information-nonlocal or matter-mediated model. The2026 locality debate is kept explicit.",
+  "boundary": "Ideal conditional laboratory channel and mediator-identifiability calculation, not an experiment, a proof of Einstein quantization, an apparatus noise budget or a theory of everything."
+}

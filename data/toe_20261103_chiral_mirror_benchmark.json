@@ -1,0 +1,259 @@
+{
+  "status": "PASS_LOCAL_ANOMALY_FREE_3450_MIRROR_BENCHMARK",
+  "spacetime_dimension": "1+1",
+  "K": [
+    [
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      -1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      -1
+    ]
+  ],
+  "charges": [
+    3,
+    4,
+    5,
+    0
+  ],
+  "gapping_rows": [
+    [
+      1,
+      -2,
+      -1,
+      2
+    ],
+    [
+      2,
+      1,
+      2,
+      1
+    ]
+  ],
+  "gauge_anomaly": 0,
+  "gravitational_anomaly": 0,
+  "null_pairing": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "charge_pairing": [
+    [
+      0
+    ],
+    [
+      0
+    ]
+  ],
+  "primitive_minors": [
+    5,
+    4,
+    -3,
+    -3,
+    -4,
+    -5
+  ],
+  "primitive_minor_gcd": 1,
+  "velocity_matrix": [
+    [
+      "5/3",
+      "0",
+      "4/5",
+      "16/15"
+    ],
+    [
+      "0",
+      "5/3",
+      "16/15",
+      "-4/5"
+    ],
+    [
+      "4/5",
+      "16/15",
+      "5/3",
+      "0"
+    ],
+    [
+      "16/15",
+      "-4/5",
+      "0",
+      "5/3"
+    ]
+  ],
+  "velocity_positive_eigenvalues": [
+    "1/3",
+    "1/3",
+    "3",
+    "3"
+  ],
+  "characteristic_speed_eigenvalues": [
+    "-1",
+    "-1",
+    "1",
+    "1"
+  ],
+  "scaling_dimensions_free": [
+    "5",
+    "5"
+  ],
+  "scaling_dimensions_tuned": [
+    "5/3",
+    "5/3"
+  ],
+  "relevance": "Delta_l=(1/2) l^T V^(-1) l for the displayed Gaussian theory with V K V=K. Both cosines have Delta=5/3<2; they are irrelevant at the free-fermion point Delta=5.",
+  "conditioning_lower_bound": "Relative to the declared free-fermion metric Vfree=I, positive V with V K V=K has reciprocal generalized eigenvalues. If either norm-sqrt10 gapping row has Delta<2 then lambda_min(V^-1)<2/5, hence generalized condition_number(V,Vfree)>25/4. The family V=aP+a^-1(I-P) attains the infimum as a decreases to5/2 from above. This is not a claim about bare Euclidean matrix norms after arbitrary coordinate changes.",
+  "nonorthogonal_integer_basis_control": [
+    [
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "reference_metric_carried_under_basis_change": true,
+  "displayed_condition_number": 9,
+  "commuting_interactions": "cos(l1 dot phi) and cos(l2 dot phi) have zero mutual equal-time null pairing. Primitivity rules out a spurious discrete degeneracy from a nonprimitive interaction lattice in the standard compact-boson gapping criterion.",
+  "harmonic_strong_pinning_dispersion": "omega^2=k^2+(10/3)*mu^2 for all four canonical branches of the declared quadratic pinning Hamiltonian. mu is supplied; this is not an exact sine-Gordon mass prediction from a bare cosine.",
+  "bounded_null_vector_controls": [
+    [
+      -3,
+      1,
+      -1,
+      -3
+    ],
+    [
+      -3,
+      1,
+      -1,
+      3
+    ],
+    [
+      -2,
+      -1,
+      -2,
+      -1
+    ],
+    [
+      -2,
+      -1,
+      -2,
+      1
+    ],
+    [
+      -1,
+      -3,
+      -3,
+      -1
+    ],
+    [
+      -1,
+      -3,
+      -3,
+      1
+    ],
+    [
+      -1,
+      2,
+      1,
+      -2
+    ],
+    [
+      -1,
+      2,
+      1,
+      2
+    ],
+    [
+      1,
+      -2,
+      -1,
+      -2
+    ],
+    [
+      1,
+      -2,
+      -1,
+      2
+    ],
+    [
+      1,
+      3,
+      3,
+      -1
+    ],
+    [
+      1,
+      3,
+      3,
+      1
+    ],
+    [
+      2,
+      1,
+      2,
+      -1
+    ],
+    [
+      2,
+      1,
+      2,
+      1
+    ],
+    [
+      3,
+      -1,
+      1,
+      -3
+    ],
+    [
+      3,
+      -1,
+      1,
+      3
+    ]
+  ],
+  "source_classic": "https://arxiv.org/abs/1307.7480",
+  "source_recent": "https://arxiv.org/abs/2601.04304",
+  "ownership": "3450 charges and mirror-decoupling mechanisms are published prior art. The explicit positive velocity matrix, reciprocal-spectrum conditioning control and harmonic spectrum are audited here; no priority claim.",
+  "boundary": "Local continuum chiral benchmark and an interacting mirror-gapping criterion. No4D non-Abelian SM lattice action, finite-dimensional rotor truncation theorem, emergent spacetime or selected generation number."
+}

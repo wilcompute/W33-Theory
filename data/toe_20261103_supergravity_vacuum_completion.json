@@ -1,0 +1,647 @@
+{
+  "status": "PASS_SUPERGRAVITY_ADS_COMPLETION_AND_TUNING_CONTROLS",
+  "rows": [
+    {
+      "gaugino_branch": 0,
+      "epsilon": [
+        0.001,
+        0.0
+      ],
+      "Planck_mass_in_input_units": 10.0,
+      "scalar_VEV_complex_pairs": [
+        [
+          1.000000941570401,
+          0.0
+        ],
+        [
+          -0.0005947728044906975,
+          0.0
+        ],
+        [
+          0.9999999076162243,
+          0.0
+        ],
+        [
+          1.0000000264848383,
+          0.0
+        ],
+        [
+          0.0031394076027921746,
+          0.0
+        ],
+        [
+          -0.0006279953557162043,
+          0.0
+        ],
+        [
+          0.0024428902290634276,
+          0.0
+        ],
+        [
+          -0.000700334581437533,
+          0.0
+        ]
+      ],
+      "DW_max_residual": 2.5313267947039956e-16,
+      "potential": -4.4655672533126233e-07,
+      "AdS_formula": -4.4655672533126233e-07,
+      "gravitino_mass": 3.8581373974638e-05,
+      "neutral_scalar_mass_squared": [
+        0.45549530488924955,
+        0.4555473838192415,
+        0.4571290982911574,
+        0.45718127053453755,
+        1.036523805001912,
+        1.0366023657400563,
+        1.0402622965880046,
+        1.040340998870775,
+        1.0426704691447104,
+        1.0427492624696795,
+        1.05315429732296,
+        1.0532334857747003,
+        4.746678278832818,
+        4.7468463938191094,
+        4.74863456295727,
+        4.74880271258293
+      ],
+      "independent_real_finite_difference_mass_error": null,
+      "first_order_in_inverse_Planck_squared_displacement_error": 3.575379717215972e-09,
+      "naive_energy_cancelling_nilpotent_f_squared": 4.290468968822506e-07,
+      "naive_uplift_holomorphic_gradient_max": 8.931142915917145e-09
+    },
+    {
+      "gaugino_branch": 0,
+      "epsilon": [
+        0.001,
+        0.0
+      ],
+      "Planck_mass_in_input_units": 30.0,
+      "scalar_VEV_complex_pairs": [
+        [
+          1.0000009802647796,
+          0.0
+        ],
+        [
+          -0.000628387757195075,
+          0.0
+        ],
+        [
+          0.999999989452636,
+          0.0
+        ],
+        [
+          1.0000000026602631,
+          0.0
+        ],
+        [
+          0.003139282052578326,
+          0.0
+        ],
+        [
+          -0.000627869058020999,
+          0.0
+        ],
+        [
+          0.002510121183441151,
+          0.0
+        ],
+        [
+          -0.0006331044282784178,
+          0.0
+        ]
+      ],
+      "DW_max_residual": 3.128507724490189e-16,
+      "potential": -4.788422495918651e-08,
+      "AdS_formula": -4.788422495918651e-08,
+      "gravitino_mass": 4.2112822433354e-06,
+      "neutral_scalar_mass_squared": [
+        0.4396003219189977,
+        0.4396059062959364,
+        0.44118988732524866,
+        0.4411954817894118,
+        1.0003996629344012,
+        1.000408087199548,
+        1.0039401686796274,
+        1.0039486078386985,
+        1.0063348641390448,
+        1.0063433133570505,
+        1.016452958389112,
+        1.0164614499767077,
+        4.5809268256967846,
+        4.580944852613377,
+        4.582849676239836,
+        4.58286770693944
+      ],
+      "independent_real_finite_difference_mass_error": 6.349319625620353e-09,
+      "first_order_in_inverse_Planck_squared_displacement_error": 4.4140389174930864e-11,
+      "naive_energy_cancelling_nilpotent_f_squared": 4.767187728670793e-08,
+      "naive_uplift_holomorphic_gradient_max": 1.064094931075683e-10
+    },
+    {
+      "gaugino_branch": 0,
+      "epsilon": [
+        0.001,
+        0.0
+      ],
+      "Planck_mass_in_input_units": 100.0,
+      "scalar_VEV_complex_pairs": [
+        [
+          1.0000009850241607,
+          0.0
+        ],
+        [
+          -0.0006322114571863474,
+          0.0
+        ],
+        [
+          0.9999999990478451,
+          0.0
+        ],
+        [
+          1.0000000002365317,
+          0.0
+        ],
+        [
+          0.003139267771115016,
+          0.0
+        ],
+        [
+          -0.0006278546924898273,
+          0.0
+        ],
+        [
+          0.002517768703502587,
+          0.0
+        ],
+        [
+          -0.0006254569981529155,
+          0.0
+        ]
+      ],
+      "DW_max_residual": 1.005256100835365e-16,
+      "potential": -4.292185495645721e-09,
+      "AdS_formula": -4.292185495645721e-09,
+      "gravitino_mass": 3.782497189091584e-07,
+      "neutral_scalar_mass_squared": [
+        0.4378278692674927,
+        0.4378283698324407,
+        0.43941227604260613,
+        0.43941277751245555,
+        0.9963711184066041,
+        0.996371873532314,
+        0.9998896906937644,
+        0.9998904471516197,
+        1.002282743213285,
+        1.0022835005758208,
+        1.0123600592799218,
+        1.0123608204403338,
+        4.562443073383703,
+        4.562444689257273,
+        4.564362126444037,
+        4.564363742657404
+      ],
+      "independent_real_finite_difference_mass_error": null,
+      "first_order_in_inverse_Planck_squared_displacement_error": 3.5746242002394373e-13,
+      "naive_energy_cancelling_nilpotent_f_squared": 4.2904689556301375e-09,
+      "naive_uplift_holomorphic_gradient_max": 8.584379447104273e-13
+    },
+    {
+      "gaugino_branch": 1,
+      "epsilon": [
+        -0.0004999999999999998,
+        0.0008660254037844387
+      ],
+      "Planck_mass_in_input_units": 10.0,
+      "scalar_VEV_complex_pairs": [
+        [
+          0.9999994532506329,
+          -8.589145150639828e-07
+        ],
+        [
+          0.0002974110972666031,
+          -0.000510554622206807
+        ],
+        [
+          0.9999999076118158,
+          -8.693973158331922e-11
+        ],
+        [
+          1.0000000267598805,
+          1.85093943425104e-10
+        ],
+        [
+          -0.001569599179342433,
+          0.002736869975812724
+        ],
+        [
+          0.00031380531379096626,
+          -0.0005473742566345353
+        ],
+        [
+          -0.001221436182043804,
+          0.002117959854315344
+        ],
+        [
+          0.0003501203438783939,
+          -0.0006155764856420697
+        ]
+      ],
+      "DW_max_residual": 1.5726962473338832e-16,
+      "potential": -4.4585651358959634e-07,
+      "AdS_formula": -4.4585651358959634e-07,
+      "gravitino_mass": 3.855111384424564e-05,
+      "neutral_scalar_mass_squared": [
+        0.4554911044366427,
+        0.45554314227900455,
+        0.45712494939605636,
+        0.45717708048198785,
+        1.0308728892448609,
+        1.0309511740961486,
+        1.0395005593011655,
+        1.0395791710578226,
+        1.0413968115311172,
+        1.041475494955355,
+        1.04668379358988,
+        1.0467626764882036,
+        4.746638375619959,
+        4.746806358043118,
+        4.748674570483249,
+        4.748842588932456
+      ],
+      "independent_real_finite_difference_mass_error": null,
+      "first_order_in_inverse_Planck_squared_displacement_error": 3.5697649447194616e-09,
+      "naive_energy_cancelling_nilpotent_f_squared": 4.2837416596816754e-07,
+      "naive_uplift_holomorphic_gradient_max": 8.917125396359884e-09
+    },
+    {
+      "gaugino_branch": 1,
+      "epsilon": [
+        -0.0004999999999999998,
+        0.0008660254037844387
+      ],
+      "Planck_mass_in_input_units": 30.0,
+      "scalar_VEV_complex_pairs": [
+        [
+          0.9999994920091294,
+          -8.59142561881726e-07
+        ],
+        [
+          0.0003142188447041104,
+          -0.0005396355706980213
+        ],
+        [
+          0.9999999894525894,
+          -9.65989094361321e-12
+        ],
+        [
+          1.0000000026912652,
+          2.0566893225786e-11
+        ],
+        [
+          -0.0015695671800723644,
+          0.0027369621995430586
+        ],
+        [
+          0.0003139007109095381,
+          -0.0005473924689628017
+        ],
+        [
+          -0.001255051821446827,
+          0.0021761225076093373
+        ],
+        [
+          0.0003165047756137095,
+          -0.0005574143458488322
+        ]
+      ],
+      "DW_max_residual": 5.332613089593943e-17,
+      "potential": -4.78091438162337e-08,
+      "AdS_formula": -4.78091438162337e-08,
+      "gravitino_mass": 4.207979360965163e-06,
+      "neutral_scalar_mass_squared": [
+        0.4395962777907471,
+        0.4396018577622132,
+        0.4411858829752865,
+        0.44119147302636397,
+        0.9948770590315297,
+        0.9948854534230489,
+        1.0031897861719958,
+        1.0031982155602925,
+        1.0050730150848206,
+        1.0050814523813874,
+        1.0101227733754916,
+        1.0101312318410858,
+        4.580888511702255,
+        4.5809065244051075,
+        4.582888452211542,
+        4.582906468845987
+      ],
+      "independent_real_finite_difference_mass_error": null,
+      "first_order_in_inverse_Planck_squared_displacement_error": 4.4071180650155785e-11,
+      "naive_energy_cancelling_nilpotent_f_squared": 4.759712940760597e-08,
+      "naive_uplift_holomorphic_gradient_max": 1.0624248784365057e-10
+    },
+    {
+      "gaugino_branch": 1,
+      "epsilon": [
+        -0.0004999999999999998,
+        0.0008660254037844387
+      ],
+      "Planck_mass_in_input_units": 100.0,
+      "scalar_VEV_complex_pairs": [
+        [
+          0.9999994967752418,
+          -8.591685031936558e-07
+        ],
+        [
+          0.00031613072553659844,
+          -0.0005429435278304249
+        ],
+        [
+          0.9999999990478455,
+          -8.693893725690196e-13
+        ],
+        [
+          1.0000000002393263,
+          1.8510295988041713e-12
+        ],
+        [
+          -0.0015695635394230238,
+          0.002736972689336145
+        ],
+        [
+          0.00031391156262076215,
+          -0.0005473945404821243
+        ],
+        [
+          -0.0012588755999314277,
+          0.002182738508556288
+        ],
+        [
+          0.0003126810046226112,
+          -0.0005507984022704827
+        ]
+      ],
+      "DW_max_residual": 7.560423648879832e-17,
+      "potential": -4.285455492550242e-09,
+      "AdS_formula": -4.2854554925502414e-09,
+      "gravitino_mass": 3.779530611310634e-07,
+      "neutral_scalar_mass_squared": [
+        0.4378238424680527,
+        0.4378243426381121,
+        0.4394082878944325,
+        0.43940878896870966,
+        0.9908629761217017,
+        0.990863728566676,
+        0.999140622235963,
+        0.9991413778173538,
+        1.0010222867132559,
+        1.0010230430057987,
+        1.0060457028183192,
+        1.006046461006133,
+        4.562404936166508,
+        4.562406550766014,
+        4.564400764699438,
+        4.564402379652059
+      ],
+      "independent_real_finite_difference_mass_error": null,
+      "first_order_in_inverse_Planck_squared_displacement_error": 3.5692909689679756e-13,
+      "naive_energy_cancelling_nilpotent_f_squared": 4.2837416465112666e-09,
+      "naive_uplift_holomorphic_gradient_max": 8.570906672009038e-13
+    },
+    {
+      "gaugino_branch": 2,
+      "epsilon": [
+        -0.0005000000000000004,
+        -0.0008660254037844385
+      ],
+      "Planck_mass_in_input_units": 10.0,
+      "scalar_VEV_complex_pairs": [
+        [
+          0.9999994532506329,
+          8.589145150639839e-07
+        ],
+        [
+          0.0002974110972666035,
+          0.0005105546222068068
+        ],
+        [
+          0.9999999076118158,
+          8.69397315833231e-11
+        ],
+        [
+          1.0000000267598805,
+          -1.8509394342510653e-10
+        ],
+        [
+          -0.001569599179342435,
+          -0.0027368699758127234
+        ],
+        [
+          0.0003138053137909667,
+          0.0005473742566345352
+        ],
+        [
+          -0.0012214361820438056,
+          -0.0021179598543153437
+        ],
+        [
+          0.00035012034387839444,
+          0.0006155764856420697
+        ]
+      ],
+      "DW_max_residual": 1.5694261103910089e-16,
+      "potential": -4.4585651358959655e-07,
+      "AdS_formula": -4.4585651358959655e-07,
+      "gravitino_mass": 3.8551113844245646e-05,
+      "neutral_scalar_mass_squared": [
+        0.4554911044366427,
+        0.45554314227900455,
+        0.4571249493960565,
+        0.457177080481988,
+        1.0308728892448609,
+        1.0309511740961486,
+        1.0395005593011646,
+        1.0395791710578217,
+        1.0413968115311167,
+        1.0414754949553546,
+        1.04668379358988,
+        1.0467626764882036,
+        4.746638375619957,
+        4.746806358043116,
+        4.748674570483249,
+        4.748842588932456
+      ],
+      "independent_real_finite_difference_mass_error": null,
+      "first_order_in_inverse_Planck_squared_displacement_error": 3.569764944719468e-09,
+      "naive_energy_cancelling_nilpotent_f_squared": 4.2837416596816775e-07,
+      "naive_uplift_holomorphic_gradient_max": 8.917125396359887e-09
+    },
+    {
+      "gaugino_branch": 2,
+      "epsilon": [
+        -0.0005000000000000004,
+        -0.0008660254037844385
+      ],
+      "Planck_mass_in_input_units": 30.0,
+      "scalar_VEV_complex_pairs": [
+        [
+          0.9999994920091294,
+          8.59142561881727e-07
+        ],
+        [
+          0.00031421884470411086,
+          0.0005396355706980212
+        ],
+        [
+          0.9999999894525894,
+          9.659890943613223e-12
+        ],
+        [
+          1.0000000026912652,
+          -2.0566893225786583e-11
+        ],
+        [
+          -0.0015695671800723663,
+          -0.002736962199543058
+        ],
+        [
+          0.00031390071090953847,
+          0.0005473924689628016
+        ],
+        [
+          -0.0012550518214468286,
+          -0.002176122507609337
+        ],
+        [
+          0.00031650477561370976,
+          0.0005574143458488321
+        ]
+      ],
+      "DW_max_residual": 5.3326131724132184e-17,
+      "potential": -4.7809143816233715e-08,
+      "AdS_formula": -4.7809143816233715e-08,
+      "gravitino_mass": 4.207979360965163e-06,
+      "neutral_scalar_mass_squared": [
+        0.4395962777907471,
+        0.4396018577622132,
+        0.4411858829752865,
+        0.44119147302636397,
+        0.9948770590315297,
+        0.9948854534230489,
+        1.0031897861719945,
+        1.0031982155602912,
+        1.0050730150848206,
+        1.0050814523813874,
+        1.010122773375492,
+        1.0101312318410862,
+        4.580888511702253,
+        4.580906524405106,
+        4.582888452211542,
+        4.582906468845987
+      ],
+      "independent_real_finite_difference_mass_error": null,
+      "first_order_in_inverse_Planck_squared_displacement_error": 4.407118065015661e-11,
+      "naive_energy_cancelling_nilpotent_f_squared": 4.759712940760598e-08,
+      "naive_uplift_holomorphic_gradient_max": 1.0624248784365061e-10
+    },
+    {
+      "gaugino_branch": 2,
+      "epsilon": [
+        -0.0005000000000000004,
+        -0.0008660254037844385
+      ],
+      "Planck_mass_in_input_units": 100.0,
+      "scalar_VEV_complex_pairs": [
+        [
+          0.9999994967752418,
+          8.591685031936569e-07
+        ],
+        [
+          0.00031613072553659887,
+          0.0005429435278304247
+        ],
+        [
+          0.9999999990478455,
+          8.693893725690584e-13
+        ],
+        [
+          1.0000000002393263,
+          -1.8510295988042145e-12
+        ],
+        [
+          -0.0015695635394230262,
+          -0.0027369726893361444
+        ],
+        [
+          0.0003139115626207626,
+          0.0005473945404821242
+        ],
+        [
+          -0.0012588755999314294,
+          -0.0021827385085562874
+        ],
+        [
+          0.00031268100462261163,
+          0.0005507984022704827
+        ]
+      ],
+      "DW_max_residual": 7.560423643709955e-17,
+      "potential": -4.285455492550243e-09,
+      "AdS_formula": -4.285455492550243e-09,
+      "gravitino_mass": 3.779530611310635e-07,
+      "neutral_scalar_mass_squared": [
+        0.43782384246805256,
+        0.43782434263811193,
+        0.4394082878944325,
+        0.43940878896870966,
+        0.9908629761217017,
+        0.990863728566676,
+        0.9991406222359632,
+        0.999141377817354,
+        1.0010222867132568,
+        1.0010230430057996,
+        1.0060457028183183,
+        1.0060464610061322,
+        4.562404936166513,
+        4.56240655076602,
+        4.564400764699442,
+        4.564402379652063
+      ],
+      "independent_real_finite_difference_mass_error": null,
+      "first_order_in_inverse_Planck_squared_displacement_error": 3.5692909689679786e-13,
+      "naive_energy_cancelling_nilpotent_f_squared": 4.283741646511267e-09,
+      "naive_uplift_holomorphic_gradient_max": 8.57090667200904e-13
+    }
+  ],
+  "tuned_constant_complex_pair": [
+    -0.003781740761267095,
+    -0.0
+  ],
+  "single_constant_control": [
+    {
+      "branch": 0,
+      "potential": -6.102208680564423e-41,
+      "absolute_total_superpotential": 1.351017550870609e-19
+    },
+    {
+      "branch": 1,
+      "potential": -1.4357784634987192e-07,
+      "absolute_total_superpotential": 0.006548460951244276
+    },
+    {
+      "branch": 2,
+      "potential": -1.43577846349872e-07,
+      "absolute_total_superpotential": 0.006548460951244278
+    }
+  ],
+  "supplied_gravity": "4D two-derivative N=1 supergravity, canonical tree-level K=sum_i w_i |phi_i|^2 with weights[2,1,1,1,1,1,1,1], supplied Planck mass, and the prior holomorphic eight-field effective superpotential. Sp gauge moments vanish on the singlet ansatz.",
+  "potential": "V=exp(K/Mp^2)*(sum_i |D_i W|^2/w_i-3|W|^2/Mp^2), D_i W=partial_i W+w_i conjugate(phi_i) W/Mp^2",
+  "conclusion": "The actual nearby supersymmetric gravitational vacua have negative vacuum energy for nonzero W. Global F-flatness and Vglobal=0 do not solve the observed cosmological-constant problem.",
+  "constant_control": "An adjustable Wconstant=-W(global critical point) makes that one point exactly supersymmetric Minkowski. The same chosen constant does not cancel the other two gaugino branches. This is explicit tuning, not a prediction.",
+  "nilpotent_control": "For Kadd=X Xbar,Wadd=fX,X^2=0, adding exp(K/Mp^2)|f|^2 can cancel the energy at the former AdS point but gives gradient_i=(exp(K/Mp^2)/Mp^2)*K_i*|f|^2 there. Nonzero gradients are exported; no de Sitter vacuum is claimed from energy cancellation alone.",
+  "scalar_mass_control": "At SUSY AdS, neutral canonical scalar masses are mf^2-2mgr^2+-mgr*mf. The smaller branch equals(mf-mgr/2)^2-(9/4)mgr^2, verifying the Breitenlohner-Freedman bound. The displayed weak examples have positive masses; an independent16-real-coordinate finite difference checks one case.",
+  "source": "https://arxiv.org/abs/hep-ph/9709356",
+  "ownership": "The Nov3 native29 producer owns the supplied deformed global model, and the quantum-vacuum-displacement producer owns its exact effective critical curve. Standard supergravity/AdS formulas are prior physics. This constructs the gravitational consistency test of that concrete EFT.",
+  "boundary": "Declared low-energy supergravity with a chosen Kahler potential and hierarchy, not a derived quantum-gravity UV completion, positive observed vacuum energy or solution of the TOE."
+}

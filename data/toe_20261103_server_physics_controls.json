@@ -1,0 +1,48 @@
+{
+  "status": "PASS_INDEPENDENT_SERVER_PHYSICS_CONTROLS",
+  "sterile_charge_box": 200,
+  "sterile_integer_solutions": [
+    "-15,12,12",
+    "-18,10,17",
+    "3,3,3"
+  ],
+  "bounded_enumeration_is_not_the_global_proof": true,
+  "mirror_integer_velocity_numerator": [
+    [
+      25,
+      0,
+      12,
+      16
+    ],
+    [
+      0,
+      25,
+      16,
+      -12
+    ],
+    [
+      12,
+      16,
+      25,
+      0
+    ],
+    [
+      16,
+      -12,
+      0,
+      25
+    ]
+  ],
+  "mirror_primitive_minors": [
+    5,
+    4,
+    -3,
+    -3,
+    -4,
+    -5
+  ],
+  "mirror_characteristic_identity": "U K U=225 K, V=U/15",
+  "independent_Dovekie_negative_branch_CW_mass_cap_eV": 0.01764947061571905,
+  "PPT_trace_moment_checks": 24,
+  "scope": "Independent V8 server arithmetic, with no Python producer imports. It corroborates the declared benchmarks; no complete TOE or empirical discovery."
+}

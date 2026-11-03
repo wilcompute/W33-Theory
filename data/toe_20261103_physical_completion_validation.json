@@ -1,0 +1,150 @@
+{
+  "status": "PASS_SIX_PHYSICAL_COMPLETION_PRODUCERS_AND_PYTEST",
+  "utc": "2026-11-03T16:55:28.253397+00:00",
+  "producers": [
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/toe_20261103_supergravity_vacuum_completion.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_SUPERGRAVITY_ADS_COMPLETION_AND_TUNING_CONTROLS [(0, 10.0, -4.4655672533126233e-07), (0, 30.0, -4.788422495918651e-08), (0, 100.0, -4.292185495645721e-09), (1, 10.0, -4.4585651358959634e-07), (1, 30.0, -4.78091438162337e-08), (1, 100.0, -4.285455492550242e-09), (2, 10.0, -4.4585651358959655e-07), (2, 30.0, -4.7809143816233715e-08), (2, 100.0, -4.285455492550243e-09)]\n",
+      "stderr": "",
+      "seconds": 8.23
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/toe_20261103_dark_radiative_stability.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_FADING_DARK_SECTOR_RADIATIVE_BENCHMARKS [('pantheon', 'free_c_neg', 0.01783), ('pantheon', 'free_c_pos', 0.01716), ('dovekie', 'free_c_neg', 0.01765), ('dovekie', 'free_c_pos', 0.01704), ('desy5', 'free_c_neg', 0.01722), ('desy5', 'free_c_pos', 0.01657)]\n",
+      "stderr": "",
+      "seconds": 4.194
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/toe_20261103_chiral_mirror_benchmark.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_LOCAL_ANOMALY_FREE_3450_MIRROR_BENCHMARK ['5/3', '5/3']\n",
+      "stderr": "",
+      "seconds": 3.548
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/toe_20261103_sterile_anomaly_operators.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_GLOBAL_THREE_SINGLET_ANOMALY_CLASSIFICATION_AND_DIRAC_OPERATORS [[-5, 4, 4], [1, 1, 1]]\n",
+      "stderr": "",
+      "seconds": 2.808
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/toe_20261103_gravity_entanglement_models.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_GRAVITY_ENTANGLEMENT_MODEL_AND_IDENTIFIABILITY_CONTROLS {'mass_each_kg': 1e-14, 'transverse_separation_m': 0.0002, 'arm_m': 0.00025, 'Newton_entangling_rate_inverse_seconds': np.float64(-0.05938186958270255), 'ideal_first_maximal_entanglement_time_seconds': np.float64(13.226228290161957), 'classical_channel_noise_threshold_inverse_seconds': np.float64(0.05938186958270255)}\n",
+      "stderr": "",
+      "seconds": 0.988
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/toe_20261103_abelian_uv_matching.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_COUPLED_ABELIAN_UV_AND_SCALAR_THRESHOLD_CONTROLS [([-18, 10, 17], 0.20280537440117585), ([-15, 12, 12], 0.23005411227060124), ([3, 3, 3], 0.4178330620487984)]\n",
+      "stderr": "",
+      "seconds": 3.152
+    }
+  ],
+  "pytest": {
+    "command": [
+      "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+      "-m",
+      "pytest",
+      "-q",
+      "--noconftest",
+      "tests/test_toe_20261103_physical_completion.py"
+    ],
+    "exit_code": 0,
+    "stdout": "....................................                                     [100%]\n36 passed in 17.69s\n",
+    "stderr": "",
+    "seconds": 23.143
+  },
+  "input_raw_sha256": {
+    "data/w33_20261103_native_quantum_vacuum_displacement.json": "7fb5cfa9a8d493e2fb791d172adbaaca36ece2436a2d98b34ffe79569db9d00b",
+    "analysis/toe_uv/fading_ds_pantheon.json": "70a08d7c0903944b6f9596cb64e11ad024beb8e9568e2a44d9465b2e13fb665d",
+    "analysis/toe_uv/fading_ds_dovekie.json": "fdb5fd73c6f010cc4adb8030652ab3d5ff47f1f98f8aebe079fe64e1f67ce6bc",
+    "analysis/toe_uv/fading_ds_desy5.json": "069c2e45b74cb3f682e63d665a99bf5b1347e37d39a844379d3eca6c6693f21f"
+  },
+  "output_raw_sha256": {
+    "data/toe_20261103_supergravity_vacuum_completion.json": "3f8135e7848038bbaca584ed100a91408e7e2fcad055aa4b6b4ef4da8a6f276e",
+    "data/toe_20261103_dark_radiative_stability.json": "eab0adc3d8c083c37cf7d2eaed6a72b7532de6d7d1dfe0a2aeb578995ede9e1d",
+    "data/toe_20261103_chiral_mirror_benchmark.json": "b40c1640f342a69a0af918dd4d87319ffbbe49947365c5abf990a0fc8c648182",
+    "data/toe_20261103_sterile_anomaly_operators.json": "47db331e619a7e1df63ef9bad2d784dde648795037504ae37f532ac7eb18e8f2",
+    "data/toe_20261103_gravity_entanglement_models.json": "d8f48b6326e2c8aa809f2fbad29bb5808fe6bde2f74af0077258d2d5cbccae03",
+    "data/toe_20261103_abelian_uv_matching.json": "0896f9747d21d42006178456a3908fd283bee2b22991c024ecb3fa615adc0499"
+  },
+  "independent_server": {
+    "status": "PASS_INDEPENDENT_SERVER_PHYSICS_CONTROLS",
+    "sterile_charge_box": 200,
+    "sterile_integer_solutions": [
+      "-15,12,12",
+      "-18,10,17",
+      "3,3,3"
+    ],
+    "bounded_enumeration_is_not_the_global_proof": true,
+    "mirror_integer_velocity_numerator": [
+      [
+        25,
+        0,
+        12,
+        16
+      ],
+      [
+        0,
+        25,
+        16,
+        -12
+      ],
+      [
+        12,
+        16,
+        25,
+        0
+      ],
+      [
+        16,
+        -12,
+        0,
+        25
+      ]
+    ],
+    "mirror_primitive_minors": [
+      5,
+      4,
+      -3,
+      -3,
+      -4,
+      -5
+    ],
+    "mirror_characteristic_identity": "U K U=225 K, V=U/15",
+    "independent_Dovekie_negative_branch_CW_mass_cap_eV": 0.01764947061571905,
+    "PPT_trace_moment_checks": 24,
+    "scope": "Independent V8 server arithmetic, with no Python producer imports. It corroborates the declared benchmarks; no complete TOE or empirical discovery."
+  },
+  "scope": "Five declared physical-EFT/model audits, not a complete TOE or all-repository test run. Actual commands and failures are retained.",
+  "earlier_repairs": "Initial sterile coefficient benchmark had a handwritten determinant coefficient2 instead of1; symbolic assertion caught it before output. Initial radiative producer had an unescaped derivative apostrophe in metadata; corrected before output. Charge-lattice refinement exposed a third allowed anomaly sector, preventing an unconditional two-sector claim."
+}

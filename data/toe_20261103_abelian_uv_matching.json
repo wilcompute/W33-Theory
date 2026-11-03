@@ -1,0 +1,192 @@
+{
+  "status": "PASS_COUPLED_ABELIAN_UV_AND_SCALAR_THRESHOLD_CONTROLS",
+  "rows": [
+    {
+      "sterile_Q": [
+        -18,
+        10,
+        17
+      ],
+      "beta_matrix": [
+        [
+          "41/6",
+          "16/3"
+        ],
+        [
+          "16/3",
+          "1741/27"
+        ]
+      ],
+      "gBL_upper_bound_no_one_loop_pole_through_cutoff": 0.20280537440117585,
+      "scans": [
+        {
+          "gBL_input": 0.1,
+          "log_Landau_scale_over_matching": 79.60712409110572,
+          "one_loop_Landau_scale_GeV": 1.1221630585106656e+38,
+          "inverse_kinetic_eigenvalues_at_operator_cutoff": [
+            5.163391842189431,
+            76.46963349729796
+          ],
+          "positive_kinetic_through_operator_cutoff": true
+        },
+        {
+          "gBL_input": 0.2,
+          "log_Landau_scale_over_matching": 29.657871254025366,
+          "one_loop_Landau_scale_GeV": 2.2770422312031124e+16,
+          "inverse_kinetic_eigenvalues_at_operator_cutoff": [
+            0.5932685692288195,
+            6.039756770258584
+          ],
+          "positive_kinetic_through_operator_cutoff": true
+        },
+        {
+          "gBL_input": 0.4,
+          "log_Landau_scale_over_matching": 7.607242848946426,
+          "one_loop_Landau_scale_GeV": 6038163.193331058,
+          "inverse_kinetic_eigenvalues_at_operator_cutoff": [
+            -17.501255432979097,
+            5.384280772466502
+          ],
+          "positive_kinetic_through_operator_cutoff": false
+        }
+      ]
+    },
+    {
+      "sterile_Q": [
+        -15,
+        12,
+        12
+      ],
+      "beta_matrix": [
+        [
+          "41/6",
+          "16/3"
+        ],
+        [
+          "16/3",
+          "149/3"
+        ]
+      ],
+      "gBL_upper_bound_no_one_loop_pole_through_cutoff": 0.23005411227060124,
+      "scans": [
+        {
+          "gBL_input": 0.1,
+          "log_Landau_scale_over_matching": 81.87043193330322,
+          "one_loop_Landau_scale_GeV": 1.0789419383167805e+39,
+          "inverse_kinetic_eigenvalues_at_operator_cutoff": [
+            5.167163326400271,
+            81.88430377745559
+          ],
+          "positive_kinetic_through_operator_cutoff": true
+        },
+        {
+          "gBL_input": 0.2,
+          "log_Landau_scale_over_matching": 37.46720970122619,
+          "one_loop_Landau_scale_GeV": 5.609493902402124e+19,
+          "inverse_kinetic_eigenvalues_at_operator_cutoff": [
+            3.9140097845461987,
+            8.13745731930966
+          ],
+          "positive_kinetic_through_operator_cutoff": true
+        },
+        {
+          "gBL_input": 0.4,
+          "log_Landau_scale_over_matching": 9.833670867679613,
+          "one_loop_Landau_scale_GeV": 55953885.44880439,
+          "inverse_kinetic_eigenvalues_at_operator_cutoff": [
+            -12.134616136642913,
+            5.436083240498776
+          ],
+          "positive_kinetic_through_operator_cutoff": false
+        }
+      ]
+    },
+    {
+      "sterile_Q": [
+        3,
+        3,
+        3
+      ],
+      "beta_matrix": [
+        [
+          "41/6",
+          "16/3"
+        ],
+        [
+          "16/3",
+          "41/3"
+        ]
+      ],
+      "gBL_upper_bound_no_one_loop_pole_through_cutoff": 0.4178330620487984,
+      "scans": [
+        {
+          "gBL_input": 0.1,
+          "log_Landau_scale_over_matching": 84.72189679976677,
+          "one_loop_Landau_scale_GeV": 1.8679856311163295e+40,
+          "inverse_kinetic_eigenvalues_at_operator_cutoff": [
+            5.1744340244024345,
+            95.04384656686875
+          ],
+          "positive_kinetic_through_operator_cutoff": true
+        },
+        {
+          "gBL_input": 0.2,
+          "log_Landau_scale_over_matching": 69.51249672884892,
+          "one_loop_Landau_scale_GeV": 4.6346293477427457e+33,
+          "inverse_kinetic_eigenvalues_at_operator_cutoff": [
+            4.96376329859263,
+            20.25451729267857
+          ],
+          "positive_kinetic_through_operator_cutoff": true
+        },
+        {
+          "gBL_input": 0.4,
+          "log_Landau_scale_over_matching": 31.053323403805265,
+          "one_loop_Landau_scale_GeV": 9.191962708171418e+16,
+          "inverse_kinetic_eigenvalues_at_operator_cutoff": [
+            0.45279082763595435,
+            6.015489763635248
+          ],
+          "positive_kinetic_through_operator_cutoff": true
+        }
+      ]
+    }
+  ],
+  "parent_input": {
+    "data/toe_20261103_sterile_anomaly_operators.json": "47db331e619a7e1df63ef9bad2d784dde648795037504ae37f532ac7eb18e8f2"
+  },
+  "kinetic_convention": "D=partial-i q_a A_a, Lkin=-1/4 F_a K_ab F_b. K(matching)=diag(gY^-2,gBL^-2) is a supplied zero-mixing boundary condition.",
+  "exact_one_loop_running": "K(mu)=K(matching)-B*log(mu/matching)/(8pi^2), B_ab=(2/3)Tr_Weyl(q_a q_b)+(1/3)Tr_complex_scalar(q_a q_b). The offdiagonal is retained; independent diagonal running would be incomplete.",
+  "input_spectrum": "Three SM generations, one Higgs doublet, the indicated three singlets, and Phi of B-L=3, all active above the common matching scale. No intermediate thresholds are assumed.",
+  "spectrum_controls": {
+    "SM_fermion_trace_Y2": 10,
+    "SM_fermion_trace_Y_BL": 8,
+    "SM_fermion_trace_BL2": 13,
+    "bY": "41/6",
+    "bY_BL": "16/3",
+    "bBL_standard_Phi3": "41/3",
+    "bBL_exotic_Phi3": "149/3",
+    "usual_standard_Phi2_bBL": "12"
+  },
+  "operator_scale_example": {
+    "matching_scale_GeV": 3000.0,
+    "gY_input": 0.36,
+    "heavy_neutrino_mass_input_eV": 0.05,
+    "vH_eV": 174000000000.0,
+    "epsilon_estimate": 2.873563218390805e-13,
+    "operator_cutoff_GeV": 1.0439999999999998e+16
+  },
+  "physical_scope": "Positive K up to the cutoff is a one-loop no-pole criterion, weaker than a full perturbativity, scalar-stability or UV-completion proof. Couplings and thresholds are inputs. New gauge structure below a pole or a different spectrum changes the test.",
+  "orthogonality_control": {
+    "generator": "X=5(B-L)-4Y",
+    "fermion_Y_X_trace": 0,
+    "light_Higgs_Y_X_scalar_trace": -2,
+    "total_mixed_one_loop_trace_coefficient": "-2/3",
+    "complete_Higgs5_scalar_trace": 0,
+    "explanation": "Complete fermion multiplets alone do not prevent mixing below scalar thresholds. The light Higgs doublet has X=-2. A color triplet with Y=-1/3,B-L=-2/3,X=-2 restores the scalar trace cancellation when both are active. X is used as a charge diagnostic; no primitive global charge-lattice relabeling is assumed."
+  },
+  "basis_control": "An explicit nonorthogonal gauge-field basis change with determinant1 preserves det K and the pole. The charge lattice and all kinetic entries are carried together; this is not a silent change of global gauge group.",
+  "source": "https://arxiv.org/abs/1004.3039",
+  "ownership": "Standard B-L running and kinetic-mixing thresholds are prior physics. This tests the actual single-Phi9 Dirac operator sectors with their different sterile charges, rather than using anomaly cancellation as a UV-completion claim.",
+  "boundary": "Declared one-loop EFT consistency check, not gauge unification, selected couplings, quantum-gravity fixed point or a complete TOE."
+}

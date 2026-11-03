@@ -1,0 +1,262 @@
+{
+  "status": "PASS_GLOBAL_THREE_SINGLET_ANOMALY_CLASSIFICATION_AND_DIRAC_OPERATORS",
+  "standard_model_generations_input": 3,
+  "sterile_left_charge_solutions": [
+    [
+      -5,
+      4,
+      4
+    ],
+    [
+      1,
+      1,
+      1
+    ]
+  ],
+  "all_quark_normalized_integer_sectors": [
+    [
+      -18,
+      10,
+      17
+    ],
+    [
+      -15,
+      12,
+      12
+    ],
+    [
+      3,
+      3,
+      3
+    ]
+  ],
+  "quark_normalized_cubic_target": 81,
+  "quark_normalized_linear_target": 9,
+  "quantized_divisor_proof_cases": [
+    {
+      "u": -3,
+      "v": 1,
+      "g": 7,
+      "charges": [
+        -18,
+        10,
+        17
+      ]
+    },
+    {
+      "u": -3,
+      "v": 2,
+      "g": 7,
+      "charges": [
+        -18,
+        10,
+        17
+      ]
+    },
+    {
+      "u": -2,
+      "v": 1,
+      "g": 9,
+      "charges": [
+        -15,
+        12,
+        12
+      ]
+    },
+    {
+      "u": 1,
+      "v": -3,
+      "g": 7,
+      "charges": [
+        -18,
+        10,
+        17
+      ]
+    },
+    {
+      "u": 1,
+      "v": -2,
+      "g": 9,
+      "charges": [
+        -15,
+        12,
+        12
+      ]
+    },
+    {
+      "u": 1,
+      "v": 1,
+      "g": 9,
+      "charges": [
+        -15,
+        12,
+        12
+      ]
+    },
+    {
+      "u": 1,
+      "v": 2,
+      "g": 7,
+      "charges": [
+        -18,
+        10,
+        17
+      ]
+    },
+    {
+      "u": 2,
+      "v": -3,
+      "g": 7,
+      "charges": [
+        -18,
+        10,
+        17
+      ]
+    },
+    {
+      "u": 2,
+      "v": 1,
+      "g": 7,
+      "charges": [
+        -18,
+        10,
+        17
+      ]
+    }
+  ],
+  "normalization_extension": "Requiring integer charges only in Q=3(B-L), as the quark charge lattice permits, adds(-18,10,17), or B-L=(-6,10/3,17/3). Thus the two ordinary-integer-B-L sectors are NOT the entire charge-quantized classification. The same proof uses u,v,u+v dividing6 rather than2 and exhausts64 divisor pairs.",
+  "single_Phi_Dirac_mass_selection": "With Phi of Q=9 and L of Q=-3, an LHn operator exists with arbitrary Phi/Phi-dagger powers iff Q_n=3 mod9. Requiring all three sterile columns therefore excludes(-18,10,17) and leaves exactly the standard and exotic sectors. This is an extra operator/symmetry-breaking hypothesis, not anomaly cancellation alone.",
+  "global_gauge_quotient_control": "For the alternative global gauge group (SU3_color x U1_BL)/Z3, a representation obeys Q mod3=color triality. Standard quarks satisfy it, while color singlets must have Q divisible3. The sector(-18,10,17) is then disallowed; standard/exotic sectors remain. The direct product and quotient are distinct supplied global-group choices, not interchangeable notation.",
+  "mixed_Y2_BL_and_Y_BL2_anomalies": [
+    0,
+    0
+  ],
+  "SM_gravity_BL_anomaly_per_generation": -1,
+  "SM_cubic_BL_anomaly_per_generation": -1,
+  "sterile_constraints": "sum_i q_i=3 and sum_i q_i^3=3 for left-handed SM-singlet Weyl fields",
+  "global_classification_proof": "Subtract1 from each charge. Apart from the all1 solution, set a=g*u,b=g*v with coprime nonzero u,v and u+v nonzero. The cubic equation reduces to2(u^2+uv+v^2)=g*u*v*(u+v). Since the quadratic factor is coprime to u,v,u+v separately, each divides2. Exhausting the finite divisors yields only permutations of(-5,4,4), with no charge cutoff.",
+  "divisor_proof_cases": [
+    {
+      "u": -2,
+      "v": 1,
+      "g": 3,
+      "charges": [
+        -5,
+        4,
+        4
+      ]
+    },
+    {
+      "u": 1,
+      "v": -2,
+      "g": 3,
+      "charges": [
+        -5,
+        4,
+        4
+      ]
+    },
+    {
+      "u": 1,
+      "v": 1,
+      "g": 3,
+      "charges": [
+        -5,
+        4,
+        4
+      ]
+    }
+  ],
+  "at_least_three_singlets": "One singlet has charge3 and fails the cubic equation; two have cubic residual9x^2-27x+24, with negative discriminant. Thus no real two-singlet solution, and no integer one-singlet solution.",
+  "symmetry_breaking": "Declare the direct-product gauge group with integer charge Q=3(B-L). A scalar of Q=9 leaves Z9 before any optional quotient with the color center. No quotient is silently assumed.",
+  "sectors": [
+    {
+      "charges": [
+        -5,
+        4,
+        4
+      ],
+      "renormalizable_Dirac_rank_bound": 0,
+      "Dirac_operators": [
+        {
+          "sterile_left_charge": -5,
+          "Phi_minus_Phidagger_power": 2,
+          "operator_dimension": 6
+        },
+        {
+          "sterile_left_charge": 4,
+          "Phi_minus_Phidagger_power": -1,
+          "operator_dimension": 5
+        },
+        {
+          "sterile_left_charge": 4,
+          "Phi_minus_Phidagger_power": -1,
+          "operator_dimension": 5
+        }
+      ],
+      "active_Weinberg_residue_mod9": 3,
+      "sterile_Majorana_residues": [
+        6
+      ]
+    },
+    {
+      "charges": [
+        1,
+        1,
+        1
+      ],
+      "renormalizable_Dirac_rank_bound": 3,
+      "Dirac_operators": [
+        {
+          "sterile_left_charge": 1,
+          "Phi_minus_Phidagger_power": 0,
+          "operator_dimension": 4
+        },
+        {
+          "sterile_left_charge": 1,
+          "Phi_minus_Phidagger_power": 0,
+          "operator_dimension": 4
+        },
+        {
+          "sterile_left_charge": 1,
+          "Phi_minus_Phidagger_power": 0,
+          "operator_dimension": 4
+        }
+      ],
+      "active_Weinberg_residue_mod9": 3,
+      "sterile_Majorana_residues": [
+        6
+      ]
+    }
+  ],
+  "Dirac_mass_coefficient_benchmark": [
+    [
+      "epsilon",
+      "2*epsilon",
+      "epsilon**2"
+    ],
+    [
+      "2*epsilon",
+      "epsilon",
+      "3*epsilon**2"
+    ],
+    [
+      "epsilon",
+      "epsilon",
+      "epsilon**2"
+    ]
+  ],
+  "determinant": "epsilon^4",
+  "exotic_hierarchy": "Two generic Dirac columns arise at dimension5 and one at dimension6: mnu=vH*[epsilon*y1,epsilon*y2,epsilon^2*y3]. With nonsingular O(1) coefficients this gives two masses of order epsilon*vH and one of order epsilon^2*vH.",
+  "scale_illustration": {
+    "vH_eV": 174000000000.0,
+    "heavy_neutrino_mass_input_eV": 0.05,
+    "epsilon_estimate": 2.873563218390805e-13,
+    "light_neutrino_parametric_scale_eV": 1.4367816091954027e-14
+  },
+  "protection": "Both the active Weinberg operator and every sterile Majorana bilinear have nonzero charge mod9. Arbitrary powers of the single Phi/Phi-dagger cannot generate them. The displayed higher-dimensional operators can give full-rank Dirac masses without breaking the residual gauge symmetry.",
+  "source_exotic": "https://arxiv.org/abs/1105.6064",
+  "source_earlier": "https://arxiv.org/abs/1008.4572",
+  "ownership": "The standard and(-4,-4,+5) right-handed B-L assignments and gauged Dirac protection are known. This uses left-handed conjugate charges and supplies a cutoff-free elementary classification and explicit minimal operator/rank controls. Pass12545 owns the earlier different SM-shaped anomaly enumeration.",
+  "boundary": "A conditional B-L extension, not a derivation of three generations, gauge group, ordering, measured Yukawas, absolute neutrino masses or a complete UV completion. The example hierarchy assumes O(1) Wilson coefficients and a supplied small scalar-to-cutoff ratio."
+}

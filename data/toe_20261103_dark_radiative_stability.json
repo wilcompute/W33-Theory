@@ -1,0 +1,410 @@
+{
+  "status": "PASS_FADING_DARK_SECTOR_RADIATIVE_BENCHMARKS",
+  "rows": [
+    {
+      "dataset": "pantheon",
+      "branch": "free_c_neg",
+      "c": -0.8516328706229315,
+      "cp": 0.04913772612483811,
+      "H0_eV": 1.443174780846508e-33,
+      "rho_DE_eV4": 2.561082654123275e-11,
+      "field_excursion_rec_to_present_in_Mpl": 0.25703397215945567,
+      "Dirac_degrees_of_freedom": 4,
+      "MS_no_curvature_cancellation_DM_mass_cap_eV": 0.017825177200395014,
+      "MS_tree_curvature_comparison_DM_mass_cap_eV": 0.019740448432421346,
+      "twice_subtracted_excursion_dimensionless_residual": "-0.0000001384903519219358301016329904518073623074248272676185094121682128714467",
+      "twice_subtracted_excursion_DM_mass_cap_eV": 0.41338617755690443,
+      "mass_scan": [
+        {
+          "DM_mass_eV": 1e-22,
+          "MS_curvature_over_H0_squared": 9.905230277538484e-82,
+          "excursion_residual_over_dark_energy": 3.4243346161591297e-87,
+          "allowed_constant_soft_mass_Delta_eV": 3.1773694222548214e+18,
+          "small_soft_physical_partner_mass_splitting_eV": 5.047838222739968e+58
+        },
+        {
+          "DM_mass_eV": 0.001,
+          "MS_curvature_over_H0_squared": 9.905230277538483e-06,
+          "excursion_residual_over_dark_energy": 3.42433461615913e-11,
+          "allowed_constant_soft_mass_Delta_eV": 0.31773694222548216,
+          "small_soft_physical_partner_mass_splitting_eV": 50.47838222739969
+        },
+        {
+          "DM_mass_eV": 0.01,
+          "MS_curvature_over_H0_squared": 0.09905230277538482,
+          "excursion_residual_over_dark_energy": 3.424334616159129e-07,
+          "allowed_constant_soft_mass_Delta_eV": 0.03177369422254822,
+          "small_soft_physical_partner_mass_splitting_eV": 0.05047838222739971
+        },
+        {
+          "DM_mass_eV": 0.1,
+          "MS_curvature_over_H0_squared": 990.5230277538484,
+          "excursion_residual_over_dark_energy": 0.0034243346161591296,
+          "allowed_constant_soft_mass_Delta_eV": 0.0031773694222548216,
+          "small_soft_physical_partner_mass_splitting_eV": 5.047838222739969e-05
+        },
+        {
+          "DM_mass_eV": 1000.0,
+          "MS_curvature_over_H0_squared": 9.905230277538482e+18,
+          "excursion_residual_over_dark_energy": 34243346161591.29,
+          "allowed_constant_soft_mass_Delta_eV": 3.177369422254822e-07,
+          "small_soft_physical_partner_mass_splitting_eV": 5.047838222739971e-17
+        },
+        {
+          "DM_mass_eV": 1000000.0,
+          "MS_curvature_over_H0_squared": 9.905230277538482e+30,
+          "excursion_residual_over_dark_energy": 3.424334616159129e+25,
+          "allowed_constant_soft_mass_Delta_eV": 3.177369422254822e-10,
+          "small_soft_physical_partner_mass_splitting_eV": 5.04783822273997e-26
+        },
+        {
+          "DM_mass_eV": 1000000000.0,
+          "MS_curvature_over_H0_squared": 9.905230277538482e+42,
+          "excursion_residual_over_dark_energy": 3.424334616159129e+37,
+          "allowed_constant_soft_mass_Delta_eV": 3.1773694222548217e-13,
+          "small_soft_physical_partner_mass_splitting_eV": 5.04783822273997e-35
+        }
+      ]
+    },
+    {
+      "dataset": "pantheon",
+      "branch": "free_c_pos",
+      "c": 0.6869445763001781,
+      "cp": 0.05304931331656138,
+      "H0_eV": 1.4439754544413595e-33,
+      "rho_DE_eV4": 2.5921439862869607e-11,
+      "field_excursion_rec_to_present_in_Mpl": 0.7721409515141329,
+      "Dirac_degrees_of_freedom": 4,
+      "MS_no_curvature_cancellation_DM_mass_cap_eV": 0.0171601839960574,
+      "MS_tree_curvature_comparison_DM_mass_cap_eV": 0.01711465629468543,
+      "twice_subtracted_excursion_dimensionless_residual": "-0.00001603987688549907784692440912293076848925357184069425016859354785515969",
+      "twice_subtracted_excursion_DM_mass_cap_eV": 0.12639196179441015,
+      "mass_scan": [
+        {
+          "DM_mass_eV": 1e-22,
+          "MS_curvature_over_H0_squared": 1.1532201957704956e-81,
+          "excursion_residual_over_dark_energy": 3.918521019939755e-85,
+          "allowed_constant_soft_mass_Delta_eV": 2.944719147785445e+18,
+          "small_soft_physical_partner_mass_splitting_eV": 4.335685429667118e+58
+        },
+        {
+          "DM_mass_eV": 0.001,
+          "MS_curvature_over_H0_squared": 1.1532201957704956e-05,
+          "excursion_residual_over_dark_energy": 3.918521019939754e-09,
+          "allowed_constant_soft_mass_Delta_eV": 0.29447191477854445,
+          "small_soft_physical_partner_mass_splitting_eV": 43.35685429667117
+        },
+        {
+          "DM_mass_eV": 0.01,
+          "MS_curvature_over_H0_squared": 0.11532201957704954,
+          "excursion_residual_over_dark_energy": 3.918521019939754e-05,
+          "allowed_constant_soft_mass_Delta_eV": 0.029447191477854448,
+          "small_soft_physical_partner_mass_splitting_eV": 0.04335685429667118
+        },
+        {
+          "DM_mass_eV": 0.1,
+          "MS_curvature_over_H0_squared": 1153.2201957704956,
+          "excursion_residual_over_dark_energy": 0.39185210199397547,
+          "allowed_constant_soft_mass_Delta_eV": 0.002944719147785444,
+          "small_soft_physical_partner_mass_splitting_eV": 4.335685429667116e-05
+        },
+        {
+          "DM_mass_eV": 1000.0,
+          "MS_curvature_over_H0_squared": 1.1532201957704954e+19,
+          "excursion_residual_over_dark_energy": 3918521019939754.0,
+          "allowed_constant_soft_mass_Delta_eV": 2.944719147785445e-07,
+          "small_soft_physical_partner_mass_splitting_eV": 4.335685429667118e-17
+        },
+        {
+          "DM_mass_eV": 1000000.0,
+          "MS_curvature_over_H0_squared": 1.1532201957704953e+31,
+          "excursion_residual_over_dark_energy": 3.918521019939754e+27,
+          "allowed_constant_soft_mass_Delta_eV": 2.944719147785445e-10,
+          "small_soft_physical_partner_mass_splitting_eV": 4.3356854296671184e-26
+        },
+        {
+          "DM_mass_eV": 1000000000.0,
+          "MS_curvature_over_H0_squared": 1.1532201957704954e+43,
+          "excursion_residual_over_dark_energy": 3.9185210199397546e+39,
+          "allowed_constant_soft_mass_Delta_eV": 2.944719147785445e-13,
+          "small_soft_physical_partner_mass_splitting_eV": 4.335685429667118e-35
+        }
+      ]
+    },
+    {
+      "dataset": "dovekie",
+      "branch": "free_c_neg",
+      "c": -0.8895650164336765,
+      "cp": 0.05004260057022673,
+      "H0_eV": 1.4409184480268033e-33,
+      "rho_DE_eV4": 2.549362377471491e-11,
+      "field_excursion_rec_to_present_in_Mpl": 0.25426657025468263,
+      "Dirac_degrees_of_freedom": 4,
+      "MS_no_curvature_cancellation_DM_mass_cap_eV": 0.017649470615719053,
+      "MS_tree_curvature_comparison_DM_mass_cap_eV": 0.019969134432002537,
+      "twice_subtracted_excursion_dimensionless_residual": "-0.0000001426853697154481845144060565797011755893170511706812222925151786821253",
+      "twice_subtracted_excursion_DM_mass_cap_eV": 0.40984341713212175,
+      "mass_scan": [
+        {
+          "DM_mass_eV": 1e-22,
+          "MS_curvature_over_H0_squared": 1.030559962086245e-81,
+          "excursion_residual_over_dark_energy": 3.5442809827100234e-87,
+          "allowed_constant_soft_mass_Delta_eV": 3.115038130151303e+18,
+          "small_soft_physical_partner_mass_splitting_eV": 4.8517312761482637e+58
+        },
+        {
+          "DM_mass_eV": 0.001,
+          "MS_curvature_over_H0_squared": 1.0305599620862449e-05,
+          "excursion_residual_over_dark_energy": 3.5442809827100236e-11,
+          "allowed_constant_soft_mass_Delta_eV": 0.3115038130151303,
+          "small_soft_physical_partner_mass_splitting_eV": 48.517312761482636
+        },
+        {
+          "DM_mass_eV": 0.01,
+          "MS_curvature_over_H0_squared": 0.10305599620862448,
+          "excursion_residual_over_dark_energy": 3.544280982710023e-07,
+          "allowed_constant_soft_mass_Delta_eV": 0.031150381301513028,
+          "small_soft_physical_partner_mass_splitting_eV": 0.04851731276148262
+        },
+        {
+          "DM_mass_eV": 0.1,
+          "MS_curvature_over_H0_squared": 1030.559962086245,
+          "excursion_residual_over_dark_energy": 0.0035442809827100235,
+          "allowed_constant_soft_mass_Delta_eV": 0.0031150381301513026,
+          "small_soft_physical_partner_mass_splitting_eV": 4.8517312761482616e-05
+        },
+        {
+          "DM_mass_eV": 1000.0,
+          "MS_curvature_over_H0_squared": 1.0305599620862448e+19,
+          "excursion_residual_over_dark_energy": 35442809827100.23,
+          "allowed_constant_soft_mass_Delta_eV": 3.115038130151303e-07,
+          "small_soft_physical_partner_mass_splitting_eV": 4.8517312761482634e-17
+        },
+        {
+          "DM_mass_eV": 1000000.0,
+          "MS_curvature_over_H0_squared": 1.0305599620862447e+31,
+          "excursion_residual_over_dark_energy": 3.544280982710023e+25,
+          "allowed_constant_soft_mass_Delta_eV": 3.115038130151303e-10,
+          "small_soft_physical_partner_mass_splitting_eV": 4.851731276148263e-26
+        },
+        {
+          "DM_mass_eV": 1000000000.0,
+          "MS_curvature_over_H0_squared": 1.0305599620862447e+43,
+          "excursion_residual_over_dark_energy": 3.544280982710023e+37,
+          "allowed_constant_soft_mass_Delta_eV": 3.115038130151303e-13,
+          "small_soft_physical_partner_mass_splitting_eV": 4.851731276148262e-35
+        }
+      ]
+    },
+    {
+      "dataset": "dovekie",
+      "branch": "free_c_pos",
+      "c": 0.7150754696177565,
+      "cp": 0.053714165884982665,
+      "H0_eV": 1.442055845549947e-33,
+      "rho_DE_eV4": 2.58360555891127e-11,
+      "field_excursion_rec_to_present_in_Mpl": 0.7885005694561151,
+      "Dirac_degrees_of_freedom": 4,
+      "MS_no_curvature_cancellation_DM_mass_cap_eV": 0.017042313092733134,
+      "MS_tree_curvature_comparison_DM_mass_cap_eV": 0.01733885879578899,
+      "twice_subtracted_excursion_dimensionless_residual": "-0.00001837564251688554468018062106927228441117480695280714536955518909284032",
+      "twice_subtracted_excursion_DM_mass_cap_eV": 0.12206772517245297,
+      "mass_scan": [
+        {
+          "DM_mass_eV": 1e-22,
+          "MS_curvature_over_H0_squared": 1.1854570977416436e-81,
+          "excursion_residual_over_dark_energy": 4.503981469756285e-85,
+          "allowed_constant_soft_mass_Delta_eV": 2.904404355507432e+18,
+          "small_soft_physical_partner_mass_splitting_eV": 4.2177823301452707e+58
+        },
+        {
+          "DM_mass_eV": 0.001,
+          "MS_curvature_over_H0_squared": 1.1854570977416437e-05,
+          "excursion_residual_over_dark_energy": 4.503981469756286e-09,
+          "allowed_constant_soft_mass_Delta_eV": 0.2904404355507432,
+          "small_soft_physical_partner_mass_splitting_eV": 42.17782330145271
+        },
+        {
+          "DM_mass_eV": 0.01,
+          "MS_curvature_over_H0_squared": 0.11854570977416434,
+          "excursion_residual_over_dark_energy": 4.503981469756285e-05,
+          "allowed_constant_soft_mass_Delta_eV": 0.029044043555074322,
+          "small_soft_physical_partner_mass_splitting_eV": 0.04217782330145271
+        },
+        {
+          "DM_mass_eV": 0.1,
+          "MS_curvature_over_H0_squared": 1185.4570977416436,
+          "excursion_residual_over_dark_energy": 0.4503981469756286,
+          "allowed_constant_soft_mass_Delta_eV": 0.002904404355507432,
+          "small_soft_physical_partner_mass_splitting_eV": 4.21778233014527e-05
+        },
+        {
+          "DM_mass_eV": 1000.0,
+          "MS_curvature_over_H0_squared": 1.1854570977416434e+19,
+          "excursion_residual_over_dark_energy": 4503981469756285.0,
+          "allowed_constant_soft_mass_Delta_eV": 2.9044043555074325e-07,
+          "small_soft_physical_partner_mass_splitting_eV": 4.217782330145272e-17
+        },
+        {
+          "DM_mass_eV": 1000000.0,
+          "MS_curvature_over_H0_squared": 1.1854570977416435e+31,
+          "excursion_residual_over_dark_energy": 4.5039814697562845e+27,
+          "allowed_constant_soft_mass_Delta_eV": 2.904404355507432e-10,
+          "small_soft_physical_partner_mass_splitting_eV": 4.217782330145271e-26
+        },
+        {
+          "DM_mass_eV": 1000000000.0,
+          "MS_curvature_over_H0_squared": 1.1854570977416434e+43,
+          "excursion_residual_over_dark_energy": 4.503981469756285e+39,
+          "allowed_constant_soft_mass_Delta_eV": 2.904404355507432e-13,
+          "small_soft_physical_partner_mass_splitting_eV": 4.217782330145271e-35
+        }
+      ]
+    },
+    {
+      "dataset": "desy5",
+      "branch": "free_c_neg",
+      "c": -1.0427053489351539,
+      "cp": 0.052082075649901624,
+      "H0_eV": 1.4283028297133197e-33,
+      "rho_DE_eV4": 2.483839387339481e-11,
+      "field_excursion_rec_to_present_in_Mpl": 0.2261114509437206,
+      "Dirac_degrees_of_freedom": 4,
+      "MS_no_curvature_cancellation_DM_mass_cap_eV": 0.017224551576834987,
+      "MS_tree_curvature_comparison_DM_mass_cap_eV": 0.02105474429368148,
+      "twice_subtracted_excursion_dimensionless_residual": "-0.000000104530837655814714701320154979527875316031272408702699877380979208436",
+      "twice_subtracted_excursion_DM_mass_cap_eV": 0.4401236457397469,
+      "mass_scan": [
+        {
+          "DM_mass_eV": 1e-22,
+          "MS_curvature_over_H0_squared": 1.1360783998016977e-81,
+          "excursion_residual_over_dark_energy": 2.665024420559646e-87,
+          "allowed_constant_soft_mass_Delta_eV": 2.966851770230486e+18,
+          "small_soft_physical_partner_mass_splitting_eV": 4.401104713259884e+58
+        },
+        {
+          "DM_mass_eV": 0.001,
+          "MS_curvature_over_H0_squared": 1.1360783998016977e-05,
+          "excursion_residual_over_dark_energy": 2.6650244205596457e-11,
+          "allowed_constant_soft_mass_Delta_eV": 0.29668517702304864,
+          "small_soft_physical_partner_mass_splitting_eV": 44.011047132598854
+        },
+        {
+          "DM_mass_eV": 0.01,
+          "MS_curvature_over_H0_squared": 0.11360783998016974,
+          "excursion_residual_over_dark_energy": 2.665024420559645e-07,
+          "allowed_constant_soft_mass_Delta_eV": 0.029668517702304862,
+          "small_soft_physical_partner_mass_splitting_eV": 0.044011047132598846
+        },
+        {
+          "DM_mass_eV": 0.1,
+          "MS_curvature_over_H0_squared": 1136.0783998016977,
+          "excursion_residual_over_dark_energy": 0.002665024420559646,
+          "allowed_constant_soft_mass_Delta_eV": 0.002966851770230486,
+          "small_soft_physical_partner_mass_splitting_eV": 4.4011047132598845e-05
+        },
+        {
+          "DM_mass_eV": 1000.0,
+          "MS_curvature_over_H0_squared": 1.1360783998016975e+19,
+          "excursion_residual_over_dark_energy": 26650244205596.453,
+          "allowed_constant_soft_mass_Delta_eV": 2.9668517702304863e-07,
+          "small_soft_physical_partner_mass_splitting_eV": 4.401104713259885e-17
+        },
+        {
+          "DM_mass_eV": 1000000.0,
+          "MS_curvature_over_H0_squared": 1.1360783998016976e+31,
+          "excursion_residual_over_dark_energy": 2.6650244205596455e+25,
+          "allowed_constant_soft_mass_Delta_eV": 2.9668517702304865e-10,
+          "small_soft_physical_partner_mass_splitting_eV": 4.4011047132598856e-26
+        },
+        {
+          "DM_mass_eV": 1000000000.0,
+          "MS_curvature_over_H0_squared": 1.1360783998016975e+43,
+          "excursion_residual_over_dark_energy": 2.6650244205596453e+37,
+          "allowed_constant_soft_mass_Delta_eV": 2.9668517702304867e-13,
+          "small_soft_physical_partner_mass_splitting_eV": 4.401104713259886e-35
+        }
+      ]
+    },
+    {
+      "dataset": "desy5",
+      "branch": "free_c_pos",
+      "c": 0.8568235440599444,
+      "cp": 0.056357490540795876,
+      "H0_eV": 1.4296768401184196e-33,
+      "rho_DE_eV4": 2.5262925410016835e-11,
+      "field_excursion_rec_to_present_in_Mpl": 0.8640379887725307,
+      "Dirac_degrees_of_freedom": 4,
+      "MS_no_curvature_cancellation_DM_mass_cap_eV": 0.01656628145535657,
+      "MS_tree_curvature_comparison_DM_mass_cap_eV": 0.01842566698214177,
+      "twice_subtracted_excursion_dimensionless_residual": "-0.00003244174130456809369335814578710403557236457266190089735410824158107513",
+      "twice_subtracted_excursion_DM_mass_cap_eV": 0.10530519647288313,
+      "mass_scan": [
+        {
+          "DM_mass_eV": 1e-22,
+          "MS_curvature_over_H0_squared": 1.3276997014812754e-81,
+          "excursion_residual_over_dark_energy": 8.132064020320363e-85,
+          "allowed_constant_soft_mass_Delta_eV": 2.74441681258091e+18,
+          "small_soft_physical_partner_mass_splitting_eV": 3.765911820588381e+58
+        },
+        {
+          "DM_mass_eV": 0.001,
+          "MS_curvature_over_H0_squared": 1.3276997014812755e-05,
+          "excursion_residual_over_dark_energy": 8.132064020320362e-09,
+          "allowed_constant_soft_mass_Delta_eV": 0.274441681258091,
+          "small_soft_physical_partner_mass_splitting_eV": 37.6591182058838
+        },
+        {
+          "DM_mass_eV": 0.01,
+          "MS_curvature_over_H0_squared": 0.13276997014812753,
+          "excursion_residual_over_dark_energy": 8.132064020320362e-05,
+          "allowed_constant_soft_mass_Delta_eV": 0.027444168125809104,
+          "small_soft_physical_partner_mass_splitting_eV": 0.037659118205883815
+        },
+        {
+          "DM_mass_eV": 0.1,
+          "MS_curvature_over_H0_squared": 1327.6997014812755,
+          "excursion_residual_over_dark_energy": 0.8132064020320362,
+          "allowed_constant_soft_mass_Delta_eV": 0.00274441681258091,
+          "small_soft_physical_partner_mass_splitting_eV": 3.765911820588381e-05
+        },
+        {
+          "DM_mass_eV": 1000.0,
+          "MS_curvature_over_H0_squared": 1.3276997014812752e+19,
+          "excursion_residual_over_dark_energy": 8132064020320361.0,
+          "allowed_constant_soft_mass_Delta_eV": 2.74441681258091e-07,
+          "small_soft_physical_partner_mass_splitting_eV": 3.765911820588381e-17
+        },
+        {
+          "DM_mass_eV": 1000000.0,
+          "MS_curvature_over_H0_squared": 1.3276997014812752e+31,
+          "excursion_residual_over_dark_energy": 8.132064020320361e+27,
+          "allowed_constant_soft_mass_Delta_eV": 2.74441681258091e-10,
+          "small_soft_physical_partner_mass_splitting_eV": 3.765911820588381e-26
+        },
+        {
+          "DM_mass_eV": 1000000000.0,
+          "MS_curvature_over_H0_squared": 1.3276997014812752e+43,
+          "excursion_residual_over_dark_energy": 8.132064020320361e+39,
+          "allowed_constant_soft_mass_Delta_eV": 2.74441681258091e-13,
+          "small_soft_physical_partner_mass_splitting_eV": 3.765911820588381e-35
+        }
+      ]
+    }
+  ],
+  "particle_assumption": "One4D Dirac dark particle with m(phi)=m0 exp[-cp*(phi-phi0)/Mpl]. Absolute DM mass is NOT specified by the background fit; it is scanned here.",
+  "scheme": "MS-bar at renormalization scale mu=m0; fermion DeltaV=-g*m(phi)^4/(64pi^2)*(log[m(phi)^2/mu^2]-3/2). x=(phi-phi0)/Mpl.",
+  "shape": "DeltaV=(g*m0^4/(64pi^2))*exp(-4cp*x)*(2cp*x+3/2)",
+  "exact_curvature": "Delta m_phi^2=g*cp^2*m0^4/(8pi^2*Mpl^2) at x=0 in this prescription.",
+  "subtracted_benchmark": "Remove DeltaV(0), its slope and curvature by three independent local matching counterterms. Residual starts at quartic here: derivative3(0)=0 and derivative4(0)=-128cp^4. This special cancellation depends on the chosen subtraction scale; it is not a physical symmetry.",
+  "soft_protected_control": "Equal boson/fermion dof and identical masses/couplings cancel their CW functions exactly. If mB^2=mF^2+Delta^2 with constant small Delta^2, the leading curvature is g*cp^2*m0^2*Delta^2/(8pi^2*Mpl^2). Delta is a soft mass parameter; the actual partner splitting is approximately Delta^2/(2*m0).",
+  "phase_only_protection_tradeoff": "For M(phi)=U(phi) M0 V(phi)^dagger with unitary U,V, every singular mass and Tr f(M^dagger M) is constant. The explicit diag(2 exp(ix),3 exp(-ix)) control has squared masses4,9 and no one-loop mass-determinant potential, but physical cprime=-d ln(mass)/dx is0. Rotating a mass phase alone cannot reproduce the fitted fading of a mass magnitude.",
+  "gravity_soft_connection": "If an additional unsequestered supergravity model supplies Delta approximately m_gravitino, the displayed naturalness control requires mDM*m_gravitino <=sqrt(8pi^2/g)*H0*Mpl/cprime. This is conditional on that mediation law. An exact-SUSY cancellation proposal must quantify how its protection survives the SUSY breaking needed for a positive vacuum in ordinary N=1 supergravity.",
+  "covariance_scope": "Uses already-published background parameter certificates only. No new data fit, cosmological likelihood, CMB perturbation calculation or observational mass exclusion.",
+  "naturalness_scope": "Mass caps quantify required cancellation/protection under the declared benchmark. Arbitrary field-dependent counterterms or an explicit protecting UV mechanism can change them; these are not scheme-independent theorems excluding a DM mass.",
+  "ownership": "Pass12547 owns the fading-background fits and Pass12548 the fifth-force/moduli constraints. Quantum radiative constraints are prior physics; this evaluates them on the actual stored branches and supplies exact residual/soft-cancellation controls.",
+  "source_general": "https://arxiv.org/abs/hep-ph/0606120",
+  "source_dark": "https://arxiv.org/abs/1605.00996",
+  "source_finetuning": "https://arxiv.org/abs/1812.03184",
+  "boundary": "Unprotected particle EFT benchmark; no derived dark-particle identity, completed string compactification or prediction of the cosmological constant."
+}
