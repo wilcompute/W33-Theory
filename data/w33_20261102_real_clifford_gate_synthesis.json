@@ -1,0 +1,258 @@
+{
+  "status": "PASS_REAL_CLIFFORD_AND_EXACT_GATE_SYNTHESIS",
+  "signature_table": [
+    {
+      "p": 0,
+      "q": 4,
+      "J_square": -1,
+      "antiunitary_linear_part": [
+        [
+          "0",
+          "-1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-1"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0"
+        ]
+      ],
+      "minimum_real_module_dimension": 8,
+      "real_algebra": "Mat2(H)"
+    },
+    {
+      "p": 1,
+      "q": 3,
+      "J_square": -1,
+      "antiunitary_linear_part": [
+        [
+          "0",
+          "0",
+          "0",
+          "-1"
+        ],
+        [
+          "0",
+          "0",
+          "-1",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "minimum_real_module_dimension": 8,
+      "real_algebra": "Mat2(H)"
+    },
+    {
+      "p": 2,
+      "q": 2,
+      "J_square": 1,
+      "antiunitary_linear_part": [
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "minimum_real_module_dimension": 4,
+      "real_algebra": "Mat4(R)"
+    },
+    {
+      "p": 3,
+      "q": 1,
+      "J_square": 1,
+      "antiunitary_linear_part": [
+        [
+          "-1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "-1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "minimum_real_module_dimension": 4,
+      "real_algebra": "Mat4(R)"
+    },
+    {
+      "p": 4,
+      "q": 0,
+      "J_square": -1,
+      "antiunitary_linear_part": [
+        [
+          "0",
+          "0",
+          "-1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-1"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ]
+      ],
+      "minimum_real_module_dimension": 8,
+      "real_algebra": "Mat2(H)"
+    }
+  ],
+  "old_spinor_antiunitary_square": -1,
+  "enlarged_spinor_antiunitary_solution_dimension": 0,
+  "old_antiunitary_linear_part": [
+    [
+      "0",
+      "0",
+      "-1",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "-1"
+    ],
+    [
+      "1",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "1",
+      "0",
+      "0"
+    ]
+  ],
+  "doubled_realification_complex_dimension": 8,
+  "native_pseudoscalar": "-Y tensor Y",
+  "native_unitary": "exp(-i*pi*(Y tensor Y)/4)",
+  "spinor_circuit": {
+    "word_in_application_order": [
+      "S1",
+      "H1",
+      "H0",
+      "S0",
+      "CX10",
+      "H1",
+      "S1",
+      "H1",
+      "S0"
+    ],
+    "CNOT_count": 1,
+    "total_gate_count": 9,
+    "phase_relative_to_native_U": "sqrt(2)*I*(1 - I)/2",
+    "optimality": "0-1 weighted Clifford action search with lexicographic(CNOT count,total gates). The target is entangling, so local-only cost0 is impossible; the exhibited cost1 word attains the bound."
+  },
+  "four_qubit_register_circuit": {
+    "CNOT_word_in_application_order": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "minimum_CNOT_count": 8,
+    "searched_GL4_states": 20160,
+    "boundary": "This circuit permutes computational basis states of four physical qubits. It is not the four-state spinor U, whose16 vertices label operators."
+  },
+  "boundary": "Signature classification does not select a physical Lorentz signature. Cl(3,1) permits a real4-dimensional module, while Cl(1,3) is quaternionic in this convention; the full enlarged spinor gate group has no invariant antiunitary on C4. Circuit synthesis is ideal and all-to-all; no calibrated device, timing or noise performance is claimed."
+}

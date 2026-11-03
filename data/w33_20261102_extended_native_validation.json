@@ -1,0 +1,152 @@
+{
+  "utc": "2026-11-03T00:02:35.720528+00:00",
+  "input_raw_sha256": {
+    "data/w33_20261102_toroidal_knight_clifford_bridge.json": "fcf98eb416975170bae9c34e2da6a76af12488614d6efe2dbe5786251d701a03",
+    "data/w33_20261102_chiral_surface_development.json": "a0514be5ea7d05c71c91bc76e20fbcf199e893efad39451d66b24ddea0004bc8",
+    "data/w33_20261031_signed_cubic_lift.json": "19e6c0c23784140899036adef54742151f333ac7e2d2b4881c640890b9c1b9b9",
+    "data/w33_20261031_unitary_stabilizer_lift.json": "109dd5cb55973e7d9354fa0eab3d2012fe2f147371922c7582a1f4275308650a",
+    "data/w33_20261101_common_cubic_spinor_extension.json": "f1a855d7402eed073b2f0778a1c1f5339786e5aafb2348220e53ebb9d4c87359",
+    "data/w33_20261102_common_cover_interactions.json": "85a518cf0f2fb85b787e4c581bff505a7afe99db9444a2a3e411985dec8bf663"
+  },
+  "execution": "Remote Desktop Commander on TheHeavyCrown; same hardware as the workspace",
+  "jobs": [
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/w33_20261102_deck_monodromy_network.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_NATIVE_DECK_MONODROMY_AND_WEIGHTED_NETWORK [1, 2, 4, 7] {'ranks': [15, 31], 'rational_Betti': [1, 2, 1]}\n",
+      "stderr": "",
+      "seconds": 10.208
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/w33_20261102_clifford_native_cubic_repair.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_ENLARGED_CLIFFORD_ACTION_ON_NATIVE_CUBIC 46080 3\n",
+      "stderr": "",
+      "seconds": 15.781
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/w33_20261102_induced_cubic_common_cover.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_INDUCED_NATIVE_CUBIC_COMMON_COVER 60 53126622932283508654080\n",
+      "stderr": "",
+      "seconds": 64.856
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/w33_20261102_quantized_native_tetrahedron.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_SUPPLIED_QUANTIZED_NATIVE_QUARTET {'-8': 1, '-8/3': 9, '0': 2} [{'h': 0.01, 'energy': -0.0004082464787299775, 'gap': 5.55284212852054e-06, 'residual': 1.3158581496743945e-15, 'weight_in_classical_ground_space': 0.9998610963932797, 'single_site_entropy_nats': 1.3862237850426953}, {'h': 0.03, 'energy': -0.0038370884683740776, 'gap': 0.00016285509577512692, 'residual': 2.922110014750183e-15, 'weight_in_classical_ground_space': 0.9986353920320312, 'single_site_entropy_nats': 1.3855760777957844}]\n",
+      "stderr": "",
+      "seconds": 20.493
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/w33_20261102_real_clifford_gate_synthesis.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_REAL_CLIFFORD_AND_EXACT_GATE_SYNTHESIS {'word_in_application_order': ['S1', 'H1', 'H0', 'S0', 'CX10', 'H1', 'S1', 'H1', 'S0'], 'CNOT_count': 1, 'total_gate_count': 9, 'phase_relative_to_native_U': 'sqrt(2)*I*(1 - I)/2', 'optimality': '0-1 weighted Clifford action search with lexicographic(CNOT count,total gates). The target is entangling, so local-only cost0 is impossible; the exhibited cost1 word attains the bound.'} {'CNOT_word_in_application_order': [(0, 1), (1, 0), (2, 3), (0, 2), (3, 0), (0, 1), (1, 2), (2, 3)], 'minimum_CNOT_count': 8, 'searched_GL4_states': 20160, 'boundary': 'This circuit permutes computational basis states of four physical qubits. It is not the four-state spinor U, whose16 vertices label operators.'}\n",
+      "stderr": "",
+      "seconds": 27.566
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/w33_20261102_deck_twisted_quantum_double.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_NATIVE_DECK_TYPE_III_QUANTUM_DOUBLE {'1': 8, '2': 14} 22\n",
+      "stderr": "",
+      "seconds": 8.318
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/w33_20261102_hypercube_switch_capacity.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_Q4_ANTIPODAL_SWITCH_CAPACITY 6 [[0, 1, 3, 7, 15], [1, 5, 4, 6, 14], [7, 6, 2, 0, 8], [4, 12, 13, 15, 11], [5, 13, 9, 8, 10], [3, 2, 10, 14, 12]]\n",
+      "stderr": "",
+      "seconds": 0.853
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/w33_20261102_entanglement_metric_axiom_audit.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_FINITE_MI_LOG_METRIC_COUNTEREXAMPLE {'AB': 1.0199887376227106, 'BC': 1.0199887376227106, 'AC': 5.00008333663704e-05} 8.92327261618711\n",
+      "stderr": "",
+      "seconds": 4.964
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/w33_20261102_spin6_rotation_group_audit.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_ACTUAL_SPIN6_ROTATIONAL_GROUP_NOT_WEYL_D6 631 751\n",
+      "stderr": "",
+      "seconds": 11.488
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_w33_20261102_six_native_fronts.py",
+        "tests/test_w33_20261102_toroidal_knight_clifford_bridge.py",
+        "tests/test_w33_20261102_topology_interactions_geometry.py"
+      ],
+      "exit_code": 124,
+      "stdout": "",
+      "stderr": "",
+      "timeout_seconds": 300,
+      "seconds": 300.425
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/w33_20261102_extended_native_validation.py",
+        "--direct-tests"
+      ],
+      "exit_code": 0,
+      "seconds": 101.392,
+      "stdout": "DIRECT_TEST six_native_fronts test_AC_information_is_strictly_positive_at_high_precision\nDIRECT_TEST six_native_fronts test_actual_spinor_to_six_form_intertwiner\nDIRECT_TEST six_native_fronts test_all_real_signature_structures_against_actual_gamma_axes\nDIRECT_TEST six_native_fronts test_all_type_III_cocycle_equations_and_flux_radicals\nDIRECT_TEST six_native_fronts test_deck_group_is_exhaustive_by_colored_graph_automorphisms\nDIRECT_TEST six_native_fronts test_each_monodromy_meridian_and_regular_group\nDIRECT_TEST six_native_fronts test_eight_CNOT_register_word_and_independent_bidirectional_lower_bound\nDIRECT_TEST six_native_fronts test_full_rank_MI_counterexample_by_tensor_partial_trace\nDIRECT_TEST six_native_fronts test_independent_involution_counts_exclude_W_D6\nDIRECT_TEST six_native_fronts test_induced324_restricts_to_old27_and_preserves_all_block_cubics\nDIRECT_TEST six_native_fronts test_induced_kernel_relations_over_an_independent_prime\nDIRECT_TEST six_native_fronts test_linear_group_center_word_and_exterior_pairing\nDIRECT_TEST six_native_fronts test_new27_preserves_every_native_polarized_cubic_entry\nDIRECT_TEST six_native_fronts test_old_embedding_word_has_basis_invariant_trace_mismatch\nDIRECT_TEST six_native_fronts test_quantum_face_projector_spectrum_and_second_order\nDIRECT_TEST six_native_fronts test_quantum_gap_converges_to_third_order_splitting\nDIRECT_TEST six_native_fronts test_shrikhande_and_rook_have_distinct_link_topology\nDIRECT_TEST six_native_fronts test_shrikhande_exact_transfer_bounds\nDIRECT_TEST six_native_fronts test_spinor_gate_word_and_entangling_lower_bound\nDIRECT_TEST six_native_fronts test_supplied_cocycle_has_an_explicit_nonClifford_phase_resource\nDIRECT_TEST six_native_fronts test_switch_capacity_paths_and_exact_parity_bound\nDIRECT_TEST six_native_fronts test_twist_T3_sum_from_independent_binary_determinants\nDIRECT_TEST six_native_fronts test_weighted_transfer_for_several_integer_couplings\nDIRECT_TEST toroidal_knight_clifford_bridge test_actual_unitary_and_existing_form_boundary\nDIRECT_TEST toroidal_knight_clifford_bridge test_all_graph_pairs_against_literal_knight_rules\nDIRECT_TEST toroidal_knight_clifford_bridge test_cover_on_every_face_and_each_vertex_link\nDIRECT_TEST toroidal_knight_clifford_bridge test_group_orders_by_independent_32_point_permutations\nDIRECT_TEST toroidal_knight_clifford_bridge test_ovoids_and_native_grade_fibers\nDIRECT_TEST toroidal_knight_clifford_bridge test_signed_switch_preserves_all_256_clifford_products\nDIRECT_TEST toroidal_knight_clifford_bridge test_switch_is_not_original_surface_deck_map\nPASS_44_DIRECT_ASSERTION_AND_UNITTEST_CASES\n",
+      "stderr": "test_KO6_matrices_act_on_independent_random_spin_operator_vectors (direct_topology_interactions_geometry.NativeContinuation.test_KO6_matrices_act_on_independent_random_spin_operator_vectors) ... ok\ntest_all_even_tori_in_small_grid_and_riemann_hurwitz (direct_topology_interactions_geometry.NativeContinuation.test_all_even_tori_in_small_grid_and_riemann_hurwitz) ... ok\ntest_all_signed_kernel_words_reconstruct_and_forbid26_coordinates (direct_topology_interactions_geometry.NativeContinuation.test_all_signed_kernel_words_reconstruct_and_forbid26_coordinates) ... ok\ntest_edge_reversal_completes_four_distinct_tetrahedron_labels (direct_topology_interactions_geometry.NativeContinuation.test_edge_reversal_completes_four_distinct_tetrahedron_labels) ... ok\ntest_exact_bilinear_witness_is_symplectic_on_every_generator (direct_topology_interactions_geometry.NativeContinuation.test_exact_bilinear_witness_is_symplectic_on_every_generator) ... ok\ntest_identical_commuting_spinors_have_no_alternating_polynomial (direct_topology_interactions_geometry.NativeContinuation.test_identical_commuting_spinors_have_no_alternating_polynomial) ... ok\ntest_local_divisibility_does_not_remove_global_obstruction (direct_topology_interactions_geometry.NativeContinuation.test_local_divisibility_does_not_remove_global_obstruction) ... ok\ntest_manifold_orientation_errors_are_rejected (direct_topology_interactions_geometry.NativeContinuation.test_manifold_orientation_errors_are_rejected) ... ok\ntest_modular_upper_bound_has_independent_constraint_rank (direct_topology_interactions_geometry.NativeContinuation.test_modular_upper_bound_has_independent_constraint_rank) ... ok\ntest_restricted_minimum_and_zero_intersection_are_explicit (direct_topology_interactions_geometry.NativeContinuation.test_restricted_minimum_and_zero_intersection_are_explicit) ... ok\ntest_seed_independence_for_success_and_failure (direct_topology_interactions_geometry.NativeContinuation.test_seed_independence_for_success_and_failure) ... ok\ntest_torus_map_saturates_every_actual_pair_and_face (direct_topology_interactions_geometry.NativeContinuation.test_torus_map_saturates_every_actual_pair_and_face) ... ok\ntest_two_spin_completion_has_the_wrong_J_square (direct_topology_interactions_geometry.NativeContinuation.test_two_spin_completion_has_the_wrong_J_square) ... ok\ntest_unique_positive_completion_against_native_matrix_traces (direct_topology_interactions_geometry.NativeContinuation.test_unique_positive_completion_against_native_matrix_traces) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 3.935s\n\nOK\n"
+    }
+  ],
+  "pytest_collection_passed": false,
+  "status": "PASS_NINE_PRODUCERS_AND_44_DIRECT_TEST_CASES",
+  "test_scope": "30 identical plain assertion functions plus14 unittest cases; no pytest fixtures. Pytest collection timed out and is not claimed successful.",
+  "conditional_vacuum": {
+    "status": "PASS_CONDITIONAL_CLASSICAL_NATIVE_SU4_TO_USP4_VACUUM",
+    "command": "py -3 -u analysis/w33_20261102_conditional_symplectic_vacuum.py",
+    "execution_receipt": "Observed exec session52050 final exit_code0; stdout PASS_CONDITIONAL_CLASSICAL_NATIVE_SU4_TO_USP4_VACUUM [[12,1],[14,1],[15,1],[17,1]] 3840.",
+    "certificate_sha256": "5b5e0eff0bcffaee479f71c3b547d2ca486b09e7e58b76e9b15b36165b08fea5",
+    "scope": "Additional exact producer assertions; these are not included in the44 direct test-case count."
+  }
+}

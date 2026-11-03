@@ -1,0 +1,148 @@
+{
+  "status": "PASS_Q4_ANTIPODAL_SWITCH_CAPACITY",
+  "dimension": 4,
+  "vertices": 16,
+  "edges": 32,
+  "requested_pairs": [
+    [
+      0,
+      15
+    ],
+    [
+      1,
+      14
+    ],
+    [
+      2,
+      13
+    ],
+    [
+      3,
+      12
+    ],
+    [
+      4,
+      11
+    ],
+    [
+      5,
+      10
+    ],
+    [
+      6,
+      9
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "single_layer_maximum_served": 6,
+  "single_layer_six_path_witness": [
+    [
+      0,
+      1,
+      3,
+      7,
+      15
+    ],
+    [
+      1,
+      5,
+      4,
+      6,
+      14
+    ],
+    [
+      7,
+      6,
+      2,
+      0,
+      8
+    ],
+    [
+      4,
+      12,
+      13,
+      15,
+      11
+    ],
+    [
+      5,
+      13,
+      9,
+      8,
+      10
+    ],
+    [
+      3,
+      2,
+      10,
+      14,
+      12
+    ]
+  ],
+  "doubled_resource_eight_path_witness": [
+    [
+      0,
+      1,
+      3,
+      7,
+      15
+    ],
+    [
+      1,
+      0,
+      2,
+      6,
+      14
+    ],
+    [
+      2,
+      3,
+      1,
+      5,
+      13
+    ],
+    [
+      3,
+      2,
+      0,
+      4,
+      12
+    ],
+    [
+      4,
+      5,
+      7,
+      3,
+      11
+    ],
+    [
+      5,
+      4,
+      6,
+      2,
+      10
+    ],
+    [
+      6,
+      7,
+      5,
+      1,
+      9
+    ],
+    [
+      7,
+      6,
+      4,
+      0,
+      8
+    ]
+  ],
+  "doubled_maximum_edge_load": 2,
+  "upper_bound_proof": "For k edge-disjoint antipodal paths, each path has length>=4, so at least4k edges are used. At each of the2k terminal vertices the used degree is odd and hence<=3; at other vertices it is<=4. Therefore used edges<=32-k. Thus5k<=32 and k<=6. The six-path witness attains the bound.",
+  "general_even_cube_bound": "For Q_d with even d and n=2^d, at most floor(nd/(2(d+1))) antipodal requests can be served using one Bell pair per edge.",
+  "comparison": "arXiv2603.00236 Theorem1 states pairwise universality after restricting to one hypercube layer, but its proof explicitly treats odd d and then invokes two resource copies for arbitrary d. The single-layer restriction is false for d=4 by this witness. This does not refute the full degree7 nested16-node resource or the two-layer repair.",
+  "boundary": "Exact ideal edge-disjoint entanglement-swapping resource model, allowing several independent Bell qubits per intermediate node. No memory noise, calibration, throughput schedule or worst-case universality theorem for the full nested resource is claimed."
+}

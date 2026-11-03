@@ -1,0 +1,275 @@
+{
+  "status": "PASS_NATIVE_DECK_MONODROMY_AND_WEIGHTED_NETWORK",
+  "deck_permutations": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    [
+      2,
+      3,
+      0,
+      1,
+      6,
+      7,
+      4,
+      5,
+      10,
+      11,
+      8,
+      9,
+      14,
+      15,
+      12,
+      13
+    ],
+    [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    [
+      10,
+      11,
+      8,
+      9,
+      14,
+      15,
+      12,
+      13,
+      2,
+      3,
+      0,
+      1,
+      6,
+      7,
+      4,
+      5
+    ],
+    [
+      0,
+      3,
+      2,
+      1,
+      12,
+      15,
+      14,
+      13,
+      8,
+      11,
+      10,
+      9,
+      4,
+      7,
+      6,
+      5
+    ],
+    [
+      2,
+      1,
+      0,
+      3,
+      14,
+      13,
+      12,
+      15,
+      10,
+      9,
+      8,
+      11,
+      6,
+      5,
+      4,
+      7
+    ],
+    [
+      8,
+      11,
+      10,
+      9,
+      4,
+      7,
+      6,
+      5,
+      0,
+      3,
+      2,
+      1,
+      12,
+      15,
+      14,
+      13
+    ],
+    [
+      10,
+      9,
+      8,
+      11,
+      6,
+      5,
+      4,
+      7,
+      2,
+      1,
+      0,
+      3,
+      14,
+      13,
+      12,
+      15
+    ]
+  ],
+  "deck_structure": "C2^3",
+  "deck_exhaustiveness": "Eight explicit label-preserving oriented simplicial automorphisms. A deck map is determined by its image on one base face; there are exactly8 such faces. Connected dual development forces all remaining vertices.",
+  "based_meridian_face_type_loops": [
+    [
+      16,
+      12,
+      20,
+      16
+    ],
+    [
+      16,
+      0,
+      20,
+      16
+    ],
+    [
+      16,
+      0,
+      12,
+      20,
+      0,
+      16
+    ],
+    [
+      16,
+      0,
+      12,
+      16
+    ]
+  ],
+  "meridian_sheet_permutations": [
+    [
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    [
+      5,
+      4,
+      7,
+      6,
+      1,
+      0,
+      3,
+      2
+    ],
+    [
+      6,
+      7,
+      4,
+      5,
+      2,
+      3,
+      0,
+      1
+    ],
+    [
+      4,
+      5,
+      6,
+      7,
+      0,
+      1,
+      2,
+      3
+    ]
+  ],
+  "branch_addresses": [
+    1,
+    2,
+    4,
+    7
+  ],
+  "branch_cycle_type": "2^4 for each of four target vertices",
+  "vertex_stabilizer_order": 2,
+  "shrikhande_srg_parameters": [
+    16,
+    6,
+    2,
+    2
+  ],
+  "shrikhande_homology": {
+    "ranks": [
+      15,
+      31
+    ],
+    "rational_Betti": [
+      1,
+      2,
+      1
+    ]
+  },
+  "rook_2_skeleton_homology": {
+    "ranks": [
+      15,
+      24
+    ],
+    "rational_Betti": [
+      1,
+      9,
+      8
+    ]
+  },
+  "spectral_multiplicities": {
+    "6": 1,
+    "2": 6,
+    "-2": 9
+  },
+  "walk_residuals_at_pi_over_2": {
+    "grid": 3.885780586188048e-16,
+    "knight": 4.0245584642661925e-16,
+    "native_equal": 4.4407107452418744e-16,
+    "native_diagonal_doubled": 4.477019073358563e-16
+  },
+  "exact_transfer_probabilities": {
+    "Shrikhande_adjacent_max": "1/12",
+    "Shrikhande_nonadjacent_max": "1/16"
+  },
+  "no_vertex_PST": "Exact P2 diagonal3/8, offdiagonal+/-1/8: no distinct strongly cospectral vertices. With z=exp(-4it), adjacent amplitude is exp(2it)(z-1)(z+3)/16, nonadjacent exp(2it)(z-1)^2/16.",
+  "weight_repair": "For A(kappa)=grid+kappa*diagonal at t=pi/2, even integer kappa gives antipodal PST; odd integer kappa gives -I. Support stays the same for positive kappa. These are supplied dimensionless uniform coupling Hamiltonians.",
+  "boundary": "The deck group is native to the fixed simplicial cover. A finite graph walk is an ideal single-excitation communication model, not a physical spacetime or fault-tolerant network. Rook comparison uses its2-skeleton, not its full clique complex with eight3-simplices."
+}

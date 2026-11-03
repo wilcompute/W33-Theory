@@ -1,0 +1,129 @@
+{
+  "status": "VERIFIED_NINE_NATIVE_RESEARCH_FRONTS",
+  "baseline": "3db91c076",
+  "integration_head": "6a37ce3b6fd1523f3df400fdfcbf1132ff5f9c03",
+  "utc": "2026-11-03T00:39:06.308128+00:00",
+  "artifact_raw_sha256": {
+    "analysis/w33_20261102_deck_monodromy_network.py": "8f5553ad565f78b1d8b8032357babf2e6fb9f56498d4db55add8fab71d6d352f",
+    "data/w33_20261102_deck_monodromy_network.json": "1a3e6f4bb9a06bfa8f7491097b7d60cc617b5bfcd8aa904828de4730d0628dbb",
+    "analysis/w33_20261102_clifford_native_cubic_repair.py": "57a5c599b434216ec2ea858db85c25db529c09b71fedb719d9a774fb140e6669",
+    "data/w33_20261102_clifford_native_cubic_repair.json": "37006d1f2bead76d4dc98204e7eda2d4af69485621368563074a5bbb29cee7b6",
+    "analysis/w33_20261102_induced_cubic_common_cover.py": "70b47f4a2775e31d3f4dd370eb2ded9aa461aa8aba397156ad51dc86b5a5c45f",
+    "data/w33_20261102_induced_cubic_common_cover.json": "f85af299e6711911f6d46ac95737912838a32031f1b943208d2c3e77d8000e5e",
+    "analysis/w33_20261102_quantized_native_tetrahedron.py": "ca859006b5037d722968ad79d3ba54a72514e5b6a265de77d6e83baf42cb9a62",
+    "data/w33_20261102_quantized_native_tetrahedron.json": "4611145d9a662eb163434737975e6a9c0a9074d25b332049122f1ece404042e5",
+    "analysis/w33_20261102_real_clifford_gate_synthesis.py": "a74fa4856303af8cd3aae0be28d1ca1bb0b189a065bd92962b821cc57432d618",
+    "data/w33_20261102_real_clifford_gate_synthesis.json": "ef7b2e3f42dca2246a0c0adc3176be60762fc443be34b1ebf367deeffe6851d5",
+    "analysis/w33_20261102_deck_twisted_quantum_double.py": "13e57b5202dd556d740ecda1fe29cd37ee1e27f88d59517a9950a2bb07ce303f",
+    "data/w33_20261102_deck_twisted_quantum_double.json": "5d644aea85f70e4c5c98a5358ea428c92d0891645a748a31261db8054d78653e",
+    "analysis/w33_20261102_hypercube_switch_capacity.py": "a824919254bd0e7923989b6c8da3e89e2680e97bd53cf83ccfbb2f15fd920851",
+    "data/w33_20261102_hypercube_switch_capacity.json": "ef8d054fac87b49e8cd5bce81e2db6e57541207cabde8ea7c0e10286c54cacd7",
+    "analysis/w33_20261102_entanglement_metric_axiom_audit.py": "804222bc40bde3c1a2044c9318060ffba6fbf355e205faa5eefa01c0aa1b808e",
+    "data/w33_20261102_entanglement_metric_axiom_audit.json": "4d73f1642214402e2c618a4399c04f9d455d2709c834aa967c486478caff59ba",
+    "analysis/w33_20261102_spin6_rotation_group_audit.py": "69de8ebf3f9879f916876388c5006578b47a39c398b3b52e6598c15776ce0456",
+    "data/w33_20261102_spin6_rotation_group_audit.json": "d5b619b587325ec9f032c90a56b89907f94a1c0033593caea836f9256e1aa0fd",
+    "analysis/w33_20261102_extended_native_validation.py": "d3b37306d700b47d5add131cb3bbcfce9bc5476fc3399ddc8f6a74c235598598",
+    "data/w33_20261102_extended_native_validation.json": "cb47d3fa2ae99d62aff437d94c9728a0f0190811cb24b00c9b8da141b2f02825",
+    "analysis/2026-11-02_eight_native_topology_cubic_quantum_fronts.md": "4a6fafdc0565f85fa45067239f0ec127080f3f8983331805bd41fb1629eaaecc",
+    "tests/test_w33_20261102_six_native_fronts.py": "6a625ff0799911bc1647d52a20f86c87f545c5c2043d05f6bea466e5081ee150",
+    "RESULTS_INDEX.md": "27dbc24593ec671b6ea3194f4826e36ff7427ebd92f13d864e06a701bde0c687",
+    "TOPICAL_ALIASES.md": "8693677996e2d3ab9c39b8ad934833792a8d363f4f2f37b64bb096f31d8fecf7",
+    "analysis/w33_20261102_conditional_symplectic_vacuum.py": "e00a0267445598366eae7b72321b8f596d79b960cde72add737c641f35bbb9cd",
+    "data/w33_20261102_conditional_symplectic_vacuum.json": "5b5e0eff0bcffaee479f71c3b547d2ca486b09e7e58b76e9b15b36165b08fea5",
+    "analysis/2026-11-02_conditional_native_symplectic_vacuum.md": "bed1a3bd062871ef7f2f7e007782bace32898c2224a4085883c3e0c84f85e250",
+    "data/w33_20261102_extended_native_guard_audit.json": "5ffc36d1bcba2900b68e1d3cf9e2aff4420cbbf11ea5356872a1fe6576a2a1a0"
+  },
+  "baseline_input_raw_sha256": {
+    "data/w33_20261102_toroidal_knight_clifford_bridge.json": "fcf98eb416975170bae9c34e2da6a76af12488614d6efe2dbe5786251d701a03",
+    "data/w33_20261102_chiral_surface_development.json": "a0514be5ea7d05c71c91bc76e20fbcf199e893efad39451d66b24ddea0004bc8",
+    "data/w33_20261031_signed_cubic_lift.json": "19e6c0c23784140899036adef54742151f333ac7e2d2b4881c640890b9c1b9b9",
+    "data/w33_20261031_unitary_stabilizer_lift.json": "109dd5cb55973e7d9354fa0eab3d2012fe2f147371922c7582a1f4275308650a",
+    "data/w33_20261101_common_cubic_spinor_extension.json": "f1a855d7402eed073b2f0778a1c1f5339786e5aafb2348220e53ebb9d4c87359",
+    "data/w33_20261102_common_cover_interactions.json": "85a518cf0f2fb85b787e4c581bff505a7afe99db9444a2a3e411985dec8bf663"
+  },
+  "preserved_unrelated_raw_sha256": {
+    ".mcp.json": "12a6b5758cc12212fb7788cecc3d2f3e2e8e9660f9e45a98bdc46f0974e388b3",
+    "analysis/w33_pass10956_albert_spin8_halfspin_normalizer.py": "970484379ebad8825a7782fa58458988b9925862b05eb7f5dfbf723d763e5aef",
+    "data/w33_20261009_toe22_scale_nogo.json": "82dbb4a48d2f9f5c0631bc0912b380e18760c039336e7dd4c4801d7d80d1bfdc",
+    "data/w33_20261009_toe22_two_boson_quantum_selector.json": "8dc1270712e753a04cff78365537018a9f88bdaf693f1d1fe6e968022397a0ad",
+    "data/w33_20261009_toe26_e6_sector_charge_dynamics.json": "581dd36c156de2f22093635c4c7ea9c56173a2153860e88822b29d20ff83403e",
+    "data/w33_20261013_toe61_charge_gap.json": "1eec3c3cf0ae96c95ad483a1918c457fe843bac83c3c27fe4fc8d93a85fa3cc0",
+    "data/w33_pass10956_albert_spin8_halfspin_normalizer.json": "38f9662ad9d4b179d97c02a3ab72a0c3ccd90b5e9bb7910e092776350e93db5d",
+    "data/w33_pass11949_axiflavon_quality_fails.json": "4c41fc7de9d19ca15e672436df6f503896853fffad12c564a188d24fc37270ef",
+    "papers/photonic_hardware_atlas/main.tex": "c337c768dbf59701a5bcafae906903ad544a45aa36204b7c039f68ddb088b70d"
+  },
+  "science_validation": "PASS_NINE_PRODUCERS_AND_44_DIRECT_TEST_CASES",
+  "conditional_vacuum_validation": "PASS_CONDITIONAL_CLASSICAL_NATIVE_SU4_TO_USP4_VACUUM",
+  "pytest_collection_passed": false,
+  "all_repository_guards_zero": false,
+  "supplemental_guard_limitations": [
+    {
+      "id": "key-nearmiss",
+      "exit_code": 124
+    }
+  ],
+  "regenerated_indexes": {
+    "results_files": 13463,
+    "distinctive_results": 18266,
+    "unique_results": 7935,
+    "topical_files": 6030,
+    "topical_tokens": 1352
+  },
+  "guard_limitations": [
+    {
+      "id": "stale-boundaries",
+      "exit_code": 124
+    },
+    {
+      "id": "tag-540-check",
+      "exit_code": 1
+    },
+    {
+      "id": "pass-namespace-collision-guard",
+      "exit_code": 1
+    },
+    {
+      "id": "topical-aliases",
+      "exit_code": 124
+    },
+    {
+      "id": "key-nearmiss",
+      "exit_code": 124
+    }
+  ],
+  "known_prior_guard_audits": [
+    "data/w33_20261102_knight_bridge_guard_audit.json",
+    "data/w33_20261102_repository_guard_audit.json"
+  ],
+  "results": {
+    "native_deck_group": "C2^3",
+    "branch_addresses": [
+      1,
+      2,
+      4,
+      7
+    ],
+    "changed_native27_linear_group": 46080,
+    "induced_common_cover_order": 53126622932283508654080,
+    "quantum_quartet_dimension": 256,
+    "spinor_minimum_CNOT": 1,
+    "register_minimum_CNOT": 8,
+    "conditional_native_VEV_nonzero_coordinates": [
+      12,
+      14,
+      15,
+      17
+    ],
+    "conditional_SU4_F_and_D_flat": true,
+    "conditional_finite_spinor_stabilizer": 3840,
+    "chosen_typeIII_anyon_dimensions": {
+      "1": 8,
+      "2": 14
+    },
+    "single_layer_antipodal_capacity": 6,
+    "MI_triangle_violation_margin": 8.92327261618711
+  },
+  "reconciliation": "General Clifford/SL6/Pfaffian, Shrikhande/rook, typeIII double and routing mathematics are credited as prior. Explicit native maps, compatible repairs and finite research audits are the scope. No numerical coincidence identifies physical particles or spacetime.",
+  "publication": "Normal master push with explicit owned files only. Git CLI fallback: no GitKraken tools are exposed.",
+  "limits": "Declared finite models; no thermodynamic phase, native cocycle selection, calibrated hardware, Lorentzian spacetime or full TOE. Complete weekly/PDF audit remains unfinished."
+}
