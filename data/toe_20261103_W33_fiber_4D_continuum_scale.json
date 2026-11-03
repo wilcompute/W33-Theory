@@ -1,0 +1,171 @@
+{
+  "status": "PASS_EXACT_W33_INTERNAL_FIBER_4D_BASE_SPECTRAL_SCALE_SEPARATION",
+  "construction": "Cartesian product of finite symplectic GQ W(3,3) point graph 40 vertices degree12, with a supplied periodic 4D LxLxLxL nearest-neighbor torus degree8. Combinatorial Laplacian kronecker sum; not a direct physical Kaluza\u2013Klein model.",
+  "exact_srg_polynomial": "A_W33^2 = 8 I - 2 A_W33 +4 J",
+  "adjacency_spec": {
+    "12": 1,
+    "2": 24,
+    "-4": 15
+  },
+  "lap_spec": {
+    "0": 1,
+    "10": 24,
+    "16": 15
+  },
+  "regular_graph_normalized_gap": 0.8333333333333334,
+  "q_GQ_bare_graph_normalized_gap_tower": [
+    {
+      "q": 3,
+      "vertices": 40,
+      "degree": 12,
+      "normalized_point_graph_gap": 0.8333333333333334,
+      "diameter_upper_bound": 2
+    },
+    {
+      "q": 5,
+      "vertices": 156,
+      "degree": 30,
+      "normalized_point_graph_gap": 0.8666666666666667,
+      "diameter_upper_bound": 2
+    },
+    {
+      "q": 7,
+      "vertices": 400,
+      "degree": 56,
+      "normalized_point_graph_gap": 0.8928571428571429,
+      "diameter_upper_bound": 2
+    },
+    {
+      "q": 9,
+      "vertices": 820,
+      "degree": 90,
+      "normalized_point_graph_gap": 0.9111111111111111,
+      "diameter_upper_bound": 2
+    },
+    {
+      "q": 11,
+      "vertices": 1464,
+      "degree": 132,
+      "normalized_point_graph_gap": 0.9242424242424242,
+      "diameter_upper_bound": 2
+    },
+    {
+      "q": 19,
+      "vertices": 7240,
+      "degree": 380,
+      "normalized_point_graph_gap": 0.9526315789473684,
+      "diameter_upper_bound": 2
+    },
+    {
+      "q": 31,
+      "vertices": 30784,
+      "degree": 992,
+      "normalized_point_graph_gap": 0.969758064516129,
+      "diameter_upper_bound": 2
+    }
+  ],
+  "rows": [
+    {
+      "L_per_spatial_coordinate": 4,
+      "4D_base_vertices": 256,
+      "product_graph_vertices": 10240,
+      "base_first_nonzero_Laplacian_eigenvalue": 1.9999999999999998,
+      "normalized_product_first_eigenvalue": 0.09999999999999999,
+      "internal_W33_24d_carrier_Laplacian_eigenvalue": 10,
+      "internal_W33_15d_carrier_Laplacian_eigenvalue": 16,
+      "internal_over_base_first_gap": 5.000000000000001,
+      "physical_internal_mass_squared_if_a_phys_length_over_L_and_standard_kinetic_operator": 160,
+      "physical_base_first_mass_squared_if_a_phys_length_over_L": 31.999999999999996
+    },
+    {
+      "L_per_spatial_coordinate": 6,
+      "4D_base_vertices": 1296,
+      "product_graph_vertices": 51840,
+      "base_first_nonzero_Laplacian_eigenvalue": 0.9999999999999998,
+      "normalized_product_first_eigenvalue": 0.04999999999999999,
+      "internal_W33_24d_carrier_Laplacian_eigenvalue": 10,
+      "internal_W33_15d_carrier_Laplacian_eigenvalue": 16,
+      "internal_over_base_first_gap": 10.000000000000002,
+      "physical_internal_mass_squared_if_a_phys_length_over_L_and_standard_kinetic_operator": 360,
+      "physical_base_first_mass_squared_if_a_phys_length_over_L": 35.999999999999986
+    },
+    {
+      "L_per_spatial_coordinate": 8,
+      "4D_base_vertices": 4096,
+      "product_graph_vertices": 163840,
+      "base_first_nonzero_Laplacian_eigenvalue": 0.5857864376269049,
+      "normalized_product_first_eigenvalue": 0.029289321881345243,
+      "internal_W33_24d_carrier_Laplacian_eigenvalue": 10,
+      "internal_W33_15d_carrier_Laplacian_eigenvalue": 16,
+      "internal_over_base_first_gap": 17.07106781186548,
+      "physical_internal_mass_squared_if_a_phys_length_over_L_and_standard_kinetic_operator": 640,
+      "physical_base_first_mass_squared_if_a_phys_length_over_L": 37.49033200812191
+    },
+    {
+      "L_per_spatial_coordinate": 12,
+      "4D_base_vertices": 20736,
+      "product_graph_vertices": 829440,
+      "base_first_nonzero_Laplacian_eigenvalue": 0.2679491924311226,
+      "normalized_product_first_eigenvalue": 0.01339745962155613,
+      "internal_W33_24d_carrier_Laplacian_eigenvalue": 10,
+      "internal_W33_15d_carrier_Laplacian_eigenvalue": 16,
+      "internal_over_base_first_gap": 37.32050807568879,
+      "physical_internal_mass_squared_if_a_phys_length_over_L_and_standard_kinetic_operator": 1440,
+      "physical_base_first_mass_squared_if_a_phys_length_over_L": 38.58468371008165
+    },
+    {
+      "L_per_spatial_coordinate": 16,
+      "4D_base_vertices": 65536,
+      "product_graph_vertices": 2621440,
+      "base_first_nonzero_Laplacian_eigenvalue": 0.15224093497742652,
+      "normalized_product_first_eigenvalue": 0.007612046748871326,
+      "internal_W33_24d_carrier_Laplacian_eigenvalue": 10,
+      "internal_W33_15d_carrier_Laplacian_eigenvalue": 16,
+      "internal_over_base_first_gap": 65.68535592272043,
+      "physical_internal_mass_squared_if_a_phys_length_over_L_and_standard_kinetic_operator": 2560,
+      "physical_base_first_mass_squared_if_a_phys_length_over_L": 38.97367935422119
+    },
+    {
+      "L_per_spatial_coordinate": 24,
+      "4D_base_vertices": 331776,
+      "product_graph_vertices": 13271040,
+      "base_first_nonzero_Laplacian_eigenvalue": 0.06814834742186338,
+      "normalized_product_first_eigenvalue": 0.0034074173710931686,
+      "internal_W33_24d_carrier_Laplacian_eigenvalue": 10,
+      "internal_W33_15d_carrier_Laplacian_eigenvalue": 16,
+      "internal_over_base_first_gap": 146.7387013524527,
+      "physical_internal_mass_squared_if_a_phys_length_over_L_and_standard_kinetic_operator": 5760,
+      "physical_base_first_mass_squared_if_a_phys_length_over_L": 39.253448114993304
+    },
+    {
+      "L_per_spatial_coordinate": 48,
+      "4D_base_vertices": 5308416,
+      "product_graph_vertices": 212336640,
+      "base_first_nonzero_Laplacian_eigenvalue": 0.017110277252379236,
+      "normalized_product_first_eigenvalue": 0.0008555138626189617,
+      "internal_W33_24d_carrier_Laplacian_eigenvalue": 10,
+      "internal_W33_15d_carrier_Laplacian_eigenvalue": 16,
+      "internal_over_base_first_gap": 584.4440655460139,
+      "physical_internal_mass_squared_if_a_phys_length_over_L_and_standard_kinetic_operator": 23040,
+      "physical_base_first_mass_squared_if_a_phys_length_over_L": 39.42207878948176
+    }
+  ],
+  "numeric_4D_L4_lap_low_eigs": [
+    -3.552755834139116e-15,
+    1.9999999999999925,
+    1.9999999999999936,
+    1.9999999999999984,
+    1.9999999999999998,
+    2.0,
+    2.0000000000000013,
+    2.0000000000000018,
+    2.000000000000002,
+    3.9999999999999867
+  ],
+  "asymptotic_claim": "With spatial coordinate length held fixed and a=1/L, continuum base Lap first gap scales (2pi)^2/L\u00b2 and physical base eigen tends (2pi)^2, but if internal W33 links have same a^-2 kinetic strength, their positive 24-sector physical eigen=10 L\u00b2 -> infinity. To retain finite 24-sector masses, independently scale internal link weight as a\u00b2 relative to base, or provide a distinct internal geometric radius. This is a parametric scale separation, NOT a no-go against any weighted/tuned unified spectral action.",
+  "topology_boundary": "The torus and its 4D topology were supplied; no W33 adjacency alone generated a four-dimensional manifold or chiral index, and no Einstein action derived.",
+  "literature": [
+    "https://doi.org/10.1007/s11005-026-02080-w",
+    "https://doi.org/10.3390/universe12070205"
+  ]
+}

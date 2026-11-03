@@ -1,0 +1,68 @@
+{
+  "status": "PASS_MATRIX_FREE_Q15_L10_KRYLOV_OVERLAP_SIGN_VECTOR_DIAGNOSTIC",
+  "L": 10,
+  "q": 15,
+  "dimension": 40000,
+  "nonzeros": 680000,
+  "H2_smallest_ritz_estimates": [
+    0.012626132035206912,
+    0.012753452214859018,
+    0.013144879556818388
+  ],
+  "H2_ritz_residual_norms": [
+    0.005666513450576291,
+    0.005370028419520672,
+    0.005414185119525129
+  ],
+  "H2_Ritz_iterations": 74,
+  "krylov_m_comparisons": [
+    {
+      "m": 24,
+      "norm_sign_H_v": 1.0,
+      "change_from_previous_lanczos_m": null,
+      "iterations": 24,
+      "min_abs_Ritz": 0.442271706310638,
+      "krylov_norm": 1.0
+    },
+    {
+      "m": 48,
+      "norm_sign_H_v": 1.0000000000000002,
+      "change_from_previous_lanczos_m": 0.06377839069485731,
+      "iterations": 48,
+      "min_abs_Ritz": 0.12043583277854282,
+      "krylov_norm": 1.0000000000000002
+    },
+    {
+      "m": 72,
+      "norm_sign_H_v": 1.0000000000000004,
+      "change_from_previous_lanczos_m": 0.0006228430486353437,
+      "iterations": 72,
+      "min_abs_Ritz": 0.11607268297997714,
+      "krylov_norm": 1.0000000000000004
+    },
+    {
+      "m": 96,
+      "norm_sign_H_v": 1.0000000000000002,
+      "change_from_previous_lanczos_m": 0.0006877586749036469,
+      "iterations": 96,
+      "min_abs_Ritz": 0.0058021087995377835,
+      "krylov_norm": 1.0000000000000002
+    },
+    {
+      "m": 128,
+      "norm_sign_H_v": 1.0000000000000009,
+      "change_from_previous_lanczos_m": 0.0006947541287878314,
+      "iterations": 128,
+      "min_abs_Ritz": 0.10937171761873443,
+      "krylov_norm": 1.0000000000000009
+    }
+  ],
+  "approx_sign_H_squared_on_single_vector_relative_error": 1.458745587485603e-07,
+  "approx_sign_H_gauge_transform_vector_relative_defect": 2.308877637969437e-15,
+  "wall_seconds": 29.230162799998652,
+  "spectral_scope": "LOBPCG gives upper bounds to smallest H\u00b2 eigenvalues (Ritz variational principle), NOT a rigorous gap lower bound. Lanczos sign action on ONE complex random vector plus its squared action, NOT full sign matrix, sign trace, large-Q index or proof of uniform locality or a Weyl measure. Potential tiny Ritz values make sign discontinuous, so finite Krylov convergence must be checked.",
+  "index_scope": "The exact continuum charge-15 index magnitude for unit flux12 x unit flux34 is 225 if the admissible lattice background is in the corresponding index stable sector; not numerically established for this L10 kernel.",
+  "prior_methods": [
+    "https://doi.org/10.1007/s11005-026-02080-w"
+  ]
+}

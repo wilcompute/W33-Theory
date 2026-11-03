@@ -1,0 +1,77 @@
+{
+  "status": "PASS_RETARDED_GRAVITY_MEDIATOR_FREQUENCY_NULL_TEST",
+  "source_distance_m": 0.0002,
+  "Yukawa_range_m": 0.00015,
+  "light_propagation_delay_seconds": 6.671281903963041e-13,
+  "massless_source_modulation_frequency_for_0p01_rad_phase_lag_Hz": 2385672579.618471,
+  "massless_source_modulation_frequency_for_0p1_rad_phase_lag_Hz": 23856725796.18471,
+  "Yukawa_evanescent_to_propagating_frequency_Hz": 318089677282.4629,
+  "frequency_table": [
+    {
+      "modulation_frequency_Hz": 1,
+      "massless_retarded_phase_lag_rad": 4.191690043903363e-12,
+      "Yukawa_response_magnitude_over_static": 0.9999999999999998,
+      "Yukawa_dynamic_propagation_phase_rad": 0.0
+    },
+    {
+      "modulation_frequency_Hz": 100,
+      "massless_retarded_phase_lag_rad": 4.191690043903364e-10,
+      "Yukawa_response_magnitude_over_static": 0.9999999999999998,
+      "Yukawa_dynamic_propagation_phase_rad": 0.0
+    },
+    {
+      "modulation_frequency_Hz": 1000,
+      "massless_retarded_phase_lag_rad": 4.191690043903363e-09,
+      "Yukawa_response_magnitude_over_static": 0.9999999999999998,
+      "Yukawa_dynamic_propagation_phase_rad": 0.0
+    },
+    {
+      "modulation_frequency_Hz": 100000.0,
+      "massless_retarded_phase_lag_rad": 4.1916900439033634e-07,
+      "Yukawa_response_magnitude_over_static": 1.000000000000066,
+      "Yukawa_dynamic_propagation_phase_rad": 0.0
+    },
+    {
+      "modulation_frequency_Hz": 1000000.0,
+      "massless_retarded_phase_lag_rad": 4.191690043903364e-06,
+      "Yukawa_response_magnitude_over_static": 1.0000000000065887,
+      "Yukawa_dynamic_propagation_phase_rad": 0.0
+    },
+    {
+      "modulation_frequency_Hz": 100000000.0,
+      "massless_retarded_phase_lag_rad": 0.00041916900439033635,
+      "Yukawa_response_magnitude_over_static": 1.000000065888499,
+      "Yukawa_dynamic_propagation_phase_rad": 0.0
+    },
+    {
+      "modulation_frequency_Hz": 1000000000.0,
+      "massless_retarded_phase_lag_rad": 0.004191690043903364,
+      "Yukawa_response_magnitude_over_static": 1.0000065888875207,
+      "Yukawa_dynamic_propagation_phase_rad": 0.0
+    },
+    {
+      "modulation_frequency_Hz": 10000000000.0,
+      "massless_retarded_phase_lag_rad": 0.041916900439033636,
+      "Yukawa_response_magnitude_over_static": 1.0006592650521624,
+      "Yukawa_dynamic_propagation_phase_rad": 0.0
+    },
+    {
+      "modulation_frequency_Hz": 300000000000.0,
+      "massless_retarded_phase_lag_rad": 1.257507013171009,
+      "Yukawa_response_magnitude_over_static": 2.4353783912676623,
+      "Yukawa_dynamic_propagation_phase_rad": 0.0
+    },
+    {
+      "modulation_frequency_Hz": 500000000000.0,
+      "massless_retarded_phase_lag_rad": 2.0958450219516815,
+      "Yukawa_response_magnitude_over_static": 3.7936678946831783,
+      "Yukawa_dynamic_propagation_phase_rad": 1.6170307907587496
+    }
+  ],
+  "theory": "For a linear relativistic massless retarded 3D wave Green function response to a harmonic source, G_omega(r)\u221de^(i omega r/c)/r. Relative to static the delay is omega r/c. Massive scalar KG Green is G_omega\u221dexp[-r sqrt(lambda^-2-(omega/c)^2)]/r for omega<c/lambda, oscillatory above the mass threshold.",
+  "scope": "Ideal linear scalar/massless-wave Green functions with externally chosen separation. A full spin-2 graviton QFT, source worldline interferometer, quantum gravitational commutator/noise, Casimir, electromagnetic screening and experimental feasibility are NOT modeled. The massless waveform phase is not a proof of graviton quantization; in a true finite-size GIE experiment, a measured entangling phase is not simply the oscillatory Green-function phase.",
+  "prior": [
+    "https://doi.org/10.1103/lq47-1hfg",
+    "https://doi.org/10.1103/r8ry-sp35"
+  ]
+}

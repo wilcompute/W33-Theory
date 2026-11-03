@@ -1,0 +1,25 @@
+{
+  "status": "PASS_EXACT_HYPERBOLIC_ISOMETRY_FADING_MASS_WARD_NO_GO",
+  "model": "Metric ds^2=dx^2+exp(-2 beta x)dy^2, K=(1,beta*y), Uchi=(m0^2/2) exp[-2(beta+gamma)x] y^2, V(x)=V0 exp(-lam x). x=phi/Mpl and y=chi/Mpl; metric factors are dimensionless.",
+  "symbolic_Lie_K_metric": [
+    [
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0"
+    ]
+  ],
+  "exact_scalar_curvature_over_1_over_Mpl_squared": "-2*beta**2",
+  "finite_isometry_pulledback_metric_ratio": "1",
+  "finite_isometry_dark_mass_potential_ratio": "exp(-2*a*gamma)",
+  "finite_isometry_rolling_potential_ratio": "exp(-a*lam)",
+  "canonically_normalized_dark_mass_squared": "m**2*exp(-2*gamma*x)",
+  "K_derivative_of_dark_potential": "-gamma*m**2*y**2*exp(-2*x*(beta + gamma))",
+  "K_derivative_of_rolling_potential": "-V0*lam*exp(-lam*x)",
+  "theorem": "Within the declared exact two-field hyperbolic sigma model, K is Killing. Global shift+rescaling invariance of BOTH Uchi and V for arbitrary a and generic nonzero fields requires gamma=0 and lambda=0 (or absent corresponding terms). Exact isometry protects constant canonical DM mass, not fading canonical DM mass or a rolling exponential potential. Realizing both with nonzero slopes requires explicitly broken/spurionic isometry, additional fields, an unconventional realization, or noncompact modulus with no such exact protection.",
+  "non_claims": "Not a proof that all shift-symmetric or SUSY/monodromy models fail. The metric has constant negative field-space curvature, known in sigma models and alpha-attractors. No gravity quantization, UV completion or coupling to SM fermions constructed.",
+  "physical_hypothesis_bridge": "If the TOE invokes one field-space isometry as a universal protection mechanism, the same symmetry imposes Ward identities on dark mass and rolling potential. This supplies a precise falsification criterion without matching arbitrary graph counts.",
+  "background_prior": "Earlier repository compact axion exact exponential obstruction and local SUSY portal; this separate hyperbolic isometry Ward identity is not asserted to supersede or prove prior speculative unification."
+}

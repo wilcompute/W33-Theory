@@ -1,0 +1,49 @@
+{
+  "status": "PASS_DIMENSIONFUL_ULTRALIGHT_JEANS_CROSSING_AND_MASS_HISTORY",
+  "input_fit": "analysis/toe_uv/class_fit_dovekie.json:free_neg",
+  "mass_today_eV_illustrative": 1e-20,
+  "Omega_chi_today": 0.2626662752496019,
+  "H0_s_inv": 2.1978790387200942e-18,
+  "m_recombination_over_today_from_actual_fitted_field_excursion": 1.0149281190426924,
+  "table": [
+    {
+      "epoch": "z0",
+      "a": 1.0,
+      "mass_ratio": 1.0,
+      "kJeans_h_Mpc": 982.6150493608732,
+      "checks_k_over_kJeans_to_fourth": {
+        "0.05": 6.704190896442315e-18,
+        "0.2": 1.7162728694892327e-15,
+        "1": 1.0726705434307701e-12,
+        "10": 1.0726705434307704e-08,
+        "100": 0.00010726705434307701,
+        "300": 0.008688631401789238,
+        "500": 0.06704190896442315,
+        "1000": 1.0726705434307704
+      }
+    },
+    {
+      "epoch": "z1090",
+      "a": 0.0009082652134423251,
+      "mass_ratio": 1.0149281190426924,
+      "kJeans_h_Mpc": 172.48965174277672,
+      "checks_k_over_kJeans_to_fourth": {
+        "0.05": 7.06037609684958e-15,
+        "0.2": 1.8074562807934926e-12,
+        "1": 1.1296601754959325e-09,
+        "10": 1.1296601754959323e-05,
+        "100": 0.11296601754959326,
+        "300": 9.15024742151705,
+        "500": 70.60376096849578,
+        "1000": 1129.6601754959324
+      }
+    }
+  ],
+  "Jeans_fractional_shift_at_recombination_due_only_to_mass_variation": 0.01117532608180527,
+  "formula": "Effective nonrelativistic ultralight scalar pressure omega_Q\u00b2= hbar\u00b2 k_comoving^4/(4m_phys\u00b2a^4) and gravitational driving 4piG rho_chi; kJeans=[16piG rho_chi (mchi/hbar)^2 a^4/c^4]^(1/4), kJeans(a)=kJeans0*a^(1/4)*(m(a)/m0)^(3/4) when comoving particle number conserved.",
+  "scope": "Linear Newtonian pressure-versus-self-gravity COMPARISON using a frozen mass input and fitted CLASS field excursion endpoints, NOT an accurate ultralight perturbation treatment, Boltzmann hierarchy or data-driven axion mass posterior. WKB after oscillation is assumed; at radiation era full transfer must be computed. Normalization uses the frozen cosmology and a separate supplied ultralight mass, so derived kJeans does not imply evidence for FDM.",
+  "prior": [
+    "https://doi.org/10.1103/PhysRevD.105.123529",
+    "https://doi.org/10.1103/fy1y-rjst"
+  ]
+}

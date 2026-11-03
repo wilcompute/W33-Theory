@@ -1,0 +1,333 @@
+{
+  "status": "PASS_REAL_CLASS_RELATIVE_ENTROPY_GAUGE_INVARIANT_DIAGNOSTIC",
+  "runs": [
+    {
+      "label": "fading_fit",
+      "info": {
+        "rd": 147.030161,
+        "s8": 0.825051,
+        "H0": 0.0002262213706727,
+        "om": 0.3059022601286444,
+        "S8": 0.8331275778072653,
+        "phi0": 0.3845070556342,
+        "phi_rec": 0.10491296737435724
+      },
+      "results": [
+        {
+          "z": 0.0,
+          "k_hMpc": 0.05,
+          "delta_b_over_delta_c": 0.988275856092164,
+          "delta_b_minus_delta_c_over_delta_c": -0.011724143907836068,
+          "gauge_invariant_Sbc_over_delta_c": -0.020102625118164394,
+          "difference_Sbc_minus_raw_over_delta_c": -0.008378481210328326,
+          "baryon_rho_log_derivative": -3.0000000004147296,
+          "CDM_rho_log_derivative": -2.9750734037934308,
+          "effective_mass_log_derivative_minus_dlnm_over_dN": -0.02492659620656923,
+          "beta_times_phi_N_if_fading": -0.024926595671272787,
+          "raw_diff_under_gauge_shift_relative_change": -0.0009970638648519128,
+          "Sbc_gauge_transform_absolute_error": 0.0
+        },
+        {
+          "z": 0.0,
+          "k_hMpc": 0.1,
+          "delta_b_over_delta_c": 0.9880147973233715,
+          "delta_b_minus_delta_c_over_delta_c": -0.011985202676628533,
+          "gauge_invariant_Sbc_over_delta_c": -0.020363683886920843,
+          "difference_Sbc_minus_raw_over_delta_c": -0.008378481210292311,
+          "baryon_rho_log_derivative": -3.0000000004147296,
+          "CDM_rho_log_derivative": -2.9750734037934308,
+          "effective_mass_log_derivative_minus_dlnm_over_dN": -0.02492659620656923,
+          "beta_times_phi_N_if_fading": -0.024926595671272787,
+          "raw_diff_under_gauge_shift_relative_change": -0.0009970638648520596,
+          "Sbc_gauge_transform_absolute_error": 1.3642420526593924e-12
+        },
+        {
+          "z": 0.0,
+          "k_hMpc": 0.2,
+          "delta_b_over_delta_c": 0.9903060447761082,
+          "delta_b_minus_delta_c_over_delta_c": -0.009693955223891826,
+          "gauge_invariant_Sbc_over_delta_c": -0.018072436434500832,
+          "difference_Sbc_minus_raw_over_delta_c": -0.008378481210609006,
+          "baryon_rho_log_derivative": -3.0000000004147296,
+          "CDM_rho_log_derivative": -2.9750734037934308,
+          "effective_mass_log_derivative_minus_dlnm_over_dN": -0.02492659620656923,
+          "beta_times_phi_N_if_fading": -0.024926595671272787,
+          "raw_diff_under_gauge_shift_relative_change": -0.0009970638648517886,
+          "Sbc_gauge_transform_absolute_error": 2.7284841053187847e-12
+        },
+        {
+          "z": 0.0,
+          "k_hMpc": 1.0,
+          "delta_b_over_delta_c": 0.9895831719968212,
+          "delta_b_minus_delta_c_over_delta_c": -0.010416828003178832,
+          "gauge_invariant_Sbc_over_delta_c": -0.018795309213687994,
+          "difference_Sbc_minus_raw_over_delta_c": -0.008378481210509162,
+          "baryon_rho_log_derivative": -3.0000000004147296,
+          "CDM_rho_log_derivative": -2.9750734037934308,
+          "effective_mass_log_derivative_minus_dlnm_over_dN": -0.02492659620656923,
+          "beta_times_phi_N_if_fading": -0.024926595671272787,
+          "raw_diff_under_gauge_shift_relative_change": -0.0009970638648518638,
+          "Sbc_gauge_transform_absolute_error": 5.4569682106375694e-12
+        },
+        {
+          "z": 1.0,
+          "k_hMpc": 0.05,
+          "delta_b_over_delta_c": 0.9826686762433977,
+          "delta_b_minus_delta_c_over_delta_c": -0.017331323756602304,
+          "gauge_invariant_Sbc_over_delta_c": -0.018732402483884435,
+          "difference_Sbc_minus_raw_over_delta_c": -0.0014010787272821306,
+          "baryon_rho_log_derivative": -2.999999999323649,
+          "CDM_rho_log_derivative": -2.9958026439806837,
+          "effective_mass_log_derivative_minus_dlnm_over_dN": -0.004197356019316256,
+          "beta_times_phi_N_if_fading": -0.0041973555047011765,
+          "raw_diff_under_gauge_shift_relative_change": -0.00016789421371864223,
+          "Sbc_gauge_transform_absolute_error": 6.821210263296962e-13
+        },
+        {
+          "z": 1.0,
+          "k_hMpc": 0.1,
+          "delta_b_over_delta_c": 0.9822545680589001,
+          "delta_b_minus_delta_c_over_delta_c": -0.01774543194109994,
+          "gauge_invariant_Sbc_over_delta_c": -0.019146510668475596,
+          "difference_Sbc_minus_raw_over_delta_c": -0.0014010787273756563,
+          "baryon_rho_log_derivative": -2.999999999323649,
+          "CDM_rho_log_derivative": -2.9958026439806837,
+          "effective_mass_log_derivative_minus_dlnm_over_dN": -0.004197356019316256,
+          "beta_times_phi_N_if_fading": -0.0041973555047011765,
+          "raw_diff_under_gauge_shift_relative_change": -0.00016789421371864679,
+          "Sbc_gauge_transform_absolute_error": 0.0
+        },
+        {
+          "z": 1.0,
+          "k_hMpc": 0.2,
+          "delta_b_over_delta_c": 0.985927031848076,
+          "delta_b_minus_delta_c_over_delta_c": -0.014072968151924074,
+          "gauge_invariant_Sbc_over_delta_c": -0.015474046878471754,
+          "difference_Sbc_minus_raw_over_delta_c": -0.0014010787265476795,
+          "baryon_rho_log_derivative": -2.999999999323649,
+          "CDM_rho_log_derivative": -2.9958026439806837,
+          "effective_mass_log_derivative_minus_dlnm_over_dN": -0.004197356019316256,
+          "beta_times_phi_N_if_fading": -0.0041973555047011765,
+          "raw_diff_under_gauge_shift_relative_change": -0.00016789421371857848,
+          "Sbc_gauge_transform_absolute_error": 1.3642420526593924e-12
+        },
+        {
+          "z": 1.0,
+          "k_hMpc": 1.0,
+          "delta_b_over_delta_c": 0.9847694973326814,
+          "delta_b_minus_delta_c_over_delta_c": -0.015230502667318608,
+          "gauge_invariant_Sbc_over_delta_c": -0.01663158139412725,
+          "difference_Sbc_minus_raw_over_delta_c": -0.001401078726808643,
+          "baryon_rho_log_derivative": -2.999999999323649,
+          "CDM_rho_log_derivative": -2.9958026439806837,
+          "effective_mass_log_derivative_minus_dlnm_over_dN": -0.004197356019316256,
+          "beta_times_phi_N_if_fading": -0.0041973555047011765,
+          "raw_diff_under_gauge_shift_relative_change": -0.00016789421371852606,
+          "Sbc_gauge_transform_absolute_error": 2.7284841053187847e-12
+        }
+      ],
+      "background_phi_scf_field_present": true,
+      "background_fields_for_derivative": {
+        "z": [
+          0.0,
+          0.0008062497754249,
+          0.001613149589564,
+          0.002420699966483,
+          0.003228901430713
+        ],
+        "rho_cdm": [
+          1.317108514561e-08,
+          1.320270329388e-08,
+          1.323439761288e-08,
+          1.326616828687e-08,
+          1.329801550058e-08
+        ]
+      }
+    },
+    {
+      "label": "fixed_params_no_mass_coupling",
+      "info": {
+        "rd": 146.93477,
+        "s8": 0.804331,
+        "H0": 0.000226221370673,
+        "om": 0.31120068309139337,
+        "S8": 0.8192085017418504,
+        "phi0": -0.2785128620298,
+        "phi_rec": -2.723923763606886e-10
+      },
+      "results": [
+        {
+          "z": 0.0,
+          "k_hMpc": 0.05,
+          "delta_b_over_delta_c": 0.9936359585759045,
+          "delta_b_minus_delta_c_over_delta_c": -0.006364041424095555,
+          "gauge_invariant_Sbc_over_delta_c": -0.006364041314682671,
+          "difference_Sbc_minus_raw_over_delta_c": 1.0941288324682641e-10,
+          "baryon_rho_log_derivative": -3.0000000004147296,
+          "CDM_rho_log_derivative": -3.0000000007403287,
+          "effective_mass_log_derivative_minus_dlnm_over_dN": 7.403286872431636e-10,
+          "beta_times_phi_N_if_fading": -0.0,
+          "raw_diff_under_gauge_shift_relative_change": 1.3024008652020002e-11,
+          "Sbc_gauge_transform_absolute_error": 0.0
+        },
+        {
+          "z": 0.0,
+          "k_hMpc": 0.1,
+          "delta_b_over_delta_c": 0.9933780899942439,
+          "delta_b_minus_delta_c_over_delta_c": -0.006621910005756041,
+          "gauge_invariant_Sbc_over_delta_c": -0.006621909896307587,
+          "difference_Sbc_minus_raw_over_delta_c": 1.0944845424382972e-10,
+          "baryon_rho_log_derivative": -3.0000000004147296,
+          "CDM_rho_log_derivative": -3.0000000007403287,
+          "effective_mass_log_derivative_minus_dlnm_over_dN": 7.403286872431636e-10,
+          "beta_times_phi_N_if_fading": -0.0,
+          "raw_diff_under_gauge_shift_relative_change": 1.3024106430217604e-11,
+          "Sbc_gauge_transform_absolute_error": 1.3642420526593924e-12
+        },
+        {
+          "z": 0.0,
+          "k_hMpc": 0.2,
+          "delta_b_over_delta_c": 0.9956990924302616,
+          "delta_b_minus_delta_c_over_delta_c": -0.004300907569738485,
+          "gauge_invariant_Sbc_over_delta_c": -0.004300907460610921,
+          "difference_Sbc_minus_raw_over_delta_c": 1.0912756404723799e-10,
+          "baryon_rho_log_derivative": -3.0000000004147296,
+          "CDM_rho_log_derivative": -3.0000000007403287,
+          "effective_mass_log_derivative_minus_dlnm_over_dN": 7.403286872431636e-10,
+          "beta_times_phi_N_if_fading": -0.0,
+          "raw_diff_under_gauge_shift_relative_change": 1.3023972356281616e-11,
+          "Sbc_gauge_transform_absolute_error": 0.0
+        },
+        {
+          "z": 0.0,
+          "k_hMpc": 1.0,
+          "delta_b_over_delta_c": 0.9949644165497513,
+          "delta_b_minus_delta_c_over_delta_c": -0.005035583450248694,
+          "gauge_invariant_Sbc_over_delta_c": -0.005035583341019561,
+          "difference_Sbc_minus_raw_over_delta_c": 1.0922913346451958e-10,
+          "baryon_rho_log_derivative": -3.0000000004147296,
+          "CDM_rho_log_derivative": -3.0000000007403287,
+          "effective_mass_log_derivative_minus_dlnm_over_dN": 7.403286872431636e-10,
+          "beta_times_phi_N_if_fading": -0.0,
+          "raw_diff_under_gauge_shift_relative_change": 1.3024005817199644e-11,
+          "Sbc_gauge_transform_absolute_error": 5.4569682106375694e-12
+        },
+        {
+          "z": 1.0,
+          "k_hMpc": 0.05,
+          "delta_b_over_delta_c": 0.989773452405136,
+          "delta_b_minus_delta_c_over_delta_c": -0.010226547594864006,
+          "gauge_invariant_Sbc_over_delta_c": -0.010226547585691035,
+          "difference_Sbc_minus_raw_over_delta_c": 9.17297158133146e-12,
+          "baryon_rho_log_derivative": -2.999999999323649,
+          "CDM_rho_log_derivative": -2.9999999993580846,
+          "effective_mass_log_derivative_minus_dlnm_over_dN": -6.419154097159208e-10,
+          "beta_times_phi_N_if_fading": -0.0,
+          "raw_diff_under_gauge_shift_relative_change": 1.3773564317073168e-12,
+          "Sbc_gauge_transform_absolute_error": 0.0
+        },
+        {
+          "z": 1.0,
+          "k_hMpc": 0.1,
+          "delta_b_over_delta_c": 0.989363142389434,
+          "delta_b_minus_delta_c_over_delta_c": -0.010636857610565936,
+          "gauge_invariant_Sbc_over_delta_c": -0.010636857601485581,
+          "difference_Sbc_minus_raw_over_delta_c": 9.080354348839288e-12,
+          "baryon_rho_log_derivative": -2.999999999323649,
+          "CDM_rho_log_derivative": -2.9999999993580846,
+          "effective_mass_log_derivative_minus_dlnm_over_dN": -6.419154097159208e-10,
+          "beta_times_phi_N_if_fading": -0.0,
+          "raw_diff_under_gauge_shift_relative_change": 1.377407595038298e-12,
+          "Sbc_gauge_transform_absolute_error": 0.0
+        },
+        {
+          "z": 1.0,
+          "k_hMpc": 0.2,
+          "delta_b_over_delta_c": 0.9930952521398416,
+          "delta_b_minus_delta_c_over_delta_c": -0.0069047478601583995,
+          "gauge_invariant_Sbc_over_delta_c": -0.006904747850236566,
+          "difference_Sbc_minus_raw_over_delta_c": 9.921833428528068e-12,
+          "baryon_rho_log_derivative": -2.999999999323649,
+          "CDM_rho_log_derivative": -2.9999999993580846,
+          "effective_mass_log_derivative_minus_dlnm_over_dN": -6.419154097159208e-10,
+          "beta_times_phi_N_if_fading": -0.0,
+          "raw_diff_under_gauge_shift_relative_change": 1.3775197258237388e-12,
+          "Sbc_gauge_transform_absolute_error": 1.3642420526593924e-12
+        },
+        {
+          "z": 1.0,
+          "k_hMpc": 1.0,
+          "delta_b_over_delta_c": 0.9919148606314754,
+          "delta_b_minus_delta_c_over_delta_c": -0.008085139368524567,
+          "gauge_invariant_Sbc_over_delta_c": -0.008085139358868891,
+          "difference_Sbc_minus_raw_over_delta_c": 9.655675668644926e-12,
+          "baryon_rho_log_derivative": -2.999999999323649,
+          "CDM_rho_log_derivative": -2.9999999993580846,
+          "effective_mass_log_derivative_minus_dlnm_over_dN": -6.419154097159208e-10,
+          "beta_times_phi_N_if_fading": -0.0,
+          "raw_diff_under_gauge_shift_relative_change": 1.3773366191033408e-12,
+          "Sbc_gauge_transform_absolute_error": 2.7284841053187847e-12
+        }
+      ],
+      "background_phi_scf_field_present": true,
+      "background_fields_for_derivative": {
+        "z": [
+          0.0,
+          0.0008062497754249,
+          0.001613149589564,
+          0.002420699966483,
+          0.003228901430713
+        ],
+        "rho_cdm": [
+          1.344223781434e-08,
+          1.347477743897e-08,
+          1.350739583226e-08,
+          1.35400931849e-08,
+          1.357286968802e-08
+        ]
+      }
+    }
+  ],
+  "summary": [
+    {
+      "model": "fading_fit",
+      "z0_k0p1": {
+        "z": 0.0,
+        "k_hMpc": 0.1,
+        "delta_b_over_delta_c": 0.9880147973233715,
+        "delta_b_minus_delta_c_over_delta_c": -0.011985202676628533,
+        "gauge_invariant_Sbc_over_delta_c": -0.020363683886920843,
+        "difference_Sbc_minus_raw_over_delta_c": -0.008378481210292311,
+        "baryon_rho_log_derivative": -3.0000000004147296,
+        "CDM_rho_log_derivative": -2.9750734037934308,
+        "effective_mass_log_derivative_minus_dlnm_over_dN": -0.02492659620656923,
+        "beta_times_phi_N_if_fading": -0.024926595671272787,
+        "raw_diff_under_gauge_shift_relative_change": -0.0009970638648520596,
+        "Sbc_gauge_transform_absolute_error": 1.3642420526593924e-12
+      }
+    },
+    {
+      "model": "fixed_params_no_mass_coupling",
+      "z0_k0p1": {
+        "z": 0.0,
+        "k_hMpc": 0.1,
+        "delta_b_over_delta_c": 0.9933780899942439,
+        "delta_b_minus_delta_c_over_delta_c": -0.006621910005756041,
+        "gauge_invariant_Sbc_over_delta_c": -0.006621909896307587,
+        "difference_Sbc_minus_raw_over_delta_c": 1.0944845424382972e-10,
+        "baryon_rho_log_derivative": -3.0000000004147296,
+        "CDM_rho_log_derivative": -3.0000000007403287,
+        "effective_mass_log_derivative_minus_dlnm_over_dN": 7.403286872431636e-10,
+        "beta_times_phi_N_if_fading": -0.0,
+        "raw_diff_under_gauge_shift_relative_change": 1.3024106430217604e-11,
+        "Sbc_gauge_transform_absolute_error": 1.3642420526593924e-12
+      }
+    }
+  ],
+  "definition": "For baryon and interacting CDM background r_i=dln rho_i/dln a, S_bc=3(zeta_b-zeta_c)=3[delta_c/r_c-delta_b/r_b]. This is invariant under common infinitesimal slicing change delta_i->delta_i+r_i epsilon. In a CDM mass-varying background r_c=-3-beta phi_N, r_b=-3. For cp=0, S_bc=delta_b-delta_c.",
+  "scope": "Real patched CLASS source density transfer functions in its synchronous gauge, and background from CLASS. Does not construct an experimentally accessible isolated S_bc, a survey likelihood, or galaxy bias. Ratios S_bc/delta_c are NOT themselves gauge invariant, only S_bc is; the normalizing delta_c is gauge dependent. No full ultralight scalar wave included. Finite differencing the background rho fields can be numerically unstable at high redshift; only z=0 and1 tested.",
+  "prior_literature": [
+    "https://doi.org/10.1103/PhysRevD.82.083515",
+    "https://doi.org/10.1103/PhysRevD.68.063505"
+  ]
+}
