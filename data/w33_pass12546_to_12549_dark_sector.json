@@ -1,0 +1,200 @@
+{
+  "gains": {
+    "pantheon": {
+      "uncoupled_exponential": -2.512748623283869,
+      "ceiling": -5.178001972037919,
+      "fading_c_neg": -8.355064847640506,
+      "fading_c_pos": -7.995339871397846,
+      "CPL": -7.251531520700155,
+      "free_w": -16.713132757764015
+    },
+    "dovekie": {
+      "uncoupled_exponential": -3.8256127739400654,
+      "ceiling": -7.933828772970628,
+      "fading_c_neg": -10.19000444823564,
+      "fading_c_pos": -9.505104529065875,
+      "CPL": -10.361697690661003,
+      "free_w": -18.791814891147624
+    },
+    "desy5": {
+      "uncoupled_exponential": -8.801816008895685,
+      "ceiling": -14.789454943163719,
+      "fading_c_neg": -16.45989878432829,
+      "fading_c_pos": -15.306635526641912,
+      "CPL": -17.47683193763055,
+      "free_w": -24.46963626818365
+    }
+  },
+  "cp_profile": {
+    "pantheon": {
+      "cp_zero": -2.5127486225057964,
+      "best": -8.355064847640506,
+      "gain_from_cp": 5.842316225134709,
+      "rows": {
+        "0.0": -2.5127486073256478,
+        "0.0123": -3.3535826226975587,
+        "0.02": -4.42411667659826,
+        "0.03": -6.142179488457941,
+        "0.05": -8.347966297237008,
+        "0.07": -2.221386890637632,
+        "0.1": 51.68681462681002,
+        "0.2": 1378.1792081595493,
+        "0.7071": 2897.221493653
+      }
+    },
+    "dovekie": {
+      "cp_zero": -3.825612823828351,
+      "best": -10.19000444823564,
+      "gain_from_cp": 6.36439162440729,
+      "rows": {
+        "0.0": -3.825612823828351,
+        "0.0123": -4.736435260628468,
+        "0.02": -5.870441665699445,
+        "0.03": -7.693442551655835,
+        "0.05": -10.189987547999863,
+        "0.07": -4.475458494114491,
+        "0.1": 48.59851793270059,
+        "0.2": 1485.594636470311,
+        "0.7071": 2961.1454517775355
+      }
+    },
+    "desy5": {
+      "cp_zero": -8.8018159912815,
+      "best": -16.45989878432829,
+      "gain_from_cp": 7.658082793046788,
+      "rows": {
+        "0.0": -8.8018159912815,
+        "0.0123": -9.882037125351417,
+        "0.02": -11.16842914289714,
+        "0.03": -13.239917153663782,
+        "0.05": -16.415663405256964,
+        "0.07": -11.694207303046596,
+        "0.1": 38.84855142002266,
+        "0.2": 1431.1021228452196,
+        "0.7071": 2872.8215371725723
+      }
+    },
+    "none": {
+      "cp_zero": 9.199978331153602e-06,
+      "best": -5.310250476322853,
+      "gain_from_cp": 5.310259676301184,
+      "rows": {
+        "0.0": 0.0001500293524649976,
+        "0.0123": -0.6130263119554407,
+        "0.02": -1.522172524609962,
+        "0.03": -3.053686775095846,
+        "0.05": -5.304988320327936,
+        "0.07": -0.9187403096225069,
+        "0.1": 40.24236193653245,
+        "0.2": 955.9959334148832,
+        "0.7071": 2073.849009843943
+      }
+    }
+  },
+  "llr": {
+    "pantheon": {
+      "phip0": -0.4430460698610225,
+      "beta_max": 0.003645347311213994
+    },
+    "dovekie": {
+      "phip0": -0.4632044239019157,
+      "beta_max": 0.0034867041767584605
+    },
+    "desy5": {
+      "phip0": -0.5435979760366767,
+      "beta_max": 0.0029710500603534946
+    }
+  },
+  "casimir_line": {
+    "pantheon": {
+      "c": 0.1812860187369179,
+      "cp": 0.04532150468422948,
+      "delta": -3.6001571689726006,
+      "cost_vs_free_c_pos": 4.395182702425245,
+      "fitted_ratio_pos": 12.94916999586726
+    },
+    "dovekie": {
+      "c": 0.17940163590801778,
+      "cp": 0.044850408977004444,
+      "delta": -3.4604230584563993,
+      "cost_vs_free_c_pos": 6.044681470609476,
+      "fitted_ratio_pos": 13.312604930865664
+    },
+    "desy5": {
+      "c": 0.1759912604425929,
+      "cp": 0.04399781511064822,
+      "delta": -3.20481001528492,
+      "cost_vs_free_c_pos": 12.101825511356992,
+      "fitted_ratio_pos": 15.20336579641902
+    }
+  },
+  "pure_radius_cap": {
+    "pantheon": -3.3535826226975587,
+    "dovekie": -4.736435260628468,
+    "desy5": -9.882037125351417
+  },
+  "mocks": {
+    "desy5_cpl": {
+      "n": 300,
+      "real_full": -17.476852826895538,
+      "real_cut": -3.615756409550386,
+      "mean_full": -18.706673779553725,
+      "mean_cut": -6.900822786146102,
+      "p_cut_as_weak": 0.2633333333333333,
+      "p_drop_as_large": 0.35333333333333333,
+      "p_conditional": 0.11038961038961038,
+      "p_full_as_strong": 0.5133333333333333
+    },
+    "dovekie_cpl": {
+      "n": 300,
+      "real_full": -10.36171486440685,
+      "real_cut": -2.6086287506436747,
+      "mean_full": -11.959247298303662,
+      "mean_cut": -5.994514363224895,
+      "p_cut_as_weak": 0.25666666666666665,
+      "p_drop_as_large": 0.33666666666666667,
+      "p_conditional": 0.12179487179487179,
+      "p_full_as_strong": 0.52
+    },
+    "dovekie_lcdm": {
+      "n": 150,
+      "real_full": -10.36171486440685,
+      "real_cut": -2.6086287506436747,
+      "mean_full": -1.9827950463837503,
+      "mean_cut": -2.0228053059852087,
+      "p_cut_as_weak": 0.7533333333333333,
+      "p_drop_as_large": 0.0,
+      "p_conditional": null,
+      "p_full_as_strong": 0.0
+    },
+    "pantheon_cpl": {
+      "n": 150,
+      "real_full": -7.251549362065816,
+      "real_cut": -5.920865086409094,
+      "mean_full": -9.29493241984308,
+      "mean_cut": -5.131862488604354,
+      "p_cut_as_weak": 0.6733333333333333,
+      "p_drop_as_large": 0.7066666666666667,
+      "p_conditional": 0.524390243902439,
+      "p_full_as_strong": 0.5466666666666666
+    }
+  },
+  "checks": {
+    "12546: order on each sample: exponential above ceiling above CPL above free w": true,
+    "12546: global search: two seeds agree within 0.05 on the ceiling, DES-Dovekie and DES-SN5YR": true,
+    "12546: the ceiling has w above -0.9 only in the two bins below z = 0.07 (DES samples, bins from z = 0.12 up within 0.05 of -1)": true,
+    "12547: control: c and c' within 0.05 of Table I of arXiv:2507.03090 on both branches, Pantheon+ and DES-SN5YR": true,
+    "12547: turning on c' gains Delta chi2 of only 5 to 8 on every sample (about 2.3 to 2.8 sigma), not the 25 that 0.05 +- 0.01 would suggest": true,
+    "12547: c' = 0.1 is worse than LCDM on every sample, by over 25 on the negative branch: the profile is very asymmetric": true,
+    "12548: control: 5D radion c' = sqrt(3/2), beta = 1/sqrt 6, gamma = 1/2 (Brans-Dicke omega = 0)": true,
+    "12548: |grad ln m_KK|^2 = 3/2 for every n, and projecting out grad ln M_D leaves n/(n+1)": true,
+    "12548: Cassini at c' = 0.05: xi < 0.18 two-sided, < 0.11 one-sided": true,
+    "12548: n = 1 with only L and Vol moving: c' = 0.05 forces beta about 0.31 or -0.27": true,
+    "12548: LLR at the fitted roll bounds beta below 0.004 on all samples, independently of Cassini": true,
+    "12548: Casimir line costs Delta chi2 4.4, 6.0, 12.1 against free c > 0; fitted ratio 13 to 15, not 4": true,
+    "12548: at the pure-radius Cassini cap c' = 0.0123 the coupling gains at most 1.1 over c' = 0": true,
+    "12549: control: LCDM mocks have mean gain within 0.3 of -2, full and cut, and none reaches the real Dovekie gain in 150": true,
+    "12549: real drops on cutting z < 0.1 are ordinary under CPL truth: probability of a drop as large over 0.3 on each sample": true
+  },
+  "all_checks_pass": true
+}
