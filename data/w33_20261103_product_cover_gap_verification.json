@@ -1,0 +1,12 @@
+{
+  "status": "PASS_INDEPENDENT_GAP_PRODUCT_COVER",
+  "signed_order": 30720,
+  "signed_derived_order": 30720,
+  "spinor_order": 46080,
+  "paired_order": 1415577600,
+  "spinor_2_core_order": 64,
+  "spinor_quotient_is_S6": true,
+  "old_bilinear_nullity": 1,
+  "new_bilinear_nullity": 0,
+  "GAP_version": "4.16.0"
+}

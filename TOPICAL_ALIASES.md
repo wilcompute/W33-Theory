@@ -10,7 +10,7 @@ to guess: `grep -i gow TOPICAL_ALIASES.md` reaches
 `2026-07-15_pass355_sp43_frobenius_schur.md`, which no search for
 "phase" or "complex structure" ever would.
 
-Files scanned: **6034** · distinct tokens: **1353**
+Files scanned: **6036** · distinct tokens: **1354**
 
 Tokens marked ⚠ appear ONLY in topically opaque filenames (dated or
 numbered), so they are invisible to any topic search — read those first.
@@ -850,7 +850,7 @@ numbered), so they are invisible to any topic search — read those first.
 - `group:Sp(4,7)` ⚠ — [PASS12070_THE_GALOIS_LIST_Q7.md](analysis/PASS12070_THE_GALOIS_LIST_Q7.md), [w33_pass2608_2617_a_routable_mixer_and_two_rediscoveries.md](analysis/w33_pass2608_2617_a_routable_mixer_and_two_rediscoveries.md)
 - `group:Sp(4,8)` ⚠ — [2026-10-22_q8_hyperoval_full_classical_dual.md](analysis/2026-10-22_q8_hyperoval_full_classical_dual.md)
 - `group:Sp(4,9)` ⚠ — [2026-10-22_golden_supergolden_dualnumber_24_20_clocks.md](analysis/2026-10-22_golden_supergolden_dualnumber_24_20_clocks.md), [PASS7130_7137_structural_attack_insert.tex](analysis/PASS7130_7137_structural_attack_insert.tex), [PASS7146_7153_exact_q9_pgl2_hexad_code_insert.tex](analysis/PASS7146_7153_exact_q9_pgl2_hexad_code_insert.tex)
-- `group:Sp(4,p)` ⚠ — [2026-10-22_pascal_css_logical_transvection_jordan.md](analysis/2026-10-22_pascal_css_logical_transvection_jordan.md)
+- `group:Sp(4,p)` ⚠ — [2026-10-22_pascal_css_logical_transvection_jordan.md](analysis/2026-10-22_pascal_css_logical_transvection_jordan.md), [2026-11-02_eight_fronts_fourbit_eiconal_q13_wave_capacity.md](analysis/2026-11-02_eight_fronts_fourbit_eiconal_q13_wave_capacity.md)
 - `group:Sp(4,p^` ⚠ — [2026-10-22_primepower_pascal_c5_photonic_six_frontiers.md](analysis/2026-10-22_primepower_pascal_c5_photonic_six_frontiers.md)
 - `group:Sp(8,2)` — [PASS11208_ARROW_UNIVERSALITY.md](analysis/PASS11208_ARROW_UNIVERSALITY.md), [PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md](analysis/PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md), [PASS4495_4502_distance_cohomology_ihara_clifford_prism_insert.tex](analysis/PASS4495_4502_distance_cohomology_ihara_clifford_prism_insert.tex), [w33_pass2082_2087_the_substrate_is_one_rank_below_phi.md](analysis/w33_pass2082_2087_the_substrate_is_one_rank_below_phi.md), [apartment-code-distance-cohomology-prisms.html](docs/apartment-code-distance-cohomology-prisms.html)
 - `group:Sp(8,3)` ⚠ — [PASS11421_FOUR_QUTRITS.md](analysis/PASS11421_FOUR_QUTRITS.md), [PASS11433_MAGIC_AXIS_LAW.md](analysis/PASS11433_MAGIC_AXIS_LAW.md), [PASS11456_N4_CLOSURE.md](analysis/PASS11456_N4_CLOSURE.md), [PASS11536_GOOD_RULES_DIM8.md](analysis/PASS11536_GOOD_RULES_DIM8.md)
@@ -1035,7 +1035,7 @@ numbered), so they are invisible to any topic search — read those first.
 - `named:Hinge` ⚠ — [BT1810_hesse_hinge_orbit.md](analysis/BT1810_hesse_hinge_orbit.md)
 - `named:Historical` ⚠ — [BT3025_BT3031_predictive_photonic_overhaul.md](analysis/BT3025_BT3031_predictive_photonic_overhaul.md)
 - `named:Hoeffding` — [2026-10-09_five_followon_toe_results.md](analysis/2026-10-09_five_followon_toe_results.md), [2026-10-09_five_fronts_round12.md](analysis/2026-10-09_five_fronts_round12.md), [2026-10-10_toe48_five_fronts_naimark_spam_flux_integrality.md](analysis/2026-10-10_toe48_five_fronts_naimark_spam_flux_integrality.md), [BT3715_BT3721_carrier_tournament_process_budget_identification_scheduler_twirl.md](analysis/BT3715_BT3721_carrier_tournament_process_budget_identification_scheduler_twirl.md), [BT3715_BT3721_carrier_tournament_process_budget_identification_scheduler_twirl_insert.tex](analysis/BT3715_BT3721_carrier_tournament_process_budget_identification_scheduler_twirl_insert.tex), [BT3743_BT3750_symmetry_os_spacetime_factory_tournament.md](analysis/BT3743_BT3750_symmetry_os_spacetime_factory_tournament.md), [BT601_605_five_frontier_release.md](analysis/BT601_605_five_frontier_release.md), [404.html](docs/404.html), [exceptional-geometry-41a8d733.html](docs/exceptional-geometry-41a8d733.html), [full-site-2026-08-06.html](docs/full-site-2026-08-06.html), [index.html](docs/index.html)
-- `named:Holevo` — [404.html](docs/404.html), [exceptional-geometry-41a8d733.html](docs/exceptional-geometry-41a8d733.html), [full-site-2026-08-06.html](docs/full-site-2026-08-06.html), [index.html](docs/index.html)
+- `named:Holevo` — [2026-11-02_eight_fronts_fourbit_eiconal_q13_wave_capacity.md](analysis/2026-11-02_eight_fronts_fourbit_eiconal_q13_wave_capacity.md), [404.html](docs/404.html), [exceptional-geometry-41a8d733.html](docs/exceptional-geometry-41a8d733.html), [full-site-2026-08-06.html](docs/full-site-2026-08-06.html), [index.html](docs/index.html)
 - `named:Holographic` — [BREAKTHROUGH_PERPLEXITY_SESSION_JUN23.md](analysis/BREAKTHROUGH_PERPLEXITY_SESSION_JUN23.md)
 - `named:Holonet` — [BT1878_BT1880_summary.md](analysis/BT1878_BT1880_summary.md), [404.html](docs/404.html), [README_2026-08_EDITION.md](docs/README_2026-08_EDITION.md), [exceptional-geometry-41a8d733.html](docs/exceptional-geometry-41a8d733.html), [full-site-2026-08-06.html](docs/full-site-2026-08-06.html), [index.html](docs/index.html)
 - `named:Holotrade` ⚠ — [PASS11802_11807_LEVELS_CHARGES_TEXTURES.md](analysis/PASS11802_11807_LEVELS_CHARGES_TEXTURES.md)
@@ -1220,6 +1220,7 @@ numbered), so they are invisible to any topic search — read those first.
 - `named:Thompson` — [404.html](docs/404.html), [exceptional-geometry-41a8d733.html](docs/exceptional-geometry-41a8d733.html), [full-site-2026-08-06.html](docs/full-site-2026-08-06.html), [index.html](docs/index.html)
 - `named:Timing` ⚠ — [W33_PASS414_INDEPENDENT_LAB_HANDOFF.md](docs/W33_PASS414_INDEPENDENT_LAB_HANDOFF.md)
 - `named:Tits` ⚠ — [2026-10-08_beyond_five_H27_center_atlas_physical.md](analysis/2026-10-08_beyond_five_H27_center_atlas_physical.md), [2026-10-09_toe27_five_fronts_decoder_allq_e8_causality_spectroscopy.md](analysis/2026-10-09_toe27_five_fronts_decoder_allq_e8_causality_spectroscopy.md)
+- `named:Tkachev` ⚠ — [2026-11-02_eight_fronts_fourbit_eiconal_q13_wave_capacity.md](analysis/2026-11-02_eight_fronts_fourbit_eiconal_q13_wave_capacity.md)
 - `named:Torelli` — [W33_K12_GENUS_POLARIZATION.md](analysis/W33_K12_GENUS_POLARIZATION.md)
 - `named:Torsion` ⚠ — [PASS12346_RECOVERED_TORSION_AND_REPAIR.md](analysis/PASS12346_RECOVERED_TORSION_AND_REPAIR.md)
 - `named:Tower` — [PASS_682_ARXIV_SYNTHESIS_PASSES_641_677.md](analysis/PASS_682_ARXIV_SYNTHESIS_PASSES_641_677.md), [README_2026-08_EDITION.md](docs/README_2026-08_EDITION.md)

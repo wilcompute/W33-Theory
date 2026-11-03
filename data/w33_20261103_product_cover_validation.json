@@ -1,0 +1,34 @@
+{
+  "status": "PASS_PRODUCT_COVER_TWO_ENGINES",
+  "utc": "2026-11-03T02:01:46.022550+00:00",
+  "python_execution": "Observed Remote Desktop Commander session3356 exit0: PASS_NATIVE27_PRODUCT_COVER_AND_MIXED_CUBIC_OBSTRUCTION1415577600,27,0.",
+  "gap_command": [
+    "C:\\Program Files\\GAP-4.16.0\\runtime\\bin\\bash.exe",
+    "-l",
+    "-c",
+    "cd /opt/gap-4.16.0 && W33_REPO='C:/Repos/Theory of Everything' ./gap -q -b --nointeract 'C:/Repos/Theory of Everything/analysis/w33_20261103_product_cover_independent_gap.g'"
+  ],
+  "gap_process_exit_code": 0,
+  "gap_stdout": "\n",
+  "gap_stderr": "",
+  "gap_seconds": 27.461,
+  "gap_result": {
+    "status": "PASS_INDEPENDENT_GAP_PRODUCT_COVER",
+    "signed_order": 30720,
+    "signed_derived_order": 30720,
+    "spinor_order": 46080,
+    "paired_order": 1415577600,
+    "spinor_2_core_order": 64,
+    "spinor_quotient_is_S6": true,
+    "old_bilinear_nullity": 1,
+    "new_bilinear_nullity": 0,
+    "GAP_version": "4.16.0"
+  },
+  "artifact_raw_sha256": {
+    "analysis/w33_20261103_product_cover_independent_gap.g": "57d8e0fd17743a8fe6778210a0ab21080d9432113a2945f311253f0acb7fec9e",
+    "data/w33_20261103_product_cover_gap_input.g": "b5da8bc548d19bc030f555b2a2b5daf38377b3ccec8fca7c4d3c775f3e82b9dd",
+    "data/w33_20261103_product_cover_gap_verification.json": "d6034d74fa57fbc8d1755a6c6c0c6d003760bf1fa7d1cc264b16d20099e39182",
+    "analysis/w33_20261103_product_cover_coupling_tradeoff.py": "552f0af20f6aa6dde1a6ac48d14a2ccda079eeabb6983d655d5955ed8f3b0bb1",
+    "data/w33_20261103_product_cover_coupling_tradeoff.json": "cc52d8a97c3b0430ba07fc839b35a2e6b10b7335d583b6667c9009d39178d434"
+  }
+}
