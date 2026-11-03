@@ -1,0 +1,124 @@
+{
+ "noncrossing_line_ids": [
+  3,
+  2,
+  18,
+  32,
+  33
+ ],
+ "pairs_loops_vs_common_points": [
+  {
+   "pair": [
+    0,
+    1
+   ],
+   "loops": 2,
+   "common_points": 1
+  },
+  {
+   "pair": [
+    0,
+    2
+   ],
+   "loops": 2,
+   "common_points": 1
+  },
+  {
+   "pair": [
+    0,
+    3
+   ],
+   "loops": 1,
+   "common_points": 0
+  },
+  {
+   "pair": [
+    0,
+    4
+   ],
+   "loops": 2,
+   "common_points": 1
+  },
+  {
+   "pair": [
+    1,
+    2
+   ],
+   "loops": 1,
+   "common_points": 0
+  },
+  {
+   "pair": [
+    1,
+    3
+   ],
+   "loops": 2,
+   "common_points": 1
+  },
+  {
+   "pair": [
+    1,
+    4
+   ],
+   "loops": 1,
+   "common_points": 0
+  },
+  {
+   "pair": [
+    2,
+    3
+   ],
+   "loops": 2,
+   "common_points": 1
+  },
+  {
+   "pair": [
+    2,
+    4
+   ],
+   "loops": 1,
+   "common_points": 0
+  },
+  {
+   "pair": [
+    3,
+    4
+   ],
+   "loops": 2,
+   "common_points": 1
+  }
+ ],
+ "loops_to_common_points_law": [
+  [
+   1,
+   0
+  ],
+  [
+   2,
+   1
+  ]
+ ],
+ "codewords_containing_all_five": 2,
+ "codeword_0": {
+  "degrees": {
+   "4": 10
+  },
+  "edges_among_five": 6,
+  "edges_among_other_five": 6,
+  "cross_edges": 8
+ },
+ "codeword_1": {
+  "degrees": {
+   "4": 10
+  },
+  "edges_among_five": 6,
+  "edges_among_other_five": 6,
+  "cross_edges": 8
+ },
+ "two_codewords_common_lines": 5,
+ "the_other_five_lines_differ": true,
+ "symmetric_difference_of_the_two_is_a_codeword": true,
+ "third_codeword_contains_caps": 0,
+ "crossing_sixth_matching_is_a_line": false,
+ "crossing_sixth_points": 4
+}

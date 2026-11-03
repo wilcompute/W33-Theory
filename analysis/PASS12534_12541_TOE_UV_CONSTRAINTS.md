@@ -1,6 +1,6 @@
 # Passes 12534–12541: an attempt on the theory of everything from outside W(3,3)
 
-Claude track. Producer: `analysis/w33_pass12534_to_12541_toe_uv.py`. Test: `tests/test_w33_pass12534_to_12541.py`. Drivers in `analysis/toe_uv`: `sm_rge.py`, `swampland_casimir.py`, `as_fixedpoint.py`, `criticality.py`, `mpp_k.py`.
+Claude track. Producer: `analysis/w33_pass12534_to_12541_toe_uv.py`. Test: `tests/test_w33_pass12534_to_12541.py`. Drivers in `analysis/toe_uv`: `sm_rge.py`, `swampland_casimir.py`, `as_fixedpoint.py`, `criticality.py`, `mpp_k.py`, `nnlo_top.py`, `matter_scan.py`, `scheme_test.py`, `swampland_ext.py`.
 
 Labels: **[E]** exact, **[N]** numerical with a stated control, **[I]** interpretation, **[C]** conjecture of the mechanism being tested.
 
@@ -88,6 +88,61 @@ A nonzero τ on branch A would need y_τ² = (17/9)g_Y², far too large, so τ m
 
 **A coincidence I am not claiming.** k = 4.9 × 10¹⁷ GeV is close to the classic heterotic scale (Kaplunovsky, about 5 × 10¹⁷). k was solved for, so there is one free scale and one test (M_t), which it misses, and many candidate scales to compare with. It is not evidence.
 
+## 12537: the top-mass tension at NNLO
+
+**[N]** `nnlo_top.py` uses Buttazzo's published fit (three-loop running), not my two-loop code. λ(M_Pl) = 0 at M_H = 125.20, α₃ = 0.1180 needs **M_t = 171.04 ± 0.37 GeV**. The error is α₃ 0.35, y_t theory 0.09, λ theory 0.06, M_H 0.05, and it is a rough budget.
+
+| measurement of M_t | value | pull |
+|---|---|---|
+| Direct LHC Run 1 combination, taken at face value | 172.52 ± 0.33 | **3.0σ** |
+| The same, adding the usually quoted 0.5 GeV Monte Carlo interpretation | ± 0.60 | **2.1σ** |
+| Preliminary pole-mass combination (Nov 2025 talk, version 1, not final) | 172.25 ± 0.95 | **1.2σ** |
+
+So the tension is real but depends strongly on what "the top mass" means. A final pole combination, or a lepton-collider threshold scan, decides it.
+
+## 12538: can gravity fix the top mass with no fit?
+
+**A failed control first.** My first version used the perturbative fixed-point formula of Doná–Eichhorn–Percacci to scan matter content. It gives G* = 0.84, Λ* = −1.5 for the SM, against their Table 3's 1.76, −2.40. **So that scan was discarded**, including its list of "closest" matter contents. Only published fixed points are used below.
+
+**[N]** `matter_scan.py`: G*, Λ* from the paper's tables, f_g, f_y, f_λ from Eichhorn–Held's functions of Λ. No fit. These two sources are **not one consistent calculation**.
+
+| matter (scheme 1L-II) | G*, Λ* | Gaussian g_Y: M_t, M_H | interacting g_Y: g_Y(M_Pl), measured 0.476 |
+|---|---|---|---|
+| SM | 1.76, −2.40 | no top fixed point | 1.07 |
+| SM + 3ν_R | 2.15, −3.20 | 148.2, 77.3 | 1.05 |
+| SM + DM scalar | 1.87, −2.50 | no top fixed point | 1.08 |
+| **SM + 3ν_R + axion + DM** | 2.50, −3.62 | **172.74, 128.82** | 1.08 |
+| Eichhorn–Held's own point | 3.29, −4.51 | 193.1, 178.6 | 1.13 |
+
+**Interacting hypercharge fails for all of them**: g_Y(M_Pl) is more than twice the measured value. Matching it needs G* about 4.5 to 8 times smaller than these tables at the required Λ*.
+
+**The hit, and why it is not a prediction.** SM + 3ν_R + axion + DM gives M_t = 172.74, against 172.57, from a published row with no fit. `scheme_test.py` was written to kill it:
+
+- **SM matter alone in the paper's other schemes** gives M_t = **171.87**, M_H = 126.86 (1L-Ia), 167.94, 118.06 (full-Ia), and no top fixed point in both type-II schemes.
+- dM_t/dΛ* = −37 GeV per unit, because f_y crosses zero at Λ = −3.28. The scheme spread of Λ* for the same matter is 1.2, so the uncertainty is about **40 GeV**.
+- About 2% of the (G*, Λ*) region I scanned lands within 1 GeV of M_t. Across the roughly 10 points I looked at, that makes a hit somewhere around a 10 to 20% event, so it is not surprising.
+
+**So the hit is not evidence for that matter content, or for any matter content.** Matter cannot be selected at this truncation.
+
+**The useful output: what a real prediction needs.** To predict M_t to 1 GeV, a gravity calculation must fix **Λ* to about 1% (±0.03)**, in one consistent scheme with the f functions. On the band of (G*, Λ*) with M_t within 1 GeV of data, M_H ∈ [126.1, 130.6]. That is the same correlation as near-criticality, not an independent success.
+
+**Prior no-go, reproduced in spirit.** The paper reports no real one-loop fixed point for MSSM and for SU(5) and SO(10) matter. My discarded formula agreed for MSSM and SU(5) but gave a fixed point for SO(10), so that comparison is not clean, and I rely on the paper's statement.
+
+## 12539: what no-AdS₃ says beyond neutrinos
+
+**[N]** `swampland_ext.py`, Dirac, normal ordering, measured Λ:
+
+| extra massless bosonic dof | bound on m₁ |
+|---|---|
+| 0 | 7.65 meV |
+| 1 (a massless scalar) | 5.29 meV |
+| 2 (one massless dark photon) | 2.84 meV |
+| 3 or more | **AdS₃ even at m₁ = 0** |
+
+So, conditional on the conjecture and with no additional light fermions, **at most 2 extra massless bosonic degrees of freedom are allowed**, i.e. at most one massless dark photon. Extra light fermions would offset this. Given a lightest neutrino mass, it also gives Λ¼ ≥ 0.65 m₁ at 1 meV, falling to 0.29 m₁ at 7.65 meV, so **a massive lightest neutrino requires Λ > 0**. That relation is in the earlier literature; it does not derive Λ.
+
+**Dark dimension.** `swampland_ext.py` adds a bulk graviton tower (5 dof per level) and a bulk right-handed tower (4 dof per flavour per level, masses approximated by √(mᵢ² + n²m_KK²)). See `swampland_ext.json`. Anchordoqui, Antoniadis and Cunat already noted that the neutrino tower offsets the graviton tower. Results are in the status section below.
+
 ## How to kill all of this
 
 | measurement | decides | killed if |
@@ -115,7 +170,7 @@ A nonzero τ on branch A would need y_τ² = (17/9)g_Y², far too large, so τ m
 | Λ | **Input.** The window relates it to m_ν and does not derive it |
 | Dark matter, baryogenesis, inflation, strong CP | **Not addressed** |
 
-**What would count as a real step:** deriving f_g, f_y from a gravity calculation that gives 172.6 GeV without a fit, or deriving the matter content. I did neither.
+**What would count as a real step:** one consistent gravity calculation fixing Λ* to about 1%, which would make M_t a prediction, or deriving the matter content. I did neither, and 12538 shows why the published ingredients cannot yet do it.
 
 ## Sources
 
@@ -125,4 +180,7 @@ A nonzero τ on branch A would need y_τ² = (17/9)g_Y², far too large, so τ m
 - K. Kowalska, S. Pramanick, E. M. Sessolo, arXiv:2204.00866.
 - L. E. Ibáñez, V. Martín-Lozano, I. Valenzuela, arXiv:1706.05392. E. Gonzalo, L. E. Ibáñez, I. Valenzuela, arXiv:2109.10961. Cao, arXiv:2306.15383.
 - DESI: arXiv:2503.14738, arXiv:2503.14744.
+- P. Doná, A. Eichhorn, R. Percacci, *Matter matters in asymptotically safe quantum gravity*, arXiv:1311.2898.
+- L. Anchordoqui, I. Antoniadis, J. Cunat, Phys. Rev. D 109 (2024) 016028; M. Montero, C. Vafa, I. Valenzuela, dark dimension (not read in full).
+- ATLAS+CMS: top mass Run 1 combination, 172.52 ± 0.33 GeV; preliminary pole-mass combination, LHCTop WG, Nov 2025.
 - C. D. Froggatt, H. B. Nielsen, *Standard Model criticality prediction*, Phys. Lett. B 368 (1996).

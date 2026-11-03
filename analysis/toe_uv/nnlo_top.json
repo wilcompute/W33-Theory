@@ -1,0 +1,31 @@
+{
+ "Mt_for_lambda_MPl_zero": 171.03945887445886,
+ "error_budget": {
+  "alpha_s": 0.3506493506493506,
+  "higgs": 0.04833333333333333,
+  "lambda_theory": 0.06398940864960281,
+  "yt_theory": 0.08992805755395684
+ },
+ "error_total": 0.37077321663879115,
+ "lambda_MPl_at_172p52": -0.009771571428571511,
+ "comparisons": {
+  "direct_run1_combination": {
+   "measured": 172.52,
+   "error": 0.33,
+   "pull_sigma": 2.982799867062582,
+   "note": "Monte Carlo mass, not pole; a further interpretation ambiguity applies"
+  },
+  "direct_with_0p5_interpretation": {
+   "measured": 172.52,
+   "error": 0.5990826320300063,
+   "pull_sigma": 2.1014375940965127,
+   "note": "with the usually quoted 0.5 GeV"
+  },
+  "preliminary_pole_combination": {
+   "measured": 172.25,
+   "error": 0.95,
+   "pull_sigma": 1.187048770336393,
+   "note": "version-1 talk, Nov 2025, not final"
+  }
+ }
+}

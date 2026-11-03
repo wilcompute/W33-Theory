@@ -3,6 +3,9 @@
 12534 -- no-AdS3: Dirac, normal ordering, sum m_nu in [58.8, 69.9] meV.
 12535 -- asymptotic safety: branch A predicts M_t = 182 GeV (measured 172.57); branch B fits; the relevance table.
 12536 -- criticality: lambda = beta_lambda = 0 cannot hit both masses; M_H = 125.20 needs M_t about 170.9.
+12537 -- NNLO: lambda(M_Pl) = 0 needs M_t = 171.04 +- 0.37; pulls 3.0, 2.1, 1.2 sigma by measurement.
+12538 -- no-fit gravity: an apparent hit at M_t = 172.74 is killed by scheme dependence; Lambda* must be known to about 1%.
+12539 -- no-AdS3: at most 2 extra massless bosonic dof.
 """
 
 import json
@@ -45,6 +48,21 @@ def main():
     checks["12535: fixed-point Higgs 127-129 GeV at measured M_t, above 125.20"] = all(127 < x < 129 for x in mh)
     checks["12536: critical points never hit both masses: M_t within 1 GeV and M_H within 1 GeV are not simultaneous"] = not any(abs(x["dMt"]) < 1 and abs(x["dMH"]) < 1 for x in k["scan"])
     checks["12536: M_H = 125.20 at criticality needs M_t near 170.8; lambda(1e19) = 0 needs M_t near 170.9"] = abs(mp["0.118"]["Mt"] - 170.83) < 0.1 and abs(a["Mt_for_lambda_MP_zero_at_measured_MH"] - 170.86) < 0.1
+    n, ms, st = load("nnlo_top.json"), load("matter_scan.json"), load("scheme_test.json")
+    res.update(nnlo=n, matter_scan=ms, scheme_test=st)
+    cmp_ = n["comparisons"]
+    checks["12537: lambda(M_Pl) = 0 needs M_t = 171.04 +- 0.37; pulls 3.0, 2.1, 1.2 sigma"] = abs(n["Mt_for_lambda_MPl_zero"] - 171.04) < 0.01 and abs(n["error_total"] - 0.37) < 0.01 and abs(cmp_["direct_run1_combination"]["pull_sigma"] - 3.0) < 0.05 and abs(cmp_["direct_with_0p5_interpretation"]["pull_sigma"] - 2.1) < 0.05 and abs(cmp_["preliminary_pole_combination"]["pull_sigma"] - 1.2) < 0.05
+    pm = ms["published_models"]
+    checks["12538: interacting hypercharge overshoots g_Y(M_Pl) by over a factor 2 for every published model with matter"] = all(pm[x]["interacting"]["gY_MP"] > 2 * 0.476 for x in ("SM", "SM_3nuR", "SM_dm_scalar", "SM_3nuR_axion_dm", "EH_1707"))
+    checks["12538: the hit: SM + 3 nu_R + axion + DM, Gaussian, M_t 172.74, M_H 128.82; SM has no top fixed point in 1L-II"] = abs(pm["SM_3nuR_axion_dm"]["gaussian"]["Mt"] - 172.74) < 0.02 and abs(pm["SM_3nuR_axion_dm"]["gaussian"]["MH"] - 128.82) < 0.02 and "no top" in pm["SM"]["gaussian"]["status"]
+    sm_ = st["SM_matter_by_scheme"]
+    checks["12538: the kill: the same SM matter gives M_t 171.87 (1L-Ia), 167.94 (full-Ia), none in type II; dM_t/dLambda about -37; about 2% of the region within 1 GeV"] = (
+        abs(sm_["1L-Ia"]["Mt"] - 171.87) < 0.02 and abs(sm_["full-Ia"]["Mt"] - 167.94) < 0.02 and sm_["1L-II"]["Mt"] is None and sm_["full-II"]["Mt"] is None and abs(st["dMt_dLambda"] + 37) < 1 and 0.01 < st["fraction_within_1_GeV"] < 0.04)
+    ext_p = D / "swampland_ext.json"
+    if ext_p.exists():
+        ex = load("swampland_ext.json"); res["swampland_ext"] = ex
+        r_ = {x["nb"]: x for x in ex["extra_massless_bosons"]}
+        checks["12539: extra massless bosons: bounds 7.65, 5.29, 2.84 meV for 0, 1, 2; AdS3 at m1 = 0 for 3 or more"] = abs(r_[4]["m1_bound"] * 1e3 - 7.65) < 0.02 and abs(r_[5]["m1_bound"] * 1e3 - 5.29) < 0.02 and abs(r_[6]["m1_bound"] * 1e3 - 2.84) < 0.02 and r_[7]["m1_bound"] is None and r_[8]["m1_bound"] is None
     checks = {x: bool(v) for x, v in checks.items()}
     res["checks"] = checks
     res["all_checks_pass"] = all(checks.values())

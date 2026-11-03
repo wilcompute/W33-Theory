@@ -435,6 +435,317 @@
       "dMH": 0.15310489707317743
     }
   },
+  "nnlo": {
+    "Mt_for_lambda_MPl_zero": 171.03945887445886,
+    "error_budget": {
+      "alpha_s": 0.3506493506493506,
+      "higgs": 0.04833333333333333,
+      "lambda_theory": 0.06398940864960281,
+      "yt_theory": 0.08992805755395684
+    },
+    "error_total": 0.37077321663879115,
+    "lambda_MPl_at_172p52": -0.009771571428571511,
+    "comparisons": {
+      "direct_run1_combination": {
+        "measured": 172.52,
+        "error": 0.33,
+        "pull_sigma": 2.982799867062582,
+        "note": "Monte Carlo mass, not pole; a further interpretation ambiguity applies"
+      },
+      "direct_with_0p5_interpretation": {
+        "measured": 172.52,
+        "error": 0.5990826320300063,
+        "pull_sigma": 2.1014375940965127,
+        "note": "with the usually quoted 0.5 GeV"
+      },
+      "preliminary_pole_combination": {
+        "measured": 172.25,
+        "error": 0.95,
+        "pull_sigma": 1.187048770336393,
+        "note": "version-1 talk, Nov 2025, not final"
+      }
+    }
+  },
+  "matter_scan": {
+    "published_models": {
+      "SM": {
+        "interacting": {
+          "f_g": 0.04910650867539401,
+          "f_y": -0.004200756581129703,
+          "f_lam": 0.07069231912421967,
+          "gY_MP": 1.0652783233926555,
+          "yt_MP": 0.5218888256783173,
+          "lam_MP": -0.042767991241193244,
+          "status": "ok",
+          "gY_low": 0.4845068515388473,
+          "Mt": 203.20103713382582,
+          "MH": 190.0050510896242
+        },
+        "gaussian": {
+          "f_g": 0.04910650867539401,
+          "f_y": -0.004200756581129703,
+          "f_lam": 0.07069231912421967,
+          "gY_MP": 0.47602007959376097,
+          "status": "no top fixed point (f_y has the wrong sign or size)"
+        }
+      },
+      "SM_3nuR": {
+        "interacting": {
+          "f_g": 0.04790730421167655,
+          "f_y": -0.0002824849855775824,
+          "f_lam": 0.05664765132450733,
+          "gY_MP": 1.0521906241002268,
+          "yt_MP": 0.659023051156834,
+          "lam_MP": 0.04060288840248662,
+          "status": "ok",
+          "gY_low": 0.48334508919239827,
+          "Mt": 215.15491063312788,
+          "MH": 232.60834284348755
+        },
+        "gaussian": {
+          "f_g": 0.04790730421167655,
+          "f_y": -0.0002824849855775824,
+          "f_lam": 0.05664765132450733,
+          "gY_MP": 0.47602007959376097,
+          "yt_MP": 0.2863893898137455,
+          "lam_MP": -0.014553038040633178,
+          "status": "ok",
+          "gY_low": 0.35841152581493324,
+          "Mt": 148.1815676784249,
+          "MH": 77.27728695838249
+        }
+      },
+      "SM_dm_scalar": {
+        "interacting": {
+          "f_g": 0.05052187005247357,
+          "f_y": -0.0036872268528076123,
+          "f_lam": 0.07068713502231509,
+          "gY_MP": 1.0805211436631859,
+          "yt_MP": 0.5533360424871286,
+          "lam_MP": -0.029609727478967836,
+          "status": "ok",
+          "gY_low": 0.4859232401224931,
+          "Mt": 206.7001014016338,
+          "MH": 203.16828380938153
+        },
+        "gaussian": {
+          "f_g": 0.05052187005247357,
+          "f_y": -0.0036872268528076123,
+          "f_lam": 0.07068713502231509,
+          "gY_MP": 0.47602007959376097,
+          "status": "no top fixed point (f_y has the wrong sign or size)"
+        }
+      },
+      "SM_3nuR_axion_dm": {
+        "interacting": {
+          "f_g": 0.05039694004612461,
+          "f_y": 0.0011509579974277528,
+          "f_lam": 0.054893093203681395,
+          "gY_MP": 1.0791843654843942,
+          "yt_MP": 0.716470980380644,
+          "lam_MP": 0.07204612529678445,
+          "status": "ok",
+          "gY_low": 0.48589258797706897,
+          "Mt": 218.917822499253,
+          "MH": 243.84337730822404
+        },
+        "gaussian": {
+          "f_g": 0.05039694004612461,
+          "f_y": 0.0011509579974277528,
+          "f_lam": 0.054893093203681395,
+          "gY_MP": 0.47602007959376097,
+          "yt_MP": 0.3823641506184317,
+          "lam_MP": -0.0010967459795049172,
+          "status": "ok",
+          "gY_low": 0.35843485777698564,
+          "Mt": 172.73718489477648,
+          "MH": 128.82131612410214
+        }
+      },
+      "no_matter": {
+        "interacting": {
+          "f_g": 0.06805459179828373,
+          "f_y": -0.22734208418203922,
+          "f_lam": 0.7775097300288153,
+          "gY_MP": 1.2540714403519342,
+          "status": "no top fixed point (f_y has the wrong sign or size)"
+        },
+        "gaussian": {
+          "f_g": 0.06805459179828373,
+          "f_y": -0.22734208418203922,
+          "f_lam": 0.7775097300288153,
+          "gY_MP": 0.47602007959376097,
+          "status": "no top fixed point (f_y has the wrong sign or size)"
+        }
+      },
+      "EH_1707": {
+        "interacting": {
+          "f_g": 0.05516644844700304,
+          "f_y": 0.003703643201971175,
+          "f_lam": 0.052130513296068166,
+          "gY_MP": 1.129096532296044,
+          "yt_MP": 0.808014438668796,
+          "lam_MP": 0.12577578511937412,
+          "status": "ok",
+          "gY_low": 0.4902131479812591,
+          "Mt": 223.68721550325543,
+          "MH": 257.79632943109334
+        },
+        "gaussian": {
+          "f_g": 0.05516644844700304,
+          "f_y": 0.003703643201971175,
+          "f_lam": 0.052130513296068166,
+          "gY_MP": 0.47602007959376097,
+          "yt_MP": 0.505398642907651,
+          "lam_MP": 0.02835676121039446,
+          "status": "ok",
+          "gY_low": 0.35846441904839743,
+          "Mt": 193.07506776632906,
+          "MH": 178.5897726936838
+        }
+      }
+    },
+    "Lambda_where_f_y_changes_sign": -3.2786746319332734,
+    "target_roots": [
+      {
+        "Lambda": -2.7456637410886584,
+        "G": 0.3897556629303695
+      }
+    ],
+    "ratio_G_table_to_target": {
+      "SM": 4.520781011242893,
+      "SM_3nuR": 5.51627648931454,
+      "SM_dm_scalar": 4.797877690706136,
+      "SM_3nuR_axion_dm": 6.414274987575046,
+      "no_matter": 1.9755966961731144,
+      "EH_1707": 8.441185883648762
+    },
+    "f_lam_at_target": [
+      0.012856371266519421
+    ]
+  },
+  "scheme_test": {
+    "SM_matter_by_scheme": {
+      "1L-II": {
+        "Mt": null,
+        "MH": null,
+        "status": "no top fixed point (f_y has the wrong sign or size)",
+        "f_y": -0.004200756581129703
+      },
+      "full-II": {
+        "Mt": null,
+        "MH": null,
+        "status": "no top fixed point (f_y has the wrong sign or size)",
+        "f_y": -0.0045329583829320196
+      },
+      "1L-Ia": {
+        "Mt": 171.86998080968306,
+        "MH": 126.85898426905295,
+        "status": "ok",
+        "f_y": 0.0011223148458928203
+      },
+      "full-Ia": {
+        "Mt": 167.9447732330125,
+        "MH": 118.05989714615922,
+        "status": "ok",
+        "f_y": 0.0008299040066245911
+      }
+    },
+    "hit": {
+      "Mt": 172.73718489477648,
+      "MH": 128.82131612410214
+    },
+    "dMt_dLambda": -36.929948479557595,
+    "dMt_dG": 1.9957205746855777,
+    "dMH_dLambda": -85.35793697556642,
+    "grid_points": 1739,
+    "grid_within_1_GeV_of_Mt": 37,
+    "fraction_within_1_GeV": 0.02127659574468085,
+    "window_samples": [
+      [
+        1.6,
+        -3.65,
+        172.97,
+        129.15
+      ],
+      [
+        1.75,
+        -3.65,
+        172.87,
+        128.97
+      ],
+      [
+        1.9,
+        -3.65,
+        172.9,
+        129.09
+      ],
+      [
+        2.05,
+        -3.65,
+        173.03,
+        129.43
+      ],
+      [
+        2.2,
+        -3.65,
+        173.23,
+        129.94
+      ],
+      [
+        2.3,
+        -3.65,
+        173.4,
+        130.35
+      ],
+      [
+        2.35,
+        -3.6,
+        171.73,
+        126.46
+      ],
+      [
+        2.5,
+        -3.6,
+        171.98,
+        127.08
+      ],
+      [
+        2.65,
+        -3.6,
+        172.28,
+        127.79
+      ],
+      [
+        2.8,
+        -3.6,
+        172.6,
+        128.56
+      ],
+      [
+        2.95,
+        -3.6,
+        172.96,
+        129.39
+      ],
+      [
+        3.1,
+        -3.6,
+        173.34,
+        130.25
+      ],
+      [
+        3.4,
+        -3.55,
+        171.74,
+        126.71
+      ]
+    ],
+    "MH_range_on_the_Mt_band": [
+      126.1,
+      130.58
+    ]
+  },
   "checks": {
     "control: two-loop RGEs reproduce Buttazzo eq. 61 (g within 3e-4, y_t within 1e-3, lambda within 1e-3) and its slopes": true,
     "control: the Casimir code gives bounds near the published 7.7 and 2.5 meV": true,
@@ -447,7 +758,11 @@
     "12535: branch B far-UV y_t* near the frontier's 0.25": true,
     "12535: fixed-point Higgs 127-129 GeV at measured M_t, above 125.20": true,
     "12536: critical points never hit both masses: M_t within 1 GeV and M_H within 1 GeV are not simultaneous": true,
-    "12536: M_H = 125.20 at criticality needs M_t near 170.8; lambda(1e19) = 0 needs M_t near 170.9": true
+    "12536: M_H = 125.20 at criticality needs M_t near 170.8; lambda(1e19) = 0 needs M_t near 170.9": true,
+    "12537: lambda(M_Pl) = 0 needs M_t = 171.04 +- 0.37; pulls 3.0, 2.1, 1.2 sigma": true,
+    "12538: interacting hypercharge overshoots g_Y(M_Pl) by over a factor 2 for every published model with matter": true,
+    "12538: the hit: SM + 3 nu_R + axion + DM, Gaussian, M_t 172.74, M_H 128.82; SM has no top fixed point in 1L-II": true,
+    "12538: the kill: the same SM matter gives M_t 171.87 (1L-Ia), 167.94 (full-Ia), none in type II; dM_t/dLambda about -37; about 2% of the region within 1 GeV": true
   },
   "all_checks_pass": true
 }
