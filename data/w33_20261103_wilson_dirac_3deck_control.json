@@ -1,0 +1,127 @@
+{
+  "status": "PASS_W33_SYNTHETIC_3D_WILSON_DIRAC_BENCHMARK",
+  "base_graph_modes": 40,
+  "Dirac_internal_modes": 4,
+  "Bloch_cell_modes": 160,
+  "voltage_edges": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      7
+    ]
+  ],
+  "W33_laplacian_amplitude": 0.1,
+  "Wilson_r": 1.5,
+  "mass_at_k0": 0,
+  "BZ_corner_doubler_controls": [
+    {
+      "pi_axes": 0,
+      "bare_dirac_min_abs": 0.0,
+      "native_40mode_naive_min_abs": 1.1102230246251454e-17,
+      "native_40mode_wilson_min_abs": 1.1102230246251454e-17,
+      "wilson_mass": 0.0,
+      "chirality_commutator_norm": 0.0
+    },
+    {
+      "pi_axes": 1,
+      "bare_dirac_min_abs": 1.2246467991473532e-16,
+      "native_40mode_naive_min_abs": 0.0007106583345636425,
+      "native_40mode_wilson_min_abs": 2.861345922533285,
+      "wilson_mass": 3.0,
+      "chirality_commutator_norm": 12.0
+    },
+    {
+      "pi_axes": 1,
+      "bare_dirac_min_abs": 1.2246467991473532e-16,
+      "native_40mode_naive_min_abs": 0.0007106583345636911,
+      "native_40mode_wilson_min_abs": 2.861345922533285,
+      "wilson_mass": 3.0,
+      "chirality_commutator_norm": 12.0
+    },
+    {
+      "pi_axes": 2,
+      "bare_dirac_min_abs": 1.7319121124709866e-16,
+      "native_40mode_naive_min_abs": 0.0014399499176571506,
+      "native_40mode_wilson_min_abs": 5.859905725972132,
+      "wilson_mass": 6.0,
+      "chirality_commutator_norm": 24.0
+    },
+    {
+      "pi_axes": 1,
+      "bare_dirac_min_abs": 1.2246467991473532e-16,
+      "native_40mode_naive_min_abs": 0.0007106583345636129,
+      "native_40mode_wilson_min_abs": 2.861345922533285,
+      "wilson_mass": 3.0,
+      "chirality_commutator_norm": 12.0
+    },
+    {
+      "pi_axes": 2,
+      "bare_dirac_min_abs": 1.7319121124709866e-16,
+      "native_40mode_naive_min_abs": 0.0014240465408280212,
+      "native_40mode_wilson_min_abs": 5.8599730766909355,
+      "wilson_mass": 6.0,
+      "chirality_commutator_norm": 24.0
+    },
+    {
+      "pi_axes": 2,
+      "bare_dirac_min_abs": 1.7319121124709866e-16,
+      "native_40mode_naive_min_abs": 0.0014087342096223761,
+      "native_40mode_wilson_min_abs": 5.856981019498597,
+      "wilson_mass": 6.0,
+      "chirality_commutator_norm": 24.0
+    },
+    {
+      "pi_axes": 3,
+      "bare_dirac_min_abs": 2.1211504774498136e-16,
+      "native_40mode_naive_min_abs": 0.0021405288211037254,
+      "native_40mode_wilson_min_abs": 8.856300390040627,
+      "wilson_mass": 9.0,
+      "chirality_commutator_norm": 36.0
+    }
+  ],
+  "small_k_branches": [
+    {
+      "k_norm": 0.0030000000000000005,
+      "four_near_zero_energies": [
+        -0.003000003773429271,
+        -0.003000003773429268,
+        0.00300000691405312,
+        0.0030000069140531205
+      ],
+      "positive_speed_ratio": 1.0000023046843733,
+      "negative_speed_ratio": 1.0000012578097568
+    },
+    {
+      "k_norm": 0.010000000000000002,
+      "four_near_zero_energies": [
+        -0.01000018046519527,
+        -0.010000180465195267,
+        0.010000215360891644,
+        0.010000215360891648
+      ],
+      "positive_speed_ratio": 1.0000215360891647,
+      "negative_speed_ratio": 1.0000180465195267
+    },
+    {
+      "k_norm": 0.03,
+      "four_near_zero_energies": [
+        -0.03000518584400713,
+        -0.03000518584400712,
+        0.03000549989541688,
+        0.030005499895416895
+      ],
+      "positive_speed_ratio": 1.0001833298472298,
+      "negative_speed_ratio": 1.0001728614669045
+    }
+  ],
+  "locality": "Exactly 3 real deck hoppings + on-site 40-mode adjacency + finite nearest-neighbor Wilson spinor terms; 160-mode cell before deck replication",
+  "limitation": "Wilson mass is manually supplied and breaks exact chiral conservation; the resulting cone is engineered, not emergent, and no SM chirality, interactions, c or gravity derived. Known Wilson fermion technique, not novel physical principle.",
+  "reference": "Gupta & Short PRA 114 012208 (2026); Wilson fermions topolectrical Communications Physics 2023"
+}

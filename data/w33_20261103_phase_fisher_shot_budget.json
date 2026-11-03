@@ -1,0 +1,39 @@
+{
+  "status": "PASS_POISSON_MULTINOMIAL_FISHER_SCALE_AT_MAXIMALLY_MIXED",
+  "POVM_complex_dimension": 24,
+  "outcomes_per_setting": 216,
+  "settings": 3,
+  "assumed_input": "rho=I24/24",
+  "per_outcome_probability_each_setting": "1/216",
+  "information_formula": "Fisher=216*N*A^T*A on traceless Hermitian coordinate directions for N detected outcomes per setting; \u03bb_min from effect matrix of three phase settings",
+  "bit_depth_controls": [
+    {
+      "bit_depth": 6,
+      "rank": 576,
+      "Fisher_min_eigenvalue_per_one_shot_per_setting": 0.0004299880014586657,
+      "worst_direction_CRB_std_at_1M_shots_per_setting": 0.04822495504628886,
+      "shots_per_setting_for_std_0p10": 232565,
+      "shots_per_setting_for_std_0p05": 930259,
+      "shots_per_setting_for_std_0p01": 23256463
+    },
+    {
+      "bit_depth": 10,
+      "rank": 576,
+      "Fisher_min_eigenvalue_per_one_shot_per_setting": 0.0004242082007233001,
+      "worst_direction_CRB_std_at_1M_shots_per_setting": 0.04855237401555496,
+      "shots_per_setting_for_std_0p10": 235734,
+      "shots_per_setting_for_std_0p05": 942934,
+      "shots_per_setting_for_std_0p01": 23573331
+    },
+    {
+      "bit_depth": 0,
+      "rank": 576,
+      "Fisher_min_eigenvalue_per_one_shot_per_setting": 0.0007427018719819076,
+      "worst_direction_CRB_std_at_1M_shots_per_setting": 0.03669380432738738,
+      "shots_per_setting_for_std_0p10": 134644,
+      "shots_per_setting_for_std_0p05": 538575,
+      "shots_per_setting_for_std_0p01": 13464353
+    }
+  ],
+  "scope": "Local unbiased-estimator Cramer-Rao LOWER bound for perfect independent detection and exact calibration; N means detected photons per setting. No detector loss, dark counts, reconstruction bias or feasibility claim."
+}

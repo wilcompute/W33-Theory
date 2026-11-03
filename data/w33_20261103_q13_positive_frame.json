@@ -1,0 +1,28 @@
+{
+  "status": "PASS_Q13_NONHYPEROVAL_SPECTRAL_SUPPORT_CERTIFICATE",
+  "field": 13,
+  "W33_ladder": "W(3,13)",
+  "point_count": 2380,
+  "line_count": 2380,
+  "monomial_orbit_size": 160,
+  "chosen_line_set_size": 160,
+  "coverage_profile": {
+    "0": 1340,
+    "2": 960,
+    "4": 80
+  },
+  "centered_integer_coverage_y": "17*coverage-16",
+  "zero_sum": 0,
+  "centered_squared_norm": 870400,
+  "point_adjacency_quadratic_form": 10444800,
+  "positive_eigenspace_dimension": 1274,
+  "negative_eigenspace_dimension": 1105,
+  "positive_eigenvalue": 12,
+  "negative_eigenvalue": -14,
+  "positive_eigenspace_squared_norm": 870400,
+  "negative_eigenspace_squared_norm": 0,
+  "positive_fraction": 1.0,
+  "negative_fraction": 0.0,
+  "geometry": "Exact Klein pullback from Q(4,13) point orbit, independent of the previously frozen q13 frame report.",
+  "scope": "Exact spectral energy decomposition for the one 160-line example; not a minimum proof, not a complete orbit or cubic-tomography theorem; full symplectic group orbit covariance is predicted by rank-three action."
+}
