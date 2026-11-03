@@ -1,0 +1,143 @@
+[
+ {
+  "q": 2,
+  "code_dim": 5,
+  "min_weight": 6,
+  "minimal_words": 10,
+  "single_context": {
+   "noncontextual|1": 1
+  },
+  "all_words": {
+   "noncontextual|8": 15,
+   "CONTEXTUAL|6": 10,
+   "CONTEXTUAL|10": 6
+  },
+  "contextual_iff_weight_2_mod_4": true
+ },
+ {
+  "q": 4,
+  "code_dim": 35,
+  "min_weight": null,
+  "minimal_words": 0,
+  "minimal_words_classified": {},
+  "basis_words_classified": {
+   "CONTEXTUAL|24": 2,
+   "CONTEXTUAL|16": 4,
+   "CONTEXTUAL|30": 1,
+   "CONTEXTUAL|10": 8,
+   "CONTEXTUAL|18": 11,
+   "CONTEXTUAL|22": 5,
+   "CONTEXTUAL|26": 4
+  },
+  "one_line_contextual": false,
+  "two_meeting_lines_contextual": false,
+  "irreducible_contextual_cores": [
+   {
+    "first_contextual_at": 12,
+    "irreducible_core": 8,
+    "core_graph_edges": 12,
+    "core": [
+     38,
+     13,
+     50,
+     61,
+     19,
+     2,
+     51,
+     37
+    ]
+   },
+   {
+    "first_contextual_at": 19,
+    "irreducible_core": 13,
+    "core_graph_edges": 24,
+    "core": [
+     23,
+     45,
+     55,
+     75,
+     41,
+     71,
+     79,
+     7,
+     29,
+     84,
+     42,
+     22,
+     58
+    ]
+   },
+   {
+    "first_contextual_at": 17,
+    "irreducible_core": 6,
+    "core_graph_edges": 9,
+    "core": [
+     56,
+     53,
+     79,
+     31,
+     63,
+     24
+    ]
+   },
+   {
+    "first_contextual_at": 15,
+    "irreducible_core": 6,
+    "core_graph_edges": 9,
+    "core": [
+     28,
+     70,
+     42,
+     71,
+     60,
+     10
+    ]
+   },
+   {
+    "first_contextual_at": 15,
+    "irreducible_core": 13,
+    "core_graph_edges": 23,
+    "core": [
+     37,
+     45,
+     29,
+     23,
+     0,
+     40,
+     69,
+     59,
+     72,
+     39,
+     64,
+     56,
+     71
+    ]
+   },
+   {
+    "first_contextual_at": 20,
+    "irreducible_core": 11,
+    "core_graph_edges": 21,
+    "core": [
+     1,
+     69,
+     71,
+     51,
+     49,
+     3,
+     19,
+     8,
+     44,
+     11,
+     33
+    ]
+   }
+  ],
+  "smallest_core": 6
+ },
+ {
+  "q": 8,
+  "code_dim": 287,
+  "min_weight": null,
+  "minimal_words": 0
+ }
+]

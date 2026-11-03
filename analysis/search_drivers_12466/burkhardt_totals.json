@@ -1,0 +1,49 @@
+{
+ "mirror_overlaps_0_if_disjoint_half_otherwise": true,
+ "quartic_invariants_of_all_45_reflections": 1,
+ "F_invariant_under_all_45": true,
+ "max_grad_norm_at_45_nodes": 6.812111590220545e-16,
+ "control_grad_norm_random": 0.2012661421447198,
+ "max_F_at_nodes": 1.4202767060788784e-16,
+ "point_gives_rank_3_span_of_9_nodes": true,
+ "max_F_on_j_planes": 2.4272865997332087e-16,
+ "line_gives_span_rank": {
+  "4": 40
+ },
+ "nodes_in_a_steiner_prime": [
+  18
+ ],
+ "steiner_prime_F_is_product_of_its_4_planes_max_spread": 3.293275228211167e-13,
+ "mirror_action_ok": true,
+ "all_45_generate_projective_order": 25920,
+ "F_equals_const_sigma4_max_spread_over_216": 1.1005290447479014e-13,
+ "total_reflection_group_order": {
+  "720": 216
+ },
+ "total_is_A5_star_gram": true,
+ "total_mirror_closure_size": {
+  "15": 216
+ },
+ "distinct_subsystems": 36,
+ "total_node_rank": {
+  "5": 216
+ },
+ "total_gram_abs_det": {
+  "0.1875": 216
+ },
+ "total_triple_phase_over_pi": {
+  "0.0": 2160
+ },
+ "rank_of_the_10_Steiner_primes_of_S": {
+  "5": 216
+ },
+ "control_other_5_sets_rank": {
+  "4": 1473,
+  "5": 1085,
+  "3": 442
+ },
+ "control_other_5_sets_abs_det_top": {
+  "0.0": 1915,
+  "0.0625": 1085
+ }
+}

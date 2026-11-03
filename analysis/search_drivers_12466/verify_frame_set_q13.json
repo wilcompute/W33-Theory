@@ -1,0 +1,115 @@
+{
+ "q": 13,
+ "weight": 160,
+ "orbit_table": [
+  {
+   "rep": [
+    1,
+    0,
+    0,
+    0,
+    5
+   ],
+   "size": 20,
+   "hamming": 2,
+   "chosen": false
+  },
+  {
+   "rep": [
+    1,
+    0,
+    0,
+    3,
+    4
+   ],
+   "size": 80,
+   "hamming": 3,
+   "chosen": false
+  },
+  {
+   "rep": [
+    1,
+    0,
+    1,
+    1,
+    6
+   ],
+   "size": 160,
+   "hamming": 4,
+   "chosen": true
+  },
+  {
+   "rep": [
+    1,
+    0,
+    1,
+    5,
+    5
+   ],
+   "size": 120,
+   "hamming": 4,
+   "chosen": false
+  },
+  {
+   "rep": [
+    1,
+    0,
+    2,
+    3,
+    5
+   ],
+   "size": 480,
+   "hamming": 4,
+   "chosen": false
+  },
+  {
+   "rep": [
+    1,
+    1,
+    1,
+    1,
+    3
+   ],
+   "size": 80,
+   "hamming": 5,
+   "chosen": false
+  },
+  {
+   "rep": [
+    1,
+    1,
+    2,
+    2,
+    4
+   ],
+   "size": 480,
+   "hamming": 5,
+   "chosen": false
+  },
+  {
+   "rep": [
+    1,
+    1,
+    3,
+    4,
+    5
+   ],
+   "size": 960,
+   "hamming": 5,
+   "chosen": false
+  }
+ ],
+ "line_intersection_histogram": {
+  "0": 1340,
+  "2": 960,
+  "4": 80
+ },
+ "isotropic_lines_have_p02_plus_p13_zero_and_map_to_the_quadric": true,
+ "lines_in_W": 160,
+ "all_points_even_in_W": true,
+ "coverage_in_W": {
+  "0": 1340,
+  "2": 960,
+  "4": 80
+ }
+}

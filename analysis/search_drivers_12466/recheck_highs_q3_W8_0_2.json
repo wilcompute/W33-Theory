@@ -1,0 +1,13 @@
+{
+ "q": 3,
+ "W": 8,
+ "classes": 2,
+ "range": [
+  0,
+  2
+ ],
+ "infeasible": 2,
+ "feasible": [],
+ "unknown": [],
+ "seconds": 0.1
+}

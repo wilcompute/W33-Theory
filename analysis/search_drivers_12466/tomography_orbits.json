@@ -1,0 +1,254 @@
+{
+ "point": {
+  "order": 648,
+  "orbits": [
+   36
+  ],
+  "unions": []
+ },
+ "line": {
+  "order": 648,
+  "orbits": [
+   9,
+   27
+  ],
+  "unions": [
+   {
+    "k": 27,
+    "rank": 24,
+    "tight": false,
+    "detects": false,
+    "orbit_sizes": [
+     27
+    ]
+   },
+   {
+    "k": 9,
+    "rank": 23,
+    "tight": false,
+    "detects": false,
+    "orbit_sizes": [
+     9
+    ]
+   }
+  ]
+ },
+ "spread_of_double_six_0": {
+  "order": 720,
+  "orbits": [
+   1,
+   15,
+   20
+  ],
+  "unions": [
+   {
+    "k": 1,
+    "rank": 5,
+    "tight": false,
+    "detects": false,
+    "orbit_sizes": [
+     1
+    ]
+   },
+   {
+    "k": 20,
+    "rank": 24,
+    "tight": false,
+    "detects": false,
+    "orbit_sizes": [
+     20
+    ]
+   },
+   {
+    "k": 15,
+    "rank": 24,
+    "tight": false,
+    "detects": false,
+    "orbit_sizes": [
+     15
+    ]
+   },
+   {
+    "k": 21,
+    "rank": 24,
+    "tight": false,
+    "detects": false,
+    "orbit_sizes": [
+     1,
+     20
+    ]
+   },
+   {
+    "k": 16,
+    "rank": 24,
+    "tight": false,
+    "detects": false,
+    "orbit_sizes": [
+     1,
+     15
+    ]
+   },
+   {
+    "k": 35,
+    "rank": 24,
+    "tight": false,
+    "detects": false,
+    "orbit_sizes": [
+     15,
+     20
+    ]
+   }
+  ]
+ },
+ "codeword": {
+  "order": 120,
+  "orbits": [
+   1,
+   10,
+   10,
+   15
+  ],
+  "unions": [
+   {
+    "k": 10,
+    "rank": 24,
+    "tight": false,
+    "detects": false,
+    "orbit_sizes": [
+     10
+    ]
+   },
+   {
+    "k": 15,
+    "rank": 24,
+    "tight": false,
+    "detects": false,
+    "orbit_sizes": [
+     15
+    ]
+   },
+   {
+    "k": 10,
+    "rank": 24,
+    "tight": false,
+    "detects": false,
+    "orbit_sizes": [
+     10
+    ]
+   },
+   {
+    "k": 1,
+    "rank": 5,
+    "tight": false,
+    "detects": false,
+    "orbit_sizes": [
+     1
+    ]
+   },
+   {
+    "k": 25,
+    "rank": 24,
+    "tight": false,
+    "detects": false,
+    "orbit_sizes": [
+     10,
+     15
+    ]
+   },
+   {
+    "k": 20,
+    "rank": 24,
+    "tight": false,
+    "detects": false,
+    "orbit_sizes": [
+     10,
+     10
+    ]
+   },
+   {
+    "k": 11,
+    "rank": 24,
+    "tight": false,
+    "detects": false,
+    "orbit_sizes": [
+     1,
+     10
+    ]
+   },
+   {
+    "k": 25,
+    "rank": 24,
+    "tight": false,
+    "detects": false,
+    "orbit_sizes": [
+     10,
+     15
+    ]
+   },
+   {
+    "k": 16,
+    "rank": 24,
+    "tight": false,
+    "detects": false,
+    "orbit_sizes": [
+     1,
+     15
+    ]
+   },
+   {
+    "k": 11,
+    "rank": 24,
+    "tight": false,
+    "detects": false,
+    "orbit_sizes": [
+     1,
+     10
+    ]
+   },
+   {
+    "k": 35,
+    "rank": 24,
+    "tight": false,
+    "detects": false,
+    "orbit_sizes": [
+     10,
+     10,
+     15
+    ]
+   },
+   {
+    "k": 26,
+    "rank": 24,
+    "tight": false,
+    "detects": false,
+    "orbit_sizes": [
+     1,
+     10,
+     15
+    ]
+   },
+   {
+    "k": 21,
+    "rank": 24,
+    "tight": false,
+    "detects": false,
+    "orbit_sizes": [
+     1,
+     10,
+     10
+    ]
+   },
+   {
+    "k": 26,
+    "rank": 24,
+    "tight": false,
+    "detects": false,
+    "orbit_sizes": [
+     1,
+     10,
+     15
+    ]
+   }
+  ]
+ }
+}

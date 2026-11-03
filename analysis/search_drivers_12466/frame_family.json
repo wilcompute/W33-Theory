@@ -1,0 +1,254 @@
+{
+ "3": {
+  "classes": 1,
+  "even_orbits": [
+   {
+    "vector": [
+     0,
+     0,
+     1,
+     1,
+     1
+    ],
+    "size": 40,
+    "intersections_through_a_point": {
+     "4": 4
+    }
+   }
+  ]
+ },
+ "5": {
+  "classes": 3,
+  "even_orbits": [
+   {
+    "vector": [
+     0,
+     0,
+     0,
+     1,
+     2
+    ],
+    "size": 20,
+    "intersections_through_a_point": {
+     "2": 6
+    }
+   }
+  ]
+ },
+ "7": {
+  "classes": 3,
+  "even_orbits": [
+   {
+    "vector": [
+     1,
+     1,
+     1,
+     3,
+     3
+    ],
+    "size": 160,
+    "intersections_through_a_point": {
+     "4": 8
+    }
+   }
+  ]
+ },
+ "11": {
+  "classes": 5,
+  "even_orbits": [
+   {
+    "vector": [
+     1,
+     1,
+     1,
+     2,
+     2
+    ],
+    "size": 160,
+    "intersections_through_a_point": {
+     "2": 12
+    }
+   },
+   {
+    "vector": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "size": 384,
+    "intersections_through_a_point": {
+     "4": 10,
+     "2": 2
+    }
+   }
+  ]
+ },
+ "13": {
+  "classes": 8,
+  "even_orbits": [
+   {
+    "vector": [
+     0,
+     1,
+     1,
+     1,
+     6
+    ],
+    "size": 160,
+    "intersections_through_a_point": {
+     "2": 12,
+     "4": 2
+    }
+   },
+   {
+    "vector": [
+     1,
+     1,
+     3,
+     4,
+     5
+    ],
+    "size": 960,
+    "intersections_through_a_point": {
+     "12": 2,
+     "6": 10,
+     "4": 2
+    }
+   }
+  ]
+ },
+ "17": {
+  "classes": 12,
+  "even_orbits": [
+   {
+    "vector": [
+     0,
+     1,
+     3,
+     4,
+     5
+    ],
+    "size": 480,
+    "intersections_through_a_point": {
+     "2": 12,
+     "4": 5,
+     "8": 1
+    }
+   },
+   {
+    "vector": [
+     1,
+     1,
+     1,
+     4,
+     7
+    ],
+    "size": 320,
+    "intersections_through_a_point": {
+     "4": 3,
+     "2": 15
+    }
+   },
+   {
+    "vector": [
+     1,
+     1,
+     2,
+     3,
+     6
+    ],
+    "size": 960,
+    "intersections_through_a_point": {
+     "4": 16,
+     "2": 2
+    }
+   },
+   {
+    "vector": [
+     1,
+     1,
+     2,
+     7,
+     8
+    ],
+    "size": 960,
+    "intersections_through_a_point": {
+     "4": 15,
+     "2": 3
+    }
+   },
+   {
+    "vector": [
+     1,
+     1,
+     3,
+     5,
+     7
+    ],
+    "size": 960,
+    "intersections_through_a_point": {
+     "4": 7,
+     "2": 5,
+     "6": 6
+    }
+   }
+  ]
+ },
+ "19": {
+  "classes": 12,
+  "even_orbits": [
+   {
+    "vector": [
+     1,
+     2,
+     3,
+     6,
+     8
+    ],
+    "size": 1920,
+    "intersections_through_a_point": {
+     "6": 10,
+     "4": 6,
+     "8": 4
+    }
+   }
+  ]
+ },
+ "23": {
+  "classes": 17,
+  "even_orbits": [
+   {
+    "vector": [
+     1,
+     2,
+     3,
+     7,
+     11
+    ],
+    "size": 1920,
+    "intersections_through_a_point": {
+     "6": 12,
+     "4": 8,
+     "2": 4
+    }
+   },
+   {
+    "vector": [
+     1,
+     2,
+     5,
+     6,
+     7
+    ],
+    "size": 1920,
+    "intersections_through_a_point": {
+     "6": 12,
+     "2": 4,
+     "4": 8
+    }
+   }
+  ]
+ }
+}

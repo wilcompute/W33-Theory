@@ -1,0 +1,18 @@
+{
+ "q": 5,
+ "W": 20,
+ "classes": 4,
+ "range": [
+  0,
+  4
+ ],
+ "infeasible": 3,
+ "feasible": [
+  {
+   "rep": 32,
+   "weight": 20
+  }
+ ],
+ "unknown": [],
+ "seconds": 0.3
+}

@@ -1,0 +1,22 @@
+{
+ "tl_ok": true,
+ "braid_ok": true,
+ "rank_Pi0_Pi2": 1,
+ "Pi4_on_cap": 1.0000000000000007,
+ "cap_is_P4_eigenstate": true,
+ "braid_relations_with_chosen_Pi4": true,
+ "tests": 160,
+ "complex_identity_agree": "160",
+ "abs_vs_line_agree": "160",
+ "worst_error": 6.240547766562284e-12,
+ "long_word_dim_frequencies": {
+  "0": 0.6754,
+  "1": 0.2995,
+  "2": 0.025
+ },
+ "predicted": {
+  "0": 0.675,
+  "1": 0.3,
+  "2": 0.025
+ }
+}

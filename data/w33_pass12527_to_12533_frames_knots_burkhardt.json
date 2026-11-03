@@ -1,0 +1,1183 @@
+{
+  "frame_q5": {
+    "q": 5,
+    "weight": 20,
+    "orbit_table": [
+      {
+        "rep": [
+          1,
+          0,
+          0,
+          0,
+          2
+        ],
+        "size": 20,
+        "hamming": 2,
+        "chosen": true
+      },
+      {
+        "rep": [
+          1,
+          0,
+          1,
+          2,
+          2
+        ],
+        "size": 120,
+        "hamming": 4,
+        "chosen": false
+      },
+      {
+        "rep": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "size": 16,
+        "hamming": 5,
+        "chosen": false
+      }
+    ],
+    "line_intersection_histogram": {
+      "0": 96,
+      "2": 60
+    },
+    "isotropic_lines_have_p02_plus_p13_zero_and_map_to_the_quadric": true,
+    "lines_in_W": 20,
+    "all_points_even_in_W": true,
+    "coverage_in_W": {
+      "0": 96,
+      "2": 60
+    }
+  },
+  "frame_q13": {
+    "q": 13,
+    "weight": 160,
+    "orbit_table": [
+      {
+        "rep": [
+          1,
+          0,
+          0,
+          0,
+          5
+        ],
+        "size": 20,
+        "hamming": 2,
+        "chosen": false
+      },
+      {
+        "rep": [
+          1,
+          0,
+          0,
+          3,
+          4
+        ],
+        "size": 80,
+        "hamming": 3,
+        "chosen": false
+      },
+      {
+        "rep": [
+          1,
+          0,
+          1,
+          1,
+          6
+        ],
+        "size": 160,
+        "hamming": 4,
+        "chosen": true
+      },
+      {
+        "rep": [
+          1,
+          0,
+          1,
+          5,
+          5
+        ],
+        "size": 120,
+        "hamming": 4,
+        "chosen": false
+      },
+      {
+        "rep": [
+          1,
+          0,
+          2,
+          3,
+          5
+        ],
+        "size": 480,
+        "hamming": 4,
+        "chosen": false
+      },
+      {
+        "rep": [
+          1,
+          1,
+          1,
+          1,
+          3
+        ],
+        "size": 80,
+        "hamming": 5,
+        "chosen": false
+      },
+      {
+        "rep": [
+          1,
+          1,
+          2,
+          2,
+          4
+        ],
+        "size": 480,
+        "hamming": 5,
+        "chosen": false
+      },
+      {
+        "rep": [
+          1,
+          1,
+          3,
+          4,
+          5
+        ],
+        "size": 960,
+        "hamming": 5,
+        "chosen": false
+      }
+    ],
+    "line_intersection_histogram": {
+      "0": 1340,
+      "2": 960,
+      "4": 80
+    },
+    "isotropic_lines_have_p02_plus_p13_zero_and_map_to_the_quadric": true,
+    "lines_in_W": 160,
+    "all_points_even_in_W": true,
+    "coverage_in_W": {
+      "0": 1340,
+      "2": 960,
+      "4": 80
+    }
+  },
+  "frame_family": {
+    "3": {
+      "classes": 1,
+      "even_orbits": [
+        {
+          "vector": [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "size": 40,
+          "intersections_through_a_point": {
+            "4": 4
+          }
+        }
+      ]
+    },
+    "5": {
+      "classes": 3,
+      "even_orbits": [
+        {
+          "vector": [
+            0,
+            0,
+            0,
+            1,
+            2
+          ],
+          "size": 20,
+          "intersections_through_a_point": {
+            "2": 6
+          }
+        }
+      ]
+    },
+    "7": {
+      "classes": 3,
+      "even_orbits": [
+        {
+          "vector": [
+            1,
+            1,
+            1,
+            3,
+            3
+          ],
+          "size": 160,
+          "intersections_through_a_point": {
+            "4": 8
+          }
+        }
+      ]
+    },
+    "11": {
+      "classes": 5,
+      "even_orbits": [
+        {
+          "vector": [
+            1,
+            1,
+            1,
+            2,
+            2
+          ],
+          "size": 160,
+          "intersections_through_a_point": {
+            "2": 12
+          }
+        },
+        {
+          "vector": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "size": 384,
+          "intersections_through_a_point": {
+            "4": 10,
+            "2": 2
+          }
+        }
+      ]
+    },
+    "13": {
+      "classes": 8,
+      "even_orbits": [
+        {
+          "vector": [
+            0,
+            1,
+            1,
+            1,
+            6
+          ],
+          "size": 160,
+          "intersections_through_a_point": {
+            "2": 12,
+            "4": 2
+          }
+        },
+        {
+          "vector": [
+            1,
+            1,
+            3,
+            4,
+            5
+          ],
+          "size": 960,
+          "intersections_through_a_point": {
+            "12": 2,
+            "6": 10,
+            "4": 2
+          }
+        }
+      ]
+    },
+    "17": {
+      "classes": 12,
+      "even_orbits": [
+        {
+          "vector": [
+            0,
+            1,
+            3,
+            4,
+            5
+          ],
+          "size": 480,
+          "intersections_through_a_point": {
+            "2": 12,
+            "4": 5,
+            "8": 1
+          }
+        },
+        {
+          "vector": [
+            1,
+            1,
+            1,
+            4,
+            7
+          ],
+          "size": 320,
+          "intersections_through_a_point": {
+            "4": 3,
+            "2": 15
+          }
+        },
+        {
+          "vector": [
+            1,
+            1,
+            2,
+            3,
+            6
+          ],
+          "size": 960,
+          "intersections_through_a_point": {
+            "4": 16,
+            "2": 2
+          }
+        },
+        {
+          "vector": [
+            1,
+            1,
+            2,
+            7,
+            8
+          ],
+          "size": 960,
+          "intersections_through_a_point": {
+            "4": 15,
+            "2": 3
+          }
+        },
+        {
+          "vector": [
+            1,
+            1,
+            3,
+            5,
+            7
+          ],
+          "size": 960,
+          "intersections_through_a_point": {
+            "4": 7,
+            "2": 5,
+            "6": 6
+          }
+        }
+      ]
+    },
+    "19": {
+      "classes": 12,
+      "even_orbits": [
+        {
+          "vector": [
+            1,
+            2,
+            3,
+            6,
+            8
+          ],
+          "size": 1920,
+          "intersections_through_a_point": {
+            "6": 10,
+            "4": 6,
+            "8": 4
+          }
+        }
+      ]
+    },
+    "23": {
+      "classes": 17,
+      "even_orbits": [
+        {
+          "vector": [
+            1,
+            2,
+            3,
+            7,
+            11
+          ],
+          "size": 1920,
+          "intersections_through_a_point": {
+            "6": 12,
+            "4": 8,
+            "2": 4
+          }
+        },
+        {
+          "vector": [
+            1,
+            2,
+            5,
+            6,
+            7
+          ],
+          "size": 1920,
+          "intersections_through_a_point": {
+            "6": 12,
+            "2": 4,
+            "4": 8
+          }
+        }
+      ]
+    }
+  },
+  "frame_minimum": {
+    "3": 20,
+    "5": 20,
+    "7": 60,
+    "9": 80,
+    "11": 112,
+    "13": 160,
+    "17": 320
+  },
+  "larger_q_frame_status": {
+    "19": 560,
+    "23": "pending",
+    "25": "pending",
+    "29": "pending"
+  },
+  "knots": {
+    "path": [
+      0,
+      39,
+      21,
+      18,
+      19
+    ],
+    "p4_on_line_of_p0_p2": true,
+    "all_three_commute": true,
+    "plat_tests": 220,
+    "plat_agree": 220,
+    "plat_dim_counts": {
+      "2": 39,
+      "1": 106,
+      "0": 75
+    },
+    "plat_first_bad": [],
+    "control_other_lines_mismatches": {
+      "0": 137,
+      "1": 136,
+      "2": 88
+    },
+    "standard_closure_vs_burau": {
+      "3": {
+        "tests": 90,
+        "agree": 90,
+        "dims": {
+          "0": 52,
+          "1": 29,
+          "2": 9
+        },
+        "bad": []
+      },
+      "4": {
+        "tests": 90,
+        "agree": 43,
+        "dims": {
+          "0": 41,
+          "1": 31,
+          "2": 16,
+          "3": 2
+        },
+        "bad": [
+          [
+            [
+              -2,
+              -2,
+              -1,
+              2,
+              2,
+              1,
+              3
+            ],
+            1,
+            0
+          ],
+          [
+            [
+              1,
+              -2,
+              -2,
+              -3
+            ],
+            1,
+            0
+          ]
+        ]
+      },
+      "5": {
+        "tests": 90,
+        "agree": 90,
+        "dims": {
+          "1": 33,
+          "2": 31,
+          "0": 17,
+          "3": 7,
+          "4": 2
+        },
+        "bad": []
+      },
+      "6": {
+        "tests": 90,
+        "agree": 76,
+        "dims": {
+          "4": 6,
+          "3": 31,
+          "2": 33,
+          "1": 18,
+          "0": 2
+        },
+        "bad": [
+          [
+            [
+              -3,
+              5,
+              -5,
+              -1,
+              5
+            ],
+            3,
+            2
+          ],
+          [
+            [
+              4,
+              2,
+              2,
+              2,
+              4,
+              2,
+              -4,
+              -1,
+              3,
+              -5,
+              -1,
+              -4
+            ],
+            2,
+            1
+          ]
+        ]
+      }
+    },
+    "known": {
+      "trefoil": {
+        "got": 1,
+        "expected": 1
+      },
+      "figure8": {
+        "got": 0,
+        "expected": 0
+      },
+      "Hopf": {
+        "got": 0,
+        "expected": 0
+      },
+      "unknot": {
+        "got": 0,
+        "expected": 0
+      },
+      "connected_sum_two_trefoils": {
+        "got": 2,
+        "expected": 2
+      },
+      "T35": {
+        "got": 0,
+        "expected": 0
+      }
+    }
+  },
+  "knots_overlap": {
+    "tl_ok": true,
+    "braid_ok": true,
+    "rank_Pi0_Pi2": 1,
+    "Pi4_on_cap": 1.0000000000000007,
+    "cap_is_P4_eigenstate": true,
+    "braid_relations_with_chosen_Pi4": true,
+    "tests": 160,
+    "complex_identity_agree": "160",
+    "abs_vs_line_agree": "160",
+    "worst_error": 6.240547766562284e-12,
+    "long_word_dim_frequencies": {
+      "0": 0.6754,
+      "1": 0.2995,
+      "2": 0.025
+    },
+    "predicted": {
+      "0": 0.675,
+      "1": 0.3,
+      "2": 0.025
+    }
+  },
+  "mermin": [
+    {
+      "q": 2,
+      "code_dim": 5,
+      "min_weight": 6,
+      "minimal_words": 10,
+      "single_context": {
+        "noncontextual|1": 1
+      },
+      "all_words": {
+        "noncontextual|8": 15,
+        "CONTEXTUAL|6": 10,
+        "CONTEXTUAL|10": 6
+      },
+      "contextual_iff_weight_2_mod_4": true
+    },
+    {
+      "q": 4,
+      "code_dim": 35,
+      "min_weight": null,
+      "minimal_words": 0,
+      "minimal_words_classified": {},
+      "basis_words_classified": {
+        "CONTEXTUAL|24": 2,
+        "CONTEXTUAL|16": 4,
+        "CONTEXTUAL|30": 1,
+        "CONTEXTUAL|10": 8,
+        "CONTEXTUAL|18": 11,
+        "CONTEXTUAL|22": 5,
+        "CONTEXTUAL|26": 4
+      },
+      "one_line_contextual": false,
+      "two_meeting_lines_contextual": false,
+      "irreducible_contextual_cores": [
+        {
+          "first_contextual_at": 12,
+          "irreducible_core": 8,
+          "core_graph_edges": 12,
+          "core": [
+            38,
+            13,
+            50,
+            61,
+            19,
+            2,
+            51,
+            37
+          ]
+        },
+        {
+          "first_contextual_at": 19,
+          "irreducible_core": 13,
+          "core_graph_edges": 24,
+          "core": [
+            23,
+            45,
+            55,
+            75,
+            41,
+            71,
+            79,
+            7,
+            29,
+            84,
+            42,
+            22,
+            58
+          ]
+        },
+        {
+          "first_contextual_at": 17,
+          "irreducible_core": 6,
+          "core_graph_edges": 9,
+          "core": [
+            56,
+            53,
+            79,
+            31,
+            63,
+            24
+          ]
+        },
+        {
+          "first_contextual_at": 15,
+          "irreducible_core": 6,
+          "core_graph_edges": 9,
+          "core": [
+            28,
+            70,
+            42,
+            71,
+            60,
+            10
+          ]
+        },
+        {
+          "first_contextual_at": 15,
+          "irreducible_core": 13,
+          "core_graph_edges": 23,
+          "core": [
+            37,
+            45,
+            29,
+            23,
+            0,
+            40,
+            69,
+            59,
+            72,
+            39,
+            64,
+            56,
+            71
+          ]
+        },
+        {
+          "first_contextual_at": 20,
+          "irreducible_core": 11,
+          "core_graph_edges": 21,
+          "core": [
+            1,
+            69,
+            71,
+            51,
+            49,
+            3,
+            19,
+            8,
+            44,
+            11,
+            33
+          ]
+        }
+      ],
+      "smallest_core": 6
+    },
+    {
+      "q": 8,
+      "code_dim": 287,
+      "min_weight": null,
+      "minimal_words": 0
+    }
+  ],
+  "burkhardt": {
+    "mirror_overlaps_0_if_disjoint_half_otherwise": true,
+    "quartic_invariants_of_all_45_reflections": 1,
+    "F_invariant_under_all_45": true,
+    "max_grad_norm_at_45_nodes": 6.812111590220545e-16,
+    "control_grad_norm_random": 0.2012661421447198,
+    "max_F_at_nodes": 1.4202767060788784e-16,
+    "point_gives_rank_3_span_of_9_nodes": true,
+    "max_F_on_j_planes": 2.4272865997332087e-16,
+    "line_gives_span_rank": {
+      "4": 40
+    },
+    "nodes_in_a_steiner_prime": [
+      18
+    ],
+    "steiner_prime_F_is_product_of_its_4_planes_max_spread": 3.293275228211167e-13,
+    "mirror_action_ok": true,
+    "all_45_generate_projective_order": 25920,
+    "F_equals_const_sigma4_max_spread_over_216": 1.1005290447479014e-13,
+    "total_reflection_group_order": {
+      "720": 216
+    },
+    "total_is_A5_star_gram": true,
+    "total_mirror_closure_size": {
+      "15": 216
+    },
+    "distinct_subsystems": 36,
+    "total_node_rank": {
+      "5": 216
+    },
+    "total_gram_abs_det": {
+      "0.1875": 216
+    },
+    "total_triple_phase_over_pi": {
+      "0.0": 2160
+    },
+    "rank_of_the_10_Steiner_primes_of_S": {
+      "5": 216
+    },
+    "control_other_5_sets_rank": {
+      "4": 1473,
+      "5": 1085,
+      "3": 442
+    },
+    "control_other_5_sets_abs_det_top": {
+      "0.0": 1915,
+      "0.0625": 1085
+    }
+  },
+  "tomography_subset": {
+    "by_k": {
+      "1": {
+        "sampled": 36,
+        "max_rank": 5,
+        "rank24": 0,
+        "detects_in_600": 0,
+        "tight_in_600": 0
+      },
+      "2": {
+        "sampled": 630,
+        "max_rank": 10,
+        "rank24": 0,
+        "detects_in_600": 0,
+        "tight_in_600": 0
+      },
+      "3": {
+        "sampled": 7140,
+        "max_rank": 15,
+        "rank24": 0,
+        "detects_in_600": 0,
+        "tight_in_600": 0
+      },
+      "4": {
+        "sampled": 1500,
+        "max_rank": 20,
+        "rank24": 0,
+        "detects_in_600": 0,
+        "tight_in_600": 0
+      },
+      "5": {
+        "sampled": 1500,
+        "max_rank": 23,
+        "rank24": 0,
+        "detects_in_600": 0,
+        "tight_in_600": 0
+      },
+      "6": {
+        "sampled": 1500,
+        "max_rank": 24,
+        "rank24": 58,
+        "detects_in_600": 0,
+        "tight_in_600": 0
+      },
+      "7": {
+        "sampled": 1500,
+        "max_rank": 24,
+        "rank24": 186,
+        "detects_in_600": 0,
+        "tight_in_600": 0
+      },
+      "8": {
+        "sampled": 1500,
+        "max_rank": 24,
+        "rank24": 461,
+        "detects_in_600": 0,
+        "tight_in_600": 0
+      },
+      "9": {
+        "sampled": 1500,
+        "max_rank": 24,
+        "rank24": 780,
+        "detects_in_600": 0,
+        "tight_in_600": 0
+      },
+      "10": {
+        "sampled": 1500,
+        "max_rank": 24,
+        "rank24": 1088,
+        "detects_in_600": 0,
+        "tight_in_600": 0
+      },
+      "11": {
+        "sampled": 1500,
+        "max_rank": 24,
+        "rank24": 1184,
+        "detects_in_600": 0,
+        "tight_in_600": 0
+      },
+      "12": {
+        "sampled": 1500,
+        "max_rank": 24,
+        "rank24": 1372,
+        "detects_in_600": 0,
+        "tight_in_600": 0
+      }
+    }
+  },
+  "tomography_orbits": {
+    "point": {
+      "order": 648,
+      "orbits": [
+        36
+      ],
+      "unions": []
+    },
+    "line": {
+      "order": 648,
+      "orbits": [
+        9,
+        27
+      ],
+      "unions": [
+        {
+          "k": 27,
+          "rank": 24,
+          "tight": false,
+          "detects": false,
+          "orbit_sizes": [
+            27
+          ]
+        },
+        {
+          "k": 9,
+          "rank": 23,
+          "tight": false,
+          "detects": false,
+          "orbit_sizes": [
+            9
+          ]
+        }
+      ]
+    },
+    "spread_of_double_six_0": {
+      "order": 720,
+      "orbits": [
+        1,
+        15,
+        20
+      ],
+      "unions": [
+        {
+          "k": 1,
+          "rank": 5,
+          "tight": false,
+          "detects": false,
+          "orbit_sizes": [
+            1
+          ]
+        },
+        {
+          "k": 20,
+          "rank": 24,
+          "tight": false,
+          "detects": false,
+          "orbit_sizes": [
+            20
+          ]
+        },
+        {
+          "k": 15,
+          "rank": 24,
+          "tight": false,
+          "detects": false,
+          "orbit_sizes": [
+            15
+          ]
+        },
+        {
+          "k": 21,
+          "rank": 24,
+          "tight": false,
+          "detects": false,
+          "orbit_sizes": [
+            1,
+            20
+          ]
+        },
+        {
+          "k": 16,
+          "rank": 24,
+          "tight": false,
+          "detects": false,
+          "orbit_sizes": [
+            1,
+            15
+          ]
+        },
+        {
+          "k": 35,
+          "rank": 24,
+          "tight": false,
+          "detects": false,
+          "orbit_sizes": [
+            15,
+            20
+          ]
+        }
+      ]
+    },
+    "codeword": {
+      "order": 120,
+      "orbits": [
+        1,
+        10,
+        10,
+        15
+      ],
+      "unions": [
+        {
+          "k": 10,
+          "rank": 24,
+          "tight": false,
+          "detects": false,
+          "orbit_sizes": [
+            10
+          ]
+        },
+        {
+          "k": 15,
+          "rank": 24,
+          "tight": false,
+          "detects": false,
+          "orbit_sizes": [
+            15
+          ]
+        },
+        {
+          "k": 10,
+          "rank": 24,
+          "tight": false,
+          "detects": false,
+          "orbit_sizes": [
+            10
+          ]
+        },
+        {
+          "k": 1,
+          "rank": 5,
+          "tight": false,
+          "detects": false,
+          "orbit_sizes": [
+            1
+          ]
+        },
+        {
+          "k": 25,
+          "rank": 24,
+          "tight": false,
+          "detects": false,
+          "orbit_sizes": [
+            10,
+            15
+          ]
+        },
+        {
+          "k": 20,
+          "rank": 24,
+          "tight": false,
+          "detects": false,
+          "orbit_sizes": [
+            10,
+            10
+          ]
+        },
+        {
+          "k": 11,
+          "rank": 24,
+          "tight": false,
+          "detects": false,
+          "orbit_sizes": [
+            1,
+            10
+          ]
+        },
+        {
+          "k": 25,
+          "rank": 24,
+          "tight": false,
+          "detects": false,
+          "orbit_sizes": [
+            10,
+            15
+          ]
+        },
+        {
+          "k": 16,
+          "rank": 24,
+          "tight": false,
+          "detects": false,
+          "orbit_sizes": [
+            1,
+            15
+          ]
+        },
+        {
+          "k": 11,
+          "rank": 24,
+          "tight": false,
+          "detects": false,
+          "orbit_sizes": [
+            1,
+            10
+          ]
+        },
+        {
+          "k": 35,
+          "rank": 24,
+          "tight": false,
+          "detects": false,
+          "orbit_sizes": [
+            10,
+            10,
+            15
+          ]
+        },
+        {
+          "k": 26,
+          "rank": 24,
+          "tight": false,
+          "detects": false,
+          "orbit_sizes": [
+            1,
+            10,
+            15
+          ]
+        },
+        {
+          "k": 21,
+          "rank": 24,
+          "tight": false,
+          "detects": false,
+          "orbit_sizes": [
+            1,
+            10,
+            10
+          ]
+        },
+        {
+          "k": 26,
+          "rank": 24,
+          "tight": false,
+          "detects": false,
+          "orbit_sizes": [
+            1,
+            10,
+            15
+          ]
+        }
+      ]
+    }
+  },
+  "second_solver": {
+    "dfs_q7_W38_cases_finished": 0,
+    "highs_q7": {
+      "q": 7,
+      "W": 38,
+      "classes": 24,
+      "range": [
+        0,
+        1
+      ],
+      "infeasible": 1,
+      "feasible": [],
+      "unknown": [],
+      "seconds": 26.6
+    },
+    "q9": "CP-SAT only"
+  },
+  "checks": {
+    "12527: q = 5: the weight-2 shell has 20 points, line intersections 0 and 2, and is even in the separately built W(3,5)": true,
+    "12527: q = 13: one orbit of size 160 of a Hamming-weight-4 vector, even in the separately built W(3,13), coverage 0/2/4, below 168": true,
+    "12527: frame minima 20, 20, 60, 80, 112, 160, 320 at q = 3, 5, 7, 9, 11, 13, 17": true,
+    "12528: p0, p2, p4 lie on one line; plat closures: 220/220 agree with d = dim(L0 meet beta L0); three control lines disagree": true,
+    "12528: standard closure agrees with reduced Burau at t = -1 for n = 3, 5, 90/90": true,
+    "12528: known knots: trefoil 1, figure-eight 0, Hopf 0, unknot 0, two trefoils 2, T(3,5) 0": true,
+    "12528: bracket = 3 <cap|U|cap> as a complex identity on 160/160 words": true,
+    "12528: long words: dim frequencies within 0.01 of 27/40, 12/40, 1/40": true,
+    "12529: q = 2: contextual iff |S| = 2 mod 4 on all 31 words; a single context is noncontextual; 10 minimal words": true,
+    "12529: q = 4: one line and two meeting lines noncontextual; irreducible contextual cores as small as 6 lines with 9 meetings": true,
+    "12530: unique quartic invariant, singular at the 45 mirrors; control is not": true,
+    "12530: 40 Jacobi planes (rank 3, F vanishes), 40 Steiner hyperplanes (rank 4, 18 nodes, F = product of 4 planes)": true,
+    "12530: all 216 totals are A5 stars: rank 5, Gram det 3/16, group order 720, 15 mirrors, 36 subsystems; controls differ": true,
+    "12530: F = const * sigma_4 under v_i -> e_0 - e_i for all 216 totals": true,
+    "12531: negative within the tested subsets: no sample up to k = 12 and no proper orbit union is tight or detects the lines": true,
+    "12532: HiGHS reproduces the star verdicts at q = 3, 5": true,
+    "12532: the from-scratch search reproduces q = 3, 5 with exact solution counts": true
+  },
+  "all_checks_pass": true
+}

@@ -1,0 +1,53 @@
+{
+ "q": 5,
+ "weight": 20,
+ "orbit_table": [
+  {
+   "rep": [
+    1,
+    0,
+    0,
+    0,
+    2
+   ],
+   "size": 20,
+   "hamming": 2,
+   "chosen": true
+  },
+  {
+   "rep": [
+    1,
+    0,
+    1,
+    2,
+    2
+   ],
+   "size": 120,
+   "hamming": 4,
+   "chosen": false
+  },
+  {
+   "rep": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": 16,
+   "hamming": 5,
+   "chosen": false
+  }
+ ],
+ "line_intersection_histogram": {
+  "0": 96,
+  "2": 60
+ },
+ "isotropic_lines_have_p02_plus_p13_zero_and_map_to_the_quadric": true,
+ "lines_in_W": 20,
+ "all_points_even_in_W": true,
+ "coverage_in_W": {
+  "0": 96,
+  "2": 60
+ }
+}

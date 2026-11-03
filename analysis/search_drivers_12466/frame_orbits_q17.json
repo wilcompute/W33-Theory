@@ -1,0 +1,126 @@
+{
+ "q": 17,
+ "points": 5220,
+ "weight_counts": {
+  "2": 20,
+  "3": 120,
+  "4": 1320,
+  "5": 3760
+ },
+ "weight_2_line_intersections": [
+  0,
+  1,
+  2
+ ],
+ "weight_3_line_intersections": [
+  0,
+  1,
+  4
+ ],
+ "weight_4_line_intersections": [
+  0,
+  3,
+  5,
+  14,
+  16
+ ],
+ "weight_5_line_intersections": [
+  0,
+  13,
+  14,
+  16
+ ],
+ "search": [
+  {
+   "group": "2^4:S5",
+   "orbits": 12,
+   "status": "OPTIMAL",
+   "seconds": 0.2,
+   "weight": 320,
+   "intersections": [
+    0,
+    2,
+    4
+   ],
+   "bound": 320.0
+  },
+  {
+   "group": "2^4:A5",
+   "orbits": 13,
+   "status": "OPTIMAL",
+   "seconds": 0.1,
+   "weight": 320,
+   "intersections": [
+    0,
+    2,
+    4
+   ],
+   "bound": 320.0
+  },
+  {
+   "group": "2^4:F20",
+   "orbits": 28,
+   "status": "OPTIMAL",
+   "seconds": 0.0,
+   "weight": 320,
+   "intersections": [
+    0,
+    2,
+    4
+   ],
+   "bound": 320.0
+  },
+  {
+   "group": "2^4:D5",
+   "orbits": 52,
+   "status": "OPTIMAL",
+   "seconds": 0.6,
+   "weight": 320,
+   "intersections": [
+    0,
+    2,
+    4
+   ],
+   "bound": 320.0
+  },
+  {
+   "group": "2^4:C5",
+   "orbits": 88,
+   "status": "OPTIMAL",
+   "seconds": 9.8,
+   "weight": 320,
+   "intersections": [
+    0,
+    2,
+    4
+   ],
+   "bound": 320.0
+  },
+  {
+   "group": "2^4:S4",
+   "orbits": 36,
+   "status": "OPTIMAL",
+   "seconds": 0.1,
+   "weight": 320,
+   "intersections": [
+    0,
+    2,
+    4
+   ],
+   "bound": 320.0
+  },
+  {
+   "group": "2^4:A4",
+   "orbits": 44,
+   "status": "OPTIMAL",
+   "seconds": 0.2,
+   "weight": 320,
+   "intersections": [
+    0,
+    2,
+    4
+   ],
+   "bound": 320.0
+  }
+ ]
+}
