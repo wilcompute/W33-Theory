@@ -1,0 +1,220 @@
+{
+  "status": "PASS_NATIVE_BRANCH_SYMMETRY_COCYCLE_AUDIT",
+  "branch_addresses": [
+    1,
+    2,
+    4,
+    7
+  ],
+  "oriented_tetrahedron_A4_actions": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    [
+      0,
+      1,
+      4,
+      5,
+      7,
+      6,
+      3,
+      2
+    ],
+    [
+      0,
+      1,
+      7,
+      6,
+      2,
+      3,
+      5,
+      4
+    ],
+    [
+      0,
+      2,
+      1,
+      3,
+      7,
+      5,
+      6,
+      4
+    ],
+    [
+      0,
+      2,
+      4,
+      6,
+      1,
+      3,
+      5,
+      7
+    ],
+    [
+      0,
+      2,
+      7,
+      5,
+      4,
+      6,
+      3,
+      1
+    ],
+    [
+      0,
+      4,
+      1,
+      5,
+      2,
+      6,
+      3,
+      7
+    ],
+    [
+      0,
+      4,
+      2,
+      6,
+      7,
+      3,
+      5,
+      1
+    ],
+    [
+      0,
+      4,
+      7,
+      3,
+      1,
+      5,
+      6,
+      2
+    ],
+    [
+      0,
+      7,
+      1,
+      6,
+      4,
+      3,
+      5,
+      2
+    ],
+    [
+      0,
+      7,
+      2,
+      5,
+      1,
+      6,
+      3,
+      4
+    ],
+    [
+      0,
+      7,
+      4,
+      3,
+      2,
+      5,
+      6,
+      1
+    ]
+  ],
+  "standard_U1_classes": 128,
+  "cocycle_equations_checked": 524288,
+  "signature_complete_on_standard_classes": "q(g)=omega(g,g,g) on7 nonzero elements uniquely distinguishes these128 standard representatives. A normalized U1 coboundary leaves q unchanged.",
+  "invariant_classes": [
+    {
+      "code": 0,
+      "diagonal_negative_fluxes": [],
+      "typeIII": false,
+      "anyons": 64,
+      "dimensions": {
+        "1": 64
+      },
+      "spins": {
+        "1": 36,
+        "-1": 28
+      }
+    },
+    {
+      "code": 7,
+      "diagonal_negative_fluxes": [
+        1,
+        2,
+        4,
+        7
+      ],
+      "typeIII": false,
+      "anyons": 64,
+      "dimensions": {
+        "1": 64
+      },
+      "spins": {
+        "1": 20,
+        "i": 16,
+        "-i": 16,
+        "-1": 12
+      }
+    },
+    {
+      "code": 120,
+      "diagonal_negative_fluxes": [
+        3,
+        5,
+        6
+      ],
+      "typeIII": true,
+      "anyons": 22,
+      "dimensions": {
+        "1": 8,
+        "2": 14
+      },
+      "spins": {
+        "1": 12,
+        "-1": 4,
+        "i": 3,
+        "-i": 3
+      }
+    },
+    {
+      "code": 127,
+      "diagonal_negative_fluxes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "typeIII": true,
+      "anyons": 22,
+      "dimensions": {
+        "1": 8,
+        "2": 14
+      },
+      "spins": {
+        "1": 8,
+        "i": 7,
+        "-i": 7
+      }
+    }
+  ],
+  "ordered_typeIII_A4_orbit_size": 4,
+  "prior_typeIII_boundary": "The previously supplied omega=(-1)^(a0 b1 c2) distinguishes branch111. Its class is not invariant under native oriented tetrahedral A4; it breaks this symmetry unless extra fields transform the twist choice.",
+  "alternating_volume_phase": "(-1)^det(a,b,c)=delta beta, beta=(-1)^(a0*a1*b2+a0*a2*b1+a1*a2*b0); thus the fully alternating candidate is cohomologically trivial.",
+  "nonabelian_invariant_choices": 2,
+  "nonabelian_genus2_Hilbert_dimension": 736,
+  "native_selection_obstruction": "Deck maps fix every native projector label. Their canonical permutation operators compose strictly, so their native associator is1. The covering and its symmetry constrain possible extra gauge actions but do not select either nontrivial invariant typeIII class.",
+  "boundary": "Exact finite cohomological/symmetry audit. No native SPT action, cocycle Hamiltonian, realized topological phase or braid universality is derived.",
+  "reference": "https://link.aps.org/accepted/10.1103/PhysRevB.91.035134"
+}

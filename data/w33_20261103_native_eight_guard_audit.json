@@ -1,0 +1,565 @@
+{
+  "mode": "Configured hook entries run directly with identical file patterns after both indexes regenerated. Existing Bash/CMD pre-commit launcher is unreliable; no --no-verify used.",
+  "records": [
+    {
+      "id": "stale-boundaries",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_stale_boundaries.py"
+      ],
+      "exit_code": 0,
+      "stdout": "==============================================================================\n[stale-boundary sweep] boundary sections a LATER file may have answered\n==============================================================================\nscanned 3980 analysis/*.md; 15 boundaries have a later file sharing >=2 result tokens\n\n  BT7171_BT7186_e8_d4_h27_q9.md\n    -> later: PASS7376_7384_deep_followup.md   (23 shared tokens, e.g. A2, D4, E6, E8)\n  2026-10-10_toe33_joint_decoder_p13_a6_bloch_hardware.md\n    -> later: w33_pass1117_1119_aliases_orbits_trees.md   (9 shared tokens, e.g. E6, E8, e6+e8, e6+levi)\n  PASS20260925_HESSE_PARABOLIC_CUBIC_CLOCK_BREAKTHROUGH.md\n    -> later: MARCELIS_DEEP_CRAWL_2026_09_09.md   (9 shared tokens, e.g. E6, E8, e6+e8, e6+hesse)\n  2026-07-08_pass70_15vector_doily_attack.md\n    -> later: 2026-07-08_pass72_cumulative_bijection.md   (4 shared tokens, e.g. doily, spread@15, spread@3, spread@5)\n  2026-07-08_pass76_QEC_codes_alpha_code.md\n    -> later: 2026-07-15_pass82_grand_synthesis.md   (3 shared tokens, e.g. [137,1,3], [[137,1,3]], monster+moonshine)\n  BT807_q3_antiflag_two_clocks.md\n    -> later: BT1710_BT1712_qubit_torus_hesse_breakthrough.md   (3 shared tokens, e.g. csaszar, csaszar+doily, doily)\n  BT809_register_f4_regular_spread.md\n    -> later: BT836_gc_hemicells_in_spreads.md   (3 shared tokens, e.g. spread@10, spread@2, spread@45)\n  2026-06-19_validation_thread_summary.md\n    -> later: 2026-06-19_bt1327_bt1330_summary.md   (2 shared tokens, e.g. [63,1,11], [[63,1,11]])\n  2026-10-31_tick_loop_algebra_rigidity.md\n    -> later: PASS20260924_EXECUTE_ALL5_TEMPORAL_E8_CONTROLLER.md   (2 shared tokens, e.g. clifford+eisenstein, edge240:signed)\n  2026-07-08_pass72_deep_structure.md\n    -> later: w33_pass1107_partial_spread_census.md   (2 shared tokens, e.g. doily, partial-spread@3)\n  BT745_presentation_torsor_chirality.md\n    -> later: BT746_absolute_chirality_z12.md   (2 shared tokens, e.g. E6, e6+torsor)\n  BT795_spread_envelope_routing_cell.md\n    -> later: w33_pass1971_spread_treatments_concordance.md   (2 shared tokens, e.g. spread@180, spread@40)\n  BT1320_BT1325_hypercube_tower_holonet.md\n    -> later: BT1416_BT1418_css_optical_quartic_frontier.md   (2 shared tokens, e.g. clifford+csaszar, csaszar)\n  BT1425_BT1427_retwined_fano_pipeline.md\n    -> later: BT1428_BT1430_symmetry_pulse_holonet.md   (2 shared tokens, e.g. D4, d4+tomotope)\n  BT2560_BT2567_seven_frontiers.md\n    -> later: BT2567_seven_frontiers_insert.tex   (2 shared tokens, e.g. tritangent@27, tritangent@45)\n\n  CANDIDATES, not verdicts. Read the later file before spending a pass\n  re-answering the question. If it does answer it, EDIT THE ORIGINAL\n  boundary to point there -- leaving it stale is what caused this.\n\n",
+      "stderr": "",
+      "seconds": 35.821
+    },
+    {
+      "id": "shifted-adjacency-descendants",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_shifted_adjacency_descendants.py",
+        "--check-only",
+        "analysis/w33_20261103_native_projector_holonomic_qutrit.py",
+        "data/w33_20261103_native_projector_holonomic_qutrit.json",
+        "analysis/w33_20261103_vacuum_effective_quantum_audit.py",
+        "data/w33_20261103_vacuum_effective_quantum_audit.json",
+        "analysis/w33_20261103_wd5_native_klein_intertwiner.py",
+        "data/w33_20261103_wd5_native_klein_intertwiner.json",
+        "analysis/w33_20261103_all_quartet_tunneling.py",
+        "data/w33_20261103_all_quartet_tunneling.json",
+        "analysis/w33_20261103_induced_cubic_compression.py",
+        "data/w33_20261103_induced_cubic_compression.json",
+        "analysis/w33_20261103_deck_cocycle_symmetry_selection.py",
+        "data/w33_20261103_deck_cocycle_symmetry_selection.json",
+        "analysis/w33_20261103_gauge_global_form_audit.py",
+        "data/w33_20261103_gauge_global_form_audit.json",
+        "analysis/w33_20261103_clifford_yang_monopole_controls.py",
+        "data/w33_20261103_clifford_yang_monopole_controls.json",
+        "analysis/w33_20261103_native_eight_validation.py",
+        "data/w33_20261103_native_eight_validation.json",
+        "analysis/2026-11-03_native_eight_investigations.md",
+        "tests/test_w33_20261103_native_eight_investigations.py",
+        "RESULTS_INDEX.md",
+        "TOPICAL_ALIASES.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 1.471
+    },
+    {
+      "id": "tag-540-check",
+      "scope": "all_owned_files",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/tag_540_disambiguation.py",
+        "--check-only",
+        "--strict",
+        "analysis/w33_20261103_native_projector_holonomic_qutrit.py",
+        "data/w33_20261103_native_projector_holonomic_qutrit.json",
+        "analysis/w33_20261103_vacuum_effective_quantum_audit.py",
+        "data/w33_20261103_vacuum_effective_quantum_audit.json",
+        "analysis/w33_20261103_wd5_native_klein_intertwiner.py",
+        "data/w33_20261103_wd5_native_klein_intertwiner.json",
+        "analysis/w33_20261103_all_quartet_tunneling.py",
+        "data/w33_20261103_all_quartet_tunneling.json",
+        "analysis/w33_20261103_induced_cubic_compression.py",
+        "data/w33_20261103_induced_cubic_compression.json",
+        "analysis/w33_20261103_deck_cocycle_symmetry_selection.py",
+        "data/w33_20261103_deck_cocycle_symmetry_selection.json",
+        "analysis/w33_20261103_gauge_global_form_audit.py",
+        "data/w33_20261103_gauge_global_form_audit.json",
+        "analysis/w33_20261103_clifford_yang_monopole_controls.py",
+        "data/w33_20261103_clifford_yang_monopole_controls.json",
+        "analysis/w33_20261103_native_eight_validation.py",
+        "data/w33_20261103_native_eight_validation.json",
+        "analysis/2026-11-03_native_eight_investigations.md",
+        "tests/test_w33_20261103_native_eight_investigations.py",
+        "RESULTS_INDEX.md",
+        "TOPICAL_ALIASES.md"
+      ],
+      "exit_code": 1,
+      "stdout": "ERROR: RESULTS_INDEX.md has ambiguous 540 occurrence(s)\n  line 218: frontiers.py` | | `[0,1440,31302]` | `analysis/bt3407_magnetic_exact_no_go.py` | | `[1080,540,540]` | `analysis/w33_pass4756_4758_4760_dependency_cube_fast_verify.py` | | `[1160,92\n  line 218: tiers.py` | | `[0,1440,31302]` | `analysis/bt3407_magnetic_exact_no_go.py` | | `[1080,540,540]` | `analysis/w33_pass4756_4758_4760_dependency_cube_fast_verify.py` | | `[1160,925,68\n  line 276: k_map.py` | | `[5,6912,1053]` | `analysis/w33_20261027_native_bloch_face_module.py` | | `[540,270,135]` | `analysis/w33_pass3989_3996_maximum_code_orbit_census.py` | | `[540,540,54\n  line 298: er_code.py` \u00b7 `analysis/w33_pass4772_4776_global_cube_cell_code.py` \u00b7 *(+2)* | | `[2025,540,3]` | `analysis/PASS4745_4752_RESERVATION.md` | | `[2025,567,4]` | `analysis/PASS4745_\n  line 407: o.py` | | `[54,72,432]` | `analysis/w33_pass1611_1615_torsion_xor_lattice_octet.py` | | `[540,141,4]` | `analysis/w33_pass4924_track_b_arithmetic_and_the_51840_warning.py` | | `[58\n  line 1488: ults_index.py` \u00b7 `analysis/w33_pass382_reversible_logic_switch_controller.g` | | `234360/540/90+360+90/6/22of48/0exact/S6-direction` | `analysis/PASS384_Q6_Q3_FOLD_OBSTRUCTION.md`\n  line 1606: ite_TOE_frontiers.md` \u00b7 `analysis/w33_20261019_round11_first_tits_jordan.py` | | `234360/540/90` | `analysis/PASS384_Q6_Q3_FOLD_OBSTRUCTION.md` \u00b7 `analysis/build_results_index.py\n  line 1617: KTHROUGH.md` \u00b7 `analysis/w33_20260924_history_pointline_cospectral_firewall.py` | | `270/540/1620` | `analysis/w33_pass2045_2049_the_sevens_and_a_numbering_collision.md` | | `343/\n  line 1964: py` \u00b7 `analysis/w33_pass10153_10160_c315_w52_structural_no_go.py` | | `totally-isotropic@540` | `analysis/BT1536_frame_dual_k44_code.md` \u00b7 `analysis/w33_frame_hoffman_resolution_\n  line 2374: it_iso.md` | | `tritangent@360` | `analysis/w33_pass4997_4999_bonkers.py` | | `tritangent@540` | `analysis/w33_e6_involution_ladder_flags.py` | | `tritangent@576` | `analysis/w33_2\n  line 2641: ic_closure.md` \u00b7 `analysis/BT3320_BT3331_global_cover_quantum_hypercube.md` | | `deficit@540` | `analysis/PASS5016_5023_EXECUTED_OUTCOMES.md` \u00b7 `analysis/w33_pass5016_radius_rp2_\n  line 2851: ity_spectral_E6_parallelism.md` \u00b7 `analysis/2026-10-10_toe43_five_fronts.md` | | `spread@540` | `analysis/PASS1074_1078_FIVE_STREAM_RELEASE.md` \u00b7 `analysis/w33_pass1067_outer_cla\n  line 3972: _matrix_cs.py` \u00b7 `analysis/w33_pass804_adversarial_calibration_failclosed.py` | | `alpha@540` | `analysis/2026-07-31_frame_hoffman_resolution_theorem.md` \u00b7 `exploration/w33_indep\n  Add an occurrence-local canonical tag: {540:point-nonedge}, {540:double-six-nonincident}, {540:gq42-arc}, {540:outer-4c}, {540:line-nonedge}; use {540:both} or {540:mixed} only for a genuinely mixed single occurrence, and {540:unrelated} only when the literal is not one of the five degree-540 carriers.\nERROR: TOPICAL_ALIASES.md has ambiguous 540 occurrence(s)\n  line 423: -code-outage-decoder.html](docs/pgsp-moduli-outer-code-outage-decoder.html) - `code:[2025,540,3]` \ufffd \u2014 [PASS4745_4752_RESERVATION.md](analysis/PASS4745_4752_RESERVATION.md), [PAS\n  Add an occurrence-local canonical tag: {540:point-nonedge}, {540:double-six-nonincident}, {540:gq42-arc}, {540:outer-4c}, {540:line-nonedge}; use {540:both} or {540:mixed} only for a genuinely mixed single occurrence, and {540:unrelated} only when the literal is not one of the five degree-540 carriers.\n",
+      "stderr": ""
+    },
+    {
+      "id": "pass-namespace-collision-guard",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "analysis/w33_pass1197_parallel_collision_guard.py",
+        "--check-only"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"C:\\Repos\\Theory of Everything\\analysis\\w33_pass1197_parallel_collision_guard.py\", line 189, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Repos\\Theory of Everything\\analysis\\w33_pass1197_parallel_collision_guard.py\", line 89, in main\n    registry, registry_blocks, supplements = load_registry_blocks()\n                                             ~~~~~~~~~~~~~~~~~~~~^^\n  File \"C:\\Repos\\Theory of Everything\\analysis\\w33_pass1197_parallel_collision_guard.py\", line 80, in load_registry_blocks\n    assert supplement.get(\"schema\") == \"w33.pass_namespace_registry.v2.supplement\", path\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: C:\\Repos\\Theory of Everything\\data\\w33_pass_namespace_registry_v2.d\\10049-10112.json\n",
+      "seconds": 0.716
+    },
+    {
+      "id": "s-min-formula-guard",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_smin_formula.py",
+        "analysis/w33_20261103_native_projector_holonomic_qutrit.py",
+        "analysis/w33_20261103_vacuum_effective_quantum_audit.py",
+        "analysis/w33_20261103_wd5_native_klein_intertwiner.py",
+        "analysis/w33_20261103_all_quartet_tunneling.py",
+        "analysis/w33_20261103_induced_cubic_compression.py",
+        "analysis/w33_20261103_deck_cocycle_symmetry_selection.py",
+        "analysis/w33_20261103_gauge_global_form_audit.py",
+        "analysis/w33_20261103_clifford_yang_monopole_controls.py",
+        "analysis/w33_20261103_native_eight_validation.py",
+        "analysis/2026-11-03_native_eight_investigations.md",
+        "tests/test_w33_20261103_native_eight_investigations.py",
+        "RESULTS_INDEX.md",
+        "TOPICAL_ALIASES.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.348
+    },
+    {
+      "id": "topical-aliases",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/build_topical_aliases.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "TOPICAL_ALIASES.md up to date\n",
+      "stderr": "",
+      "seconds": 19.008
+    },
+    {
+      "id": "certificate-digests",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_certificates.py",
+        "--quiet",
+        "data/w33_20261103_native_projector_holonomic_qutrit.json",
+        "data/w33_20261103_vacuum_effective_quantum_audit.json",
+        "data/w33_20261103_wd5_native_klein_intertwiner.json",
+        "data/w33_20261103_all_quartet_tunneling.json",
+        "data/w33_20261103_induced_cubic_compression.json",
+        "data/w33_20261103_deck_cocycle_symmetry_selection.json",
+        "data/w33_20261103_gauge_global_form_audit.json",
+        "data/w33_20261103_clifford_yang_monopole_controls.json",
+        "data/w33_20261103_native_eight_validation.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.344
+    },
+    {
+      "id": "novelty-claims",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_novelty_claims.py",
+        "analysis/2026-11-03_native_eight_investigations.md"
+      ],
+      "exit_code": 0,
+      "stdout": "checking 1 file(s) against index.html, photonic_holonet_body.tex, w33_paper_body.tex\nno novelty claim collides with the encyclopedia.\n",
+      "stderr": "",
+      "seconds": 0.342
+    },
+    {
+      "id": "rediscovery",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_rediscovery.py",
+        "analysis/w33_20261103_native_projector_holonomic_qutrit.py",
+        "analysis/w33_20261103_vacuum_effective_quantum_audit.py",
+        "analysis/w33_20261103_wd5_native_klein_intertwiner.py",
+        "analysis/w33_20261103_all_quartet_tunneling.py",
+        "analysis/w33_20261103_induced_cubic_compression.py",
+        "analysis/w33_20261103_deck_cocycle_symmetry_selection.py",
+        "analysis/w33_20261103_gauge_global_form_audit.py",
+        "analysis/w33_20261103_clifford_yang_monopole_controls.py",
+        "analysis/w33_20261103_native_eight_validation.py",
+        "analysis/2026-11-03_native_eight_investigations.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.575
+    },
+    {
+      "id": "search-power",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_search_power.py",
+        "analysis/w33_20261103_native_projector_holonomic_qutrit.py",
+        "analysis/w33_20261103_vacuum_effective_quantum_audit.py",
+        "analysis/w33_20261103_wd5_native_klein_intertwiner.py",
+        "analysis/w33_20261103_all_quartet_tunneling.py",
+        "analysis/w33_20261103_induced_cubic_compression.py",
+        "analysis/w33_20261103_deck_cocycle_symmetry_selection.py",
+        "analysis/w33_20261103_gauge_global_form_audit.py",
+        "analysis/w33_20261103_clifford_yang_monopole_controls.py",
+        "analysis/w33_20261103_native_eight_validation.py",
+        "analysis/2026-11-03_native_eight_investigations.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  scanned 10 files, 0 unpowered nulls\n  (a zero here means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.317
+    },
+    {
+      "id": "guard-selftests",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_guard_selftests.py"
+      ],
+      "exit_code": 0,
+      "stdout": "  stale-boundaries                 self-test green\n  shifted-adjacency-descendants    self-test green\n  tag-540-check                    self-test green\n  pass-namespace-collision-guard   self-test green\n  s-min-formula-guard              self-test green\n  topical-aliases                  self-test green\n  certificate-digests              self-test green\n  novelty-claims                   self-test green\n  rtl-folds                        self-test green\n  rediscovery                      self-test green\n  search-power                     self-test green\n  layer-conformance                self-test green\n  guard-selftests                  (this runner; skipped)\n  regex-deadends                   self-test green\n  retraction-propagation           self-test green\n  stdlib-shadow                    self-test green\n  pattern-inversions               self-test green\n  heredoc-regex                    self-test green\n  reservation-overlap              self-test green\n  cert-prose-vs-data               self-test green\n  convention-fixed-form            self-test green\n  key-nearmiss                     self-test green\n  certificate-rediscovery          self-test green\n  order-coincidence                self-test green\n  spectral-overreach               self-test green\n  hardcoded-keys                   self-test green\n  constant-claims                  no self-test\n\n  25 self-tested, 1 without a self-test, 0 failing\n\n  The guards without a self-test report numbers nobody can interpret. A zero from a checker\n  that has never been shown to detect anything is not evidence of a clean corpus -- it is\n  the absence of evidence, formatted to look like the presence of it.\n",
+      "stderr": "",
+      "seconds": 19.531
+    },
+    {
+      "id": "regex-deadends",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_regex_deadends.py",
+        "analysis/w33_20261103_native_projector_holonomic_qutrit.py",
+        "analysis/w33_20261103_vacuum_effective_quantum_audit.py",
+        "analysis/w33_20261103_wd5_native_klein_intertwiner.py",
+        "analysis/w33_20261103_all_quartet_tunneling.py",
+        "analysis/w33_20261103_induced_cubic_compression.py",
+        "analysis/w33_20261103_deck_cocycle_symmetry_selection.py",
+        "analysis/w33_20261103_gauge_global_form_audit.py",
+        "analysis/w33_20261103_clifford_yang_monopole_controls.py",
+        "analysis/w33_20261103_native_eight_validation.py"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 unmatchable alternatives\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.346
+    },
+    {
+      "id": "retraction-propagation",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_retraction_propagation.py",
+        "analysis/w33_20261103_native_projector_holonomic_qutrit.py",
+        "analysis/w33_20261103_vacuum_effective_quantum_audit.py",
+        "analysis/w33_20261103_wd5_native_klein_intertwiner.py",
+        "analysis/w33_20261103_all_quartet_tunneling.py",
+        "analysis/w33_20261103_induced_cubic_compression.py",
+        "analysis/w33_20261103_deck_cocycle_symmetry_selection.py",
+        "analysis/w33_20261103_gauge_global_form_audit.py",
+        "analysis/w33_20261103_clifford_yang_monopole_controls.py",
+        "analysis/w33_20261103_native_eight_validation.py",
+        "analysis/2026-11-03_native_eight_investigations.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 live assertions of retracted claims across 3 registered\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.458
+    },
+    {
+      "id": "stdlib-shadow",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_stdlib_shadow.py",
+        "analysis/w33_20261103_native_projector_holonomic_qutrit.py",
+        "analysis/w33_20261103_vacuum_effective_quantum_audit.py",
+        "analysis/w33_20261103_wd5_native_klein_intertwiner.py",
+        "analysis/w33_20261103_all_quartet_tunneling.py",
+        "analysis/w33_20261103_induced_cubic_compression.py",
+        "analysis/w33_20261103_deck_cocycle_symmetry_selection.py",
+        "analysis/w33_20261103_gauge_global_form_audit.py",
+        "analysis/w33_20261103_clifford_yang_monopole_controls.py",
+        "analysis/w33_20261103_native_eight_validation.py",
+        "tests/test_w33_20261103_native_eight_investigations.py"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 shadowing files, 0 high-risk\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.453
+    },
+    {
+      "id": "heredoc-regex",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_heredoc_regex.py",
+        "analysis/w33_20261103_native_projector_holonomic_qutrit.py",
+        "analysis/w33_20261103_vacuum_effective_quantum_audit.py",
+        "analysis/w33_20261103_wd5_native_klein_intertwiner.py",
+        "analysis/w33_20261103_all_quartet_tunneling.py",
+        "analysis/w33_20261103_induced_cubic_compression.py",
+        "analysis/w33_20261103_deck_cocycle_symmetry_selection.py",
+        "analysis/w33_20261103_gauge_global_form_audit.py",
+        "analysis/w33_20261103_clifford_yang_monopole_controls.py",
+        "analysis/w33_20261103_native_eight_validation.py"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 collapsed escapes in regex context\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.414
+    },
+    {
+      "id": "cert-prose-vs-data",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_cert_prose_vs_data.py",
+        "data/w33_20261103_native_projector_holonomic_qutrit.json",
+        "data/w33_20261103_vacuum_effective_quantum_audit.json",
+        "data/w33_20261103_wd5_native_klein_intertwiner.json",
+        "data/w33_20261103_all_quartet_tunneling.json",
+        "data/w33_20261103_induced_cubic_compression.json",
+        "data/w33_20261103_deck_cocycle_symmetry_selection.json",
+        "data/w33_20261103_gauge_global_form_audit.json",
+        "data/w33_20261103_clifford_yang_monopole_controls.json",
+        "data/w33_20261103_native_eight_validation.json"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 prose/data contradiction(s) in 9 certificate(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.52
+    },
+    {
+      "id": "convention-fixed-form",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_convention_fixed_form.py",
+        "analysis/w33_20261103_native_projector_holonomic_qutrit.py",
+        "analysis/w33_20261103_vacuum_effective_quantum_audit.py",
+        "analysis/w33_20261103_wd5_native_klein_intertwiner.py",
+        "analysis/w33_20261103_all_quartet_tunneling.py",
+        "analysis/w33_20261103_induced_cubic_compression.py",
+        "analysis/w33_20261103_deck_cocycle_symmetry_selection.py",
+        "analysis/w33_20261103_gauge_global_form_audit.py",
+        "analysis/w33_20261103_clifford_yang_monopole_controls.py",
+        "analysis/w33_20261103_native_eight_validation.py",
+        "analysis/2026-11-03_native_eight_investigations.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 convention-fixed choice(s) in 10 file(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.438
+    },
+    {
+      "id": "key-nearmiss",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_key_nearmiss.py",
+        "data/w33_20261103_native_projector_holonomic_qutrit.json",
+        "data/w33_20261103_vacuum_effective_quantum_audit.json",
+        "data/w33_20261103_wd5_native_klein_intertwiner.json",
+        "data/w33_20261103_all_quartet_tunneling.json",
+        "data/w33_20261103_induced_cubic_compression.json",
+        "data/w33_20261103_deck_cocycle_symmetry_selection.json",
+        "data/w33_20261103_gauge_global_form_audit.json",
+        "data/w33_20261103_clifford_yang_monopole_controls.json",
+        "data/w33_20261103_native_eight_validation.json"
+      ],
+      "exit_code": 124,
+      "stdout": "Exceeded90s; no PASS asserted.",
+      "stderr": "",
+      "seconds": 90.149
+    },
+    {
+      "id": "certificate-rediscovery",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_certificate_rediscovery.py",
+        "data/w33_20261103_native_projector_holonomic_qutrit.json",
+        "data/w33_20261103_vacuum_effective_quantum_audit.json",
+        "data/w33_20261103_wd5_native_klein_intertwiner.json",
+        "data/w33_20261103_all_quartet_tunneling.json",
+        "data/w33_20261103_induced_cubic_compression.json",
+        "data/w33_20261103_deck_cocycle_symmetry_selection.json",
+        "data/w33_20261103_gauge_global_form_audit.json",
+        "data/w33_20261103_clifford_yang_monopole_controls.json",
+        "data/w33_20261103_native_eight_validation.json"
+      ],
+      "exit_code": 0,
+      "stdout": "  RARE  w33_20261103_native_projector_holonomic_qutrit.json\n        action@2  (stem reaches 4 file-slots)  already in: dccxxxvi_closure_action_weight_bridge.json\n  RARE  w33_20261103_native_projector_holonomic_qutrit.json\n        action@3  (stem reaches 4 file-slots)  already in: dccxxxvi_closure_action_weight_bridge.json\n  RARE  w33_20261103_native_projector_holonomic_qutrit.json\n        action@4  (stem reaches 4 file-slots)  already in: dccxxxvi_closure_action_weight_bridge.json\n        w33_20261103_native_projector_holonomic_qutrit.json\n        action@5  (stem reaches 4 file-slots)  already in: dccxxxvi_closure_action_weight_bridge.json\n        w33_20261103_native_projector_holonomic_qutrit.json\n        pair@12  (stem reaches 110 file-slots)  already in: ckm_sample_stats.json, w33_spectral_heegner_unification.json\n        w33_20261103_native_projector_holonomic_qutrit.json\n        pair@15  (stem reaches 110 file-slots)  already in: w33_spectral_heegner_unification.json\n        w33_20261103_native_projector_holonomic_qutrit.json\n        pair@16  (stem reaches 110 file-slots)  already in: ckm_sample_stats.json, w33_spectral_heegner_unification.json\n        w33_20261103_native_projector_holonomic_qutrit.json\n        pair@18  (stem reaches 110 file-slots)  already in: ckm_sample_stats.json\n        w33_20261103_native_projector_holonomic_qutrit.json\n        pair@20  (stem reaches 110 file-slots)  already in: ckm_sample_stats.json\n        w33_20261103_native_projector_holonomic_qutrit.json\n        pair@24  (stem reaches 110 file-slots)  already in: w33_klein_quartic_substrate_closure.json\n        w33_20261103_native_projector_holonomic_qutrit.json\n        pair@25  (stem reaches 110 file-slots)  already in: ckm_sample_stats.json\n        w33_20261103_native_projector_holonomic_qutrit.json\n        pair@26  (stem reaches 110 file-slots)  already in: PART_W33_PASS3060_3062_IHARA_FRAME_RH.json, ckm_sample_stats.json\n        w33_20261103_native_projector_holonomic_qutrit.json\n        pair@27  (stem reaches 110 file-slots)  already in: ckm_sample_stats.json\n        w33_20261103_native_projector_holonomic_qutrit.json\n        pair@28  (stem reaches 110 file-slots)  already in: ckm_sample_stats.json, w33_klein_quartic_substrate_closure.json\n        w33_20261103_native_projector_holonomic_qutrit.json\n        pair@29  (stem reaches 110 file-slots)  already in: ckm_sample_stats.json\n        w33_20261103_native_projector_holonomic_qutrit.json\n        pair@69  (stem reaches 110 file-slots)  already in: ckm_sample_stats.json\n        w33_20261103_native_projector_holonomic_qutrit.json\n        pair@70  (stem reaches 110 file-slots)  already in: ckm_sample_stats.json\n        w33_20261103_native_projector_holonomic_qutrit.json\n        pair@71  (stem reaches 110 file-slots)  already in: ckm_sample_stats.json\n        w33_20261103_native_projector_holonomic_qutrit.json\n        pair@72  (stem reaches 110 file-slots)  already in: ckm_sample_stats.json\n        w33_20261103_native_projector_holonomic_qutrit.json\n        pair@73  (stem reaches 110 file-slots)  already in: ckm_sample_stats.json\n        w33_20261103_native_projector_holonomic_qutrit.json\n        pair@74  (stem reaches 110 file-slots)  already in: ckm_sample_stats.json\n        w33_20261103_native_projector_holonomic_qutrit.json\n        pair@90  (stem reaches 110 file-slots)  already in: bt961_final_selector_physics_packet_map.json, bt963_selector_phase_slot_scoring.json, bt964_holonet_packet_abi_rail_attachment.json\n        w33_20261103_native_projector_holonomic_qutrit.json\n        multiplicity@45  (stem reaches 162 file-slots)  already in: w33_pass1828_weight_frontier.json\n        w33_20261103_native_projector_holonomic_qutrit.json\n        multiplicity@72  (stem reaches 162 file-slots)  already in: PART_3989_3990_3994_3996_PHOTON_INCIDENCE_ECHO_CLOCK.json, w33_pass437_full_smith_weld.json, w33_pass452_length3_hjelmslev_filtration.json\n        w33_20261103_native_projector_holonomic_qutrit.json\n        multiplicity@81  (stem reaches 162 file-slots)  already in: PART_4019_4024_PHOTONIC_FLAT_BAND_H1.json, PART_4041_4048_EIGHT_PHYSICS_EXPANSION.json, PART_BT1683_SCHUR_ISOTYPIC_PROOF_results.json ...\n        w33_20261103_native_projector_holonomic_qutrit.json\n        multiplicity@90  (stem reaches 162 file-slots)  already in: w33_pass1909_complete_s6_subgroup_phase_poset_certificate.json\n        w33_20261103_native_projector_holonomic_qutrit.json\n        denominator@12  (stem reaches 179 file-slots)  already in: dcmlxxxiii_bass_cnub_entropy_branch_selector.json, w33_BREAKTHROUGH_20_zeta_substrate_signature.json, w33_contextuality_tax_scheduler.json ...\n  RARE  w33_20261103_induced_cubic_compression.json\n        triple@12  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n  RARE  w33_20261103_induced_cubic_compression.json\n        triple@13  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n  RARE  w33_20261103_induced_cubic_compression.json\n        triple@15  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n        w33_20261103_induced_cubic_compression.json\n        triple@16  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n        w33_20261103_induced_cubic_compression.json\n        triple@17  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n        w33_20261103_induced_cubic_compression.json\n        triple@193  (stem reaches 32 file-slots)  already in: dcmlxxx_z12_709_ihara_genus_bridge.json\n        w33_20261103_induced_cubic_compression.json\n        triple@20  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n        w33_20261103_induced_cubic_compression.json\n        triple@21  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n        w33_20261103_induced_cubic_compression.json\n        triple@24  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n        w33_20261103_induced_cubic_compression.json\n        triple@25  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n        w33_20261103_induced_cubic_compression.json\n        triple@29  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n        w33_20261103_induced_cubic_compression.json\n        triple@3  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n        w33_20261103_induced_cubic_compression.json\n        triple@33  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n        w33_20261103_induced_cubic_compression.json\n        triple@35  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n        w33_20261103_induced_cubic_compression.json\n        triple@37  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n        w33_20261103_induced_cubic_compression.json\n        triple@4  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n        w33_20261103_induced_cubic_compression.json\n        triple@40  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n        w33_20261103_induced_cubic_compression.json\n        triple@41  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n        w33_20261103_induced_cubic_compression.json\n        triple@48  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n        w33_20261103_induced_cubic_compression.json\n        triple@5  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n        w33_20261103_induced_cubic_compression.json\n        triple@55  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n        w33_20261103_induced_cubic_compression.json\n        triple@56  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n        w33_20261103_induced_cubic_compression.json\n        triple@63  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n        w33_20261103_induced_cubic_compression.json\n        triple@65  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n        w33_20261103_induced_cubic_compression.json\n        triple@7  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n        w33_20261103_induced_cubic_compression.json\n        triple@73  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n        w33_20261103_induced_cubic_compression.json\n        triple@8  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n        w33_20261103_induced_cubic_compression.json\n        triple@84  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n        w33_20261103_induced_cubic_compression.json\n        triple@85  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n        w33_20261103_induced_cubic_compression.json\n        triple@9  (stem reaches 32 file-slots)  already in: w33_pythagorean_triple_package.json\n  RARE  w33_20261103_gauge_global_form_audit.json\n        power@2  (stem reaches 34 file-slots)  already in: dccxlii_closure_jordan_residue_bridge.json, w33_cyclotomic_crt_branch_factorization.json, w33_cyclotomic_eisenstein_ideal_packet.json ...\n  RARE  w33_20261103_gauge_global_form_audit.json\n        power@3  (stem reaches 34 file-slots)  already in: bt834_desync_guard_band_arithmetic.json, dccxlii_closure_jordan_residue_bridge.json, w33_cyclotomic_eisenstein_ideal_packet.json ...\n\n  59 token(s) already present elsewhere, over 9 certificate(s)\n\n  CANDIDATES, RAREST FIRST. Pass 4800's `alpha@18` sat in a committed certificate while\n  six passes re-derived it. Read the RARE ones first: a stem with small reach names a\n  quantity, a stem with large reach names bookkeeping. Ranking is the fix that a stem\n  blocklist was not -- Pass 5635 A/B'd the blocklist and it moved two certificates.\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 2.662
+    },
+    {
+      "id": "order-coincidence",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_order_coincidence.py",
+        "analysis/w33_20261103_native_projector_holonomic_qutrit.py",
+        "analysis/w33_20261103_vacuum_effective_quantum_audit.py",
+        "analysis/w33_20261103_wd5_native_klein_intertwiner.py",
+        "analysis/w33_20261103_all_quartet_tunneling.py",
+        "analysis/w33_20261103_induced_cubic_compression.py",
+        "analysis/w33_20261103_deck_cocycle_symmetry_selection.py",
+        "analysis/w33_20261103_gauge_global_form_audit.py",
+        "analysis/w33_20261103_clifford_yang_monopole_controls.py",
+        "analysis/w33_20261103_native_eight_validation.py",
+        "analysis/2026-11-03_native_eight_investigations.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 order-coincidence claim(s) in 10 file(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.319
+    },
+    {
+      "id": "spectral-overreach",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_spectral_overreach.py",
+        "analysis/w33_20261103_native_projector_holonomic_qutrit.py",
+        "analysis/w33_20261103_vacuum_effective_quantum_audit.py",
+        "analysis/w33_20261103_wd5_native_klein_intertwiner.py",
+        "analysis/w33_20261103_all_quartet_tunneling.py",
+        "analysis/w33_20261103_induced_cubic_compression.py",
+        "analysis/w33_20261103_deck_cocycle_symmetry_selection.py",
+        "analysis/w33_20261103_gauge_global_form_audit.py",
+        "analysis/w33_20261103_clifford_yang_monopole_controls.py",
+        "analysis/w33_20261103_native_eight_validation.py",
+        "analysis/2026-11-03_native_eight_investigations.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 candidate spectral over-read(s) in 10 file(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.412
+    },
+    {
+      "id": "hardcoded-keys",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_hardcoded_keys.py",
+        "analysis/w33_20261103_native_projector_holonomic_qutrit.py",
+        "analysis/w33_20261103_vacuum_effective_quantum_audit.py",
+        "analysis/w33_20261103_wd5_native_klein_intertwiner.py",
+        "analysis/w33_20261103_all_quartet_tunneling.py",
+        "analysis/w33_20261103_induced_cubic_compression.py",
+        "analysis/w33_20261103_deck_cocycle_symmetry_selection.py",
+        "analysis/w33_20261103_gauge_global_form_audit.py",
+        "analysis/w33_20261103_clifford_yang_monopole_controls.py",
+        "analysis/w33_20261103_native_eight_validation.py"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 single-key lookups beside a canonical list\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.914
+    },
+    {
+      "id": "constant-claims",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_constant_claims_hook.py",
+        "analysis/2026-11-03_native_eight_investigations.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.539
+    }
+  ],
+  "all_exit_codes_zero": false,
+  "prior_guard_attempts": [
+    {
+      "id": "tag-540-check",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/tag_540_disambiguation.py",
+        "--check-only",
+        "--strict",
+        "analysis/w33_20261103_native_projector_holonomic_qutrit.py",
+        "data/w33_20261103_native_projector_holonomic_qutrit.json",
+        "analysis/w33_20261103_vacuum_effective_quantum_audit.py",
+        "data/w33_20261103_vacuum_effective_quantum_audit.json",
+        "analysis/w33_20261103_wd5_native_klein_intertwiner.py",
+        "data/w33_20261103_wd5_native_klein_intertwiner.json",
+        "analysis/w33_20261103_all_quartet_tunneling.py",
+        "data/w33_20261103_all_quartet_tunneling.json",
+        "analysis/w33_20261103_induced_cubic_compression.py",
+        "data/w33_20261103_induced_cubic_compression.json",
+        "analysis/w33_20261103_deck_cocycle_symmetry_selection.py",
+        "data/w33_20261103_deck_cocycle_symmetry_selection.json",
+        "analysis/w33_20261103_gauge_global_form_audit.py",
+        "data/w33_20261103_gauge_global_form_audit.json",
+        "analysis/w33_20261103_clifford_yang_monopole_controls.py",
+        "data/w33_20261103_clifford_yang_monopole_controls.json",
+        "analysis/w33_20261103_native_eight_validation.py",
+        "data/w33_20261103_native_eight_validation.json",
+        "analysis/2026-11-03_native_eight_investigations.md",
+        "tests/test_w33_20261103_native_eight_investigations.py",
+        "RESULTS_INDEX.md",
+        "TOPICAL_ALIASES.md"
+      ],
+      "exit_code": 1,
+      "stdout": "ERROR: analysis/w33_20261103_induced_cubic_compression.py has ambiguous 540 occurrence(s)\n  line 56: lock+i) for i in t))]+=c cubic={t:c for t,c in cubic.items() if c};assert len(cubic)==540 for q,bits in compressed: transformed={tuple(sorted(q[i] for i in t)):c*(-1)*\n  Add an occurrence-local canonical tag: {540:point-nonedge}, {540:double-six-nonincident}, {540:gq42-arc}, {540:outer-4c}, {540:line-nonedge}; use {540:both} or {540:mixed} only for a genuinely mixed single occurrence, and {540:unrelated} only when the literal is not one of the five degree-540 carriers.\nERROR: RESULTS_INDEX.md has ambiguous 540 occurrence(s)\n  line 218: frontiers.py` | | `[0,1440,31302]` | `analysis/bt3407_magnetic_exact_no_go.py` | | `[1080,540,540]` | `analysis/w33_pass4756_4758_4760_dependency_cube_fast_verify.py` | | `[1160,92\n  line 218: tiers.py` | | `[0,1440,31302]` | `analysis/bt3407_magnetic_exact_no_go.py` | | `[1080,540,540]` | `analysis/w33_pass4756_4758_4760_dependency_cube_fast_verify.py` | | `[1160,925,68\n  line 276: k_map.py` | | `[5,6912,1053]` | `analysis/w33_20261027_native_bloch_face_module.py` | | `[540,270,135]` | `analysis/w33_pass3989_3996_maximum_code_orbit_census.py` | | `[540,540,54\n  line 298: er_code.py` \u00b7 `analysis/w33_pass4772_4776_global_cube_cell_code.py` \u00b7 *(+2)* | | `[2025,540,3]` | `analysis/PASS4745_4752_RESERVATION.md` | | `[2025,567,4]` | `analysis/PASS4745_\n  line 407: o.py` | | `[54,72,432]` | `analysis/w33_pass1611_1615_torsion_xor_lattice_octet.py` | | `[540,141,4]` | `analysis/w33_pass4924_track_b_arithmetic_and_the_51840_warning.py` | | `[58\n  line 1488: ults_index.py` \u00b7 `analysis/w33_pass382_reversible_logic_switch_controller.g` | | `234360/540/90+360+90/6/22of48/0exact/S6-direction` | `analysis/PASS384_Q6_Q3_FOLD_OBSTRUCTION.md`\n  line 1606: ite_TOE_frontiers.md` \u00b7 `analysis/w33_20261019_round11_first_tits_jordan.py` | | `234360/540/90` | `analysis/PASS384_Q6_Q3_FOLD_OBSTRUCTION.md` \u00b7 `analysis/build_results_index.py\n  line 1617: KTHROUGH.md` \u00b7 `analysis/w33_20260924_history_pointline_cospectral_firewall.py` | | `270/540/1620` | `analysis/w33_pass2045_2049_the_sevens_and_a_numbering_collision.md` | | `343/\n  line 1964: py` \u00b7 `analysis/w33_pass10153_10160_c315_w52_structural_no_go.py` | | `totally-isotropic@540` | `analysis/BT1536_frame_dual_k44_code.md` \u00b7 `analysis/w33_frame_hoffman_resolution_\n  line 2374: it_iso.md` | | `tritangent@360` | `analysis/w33_pass4997_4999_bonkers.py` | | `tritangent@540` | `analysis/w33_e6_involution_ladder_flags.py` | | `tritangent@576` | `analysis/w33_2\n  line 2641: ic_closure.md` \u00b7 `analysis/BT3320_BT3331_global_cover_quantum_hypercube.md` | | `deficit@540` | `analysis/PASS5016_5023_EXECUTED_OUTCOMES.md` \u00b7 `analysis/w33_pass5016_radius_rp2_\n  line 2851: ity_spectral_E6_parallelism.md` \u00b7 `analysis/2026-10-10_toe43_five_fronts.md` | | `spread@540` | `analysis/PASS1074_1078_FIVE_STREAM_RELEASE.md` \u00b7 `analysis/w33_pass1067_outer_cla\n  line 3972: _matrix_cs.py` \u00b7 `analysis/w33_pass804_adversarial_calibration_failclosed.py` | | `alpha@540` | `analysis/2026-07-31_frame_hoffman_resolution_theorem.md` \u00b7 `exploration/w33_indep\n  Add an occurrence-local canonical tag: {540:point-nonedge}, {540:double-six-nonincident}, {540:gq42-arc}, {540:outer-4c}, {540:line-nonedge}; use {540:both} or {540:mixed} only for a genuinely mixed single occurrence, and {540:unrelated} only when the literal is not one of the five degree-540 carriers.\nERROR: TOPICAL_ALIASES.md has ambiguous 540 occurrence(s)\n  line 423: -code-outage-decoder.html](docs/pgsp-moduli-outer-code-outage-decoder.html) - `code:[2025,540,3]` \ufffd \u2014 [PASS4745_4752_RESERVATION.md](analysis/PASS4745_4752_RESERVATION.md), [PAS\n  Add an occurrence-local canonical tag: {540:point-nonedge}, {540:double-six-nonincident}, {540:gq42-arc}, {540:outer-4c}, {540:line-nonedge}; use {540:both} or {540:mixed} only for a genuinely mixed single occurrence, and {540:unrelated} only when the literal is not one of the five degree-540 carriers.\n",
+      "stderr": "",
+      "seconds": 1.134
+    }
+  ],
+  "post_annotation_checks": [
+    {
+      "id": "tag-540-check",
+      "scope": "owned_scientific_files",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/tag_540_disambiguation.py",
+        "--check-only",
+        "--strict",
+        "analysis/w33_20261103_native_projector_holonomic_qutrit.py",
+        "data/w33_20261103_native_projector_holonomic_qutrit.json",
+        "analysis/w33_20261103_vacuum_effective_quantum_audit.py",
+        "data/w33_20261103_vacuum_effective_quantum_audit.json",
+        "analysis/w33_20261103_wd5_native_klein_intertwiner.py",
+        "data/w33_20261103_wd5_native_klein_intertwiner.json",
+        "analysis/w33_20261103_all_quartet_tunneling.py",
+        "data/w33_20261103_all_quartet_tunneling.json",
+        "analysis/w33_20261103_induced_cubic_compression.py",
+        "data/w33_20261103_induced_cubic_compression.json",
+        "analysis/w33_20261103_deck_cocycle_symmetry_selection.py",
+        "data/w33_20261103_deck_cocycle_symmetry_selection.json",
+        "analysis/w33_20261103_gauge_global_form_audit.py",
+        "data/w33_20261103_gauge_global_form_audit.json",
+        "analysis/w33_20261103_clifford_yang_monopole_controls.py",
+        "data/w33_20261103_clifford_yang_monopole_controls.json",
+        "analysis/w33_20261103_native_eight_validation.py",
+        "data/w33_20261103_native_eight_validation.json",
+        "analysis/2026-11-03_native_eight_investigations.md",
+        "tests/test_w33_20261103_native_eight_investigations.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "id": "tag-540-check",
+      "scope": "all_owned_files",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/tag_540_disambiguation.py",
+        "--check-only",
+        "--strict",
+        "analysis/w33_20261103_native_projector_holonomic_qutrit.py",
+        "data/w33_20261103_native_projector_holonomic_qutrit.json",
+        "analysis/w33_20261103_vacuum_effective_quantum_audit.py",
+        "data/w33_20261103_vacuum_effective_quantum_audit.json",
+        "analysis/w33_20261103_wd5_native_klein_intertwiner.py",
+        "data/w33_20261103_wd5_native_klein_intertwiner.json",
+        "analysis/w33_20261103_all_quartet_tunneling.py",
+        "data/w33_20261103_all_quartet_tunneling.json",
+        "analysis/w33_20261103_induced_cubic_compression.py",
+        "data/w33_20261103_induced_cubic_compression.json",
+        "analysis/w33_20261103_deck_cocycle_symmetry_selection.py",
+        "data/w33_20261103_deck_cocycle_symmetry_selection.json",
+        "analysis/w33_20261103_gauge_global_form_audit.py",
+        "data/w33_20261103_gauge_global_form_audit.json",
+        "analysis/w33_20261103_clifford_yang_monopole_controls.py",
+        "data/w33_20261103_clifford_yang_monopole_controls.json",
+        "analysis/w33_20261103_native_eight_validation.py",
+        "data/w33_20261103_native_eight_validation.json",
+        "analysis/2026-11-03_native_eight_investigations.md",
+        "tests/test_w33_20261103_native_eight_investigations.py",
+        "RESULTS_INDEX.md",
+        "TOPICAL_ALIASES.md"
+      ],
+      "exit_code": 1,
+      "stdout": "ERROR: RESULTS_INDEX.md has ambiguous 540 occurrence(s)\n  line 218: frontiers.py` | | `[0,1440,31302]` | `analysis/bt3407_magnetic_exact_no_go.py` | | `[1080,540,540]` | `analysis/w33_pass4756_4758_4760_dependency_cube_fast_verify.py` | | `[1160,92\n  line 218: tiers.py` | | `[0,1440,31302]` | `analysis/bt3407_magnetic_exact_no_go.py` | | `[1080,540,540]` | `analysis/w33_pass4756_4758_4760_dependency_cube_fast_verify.py` | | `[1160,925,68\n  line 276: k_map.py` | | `[5,6912,1053]` | `analysis/w33_20261027_native_bloch_face_module.py` | | `[540,270,135]` | `analysis/w33_pass3989_3996_maximum_code_orbit_census.py` | | `[540,540,54\n  line 298: er_code.py` \u00b7 `analysis/w33_pass4772_4776_global_cube_cell_code.py` \u00b7 *(+2)* | | `[2025,540,3]` | `analysis/PASS4745_4752_RESERVATION.md` | | `[2025,567,4]` | `analysis/PASS4745_\n  line 407: o.py` | | `[54,72,432]` | `analysis/w33_pass1611_1615_torsion_xor_lattice_octet.py` | | `[540,141,4]` | `analysis/w33_pass4924_track_b_arithmetic_and_the_51840_warning.py` | | `[58\n  line 1488: ults_index.py` \u00b7 `analysis/w33_pass382_reversible_logic_switch_controller.g` | | `234360/540/90+360+90/6/22of48/0exact/S6-direction` | `analysis/PASS384_Q6_Q3_FOLD_OBSTRUCTION.md`\n  line 1606: ite_TOE_frontiers.md` \u00b7 `analysis/w33_20261019_round11_first_tits_jordan.py` | | `234360/540/90` | `analysis/PASS384_Q6_Q3_FOLD_OBSTRUCTION.md` \u00b7 `analysis/build_results_index.py\n  line 1617: KTHROUGH.md` \u00b7 `analysis/w33_20260924_history_pointline_cospectral_firewall.py` | | `270/540/1620` | `analysis/w33_pass2045_2049_the_sevens_and_a_numbering_collision.md` | | `343/\n  line 1964: py` \u00b7 `analysis/w33_pass10153_10160_c315_w52_structural_no_go.py` | | `totally-isotropic@540` | `analysis/BT1536_frame_dual_k44_code.md` \u00b7 `analysis/w33_frame_hoffman_resolution_\n  line 2374: it_iso.md` | | `tritangent@360` | `analysis/w33_pass4997_4999_bonkers.py` | | `tritangent@540` | `analysis/w33_e6_involution_ladder_flags.py` | | `tritangent@576` | `analysis/w33_2\n  line 2641: ic_closure.md` \u00b7 `analysis/BT3320_BT3331_global_cover_quantum_hypercube.md` | | `deficit@540` | `analysis/PASS5016_5023_EXECUTED_OUTCOMES.md` \u00b7 `analysis/w33_pass5016_radius_rp2_\n  line 2851: ity_spectral_E6_parallelism.md` \u00b7 `analysis/2026-10-10_toe43_five_fronts.md` | | `spread@540` | `analysis/PASS1074_1078_FIVE_STREAM_RELEASE.md` \u00b7 `analysis/w33_pass1067_outer_cla\n  line 3972: _matrix_cs.py` \u00b7 `analysis/w33_pass804_adversarial_calibration_failclosed.py` | | `alpha@540` | `analysis/2026-07-31_frame_hoffman_resolution_theorem.md` \u00b7 `exploration/w33_indep\n  Add an occurrence-local canonical tag: {540:point-nonedge}, {540:double-six-nonincident}, {540:gq42-arc}, {540:outer-4c}, {540:line-nonedge}; use {540:both} or {540:mixed} only for a genuinely mixed single occurrence, and {540:unrelated} only when the literal is not one of the five degree-540 carriers.\nERROR: TOPICAL_ALIASES.md has ambiguous 540 occurrence(s)\n  line 423: -code-outage-decoder.html](docs/pgsp-moduli-outer-code-outage-decoder.html) - `code:[2025,540,3]` \ufffd \u2014 [PASS4745_4752_RESERVATION.md](analysis/PASS4745_4752_RESERVATION.md), [PAS\n  Add an occurrence-local canonical tag: {540:point-nonedge}, {540:double-six-nonincident}, {540:gq42-arc}, {540:outer-4c}, {540:line-nonedge}; use {540:both} or {540:mixed} only for a genuinely mixed single occurrence, and {540:unrelated} only when the literal is not one of the five degree-540 carriers.\n",
+      "stderr": ""
+    }
+  ],
+  "certificate_advisory_reconciliation": "All59 certificate token hits were read. action@2..5 are finite Pauli-action arrays; pair@12..90 are projector-label tuples; multiplicity values and denominator12 are loop bookkeeping; triple@12..85 and193 are compressed coordinate tuples; power@2,3 are center element powers. None identifies the compared Pythagorean, CKM, cyclotomic or clock carrier. Prior mathematical owners are credited in the report."
+}

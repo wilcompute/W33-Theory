@@ -1,0 +1,131 @@
+{
+  "utc": "2026-11-03T01:28:50.885634+00:00",
+  "input_raw_sha256": {
+    "data/w33_20261031_signed_cubic_lift.json": "19e6c0c23784140899036adef54742151f333ac7e2d2b4881c640890b9c1b9b9",
+    "data/w33_20261031_unitary_stabilizer_lift.json": "109dd5cb55973e7d9354fa0eab3d2012fe2f147371922c7582a1f4275308650a",
+    "data/w33_20261031_chiral_tetrahedron_strange_bridge.json": "3df20f3f0c8ada3d41efb8abd879c74cb63b7f931c3be307103b0c27d4fd6ed5",
+    "data/w33_20261031_tick_loop_rigidity.json": "35706afbe1c3d69f30d8fde1487867cfb42b3d3e63976efad5210750128d7a68",
+    "data/w33_20261102_chiral_surface_development.json": "a0514be5ea7d05c71c91bc76e20fbcf199e893efad39451d66b24ddea0004bc8",
+    "data/w33_20261102_induced_cubic_common_cover.json": "f85af299e6711911f6d46ac95737912838a32031f1b943208d2c3e77d8000e5e",
+    "data/w33_20261102_conditional_symplectic_vacuum.json": "5b5e0eff0bcffaee479f71c3b547d2ca486b09e7e58b76e9b15b36165b08fea5",
+    "data/w33_20261102_clifford_native_cubic_repair.json": "37006d1f2bead76d4dc98204e7eda2d4af69485621368563074a5bbb29cee7b6",
+    "data/w33_20261102_spin6_rotation_group_audit.json": "d5b619b587325ec9f032c90a56b89907f94a1c0033593caea836f9256e1aa0fd",
+    "data/w33_20261102_deck_monodromy_network.json": "1a3e6f4bb9a06bfa8f7491097b7d60cc617b5bfcd8aa904828de4730d0628dbb"
+  },
+  "execution": "Local Windows subprocesses, three independent producers concurrently; Remote Desktop Commander also executed initial probes/producers on the same authorized device.",
+  "jobs": [
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/w33_20261103_native_projector_holonomic_qutrit.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_NATIVE_POSTSELECTED_HOLONOMIC_QUTRIT_CLIFFORD [4, 5, 10] 2592\n",
+      "stderr": "",
+      "seconds": 32.32
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/w33_20261103_vacuum_effective_quantum_audit.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_NATIVE_F_FLAT_CHART_AND_CONDITIONAL_ADS_AUDIT 17 2\n",
+      "stderr": "",
+      "seconds": 14.43
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/w33_20261103_wd5_native_klein_intertwiner.py"
+      ],
+      "exit_code": 0,
+      "stdout": "WD5_GROUPS 1920 extra_word [6, 5, 5, 2, 5, 6, 5, 5, 6]\nWD5_EXACT_SPINOR_WORD_CHECKED\nWD5_KLEIN_GEOMETRY 156 20\nPASS_NATIVE_WD5_Q5_KLEIN_CLEBSCH_INTERTWINER [6, 5, 5, 2, 5, 6, 5, 5, 6] {'0': 96, '2': 60}\n",
+      "stderr": "",
+      "seconds": 14.923
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/w33_20261103_all_quartet_tunneling.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_ALL_NATIVE_QUARTET_LEADING_TUNNELING 19657590887/45916502400000 19657590887/212576400000\n",
+      "stderr": "",
+      "seconds": 5.242
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/w33_20261103_induced_cubic_compression.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_INDUCED313_NATIVE_CUBIC_COMPRESSION 313 {'12': 0, '120': 48, '192': 60}\n",
+      "stderr": "",
+      "seconds": 0.378
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/w33_20261103_deck_cocycle_symmetry_selection.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_NATIVE_BRANCH_SYMMETRY_COCYCLE_AUDIT [(0, 64, {'1': 36, '-1': 28}), (7, 64, {'1': 20, 'i': 16, '-i': 16, '-1': 12}), (120, 22, {'1': 12, '-1': 4, 'i': 3, '-i': 3}), (127, 22, {'1': 8, 'i': 7, '-i': 7})]\n",
+      "stderr": "",
+      "seconds": 0.941
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/w33_20261103_gauge_global_form_audit.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_NATIVE27_GAUGE_GLOBAL_FORM_AND_ANOMALY_AUDIT {'0': 5, '1': 8, '2': 6, '3': 8}\n",
+      "stderr": "",
+      "seconds": 2.358
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/w33_20261103_clifford_yang_monopole_controls.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_NATIVE_YANG_BUNDLE_AND_NONABELIAN_CONTROLS 1 {'steps_per_edge': 64, 'loop_A_trace': 1.998980474657356, 'loop_B_trace': 1.9989804746573592, 'commutator_Frobenius': 0.002882918144129767, 'maximum_unitarity_error': 4.200584187420207e-15}\n",
+      "stderr": "",
+      "seconds": 5.951
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "-m",
+        "pytest",
+        "-q",
+        "--noconftest",
+        "tests/test_w33_20261103_native_eight_investigations.py"
+      ],
+      "exit_code": 0,
+      "stdout": "......................                                                   [100%]\n22 passed in 24.53s\n",
+      "stderr": "",
+      "seconds": 27.95
+    }
+  ],
+  "status": "PASS_EIGHT_PRODUCERS_AND_22_PYTEST_CASES",
+  "test_scope": "22 tests have no fixtures. --noconftest intentionally avoids repository-wide legacy fixture preparation and subprocess rewriting; no global integration pass is asserted.",
+  "nonsemantic_source_annotation": {
+    "path": "analysis/w33_20261103_induced_cubic_compression.py",
+    "before_sha256": "8efb025373f3ee82de5e44eeadeb8314af4af5ed309eead36fec144a7ea32c42",
+    "after_sha256": "0dc284ce5c151cb7d0531e1eb848bf3579363f9aea6418e27a66ccf110911488",
+    "executable_AST_equal": true,
+    "result_index_token_sets_equal": true,
+    "reason": "Occurrence-local540 carrier disambiguation; no executable or indexed result changed."
+  }
+}

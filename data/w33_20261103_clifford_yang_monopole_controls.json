@@ -1,0 +1,45 @@
+{
+  "status": "PASS_NATIVE_YANG_BUNDLE_AND_NONABELIAN_CONTROLS",
+  "gamma_volume_sign": -1,
+  "rank2_projector": "P(n)=(I-sum n_a gamma_a)/2 on the supplied unit S4.",
+  "north_pole_Tr_P_dP4_density": 3,
+  "second_Chern_number": 1,
+  "first_Chern_number": 0,
+  "exact_density_proof": "Clifford covariance gives density=-3*gamma_volume_sign times the unit S4 volume form. Vol(S4)=8*pi^2/3, so (8*pi^2)^-1 integral Tr P(dP)^4=-gamma_volume_sign.",
+  "tangent_Grassmann_metric": "g_ij=(1/2)Tr(d_iP d_jP)=delta_ij/2 in north-pole tangent coordinates.",
+  "noncommuting_Wilson_loop_convergence": [
+    {
+      "steps_per_edge": 16,
+      "loop_A_trace": 1.9989803932808998,
+      "loop_B_trace": 1.9989803932808998,
+      "commutator_Frobenius": 0.0028831481941818996,
+      "maximum_unitarity_error": 2.6645352591003757e-15
+    },
+    {
+      "steps_per_edge": 32,
+      "loop_A_trace": 1.9989804583826065,
+      "loop_B_trace": 1.99898045838261,
+      "commutator_Frobenius": 0.0028829641526284975,
+      "maximum_unitarity_error": 9.992007221626409e-15
+    },
+    {
+      "steps_per_edge": 64,
+      "loop_A_trace": 1.998980474657356,
+      "loop_B_trace": 1.9989804746573592,
+      "commutator_Frobenius": 0.002882918144129767,
+      "maximum_unitarity_error": 4.200584187420207e-15
+    }
+  ],
+  "added_gate_gamma_span_residual_squared": [
+    4,
+    4,
+    4,
+    4,
+    0
+  ],
+  "enlarged_group_boundary": "The added Clifford gate takes four of the five Hermitian gamma axes outside their linear span. This S4 family is Spin5-covariant, not invariant under the full enlarged SU4 Clifford action. Its six-skew-form representation is a different carrier.",
+  "vacuum_boundary": "The conditional vacuum orbit is S5, with H4(S5)=0. The Yang bundle lives on a separately supplied S4 control manifold; its Chern number is not a monopole charge forced on the vacuum orbit.",
+  "ownership": "Pass4153/BT4153_BT4160 already establishes the standard second-Chern synthetic pump. This records the actual native gamma sign, noncommuting controlled loops and an explicit covariance obstruction.",
+  "reference": "https://arxiv.org/abs/1610.06228",
+  "boundary": "Exact synthetic bundle invariant and numerical Wilson-loop convergence. No physical parameter manifold, protected laboratory gate or spacetime dimension derived."
+}
