@@ -1,0 +1,518 @@
+{
+  "absolute_scale_underdetermination": "All distributions depend on tau=J*z only; a ratio of coupling strength to device length must be calibrated externally.",
+  "experimental_interpretation": "Possible 36-site and 216-site laser-written waveguide arrays or programmable optical circuits; requires onsite detunings, coupling calibration, propagation-loss and polarization controls. This is numerical Hamiltonian propagation, not a fabricated or validated device.",
+  "full_lattice_negative_controls": [
+    {
+      "dimensionless_time": 1.0,
+      "full_triangle_probability_on_retained_sites": 0.9070297358142,
+      "level": 2,
+      "total_variation_quantum_vs_undeleted_triangle": 0.26766328626233615
+    },
+    {
+      "dimensionless_time": 2.0,
+      "full_triangle_probability_on_retained_sites": 0.7926807724542809,
+      "level": 2,
+      "total_variation_quantum_vs_undeleted_triangle": 0.48969504889964494
+    },
+    {
+      "dimensionless_time": 4.0,
+      "full_triangle_probability_on_retained_sites": 0.8713566189702987,
+      "level": 2,
+      "total_variation_quantum_vs_undeleted_triangle": 0.5746916619790625
+    },
+    {
+      "dimensionless_time": 8.0,
+      "full_triangle_probability_on_retained_sites": 0.8654747545911461,
+      "level": 2,
+      "total_variation_quantum_vs_undeleted_triangle": 0.4096434934686763
+    },
+    {
+      "dimensionless_time": 1.0,
+      "full_triangle_probability_on_retained_sites": 0.9070296486335331,
+      "level": 3,
+      "total_variation_quantum_vs_undeleted_triangle": 0.2676632928184891
+    },
+    {
+      "dimensionless_time": 2.0,
+      "full_triangle_probability_on_retained_sites": 0.7902169025240778,
+      "level": 3,
+      "total_variation_quantum_vs_undeleted_triangle": 0.48955920106562556
+    },
+    {
+      "dimensionless_time": 4.0,
+      "full_triangle_probability_on_retained_sites": 0.6213328003292423,
+      "level": 3,
+      "total_variation_quantum_vs_undeleted_triangle": 0.780379354171608
+    },
+    {
+      "dimensionless_time": 8.0,
+      "full_triangle_probability_on_retained_sites": 0.6622435002380606,
+      "level": 3,
+      "total_variation_quantum_vs_undeleted_triangle": 0.8732664395895681
+    }
+  ],
+  "hamiltonian": "H=J*L; vertex onsite beta_v=J deg(v); each edge coupling -J. Optical propagation coordinate z produces tau=Jz with hbar set by wave equation; all values dimensionless.",
+  "literature": [
+    "https://doi.org/10.1038/s41566-021-00845-4",
+    "https://doi.org/10.1038/s41566-021-00868-x",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC5947980/"
+  ],
+  "observable": "Single-site injection; coherent root return, two far-corner probabilities, spatial inverse participation ratio; classical heat-semigroup negative controls. Distinguish quantum interference and deleted-site connectivity.",
+  "quantum_unitarity_and_classical_mass_test": true,
+  "simulation": [
+    {
+      "edges": 9,
+      "full": false,
+      "level": 1,
+      "phases": [
+        {
+          "dimensionless_time": 0.25,
+          "far_corner_classical_left": 0.020783056779574018,
+          "far_corner_classical_right": 0.020783056779574018,
+          "far_corner_quantum_left": 0.0009623467700509392,
+          "far_corner_quantum_right": 0.0009623467700509392,
+          "participation_ratio_classical": 2.199977729709953,
+          "participation_ratio_quantum": 1.2736328092557871,
+          "root_return_classical": 0.6423736070265732,
+          "root_return_quantum": 0.8825382296567014
+        },
+        {
+          "dimensionless_time": 1.0,
+          "far_corner_classical_left": 0.11364399432956136,
+          "far_corner_classical_right": 0.11364399432956136,
+          "far_corner_quantum_left": 0.1711650737629889,
+          "far_corner_quantum_right": 0.17116507376298895,
+          "participation_ratio_classical": 5.341369040547985,
+          "participation_ratio_quantum": 5.844364650321435,
+          "root_return_classical": 0.2818698307852444,
+          "root_return_quantum": 0.187776627606161
+        },
+        {
+          "dimensionless_time": 2.0,
+          "far_corner_classical_left": 0.15647490581833778,
+          "far_corner_classical_right": 0.15647490581833778,
+          "far_corner_quantum_left": 0.27270405749842974,
+          "far_corner_quantum_right": 0.2727040574984302,
+          "participation_ratio_classical": 5.97534180370677,
+          "participation_ratio_quantum": 4.344993585313376,
+          "root_return_classical": 0.1872179196772757,
+          "root_return_quantum": 0.22259852176425443
+        },
+        {
+          "dimensionless_time": 4.0,
+          "far_corner_classical_left": 0.16632280657471413,
+          "far_corner_classical_right": 0.16632280657471413,
+          "far_corner_quantum_left": 0.10415797542601733,
+          "far_corner_quantum_right": 0.10415797542601772,
+          "participation_ratio_classical": 5.999972115990633,
+          "participation_ratio_quantum": 4.272970788024006,
+          "root_return_classical": 0.16735444311815842,
+          "root_return_quantum": 0.3340029488424969
+        },
+        {
+          "dimensionless_time": 8.0,
+          "far_corner_classical_left": 0.16666627938696213,
+          "far_corner_classical_right": 0.16666627938696216,
+          "far_corner_quantum_left": 0.03985184196014755,
+          "far_corner_quantum_right": 0.03985184196014711,
+          "participation_ratio_classical": 5.999999999964618,
+          "participation_ratio_quantum": 1.8662182988976683,
+          "root_return_classical": 0.16666744122608274,
+          "root_return_quantum": 0.7037581800374733
+        }
+      ],
+      "vertices": 6
+    },
+    {
+      "edges": 9,
+      "full": true,
+      "level": 1,
+      "phases": [
+        {
+          "dimensionless_time": 0.25,
+          "far_corner_classical_left": 0.020783056779574018,
+          "far_corner_classical_right": 0.020783056779574018,
+          "far_corner_quantum_left": 0.0009623467700509392,
+          "far_corner_quantum_right": 0.0009623467700509392,
+          "participation_ratio_classical": 2.199977729709953,
+          "participation_ratio_quantum": 1.2736328092557871,
+          "root_return_classical": 0.6423736070265732,
+          "root_return_quantum": 0.8825382296567014
+        },
+        {
+          "dimensionless_time": 1.0,
+          "far_corner_classical_left": 0.11364399432956136,
+          "far_corner_classical_right": 0.11364399432956136,
+          "far_corner_quantum_left": 0.1711650737629889,
+          "far_corner_quantum_right": 0.17116507376298895,
+          "participation_ratio_classical": 5.341369040547985,
+          "participation_ratio_quantum": 5.844364650321435,
+          "root_return_classical": 0.2818698307852444,
+          "root_return_quantum": 0.187776627606161
+        },
+        {
+          "dimensionless_time": 2.0,
+          "far_corner_classical_left": 0.15647490581833778,
+          "far_corner_classical_right": 0.15647490581833778,
+          "far_corner_quantum_left": 0.27270405749842974,
+          "far_corner_quantum_right": 0.2727040574984302,
+          "participation_ratio_classical": 5.97534180370677,
+          "participation_ratio_quantum": 4.344993585313376,
+          "root_return_classical": 0.1872179196772757,
+          "root_return_quantum": 0.22259852176425443
+        },
+        {
+          "dimensionless_time": 4.0,
+          "far_corner_classical_left": 0.16632280657471413,
+          "far_corner_classical_right": 0.16632280657471413,
+          "far_corner_quantum_left": 0.10415797542601733,
+          "far_corner_quantum_right": 0.10415797542601772,
+          "participation_ratio_classical": 5.999972115990633,
+          "participation_ratio_quantum": 4.272970788024006,
+          "root_return_classical": 0.16735444311815842,
+          "root_return_quantum": 0.3340029488424969
+        },
+        {
+          "dimensionless_time": 8.0,
+          "far_corner_classical_left": 0.16666627938696213,
+          "far_corner_classical_right": 0.16666627938696216,
+          "far_corner_quantum_left": 0.03985184196014755,
+          "far_corner_quantum_right": 0.03985184196014711,
+          "participation_ratio_classical": 5.999999999964618,
+          "participation_ratio_quantum": 1.8662182988976683,
+          "root_return_classical": 0.16666744122608274,
+          "root_return_quantum": 0.7037581800374733
+        }
+      ],
+      "vertices": 6
+    },
+    {
+      "edges": 63,
+      "full": false,
+      "level": 2,
+      "phases": [
+        {
+          "dimensionless_time": 0.25,
+          "far_corner_classical_left": 2.2461252221774036e-10,
+          "far_corner_classical_right": 2.2461252221774036e-10,
+          "far_corner_quantum_left": 1.4154315074744313e-19,
+          "far_corner_quantum_right": 1.4154315074744313e-19,
+          "participation_ratio_classical": 2.2009366537036947,
+          "participation_ratio_quantum": 1.2736363911483426,
+          "root_return_classical": 0.642363656826071,
+          "root_return_quantum": 0.8825380519349009
+        },
+        {
+          "dimensionless_time": 1.0,
+          "far_corner_classical_left": 3.3374017254377126e-06,
+          "far_corner_classical_right": 3.3374017254377126e-06,
+          "far_corner_quantum_left": 5.051242818418678e-10,
+          "far_corner_quantum_right": 5.051242818418678e-10,
+          "participation_ratio_classical": 5.894957647772613,
+          "participation_ratio_quantum": 5.855087519411987,
+          "root_return_classical": 0.27927440494400363,
+          "root_return_quantum": 0.1820842244350974
+        },
+        {
+          "dimensionless_time": 2.0,
+          "far_corner_classical_left": 0.0001450847626745668,
+          "far_corner_classical_right": 0.00014508476267456686,
+          "far_corner_quantum_left": 1.666596651820658e-05,
+          "far_corner_quantum_right": 1.666596651820652e-05,
+          "participation_ratio_classical": 8.88801303877112,
+          "participation_ratio_quantum": 11.919816367985332,
+          "root_return_classical": 0.16963650288104212,
+          "root_return_quantum": 0.08711153003846196
+        },
+        {
+          "dimensionless_time": 4.0,
+          "far_corner_classical_left": 0.0020754650351132936,
+          "far_corner_classical_right": 0.002075465035113293,
+          "far_corner_quantum_left": 0.023218919132833853,
+          "far_corner_quantum_right": 0.02321891913283386,
+          "participation_ratio_classical": 14.277019365065106,
+          "participation_ratio_quantum": 13.380791969480015,
+          "root_return_classical": 0.1125110860703983,
+          "root_return_quantum": 0.21412203453442025
+        },
+        {
+          "dimensionless_time": 8.0,
+          "far_corner_classical_left": 0.009973972234030374,
+          "far_corner_classical_right": 0.009973972234030374,
+          "far_corner_quantum_left": 0.0029514256348885863,
+          "far_corner_quantum_right": 0.0029514256348885885,
+          "participation_ratio_classical": 24.511263455749788,
+          "participation_ratio_quantum": 21.76307848333766,
+          "root_return_classical": 0.07004263105833784,
+          "root_return_quantum": 0.08304519647879302
+        }
+      ],
+      "vertices": 36
+    },
+    {
+      "edges": 108,
+      "full": true,
+      "level": 2,
+      "phases": [
+        {
+          "dimensionless_time": 0.25,
+          "far_corner_classical_left": 3.455129671223266e-10,
+          "far_corner_classical_right": 3.4551296712232667e-10,
+          "far_corner_quantum_left": 2.305538061796201e-19,
+          "far_corner_quantum_right": 2.305538061796201e-19,
+          "participation_ratio_classical": 2.203888846763451,
+          "participation_ratio_quantum": 1.2737305907698135,
+          "root_return_classical": 0.6423253753581195,
+          "root_return_quantum": 0.8824959537644379
+        },
+        {
+          "dimensionless_time": 1.0,
+          "far_corner_classical_left": 7.678703723572845e-06,
+          "far_corner_classical_right": 7.678703723572845e-06,
+          "far_corner_quantum_left": 5.629441473951538e-09,
+          "far_corner_quantum_right": 5.62944147395154e-09,
+          "participation_ratio_classical": 6.802748715537626,
+          "participation_ratio_quantum": 7.724928212412926,
+          "root_return_classical": 0.27372666698834325,
+          "root_return_quantum": 0.14088191587967458
+        },
+        {
+          "dimensionless_time": 2.0,
+          "far_corner_classical_left": 0.0003541847650006735,
+          "far_corner_classical_right": 0.0003541847650006735,
+          "far_corner_quantum_left": 0.00041414739725130636,
+          "far_corner_quantum_right": 0.00041414739725130663,
+          "participation_ratio_classical": 13.402662546714941,
+          "participation_ratio_quantum": 24.982074752112467,
+          "root_return_classical": 0.14699940300837183,
+          "root_return_quantum": 0.028552019037057084
+        },
+        {
+          "dimensionless_time": 4.0,
+          "far_corner_classical_left": 0.004392414654411891,
+          "far_corner_classical_right": 0.004392414654411891,
+          "far_corner_quantum_left": 0.10011360336911236,
+          "far_corner_quantum_right": 0.10011360336911349,
+          "participation_ratio_classical": 26.506356332817653,
+          "participation_ratio_quantum": 20.107209633890783,
+          "root_return_classical": 0.07461204044453881,
+          "root_return_quantum": 0.006676931920075801
+        },
+        {
+          "dimensionless_time": 8.0,
+          "far_corner_classical_left": 0.014862693712037996,
+          "far_corner_classical_right": 0.014862693712038,
+          "far_corner_quantum_left": 0.06544733289525523,
+          "far_corner_quantum_right": 0.06544733289525376,
+          "participation_ratio_classical": 41.70056455395909,
+          "participation_ratio_quantum": 27.317664689421562,
+          "root_return_classical": 0.03772679984543541,
+          "root_return_quantum": 0.04231225724557816
+        }
+      ],
+      "vertices": 45
+    },
+    {
+      "edges": 387,
+      "full": false,
+      "level": 3,
+      "phases": [
+        {
+          "dimensionless_time": 0.25,
+          "far_corner_classical_left": 0.0,
+          "far_corner_classical_right": 0.0,
+          "far_corner_quantum_left": 0.0,
+          "far_corner_quantum_right": 0.0,
+          "participation_ratio_classical": 2.200936653703695,
+          "participation_ratio_quantum": 1.273636391148344,
+          "root_return_classical": 0.6423636568260709,
+          "root_return_quantum": 0.8825380519349004
+        },
+        {
+          "dimensionless_time": 1.0,
+          "far_corner_classical_left": 2.533372458923588e-28,
+          "far_corner_classical_right": 2.5333724589235883e-28,
+          "far_corner_quantum_left": 5.772404119146302e-54,
+          "far_corner_quantum_right": 5.772404119146302e-54,
+          "participation_ratio_classical": 5.89495764815557,
+          "participation_ratio_quantum": 5.855087519412943,
+          "root_return_classical": 0.2792744049440028,
+          "root_return_quantum": 0.1820842244350945
+        },
+        {
+          "dimensionless_time": 2.0,
+          "far_corner_classical_left": 2.137588433666278e-21,
+          "far_corner_classical_right": 2.1375884336662785e-21,
+          "far_corner_quantum_left": 2.0323746328669487e-38,
+          "far_corner_quantum_right": 2.0323746328669466e-38,
+          "participation_ratio_classical": 8.888015924746334,
+          "participation_ratio_quantum": 11.919816640240004,
+          "root_return_classical": 0.16963650287002197,
+          "root_return_quantum": 0.08711152982348987
+        },
+        {
+          "dimensionless_time": 4.0,
+          "far_corner_classical_left": 2.6354849628008e-15,
+          "far_corner_classical_right": 2.635484962800801e-15,
+          "far_corner_quantum_left": 3.3677615637091263e-23,
+          "far_corner_quantum_right": 3.3677615637091234e-23,
+          "participation_ratio_classical": 14.279673882048712,
+          "participation_ratio_quantum": 13.454149902189084,
+          "root_return_classical": 0.1125110495375874,
+          "root_return_quantum": 0.21409301787161422
+        },
+        {
+          "dimensionless_time": 8.0,
+          "far_corner_classical_left": 1.7735489985842638e-10,
+          "far_corner_classical_right": 1.7735489985842636e-10,
+          "far_corner_quantum_left": 1.2100926830701113e-09,
+          "far_corner_quantum_right": 1.2100926830701107e-09,
+          "participation_ratio_classical": 24.834237415998864,
+          "participation_ratio_quantum": 26.38097973495315,
+          "root_return_classical": 0.07002961049811667,
+          "root_return_quantum": 0.08439901687843798
+        }
+      ],
+      "vertices": 216
+    },
+    {
+      "edges": 1053,
+      "full": true,
+      "level": 3,
+      "phases": [
+        {
+          "dimensionless_time": 0.25,
+          "far_corner_classical_left": 0.0,
+          "far_corner_classical_right": 0.0,
+          "far_corner_quantum_left": 0.0,
+          "far_corner_quantum_right": 0.0,
+          "participation_ratio_classical": 2.20388884676345,
+          "participation_ratio_quantum": 1.2737305907698124,
+          "root_return_classical": 0.6423253753581196,
+          "root_return_quantum": 0.8824959537644383
+        },
+        {
+          "dimensionless_time": 1.0,
+          "far_corner_classical_left": 1.047419306241487e-26,
+          "far_corner_classical_right": 1.047419306241487e-26,
+          "far_corner_quantum_left": 8.472392414246548e-51,
+          "far_corner_quantum_right": 8.472392414246567e-51,
+          "participation_ratio_classical": 6.8027493340970535,
+          "participation_ratio_quantum": 7.724928215347891,
+          "root_return_classical": 0.2737266669861314,
+          "root_return_quantum": 0.14088191584300877
+        },
+        {
+          "dimensionless_time": 2.0,
+          "far_corner_classical_left": 2.1710260881599887e-19,
+          "far_corner_classical_right": 2.1710260881599897e-19,
+          "far_corner_quantum_left": 1.95667896855751e-33,
+          "far_corner_quantum_right": 1.9566789685575078e-33,
+          "participation_ratio_classical": 13.404485867954655,
+          "participation_ratio_quantum": 25.01928808977663,
+          "root_return_classical": 0.14699938964203105,
+          "root_return_quantum": 0.028552676539970626
+        },
+        {
+          "dimensionless_time": 4.0,
+          "far_corner_classical_left": 4.3495832315587205e-13,
+          "far_corner_classical_right": 4.3495832315587205e-13,
+          "far_corner_quantum_left": 2.015533137453433e-16,
+          "far_corner_quantum_right": 2.0155331374534302e-16,
+          "participation_ratio_classical": 26.991615406341598,
+          "participation_ratio_quantum": 74.43062210300556,
+          "root_return_classical": 0.07460189147505043,
+          "root_return_quantum": 0.006178938125066124
+        },
+        {
+          "dimensionless_time": 8.0,
+          "far_corner_classical_left": 2.183879186661488e-08,
+          "far_corner_classical_right": 2.183879186661488e-08,
+          "far_corner_quantum_left": 0.001792537946880137,
+          "far_corner_quantum_right": 0.0017925379468801358,
+          "participation_ratio_classical": 54.69856145093641,
+          "participation_ratio_quantum": 156.28630841837187,
+          "root_return_classical": 0.03704854211004549,
+          "root_return_quantum": 0.001451249137613177
+        }
+      ],
+      "vertices": 378
+    }
+  ],
+  "status": "PASS_UNITARY_WALK_MARKOV_CONTROL_AND_DISORDER",
+  "symmetric_disorder_5pct_tests": [
+    {
+      "distribution_total_variation": 0.058847416566941445,
+      "level": 2,
+      "relative_coupling_disorder_max": 0.05,
+      "seed": 0
+    },
+    {
+      "distribution_total_variation": 0.05877538940485735,
+      "level": 2,
+      "relative_coupling_disorder_max": 0.05,
+      "seed": 1
+    },
+    {
+      "distribution_total_variation": 0.05428349794015575,
+      "level": 2,
+      "relative_coupling_disorder_max": 0.05,
+      "seed": 2
+    },
+    {
+      "distribution_total_variation": 0.07038251286350015,
+      "level": 2,
+      "relative_coupling_disorder_max": 0.05,
+      "seed": 3
+    },
+    {
+      "distribution_total_variation": 0.039431549603857835,
+      "level": 2,
+      "relative_coupling_disorder_max": 0.05,
+      "seed": 4
+    },
+    {
+      "distribution_total_variation": 0.048058883539395365,
+      "level": 2,
+      "relative_coupling_disorder_max": 0.05,
+      "seed": 5
+    },
+    {
+      "distribution_total_variation": 0.058592631329694216,
+      "level": 3,
+      "relative_coupling_disorder_max": 0.05,
+      "seed": 0
+    },
+    {
+      "distribution_total_variation": 0.06018365637236949,
+      "level": 3,
+      "relative_coupling_disorder_max": 0.05,
+      "seed": 1
+    },
+    {
+      "distribution_total_variation": 0.05495810476812843,
+      "level": 3,
+      "relative_coupling_disorder_max": 0.05,
+      "seed": 2
+    },
+    {
+      "distribution_total_variation": 0.06977331836580691,
+      "level": 3,
+      "relative_coupling_disorder_max": 0.05,
+      "seed": 3
+    },
+    {
+      "distribution_total_variation": 0.03951852609925598,
+      "level": 3,
+      "relative_coupling_disorder_max": 0.05,
+      "seed": 4
+    },
+    {
+      "distribution_total_variation": 0.04993706809287147,
+      "level": 3,
+      "relative_coupling_disorder_max": 0.05,
+      "seed": 5
+    }
+  ],
+  "unweighted_graphs": "For n=1,2,3 Pascal Lucas support vs undeleted triangular lattice, identical side length and unit nearest-neighbor coupling."
+}

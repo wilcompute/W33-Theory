@@ -1,0 +1,55 @@
+{
+  "checks": [
+    {
+      "conjugacy_histogram": {
+        "(0, 2, 1)": 1,
+        "(1, 0, 2)": 3
+      },
+      "flux_group_order": 2,
+      "level": 1,
+      "normalized_wilson_action_sum": 3.2,
+      "triangles": 4,
+      "w33_wilson_trace_each_plaquette": 8
+    },
+    {
+      "conjugacy_histogram": {
+        "(0, 2, 1)": 7,
+        "(1, 0, 2)": 18
+      },
+      "flux_group_order": 2,
+      "level": 2,
+      "normalized_wilson_action_sum": 20.0,
+      "triangles": 25,
+      "w33_wilson_trace_each_plaquette": 8
+    },
+    {
+      "conjugacy_histogram": {
+        "(0, 2, 1)": 43,
+        "(1, 0, 2)": 108
+      },
+      "flux_group_order": 2,
+      "level": 3,
+      "normalized_wilson_action_sum": 120.8,
+      "triangles": 151,
+      "w33_wilson_trace_each_plaquette": 8
+    },
+    {
+      "conjugacy_histogram": {
+        "(0, 2, 1)": 259,
+        "(1, 0, 2)": 648
+      },
+      "flux_group_order": 2,
+      "level": 4,
+      "normalized_wilson_action_sum": 725.6,
+      "triangles": 907,
+      "w33_wilson_trace_each_plaquette": 8
+    }
+  ],
+  "holonomy_law": "Every elementary triangular three-edge loop carries the product of three barycentric-coordinate transpositions; it is a transposition of order 2. All transpositions have W33 permutation trace 8 (32 nonfixed points), independent of local gauge.",
+  "physical_scope": "A graph-connection Wilson observable and a gauge-invariant benchmark. A Yang-Mills field would require independent dynamical link variables, a coupling/action and observables; this construction specifies a background connection.",
+  "recursion_proof": "At each scale six disjoint copies are connected by nine unit bonds. Their corner vertices are nonadjacent within every child level>=1; therefore any new triangle lies entirely within the bond graph, whose unique triangle is checked directly. Thus exactly one cross-block triangle is added.",
+  "status": "PASS_NONABELIAN_TRIANGLE_WILSON_CENSUS",
+  "triangle_recursion": "T_(n+1)=6*T_n+1 with T_1=4; T_n=(21*6^(n-1)-1)/5",
+  "wilson_action_density": "Tr(I-U_triangle)/40=32/40=4/5; sum per level =4*T_n/5 with chosen standard dimensionless normalization.",
+  "zero_mode_implication": "Full S3 holonomy gives 12 covariantly constant 40-fiber sections, versus 40 for trivial/pure-gauge transport; no physical mass or coupling follows."
+}

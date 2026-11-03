@@ -1,0 +1,181 @@
+{
+  "closure_dimension": 2,
+  "general_identity": "For finite graph stage n with vertex boundary B, DtN_n(z)=(L_n-zI)_BB-(L_n-zI)_BI[(L_n-zI)_II]^-1(L_n-zI)_IB. Due to S3 symmetry, DtN_n(z)=d_n(z)I+o_n(z)(J-I). Six copies and nine unit interblock bridges give an 18-port matrix; the 3x3 Schur complement after eliminating 15 ports is exactly DtN_(n+1)(z), with no fitted parameters.",
+  "positive_tests": "For z=0,-0.01,-0.1,-1,+0.0001 and stages 1..4, independently assembled full sparse Laplacian Schur complements match iterated 18-port recursion within numerical tolerance.",
+  "recursion_scope": "Exact meromorphic recursion for the 3-boundary Dirichlet-to-Neumann map at regular z, not a complete scalar spectral-decimation theorem. Eigenfunctions with zero boundary trace and poles need an additional determinant/Dirichlet-mode genealogy.",
+  "source": "Nine block bridges in analysis/2026_11_03_pascal_schur_rg_exact.py",
+  "status": "PASS_18_PORT_TWO_SCALAR_SCHUR_RECURSION",
+  "tests": [
+    {
+      "lambda": 0.0,
+      "levels": [
+        {
+          "diag": 1.2,
+          "level": 1,
+          "offdiag": -0.6
+        },
+        {
+          "diag": 0.38153846153846116,
+          "independent_sparse_schur_diag": 0.38153846153846227,
+          "independent_sparse_schur_offdiag": -0.19076923076923052,
+          "level": 2,
+          "max_abs_error": 1.1102230246251565e-15,
+          "offdiag": -0.19076923076923086
+        },
+        {
+          "diag": 0.15498051118704026,
+          "independent_sparse_schur_diag": 0.15498051118704437,
+          "independent_sparse_schur_offdiag": -0.0774902555935201,
+          "level": 3,
+          "max_abs_error": 4.107825191113079e-15,
+          "offdiag": -0.07749025559352175
+        },
+        {
+          "diag": 0.06819863631316832,
+          "independent_sparse_schur_diag": 0.06819863631317125,
+          "independent_sparse_schur_offdiag": -0.03409931815659474,
+          "level": 4,
+          "max_abs_error": 2.9282132274488504e-15,
+          "offdiag": -0.034099318156593526
+        }
+      ]
+    },
+    {
+      "lambda": -0.01,
+      "levels": [
+        {
+          "diag": 1.213582883983277,
+          "level": 1,
+          "offdiag": -0.5968163176135292
+        },
+        {
+          "diag": 0.4390836251626662,
+          "independent_sparse_schur_diag": 0.4390836251626662,
+          "independent_sparse_schur_offdiag": -0.16441131493834021,
+          "level": 2,
+          "max_abs_error": 3.0531133177191805e-16,
+          "offdiag": -0.1644113149383399
+        },
+        {
+          "diag": 0.3348536923488193,
+          "independent_sparse_schur_diag": 0.33485369234881857,
+          "independent_sparse_schur_offdiag": -0.014418897081924217,
+          "level": 3,
+          "max_abs_error": 7.216449660063518e-16,
+          "offdiag": -0.014418897081924046
+        },
+        {
+          "diag": 0.3341252668798901,
+          "independent_sparse_schur_diag": 0.3341252668798893,
+          "independent_sparse_schur_offdiag": -5.464031029307532e-06,
+          "level": 4,
+          "max_abs_error": 7.771561172376096e-16,
+          "offdiag": -5.464031029307277e-06
+        }
+      ]
+    },
+    {
+      "lambda": -0.1,
+      "levels": [
+        {
+          "diag": 1.334360410830999,
+          "level": 1,
+          "offdiag": -0.5695611577964521
+        },
+        {
+          "diag": 0.792868529912454,
+          "independent_sparse_schur_diag": 0.792868529912454,
+          "independent_sparse_schur_offdiag": -0.05937232123436206,
+          "level": 2,
+          "max_abs_error": 9.020562075079397e-17,
+          "offdiag": -0.05937232123436215
+        },
+        {
+          "diag": 0.7868618135246703,
+          "independent_sparse_schur_diag": 0.7868618135246703,
+          "independent_sparse_schur_offdiag": -5.221606198882845e-05,
+          "level": 3,
+          "max_abs_error": 2.710505431213761e-19,
+          "offdiag": -5.221606198882872e-05
+        },
+        {
+          "diag": 0.7868618090810825,
+          "independent_sparse_schur_diag": 0.7868618090810826,
+          "independent_sparse_schur_offdiag": -2.961133092233925e-14,
+          "level": 4,
+          "max_abs_error": 1.1102230246251565e-16,
+          "offdiag": -2.9611330922339843e-14
+        }
+      ]
+    },
+    {
+      "lambda": -1.0,
+      "levels": [
+        {
+          "diag": 2.4444444444444446,
+          "level": 1,
+          "offdiag": -0.3888888888888889
+        },
+        {
+          "diag": 2.3346701487065777,
+          "independent_sparse_schur_diag": 2.3346701487065773,
+          "independent_sparse_schur_offdiag": -0.0008270622955384123,
+          "level": 2,
+          "max_abs_error": 4.440892098500626e-16,
+          "offdiag": -0.0008270622955384116
+        },
+        {
+          "diag": 2.3346696977900896,
+          "independent_sparse_schur_diag": 2.334669697790089,
+          "independent_sparse_schur_offdiag": -5.529311137520355e-12,
+          "level": 3,
+          "max_abs_error": 4.440892098500626e-16,
+          "offdiag": -5.529311137520343e-12
+        },
+        {
+          "diag": 2.3346696977900896,
+          "independent_sparse_schur_diag": 2.334669697790089,
+          "independent_sparse_schur_offdiag": -1.650631668956859e-36,
+          "level": 4,
+          "max_abs_error": 4.440892098500626e-16,
+          "offdiag": -1.6506316689568534e-36
+        }
+      ]
+    },
+    {
+      "lambda": 0.0001,
+      "levels": [
+        {
+          "diag": 1.1998639982799155,
+          "level": 1,
+          "offdiag": -0.6000320016400829
+        },
+        {
+          "diag": 0.3809272469687056,
+          "independent_sparse_schur_diag": 0.3809272469687055,
+          "independent_sparse_schur_offdiag": -0.1910641623868767,
+          "level": 2,
+          "max_abs_error": 1.3877787807814457e-16,
+          "offdiag": -0.19106416238687685
+        },
+        {
+          "diag": 0.15157057391079562,
+          "independent_sparse_schur_diag": 0.15157057391079576,
+          "independent_sparse_schur_offdiag": -0.07944178109699615,
+          "level": 3,
+          "max_abs_error": 1.3877787807814457e-16,
+          "offdiag": -0.07944178109699622
+        },
+        {
+          "diag": 0.04418521847339435,
+          "independent_sparse_schur_diag": 0.04418521847338286,
+          "independent_sparse_schur_offdiag": -0.05000894412848185,
+          "level": 4,
+          "max_abs_error": 1.1581013925621164e-14,
+          "offdiag": -0.05000894412847027
+        }
+      ]
+    }
+  ],
+  "zero_lambda_limit": "d=2c, o=-c yields exact resistance recurrence c_(n+1)=c_n(9c_n+7)/(15c_n\u00b2+31c_n+15)."
+}

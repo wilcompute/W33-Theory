@@ -1,0 +1,72 @@
+{
+  "equal_clock_product_no_go": {
+    "m_tests": {
+      "1": 1.4031558049187283,
+      "2": 2.8063116098374565,
+      "3": 4.209467414756185,
+      "4": 5.612623219674913,
+      "5": 7.015779024593641,
+      "6": 8.41893482951237
+    },
+    "proof": "m*2log(6)/log(90/7)=4 implies 6^m=(90/7)^2=8100/49, contradicting integrality of 6^m.",
+    "scope": "Assumes standard time rescaling 90/7 and independent equal-clock product; variable q, anisotropy, interactions, dynamical fibers can evade the restricted statement.",
+    "theorem": "No positive integer tensor power of identical six-copy Pascal limiting diffusions has exact spectral dimension 4 under the standard common-clock scaling."
+  },
+  "exact_conductance_fixed_point": "only c=0 for c>=0; numerator F(c)-c=-c(15c\u00b2+22c+8)/(15c\u00b2+31c+15)",
+  "exact_mass_time_ratio": "90/7",
+  "linearization_at_zero": "F'(0)=7/15",
+  "literature_scope": "Ordinary one-loop asymptotic freedom and dimensional transmutation are established QFT; the exact graph RG and product no-go are restricted mathematical checks, not a complete UV quantum theory.",
+  "negative_control": "This is a hyperbolic power-law contraction, not a marginal logarithmic beta function; the circuit alone does not generate an exponential transmutation scale.",
+  "one_loop_su3_benchmark": {
+    "coupling_sensitivity": [
+      {
+        "Lambda_over_mu_one_loop": 4.6347611552386226e-43,
+        "loop_expansion_g2_over_16pi2": 0.0005699316579881499,
+        "uv_g": 0.3
+      },
+      {
+        "Lambda_over_mu_one_loop": 5.751350682196822e-16,
+        "loop_expansion_g2_over_16pi2": 0.0015831434944115277,
+        "uv_g": 0.5
+      },
+      {
+        "Lambda_over_mu_one_loop": 1.676379618232884e-08,
+        "loop_expansion_g2_over_16pi2": 0.003102961249046594,
+        "uv_g": 0.7
+      },
+      {
+        "Lambda_over_mu_one_loop": 0.0001548611436683181,
+        "loop_expansion_g2_over_16pi2": 0.006332573977646111,
+        "uv_g": 1.0
+      },
+      {
+        "Lambda_over_mu_one_loop": 0.11155412024665472,
+        "loop_expansion_g2_over_16pi2": 0.025330295910584444,
+        "uv_g": 2.0
+      }
+    ],
+    "external_beta_coefficient_b0": 9,
+    "one_loop_formula": "Lambda/mu=exp(-8*pi\u00b2/(b0*g_UV\u00b2)); g_UV and mu are externally supplied.",
+    "posthoc_couplings_for_pascal_ratios": {
+      "15/7": {
+        "alpha_g2_over_4pi": 0.9160149750990565,
+        "g2_required": 11.510983665397733,
+        "scheme": "one-loop SU3 with Nf3, benchmark only"
+      },
+      "90/7": {
+        "alpha_g2_over_4pi": 0.2733591102476937,
+        "g2_required": 3.4351318901839876,
+        "scheme": "one-loop SU3 with Nf3, benchmark only"
+      }
+    },
+    "warning": "Choosing g_UV to match a graph ratio is parameter fitting and does not derive a prediction. The 15/7 choice requires alpha close to 1, outside a reliable perturbative regime."
+  },
+  "physical_scale_gauge": {
+    "continuous_time_photonic_model": "H=J*L, U(t)=exp(-i J t L/hbar). Dimensionless normalized data fix only tau=Jt/hbar; J and t cannot be separately identified without external calibration.",
+    "electrical_model": "R_n scales as 1/g0 for common edge conductance g0; its ratio 15/7 is invariant and cannot fix g0. Physical length \u21130 is likewise absent.",
+    "parameter_underdetermination": "Multiplying all edge conductances by a positive factor leaves the exact resistance ratios unchanged; multiplying J by a and t by 1/a preserves all quantum-walk probabilities."
+  },
+  "relative_conductance_anomalous_exponent": -0.6937297715565048,
+  "second_order_term": "F(c)=7c/15 - 82 c\u00b2/225+O(c\u00b3)",
+  "status": "PASS_SCALE_NONIDENTIFIABILITY_AND_PRODUCT_SPECTRAL_DIMENSION_NOGO"
+}

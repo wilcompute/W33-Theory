@@ -1,0 +1,378 @@
+{
+  "Aut_root_A2_extended": 12,
+  "Pascal_coordinate_S3_fiber_subgroup": 6,
+  "W_A2": 6,
+  "all_fibers_A2_root_subsystems": true,
+  "fiber_checks": [
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 0,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 1,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 2,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 3,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 4,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 5,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 6,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 7,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 8,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 9,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 10,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 11,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 12,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 13,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 14,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 15,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 16,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 17,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 18,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 19,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 20,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 21,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 22,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 23,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 24,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 25,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 26,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 27,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 28,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 29,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 30,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 31,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 32,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 33,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 34,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 35,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 36,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 37,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 38,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    },
+    {
+      "a2_root_count": 6,
+      "equivariant_boundary_isomorphism_count": 12,
+      "extended_root_hexagon_dihedral_order": 12,
+      "fiber": 39,
+      "pascal_coordinate_s3_lift_order": 6,
+      "weyl_a2_is_transitive": true,
+      "weyl_a2_order": 6
+    }
+  ],
+  "fiber_size": 6,
+  "fibers": 40,
+  "important_obstruction": "The intrinsic W(A2) subgroup acts transitively/regularly on the six roots, whereas coordinate-permutation S3 on Pascal digit sites has two orbits of size three. They are NOT isomorphic S3-sets for the bare Weyl(A2). The correct lift uses the parity-preserving index-2 S3 inside W(A2) times global E8 antipodal -I (the full D6 hexagon group).",
+  "necessary_extra_structure": "An S3-equivariant isomorphism between an oriented Pascal boundary and a chosen root hexagon is not canonical; there remain coordinate/dihedral and two antipodal color-sector choices. Internal mid-mid Pascal edges are extra relative to the pure E8 A2 root graph.",
+  "pascal_digit_graph_boundary_C6_edges": 6,
+  "pascal_digit_graph_edges": 9,
+  "pascal_digit_graph_extra_midpoint_triangle_edges": 3,
+  "pascal_digit_graph_vertices": 6,
+  "physics_boundary": "A tested combinatorial representation/intertwiner pattern at one six-state cell, not a unique 40-fiber photonic Hamiltonian or spacetime dynamical law.",
+  "status": "PASS_OBJECTWISE_A2_ROOT_HEXAGON_PASCAL_BOUNDARY"
+}

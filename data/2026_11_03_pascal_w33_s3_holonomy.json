@@ -1,0 +1,157 @@
+{
+  "cases": [
+    {
+      "all_eigenvalues_nonnegative": true,
+      "cycle_rank": 4,
+      "edges": 9,
+      "holonomy_group_elements": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "holonomy_subgroup_order": 6,
+      "level": 1,
+      "nodes": 6,
+      "predicted_exact_covariantly_constant_dimensions": 12,
+      "smallest_positive_eigenvalue": 0.6511057824992812,
+      "total_nontrivial_chords_after_tree_gauge": 4,
+      "triangles": 4,
+      "twisted_graph_laplacian_dimension": 240,
+      "verified_zero_modes": 12,
+      "w33_point_orbit_size_census": {
+        "1": 2,
+        "2": 1,
+        "3": 6,
+        "6": 3
+      }
+    },
+    {
+      "cycle_rank": 28,
+      "edges": 63,
+      "holonomy_group_elements": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "holonomy_subgroup_order": 6,
+      "level": 2,
+      "nodes": 36,
+      "predicted_exact_covariantly_constant_dimensions": 12,
+      "total_nontrivial_chords_after_tree_gauge": 28,
+      "triangles": 25,
+      "w33_point_orbit_size_census": {
+        "1": 2,
+        "2": 1,
+        "3": 6,
+        "6": 3
+      }
+    },
+    {
+      "cycle_rank": 172,
+      "edges": 387,
+      "holonomy_group_elements": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "holonomy_subgroup_order": 6,
+      "level": 3,
+      "nodes": 216,
+      "predicted_exact_covariantly_constant_dimensions": 12,
+      "total_nontrivial_chords_after_tree_gauge": 172,
+      "triangles": 151,
+      "w33_point_orbit_size_census": {
+        "1": 2,
+        "2": 1,
+        "3": 6,
+        "6": 3
+      }
+    }
+  ],
+  "edge_rule": "Triangular nearest-neighbor edge transfers one barycentric coordinate unit, assigned the transposition of the two affected coordinate axes in S3. Fiber group embeds faithfully in Sp4(F3) by block diag(g,(g^-1)^T).",
+  "intrinsic_symmetry": "Coordinate S3 acts equivariantly on the local direction labels; the connection does not require fitted edge phases.",
+  "scope": "A declared nonflat combinatorial connection on an externally chosen Pascal lattice, not derived unique dynamics, continuum Yang-Mills, or photons.",
+  "status": "PASS_FINITE_SYMPLECTIC_HOLONOMY",
+  "verification": "Projective W33 automorphism 40 points, full Sp4 form, tree-gauge Wilson subgroup, covariantly constant 40-fiber modes verified for first level."
+}
