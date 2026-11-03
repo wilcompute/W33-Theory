@@ -1,0 +1,139 @@
+{
+  "asymptotic_resistance_factor_exact": "15/7",
+  "boundary": "Numerical smallest-eigenvalue evidence at five finite depths. Neither an independent spectral-decimation proof nor a 4D continuum. The predicted time factor assumes standard self-similar harmonic diffusion from the exact resistance renormalization.",
+  "conditional_self_similar_time_scale": "90/7",
+  "conditional_spectral_dimension": 1.4031558049187283,
+  "conditional_walk_dimension": 2.3246595251279625,
+  "full_triangular_control": [
+    {
+      "edges": 9,
+      "first_nonzero_laplacian_eigenvalue": 1.697224362268005,
+      "level": 1,
+      "multiplicity_not_certified": true,
+      "sample_shifted_eigenvalues": [
+        1.697224362268005,
+        1.6972243622680057,
+        3.9999999999999982
+      ],
+      "vertices": 6
+    },
+    {
+      "edges": 108,
+      "first_nonzero_laplacian_eigenvalue": 0.26977204909781066,
+      "level": 2,
+      "multiplicity_not_certified": true,
+      "sample_shifted_eigenvalues": [
+        0.26977204909781066,
+        0.2697720490978115,
+        0.763932022500211,
+        0.9999999999999999
+      ],
+      "vertices": 45
+    },
+    {
+      "edges": 1053,
+      "first_nonzero_laplacian_eigenvalue": 0.03393460892075716,
+      "level": 3,
+      "multiplicity_not_certified": true,
+      "sample_shifted_eigenvalues": [
+        0.03393460892075716,
+        0.033934608920759196,
+        0.10028835127270622,
+        0.13509799406709574
+      ],
+      "vertices": 378
+    },
+    {
+      "edges": 9720,
+      "first_nonzero_laplacian_eigenvalue": 0.003929617075722706,
+      "level": 4,
+      "multiplicity_not_certified": true,
+      "sample_shifted_eigenvalues": [
+        0.003929617075722706,
+        0.003929617075723071,
+        0.01173679526503789,
+        0.015709884425589026
+      ],
+      "vertices": 3321
+    }
+  ],
+  "observed_full_triangular_gap_ratios": [
+    6.291327689224936,
+    7.949761546619627,
+    8.635601959897368
+  ],
+  "observed_laplacian_gap_ratios": [
+    12.16372249621345,
+    12.913284318742067,
+    12.912384918589478,
+    12.885004346004735
+  ],
+  "output_reproducibility": "Scipy eigsh symmetric smallest-algebraic eigenpairs, tolerance 1e-9; degeneracy checked; sparse exact connectivity from separate graph constructor.",
+  "pascal_mod3": [
+    {
+      "edges": 9,
+      "first_nonzero_laplacian_eigenvalue": 1.697224362268005,
+      "level": 1,
+      "multiplicity_not_certified": true,
+      "sample_shifted_eigenvalues": [
+        1.697224362268005,
+        1.6972243622680057,
+        3.9999999999999982
+      ],
+      "vertices": 6
+    },
+    {
+      "edges": 63,
+      "first_nonzero_laplacian_eigenvalue": 0.13953165758231895,
+      "level": 2,
+      "multiplicity_not_certified": true,
+      "sample_shifted_eigenvalues": [
+        0.13953165758231895,
+        0.39984758330881703,
+        0.49688015553649656,
+        0.9999999999999998
+      ],
+      "vertices": 36
+    },
+    {
+      "edges": 387,
+      "first_nonzero_laplacian_eigenvalue": 0.010805280371609697,
+      "level": 3,
+      "multiplicity_not_certified": true,
+      "sample_shifted_eigenvalues": [
+        0.010805280371609697,
+        0.01080528037161047,
+        0.0319222909171024,
+        0.03801033939167858
+      ],
+      "vertices": 216
+    },
+    {
+      "edges": 2331,
+      "first_nonzero_laplacian_eigenvalue": 0.000836815231247772,
+      "level": 4,
+      "multiplicity_not_certified": true,
+      "sample_shifted_eigenvalues": [
+        0.000836815231247772,
+        0.0008368152312478787,
+        0.0024954463737098063,
+        0.002914285792032122
+      ],
+      "vertices": 1296
+    },
+    {
+      "edges": 13995,
+      "first_nonzero_laplacian_eigenvalue": 6.49448932089219e-05,
+      "level": 5,
+      "multiplicity_not_certified": true,
+      "sample_shifted_eigenvalues": [
+        6.49448932089219e-05,
+        6.494489321012726e-05,
+        0.00019443389803189195,
+        0.00022508535556099642
+      ],
+      "vertices": 7776
+    }
+  ],
+  "status": "PASS_NUMERICAL_SPECTRAL_GAP_VALIDATION"
+}
