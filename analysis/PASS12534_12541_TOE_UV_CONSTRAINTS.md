@@ -11,7 +11,7 @@ Labels: **[E]** exact, **[N]** numerical with a stated control, **[I]** interpre
 | question | result |
 |---|---|
 | Does the fixed-point relation y_t² − y_b² = g_Y²/3 predict the top mass? | **No: it gives 182 GeV, against 172.57.** This is the published prediction, reproduced and ruled out by 9 GeV |
-| Does asymptotic safety predict the Higgs mass? | **Near miss**: 127.2–128.8 GeV at the measured M_t, against 125.20 |
+| Does asymptotic safety predict the Higgs mass? | **Near miss**: 127.2–128.8 GeV at the measured M_t, against 125.20. *Later (Pass 12543): that used an algebraic estimate. On the true trajectory M_H = 125.20 is reachable at M_t within the measured error, and this is consistency, not prediction.* |
 | Does multiple-point criticality fix both? | **Near miss**: matching M_H needs M_t ≈ 170.8 GeV |
 | Does no-AdS₃ constrain neutrinos? | **Yes, conditional on a conjecture**: Dirac, normal ordering, Σm_ν ∈ [58.8, 69.9] meV, consistent with DESI |
 
@@ -192,7 +192,7 @@ A first version had the wrong λ flow (Φ¹₂ for Φ²₁). The control caught 
 Three conclusions, for BAO + CMB only, no supernovae, no curvature, and a single exponential:
 
 1. **λ = √2 is excluded at about 4.4σ.** λ = √(2/3) survives, at about 1.5σ. The 95% limit is near λ ≈ 0.95. These agree in order with the published λ = 0.698 (+0.173, −0.202) and λ < 0.85.
-2. **Single exponential quintessence never beats ΛCDM** here. It is not what the w₀wₐ preference is seeing: its w₀ rises while wₐ stays small, and the fit wants wₐ ≈ −1.6.
+2. **Single exponential quintessence never beats ΛCDM** here. *(Later, Pass 12542: with real supernovae it does, mildly, and √2 goes to about 7σ.)* It is not what the w₀wₐ preference is seeing: its w₀ rises while wₐ stays small, and the fit wants wₐ ≈ −1.6.
 3. So if the DESI preference is real, it is **not** this simplest swampland model. Andriot et al. find that curvature weakens constraints; I did not test that.
 
 **[N] Does anything here select three generations? No** (`ngen_scan.py`, a toy: extra generations massless, so it tests UV constraints only).
