@@ -1,0 +1,157 @@
+{
+  "status": "PASS_COVARIANT_WKB_BACKGROUND_AND_COMPACT_MASS_OBSTRUCTION",
+  "inputs": {
+    "beta": 0.05299751293406564,
+    "Omega_b": 0.048534407842725974,
+    "Omega_c": 0.2626662752496019,
+    "Omega_r": 9.2e-05,
+    "fitted_phi_excursion": 0.2795940882598428
+  },
+  "background_exact_energy_exchange": {
+    "lambda_exp_input": 0.5,
+    "scalar_speed_v0_input": 0.5,
+    "V0": 0.6470406502410054,
+    "redshifts": [
+      {
+        "z": 0,
+        "x": 0.0,
+        "v": 0.5,
+        "E2": 0.9999999999999999,
+        "Omega_phi": 0.6887073169076722,
+        "effective_wphi": -0.8790003659210363,
+        "m_rec_over_today_at_z": 1.0,
+        "Friedmann_Hdot_residual": 0.0,
+        "energy_transfer_residual": 2.688821387764051e-17,
+        "total_continuity_residual": 5.551115123125783e-17
+      },
+      {
+        "z": 0.25,
+        "x": -0.11804342828129197,
+        "v": 0.5664607368004919,
+        "E2": 1.3709557711968168,
+        "Omega_phi": 0.5541373585774552,
+        "effective_wphi": -0.8069806090675832,
+        "m_rec_over_today_at_z": 1.006275617807366,
+        "Friedmann_Hdot_residual": 0.0,
+        "energy_transfer_residual": 6.938893903907228e-18,
+        "total_continuity_residual": 1.1102230246251565e-16
+      },
+      {
+        "z": 0.5,
+        "x": -0.22956324615355836,
+        "v": 0.6642019271535441,
+        "E2": 1.9292081338854679,
+        "Omega_phi": 0.44971239501866955,
+        "effective_wphi": -0.673002712458654,
+        "m_rec_over_today_at_z": 1.012240591359221,
+        "Friedmann_Hdot_residual": -4.440892098500626e-16,
+        "energy_transfer_residual": -3.469446951953614e-17,
+        "total_continuity_residual": -5.551115123125783e-16
+      },
+      {
+        "z": 1,
+        "x": -0.4535877501043926,
+        "v": 0.9127588612223353,
+        "E2": 3.8947694177872645,
+        "Omega_phi": 0.34727755008051553,
+        "effective_wphi": -0.20032383459403452,
+        "m_rec_over_today_at_z": 1.0243302891960446,
+        "Friedmann_Hdot_residual": 0.0,
+        "energy_transfer_residual": 1.249000902703301e-16,
+        "total_continuity_residual": 4.440892098500626e-16
+      },
+      {
+        "z": 2,
+        "x": -0.9231830125057676,
+        "v": 1.4254094679907878,
+        "E2": 14.805792944243688,
+        "Omega_phi": 0.40796926334347655,
+        "effective_wphi": 0.6600859705184695,
+        "m_rec_over_today_at_z": 1.0501430611952396,
+        "Friedmann_Hdot_residual": -4.440892098500626e-16,
+        "energy_transfer_residual": 3.552713678800501e-15,
+        "total_continuity_residual": -1.0658141036401503e-14
+      },
+      {
+        "z": 5,
+        "x": -2.206079981163242,
+        "v": 2.1853255606710267,
+        "E2": 374.03470653461113,
+        "Omega_phi": 0.8011540143904119,
+        "effective_wphi": 0.9869869880786354,
+        "m_rec_over_today_at_z": 1.1240258532682146,
+        "Friedmann_Hdot_residual": 8.881784197001252e-16,
+        "energy_transfer_residual": -8.171241461241152e-14,
+        "total_continuity_residual": 2.2737367544323206e-13
+      }
+    ],
+    "scope": "Exact homogeneous FLRW canonical-phi + WKB coupled oscillating chi dust background under the declared exponential potential and time variable, NOT a new CLASS perturbation solver and NOT the full fitted best-fit cosmology."
+  },
+  "compact_axion_mass_periodicity": {
+    "theorem": "For compact phi~phi+2pi f and strictly positive m(phi), m0 exp(-beta phi/Mpl) is single-valued iff beta=0 (real beta,f>0).",
+    "periodic_local_replacement": "m(phi)=m0 exp[-beta*(f/Mpl)*sin(phi/f)], at phi=0 derivative d ln m/d(phi/Mpl)=-beta but coupling varies as cos(phi/f); this remains a periodic mass, not exact global exponential.",
+    "field_excursion_fitted_delta_phi_over_Mpl": 0.2795940882598428,
+    "minimum_decay_constants_for_tolerances": {
+      "0.1": {
+        "minimum_f_over_Mpl_for_at_most_tolerance_slope_drift": 0.6199056928485681,
+        "log_mass_perturbation_amplitude_bf_over_Mpl": 0.03285345997464291,
+        "absolute_relative_coupling_deviation_at_bound": 0.09999999999999998
+      },
+      "0.01": {
+        "minimum_f_over_Mpl_for_at_most_tolerance_slope_drift": 1.9753788939073975,
+        "log_mass_perturbation_amplitude_bf_over_Mpl": 0.10469016847953758,
+        "absolute_relative_coupling_deviation_at_bound": 0.010000000000000009
+      },
+      "0.001": {
+        "minimum_f_over_Mpl_for_at_most_tolerance_slope_drift": 6.251392807911669,
+        "log_mass_perturbation_amplitude_bf_over_Mpl": 0.3313082711932236,
+        "absolute_relative_coupling_deviation_at_bound": 0.0010000000000000009
+      }
+    },
+    "sampled_mass_monodromy_and_periodicization": [
+      {
+        "f_over_Mpl": 0.1,
+        "exp_mass_monodromy_factor_after_2pi_f": 0.967248999808958,
+        "percent_change_effective_beta_between_ends": 194.08548259515413,
+        "periodic_mass_ratio_across_field_excursion": 1.0017972216527244,
+        "exponential_mass_ratio_across_field_excursion": 1.0149281190426924
+      },
+      {
+        "f_over_Mpl": 0.25,
+        "exp_mass_monodromy_factor_after_2pi_f": 0.9201226536448343,
+        "percent_change_effective_beta_between_ends": 56.2856683297527,
+        "periodic_mass_ratio_across_field_excursion": 1.0119876659090727,
+        "exponential_mass_ratio_across_field_excursion": 1.0149281190426924
+      },
+      {
+        "f_over_Mpl": 0.5,
+        "exp_mass_monodromy_factor_after_2pi_f": 0.8466256977504116,
+        "percent_change_effective_beta_between_ends": 15.23139388009046,
+        "periodic_mass_ratio_across_field_excursion": 1.0141568145241504,
+        "exponential_mass_ratio_across_field_excursion": 1.0149281190426924
+      },
+      {
+        "f_over_Mpl": 1,
+        "exp_mass_monodromy_factor_after_2pi_f": 0.7167750720913715,
+        "percent_change_effective_beta_between_ends": 3.8832464863930327,
+        "periodic_mass_ratio_across_field_excursion": 1.0147329620756909,
+        "exponential_mass_ratio_across_field_excursion": 1.0149281190426924
+      },
+      {
+        "f_over_Mpl": 2,
+        "exp_mass_monodromy_factor_after_2pi_f": 0.5137665039715907,
+        "percent_change_effective_beta_between_ends": 0.9755703087346856,
+        "periodic_mass_ratio_across_field_excursion": 1.0148791830243193,
+        "exponential_mass_ratio_across_field_excursion": 1.0149281190426924
+      },
+      {
+        "f_over_Mpl": 5,
+        "exp_mass_monodromy_factor_after_2pi_f": 0.1891970956968034,
+        "percent_change_effective_beta_between_ends": 0.15630497265826104,
+        "periodic_mass_ratio_across_field_excursion": 1.014920282691485,
+        "exponential_mass_ratio_across_field_excursion": 1.0149281190426924
+      }
+    ],
+    "scope": "Exact compact-periodicity obstruction; periodic replacement is an original comparison ansatz but periodic couplings are established, not a new particle prediction. Applies ONLY if the rolling field itself is an ordinary compact axion; a noncompact modulus or an axion monodromy mechanism is not ruled out."
+  }
+}

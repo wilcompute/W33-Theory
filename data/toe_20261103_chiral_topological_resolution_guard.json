@@ -1,0 +1,79 @@
+{
+  "status": "PASS_EXACT_EXOTIC_CHARGE_LATTICE_RESOLUTION_AND_TOPOLOGY_FIREWALL",
+  "old_fixture": "data/toe_20261103_sterile_anomaly_operators.json",
+  "exotic_sterile_Q3BL": [
+    -15,
+    12,
+    12
+  ],
+  "exotic_sterile_charge_sums": {
+    "linear": 9,
+    "cubic": 81,
+    "quadratic": 513
+  },
+  "charge_resolution_rows": [
+    {
+      "absolute_charge_Q": 1,
+      "minimum_L_for_charge_plaquette_angle_below_pi_over_3": 3,
+      "4D_site_count": 81,
+      "overlap_spinor_dimension_4L4": 324,
+      "dense_complex128_kernel_GiB": 0.0015642642974853516,
+      "charged_plaquette_angle_radians": 0.6981317007977318,
+      "index_magnitude_on_flux_1_times_1_continuum": 1
+    },
+    {
+      "absolute_charge_Q": 3,
+      "minimum_L_for_charge_plaquette_angle_below_pi_over_3": 5,
+      "4D_site_count": 625,
+      "overlap_spinor_dimension_4L4": 2500,
+      "dense_complex128_kernel_GiB": 0.09313225746154785,
+      "charged_plaquette_angle_radians": 0.7539822368615503,
+      "index_magnitude_on_flux_1_times_1_continuum": 9
+    },
+    {
+      "absolute_charge_Q": 9,
+      "minimum_L_for_charge_plaquette_angle_below_pi_over_3": 8,
+      "4D_site_count": 4096,
+      "overlap_spinor_dimension_4L4": 16384,
+      "dense_complex128_kernel_GiB": 4.0,
+      "charged_plaquette_angle_radians": 0.8835729338221293,
+      "index_magnitude_on_flux_1_times_1_continuum": 81
+    },
+    {
+      "absolute_charge_Q": 12,
+      "minimum_L_for_charge_plaquette_angle_below_pi_over_3": 9,
+      "4D_site_count": 6561,
+      "overlap_spinor_dimension_4L4": 26244,
+      "dense_complex128_kernel_GiB": 10.263138055801392,
+      "charged_plaquette_angle_radians": 0.9308422677303091,
+      "index_magnitude_on_flux_1_times_1_continuum": 144
+    },
+    {
+      "absolute_charge_Q": 15,
+      "minimum_L_for_charge_plaquette_angle_below_pi_over_3": 10,
+      "4D_site_count": 10000,
+      "overlap_spinor_dimension_4L4": 40000,
+      "dense_complex128_kernel_GiB": 23.84185791015625,
+      "charged_plaquette_angle_radians": 0.9424777960769378,
+      "index_magnitude_on_flux_1_times_1_continuum": 225
+    },
+    {
+      "absolute_charge_Q": 18,
+      "minimum_L_for_charge_plaquette_angle_below_pi_over_3": 11,
+      "4D_site_count": 14641,
+      "overlap_spinor_dimension_4L4": 58564,
+      "dense_complex128_kernel_GiB": 51.10713982582092,
+      "charged_plaquette_angle_radians": 0.9346887233820872,
+      "index_magnitude_on_flux_1_times_1_continuum": 324
+    }
+  ],
+  "admissibility_requirement_input": "For benchmark homogeneous flux 1 in a plaquette plane, require |q|*2pi/L\u00b2<pi/3 on the unwrapped flux branch, a chosen conservative phase control rather than a universal necessary and sufficient Luescher condition.",
+  "zero_mode_index_law": "For a smooth 4D U(1) bundle with c1 = n12 dx12 +n34 dx34, charge q Dirac index = +/-q\u00b2*n12*n34, sign depends on conventions. One chirality acquires this index contribution; in an index-nonzero gauge sector a massless square Weyl determinant cannot generically be treated as a nonzero scalar with a fixed basis and no insertions.",
+  "doubled_charge_index": "The index is quadratic in representation charge, while the local 4D cubic abelian gauge anomaly is cubic. Anomaly cancellation sum_i q_i\u00b3=0 does not remove individual q_i\u00b2 flux zero-mode multiplicities.",
+  "resource_constraint": "Dense 4L^4 by 4L^4 overlap kernel stores O(L^8) complex numbers; achieving stable admissibility for q>=15 exceeds 40,000 spinor dimensions and a 20 GiB dense Hermitian kernel. Sparse Krylov/rational-sign algorithms, sector-aware Weyl bases, and gauge-invariant measure remain needed.",
+  "scope": "Exact finite charge sums, chosen angle-bound combinatorics, and standard topological index expectation. We did NOT numerically compute the L10 overlap index (too costly for dense eigensolve), construct a nonperturbative Weyl measure, or settle admissibility of arbitrary gauge backgrounds.",
+  "source_prior": [
+    "https://arxiv.org/abs/2610.09093",
+    "https://link.springer.com/article/10.1007/JHEP07%282026%29271"
+  ]
+}

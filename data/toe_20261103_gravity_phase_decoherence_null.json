@@ -1,0 +1,92 @@
+{
+  "status": "PASS_NEWTON_TWO_BODY_PHASE_AND_PPT_OPERATIONAL_FALSIFIER",
+  "experiment_inputs": {
+    "mass_per_body_kg": 2e-14,
+    "central_distance_m": 0.0002,
+    "branch_displacement_m": 0.0001,
+    "interaction_time_s": 1.0
+  },
+  "newton_controlled_phase_radians": -0.8438559160420525,
+  "pure_two_qubit_concurrence": 0.409520091288304,
+  "pure_state_entanglement_negativity": 0.2047600456441519,
+  "independent_local_phase_damping_coherence_threshold": 0.6710846954717681,
+  "independent_local_phase_damping_rate_threshold_per_second": 0.39885992721616353,
+  "decoherence_PPT_checks": [
+    {
+      "eta_coherence_per_local_qubit": 0,
+      "PPT_smallest_eigen": 0.25,
+      "PPT_negativity": 0.0,
+      "entangled_by_PPT": false
+    },
+    {
+      "eta_coherence_per_local_qubit": 0.25,
+      "PPT_smallest_eigen": 0.1515873626527724,
+      "PPT_negativity": 0.0,
+      "entangled_by_PPT": false
+    },
+    {
+      "eta_coherence_per_local_qubit": 0.5,
+      "PPT_smallest_eigen": 0.0844247253055448,
+      "PPT_negativity": 0.0,
+      "entangled_by_PPT": false
+    },
+    {
+      "eta_coherence_per_local_qubit": 0.75,
+      "PPT_smallest_eigen": -0.044195034233114036,
+      "PPT_negativity": 0.044195034233114036,
+      "entangled_by_PPT": true
+    },
+    {
+      "eta_coherence_per_local_qubit": 0.6710846954717681,
+      "PPT_smallest_eigen": -9.313281052827236e-18,
+      "PPT_negativity": 9.313281052827236e-18,
+      "entangled_by_PPT": false
+    },
+    {
+      "eta_coherence_per_local_qubit": 1,
+      "PPT_smallest_eigen": -0.2047600456441519,
+      "PPT_negativity": 0.2047600456441519,
+      "entangled_by_PPT": true
+    }
+  ],
+  "formula": "DeltaPhi=(G m1m2 t/hbar)[2/d-1/(d-delta_x)-1/(d+delta_x)]; for balanced two-path inputs C=abs(sin(DeltaPhi/2)); under independent local phase-damping eta, test PPT negative eigenvalue for entanglement.",
+  "phase_structure_identifiability": {
+    "model1": "Newton 1/r",
+    "model2": "finite-range 1/r exp(-r/lambda)",
+    "hypothetical_lambda_m": 0.00015,
+    "fixed_branch_displacement_m": 5e-05,
+    "single_distance_prefactor_degeneracy": "Amplitude of any one measured controlled phase can be matched by adjusting the unknown coupling prefactor of a finite-range Yukawa potential.",
+    "multi_distance_normalized_comparison": [
+      {
+        "center_distance_m": 0.00015,
+        "newton_phase_shape": -1666.666666666666,
+        "yukawa_phase_shape": -1547.0976652853226,
+        "normalized_yukawa_over_newton": 1.081771800057535
+      },
+      {
+        "center_distance_m": 0.0002,
+        "newton_phase_shape": -666.6666666666661,
+        "yukawa_phase_shape": -572.0606380025947,
+        "normalized_yukawa_over_newton": 1.0000000000000002
+      },
+      {
+        "center_distance_m": 0.0003,
+        "newton_phase_shape": -190.47619047619128,
+        "yukawa_phase_shape": -130.32995509970112,
+        "normalized_yukawa_over_newton": 0.7973889698855362
+      },
+      {
+        "center_distance_m": 0.0005,
+        "newton_phase_shape": -40.40404040404019,
+        "yukawa_phase_shape": -14.417471238277258,
+        "normalized_yukawa_over_newton": 0.415844509529944
+      }
+    ],
+    "scope": "This is a pure two-body potential shape comparison. Even a multi-distance fit cannot resolve local quantum mediation vs some nonlocal classical theories without assumptions or other probes."
+  },
+  "scope": "Newtonian unitary phase accumulation, ideal point masses and static paths. Not a lab detection, not a gravity quantization proof. Charged and electromagnetic backgrounds, Casimir forces, self-gravitation, decoherence, retardation and finite wavepackets all omitted. Photon matter dark scalar coupling is independent; no claim that the cosmological DM-only fifth force modifies this test.",
+  "literature": [
+    "https://doi.org/10.1103/r8ry-sp35",
+    "https://doi.org/10.1103/lq47-1hfg"
+  ]
+}

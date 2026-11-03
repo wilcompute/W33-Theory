@@ -1,0 +1,320 @@
+{
+  "status": "PASS_REAL_CLASS_LINEAR_SIGMA8_AND_SINGLE_POINT_DR1_PV_CHECK",
+  "source": "Existing analysis/toe_uv/class_cmb.py : run_class using patched CLASS under Ubuntu",
+  "models": [
+    {
+      "label": "fading_fit",
+      "parameters": {
+        "wb": 0.02232330022011675,
+        "wc": 0.12081280849448914,
+        "h": 0.678194607660839,
+        "lnA": 3.0514612032076927,
+        "ns": 0.9657017618256943,
+        "tau": 0.05756393892251469,
+        "A": 1.0005036619003593,
+        "c": -0.9014357644025587,
+        "cp": 0.05299751293406564
+      },
+      "info": {
+        "rd": 147.030161,
+        "s8": 0.825051,
+        "H0": 0.0002262213706727,
+        "om": 0.3059022601286444,
+        "S8": 0.8331275778072653,
+        "phi0": 0.3845070556342,
+        "phi_rec": 0.10491296737435724
+      },
+      "spectrum": [
+        {
+          "z": 0.0,
+          "sigma8_linear_from_integral": 0.825205986759157,
+          "matter_delta_k": {
+            "0.05": -6105.165917907971,
+            "0.1": -11662.30488831123,
+            "0.2": -19996.066030433616,
+            "0.35": -27087.37339732521
+          }
+        },
+        {
+          "z": 0.04,
+          "sigma8_linear_from_integral": 0.8083912150845454,
+          "matter_delta_k": {
+            "0.05": -5980.677583426082,
+            "0.1": -11424.634683158025,
+            "0.2": -19588.686655229,
+            "0.35": -26535.57856685736
+          }
+        },
+        {
+          "z": 0.06,
+          "sigma8_linear_from_integral": 0.8001029646310746,
+          "matter_delta_k": {
+            "0.05": -5919.316587782482,
+            "0.1": -11307.484259567424,
+            "0.2": -19387.882350222095,
+            "0.35": -26263.58810749695
+          }
+        },
+        {
+          "z": 0.07,
+          "sigma8_linear_from_integral": 0.7959894085651069,
+          "matter_delta_k": {
+            "0.05": -5888.862688417202,
+            "0.1": -11249.341308509234,
+            "0.2": -19288.220577458265,
+            "0.35": -26128.595416843295
+          }
+        },
+        {
+          "z": 0.08,
+          "sigma8_linear_from_integral": 0.7918965040277399,
+          "matter_delta_k": {
+            "0.05": -5858.56186569953,
+            "0.1": -11191.490373610854,
+            "0.2": -19189.0589863846,
+            "0.35": -25994.280025420707
+          }
+        },
+        {
+          "z": 0.1,
+          "sigma8_linear_from_integral": 0.7837734065864627,
+          "matter_delta_k": {
+            "0.05": -5798.425043487357,
+            "0.1": -11076.675242875106,
+            "0.2": -18992.25470013857,
+            "0.35": -25727.706016511485
+          }
+        },
+        {
+          "z": 0.15,
+          "sigma8_linear_from_integral": 0.7638393100882673,
+          "matter_delta_k": {
+            "0.05": -5650.852293439667,
+            "0.1": -10794.920606422731,
+            "0.2": -18509.29400644494,
+            "0.35": -25073.526145897806
+          }
+        }
+      ],
+      "diagnostics": {
+        "f_sigma8_at_z0p07": 0.43904564227840265,
+        "observed_DESI_DR1_PV_z0p07": 0.45,
+        "reported_consensus_sigma": 0.055,
+        "Gaussian_single_point_chi2": 0.03966874482403959,
+        "sigma8_z0p07": 0.7959894085651069,
+        "calibrated_sigma8_z0_vs_CLASS_info_relative_error": 0.00018785112575712124
+      }
+    },
+    {
+      "label": "fixed_params_cprime_zero",
+      "parameters": {
+        "wb": 0.02232330022011675,
+        "wc": 0.12081280849448914,
+        "h": 0.678194607660839,
+        "lnA": 3.0514612032076927,
+        "ns": 0.9657017618256943,
+        "tau": 0.05756393892251469,
+        "A": 1.0005036619003593,
+        "c": -0.9014357644025587,
+        "cp": 0.0
+      },
+      "info": {
+        "rd": 146.93477,
+        "s8": 0.804331,
+        "H0": 0.000226221370673,
+        "om": 0.31120068309139337,
+        "S8": 0.8192085017418504,
+        "phi0": -0.2785128620298,
+        "phi_rec": -2.723923763606886e-10
+      },
+      "spectrum": [
+        {
+          "z": 0.0,
+          "sigma8_linear_from_integral": 0.8043787755931193,
+          "matter_delta_k": {
+            "0.05": -5959.38351247662,
+            "0.1": -11376.320371472557,
+            "0.2": -19488.35614057244,
+            "0.35": -26389.592183947185
+          }
+        },
+        {
+          "z": 0.04,
+          "sigma8_linear_from_integral": 0.7877565762285074,
+          "matter_delta_k": {
+            "0.05": -5836.148800740052,
+            "0.1": -11141.201422801309,
+            "0.2": -19085.704459066274,
+            "0.35": -25844.410712166984
+          }
+        },
+        {
+          "z": 0.06,
+          "sigma8_linear_from_integral": 0.779573344412237,
+          "matter_delta_k": {
+            "0.05": -5775.480655412684,
+            "0.1": -11025.451314015316,
+            "0.2": -18887.475073019035,
+            "0.35": -25576.011139829014
+          }
+        },
+        {
+          "z": 0.07,
+          "sigma8_linear_from_integral": 0.7755143365723932,
+          "matter_delta_k": {
+            "0.05": -5745.388622708079,
+            "0.1": -10968.037660322148,
+            "0.2": -18789.150035190964,
+            "0.35": -25442.88020812737
+          }
+        },
+        {
+          "z": 0.08,
+          "sigma8_linear_from_integral": 0.7714772852812696,
+          "matter_delta_k": {
+            "0.05": -5715.459540789588,
+            "0.1": -10910.934683414778,
+            "0.2": -18691.3567090457,
+            "0.35": -25310.468995812156
+          }
+        },
+        {
+          "z": 0.1,
+          "sigma8_linear_from_integral": 0.7634696462702085,
+          "matter_delta_k": {
+            "0.05": -5656.094677215165,
+            "0.1": -10797.669156150612,
+            "0.2": -18497.379611545053,
+            "0.35": -25047.825275610914
+          }
+        },
+        {
+          "z": 0.15,
+          "sigma8_linear_from_integral": 0.7438442203888033,
+          "matter_delta_k": {
+            "0.05": -5510.604332355505,
+            "0.1": -10520.07545747554,
+            "0.2": -18021.97056782365,
+            "0.35": -24404.121161703053
+          }
+        }
+      ],
+      "diagnostics": {
+        "f_sigma8_at_z0p07": 0.4331391635067584,
+        "observed_DESI_DR1_PV_z0p07": 0.45,
+        "reported_consensus_sigma": 0.055,
+        "Gaussian_single_point_chi2": 0.09397944041382739,
+        "sigma8_z0p07": 0.7755143365723932,
+        "calibrated_sigma8_z0_vs_CLASS_info_relative_error": 5.939792587790794e-05
+      }
+    },
+    {
+      "label": "native_LCDM_independently_fitted",
+      "parameters": {
+        "wb": 0.022508136446064284,
+        "wc": 0.11776884478716293,
+        "h": 0.6833944531218688,
+        "lnA": 3.04896743103644,
+        "ns": 0.9701835271977778,
+        "tau": 0.05935591330084822,
+        "A": 1.0007076615194992,
+        "c": 0.0,
+        "cp": 0.0
+      },
+      "info": {
+        "rd": 147.53722,
+        "s8": 0.806312,
+        "H0": 0.000227955852419,
+        "om": 0.30036097979914905,
+        "S8": 0.8067969580668223
+      },
+      "spectrum": [
+        {
+          "z": 0.0,
+          "sigma8_linear_from_integral": 0.8064352901019813,
+          "matter_delta_k": {
+            "0.05": -6041.452330429931,
+            "0.1": -11408.848490796036,
+            "0.2": -19465.663547681488,
+            "0.35": -26231.775249051105
+          }
+        },
+        {
+          "z": 0.04,
+          "sigma8_linear_from_integral": 0.7899964526108193,
+          "matter_delta_k": {
+            "0.05": -5918.154435451465,
+            "0.1": -11176.139486127833,
+            "0.2": -19068.735884800306,
+            "0.35": -25696.934005342115
+          }
+        },
+        {
+          "z": 0.06,
+          "sigma8_linear_from_integral": 0.7818694322496498,
+          "matter_delta_k": {
+            "0.05": -5857.200245631422,
+            "0.1": -11061.094777938511,
+            "0.2": -18872.5040947939,
+            "0.35": -25432.519637816986
+          }
+        },
+        {
+          "z": 0.07,
+          "sigma8_linear_from_integral": 0.7778306313257728,
+          "matter_delta_k": {
+            "0.05": -5826.9088966893205,
+            "0.1": -11003.922634048988,
+            "0.2": -18774.985051769232,
+            "0.35": -25301.116374080164
+          }
+        },
+        {
+          "z": 0.08,
+          "sigma8_linear_from_integral": 0.7738088670598879,
+          "matter_delta_k": {
+            "0.05": -5796.745600837877,
+            "0.1": -10946.99193536442,
+            "0.2": -18677.877515464173,
+            "0.35": -25170.267395725466
+          }
+        },
+        {
+          "z": 0.1,
+          "sigma8_linear_from_integral": 0.7658180321836237,
+          "matter_delta_k": {
+            "0.05": -5736.8150277705045,
+            "0.1": -10833.877265477973,
+            "0.2": -18484.93517853671,
+            "0.35": -24910.283806254178
+          }
+        },
+        {
+          "z": 0.15,
+          "sigma8_linear_from_integral": 0.746164983008761,
+          "matter_delta_k": {
+            "0.05": -5589.4234198227905,
+            "0.1": -10555.68200239258,
+            "0.2": -18010.40557046573,
+            "0.35": -24270.867141330382
+          }
+        }
+      ],
+      "diagnostics": {
+        "f_sigma8_at_z0p07": 0.4312402376522582,
+        "observed_DESI_DR1_PV_z0p07": 0.45,
+        "reported_consensus_sigma": 0.055,
+        "Gaussian_single_point_chi2": 0.11634006060950436,
+        "sigma8_z0p07": 0.7778306313257728,
+        "calibrated_sigma8_z0_vs_CLASS_info_relative_error": 0.00015290619757774956
+      }
+    }
+  ],
+  "public_RSD_reference": "DESI DR1 Peculiar Velocity Survey consensus f sigma8 (z_eff=.07)=.450 +/- .055, Astronomy & Astrophysics 2026 A&A doi 10.1051/0004-6361/202558368",
+  "fading_vs_same_params_zero_cprime_delta_fsigma8": 0.005906478771644241,
+  "fading_vs_native_LCDM_different_fit_delta_fsigma8": 0.00780540462614443,
+  "precision_required_for_one_sigma_distinguishing_coupling_with_single_fsigma8_point": 0.005906478771644241,
+  "real_likelihood_evaluated": "NO: uses one Gaussian consensus datum without survey window/AP corrections, non-Gaussian posterior, nuisance or full public covariance",
+  "physics_scope": "Linear pressureless CDM CLASS model. Does NOT include coupled ultralight axion in CLASS. The signed delta between separately fitted LCDM and fading mixes cosmological background shifts. The fixed-parameter zero-coupling control is not refitted; observed PV datum may have priors and overlaps with previously used observations.",
+  "external_reference": "https://doi.org/10.1051/0004-6361/202558368"
+}

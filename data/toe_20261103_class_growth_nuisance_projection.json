@@ -1,0 +1,41 @@
+{
+  "status": "PASS_PROJECTED_CLASS_GROWTH_SHAPE_IDENTIFIABILITY_NO_GO",
+  "source": "data/toe_20261103_real_CLASS_fading_species_transfers.json and independent linear P(k) DR1 PV comparison",
+  "k_h_per_Mpc": [
+    0.05,
+    0.1,
+    0.2,
+    0.5,
+    1.0,
+    3.0
+  ],
+  "fixed_background_parameter_fading_cprime_off_normalized_growth_z5_to_z0": [
+    1.003320450060512,
+    1.0033195165968014,
+    1.0033117754212493,
+    1.0033146697920896,
+    1.0033145414135902,
+    1.0033144791268434
+  ],
+  "mean_log_growth_offset": 0.0033104199057826574,
+  "log_growth_relative_scale_residual": [
+    4.529633201915892e-06,
+    3.5992583204609054e-06,
+    -4.116335055327422e-06,
+    -1.2315222420208709e-06,
+    -1.3594766230988833e-06,
+    -1.42155760192832e-06
+  ],
+  "rms_scale_dependent_fractional_response": 3.0496475595814875e-06,
+  "maximum_abs_scale_dependent_fractional_response": 4.529633201915892e-06,
+  "illustrative_independent_per_scale_fractional_error_for_chi2": 0.01,
+  "shape_only_chi2_after_exact_constant_amplitude_marginalization": 5.580210142596793e-07,
+  "public_PV_fsigma8_absolute_offset": 0.005906478771644241,
+  "public_PV_reported_1sigma": 0.055,
+  "single_point_max_snr_if_parameter_fixed": 0.10739052312080438,
+  "idealized_one_point_sigma_needed_to_reach_3sigma": 0.0019688262572147472,
+  "absurd_independent_same_precision_PV_bins_needed_for_3sigma": 780.3880196923282,
+  "math": "For response vector g_i=ln(D_fading/D_off) and unknown scale-independent amplitude a, least-squares min_a sum[(g_i-a)/sigma]^2 = sum[(g_i-mean g)/sigma]^2 for equal errors. This projects the response out of the nuisance direction (1,...,1).",
+  "scope": "NO survey likelihood. A formal shape-only Fisher null test under independent 1% equal log-growth errors and a single free amplitude. Real k covariances, redshift dependence, baryon-tracer bias, cosmic variance, AP correction and nonlinear scale response not evaluated. The same-observation-independent-duplicates count is a deliberately unrealistic precision illustration.",
+  "conclusion": "On sampled linear scales and this fixed-background control, scale variation offers little leverage once amplitude is free. Multi-redshift and species-sensitive galaxy+lensing combinations, not more modes in same z bin, are the promising discriminants."
+}
