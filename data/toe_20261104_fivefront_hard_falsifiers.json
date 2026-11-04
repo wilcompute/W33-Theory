@@ -1,0 +1,408 @@
+{
+  "claim_boundary": "All derived claims are finite mathematics, conditioned models, or idealized open-system simulation. Not a theory of everything.",
+  "continuum": {
+    "asymptotic_formula": "L^2 lambda_1(L) = alpha^2 * (1+1/(2L)+O(1/L^2)); alpha=acos(sqrt(6)/4)",
+    "boundary": "Same fixed metric-graph topology under subdivision: one-dimensional Weyl law, not generated 3+1 dimensions.",
+    "exact_characteristic": "sqrt(6) = 4*cos(L*theta)+2*tan(theta/2)*sin(L*theta); lambda=2-2cos(theta)",
+    "first_gap_metric_graph_target": 0.8312667112181387,
+    "original_graph_valency": 4,
+    "results": [
+      {
+        "analytic_first_order_prediction": 1.2469000668272079,
+        "asymptotic_coefficient_L_times_relative_error": 0.8652379991792329,
+        "cycle_rank": 81,
+        "edges": 160,
+        "laplacian_eigenvalue": 1.5505102572168221,
+        "rescaled_first_gap": 1.5505102572168221,
+        "segments": 1,
+        "subdivision_vertices": 80
+      },
+      {
+        "analytic_first_order_prediction": 1.0390833890226734,
+        "asymptotic_coefficient_L_times_relative_error": 0.6044556534945023,
+        "cycle_rank": 81,
+        "edges": 320,
+        "laplacian_eigenvalue": 0.27062466069923286,
+        "rescaled_first_gap": 1.0824986427969314,
+        "segments": 2,
+        "subdivision_vertices": 240
+      },
+      {
+        "analytic_first_order_prediction": 0.935175050120406,
+        "asymptotic_coefficient_L_times_relative_error": 0.5452816671351215,
+        "cycle_rank": 81,
+        "edges": 640,
+        "laplacian_eigenvalue": 0.059036583484367355,
+        "rescaled_first_gap": 0.9445853357498777,
+        "segments": 4,
+        "subdivision_vertices": 560
+      },
+      {
+        "analytic_first_order_prediction": 0.8832208806692723,
+        "asymptotic_coefficient_L_times_relative_error": 0.5213682287371295,
+        "cycle_rank": 81,
+        "edges": 1280,
+        "laplacian_eigenvalue": 0.013835019028478612,
+        "rescaled_first_gap": 0.8854412178226312,
+        "segments": 8,
+        "subdivision_vertices": 1200
+      },
+      {
+        "analytic_first_order_prediction": 0.8572437959437055,
+        "asymptotic_coefficient_L_times_relative_error": 0.5104052339083545,
+        "cycle_rank": 81,
+        "edges": 2560,
+        "laplacian_eigenvalue": 0.0033507202782396828,
+        "rescaled_first_gap": 0.8577843912293588,
+        "segments": 16,
+        "subdivision_vertices": 2480
+      },
+      {
+        "analytic_first_order_prediction": 0.8442552535809221,
+        "asymptotic_coefficient_L_times_relative_error": 0.5051370357422442,
+        "cycle_rank": 81,
+        "edges": 5120,
+        "laplacian_eigenvalue": 0.0008245983386656608,
+        "rescaled_first_gap": 0.8443886987936366,
+        "segments": 32,
+        "subdivision_vertices": 5040
+      },
+      {
+        "analytic_first_order_prediction": 0.8377609823995303,
+        "asymptotic_coefficient_L_times_relative_error": 0.5025525998512421,
+        "cycle_rank": 81,
+        "edges": 10240,
+        "laplacian_eigenvalue": 0.00020453958421651208,
+        "rescaled_first_gap": 0.8377941369508335,
+        "segments": 64,
+        "subdivision_vertices": 10160
+      },
+      {
+        "analytic_first_order_prediction": 0.8345138468088346,
+        "asymptotic_coefficient_L_times_relative_error": 0.5012723780775161,
+        "cycle_rank": 81,
+        "edges": 20480,
+        "laplacian_eigenvalue": 5.093518737653291e-05,
+        "rescaled_first_gap": 0.8345221099771152,
+        "segments": 128,
+        "subdivision_vertices": 20400
+      },
+      {
+        "analytic_first_order_prediction": 0.8328902790134866,
+        "asymptotic_coefficient_L_times_relative_error": 0.5006352145092023,
+        "cycle_rank": 81,
+        "edges": 40960,
+        "laplacian_eigenvalue": 1.2708928552873644e-05,
+        "rescaled_first_gap": 0.8328923416411271,
+        "segments": 256,
+        "subdivision_vertices": 40880
+      }
+    ],
+    "status": "PASS_EQUIDISTANT_EDGE_SUBDIVISION_FINITE_SIZE_LAW",
+    "underlying_W33_Levi_adjacency_eigenvalue": 2.449489742783178
+  },
+  "flavor": {
+    "CP_odd_commutator_imag_cubed_trace": "1600",
+    "bare_one_spurion_matrix": [
+      [
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "2",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "4"
+      ]
+    ],
+    "boundary": "The vectorlike mixing vector v is a second independent flavor-sensitive spurion. This does not derive v, explain observed flavor, or refute the strict one-spurion no-go.",
+    "conjugated_vector_CP_invariant": "-1600",
+    "effective_Yd": [
+      [
+        "2/3",
+        "-1/3",
+        "-1/3 - I/3"
+      ],
+      [
+        "-1/3",
+        "5/3",
+        "-1/3 - I/3"
+      ],
+      [
+        "-1/3 - I/3",
+        "-1/3 - I/3",
+        "4 - (1 + I)**2/3"
+      ]
+    ],
+    "effective_rank_one_update": true,
+    "exact_block_determinant_identity": true,
+    "heavy_mass": "3",
+    "new_flavor_mix_vector": [
+      "1",
+      "1",
+      "1 + I"
+    ],
+    "real_flavor_vector_CP_invariant": 0,
+    "status": "PASS_VECTORLIKE_SCHUR_CP_COUNTEREXAMPLE"
+  },
+  "gravity": {
+    "boundary": "No-go ONLY for these positive cycle quadratic densities treated simultaneously as zero constraints. Does not preclude Einstein/Regge/ADM gravity.",
+    "cycle_rank": 81,
+    "explicit_pure_gauge_zero_witness": true,
+    "incidence_rank": 79,
+    "minimum_edge_participation": 3,
+    "positive_local_constraints": 81,
+    "proof": "Every h_i is sum of nonnegative real squares; all supports cover all 160 edges; B spans ker D and im D^T=(ker D)^perp.",
+    "status": "PASS_QUADRATIC_CONSTRAINT_TRIVIAL_ZERO_LOCUS",
+    "supported_edges": 160,
+    "theorem": "For h_i=(c_i.x)^2/2+sum_{e in supp(ci)}p_e^2/2, h_i=0 for all 81 iff p=0 and x=D^T phi; reduced zero surface modulo x gauge shifts is a single point."
+  },
+  "hardware": {
+    "Hilbert_states": [
+      "idle_reference",
+      "site0",
+      "site1",
+      "site2",
+      "vacuum_loss"
+    ],
+    "boundary": "Independent Markovian loss/dephasing on 3 sites plus ideal phase-stable idle arm. No detector inefficiency, cross-talk, pulse calibration, spatial embedding or demonstrated circuit.",
+    "contrast_definition": "abs[2 Im (rho_ref,site0_zeroFlux-rho_ref,site0_piFlux)]",
+    "interferometric_initial_state": "(|reference>+|site0>)/sqrt(2)",
+    "noisy_sequential_compile_analog_contrast": 0.03937993677123733,
+    "noisy_sequential_compile_best_depth_in_sample": 16,
+    "noisy_sequential_compile_deadtime_per_pulse": 0.003,
+    "noisy_sequential_compile_reference_gamma": 0.1,
+    "noisy_sequential_compile_reference_kappa": 0.1,
+    "noisy_sequential_compile_results": [
+      {
+        "coherent_phase_contrast": 0.0,
+        "error_relative_to_simultaneous_noisy_analog": 0.03937993677123733,
+        "loss_vacuum_population": 0.05693871629042381,
+        "pulses": 3,
+        "steps": 1,
+        "total_physical_duration": 1.209
+      },
+      {
+        "coherent_phase_contrast": 0.02722068292506778,
+        "error_relative_to_simultaneous_noisy_analog": 0.01215925384616955,
+        "loss_vacuum_population": 0.05733729205976239,
+        "pulses": 6,
+        "steps": 2,
+        "total_physical_duration": 1.2180000000000002
+      },
+      {
+        "coherent_phase_contrast": 0.033959586387384284,
+        "error_relative_to_simultaneous_noisy_analog": 0.005420350383853044,
+        "loss_vacuum_population": 0.05813336825054255,
+        "pulses": 12,
+        "steps": 4,
+        "total_physical_duration": 1.2360000000000002
+      },
+      {
+        "coherent_phase_contrast": 0.03552801600763753,
+        "error_relative_to_simultaneous_noisy_analog": 0.0038519207635997962,
+        "loss_vacuum_population": 0.0597212282619316,
+        "pulses": 24,
+        "steps": 8,
+        "total_physical_duration": 1.2720000000000002
+      },
+      {
+        "coherent_phase_contrast": 0.035692691284624406,
+        "error_relative_to_simultaneous_noisy_analog": 0.0036872454866129223,
+        "loss_vacuum_population": 0.06287985073231502,
+        "pulses": 48,
+        "steps": 16,
+        "total_physical_duration": 1.3440000000000003
+      },
+      {
+        "coherent_phase_contrast": 0.03528578783384294,
+        "error_relative_to_simultaneous_noisy_analog": 0.00409414893739439,
+        "loss_vacuum_population": 0.06912927702276532,
+        "pulses": 96,
+        "steps": 32,
+        "total_physical_duration": 1.4880000000000002
+      },
+      {
+        "coherent_phase_contrast": 0.034309164607314105,
+        "error_relative_to_simultaneous_noisy_analog": 0.005070772163923223,
+        "loss_vacuum_population": 0.08136136628875723,
+        "pulses": 192,
+        "steps": 64,
+        "total_physical_duration": 1.7760000000000002
+      }
+    ],
+    "scenarios": [
+      {
+        "absolute_Ramsey_imaginary_coherence_difference": 0.040987062478518806,
+        "dephasing_rate": 0,
+        "loss_rate": 0,
+        "loss_to_vacuum_probability": 0.0,
+        "max_observed_triangle_population_difference": 1.1092981094942657e-17
+      },
+      {
+        "absolute_Ramsey_imaginary_coherence_difference": 0.04017546426418525,
+        "dephasing_rate": 0,
+        "loss_rate": 0.1,
+        "loss_to_vacuum_probability": 0.0196052804238384,
+        "max_observed_triangle_population_difference": 1.040834085586084e-17
+      },
+      {
+        "absolute_Ramsey_imaginary_coherence_difference": 0.04017546426418525,
+        "dephasing_rate": 0.1,
+        "loss_rate": 0,
+        "loss_to_vacuum_probability": 0.0,
+        "max_observed_triangle_population_difference": 6.938893903907227e-18
+      },
+      {
+        "absolute_Ramsey_imaginary_coherence_difference": 0.03937993677123733,
+        "dephasing_rate": 0.1,
+        "loss_rate": 0.1,
+        "loss_to_vacuum_probability": 0.0196052804238384,
+        "max_observed_triangle_population_difference": 1.8469394444741648e-17
+      },
+      {
+        "absolute_Ramsey_imaginary_coherence_difference": 0.03563244031050574,
+        "dephasing_rate": 0.2,
+        "loss_rate": 0.5,
+        "loss_to_vacuum_probability": 0.09063462346100909,
+        "max_observed_triangle_population_difference": 6.938893903907227e-18
+      }
+    ],
+    "status": "PASS_LINDBLAD_RAMSEY_PHASE_WITNESS",
+    "t": 0.4,
+    "trotter_compilation_order": "(edge01 pulse)*(edge02 pulse)*(edge12 pulse) repeated n times",
+    "trotter_results": [
+      {
+        "approximate_Ramsey_contrast": 0.0,
+        "contrast_absolute_error": 0.04098706247851882,
+        "elementary_signed_edge_pulses": 3,
+        "exact_Ramsey_contrast": 0.04098706247851882,
+        "max_unitary_entry_error": 0.0859921960999081,
+        "steps": 1
+      },
+      {
+        "approximate_Ramsey_contrast": 0.03074652826723182,
+        "contrast_absolute_error": 0.010240534211287,
+        "elementary_signed_edge_pulses": 6,
+        "exact_Ramsey_contrast": 0.04098706247851882,
+        "max_unitary_entry_error": 0.041296834994454475,
+        "steps": 2
+      },
+      {
+        "approximate_Ramsey_contrast": 0.03842741672179457,
+        "contrast_absolute_error": 0.002559645756724252,
+        "elementary_signed_edge_pulses": 12,
+        "exact_Ramsey_contrast": 0.04098706247851882,
+        "max_unitary_entry_error": 0.020274385786941785,
+        "steps": 4
+      },
+      {
+        "approximate_Ramsey_contrast": 0.04034718261271743,
+        "contrast_absolute_error": 0.0006398798658013918,
+        "elementary_signed_edge_pulses": 24,
+        "exact_Ramsey_contrast": 0.04098706247851882,
+        "max_unitary_entry_error": 0.010052855940804193,
+        "steps": 8
+      },
+      {
+        "approximate_Ramsey_contrast": 0.040827094500700725,
+        "contrast_absolute_error": 0.0001599679778180943,
+        "elementary_signed_edge_pulses": 48,
+        "exact_Ramsey_contrast": 0.04098706247851882,
+        "max_unitary_entry_error": 0.005006658619501429,
+        "steps": 16
+      },
+      {
+        "approximate_Ramsey_contrast": 0.0409470706085865,
+        "contrast_absolute_error": 3.999186993231679e-05,
+        "elementary_signed_edge_pulses": 96,
+        "exact_Ramsey_contrast": 0.04098706247851882,
+        "max_unitary_entry_error": 0.0024985615373642636,
+        "steps": 32
+      },
+      {
+        "approximate_Ramsey_contrast": 0.04097706451882149,
+        "contrast_absolute_error": 9.997959697326253e-06,
+        "elementary_signed_edge_pulses": 192,
+        "exact_Ramsey_contrast": 0.04098706247851882,
+        "max_unitary_entry_error": 0.001248111271789037,
+        "steps": 64
+      }
+    ]
+  },
+  "status": "PASS_FIVE_TOE_FALSIFICATION_GATES",
+  "symmetry": {
+    "all_apartment_frame_condition_number": 1.0000000000000056,
+    "all_apartment_max_offdiagonal_neighbors": 159,
+    "all_apartment_undirected_hopping_pairs": 12720,
+    "all_apartments": 1620,
+    "all_apartments_exact_cycle_operator": "C C^T = 160 P_cycle",
+    "boundary": "Weights and C3 chosen by optimizer, not by a derived physical variational action; finite carrier only.",
+    "each_frame_exact_C3_invariant_and_cycle_preserving": true,
+    "optimized_weight_sum": 3.0,
+    "optimizer_start_results": [
+      {
+        "condition": 6.8470924515891625,
+        "success": true,
+        "weights_first_two": [
+          0.853964690514555,
+          0.9375554413508761
+        ]
+      },
+      {
+        "condition": 6.847092451589007,
+        "success": true,
+        "weights_first_two": [
+          0.8539646429178798,
+          0.9375553707693497
+        ]
+      },
+      {
+        "condition": 6.847092451592248,
+        "success": true,
+        "weights_first_two": [
+          0.8539654292967545,
+          0.9375548346521227
+        ]
+      },
+      {
+        "condition": 6.847092451589142,
+        "success": true,
+        "weights_first_two": [
+          0.8539644239967701,
+          0.9375553845905021
+        ]
+      },
+      {
+        "condition": 6.847092451589211,
+        "success": true,
+        "weights_first_two": [
+          0.8539643720005947,
+          0.9375553764764725
+        ]
+      }
+    ],
+    "relative_condition_improvement": 1.0220107570752013,
+    "sampled_optimal_weights": [
+      0.8539646429178798,
+      0.9375553707693497,
+      1.2084799863127706
+    ],
+    "sampled_optimized_condition_number": 6.847092451589007,
+    "selected_C3_frame_seeds": [
+      5,
+      9,
+      18
+    ],
+    "status": "PASS_C3_WEIGHT_TUNING_AND_FULL_PROJECTOR_CONTROL",
+    "unweighted_frame_hopping_pairs": 4320,
+    "unweighted_three_frame_condition_number": 6.997802140212377,
+    "weighted_frame_hopping_pairs": 4320,
+    "weighted_frame_max_offdiagonal_neighbors": 72
+  }
+}
