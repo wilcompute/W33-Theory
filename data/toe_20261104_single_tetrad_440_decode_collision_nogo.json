@@ -1,0 +1,538 @@
+{
+  "all_native_tetrad_collision_audits": [
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.00015653377239620292,
+      "minimum_positive_pairwise_total_variation_distance": 0.00015653377239620292,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 0.24772727272727274,
+      "histogram_of_class_sizes": {
+        "1": 20,
+        "12": 1,
+        "3": 64,
+        "9": 24
+      },
+      "maximum_class_size": 12,
+      "minimum_pairwise_total_variation_distance": 1.3877787807814457e-17,
+      "minimum_positive_pairwise_total_variation_distance": 0.0030917806531854386,
+      "number_of_zero_dist_pairs_numerical": 1122,
+      "total_colliding_root_labels": 420,
+      "unique_prob_distributions": 109
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.00015653377239603639,
+      "minimum_positive_pairwise_total_variation_distance": 0.00015653377239603639,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.00015653377239607802,
+      "minimum_positive_pairwise_total_variation_distance": 0.00015653377239607802,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.0001565337723960919,
+      "minimum_positive_pairwise_total_variation_distance": 0.0001565337723960919,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.0001565337723960225,
+      "minimum_positive_pairwise_total_variation_distance": 0.0001565337723960225,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 0.24772727272727274,
+      "histogram_of_class_sizes": {
+        "1": 20,
+        "12": 1,
+        "3": 64,
+        "9": 24
+      },
+      "maximum_class_size": 12,
+      "minimum_pairwise_total_variation_distance": 0.0,
+      "minimum_positive_pairwise_total_variation_distance": 0.0030917806531855913,
+      "number_of_zero_dist_pairs_numerical": 1122,
+      "total_colliding_root_labels": 420,
+      "unique_prob_distributions": 109
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.0001565337723961474,
+      "minimum_positive_pairwise_total_variation_distance": 0.0001565337723961474,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 0.24772727272727274,
+      "histogram_of_class_sizes": {
+        "1": 20,
+        "12": 1,
+        "3": 64,
+        "9": 24
+      },
+      "maximum_class_size": 12,
+      "minimum_pairwise_total_variation_distance": 2.7755575615628914e-17,
+      "minimum_positive_pairwise_total_variation_distance": 0.003091780653185619,
+      "number_of_zero_dist_pairs_numerical": 1122,
+      "total_colliding_root_labels": 420,
+      "unique_prob_distributions": 109
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.0001565337723957172,
+      "minimum_positive_pairwise_total_variation_distance": 0.0001565337723957172,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 0.24772727272727274,
+      "histogram_of_class_sizes": {
+        "1": 20,
+        "12": 1,
+        "3": 64,
+        "9": 24
+      },
+      "maximum_class_size": 12,
+      "minimum_pairwise_total_variation_distance": 1.3877787807814457e-17,
+      "minimum_positive_pairwise_total_variation_distance": 0.0030917806531854664,
+      "number_of_zero_dist_pairs_numerical": 1122,
+      "total_colliding_root_labels": 420,
+      "unique_prob_distributions": 109
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.00015653377239563393,
+      "minimum_positive_pairwise_total_variation_distance": 0.00015653377239563393,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.00015653377239578659,
+      "minimum_positive_pairwise_total_variation_distance": 0.00015653377239578659,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.0001565337723961474,
+      "minimum_positive_pairwise_total_variation_distance": 0.0001565337723961474,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.0001565337723960225,
+      "minimum_positive_pairwise_total_variation_distance": 0.0001565337723960225,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.0001565337723958421,
+      "minimum_positive_pairwise_total_variation_distance": 0.0001565337723958421,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.00015653377239605026,
+      "minimum_positive_pairwise_total_variation_distance": 0.00015653377239605026,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 0.24772727272727274,
+      "histogram_of_class_sizes": {
+        "1": 20,
+        "12": 1,
+        "3": 64,
+        "9": 24
+      },
+      "maximum_class_size": 12,
+      "minimum_pairwise_total_variation_distance": 0.0,
+      "minimum_positive_pairwise_total_variation_distance": 0.0030917806531855774,
+      "number_of_zero_dist_pairs_numerical": 1122,
+      "total_colliding_root_labels": 420,
+      "unique_prob_distributions": 109
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 0.24772727272727274,
+      "histogram_of_class_sizes": {
+        "1": 20,
+        "12": 1,
+        "3": 64,
+        "9": 24
+      },
+      "maximum_class_size": 12,
+      "minimum_pairwise_total_variation_distance": 0.0,
+      "minimum_positive_pairwise_total_variation_distance": 0.003091780653185411,
+      "number_of_zero_dist_pairs_numerical": 1122,
+      "total_colliding_root_labels": 420,
+      "unique_prob_distributions": 109
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.0001565337723957727,
+      "minimum_positive_pairwise_total_variation_distance": 0.0001565337723957727,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.00015653377239582822,
+      "minimum_positive_pairwise_total_variation_distance": 0.00015653377239582822,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.00015653377239568944,
+      "minimum_positive_pairwise_total_variation_distance": 0.00015653377239568944,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 0.24772727272727274,
+      "histogram_of_class_sizes": {
+        "1": 20,
+        "12": 1,
+        "3": 64,
+        "9": 24
+      },
+      "maximum_class_size": 12,
+      "minimum_pairwise_total_variation_distance": 2.7755575615628914e-17,
+      "minimum_positive_pairwise_total_variation_distance": 0.0030917806531856606,
+      "number_of_zero_dist_pairs_numerical": 1122,
+      "total_colliding_root_labels": 420,
+      "unique_prob_distributions": 109
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.00015653377239555066,
+      "minimum_positive_pairwise_total_variation_distance": 0.00015653377239555066,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 0.24772727272727274,
+      "histogram_of_class_sizes": {
+        "1": 20,
+        "12": 1,
+        "3": 64,
+        "9": 24
+      },
+      "maximum_class_size": 12,
+      "minimum_pairwise_total_variation_distance": 1.3877787807814457e-17,
+      "minimum_positive_pairwise_total_variation_distance": 0.003091780653185508,
+      "number_of_zero_dist_pairs_numerical": 1122,
+      "total_colliding_root_labels": 420,
+      "unique_prob_distributions": 109
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.0001565337723957727,
+      "minimum_positive_pairwise_total_variation_distance": 0.0001565337723957727,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.0001565337723955923,
+      "minimum_positive_pairwise_total_variation_distance": 0.0001565337723955923,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.00015653377239574495,
+      "minimum_positive_pairwise_total_variation_distance": 0.00015653377239574495,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.00015653377239574495,
+      "minimum_positive_pairwise_total_variation_distance": 0.00015653377239574495,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.00015653377239582822,
+      "minimum_positive_pairwise_total_variation_distance": 0.00015653377239582822,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 0.24772727272727274,
+      "histogram_of_class_sizes": {
+        "1": 20,
+        "12": 1,
+        "3": 64,
+        "9": 24
+      },
+      "maximum_class_size": 12,
+      "minimum_pairwise_total_variation_distance": 1.3877787807814457e-17,
+      "minimum_positive_pairwise_total_variation_distance": 0.0030917806531854802,
+      "number_of_zero_dist_pairs_numerical": 1122,
+      "total_colliding_root_labels": 420,
+      "unique_prob_distributions": 109
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.00015653377239599475,
+      "minimum_positive_pairwise_total_variation_distance": 0.00015653377239599475,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.00015653377239599475,
+      "minimum_positive_pairwise_total_variation_distance": 0.00015653377239599475,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 0.24772727272727274,
+      "histogram_of_class_sizes": {
+        "1": 20,
+        "12": 1,
+        "3": 64,
+        "9": 24
+      },
+      "maximum_class_size": 12,
+      "minimum_pairwise_total_variation_distance": 0.0,
+      "minimum_positive_pairwise_total_variation_distance": 0.0030917806531855357,
+      "number_of_zero_dist_pairs_numerical": 1122,
+      "total_colliding_root_labels": 420,
+      "unique_prob_distributions": 109
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.0001565337723958421,
+      "minimum_positive_pairwise_total_variation_distance": 0.0001565337723958421,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.00015653377239581434,
+      "minimum_positive_pairwise_total_variation_distance": 0.00015653377239581434,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.00015653377239605026,
+      "minimum_positive_pairwise_total_variation_distance": 0.00015653377239605026,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.0001565337723958976,
+      "minimum_positive_pairwise_total_variation_distance": 0.0001565337723958976,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.00015653377239607802,
+      "minimum_positive_pairwise_total_variation_distance": 0.00015653377239607802,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    },
+    {
+      "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+      "histogram_of_class_sizes": {
+        "1": 440
+      },
+      "maximum_class_size": 1,
+      "minimum_pairwise_total_variation_distance": 0.00015653377239632782,
+      "minimum_positive_pairwise_total_variation_distance": 0.00015653377239632782,
+      "number_of_zero_dist_pairs_numerical": 0,
+      "total_colliding_root_labels": 0,
+      "unique_prob_distributions": 440
+    }
+  ],
+  "best_sampled_Haar_four_outcome_collision_audit": {
+    "asymptotic_uniform_prior_optimal_label_decoding_success": 1.0,
+    "histogram_of_class_sizes": {
+      "1": 440
+    },
+    "maximum_class_size": 1,
+    "minimum_pairwise_total_variation_distance": 0.0022361409771425172,
+    "minimum_positive_pairwise_total_variation_distance": 0.0022361409771425172,
+    "number_of_zero_dist_pairs_numerical": 0,
+    "total_colliding_root_labels": 0,
+    "unique_prob_distributions": 440
+  },
+  "fixed_basis_continuous_density_parameter_rank_at_most": 3,
+  "full_Witting40_POVM_continuous_density_parameter_rank": 8,
+  "full_Witting40_probability_unique_440_label_count": 440,
+  "native_Witting_tetrads_checked": 40,
+  "native_tetrad_unique_counts": [
+    109,
+    440
+  ],
+  "prior_art": "Bayesian identifiability and finite-output POVM linear rank are elementary; new audit explicitly checks all Witting40 tetrads on the prepared 440-root E8 codebook.",
+  "status": "PASS_FIXED_WITTING_TETRAD_VS_FULL_POVM_MULTI_COPY_IDENTIFIABILITY",
+  "total_E8_root_labels": 440,
+  "warning": "Identical single-shot uniform-ensemble mutual information does not imply identical repeated-label identification. Exact collisions impose a nonzero infinite-copy error floor for a fixed measurement. Finite 440 labels may be injective under a generic single four-outcome basis despite rank3 continuous tomography."
+}

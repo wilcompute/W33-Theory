@@ -1,0 +1,249 @@
+{
+  "Gauss_invariant_dimension": 8,
+  "Hilbert_dimension_raw": 64,
+  "Wilson_commutes_hopping_at_g0": true,
+  "Wilson_plaquette_commutes_all_Gauss": true,
+  "dynamic_matter_excitation_count": 1,
+  "electric_link_X_commutes_all_Gauss": true,
+  "electric_term_does_not_commute_Wilson": true,
+  "full_Gauss_product_identity": true,
+  "matter_covariant_hop_commutes_all_Gauss": true,
+  "physical_sector_site0_localized_dimension": 2,
+  "pi_flux_matter_hop_spectrum_J1": [
+    -1.414213562373095,
+    -1.4142135623730947,
+    1.4142135623730947,
+    1.4142135623730947
+  ],
+  "prior_art": "AB ring flux dependence and Kogut-Susskind Z2 Gauss law are classical; here the specific 120-root plaquette geometry from the Reye/icosian sheets motivates the coupled local falsifier.",
+  "relevance": "The E8-interlayer 120 four-cycles can each support this gauge-covariant matter-plaquette local model. At g0 and J1, MATTER hopping prefers zero flux unless externally negative K overcomes finite-size kinetic offset.",
+  "scope": "Toy one C4 with a chosen static neutralizing background charge and one mobile Z2 charge, NOT derivation of the sign of K, an E8 root graph many-body Hamiltonian, spontaneous symmetry breaking, cosmological vacuum or TOE.",
+  "static_background_charge_at_vertex": 0,
+  "status": "PASS_GAUSS_COVARIANT_MATTER_HOPPING_INDUCES_ZERO_FLUX_SELECTION",
+  "sweep": [
+    {
+      "Wilson_expectation": -0.999999999999999,
+      "electric_g": 0,
+      "first_gap": 1.3322676295501878e-15,
+      "ground_energy": -1.9142135623730947,
+      "local_Gauss_constraints_exact": true,
+      "matter_hopping_J": 1.0,
+      "plaquette_K": -0.5
+    },
+    {
+      "Wilson_expectation": -0.9953273204401278,
+      "electric_g": 0.02,
+      "first_gap": 0.0007228570701780512,
+      "ground_energy": -1.9152677836287828,
+      "local_Gauss_constraints_exact": true,
+      "matter_hopping_J": 1.0,
+      "plaquette_K": -0.5
+    },
+    {
+      "Wilson_expectation": -0.8989460555090192,
+      "electric_g": 0.1,
+      "first_gap": 0.016949652304314666,
+      "ground_energy": -1.9394432686638574,
+      "local_Gauss_constraints_exact": true,
+      "matter_hopping_J": 1.0,
+      "plaquette_K": -0.5
+    },
+    {
+      "Wilson_expectation": -0.5513307470785402,
+      "electric_g": 0.3,
+      "first_gap": 0.10686799192704854,
+      "ground_energy": -2.0952659928194746,
+      "local_Gauss_constraints_exact": true,
+      "matter_hopping_J": 1.0,
+      "plaquette_K": -0.5
+    },
+    {
+      "Wilson_expectation": -1.0,
+      "electric_g": 0,
+      "first_gap": 2.4424906541753444e-15,
+      "ground_energy": -1.7171067811865488,
+      "local_Gauss_constraints_exact": true,
+      "matter_hopping_J": 1.0,
+      "plaquette_K": -0.30289321881345244
+    },
+    {
+      "Wilson_expectation": -0.44643811334998484,
+      "electric_g": 0.02,
+      "first_gap": 0.012075993154206488,
+      "ground_energy": -1.7295787917492536,
+      "local_Gauss_constraints_exact": true,
+      "matter_hopping_J": 1.0,
+      "plaquette_K": -0.30289321881345244
+    },
+    {
+      "Wilson_expectation": -0.09466440464608847,
+      "electric_g": 0.1,
+      "first_gap": 0.08357559423048744,
+      "ground_energy": -1.8105694616783194,
+      "local_Gauss_constraints_exact": true,
+      "matter_hopping_J": 1.0,
+      "plaquette_K": -0.30289321881345244
+    },
+    {
+      "Wilson_expectation": -0.022047383356213757,
+      "electric_g": 0.3,
+      "first_gap": 0.22893391430162158,
+      "ground_energy": -2.0340066631341305,
+      "local_Gauss_constraints_exact": true,
+      "matter_hopping_J": 1.0,
+      "plaquette_K": -0.30289321881345244
+    },
+    {
+      "Wilson_expectation": -0.056172856650600345,
+      "electric_g": 0,
+      "first_gap": 2.220446049250313e-16,
+      "ground_energy": -1.7071067811865472,
+      "local_Gauss_constraints_exact": true,
+      "matter_hopping_J": 1.0,
+      "plaquette_K": -0.2928932188134524
+    },
+    {
+      "Wilson_expectation": 0.0010106517064285558,
+      "electric_g": 0.02,
+      "first_gap": 0.019720697678081933,
+      "ground_energy": -1.7272274554312328,
+      "local_Gauss_constraints_exact": true,
+      "matter_hopping_J": 1.0,
+      "plaquette_K": -0.2928932188134524
+    },
+    {
+      "Wilson_expectation": 0.004568279427829253,
+      "electric_g": 0.1,
+      "first_gap": 0.09302576943672758,
+      "ground_energy": -1.8101178765199466,
+      "local_Gauss_constraints_exact": true,
+      "matter_hopping_J": 1.0,
+      "plaquette_K": -0.2928932188134524
+    },
+    {
+      "Wilson_expectation": 0.010379934813503161,
+      "electric_g": 0.3,
+      "first_gap": 0.2380444956244907,
+      "ground_energy": -2.0339483188492835,
+      "local_Gauss_constraints_exact": true,
+      "matter_hopping_J": 1.0,
+      "plaquette_K": -0.2928932188134524
+    },
+    {
+      "Wilson_expectation": 1.0000000000000009,
+      "electric_g": 0,
+      "first_gap": 0.020000000000000684,
+      "ground_energy": -1.7171067811865481,
+      "local_Gauss_constraints_exact": true,
+      "matter_hopping_J": 1.0,
+      "plaquette_K": -0.2828932188134524
+    },
+    {
+      "Wilson_expectation": 0.44787084522281184,
+      "electric_g": 0.02,
+      "first_gap": 0.03208602347712697,
+      "ground_energy": -1.7295968203343335,
+      "local_Gauss_constraints_exact": true,
+      "matter_hopping_J": 1.0,
+      "plaquette_K": -0.2828932188134524
+    },
+    {
+      "Wilson_expectation": 0.10365079653764422,
+      "electric_g": 0.1,
+      "first_gap": 0.10346801565503361,
+      "ground_energy": -1.8106603242125343,
+      "local_Gauss_constraints_exact": true,
+      "matter_hopping_J": 1.0,
+      "plaquette_K": -0.2828932188134524
+    },
+    {
+      "Wilson_expectation": 0.042763638954391475,
+      "electric_g": 0.3,
+      "first_gap": 0.24746405630429114,
+      "ground_energy": -2.0342141163694145,
+      "local_Gauss_constraints_exact": true,
+      "matter_hopping_J": 1.0,
+      "plaquette_K": -0.2828932188134524
+    },
+    {
+      "Wilson_expectation": 1.0000000000000004,
+      "electric_g": 0,
+      "first_gap": 0.5857864376269044,
+      "ground_energy": -1.9999999999999996,
+      "local_Gauss_constraints_exact": true,
+      "matter_hopping_J": 1.0,
+      "plaquette_K": 0
+    },
+    {
+      "Wilson_expectation": 0.9976082878749322,
+      "electric_g": 0.02,
+      "first_gap": 0.5860200671444169,
+      "ground_energy": -2.000799201850609,
+      "local_Gauss_constraints_exact": true,
+      "matter_hopping_J": 1.0,
+      "plaquette_K": 0
+    },
+    {
+      "Wilson_expectation": 0.9447424935665298,
+      "electric_g": 0.1,
+      "first_gap": 0.591241360357398,
+      "ground_energy": -2.019527046065968,
+      "local_Gauss_constraints_exact": true,
+      "matter_hopping_J": 1.0,
+      "plaquette_K": 0
+    },
+    {
+      "Wilson_expectation": 0.6880372012506784,
+      "electric_g": 0.3,
+      "first_gap": 0.6163065142241941,
+      "ground_energy": -2.152535663797915,
+      "local_Gauss_constraints_exact": true,
+      "matter_hopping_J": 1.0,
+      "plaquette_K": 0
+    },
+    {
+      "Wilson_expectation": 1.0,
+      "electric_g": 0,
+      "first_gap": 0.9857864376269034,
+      "ground_energy": -2.1999999999999993,
+      "local_Gauss_constraints_exact": true,
+      "matter_hopping_J": 1.0,
+      "plaquette_K": 0.2
+    },
+    {
+      "Wilson_expectation": 0.9991228022201335,
+      "electric_g": 0.02,
+      "first_gap": 0.9855085215536843,
+      "ground_energy": -2.2005104793811903,
+      "local_Gauss_constraints_exact": true,
+      "matter_hopping_J": 1.0,
+      "plaquette_K": 0.2
+    },
+    {
+      "Wilson_expectation": 0.9786671023800045,
+      "electric_g": 0.1,
+      "first_gap": 0.9789744442652573,
+      "ground_energy": -2.2126684383142132,
+      "local_Gauss_constraints_exact": true,
+      "matter_hopping_J": 1.0,
+      "plaquette_K": 0.2
+    },
+    {
+      "Wilson_expectation": 0.8427429448428745,
+      "electric_g": 0.3,
+      "first_gap": 0.9324035222408524,
+      "ground_energy": -2.3079959296190315,
+      "local_Gauss_constraints_exact": true,
+      "matter_hopping_J": 1.0,
+      "plaquette_K": 0.2
+    }
+  ],
+  "threshold_K_where_pi_flux_wins_when_g0_J1": -0.2928932188134524,
+  "zero_flux_matter_hop_spectrum_J1": [
+    -1.9999999999999998,
+    -1.5266743188674554e-16,
+    2.359341587336323e-16,
+    1.9999999999999998
+  ],
+  "zero_flux_vs_pi_ground_kinetic_advantage_J1": 0.5857864376269049
+}

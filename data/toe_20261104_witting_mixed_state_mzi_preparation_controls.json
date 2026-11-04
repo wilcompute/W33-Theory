@@ -1,0 +1,213 @@
+{
+  "A5_ququart_group_generator_mesh_certificates": [
+    {
+      "A5_class_index": 0,
+      "generator_order": 5,
+      "max_mesh_reconstruction_error": 3.331487169890429e-16,
+      "projective_order_phase_imag": 0.49999999999999917,
+      "projective_order_phase_real": 0.8660254037844394,
+      "required_Givens_count": 6
+    },
+    {
+      "A5_class_index": 0,
+      "generator_order": 3,
+      "max_mesh_reconstruction_error": 2.0014830212433607e-16,
+      "projective_order_phase_imag": 1.0,
+      "projective_order_phase_real": -1.3877787807814457e-16,
+      "required_Givens_count": 6
+    },
+    {
+      "A5_class_index": 1,
+      "generator_order": 5,
+      "max_mesh_reconstruction_error": 2.482534153247273e-16,
+      "projective_order_phase_imag": -1.0000000000000002,
+      "projective_order_phase_real": 5.551115123125783e-17,
+      "required_Givens_count": 6
+    },
+    {
+      "A5_class_index": 1,
+      "generator_order": 3,
+      "max_mesh_reconstruction_error": 2.7755575615628914e-16,
+      "projective_order_phase_imag": -1.0000000000000004,
+      "projective_order_phase_real": -1.6653345369377348e-16,
+      "required_Givens_count": 6
+    }
+  ],
+  "E8_root_440_mixed_state_preparation": [
+    {
+      "all_440_preparable_by_classical_mixture_plus_4port_unitary": true,
+      "all_rho_PSD": true,
+      "epsilon": 0.1,
+      "maximum_440_mixed_state_density_matrix_mesh_reconstruction_error": 7.771561172376096e-16,
+      "maximum_gates_for_4mode_mixed_state_prep": 6,
+      "root_state_MZI_two_mode_gate_counts_histogram": {
+        "6": 440
+      },
+      "root_state_count": 440,
+      "state_prep_mixture_classical_eigenmode_probs": [
+        [
+          0.17928932188134517,
+          0.17928932188134547,
+          0.3207106781186548,
+          0.32071067811865495
+        ],
+        [
+          0.17928932188134494,
+          0.17928932188134522,
+          0.3207106781186542,
+          0.3207106781186547
+        ],
+        [
+          0.1792893218813454,
+          0.17928932188134555,
+          0.3207106781186548,
+          0.320710678118655
+        ],
+        [
+          0.17928932188134514,
+          0.17928932188134544,
+          0.3207106781186546,
+          0.3207106781186549
+        ],
+        [
+          0.15580348548801076,
+          0.21642893129802704,
+          0.28357106870197285,
+          0.3441965145119894
+        ],
+        [
+          0.15580348548801062,
+          0.21642893129802715,
+          0.2835710687019729,
+          0.3441965145119893
+        ],
+        [
+          0.15580348548801076,
+          0.2164289312980272,
+          0.28357106870197285,
+          0.34419651451198957
+        ],
+        [
+          0.15580348548801073,
+          0.21642893129802718,
+          0.2835710687019731,
+          0.3441965145119894
+        ]
+      ]
+    },
+    {
+      "all_440_preparable_by_classical_mixture_plus_4port_unitary": true,
+      "all_rho_PSD": true,
+      "epsilon": 0.2,
+      "maximum_440_mixed_state_density_matrix_mesh_reconstruction_error": 8.326690754705276e-16,
+      "maximum_gates_for_4mode_mixed_state_prep": 6,
+      "root_state_MZI_two_mode_gate_counts_histogram": {
+        "6": 440
+      },
+      "root_state_count": 440,
+      "state_prep_mixture_classical_eigenmode_probs": [
+        [
+          0.10857864376269026,
+          0.10857864376269082,
+          0.3914213562373094,
+          0.3914213562373096
+        ],
+        [
+          0.1085786437626899,
+          0.10857864376269045,
+          0.3914213562373088,
+          0.39142135623730956
+        ],
+        [
+          0.1085786437626906,
+          0.10857864376269089,
+          0.3914213562373095,
+          0.39142135623730995
+        ],
+        [
+          0.1085786437626903,
+          0.10857864376269102,
+          0.3914213562373092,
+          0.3914213562373099
+        ],
+        [
+          0.06160697097602139,
+          0.182857862596054,
+          0.3171421374039456,
+          0.438393029023979
+        ],
+        [
+          0.06160697097602116,
+          0.18285786259605416,
+          0.317142137403946,
+          0.4383930290239782
+        ],
+        [
+          0.061606970976021455,
+          0.18285786259605452,
+          0.31714213740394587,
+          0.438393029023979
+        ],
+        [
+          0.06160697097602138,
+          0.18285786259605435,
+          0.31714213740394587,
+          0.4383930290239787
+        ]
+      ]
+    }
+  ],
+  "hardware_modes": 4,
+  "native_interferometer_two_mode_givens_upper_bound": 6,
+  "optical_achievability_qualification": "Universal 4x4 passive unitary + CLASSICAL source-mode eigenstate mixture + calibrated 40-effect Witting analyzer; simulations only. No chip layout, real phase drift process or detector calibration.",
+  "output_readout_Witting40_POVM_static_drift_controls": [
+    {
+      "Witting_POVM_TV_max_observed": 5.568462357885551e-16,
+      "Witting_POVM_TV_mean": 2.358139725155972e-16,
+      "Witting_POVM_TV_p95": 5.568462357885551e-16,
+      "state_sign_controls": 16,
+      "static_calibration_realizations_per_state": 128,
+      "static_gate_mix_angle_and_phase_sigma": 0,
+      "total_traces": 2048
+    },
+    {
+      "Witting_POVM_TV_max_observed": 0.0019629257302287133,
+      "Witting_POVM_TV_mean": 0.0006758510438785979,
+      "Witting_POVM_TV_p95": 0.0010627740483590952,
+      "state_sign_controls": 16,
+      "static_calibration_realizations_per_state": 128,
+      "static_gate_mix_angle_and_phase_sigma": 0.005,
+      "total_traces": 2048
+    },
+    {
+      "Witting_POVM_TV_max_observed": 0.00611624741363888,
+      "Witting_POVM_TV_mean": 0.0027251910536437015,
+      "Witting_POVM_TV_p95": 0.004317224319253406,
+      "state_sign_controls": 16,
+      "static_calibration_realizations_per_state": 128,
+      "static_gate_mix_angle_and_phase_sigma": 0.02,
+      "total_traces": 2048
+    },
+    {
+      "Witting_POVM_TV_max_observed": 0.017142047610810403,
+      "Witting_POVM_TV_mean": 0.006757955356804976,
+      "Witting_POVM_TV_p95": 0.010534487776759568,
+      "state_sign_controls": 16,
+      "static_calibration_realizations_per_state": 128,
+      "static_gate_mix_angle_and_phase_sigma": 0.05,
+      "total_traces": 2048
+    },
+    {
+      "Witting_POVM_TV_max_observed": 0.032466051897233124,
+      "Witting_POVM_TV_mean": 0.013408517885335484,
+      "Witting_POVM_TV_p95": 0.020973736707863216,
+      "state_sign_controls": 16,
+      "static_calibration_realizations_per_state": 128,
+      "static_gate_mix_angle_and_phase_sigma": 0.1,
+      "total_traces": 2048
+    }
+  ],
+  "prior_art": "Reck/Clements 4x4 decomposition and classical randomized mixed-state preparation are standard. The new test compiles concrete native A5 Witting U4 and 440 actual packet/E8 ququart density family.",
+  "source_mixed_state_requires_classical_eigenmode_randomization": true,
+  "status": "PASS_WITTING_A5_FOUR_PORT_COMPILED_MIXED_STATE_440_PREP_AND_DRIFT"
+}

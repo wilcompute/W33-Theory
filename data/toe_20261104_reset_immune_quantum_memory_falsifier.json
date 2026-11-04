@@ -1,0 +1,335 @@
+{
+  "classical_dephased_memory_negativity": -0.0,
+  "detection_warning": "If loss depends on untrusted state or memory, a conditionally selected subensemble need not obey the calibrated eta null. The all-trials test uses no-click assigned random maximally-mixed qutrit, not hidden conditional renormalization.",
+  "input_ref_system_singlet_qutrit_fidelity": 1,
+  "intermediate_intervention": "trusted qutrit entanglement-breaking replacement R_s(rho)=|0><0|Tr_s(rho)",
+  "joint_R_S_E_dimension": 27,
+  "memory_sequential_SWAPS_count": 2,
+  "noise_herald_exact_binomial_controls": [
+    {
+      "channel_entanglement_negativity": -0.0,
+      "conditioned_memory_singlet_fidelity": 0.11111111111111116,
+      "exact_binomial_separable_null_vs_model_alt_5sigma_rule": null,
+      "independent_herald_efficiency_eta": 0.6,
+      "separable_memory_upper_bound_with_same_trusted_eta": 0.24444444444444444,
+      "storage_coherence_p": 0,
+      "unconditional_reference_singlet_probability": 0.11111111111111113,
+      "witness_positive": false
+    },
+    {
+      "channel_entanglement_negativity": -0.0,
+      "conditioned_memory_singlet_fidelity": 0.11111111111111116,
+      "exact_binomial_separable_null_vs_model_alt_5sigma_rule": null,
+      "independent_herald_efficiency_eta": 0.85,
+      "separable_memory_upper_bound_with_same_trusted_eta": 0.3,
+      "storage_coherence_p": 0,
+      "unconditional_reference_singlet_probability": 0.11111111111111116,
+      "witness_positive": false
+    },
+    {
+      "channel_entanglement_negativity": -0.0,
+      "conditioned_memory_singlet_fidelity": 0.11111111111111116,
+      "exact_binomial_separable_null_vs_model_alt_5sigma_rule": null,
+      "independent_herald_efficiency_eta": 1,
+      "separable_memory_upper_bound_with_same_trusted_eta": 0.3333333333333333,
+      "storage_coherence_p": 0,
+      "unconditional_reference_singlet_probability": 0.11111111111111116,
+      "witness_positive": false
+    },
+    {
+      "channel_entanglement_negativity": -0.0,
+      "conditioned_memory_singlet_fidelity": 0.2888888888888891,
+      "exact_binomial_separable_null_vs_model_alt_5sigma_rule": null,
+      "independent_herald_efficiency_eta": 0.6,
+      "separable_memory_upper_bound_with_same_trusted_eta": 0.24444444444444444,
+      "storage_coherence_p": 0.2,
+      "unconditional_reference_singlet_probability": 0.2177777777777779,
+      "witness_positive": false
+    },
+    {
+      "channel_entanglement_negativity": -0.0,
+      "conditioned_memory_singlet_fidelity": 0.2888888888888891,
+      "exact_binomial_separable_null_vs_model_alt_5sigma_rule": null,
+      "independent_herald_efficiency_eta": 0.85,
+      "separable_memory_upper_bound_with_same_trusted_eta": 0.3,
+      "storage_coherence_p": 0.2,
+      "unconditional_reference_singlet_probability": 0.2622222222222224,
+      "witness_positive": false
+    },
+    {
+      "channel_entanglement_negativity": -0.0,
+      "conditioned_memory_singlet_fidelity": 0.2888888888888891,
+      "exact_binomial_separable_null_vs_model_alt_5sigma_rule": null,
+      "independent_herald_efficiency_eta": 1,
+      "separable_memory_upper_bound_with_same_trusted_eta": 0.3333333333333333,
+      "storage_coherence_p": 0.2,
+      "unconditional_reference_singlet_probability": 0.2888888888888891,
+      "witness_positive": false
+    },
+    {
+      "channel_entanglement_negativity": 5.551115123125784e-17,
+      "conditioned_memory_singlet_fidelity": 0.3333333333333335,
+      "exact_binomial_separable_null_vs_model_alt_5sigma_rule": null,
+      "independent_herald_efficiency_eta": 0.6,
+      "separable_memory_upper_bound_with_same_trusted_eta": 0.24444444444444444,
+      "storage_coherence_p": 0.25,
+      "unconditional_reference_singlet_probability": 0.24444444444444455,
+      "witness_positive": false
+    },
+    {
+      "channel_entanglement_negativity": 5.551115123125784e-17,
+      "conditioned_memory_singlet_fidelity": 0.3333333333333335,
+      "exact_binomial_separable_null_vs_model_alt_5sigma_rule": null,
+      "independent_herald_efficiency_eta": 0.85,
+      "separable_memory_upper_bound_with_same_trusted_eta": 0.3,
+      "storage_coherence_p": 0.25,
+      "unconditional_reference_singlet_probability": 0.3000000000000001,
+      "witness_positive": false
+    },
+    {
+      "channel_entanglement_negativity": 5.551115123125784e-17,
+      "conditioned_memory_singlet_fidelity": 0.3333333333333335,
+      "exact_binomial_separable_null_vs_model_alt_5sigma_rule": null,
+      "independent_herald_efficiency_eta": 1,
+      "separable_memory_upper_bound_with_same_trusted_eta": 0.3333333333333333,
+      "storage_coherence_p": 0.25,
+      "unconditional_reference_singlet_probability": 0.3333333333333335,
+      "witness_positive": false
+    },
+    {
+      "channel_entanglement_negativity": 0.0666666666666667,
+      "conditioned_memory_singlet_fidelity": 0.377777777777778,
+      "exact_binomial_separable_null_vs_model_alt_5sigma_rule": {
+        "false_negative": 2.855744731174686e-07,
+        "false_positive": 2.7677980151725066e-07,
+        "n": 26924,
+        "threshold": 6937
+      },
+      "independent_herald_efficiency_eta": 0.6,
+      "separable_memory_upper_bound_with_same_trusted_eta": 0.24444444444444444,
+      "storage_coherence_p": 0.3,
+      "unconditional_reference_singlet_probability": 0.27111111111111125,
+      "witness_positive": true
+    },
+    {
+      "channel_entanglement_negativity": 0.0666666666666667,
+      "conditioned_memory_singlet_fidelity": 0.377777777777778,
+      "exact_binomial_separable_null_vs_model_alt_5sigma_rule": {
+        "false_negative": 2.846416303725972e-07,
+        "false_positive": 2.797794268750224e-07,
+        "n": 15220,
+        "threshold": 4851
+      },
+      "independent_herald_efficiency_eta": 0.85,
+      "separable_memory_upper_bound_with_same_trusted_eta": 0.3,
+      "storage_coherence_p": 0.3,
+      "unconditional_reference_singlet_probability": 0.33777777777777795,
+      "witness_positive": true
+    },
+    {
+      "channel_entanglement_negativity": 0.0666666666666667,
+      "conditioned_memory_singlet_fidelity": 0.377777777777778,
+      "exact_binomial_separable_null_vs_model_alt_5sigma_rule": {
+        "false_negative": 2.77529378057866e-07,
+        "false_positive": 2.796191552153747e-07,
+        "n": 11610,
+        "threshold": 4126
+      },
+      "independent_herald_efficiency_eta": 1,
+      "separable_memory_upper_bound_with_same_trusted_eta": 0.3333333333333333,
+      "storage_coherence_p": 0.3,
+      "unconditional_reference_singlet_probability": 0.377777777777778,
+      "witness_positive": true
+    },
+    {
+      "channel_entanglement_negativity": 0.3333333333333335,
+      "conditioned_memory_singlet_fidelity": 0.5555555555555558,
+      "exact_binomial_separable_null_vs_model_alt_5sigma_rule": {
+        "false_negative": 2.58191127566839e-07,
+        "false_positive": 2.3781927624018288e-07,
+        "n": 1201,
+        "threshold": 371
+      },
+      "independent_herald_efficiency_eta": 0.6,
+      "separable_memory_upper_bound_with_same_trusted_eta": 0.24444444444444444,
+      "storage_coherence_p": 0.5,
+      "unconditional_reference_singlet_probability": 0.37777777777777793,
+      "witness_positive": true
+    },
+    {
+      "channel_entanglement_negativity": 0.3333333333333335,
+      "conditioned_memory_singlet_fidelity": 0.5555555555555558,
+      "exact_binomial_separable_null_vs_model_alt_5sigma_rule": {
+        "false_negative": 2.596887674700962e-07,
+        "false_positive": 2.5984304281098714e-07,
+        "n": 660,
+        "threshold": 259
+      },
+      "independent_herald_efficiency_eta": 0.85,
+      "separable_memory_upper_bound_with_same_trusted_eta": 0.3,
+      "storage_coherence_p": 0.5,
+      "unconditional_reference_singlet_probability": 0.4888888888888891,
+      "witness_positive": true
+    },
+    {
+      "channel_entanglement_negativity": 0.3333333333333335,
+      "conditioned_memory_singlet_fidelity": 0.5555555555555558,
+      "exact_binomial_separable_null_vs_model_alt_5sigma_rule": {
+        "false_negative": 2.859601733168946e-07,
+        "false_positive": 2.2580288848445318e-07,
+        "n": 491,
+        "threshold": 218
+      },
+      "independent_herald_efficiency_eta": 1,
+      "separable_memory_upper_bound_with_same_trusted_eta": 0.3333333333333333,
+      "storage_coherence_p": 0.5,
+      "unconditional_reference_singlet_probability": 0.5555555555555558,
+      "witness_positive": true
+    },
+    {
+      "channel_entanglement_negativity": 0.4666666666666668,
+      "conditioned_memory_singlet_fidelity": 0.6444444444444448,
+      "exact_binomial_separable_null_vs_model_alt_5sigma_rule": {
+        "false_negative": 2.7633138323243953e-07,
+        "false_positive": 2.349530584666519e-07,
+        "n": 631,
+        "threshold": 211
+      },
+      "independent_herald_efficiency_eta": 0.6,
+      "separable_memory_upper_bound_with_same_trusted_eta": 0.24444444444444444,
+      "storage_coherence_p": 0.6,
+      "unconditional_reference_singlet_probability": 0.43111111111111133,
+      "witness_positive": true
+    },
+    {
+      "channel_entanglement_negativity": 0.4666666666666668,
+      "conditioned_memory_singlet_fidelity": 0.6444444444444448,
+      "exact_binomial_separable_null_vs_model_alt_5sigma_rule": {
+        "false_negative": 2.2272052695320773e-07,
+        "false_positive": 2.5566400542070334e-07,
+        "n": 342,
+        "threshold": 147
+      },
+      "independent_herald_efficiency_eta": 0.85,
+      "separable_memory_upper_bound_with_same_trusted_eta": 0.3,
+      "storage_coherence_p": 0.6,
+      "unconditional_reference_singlet_probability": 0.5644444444444447,
+      "witness_positive": true
+    },
+    {
+      "channel_entanglement_negativity": 0.4666666666666668,
+      "conditioned_memory_singlet_fidelity": 0.6444444444444448,
+      "exact_binomial_separable_null_vs_model_alt_5sigma_rule": {
+        "false_negative": 2.0661532314105341e-07,
+        "false_positive": 2.0949968541110872e-07,
+        "n": 251,
+        "threshold": 123
+      },
+      "independent_herald_efficiency_eta": 1,
+      "separable_memory_upper_bound_with_same_trusted_eta": 0.3333333333333333,
+      "storage_coherence_p": 0.6,
+      "unconditional_reference_singlet_probability": 0.6444444444444448,
+      "witness_positive": true
+    },
+    {
+      "channel_entanglement_negativity": 0.7333333333333336,
+      "conditioned_memory_singlet_fidelity": 0.8222222222222227,
+      "exact_binomial_separable_null_vs_model_alt_5sigma_rule": {
+        "false_negative": 2.276838201580615e-07,
+        "false_positive": 2.2041548068820725e-07,
+        "n": 267,
+        "threshold": 103
+      },
+      "independent_herald_efficiency_eta": 0.6,
+      "separable_memory_upper_bound_with_same_trusted_eta": 0.24444444444444444,
+      "storage_coherence_p": 0.8,
+      "unconditional_reference_singlet_probability": 0.537777777777778,
+      "witness_positive": true
+    },
+    {
+      "channel_entanglement_negativity": 0.7333333333333336,
+      "conditioned_memory_singlet_fidelity": 0.8222222222222227,
+      "exact_binomial_separable_null_vs_model_alt_5sigma_rule": {
+        "false_negative": 1.6672195869047985e-07,
+        "false_positive": 2.3875825673589876e-07,
+        "n": 135,
+        "threshold": 69
+      },
+      "independent_herald_efficiency_eta": 0.85,
+      "separable_memory_upper_bound_with_same_trusted_eta": 0.3,
+      "storage_coherence_p": 0.8,
+      "unconditional_reference_singlet_probability": 0.715555555555556,
+      "witness_positive": true
+    },
+    {
+      "channel_entanglement_negativity": 0.7333333333333336,
+      "conditioned_memory_singlet_fidelity": 0.8222222222222227,
+      "exact_binomial_separable_null_vs_model_alt_5sigma_rule": {
+        "false_negative": 1.9711831644633603e-07,
+        "false_positive": 2.0050357613524943e-07,
+        "n": 90,
+        "threshold": 54
+      },
+      "independent_herald_efficiency_eta": 1,
+      "separable_memory_upper_bound_with_same_trusted_eta": 0.3333333333333333,
+      "storage_coherence_p": 0.8,
+      "unconditional_reference_singlet_probability": 0.8222222222222227,
+      "witness_positive": true
+    },
+    {
+      "channel_entanglement_negativity": 1.0000000000000002,
+      "conditioned_memory_singlet_fidelity": 1.0000000000000007,
+      "exact_binomial_separable_null_vs_model_alt_5sigma_rule": {
+        "false_negative": 2.0627704534520917e-07,
+        "false_positive": 1.7430557373045343e-07,
+        "n": 145,
+        "threshold": 64
+      },
+      "independent_herald_efficiency_eta": 0.6,
+      "separable_memory_upper_bound_with_same_trusted_eta": 0.24444444444444444,
+      "storage_coherence_p": 1,
+      "unconditional_reference_singlet_probability": 0.6444444444444448,
+      "witness_positive": true
+    },
+    {
+      "channel_entanglement_negativity": 1.0000000000000002,
+      "conditioned_memory_singlet_fidelity": 1.0000000000000007,
+      "exact_binomial_separable_null_vs_model_alt_5sigma_rule": {
+        "false_negative": 1.8129871252197405e-07,
+        "false_positive": 1.6254602100554373e-07,
+        "n": 63,
+        "threshold": 39
+      },
+      "independent_herald_efficiency_eta": 0.85,
+      "separable_memory_upper_bound_with_same_trusted_eta": 0.3,
+      "storage_coherence_p": 1,
+      "unconditional_reference_singlet_probability": 0.8666666666666673,
+      "witness_positive": true
+    },
+    {
+      "channel_entanglement_negativity": 1.0000000000000002,
+      "conditioned_memory_singlet_fidelity": 1.0000000000000007,
+      "exact_binomial_separable_null_vs_model_alt_5sigma_rule": {
+        "false_negative": 0.0,
+        "false_positive": 2.0907515812876892e-07,
+        "n": 14,
+        "threshold": 14
+      },
+      "independent_herald_efficiency_eta": 1,
+      "separable_memory_upper_bound_with_same_trusted_eta": 0.3333333333333333,
+      "storage_coherence_p": 1,
+      "unconditional_reference_singlet_probability": 1.0000000000000007,
+      "witness_positive": true
+    }
+  ],
+  "physics_boundary": "Quantum memory via SWAP is a textbook example. This explicitly separates stored quantum coherence from classical-only environment memory in a three-time instrument. NOT a single photon past/future self-entanglement measurement or proof of retrocausality.",
+  "quantum_coherent_memory_negativity": 1.0000000000000002,
+  "quantum_storage_NPT_iff_p_greater_than_one_quarter": true,
+  "quantum_storage_depolarizing_fidelity_formula": "(1+8p)/9",
+  "qutrit_separable_memory_singlet_fraction_upper_bound": 0.3333333333333333,
+  "recovered_R_output_fidelity_classical_dephased_memory": 0.33333333333333354,
+  "recovered_R_output_fidelity_markovian_no_quantum_memory": 0.11111111111111113,
+  "recovered_R_output_fidelity_quantum_coherent_memory": 1.0000000000000007,
+  "status": "PASS_THREE_TIME_RESET_IMMUNE_QUANTUM_MEMORY_VS_CLASSICAL_EB_FALSIFIER",
+  "witness_operational_requirements": "trusted maximally entangled reference, verified EB reset, no unmonitored quantum bypass, independently calibrated state-independent heralding eta; joint R-S singlet measurement."
+}
