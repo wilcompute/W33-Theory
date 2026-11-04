@@ -1,0 +1,702 @@
+{
+  "attempted_seeds": 33,
+  "audit_boundary": "Not a globally minimal condition number. Eigenspectra are floating calculations; cycle ranks and load checks are exact. Pi-flux counts are exact integers.",
+  "best": {
+    "condition_number": 1272.3109928271904,
+    "load_histogram": {
+      "3": 9,
+      "4": 134,
+      "5": 17
+    },
+    "max_eigenvalue": 23.14273100286238,
+    "max_flag_load": 5,
+    "min_nonzero_eigenvalue": 0.01818952373541718,
+    "nonzero_hoppings": 1896,
+    "pi_flux_triangles": 752,
+    "seed": 33,
+    "selected_apartment_indices": [
+      536,
+      816,
+      783,
+      227,
+      127,
+      1375,
+      1275,
+      1014,
+      929,
+      1379,
+      497,
+      426,
+      236,
+      1470,
+      674,
+      1546,
+      683,
+      149,
+      1404,
+      1150,
+      108,
+      338,
+      1081,
+      612,
+      980,
+      1595,
+      565,
+      1376,
+      545,
+      136,
+      221,
+      1202,
+      867,
+      402,
+      412,
+      1128,
+      1069,
+      182,
+      1033,
+      1309,
+      1419,
+      864,
+      1015,
+      1381,
+      1078,
+      1509,
+      1225,
+      1184,
+      210,
+      191,
+      1325,
+      146,
+      462,
+      1437,
+      398,
+      881,
+      93,
+      653,
+      791,
+      1046,
+      557,
+      930,
+      732,
+      779,
+      676,
+      1136,
+      446,
+      595,
+      392,
+      1245,
+      1441,
+      121,
+      974,
+      701,
+      1217,
+      66,
+      840,
+      661,
+      252,
+      212,
+      5
+    ],
+    "triangle_count": 5264
+  },
+  "best_seed": 33,
+  "experiment": "33 deterministic basis seeds, all 81 cycles and GF2 independent, maximum load five",
+  "improvement_factor": 270.21636915386756,
+  "original": {
+    "condition_number": 343799.2569163158,
+    "load_histogram": {
+      "3": 9,
+      "4": 134,
+      "5": 17
+    },
+    "max_eigenvalue": 23.296365271236077,
+    "max_flag_load": 5,
+    "min_nonzero_eigenvalue": 6.77615346821609e-05,
+    "nonzero_hoppings": 1883,
+    "pi_flux_triangles": 780,
+    "seed": 1,
+    "selected_apartment_indices": [
+      1329,
+      458,
+      323,
+      622,
+      61,
+      774,
+      176,
+      997,
+      601,
+      1392,
+      562,
+      1432,
+      1209,
+      821,
+      1520,
+      118,
+      239,
+      617,
+      1114,
+      994,
+      822,
+      156,
+      885,
+      1355,
+      717,
+      1574,
+      1458,
+      256,
+      298,
+      198,
+      1366,
+      1590,
+      1273,
+      595,
+      1206,
+      1015,
+      443,
+      5,
+      819,
+      1039,
+      653,
+      1514,
+      124,
+      773,
+      1562,
+      1365,
+      1218,
+      1283,
+      1347,
+      275,
+      414,
+      1459,
+      85,
+      1446,
+      981,
+      305,
+      188,
+      495,
+      548,
+      703,
+      1539,
+      1252,
+      1166,
+      254,
+      75,
+      1337,
+      263,
+      1396,
+      1609,
+      1124,
+      506,
+      711,
+      74,
+      411,
+      1320,
+      1154,
+      1240,
+      771,
+      1447,
+      865,
+      346
+    ],
+    "triangle_count": 5250
+  },
+  "original_seed": 1,
+  "search_results": [
+    {
+      "condition_number": 343799.2569163158,
+      "load_histogram": {
+        "3": 9,
+        "4": 134,
+        "5": 17
+      },
+      "max_eigenvalue": 23.296365271236077,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 6.77615346821609e-05,
+      "nonzero_hoppings": 1883,
+      "pi_flux_triangles": 780,
+      "seed": 1,
+      "triangle_count": 5250
+    },
+    {
+      "condition_number": 77453.85226903294,
+      "load_histogram": {
+        "3": 9,
+        "4": 134,
+        "5": 17
+      },
+      "max_eigenvalue": 23.134301150038695,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.0002986849649476775,
+      "nonzero_hoppings": 1938,
+      "pi_flux_triangles": 829,
+      "seed": 2,
+      "triangle_count": 5393
+    },
+    {
+      "condition_number": 13995.506655038365,
+      "load_histogram": {
+        "3": 13,
+        "4": 126,
+        "5": 21
+      },
+      "max_eigenvalue": 24.841346883016847,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.0017749515966307653,
+      "nonzero_hoppings": 1888,
+      "pi_flux_triangles": 748,
+      "seed": 3,
+      "triangle_count": 5251
+    },
+    {
+      "condition_number": 21182.112124245414,
+      "load_histogram": {
+        "3": 9,
+        "4": 134,
+        "5": 17
+      },
+      "max_eigenvalue": 21.677237013982662,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.0010233746704215827,
+      "nonzero_hoppings": 1951,
+      "pi_flux_triangles": 898,
+      "seed": 4,
+      "triangle_count": 5480
+    },
+    {
+      "condition_number": 2444070.972560407,
+      "load_histogram": {
+        "3": 11,
+        "4": 130,
+        "5": 19
+      },
+      "max_eigenvalue": 23.009005070755038,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 9.414213142366656e-06,
+      "nonzero_hoppings": 1916,
+      "pi_flux_triangles": 879,
+      "seed": 5,
+      "triangle_count": 5419
+    },
+    {
+      "condition_number": 8592.20438289644,
+      "load_histogram": {
+        "3": 12,
+        "4": 128,
+        "5": 20
+      },
+      "max_eigenvalue": 23.153135102242704,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.002694667639462943,
+      "nonzero_hoppings": 1914,
+      "pi_flux_triangles": 804,
+      "seed": 6,
+      "triangle_count": 5337
+    },
+    {
+      "condition_number": 26690.080156689204,
+      "load_histogram": {
+        "3": 11,
+        "4": 130,
+        "5": 19
+      },
+      "max_eigenvalue": 22.84485991287368,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.0008559307345185393,
+      "nonzero_hoppings": 1944,
+      "pi_flux_triangles": 806,
+      "seed": 7,
+      "triangle_count": 5346
+    },
+    {
+      "condition_number": 28539.410893387754,
+      "load_histogram": {
+        "3": 8,
+        "4": 136,
+        "5": 16
+      },
+      "max_eigenvalue": 22.78056845315969,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.0007982143898575594,
+      "nonzero_hoppings": 1932,
+      "pi_flux_triangles": 795,
+      "seed": 8,
+      "triangle_count": 5355
+    },
+    {
+      "condition_number": 30486.61525095423,
+      "load_histogram": {
+        "3": 7,
+        "4": 138,
+        "5": 15
+      },
+      "max_eigenvalue": 23.456314263943643,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.0007693971295553862,
+      "nonzero_hoppings": 1904,
+      "pi_flux_triangles": 794,
+      "seed": 9,
+      "triangle_count": 5287
+    },
+    {
+      "condition_number": 782221.9073902094,
+      "load_histogram": {
+        "3": 12,
+        "4": 128,
+        "5": 20
+      },
+      "max_eigenvalue": 23.336960411976573,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 2.9834194352645495e-05,
+      "nonzero_hoppings": 1938,
+      "pi_flux_triangles": 823,
+      "seed": 10,
+      "triangle_count": 5388
+    },
+    {
+      "condition_number": 174214.5035313186,
+      "load_histogram": {
+        "3": 9,
+        "4": 134,
+        "5": 17
+      },
+      "max_eigenvalue": 22.75422574581892,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.00013061039858675363,
+      "nonzero_hoppings": 1935,
+      "pi_flux_triangles": 811,
+      "seed": 11,
+      "triangle_count": 5339
+    },
+    {
+      "condition_number": 2471.703567680067,
+      "load_histogram": {
+        "3": 7,
+        "4": 138,
+        "5": 15
+      },
+      "max_eigenvalue": 23.505840652644455,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.009509975613583372,
+      "nonzero_hoppings": 1926,
+      "pi_flux_triangles": 809,
+      "seed": 12,
+      "triangle_count": 5363
+    },
+    {
+      "condition_number": 39653.35536513137,
+      "load_histogram": {
+        "3": 12,
+        "4": 128,
+        "5": 20
+      },
+      "max_eigenvalue": 22.41350082928162,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.0005652359207158198,
+      "nonzero_hoppings": 1924,
+      "pi_flux_triangles": 823,
+      "seed": 13,
+      "triangle_count": 5355
+    },
+    {
+      "condition_number": 71764.07559640857,
+      "load_histogram": {
+        "3": 9,
+        "4": 134,
+        "5": 17
+      },
+      "max_eigenvalue": 22.00080372236154,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.00030657126897434134,
+      "nonzero_hoppings": 1940,
+      "pi_flux_triangles": 862,
+      "seed": 14,
+      "triangle_count": 5436
+    },
+    {
+      "condition_number": 95438.50594773394,
+      "load_histogram": {
+        "3": 10,
+        "4": 132,
+        "5": 18
+      },
+      "max_eigenvalue": 22.84682689670821,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.00023938793540230057,
+      "nonzero_hoppings": 1934,
+      "pi_flux_triangles": 782,
+      "seed": 15,
+      "triangle_count": 5335
+    },
+    {
+      "condition_number": 96541.81970931687,
+      "load_histogram": {
+        "3": 13,
+        "4": 126,
+        "5": 21
+      },
+      "max_eigenvalue": 22.85448847021516,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.00023673148630333474,
+      "nonzero_hoppings": 1911,
+      "pi_flux_triangles": 826,
+      "seed": 16,
+      "triangle_count": 5357
+    },
+    {
+      "condition_number": 42551.38227175508,
+      "load_histogram": {
+        "3": 9,
+        "4": 134,
+        "5": 17
+      },
+      "max_eigenvalue": 23.227002126218906,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.0005458577579896063,
+      "nonzero_hoppings": 1942,
+      "pi_flux_triangles": 846,
+      "seed": 17,
+      "triangle_count": 5401
+    },
+    {
+      "condition_number": 548836.2746880298,
+      "load_histogram": {
+        "3": 15,
+        "4": 122,
+        "5": 23
+      },
+      "max_eigenvalue": 23.801396080238014,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 4.3367024334838716e-05,
+      "nonzero_hoppings": 1905,
+      "pi_flux_triangles": 750,
+      "seed": 18,
+      "triangle_count": 5274
+    },
+    {
+      "condition_number": 32182.79471668994,
+      "load_histogram": {
+        "3": 8,
+        "4": 136,
+        "5": 16
+      },
+      "max_eigenvalue": 23.361814332334887,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.0007259100565377404,
+      "nonzero_hoppings": 1939,
+      "pi_flux_triangles": 796,
+      "seed": 19,
+      "triangle_count": 5342
+    },
+    {
+      "condition_number": 30219.833787755095,
+      "load_histogram": {
+        "3": 9,
+        "4": 134,
+        "5": 17
+      },
+      "max_eigenvalue": 22.44067937631807,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.0007425811648709632,
+      "nonzero_hoppings": 1942,
+      "pi_flux_triangles": 833,
+      "seed": 20,
+      "triangle_count": 5402
+    },
+    {
+      "condition_number": 206907.26240309383,
+      "load_histogram": {
+        "3": 10,
+        "4": 132,
+        "5": 18
+      },
+      "max_eigenvalue": 22.18779415239579,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.00010723545367474748,
+      "nonzero_hoppings": 1953,
+      "pi_flux_triangles": 883,
+      "seed": 21,
+      "triangle_count": 5488
+    },
+    {
+      "condition_number": 23683129.523777798,
+      "load_histogram": {
+        "3": 7,
+        "4": 138,
+        "5": 15
+      },
+      "max_eigenvalue": 22.548816237526086,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 9.521045863000131e-07,
+      "nonzero_hoppings": 1927,
+      "pi_flux_triangles": 808,
+      "seed": 22,
+      "triangle_count": 5368
+    },
+    {
+      "condition_number": 38319.513792744154,
+      "load_histogram": {
+        "3": 8,
+        "4": 136,
+        "5": 16
+      },
+      "max_eigenvalue": 22.916171781316248,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.0005980287721097195,
+      "nonzero_hoppings": 1921,
+      "pi_flux_triangles": 671,
+      "seed": 23,
+      "triangle_count": 5227
+    },
+    {
+      "condition_number": 24031.86904908881,
+      "load_histogram": {
+        "3": 11,
+        "4": 130,
+        "5": 19
+      },
+      "max_eigenvalue": 23.015683348927706,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.0009577150783367956,
+      "nonzero_hoppings": 1919,
+      "pi_flux_triangles": 804,
+      "seed": 24,
+      "triangle_count": 5317
+    },
+    {
+      "condition_number": 46740.1509031901,
+      "load_histogram": {
+        "3": 13,
+        "4": 126,
+        "5": 21
+      },
+      "max_eigenvalue": 22.356624702981073,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.0004783173411075828,
+      "nonzero_hoppings": 1933,
+      "pi_flux_triangles": 805,
+      "seed": 25,
+      "triangle_count": 5346
+    },
+    {
+      "condition_number": 7344.745240796415,
+      "load_histogram": {
+        "3": 7,
+        "4": 138,
+        "5": 15
+      },
+      "max_eigenvalue": 23.735892862013863,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.0032316836164953356,
+      "nonzero_hoppings": 1890,
+      "pi_flux_triangles": 793,
+      "seed": 26,
+      "triangle_count": 5287
+    },
+    {
+      "condition_number": 49739.79630417124,
+      "load_histogram": {
+        "3": 10,
+        "4": 132,
+        "5": 18
+      },
+      "max_eigenvalue": 22.664310750956016,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.0004556574902791743,
+      "nonzero_hoppings": 1931,
+      "pi_flux_triangles": 852,
+      "seed": 27,
+      "triangle_count": 5406
+    },
+    {
+      "condition_number": 45394.37090882277,
+      "load_histogram": {
+        "3": 10,
+        "4": 132,
+        "5": 18
+      },
+      "max_eigenvalue": 22.278868391497458,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.0004907848251988305,
+      "nonzero_hoppings": 1916,
+      "pi_flux_triangles": 784,
+      "seed": 28,
+      "triangle_count": 5317
+    },
+    {
+      "condition_number": 20615.249047987338,
+      "load_histogram": {
+        "3": 11,
+        "4": 130,
+        "5": 19
+      },
+      "max_eigenvalue": 22.98887449620775,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.0011151393050210154,
+      "nonzero_hoppings": 1922,
+      "pi_flux_triangles": 861,
+      "seed": 29,
+      "triangle_count": 5387
+    },
+    {
+      "condition_number": 137411.7974235783,
+      "load_histogram": {
+        "3": 12,
+        "4": 128,
+        "5": 20
+      },
+      "max_eigenvalue": 23.802227087840567,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.0001732182209542685,
+      "nonzero_hoppings": 1929,
+      "pi_flux_triangles": 802,
+      "seed": 30,
+      "triangle_count": 5344
+    },
+    {
+      "condition_number": 19733.867692092077,
+      "load_histogram": {
+        "3": 9,
+        "4": 134,
+        "5": 17
+      },
+      "max_eigenvalue": 23.319827562194327,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.0011817160186768276,
+      "nonzero_hoppings": 1920,
+      "pi_flux_triangles": 772,
+      "seed": 31,
+      "triangle_count": 5305
+    },
+    {
+      "condition_number": 20637.610069589995,
+      "load_histogram": {
+        "3": 11,
+        "4": 130,
+        "5": 19
+      },
+      "max_eigenvalue": 22.88795199924629,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.001109040820233939,
+      "nonzero_hoppings": 1954,
+      "pi_flux_triangles": 894,
+      "seed": 32,
+      "triangle_count": 5448
+    },
+    {
+      "condition_number": 1272.3109928271904,
+      "load_histogram": {
+        "3": 9,
+        "4": 134,
+        "5": 17
+      },
+      "max_eigenvalue": 23.14273100286238,
+      "max_flag_load": 5,
+      "min_nonzero_eigenvalue": 0.01818952373541718,
+      "nonzero_hoppings": 1896,
+      "pi_flux_triangles": 752,
+      "seed": 33,
+      "triangle_count": 5264
+    }
+  ],
+  "status": "PASS_SEED33_SAMPLED_SPECTRAL_PARETO_IMPROVEMENT"
+}

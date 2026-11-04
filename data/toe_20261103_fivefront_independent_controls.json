@@ -1,0 +1,96 @@
+{
+  "chiral_anomaly": {
+    "E6_branching": "27=16_1+10_-2+1_4",
+    "SO10_squared_U1_anomaly": 0,
+    "SU5_cubic_anomaly": 0,
+    "U1_cubic_anomaly": 0,
+    "U1_gravitational_anomaly": 0,
+    "allowed_cubic_charge_channels": [
+      "16*16*10",
+      "10*10*1"
+    ],
+    "boundary": "27bar is separately anomaly-free; finite geometry has not selected chirality, generations or Yukawa values."
+  },
+  "continuum": {
+    "boundary": "Finite-diameter q-family does not alone supply bounded-valence spatial refinement or a Lorentzian metric.",
+    "eigenvalue_max": 23.296365271236102,
+    "eigenvalue_min": 6.77615346809669e-05,
+    "flag_graph_diameter_histogram": {
+      "4": 160
+    },
+    "graph_degree": 6,
+    "nonzero_band_condition_number": 343799.2569223741,
+    "selected_H_max_offdiagonal_degree": 31
+  },
+  "exact_checks": {
+    "H_cut_decoupled": true,
+    "local_Gauss_closure_only": true
+  },
+  "gravity_nonclosure": {
+    "bracket_on_gauss_zero": -7,
+    "edge_overlap": 1,
+    "gauss_norm": 0,
+    "i": 0,
+    "j": 15
+  },
+  "hardware": {
+    "boundary": "Not yet a compiled control circuit; programmable signs, loss, engineering margins unverified.",
+    "coupling_histogram": {
+      "-1": 796,
+      "-2": 155,
+      "-3": 54,
+      "-4": 7,
+      "1": 779,
+      "2": 84,
+      "3": 7,
+      "4": 1
+    },
+    "modes": 160,
+    "negative_couplings": 1012,
+    "negative_cycle_gauge_obstruction": true,
+    "nonzero_undirected_couplings": 1883,
+    "pi_flux_triangle_witness": {
+      "flag_indices": [
+        0,
+        1,
+        2
+      ],
+      "hoppings": [
+        -1,
+        -2,
+        -1
+      ]
+    },
+    "pi_flux_triangles": 780,
+    "positive_couplings": 871,
+    "signed_triangles_total": 5250,
+    "single_defect_leakage_coefficient": "lambda^2*81*79/160^2",
+    "time_evolution": [
+      {
+        "leading_order": 2.499609375e-07,
+        "leakage": 2.4995723815656354e-07,
+        "time": 0.02
+      },
+      {
+        "leading_order": 9.9984375e-07,
+        "leakage": 9.997845621115179e-07,
+        "time": 0.04
+      },
+      {
+        "leading_order": 3.999375e-06,
+        "leakage": 3.998428096591521e-06,
+        "time": 0.08
+      }
+    ]
+  },
+  "physical_claims": "No full TOE, no Einstein algebra, no continuum, no measured masses, no experiment.",
+  "source": "Independent re-evaluation on local worktree of W33 cycle construction",
+  "status": "PASS_FINITE_FIVE_FRONT_CONTROLS",
+  "symmetry": {
+    "boundary": "A non-scalar operator on the irreducible Steinberg representation cannot commute with the full group.",
+    "max_relative_H_change": 0.9533574143967537,
+    "min_relative_H_change": 0.8911655527207364,
+    "selected_basis_stabilizers": 0,
+    "symplectic_transvections": 40
+  }
+}
