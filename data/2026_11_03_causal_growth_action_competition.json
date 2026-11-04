@@ -1,0 +1,182 @@
+{
+  "status": "PASS_EXACT_CSG_NORMALIZATION_AND_HELDOUT_CAUSAL_FALSIFIER",
+  "source": "Rideout-Sorkin CSG transitive-percolation t_k=t**k, p=t/(1+t), \u03bb(varpi,m)=t^m (1+t)^(varpi-m), \u03bb(n,0)=(1+t)^n.",
+  "exact_transition": "A specified precursor/downset of size varpi, with m maximal elements, has probability p**m*(1-p)**(n-varpi). Derived from independent prior-event links and transitive closure.",
+  "normalized_exact_predecessor_posets": "4-element antichain, chain and 2+2, at 4 different p values; sums 1.",
+  "scan_p_only_by_training_density": [
+    {
+      "p": 0.002,
+      "train_mean_comparable": 0.0021395735524256656,
+      "train_mean_height": 2.21875,
+      "train_density_abs_error": 0.0996253368979308
+    },
+    {
+      "p": 0.004,
+      "train_mean_comparable": 0.003924589201877934,
+      "train_mean_height": 2.46875,
+      "train_density_abs_error": 0.09784032124847852
+    },
+    {
+      "p": 0.006,
+      "train_mean_comparable": 0.006675469483568074,
+      "train_mean_height": 2.875,
+      "train_density_abs_error": 0.09508944096678838
+    },
+    {
+      "p": 0.008,
+      "train_mean_comparable": 0.008668329420970266,
+      "train_mean_height": 3.1875,
+      "train_density_abs_error": 0.0930965810293862
+    },
+    {
+      "p": 0.01,
+      "train_mean_comparable": 0.013522104851330204,
+      "train_mean_height": 3.84375,
+      "train_density_abs_error": 0.08824280559902625
+    },
+    {
+      "p": 0.015,
+      "train_mean_comparable": 0.022618348982785603,
+      "train_mean_height": 4.34375,
+      "train_density_abs_error": 0.07914656146757086
+    },
+    {
+      "p": 0.02,
+      "train_mean_comparable": 0.03318172926447575,
+      "train_mean_height": 5.0,
+      "train_density_abs_error": 0.06858318118588072
+    },
+    {
+      "p": 0.025,
+      "train_mean_comparable": 0.045835778560250395,
+      "train_mean_height": 5.40625,
+      "train_density_abs_error": 0.055929131890106065
+    },
+    {
+      "p": 0.03,
+      "train_mean_comparable": 0.06911433881064163,
+      "train_mean_height": 6.1875,
+      "train_density_abs_error": 0.032650571639714826
+    },
+    {
+      "p": 0.04,
+      "train_mean_comparable": 0.11179577464788731,
+      "train_mean_height": 7.125,
+      "train_density_abs_error": 0.010030864197530853
+    },
+    {
+      "p": 0.055,
+      "train_mean_comparable": 0.1916691118935837,
+      "train_mean_height": 8.625,
+      "train_density_abs_error": 0.08990420144322725
+    },
+    {
+      "p": 0.075,
+      "train_mean_comparable": 0.3141260758998435,
+      "train_mean_height": 10.34375,
+      "train_density_abs_error": 0.21236116544948702
+    },
+    {
+      "p": 0.1,
+      "train_mean_comparable": 0.44762323943661975,
+      "train_mean_height": 12.71875,
+      "train_density_abs_error": 0.3458583289862633
+    },
+    {
+      "p": 0.15,
+      "train_mean_comparable": 0.638424295774648,
+      "train_mean_height": 16.6875,
+      "train_density_abs_error": 0.5366593853242916
+    },
+    {
+      "p": 0.22,
+      "train_mean_comparable": 0.7961781103286385,
+      "train_mean_height": 22.875,
+      "train_density_abs_error": 0.6944131998782821
+    }
+  ],
+  "frozen_p": 0.04,
+  "sprinkling_dimension_4_supplied": true,
+  "n": 72,
+  "target_train": {
+    "mean_density": 0.10176491045035646,
+    "mean_height": 4.166666666666667,
+    "mean_counts_first4": [
+      187.05555555555554,
+      36.0,
+      17.944444444444443,
+      8.444444444444445
+    ],
+    "mean_4d_BDG_bracket": -10.61111111111111
+  },
+  "target_holdout": {
+    "mean_density": 0.09884051785460236,
+    "mean_height": 4.409090909090909,
+    "mean_counts_first4": [
+      183.4090909090909,
+      33.13636363636363,
+      13.954545454545455,
+      8.818181818181818
+    ],
+    "mean_4d_BDG_bracket": 34.09090909090909
+  },
+  "frozen_growth_model_holdout": {
+    "mean_density": 0.10550542840375587,
+    "mean_height": 6.9296875,
+    "mean_counts_first4": [
+      95.4453125,
+      78.6953125,
+      47.6953125,
+      23.609375
+    ],
+    "mean_4d_BDG_bracket": 110.5625
+  },
+  "tilted_D4_BDG_like_action": [
+    {
+      "beta": -0.5,
+      "effective_sample_size": 88.53956786048228,
+      "weighted_density": 0.10038611950952389,
+      "weighted_height": 6.824566332729739,
+      "weighted_action": 165.17966389068914,
+      "action_formula": "4D input: N-N0+9N1-16N2+8N3"
+    },
+    {
+      "beta": -0.2,
+      "effective_sample_size": 120.42764382630415,
+      "weighted_density": 0.10292445567859151,
+      "weighted_height": 6.865123591702104,
+      "weighted_action": 132.76230995598178,
+      "action_formula": "4D input: N-N0+9N1-16N2+8N3"
+    },
+    {
+      "beta": 0.0,
+      "effective_sample_size": 128.0,
+      "weighted_density": 0.10550542840375587,
+      "weighted_height": 6.9296875,
+      "weighted_action": 110.5625,
+      "action_formula": "4D input: N-N0+9N1-16N2+8N3"
+    },
+    {
+      "beta": 0.2,
+      "effective_sample_size": 120.03732821420034,
+      "weighted_density": 0.1088810571296559,
+      "weighted_height": 7.020296853202898,
+      "weighted_action": 87.77418821569793,
+      "action_formula": "4D input: N-N0+9N1-16N2+8N3"
+    },
+    {
+      "beta": 0.5,
+      "effective_sample_size": 84.56078709314731,
+      "weighted_density": 0.11547183832604127,
+      "weighted_height": 7.193536788864739,
+      "weighted_action": 52.34614261617378,
+      "action_formula": "4D input: N-N0+9N1-16N2+8N3"
+    }
+  ],
+  "no_go_scope": "Transitive percolation obeys a classical general-covariant sequential-growth specialization, but choosing p by one causal-density metric does not ensure 4D manifoldlikeness. The 4D interval-action coefficients were chosen by assuming dimension four, so reweighting them cannot establish spontaneous dimension selection.",
+  "sampling_scope": "Finite N=72, finite Monte Carlo ensembles; no finite-size extrapolation, Euclidean action integral, proof of intrinsic causet manifoldlikeness or continuum Einstein equation.",
+  "prior": [
+    "https://doi.org/10.1103/PhysRevD.61.024002",
+    "https://doi.org/10.1007/s41114-019-0023-1"
+  ]
+}

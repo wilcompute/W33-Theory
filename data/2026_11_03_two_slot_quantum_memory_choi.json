@@ -1,0 +1,78 @@
+{
+  "status": "PASS_TWO_SLOT_CP_CAUSAL_PROCESS_MEMORY",
+  "Choi_tensor_factors": "[A_in,A_out,B_in,B_out,F], each dimension2; unnormalized Omega vectors on output-to-channel Choi links",
+  "causal_constraints": "Tr_F T = I_{B_out} tensor T_{A_in A_out B_in}, and Tr_{B_in}T_prev = (I/2)_{A_in} tensor I_{A_out}. Trace full T=4.",
+  "models": {
+    "memoryless_identity": {
+      "min_Choi_eigenvalue": -2.1697511642483452e-16,
+      "Choi_trace": 4.0,
+      "max_later_output_no_signalling_defect": 0.0,
+      "initial_state_trace_rule_defect": 0.0,
+      "Choi_rank": 2
+    },
+    "coherent_S_E_swap": {
+      "min_Choi_eigenvalue": -2.685637015843452e-17,
+      "Choi_trace": 4.000000000000001,
+      "max_later_output_no_signalling_defect": 0.0,
+      "initial_state_trace_rule_defect": 1.1102230246251565e-16,
+      "Choi_rank": 2
+    }
+  },
+  "two_slot_break_responses": [
+    {
+      "first_reprepared_bit_a": 0,
+      "causal_break_reprepared_bit_b": 0,
+      "Markov_final_distribution": [
+        1.0,
+        0.0
+      ],
+      "SWAP_memory_final_distribution": [
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "first_reprepared_bit_a": 0,
+      "causal_break_reprepared_bit_b": 1,
+      "Markov_final_distribution": [
+        0.0,
+        1.0
+      ],
+      "SWAP_memory_final_distribution": [
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "first_reprepared_bit_a": 1,
+      "causal_break_reprepared_bit_b": 0,
+      "Markov_final_distribution": [
+        1.0,
+        0.0
+      ],
+      "SWAP_memory_final_distribution": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "first_reprepared_bit_a": 1,
+      "causal_break_reprepared_bit_b": 1,
+      "Markov_final_distribution": [
+        0.0,
+        1.0
+      ],
+      "SWAP_memory_final_distribution": [
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "operational_witness": "At the second-slot replacement causal break, F=b for identity (first-slot choice erased), while F=a for SWAP environmental memory (the first-slot choice bypasses the break). Both obey same one-way causal order.",
+  "prior_art": "Standard process tensor constructions and environmental memory, not a novel QFT; existing repo PASS11042 covers related one-slot qutrit instrument dependence. Distinct additional result: explicit 2-intervention qubit comb Choi with causal trace rules.",
+  "scope": "Models have predetermined time ordering; no indefinite-causal-order gravity, curved spacetime, stress tensor, graviton or Planck-scale observable.",
+  "source": [
+    "https://doi.org/10.1103/PRXQuantum.3.020344",
+    "https://doi.org/10.1103/PRXQUANTUM.2.030201"
+  ]
+}

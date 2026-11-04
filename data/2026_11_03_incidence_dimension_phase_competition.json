@@ -1,0 +1,160 @@
+{
+  "status": "PASS_DIMENSION_SELECTION_TOY_ACTION_PHASE_BANDS_AND_DETAILED_BALANCE",
+  "candidate_family": "Periodic hypercubic complexes with D independent coordinate directions, cycle lengths>=3. Each vertex has E/V=D undirected edges and F_square/V=binom(D,2) geometric elementary square 2-cells.",
+  "declared_energy": "E_D/V=a(E/V)+b(F_square/V)=aD+bD(D-1)/2 with b>0; axes are prespecified by candidate dimension.",
+  "dimension_3_unique_ground_state_iff": "-3b < a < -2b",
+  "dimension_4_unique_ground_state_iff": "-4b < a < -3b",
+  "exact_discrete_energy_difference": "E_(D+1)/V-E_D/V = a+bD",
+  "stochastic_rule": "Global D -> D\u00b11 proposals symmetric probability 1/2 (out-of-range stays); Metropolis accept min(1,exp(-(e_new-e_old)/T)); verified equilibrium Boltzmann frequencies for D=1..6.",
+  "phase_scan": [
+    {
+      "a": -2.5,
+      "b": 1.0,
+      "temperature": 0.3,
+      "stationary_exact": [
+        0.0009220001238398411,
+        0.13683695107203772,
+        0.7244818759875579,
+        0.13683695107203772,
+        0.0009220001238398411,
+        2.2162068702610995e-07
+      ],
+      "stationary_measured": [
+        0.000575,
+        0.1360875,
+        0.722825,
+        0.1395375,
+        0.000975,
+        0.0
+      ],
+      "max_absolute_frequency_error": 0.0027005489279622874,
+      "expected_mode": 3,
+      "metropolis_acceptance": 0.274597253439085
+    },
+    {
+      "a": -3.5,
+      "b": 1.0,
+      "temperature": 0.3,
+      "stationary_exact": [
+        2.2162068702610995e-07,
+        0.0009220001238398411,
+        0.13683695107203772,
+        0.7244818759875579,
+        0.13683695107203772,
+        0.0009220001238398411
+      ],
+      "stationary_measured": [
+        0.0,
+        0.000875,
+        0.1350625,
+        0.725875,
+        0.137325,
+        0.0008625
+      ],
+      "max_absolute_frequency_error": 0.0017744510720377193,
+      "expected_mode": 4,
+      "metropolis_acceptance": 0.2754569958920395
+    },
+    {
+      "a": -3.0,
+      "b": 1.0,
+      "temperature": 0.3,
+      "stationary_exact": [
+        2.1917099388686514e-05,
+        0.017221842894328706,
+        0.48275624000628264,
+        0.48275624000628264,
+        0.017221842894328706,
+        2.1917099388686514e-05
+      ],
+      "stationary_measured": [
+        0.0,
+        0.016625,
+        0.481075,
+        0.484825,
+        0.017475,
+        0.0
+      ],
+      "max_absolute_frequency_error": 0.0020687599937173617,
+      "expected_mode": 3,
+      "metropolis_acceptance": 0.5148117647058823
+    },
+    {
+      "a": 0.0,
+      "b": 1.0,
+      "temperature": 0.3,
+      "stationary_exact": [
+        0.9655124780911252,
+        0.03444368572011197,
+        4.383419869013978e-05,
+        1.9900695417271514e-09,
+        3.223110246260314e-15,
+        1.862232045325523e-22
+      ],
+      "stationary_measured": [
+        0.9643875,
+        0.0355875,
+        2.5e-05,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_absolute_frequency_error": 0.0011438142798880294,
+      "expected_mode": 1,
+      "metropolis_acceptance": 0.06830823497490164
+    },
+    {
+      "a": -2.9,
+      "b": 1.0,
+      "temperature": 0.3,
+      "stationary_exact": [
+        4.9546169720270806e-05,
+        0.02789599167191833,
+        0.5603059707352502,
+        0.4014767715332485,
+        0.010262361827188527,
+        9.358062674208255e-06
+      ],
+      "stationary_measured": [
+        5e-05,
+        0.0275125,
+        0.5632625,
+        0.397775,
+        0.0114,
+        0.0
+      ],
+      "max_absolute_frequency_error": 0.0037017715332485213,
+      "expected_mode": 3,
+      "metropolis_acceptance": 0.439899292932858
+    },
+    {
+      "a": -3.1,
+      "b": 1.0,
+      "temperature": 0.3,
+      "stationary_exact": [
+        9.358062674208274e-06,
+        0.010262361827188498,
+        0.40147677153324857,
+        0.5603059707352503,
+        0.02789599167191824,
+        4.9546169720270894e-05
+      ],
+      "stationary_measured": [
+        3.75e-05,
+        0.009275,
+        0.402325,
+        0.5605625,
+        0.0277625,
+        3.75e-05
+      ],
+      "max_absolute_frequency_error": 0.0009873618271884974,
+      "expected_mode": 4,
+      "metropolis_acceptance": 0.4419069805748709
+    }
+  ],
+  "no_go_scope": "This explicitly supplied local cell-count action can select d=4 only in a chosen coupling interval. Selecting a in that interval is not a prediction. Moving D globally is not a strictly local graph rewrite; the model does not describe dynamical triangulations, manifoldlikeness or gravitational path-integral entropy.",
+  "physical_scope": "No Lorentzian metric, selection of three spatial plus time dimensions, gravity, graviton or Planck length generated. Cubical candidate family fixes D for each state rather than finding D from an unconstrained network.",
+  "inspiration": [
+    "https://doi.org/10.1103/ljx7-qpqp"
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "status": "PASS_TRANSMUTATION_ABSOLUTE_SCALE_NONIDENTIFIABILITY",
+  "benchmark": "1+1D asymptotically free four-fermion mean-field regularization, two independent dimensionless bare couplings with a shared freely chosen UV cutoff.",
+  "sharp_cutoff_mass_formula": "m=Lambda/sqrt(exp(2pi/g_bare\u00b2)-1)",
+  "inverse_fit": "g_bare\u00b2=2pi/log(1+(Lambda/m)^2), for arbitrary Lambda>m. Two measured masses and two unconstrained couplings do not identify Lambda.",
+  "two_target_masses_unitless": [
+    0.001,
+    1.0
+  ],
+  "distinct_cutoff_identical_spectra": [
+    {
+      "arbitrary_reference_cutoff_in_target_units": 2.0,
+      "bare_couplings_squared_to_fit_two_masses": [
+        0.41331836826574264,
+        3.903962531662343
+      ],
+      "reproduced_mass_pair": [
+        0.0009999999999999998,
+        1.0000000000000002
+      ]
+    },
+    {
+      "arbitrary_reference_cutoff_in_target_units": 10.0,
+      "bare_couplings_squared_to_fit_two_masses": [
+        0.34109408827529125,
+        1.3614347196896182
+      ],
+      "reproduced_mass_pair": [
+        0.0010000000000000005,
+        0.9999999999999998
+      ]
+    },
+    {
+      "arbitrary_reference_cutoff_in_target_units": 100.0,
+      "bare_couplings_squared_to_fit_two_masses": [
+        0.2728752707671832,
+        0.6821807706076217
+      ],
+      "reproduced_mass_pair": [
+        0.0010000000000000007,
+        0.9999999999999996
+      ]
+    },
+    {
+      "arbitrary_reference_cutoff_in_target_units": 1000.0,
+      "bare_couplings_squared_to_fit_two_masses": [
+        0.22739605897363196,
+        0.45479208502834806
+      ],
+      "reproduced_mass_pair": [
+        0.0009999999999999996,
+        1.0000000000000002
+      ]
+    },
+    {
+      "arbitrary_reference_cutoff_in_target_units": 1000000.0,
+      "bare_couplings_squared_to_fit_two_masses": [
+        0.15159737264909348,
+        0.22739605897363196
+      ],
+      "reproduced_mass_pair": [
+        0.0010000000000000007,
+        0.9999999999999996
+      ]
+    }
+  ],
+  "common_bare_coupling_no_go": "For common Lambda and common positive g_bare\u00b2, the mass function is strictly increasing in g_bare\u00b2; two different target masses cannot be reproduced.",
+  "continuum_one_loop_mass": "m=mu*exp(-pi/gR\u00b2(mu))",
+  "continuum_beta_gR_squared": "d(gR\u00b2)/d ln(mu)=-(gR\u00b2)^2/pi",
+  "RG_invariance_tests": [
+    {
+      "renormalization_scale_mu": 1.0,
+      "running_gR_squared": 0.3410940884604603,
+      "RG_invariant_gap": 9.999999999999991e-05
+    },
+    {
+      "renormalization_scale_mu": 2.0,
+      "running_gR_squared": 0.31722084133738127,
+      "RG_invariant_gap": 0.00010000000000000009
+    },
+    {
+      "renormalization_scale_mu": 5.0,
+      "running_gR_squared": 0.29035647228708633,
+      "RG_invariant_gap": 9.999999999999999e-05
+    },
+    {
+      "renormalization_scale_mu": 10.0,
+      "running_gR_squared": 0.27287527076836826,
+      "RG_invariant_gap": 9.999999999999998e-05
+    },
+    {
+      "renormalization_scale_mu": 100.0,
+      "running_gR_squared": 0.22739605897364024,
+      "RG_invariant_gap": 0.00010000000000000003
+    },
+    {
+      "renormalization_scale_mu": 1000.0,
+      "running_gR_squared": 0.19491090769169162,
+      "RG_invariant_gap": 9.999999999999994e-05
+    }
+  ],
+  "naive_m4_vacuum_energy_ratio": 1000000000000.0,
+  "radiative_warning": "m^4 is a dimensional estimate for a threshold contribution, not a calculated renormalized cosmological constant; a gravitational vacuum counterterm and observable subtraction scheme must be specified.",
+  "core_no_go": "A dimensionless graph or interaction gap cannot fix an absolute meter, GeV, Planck scale or Newton constant without an external physical datum or a separate dimensionful dynamical reference. Scale invariance of the parameter family explicitly witnesses underidentification.",
+  "prior_project": "analysis/2026_11_03_marginal_gap_scale_comparison.py already owns an independently normalized lattice-Dirac gap benchmark; this certificate adds exact inverse maps for two masses and a compensated RG-running invariance test.",
+  "source": [
+    "https://doi.org/10.1103/PhysRevD.10.3235",
+    "https://doi.org/10.1016/0550-3213(90)90045-F"
+  ]
+}

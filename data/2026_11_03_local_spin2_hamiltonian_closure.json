@@ -1,0 +1,118 @@
+{
+  "status": "PASS_LOCAL_LINEAR_SPIN2_FIRST_CLASS_AND_INHOMOGENEOUS_OBSTRUCTION",
+  "discrete_geometry_given": "3\u00d73\u00d73 spatial periodic Cartesian lattice with central difference operators D_i=(shift_i+-shift_i-)/2. Time evolution is Hamiltonian and not derived from an emergent clock.",
+  "linear_constraints": "H0=\u03a3_i D_i\u00b2 tr(h)\u2212\u03a3_i,j D_iD_j h_ij; Mi=\u03a3_j D_j pi_ij, canonical p_off=2pi_off. Hamiltonian H=0.5 p^T Gp+0.5 h^T Kh using local ADM linear kinetic DeWitt G and spatial Fierz-Pauli quadratic Hessian K.",
+  "local_Fierz_Pauli_potential": "V=1/4 sum_{kij}(D_k h_ij)\u00b2\u22121/2 sum_j(sum_i D_i h_ij)\u00b2+1/2 sum_j(sum_i D_i h_ij) D_j tr h\u22121/4 sum_j(D_j tr h)\u00b2.",
+  "algebraic_closure": "For commuting skew-adjoint D_i: H0 Mi^T=0, H0 G=-2 \u03a3_i D_i Mi, Mi K=0. All local identities. On Fourier k!=0 rank constraints=4 leaving 2 physical configuration modes; k=0 retains 6 global modes.",
+  "commuting_cartesian_control": {
+    "sites": 27,
+    "symmetric_components": 162,
+    "momentum_constraint_rows": 81,
+    "scalar_constraint_rows": 27,
+    "max_scalar_momentum_Poisson_bracket": 0.0,
+    "max_scalar_evolution_minus_momentum_divergence": 0.0,
+    "max_momentum_evolution_residual": 0.0,
+    "derivative_commutator_norms": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "nonzero_and_zero_momentum_sector_tests": [
+    {
+      "momentum": [
+        0,
+        0,
+        0
+      ],
+      "rank_constraints": 0,
+      "remaining_configuration_modes": 6,
+      "hamiltonian_wave_eigenvalues_realparts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_eigenvalue_imag": 0.0
+    },
+    {
+      "momentum": [
+        1,
+        0,
+        0
+      ],
+      "rank_constraints": 4,
+      "remaining_configuration_modes": 2,
+      "hamiltonian_wave_eigenvalues_realparts": [
+        0.0,
+        0.0,
+        0.0,
+        1.4098659758759608e-33,
+        0.75,
+        0.7500000000000001
+      ],
+      "max_eigenvalue_imag": 0.0
+    },
+    {
+      "momentum": [
+        1,
+        1,
+        0
+      ],
+      "rank_constraints": 4,
+      "remaining_configuration_modes": 2,
+      "hamiltonian_wave_eigenvalues_realparts": [
+        -1.5511274137546001e-16,
+        -9.011174320678666e-17,
+        -5.701126988957661e-17,
+        2.8197319517519216e-33,
+        1.5,
+        1.5000000000000002
+      ],
+      "max_eigenvalue_imag": 1.268407193332646e-08
+    },
+    {
+      "momentum": [
+        1,
+        1,
+        1
+      ],
+      "rank_constraints": 4,
+      "remaining_configuration_modes": 2,
+      "hamiltonian_wave_eigenvalues_realparts": [
+        -1.8965786615469042e-16,
+        3.0853727727693575e-17,
+        4.079561971446804e-17,
+        3.15925395336619e-16,
+        2.249999999999999,
+        2.250000000000001
+      ],
+      "max_eigenvalue_imag": 7.052964837891581e-09
+    }
+  ],
+  "inhomogeneous_local_skew_derivative_defect": {
+    "sites": 27,
+    "symmetric_components": 162,
+    "momentum_constraint_rows": 81,
+    "scalar_constraint_rows": 27,
+    "max_scalar_momentum_Poisson_bracket": 0.05990756835937494,
+    "max_scalar_evolution_minus_momentum_divergence": 2.220446049250313e-16,
+    "max_momentum_evolution_residual": 0.038977294921875,
+    "derivative_commutator_norms": [
+      0.3221755271781209,
+      0.0,
+      0.0
+    ]
+  },
+  "important_limit": "A valid *linear*, locally first-class spin-2 positive control on a GIVEN flat periodic spatial lattice. No emergent 3-space, Lorentzian metric dynamics, nonlinear hypersurface deformation algebra or universal matter coupling. The modulated skew derivative failure is for this specific naive prescription, not a general curved discrete-gravity no-go.",
+  "prior_repo": [
+    "analysis/w33_pass11968_native_spin2_constraint_completion.py",
+    "analysis/2026_11_03_alternative_torus_spin2_controls.py"
+  ],
+  "literature": [
+    "https://doi.org/10.1103/PhysRev.135.B1049",
+    "https://doi.org/10.1103/PhysRevD.96.084048"
+  ]
+}
