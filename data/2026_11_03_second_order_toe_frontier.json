@@ -1,0 +1,274 @@
+{
+  "date": "2026-11-03",
+  "status": "PASS_FIVE_SECOND_ORDER_TOE_CONTROLS",
+  "baseline_commit": "94ee11b997c448f310327c4a80902500b4173ba7",
+  "SU2_nonabelian_discrete_Bianchi": {
+    "status": "PASS",
+    "face_count": 6,
+    "noncommuting_group": "SU(2)",
+    "six_transport_face_Bianchi_residual": 8.566306200735732e-16,
+    "deliberately_untransported_face_product_defect": 1.6242945434773859,
+    "maximum_gauge_covariance_error": 1.1322097734007351e-15,
+    "largest_nontrivial_rooted_face_holonomy": 2.5845105094945815,
+    "boundary": "Nonabelian cube gauge Bianchi identity; NOT gravitational Levi-Civita Bianchi or first-class ADM constraints."
+  },
+  "causal_fixed_coupling_finite_size_drift": {
+    "status": "PASS",
+    "frozen_p": 0.05,
+    "training_only_n": 48,
+    "training_target_density": 0.10161790780141844,
+    "train_candidate_grid": [
+      0.006,
+      0.01,
+      0.014,
+      0.018,
+      0.022,
+      0.028,
+      0.034,
+      0.042,
+      0.05,
+      0.06,
+      0.075,
+      0.09
+    ],
+    "train_null_densities": [
+      0.006648936170212767,
+      0.011593016912165851,
+      0.016503000545553734,
+      0.02509547190398255,
+      0.030482815057283143,
+      0.04350791052918712,
+      0.06059056192034916,
+      0.08367430441898528,
+      0.1050531914893617,
+      0.14157119476268412,
+      0.2189034369885434,
+      0.3109656301145663
+    ],
+    "finite_size": [
+      {
+        "n": 32,
+        "reference_density": 0.10040322580645161,
+        "reference_height": 3.3,
+        "growth_density": 0.08203405017921146,
+        "growth_height": 4.288888888888889
+      },
+      {
+        "n": 48,
+        "reference_density": 0.09967494089834515,
+        "reference_height": 3.9,
+        "growth_density": 0.10908195429472022,
+        "growth_height": 5.7555555555555555
+      },
+      {
+        "n": 72,
+        "reference_density": 0.09357068335941578,
+        "reference_height": 4.133333333333334,
+        "growth_density": 0.1583550686837072,
+        "growth_height": 8.155555555555555
+      },
+      {
+        "n": 96,
+        "reference_density": 0.09918128654970762,
+        "reference_height": 4.866666666666666,
+        "growth_density": 0.2288791423001949,
+        "growth_height": 10.555555555555555
+      }
+    ],
+    "reference_density_change": -0.0012219392567439924,
+    "growth_density_change": 0.14684509212098346,
+    "theory_four_d_density": 0.1,
+    "boundary": "Only one fixed p from N=48; 30/45 independent replicas per N=32,48,72,96. Rejects its scale stability as a 4D Alexandrov-order model, not causal-set quantum gravity in general."
+  },
+  "mixed_dimension_simplicial_cone": {
+    "status": "PASS",
+    "initial_sphere": {
+      "fvector": [
+        6,
+        12,
+        8,
+        0
+      ],
+      "betti": [
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    "final_three_ball": {
+      "fvector": [
+        7,
+        18,
+        20,
+        8
+      ],
+      "betti": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "total_subsets": 256,
+    "partial_mixed_dimensional_states": 254,
+    "pure_endpoints": 2,
+    "distribution_by_tetra_count_and_beta2": [
+      {
+        "tetra": 0,
+        "betti2": 1,
+        "count": 1
+      },
+      {
+        "tetra": 1,
+        "betti2": 1,
+        "count": 8
+      },
+      {
+        "tetra": 2,
+        "betti2": 1,
+        "count": 28
+      },
+      {
+        "tetra": 3,
+        "betti2": 1,
+        "count": 48
+      },
+      {
+        "tetra": 3,
+        "betti2": 2,
+        "count": 8
+      },
+      {
+        "tetra": 4,
+        "betti2": 1,
+        "count": 38
+      },
+      {
+        "tetra": 4,
+        "betti2": 2,
+        "count": 30
+      },
+      {
+        "tetra": 4,
+        "betti2": 4,
+        "count": 2
+      },
+      {
+        "tetra": 5,
+        "betti2": 1,
+        "count": 24
+      },
+      {
+        "tetra": 5,
+        "betti2": 2,
+        "count": 24
+      },
+      {
+        "tetra": 5,
+        "betti2": 3,
+        "count": 8
+      },
+      {
+        "tetra": 6,
+        "betti2": 1,
+        "count": 12
+      },
+      {
+        "tetra": 6,
+        "betti2": 2,
+        "count": 16
+      },
+      {
+        "tetra": 7,
+        "betti2": 1,
+        "count": 8
+      },
+      {
+        "tetra": 8,
+        "betti2": 0,
+        "count": 1
+      }
+    ],
+    "topology_boundary": "Attaching 3-simplices over existing 2-faces changes local topological dimension but passes through nonpure complexes. At all-eight endpoint topology becomes a 3-ball with boundary, not closed spacetime. This does not prove dimension selection."
+  },
+  "interacting_matter_universal_coupling": {
+    "status": "PASS",
+    "interaction": "V_int=g phi^2 chi^2/2",
+    "split": "T_A uses alpha V_int, T_B uses (1-alpha) V_int",
+    "on_shell_div_TA": [
+      "g((alpha-1)phi chi^2 partial^nu phi + alpha phi^2 chi partial^nu chi)"
+    ],
+    "on_shell_div_TB": "minus divergence T_A",
+    "independent_species_not_conserved": true,
+    "total_tensor_conserved": true,
+    "weighted_tensor_divergence": "(kappa_A-kappa_B) Q^nu",
+    "explicit_Q_upper_t_x": [
+      -174,
+      42
+    ],
+    "nonuniversal_kappa1_kappa2": [
+      1,
+      2
+    ],
+    "nonuniversal_weighted_divergence": [
+      174,
+      -42
+    ],
+    "universal_weighted_divergence": [
+      0,
+      0
+    ],
+    "boundary": "Exact classical on-shell coupled 1+1D field identity. An arbitrary split of interaction energy means species-only couplings are not individually invariant; demonstrates conservation-driven universal total-stress coupling requirement, not an emergent graviton or full quantum Ward theorem."
+  },
+  "nongeometric_commutator_graph_inference": {
+    "status": "PASS",
+    "hilbert_dimension": 32,
+    "sites": 5,
+    "supplied_hamiltonian": "sum_(i<j) J_ij X_i X_j + sum_i h_i Z_i",
+    "reconstruction_formula": "J_ij = Tr(Y_i Y_j [Z_j,[H,Z_i]])/(4*2^n)",
+    "inferred_signed_couplings": {
+      "0-1": 0.5,
+      "0-4": 0.9000000000000001,
+      "1-2": -0.75,
+      "2-3": 0.8333333333333333,
+      "3-4": -0.875
+    },
+    "maximum_pair_operator_reconstruction_error": 1.1102230246251565e-16,
+    "third_body_false_positive_double_commutator_norm": 27.152900397563428,
+    "third_body_exact_pair_projection": 0.0,
+    "local_Z_gauge_transformed_couplings": {
+      "0-1": -0.5,
+      "0-4": -0.9000000000000001,
+      "1-2": -0.75,
+      "2-3": 0.8333333333333333,
+      "3-4": -0.875
+    },
+    "boundary": "Commutator derivatives identify pair coefficients only in supplied qubit tensor factors and Pauli axes. Unknown operators with higher-body support need basis-resolved tomography. A local conjugation changes coupling signs. Locality not derived from abstract algebra alone."
+  },
+  "bonus_W33_single_excitation_operator_bridge": {
+    "status": "PASS",
+    "projective_points": 40,
+    "regular_degree": 12,
+    "edges": 240,
+    "graph_parameters": [
+      40,
+      12,
+      2,
+      4
+    ],
+    "tested_matrix_commutators": 50,
+    "maximum_operator_residual": 0.0,
+    "exact_all_pairs_matrix_unit_identity": "For i!=j, [P_j,[H,P_i]]=H_ij |i><j| + H_ji |j><i|",
+    "reconstructed_graph": "The W(3,3) adjacency, GIVEN as a 40-mode Hamiltonian, is identifiable from mode-occupancy commutators in the single-excitation sector.",
+    "boundary": "40 W33 modes and adjacency hopping were supplied. This experiment does not select W33 from a free information algebra, infer absolute coupling energy, establish photonic gate universality or produce gravitational locality."
+  },
+  "conclusion": "Five exact or seeded computational stress tests. They constrain, but do not construct, an emergent TOE. In particular no first-class curved spin-2 gravitational Hamiltonian, closed dimension-selected 3+1D Lorentzian phase or derived Planck scale.",
+  "literature": [
+    "https://doi.org/10.1103/PhysRevD.91.124034",
+    "https://doi.org/10.1007/s41114-019-0023-1",
+    "https://link.springer.com/article/10.1007/s00454-026-00818-w",
+    "https://doi.org/10.1103/PhysRev.135.B1049",
+    "https://doi.org/10.1103/n242-m1l2"
+  ]
+}
