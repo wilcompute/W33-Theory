@@ -1,0 +1,403 @@
+{
+  "Markovian_quantum_process_tensor_can_be_entangled_across_temporal_link": true,
+  "classical_memory_scope": "A trusted entangled reference tests whether a channel is entanglement-breaking. A hidden memory model allowing arbitrary quantum ancilla, postselection or measurement-context dependence is not excluded. Conversely 2025/26 literature cautions that entanglement-breaking temporal processes can retain nonclassical temporal correlations in other tests.",
+  "entanglement_witness": "Normalized Choi singlet fraction F=Tr(Phi J)>1/3 excludes entanglement-breaking qutrit channel, with a prepared maximally entangled ancilla reference and trusted tomography.",
+  "individual_link_NPT_iff_t_greater_than": 0.25,
+  "intermediate_intervention_set": [
+    "identity",
+    "cyclic_X",
+    "dephase",
+    "reprepare_zero"
+  ],
+  "link_Choi_dimension": 9,
+  "link_analytical_negativity": "max(0,(4t-1)/3)",
+  "no_classical_memory_witness_from_only_unconditional_populations": true,
+  "per_link_analytical_F": "(1+8t)/9",
+  "physical_limitation": "No explicit single photon experiment constructed: preparing a qutrit entangled reference, carrying reference through three times, closing loss loopholes and process-tensor tomography require independent experimental engineering. This is a memoryless Markov comb toy, not retrocausality.",
+  "prior_art": "Process-tensor formalism Pollock et al PRL2018; quantum non-Markovianity; recent Di Pietra et al accepted PRL 21 Oct2026 temporal witnesses; Vieira Ku Budroni 2025 entanglement-breaking temporal processes.",
+  "product_process_tensor_dimension": 81,
+  "quantum_links": 2,
+  "status": "PASS_EXPLICIT_THREE_TIME_QUTRIT_CHOIS_INTERVENTIONS_MARKOV_CONTROL",
+  "system_dimension": 3,
+  "t_sweep_with_four_interventions": [
+    {
+      "both_links_NPT_but_end_to_end_identity_entanglement_broken": false,
+      "each_link_Choi_singlet_fraction": 0.11111111111111113,
+      "each_link_entanglement_negativity": 0.0,
+      "intermediate_interventions": {
+        "cyclic_X": {
+          "Choi_entanglement_negativity": 0.0,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": false,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.11111111111111113
+        },
+        "dephase": {
+          "Choi_entanglement_negativity": 0.0,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": false,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.11111111111111113
+        },
+        "identity": {
+          "Choi_entanglement_negativity": 0.0,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": false,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.11111111111111113
+        },
+        "reprepare_zero": {
+          "Choi_entanglement_negativity": 0.0,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": false,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.11111111111111113
+        }
+      },
+      "step_depolarizing_transmission_t": 0,
+      "three_time_2link_process_tensor_is_Markov_product": true
+    },
+    {
+      "both_links_NPT_but_end_to_end_identity_entanglement_broken": false,
+      "each_link_Choi_singlet_fraction": 0.3244444444444445,
+      "each_link_entanglement_negativity": 0.0,
+      "intermediate_interventions": {
+        "cyclic_X": {
+          "Choi_entanglement_negativity": 0.0,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": false,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.10471111111111112
+        },
+        "dephase": {
+          "Choi_entanglement_negativity": 0.0,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": false,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.12391111111111114
+        },
+        "identity": {
+          "Choi_entanglement_negativity": 0.0,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": false,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.16231111111111113
+        },
+        "reprepare_zero": {
+          "Choi_entanglement_negativity": 0.0,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": false,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.11111111111111113
+        }
+      },
+      "step_depolarizing_transmission_t": 0.24,
+      "three_time_2link_process_tensor_is_Markov_product": true
+    },
+    {
+      "both_links_NPT_but_end_to_end_identity_entanglement_broken": true,
+      "each_link_Choi_singlet_fraction": 0.3422222222222223,
+      "each_link_entanglement_negativity": 0.013333333333333364,
+      "intermediate_interventions": {
+        "cyclic_X": {
+          "Choi_entanglement_negativity": 0.0,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": false,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.10360000000000003
+        },
+        "dephase": {
+          "Choi_entanglement_negativity": 0.0,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": false,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.12613333333333338
+        },
+        "identity": {
+          "Choi_entanglement_negativity": 0.0,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": false,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.17120000000000005
+        },
+        "reprepare_zero": {
+          "Choi_entanglement_negativity": 0.0,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": false,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.11111111111111112
+        }
+      },
+      "step_depolarizing_transmission_t": 0.26,
+      "three_time_2link_process_tensor_is_Markov_product": true
+    },
+    {
+      "both_links_NPT_but_end_to_end_identity_entanglement_broken": true,
+      "each_link_Choi_singlet_fraction": 0.5111111111111112,
+      "each_link_entanglement_negativity": 0.2666666666666666,
+      "intermediate_interventions": {
+        "cyclic_X": {
+          "Choi_entanglement_negativity": 0.0,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": false,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.08861111111111114
+        },
+        "dephase": {
+          "Choi_entanglement_negativity": 0.0,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": false,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.15611111111111112
+        },
+        "identity": {
+          "Choi_entanglement_negativity": 0.0,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": false,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.2911111111111112
+        },
+        "reprepare_zero": {
+          "Choi_entanglement_negativity": 0.0,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": false,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.11111111111111113
+        }
+      },
+      "step_depolarizing_transmission_t": 0.45,
+      "three_time_2link_process_tensor_is_Markov_product": true
+    },
+    {
+      "both_links_NPT_but_end_to_end_identity_entanglement_broken": true,
+      "each_link_Choi_singlet_fraction": 0.5555555555555557,
+      "each_link_entanglement_negativity": 0.3333333333333333,
+      "intermediate_interventions": {
+        "cyclic_X": {
+          "Choi_entanglement_negativity": 2.7755575615628914e-17,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": false,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.08333333333333334
+        },
+        "dephase": {
+          "Choi_entanglement_negativity": 0.0,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": false,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.16666666666666669
+        },
+        "identity": {
+          "Choi_entanglement_negativity": 3.469446951953614e-17,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": false,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.33333333333333337
+        },
+        "reprepare_zero": {
+          "Choi_entanglement_negativity": 0.0,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": false,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.1111111111111111
+        }
+      },
+      "step_depolarizing_transmission_t": 0.5,
+      "three_time_2link_process_tensor_is_Markov_product": true
+    },
+    {
+      "both_links_NPT_but_end_to_end_identity_entanglement_broken": false,
+      "each_link_Choi_singlet_fraction": 0.6444444444444446,
+      "each_link_entanglement_negativity": 0.4666666666666667,
+      "intermediate_interventions": {
+        "cyclic_X": {
+          "Choi_entanglement_negativity": 0.14666666666666672,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": true,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.07111111111111112
+        },
+        "dephase": {
+          "Choi_entanglement_negativity": 0.0,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": false,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.19111111111111112
+        },
+        "identity": {
+          "Choi_entanglement_negativity": 0.14666666666666672,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": true,
+          "identity_reference_witness_F_gt_one_third": true,
+          "singlet_fraction_to_identity": 0.43111111111111117
+        },
+        "reprepare_zero": {
+          "Choi_entanglement_negativity": 0.0,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": false,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.11111111111111112
+        }
+      },
+      "step_depolarizing_transmission_t": 0.6,
+      "three_time_2link_process_tensor_is_Markov_product": true
+    },
+    {
+      "both_links_NPT_but_end_to_end_identity_entanglement_broken": false,
+      "each_link_Choi_singlet_fraction": 0.7777777777777781,
+      "each_link_entanglement_negativity": 0.6666666666666666,
+      "intermediate_interventions": {
+        "cyclic_X": {
+          "Choi_entanglement_negativity": 0.41666666666666674,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": true,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.04861111111111112
+        },
+        "dephase": {
+          "Choi_entanglement_negativity": 0.0,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": false,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.23611111111111116
+        },
+        "identity": {
+          "Choi_entanglement_negativity": 0.41666666666666674,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": true,
+          "identity_reference_witness_F_gt_one_third": true,
+          "singlet_fraction_to_identity": 0.6111111111111113
+        },
+        "reprepare_zero": {
+          "Choi_entanglement_negativity": 0.0,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": false,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.11111111111111115
+        }
+      },
+      "step_depolarizing_transmission_t": 0.75,
+      "three_time_2link_process_tensor_is_Markov_product": true
+    },
+    {
+      "both_links_NPT_but_end_to_end_identity_entanglement_broken": false,
+      "each_link_Choi_singlet_fraction": 1.0000000000000002,
+      "each_link_entanglement_negativity": 1.0,
+      "intermediate_interventions": {
+        "cyclic_X": {
+          "Choi_entanglement_negativity": 1.0,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": true,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.0
+        },
+        "dephase": {
+          "Choi_entanglement_negativity": 0.0,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": false,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.33333333333333337
+        },
+        "identity": {
+          "Choi_entanglement_negativity": 1.0,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": true,
+          "identity_reference_witness_F_gt_one_third": true,
+          "singlet_fraction_to_identity": 1.0000000000000002
+        },
+        "reprepare_zero": {
+          "Choi_entanglement_negativity": 0.0,
+          "channel_entanglement_breaking_excluded_by_any_negative_PT": false,
+          "identity_reference_witness_F_gt_one_third": false,
+          "singlet_fraction_to_identity": 0.11111111111111113
+        }
+      },
+      "step_depolarizing_transmission_t": 1,
+      "three_time_2link_process_tensor_is_Markov_product": true
+    }
+  ],
+  "temporal_NPT_not_equal_nonMarkovian_memory": true,
+  "time_slices": 3,
+  "two_link_analytical_negativity": "max(0,(4*t*t-1)/3)",
+  "two_link_heralded_erasure_controls": [
+    {
+      "both_links_survival_probability": 0.36,
+      "conditioned_on_success_singlet_fraction": 0.2911111111111111,
+      "genuine_process_entanglement_witness_if_ancilla_and_trusted_heralding": false,
+      "naive_unconditioned_threshold_F_gt_third": false,
+      "step_survival_eta": 0.6,
+      "t": 0.45,
+      "unconditioned_accepted_singlet_fraction": 0.10479999999999999
+    },
+    {
+      "both_links_survival_probability": 0.6400000000000001,
+      "conditioned_on_success_singlet_fraction": 0.2911111111111111,
+      "genuine_process_entanglement_witness_if_ancilla_and_trusted_heralding": false,
+      "naive_unconditioned_threshold_F_gt_third": false,
+      "step_survival_eta": 0.8,
+      "t": 0.45,
+      "unconditioned_accepted_singlet_fraction": 0.18631111111111115
+    },
+    {
+      "both_links_survival_probability": 0.9025,
+      "conditioned_on_success_singlet_fraction": 0.2911111111111111,
+      "genuine_process_entanglement_witness_if_ancilla_and_trusted_heralding": false,
+      "naive_unconditioned_threshold_F_gt_third": false,
+      "step_survival_eta": 0.95,
+      "t": 0.45,
+      "unconditioned_accepted_singlet_fraction": 0.2627277777777778
+    },
+    {
+      "both_links_survival_probability": 1,
+      "conditioned_on_success_singlet_fraction": 0.2911111111111111,
+      "genuine_process_entanglement_witness_if_ancilla_and_trusted_heralding": false,
+      "naive_unconditioned_threshold_F_gt_third": false,
+      "step_survival_eta": 1,
+      "t": 0.45,
+      "unconditioned_accepted_singlet_fraction": 0.2911111111111111
+    },
+    {
+      "both_links_survival_probability": 0.36,
+      "conditioned_on_success_singlet_fraction": 0.4311111111111111,
+      "genuine_process_entanglement_witness_if_ancilla_and_trusted_heralding": true,
+      "naive_unconditioned_threshold_F_gt_third": false,
+      "step_survival_eta": 0.6,
+      "t": 0.6,
+      "unconditioned_accepted_singlet_fraction": 0.1552
+    },
+    {
+      "both_links_survival_probability": 0.6400000000000001,
+      "conditioned_on_success_singlet_fraction": 0.4311111111111111,
+      "genuine_process_entanglement_witness_if_ancilla_and_trusted_heralding": true,
+      "naive_unconditioned_threshold_F_gt_third": false,
+      "step_survival_eta": 0.8,
+      "t": 0.6,
+      "unconditioned_accepted_singlet_fraction": 0.27591111111111116
+    },
+    {
+      "both_links_survival_probability": 0.9025,
+      "conditioned_on_success_singlet_fraction": 0.4311111111111111,
+      "genuine_process_entanglement_witness_if_ancilla_and_trusted_heralding": true,
+      "naive_unconditioned_threshold_F_gt_third": true,
+      "step_survival_eta": 0.95,
+      "t": 0.6,
+      "unconditioned_accepted_singlet_fraction": 0.38907777777777774
+    },
+    {
+      "both_links_survival_probability": 1,
+      "conditioned_on_success_singlet_fraction": 0.4311111111111111,
+      "genuine_process_entanglement_witness_if_ancilla_and_trusted_heralding": true,
+      "naive_unconditioned_threshold_F_gt_third": true,
+      "step_survival_eta": 1,
+      "t": 0.6,
+      "unconditioned_accepted_singlet_fraction": 0.4311111111111111
+    },
+    {
+      "both_links_survival_probability": 0.36,
+      "conditioned_on_success_singlet_fraction": 0.6800000000000002,
+      "genuine_process_entanglement_witness_if_ancilla_and_trusted_heralding": true,
+      "naive_unconditioned_threshold_F_gt_third": false,
+      "step_survival_eta": 0.6,
+      "t": 0.8,
+      "unconditioned_accepted_singlet_fraction": 0.24480000000000005
+    },
+    {
+      "both_links_survival_probability": 0.6400000000000001,
+      "conditioned_on_success_singlet_fraction": 0.6800000000000002,
+      "genuine_process_entanglement_witness_if_ancilla_and_trusted_heralding": true,
+      "naive_unconditioned_threshold_F_gt_third": true,
+      "step_survival_eta": 0.8,
+      "t": 0.8,
+      "unconditioned_accepted_singlet_fraction": 0.4352000000000002
+    },
+    {
+      "both_links_survival_probability": 0.9025,
+      "conditioned_on_success_singlet_fraction": 0.6800000000000002,
+      "genuine_process_entanglement_witness_if_ancilla_and_trusted_heralding": true,
+      "naive_unconditioned_threshold_F_gt_third": true,
+      "step_survival_eta": 0.95,
+      "t": 0.8,
+      "unconditioned_accepted_singlet_fraction": 0.6137000000000001
+    },
+    {
+      "both_links_survival_probability": 1,
+      "conditioned_on_success_singlet_fraction": 0.6800000000000002,
+      "genuine_process_entanglement_witness_if_ancilla_and_trusted_heralding": true,
+      "naive_unconditioned_threshold_F_gt_third": true,
+      "step_survival_eta": 1,
+      "t": 0.8,
+      "unconditioned_accepted_singlet_fraction": 0.6800000000000002
+    }
+  ],
+  "two_link_identity_F": "(1+8*t*t)/9",
+  "two_link_identity_process_NPT_iff_t_greater_than": 0.5
+}

@@ -1,0 +1,335 @@
+{
+  "Gauss_generators": "Gv=X_e_before X_e_after",
+  "action_hamiltonian": "H=-K B-g sum_e X_e",
+  "all_Gauss_generators_commute_with_hamiltonian_exact": true,
+  "explicit_h_nonzero_breaks_full_H4_sheet_swap": true,
+  "explicit_local_link_Z_is_gauge_odd_and_expectation_zero": true,
+  "finite_sheet_qubit_has_spontaneous_symmetry_breaking": false,
+  "gauge_invariant_hilbert_dimension_per_C4": 2,
+  "ground_state_Wilson_flux_expectation_for_g_nonzero": "K/sqrt(K^2+16*g^2)",
+  "ground_state_gap": "2*sqrt(K^2+16*g^2) in Gauss+ subspace",
+  "no_dynamical_uniform_pi_selection_without_negative_K_or_frustration": true,
+  "number_of_intersheet_C4_in_previous_icosian_model": 120,
+  "physical_boundaries": "A gauge-theory toy on 120 disconnected independent squares and a SINGLE sheet-choice qubit. Not derived from photonic microscopic Hamiltonian or a four-dimensional local lattice action. No Elitzur-violating gauge-odd order parameter; no genuine macroscopic thermodynamic limit or spontaneous symmetry breaking.",
+  "plaquette_edge_qubits": 4,
+  "plaquette_operator": "B=Z0*Z1*Z2*Z3",
+  "prior_art": "Wegner Z2 lattice gauge theory and Elitzur theorem classical; exact 4-edge plaquette calculation is an operational completion of the 2026-11-04 root-flux scaffold, not a new gauge theory.",
+  "sheet_sweep": [
+    {
+      "exchange_tunnelling_Delta": 0,
+      "explicit_sheet_bias_h": 0,
+      "gap": 0.0,
+      "ground_level_degenerate": true,
+      "sheet_order_parameter_sigma_z": null
+    },
+    {
+      "exchange_tunnelling_Delta": 0,
+      "explicit_sheet_bias_h": 0.05,
+      "gap": 0.1,
+      "ground_level_degenerate": false,
+      "sheet_order_parameter_sigma_z": 1.0
+    },
+    {
+      "exchange_tunnelling_Delta": 0,
+      "explicit_sheet_bias_h": 0.2,
+      "gap": 0.4,
+      "ground_level_degenerate": false,
+      "sheet_order_parameter_sigma_z": 1.0
+    },
+    {
+      "exchange_tunnelling_Delta": 0.02,
+      "explicit_sheet_bias_h": 0,
+      "gap": 0.04,
+      "ground_level_degenerate": false,
+      "sheet_order_parameter_sigma_z": 0.0
+    },
+    {
+      "exchange_tunnelling_Delta": 0.02,
+      "explicit_sheet_bias_h": 0.05,
+      "gap": 0.10770329614269009,
+      "ground_level_degenerate": false,
+      "sheet_order_parameter_sigma_z": 0.9284766908852595
+    },
+    {
+      "exchange_tunnelling_Delta": 0.02,
+      "explicit_sheet_bias_h": 0.2,
+      "gap": 0.4019950248448356,
+      "ground_level_degenerate": false,
+      "sheet_order_parameter_sigma_z": 0.9950371902099888
+    },
+    {
+      "exchange_tunnelling_Delta": 0.25,
+      "explicit_sheet_bias_h": 0,
+      "gap": 0.5,
+      "ground_level_degenerate": false,
+      "sheet_order_parameter_sigma_z": 0.0
+    },
+    {
+      "exchange_tunnelling_Delta": 0.25,
+      "explicit_sheet_bias_h": 0.05,
+      "gap": 0.5099019513592785,
+      "ground_level_degenerate": false,
+      "sheet_order_parameter_sigma_z": 0.19611613513818404
+    },
+    {
+      "exchange_tunnelling_Delta": 0.25,
+      "explicit_sheet_bias_h": 0.2,
+      "gap": 0.6403124237432849,
+      "ground_level_degenerate": false,
+      "sheet_order_parameter_sigma_z": 0.6246950475544246
+    },
+    {
+      "exchange_tunnelling_Delta": 1,
+      "explicit_sheet_bias_h": 0,
+      "gap": 2.0,
+      "ground_level_degenerate": false,
+      "sheet_order_parameter_sigma_z": 0.0
+    },
+    {
+      "exchange_tunnelling_Delta": 1,
+      "explicit_sheet_bias_h": 0.05,
+      "gap": 2.0024984394500787,
+      "ground_level_degenerate": false,
+      "sheet_order_parameter_sigma_z": 0.04993761694389237
+    },
+    {
+      "exchange_tunnelling_Delta": 1,
+      "explicit_sheet_bias_h": 0.2,
+      "gap": 2.039607805437114,
+      "ground_level_degenerate": false,
+      "sheet_order_parameter_sigma_z": 0.19611613513818404
+    }
+  ],
+  "status": "PASS_ACTUAL_GAUSS_COVARIANT_Z2_DYNAMICS_NO_AUTOMATIC_E8_GLUE_SELECTION",
+  "sweep_gauge_flux": [
+    {
+      "K_plaquette_coupling": -2,
+      "flux_expectation": -1.0000000000000004,
+      "g_electric_field": 0,
+      "ground_energy": -2.000000000000001,
+      "ground_flux_for_nonzero_electric_g_is_not_exact_pm_one": false,
+      "ground_link_expectation_zero": true,
+      "physical_gap": 4.000000000000001
+    },
+    {
+      "K_plaquette_coupling": -2,
+      "flux_expectation": -0.9950371902099893,
+      "g_electric_field": 0.05,
+      "ground_energy": -2.009975124224179,
+      "ground_flux_for_nonzero_electric_g_is_not_exact_pm_one": true,
+      "ground_link_expectation_zero": true,
+      "physical_gap": 4.019950248448357
+    },
+    {
+      "K_plaquette_coupling": -2,
+      "flux_expectation": -0.8944271909999162,
+      "g_electric_field": 0.25,
+      "ground_energy": -2.2360679774997907,
+      "ground_flux_for_nonzero_electric_g_is_not_exact_pm_one": true,
+      "ground_link_expectation_zero": true,
+      "physical_gap": 4.4721359549995805
+    },
+    {
+      "K_plaquette_coupling": -2,
+      "flux_expectation": -0.7071067811865479,
+      "g_electric_field": 0.5,
+      "ground_energy": -2.8284271247461907,
+      "ground_flux_for_nonzero_electric_g_is_not_exact_pm_one": true,
+      "ground_link_expectation_zero": true,
+      "physical_gap": 5.656854249492381
+    },
+    {
+      "K_plaquette_coupling": -2,
+      "flux_expectation": -0.4472135954999582,
+      "g_electric_field": 1,
+      "ground_energy": -4.47213595499958,
+      "ground_flux_for_nonzero_electric_g_is_not_exact_pm_one": true,
+      "ground_link_expectation_zero": true,
+      "physical_gap": 8.94427190999916
+    },
+    {
+      "K_plaquette_coupling": -1,
+      "flux_expectation": -1.0000000000000004,
+      "g_electric_field": 0,
+      "ground_energy": -1.0000000000000004,
+      "ground_flux_for_nonzero_electric_g_is_not_exact_pm_one": false,
+      "ground_link_expectation_zero": true,
+      "physical_gap": 2.0000000000000004
+    },
+    {
+      "K_plaquette_coupling": -1,
+      "flux_expectation": -0.9805806756909202,
+      "g_electric_field": 0.05,
+      "ground_energy": -1.0198039027185575,
+      "ground_flux_for_nonzero_electric_g_is_not_exact_pm_one": true,
+      "ground_link_expectation_zero": true,
+      "physical_gap": 2.0396078054371145
+    },
+    {
+      "K_plaquette_coupling": -1,
+      "flux_expectation": -0.7071067811865479,
+      "g_electric_field": 0.25,
+      "ground_energy": -1.4142135623730954,
+      "ground_flux_for_nonzero_electric_g_is_not_exact_pm_one": true,
+      "ground_link_expectation_zero": true,
+      "physical_gap": 2.8284271247461903
+    },
+    {
+      "K_plaquette_coupling": -1,
+      "flux_expectation": -0.4472135954999582,
+      "g_electric_field": 0.5,
+      "ground_energy": -2.23606797749979,
+      "ground_flux_for_nonzero_electric_g_is_not_exact_pm_one": true,
+      "ground_link_expectation_zero": true,
+      "physical_gap": 4.47213595499958
+    },
+    {
+      "K_plaquette_coupling": -1,
+      "flux_expectation": -0.24253562503633336,
+      "g_electric_field": 1,
+      "ground_energy": -4.123105625617661,
+      "ground_flux_for_nonzero_electric_g_is_not_exact_pm_one": true,
+      "ground_link_expectation_zero": true,
+      "physical_gap": 8.246211251235321
+    },
+    {
+      "K_plaquette_coupling": 0.3,
+      "flux_expectation": 1.0,
+      "g_electric_field": 0,
+      "ground_energy": -0.29999999999999993,
+      "ground_flux_for_nonzero_electric_g_is_not_exact_pm_one": false,
+      "ground_link_expectation_zero": true,
+      "physical_gap": 0.6000000000000001
+    },
+    {
+      "K_plaquette_coupling": 0.3,
+      "flux_expectation": 0.8320502943378438,
+      "g_electric_field": 0.05,
+      "ground_energy": -0.36055512754639885,
+      "ground_flux_for_nonzero_electric_g_is_not_exact_pm_one": true,
+      "ground_link_expectation_zero": true,
+      "physical_gap": 0.7211102550927979
+    },
+    {
+      "K_plaquette_coupling": 0.3,
+      "flux_expectation": 0.2873478855663453,
+      "g_electric_field": 0.25,
+      "ground_energy": -1.0440306508910548,
+      "ground_flux_for_nonzero_electric_g_is_not_exact_pm_one": true,
+      "ground_link_expectation_zero": true,
+      "physical_gap": 2.08806130178211
+    },
+    {
+      "K_plaquette_coupling": 0.3,
+      "flux_expectation": 0.14834045293024445,
+      "g_electric_field": 0.5,
+      "ground_energy": -2.022374841615668,
+      "ground_flux_for_nonzero_electric_g_is_not_exact_pm_one": true,
+      "ground_link_expectation_zero": true,
+      "physical_gap": 4.044749683231337
+    },
+    {
+      "K_plaquette_coupling": 0.3,
+      "flux_expectation": 0.07478994824163401,
+      "g_electric_field": 1,
+      "ground_energy": -4.011234224026315,
+      "ground_flux_for_nonzero_electric_g_is_not_exact_pm_one": true,
+      "ground_link_expectation_zero": true,
+      "physical_gap": 8.022468448052631
+    },
+    {
+      "K_plaquette_coupling": 1,
+      "flux_expectation": 1.0,
+      "g_electric_field": 0,
+      "ground_energy": -1.0,
+      "ground_flux_for_nonzero_electric_g_is_not_exact_pm_one": false,
+      "ground_link_expectation_zero": true,
+      "physical_gap": 2.0000000000000004
+    },
+    {
+      "K_plaquette_coupling": 1,
+      "flux_expectation": 0.9805806756909199,
+      "g_electric_field": 0.05,
+      "ground_energy": -1.0198039027185568,
+      "ground_flux_for_nonzero_electric_g_is_not_exact_pm_one": true,
+      "ground_link_expectation_zero": true,
+      "physical_gap": 2.0396078054371145
+    },
+    {
+      "K_plaquette_coupling": 1,
+      "flux_expectation": 0.7071067811865475,
+      "g_electric_field": 0.25,
+      "ground_energy": -1.414213562373095,
+      "ground_flux_for_nonzero_electric_g_is_not_exact_pm_one": true,
+      "ground_link_expectation_zero": true,
+      "physical_gap": 2.8284271247461903
+    },
+    {
+      "K_plaquette_coupling": 1,
+      "flux_expectation": 0.4472135954999577,
+      "g_electric_field": 0.5,
+      "ground_energy": -2.2360679774997894,
+      "ground_flux_for_nonzero_electric_g_is_not_exact_pm_one": true,
+      "ground_link_expectation_zero": true,
+      "physical_gap": 4.47213595499958
+    },
+    {
+      "K_plaquette_coupling": 1,
+      "flux_expectation": 0.24253562503633289,
+      "g_electric_field": 1,
+      "ground_energy": -4.12310562561766,
+      "ground_flux_for_nonzero_electric_g_is_not_exact_pm_one": true,
+      "ground_link_expectation_zero": true,
+      "physical_gap": 8.246211251235321
+    },
+    {
+      "K_plaquette_coupling": 2,
+      "flux_expectation": 1.0,
+      "g_electric_field": 0,
+      "ground_energy": -2.0,
+      "ground_flux_for_nonzero_electric_g_is_not_exact_pm_one": false,
+      "ground_link_expectation_zero": true,
+      "physical_gap": 4.000000000000001
+    },
+    {
+      "K_plaquette_coupling": 2,
+      "flux_expectation": 0.9950371902099888,
+      "g_electric_field": 0.05,
+      "ground_energy": -2.0099751242241783,
+      "ground_flux_for_nonzero_electric_g_is_not_exact_pm_one": true,
+      "ground_link_expectation_zero": true,
+      "physical_gap": 4.019950248448357
+    },
+    {
+      "K_plaquette_coupling": 2,
+      "flux_expectation": 0.8944271909999157,
+      "g_electric_field": 0.25,
+      "ground_energy": -2.23606797749979,
+      "ground_flux_for_nonzero_electric_g_is_not_exact_pm_one": true,
+      "ground_link_expectation_zero": true,
+      "physical_gap": 4.47213595499958
+    },
+    {
+      "K_plaquette_coupling": 2,
+      "flux_expectation": 0.7071067811865475,
+      "g_electric_field": 0.5,
+      "ground_energy": -2.82842712474619,
+      "ground_flux_for_nonzero_electric_g_is_not_exact_pm_one": true,
+      "ground_link_expectation_zero": true,
+      "physical_gap": 5.656854249492381
+    },
+    {
+      "K_plaquette_coupling": 2,
+      "flux_expectation": 0.4472135954999577,
+      "g_electric_field": 1,
+      "ground_energy": -4.472135954999579,
+      "ground_flux_for_nonzero_electric_g_is_not_exact_pm_one": true,
+      "ground_link_expectation_zero": true,
+      "physical_gap": 8.94427190999916
+    }
+  ],
+  "total_physical_gauge_invariant_dimension_for_120_independent_loops": "2^120",
+  "two_glue_exchange_involution": "X interchanges E8+ and E8- sheet labels",
+  "two_glue_sheet_hamiltonian": "H=-Delta X-h Z",
+  "zero_bias_nonzero_Delta_ground_sheet_imbalance": 0
+}

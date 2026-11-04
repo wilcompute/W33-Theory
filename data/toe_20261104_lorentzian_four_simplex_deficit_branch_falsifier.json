@@ -1,0 +1,224 @@
+{
+  "ADM_Hamiltonian_and_momentum_constraint_Poisson_algebra_derived": false,
+  "Lorentzian_metric_diag": [
+    -1,
+    1,
+    1,
+    1
+  ],
+  "actual_Lorentzian_boundary_action_and_variational_principle_completed": false,
+  "all_five_child_coordinate_4_volumes": [
+    0.01666666666666667,
+    0.016666666666666666,
+    0.016666666666666666,
+    0.016666666666666666,
+    0.016666666666666666
+  ],
+  "boundary_vertices": [
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      2.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "exact_Minkowski_embedding_constraint_polynomial": "-11*z0**2/16 - z0*z1/8 + z0*z2/2 + z0*z3/2 + z0*z4/2 - z0 + z1**2/16 + z1/2 - z2**2/4 + z2/2 - z3**2/4 + z3/2 - z4**2/4 + z4/2 + 1/4",
+  "five_interior_squared_interval_variables": [
+    -0.04000000000000001,
+    -2.4400000000000004,
+    0.5600000000000002,
+    0.5600000000000002,
+    0.56
+  ],
+  "flat_all_hinge_rotation_and_boost_deficits_zero_after_oriented_branch": true,
+  "flat_child_simplex_Gram_eigenvalues": [
+    [
+      -2.8168020044529447,
+      0.05680200445294452,
+      0.9999999999999996,
+      1.0000000000000002
+    ],
+    [
+      -0.6186342439892258,
+      0.25863424398922613,
+      1.0,
+      1.0000000000000009
+    ],
+    [
+      -2.902649717445642,
+      0.13532805749054014,
+      0.4073216599551004,
+      1.0
+    ],
+    [
+      -2.902649717445642,
+      0.13532805749054014,
+      0.4073216599551004,
+      1.0
+    ],
+    [
+      -2.9026497174456427,
+      0.1353280574905402,
+      0.40732165995510033,
+      1.0
+    ]
+  ],
+  "flat_constraint_gradient": [
+    0.2000000000000003,
+    0.19999999999999996,
+    0.1999999999999999,
+    0.1999999999999999,
+    0.19999999999999996
+  ],
+  "flat_geometry_interval_constraint_zero": true,
+  "full_rank_four_vertex_motion_Jacobian": [
+    [
+      -0.8,
+      0.4,
+      0.4,
+      0.4
+    ],
+    [
+      3.2,
+      0.4,
+      0.4,
+      0.4
+    ],
+    [
+      -0.8,
+      -1.6,
+      0.4,
+      0.4
+    ],
+    [
+      -0.8,
+      0.4,
+      -1.6,
+      0.4
+    ],
+    [
+      -0.8,
+      0.4,
+      0.4,
+      -1.6
+    ]
+  ],
+  "interior_triangle_hinges": 10,
+  "interior_vertex": [
+    0.4,
+    0.2,
+    0.2,
+    0.2
+  ],
+  "max_naive_spurious_flat_hinge_deficit_abs": 1.3169578969248192,
+  "naive_principal_arccos_produces_spurious_flat_boost_deficit": true,
+  "number_of_4simplices": 5,
+  "off_flat_squared_interval_normal_perturbations": [
+    {
+      "all_five_child_Grams_still_Lorentzian": true,
+      "bulk_hinge_equation_norm": 0.021026813742760345,
+      "formal_complex_bulk_area_times_deficit": [
+        0.03997644864966556,
+        -0.002515111436185336
+      ],
+      "implicit_interval_constraint_residual": 0.000447213595499929,
+      "max_rotation_or_boost_hinge_deficit_abs": 0.017983712297700905,
+      "normal_perturbation_s": 0.001,
+      "spacelike_deficits_boost_rad": [
+        -0.004822395573182092,
+        -0.004822395573182647,
+        -0.00482239557318298
+      ],
+      "timelike_deficits_rotation_rad": [
+        0.009619744549358877,
+        0.003922638531284051,
+        0.003922638531284051,
+        0.003922638531284939,
+        0.017983712297700905,
+        0.017983712297700016,
+        0.017983712297699128
+      ]
+    },
+    {
+      "all_five_child_Grams_still_Lorentzian": true,
+      "bulk_hinge_equation_norm": 0.10196250645502823,
+      "formal_complex_bulk_area_times_deficit": [
+        0.19470571460772595,
+        -0.012577113122885314
+      ],
+      "implicit_interval_constraint_residual": 0.002236067977499756,
+      "max_rotation_or_boost_hinge_deficit_abs": 0.08744664794460011,
+      "normal_perturbation_s": 0.005,
+      "spacelike_deficits_boost_rad": [
+        -0.023765865611538317,
+        -0.02376586561153926,
+        -0.023765865611538484
+      ],
+      "timelike_deficits_rotation_rad": [
+        0.046886299899931316,
+        0.019025874769480033,
+        0.019025874769480033,
+        0.019025874769479145,
+        0.08744664794459922,
+        0.08744664794460011,
+        0.08744664794460011
+      ]
+    },
+    {
+      "all_five_child_Grams_still_Lorentzian": true,
+      "bulk_hinge_equation_norm": 0.19672722526509018,
+      "formal_complex_bulk_area_times_deficit": [
+        0.3775617393685304,
+        -0.025197943487431467
+      ],
+      "implicit_interval_constraint_residual": 0.004472135954999609,
+      "max_rotation_or_boost_hinge_deficit_abs": 0.16925240433642674,
+      "normal_perturbation_s": 0.01,
+      "spacelike_deficits_boost_rad": [
+        -0.046781356574652544,
+        -0.0467813565746521,
+        -0.04678135657465177
+      ],
+      "timelike_deficits_rotation_rad": [
+        0.09091707183575615,
+        0.036653912585892456,
+        0.036653912585892456,
+        0.036653912585892456,
+        0.16925240433642585,
+        0.16925240433642585,
+        0.16925240433642674
+      ]
+    }
+  ],
+  "oriented_branch_recipe_for_three_spacelike_hinges": "Using ordered absent-vertex sectors, flip imaginary sign of 1st and 3rd arccos branches; follows this fixed explicit flat Minkowski embedding, NOT universally applicable.",
+  "original_simplex_signed_Gromov_4_volume": 0.08333333333333333,
+  "prior_art": "Sorkin Lorentzian Regge prescription, Bahr Dittrich 0905.1670, Lapse and Shift in Regge Calculus Galassi 1993; Causal Structure in Spin Foams (2024). This is a coordinate-specific numerical branch-control falsifier, not original Regge theory.",
+  "scope": "A genuine 4D Lorentzian piecewise-flat causal-signature/hinge control and local curvature perturbation. Naively interpreting a principal complex arccos deficit misdiagnoses flat space as curved. No complete Lorentzian Regge Gibbons-Hawking boundary action or first-class constraint closure has been constructed.",
+  "spacelike_triangle_hinges": 3,
+  "status": "PASS_FLAT_MINKOWSKI_4D_1TO5_LORENTZIAN_HINGES_AND_BRANCH_FAIL_CONTROL",
+  "timelike_triangle_hinges": 7
+}

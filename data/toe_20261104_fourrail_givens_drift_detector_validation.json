@@ -1,0 +1,482 @@
+{
+  "Lindblad_dephasing_plus_loss_with_detector_added": {
+    "dark": 0.005,
+    "eta": 0.85,
+    "exact_iid_binomial_rule_known_fixed_rates": {
+      "click_threshold": 8,
+      "false_pi_when_zero": 2.1224104535957918e-07,
+      "false_zero_when_pi": 1.7695939662001798e-07,
+      "n": 31
+    },
+    "gamma": 0.1,
+    "kappa": 0.1,
+    "pi_flux_click_probability": 0.020751163823664456,
+    "source": "data/toe_20261104_e8_c4_flux_photonic_falsifier.json",
+    "zero_flux_click_probability": 0.6836361489759883
+  },
+  "Monte_Carlo_static_mesh_error_calibration": [
+    {
+      "binomial_rule_for_worst_observed_2_calibrations": {
+        "click_threshold": 5,
+        "false_pi_when_zero": 1.4954807721319094e-07,
+        "false_zero_when_pi": 7.666016098767579e-08,
+        "n": 22
+      },
+      "calibration_realizations": 512,
+      "gate_angle_and_phase_sigma": 0,
+      "max_unitary_entrywise_error_pi": 1.1102230246251565e-16,
+      "max_unitary_entrywise_error_zero": 2.2204460492503136e-16,
+      "min_observed_calibration_population_contrast": 0.7228083962838472,
+      "not_uniform_hardware_calibration_confidence_interval": true,
+      "pi_flux_click_max": 0.005,
+      "pi_flux_click_mean": 0.005,
+      "pi_flux_click_min": 0.005,
+      "zero_flux_click_max": 0.7278083962838472,
+      "zero_flux_click_mean": 0.7278083962838474,
+      "zero_flux_click_min": 0.7278083962838472
+    },
+    {
+      "binomial_rule_for_worst_observed_2_calibrations": {
+        "click_threshold": 5,
+        "false_pi_when_zero": 1.5271840522056036e-07,
+        "false_zero_when_pi": 8.129061256697448e-08,
+        "n": 22
+      },
+      "calibration_realizations": 512,
+      "gate_angle_and_phase_sigma": 0.005,
+      "max_unitary_entrywise_error_pi": 0.0222158250876066,
+      "max_unitary_entrywise_error_zero": 0.01989117405800776,
+      "min_observed_calibration_population_contrast": 0.7224046519664298,
+      "not_uniform_hardware_calibration_confidence_interval": true,
+      "pi_flux_click_max": 0.005059853635420607,
+      "pi_flux_click_mean": 0.0050062574991571835,
+      "pi_flux_click_min": 0.005000000001166273,
+      "zero_flux_click_max": 0.7278082838003902,
+      "zero_flux_click_mean": 0.7277540675729852,
+      "zero_flux_click_min": 0.7274645056018504
+    },
+    {
+      "binomial_rule_for_worst_observed_2_calibrations": {
+        "click_threshold": 5,
+        "false_pi_when_zero": 1.9504264372318269e-07,
+        "false_zero_when_pi": 2.1530686648325022e-07,
+        "n": 22
+      },
+      "calibration_realizations": 512,
+      "gate_angle_and_phase_sigma": 0.02,
+      "max_unitary_entrywise_error_pi": 0.0839419592480464,
+      "max_unitary_entrywise_error_zero": 0.07596831506916074,
+      "min_observed_calibration_population_contrast": 0.7172510167418591,
+      "not_uniform_hardware_calibration_confidence_interval": true,
+      "pi_flux_click_max": 0.0061674809488030755,
+      "pi_flux_click_mean": 0.005087145791413001,
+      "pi_flux_click_min": 0.005000000013891243,
+      "zero_flux_click_max": 0.727802527879037,
+      "zero_flux_click_mean": 0.7269712434639531,
+      "zero_flux_click_min": 0.7234184976906621
+    },
+    {
+      "binomial_rule_for_worst_observed_2_calibrations": {
+        "click_threshold": 7,
+        "false_pi_when_zero": 1.8461107417386147e-07,
+        "false_zero_when_pi": 4.2039921480542526e-08,
+        "n": 29
+      },
+      "calibration_realizations": 512,
+      "gate_angle_and_phase_sigma": 0.05,
+      "max_unitary_entrywise_error_pi": 0.2003881310765681,
+      "max_unitary_entrywise_error_zero": 0.2471153407484594,
+      "min_observed_calibration_population_contrast": 0.6708620001868848,
+      "not_uniform_hardware_calibration_confidence_interval": true,
+      "pi_flux_click_max": 0.011905346811521007,
+      "pi_flux_click_mean": 0.005620700714168684,
+      "pi_flux_click_min": 0.005000001947698883,
+      "zero_flux_click_max": 0.7277607820299583,
+      "zero_flux_click_mean": 0.7225143656127002,
+      "zero_flux_click_min": 0.6827673469984058
+    },
+    {
+      "binomial_rule_for_worst_observed_2_calibrations": {
+        "click_threshold": 12,
+        "false_pi_when_zero": 1.9461824941382386e-07,
+        "false_zero_when_pi": 1.0007696363393138e-07,
+        "n": 46
+      },
+      "calibration_realizations": 512,
+      "gate_angle_and_phase_sigma": 0.1,
+      "max_unitary_entrywise_error_pi": 0.4213079351400502,
+      "max_unitary_entrywise_error_zero": 0.38394921000894844,
+      "min_observed_calibration_population_contrast": 0.580099516115446,
+      "not_uniform_hardware_calibration_confidence_interval": true,
+      "pi_flux_click_max": 0.037822610505080706,
+      "pi_flux_click_mean": 0.007406948160318009,
+      "pi_flux_click_min": 0.005000002876169037,
+      "zero_flux_click_max": 0.727003747889871,
+      "zero_flux_click_mean": 0.7075865412219693,
+      "zero_flux_click_min": 0.6179221266205267
+    }
+  ],
+  "assumed_detector_efficiency": 0.85,
+  "assumed_survival_for_mesh_run": 0.8546359991532334,
+  "assumed_uniform_photon_loss_rate_for_mesh_run": 0.1,
+  "confidence_firewall": "Exact binomial tails hold for fixed known click probabilities. The worst OBSERVED calibration sample is NOT a rigorous confidence region for all possible optical hardware. Static miscalibration persists across photons, so treating averaged Monte-Carlo calibration data as iid per photon is wrong.",
+  "detector_click_model": "pclick=dark+(1-dark)*eta*survival*p_rail",
+  "detector_dark_click_probability": 0.005,
+  "ideal_gate_blocks_encoded_as_complex_real_imag": [
+    [
+      {
+        "imag": [
+          [
+            -0.0,
+            -3.0880995013406187e-16
+          ],
+          [
+            -3.0880995013406187e-16,
+            -0.0
+          ]
+        ],
+        "modes": [
+          2,
+          3
+        ],
+        "real": [
+          [
+            -1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0
+          ]
+        ]
+      },
+      {
+        "imag": [
+          [
+            0.0,
+            -0.0
+          ],
+          [
+            0.0,
+            -0.0
+          ]
+        ],
+        "modes": [
+          1,
+          2
+        ],
+        "real": [
+          [
+            0.0,
+            -1.0
+          ],
+          [
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "imag": [
+          [
+            0.0,
+            -0.0
+          ],
+          [
+            0.0,
+            -0.0
+          ]
+        ],
+        "modes": [
+          0,
+          1
+        ],
+        "real": [
+          [
+            0.0,
+            -1.0
+          ],
+          [
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "imag": [
+          [
+            0.0,
+            -0.0
+          ],
+          [
+            0.0,
+            -0.0
+          ]
+        ],
+        "modes": [
+          2,
+          3
+        ],
+        "real": [
+          [
+            2.220446049250313e-16,
+            -1.0
+          ],
+          [
+            1.0,
+            2.220446049250313e-16
+          ]
+        ]
+      },
+      {
+        "imag": [
+          [
+            1.0005012532785278e-16,
+            -0.0
+          ],
+          [
+            0.0,
+            -1.0005012532785278e-16
+          ]
+        ],
+        "modes": [
+          1,
+          2
+        ],
+        "real": [
+          [
+            0.0,
+            -1.0
+          ],
+          [
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "imag": [
+          [
+            -0.0,
+            -1.110223024625156e-16
+          ],
+          [
+            -1.110223024625156e-16,
+            -0.0
+          ]
+        ],
+        "modes": [
+          2,
+          3
+        ],
+        "real": [
+          [
+            -1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "imag": [
+          [
+            -0.0,
+            1.0
+          ],
+          [
+            1.0,
+            -0.0
+          ]
+        ],
+        "modes": [
+          2,
+          3
+        ],
+        "real": [
+          [
+            -1.357048902913581e-16,
+            -0.0
+          ],
+          [
+            0.0,
+            -1.357048902913581e-16
+          ]
+        ]
+      },
+      {
+        "imag": [
+          [
+            -0.7071067811865475,
+            -0.0
+          ],
+          [
+            0.0,
+            0.7071067811865475
+          ]
+        ],
+        "modes": [
+          1,
+          2
+        ],
+        "real": [
+          [
+            0.0,
+            -0.7071067811865475
+          ],
+          [
+            0.7071067811865475,
+            0.0
+          ]
+        ]
+      },
+      {
+        "imag": [
+          [
+            -0.0,
+            -0.0
+          ],
+          [
+            0.0,
+            -0.0
+          ]
+        ],
+        "modes": [
+          0,
+          1
+        ],
+        "real": [
+          [
+            -0.6056998670788135,
+            -0.7956932015674808
+          ],
+          [
+            0.7956932015674808,
+            -0.6056998670788135
+          ]
+        ]
+      },
+      {
+        "imag": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            -0.0,
+            -0.0
+          ]
+        ],
+        "modes": [
+          2,
+          3
+        ],
+        "real": [
+          [
+            0.6056998670788135,
+            0.7956932015674808
+          ],
+          [
+            -0.7956932015674808,
+            0.6056998670788135
+          ]
+        ]
+      },
+      {
+        "imag": [
+          [
+            0.7071067811865475,
+            -0.0
+          ],
+          [
+            0.0,
+            -0.7071067811865475
+          ]
+        ],
+        "modes": [
+          1,
+          2
+        ],
+        "real": [
+          [
+            0.0,
+            -0.7071067811865476
+          ],
+          [
+            0.7071067811865476,
+            0.0
+          ]
+        ]
+      },
+      {
+        "imag": [
+          [
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            -0.0
+          ]
+        ],
+        "modes": [
+          2,
+          3
+        ],
+        "real": [
+          [
+            6.642630089492059e-17,
+            -0.0
+          ],
+          [
+            0.0,
+            6.642630089492059e-17
+          ]
+        ]
+      }
+    ]
+  ],
+  "ideal_givens_reconstruction_error_less_than_1e_minus12": true,
+  "ideal_givens_two_mode_gate_counts": {
+    "pi_flux": 6,
+    "zero_flux": 6
+  },
+  "modes": 4,
+  "physical_boundary": "A four-mode mathematically compiled U(4) and stochastic controls; actual MZI propagation, source generation, thermal crosstalk, timing noise, detector dead time, and calibration drift need measured parameters. These optics demonstrate existing AB interference, not E8 particles or a completed TOE.",
+  "residual_output_phases_real_imag": [
+    {
+      "imag": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "real": [
+        1.0,
+        1.0,
+        0.9999999999999999,
+        1.0
+      ]
+    },
+    {
+      "imag": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "real": [
+        1.0000000000000002,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "status": "PASS_FOUR_MODE_EXACT_GIVENS_AND_512_STATIC_CALIBRATION_CONTROLS",
+  "target_evolution_time": 1.5707963267948966
+}
