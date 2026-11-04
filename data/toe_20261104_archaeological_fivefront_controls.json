@@ -1,0 +1,138 @@
+{
+  "boundary": "Only finite mathematical counterexamples, systematic historical provenance and conditional noise benchmarks; no full TOE.",
+  "corpus_prior_art": "data/toe_20261104_corpus_archaeology.json",
+  "dimension": {
+    "allowed_spacetime_dimensions_up_to_64": [
+      4,
+      12,
+      20,
+      28,
+      36,
+      44,
+      52,
+      60
+    ],
+    "conditional_theorem": "If KO(F)=6 and KO(MxF)=2 mod 8 for a spin manifold M, then dim(M)=4 mod 8, not uniquely 4.",
+    "finite_KO_dimension_assumed_from_prior": 6,
+    "historic_python_sets_KO_signs_by_literal_assignment": true,
+    "n_distinct_solutions_up_to_64": 8,
+    "nonemergence": "Selection of the minimal representative 4, spin manifold existence, metric, causality, dynamics and spectral dimension are additional premises.",
+    "prior_owner": "analysis/W33_SPACETIME_DIMENSION_FROM_KO.md (June 2026), which currently uses stronger 'forced 4D' language.",
+    "status": "PASS_CONDITIONAL_KO_4_MOD_8_NONUNIQUENESS",
+    "total_Pfaffian_KO_dimension_assumed": 2
+  },
+  "flavor": {
+    "aligned_diagonal_real_bare_Y_and_single_B_triplet_imaginary_invariant_exact": "0",
+    "aligned_no_go": "For real diagonal m and one heavy mixing row B, Hd_ij=-mi*mj*conj(Bi)*Bj/(mu\u00b2+|B|\u00b2) for i!=j, so Im(H12 H23 H31)=0. Real light-sector misalignment or more independent structure is needed.",
+    "historic_11951_nonzero_Jarlskog_like_triple": "119/64",
+    "historic_11951_parity_compatible_alternative_owner": "analysis/PASS11950_11951_STRONG_CP_COMPLETION.md",
+    "historic_11951_triangular_determinant_exact": "14",
+    "limitation": "The strong-CP phase is physical only if the toy mass matrix represents the full colored sector and bare theta is not tuned to cancel it. Nelson-Barr 11951 is established repo prior art and still requires a gauge/vacuum/radiative completion.",
+    "previous_symmetric_4x4_toy_determinant": "12 - 4*I",
+    "previous_symmetric_toy_arg_det_radians": -0.3217505543966422,
+    "previous_symmetric_toy_nelson_barr_structure": false,
+    "previous_symmetric_toy_strong_CP_safe_if_bare_theta_zero": false,
+    "previous_symmetric_toy_weak_CP_cubed_trace": "1600",
+    "status": "PASS_STRONG_CP_AUDIT_AND_ALIGNED_RANK_ONE_FLAVOR_NO_GO"
+  },
+  "gravity": {
+    "common_zero_witness": "x=p=c0, with nonzero cycle component; all 81 g_i vanish and Dp=0",
+    "exact_two_constraint_witness_indices": [
+      0,
+      20
+    ],
+    "full_common_indefinite_constraint_surface_has_nonpure_gauge_cycle_point": true,
+    "gauss_dp_zero_exact": true,
+    "limitation": "Pairwise closure fails into the two selected constraints plus Gauss at a point where those two vanish. Other 79 g_k at that point need not vanish; no full Dirac algebra/no Einstein action claimed.",
+    "p_formula": "(c0-c20)/7",
+    "status": "PASS_INDEFINITE_REPAIRS_ZERO_LOCUS_BUT_NOT_PAIRWISE_FIRST_CLASS",
+    "two_constraint_Poisson_bracket_exact": "-8",
+    "two_indefinite_constraints_zero_exact": true,
+    "x_formula": "(c0+c20)/9"
+  },
+  "hardware": {
+    "best_sampled_pulses": 24,
+    "best_sampled_steps": 8,
+    "boundary": "No readout/reset latency, no shot overhead, reference phase drift, pulse crosstalk or detector inefficiency. Not a hardware-specific prescription and shot estimate is asymptotic, not a rigorous finite-sample p-value.",
+    "chosen_reference_dephasing_rate": 0.1,
+    "new_optimized_target": "idealized total interrogation time to distinguish flux settings at 5 Gaussian standard deviations; best 8 slices",
+    "previously_optimized_target": "absolute signal approximation error against noisy simultaneous-Hamiltonian target; best 16 slices",
+    "shot_and_latency_budgets": [
+      {
+        "approximate_5sigma_shots_per_flux_setting": null,
+        "ideal_reference_contrast": 0.0,
+        "idealized_total_interrogation_time_for_both_flux_settings": null,
+        "physical_duration_per_shot": 1.209,
+        "pulses": 3,
+        "reference_dephased_contrast": 0.0,
+        "reference_dephasing_rate": 0.1,
+        "steps": 1
+      },
+      {
+        "approximate_5sigma_shots_per_flux_setting": 76221,
+        "ideal_reference_contrast": 0.02722068292506778,
+        "idealized_total_interrogation_time_for_both_flux_settings": 185674.35600000003,
+        "physical_duration_per_shot": 1.2180000000000002,
+        "pulses": 6,
+        "reference_dephased_contrast": 0.025612412211641147,
+        "reference_dephasing_rate": 0.1,
+        "steps": 2
+      },
+      {
+        "approximate_5sigma_shots_per_flux_setting": 49060,
+        "ideal_reference_contrast": 0.033959586387384284,
+        "idealized_total_interrogation_time_for_both_flux_settings": 121276.32000000002,
+        "physical_duration_per_shot": 1.2360000000000002,
+        "pulses": 12,
+        "reference_dephased_contrast": 0.03192441833322695,
+        "reference_dephasing_rate": 0.1,
+        "steps": 4
+      },
+      {
+        "approximate_5sigma_shots_per_flux_setting": 44986,
+        "ideal_reference_contrast": 0.03552801600763753,
+        "idealized_total_interrogation_time_for_both_flux_settings": 114444.38400000002,
+        "physical_duration_per_shot": 1.2720000000000002,
+        "pulses": 24,
+        "reference_dephased_contrast": 0.03333878948761926,
+        "reference_dephasing_rate": 0.1,
+        "steps": 8
+      },
+      {
+        "approximate_5sigma_shots_per_flux_setting": 44894,
+        "ideal_reference_contrast": 0.035692691284624406,
+        "idealized_total_interrogation_time_for_both_flux_settings": 120675.07200000003,
+        "physical_duration_per_shot": 1.3440000000000003,
+        "pulses": 48,
+        "reference_dephased_contrast": 0.03337295835300146,
+        "reference_dephasing_rate": 0.1,
+        "steps": 16
+      },
+      {
+        "approximate_5sigma_shots_per_flux_setting": 46601,
+        "ideal_reference_contrast": 0.03528578783384294,
+        "idealized_total_interrogation_time_for_both_flux_settings": 138684.57600000003,
+        "physical_duration_per_shot": 1.4880000000000002,
+        "pulses": 96,
+        "reference_dephased_contrast": 0.03275580741240022,
+        "reference_dephasing_rate": 0.1,
+        "steps": 32
+      },
+      {
+        "approximate_5sigma_shots_per_flux_setting": 50732,
+        "ideal_reference_contrast": 0.034309164607314105,
+        "idealized_total_interrogation_time_for_both_flux_settings": 180200.064,
+        "physical_duration_per_shot": 1.7760000000000002,
+        "pulses": 192,
+        "reference_dephased_contrast": 0.031393865519306965,
+        "reference_dephasing_rate": 0.1,
+        "steps": 64
+      }
+    ],
+    "shots_per_setting_formula": "N=ceil(2*z\u00b2/delta_eff\u00b2); assumes two independent +/-1 expectation estimators, asymptotic normal approximation and variance \u22641.",
+    "sigma_goal": 5,
+    "status": "PASS_HARDWARE_RESOURCE_METRIC_CHANGES_OPTIMAL_DEPTH"
+  },
+  "orbit_producer": "analysis/toe_20261104_c3_orbit_sparsification.py",
+  "status": "PASS_FOUR_ARCHAEOLOGICAL_HARD_CONTROLS_PLUS_C3_ORBIT_PRODUCER"
+}
