@@ -1,0 +1,84 @@
+{
+  "status": "PASS_TWO_ONSHELL_STRESS_TENSORS_SOFT_SPIN2_UNIVERSALITY",
+  "matter_species": [
+    {
+      "field": "cos(t-x)",
+      "mass": 0,
+      "stress_divergence": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "field": "cos(5t-4x)",
+      "mass": 3,
+      "stress_divergence": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    }
+  ],
+  "off_shell_control_divergence": [
+    "-36*sin(4*t - 4*x)*cos(4*t - 4*x)",
+    "36*sin(4*t - 4*x)*cos(4*t - 4*x)",
+    "0",
+    "0"
+  ],
+  "linearized_coupling": "S_int=(1/2) integral h_mu_nu [kA T_A^mu_nu+kB T_B^mu_nu]. For separately on-shell free fields, divergence vanishes for arbitrary kA,kB; linearized hT gauge invariance alone cannot force equality.",
+  "soft_mixed_mass_scattering_momenta": [
+    [
+      "1",
+      "0",
+      "0",
+      "1"
+    ],
+    [
+      "3",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "3/4",
+      "3/4",
+      "0",
+      "0"
+    ],
+    [
+      "13/4",
+      "-3/4",
+      "0",
+      "1"
+    ]
+  ],
+  "species_mass_squared": [
+    0,
+    9,
+    0,
+    9
+  ],
+  "soft_null_q": [
+    "5",
+    "3",
+    "4",
+    "0"
+  ],
+  "gauge_vector_xi": [
+    "1/3",
+    "2/5",
+    "-1/7",
+    "3/11"
+  ],
+  "exact_soft_spin2_polarization_variation": "-73*(kA - kB)/330",
+  "universal_coupling_nullspace": [
+    1,
+    1
+  ],
+  "logical_message": "Both freely chosen \u03ba species preserve local source conservation, yet the massless-spin2 scattering Ward identity requires \u03ba_A=\u03ba_B for nonforward processes. Two helicities and a conserved hT coupling are not sufficient for gravitational universality.",
+  "physics_boundary": "This checks two supplied flat-space scalar waves and an exact on-shell soft theorem kinematics; it does NOT include an interacting backreacting scalar-gravity Hamiltonian, nonlinear diffeomorphisms, quantum loops or a derived Newton constant.",
+  "reference": "https://doi.org/10.1103/PhysRev.135.B1049"
+}

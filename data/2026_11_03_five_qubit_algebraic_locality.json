@@ -1,0 +1,374 @@
+{
+  "status": "PASS_FIVE_QUBIT_OAQEC_RECONSTRUCTION_NO_METRIC",
+  "stabilizer_generators": [
+    "XZZXI",
+    "IXZZX",
+    "XIXZZ",
+    "ZXIXZ"
+  ],
+  "logical_X": "XXXXX",
+  "logical_Z": "ZZZZZ",
+  "code_dimension": 2,
+  "physical_qubits": 5,
+  "distance": 3,
+  "pauli_errors_weight_at_most_2_checked": 106,
+  "max_logical_compression_deviation": 2.220446049250313e-16,
+  "all_two_qubit_erasures_Knill_Laflamme": true,
+  "three_qubit_region_reconstruction_witnesses": [
+    {
+      "region": [
+        0,
+        1,
+        2
+      ],
+      "logical_representatives": {
+        "X": {
+          "word": "ZXZII",
+          "support": [
+            0,
+            1,
+            2
+          ],
+          "relative_phase_complex": [
+            -1.0,
+            0.0
+          ]
+        },
+        "Z": {
+          "word": "YZYII",
+          "support": [
+            0,
+            1,
+            2
+          ],
+          "relative_phase_complex": [
+            -1.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "region": [
+        0,
+        1,
+        3
+      ],
+      "logical_representatives": {
+        "X": {
+          "word": "YYIXI",
+          "support": [
+            0,
+            1,
+            3
+          ],
+          "relative_phase_complex": [
+            -1.0,
+            0.0
+          ]
+        },
+        "Z": {
+          "word": "XXIZI",
+          "support": [
+            0,
+            1,
+            3
+          ],
+          "relative_phase_complex": [
+            -1.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "region": [
+        0,
+        1,
+        4
+      ],
+      "logical_representatives": {
+        "X": {
+          "word": "XZIIZ",
+          "support": [
+            0,
+            1,
+            4
+          ],
+          "relative_phase_complex": [
+            -1.0,
+            0.0
+          ]
+        },
+        "Z": {
+          "word": "ZYIIY",
+          "support": [
+            0,
+            1,
+            4
+          ],
+          "relative_phase_complex": [
+            -1.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "region": [
+        0,
+        2,
+        3
+      ],
+      "logical_representatives": {
+        "X": {
+          "word": "XIYYI",
+          "support": [
+            0,
+            2,
+            3
+          ],
+          "relative_phase_complex": [
+            -1.0,
+            0.0
+          ]
+        },
+        "Z": {
+          "word": "ZIXXI",
+          "support": [
+            0,
+            2,
+            3
+          ],
+          "relative_phase_complex": [
+            -1.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "region": [
+        0,
+        2,
+        4
+      ],
+      "logical_representatives": {
+        "X": {
+          "word": "YIXIY",
+          "support": [
+            0,
+            2,
+            4
+          ],
+          "relative_phase_complex": [
+            -1.0,
+            0.0
+          ]
+        },
+        "Z": {
+          "word": "XIZIX",
+          "support": [
+            0,
+            2,
+            4
+          ],
+          "relative_phase_complex": [
+            -1.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "region": [
+        0,
+        3,
+        4
+      ],
+      "logical_representatives": {
+        "X": {
+          "word": "ZIIZX",
+          "support": [
+            0,
+            3,
+            4
+          ],
+          "relative_phase_complex": [
+            -1.0,
+            0.0
+          ]
+        },
+        "Z": {
+          "word": "YIIYZ",
+          "support": [
+            0,
+            3,
+            4
+          ],
+          "relative_phase_complex": [
+            -1.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "region": [
+        1,
+        2,
+        3
+      ],
+      "logical_representatives": {
+        "X": {
+          "word": "IZXZI",
+          "support": [
+            1,
+            2,
+            3
+          ],
+          "relative_phase_complex": [
+            -1.0,
+            0.0
+          ]
+        },
+        "Z": {
+          "word": "IYZYI",
+          "support": [
+            1,
+            2,
+            3
+          ],
+          "relative_phase_complex": [
+            -1.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "region": [
+        1,
+        2,
+        4
+      ],
+      "logical_representatives": {
+        "X": {
+          "word": "IYYIX",
+          "support": [
+            1,
+            2,
+            4
+          ],
+          "relative_phase_complex": [
+            -1.0,
+            0.0
+          ]
+        },
+        "Z": {
+          "word": "IXXIZ",
+          "support": [
+            1,
+            2,
+            4
+          ],
+          "relative_phase_complex": [
+            -1.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "region": [
+        1,
+        3,
+        4
+      ],
+      "logical_representatives": {
+        "X": {
+          "word": "IXIYY",
+          "support": [
+            1,
+            3,
+            4
+          ],
+          "relative_phase_complex": [
+            -1.0,
+            0.0
+          ]
+        },
+        "Z": {
+          "word": "IZIXX",
+          "support": [
+            1,
+            3,
+            4
+          ],
+          "relative_phase_complex": [
+            -1.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "region": [
+        2,
+        3,
+        4
+      ],
+      "logical_representatives": {
+        "X": {
+          "word": "IIZXZ",
+          "support": [
+            2,
+            3,
+            4
+          ],
+          "relative_phase_complex": [
+            -1.0,
+            0.0
+          ]
+        },
+        "Z": {
+          "word": "IIYZY",
+          "support": [
+            2,
+            3,
+            4
+          ],
+          "relative_phase_complex": [
+            -1.0,
+            0.0
+          ]
+        }
+      }
+    }
+  ],
+  "three_qubit_regions": 10,
+  "same_logical_unitary_from_distinct_physical_three_body_Hamiltonians": {
+    "A_region": [
+      0,
+      1,
+      2
+    ],
+    "A_physical_word": "ZXZII",
+    "B_region": [
+      2,
+      3,
+      4
+    ],
+    "B_physical_word": "IIZXZ",
+    "physical_Hamiltonian_difference_operator_norm": 2.0000000000000004,
+    "max_difference_on_all_encoded_unitary_evolutions": 5.119792266921522e-16
+  },
+  "subsystem_reconstruction": "Every 3-of-5 physical qubit region has code-space representatives of both logical X and Z, while any erased <=2 qubits carries only scalar compressed operators. Supports are explicit stabilizer dressings with full 32x32 matrix verification.",
+  "algebraic_locality_no_go": "Without additional adjacency, Hamiltonian, net-of-algebras, modular data, or causal dynamics, the encoding code treats all 10 triples as equally eligible reconstructing regions. The bare correctability poset cannot identify a physical metric or a unique 3D/4D spacetime.",
+  "5factor_permutation_descriptions": 120,
+  "physics_boundary": "Exact finite operator-algebra quantum error correction, not an RT area-law derivation, gravity, emergent Lorentzian causal geometry, or unique factorization selected by a microscopic action.",
+  "references": [
+    "https://arxiv.org/abs/quant-ph/9602019",
+    "https://arxiv.org/abs/1607.03901"
+  ]
+}

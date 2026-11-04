@@ -1,0 +1,59 @@
+{
+  "status": "PASS_LOCAL_HAMILTONIAN_OPERATIONAL_DISTANCE_AND_TIME_SCALE",
+  "identity": "For a finite simple connected graph G with A adjacency and H=J A, the transition amplitude U_ji(t)=sum_k (-iJt)^k (A^k)_ji/k!. By walk counting, (A^k)_ji=0 for k<distance(i,j) and (A^distance)_ji>0, hence the first nonzero Taylor order is precisely graph shortest path distance.",
+  "same_degree_nonisomorphic_graphs": [
+    {
+      "graph": "hypercube_Q3",
+      "nodes": 8,
+      "edges": 12,
+      "degree_sequence": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "pair_distance_census": {
+        "1": 12,
+        "2": 12,
+        "3": 4
+      },
+      "diameter": 3,
+      "exact_Taylor_order_recovers_all_pair_distances": true,
+      "max_small_time_leading_coefficient_relative_error_at_t_005": 0.002913491278612318,
+      "unidentifiable_absolute_J_and_t_separately": true
+    },
+    {
+      "graph": "Mobius_ladder_M8",
+      "nodes": 8,
+      "edges": 12,
+      "degree_sequence": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "pair_distance_census": {
+        "1": 12,
+        "2": 16
+      },
+      "diameter": 2,
+      "exact_Taylor_order_recovers_all_pair_distances": true,
+      "max_small_time_leading_coefficient_relative_error_at_t_005": 0.0499809062197043,
+      "unidentifiable_absolute_J_and_t_separately": true
+    }
+  ],
+  "unitarity": "U(t)=exp(-i Jt A) unitary for real J; a finite-speed suppression in powers of t follows from microscopic adjacency, but no Lorentz symmetry or relativistic Lieb-Robinson theorem is proved.",
+  "physical_scale_firewall": "All one-excitation observables depend only on Jt. Without a separately calibrated interaction J or clock t, the dynamical transfer measurements do not determine absolute seconds or propagation speed.",
+  "no_geometry_free_claim": "The dynamical interaction graph A is an INPUT. The experiment reconstructs its operational distance from quantum transition amplitudes; it does not derive the interaction graph or emergent 4D locality from an abstract algebra by itself.",
+  "sources": [
+    "https://doi.org/10.1103/PhysRevLett.28.259"
+  ]
+}

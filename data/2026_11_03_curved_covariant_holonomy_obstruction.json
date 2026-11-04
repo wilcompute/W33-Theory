@@ -1,0 +1,105 @@
+{
+  "status": "PASS_QUANTIZED_CURVATURE_GAUGE_COVARIANCE_AND_DISCRETE_BIANCHI",
+  "model": "Uniform U(1) flux m on a 2D LxL periodic lattice, with a=1/L, T_x=f(x+1,y) times U_x, T_y=f(x,y+1) times U_y. A lattice gauge connection, not a metric/Levi-Civita connection.",
+  "links": "U_x(x,y)=exp(-2pi i m y/L\u00b2), U_y(x,L-1)=exp(2pi i m x/L), otherwise U_y=1",
+  "exact_curvature_relation": "T_x T_y = exp(2pi i m/L\u00b2) T_y T_x. [T_x,T_y]=(exp(2pi i m/L\u00b2)-1)T_y T_x. Uniform plaquette gauge-invariant Wilson phase.",
+  "gauge_covariance": "For g(x) any site U1 phase, U'_e=g(source) U_e conjugate(g(target)), and T'_i=G T_i G\u2020. Full operator identity tested.",
+  "Wilson_action": "S=sum_plaquettes(1-Re W)/a\u00b2 tends to integral F_xy\u00b2/2 for fixed square unit area and fixed integer flux 2pi m.",
+  "rows": [
+    {
+      "L": 4,
+      "flux_integer_m": 0,
+      "plaquette_argument": 0.0,
+      "quantized_total_flux": 0,
+      "covariant_shift_commutator_norm": 0.0,
+      "lattice_Yang_Mills_action_with_a_1_over_L": 0.0,
+      "fixed_B_continuum_F2_over2_limit": 0.0,
+      "gauge_transform_verified": true
+    },
+    {
+      "L": 6,
+      "flux_integer_m": 0,
+      "plaquette_argument": 0.0,
+      "quantized_total_flux": 0,
+      "covariant_shift_commutator_norm": 0.0,
+      "lattice_Yang_Mills_action_with_a_1_over_L": 0.0,
+      "fixed_B_continuum_F2_over2_limit": 0.0,
+      "gauge_transform_verified": true
+    },
+    {
+      "L": 8,
+      "flux_integer_m": 0,
+      "plaquette_argument": 0.0,
+      "quantized_total_flux": 0,
+      "covariant_shift_commutator_norm": 0.0,
+      "lattice_Yang_Mills_action_with_a_1_over_L": 0.0,
+      "fixed_B_continuum_F2_over2_limit": 0.0,
+      "gauge_transform_verified": true
+    },
+    {
+      "L": 4,
+      "flux_integer_m": 1,
+      "plaquette_argument": 0.39269908169872414,
+      "quantized_total_flux": 1,
+      "covariant_shift_commutator_norm": 0.3901806440322568,
+      "lattice_Yang_Mills_action_with_a_1_over_L": 19.486839677110588,
+      "fixed_B_continuum_F2_over2_limit": 19.739208802178716,
+      "gauge_transform_verified": true
+    },
+    {
+      "L": 6,
+      "flux_integer_m": 1,
+      "plaquette_argument": 0.17453292519943295,
+      "quantized_total_flux": 1,
+      "covariant_shift_commutator_norm": 0.17431148549531691,
+      "lattice_Yang_Mills_action_with_a_1_over_L": 19.689152096178393,
+      "fixed_B_continuum_F2_over2_limit": 19.739208802178716,
+      "gauge_transform_verified": true
+    },
+    {
+      "L": 8,
+      "flux_integer_m": 1,
+      "plaquette_argument": 0.09817477042468103,
+      "quantized_total_flux": 1,
+      "covariant_shift_commutator_norm": 0.0981353486548363,
+      "lattice_Yang_Mills_action_with_a_1_over_L": 19.72335955068155,
+      "fixed_B_continuum_F2_over2_limit": 19.739208802178716,
+      "gauge_transform_verified": true
+    },
+    {
+      "L": 4,
+      "flux_integer_m": 2,
+      "plaquette_argument": 0.7853981633974483,
+      "quantized_total_flux": 2,
+      "covariant_shift_commutator_norm": 0.7653668647301799,
+      "lattice_Yang_Mills_action_with_a_1_over_L": 74.98066401624382,
+      "fixed_B_continuum_F2_over2_limit": 78.95683520871486,
+      "gauge_transform_verified": true
+    },
+    {
+      "L": 6,
+      "flux_integer_m": 2,
+      "plaquette_argument": 0.3490658503988659,
+      "quantized_total_flux": 2,
+      "covariant_shift_commutator_norm": 0.34729635533386183,
+      "lattice_Yang_Mills_action_with_a_1_over_L": 78.15836346146271,
+      "fixed_B_continuum_F2_over2_limit": 78.95683520871486,
+      "gauge_transform_verified": true
+    },
+    {
+      "L": 8,
+      "flux_integer_m": 2,
+      "plaquette_argument": 0.19634954084936207,
+      "quantized_total_flux": 2,
+      "covariant_shift_commutator_norm": 0.19603428065912168,
+      "lattice_Yang_Mills_action_with_a_1_over_L": 78.70349146836804,
+      "fixed_B_continuum_F2_over2_limit": 78.95683520871486,
+      "gauge_transform_verified": true
+    }
+  ],
+  "no_go": "Genuine nonzero discrete holonomy forces noncommuting naive shifts. Flat spin-two constraints based on commuting ordinary differences cannot simply be transplanted unchanged to this connection. Need curvature-dependent local terms that close an appropriate gravity constraint algebra.",
+  "scope": "U1 lattice curvature with a supplied 2D flat coordinate torus, not a vierbein/spin connection, curved Regge gravity, Fierz-Pauli curved Hamiltonian closure, emergent time, or quantized Einstein theory.",
+  "source": [
+    "https://doi.org/10.1103/PhysRevD.10.2445"
+  ]
+}

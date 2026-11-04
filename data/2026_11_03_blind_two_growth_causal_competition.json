@@ -1,0 +1,102 @@
+{
+  "status": "PASS_TWO_GROWTH_BLINDED_CAUSAL_NULLS",
+  "N": 72,
+  "target_dimension_supplied": 4,
+  "only_training_observable": "Mean comparable-pair fraction from 15 independent 4D diamond sprinklings.",
+  "target_training_density": 0.0970266040688576,
+  "growth_candidate_parameters": {
+    "transitive_percolation": [
+      0.005,
+      0.01,
+      0.015,
+      0.02,
+      0.025,
+      0.03,
+      0.035,
+      0.04,
+      0.045,
+      0.05,
+      0.06,
+      0.08,
+      0.1
+    ],
+    "disjoint_independent_chains": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ]
+  },
+  "frozen_selected_params": {
+    "transitive_percolation": 0.04,
+    "disjoint_independent_chains": 10
+  },
+  "heldout_36_target_sprinklings": {
+    "pair_fraction": 0.09873282907320464,
+    "longest_chain": 4.361111111111111,
+    "comparability_components": 9.25,
+    "interval_frequency_first_four": [
+      0.7505320549286223,
+      0.1355458686632034,
+      0.04902026474394739,
+      0.023372853178158084
+    ]
+  },
+  "heldout_null_100_each": {
+    "transitive_percolation": {
+      "pair_fraction": 0.10642018779342723,
+      "longest_chain": 7.07,
+      "comparability_components": 5.01,
+      "interval_frequency_first_four": [
+        0.37108514676742116,
+        0.2975647892075913,
+        0.1690029725820661,
+        0.08306433971479431
+      ],
+      "L1_interval_profile_discrepancy": 0.721140023080344,
+      "mean_chain_height_difference": 2.7088888888888896,
+      "mean_connected_component_difference": -4.24
+    },
+    "disjoint_independent_chains": {
+      "pair_fraction": 0.09900234741784038,
+      "longest_chain": 11.55,
+      "comparability_components": 10.0,
+      "interval_frequency_first_four": [
+        0.2458576772030465,
+        0.20630772976413222,
+        0.16705088476797036,
+        0.12951837140338168
+      ],
+      "L1_interval_profile_discrepancy": 0.7996123770757512,
+      "mean_chain_height_difference": 7.18888888888889,
+      "mean_connected_component_difference": 0.75
+    }
+  },
+  "independent_heldout_observables": [
+    "longest_chain",
+    "comparability_components",
+    "first_four_interval_frequency"
+  ],
+  "disjoint_chain_null_description": "Each event independently samples one of k preexisting chains and is after all earlier events of that chain, incomparable to other chains. k fitted only on pair density, not geometry or interval data.",
+  "CSG_null_description": "Rideout-Sorkin transitive-percolation specialization; new event selects each prior event with probability p, then takes transitive closure. p fitted only by training density.",
+  "selection_warning": "Both candidate null families are separately calibrated to the 4D target on a single statistic; no candidate 4D dimension emerges in their microscopic dynamics. These are explicit out-of-sample statistical challenges for future dynamics, not a full Bayes model selection or proof no alternative growth law works.",
+  "references": [
+    "https://doi.org/10.1103/PhysRevD.61.024002"
+  ]
+}
