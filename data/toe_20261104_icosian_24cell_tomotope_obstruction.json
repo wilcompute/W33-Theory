@@ -1,0 +1,68 @@
+{
+  "correct_24cell_reye_relation": "The FULL 24-cell Coxeter group W(F4), order1152, acts on the twelve antipodal axes and sixteen central hexagon planes with central kernel \u00b1I, giving Reye Aut576. The ROTATIONAL 24-cell group W(F4)^+, order576, retains central antipode and only maps to a subgroup of order288 on axes/planes.",
+  "exact_no_go": "The 600-cell full H4 stabilizer of an inscribed 24-cell and the colored Reye/tomotope-medial full automorphism group both have order576 but are NOT isomorphic: the first has 96 elements of order12 and nontrivial central antipodal involution; the second has no order12 element and trivial center.",
+  "exact_scope": "Integer golden ratio arithmetic and finite permutation actions only; no physical embedding W33 or the tomotope itself into a 600-cell as an abstract rank-four subpolytope.",
+  "geometry": {
+    "Hurwitz_binary_tetrahedral_order": 24,
+    "axes_plus_24cells_85_points_of_PG3_F4_count": 85,
+    "boundary": "25/5x5/10 are published 2020 prior art, replicated with exact Z[phi] quaternions. No unique canonical 24-cell subgroup selection.",
+    "cosets_per_subgroup": 5,
+    "disjointness_graph_degree": 8,
+    "disjointness_graph_is_isomorphic_to_5x5_rook": true,
+    "disjointness_graph_srg": [
+      25,
+      8,
+      3,
+      2
+    ],
+    "disjointness_graph_vertices": 25,
+    "distinct_conjugate_subgroups_of_order24": 5,
+    "each_600cell_vertex_in_n_24cells": 5,
+    "each_axis_in_five_24cells": true,
+    "inscribed_24cells": 25,
+    "projective_600cell_antipodal_axes": 60,
+    "quaternion_vertices": 120,
+    "source": "Denney, Hooker, Johnson, Robinson, Butler, Claiborne (2020), The Geometry of H4 Polytopes",
+    "status": "PASS_EXACT_600CELL_25_24CELL_5x5_REPRODUCTION",
+    "total_five_cell_decompositions": 10,
+    "unordered_24cell_intersections": {
+      "0_vertices": 100,
+      "6_vertices": 200
+    }
+  },
+  "prior_art": {
+    "600cell_25_cells": "Denney et al 2020",
+    "new_comparison": "group order spectrum and central-inversion distinction, check exact against prior repo before novelty claim",
+    "reye24cell_spine": "repo PART_MCXCIII",
+    "tomotope_medial_R_eye": "Monson-Pellicer-Williams 2012 Section6"
+  },
+  "reye": {
+    "reye_contains_order12": false,
+    "reye_group_center_order": 1,
+    "reye_group_is_WF4_mod_antipode": true,
+    "reye_medial_color_preserving_automorphism_order": 576,
+    "reye_order_histogram": {
+      "1": 1,
+      "2": 75,
+      "3": 80,
+      "4": 180,
+      "6": 240
+    }
+  },
+  "stabilizer": {
+    "H4_full_symmetry_order": 14400,
+    "central_antipodal_order2_exists": true,
+    "one_inscribed_24cell_H4_stabilizer_order": 576,
+    "stabilizer_action_on_120_icosian_vertices_order": 576,
+    "stabilizer_contains_order12": true,
+    "stabilizer_order_histogram": {
+      "1": 1,
+      "12": 96,
+      "2": 43,
+      "3": 80,
+      "4": 84,
+      "6": 272
+    }
+  },
+  "status": "PASS_600CELL_24CELL_TOMOTOPE_576_FALSE_FRIEND_OBSTRUCTION"
+}

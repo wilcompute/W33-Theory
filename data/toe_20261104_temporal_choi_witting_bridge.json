@@ -1,0 +1,110 @@
+{
+  "Pauli_3x3_single_system_operator_basis_size": 9,
+  "Pauli_reps_are_pairwise_Hilbert_Schmidt_orthogonal": true,
+  "Witting_Ray_and_Pauli_Operator_gram_matrices_are_not_equal": true,
+  "Witting_nonorthogonal_squared_overlap": "1/3",
+  "Witting_orthogonality_graph_exactly_isomorphic": true,
+  "Witting_ququart_rays": 40,
+  "Witting_ray_Hilbert_dimension": 4,
+  "certified_non_entanglement_breaking_if_trusted_choi_fidelity_gt_one_third": true,
+  "citations": [
+    "Vlasov, Scheme of quantum communications based on Witting polytope, arxiv:2503.18431",
+    "repo exploration/w33_witting_srg_bridge.py",
+    "repo analysis/w33_20260924_m36_temporal_triangle_dictionary.py",
+    "repo analysis/2026-10-15_toe90_vlasov_witting_research.md"
+  ],
+  "claim_boundary": "A one-qutrit two-time process can be represented on End(C^3)\u2245C^3\u2297(C^3)*, which is 9-dimensional. A single qutrit STATE in C^3 does not contain two independent qutrit factors. Frame fusion as Choi history is a kinematic map, not demonstrated retrocausal signaling, self-entanglement, a Bell violation in one system, or a physical measurement protocol.",
+  "commuting_pairs": 240,
+  "depolarizing_threshold_p_three_quarters": true,
+  "explicit_graph_isomorphism_pauli_index_to_witting_index": [
+    0,
+    7,
+    39,
+    23,
+    4,
+    32,
+    24,
+    6,
+    38,
+    22,
+    5,
+    21,
+    37,
+    8,
+    36,
+    16,
+    10,
+    30,
+    26,
+    9,
+    25,
+    29,
+    12,
+    20,
+    28,
+    13,
+    33,
+    17,
+    14,
+    18,
+    34,
+    3,
+    1,
+    2,
+    35,
+    19,
+    15,
+    27,
+    31,
+    11
+  ],
+  "finite_commutation_graph_SRG": [
+    40,
+    12,
+    2,
+    4
+  ],
+  "full_double_operator_algebra_dimension": 81,
+  "ideal_depolarizing_Choi_positivity_And_partial_transpose_witness": [
+    {
+      "Choi_partial_transpose_negativity": 1.0000000000000002,
+      "depolarizing_probability": 0,
+      "entanglement_witness_F_exceeds_one_third": true,
+      "normalized_Choi_entanglement_fidelity": 1.0000000000000007
+    },
+    {
+      "Choi_partial_transpose_negativity": 0.6666666666666669,
+      "depolarizing_probability": 0.25,
+      "entanglement_witness_F_exceeds_one_third": true,
+      "normalized_Choi_entanglement_fidelity": 0.7777777777777781
+    },
+    {
+      "Choi_partial_transpose_negativity": 0.33333333333333354,
+      "depolarizing_probability": 0.5,
+      "entanglement_witness_F_exceeds_one_third": true,
+      "normalized_Choi_entanglement_fidelity": 0.5555555555555558
+    },
+    {
+      "Choi_partial_transpose_negativity": 1.0408340855860843e-16,
+      "depolarizing_probability": 0.75,
+      "entanglement_witness_F_exceeds_one_third": false,
+      "normalized_Choi_entanglement_fidelity": 0.3333333333333335
+    },
+    {
+      "Choi_partial_transpose_negativity": 0.0,
+      "depolarizing_probability": 1,
+      "entanglement_witness_F_exceeds_one_third": false,
+      "normalized_Choi_entanglement_fidelity": 0.11111111111111115
+    }
+  ],
+  "identity_process_Choi_Schmidt_rank": 3,
+  "identity_process_Choi_reduced_density": "I_3/3",
+  "noncommuting_pairs": 540,
+  "projective_order3_nonidentity_Pauli_classes": 40,
+  "status": "PASS_TWO_TIME_QUTRIT_CHOIVERSE_W33_COMMUTATOR_GEOMETRY",
+  "two_commuting_qutrit_factor_algebras_dimensions": [
+    9,
+    9
+  ],
+  "two_time_Choi_operator_Hilbert_dimension": 9
+}
