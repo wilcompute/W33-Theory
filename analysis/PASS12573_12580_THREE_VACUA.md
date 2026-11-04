@@ -4,6 +4,8 @@ Claude track. Continues `PASS12563_12570_STABILISED_TOWER.md`. Producer: `analys
 
 **This is not a theory of everything.** The gauge group, generations and strong CP are untouched. All dark-sector versions below give the same evidence over ΛCDM, and how large that is now depends on which weak lensing survey is right.
 
+> **Correction (Passes 12583-12592).** The DES Y6 result below, a c′ gain of 4.0 or 2σ, compared a ΛCDM-derived S8 directly with the model. With the shear-equivalent shift the gain is 6.7, or 2.6σ on Dovekie, on a stand-in survey. The c′ gain also depends on the neutrino mass. See `PASS12583_12592_NEUTRINO_OVERLAP.md`.
+
 ## The result in brief
 
 Three versions of the dark-dimension sector fit the data equally well and differ in their vacuum. No data set here separates them; their futures and their extra assumptions do.

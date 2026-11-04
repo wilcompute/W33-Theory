@@ -65,7 +65,7 @@ def cic_interp(f, x):
 
 
 def zeldovich():
-    rng = np.random.default_rng(1234)
+    rng = np.random.default_rng(int(os.environ.get("SEED", "1234")))
     gauss = rng.normal(size=(NP, NP, NP))
     dk = np.fft.rfftn(gauss)
     kf1 = np.fft.fftfreq(NP, 1 / NP) * kf

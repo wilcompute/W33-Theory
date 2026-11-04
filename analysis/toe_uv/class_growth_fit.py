@@ -2,6 +2,7 @@
 Added to plik-lite + tau prior + DESI + SN + ACT/Planck lensing:
   S8 priors, one at a time, since they conflict: DES Y6 3x2pt 0.789 +- 0.012 (arXiv:2601.14559), KiDS-Legacy 0.81 +- 0.0185 (+0.016, -0.021 symmetrised, arXiv:2503.19442).
   f sigma8: z = 0.07 0.450 +- 0.055 (DESI DR1 PV, as cited by the parallel track), z = 0.38 0.497 +- 0.045, z = 0.51 0.459 +- 0.038 (BOSS DR12), z = 0.70 0.473 +- 0.044 (eBOSS LRG), z = 0.85 0.315 +- 0.095 (eBOSS ELG), z = 1.48 0.462 +- 0.045 (eBOSS QSO).  Diagonal: covariances neglected, and BOSS values quoted from memory except eBOSS LRG.
+Set desq applies the shift from class_shear_equiv.py to the model S8 before comparing with DES; the shift is held fixed rather than recomputed at each point.
 Caveats, all material: S8 from a survey is derived assuming LCDM, and its degeneracy direction need not be S8 exactly for these models, which also have dark matter species that do not trace each other; a summary prior is not a 3x2pt likelihood.  So this is a stress test of size, not a final verdict.
 sigma8(z) comes from CLASS P(k, z) for matter, f sigma8 = -(1+z) d sigma8/dz by differences across +- 0.03.
 Models: LCDM, exponential on the better sign, fading c < 0, relaxing radion (x_i = x_min, N_f = 2, b = 1/sqrt 2).
@@ -21,8 +22,14 @@ ds, which = sys.argv[1], sys.argv[2]
 dd = act.load_data("actplanck_baseline", lens_only=False)
 ULENS = np.linalg.cholesky(dd["cinv"]).T
 FS8 = [(0.07, 0.450, 0.055), (0.38, 0.497, 0.045), (0.51, 0.459, 0.038), (0.70, 0.473, 0.044), (0.85, 0.315, 0.095), (1.48, 0.462, 0.045)]
-S8P = dict(des=(0.789, 0.012), kids=(0.81, 0.0185)).get(which)
+S8P = dict(des=(0.789, 0.012), kids=(0.81, 0.0185), desq=(0.789, 0.012)).get(which)
 ZS = sorted({round(z + d, 3) for z, _, _ in FS8 for d in (-0.03, 0.03)})
+LYA = which == "lya"
+if LYA:
+    ZS.append(3.0)
+LYAD = np.array([0.310, -2.340])  # Goldstein et al arXiv:2303.00746, eBOSS compressed, k = 0.009 s/km at z = 3
+LYAC = np.array([[0.020 ** 2, 0.512 * 0.020 * 0.006], [0.512 * 0.020 * 0.006, 0.006 ** 2]])
+LYAU = np.linalg.cholesky(np.linalg.inv(LYAC)).T
 C.STEP.update(prod=0.004, Zn=0.002)
 _run = C.run_class
 
@@ -52,7 +59,7 @@ def lens_resid(tag):
 
 class GF(C.Fitter):
     def resid(self, p, kind):
-        extra = "l_max_scalars=4000\nz_pk=" + ",".join(str(z) for z in ZS) + "\nz_max_pk=2.0"
+        extra = "l_max_scalars=4000\nz_pk=" + ",".join(str(z) for z in ZS) + "\nz_max_pk=3.1"
         binp = C.CLASSBIN
         if "Zn" in p:
             b = p["b"]
@@ -77,14 +84,40 @@ class GF(C.Fitter):
         if self.sn is not None:
             parts["sn"] = self.sn.resid(z, dc)
         if S8P is not None:
-            parts["S8"] = np.array([(S8P[0] - info["S8"]) / S8P[1]])
+            # desq: the S8 a LCDM shear analysis would infer, class_shear_equiv.py: S8_equiv - S8 was -0.0124 for fading and -0.0120 for the relaxing radion at c' = 0.05, and -0.0047 for the exponential
+            shift = 0.0
+            if which == "desq":
+                if "Zn" in p:
+                    shift = -0.0120
+                elif p.get("cp", 0.0) > 0:
+                    shift = -0.0124
+                elif p.get("c", 0.0) != 0.0:
+                    shift = -0.0047
+            info["S8_shift"] = shift
+            parts["S8"] = np.array([(S8P[0] - info["S8"] - shift) / S8P[1]])
         info["fs8"] = out_fs
+        if LYA:
+            d3 = np.loadtxt(f"{kp['tag']}/o_z{ZS.index(3.0) + 1}_pk.dat")
+            k3, P3 = d3[:, 0] * h, d3[:, 1] / h ** 3
+            H3 = float(np.interp(3.0, z, H)) * 299792.458  # km/s/Mpc
+            kp_ = 0.009 * H3 / 4.0  # 1/Mpc
+            lnP = np.interp(np.log(kp_), np.log(k3), np.log(P3))
+            dk = 0.05
+            n_ = (np.interp(np.log(kp_) + dk, np.log(k3), np.log(P3)) - np.interp(np.log(kp_) - dk, np.log(k3), np.log(P3))) / (2 * dk)
+            D2 = kp_ ** 3 * math.exp(lnP) / (2 * math.pi ** 2)
+            info["lya"] = dict(D2=D2, n=n_, kp=kp_)
+            parts["lya"] = LYAU @ (np.array([D2, n_]) - LYAD)
         subprocess.run(["rm", "-rf", kp["tag"]])
         return np.concatenate(list(parts.values())), {k: float(v @ v) for k, v in parts.items()}, info
 
 
 F = GF(ds)
-base = json.load(open(os.path.join(BG, f"class_lensfit_{ds}.json")))
+lf = os.path.join(BG, f"class_lensfit_{ds}.json")
+if os.path.exists(lf):
+    base = json.load(open(lf))
+else:
+    b0 = json.load(open(os.path.join(BG, f"class_fit_{ds}.json")))
+    base = dict(LCDM=b0["LCDM"], free_neg=b0["free_neg"], exp=b0["exp_neg"] if b0["exp_neg"]["chi2"] < b0["exp_pos"]["chi2"] else b0["exp_pos"])
 mas = json.load(open(os.path.join(BG, f"class_massive_{ds}.json")))
 path = os.path.join(BG, f"class_growth_{ds}_{which}.json")
 out = json.load(open(path)) if os.path.exists(path) else dict(dataset=ds, set=which, S8_prior=S8P)
@@ -100,7 +133,7 @@ def go(name, x0, free):
         r = dict(failed=str(e)[-300:])
     out[name] = r
     if "chi2" in r:
-        print(name, round(r["chi2"], 3), "vs LCDM", round(r["chi2"] - out["LCDM"]["chi2"], 3) if "LCDM" in out else "", r["parts"], {k: r["info"][k] for k in ("S8", "s8", "om")}, flush=True)
+        print(name, round(r["chi2"], 3), "vs LCDM", round(r["chi2"] - out["LCDM"]["chi2"], 3) if "LCDM" in out else "", r["parts"], {k: r["info"].get(k) for k in ("S8", "s8", "om", "lya")}, flush=True)
     json.dump(out, open(path, "w"), indent=1, default=float)
 
 

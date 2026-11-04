@@ -95,7 +95,7 @@ def bao_resid(z_, H, dc, rd):
 
 def run_class(p, kind="fading", extra="", binp=CLASSBIN, keep=None):
     tag = tempfile.mkdtemp(prefix="cl_", dir="/tmp")
-    ini = [f"h={p['h']}", f"omega_b={p['wb']}", f"omega_cdm={p['wc']}", "N_ur=2.0328", "N_ncdm=1", "m_ncdm=0.06", "T_cmb=2.7255", f"ln10^{{10}}A_s={p['lnA']}", f"n_s={p['ns']}", f"tau_reio={p['tau']}", "output=tCl,pCl,lCl,mPk", "lensing=yes", "non_linear=halofit", "l_max_scalars=2600", "P_k_max_1/Mpc=10", f"root={tag}/o", "write_background=yes", "overwrite_root=yes", "thermodynamics_verbose=1", "fourier_verbose=1"]
+    ini = [f"h={p['h']}", f"omega_b={p['wb']}", f"omega_cdm={p['wc']}", "N_ur=2.0328", "N_ncdm=1", f"m_ncdm={p.get('mnu', 0.06)}", "T_cmb=2.7255", f"ln10^{{10}}A_s={p['lnA']}", f"n_s={p['ns']}", f"tau_reio={p['tau']}", "output=tCl,pCl,lCl,mPk", "lensing=yes", "non_linear=halofit", "l_max_scalars=2600", "P_k_max_1/Mpc=10", f"root={tag}/o", "write_background=yes", "overwrite_root=yes", "thermodynamics_verbose=1", "fourier_verbose=1"]
     if kind == "fading":
         ini += ["Omega_Lambda=0", "Omega_fld=0", "Omega_scf=-1", "attractor_ic_scf=no", f"scf_parameters={p.get('c', 0.0)},{p.get('cp', 0.0)},2.0,0.0,0.0", "scf_tuning_index=2"]
     elif kind == "cpl":
