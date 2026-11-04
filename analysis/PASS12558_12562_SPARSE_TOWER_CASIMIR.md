@@ -4,6 +4,8 @@ Claude track. Continues `PASS12550_12557_DARK_MATTER_DRAG.md`. Producers: `analy
 
 **This is not a theory of everything.** Gauge group, generations, Λ and strong CP stay unexplained. Λ is put in by hand below, and that is the cosmological constant problem, untouched.
 
+**Corrected by Passes 12563–12570** (`PASS12563_12570_STABILISED_TOWER.md`): the recollapse below is not robust, since massive bulk fermions give the radion a minimum; the no-AdS₃ conflict below has a window at two or more fermions with M R ≈ 0.5 to 3; and with lensing in the fit the c′ gain on Dovekie is 7.7, replacing the post hoc numbers.
+
 ## The result in brief
 
 A dark sector can be written with nothing but a constant Λ, the Casimir energy of the dark dimension, and about 7 percent of the dark matter on the KK tower:
