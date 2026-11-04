@@ -1,0 +1,64 @@
+{
+  "block_conjugacy_verified_integer": true,
+  "combined_graph_all_full_H4_generators_preserve_adjacency": true,
+  "combined_graph_connected": true,
+  "combined_graph_edges": 13920,
+  "combined_graph_eigenvalues": {
+    "-2.0": 308,
+    "-6.0": 84,
+    "10.0": 35,
+    "28.0": 16,
+    "54.0": 1,
+    "58.0": 1,
+    "6.0": 35
+  },
+  "combined_graph_regular_degree": 58,
+  "combined_graph_vertices": 480,
+  "e8_both_sheets_intralayer_edges": 13440,
+  "e8_sheet_root_modes": 240,
+  "e8_single_sheet_innerproduct1_degree": 56,
+  "e8_single_sheet_root_graph_eigenvalues": {
+    "-2.0": 112,
+    "-4.0": 84,
+    "28.0": 8,
+    "56.0": 1,
+    "8.0": 35
+  },
+  "exact_conjugated_block_matrix": "[[T,I+N],[I+N,T]], T=E8 root adjacency, N=root inversion",
+  "exact_two_sheet_spectrum_from_inversion_parity": true,
+  "full_H4_symmetric_interlayer_dark_subspace_dimension": 240,
+  "intersheet_adjacency_spectrum": {
+    "-2": 120,
+    "0": 240,
+    "2": 120
+  },
+  "intersheet_bipartite_edge_count": 480,
+  "intersheet_degree_per_root": 2,
+  "intersheet_disconnected_components": 120,
+  "intersheet_each_component_is_four_cycle": true,
+  "intersheet_exact_minimal_polynomial": "A^3=4A",
+  "intersheet_matched_hopping_F1_vs_F2_requires_symmetry_completion": true,
+  "intersheet_only_has_240_zero_modes": true,
+  "intersheet_root_coordinate_flips": 2,
+  "inversion_even_T_minimal_polynomial": "(T-56I)(T-8I)(T+4I)(I+N)=0",
+  "inversion_even_subspace_T_eigenvalues": {
+    "-4": 84,
+    "56": 1,
+    "8": 35
+  },
+  "inversion_odd_T_minimal_polynomial": "(T-28I)(T+2I)(I-N)=0",
+  "inversion_odd_subspace_T_eigenvalues": {
+    "-2": 112,
+    "28": 8
+  },
+  "number_of_sheets": 2,
+  "one_flip_matching_preserves_base_A5xA5_but_breaks_full_swap": true,
+  "physics_limit": "Graph hopping is not an actual single photon optical compiler, neither tomotope face rank nor Lorentzian dynamics; physical root-mode labels and signed coupling phases remain unspecified.",
+  "prior_art": "The E8 240 root shell/56-neighbor graph is classical. Here the explicit 25-packet A4+A4 gluing is transported to a concrete 480-mode H4-invariant interlayer graph and checked against all generators; no novelty priority claim for classical root geometry.",
+  "root_inversion_commutes_with_E8_adj_exact": true,
+  "root_sheet_flip_laws": "F1(u,v)=(-u,v), F2(u,v)=(u,-v), F1=negative_global*F2; swap conjugates F1 to F2.",
+  "shared_40_roots_in_lattices_not_identified_as_same_state": true,
+  "status": "PASS_FULL_H4_INVARIANT_TWO_E8_SHEET_C4_COUPLER_AND_CONNECTED_ROOT_GRAPH",
+  "two_flip_completed_matching_preserves_all_five_group_generators": true,
+  "unbroken_symmetry_protection": "Rootwise F1-only matching respects A5\u00d7A5 but breaks sheet swap. Adding swap-conjugate F2 restores full group at the cost of 120 uncoupled four-cycles and 240 null interlayer modes."
+}

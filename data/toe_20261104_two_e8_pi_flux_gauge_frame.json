@@ -1,0 +1,69 @@
+{
+  "H4_interlayer_edge_orbit_sizes": [
+    40,
+    40,
+    100,
+    100,
+    100,
+    100
+  ],
+  "all_generators_gauge_covariant": true,
+  "all_wilson_fluxes_minus_one": true,
+  "components": 120,
+  "distinction": "Gauge-invariant pi Wilson flux may preserve H4 UP TO LOCAL Z2 GAUGE even if no literal edge-sign assignment is strictly H4 invariant. The actual local gauge lifts have been constructed for all 5 symmetry generators.",
+  "full_H4_packet_generators_count": 5,
+  "full_graph_warning": "120 disconnected squares, no root-shell mixing across distinct C4 components; 480 optical modes are far more than the proposed 40-mode Witting readout. Combining an all-positive 56-regular intra-sheet E8 root graph with this fixed gauge choice may invalidate these same gauge lifts and must be audited separately.",
+  "gauge_minus_sign_counts_per_generator": [
+    108,
+    104,
+    8,
+    4,
+    200
+  ],
+  "interlayer_root_modes": 480,
+  "interlayer_signed_edges": 480,
+  "novelty_boundary": "Flux pi signed C4 spectra are standard. This is a concrete full-H4 gauge-covariant construction on the NEW two-glue interlayer geometry, whose 120 squares derive from the packet incidence kernel.",
+  "one_negative_edge_per_C4": 120,
+  "one_tick_single_root_to_two_opposite_sheet_neighbor_equal_probabilities": [
+    0.5,
+    0.5
+  ],
+  "ordinary_zero_flux_graph_exact_poly": "A0^3=4A0",
+  "ordinary_zero_flux_spectrum": {
+    "-2": 120,
+    "0": 240,
+    "2": 120
+  },
+  "per_C4_orbit_edge_intersection_parity_patterns": {
+    "(0, 0, 0, 0, 0, 0)": 20,
+    "(0, 0, 1, 1, 1, 1)": 100
+  },
+  "physical_limit": "Ideal signed 480-mode tight-binding graph, not realized photons, physical single-time/temporal entanglement, measured flux, natural W33 map or Lorentzian TOE. Z2 gauge equivalence here is combinatorial; no local gauge dynamical field has been built.",
+  "pi_flux_graph_exact_poly": "A_pi^2=2I480",
+  "pi_flux_has_no_zero_eigenmodes": true,
+  "pi_flux_one_tick_U": "-i A_pi/sqrt2 (evolution time pi/(2sqrt2) at unit signed hopping)",
+  "pi_flux_spectrum": {
+    "-sqrt2": 240,
+    "sqrt2": 240
+  },
+  "status": "PASS_120_C4_PI_FLUX_H4_GAUGE_COVARIANT_EXACT_INVOLUTION",
+  "strict_edge_orbit_signs_force_zero_flux": false,
+  "strict_full_H4_100_noncommon_E8_glue_C4_allow_pi_flux": true,
+  "strict_full_H4_20_common_A4_C4_forced_trivial_flux": true,
+  "strict_full_H4_edge_orbits_count": 6,
+  "strict_full_H4_partial_flux_exact_spectrum": {
+    "-2": 20,
+    "-sqrt2": 200,
+    "0": 40,
+    "2": 20,
+    "sqrt2": 200
+  },
+  "strict_full_H4_partial_flux_residual_zero_modes": 40,
+  "strict_full_H4_partial_pi_flux_squares": 100,
+  "strict_full_H4_partial_pi_flux_verified_by_edge_orbit_signs": true,
+  "strict_full_H4_partial_zero_flux_squares": 20,
+  "strict_full_H4_signed_edge_pi_flux_possible_on_all_120_C4": false,
+  "two_ticks_minus_identity": true,
+  "unexpected_40_mode_sector_warning": "20 common A4 root-line C4 each have 2 dark vectors => 40D interlayer-only kernel. It is NOT a canonical W33 40-ray representation: full H4->W33 graph action is obstructed by the independent 5-adic group-order theorem.",
+  "vertices_per_component": 4
+}

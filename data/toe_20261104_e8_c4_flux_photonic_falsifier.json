@@ -1,0 +1,388 @@
+{
+  "connection_to_prior_3site_ramsey": "Prior three-site signed-flux loop was population-indistinguishable in its paired sign-reversal control; four-site Wilson pi flux cancels two paths to the opposite port exactly, so site populations directly distinguish them.",
+  "fully_H4_strict_20_trivial_100_pi_loops": true,
+  "ideal_target_interrogation_time": 1.5707963267948966,
+  "ideal_time_scans": [
+    {
+      "opposite_probability_contrast": 0.0,
+      "pi_flux_opposite_probability": 0.0,
+      "t": 0,
+      "zero_flux_opposite_probability": 0.0
+    },
+    {
+      "opposite_probability_contrast": 0.0015578416669531365,
+      "pi_flux_opposite_probability": 0.0,
+      "t": 0.2,
+      "zero_flux_opposite_probability": 0.0015578416669531365
+    },
+    {
+      "opposite_probability_contrast": 0.022996705038756202,
+      "pi_flux_opposite_probability": 0.0,
+      "t": 0.4,
+      "zero_flux_opposite_probability": 0.022996705038756202
+    },
+    {
+      "opposite_probability_contrast": 0.2648129141763003,
+      "pi_flux_opposite_probability": 3.0814879110195774e-33,
+      "t": 0.8,
+      "zero_flux_opposite_probability": 0.2648129141763003
+    },
+    {
+      "opposite_probability_contrast": 0.6445680157842297,
+      "pi_flux_opposite_probability": 0.0,
+      "t": 1.1107207345395915,
+      "zero_flux_opposite_probability": 0.6445680157842297
+    },
+    {
+      "opposite_probability_contrast": 1.0,
+      "pi_flux_opposite_probability": 5.8297817423978645e-33,
+      "t": 1.5707963267948966,
+      "zero_flux_opposite_probability": 1.0
+    },
+    {
+      "opposite_probability_contrast": 0.4008506478121057,
+      "pi_flux_opposite_probability": 1.4128210256141963e-64,
+      "t": 2.221441469079183,
+      "zero_flux_opposite_probability": 0.4008506478121057
+    }
+  ],
+  "initial_rail": 0,
+  "modes_per_test_loop": 4,
+  "noise_model": "Independent Lindblad dephasing jump sqrt(kappa)|j><j| and loss jump sqrt(gamma)|vac><j| for each of four rails, total 5D Hilbert. Constant simultaneous couplings, no source drift, detector dark counts or crosstalk.",
+  "number_of_independent_loops_120": 120,
+  "opposite_output_rail": 2,
+  "physical_boundary": "A single 4-rail chip tests the local Wilson-flux effect but not full 25-packet H4 symmetry, E8 lattice glue selection, physical time-entangled single photon or cosmology. Hardware requires stable four-edge hopping phases and reference calibration.",
+  "pi_edge_phase_calibration_error_scan": [
+    {
+      "pi_edge_phase_error_rad": 0,
+      "pi_flux_opposite_leak_probability": 5.8297817423978645e-33
+    },
+    {
+      "pi_edge_phase_error_rad": 0.01,
+      "pi_flux_opposite_leak_probability": 1.9527213841592604e-05
+    },
+    {
+      "pi_edge_phase_error_rad": 0.03,
+      "pi_flux_opposite_leak_probability": 0.00017574239940801415
+    },
+    {
+      "pi_edge_phase_error_rad": 0.1,
+      "pi_flux_opposite_leak_probability": 0.001952372950405827
+    },
+    {
+      "pi_edge_phase_error_rad": 0.2,
+      "pi_flux_opposite_leak_probability": 0.007805203518847816
+    },
+    {
+      "pi_edge_phase_error_rad": 0.4,
+      "pi_flux_opposite_leak_probability": 0.031148344366798104
+    }
+  ],
+  "pi_flux_ideal_4port_probability_at_target": [
+    0.3668723289792925,
+    0.31656383551035405,
+    5.8297817423978645e-33,
+    0.31656383551035405
+  ],
+  "pi_flux_opposite_population_formula": "0 for all t",
+  "sample_5sigma_warning": "Toy iid normal sample-size formula n=25*(p0(1-p0)+p1(1-p1))/(p0-p1)^2 for two n-trial samples. It is NOT a rigorous finite confidence result, exact witness of contextuality or detector loophole closure.",
+  "status": "PASS_FOUR_RAIL_E8_C4_WILSON_FLUX_PERFECT_OPPOSITE_PORT_FALSIFIER",
+  "target_probability_contrast_ideal": 1,
+  "uniform_loss_plus_markov_site_dephasing_control": [
+    {
+      "evolution_time": 1.5707963267948966,
+      "exact_iid_one_sided_5sigma_binomial_error_threshold": {
+        "decision_threshold_opposite_clicks": 1,
+        "false_negative_zero_as_pi": 0.0,
+        "false_positive_pi_as_zero": 0.0,
+        "trials": 1
+      },
+      "iid_normal_5sigma_trials_per_hypothesis_approx": 0,
+      "opposite_population_contrast_unconditional": 1.0000000000000002,
+      "pi_flux_opposite_probability_conditioned_on_survival": -1.3792949883477622e-16,
+      "pi_flux_opposite_probability_unconditional": -1.3792949883477622e-16,
+      "site_dephasing_rate": 0,
+      "survival_probability": 1.0,
+      "uniform_loss_rate": 0,
+      "zero_flux_opposite_probability_conditioned_on_survival": 1.0,
+      "zero_flux_opposite_probability_unconditional": 1.0
+    },
+    {
+      "evolution_time": 1.5707963267948966,
+      "exact_iid_one_sided_5sigma_binomial_error_threshold": {
+        "decision_threshold_opposite_clicks": 5,
+        "false_negative_zero_as_pi": 1.7447261479842914e-07,
+        "false_positive_pi_as_zero": 4.4129603559415136e-08,
+        "trials": 10
+      },
+      "iid_normal_5sigma_trials_per_hypothesis_approx": 2,
+      "opposite_population_contrast_unconditional": 0.9574881572250056,
+      "pi_flux_opposite_probability_conditioned_on_survival": 0.011291969666300484,
+      "pi_flux_opposite_probability_unconditional": 0.011291969666300484,
+      "site_dephasing_rate": 0.05,
+      "survival_probability": 1.0,
+      "uniform_loss_rate": 0,
+      "zero_flux_opposite_probability_conditioned_on_survival": 0.9687801268913061,
+      "zero_flux_opposite_probability_unconditional": 0.9687801268913061
+    },
+    {
+      "evolution_time": 1.5707963267948966,
+      "exact_iid_one_sided_5sigma_binomial_error_threshold": {
+        "decision_threshold_opposite_clicks": 6,
+        "false_negative_zero_as_pi": 1.894465646879947e-07,
+        "false_positive_pi_as_zero": 1.610654501432238e-07,
+        "trials": 13
+      },
+      "iid_normal_5sigma_trials_per_hypothesis_approx": 3,
+      "opposite_population_contrast_unconditional": 0.9170964097268299,
+      "pi_flux_opposite_probability_conditioned_on_survival": 0.02179161712100394,
+      "pi_flux_opposite_probability_unconditional": 0.02179161712100394,
+      "site_dephasing_rate": 0.1,
+      "survival_probability": 1.0,
+      "uniform_loss_rate": 0,
+      "zero_flux_opposite_probability_conditioned_on_survival": 0.9388880268478339,
+      "zero_flux_opposite_probability_unconditional": 0.9388880268478339
+    },
+    {
+      "evolution_time": 1.5707963267948966,
+      "exact_iid_one_sided_5sigma_binomial_error_threshold": {
+        "decision_threshold_opposite_clicks": 9,
+        "false_negative_zero_as_pi": 6.369477799291971e-08,
+        "false_positive_pi_as_zero": 5.651916491231006e-08,
+        "trials": 21
+      },
+      "iid_normal_5sigma_trials_per_hypothesis_approx": 6,
+      "opposite_population_contrast_unconditional": 0.8422170448868423,
+      "pi_flux_opposite_probability_conditioned_on_survival": 0.04060863042850149,
+      "pi_flux_opposite_probability_unconditional": 0.04060863042850149,
+      "site_dephasing_rate": 0.2,
+      "survival_probability": 1.0,
+      "uniform_loss_rate": 0,
+      "zero_flux_opposite_probability_conditioned_on_survival": 0.8828256753153438,
+      "zero_flux_opposite_probability_unconditional": 0.8828256753153438
+    },
+    {
+      "evolution_time": 1.5707963267948966,
+      "exact_iid_one_sided_5sigma_binomial_error_threshold": {
+        "decision_threshold_opposite_clicks": 1,
+        "false_negative_zero_as_pi": 1.8572944625879393e-07,
+        "false_positive_pi_as_zero": 9.85460763687009e-18,
+        "trials": 6
+      },
+      "iid_normal_5sigma_trials_per_hypothesis_approx": 3,
+      "opposite_population_contrast_unconditional": 0.9244652503762559,
+      "pi_flux_opposite_probability_conditioned_on_survival": 1.776632064295058e-18,
+      "pi_flux_opposite_probability_unconditional": 1.642434606145015e-18,
+      "site_dephasing_rate": 0,
+      "survival_probability": 0.9244652503762558,
+      "uniform_loss_rate": 0.05,
+      "zero_flux_opposite_probability_conditioned_on_survival": 1.0000000000000002,
+      "zero_flux_opposite_probability_unconditional": 0.9244652503762559
+    },
+    {
+      "evolution_time": 1.5707963267948966,
+      "exact_iid_one_sided_5sigma_binomial_error_threshold": {
+        "decision_threshold_opposite_clicks": 5,
+        "false_negative_zero_as_pi": 1.0334915013296319e-07,
+        "false_positive_pi_as_zero": 2.2942947713971834e-07,
+        "trials": 14
+      },
+      "iid_normal_5sigma_trials_per_hypothesis_approx": 4,
+      "opposite_population_contrast_unconditional": 0.8851645290013147,
+      "pi_flux_opposite_probability_conditioned_on_survival": 0.011291969666300474,
+      "pi_flux_opposite_probability_unconditional": 0.010439033564797553,
+      "site_dephasing_rate": 0.05,
+      "survival_probability": 0.9244652503762558,
+      "uniform_loss_rate": 0.05,
+      "zero_flux_opposite_probability_conditioned_on_survival": 0.9687801268913062,
+      "zero_flux_opposite_probability_unconditional": 0.8956035625661123
+    },
+    {
+      "evolution_time": 1.5707963267948966,
+      "exact_iid_one_sided_5sigma_binomial_error_threshold": {
+        "decision_threshold_opposite_clicks": 7,
+        "false_negative_zero_as_pi": 2.3926099069536696e-07,
+        "false_positive_pi_as_zero": 3.5251451588445234e-08,
+        "trials": 18
+      },
+      "iid_normal_5sigma_trials_per_hypothesis_approx": 5,
+      "opposite_population_contrast_unconditional": 0.8478237620372795,
+      "pi_flux_opposite_probability_conditioned_on_survival": 0.021791617121003724,
+      "pi_flux_opposite_probability_unconditional": 0.02014559277787221,
+      "site_dephasing_rate": 0.1,
+      "survival_probability": 0.9244652503762558,
+      "uniform_loss_rate": 0.05,
+      "zero_flux_opposite_probability_conditioned_on_survival": 0.938888026847834,
+      "zero_flux_opposite_probability_unconditional": 0.8679693548151517
+    },
+    {
+      "evolution_time": 1.5707963267948966,
+      "exact_iid_one_sided_5sigma_binomial_error_threshold": {
+        "decision_threshold_opposite_clicks": 9,
+        "false_negative_zero_as_pi": 2.75478396347398e-07,
+        "false_positive_pi_as_zero": 1.1579549058176576e-07,
+        "trials": 24
+      },
+      "iid_normal_5sigma_trials_per_hypothesis_approx": 8,
+      "opposite_population_contrast_unconditional": 0.7786003912724652,
+      "pi_flux_opposite_probability_conditioned_on_survival": 0.040608630428501255,
+      "pi_flux_opposite_probability_unconditional": 0.037541267696521254,
+      "site_dephasing_rate": 0.2,
+      "survival_probability": 0.9244652503762558,
+      "uniform_loss_rate": 0.05,
+      "zero_flux_opposite_probability_conditioned_on_survival": 0.8828256753153437,
+      "zero_flux_opposite_probability_unconditional": 0.8161416589689864
+    },
+    {
+      "evolution_time": 1.5707963267948966,
+      "exact_iid_one_sided_5sigma_binomial_error_threshold": {
+        "decision_threshold_opposite_clicks": 1,
+        "false_negative_zero_as_pi": 1.9936776499571778e-07,
+        "false_positive_pi_as_zero": 0.0,
+        "trials": 8
+      },
+      "iid_normal_5sigma_trials_per_hypothesis_approx": 5,
+      "opposite_population_contrast_unconditional": 0.8546359991532335,
+      "pi_flux_opposite_probability_conditioned_on_survival": -5.338064797306558e-17,
+      "pi_flux_opposite_probability_unconditional": -4.5621023415907925e-17,
+      "site_dephasing_rate": 0,
+      "survival_probability": 0.8546359991532334,
+      "uniform_loss_rate": 0.1,
+      "zero_flux_opposite_probability_conditioned_on_survival": 1.0000000000000002,
+      "zero_flux_opposite_probability_unconditional": 0.8546359991532335
+    },
+    {
+      "evolution_time": 1.5707963267948966,
+      "exact_iid_one_sided_5sigma_binomial_error_threshold": {
+        "decision_threshold_opposite_clicks": 6,
+        "false_negative_zero_as_pi": 9.663783536230574e-08,
+        "false_positive_pi_as_zero": 1.967617463361976e-08,
+        "trials": 19
+      },
+      "iid_normal_5sigma_trials_per_hypothesis_approx": 6,
+      "opposite_population_contrast_unconditional": 0.8183038479273811,
+      "pi_flux_opposite_probability_conditioned_on_survival": 0.011291969666300276,
+      "pi_flux_opposite_probability_unconditional": 0.00965052377816654,
+      "site_dephasing_rate": 0.05,
+      "survival_probability": 0.8546359991532334,
+      "uniform_loss_rate": 0.1,
+      "zero_flux_opposite_probability_conditioned_on_survival": 0.9687801268913061,
+      "zero_flux_opposite_probability_unconditional": 0.8279543717055476
+    },
+    {
+      "evolution_time": 1.5707963267948966,
+      "exact_iid_one_sided_5sigma_binomial_error_threshold": {
+        "decision_threshold_opposite_clicks": 7,
+        "false_negative_zero_as_pi": 1.1754433975316299e-07,
+        "false_positive_pi_as_zero": 1.0363326201935657e-07,
+        "trials": 22
+      },
+      "iid_normal_5sigma_trials_per_hypothesis_approx": 8,
+      "opposite_population_contrast_unconditional": 0.7837836064467324,
+      "pi_flux_opposite_probability_conditioned_on_survival": 0.0217916171210039,
+      "pi_flux_opposite_probability_unconditional": 0.018623900471373876,
+      "site_dephasing_rate": 0.1,
+      "survival_probability": 0.8546359991532334,
+      "uniform_loss_rate": 0.1,
+      "zero_flux_opposite_probability_conditioned_on_survival": 0.9388880268478338,
+      "zero_flux_opposite_probability_unconditional": 0.8024075069181063
+    },
+    {
+      "evolution_time": 1.5707963267948966,
+      "exact_iid_one_sided_5sigma_binomial_error_threshold": {
+        "decision_threshold_opposite_clicks": 9,
+        "false_negative_zero_as_pi": 2.3501327914031661e-07,
+        "false_positive_pi_as_zero": 2.76585992142213e-07,
+        "trials": 28
+      },
+      "iid_normal_5sigma_trials_per_hypothesis_approx": 11,
+      "opposite_population_contrast_unconditional": 0.7197890056607498,
+      "pi_flux_opposite_probability_conditioned_on_survival": 0.04060863042850139,
+      "pi_flux_opposite_probability_unconditional": 0.03470559744050668,
+      "site_dephasing_rate": 0.2,
+      "survival_probability": 0.8546359991532334,
+      "uniform_loss_rate": 0.1,
+      "zero_flux_opposite_probability_conditioned_on_survival": 0.8828256753153434,
+      "zero_flux_opposite_probability_unconditional": 0.7544946031012565
+    },
+    {
+      "evolution_time": 1.5707963267948966,
+      "exact_iid_one_sided_5sigma_binomial_error_threshold": {
+        "decision_threshold_opposite_clicks": 1,
+        "false_negative_zero_as_pi": 1.5804568434868186e-07,
+        "false_positive_pi_as_zero": 0.0,
+        "trials": 16
+      },
+      "iid_normal_5sigma_trials_per_hypothesis_approx": 16,
+      "opposite_population_contrast_unconditional": 0.6242284336485697,
+      "pi_flux_opposite_probability_conditioned_on_survival": -3.28506146570261e-17,
+      "pi_flux_opposite_probability_unconditional": -2.050628773174815e-17,
+      "site_dephasing_rate": 0,
+      "survival_probability": 0.6242284336485697,
+      "uniform_loss_rate": 0.3,
+      "zero_flux_opposite_probability_conditioned_on_survival": 1.0,
+      "zero_flux_opposite_probability_unconditional": 0.6242284336485697
+    },
+    {
+      "evolution_time": 1.5707963267948966,
+      "exact_iid_one_sided_5sigma_binomial_error_threshold": {
+        "decision_threshold_opposite_clicks": 6,
+        "false_negative_zero_as_pi": 2.3987081577876117e-07,
+        "false_positive_pi_as_zero": 9.496869693441671e-08,
+        "trials": 32
+      },
+      "iid_normal_5sigma_trials_per_hypothesis_approx": 18,
+      "opposite_population_contrast_unconditional": 0.5976913326216208,
+      "pi_flux_opposite_probability_conditioned_on_survival": 0.011291969666300557,
+      "pi_flux_opposite_probability_unconditional": 0.007048768537601959,
+      "site_dephasing_rate": 0.05,
+      "survival_probability": 0.6242284336485697,
+      "uniform_loss_rate": 0.3,
+      "zero_flux_opposite_probability_conditioned_on_survival": 0.9687801268913062,
+      "zero_flux_opposite_probability_unconditional": 0.6047401011592227
+    },
+    {
+      "evolution_time": 1.5707963267948966,
+      "exact_iid_one_sided_5sigma_binomial_error_threshold": {
+        "decision_threshold_opposite_clicks": 8,
+        "false_negative_zero_as_pi": 2.3570502373664442e-07,
+        "false_positive_pi_as_zero": 4.9512000542779745e-08,
+        "trials": 39
+      },
+      "iid_normal_5sigma_trials_per_hypothesis_approx": 20,
+      "opposite_population_contrast_unconditional": 0.5724776553485061,
+      "pi_flux_opposite_probability_conditioned_on_survival": 0.021791617121003838,
+      "pi_flux_opposite_probability_unconditional": 0.01360294702211358,
+      "site_dephasing_rate": 0.1,
+      "survival_probability": 0.6242284336485697,
+      "uniform_loss_rate": 0.3,
+      "zero_flux_opposite_probability_conditioned_on_survival": 0.9388880268478341,
+      "zero_flux_opposite_probability_unconditional": 0.5860806023706198
+    },
+    {
+      "evolution_time": 1.5707963267948966,
+      "exact_iid_one_sided_5sigma_binomial_error_threshold": {
+        "decision_threshold_opposite_clicks": 11,
+        "false_negative_zero_as_pi": 2.2294500916706861e-07,
+        "false_positive_pi_as_zero": 5.1807689896068015e-08,
+        "trials": 51
+      },
+      "iid_normal_5sigma_trials_per_hypothesis_approx": 25,
+      "opposite_population_contrast_unconditional": 0.5257358267218407,
+      "pi_flux_opposite_probability_conditioned_on_survival": 0.040608630428501415,
+      "pi_flux_opposite_probability_unconditional": 0.025349061764997086,
+      "site_dephasing_rate": 0.2,
+      "survival_probability": 0.6242284336485697,
+      "uniform_loss_rate": 0.3,
+      "zero_flux_opposite_probability_conditioned_on_survival": 0.8828256753153437,
+      "zero_flux_opposite_probability_unconditional": 0.5510848884868378
+    }
+  ],
+  "zero_flux_ideal_4port_probability_at_target": [
+    0.0,
+    0.0,
+    1.0,
+    9.536358530180178e-32
+  ],
+  "zero_flux_opposite_population_formula": "sin(t)^4"
+}
