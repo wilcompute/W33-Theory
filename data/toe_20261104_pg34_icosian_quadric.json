@@ -1,0 +1,4806 @@
+{
+  "200_distinct_shared_3axis_hexagons": 200,
+  "24cell_pair_shared_icosian_axes_histogram": {
+    "0": 100,
+    "3": 200
+  },
+  "PG3F4_lines": 357,
+  "PG3F4_planes": 85,
+  "PG3F4_points": 85,
+  "all_200_shared_hexagons_match_polar_duals_of_2quadric_secants": true,
+  "all_25_24cells_reye_graphs_are_16_tangent_plane_secants": true,
+  "all_25_spatial_hexagon_planes_equal_projective_secant_triples": true,
+  "all_axes_are_even_5_permutations": true,
+  "antipodal_axes": 60,
+  "axes_as_projective_invertible_2x2_F4_matrices": 60,
+  "axis_cell_polar_incidence_exact_matches_300_memberships": true,
+  "axis_permutations_equal_A5_equal_PGL2_F4": true,
+  "cell_axis_incidence_cols_each": 5,
+  "cell_axis_incidence_rows_each": 12,
+  "cell_grid_locations_25": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      1,
+      3
+    ]
+  ],
+  "cells_as_projective_rank1_2x2_F4_matrices": 25,
+  "icosian_axis_permutations_60": [
+    {
+      "axis_id": 0,
+      "permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "axis_id": 1,
+      "permutation": [
+        0,
+        4,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "axis_id": 2,
+      "permutation": [
+        0,
+        2,
+        3,
+        1,
+        4
+      ]
+    },
+    {
+      "axis_id": 3,
+      "permutation": [
+        0,
+        4,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "axis_id": 4,
+      "permutation": [
+        0,
+        1,
+        3,
+        4,
+        2
+      ]
+    },
+    {
+      "axis_id": 5,
+      "permutation": [
+        3,
+        0,
+        2,
+        1,
+        4
+      ]
+    },
+    {
+      "axis_id": 6,
+      "permutation": [
+        4,
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "axis_id": 7,
+      "permutation": [
+        1,
+        4,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "axis_id": 8,
+      "permutation": [
+        2,
+        1,
+        3,
+        0,
+        4
+      ]
+    },
+    {
+      "axis_id": 9,
+      "permutation": [
+        4,
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "axis_id": 10,
+      "permutation": [
+        1,
+        2,
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "axis_id": 11,
+      "permutation": [
+        2,
+        0,
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "axis_id": 12,
+      "permutation": [
+        3,
+        1,
+        2,
+        4,
+        0
+      ]
+    },
+    {
+      "axis_id": 13,
+      "permutation": [
+        3,
+        1,
+        0,
+        2,
+        4
+      ]
+    },
+    {
+      "axis_id": 14,
+      "permutation": [
+        4,
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "axis_id": 15,
+      "permutation": [
+        2,
+        1,
+        4,
+        3,
+        0
+      ]
+    },
+    {
+      "axis_id": 16,
+      "permutation": [
+        1,
+        3,
+        2,
+        0,
+        4
+      ]
+    },
+    {
+      "axis_id": 17,
+      "permutation": [
+        0,
+        1,
+        4,
+        2,
+        3
+      ]
+    },
+    {
+      "axis_id": 18,
+      "permutation": [
+        0,
+        2,
+        4,
+        3,
+        1
+      ]
+    },
+    {
+      "axis_id": 19,
+      "permutation": [
+        0,
+        3,
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "axis_id": 20,
+      "permutation": [
+        0,
+        3,
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "axis_id": 21,
+      "permutation": [
+        2,
+        4,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "axis_id": 22,
+      "permutation": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ]
+    },
+    {
+      "axis_id": 23,
+      "permutation": [
+        2,
+        4,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "axis_id": 24,
+      "permutation": [
+        1,
+        4,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "axis_id": 25,
+      "permutation": [
+        2,
+        0,
+        4,
+        1,
+        3
+      ]
+    },
+    {
+      "axis_id": 26,
+      "permutation": [
+        3,
+        2,
+        4,
+        1,
+        0
+      ]
+    },
+    {
+      "axis_id": 27,
+      "permutation": [
+        4,
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "axis_id": 28,
+      "permutation": [
+        1,
+        3,
+        0,
+        4,
+        2
+      ]
+    },
+    {
+      "axis_id": 29,
+      "permutation": [
+        3,
+        0,
+        4,
+        2,
+        1
+      ]
+    },
+    {
+      "axis_id": 30,
+      "permutation": [
+        4,
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "axis_id": 31,
+      "permutation": [
+        4,
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "axis_id": 32,
+      "permutation": [
+        3,
+        2,
+        0,
+        4,
+        1
+      ]
+    },
+    {
+      "axis_id": 33,
+      "permutation": [
+        4,
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "axis_id": 34,
+      "permutation": [
+        3,
+        0,
+        1,
+        4,
+        2
+      ]
+    },
+    {
+      "axis_id": 35,
+      "permutation": [
+        3,
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "axis_id": 36,
+      "permutation": [
+        4,
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "axis_id": 37,
+      "permutation": [
+        1,
+        4,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "axis_id": 38,
+      "permutation": [
+        4,
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "axis_id": 39,
+      "permutation": [
+        3,
+        4,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "axis_id": 40,
+      "permutation": [
+        2,
+        0,
+        3,
+        4,
+        1
+      ]
+    },
+    {
+      "axis_id": 41,
+      "permutation": [
+        1,
+        3,
+        4,
+        2,
+        0
+      ]
+    },
+    {
+      "axis_id": 42,
+      "permutation": [
+        2,
+        3,
+        4,
+        0,
+        1
+      ]
+    },
+    {
+      "axis_id": 43,
+      "permutation": [
+        1,
+        2,
+        4,
+        0,
+        3
+      ]
+    },
+    {
+      "axis_id": 44,
+      "permutation": [
+        2,
+        3,
+        1,
+        4,
+        0
+      ]
+    },
+    {
+      "axis_id": 45,
+      "permutation": [
+        0,
+        2,
+        1,
+        4,
+        3
+      ]
+    },
+    {
+      "axis_id": 46,
+      "permutation": [
+        1,
+        0,
+        2,
+        4,
+        3
+      ]
+    },
+    {
+      "axis_id": 47,
+      "permutation": [
+        3,
+        2,
+        1,
+        0,
+        4
+      ]
+    },
+    {
+      "axis_id": 48,
+      "permutation": [
+        4,
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "axis_id": 49,
+      "permutation": [
+        2,
+        1,
+        0,
+        4,
+        3
+      ]
+    },
+    {
+      "axis_id": 50,
+      "permutation": [
+        3,
+        4,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "axis_id": 51,
+      "permutation": [
+        1,
+        0,
+        3,
+        2,
+        4
+      ]
+    },
+    {
+      "axis_id": 52,
+      "permutation": [
+        2,
+        4,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "axis_id": 53,
+      "permutation": [
+        4,
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "axis_id": 54,
+      "permutation": [
+        4,
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "axis_id": 55,
+      "permutation": [
+        2,
+        3,
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "axis_id": 56,
+      "permutation": [
+        1,
+        0,
+        4,
+        3,
+        2
+      ]
+    },
+    {
+      "axis_id": 57,
+      "permutation": [
+        3,
+        1,
+        4,
+        0,
+        2
+      ]
+    },
+    {
+      "axis_id": 58,
+      "permutation": [
+        0,
+        4,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "axis_id": 59,
+      "permutation": [
+        0,
+        3,
+        4,
+        1,
+        2
+      ]
+    }
+  ],
+  "icosian_vertices": 120,
+  "inscribed_24cells": 25,
+  "known_prior_art": "Denney et al (2020) establish 600-cell to PG(3,4) using E8/2E8; A5=PGL2(4) and hyperbolic quadric coordinatization are classical. This concrete icosian incidence realization is independently recomputed; no discovery priority claim.",
+  "line_types_number_quadric_points": {
+    "0": 72,
+    "1": 75,
+    "2": 200,
+    "5": 10
+  },
+  "lines_through_each_point": 21,
+  "physics_boundary": "Finite exact F4 incidence only. Does not derive E8/2E8 lattice isomorphism, a canonical quantum state-map, physical 4D spacetime, or an experimentally selected 24-cell.",
+  "points_on_each_line": 5,
+  "projective_point_coordinates_85": [
+    [
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      2,
+      2,
+      3
+    ],
+    [
+      1,
+      3,
+      3,
+      2
+    ],
+    [
+      1,
+      2,
+      3,
+      1
+    ],
+    [
+      1,
+      0,
+      2,
+      0
+    ],
+    [
+      1,
+      3,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      2,
+      1,
+      2
+    ],
+    [
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      3,
+      3
+    ],
+    [
+      1,
+      3,
+      2,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      3
+    ],
+    [
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      3
+    ],
+    [
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      2
+    ],
+    [
+      1,
+      1,
+      2,
+      2
+    ],
+    [
+      1,
+      0,
+      3,
+      0
+    ],
+    [
+      1,
+      3,
+      1,
+      3
+    ],
+    [
+      1,
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      3,
+      2
+    ],
+    [
+      0,
+      1,
+      2,
+      2
+    ],
+    [
+      0,
+      1,
+      2,
+      1
+    ],
+    [
+      0,
+      1,
+      3,
+      0
+    ],
+    [
+      1,
+      2,
+      0,
+      3
+    ],
+    [
+      1,
+      3,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      3,
+      2
+    ],
+    [
+      1,
+      1,
+      2,
+      0
+    ],
+    [
+      1,
+      3,
+      2,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      2,
+      3,
+      0
+    ],
+    [
+      1,
+      2,
+      1,
+      0
+    ],
+    [
+      1,
+      3,
+      0,
+      2
+    ],
+    [
+      1,
+      1,
+      3,
+      0
+    ],
+    [
+      1,
+      0,
+      2,
+      3
+    ],
+    [
+      0,
+      1,
+      2,
+      0
+    ],
+    [
+      0,
+      1,
+      3,
+      3
+    ],
+    [
+      0,
+      1,
+      3,
+      1
+    ],
+    [
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      1,
+      1,
+      2,
+      1
+    ],
+    [
+      1,
+      0,
+      3,
+      3
+    ],
+    [
+      1,
+      1,
+      3,
+      2
+    ],
+    [
+      1,
+      0,
+      2,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      2
+    ],
+    [
+      1,
+      2,
+      3,
+      3
+    ],
+    [
+      1,
+      3,
+      2,
+      3
+    ],
+    [
+      1,
+      0,
+      1,
+      2
+    ],
+    [
+      1,
+      2,
+      0,
+      1
+    ],
+    [
+      1,
+      3,
+      1,
+      2
+    ],
+    [
+      1,
+      3,
+      0,
+      3
+    ],
+    [
+      1,
+      2,
+      1,
+      1
+    ],
+    [
+      1,
+      3,
+      1,
+      1
+    ],
+    [
+      1,
+      2,
+      0,
+      2
+    ],
+    [
+      1,
+      2,
+      1,
+      3
+    ],
+    [
+      1,
+      3,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      3
+    ],
+    [
+      1,
+      3,
+      2,
+      2
+    ],
+    [
+      1,
+      2,
+      3,
+      2
+    ],
+    [
+      1,
+      1,
+      0,
+      3
+    ],
+    [
+      1,
+      0,
+      3,
+      1
+    ],
+    [
+      1,
+      1,
+      2,
+      3
+    ],
+    [
+      1,
+      0,
+      2,
+      2
+    ],
+    [
+      1,
+      1,
+      3,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      2,
+      2,
+      2
+    ],
+    [
+      1,
+      3,
+      3,
+      3
+    ],
+    [
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      2,
+      2,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      2
+    ],
+    [
+      1,
+      1,
+      1,
+      3
+    ],
+    [
+      1,
+      3,
+      3,
+      0
+    ],
+    [
+      1,
+      3,
+      3,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      2
+    ],
+    [
+      1,
+      0,
+      0,
+      3
+    ],
+    [
+      1,
+      2,
+      2,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      3
+    ],
+    [
+      0,
+      1,
+      1,
+      2
+    ]
+  ],
+  "quadric_generators_two_reguli": 10,
+  "quadric_polar_plane_contains_21_points": true,
+  "reye_tangent_plane_records_25": [
+    {
+      "cell_id": 0,
+      "central_hexagon_axes": [
+        [
+          0,
+          1,
+          20
+        ],
+        [
+          0,
+          2,
+          19
+        ],
+        [
+          0,
+          3,
+          18
+        ],
+        [
+          0,
+          4,
+          17
+        ],
+        [
+          1,
+          2,
+          59
+        ],
+        [
+          1,
+          3,
+          58
+        ],
+        [
+          1,
+          17,
+          45
+        ],
+        [
+          2,
+          4,
+          58
+        ],
+        [
+          2,
+          18,
+          45
+        ],
+        [
+          3,
+          4,
+          59
+        ],
+        [
+          3,
+          19,
+          45
+        ],
+        [
+          4,
+          20,
+          45
+        ],
+        [
+          17,
+          18,
+          59
+        ],
+        [
+          17,
+          19,
+          58
+        ],
+        [
+          18,
+          20,
+          58
+        ],
+        [
+          19,
+          20,
+          59
+        ]
+      ],
+      "icosian_hexagon_planes_identical_to_projective_secants": true,
+      "incidence_axes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        17,
+        18,
+        19,
+        20,
+        45,
+        58,
+        59
+      ],
+      "lines_not_through_quadric_center": 16,
+      "tangent_plane_projective_lines": 21
+    },
+    {
+      "cell_id": 1,
+      "central_hexagon_axes": [
+        [
+          0,
+          4,
+          17
+        ],
+        [
+          0,
+          6,
+          15
+        ],
+        [
+          0,
+          8,
+          13
+        ],
+        [
+          0,
+          9,
+          12
+        ],
+        [
+          4,
+          6,
+          57
+        ],
+        [
+          4,
+          8,
+          53
+        ],
+        [
+          4,
+          12,
+          49
+        ],
+        [
+          6,
+          9,
+          53
+        ],
+        [
+          6,
+          13,
+          49
+        ],
+        [
+          8,
+          9,
+          57
+        ],
+        [
+          8,
+          15,
+          49
+        ],
+        [
+          9,
+          17,
+          49
+        ],
+        [
+          12,
+          13,
+          57
+        ],
+        [
+          12,
+          15,
+          53
+        ],
+        [
+          13,
+          17,
+          53
+        ],
+        [
+          15,
+          17,
+          57
+        ]
+      ],
+      "icosian_hexagon_planes_identical_to_projective_secants": true,
+      "incidence_axes": [
+        0,
+        4,
+        6,
+        8,
+        9,
+        12,
+        13,
+        15,
+        17,
+        49,
+        53,
+        57
+      ],
+      "lines_not_through_quadric_center": 16,
+      "tangent_plane_projective_lines": 21
+    },
+    {
+      "cell_id": 2,
+      "central_hexagon_axes": [
+        [
+          0,
+          1,
+          20
+        ],
+        [
+          0,
+          5,
+          16
+        ],
+        [
+          0,
+          7,
+          14
+        ],
+        [
+          0,
+          9,
+          12
+        ],
+        [
+          1,
+          5,
+          54
+        ],
+        [
+          1,
+          7,
+          50
+        ],
+        [
+          1,
+          9,
+          46
+        ],
+        [
+          5,
+          12,
+          50
+        ],
+        [
+          5,
+          14,
+          46
+        ],
+        [
+          7,
+          12,
+          54
+        ],
+        [
+          7,
+          16,
+          46
+        ],
+        [
+          9,
+          14,
+          54
+        ],
+        [
+          9,
+          16,
+          50
+        ],
+        [
+          12,
+          20,
+          46
+        ],
+        [
+          14,
+          20,
+          50
+        ],
+        [
+          16,
+          20,
+          54
+        ]
+      ],
+      "icosian_hexagon_planes_identical_to_projective_secants": true,
+      "incidence_axes": [
+        0,
+        1,
+        5,
+        7,
+        9,
+        12,
+        14,
+        16,
+        20,
+        46,
+        50,
+        54
+      ],
+      "lines_not_through_quadric_center": 16,
+      "tangent_plane_projective_lines": 21
+    },
+    {
+      "cell_id": 3,
+      "central_hexagon_axes": [
+        [
+          0,
+          3,
+          18
+        ],
+        [
+          0,
+          6,
+          15
+        ],
+        [
+          0,
+          7,
+          14
+        ],
+        [
+          0,
+          10,
+          11
+        ],
+        [
+          3,
+          6,
+          56
+        ],
+        [
+          3,
+          7,
+          52
+        ],
+        [
+          3,
+          11,
+          48
+        ],
+        [
+          6,
+          10,
+          52
+        ],
+        [
+          6,
+          14,
+          48
+        ],
+        [
+          7,
+          10,
+          56
+        ],
+        [
+          7,
+          15,
+          48
+        ],
+        [
+          10,
+          18,
+          48
+        ],
+        [
+          11,
+          14,
+          56
+        ],
+        [
+          11,
+          15,
+          52
+        ],
+        [
+          14,
+          18,
+          52
+        ],
+        [
+          15,
+          18,
+          56
+        ]
+      ],
+      "icosian_hexagon_planes_identical_to_projective_secants": true,
+      "incidence_axes": [
+        0,
+        3,
+        6,
+        7,
+        10,
+        11,
+        14,
+        15,
+        18,
+        48,
+        52,
+        56
+      ],
+      "lines_not_through_quadric_center": 16,
+      "tangent_plane_projective_lines": 21
+    },
+    {
+      "cell_id": 4,
+      "central_hexagon_axes": [
+        [
+          0,
+          2,
+          19
+        ],
+        [
+          0,
+          5,
+          16
+        ],
+        [
+          0,
+          8,
+          13
+        ],
+        [
+          0,
+          10,
+          11
+        ],
+        [
+          2,
+          5,
+          55
+        ],
+        [
+          2,
+          8,
+          51
+        ],
+        [
+          2,
+          10,
+          47
+        ],
+        [
+          5,
+          11,
+          51
+        ],
+        [
+          5,
+          13,
+          47
+        ],
+        [
+          8,
+          11,
+          55
+        ],
+        [
+          8,
+          16,
+          47
+        ],
+        [
+          10,
+          13,
+          55
+        ],
+        [
+          10,
+          16,
+          51
+        ],
+        [
+          11,
+          19,
+          47
+        ],
+        [
+          13,
+          19,
+          51
+        ],
+        [
+          16,
+          19,
+          55
+        ]
+      ],
+      "icosian_hexagon_planes_identical_to_projective_secants": true,
+      "incidence_axes": [
+        0,
+        2,
+        5,
+        8,
+        10,
+        11,
+        13,
+        16,
+        19,
+        47,
+        51,
+        55
+      ],
+      "lines_not_through_quadric_center": 16,
+      "tangent_plane_projective_lines": 21
+    },
+    {
+      "cell_id": 5,
+      "central_hexagon_axes": [
+        [
+          1,
+          9,
+          46
+        ],
+        [
+          1,
+          17,
+          45
+        ],
+        [
+          1,
+          21,
+          37
+        ],
+        [
+          1,
+          25,
+          33
+        ],
+        [
+          9,
+          17,
+          49
+        ],
+        [
+          9,
+          21,
+          43
+        ],
+        [
+          9,
+          31,
+          33
+        ],
+        [
+          17,
+          25,
+          43
+        ],
+        [
+          17,
+          31,
+          37
+        ],
+        [
+          21,
+          25,
+          49
+        ],
+        [
+          21,
+          31,
+          45
+        ],
+        [
+          25,
+          31,
+          46
+        ],
+        [
+          33,
+          37,
+          49
+        ],
+        [
+          33,
+          43,
+          45
+        ],
+        [
+          37,
+          43,
+          46
+        ],
+        [
+          45,
+          46,
+          49
+        ]
+      ],
+      "icosian_hexagon_planes_identical_to_projective_secants": true,
+      "incidence_axes": [
+        1,
+        9,
+        17,
+        21,
+        25,
+        31,
+        33,
+        37,
+        43,
+        45,
+        46,
+        49
+      ],
+      "lines_not_through_quadric_center": 16,
+      "tangent_plane_projective_lines": 21
+    },
+    {
+      "cell_id": 6,
+      "central_hexagon_axes": [
+        [
+          1,
+          2,
+          59
+        ],
+        [
+          1,
+          5,
+          54
+        ],
+        [
+          1,
+          23,
+          35
+        ],
+        [
+          1,
+          25,
+          33
+        ],
+        [
+          2,
+          5,
+          55
+        ],
+        [
+          2,
+          23,
+          36
+        ],
+        [
+          2,
+          26,
+          33
+        ],
+        [
+          5,
+          25,
+          36
+        ],
+        [
+          5,
+          26,
+          35
+        ],
+        [
+          23,
+          25,
+          55
+        ],
+        [
+          23,
+          26,
+          54
+        ],
+        [
+          25,
+          26,
+          59
+        ],
+        [
+          33,
+          35,
+          55
+        ],
+        [
+          33,
+          36,
+          54
+        ],
+        [
+          35,
+          36,
+          59
+        ],
+        [
+          54,
+          55,
+          59
+        ]
+      ],
+      "icosian_hexagon_planes_identical_to_projective_secants": true,
+      "incidence_axes": [
+        1,
+        2,
+        5,
+        23,
+        25,
+        26,
+        33,
+        35,
+        36,
+        54,
+        55,
+        59
+      ],
+      "lines_not_through_quadric_center": 16,
+      "tangent_plane_projective_lines": 21
+    },
+    {
+      "cell_id": 7,
+      "central_hexagon_axes": [
+        [
+          1,
+          3,
+          58
+        ],
+        [
+          1,
+          7,
+          50
+        ],
+        [
+          1,
+          21,
+          37
+        ],
+        [
+          1,
+          23,
+          35
+        ],
+        [
+          3,
+          7,
+          52
+        ],
+        [
+          3,
+          21,
+          39
+        ],
+        [
+          3,
+          24,
+          35
+        ],
+        [
+          7,
+          23,
+          39
+        ],
+        [
+          7,
+          24,
+          37
+        ],
+        [
+          21,
+          23,
+          52
+        ],
+        [
+          21,
+          24,
+          50
+        ],
+        [
+          23,
+          24,
+          58
+        ],
+        [
+          35,
+          37,
+          52
+        ],
+        [
+          35,
+          39,
+          50
+        ],
+        [
+          37,
+          39,
+          58
+        ],
+        [
+          50,
+          52,
+          58
+        ]
+      ],
+      "icosian_hexagon_planes_identical_to_projective_secants": true,
+      "incidence_axes": [
+        1,
+        3,
+        7,
+        21,
+        23,
+        24,
+        35,
+        37,
+        39,
+        50,
+        52,
+        58
+      ],
+      "lines_not_through_quadric_center": 16,
+      "tangent_plane_projective_lines": 21
+    },
+    {
+      "cell_id": 8,
+      "central_hexagon_axes": [
+        [
+          2,
+          10,
+          47
+        ],
+        [
+          2,
+          18,
+          45
+        ],
+        [
+          2,
+          22,
+          38
+        ],
+        [
+          2,
+          26,
+          33
+        ],
+        [
+          10,
+          18,
+          48
+        ],
+        [
+          10,
+          22,
+          43
+        ],
+        [
+          10,
+          32,
+          33
+        ],
+        [
+          18,
+          26,
+          43
+        ],
+        [
+          18,
+          32,
+          38
+        ],
+        [
+          22,
+          26,
+          48
+        ],
+        [
+          22,
+          32,
+          45
+        ],
+        [
+          26,
+          32,
+          47
+        ],
+        [
+          33,
+          38,
+          48
+        ],
+        [
+          33,
+          43,
+          45
+        ],
+        [
+          38,
+          43,
+          47
+        ],
+        [
+          45,
+          47,
+          48
+        ]
+      ],
+      "icosian_hexagon_planes_identical_to_projective_secants": true,
+      "incidence_axes": [
+        2,
+        10,
+        18,
+        22,
+        26,
+        32,
+        33,
+        38,
+        43,
+        45,
+        47,
+        48
+      ],
+      "lines_not_through_quadric_center": 16,
+      "tangent_plane_projective_lines": 21
+    },
+    {
+      "cell_id": 9,
+      "central_hexagon_axes": [
+        [
+          2,
+          4,
+          58
+        ],
+        [
+          2,
+          8,
+          51
+        ],
+        [
+          2,
+          22,
+          38
+        ],
+        [
+          2,
+          23,
+          36
+        ],
+        [
+          4,
+          8,
+          53
+        ],
+        [
+          4,
+          22,
+          40
+        ],
+        [
+          4,
+          24,
+          36
+        ],
+        [
+          8,
+          23,
+          40
+        ],
+        [
+          8,
+          24,
+          38
+        ],
+        [
+          22,
+          23,
+          53
+        ],
+        [
+          22,
+          24,
+          51
+        ],
+        [
+          23,
+          24,
+          58
+        ],
+        [
+          36,
+          38,
+          53
+        ],
+        [
+          36,
+          40,
+          51
+        ],
+        [
+          38,
+          40,
+          58
+        ],
+        [
+          51,
+          53,
+          58
+        ]
+      ],
+      "icosian_hexagon_planes_identical_to_projective_secants": true,
+      "incidence_axes": [
+        2,
+        4,
+        8,
+        22,
+        23,
+        24,
+        36,
+        38,
+        40,
+        51,
+        53,
+        58
+      ],
+      "lines_not_through_quadric_center": 16,
+      "tangent_plane_projective_lines": 21
+    },
+    {
+      "cell_id": 10,
+      "central_hexagon_axes": [
+        [
+          3,
+          11,
+          48
+        ],
+        [
+          3,
+          19,
+          45
+        ],
+        [
+          3,
+          21,
+          39
+        ],
+        [
+          3,
+          27,
+          34
+        ],
+        [
+          11,
+          19,
+          47
+        ],
+        [
+          11,
+          21,
+          44
+        ],
+        [
+          11,
+          31,
+          34
+        ],
+        [
+          19,
+          27,
+          44
+        ],
+        [
+          19,
+          31,
+          39
+        ],
+        [
+          21,
+          27,
+          47
+        ],
+        [
+          21,
+          31,
+          45
+        ],
+        [
+          27,
+          31,
+          48
+        ],
+        [
+          34,
+          39,
+          47
+        ],
+        [
+          34,
+          44,
+          45
+        ],
+        [
+          39,
+          44,
+          48
+        ],
+        [
+          45,
+          47,
+          48
+        ]
+      ],
+      "icosian_hexagon_planes_identical_to_projective_secants": true,
+      "incidence_axes": [
+        3,
+        11,
+        19,
+        21,
+        27,
+        31,
+        34,
+        39,
+        44,
+        45,
+        47,
+        48
+      ],
+      "lines_not_through_quadric_center": 16,
+      "tangent_plane_projective_lines": 21
+    },
+    {
+      "cell_id": 11,
+      "central_hexagon_axes": [
+        [
+          3,
+          4,
+          59
+        ],
+        [
+          3,
+          6,
+          56
+        ],
+        [
+          3,
+          24,
+          35
+        ],
+        [
+          3,
+          27,
+          34
+        ],
+        [
+          4,
+          6,
+          57
+        ],
+        [
+          4,
+          24,
+          36
+        ],
+        [
+          4,
+          28,
+          34
+        ],
+        [
+          6,
+          27,
+          36
+        ],
+        [
+          6,
+          28,
+          35
+        ],
+        [
+          24,
+          27,
+          57
+        ],
+        [
+          24,
+          28,
+          56
+        ],
+        [
+          27,
+          28,
+          59
+        ],
+        [
+          34,
+          35,
+          57
+        ],
+        [
+          34,
+          36,
+          56
+        ],
+        [
+          35,
+          36,
+          59
+        ],
+        [
+          56,
+          57,
+          59
+        ]
+      ],
+      "icosian_hexagon_planes_identical_to_projective_secants": true,
+      "incidence_axes": [
+        3,
+        4,
+        6,
+        24,
+        27,
+        28,
+        34,
+        35,
+        36,
+        56,
+        57,
+        59
+      ],
+      "lines_not_through_quadric_center": 16,
+      "tangent_plane_projective_lines": 21
+    },
+    {
+      "cell_id": 12,
+      "central_hexagon_axes": [
+        [
+          4,
+          12,
+          49
+        ],
+        [
+          4,
+          20,
+          45
+        ],
+        [
+          4,
+          22,
+          40
+        ],
+        [
+          4,
+          28,
+          34
+        ],
+        [
+          12,
+          20,
+          46
+        ],
+        [
+          12,
+          22,
+          44
+        ],
+        [
+          12,
+          32,
+          34
+        ],
+        [
+          20,
+          28,
+          44
+        ],
+        [
+          20,
+          32,
+          40
+        ],
+        [
+          22,
+          28,
+          46
+        ],
+        [
+          22,
+          32,
+          45
+        ],
+        [
+          28,
+          32,
+          49
+        ],
+        [
+          34,
+          40,
+          46
+        ],
+        [
+          34,
+          44,
+          45
+        ],
+        [
+          40,
+          44,
+          49
+        ],
+        [
+          45,
+          46,
+          49
+        ]
+      ],
+      "icosian_hexagon_planes_identical_to_projective_secants": true,
+      "incidence_axes": [
+        4,
+        12,
+        20,
+        22,
+        28,
+        32,
+        34,
+        40,
+        44,
+        45,
+        46,
+        49
+      ],
+      "lines_not_through_quadric_center": 16,
+      "tangent_plane_projective_lines": 21
+    },
+    {
+      "cell_id": 13,
+      "central_hexagon_axes": [
+        [
+          5,
+          12,
+          50
+        ],
+        [
+          5,
+          13,
+          47
+        ],
+        [
+          5,
+          26,
+          35
+        ],
+        [
+          5,
+          29,
+          34
+        ],
+        [
+          12,
+          13,
+          57
+        ],
+        [
+          12,
+          26,
+          39
+        ],
+        [
+          12,
+          32,
+          34
+        ],
+        [
+          13,
+          29,
+          39
+        ],
+        [
+          13,
+          32,
+          35
+        ],
+        [
+          26,
+          29,
+          57
+        ],
+        [
+          26,
+          32,
+          47
+        ],
+        [
+          29,
+          32,
+          50
+        ],
+        [
+          34,
+          35,
+          57
+        ],
+        [
+          34,
+          39,
+          47
+        ],
+        [
+          35,
+          39,
+          50
+        ],
+        [
+          47,
+          50,
+          57
+        ]
+      ],
+      "icosian_hexagon_planes_identical_to_projective_secants": true,
+      "incidence_axes": [
+        5,
+        12,
+        13,
+        26,
+        29,
+        32,
+        34,
+        35,
+        39,
+        47,
+        50,
+        57
+      ],
+      "lines_not_through_quadric_center": 16,
+      "tangent_plane_projective_lines": 21
+    },
+    {
+      "cell_id": 14,
+      "central_hexagon_axes": [
+        [
+          5,
+          11,
+          51
+        ],
+        [
+          5,
+          14,
+          46
+        ],
+        [
+          5,
+          25,
+          36
+        ],
+        [
+          5,
+          29,
+          34
+        ],
+        [
+          11,
+          14,
+          56
+        ],
+        [
+          11,
+          25,
+          40
+        ],
+        [
+          11,
+          31,
+          34
+        ],
+        [
+          14,
+          29,
+          40
+        ],
+        [
+          14,
+          31,
+          36
+        ],
+        [
+          25,
+          29,
+          56
+        ],
+        [
+          25,
+          31,
+          46
+        ],
+        [
+          29,
+          31,
+          51
+        ],
+        [
+          34,
+          36,
+          56
+        ],
+        [
+          34,
+          40,
+          46
+        ],
+        [
+          36,
+          40,
+          51
+        ],
+        [
+          46,
+          51,
+          56
+        ]
+      ],
+      "icosian_hexagon_planes_identical_to_projective_secants": true,
+      "incidence_axes": [
+        5,
+        11,
+        14,
+        25,
+        29,
+        31,
+        34,
+        36,
+        40,
+        46,
+        51,
+        56
+      ],
+      "lines_not_through_quadric_center": 16,
+      "tangent_plane_projective_lines": 21
+    },
+    {
+      "cell_id": 15,
+      "central_hexagon_axes": [
+        [
+          6,
+          9,
+          53
+        ],
+        [
+          6,
+          14,
+          48
+        ],
+        [
+          6,
+          27,
+          36
+        ],
+        [
+          6,
+          30,
+          33
+        ],
+        [
+          9,
+          14,
+          54
+        ],
+        [
+          9,
+          27,
+          38
+        ],
+        [
+          9,
+          31,
+          33
+        ],
+        [
+          14,
+          30,
+          38
+        ],
+        [
+          14,
+          31,
+          36
+        ],
+        [
+          27,
+          30,
+          54
+        ],
+        [
+          27,
+          31,
+          48
+        ],
+        [
+          30,
+          31,
+          53
+        ],
+        [
+          33,
+          36,
+          54
+        ],
+        [
+          33,
+          38,
+          48
+        ],
+        [
+          36,
+          38,
+          53
+        ],
+        [
+          48,
+          53,
+          54
+        ]
+      ],
+      "icosian_hexagon_planes_identical_to_projective_secants": true,
+      "incidence_axes": [
+        6,
+        9,
+        14,
+        27,
+        30,
+        31,
+        33,
+        36,
+        38,
+        48,
+        53,
+        54
+      ],
+      "lines_not_through_quadric_center": 16,
+      "tangent_plane_projective_lines": 21
+    },
+    {
+      "cell_id": 16,
+      "central_hexagon_axes": [
+        [
+          6,
+          10,
+          52
+        ],
+        [
+          6,
+          13,
+          49
+        ],
+        [
+          6,
+          28,
+          35
+        ],
+        [
+          6,
+          30,
+          33
+        ],
+        [
+          10,
+          13,
+          55
+        ],
+        [
+          10,
+          28,
+          37
+        ],
+        [
+          10,
+          32,
+          33
+        ],
+        [
+          13,
+          30,
+          37
+        ],
+        [
+          13,
+          32,
+          35
+        ],
+        [
+          28,
+          30,
+          55
+        ],
+        [
+          28,
+          32,
+          49
+        ],
+        [
+          30,
+          32,
+          52
+        ],
+        [
+          33,
+          35,
+          55
+        ],
+        [
+          33,
+          37,
+          49
+        ],
+        [
+          35,
+          37,
+          52
+        ],
+        [
+          49,
+          52,
+          55
+        ]
+      ],
+      "icosian_hexagon_planes_identical_to_projective_secants": true,
+      "incidence_axes": [
+        6,
+        10,
+        13,
+        28,
+        30,
+        32,
+        33,
+        35,
+        37,
+        49,
+        52,
+        55
+      ],
+      "lines_not_through_quadric_center": 16,
+      "tangent_plane_projective_lines": 21
+    },
+    {
+      "cell_id": 17,
+      "central_hexagon_axes": [
+        [
+          7,
+          12,
+          54
+        ],
+        [
+          7,
+          15,
+          48
+        ],
+        [
+          7,
+          22,
+          41
+        ],
+        [
+          7,
+          23,
+          39
+        ],
+        [
+          12,
+          15,
+          53
+        ],
+        [
+          12,
+          22,
+          44
+        ],
+        [
+          12,
+          26,
+          39
+        ],
+        [
+          15,
+          23,
+          44
+        ],
+        [
+          15,
+          26,
+          41
+        ],
+        [
+          22,
+          23,
+          53
+        ],
+        [
+          22,
+          26,
+          48
+        ],
+        [
+          23,
+          26,
+          54
+        ],
+        [
+          39,
+          41,
+          53
+        ],
+        [
+          39,
+          44,
+          48
+        ],
+        [
+          41,
+          44,
+          54
+        ],
+        [
+          48,
+          53,
+          54
+        ]
+      ],
+      "icosian_hexagon_planes_identical_to_projective_secants": true,
+      "incidence_axes": [
+        7,
+        12,
+        15,
+        22,
+        23,
+        26,
+        39,
+        41,
+        44,
+        48,
+        53,
+        54
+      ],
+      "lines_not_through_quadric_center": 16,
+      "tangent_plane_projective_lines": 21
+    },
+    {
+      "cell_id": 18,
+      "central_hexagon_axes": [
+        [
+          7,
+          10,
+          56
+        ],
+        [
+          7,
+          16,
+          46
+        ],
+        [
+          7,
+          22,
+          41
+        ],
+        [
+          7,
+          24,
+          37
+        ],
+        [
+          10,
+          16,
+          51
+        ],
+        [
+          10,
+          22,
+          43
+        ],
+        [
+          10,
+          28,
+          37
+        ],
+        [
+          16,
+          24,
+          43
+        ],
+        [
+          16,
+          28,
+          41
+        ],
+        [
+          22,
+          24,
+          51
+        ],
+        [
+          22,
+          28,
+          46
+        ],
+        [
+          24,
+          28,
+          56
+        ],
+        [
+          37,
+          41,
+          51
+        ],
+        [
+          37,
+          43,
+          46
+        ],
+        [
+          41,
+          43,
+          56
+        ],
+        [
+          46,
+          51,
+          56
+        ]
+      ],
+      "icosian_hexagon_planes_identical_to_projective_secants": true,
+      "incidence_axes": [
+        7,
+        10,
+        16,
+        22,
+        24,
+        28,
+        37,
+        41,
+        43,
+        46,
+        51,
+        56
+      ],
+      "lines_not_through_quadric_center": 16,
+      "tangent_plane_projective_lines": 21
+    },
+    {
+      "cell_id": 19,
+      "central_hexagon_axes": [
+        [
+          8,
+          11,
+          55
+        ],
+        [
+          8,
+          15,
+          49
+        ],
+        [
+          8,
+          21,
+          42
+        ],
+        [
+          8,
+          23,
+          40
+        ],
+        [
+          11,
+          15,
+          52
+        ],
+        [
+          11,
+          21,
+          44
+        ],
+        [
+          11,
+          25,
+          40
+        ],
+        [
+          15,
+          23,
+          44
+        ],
+        [
+          15,
+          25,
+          42
+        ],
+        [
+          21,
+          23,
+          52
+        ],
+        [
+          21,
+          25,
+          49
+        ],
+        [
+          23,
+          25,
+          55
+        ],
+        [
+          40,
+          42,
+          52
+        ],
+        [
+          40,
+          44,
+          49
+        ],
+        [
+          42,
+          44,
+          55
+        ],
+        [
+          49,
+          52,
+          55
+        ]
+      ],
+      "icosian_hexagon_planes_identical_to_projective_secants": true,
+      "incidence_axes": [
+        8,
+        11,
+        15,
+        21,
+        23,
+        25,
+        40,
+        42,
+        44,
+        49,
+        52,
+        55
+      ],
+      "lines_not_through_quadric_center": 16,
+      "tangent_plane_projective_lines": 21
+    },
+    {
+      "cell_id": 20,
+      "central_hexagon_axes": [
+        [
+          8,
+          9,
+          57
+        ],
+        [
+          8,
+          16,
+          47
+        ],
+        [
+          8,
+          21,
+          42
+        ],
+        [
+          8,
+          24,
+          38
+        ],
+        [
+          9,
+          16,
+          50
+        ],
+        [
+          9,
+          21,
+          43
+        ],
+        [
+          9,
+          27,
+          38
+        ],
+        [
+          16,
+          24,
+          43
+        ],
+        [
+          16,
+          27,
+          42
+        ],
+        [
+          21,
+          24,
+          50
+        ],
+        [
+          21,
+          27,
+          47
+        ],
+        [
+          24,
+          27,
+          57
+        ],
+        [
+          38,
+          42,
+          50
+        ],
+        [
+          38,
+          43,
+          47
+        ],
+        [
+          42,
+          43,
+          57
+        ],
+        [
+          47,
+          50,
+          57
+        ]
+      ],
+      "icosian_hexagon_planes_identical_to_projective_secants": true,
+      "incidence_axes": [
+        8,
+        9,
+        16,
+        21,
+        24,
+        27,
+        38,
+        42,
+        43,
+        47,
+        50,
+        57
+      ],
+      "lines_not_through_quadric_center": 16,
+      "tangent_plane_projective_lines": 21
+    },
+    {
+      "cell_id": 21,
+      "central_hexagon_axes": [
+        [
+          13,
+          17,
+          53
+        ],
+        [
+          13,
+          19,
+          51
+        ],
+        [
+          13,
+          29,
+          39
+        ],
+        [
+          13,
+          30,
+          37
+        ],
+        [
+          17,
+          19,
+          58
+        ],
+        [
+          17,
+          29,
+          41
+        ],
+        [
+          17,
+          31,
+          37
+        ],
+        [
+          19,
+          30,
+          41
+        ],
+        [
+          19,
+          31,
+          39
+        ],
+        [
+          29,
+          30,
+          58
+        ],
+        [
+          29,
+          31,
+          51
+        ],
+        [
+          30,
+          31,
+          53
+        ],
+        [
+          37,
+          39,
+          58
+        ],
+        [
+          37,
+          41,
+          51
+        ],
+        [
+          39,
+          41,
+          53
+        ],
+        [
+          51,
+          53,
+          58
+        ]
+      ],
+      "icosian_hexagon_planes_identical_to_projective_secants": true,
+      "incidence_axes": [
+        13,
+        17,
+        19,
+        29,
+        30,
+        31,
+        37,
+        39,
+        41,
+        51,
+        53,
+        58
+      ],
+      "lines_not_through_quadric_center": 16,
+      "tangent_plane_projective_lines": 21
+    },
+    {
+      "cell_id": 22,
+      "central_hexagon_axes": [
+        [
+          14,
+          18,
+          52
+        ],
+        [
+          14,
+          20,
+          50
+        ],
+        [
+          14,
+          29,
+          40
+        ],
+        [
+          14,
+          30,
+          38
+        ],
+        [
+          18,
+          20,
+          58
+        ],
+        [
+          18,
+          29,
+          42
+        ],
+        [
+          18,
+          32,
+          38
+        ],
+        [
+          20,
+          30,
+          42
+        ],
+        [
+          20,
+          32,
+          40
+        ],
+        [
+          29,
+          30,
+          58
+        ],
+        [
+          29,
+          32,
+          50
+        ],
+        [
+          30,
+          32,
+          52
+        ],
+        [
+          38,
+          40,
+          58
+        ],
+        [
+          38,
+          42,
+          50
+        ],
+        [
+          40,
+          42,
+          52
+        ],
+        [
+          50,
+          52,
+          58
+        ]
+      ],
+      "icosian_hexagon_planes_identical_to_projective_secants": true,
+      "incidence_axes": [
+        14,
+        18,
+        20,
+        29,
+        30,
+        32,
+        38,
+        40,
+        42,
+        50,
+        52,
+        58
+      ],
+      "lines_not_through_quadric_center": 16,
+      "tangent_plane_projective_lines": 21
+    },
+    {
+      "cell_id": 23,
+      "central_hexagon_axes": [
+        [
+          15,
+          17,
+          57
+        ],
+        [
+          15,
+          18,
+          56
+        ],
+        [
+          15,
+          25,
+          42
+        ],
+        [
+          15,
+          26,
+          41
+        ],
+        [
+          17,
+          18,
+          59
+        ],
+        [
+          17,
+          25,
+          43
+        ],
+        [
+          17,
+          29,
+          41
+        ],
+        [
+          18,
+          26,
+          43
+        ],
+        [
+          18,
+          29,
+          42
+        ],
+        [
+          25,
+          26,
+          59
+        ],
+        [
+          25,
+          29,
+          56
+        ],
+        [
+          26,
+          29,
+          57
+        ],
+        [
+          41,
+          42,
+          59
+        ],
+        [
+          41,
+          43,
+          56
+        ],
+        [
+          42,
+          43,
+          57
+        ],
+        [
+          56,
+          57,
+          59
+        ]
+      ],
+      "icosian_hexagon_planes_identical_to_projective_secants": true,
+      "incidence_axes": [
+        15,
+        17,
+        18,
+        25,
+        26,
+        29,
+        41,
+        42,
+        43,
+        56,
+        57,
+        59
+      ],
+      "lines_not_through_quadric_center": 16,
+      "tangent_plane_projective_lines": 21
+    },
+    {
+      "cell_id": 24,
+      "central_hexagon_axes": [
+        [
+          16,
+          19,
+          55
+        ],
+        [
+          16,
+          20,
+          54
+        ],
+        [
+          16,
+          27,
+          42
+        ],
+        [
+          16,
+          28,
+          41
+        ],
+        [
+          19,
+          20,
+          59
+        ],
+        [
+          19,
+          27,
+          44
+        ],
+        [
+          19,
+          30,
+          41
+        ],
+        [
+          20,
+          28,
+          44
+        ],
+        [
+          20,
+          30,
+          42
+        ],
+        [
+          27,
+          28,
+          59
+        ],
+        [
+          27,
+          30,
+          54
+        ],
+        [
+          28,
+          30,
+          55
+        ],
+        [
+          41,
+          42,
+          59
+        ],
+        [
+          41,
+          44,
+          54
+        ],
+        [
+          42,
+          44,
+          55
+        ],
+        [
+          54,
+          55,
+          59
+        ]
+      ],
+      "icosian_hexagon_planes_identical_to_projective_secants": true,
+      "incidence_axes": [
+        16,
+        19,
+        20,
+        27,
+        28,
+        30,
+        41,
+        42,
+        44,
+        54,
+        55,
+        59
+      ],
+      "lines_not_through_quadric_center": 16,
+      "tangent_plane_projective_lines": 21
+    }
+  ],
+  "shared_hexagon_between_cell_pairs": {
+    "0-1": [
+      0,
+      4,
+      17
+    ],
+    "0-10": [
+      3,
+      19,
+      45
+    ],
+    "0-11": [
+      3,
+      4,
+      59
+    ],
+    "0-12": [
+      4,
+      20,
+      45
+    ],
+    "0-2": [
+      0,
+      1,
+      20
+    ],
+    "0-21": [
+      17,
+      19,
+      58
+    ],
+    "0-22": [
+      18,
+      20,
+      58
+    ],
+    "0-23": [
+      17,
+      18,
+      59
+    ],
+    "0-24": [
+      19,
+      20,
+      59
+    ],
+    "0-3": [
+      0,
+      3,
+      18
+    ],
+    "0-4": [
+      0,
+      2,
+      19
+    ],
+    "0-5": [
+      1,
+      17,
+      45
+    ],
+    "0-6": [
+      1,
+      2,
+      59
+    ],
+    "0-7": [
+      1,
+      3,
+      58
+    ],
+    "0-8": [
+      2,
+      18,
+      45
+    ],
+    "0-9": [
+      2,
+      4,
+      58
+    ],
+    "1-11": [
+      4,
+      6,
+      57
+    ],
+    "1-12": [
+      4,
+      12,
+      49
+    ],
+    "1-13": [
+      12,
+      13,
+      57
+    ],
+    "1-15": [
+      6,
+      9,
+      53
+    ],
+    "1-16": [
+      6,
+      13,
+      49
+    ],
+    "1-17": [
+      12,
+      15,
+      53
+    ],
+    "1-19": [
+      8,
+      15,
+      49
+    ],
+    "1-2": [
+      0,
+      9,
+      12
+    ],
+    "1-20": [
+      8,
+      9,
+      57
+    ],
+    "1-21": [
+      13,
+      17,
+      53
+    ],
+    "1-23": [
+      15,
+      17,
+      57
+    ],
+    "1-3": [
+      0,
+      6,
+      15
+    ],
+    "1-4": [
+      0,
+      8,
+      13
+    ],
+    "1-5": [
+      9,
+      17,
+      49
+    ],
+    "1-9": [
+      4,
+      8,
+      53
+    ],
+    "10-11": [
+      3,
+      27,
+      34
+    ],
+    "10-12": [
+      34,
+      44,
+      45
+    ],
+    "10-13": [
+      34,
+      39,
+      47
+    ],
+    "10-14": [
+      11,
+      31,
+      34
+    ],
+    "10-15": [
+      27,
+      31,
+      48
+    ],
+    "10-17": [
+      39,
+      44,
+      48
+    ],
+    "10-19": [
+      11,
+      21,
+      44
+    ],
+    "10-20": [
+      21,
+      27,
+      47
+    ],
+    "10-21": [
+      19,
+      31,
+      39
+    ],
+    "10-24": [
+      19,
+      27,
+      44
+    ],
+    "11-12": [
+      4,
+      28,
+      34
+    ],
+    "11-13": [
+      34,
+      35,
+      57
+    ],
+    "11-14": [
+      34,
+      36,
+      56
+    ],
+    "11-15": [
+      6,
+      27,
+      36
+    ],
+    "11-16": [
+      6,
+      28,
+      35
+    ],
+    "11-18": [
+      24,
+      28,
+      56
+    ],
+    "11-20": [
+      24,
+      27,
+      57
+    ],
+    "11-23": [
+      56,
+      57,
+      59
+    ],
+    "11-24": [
+      27,
+      28,
+      59
+    ],
+    "12-13": [
+      12,
+      32,
+      34
+    ],
+    "12-14": [
+      34,
+      40,
+      46
+    ],
+    "12-16": [
+      28,
+      32,
+      49
+    ],
+    "12-17": [
+      12,
+      22,
+      44
+    ],
+    "12-18": [
+      22,
+      28,
+      46
+    ],
+    "12-19": [
+      40,
+      44,
+      49
+    ],
+    "12-22": [
+      20,
+      32,
+      40
+    ],
+    "12-24": [
+      20,
+      28,
+      44
+    ],
+    "13-14": [
+      5,
+      29,
+      34
+    ],
+    "13-16": [
+      13,
+      32,
+      35
+    ],
+    "13-17": [
+      12,
+      26,
+      39
+    ],
+    "13-20": [
+      47,
+      50,
+      57
+    ],
+    "13-21": [
+      13,
+      29,
+      39
+    ],
+    "13-22": [
+      29,
+      32,
+      50
+    ],
+    "13-23": [
+      26,
+      29,
+      57
+    ],
+    "14-15": [
+      14,
+      31,
+      36
+    ],
+    "14-18": [
+      46,
+      51,
+      56
+    ],
+    "14-19": [
+      11,
+      25,
+      40
+    ],
+    "14-21": [
+      29,
+      31,
+      51
+    ],
+    "14-22": [
+      14,
+      29,
+      40
+    ],
+    "14-23": [
+      25,
+      29,
+      56
+    ],
+    "15-16": [
+      6,
+      30,
+      33
+    ],
+    "15-17": [
+      48,
+      53,
+      54
+    ],
+    "15-20": [
+      9,
+      27,
+      38
+    ],
+    "15-21": [
+      30,
+      31,
+      53
+    ],
+    "15-22": [
+      14,
+      30,
+      38
+    ],
+    "15-24": [
+      27,
+      30,
+      54
+    ],
+    "16-18": [
+      10,
+      28,
+      37
+    ],
+    "16-19": [
+      49,
+      52,
+      55
+    ],
+    "16-21": [
+      13,
+      30,
+      37
+    ],
+    "16-22": [
+      30,
+      32,
+      52
+    ],
+    "16-24": [
+      28,
+      30,
+      55
+    ],
+    "17-18": [
+      7,
+      22,
+      41
+    ],
+    "17-19": [
+      15,
+      23,
+      44
+    ],
+    "17-21": [
+      39,
+      41,
+      53
+    ],
+    "17-23": [
+      15,
+      26,
+      41
+    ],
+    "17-24": [
+      41,
+      44,
+      54
+    ],
+    "18-20": [
+      16,
+      24,
+      43
+    ],
+    "18-21": [
+      37,
+      41,
+      51
+    ],
+    "18-23": [
+      41,
+      43,
+      56
+    ],
+    "18-24": [
+      16,
+      28,
+      41
+    ],
+    "19-20": [
+      8,
+      21,
+      42
+    ],
+    "19-22": [
+      40,
+      42,
+      52
+    ],
+    "19-23": [
+      15,
+      25,
+      42
+    ],
+    "19-24": [
+      42,
+      44,
+      55
+    ],
+    "2-12": [
+      12,
+      20,
+      46
+    ],
+    "2-13": [
+      5,
+      12,
+      50
+    ],
+    "2-14": [
+      5,
+      14,
+      46
+    ],
+    "2-15": [
+      9,
+      14,
+      54
+    ],
+    "2-17": [
+      7,
+      12,
+      54
+    ],
+    "2-18": [
+      7,
+      16,
+      46
+    ],
+    "2-20": [
+      9,
+      16,
+      50
+    ],
+    "2-22": [
+      14,
+      20,
+      50
+    ],
+    "2-24": [
+      16,
+      20,
+      54
+    ],
+    "2-3": [
+      0,
+      7,
+      14
+    ],
+    "2-4": [
+      0,
+      5,
+      16
+    ],
+    "2-5": [
+      1,
+      9,
+      46
+    ],
+    "2-6": [
+      1,
+      5,
+      54
+    ],
+    "2-7": [
+      1,
+      7,
+      50
+    ],
+    "20-22": [
+      38,
+      42,
+      50
+    ],
+    "20-23": [
+      42,
+      43,
+      57
+    ],
+    "20-24": [
+      16,
+      27,
+      42
+    ],
+    "21-22": [
+      29,
+      30,
+      58
+    ],
+    "21-23": [
+      17,
+      29,
+      41
+    ],
+    "21-24": [
+      19,
+      30,
+      41
+    ],
+    "22-23": [
+      18,
+      29,
+      42
+    ],
+    "22-24": [
+      20,
+      30,
+      42
+    ],
+    "23-24": [
+      41,
+      42,
+      59
+    ],
+    "3-10": [
+      3,
+      11,
+      48
+    ],
+    "3-11": [
+      3,
+      6,
+      56
+    ],
+    "3-14": [
+      11,
+      14,
+      56
+    ],
+    "3-15": [
+      6,
+      14,
+      48
+    ],
+    "3-16": [
+      6,
+      10,
+      52
+    ],
+    "3-17": [
+      7,
+      15,
+      48
+    ],
+    "3-18": [
+      7,
+      10,
+      56
+    ],
+    "3-19": [
+      11,
+      15,
+      52
+    ],
+    "3-22": [
+      14,
+      18,
+      52
+    ],
+    "3-23": [
+      15,
+      18,
+      56
+    ],
+    "3-4": [
+      0,
+      10,
+      11
+    ],
+    "3-7": [
+      3,
+      7,
+      52
+    ],
+    "3-8": [
+      10,
+      18,
+      48
+    ],
+    "4-10": [
+      11,
+      19,
+      47
+    ],
+    "4-13": [
+      5,
+      13,
+      47
+    ],
+    "4-14": [
+      5,
+      11,
+      51
+    ],
+    "4-16": [
+      10,
+      13,
+      55
+    ],
+    "4-18": [
+      10,
+      16,
+      51
+    ],
+    "4-19": [
+      8,
+      11,
+      55
+    ],
+    "4-20": [
+      8,
+      16,
+      47
+    ],
+    "4-21": [
+      13,
+      19,
+      51
+    ],
+    "4-24": [
+      16,
+      19,
+      55
+    ],
+    "4-6": [
+      2,
+      5,
+      55
+    ],
+    "4-8": [
+      2,
+      10,
+      47
+    ],
+    "4-9": [
+      2,
+      8,
+      51
+    ],
+    "5-10": [
+      21,
+      31,
+      45
+    ],
+    "5-12": [
+      45,
+      46,
+      49
+    ],
+    "5-14": [
+      25,
+      31,
+      46
+    ],
+    "5-15": [
+      9,
+      31,
+      33
+    ],
+    "5-16": [
+      33,
+      37,
+      49
+    ],
+    "5-18": [
+      37,
+      43,
+      46
+    ],
+    "5-19": [
+      21,
+      25,
+      49
+    ],
+    "5-20": [
+      9,
+      21,
+      43
+    ],
+    "5-21": [
+      17,
+      31,
+      37
+    ],
+    "5-23": [
+      17,
+      25,
+      43
+    ],
+    "5-6": [
+      1,
+      25,
+      33
+    ],
+    "5-7": [
+      1,
+      21,
+      37
+    ],
+    "5-8": [
+      33,
+      43,
+      45
+    ],
+    "6-11": [
+      35,
+      36,
+      59
+    ],
+    "6-13": [
+      5,
+      26,
+      35
+    ],
+    "6-14": [
+      5,
+      25,
+      36
+    ],
+    "6-15": [
+      33,
+      36,
+      54
+    ],
+    "6-16": [
+      33,
+      35,
+      55
+    ],
+    "6-17": [
+      23,
+      26,
+      54
+    ],
+    "6-19": [
+      23,
+      25,
+      55
+    ],
+    "6-23": [
+      25,
+      26,
+      59
+    ],
+    "6-24": [
+      54,
+      55,
+      59
+    ],
+    "6-7": [
+      1,
+      23,
+      35
+    ],
+    "6-8": [
+      2,
+      26,
+      33
+    ],
+    "6-9": [
+      2,
+      23,
+      36
+    ],
+    "7-10": [
+      3,
+      21,
+      39
+    ],
+    "7-11": [
+      3,
+      24,
+      35
+    ],
+    "7-13": [
+      35,
+      39,
+      50
+    ],
+    "7-16": [
+      35,
+      37,
+      52
+    ],
+    "7-17": [
+      7,
+      23,
+      39
+    ],
+    "7-18": [
+      7,
+      24,
+      37
+    ],
+    "7-19": [
+      21,
+      23,
+      52
+    ],
+    "7-20": [
+      21,
+      24,
+      50
+    ],
+    "7-21": [
+      37,
+      39,
+      58
+    ],
+    "7-22": [
+      50,
+      52,
+      58
+    ],
+    "7-9": [
+      23,
+      24,
+      58
+    ],
+    "8-10": [
+      45,
+      47,
+      48
+    ],
+    "8-12": [
+      22,
+      32,
+      45
+    ],
+    "8-13": [
+      26,
+      32,
+      47
+    ],
+    "8-15": [
+      33,
+      38,
+      48
+    ],
+    "8-16": [
+      10,
+      32,
+      33
+    ],
+    "8-17": [
+      22,
+      26,
+      48
+    ],
+    "8-18": [
+      10,
+      22,
+      43
+    ],
+    "8-20": [
+      38,
+      43,
+      47
+    ],
+    "8-22": [
+      18,
+      32,
+      38
+    ],
+    "8-23": [
+      18,
+      26,
+      43
+    ],
+    "8-9": [
+      2,
+      22,
+      38
+    ],
+    "9-11": [
+      4,
+      24,
+      36
+    ],
+    "9-12": [
+      4,
+      22,
+      40
+    ],
+    "9-14": [
+      36,
+      40,
+      51
+    ],
+    "9-15": [
+      36,
+      38,
+      53
+    ],
+    "9-17": [
+      22,
+      23,
+      53
+    ],
+    "9-18": [
+      22,
+      24,
+      51
+    ],
+    "9-19": [
+      8,
+      23,
+      40
+    ],
+    "9-20": [
+      8,
+      24,
+      38
+    ],
+    "9-21": [
+      51,
+      53,
+      58
+    ],
+    "9-22": [
+      38,
+      40,
+      58
+    ]
+  },
+  "status": "PASS_FULL_EXPLICIT_PG34_600CELL_85_POINTS_357_LINES_POLARITY"
+}

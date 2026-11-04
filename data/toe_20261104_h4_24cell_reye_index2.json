@@ -1,0 +1,66 @@
+{
+  "all_reye_automorphisms_order": 576,
+  "cell24_axis_to_published_Reye_axis_index_map": [
+    0,
+    2,
+    5,
+    7,
+    8,
+    6,
+    9,
+    3,
+    4,
+    10,
+    11,
+    1
+  ],
+  "cell24_hexagon_to_published_Reye_line_index_map": [
+    0,
+    1,
+    4,
+    5,
+    2,
+    8,
+    10,
+    13,
+    14,
+    7,
+    11,
+    15,
+    6,
+    9,
+    12,
+    3
+  ],
+  "distinct_effective_actions_from_1152_parameterized_2T_operations": 288,
+  "effective_H4_stabilizer_on_12axes_16hexagons_order": 288,
+  "effective_group_center_order": 1,
+  "effective_group_order_histogram": {
+    "1": 1,
+    "2": 27,
+    "3": 80,
+    "4": 36,
+    "6": 144
+  },
+  "effective_image_has_index2_in_reye": true,
+  "exact_reye_24cell_hexagon_incidence": [
+    12,
+    16,
+    48
+  ],
+  "full_reye_group_order_histogram": {
+    "1": 1,
+    "2": 75,
+    "3": 80,
+    "4": 180,
+    "6": 240
+  },
+  "image_order_as_reye_28vertex_permutation_subgroup": 288,
+  "original_H4_stabilizer_center_contains_antipodal": true,
+  "original_H4_stabilizer_on_600cell_vertices_order": 576,
+  "parameterization_kernel_size": 4,
+  "physics_boundary": "Group-action exactness, not a physical gauge field, embedding of the full tomotope or selected 3+1 spacetime.",
+  "prior_art": "24cell/REYE coincidence and Aut576 in Tomotope 2012, repo MCXCIII, Pass5643. Distinguishing H4 stabilizer 576 from Reye576 and embedding its center quotient fixes a possible false identification.",
+  "proof_type": "explicit injection of axis/plane quotient group as exact 288-element subset of fully enumerated colored Reye graph aut576, after 28-index graph isomorphism",
+  "status": "PASS_EXPLICIT_H4_STABILIZER_CENTRAL_QUOTIENT_AS_INDEX2_REYE"
+}
