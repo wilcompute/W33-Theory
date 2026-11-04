@@ -4,6 +4,8 @@ Claude track. Continues `PASS12558_12562_SPARSE_TOWER_CASIMIR.md`. Producer: `an
 
 **This is not a theory of everything.** Λ is a tuned input. The gauge group, generations and strong CP are untouched, and so is everything W33-related. No detection is claimed: the preference over ΛCDM is the same 2.5 to 3σ-level one as in Passes 12550–12562.
 
+**Corrected by Passes 12573–12580** (`PASS12573_12580_THREE_VACUA.md`): the real N-body reverses the sign of the toy in 12563, with the coupled species concentrated in peaks, not expelled; and weak lensing is not neutral, as the DES Y6 S8 prior cuts the c′ gain to 4.0.
+
 ## The result in brief
 
 Pass 12562 left a model that fit well but had two problems: an unbounded negative potential with recollapse, and a conflict with no-AdS₃. Both go away together when the bulk contains two massive Dirac fermions:
