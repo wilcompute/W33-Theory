@@ -1,0 +1,26 @@
+{
+  "status": "PASS_EXACT_OPTIMAL_FIVE_LOAD_APARTMENT_BASIS",
+  "date": "2026-11-03",
+  "flags": 160,
+  "apartments_all": 1620,
+  "selected": 81,
+  "length_each": 8,
+  "total_cycle_incidence": 648,
+  "max_flag_load": 5,
+  "max_flag_load_lower_bound": 5,
+  "load_histogram": {
+    "3": 9,
+    "4": 134,
+    "5": 17
+  },
+  "rank_GF2": 81,
+  "rank_Q": 81,
+  "H_nonzero_entries": 3926,
+  "H_max_offdiag_degree": 31,
+  "cut_mixing_exact": 0,
+  "H_non_scalar_in_H1": true,
+  "positive_eigenvalues_numeric_min": 0.00006776153468091977,
+  "positive_eigenvalues_numeric_max": 23.296365271236102,
+  "hash": "4e3587dfdec1096401e0e91956c5b48910f5ba0e6d4c58559716e1f1a258915f",
+  "limitations": "No integral-unimodularity or physical continuum claimed."
+}
