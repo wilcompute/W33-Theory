@@ -1,0 +1,24 @@
+{
+  "status": "PASS_EXACT_Q2_PARITY_SHARP_LOAD_FOUR",
+  "date": "2026-11-03",
+  "q": 2,
+  "Levi_nodes": 30,
+  "Levi_flags": 45,
+  "shortest_apartments": 90,
+  "shortest_cycle_length": 8,
+  "cycle_rank": 16,
+  "selected_octagons": 16,
+  "incidence_total": 128,
+  "average_lower_bound": 3,
+  "parity_sharp_lower_bound": 4,
+  "attained_max_load": 4,
+  "load_histogram": {
+    "2": 11,
+    "3": 30,
+    "4": 4
+  },
+  "proof": "At every trivalent Levi vertex sum of incident selected-cycle loads is even. If all loads <=3, each vertex requires an incident flag of load<=2, so at least 15 such flags exist. Total <=15*2+30*3=120 <128. Contradiction.",
+  "basis_rank_over_GF2": 16,
+  "script": "analysis/2026_11_03_q2_parity_apartment_load.py",
+  "scope": "Finite incidence theorem, no physical q-selection or continuum."
+}
