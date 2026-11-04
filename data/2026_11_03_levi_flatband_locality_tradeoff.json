@@ -1,0 +1,319 @@
+{
+  "status": "PASS_EXACT_PRIME_FIELD_LEVI_HODGE_FLATBAND_LOCALITY_TRADEOFF",
+  "date": "2026-11-03",
+  "scope": "Finite generalized-quadrangle incidence geometry, not emergent spacetime or a TOE; prime fields q=2,3,5 explicitly enumerated. All prime-power q proof is a graph-theoretic extension, not fully enumerated for extension fields.",
+  "formula": "v=(q+1)(q^2+1); E=(q+1)^2(q^2+1); beta1=E-2v+1=q^4",
+  "radial_projector": "P_cycle=(q^4 A0-q^3 A1+q^2 A2-q A3+A4)/E",
+  "distance_regular_intersection_array": "b=(2q,q,q,q), c=(1,1,1,2) on Levi line graph",
+  "rigidity": "For any onsite diagonal V, [V,P]_(ef)=(V_ee-V_ff)P_ef. Since every entry of P is nonzero, [V,P]=0 iff V is a scalar constant. Any polynomial h(A_flag) restricts to h(-2)I on the cycle space, so it cannot generate intra-band dispersion.",
+  "local_defect": "V=lambda |e><e|: PVP has rank1 eigenvalue lambda p with p=q^4/E, and ||(I-P)VP||=|lambda|sqrt[p(1-p)]. PVP is dense with all E^2 entries nonzero.",
+  "cases": [
+    {
+      "q": 2,
+      "points": 15,
+      "lines": 15,
+      "levi_vertices": 30,
+      "flags": 45,
+      "cycle_rank": 16,
+      "flat_band_adjacency_eigenvalue": -2,
+      "flag_graph_degree": 4,
+      "diameter": 4,
+      "distance_shells": [
+        1,
+        4,
+        8,
+        16,
+        16
+      ],
+      "intersection_profiles": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "integer_projector_coefficients": [
+        16,
+        -8,
+        4,
+        -2,
+        1
+      ],
+      "projector_denominator": 45,
+      "exact_incidence_and_flatband_residual": 0,
+      "projector_test": "full exact K^2=E K",
+      "projection_onto_defect": 0.35555555555555557,
+      "defect_cut_leakage_amplitude": 0.4786813161897337,
+      "leakage_to_band_split_ratio": 1.346291201783626,
+      "projected_defect_radial_probability": [
+        0.35555555555555557,
+        0.35555555555555557,
+        0.17777777777777778,
+        0.08888888888888889,
+        0.022222222222222223
+      ],
+      "all_projected_defect_matrix_entries_nonzero": true
+    },
+    {
+      "q": 3,
+      "points": 40,
+      "lines": 40,
+      "levi_vertices": 80,
+      "flags": 160,
+      "cycle_rank": 81,
+      "flat_band_adjacency_eigenvalue": -2,
+      "flag_graph_degree": 6,
+      "diameter": 4,
+      "distance_shells": [
+        1,
+        6,
+        18,
+        54,
+        81
+      ],
+      "intersection_profiles": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "integer_projector_coefficients": [
+        81,
+        -27,
+        9,
+        -3,
+        1
+      ],
+      "projector_denominator": 160,
+      "exact_incidence_and_flatband_residual": 0,
+      "projector_test": "full exact K^2=E K",
+      "projection_onto_defect": 0.50625,
+      "defect_cut_leakage_amplitude": 0.4999609359740019,
+      "leakage_to_band_split_ratio": 0.9875771574795099,
+      "projected_defect_radial_probability": [
+        0.50625,
+        0.3375,
+        0.1125,
+        0.0375,
+        0.00625
+      ],
+      "all_projected_defect_matrix_entries_nonzero": true
+    },
+    {
+      "q": 4,
+      "points": 85,
+      "lines": 85,
+      "levi_vertices": 170,
+      "flags": 425,
+      "cycle_rank": 256,
+      "flat_band_adjacency_eigenvalue": -2,
+      "flag_graph_degree": 8,
+      "diameter": 4,
+      "distance_shells": [
+        1,
+        8,
+        32,
+        128,
+        256
+      ],
+      "intersection_profiles": [
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "integer_projector_coefficients": [
+        256,
+        -64,
+        16,
+        -4,
+        1
+      ],
+      "projector_denominator": 425,
+      "exact_incidence_and_flatband_residual": 0,
+      "projector_test": "deterministic basis-column and vector K^2=E K probes",
+      "projection_onto_defect": 0.6023529411764705,
+      "defect_cut_leakage_amplitude": 0.4894117647058824,
+      "leakage_to_band_split_ratio": 0.8125000000000001,
+      "projected_defect_radial_probability": [
+        0.6023529411764705,
+        0.30117647058823527,
+        0.07529411764705882,
+        0.018823529411764704,
+        0.002352941176470588
+      ],
+      "all_projected_defect_matrix_entries_nonzero": true
+    },
+    {
+      "q": 5,
+      "points": 156,
+      "lines": 156,
+      "levi_vertices": 312,
+      "flags": 936,
+      "cycle_rank": 625,
+      "flat_band_adjacency_eigenvalue": -2,
+      "flag_graph_degree": 10,
+      "diameter": 4,
+      "distance_shells": [
+        1,
+        10,
+        50,
+        250,
+        625
+      ],
+      "intersection_profiles": [
+        [
+          0,
+          10
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      "integer_projector_coefficients": [
+        625,
+        -125,
+        25,
+        -5,
+        1
+      ],
+      "projector_denominator": 936,
+      "exact_incidence_and_flatband_residual": 0,
+      "projector_test": "deterministic basis-column and vector K^2=E K probes",
+      "projection_onto_defect": 0.6677350427350427,
+      "defect_cut_leakage_amplitude": 0.4710254297155021,
+      "leakage_to_band_split_ratio": 0.705407683541936,
+      "projected_defect_radial_probability": [
+        0.6677350427350427,
+        0.2670940170940171,
+        0.053418803418803416,
+        0.010683760683760684,
+        0.0010683760683760685
+      ],
+      "all_projected_defect_matrix_entries_nonzero": true
+    }
+  ],
+  "q3_dynamical_controls": {
+    "q": 3,
+    "onsite_coupling": 0.25,
+    "small_time_leakage_coefficient": 0.01562255859375,
+    "finite_time_tests": [
+      {
+        "t": 0.005,
+        "cut_leakage_probability": 3.9054745555081424e-07,
+        "leading_order_prediction": 3.9056396484375e-07,
+        "relative_error": -4.227039466475624e-05
+      },
+      {
+        "t": 0.01,
+        "cut_leakage_probability": 1.5619917325068375e-06,
+        "leading_order_prediction": 1.562255859375e-06,
+        "relative_error": -0.00016906761243840052
+      },
+      {
+        "t": 0.02,
+        "cut_leakage_probability": 6.244798803636088e-06,
+        "leading_order_prediction": 6.2490234375e-06,
+        "relative_error": -0.0006760470505776661
+      }
+    ],
+    "adjacent_bond_projected_eigenvalues": [
+      0.33749999999999997,
+      -0.675
+    ],
+    "adjacent_bond_cut_leakage_amplitudes": [
+      0.47285700798444347,
+      0.4683748498798799
+    ],
+    "two_flag_bond_is_local_but_not_cycle_preserving": true
+  },
+  "proof_note": "GQ(q,q) incidence is (q+1)-regular and connected; Euler rank gives q^4. The line graph is distance-regular with stated intersection array. Its -2 eigenspace is ker of unsigned incidence U, dimension q^4. The radial K satisfies A K=-2K by the three-term recurrence. Each A_d is a polynomial in A, so K is central on eigenspaces; its image is the -2 eigenspace and trace(K)=E*q^4, hence K=E P_cycle.",
+  "independent_prior": [
+    "analysis/w33_levi_kirchhoff_cycle_projector.py",
+    "analysis/w33_levi_flag_association_scheme.py",
+    "analysis/2026_11_03_local_spin2_hamiltonian_closure.py"
+  ],
+  "literature": [
+    "https://doi.org/10.1515/nanoph-2024-0135",
+    "https://www.nature.com/articles/s42005-025-02138-6"
+  ],
+  "not_claimed": [
+    "emergent Lorentzian metric",
+    "full Hilbert-space local dynamics",
+    "graviton",
+    "bona fide qutrit hardware",
+    "experimental physics"
+  ]
+}
