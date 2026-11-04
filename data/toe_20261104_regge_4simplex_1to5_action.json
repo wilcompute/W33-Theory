@@ -1,0 +1,148 @@
+{
+  "Euclidean_Regge_plus_boundary_action_formula": "S=sum_internal A_h(2*pi-sum theta) + sum_boundary A_h(pi-sum theta)",
+  "Lorentzian_signature_or_causality_constructed": false,
+  "analytic_orthogonal_normal_vector": [
+    0.22360679774997896,
+    0.4873397172404482,
+    0.4873397172404482,
+    0.4873397172404482,
+    0.4873397172404482
+  ],
+  "base_simplex_vertices_5": [
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "boundary": "Only a single Euclidean 4-simplex 1-5 subdivision with fixed boundary. This is an action-derived finite control, not a Lorentzian metric, not full gravitational dynamics, and not an embedding of a 600-cell/tomotope gravity theory.",
+  "boundary_2simplices": 10,
+  "boundary_lengths_fixed": true,
+  "dynamical_internal_edge_lengths": 5,
+  "exact_4D_flat_vertex_motions_keep_action_constant": true,
+  "exact_non_linear_Dirac_first_class_constraint_algebra_derived": false,
+  "flat_Action_gradient_norm": 3.761375452347623e-14,
+  "flat_action_Hessian_eigenvalues": [
+    9.405268511657325e-07,
+    9.405578899807652e-07,
+    9.405790984415308e-07,
+    1.22418753037556e-06,
+    128.00002299549297
+  ],
+  "flat_action_Hessian_rank_approx": 1,
+  "flat_action_exact": "3*pi/2 + 4*pi*sqrt(3)/3",
+  "flat_action_measured": 11.967586437321557,
+  "flat_internal_deficit_max": 9.769962616701378e-15,
+  "four_flat_vertex_translation_gauge_tangent_directions": [
+    [
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      -0.917662935482247,
+      0.22941573387056174,
+      0.22941573387056174,
+      0.22941573387056174
+    ],
+    [
+      0.22941573387056174,
+      -0.917662935482247,
+      0.22941573387056174,
+      0.22941573387056174
+    ],
+    [
+      0.22941573387056174,
+      0.22941573387056174,
+      -0.917662935482247,
+      0.22941573387056174
+    ],
+    [
+      0.22941573387056177,
+      0.22941573387056177,
+      0.22941573387056177,
+      -0.9176629354822471
+    ]
+  ],
+  "inserted_interior_vertex": [
+    0.2,
+    0.2,
+    0.2,
+    0.2
+  ],
+  "internal_2simplices_triangle_hinges": 10,
+  "new_4simplices": 5,
+  "off_shell_curved_normal_perturbations": [
+    {
+      "action_Hessian_eigenvalues": [
+        -0.2586884402431727,
+        -0.19620845863994843,
+        -0.1962084586141372,
+        -0.19620845859791836,
+        123.20241493924983
+      ],
+      "delta_action": 6.31800455135334e-05,
+      "four_vertex_translation_hessian_zeros_lifted": true,
+      "gradient_norm": 0.12556061017609116,
+      "max_internal_deficit_rad": 0.03162768876623723,
+      "normal_perturbation_length": 0.001
+    },
+    {
+      "action_Hessian_eigenvalues": [
+        -1.1348871520542225,
+        -0.9080630646753861,
+        -0.9080630646623131,
+        -0.9080630646534659,
+        107.7507121758041
+      ],
+      "delta_action": 0.001506260509220425,
+      "four_vertex_translation_hessian_zeros_lifted": true,
+      "gradient_norm": 0.585718551853341,
+      "max_internal_deficit_rad": 0.14750678885946833,
+      "normal_perturbation_length": 0.005
+    },
+    {
+      "action_Hessian_eigenvalues": [
+        -1.9760052914868806,
+        -1.6659675176837874,
+        -1.6659675176759712,
+        -1.6659675176604065,
+        93.67459335586503
+      ],
+      "delta_action": 0.0057171686851447134,
+      "four_vertex_translation_hessian_zeros_lifted": true,
+      "gradient_norm": 1.0871577685556948,
+      "max_internal_deficit_rad": 0.27399673607954256,
+      "normal_perturbation_length": 0.01
+    }
+  ],
+  "prior_art": "Flat Regge vertex displacement nulls and curvature-induced pseudo-constraints are established in Bahr/Dittrich 2009 arxiv:0905.1670; Dittrich/Hohn 2010; Hohn 2015. Added here: numerical controlled derivation and rank/curvature tests in this explicit one-interior-vertex 4-simplex.",
+  "single_nonzero_Hessian_eigen_approx_128": true,
+  "status": "PASS_ACTION_DERIVED_4D_EUCLIDEAN_REGGE_FLAT_GAUGE_AND_CURVED_PSEUDOCONSTRAINTS"
+}

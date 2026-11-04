@@ -1,0 +1,158 @@
+{
+  "compatibility_test": "For each nominal ray shared across contexts, compare rank-one POVM projector tr(P_from_context_a P_from_context_b) with calibrated coherent device. Monte Carlo reports mismatch in independent mixing-angle and relative-phase perturbations; has no claim of an experimentally demonstrated operational-equivalence error budget.",
+  "context_dependent_classical_one_hot_hidden_variable_model_attains_beta9": true,
+  "contextual_model_proves_no_compatibility_free_witness": true,
+  "detection_assignment": "Every four-port single-photon detection outcome has one +1 and three -1 ray signs => product -1. No click assigned four -1 => product +1; beta=9(2eta-1), not a universal detection-efficiency bound.",
+  "exact_Witting_contexts": 40,
+  "exact_nine_contexts": 9,
+  "experimental_limit": "This demonstrates why beta9 after one-hot outcome postselection proves nothing without contexts defining the SAME projector. Estimated shot requirements assume iid detection, exact eta, independent events, no adverse memory, accurate cross-context equivalence and specified no-click assignment; not a loophole-free KCBS/KS test.",
+  "ideal_nine_context_parity_sum_is_9_for_ANY_9_orthonormal_bases_even_when_miscalibrated": true,
+  "ideal_single_click_four_port_context_product": -1,
+  "noncontextual_threshold_in_specific_no_click_assignment_eta_greater_than": 0.8888888888888888,
+  "previous_independent_4_dichotomic_sign_flip_threshold_is_not_physical_single_click_noise_threshold": true,
+  "prior_art": "Peres/Cabello contextuality, established experimental compatibility/detection loopholes and repo 4-mode compiler. Falsifies overstrong use of epsilon 3 percent sign-flip figure as physical detector threshold.",
+  "sample_no_click_and_trial_budget": [
+    {
+      "exceeds_standard_7_bound_under_perfect_context_equivalence": false,
+      "independent_Bernoulli_5sigma_shots_per_context": null,
+      "independent_Bernoulli_5sigma_total_trials": null,
+      "total_single_photon_detection_probability": 0.7,
+      "unconditional_beta_under_all_minus_no_click_assignment": 3.599999999999999
+    },
+    {
+      "exceeds_standard_7_bound_under_perfect_context_equivalence": false,
+      "independent_Bernoulli_5sigma_shots_per_context": null,
+      "independent_Bernoulli_5sigma_total_trials": null,
+      "total_single_photon_detection_probability": 0.8,
+      "unconditional_beta_under_all_minus_no_click_assignment": 5.4
+    },
+    {
+      "exceeds_standard_7_bound_under_perfect_context_equivalence": false,
+      "independent_Bernoulli_5sigma_shots_per_context": null,
+      "independent_Bernoulli_5sigma_total_trials": null,
+      "total_single_photon_detection_probability": 0.8888888888888888,
+      "unconditional_beta_under_all_minus_no_click_assignment": 6.999999999999999
+    },
+    {
+      "exceeds_standard_7_bound_under_perfect_context_equivalence": true,
+      "independent_Bernoulli_5sigma_shots_per_context": 2025,
+      "independent_Bernoulli_5sigma_total_trials": 18225,
+      "total_single_photon_detection_probability": 0.9,
+      "unconditional_beta_under_all_minus_no_click_assignment": 7.2
+    },
+    {
+      "exceeds_standard_7_bound_under_perfect_context_equivalence": true,
+      "independent_Bernoulli_5sigma_shots_per_context": 36,
+      "independent_Bernoulli_5sigma_total_trials": 324,
+      "total_single_photon_detection_probability": 0.95,
+      "unconditional_beta_under_all_minus_no_click_assignment": 8.1
+    },
+    {
+      "exceeds_standard_7_bound_under_perfect_context_equivalence": true,
+      "independent_Bernoulli_5sigma_shots_per_context": 7,
+      "independent_Bernoulli_5sigma_total_trials": 63,
+      "total_single_photon_detection_probability": 0.98,
+      "unconditional_beta_under_all_minus_no_click_assignment": 8.64
+    },
+    {
+      "exceeds_standard_7_bound_under_perfect_context_equivalence": true,
+      "independent_Bernoulli_5sigma_shots_per_context": null,
+      "independent_Bernoulli_5sigma_total_trials": null,
+      "total_single_photon_detection_probability": 1,
+      "unconditional_beta_under_all_minus_no_click_assignment": 9
+    }
+  ],
+  "simulated_phase_and_beamsplitter_drift": [
+    {
+      "avg_shared_ray_projector_infidelity": 2.467162276944793e-17,
+      "max_observed_shared_ray_infidelity": 4.440892098500626e-16,
+      "monte_carlo_independent_reconfigurations": 96,
+      "pair_comparisons_per_run": 18,
+      "protocol": "KS18",
+      "sigma_angle_and_phase_rad": 0,
+      "worst_pair_per_run_infidelity_p95": 4.440892098500626e-16
+    },
+    {
+      "avg_shared_ray_projector_infidelity": 1.850371707708594e-17,
+      "max_observed_shared_ray_infidelity": 8.881784197001252e-16,
+      "monte_carlo_independent_reconfigurations": 96,
+      "pair_comparisons_per_run": 240,
+      "protocol": "Witting40",
+      "sigma_angle_and_phase_rad": 0,
+      "worst_pair_per_run_infidelity_p95": 8.881784197001252e-16
+    },
+    {
+      "avg_shared_ray_projector_infidelity": 8.13499372963112e-05,
+      "max_observed_shared_ray_infidelity": 0.0007074123721810821,
+      "monte_carlo_independent_reconfigurations": 96,
+      "pair_comparisons_per_run": 18,
+      "protocol": "KS18",
+      "sigma_angle_and_phase_rad": 0.005,
+      "worst_pair_per_run_infidelity_p95": 0.0004896715988631228
+    },
+    {
+      "avg_shared_ray_projector_infidelity": 9.968495971156964e-05,
+      "max_observed_shared_ray_infidelity": 0.0009825788254722578,
+      "monte_carlo_independent_reconfigurations": 96,
+      "pair_comparisons_per_run": 240,
+      "protocol": "Witting40",
+      "sigma_angle_and_phase_rad": 0.005,
+      "worst_pair_per_run_infidelity_p95": 0.0007447954842616789
+    },
+    {
+      "avg_shared_ray_projector_infidelity": 0.0013793880532260874,
+      "max_observed_shared_ray_infidelity": 0.012138043429926304,
+      "monte_carlo_independent_reconfigurations": 96,
+      "pair_comparisons_per_run": 18,
+      "protocol": "KS18",
+      "sigma_angle_and_phase_rad": 0.02,
+      "worst_pair_per_run_infidelity_p95": 0.009190146324751458
+    },
+    {
+      "avg_shared_ray_projector_infidelity": 0.0015726943395364013,
+      "max_observed_shared_ray_infidelity": 0.01746309521462963,
+      "monte_carlo_independent_reconfigurations": 96,
+      "pair_comparisons_per_run": 240,
+      "protocol": "Witting40",
+      "sigma_angle_and_phase_rad": 0.02,
+      "worst_pair_per_run_infidelity_p95": 0.01224284253475727
+    },
+    {
+      "avg_shared_ray_projector_infidelity": 0.008319578368900899,
+      "max_observed_shared_ray_infidelity": 0.0560848115819681,
+      "monte_carlo_independent_reconfigurations": 96,
+      "pair_comparisons_per_run": 18,
+      "protocol": "KS18",
+      "sigma_angle_and_phase_rad": 0.05,
+      "worst_pair_per_run_infidelity_p95": 0.04517001660742381
+    },
+    {
+      "avg_shared_ray_projector_infidelity": 0.009691337486248204,
+      "max_observed_shared_ray_infidelity": 0.08527112941866788,
+      "monte_carlo_independent_reconfigurations": 96,
+      "pair_comparisons_per_run": 240,
+      "protocol": "Witting40",
+      "sigma_angle_and_phase_rad": 0.05,
+      "worst_pair_per_run_infidelity_p95": 0.07226797029776028
+    },
+    {
+      "avg_shared_ray_projector_infidelity": 0.03259125986375188,
+      "max_observed_shared_ray_infidelity": 0.26913992404211984,
+      "monte_carlo_independent_reconfigurations": 96,
+      "pair_comparisons_per_run": 18,
+      "protocol": "KS18",
+      "sigma_angle_and_phase_rad": 0.1,
+      "worst_pair_per_run_infidelity_p95": 0.19584057607570773
+    },
+    {
+      "avg_shared_ray_projector_infidelity": 0.03800672112880276,
+      "max_observed_shared_ray_infidelity": 0.350772584884661,
+      "monte_carlo_independent_reconfigurations": 96,
+      "pair_comparisons_per_run": 240,
+      "protocol": "Witting40",
+      "sigma_angle_and_phase_rad": 0.1,
+      "worst_pair_per_run_infidelity_p95": 0.28649613613045005
+    }
+  ],
+  "status": "PASS_KS18_WITTING_COMPATIBILITY_AND_NOCLICK_FALSIFIER"
+}

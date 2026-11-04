@@ -1,0 +1,506 @@
+{
+  "A5xA5_preserves_both_E8_glues": true,
+  "E8_overlattice_index": 5,
+  "absolute_limit": "The lattice extension is a mathematical choice, not forced by the incidence M. H4 symmetry exchanges the two choices. It does not prove E8 particles or TOE.",
+  "discriminant_isotropic_slope_solutions_mod5": [
+    2,
+    3
+  ],
+  "each_E8_has_240_norm2_roots": true,
+  "each_E8_mod2_has_120_anisotropic_135_singular": true,
+  "even_unimodular_rank": 8,
+  "full_icosian_H4_packet_action_cannot_fix_one_E8_glue": true,
+  "inner_product_scaling_of_row_col_zero_sum_5x5_basis": 5,
+  "no_invariant_single_glue_selection_without_sheet_choice": true,
+  "normalized_kernel_Gram_determinant": 25,
+  "normalized_kernel_root_Gram_matrix": [
+    [
+      2,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      -1,
+      2,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      -1,
+      2,
+      -1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      -1,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      2,
+      -1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      -1,
+      2,
+      -1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      2,
+      -1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      2
+    ]
+  ],
+  "normalized_kernel_root_lattice": "A4 \u2295 A4",
+  "novelty_and_prior_art": "E8 as index-five overlattice of A4\u2295A4 and two isotropic glues is classical lattice theory; F4 25cells/60axes projective geometry is published. The new computed integration is that the eight-dimensional blind submodule of THIS exact 25x60 Reye\u2013600cell frame incidence carries A4\u2295A4, with explicit E8 glues and a swap obstruction.",
+  "packet_axis_kernel_dimension": 8,
+  "packet_axis_matrix_shape": [
+    25,
+    60
+  ],
+  "physical_candidate": "Two E8 sheets are exchanged by the 5x5 packet-grid swap. It is tempting to interpret as past/future or chirality, but NO physical map to photon states, spacetime, gravity or generations has been supplied.",
+  "plus_and_minus_E8_lattice_certificates": {
+    "2": {
+      "Gram_determinant": 1,
+      "Gram_matrix": [
+        [
+          2,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          -1,
+          2,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          -1,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          -1,
+          2,
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          -1,
+          2,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          4
+        ]
+      ],
+      "basis_scaled5": [
+        [
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4
+        ],
+        [
+          -5,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          -5,
+          5,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          0,
+          -5,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          0,
+          0,
+          5,
+          0,
+          0,
+          0,
+          8
+        ],
+        [
+          0,
+          0,
+          0,
+          -5,
+          5,
+          0,
+          0,
+          -2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          -5,
+          5,
+          0,
+          -2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          -5,
+          5,
+          -2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -5,
+          -2
+        ]
+      ],
+      "even_unimodular": true,
+      "nonzero_anisotropic_mod2_classes": 120,
+      "nonzero_isotropic_mod2_classes": 135,
+      "norm2_roots": 240,
+      "root_count_per_glue_coset": {
+        "0": 40,
+        "1": 50,
+        "2": 50,
+        "3": 50,
+        "4": 50
+      }
+    },
+    "3": {
+      "Gram_determinant": 1,
+      "Gram_matrix": [
+        [
+          2,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          -1,
+          2,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          -1,
+          0,
+          0,
+          -2
+        ],
+        [
+          0,
+          0,
+          0,
+          -1,
+          2,
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          -1,
+          2,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          -2,
+          0,
+          0,
+          0,
+          4
+        ]
+      ],
+      "basis_scaled5": [
+        [
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4
+        ],
+        [
+          -5,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          -5,
+          5,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          0,
+          -5,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          0,
+          0,
+          5,
+          0,
+          0,
+          0,
+          -8
+        ],
+        [
+          0,
+          0,
+          0,
+          -5,
+          5,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          -5,
+          5,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          -5,
+          5,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -5,
+          2
+        ]
+      ],
+      "even_unimodular": true,
+      "nonzero_anisotropic_mod2_classes": 120,
+      "nonzero_isotropic_mod2_classes": 135,
+      "norm2_roots": 240,
+      "root_count_per_glue_coset": {
+        "0": 40,
+        "1": 50,
+        "2": 50,
+        "3": 50,
+        "4": 50
+      }
+    }
+  },
+  "row_column_interchange_exchanges_the_two_E8_glues": true,
+  "status": "PASS_E8_LATTICES_IN_REYE_PACKET_AXIS_KERNEL_WITH_TWO_SWAPPED_GLUES"
+}

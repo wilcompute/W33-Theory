@@ -1,0 +1,98 @@
+{
+  "H4_full_order": 14400,
+  "H4_invariant_three_packet_choice_exists": false,
+  "all_H4_invariant_single_packet_selectors_constant": true,
+  "central_antipode_kernel_on_25_packets": 2,
+  "column_icosian_right_image_order": 60,
+  "index_two_extension_by_quaternion_conjugation": true,
+  "induced_H4_permutation_group_order": 7200,
+  "one_packet_stabilizer_effective": 288,
+  "pair_orbits": [
+    {
+      "orbit_size": 200,
+      "seed": [
+        0,
+        1
+      ],
+      "shared_vertices": 6,
+      "stabilizer_order": 36
+    },
+    {
+      "orbit_size": 100,
+      "seed": [
+        0,
+        13
+      ],
+      "shared_vertices": 0,
+      "stabilizer_order": 72
+    }
+  ],
+  "point_orbit_size": 25,
+  "prior_art": "25 24-cells and H4 action Denney et al 2020; earlier repository Schur-Reye288 and H4-Reye bridge. New local certificate is full 25-cell group and triple orbit census in icosian coordinates.",
+  "row_icosian_left_image_order": 60,
+  "scope": "Exact 25-subset action of binary icosian left/right/conjugation; H4 14400 acts via 7200 projective quotient. Invariants on pairs/triples do not uniquely identify a selected physical cell or a full tomotope cover.",
+  "status": "PASS_EXPLICIT_H4_25_REYE_PACKET_AND_TRIPLE_ORBITS",
+  "triple_orbit_count": 4,
+  "triple_orbits": [
+    {
+      "orbit_size": 100,
+      "pairwise_shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "seed": [
+        0,
+        13,
+        15
+      ],
+      "stabilizer_order": 72,
+      "three_way_shared_vertices": 0
+    },
+    {
+      "orbit_size": 400,
+      "pairwise_shared_vertices": [
+        0,
+        0,
+        6
+      ],
+      "seed": [
+        0,
+        1,
+        14
+      ],
+      "stabilizer_order": 18,
+      "three_way_shared_vertices": 0
+    },
+    {
+      "orbit_size": 600,
+      "pairwise_shared_vertices": [
+        6,
+        6,
+        6
+      ],
+      "seed": [
+        0,
+        1,
+        2
+      ],
+      "stabilizer_order": 12,
+      "three_way_shared_vertices": 2
+    },
+    {
+      "orbit_size": 1200,
+      "pairwise_shared_vertices": [
+        0,
+        6,
+        6
+      ],
+      "seed": [
+        0,
+        1,
+        6
+      ],
+      "stabilizer_order": 6,
+      "three_way_shared_vertices": 0
+    }
+  ]
+}
