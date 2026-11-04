@@ -1,0 +1,208 @@
+{
+  "antipodal_q4_source": {
+    "incidence_edges": 48,
+    "original_edges": 32,
+    "original_faces": 24,
+    "quotient_edge_classes": 16,
+    "quotient_face_classes": 12
+  },
+  "covers": {
+    "boundary": "Restates and checks published order formula, NOT a new proof of group extensions. Regular cover index alone does not specify a physical geometric metric or local dynamics.",
+    "cover_parameters": [
+      3,
+      5,
+      7
+    ],
+    "fundamental_tomotope_automorphism_order": 96,
+    "published_minimal_regular_cover_R2_order": 36864,
+    "status": "PASS_PUBLISHED_COVER_ARITHMETIC_PRIOR_ART",
+    "table": [
+      {
+        "k": 3,
+        "monodromy_kernel_over_k1_order": 729,
+        "monodromy_order": 26873856,
+        "qk_edges": 648,
+        "qk_octahedra": 108,
+        "qk_tetrahedra": 216,
+        "qk_triangles": 864,
+        "qk_vertices": 108
+      },
+      {
+        "k": 5,
+        "monodromy_kernel_over_k1_order": 15625,
+        "monodromy_order": 576000000,
+        "qk_edges": 3000,
+        "qk_octahedra": 500,
+        "qk_tetrahedra": 1000,
+        "qk_triangles": 4000,
+        "qk_vertices": 500
+      },
+      {
+        "k": 7,
+        "monodromy_kernel_over_k1_order": 117649,
+        "monodromy_order": 4337012736,
+        "qk_edges": 8232,
+        "qk_octahedra": 1372,
+        "qk_tetrahedra": 2744,
+        "qk_triangles": 10976,
+        "qk_vertices": 1372
+      }
+    ],
+    "theorem_citation": "Monson-Pellicer-Williams 2012 Theorem 5.9: minimal regular covers for coprime odd p,q>1 do not cover each other; R2 incomparable",
+    "tomotope_monodromy_order": 18432
+  },
+  "hardware_flux": {
+    "cycle_rank_unchanged_under_flux": 21,
+    "imaginary_return_quadrature_is_exactly_zero_for_all_real_t": true,
+    "leading_return_amplitude_contrast": "-t^6/30 + O(t^8); real quadrature",
+    "limitation": "28-site ideal real tight binding; no physical device, no measured noise, no guarantee optical phases and diagonal detunings preserve bipartite chiral symmetry.",
+    "moment_differences_orders_0_through_6": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      24
+    ],
+    "one_link_pi_flux_incidence_rank": 11,
+    "root_node": 0,
+    "signed_edge_indices": [
+      0,
+      12
+    ],
+    "simulations": [
+      {
+        "imaginary_Ramsey_quadrature_difference": 0.0,
+        "leading_small_time_real_amplitude_difference": -2.1333333333333342e-06,
+        "real_return_amplitude_difference": -2.0940109868305967e-06,
+        "return_population_difference": -3.859614468249006e-06,
+        "time": 0.2
+      },
+      {
+        "imaginary_Ramsey_quadrature_difference": 0.0,
+        "leading_small_time_real_amplitude_difference": -0.0001365333333333334,
+        "real_return_amplitude_difference": -0.0001266907668445727,
+        "return_population_difference": -0.00017853305271925413,
+        "time": 0.4
+      },
+      {
+        "imaginary_Ramsey_quadrature_difference": 0.0,
+        "leading_small_time_real_amplitude_difference": -0.008738133333333337,
+        "real_return_amplitude_difference": -0.006433420843599547,
+        "return_population_difference": -0.0009045283737481686,
+        "time": 0.8
+      }
+    ],
+    "sixth_moment_return_difference_exact": 24,
+    "status": "PASS_GIRTH6_BIPARTITE_REAL_QUADRATURE_FLUX_OBSTRUCTION",
+    "unsigned_bipartite_incidence_rank": 10,
+    "zero_eigenmodes_after": 6,
+    "zero_eigenmodes_before": 8
+  },
+  "physics_boundary": "Only finite exact configuration and independent toy tight-binding checks; no spacetime emergence, Einstein constraints, realistic flavor, or photonic experiment.",
+  "provenance": {
+    "followups": [
+      "Monson, Pellicer, Williams (2014), Mixing and monodromy",
+      "Cunningham, Mixer, Williams (2024), Reflexible covers of prisms",
+      "Servatius, Servatius (2010), The generalized Reye configuration",
+      "Monson, Weiss (2007), Medial layer graphs of equivelar 4-polytopes"
+    ],
+    "primary_paper": "Monson, Pellicer, Williams (2012) The tomotope, \u00a74-6, DOI 10.26493/1855-3974.189.e64",
+    "repo_prior_owners": [
+      "BT831",
+      "BT1363",
+      "Pass5309",
+      "Pass5310",
+      "Pass5396",
+      "Pass5488-5495",
+      "Pass5643-5650",
+      "analysis/w33_pass1376_tomotope_published_generators.g"
+    ]
+  },
+  "spectral": {
+    "cycle_rank": 21,
+    "edge_nodes": 12,
+    "exact_positive_gram_charpoly": "z^2 (z-4)^9 (z-12)",
+    "flags_of_full_tomotope": 192,
+    "girth": 6,
+    "graph_nodes": 28,
+    "medial_incidence_edges": 48,
+    "shortest_six_cycles_through_each_incidence_edge": 6,
+    "signed_bipartite_adjacency_spectrum": {
+      "minus_2": 9,
+      "minus_2sqrt3": 1,
+      "plus_2": 9,
+      "plus_2sqrt3": 1,
+      "zero": 8
+    },
+    "status": "PASS_REYE_MEDIAL_GRAPH_28_48_H1_21_GIRTH6",
+    "triangle_nodes": 16,
+    "unsigned_incidence_rank_exact": 10
+  },
+  "status": "PASS_TOMOTOPE_REYE_PUBLISHED_LITERATURE_FLUX_FALSIFIERS",
+  "symmetry": {
+    "Gamma96_orbits_on_12_edges": [
+      12
+    ],
+    "Gamma96_orbits_on_16_triangles": [
+      16
+    ],
+    "Gamma96_orbits_on_48_incident_pairs": [
+      48
+    ],
+    "Q4_Gamma_center_order": 1,
+    "Q4_Gamma_derived_order": 48,
+    "Q4_action_matches_published_group_order_histogram": true,
+    "Reye_bipartite_aut_color_preserving_order": 576,
+    "accidental_extra_symmetry_index": 6,
+    "boundary": "Both actions realize abstract Gamma96 with same element orders; no assertion that the sixfold Reye graph enhancement is a physical gauge symmetry. Published rho is a non-string Wythoff subgroup, not Mon(T).",
+    "independent_Q4_even_signed_WD4_central_quotient_order": 96,
+    "nontrivial_order3_elements_in_Gamma96": 32,
+    "order3_fixed_48_medial_incidence_flags_per_element": 0,
+    "order3_fixed_published_12_edge_labels_per_element": 0,
+    "paper_published_rho_group_order": 96,
+    "paper_published_rho_order_histogram": {
+      "1": 1,
+      "2": 27,
+      "3": 32,
+      "4": 36
+    },
+    "published_branching_relation": "(r1 r3) order4; NOT string diagram involution commuting at distance 2",
+    "relabelled_PUBLISHED_GENERATORS_NOT_EXPLICITLY_CONJUGATED": true,
+    "selected_C3_orbits_12_edges": [
+      3,
+      3,
+      3,
+      3
+    ],
+    "selected_C3_orbits_16_triangles": [
+      1,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "selected_C3_orbits_48_medial_flags": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "status": "PASS_TOMOTOPE_GAMMA96_REYE_AUT576_C3",
+    "symmetry_selection_obstruction": "No proper triple of 16 triangle modes is invariant under all Gamma96, since the action is transitive. A selected C3 has one fixed triangle and five 3-cycles; a 'three-family' choice needs further symmetry breaking and physics."
+  }
+}

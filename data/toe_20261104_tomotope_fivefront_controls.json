@@ -1,0 +1,214 @@
+{
+  "dimension": {
+    "alpha_definition": "alpha = arccos(1/sqrt(3)), from Reye normalized adjacency sigma=2/sqrt(12)",
+    "asymptotic_formula": "L^2 lambda_1(L) = alpha^2 [1+5/(12L)+O(L^-2)]",
+    "boundary": "A metric-graph 1D refinement, distinct from the existing W33 Levi graph 1D limit and from the native H4 S3xI 4D cell topology. A chosen spin manifold/metric is absent.",
+    "exact_first_eigen_secular_equation": "(4cos(Ltheta)+2tan(theta/2)sin(Ltheta))*(3cos(Ltheta)+tan(theta/2)sin(Ltheta))=4",
+    "metric_graph_weyl_dimension": 1,
+    "not_spacetime_dim4": true,
+    "predicted_rescaled_gap": 0.9126298408648493,
+    "rank4_of_abstract_tomotope_is_not_4D_Lorentzian_geometry": true,
+    "status": "PASS_REYE_BIREGULAR_METRIC_GRAPH_FINITE_SIZE_CORRECTION",
+    "verified_results": [
+      {
+        "L": 1,
+        "cycle_rank": 21,
+        "direct_sparse_gap": 1.4384471871911693,
+        "edges": 48,
+        "first_gap": 1.4384471871911695,
+        "leading_correction_measure": 0.5761562057055156,
+        "nodes": 28,
+        "rescaled_gap": 1.4384471871911695
+      },
+      {
+        "L": 2,
+        "cycle_rank": 21,
+        "direct_sparse_gap": 0.281290309608085,
+        "edges": 96,
+        "first_gap": 0.2812903096080852,
+        "leading_correction_measure": 0.4657559681942618,
+        "nodes": 76,
+        "rescaled_gap": 1.1251612384323408
+      },
+      {
+        "L": 4,
+        "cycle_rank": 21,
+        "direct_sparse_gap": 0.06329336435282511,
+        "edges": 192,
+        "first_gap": 0.06329336435282507,
+        "leading_correction_measure": 0.4385742578196945,
+        "nodes": 172,
+        "rescaled_gap": 1.012693829645201
+      },
+      {
+        "L": 8,
+        "cycle_rank": 21,
+        "direct_sparse_gap": 0.015021262203351596,
+        "edges": 384,
+        "first_gap": 0.015021262203351426,
+        "leading_correction_measure": 0.4271693777048746,
+        "nodes": 364,
+        "rescaled_gap": 0.9613607810144913
+      },
+      {
+        "L": 16,
+        "cycle_rank": 21,
+        "edges": 768,
+        "first_gap": 0.0036589466714240793,
+        "leading_correction_measure": 0.4218228410662377,
+        "nodes": 748,
+        "rescaled_gap": 0.9366903478845643
+      },
+      {
+        "L": 32,
+        "cycle_rank": 21,
+        "edges": 1536,
+        "first_gap": 0.0009029159590050462,
+        "leading_correction_measure": 0.4192227997274429,
+        "nodes": 1516,
+        "rescaled_gap": 0.9245859420211673
+      },
+      {
+        "L": 64,
+        "cycle_rank": 21,
+        "edges": 3072,
+        "first_gap": 0.00022426503690553545,
+        "leading_correction_measure": 0.41793945599332005,
+        "nodes": 3052,
+        "rescaled_gap": 0.9185895911650732
+      },
+      {
+        "L": 128,
+        "cycle_rank": 21,
+        "edges": 6144,
+        "first_gap": 5.588410457435522e-05,
+        "leading_correction_measure": 0.41730176744667347,
+        "nodes": 6124,
+        "rescaled_gap": 0.9156051693462359
+      }
+    ]
+  },
+  "external_papers": [
+    "Monson, Pellicer, Williams (2014), Mixing and monodromy",
+    "Cunningham, Mixer, Williams (2024), Reflexible covers of prisms",
+    "Servatius, Servatius (2010), The generalized Reye configuration",
+    "Monson, Weiss (2007), Medial layer graphs of equivelar 4-polytopes"
+  ],
+  "gravity": {
+    "Reye_cycle_rank": 21,
+    "Reye_node_edge_incidence_rank": 27,
+    "boundary": "Counterexample ONLY for this specific positive local constraint ansatz and direct H1 identification. Extra fibers or a different action may have more degrees of freedom.",
+    "direct_rank_preserving_identification_of_81W33_cycles_inside_Reye_H1_impossible": true,
+    "nonlinear_Einstein_Dirac_algebra_derived": false,
+    "original_W33_Levi_cycle_rank": 81,
+    "positive_local_constraint_zero_set": "all 21 positive h_i zero iff p=0 and x=D^T phi, one gauge orbit",
+    "selected_integer_cycle_basis_covers_all_48_edges": true,
+    "status": "PASS_REYE_CYCLE_RANK21_GRAVITY_ZERO_LOCUS_BOUNDARY"
+  },
+  "hardware": {
+    "all_real_bipartite_return_imaginary_is_zero": true,
+    "boundary": "Closed ideal graph only: no Lindblad rates, baseline detector fidelity, Trotter compilation, or physical photonic gate map for the 28-site Reye configuration.",
+    "leading_observable": "Re[U_plus(ii)-U_pi(ii)] = -t^6/30+O(t^8)",
+    "measurement_schemes": [
+      "coherent real-quadrature Ramsey reference",
+      "return population with matched onsite phases"
+    ],
+    "one_pi_incidence_edge_lifts_two_flat_zero_modes": true,
+    "simulated_t_points": [
+      {
+        "imaginary_Ramsey_quadrature_difference": 0.0,
+        "leading_small_time_real_amplitude_difference": -2.1333333333333342e-06,
+        "real_return_amplitude_difference": -2.0940109868305967e-06,
+        "return_population_difference": -3.859614468249006e-06,
+        "time": 0.2
+      },
+      {
+        "imaginary_Ramsey_quadrature_difference": 0.0,
+        "leading_small_time_real_amplitude_difference": -0.0001365333333333334,
+        "real_return_amplitude_difference": -0.0001266907668445727,
+        "return_population_difference": -0.00017853305271925413,
+        "time": 0.4
+      },
+      {
+        "imaginary_Ramsey_quadrature_difference": 0.0,
+        "leading_small_time_real_amplitude_difference": -0.008738133333333337,
+        "real_return_amplitude_difference": -0.006433420843599547,
+        "return_population_difference": -0.0009045283737481686,
+        "time": 0.8
+      }
+    ],
+    "status": "PASS_REAL_BIPARTITE_FLUX_HARDWARE_QUADRATURE_SELECTION",
+    "tri_hopping_vs_Reye_bipartite_hopping_comparison": "triangle: leading t^3 imaginary phase return; Reye: leading t^6 REAL return"
+  },
+  "new_tomotope_producer": "analysis/toe_20261104_tomotope_reye_flux_invariants.py",
+  "nonunique_regular_cover": {
+    "boundary": "Restates and checks published order formula, NOT a new proof of group extensions. Regular cover index alone does not specify a physical geometric metric or local dynamics.",
+    "cover_parameters": [
+      3,
+      5,
+      7
+    ],
+    "fundamental_tomotope_automorphism_order": 96,
+    "published_minimal_regular_cover_R2_order": 36864,
+    "status": "PASS_PUBLISHED_COVER_ARITHMETIC_PRIOR_ART",
+    "table": [
+      {
+        "k": 3,
+        "monodromy_kernel_over_k1_order": 729,
+        "monodromy_order": 26873856,
+        "qk_edges": 648,
+        "qk_octahedra": 108,
+        "qk_tetrahedra": 216,
+        "qk_triangles": 864,
+        "qk_vertices": 108
+      },
+      {
+        "k": 5,
+        "monodromy_kernel_over_k1_order": 15625,
+        "monodromy_order": 576000000,
+        "qk_edges": 3000,
+        "qk_octahedra": 500,
+        "qk_tetrahedra": 1000,
+        "qk_triangles": 4000,
+        "qk_vertices": 500
+      },
+      {
+        "k": 7,
+        "monodromy_kernel_over_k1_order": 117649,
+        "monodromy_order": 4337012736,
+        "qk_edges": 8232,
+        "qk_octahedra": 1372,
+        "qk_tetrahedra": 2744,
+        "qk_triangles": 10976,
+        "qk_vertices": 1372
+      }
+    ],
+    "theorem_citation": "Monson-Pellicer-Williams 2012 Theorem 5.9: minimal regular covers for coprime odd p,q>1 do not cover each other; R2 incomparable",
+    "tomotope_monodromy_order": 18432
+  },
+  "physics_boundary": "Finite exact combinatorial and mathematically conditioned controls, no completed TOE or real hardware experiment.",
+  "status": "PASS_ALL_FIVE_TOMOTOPE_ANCHORED_TOE_FALSIFICATION_FRONTS",
+  "symmetry_and_flavor": {
+    "C3_equivariant_total_map_160_W33_flags_to_48_tomotope_medial_flags_exists": false,
+    "C3_triplication_does_not_select_one_unique_generation_triple": true,
+    "Reye_color_preserving_aut_order": 576,
+    "Tomotope_any_nontrivial_Gamma96_C3_fixed_48_medial_flags": 0,
+    "W33_selected_C3_fixed_160_Levi_flags": 16,
+    "accidental_uncolored_rank1_2_hopping_symmetry_index": 6,
+    "boundary": "No fields, Yukawa invariants, physical chirality or measured fermion generations are identified by these rank-2 tomotope incidence orbits.",
+    "equivariance_proof": "Every equivariant map sends fixed points to fixed points. W33's selected transvection fixes 16 of 160 flags; all 32 order-three elements of tomotope Gamma96 act freely on 48 medial incidences. Thus no total map intertwining these two specified nontrivial C3 actions exists.",
+    "flavor_parent": "October Pass11951 parity-safe Nelson-Barr and November vectorlike strong-CP countercontrol",
+    "group_action_transitive_on_16_triangles": true,
+    "invariant_three_triangle_subset_under_full_Gamma_exists": false,
+    "selected_C3_triangle_orbits": [
+      1,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "status": "PASS_TOMOTOPE_SYMMETRY_VS_FLAVOR_ORBIT_NO_GO",
+    "tomotope_Gamma_order": 96
+  }
+}
