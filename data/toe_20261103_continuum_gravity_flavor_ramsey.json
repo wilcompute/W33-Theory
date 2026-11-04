@@ -1,0 +1,203 @@
+{
+  "continuum": {
+    "base_betti": 81,
+    "boundary": "Taking Cartesian fourth power inserts 4D by hand; subdivision alone preserves 81 topological cycles and gives a one-dimensional metric graph.",
+    "continuum_dimension": "Weyl/spectral dimension one on finite compact metric graph, not four",
+    "first_eigenvalue_formula": "arccos(sqrt(6)/4)^2 for Kirchhoff metric graph with 160 unit edges",
+    "imposed_4torus_times_W33_heat": [
+      {
+        "one_factor": 1.0362321035289828,
+        "product_spectral_dimension": 4.144928414115939,
+        "t": 4.0,
+        "w33_internal": 8.156840170467788e-15
+      },
+      {
+        "one_factor": 1.0167118262988823,
+        "product_spectral_dimension": 4.066847305195529,
+        "t": 8.0,
+        "w33_internal": 6.930629329326394e-32
+      },
+      {
+        "one_factor": 1.0080694056328308,
+        "product_spectral_dimension": 4.032277622531323,
+        "t": 16.0,
+        "w33_internal": 2.501751192735376e-66
+      },
+      {
+        "one_factor": 1.0019597416504336,
+        "product_spectral_dimension": 4.007838966601734,
+        "t": 64.0,
+        "w33_internal": 3.4590177712638023e-274
+      }
+    ],
+    "metric_graph_predicted_first_eigenvalue": 0.8312667112181387,
+    "subdivision": [
+      {
+        "betti1": 81,
+        "edges": 160,
+        "rescaled_gap": 1.5505102572168197,
+        "spectral_gap": 1.5505102572168197,
+        "subdivision_length": 1,
+        "vertices": 80
+      },
+      {
+        "betti1": 81,
+        "edges": 320,
+        "rescaled_gap": 1.08249864279693,
+        "spectral_gap": 0.2706246606992325,
+        "subdivision_length": 2,
+        "vertices": 240
+      },
+      {
+        "betti1": 81,
+        "edges": 480,
+        "rescaled_gap": 0.9872748163522137,
+        "spectral_gap": 0.10969720181691263,
+        "subdivision_length": 3,
+        "vertices": 400
+      },
+      {
+        "betti1": 81,
+        "edges": 640,
+        "rescaled_gap": 0.9445853357498626,
+        "spectral_gap": 0.05903658348436641,
+        "subdivision_length": 4,
+        "vertices": 560
+      },
+      {
+        "betti1": 81,
+        "edges": 960,
+        "rescaled_gap": 0.9045599093776068,
+        "spectral_gap": 0.02512666414937797,
+        "subdivision_length": 6,
+        "vertices": 880
+      },
+      {
+        "betti1": 81,
+        "edges": 1280,
+        "rescaled_gap": 0.8854412178226264,
+        "spectral_gap": 0.013835019028478538,
+        "subdivision_length": 8,
+        "vertices": 1200
+      },
+      {
+        "betti1": 81,
+        "edges": 2560,
+        "rescaled_gap": 0.8577843912293585,
+        "spectral_gap": 0.0033507202782396815,
+        "subdivision_length": 16,
+        "vertices": 2480
+      },
+      {
+        "betti1": 81,
+        "edges": 5120,
+        "rescaled_gap": 0.8443886987936177,
+        "spectral_gap": 0.0008245983386656423,
+        "subdivision_length": 32,
+        "vertices": 5040
+      }
+    ]
+  },
+  "flavor": {
+    "boundary": "Two arbitrary spurions show mathematical possibility, not natural Yukawa coefficients, measured masses, nor selection of chirality. Established E6 models already use two symmetric Yukawa matrices.",
+    "decomposition": "27=16_1+10_-2+1_4, SU5: (10+5bar+1)+(5+5bar)+(1)",
+    "exact_two_spurion_CP_trace": "-97200",
+    "one_27_contains_one_SU5_chiral_generation_plus_vectorlike_5_5bar": true,
+    "second_independent_symmetric_spurion_Yd": [
+      [
+        "1",
+        "1",
+        "I"
+      ],
+      [
+        "1",
+        "2",
+        "1"
+      ],
+      [
+        "I",
+        "1",
+        "3"
+      ]
+    ],
+    "second_independent_symmetric_spurion_Yu": [
+      [
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "2",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "4"
+      ]
+    ],
+    "single_flavor_spurion_proportional_Yu_Yd_CP_invariant": 0,
+    "theorem": "If Yu=aY and Yd=bY, [Hu,Hd]=0 and CKM=I modulo degeneracies/rephasings; a second independent spurion can produce nonzero CP-odd commutator."
+  },
+  "gravity": {
+    "Gauss_zero": true,
+    "analytic_general_identity": "{hi,hj}|x=ci,p=cj = (ci.cj)*(8-|supp(ci) intersection supp(cj)|)",
+    "boundary": "Closure into Gauss alone fails for these toy local gauge-invariant constraints; GR hypersurface deformation algebra not modeled.",
+    "cycle_pair": [
+      0,
+      20
+    ],
+    "overlap": 1,
+    "poisson_bracket_at_gauss_zero": 7,
+    "signed_intersection": 1
+  },
+  "hardware": {
+    "Ramsey_reference_phase_contrast": [
+      {
+        "coherent_reference_imaginary_contrast": 0.005280212854314633,
+        "leading_2t3_over_3": 0.005333333333333335,
+        "site_probability_max_gap": 0.0,
+        "t": 0.2
+      },
+      {
+        "coherent_reference_imaginary_contrast": 0.04098706247851882,
+        "leading_2t3_over_3": 0.04266666666666668,
+        "site_probability_max_gap": 0.0,
+        "t": 0.4
+      },
+      {
+        "coherent_reference_imaginary_contrast": 0.2900923858383602,
+        "leading_2t3_over_3": 0.34133333333333343,
+        "site_probability_max_gap": 0.0,
+        "t": 0.8
+      }
+    ],
+    "boundary": "Simulated 3-site tight binding and non-Hermitian uniform loss factor; not a calibrated optical pulse sequence or physical demonstration.",
+    "contrast_mean": 0.04104891914014296,
+    "contrast_minimum": 0.03739572506816036,
+    "contrast_positive_fraction": 1.0,
+    "contrast_std": 0.0013965689458913157,
+    "cubed_return_matrix_difference_exact": "4",
+    "experiment": "Ramsey measure Im<0|exp(-i H t)|0> relative to idle phase reference for +/- triangle flux; compare at identical static disorder.",
+    "hopping_disorder_sigma": 0.02,
+    "matched_disorder_pair": true,
+    "onsite_disorder_sigma": 0.05,
+    "onsite_flux_pi_eigenvalues": [
+      -2,
+      1,
+      1
+    ],
+    "onsite_flux_zero_eigenvalues": [
+      -1,
+      -1,
+      2
+    ],
+    "plaquette_sites": 3,
+    "robust_perturbation_sample_size": 500,
+    "site_probabilities_cannot_discriminate_flux_for_equal_real_hoppings": true,
+    "uniform_amplitude_loss_factor_at_gamma_0_1_t_0_4": 0.9801986733067553
+  },
+  "physical_boundary": "Finite mathematics and controlled toy simulations only; no completed TOE.",
+  "status": "PASS_FOUR_INDEPENDENT_TOE_FALSIFIERS"
+}
