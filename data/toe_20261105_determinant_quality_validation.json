@@ -1,0 +1,27 @@
+{
+  "UTC": "2026-11-05T20:24:25.935146+00:00",
+  "source_raw_sha256": {
+    "analysis/toe_20261105_determinant_and_fermion_quality.py": "2de16b4286d7a3d9759af66520ae18c051bf1ae0c0cdc24308470e26470f53a7",
+    "analysis/toe_20261105_determinant_quality_validation.py": "e29c91e0cfc730ccc758a8719b4bfd9099080c22b3aa5ba398173514b51a0e58",
+    "analysis/toe_20261105_determinant_quality_server.js": "cd79afcb2e2bb766937b4f5e25850dacaa6fde400ae2433c29fc8829704193ab",
+    "tests/test_toe_20261105_determinant_and_fermion_quality.py": "205a2c695fa7d44f7ac5bb6e8060d0e1268025a2f61b88e36a07a6f7be0dfe76"
+  },
+  "producer": {
+    "exit_code": 0,
+    "stdout": "PASS_CONDITIONAL_DETERMINANT_AND_EXPLICIT_MIXED_FERMION_CONTROLS 2.632323871004147e-49 9\n",
+    "stderr": "",
+    "seconds": 19.043987500015646
+  },
+  "pytest": {
+    "exit_code": 0,
+    "stdout": "..................................................                       [100%]\n50 passed in 27.42s\n",
+    "stderr": "",
+    "seconds": 30.408594299980905
+  },
+  "initial_attempt": "Initial pytest without --noconftest completed nine tests in156.75s; an attempted stop found it had already exited. Focused replay excludes repository-wide conftest initialization.",
+  "output_raw_sha256": {
+    "data/toe_20261105_determinant_and_fermion_quality.json": "501669a502a15aeae3d46ba63496258d03813e8a9f7c43c2acc001e616506f36",
+    "data/toe_20261105_determinant_quality_server.json": "a11f3f90ecb1d003a688fa1c315ab910627aa205fb4acd509859401aa67cd736"
+  },
+  "status": "PASS_NEW_PRODUCER_AND_50_COMBINED_TESTS"
+}

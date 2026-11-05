@@ -1,0 +1,354 @@
+{
+  "mode": "Configured hook entries run directly with identical file patterns after both indexes regenerated. Existing Bash/CMD pre-commit launcher is unreliable; no --no-verify used.",
+  "records": [
+    {
+      "id": "stale-boundaries",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_stale_boundaries.py"
+      ],
+      "exit_code": 0,
+      "stdout": "==============================================================================\n[stale-boundary sweep] boundary sections a LATER file may have answered\n==============================================================================\nscanned 4039 analysis/*.md; 15 boundaries have a later file sharing >=2 result tokens\n\n  BT7171_BT7186_e8_d4_h27_q9.md\n    -> later: PASS7376_7384_deep_followup.md   (23 shared tokens, e.g. A2, D4, E6, E8)\n  2026-10-10_toe33_joint_decoder_p13_a6_bloch_hardware.md\n    -> later: w33_pass1117_1119_aliases_orbits_trees.md   (9 shared tokens, e.g. E6, E8, e6+e8, e6+levi)\n  PASS20260925_HESSE_PARABOLIC_CUBIC_CLOCK_BREAKTHROUGH.md\n    -> later: THE_27_FOLD_WAY.md   (9 shared tokens, e.g. A2, E6, E8, a2+e6)\n  2026-07-08_pass70_15vector_doily_attack.md\n    -> later: 2026-07-08_pass72_cumulative_bijection.md   (4 shared tokens, e.g. doily, spread@15, spread@3, spread@5)\n  2026-07-08_pass76_QEC_codes_alpha_code.md\n    -> later: 2026-07-15_pass82_grand_synthesis.md   (3 shared tokens, e.g. [137,1,3], [[137,1,3]], monster+moonshine)\n  BT807_q3_antiflag_two_clocks.md\n    -> later: BT1710_BT1712_qubit_torus_hesse_breakthrough.md   (3 shared tokens, e.g. csaszar, csaszar+doily, doily)\n  BT809_register_f4_regular_spread.md\n    -> later: BT836_gc_hemicells_in_spreads.md   (3 shared tokens, e.g. spread@10, spread@2, spread@45)\n  2026-06-19_validation_thread_summary.md\n    -> later: 2026-06-19_bt1327_bt1330_summary.md   (2 shared tokens, e.g. [63,1,11], [[63,1,11]])\n  2026-10-31_tick_loop_algebra_rigidity.md\n    -> later: PASS20260924_EXECUTE_ALL5_TEMPORAL_E8_CONTROLLER.md   (2 shared tokens, e.g. clifford+eisenstein, edge240:signed)\n  2026-07-08_pass72_deep_structure.md\n    -> later: 2026-07-08_pass73_kneser_css_moonshine.md   (2 shared tokens, e.g. doily, doily+monster)\n  BT745_presentation_torsor_chirality.md\n    -> later: BT746_absolute_chirality_z12.md   (2 shared tokens, e.g. E6, e6+torsor)\n  BT795_spread_envelope_routing_cell.md\n    -> later: w33_pass1971_spread_treatments_concordance.md   (2 shared tokens, e.g. spread@180, spread@40)\n  BT1320_BT1325_hypercube_tower_holonet.md\n    -> later: BT1416_BT1418_css_optical_quartic_frontier.md   (2 shared tokens, e.g. clifford+csaszar, csaszar)\n  BT1425_BT1427_retwined_fano_pipeline.md\n    -> later: BT1428_BT1430_symmetry_pulse_holonet.md   (2 shared tokens, e.g. D4, d4+tomotope)\n  BT2560_BT2567_seven_frontiers.md\n    -> later: BT2567_seven_frontiers_insert.tex   (2 shared tokens, e.g. tritangent@27, tritangent@45)\n\n  CANDIDATES, not verdicts. Read the later file before spending a pass\n  re-answering the question. If it does answer it, EDIT THE ORIGINAL\n  boundary to point there -- leaving it stale is what caused this.\n\n",
+      "stderr": "",
+      "seconds": 40.832
+    },
+    {
+      "id": "shifted-adjacency-descendants",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_shifted_adjacency_descendants.py",
+        "--check-only",
+        "analysis/toe_20261105_determinant_and_fermion_quality.py",
+        "data/toe_20261105_determinant_and_fermion_quality.json",
+        "data/toe_20261105_determinant_quality_server.json",
+        "analysis/toe_20261105_determinant_quality_validation.py",
+        "data/toe_20261105_determinant_quality_validation.json",
+        "tests/test_toe_20261105_determinant_and_fermion_quality.py",
+        "analysis/2026-11-05_determinant_protection_and_mixed_fermion_audit.md",
+        "data/toe_20261105_determinant_quality_result_search.json",
+        "RESULTS_INDEX.md",
+        "TOPICAL_ALIASES.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 1.878
+    },
+    {
+      "id": "tag-540-check",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/tag_540_disambiguation.py",
+        "--check-only",
+        "--strict",
+        "analysis/toe_20261105_determinant_and_fermion_quality.py",
+        "data/toe_20261105_determinant_and_fermion_quality.json",
+        "data/toe_20261105_determinant_quality_server.json",
+        "analysis/toe_20261105_determinant_quality_validation.py",
+        "data/toe_20261105_determinant_quality_validation.json",
+        "tests/test_toe_20261105_determinant_and_fermion_quality.py",
+        "analysis/2026-11-05_determinant_protection_and_mixed_fermion_audit.md",
+        "data/toe_20261105_determinant_quality_result_search.json",
+        "RESULTS_INDEX.md",
+        "TOPICAL_ALIASES.md"
+      ],
+      "exit_code": 1,
+      "stdout": "ERROR: RESULTS_INDEX.md has ambiguous 540 occurrence(s)\n  line 218: frontiers.py` | | `[0,1440,31302]` | `analysis/bt3407_magnetic_exact_no_go.py` | | `[1080,540,540]` | `analysis/w33_pass4756_4758_4760_dependency_cube_fast_verify.py` | | `[1160,92\n  line 218: tiers.py` | | `[0,1440,31302]` | `analysis/bt3407_magnetic_exact_no_go.py` | | `[1080,540,540]` | `analysis/w33_pass4756_4758_4760_dependency_cube_fast_verify.py` | | `[1160,925,68\n  line 276: k_map.py` | | `[5,6912,1053]` | `analysis/w33_20261027_native_bloch_face_module.py` | | `[540,270,135]` | `analysis/w33_pass3989_3996_maximum_code_orbit_census.py` | | `[540,540,54\n  line 298: er_code.py` \u00b7 `analysis/w33_pass4772_4776_global_cube_cell_code.py` \u00b7 *(+2)* | | `[2025,540,3]` | `analysis/PASS4745_4752_RESERVATION.md` | | `[2025,567,4]` | `analysis/PASS4745_\n  line 408: o.py` | | `[54,72,432]` | `analysis/w33_pass1611_1615_torsion_xor_lattice_octet.py` | | `[540,141,4]` | `analysis/w33_pass4924_track_b_arithmetic_and_the_51840_warning.py` | | `[58\n  line 1494: ults_index.py` \u00b7 `analysis/w33_pass382_reversible_logic_switch_controller.g` | | `234360/540/90+360+90/6/22of48/0exact/S6-direction` | `analysis/PASS384_Q6_Q3_FOLD_OBSTRUCTION.md`\n  line 1619: ite_TOE_frontiers.md` \u00b7 `analysis/w33_20261019_round11_first_tits_jordan.py` | | `234360/540/90` | `analysis/PASS384_Q6_Q3_FOLD_OBSTRUCTION.md` \u00b7 `analysis/build_results_index.py\n  line 1630: KTHROUGH.md` \u00b7 `analysis/w33_20260924_history_pointline_cospectral_firewall.py` | | `270/540/1620` | `analysis/w33_pass2045_2049_the_sevens_and_a_numbering_collision.md` | | `343/\n  line 1977: py` \u00b7 `analysis/w33_pass10153_10160_c315_w52_structural_no_go.py` | | `totally-isotropic@540` | `analysis/BT1536_frame_dual_k44_code.md` \u00b7 `analysis/w33_frame_hoffman_resolution_\n  line 2387: it_iso.md` | | `tritangent@360` | `analysis/w33_pass4997_4999_bonkers.py` | | `tritangent@540` | `analysis/w33_e6_involution_ladder_flags.py` | | `tritangent@576` | `analysis/w33_2\n  line 2653: ic_closure.md` \u00b7 `analysis/BT3320_BT3331_global_cover_quantum_hypercube.md` | | `deficit@540` | `analysis/PASS5016_5023_EXECUTED_OUTCOMES.md` \u00b7 `analysis/w33_pass5016_radius_rp2_\n  line 2864: ity_spectral_E6_parallelism.md` \u00b7 `analysis/2026-10-10_toe43_five_fronts.md` | | `spread@540` | `analysis/PASS1074_1078_FIVE_STREAM_RELEASE.md` \u00b7 `analysis/w33_pass1067_outer_cla\n  line 3995: _matrix_cs.py` \u00b7 `analysis/w33_pass804_adversarial_calibration_failclosed.py` | | `alpha@540` | `analysis/2026-07-31_frame_hoffman_resolution_theorem.md` \u00b7 `exploration/w33_indep\n  Add an occurrence-local canonical tag: {540:point-nonedge}, {540:double-six-nonincident}, {540:gq42-arc}, {540:outer-4c}, {540:line-nonedge}; use {540:both} or {540:mixed} only for a genuinely mixed single occurrence, and {540:unrelated} only when the literal is not one of the five degree-540 carriers.\nERROR: TOPICAL_ALIASES.md has ambiguous 540 occurrence(s)\n  line 435: -code-outage-decoder.html](docs/pgsp-moduli-outer-code-outage-decoder.html) - `code:[2025,540,3]` \ufffd \u2014 [PASS4745_4752_RESERVATION.md](analysis/PASS4745_4752_RESERVATION.md), [PAS\n  Add an occurrence-local canonical tag: {540:point-nonedge}, {540:double-six-nonincident}, {540:gq42-arc}, {540:outer-4c}, {540:line-nonedge}; use {540:both} or {540:mixed} only for a genuinely mixed single occurrence, and {540:unrelated} only when the literal is not one of the five degree-540 carriers.\n",
+      "stderr": "",
+      "seconds": 1.257
+    },
+    {
+      "id": "pass-namespace-collision-guard",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "analysis/w33_pass1197_parallel_collision_guard.py",
+        "--check-only"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"C:\\Repos\\Theory of Everything\\analysis\\w33_pass1197_parallel_collision_guard.py\", line 189, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Repos\\Theory of Everything\\analysis\\w33_pass1197_parallel_collision_guard.py\", line 89, in main\n    registry, registry_blocks, supplements = load_registry_blocks()\n                                             ~~~~~~~~~~~~~~~~~~~~^^\n  File \"C:\\Repos\\Theory of Everything\\analysis\\w33_pass1197_parallel_collision_guard.py\", line 80, in load_registry_blocks\n    assert supplement.get(\"schema\") == \"w33.pass_namespace_registry.v2.supplement\", path\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: C:\\Repos\\Theory of Everything\\data\\w33_pass_namespace_registry_v2.d\\10049-10112.json\n",
+      "seconds": 1.062
+    },
+    {
+      "id": "s-min-formula-guard",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_smin_formula.py",
+        "analysis/toe_20261105_determinant_and_fermion_quality.py",
+        "analysis/toe_20261105_determinant_quality_validation.py",
+        "tests/test_toe_20261105_determinant_and_fermion_quality.py",
+        "analysis/2026-11-05_determinant_protection_and_mixed_fermion_audit.md",
+        "RESULTS_INDEX.md",
+        "TOPICAL_ALIASES.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.403
+    },
+    {
+      "id": "topical-aliases",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/build_topical_aliases.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "TOPICAL_ALIASES.md up to date\n",
+      "stderr": "",
+      "seconds": 22.444
+    },
+    {
+      "id": "certificate-digests",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_certificates.py",
+        "--quiet",
+        "data/toe_20261105_determinant_and_fermion_quality.json",
+        "data/toe_20261105_determinant_quality_server.json",
+        "data/toe_20261105_determinant_quality_validation.json",
+        "data/toe_20261105_determinant_quality_result_search.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.38384749996475875
+    },
+    {
+      "id": "novelty-claims",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_novelty_claims.py",
+        "analysis/2026-11-05_determinant_protection_and_mixed_fermion_audit.md"
+      ],
+      "exit_code": 0,
+      "stdout": "checking 1 file(s) against index.html, photonic_holonet_body.tex, w33_paper_body.tex\nno novelty claim collides with the encyclopedia.\n",
+      "stderr": "",
+      "seconds": 0.632
+    },
+    {
+      "id": "rediscovery",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_rediscovery.py",
+        "analysis/toe_20261105_determinant_and_fermion_quality.py",
+        "analysis/toe_20261105_determinant_quality_validation.py",
+        "analysis/2026-11-05_determinant_protection_and_mixed_fermion_audit.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.66
+    },
+    {
+      "id": "search-power",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_search_power.py",
+        "analysis/toe_20261105_determinant_and_fermion_quality.py",
+        "analysis/toe_20261105_determinant_quality_validation.py",
+        "analysis/2026-11-05_determinant_protection_and_mixed_fermion_audit.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  scanned 3 files, 0 unpowered nulls\n  (a zero here means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.37
+    },
+    {
+      "id": "guard-selftests",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_guard_selftests.py"
+      ],
+      "exit_code": 0,
+      "stdout": "  stale-boundaries                 self-test green\n  shifted-adjacency-descendants    self-test green\n  tag-540-check                    self-test green\n  pass-namespace-collision-guard   self-test green\n  s-min-formula-guard              self-test green\n  topical-aliases                  self-test green\n  certificate-digests              self-test green\n  novelty-claims                   self-test green\n  rtl-folds                        self-test green\n  rediscovery                      self-test green\n  search-power                     self-test green\n  layer-conformance                self-test green\n  guard-selftests                  (this runner; skipped)\n  regex-deadends                   self-test green\n  retraction-propagation           self-test green\n  stdlib-shadow                    self-test green\n  pattern-inversions               self-test green\n  heredoc-regex                    self-test green\n  reservation-overlap              self-test green\n  cert-prose-vs-data               self-test green\n  convention-fixed-form            self-test green\n  key-nearmiss                     self-test green\n  certificate-rediscovery          self-test green\n  order-coincidence                self-test green\n  spectral-overreach               self-test green\n  hardcoded-keys                   self-test green\n  constant-claims                  no self-test\n\n  25 self-tested, 1 without a self-test, 0 failing\n\n  The guards without a self-test report numbers nobody can interpret. A zero from a checker\n  that has never been shown to detect anything is not evidence of a clean corpus -- it is\n  the absence of evidence, formatted to look like the presence of it.\n",
+      "stderr": "",
+      "seconds": 20.133
+    },
+    {
+      "id": "regex-deadends",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_regex_deadends.py",
+        "analysis/toe_20261105_determinant_and_fermion_quality.py",
+        "analysis/toe_20261105_determinant_quality_validation.py"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 unmatchable alternatives\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.571
+    },
+    {
+      "id": "retraction-propagation",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_retraction_propagation.py",
+        "analysis/toe_20261105_determinant_and_fermion_quality.py",
+        "analysis/toe_20261105_determinant_quality_validation.py",
+        "analysis/2026-11-05_determinant_protection_and_mixed_fermion_audit.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 live assertions of retracted claims across 3 registered\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.476
+    },
+    {
+      "id": "stdlib-shadow",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_stdlib_shadow.py",
+        "analysis/toe_20261105_determinant_and_fermion_quality.py",
+        "analysis/toe_20261105_determinant_quality_validation.py",
+        "tests/test_toe_20261105_determinant_and_fermion_quality.py"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 shadowing files, 0 high-risk\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.338
+    },
+    {
+      "id": "heredoc-regex",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_heredoc_regex.py",
+        "analysis/toe_20261105_determinant_and_fermion_quality.py",
+        "analysis/toe_20261105_determinant_quality_validation.py"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 collapsed escapes in regex context\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.378
+    },
+    {
+      "id": "cert-prose-vs-data",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_cert_prose_vs_data.py",
+        "data/toe_20261105_determinant_and_fermion_quality.json",
+        "data/toe_20261105_determinant_quality_server.json",
+        "data/toe_20261105_determinant_quality_validation.json",
+        "data/toe_20261105_determinant_quality_result_search.json"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 prose/data contradiction(s) in 4 certificate(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.3208081999910064
+    },
+    {
+      "id": "convention-fixed-form",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_convention_fixed_form.py",
+        "analysis/toe_20261105_determinant_and_fermion_quality.py",
+        "analysis/toe_20261105_determinant_quality_validation.py",
+        "analysis/2026-11-05_determinant_protection_and_mixed_fermion_audit.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 convention-fixed choice(s) in 3 file(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.286
+    },
+    {
+      "id": "key-nearmiss",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_key_nearmiss.py",
+        "data/toe_20261105_determinant_and_fermion_quality.json",
+        "data/toe_20261105_determinant_quality_server.json",
+        "data/toe_20261105_determinant_quality_validation.json",
+        "data/toe_20261105_determinant_quality_result_search.json"
+      ],
+      "exit_code": 124,
+      "stdout": "Exceeded90s; no PASS asserted.",
+      "stderr": "",
+      "seconds": 90.124
+    },
+    {
+      "id": "certificate-rediscovery",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_certificate_rediscovery.py",
+        "data/toe_20261105_determinant_and_fermion_quality.json",
+        "data/toe_20261105_determinant_quality_server.json",
+        "data/toe_20261105_determinant_quality_validation.json",
+        "data/toe_20261105_determinant_quality_result_search.json"
+      ],
+      "exit_code": 0,
+      "stdout": "  RARE  toe_20261105_determinant_quality_result_search.json\n        line@1020  (stem reaches 7433 file-slots)  already in: w33_formula_search_universe_v1.json\n  RARE  toe_20261105_determinant_quality_result_search.json\n        line@1063  (stem reaches 7433 file-slots)  already in: w33_formula_search_universe_v1.json\n  RARE  toe_20261105_determinant_quality_result_search.json\n        line@11  (stem reaches 7433 file-slots)  already in: PART_W33_PASS4710_4712_SELFDUALITY_AND_VACUITY.json, PART_W33_PASS4761_RETRACTION_DID_NOT_PROPAGATE.json, QUARANTINE_2026_07_27_false_cubic_scan.json ...\n        toe_20261105_determinant_quality_result_search.json\n        line@112  (stem reaches 7433 file-slots)  already in: PART_W33_PASS4710_4712_SELFDUALITY_AND_VACUITY.json, w33_formula_search_universe_v1.json\n        toe_20261105_determinant_quality_result_search.json\n        line@119  (stem reaches 7433 file-slots)  already in: QUARANTINE_2026_07_27_false_cubic_scan.json, w33_formula_search_universe_v1.json\n        toe_20261105_determinant_quality_result_search.json\n        line@12  (stem reaches 7433 file-slots)  already in: w33_component_browser_demo.json, w33_contextuality_tax_holonomy_queue.json, w33_formula_search_universe_v1.json ...\n        toe_20261105_determinant_quality_result_search.json\n        line@121  (stem reaches 7433 file-slots)  already in: PART_W33_PASS4375_UNTESTED_PREMISES.json, QUARANTINE_2026_07_27_false_cubic_scan.json, w33_formula_search_universe_v1.json\n        toe_20261105_determinant_quality_result_search.json\n        line@124  (stem reaches 7433 file-slots)  already in: QUARANTINE_2026_07_27_false_cubic_scan.json, w33_formula_search_universe_v1.json\n        toe_20261105_determinant_quality_result_search.json\n        line@125  (stem reaches 7433 file-slots)  already in: w33_formula_search_universe_v1.json\n        toe_20261105_determinant_quality_result_search.json\n        line@22  (stem reaches 7433 file-slots)  already in: PART_W33_PASS4710_4712_SELFDUALITY_AND_VACUITY.json, w33_component_browser_demo.json, w33_contextuality_tax_holonomy_queue.json ...\n        toe_20261105_determinant_quality_result_search.json\n        line@28  (stem reaches 7433 file-slots)  already in: PART_W33_PASS4531_FLAG_GAUGE_COMPILER.json, QUARANTINE_2026_07_27_false_cubic_scan.json, w33_component_browser_demo.json ...\n        toe_20261105_determinant_quality_result_search.json\n        line@3  (stem reaches 7433 file-slots)  already in: PART_W33_PASS4531_FLAG_GAUGE_COMPILER.json, QUARANTINE_2026_07_27_false_cubic_scan.json, w33_component_browser_demo.json ...\n        toe_20261105_determinant_quality_result_search.json\n        line@34  (stem reaches 7433 file-slots)  already in: PART_W33_PASS4710_4712_SELFDUALITY_AND_VACUITY.json, PART_W33_PASS4735_51840_PROVENANCE.json, PART_W33_PASS4761_RETRACTION_DID_NOT_PROPAGATE.json ...\n        toe_20261105_determinant_quality_result_search.json\n        line@360  (stem reaches 7433 file-slots)  already in: w33_formula_search_universe_v1.json\n        toe_20261105_determinant_quality_result_search.json\n        line@4  (stem reaches 7433 file-slots)  already in: PART_W33_PASS4531_FLAG_GAUGE_COMPILER.json, PART_W33_PASS4710_4712_SELFDUALITY_AND_VACUITY.json, QUARANTINE_2026_07_27_false_cubic_scan.json ...\n        toe_20261105_determinant_quality_result_search.json\n        line@40  (stem reaches 7433 file-slots)  already in: PART_W33_PASS4375_UNTESTED_PREMISES.json, PART_W33_PASS4380_READING_TWENTY.json, QUARANTINE_2026_07_27_false_cubic_scan.json ...\n        toe_20261105_determinant_quality_result_search.json\n        line@43  (stem reaches 7433 file-slots)  already in: QUARANTINE_2026_07_27_false_cubic_scan.json, w33_formula_search_universe_v1.json\n        toe_20261105_determinant_quality_result_search.json\n        line@45  (stem reaches 7433 file-slots)  already in: PART_W33_PASS4354_4357_WATTAGE_AND_BUYS.json, QUARANTINE_2026_07_27_false_cubic_scan.json, w33_formula_search_universe_v1.json\n        toe_20261105_determinant_quality_result_search.json\n        line@77  (stem reaches 7433 file-slots)  already in: PART_W33_PASS4735_51840_PROVENANCE.json, QUARANTINE_2026_07_27_false_cubic_scan.json, w33_formula_search_universe_v1.json\n        toe_20261105_determinant_quality_result_search.json\n        line@79  (stem reaches 7433 file-slots)  already in: PART_W33_PASS4375_UNTESTED_PREMISES.json, QUARANTINE_2026_07_27_false_cubic_scan.json, w33_formula_search_universe_v1.json\n\n  20 token(s) already present elsewhere, over 4 certificate(s)\n\n  CANDIDATES, RAREST FIRST. Pass 4800's `alpha@18` sat in a committed certificate while\n  six passes re-derived it. Read the RARE ones first: a stem with small reach names a\n  quantity, a stem with large reach names bookkeeping. Ranking is the fix that a stem\n  blocklist was not -- Pass 5635 A/B'd the blocklist and it moved two certificates.\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 1.5389218000345863
+    },
+    {
+      "id": "order-coincidence",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_order_coincidence.py",
+        "analysis/toe_20261105_determinant_and_fermion_quality.py",
+        "analysis/toe_20261105_determinant_quality_validation.py",
+        "analysis/2026-11-05_determinant_protection_and_mixed_fermion_audit.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 order-coincidence claim(s) in 3 file(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.628
+    },
+    {
+      "id": "spectral-overreach",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_spectral_overreach.py",
+        "analysis/toe_20261105_determinant_and_fermion_quality.py",
+        "analysis/toe_20261105_determinant_quality_validation.py",
+        "analysis/2026-11-05_determinant_protection_and_mixed_fermion_audit.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 candidate spectral over-read(s) in 3 file(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.528
+    },
+    {
+      "id": "hardcoded-keys",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_hardcoded_keys.py",
+        "analysis/toe_20261105_determinant_and_fermion_quality.py",
+        "analysis/toe_20261105_determinant_quality_validation.py"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 single-key lookups beside a canonical list\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.347
+    },
+    {
+      "id": "constant-claims",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_constant_claims_hook.py",
+        "analysis/2026-11-05_determinant_protection_and_mixed_fermion_audit.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.279
+    }
+  ],
+  "all_exit_codes_zero": false,
+  "initial_missing_search_certificate_warning": {
+    "id": "certificate-digests",
+    "command": [
+      "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+      "scripts/check_certificates.py",
+      "--quiet",
+      "data/toe_20261105_determinant_and_fermion_quality.json",
+      "data/toe_20261105_determinant_quality_server.json",
+      "data/toe_20261105_determinant_quality_validation.json",
+      "data/toe_20261105_determinant_quality_result_search.json"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "seconds": 0.36325490003218874
+  },
+  "scope": "Actual configured hook entries. Missing search JSON warning in initial run retained; three certificate guards replayed after search record materialized. Namespace supplement schema failure, inherited index540 ambiguities and key-nearmiss timeout remain non-PASS. No --no-verify.",
+  "candidate_triage": "Certificate rediscovery line@NN tokens come from search hit source line numbers, not new physical or code parameters. The source result candidates PASS12045 and11630 were read in full and triaged in the search record. General determinant and heavy-mediation ideas credited to1003.0941 and2212.00102. No priority/absence claim."
+}

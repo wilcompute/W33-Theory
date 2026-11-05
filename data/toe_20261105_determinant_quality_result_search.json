@@ -1,0 +1,205 @@
+{
+  "files_scanned": 10710,
+  "hits": [
+    {
+      "file": "analysis\\2026-11-05_determinant_protection_and_mixed_fermion_audit.md",
+      "matches": [
+        {
+          "line": 3,
+          "text": "1003.0941"
+        },
+        {
+          "line": 3,
+          "text": "1003.0941"
+        },
+        {
+          "line": 12,
+          "text": "m_D(\\Sigma)\\,[\\det"
+        },
+        {
+          "line": 28,
+          "text": "S^6 NN"
+        },
+        {
+          "line": 40,
+          "text": "S^6/M_P^5\\\\\\kappa S^6/M_P^5&y'T\\en"
+        }
+      ]
+    },
+    {
+      "file": "analysis\\toe_20261105_determinant_and_fermion_quality.py",
+      "matches": [
+        {
+          "line": 1,
+          "text": "determinant obstruction and a mixed-fermion quality"
+        },
+        {
+          "line": 3,
+          "text": "1003.0941"
+        },
+        {
+          "line": 34,
+          "text": "mD det"
+        },
+        {
+          "line": 43,
+          "text": "mD det"
+        },
+        {
+          "line": 121,
+          "text": "1003.0941"
+        }
+      ]
+    },
+    {
+      "file": "data\\toe_20261105_determinant_and_fermion_quality.json",
+      "matches": [
+        {
+          "line": 11,
+          "text": "mD det"
+        },
+        {
+          "line": 22,
+          "text": "mD det"
+        },
+        {
+          "line": 1020,
+          "text": "S^6 N N"
+        },
+        {
+          "line": 1063,
+          "text": "1003.0941"
+        }
+      ]
+    },
+    {
+      "file": "analysis\\2026-10-28_two_week_commit_catalogue.json",
+      "matches": [
+        {
+          "line": 5934,
+          "text": "M_d| = |det"
+        }
+      ]
+    },
+    {
+      "file": "analysis\\PASS11630_REYE_WITTING_INSTRUMENT.md",
+      "matches": [
+        {
+          "line": 40,
+          "text": "md`, describe det"
+        }
+      ]
+    },
+    {
+      "file": "analysis\\PASS12045_GEOMETRIC_BARR_ROW.md",
+      "matches": [
+        {
+          "line": 45,
+          "text": "M_d| = |det"
+        }
+      ]
+    },
+    {
+      "file": "analysis\\THEORY_OF_EVERYTHING.py",
+      "matches": [
+        {
+          "line": 360,
+          "text": "m_det': det"
+        }
+      ]
+    },
+    {
+      "file": "analysis\\bt3025_3031_predictive_photonic_overhaul.py",
+      "matches": [
+        {
+          "line": 4,
+          "text": "S^6apff*LptQ54J!JUls_(_JwOJpN!{LPmLiOu;t>@lD;hjzKAn"
+        }
+      ]
+    },
+    {
+      "file": "analysis\\bt929_chain_to_vertex_e8_map_search.py",
+      "matches": [
+        {
+          "line": 125,
+          "text": "m_det\": int(det"
+        }
+      ]
+    },
+    {
+      "file": "analysis\\bt930_chain_to_tetracode_e8_map_search.py",
+      "matches": [
+        {
+          "line": 119,
+          "text": "m_det\": det"
+        }
+      ]
+    },
+    {
+      "file": "analysis\\bt954_metric_selector_among_support60.py",
+      "matches": [
+        {
+          "line": 79,
+          "text": "m_det\": int(det"
+        }
+      ]
+    },
+    {
+      "file": "analysis\\review_20261021\\reading_progress.json",
+      "matches": [
+        {
+          "line": 1370,
+          "text": "M_d| = |det"
+        }
+      ]
+    },
+    {
+      "file": "analysis\\w33_20261014_toe76_four_fronts.py",
+      "matches": [
+        {
+          "line": 77,
+          "text": "m_det:minimum_det"
+        }
+      ]
+    },
+    {
+      "file": "analysis\\w33_laplacian_spectral_zeta.py",
+      "matches": [
+        {
+          "line": 124,
+          "text": "m_det = det"
+        }
+      ]
+    },
+    {
+      "file": "analysis\\w33_pass10837_10844_d26_extension_defect_resolution.py",
+      "matches": [
+        {
+          "line": 112,
+          "text": "s^6 on F_{2^12}; nonabelian Hilbert 90 con"
+        }
+      ]
+    }
+  ],
+  "skipped_over_4MB": [],
+  "stopped_at_budget": true,
+  "wall_budget_seconds": 90,
+  "file_budget": 30000,
+  "patterns": [
+    "1003\\.0941",
+    "Axion Protection from Flavor",
+    "det(?:erminant)?[^\\n]{0,70}(?:\\bPQ\\b|\\bquality\\b)",
+    "S\\^6[^\\n]{0,50}N",
+    "\\(n\\+5\\)/2",
+    "det\\s*M_Q",
+    "m_?D[^\\n]{0,12}det"
+  ],
+  "script_sha256": "a3059e17f9b648d9e7fda72b6209c2fb45bfc522af848036f3d4d02350e9dcfe",
+  "scope": "Bounded result-oriented text search, both indexes and recent Nov5 files first; rg --no-ignore includes ignored data JSON; not exhaustive semantic review or a novelty proof. Earlier broader traversals were stopped after failing to finish promptly; first bounded trial scanned3000 files and its quality substring also matched equality, corrected with word boundaries.",
+  "reproducible_script": "import pathlib,re,json,subprocess,os,time,hashlib\nR=pathlib.Path(r'C:\\Repos\\Theory of Everything')\npatterns=[r'1003\\.0941',r'Axion Protection from Flavor',r'det(?:erminant)?[^\\n]{0,70}(?:\\bPQ\\b|\\bquality\\b)',r'S\\^6[^\\n]{0,50}N',r'\\(n\\+5\\)/2',r'det\\s*M_Q',r'm_?D[^\\n]{0,12}det']\nrx=re.compile('|'.join(patterns),re.I)\nhits=[]; count=0\npaths=[R/p for p in subprocess.check_output(['rg','--files','--hidden','--no-ignore','analysis','data','papers','docs','tests','scripts'],cwd=R,text=True,encoding='utf-8').splitlines()]\npaths.extend([R/'RESULTS_INDEX.md',R/'TOPICAL_ALIASES.md'])\npaths.sort(key=lambda p:(p.name not in {'RESULTS_INDEX.md','TOPICAL_ALIASES.md'},not ('20261105' in p.name or '2026-11-05' in p.name or '1261' in p.name),str(p)))\nskipped=[]\nstart=time.monotonic();budget=90;stopped=False\nfor p in paths:\n if time.monotonic()-start>budget or count>=30000:stopped=True;break\n if p.suffix.lower() not in {'.py','.json','.md','.tex','.html','.bib','.js'}:continue\n count+=1\n try:\n  if p.stat().st_size>4000000:skipped.append(str(p.relative_to(R)));continue\n  s=p.read_text(encoding='utf-8',errors='replace')\n except OSError:continue\n out=[]\n for hit in rx.finditer(s):\n  out.append({'line':s.count('\\n',0,hit.start())+1,'text':hit.group()[:450]})\n  if len(out)>=10:break\n if out:hits.append({'file':str(p.relative_to(R)),'matches':out[:10]})\nout={'files_scanned':count,'hits':hits,'skipped_over_4MB':skipped,'stopped_at_budget':stopped,'wall_budget_seconds':budget,'file_budget':30000,'patterns':patterns,'script_sha256':hashlib.sha256(pathlib.Path(__file__).read_bytes()).hexdigest(),'scope':'Bounded result-oriented text search, both indexes and recent Nov5 files first; rg --no-ignore includes ignored data JSON; not exhaustive semantic review or a novelty proof. Earlier broader traversals were stopped after failing to finish promptly; first bounded trial scanned3000 files and its quality substring also matched equality, corrected with word boundaries.'}\n(pathlib.Path(os.environ['TEMP'])/'toe_determinant_search_results.json').write_text(json.dumps(out,indent=2),encoding='utf-8')\nprint(json.dumps(out,indent=2))\n",
+  "candidate_triage": {
+    "PASS12045": "Read full report: determinant ratio cancels one vectorlike Nelson-Barr row in shared quark/lepton matching. It is an axionless CP/flavor alternative, not the DQQ PQ-breaking degree bound. This work does not rule out Nelson-Barr solutions; their loops and common-scale matching still need checking.",
+    "PASS11630": "Read full report: Reye/Witting heralded quantum instrument and geometric projective determinant; no PQ protection theorem.",
+    "other_literal_matches": "Catalogue/reading logs repeat the Barr ratio. Lattice-zeta/minimum determinants, compressed source strings and Hilbert90 power s6 are lexical matches, not evidence of axion protection. No global absence or priority claim."
+  }
+}

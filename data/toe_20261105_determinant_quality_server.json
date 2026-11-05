@@ -1,0 +1,13 @@
+{
+  "status": "PASS_SERVER_V8_DETERMINANT_AND_OPERATOR_CHECKS",
+  "assignments": 64,
+  "maxDegree": 5,
+  "twoCharged": 40,
+  "minimumOperatorDimension": 9,
+  "minimizers": 2,
+  "amplitudeOverChi": 3.798924633535052e+38,
+  "sufficientC": 2.632323871004147e-49,
+  "inducedC": 0.1828865499838817,
+  "scope": "Independent arithmetic, not a second proof of anomaly assumptions or full UV completion.",
+  "execution": "functions.exec server V8"
+}

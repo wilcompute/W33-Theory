@@ -22,9 +22,9 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **13742** files; **18632** distinctive results
+Indexed **13745** files; **18633** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
-**8126** appear in exactly one file — the sharpest signal.
+**8127** appear in exactly one file — the sharpest signal.
 
 ## Index
 
@@ -1269,7 +1269,7 @@ Indexed **13742** files; **18632** distinctive results
 | `[1,1,8]` | `analysis/bt867_cache_split_transport_nonsplit_boundary.py` |
 | `[1,2,0]` | `analysis/PASS11975_11979_DYNAMICAL_COMPLETION.md` · `analysis/bt1716_q2025_domain_chart_extractor.py` · `analysis/bt1720_q2025_connected_domain_triples.py` · `analysis/verify_dclxxxv_holonomy_single_photon_fiber_jordan_bridge.py` · *(+14)* |
 | `[1,2,1]` | `analysis/2026-11-03_c3_fusion_refinement_gravity_flavor_ramsey.md` · `analysis/PASS11493_11497_EXACT_MATCHING_INFERENCE.md` · `analysis/PASS11506_11510_FIVE_PHYSICS_TARGETS.md` · `analysis/PASS11965_11969_FIVE_DYNAMICAL_FRONTS.md` · *(+17)* |
-| `[1,2,2]` | `analysis/PASS11130_SINGLE_HIGGS_BOTTOM_TAU.md` · `analysis/PASS11493_11497_EXACT_MATCHING_INFERENCE.md` · `analysis/bt1720_q2025_connected_domain_triples.py` · `analysis/bt3500_3505_triangle_free_srg_m57_bridge.py` · *(+7)* |
+| `[1,2,2]` | `analysis/PASS11130_SINGLE_HIGGS_BOTTOM_TAU.md` · `analysis/PASS11493_11497_EXACT_MATCHING_INFERENCE.md` · `analysis/bt1720_q2025_connected_domain_triples.py` · `analysis/bt3500_3505_triangle_free_srg_m57_bridge.py` · *(+8)* |
 | `[1,2,4]` | `analysis/PART_MCCLXVI_MCCLXXV_CYCLOTOMIC_SPECTRAL_ALGEBRA.py` · `analysis/bt924_integral_e8_lift_explore.py` · `analysis/toe_20261103_mechanism_neutrino_messengers.py` · `analysis/w33_20260923_psp43_chain_decomposition.g` · *(+20)* |
 | `[1,2,5]` | `analysis/w33_20261102_q13_transvection_trades.py` · `analysis/w33_pass335_complete_stable_lattice_complex.g` |
 | `[1,2,6]` | `analysis/w33_decisive_experiment.py` · `analysis/w33_genus_six_execution.py` · `analysis/w33_substrate_periodic_table.py` |
@@ -10150,6 +10150,7 @@ Indexed **13742** files; **18632** distinctive results
 | `12613` | `analysis/2026-11-05_five_completion_attempts_and_extra_consistency.md` · `analysis/PASS12613_12615_ORBIFOLD_ROUTE.md` · `analysis/w33_pass12613_to_12615_orbifold_route.py` |
 | `12614` | `analysis/PASS12613_12615_ORBIFOLD_ROUTE.md` · `analysis/w33_pass12613_to_12615_orbifold_route.py` |
 | `12615` | `analysis/2026-11-05_five_completion_attempts_and_extra_consistency.md` · `analysis/PASS12613_12615_ORBIFOLD_ROUTE.md` · `analysis/w33_pass12613_to_12615_orbifold_route.py` |
+| `12616` | `analysis/2026-11-05_determinant_protection_and_mixed_fermion_audit.md` |
 | `12628` | `analysis/2026-10-14_toe71_five_fronts.md` · `analysis/2026-10-14_toe72_five_fronts.md` · `analysis/w33_20261014_toe71_quantum_pairing.py` · `analysis/w33_20261014_toe72_cover_orbit_escape.py` · *(+1)* |
 | `12636` | `analysis/w33_pass7725_7732_symplectic_polarity_moduli_117.py` |
 | `12640` | `analysis/2026-10-14_toe71_five_fronts.md` · `analysis/2026-10-14_toe72_five_fronts.md` · `analysis/2026-10-14_toe74_five_fronts.md` · `analysis/w33_20261014_toe71_quantum_pairing.py` · *(+1)* |
