@@ -1,0 +1,469 @@
+{
+  "results": {
+    "adaptive_Witting_photonic": {
+      "bound": "All mixed state preparations and detector loss models are assumed; calibration drift samples do not give a worst-case certified hardware bound.",
+      "native_effects": 40,
+      "physical_modes": 4,
+      "prior_art": "Helstrom discrimination, ququart unitary Givens decomposition, and Witting 2-design are known.",
+      "records": [
+        {
+          "Helstrom_four_port_success": 0.53,
+          "Helstrom_trace_distance": 0.1,
+          "Witting_total_variation": 0.04000000000000004,
+          "epsilon": 0.1,
+          "ideal_mesh_reconstruction_verified": true,
+          "independent_loss_efficiency": 0.6,
+          "native_Witting40_success": 0.512,
+          "ray_pair": [
+            0,
+            1
+          ],
+          "static_calibration_samples": null,
+          "two_mode_givens_gates": 5,
+          "type": "orthogonal"
+        },
+        {
+          "Helstrom_four_port_success": 0.5425,
+          "Helstrom_trace_distance": 0.1,
+          "Witting_total_variation": 0.04000000000000004,
+          "epsilon": 0.1,
+          "ideal_mesh_reconstruction_verified": true,
+          "independent_loss_efficiency": 0.85,
+          "native_Witting40_success": 0.517,
+          "ray_pair": [
+            0,
+            1
+          ],
+          "static_calibration_samples": [
+            {
+              "assumed_static_beamsplitter_noise_sigma": 0,
+              "mean_port_total_variation": 0.1,
+              "realizations": 32,
+              "worst_observed_port_total_variation": 0.1
+            },
+            {
+              "assumed_static_beamsplitter_noise_sigma": 0.005,
+              "mean_port_total_variation": 0.0999931536361659,
+              "realizations": 32,
+              "worst_observed_port_total_variation": 0.09996066618871065
+            },
+            {
+              "assumed_static_beamsplitter_noise_sigma": 0.02,
+              "mean_port_total_variation": 0.09991965555905051,
+              "realizations": 32,
+              "worst_observed_port_total_variation": 0.09956027379438384
+            }
+          ],
+          "two_mode_givens_gates": 5,
+          "type": "orthogonal"
+        },
+        {
+          "Helstrom_four_port_success": 0.55,
+          "Helstrom_trace_distance": 0.1,
+          "Witting_total_variation": 0.04000000000000004,
+          "epsilon": 0.1,
+          "ideal_mesh_reconstruction_verified": true,
+          "independent_loss_efficiency": 1.0,
+          "native_Witting40_success": 0.52,
+          "ray_pair": [
+            0,
+            1
+          ],
+          "static_calibration_samples": null,
+          "two_mode_givens_gates": 5,
+          "type": "orthogonal"
+        },
+        {
+          "Helstrom_four_port_success": 0.56,
+          "Helstrom_trace_distance": 0.2,
+          "Witting_total_variation": 0.08000000000000002,
+          "epsilon": 0.2,
+          "ideal_mesh_reconstruction_verified": true,
+          "independent_loss_efficiency": 0.6,
+          "native_Witting40_success": 0.524,
+          "ray_pair": [
+            0,
+            1
+          ],
+          "static_calibration_samples": null,
+          "two_mode_givens_gates": 5,
+          "type": "orthogonal"
+        },
+        {
+          "Helstrom_four_port_success": 0.585,
+          "Helstrom_trace_distance": 0.2,
+          "Witting_total_variation": 0.08000000000000002,
+          "epsilon": 0.2,
+          "ideal_mesh_reconstruction_verified": true,
+          "independent_loss_efficiency": 0.85,
+          "native_Witting40_success": 0.534,
+          "ray_pair": [
+            0,
+            1
+          ],
+          "static_calibration_samples": [
+            {
+              "assumed_static_beamsplitter_noise_sigma": 0,
+              "mean_port_total_variation": 0.2,
+              "realizations": 32,
+              "worst_observed_port_total_variation": 0.2
+            },
+            {
+              "assumed_static_beamsplitter_noise_sigma": 0.005,
+              "mean_port_total_variation": 0.19998538030684715,
+              "realizations": 32,
+              "worst_observed_port_total_variation": 0.19994139565595845
+            },
+            {
+              "assumed_static_beamsplitter_noise_sigma": 0.02,
+              "mean_port_total_variation": 0.19983086795791788,
+              "realizations": 32,
+              "worst_observed_port_total_variation": 0.1991162166586425
+            }
+          ],
+          "two_mode_givens_gates": 5,
+          "type": "orthogonal"
+        },
+        {
+          "Helstrom_four_port_success": 0.6,
+          "Helstrom_trace_distance": 0.2,
+          "Witting_total_variation": 0.08000000000000002,
+          "epsilon": 0.2,
+          "ideal_mesh_reconstruction_verified": true,
+          "independent_loss_efficiency": 1.0,
+          "native_Witting40_success": 0.54,
+          "ray_pair": [
+            0,
+            1
+          ],
+          "static_calibration_samples": null,
+          "two_mode_givens_gates": 5,
+          "type": "orthogonal"
+        },
+        {
+          "Helstrom_four_port_success": 0.5244948974278318,
+          "Helstrom_trace_distance": 0.08164965809277264,
+          "Witting_total_variation": 0.03333333333333336,
+          "epsilon": 0.1,
+          "ideal_mesh_reconstruction_verified": true,
+          "independent_loss_efficiency": 0.6,
+          "native_Witting40_success": 0.51,
+          "ray_pair": [
+            0,
+            5
+          ],
+          "static_calibration_samples": null,
+          "two_mode_givens_gates": 6,
+          "type": "nonorthogonal"
+        },
+        {
+          "Helstrom_four_port_success": 0.5347011046894283,
+          "Helstrom_trace_distance": 0.08164965809277264,
+          "Witting_total_variation": 0.03333333333333336,
+          "epsilon": 0.1,
+          "ideal_mesh_reconstruction_verified": true,
+          "independent_loss_efficiency": 0.85,
+          "native_Witting40_success": 0.5141666666666667,
+          "ray_pair": [
+            0,
+            5
+          ],
+          "static_calibration_samples": [
+            {
+              "assumed_static_beamsplitter_noise_sigma": 0,
+              "mean_port_total_variation": 0.08164965809277264,
+              "realizations": 32,
+              "worst_observed_port_total_variation": 0.08164965809277264
+            },
+            {
+              "assumed_static_beamsplitter_noise_sigma": 0.005,
+              "mean_port_total_variation": 0.08164348946915616,
+              "realizations": 32,
+              "worst_observed_port_total_variation": 0.08162476174759753
+            },
+            {
+              "assumed_static_beamsplitter_noise_sigma": 0.02,
+              "mean_port_total_variation": 0.0815501425386353,
+              "realizations": 32,
+              "worst_observed_port_total_variation": 0.08120088057156089
+            }
+          ],
+          "two_mode_givens_gates": 6,
+          "type": "nonorthogonal"
+        },
+        {
+          "Helstrom_four_port_success": 0.5408248290463863,
+          "Helstrom_trace_distance": 0.08164965809277264,
+          "Witting_total_variation": 0.03333333333333336,
+          "epsilon": 0.1,
+          "ideal_mesh_reconstruction_verified": true,
+          "independent_loss_efficiency": 1.0,
+          "native_Witting40_success": 0.5166666666666667,
+          "ray_pair": [
+            0,
+            5
+          ],
+          "static_calibration_samples": null,
+          "two_mode_givens_gates": 6,
+          "type": "nonorthogonal"
+        },
+        {
+          "Helstrom_four_port_success": 0.5489897948556636,
+          "Helstrom_trace_distance": 0.16329931618554527,
+          "Witting_total_variation": 0.06666666666666674,
+          "epsilon": 0.2,
+          "ideal_mesh_reconstruction_verified": true,
+          "independent_loss_efficiency": 0.6,
+          "native_Witting40_success": 0.52,
+          "ray_pair": [
+            0,
+            5
+          ],
+          "static_calibration_samples": null,
+          "two_mode_givens_gates": 6,
+          "type": "nonorthogonal"
+        },
+        {
+          "Helstrom_four_port_success": 0.5694022093788568,
+          "Helstrom_trace_distance": 0.16329931618554527,
+          "Witting_total_variation": 0.06666666666666674,
+          "epsilon": 0.2,
+          "ideal_mesh_reconstruction_verified": true,
+          "independent_loss_efficiency": 0.85,
+          "native_Witting40_success": 0.5283333333333333,
+          "ray_pair": [
+            0,
+            5
+          ],
+          "static_calibration_samples": [
+            {
+              "assumed_static_beamsplitter_noise_sigma": 0,
+              "mean_port_total_variation": 0.16329931618554522,
+              "realizations": 32,
+              "worst_observed_port_total_variation": 0.16329931618554522
+            },
+            {
+              "assumed_static_beamsplitter_noise_sigma": 0.005,
+              "mean_port_total_variation": 0.16328228343037585,
+              "realizations": 32,
+              "worst_observed_port_total_variation": 0.1632143576611454
+            },
+            {
+              "assumed_static_beamsplitter_noise_sigma": 0.02,
+              "mean_port_total_variation": 0.163129378081423,
+              "realizations": 32,
+              "worst_observed_port_total_variation": 0.1626969837789394
+            }
+          ],
+          "two_mode_givens_gates": 6,
+          "type": "nonorthogonal"
+        },
+        {
+          "Helstrom_four_port_success": 0.5816496580927726,
+          "Helstrom_trace_distance": 0.16329931618554527,
+          "Witting_total_variation": 0.06666666666666674,
+          "epsilon": 0.2,
+          "ideal_mesh_reconstruction_verified": true,
+          "independent_loss_efficiency": 1.0,
+          "native_Witting40_success": 0.5333333333333333,
+          "ray_pair": [
+            0,
+            5
+          ],
+          "static_calibration_samples": null,
+          "two_mode_givens_gates": 6,
+          "type": "nonorthogonal"
+        }
+      ],
+      "status": "PASS_NATIVE_WITTING_VS_PAIR_ADAPTED_HELSTROM_COMPILED"
+    },
+    "chirality_flavor": {
+      "all_four_yukawa_monomials_allowed": true,
+      "all_six_anomalies_vanish": true,
+      "integer_U1_charge_parameter_choices": 48,
+      "lattice_chiral_symmetry_exact": true,
+      "no_unique_flavor_selector": "48 different integer charge pairs satisfy the scanned anomaly and Yukawa conditions, and the finite chiral chain produces paired boundaries. Neither fixes SM masses, CKM, CP sign, or nature's chirality.",
+      "prior_art": "SM plus right-handed neutrino anomaly-free Y/B-L combinations and SSH boundary modes are established.",
+      "representative_mixed_charge_records": [
+        {
+          "a": -3,
+          "b": -3,
+          "charges": {
+            "L": 18,
+            "Q": -6,
+            "dc": -3,
+            "ec": -27,
+            "nc": -9,
+            "uc": 15
+          }
+        },
+        {
+          "a": -3,
+          "b": -2,
+          "charges": {
+            "L": 15,
+            "Q": -5,
+            "dc": -4,
+            "ec": -24,
+            "nc": -6,
+            "uc": 14
+          }
+        },
+        {
+          "a": -3,
+          "b": -1,
+          "charges": {
+            "L": 12,
+            "Q": -4,
+            "dc": -5,
+            "ec": -21,
+            "nc": -3,
+            "uc": 13
+          }
+        },
+        {
+          "a": -3,
+          "b": 0,
+          "charges": {
+            "L": 9,
+            "Q": -3,
+            "dc": -6,
+            "ec": -18,
+            "nc": 0,
+            "uc": 12
+          }
+        },
+        {
+          "a": -3,
+          "b": 1,
+          "charges": {
+            "L": 6,
+            "Q": -2,
+            "dc": -7,
+            "ec": -15,
+            "nc": 3,
+            "uc": 11
+          }
+        },
+        {
+          "a": -3,
+          "b": 2,
+          "charges": {
+            "L": 3,
+            "Q": -1,
+            "dc": -8,
+            "ec": -12,
+            "nc": 6,
+            "uc": 10
+          }
+        },
+        {
+          "a": -3,
+          "b": 3,
+          "charges": {
+            "L": 0,
+            "Q": 0,
+            "dc": -9,
+            "ec": -9,
+            "nc": 9,
+            "uc": 9
+          }
+        },
+        {
+          "a": -2,
+          "b": -3,
+          "charges": {
+            "L": 15,
+            "Q": -5,
+            "dc": -1,
+            "ec": -21,
+            "nc": -9,
+            "uc": 11
+          }
+        }
+      ],
+      "status": "PASS_ANOMALY_FREE_CHARGE_FAMILY_AND_CHIRAL_EDGE_PAIR_FIREWALL",
+      "topological_open_SSH_smallest_abs_modes": [
+        2.3399414405220935e-05,
+        2.3399414405807034e-05
+      ],
+      "trivial_open_SSH_smallest_abs_modes": [
+        0.43045679313628626,
+        0.43045679313628715
+      ]
+    },
+    "trusted_memory": {
+      "binomial_records": [
+        {
+          "binomial_false_positive": 0.009167732938992541,
+          "binomial_power": 1.0620371694330444e-12,
+          "calibrated_separable_null": 0.3,
+          "detector_efficiency": 0.85,
+          "memory_survival": 0.2,
+          "negativity": -0.0,
+          "quantum_fidelity": 0.2888888888888891,
+          "rejection_threshold": 960,
+          "shots": 3000,
+          "unconditional_success_probability": 0.2622222222222224
+        },
+        {
+          "binomial_false_positive": 0.009167732938992541,
+          "binomial_power": 0.9814811054241344,
+          "calibrated_separable_null": 0.3,
+          "detector_efficiency": 0.85,
+          "memory_survival": 0.3,
+          "negativity": 0.0666666666666667,
+          "quantum_fidelity": 0.377777777777778,
+          "rejection_threshold": 960,
+          "shots": 3000,
+          "unconditional_success_probability": 0.33777777777777795
+        },
+        {
+          "binomial_false_positive": 0.009167732938992541,
+          "binomial_power": 0.9999999999065687,
+          "calibrated_separable_null": 0.3,
+          "detector_efficiency": 0.85,
+          "memory_survival": 0.35,
+          "negativity": 0.13333333333333336,
+          "quantum_fidelity": 0.4222222222222224,
+          "rejection_threshold": 960,
+          "shots": 3000,
+          "unconditional_success_probability": 0.3755555555555557
+        },
+        {
+          "binomial_false_positive": 0.009167732938992541,
+          "binomial_power": 1.0,
+          "calibrated_separable_null": 0.3,
+          "detector_efficiency": 0.85,
+          "memory_survival": 0.6,
+          "negativity": 0.4666666666666668,
+          "quantum_fidelity": 0.6444444444444448,
+          "rejection_threshold": 960,
+          "shots": 3000,
+          "unconditional_success_probability": 0.5644444444444447
+        },
+        {
+          "binomial_false_positive": 0.009167732938992541,
+          "binomial_power": 1.0,
+          "calibrated_separable_null": 0.3,
+          "detector_efficiency": 0.85,
+          "memory_survival": 1.0,
+          "negativity": 1.0000000000000002,
+          "quantum_fidelity": 1.0000000000000007,
+          "rejection_threshold": 960,
+          "shots": 3000,
+          "unconditional_success_probability": 0.8666666666666673
+        }
+      ],
+      "classical_dephased_memory_fidelity": 0.33333333333333354,
+      "coherent_reset_fidelity": 1.0000000000000007,
+      "no_memory_fidelity": 0.11111111111111116,
+      "scope": "Outcome-dependent detection falsely inflates a separable state's conditional Bell statistic; this is a measurement bias, not entanglement. Trusted independent efficiency and no quantum bypass remain necessary.",
+      "state_dependent_loss_detector_failure_eta": 0.1,
+      "state_dependent_loss_detector_success_eta": 0.95,
+      "state_dependent_loss_false_witness_conditional_fidelity": 0.8260869565217391,
+      "status": "PASS_QUTRIT_RESET_MEMORY_TRUSTED_LOSS_AND_ADVERSARIAL_HERALD"
+    }
+  },
+  "status": "PASS_FIVE_FRONT_CONTINUATION_3OF5"
+}

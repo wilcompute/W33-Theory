@@ -1,0 +1,84 @@
+{
+  "Burnside_trace_census": {
+    "each_three_cycle": 9,
+    "each_transposition": 0,
+    "identity": 144,
+    "projected_rank": 27
+  },
+  "distinguishable_color_doublet_matter_fields": 2,
+  "electric_magnetic_commutator_frobenius": 10.954451150103322,
+  "electric_matter_commutator_frobenius": 6.0,
+  "exact_projector_and_Gauss_constraints": true,
+  "gauge_links": 2,
+  "group": "D3 isomorphic S3",
+  "group_order": 6,
+  "model_operator": "H=J E + K M + g C with electric conjugacy-class shifts, magnetic commutator character and loop-matter symmetric color couplings",
+  "nonidentification": "The numerical dimension 27 coincides with the W33 affine history and three-qutrit Hilbert dimension but gives no canonical H27/W33 intertwiner, ray identification, relativistic gauge group, particle spectrum or continuum limit.",
+  "physical_gauge_invariant_dimension": 27,
+  "prior_art": "Finite-group Hamiltonian lattice gauge theory and group projection are established. This 2-loop S3 color-doublet implementation and coincidence check are repo-local.",
+  "pure_gauge_orbital_dimension": 11,
+  "raw_hilbert_dimension": 144,
+  "scans": [
+    {
+      "J": 1,
+      "K": 0,
+      "ground_gap": 0.9999999999999989,
+      "ground_magnetic_expectation": -0.2500000000000008,
+      "ground_matter_expectation": -2.706168622523819e-16,
+      "lowest_four_eigenvalues": [
+        -2.0,
+        -1.000000000000001,
+        -1.0000000000000004,
+        -1.0000000000000002
+      ],
+      "matter_g": 0,
+      "max_Gauss_invariance_error": 8.792430151425921e-16
+    },
+    {
+      "J": 0.5,
+      "K": 1,
+      "ground_gap": 0.3050001581006565,
+      "ground_magnetic_expectation": -0.9522837763633567,
+      "ground_matter_expectation": -0.725880418218829,
+      "lowest_four_eigenvalues": [
+        -1.8773547834131687,
+        -1.5723546253125122,
+        -1.4389342905856601,
+        -1.2525360971332538
+      ],
+      "matter_g": 0.3,
+      "max_Gauss_invariance_error": 7.863723663691733e-16
+    },
+    {
+      "J": 1,
+      "K": 0.4,
+      "ground_gap": 0.7687327167125113,
+      "ground_magnetic_expectation": -0.7095704911647391,
+      "ground_matter_expectation": -0.6062310515231885,
+      "lowest_four_eigenvalues": [
+        -2.4202590846548846,
+        -1.6515263679423733,
+        -1.5390657922681648,
+        -1.2846306015184703
+      ],
+      "matter_g": 0.7,
+      "max_Gauss_invariance_error": 8.622430778574908e-16
+    },
+    {
+      "J": 0.1,
+      "K": 1,
+      "ground_gap": 0.07375322791794936,
+      "ground_magnetic_expectation": -0.9991223256332891,
+      "ground_matter_expectation": -0.9965701321050112,
+      "lowest_four_eigenvalues": [
+        -2.078854252361927,
+        -2.0051010244439778,
+        -2.0025197268522485,
+        -1.929769618249256
+      ],
+      "matter_g": 1,
+      "max_Gauss_invariance_error": 7.833721318778662e-16
+    }
+  ],
+  "status": "PASS_NONABELIAN_S3_TWO_LOOP_TWO_MATTER_GAUSS_INVARIANT_SPECTRAL_MODEL"
+}

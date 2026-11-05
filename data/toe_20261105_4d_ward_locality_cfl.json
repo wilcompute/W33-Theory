@@ -1,0 +1,68 @@
+{
+  "conclusion": "Finite-difference metric kinematics and mesoscopic dimension 4 are achievable when a 4D lattice and locality are supplied explicitly; they are not derived from W33, and no nonlinear Einstein equation is obtained.",
+  "conformal_factor_caveat": "Euclidean Fierz-Pauli quadratic form has conformal indefiniteness even though gauge Ward identity holds.",
+  "discrete_gauge_null_directions": 4,
+  "euclidean_linearized_field_dimensions": 4,
+  "literature": "Regge and gauge-fixed discrete gravity are established; no novel continuum Einstein derivation.",
+  "massive_gauge_deformation_residual": 1.8027756377319948,
+  "physical_operator_rank": 6,
+  "records": [
+    {
+      "heat_spectral_dimension_t002": 4.676018967808546,
+      "independent_gauge_zero_modes": 4,
+      "lattice_spacing": 0.125,
+      "linear_Einstein_rank": 6,
+      "max_Ward_divergence_residual": 1.2734918425694434e-13,
+      "max_gauge_null_residual": 5.084229945850415e-13,
+      "momentum_relative_error": 0.0827126761584913,
+      "n": 8
+    },
+    {
+      "heat_spectral_dimension_t002": 4.215128846085059,
+      "independent_gauge_zero_modes": 4,
+      "lattice_spacing": 0.08333333333333333,
+      "linear_Einstein_rank": 6,
+      "max_Ward_divergence_residual": 1.6140428288623166e-13,
+      "max_gauge_null_residual": 9.165725883006586e-13,
+      "momentum_relative_error": 0.03738211880266329,
+      "n": 12
+    },
+    {
+      "heat_spectral_dimension_t002": 4.1071160778238625,
+      "independent_gauge_zero_modes": 4,
+      "lattice_spacing": 0.0625,
+      "linear_Einstein_rank": 6,
+      "max_Ward_divergence_residual": 1.135763642228438e-13,
+      "max_gauge_null_residual": 6.04921884069903e-13,
+      "momentum_relative_error": 0.02115105958010345,
+      "n": 16
+    },
+    {
+      "heat_spectral_dimension_t002": 4.044182288483829,
+      "independent_gauge_zero_modes": 4,
+      "lattice_spacing": 0.041666666666666664,
+      "linear_Einstein_rank": 6,
+      "max_Ward_divergence_residual": 1.757785650632539e-13,
+      "max_gauge_null_residual": 8.198074455012805e-13,
+      "momentum_relative_error": 0.009439909748072827,
+      "n": 24
+    },
+    {
+      "heat_spectral_dimension_t002": 4.024014524953703,
+      "independent_gauge_zero_modes": 4,
+      "lattice_spacing": 0.03125,
+      "linear_Einstein_rank": 6,
+      "max_Ward_divergence_residual": 1.5888218580782548e-13,
+      "max_gauge_null_residual": 9.374856803373542e-13,
+      "momentum_relative_error": 0.005317735427078648,
+      "n": 32
+    }
+  ],
+  "spatial_dimensions_for_CFL": 3,
+  "stable_courant": 0.55,
+  "stable_zone_corner_argument": -0.8150000000000004,
+  "status": "PASS_4D_DISCRETE_LINEAR_WARD_LOCALITY_CFL_GUARDS",
+  "symmetric_metric_components": 10,
+  "unstable_courant": 0.6,
+  "unstable_zone_corner_argument": -1.1600000000000001
+}

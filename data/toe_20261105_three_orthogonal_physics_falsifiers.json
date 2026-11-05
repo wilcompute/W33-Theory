@@ -1,0 +1,260 @@
+{
+  "results": {
+    "entropy_arrow": {
+      "boundary": "Identical four-state geometry and uniform stationary Shannon entropy coexist with equilibrium and two opposite nonequilibrium currents. An exchange counter alone does not derive time reversal breaking; microscopic rates and constraints are required.",
+      "clockwise": {
+        "backward": 0.2,
+        "clockwise_net_current": 0.12499999999999999,
+        "detailed_balance": false,
+        "entropy_production": 0.6263814842476838,
+        "forward": 0.7,
+        "stationary_probability": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "stationary_shannon_entropy": 1.3862943611198906,
+        "stay": 0.10000000000000003
+      },
+      "counterclockwise": {
+        "backward": 0.7,
+        "clockwise_net_current": -0.12499999999999999,
+        "detailed_balance": false,
+        "entropy_production": 0.6263814842476838,
+        "forward": 0.2,
+        "stationary_probability": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "stationary_shannon_entropy": 1.3862943611198906,
+        "stay": 0.10000000000000009
+      },
+      "equilibrium": {
+        "backward": 0.45,
+        "clockwise_net_current": 0.0,
+        "detailed_balance": true,
+        "entropy_production": 0.0,
+        "forward": 0.45,
+        "stationary_probability": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "stationary_shannon_entropy": 1.3862943611198906,
+        "stay": 0.10000000000000003
+      },
+      "status": "PASS_STATIONARY_ENTROPY_NOT_DETERMINING_TIME_ARROW"
+    },
+    "isospectral_geometry": {
+      "boundary": "Identical Laplacian eigenvalues and heat traces do not fix local geometry, topology, metric, causal structure, or unique quantum substrate. Isospectral graphs are established mathematics.",
+      "edges_first": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "edges_second": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "exact_laplacian_characteristic_polynomial": "x*(x - 3)**2*(x - 2)*(x**2 - 6*x + 4)",
+      "first_degree_sequence": [
+        1,
+        2,
+        2,
+        3,
+        3,
+        3
+      ],
+      "graph_vertices": 6,
+      "isomorphic": false,
+      "records": [
+        {
+          "common_global_heat_trace": 3.3650112290209866,
+          "sorted_local_heat_diagonal_distance": 0.26422771343692036,
+          "sorted_local_heat_first": [
+            0.46829947940842664,
+            0.46829947940842664,
+            0.46829947940842687,
+            0.5955878000236693,
+            0.5955878000236694,
+            0.7689371907483675
+          ],
+          "sorted_local_heat_second": [
+            0.3749569099278256,
+            0.5955878000236693,
+            0.5955878000236694,
+            0.5996262396819407,
+            0.5996262396819408,
+            0.599626239681941
+          ],
+          "time": 0.3
+        },
+        {
+          "common_global_heat_trace": 1.706061721175532,
+          "sorted_local_heat_diagonal_distance": 0.21259745901002755,
+          "sorted_local_heat_first": [
+            0.2124060290752948,
+            0.21240602907529488,
+            0.21240602907529507,
+            0.28808781418767415,
+            0.28808781418767415,
+            0.492668005574299
+          ],
+          "sorted_local_heat_second": [
+            0.18374849016603206,
+            0.2880878141876741,
+            0.2880878141876741,
+            0.31537920087805066,
+            0.31537920087805077,
+            0.31537920087805077
+          ],
+          "time": 1
+        },
+        {
+          "common_global_heat_trace": 1.240300129817797,
+          "sorted_local_heat_diagonal_distance": 0.1033834377051679,
+          "sorted_local_heat_first": [
+            0.17628469238538474,
+            0.17628469238538483,
+            0.176284692385385,
+            0.19785768505882906,
+            0.19785768505882909,
+            0.3157306825439841
+          ],
+          "sorted_local_heat_second": [
+            0.17018254197280455,
+            0.19785768505882897,
+            0.19785768505882903,
+            0.2248007392424448,
+            0.22480073924244498,
+            0.224800739242445
+          ],
+          "time": 2
+        }
+      ],
+      "second_degree_sequence": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        4
+      ],
+      "status": "PASS_EXACT_LAPLACIAN_COSPECTRAL_GRAPH_NONIDENTIFICATION"
+    },
+    "z3_criticality": {
+      "model": "Periodic 3-state quantum Potts chain H=-sum(Zi Z_i+1^dagger+h.c.)-g sum(Xi+Xi^dagger)",
+      "nonidentification": "A qutrit spectral clock or a 27-dimensional three-site Hilbert space is not automatically the Z3 parafermion field theory; one needs an explicit local Hamiltonian, critical tuning, and scaling observables.",
+      "notable_prior_art": "R. X. Siew, S. Chandrasekharan, T. Bhattacharya, Phys. Rev. D 114 L071504 (2026-10-29): SU3 qubit-regularized plaquette-chain continuum maps to Z3 clock/parafermion criticality.",
+      "records": [
+        {
+          "critical_coupling": 1,
+          "critical_gap": 0.7603144464062419,
+          "critical_n_times_gap": 2.2809433392187257,
+          "disordered_coupling": 1.8,
+          "disordered_gap": 2.9619293723342626,
+          "disordered_n_times_gap": 8.885788117002788,
+          "qudit_hilbert": 27,
+          "sites": 3
+        },
+        {
+          "critical_coupling": 1,
+          "critical_gap": 0.5612939586365187,
+          "critical_n_times_gap": 2.2451758345460746,
+          "disordered_coupling": 1.8,
+          "disordered_gap": 2.901999749099824,
+          "disordered_n_times_gap": 11.607998996399296,
+          "qudit_hilbert": 81,
+          "sites": 4
+        },
+        {
+          "critical_coupling": 1,
+          "critical_gap": 0.44546464659118534,
+          "critical_n_times_gap": 2.2273232329559267,
+          "disordered_coupling": 1.8,
+          "disordered_gap": 2.899489961253174,
+          "disordered_n_times_gap": 14.49744980626587,
+          "qudit_hilbert": 243,
+          "sites": 5
+        },
+        {
+          "critical_coupling": 1,
+          "critical_gap": 0.3694687381540227,
+          "critical_n_times_gap": 2.216812428924136,
+          "disordered_coupling": 1.8,
+          "disordered_gap": 2.907738621060492,
+          "disordered_n_times_gap": 17.446431726362952,
+          "qudit_hilbert": 729,
+          "sites": 6
+        },
+        {
+          "critical_coupling": 1,
+          "critical_gap": 0.3157068344871128,
+          "critical_n_times_gap": 2.2099478414097895,
+          "disordered_coupling": 1.8,
+          "disordered_gap": 2.915301707582511,
+          "disordered_n_times_gap": 20.407111953077578,
+          "qudit_hilbert": 2187,
+          "sites": 7
+        }
+      ],
+      "status": "PASS_Z3_PARAFERMION_CRITICAL_VS_MASSIVE_FINITE_SIZE_SCALING"
+    }
+  },
+  "status": "PASS_THREE_ORTHOGONAL_THEORY_CONTROLS"
+}
