@@ -1,0 +1,90 @@
+{
+  "ADM_Hamiltonian_momentum_constraint_closure_derived": false,
+  "Euclidean_S_flat_known_outer_value": 11.967586437321561,
+  "Euclidean_boundary_complete_S_flat": 11.967586437321563,
+  "Euclidean_flat_Hessian_8_tangent_near_null": true,
+  "Euclidean_flat_Hessian_eigenvalues": [
+    6.8421836289610226e-09,
+    6.854946649070979e-09,
+    6.856939848750638e-09,
+    3.083413762151801e-07,
+    3.083626181200532e-07,
+    3.0866672434788866e-07,
+    4.456124036852524e-07,
+    9.884759817371927e-05,
+    48.45004878111053,
+    244.07012644880194
+  ],
+  "Euclidean_flat_Hessian_times_J_norm": 2.1450537832216032e-05,
+  "Euclidean_flat_internal_vertex_Jacobian_rank": 8,
+  "Lorentzian_action_physically_verified": false,
+  "Lorentzian_principal_branch_max_flat_vertex_motion_action_residual": 0.04242242788402001,
+  "Lorentzian_principal_branch_relative_flat_action_gradient_norm": 26.955658230690418,
+  "boundary_hinges": 10,
+  "four_simplices": 9,
+  "interior_hinges": 20,
+  "interior_squared_edge_variables": 10,
+  "interior_vertices": 2,
+  "known_prior_art": "Regge action variation/Schlafli, flat vertex gauge/null modes and curved pseudo-constraints (Bahr Dittrich 2009); numerical 9-simplex nested control builds on 2026-11-04 one-vertex Euclidean repo action.",
+  "off_flat_normal_curvature_and_Hessian": [
+    {
+      "Hessian_eigenvalues": [
+        6.8421836289610226e-09,
+        6.854946649070979e-09,
+        6.856939848750638e-09,
+        3.083413762151801e-07,
+        3.083626181200532e-07,
+        3.0866672434788866e-07,
+        4.456124036852524e-07,
+        9.884759817371927e-05,
+        48.45004878111053,
+        244.07012644880194
+      ],
+      "Schlafli_FD_gradient_residual": 6.2172320671082415e-09,
+      "action_change": 0.0,
+      "amp": 0,
+      "gradient_norm": 4.7993363325319036e-14,
+      "maximum_hinge_deficit": 1.7763568394002505e-14
+    },
+    {
+      "Hessian_eigenvalues": [
+        -23.745651841935445,
+        -0.2415058251937813,
+        -0.2415058251399791,
+        -0.24150582510512605,
+        0.006991601998269398,
+        0.006991602026160934,
+        0.006991602033063841,
+        0.03575571215418147,
+        47.17331185093195,
+        192.24412900468818
+      ],
+      "Schlafli_FD_gradient_residual": 4.359447081103696e-09,
+      "action_change": 0.00011009350424906472,
+      "amp": 0.001,
+      "gradient_norm": 0.21272772781746122,
+      "maximum_hinge_deficit": 0.08708751918098567
+    },
+    {
+      "Hessian_eigenvalues": [
+        -52.0881021775708,
+        -0.752167512948194,
+        -0.7521675128680547,
+        -0.752167512826003,
+        0.0418543436151077,
+        0.04185434366105258,
+        0.04185434368522442,
+        0.21414004531091413,
+        45.900599789412986,
+        131.36609160728938
+      ],
+      "Schlafli_FD_gradient_residual": 2.13684825736693e-09,
+      "action_change": 0.0014760444816221963,
+      "amp": 0.004,
+      "gradient_norm": 0.6738299106008544,
+      "maximum_hinge_deficit": 0.27913014763304744
+    }
+  ],
+  "status": "PASS_NINE_SIMPLEX_EUCLIDEAN_REGGE_ACTION_8_FLAT_GAUGE_HESSIAN_ZERO_MODES_AND_LORENTZ_DIAGNOSTIC",
+  "warning": "Euclidean action is genuine Regge+GHY, not Lorentzian causal gravity. Lorentzian complex principal angle branch calibrated by subtracting flat value is only a diagnostic; a correct Lorentzian boundary term, causal boosts and first-class Dirac algebra are NOT established by its residuals."
+}

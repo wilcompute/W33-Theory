@@ -1,0 +1,77 @@
+{
+  "decoder_models": {
+    "Witting_40": {
+      "exact_union_bound_sufficient_detected_photons_for_max_5pct_ML_error": 11238,
+      "exact_union_bound_sufficient_incident_photons_eta085": 13222,
+      "independent_85percent_heralded_no_click_BC": 0.9993134740906983,
+      "observed_seeded_100trials_ML_success_rate_12000_shots": 1.0,
+      "observed_seeded_100trials_ML_success_rate_700_shots": 0.4,
+      "single_copy_worst_pair_Bhattacharyya_coefficient": 0.9991923224596451,
+      "sufficient_detected_photons_with_background": 11353,
+      "uniform_background_contaminated_worst_pair_BC": 0.9992004563266941,
+      "uniform_background_fraction": 0.005,
+      "worst_pair_Bhattacharyya_exponent_per_detected_photon": 0.0008080038875935867,
+      "worst_pair_exponent_with_background": 0.0007998634788257026
+    },
+    "optimized_4outcome_basis": {
+      "exact_union_bound_sufficient_detected_photons_for_max_5pct_ML_error": 4093456,
+      "exact_union_bound_sufficient_incident_photons_eta085": 4815831,
+      "independent_85percent_heralded_no_click_BC": 0.9999981145051654,
+      "observed_seeded_100trials_ML_success_rate_12000_shots": 0.51,
+      "observed_seeded_100trials_ML_success_rate_700_shots": 0.12,
+      "single_copy_worst_pair_Bhattacharyya_coefficient": 0.9999977817707828,
+      "sufficient_detected_photons_with_background": 4133460,
+      "uniform_background_contaminated_worst_pair_BC": 0.999997803239408,
+      "uniform_background_fraction": 0.005,
+      "worst_pair_Bhattacharyya_exponent_per_detected_photon": 2.2182316774731207e-06,
+      "worst_pair_exponent_with_background": 2.196763004870228e-06
+    }
+  },
+  "exact_prior_Fano_necessary_detected_photon_lower_bound_at_epsilon_point_one": 694,
+  "ideal_full_Witting_min_pair_TV": 0.030607120814395684,
+  "interpretation": "Fano 694 is necessary, union-Bhattacharyya N upper budget is a SUFFICIENT worst-label maximum-likelihood error guarantee assuming all 440 exact IID likelihoods, trusted calibrated known POVM and state preparation. Numerical 100-trial MLE success is synthetic and not a confidence bound.",
+  "labels": 440,
+  "prior_art": "Classical Bhattacharyya Markov and union likelihood ratios; no new quantum discrimination theorem. Specific finite 440-root Witting and optimized basis information geometry is calculated here.",
+  "root_prior": "uniform",
+  "six_2mode_gate_preparation_static_error_bound": "TV(P\u03c1ideal,P\u03c1actual)<=||U-V||op<=6*(2sin(delta/2)+2sin(delta/4)) for all six gates with both errors bounded by delta, fixed source mixture weights, fixed ideal POVM.",
+  "static_calibration_bound_scan": [
+    {
+      "conservative_preparation_TV_deviation_upper_bound": 0.0,
+      "max_abs_gate_mixing_angle_and_differential_phase_error_rad": 0,
+      "worst_pair_codeword_separation_certified_by_this_bound": true
+    },
+    {
+      "conservative_preparation_TV_deviation_upper_bound": 0.0008999999997187501,
+      "max_abs_gate_mixing_angle_and_differential_phase_error_rad": 0.0001,
+      "worst_pair_codeword_separation_certified_by_this_bound": true
+    },
+    {
+      "conservative_preparation_TV_deviation_upper_bound": 0.004499999964843749,
+      "max_abs_gate_mixing_angle_and_differential_phase_error_rad": 0.0005,
+      "worst_pair_codeword_separation_certified_by_this_bound": true
+    },
+    {
+      "conservative_preparation_TV_deviation_upper_bound": 0.008999999718750002,
+      "max_abs_gate_mixing_angle_and_differential_phase_error_rad": 0.001,
+      "worst_pair_codeword_separation_certified_by_this_bound": true
+    },
+    {
+      "conservative_preparation_TV_deviation_upper_bound": 0.017999997750000104,
+      "max_abs_gate_mixing_angle_and_differential_phase_error_rad": 0.002,
+      "worst_pair_codeword_separation_certified_by_this_bound": false
+    },
+    {
+      "conservative_preparation_TV_deviation_upper_bound": 0.044999964843760065,
+      "max_abs_gate_mixing_angle_and_differential_phase_error_rad": 0.005,
+      "worst_pair_codeword_separation_certified_by_this_bound": false
+    },
+    {
+      "conservative_preparation_TV_deviation_upper_bound": 0.08999971875032226,
+      "max_abs_gate_mixing_angle_and_differential_phase_error_rad": 0.01,
+      "worst_pair_codeword_separation_certified_by_this_bound": false
+    }
+  ],
+  "status": "PASS_440ROOT_WITTING_ML_SUFFICIENT_BHATTACHARYYA_AND_CALIBRATION_GUARDS",
+  "sufficient_max_per_gate_absolute_phase_and_mixing_error_radians_for_nonoverlap": 0.0017003957544391875,
+  "target_max_ML_classification_error_probability": 0.05
+}

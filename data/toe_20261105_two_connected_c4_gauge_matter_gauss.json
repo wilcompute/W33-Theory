@@ -1,0 +1,178 @@
+{
+  "Gauss_orbit_size": 128,
+  "all_dressed_hopping_and_flux_and_electric_terms_preserve_physical_sector": true,
+  "bare_hopping_across_link_breaks_local_Gauss_law": true,
+  "connected_120_loop_scaffold_cycle_rank": 120,
+  "connected_120_loop_scaffold_edges": 599,
+  "connected_120_loop_scaffold_sites": 480,
+  "edge_count": 9,
+  "full_E8_root_graph_and_interlayer_links_not_implemented": true,
+  "independent_cycles": 2,
+  "one_charge_physical_hilbert_dimension_for_120_loops_decimal": "638029437976759618993827388934565396480",
+  "one_particle_background_neutral_gauss_subspace_dimension": 32,
+  "priority": "Ordinary Z2 lattice gauge matter and AB flux energetics are prior art; exact 32D two-ring control is a validated adjacent-loop extension of the earlier 8D single-ring E8 local toy.",
+  "raw_hilbert_dimension": 4096,
+  "scan": [
+    {
+      "K_per_loop": -0.4,
+      "W0": -1.0000000000000007,
+      "W1": -1.0000000000000007,
+      "energy": -2.8000000000000003,
+      "g_electric": 0,
+      "gap": 0.5639320225002096
+    },
+    {
+      "K_per_loop": -0.4,
+      "W0": -0.9806422769979287,
+      "W1": -0.9480482523032275,
+      "energy": -2.8241539278669063,
+      "g_electric": 0.03,
+      "gap": 0.5184977444217762
+    },
+    {
+      "K_per_loop": -0.4,
+      "W0": -0.6150909663236438,
+      "W1": -0.5386310609758513,
+      "energy": -3.2769195146022083,
+      "g_electric": 0.15,
+      "gap": 0.4221682893160854
+    },
+    {
+      "K_per_loop": -0.4,
+      "W0": -0.19052176460470177,
+      "W1": -0.24214321312491777,
+      "energy": -4.977028258190742,
+      "g_electric": 0.4,
+      "gap": 0.7684633025717309
+    },
+    {
+      "K_per_loop": 0,
+      "W0": 1.0,
+      "W1": 1.0,
+      "energy": -2.3429230827771708,
+      "g_electric": 0,
+      "gap": 0.1068551052773814
+    },
+    {
+      "K_per_loop": 0,
+      "W0": 0.8311629122979147,
+      "W1": 0.42065483539461107,
+      "energy": -2.4335879862119483,
+      "g_electric": 0.03,
+      "gap": 0.18639693318303774
+    },
+    {
+      "K_per_loop": 0,
+      "W0": 0.47261387260337473,
+      "W1": 0.04199472577198253,
+      "energy": -3.1327613507598575,
+      "g_electric": 0.15,
+      "gap": 0.5571440244706336
+    },
+    {
+      "K_per_loop": 0,
+      "W0": 0.19422860057932195,
+      "W1": 0.0018415309047777693,
+      "energy": -4.928812672917814,
+      "g_electric": 0.4,
+      "gap": 1.0264245724178673
+    },
+    {
+      "K_per_loop": 0.2,
+      "W0": 0.9999999999999993,
+      "W1": 0.9999999999999993,
+      "energy": -2.74292308277717,
+      "g_electric": 0,
+      "gap": 0.5068551052773809
+    },
+    {
+      "K_per_loop": 0.2,
+      "W0": 0.9779751007381805,
+      "W1": 0.916843400440166,
+      "energy": -2.7734038391291223,
+      "g_electric": 0.03,
+      "gap": 0.49058083314867806
+    },
+    {
+      "K_per_loop": 0.2,
+      "W0": 0.7522628805600485,
+      "W1": 0.3571893966656975,
+      "energy": -3.3003249355073865,
+      "g_electric": 0.15,
+      "gap": 0.702871826984758
+    },
+    {
+      "K_per_loop": 0.2,
+      "W0": 0.3686741449129508,
+      "W1": 0.12649230669716807,
+      "energy": -4.998427753947297,
+      "g_electric": 0.4,
+      "gap": 1.1492798803736264
+    }
+  ],
+  "scope": "No derived full 480-mode E8 many-body action or spontaneous flux selection in a vacuum. Connected scaffold requires gauging every bridge; naked E8 adjacency cannot be appended without Gauss dressing.",
+  "status": "PASS_TWO_COUPLED_C4_FULL_GAUSS_INVARIANT_32D_MATTER_AND_GAUGE",
+  "two_flux_sector_hopping_spectra": {
+    "-1,-1": {
+      "W0": -1,
+      "W1": -1,
+      "ground_kinetic_energy": -1.9999999999999993,
+      "kinetic_eigenvalues_J1": [
+        -1.9999999999999993,
+        -1.4142135623730947,
+        -1.4142135623730943,
+        -0.9999999999999999,
+        0.9999999999999994,
+        1.414213562373095,
+        1.4142135623730951,
+        1.9999999999999991
+      ]
+    },
+    "-1,1": {
+      "W0": -1,
+      "W1": 1,
+      "ground_kinetic_energy": -2.236067977499789,
+      "kinetic_eigenvalues_J1": [
+        -2.236067977499789,
+        -1.414213562373095,
+        -1.4142135623730943,
+        -3.1018474968367957e-16,
+        -1.190545636993402e-16,
+        1.4142135623730947,
+        1.414213562373095,
+        2.236067977499788
+      ]
+    },
+    "1,-1": {
+      "W0": 1,
+      "W1": -1,
+      "ground_kinetic_energy": -2.2360679774997894,
+      "kinetic_eigenvalues_J1": [
+        -2.2360679774997894,
+        -1.4142135623730947,
+        -1.4142135623730945,
+        -6.925863648568004e-16,
+        -1.3542535359098e-16,
+        1.414213562373095,
+        1.414213562373096,
+        2.2360679774997894
+      ]
+    },
+    "1,1": {
+      "W0": 1,
+      "W1": 1,
+      "ground_kinetic_energy": -2.34292308277717,
+      "kinetic_eigenvalues_J1": [
+        -2.34292308277717,
+        -1.8136065026483301,
+        -0.47068341987116136,
+        0.0,
+        1.110223023218506e-15,
+        0.4706834198711612,
+        1.8136065026483297,
+        2.3429230827771685
+      ]
+    }
+  },
+  "vertex_count": 8
+}

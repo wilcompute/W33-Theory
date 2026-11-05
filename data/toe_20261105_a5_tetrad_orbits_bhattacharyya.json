@@ -1,0 +1,538 @@
+{
+  "A5_tetrad_orbit_details": [
+    {
+      "distinct_440root_probability_counts": {
+        "440": 30
+      },
+      "orbit_size": 30,
+      "tetrad_indices": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        7,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        19,
+        20,
+        21,
+        23,
+        25,
+        26,
+        27,
+        28,
+        29,
+        31,
+        32,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "uniform_root_codebook_440_identifiability": true
+    },
+    {
+      "distinct_440root_probability_counts": {
+        "109": 10
+      },
+      "orbit_size": 10,
+      "tetrad_indices": [
+        1,
+        6,
+        8,
+        10,
+        17,
+        18,
+        22,
+        24,
+        30,
+        33
+      ],
+      "uniform_root_codebook_440_identifiability": false
+    }
+  ],
+  "A5_tetrad_orbit_sizes": [
+    10,
+    30
+  ],
+  "bad_basis_indices": [
+    1,
+    6,
+    8,
+    10,
+    17,
+    18,
+    22,
+    24,
+    30,
+    33
+  ],
+  "full_Witting40_POVM_closest_pair_Bhattacharyya": {
+    "minimum_squared_Hellinger_separation": 0.0016153550807098513,
+    "nearest_pair_Bhattacharyya_coefficient": 0.9991923224596451,
+    "worst_pair_Bhattacharyya_error_exponent": 0.0008080038875935867
+  },
+  "good_basis_indices": [
+    0,
+    2,
+    3,
+    4,
+    5,
+    7,
+    9,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    19,
+    20,
+    21,
+    23,
+    25,
+    26,
+    27,
+    28,
+    29,
+    31,
+    32,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+  ],
+  "native_10_collision_tetrads_all_exponent_zero": true,
+  "native_30_injective_tetrad_min_pair_exponent_range": [
+    1.2372142054114025e-08,
+    1.2372142054114025e-08
+  ],
+  "native_40ray_tetrad_count": 40,
+  "native_A5_order": 60,
+  "note": "Bhattacharyya exponent -ln(maxpair sum_o sqrt(p_o q_o)) gives a worst-pair discrimination BOUND, not optimal many-hypothesis Bayes error exponent. Classification on finite 440 roots only.",
+  "optimized_single_4outcome_basis_closest_pair_Bhattacharyya": {
+    "minimum_squared_Hellinger_separation": 4.436458434470802e-06,
+    "nearest_pair_Bhattacharyya_coefficient": 0.9999977817707828,
+    "worst_pair_Bhattacharyya_error_exponent": 2.2182316774731207e-06
+  },
+  "prior_art": "A5 subgroup already identified in repo; present calculation classifies the specific 30/10 Witting measurement codebook split and setting-dependent capacity.",
+  "status": "PASS_NATIVE_A5_WITTING_TETRAD_ORBITS_AND_PAIR_DISCRIMINATION",
+  "two_bad_tetrad_pair_classification": [
+    {
+      "distinct_440root_probability_classes": 440,
+      "largest_collision_class": 1,
+      "min_probability_pair_Bhattacharyya_exponent": 2.7016538748246678e-05,
+      "tetrads": [
+        1,
+        6
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        1,
+        8
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        1,
+        10
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        1,
+        17
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 440,
+      "largest_collision_class": 1,
+      "min_probability_pair_Bhattacharyya_exponent": 2.7016538748246678e-05,
+      "tetrads": [
+        1,
+        18
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        1,
+        22
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        1,
+        24
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 440,
+      "largest_collision_class": 1,
+      "min_probability_pair_Bhattacharyya_exponent": 2.7016538748246678e-05,
+      "tetrads": [
+        1,
+        30
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        1,
+        33
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        6,
+        8
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        6,
+        10
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 440,
+      "largest_collision_class": 1,
+      "min_probability_pair_Bhattacharyya_exponent": 2.7016538748246678e-05,
+      "tetrads": [
+        6,
+        17
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        6,
+        18
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        6,
+        22
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        6,
+        24
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        6,
+        30
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 440,
+      "largest_collision_class": 1,
+      "min_probability_pair_Bhattacharyya_exponent": 2.7016538748246678e-05,
+      "tetrads": [
+        6,
+        33
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 440,
+      "largest_collision_class": 1,
+      "min_probability_pair_Bhattacharyya_exponent": 2.7016538748246678e-05,
+      "tetrads": [
+        8,
+        10
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        8,
+        17
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 440,
+      "largest_collision_class": 1,
+      "min_probability_pair_Bhattacharyya_exponent": 2.7016538748246678e-05,
+      "tetrads": [
+        8,
+        18
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        8,
+        22
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        8,
+        24
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        8,
+        30
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 440,
+      "largest_collision_class": 1,
+      "min_probability_pair_Bhattacharyya_exponent": 2.7016538748246678e-05,
+      "tetrads": [
+        8,
+        33
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 440,
+      "largest_collision_class": 1,
+      "min_probability_pair_Bhattacharyya_exponent": 2.7016538748246678e-05,
+      "tetrads": [
+        10,
+        17
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        10,
+        18
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        10,
+        22
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        10,
+        24
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 440,
+      "largest_collision_class": 1,
+      "min_probability_pair_Bhattacharyya_exponent": 2.7016538748246678e-05,
+      "tetrads": [
+        10,
+        30
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        10,
+        33
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        17,
+        18
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        17,
+        22
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 440,
+      "largest_collision_class": 1,
+      "min_probability_pair_Bhattacharyya_exponent": 2.7016538748246678e-05,
+      "tetrads": [
+        17,
+        24
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        17,
+        30
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        17,
+        33
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        18,
+        22
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 440,
+      "largest_collision_class": 1,
+      "min_probability_pair_Bhattacharyya_exponent": 2.7016538748246678e-05,
+      "tetrads": [
+        18,
+        24
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        18,
+        30
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        18,
+        33
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 440,
+      "largest_collision_class": 1,
+      "min_probability_pair_Bhattacharyya_exponent": 2.7016538748246678e-05,
+      "tetrads": [
+        22,
+        24
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 440,
+      "largest_collision_class": 1,
+      "min_probability_pair_Bhattacharyya_exponent": 2.7016538748246678e-05,
+      "tetrads": [
+        22,
+        30
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 440,
+      "largest_collision_class": 1,
+      "min_probability_pair_Bhattacharyya_exponent": 2.7016538748246678e-05,
+      "tetrads": [
+        22,
+        33
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        24,
+        30
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        24,
+        33
+      ]
+    },
+    {
+      "distinct_440root_probability_classes": 249,
+      "largest_collision_class": 4,
+      "min_probability_pair_Bhattacharyya_exponent": 0.0,
+      "tetrads": [
+        30,
+        33
+      ]
+    }
+  ],
+  "two_distinct_bad_tetrad_pairs_checked": 45
+}

@@ -1,0 +1,82 @@
+{
+  "S_R_E_total_dimension": 27,
+  "Schmidt_number_m_singlet_fraction_upper_bounds": [
+    {
+      "Schmidt_rank_m": 1,
+      "max_singlet_fidelity_m_over_three": 0.3333333333333334
+    },
+    {
+      "Schmidt_rank_m": 2,
+      "max_singlet_fidelity_m_over_three": 0.6666666666666667
+    },
+    {
+      "Schmidt_rank_m": 3,
+      "max_singlet_fidelity_m_over_three": 1.0000000000000007
+    }
+  ],
+  "arbitrary_classical_memory_dephasing_Haar_bases": 32,
+  "caveat": "A general multitime process with correlated initial reference-environment state, adaptive classical apparatus, or an untrusted extra quantum path is not excluded. No laboratory implementation.",
+  "middle_instruments": [
+    {
+      "dephased_classical_memory_singlet_fraction": 0.33333333333333354,
+      "intervention": "identity",
+      "no_accessible_intervention_can_affect_coherently_stored_E_in_ideal_SWAPS": true,
+      "quantum_memory_recovered_singlet_fraction": 1.0000000000000007,
+      "recovered_entanglement_negativity": 1.0000000000000002
+    },
+    {
+      "dephased_classical_memory_singlet_fraction": 0.33333333333333354,
+      "intervention": "X",
+      "no_accessible_intervention_can_affect_coherently_stored_E_in_ideal_SWAPS": true,
+      "quantum_memory_recovered_singlet_fraction": 1.0000000000000007,
+      "recovered_entanglement_negativity": 1.0000000000000002
+    },
+    {
+      "dephased_classical_memory_singlet_fraction": 0.33333333333333354,
+      "intervention": "Z",
+      "no_accessible_intervention_can_affect_coherently_stored_E_in_ideal_SWAPS": true,
+      "quantum_memory_recovered_singlet_fraction": 1.0000000000000007,
+      "recovered_entanglement_negativity": 1.0000000000000002
+    },
+    {
+      "dephased_classical_memory_singlet_fraction": 0.33333333333333365,
+      "intervention": "Fourier",
+      "no_accessible_intervention_can_affect_coherently_stored_E_in_ideal_SWAPS": true,
+      "quantum_memory_recovered_singlet_fraction": 1.0000000000000009,
+      "recovered_entanglement_negativity": 1.0000000000000007
+    },
+    {
+      "dephased_classical_memory_singlet_fraction": 0.33333333333333354,
+      "intervention": "dephase",
+      "no_accessible_intervention_can_affect_coherently_stored_E_in_ideal_SWAPS": true,
+      "quantum_memory_recovered_singlet_fraction": 1.0000000000000007,
+      "recovered_entanglement_negativity": 1.0000000000000002
+    },
+    {
+      "dephased_classical_memory_singlet_fraction": 0.33333333333333354,
+      "intervention": "reset0",
+      "no_accessible_intervention_can_affect_coherently_stored_E_in_ideal_SWAPS": true,
+      "quantum_memory_recovered_singlet_fraction": 1.0000000000000007,
+      "recovered_entanglement_negativity": 1.0000000000000002
+    },
+    {
+      "dephased_classical_memory_singlet_fraction": 0.33333333333333354,
+      "intervention": "reset1",
+      "no_accessible_intervention_can_affect_coherently_stored_E_in_ideal_SWAPS": true,
+      "quantum_memory_recovered_singlet_fraction": 1.0000000000000007,
+      "recovered_entanglement_negativity": 1.0000000000000002
+    }
+  ],
+  "no_click_assumption": "Independent, state-independent \u03b7, no unobserved coherent quantum bypass; no-click qutrit assigned maximally mixed. The exact binomial bounds apply ONLY to this declared statistical model.",
+  "noisy_memory_p_greater_than_5_over8_recovery_singlet_exceeds_rank2_upper_bound": true,
+  "p_equal_point6_eta085_Binomial_exact_rule": {
+    "false_negative": 2.2272052695320773e-07,
+    "false_positive": 2.5566400542070334e-07,
+    "n": 342,
+    "threshold": 147
+  },
+  "recovered_fidelity_classical_E_any_test_basis_max": 0.33333333333333387,
+  "scientific_priority": "Schmidt-number witnesses, quantum-memory SWAP examples and EB channel caveats all known. These 7+32 intervention controls apply the old W33 temporal proposal to a quantifiable memory-dimension falsifier, not independent proof of photon self-entanglement.",
+  "status": "PASS_THREE_TIME_QUTRIT_7_INTERVENTIONS_32_CLASSICAL_ADVERSARIES_AND_MEMORY_BOTTLENECK",
+  "trusted_perfect_identity_recovery_requires_quantum_bottleneck_dimension_at_least3": true
+}
