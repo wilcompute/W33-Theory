@@ -1,0 +1,98 @@
+{
+  "27_exchange_obstruction": {
+    "burnside_trace_census": [
+      -3,
+      -3,
+      12,
+      12,
+      12,
+      12
+    ],
+    "claim_boundary": "For this exchange-symmetric E/M/C generating set, a non-scalar commuting operator prevents its generated associative algebra from being full Mat_27(C). No claim that a distinct H27 address action or an abstract 27D Hilbert isomorphism is impossible.",
+    "exchange_even": 17,
+    "exchange_is_nontrivial_commutant_of_E_M_C": true,
+    "exchange_odd": 10,
+    "exchange_trace_physical": 7,
+    "gauge_invariant_loop_imbalance_breaks_exchange": true,
+    "interparity_mixing_frobenius": 3.1622776601683786,
+    "rank_physical": 27,
+    "sample_H_ground_energy": -1.9074979442695421,
+    "sample_H_parity_blocks": [
+      {
+        "dimension": 17,
+        "exchange_eigenvalue": 1,
+        "lowest_four_energies": [
+          -1.9074979442695397,
+          -1.3775582554644124,
+          -1.1686370757180384,
+          -1.027630516643971
+        ]
+      },
+      {
+        "dimension": 10,
+        "exchange_eigenvalue": -1,
+        "lowest_four_energies": [
+          -1.5177815113175213,
+          -1.0767461251465613,
+          -1.027630516643971,
+          -0.7270864979488606
+        ]
+      }
+    ]
+  },
+  "known_prior_art": "Burnside's lemma, finite-group Gauss projection, and gauge-fixed link transport; novel here is a direct model-to-model obstruction/falsifier calculation.",
+  "mobile_two_vertex": {
+    "Burnside_traces_sorted": [
+      -18,
+      -18,
+      0,
+      0,
+      0,
+      144
+    ],
+    "boundary": "A minimal two-vertex graph with mobile matter, not a continuum propagating field. Replacing a tensor-product two-species Hilbert space by one mobile excitation changes the physical rank from 27 to 18.",
+    "full_unfixed_2vertex_projected_dimension_from_character": 18,
+    "full_unfixed_raw_dimension": 864,
+    "gauge_fixed_graph": "two vertices joined by three parallel directed links, one spanning tree edge fixed",
+    "independent_loops": 2,
+    "matter_model": "one mobile color-doublet excitation at either of two sites (2+2 direct sum)",
+    "projected_dimension": 18,
+    "raw_reduced_dimension": 144,
+    "scans": [
+      {
+        "J": 1.0,
+        "K": 0,
+        "gauss_max_residual": 7.581054416782226e-16,
+        "ground_energy": -1.0000000000000007,
+        "matter_transport": 0,
+        "spectral_gap": 6.661338147750939e-16
+      },
+      {
+        "J": 0.5,
+        "K": 1,
+        "gauss_max_residual": 7.620707077329554e-16,
+        "ground_energy": -1.5761778226746035,
+        "matter_transport": 0.3,
+        "spectral_gap": 0.2226044931834239
+      },
+      {
+        "J": 1.0,
+        "K": 0.5,
+        "gauss_max_residual": 8.068654662302692e-16,
+        "ground_energy": -1.875016531032048,
+        "matter_transport": 0.7,
+        "spectral_gap": 0.30271846892586907
+      },
+      {
+        "J": 0.1,
+        "K": 1,
+        "gauss_max_residual": 7.960506899907026e-16,
+        "ground_energy": -2.048491424027168,
+        "matter_transport": 1.0,
+        "spectral_gap": 0.04667168284735945
+      }
+    ],
+    "transport_covariant_and_noncommuting_with_electric": true
+  },
+  "status": "PASS_S3_PARITY_17_10_OBSTRUCTION_AND_MOBILE_18_SECTOR"
+}

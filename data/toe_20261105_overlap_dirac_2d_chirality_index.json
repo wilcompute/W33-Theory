@@ -1,0 +1,264 @@
+{
+  "Ginsparg_Wilson_relation": "gamma5 D + D gamma5 = D gamma5 D for D=1+gamma5 signH, lattice units",
+  "chirality_index_sign_convention": "Index = -flux Q for Wilson mass 1; regulator branch mass 2.5 flips the sign",
+  "fermi_index_relation": "index D_ov = -1/2 Tr(sign[gamma5 D_W(-m)])",
+  "limitation": "This is a standard 2D overlap index in externally imposed flux; neither sign of Q nor Wilson mass branch is selected by W33 geometry. No 3+1D single chiral SM family, anomaly cancellation or flavour dynamics derived.",
+  "prior_art": "Neuberger overlap fermions, Kurokawa-Fujiwara uniform-field Wilson-Dirac, and lattice index theorem are established.",
+  "records": [
+    {
+      "L": 4,
+      "Wilson_regulator_mass": 1.0,
+      "index_minus_half_eta": 2,
+      "maximum_plaquette_phase": 0.7853981633974487,
+      "minimum_abs_Wilson_eigenvalue": 0.5926375438430268,
+      "topological_flux_Q": -2
+    },
+    {
+      "L": 4,
+      "Wilson_regulator_mass": 2.5,
+      "index_minus_half_eta": -2,
+      "maximum_plaquette_phase": 0.7853981633974487,
+      "minimum_abs_Wilson_eigenvalue": 0.3617849066677099,
+      "topological_flux_Q": -2
+    },
+    {
+      "L": 4,
+      "Wilson_regulator_mass": 1.0,
+      "index_minus_half_eta": 1,
+      "maximum_plaquette_phase": 0.3926990816987244,
+      "minimum_abs_Wilson_eigenvalue": 0.7986929152911126,
+      "topological_flux_Q": -1
+    },
+    {
+      "L": 4,
+      "Wilson_regulator_mass": 2.5,
+      "index_minus_half_eta": -1,
+      "maximum_plaquette_phase": 0.3926990816987244,
+      "minimum_abs_Wilson_eigenvalue": 0.44419518170366357,
+      "topological_flux_Q": -1
+    },
+    {
+      "L": 4,
+      "Wilson_regulator_mass": 1.0,
+      "index_minus_half_eta": 0,
+      "maximum_plaquette_phase": 0.0,
+      "minimum_abs_Wilson_eigenvalue": 0.999999999999999,
+      "topological_flux_Q": 0
+    },
+    {
+      "L": 4,
+      "Wilson_regulator_mass": 2.5,
+      "index_minus_half_eta": 0,
+      "maximum_plaquette_phase": 0.0,
+      "minimum_abs_Wilson_eigenvalue": 0.4999999999999994,
+      "topological_flux_Q": 0
+    },
+    {
+      "L": 4,
+      "Wilson_regulator_mass": 1.0,
+      "index_minus_half_eta": -1,
+      "maximum_plaquette_phase": 0.3926990816987244,
+      "minimum_abs_Wilson_eigenvalue": 0.7986929152911126,
+      "topological_flux_Q": 1
+    },
+    {
+      "L": 4,
+      "Wilson_regulator_mass": 2.5,
+      "index_minus_half_eta": 1,
+      "maximum_plaquette_phase": 0.3926990816987244,
+      "minimum_abs_Wilson_eigenvalue": 0.44419518170366296,
+      "topological_flux_Q": 1
+    },
+    {
+      "L": 4,
+      "Wilson_regulator_mass": 1.0,
+      "index_minus_half_eta": -2,
+      "maximum_plaquette_phase": 0.7853981633974487,
+      "minimum_abs_Wilson_eigenvalue": 0.5926375438430258,
+      "topological_flux_Q": 2
+    },
+    {
+      "L": 4,
+      "Wilson_regulator_mass": 2.5,
+      "index_minus_half_eta": 2,
+      "maximum_plaquette_phase": 0.7853981633974487,
+      "minimum_abs_Wilson_eigenvalue": 0.3617849066677103,
+      "topological_flux_Q": 2
+    },
+    {
+      "L": 6,
+      "Wilson_regulator_mass": 1.0,
+      "index_minus_half_eta": 2,
+      "maximum_plaquette_phase": 0.349065850398867,
+      "minimum_abs_Wilson_eigenvalue": 0.8214229046304442,
+      "topological_flux_Q": -2
+    },
+    {
+      "L": 6,
+      "Wilson_regulator_mass": 2.5,
+      "index_minus_half_eta": -2,
+      "maximum_plaquette_phase": 0.349065850398867,
+      "minimum_abs_Wilson_eigenvalue": 0.450893166544134,
+      "topological_flux_Q": -2
+    },
+    {
+      "Ginsparg_Wilson_error": 3.996808153609134e-15,
+      "L": 6,
+      "Wilson_regulator_mass": 1.0,
+      "index_minus_half_eta": 1,
+      "maximum_plaquette_phase": 0.17453292519943353,
+      "minimum_abs_Wilson_eigenvalue": 0.9115743795172987,
+      "overlap_zero_mode_count": 1,
+      "topological_flux_Q": -1
+    },
+    {
+      "Ginsparg_Wilson_error": 2.6650425059207012e-15,
+      "L": 6,
+      "Wilson_regulator_mass": 2.5,
+      "index_minus_half_eta": -1,
+      "maximum_plaquette_phase": 0.17453292519943353,
+      "minimum_abs_Wilson_eigenvalue": 0.47605257110719507,
+      "overlap_zero_mode_count": 3,
+      "topological_flux_Q": -1
+    },
+    {
+      "Ginsparg_Wilson_error": 4.441026328041884e-15,
+      "L": 6,
+      "Wilson_regulator_mass": 1.0,
+      "index_minus_half_eta": 0,
+      "maximum_plaquette_phase": 0.0,
+      "minimum_abs_Wilson_eigenvalue": 0.9999999999999979,
+      "overlap_zero_mode_count": 2,
+      "topological_flux_Q": 0
+    },
+    {
+      "Ginsparg_Wilson_error": 1.998406745492264e-15,
+      "L": 6,
+      "Wilson_regulator_mass": 2.5,
+      "index_minus_half_eta": 0,
+      "maximum_plaquette_phase": 0.0,
+      "minimum_abs_Wilson_eigenvalue": 0.4999999999999998,
+      "overlap_zero_mode_count": 6,
+      "topological_flux_Q": 0
+    },
+    {
+      "Ginsparg_Wilson_error": 3.5527142162756616e-15,
+      "L": 6,
+      "Wilson_regulator_mass": 1.0,
+      "index_minus_half_eta": -1,
+      "maximum_plaquette_phase": 0.17453292519943353,
+      "minimum_abs_Wilson_eigenvalue": 0.9115743795172982,
+      "overlap_zero_mode_count": 1,
+      "topological_flux_Q": 1
+    },
+    {
+      "Ginsparg_Wilson_error": 1.9984240931485205e-15,
+      "L": 6,
+      "Wilson_regulator_mass": 2.5,
+      "index_minus_half_eta": 1,
+      "maximum_plaquette_phase": 0.17453292519943353,
+      "minimum_abs_Wilson_eigenvalue": 0.47605257110719446,
+      "overlap_zero_mode_count": 3,
+      "topological_flux_Q": 1
+    },
+    {
+      "L": 6,
+      "Wilson_regulator_mass": 1.0,
+      "index_minus_half_eta": -2,
+      "maximum_plaquette_phase": 0.349065850398867,
+      "minimum_abs_Wilson_eigenvalue": 0.8214229046304438,
+      "topological_flux_Q": 2
+    },
+    {
+      "L": 6,
+      "Wilson_regulator_mass": 2.5,
+      "index_minus_half_eta": 2,
+      "maximum_plaquette_phase": 0.349065850398867,
+      "minimum_abs_Wilson_eigenvalue": 0.4508931665441349,
+      "topological_flux_Q": 2
+    },
+    {
+      "L": 8,
+      "Wilson_regulator_mass": 1.0,
+      "index_minus_half_eta": 2,
+      "maximum_plaquette_phase": 0.19634954084936257,
+      "minimum_abs_Wilson_eigenvalue": 0.9003853440184939,
+      "topological_flux_Q": -2
+    },
+    {
+      "L": 8,
+      "Wilson_regulator_mass": 2.5,
+      "index_minus_half_eta": -2,
+      "maximum_plaquette_phase": 0.19634954084936257,
+      "minimum_abs_Wilson_eigenvalue": 0.4729767072055505,
+      "topological_flux_Q": -2
+    },
+    {
+      "L": 8,
+      "Wilson_regulator_mass": 1.0,
+      "index_minus_half_eta": 1,
+      "maximum_plaquette_phase": 0.09817477042468131,
+      "minimum_abs_Wilson_eigenvalue": 0.9505173708871691,
+      "topological_flux_Q": -1
+    },
+    {
+      "L": 8,
+      "Wilson_regulator_mass": 2.5,
+      "index_minus_half_eta": -1,
+      "maximum_plaquette_phase": 0.09817477042468131,
+      "minimum_abs_Wilson_eigenvalue": 0.4866710223329244,
+      "topological_flux_Q": -1
+    },
+    {
+      "L": 8,
+      "Wilson_regulator_mass": 1.0,
+      "index_minus_half_eta": 0,
+      "maximum_plaquette_phase": 0.0,
+      "minimum_abs_Wilson_eigenvalue": 0.9999999999999983,
+      "topological_flux_Q": 0
+    },
+    {
+      "L": 8,
+      "Wilson_regulator_mass": 2.5,
+      "index_minus_half_eta": 0,
+      "maximum_plaquette_phase": 0.0,
+      "minimum_abs_Wilson_eigenvalue": 0.49999999999999994,
+      "topological_flux_Q": 0
+    },
+    {
+      "L": 8,
+      "Wilson_regulator_mass": 1.0,
+      "index_minus_half_eta": -1,
+      "maximum_plaquette_phase": 0.09817477042468131,
+      "minimum_abs_Wilson_eigenvalue": 0.9505173708871699,
+      "topological_flux_Q": 1
+    },
+    {
+      "L": 8,
+      "Wilson_regulator_mass": 2.5,
+      "index_minus_half_eta": 1,
+      "maximum_plaquette_phase": 0.09817477042468131,
+      "minimum_abs_Wilson_eigenvalue": 0.48667102233292536,
+      "topological_flux_Q": 1
+    },
+    {
+      "L": 8,
+      "Wilson_regulator_mass": 1.0,
+      "index_minus_half_eta": -2,
+      "maximum_plaquette_phase": 0.19634954084936257,
+      "minimum_abs_Wilson_eigenvalue": 0.9003853440184946,
+      "topological_flux_Q": 2
+    },
+    {
+      "L": 8,
+      "Wilson_regulator_mass": 2.5,
+      "index_minus_half_eta": 2,
+      "maximum_plaquette_phase": 0.19634954084936257,
+      "minimum_abs_Wilson_eigenvalue": 0.4729767072055504,
+      "topological_flux_Q": 2
+    }
+  ],
+  "spacetime_dimensions": 2,
+  "status": "PASS_OVERLAP_DIRAC_FLUX_INDEX_GINSparg_WILSON_REGULATOR_BRANCH",
+  "uniform_plaquette_flux_verified": true
+}

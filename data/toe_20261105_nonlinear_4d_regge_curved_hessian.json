@@ -1,0 +1,42 @@
+{
+  "S6_edge_rep_irrep_multiplicities": [
+    1,
+    5,
+    9
+  ],
+  "boundary": "No Lorentzian signature, continuum limit, discrete canonical constraint algebra, matter coupling, or derived Newton constant. The symmetry and Schlaefli identities are standard Regge-calculus mathematics.",
+  "edges": 15,
+  "four_simplices": 6,
+  "hessian_eigenvalues": [
+    -5.378218353631803,
+    5.106393500590287,
+    5.106393526045225,
+    5.106393546966789,
+    5.106393630831761,
+    5.106393659563144,
+    13.002220810938272,
+    13.002220836938431,
+    13.002220898044822,
+    13.002220901681648,
+    13.002220962259434,
+    13.002220970534554,
+    13.002220994205299,
+    13.00222104230377,
+    13.002221085647339
+  ],
+  "hessian_min_abs_eigenvalue": 5.106393500590287,
+  "interpretation": "The curved, finite Euclidean Regge+volume stationary point has no exact edge-Hessian zero modes and one negative scale mode. The continuum four linearized gauge zero directions from the previously supplied flat-symbol calculation do not automatically survive this nonlinear curved triangulation.",
+  "max_full_action_gradient_at_stationarity": 6.563296572892341e-10,
+  "max_schlaefli_gradient_mismatch": 6.198268565071885e-10,
+  "negative_uniform_scale_mode": -5.378218353631799,
+  "nonzero_linearized_gauge_modes": 0,
+  "regge_action_S": 20.16832083138985,
+  "regular_hinge_deficit": 2.328837092221132,
+  "regular_simplex_interior_dihedral": 1.318116071652818,
+  "status": "PASS_CURVED_4D_REGGE_S4_SCHLAEFLI_HESSIAN_1_5_9",
+  "symmetric_cosmological_lambda": 36.07818909681022,
+  "total_4_volume": 0.13975424859373686,
+  "triangle_hinges": 20,
+  "triangulation": "boundary of six-vertex 5-simplex, topological 4-sphere",
+  "unit_edge_triangle_area": 0.4330127018922193
+}

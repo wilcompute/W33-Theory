@@ -1,0 +1,73 @@
+{
+  "Hoeffding_bound_at_shots": 0.009999781520934316,
+  "Witting_outcomes_per_site": 40,
+  "all_models": [
+    {
+      "Bell_fidelity": 0.1111111111111111,
+      "Witting_pair_single_sample_variance": 1.7366255144032938,
+      "Witting_single_sample_standard_deviation": 1.3178108796042374,
+      "Witting_vs_global_variance_ratio": 17.58333333333335,
+      "dual_estimator_mean": 0.11111111111111122,
+      "ideal_Global_Bell_projection_variance": 0.09876543209876543,
+      "storage_survival_p": 0
+    },
+    {
+      "Bell_fidelity": 0.3333333333333333,
+      "Witting_pair_single_sample_variance": 1.8765432098765449,
+      "Witting_single_sample_standard_deviation": 1.3698697784375509,
+      "Witting_vs_global_variance_ratio": 8.444444444444452,
+      "dual_estimator_mean": 0.3333333333333336,
+      "ideal_Global_Bell_projection_variance": 0.22222222222222224,
+      "storage_survival_p": 0.25
+    },
+    {
+      "Bell_fidelity": 0.4222222222222222,
+      "Witting_pair_single_sample_variance": 1.904855967078191,
+      "Witting_single_sample_standard_deviation": 1.3801651955755843,
+      "Witting_vs_global_variance_ratio": 7.808367071524974,
+      "dual_estimator_mean": 0.4222222222222225,
+      "ideal_Global_Bell_projection_variance": 0.2439506172839506,
+      "storage_survival_p": 0.35
+    },
+    {
+      "Bell_fidelity": 0.6444444444444444,
+      "Witting_pair_single_sample_variance": 1.9065020576131706,
+      "Witting_single_sample_standard_deviation": 1.3807614050273749,
+      "Witting_vs_global_variance_ratio": 8.320402298850583,
+      "dual_estimator_mean": 0.6444444444444449,
+      "ideal_Global_Bell_projection_variance": 0.2291358024691358,
+      "storage_survival_p": 0.6
+    },
+    {
+      "Bell_fidelity": 1.0,
+      "Witting_pair_single_sample_variance": 1.703703703703705,
+      "Witting_single_sample_standard_deviation": 1.3052600138300816,
+      "Witting_vs_global_variance_ratio": null,
+      "dual_estimator_mean": 1.0000000000000009,
+      "ideal_Global_Bell_projection_variance": 0.0,
+      "storage_survival_p": 1.0
+    }
+  ],
+  "alternative_Bell_fidelity": 0.4222222222222222,
+  "alternative_storage_p": 0.35,
+  "conservative_distribution_free_Hoeffding_shots_1pct_fpr_95pct_power": 155076,
+  "dual_frame_identity": "rho = sum_i p_i (5 P_i - I4)",
+  "dual_weight_max": 6.0000000000000036,
+  "dual_weight_min": -2.333333333333334,
+  "ideal_global_entangling_Bell_measurement_binomial_benchmark": {
+    "false_positive": 0.009706248748646598,
+    "hit_threshold": 182,
+    "model_power": 0.951802494289297,
+    "shots": 472
+  },
+  "independent_analyzer_efficiency": 0.85,
+  "joint_coincidence_efficiency": 0.7224999999999999,
+  "joint_outcome_count": 1600,
+  "known_prior_art": "Witting complex projective 2-design, linear-inversion dual frame, entanglement witness F<=1/3 for separable states, and Hoeffding/Bernstein concentration are standard.",
+  "local_dual_weight_formula": "W_ij=25/3*|sum_a<3 r_i,a r_j,a|^2 - 5/3*(s_i+s_j)+1",
+  "scaled_unconditional_variance_alt": 2.704949948025691,
+  "scaled_unconditional_variance_null_isotropic": 2.6399675338545037,
+  "scope": "Local product Witting tomography yields an unbiased Bell witness but a larger finite-sample variance than a global Bell projector. Hoeffding is conservative, not a realistic hardware forecast. Fixed eta and no outcome-dependent loss are essential. Global Bell projector not assumed available with passive four-port optics.",
+  "separable_upper_bound_Bell_fidelity": 0.3333333333333333,
+  "status": "PASS_WITTING_LOCAL_PRODUCT_DUAL_QUTRIT_MEMORY_WITNESS"
+}
