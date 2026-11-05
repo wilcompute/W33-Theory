@@ -1,0 +1,269 @@
+{
+  "chiral_landau": {
+    "anomaly_free": true,
+    "chiral_charge_spectrum": [
+      -9,
+      -5,
+      -1,
+      7,
+      8
+    ],
+    "chiral_no_opposite_pairs": true,
+    "illustrative_couplings": [
+      {
+        "first_max_charge_alpha_equals_one_energy_GeV": 7.462473933339702e+24,
+        "g_at_1TeV": 0.1,
+        "log_pole_over_threshold": 53.834205824123764,
+        "max_abs_charge": 9,
+        "one_loop_Landau_pole_GeV": 2.398272496997067e+26,
+        "one_loop_beta_b": 146.66666666666666,
+        "perturbativity_convention": "max_q (q*g)^2/(4*pi) reaches 1"
+      },
+      {
+        "first_max_charge_alpha_equals_one_energy_GeV": 765685304804.5748,
+        "g_at_1TeV": 0.15,
+        "log_pole_over_threshold": 23.92631369961057,
+        "max_abs_charge": 9,
+        "one_loop_Landau_pole_GeV": 24607416042870.38,
+        "one_loop_beta_b": 146.66666666666666,
+        "perturbativity_convention": "max_q (q*g)^2/(4*pi) reaches 1"
+      },
+      {
+        "first_max_charge_alpha_equals_one_energy_GeV": 21775038.514657646,
+        "g_at_1TeV": 0.2,
+        "log_pole_over_threshold": 13.458551456030941,
+        "max_abs_charge": 9,
+        "one_loop_Landau_pole_GeV": 699801117.6621208,
+        "one_loop_beta_b": 146.66666666666666,
+        "perturbativity_convention": "max_q (q*g)^2/(4*pi) reaches 1"
+      }
+    ],
+    "one_loop_beta_coefficient_b": 146.66666666666666,
+    "one_loop_beta_positive": true,
+    "scope": "Anomaly-free charge spectrum does not ensure perturbative UV completion. Charges have conventional normalization with fixed g. Higgs and full QFT completion omitted.",
+    "status": "PASS"
+  },
+  "no_toe_claim": true,
+  "prior_art": "Perturbative Abelian Landau poles, weak-field gravitational redshift, quantum-clock controlled phases, Gaussian symplectic eigenvalue entropies and 1+1D CFT scaling are established.",
+  "proper_time_quantum_clock": {
+    "boundary": "Prescribed weak gravitational potentials and fixed metric, no graviton quantization, no derived redshift or fundamental time-flow law.",
+    "clock_frequency_Hz": 1000000000000000.0,
+    "interpretation": "One global coordinate exchange count is not identical to both local proper times; each branch accumulates different clock phase. Branch-time entanglement is a known quantum-clock effect.",
+    "path_internal_state": "(|0>path |+>clock + |1>path e^{-i theta sigma_z/2}|+>clock)/sqrt2",
+    "relations": "Delta_phase=2pi*f0*t*DeltaPhi/c\u00b2; visibility=abs(cos(Delta_phase/2)); entropy=H2((1+visibility)/2)",
+    "rows": [
+      {
+        "Ramsey_phase_difference_rad": 0.0,
+        "clock_Ramsey_visibility": 1.0,
+        "coordinate_time_s": 0.0,
+        "internal_clock_path_entanglement_ebits": 0.0,
+        "relative_proper_time_s": 0.0
+      },
+      {
+        "Ramsey_phase_difference_rad": 0.7853981633974483,
+        "clock_Ramsey_visibility": 0.9238795325112867,
+        "coordinate_time_s": 0.125,
+        "internal_clock_path_entanglement_ebits": 0.23332662865093506,
+        "relative_proper_time_s": 1.25e-16
+      },
+      {
+        "Ramsey_phase_difference_rad": 1.5707963267948966,
+        "clock_Ramsey_visibility": 0.7071067811865476,
+        "coordinate_time_s": 0.25,
+        "internal_clock_path_entanglement_ebits": 0.6008760366928562,
+        "relative_proper_time_s": 2.5e-16
+      },
+      {
+        "Ramsey_phase_difference_rad": 3.141592653589793,
+        "clock_Ramsey_visibility": 6.123233995736766e-17,
+        "coordinate_time_s": 0.5,
+        "internal_clock_path_entanglement_ebits": 1.0,
+        "relative_proper_time_s": 5e-16
+      },
+      {
+        "Ramsey_phase_difference_rad": 4.712388980384691,
+        "clock_Ramsey_visibility": 0.7071067811865478,
+        "coordinate_time_s": 0.75,
+        "internal_clock_path_entanglement_ebits": 0.6008760366928556,
+        "relative_proper_time_s": 7.500000000000001e-16
+      },
+      {
+        "Ramsey_phase_difference_rad": 6.283185307179586,
+        "clock_Ramsey_visibility": 1.0,
+        "coordinate_time_s": 1.0,
+        "internal_clock_path_entanglement_ebits": 0.0,
+        "relative_proper_time_s": 1e-15
+      }
+    ],
+    "status": "PASS",
+    "weak_field_potential_difference_over_c_squared": 1e-15
+  },
+  "status": "PASS_THREE_ORTHOGONAL_TOE_PHYSICS_CONTROLS",
+  "vacuum_entanglement_area_critical": {
+    "N_sites": 128,
+    "boundary": "1+1D nonrelativistic lattice regulator, not 3+1D horizon entropy, black-hole thermodynamics or emergent gravity. m=.001 has finite zero-mode finite-size effects.",
+    "interpretation": "A gapped local vacuum entangles mainly across interval boundaries; a nearly critical vacuum has approximate CFT logarithmic growth. Entanglement area laws alone do not yield Einstein equations.",
+    "model": "One-dimensional harmonic chain, Gaussian ground state, X/P restricted covariance and symplectic entropy",
+    "nearest_neighbor_spring_strength": 1,
+    "periodic_chain": true,
+    "records": {
+      "0.001": {
+        "finite_chord_log_slope": 0.3142450296518265,
+        "late_block_entropy_difference": 0.10864924134138354,
+        "mass_gap": 0.001,
+        "subsystem_entropies": [
+          {
+            "entropy_nats": 1.9802834281905415,
+            "smallest_symplectic_eigenvalue": 0.5000196514996544,
+            "subsystem_length": 4
+          },
+          {
+            "entropy_nats": 2.1971678405805943,
+            "smallest_symplectic_eigenvalue": 0.5000000000186478,
+            "subsystem_length": 8
+          },
+          {
+            "entropy_nats": 2.4089488693999805,
+            "smallest_symplectic_eigenvalue": 0.5,
+            "subsystem_length": 16
+          },
+          {
+            "entropy_nats": 2.6016300760949513,
+            "smallest_symplectic_eigenvalue": 0.5,
+            "subsystem_length": 32
+          },
+          {
+            "entropy_nats": 2.685465659013693,
+            "smallest_symplectic_eigenvalue": 0.5,
+            "subsystem_length": 48
+          },
+          {
+            "entropy_nats": 2.710279317436335,
+            "smallest_symplectic_eigenvalue": 0.5,
+            "subsystem_length": 64
+          }
+        ]
+      },
+      "0.01": {
+        "finite_chord_log_slope": 0.20420484360649976,
+        "late_block_entropy_difference": 0.06100722177499973,
+        "mass_gap": 0.01,
+        "subsystem_entropies": [
+          {
+            "entropy_nats": 1.1387071789164955,
+            "smallest_symplectic_eigenvalue": 0.5000195830774629,
+            "subsystem_length": 4
+          },
+          {
+            "entropy_nats": 1.294901329480648,
+            "smallest_symplectic_eigenvalue": 0.5000000000184233,
+            "subsystem_length": 8
+          },
+          {
+            "entropy_nats": 1.4367580026236664,
+            "smallest_symplectic_eigenvalue": 0.5,
+            "subsystem_length": 16
+          },
+          {
+            "entropy_nats": 1.5544864302250871,
+            "smallest_symplectic_eigenvalue": 0.5,
+            "subsystem_length": 32
+          },
+          {
+            "entropy_nats": 1.601917039976695,
+            "smallest_symplectic_eigenvalue": 0.5,
+            "subsystem_length": 48
+          },
+          {
+            "entropy_nats": 1.6154936520000869,
+            "smallest_symplectic_eigenvalue": 0.5,
+            "subsystem_length": 64
+          }
+        ]
+      },
+      "0.2": {
+        "finite_chord_log_slope": 0.00885521593879413,
+        "late_block_entropy_difference": 1.229361727972389e-07,
+        "mass_gap": 0.2,
+        "subsystem_entropies": [
+          {
+            "entropy_nats": 0.520167743944675,
+            "smallest_symplectic_eigenvalue": 0.5000113376105866,
+            "subsystem_length": 4
+          },
+          {
+            "entropy_nats": 0.5416996926433966,
+            "smallest_symplectic_eigenvalue": 0.5000000000038356,
+            "subsystem_length": 8
+          },
+          {
+            "entropy_nats": 0.5451504830853674,
+            "smallest_symplectic_eigenvalue": 0.5,
+            "subsystem_length": 16
+          },
+          {
+            "entropy_nats": 0.5452532775296793,
+            "smallest_symplectic_eigenvalue": 0.5,
+            "subsystem_length": 32
+          },
+          {
+            "entropy_nats": 0.5452534002968362,
+            "smallest_symplectic_eigenvalue": 0.5,
+            "subsystem_length": 48
+          },
+          {
+            "entropy_nats": 0.5452534004658521,
+            "smallest_symplectic_eigenvalue": 0.5,
+            "subsystem_length": 64
+          }
+        ]
+      },
+      "0.5": {
+        "finite_chord_log_slope": 0.0004981164122111214,
+        "late_block_entropy_difference": 1.2601031329495527e-13,
+        "mass_gap": 0.5,
+        "subsystem_entropies": [
+          {
+            "entropy_nats": 0.2694473290722949,
+            "smallest_symplectic_eigenvalue": 0.5000032756030233,
+            "subsystem_length": 4
+          },
+          {
+            "entropy_nats": 0.27093144518971274,
+            "smallest_symplectic_eigenvalue": 0.5000000000001793,
+            "subsystem_length": 8
+          },
+          {
+            "entropy_nats": 0.27095189686960697,
+            "smallest_symplectic_eigenvalue": 0.5,
+            "subsystem_length": 16
+          },
+          {
+            "entropy_nats": 0.27095190216587206,
+            "smallest_symplectic_eigenvalue": 0.5,
+            "subsystem_length": 32
+          },
+          {
+            "entropy_nats": 0.2709519021658919,
+            "smallest_symplectic_eigenvalue": 0.5,
+            "subsystem_length": 48
+          },
+          {
+            "entropy_nats": 0.27095190216599807,
+            "smallest_symplectic_eigenvalue": 0.5,
+            "subsystem_length": 64
+          }
+        ]
+      }
+    },
+    "status": "PASS",
+    "subsystem_sizes": [
+      4,
+      8,
+      16,
+      32,
+      48,
+      64
+    ]
+  }
+}

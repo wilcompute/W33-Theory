@@ -1,0 +1,118 @@
+{
+  "co_speed_without_loss_of_species": false,
+  "interpretation": "The low-energy acoustic speed becomes common to the only remaining massless branch when g>0, but that is NOT universality of two gapless particle species: the relative branch is gapped.",
+  "local_interaction": "g/2 (phi_A-phi_B)^2 on each lattice site",
+  "microscopic_speed_coefficients": {
+    "A": 1.0,
+    "B": 1.2
+  },
+  "no_one_loop_c_attraction_for_independent_phi4_tadpoles": true,
+  "normal_mode_sweep": [
+    {
+      "acoustic_effective_speed": null,
+      "all_original_massless_species_retained": true,
+      "frequencies_at_k0": [
+        9.999999995833334e-05,
+        0.00011999999995
+      ],
+      "frequencies_at_zero": [
+        0.0,
+        0.0
+      ],
+      "k_very_small": 0.0001,
+      "massless_mode_count": 2,
+      "onsite_coupling_g": 0.0,
+      "optical_gap": 0.0
+    },
+    {
+      "acoustic_effective_speed": 1.104536101718726,
+      "all_original_massless_species_retained": false,
+      "frequencies_at_k0": [
+        0.0001104536097627318,
+        0.2449489991814624
+      ],
+      "frequencies_at_zero": [
+        0.0,
+        0.2449489742783178
+      ],
+      "k_very_small": 0.0001,
+      "massless_mode_count": 1,
+      "onsite_coupling_g": 0.03,
+      "optical_gap": 0.2449489742783178
+    },
+    {
+      "acoustic_effective_speed": 1.104536101718726,
+      "all_original_massless_species_retained": false,
+      "frequencies_at_k0": [
+        0.00011045361009254622,
+        0.6324555416786227
+      ],
+      "frequencies_at_zero": [
+        0.0,
+        0.6324555320336759
+      ],
+      "k_very_small": 0.0001,
+      "massless_mode_count": 1,
+      "onsite_coupling_g": 0.2,
+      "optical_gap": 0.6324555320336759
+    },
+    {
+      "acoustic_effective_speed": 1.104536101718726,
+      "all_original_massless_species_retained": false,
+      "frequencies_at_k0": [
+        0.0001104536102181898,
+        1.4142135666864464
+      ],
+      "frequencies_at_zero": [
+        0.0,
+        1.4142135623730951
+      ],
+      "k_very_small": 0.0001,
+      "massless_mode_count": 1,
+      "onsite_coupling_g": 1.0,
+      "optical_gap": 1.4142135623730951
+    }
+  ],
+  "one_loop_quartic_tadpole_sweep": [
+    {
+      "bare_quartic_lambdaA": 0.7,
+      "bare_quartic_lambdaB": 1.2,
+      "kinetic_counterterms_at_one_loop": [
+        0.0,
+        0.0
+      ],
+      "lambda_AB": 0.0,
+      "mass_counterterm_A": 1.771358601627137,
+      "mass_counterterm_B": 2.5312026394011844,
+      "velocity_difference_after_one_loop_in_tadpole_approx": 0.19999999999999996
+    },
+    {
+      "bare_quartic_lambdaA": 0.7,
+      "bare_quartic_lambdaB": 1.2,
+      "kinetic_counterterms_at_one_loop": [
+        0.0,
+        0.0
+      ],
+      "lambda_AB": 0.2,
+      "mass_counterterm_A": 2.193225708194001,
+      "mass_counterterm_B": 3.0373050970089377,
+      "velocity_difference_after_one_loop_in_tadpole_approx": 0.19999999999999996
+    },
+    {
+      "bare_quartic_lambdaA": 0.7,
+      "bare_quartic_lambdaB": 1.2,
+      "kinetic_counterterms_at_one_loop": [
+        0.0,
+        0.0
+      ],
+      "lambda_AB": 0.8,
+      "mass_counterterm_A": 3.4588270278945936,
+      "mass_counterterm_B": 4.555612469832198,
+      "velocity_difference_after_one_loop_in_tadpole_approx": 0.19999999999999996
+    }
+  ],
+  "prior_art": "Two-field coupled harmonic lattice normal modes and one-loop phi4 tadpole self-energy are standard textbook results.",
+  "scope": "Free bosonic coupled lattice modes, mass-only one-loop tadpoles, no full renormalized interacting gauge-matter theory or higher-loop velocity beta functions.",
+  "status": "PASS_UNIVERSAL_LIGHTCONE_UNDERDETERMINATION_RADIATIVE_TEST",
+  "what_would_suffice": "An exact microscopic Lorentz symmetry acting on all species or a quantitatively demonstrated interacting RG attraction to a shared speed in d=3+1, with thresholds and radiative stability."
+}

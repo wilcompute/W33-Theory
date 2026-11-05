@@ -1,0 +1,26 @@
+{
+  "all_local_polynomial_U1_gauge_anomalies": {
+    "BL3": "0",
+    "Y2BL": "0",
+    "Y3": "0",
+    "YBL2": "0",
+    "gravBL": "0",
+    "gravY": "0"
+  },
+  "benchmark_fixed_gBL": 0.2,
+  "benchmark_fixed_gY": 0.35741704769115173,
+  "boundary": "Leading-log illustrative bare chi convention, constant couplings, mass thresholds approximated. No full kinetic-mixing matrix RGE, no generated UV completion and no empirical Zprime prediction.",
+  "consequence": "Two-loop diagonal SM gauge RG plus separately anomaly-free gauged BL seesaw do not form a radiatively closed joint model: U1xU1 mixing and BL beta function must be included.",
+  "leading_log_boundary_zero_kinetic_mix_at_GeV": 10000000000.0,
+  "loop_generated_kinetic_mixing_estimate": 0.03083026804191608,
+  "mixed_beta_b_Y_BL_with_vectorlike": "52/9",
+  "mixed_beta_b_Y_BL_without_vectorlike": "16/3",
+  "model": "SM*3 + (Nc)*3 + S(BL=-2) + one vectorlike quark doublet (3,2,Y=1/6,BL=1/3)",
+  "nonzero_radiative_kinetic_mixing": true,
+  "one_loop_BL_diagonal_b_with_vectorlike_and_scalar": "116/9",
+  "prior_art": "One-loop U1xU1 kinetic mixing proportional to trace of product of charges is standard.",
+  "reference_energy_GeV": 1316300369060598.2,
+  "status": "PASS_U1_MIXED_TRACE_NONZERO",
+  "trace_Y_BL_SM_three_families": "8",
+  "trace_Y_BL_added_vectorlike_pair": "2/3"
+}

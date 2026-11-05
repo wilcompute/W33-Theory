@@ -1,0 +1,137 @@
+{
+  "global_SU2_Witten_doublets_three_generations": 12,
+  "limitation": "A consistent toy extension with fitted Yukawa masses, not a selection of SM gauge group, number of generations, cosmological vacuum or measured PMNS from first principles.",
+  "model_action": "L=LSM - FBL_{mu nu} FBL^{mu nu}/4 + |D_mu H|^2+|D_mu S|^2 - (Ynu L H Nc + f S Nc Nc/2 +h.c.) -V(H,S), where D contains gBL and B-L(S)=-2; spinor indices/conjugations suppressed",
+  "per_generation_chiral_anomalies": {
+    "BL_cubic": "0",
+    "BL_grav": "0",
+    "SU2_squared_BL": "0",
+    "SU3_squared_BL": "0",
+    "Y2_BL": "0",
+    "Y_BL2": "0",
+    "Y_cubic": "0",
+    "Y_grav": "0"
+  },
+  "prior_art": "Standard anomaly cancellation with B-L and RH neutrinos, type-I seesaw and Casas-Ibarra family are established.",
+  "scalar_S_BL_charge": -2,
+  "seesaw": {
+    "PMNS_input_angles_degrees": [
+      33.44,
+      49.2,
+      8.57
+    ],
+    "PMNS_input_dirac_cp_degrees": 195,
+    "atmospheric_delta_m2_input_eV2": 0.002515,
+    "boundary": "Reconstructs selected experimental-like neutrino masses/mixings using a general free Dirac Yukawa; cannot derive 3 family count, masses, mixing or scale. For gauged BL 3 Nc cancel anomaly even if one Yukawa column is zero.",
+    "continuous_orthogonal_rotation_degeneracy": true,
+    "examples": [
+      {
+        "Casas_Ibarra_angle_radians": 0.0,
+        "Dirac_Yukawa_rank": 2,
+        "PMNS_reconstruction_error_GeV": 1.292470323411541e-26,
+        "Yukawa_Frobenius_norm": 0.09126368373004472,
+        "charged_lepton_flavour_inputs": "angles, phase and light mass-squared differences supplied as external inputs, not predicted",
+        "heavy_N_masses_GeV": [
+          10000000000.0,
+          200000000000.0,
+          5000000000000.0
+        ],
+        "light_masses_eV": [
+          0.0,
+          0.008613942186943212,
+          0.05014977567247933
+        ],
+        "maximum_Yukawa_entry_abs": 0.06808130033714126,
+        "mnu_eigenvalues_eV": [
+          5.147674868835286e-19,
+          0.008613942186943205,
+          0.05014977567247933
+        ]
+      },
+      {
+        "Casas_Ibarra_angle_radians": 0.4487989505128276,
+        "Dirac_Yukawa_rank": 2,
+        "PMNS_reconstruction_error_GeV": 9.693596758783542e-27,
+        "Yukawa_Frobenius_norm": 0.08420718562277925,
+        "charged_lepton_flavour_inputs": "angles, phase and light mass-squared differences supplied as external inputs, not predicted",
+        "heavy_N_masses_GeV": [
+          10000000000.0,
+          200000000000.0,
+          5000000000000.0
+        ],
+        "light_masses_eV": [
+          0.0,
+          0.008613942186943212,
+          0.05014977567247933
+        ],
+        "maximum_Yukawa_entry_abs": 0.07123931746072666,
+        "mnu_eigenvalues_eV": [
+          5.586538378454707e-19,
+          0.008613942186943212,
+          0.050149775672479316
+        ]
+      },
+      {
+        "Casas_Ibarra_angle_radians": 1.0471975511965976,
+        "Dirac_Yukawa_rank": 2,
+        "PMNS_reconstruction_error_GeV": 1.2924795678378055e-26,
+        "Yukawa_Frobenius_norm": 0.058275952021950884,
+        "charged_lepton_flavour_inputs": "angles, phase and light mass-squared differences supplied as external inputs, not predicted",
+        "heavy_N_masses_GeV": [
+          10000000000.0,
+          200000000000.0,
+          5000000000000.0
+        ],
+        "light_masses_eV": [
+          0.0,
+          0.008613942186943212,
+          0.05014977567247933
+        ],
+        "maximum_Yukawa_entry_abs": 0.05380286455053126,
+        "mnu_eigenvalues_eV": [
+          1.9721559891389547e-18,
+          0.00861394218694321,
+          0.050149775672479316
+        ]
+      },
+      {
+        "Casas_Ibarra_angle_radians": 0.4487989505128276,
+        "Dirac_Yukawa_rank": 2,
+        "PMNS_reconstruction_error_GeV": 9.693596758783542e-27,
+        "Yukawa_Frobenius_norm": 0.08420718562277925,
+        "charged_lepton_flavour_inputs": "angles, phase and light mass-squared differences supplied as external inputs, not predicted",
+        "heavy_N_masses_GeV": [
+          100000000000000.0,
+          200000000000.0,
+          5000000000000.0
+        ],
+        "light_masses_eV": [
+          0.0,
+          0.008613942186943212,
+          0.05014977567247933
+        ],
+        "maximum_Yukawa_entry_abs": 0.07123931746072666,
+        "mnu_eigenvalues_eV": [
+          5.586538378454707e-19,
+          0.008613942186943212,
+          0.050149775672479316
+        ]
+      }
+    ],
+    "solar_delta_m2_input_eV2": 7.42e-05,
+    "sterile_uncoupled_first_N_mass_unconstrained_by_neutrino_sector": true,
+    "type_I_three_heavy_N_but_two_coupled_Yukawa_columns": true
+  },
+  "status": "PASS_ANOMALY_FREE_GAUGED_BL_SEESAW_FAMILY_UNDERDETERMINATION",
+  "three_generation_gauged_BL_requires_three_Nc_under_this_chiral_spectrum": true,
+  "without_Nc_anomalies": {
+    "BL_cubic": "-1",
+    "BL_grav": "-1",
+    "SU2_squared_BL": "0",
+    "SU3_squared_BL": "0",
+    "Y2_BL": "0",
+    "Y_BL2": "0",
+    "Y_cubic": "0",
+    "Y_grav": "0"
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "MZ_inputs_inverse_alpha": [
+    59.02154694,
+    29.5857551,
+    8.474576271186441
+  ],
+  "SM_B": [
+    [
+      3.98,
+      2.7,
+      8.8
+    ],
+    [
+      0.9,
+      5.833333333333333,
+      12.0
+    ],
+    [
+      1.1,
+      4.5,
+      -26.0
+    ]
+  ],
+  "SM_b": [
+    4.1,
+    -3.1666666666666665,
+    -7.0
+  ],
+  "SM_no_new_particles_control": [
+    {
+      "energy_GeV": 10000000000,
+      "inverse_couplings": [
+        46.797569824059586,
+        38.71830413647558,
+        29.442405638710547
+      ],
+      "max_spread": 17.35516418534904
+    },
+    {
+      "energy_GeV": 10000000000000,
+      "inverse_couplings": [
+        42.256055688365514,
+        42.15627798914575,
+        37.198336653029365
+      ],
+      "max_spread": 5.057719035336149
+    },
+    {
+      "energy_GeV": 10000000000000000,
+      "inverse_couplings": [
+        37.71791073332455,
+        45.60051726745286,
+        44.94104590312407
+      ],
+      "max_spread": 7.882606534128307
+    }
+  ],
+  "SM_top_yukawa_gauge_d": [
+    1.7,
+    1.5,
+    2.0
+  ],
+  "Y_top_MZ_assumption": 0.936,
+  "reference_proton_limit_p_eplus_pi0_90pct_yr": 2.4e+34,
+  "scans": {
+    "Dirac_vectorlike_quark_doublet_3_2_1_6": {
+      "extra_B": [
+        [
+          0.006666666666666667,
+          0.30000000000000004,
+          0.5333333333333333
+        ],
+        [
+          0.1,
+          24.5,
+          8.0
+        ],
+        [
+          0.06666666666666667,
+          3.0,
+          25.333333333333332
+        ]
+      ],
+      "extra_b": [
+        0.13333333333333333,
+        2.0,
+        1.3333333333333333
+      ],
+      "one_loop_recomputed": {
+        "example_tau_years_if_K_equals_1e35_years": 3.1502893473578026e+32,
+        "max_two_coupling_mismatch": 0.0,
+        "minimum_reference_K_years_for_p_to_e_pi0_limit": 7.618347825773267e+36,
+        "proton_decay_assumptions": "tau=K*(MV/10^16GeV)^4*(.025/alphaG)^2; here MV=MGUT, K unspecified. Experimental bound 2.4e34 yr 90%CL for e+pi0. No branching ratio, Wilson mixing or matrix elements computed.",
+        "proton_partial_lifetime_scaling_for_MV_equals_MGUT": 0.003150289347357803,
+        "threshold_mass_GeV": 1438221.1354121794,
+        "unification_scale_GeV": 2417922482243991.0,
+        "unified_inverse_alpha": 38.40170144077841,
+        "yt_at_GUT": 0.936
+      },
+      "two_loop_gauge_with_top_yukawa_one_loop": {
+        "example_tau_years_if_K_equals_1e35_years": 2.80402518191332e+31,
+        "max_two_coupling_mismatch": 2.984279490192421e-13,
+        "minimum_reference_K_years_for_p_to_e_pi0_limit": 8.559124274206286e+37,
+        "proton_decay_assumptions": "tau=K*(MV/10^16GeV)^4*(.025/alphaG)^2; here MV=MGUT, K unspecified. Experimental bound 2.4e34 yr 90%CL for e+pi0. No branching ratio, Wilson mixing or matrix elements computed.",
+        "proton_partial_lifetime_scaling_for_MV_equals_MGUT": 0.00028040251819133204,
+        "threshold_mass_GeV": 21189103.22756254,
+        "unification_scale_GeV": 1316300369060598.2,
+        "unified_inverse_alpha": 38.65813870507239,
+        "yt_at_GUT": 0.41948165184310876
+      }
+    },
+    "Majorana_weak_adjoint_1_3_0": {
+      "extra_B": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          21.333333333333336,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "extra_b": [
+        0.0,
+        1.3333333333333333,
+        0.0
+      ],
+      "one_loop_recomputed": {
+        "example_tau_years_if_K_equals_1e35_years": 3.5637168851796657e+28,
+        "max_two_coupling_mismatch": 7.105427357601002e-15,
+        "minimum_reference_K_years_for_p_to_e_pi0_limit": 6.734541708351794e+40,
+        "proton_decay_assumptions": "tau=K*(MV/10^16GeV)^4*(.025/alphaG)^2; here MV=MGUT, K unspecified. Experimental bound 2.4e34 yr 90%CL for e+pi0. No branching ratio, Wilson mixing or matrix elements computed.",
+        "proton_partial_lifetime_scaling_for_MV_equals_MGUT": 3.5637168851796657e-07,
+        "threshold_mass_GeV": 8050978.055187406,
+        "unification_scale_GeV": 243264314534077.47,
+        "unified_inverse_alpha": 40.35104426052833,
+        "yt_at_GUT": 0.936
+      },
+      "two_loop_gauge_with_top_yukawa_one_loop": {
+        "example_tau_years_if_K_equals_1e35_years": 8.895289962531773e+27,
+        "max_two_coupling_mismatch": 7.105427357601002e-15,
+        "minimum_reference_K_years_for_p_to_e_pi0_limit": 2.698057073023073e+41,
+        "proton_decay_assumptions": "tau=K*(MV/10^16GeV)^4*(.025/alphaG)^2; here MV=MGUT, K unspecified. Experimental bound 2.4e34 yr 90%CL for e+pi0. No branching ratio, Wilson mixing or matrix elements computed.",
+        "proton_partial_lifetime_scaling_for_MV_equals_MGUT": 8.895289962531774e-08,
+        "threshold_mass_GeV": 84061276.67399716,
+        "unification_scale_GeV": 171870221378242.66,
+        "unified_inverse_alpha": 40.38673765804613,
+        "yt_at_GUT": 0.44453122639973636
+      }
+    }
+  },
+  "scope": "Gauge couplings two-loop, yt one-loop. Neglect other Yukawas, BSM Yukawas, heavy matching, threshold uncertainty, 3-loop, Planck operators; not a consistent full grand unified UV theory. Proton scaling depends on free K and MV/MGUT.",
+  "source_SM_two_loop": "Phys Rev D90 075006 app B",
+  "source_extra_two_loop": "Jones Phys Rev D25 581 (1982), gauge group formula and Dirac/Weyl kappa convention",
+  "source_proton_decay": "Super-Kamiokande Phys Rev D102 112011 (2020), tested specific mode not all channels",
+  "status": "PASS_TWOLOOP_GAUGE_TOP_YUKAWA_THRESHOLD_AND_CONDITIONAL_PROTON"
+}

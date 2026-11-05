@@ -1,0 +1,146 @@
+{
+  "four_site": [
+    {
+      "basis_dimension": 4,
+      "excitation_number": 1,
+      "records": [
+        {
+          "Jt": 0.0,
+          "both_ends_probability": 0.0,
+          "n0_n3_expectation": 0.0
+        },
+        {
+          "Jt": 0.1,
+          "both_ends_probability": 0.0,
+          "n0_n3_expectation": 0.0
+        },
+        {
+          "Jt": 0.2,
+          "both_ends_probability": 0.0,
+          "n0_n3_expectation": 0.0
+        },
+        {
+          "Jt": 0.5,
+          "both_ends_probability": 0.0,
+          "n0_n3_expectation": 0.0
+        },
+        {
+          "Jt": 1.0,
+          "both_ends_probability": 0.0,
+          "n0_n3_expectation": 0.0
+        },
+        {
+          "Jt": 2.0,
+          "both_ends_probability": 0.0,
+          "n0_n3_expectation": 0.0
+        }
+      ]
+    },
+    {
+      "basis_dimension": 10,
+      "excitation_number": 2,
+      "records": [
+        {
+          "Jt": 0.0,
+          "both_ends_probability": 0.0,
+          "n0_n3_expectation": 0.0
+        },
+        {
+          "Jt": 0.1,
+          "both_ends_probability": 9.818270555951944e-05,
+          "n0_n3_expectation": 9.818270555951944e-05
+        },
+        {
+          "Jt": 0.2,
+          "both_ends_probability": 0.001486707443932998,
+          "n0_n3_expectation": 0.001486707443932998
+        },
+        {
+          "Jt": 0.5,
+          "both_ends_probability": 0.03938083902010268,
+          "n0_n3_expectation": 0.03938083902010268
+        },
+        {
+          "Jt": 1.0,
+          "both_ends_probability": 0.16038973544181848,
+          "n0_n3_expectation": 0.16038973544181848
+        },
+        {
+          "Jt": 2.0,
+          "both_ends_probability": 0.11763133698727493,
+          "n0_n3_expectation": 0.11763133698727493
+        }
+      ]
+    }
+  ],
+  "limitations": "Exact tiny Hamiltonian models, not a relativistic local QFT or scattering cross sections, not Bell nonlocality and not an explanation why the universe has multiparticles.",
+  "model": "number-conserving Bose-Hubbard with fixed 1 or 2 excitations, nearest-neighbor hopping and onsite quartic interaction",
+  "physics": "HOM bunching and number-resolved local coincidences demand two-excitation sector, not high-dimensional single-particle reencoding. U changes the two-body interference quantitatively.",
+  "prior_art": "Bose-Hubbard Hamiltonian, Hong-Ou-Mandel interference and occupation-number entanglement are textbook.",
+  "status": "PASS_MULTIPARTICLE_FOCK_HOM_INTERACTION_AND_LOCAL_COINCIDENCES",
+  "two_site": {
+    "Hilbert_dimensions": {
+      "two_sites_one_photon": 2,
+      "two_sites_two_photons": 3
+    },
+    "exact_one_excitation_double_coincidence": 0,
+    "exact_u0_hong_ou_mandel_zero": true,
+    "two_site_two_excitation_results": [
+      {
+        "U_over_J": 0.0,
+        "interferometer_time_Jt": 0.7853981633974483,
+        "local_coincidence_probability": 0.0,
+        "mode_entanglement_negativity": 0.5000000000000004,
+        "probabilities": {
+          "(0, 2)": 0.5000000000000002,
+          "(1, 1)": 0.0,
+          "(2, 0)": 0.5000000000000001
+        }
+      },
+      {
+        "U_over_J": 0.5,
+        "interferometer_time_Jt": 0.7853981633974483,
+        "local_coincidence_probability": 0.015531742114868822,
+        "mode_entanglement_negativity": 0.667108410080451,
+        "probabilities": {
+          "(0, 2)": 0.49223412894256585,
+          "(1, 1)": 0.015531742114868822,
+          "(2, 0)": 0.4922341289425656
+        }
+      },
+      {
+        "U_over_J": 2.0,
+        "interferometer_time_Jt": 0.7853981633974483,
+        "local_coincidence_probability": 0.2271870304747091,
+        "mode_entanglement_negativity": 0.9789823594973375,
+        "probabilities": {
+          "(0, 2)": 0.38640648476264544,
+          "(1, 1)": 0.2271870304747091,
+          "(2, 0)": 0.38640648476264555
+        }
+      },
+      {
+        "U_over_J": 5.0,
+        "interferometer_time_Jt": 0.7853981633974483,
+        "local_coincidence_probability": 0.86562921678296,
+        "mode_entanglement_negativity": 0.5495032864344926,
+        "probabilities": {
+          "(0, 2)": 0.06718539160851993,
+          "(1, 1)": 0.86562921678296,
+          "(2, 0)": 0.06718539160851995
+        }
+      },
+      {
+        "U_over_J": 20.0,
+        "interferometer_time_Jt": 0.7853981633974483,
+        "local_coincidence_probability": 0.9624614641440052,
+        "mode_entanglement_negativity": 0.28757921633684114,
+        "probabilities": {
+          "(0, 2)": 0.018769267927997255,
+          "(1, 1)": 0.9624614641440052,
+          "(2, 0)": 0.01876926792799726
+        }
+      }
+    ]
+  }
+}
