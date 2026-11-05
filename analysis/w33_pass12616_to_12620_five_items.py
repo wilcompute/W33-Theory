@@ -36,6 +36,7 @@ def main():
     checks["12620: posterior predictive: fading and CPL within 1 in total elpd"] = abs(tot["free_neg_infl1"] - tot["cpl_infl1"]) < 1
     checks["12620: both beat LCDM out of sample by more than 5 in elpd"] = tot["free_neg_infl1"] - tot["LCDM_infl1"] > 5 and tot["cpl_infl1"] - tot["LCDM_infl1"] > 5
     checks["12620: retraction: CPL's point estimate missed SN by 17 while its posterior predictive is within 1.1 of fading"] = sn["cpl_infl1"]["chi2_best"] - sn["LCDM_infl1"]["chi2_best"] > 15 and abs(sn["cpl_infl1"]["elpd"] - sn["free_neg_infl1"]["elpd"]) < 1.1
+    checks["12620: exponential also beats LCDM by over 3, and the three evolving models lie within 3"] = tot["exp_infl1"] - tot["LCDM_infl1"] > 3 and max(tot[k] for k in ("free_neg_infl1", "cpl_infl1", "exp_infl1")) - min(tot[k] for k in ("free_neg_infl1", "cpl_infl1", "exp_infl1")) < 3
     res["checks"] = checks
     res["all_checks_pass"] = all(checks.values())
     OUT.write_text(json.dumps(res, indent=1, default=float), encoding="utf-8")

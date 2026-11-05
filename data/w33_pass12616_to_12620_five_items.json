@@ -750,6 +750,49 @@
      "w0": 0.19054700124014093,
      "wa": 0.5510343079747341
     }
+   },
+   "cpl_infl2": {
+    "n": 24,
+    "elpd": -817.2960026280106,
+    "chi2_best": 1652.5695384818791,
+    "chi2_mean": 1705.4595467602442,
+    "chi2_q": [
+     1634.512268607336,
+     1669.6708101517484,
+     1800.2453688819076
+    ],
+    "sd": {
+     "w0": 0.38109400248028186,
+     "wa": 1.1020686159494681
+    }
+   },
+   "exp_infl1": {
+    "n": 8,
+    "elpd": -816.6794469795508,
+    "chi2_best": 1635.2168415908764,
+    "chi2_mean": 1728.8536231320463,
+    "chi2_q": [
+     1631.684485376016,
+     1733.4920291321798,
+     1807.8458391161766
+    ],
+    "sd": {
+     "c": 3.853158016443051
+    }
+   },
+   "exp_infl2": {
+    "n": 6,
+    "elpd": -816.9484395713688,
+    "chi2_best": 1635.2168415908764,
+    "chi2_mean": 1712.4853935776302,
+    "chi2_q": [
+     1632.8606534898686,
+     1643.0376146561716,
+     1759.1478927945222
+    ],
+    "sd": {
+     "c": 7.706316032886102
+    }
    }
   },
   "bao": {
@@ -824,6 +867,34 @@
      "w0": 0.2128277492487937,
      "wa": 1.0339543441075436
     }
+   },
+   "exp_infl1": {
+    "n": 24,
+    "elpd": -8.962510287922012,
+    "chi2_best": 33.302382784270534,
+    "chi2_mean": 29.03989857596167,
+    "chi2_q": [
+     19.748577892641176,
+     28.809613212194137,
+     40.51851632392836
+    ],
+    "sd": {
+     "c": 0.2461588196927957
+    }
+   },
+   "exp_infl2": {
+    "n": 24,
+    "elpd": -7.583590470806957,
+    "chi2_best": 33.302382784270534,
+    "chi2_mean": 44.61022193293769,
+    "chi2_q": [
+     13.169171690312544,
+     27.688211134837324,
+     44.3887921712273
+    ],
+    "sd": {
+     "c": 0.4923176393855914
+    }
    }
   }
  },
@@ -831,7 +902,10 @@
   "LCDM_infl1": -829.0673358484405,
   "free_neg_infl1": -823.0200599527949,
   "free_neg_infl2": -827.7386275267139,
-  "cpl_infl1": -823.5842348300075
+  "cpl_infl1": -823.5842348300075,
+  "cpl_infl2": -823.8503289076333,
+  "exp_infl1": -825.6419572674728,
+  "exp_infl2": -824.5320300421757
  },
  "checks": {
   "12616: three vectorlike (3,3bar,1) meet at M_U 3.5e16 with M_X 2.9e11 and tau above 1e38": true,
@@ -845,7 +919,8 @@
   "12618: Model A N_DW = 1 is above the GUT line, N_DW = 5 below": true,
   "12620: posterior predictive: fading and CPL within 1 in total elpd": true,
   "12620: both beat LCDM out of sample by more than 5 in elpd": true,
-  "12620: retraction: CPL's point estimate missed SN by 17 while its posterior predictive is within 1.1 of fading": true
+  "12620: retraction: CPL's point estimate missed SN by 17 while its posterior predictive is within 1.1 of fading": true,
+  "12620: exponential also beats LCDM by over 3, and the three evolving models lie within 3": true
  },
  "all_checks_pass": true
 }

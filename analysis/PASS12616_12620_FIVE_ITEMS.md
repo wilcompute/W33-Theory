@@ -71,3 +71,7 @@ Parallel `6fdfcfefb` independently gave the two-loop single-Q threshold, 2.1189�
 ## Sources
 
 arXiv:2511.21830, 1705.05370, hep-ph/9902423, hep-ph/0103125, 1307.3536. Trinification decomposition: standard; not re-read.
+
+### Addendum: the exponential comparator and the c-block-widened variants
+
+Total elpd, SN + BAO held: ΛCDM −829.07; exponential −825.64 (Fisher), −824.53 (×2); CPL −823.58, −823.85; fading −823.02, −827.74. **Every evolving model beats ΛCDM out of sample by about 3.5 to 6, and the three evolving models are not distinguished**: their spread, 2.6, is at the noise level of 24 draws. The out-of-sample evidence is for late-time evolution of dark energy in general, not for the coupling c′.
