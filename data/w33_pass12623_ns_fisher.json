@@ -1,0 +1,75 @@
+{
+ "pass_number": 12623,
+ "track": "claude",
+ "fits": {
+  "LCDM_without_sn": {
+   "ns": 0.9708166842817642,
+   "sigma": 0.003243596537422704
+  },
+  "exp_without_sn": {
+   "ns": 0.970918012261156,
+   "sigma": 0.003385234028698517
+  },
+  "cpl_without_sn": {
+   "ns": 0.9664321022246728,
+   "sigma": 0.003612056278799842
+  },
+  "free_neg_without_sn": {
+   "ns": 0.9656159822063679,
+   "sigma": 0.0036792816072277763
+  },
+  "LCDM_without_bao": {
+   "ns": 0.9642415159422976,
+   "sigma": 0.003792352542763688
+  },
+  "exp_without_bao": {
+   "ns": 0.9654563491724656,
+   "sigma": 0.003933317864012038
+  },
+  "cpl_without_bao": {
+   "ns": 0.9660139055817292,
+   "sigma": 0.003943257936685377
+  },
+  "free_neg_without_bao": {
+   "ns": 0.965158009460873,
+   "sigma": 0.004266682798144917
+  },
+  "pull_significance": {
+   "LCDM": {
+    "pull": 0.006575168339466586,
+    "sigma_without_bao": 0.003792352542763688,
+    "significance": 1.7337967041099278,
+    "distance_from_0965_sigma": 1.7932823070485835
+   },
+   "exp": {
+    "pull": 0.005461663088690449,
+    "sigma_without_bao": 0.003933317864012038,
+    "significance": 1.3885638734316474,
+    "distance_from_0965_sigma": 1.7481840874178205
+   },
+   "cpl": {
+    "pull": 0.0004181966429436246,
+    "sigma_without_bao": 0.003943257936685377,
+    "significance": 0.10605358555244605,
+    "distance_from_0965_sigma": 0.3964783807711499
+   },
+   "free_neg": {
+    "pull": 0.0004579727454948612,
+    "sigma_without_bao": 0.004266682798144917,
+    "significance": 0.10733695640416019,
+    "distance_from_0965_sigma": 0.16741915192299212
+   }
+  }
+ },
+ "checks": {
+  "all_eight_fits_present": true,
+  "sigmas_physical": true,
+  "control_lcdm_pull_nonzero": true,
+  "thawing_exp_pull_nonzero": true,
+  "crossing_models_pull_vanishes": true,
+  "lcdm_with_bao_above_0965_by_more_than_1p5_sigma": true,
+  "crossing_models_with_bao_within_1_sigma_of_0965": true,
+  "no_bao_fits_agree_within_half_sigma": true
+ },
+ "all_checks_pass": true
+}
