@@ -45,3 +45,18 @@ Parallel `6fdfcfefb` computed the two-loop single-(3,2,1/6) threshold independen
 ## Sources
 
 AxionLimits (O'Hare), github.com/cajohare/AxionLimits; arXiv:1705.05370.
+
+## Addendum, Pass 12612: the ceiling from the measured top mass
+
+`pq_mass_ceiling.py`. My one-loop crossing near 10⁸ GeV was too low. I replaced it with the NNLO fit of Buttazzo et al, arXiv:1307.3536, eq. (67), which I read for this: log₁₀ Λ_V/GeV = 9.5 + 0.7 (M_h − 125.15) − 1.0 (M_t − 173.34) + 0.3 (α_s − 0.1184)/0.0007. The same paper puts the MS̄ scale where λ vanishes at about 2Λ_V, which is the scale m_ρ must lie below. Inputs, from memory, not re-read: M_h = 125.20 ± 0.11, M_t = 172.57 ± 0.29, α_s = 0.1180 ± 0.0009.
+
+| | value |
+|---|---|
+| Λ_V, central | 1.4×10¹⁰ GeV |
+| λ = 0 at | 2.7×10¹⁰ GeV |
+| m_a ceiling, central | 120 μeV; 62 with Λ_V itself |
+| 68% range | 42 to 209 μeV; 209 is the cap set by y_Q ≤ 1 |
+
+Probability over inputs that the ceiling reaches the low end of a post-inflation window: 40 μeV, 0.85; 95 μeV, 0.59; 160 μeV, 0.45; 480 μeV, 0.00. Adding ±0.5 GeV for the top-mass interpretation changes these by under 0.08.
+
+**So the tension noted in Pass 12607 is mostly gone.** Model A fits the 40 to 180 μeV window and part of 95 to 450, and **a post-inflation axion near 500 μeV would exclude it**. The stability grid assumes a common y_Q and a simplified fermion RGE.

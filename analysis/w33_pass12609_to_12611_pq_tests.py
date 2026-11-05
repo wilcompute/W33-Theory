@@ -26,6 +26,10 @@ def main():
     checks["12610: B survives in at most 15 percent and the single Q in none"] = t["B"]["span10"]["frac_above_SK"] < 0.2 and t["Q"]["span10"]["frac_above_SK"] == 0
     checks["12610: Hyper-K at 1e35 yr would see Model A in about 80 percent of draws"] = 0.75 < 1 - t["A"]["span10"]["frac_above_HK"] < 0.86
     checks["12611: the m_a ceiling runs from about 28 to about 211 ueV as mu_I goes from 1e10 to 1e11"] = abs(c["1e+10"] - 28.5) < 0.1 and abs(c["1e+11"] - 211.1) < 0.2
+    m = load("pq_mass_ceiling.json")
+    res["mass_ceiling"] = m
+    checks["12612: central Lambda_V from Buttazzo eq. 67 is 1.36e10 GeV and the ceiling 120 ueV"] = abs(m["central"]["Lambda_V"] / 1.36e10 - 1) < 0.02 and abs(m["central"]["ceiling_2LV"] - 120.5) < 1
+    checks["12612: the ceiling reaches 40 ueV in 85 percent of input draws and 480 ueV in none"] = abs(m["Mt_0.29"]["P_ceiling_reaches"]["w40_180"] - 0.849) < 0.01 and m["Mt_0.29"]["P_ceiling_reaches"]["w480"] == 0
     res["checks"] = checks
     res["all_checks_pass"] = all(checks.values())
     OUT.write_text(json.dumps(res, indent=1, default=float), encoding="utf-8")
