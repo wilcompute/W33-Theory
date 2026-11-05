@@ -1,0 +1,152 @@
+{
+ "branches": {
+  "V_fixed": {
+   "dlnrho_dphi": 0.8164965809277261,
+   "beta": 0.4082482904638631,
+   "dlnalpha_dphi": 0.0,
+   "c_prime_mKK": 1.2247448713915892,
+   "gamma_minus_1": -0.5000000000000001
+  },
+  "Vrho_fixed": {
+   "dlnrho_dphi": 0.9258200997725514,
+   "beta": 0.0,
+   "dlnalpha_dphi": 0.9258200997725514,
+   "c_prime_mKK": 0.9258200997725514,
+   "gamma_minus_1": 0.0
+  }
+ },
+ "beta_ratio_to_cassini_V_fixed": 163.29931618554522,
+ "alpha_ratio_to_clock_Vrho_fixed": 9258200.997725515,
+ "best_mix": {
+  "dlnV_over_dlnrho": -1e-05,
+  "max_violation": 163.2982275170868,
+  "dlnrho_dphi_allowed": 0.005000050000500004
+ },
+ "max_dlnmKK_allowed_over_cprime": 0.005000050000500004,
+ "control_D3": {
+  "beta": 0.0,
+  "dlnalpha": 0.0,
+  "note": "three moduli (rho, V, g_s): g_s fixed by alpha, V rho fixed by Cassini, rho free"
+ },
+ "scales": {
+  "10.0": {
+   "M11_GeV": 737095482.8835622,
+   "V_inv6_GeV": 365233819.39512557,
+   "rho_c_over_rho": 1.4135914413594724e-19,
+   "flux_unit_mass_GeV": 44433721.67824437,
+   "M5_GeV": 265054293.94261003
+  },
+  "15.0": {
+   "M11_GeV": 643912214.4924489,
+   "V_inv6_GeV": 319061129.68460727,
+   "rho_c_over_rho": 1.0787721707171206e-19,
+   "flux_unit_mass_GeV": 38816431.23364408,
+   "M5_GeV": 231546253.28273684
+  },
+  "30.0": {
+   "M11_GeV": 511073463.3302432,
+   "V_inv6_GeV": 253238986.45175385,
+   "rho_c_over_rho": 6.795838829636429e-20,
+   "flux_unit_mass_GeV": 30808621.886968948,
+   "M5_GeV": 183778383.02015582
+  }
+ },
+ "sm_couplings_at_compact_scale": {
+  "10.0": {
+   "inv_alpha1": 49.07943908678312,
+   "inv_alpha2": 37.2622218435415,
+   "inv_alpha3": 25.412119293751843,
+   "spread": 1.9313398665986286
+  },
+  "15.0": {
+   "inv_alpha1": 49.16763251426562,
+   "inv_alpha2": 37.194104968656646,
+   "inv_alpha3": 25.261545149269537,
+   "spread": 1.9463430373611708
+  },
+  "30.0": {
+   "inv_alpha1": 49.31840017436993,
+   "inv_alpha2": 37.07765840190941,
+   "inv_alpha3": 25.004136949091446,
+   "spread": 1.972409616647935
+  }
+ },
+ "mode_sums_over_S": {
+  "gravity": 8.0,
+  "vector": 4.0,
+  "hyper": -4.0
+ },
+ "S_half": 1.9374999999999847,
+ "identity": "net/S = 8 + 4 n_V - 4 n_H in units where negative V_C is positive = -4 (n_H - n_V - 2)",
+ "hodge": {
+  "Tian-Yau/Z3": {
+   "h11": 6,
+   "h21": 9,
+   "chi": -6,
+   "net": 12,
+   "n_V": 5,
+   "n_H": 10,
+   "generations_standard_embedding": 3,
+   "V_C_sign": "positive",
+   "R_micron_at_eps": 16.389360107387034,
+   "massless_bosons": 11,
+   "massless_fermions": 20,
+   "net_massless_bosons_minus_fermions": -9
+  },
+  "mirror": {
+   "h11": 9,
+   "h21": 6,
+   "chi": 6,
+   "net": -12,
+   "n_V": 8,
+   "n_H": 7,
+   "generations_standard_embedding": 3,
+   "V_C_sign": "negative",
+   "R_micron_at_eps": 16.389360107387034,
+   "massless_bosons": 14,
+   "massless_fermions": 14,
+   "net_massless_bosons_minus_fermions": 0
+  },
+  "minimal": {
+   "h11": 1,
+   "h21": 4,
+   "chi": -6,
+   "net": 12,
+   "n_V": 0,
+   "n_H": 5,
+   "generations_standard_embedding": 3,
+   "V_C_sign": "positive",
+   "R_micron_at_eps": 16.389360107387034,
+   "massless_bosons": 6,
+   "massless_fermions": 10,
+   "net_massless_bosons_minus_fermions": -4
+  },
+  "minimal mirror": {
+   "h11": 4,
+   "h21": 1,
+   "chi": 6,
+   "net": -12,
+   "n_V": 3,
+   "n_H": 2,
+   "generations_standard_embedding": 3,
+   "V_C_sign": "negative",
+   "R_micron_at_eps": 16.389360107387034,
+   "massless_bosons": 9,
+   "massless_fermions": 4,
+   "net_massless_bosons_minus_fermions": 5
+  },
+  "Schoen/Z3xZ3 like": {
+   "h11": 3,
+   "h21": 3,
+   "chi": 0,
+   "net": 0,
+   "n_V": 2,
+   "n_H": 4,
+   "generations_standard_embedding": 0,
+   "V_C_sign": "zero",
+   "massless_bosons": 8,
+   "massless_fermions": 8,
+   "net_massless_bosons_minus_fermions": 0
+  }
+ }
+}

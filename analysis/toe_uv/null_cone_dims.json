@@ -1,0 +1,1780 @@
+{
+ "rows": [
+  {
+   "q": 3,
+   "d": 2,
+   "signature": [
+    2,
+    0
+   ],
+   "degree": 0,
+   "spectrum": {
+    "0": 9
+   },
+   "L": [
+    0
+   ],
+   "intrinsic": [],
+   "gcd": 1,
+   "clock_order": 1,
+   "fixed_dim": 9,
+   "n_levels": 1,
+   "witt": 0
+  },
+  {
+   "q": 3,
+   "d": 2,
+   "signature": [
+    1,
+    1
+   ],
+   "degree": 4,
+   "spectrum": {
+    "4": 1,
+    "1": 4,
+    "-2": 4
+   },
+   "L": [
+    0,
+    3,
+    6
+   ],
+   "intrinsic": [
+    1,
+    2
+   ],
+   "gcd": 3,
+   "clock_order": 1,
+   "fixed_dim": 9,
+   "n_levels": 3,
+   "srg": [
+    9,
+    4,
+    1,
+    2
+   ],
+   "witt": 1
+  },
+  {
+   "q": 3,
+   "d": 2,
+   "signature": [
+    0,
+    2
+   ],
+   "degree": 0,
+   "spectrum": {
+    "0": 9
+   },
+   "L": [
+    0
+   ],
+   "intrinsic": [],
+   "gcd": 1,
+   "clock_order": 1,
+   "fixed_dim": 9,
+   "n_levels": 1,
+   "witt": 0
+  },
+  {
+   "q": 3,
+   "d": 3,
+   "signature": [
+    3,
+    0
+   ],
+   "degree": 8,
+   "spectrum": {
+    "8": 1,
+    "2": 12,
+    "-1": 8,
+    "-4": 6
+   },
+   "L": [
+    0,
+    6,
+    9,
+    12
+   ],
+   "intrinsic": [
+    2,
+    3,
+    4
+   ],
+   "gcd": 3,
+   "clock_order": 3,
+   "fixed_dim": 9,
+   "n_levels": 4,
+   "witt": 1
+  },
+  {
+   "q": 3,
+   "d": 3,
+   "signature": [
+    2,
+    1
+   ],
+   "degree": 8,
+   "spectrum": {
+    "8": 1,
+    "2": 12,
+    "-1": 8,
+    "-4": 6
+   },
+   "L": [
+    0,
+    6,
+    9,
+    12
+   ],
+   "intrinsic": [
+    2,
+    3,
+    4
+   ],
+   "gcd": 3,
+   "clock_order": 3,
+   "fixed_dim": 9,
+   "n_levels": 4,
+   "witt": 1
+  },
+  {
+   "q": 3,
+   "d": 3,
+   "signature": [
+    1,
+    2
+   ],
+   "degree": 8,
+   "spectrum": {
+    "8": 1,
+    "2": 12,
+    "-1": 8,
+    "-4": 6
+   },
+   "L": [
+    0,
+    6,
+    9,
+    12
+   ],
+   "intrinsic": [
+    2,
+    3,
+    4
+   ],
+   "gcd": 3,
+   "clock_order": 3,
+   "fixed_dim": 9,
+   "n_levels": 4,
+   "witt": 1
+  },
+  {
+   "q": 3,
+   "d": 3,
+   "signature": [
+    0,
+    3
+   ],
+   "degree": 8,
+   "spectrum": {
+    "8": 1,
+    "2": 12,
+    "-1": 8,
+    "-4": 6
+   },
+   "L": [
+    0,
+    6,
+    9,
+    12
+   ],
+   "intrinsic": [
+    2,
+    3,
+    4
+   ],
+   "gcd": 3,
+   "clock_order": 3,
+   "fixed_dim": 9,
+   "n_levels": 4,
+   "witt": 1
+  },
+  {
+   "q": 3,
+   "d": 4,
+   "signature": [
+    4,
+    0
+   ],
+   "degree": 32,
+   "spectrum": {
+    "32": 1,
+    "5": 32,
+    "-4": 48
+   },
+   "L": [
+    0,
+    27,
+    36
+   ],
+   "intrinsic": [
+    3,
+    4
+   ],
+   "gcd": 9,
+   "clock_order": 3,
+   "fixed_dim": 33,
+   "n_levels": 3,
+   "srg": [
+    81,
+    32,
+    13,
+    12
+   ],
+   "witt": 2
+  },
+  {
+   "q": 3,
+   "d": 4,
+   "signature": [
+    3,
+    1
+   ],
+   "degree": 20,
+   "spectrum": {
+    "20": 1,
+    "2": 60,
+    "-7": 20
+   },
+   "L": [
+    0,
+    18,
+    27
+   ],
+   "intrinsic": [
+    2,
+    3
+   ],
+   "gcd": 9,
+   "clock_order": 3,
+   "fixed_dim": 21,
+   "n_levels": 3,
+   "srg": [
+    81,
+    20,
+    1,
+    6
+   ],
+   "witt": 1
+  },
+  {
+   "q": 3,
+   "d": 4,
+   "signature": [
+    2,
+    2
+   ],
+   "degree": 32,
+   "spectrum": {
+    "32": 1,
+    "5": 32,
+    "-4": 48
+   },
+   "L": [
+    0,
+    27,
+    36
+   ],
+   "intrinsic": [
+    3,
+    4
+   ],
+   "gcd": 9,
+   "clock_order": 3,
+   "fixed_dim": 33,
+   "n_levels": 3,
+   "srg": [
+    81,
+    32,
+    13,
+    12
+   ],
+   "witt": 2
+  },
+  {
+   "q": 3,
+   "d": 4,
+   "signature": [
+    1,
+    3
+   ],
+   "degree": 20,
+   "spectrum": {
+    "20": 1,
+    "2": 60,
+    "-7": 20
+   },
+   "L": [
+    0,
+    18,
+    27
+   ],
+   "intrinsic": [
+    2,
+    3
+   ],
+   "gcd": 9,
+   "clock_order": 3,
+   "fixed_dim": 21,
+   "n_levels": 3,
+   "srg": [
+    81,
+    20,
+    1,
+    6
+   ],
+   "witt": 1
+  },
+  {
+   "q": 3,
+   "d": 4,
+   "signature": [
+    0,
+    4
+   ],
+   "degree": 32,
+   "spectrum": {
+    "32": 1,
+    "5": 32,
+    "-4": 48
+   },
+   "L": [
+    0,
+    27,
+    36
+   ],
+   "intrinsic": [
+    3,
+    4
+   ],
+   "gcd": 9,
+   "clock_order": 3,
+   "fixed_dim": 33,
+   "n_levels": 3,
+   "srg": [
+    81,
+    32,
+    13,
+    12
+   ],
+   "witt": 2
+  },
+  {
+   "q": 3,
+   "d": 5,
+   "signature": [
+    1,
+    4
+   ],
+   "degree": 80,
+   "spectrum": {
+    "80": 1,
+    "8": 90,
+    "-1": 80,
+    "-10": 72
+   },
+   "L": [
+    0,
+    72,
+    81,
+    90
+   ],
+   "intrinsic": [
+    8,
+    9,
+    10
+   ],
+   "gcd": 9,
+   "clock_order": 9,
+   "fixed_dim": 81,
+   "n_levels": 4
+  },
+  {
+   "q": 3,
+   "d": 6,
+   "signature": [
+    1,
+    5
+   ],
+   "degree": 260,
+   "spectrum": {
+    "260": 1,
+    "17": 260,
+    "-10": 468
+   },
+   "L": [
+    0,
+    243,
+    270
+   ],
+   "intrinsic": [
+    9,
+    10
+   ],
+   "gcd": 27,
+   "clock_order": 9,
+   "fixed_dim": 261,
+   "n_levels": 3,
+   "srg": [
+    729,
+    260,
+    97,
+    90
+   ]
+  },
+  {
+   "q": 3,
+   "d": 7,
+   "signature": [
+    1,
+    6
+   ],
+   "degree": 728,
+   "spectrum": {
+    "728": 1,
+    "26": 756,
+    "-1": 728,
+    "-28": 702
+   },
+   "L": [
+    0,
+    702,
+    729,
+    756
+   ],
+   "intrinsic": [
+    26,
+    27,
+    28
+   ],
+   "gcd": 27,
+   "clock_order": 27,
+   "fixed_dim": 729,
+   "n_levels": 4
+  },
+  {
+   "q": 5,
+   "d": 2,
+   "signature": [
+    2,
+    0
+   ],
+   "degree": 8,
+   "spectrum": {
+    "8": 1,
+    "3": 8,
+    "-2": 16
+   },
+   "L": [
+    0,
+    5,
+    10
+   ],
+   "intrinsic": [
+    1,
+    2
+   ],
+   "gcd": 5,
+   "clock_order": 1,
+   "fixed_dim": 25,
+   "n_levels": 3,
+   "srg": [
+    25,
+    8,
+    3,
+    2
+   ],
+   "witt": 1
+  },
+  {
+   "q": 5,
+   "d": 2,
+   "signature": [
+    1,
+    1
+   ],
+   "degree": 8,
+   "spectrum": {
+    "8": 1,
+    "3": 8,
+    "-2": 16
+   },
+   "L": [
+    0,
+    5,
+    10
+   ],
+   "intrinsic": [
+    1,
+    2
+   ],
+   "gcd": 5,
+   "clock_order": 1,
+   "fixed_dim": 25,
+   "n_levels": 3,
+   "srg": [
+    25,
+    8,
+    3,
+    2
+   ],
+   "witt": 1
+  },
+  {
+   "q": 5,
+   "d": 2,
+   "signature": [
+    0,
+    2
+   ],
+   "degree": 8,
+   "spectrum": {
+    "8": 1,
+    "3": 8,
+    "-2": 16
+   },
+   "L": [
+    0,
+    5,
+    10
+   ],
+   "intrinsic": [
+    1,
+    2
+   ],
+   "gcd": 5,
+   "clock_order": 1,
+   "fixed_dim": 25,
+   "n_levels": 3,
+   "srg": [
+    25,
+    8,
+    3,
+    2
+   ],
+   "witt": 1
+  },
+  {
+   "q": 5,
+   "d": 3,
+   "signature": [
+    3,
+    0
+   ],
+   "degree": 24,
+   "spectrum": {
+    "24": 1,
+    "4": 60,
+    "-1": 24,
+    "-6": 40
+   },
+   "L": [
+    0,
+    20,
+    25,
+    30
+   ],
+   "intrinsic": [
+    4,
+    5,
+    6
+   ],
+   "gcd": 5,
+   "clock_order": 5,
+   "fixed_dim": 25,
+   "n_levels": 4,
+   "witt": 1
+  },
+  {
+   "q": 5,
+   "d": 3,
+   "signature": [
+    2,
+    1
+   ],
+   "degree": 24,
+   "spectrum": {
+    "24": 1,
+    "4": 60,
+    "-1": 24,
+    "-6": 40
+   },
+   "L": [
+    0,
+    20,
+    25,
+    30
+   ],
+   "intrinsic": [
+    4,
+    5,
+    6
+   ],
+   "gcd": 5,
+   "clock_order": 5,
+   "fixed_dim": 25,
+   "n_levels": 4,
+   "witt": 1
+  },
+  {
+   "q": 5,
+   "d": 3,
+   "signature": [
+    1,
+    2
+   ],
+   "degree": 24,
+   "spectrum": {
+    "24": 1,
+    "4": 60,
+    "-1": 24,
+    "-6": 40
+   },
+   "L": [
+    0,
+    20,
+    25,
+    30
+   ],
+   "intrinsic": [
+    4,
+    5,
+    6
+   ],
+   "gcd": 5,
+   "clock_order": 5,
+   "fixed_dim": 25,
+   "n_levels": 4,
+   "witt": 1
+  },
+  {
+   "q": 5,
+   "d": 3,
+   "signature": [
+    0,
+    3
+   ],
+   "degree": 24,
+   "spectrum": {
+    "24": 1,
+    "4": 60,
+    "-1": 24,
+    "-6": 40
+   },
+   "L": [
+    0,
+    20,
+    25,
+    30
+   ],
+   "intrinsic": [
+    4,
+    5,
+    6
+   ],
+   "gcd": 5,
+   "clock_order": 5,
+   "fixed_dim": 25,
+   "n_levels": 4,
+   "witt": 1
+  },
+  {
+   "q": 5,
+   "d": 4,
+   "signature": [
+    4,
+    0
+   ],
+   "degree": 144,
+   "spectrum": {
+    "144": 1,
+    "19": 144,
+    "-6": 480
+   },
+   "L": [
+    0,
+    125,
+    150
+   ],
+   "intrinsic": [
+    5,
+    6
+   ],
+   "gcd": 25,
+   "clock_order": 5,
+   "fixed_dim": 145,
+   "n_levels": 3,
+   "srg": [
+    625,
+    144,
+    43,
+    30
+   ],
+   "witt": 2
+  },
+  {
+   "q": 5,
+   "d": 4,
+   "signature": [
+    3,
+    1
+   ],
+   "degree": 144,
+   "spectrum": {
+    "144": 1,
+    "19": 144,
+    "-6": 480
+   },
+   "L": [
+    0,
+    125,
+    150
+   ],
+   "intrinsic": [
+    5,
+    6
+   ],
+   "gcd": 25,
+   "clock_order": 5,
+   "fixed_dim": 145,
+   "n_levels": 3,
+   "srg": [
+    625,
+    144,
+    43,
+    30
+   ],
+   "witt": 2
+  },
+  {
+   "q": 5,
+   "d": 4,
+   "signature": [
+    2,
+    2
+   ],
+   "degree": 144,
+   "spectrum": {
+    "144": 1,
+    "19": 144,
+    "-6": 480
+   },
+   "L": [
+    0,
+    125,
+    150
+   ],
+   "intrinsic": [
+    5,
+    6
+   ],
+   "gcd": 25,
+   "clock_order": 5,
+   "fixed_dim": 145,
+   "n_levels": 3,
+   "srg": [
+    625,
+    144,
+    43,
+    30
+   ],
+   "witt": 2
+  },
+  {
+   "q": 5,
+   "d": 4,
+   "signature": [
+    1,
+    3
+   ],
+   "degree": 144,
+   "spectrum": {
+    "144": 1,
+    "19": 144,
+    "-6": 480
+   },
+   "L": [
+    0,
+    125,
+    150
+   ],
+   "intrinsic": [
+    5,
+    6
+   ],
+   "gcd": 25,
+   "clock_order": 5,
+   "fixed_dim": 145,
+   "n_levels": 3,
+   "srg": [
+    625,
+    144,
+    43,
+    30
+   ],
+   "witt": 2
+  },
+  {
+   "q": 5,
+   "d": 4,
+   "signature": [
+    0,
+    4
+   ],
+   "degree": 144,
+   "spectrum": {
+    "144": 1,
+    "19": 144,
+    "-6": 480
+   },
+   "L": [
+    0,
+    125,
+    150
+   ],
+   "intrinsic": [
+    5,
+    6
+   ],
+   "gcd": 25,
+   "clock_order": 5,
+   "fixed_dim": 145,
+   "n_levels": 3,
+   "srg": [
+    625,
+    144,
+    43,
+    30
+   ],
+   "witt": 2
+  },
+  {
+   "q": 5,
+   "d": 5,
+   "signature": [
+    1,
+    4
+   ],
+   "degree": 624,
+   "spectrum": {
+    "624": 1,
+    "24": 1300,
+    "-1": 624,
+    "-26": 1200
+   },
+   "L": [
+    0,
+    600,
+    625,
+    650
+   ],
+   "intrinsic": [
+    24,
+    25,
+    26
+   ],
+   "gcd": 25,
+   "clock_order": 25,
+   "fixed_dim": 625,
+   "n_levels": 4
+  },
+  {
+   "q": 7,
+   "d": 2,
+   "signature": [
+    2,
+    0
+   ],
+   "degree": 0,
+   "spectrum": {
+    "0": 49
+   },
+   "L": [
+    0
+   ],
+   "intrinsic": [],
+   "gcd": 1,
+   "clock_order": 1,
+   "fixed_dim": 49,
+   "n_levels": 1,
+   "witt": 0
+  },
+  {
+   "q": 7,
+   "d": 2,
+   "signature": [
+    1,
+    1
+   ],
+   "degree": 12,
+   "spectrum": {
+    "12": 1,
+    "5": 12,
+    "-2": 36
+   },
+   "L": [
+    0,
+    7,
+    14
+   ],
+   "intrinsic": [
+    1,
+    2
+   ],
+   "gcd": 7,
+   "clock_order": 1,
+   "fixed_dim": 49,
+   "n_levels": 3,
+   "srg": [
+    49,
+    12,
+    5,
+    2
+   ],
+   "witt": 1
+  },
+  {
+   "q": 7,
+   "d": 2,
+   "signature": [
+    0,
+    2
+   ],
+   "degree": 0,
+   "spectrum": {
+    "0": 49
+   },
+   "L": [
+    0
+   ],
+   "intrinsic": [],
+   "gcd": 1,
+   "clock_order": 1,
+   "fixed_dim": 49,
+   "n_levels": 1,
+   "witt": 0
+  },
+  {
+   "q": 7,
+   "d": 3,
+   "signature": [
+    3,
+    0
+   ],
+   "degree": 48,
+   "spectrum": {
+    "48": 1,
+    "6": 168,
+    "-1": 48,
+    "-8": 126
+   },
+   "L": [
+    0,
+    42,
+    49,
+    56
+   ],
+   "intrinsic": [
+    6,
+    7,
+    8
+   ],
+   "gcd": 7,
+   "clock_order": 7,
+   "fixed_dim": 49,
+   "n_levels": 4,
+   "witt": 1
+  },
+  {
+   "q": 7,
+   "d": 3,
+   "signature": [
+    2,
+    1
+   ],
+   "degree": 48,
+   "spectrum": {
+    "48": 1,
+    "6": 168,
+    "-1": 48,
+    "-8": 126
+   },
+   "L": [
+    0,
+    42,
+    49,
+    56
+   ],
+   "intrinsic": [
+    6,
+    7,
+    8
+   ],
+   "gcd": 7,
+   "clock_order": 7,
+   "fixed_dim": 49,
+   "n_levels": 4,
+   "witt": 1
+  },
+  {
+   "q": 7,
+   "d": 3,
+   "signature": [
+    1,
+    2
+   ],
+   "degree": 48,
+   "spectrum": {
+    "48": 1,
+    "6": 168,
+    "-1": 48,
+    "-8": 126
+   },
+   "L": [
+    0,
+    42,
+    49,
+    56
+   ],
+   "intrinsic": [
+    6,
+    7,
+    8
+   ],
+   "gcd": 7,
+   "clock_order": 7,
+   "fixed_dim": 49,
+   "n_levels": 4,
+   "witt": 1
+  },
+  {
+   "q": 7,
+   "d": 3,
+   "signature": [
+    0,
+    3
+   ],
+   "degree": 48,
+   "spectrum": {
+    "48": 1,
+    "6": 168,
+    "-1": 48,
+    "-8": 126
+   },
+   "L": [
+    0,
+    42,
+    49,
+    56
+   ],
+   "intrinsic": [
+    6,
+    7,
+    8
+   ],
+   "gcd": 7,
+   "clock_order": 7,
+   "fixed_dim": 49,
+   "n_levels": 4,
+   "witt": 1
+  },
+  {
+   "q": 7,
+   "d": 4,
+   "signature": [
+    4,
+    0
+   ],
+   "degree": 384,
+   "spectrum": {
+    "384": 1,
+    "41": 384,
+    "-8": 2016
+   },
+   "L": [
+    0,
+    343,
+    392
+   ],
+   "intrinsic": [
+    7,
+    8
+   ],
+   "gcd": 49,
+   "clock_order": 7,
+   "fixed_dim": 385,
+   "n_levels": 3,
+   "srg": [
+    2401,
+    384,
+    89,
+    56
+   ],
+   "witt": 2
+  },
+  {
+   "q": 7,
+   "d": 4,
+   "signature": [
+    3,
+    1
+   ],
+   "degree": 300,
+   "spectrum": {
+    "300": 1,
+    "6": 2100,
+    "-43": 300
+   },
+   "L": [
+    0,
+    294,
+    343
+   ],
+   "intrinsic": [
+    6,
+    7
+   ],
+   "gcd": 49,
+   "clock_order": 7,
+   "fixed_dim": 301,
+   "n_levels": 3,
+   "srg": [
+    2401,
+    300,
+    5,
+    42
+   ],
+   "witt": 1
+  },
+  {
+   "q": 7,
+   "d": 4,
+   "signature": [
+    2,
+    2
+   ],
+   "degree": 384,
+   "spectrum": {
+    "384": 1,
+    "41": 384,
+    "-8": 2016
+   },
+   "L": [
+    0,
+    343,
+    392
+   ],
+   "intrinsic": [
+    7,
+    8
+   ],
+   "gcd": 49,
+   "clock_order": 7,
+   "fixed_dim": 385,
+   "n_levels": 3,
+   "srg": [
+    2401,
+    384,
+    89,
+    56
+   ],
+   "witt": 2
+  },
+  {
+   "q": 7,
+   "d": 4,
+   "signature": [
+    1,
+    3
+   ],
+   "degree": 300,
+   "spectrum": {
+    "300": 1,
+    "6": 2100,
+    "-43": 300
+   },
+   "L": [
+    0,
+    294,
+    343
+   ],
+   "intrinsic": [
+    6,
+    7
+   ],
+   "gcd": 49,
+   "clock_order": 7,
+   "fixed_dim": 301,
+   "n_levels": 3,
+   "srg": [
+    2401,
+    300,
+    5,
+    42
+   ],
+   "witt": 1
+  },
+  {
+   "q": 7,
+   "d": 4,
+   "signature": [
+    0,
+    4
+   ],
+   "degree": 384,
+   "spectrum": {
+    "384": 1,
+    "41": 384,
+    "-8": 2016
+   },
+   "L": [
+    0,
+    343,
+    392
+   ],
+   "intrinsic": [
+    7,
+    8
+   ],
+   "gcd": 49,
+   "clock_order": 7,
+   "fixed_dim": 385,
+   "n_levels": 3,
+   "srg": [
+    2401,
+    384,
+    89,
+    56
+   ],
+   "witt": 2
+  },
+  {
+   "q": 11,
+   "d": 2,
+   "signature": [
+    2,
+    0
+   ],
+   "degree": 0,
+   "spectrum": {
+    "0": 121
+   },
+   "L": [
+    0
+   ],
+   "intrinsic": [],
+   "gcd": 1,
+   "clock_order": 1,
+   "fixed_dim": 121,
+   "n_levels": 1
+  },
+  {
+   "q": 11,
+   "d": 2,
+   "signature": [
+    1,
+    1
+   ],
+   "degree": 20,
+   "spectrum": {
+    "20": 1,
+    "9": 20,
+    "-2": 100
+   },
+   "L": [
+    0,
+    11,
+    22
+   ],
+   "intrinsic": [
+    1,
+    2
+   ],
+   "gcd": 11,
+   "clock_order": 1,
+   "fixed_dim": 121,
+   "n_levels": 3,
+   "srg": [
+    121,
+    20,
+    9,
+    2
+   ]
+  },
+  {
+   "q": 11,
+   "d": 2,
+   "signature": [
+    0,
+    2
+   ],
+   "degree": 0,
+   "spectrum": {
+    "0": 121
+   },
+   "L": [
+    0
+   ],
+   "intrinsic": [],
+   "gcd": 1,
+   "clock_order": 1,
+   "fixed_dim": 121,
+   "n_levels": 1
+  },
+  {
+   "q": 11,
+   "d": 3,
+   "signature": [
+    3,
+    0
+   ],
+   "degree": 120,
+   "spectrum": {
+    "120": 1,
+    "10": 660,
+    "-1": 120,
+    "-12": 550
+   },
+   "L": [
+    0,
+    110,
+    121,
+    132
+   ],
+   "intrinsic": [
+    10,
+    11,
+    12
+   ],
+   "gcd": 11,
+   "clock_order": 11,
+   "fixed_dim": 121,
+   "n_levels": 4
+  },
+  {
+   "q": 11,
+   "d": 3,
+   "signature": [
+    2,
+    1
+   ],
+   "degree": 120,
+   "spectrum": {
+    "120": 1,
+    "10": 660,
+    "-1": 120,
+    "-12": 550
+   },
+   "L": [
+    0,
+    110,
+    121,
+    132
+   ],
+   "intrinsic": [
+    10,
+    11,
+    12
+   ],
+   "gcd": 11,
+   "clock_order": 11,
+   "fixed_dim": 121,
+   "n_levels": 4
+  },
+  {
+   "q": 11,
+   "d": 3,
+   "signature": [
+    1,
+    2
+   ],
+   "degree": 120,
+   "spectrum": {
+    "120": 1,
+    "10": 660,
+    "-1": 120,
+    "-12": 550
+   },
+   "L": [
+    0,
+    110,
+    121,
+    132
+   ],
+   "intrinsic": [
+    10,
+    11,
+    12
+   ],
+   "gcd": 11,
+   "clock_order": 11,
+   "fixed_dim": 121,
+   "n_levels": 4
+  },
+  {
+   "q": 11,
+   "d": 3,
+   "signature": [
+    0,
+    3
+   ],
+   "degree": 120,
+   "spectrum": {
+    "120": 1,
+    "10": 660,
+    "-1": 120,
+    "-12": 550
+   },
+   "L": [
+    0,
+    110,
+    121,
+    132
+   ],
+   "intrinsic": [
+    10,
+    11,
+    12
+   ],
+   "gcd": 11,
+   "clock_order": 11,
+   "fixed_dim": 121,
+   "n_levels": 4
+  },
+  {
+   "q": 13,
+   "d": 2,
+   "signature": [
+    2,
+    0
+   ],
+   "degree": 24,
+   "spectrum": {
+    "24": 1,
+    "11": 24,
+    "-2": 144
+   },
+   "L": [
+    0,
+    13,
+    26
+   ],
+   "intrinsic": [
+    1,
+    2
+   ],
+   "gcd": 13,
+   "clock_order": 1,
+   "fixed_dim": 169,
+   "n_levels": 3,
+   "srg": [
+    169,
+    24,
+    11,
+    2
+   ]
+  },
+  {
+   "q": 13,
+   "d": 2,
+   "signature": [
+    1,
+    1
+   ],
+   "degree": 24,
+   "spectrum": {
+    "24": 1,
+    "11": 24,
+    "-2": 144
+   },
+   "L": [
+    0,
+    13,
+    26
+   ],
+   "intrinsic": [
+    1,
+    2
+   ],
+   "gcd": 13,
+   "clock_order": 1,
+   "fixed_dim": 169,
+   "n_levels": 3,
+   "srg": [
+    169,
+    24,
+    11,
+    2
+   ]
+  },
+  {
+   "q": 13,
+   "d": 2,
+   "signature": [
+    0,
+    2
+   ],
+   "degree": 24,
+   "spectrum": {
+    "24": 1,
+    "11": 24,
+    "-2": 144
+   },
+   "L": [
+    0,
+    13,
+    26
+   ],
+   "intrinsic": [
+    1,
+    2
+   ],
+   "gcd": 13,
+   "clock_order": 1,
+   "fixed_dim": 169,
+   "n_levels": 3,
+   "srg": [
+    169,
+    24,
+    11,
+    2
+   ]
+  },
+  {
+   "q": 13,
+   "d": 3,
+   "signature": [
+    3,
+    0
+   ],
+   "degree": 168,
+   "spectrum": {
+    "168": 1,
+    "12": 1092,
+    "-1": 168,
+    "-14": 936
+   },
+   "L": [
+    0,
+    156,
+    169,
+    182
+   ],
+   "intrinsic": [
+    12,
+    13,
+    14
+   ],
+   "gcd": 13,
+   "clock_order": 13,
+   "fixed_dim": 169,
+   "n_levels": 4
+  },
+  {
+   "q": 13,
+   "d": 3,
+   "signature": [
+    2,
+    1
+   ],
+   "degree": 168,
+   "spectrum": {
+    "168": 1,
+    "12": 1092,
+    "-1": 168,
+    "-14": 936
+   },
+   "L": [
+    0,
+    156,
+    169,
+    182
+   ],
+   "intrinsic": [
+    12,
+    13,
+    14
+   ],
+   "gcd": 13,
+   "clock_order": 13,
+   "fixed_dim": 169,
+   "n_levels": 4
+  },
+  {
+   "q": 13,
+   "d": 3,
+   "signature": [
+    1,
+    2
+   ],
+   "degree": 168,
+   "spectrum": {
+    "168": 1,
+    "12": 1092,
+    "-1": 168,
+    "-14": 936
+   },
+   "L": [
+    0,
+    156,
+    169,
+    182
+   ],
+   "intrinsic": [
+    12,
+    13,
+    14
+   ],
+   "gcd": 13,
+   "clock_order": 13,
+   "fixed_dim": 169,
+   "n_levels": 4
+  },
+  {
+   "q": 13,
+   "d": 3,
+   "signature": [
+    0,
+    3
+   ],
+   "degree": 168,
+   "spectrum": {
+    "168": 1,
+    "12": 1092,
+    "-1": 168,
+    "-14": 936
+   },
+   "L": [
+    0,
+    156,
+    169,
+    182
+   ],
+   "intrinsic": [
+    12,
+    13,
+    14
+   ],
+   "gcd": 13,
+   "clock_order": 13,
+   "fixed_dim": 169,
+   "n_levels": 4
+  }
+ ],
+ "control_d3_q3": true,
+ "control_d3_q5": true,
+ "dense_q3_d4": {
+  "-7": 20,
+  "2": 60,
+  "20": 1
+ },
+ "lambda_check": 1,
+ "d4_pattern": {
+  "3": {
+   "(4, 0)": {
+    "k": 32,
+    "witt": 2
+   },
+   "(3, 1)": {
+    "k": 20,
+    "witt": 1
+   },
+   "(2, 2)": {
+    "k": 32,
+    "witt": 2
+   },
+   "(1, 3)": {
+    "k": 20,
+    "witt": 1
+   },
+   "(0, 4)": {
+    "k": 32,
+    "witt": 2
+   }
+  },
+  "5": {
+   "(4, 0)": {
+    "k": 144,
+    "witt": 2
+   },
+   "(3, 1)": {
+    "k": 144,
+    "witt": 2
+   },
+   "(2, 2)": {
+    "k": 144,
+    "witt": 2
+   },
+   "(1, 3)": {
+    "k": 144,
+    "witt": 2
+   },
+   "(0, 4)": {
+    "k": 144,
+    "witt": 2
+   }
+  },
+  "7": {
+   "(4, 0)": {
+    "k": 384,
+    "witt": 2
+   },
+   "(3, 1)": {
+    "k": 300,
+    "witt": 1
+   },
+   "(2, 2)": {
+    "k": 384,
+    "witt": 2
+   },
+   "(1, 3)": {
+    "k": 300,
+    "witt": 1
+   },
+   "(0, 4)": {
+    "k": 384,
+    "witt": 2
+   }
+  }
+ },
+ "order_by_dim": {
+  "3": {
+   "2": 1,
+   "3": 3,
+   "4": 3,
+   "5": 9,
+   "6": 9,
+   "7": 27
+  },
+  "5": {
+   "2": 1,
+   "3": 5,
+   "4": 5,
+   "5": 25
+  },
+  "7": {
+   "2": 1,
+   "3": 7,
+   "4": 7
+  },
+  "11": {
+   "2": 1,
+   "3": 11
+  },
+  "13": {
+   "2": 1,
+   "3": 13
+  }
+ }
+}

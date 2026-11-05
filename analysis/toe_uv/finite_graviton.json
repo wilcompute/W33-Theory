@@ -1,0 +1,208 @@
+{
+ "control_Q": {
+  "rank_null": 4,
+  "gauge_null": 4,
+  "rank_nonnull": 6,
+  "gauge_nonnull": 4,
+  "massive_kernel": 5,
+  "kill_gauge": true,
+  "bianchi": true
+ },
+ "rows": {
+  "3": {
+   "census": {
+    "('nonnull', 6, 4, 0)": 60,
+    "('null', 4, 4, 2)": 20
+   },
+   "bad_gauge": 0,
+   "bad_bianchi": 0,
+   "massive_kernel": {
+    "5": 60
+   },
+   "rotation_group_order": 4,
+   "cyclic": true,
+   "anisotropic_transverse": true,
+   "helicity": {
+    "SO2": {
+     "order": 4,
+     "photon_pm1_distinct": true,
+     "graviton_pm2_distinct": false,
+     "graviton_same_as_scalar": false,
+     "gravitino_note": null
+    },
+    "Omega": {
+     "order": 2,
+     "photon_pm1_distinct": false,
+     "graviton_pm2_distinct": false,
+     "graviton_same_as_scalar": true,
+     "gravitino_note": null
+    }
+   },
+   "generator": [
+    0,
+    1
+   ],
+   "tt_rotation": [
+    2,
+    0
+   ],
+   "tt_is_scalar": true
+  },
+  "5": {
+   "census": {
+    "('nonnull', 6, 4, 0)": 380,
+    "('null', 4, 4, 2)": 119
+   },
+   "bad_gauge": 0,
+   "bad_bianchi": 0,
+   "massive_kernel": {
+    "5": 305
+   },
+   "rotation_group_order": 4,
+   "cyclic": true,
+   "anisotropic_transverse": false,
+   "helicity": {
+    "SO2": {
+     "order": 4,
+     "photon_pm1_distinct": true,
+     "graviton_pm2_distinct": false,
+     "graviton_same_as_scalar": false,
+     "gravitino_note": null
+    },
+    "Omega": {
+     "order": 2,
+     "photon_pm1_distinct": false,
+     "graviton_pm2_distinct": false,
+     "graviton_same_as_scalar": true,
+     "gravitino_note": null
+    }
+   },
+   "generator": [
+    0,
+    1
+   ],
+   "tt_rotation": [
+    4,
+    0
+   ],
+   "tt_is_scalar": true
+  },
+  "7": {
+   "census": {
+    "('nonnull', 6, 4, 0)": 440,
+    "('null', 4, 4, 2)": 60
+   },
+   "bad_gauge": 0,
+   "bad_bianchi": 0,
+   "massive_kernel": {
+    "5": 350
+   },
+   "rotation_group_order": 8,
+   "cyclic": true,
+   "anisotropic_transverse": true,
+   "helicity": {
+    "SO2": {
+     "order": 8,
+     "photon_pm1_distinct": true,
+     "graviton_pm2_distinct": true,
+     "graviton_same_as_scalar": false,
+     "gravitino_note": null
+    },
+    "Omega": {
+     "order": 4,
+     "photon_pm1_distinct": true,
+     "graviton_pm2_distinct": false,
+     "graviton_same_as_scalar": false,
+     "gravitino_note": null
+    }
+   },
+   "generator": [
+    2,
+    2
+   ],
+   "tt_rotation": [
+    0,
+    1
+   ],
+   "tt_is_scalar": false
+  },
+  "11": {
+   "census": {
+    "('nonnull', 6, 4, 0)": 457,
+    "('null', 4, 4, 2)": 44
+   },
+   "bad_gauge": 0,
+   "bad_bianchi": 0,
+   "massive_kernel": {
+    "5": 362
+   },
+   "rotation_group_order": 12,
+   "cyclic": true,
+   "anisotropic_transverse": true,
+   "helicity": {
+    "SO2": {
+     "order": 12,
+     "photon_pm1_distinct": true,
+     "graviton_pm2_distinct": true,
+     "graviton_same_as_scalar": false,
+     "gravitino_note": null
+    },
+    "Omega": {
+     "order": 6,
+     "photon_pm1_distinct": true,
+     "graviton_pm2_distinct": true,
+     "graviton_same_as_scalar": false,
+     "gravitino_note": null
+    }
+   },
+   "generator": [
+    3,
+    5
+   ],
+   "tt_rotation": [
+    6,
+    8
+   ],
+   "tt_is_scalar": false
+  },
+  "13": {
+   "census": {
+    "('nonnull', 6, 4, 0)": 459,
+    "('null', 4, 4, 2)": 42
+   },
+   "bad_gauge": 0,
+   "bad_bianchi": 0,
+   "massive_kernel": {
+    "5": 366
+   },
+   "rotation_group_order": 12,
+   "cyclic": true,
+   "anisotropic_transverse": false,
+   "helicity": {
+    "SO2": {
+     "order": 12,
+     "photon_pm1_distinct": true,
+     "graviton_pm2_distinct": true,
+     "graviton_same_as_scalar": false,
+     "gravitino_note": null
+    },
+    "Omega": {
+     "order": 6,
+     "photon_pm1_distinct": true,
+     "graviton_pm2_distinct": true,
+     "graviton_same_as_scalar": false,
+     "gravitino_note": null
+    }
+   },
+   "generator": [
+    2,
+    6
+   ],
+   "tt_rotation": [
+    7,
+    11
+   ],
+   "tt_is_scalar": false
+  }
+ }
+}
