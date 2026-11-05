@@ -1,0 +1,50 @@
+{
+ "control: single (3,1,-1/3)": {
+  "EN": "2/3",
+  "NDW": "1",
+  "g_over_KSVZ": 0.6527777777777778,
+  "above_GUT_line": true
+ },
+ "control: single (3,1,2/3)": {
+  "EN": "8/3",
+  "NDW": "1",
+  "g_over_KSVZ": 0.38888888888888884,
+  "above_GUT_line": false
+ },
+ "control: SU(5) 5 complete": {
+  "EN": "8/3",
+  "NDW": "1",
+  "g_over_KSVZ": 0.38888888888888884,
+  "above_GUT_line": false
+ },
+ "control: SU(5) 10 complete": {
+  "EN": "8/3",
+  "NDW": "3",
+  "g_over_KSVZ": 0.38888888888888884,
+  "above_GUT_line": false
+ },
+ "Model A, N_DW = 1": {
+  "EN": "2/3",
+  "NDW": "1",
+  "g_over_KSVZ": 0.6527777777777778,
+  "above_GUT_line": true
+ },
+ "Model A, all +": {
+  "EN": "22/15",
+  "NDW": "5",
+  "g_over_KSVZ": 0.23611111111111113,
+  "above_GUT_line": false
+ },
+ "trinification 3 pairs, N_DW = 1 (a)": {
+  "EN": "8/3",
+  "NDW": "1",
+  "g_over_KSVZ": 0.38888888888888884,
+  "above_GUT_line": false
+ },
+ "trinification 3 pairs, N_DW = 1 (b)": {
+  "EN": "-4/3",
+  "NDW": "1",
+  "g_over_KSVZ": 1.6944444444444444,
+  "above_GUT_line": true
+ }
+}
