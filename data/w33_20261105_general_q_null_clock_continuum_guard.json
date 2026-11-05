@@ -1,0 +1,135 @@
+{
+  "status": "FORMULA_PROVED_BY_GAUSS_SUM; TESTED_FIVE_ODD_PRIMES",
+  "graph": "parabolic affine polar Cayley graph VO(3,q) from Sym_2(F_q)",
+  "known_prior_art": true,
+  "new_programmatic_consequences": [
+    "q-th-order finite-null spectral clock for all odd prime-power q",
+    "random-walk operator norm off constants =1/(q-1)",
+    "normalized Laplacian spectral variance=q^-2-q^-4",
+    "the Hamming distance-three product degree equality holds only at q=3"
+  ],
+  "validation": "integer minimal polynomial q=3,5,7; FFT character eigenvalue census q=3,5,7,11,13",
+  "physical_boundary": "No continuous spacetime, Einstein field equations, selected clock or empirical TOE predicted",
+  "records": [
+    {
+      "q": 3,
+      "vertices": 27,
+      "degree": 8,
+      "edges": 108,
+      "adjacency_spectrum": {
+        "-4": 6,
+        "-1": 8,
+        "2": 12,
+        "8": 1
+      },
+      "laplacian_spectrum": {
+        "12": 6,
+        "9": 8,
+        "6": 12,
+        "0": 1
+      },
+      "exact_integer_polynomial_verified": true,
+      "canonical_clock_order": 3,
+      "clock_fixed_dimension": 9,
+      "nonconstant_random_walk_spectral_radius": 0.5,
+      "normalized_laplacian_mean": 0.8888888888888888,
+      "normalized_laplacian_variance": 0.09876543209876543
+    },
+    {
+      "q": 5,
+      "vertices": 125,
+      "degree": 24,
+      "edges": 1500,
+      "adjacency_spectrum": {
+        "-6": 40,
+        "-1": 24,
+        "4": 60,
+        "24": 1
+      },
+      "laplacian_spectrum": {
+        "30": 40,
+        "25": 24,
+        "20": 60,
+        "0": 1
+      },
+      "exact_integer_polynomial_verified": true,
+      "canonical_clock_order": 5,
+      "clock_fixed_dimension": 25,
+      "nonconstant_random_walk_spectral_radius": 0.25,
+      "normalized_laplacian_mean": 0.96,
+      "normalized_laplacian_variance": 0.038400000000000004
+    },
+    {
+      "q": 7,
+      "vertices": 343,
+      "degree": 48,
+      "edges": 8232,
+      "adjacency_spectrum": {
+        "-8": 126,
+        "-1": 48,
+        "6": 168,
+        "48": 1
+      },
+      "laplacian_spectrum": {
+        "56": 126,
+        "49": 48,
+        "42": 168,
+        "0": 1
+      },
+      "exact_integer_polynomial_verified": true,
+      "canonical_clock_order": 7,
+      "clock_fixed_dimension": 49,
+      "nonconstant_random_walk_spectral_radius": 0.16666666666666666,
+      "normalized_laplacian_mean": 0.9795918367346939,
+      "normalized_laplacian_variance": 0.01999167013744273
+    },
+    {
+      "q": 11,
+      "vertices": 1331,
+      "degree": 120,
+      "edges": 79860,
+      "adjacency_spectrum": {
+        "-12": 550,
+        "-1": 120,
+        "10": 660,
+        "120": 1
+      },
+      "laplacian_spectrum": {
+        "132": 550,
+        "121": 120,
+        "110": 660,
+        "0": 1
+      },
+      "exact_integer_polynomial_verified": false,
+      "canonical_clock_order": 11,
+      "clock_fixed_dimension": 121,
+      "nonconstant_random_walk_spectral_radius": 0.1,
+      "normalized_laplacian_mean": 0.9917355371900827,
+      "normalized_laplacian_variance": 0.008196161464380848
+    },
+    {
+      "q": 13,
+      "vertices": 2197,
+      "degree": 168,
+      "edges": 184548,
+      "adjacency_spectrum": {
+        "-14": 936,
+        "-1": 168,
+        "12": 1092,
+        "168": 1
+      },
+      "laplacian_spectrum": {
+        "182": 936,
+        "169": 168,
+        "156": 1092,
+        "0": 1
+      },
+      "exact_integer_polynomial_verified": false,
+      "canonical_clock_order": 13,
+      "clock_fixed_dimension": 169,
+      "nonconstant_random_walk_spectral_radius": 0.08333333333333333,
+      "normalized_laplacian_mean": 0.9940828402366864,
+      "normalized_laplacian_variance": 0.005882146983649032
+    }
+  ]
+}
