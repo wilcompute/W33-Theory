@@ -1,0 +1,41 @@
+{
+  "status": "VERIFIED_PUBLISHED_FIVE_COMPLETION_ATTEMPTS_41_TESTS",
+  "science_commit": "a0dc6af59fcc1b15dddf2dfa583d200df4a273ab",
+  "remote_master_at_verification": "a0dc6af59fcc1b15dddf2dfa583d200df4a273ab",
+  "published_blob_sha256": {
+    "analysis/toe_20261105_five_fronts_model_completion.py": "3386e9be2776b1a5fd73addf3efbfad583f68db12bc8629af097c82a398efab3",
+    "data/toe_20261105_five_fronts_model_completion.json": "4e5a9ae5d8518d3ff16e401c64e2e684a7a16aacc87c2527f568b760a370c0ab",
+    "analysis/toe_20261105_global_measure_and_lorentz_branches.py": "535939083782e16bfa6e35934bb18e586ec783fd307a165ffc91d988cf83cb28",
+    "data/toe_20261105_global_measure_and_lorentz_branches.json": "f642ab6910ce507ea5f9a5ecd6a212352c89fbcd311516164f7ee1cd321e99c4",
+    "tests/test_toe_20261105_five_completion_fronts.py": "b9a6eb314ecb3823a43343ccaefaf14c3b4ab2a7d412cfe3f79b4f756222892c",
+    "analysis/toe_20261105_five_completion_result_search.py": "e97bd85cc6761074c4320c5d6c4acebf854bcf7e5f681c6bced2ed23042a123b",
+    "data/toe_20261105_five_completion_result_search.json": "a0422e0565de7b889c5ef48f4118eb50125d7244108efcc13121744fa3d6fe63",
+    "analysis/toe_20261105_five_completion_validation.py": "8b22b16aae48234f28c570f420568096310986aed734f474ef8704ad681f4609",
+    "data/toe_20261105_five_completion_validation.json": "f7f712fe69b47e2e7e00df43a4ea0c98f621b5447559202b6d02629ca00f6928",
+    "analysis/toe_20261105_five_completion_server.js": "00cede5b1f7ec953db1bf8a9b71b3e9935396e4c304b888f641ab2585b3de728",
+    "data/toe_20261105_five_completion_server.json": "b8c8419ece3b53fdaef118a9fdc1fb28d63619621950f344a66cc65a9ed9ec1e",
+    "analysis/2026-11-05_five_completion_attempts_and_extra_consistency.md": "d2cbf5bb0b047e8a74dc45135dda5169c61434df3a36c3008fe63124361637c3",
+    "RESULTS_INDEX.md": "0dfa98048464b6669401f53c598f53720e15c8e57ce7f2b37cc4dd233e65597b",
+    "TOPICAL_ALIASES.md": "9bc9d2e412adde2990842328bfb493369ed1460b71de35c32762c3cf1f5b29f5",
+    "data/toe_20261105_five_completion_guard_audit.json": "5a2f602cea6f2074b96398852e2a1683026f87d39dbe53a24e878bb22ecef8f2",
+    "data/toe_20261105_five_completion_publication_manifest.json": "647bf395a74c61ef31d9c19af192e7abfa8808cd76597c503f77bf013ecf8560"
+  },
+  "guard_limits": [
+    {
+      "id": "tag-540-check",
+      "exit_code": 1
+    },
+    {
+      "id": "pass-namespace-collision-guard",
+      "exit_code": 1
+    },
+    {
+      "id": "key-nearmiss",
+      "exit_code": 124
+    }
+  ],
+  "reading_coverage": "45initial reports read in full;550file inventory and60commit list are not full patch review;215page PDF reading incomplete.",
+  "preserved_unrelated": 37,
+  "unchanged_parents": 174,
+  "scope": "Explicit anomaly-free protection variant with unification/relic/Landau costs; corrected one-loop tensor beta and10variable truncation; warped gravity repair fails original KK preservation; actual4D toron Chern controls; boundary-complete continued Regge flat Ward/Schlafli and offshell Hessian diagnostics. Full multi-loop SM/sterile/mixing matching, common quantum-gravity UV completion, all-configuration local chiral measure and nonlinear ADM algebra remain open."
+}
