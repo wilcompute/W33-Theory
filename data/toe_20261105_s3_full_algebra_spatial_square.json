@@ -1,0 +1,85 @@
+{
+  "mobile_square": {
+    "Wilson_triangles": 2,
+    "boundary": "One particle on a finite 4-vertex spatial graph. No thermodynamic phase transition or continuum SU(3) matter spectrum.",
+    "electric_magnetic_noncommutation": true,
+    "electric_transport_noncommutation": true,
+    "gauge_fixed_dimension": 288,
+    "gauge_trace_census": [
+      -36,
+      -36,
+      0,
+      0,
+      0,
+      288
+    ],
+    "graph": "4-site square plus diagonal (5 oriented edges, 3 spanning-tree links, 2 independent loops)",
+    "invariant_dimension": 36,
+    "matter_transport_edges": 5,
+    "raw_unfixed_dimension": 62208,
+    "scans": [
+      {
+        "J": 1,
+        "gap": 5.551115123125783e-16,
+        "gauss_error": 8.957917613465597e-16,
+        "ground_energy": -1.0000000000000004,
+        "magnetic_K": 0,
+        "transport_g": 0
+      },
+      {
+        "J": 0.5,
+        "gap": 0.1464801585864911,
+        "gauss_error": 5.448492834357823e-16,
+        "ground_energy": -0.9406249452190666,
+        "magnetic_K": 1,
+        "transport_g": 0.3
+      },
+      {
+        "J": 0.5,
+        "gap": 0.16731629516039204,
+        "gauss_error": 5.383909885761174e-16,
+        "ground_energy": -1.0889255357332337,
+        "magnetic_K": 0.5,
+        "transport_g": 1
+      },
+      {
+        "J": 0.1,
+        "gap": 0.06623629666803277,
+        "gauss_error": 5.331649940485445e-16,
+        "ground_energy": -1.05081105436608,
+        "magnetic_K": 1,
+        "transport_g": 1
+      }
+    ]
+  },
+  "operator_algebra": {
+    "exchange_broken_generators": {
+      "generic_simple_spectral_gap": 0.0015283340780511967,
+      "graph_component_sizes": [
+        18,
+        4,
+        4,
+        1
+      ],
+      "matrix_dimension": 27,
+      "min_nontrivial_transition_magnitude": 0.016869684025290117,
+      "scalar_commutant_numerically_supported": false
+    },
+    "interpretation": "Commutant test of the specified Hermitian matrices only. Full Mat27 if a simple element and connected transitions can be rigorously certified; numerical thresholds are not a formal proof. Neither case supplies a natural H27/Pauli intertwiner.",
+    "original_symmetric_generators": {
+      "generic_simple_spectral_gap": 1.1102230246251565e-16,
+      "graph_component_sizes": [
+        12,
+        6,
+        4,
+        4,
+        1
+      ],
+      "matrix_dimension": 27,
+      "min_nontrivial_transition_magnitude": 6.984834838565492e-11,
+      "scalar_commutant_numerically_supported": false
+    }
+  },
+  "prior_art": "Finite-group gauge-invariant Hilbert spaces, Burnside trace rank, irreducibility/commutant tests and gauge-covariant hopping are established.",
+  "status": "NUMERIC_S3_OPERATOR_COMMUTANT_AND_SPATIAL_SQUARE_GAUSS"
+}

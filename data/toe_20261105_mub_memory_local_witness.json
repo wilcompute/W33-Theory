@@ -1,0 +1,73 @@
+{
+  "alternative_Bell_fidelity": 0.4222222222222222,
+  "alternative_match_probability": 0.5666666666666667,
+  "alternative_survival_p": 0.35,
+  "alternative_unconditional_joint_match_probability": 0.4094166666666666,
+  "coincidence_efficiency": 0.7224999999999999,
+  "exact_binomial_loss_adjusted_MUB_design": {
+    "exact_false_alarm": 0.009857173757295574,
+    "model_power": 0.9503165557033864,
+    "reject_if_hits_at_least": 628,
+    "shots": 1612
+  },
+  "exact_binomial_perfect_detector_MUB_design": {
+    "exact_false_alarm": 0.00948609101311506,
+    "model_power": 0.9502504837642339,
+    "reject_if_hits_at_least": 481,
+    "shots": 891
+  },
+  "four_rail_compiler_blocks_per_side_max": 6,
+  "four_rail_nontrivial_two_mode_mixers_per_side_max": 3,
+  "ideal_global_entangling_Bell_projection_comparator": {
+    "exact_false_alarm": 0.009706248748646598,
+    "model_power": 0.951802494289297,
+    "reject_if_hits_at_least": 182,
+    "shots": 472
+  },
+  "independent_detector_efficiency_each": 0.85,
+  "local_measurement_setting_pairs": 4,
+  "local_output_ports": 3,
+  "matching_operator_exact_identity": "C=(I9+3 Bell3)/4",
+  "null_unconditional_joint_match_probability": 0.36124999999999996,
+  "originality_boundary": "MUB 2-design Bell witness, four-port unitary compilation, Hoeffding/binomial tests are established. Repo-local contribution is exact 4-setting qutrit memory witness compiled and compared to the Witting local dual.",
+  "qutrit_MUB_bases": 4,
+  "rank_one_measurement_projectors": 12,
+  "separable_match_probability_upper_bound": 0.5,
+  "separable_true_fidelity_upper_bound": 0.3333333333333333,
+  "static_mesh_calibrations": [
+    {
+      "calibration_realizations": 64,
+      "not_a_separable_null_calibration": true,
+      "observed_max_match_probability": 0.5666666666666669,
+      "observed_mean_match_probability": 0.5666666666666669,
+      "observed_min_match_probability": 0.5666666666666669,
+      "static_independent_mesh_phase_angle_sigma": 0
+    },
+    {
+      "calibration_realizations": 64,
+      "not_a_separable_null_calibration": true,
+      "observed_max_match_probability": 0.5666455137313078,
+      "observed_mean_match_probability": 0.5666101232044823,
+      "observed_min_match_probability": 0.5665506234006317,
+      "static_independent_mesh_phase_angle_sigma": 0.005
+    },
+    {
+      "calibration_realizations": 64,
+      "not_a_separable_null_calibration": true,
+      "observed_max_match_probability": 0.5662957020514818,
+      "observed_mean_match_probability": 0.5657182365149478,
+      "observed_min_match_probability": 0.564838082972037,
+      "static_independent_mesh_phase_angle_sigma": 0.02
+    },
+    {
+      "calibration_realizations": 64,
+      "not_a_separable_null_calibration": true,
+      "observed_max_match_probability": 0.5637340862211107,
+      "observed_mean_match_probability": 0.5608657968203613,
+      "observed_min_match_probability": 0.5559941327749763,
+      "static_independent_mesh_phase_angle_sigma": 0.05
+    }
+  ],
+  "statistical_boundary": "Exact binomial uses known IID detector efficiency independent of state and outcomes, fair/random basis sampling and ideal aligned MUBs. Noise simulations are static sample observations, do not certify a separable upper bound under adversarial drift. MUB is witness-adapted but not proven globally optimal across all LOCC protocols.",
+  "status": "PASS_FOUR_QUTRIT_EMBEDDED_QUTRIT_MUB_PRODUCT_BELL_WITNESS"
+}

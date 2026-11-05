@@ -1,0 +1,153 @@
+{
+  "L3_recovers_unit_product_flux_index": true,
+  "Wilson_mass_branch_multipliers": {
+    "1": 1,
+    "3": -3,
+    "5": 3,
+    "7": -1
+  },
+  "boundary": "No noncommuting SU2 instanton; no dynamical flux selection, lattice continuum limit, three families, mass matrices or observed chirality derived. Wilson regulator branch is imposed externally.",
+  "coarse_L2_nonzero_flux_index_collapses_to_zero": true,
+  "first_Wilson_branch_index_sign_for_Q01Q23_plusone": 1,
+  "flux_background": "uniform U(1) Q01 and Q23 on orthogonal two-tori",
+  "lattice_hilbert_spinor_dimension_L3": 324,
+  "prior_art": "4D overlap index, index spectral flow, lattice uniform-field Chern class and reducible SU2 gauge embeddings are established.",
+  "representation": "Euclidean 4D Wilson Dirac with four 4x4 Clifford gamma matrices",
+  "scans": [
+    {
+      "Ginsparg_Wilson_max_residual": 3.552713678800501e-15,
+      "L": 2,
+      "Q01": 1,
+      "Q23": 1,
+      "Wilson_H_minimum_abs_eigenvalue": 0.17157287525381362,
+      "Wilson_negative_mass_parameter": 1,
+      "ch2_abelian": 1,
+      "exact_nearzero_modes": 0,
+      "overlap_index": 0
+    },
+    {
+      "L": 2,
+      "Q01": 1,
+      "Q23": -1,
+      "Wilson_H_minimum_abs_eigenvalue": 0.17157287525381124,
+      "Wilson_negative_mass_parameter": 1,
+      "ch2_abelian": -1,
+      "overlap_index": 0
+    },
+    {
+      "L": 2,
+      "Q01": 0,
+      "Q23": 1,
+      "Wilson_H_minimum_abs_eigenvalue": 0.19393656647462945,
+      "Wilson_negative_mass_parameter": 1,
+      "ch2_abelian": 0,
+      "overlap_index": 0
+    },
+    {
+      "L": 2,
+      "Q01": 0,
+      "Q23": 0,
+      "Wilson_H_minimum_abs_eigenvalue": 0.9999999999999976,
+      "Wilson_negative_mass_parameter": 1,
+      "ch2_abelian": 0,
+      "overlap_index": 0
+    },
+    {
+      "Ginsparg_Wilson_max_residual": 7.549518342601556e-15,
+      "L": 3,
+      "Q01": 1,
+      "Q23": 1,
+      "Wilson_H_minimum_abs_eigenvalue": 0.34550978108789826,
+      "Wilson_negative_mass_parameter": 1,
+      "ch2_abelian": 1,
+      "exact_nearzero_modes": 1,
+      "overlap_index": 1
+    },
+    {
+      "L": 3,
+      "Q01": 1,
+      "Q23": -1,
+      "Wilson_H_minimum_abs_eigenvalue": 0.34550978108789554,
+      "Wilson_negative_mass_parameter": 1,
+      "ch2_abelian": -1,
+      "overlap_index": -1
+    },
+    {
+      "L": 3,
+      "Q01": -1,
+      "Q23": 1,
+      "Wilson_H_minimum_abs_eigenvalue": 0.3455097810878957,
+      "Wilson_negative_mass_parameter": 1,
+      "ch2_abelian": -1,
+      "overlap_index": -1
+    },
+    {
+      "L": 3,
+      "Q01": -1,
+      "Q23": -1,
+      "Wilson_H_minimum_abs_eigenvalue": 0.3455097810879013,
+      "Wilson_negative_mass_parameter": 1,
+      "ch2_abelian": 1,
+      "overlap_index": 1
+    },
+    {
+      "L": 3,
+      "Q01": 0,
+      "Q23": 1,
+      "Wilson_H_minimum_abs_eigenvalue": 0.6384828637092265,
+      "Wilson_negative_mass_parameter": 1,
+      "ch2_abelian": 0,
+      "overlap_index": 0
+    },
+    {
+      "L": 3,
+      "Q01": 0,
+      "Q23": 0,
+      "Wilson_H_minimum_abs_eigenvalue": 0.9999999999999851,
+      "Wilson_negative_mass_parameter": 1,
+      "ch2_abelian": 0,
+      "overlap_index": 0
+    },
+    {
+      "L": 3,
+      "Q01": 1,
+      "Q23": 1,
+      "Wilson_H_minimum_abs_eigenvalue": 0.5055501474050254,
+      "Wilson_negative_mass_parameter": 3,
+      "ch2_abelian": 1,
+      "overlap_index": -3
+    },
+    {
+      "L": 3,
+      "Q01": 1,
+      "Q23": -1,
+      "Wilson_H_minimum_abs_eigenvalue": 0.5055501474050177,
+      "Wilson_negative_mass_parameter": 3,
+      "ch2_abelian": -1,
+      "overlap_index": 3
+    },
+    {
+      "L": 3,
+      "Q01": 1,
+      "Q23": 1,
+      "Wilson_H_minimum_abs_eigenvalue": 0.4602707526563686,
+      "Wilson_negative_mass_parameter": 5,
+      "ch2_abelian": 1,
+      "overlap_index": 3
+    },
+    {
+      "L": 3,
+      "Q01": 1,
+      "Q23": 1,
+      "Wilson_H_minimum_abs_eigenvalue": 0.3306176942172483,
+      "Wilson_negative_mass_parameter": 7,
+      "ch2_abelian": 1,
+      "overlap_index": -1
+    }
+  ],
+  "single_weyl_chiral_anomaly_guard": "A single isolated charged chiral fermion can have gauge anomalies; an overlap Dirac index is not by itself an anomaly-free 4D chiral gauge theory.",
+  "status": "PASS_4D_OVERLAP_ABSOLUTE_INDEX_AND_REDUCIBLE_SU2_CARTAN",
+  "su2_background": "SU(2) fundamental links diag(u,u^-1), which all lie in the commuting Cartan U(1) subgroup",
+  "su2_is_truly_noncommuting_gauge_background": false,
+  "su2_reducible_fundamental_index": 2
+}

@@ -1,0 +1,245 @@
+{
+  "H27": {
+    "H27_center_eigenspace_dimensions": {
+      "0": 9,
+      "1": 9,
+      "2": 9
+    },
+    "H27_left_regular_associative_algebra_dimension": 27,
+    "H27_order": 27,
+    "H27_right_regular_commutant_contains_dim": 27,
+    "full_Mat27_dimension": 729,
+    "nonidentification": "A regular representation of the 27-element Heisenberg H27 is not an irreducible representation of the 729-dimensional three-qutrit full operator algebra. H27's center has 9+9+9 sectors in the left regular representation.",
+    "single_qutrit_Weyl_Hilbert_Schmidt_orthonormal": true,
+    "three_qutrit_Weyl_operator_basis_dimension": 729
+  },
+  "S3_gauge": {
+    "gauge_invariance_of_extra_generators": true,
+    "guard": "If the full family becomes irreducible, it still does not endow a *canonical* H27 history interpretation. These are finite, numerical common-commutant screens.",
+    "minimal_ensemble_robustness": [
+      {
+        "commutant_scalar_if_simple_and_connected": true,
+        "components": [
+          27
+        ],
+        "connected_component_decomposition_interpretable": true,
+        "generic_simple_spectral_gap": 0.014260322963508586,
+        "is_numerical_not_interval_certified": true,
+        "minimum_nonzero_edge_magnitude": 0.002336882354113052,
+        "nonzero_transition_edges": 351,
+        "random_seed": 61873
+      },
+      {
+        "commutant_scalar_if_simple_and_connected": true,
+        "components": [
+          27
+        ],
+        "connected_component_decomposition_interpretable": true,
+        "generic_simple_spectral_gap": 0.04208390894872022,
+        "is_numerical_not_interval_certified": true,
+        "minimum_nonzero_edge_magnitude": 0.006087087467823541,
+        "nonzero_transition_edges": 351,
+        "random_seed": 12345
+      },
+      {
+        "commutant_scalar_if_simple_and_connected": true,
+        "components": [
+          27
+        ],
+        "connected_component_decomposition_interpretable": true,
+        "generic_simple_spectral_gap": 0.008018589501247897,
+        "is_numerical_not_interval_certified": true,
+        "minimum_nonzero_edge_magnitude": 0.002891801377954909,
+        "nonzero_transition_edges": 351,
+        "random_seed": 96731
+      }
+    ],
+    "minimal_irreducible_additions": [
+      {
+        "added_generators": [
+          "Ccross",
+          "Nielsen_shear"
+        ],
+        "generic_simple_spectral_gap": 0.014260322963508586,
+        "smallest_witnessed_transition": 0.002336882354113052
+      }
+    ],
+    "records": [
+      {
+        "commutant_scalar_if_simple_and_connected": false,
+        "components": [
+          12,
+          8,
+          6,
+          1
+        ],
+        "connected_component_decomposition_interpretable": false,
+        "generators": [
+          "E",
+          "M",
+          "C"
+        ],
+        "generic_simple_spectral_gap": 2.220446049250313e-16,
+        "is_numerical_not_interval_certified": true,
+        "minimum_nonzero_edge_magnitude": 1.0671008644131137e-08,
+        "name": "original_EMC",
+        "nonzero_transition_edges": 100
+      },
+      {
+        "commutant_scalar_if_simple_and_connected": false,
+        "components": [
+          18,
+          4,
+          4,
+          1
+        ],
+        "connected_component_decomposition_interpretable": true,
+        "generators": [
+          "E",
+          "M",
+          "C",
+          "D"
+        ],
+        "generic_simple_spectral_gap": 0.0016464471082270338,
+        "is_numerical_not_interval_certified": true,
+        "minimum_nonzero_edge_magnitude": 0.015834676849143522,
+        "name": "add_electric_difference",
+        "nonzero_transition_edges": 165
+      },
+      {
+        "commutant_scalar_if_simple_and_connected": false,
+        "components": [
+          18,
+          4,
+          4,
+          1
+        ],
+        "connected_component_decomposition_interpretable": true,
+        "generators": [
+          "E",
+          "M",
+          "C",
+          "D",
+          "W1"
+        ],
+        "generic_simple_spectral_gap": 0.002773666610317249,
+        "is_numerical_not_interval_certified": true,
+        "minimum_nonzero_edge_magnitude": 0.018093595624397406,
+        "name": "add_loop_Wilson_trace",
+        "nonzero_transition_edges": 165
+      },
+      {
+        "commutant_scalar_if_simple_and_connected": false,
+        "components": [
+          18,
+          4,
+          4,
+          1
+        ],
+        "connected_component_decomposition_interpretable": true,
+        "generators": [
+          "E",
+          "M",
+          "C",
+          "D",
+          "W1",
+          "W2"
+        ],
+        "generic_simple_spectral_gap": 0.0013716900977479574,
+        "is_numerical_not_interval_certified": true,
+        "minimum_nonzero_edge_magnitude": 0.05175741587590193,
+        "name": "add_two_Wilson_traces",
+        "nonzero_transition_edges": 165
+      },
+      {
+        "commutant_scalar_if_simple_and_connected": false,
+        "components": [
+          18,
+          4,
+          4,
+          1
+        ],
+        "connected_component_decomposition_interpretable": true,
+        "generators": [
+          "E",
+          "M",
+          "C",
+          "D",
+          "Cdiff"
+        ],
+        "generic_simple_spectral_gap": 0.0018377152477376674,
+        "is_numerical_not_interval_certified": true,
+        "minimum_nonzero_edge_magnitude": 0.013775333309163912,
+        "name": "add_color_difference",
+        "nonzero_transition_edges": 165
+      },
+      {
+        "commutant_scalar_if_simple_and_connected": false,
+        "components": [
+          19,
+          8
+        ],
+        "connected_component_decomposition_interpretable": true,
+        "generators": [
+          "E",
+          "M",
+          "C",
+          "D",
+          "Ccross"
+        ],
+        "generic_simple_spectral_gap": 0.0011461789755325968,
+        "is_numerical_not_interval_certified": true,
+        "minimum_nonzero_edge_magnitude": 0.014649575321921644,
+        "name": "add_correlated_matter",
+        "nonzero_transition_edges": 199
+      },
+      {
+        "commutant_scalar_if_simple_and_connected": false,
+        "components": [
+          22,
+          4,
+          1
+        ],
+        "connected_component_decomposition_interpretable": true,
+        "generators": [
+          "E",
+          "M",
+          "C",
+          "D",
+          "Nielsen_shear"
+        ],
+        "generic_simple_spectral_gap": 0.01681803168803553,
+        "is_numerical_not_interval_certified": true,
+        "minimum_nonzero_edge_magnitude": 0.0070168414350496545,
+        "name": "add_holonomy_shear",
+        "nonzero_transition_edges": 237
+      },
+      {
+        "commutant_scalar_if_simple_and_connected": true,
+        "components": [
+          27
+        ],
+        "connected_component_decomposition_interpretable": true,
+        "generators": [
+          "E",
+          "M",
+          "C",
+          "D",
+          "W1",
+          "W2",
+          "Cdiff",
+          "Ccross",
+          "Nielsen_shear",
+          "loop_inverse"
+        ],
+        "generic_simple_spectral_gap": 0.0239842356938611,
+        "is_numerical_not_interval_certified": true,
+        "minimum_nonzero_edge_magnitude": 0.014950174744086223,
+        "name": "full_10_operator_family",
+        "nonzero_transition_edges": 351
+      }
+    ],
+    "smallest_irreducibility_addition_size": 2
+  },
+  "status": "PASS_H27_GROUP_ALGEBRA_VS_QUTRIT_ALGEBRA_AND_S3_EXTENSION"
+}

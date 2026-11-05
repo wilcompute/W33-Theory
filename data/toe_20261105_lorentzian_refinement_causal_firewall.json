@@ -1,0 +1,192 @@
+{
+  "S4_lorentzian_no_go": "The closed compact 4-sphere chi=2 cannot support a global nonsingular Lorentz metric. An open time-slab chi=1 is not obstructed by this closed-manifold theorem.",
+  "curved_regge_S4_closed_f_vector": [
+    6,
+    15,
+    20,
+    15,
+    6
+  ],
+  "curved_regge_S4_euler_characteristic": 2,
+  "massless_scalar_FEM_continuum_action": 0.6168502750680849,
+  "massless_scalar_FEM_refinement": [
+    {
+      "Lorentzian_FEM_action": 0.49999999999999994,
+      "absolute_error": 0.11685027506808493,
+      "n": 2
+    },
+    {
+      "Lorentzian_FEM_action": 0.5625,
+      "absolute_error": 0.054350275068084875,
+      "n": 3
+    },
+    {
+      "Lorentzian_FEM_action": 0.5857864376269015,
+      "absolute_error": 0.03106383744118335,
+      "n": 4
+    },
+    {
+      "Lorentzian_FEM_action": 0.5968218925783147,
+      "absolute_error": 0.020028382489770125,
+      "n": 5
+    }
+  ],
+  "new_discretization_control": "With timestep .37, the timelike 1-skeleton cannot change spatial coordinates; with timestep 1.2 it allows spatial movement only in +coordinate directions under this Freudenthal ordering. Neither behavior follows from continuum Minkowski lightcones; they are mesh artefacts.",
+  "physical_boundary": "Signature and causal link counts are kinematic only; no Lorentzian Regge deficit angles, constraints, quantum amplitudes or continuum convergence proof.",
+  "rows": [
+    {
+      "euler_characteristic": 1,
+      "f_vector": [
+        16,
+        65,
+        110,
+        84,
+        24
+      ],
+      "four_simplices": 24,
+      "four_volume": 0.36999999999999994,
+      "future_directed_timelike_edges": 8,
+      "metric_signatures": [
+        [
+          1,
+          3
+        ]
+      ],
+      "metric_timestep": 0.37,
+      "n": 1,
+      "negative_spatial_future_steps": 0,
+      "parity_asymmetric_timelike_1_skeleton": false,
+      "positive_spatial_future_steps": 0,
+      "timelike_edges_with_spatial_transport": 0
+    },
+    {
+      "euler_characteristic": 1,
+      "f_vector": [
+        16,
+        65,
+        110,
+        84,
+        24
+      ],
+      "four_simplices": 24,
+      "four_volume": 1.2000000000000004,
+      "future_directed_timelike_edges": 20,
+      "metric_signatures": [
+        [
+          1,
+          3
+        ]
+      ],
+      "metric_timestep": 1.2,
+      "n": 1,
+      "negative_spatial_future_steps": 0,
+      "parity_asymmetric_timelike_1_skeleton": true,
+      "positive_spatial_future_steps": 12,
+      "timelike_edges_with_spatial_transport": 12
+    },
+    {
+      "euler_characteristic": 1,
+      "f_vector": [
+        81,
+        544,
+        1232,
+        1152,
+        384
+      ],
+      "four_simplices": 384,
+      "four_volume": 5.920000000000045,
+      "future_directed_timelike_edges": 54,
+      "metric_signatures": [
+        [
+          1,
+          3
+        ]
+      ],
+      "metric_timestep": 0.37,
+      "n": 2,
+      "negative_spatial_future_steps": 0,
+      "parity_asymmetric_timelike_1_skeleton": false,
+      "positive_spatial_future_steps": 0,
+      "timelike_edges_with_spatial_transport": 0
+    },
+    {
+      "euler_characteristic": 1,
+      "f_vector": [
+        81,
+        544,
+        1232,
+        1152,
+        384
+      ],
+      "four_simplices": 384,
+      "four_volume": 19.200000000000138,
+      "future_directed_timelike_edges": 162,
+      "metric_signatures": [
+        [
+          1,
+          3
+        ]
+      ],
+      "metric_timestep": 1.2,
+      "n": 2,
+      "negative_spatial_future_steps": 0,
+      "parity_asymmetric_timelike_1_skeleton": true,
+      "positive_spatial_future_steps": 108,
+      "timelike_edges_with_spatial_transport": 108
+    },
+    {
+      "euler_characteristic": 1,
+      "f_vector": [
+        256,
+        2145,
+        5454,
+        5508,
+        1944
+      ],
+      "four_simplices": 1944,
+      "four_volume": 29.97000000000034,
+      "future_directed_timelike_edges": 192,
+      "metric_signatures": [
+        [
+          1,
+          3
+        ]
+      ],
+      "metric_timestep": 0.37,
+      "n": 3,
+      "negative_spatial_future_steps": 0,
+      "parity_asymmetric_timelike_1_skeleton": false,
+      "positive_spatial_future_steps": 0,
+      "timelike_edges_with_spatial_transport": 0
+    },
+    {
+      "euler_characteristic": 1,
+      "f_vector": [
+        256,
+        2145,
+        5454,
+        5508,
+        1944
+      ],
+      "four_simplices": 1944,
+      "four_volume": 97.19999999999662,
+      "future_directed_timelike_edges": 624,
+      "metric_signatures": [
+        [
+          1,
+          3
+        ]
+      ],
+      "metric_timestep": 1.2,
+      "n": 3,
+      "negative_spatial_future_steps": 0,
+      "parity_asymmetric_timelike_1_skeleton": true,
+      "positive_spatial_future_steps": 432,
+      "timelike_edges_with_spatial_transport": 432
+    }
+  ],
+  "scalar_action_model": "S=1/2 integral(-dt(phi)^2+dx(phi)^2+dy(phi)^2+dz(phi)^2), phi=product sin(pi*x_mu) on unit box",
+  "spatial_lattice_step": 1,
+  "status": "PASS_4D_LORENTZIAN_GRID_REFINEMENT_AND_CAUSAL_ARTIFACT",
+  "vertex_ordering": "Freudenthal simplices formed by cumulative +coordinate increments"
+}
