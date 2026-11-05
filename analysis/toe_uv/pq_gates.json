@@ -1,0 +1,104 @@
+{
+ "stability": [
+  {
+   "f": 15000000000.0,
+   "y_Q": 1.82,
+   "m_a_ueV": 380.0,
+   "min_lambda_s": 2.0,
+   "m_rho": 30000000000.0,
+   "m_rho_over_f": 2.0,
+   "ok_1e10": false,
+   "ok_1e11": true
+  },
+  {
+   "f": 27000000000.0,
+   "y_Q": 1.011111111111111,
+   "m_a_ueV": 211.11111111111111,
+   "min_lambda_s": 0.725601241074424,
+   "m_rho": 32525783764.369312,
+   "m_rho_over_f": 1.2046586579396041,
+   "ok_1e10": false,
+   "ok_1e11": true
+  },
+  {
+   "f": 50000000000.0,
+   "y_Q": 0.546,
+   "m_a_ueV": 114.0,
+   "min_lambda_s": 0.13289960531668654,
+   "m_rho": 25777859231.97333,
+   "m_rho_over_f": 0.5155571846394666,
+   "ok_1e10": false,
+   "ok_1e11": true
+  },
+  {
+   "f": 100000000000.0,
+   "y_Q": 0.273,
+   "m_a_ueV": 57.0,
+   "min_lambda_s": 0.007783116232899929,
+   "m_rho": 12476470841.467896,
+   "m_rho_over_f": 0.12476470841467895,
+   "ok_1e10": false,
+   "ok_1e11": true
+  },
+  {
+   "f": 200000000000.0,
+   "y_Q": 0.1365,
+   "m_a_ueV": 28.5,
+   "min_lambda_s": 0.00045940624249078053,
+   "m_rho": 6062383969.962843,
+   "m_rho_over_f": 0.030311919849814215,
+   "ok_1e10": true,
+   "ok_1e11": true
+  },
+  {
+   "f": 500000000000.0,
+   "y_Q": 0.0546,
+   "m_a_ueV": 11.4,
+   "min_lambda_s": 1.0996331111941843e-05,
+   "m_rho": 2344816742.5133505,
+   "m_rho_over_f": 0.0046896334850267014,
+   "ok_1e10": true,
+   "ok_1e11": true
+  },
+  {
+   "f": 1000000000000.0,
+   "y_Q": 0.0273,
+   "m_a_ueV": 5.7,
+   "min_lambda_s": 1.0000000000131955e-06,
+   "m_rho": 1414213562.3824258,
+   "m_rho_over_f": 0.0014142135623824257,
+   "ok_1e10": true,
+   "ok_1e11": true
+  }
+ ],
+ "control_small_y_D3": 1.0000000000131955e-06,
+ "pq_quality": {
+  "27000000000.0": {
+   "min_dim": 12,
+   "theta": 3.7178020580943226e-18
+  },
+  "100000000000.0": {
+   "min_dim": 12,
+   "theta": 2.476971978870356e-11
+  },
+  "1000000000000.0": {
+   "min_dim": 14,
+   "theta": 4.17756448586511e-12
+  }
+ },
+ "scorecard": {
+  "gauge couplings meet (two-loop, common threshold)": "pass, exact by construction: M_X and M_U solved",
+  "proton": "at the limit: 3.5e34 yr, factor 3 and more with GUT thresholds; Hyper-K can decide",
+  "strong CP": "axion, PQ quality open: needs dimension above 9 or so protected",
+  "dark matter": "axion, post-inflation: simulation range 25 to 500 ueV",
+  "neutrino masses": "seesaw at M_N ~ y_N f, available, not predicted",
+  "baryon asymmetry": "thermal leptogenesis if M_N >= 1e9, available, not computed",
+  "Higgs stability": "threshold stabilisation: see stability rows",
+  "inflation": "Higgs-portal as in SMASH: not recomputed",
+  "three generations": "not explained",
+  "flavour": "not explained; 19 parameters",
+  "dark energy": "not explained: cosmological constant by hand",
+  "quantum gravity": "not included: this is an EFT below M_U",
+  "GUT completion": "not built; SU(5) fragments at 1e10 with partners at M_U is a tuned split"
+ }
+}

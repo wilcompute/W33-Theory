@@ -1,0 +1,477 @@
+{
+ "one_loop": {
+  "n": 2033,
+  "stages": {
+   "2e+15": {
+    "n": 93,
+    "n_decay": 5
+   },
+   "4e+15": {
+    "n": 82,
+    "n_decay": 3
+   },
+   "8e+15": {
+    "n": 73,
+    "n_decay": 1
+   }
+  },
+  "final": [
+   {
+    "reps": [
+     [
+      3,
+      1,
+      "-1/3"
+     ],
+     [
+      3,
+      2,
+      "1/6"
+     ],
+     [
+      3,
+      2,
+      "1/6"
+     ]
+    ],
+    "dB": [
+     0.5333333333333333,
+     4.0,
+     3.333333333333333
+    ],
+    "MX": 6621222505.863602,
+    "MU": 8435789013370243.0,
+    "inv_alpha_U": 36.843839692825696,
+    "E_over_N": 1.4666666666666668,
+    "N": 2.5,
+    "NDW": 5.0,
+    "decays": true,
+    "MX_range": [
+     6084943354.142938,
+     7214125222.757102
+    ],
+    "MU_range": [
+     7800947654733182.0,
+     9111495479659974.0
+    ],
+    "fa_y1": 1324244501.1727204,
+    "ma_ueV_y1": 4304.341075195865,
+    "ma_ueV_f1e12": 28.5,
+    "E_N_minus_192": -0.45333333333333314
+   },
+   {
+    "reps": [
+     [
+      3,
+      1,
+      "2/3"
+     ],
+     [
+      3,
+      2,
+      "1/6"
+     ],
+     [
+      3,
+      2,
+      "1/6"
+     ]
+    ],
+    "dB": [
+     1.3333333333333333,
+     4.0,
+     3.333333333333333
+    ],
+    "MX": 230237765.2251784,
+    "MU": 5128765899434318.0,
+    "inv_alpha_U": 34.77148170952953,
+    "E_over_N": 1.8666666666666667,
+    "N": 2.5,
+    "NDW": 5.0,
+    "decays": true,
+    "MX_range": [
+     203579697.95891643,
+     260879612.45884788
+    ],
+    "MU_range": [
+     4770410242400506.0,
+     5507998346865187.0
+    ],
+    "fa_y1": 46047553.045035675,
+    "ma_ueV_y1": 123785.07918597228,
+    "ma_ueV_f1e12": 28.5,
+    "E_N_minus_192": -0.05333333333333323
+   },
+   {
+    "reps": [
+     [
+      3,
+      1,
+      "-1/3"
+     ],
+     [
+      3,
+      2,
+      "1/6"
+     ],
+     [
+      3,
+      2,
+      "1/6"
+     ],
+     [
+      1,
+      1,
+      "1"
+     ]
+    ],
+    "dB": [
+     1.3333333333333335,
+     4.0,
+     3.333333333333333
+    ],
+    "MX": 230237765.2251776,
+    "MU": 5128765899434300.0,
+    "inv_alpha_U": 34.77148170952953,
+    "E_over_N": 1.8666666666666667,
+    "N": 2.5,
+    "NDW": 5.0,
+    "decays": true,
+    "MX_range": [
+     203579697.95891643,
+     260879612.45884696
+    ],
+    "MU_range": [
+     4770410242400489.0,
+     5507998346865187.0
+    ],
+    "fa_y1": 46047553.04503552,
+    "ma_ueV_y1": 123785.0791859727,
+    "ma_ueV_f1e12": 28.5,
+    "E_N_minus_192": -0.05333333333333323
+   }
+  ]
+ },
+ "two_loop": {
+  "A": {
+   "two_loop": {
+    "MX": 27279937181.61975,
+    "MU": 3964835648946381.0,
+    "inv_alpha_U": 37.301530818336154,
+    "spread": 2.1152857243578183e-11
+   },
+   "alpha_s": {
+    "as+": {
+     "MX": 25319004141.159874,
+     "MU": 4271853265786877.5,
+     "inv_alpha_U": 37.23884843001697,
+     "spread": 0.0
+    },
+    "as-": {
+     "MX": 29427765301.07282,
+     "MU": 3675609814761922.5,
+     "inv_alpha_U": 37.36518235913335,
+     "spread": 4.263256414560601e-14
+    }
+   },
+   "split": {
+    "n": 27,
+    "MX": [
+     5859107838.970537,
+     126909372178.68283
+    ],
+    "MU": [
+     3014573235030674.5,
+     5222064423157822.0
+    ],
+    "tau": [
+     1.1426373551559388e+34,
+     1.0667771242004451e+35
+    ],
+    "frac_above_SK": 0.7407407407407407,
+    "frac_above_HK": 0.037037037037037035
+   },
+   "tau_years": 3.480995960201338e+34,
+   "axion": {
+    "1.0": {
+     "fa": 900000000000.0,
+     "f": 4500000000000.0,
+     "y_Q": 0.006062208262582167,
+     "m_a_ueV": 6.333333333333333
+    },
+    "2.0": {
+     "fa": 274278072196.00702,
+     "f": 1371390360980.0352,
+     "y_Q": 0.019892175093111142,
+     "m_a_ueV": 20.781829018860158
+    }
+   },
+   "E_over_N": 1.4666666666666666,
+   "g_over_KSVZ": 0.23611111111111113,
+   "g_over_DFSZ": 0.6071428571428572,
+   "y_nu_needed": 0.08615738081562321
+  },
+  "B": {
+   "two_loop": {
+    "MX": 1678662000.3637853,
+    "MU": 2687956855679188.0,
+    "inv_alpha_U": 35.50560568840732,
+    "spread": 3.645297397270042e-10
+   },
+   "alpha_s": {
+    "as+": {
+     "MX": 1504776636.6029558,
+     "MU": 2882861371283423.5,
+     "inv_alpha_U": 35.4200029421613,
+     "spread": 1.4210854715202004e-14
+    },
+    "as-": {
+     "MX": 1875909499.2951427,
+     "MU": 2503530308466301.0,
+     "inv_alpha_U": 35.592523127879865,
+     "spread": 5.684341886080802e-14
+    }
+   },
+   "split": {
+    "n": 27,
+    "MX": [
+     181732741.00994605,
+     15462747700.748219
+    ],
+    "MU": [
+     2243377180965921.5,
+     3231083271896123.5
+    ],
+    "tau": [
+     3.770647800619671e+33,
+     1.771961770008485e+34
+    ],
+    "frac_above_SK": 0.0,
+    "frac_above_HK": 0.0
+   },
+   "tau_years": 8.116174845477784e+33,
+   "axion": {
+    "1.0": {
+     "fa": 900000000000.0,
+     "f": 4500000000000.0,
+     "y_Q": 0.0003730360000808412,
+     "m_a_ueV": 6.333333333333333
+    },
+    "2.0": {
+     "fa": 274278072196.00702,
+     "f": 1371390360980.0352,
+     "y_Q": 0.0012240584797199282,
+     "m_a_ueV": 20.781829018860158
+    }
+   },
+   "E_over_N": 1.8666666666666667,
+   "g_over_KSVZ": 0.027777777777777728,
+   "g_over_DFSZ": 0.0714285714285713,
+   "y_nu_needed": 0.08615738081562321
+  },
+  "C": {
+   "two_loop": {
+    "MX": 1732466893.2478895,
+    "MU": 2693337088650647.5,
+    "inv_alpha_U": 35.52637210921119,
+    "spread": 4.5852743824070785e-10
+   },
+   "alpha_s": {
+    "as+": {
+     "MX": 1553852310.7961946,
+     "MU": 2888750050302940.5,
+     "inv_alpha_U": 35.44113307604693,
+     "spread": 0.0
+    },
+    "as-": {
+     "MX": 1934978249.5618725,
+     "MU": 2508438229288624.0,
+     "inv_alpha_U": 35.61292381731311,
+     "spread": 0.0
+    }
+   },
+   "split": {
+    "n": 81,
+    "MX": [
+     189547228.3275156,
+     15813124120.328138
+    ],
+    "MU": [
+     2091214111764130.8,
+     3475934543234463.0
+    ],
+    "tau": [
+     2.8968747300364643e+33,
+     2.325203486047904e+34
+    ],
+    "frac_above_SK": 0.0,
+    "frac_above_HK": 0.0
+   },
+   "tau_years": 8.171789989918666e+33,
+   "axion": {
+    "1.0": {
+     "fa": 900000000000.0,
+     "f": 4500000000000.0,
+     "y_Q": 0.0003849926429439755,
+     "m_a_ueV": 6.333333333333333
+    },
+    "2.0": {
+     "fa": 274278072196.00702,
+     "f": 1371390360980.0352,
+     "y_Q": 0.00126329230723907,
+     "m_a_ueV": 20.781829018860158
+    }
+   },
+   "E_over_N": 1.8666666666666667,
+   "g_over_KSVZ": 0.027777777777777728,
+   "g_over_DFSZ": 0.0714285714285713,
+   "y_nu_needed": 0.08615738081562321
+  }
+ },
+ "scan_stages": {
+  "coloured": 85,
+  "proton": 1,
+  "proton_factor3": 3,
+  "ndw1": 1,
+  "natural": 1
+ },
+ "gates": {
+  "stability": [
+   {
+    "f": 15000000000.0,
+    "y_Q": 1.82,
+    "m_a_ueV": 380.0,
+    "min_lambda_s": 2.0,
+    "m_rho": 30000000000.0,
+    "m_rho_over_f": 2.0,
+    "ok_1e10": false,
+    "ok_1e11": true
+   },
+   {
+    "f": 27000000000.0,
+    "y_Q": 1.011111111111111,
+    "m_a_ueV": 211.11111111111111,
+    "min_lambda_s": 0.725601241074424,
+    "m_rho": 32525783764.369312,
+    "m_rho_over_f": 1.2046586579396041,
+    "ok_1e10": false,
+    "ok_1e11": true
+   },
+   {
+    "f": 50000000000.0,
+    "y_Q": 0.546,
+    "m_a_ueV": 114.0,
+    "min_lambda_s": 0.13289960531668654,
+    "m_rho": 25777859231.97333,
+    "m_rho_over_f": 0.5155571846394666,
+    "ok_1e10": false,
+    "ok_1e11": true
+   },
+   {
+    "f": 100000000000.0,
+    "y_Q": 0.273,
+    "m_a_ueV": 57.0,
+    "min_lambda_s": 0.007783116232899929,
+    "m_rho": 12476470841.467896,
+    "m_rho_over_f": 0.12476470841467895,
+    "ok_1e10": false,
+    "ok_1e11": true
+   },
+   {
+    "f": 200000000000.0,
+    "y_Q": 0.1365,
+    "m_a_ueV": 28.5,
+    "min_lambda_s": 0.00045940624249078053,
+    "m_rho": 6062383969.962843,
+    "m_rho_over_f": 0.030311919849814215,
+    "ok_1e10": true,
+    "ok_1e11": true
+   },
+   {
+    "f": 500000000000.0,
+    "y_Q": 0.0546,
+    "m_a_ueV": 11.4,
+    "min_lambda_s": 1.0996331111941843e-05,
+    "m_rho": 2344816742.5133505,
+    "m_rho_over_f": 0.0046896334850267014,
+    "ok_1e10": true,
+    "ok_1e11": true
+   },
+   {
+    "f": 1000000000000.0,
+    "y_Q": 0.0273,
+    "m_a_ueV": 5.7,
+    "min_lambda_s": 1.0000000000131955e-06,
+    "m_rho": 1414213562.3824258,
+    "m_rho_over_f": 0.0014142135623824257,
+    "ok_1e10": true,
+    "ok_1e11": true
+   }
+  ],
+  "control_small_y_D3": 1.0000000000131955e-06,
+  "pq_quality": {
+   "27000000000.0": {
+    "min_dim": 12,
+    "theta": 3.7178020580943226e-18
+   },
+   "100000000000.0": {
+    "min_dim": 12,
+    "theta": 2.476971978870356e-11
+   },
+   "1000000000000.0": {
+    "min_dim": 14,
+    "theta": 4.17756448586511e-12
+   }
+  },
+  "scorecard": {
+   "gauge couplings meet (two-loop, common threshold)": "pass, exact by construction: M_X and M_U solved",
+   "proton": "at the limit: 3.5e34 yr, factor 3 and more with GUT thresholds; Hyper-K can decide",
+   "strong CP": "axion, PQ quality open: needs dimension above 9 or so protected",
+   "dark matter": "axion, post-inflation: simulation range 25 to 500 ueV",
+   "neutrino masses": "seesaw at M_N ~ y_N f, available, not predicted",
+   "baryon asymmetry": "thermal leptogenesis if M_N >= 1e9, available, not computed",
+   "Higgs stability": "threshold stabilisation: see stability rows",
+   "inflation": "Higgs-portal as in SMASH: not recomputed",
+   "three generations": "not explained",
+   "flavour": "not explained; 19 parameters",
+   "dark energy": "not explained: cosmological constant by hand",
+   "quantum gravity": "not included: this is an EFT below M_U",
+   "GUT completion": "not built; SU(5) fragments at 1e10 with partners at M_U is a tuned split"
+  }
+ },
+ "controls": {
+  "single_Q": {
+   "MX": 21220060.14239697,
+   "MU": 1315846083656351.5,
+   "inv_alpha_U": 38.65986889347269,
+   "spread": 2.2879476091475226e-12
+  },
+  "tau_single_Q": 3.9314765218918765e+32,
+  "di_luzio_mQ": 20000000.0,
+  "chat_tau_q": 4.542792295892802e+33,
+  "chat_tau_triplet": 4.2155946190218956e+29
+ },
+ "window_chance": 0.15294117647058825,
+ "checks": {
+  "12603: control: reproduces the parallel track's (3,2,1/6) solution within 1e-4": true,
+  "12603: control: reproduces the parallel track's triplet within 1e-4": true,
+  "12603: 2033 sets have a solution, 3 survive the one-loop stage at the 4e15 floor": true,
+  "12604: control: SM generation b1 = 4 and the published two-loop generation block": true,
+  "12604: control: single Q threshold 2.1e7 against Di Luzio et al's 2e7, within 10 percent": true,
+  "12604: Model A M_X 2.7e10 and M_U 4.0e15, tau above Super-K": true,
+  "12604: Models B and C fall below Super-K at two loops": true,
+  "12604: couplings meet: spread under 1e-6": true,
+  "12605: 85 sets, 1 above Super-K at the central estimate, 3 within a factor of 3": true,
+  "12605: the one is Model A": true,
+  "12606: charges (+,+,-) give N_DW = 1, E/N = 2/3, g = 0.653 KSVZ": true,
+  "12606: charges (+,+,+) give N_DW = 5, E/N = 22/15": true,
+  "12606: the window is not rare: 15 percent of sets land in it": true,
+  "12607: control: small y gives the floor of the bisection": true,
+  "12607: at f = 2e11, y = 0.14, m_rho is below 1e10": true,
+  "12607: at f = 5e10, y = 0.55, m_rho is above 1e10: heavy axions are in tension": true,
+  "12607: PQ quality needs dimension 12 at f = 1e11": true,
+  "12608: the scorecard states the failures": true,
+  "12608: the parallel track's one-field witnesses are below Super-K by this estimate": true
+ },
+ "all_checks_pass": true
+}
