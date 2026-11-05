@@ -1,0 +1,63 @@
+{
+  "status": "VERIFIED_PUBLISHED_MECHANISMS_PQ_UV_32_TESTS",
+  "science_commit": "191e18a5d1c567955a29d701209673fb7c621e9d",
+  "remote_master_at_verification": "191e18a5d1c567955a29d701209673fb7c621e9d",
+  "published_blob_sha256": {
+    "analysis/toe_20261103_mechanism_portal_protection.py": "fb9c3b17af7ba8c737cc78ff3b8ac3216ee89280474d8a630ec6d88f38f458b3",
+    "data/toe_20261103_mechanism_portal_protection.json": "73894107f04abc1e347db8abafb0db81ca4c7949a9c19751a389534bf768ba15",
+    "analysis/toe_20261103_mechanism_stationary_uplift.py": "cedb6fd3950b4141f31049fdbab1a059da6c3374993002a0e6706e49b97c1702",
+    "data/toe_20261103_mechanism_stationary_uplift.json": "526bdcb6130f69b74a78017465a1a3a3d056017590974b74cfeeaa453572da61",
+    "analysis/toe_20261103_mechanism_four_dimensional_overlap.py": "831c3ffa9b9c25986cfd2c0de1a4db0b01c595902a521b1908fd8f3979fe66e1",
+    "data/toe_20261103_mechanism_four_dimensional_overlap.json": "b61643c2f9bd10a7aad77641f804a0ea9a39a28e23e5a6d2b91dfa9e551e7a1b",
+    "analysis/toe_20261103_mechanism_neutrino_messengers.py": "e590e7b363162a915005330d55296ec3f8ecf82f883eb93c7e72bb93582137ad",
+    "data/toe_20261103_mechanism_neutrino_messengers.json": "76bde3c5789e5b71001b53853a02aeb4242a4c51885f8bfb6b0f4f5d168e1eb0",
+    "analysis/toe_20261103_mechanism_gravity_identifiability.py": "c788bb8f5fc7ae3cc9de68802e9524be3376aa1cfae670f50c7461d861b1166d",
+    "data/toe_20261103_mechanism_gravity_identifiability.json": "2d35d0ba8ec507af68835dea1cc1cb27ba8cdcc245bbc528beeb7799677ce882",
+    "analysis/toe_20261103_mechanism_holomorphic_bridge.py": "4a06976d663c22944897b2eee9c77af1007911335c3019591be53382c265a323",
+    "data/toe_20261103_mechanism_holomorphic_bridge.json": "d074d2603027667861342a1486574200a33f9be285e68c56e67820b2916750f8",
+    "analysis/toe_20261103_mechanism_sector_reference.py": "850e8744c15963c8a78bc5e8194b5c6a04cd840dafe6a98e7eba0d31e0bab29d",
+    "data/toe_20261103_mechanism_sector_reference.json": "be9c3dd8cccbc0b868d808ca68d7d7222c233149fa952d1af469dcedbcaec3ab",
+    "analysis/toe_20261103_mechanisms_validation.py": "2ebb71d966665a878805a7e5fb74c59989bf553c82359fd68c354bf5fbe84fb7",
+    "data/toe_20261103_mechanisms_validation.json": "74cbace006284c883eeecaf197d1247712b60f5435e5d379bbf7a347b58eb12b",
+    "tests/test_toe_20261103_mechanisms.py": "dcd7838118f3fba59bbbcb00b14c05a678c5484266bd90fce20e5e75204e7b8e",
+    "analysis/2026-11-03_toe_mechanism_completion.md": "fcca573a1f11288cd3e4750aedbbbe645ccd35fc06993981e919ae6b76c9a759",
+    "analysis/toe_20261103_mechanism_server_controls.js": "88b88ca809425bd8809ef8fe1bcacc65039bb9f1af1388c62fb7a80538d61df1",
+    "data/toe_20261103_mechanism_server_controls.json": "ee6490f76f79b851bec4cf3767dc12f2ef7d96b90c4b1876a8da268ecb9741db",
+    "analysis/toe_20261103_projector_cylinder_controls.js": "0df57be67356553f7e4d056df5357617901a33b270e26b64ac69be45732cf193",
+    "data/toe_20261103_projector_cylinder_controls.json": "efb9ce393de28bf29a6e157b50f10ee02dd869779bfefbde06f6ce537aff467e",
+    "RESULTS_INDEX.md": "b55bd71724f176fd8ba08e1a53b570aedf6c7fc2cd6491c7f9cd84c668fc4fcc",
+    "TOPICAL_ALIASES.md": "e4f976352a9b18a862754a07138776e4c5715bf3fc9bd928b7ea82549868bc08",
+    "analysis/toe_20261105_pq_quality_gauge_obstruction.py": "7099dba40617084b1dd19a9fadb74d9632bb6b97c2ae7566428f72d5aa4c5c87",
+    "data/toe_20261105_pq_quality_gauge_obstruction.json": "00e09950a42aac9e178574d51ef774a92b178eeb16feb84d8165b0f286b4848c",
+    "analysis/toe_20261105_pq_normalization_cutoff.py": "816d5c5d737a29b3eed532495921a80033afdd4d1ad9cd27a3cdc5dfc6a62309",
+    "data/toe_20261105_pq_normalization_cutoff.json": "178d35e08e5e59d5cabf4c7f187f5548ea7505dd9beeb07fbe0166a5800c474e",
+    "tests/test_toe_20261105_pq_uv_controls.py": "a320dee5436614ce77c8d11d84653e16e5747e39606966a777d3a54fcd391284",
+    "analysis/toe_20261105_pq_uv_validation.py": "3d008a8b1d4bfb1d2812bdb20f0bba2d04598327f22cb7b5b52eb1f2bf90894a",
+    "data/toe_20261105_pq_uv_validation.json": "582416a14be3fb99db46752405e4b499aa527063e562c6d5791c2000cd9cb69b",
+    "analysis/toe_20261105_pq_server_controls.js": "ad90ff4263e454b283c688c1c66bd4f1381d4ed4ff644f1bfc56ed7de9b3c875",
+    "data/toe_20261105_pq_server_controls.json": "6b38eec05705022c8596fe7cb3ca7f2453a4240b95f283339ad0e183f68d3f6b",
+    "analysis/2026-11-05_pq_protection_normalization_and_shared_uv_audit.md": "36440b2d65d90a2e8e8092a5dd8bdaadc512d86666e64df1493da53929963faa",
+    "data/toe_20261105_change_reading_coverage.json": "6ba3553541aec9f2bce66721800d46c206cbb90c3a06af898a76a32cf600c68b",
+    "data/toe_20261105_pq_result_search.json": "7dc037b29da334fee30cdbbc0d1154a6965648aafa0242b55ea9d47f40578e5c",
+    "data/toe_20261105_mechanisms_pq_guard_audit.json": "57a9441e9b5de1174edefc1ec3af20ffebc461534b66f06f4d4b055b435b21b6",
+    "data/toe_20261105_mechanisms_pq_publication_manifest.json": "45e663743c63177952cf7b5262faa56b5e3dafec45345cf19b8e73f5a38e6655"
+  },
+  "guard_limits": [
+    {
+      "id": "tag-540-check",
+      "exit_code": 1
+    },
+    {
+      "id": "pass-namespace-collision-guard",
+      "exit_code": 1
+    },
+    {
+      "id": "key-nearmiss",
+      "exit_code": 124
+    }
+  ],
+  "reading_coverage": "45initial reports read in full;550file inventory and60commit list are not full patch review;215page PDF reading incomplete.",
+  "preserved_unrelated": 37,
+  "unchanged_parents": 174,
+  "scope": "Conditional models, exact anomaly necessity and finite/numerical controls. No complete TOE, common UV action, observed constant prediction, full charged spectrum or global integrable chiral measure."
+}
