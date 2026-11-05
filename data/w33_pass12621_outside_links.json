@@ -1,0 +1,159 @@
+{
+ "trin_window": [
+  {
+   "m_a_ueV": 0.8,
+   "f_a": 7125000000000.0,
+   "theta": 0.2991233323916328,
+   "DMRadio_m3_DFSZ": true,
+   "H_I_max_GeV": 21312537.43290384
+  },
+  {
+   "m_a_ueV": 0.5,
+   "f_a": 11400000000000.0,
+   "theta": 0.2273946803155242,
+   "DMRadio_m3_DFSZ": true,
+   "H_I_max_GeV": 25922993.55596976
+  },
+  {
+   "m_a_ueV": 0.3,
+   "f_a": 19000000000000.0,
+   "theta": 0.16879847937308312,
+   "DMRadio_m3_DFSZ": true,
+   "H_I_max_GeV": 32071711.080885798
+  },
+  {
+   "m_a_ueV": 0.2,
+   "f_a": 28500000000000.0,
+   "theta": 0.13324429669678614,
+   "DMRadio_m3_DFSZ": true,
+   "H_I_max_GeV": 37974624.55858405
+  },
+  {
+   "m_a_ueV": 0.12,
+   "f_a": 47500000000000.0,
+   "theta": 0.09890923849381686,
+   "DMRadio_m3_DFSZ": true,
+   "H_I_max_GeV": 46981888.28456301
+  },
+  {
+   "m_a_ueV": 0.05,
+   "f_a": 114000000000000.0,
+   "theta": 0.05935358656333891,
+   "DMRadio_m3_DFSZ": false,
+   "H_I_max_GeV": 67663088.68220636
+  },
+  {
+   "m_a_ueV": 0.02,
+   "f_a": 285000000000000.0,
+   "theta": 0.03477885624716611,
+   "DMRadio_m3_DFSZ": false,
+   "H_I_max_GeV": 99119740.30442342
+  },
+  {
+   "m_a_ueV": 0.006,
+   "f_a": 950000000000000.0,
+   "theta": 0.01723069099362931,
+   "DMRadio_m3_DFSZ": false,
+   "H_I_max_GeV": 163691564.43947846
+  }
+ ],
+ "higgs": {
+  "shift": 0.018582822826764427,
+  "note": "baseline = one-loop SM lambda shifted to cross zero at 2.7e10 GeV",
+  "control_none": {
+   "MX": 1e+30,
+   "dB3": 0,
+   "delta_lambda_MP": 0.0,
+   "yt_MP": 0.4135298239691413,
+   "yt_MP_SM": 0.4135298239691413,
+   "min_lambda": -0.01543022546774614,
+   "mu_at_min": 4.088355589181252e+17,
+   "stays_positive": false
+  },
+  "model_A": {
+   "MX": 27300000000.0,
+   "dB3": 3.333333333333333,
+   "delta_lambda_MP": 0.007169065859584371,
+   "yt_MP": 0.3930390905189968,
+   "yt_MP_SM": 0.4135298239691413,
+   "min_lambda": -0.01149689223645612,
+   "mu_at_min": 1528245575593297.2,
+   "stays_positive": false
+  },
+  "trinification_3": {
+   "MX": 285000000000.0,
+   "dB3": 6.0,
+   "delta_lambda_MP": 0.008659748500306482,
+   "yt_MP": 0.3859271393822661,
+   "yt_MP_SM": 0.4135298239691413,
+   "min_lambda": -0.011747553937910472,
+   "mu_at_min": 873891661984001.8,
+   "stays_positive": false
+  },
+  "model_A_low_MX": {
+   "MX": 1000000000.0,
+   "dB3": 3.333333333333333,
+   "delta_lambda_MP": 0.011384912520650763,
+   "yt_MP": 0.3819173423382145,
+   "yt_MP_SM": 0.4135298239691413,
+   "min_lambda": -0.00901972335758737,
+   "mu_at_min": 344269337009425.06,
+   "stays_positive": false
+  }
+ },
+ "ns": {
+  "class_growth_dovekie_none.json": {
+   "LCDM": 0.9703036543233584,
+   "exp": 0.9713642875213835,
+   "free_neg": 0.9661035233362832,
+   "relax": 0.9669712726758068
+  },
+  "class_growth_desy5_none.json": {
+   "LCDM": 0.969972454776986,
+   "exp": 0.9718169243905799,
+   "free_neg": 0.9658462635356553,
+   "relax": 0.9663987199144651
+  },
+  "class_fit_dovekie.json": {
+   "LCDM": 0.9701835271977778,
+   "free_neg": 0.9657017618256943,
+   "CPL": 0.9670606740686725
+  },
+  "class_fit_desy5.json": {
+   "LCDM": 0.9700137650025367,
+   "free_neg": 0.9654304237638633,
+   "CPL": 0.9670788779374325
+  },
+  "class_des_dovekie_joint.json": {
+   "LCDM": 0.9707135212807861,
+   "exp": 0.9718325647017112,
+   "free_neg": 0.9668345702711245,
+   "relax": 0.967297584109822
+  },
+  "trained_without_sn": {
+   "LCDM": 0.9708166842817642,
+   "free_neg": 0.9656159822063679,
+   "exp": 0.970918012261156,
+   "cpl": 0.9664321022246728
+  },
+  "trained_without_bao": {
+   "LCDM": 0.9642415159422976,
+   "free_neg": 0.965158009460873,
+   "exp": 0.9654563491724656,
+   "cpl": 0.9660139055817292
+  },
+  "bao_pull": {
+   "LCDM": 0.006575168339466586,
+   "free_neg": 0.0004579727454948612,
+   "exp": 0.005461663088690449,
+   "cpl": 0.0004181966429436246
+  }
+ },
+ "checks": {
+  "trinification axion: DMRadio-m3 DFSZ reach covers 0.12-0.8 ueV with theta 0.10-0.30": true,
+  "control: no new states gives no shift": true,
+  "PQ quarks raise lambda but it stays negative for every model": true,
+  "BAO pulls n_s up by over 0.005 in LCDM and the exponential, under 0.001 in CPL and fading": true
+ },
+ "all_checks_pass": true
+}

@@ -1,0 +1,44 @@
+{
+ "shift": 0.018582822826764427,
+ "note": "baseline = one-loop SM lambda shifted to cross zero at 2.7e10 GeV",
+ "control_none": {
+  "MX": 1e+30,
+  "dB3": 0,
+  "delta_lambda_MP": 0.0,
+  "yt_MP": 0.4135298239691413,
+  "yt_MP_SM": 0.4135298239691413,
+  "min_lambda": -0.01543022546774614,
+  "mu_at_min": 4.088355589181252e+17,
+  "stays_positive": false
+ },
+ "model_A": {
+  "MX": 27300000000.0,
+  "dB3": 3.333333333333333,
+  "delta_lambda_MP": 0.007169065859584371,
+  "yt_MP": 0.3930390905189968,
+  "yt_MP_SM": 0.4135298239691413,
+  "min_lambda": -0.01149689223645612,
+  "mu_at_min": 1528245575593297.2,
+  "stays_positive": false
+ },
+ "trinification_3": {
+  "MX": 285000000000.0,
+  "dB3": 6.0,
+  "delta_lambda_MP": 0.008659748500306482,
+  "yt_MP": 0.3859271393822661,
+  "yt_MP_SM": 0.4135298239691413,
+  "min_lambda": -0.011747553937910472,
+  "mu_at_min": 873891661984001.8,
+  "stays_positive": false
+ },
+ "model_A_low_MX": {
+  "MX": 1000000000.0,
+  "dB3": 3.333333333333333,
+  "delta_lambda_MP": 0.011384912520650763,
+  "yt_MP": 0.3819173423382145,
+  "yt_MP_SM": 0.4135298239691413,
+  "min_lambda": -0.00901972335758737,
+  "mu_at_min": 344269337009425.06,
+  "stays_positive": false
+ }
+}

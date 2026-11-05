@@ -14,13 +14,14 @@ import numpy as np
 BG = os.path.dirname(os.path.abspath(__file__))
 os.chdir(BG)
 HOLD, models, ND = sys.argv[1], sys.argv[2].split(","), int(sys.argv[3])
-sys.argv = ["x", "dovekie", HOLD]
+DS = os.environ.get("DS", "dovekie")
+sys.argv = ["x", DS, HOLD]
 src = open("class_holdout.py", encoding="utf-8").read().split('if HOLD == "evidence":')[0]
 g = dict(__name__="x", __file__=os.path.join(BG, "class_holdout.py"))
 exec(src, g)
 F, C, BMASK, SN, FREE, kind_of = g["F"], g["C"], g["BMASK"], g["SN"], g["FREE"], g["kind_of"]
-neu = json.load(open(f"class_holdout_dovekie_{HOLD}_neutral.json"))
-path = f"class_ppd_dovekie_{HOLD}.json"
+neu = json.load(open(f"class_holdout_{DS}_{HOLD}_neutral.json"))
+path = f"class_ppd_{DS}_{HOLD}.json"
 out = json.load(open(path)) if os.path.exists(path) else dict(hold=HOLD, rows={})
 rng = np.random.default_rng(20261105)
 
