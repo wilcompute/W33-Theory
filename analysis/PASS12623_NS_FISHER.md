@@ -24,4 +24,4 @@ Claude track. Continues Pass 12621 §3, which gave point shifts only. Script: `a
 - The two training sets share the CMB, so the ratio is an indicator, not a proper difference test.
 - plik-lite understates the published ACT-driven tension (n_s = 0.9743 ± 0.0034 for P+ACT+DESI).
 - Dovekie only.
-- Novelty is not claimed. DESI's own w₀wₐ chains surely contain this n_s shift, and I have not searched them.
+- Novelty is not claimed. arXiv:2507.12459 reports n_s only under ΛCDM. It says evolving dark energy accommodates CMB and BAO together and refers to SPT-3G D1 (arXiv:2506.20707), Table VII, for extended-model fits. I have not read that table. The n_s value under w₀wₐ is probably already there, so treat this pass as an in-house replication with a fading-coupling column added.

@@ -45,9 +45,9 @@ Along the fading-coupling profile (Dovekie fits), n_s and c′ are strongly dege
 
 **c′ ∈ [0.040, 0.055],** which contains the free fit c′ = 0.053.
 
-ΛCDM's n_s = 0.970 lies outside that band. CPL gives n_s = 0.967 with w₀ = −0.81, wₐ = −0.69. SMASH predicts r ≈ 0.004; that value is from memory and I have not re-read it.
+ΛCDM's n_s = 0.970 lies outside that band. CPL gives n_s = 0.967 with w₀ = −0.81, wₐ = −0.69. SMASH predicts a lower bound r ≳ 0.004 and running α ≳ −8×10⁻⁴ (Tamarit, arXiv:1705.06951, as summarised by the search tool; Ballesteros et al., arXiv:1608.05414). This corrects my earlier memory-based statement of r ≈ 0.004 as a value.
 
-So Model A + Higgs-portal inflation + an evolving dark energy that crosses −1 is a consistent joint target: (n_s ≈ 0.966, r ≈ 0.004, w₀ ≈ −0.8, wₐ ≈ −0.7 or c′ ≈ 0.05). CMB-S4 (r) and DESI DR3 / Euclid (w) can test it. These are point fits. The n_s Fisher widths are in Pass 12623.
+So Model A + Higgs-portal inflation + an evolving dark energy that crosses −1 is a consistent joint target: (n_s ≈ 0.966, r ≳ 0.004, w₀ ≈ −0.8, wₐ ≈ −0.7 or c′ ≈ 0.05). CMB-S4 (r) and DESI DR3 / Euclid (w) can test it. These are point fits. The n_s Fisher widths are in Pass 12623.
 
 ## 4. Cross-check of Chat's 6e0f24d33
 
@@ -58,5 +58,5 @@ For X = 3(B − 3L_e) with T(−9), S(−18) and a vectorlike (3,2,1/6) of X = �
 - One- and two-loop running only, no threshold spread (Pass 12610 showed it matters).
 - K and the instanton prefactor are order-of-magnitude.
 - The c′ band uses profile points, not posteriors.
-- The SMASH r value is from memory.
+- The SMASH r bound is from search summaries, not from reading the papers.
 - No novelty is claimed for the heavy-axion mechanism. Aligned small-instanton heavy axions are an existing literature that I have not searched here.
