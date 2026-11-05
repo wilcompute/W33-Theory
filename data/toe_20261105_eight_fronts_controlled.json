@@ -1,0 +1,209 @@
+{
+  "base": "independent idealized falsifiers; no TOE solved",
+  "prior_art_boundary": "Each constituent model is known; this combined regression atlas is repo-specific.",
+  "results": {
+    "1_native_gauge_action": {
+      "boundary": "Background flux only; no dynamical photon, SM vacuum, cosmological selection",
+      "lim_n2_gap": "pi^2",
+      "model": "one mobile matter excitation, Z2 background ring Wilson flux; hopping J=1",
+      "rows": [
+        {
+          "E_pi": -1.0000000000000002,
+          "E_zero": -2.0,
+          "delta": 0.9999999999999998,
+          "n": 3,
+          "n2_delta": 8.999999999999998
+        },
+        {
+          "E_pi": -1.4142135623730951,
+          "E_zero": -2.0,
+          "delta": 0.5857864376269049,
+          "n": 4,
+          "n2_delta": 9.372583002030478
+        },
+        {
+          "E_pi": -1.7320508075688774,
+          "E_zero": -2.0,
+          "delta": 0.2679491924311226,
+          "n": 6,
+          "n2_delta": 9.646170927520412
+        },
+        {
+          "E_pi": -1.8477590650225735,
+          "E_zero": -2.0,
+          "delta": 0.15224093497742652,
+          "n": 8,
+          "n2_delta": 9.743419838555297
+        },
+        {
+          "E_pi": -1.9318516525781366,
+          "E_zero": -2.0,
+          "delta": 0.06814834742186338,
+          "n": 12,
+          "n2_delta": 9.813362028748326
+        },
+        {
+          "E_pi": -1.9753766811902755,
+          "E_zero": -2.0,
+          "delta": 0.02462331880972446,
+          "n": 20,
+          "n2_delta": 9.849327523889784
+        }
+      ],
+      "status": "PASS_CONDITIONAL_AHARONOV_BOHM_FLUX_GAP"
+    },
+    "2_continuum_locality": {
+      "affine_null_graphs": [
+        {
+          "d_s_t16": 0.005994395881811261,
+          "d_s_t4": 2.950354652286484,
+          "normalized_gap": 0.6666666666666666,
+          "q": 3
+        },
+        {
+          "d_s_t16": 0.00433328930377831,
+          "d_s_t4": 5.29826203596363,
+          "normalized_gap": 0.8,
+          "q": 5
+        },
+        {
+          "d_s_t16": 0.005323435560168089,
+          "d_s_t4": 6.524214215228502,
+          "normalized_gap": 0.8571428571428571,
+          "q": 7
+        },
+        {
+          "d_s_t16": 0.010186312836259004,
+          "d_s_t4": 7.436239726810893,
+          "normalized_gap": 0.9090909090909091,
+          "q": 11
+        }
+      ],
+      "boundary": "A weighted local graph requires chosen embedding and neighborhood; no dynamically emergent curvature",
+      "status": "PASS_LOCALITY_CONTROL_NOT_GRAVITY",
+      "torus_2d_n64_normalized_heat_dimension": {
+        "16": 2.0724642070579673,
+        "32": 2.0334236525977643,
+        "4": 2.4178027362879373,
+        "8": 2.1836382236071907
+      }
+    },
+    "3_temporal_memory": {
+      "all_trials_efficiency": 0.85,
+      "boundary": "Trusted reference/reset and no quantum bypass are indispensable; not an experiment",
+      "depolarizing_survival_p": 0.35,
+      "exact_one_sided_false_alarm": 0.009800168666137227,
+      "fidelity_ideal": 0.4222222222222222,
+      "fidelity_with_random_assigned_noclick": 0.37555555555555553,
+      "minimum_efficiency_to_beat_null": 0.7142857142857143,
+      "reference": "qutrit R; E quantum storage; S reset; R-S Bell-projector readout",
+      "reject_if_Bell_hits_at_least": 1061,
+      "separable_null_fidelity": 0.3333333333333333,
+      "shots": 3000,
+      "status": "PASS_TRUSTED_RESET_WITNESS_POWER",
+      "true_positive_power": 0.9938460902076331
+    },
+    "4_chirality_vacuum": {
+      "beta": 0.55,
+      "boundary": "Proves no unique preferred sign in finite CP-symmetric ensemble, not a SM chirality vacuum",
+      "finite_4x4_partition_states": 65536,
+      "negative_bias_signed_order": -0.23838091225297264,
+      "positive_bias_signed_order": 0.23838091225297886,
+      "status": "PASS_FINITE_CP_DEGENERACY_NO_UNIQUE_SIGN",
+      "zero_bias_abs_order": 0.9535892644693699,
+      "zero_bias_signed_order": -1.6653345369377348e-16
+    },
+    "5_optical_falsifier": {
+      "Witting_effects": "E_j=P_j/10",
+      "boundary": "Ideal projective 40-effect POVM; no chip, calibration, finite hardware data",
+      "comparisons": [
+        {
+          "Helstrom_optimal_success": 0.6,
+          "POVM_optimal_decision_success": 0.54,
+          "Witting_POVM_total_variation": 0.07999999999999997,
+          "adjacent": true,
+          "fraction_of_optimal_trace_dist": 0.39999999999999986,
+          "projector_overlap": 0.0
+        },
+        {
+          "Helstrom_optimal_success": 0.5816496580927726,
+          "POVM_optimal_decision_success": 0.5333333333333333,
+          "Witting_POVM_total_variation": 0.06666666666666667,
+          "adjacent": false,
+          "fraction_of_optimal_trace_dist": 0.40824829046386296,
+          "projector_overlap": 0.3333333333333333
+        }
+      ],
+      "hilbert_dimension": 4,
+      "mixture_epsilon": 0.2,
+      "ray_count": 40,
+      "status": "PASS_NATIVE_WITTING_BINARY_READOUT_GAP"
+    },
+    "6_orthogonal_nonhermitian_skin": {
+      "OBC_biorthogonal_mean_center": 19.5,
+      "OBC_max_abs_imag_eigenvalue": 0.0,
+      "OBC_mean_right_eigenstate_center": 0.7249999999999988,
+      "OBC_similarity_condition_number": 2013095912.5235424,
+      "OBC_similarity_to_real_symmetric_verified": true,
+      "PBC_point_gap_winding": 1.0,
+      "boundary": "Known non-Hermitian skin effect; physical metric must be specified before fundamental inference",
+      "left_hopping": 0.5,
+      "right_hopping": 1.5,
+      "sites": 40,
+      "status": "PASS_HATANO_NELSON_SKIN_CONTROL",
+      "symmetric_control_center": 19.5
+    },
+    "7_orthogonal_quasiperiodic_localization": {
+      "boundary": "Aubry-Andre self-duality at lambda=2 is prior art; effective exponents from three finite sizes are not thermodynamic critical exponents",
+      "effective_IPR_decay_exponents": {
+        "1": 0.6585645146124784,
+        "2": 0.5354138194582823,
+        "3": 0.039628665851598834
+      },
+      "model": "irrational golden-frequency onsite cosine, open chain, nearest hopping=1",
+      "rows": [
+        {
+          "mean_IPR_lambda_1": 0.0320836497170776,
+          "mean_IPR_lambda_2": 0.14910719473756634,
+          "mean_IPR_lambda_3": 0.4612801495890555,
+          "sites": 55
+        },
+        {
+          "mean_IPR_lambda_1": 0.02647571882081129,
+          "mean_IPR_lambda_2": 0.11726910729703172,
+          "mean_IPR_lambda_3": 0.4405653704599947,
+          "sites": 89
+        },
+        {
+          "mean_IPR_lambda_1": 0.01702155322254746,
+          "mean_IPR_lambda_2": 0.08906253738475423,
+          "mean_IPR_lambda_3": 0.44401844552318825,
+          "sites": 144
+        }
+      ],
+      "status": "PASS_AUBRY_ANDRE_FINITE_SIZE_LOCALIZATION"
+    },
+    "8_orthogonal_postselection_collider": {
+      "all_trials_random_noclick_CHSH": 2.0,
+      "boundary": "Setting-dependent joint herald uses both settings/outcomes and cannot certify Bell nonlocality",
+      "conditional_CHSH": 4.0,
+      "conditional_correlations": {
+        "00": 1.0,
+        "01": 1.0,
+        "10": 1.0,
+        "11": -1.0
+      },
+      "detection_efficiency_each_setting": {
+        "00": 0.5,
+        "01": 0.5,
+        "10": 0.5,
+        "11": 0.5
+      },
+      "hidden_bits": "u,v independent uniform; Alice output u, Bob output v; joint herald accepts iff u xor v=x*y",
+      "setting_independent_herald_control_CHSH": 2.0,
+      "status": "PASS_FAKE_PR_BY_SETTING_DEPENDENT_SELECTION",
+      "unconditioned_CHSH": 0.0
+    }
+  },
+  "version": "2026-11-05.eight_fronts.v1"
+}
