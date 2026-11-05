@@ -55,3 +55,10 @@ def test_quasiperiodic_scaling_not_just_one_size(record):
 def test_setting_independent_herald_does_not_fake_PR(record):
     r=record["8_orthogonal_postselection_collider"]
     assert r["setting_independent_herald_control_CHSH"]==2
+
+
+def test_strictly_local_detector_hidden_model(record):
+    r=record["8_orthogonal_postselection_collider"]
+    assert r["fully_local_detector_conditional_CHSH"]==4
+    assert set(r["fully_local_detector_joint_efficiency"].values())=={0.25}
+    assert r["fully_local_detector_randomized_alltrials_CHSH"]==1

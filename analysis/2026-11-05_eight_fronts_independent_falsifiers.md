@@ -172,3 +172,25 @@ the retained data give CHSH=2. **Original research hypothesis:**
 every proposed retrocausal or temporal-interference witness should
 publish a causal DAG for the herald and an all-trials randomized
 no-click result, not only its conditional score.
+
+
+### A stronger, genuinely *local* detection-loophole model
+
+The central joint-herald example above is intentionally a weak adversarial
+control because it reads both measurement settings. We independently built a
+strictly local-detector construction. Shared source randomness is
+\(\lambda=(x_*,y_*,u)\) with three independent fair bits. Alice's
+outcome is \(a=u\), Bob's outcome is \(b=u\oplus(x_*y_*)\).
+Alice clicks only when her local input \(x=x_*\); Bob clicks only when
+Bob's **own** input \(y=y_*\). Neither device knows the remote actual
+setting, and the detectors do not communicate.
+
+Conditional on both detectors clicking, \(a\oplus b=xy\) identically,
+so postselected CHSH=4. Yet each local detector clicks with probability
+1/2 and coincident detection probability is 1/4 for every input pair.
+Assign independent fair output bits on the noncoincident events: the
+all-trials CHSH is only 1. This is a fully local example of a
+detection-loophole counterfeit. It makes the requested *physical*
+falsifier sharper: publish both local efficiencies and the unfiltered
+statistic, never only the postselected correlation. The mechanism is
+established Bell-test prior art, not evidence for superquantum signalling.

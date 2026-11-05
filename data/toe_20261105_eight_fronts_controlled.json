@@ -185,7 +185,7 @@
     },
     "8_orthogonal_postselection_collider": {
       "all_trials_random_noclick_CHSH": 2.0,
-      "boundary": "Setting-dependent joint herald uses both settings/outcomes and cannot certify Bell nonlocality",
+      "boundary": "Two distinct local-output selection controls: centralized joint herald and fully local setting-dependent detectors; neither certifies Bell nonlocality",
       "conditional_CHSH": 4.0,
       "conditional_correlations": {
         "00": 1.0,
@@ -199,6 +199,14 @@
         "10": 0.5,
         "11": 0.5
       },
+      "fully_local_detector_conditional_CHSH": 4.0,
+      "fully_local_detector_joint_efficiency": {
+        "00": 0.25,
+        "01": 0.25,
+        "10": 0.25,
+        "11": 0.25
+      },
+      "fully_local_detector_randomized_alltrials_CHSH": 1.0,
       "hidden_bits": "u,v independent uniform; Alice output u, Bob output v; joint herald accepts iff u xor v=x*y",
       "setting_independent_herald_control_CHSH": 2.0,
       "status": "PASS_FAKE_PR_BY_SETTING_DEPENDENT_SELECTION",

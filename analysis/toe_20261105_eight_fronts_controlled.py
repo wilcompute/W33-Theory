@@ -237,6 +237,24 @@ def postselection_collider():
     # A pre-settings central herald that keeps only u=v has CHSH=2, not 4.
     setting_independent_correlations={key:1.0 for key in correlations}
     assert CHSH(setting_independent_correlations)==2
+    # Stronger detection-loophole example with *strictly local* detectors:
+    # shared lambda=(target_x,target_y,u); A emits u, B emits u xor target_x*target_y.
+    # A clicks iff x==target_x; B clicks iff y==target_y; no inter-party message.
+    fully_local_corr={}
+    fully_local_eff={}
+    for x,y in product((0,1),repeat=2):
+        accepted=[]
+        for target_x,target_y,u in product((0,1),repeat=3):
+            a=u
+            b=u^(target_x*target_y)
+            if x==target_x and y==target_y:
+                accepted.append((-1)**(a^b))
+        assert len(accepted)==2
+        fully_local_corr[f"{x}{y}"]=float(np.mean(accepted))
+        fully_local_eff[f"{x}{y}"]=len(accepted)/8
+    assert CHSH(fully_local_corr)==4
+    assert all(v==.25 for v in fully_local_eff.values())
+    assert CHSH({k:fully_local_eff[k]*fully_local_corr[k] for k in fully_local_corr})==1
     return {"status":"PASS_FAKE_PR_BY_SETTING_DEPENDENT_SELECTION",
             "hidden_bits":"u,v independent uniform; Alice output u, Bob output v; joint herald accepts iff u xor v=x*y",
             "conditional_correlations":correlations,
@@ -244,7 +262,10 @@ def postselection_collider():
             "all_trials_random_noclick_CHSH":all_trial,
             "unconditioned_CHSH":CHSH(raw),
             "setting_independent_herald_control_CHSH":CHSH(setting_independent_correlations),
-            "boundary":"Setting-dependent joint herald uses both settings/outcomes and cannot certify Bell nonlocality"}
+            "fully_local_detector_conditional_CHSH":CHSH(fully_local_corr),
+            "fully_local_detector_joint_efficiency":fully_local_eff,
+            "fully_local_detector_randomized_alltrials_CHSH":CHSH({k:fully_local_eff[k]*fully_local_corr[k] for k in fully_local_corr}),
+            "boundary":"Two distinct local-output selection controls: centralized joint herald and fully local setting-dependent detectors; neither certifies Bell nonlocality"}
 
 FRONTS=[
     ("1_native_gauge_action",gauge_dynamics),
