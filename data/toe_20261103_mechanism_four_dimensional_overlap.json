@@ -1,0 +1,180 @@
+{
+  "status": "PASS_FOUR_DIMENSIONAL_FLUX_INDEX_AND_WEYL_KINETIC_MAP",
+  "rows": [
+    {
+      "L": 3,
+      "sites": 81,
+      "spinor_matrix_dimension": 324,
+      "flux12": 0,
+      "flux34": 0,
+      "link_perturbation": 0.0,
+      "overlap_index": 0,
+      "continuum_flux_product": 0,
+      "Dirac_zero_modes": 4,
+      "kernel_spectral_gap": 0.9999999999999939,
+      "GW_max_defect": 3.996806956939271e-15,
+      "Weyl_intertwiner_max_defect": 1.7763573664027556e-15,
+      "Weyl_domain_rank": 162,
+      "Weyl_codomain_rank": 162,
+      "chirality_of_zero_modes_index_formula": -5.662137425588298e-15,
+      "maximum_plaquette_angle": 0.0,
+      "Wilson_gauge_action_beta1": 0.0,
+      "index_density_range": [
+        -0.08025624289453437,
+        0.08025624289453437
+      ],
+      "elapsed_seconds": 0.46490159997483715,
+      "kernel_eigenvalue_sha256": "585c3a504ced2981fc7bba3e5f76ef2fc514dac3eb3937627bbceeba9856aab4"
+    },
+    {
+      "L": 3,
+      "sites": 81,
+      "spinor_matrix_dimension": 324,
+      "flux12": 1,
+      "flux34": 1,
+      "link_perturbation": 0.0,
+      "overlap_index": -1,
+      "continuum_flux_product": 1,
+      "Dirac_zero_modes": 1,
+      "kernel_spectral_gap": 0.3455097810878945,
+      "GW_max_defect": 8.437699213742448e-15,
+      "Weyl_intertwiner_max_defect": 2.886580286418871e-15,
+      "Weyl_domain_rank": 163,
+      "Weyl_codomain_rank": 162,
+      "chirality_of_zero_modes_index_formula": -1.0000000000000178,
+      "maximum_plaquette_angle": 0.6981317007977323,
+      "Wilson_gauge_action_beta1": 37.90080021472558,
+      "index_density_range": [
+        -0.10654309550967156,
+        0.08234230018316857
+      ],
+      "elapsed_seconds": 0.8451956000062637,
+      "kernel_eigenvalue_sha256": "c78786edf6f7aee8a278d36b9dc339e2bb54609f0db0505bc312410fd4af76c4"
+    },
+    {
+      "L": 3,
+      "sites": 81,
+      "spinor_matrix_dimension": 324,
+      "flux12": 1,
+      "flux34": -1,
+      "link_perturbation": 0.0,
+      "overlap_index": 1,
+      "continuum_flux_product": -1,
+      "Dirac_zero_modes": 1,
+      "kernel_spectral_gap": 0.34550978108789393,
+      "GW_max_defect": 7.993605837640738e-15,
+      "Weyl_intertwiner_max_defect": 3.996802918820369e-15,
+      "Weyl_domain_rank": 161,
+      "Weyl_codomain_rank": 162,
+      "chirality_of_zero_modes_index_formula": 1.0000000000000067,
+      "maximum_plaquette_angle": 0.6981317007977323,
+      "Wilson_gauge_action_beta1": 37.90080021472558,
+      "index_density_range": [
+        -0.08234230018316846,
+        0.10654309550967156
+      ],
+      "elapsed_seconds": 0.5759001999977045,
+      "kernel_eigenvalue_sha256": "11543db46ccb52e7128b701ce52c911bb4c595328fdd7ffddcdf45e554e97634"
+    },
+    {
+      "L": 3,
+      "sites": 81,
+      "spinor_matrix_dimension": 324,
+      "flux12": 1,
+      "flux34": 1,
+      "link_perturbation": 0.015,
+      "overlap_index": -1,
+      "continuum_flux_product": 1,
+      "Dirac_zero_modes": 1,
+      "kernel_spectral_gap": 0.34459639574674883,
+      "GW_max_defect": 7.5495169304543e-15,
+      "Weyl_intertwiner_max_defect": 3.77475846522715e-15,
+      "Weyl_domain_rank": 163,
+      "Weyl_codomain_rank": 162,
+      "chirality_of_zero_modes_index_formula": -0.9999999999999977,
+      "maximum_plaquette_angle": 0.7932652330493243,
+      "Wilson_gauge_action_beta1": 38.13052974633466,
+      "index_density_range": [
+        -0.10658062944900171,
+        0.08249817531778825
+      ],
+      "elapsed_seconds": 0.5351244999910705,
+      "kernel_eigenvalue_sha256": "f196a36424120e7c2ed2fe74b19ccdcc864c330e449b4fe8402ee48d83258ebe"
+    },
+    {
+      "L": 4,
+      "sites": 256,
+      "spinor_matrix_dimension": 1024,
+      "flux12": 1,
+      "flux34": 1,
+      "link_perturbation": 0.0,
+      "overlap_index": -1,
+      "continuum_flux_product": 1,
+      "Dirac_zero_modes": 1,
+      "kernel_spectral_gap": 0.6192073257122265,
+      "GW_max_defect": 7.549517243440847e-15,
+      "Weyl_intertwiner_max_defect": 3.774758621720424e-15,
+      "Weyl_domain_rank": 513,
+      "Weyl_codomain_rank": 512,
+      "chirality_of_zero_modes_index_formula": -0.9999999999999816,
+      "maximum_plaquette_angle": 0.3926990816987244,
+      "Wilson_gauge_action_beta1": 38.97367935422113,
+      "index_density_range": [
+        -0.09058528304023661,
+        0.08337841513348532
+      ],
+      "elapsed_seconds": 12.704008399974555,
+      "kernel_eigenvalue_sha256": "f64c364b4f7c98f71f7e8a4a3ed078b878fd84588c307d4aa2b2af45dd046a14"
+    }
+  ],
+  "gauge_covariance_max_defect": 2.6651498128444817e-15,
+  "free_Brillouin_corners": [
+    {
+      "pi_components": 0,
+      "multiplicity": 1,
+      "overlap_D_eigenvalue": 0
+    },
+    {
+      "pi_components": 1,
+      "multiplicity": 4,
+      "overlap_D_eigenvalue": 2
+    },
+    {
+      "pi_components": 2,
+      "multiplicity": 6,
+      "overlap_D_eigenvalue": 2
+    },
+    {
+      "pi_components": 3,
+      "multiplicity": 4,
+      "overlap_D_eigenvalue": 2
+    },
+    {
+      "pi_components": 4,
+      "multiplicity": 1,
+      "overlap_D_eigenvalue": 2
+    }
+  ],
+  "anomaly_free_chiral_U1_example": [
+    -9,
+    -5,
+    -1,
+    7,
+    8
+  ],
+  "anomaly_linear": 0,
+  "anomaly_cubic": 0,
+  "declared_geometry": "Periodic hypercubic Euclidean four-torus with L=3 and4, four-component complex spinors and compact U(1) links. This geometry and gauge group are supplied; they are not derived from W33, quantum information, or a background-independent action.",
+  "convention": "gamma=(XxI,YxI,ZxX,ZxY), gamma5=gamma0 gamma1 gamma2 gamma3. DW=4I-sum_mu[(1-gamma_mu)U_mu Tplus+(1+gamma_mu)Tminus U_mu^dag]/2. H=gamma5(DW-m0),m0=1. D=I+gamma5 sign(H), in lattice units. Orientation is fixed by these gamma/flux conventions, not silently adjusted to a desired sign.",
+  "kinetic_map": "hat_gamma5=gamma5(1-D)=-sign(H). hatPminus=(1-hat_gamma5)/2, Pplus=(1+gamma5)/2, D hatPminus=Pplus D. In nonzero-index backgrounds the Weyl block is rectangular, with the dimension mismatch and zero modes exported.",
+  "prior_native_obstruction": "analysis/w33_20261010_toe41_w33_overlap_index_nogo.py proves zero index for its paired 40x40 incidence kernel for ALL gauges. The present unpaired spin/Wilson regulator has a nonzero flux index on a DIFFERENT supplied 4D geometry; it neither refutes that theorem nor supplies a W33-to-spacetime map.",
+  "prior_free_corner_owner": "data/PART_4057_4064_ADVANCED_PHYSICS.json:pass4060_gauge_covariant_wilson_matter already owns the supplied4D nearest-neighbor Wilson construction, gauge covariance and16-corner/one-species audit. Those are reused prior controls, not new results here. The present calculation adds actual finite overlap flux matrices, their nonzero index, rectangular Weyl maps and perturbation/second-size tests.",
+  "locality": "Wilson kernel is nearest-neighbor. The overlap sign is not ultralocal. Positive gaps and observed index persistence under one small perturbation are finite numerical tests, not a proof of uniform exponential locality, admissibility for all backgrounds or a continuum limit.",
+  "missing_dynamics": "This implements a 4D gauge-covariant Weyl kinetic operator and Wilson gauge-action evaluation, NOT a full interacting chiral gauge path integral or Hamiltonian. The anomaly-free charge example passes only polynomial anomaly conditions. An integrable gauge-field-dependent Weyl measure, fermion determinant phase, anomaly/ward identities, fermionic backreaction and continuum dynamics remain unimplemented. A vectorlike determinant or a 1+1D mirror gap would not fill that gap.",
+  "sources": [
+    "https://arxiv.org/abs/hep-lat/9707022",
+    "https://arxiv.org/abs/hep-lat/9802011",
+    "https://arxiv.org/abs/hep-lat/9811032",
+    "https://arxiv.org/abs/2505.20419"
+  ]
+}

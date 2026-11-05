@@ -1,0 +1,23 @@
+{
+  "status": "PASS_INDEPENDENT_V8_MECHANISM_CONTROLS",
+  "RG_RK4_absolute_error": 1.457167719820518e-16,
+  "messenger_determinants": [
+    1,
+    1
+  ],
+  "flux": [
+    {
+      "L": 3,
+      "plaquettes": 486,
+      "max_phase_error": 8.881784197001252e-16
+    },
+    {
+      "L": 4,
+      "plaquettes": 1536,
+      "max_phase_error": 4.440892098500626e-16
+    }
+  ],
+  "scalar_optical_controls": 12,
+  "portal_y": 8.753026297780048e-25,
+  "scope": "Independent server V8 math checks. Not a replay of local eigenvalue solvers or proof of a chiral measure."
+}

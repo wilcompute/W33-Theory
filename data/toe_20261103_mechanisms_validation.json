@@ -1,0 +1,330 @@
+{
+  "status": "PASS_SEVEN_MECHANISM_PRODUCERS_AND_TESTS",
+  "UTC": "2026-11-03T18:18:52.961310+00:00",
+  "producers": [
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/toe_20261103_mechanism_portal_protection.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_EXPLICIT_PORTAL_LEAKAGE_AND_SUSY_CONTROL 8.753026297780048e-25\n",
+      "stderr": "",
+      "seconds": 0.958
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/toe_20261103_mechanism_stationary_uplift.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_ENGINEERED_STATIONARY_POSITIVE_ENERGY_NEUTRAL_VACUUM 4.7884224959186514e-09 -3.5469796266064085e-11\n",
+      "stderr": "",
+      "seconds": 10.995
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/toe_20261103_mechanism_four_dimensional_overlap.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_FOUR_DIMENSIONAL_FLUX_INDEX_AND_WEYL_KINETIC_MAP [(3, 0, 0, 0), (3, 1, 1, -1), (3, 1, -1, 1), (3, 1, 1, -1), (4, 1, 1, -1)]\n",
+      "stderr": "",
+      "seconds": 16.698
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/toe_20261103_mechanism_neutrino_messengers.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_EXPLICIT_DIRAC_MESSENGER_COMPLETION_WITH_RANK_AND_COST_CONTROLS -10*epsilon**4/(9*epsilon**2 - 10)\n",
+      "stderr": "",
+      "seconds": 4.161
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/toe_20261103_mechanism_gravity_identifiability.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_JOINT_GRAVITY_OBSERVABLES_WITH_DEGENERACY_CONTROLS 7.426160269118665e-38\n",
+      "stderr": "",
+      "seconds": 5.235
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/toe_20261103_mechanism_holomorphic_bridge.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_HOLOMORPHIC_DIRAC_BRIDGE_WITH_D_FLAT_BREAKING 102\n",
+      "stderr": "",
+      "seconds": 2.479
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/toe_20261103_mechanism_sector_reference.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS_FLUX_SECTOR_REFERENCE_RANK_OBSTRUCTION 1 1.8185572492335211e-09\n",
+      "stderr": "",
+      "seconds": 2.02
+    }
+  ],
+  "pytest": {
+    "command": [
+      "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+      "-m",
+      "pytest",
+      "-q",
+      "--noconftest",
+      "tests/test_toe_20261103_mechanisms.py"
+    ],
+    "exit_code": 0,
+    "stdout": "........................                                                 [100%]\n24 passed in 30.16s\n",
+    "stderr": "",
+    "seconds": 33.098
+  },
+  "node_replay": {
+    "command": [
+      "node",
+      "analysis/toe_20261103_mechanism_server_controls.js"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"status\": \"PASS_INDEPENDENT_V8_MECHANISM_CONTROLS\",\n  \"RG_RK4_absolute_error\": 1.457167719820518e-16,\n  \"messenger_determinants\": [\n    1,\n    1\n  ],\n  \"flux\": [\n    {\n      \"L\": 3,\n      \"plaquettes\": 486,\n      \"max_phase_error\": 8.881784197001252e-16\n    },\n    {\n      \"L\": 4,\n      \"plaquettes\": 1536,\n      \"max_phase_error\": 4.440892098500626e-16\n    }\n  ],\n  \"scalar_optical_controls\": 12,\n  \"portal_y\": 8.753026297780048e-25,\n  \"scope\": \"Independent server V8 math checks. Not a replay of local eigenvalue solvers or proof of a chiral measure.\"\n}\n",
+    "stderr": "",
+    "seconds": 0.452
+  },
+  "independent_server": {
+    "status": "PASS_INDEPENDENT_V8_MECHANISM_CONTROLS",
+    "RG_RK4_absolute_error": 1.457167719820518e-16,
+    "messenger_determinants": [
+      1,
+      1
+    ],
+    "flux": [
+      {
+        "L": 3,
+        "plaquettes": 486,
+        "max_phase_error": 8.881784197001252e-16
+      },
+      {
+        "L": 4,
+        "plaquettes": 1536,
+        "max_phase_error": 4.440892098500626e-16
+      }
+    ],
+    "scalar_optical_controls": 12,
+    "portal_y": 8.753026297780048e-25,
+    "scope": "Independent server V8 math checks. Not a replay of local eigenvalue solvers or proof of a chiral measure."
+  },
+  "input_raw_sha256": {
+    "data/w33_20261103_native_quantum_vacuum_displacement.json": "7fb5cfa9a8d493e2fb791d172adbaaca36ece2436a2d98b34ffe79569db9d00b",
+    "analysis/toe_uv/fading_ds_dovekie.json": "fdb5fd73c6f010cc4adb8030652ab3d5ff47f1f98f8aebe079fe64e1f67ce6bc",
+    "data/toe_20261103_dark_radiative_stability.json": "eab0adc3d8c083c37cf7d2eaed6a72b7532de6d7d1dfe0a2aeb578995ede9e1d",
+    "data/toe_20261103_sterile_anomaly_operators.json": "47db331e619a7e1df63ef9bad2d784dde648795037504ae37f532ac7eb18e8f2",
+    "analysis/toe_20261103_supergravity_vacuum_completion.py": "a0a77554fb23b2f1963549fe2dacf663eea111c3a073df7dac66a8633359e04b"
+  },
+  "source_raw_sha256": {
+    "analysis/toe_20261103_mechanism_portal_protection.py": "fb9c3b17af7ba8c737cc78ff3b8ac3216ee89280474d8a630ec6d88f38f458b3",
+    "analysis/toe_20261103_mechanism_stationary_uplift.py": "cedb6fd3950b4141f31049fdbab1a059da6c3374993002a0e6706e49b97c1702",
+    "analysis/toe_20261103_mechanism_four_dimensional_overlap.py": "831c3ffa9b9c25986cfd2c0de1a4db0b01c595902a521b1908fd8f3979fe66e1",
+    "analysis/toe_20261103_mechanism_neutrino_messengers.py": "e590e7b363162a915005330d55296ec3f8ecf82f883eb93c7e72bb93582137ad",
+    "analysis/toe_20261103_mechanism_gravity_identifiability.py": "c788bb8f5fc7ae3cc9de68802e9524be3376aa1cfae670f50c7461d861b1166d",
+    "analysis/toe_20261103_mechanism_holomorphic_bridge.py": "4a06976d663c22944897b2eee9c77af1007911335c3019591be53382c265a323",
+    "analysis/toe_20261103_mechanism_sector_reference.py": "850e8744c15963c8a78bc5e8194b5c6a04cd840dafe6a98e7eba0d31e0bab29d",
+    "tests/test_toe_20261103_mechanisms.py": "dcd7838118f3fba59bbbcb00b14c05a678c5484266bd90fce20e5e75204e7b8e",
+    "analysis/toe_20261103_mechanisms_validation.py": "2ebb71d966665a878805a7e5fb74c59989bf553c82359fd68c354bf5fbe84fb7"
+  },
+  "output_raw_sha256": {
+    "data/toe_20261103_mechanism_portal_protection.json": "7bcdbeb75fa852e80489f397a787a10c1469fba6a38e1f57166f42a4abb61c61",
+    "data/toe_20261103_mechanism_stationary_uplift.json": "114596377c3092083434eb4d339a0fe05f1dd2edae89af0e13c3843911abfe20",
+    "data/toe_20261103_mechanism_four_dimensional_overlap.json": "a898b9d04670a6318113fc5308404f93a5a7199938c43343ee661a2235ae2d54",
+    "data/toe_20261103_mechanism_neutrino_messengers.json": "e833a8a38813febbf21b9865beca29ac7b87bbd5b4a8996ead05586fc4ed5c0b",
+    "data/toe_20261103_mechanism_gravity_identifiability.json": "717176cb84dae312a155e15da2b264c08ccd221b9e584ea2adb3e93066fea412",
+    "data/toe_20261103_mechanism_holomorphic_bridge.json": "65021f32c92ca61ef30367e0363133ad638c68edcb710c418e02b9229d8705dd",
+    "data/toe_20261103_mechanism_sector_reference.json": "c0b03c4d80aeb5594295f7756ad90d91ba01c8db2f03eb2661922880e6bacebf"
+  },
+  "initial_failure": "The first photon ray quadrature used an absolute tolerance on a7e-38rad integrand and failed its analytic relative check. Fixed by integrating a normalized dimensionless kernel with1e-12 tolerance, then restoring physical units. No failed run is counted as PASS.",
+  "scope": "Seven explicitly declared EFT/regulator mechanisms, not full repository tests, observational validation, an interacting four-dimensional chiral gauge theory or a solved TOE.",
+  "earlier_runs": [
+    {
+      "status": "FAIL_MECHANISM_VALIDATION",
+      "UTC": "2026-11-03T17:59:17.024494+00:00",
+      "producers": [
+        {
+          "command": [
+            "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-u",
+            "analysis/toe_20261103_mechanism_portal_protection.py"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-u",
+            "analysis/toe_20261103_mechanism_stationary_uplift.py"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-u",
+            "analysis/toe_20261103_mechanism_four_dimensional_overlap.py"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-u",
+            "analysis/toe_20261103_mechanism_neutrino_messengers.py"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-u",
+            "analysis/toe_20261103_mechanism_gravity_identifiability.py"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-u",
+            "analysis/toe_20261103_mechanism_holomorphic_bridge.py"
+          ],
+          "exit_code": 0
+        }
+      ],
+      "pytest_exit_code": 1,
+      "pytest_stdout_tail": "                return sympify(a.item(),\n                                           locals=locals,\n                                           convert_xor=convert_xor,\n                                           strict=strict,\n                                           rational=rational,\n                                           evaluate=evaluate)\n                        except SympifyError:\n                            pass\n            elif hasattr(a, '__float__'):\n                # float and int can coerce size-one numpy arrays to their lone\n                # element.  See issue https://github.com/numpy/numpy/issues/10404.\n                return sympify(float(a))\n            elif hasattr(a, '__int__'):\n                return sympify(int(a))\n    \n        if strict:\n            raise SympifyError(a)\n    \n        if iterable(a):\n            try:\n                return type(a)([sympify(x, locals=locals, convert_xor=convert_xor,\n                    rational=rational, evaluate=evaluate) for x in a])\n            except TypeError:\n                # Not all iterables are rebuildable with their type.\n                pass\n    \n        if not isinstance(a, str):\n            raise SympifyError('cannot sympify object of type %r' % type(a))\n    \n        from sympy.parsing.sympy_parser import (parse_expr, TokenError,\n                                                standard_transformations)\n        from sympy.parsing.sympy_parser import convert_xor as t_convert_xor\n        from sympy.parsing.sympy_parser import rationalize as t_rationalize\n    \n        transformations = standard_transformations\n    \n        if rational:\n            transformations += (t_rationalize,)\n        if convert_xor:\n            transformations += (t_convert_xor,)\n    \n        try:\n            a = a.replace('\\n', '')\n            expr = parse_expr(a, local_dict=locals, transformations=transformations, evaluate=evaluate)\n        except (TokenError, SyntaxError) as exc:\n>           raise SympifyError('could not parse %r' % a, exc)\nE           sympy.core.sympify.SympifyError: Sympify of expression 'could not parse 'lambda*v'' failed, because of exception being raised:\nE           TokenError: Starred arguments in lambda not supported\n\nC:\\Users\\wiljd\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\sympy\\core\\sympify.py:509: SympifyError\n=========================== short test summary info ===========================\nFAILED tests/test_toe_20261103_mechanisms.py::test_holomorphic_bridge_F_and_D_branch\n1 failed, 20 passed in 12.75s\n"
+    },
+    {
+      "status": "PASS_SIX_MECHANISM_PRODUCERS_AND_TESTS",
+      "UTC": "2026-11-03T18:01:26.593711+00:00",
+      "producers": [
+        {
+          "command": [
+            "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-u",
+            "analysis/toe_20261103_mechanism_portal_protection.py"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-u",
+            "analysis/toe_20261103_mechanism_stationary_uplift.py"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-u",
+            "analysis/toe_20261103_mechanism_four_dimensional_overlap.py"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-u",
+            "analysis/toe_20261103_mechanism_neutrino_messengers.py"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-u",
+            "analysis/toe_20261103_mechanism_gravity_identifiability.py"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-u",
+            "analysis/toe_20261103_mechanism_holomorphic_bridge.py"
+          ],
+          "exit_code": 0
+        }
+      ],
+      "pytest_exit_code": 0,
+      "pytest_stdout_tail": ".....................                                                    [100%]\n21 passed in 9.37s\n"
+    },
+    {
+      "status": "PASS_SIX_MECHANISM_PRODUCERS_AND_TESTS",
+      "UTC": "2026-11-03T18:15:06.412591+00:00",
+      "producers": [
+        {
+          "command": [
+            "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-u",
+            "analysis/toe_20261103_mechanism_portal_protection.py"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-u",
+            "analysis/toe_20261103_mechanism_stationary_uplift.py"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-u",
+            "analysis/toe_20261103_mechanism_four_dimensional_overlap.py"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-u",
+            "analysis/toe_20261103_mechanism_neutrino_messengers.py"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-u",
+            "analysis/toe_20261103_mechanism_gravity_identifiability.py"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-u",
+            "analysis/toe_20261103_mechanism_holomorphic_bridge.py"
+          ],
+          "exit_code": 0
+        }
+      ],
+      "pytest_exit_code": 0,
+      "pytest_stdout_tail": ".....................                                                    [100%]\n21 passed in 14.65s\n"
+    }
+  ],
+  "serialization_repair": "First full run20passed1failed: Sympy could not parse exported lambda*v because lambda is a Python keyword. Changed only symbolic spelling to lam, regenerated the artifact and reran all producers/tests on frozen source hashes. The earlier failed result is retained."
+}

@@ -1,0 +1,78 @@
+{
+  "status": "PASS_EXPLICIT_PORTAL_LEAKAGE_AND_SUSY_CONTROL",
+  "source_parent_status": "PASS_FADING_DARK_SECTOR_RADIATIVE_BENCHMARKS",
+  "input_fit": "analysis/toe_uv/fading_ds_dovekie.json:free_c_neg",
+  "prior_CW_owner": "analysis/w33_pass12034_12038_joint_mechanisms.py:radiative_fibre already implements the same complete scalar/Dirac common-soft determinant and exact SUSY cancellation on a DIFFERENT flavor texture, citing11909 and11935. Those methods are prior controls. The new declared S-D-Dbar portal RG solution and derivative of the fading physical mass add a specific leakage calculation, not a new supertrace theorem.",
+  "cprime": 0.05004260057022673,
+  "H0_eV": 1.4409184480274416e-33,
+  "Mpl_eV": 2.435e+27,
+  "DM_mass_input_eV": 1000000000.0,
+  "visible_soft_mass_input_eV": 1000000000000.0,
+  "log_UV_over_IR": 10.0,
+  "soft_delta_benchmark_eV": 3.115038130152682e-13,
+  "portal_y_benchmark": 8.753026297780048e-25,
+  "rows": [
+    {
+      "y": 0.0,
+      "dark_soft_squared_eV2": -0.0,
+      "source_soft_squared_eV2": 1e+24,
+      "scalar_non_tachyonic": true,
+      "one_loop_curvature_eV2": 0.0,
+      "absolute_curvature_over_H0_squared": 0.0
+    },
+    {
+      "y": 8.753026297780047e-26,
+      "dark_soft_squared_eV2": -9.703462552305117e-28,
+      "source_soft_squared_eV2": 1e+24,
+      "scalar_non_tachyonic": true,
+      "one_loop_curvature_eV2": -2.0762459738658104e-68,
+      "absolute_curvature_over_H0_squared": 0.009999999999999997
+    },
+    {
+      "y": 8.753026297780048e-25,
+      "dark_soft_squared_eV2": -9.703462552305118e-26,
+      "source_soft_squared_eV2": 1e+24,
+      "scalar_non_tachyonic": true,
+      "one_loop_curvature_eV2": -2.0762459738658105e-66,
+      "absolute_curvature_over_H0_squared": 0.9999999999999998
+    },
+    {
+      "y": 8.753026297780048e-24,
+      "dark_soft_squared_eV2": -9.703462552305117e-24,
+      "source_soft_squared_eV2": 1e+24,
+      "scalar_non_tachyonic": true,
+      "one_loop_curvature_eV2": -2.07624597386581e-64,
+      "absolute_curvature_over_H0_squared": 99.99999999999996
+    },
+    {
+      "y": 1e-08,
+      "dark_soft_squared_eV2": -12665147.955292225,
+      "source_soft_squared_eV2": 1e+24,
+      "scalar_non_tachyonic": true,
+      "one_loop_curvature_eV2": -2.7099566066077634e-34,
+      "absolute_curvature_over_H0_squared": 1.305219439661107e+32
+    },
+    {
+      "y": 0.001,
+      "dark_soft_squared_eV2": -1.2665145549202938e+17,
+      "source_soft_squared_eV2": 9.999998733485445e+23,
+      "scalar_non_tachyonic": true,
+      "one_loop_curvature_eV2": -2.718236418466101e-24,
+      "absolute_curvature_over_H0_squared": 1.3092073158388611e+42
+    }
+  ],
+  "exact_SUSY_curvature_controls": [
+    0.0,
+    0.0
+  ],
+  "declared_model": "Global N=1 SUSY with canonical K and W=m(Phi) D Dbar + M S^2/2 + y S D Dbar. D=Dbar=S=0 and F_Phi=0 define the supersymmetric flat background. A soft scalar mass for S explicitly breaks SUSY. RG runs above the S threshold; log(UV/M)=10 is input. No visible SM embedding is presumed.",
+  "exact_protection": "In the unbroken global-SUSY background, all four bosonic and four fermionic degrees have the same |m(Phi)|: their one-loop determinants cancel pointwise. Perturbative Kahler corrections alone cannot lift an F-flat background. This requires F_Phi=0 and unbroken SUSY, unlike a rolling positive-energy universe.",
+  "leakage": "The declared portal transmits the supplied S soft mass even with zero dark soft masses at the UV boundary. Exact integration of the constant-y one-loop soft RG equations gives mD^2=(mS_UV^2/3)[exp(-6 y^2 L/(16pi^2))-1]. The IR sign is negative; large leakage can be tachyonic. Small-y naturalness uses its absolute value.",
+  "curvature": "At mu=m(today), the small-soft expansion is delta_mPhi^2=cp^2*m^2*mDsoft^2/(2*pi^2*Mpl^2); the high-precision calculation evaluates the full two-complex-scalar minus Dirac determinant rather than subtracting floating nearly equal numbers.",
+  "boundary": "Leading one-loop, constant Yukawa, explicit global-SUSY portal and supplied soft threshold. Gauge effects, A/B terms, y running, anomaly mediation, thermal state and gravity mediation are not included. The portal cap is conditional naturalness, not an experimental limit. This exhibits a possible protection and a concrete failure mechanism; it does not construct realistic sequestering.",
+  "sources": [
+    "https://arxiv.org/abs/hep-ph/9709356",
+    "https://arxiv.org/abs/1605.00996",
+    "https://arxiv.org/abs/hep-th/0701023"
+  ]
+}

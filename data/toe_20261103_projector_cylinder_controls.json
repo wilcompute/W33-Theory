@@ -1,0 +1,54 @@
+{
+  "status": "PASS_SERVER_PROJECTOR_CYLINDER_AND_GLOBAL_LOOP_CONTROL",
+  "theta0": 0.4,
+  "theta1": 1.2,
+  "analytic_curvature": "Omega_theta_phi = -sin(theta)/2 for P=|v><v|,v=(cos(theta/2),e^(i phi)sin(theta/2))",
+  "expected_ratio_complex": [
+    -0.18337803738067343,
+    -0.9830424687705065
+  ],
+  "rows": [
+    {
+      "steps": 128,
+      "ratio_complex": [
+        -0.18326940653611876,
+        -0.9830627267005416
+      ],
+      "cylinder_phase_error": 0.00011050359323555966
+    },
+    {
+      "steps": 512,
+      "ratio_complex": [
+        -0.1833712505654025,
+        -0.9830437347678093
+      ],
+      "cylinder_phase_error": 0.000006903883739788655
+    },
+    {
+      "steps": 2048,
+      "ratio_complex": [
+        -0.18337761321490625,
+        -0.9830425478947717
+      ],
+      "cylinder_phase_error": 4.31482615404188e-7
+    },
+    {
+      "steps": 8192,
+      "ratio_complex": [
+        -0.1833780108704076,
+        -0.9830424737160657
+      ],
+      "cylinder_phase_error": 2.6967624121303753e-8
+    }
+  ],
+  "flat_connection_control": {
+    "one_form": "(1/2)dphi on S1",
+    "curvature": 0,
+    "loop_Wilson_phase_complex": [
+      -1,
+      1.2246467991473532e-16
+    ]
+  },
+  "scope": "Prior Berry/Kato rank-one cylinder identity and flat global-holonomy counterexample. A numerical geometry control, NOT the four-dimensional fermion measure, its locality, SU5 proof, or independent verification of all claims of arXiv2610.09093.",
+  "source": "https://arxiv.org/html/2610.09093v1#S5"
+}

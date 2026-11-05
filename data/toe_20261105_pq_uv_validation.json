@@ -1,0 +1,44 @@
+{
+  "UTC": "2026-11-05T19:26:26.114563+00:00",
+  "source_raw_sha256": {
+    "analysis/toe_20261105_pq_quality_gauge_obstruction.py": "7099dba40617084b1dd19a9fadb74d9632bb6b97c2ae7566428f72d5aa4c5c87",
+    "analysis/toe_20261105_pq_normalization_cutoff.py": "816d5c5d737a29b3eed532495921a80033afdd4d1ad9cd27a3cdc5dfc6a62309",
+    "tests/test_toe_20261105_pq_uv_controls.py": "a320dee5436614ce77c8d11d84653e16e5747e39606966a777d3a54fcd391284",
+    "analysis/toe_20261105_pq_uv_validation.py": "3d008a8b1d4bfb1d2812bdb20f0bba2d04598327f22cb7b5b52eb1f2bf90894a",
+    "analysis/toe_20261105_pq_server_controls.js": "ad90ff4263e454b283c688c1c66bd4f1381d4ed4ff644f1bfc56ed7de9b3c875"
+  },
+  "input_raw_sha256": {
+    "analysis/toe_uv/pq_full_scan.json": "6c37931c57b868284df33ae726cfdcbfdf5aaf32988c6918ed41f08988318725",
+    "analysis/toe_uv/pq_twoloop.json": "3ce0ca45ccc55461a95029ac8b07283cbc33e86c00c164991610c92be29420f7",
+    "analysis/toe_uv/pq_gates.py": "18d49cfb9eb40ae2e55abc51707b4869ef2db2aababee0dd68bc173816ba74a5",
+    "analysis/toe_uv/pq_mass_ceiling.py": "8d48d5ed29566228cc713d98b61b83e0ffa9895bae2db040ede28c7b17b72ded"
+  },
+  "producers": [
+    {
+      "path": "analysis/toe_20261105_pq_quality_gauge_obstruction.py",
+      "exit_code": 0,
+      "seconds": 0.8430581092834473,
+      "stdout": "PASS_PQ_QUALITY_AND_MINIMAL_GAUGE_PROTECTION_OBSTRUCTIONS [(211.11111111111111, 12), (60.0, 12), (57.0, 12), (28.5, 13), (25.0, 13), (5.7, 14)]\n",
+      "stderr": ""
+    },
+    {
+      "path": "analysis/toe_20261105_pq_normalization_cutoff.py",
+      "exit_code": 0,
+      "seconds": 5.897012233734131,
+      "stdout": "PASS_CANONICAL_NORMALIZATION_AND_CONDITIONAL_CUTOFF_CONTROLS\n15000000000.0 [(False, None, None), (True, None, None)]\n27000000000.0 [(False, None, None), (True, None, None)]\n50000000000.0 [(False, 0.13252321091294963, 25741329696.90471), (True, None, None)]\n100000000000.0 [(False, 0.007760631199914301, 12458435856.811481), (True, 0.03156716660830789, 25126546363.679943)]\n200000000000.0 [(False, 0.0004580917459553047, 6053704624.147463), (True, 0.0018418795209852513, 12138795726.052074)]\n500000000000.0 [(False, 1.0965172449087044e-05, 2341492307.1715446), (True, 4.389580858904915e-05, 4684859047.455384)]\n1000000000000.0 [(False, 6.487058292815043e-07, 1139039796.7424178), (True, 2.5950183417832087e-06, 2278165201.1139174)]\nM5_range 231546253.28273687 359734022.41597265\n",
+      "stderr": ""
+    }
+  ],
+  "pytest": {
+    "exit_code": 0,
+    "stdout": "................................                                         [100%]\n32 passed in 10.58s\n",
+    "stderr": ""
+  },
+  "output_raw_sha256": {
+    "data/toe_20261105_pq_quality_gauge_obstruction.json": "903f7d09ac3ad9c2ae200b41ff9a8eb4bc0f36255b21e9886c703065138003a3",
+    "data/toe_20261105_pq_normalization_cutoff.json": "7cb5a12173996d4e7a311965be1a1691fa5335aeb07710db367bee4b2dbdb791"
+  },
+  "status": "PASS_TWO_PQ_UV_PRODUCERS_AND_32_COMBINED_TESTS",
+  "initial_launch_failure": "Remote process5720 rejected CMD && syntax under PowerShell before executing Python. Relaunched with absolute producer path, no scientific input changed.",
+  "corrected_unpublished_citation": "The originally typed1203.0896 points to an unrelated condensed matter paper. Verified and corrected to1203.0237 before final producer replay."
+}

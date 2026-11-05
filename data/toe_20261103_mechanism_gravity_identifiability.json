@@ -1,0 +1,149 @@
+{
+  "status": "PASS_JOINT_GRAVITY_OBSERVABLES_WITH_DEGENERACY_CONTROLS",
+  "rows": [
+    {
+      "alpha_squared": 0.0,
+      "scalar_range_m": 1e-05,
+      "G_tensor": 6.6743e-11,
+      "G_force_calibration": 6.6743e-11,
+      "J_per_second": -0.05938186958270255,
+      "lensing_over_GR_with_same_force_calibration": 1.0,
+      "potential_slip_gamma_at_calibration": 1.0
+    },
+    {
+      "alpha_squared": 0.0,
+      "scalar_range_m": 0.0002,
+      "G_tensor": 6.6743e-11,
+      "G_force_calibration": 6.6743e-11,
+      "J_per_second": -0.05938186958270255,
+      "lensing_over_GR_with_same_force_calibration": 1.0,
+      "potential_slip_gamma_at_calibration": 1.0
+    },
+    {
+      "alpha_squared": 0.0,
+      "scalar_range_m": 1000000.0,
+      "G_tensor": 6.6743e-11,
+      "G_force_calibration": 6.6743e-11,
+      "J_per_second": -0.05938186958270255,
+      "lensing_over_GR_with_same_force_calibration": 1.0,
+      "potential_slip_gamma_at_calibration": 1.0
+    },
+    {
+      "alpha_squared": 0.01,
+      "scalar_range_m": 1e-05,
+      "G_tensor": 6.67429999711108e-11,
+      "G_force_calibration": 6.6743e-11,
+      "J_per_second": -0.059381869560260765,
+      "lensing_over_GR_with_same_force_calibration": 0.9999999995671578,
+      "potential_slip_gamma_at_calibration": 0.999999999958777
+    },
+    {
+      "alpha_squared": 0.01,
+      "scalar_range_m": 0.0002,
+      "G_tensor": 6.625551913293703e-11,
+      "G_force_calibration": 6.6743e-11,
+      "J_per_second": -0.059328027218964095,
+      "lensing_over_GR_with_same_force_calibration": 0.9926961499024173,
+      "potential_slip_gamma_at_calibration": 0.9926693790240518
+    },
+    {
+      "alpha_squared": 0.01,
+      "scalar_range_m": 1000000.0,
+      "G_tensor": 6.608217821782178e-11,
+      "G_force_calibration": 6.6743e-11,
+      "J_per_second": -0.059381869582702564,
+      "lensing_over_GR_with_same_force_calibration": 0.9900990099009901,
+      "potential_slip_gamma_at_calibration": 0.9801980198059013
+    },
+    {
+      "alpha_squared": 1.0,
+      "scalar_range_m": 1e-05,
+      "G_tensor": 6.674299711108102e-11,
+      "G_force_calibration": 6.6743e-11,
+      "J_per_second": -0.059381867338525046,
+      "lensing_over_GR_with_same_force_calibration": 0.9999999567157759,
+      "potential_slip_gamma_at_calibration": 0.9999999958776927
+    },
+    {
+      "alpha_squared": 1.0,
+      "scalar_range_m": 0.0002,
+      "G_tensor": 3.845176923992573e-11,
+      "G_force_calibration": 6.6743e-11,
+      "J_per_second": -0.056257097227287126,
+      "lensing_over_GR_with_same_force_calibration": 0.5761168847658291,
+      "potential_slip_gamma_at_calibration": 0.46211715726000974
+    },
+    {
+      "alpha_squared": 1.0,
+      "scalar_range_m": 1000000.0,
+      "G_tensor": 3.33715e-11,
+      "G_force_calibration": 6.6743e-11,
+      "J_per_second": -0.05938186958270254,
+      "lensing_over_GR_with_same_force_calibration": 0.5,
+      "potential_slip_gamma_at_calibration": 1.000000082840371e-10
+    },
+    {
+      "alpha_squared": 100.0,
+      "scalar_range_m": 1e-05,
+      "G_tensor": 6.674271110934037e-11,
+      "G_force_calibration": 6.6743e-11,
+      "J_per_second": -0.059381645165911635,
+      "lensing_over_GR_with_same_force_calibration": 0.9999956715961279,
+      "potential_slip_gamma_at_calibration": 0.9999995877693604
+    },
+    {
+      "alpha_squared": 100.0,
+      "scalar_range_m": 0.0002,
+      "G_tensor": 8.949675502398231e-13,
+      "G_force_calibration": 6.6743e-11,
+      "J_per_second": -0.0521089406245222,
+      "lensing_over_GR_with_same_force_calibration": 0.01340915976566566,
+      "potential_slip_gamma_at_calibration": -0.947073066642633
+    },
+    {
+      "alpha_squared": 100.0,
+      "scalar_range_m": 1000000.0,
+      "G_tensor": 6.608217821782177e-13,
+      "G_force_calibration": 6.6743e-11,
+      "J_per_second": -0.059381869582702515,
+      "lensing_over_GR_with_same_force_calibration": 0.009900990099009901,
+      "potential_slip_gamma_at_calibration": -0.980198019798059
+    }
+  ],
+  "ray_integral_bending_rad": 7.426160269118665e-38,
+  "analytic_bending_rad": 7.426160269118665e-38,
+  "force_calibration_distance_m": 0.0002,
+  "arm_m": 0.00025,
+  "particle_mass_input_kg": 1e-14,
+  "static_mass_phase_response_rank": 1,
+  "joint_response_rank": 2,
+  "extended_tensor_scalar_photon_response": [
+    [
+      1.0,
+      1.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "extended_null_direction": [
+    1.0,
+    -1.0,
+    -1.0
+  ],
+  "action": "Einstein-frame tensor gravity plus one canonically normalized stable scalar with universal conformal matter coupling A(phi), scalar Compton range lambda, weak unscreened sources. alpha\u00b2 convention is the ratio of massless scalar to tensor Newton forces. No separate direct scalar-photon operator or screening in the baseline.",
+  "weak_metric": "Phi=-Gtensor*M*(1+alpha\u00b2*exp(-r/lambda))/r; Psi=-Gtensor*M*(1-alpha\u00b2*exp(-r/lambda))/r. The optical potential Phi+Psi cancels the linear conformal scalar. Slow-body acceleration measures Gtensor*[1+alpha\u00b2*(1+r/lambda)*exp(-r/lambda)].",
+  "observables": "Mass-mass path phase uses the potential (not its force) and physical branch separations. Ray bending is4Gtensor*M/(bc\u00b2). After finite-distance force calibration the bending/GR ratio is1/[1+alpha\u00b2*(1+r/lambda)*exp(-r/lambda)]. Potential slip gamma(r) is NOT interchangeable with the finite-distance force-calibrated lensing ratio for a massive scalar.",
+  "massless_limit": "For lambda>>all apparatus scales, Gmeas=Gtensor*(1+alpha\u00b2), gamma=(1-alpha\u00b2)/(1+alpha\u00b2), and all static mass-only phases have identical strength after calibration. Lensing instead measures (1+gamma)/2=1/(1+alpha\u00b2). Thus phase entanglement alone does not determine mediator spin even in this small class.",
+  "extended_control": "Allow a third independent response coefficient to the photon channel. The two ideal observables have null direction(delta gt,delta gs,delta cg)=(1,-1,-1). The baseline discrimination is model-specific. A photon channel does not establish a model-independent spin2 or quantum-gravity theorem.",
+  "sensitivity": "The microscopic-source bending angle is exported to expose the extremely small signal. No detector noise, timing protocol, matter-photon quantum state or feasible experimental design is asserted. The prior Markovian entanglement certificate supplies the static controlled phase, not these other missing ingredients.",
+  "sources": [
+    "https://arxiv.org/abs/gr-qc/9602056",
+    "https://arxiv.org/abs/2604.24496",
+    "https://doi.org/10.1103/r8ry-sp35"
+  ],
+  "boundary": "Specified weak-field unscreened scalar-tensor EFT and ideal observables, not an observational fit, gravity UV completion, proof of spin2 uniqueness or model-independent quantum witness."
+}

@@ -1,0 +1,31 @@
+{
+  "status": "PASS_INDEPENDENT_SERVER_V8_PQ_CONTROLS",
+  "yukawa_scalar_RK4": {
+    "steps": 20000,
+    "canonical_initial_y": 0.3857965714293272,
+    "final_y": 0.37672164174086725
+  },
+  "ordinary_ZN_checked": 256,
+  "neutral_allowed_charges": 256,
+  "quality": [
+    {
+      "fa": 95000000000,
+      "first_sufficient_dimension": 12
+    },
+    {
+      "fa": 100000000000,
+      "first_sufficient_dimension": 12
+    },
+    {
+      "fa": 200000000000,
+      "first_sufficient_dimension": 13
+    },
+    {
+      "fa": 228000000000,
+      "first_sufficient_dimension": 13
+    }
+  ],
+  "interval_10micron_M5_GeV": 333947484.3033179,
+  "scope": "Independent arithmetic and ODE controls of the declared parent equations. Not a full beta-function derivation, quantum-gravity theorem, or experimental axion bound.",
+  "execution_environment": "Actual functions.exec server V8 execution, source read from the owned JS file."
+}

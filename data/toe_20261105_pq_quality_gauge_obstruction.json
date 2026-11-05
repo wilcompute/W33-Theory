@@ -1,0 +1,2959 @@
+{
+  "status": "PASS_PQ_QUALITY_AND_MINIMAL_GAUGE_PROTECTION_OBSTRUCTIONS",
+  "model_representation_source": "analysis/toe_uv/pq_full_scan.json",
+  "left_handed_mass_signs": [
+    1,
+    1,
+    -1
+  ],
+  "integer_color_anomaly": 1,
+  "E_over_N": "2/3",
+  "theta_tolerance_input": 1e-10,
+  "Planck_scale_input_GeV": 2.435e+18,
+  "QCD_susceptibility_input_GeV4": 3.26653399296e-05,
+  "quality_scan": [
+    {
+      "fa_input_GeV": 27000000000.0,
+      "axion_mass_input_relation_ueV": 211.11111111111111,
+      "conventions": [
+        {
+          "canonical_sigma_f_over_sqrt2": true,
+          "first_sufficient_dimension": 12,
+          "rows": [
+            {
+              "operator_dimension": 5,
+              "amplitude_over_QCD": 6.3780464786033885e+37,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 6,
+              "amplitude_over_QCD": 5.00077690862731e+29,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 7,
+              "amplitude_over_QCD": 3.9209136800357055e+21,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 8,
+              "amplitude_over_QCD": 30742351372980.96,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 9,
+              "amplitude_over_QCD": 241038.759091278,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 10,
+              "amplitude_over_QCD": 0.0018898906814046209,
+              "uniform_theta_bound": 0.023412013773770734,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -0.01058058435532852,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.1565403514195727
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -0.017764153260934393,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0643687510665305
+                }
+              ]
+            },
+            {
+              "operator_dimension": 11,
+              "amplitude_over_QCD": 1.4817894023042085e-11,
+              "uniform_theta_bound": 1.6299683455054112e-10,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.0500544344583346e-10,
+                  "stationarity_residual": 1.608611746708759e-86,
+                  "curvature": 1.0000000013713355
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.606251862550991e-10,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0000000003047451
+                }
+              ]
+            },
+            {
+              "operator_dimension": 12,
+              "amplitude_over_QCD": 1.1618131431544775e-19,
+              "uniform_theta_bound": 1.394175771785373e-18,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -8.981526913023959e-19,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.3738901378623488e-18,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 13,
+              "amplitude_over_QCD": 9.109322671004608e-28,
+              "uniform_theta_bound": 1.1842119472305991e-26,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -7.628902818441392e-27,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.1669813436475025e-26,
+                  "stationarity_residual": 1.7859177988785547e-102,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 14,
+              "amplitude_over_QCD": 7.142263798047727e-36,
+              "uniform_theta_bound": 9.999169317266818e-35,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -6.441641731867712e-35,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -9.853678703809481e-35,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 15,
+              "amplitude_over_QCD": 5.599969833462682e-44,
+              "uniform_theta_bound": 8.399954750194022e-43,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -5.41139942207125e-43,
+                  "stationarity_residual": 9.913835302014255e-119,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -8.277733140493983e-43,
+                  "stationarity_residual": 1.982767060402851e-118,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 16,
+              "amplitude_over_QCD": 4.3907174283120366e-52,
+              "uniform_theta_bound": 7.025147885299259e-51,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -4.5257245231702445e-51,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -6.922930086697157e-51,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 17,
+              "amplitude_over_QCD": 3.4425898904106186e-60,
+              "uniform_theta_bound": 5.852402813698051e-59,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -3.7702214054239144e-59,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -5.76724877254245e-59,
+                  "stationarity_residual": 1.1006568214637918e-134,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 18,
+              "amplitude_over_QCD": 2.699200152835819e-68,
+              "uniform_theta_bound": 4.8585602751044745e-67,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -3.129970463732724e-67,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -4.787866911234363e-67,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 19,
+              "amplitude_over_QCD": 2.1163373207370548e-76,
+              "uniform_theta_bound": 4.021040909400404e-75,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -2.59042567494207e-75,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -3.9625336784411807e-75,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "canonical_sigma_f_over_sqrt2": false,
+          "first_sufficient_dimension": 12,
+          "rows": [
+            {
+              "operator_dimension": 5,
+              "amplitude_over_QCD": 3.607967932594766e+38,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 6,
+              "amplitude_over_QCD": 4.0006215269018706e+30,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 7,
+              "amplitude_over_QCD": 4.436007442560586e+22,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 8,
+              "amplitude_over_QCD": 491877621967699.06,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 9,
+              "amplitude_over_QCD": 5454084.514631511,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 10,
+              "amplitude_over_QCD": 0.06047650180494843,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 11,
+              "amplitude_over_QCD": 6.705813341822128e-10,
+              "uniform_theta_bound": 7.376395284420518e-09,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -4.752003623420691e-09,
+                  "stationarity_residual": 1.0295115178936058e-84,
+                  "curvature": 1.000000062059559
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -7.269066041507684e-09,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0000000137911984
+                }
+              ]
+            },
+            {
+              "operator_dimension": 12,
+              "amplitude_over_QCD": 7.435604116188739e-18,
+              "uniform_theta_bound": 8.922724939426497e-17,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -5.748177224335394e-17,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0000000000000009
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -8.79289688231913e-17,
+                  "stationarity_residual": 1.5340917079055395e-92,
+                  "curvature": 1.0000000000000002
+                }
+              ]
+            },
+            {
+              "operator_dimension": 13,
+              "amplitude_over_QCD": 8.244817705835018e-26,
+              "uniform_theta_bound": 1.0718263017585522e-24,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -6.904894612394221e-25,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.0562309396624952e-24,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 14,
+              "amplitude_over_QCD": 9.14209766150121e-34,
+              "uniform_theta_bound": 1.2798936726101694e-32,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -8.245301416790778e-33,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.26127087408763e-32,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 15,
+              "amplitude_over_QCD": 1.0137028207824657e-41,
+              "uniform_theta_bound": 1.5205542311736985e-40,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -9.795679301262054e-41,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.4984297565429318e-40,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 16,
+              "amplitude_over_QCD": 1.1240236616478983e-49,
+              "uniform_theta_bound": 1.7984378586366372e-48,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.1585854779316e-48,
+                  "stationarity_residual": 1.8909140209225187e-124,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.7722701021944986e-48,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 17,
+              "amplitude_over_QCD": 1.2463506720530995e-57,
+              "uniform_theta_bound": 2.118796142490269e-56,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.3649659506432226e-56,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -2.087967086517627e-56,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 18,
+              "amplitude_over_QCD": 1.3819904782519625e-65,
+              "uniform_theta_bound": 2.4875828608535325e-64,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.602544877431182e-64,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -2.4513878585520348e-64,
+                  "stationarity_residual": 4.1986725672294305e-140,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 19,
+              "amplitude_over_QCD": 1.5323919060699237e-73,
+              "uniform_theta_bound": 2.9115446215328554e-72,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.8756685423732345e-72,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -2.8691808611389053e-72,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fa_input_GeV": 95000000000.0,
+      "axion_mass_input_relation_ueV": 60.0,
+      "conventions": [
+        {
+          "canonical_sigma_f_over_sqrt2": true,
+          "first_sufficient_dimension": 12,
+          "rows": [
+            {
+              "operator_dimension": 5,
+              "amplitude_over_QCD": 3.4394332499557915e+40,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 6,
+              "amplitude_over_QCD": 9.48847739531061e+32,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 7,
+              "amplitude_over_QCD": 2.617617402008805e+25,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 8,
+              "amplitude_over_QCD": 7.221307042039885e+17,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 9,
+              "amplitude_over_QCD": 19921656753.731888,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 10,
+              "amplitude_over_QCD": 549.5852835270131,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 11,
+              "amplitude_over_QCD": 1.5161589600869673e-05,
+              "uniform_theta_bound": 0.00016708908595577604,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -0.00010729038771919504,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0014045311064415
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -0.00016429932975037676,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.000315066942308
+                }
+              ]
+            },
+            {
+              "operator_dimension": 12,
+              "amplitude_over_QCD": 4.1826774863758623e-13,
+              "uniform_theta_bound": 5.019212983957543e-12,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -3.2334657799321047e-12,
+                  "stationarity_residual": 5.026911708464872e-88,
+                  "curvature": 1.000000000046067
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -4.94618207944285e-12,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0000000000102371
+                }
+              ]
+            },
+            {
+              "operator_dimension": 13,
+              "amplitude_over_QCD": 1.1538889664993288e-20,
+              "uniform_theta_bound": 1.5000556564491276e-19,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -9.663623857254733e-20,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.478229441615455e-19,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 14,
+              "amplitude_over_QCD": 3.183271364684399e-28,
+              "uniform_theta_bound": 4.456579910558159e-27,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -2.871007602969733e-27,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -4.391735469531533e-27,
+                  "stationarity_residual": 8.929588994392773e-103,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 15,
+              "amplitude_over_QCD": 8.781795194698158e-36,
+              "uniform_theta_bound": 1.3172692792047238e-34,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -8.486081685185274e-35,
+                  "stationarity_residual": 1.3306124500025471e-110,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.2981026555143885e-34,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 16,
+              "amplitude_over_QCD": 2.4226626638621543e-43,
+              "uniform_theta_bound": 3.876260262179447e-42,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -2.4971554212326094e-42,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -3.819859628729734e-42,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 17,
+              "amplitude_over_QCD": 6.683479007134149e-51,
+              "uniform_theta_bound": 1.1361914312128053e-49,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -7.319546160751956e-50,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.1196595391038612e-49,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 18,
+              "amplitude_over_QCD": 1.8437932901312505e-58,
+              "uniform_theta_bound": 3.318827922236251e-57,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -2.138047648402909e-57,
+                  "stationarity_residual": 3.522101828684134e-133,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -3.270538079845876e-57,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 19,
+              "amplitude_over_QCD": 5.086533066242926e-66,
+              "uniform_theta_bound": 9.664412825861559e-65,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -6.225985679186812e-65,
+                  "stationarity_residual": 1.0496681418073576e-140,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -9.523793009742285e-65,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "canonical_sigma_f_over_sqrt2": false,
+          "first_sufficient_dimension": 13,
+          "rows": [
+            {
+              "operator_dimension": 5,
+              "amplitude_over_QCD": 1.9456372595857897e+41,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 6,
+              "amplitude_over_QCD": 7.590781916248531e+33,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 7,
+              "amplitude_over_QCD": 2.961496024819762e+26,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 8,
+              "amplitude_over_QCD": 1.1554091267263902e+19,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 9,
+              "amplitude_over_QCD": 450775634657.11096,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 10,
+              "amplitude_over_QCD": 17586.729072864582,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 11,
+              "amplitude_over_QCD": 0.0006861352205019392,
+              "uniform_theta_bound": 0.008243166423337136,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -0.004566276364621518,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0660938377831894
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -0.007310648194208529,
+                  "stationarity_residual": 1.0795210693868056e-78,
+                  "curvature": 1.0206109353420039
+                }
+              ]
+            },
+            {
+              "operator_dimension": 12,
+              "amplitude_over_QCD": 2.676913591280582e-11,
+              "uniform_theta_bound": 3.212296322091296e-10,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -2.0694180931506786e-10,
+                  "stationarity_residual": 3.217223493417518e-86,
+                  "curvature": 1.0000000029482796
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -3.1655565288018515e-10,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.000000000655182
+                }
+              ]
+            },
+            {
+              "operator_dimension": 13,
+              "amplitude_over_QCD": 1.0443810725734981e-18,
+              "uniform_theta_bound": 1.3576953943455478e-17,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -8.746513869185535e-18,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0000000000000002
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.3379405597643957e-17,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 14,
+              "amplitude_over_QCD": 4.0745873467960844e-26,
+              "uniform_theta_bound": 5.704422285514518e-25,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -3.6748897318013068e-25,
+                  "stationarity_residual": 5.714936956411375e-101,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -5.621421401000437e-25,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 15,
+              "amplitude_over_QCD": 1.5896747348896688e-33,
+              "uniform_theta_bound": 2.3845121023345032e-32,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.5361448717562182e-32,
+                  "stationarity_residual": 3.4063678720065206e-108,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -2.3498168073997517e-32,
+                  "stationarity_residual": 3.4063678720065206e-108,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 16,
+              "amplitude_over_QCD": 6.202016419487208e-41,
+              "uniform_theta_bound": 9.923226271179532e-40,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -6.392717878355575e-40,
+                  "stationarity_residual": 1.0151767349262597e-115,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -9.778840649548264e-40,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 17,
+              "amplitude_over_QCD": 2.419677863865565e-48,
+              "uniform_theta_bound": 4.1134523685714608e-47,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -2.6499587714435086e-47,
+                  "stationarity_residual": 6.05092486695206e-123,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -4.0536005259291376e-47,
+                  "stationarity_residual": 6.05092486695206e-123,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 18,
+              "amplitude_over_QCD": 9.440221645472162e-56,
+              "uniform_theta_bound": 1.6992398961849892e-54,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.094680395982308e-54,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.6745154968811166e-54,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 19,
+              "amplitude_over_QCD": 3.683043352442815e-63,
+              "uniform_theta_bound": 6.997782369641348e-62,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -4.508095173963039e-62,
+                  "stationarity_residual": 1.0748601772107342e-137,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -6.895962746681074e-62,
+                  "stationarity_residual": 1.0748601772107342e-137,
+                  "curvature": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fa_input_GeV": 100000000000.0,
+      "axion_mass_input_relation_ueV": 57.0,
+      "conventions": [
+        {
+          "canonical_sigma_f_over_sqrt2": true,
+          "first_sufficient_dimension": 12,
+          "rows": [
+            {
+              "operator_dimension": 5,
+              "amplitude_over_QCD": 4.444970253555584e+40,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 6,
+              "amplitude_over_QCD": 1.2907879295530064e+33,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 7,
+              "amplitude_over_QCD": 3.7483568708857763e+25,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 8,
+              "amplitude_over_QCD": 1.0884963292445737e+18,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 9,
+              "amplitude_over_QCD": 31609163684.004425,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 10,
+              "amplitude_over_QCD": 917.9077613386111,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 11,
+              "amplitude_over_QCD": 2.6655392301696057e-05,
+              "uniform_theta_bound": 0.0002941737974296267,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -0.0001884254059801524,
+                  "stationarity_residual": 3.3735033418337674e-80,
+                  "curvature": 1.002471130947691
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -0.0002887832773686692,
+                  "stationarity_residual": 6.747006683667535e-80,
+                  "curvature": 1.0005582474369097
+                }
+              ]
+            },
+            {
+              "operator_dimension": 12,
+              "amplitude_over_QCD": 7.740537433969633e-13,
+              "uniform_theta_bound": 9.288644921813285e-12,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -5.983909347916285e-12,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0000000000852522
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -9.153492628951718e-12,
+                  "stationarity_residual": 2.010764683385949e-87,
+                  "curvature": 1.000000000018945
+                }
+              ]
+            },
+            {
+              "operator_dimension": 13,
+              "amplitude_over_QCD": 2.2477973345331742e-20,
+              "uniform_theta_bound": 2.9221365348931265e-19,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.8824920403016104e-19,
+                  "stationarity_residual": 2.996272867003007e-95,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -2.879618659299846e-19,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 14,
+              "amplitude_over_QCD": 6.527444509164122e-28,
+              "uniform_theta_bound": 9.13842231282977e-27,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -5.887133287372506e-27,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -9.005455800698617e-27,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 15,
+              "amplitude_over_QCD": 1.8955237274123632e-35,
+              "uniform_theta_bound": 2.843285591118545e-34,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.8316948676666402e-34,
+                  "stationarity_residual": 2.6612249000050942e-110,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -2.8019150180478493e-34,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 16,
+              "amplitude_over_QCD": 5.504466864694928e-43,
+              "uniform_theta_bound": 8.807146983511885e-42,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -5.673719860880434e-42,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -8.679000616870468e-42,
+                  "stationarity_residual": 1.5862136483222808e-117,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 17,
+              "amplitude_over_QCD": 1.598458253323302e-50,
+              "uniform_theta_bound": 2.7173790306496133e-49,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.750583634473293e-49,
+                  "stationarity_residual": 4.727285052306297e-125,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -2.677840432029965e-49,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 18,
+              "amplitude_over_QCD": 4.641809734573497e-58,
+              "uniform_theta_bound": 8.355257522232296e-57,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -5.38260467724781e-57,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -8.233686269267866e-57,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 19,
+              "amplitude_over_QCD": 1.3479487229135449e-65,
+              "uniform_theta_bound": 2.5611025735357354e-64,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.64990757670169e-64,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -2.523837839563541e-64,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "canonical_sigma_f_over_sqrt2": false,
+          "first_sufficient_dimension": 13,
+          "rows": [
+            {
+              "operator_dimension": 5,
+              "amplitude_over_QCD": 2.514454886769324e+41,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 6,
+              "amplitude_over_QCD": 1.0326303436424109e+34,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 7,
+              "amplitude_over_QCD": 4.240781698736861e+26,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 8,
+              "amplitude_over_QCD": 1.741594126791331e+19,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 9,
+              "amplitude_over_QCD": 715233727635.0486,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 10,
+              "amplitude_over_QCD": 29373.04836283583,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 11,
+              "amplitude_over_QCD": 0.0012062853537099332,
+              "uniform_theta_bound": 0.01558092970940252,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -0.00766342732453758,
+                  "stationarity_residual": 1.0795210693868056e-78,
+                  "curvature": 1.1191281472292707
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -0.01263774549562546,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0444204652525022
+                }
+              ]
+            },
+            {
+              "operator_dimension": 12,
+              "amplitude_over_QCD": 4.9539439577406205e-11,
+              "uniform_theta_bound": 5.94473279228556e-10,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -3.82970196209757e-10,
+                  "stationarity_residual": 6.434446986835036e-86,
+                  "curvature": 1.0000000054561389
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -5.858235275537091e-10,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0000000012124912
+                }
+              ]
+            },
+            {
+              "operator_dimension": 13,
+              "amplitude_over_QCD": 2.0344739046162278e-18,
+              "uniform_theta_bound": 2.644816076001097e-17,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.7038372956504912e-17,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0000000000000002
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -2.6063332879644188e-17,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 14,
+              "amplitude_over_QCD": 8.355128971730186e-26,
+              "uniform_theta_bound": 1.169718056042226e-24,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -7.535530607836907e-25,
+                  "stationarity_residual": 1.142987391282275e-100,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.1526983424894383e-24,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 15,
+              "amplitude_over_QCD": 3.431264464776354e-33,
+              "uniform_theta_bound": 5.146896697164532e-32,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -3.315721886698645e-32,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -5.072007960499285e-32,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 16,
+              "amplitude_over_QCD": 1.4091435173619226e-40,
+              "uniform_theta_bound": 2.2546296277790762e-39,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.4524722843854128e-39,
+                  "stationarity_residual": 2.0303534698525194e-115,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -2.221824157918873e-39,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 17,
+              "amplitude_over_QCD": 5.787037032287033e-48,
+              "uniform_theta_bound": 9.837962954887957e-47,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -6.337789741928001e-47,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -9.69481793753081e-47,
+                  "stationarity_residual": 2.420369946780824e-122,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 18,
+              "amplitude_over_QCD": 2.3766065841016705e-55,
+              "uniform_theta_bound": 4.277891851383007e-54,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -2.755893594750925e-54,
+                  "stationarity_residual": 7.213264545145106e-130,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -4.2156473698652184e-54,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 19,
+              "amplitude_over_QCD": 9.760191310478931e-63,
+              "uniform_theta_bound": 1.854436348990997e-61,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.1946606958764878e-61,
+                  "stationarity_residual": 2.1497203544214684e-137,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.827453799393964e-61,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fa_input_GeV": 200000000000.0,
+      "axion_mass_input_relation_ueV": 28.5,
+      "conventions": [
+        {
+          "canonical_sigma_f_over_sqrt2": true,
+          "first_sufficient_dimension": 13,
+          "rows": [
+            {
+              "operator_dimension": 5,
+              "amplitude_over_QCD": 1.4223904811377595e+42,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 6,
+              "amplitude_over_QCD": 8.261042749139333e+34,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 7,
+              "amplitude_over_QCD": 4.79789679473372e+27,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 8,
+              "amplitude_over_QCD": 2.7865506028660713e+20,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 9,
+              "amplitude_over_QCD": 16183891806210.078,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 10,
+              "amplitude_over_QCD": 939937.5476107019,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 11,
+              "amplitude_over_QCD": 0.05459024343387154,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 12,
+              "amplitude_over_QCD": 3.1705241329540327e-09,
+              "uniform_theta_bound": 3.8046307206951726e-08,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -2.4510084132407065e-08,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0000003491929745
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -3.7492702899481235e-08,
+                  "stationarity_residual": 8.236092143148846e-84,
+                  "curvature": 1.0000000775996314
+                }
+              ]
+            },
+            {
+              "operator_dimension": 13,
+              "amplitude_over_QCD": 1.8413955764495161e-16,
+              "uniform_theta_bound": 2.3938142493844465e-15,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.5421374794149921e-15,
+                  "stationarity_residual": 2.4545467326488633e-91,
+                  "curvature": 1.0000000000000238
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -2.3589836056983443e-15,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0000000000000053
+                }
+              ]
+            },
+            {
+              "operator_dimension": 14,
+              "amplitude_over_QCD": 1.0694565083814169e-23,
+              "uniform_theta_bound": 1.4972391117339835e-22,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -9.645479178030818e-23,
+                  "stationarity_residual": 1.463023860841312e-98,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.475453878386416e-22,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 15,
+              "amplitude_over_QCD": 6.211252149984652e-31,
+              "uniform_theta_bound": 9.316878224976979e-30,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -6.002097742369873e-30,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -9.181315131138928e-30,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 16,
+              "amplitude_over_QCD": 3.6074074044463705e-38,
+              "uniform_theta_bound": 5.771851847114193e-37,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -3.7183290480265005e-37,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -5.687869844272076e-37,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 17,
+              "amplitude_over_QCD": 2.0951312017958658e-45,
+              "uniform_theta_bound": 3.561723043052972e-44,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -2.2945249813767767e-44,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -3.509899011070228e-44,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 18,
+              "amplitude_over_QCD": 1.2168225710600065e-52,
+              "uniform_theta_bound": 2.1902806279080116e-51,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.411017520512417e-51,
+                  "stationarity_residual": 3.6931914471142943e-127,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -2.1584114533709052e-51,
+                  "stationarity_residual": 3.6931914471142943e-127,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 19,
+              "amplitude_over_QCD": 7.067133400388815e-60,
+              "uniform_theta_bound": 1.3427553460738748e-58,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -8.650267435737571e-59,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.3232178932290614e-58,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "canonical_sigma_f_over_sqrt2": false,
+          "first_sufficient_dimension": 13,
+          "rows": [
+            {
+              "operator_dimension": 5,
+              "amplitude_over_QCD": 8.046255637661683e+42,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 6,
+              "amplitude_over_QCD": 6.6088341993115034e+35,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 7,
+              "amplitude_over_QCD": 5.428200574383059e+28,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 8,
+              "amplitude_over_QCD": 4.458480964585747e+21,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 9,
+              "amplitude_over_QCD": 366199668549140.6,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 10,
+              "amplitude_over_QCD": 30078001.523542795,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 11,
+              "amplitude_over_QCD": 2.4704724043978534,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 12,
+              "amplitude_over_QCD": 2.0291354450906e-07,
+              "uniform_theta_bound": 2.435034672930127e-06,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.5686108760999037e-06,
+                  "stationarity_residual": 2.635549485807631e-82,
+                  "curvature": 1.000022348697938
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -2.399521253882249e-06,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0000049671897322
+                }
+              ]
+            },
+            {
+              "operator_dimension": 13,
+              "amplitude_over_QCD": 1.6666410226616542e-14,
+              "uniform_theta_bound": 2.1666333294663252e-13,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.3957835125939094e-13,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0000000000021543
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -2.1351082294994815e-13,
+                  "stationarity_residual": 3.141819817790545e-89,
+                  "curvature": 1.0000000000004787
+                }
+              ]
+            },
+            {
+              "operator_dimension": 14,
+              "amplitude_over_QCD": 1.3689043307282315e-21,
+              "uniform_theta_bound": 1.9164660630195242e-20,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.2346213347879608e-20,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.8885809643346373e-20,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 15,
+              "amplitude_over_QCD": 1.1243567398178835e-28,
+              "uniform_theta_bound": 1.6865351097268253e-27,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.0864957478333809e-27,
+                  "stationarity_residual": 2.2323972485981933e-103,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.661995568496358e-27,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 16,
+              "amplitude_over_QCD": 9.234962955382846e-36,
+              "uniform_theta_bound": 1.4775940728612554e-34,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -9.518922362947983e-35,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.4560946801336733e-34,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 17,
+              "amplitude_over_QCD": 7.585185178959069e-43,
+              "uniform_theta_bound": 1.2894814804230416e-41,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -8.30706777053966e-42,
+                  "stationarity_residual": 1.5862136483222808e-117,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.2707191767080065e-41,
+                  "stationarity_residual": 3.1724272966445615e-117,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 18,
+              "amplitude_over_QCD": 6.230131563827338e-50,
+              "uniform_theta_bound": 1.1214236814889208e-48,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -7.224409705023697e-49,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.105106664125922e-48,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 19,
+              "amplitude_over_QCD": 5.117151181787978e-57,
+              "uniform_theta_bound": 9.72258724539716e-56,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -6.2634626691964305e-56,
+                  "stationarity_residual": 1.1270725851789228e-131,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -9.581120975765876e-56,
+                  "stationarity_residual": 2.2541451703578456e-131,
+                  "curvature": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fa_input_GeV": 228000000000.0,
+      "axion_mass_input_relation_ueV": 25.0,
+      "conventions": [
+        {
+          "canonical_sigma_f_over_sqrt2": true,
+          "first_sufficient_dimension": 13,
+          "rows": [
+            {
+              "operator_dimension": 5,
+              "amplitude_over_QCD": 2.7386913742496567e+42,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 6,
+              "amplitude_over_QCD": 1.8132762679525707e+35,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 7,
+              "amplitude_over_QCD": 1.200562741327847e+28,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 8,
+              "amplitude_over_QCD": 7.948876414139151e+20,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 9,
+              "amplitude_over_QCD": 52629183025764.84,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 10,
+              "amplitude_over_QCD": 3484556.510442888,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 11,
+              "amplitude_over_QCD": 0.23071104996111572,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 12,
+              "amplitude_over_QCD": 1.527528350154157e-08,
+              "uniform_theta_bound": 1.833038108210797e-07,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.1808709504389725e-07,
+                  "stationarity_residual": 1.6472184286297693e-83,
+                  "curvature": 1.0000016823801003
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.806362204908109e-07,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0000003738713485
+                }
+              ]
+            },
+            {
+              "operator_dimension": 13,
+              "amplitude_over_QCD": 1.011370223020559e-15,
+              "uniform_theta_bound": 1.3147812899269539e-14,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -8.470053618198733e-15,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0000000000001308
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.2956508671521345e-14,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.000000000000029
+                }
+              ]
+            },
+            {
+              "operator_dimension": 14,
+              "amplitude_over_QCD": 6.696240550359853e-23,
+              "uniform_theta_bound": 9.374736770503794e-22,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -6.039371240756095e-22,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -9.238331819205854e-22,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 15,
+              "amplitude_over_QCD": 4.433553261472121e-30,
+              "uniform_theta_bound": 6.650329892208181e-29,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -4.284260142526038e-29,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -6.553565796610738e-29,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 16,
+              "amplitude_over_QCD": 2.93543733599171e-37,
+              "uniform_theta_bound": 4.696699737586736e-36,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -3.0256970425979976e-36,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -4.628361488241721e-36,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 17,
+              "amplitude_over_QCD": 1.94354095808764e-44,
+              "uniform_theta_bound": 3.304019628748988e-43,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -2.1285078838206076e-43,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -3.2559452510272627e-43,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 18,
+              "amplitude_over_QCD": 1.2868104556177564e-51,
+              "uniform_theta_bound": 2.3162588201119613e-50,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.4921749001364309e-50,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -2.282556628862722e-50,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 19,
+              "amplitude_over_QCD": 8.519918974675022e-59,
+              "uniform_theta_bound": 1.6187846051882544e-57,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.042849674490356e-57,
+                  "stationarity_residual": 1.761050914342067e-133,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.5952308520922413e-57,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "canonical_sigma_f_over_sqrt2": false,
+          "first_sufficient_dimension": 13,
+          "rows": [
+            {
+              "operator_dimension": 5,
+              "amplitude_over_QCD": 1.5492377938471928e+43,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 6,
+              "amplitude_over_QCD": 1.4506210143620648e+36,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 7,
+              "amplitude_over_QCD": 1.3582816890125009e+29,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 8,
+              "amplitude_over_QCD": 1.2718202262622376e+22,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 9,
+              "amplitude_over_QCD": 1190862470586416.5,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 10,
+              "amplitude_over_QCD": 111505808.3341673,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 11,
+              "amplitude_over_QCD": 10.440790267018901,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 12,
+              "amplitude_over_QCD": 9.776181440986695e-07,
+              "uniform_theta_bound": 1.1733092419853294e-05,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -7.556773112140421e-06,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0001076803933355
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.1560445710444062e-05,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.000023946644774
+                }
+              ]
+            },
+            {
+              "operator_dimension": 13,
+              "amplitude_over_QCD": 9.153878310246098e-14,
+              "uniform_theta_bound": 1.1900041803506202e-12,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -7.666217408475899e-13,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.000000000011832
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.1726892981902176e-12,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0000000000026295
+                }
+              ]
+            },
+            {
+              "operator_dimension": 14,
+              "amplitude_over_QCD": 8.571187904460236e-21,
+              "uniform_theta_bound": 1.1999663066244329e-19,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -7.730395188167462e-20,
+                  "stationarity_residual": 1.4981364335015035e-95,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.1825064728582973e-19,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 15,
+              "amplitude_over_QCD": 8.025588674402484e-28,
+              "uniform_theta_bound": 1.2038383011603725e-26,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -7.755339261816863e-27,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.1863221288282558e-26,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 16,
+              "amplitude_over_QCD": 7.514719580138462e-35,
+              "uniform_theta_bound": 1.202355132822154e-33,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -7.745784429050549e-34,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.1848605409898307e-33,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 17,
+              "amplitude_over_QCD": 7.036369873805069e-42,
+              "uniform_theta_bound": 1.1961828785468618e-40,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -7.706021675307831e-41,
+                  "stationarity_residual": 1.2689709186578246e-116,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.178778094680824e-40,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 18,
+              "amplitude_over_QCD": 6.588469532762649e-49,
+              "uniform_theta_bound": 1.1859245158972768e-47,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -7.639935488698221e-48,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.168668993977667e-47,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 19,
+              "amplitude_over_QCD": 6.169080301723892e-56,
+              "uniform_theta_bound": 1.1721252573275395e-54,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -7.55103822428431e-55,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.1550705183460782e-54,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fa_input_GeV": 1000000000000.0,
+      "axion_mass_input_relation_ueV": 5.7,
+      "conventions": [
+        {
+          "canonical_sigma_f_over_sqrt2": true,
+          "first_sufficient_dimension": 14,
+          "rows": [
+            {
+              "operator_dimension": 5,
+              "amplitude_over_QCD": 4.4449702535556235e+45,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 6,
+              "amplitude_over_QCD": 1.2907879295530425e+39,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 7,
+              "amplitude_over_QCD": 3.7483568708858185e+32,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 8,
+              "amplitude_over_QCD": 1.0884963292445835e+26,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 9,
+              "amplitude_over_QCD": 3.16091636840044e+19,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 10,
+              "amplitude_over_QCD": 9179077613386.295,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 11,
+              "amplitude_over_QCD": 2665539.2301696287,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 12,
+              "amplitude_over_QCD": 0.7740537433970052,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 13,
+              "amplitude_over_QCD": 2.2477973345331466e-07,
+              "uniform_theta_bound": 2.922248858349719e-06,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.8824373461753548e-06,
+                  "stationarity_residual": 2.635549485807631e-82,
+                  "curvature": 1.000029055249986
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -2.8796000646484564e-06,
+                  "stationarity_residual": 5.271098971615262e-82,
+                  "curvature": 1.0000064580707968
+                }
+              ]
+            },
+            {
+              "operator_dimension": 14,
+              "amplitude_over_QCD": 6.527444509164362e-14,
+              "uniform_theta_bound": 9.138422312948214e-13,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -5.887133287315116e-13,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0000000000097853
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -9.005455800679366e-13,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0000000000021745
+                }
+              ]
+            },
+            {
+              "operator_dimension": 15,
+              "amplitude_over_QCD": 1.8955237274123205e-20,
+              "uniform_theta_bound": 2.8432855911184807e-19,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.831694867666599e-19,
+                  "stationarity_residual": 2.996272867003007e-95,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -2.801915018047786e-19,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 16,
+              "amplitude_over_QCD": 5.5044668646950646e-27,
+              "uniform_theta_bound": 8.807146983512103e-26,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -5.673719860880575e-26,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -8.679000616870684e-26,
+                  "stationarity_residual": 1.4287342391028437e-101,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 17,
+              "amplitude_over_QCD": 1.598458253323406e-33,
+              "uniform_theta_bound": 2.7173790306497903e-32,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.7505836344734067e-32,
+                  "stationarity_residual": 3.4063678720065206e-108,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -2.6778404320301397e-32,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 18,
+              "amplitude_over_QCD": 4.641809734573491e-40,
+              "uniform_theta_bound": 8.355257522232284e-39,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -5.382604677247803e-39,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -8.233686269267855e-39,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 19,
+              "amplitude_over_QCD": 1.3479487229135302e-46,
+              "uniform_theta_bound": 2.5611025735357074e-45,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.649907576701672e-45,
+                  "stationarity_residual": 3.8725919148493183e-121,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -2.5238378395635134e-45,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "canonical_sigma_f_over_sqrt2": false,
+          "first_sufficient_dimension": 15,
+          "rows": [
+            {
+              "operator_dimension": 5,
+              "amplitude_over_QCD": 2.514454886769275e+46,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 6,
+              "amplitude_over_QCD": 1.0326303436424104e+40,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 7,
+              "amplitude_over_QCD": 4.240781698736788e+33,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 8,
+              "amplitude_over_QCD": 1.741594126791297e+27,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 9,
+              "amplitude_over_QCD": 7.152337276350278e+20,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 10,
+              "amplitude_over_QCD": 293730483628347.44,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 11,
+              "amplitude_over_QCD": 120628535.37098771,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 12,
+              "amplitude_over_QCD": 49.53943957740607,
+              "uniform_theta_bound": null,
+              "phase_controls": []
+            },
+            {
+              "operator_dimension": 13,
+              "amplitude_over_QCD": 2.034473904616203e-05,
+              "uniform_theta_bound": 0.0002654049382099213,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -0.0001699364285600385,
+                  "stationarity_residual": 3.3735033418337674e-80,
+                  "curvature": 1.002634599420019
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -0.0002604796157044384,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0005958274384048
+                }
+              ]
+            },
+            {
+              "operator_dimension": 14,
+              "amplitude_over_QCD": 8.355128971730018e-12,
+              "uniform_theta_bound": 1.1697180579772855e-10,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -7.535530598398431e-11,
+                  "stationarity_residual": 1.608611746708759e-86,
+                  "curvature": 1.0000000012525097
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.152698342168574e-10,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0000000002783391
+                }
+              ]
+            },
+            {
+              "operator_dimension": 15,
+              "amplitude_over_QCD": 3.4312644647762774e-18,
+              "uniform_theta_bound": 5.1468966971644196e-17,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -3.315721886698569e-17,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0000000000000007
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -5.0720079604991706e-17,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0000000000000002
+                }
+              ]
+            },
+            {
+              "operator_dimension": 16,
+              "amplitude_over_QCD": 1.4091435173618774e-24,
+              "uniform_theta_bound": 2.2546296277790038e-23,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.452472284385366e-23,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -2.2218241579188017e-23,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 17,
+              "amplitude_over_QCD": 5.787037032286751e-31,
+              "uniform_theta_bound": 9.837962954887478e-30,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -6.337789741927691e-30,
+                  "stationarity_residual": 1.7440603504673385e-105,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -9.694817937530338e-30,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 18,
+              "amplitude_over_QCD": 2.376606584101532e-37,
+              "uniform_theta_bound": 4.2778918513827575e-36,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -2.7558935947507646e-36,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -4.215647369864973e-36,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            },
+            {
+              "operator_dimension": 19,
+              "amplitude_over_QCD": 9.760191310477714e-44,
+              "uniform_theta_bound": 1.8544363489907657e-42,
+              "phase_controls": [
+                {
+                  "phase": 0.7,
+                  "theta": -1.1946606958763388e-42,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                },
+                {
+                  "phase": 1.4,
+                  "theta": -1.8274537993937358e-42,
+                  "stationarity_residual": 0.0,
+                  "curvature": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "discrete_modular_controls": [
+    {
+      "N": 2,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 3,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 4,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 5,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 6,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 7,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 8,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 9,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 10,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 11,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 12,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 13,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 14,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 15,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 16,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 17,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 18,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 19,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 20,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 21,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 22,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 23,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 24,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 25,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 26,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 27,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 28,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 29,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 30,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 31,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 32,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 33,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 34,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 35,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 36,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 37,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 38,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 39,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 40,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 41,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 42,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 43,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 44,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 45,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 46,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 47,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 48,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 49,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 50,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 51,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 52,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 53,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 54,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 55,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 56,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 57,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 58,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 59,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 60,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 61,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 62,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 63,
+      "allowed_sigma_charges": [
+        0
+      ]
+    },
+    {
+      "N": 64,
+      "allowed_sigma_charges": [
+        0
+      ]
+    }
+  ],
+  "continuous_mixed_anomaly_matrix": [
+    [
+      "1/2",
+      "1",
+      "1",
+      "0"
+    ],
+    [
+      "0",
+      "3/2",
+      "3/2",
+      "1"
+    ],
+    [
+      "1/3",
+      "1/6",
+      "1/6",
+      "-1"
+    ]
+  ],
+  "continuous_kernel_basis": [
+    [
+      "0",
+      "-1",
+      "1",
+      "0"
+    ]
+  ],
+  "SM_one_Higgs_identities": {
+    "SM_SU3": "0",
+    "SM_SU2": "l/2 + 3*q/2",
+    "SM_Y2": "-l/2 - 3*q/2"
+  },
+  "two_scalar_attempt": {
+    "scalar_gauge_charges": [
+      2,
+      3
+    ],
+    "axial_pair_charges": [
+      -2,
+      -2,
+      3
+    ],
+    "SU3_squared_U1": 0,
+    "SU2_squared_U1": "3/2",
+    "Y_squared_U1": "-1/2",
+    "lowest_interlocking_scalar_operator": "S^3 (Tdag)^2",
+    "operator_dimension": 5
+  },
+  "quality_action": "Sigma=(fa+rho)/sqrt(2)*exp(i theta), N_DW=1. DeltaV=-[c Sigma^d/Mpl^(d-4)+h.c.], |c|=1 input. U/chi=1-cos(theta)-r cos(d theta+delta), r=2(fa/sqrt2)^d/[Mpl^(d-4) chi]. Phase delta is generic. Canonical and bare-vev=fa conventions are exported separately; neither coefficient nor operator absence is predicted.",
+  "exact_bound": "Every global minimum satisfies1-cos(theta)<=2r by comparison with theta=0. On that interval Usecond>=1-(d\u00b2+2)r. If positive the root is unique there and |theta_min|<=d*r/[1-(d\u00b2+2)r], uniformly in delta. Finite high-precision root controls verify two phases. Large-r rows are not assigned a false perturbative small-angle answer.",
+  "discrete_theorem": "With full-rank renormalizable SM quark Yukawas and one Higgs, their determinant charge equations imply2 sum Q+sum uc+sum dc=0 modN. The three heavy Dirac mass terms from Sigma,Sigma,Sigma-dagger imply the integer SU3-instanton Jacobian charge A3=-(1+2-2)qSigma=-qSigma modN. Ordinary anomaly-free non-R ZN therefore requires qSigma=0. Sigma is neutral, so no power Sigma^d is forbidden. This algebra holds for everyN; the2..64 scan is only a control, not the proof.",
+  "continuous_theorem": "Let d,a,b be LH pair-charge sums for D,Q1,Q2 and z the full SM SU2\u00b2U1 anomaly. The necessary SU3\u00b2,SU2\u00b2,Y\u00b2 anomaly equations have only kernel(d,a,b,z)=(0,-t,t,0). Consequently an ordinary continuous U1 with just this colored inventory and renormalizable single-Higgs SM Yukawas cannot give D an axial charge. If D mass is renormalizably generated by Sigma, Sigma must be neutral. Arbitrarily many SM-singlet neutrinos cannot repair these mixed anomalies.",
+  "escapes": "Green-Schwarz axions or higher-dimensional inflow, extra EW/colored chiral matter, multiple-Higgs or nonrenormalizable SM mass sectors, differently generated heavy masses, and Wilson-line gauge-origin axions change the hypotheses. Explicit high-quality N_DW=1 models exist in the literature, so this is NOT a universal obstruction to axions, discrete gauge protection or strong-CP solutions.",
+  "prior": "Pass12603-12608 owns the unification inventory/signs and flags PQ quality open. Its pq_gates.py uses an order-of-magnitude quality proxy omitting the derivative factor and canonical vev in that proxy; this calculation retains both, without changing its stored results. Pass11949 concerns a different axiflavon loop obstruction. General quality/discrete anomaly methods are established prior physics.",
+  "sources": [
+    "https://arxiv.org/abs/1705.05370",
+    "https://arxiv.org/abs/hep-ph/0212339",
+    "https://arxiv.org/abs/2412.21157",
+    "https://arxiv.org/abs/2607.08814"
+  ],
+  "boundary": "Declared operator coefficient/phase and necessary mixed-gauge anomaly tests, not a quantum-gravity prediction, full discrete anomaly classification, experimental exclusion or complete UV model."
+}

@@ -1,0 +1,172 @@
+{
+  "status": "PASS_FLUX_SECTOR_REFERENCE_RANK_OBSTRUCTION",
+  "L": 3,
+  "free_positive_projector_rank": 162,
+  "flux_positive_projector_rank": 163,
+  "free_index": 0,
+  "flux_index": -1,
+  "endpoint_kernel_gaps": [
+    0.9999999999999939,
+    0.3455097810878945
+  ],
+  "projected_free_reference_rank": 162,
+  "missing_target_dimensions": 1,
+  "endpoint_frame_projector_operator_error": 1.0000000000000002,
+  "affine_gap_closure_bracket": [
+    0.6305513381958008,
+    0.6305513419210911
+  ],
+  "near_crossing_gap": 1.8185572492335211e-09,
+  "bisection_records": [
+    {
+      "t": 0.5,
+      "positive_rank": 162,
+      "min_absolute_eigenvalue": 0.1467000916601321
+    },
+    {
+      "t": 0.75,
+      "positive_rank": 163,
+      "min_absolute_eigenvalue": 0.11824258017604704
+    },
+    {
+      "t": 0.625,
+      "positive_rank": 162,
+      "min_absolute_eigenvalue": 0.005734091035660717
+    },
+    {
+      "t": 0.6875,
+      "positive_rank": 163,
+      "min_absolute_eigenvalue": 0.05727245580453999
+    },
+    {
+      "t": 0.65625,
+      "positive_rank": 163,
+      "min_absolute_eigenvalue": 0.026154339698945546
+    },
+    {
+      "t": 0.640625,
+      "positive_rank": 163,
+      "min_absolute_eigenvalue": 0.010324755533581647
+    },
+    {
+      "t": 0.6328125,
+      "positive_rank": 163,
+      "min_absolute_eigenvalue": 0.002326334657624841
+    },
+    {
+      "t": 0.62890625,
+      "positive_rank": 162,
+      "min_absolute_eigenvalue": 0.0016958335769668652
+    },
+    {
+      "t": 0.630859375,
+      "positive_rank": 163,
+      "min_absolute_eigenvalue": 0.0003172249441826206
+    },
+    {
+      "t": 0.6298828125,
+      "positive_rank": 162,
+      "min_absolute_eigenvalue": 0.0006888061205113736
+    },
+    {
+      "t": 0.63037109375,
+      "positive_rank": 162,
+      "min_absolute_eigenvalue": 0.00018566661352282886
+    },
+    {
+      "t": 0.630615234375,
+      "positive_rank": 163,
+      "min_absolute_eigenvalue": 6.581008720110108e-05
+    },
+    {
+      "t": 0.6304931640625,
+      "positive_rank": 162,
+      "min_absolute_eigenvalue": 5.992052370262252e-05
+    },
+    {
+      "t": 0.63055419921875,
+      "positive_rank": 163,
+      "min_absolute_eigenvalue": 2.9467154761290996e-06
+    },
+    {
+      "t": 0.630523681640625,
+      "positive_rank": 162,
+      "min_absolute_eigenvalue": 2.8486420543511474e-05
+    },
+    {
+      "t": 0.6305389404296875,
+      "positive_rank": 162,
+      "min_absolute_eigenvalue": 1.276973165703938e-05
+    },
+    {
+      "t": 0.6305465698242188,
+      "positive_rank": 162,
+      "min_absolute_eigenvalue": 4.911477871953886e-06
+    },
+    {
+      "t": 0.6305503845214844,
+      "positive_rank": 162,
+      "min_absolute_eigenvalue": 9.82373644956848e-07
+    },
+    {
+      "t": 0.6305522918701172,
+      "positive_rank": 163,
+      "min_absolute_eigenvalue": 9.82172807896341e-07
+    },
+    {
+      "t": 0.6305513381958008,
+      "positive_rank": 162,
+      "min_absolute_eigenvalue": 9.994329032209042e-11
+    },
+    {
+      "t": 0.630551815032959,
+      "positive_rank": 163,
+      "min_absolute_eigenvalue": 4.910365447074246e-07
+    },
+    {
+      "t": 0.6305515766143799,
+      "positive_rank": 163,
+      "min_absolute_eigenvalue": 2.4546833724794856e-07
+    },
+    {
+      "t": 0.6305514574050903,
+      "positive_rank": 163,
+      "min_absolute_eigenvalue": 1.226842004378024e-07
+    },
+    {
+      "t": 0.6305513978004456,
+      "positive_rank": 163,
+      "min_absolute_eigenvalue": 6.12921331879616e-08
+    },
+    {
+      "t": 0.6305513679981232,
+      "positive_rank": 163,
+      "min_absolute_eigenvalue": 3.0596100454389756e-08
+    },
+    {
+      "t": 0.630551353096962,
+      "positive_rank": 163,
+      "min_absolute_eigenvalue": 1.5248084793185176e-08
+    },
+    {
+      "t": 0.6305513456463814,
+      "positive_rank": 163,
+      "min_absolute_eigenvalue": 7.574062607674013e-09
+    },
+    {
+      "t": 0.6305513419210911,
+      "positive_rank": 163,
+      "min_absolute_eigenvalue": 3.737058521373256e-09
+    }
+  ],
+  "theorem": "For a continuous Hermitian family on one fixed finite Hilbert space with no zero eigenvalue, the positive spectral projector has constant integer rank. These endpoints have162 and163. Therefore EVERY such interpolating family has a zero eigenvalue somewhere. This rank theorem is standard; the endpoints and deficient reference map are actual matrices of the new4D flux regulator.",
+  "frame_failure": "A162-column free reference E cannot span the163-dimensional target chiral subspace. Polar normalization of Ptarget E cannot create the missing column. The operator norm of the resulting projector error is1. This is a dimension obstruction, not a small discretization error.",
+  "prior_owner": "analysis/w33_pass12002_native_path_overlap.py constructs an onsite-reference Kato frame for uniformly positive-mass HEAVY optical blocks. That proof remains valid. It does not trivialize an acoustic block of different index. Pass12030 already owns a distinct toron Chern/sector-frame obstruction; Pass12038 owns finite non-Abelian patch transitions; Oct27 acoustic-density code already implements a finite projector comparison current.",
+  "implication": "A measure construction needs compatible reference data for each index component (and suitable insertions/rectangular Weyl maps), followed by locality and global-integrability checks within components. Failure to connect two different-index sectors by a gapped path is expected and does NOT disprove the Craig/Luscher measure constructions or the physical existence of chiral gauge theory.",
+  "limits": "Finite numeric endpoint spectral gaps and a numerical affine crossing bracket, not interval-certified eigenvalues or a new general theorem. No all-volume locality, admissibility matching, full Weyl measure, unique inter-component phase or interacting continuum model is established.",
+  "sources": [
+    "https://arxiv.org/html/2610.09093v1#S4.SS3",
+    "https://arxiv.org/html/2610.09093v1#S5",
+    "https://arxiv.org/abs/hep-lat/9811032"
+  ]
+}

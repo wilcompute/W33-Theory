@@ -1,0 +1,103 @@
+{
+  "status": "PASS_HOLOMORPHIC_DIRAC_BRIDGE_WITH_D_FLAT_BREAKING",
+  "superpotential_breaking": "Z*lam*(PhiMinus*PhiPlus - v**2)",
+  "F_at_supplied_real_branch": [
+    "0",
+    "0",
+    "0"
+  ],
+  "D_at_branch": 0,
+  "breaking_Hessian": [
+    [
+      "0",
+      "0",
+      "lam*v"
+    ],
+    [
+      "0",
+      "0",
+      "lam*v"
+    ],
+    [
+      "lam*v",
+      "lam*v",
+      "0"
+    ]
+  ],
+  "uneaten_chiral_supersymmetric_masses": "sqrt(2)*abs(lambda*v) for the radial and Z chiral multiplets",
+  "null_gauge_tangent": [
+    "v",
+    "-v",
+    "0"
+  ],
+  "vector_multiplet_mass": "2*g*3*abs(v)",
+  "charge_neutral_holomorphic_vertices": [
+    [
+      "L",
+      "H",
+      "Nc"
+    ],
+    [
+      "N",
+      "Nc"
+    ],
+    [
+      "N",
+      "PhiMinus",
+      "nA"
+    ],
+    [
+      "N",
+      "PhiPlus",
+      "B"
+    ],
+    [
+      "Bc",
+      "PhiMinus",
+      "Nc"
+    ],
+    [
+      "B",
+      "Bc"
+    ],
+    [
+      "Bc",
+      "PhiPlus",
+      "nC"
+    ],
+    [
+      "Z",
+      "PhiPlus",
+      "PhiMinus"
+    ]
+  ],
+  "left_handed_BL_charges": {
+    "L": -1,
+    "H": 0,
+    "nA": 4,
+    "nC": -5,
+    "N": -1,
+    "Nc": 1,
+    "B": -2,
+    "Bc": 2,
+    "PhiPlus": 3,
+    "PhiMinus": -3,
+    "Z": 0
+  },
+  "SUSY_BL_beta_breakdown": {
+    "SM_three_generations": 13,
+    "steriles": 57,
+    "messengers": 14,
+    "breaking_pair": 18,
+    "total": 102
+  },
+  "mechanism": "Replace each Phi^dag vertex of the previous non-SUSY messenger model with an INDEPENDENT chiral PhiMinus of charge-3. Keep PhiPlus of charge+3. Wbreaking=lambda Z(PhiPlus PhiMinus-v\u00b2). On PhiPlus=PhiMinus=v real,Z=0 the F and D equations vanish. The gauge tangent is the sole Hessian null; the complexified gauge orbit is eaten by the massive vector. Z9 survives in quark-normalized charge Q=3(B-L).",
+  "new_anomalies": "Opposite-charge breaking multiplets and each messenger pair cancel linear/cubic Abelian anomalies. Added fields are SM singlets. This does not supersymmetrize the earlier native SU4 model automatically.",
+  "beta": "Assuming a supersymmetric SM with both Higgs doublets, three exotic sterile supermultiplets, three N pairs, one B pair and both breaking multiplets above their thresholds, bBL=sum_chiral dim(R)*qBL\u00b2=13+57+14+18=102. Higgs BL=0. Non-GUT-normalized bY=11 and mixed bYBL=8. Supersymmetrizing changes the entire beta matrix and thresholds;59 from the non-SUSY model cannot be reused.",
+  "vacuum_cost": "The breaking scale v and coupling lambda are supplied inputs, Wbreaking=0 at its supersymmetric vacuum, and the breaking subsystem alone does not uplift, select the observed CC, protect a rolling scalar after SUSY breaking or determine PMNS data. Coupling it to other sectors can move the branch and transmit soft masses.",
+  "boundary": "A holomorphic and D-flat compatibility module with explicitly enlarged field content, not a demonstrated common UV action or full scalar/fermion spectrum of all combined theories. No comparison of102 to nonsupersymmetric bounds without threshold matching.",
+  "sources": [
+    "https://arxiv.org/abs/hep-ph/9709356",
+    "https://arxiv.org/abs/1411.5042"
+  ]
+}

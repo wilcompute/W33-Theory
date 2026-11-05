@@ -1,0 +1,112 @@
+{
+  "status": "PASS_ENGINEERED_STATIONARY_POSITIVE_ENERGY_NEUTRAL_VACUUM",
+  "fields_complex_pairs": [
+    [
+      1.0000009802647796,
+      0.0
+    ],
+    [
+      -0.000628387757195075,
+      0.0
+    ],
+    [
+      0.999999989452636,
+      0.0
+    ],
+    [
+      1.0000000026602631,
+      0.0
+    ],
+    [
+      0.003139282052578326,
+      0.0
+    ],
+    [
+      -0.000627869058020999,
+      0.0
+    ],
+    [
+      0.002510121183441151,
+      0.0
+    ],
+    [
+      -0.0006331044282784178,
+      0.0
+    ]
+  ],
+  "Planck_mass_input": 30.0,
+  "epsilon_input": 0.001,
+  "original_AdS_energy": -4.788422495918651e-08,
+  "target_positive_energy_input": 4.7884224959186514e-09,
+  "f_squared_input": 5.267264745510516e-08,
+  "stationary_DW_max": 3.128507724490189e-16,
+  "scalar_mass_squared_neutral_eigenvalues": [
+    0.43960032819682254,
+    0.43960591260948223,
+    0.4411898936745683,
+    0.44119548788876306,
+    1.0003996621923006,
+    1.0004080879710566,
+    1.003940168921755,
+    1.0039486075653308,
+    1.0063348636826575,
+    1.0063433138285627,
+    1.016452956445011,
+    1.0164614520180892,
+    4.5809268299038335,
+    4.580944856706657,
+    4.582849680438314,
+    4.582867711276654
+  ],
+  "gravitino_mass": 4.2112822433354e-06,
+  "displaced_identity_controls": [
+    {
+      "displacement_scale": 0.0,
+      "uplift": 5.267264745510516e-08,
+      "total_potential": 4.7884224959186514e-09
+    },
+    {
+      "displacement_scale": 0.0001,
+      "uplift": 5.267264745510516e-08,
+      "total_potential": 3.258371101148417e-07
+    },
+    {
+      "displacement_scale": 0.01,
+      "uplift": 5.267264745510516e-08,
+      "total_potential": 0.0018353706282938794
+    }
+  ],
+  "metric_deformation_stability_threshold": 7511304528.870684,
+  "metric_deformation_controls": [
+    {
+      "metric_deformation_eta": 0.0,
+      "smallest_mass_squared": 0.43960032819682254
+    },
+    {
+      "metric_deformation_eta": 1.0,
+      "smallest_mass_squared": 0.43960032813829736
+    },
+    {
+      "metric_deformation_eta": 6760174075.983616,
+      "smallest_mass_squared": 0.04396003281968225
+    },
+    {
+      "metric_deformation_eta": 8262434981.757752,
+      "smallest_mass_squared": -0.04396003281968225
+    }
+  ],
+  "light_spectator_constant_uplift_mass_squared": -3.5469796266064085e-11,
+  "light_spectator_minimal_uplift_mass_squared": 2.3055367572941653e-11,
+  "goldstino_strong_coupling_scale_order": 0.01514942979634218,
+  "largest_neutral_mass_over_goldstino_scale": 141.3098299128857,
+  "mechanism": "K=K0+exp(K0/Mp\u00b2) Xbar X, W=Wprior+fX, X\u00b2=0. At X=0 the inverse nilpotent metric cancels e^(K0/Mp\u00b2), so V=Vprior+|f|\u00b2 at EVERY ordinary-field value. All prior critical points remain critical, and the ordinary scalar Hessian is unchanged. At the tested stable AdS neutral point choose |f|\u00b2=-VAdS+Vtarget>0. This is a declared engineered Kahler function, not the minimal KXX=1 uplift that failed stationarity in the previous report.",
+  "sensitivity": "Multiplying KXX by exp[eta*sum_i w_i |phi_i-phi0_i|\u00b2/Mp\u00b2] leaves the critical point fixed but shifts every canonical real scalar mass\u00b2 by -eta*|f|\u00b2/Mp\u00b2. The certificate includes a deformation beyond the first instability threshold.",
+  "spectator_control": "A new otherwise massless canonical Q with W independent of Q has AdS mass\u00b2=-2mgr\u00b2. If the constant-uplift metric includes Q in K0 it remains tachyonic after uplift. If Q is excluded from the exponent it instead receives +|f|\u00b2/Mp\u00b2. Thus neutral stabilization does not imply a viable light quintessence/dark sector, and naturalness-sized masses require extra protection/tuning.",
+  "cutoff": "The Volkov-Akulov strong-coupling scale is order sqrt(Fcanonical)=|f|^(1/2)=(f\u00b2)^(1/4), up to numerical factors. In this example it lies BELOW several heavy neutral masses. The combined high-energy nilpotent/matter EFT therefore needs a UV completion; only the lower-energy background/light-mode interpretation is available. Exporting Hessian eigenvalues is not evidence of a controlled scattering theory above that scale.",
+  "scope": "Only the eight complex neutral fields of the prior effective theory plus the constrained goldstino are tested. No sgoldstino scalar exists in the nilpotent EFT. Charged gauge/matter sectors, fermion spectrum beyond gravitino, quantum corrections, tunneling and UV origin of K are NOT audited here. Positive energy is a tunable input, not its observed value or a TOE solution.",
+  "sources": [
+    "https://arxiv.org/abs/1509.02136",
+    "https://arxiv.org/abs/1411.2605"
+  ],
+  "parent": "analysis/toe_20261103_supergravity_vacuum_completion.py"
+}

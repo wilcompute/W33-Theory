@@ -1,0 +1,587 @@
+{
+  "status": "PASS_CANONICAL_NORMALIZATION_AND_CONDITIONAL_CUTOFF_CONTROLS",
+  "physical_MQ_input_GeV": 27279937181.61975,
+  "physical_MU_input_GeV": 3964835648946381.0,
+  "stability": [
+    {
+      "f_input_GeV": 15000000000.0,
+      "ma_input_ueV": 380.0,
+      "threshold_decoupling_uncontrolled": true,
+      "conventions": [
+        {
+          "canonical_sigma_f_over_sqrt2": false,
+          "y_initial": 1.8186624787746501,
+          "lambda_initial": null,
+          "tested_lambda_initial": 2.0703511735683264,
+          "trajectory": {
+            "classification": "perturbativity_cut",
+            "solver_success": true,
+            "reaches_MU": false,
+            "end_scale_GeV": 41315626469.24447,
+            "end_lambda": 7.496622931637761e-05,
+            "end_y": 3.5449077018110304,
+            "steps": 67
+          },
+          "lower_floor": false
+        },
+        {
+          "canonical_sigma_f_over_sqrt2": true,
+          "y_initial": 2.5719771428621816,
+          "lambda_initial": null,
+          "tested_lambda_initial": 2.761737653692151,
+          "trajectory": {
+            "classification": "perturbativity_cut",
+            "solver_success": true,
+            "reaches_MU": false,
+            "end_scale_GeV": 20676545253.572502,
+            "end_lambda": 1.9471210107105397e-05,
+            "end_y": 3.5449077018110375,
+            "steps": 39
+          },
+          "lower_floor": false
+        }
+      ]
+    },
+    {
+      "f_input_GeV": 27000000000.0,
+      "ma_input_ueV": 211.11111111111111,
+      "threshold_decoupling_uncontrolled": true,
+      "conventions": [
+        {
+          "canonical_sigma_f_over_sqrt2": false,
+          "y_initial": 1.0103680437636944,
+          "lambda_initial": null,
+          "tested_lambda_initial": 0.7083483533616761,
+          "trajectory": {
+            "classification": "perturbativity_cut",
+            "solver_success": true,
+            "reaches_MU": false,
+            "end_scale_GeV": 2143854430757.2942,
+            "end_lambda": 0.0006123124272428108,
+            "end_y": 3.5449077018110278,
+            "steps": 106
+          },
+          "lower_floor": false
+        },
+        {
+          "canonical_sigma_f_over_sqrt2": true,
+          "y_initial": 1.4288761904789895,
+          "lambda_initial": null,
+          "tested_lambda_initial": 1.3912542991846497,
+          "trajectory": {
+            "classification": "perturbativity_cut",
+            "solver_success": true,
+            "reaches_MU": false,
+            "end_scale_GeV": 180324173139.86224,
+            "end_lambda": 0.0001745815272513468,
+            "end_y": 3.544907701811024,
+            "steps": 80
+          },
+          "lower_floor": false
+        }
+      ]
+    },
+    {
+      "f_input_GeV": 50000000000.0,
+      "ma_input_ueV": 114.0,
+      "threshold_decoupling_uncontrolled": false,
+      "conventions": [
+        {
+          "canonical_sigma_f_over_sqrt2": false,
+          "y_initial": 0.545598743632395,
+          "lambda_initial": 0.13252321091294963,
+          "tested_lambda_initial": 0.13252321091294963,
+          "trajectory": {
+            "classification": "full_positive_perturbative",
+            "solver_success": true,
+            "reaches_MU": true,
+            "end_scale_GeV": 3964835648946381.0,
+            "end_lambda": 1.786518343904189e-06,
+            "end_y": 0.7147313975673748,
+            "steps": 97
+          },
+          "lower_floor": false,
+          "radial_mass_GeV": 25741329696.90471
+        },
+        {
+          "canonical_sigma_f_over_sqrt2": true,
+          "y_initial": 0.7715931428586544,
+          "lambda_initial": null,
+          "tested_lambda_initial": 0.39768345647298414,
+          "trajectory": {
+            "classification": "perturbativity_cut",
+            "solver_success": true,
+            "reaches_MU": false,
+            "end_scale_GeV": 213474882672621.84,
+            "end_lambda": 0.0018212939325052933,
+            "end_y": 3.544907701811028,
+            "steps": 139
+          },
+          "lower_floor": false
+        }
+      ]
+    },
+    {
+      "f_input_GeV": 100000000000.0,
+      "ma_input_ueV": 57.0,
+      "threshold_decoupling_uncontrolled": false,
+      "conventions": [
+        {
+          "canonical_sigma_f_over_sqrt2": false,
+          "y_initial": 0.2727993718161975,
+          "lambda_initial": 0.007760631199914301,
+          "tested_lambda_initial": 0.007760631199914301,
+          "trajectory": {
+            "classification": "full_positive_perturbative",
+            "solver_success": true,
+            "reaches_MU": true,
+            "end_scale_GeV": 3964835648946381.0,
+            "end_lambda": 2.0574588714556146e-08,
+            "end_y": 0.242267852814179,
+            "steps": 91
+          },
+          "lower_floor": false,
+          "radial_mass_GeV": 12458435856.811481
+        },
+        {
+          "canonical_sigma_f_over_sqrt2": true,
+          "y_initial": 0.3857965714293272,
+          "lambda_initial": 0.03156716660830789,
+          "tested_lambda_initial": 0.03156716660830789,
+          "trajectory": {
+            "classification": "full_positive_perturbative",
+            "solver_success": true,
+            "reaches_MU": true,
+            "end_scale_GeV": 3964835648946381.0,
+            "end_lambda": 1.184507548092524e-07,
+            "end_y": 0.3767216417408654,
+            "steps": 91
+          },
+          "lower_floor": false,
+          "radial_mass_GeV": 25126546363.679943
+        }
+      ]
+    },
+    {
+      "f_input_GeV": 200000000000.0,
+      "ma_input_ueV": 28.5,
+      "threshold_decoupling_uncontrolled": false,
+      "conventions": [
+        {
+          "canonical_sigma_f_over_sqrt2": false,
+          "y_initial": 0.13639968590809876,
+          "lambda_initial": 0.0004580917459553047,
+          "tested_lambda_initial": 0.0004580917459553047,
+          "trajectory": {
+            "classification": "full_positive_perturbative",
+            "solver_success": true,
+            "reaches_MU": true,
+            "end_scale_GeV": 3964835648946381.0,
+            "end_lambda": 1.0784200155387595e-09,
+            "end_y": 0.11548050211324551,
+            "steps": 85
+          },
+          "lower_floor": false,
+          "radial_mass_GeV": 6053704624.147463
+        },
+        {
+          "canonical_sigma_f_over_sqrt2": true,
+          "y_initial": 0.1928982857146636,
+          "lambda_initial": 0.0018418795209852513,
+          "tested_lambda_initial": 0.0018418795209852513,
+          "trajectory": {
+            "classification": "full_positive_perturbative",
+            "solver_success": true,
+            "reaches_MU": true,
+            "end_scale_GeV": 3964835648946381.0,
+            "end_lambda": 4.2766365739254464e-09,
+            "end_y": 0.16635154054208776,
+            "steps": 85
+          },
+          "lower_floor": false,
+          "radial_mass_GeV": 12138795726.052074
+        }
+      ]
+    },
+    {
+      "f_input_GeV": 500000000000.0,
+      "ma_input_ueV": 11.4,
+      "threshold_decoupling_uncontrolled": false,
+      "conventions": [
+        {
+          "canonical_sigma_f_over_sqrt2": false,
+          "y_initial": 0.0545598743632395,
+          "lambda_initial": 1.0965172449087044e-05,
+          "tested_lambda_initial": 1.0965172449087044e-05,
+          "trajectory": {
+            "classification": "full_positive_perturbative",
+            "solver_success": true,
+            "reaches_MU": true,
+            "end_scale_GeV": 3964835648946381.0,
+            "end_lambda": 1.2297936309892087e-10,
+            "end_y": 0.04634248906454875,
+            "steps": 77
+          },
+          "lower_floor": false,
+          "radial_mass_GeV": 2341492307.1715446
+        },
+        {
+          "canonical_sigma_f_over_sqrt2": true,
+          "y_initial": 0.07715931428586545,
+          "lambda_initial": 4.389580858904915e-05,
+          "tested_lambda_initial": 4.389580858904915e-05,
+          "trajectory": {
+            "classification": "full_positive_perturbative",
+            "solver_success": true,
+            "reaches_MU": true,
+            "end_scale_GeV": 3964835648946381.0,
+            "end_lambda": 1.9104187672946713e-10,
+            "end_y": 0.06570893490141969,
+            "steps": 77
+          },
+          "lower_floor": false,
+          "radial_mass_GeV": 4684859047.455384
+        }
+      ]
+    },
+    {
+      "f_input_GeV": 1000000000000.0,
+      "ma_input_ueV": 5.7,
+      "threshold_decoupling_uncontrolled": false,
+      "conventions": [
+        {
+          "canonical_sigma_f_over_sqrt2": false,
+          "y_initial": 0.02727993718161975,
+          "lambda_initial": 6.487058292815043e-07,
+          "tested_lambda_initial": 6.487058292815043e-07,
+          "trajectory": {
+            "classification": "full_positive_perturbative",
+            "solver_success": true,
+            "reaches_MU": true,
+            "end_scale_GeV": 3964835648946381.0,
+            "end_lambda": 1.015009217252405e-10,
+            "end_y": 0.023445234969736127,
+            "steps": 72
+          },
+          "lower_floor": false,
+          "radial_mass_GeV": 1139039796.7424178
+        },
+        {
+          "canonical_sigma_f_over_sqrt2": true,
+          "y_initial": 0.038579657142932725,
+          "lambda_initial": 2.5950183417832087e-06,
+          "tested_lambda_initial": 2.5950183417832087e-06,
+          "trajectory": {
+            "classification": "full_positive_perturbative",
+            "solver_success": true,
+            "reaches_MU": true,
+            "end_scale_GeV": 3964835648946381.0,
+            "end_lambda": 1.0561261333392794e-10,
+            "end_y": 0.03317663339547922,
+            "steps": 72
+          },
+          "lower_floor": false,
+          "radial_mass_GeV": 2278165201.1139174
+        }
+      ]
+    }
+  ],
+  "positive_but_incomplete_flow_control": {
+    "classification": "perturbativity_cut",
+    "solver_success": true,
+    "reaches_MU": false,
+    "end_scale_GeV": 169989354893.40323,
+    "end_lambda": 12.566370614359165,
+    "end_y": 1.2685752455707877,
+    "steps": 37
+  },
+  "gravity_cutoffs": [
+    {
+      "radius_input_micron": 8.0,
+      "length_convention": "interval_pi_R",
+      "L_GeV_inverse": 127365964744.26334,
+      "M5_GeV": 359734022.41597265,
+      "MQ_over_M5": 75.83363118786423,
+      "MU_over_M5": 11021575.3915033,
+      "axion_fa_input_GeV": 100000000000.0,
+      "Wilson_line_g4_required": 7.851391084014387e-23,
+      "dimensional_reduction_residual": -3.3306690738754696e-15
+    },
+    {
+      "radius_input_micron": 8.0,
+      "length_convention": "circle_2pi_R",
+      "L_GeV_inverse": 254731929488.52667,
+      "M5_GeV": 285521082.8059334,
+      "MQ_over_M5": 95.54438822355449,
+      "MU_over_M5": 13886314.838758336,
+      "axion_fa_input_GeV": 100000000000.0,
+      "Wilson_line_g4_required": 3.9256955420071935e-23,
+      "dimensional_reduction_residual": -3.3306690738754696e-15
+    },
+    {
+      "radius_input_micron": 10.0,
+      "length_convention": "interval_pi_R",
+      "L_GeV_inverse": 159207455930.3292,
+      "M5_GeV": 333947484.30331755,
+      "MQ_over_M5": 81.68930285110922,
+      "MU_over_M5": 11872632.181128226,
+      "axion_fa_input_GeV": 100000000000.0,
+      "Wilson_line_g4_required": 6.28111286721151e-23,
+      "dimensional_reduction_residual": -3.3306690738754696e-15
+    },
+    {
+      "radius_input_micron": 10.0,
+      "length_convention": "circle_2pi_R",
+      "L_GeV_inverse": 318414911860.6584,
+      "M5_GeV": 265054293.94261003,
+      "MQ_over_M5": 102.9220722133498,
+      "MU_over_M5": 14958579.202662732,
+      "axion_fa_input_GeV": 100000000000.0,
+      "Wilson_line_g4_required": 3.140556433605755e-23,
+      "dimensional_reduction_residual": -3.3306690738754696e-15
+    },
+    {
+      "radius_input_micron": 15.0,
+      "length_convention": "interval_pi_R",
+      "L_GeV_inverse": 238811183895.49374,
+      "M5_GeV": 291729998.53521,
+      "MQ_over_M5": 93.51090843791722,
+      "MU_over_M5": 13590771.15433451,
+      "axion_fa_input_GeV": 100000000000.0,
+      "Wilson_line_g4_required": 4.187408578141007e-23,
+      "dimensional_reduction_residual": -3.3306690738754696e-15
+    },
+    {
+      "radius_input_micron": 15.0,
+      "length_convention": "circle_2pi_R",
+      "L_GeV_inverse": 477622367790.9875,
+      "M5_GeV": 231546253.28273687,
+      "MQ_over_M5": 117.81636193572402,
+      "MU_over_M5": 17123298.66165009,
+      "axion_fa_input_GeV": 100000000000.0,
+      "Wilson_line_g4_required": 2.0937042890705036e-23,
+      "dimensional_reduction_residual": -2.9976021664879227e-15
+    }
+  ],
+  "stretched_GUT_string_controls": [
+    {
+      "radius_input_micron": 8.0,
+      "length_convention": "interval_pi_R",
+      "gauge_KK_lower_bound_input_GeV": 1000.0,
+      "MV_identified_with_MU_GeV": 3964835648946381.0,
+      "MV_upper_if_tension_at_M5_squared_GeV": 129408566883575.52,
+      "required_tension_over_M5_squared": 30.6381234598897,
+      "max_radius_micron_if_unit_tension_factor": 0.0471733527760993,
+      "allowed_tension_factors": {
+        "1": false,
+        "10": false,
+        "100": true,
+        "1000": true
+      }
+    },
+    {
+      "radius_input_micron": 8.0,
+      "length_convention": "interval_pi_R",
+      "gauge_KK_lower_bound_input_GeV": 10000.0,
+      "MV_identified_with_MU_GeV": 3964835648946381.0,
+      "MV_upper_if_tension_at_M5_squared_GeV": 12940856688357.553,
+      "required_tension_over_M5_squared": 306.38123459889704,
+      "max_radius_micron_if_unit_tension_factor": 0.001491752396391008,
+      "allowed_tension_factors": {
+        "1": false,
+        "10": false,
+        "100": false,
+        "1000": true
+      }
+    },
+    {
+      "radius_input_micron": 8.0,
+      "length_convention": "circle_2pi_R",
+      "gauge_KK_lower_bound_input_GeV": 1000.0,
+      "MV_identified_with_MU_GeV": 3964835648946381.0,
+      "MV_upper_if_tension_at_M5_squared_GeV": 81522288726672.69,
+      "required_tension_over_M5_squared": 48.634989410560486,
+      "max_radius_micron_if_unit_tension_factor": 0.02358667638804965,
+      "allowed_tension_factors": {
+        "1": false,
+        "10": false,
+        "100": true,
+        "1000": true
+      }
+    },
+    {
+      "radius_input_micron": 8.0,
+      "length_convention": "circle_2pi_R",
+      "gauge_KK_lower_bound_input_GeV": 10000.0,
+      "MV_identified_with_MU_GeV": 3964835648946381.0,
+      "MV_upper_if_tension_at_M5_squared_GeV": 8152228872667.269,
+      "required_tension_over_M5_squared": 486.3498941056049,
+      "max_radius_micron_if_unit_tension_factor": 0.000745876198195504,
+      "allowed_tension_factors": {
+        "1": false,
+        "10": false,
+        "100": false,
+        "1000": true
+      }
+    },
+    {
+      "radius_input_micron": 10.0,
+      "length_convention": "interval_pi_R",
+      "gauge_KK_lower_bound_input_GeV": 1000.0,
+      "MV_identified_with_MU_GeV": 3964835648946381.0,
+      "MV_upper_if_tension_at_M5_squared_GeV": 111520922272514.52,
+      "required_tension_over_M5_squared": 35.55239293356845,
+      "max_radius_micron_if_unit_tension_factor": 0.0471733527760993,
+      "allowed_tension_factors": {
+        "1": false,
+        "10": false,
+        "100": true,
+        "1000": true
+      }
+    },
+    {
+      "radius_input_micron": 10.0,
+      "length_convention": "interval_pi_R",
+      "gauge_KK_lower_bound_input_GeV": 10000.0,
+      "MV_identified_with_MU_GeV": 3964835648946381.0,
+      "MV_upper_if_tension_at_M5_squared_GeV": 11152092227251.451,
+      "required_tension_over_M5_squared": 355.52392933568444,
+      "max_radius_micron_if_unit_tension_factor": 0.001491752396391008,
+      "allowed_tension_factors": {
+        "1": false,
+        "10": false,
+        "100": false,
+        "1000": true
+      }
+    },
+    {
+      "radius_input_micron": 10.0,
+      "length_convention": "circle_2pi_R",
+      "gauge_KK_lower_bound_input_GeV": 1000.0,
+      "MV_identified_with_MU_GeV": 3964835648946381.0,
+      "MV_upper_if_tension_at_M5_squared_GeV": 70253778737415.52,
+      "required_tension_over_M5_squared": 56.43590594273333,
+      "max_radius_micron_if_unit_tension_factor": 0.02358667638804965,
+      "allowed_tension_factors": {
+        "1": false,
+        "10": false,
+        "100": true,
+        "1000": true
+      }
+    },
+    {
+      "radius_input_micron": 10.0,
+      "length_convention": "circle_2pi_R",
+      "gauge_KK_lower_bound_input_GeV": 10000.0,
+      "MV_identified_with_MU_GeV": 3964835648946381.0,
+      "MV_upper_if_tension_at_M5_squared_GeV": 7025377873741.552,
+      "required_tension_over_M5_squared": 564.3590594273332,
+      "max_radius_micron_if_unit_tension_factor": 0.000745876198195504,
+      "allowed_tension_factors": {
+        "1": false,
+        "10": false,
+        "100": false,
+        "1000": true
+      }
+    },
+    {
+      "radius_input_micron": 15.0,
+      "length_convention": "interval_pi_R",
+      "gauge_KK_lower_bound_input_GeV": 1000.0,
+      "MV_identified_with_MU_GeV": 3964835648946381.0,
+      "MV_upper_if_tension_at_M5_squared_GeV": 85106392045353.62,
+      "required_tension_over_M5_squared": 46.586813912091344,
+      "max_radius_micron_if_unit_tension_factor": 0.0471733527760993,
+      "allowed_tension_factors": {
+        "1": false,
+        "10": false,
+        "100": true,
+        "1000": true
+      }
+    },
+    {
+      "radius_input_micron": 15.0,
+      "length_convention": "interval_pi_R",
+      "gauge_KK_lower_bound_input_GeV": 10000.0,
+      "MV_identified_with_MU_GeV": 3964835648946381.0,
+      "MV_upper_if_tension_at_M5_squared_GeV": 8510639204535.363,
+      "required_tension_over_M5_squared": 465.86813912091344,
+      "max_radius_micron_if_unit_tension_factor": 0.001491752396391008,
+      "allowed_tension_factors": {
+        "1": false,
+        "10": false,
+        "100": false,
+        "1000": true
+      }
+    },
+    {
+      "radius_input_micron": 15.0,
+      "length_convention": "circle_2pi_R",
+      "gauge_KK_lower_bound_input_GeV": 1000.0,
+      "MV_identified_with_MU_GeV": 3964835648946381.0,
+      "MV_upper_if_tension_at_M5_squared_GeV": 53613667409273.336,
+      "required_tension_over_M5_squared": 73.95195741190052,
+      "max_radius_micron_if_unit_tension_factor": 0.02358667638804965,
+      "allowed_tension_factors": {
+        "1": false,
+        "10": false,
+        "100": true,
+        "1000": true
+      }
+    },
+    {
+      "radius_input_micron": 15.0,
+      "length_convention": "circle_2pi_R",
+      "gauge_KK_lower_bound_input_GeV": 10000.0,
+      "MV_identified_with_MU_GeV": 3964835648946381.0,
+      "MV_upper_if_tension_at_M5_squared_GeV": 5361366740927.334,
+      "required_tension_over_M5_squared": 739.5195741190053,
+      "max_radius_micron_if_unit_tension_factor": 0.000745876198195504,
+      "allowed_tension_factors": {
+        "1": false,
+        "10": false,
+        "100": false,
+        "1000": true
+      }
+    }
+  ],
+  "stretched_string_hypotheses": "Apply the order-of-magnitude proposal2409.01405: MV=T*LX, T<=cT*M5\u00b2, LX<=Lg, and Lg<=1/KKmin. Then cT>=MV*KKmin/M5\u00b2. Set MV=the repo fitted MU as an additional hypothesis, KKmin1or10TeV as illustrative localization-bound inputs, and export cT sensitivity. No exact black-string prefactor or experimental likelihood is computed; cT is not a measured number. This diagnoses the cost of this particular proposed UV repair, not a theorem excluding all high-scale gauge sectors.",
+  "exact_parent_Yukawa_perturbativity_bounds": [
+    {
+      "canonical_sigma_f_over_sqrt2": false,
+      "minimum_f_for_y_squared_below_4pi_GeV": 40117796438.56623,
+      "necessary_ma_upper_ueV": 142.08158239021446,
+      "inverse_y_squared_at_MU": 0.07957747154594763
+    },
+    {
+      "canonical_sigma_f_over_sqrt2": true,
+      "minimum_f_for_y_squared_below_4pi_GeV": 56120738914.7615,
+      "necessary_ma_upper_ueV": 101.56673112692611,
+      "inverse_y_squared_at_MU": 0.0795774715459725
+    }
+  ],
+  "Yukawa_analytic_control": "Set z=1/y\u00b2. The supplied beta becomes zprime=16K*g3\u00b2*z-36K. With inverse alpha3=a(t)=a0+B(t-t0), B=11/(6pi), exact z(t)=[a(t)/a0]^(24/11)z0-36K*a(t)^(24/11)*integral(a(s)^(-24/11)ds). This independently checks numerical trajectories and exposes pole/perturbativity failure regardless of quartic. It is only the parent beta system, not a complete EW/Yukawa model or universal axion bound.",
+  "equations": "Parent simplified one-loop beta functions retained: 16pi\u00b2 beta_lambda=20lambda\u00b2+60lambda*y\u00b2-30y\u2074, 16pi\u00b2 beta_y=y(18y\u00b2-8g3\u00b2), portals and sterile Yukawas set0. Parent canonical Sigma=(f+rho)/sqrt2 exp(ia/f), M_Q=yf/sqrt2, m_rho=sqrt(2lambda)f. Therefore y=sqrt2*M_Q/f, not M_Q/f. Gauge threshold held at the same physical M_Q in both convention runs.",
+  "perturbativity": "Declared diagnostic lambda<4pi and y\u00b2<4pi; stricter criteria change the domain. Integration must succeed and reach MU with positive lambda. A positive solver prefix ending at a pole/cut is not evidence of UV stability.",
+  "RGE_scope": "Controlled normalization comparison within the parent approximate beta system, not a complete mass-dependent multi-loop SMASH calculation. Common y is a boundary input, not equality protected against EW running. f<MQ rows flag the missing decoupling treatment. No unique axion ceiling or measured instability scale inferred.",
+  "gravity_equations": "For a flat factorizable five-dimensional Einstein term, M4_reduced\u00b2=M5\u00b3 L. R and interval/circle length conventions are exported. This is the characteristic 5D gravity scale up to UV factors, not a precision hard cutoff. The KK species scaling Lambda\u00b3~M4\u00b2/R agrees parametrically.",
+  "shared_EFT_boundary": "If the micron dark dimension and high-scale PQ/unification benchmark inhabit this same ordinary 5D gravity EFT, their MQ and MU exceed its gravity scale. The existing 4D perturbative gauge calculation alone is not a controlled common UV completion. Brane localization does not prove gravitational UV corrections vanish. A separate compact dimension, modified Planck relation, or explicit UV completion changes this conditional conclusion.",
+  "Wilson_line_scope": "For the gauge-origin interval axion in2607.08814, f=1/(g5 sqrtL) and g4=g5/sqrtL imply g4=1/(fL). Using the micron dimension therefore requires the exported very small g4, an additional input. Its Wilson-line axion has no scalar PQ radial mode; the old scalar threshold-stabilization model cannot be imported unchanged.",
+  "prior_owners": [
+    "analysis/toe_uv/pq_gates.py",
+    "analysis/toe_uv/pq_twoloop.json",
+    "analysis/PASS12603_12608_PQ_ASSISTED_UNIFICATION.md",
+    "analysis/PASS12609_12611_PQ_TESTS.md",
+    "analysis/PASS12563_12570_STABILISED_TOWER.md",
+    "analysis/toe_uv/hw_wall_radius.py",
+    "analysis/toe_uv/hw_wall_radius.json"
+  ],
+  "cutoff_priority": "The hw_wall_radius producer/certificate in12593 already owns the M5 value265054293.94261003GeV for R10micron and L=2piR. This reproduces that value and tests its compatibility with the later12603 MQ/MU benchmark; it is not a new Planck-scale law.",
+  "literature": [
+    "https://arxiv.org/abs/2607.08814",
+    "https://arxiv.org/abs/1203.0237",
+    "https://arxiv.org/abs/hep-ph/9803315",
+    "https://arxiv.org/abs/2409.01405"
+  ],
+  "boundary": "Neither an axion exclusion nor a general TOE no-go. This exposes extra protection/normalization/UV assumptions that need a shared action."
+}

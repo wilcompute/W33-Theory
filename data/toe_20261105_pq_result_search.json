@@ -1,0 +1,1254 @@
+{
+  "files_scanned": 23404,
+  "patterns": {
+    "canonical_PQ_mass": "(?:sqrt\\(?2\\)?.{0,35}(?:M_Q|M_X|MQ|MX)|(?:M_Q|M_X|MQ|MX).{0,35}sqrt\\(?2\\)?)",
+    "ordinary_axion_gauge_obstruction": "(?:qSigma|q_sigma|q_Sigma|qΣ|q_Σ).{0,60}(?:anomal|neutral)|anomal.{0,60}(?:D\\+Q\\+Q|D\\+2Q)",
+    "quality_dimension_12": "(?:quality|质量).{0,80}(?:12|13)|(?:dimension|dimensi).{0,15}12.{0,50}(?:axion|PQ)",
+    "5D_Planck_relation": "(?:M_?5|M₅|M_\\{5\\}).{0,40}(?:M_?[Pp4]|M[pP]|Planck)|(?:species|gravity).{0,40}cutoff",
+    "new_primary_citations": "2606\\.14098|2607\\.08814|2409\\.01405|2609\\.01712|2412\\.21157",
+    "incomplete_PQ_integration": "(?:pq_gates|pq_mass_ceiling|Yukawa).{0,80}(?:success|pole|perturb|normaliz)"
+  },
+  "matches": [
+    {
+      "path": "analysis/2026-10-08_five_frontiers_deep_jacobi_and_equivariance.md",
+      "hits": [
+        {
+          "result": "incomplete_PQ_integration",
+          "line": 110,
+          "snippet": " adjacency propagator without compiled approximations and losses. A holomorphic Yukawa integral is **not** a canonically normalized measured quark mass. Those are explicit \"firewalls\" for future research. The next result should p"
+        }
+      ]
+    },
+    {
+      "path": "analysis/2026-10-08_polar13_global_atlas_physical_followthrough.md",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 35,
+          "snippet": "mathbf F_3[13]=\\langle\\mathbf 1\\rangle\\oplus W\\). If one hoped for a canonical equality between the 13 projective points and the \\(1+12\\) Heisenberg Lie radical, the evident candidate is precisely this 12D \\(W\\).\n\nAn explicit five-gene"
+        }
+      ]
+    },
+    {
+      "path": "analysis/2026-10-08_twenty_apartment_torus_F20_H27_physical_packet.md",
+      "hits": [
+        {
+          "result": "incomplete_PQ_integration",
+          "line": 108,
+          "snippet": "ficate\n\nWe did **not** silently equate the earlier integral holomorphic residue Yukawa with a canonically normalized physical coupling. The source tetraquadric candidate is a specific Klein-four-invariant section o"
+        }
+      ]
+    },
+    {
+      "path": "analysis/2026-10-10_toe44_five_fronts.md",
+      "hits": [
+        {
+          "result": "incomplete_PQ_integration",
+          "line": 131,
+          "snippet": "s additional moment-map scalar-loop results, but **the fermionic representation/Yukawa mass matrices and renormalization prescriptions required for a full physical supertrace have not been fixed**. As a demonstratio"
+        }
+      ]
+    },
+    {
+      "path": "analysis/2026-10-27_week_commit_subjects.txt",
+      "hits": [
+        {
+          "result": "incomplete_PQ_integration",
+          "line": 276,
+          "snippet": "40ea7 Passes12189-12193 reserved: heralded magic, discriminant phases, polarity Yukawa maps, multi-anchor continuum, integral normalizer (Codex)\nf9ed95109 Pass 398: freeze complete formula-search universe\nf7d2e4db0 Index native cover,"
+        }
+      ]
+    },
+    {
+      "path": "analysis/2026-10-28_two_week_commit_catalogue.json",
+      "hits": [
+        {
+          "result": "incomplete_PQ_integration",
+          "line": 2904,
+          "snippet": "ge\": \"Passes12189-12193 reserved: heralded magic, discriminant phases, polarity Yukawa maps, multi-anchor continuum, integral normalizer (Codex)\",\n      \"full_diff_read\": false\n    },\n    {\n      \"sha\": \"f9ed9510973353b0f3b912924a2fb3"
+        }
+      ]
+    },
+    {
+      "path": "analysis/2026-11-03_alternative_geometry_five_fronts_TOE.md",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 137,
+          "snippet": "hotons and Gravitons in S-Matrix Theory: Derivation of Charge Conservation and Equality of Gravitational and Inertial Mass*, Phys. Rev. **135**, B1049 (1964), https://doi.org/10.1103/PhysRev.135.B1049 .\n- *Analogue gravity*, Living Reviews "
+        }
+      ]
+    },
+    {
+      "path": "analysis/2026-11-03_cross_domain_TOE_falsifiers.md",
+      "hits": [
+        {
+          "result": "incomplete_PQ_integration",
+          "line": 58,
+          "snippet": "t that one separation. For fixed arm separation 50 micrometers and hypothetical Yukawa range 150 micrometers, normalizing both at center distance 200 micrometers yields Yukawa/Newton phase-shape ratios `1.08177` at 150"
+        }
+      ]
+    },
+    {
+      "path": "analysis/2026-11-03_lensing_tilt_sparse_q15_and_wkb_TOE_fronts.md",
+      "hits": [
+        {
+          "result": "incomplete_PQ_integration",
+          "line": 59,
+          "snippet": "sen from 150–500 μm, with mass 2e-14 kg each, path displacement 50 μm, t=1s and Yukawa trial range λ=150 μm. A priori unrelated phase offset and Yukawa normalization are each fitted away. The best among the tested four-distance combinations is **150,200,225,50"
+        }
+      ]
+    },
+    {
+      "path": "analysis/bt1830_photonic_syndrome_compiler.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 124,
+          "snippet": "           \"stage\": \"measure_E\",\n            \"description\": \"read the three K4 equality-vs-edge comparators E01,E12,E20\",\n        },\n        {\n            \"stage\": \"measure_C\",\n            \"description\": \"read windi"
+        }
+      ]
+    },
+    {
+      "path": "analysis/BT2808_pg32_tetrahedral_support_lift.md",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 234,
+          "snippet": "ism and not a linear reduction \\(\\mathbb F_3^4\\to\\mathbb F_2^4\\).\n2. The exact equality \\((4,12,16,8)\\) proves a fiber-capacity theorem. It does\n   not by itself prove that the quotient incidence"
+        }
+      ]
+    },
+    {
+      "path": "analysis/bt2808_pg32_tetrahedral_support_lift.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 532,
+          "snippet": "rts objectwise.\"\n            ),\n            \"tomotope\": (\n                \"The equality (4,12,16,8) is an exact fiber-capacity theorem. \"\n                \"An incidence-preserving isomorphism fr"
+        }
+      ]
+    },
+    {
+      "path": "analysis/bt2857_selector_tomotope_fusion.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 59,
+          "snippet": "s and one of the eight parity-coded tomotope cells.\",\n        \"boundary\": \"The equality 12*8=96 is implemented as an exact bijection of control labels. It is not promoted as a regular action"
+        }
+      ]
+    },
+    {
+      "path": "analysis/BT3025_BT3031_predictive_photonic_overhaul_insert.tex",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 36,
+          "snippet": "4,3)}\\mathbb C[\\mathcal F]\n  =\\frac{6480+288+288+24}{4}=1770.\n\\]\nThe numerical equality \\(6480=27(81+120+24+15)\\) does not by itself identify the\nflag module with 27 Hodge copies.\n\n\\paragraph{Typed optic"
+        }
+      ]
+    },
+    {
+      "path": "analysis/BT3025_BT3031_unified_architecture_spine.tex",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 27,
+          "snippet": "n are\n\\[\n  \\dim\\operatorname{End}_{PSp(4,3)}\\mathbb C[\\mathcal F]=1770.\n\\]\nThe equality \\(6480=27(81+120+24+15)\\) is retained only as a dimensional bridge,\nnot as an unproved representation identificatio"
+        }
+      ]
+    },
+    {
+      "path": "analysis/BT3506_BT3512_seven_graph_csp_scheme_symmetry_index_insert.html",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 11,
+          "snippet": "on class=\"card boundary\" style=\"margin-top:18px\"><strong>Boundary.</strong> The M57 solver surface is implemented but not solved; involutive curvature is a high-risk ansatz, not a necessary condition. <a h"
+        }
+      ]
+    },
+    {
+      "path": "analysis/BT3506_BT3512_seven_graph_csp_scheme_symmetry_insert.tex",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 160,
+          "snippet": "valence or group\nidentification is asserted.\n\n\\paragraph{Evidence boundary.}\nNo M57 existence decision, complete CP-SAT run, necessity of involutive\ncurvature, actual M57 \\(19{:}9\\) action, canonical W33--Gew"
+        }
+      ]
+    },
+    {
+      "path": "analysis/bt3542_3548_borel_commutant_outer_s6_analytic.py",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 12,
+          "snippet": "LazeITu`6AX9-WT&B_#br4^?jfIN#r(t$C5Z!1uEftVvqogI2Gb3QQ#_-+X8BhfX@LheN&h0NH5#SRL>m5nWe?-my|F%Bak?N{!5&HqqHM4>s5<APmTFHoJ+V6Z9Qn}hevl>N<t{PHM8QD$9Xha~<=o-aSgV+3B5wdjFFM7z$uTLKpWkA>VU!5ptF>Zl9gY9It+wIzSul@!1z4X"
+        }
+      ]
+    },
+    {
+      "path": "analysis/bt3549_3555_borel_pentad_quantum_walk.py",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 11,
+          "snippet": "7fraVk9RQP1tukKgZUI}(%j+&w&Lt9JI;y4I5-!*6Wp330*DwF_JSD40UQLd54@>cWFX`8$)Qc+6b%BPM5PM4ByCf@1HrX0cR&*hifsG9Nbw42pd7VGN%Ne&L;XNYYZGlPs6s>)sPi(u@I3-{fyE6c!rRt@00725@H#D9F$f<n-hf+$Kw&E<Fif3r"
+        }
+      ]
+    },
+    {
+      "path": "analysis/bt3577_3583_petersen_matrix_octad_marked_walk.py",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 220,
+          "snippet": "ed Petersen skeleton','3583_bonkers_sunflower_moore_shell':None},'boundaries':['M57 remains open','the complete K8 octad orbit census remains open','the all-3,720 proof archive remains a heavy artifact','mar"
+        }
+      ]
+    },
+    {
+      "path": "analysis/BT3577_BT3583_petersen_matrix_octad_marked_walk_index_insert.html",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 11,
+          "snippet": "</article>\n  </div>\n  <section class=\"card boundary\"><strong>Boundary.</strong> M57 remains open; complete Borel, octad-orbit, and 3,720-proof verdicts are not claimed. <a href=\"petersen-matrix-octad-ma"
+        }
+      ]
+    },
+    {
+      "path": "analysis/BT859_bell_compass_parabolic_router.md",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 78,
+          "snippet": " side chooses an address sheet; the Bell-line side decodes a\nroute class.  The equality `1296=1296` was the shadow of this dual protocol,\nnot a regular-action isomorphism.\n"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS11103_REFLECTION_BREAKING_VACUA.md",
+      "hits": [
+        {
+          "result": "incomplete_PQ_integration",
+          "line": 63,
+          "snippet": "efficient tuning;\n* physics outside the scalar vacuum, such as moduli-dependent Yukawa couplings or non-perturbative effects.\n\nThis is the Kobayashi–Nilles–Plöger–Raby–Ratz Δ(54) (hep-ph/0611020) acting on the s"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS11313_11319_PORTAL_BARRIERS_RADIATIVE_SCALE_AND_GEOMETRY.md",
+      "hits": [
+        {
+          "result": "incomplete_PQ_integration",
+          "line": 61,
+          "snippet": "d quartic. This texture has no real full seven-quartic\nAF fixed ray. Additional Yukawa textures, charged inventories, nonperturbative\ncompletions and alternative representations are not excluded. The240-start\noriginal root searc"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS11734_11741_GAUGING_AND_CHIRAL_QUOTIENT.md",
+      "hits": [
+        {
+          "result": "incomplete_PQ_integration",
+          "line": 63,
+          "snippet": "ctions2–3, supplies the established slope, Koszul and equivariant\n  line-bundle/Yukawa methods. Physical normalization requires the kinetic\n  metric; holomorphic cohomology alone does not determine masses.\n- [Gall"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS11796_FULL_FIELD_PARITY_AND_ABELIAN_HIGGS.md",
+      "hits": [
+        {
+          "result": "incomplete_PQ_integration",
+          "line": 177,
+          "snippet": "onsistency, exotic mass matrices,\nphysical family/Higgs identification, kinetic/Yukawa normalization,\nproton-safe effective couplings, physical scales, gravity and a completed TOE.\n"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS11947_ENTANGLING_PHASE_AXIFLAVON.md",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 76,
+          "snippet": " arg Ω₁₂ must be below about 10⁻¹⁰ of the QCD one. This is the standard axion\n  quality problem; Pass 11913's flatness is necessary, not sufficient.\n* **Domain-wall number.** It is 3.\n* **The residual.** The"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS12011_12015_SCALE_FLAVOUR_AND_INTERNAL_INDEX.md",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 69,
+          "snippet": "arget class for mediation; it does not derive it.\n\n##12014: count light optical species before relating a cutoff to gravity\n\nFor a declared27-real-scalar extension of the capacity-completed smooth4D metric, use t"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS12021_12025_UV_CURVATURE_THRESHOLDS_AND_HOLONOMY.md",
+      "hits": [
+        {
+          "result": "incomplete_PQ_integration",
+          "line": 88,
+          "snippet": "ctroweak vacuum.\n\nRun the prior SM below Ms and full three-matrix one-loop MSSM Yukawa equations above it. Convert gprime to the SU5 normalization used by the MSSM equations. Include the calculated leading tanbeta-enhanced SQCD term\n\n```\nDel"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS12061_COMPATIBLE_CLOCKS_CONDENSE_TOGETHER.md",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 47,
+          "snippet": "ant tick-to-clock map, so that reading is **withdrawn**. The spectra and the inequality F_col < F_far < F_same stand. Pass 12068 further shows that a capacity cost condenses a whole context, never a pair.\n"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS123_W33_AXIS_GLUE_E8_LIFT.md",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 46,
+          "snippet": "ectral:\n\n\\[\nA_{\\rm axis}(a,b)=1\n\\iff\nB([h_a],[h_b])=0.\n\\]\n\nThe verifier checks equality of all \\(120^2\\) adjacency entries.\n\n## Exact \\(E_8\\) lift\n\nThe script uses the existing W33-derived tetracode "
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS12450_12457_MAJORANA_RESCUE_DEFICIT_CUTRANK_INDEX.md",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 116,
+          "snippet": ") + |x| + t,\n\nand also |R| ≥ |x|. Together these give |R| ≥ q + 1 for every q. Equality fails in the same way as in the 12450 lemma.\n\n## 12453: the cut-rank profile — flat at the ceiling\n\nFor a bipartition (X, Y), the enta"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS12490_12497_MOORE_FAMILY_HS_EXCLUSION.md",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 47,
+          "snippet": "d occurs **exactly when a square-good\nmatching of PG(1,q) exists**.\n\n## 12493: equality only at q = 5, and no Hoffman–Singleton set at q = 13\n\nComplete backtracking finds square-good matchings:\n\n- **only at q = 5** among primes ≤ 41;\n- and a"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS12603_12608_PQ_ASSISTED_UNIFICATION.md",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 64,
+          "snippet": "V this model needs a higher instability scale, so a lower M_t, or it fails.\n\nPQ quality: Planck-suppressed operators must start at dimension 12 or above for f = 10¹¹. Open: nothing here protects them.\n\n## 12608: scorecard and falsifiers\n\n| Gat"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS20260916_suzuki_e6_instanton_qc_frontier.md",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 27,
+          "snippet": "4},\n\\]\n\nso its permutation module splits as\n\n\\[\n165=(1+44)+120=45+120.\n\\]\n\nThe equality with the repo's 45 tritangents and 120 Steiner triangles is exact at the dimension level.  No equivariant intertwiner is claimed yet.  Lo"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS4571_4578_composition_enumerator_c8_q53_binary_bonkers_insert.tex",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 130,
+          "snippet": "on over all possible base identifications finds no equivariant bijection.  The equality $120=120$ is therefore explicitly rejected rather than promoted into a correspondence.\n\n\\begin{quote}\\small"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS4785_4792_RESERVATION.md",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 42,
+          "snippet": " the old protected 45 from the 135 singular apartment fibers gives literal set equality: the support-12 rook grids are the same 45 subsets of the same 40 W33 line coordinates as the protected E6/center-q"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS5158_5165_EXECUTED_OUTCOMES.md",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 73,
+          "snippet": "ossible in a simple bipartite girth-eight selected Levi graph. For `(4,4,12)`, equality forces a degree-three `C12` plus four antipodal two-edge chords; the antipodal chord classes would need an independent set of "
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS5158_5165_path_fourth_decoder_metric_insert.tex",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 29,
+          "snippet": "P_4=96$ cases are incompatible with Levi girth eight.  In the $(4,4,12)$ case, equality forces the induced degree-three graph to be a $C_{12}$ and the four degree-two vertices to be antipodal two-edge chords.  Their four antipodal classes w"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS5957_5964_prediction_evidence_audit.md",
+      "hits": [
+        {
+          "result": "incomplete_PQ_integration",
+          "line": 55,
+          "snippet": "on/top Yukawa ratio must equal the reciprocal of that product.\n\nNo mass matrix, Yukawa operator, renormalization flow or representation-theoretic eigenvalue theorem in the producer forces those factors to mu"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS9197_9260_eight_front_insert.tex",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 95,
+          "snippet": "[\nH_+-H_-=q^6,\n\\qquad\nA_--A_+=q^6.\n\\]\nAt $q=3$ the transfer is $3^6=729$.  The equality of this number with the cardinality of either ternary $[12,6]$ glue code is forced by their common six-dimensionality and is not promoted to a separate physic"
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_20261103_gravity_multidistance_nuisance_design.py",
+      "hits": [
+        {
+          "result": "incomplete_PQ_integration",
+          "line": 4,
+          "snippet": "hase design with nuisance projection.\n\nTemplate discrimination from one unknown Yukawa coupling normalization and\nan instrumental constant phase offset, then add an inverse-cube background.\nThis is a toy "
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_20260923_execute_five_post_frontier_attacks.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 593,
+          "snippet": "_traversal_equivalent_phase_deg\": fourier_phase_deg_halfbudget,\n            \"inequality\": \"12 eps_phase + 8 eps_F3_phase < 60 degrees\",\n        },\n        \"leakage_budget\": {\n            \"repo_"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_20261010_toe44_e8_cp_cw_firewall.py",
+      "hits": [
+        {
+          "result": "incomplete_PQ_integration",
+          "line": 78,
+          "snippet": "this_is_not_a_consistent_complete_representation\":True},\n\"cannot_calculate\":\"No Yukawa fermion representations, invariant contractions, gauge-fixing prescription, renormalization conditions and full scalar/ghost spectrum specified in this independent producer. A complete o"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_20261022_pascal_beta_discriminants.py",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 43,
+          "snippet": "iminant sign.\",\n        \"candidate_exceptional_characteristics\":cases,\n        \"m5_sample_overlap\":{\"discriminant\":3381,\"divisors\":[3,7,23],\n            \"Levi_family_nondivisor_control\":4"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_20261027_acoustic_density_backreaction.py",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 261,
+          "snippet": " to leading order\n            # when ell/R and M5 R are both large.\n            M5=mp.mpf(1000);VJ=C*shape(root)/R**4;rho=VJ/(2*mp.pi*R)\n            pressure=-(C*(-4*shape(root)+root*mp.di"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_BREAKTHROUGH_55_seven_27s_matter_cube.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 223,
+          "snippet": "es\": {\n            \"group\": \"W(E_6)\",\n            \"order\": 51840,\n            \"equality\": \"= |Sp(4, F_3)| = |Aut(W(3,3))| (BT12)\",\n            \"substrate\": \"lambda^6 * q^mu * F_5 * 2^q\",\n        },\n        \"Freudenthal_magic_J3"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_e8_holonomy_c3xc6_factorization.py",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 37,
+          "snippet": "asis-free recognition theorem. For a real 248-dimensional\nC6 representation, m1=m5 and m2=m4. If\n  dim Fix(g)=44,\n  dim Fix(g^2)=92,\n  dim Fix(g^3)=120,\nthen necessarily\n  m=(44,40,38,48,38,40"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_k12_genus_polarization.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 3,
+          "snippet": "ator corpus.\nPrior: Holotrade a0ed473/b63daac; W33 BT802, BT1844, DCCXXIII.\nNo equality of graph K_12 and Coxeter-Todd lattice K_12 is assumed.\n\"\"\"\nfrom pathlib import Path\nfrom math import isqrt, comb\nimport json\nimport sympy as s"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass10661_10668_homology_scalar_extension_no_go.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 56,
+          "snippet": "e to H(4)'},\n      'theorem':'The 4096-dimensional H(4)-Levi homology / F2[V2] equality is genuinely C13-specific and cannot extend across the internal F4 scalar C3. The canonical G2(4)-equivariant descen"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass11103_reflection_breaking_vacua.py",
+      "hits": [
+        {
+          "result": "incomplete_PQ_integration",
+          "line": 32,
+          "snippet": " O(1)\ncoefficient tuning or physics outside the scalar vacuum (moduli-dependent Yukawas / non-perturbative effects).\n\"\"\"\nfrom __future__ import annotations\n\nimport json\nimport sys\nfrom collections impo"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass11293_yukawa_uv_budget.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 48,
+          "snippet": "ge transform. Thus kernel<=111. The integer orbit tangent has rank111, proving equality and positivity of1254 normal directions among1365 alignment fields. This is analytic elimination using the prior rank theorem, not a numeric full H"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass11471_11475_frames_currents_matching.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 60,
+          "snippet": "s=enc(R2),compact_real_dimension=28,clock_idempotent_indices=idempotents,cubic_equality='12*N_native(T*y)=12*N_Albert(y)',cubic_coefficient_residual=0,scope='Explicit Gaussian-rational carrier map from the ca"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass11561_native_e6_hesse_polynomial_law.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 79,
+          "snippet": "ab[\"clock_idempotent_indices\"]))\n    assert ids==[26,0,9]\n    assert ab[\"cubic_equality\"]==\"12*N_native(T*y)=12*N_Albert(y)\"\n\n    _,tensors=native_tensors()\n    native=tensors[1]\n    V=T[:,ids]\n    C=np.einsum(\""
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass11625_11629_composites_joint_vacua.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 312,
+          "snippet": " is standard.')\n\n\ndef reye_vacuum_audit():\n    \"\"\"Explicit incidence lifts; no equality from12/16 counts alone.\n\n    BT544 owns the cyclic Reye;5580-5585 own A4 grid incidence;\n    1089 owns dua"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass11797_11801_five_physical_fronts.py",
+      "hits": [
+        {
+          "result": "incomplete_PQ_integration",
+          "line": 297,
+          "snippet": "w charged flavor. Thus no single elementary addition repairs the declared Hu up-Yukawa rank. Coordinated hidden flavors, changed Higgs basis and nonperturbative mechanisms remain open.',\n        additional_fractional_exotics={'fractional_colored_2x2_rank_"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass11944_mu_tau_parity_identities.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 94,
+          "snippet": "nversion_is_mu_tau_reflection=res[\"inversion_is_mu_tau_swap\"],\n        lemma_inequality=viol < 1e-12,\n        odd_column_equals_odd_content=eq < 1e-12,\n        up_charm_is_the_odd_state=all(f[\"charm_i"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass11947_entangling_phase_axiflavon.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 21,
+          "snippet": " the decay constant (Kahler normalisation of Omega12\n   in physical units), the quality requirement (other potentials for arg Omega12 below ~1e-10 of the QCD one), and the\n   domain-wall number 3.\n\"\"\"\n\nimport json\nimport sys\nfrom pat"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass11949_axiflavon_quality_fails.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 69,
+          "snippet": "e-6 and f[\"harmonic_4\"] < 1e-3 * f[\"harmonic_2\"] for f in Fs.values()),\n        quality_violated_by_over_1e13=all(f[\"ratio_to_quality_bound\"] > 1e13 for f in Fs.values()),\n        theta_bar_at_extrema_not_small=all(abs(e[\"theta_bar\"]) > 1e-3 for f "
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass12011_12015_scale_flavour_internal_index.py",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 128,
+          "snippet": "kappa=kappa,dimensionless_optical_masses_squared=x.tolist(),curvature_effective_species=F2,vacuum_effective_moment=F4,G_times_cutoff_squared=12*np.pi/F2,absolute_vacuum_over_reduced_Planck_fourth=288*np.pi**2*F4/F2**2))\n    return d"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass12189_12193_five_bridges.py",
+      "hits": [
+        {
+          "result": "incomplete_PQ_integration",
+          "line": 336,
+          "snippet": ",\n        'magic':heralded_magic(),'discriminant':discriminant_weil(),\n        'yukawa':yukawa_slice(),'continuum':continuum_bridge(),'normalizer':normalizer_actions()}\n\n\nif __name__=='__main__':\n    import argparse\n    parser=argparse.ArgumentParser();pa"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass1224_qutrit_phase_commutant_bridge_note.py",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 20,
+          "snippet": "er F_3.',\n        'commutant_context': 'The residual commutant is M_13 + M_16 + M_5 + M_4 + M_21 + M_2 + M_9 + M_4 + M_10 + M_1 over Q.',\n        'bridge_hypothesis': 'The 27-dimensional geometry (3^3 qutrit basis "
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass12603_to_12608_pq_unification.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 65,
+          "snippet": "heavy axions are in tension\"] = rows[5.0][\"m_rho\"] > 1e10\n    checks[\"12607: PQ quality needs dimension 12 at f = 1e11\"] = g[\"pq_quality\"][\"100000000000.0\"][\"min_dim\"] == 12\n\n    # 12608\n    checks[\"12608: "
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass176_incidence_fixed_line_e8_bridge.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 442,
+          "snippet": "he proved symmetry is the native PSp(4,3) coordinate action. \"\n            \"No equality with the full automorphism group of the 120-graph is asserted, \"\n            \"and the two-sheet cover is not yet an integral signed E8 Gram re"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass220_local120_selector_mackey_boundary.g",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 442,
+          "snippet": "oint-line actions are not interchangeable\\\",\\n\");\nEmit(\"    \\\"verdict\\\": \\\"the equality 15*4*2=40*3=120 is a genuine local carrier factorization and a Mackey-slice cardinality coincidence, not the selec"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass2553_rank9_octet_a4_v4_decoder.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 84,
+          "snippet": "the 24 perfect matchings of that K4,4, hence form an A4 torsor. Relation 16 is equality of the three V4 cosets in A4, giving three K4 graphs, while relation 13 joins distinct cosets, giving K4,4,4; their union is K12.','block_model':{'blocks':45,'frames_per_b"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass2674_2681_the_paper_warned_me_three_times.md",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 94,
+          "snippet": "ause it is the part of the architecture I have no hardware for:\n\n- **The Kraft-equality router.** The Bell-line parabolic's four orbits on 1296 compass\n  pairs are `162+162+324+648`, whose normalised sizes satisfy\n  `2⁻³+2⁻³+2⁻²+2⁻¹ = 1` exa"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass386_the_geometric_gap_is_the_phase.py",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 252,
+          "snippet": "\n    checks[\"w35_has_156_points\"] = len(P5) == 156\n    p05 = (0, 0, 0, 1)\n    rim5 = [p for p in P5 if p != p05 and symp(p05, p, 5) == 0]\n    checks[\"w35_rim_30\"] = len(rim5) == 30\n    perp_dirs = [p for p in P5 if symp("
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass4482_ten_line_protected_readout.py",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 60,
+          "snippet": "\n            if compatible(dual[i],dual[j],Ast):adj[i].add(j);adj[j].add(i)\n    m5=clique_target(dual,adj,5); m4=clique_target(dual,adj,4); Gi=inv2(G)\n    recovered=True\n    for m in range(1<<10):\n        c=np.ar"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass4515_q53_apartment_code_frontier.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 152,
+          "snippet": "pair_beta\":6,\"P3_triple_apartments\":9},\n      \"boundary\":\"The GQ(3,9) distance equality d=1458 is not claimed. The support-13..140 window is the exact remaining coefficient-space frontier after the proved bounds.\"\n    }\n    O"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass4762_thickening_partner_rook45.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 96,
+          "snippet": "iously protected E6/center-quad 45.',\n      'boundary':'Exact finite set/graph equality. The partner involution is defined on support-12 minima; no dynamical meaning is inferred.'}\n    OUT.write_text(json.dumps(out,indent=2,sort_keys=Tr"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass4831_deephole_residue_12x12_falsifier.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 36,
+          "snippet": " and 2160 and have no components of those residue sizes',\n      'theorem':'The equality 12=12 between the Pass4812 H10 deep-hole orbit count and the Pass4737 residue-action orbital rank is numerology, not an equiva"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass4867_cut_ising_full_enumerator.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 107,
+          "snippet": "ary\":\"This closes the complete weight enumerator, not the covering radius. The equality '120 maximum cuts = 120 Steiner triangles' is not promoted to an identification without a stabilizer-compatible map.\"\n    "
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass4882_pancharatnam_steiner_f3_cocycle.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 32,
+          "snippet": "carry the standard W33 point graph and are not isomorphic to Q(4,3). Parameter equality SRG(40,12,2,4) was insufficient.',\n      'authoritative_replacement':{\n        'Pass4963':'Witting rays = W33"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass5164_q5_cubic_leader25_girth_rejection.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 81,
+          "snippet": "urn None\n    return rec(0,R,tuple([0]*nr))\n\n\ndef profile_A_impossible():\n    # Equality DP forces the degree-3 induced graph H to be 2-regular on 12\n    # vertices. Girth>=8 implies H=C12. Four external degree-2 vertices join\n    # eight H vertices"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass5188_q5_dual_grid_code_exact.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 114,
+          "snippet": "2(q+1)=12 points by the two-step GQ forcing argument.',\n      'minimum_shell':'Equality forces a 6-regular triangle-free graph on 12 selected points, hence K_6,6; in W(3,5) this is a hyperbolic polar-pair dual grid. Thus A_12=325 an"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass5208_oddq_dualgrid_spanning_rank_reduction.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 48,
+          "snippet": "True} for q,r in anchors.items()},\n      'q5_theorem':'Pass5188 proves the q=5 equality and code [156,65,12]_2.',\n      'even_characteristic_firewall':'Known even-q coding results show that for q>=4 the full"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass5265_weight8_block_polymatroid.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 104,
+          "snippet": "ples containing one opposite pair.',\n      'connection':'The no-singleton rank equality r(D)=r(D\\\\{j})=134 used in Pass5262 is the top layer of this local polymatroid.',\n      'boundary':'Exact q5 local ra"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass5303_q13_rank_anchor_allodd_generation.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 91,
+          "snippet": "303,'status':'THEOREM_Q13_FOOTPRINT_RANK_EQUALITY_ANCHOR',\n      'q13':a,'rank_equality_anchors':{'q3':15,'q5':65,'q7':175,'q9':369,'q11':671,'q13':1105},\n      'all_odd_equivalence':'rank_2(F)=g=q(q^2+1)/2 iff K0=D_q, the span of same-point cham"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass5304_q11_dual20_density_wall.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 12,
+          "snippet": "r intersections gives\n\n    2e = sum_p C(d_p,2).\n\nFor even d, C(d,2)>=d/2, with equality only at d=0,2.  Hence e>=120, with equality\niff the selected carriers cover exactly 240 W-points twice.  In that equality\ncase "
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass5334_allodd_characteristic_rank_complement.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 19,
+          "snippet": "  rank_2(F) = nullity_Q(F) = g,\n    nullity_2(F) = rank_Q(F) = 1+f.\n\nThe first equality is open in general but verified at q=3,5,7,9,11,13.\n\"\"\"\nfrom __future__ import annotations\nimport json\nfrom pathlib import Path\nROOT=Path(__file__).re"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass5349_q11_dual20_doublecover_xorsat.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 81,
+          "snippet": "                 boundary='This does not exclude weight20 dual words above the equality wall and does not prove d=121.')\n    else:\n        M=set(v for v in model if v>0);S=[j for j,v in enumerate(y) if v in M];assert"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass5447_q5_K0_weight1040_support_reduction.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 89,
+          "snippet": "ve_block':40,\n      'weight8_shell_checks':24375,\n      'no_singleton_moment_inequality':'4a-c>=1235',\n      'relation_pair_counts':'a+b+c=325 for R1(codegree25), R2(codegree5), R3(codegree0)',\n    "
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass7081_7096_e8_z3_z4_z12_common_refinement.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 245,
+          "snippet": "has an independent mu_12 scalar phase-group theorem for qutrit Clifford gates; equality of the orders 12 does not identify those structures. An explicit character/intertwiner is required before connecting"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass7237_7244_the_ninety_and_the_witting_rays.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 107,
+          "snippet": "and their Coxeter 5-cycle structure (BT1750); the 36\n    spreads and the count-equality warning (MDCLXXXI, decision-ab66d64e); 1120 A2s and 3150\n    D4s in E8; G32 as the Witting symmetry group.\"\"\")\n\n    out = {\n        \"boundary\""
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_qutrit_20_7_2_to_66_recode_circuit.py",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 163,
+          "snippet": "ical_wire\":4,\"verified\":bool(ok)})\n    handoff,handclasses=handoff_fault_census(M5,S5);boundary,boundsamples=target_boundary_faults(M5,S5)\n    checks={\n      \"source_tableau_symplectic\":M20.shape==(40,40),"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_schur176_reye_decoder_quotient_grid_bridge.py",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 47,
+          "snippet": "ath:\n    sys.path.insert(0, str(ANALYSIS))\n\nfrom w33_reye_v4_decoder_automorphism_576 import GL, R, mat_apply  # noqa: E402\nfrom w33_schur176_qplus_macro_skeleton import build_result as bui"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_schur_reye_288_action_bridge.py",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 45,
+          "snippet": "losure import wf4_and_kernels  # noqa: E402\nfrom w33_reye_v4_decoder_automorphism_576 import (  # noqa: E402\n    POINTS, BLOCKS, R, GL, S3, block_points, point_perm,\n)\n\nOUT = ROOT / \"data\" "
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_suzuki_local_165_gq48_spectral_bridge.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 103,
+          "snippet": "_pass4964_4965_4967_double_six_spread_transceiver.py']},\n      'boundary':'The equality 45+120 with the old tritangent/Steiner carrier sizes is exact and representation-theoretically suggestive"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_suzuki_refactorization_compiler.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 16,
+          "snippet": "\nis either H_U or Suz, and H_V is not contained in H_U (same order would force\nequality).  Lifting the projective Suzuki action to the exact 12-dimensional\nsymplectic representation gives 2.Suz <= Sp(12,3).\n\nThus the complete library of local "
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_wzw_generation_ladder.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 26,
+          "snippet": ")_12) rung, and the count of its lattice realizations is f itself.\nHonest: the equality c(sp4_12) = c((E8)_1) = 8 is exact; whether sp(4)_12 sits as a\nconformal embedding inside (E8)_1 is a sharper claim left open here.\n\"\"\"\nfrom __future__ "
+        }
+      ]
+    },
+    {
+      "path": "analysis/search_drivers_12136/exomass5.py",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 68,
+          "snippet": "(A), len(B)), complex)\n        M4 = np.zeros((len(A), len(B)), complex)\n        M5 = np.zeros((len(A), len(B)), complex)\n        for i, a in enumerate(A):\n            for j, b in enumerate(B):\n                need = "
+        }
+      ]
+    },
+    {
+      "path": "analysis/search_drivers_12141/block.py",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 7,
+          "snippet": "cipy.sparse import csr_matrix\nsrc = open('exomass5.py').read().replace(\"        M5t = M3 + 0.1 * M4 + 0.01 * M5\", \"        M5t = M3 + 0.1 * M4 + 0.01 * M5\\n        if key[1] == 2:\\n            DBG.ap"
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/hw_wall_radius.py",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 72,
+          "snippet": "inv6_GeV=Vs, rho_c_over_rho=rho_c / rho, flux_unit_mass_GeV=k23 / V ** (2 / 3), M5_GeV=((MP / GEV) ** 2 / (2 * rho)) ** (1 / 3))\nout[\"scales\"] = sc\n# one-loop SM couplings at the compact scal"
+        }
+      ]
+    },
+    {
+      "path": "papers/forty_points/appA_ledger.tex",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 584,
+          "snippet": "harmonic (top modulation $2$--$5\\times10^{-6}$); the top loop exceeds the axion quality bound by $10^{16}$--$10^{17}$ and fixes $\\bar\\theta=O(1)$: $\\arg\\Omega_{12}$ is not the QCD axion; the axiflavon route is closed and strong CP, still open, moves to the Nelso"
+        }
+      ]
+    },
+    {
+      "path": "papers/forty_points/sec09_physics.tex",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 1571,
+          "snippet": " this gives the would-be axion a potential $10^{16}$--$10^{17}$ times above the quality bound, and it fixes $\\bar\\theta=O(1)$. The phase of $\\Omega_{12}$ is therefore not the QCD axion, and the strong-CP problem of this flavour chain remains open. \\ce"
+        }
+      ]
+    },
+    {
+      "path": "docs/404.html",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 10982,
+          "snippet": " </tr>\n              <tr>\n                <td>1031</td>\n                <td>abc-quality q_abc = log(k)/log(v) = log(12)/log(40)</td>\n                <td>Quality measure for abc conjecture</td>\n                <td class"
+        }
+      ]
+    },
+    {
+      "path": "docs/exceptional-geometry-41a8d733.html",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 11007,
+          "snippet": " </tr>\n              <tr>\n                <td>1031</td>\n                <td>abc-quality q_abc = log(k)/log(v) = log(12)/log(40)</td>\n                <td>Quality measure for abc conjecture</td>\n                <td class"
+        }
+      ]
+    },
+    {
+      "path": "docs/extremal-mesh-photon-tensor.html",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 17,
+          "snippet": "ction class=\"card\"><h2>Rank-48 tensor</h2><div class=\"eq\">Q² ⊕ M₂(Q)³ ⊕ M₃(Q) ⊕ M₅(Q)</div><p>The complete matrix-unit product table has 48 basis elements, center dimension seven, and 178 nonzero struct"
+        }
+      ]
+    },
+    {
+      "path": "docs/full-site-2026-08-06.html",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 11007,
+          "snippet": " </tr>\n              <tr>\n                <td>1031</td>\n                <td>abc-quality q_abc = log(k)/log(v) = log(12)/log(40)</td>\n                <td>Quality measure for abc conjecture</td>\n                <td class"
+        }
+      ]
+    },
+    {
+      "path": "docs/index.html",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 13010,
+          "snippet": " </tr>\n              <tr>\n                <td>1031</td>\n                <td>abc-quality q_abc = log(k)/log(v) = log(12)/log(40)</td>\n                <td>Quality measure for abc conjecture</td>\n                <td class"
+        },
+        {
+          "result": "5D_Planck_relation",
+          "line": 30811,
+          "snippet": "on class=\"card boundary\" style=\"margin-top:18px\"><strong>Boundary.</strong> The M57 solver surface is implemented but not solved; involutive curvature is a high-risk ansatz, not a necessary condition. <a h"
+        },
+        {
+          "result": "incomplete_PQ_integration",
+          "line": 2040,
+          "snippet": "ow supply the third-family input using published Dolbeault primitives. Physical Yukawa normalization, opposite-charge balancing fields, backreaction, quantum consistency,4D gravity and a complete"
+        }
+      ]
+    },
+    {
+      "path": "docs/PART_CCCCCLXXVI_EFFECTIVE_Y_MASS_SPECTRUM.md",
+      "hits": [
+        {
+          "result": "incomplete_PQ_integration",
+          "line": 26,
+          "snippet": "ndition number**: Ratio of largest to smallest eigenvalue controls stability of Yukawa renormalization\n\nThe structure is **completely geometric**: all 8 vertex + 2 triangle mass eigenvalues are for"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_bt3500_bt3505_triangle_free_srg_m57_bridge.py",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 1,
+          "snippet": "from analysis.bt3500_3505_triangle_free_srg_m57_bridge import build_certificate\n\n\ndef test_triangle_free_srg_m57_bridge_certificate():\n    result = build_cert"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_bt3506_bt3512_seven_graph_csp_scheme_symmetry.py",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 2,
+          "snippet": "2_seven_graph_csp_scheme_symmetry import build_certificate\nfrom analysis.bt3506_m57_permutation_csp import (\n    model_statistics,\n    residual_mu_violations,\n    triangle_violations,\n    validate_double"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_mass_mixing_closure_surface_cccxxvii.py",
+      "hits": [
+        {
+          "result": "incomplete_PQ_integration",
+          "line": 62,
+          "snippet": "\",\n        \"wolf_A\",\n        \"wolf_rhobar\",\n        \"wolf_etabar\",\n        \"top_yukawa_pole\",\n    }\n    assert observables[\"lambda_H_MSbar_MZ\"][\"formula\"] == \"Phi_3/Phi_4^2 = 13/100\"\n    asse"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_photonic_empirical_closure_handoff_ccccxxix.py",
+      "hits": [
+        {
+          "result": "incomplete_PQ_integration",
+          "line": 84,
+          "snippet": "\",\n        \"wolf_A\",\n        \"wolf_rhobar\",\n        \"wolf_etabar\",\n        \"top_yukawa_pole\",\n    ]\n    assert sheet[\"reduced_chi2\"] < 0.34\n    assert sheet[\"max_abs_z\"] <= 1.0 + 1e-12\n    as"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_probabilistic_combinatorics_computation.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 993,
+          "snippet": "\"\"\n\n    def test_cheeger_spectral_lower_bound(self, w33):\n        \"\"\"Cheeger inequality (discrete): h(G) >= (k - lambda_2)/2 = (12-2)/2 = 5.\n        Here lambda_2 is the second-largest eigenvalue of A, which is 2.\"\"\"\n        k, la"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_proton_decay_gut.py",
+      "hits": [
+        {
+          "result": "canonical_PQ_mass",
+          "line": 181,
+          "snippet": "slightly below M_GUT.\"\"\"\n        mx_ratio = math.sqrt(K / E)\n        assert abs(mx_ratio - 1/math.sqrt(20)) < 1e-10\n\n    def test_xy_boson_count(self):\n        \"\"\"Number of X/Y bosons: dim(E₆) - dim(SM) ="
+        }
+      ]
+    },
+    {
+      "path": "tests/test_qec_stabilizer_codes.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 339,
+          "snippet": "erties.\"\"\"\n\n    def test_expansion_from_eigenvalue(self):\n        \"\"\"Cheeger inequality: h ≥ (K - R_eig)/2 = (12-2)/2 = 5.\n        High expansion → good error correction.\n        Threshold p_th ∝ h/K = 5/12.\"\"\"\n "
+        }
+      ]
+    },
+    {
+      "path": "tests/test_spectral_decomposition_deep_computation.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 797,
+          "snippet": " 1e-8\n\n    def test_cheeger_lower_bound(self, laplacian):\n        \"\"\"Cheeger inequality lower bound: h(G) >= lambda_1_L / (2k) = 10/24 = 5/12.\"\"\"\n        evals = np.sort(np.linalg.eigvalsh(laplacian))\n        lambda_1_L = evals[1]\n        k "
+        }
+      ]
+    },
+    {
+      "path": "tests/test_spectral_moonshine_bridge_cclxii.py",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 206,
+          "snippet": " 960\n\n\n# ================================================================\n# T8: M₅ decomposition\n# ================================================================\nclass TestT8_M5:\n    \"\"\"M"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_strong_cp_axion.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 409,
+          "snippet": "salignment → no overclosure),\n        (6) N_DW = 3 (inflated away),\n        (7) Quality: dim-13 PQ-violating operators.\"\"\"\n        cp = {\n            'theta_zero': True,\n            'pq': 6 - 5 ="
+        }
+      ]
+    },
+    {
+      "path": "tests/test_swampland_constraints.py",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 289,
+          "snippet": "n number of light particles.\"\"\"\n\n    def test_species_bound(self):\n        \"\"\"N_species ≤ M_Pl²/Λ² where Λ is the cutoff.\n        If Λ = M_GUT: N_species ≤ (M_Pl/M_GUT)² ≈ 400.\n        From W(3,3): N_species = V = 40 ≪ 4"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_swampland_landscape.py",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 113,
+          "snippet": "def test_magnetic_wgc(self):\n        \"\"\"Magnetic WGC: cutoff Λ ≤ gM_Pl.\n        Species count N ≤ 1/g² at the cutoff.\n        For g ~ 1/√(α_GUT⁻¹) = 1/5: N ≤ 25 = α_GUT⁻¹.\"\"\"\n        n_species_max = (K + PHI3)\n      "
+        }
+      ]
+    },
+    {
+      "path": "tests/test_swampland_uv_ccclxix.py",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 181,
+          "snippet": "═════════════════════════════════════════\nclass TestT4_SpeciesScale:\n    \"\"\"The species scale and UV cutoff.\"\"\"\n\n    def test_species_count(self):\n        \"\"\"Number of species N = v = 40 (one per vertex).\n  "
+        }
+      ]
+    },
+    {
+      "path": "tests/test_top_yukawa_cccxxvi.py",
+      "hits": [
+        {
+          "result": "incomplete_PQ_integration",
+          "line": 2,
+          "snippet": "\"\"\"\nPart CCCXXVI -- Top Yukawa  y_t(pole)^3 = v / (v+1)\nRegression tests for exploration/PART_CCCXXVI_TOP_YUKAWA_BRIDGE.py\n\"\"\"\nfrom __future"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_w33_20261022_golden_dualnumber_clock.py",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 67,
+          "snippet": "[\"candidate_exceptional_characteristics\"][:4]]==[5,-31,-283,3381]\n    assert r[\"m5_sample_overlap\"][\"divisors\"]==[3,7,23]\n    assert r[\"m5_sample_overlap\"][\"Levi_family_nondivisor_control"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_w33_reye_v4_decoder_automorphism_576_20260911.py",
+      "hits": [
+        {
+          "result": "5D_Planck_relation",
+          "line": 12,
+          "snippet": "ath:\n    sys.path.insert(0, str(ANALYSIS))\n\nfrom w33_reye_v4_decoder_automorphism_576 import build_result  # noqa: E402\n\n\ndef test_reye_576_is_affine_v4_decoder_symmetry() -> None:\n    data"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_yukawa_a4_normalization_bridge.py",
+      "hits": [
+        {
+          "result": "incomplete_PQ_integration",
+          "line": 1,
+          "snippet": "from exploration.w33_yukawa_a4_normalization_bridge import (\n    build_yukawa_a4_normalization_summary,\n)\n\n\ndef test_yukawa_a4_normalizatio"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_yukawa_rg.py",
+      "hits": [
+        {
+          "result": "incomplete_PQ_integration",
+          "line": 10,
+          "snippet": "s.path.dirname(__file__), '..', 'scripts'))\nfrom w33_yukawa_rg import (\n    w33_yukawa_gut, run_yukawa_system, yukawa_to_pole_mass,\n    w33_fermion_mass_predictions, PDG_MASSES\n)\nfrom w33_neutrino_rg_bridge import (\n    seesa"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_zeta_number_theory_computation.py",
+      "hits": [
+        {
+          "result": "quality_dimension_12",
+          "line": 457,
+          "snippet": "ap.\"\"\"\n\n    def test_cheeger_lower_bound(self, spectrum):\n        \"\"\"Cheeger inequality: h >= (k - lambda_2) / 2 = (12 - 2) / 2 = 5.\"\"\"\n        k = 12\n        lambda_2 = 2  # second eigenvalue\n        h_lower = (k - la"
+        }
+      ]
+    },
+    {
+      "path": "scripts/w33_yukawa_rg.py",
+      "hits": [
+        {
+          "result": "incomplete_PQ_integration",
+          "line": 175,
+          "snippet": "---------------------------------------------------------------------\n# Convert Yukawa couplings to pole masses\n# ---------------------------------------------------------------------------\n\ndef yukawa_to"
+        }
+      ]
+    },
+    {
+      "path": "scripts/yukawa_rge_two_loop.py",
+      "hits": [
+        {
+          "result": "incomplete_PQ_integration",
+          "line": 18,
+          "snippet": "eutrinos decoupled, modifying\nbeta functions below M_R.\n\nOutputs:\n    artifacts/yukawa_masses_MZ.json   -- pole masses at M_Z\n    artifacts/yukawa_rge_trajectory.json -- full running trajectory\n\nUsage:\n    pytho"
+        }
+      ]
+    }
+  ],
+  "scope": "Bounded present-text regex search over named extensions; not semantic novelty or full historical search."
+}
