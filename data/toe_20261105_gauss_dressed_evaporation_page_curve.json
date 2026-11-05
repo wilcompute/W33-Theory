@@ -1,0 +1,96 @@
+{
+  "best_nonzero_intermediate_entropy_benchmark": {
+    "bare_link_swap_gauge_leakage_probability_if_radiation_starts_vacuum": 0.5817867835792191,
+    "last_radiation_state_pure": true,
+    "mean_staggered_particle_antiparticle_pairs_before_emission": 1.3246495164905079,
+    "pre_scramble_time_Jt": 1.3,
+    "radiation_entropy_after_0_1_2_3_emissions_bits": [
+      3.2034265038149176e-16,
+      0.9742143157252501,
+      0.9656055175725036,
+      3.2034265038149176e-16
+    ]
+  },
+  "crucial_novelty_boundary": "The exact dressed SWAP is a constructed gauge-invariant qubit transfer to an external neutral radiation register. Emission schedule and no horizon are imposed, so Page-like curve is unitary information transfer by design, not quantum-gravitational evaporation.",
+  "emitted_radiation_qubits": 3,
+  "full_fock_link_Hilbert_dimension": 128,
+  "independent_hidden_hawking_pair_entropy_at_three_emissions_bits": 3,
+  "microscopic_local_dressed_flip_rule": "link j electric X bit flip together with both adjacent site occupation parity flips; preserves Gauss exactly, supports 3 adjacent microscopic gauge/matter qubits.",
+  "num_logical_links": 3,
+  "physical_gauss_sector_dimension": 8,
+  "prior_art": [
+    "Kogut Susskind staggered fermions and Z2 Gauss law",
+    "Don Page PRL71 1291 (1993)",
+    "Azad et al PRD114 074503 (2026) finite gauge-invariant Z2 lattice simulation"
+  ],
+  "reference_gauss_eigenvalues": [
+    -1,
+    1,
+    -1,
+    1
+  ],
+  "samplings": [
+    {
+      "bare_link_swap_gauge_leakage_probability_if_radiation_starts_vacuum": 0.08473385487033373,
+      "last_radiation_state_pure": true,
+      "mean_staggered_particle_antiparticle_pairs_before_emission": 0.2515989651026843,
+      "pre_scramble_time_Jt": 0.3,
+      "radiation_entropy_after_0_1_2_3_emissions_bits": [
+        1.6017132519074586e-16,
+        0.06077786690225162,
+        0.16732660056084664,
+        -0.0
+      ]
+    },
+    {
+      "bare_link_swap_gauge_leakage_probability_if_radiation_starts_vacuum": 0.2830002180752239,
+      "last_radiation_state_pure": true,
+      "mean_staggered_particle_antiparticle_pairs_before_emission": 0.8119147922678461,
+      "pre_scramble_time_Jt": 0.6,
+      "radiation_entropy_after_0_1_2_3_emissions_bits": [
+        3.2034265038149176e-16,
+        0.401760722391199,
+        0.43440977921210966,
+        -0.0
+      ]
+    },
+    {
+      "bare_link_swap_gauge_leakage_probability_if_radiation_starts_vacuum": 0.4739722337133728,
+      "last_radiation_state_pure": true,
+      "mean_staggered_particle_antiparticle_pairs_before_emission": 1.269651494261717,
+      "pre_scramble_time_Jt": 0.9,
+      "radiation_entropy_after_0_1_2_3_emissions_bits": [
+        -0.0,
+        0.8009654808531035,
+        0.7961514738851384,
+        -0.0
+      ]
+    },
+    {
+      "bare_link_swap_gauge_leakage_probability_if_radiation_starts_vacuum": 0.5817867835792191,
+      "last_radiation_state_pure": true,
+      "mean_staggered_particle_antiparticle_pairs_before_emission": 1.3246495164905079,
+      "pre_scramble_time_Jt": 1.3,
+      "radiation_entropy_after_0_1_2_3_emissions_bits": [
+        3.2034265038149176e-16,
+        0.9742143157252501,
+        0.9656055175725036,
+        3.2034265038149176e-16
+      ]
+    },
+    {
+      "bare_link_swap_gauge_leakage_probability_if_radiation_starts_vacuum": 0.5626823248989882,
+      "last_radiation_state_pure": true,
+      "mean_staggered_particle_antiparticle_pairs_before_emission": 1.040354869865639,
+      "pre_scramble_time_Jt": 2.0,
+      "radiation_entropy_after_0_1_2_3_emissions_bits": [
+        -0.0,
+        0.9539559149838505,
+        0.9153736792454572,
+        -9.610279511444756e-16
+      ]
+    }
+  ],
+  "status": "PASS_GAUSS_DRESSED_LOCAL_GATE_PAGE_INFORMATION_TRANSFER",
+  "why_bare_link_swap_fails": "Physical electric flip alone leaves matter sites unchanged, reverses two local Gauss eigenvalues, so bare link exchange couples a physical state to forbidden gauge sectors."
+}

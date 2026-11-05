@@ -1,0 +1,140 @@
+{
+  "basis_covariance_error_K_infinity": 7.389644451905042e-13,
+  "basis_transformed_two_loop": {
+    "K_eigenvalues": [
+      3.265252491934177,
+      885.2663085900666
+    ],
+    "K_high": [
+      [
+        451.6349531690634,
+        440.93895386360805
+      ],
+      [
+        440.93895386360805,
+        436.8966079129374
+      ]
+    ],
+    "K_initial": [
+      [
+        524.6913580246913,
+        509.2592592592593
+      ],
+      [
+        509.2592592592593,
+        501.54320987654324
+      ]
+    ],
+    "end_mu_GeV": 1316300369060598.2,
+    "full_beta_one_loop": [
+      [
+        480.55555555555543,
+        449.1111111111111
+      ],
+      [
+        449.1111111111111,
+        424.7222222222223
+      ]
+    ],
+    "g2_high": 0.546639569503383,
+    "g3_high": 0.5705960688282014,
+    "initial_mu_GeV": 10000000000.0
+  },
+  "beta_formula": "dK/dt=-B/(8pi\u00b2)-[2SumWeyl n QQT(QK^-1Q + sum C2*g\u00b2)+4SumComplexScalar n QQT(same)]/(128pi^4). Nonabelian two-loop beta has established SM B_nonabelian, added Dirac (3,2) index terms, and 2SumWeyl S2 QK^-1Q + 4SumScalar S2 QK^-1Q.",
+  "critical_missing": "Not the full two-loop EFT: top, neutrino, heavy quark Yukawa terms and scalar/Yukawa RGEs OMITTED; no matching or decoupling, no generated heavy fields at threshold and no running below U1X breaking. Gauge-only two-loop does not imply complete two-loop unification.",
+  "one_loop_whole_gauge_4factor": {
+    "K_eigenvalues": [
+      6.647126874714475,
+      436.66328321907014
+    ],
+    "K_high": [
+      [
+        6.662700063187443,
+        -2.5877558086057113
+      ],
+      [
+        -2.5877558086057113,
+        436.6477100305972
+      ]
+    ],
+    "K_initial": [
+      [
+        7.71604938271605,
+        0.0
+      ],
+      [
+        0.0,
+        493.8271604938272
+      ]
+    ],
+    "end_mu_GeV": 1316300369060598.2,
+    "full_beta_one_loop": [
+      [
+        7.055555555555555,
+        17.333333333333336
+      ],
+      [
+        17.333333333333336,
+        383.0
+      ]
+    ],
+    "g2_high": 0.5453052834919229,
+    "g3_high": 0.5703898039691271,
+    "initial_mu_GeV": 10000000000.0
+  },
+  "physical_scope": "One unbroken high-scale window with all specified fields active and arbitrarily selected K,g2,g3 at 1e10GeV. X=3(B-3Le), S=-18,T=-9, one vectorlike Q; no Higgs vev or physical prediction.",
+  "prior_art": [
+    "Davidson Gorbahn PRD114 055020 2026 doi:10.1103/cjy8-36vv",
+    "Luo Xiao Phys Lett B555 279 2003",
+    "Machacek Vaughan general gauge beta formulas"
+  ],
+  "reproduced_exact_SM_rawY_two_loop_coefficients": {
+    "one_loop_bYY": 6.833333333333334,
+    "two_loop_SU2_YY": 1.5,
+    "two_loop_SU3_YY": 1.8333333333333335,
+    "two_loop_YY_SU2": 4.5,
+    "two_loop_YY_SU3": 14.666666666666664,
+    "two_loop_YY_YY": 11.055555555809555
+  },
+  "status": "PASS_GAUGEONLY_TWO_LOOP_COUPLED_NONABELIAN_AND_TWO_U1",
+  "two_loop_gauge_only_whole_4factor": {
+    "K_eigenvalues": [
+      6.637752039423693,
+      435.4814706817407
+    ],
+    "K_high": [
+      [
+        6.6536533547844465,
+        -2.611307404113755
+      ],
+      [
+        -2.611307404113755,
+        435.4655693663799
+      ]
+    ],
+    "K_initial": [
+      [
+        7.71604938271605,
+        0.0
+      ],
+      [
+        0.0,
+        493.8271604938272
+      ]
+    ],
+    "end_mu_GeV": 1316300369060598.2,
+    "full_beta_one_loop": [
+      [
+        7.055555555555555,
+        17.333333333333336
+      ],
+      [
+        17.333333333333336,
+        383.0
+      ]
+    ],
+    "g2_high": 0.546639569503388,
+    "g3_high": 0.5705960688263471,
+    "initial_mu_GeV": 10000000000.0
+  }
+}

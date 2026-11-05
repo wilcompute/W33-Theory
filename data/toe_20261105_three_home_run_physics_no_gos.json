@@ -1,0 +1,217 @@
+{
+  "leptogenesis": {
+    "Higgs_vev_for_DavidsonIbarra_epsilon_formula_GeV": 174.0,
+    "benchmarks": [
+      {
+        "approx_hierarchical_unflavored_epsilon1": 7.718143215877198e-07,
+        "complex_rotation_imag": -0.45,
+        "complex_rotation_real": 0.2,
+        "low_energy_mass_singular_values_eV": [
+          0.0,
+          0.008613942186943212,
+          0.050149775672479295
+        ],
+        "reconstruction_error_GeV": 3.887595841997225e-26
+      },
+      {
+        "approx_hierarchical_unflavored_epsilon1": -7.718143215877198e-07,
+        "complex_rotation_imag": 0.45,
+        "complex_rotation_real": 0.2,
+        "low_energy_mass_singular_values_eV": [
+          0.0,
+          0.008613942186943212,
+          0.050149775672479295
+        ],
+        "reconstruction_error_GeV": 3.887595841997225e-26
+      },
+      {
+        "approx_hierarchical_unflavored_epsilon1": 9.796141972181475e-07,
+        "complex_rotation_imag": -0.45,
+        "complex_rotation_real": 0.45,
+        "low_energy_mass_singular_values_eV": [
+          0.0,
+          0.008613942186943212,
+          0.05014977567247931
+        ],
+        "reconstruction_error_GeV": 2.596326672762e-26
+      },
+      {
+        "approx_hierarchical_unflavored_epsilon1": -9.796141972181475e-07,
+        "complex_rotation_imag": 0.45,
+        "complex_rotation_real": 0.45,
+        "low_energy_mass_singular_values_eV": [
+          0.0,
+          0.008613942186943212,
+          0.05014977567247931
+        ],
+        "reconstruction_error_GeV": 2.596326672762e-26
+      }
+    ],
+    "formula": "epsilon1\u2248-(3M1/(16pi*v\u00b2))*Im(sum_j mj\u00b2 R_j1\u00b2)/(sum_j mj |R_j1|\u00b2), hierarchical heavy limit",
+    "heavy_M1_GeV": 10000000000.0,
+    "interpretation": "No prediction of even the SIGN of leptogenesis from low-energy neutrino masses and PMNS phases alone in unrestricted high-scale type-I seesaw. Need a constrained UV model and full flavored kinetic/Boltzmann dynamics.",
+    "low_masses_eV": [
+      0.0,
+      0.008613942186943212,
+      0.05014977567247933
+    ],
+    "model": "Generic 3 RHN type-I seesaw, rank-two light mnu, arbitrary complex orthogonal Casas-Ibarra R mixing light indices (1,3).",
+    "same_light_spectrum_opposite_leptogenesis_cp_asymmetry": true,
+    "scope": "Unflavored hierarchical epsilon1 only, not baryon asymmetry, washout or viable leptogenesis region. The complex R rotations do not enforce the special flavor U1X Yukawa-block texture of the other model; this is a generic seesaw counterexample."
+  },
+  "novelty": "Independent executable falsification examples and arithmetic; all underlying physics is known.",
+  "operational_Bell": {
+    "dephased_two_qubit_Bell_state": "rho=1/2(|00><00|+|11><11|+p|00><11|+p|11><00|), p real [0,1]",
+    "each_side_single_detection_efficiency": 0.5,
+    "joint_detection_probability_each_setting_pair": 0.25,
+    "limitations": "No real photonic source/detector or experiment; no detection-closing hardware threshold estimated. Standard CHSH and detection loophole examples.",
+    "message": "Observed CHSH=4 from postselected local models is NOT evidence of nonlocality if settings/outcomes are selected by detection. Compare complete event probabilities, heralding independent of settings, and fair sampling/loophole-free detection.",
+    "postselected_apparent_CHSH": 4.0,
+    "postselected_correlations": {
+      "00": 1.0,
+      "01": 1.0,
+      "10": 1.0,
+      "11": -1.0
+    },
+    "postselected_local_hidden_variable_distribution": [
+      {
+        "A_detect_setting": 0,
+        "A_outcome_when_detected": 1,
+        "B_detect_setting": 0,
+        "B_outcome_when_detected": 1,
+        "lambda_for_settings": [
+          0,
+          0
+        ],
+        "weight": 0.25
+      },
+      {
+        "A_detect_setting": 0,
+        "A_outcome_when_detected": 1,
+        "B_detect_setting": 1,
+        "B_outcome_when_detected": 1,
+        "lambda_for_settings": [
+          0,
+          1
+        ],
+        "weight": 0.25
+      },
+      {
+        "A_detect_setting": 1,
+        "A_outcome_when_detected": 1,
+        "B_detect_setting": 0,
+        "B_outcome_when_detected": 1,
+        "lambda_for_settings": [
+          1,
+          0
+        ],
+        "weight": 0.25
+      },
+      {
+        "A_detect_setting": 1,
+        "A_outcome_when_detected": 1,
+        "B_detect_setting": 1,
+        "B_outcome_when_detected": -1,
+        "lambda_for_settings": [
+          1,
+          1
+        ],
+        "weight": 0.25
+      }
+    ],
+    "quantum_CHSH_sweep": [
+      {
+        "CHSH_fixed_measurements": 1.4142135623730951,
+        "CHSH_optimal": 2.0,
+        "entangled_Bell_offdiagonal_coherence": 0.0,
+        "fixed_settings_violate": false,
+        "optimal_settings_violate": false
+      },
+      {
+        "CHSH_fixed_measurements": 1.5556349186104048,
+        "CHSH_optimal": 2.009975124224178,
+        "entangled_Bell_offdiagonal_coherence": 0.1,
+        "fixed_settings_violate": false,
+        "optimal_settings_violate": true
+      },
+      {
+        "CHSH_fixed_measurements": 1.7677669529663689,
+        "CHSH_optimal": 2.0615528128088303,
+        "entangled_Bell_offdiagonal_coherence": 0.25,
+        "fixed_settings_violate": false,
+        "optimal_settings_violate": true
+      },
+      {
+        "CHSH_fixed_measurements": 2.008183258569795,
+        "CHSH_optimal": 2.169239498073,
+        "entangled_Bell_offdiagonal_coherence": 0.42,
+        "fixed_settings_violate": true,
+        "optimal_settings_violate": true
+      },
+      {
+        "CHSH_fixed_measurements": 2.4041630560342617,
+        "CHSH_optimal": 2.4413111231467406,
+        "entangled_Bell_offdiagonal_coherence": 0.7,
+        "fixed_settings_violate": true,
+        "optimal_settings_violate": true
+      },
+      {
+        "CHSH_fixed_measurements": 2.8284271247461903,
+        "CHSH_optimal": 2.8284271247461903,
+        "entangled_Bell_offdiagonal_coherence": 1.0,
+        "fixed_settings_violate": true,
+        "optimal_settings_violate": true
+      }
+    ]
+  },
+  "sources": [
+    "Coleman Weinberg Phys Rev D7 1888 (1973)",
+    "CHSH Phys Lett A47 447 (1969), detection loophole",
+    "Casas Ibarra Nucl Phys B618 171 (2001)",
+    "Davidson Ibarra Phys Lett B535 25 (2002)"
+  ],
+  "status": "PASS_THREE_ORTHOGONAL_TOE_COSMO_BELL_BARYOGENESIS_CONTROLS",
+  "vacuum_energy": {
+    "interpretation": "Unless extra counterterm or protection cancels scale-dependent vacuum contributions, adding high-mass matter sectors does not explain tiny cosmological vacuum energy. Ratios quantify an illustrative fine-tuning sensitivity, not a direct experimental loop measurement.",
+    "observed_DE_rho_GeV4_from_2p25meV": 2.5628906249999997e-47,
+    "reference_formula": "abs(V1_MSbar(mu=m))=(3/2)m^4/(64pi^2), for ONE free REAL scalar degree of freedom",
+    "reference_thresholds": [
+      {
+        "deltaV_over_observed_rhoLambda": 579.1105603700149,
+        "mass_GeV": 5e-11,
+        "mass_label": "active_neutrino_0p05eV",
+        "one_part_in_tuning_if_uncancelled": 0.0017267859860145935,
+        "one_real_scalar_MSbar_reference_abs_deltaV_GeV4": 1.4841970260108075e-44
+      },
+      {
+        "deltaV_over_observed_rhoLambda": 1.4825230345472382e+41,
+        "mass_GeV": 0.2,
+        "mass_label": "QCD_0p2GeV",
+        "one_part_in_tuning_if_uncancelled": 6.745257757869505e-42,
+        "one_real_scalar_MSbar_reference_abs_deltaV_GeV4": 3.7995443865876673e-06
+      },
+      {
+        "deltaV_over_observed_rhoLambda": 2.26215062644537e+52,
+        "mass_GeV": 125.0,
+        "mass_label": "Higgs_125GeV",
+        "one_part_in_tuning_if_uncancelled": 4.420572124197361e-53,
+        "one_real_scalar_MSbar_reference_abs_deltaV_GeV4": 579764.4632854715
+      },
+      {
+        "deltaV_over_observed_rhoLambda": 1.8678060345703462e+73,
+        "mass_GeV": 21189103.22756254,
+        "mass_label": "vectorlike_quark_2p1e7GeV",
+        "one_part_in_tuning_if_uncancelled": 5.353874982152691e-74,
+        "one_real_scalar_MSbar_reference_abs_deltaV_GeV4": 4.786982575318766e+26
+      },
+      {
+        "deltaV_over_observed_rhoLambda": 9.265768965920237e+87,
+        "mass_GeV": 100000000000.0,
+        "mass_label": "PQ_scalar_1e11GeV",
+        "one_part_in_tuning_if_uncancelled": 1.0792412412591212e-88,
+        "one_real_scalar_MSbar_reference_abs_deltaV_GeV4": 2.374715241617292e+41
+      }
+    ],
+    "scope": "Reference real scalar formula applied across a mass ladder only for scaling (not exact sign/DOF for quarks/fermions). Flat-space one-loop effective potential, with counterterms and full curved-space running absent. No solution to cosmological constant problem."
+  }
+}

@@ -1,0 +1,596 @@
+{
+  "delayed_scalar_only_comparators_without_yukawa_constraints": [
+    {
+      "charge_A": 3,
+      "charge_B": 4,
+      "first_scalar_phase_sensitive_degree": 7,
+      "one_primitive_exponent_pair": [
+        -4,
+        3
+      ]
+    },
+    {
+      "charge_A": 5,
+      "charge_B": 6,
+      "first_scalar_phase_sensitive_degree": 11,
+      "one_primitive_exponent_pair": [
+        -6,
+        5
+      ]
+    },
+    {
+      "charge_A": 7,
+      "charge_B": 8,
+      "first_scalar_phase_sensitive_degree": 15,
+      "one_primitive_exponent_pair": [
+        -8,
+        7
+      ]
+    },
+    {
+      "charge_A": 10,
+      "charge_B": 11,
+      "first_scalar_phase_sensitive_degree": 21,
+      "one_primitive_exponent_pair": [
+        -11,
+        10
+      ]
+    },
+    {
+      "charge_A": 13,
+      "charge_B": 14,
+      "first_scalar_phase_sensitive_degree": 27,
+      "one_primitive_exponent_pair": [
+        -14,
+        13
+      ]
+    }
+  ],
+  "derived": "Allowed three seesaw monomials force Sdag T^2 to be allowed by EVERY additive abelian symmetry, even an arbitrary product of U(1)s and Z_n factors.",
+  "exhaustive_Zn_charge_assignments_n2_through50": {
+    "10": {
+      "bare_mass_compatible_pairs": 20,
+      "charge_pairs_checked": 100,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "11": {
+      "bare_mass_compatible_pairs": 11,
+      "charge_pairs_checked": 121,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "12": {
+      "bare_mass_compatible_pairs": 24,
+      "charge_pairs_checked": 144,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "13": {
+      "bare_mass_compatible_pairs": 13,
+      "charge_pairs_checked": 169,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "14": {
+      "bare_mass_compatible_pairs": 28,
+      "charge_pairs_checked": 196,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "15": {
+      "bare_mass_compatible_pairs": 15,
+      "charge_pairs_checked": 225,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "16": {
+      "bare_mass_compatible_pairs": 32,
+      "charge_pairs_checked": 256,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "17": {
+      "bare_mass_compatible_pairs": 17,
+      "charge_pairs_checked": 289,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "18": {
+      "bare_mass_compatible_pairs": 36,
+      "charge_pairs_checked": 324,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "19": {
+      "bare_mass_compatible_pairs": 19,
+      "charge_pairs_checked": 361,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "2": {
+      "bare_mass_compatible_pairs": 4,
+      "charge_pairs_checked": 4,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "20": {
+      "bare_mass_compatible_pairs": 40,
+      "charge_pairs_checked": 400,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "21": {
+      "bare_mass_compatible_pairs": 21,
+      "charge_pairs_checked": 441,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "22": {
+      "bare_mass_compatible_pairs": 44,
+      "charge_pairs_checked": 484,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "23": {
+      "bare_mass_compatible_pairs": 23,
+      "charge_pairs_checked": 529,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "24": {
+      "bare_mass_compatible_pairs": 48,
+      "charge_pairs_checked": 576,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "25": {
+      "bare_mass_compatible_pairs": 25,
+      "charge_pairs_checked": 625,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "26": {
+      "bare_mass_compatible_pairs": 52,
+      "charge_pairs_checked": 676,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "27": {
+      "bare_mass_compatible_pairs": 27,
+      "charge_pairs_checked": 729,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "28": {
+      "bare_mass_compatible_pairs": 56,
+      "charge_pairs_checked": 784,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "29": {
+      "bare_mass_compatible_pairs": 29,
+      "charge_pairs_checked": 841,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "3": {
+      "bare_mass_compatible_pairs": 3,
+      "charge_pairs_checked": 9,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "30": {
+      "bare_mass_compatible_pairs": 60,
+      "charge_pairs_checked": 900,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "31": {
+      "bare_mass_compatible_pairs": 31,
+      "charge_pairs_checked": 961,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "32": {
+      "bare_mass_compatible_pairs": 64,
+      "charge_pairs_checked": 1024,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "33": {
+      "bare_mass_compatible_pairs": 33,
+      "charge_pairs_checked": 1089,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "34": {
+      "bare_mass_compatible_pairs": 68,
+      "charge_pairs_checked": 1156,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "35": {
+      "bare_mass_compatible_pairs": 35,
+      "charge_pairs_checked": 1225,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "36": {
+      "bare_mass_compatible_pairs": 72,
+      "charge_pairs_checked": 1296,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "37": {
+      "bare_mass_compatible_pairs": 37,
+      "charge_pairs_checked": 1369,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "38": {
+      "bare_mass_compatible_pairs": 76,
+      "charge_pairs_checked": 1444,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "39": {
+      "bare_mass_compatible_pairs": 39,
+      "charge_pairs_checked": 1521,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "4": {
+      "bare_mass_compatible_pairs": 8,
+      "charge_pairs_checked": 16,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "40": {
+      "bare_mass_compatible_pairs": 80,
+      "charge_pairs_checked": 1600,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "41": {
+      "bare_mass_compatible_pairs": 41,
+      "charge_pairs_checked": 1681,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "42": {
+      "bare_mass_compatible_pairs": 84,
+      "charge_pairs_checked": 1764,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "43": {
+      "bare_mass_compatible_pairs": 43,
+      "charge_pairs_checked": 1849,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "44": {
+      "bare_mass_compatible_pairs": 88,
+      "charge_pairs_checked": 1936,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "45": {
+      "bare_mass_compatible_pairs": 45,
+      "charge_pairs_checked": 2025,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "46": {
+      "bare_mass_compatible_pairs": 92,
+      "charge_pairs_checked": 2116,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "47": {
+      "bare_mass_compatible_pairs": 47,
+      "charge_pairs_checked": 2209,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "48": {
+      "bare_mass_compatible_pairs": 96,
+      "charge_pairs_checked": 2304,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "49": {
+      "bare_mass_compatible_pairs": 49,
+      "charge_pairs_checked": 2401,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "5": {
+      "bare_mass_compatible_pairs": 5,
+      "charge_pairs_checked": 25,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "50": {
+      "bare_mass_compatible_pairs": 100,
+      "charge_pairs_checked": 2500,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "6": {
+      "bare_mass_compatible_pairs": 12,
+      "charge_pairs_checked": 36,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "7": {
+      "bare_mass_compatible_pairs": 7,
+      "charge_pairs_checked": 49,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "8": {
+      "bare_mass_compatible_pairs": 16,
+      "charge_pairs_checked": 64,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    },
+    "9": {
+      "bare_mass_compatible_pairs": 9,
+      "charge_pairs_checked": 81,
+      "cubic_allowed_when_bare_mass": true,
+      "quartic_allowed_with_R_when_mass_is_from_R": true
+    }
+  },
+  "formal_charge_identities": {
+    "N_e": "e",
+    "N_mu": "m",
+    "S": "-2*e",
+    "T": "-e - m",
+    "cubic_charge": "-2*m",
+    "possible_replacement_R": "-2*m",
+    "quartic_with_Rdag_charge": "0"
+  },
+  "integer_continuous_examples": [
+    {
+      "R": 10,
+      "S": 10,
+      "T": 10,
+      "cubic_charge": 10,
+      "e": -5,
+      "m": -5,
+      "quartic_charge": 0
+    },
+    {
+      "R": 4,
+      "S": 10,
+      "T": 7,
+      "cubic_charge": 4,
+      "e": -5,
+      "m": -2,
+      "quartic_charge": 0
+    },
+    {
+      "R": 0,
+      "S": 10,
+      "T": 5,
+      "cubic_charge": 0,
+      "e": -5,
+      "m": 0,
+      "quartic_charge": 0
+    },
+    {
+      "R": -4,
+      "S": 10,
+      "T": 3,
+      "cubic_charge": -4,
+      "e": -5,
+      "m": 2,
+      "quartic_charge": 0
+    },
+    {
+      "R": -10,
+      "S": 10,
+      "T": 0,
+      "cubic_charge": -10,
+      "e": -5,
+      "m": 5,
+      "quartic_charge": 0
+    },
+    {
+      "R": 10,
+      "S": 4,
+      "T": 7,
+      "cubic_charge": 10,
+      "e": -2,
+      "m": -5,
+      "quartic_charge": 0
+    },
+    {
+      "R": 4,
+      "S": 4,
+      "T": 4,
+      "cubic_charge": 4,
+      "e": -2,
+      "m": -2,
+      "quartic_charge": 0
+    },
+    {
+      "R": 0,
+      "S": 4,
+      "T": 2,
+      "cubic_charge": 0,
+      "e": -2,
+      "m": 0,
+      "quartic_charge": 0
+    },
+    {
+      "R": -4,
+      "S": 4,
+      "T": 0,
+      "cubic_charge": -4,
+      "e": -2,
+      "m": 2,
+      "quartic_charge": 0
+    },
+    {
+      "R": -10,
+      "S": 4,
+      "T": -3,
+      "cubic_charge": -10,
+      "e": -2,
+      "m": 5,
+      "quartic_charge": 0
+    },
+    {
+      "R": 10,
+      "S": 0,
+      "T": 5,
+      "cubic_charge": 10,
+      "e": 0,
+      "m": -5,
+      "quartic_charge": 0
+    },
+    {
+      "R": 4,
+      "S": 0,
+      "T": 2,
+      "cubic_charge": 4,
+      "e": 0,
+      "m": -2,
+      "quartic_charge": 0
+    },
+    {
+      "R": 0,
+      "S": 0,
+      "T": 0,
+      "cubic_charge": 0,
+      "e": 0,
+      "m": 0,
+      "quartic_charge": 0
+    },
+    {
+      "R": -4,
+      "S": 0,
+      "T": -2,
+      "cubic_charge": -4,
+      "e": 0,
+      "m": 2,
+      "quartic_charge": 0
+    },
+    {
+      "R": -10,
+      "S": 0,
+      "T": -5,
+      "cubic_charge": -10,
+      "e": 0,
+      "m": 5,
+      "quartic_charge": 0
+    },
+    {
+      "R": 10,
+      "S": -4,
+      "T": 3,
+      "cubic_charge": 10,
+      "e": 2,
+      "m": -5,
+      "quartic_charge": 0
+    },
+    {
+      "R": 4,
+      "S": -4,
+      "T": 0,
+      "cubic_charge": 4,
+      "e": 2,
+      "m": -2,
+      "quartic_charge": 0
+    },
+    {
+      "R": 0,
+      "S": -4,
+      "T": -2,
+      "cubic_charge": 0,
+      "e": 2,
+      "m": 0,
+      "quartic_charge": 0
+    },
+    {
+      "R": -4,
+      "S": -4,
+      "T": -4,
+      "cubic_charge": -4,
+      "e": 2,
+      "m": 2,
+      "quartic_charge": 0
+    },
+    {
+      "R": -10,
+      "S": -4,
+      "T": -7,
+      "cubic_charge": -10,
+      "e": 2,
+      "m": 5,
+      "quartic_charge": 0
+    },
+    {
+      "R": 10,
+      "S": -10,
+      "T": 0,
+      "cubic_charge": 10,
+      "e": 5,
+      "m": -5,
+      "quartic_charge": 0
+    },
+    {
+      "R": 4,
+      "S": -10,
+      "T": -3,
+      "cubic_charge": 4,
+      "e": 5,
+      "m": -2,
+      "quartic_charge": 0
+    },
+    {
+      "R": 0,
+      "S": -10,
+      "T": -5,
+      "cubic_charge": 0,
+      "e": 5,
+      "m": 0,
+      "quartic_charge": 0
+    },
+    {
+      "R": -4,
+      "S": -10,
+      "T": -7,
+      "cubic_charge": -4,
+      "e": 5,
+      "m": 2,
+      "quartic_charge": 0
+    },
+    {
+      "R": -10,
+      "S": -10,
+      "T": -10,
+      "cubic_charge": -10,
+      "e": 5,
+      "m": 5,
+      "quartic_charge": 0
+    }
+  ],
+  "operator_premises": [
+    "S N_e N_e",
+    "T N_e N_mu",
+    "bare N_mu N_mu"
+  ],
+  "physics_boundary": "An allowed operator can have a protected zero coefficient under some further non-Abelian, SUSY holomorphic, nonperturbative or UV selection. These identities do not exclude an unrelated PQ combination involving additional scalar/fermion phases. They do show the minimal advertised two-singlet relative phase is not automatically high quality.",
+  "prior_art": "Generic linear Abelian charge constraints and operator selection are elementary. Davighi-Greljo-Ponce Diaz arxiv:2609.01712 achieves high quality with a different full heavy spectrum.",
+  "second_derived": "Replacing bare mass by R instead forces Sdag T^2 Rdag to be invariant; degree 4 if all S,T,R are elementary complex scalars.",
+  "second_premises": [
+    "S N_e N_e",
+    "T N_e N_mu",
+    "R N_mu N_mu"
+  ],
+  "status": "PASS_SEESAW_ABElIAN_SELECTION_RULE_PQ_OPERATOR_IDENTITY"
+}
