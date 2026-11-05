@@ -1,0 +1,125 @@
+{
+  "B_SM_minimal_no_N": [
+    [
+      6.833333333333334,
+      5.333333333333334
+    ],
+    [
+      5.333333333333334,
+      8.666666666666666
+    ]
+  ],
+  "B_Y_BL": 5.777777777777779,
+  "B_added_vectorlike": [
+    [
+      0.2222222222222222,
+      0.4444444444444444
+    ],
+    [
+      0.4444444444444444,
+      0.8888888888888888
+    ]
+  ],
+  "B_full": [
+    [
+      7.055555555555555,
+      5.777777777777779
+    ],
+    [
+      5.777777777777779,
+      12.88888888888889
+    ]
+  ],
+  "B_without_vectorlike": [
+    [
+      6.833333333333334,
+      5.333333333333334
+    ],
+    [
+      5.333333333333334,
+      12.0
+    ]
+  ],
+  "K0_at_mu0": [
+    [
+      7.71604938271605,
+      0.0
+    ],
+    [
+      0.0,
+      24.999999999999996
+    ]
+  ],
+  "K_high": [
+    [
+      6.662700063187443,
+      -0.8625852695352373
+    ],
+    [
+      -0.8625852695352373,
+      23.075771321806005
+    ]
+  ],
+  "K_high_eigenvalues": [
+    6.617491611252937,
+    23.120979773740512
+  ],
+  "charge_current_basis_invariance": [
+    {
+      "charge_Y_BL": [
+        0.16666666666666666,
+        0.3333333333333333
+      ],
+      "difference": 0.0,
+      "effective_inverse_kinetic_form": 0.009654304343553802,
+      "transformed_form": 0.009654304343553802
+    },
+    {
+      "charge_Y_BL": [
+        -0.5,
+        -1.0
+      ],
+      "difference": 1.3877787807814457e-17,
+      "effective_inverse_kinetic_form": 0.08688873909198422,
+      "transformed_form": 0.08688873909198423
+    },
+    {
+      "charge_Y_BL": [
+        0.0,
+        1.0
+      ],
+      "difference": -6.938893903907228e-18,
+      "effective_inverse_kinetic_form": 0.04354623678282177,
+      "transformed_form": 0.04354623678282176
+    }
+  ],
+  "diagonal_truncation_effect_on_effective_current_quadratic_form": {
+    "[-0.5, -1.0]": 0.0060309174825514955,
+    "[0.0, 1.0]": 0.00021074060137772632,
+    "[0.16666666666666666, 0.3333333333333333]": 0.0006701019425057221
+  },
+  "effective_chi_K12_over_sqrtK11K22": -0.06956628195775157,
+  "exact_basis_covariance_max_error": 7.105427357601002e-15,
+  "generation_flavours": 3,
+  "literature": [
+    "Davidson-Gorbahn Phys Rev D114 055020 (2026) doi:10.1103/cjy8-36vv",
+    "Holdom Phys Lett B166 (1986) 196"
+  ],
+  "material_limitation": "K0 and gBL are chosen, not measured; B-L is treated unbroken at mu0>vBL. The VL threshold delta is a formal high-energy difference; no simultaneous full two-loop nonabelian and U1 matrix RGE or finite matching. Do not call this a model prediction.",
+  "mu0_GeV": 10000000000.0,
+  "mu_high_GeV": 1316300369060598.2,
+  "second_loop_status": "NOT_IMPLEMENTED: Davidson-Gorbahn PRD114 055020 (2026) supplies gauge-field-redefinition covariant two-loop equations",
+  "status": "PASS_COVARIANT_FULL_TWO_U1_ONE_LOOP_MATRIX",
+  "vectorlike": "one Dirac (3,2,Y=1/6,B-L=1/3)",
+  "vectorlike_log_threshold_deltaK": [
+    [
+      -0.05050468057642591,
+      -0.10100936115285182
+    ],
+    [
+      -0.10100936115285182,
+      -0.20201872230570364
+    ]
+  ],
+  "vectorlike_mass_from_previous_two_loop_inverse_fit_GeV": 21189103.22756254
+}

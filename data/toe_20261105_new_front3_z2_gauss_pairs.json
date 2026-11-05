@@ -1,0 +1,95 @@
+{
+  "bare_hopping_without_gauge_link_max_commutator": 2.0,
+  "control": "Replacing Z-link flip by the identity violates all local Gauss generators, but still preserves global fermion number.",
+  "full_Hilbert_dimension": 128,
+  "full_gauge_generator_commutator_infinity_norms": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "gauge_generators": "G_j=(-1)^(occupation_j)*X_(j-1,j)*X_(j,j+1), fixed sector (-1,+1,-1,+1)",
+  "gauge_preserving_leakage_full_evolution": 0.0,
+  "gauge_violating_bare_hopping_leakage": 0.7459640212620906,
+  "gauss_sector_dim_all_parity_even": 8,
+  "gauss_sector_dim_fixed_fermion_number_2": 6,
+  "hamiltonian": "-t sum_j (c_j^dagger Z_j c_(j+1)+h.c.) -h sum_j X_j + m sum_j (-1)^j n_j",
+  "limitations": "Finite 4-site 1+1D Z2 gauge toy with fixed total bare fermion number; staggered pair counts change, physical particle number defined relative to sea. No continuum 3+1D QED, dynamical photons, real pair production from empty Fock vacuum or proof of emergence from one global photon.",
+  "prior_art": [
+    "Z2 staggered fermion lattice gauge toy models",
+    "Phys Rev Research 8 035? (2026) gauge-invariant finite temperature sampling",
+    "Nature Phys 21 2025 qudit lattice gauge simulation"
+  ],
+  "sector_eigenvalues": [
+    -2.8042741961877438,
+    -1.3408398696930037,
+    -0.600000000000001,
+    -0.06523898800701736,
+    1.268234274917328,
+    2.342118778970438
+  ],
+  "staggered_reference_vacuum": "matter occupation 1010 (site 0,2 occupied), link electric X=+1 everywhere",
+  "status": "PASS_Z2_GAUSS_LOCAL_FERMION_PAIR_DYNAMICS",
+  "time_series": [
+    {
+      "mean_staggered_particle_antiparticle_pair_count": 0.0,
+      "pair_count_distribution": {
+        "0": 1.0,
+        "1": 0.0,
+        "2": 0.0
+      },
+      "specific_neighbor_pair_probability": 0.0,
+      "t_hopping_units": 0.0
+    },
+    {
+      "mean_staggered_particle_antiparticle_pair_count": 0.02976647172005407,
+      "pair_count_distribution": {
+        "0": 0.9703325262294281,
+        "1": 0.029568475821089783,
+        "2": 9.899794948214449e-05
+      },
+      "specific_neighbor_pair_probability": 0.00993311342749607,
+      "t_hopping_units": 0.1
+    },
+    {
+      "mean_staggered_particle_antiparticle_pair_count": 0.17854138132950087,
+      "pair_count_distribution": {
+        "0": 0.8251260416994467,
+        "1": 0.17120653527160634,
+        "2": 0.003667423028947271
+      },
+      "specific_neighbor_pair_probability": 0.05991116357659769,
+      "t_hopping_units": 0.25
+    },
+    {
+      "mean_staggered_particle_antiparticle_pair_count": 0.6156737261629496,
+      "pair_count_distribution": {
+        "0": 0.4327846101451851,
+        "1": 0.5187570535466802,
+        "2": 0.048458336308134654
+      },
+      "specific_neighbor_pair_probability": 0.21006880290050045,
+      "t_hopping_units": 0.5
+    },
+    {
+      "mean_staggered_particle_antiparticle_pair_count": 1.3440489133990678,
+      "pair_count_distribution": {
+        "0": 0.004302612838216668,
+        "1": 0.6473458609244983,
+        "2": 0.34835152623728477
+      },
+      "specific_neighbor_pair_probability": 0.47106770484310356,
+      "t_hopping_units": 1.0
+    },
+    {
+      "mean_staggered_particle_antiparticle_pair_count": 1.040354869865639,
+      "pair_count_distribution": {
+        "0": 0.0670828407763071,
+        "1": 0.8254794485817465,
+        "2": 0.10743771064194631
+      },
+      "specific_neighbor_pair_probability": 0.4142742836826065,
+      "t_hopping_units": 2.0
+    }
+  ]
+}

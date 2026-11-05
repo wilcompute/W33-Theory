@@ -1,0 +1,272 @@
+{
+  "best_matched_metric_free_growth_probability": 0.012656506990131579,
+  "calibration_grid": [
+    {
+      "global_relation_fraction": 0.002454824411864985,
+      "p": 0.002
+    },
+    {
+      "global_relation_fraction": 0.012058188430503465,
+      "p": 0.005315789473684211
+    },
+    {
+      "global_relation_fraction": 0.036936015456301846,
+      "p": 0.00863157894736842
+    },
+    {
+      "global_relation_fraction": 0.08571807402356328,
+      "p": 0.011947368421052632
+    },
+    {
+      "global_relation_fraction": 0.15000568246391635,
+      "p": 0.015263157894736843
+    },
+    {
+      "global_relation_fraction": 0.23228775997272413,
+      "p": 0.018578947368421056
+    },
+    {
+      "global_relation_fraction": 0.31836572337765656,
+      "p": 0.021894736842105265
+    },
+    {
+      "global_relation_fraction": 0.3947797098155093,
+      "p": 0.025210526315789475
+    },
+    {
+      "global_relation_fraction": 0.459404477781566,
+      "p": 0.028526315789473684
+    },
+    {
+      "global_relation_fraction": 0.5114331173997045,
+      "p": 0.031842105263157894
+    },
+    {
+      "global_relation_fraction": 0.5564420199265068,
+      "p": 0.03515789473684211
+    },
+    {
+      "global_relation_fraction": 0.5962647270523166,
+      "p": 0.03847368421052632
+    },
+    {
+      "global_relation_fraction": 0.6253703072318825,
+      "p": 0.04178947368421053
+    },
+    {
+      "global_relation_fraction": 0.6574724400500057,
+      "p": 0.04510526315789474
+    },
+    {
+      "global_relation_fraction": 0.685869606394666,
+      "p": 0.048421052631578955
+    },
+    {
+      "global_relation_fraction": 0.7072887070500435,
+      "p": 0.051736842105263164
+    },
+    {
+      "global_relation_fraction": 0.7313482592718871,
+      "p": 0.055052631578947374
+    },
+    {
+      "global_relation_fraction": 0.7481948706292382,
+      "p": 0.05836842105263158
+    },
+    {
+      "global_relation_fraction": 0.7671402053263628,
+      "p": 0.06168421052631579
+    },
+    {
+      "global_relation_fraction": 0.7824184566428003,
+      "p": 0.065
+    },
+    {
+      "global_relation_fraction": 0.11950979277948252,
+      "p": 0.013605263157894738
+    },
+    {
+      "global_relation_fraction": 0.10245861272114255,
+      "p": 0.012776315789473684
+    },
+    {
+      "global_relation_fraction": 0.09531386142364662,
+      "p": 0.012361842105263157
+    },
+    {
+      "global_relation_fraction": 0.09921203167026556,
+      "p": 0.01256907894736842
+    },
+    {
+      "global_relation_fraction": 0.10018941546387848,
+      "p": 0.012672697368421052
+    },
+    {
+      "global_relation_fraction": 0.09954540288669167,
+      "p": 0.012620888157894736
+    },
+    {
+      "global_relation_fraction": 0.09989392734022806,
+      "p": 0.012646792763157895
+    },
+    {
+      "global_relation_fraction": 0.10003409478349812,
+      "p": 0.012659745065789475
+    },
+    {
+      "global_relation_fraction": 0.09989392734022806,
+      "p": 0.012653268914473685
+    },
+    {
+      "global_relation_fraction": 0.10001515323711026,
+      "p": 0.012656506990131579
+    },
+    {
+      "global_relation_fraction": 0.09989392734022806,
+      "p": 0.012654887952302633
+    },
+    {
+      "global_relation_fraction": 0.09989392734022806,
+      "p": 0.012655697471217106
+    },
+    {
+      "global_relation_fraction": 0.10001515323711026,
+      "p": 0.012656102230674343
+    },
+    {
+      "global_relation_fraction": 0.09989392734022806,
+      "p": 0.012655899850945725
+    }
+  ],
+  "ensemble_summary": {
+    "Minkowski_4_supplied": {
+      "chain_height": 7.4,
+      "intervals_total": 92,
+      "local_dimension": 4.012702782534316,
+      "related_fraction": 0.09782929878395272
+    },
+    "causal_percolation_metric_free": {
+      "chain_height": 12.8,
+      "intervals_total": 46,
+      "local_dimension": 2.2033766867995364,
+      "related_fraction": 0.09452210478463462
+    }
+  },
+  "independent_seed_replicates": {
+    "Minkowski_4_supplied": [
+      {
+        "local_interval_count": 23,
+        "local_interval_dimension_median": 4.015327238489627,
+        "local_interval_dimension_q20": 3.563905014095073,
+        "local_interval_dimension_q80": 4.630675366751079,
+        "longest_causal_chain": 7,
+        "median_interval_size": 16.0,
+        "naive_endpoint_included_dimension_median": 2.66720098792886,
+        "whole_related_fraction": 0.1045346062052506
+      },
+      {
+        "local_interval_count": 26,
+        "local_interval_dimension_median": 3.7180739253021415,
+        "local_interval_dimension_q20": 3.3173210348522426,
+        "local_interval_dimension_q80": 4.191069624717953,
+        "longest_causal_chain": 8,
+        "median_interval_size": 24.5,
+        "naive_endpoint_included_dimension_median": 3.0600466425376944,
+        "whole_related_fraction": 0.11275144902829867
+      },
+      {
+        "local_interval_count": 5,
+        "local_interval_dimension_median": 4.3401371815004355,
+        "local_interval_dimension_q20": 3.8182625473522567,
+        "local_interval_dimension_q80": 5.124002586895869,
+        "longest_causal_chain": 7,
+        "median_interval_size": 16.0,
+        "naive_endpoint_included_dimension_median": 2.77107883859955,
+        "whole_related_fraction": 0.07846346175701785
+      },
+      {
+        "local_interval_count": 22,
+        "local_interval_dimension_median": 3.9408916722923797,
+        "local_interval_dimension_q20": 3.5749800864365664,
+        "local_interval_dimension_q80": 4.3152915862731955,
+        "longest_causal_chain": 8,
+        "median_interval_size": 19.5,
+        "naive_endpoint_included_dimension_median": 2.9387959513307536,
+        "whole_related_fraction": 0.0954653937947494
+      },
+      {
+        "local_interval_count": 16,
+        "local_interval_dimension_median": 4.012702782534316,
+        "local_interval_dimension_q20": 3.806324868786851,
+        "local_interval_dimension_q80": 4.4480357521991865,
+        "longest_causal_chain": 7,
+        "median_interval_size": 21.5,
+        "naive_endpoint_included_dimension_median": 3.0553990729086156,
+        "whole_related_fraction": 0.0979315831344471
+      }
+    ],
+    "causal_percolation_metric_free": [
+      {
+        "local_interval_count": 12,
+        "local_interval_dimension_median": 2.2695995145553236,
+        "local_interval_dimension_q20": 1.9573403173351134,
+        "local_interval_dimension_q80": 2.5635289579384426,
+        "longest_causal_chain": 12,
+        "median_interval_size": 15.0,
+        "naive_endpoint_included_dimension_median": 1.8429530806617564,
+        "whole_related_fraction": 0.09398795317649733
+      },
+      {
+        "local_interval_count": 10,
+        "local_interval_dimension_median": 2.2257166352728963,
+        "local_interval_dimension_q20": 1.8736881194674826,
+        "local_interval_dimension_q80": 2.3109985038806657,
+        "longest_causal_chain": 13,
+        "median_interval_size": 15.5,
+        "naive_endpoint_included_dimension_median": 1.9064296190467933,
+        "whole_related_fraction": 0.09829526082509377
+      },
+      {
+        "local_interval_count": 9,
+        "local_interval_dimension_median": 2.1012815871116133,
+        "local_interval_dimension_q20": 1.7987616055826174,
+        "local_interval_dimension_q80": 2.2788830762339596,
+        "longest_causal_chain": 13,
+        "median_interval_size": 17.0,
+        "naive_endpoint_included_dimension_median": 1.6749046474770228,
+        "whole_related_fraction": 0.09740879645414252
+      },
+      {
+        "local_interval_count": 5,
+        "local_interval_dimension_median": 2.2033766867995364,
+        "local_interval_dimension_q20": 1.9856789029489341,
+        "local_interval_dimension_q80": 2.621755097934291,
+        "longest_causal_chain": 13,
+        "median_interval_size": 14.0,
+        "naive_endpoint_included_dimension_median": 2.2141050953588994,
+        "whole_related_fraction": 0.08547562222979883
+      },
+      {
+        "local_interval_count": 10,
+        "local_interval_dimension_median": 1.9173627446938009,
+        "local_interval_dimension_q20": 1.796298398084552,
+        "local_interval_dimension_q80": 2.290418498407433,
+        "longest_causal_chain": 13,
+        "median_interval_size": 15.5,
+        "naive_endpoint_included_dimension_median": 1.659789740934627,
+        "whole_related_fraction": 0.09744289123764065
+      }
+    ]
+  },
+  "interpretation": "Global causal ordering fraction can be tuned to match a supplied dimension-four Minkowski sprinkling while the local interval dimension and longest-chain distribution still disagree. No dynamical selection of a manifoldlike 3+1D quantum spacetime.",
+  "n_events_each": 420,
+  "prior_art": [
+    "Rideout & Sorkin PRD61 024002 transitive percolation",
+    "Myrheim-Meyer dimension estimator",
+    "Meyer 2026 Phys Rev D doi:10.1103/klxp-f94q"
+  ],
+  "replicates_each": 5,
+  "scope": "Neither model has a quantum action; percolation is a known sequential growth toy. The dimension estimator assumes continuum Minkowski interval behavior even when testing nonmanifold causal growth.",
+  "status": "PASS_CAUSAL_GLOBAL_MATCH_LOCAL_MANIFOLD_FAIL",
+  "target_Minkowski4_global_comparability": 0.10000000000000002
+}

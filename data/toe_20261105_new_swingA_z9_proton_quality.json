@@ -1,0 +1,87 @@
+{
+  "candidate_DeltaB_multiple3_found_in_screen": 0,
+  "cannot_get_Z9_proton_selection_from_unchanged_minimal_BL_S_vev": true,
+  "claimed_Z9_action": "q(Q)=+1, q(uc)=q(dc)=-1, all leptons and Higgs neutral",
+  "critical_missing": "Naively asserting Z9 does not prove discrete gauge anomaly cancellation or a UV Higgs embedding. Nor does Z9 proton stability alone forbid PQ-breaking scalar monomials, imply dark-matter abundance, or fix strong CP.",
+  "exact_selection_rule": "Delta B=0 mod3",
+  "explicit_dim6_forbidden_SM_operators": [
+    {
+      "DeltaB": 1.0,
+      "SM_necessary": true,
+      "Z9_charge": 3,
+      "dim": 6.0,
+      "operators": [
+        "Q",
+        "Q",
+        "Q",
+        "L"
+      ]
+    },
+    {
+      "DeltaB": -1.0,
+      "SM_necessary": true,
+      "Z9_charge": 6,
+      "dim": 6.0,
+      "operators": [
+        "uc",
+        "dc",
+        "dc",
+        "Nc"
+      ]
+    },
+    {
+      "DeltaB": -1.0,
+      "SM_necessary": true,
+      "Z9_charge": 6,
+      "dim": 6.0,
+      "operators": [
+        "uc",
+        "uc",
+        "dc",
+        "ec"
+      ]
+    }
+  ],
+  "explicit_schematic_DeltaB3_operator": {
+    "DeltaB": -3.0,
+    "SM_necessary": true,
+    "Z9_charge": 0,
+    "dim": 15.0,
+    "operators": [
+      "uc",
+      "dc",
+      "dc",
+      "uc",
+      "dc",
+      "dc",
+      "uc",
+      "dc",
+      "dc",
+      "Nc"
+    ]
+  },
+  "minimal_BL_3BL_integer_charges": {
+    "Nc": 3,
+    "S": -6,
+    "lepton": -3,
+    "quark": 1
+  },
+  "minimal_BL_S_condensate_remnant": "Z6, not desired lepton-neutral quark-unit Z9",
+  "novelty": "Independent executable operator-selection audit of published Z9 idea, not a discovery of Z9 proton stability.",
+  "number_necessary_SM_gauge_singlet_nonzero_B_operator_monomials": 202,
+  "paper": "Davighi-Greljo-Ponce Diaz Axion Quality from Exact Proton Stability arXiv:2609.01712 (2026)",
+  "scope": "Brute-force color triality, SU2 parity, hypercharge, Lorentz Weyl-even are NECESSARY not full SU3/SU2/spin/Fermi contraction tests. The dim15 DeltaB3 operator may need distinct generations for nonzero Grassmann contraction.",
+  "screened_DeltaB_1_or_2_all_forbidden": 202,
+  "search_dimension_histogram": {
+    "10": 16,
+    "11": 27,
+    "12": 25,
+    "13": 44,
+    "14": 68,
+    "6": 3,
+    "7": 3,
+    "8": 7,
+    "9": 9
+  },
+  "status": "PASS_Z9_PROTON_BARYON_SELECTION_FULL_MONOMIAL_SCREEN"
+}

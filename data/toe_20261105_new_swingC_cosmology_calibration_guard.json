@@ -1,0 +1,193 @@
+{
+  "repo_posterior_predictive_failure_audit": {
+    "assumed_attempts_per_fold": 24,
+    "interpretation": "The parent code averages e^{-chi2/2} only over successful CLASS evaluations. If failed evaluations are assigned zero physical likelihood, use total attempted count instead, lowering elpd by ln(n_valid/24). If they are numerical failures of physically valid points, neither treatment resolves the missing predictive mass. Thus posterior model ranking needs convergence, failure accounting and robust sampling.",
+    "not_a_new_data_fit": true,
+    "repo_parent_source": "analysis/toe_uv/class_ppd.py + class_ppd_dovekie_sn/bao.json (prior 24-draw attempted Fisher posterior predictive)",
+    "rows": [
+      {
+        "folds": [
+          {
+            "hold": "bao",
+            "missing_draw_log_correction": 0.0,
+            "n_valid": 24,
+            "reported_valid_only_elpd": -11.473757849707567,
+            "zero_failed_draws_elpd": -11.473757849707567
+          },
+          {
+            "hold": "sn",
+            "missing_draw_log_correction": 0.0,
+            "n_valid": 24,
+            "reported_valid_only_elpd": -817.5935779987329,
+            "zero_failed_draws_elpd": -817.5935779987329
+          }
+        ],
+        "model": "LCDM_infl1",
+        "reported_total_elpd": -829.0673358484405,
+        "zero_failed_draws_total_elpd": -829.0673358484405
+      },
+      {
+        "folds": [
+          {
+            "hold": "bao",
+            "missing_draw_log_correction": 0.0,
+            "n_valid": 24,
+            "reported_valid_only_elpd": -6.880624898232293,
+            "zero_failed_draws_elpd": -6.880624898232293
+          },
+          {
+            "hold": "sn",
+            "missing_draw_log_correction": 0.0,
+            "n_valid": 24,
+            "reported_valid_only_elpd": -816.7036099317752,
+            "zero_failed_draws_elpd": -816.7036099317752
+          }
+        ],
+        "model": "cpl_infl1",
+        "reported_total_elpd": -823.5842348300075,
+        "zero_failed_draws_total_elpd": -823.5842348300075
+      },
+      {
+        "folds": [
+          {
+            "hold": "bao",
+            "missing_draw_log_correction": 0.0,
+            "n_valid": 24,
+            "reported_valid_only_elpd": -6.554326279622691,
+            "zero_failed_draws_elpd": -6.554326279622691
+          },
+          {
+            "hold": "sn",
+            "missing_draw_log_correction": 0.0,
+            "n_valid": 24,
+            "reported_valid_only_elpd": -817.2960026280106,
+            "zero_failed_draws_elpd": -817.2960026280106
+          }
+        ],
+        "model": "cpl_infl2",
+        "reported_total_elpd": -823.8503289076333,
+        "zero_failed_draws_total_elpd": -823.8503289076333
+      },
+      {
+        "folds": [
+          {
+            "hold": "bao",
+            "missing_draw_log_correction": 0.0,
+            "n_valid": 24,
+            "reported_valid_only_elpd": -8.962510287922012,
+            "zero_failed_draws_elpd": -8.962510287922012
+          },
+          {
+            "hold": "sn",
+            "missing_draw_log_correction": -1.0986122886681098,
+            "n_valid": 8,
+            "reported_valid_only_elpd": -816.6794469795508,
+            "zero_failed_draws_elpd": -817.778059268219
+          }
+        ],
+        "model": "exp_infl1",
+        "reported_total_elpd": -825.6419572674728,
+        "zero_failed_draws_total_elpd": -826.7405695561409
+      },
+      {
+        "folds": [
+          {
+            "hold": "bao",
+            "missing_draw_log_correction": 0.0,
+            "n_valid": 24,
+            "reported_valid_only_elpd": -7.583590470806957,
+            "zero_failed_draws_elpd": -7.583590470806957
+          },
+          {
+            "hold": "sn",
+            "missing_draw_log_correction": -1.3862943611198906,
+            "n_valid": 6,
+            "reported_valid_only_elpd": -816.9484395713688,
+            "zero_failed_draws_elpd": -818.3347339324887
+          }
+        ],
+        "model": "exp_infl2",
+        "reported_total_elpd": -824.5320300421757,
+        "zero_failed_draws_total_elpd": -825.9183244032956
+      },
+      {
+        "folds": [
+          {
+            "hold": "bao",
+            "missing_draw_log_correction": -0.08701137698962981,
+            "n_valid": 22,
+            "reported_valid_only_elpd": -7.371699666409334,
+            "zero_failed_draws_elpd": -7.4587110433989645
+          },
+          {
+            "hold": "sn",
+            "missing_draw_log_correction": 0.0,
+            "n_valid": 24,
+            "reported_valid_only_elpd": -815.6483602863856,
+            "zero_failed_draws_elpd": -815.6483602863856
+          }
+        ],
+        "model": "free_neg_infl1",
+        "reported_total_elpd": -823.0200599527949,
+        "zero_failed_draws_total_elpd": -823.1070713297845
+      },
+      {
+        "folds": [
+          {
+            "hold": "bao",
+            "missing_draw_log_correction": -0.6131044728864089,
+            "n_valid": 13,
+            "reported_valid_only_elpd": -11.15051676886135,
+            "zero_failed_draws_elpd": -11.763621241747758
+          },
+          {
+            "hold": "sn",
+            "missing_draw_log_correction": -0.04255961441879589,
+            "n_valid": 23,
+            "reported_valid_only_elpd": -816.5881107578525,
+            "zero_failed_draws_elpd": -816.6306703722713
+          }
+        ],
+        "model": "free_neg_infl2",
+        "reported_total_elpd": -827.7386275267139,
+        "zero_failed_draws_total_elpd": -828.394291614019
+      }
+    ]
+  },
+  "scientific_boundary": "No fresh statistical evidence for evolving dark energy; synthetic stress test is not posterior inference. PPD failure corrections are conditional interpretations, not unique corrected Bayes factors.",
+  "source_literature": [
+    "DES-Dovekie 2026 updated photometry MNRAS548 2026 stag632",
+    "Turyshev PRD113 103540 2026 dark energy SN calibration sensitivity",
+    "DESI DR2 papers 2025-2026",
+    "repo PASS12616-12620 posterior predictive retraction"
+  ],
+  "status": "PASS_SYNTHETIC_DE_CPL_SN_DRIFT_AND_PPD_MISSING_DRAW_AUDIT",
+  "synthetic_calibration": {
+    "BAO_one_percent_fractional_uncertainty_LCDM_vs_CPL_expected_chi2": 11.882795401878173,
+    "BAO_radial_and_transverse_observations": 14,
+    "BAO_redshift_points": [
+      0.3,
+      0.5,
+      0.7,
+      0.9,
+      1.2,
+      1.5,
+      2.3
+    ],
+    "BAO_scale_fit_1percent": 0.9918123573943909,
+    "BAO_scale_fit_3percent": 0.9918123573943907,
+    "BAO_three_percent_fractional_uncertainty_LCDM_vs_CPL_expected_chi2": 1.320310600208684,
+    "SN_distance_modulus_CPL_minus_LCDM_mag_minmax": [
+      -0.03646482906400856,
+      -0.01127812492830194
+    ],
+    "SN_sample_redshift_count": 90,
+    "fitted_SN_calibration_offset_mag": -0.029747960855297764,
+    "fitted_SN_redshift_drift_per_z_over_1plusz_mag": 0.0011887485328122714,
+    "interpretation": "SN-only CPL distances can be closely matched by a smooth calibration offset and drift. Independent BAO E(z),D_M(z) with common absolute scale can break the degeneracy at sufficiently small uncertainties; choice of adopted sound-horizon calibration and other parameters changes significance.",
+    "limitations": "Purely synthetic ensemble and assumed homogeneous precision, no Planck likelihood, survey covariance, Pantheon/Dovekie redshift selection, selection biases, numerical BAO nuisance, perturbation data or joint posterior.",
+    "max_abs_post_calibration_SN_residual_mag": 0.01840254827419513,
+    "synthetic_SN_chi2_difference_versus_CPL_for_drift_LCDM": 0.3143213437175303,
+    "synthetic_baseline": "Dovekie 2026 published illustrative central Omega_m=.33, CPL w0=-.803 wa=-.72, not refitted from observed SN/BAO"
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "gaussian_no_go_statement": "With positive kinetic time metric identity and two independent exact scalar shift symmetries, local gradient mixing keeps both modes massless but generically splits limiting speeds; equal speeds require exactly scalar stiffness, which for 2 unequal diagonal entries and nonzero mixing is impossible.",
+  "gw170817_empirical_illustration": {
+    "source": "LIGO Virgo Fermi GRB170817A ApJL848 L13 (2017)",
+    "speed_gravity_minus_photon_over_c_range": [
+      -3e-15,
+      7e-16
+    ],
+    "warning": "This observed GRAVITY vs PHOTON bound does not automatically constrain two hypothetical scalar modes here."
+  },
+  "higher_species_matrix_controls": [
+    {
+      "number_gapless_species": 3,
+      "stiffness_distance_from_scalar_identity_frobenius": 0.06321401069169795,
+      "velocity_spread": 0.0445457830051178
+    },
+    {
+      "number_gapless_species": 4,
+      "stiffness_distance_from_scalar_identity_frobenius": 0.16931375744379468,
+      "velocity_spread": 0.10401622782834274
+    },
+    {
+      "number_gapless_species": 6,
+      "stiffness_distance_from_scalar_identity_frobenius": 0.21911202916800762,
+      "velocity_spread": 0.12051540650439363
+    }
+  ],
+  "identical_bare_speeds_offdiagonal_coupling_sweep": [
+    {
+      "both_modes_gapless": true,
+      "coupling": 0.0,
+      "gapless_boson_branches": 2,
+      "normal_mode_velocities": [
+        1.0,
+        1.0
+      ],
+      "squared_velocity_discriminant": 0.0,
+      "velocity_split": 0.0
+    },
+    {
+      "both_modes_gapless": true,
+      "coupling": 0.05,
+      "gapless_boson_branches": 2,
+      "normal_mode_velocities": [
+        0.9746794344808963,
+        1.02469507659596
+      ],
+      "squared_velocity_discriminant": 0.010000000000000002,
+      "velocity_split": 0.0500156421150636
+    },
+    {
+      "both_modes_gapless": true,
+      "coupling": 0.2,
+      "gapless_boson_branches": 2,
+      "normal_mode_velocities": [
+        0.8944271909999159,
+        1.0954451150103321
+      ],
+      "squared_velocity_discriminant": 0.16000000000000003,
+      "velocity_split": 0.2010179240104163
+    },
+    {
+      "both_modes_gapless": true,
+      "coupling": 0.5,
+      "gapless_boson_branches": 2,
+      "normal_mode_velocities": [
+        0.7071067811865476,
+        1.224744871391589
+      ],
+      "squared_velocity_discriminant": 1.0,
+      "velocity_split": 0.5176380902050414
+    }
+  ],
+  "initial_velocities": [
+    1.0,
+    1.2
+  ],
+  "prior_art": "Coupled Luttinger-liquid/harmonic normal modes and eigenvalue discriminants are elementary.",
+  "scope": "Exact Gaussian quadratic gradient action; no interacting RG, no quantum UV completion, no statement that velocity equalization cannot occur under a non-Gaussian RG fixed point.",
+  "status": "PASS_GAPLESS_TWO_CONE_GAUSSIAN_NO_GO",
+  "symbolic_squared_eigenvalue_discriminant": "4*k**2 + v1**4 - 2*v1**2*v2**2 + v2**4",
+  "two_species_all_gapless_sweep": [
+    {
+      "both_modes_gapless": true,
+      "coupling": 0.0,
+      "gapless_boson_branches": 2,
+      "normal_mode_velocities": [
+        1.0,
+        1.2
+      ],
+      "squared_velocity_discriminant": 0.19359999999999997,
+      "velocity_split": 0.19999999999999996
+    },
+    {
+      "both_modes_gapless": true,
+      "coupling": 0.05,
+      "gapless_boson_branches": 2,
+      "normal_mode_velocities": [
+        0.9971909127877321,
+        1.2023353456725663
+      ],
+      "squared_velocity_discriminant": 0.20359999999999998,
+      "velocity_split": 0.2051444328848342
+    },
+    {
+      "both_modes_gapless": true,
+      "coupling": 0.1,
+      "gapless_boson_branches": 2,
+      "normal_mode_velocities": [
+        0.9891102469027953,
+        1.2089916953692823
+      ],
+      "squared_velocity_discriminant": 0.23359999999999997,
+      "velocity_split": 0.21988144846648705
+    },
+    {
+      "both_modes_gapless": true,
+      "coupling": 0.2,
+      "gapless_boson_branches": 2,
+      "normal_mode_velocities": [
+        0.9605616196026311,
+        1.2317959956690758
+      ],
+      "squared_velocity_discriminant": 0.3536,
+      "velocity_split": 0.27123437606644474
+    },
+    {
+      "both_modes_gapless": true,
+      "coupling": 0.4,
+      "gapless_boson_branches": 2,
+      "normal_mode_velocities": [
+        0.8737800132639032,
+        1.294800559321988
+      ],
+      "squared_velocity_discriminant": 0.8336000000000001,
+      "velocity_split": 0.4210205460580848
+    },
+    {
+      "both_modes_gapless": true,
+      "coupling": 0.8,
+      "gapless_boson_branches": 2,
+      "normal_mode_velocities": [
+        0.6247409539099692,
+        1.431676898084083
+      ],
+      "squared_velocity_discriminant": 2.7536000000000005,
+      "velocity_split": 0.8069359441741139
+    }
+  ]
+}

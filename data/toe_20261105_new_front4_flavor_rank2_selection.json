@@ -1,0 +1,68 @@
+{
+  "TBM_s13_zero_excluded": true,
+  "TM1_exact_model_solar_prediction_range": [
+    0.3167979316384115,
+    0.3192835279169284
+  ],
+  "TM1_not_excluded_by_solar_angle_alone": true,
+  "TM2_exact_model_solar_prediction_range": [
+    0.3403582360415358,
+    0.34160103418079424
+  ],
+  "TM2_outside_3sigma_s12_projection": true,
+  "consequence": "With rank two and one exactly massless Majorana neutrino, m_ee=0 is excluded throughout supplied independent conservative 3sigma ranges for both orderings. Exact TM2 second PMNS column trimaximal is also excluded by 3sigma solar+reactor intervals. Existing general type-I seesaw with arbitrary free Yukawas is not excluded.",
+  "literature": [
+    "NuFIT v6.1 (2025) https://www.nu-fit.org/?q=node/309",
+    "Bari preliminary 2026.a https://global-nu.org/results.html",
+    "TM1 TM2 conventional trimaximal mixing literature"
+  ],
+  "not_claimed": "0nu2beta detection; exclusion of all texture zero models; an actual statistical joint 3sigma fit; mass ordering established; first-principles masses or CP",
+  "ranges_used": {
+    "abs_dm32_IO": [
+      0.002421,
+      0.002547
+    ],
+    "dm21": [
+      7.236e-05,
+      7.823e-05
+    ],
+    "dm31_NO": [
+      0.00245,
+      0.002576
+    ],
+    "s12": [
+      0.2893,
+      0.3295
+    ],
+    "s13_IO": [
+      0.02093855358094519,
+      0.02441783718439181
+    ],
+    "s13_NO": [
+      0.02063973180112858,
+      0.024202798060280903
+    ]
+  },
+  "rank_two_see_saw_massless_lightest_prediction": {
+    "inverted_ordering": {
+      "m_ee_two_positive_amplitude_bounds": [
+        0.03166120651131469,
+        0.016280953676591835
+      ],
+      "minimal_mass_sum_eV": 0.09760582777344023,
+      "sampled_minimum_mee_eV": 0.015878169464557165,
+      "strict_lower_bound_mee_eV": 0.015380252834722854
+    },
+    "normal_ordering": {
+      "m_ee_two_positive_amplitude_bounds": [
+        0.0024013600496618397,
+        0.001228396319534862
+      ],
+      "minimal_mass_sum_eV": 0.05800394281031302,
+      "sampled_minimum_mee_eV": 0.0011845264774149932,
+      "strict_lower_bound_mee_eV": 0.0011729637301269777
+    }
+  },
+  "source": "NuFIT v6.1 (2025), 3sigma 1D intervals (without SK-atm); September 2026 independent Bari is narrower; intentionally use conservative Cartesian products",
+  "status": "PASS_RANK2_FLAVOR_TM2_AND_MEE_ZERO_RECTANGLE_EXCLUSION"
+}

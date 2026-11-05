@@ -1,0 +1,124 @@
+{
+  "Page_formula": "[digamma(dR*dBH+1)-digamma(max(dR,dBH)+1)-(min(dR,dBH)-1)/(2max(dR,dBH))]/ln2",
+  "information_gate": "With fixed finite pure total dimension and full release, radiation entropy returns to zero at complete evaporation; independent permanently hidden Hawking partners prevent return. Full unitary retrieval or remnant/partner return is required.",
+  "limitations": "Uniform Haar randomness and qubit relabeling approximate fast scrambling, not a local gravitational evaporation unitary; hidden-partner construction includes a growing inaccessible Hilbert space; no horizon, energy conservation, quantum gravity or replica-wormhole computation.",
+  "prior_art": [
+    "Don Page Phys Rev Lett 71 1291 (1993) finite-dimensional average entanglement formula",
+    "QURI quantum computing Page curve tutorial",
+    "2026 nonperturbative finite N island formula literature"
+  ],
+  "reference_total_qubits": 8,
+  "rows": [
+    {
+      "Haar_single_sample_entropy_95pct": [
+        -6.406853007629837e-16,
+        9.61027951144475e-16
+      ],
+      "Page_exact_Haar_mean_entropy_bits": 0.0,
+      "emitted_qubits": 0,
+      "hidden_partner_never_released_entropy_bits": 0.0,
+      "observed_random_state_mean_entropy_bits": 8.008566259537289e-17,
+      "remaining_bh_qubits": 8,
+      "sampling_standard_error_bits": 4.157479231738175e-17
+    },
+    {
+      "Haar_single_sample_entropy_95pct": [
+        0.974149503534502,
+        0.9988084403630219
+      ],
+      "Page_exact_Haar_mean_entropy_bits": 0.9915522121476336,
+      "emitted_qubits": 1,
+      "hidden_partner_never_released_entropy_bits": 1.0,
+      "observed_random_state_mean_entropy_bits": 0.9916390849076067,
+      "remaining_bh_qubits": 7,
+      "sampling_standard_error_bits": 0.0006039110766402312
+    },
+    {
+      "Haar_single_sample_entropy_95pct": [
+        1.9251067351590188,
+        1.9816610133688917
+      ],
+      "Page_exact_Haar_mean_entropy_bits": 1.957761060234384,
+      "emitted_qubits": 2,
+      "hidden_partner_never_released_entropy_bits": 2.0,
+      "observed_random_state_mean_entropy_bits": 1.9576900260451637,
+      "remaining_bh_qubits": 6,
+      "sampling_standard_error_bits": 0.001588184726653443
+    },
+    {
+      "Haar_single_sample_entropy_95pct": [
+        2.747362849251566,
+        2.872563485026567
+      ],
+      "Page_exact_Haar_mean_entropy_bits": 2.822596444524612,
+      "emitted_qubits": 3,
+      "hidden_partner_never_released_entropy_bits": 3.0,
+      "observed_random_state_mean_entropy_bits": 2.816750410879934,
+      "remaining_bh_qubits": 5,
+      "sampling_standard_error_bits": 0.003340545740866359
+    },
+    {
+      "Haar_single_sample_entropy_95pct": [
+        3.1847647949471765,
+        3.3654622149163202
+      ],
+      "Page_exact_Haar_mean_entropy_bits": 3.281937853012086,
+      "emitted_qubits": 4,
+      "hidden_partner_never_released_entropy_bits": 4.0,
+      "observed_random_state_mean_entropy_bits": 3.286256509591345,
+      "remaining_bh_qubits": 4,
+      "sampling_standard_error_bits": 0.004940674003742465
+    },
+    {
+      "Haar_single_sample_entropy_95pct": [
+        2.7504793408817743,
+        2.8739290734892675
+      ],
+      "Page_exact_Haar_mean_entropy_bits": 2.822596444524612,
+      "emitted_qubits": 5,
+      "hidden_partner_never_released_entropy_bits": 5.0,
+      "observed_random_state_mean_entropy_bits": 2.823067757135316,
+      "remaining_bh_qubits": 3,
+      "sampling_standard_error_bits": 0.0032076467093667222
+    },
+    {
+      "Haar_single_sample_entropy_95pct": [
+        1.9157496592417396,
+        1.9802011062434397
+      ],
+      "Page_exact_Haar_mean_entropy_bits": 1.957761060234384,
+      "emitted_qubits": 6,
+      "hidden_partner_never_released_entropy_bits": 6.0,
+      "observed_random_state_mean_entropy_bits": 1.9550918210398753,
+      "remaining_bh_qubits": 2,
+      "sampling_standard_error_bits": 0.001703961173349636
+    },
+    {
+      "Haar_single_sample_entropy_95pct": [
+        0.9780142520654109,
+        0.9995888401502568
+      ],
+      "Page_exact_Haar_mean_entropy_bits": 0.9915522121476336,
+      "emitted_qubits": 7,
+      "hidden_partner_never_released_entropy_bits": 7.0,
+      "observed_random_state_mean_entropy_bits": 0.9926364290678982,
+      "remaining_bh_qubits": 1,
+      "sampling_standard_error_bits": 0.0006530247312223509
+    },
+    {
+      "Haar_single_sample_entropy_95pct": [
+        -6.406853007629837e-16,
+        9.61027951144475e-16
+      ],
+      "Page_exact_Haar_mean_entropy_bits": 0.0,
+      "emitted_qubits": 8,
+      "hidden_partner_never_released_entropy_bits": 8.0,
+      "observed_random_state_mean_entropy_bits": -1.9220559022889595e-17,
+      "remaining_bh_qubits": 0,
+      "sampling_standard_error_bits": 5.004740693513503e-17
+    }
+  ],
+  "sampled_independent_Haar_pure_states_per_step": 100,
+  "status": "PASS_PAGE_CURVE_INFORMATION_TRANSFER_VERSUS_PAIR_ONLY",
+  "two_processes": "(a) Pure globally scrambled finite 8-qubit state with qubits reclassified as emitted radiation, (b) every emitted Hawking qubit entangled with a NEW permanently retained inaccessible partner; no transfer/purification."
+}
