@@ -1,0 +1,85 @@
+{
+ "heavy_axion": {
+  "K": 1.8512639502750897e-27,
+  "rows": [
+   {
+    "alpha_b_inv": 1,
+    "S": 6.283185307179586,
+    "brane_over_chi": 6.614674406926819e+37,
+    "m_a_eV": 464833935966265.06,
+    "harmless_if_misaligned": false
+   },
+   {
+    "alpha_b_inv": 2,
+    "S": 12.566370614359172,
+    "brane_over_chi": 1.2352525643830341e+35,
+    "m_a_eV": 20087295715073.723,
+    "harmless_if_misaligned": false
+   },
+   {
+    "alpha_b_inv": 3,
+    "S": 18.84955592153876,
+    "brane_over_chi": 2.3067634231807527e+32,
+    "m_a_eV": 868050755171.4186,
+    "harmless_if_misaligned": false
+   },
+   {
+    "alpha_b_inv": 5,
+    "S": 31.41592653589793,
+    "brane_over_chi": 8.044473791411896e+26,
+    "m_a_eV": 1621035073.4984965,
+    "harmless_if_misaligned": false
+   },
+   {
+    "alpha_b_inv": 8,
+    "S": 50.26548245743669,
+    "brane_over_chi": 5.238892874756756e+18,
+    "m_a_eV": 130816.74839587201,
+    "harmless_if_misaligned": false
+   },
+   {
+    "alpha_b_inv": 10,
+    "S": 62.83185307179586,
+    "brane_over_chi": 18269813021780.754,
+    "m_a_eV": 244.29278597755064,
+    "harmless_if_misaligned": false
+   },
+   {
+    "alpha_b_inv": 15,
+    "S": 94.24777960769379,
+    "brane_over_chi": 0.41492591871848056,
+    "m_a_eV": 6.79845836275701e-05,
+    "harmless_if_misaligned": false
+   },
+   {
+    "alpha_b_inv": 20,
+    "S": 125.66370614359172,
+    "brane_over_chi": 9.423386972768919e-15,
+    "m_a_eV": 5.715360000000027e-05,
+    "harmless_if_misaligned": true
+   },
+   {
+    "alpha_b_inv": 30,
+    "S": 188.49555921538757,
+    "brane_over_chi": 4.860488825621099e-42,
+    "m_a_eV": 5.7153599999999994e-05,
+    "harmless_if_misaligned": true
+   }
+  ],
+  "alpha_b_inv_brane_dominates_below": 14.859998513366614,
+  "alpha_b_inv_safe_above": 18.524676507763754,
+  "QCD_m_a_eV": 5.7153599999999994e-05
+ },
+ "control_three_full_27": null,
+ "joint_target": {
+  "n_s_fading": 0.9657017618256943,
+  "n_s_CPL": 0.9670606740686725,
+  "n_s_LCDM": 0.9701835271977778,
+  "n_s_SMASH": [
+   0.965,
+   0.968
+  ],
+  "r_SMASH": 0.004,
+  "note": "SMASH values from memory, not re-read"
+ }
+}

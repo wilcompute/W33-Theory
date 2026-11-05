@@ -1,0 +1,242 @@
+{
+ "pass_number": 12624,
+ "track": "claude",
+ "copies": {
+  "quark_33b1": {
+   "1": null,
+   "2": {
+    "MX": 823277789.9272671,
+    "MU": 3.5794906058065504e+16,
+    "inv_alpha_U": 34.60224831892631,
+    "spread": 5.000089231543825e-11
+   },
+   "3": {
+    "MX": 284798856925.48883,
+    "MU": 3.4799367602326428e+16,
+    "inv_alpha_U": 34.63079238577609,
+    "spread": 1.1448975101302494e-10
+   },
+   "4": {
+    "MX": 5279447640209.705,
+    "MU": 3.4437060284276156e+16,
+    "inv_alpha_U": 34.64132039511511,
+    "spread": 6.821210263296962e-13
+   },
+   "5": {
+    "MX": 30431621578952.637,
+    "MU": 3.4250673872871908e+16,
+    "inv_alpha_U": 34.64676409016411,
+    "spread": 7.863576456657029e-11
+   }
+  },
+  "antiquark_3b13": {
+   "1": null,
+   "2": null,
+   "3": null,
+   "4": null,
+   "5": null
+  },
+  "lepton_133b": {
+   "1": {
+    "MX": 93.83009345551197,
+    "MU": 4930960860718.454,
+    "inv_alpha_U": 36.403001490599394,
+    "spread": 2.5153212845907547e-12
+   },
+   "2": {
+    "MX": 20103595.675421048,
+    "MU": 4858022469310.5205,
+    "inv_alpha_U": 36.388286986078406,
+    "spread": 3.1199931527226e-11
+   },
+   "3": {
+    "MX": 1234311318.7753046,
+    "MU": 4837201035539.422,
+    "inv_alpha_U": 36.38404821235819,
+    "spread": 9.947598300641403e-14
+   },
+   "4": {
+    "MX": 9711222347.448536,
+    "MU": 4827340593780.705,
+    "inv_alpha_U": 36.38203689676429,
+    "spread": 3.588240815588506e-12
+   },
+   "5": {
+    "MX": 33520936635.856834,
+    "MU": 4821589094892.955,
+    "inv_alpha_U": 36.38086279656151,
+    "spread": 6.444622613344109e-12
+   }
+  },
+  "full_27": {
+   "1": null,
+   "2": null,
+   "3": null,
+   "4": null,
+   "5": null
+  }
+ },
+ "proton_tau_quark_piece": {
+  "2": 2.6874001823980314e+38,
+  "3": 2.3967162518082696e+38,
+  "4": 2.2970554562257292e+38,
+  "5": 2.2470213330065567e+38
+ },
+ "heavy_axion": {
+  "K": 1.8512639502750897e-27,
+  "rows": [
+   {
+    "alpha_b_inv": 1,
+    "S": 6.283185307179586,
+    "brane_over_chi": 6.614674406926819e+37,
+    "m_a_eV": 464833935966265.06,
+    "harmless_if_misaligned": false
+   },
+   {
+    "alpha_b_inv": 2,
+    "S": 12.566370614359172,
+    "brane_over_chi": 1.2352525643830341e+35,
+    "m_a_eV": 20087295715073.723,
+    "harmless_if_misaligned": false
+   },
+   {
+    "alpha_b_inv": 3,
+    "S": 18.84955592153876,
+    "brane_over_chi": 2.3067634231807527e+32,
+    "m_a_eV": 868050755171.4186,
+    "harmless_if_misaligned": false
+   },
+   {
+    "alpha_b_inv": 5,
+    "S": 31.41592653589793,
+    "brane_over_chi": 8.044473791411896e+26,
+    "m_a_eV": 1621035073.4984965,
+    "harmless_if_misaligned": false
+   },
+   {
+    "alpha_b_inv": 8,
+    "S": 50.26548245743669,
+    "brane_over_chi": 5.238892874756756e+18,
+    "m_a_eV": 130816.74839587201,
+    "harmless_if_misaligned": false
+   },
+   {
+    "alpha_b_inv": 10,
+    "S": 62.83185307179586,
+    "brane_over_chi": 18269813021780.754,
+    "m_a_eV": 244.29278597755064,
+    "harmless_if_misaligned": false
+   },
+   {
+    "alpha_b_inv": 15,
+    "S": 94.24777960769379,
+    "brane_over_chi": 0.41492591871848056,
+    "m_a_eV": 6.79845836275701e-05,
+    "harmless_if_misaligned": false
+   },
+   {
+    "alpha_b_inv": 20,
+    "S": 125.66370614359172,
+    "brane_over_chi": 9.423386972768919e-15,
+    "m_a_eV": 5.715360000000027e-05,
+    "harmless_if_misaligned": true
+   },
+   {
+    "alpha_b_inv": 30,
+    "S": 188.49555921538757,
+    "brane_over_chi": 4.860488825621099e-42,
+    "m_a_eV": 5.7153599999999994e-05,
+    "harmless_if_misaligned": true
+   }
+  ],
+  "alpha_b_inv_brane_dominates_below": 14.859998513366614,
+  "alpha_b_inv_safe_above": 18.524676507763754,
+  "QCD_m_a_eV": 5.7153599999999994e-05
+ },
+ "heavy_axion_lifetime": [
+  {
+   "alpha_b_inv": 1,
+   "m_a_GeV": 464833.9359662651,
+   "tau_s": 6.500279175857411e-15,
+   "bbn_safe": true
+  },
+  {
+   "alpha_b_inv": 2,
+   "m_a_GeV": 20087.295715073724,
+   "tau_s": 8.054917020036003e-11,
+   "bbn_safe": true
+  },
+  {
+   "alpha_b_inv": 3,
+   "m_a_GeV": 868.0507551714186,
+   "tau_s": 9.981369483427997e-07,
+   "bbn_safe": true
+  },
+  {
+   "alpha_b_inv": 5,
+   "m_a_GeV": 1.6210350734984966,
+   "tau_s": 153.26685834469023,
+   "bbn_safe": false
+  }
+ ],
+ "chat_cross_check": {
+  "B_YY": "127/18",
+  "B_YX": "52/3",
+  "B_XX": "383",
+  "agrees": true
+ },
+ "joint_target": {
+  "n_s_inflation_prior": [
+   0.965,
+   0.968
+  ],
+  "r_SMASH_from_memory": 0.004,
+  "cprime_band": [
+   0.039903834174699115,
+   0.0553170911695046
+  ],
+  "cprime_fading_best": 0.05299751293406564,
+  "CPL_w0": -0.8093548015222838,
+  "CPL_wa": -0.6853038517027648,
+  "ns_profile": [
+   [
+    0.02,
+    0.9709644961239503
+   ],
+   [
+    0.03,
+    0.9696756434300916
+   ],
+   [
+    0.05,
+    0.9662918157113838
+   ],
+   [
+    0.07,
+    0.9614327088418502
+   ],
+   [
+    0.1,
+    0.9514632151546751
+   ]
+  ]
+ },
+ "checks": {
+  "control_full_27_never_unifies": true,
+  "quark_piece_one_copy_fails": true,
+  "quark_piece_unifies_for_2_to_5": true,
+  "quark_piece_MU_nearly_n_independent": true,
+  "quark_piece_MX_rises_with_n": true,
+  "quark_piece_proton_safe_all_n": true,
+  "antiquark_piece_never_unifies": true,
+  "lepton_piece_MU_too_low_for_proton": true,
+  "chat_kinetic_matrix_reproduced": true,
+  "brane_dominates_below_alpha_inv_12_to_18": true,
+  "misaligned_safe_above_alpha_inv_16_to_22": true,
+  "heavy_axion_bbn_safe_only_alpha_inv_le_3": true,
+  "cprime_band_from_inflation_prior": true,
+  "cprime_band_contains_fading_best_fit": true,
+  "lcdm_ns_outside_inflation_band": true
+ },
+ "all_checks_pass": true
+}
