@@ -1,0 +1,277 @@
+{
+  "add_scalar_A_charge_scan": [
+    {
+      "A_charge": 9,
+      "A_sensitive_min_dimension": 2,
+      "monomial_exponent_S": 0,
+      "monomial_exponent_T": 1,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 18,
+      "A_sensitive_min_dimension": 2,
+      "monomial_exponent_S": 1,
+      "monomial_exponent_T": 0,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 27,
+      "A_sensitive_min_dimension": 3,
+      "monomial_exponent_S": 1,
+      "monomial_exponent_T": 1,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 36,
+      "A_sensitive_min_dimension": 3,
+      "monomial_exponent_S": 2,
+      "monomial_exponent_T": 0,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 45,
+      "A_sensitive_min_dimension": 4,
+      "monomial_exponent_S": 2,
+      "monomial_exponent_T": 1,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 54,
+      "A_sensitive_min_dimension": 4,
+      "monomial_exponent_S": 3,
+      "monomial_exponent_T": 0,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 63,
+      "A_sensitive_min_dimension": 5,
+      "monomial_exponent_S": 3,
+      "monomial_exponent_T": 1,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 72,
+      "A_sensitive_min_dimension": 5,
+      "monomial_exponent_S": 4,
+      "monomial_exponent_T": 0,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 81,
+      "A_sensitive_min_dimension": 6,
+      "monomial_exponent_S": 4,
+      "monomial_exponent_T": 1,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 90,
+      "A_sensitive_min_dimension": 6,
+      "monomial_exponent_S": 5,
+      "monomial_exponent_T": 0,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 99,
+      "A_sensitive_min_dimension": 7,
+      "monomial_exponent_S": 5,
+      "monomial_exponent_T": 1,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 108,
+      "A_sensitive_min_dimension": 7,
+      "monomial_exponent_S": 6,
+      "monomial_exponent_T": 0,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 117,
+      "A_sensitive_min_dimension": 8,
+      "monomial_exponent_S": 6,
+      "monomial_exponent_T": 1,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 126,
+      "A_sensitive_min_dimension": 8,
+      "monomial_exponent_S": 7,
+      "monomial_exponent_T": 0,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 135,
+      "A_sensitive_min_dimension": 9,
+      "monomial_exponent_S": 7,
+      "monomial_exponent_T": 1,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 144,
+      "A_sensitive_min_dimension": 9,
+      "monomial_exponent_S": 8,
+      "monomial_exponent_T": 0,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 153,
+      "A_sensitive_min_dimension": 10,
+      "monomial_exponent_S": 8,
+      "monomial_exponent_T": 1,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 162,
+      "A_sensitive_min_dimension": 10,
+      "monomial_exponent_S": 9,
+      "monomial_exponent_T": 0,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 171,
+      "A_sensitive_min_dimension": 11,
+      "monomial_exponent_S": 9,
+      "monomial_exponent_T": 1,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 180,
+      "A_sensitive_min_dimension": 11,
+      "monomial_exponent_S": 10,
+      "monomial_exponent_T": 0,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 189,
+      "A_sensitive_min_dimension": 12,
+      "monomial_exponent_S": 10,
+      "monomial_exponent_T": 1,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 198,
+      "A_sensitive_min_dimension": 12,
+      "monomial_exponent_S": 11,
+      "monomial_exponent_T": 0,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 207,
+      "A_sensitive_min_dimension": 13,
+      "monomial_exponent_S": 11,
+      "monomial_exponent_T": 1,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 216,
+      "A_sensitive_min_dimension": 13,
+      "monomial_exponent_S": 12,
+      "monomial_exponent_T": 0,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 225,
+      "A_sensitive_min_dimension": 14,
+      "monomial_exponent_S": 12,
+      "monomial_exponent_T": 1,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 234,
+      "A_sensitive_min_dimension": 14,
+      "monomial_exponent_S": 13,
+      "monomial_exponent_T": 0,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 243,
+      "A_sensitive_min_dimension": 15,
+      "monomial_exponent_S": 13,
+      "monomial_exponent_T": 1,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 252,
+      "A_sensitive_min_dimension": 15,
+      "monomial_exponent_S": 14,
+      "monomial_exponent_T": 0,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 261,
+      "A_sensitive_min_dimension": 16,
+      "monomial_exponent_S": 14,
+      "monomial_exponent_T": 1,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 270,
+      "A_sensitive_min_dimension": 16,
+      "monomial_exponent_S": 15,
+      "monomial_exponent_T": 0,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 279,
+      "A_sensitive_min_dimension": 17,
+      "monomial_exponent_S": 15,
+      "monomial_exponent_T": 1,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    },
+    {
+      "A_charge": 288,
+      "A_sensitive_min_dimension": 17,
+      "monomial_exponent_S": 16,
+      "monomial_exponent_T": 0,
+      "original_relative_phase_breaker_remains": "Sdag T^2 (dimension 3)",
+      "scalar_vevs_leave_Z9": true
+    }
+  ],
+  "base_gauged_X": "3(B-3Le), charges T=-9 S=-18",
+  "crucial_limitation": "Cubic Sdag T\u00b2 remains; scalar-only A dimension does NOT test mixed PQ-breaking fermion operators, whether A phase is eaten, QCD anomaly under an accidental global PQ, residual discrete gauge anomalies, heavy relic decays, or full cubic/gravitational X anomaly. Opposite-color anomaly partners may alter the intended PQ anomaly.",
+  "first_A_sensitive_scalar_operator_dimension_formula": "1+ceil(abs(X_A/9)/2)",
+  "high_quality_candidate_example": {
+    "X_A": 216,
+    "cannot_infer_full_axion_quality": true,
+    "first_A_sensitive_dimension": 13,
+    "operator": "A S^12 (or h.c. depending phase charge)"
+  },
+  "one_QCD_colored_KSVZ_pair_color_mixed_X_anomaly": "-X_A/2",
+  "preexisting_cubic_breaks_original_relative_scalar_phase": true,
+  "sources": [
+    "Davighi-Greljo-Ponce Diaz arxiv:2609.01712",
+    "Di Luzio et al arxiv:2609.16110"
+  ],
+  "status": "PASS_Z9_SCALAR_PQ_AND_COLOR_ANOMALY_NECESSARY_FILTER",
+  "two_pairs_with_A_and_A_dagger_masses_color_mixed_X_anomaly": "-X_A/2 + X_A/2 = 0"
+}

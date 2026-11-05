@@ -1,0 +1,317 @@
+{
+  "UV_mu_GeV": 1316300369060598.2,
+  "exact_Z9_proton_dim6_charge_screens": [
+    {
+      "all_nonzero_mod_Z9": true,
+      "family": 0,
+      "lepton_charge": -9,
+      "proton_decay_operator_X_charges": {
+        "QQQL": -6,
+        "ucdcdcNc": 6,
+        "ucucdcec": 6
+      }
+    },
+    {
+      "all_nonzero_mod_Z9": true,
+      "family": 1,
+      "lepton_charge": 0,
+      "proton_decay_operator_X_charges": {
+        "QQQL": 3,
+        "ucdcdcNc": -3,
+        "ucucdcec": -3
+      }
+    },
+    {
+      "all_nonzero_mod_Z9": true,
+      "family": 2,
+      "lepton_charge": 0,
+      "proton_decay_operator_X_charges": {
+        "QQQL": 3,
+        "ucdcdcNc": -3,
+        "ucucdcec": -3
+      }
+    }
+  ],
+  "heavy_vectorlike_mass_scan": [
+    {
+      "K_UV": [
+        [
+          6.653653354784762,
+          -2.6113074041133206
+        ],
+        [
+          -2.6113074041133206,
+          435.4655693663825
+        ]
+      ],
+      "K_UV_oneloop": [
+        [
+          6.662700063187443,
+          -2.5877558086057113
+        ],
+        [
+          -2.5877558086057113,
+          436.64771003059707
+        ]
+      ],
+      "K_at_threshold": [
+        [
+          7.71604938271605,
+          0.0
+        ],
+        [
+          0.0,
+          493.8271604938272
+        ]
+      ],
+      "K_min_eigenvalue": 6.637752039424015,
+      "MQ_GeV": 10000000000.0,
+      "g2_UV": 0.5466395695033544,
+      "g3_UV": 0.5705960688396513
+    },
+    {
+      "K_UV": [
+        [
+          6.656846219765583,
+          -2.592354153011738
+        ],
+        [
+          -2.592354153011738,
+          435.5799470923867
+        ]
+      ],
+      "K_UV_oneloop": [
+        [
+          6.665792082561106,
+          -2.569203692363733
+        ],
+        [
+          -2.569203692363733,
+          436.759022728049
+        ]
+      ],
+      "K_at_threshold": [
+        [
+          7.620105845325611,
+          -0.22457940703294976
+        ],
+        [
+          -0.22457940703294976,
+          488.5058514337961
+        ]
+      ],
+      "K_min_eigenvalue": 6.641178948458499,
+      "MQ_GeV": 30000000000.0,
+      "g2_UV": 0.5442914347267115,
+      "g3_UV": 0.5687810567865621
+    },
+    {
+      "K_UV": [
+        [
+          6.660335314832935,
+          -2.571610458829959
+        ],
+        [
+          -2.571610458829959,
+          435.7050513717905
+        ]
+      ],
+      "K_UV_oneloop": [
+        [
+          6.66918063671687,
+          -2.5488723674291514
+        ],
+        [
+          -2.5488723674291514,
+          436.8810106776565
+        ]
+      ],
+      "K_at_threshold": [
+        [
+          7.514987032073573,
+          -0.47067419468189636
+        ],
+        [
+          -0.47067419468189636,
+          482.67329248036145
+        ]
+      ],
+      "K_min_eigenvalue": 6.644922136349658,
+      "MQ_GeV": 100000000000.0,
+      "g2_UV": 0.5417559650475372,
+      "g3_UV": 0.5668162775922264
+    },
+    {
+      "K_UV": [
+        [
+          6.66698222589273,
+          -2.5320101972320317
+        ],
+        [
+          -2.5320101972320317,
+          435.9436565150062
+        ]
+      ],
+      "K_UV_oneloop": [
+        [
+          6.675661210246298,
+          -2.509988926252591
+        ],
+        [
+          -2.509988926252591,
+          437.1143113247158
+        ]
+      ],
+      "K_at_threshold": [
+        [
+          7.314015246039191,
+          -0.9412740862175544
+        ],
+        [
+          -0.9412740862175544,
+          471.5157137871109
+        ]
+      ],
+      "K_min_eigenvalue": 6.652048144923321,
+      "MQ_GeV": 1000000000000.0,
+      "g2_UV": 0.5370129143854557,
+      "g3_UV": 0.5631263157557918
+    },
+    {
+      "K_UV": [
+        [
+          6.670142833770604,
+          -2.5131463161670635
+        ],
+        [
+          -2.5131463161670635,
+          436.05721725886406
+        ]
+      ],
+      "K_UV_oneloop": [
+        [
+          6.67875322961996,
+          -2.491436810010613
+        ],
+        [
+          -2.491436810010613,
+          437.2256240221677
+        ]
+      ],
+      "K_at_threshold": [
+        [
+          7.21815466233498,
+          -1.1657873197442783
+        ],
+        [
+          -1.1657873197442783,
+          466.19077659593046
+        ]
+      ],
+      "K_min_eigenvalue": 6.655434221333585,
+      "MQ_GeV": 3000000000000.0,
+      "g2_UV": 0.5347971271517368,
+      "g3_UV": 0.5613957704041128
+    },
+    {
+      "K_UV": [
+        [
+          6.673599347121462,
+          -2.4924938370016476
+        ],
+        [
+          -2.4924938370016476,
+          436.1814721554065
+        ]
+      ],
+      "K_UV_oneloop": [
+        [
+          6.682141783775725,
+          -2.4711054850760314
+        ],
+        [
+          -2.4711054850760314,
+          437.3476119717753
+        ]
+      ],
+      "K_at_threshold": [
+        [
+          7.113118686013533,
+          -1.4118205719023649
+        ],
+        [
+          -1.4118205719023649,
+          460.354040428523
+        ]
+      ],
+      "K_min_eigenvalue": 6.659135546294395,
+      "MQ_GeV": 10000000000000.0,
+      "g2_UV": 0.5324026012390647,
+      "g3_UV": 0.5595206564950082
+    }
+  ],
+  "lowest_PQ_breaker_still": "Sdag T\u00b2 (dimension 3); scalar potential contains a physical phase-sensitive cubic regardless of quartic BFB",
+  "missing_from_true_complete_uv": "No Yukawa beta functions, no full scalar quartic RG/bounce metastability, no finite matching beyond sharp leading-log decoupling, no threshold for broken gauge boson, no actual proton decay Wilson coefficients/renormalization, no LFV limits, no precision matching to data.",
+  "model_consistency_assumptions": "Unbroken U1X above mu0=1e10; both scalar vevs and physical scalars and sterile neutrino masses below mu0; vectorlike SM,X-Dirac mass MQ may exceed mu0 without X breaking. These scales are independent fiducial inputs.",
+  "one_loop_B_vectorlike_increment": [
+    [
+      0.22222222222222143,
+      1.3333333333333357
+    ],
+    [
+      1.3333333333333357,
+      8.0
+    ]
+  ],
+  "one_loop_exact_sharp_decoupling_identity": "K_UV(MQ)-K_UV(MQ=mu0)=B_Q/(8pi\u00b2) ln(MQ/mu0) with all light fields active.",
+  "reference_mu_GeV": 10000000000.0,
+  "references": [
+    "Davidson Gorbahn PRD114 055020 2026",
+    "E6 G2 SU3A embedding EPJC 2026 threshold uncertainty"
+  ],
+  "status": "PASS_SHARP_VECTORLIKE_THRESHOLD_TWOLOOP_SCALAR_BFB_PROTON_GUARDS",
+  "tree_level_bounded_below_examples": [
+    {
+      "bounded_from_below_quartic": false,
+      "copositivity_margin": -0.12021749413847882,
+      "lambdaS": 0.12,
+      "lambdaT": 0.11,
+      "lambdaTS": -0.35,
+      "quartic_at_analytic_test_direction": -0.1584090909090909
+    },
+    {
+      "bounded_from_below_quartic": false,
+      "copositivity_margin": -0.010217494138478833,
+      "lambdaS": 0.12,
+      "lambdaT": 0.11,
+      "lambdaTS": -0.24,
+      "quartic_at_analytic_test_direction": -0.010909090909090896
+    },
+    {
+      "bounded_from_below_quartic": true,
+      "copositivity_margin": 0.029782505861521147,
+      "lambdaS": 0.12,
+      "lambdaT": 0.11,
+      "lambdaTS": -0.2,
+      "quartic_at_analytic_test_direction": 0.02909090909090907
+    },
+    {
+      "bounded_from_below_quartic": true,
+      "copositivity_margin": 0.22978250586152116,
+      "lambdaS": 0.12,
+      "lambdaT": 0.11,
+      "lambdaTS": 0.0,
+      "quartic_at_analytic_test_direction": 0.12
+    },
+    {
+      "bounded_from_below_quartic": true,
+      "copositivity_margin": 0.5297825058615211,
+      "lambdaS": 0.12,
+      "lambdaT": 0.11,
+      "lambdaTS": 0.3,
+      "quartic_at_analytic_test_direction": 0.12
+    }
+  ],
+  "tree_level_scalar_quartic_potential": "lambdaT*abs(T)^4+lambdaS*abs(S)^4+lambdaTS*abs(T)^2*abs(S)^2",
+  "two_loop_reference_no_threshold_matches_prior_baseline": true
+}

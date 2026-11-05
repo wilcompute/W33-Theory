@@ -1,0 +1,103 @@
+{
+  "exact_predictions_when_masses_nondegenerate_and_s13_nonzero": {
+    "abs_sin_deltaCP": 1,
+    "mu_tau_mass_eigenstate_amplitude_equal": true,
+    "theta23_degrees": 45
+  },
+  "extra_assumption_needed": "Explicit generalized CP or residual flavor symmetry aligned with charged lepton mass basis, compatible with X gauge charges and full Higgs/sterile content.",
+  "free_complex_symmetric_structure": "[[a,b,b*],[b,c,d],[b*,d,c*]]; a,d real; b,c complex",
+  "generalized_CP_equation": "P_mu_tau Mnu* P_mu_tau = Mnu",
+  "not_done": "No combined UV symmetry action, no charged-lepton basis derivation, no neutrino global-fit likelihood or absolute mass prediction. The example random matrices do NOT fit NuFIT angles/splittings.",
+  "original_X_seesaw_alone_enforces_reflection": false,
+  "random_symmetric_nontrivial_models": [
+    {
+      "Jarlskog": -0.07734279975795905,
+      "mass_matrix_det_abs": 0.04953899999999999,
+      "mu_tau_mode_probability_max_difference": 1.942890293094024e-16,
+      "sin_delta_CP": -1.0000000000000007,
+      "singular_masses": [
+        0.17731585041396855,
+        0.3741096856269332,
+        0.7467938352129646
+      ],
+      "theta12_deg": 27.2354643941958,
+      "theta13_deg": 31.6102809245352,
+      "theta23_deg": 44.99999999999998
+    },
+    {
+      "Jarlskog": 0.09416469174405265,
+      "mass_matrix_det_abs": 0.13104200000000002,
+      "mu_tau_mode_probability_max_difference": 3.885780586188048e-16,
+      "sin_delta_CP": 1.0000000000000002,
+      "singular_masses": [
+        0.402460986499732,
+        0.4803307969185539,
+        0.677869810418822
+      ],
+      "theta12_deg": 42.39467337038095,
+      "theta13_deg": 30.936599220254795,
+      "theta23_deg": 45.00000000000003
+    },
+    {
+      "Jarlskog": 0.06949478998781389,
+      "mass_matrix_det_abs": 0.027360000000000002,
+      "mu_tau_mode_probability_max_difference": 1.6653345369377348e-16,
+      "sin_delta_CP": 1.0000000000000002,
+      "singular_masses": [
+        0.09899063522620144,
+        0.38963499423661635,
+        0.709355640989585
+      ],
+      "theta12_deg": 65.64278818741258,
+      "theta13_deg": 28.797484562202687,
+      "theta23_deg": 44.99999999999999
+    },
+    {
+      "Jarlskog": 0.03960549000542263,
+      "mass_matrix_det_abs": 0.099876,
+      "mu_tau_mode_probability_max_difference": 5.551115123125783e-16,
+      "sin_delta_CP": 1.0000000000000009,
+      "singular_masses": [
+        0.3361005799052243,
+        0.45975732731867375,
+        0.6463432525865507
+      ],
+      "theta12_deg": 62.96830516532407,
+      "theta13_deg": 11.781187556611336,
+      "theta23_deg": 44.999999999999986
+    },
+    {
+      "Jarlskog": 0.08408317129274466,
+      "mass_matrix_det_abs": 0.04123999999999999,
+      "mu_tau_mode_probability_max_difference": 8.881784197001252e-16,
+      "sin_delta_CP": 0.9999999999999997,
+      "singular_masses": [
+        0.238753526555436,
+        0.32151587168200646,
+        0.5372376548734294
+      ],
+      "theta12_deg": 58.22991160847443,
+      "theta13_deg": 30.18509100510182,
+      "theta23_deg": 44.99999999999998
+    }
+  ],
+  "references": [
+    "Grimus and Lavoura mu-tau reflection 2004",
+    "NuFIT v6.1 2025"
+  ],
+  "status": "PASS_MU_TAU_REFLECTION_GENERATES_PREDICTIVE_ANGLE_CP_SUM_RULE",
+  "symmetry_violating_control": {
+    "Jarlskog": -0.0619959170558224,
+    "mass_matrix_det_abs": 0.042455025391583495,
+    "mu_tau_mode_probability_max_difference": 0.13039304196060636,
+    "sin_delta_CP": -0.995536076961937,
+    "singular_masses": [
+      0.17688128254675606,
+      0.3326748621650516,
+      0.7214848910185706
+    ],
+    "theta12_deg": 21.070907103937145,
+    "theta13_deg": 29.709613865183684,
+    "theta23_deg": 48.39614223193933
+  }
+}

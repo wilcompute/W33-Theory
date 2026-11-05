@@ -1,0 +1,157 @@
+{
+  "DAG_forward_edge_presentations": 32768,
+  "N": 6,
+  "chain_height_histogram": {
+    "height_1": {
+      "DAG_presentations": 1,
+      "unique_posets": 1
+    },
+    "height_2": {
+      "DAG_presentations": 1329,
+      "unique_posets": 1329
+    },
+    "height_3": {
+      "DAG_presentations": 10318,
+      "unique_posets": 2787
+    },
+    "height_4": {
+      "DAG_presentations": 13696,
+      "unique_posets": 661
+    },
+    "height_5": {
+      "DAG_presentations": 6400,
+      "unique_posets": 45
+    },
+    "height_6": {
+      "DAG_presentations": 1024,
+      "unique_posets": 1
+    }
+  },
+  "exact_multiplicity_law": "m(C)=2^(R(C)-L(C)); R=#related pairs, L=#Hasse cover relations",
+  "maximum_presentation_multiplicity": 1024,
+  "mean_chain_height_DAG_presentation_measure": 3.861724853515625,
+  "mean_chain_height_unique_naturally_labeled_poset_measure": 2.880389718076285,
+  "most_common_multiplicity": 1,
+  "multiplicity_distribution": {
+    "1": 1330,
+    "1024": 1,
+    "128": 24,
+    "16": 337,
+    "2": 1315,
+    "256": 10,
+    "32": 138,
+    "4": 1176,
+    "512": 2,
+    "64": 48,
+    "8": 443
+  },
+  "phase_partition_function_measure_comparison": [
+    {
+      "absolute_complex_amplitude_disagreement": 0.0,
+      "distinct_naturally_labeled_poset_measure_abs_amplitude": 1.0,
+      "kappa": 0,
+      "poset_measure_amplitude_real_imag": [
+        1.0,
+        0.0
+      ],
+      "presentation_measure_abs_amplitude": 1.0,
+      "presentation_measure_amplitude_real_imag": [
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "absolute_complex_amplitude_disagreement": 0.1561036952935757,
+      "distinct_naturally_labeled_poset_measure_abs_amplitude": 0.5679040102136202,
+      "kappa": 0.1,
+      "poset_measure_amplitude_real_imag": [
+        0.3869268281618832,
+        0.4156953144615612
+      ],
+      "presentation_measure_abs_amplitude": 0.4193539226271881,
+      "presentation_measure_amplitude_real_imag": [
+        0.2541980405796043,
+        0.3335282125822334
+      ]
+    },
+    {
+      "absolute_complex_amplitude_disagreement": 0.07515338624384015,
+      "distinct_naturally_labeled_poset_measure_abs_amplitude": 0.06913216160737486,
+      "kappa": 0.25,
+      "poset_measure_amplitude_real_imag": [
+        0.023840563513938706,
+        0.06489131914089934
+      ],
+      "presentation_measure_abs_amplitude": 0.04143277282690923,
+      "presentation_measure_amplitude_real_imag": [
+        -0.03634796625668704,
+        0.01988718213143853
+      ]
+    },
+    {
+      "absolute_complex_amplitude_disagreement": 0.10544742068077424,
+      "distinct_naturally_labeled_poset_measure_abs_amplitude": 0.09441959899594929,
+      "kappa": 0.5,
+      "poset_measure_amplitude_real_imag": [
+        0.09441959676180013,
+        -2.054008106744074e-05
+      ],
+      "presentation_measure_abs_amplitude": 0.01287867683475942,
+      "presentation_measure_amplitude_real_imag": [
+        -0.010795036873043949,
+        -0.007023353609479621
+      ]
+    },
+    {
+      "absolute_complex_amplitude_disagreement": 0.08938692063107866,
+      "distinct_naturally_labeled_poset_measure_abs_amplitude": 0.027344525034972263,
+      "kappa": 1,
+      "poset_measure_amplitude_real_imag": [
+        0.010161982855505595,
+        -0.025386160675309594
+      ],
+      "presentation_measure_abs_amplitude": 0.11498780200966423,
+      "presentation_measure_amplitude_real_imag": [
+        0.007600123259399963,
+        -0.11473636187998845
+      ]
+    },
+    {
+      "absolute_complex_amplitude_disagreement": 0.046768025288524424,
+      "distinct_naturally_labeled_poset_measure_abs_amplitude": 0.0345412834081321,
+      "kappa": 2,
+      "poset_measure_amplitude_real_imag": [
+        0.034535508818007626,
+        -0.0006315775187727739
+      ],
+      "presentation_measure_abs_amplitude": 0.04674104958973694,
+      "presentation_measure_amplitude_real_imag": [
+        0.016436816158928835,
+        -0.04375564867886001
+      ]
+    },
+    {
+      "absolute_complex_amplitude_disagreement": 0.18216160004016377,
+      "distinct_naturally_labeled_poset_measure_abs_amplitude": 0.019071310116086235,
+      "kappa": 3.141592653589793,
+      "poset_measure_amplitude_real_imag": [
+        -0.019071310116086235,
+        5.724851408979805e-16
+      ],
+      "presentation_measure_abs_amplitude": 0.20123291015625,
+      "presentation_measure_amplitude_real_imag": [
+        -0.20123291015625,
+        2.1991218454888443e-16
+      ]
+    }
+  ],
+  "pitfalls": "These are partial orders on a fixed chronological index; dedup by closure is NOT quotient by all relabelings or automorphism groups. No BDG boundary term/action normalization, no quantum measure or causality constraints chosen by an action.",
+  "prior_art": [
+    "Rideout Sorkin causal sequential growth 2000",
+    "Causal sets and an emerging continuum GRG 2024",
+    "Adamson Wallden PRResearch 8 023188 2026"
+  ],
+  "scientific_result": "Transitive-closure representation inserts an exact exponentially varying entropy factor into the path sum. Even after removing that multiplicity the naturally-labelled uniform measure still is not a covariant/unlabeled causal-set gravity measure. No 4D selection or continuum established.",
+  "status": "PASS_EXACT_SIX_EVENT_PRESENTATION_TO_POSET_MEASURE_OBSTRUCTION",
+  "unique_transitively_closed_posets_with_fixed_natural_chronological_labels": 4824
+}

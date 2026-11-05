@@ -1,0 +1,219 @@
+{
+  "combined_physical_dimension": 64,
+  "detuned_pair_exchange": {
+    "couplings": [
+      1.0,
+      1.03,
+      1.11
+    ],
+    "initial_source": "excited_product",
+    "reference_total_excitation_energy_over_omega": 3.0,
+    "time_series": [
+      {
+        "P_source_completely_empty": 2.521620914145285e-31,
+        "S_radiation_bits": -6.406853007629837e-16,
+        "energy_conservation_error": 1.3322676295501878e-15,
+        "mean_radiated_excitation_energy_over_omega": 3.0651645555138728e-30,
+        "mean_remaining_source_excitation_energy_over_omega": 3.0000000000000013,
+        "t_in_inverse_coupling_units": 0
+      },
+      {
+        "P_source_completely_empty": 0.004043358070710184,
+        "S_radiation_bits": 1.8990635808473044,
+        "energy_conservation_error": 4.440892098500626e-16,
+        "mean_radiated_excitation_energy_over_omega": 0.4795930569226183,
+        "mean_remaining_source_excitation_energy_over_omega": 2.5204069430773823,
+        "t_in_inverse_coupling_units": 0.39269908169872414
+      },
+      {
+        "P_source_completely_empty": 0.15339181508461444,
+        "S_radiation_bits": 2.9769696583458787,
+        "energy_conservation_error": 1.7763568394002505e-15,
+        "mean_radiated_excitation_energy_over_omega": 1.6095177754945273,
+        "mean_remaining_source_excitation_energy_over_omega": 1.3904822245054744,
+        "t_in_inverse_coupling_units": 0.7853981633974483
+      },
+      {
+        "P_source_completely_empty": 0.6984408858389782,
+        "S_radiation_bits": 1.4940468812396566,
+        "energy_conservation_error": 1.7763568394002505e-15,
+        "mean_radiated_excitation_energy_over_omega": 2.6635510169959447,
+        "mean_remaining_source_excitation_energy_over_omega": 0.33644898300405707,
+        "t_in_inverse_coupling_units": 1.1780972450961724
+      },
+      {
+        "P_source_completely_empty": 0.9682869600886583,
+        "S_radiation_bits": 0.2149388886484604,
+        "energy_conservation_error": 2.220446049250313e-15,
+        "mean_radiated_excitation_energy_over_omega": 2.968221366778655,
+        "mean_remaining_source_excitation_energy_over_omega": 0.03177863322134734,
+        "t_in_inverse_coupling_units": 1.5707963267948966
+      },
+      {
+        "P_source_completely_empty": 0.05418135454828575,
+        "S_radiation_bits": 2.8004884562909975,
+        "energy_conservation_error": 8.881784197001252e-16,
+        "mean_radiated_excitation_energy_over_omega": 1.1818200498150047,
+        "mean_remaining_source_excitation_energy_over_omega": 1.818179950184996,
+        "t_in_inverse_coupling_units": 2.356194490192345
+      },
+      {
+        "P_source_completely_empty": 1.7291060005927107e-30,
+        "S_radiation_bits": 0.5871722033982427,
+        "energy_conservation_error": 4.440892098500626e-16,
+        "mean_radiated_excitation_energy_over_omega": 0.12359975324776135,
+        "mean_remaining_source_excitation_energy_over_omega": 2.876400246752239,
+        "t_in_inverse_coupling_units": 3.141592653589793
+      }
+    ]
+  },
+  "fixed_time_independent_emission_Hamiltonian": "sum_{j=0}^2 g_j (sigma+_source,j sigma-_radiation,j + h.c.) built on exact Gauss-isometry source basis",
+  "full_microscopic_matter_links_dimension": 128,
+  "identical_mode_pair_exchange": {
+    "couplings": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "initial_source": "excited_product",
+    "reference_total_excitation_energy_over_omega": 3.0,
+    "time_series": [
+      {
+        "P_source_completely_empty": 2.2111703207187683e-32,
+        "S_radiation_bits": -6.406853007629837e-16,
+        "energy_conservation_error": 1.3322676295501878e-15,
+        "mean_radiated_excitation_energy_over_omega": 9.02363068159802e-31,
+        "mean_remaining_source_excitation_energy_over_omega": 3.0000000000000013,
+        "t_in_inverse_coupling_units": 0
+      },
+      {
+        "P_source_completely_empty": 0.0031407832308854616,
+        "S_radiation_bits": 1.8026281100785686,
+        "energy_conservation_error": 1.7763568394002505e-15,
+        "mean_radiated_excitation_energy_over_omega": 0.43933982822017925,
+        "mean_remaining_source_excitation_energy_over_omega": 2.5606601717798227,
+        "t_in_inverse_coupling_units": 0.39269908169872414
+      },
+      {
+        "P_source_completely_empty": 0.12500000000000017,
+        "S_radiation_bits": 3.000000000000001,
+        "energy_conservation_error": 2.6645352591003757e-15,
+        "mean_radiated_excitation_energy_over_omega": 1.5000000000000016,
+        "mean_remaining_source_excitation_energy_over_omega": 1.5000000000000009,
+        "t_in_inverse_coupling_units": 0.7853981633974483
+      },
+      {
+        "P_source_completely_empty": 0.6218592167691154,
+        "S_radiation_bits": 1.8026281100785664,
+        "energy_conservation_error": 2.6645352591003757e-15,
+        "mean_radiated_excitation_energy_over_omega": 2.560660171779824,
+        "mean_remaining_source_excitation_energy_over_omega": 0.4393398282201785,
+        "t_in_inverse_coupling_units": 1.1780972450961724
+      },
+      {
+        "P_source_completely_empty": 1.0000000000000009,
+        "S_radiation_bits": -9.610279511444756e-16,
+        "energy_conservation_error": 2.6645352591003757e-15,
+        "mean_radiated_excitation_energy_over_omega": 3.0000000000000027,
+        "mean_remaining_source_excitation_energy_over_omega": 2.735707394401308e-30,
+        "t_in_inverse_coupling_units": 1.5707963267948966
+      },
+      {
+        "P_source_completely_empty": 0.12499999999999974,
+        "S_radiation_bits": 3.0000000000000004,
+        "energy_conservation_error": 2.220446049250313e-15,
+        "mean_radiated_excitation_energy_over_omega": 1.4999999999999996,
+        "mean_remaining_source_excitation_energy_over_omega": 1.5000000000000027,
+        "t_in_inverse_coupling_units": 2.356194490192345
+      },
+      {
+        "P_source_completely_empty": 1.739548292474518e-31,
+        "S_radiation_bits": -6.406853007629837e-16,
+        "energy_conservation_error": 1.3322676295501878e-15,
+        "mean_radiated_excitation_energy_over_omega": 6.004571095161879e-30,
+        "mean_remaining_source_excitation_energy_over_omega": 3.0000000000000013,
+        "t_in_inverse_coupling_units": 3.141592653589793
+      }
+    ]
+  },
+  "limitation": "Dressed operator on physical Gauss sector assumes encoded sources; does not implement a local continuum gauge QFT, Hawking mode spectrum, horizon geometry, backreaction of curved spacetime, density-of-states growth, or an autonomous moving boundary.",
+  "local_dressed_source_flip_checks": 24,
+  "max_energy_commutator_infinity_norm": 0.0,
+  "number_energy_operator": "omega (N_logical_source+N_radiation), omega=1 fixed. No gravitational ADM mass.",
+  "physical_gauge_source_dimension": 8,
+  "prior_art": [
+    "Jaynes Cummings excitation-conserving Rabi exchange",
+    "Page 1993",
+    "Akil et al arxiv:2507.17031 quantum-controlled unitary evaporation"
+  ],
+  "radiation_dimension": 8,
+  "status": "PASS_AUTONOMOUS_GAUSS_DRESSED_EXCHANGE_ENERGY_PAGE_RECURRENCE",
+  "superposed_input_GHZ": {
+    "couplings": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "initial_source": "GHZ",
+    "reference_total_excitation_energy_over_omega": 1.4999999999999996,
+    "time_series": [
+      {
+        "P_source_completely_empty": 0.4999999999999999,
+        "S_radiation_bits": -3.2034265038149176e-16,
+        "energy_conservation_error": 1.1102230246251565e-15,
+        "mean_radiated_excitation_energy_over_omega": 4.432733723248571e-31,
+        "mean_remaining_source_excitation_energy_over_omega": 1.5000000000000007,
+        "t_in_inverse_coupling_units": 0
+      },
+      {
+        "P_source_completely_empty": 0.5015703916154426,
+        "S_radiation_bits": 1.1131788272227003,
+        "energy_conservation_error": 1.1102230246251565e-15,
+        "mean_radiated_excitation_energy_over_omega": 0.2196699141100896,
+        "mean_remaining_source_excitation_energy_over_omega": 1.2803300858899112,
+        "t_in_inverse_coupling_units": 0.39269908169872414
+      },
+      {
+        "P_source_completely_empty": 0.5625,
+        "S_radiation_bits": 1.9747130125793704,
+        "energy_conservation_error": 1.1102230246251565e-15,
+        "mean_radiated_excitation_energy_over_omega": 0.7500000000000007,
+        "mean_remaining_source_excitation_energy_over_omega": 0.75,
+        "t_in_inverse_coupling_units": 0.7853981633974483
+      },
+      {
+        "P_source_completely_empty": 0.8109296083845574,
+        "S_radiation_bits": 1.1131788272226988,
+        "energy_conservation_error": 8.881784197001252e-16,
+        "mean_radiated_excitation_energy_over_omega": 1.2803300858899114,
+        "mean_remaining_source_excitation_energy_over_omega": 0.21966991411008915,
+        "t_in_inverse_coupling_units": 1.1780972450961724
+      },
+      {
+        "P_source_completely_empty": 1.0,
+        "S_radiation_bits": -0.0,
+        "energy_conservation_error": 1.1102230246251565e-15,
+        "mean_radiated_excitation_energy_over_omega": 1.5000000000000007,
+        "mean_remaining_source_excitation_energy_over_omega": 1.3566972683960954e-30,
+        "t_in_inverse_coupling_units": 1.5707963267948966
+      },
+      {
+        "P_source_completely_empty": 0.5624999999999998,
+        "S_radiation_bits": 1.9747130125793704,
+        "energy_conservation_error": 1.1102230246251565e-15,
+        "mean_radiated_excitation_energy_over_omega": 0.7499999999999996,
+        "mean_remaining_source_excitation_energy_over_omega": 0.7500000000000011,
+        "t_in_inverse_coupling_units": 2.356194490192345
+      },
+      {
+        "P_source_completely_empty": 0.4999999999999999,
+        "S_radiation_bits": -3.2034265038149176e-16,
+        "energy_conservation_error": 1.1102230246251565e-15,
+        "mean_radiated_excitation_energy_over_omega": 2.994377385825895e-30,
+        "mean_remaining_source_excitation_energy_over_omega": 1.5000000000000007,
+        "t_in_inverse_coupling_units": 3.141592653589793
+      }
+    ]
+  },
+  "why_closed_system_recurs": "Without a sink or expanding field bath, coherent reversible unitary exchange reabsorbs photons. Perfect transfer at t=pi/2 and full return at t=pi are Rabi revivals, not actual thermal evaporation."
+}
