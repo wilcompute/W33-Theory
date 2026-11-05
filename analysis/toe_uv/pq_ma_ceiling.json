@@ -1,0 +1,8 @@
+{
+ "ceiling_ueV_by_instability_scale": {
+  "1e+10": 28.5,
+  "3e+10": 114.0,
+  "1e+11": 211.11111111111111
+ },
+ "note": "coarse grid of pq_gates.json, y_Q <= 1"
+}

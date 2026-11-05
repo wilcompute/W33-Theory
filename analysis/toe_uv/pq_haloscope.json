@@ -1,0 +1,13 @@
+{
+ "DFSZ_ADMX": 0.52595,
+ "KSVZ_ADMX": 1.0,
+ "KSVZ_CAPP": 0.8663,
+ "KSVZ_HAYSTAC": 0.0101,
+ "ModelA_25_60": 0.0,
+ "ModelA_20_220": 0.0,
+ "ModelA_NDW5_25_60": 0.0,
+ "coverage_25_60": 0.21305,
+ "best_ratio_25_60": 34.60688498564331,
+ "coverage_60_220": 0.05585,
+ "best_ratio_60_220": 75.17408017408607
+}
