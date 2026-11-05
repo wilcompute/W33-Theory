@@ -1,0 +1,181 @@
+{
+  "SM_three_family_polynomial_anomaly_tests": {
+    "SU2_squared_X": "0",
+    "SU3_squared_X": "0",
+    "X_cubed": "0",
+    "Y_X_squared": "0",
+    "Y_squared_X": "0",
+    "gravitational_X": "0"
+  },
+  "chiral_field_rows": 18,
+  "generation_universal_no_go": {
+    "QQQL_X_charge_after_anomaly_cancellation": "0",
+    "if_only_SM_doublets_and_generation_universal_X_no_proton_selection": true,
+    "universal_lepton_doublet_charge_from_anomaly": "-3*q",
+    "weak_mixed_anomaly_equation": "3*l + 9*q"
+  },
+  "generic_seesaw_renormalizable_textures": {
+    "Majorana_renormalizable_sources": {
+      "00": "S",
+      "01": "T",
+      "02": "T",
+      "11": "bare",
+      "12": "bare",
+      "22": "bare"
+    },
+    "Ynu_renormalizable_allowed_3x3": [
+      [
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        true,
+        true
+      ],
+      [
+        false,
+        true,
+        true
+      ]
+    ],
+    "electron_mixing_with_other_flavors_nonzero": true,
+    "light_mass_matrix": [
+      [
+        -0.00035835207960460425,
+        0.00025575934713715706,
+        0.0001935928802482718
+      ],
+      [
+        0.00025575934713715695,
+        -0.0020212475985616,
+        -0.0006301045959836456
+      ],
+      [
+        0.0001935928802482718,
+        -0.0006301045959836456,
+        -0.002360999819378992
+      ]
+    ],
+    "light_mass_matrix_rank": 3,
+    "light_symmetric_matrix_spectral_eigenvalues": [
+      -0.0028816999957610983,
+      -0.0015442974425770078,
+      -0.0003146020592070921
+    ],
+    "not_a_mass_fit_or_PMNS_prediction": true,
+    "one_arbitrary_dimensionless_MR": [
+      [
+        5.0,
+        1.2,
+        0.9
+      ],
+      [
+        1.2,
+        3.5,
+        0.6
+      ],
+      [
+        0.9,
+        0.6,
+        4.0
+      ]
+    ],
+    "one_arbitrary_dimensionless_md": [
+      [
+        0.04,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.08,
+        0.02
+      ],
+      [
+        0.0,
+        0.015,
+        0.095
+      ]
+    ]
+  },
+  "new_claims": "No originality claim. Executable internal consistency check: gauged flavor nonuniversality repairs minimal B-L proton protection but minimal two-scalar pattern produces an unsuppressed cubic and no high-quality axion.",
+  "normalization": "X=3(B-3Le) with primitive integer quark charge +1",
+  "prior_work": [
+    "Greljo Ponce D\u00edaz Thomsen arxiv:2505.18259 (2025)",
+    "Davighi Greljo Ponce D\u00edaz arxiv:2609.01712 (2026)"
+  ],
+  "proton_operators": [
+    {
+      "all_nonzero_mod_Z9": true,
+      "family": 0,
+      "lepton_charge": -9,
+      "proton_decay_operator_X_charges": {
+        "QQQL": -6,
+        "ucdcdcNc": 6,
+        "ucucdcec": 6
+      }
+    },
+    {
+      "all_nonzero_mod_Z9": true,
+      "family": 1,
+      "lepton_charge": 0,
+      "proton_decay_operator_X_charges": {
+        "QQQL": 3,
+        "ucdcdcNc": -3,
+        "ucucdcec": -3
+      }
+    },
+    {
+      "all_nonzero_mod_Z9": true,
+      "family": 2,
+      "lepton_charge": 0,
+      "proton_decay_operator_X_charges": {
+        "QQQL": 3,
+        "ucdcdcNc": -3,
+        "ucucdcec": -3
+      }
+    }
+  ],
+  "qualifications": "SU2 Witten anomaly 12 doublets unchanged. Full discrete global-anomaly constraints, cosmology, charged-lepton mixing, neutrino fit, thermal history, GUT and axion heavy quarks not included. Continuous anomaly-free U1 broken by primitive integer-charge vevs is a necessary standard discrete-gauge consistency construction; this is not a direct nonperturbative anomaly proof.",
+  "scalar_X_charges": {
+    "H": 0,
+    "S": -18,
+    "T": -9
+  },
+  "scalar_phase_quality": {
+    "cannot_claim_PQ_quality_or_light_QCD_axion_from_this_scalar_inventory": true,
+    "conditional_QCD_quality_example": {
+      "QCD_topological_susceptibility_GeV4": 3.26653399296e-05,
+      "conditional_sufficient_phase_uniform_max_abs_cubic_coefficient_GeV": 4.619576674796773e-48,
+      "critical_warning": "The theta quality estimate is a sufficient all-phase criterion in a conventional QCD axion potential; no axion solution exists for a generic unsuppressed cubic here.",
+      "phase_uniform_theta_target": 1e-10,
+      "relative_phase_canonical_decay_constant_GeV": 44721359549.99579,
+      "relative_phase_mass_if_cubic_coefficient_equals_vT_GeV": 188030154654.31967,
+      "vS_GeV": 100000000000.0,
+      "vT_GeV": 100000000000.0
+    },
+    "example_operator": "Sdag T^2 + h.c.",
+    "independent_relative_axion_shift_is_explicitly_broken_by_renormalizable_cubic": true,
+    "lowest_gauge_invariant_phase_sensitive_scalar_dimension": 3,
+    "primitive_degree3_monoms": [
+      {
+        "S": 1,
+        "Sdag": 0,
+        "T": 0,
+        "Tdag": 2
+      },
+      {
+        "S": 0,
+        "Sdag": 1,
+        "T": 2,
+        "Tdag": 0
+      }
+    ],
+    "relative_angle": "2 theta_T - theta_S",
+    "scope": "Exact polynomial gauge-invariance test; depends on both vevs and nonzero coefficient. A model may forbid this term with an additional exact selection rule or add a different charge spectrum."
+  },
+  "status": "PASS_B_MINUS_3LE_Z9_SEESAW_PROTON_AND_CUBIC_PQ_OBSTRUCTION",
+  "unbroken_discrete_gauge_group": "Z_9"
+}

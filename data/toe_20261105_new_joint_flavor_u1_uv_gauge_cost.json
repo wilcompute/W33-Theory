@@ -1,0 +1,111 @@
+{
+  "KXX_positive_necessary_coupling_upper_bound_at_initial_scale": 0.13224522852499113,
+  "Weyl_and_complex_scalar_B_before_Q": [
+    [
+      6.833333333333334,
+      16.0
+    ],
+    [
+      16.0,
+      375.0
+    ]
+  ],
+  "benchmark_UV_GeV": 1316300369060598.2,
+  "benchmark_mu_GeV": 10000000000.0,
+  "change_of_gauge_basis_invariant_current_errors": [
+    3.469446951953614e-18,
+    1.6653345369377348e-16,
+    2.7755575615628914e-17
+  ],
+  "charge_normalization": "X=3(B-3Le), primitive quark charge1; rescaling X rescales gX, so raw bXX by itself is NOT invariant.",
+  "critical_warning": "The upper bound is specific to the supplied one-loop particle inventory and start/unification scales, not a measured exclusion. KXX positivity alone is weaker than full matrix positivity.",
+  "diagonal_X_beta_coefficient": 383.0,
+  "full_B_above_vectorlike_threshold": [
+    [
+      7.055555555555556,
+      17.333333333333332
+    ],
+    [
+      17.333333333333332,
+      383.0
+    ]
+  ],
+  "initial_X_coupling_scan": [
+    {
+      "Kmatrix_determinant_at_UV": 5051.27281875243,
+      "Kmatrix_positive_at_UV": true,
+      "gX_at_1e10_GeV": 0.035,
+      "minimum_K_eigenvalue_at_UV": 6.653801006796393,
+      "quark_current_qT_Kinverse_q_if_positive": 0.005664454337039286
+    },
+    {
+      "Kmatrix_determinant_at_UV": 2277.4140169356197,
+      "Kmatrix_positive_at_UV": true,
+      "gX_at_1e10_GeV": 0.05,
+      "minimum_K_eigenvalue_at_UV": 6.642780601688888,
+      "quark_current_qT_Kinverse_q_if_positive": 0.007485717681824858
+    },
+    {
+      "Kmatrix_determinant_at_UV": 653.3808765336794,
+      "Kmatrix_positive_at_UV": true,
+      "gX_at_1e10_GeV": 0.08,
+      "minimum_K_eigenvalue_at_UV": 6.590290230265384,
+      "quark_current_qT_Kinverse_q_if_positive": 0.015729332478477652
+    },
+    {
+      "Kmatrix_determinant_at_UV": 278.60399797938567,
+      "Kmatrix_positive_at_UV": true,
+      "gX_at_1e10_GeV": 0.1,
+      "minimum_K_eigenvalue_at_UV": 6.478437789943036,
+      "quark_current_qT_Kinverse_q_if_positive": 0.03128004301906041
+    },
+    {
+      "Kmatrix_determinant_at_UV": 75.02149604865812,
+      "Kmatrix_positive_at_UV": true,
+      "gX_at_1e10_GeV": 0.12,
+      "minimum_K_eigenvalue_at_UV": 5.6503310053258025,
+      "quark_current_qT_Kinverse_q_if_positive": 0.10484967674967242
+    },
+    {
+      "Kmatrix_determinant_at_UV": -22.08575795870341,
+      "Kmatrix_positive_at_UV": false,
+      "gX_at_1e10_GeV": 0.135,
+      "minimum_K_eigenvalue_at_UV": -3.00260301909797,
+      "quark_current_qT_Kinverse_q_if_positive": null
+    },
+    {
+      "Kmatrix_determinant_at_UV": -91.5460055310279,
+      "Kmatrix_positive_at_UV": false,
+      "gX_at_1e10_GeV": 0.15,
+      "minimum_K_eigenvalue_at_UV": -13.074291771202276,
+      "quark_current_qT_Kinverse_q_if_positive": null
+    },
+    {
+      "Kmatrix_determinant_at_UV": -221.09850675967263,
+      "Kmatrix_positive_at_UV": false,
+      "gX_at_1e10_GeV": 0.2,
+      "minimum_K_eigenvalue_at_UV": -32.35109437077939,
+      "quark_current_qT_Kinverse_q_if_positive": null
+    }
+  ],
+  "initial_hypercharge_coupling": 0.36,
+  "mixed_YX_beta_coefficient": 17.333333333333332,
+  "not_done": "No two-loop RGE; no X gauge boson mass, flavor-changing currents, collider bound, scalar thresholds, UV completion, axion model or realistic neutrino likelihood fit.",
+  "prior_work": [
+    "Davighi-Greljo-Ponce Diaz arxiv:2609.01712",
+    "Greljo-Ponce Diaz-Thomsen arxiv:2505.18259",
+    "two-U1 kinetic mixing via Holdom 1986"
+  ],
+  "scalar_vev_assumption": "X remains unbroken between reference and UV. Both T and S have vevs below reference. This requires separate broken-phase matching below reference.",
+  "status": "PASS_FLAVOR_Z9_PROTON_SEESAW_U1_MATRIX_UV_PRESSURE",
+  "vectorlike_quark_B_increment": [
+    [
+      0.2222222222222222,
+      1.3333333333333333
+    ],
+    [
+      1.3333333333333333,
+      8.0
+    ]
+  ]
+}
