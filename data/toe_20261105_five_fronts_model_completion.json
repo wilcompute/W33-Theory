@@ -1,0 +1,2214 @@
+{
+  "status": "PASS_EXPLICIT_PQ_VARIANT_TENSOR_RGE_AND_GRAVITY_REPAIR_ATTEMPTS",
+  "PQ": {
+    "rows": [
+      {
+        "n": 2,
+        "colored_Dirac_pairs": 3,
+        "singlet_Dirac_pairs": 9,
+        "scalar_X_charges": [
+          2,
+          4
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 223606797749.97897,
+        "leading_scalar_operator_dimension": 3,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": null,
+        "sufficient_quality": false,
+        "gauge_delta_b": [
+          0.8,
+          0.0,
+          2.0
+        ],
+        "one_loop_12_cross_scale_GeV": 6629835192820.18,
+        "third_inverse_coupling_mismatch_at_12": -7.056396055384404
+      },
+      {
+        "n": 3,
+        "colored_Dirac_pairs": 4,
+        "singlet_Dirac_pairs": 12,
+        "scalar_X_charges": [
+          2,
+          6
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 316227766016.83795,
+        "leading_scalar_operator_dimension": 4,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": null,
+        "sufficient_quality": false,
+        "gauge_delta_b": [
+          1.0666666666666667,
+          0.0,
+          2.6666666666666665
+        ],
+        "one_loop_12_cross_scale_GeV": 6149610436225.588,
+        "third_inverse_coupling_mismatch_at_12": -7.3196712158001915
+      },
+      {
+        "n": 4,
+        "colored_Dirac_pairs": 5,
+        "singlet_Dirac_pairs": 15,
+        "scalar_X_charges": [
+          2,
+          8
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 412310562561.76605,
+        "leading_scalar_operator_dimension": 5,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": null,
+        "sufficient_quality": false,
+        "gauge_delta_b": [
+          1.3333333333333333,
+          0.0,
+          3.333333333333333
+        ],
+        "one_loop_12_cross_scale_GeV": 5782031642125.897,
+        "third_inverse_coupling_mismatch_at_12": -7.53547571206547
+      },
+      {
+        "n": 5,
+        "colored_Dirac_pairs": 6,
+        "singlet_Dirac_pairs": 18,
+        "scalar_X_charges": [
+          2,
+          10
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 509901951359.27844,
+        "leading_scalar_operator_dimension": 6,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": null,
+        "sufficient_quality": false,
+        "gauge_delta_b": [
+          1.6,
+          0.0,
+          4.0
+        ],
+        "one_loop_12_cross_scale_GeV": 5491748090969.672,
+        "third_inverse_coupling_mismatch_at_12": -7.715828016186094
+      },
+      {
+        "n": 6,
+        "colored_Dirac_pairs": 7,
+        "singlet_Dirac_pairs": 21,
+        "scalar_X_charges": [
+          2,
+          12
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 608276253029.8219,
+        "leading_scalar_operator_dimension": 7,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": null,
+        "sufficient_quality": false,
+        "gauge_delta_b": [
+          1.8666666666666667,
+          0.0,
+          4.666666666666666
+        ],
+        "one_loop_12_cross_scale_GeV": 5258192221533.897,
+        "third_inverse_coupling_mismatch_at_12": -7.867996911716247
+      },
+      {
+        "n": 7,
+        "colored_Dirac_pairs": 8,
+        "singlet_Dirac_pairs": 24,
+        "scalar_X_charges": [
+          2,
+          14
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 707106781186.5476,
+        "leading_scalar_operator_dimension": 8,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": null,
+        "sufficient_quality": false,
+        "gauge_delta_b": [
+          2.1333333333333333,
+          0.0,
+          5.333333333333333
+        ],
+        "one_loop_12_cross_scale_GeV": 5067939522854.026,
+        "third_inverse_coupling_mismatch_at_12": -7.997034168322401
+      },
+      {
+        "n": 8,
+        "colored_Dirac_pairs": 9,
+        "singlet_Dirac_pairs": 27,
+        "scalar_X_charges": [
+          2,
+          16
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 806225774829.8549,
+        "leading_scalar_operator_dimension": 9,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": null,
+        "sufficient_quality": false,
+        "gauge_delta_b": [
+          2.4,
+          0.0,
+          6.0
+        ],
+        "one_loop_12_cross_scale_GeV": 4911659078035.247,
+        "third_inverse_coupling_mismatch_at_12": -8.106707207524899
+      },
+      {
+        "n": 9,
+        "colored_Dirac_pairs": 10,
+        "singlet_Dirac_pairs": 30,
+        "scalar_X_charges": [
+          2,
+          18
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 905538513813.7417,
+        "leading_scalar_operator_dimension": 10,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": null,
+        "sufficient_quality": false,
+        "gauge_delta_b": [
+          2.6666666666666665,
+          0.0,
+          6.666666666666666
+        ],
+        "one_loop_12_cross_scale_GeV": 4782594299275.423,
+        "third_inverse_coupling_mismatch_at_12": -8.199944970342848
+      },
+      {
+        "n": 10,
+        "colored_Dirac_pairs": 11,
+        "singlet_Dirac_pairs": 33,
+        "scalar_X_charges": [
+          2,
+          20
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 1004987562112.089,
+        "leading_scalar_operator_dimension": 11,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": null,
+        "sufficient_quality": false,
+        "gauge_delta_b": [
+          2.933333333333333,
+          0.0,
+          7.333333333333333
+        ],
+        "one_loop_12_cross_scale_GeV": 4675704591149.222,
+        "third_inverse_coupling_mismatch_at_12": -8.279088270394894
+      },
+      {
+        "n": 11,
+        "colored_Dirac_pairs": 12,
+        "singlet_Dirac_pairs": 36,
+        "scalar_X_charges": [
+          2,
+          22
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 1104536101718.726,
+        "leading_scalar_operator_dimension": 12,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": null,
+        "sufficient_quality": false,
+        "gauge_delta_b": [
+          3.2,
+          0.0,
+          8.0
+        ],
+        "one_loop_12_cross_scale_GeV": 4587140902735.832,
+        "third_inverse_coupling_mismatch_at_12": -8.346045475585107
+      },
+      {
+        "n": 12,
+        "colored_Dirac_pairs": 13,
+        "singlet_Dirac_pairs": 39,
+        "scalar_X_charges": [
+          2,
+          24
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 1204159457879.2295,
+        "leading_scalar_operator_dimension": 13,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 2.515662894257768e-06,
+        "sufficient_quality": false,
+        "gauge_delta_b": [
+          3.466666666666667,
+          0.0,
+          8.666666666666666
+        ],
+        "one_loop_12_cross_scale_GeV": 4513907583191.037,
+        "third_inverse_coupling_mismatch_at_12": -8.402396196194907
+      },
+      {
+        "n": 13,
+        "colored_Dirac_pairs": 14,
+        "singlet_Dirac_pairs": 42,
+        "scalar_X_charges": [
+          2,
+          26
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 1303840481040.5298,
+        "leading_scalar_operator_dimension": 14,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 2.6784629179930895e-12,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          3.7333333333333334,
+          0.0,
+          9.333333333333332
+        ],
+        "one_loop_12_cross_scale_GeV": 4453635497350.67,
+        "third_inverse_coupling_mismatch_at_12": -8.44946380090888,
+        "X_gauge_beta_coefficient": 1682.6666666666667,
+        "X_gauge_max_initial_coupling_for_no_formal_pole_before_MU": 0.07489010749335999,
+        "X_gauge_log10_pole_over_threshold": {
+          "0.01": 203.78675419783627,
+          "0.03": 22.64297268864848,
+          "0.1": 2.0378675419783625
+        }
+      },
+      {
+        "n": 14,
+        "colored_Dirac_pairs": 15,
+        "singlet_Dirac_pairs": 45,
+        "scalar_X_charges": [
+          2,
+          28
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 1403566884761.8198,
+        "leading_scalar_operator_dimension": 15,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 3.063556690921474e-18,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          4.0,
+          0.0,
+          10.0
+        ],
+        "one_loop_12_cross_scale_GeV": 4404424969507.454,
+        "third_inverse_coupling_mismatch_at_12": -8.488368016113412
+      },
+      {
+        "n": 15,
+        "colored_Dirac_pairs": 16,
+        "singlet_Dirac_pairs": 48,
+        "scalar_X_charges": [
+          2,
+          30
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 1503329637837.2908,
+        "leading_scalar_operator_dimension": 16,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 3.7461294007024745e-24,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          4.266666666666667,
+          0.0,
+          10.666666666666666
+        ],
+        "one_loop_12_cross_scale_GeV": 4364734265420.351,
+        "third_inverse_coupling_mismatch_at_12": -8.520064173933584
+      },
+      {
+        "n": 16,
+        "colored_Dirac_pairs": 17,
+        "singlet_Dirac_pairs": 51,
+        "scalar_X_charges": [
+          2,
+          32
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 1603121954188.14,
+        "leading_scalar_operator_dimension": 17,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 4.8767764337902636e-30,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          4.533333333333333,
+          0.0,
+          11.333333333333332
+        ],
+        "one_loop_12_cross_scale_GeV": 4333298702289.924,
+        "third_inverse_coupling_mismatch_at_12": -8.545373168596
+      },
+      {
+        "n": 17,
+        "colored_Dirac_pairs": 18,
+        "singlet_Dirac_pairs": 54,
+        "scalar_X_charges": [
+          2,
+          34
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 1702938636592.6404,
+        "leading_scalar_operator_dimension": 18,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 6.733941141166489e-36,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          4.8,
+          0.0,
+          12.0
+        ],
+        "one_loop_12_cross_scale_GeV": 4309070892463.577,
+        "third_inverse_coupling_mismatch_at_12": -8.565004749164302
+      },
+      {
+        "n": 18,
+        "colored_Dirac_pairs": 19,
+        "singlet_Dirac_pairs": 57,
+        "scalar_X_charges": [
+          2,
+          36
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 1802775637731.9946,
+        "leading_scalar_operator_dimension": 19,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 9.830266706216192e-42,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          5.066666666666666,
+          0.0,
+          12.666666666666666
+        ],
+        "one_loop_12_cross_scale_GeV": 4291175890303.6265,
+        "third_inverse_coupling_mismatch_at_12": -8.57957591418269
+      },
+      {
+        "n": 19,
+        "colored_Dirac_pairs": 20,
+        "singlet_Dirac_pairs": 60,
+        "scalar_X_charges": [
+          2,
+          38
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 1902629759044.0447,
+        "leading_scalar_operator_dimension": 20,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 1.512673203348181e-47,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          5.333333333333333,
+          0.0,
+          13.333333333333332
+        ],
+        "one_loop_12_cross_scale_GeV": 4278877048165.6084,
+        "third_inverse_coupling_mismatch_at_12": -8.589625631103878
+      },
+      {
+        "n": 20,
+        "colored_Dirac_pairs": 21,
+        "singlet_Dirac_pairs": 63,
+        "scalar_X_charges": [
+          2,
+          40
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 2002498439450.0789,
+        "leading_scalar_operator_dimension": 21,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 2.4471543204405224e-53,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          5.6,
+          0.0,
+          14.0
+        ],
+        "one_loop_12_cross_scale_GeV": 4271549695922.032,
+        "third_inverse_coupling_mismatch_at_12": -8.595626749479308
+      },
+      {
+        "n": 21,
+        "colored_Dirac_pairs": 22,
+        "singlet_Dirac_pairs": 66,
+        "scalar_X_charges": [
+          2,
+          42
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 2102379604162.864,
+        "leading_scalar_operator_dimension": 22,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 4.152182601057669e-59,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          5.866666666666666,
+          0.0,
+          14.666666666666666
+        ],
+        "one_loop_12_cross_scale_GeV": 4268660620482.584,
+        "third_inverse_coupling_mismatch_at_12": -8.59799573900731
+      },
+      {
+        "n": 22,
+        "colored_Dirac_pairs": 23,
+        "singlet_Dirac_pairs": 69,
+        "scalar_X_charges": [
+          2,
+          44
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 2202271554554.524,
+        "leading_scalar_operator_dimension": 23,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 7.373055652108497e-65,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          6.133333333333333,
+          0.0,
+          15.333333333333332
+        ],
+        "one_loop_12_cross_scale_GeV": 4269751902121.3413,
+        "third_inverse_coupling_mismatch_at_12": -8.597100719450204
+      },
+      {
+        "n": 23,
+        "colored_Dirac_pairs": 24,
+        "singlet_Dirac_pairs": 72,
+        "scalar_X_charges": [
+          2,
+          46
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 2302172886644.2676,
+        "leading_scalar_operator_dimension": 24,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 1.3674579797376701e-70,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          6.4,
+          0.0,
+          16.0
+        ],
+        "one_loop_12_cross_scale_GeV": 4274428062703.497,
+        "third_inverse_coupling_mismatch_at_12": -8.593268133696668
+      },
+      {
+        "n": 24,
+        "colored_Dirac_pairs": 25,
+        "singlet_Dirac_pairs": 75,
+        "scalar_X_charges": [
+          2,
+          48
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 2402082429892.863,
+        "leading_scalar_operator_dimension": 25,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 2.6441571059760928e-76,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          6.666666666666667,
+          0.0,
+          16.666666666666664
+        ],
+        "one_loop_12_cross_scale_GeV": 4282345758927.8022,
+        "third_inverse_coupling_mismatch_at_12": -8.586788332006464
+      },
+      {
+        "n": 25,
+        "colored_Dirac_pairs": 26,
+        "singlet_Dirac_pairs": 78,
+        "scalar_X_charges": [
+          2,
+          50
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 2501999200639.361,
+        "leading_scalar_operator_dimension": 26,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 5.32159671741791e-82,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          6.933333333333334,
+          0.0,
+          17.333333333333332
+        ],
+        "one_loop_12_cross_scale_GeV": 4293205450766.8022,
+        "third_inverse_coupling_mismatch_at_12": -8.577920274571532
+      },
+      {
+        "n": 26,
+        "colored_Dirac_pairs": 27,
+        "singlet_Dirac_pairs": 81,
+        "scalar_X_charges": [
+          2,
+          52
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 2601922366251.5376,
+        "leading_scalar_operator_dimension": 27,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 1.1130346683679659e-87,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          7.2,
+          0.0,
+          18.0
+        ],
+        "one_loop_12_cross_scale_GeV": 4306744616923.0957,
+        "third_inverse_coupling_mismatch_at_12": -8.56689551428498
+      },
+      {
+        "n": 27,
+        "colored_Dirac_pairs": 28,
+        "singlet_Dirac_pairs": 84,
+        "scalar_X_charges": [
+          2,
+          54
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 2701851217221.2593,
+        "leading_scalar_operator_dimension": 28,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 2.4158376362048174e-93,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          7.466666666666667,
+          0.0,
+          18.666666666666664
+        ],
+        "one_loop_12_cross_scale_GeV": 4322732192202.6284,
+        "third_inverse_coupling_mismatch_at_12": -8.553921587538568
+      },
+      {
+        "n": 28,
+        "colored_Dirac_pairs": 29,
+        "singlet_Dirac_pairs": 87,
+        "scalar_X_charges": [
+          2,
+          56
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 2801785145224.38,
+        "leading_scalar_operator_dimension": 29,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 5.4343018849886315e-99,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          7.733333333333333,
+          0.0,
+          19.333333333333332
+        ],
+        "one_loop_12_cross_scale_GeV": 4340963977609.607,
+        "third_inverse_coupling_mismatch_at_12": -8.539184914899536
+      },
+      {
+        "n": 29,
+        "colored_Dirac_pairs": 30,
+        "singlet_Dirac_pairs": 90,
+        "scalar_X_charges": [
+          2,
+          58
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 2901723625709.382,
+        "leading_scalar_operator_dimension": 30,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 1.2653222556499189e-104,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          8.0,
+          0.0,
+          20.0
+        ],
+        "one_loop_12_cross_scale_GeV": 4361258830452.6353,
+        "third_inverse_coupling_mismatch_at_12": -8.522853293500575
+      },
+      {
+        "n": 30,
+        "colored_Dirac_pairs": 31,
+        "singlet_Dirac_pairs": 93,
+        "scalar_X_charges": [
+          2,
+          60
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 3001666203960.727,
+        "leading_scalar_operator_dimension": 31,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 3.0460713451579777e-110,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          8.266666666666666,
+          0.0,
+          20.666666666666664
+        ],
+        "one_loop_12_cross_scale_GeV": 4383455484202.3975,
+        "third_inverse_coupling_mismatch_at_12": -8.505078047395465
+      },
+      {
+        "n": 31,
+        "colored_Dirac_pairs": 32,
+        "singlet_Dirac_pairs": 96,
+        "scalar_X_charges": [
+          2,
+          62
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 3101612483854.1646,
+        "leading_scalar_operator_dimension": 32,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 7.573436706257533e-116,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          8.533333333333333,
+          0.0,
+          21.333333333333332
+        ],
+        "one_loop_12_cross_scale_GeV": 4407409880041.353,
+        "third_inverse_coupling_mismatch_at_12": -8.485995889891441
+      },
+      {
+        "n": 32,
+        "colored_Dirac_pairs": 33,
+        "singlet_Dirac_pairs": 99,
+        "scalar_X_charges": [
+          2,
+          64
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 3201562118716.4243,
+        "leading_scalar_operator_dimension": 33,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 1.942771228682761e-121,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          8.8,
+          0.0,
+          22.0
+        ],
+        "one_loop_12_cross_scale_GeV": 4432992916675.083,
+        "third_inverse_coupling_mismatch_at_12": -8.46573054217248
+      },
+      {
+        "n": 33,
+        "colored_Dirac_pairs": 34,
+        "singlet_Dirac_pairs": 102,
+        "scalar_X_charges": [
+          2,
+          66
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 3301514803843.8354,
+        "leading_scalar_operator_dimension": 34,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 5.1370570145031235e-127,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          9.066666666666666,
+          0.0,
+          22.666666666666664
+        ],
+        "one_loop_12_cross_scale_GeV": 4460088543968.791,
+        "third_inverse_coupling_mismatch_at_12": -8.444394144786976
+      },
+      {
+        "n": 34,
+        "colored_Dirac_pairs": 35,
+        "singlet_Dirac_pairs": 105,
+        "scalar_X_charges": [
+          2,
+          68
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 3401470270338.99,
+        "leading_scalar_operator_dimension": 35,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 1.3988905588690297e-132,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          9.333333333333334,
+          0.0,
+          23.333333333333332
+        ],
+        "one_loop_12_cross_scale_GeV": 4488592140726.128,
+        "third_inverse_coupling_mismatch_at_12": -8.422088492350149
+      },
+      {
+        "n": 35,
+        "colored_Dirac_pairs": 36,
+        "singlet_Dirac_pairs": 108,
+        "scalar_X_charges": [
+          2,
+          70
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 3501428280002.32,
+        "leading_scalar_operator_dimension": 36,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 3.919804953258678e-138,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          9.6,
+          0.0,
+          24.0
+        ],
+        "one_loop_12_cross_scale_GeV": 4518409128472.106,
+        "third_inverse_coupling_mismatch_at_12": -8.398906116775677
+      },
+      {
+        "n": 36,
+        "colored_Dirac_pairs": 37,
+        "singlet_Dirac_pairs": 111,
+        "scalar_X_charges": [
+          2,
+          72
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 3601388621073.8213,
+        "leading_scalar_operator_dimension": 37,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 1.1293058770232808e-143,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          9.866666666666667,
+          0.0,
+          24.666666666666664
+        ],
+        "one_loop_12_cross_scale_GeV": 4549453782192.835,
+        "third_inverse_coupling_mismatch_at_12": -8.374931240251605
+      },
+      {
+        "n": 37,
+        "colored_Dirac_pairs": 38,
+        "singlet_Dirac_pairs": 114,
+        "scalar_X_charges": [
+          2,
+          74
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 3701351104664.3496,
+        "leading_scalar_operator_dimension": 38,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 3.3427110983353734e-149,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          10.133333333333333,
+          0.0,
+          25.333333333333332
+        ],
+        "one_loop_12_cross_scale_GeV": 4581648206188.836,
+        "third_inverse_coupling_mismatch_at_12": -8.350240615818343
+      },
+      {
+        "n": 38,
+        "colored_Dirac_pairs": 39,
+        "singlet_Dirac_pairs": 117,
+        "scalar_X_charges": [
+          2,
+          76
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 3801315561749.642,
+        "leading_scalar_operator_dimension": 39,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 1.0158208491741643e-154,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          10.4,
+          0.0,
+          26.0
+        ],
+        "one_loop_12_cross_scale_GeV": 4614921448943.508,
+        "third_inverse_coupling_mismatch_at_12": -8.324904270643984
+      },
+      {
+        "n": 39,
+        "colored_Dirac_pairs": 40,
+        "singlet_Dirac_pairs": 120,
+        "scalar_X_charges": [
+          2,
+          78
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 3901281840626.232,
+        "leading_scalar_operator_dimension": 40,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 3.167183230391899e-160,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          10.666666666666666,
+          0.0,
+          26.666666666666664
+        ],
+        "one_loop_12_cross_scale_GeV": 4649208735511.516,
+        "third_inverse_coupling_mismatch_at_12": -8.298986164806792
+      },
+      {
+        "n": 40,
+        "colored_Dirac_pairs": 41,
+        "singlet_Dirac_pairs": 123,
+        "scalar_X_charges": [
+          2,
+          80
+        ],
+        "gravitational_anomaly": 0,
+        "cubic_X_anomaly": 0,
+        "fa_input_GeV": 100000000000.0,
+        "equal_scalar_f_input_GeV": 4001249804748.511,
+        "leading_scalar_operator_dimension": 41,
+        "leading_operator": "S^n Tdag",
+        "phase_uniform_theta_bound": 1.0124847288015364e-165,
+        "sufficient_quality": true,
+        "gauge_delta_b": [
+          10.933333333333334,
+          0.0,
+          27.333333333333332
+        ],
+        "one_loop_12_cross_scale_GeV": 4684450799643.975,
+        "third_inverse_coupling_mismatch_at_12": -8.272544776495522
+      }
+    ],
+    "first_quality_row": {
+      "n": 13,
+      "colored_Dirac_pairs": 14,
+      "singlet_Dirac_pairs": 42,
+      "scalar_X_charges": [
+        2,
+        26
+      ],
+      "gravitational_anomaly": 0,
+      "cubic_X_anomaly": 0,
+      "fa_input_GeV": 100000000000.0,
+      "equal_scalar_f_input_GeV": 1303840481040.5298,
+      "leading_scalar_operator_dimension": 14,
+      "leading_operator": "S^n Tdag",
+      "phase_uniform_theta_bound": 2.6784629179930895e-12,
+      "sufficient_quality": true,
+      "gauge_delta_b": [
+        3.7333333333333334,
+        0.0,
+        9.333333333333332
+      ],
+      "one_loop_12_cross_scale_GeV": 4453635497350.67,
+      "third_inverse_coupling_mismatch_at_12": -8.44946380090888,
+      "X_gauge_beta_coefficient": 1682.6666666666667,
+      "X_gauge_max_initial_coupling_for_no_formal_pole_before_MU": 0.07489010749335999,
+      "X_gauge_log10_pole_over_threshold": {
+        "0.01": 203.78675419783627,
+        "0.03": 22.64297268864848,
+        "0.1": 2.0378675419783625
+      }
+    },
+    "NDW": 1,
+    "E_over_N": "2/3",
+    "action": "n copies S D Dbar + Tdag Dprime Dprimebar;3n copies Sdag N Nbar +3copies T Nprime Nprimebar. D=(3,1,-1/3). LH pair X charges(-1,-1),(n,n),(1,1),(-n,-n); scalars S2,T2n. SM fields X0. All listed mass terms renormalizable. Potential includes radial masses, self/portal quartics and gauge-allowed high-dimensional S^n Tdag; coefficients supplied.",
+    "anomaly_proof": "Colored SU3\u00b2X and Y\u00b2X cancel between n and1 pairs; YX\u00b2 cancels within each vectorlike SM pair; no new SU2 doublets. Singlet partners cancel X\u00b3 and gravity exactly. psi=n thetaS-thetaT is gauge invariant; QCD couples to psi once. After quotient by the gauge orbit the physical phase has period2pi, NDW1. Residual gauge Z2 acts trivially on scalar phases, not a second physical wall.",
+    "quality_scope": "Equal vevs and coefficient1 are inputs. fa=FS FT/sqrt(n\u00b2FT\u00b2+FS\u00b2); for FS=FT=F, F=fa sqrt(n\u00b2+1). Leading pure scalar phase-breaking invariant has degree n+1. Mixed fermion operators, stable relics, cosmology and vacuum stability are NOT certified by this scalar check.",
+    "extra_relic_and_gauge_controls": "With scalar charges2,2n a gauge Z2 survives. At odd n all new fermions are odd while SM fields are even: ordinary heavy-SM mixing is forbidden and the lightest odd state is stable. A gauge-invariant dimension6 operator (D N)(uc ec) has total X=-1+1=0 and Y=-1/3-2/3+1=0 and can permit colored decays only with appropriate spectrum and Wilson coefficient. No relic abundance/lifetime inferred. Tr(YX)=0 within the paired hypercharges, so one-loop kinetic mixing vanishes. The large positive bX=(2/3)sum_Weyl dim X\u00b2+(1/3)sum_complex X\u00b2 is exported with a common-threshold formal Landau bound, not a full threshold evolution of the new protection model.",
+    "cost": "This replaces D+2Q; it does not evade the unchanged-inventory theorem. The extra D multiplets do not reproduce its unification fit. The printed mismatch is a necessary one-loop screen with one common assumed Yukawa1 threshold, not a multi-threshold fit.",
+    "prior": "Gauged two-scalar accidental PQ methods are established;2412.21157 and2609.01712. This specific transparent mirror-singlet variant is a control, no priority claim."
+  },
+  "complete_SU5_repair_obstruction": {
+    "exact_trace_controls": [
+      {
+        "irrep": "5",
+        "TrY2": "5/6",
+        "SU3_index": "1/2",
+        "SU2_index": "1/2"
+      },
+      {
+        "irrep": "10",
+        "TrY2": "5/2",
+        "SU3_index": "3/2",
+        "SU2_index": "3/2"
+      },
+      {
+        "irrep": "24",
+        "TrY2": "25/3",
+        "SU3_index": "5",
+        "SU2_index": "5"
+      }
+    ],
+    "old_candidate_C_per_qSigma": 1,
+    "theorem": "Define C=A_Y\u00b2X+A_SU2\u00b2X-(8/3)A_SU3\u00b2X. Any complete SU5 representation with a common X charge has C0: the unique invariant trace gives A_SU2=A_SU3 and A_Y\u00b2=(5/3)A_SU3. This holds for arbitrary representations, not just5,10,24. One-Higgs full-rank renormalizable SM Yukawas give C_SM0. For original D+Q+Q pair sums(d,a,b)=(-qSigma,-qSigma,+qSigma), C=-(d+a+b)=qSigma. Therefore any number of extra complete SU5 multiplets whose X commutes with SU5 cannot repair ordinary anomaly cancellation with qSigma nonzero under these hypotheses.",
+    "hypotheses": "No GS/inflow. SM mass-sector assumptions unchanged; heavy original signs and renormalizable masses unchanged. Additional X is uniform across each complete SU5 representation. Split X charges, incomplete representations, changed mass operators or SM Yukawa sector evade the statement.",
+    "scope": "A specific original-inventory repair obstruction, not a no-go for unification or protected axions. Invariant trace identities and complete-multiplet beta universality are established group theory. Connects the prior mixed-anomaly theorem to the incoming SU5/orbifold completion question."
+  },
+  "Yukawa": {
+    "expected": [
+      0.39904199999999995,
+      0.6267199999999999,
+      0.8776299999999999
+    ],
+    "actual_real_scalar_tensor_beta": [
+      0.39904199999999984,
+      0.6267199999999998,
+      0.8776299999999998
+    ],
+    "common_y_cubic_coefficient_D15": 16,
+    "old_parent_coefficient": 18,
+    "single_color_triplet_coefficient": 4,
+    "equation": "16pi\u00b2 beta_yi=yi[yi\u00b2+sum_j Dj yj\u00b2-6 sum_a Ca(i)ga\u00b2] for disjoint Dirac pairs coupled to one complex scalar. Real scalar Yukawa matrices explicitly implement sigma and sigma-dagger signs. Formula:1/2(Y2F^T Ya+Ya Y2F)+2Yb Ya\u2020Yb+Yb Tr[(Yb\u2020Ya+Ya\u2020Yb)/2]-3g\u00b2{C,Ya}.",
+    "boundary": "One-loop tensor identity for specified interactions, not all allowed SM-mixing Yukawas or higher-loop equations. Fermion wavefunction term gives1, scalar trace givesD; the parent D+3 is not inherited."
+  },
+  "RG": [
+    {
+      "f_input_GeV": 50000000000.0,
+      "lambdaS_at_radial_threshold": 0.003,
+      "delta_lambdaH": 0.02,
+      "split": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "radial_mass_GeV": 3872983346.207417,
+      "tree_portal_at_threshold": 0.015491933384829668,
+      "reaches_MU": false,
+      "termination": "perturbativity_cut_or_solver_failure",
+      "min_lambdaH_sampled": -0.01247082457415614,
+      "min_lambdaS_above_activation_sampled": -12.566370614359123,
+      "final_state": [
+        0.44016807178007106,
+        0.5742288911262369,
+        0.5892096454933219,
+        0.4544006272708707,
+        -0.010428341718180032,
+        -12.566370614359123,
+        0.07683212470697347,
+        2.610188812474356,
+        2.362040129391213,
+        2.362040129391213
+      ],
+      "threshold_events": [
+        {
+          "scale_GeV": 3872983346.207417,
+          "event": "scalar",
+          "species": null,
+          "state_after": [
+            0.39762917825551475,
+            0.5715007493062192,
+            0.6688712519448602,
+            0.5679747799960563,
+            0.007529175425843861,
+            0.003,
+            0.015491933384829668,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "scale_GeV": 27279937181.61975,
+          "event": "fermion",
+          "species": 0,
+          "state_after": [
+            0.40304874537971025,
+            0.5643309350627767,
+            0.6443892461273174,
+            0.5472876722467939,
+            0.0024383331196411355,
+            0.003008190458993056,
+            0.01555298951758981,
+            0.7715931428586544,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "scale_GeV": 27279937181.61975,
+          "event": "fermion",
+          "species": 1,
+          "state_after": [
+            0.40304874537971025,
+            0.5643309350627767,
+            0.6443892461273174,
+            0.5472876722467939,
+            0.0024383331196411355,
+            0.003008190458993056,
+            0.01555298951758981,
+            0.7715931428586544,
+            0.7715931428586544,
+            0.0
+          ]
+        },
+        {
+          "scale_GeV": 27279937181.61975,
+          "event": "fermion",
+          "species": 2,
+          "state_after": [
+            0.40304874537971025,
+            0.5643309350627767,
+            0.6443892461273174,
+            0.5472876722467939,
+            0.0024383331196411355,
+            0.003008190458993056,
+            0.01555298951758981,
+            0.7715931428586544,
+            0.7715931428586544,
+            0.7715931428586544
+          ]
+        }
+      ]
+    },
+    {
+      "f_input_GeV": 50000000000.0,
+      "lambdaS_at_radial_threshold": 0.003,
+      "delta_lambdaH": 0.02,
+      "split": [
+        1.0,
+        0.7,
+        1.4
+      ],
+      "radial_mass_GeV": 3872983346.207417,
+      "tree_portal_at_threshold": 0.015491933384829668,
+      "reaches_MU": false,
+      "termination": "perturbativity_cut_or_solver_failure",
+      "min_lambdaH_sampled": -0.01247082457415614,
+      "min_lambdaS_above_activation_sampled": -12.566370614359222,
+      "final_state": [
+        0.43187740636067246,
+        0.5722431477365653,
+        0.5992121748816255,
+        0.4715806198045255,
+        -0.009391480106697733,
+        -12.566370614359222,
+        0.05988688288798194,
+        2.2034553017756617,
+        1.3736103698567839,
+        3.059003209697646
+      ],
+      "threshold_events": [
+        {
+          "scale_GeV": 3872983346.207417,
+          "event": "scalar",
+          "species": null,
+          "state_after": [
+            0.39762917825551475,
+            0.5715007493062192,
+            0.6688712519448602,
+            0.5679747799960563,
+            0.007529175425843861,
+            0.003,
+            0.015491933384829668,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "scale_GeV": 19095956027.133823,
+          "event": "fermion",
+          "species": 1,
+          "state_after": [
+            0.4020419792314848,
+            0.5656207986531172,
+            0.6486619083611781,
+            0.5509276012805397,
+            0.0032989478629245343,
+            0.003006689760511163,
+            0.015544199635371589,
+            0.0,
+            0.5401152000010581,
+            0.0
+          ]
+        },
+        {
+          "scale_GeV": 27279937181.61975,
+          "event": "fermion",
+          "species": 0,
+          "state_after": [
+            0.40308161284411953,
+            0.5651445574079766,
+            0.6451965778805581,
+            0.5472811661492377,
+            0.00243921556296458,
+            0.0007597251250064925,
+            0.015675291579141236,
+            0.7715931428586544,
+            0.5367291795449277,
+            0.0
+          ]
+        },
+        {
+          "scale_GeV": 38191912054.26765,
+          "event": "fermion",
+          "species": 2,
+          "state_after": [
+            0.4041322800951499,
+            0.564696392232947,
+            0.6423540922449377,
+            0.5438809915680568,
+            0.0016565995594163352,
+            -0.0059739697760604615,
+            0.015917609126459047,
+            0.7727211222824059,
+            0.5356120920737328,
+            1.0802304000021161
+          ]
+        }
+      ]
+    },
+    {
+      "f_input_GeV": 50000000000.0,
+      "lambdaS_at_radial_threshold": 0.03,
+      "delta_lambdaH": 0.02,
+      "split": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "radial_mass_GeV": 12247448713.91589,
+      "tree_portal_at_threshold": 0.04898979485566356,
+      "reaches_MU": false,
+      "termination": "perturbativity_cut_or_solver_failure",
+      "min_lambdaH_sampled": -0.01561757026345,
+      "min_lambdaS_above_activation_sampled": -12.5663706143592,
+      "final_state": [
+        0.44017769395383816,
+        0.5742311964797716,
+        0.5891986875283832,
+        0.4543816099123429,
+        -0.009642015523895655,
+        -12.5663706143592,
+        0.2558063515635065,
+        2.613677522866994,
+        2.365106542351421,
+        2.365106542351421
+      ],
+      "threshold_events": [
+        {
+          "scale_GeV": 12247448713.91589,
+          "event": "scalar",
+          "species": null,
+          "state_after": [
+            0.4007987608475892,
+            0.5672394686048428,
+            0.6541033006265443,
+            0.5555447215662458,
+            0.00438242973655,
+            0.03,
+            0.04898979485566356,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "scale_GeV": 27279937181.61975,
+          "event": "fermion",
+          "species": 0,
+          "state_after": [
+            0.4030487453797102,
+            0.5643309350627767,
+            0.6443892461273175,
+            0.5472876722467938,
+            0.002418995112593381,
+            0.03011605759035653,
+            0.049143777038880114,
+            0.7715931428586544,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "scale_GeV": 27279937181.61975,
+          "event": "fermion",
+          "species": 1,
+          "state_after": [
+            0.4030487453797102,
+            0.5643309350627767,
+            0.6443892461273175,
+            0.5472876722467938,
+            0.002418995112593381,
+            0.03011605759035653,
+            0.049143777038880114,
+            0.7715931428586544,
+            0.7715931428586544,
+            0.0
+          ]
+        },
+        {
+          "scale_GeV": 27279937181.61975,
+          "event": "fermion",
+          "species": 2,
+          "state_after": [
+            0.4030487453797102,
+            0.5643309350627767,
+            0.6443892461273175,
+            0.5472876722467938,
+            0.002418995112593381,
+            0.03011605759035653,
+            0.049143777038880114,
+            0.7715931428586544,
+            0.7715931428586544,
+            0.7715931428586544
+          ]
+        }
+      ]
+    },
+    {
+      "f_input_GeV": 50000000000.0,
+      "lambdaS_at_radial_threshold": 0.03,
+      "delta_lambdaH": 0.02,
+      "split": [
+        1.0,
+        0.7,
+        1.4
+      ],
+      "radial_mass_GeV": 12247448713.91589,
+      "tree_portal_at_threshold": 0.04898979485566356,
+      "reaches_MU": false,
+      "termination": "perturbativity_cut_or_solver_failure",
+      "min_lambdaH_sampled": -0.01561757026345,
+      "min_lambdaS_above_activation_sampled": -12.566370614359194,
+      "final_state": [
+        0.43188462013001017,
+        0.5722449586189327,
+        0.5992030267797365,
+        0.4715649100700712,
+        -0.008926040752582257,
+        -12.566370614359194,
+        0.19615178604697164,
+        2.2056020909019356,
+        1.3748792723709409,
+        3.0620945640916526
+      ],
+      "threshold_events": [
+        {
+          "scale_GeV": 12247448713.91589,
+          "event": "scalar",
+          "species": null,
+          "state_after": [
+            0.4007987608475892,
+            0.5672394686048428,
+            0.6541033006265443,
+            0.5555447215662458,
+            0.00438242973655,
+            0.03,
+            0.04898979485566356,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "scale_GeV": 19095956027.133823,
+          "event": "fermion",
+          "species": 1,
+          "state_after": [
+            0.4020419792314848,
+            0.5656207986531172,
+            0.6486619083611782,
+            0.5509276012805397,
+            0.0032747278852253126,
+            0.030064261614225516,
+            0.049077118655011,
+            0.0,
+            0.5401152000010581,
+            0.0
+          ]
+        },
+        {
+          "scale_GeV": 27279937181.61975,
+          "event": "fermion",
+          "species": 0,
+          "state_after": [
+            0.4030816128441195,
+            0.5651445574079768,
+            0.6451965778805581,
+            0.5472811661492378,
+            0.002419916518701756,
+            0.028294414058850942,
+            0.04953047308648455,
+            0.7715931428586544,
+            0.5367291795449276,
+            0.0
+          ]
+        },
+        {
+          "scale_GeV": 38191912054.26765,
+          "event": "fermion",
+          "species": 2,
+          "state_after": [
+            0.4041322800951498,
+            0.5646963922329472,
+            0.6423540922449377,
+            0.5438809915680569,
+            0.0016420701493216313,
+            0.02243500819100561,
+            0.05033474990182989,
+            0.7727211222824059,
+            0.5356120920737327,
+            1.0802304000021161
+          ]
+        }
+      ]
+    },
+    {
+      "f_input_GeV": 50000000000.0,
+      "lambdaS_at_radial_threshold": 0.3,
+      "delta_lambdaH": 0.02,
+      "split": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "radial_mass_GeV": 38729833462.07417,
+      "reaches_MU": false,
+      "termination": "UNSUPPORTED_RADIAL_FERMION_ORDER_NEEDS_BROKEN_PHASE_MATCHING",
+      "min_lambdaH_sampled": null,
+      "min_lambdaS_above_activation_sampled": null,
+      "final_state": null,
+      "threshold_events": [],
+      "reason": "A colored fermion activates below the radial scalar. Full complex-scalar Yukawa beta functions are not a consistent EFT there. Broken-phase axion/mass operators and matching are required. This row is rejected before integration, not assigned a false stability result."
+    },
+    {
+      "f_input_GeV": 50000000000.0,
+      "lambdaS_at_radial_threshold": 0.3,
+      "delta_lambdaH": 0.02,
+      "split": [
+        1.0,
+        0.7,
+        1.4
+      ],
+      "radial_mass_GeV": 38729833462.07417,
+      "reaches_MU": false,
+      "termination": "UNSUPPORTED_RADIAL_FERMION_ORDER_NEEDS_BROKEN_PHASE_MATCHING",
+      "min_lambdaH_sampled": null,
+      "min_lambdaS_above_activation_sampled": null,
+      "final_state": null,
+      "threshold_events": [],
+      "reason": "A colored fermion activates below the radial scalar. Full complex-scalar Yukawa beta functions are not a consistent EFT there. Broken-phase axion/mass operators and matching are required. This row is rejected before integration, not assigned a false stability result."
+    },
+    {
+      "f_input_GeV": 100000000000.0,
+      "lambdaS_at_radial_threshold": 0.003,
+      "delta_lambdaH": 0.02,
+      "split": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "radial_mass_GeV": 7745966692.414834,
+      "tree_portal_at_threshold": 0.015491933384829668,
+      "reaches_MU": true,
+      "termination": "reached_MU",
+      "min_lambdaH_sampled": -0.014410975344872415,
+      "min_lambdaS_above_activation_sampled": -0.04421495750651157,
+      "final_state": [
+        0.4475163551949797,
+        0.5759541130185597,
+        0.5812115835441057,
+        0.44046358106434574,
+        -0.010931132390363602,
+        -0.04421495750651157,
+        0.020008773070013437,
+        0.3560815966259429,
+        0.32081681257846073,
+        0.32081681257846073
+      ],
+      "threshold_events": [
+        {
+          "scale_GeV": 7745966692.414834,
+          "event": "scalar",
+          "species": null,
+          "state_after": [
+            0.39952840125699607,
+            0.5689237560390508,
+            0.6598620298438305,
+            0.5604090540184835,
+            0.005589024655127586,
+            0.003,
+            0.015491933384829668,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "scale_GeV": 27279937181.61975,
+          "event": "fermion",
+          "species": 0,
+          "state_after": [
+            0.4030487453797102,
+            0.5643309350627769,
+            0.6443892461273175,
+            0.5472876722467939,
+            0.0024151094533204037,
+            0.003005273751102078,
+            0.015527490087335751,
+            0.3857965714293272,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "scale_GeV": 27279937181.61975,
+          "event": "fermion",
+          "species": 1,
+          "state_after": [
+            0.4030487453797102,
+            0.5643309350627769,
+            0.6443892461273175,
+            0.5472876722467939,
+            0.0024151094533204037,
+            0.003005273751102078,
+            0.015527490087335751,
+            0.3857965714293272,
+            0.3857965714293272,
+            0.0
+          ]
+        },
+        {
+          "scale_GeV": 27279937181.61975,
+          "event": "fermion",
+          "species": 2,
+          "state_after": [
+            0.4030487453797102,
+            0.5643309350627769,
+            0.6443892461273175,
+            0.5472876722467939,
+            0.0024151094533204037,
+            0.003005273751102078,
+            0.015527490087335751,
+            0.3857965714293272,
+            0.3857965714293272,
+            0.3857965714293272
+          ]
+        },
+        {
+          "scale_GeV": 3964835648946381.0,
+          "event": "end",
+          "species": null,
+          "state_after": [
+            0.4475163551949797,
+            0.5759541130185597,
+            0.5812115835441057,
+            0.44046358106434574,
+            -0.010931132390363602,
+            -0.04421495750651157,
+            0.020008773070013437,
+            0.3560815966259429,
+            0.32081681257846073,
+            0.32081681257846073
+          ]
+        }
+      ]
+    },
+    {
+      "f_input_GeV": 100000000000.0,
+      "lambdaS_at_radial_threshold": 0.003,
+      "delta_lambdaH": 0.02,
+      "split": [
+        1.0,
+        0.7,
+        1.4
+      ],
+      "radial_mass_GeV": 7745966692.414834,
+      "tree_portal_at_threshold": 0.015491933384829668,
+      "reaches_MU": true,
+      "termination": "reached_MU",
+      "min_lambdaH_sampled": -0.014410975344872415,
+      "min_lambdaS_above_activation_sampled": -0.09115650194271331,
+      "final_state": [
+        0.4475189032439786,
+        0.5760030051295795,
+        0.581245077689747,
+        0.44043375541606733,
+        -0.010920279146400676,
+        -0.09115650194271331,
+        0.020913561583739197,
+        0.36609874735903075,
+        0.22749937384099772,
+        0.46985121062444324
+      ],
+      "threshold_events": [
+        {
+          "scale_GeV": 7745966692.414834,
+          "event": "scalar",
+          "species": null,
+          "state_after": [
+            0.39952840125699607,
+            0.5689237560390508,
+            0.6598620298438305,
+            0.5604090540184835,
+            0.005589024655127586,
+            0.003,
+            0.015491933384829668,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "scale_GeV": 19095956027.133823,
+          "event": "fermion",
+          "species": 1,
+          "state_after": [
+            0.4020419792314848,
+            0.5656207986531173,
+            0.6486619083611782,
+            0.5509276012805397,
+            0.003275746762696098,
+            0.003003777421320833,
+            0.015518728770519876,
+            0.0,
+            0.27005760000052903,
+            0.0
+          ]
+        },
+        {
+          "scale_GeV": 27279937181.61975,
+          "event": "fermion",
+          "species": 0,
+          "state_after": [
+            0.4030816128441195,
+            0.5651445574079769,
+            0.6451965778805581,
+            0.5472811661492377,
+            0.0024159888703779724,
+            0.0028753742279980354,
+            0.015557826312768318,
+            0.3857965714293272,
+            0.2674425932436722,
+            0.0
+          ]
+        },
+        {
+          "scale_GeV": 38191912054.26765,
+          "event": "fermion",
+          "species": 2,
+          "state_after": [
+            0.4041322800951498,
+            0.5646963922329472,
+            0.6423540922449376,
+            0.543880991568057,
+            0.0016333438004283328,
+            0.0024875805436590215,
+            0.015622713955993727,
+            0.38382368458867033,
+            0.26526444801624366,
+            0.5401152000010581
+          ]
+        },
+        {
+          "scale_GeV": 3964835648946381.0,
+          "event": "end",
+          "species": null,
+          "state_after": [
+            0.4475189032439786,
+            0.5760030051295795,
+            0.581245077689747,
+            0.44043375541606733,
+            -0.010920279146400676,
+            -0.09115650194271331,
+            0.020913561583739197,
+            0.36609874735903075,
+            0.22749937384099772,
+            0.46985121062444324
+          ]
+        }
+      ]
+    },
+    {
+      "f_input_GeV": 100000000000.0,
+      "lambdaS_at_radial_threshold": 0.03,
+      "delta_lambdaH": 0.02,
+      "split": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "radial_mass_GeV": 24494897427.83178,
+      "tree_portal_at_threshold": 0.04898979485566356,
+      "reaches_MU": true,
+      "termination": "reached_MU",
+      "min_lambdaH_sampled": -0.01733432361450149,
+      "min_lambdaS_above_activation_sampled": 0.004049101701140421,
+      "final_state": [
+        0.44751635519497984,
+        0.5759541130185591,
+        0.5812115835441064,
+        0.4404635810643453,
+        -0.010717737997300438,
+        0.004049101701140421,
+        0.06537886602655302,
+        0.3560815966259424,
+        0.32081681257846056,
+        0.32081681257846056
+      ],
+      "threshold_events": [
+        {
+          "scale_GeV": 24494897427.83178,
+          "event": "scalar",
+          "species": null,
+          "state_after": [
+            0.40274398754081275,
+            0.5647194382336989,
+            0.6456703337993798,
+            0.5483803996350841,
+            0.0026656763854985104,
+            0.03,
+            0.04898979485566356,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "scale_GeV": 27279937181.61975,
+          "event": "fermion",
+          "species": 0,
+          "state_after": [
+            0.4030487453797102,
+            0.5643309350627767,
+            0.6443892461273175,
+            0.5472876722467938,
+            0.00241041427008068,
+            0.03001555578001567,
+            0.04900949800597552,
+            0.3857965714293272,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "scale_GeV": 27279937181.61975,
+          "event": "fermion",
+          "species": 1,
+          "state_after": [
+            0.4030487453797102,
+            0.5643309350627767,
+            0.6443892461273175,
+            0.5472876722467938,
+            0.00241041427008068,
+            0.03001555578001567,
+            0.04900949800597552,
+            0.3857965714293272,
+            0.3857965714293272,
+            0.0
+          ]
+        },
+        {
+          "scale_GeV": 27279937181.61975,
+          "event": "fermion",
+          "species": 2,
+          "state_after": [
+            0.4030487453797102,
+            0.5643309350627767,
+            0.6443892461273175,
+            0.5472876722467938,
+            0.00241041427008068,
+            0.03001555578001567,
+            0.04900949800597552,
+            0.3857965714293272,
+            0.3857965714293272,
+            0.3857965714293272
+          ]
+        },
+        {
+          "scale_GeV": 3964835648946381.0,
+          "event": "end",
+          "species": null,
+          "state_after": [
+            0.44751635519497984,
+            0.5759541130185591,
+            0.5812115835441064,
+            0.4404635810643453,
+            -0.010717737997300438,
+            0.004049101701140421,
+            0.06537886602655302,
+            0.3560815966259424,
+            0.32081681257846056,
+            0.32081681257846056
+          ]
+        }
+      ]
+    },
+    {
+      "f_input_GeV": 100000000000.0,
+      "lambdaS_at_radial_threshold": 0.03,
+      "delta_lambdaH": 0.02,
+      "split": [
+        1.0,
+        0.7,
+        1.4
+      ],
+      "radial_mass_GeV": 24494897427.83178,
+      "reaches_MU": false,
+      "termination": "UNSUPPORTED_RADIAL_FERMION_ORDER_NEEDS_BROKEN_PHASE_MATCHING",
+      "min_lambdaH_sampled": null,
+      "min_lambdaS_above_activation_sampled": null,
+      "final_state": null,
+      "threshold_events": [],
+      "reason": "A colored fermion activates below the radial scalar. Full complex-scalar Yukawa beta functions are not a consistent EFT there. Broken-phase axion/mass operators and matching are required. This row is rejected before integration, not assigned a false stability result."
+    },
+    {
+      "f_input_GeV": 100000000000.0,
+      "lambdaS_at_radial_threshold": 0.3,
+      "delta_lambdaH": 0.02,
+      "split": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "radial_mass_GeV": 77459666924.14835,
+      "reaches_MU": false,
+      "termination": "UNSUPPORTED_RADIAL_FERMION_ORDER_NEEDS_BROKEN_PHASE_MATCHING",
+      "min_lambdaH_sampled": null,
+      "min_lambdaS_above_activation_sampled": null,
+      "final_state": null,
+      "threshold_events": [],
+      "reason": "A colored fermion activates below the radial scalar. Full complex-scalar Yukawa beta functions are not a consistent EFT there. Broken-phase axion/mass operators and matching are required. This row is rejected before integration, not assigned a false stability result."
+    },
+    {
+      "f_input_GeV": 100000000000.0,
+      "lambdaS_at_radial_threshold": 0.3,
+      "delta_lambdaH": 0.02,
+      "split": [
+        1.0,
+        0.7,
+        1.4
+      ],
+      "radial_mass_GeV": 77459666924.14835,
+      "reaches_MU": false,
+      "termination": "UNSUPPORTED_RADIAL_FERMION_ORDER_NEEDS_BROKEN_PHASE_MATCHING",
+      "min_lambdaH_sampled": null,
+      "min_lambdaS_above_activation_sampled": null,
+      "final_state": null,
+      "threshold_events": [],
+      "reason": "A colored fermion activates below the radial scalar. Full complex-scalar Yukawa beta functions are not a consistent EFT there. Broken-phase axion/mass operators and matching are required. This row is rejected before integration, not assigned a false stability result."
+    },
+    {
+      "f_input_GeV": 200000000000.0,
+      "lambdaS_at_radial_threshold": 0.003,
+      "delta_lambdaH": 0.02,
+      "split": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "radial_mass_GeV": 15491933384.829668,
+      "tree_portal_at_threshold": 0.015491933384829668,
+      "reaches_MU": true,
+      "termination": "reached_MU",
+      "min_lambdaH_sampled": -0.016213996195132887,
+      "min_lambdaS_above_activation_sampled": 0.001459318678874721,
+      "final_state": [
+        0.44751635519497956,
+        0.5759541130185591,
+        0.5812115835441055,
+        0.4404635810643461,
+        -0.010943921443565286,
+        0.001459318678874721,
+        0.016194848910593366,
+        0.15795194637913737,
+        0.14241845999098857,
+        0.14241845999098857
+      ],
+      "threshold_events": [
+        {
+          "scale_GeV": 15491933384.829668,
+          "event": "scalar",
+          "species": null,
+          "state_after": [
+            0.4014551010018685,
+            0.5663813116066865,
+            0.6512073118649897,
+            0.5530899730108056,
+            0.0037860038048671135,
+            0.003,
+            0.015491933384829668,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "scale_GeV": 27279937181.61975,
+          "event": "fermion",
+          "species": 0,
+          "state_after": [
+            0.4030487453797102,
+            0.5643309350627765,
+            0.6443892461273175,
+            0.547287672246794,
+            0.0024067686396470264,
+            0.003002367043398258,
+            0.01550627523704166,
+            0.1928982857146636,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "scale_GeV": 27279937181.61975,
+          "event": "fermion",
+          "species": 1,
+          "state_after": [
+            0.4030487453797102,
+            0.5643309350627765,
+            0.6443892461273175,
+            0.547287672246794,
+            0.0024067686396470264,
+            0.003002367043398258,
+            0.01550627523704166,
+            0.1928982857146636,
+            0.1928982857146636,
+            0.0
+          ]
+        },
+        {
+          "scale_GeV": 27279937181.61975,
+          "event": "fermion",
+          "species": 2,
+          "state_after": [
+            0.4030487453797102,
+            0.5643309350627765,
+            0.6443892461273175,
+            0.547287672246794,
+            0.0024067686396470264,
+            0.003002367043398258,
+            0.01550627523704166,
+            0.1928982857146636,
+            0.1928982857146636,
+            0.1928982857146636
+          ]
+        },
+        {
+          "scale_GeV": 3964835648946381.0,
+          "event": "end",
+          "species": null,
+          "state_after": [
+            0.44751635519497956,
+            0.5759541130185591,
+            0.5812115835441055,
+            0.4404635810643461,
+            -0.010943921443565286,
+            0.001459318678874721,
+            0.016194848910593366,
+            0.15795194637913737,
+            0.14241845999098857,
+            0.14241845999098857
+          ]
+        }
+      ]
+    },
+    {
+      "f_input_GeV": 200000000000.0,
+      "lambdaS_at_radial_threshold": 0.003,
+      "delta_lambdaH": 0.02,
+      "split": [
+        1.0,
+        0.7,
+        1.4
+      ],
+      "radial_mass_GeV": 15491933384.829668,
+      "tree_portal_at_threshold": 0.015491933384829668,
+      "reaches_MU": true,
+      "termination": "reached_MU",
+      "min_lambdaH_sampled": -0.016213996195132887,
+      "min_lambdaS_above_activation_sampled": -0.00012238906196854256,
+      "final_state": [
+        0.44751890324397875,
+        0.5760030051295789,
+        0.5812450776897465,
+        0.4404337554160671,
+        -0.010934027662955901,
+        -0.00012238906196854256,
+        0.016365549281969035,
+        0.15878091188852309,
+        0.09904994635315695,
+        0.202779859070019
+      ],
+      "threshold_events": [
+        {
+          "scale_GeV": 15491933384.829668,
+          "event": "scalar",
+          "species": null,
+          "state_after": [
+            0.4014551010018685,
+            0.5663813116066865,
+            0.6512073118649897,
+            0.5530899730108056,
+            0.0037860038048671135,
+            0.003,
+            0.015491933384829668,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "scale_GeV": 19095956027.133823,
+          "event": "fermion",
+          "species": 1,
+          "state_after": [
+            0.4020419792314848,
+            0.5656207986531171,
+            0.6486619083611782,
+            0.5509276012805399,
+            0.003267414882631953,
+            0.0030008744737053407,
+            0.015497533174819335,
+            0.0,
+            0.13502880000026452,
+            0.0
+          ]
+        },
+        {
+          "scale_GeV": 27279937181.61975,
+          "event": "fermion",
+          "species": 0,
+          "state_after": [
+            0.40308161284411953,
+            0.5651445574079766,
+            0.6451965778805582,
+            0.5472811661492379,
+            0.002407647331915978,
+            0.0029964773823686723,
+            0.015513785374045694,
+            0.1928982857146636,
+            0.13360678755850822,
+            0.0
+          ]
+        },
+        {
+          "scale_GeV": 38191912054.26765,
+          "event": "fermion",
+          "species": 2,
+          "state_after": [
+            0.40413228009514984,
+            0.5646963922329471,
+            0.6423540922449378,
+            0.5438809915680571,
+            0.0016249924261668139,
+            0.0029779530527215105,
+            0.015535271604414811,
+            0.19159966187415042,
+            0.13231939145898514,
+            0.27005760000052903
+          ]
+        },
+        {
+          "scale_GeV": 3964835648946381.0,
+          "event": "end",
+          "species": null,
+          "state_after": [
+            0.44751890324397875,
+            0.5760030051295789,
+            0.5812450776897465,
+            0.4404337554160671,
+            -0.010934027662955901,
+            -0.00012238906196854256,
+            0.016365549281969035,
+            0.15878091188852309,
+            0.09904994635315695,
+            0.202779859070019
+          ]
+        }
+      ]
+    },
+    {
+      "f_input_GeV": 200000000000.0,
+      "lambdaS_at_radial_threshold": 0.03,
+      "delta_lambdaH": 0.02,
+      "split": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "radial_mass_GeV": 48989794855.66356,
+      "reaches_MU": false,
+      "termination": "UNSUPPORTED_RADIAL_FERMION_ORDER_NEEDS_BROKEN_PHASE_MATCHING",
+      "min_lambdaH_sampled": null,
+      "min_lambdaS_above_activation_sampled": null,
+      "final_state": null,
+      "threshold_events": [],
+      "reason": "A colored fermion activates below the radial scalar. Full complex-scalar Yukawa beta functions are not a consistent EFT there. Broken-phase axion/mass operators and matching are required. This row is rejected before integration, not assigned a false stability result."
+    },
+    {
+      "f_input_GeV": 200000000000.0,
+      "lambdaS_at_radial_threshold": 0.03,
+      "delta_lambdaH": 0.02,
+      "split": [
+        1.0,
+        0.7,
+        1.4
+      ],
+      "radial_mass_GeV": 48989794855.66356,
+      "reaches_MU": false,
+      "termination": "UNSUPPORTED_RADIAL_FERMION_ORDER_NEEDS_BROKEN_PHASE_MATCHING",
+      "min_lambdaH_sampled": null,
+      "min_lambdaS_above_activation_sampled": null,
+      "final_state": null,
+      "threshold_events": [],
+      "reason": "A colored fermion activates below the radial scalar. Full complex-scalar Yukawa beta functions are not a consistent EFT there. Broken-phase axion/mass operators and matching are required. This row is rejected before integration, not assigned a false stability result."
+    },
+    {
+      "f_input_GeV": 200000000000.0,
+      "lambdaS_at_radial_threshold": 0.3,
+      "delta_lambdaH": 0.02,
+      "split": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "radial_mass_GeV": 154919333848.2967,
+      "reaches_MU": false,
+      "termination": "UNSUPPORTED_RADIAL_FERMION_ORDER_NEEDS_BROKEN_PHASE_MATCHING",
+      "min_lambdaH_sampled": null,
+      "min_lambdaS_above_activation_sampled": null,
+      "final_state": null,
+      "threshold_events": [],
+      "reason": "A colored fermion activates below the radial scalar. Full complex-scalar Yukawa beta functions are not a consistent EFT there. Broken-phase axion/mass operators and matching are required. This row is rejected before integration, not assigned a false stability result."
+    },
+    {
+      "f_input_GeV": 200000000000.0,
+      "lambdaS_at_radial_threshold": 0.3,
+      "delta_lambdaH": 0.02,
+      "split": [
+        1.0,
+        0.7,
+        1.4
+      ],
+      "radial_mass_GeV": 154919333848.2967,
+      "reaches_MU": false,
+      "termination": "UNSUPPORTED_RADIAL_FERMION_ORDER_NEEDS_BROKEN_PHASE_MATCHING",
+      "min_lambdaH_sampled": null,
+      "min_lambdaS_above_activation_sampled": null,
+      "final_state": null,
+      "threshold_events": [],
+      "reason": "A colored fermion activates below the radial scalar. Full complex-scalar Yukawa beta functions are not a consistent EFT there. Broken-phase axion/mass operators and matching are required. This row is rejected before integration, not assigned a false stability result."
+    }
+  ],
+  "gravity": {
+    "rows": [
+      {
+        "radius_input_micron": 8.0,
+        "M5_target_input_GeV": 3964835648946381.0,
+        "k_GeV": 5255906635.9107485,
+        "k_over_M5": 1.3256303920964436e-06,
+        "kL": 6.694236192885481e+20,
+        "log10_IR_redshift": -2.9072698391271968e+20,
+        "flat_KK_scale_GeV": 7.851391084014388e-12,
+        "log10_warped_KK_scale_GeV": -2.9072698391271968e+20,
+        "required_brane_EH_mass_squared_if_flat_GeV2": -7.938326518152283e+57
+      },
+      {
+        "radius_input_micron": 10.0,
+        "M5_target_input_GeV": 3964835648946381.0,
+        "k_GeV": 5255906635.9107485,
+        "k_over_M5": 1.3256303920964436e-06,
+        "kL": 8.36779524110685e+20,
+        "log10_IR_redshift": -3.6340872989089956e+20,
+        "flat_KK_scale_GeV": 6.281112867211511e-12,
+        "log10_warped_KK_scale_GeV": -3.6340872989089956e+20,
+        "required_brane_EH_mass_squared_if_flat_GeV2": -9.922908147690353e+57
+      },
+      {
+        "radius_input_micron": 15.0,
+        "M5_target_input_GeV": 3964835648946381.0,
+        "k_GeV": 5255906635.9107485,
+        "k_over_M5": 1.3256303920964436e-06,
+        "kL": 1.2551692861660277e+21,
+        "log10_IR_redshift": -5.451130948363494e+20,
+        "flat_KK_scale_GeV": 4.187408578141007e-12,
+        "log10_warped_KK_scale_GeV": -5.451130948363494e+20,
+        "required_brane_EH_mass_squared_if_flat_GeV2": -1.4884362221535528e+58
+      }
+    ],
+    "action": "5D Einstein-AdS interval with a(y)=exp(-ky), tuned RS brane tensions +/-6kM5\u00b3 in conventional normalization, and supplied stabilized L. M4\u00b2=M5\u00b3[1-exp(-2kL)]/(2k), using physical interval once. kL enormous, so exponent neglected with controlled bound. Positive brane EH terms in a flat interval only reduce the allowed M5: M4\u00b2=M5\u00b3L+Mbrane\u00b2.",
+    "outcome": "A weakly curved warped action can raise M5, but changes the KK spectrum exponentially and does not preserve the original approximately flat micron KK cosmology. Stabilization and vacuum selection not derived. Negative brane EH coefficient would be needed by the flat high-M5 attempt, not accepted as a healthy repair.",
+    "sources": [
+      "https://arxiv.org/abs/hep-ph/9905221",
+      "https://arxiv.org/abs/2409.01405"
+    ]
+  },
+  "RG_action": "SM top-only Yukawa truncation plus complex Sigma and original D+Q+Q inventory, potential lambdaH(HdagH)^2+lambdaS(SdagS)^2+lambdaHS HdagH SdagS. No sterile/mixing Yukawas. Piecewise one-loop gauge/top/scalar/three independent heavy Yukawa evolution. Tree matching lambdaH_high=lambdaH_low+lambdaHS\u00b2/(4lambdaS); new heavy yi(Mi)=sqrt2 Mi/f. All thresholds and boundary couplings are supplied.",
+  "RG_limits": "A reproducible closed one-loop truncation for radial-before-all-heavy threshold ordering; other orderings explicitly rejected pending broken-phase EFT matching. Not complete SM flavor/sterile/mixing or two-loop finite matching. Higgs inputs illustrative. Sampled quartic minima are not a rigorous global vacuum-stability proof. This replaces the old common-y beta only within the stated model; no precise axion ceiling asserted.",
+  "sources": [
+    "https://arxiv.org/abs/1610.01639",
+    "https://arxiv.org/abs/2007.12700",
+    "https://arxiv.org/abs/2412.21157"
+  ],
+  "boundary": "Three explicit independent construction attempts, not a common TOE action or a completed UV theory."
+}

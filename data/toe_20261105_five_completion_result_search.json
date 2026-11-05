@@ -1,0 +1,678 @@
+{
+  "scanned_files": 20613,
+  "patterns": {
+    "tensor_D_plus_one": "D\\s*\\+\\s*1.{0,60}(?:yukawa|beta)|(?:beta|yukawa).{0,60}D\\s*\\+\\s*1",
+    "two_scalar_primitive_axion": "n\\s*(?:thetaS|theta_S|\u03b8S).{0,20}(?:thetaT|theta_T|\u03b8T)|S\\^n.{0,12}Tdag",
+    "toron_first_Chern": "toron.{0,80}(?:chern|determinant)|(?:chern|determinant).{0,80}toron",
+    "Lorentzian_continuation": "(?:track|continu).{0,60}(?:arccos|dihedral)|(?:Schlafli|Schl\u00e4fli).{0,60}(?:Lorentz|complex)",
+    "warped_Planck_repair": "Mbrane|brane.{0,40}Einstein|warped.{0,50}(?:Planck|KK)"
+  },
+  "matches": [
+    {
+      "path": "analysis/2026-10-15_toe83_h27_square_css_surgery.md",
+      "hits": [
+        {
+          "result": "Lorentzian_continuation",
+          "line": 7,
+          "snippet": "it\n\nTOE81 built the 27-vertex, 135-edge, 45-triangle native Schl\u00e4fli graph complex from five right-coset directions of the order-27 Heisenberg group, with CSS par"
+        }
+      ]
+    },
+    {
+      "path": "analysis/2026-10-15_toe87_five_followups.md",
+      "hits": [
+        {
+          "result": "Lorentzian_continuation",
+          "line": 30,
+          "snippet": "- [H2] = [H0] - [C0] + [C1] - [C2].\n```\n\nFor the native H27 Schl\u00e4fli complex with **any two complete regular square orbits**:\n\n- `C0 = Reg(H27)` (one 27-poi"
+        }
+      ]
+    },
+    {
+      "path": "analysis/2026-10-15_toe88_five_followups.md",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 1,
+          "snippet": " \u2014 Five research tracks: cyclic Tate polarization, parity membranes, ancilla hooks, adversarial MUB controls, and the 26D Albert comparison\n\n**15 "
+        }
+      ]
+    },
+    {
+      "path": "analysis/2026-10-15_toe89_five_followups.md",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 21,
+          "snippet": "ons.\n\n## 2. Geometric origin of the 24-face Z/2 Bockstein membranes\n\nTOE88 independently constructed two 24-face parity membranes spanning the ran"
+        }
+      ]
+    },
+    {
+      "path": "analysis/2026-10-15_toe93_witting_five.md",
+      "hits": [
+        {
+          "result": "Lorentzian_continuation",
+          "line": 153,
+          "snippet": "** on all 40 rays/480 events.\n\nThis is **not** yet the full Schl\u00e4fli 2-dimensional CSS chain complex: no face transport compatible with d2, commuting stabilizer lift, CPTP instrume"
+        }
+      ]
+    },
+    {
+      "path": "analysis/2026-10-23_native_gq24_css_135_4_4.md",
+      "hits": [
+        {
+          "result": "Lorentzian_continuation",
+          "line": 55,
+          "snippet": "ready established the 27-vertex/135-edge/45-triangle native Schl\u00e4fli-complement complex, its 64 first-homology classes and the triangle-only `[[135,64,2]]` code. TOE83"
+        }
+      ]
+    },
+    {
+      "path": "analysis/2026-10-27_research_intake_coverage.json",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 7839,
+          "snippet": "ts\\\\appA_ledger.tex\",\n        \"reference\": \"w33_pass11297_membrane_flux_dynamics.py\",\n        \"basename_exists\": true,\n        \"resolution\": \"loca"
+        }
+      ]
+    },
+    {
+      "path": "analysis/2026-10-28_two_week_commit_catalogue.json",
+      "hits": [
+        {
+          "result": "toron_first_Chern",
+          "line": 6094,
+          "snippet": "endent real-space/form-factor controls; compile multi-patch toron/flux determinant sectors from native words and retain integer mesh aliases. Expose six theta fla"
+        },
+        {
+          "result": "warped_Planck_repair",
+          "line": 6707,
+          "snippet": "\",\n      \"message\": \"TOE88: cyclic Tate selection, parity membranes, ancilla hooks and F4 obstruction\",\n      \"full_diff_read\": false\n    },\n    {"
+        }
+      ]
+    },
+    {
+      "path": "analysis/2026-11-03_toe_mechanism_completion.md",
+      "hits": [
+        {
+          "result": "toron_first_Chern",
+          "line": 183,
+          "snippet": "e a different-index acoustic block. Likewise12030's nonzero toron Chern obstruction and12038's non-Abelian transition atlas remain prior results. A mea"
+        }
+      ]
+    },
+    {
+      "path": "analysis/BT790_csaszar_embedding.md",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 21,
+          "snippet": "s\u00e1\u00e1sz\u00e1r torus (K\u2087 on genus-1 surface) is the phase change membrane between the cube (g=0) and tomotope (g=1) levels. The four factors are:\n- 4 = |"
+        }
+      ]
+    },
+    {
+      "path": "analysis/BT796_torus_cell_orbit_census.md",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 51,
+          "snippet": "he **canonical Cs\u00e1\u00e1sz\u00e1r cells** \u2014 the toroidal transition membranes of the fractal architecture.\n- Each spread contains 2160/36 = **60 Class-A cel"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS11293_11297_UV_PHASE_POLES_MATTER_AND_FLUX.md",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 72,
+          "snippet": "ps.org/pr/abstract/10.1103/PhysRev.160.1113).\n\n## 11297 \u2014 membrane dynamics selects a sector but does not solve vacuum energy\n\nDeclare a compact t"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS11298_11302_RUNNING_FLAVOR_GRAVITY_AND_JUNCTIONS.md",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 129,
+          "snippet": "a separate conditional construction.\n\n## 11302 \u2014 Separate membrane charge from sequestering flux\n\nIn linear local sequestering, variation of \u039b fix"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS11303_11307_UV_ESCAPE_PHASE_PROBES_AND_RELATIONAL_CONSTRAINTS.md",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 211,
+          "snippet": " as prior work rather than rederived.\n\n## 11307 \u2014 Integer membrane flux retains a reduced radial negative direction\n\nAdd a compact Maxwell membran"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS11313_11319_PORTAL_BARRIERS_RADIATIVE_SCALE_AND_GEOMETRY.md",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 180,
+          "snippet": "s not\nnew wormhole physics or a global81-handle Euclidean membrane instanton.\nNon-static necks, wall topology, higher curvature and quantum stress"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS11320_11324_FLAVOR_BIFURCATION_NONLINEAR_GRAVITY_AND_WALL.md",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 73,
+          "snippet": "is the magnetic two-form, not a silently inserted nonzero membrane four-flux.\n\nContinuing one torus coordinate to noncompact Lorentzian time gives"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS11448_11455_SUBGROUP_TORON_AUXILIARY_CONTROL.md",
+      "hits": [
+        {
+          "result": "toron_first_Chern",
+          "line": 137,
+          "snippet": " reports, scripts\nand certificates, then result phrases for toron holonomy, determinant removal,\nCasimir branching and environment dimension. No exhaustive corpus read"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS11461_11465_EXPLICIT_PHYSICAL_MAPS.md",
+      "hits": [
+        {
+          "result": "toron_first_Chern",
+          "line": 88,
+          "snippet": " size verifies the projector block decomposition.\n\nOn a two-toron slice, calculate the positive Wilson projectors, determinant-line\ncurvature, polar-frame rectangle transport, and an explicit local Stiefel-"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS11620_11624_COVARIANT_PAIR_VACUUM.md",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 284,
+          "snippet": "ns input.11307\nalready owns a different spherical two-cap membrane saddle; the sphere is not\na new W33-derived topology or an observed cosmologica"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS11625_11629_COMPOSITES_JOINT_VACUA.md",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 13,
+          "snippet": "pse obstruction.11307/11324 already investigate different membrane/cap constructions.11624's graviton-loop boundary remains open.\n\nFor the Reye qu"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS11636_11640_OPERATORS_SELECTORS_AND_TRANSITIONS.md",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 152,
+          "snippet": "rd identity\n\nContinue11302's closed unequal-cap Euclidean membrane model with distinct Maxwell and sequestering forms. Hold chosen fluxes fixed, u"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS11664_11671_KERNEL_DYNAMICS.md",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 204,
+          "snippet": "pplied coherent superposition, the\nexpectation of a fixed membrane-reference S rotates. Transforming that\nreference with the state restores covari"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS11672_11679_NATIVE_DYNAMICS_INDEX.md",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 133,
+          "snippet": "/1109.3515) remain imported theories.\n\n##11676: a neutral membrane reference gives a flux measure, but retains absolute energy\n\nSupply two compact"
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS12026_12033_THETA_SOFT_HEAT_AND_DETERMINANT_TOPOLOGY.md",
+      "hits": [
+        {
+          "result": "toron_first_Chern",
+          "line": 9,
+          "snippet": "on/cubic gluino/Vandermonde, the heat-Hessian coefficients, toron determinant Chern numbers and fixed-density response. Earlier pump scripts already use Fukui\u2013Hats"
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_20261103_mechanism_sector_reference.py",
+      "hits": [
+        {
+          "result": "toron_first_Chern",
+          "line": 50,
+          "snippet": "block of different index. Pass12030 already owns a distinct toron Chern/sector-frame obstruction; Pass12038 owns finite non-Abelian patch transitions; "
+        }
+      ]
+    },
+    {
+      "path": "analysis/verify_dccxx_universal_computer_of_life.py",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 177,
+          "snippet": "_bound\": \"q <= 3 (q! <= 2q)\",\n            \"consequence\": \"membranes embed in R^3, not higher\",\n        },\n        {\n            \"pillar\": \"error c"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_20261015_toe88_parity_membranes.py",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 1,
+          "snippet": "\"\"\"TOE88 explicit 2-torsion parity membranes without integral SNF.\n\nA mod-2 closed face chain with integer boundary 2*y def"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_20261015_toe89_parity_symmetry.py",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 1,
+          "snippet": "\"\"\"TOE89: transport the two Z/2 Bockstein membrane classes under H27.\n\nThe two nontrivial parity membranes span a 2D binary simple"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_20261021_five_physical_candidates.py",
+      "hits": [
+        {
+          "result": "tensor_D_plus_one",
+          "line": 198,
+          "snippet": ";beta+=q*offset[1]\n        D=cache[q]-(np.cos(alpha)+np.cos(beta))*Id+1j*(np.kron(gamma[0],np.eye(n))*np.sin(alpha)+np.kron(gamma[1],np.eye(n))*np.sin("
+        },
+        {
+          "result": "toron_first_Chern",
+          "line": 225,
+          "snippet": "licities.',\n                conclusion='Tests actual closed toron transport of the supplied anomaly-free multiplet, beyond its zero first Chern number. A zero-current measure would require every displayed loop phase1; nontr"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_BREAKTHROUGH_292_string_M_theory_critical_dims.py",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 99,
+          "snippet": " - D_super = 1.\n\nThe \"M\" in M-theory often referenced as \"membrane\" or \"mystery\" --\nsubstrate reading: the lambda^0 = 1 extra dim is a TRIVIAL sub"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_BREAKTHROUGH_341_witting_polytope_SQNA.py",
+      "hits": [
+        {
+          "result": "Lorentzian_continuation",
+          "line": 178,
+          "snippet": "rder\",  155520, \"q * |Sp(4, F_q)| = q * W(E_6)\"),\n        (\"Schlafli symbol\", \"3{3}3{3}3{3}3\", \"complex regular polytope\"),\n    ]\n    for n, v, s in params:\n        print(f\"  {n:<18} "
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass11289_cycle_gram_gluing_flux.py",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 55,
+          "snippet": "four-form Maxwell weight predicts observed vacuum energy; membrane dynamics, cosmological state and measure must be supplied.',\n 'prior_owners':['"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass11297_membrane_flux_dynamics.py",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 2,
+          "snippet": "#!/usr/bin/env python3\n\"\"\"Declared membrane relaxation and its incompatibility with a uniform linear flux constraint.\"\"\"\nfr"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass11302_sequestered_membrane_junction.py",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 31,
+          "snippet": "n {'status':'PASS','result_scope':'PASS_DECLARED_SEPARATE_MEMBRANE_FORM_JUNCTION_AND_GLOBAL_SEQUESTERING_SOLUTION',\n 'named_action':'Original rigi"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass11307_quantized_membrane_radial_mode.py",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 1,
+          "snippet": "\"\"\"A reduced fixed-flux saddle, quantized membrane period and constrained radial mode.\"\"\"\nfrom pathlib import Path\nimport sys,json"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass11317_history_einstein_obstruction.py",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 10,
+          "snippet": " Thus no such metric exists for any Einstein constant.'],'membrane_boundary':['A degree-one collapse toS4 transfers the top-dimensional flux pairi"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass11319_smooth_neck_stress.py",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 15,
+          "snippet": "lis throat, not the global81-handle metric or a Euclidean membrane instanton.','The required negative radial null contraction cannot be supplied b"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass11324_quantized_warped_history_wall.py",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 40,
+          "snippet": "sh, satisfying the charged wall force equation.','charged_membrane_sector':'Take Lorentzian fplus=1/5,fminus=-1/5, membrane charge2/5 and common b"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass11329_wall_shape_fluctuations.py",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 36,
+          "snippet": "rped_history_wall.py','analysis/w33_pass11302_sequestered_membrane_junction.py']}\nif __name__=='__main__':\n d=payload();(ROOT/'data/w33_pass11329_"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass11448_11455_subgroup_toron_auxiliary_control.py",
+      "hits": [
+        {
+          "result": "toron_first_Chern",
+          "line": 171,
+          "snippet": "vation='ec4cee553',subgroup=subgroup(),soft=coupled_soft(H),torons=toron_loops(),stress=stress_map(),auxiliary=auxiliary_determinants(),joint_slice=joint_scale_pin(),instrument=clock_instrument(),relay=relay_faul"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass11620_11624_covariant_pair_vacuum.py",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 365,
+          "snippet": "se. Prior11307 already owns a different spherical two-cap membrane saddle.',\n        exact_shift_Ward='With linear sigma, a translation-invariant "
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass11625_11629_composites_joint_vacua.py",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 6,
+          "snippet": "lock completion and native lapse obstruction;11307/11324:\nmembranes. Classical Hubbard/Kuchar/Brown-Teitelboim mechanisms are credited.\n\"\"\"\nfrom f"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass11631_11635_physical_interfaces.py",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 301,
+          "snippet": "dds of unequal-volume sectors by exp[-C(V1-V2)]. Supplied membrane/flux transitions obeying detailed balance select their supplied Gibbs distribut"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass11636_11640_operator_selector_transitions.py",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 16,
+          "snippet": "_flux import cycle_basis\nimport w33_pass11302_sequestered_membrane_junction as caps\nOUT=ROOT/'data/w33_pass11636_11640_operator_selector_transitio"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass11664_11671_kernel_dynamics.py",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 304,
+          "snippet": "ft_phase='U_C|n>=exp(-i C n q/alpha)|n>',\n                membrane_covariance='U_C^dag S U_C=exp(i C q/alpha) S',\n                unchanged_flux_p"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass11672_11679_native_dynamics_index.py",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 244,
+          "snippet": "G=n1+n2=0',physical_states='|n,-n>; both rotors declared',membrane='S1 S2dag',\n        Hamiltonian='V rho+V q^2 n^2-t(S1 S2dag+h.c.); benchmarkV=q"
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass12030_native_determinant_torus.py",
+      "hits": [
+        {
+          "result": "toron_first_Chern",
+          "line": 1,
+          "snippet": "\"\"\"Multi-patch finite chiral determinant topology on a toron/flux family.\n\nFukui-Hatsugai-Suzuki determinant links are standard; integer mes"
+        }
+      ]
+    },
+    {
+      "path": "analysis/review_20261021/reading_progress.json",
+      "hits": [
+        {
+          "result": "toron_first_Chern",
+          "line": 1466,
+          "snippet": "endent real-space/form-factor controls; compile multi-patch toron/flux determinant sectors from native words and retain integer mesh aliases. Expose six theta fla"
+        },
+        {
+          "result": "warped_Planck_repair",
+          "line": 1832,
+          "snippet": "\",\n      \"message\": \"TOE88: cyclic Tate selection, parity membranes, ancilla hooks and F4 obstruction\",\n      \"diff_review_complete\": false\n    },"
+        }
+      ]
+    },
+    {
+      "path": "papers/dahn_asi_toe/fractal_network.md",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 186,
+          "snippet": "r torus is an *external* structure \u2014 the gateway crossing membrane lies outside the Witting geometry and must be appended as a boundary condition."
+        }
+      ]
+    },
+    {
+      "path": "papers/dahn_asi_toe/fractal_network_v2.md",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 33,
+          "snippet": " torus cell is a sub-structure of the spread \u2014 the commit membrane within the routing fabric.\n\nThe hierarchy within a single spread:\n\n```\nskew pai"
+        }
+      ]
+    },
+    {
+      "path": "papers/dahn_asi_toe/holonet_phase_engine.md",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 113,
+          "snippet": "s fixed point is killed.\n\n### The Torus as a Phase Change Membrane\n\nThe C\u2082\u00b3 module profile is 1+2 over F\u2082: one fixed bit (the diagonal) plus two f"
+        }
+      ]
+    },
+    {
+      "path": "papers/dahn_asi_toe/torus_gateway.md",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 23,
+          "snippet": "is fixed center.\n\n**The Cs\u00e1sz\u00e1r torus is the phase change membrane.** A computation that transitions from the cube phase machine to the tomotope p"
+        }
+      ]
+    },
+    {
+      "path": "papers/forty_points/appA_ledger.tex",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 443,
+          "snippet": "cert{w33\\_pass11296\\_covariant\\_matter\\_constraints.py}\\\\\nMembrane relaxation model; intensive ladder differs from old uniform flux branch & \\tier"
+        }
+      ]
+    },
+    {
+      "path": "papers/forty_points/sec05_e8.tex",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 547,
+          "snippet": " the metric\nfiber and continuum ADM constraints. An added membrane-rate model selects a\nnearest-lattice flux sector but retains bare vacuum energy"
+        }
+      ]
+    },
+    {
+      "path": "docs/index.html",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 2119,
+          "snippet": "native W33 gravity. A Lorentzian compact-flux rotor keeps membrane boundary loss and an exact Euler-charge compatibility law. It does not remove g"
+        }
+      ]
+    },
+    {
+      "path": "docs/archive/COMPLETE_M_THEORY_SYNTHESIS.md",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 47,
+          "snippet": " as:\n- **6 momenta** (KK modes, one per direction)\n- **15 membranes** (M2-branes wrapping 2-cycles: C(6,2) = 15)\n- **6 fivebranes** (M5-branes wra"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_generalized_symmetries.py",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 64,
+          "snippet": "1: acts on strings (Wilson lines).\n        p = 2: acts on membranes.\"\"\"\n        p_max = MU - 2\n        types = MU - 1\n        assert p_max == 2\n  "
+        }
+      ]
+    },
+    {
+      "path": "tests/test_toe_20261105_five_completion_fronts.py",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 54,
+          "snippet": "7+e['species']]*1e11/math.sqrt(2),e['scale_GeV'])\n\ndef test_warped_repair_does_not_preserve_flat_KK():\n    for row in m.warped_gravity()['rows']:\n        assert row['k_over_M5']<1"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_w33_20261015_toe88_all_five.py",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 7,
+          "snippet": "ridge as T\nfrom analysis import w33_20261015_toe88_parity_membranes as P\nfrom analysis import w33_20261015_toe88_ancilla_syndrome as A\nfrom analys"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_w33_20261015_toe89_all_five.py",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 38,
+          "snippet": "nflat_H2_direction_rank\"]==[13,12,13,13]\n\ndef test_parity_membrane_transforms_into_2D_C3_simple_module():\n    x=fresh(\"parity\")\n    a=x[\"represent"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_w33_pass11293_11297_frontiers.py",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 12,
+          "snippet": "96_covariant_matter_constraints as G\nimport w33_pass11297_membrane_flux_dynamics as M\n\ndef certificate(n):return json.loads(next((ROOT/'data').glo"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_w33_pass11298_11302_frontiers.py",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 15,
+          "snippet": "graph_adm_regulator as G\nimport w33_pass11302_sequestered_membrane_junction as M\n\n\ndef test_yukawa_components_and_two_channel_rank_budget():\n    #"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_w33_pass11303_11307_frontiers.py",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 13,
+          "snippet": "aph_clock_constraints as G\nimport w33_pass11307_quantized_membrane_radial_mode as M\n\ndef cert(n):return json.loads(next((ROOT/'data').glob(f'w33_p"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_w33_pass11625_11629_composites_joint_vacua.py",
+      "hits": [
+        {
+          "result": "warped_Planck_repair",
+          "line": 241,
+          "snippet": "max(abs(U(.2).conj().T@U(.2)-np.eye(n)))<1e-13\n\n\ndef test_membrane_shift_keeps_boundary_loss_and_energy_difference():\n    n=17;S=np.zeros((n,n));S"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_w33_pass12026_12033_physical_connections.py",
+      "hits": [
+        {
+          "result": "toron_first_Chern",
+          "line": 129,
+          "snippet": ">0 and z['min_overlap']>.9\n        assert abs(row['physical_toron_Chern_total'])<1e-10\n    assert abs(out['meshes'][0]['physical_toron_Chern_total'])>1"
+        }
+      ]
+    }
+  ],
+  "scope": "Bounded result/formula search. Hits are not semantic novelty proofs."
+}

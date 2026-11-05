@@ -1,0 +1,51 @@
+{
+  "UTC": "2026-11-05T19:58:18.282289+00:00",
+  "source_raw_sha256": {
+    "analysis/toe_20261105_five_fronts_model_completion.py": "3386e9be2776b1a5fd73addf3efbfad583f68db12bc8629af097c82a398efab3",
+    "analysis/toe_20261105_global_measure_and_lorentz_branches.py": "535939083782e16bfa6e35934bb18e586ec783fd307a165ffc91d988cf83cb28",
+    "analysis/toe_20261105_five_completion_validation.py": "8b22b16aae48234f28c570f420568096310986aed734f474ef8704ad681f4609",
+    "analysis/toe_20261105_five_completion_server.js": "00cede5b1f7ec953db1bf8a9b71b3e9935396e4c304b888f641ab2585b3de728",
+    "tests/test_toe_20261105_five_completion_fronts.py": "b9a6eb314ecb3823a43343ccaefaf14c3b4ab2a7d412cfe3f79b4f756222892c"
+  },
+  "input_raw_sha256": {
+    "analysis/toe_20261103_mechanism_four_dimensional_overlap.py": "831c3ffa9b9c25986cfd2c0de1a4db0b01c595902a521b1908fd8f3979fe66e1"
+  },
+  "producers": [
+    {
+      "path": "analysis/toe_20261105_five_fronts_model_completion.py",
+      "exit_code": 0,
+      "seconds": 2.746369300002698,
+      "stdout": "PASS_EXPLICIT_PQ_VARIANT_TENSOR_RGE_AND_GRAVITY_REPAIR_ATTEMPTS first_quality_n 13 RG_reaches 5 18\n",
+      "stderr": ""
+    },
+    {
+      "path": "analysis/toe_20261105_global_measure_and_lorentz_branches.py",
+      "exit_code": 0,
+      "seconds": 35.49994639999932,
+      "stdout": "EXECUTED_GLOBAL_MEASURE_AND_LORENTZ_BRANCH_TESTS [(8, 1, -1.0000000000000002), (12, 1, -1.0), (8, -1, 1.0000000000000002), (12, -1, 1.0), (40, 1, -1.0000000000000002)] {'action_flat': [np.float64(3.7165447520009858), np.float64(-13.257811972312478)], 'flat_hinge_max_deficit': np.float64(2.275957200481571e-15), 'raw_action_flat_FD_gradient_norm': 4.754749647246028e-09, 'gradient': [[np.float64(-1.1102230246251564e-11), np.float64(4.440892098500625e-09)], [np.float64(0.0), np.float64(8.881784197001251e-11)], [np.float64(2.2204460492503128e-11), np.float64(1.06581410364015e-09)], [np.float64(3.330669073875469e-11), np.float64(9.325873406851313e-10)], [np.float64(3.330669073875469e-11), np.float64(9.325873406851313e-10)]], 'branch_changes': 0, 'continuation_160_vs_320_action_error': np.float64(0.0), 'flat_vertex_motion_controls': [{'action_change': np.float64(0.0), 'max_deficit': np.float64(5.329070518200754e-15)}, {'action_change': np.float64(1.7763568394002505e-15), 'max_deficit': np.float64(2.9976021664879227e-15)}, {'action_change': np.float64(5.329070518200751e-15), 'max_deficit': np.float64(2.1094237467877974e-15)}], 'Schlafli_vs_FD_gradient_error': 4.754751327047149e-09, 'flat_and_offshell_Hessian_controls': [{'perturbation': 0.0, 'Hessian_singular_values': [6.250000108522225, 9.483964350281456e-08, 7.462818626593718e-09, 7.4475377479717935e-09, 6.494760683651644e-10], 'Hessian_times_flat_vertex_J_norm': 2.1624700357438694e-07, 'complex_symmetry_defect': 1.30265963231336e-07}, {'perturbation': 0.001, 'Hessian_singular_values': [6.14609801984629, 0.011787288916307499, 0.0030709067763769206, 0.0030709067434396796, 0.0009965712898680455], 'Hessian_times_flat_vertex_J_norm': 0.04646101641956372, 'complex_symmetry_defect': 1.2570551448816154e-07}], 'off_flat_max_deficit': np.float64(0.008060710122569148), 'off_flat_action_change': np.float64(6.14167655399494e-07), 'prescription': 'Continue the complete Euclidean Regge+boundary action along metric diag(exp(-i alpha),1,1,1), alpha0..pi-epsilon. Track each square root and arccos sheet continuously; include actual boundary exterior angles. No flat-value subtraction. Geometry is one Lorentzian1to5 simplex refinement, not the prior nine-simplex action.', 'limits': 'A finite complex continuation on a declared sheet and time orientation. Correct flat stationarity and geometric-motion Ward controls are necessary, not a proof of reflection positivity, causal quantum dynamics, all-triangulation uniqueness or nonlinear Hamiltonian constraint closure. No lapse/shift Poisson algebra is constructed.', 'sources': ['https://arxiv.org/abs/2303.07367', 'https://arxiv.org/abs/0905.1670']}\n",
+      "stderr": ""
+    }
+  ],
+  "pytest": {
+    "exit_code": 0,
+    "stdout": ".........................................                                [100%]\n41 passed in 21.33s\n",
+    "stderr": ""
+  },
+  "Node_server_source_replay": {
+    "status": "PASS_INDEPENDENT_SERVER_FIVE_COMPLETION_CONTROLS",
+    "first_quality_n": 13,
+    "leading_dimension": 14,
+    "integer_anomaly_cases": 39,
+    "bX": 1682.6666666666667,
+    "corrected_common_Yukawa_coefficient": 16,
+    "k_over_M5": 1.3256303920964436e-06,
+    "scope": "Independent integer, logarithmic quality and dimensional controls, not full physical completion."
+  },
+  "output_raw_sha256": {
+    "data/toe_20261105_five_fronts_model_completion.json": "de535e03506996e3661e281a8433c8a005c06f71657df18b02ef1d1b26f0a03d",
+    "data/toe_20261105_global_measure_and_lorentz_branches.json": "41c4c13b3945bae70ddb6c859099ee07258eea935e07544bcdbedc7d1c3056a5"
+  },
+  "initial_test_failure_history": "6PASS2FAIL: symbolic radial fluctuation incorrectly assumed positive, floating Chern integer required exact equality. Repaired test domain/tolerance; no science adjusted. Then8PASS. Refined40mesh and Schlaefli/Hessian additions checked in final replay.",
+  "EFT_scope_correction": "Initial18point flow sweep ran12rows throughMU but overlooked radial-above-fermion ordering in9rows. Final producer rejects these unsupported orderings before integration. Remaining9supported rows:5reachMU,4cut early; no absolute-stability pass inferred. Added explicit rejection control.",
+  "status": "PASS_TWO_FIVE_FRONT_PRODUCERS_AND_41_COMBINED_TESTS"
+}

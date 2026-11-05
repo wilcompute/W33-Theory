@@ -1,0 +1,165 @@
+{
+  "status": "EXECUTED_GLOBAL_MEASURE_AND_LORENTZ_BRANCH_TESTS",
+  "toron_rows": [
+    {
+      "L": 2,
+      "grid": 8,
+      "charge": 1,
+      "background_flux34": 1,
+      "projector_rank": 32,
+      "kernel_gap_min": 0.19393656647463042,
+      "frame_neighbor_min_singular": 0.8667991106871059,
+      "whole_parameter_torus_gap_lower_bound": -0.5914615969228179,
+      "gap_bound_scope": "Each toron derivative of H has operator norm at most|q|: the differentiated boundary hopping uses complementary gamma projectors on opposite endpoint blocks. Nearest mesh point differs by at most pi/N per coordinate; Weyl bound gives gap_sample_min-2pi|q|/N. Numerical eigenvalue rounding must be allowed; no interval eigensolver used. The method already belongs to12030; here applied to the4D flux family.",
+      "first_Chern_sum": -1.0000000000000002,
+      "max_parameter_plaquette_angle": 0.7630420154143579
+    },
+    {
+      "L": 2,
+      "grid": 12,
+      "charge": 1,
+      "background_flux34": 1,
+      "projector_rank": 32,
+      "kernel_gap_min": 0.19393656647463042,
+      "frame_neighbor_min_singular": 0.901068003368417,
+      "whole_parameter_torus_gap_lower_bound": -0.3296622091236684,
+      "gap_bound_scope": "Each toron derivative of H has operator norm at most|q|: the differentiated boundary hopping uses complementary gamma projectors on opposite endpoint blocks. Nearest mesh point differs by at most pi/N per coordinate; Weyl bound gives gap_sample_min-2pi|q|/N. Numerical eigenvalue rounding must be allowed; no interval eigensolver used. The method already belongs to12030; here applied to the4D flux family.",
+      "first_Chern_sum": -1.0,
+      "max_parameter_plaquette_angle": 0.5056336981784816
+    },
+    {
+      "L": 2,
+      "grid": 8,
+      "charge": -1,
+      "background_flux34": 1,
+      "projector_rank": 32,
+      "kernel_gap_min": 0.1939365664746292,
+      "frame_neighbor_min_singular": 0.8667991106871052,
+      "whole_parameter_torus_gap_lower_bound": -0.5914615969228191,
+      "gap_bound_scope": "Each toron derivative of H has operator norm at most|q|: the differentiated boundary hopping uses complementary gamma projectors on opposite endpoint blocks. Nearest mesh point differs by at most pi/N per coordinate; Weyl bound gives gap_sample_min-2pi|q|/N. Numerical eigenvalue rounding must be allowed; no interval eigensolver used. The method already belongs to12030; here applied to the4D flux family.",
+      "first_Chern_sum": 1.0000000000000002,
+      "max_parameter_plaquette_angle": 0.763042015414359
+    },
+    {
+      "L": 2,
+      "grid": 12,
+      "charge": -1,
+      "background_flux34": 1,
+      "projector_rank": 32,
+      "kernel_gap_min": 0.1939365664746292,
+      "frame_neighbor_min_singular": 0.9010680033684167,
+      "whole_parameter_torus_gap_lower_bound": -0.3296622091236696,
+      "gap_bound_scope": "Each toron derivative of H has operator norm at most|q|: the differentiated boundary hopping uses complementary gamma projectors on opposite endpoint blocks. Nearest mesh point differs by at most pi/N per coordinate; Weyl bound gives gap_sample_min-2pi|q|/N. Numerical eigenvalue rounding must be allowed; no interval eigensolver used. The method already belongs to12030; here applied to the4D flux family.",
+      "first_Chern_sum": 1.0,
+      "max_parameter_plaquette_angle": 0.505633698178479
+    },
+    {
+      "L": 2,
+      "grid": 40,
+      "charge": 1,
+      "background_flux34": 1,
+      "projector_rank": 32,
+      "kernel_gap_min": 0.19393656647463042,
+      "frame_neighbor_min_singular": 0.9816343280958292,
+      "whole_parameter_torus_gap_lower_bound": 0.03685693379514077,
+      "gap_bound_scope": "Each toron derivative of H has operator norm at most|q|: the differentiated boundary hopping uses complementary gamma projectors on opposite endpoint blocks. Nearest mesh point differs by at most pi/N per coordinate; Weyl bound gives gap_sample_min-2pi|q|/N. Numerical eigenvalue rounding must be allowed; no interval eigensolver used. The method already belongs to12030; here applied to the4D flux family.",
+      "first_Chern_sum": -1.0000000000000002,
+      "max_parameter_plaquette_angle": 0.0892944884328274
+    }
+  ],
+  "Regge": {
+    "action_flat": [
+      3.7165447520009858,
+      -13.257811972312478
+    ],
+    "flat_hinge_max_deficit": 2.275957200481571e-15,
+    "raw_action_flat_FD_gradient_norm": 4.754749647246028e-09,
+    "gradient": [
+      [
+        -1.1102230246251564e-11,
+        4.440892098500625e-09
+      ],
+      [
+        0.0,
+        8.881784197001251e-11
+      ],
+      [
+        2.2204460492503128e-11,
+        1.06581410364015e-09
+      ],
+      [
+        3.330669073875469e-11,
+        9.325873406851313e-10
+      ],
+      [
+        3.330669073875469e-11,
+        9.325873406851313e-10
+      ]
+    ],
+    "branch_changes": 0,
+    "continuation_160_vs_320_action_error": 0.0,
+    "flat_vertex_motion_controls": [
+      {
+        "action_change": 0.0,
+        "max_deficit": 5.329070518200754e-15
+      },
+      {
+        "action_change": 1.7763568394002505e-15,
+        "max_deficit": 2.9976021664879227e-15
+      },
+      {
+        "action_change": 5.329070518200751e-15,
+        "max_deficit": 2.1094237467877974e-15
+      }
+    ],
+    "Schlafli_vs_FD_gradient_error": 4.754751327047149e-09,
+    "flat_and_offshell_Hessian_controls": [
+      {
+        "perturbation": 0.0,
+        "Hessian_singular_values": [
+          6.250000108522225,
+          9.483964350281456e-08,
+          7.462818626593718e-09,
+          7.4475377479717935e-09,
+          6.494760683651644e-10
+        ],
+        "Hessian_times_flat_vertex_J_norm": 2.1624700357438694e-07,
+        "complex_symmetry_defect": 1.30265963231336e-07
+      },
+      {
+        "perturbation": 0.001,
+        "Hessian_singular_values": [
+          6.14609801984629,
+          0.011787288916307499,
+          0.0030709067763769206,
+          0.0030709067434396796,
+          0.0009965712898680455
+        ],
+        "Hessian_times_flat_vertex_J_norm": 0.04646101641956372,
+        "complex_symmetry_defect": 1.2570551448816154e-07
+      }
+    ],
+    "off_flat_max_deficit": 0.008060710122569148,
+    "off_flat_action_change": 6.14167655399494e-07,
+    "prescription": "Continue the complete Euclidean Regge+boundary action along metric diag(exp(-i alpha),1,1,1), alpha0..pi-epsilon. Track each square root and arccos sheet continuously; include actual boundary exterior angles. No flat-value subtraction. Geometry is one Lorentzian1to5 simplex refinement, not the prior nine-simplex action.",
+    "limits": "A finite complex continuation on a declared sheet and time orientation. Correct flat stationarity and geometric-motion Ward controls are necessary, not a proof of reflection positivity, causal quantum dynamics, all-triangulation uniqueness or nonlinear Hamiltonian constraint closure. No lapse/shift Poisson algebra is constructed.",
+    "sources": [
+      "https://arxiv.org/abs/2303.07367",
+      "https://arxiv.org/abs/0905.1670"
+    ]
+  },
+  "measure_boundary": "Actual4D Wilson/overlap projector family over two periodic boundary-link torons, with flux34. Discrete determinant-link Chern calculation; mesh/gap/overlap diagnostics exported. A nonzero Chern number obstructs one global smooth basis for that representation. Opposite-charge sums test vectorlike cancellation only. No local reconstruction current, anomaly-free chiral full-sector measure or continuum limit follows from this finite test.",
+  "chiral_inventory_limit": "The earlier chiral charges(-9,-5,-1,7,8) need much finer spatial/parameter lattices to avoid charge-amplified flux aliasing. They are not falsely certified by a coarse-torus zero. A full SM/non-Abelian construction remains open.",
+  "prior": [
+    "analysis/toe_20261103_mechanism_four_dimensional_overlap.py",
+    "analysis/toe_20261103_mechanism_sector_reference.py",
+    "analysis/w33_pass12026_12033_theta_soft_threshold_connections.py:12030",
+    "analysis/w33_pass12034_12038_joint_mechanisms.py:12038",
+    "analysis/toe_20261105_nine_simplex_regge_action_hessian_lorentz_diagnostic.py"
+  ],
+  "literature": [
+    "https://arxiv.org/abs/hep-lat/9811032",
+    "https://arxiv.org/abs/2303.07367"
+  ],
+  "boundary": "Both fronts executed as explicit finite necessary controls; neither global chiral measure nor full nonlinear GR is solved."
+}
