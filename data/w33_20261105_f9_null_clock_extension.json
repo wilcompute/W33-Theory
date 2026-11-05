@@ -1,0 +1,23 @@
+{
+  "field": "F9=F3[alpha]/(alpha^2+1), alpha^2=2",
+  "graph": "VO(3,9), Cayley null cone on Sym2(F9)",
+  "vertex_count": 729,
+  "degree": 80,
+  "eigenvalues": {
+    "-10": 288,
+    "-1": 80,
+    "8": 360,
+    "80": 1
+  },
+  "laplacian_eigenvalues": {
+    "90": 288,
+    "81": 80,
+    "72": 360,
+    "0": 1
+  },
+  "clock_order": 9,
+  "fixed_modes": 81,
+  "nontrivial_normalized_adjacency_radius": 0.125,
+  "validation": "6D additive FFT over F3^6; Fourier eigenvalues certified to 1e-9, theoretical exact values from odd-field Gauss sums",
+  "scope": "finite algebra only; no measured physical clock, no gravity or continuum derivation"
+}
