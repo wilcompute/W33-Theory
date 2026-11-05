@@ -1,0 +1,1226 @@
+{
+  "all_witnesses": [
+    {
+      "alpha_unified_inverse": 38.40170144077841,
+      "extra_beta_coefficients": [
+        "2/15",
+        "2",
+        "4/3"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 30.908766165040145,
+      "ln_GUT_over_new_mass": 21.24276750268229,
+      "new_common_mass_GeV": 1438221.1354121794,
+      "new_multiplets": [
+        "VL_quark_doublet_3_2_1_6"
+      ],
+      "triple_crossing_mass_GeV": 2417922482243991.0
+    },
+    {
+      "alpha_unified_inverse": 40.351044260528326,
+      "extra_beta_coefficients": [
+        "0",
+        "4/3",
+        "0"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 28.612250759344764,
+      "ln_GUT_over_new_mass": 17.223865542715377,
+      "new_common_mass_GeV": 8050978.055187406,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0"
+      ],
+      "triple_crossing_mass_GeV": 243264314534077.47
+    },
+    {
+      "alpha_unified_inverse": 38.60660395308167,
+      "extra_beta_coefficients": [
+        "4/5",
+        "4/3",
+        "0"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 27.046444800916092,
+      "ln_GUT_over_new_mass": 21.725557673197805,
+      "new_common_mass_GeV": 18653.81665736494,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "VL_charged_singlet_1_1_m1"
+      ],
+      "triple_crossing_mass_GeV": 50822674727974.04
+    },
+    {
+      "alpha_unified_inverse": 38.60660395308167,
+      "extra_beta_coefficients": [
+        "4/5",
+        "4/3",
+        "0"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 27.046444800916092,
+      "ln_GUT_over_new_mass": 21.725557673197805,
+      "new_common_mass_GeV": 18653.81665736494,
+      "new_multiplets": [
+        "VL_lepton_doublet_1_2_m1_2",
+        "VL_lepton_doublet_1_2_m1_2"
+      ],
+      "triple_crossing_mass_GeV": 50822674727974.04
+    },
+    {
+      "alpha_unified_inverse": 37.7312292960899,
+      "extra_beta_coefficients": [
+        "1/5",
+        "2",
+        "3/2"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 31.44655774738653,
+      "ln_GUT_over_new_mass": 24.20062120558742,
+      "new_common_mass_GeV": 127881.0053388726,
+      "new_multiplets": [
+        "VL_quark_doublet_3_2_1_6",
+        "complex_scalar_triplet_3_1_1_3"
+      ],
+      "triple_crossing_mass_GeV": 4140018578550692.0
+    },
+    {
+      "alpha_unified_inverse": 40.0357989763969,
+      "extra_beta_coefficients": [
+        "1/15",
+        "4/3",
+        "1/6"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 28.78448941477192,
+      "ln_GUT_over_new_mass": 19.11849075241407,
+      "new_common_mass_GeV": 1438221.1354121743,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "complex_scalar_triplet_3_1_1_3"
+      ],
+      "triple_crossing_mass_GeV": 288988594451328.56
+    },
+    {
+      "alpha_unified_inverse": 38.42401755597975,
+      "extra_beta_coefficients": [
+        "7/30",
+        "13/6",
+        "4/3"
+      ],
+      "inverse_coupling_residual": 1.4210854715202004e-14,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 30.488117303600895,
+      "ln_GUT_over_new_mass": 18.9291987647664,
+      "new_common_mass_GeV": 9547954.125002407,
+      "new_multiplets": [
+        "VL_quark_doublet_3_2_1_6",
+        "complex_scalar_doublet_1_2_1_2"
+      ],
+      "triple_crossing_mass_GeV": 1587657773318845.8
+    },
+    {
+      "alpha_unified_inverse": 40.193758659037236,
+      "extra_beta_coefficients": [
+        "1/10",
+        "3/2",
+        "0"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 28.4710715335848,
+      "ln_GUT_over_new_mass": 15.670894059355792,
+      "new_common_mass_GeV": 33035602.35599653,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "complex_scalar_doublet_1_2_1_2"
+      ],
+      "triple_crossing_mass_GeV": 211234595016655.5
+    },
+    {
+      "alpha_unified_inverse": 38.46898286272873,
+      "extra_beta_coefficients": [
+        "8/15",
+        "8/3",
+        "4/3"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 29.640541239506874,
+      "ln_GUT_over_new_mass": 14.2675304122493,
+      "new_common_mass_GeV": 432862095.9698362,
+      "new_multiplets": [
+        "VL_lepton_doublet_1_2_m1_2",
+        "VL_quark_doublet_3_2_1_6"
+      ],
+      "triple_crossing_mass_GeV": 680235489632429.4
+    },
+    {
+      "alpha_unified_inverse": 39.85584830228541,
+      "extra_beta_coefficients": [
+        "2/5",
+        "2",
+        "0"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 28.167763906629528,
+      "ln_GUT_over_new_mass": 12.334510162847783,
+      "new_common_mass_GeV": 685852169.9073173,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "VL_lepton_doublet_1_2_m1_2"
+      ],
+      "triple_crossing_mass_GeV": 155969693138869.72
+    },
+    {
+      "alpha_unified_inverse": 40.351044260528326,
+      "extra_beta_coefficients": [
+        "0",
+        "8/3",
+        "0"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 28.612250759344764,
+      "ln_GUT_over_new_mass": 8.611932771357688,
+      "new_common_mass_GeV": 44255120132.29721,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "Majorana_SU2_adjoint_1_3_0"
+      ],
+      "triple_crossing_mass_GeV": 243264314534077.47
+    },
+    {
+      "alpha_unified_inverse": 39.478204191983586,
+      "extra_beta_coefficients": [
+        "2/15",
+        "10/3",
+        "4/3"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 29.640541239506874,
+      "ln_GUT_over_new_mass": 9.511686941499534,
+      "new_common_mass_GeV": 50325272382.73692,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "VL_quark_doublet_3_2_1_6"
+      ],
+      "triple_crossing_mass_GeV": 680235489632429.4
+    },
+    {
+      "alpha_unified_inverse": 38.40170144077841,
+      "extra_beta_coefficients": [
+        "4/15",
+        "4",
+        "8/3"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 30.908766165040145,
+      "ln_GUT_over_new_mass": 10.621383751341146,
+      "new_common_mass_GeV": 58970392721.7005,
+      "new_multiplets": [
+        "VL_quark_doublet_3_2_1_6",
+        "VL_quark_doublet_3_2_1_6"
+      ],
+      "triple_crossing_mass_GeV": 2417922482243991.0
+    },
+    {
+      "alpha_unified_inverse": 36.843839692825696,
+      "extra_beta_coefficients": [
+        "4/15",
+        "2",
+        "5/3"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 32.15834072402146,
+      "ln_GUT_over_new_mass": 28.115427577079508,
+      "new_common_mass_GeV": 5196.975339552652,
+      "new_multiplets": [
+        "VL_quark_doublet_3_2_1_6",
+        "complex_scalar_triplet_3_1_1_3",
+        "complex_scalar_triplet_3_1_1_3"
+      ],
+      "triple_crossing_mass_GeV": 8435789013370243.0
+    },
+    {
+      "alpha_unified_inverse": 35.88770523213458,
+      "extra_beta_coefficients": [
+        "31/30",
+        "13/6",
+        "4/3"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 29.274707126372277,
+      "ln_GUT_over_new_mass": 24.510885580018037,
+      "new_common_mass_GeV": 10686.54197304574,
+      "new_multiplets": [
+        "VL_charged_singlet_1_1_m1",
+        "VL_quark_doublet_3_2_1_6",
+        "complex_scalar_doublet_1_2_1_2"
+      ],
+      "triple_crossing_mass_GeV": 471823480368994.9
+    },
+    {
+      "alpha_unified_inverse": 38.4883909652144,
+      "extra_beta_coefficients": [
+        "11/30",
+        "3/2",
+        "2/3"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 29.274707126372277,
+      "ln_GUT_over_new_mass": 24.510885580018034,
+      "new_common_mass_GeV": 10686.541973045776,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "VL_down_singlet_3_1_m1_3",
+        "complex_scalar_doublet_1_2_1_2"
+      ],
+      "triple_crossing_mass_GeV": 471823480368994.9
+    },
+    {
+      "alpha_unified_inverse": 36.30145068967001,
+      "extra_beta_coefficients": [
+        "22/15",
+        "2",
+        "2/3"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 27.046444800916092,
+      "ln_GUT_over_new_mass": 21.725557673197798,
+      "new_common_mass_GeV": 18653.81665736507,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "VL_lepton_doublet_1_2_m1_2",
+        "VL_up_singlet_3_1_2_3"
+      ],
+      "triple_crossing_mass_GeV": 50822674727974.04
+    },
+    {
+      "alpha_unified_inverse": 39.64262789169365,
+      "extra_beta_coefficients": [
+        "2/15",
+        "4/3",
+        "1/3"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 28.999303917608028,
+      "ln_GUT_over_new_mass": 21.48145028361131,
+      "new_common_mass_GeV": 167841.02941463992,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "complex_scalar_triplet_3_1_1_3",
+        "complex_scalar_triplet_3_1_1_3"
+      ],
+      "triple_crossing_mass_GeV": 358239488345150.7
+    },
+    {
+      "alpha_unified_inverse": 38.60660395308167,
+      "extra_beta_coefficients": [
+        "9/10",
+        "3/2",
+        "0"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 27.046444800916092,
+      "ln_GUT_over_new_mass": 19.31160682062027,
+      "new_common_mass_GeV": 208513.04896356037,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "VL_charged_singlet_1_1_m1",
+        "complex_scalar_doublet_1_2_1_2"
+      ],
+      "triple_crossing_mass_GeV": 50822674727974.04
+    },
+    {
+      "alpha_unified_inverse": 38.60660395308167,
+      "extra_beta_coefficients": [
+        "9/10",
+        "3/2",
+        "0"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 27.046444800916092,
+      "ln_GUT_over_new_mass": 19.31160682062027,
+      "new_common_mass_GeV": 208513.04896356037,
+      "new_multiplets": [
+        "VL_lepton_doublet_1_2_m1_2",
+        "VL_lepton_doublet_1_2_m1_2",
+        "complex_scalar_doublet_1_2_1_2"
+      ],
+      "triple_crossing_mass_GeV": 50822674727974.04
+    },
+    {
+      "alpha_unified_inverse": 36.14777380544257,
+      "extra_beta_coefficients": [
+        "4/5",
+        "8/3",
+        "2"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 30.908766165040145,
+      "ln_GUT_over_new_mass": 21.242767502682298,
+      "new_common_mass_GeV": 1438221.1354121692,
+      "new_multiplets": [
+        "VL_down_singlet_3_1_m1_3",
+        "VL_lepton_doublet_1_2_m1_2",
+        "VL_quark_doublet_3_2_1_6"
+      ],
+      "triple_crossing_mass_GeV": 2417922482243991.0
+    },
+    {
+      "alpha_unified_inverse": 37.838219531944446,
+      "extra_beta_coefficients": [
+        "3/10",
+        "13/6",
+        "3/2"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 30.908766165040145,
+      "ln_GUT_over_new_mass": 21.242767502682298,
+      "new_common_mass_GeV": 1438221.1354121692,
+      "new_multiplets": [
+        "VL_quark_doublet_3_2_1_6",
+        "complex_scalar_doublet_1_2_1_2",
+        "complex_scalar_triplet_3_1_1_3"
+      ],
+      "triple_crossing_mass_GeV": 2417922482243991.0
+    },
+    {
+      "alpha_unified_inverse": 38.523535367012784,
+      "extra_beta_coefficients": [
+        "2/3",
+        "2",
+        "2/3"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 28.61225075934476,
+      "ln_GUT_over_new_mass": 17.223865542715373,
+      "new_common_mass_GeV": 8050978.055187406,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "VL_down_singlet_3_1_m1_3",
+        "VL_lepton_doublet_1_2_m1_2"
+      ],
+      "triple_crossing_mass_GeV": 243264314534076.62
+    },
+    {
+      "alpha_unified_inverse": 39.89416703714944,
+      "extra_beta_coefficients": [
+        "1/6",
+        "3/2",
+        "1/6"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 28.612250759344764,
+      "ln_GUT_over_new_mass": 17.223865542715377,
+      "new_common_mass_GeV": 8050978.055187406,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "complex_scalar_doublet_1_2_1_2",
+        "complex_scalar_triplet_3_1_1_3"
+      ],
+      "triple_crossing_mass_GeV": 243264314534077.47
+    },
+    {
+      "alpha_unified_inverse": 36.69602647349723,
+      "extra_beta_coefficients": [
+        "4/3",
+        "8/3",
+        "4/3"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 28.612250759344764,
+      "ln_GUT_over_new_mass": 17.223865542715377,
+      "new_common_mass_GeV": 8050978.055187406,
+      "new_multiplets": [
+        "VL_charged_singlet_1_1_m1",
+        "VL_lepton_doublet_1_2_m1_2",
+        "VL_quark_doublet_3_2_1_6"
+      ],
+      "triple_crossing_mass_GeV": 243264314534077.47
+    },
+    {
+      "alpha_unified_inverse": 38.60660395308167,
+      "extra_beta_coefficients": [
+        "6/5",
+        "2",
+        "0"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 27.046444800916092,
+      "ln_GUT_over_new_mass": 14.4837051154652,
+      "new_common_mass_GeV": 26053394.072690077,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "VL_charged_singlet_1_1_m1",
+        "VL_lepton_doublet_1_2_m1_2"
+      ],
+      "triple_crossing_mass_GeV": 50822674727974.04
+    },
+    {
+      "alpha_unified_inverse": 38.60660395308167,
+      "extra_beta_coefficients": [
+        "6/5",
+        "2",
+        "0"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 27.046444800916092,
+      "ln_GUT_over_new_mass": 14.4837051154652,
+      "new_common_mass_GeV": 26053394.072690077,
+      "new_multiplets": [
+        "VL_lepton_doublet_1_2_m1_2",
+        "VL_lepton_doublet_1_2_m1_2",
+        "VL_lepton_doublet_1_2_m1_2"
+      ],
+      "triple_crossing_mass_GeV": 50822674727974.04
+    },
+    {
+      "alpha_unified_inverse": 38.441950148552266,
+      "extra_beta_coefficients": [
+        "1/3",
+        "7/3",
+        "4/3"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 30.15009589708721,
+      "ln_GUT_over_new_mass": 17.07008102894113,
+      "new_common_mass_GeV": 43703283.348222606,
+      "new_multiplets": [
+        "VL_quark_doublet_3_2_1_6",
+        "complex_scalar_doublet_1_2_1_2",
+        "complex_scalar_doublet_1_2_1_2"
+      ],
+      "triple_crossing_mass_GeV": 1132285804175085.8
+    },
+    {
+      "alpha_unified_inverse": 36.00077852487719,
+      "extra_beta_coefficients": [
+        "2/15",
+        "10/3",
+        "10/3"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 34.60316051333272,
+      "ln_GUT_over_new_mass": 20.78096820914572,
+      "new_common_mass_GeV": 91798932.51176266,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "Majorana_SU3_adjoint_8_1_0",
+        "VL_quark_doublet_3_2_1_6"
+      ],
+      "triple_crossing_mass_GeV": 9.72517562387689e+16
+    },
+    {
+      "alpha_unified_inverse": 40.06249022471008,
+      "extra_beta_coefficients": [
+        "1/5",
+        "5/3",
+        "0"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 28.353245262461826,
+      "ln_GUT_over_new_mass": 14.374805077003057,
+      "new_common_mass_GeV": 107323597.94839363,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "complex_scalar_doublet_1_2_1_2",
+        "complex_scalar_doublet_1_2_1_2"
+      ],
+      "triple_crossing_mass_GeV": 187755966566940.2
+    },
+    {
+      "alpha_unified_inverse": 38.044371449810534,
+      "extra_beta_coefficients": [
+        "3/5",
+        "8/3",
+        "3/2"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 29.872533603933693,
+      "ln_GUT_over_new_mass": 15.543488416596803,
+      "new_common_mass_GeV": 152391604.3695706,
+      "new_multiplets": [
+        "VL_lepton_doublet_1_2_m1_2",
+        "VL_quark_doublet_3_2_1_6",
+        "complex_scalar_triplet_3_1_1_3"
+      ],
+      "triple_crossing_mass_GeV": 857851846009099.6
+    },
+    {
+      "alpha_unified_inverse": 38.36180891625919,
+      "extra_beta_coefficients": [
+        "0",
+        "8/3",
+        "2"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 31.66072253681651,
+      "ln_GUT_over_new_mass": 16.9190183649682,
+      "new_common_mass_GeV": 230237765.22517756,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "Majorana_SU2_adjoint_1_3_0",
+        "Majorana_SU3_adjoint_8_1_0"
+      ],
+      "triple_crossing_mass_GeV": 5128765899434318.0
+    },
+    {
+      "alpha_unified_inverse": 34.77148170952953,
+      "extra_beta_coefficients": [
+        "4/3",
+        "4",
+        "10/3"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 31.66072253681651,
+      "ln_GUT_over_new_mass": 16.919018364968196,
+      "new_common_mass_GeV": 230237765.22517836,
+      "new_multiplets": [
+        "VL_quark_doublet_3_2_1_6",
+        "VL_quark_doublet_3_2_1_6",
+        "VL_up_singlet_3_1_2_3"
+      ],
+      "triple_crossing_mass_GeV": 5128765899434318.0
+    },
+    {
+      "alpha_unified_inverse": 39.59910049705058,
+      "extra_beta_coefficients": [
+        "7/15",
+        "2",
+        "1/6"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 28.25342022720486,
+      "ln_GUT_over_new_mass": 13.276729689176435,
+      "new_common_mass_GeV": 291225797.5796545,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "VL_lepton_doublet_1_2_m1_2",
+        "complex_scalar_triplet_3_1_1_3"
+      ],
+      "triple_crossing_mass_GeV": 169918351129243.38
+    },
+    {
+      "alpha_unified_inverse": 36.95515086884645,
+      "extra_beta_coefficients": [
+        "6/5",
+        "10/3",
+        "2"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 29.640541239506874,
+      "ln_GUT_over_new_mass": 14.2675304122493,
+      "new_common_mass_GeV": 432862095.9698362,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "VL_quark_doublet_3_2_1_6",
+        "VL_up_singlet_3_1_2_3"
+      ],
+      "triple_crossing_mass_GeV": 680235489632429.4
+    },
+    {
+      "alpha_unified_inverse": 38.54711612692911,
+      "extra_beta_coefficients": [
+        "16/15",
+        "8/3",
+        "2/3"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 28.167763906629528,
+      "ln_GUT_over_new_mass": 12.334510162847783,
+      "new_common_mass_GeV": 685852169.9073173,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "Majorana_SU2_adjoint_1_3_0",
+        "VL_up_singlet_3_1_2_3"
+      ],
+      "triple_crossing_mass_GeV": 155969693138869.72
+    },
+    {
+      "alpha_unified_inverse": 38.4794230833762,
+      "extra_beta_coefficients": [
+        "19/30",
+        "17/6",
+        "4/3"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 29.443747716579296,
+      "ln_GUT_over_new_mass": 13.18516603614763,
+      "new_common_mass_GeV": 1049416994.2667769,
+      "new_multiplets": [
+        "VL_lepton_doublet_1_2_m1_2",
+        "VL_quark_doublet_3_2_1_6",
+        "complex_scalar_doublet_1_2_1_2"
+      ],
+      "triple_crossing_mass_GeV": 558718363155894.2
+    },
+    {
+      "alpha_unified_inverse": 39.773067050229734,
+      "extra_beta_coefficients": [
+        "1/2",
+        "13/6",
+        "0"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 28.093459628540085,
+      "ln_GUT_over_new_mass": 11.517163103863895,
+      "new_common_mass_GeV": 1441882585.3030605,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "VL_lepton_doublet_1_2_m1_2",
+        "complex_scalar_doublet_1_2_1_2"
+      ],
+      "triple_crossing_mass_GeV": 144800572769675.62
+    },
+    {
+      "alpha_unified_inverse": 36.843839692825696,
+      "extra_beta_coefficients": [
+        "8/15",
+        "4",
+        "10/3"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 32.15834072402146,
+      "ln_GUT_over_new_mass": 14.057713788539754,
+      "new_common_mass_GeV": 6621222505.863577,
+      "new_multiplets": [
+        "VL_down_singlet_3_1_m1_3",
+        "VL_quark_doublet_3_2_1_6",
+        "VL_quark_doublet_3_2_1_6"
+      ],
+      "triple_crossing_mass_GeV": 8435789013370243.0
+    },
+    {
+      "alpha_unified_inverse": 38.43041389473173,
+      "extra_beta_coefficients": [
+        "2/5",
+        "10/3",
+        "2"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 30.36754915860238,
+      "ln_GUT_over_new_mass": 12.177382644849722,
+      "new_common_mass_GeV": 7241436510.220049,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "VL_down_singlet_3_1_m1_3",
+        "VL_quark_doublet_3_2_1_6"
+      ],
+      "triple_crossing_mass_GeV": 1407326333074358.2
+    },
+    {
+      "alpha_unified_inverse": 37.1383534668322,
+      "extra_beta_coefficients": [
+        "16/15",
+        "4",
+        "8/3"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 30.36754915860238,
+      "ln_GUT_over_new_mass": 12.177382644849722,
+      "new_common_mass_GeV": 7241436510.220049,
+      "new_multiplets": [
+        "VL_charged_singlet_1_1_m1",
+        "VL_quark_doublet_3_2_1_6",
+        "VL_quark_doublet_3_2_1_6"
+      ],
+      "triple_crossing_mass_GeV": 1407326333074358.2
+    },
+    {
+      "alpha_unified_inverse": 39.64262789169365,
+      "extra_beta_coefficients": [
+        "4/15",
+        "8/3",
+        "2/3"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 28.999303917608028,
+      "ln_GUT_over_new_mass": 10.740725141805655,
+      "new_common_mass_GeV": 7754178518.761609,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "Majorana_SU2_adjoint_1_3_0",
+        "VL_down_singlet_3_1_m1_3"
+      ],
+      "triple_crossing_mass_GeV": 358239488345150.7
+    },
+    {
+      "alpha_unified_inverse": 38.50300155922047,
+      "extra_beta_coefficients": [
+        "14/15",
+        "10/3",
+        "4/3"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 28.999303917608028,
+      "ln_GUT_over_new_mass": 10.740725141805653,
+      "new_common_mass_GeV": 7754178518.761638,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "VL_charged_singlet_1_1_m1",
+        "VL_quark_doublet_3_2_1_6"
+      ],
+      "triple_crossing_mass_GeV": 358239488345150.7
+    },
+    {
+      "alpha_unified_inverse": 38.50300155922047,
+      "extra_beta_coefficients": [
+        "14/15",
+        "10/3",
+        "4/3"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 28.999303917608028,
+      "ln_GUT_over_new_mass": 10.740725141805653,
+      "new_common_mass_GeV": 7754178518.761638,
+      "new_multiplets": [
+        "VL_lepton_doublet_1_2_m1_2",
+        "VL_lepton_doublet_1_2_m1_2",
+        "VL_quark_doublet_3_2_1_6"
+      ],
+      "triple_crossing_mass_GeV": 358239488345150.7
+    },
+    {
+      "alpha_unified_inverse": 39.579633471305684,
+      "extra_beta_coefficients": [
+        "4/5",
+        "8/3",
+        "0"
+      ],
+      "inverse_coupling_residual": 1.4210854715202004e-14,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 27.919834054109977,
+      "ln_GUT_over_new_mass": 9.607281785132697,
+      "new_common_mass_GeV": 8184199088.905586,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "Majorana_SU2_adjoint_1_3_0",
+        "VL_charged_singlet_1_1_m1"
+      ],
+      "triple_crossing_mass_GeV": 121721039015677.9
+    },
+    {
+      "alpha_unified_inverse": 39.579633471305684,
+      "extra_beta_coefficients": [
+        "4/5",
+        "8/3",
+        "0"
+      ],
+      "inverse_coupling_residual": 1.4210854715202004e-14,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 27.919834054109977,
+      "ln_GUT_over_new_mass": 9.607281785132697,
+      "new_common_mass_GeV": 8184199088.905586,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "VL_lepton_doublet_1_2_m1_2",
+        "VL_lepton_doublet_1_2_m1_2"
+      ],
+      "triple_crossing_mass_GeV": 121721039015677.9
+    },
+    {
+      "alpha_unified_inverse": 40.20163891259874,
+      "extra_beta_coefficients": [
+        "1/15",
+        "8/3",
+        "1/6"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 28.69388045386,
+      "ln_GUT_over_new_mass": 9.0608960911915,
+      "new_common_mass_GeV": 30650146699.336807,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "Majorana_SU2_adjoint_1_3_0",
+        "complex_scalar_triplet_3_1_1_3"
+      ],
+      "triple_crossing_mass_GeV": 263954901487671.9
+    },
+    {
+      "alpha_unified_inverse": 39.261752775314456,
+      "extra_beta_coefficients": [
+        "1/5",
+        "10/3",
+        "3/2"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 29.79072577016213,
+      "ln_GUT_over_new_mass": 10.06236355390214,
+      "new_common_mass_GeV": 33717443079.13021,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "VL_quark_doublet_3_2_1_6",
+        "complex_scalar_triplet_3_1_1_3"
+      ],
+      "triple_crossing_mass_GeV": 790466736861421.6
+    },
+    {
+      "alpha_unified_inverse": 38.08828546781751,
+      "extra_beta_coefficients": [
+        "1/3",
+        "4",
+        "17/6"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 31.16015986329674,
+      "ln_GUT_over_new_mass": 11.312716421546785,
+      "new_common_mass_GeV": 37981398538.34875,
+      "new_multiplets": [
+        "VL_quark_doublet_3_2_1_6",
+        "VL_quark_doublet_3_2_1_6",
+        "complex_scalar_triplet_3_1_1_3"
+      ],
+      "triple_crossing_mass_GeV": 3109003918068039.0
+    },
+    {
+      "alpha_unified_inverse": 40.26868870953299,
+      "extra_beta_coefficients": [
+        "1/10",
+        "17/6",
+        "0"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 28.53832858963354,
+      "ln_GUT_over_new_mass": 8.20536083794595,
+      "new_common_mass_GeV": 61720790648.76629,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "Majorana_SU2_adjoint_1_3_0",
+        "complex_scalar_doublet_1_2_1_2"
+      ],
+      "triple_crossing_mass_GeV": 225930266563116.53
+    },
+    {
+      "alpha_unified_inverse": 39.43297965128585,
+      "extra_beta_coefficients": [
+        "7/30",
+        "7/2",
+        "4/3"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 29.505941895995086,
+      "ln_GUT_over_new_mass": 9.018156015289652,
+      "new_common_mass_GeV": 72055666540.12431,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "VL_quark_doublet_3_2_1_6",
+        "complex_scalar_doublet_1_2_1_2"
+      ],
+      "triple_crossing_mass_GeV": 594570741896650.4
+    },
+    {
+      "alpha_unified_inverse": 38.41350210902624,
+      "extra_beta_coefficients": [
+        "11/30",
+        "25/6",
+        "8/3"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 30.686328808991117,
+      "ln_GUT_over_new_mass": 10.009681022206316,
+      "new_common_mass_GeV": 87034176318.37923,
+      "new_multiplets": [
+        "VL_quark_doublet_3_2_1_6",
+        "VL_quark_doublet_3_2_1_6",
+        "complex_scalar_doublet_1_2_1_2"
+      ],
+      "triple_crossing_mass_GeV": 1935704488574128.0
+    },
+    {
+      "alpha_unified_inverse": 40.06249022471008,
+      "extra_beta_coefficients": [
+        "2/5",
+        "10/3",
+        "0"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 28.353245262461826,
+      "ln_GUT_over_new_mass": 7.187402538501528,
+      "new_common_mass_GeV": 141952970621.40775,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "Majorana_SU2_adjoint_1_3_0",
+        "VL_lepton_doublet_1_2_m1_2"
+      ],
+      "triple_crossing_mass_GeV": 187755966566940.2
+    },
+    {
+      "alpha_unified_inverse": 39.32167190418079,
+      "extra_beta_coefficients": [
+        "8/15",
+        "4",
+        "4/3"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 29.174662695433426,
+      "ln_GUT_over_new_mass": 7.803465613230229,
+      "new_common_mass_GeV": 174312587643.12952,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "VL_lepton_doublet_1_2_m1_2",
+        "VL_quark_doublet_3_2_1_6"
+      ],
+      "triple_crossing_mass_GeV": 426904571553523.3
+    },
+    {
+      "alpha_unified_inverse": 38.441950148552266,
+      "extra_beta_coefficients": [
+        "2/3",
+        "14/3",
+        "8/3"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 30.15009589708721,
+      "ln_GUT_over_new_mass": 8.535040514470564,
+      "new_common_mass_GeV": 222451359472.2092,
+      "new_multiplets": [
+        "VL_lepton_doublet_1_2_m1_2",
+        "VL_quark_doublet_3_2_1_6",
+        "VL_quark_doublet_3_2_1_6"
+      ],
+      "triple_crossing_mass_GeV": 1132285804175085.8
+    },
+    {
+      "alpha_unified_inverse": 40.351044260528326,
+      "extra_beta_coefficients": [
+        "0",
+        "4",
+        "0"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 28.61225075934476,
+      "ln_GUT_over_new_mass": 5.741288514238458,
+      "new_common_mass_GeV": 781031382182.1592,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "Majorana_SU2_adjoint_1_3_0",
+        "Majorana_SU2_adjoint_1_3_0"
+      ],
+      "triple_crossing_mass_GeV": 243264314534076.62
+    },
+    {
+      "alpha_unified_inverse": 39.788733831754314,
+      "extra_beta_coefficients": [
+        "2/15",
+        "14/3",
+        "4/3"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 29.274707126372277,
+      "ln_GUT_over_new_mass": 6.127721395004507,
+      "new_common_mass_GeV": 1029304712982.7888,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "Majorana_SU2_adjoint_1_3_0",
+        "VL_quark_doublet_3_2_1_6"
+      ],
+      "triple_crossing_mass_GeV": 471823480368994.9
+    },
+    {
+      "alpha_unified_inverse": 39.14526519676549,
+      "extra_beta_coefficients": [
+        "4/15",
+        "16/3",
+        "8/3"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 30.0327757525584,
+      "ln_GUT_over_new_mass": 6.569928093613081,
+      "new_common_mass_GeV": 1411630565877.5615,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0",
+        "VL_quark_doublet_3_2_1_6",
+        "VL_quark_doublet_3_2_1_6"
+      ],
+      "triple_crossing_mass_GeV": 1006942267158094.1
+    },
+    {
+      "alpha_unified_inverse": 38.40170144077841,
+      "extra_beta_coefficients": [
+        "2/5",
+        "6",
+        "4"
+      ],
+      "inverse_coupling_residual": 7.105427357601002e-15,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 30.908766165040145,
+      "ln_GUT_over_new_mass": 7.080922500894099,
+      "new_common_mass_GeV": 2033465481175.574,
+      "new_multiplets": [
+        "VL_quark_doublet_3_2_1_6",
+        "VL_quark_doublet_3_2_1_6",
+        "VL_quark_doublet_3_2_1_6"
+      ],
+      "triple_crossing_mass_GeV": 2417922482243991.0
+    }
+  ],
+  "assumptions": "minimal SM b_i below a single mass; chosen 1-3 extra species all at one shared mass; 1-loop, no two-loop or threshold splitting",
+  "betas_SM": [
+    "41/10",
+    "-19/6",
+    "-7"
+  ],
+  "enumerated_declared_representation_count": 9,
+  "epistemic_boundary": "One-loop apparent convergence is neither a UV completion nor a prediction of BSM masses: they are solved for using measured couplings. Proton decay, representation embeddings, thresholds, two-loop RG, neutrino masses and experimental exclusions require independent checks.",
+  "max_species_enumerated": 3,
+  "representations_and_beta_additions": {
+    "Majorana_SU2_adjoint_1_3_0": [
+      "0",
+      "4/3",
+      "0"
+    ],
+    "Majorana_SU3_adjoint_8_1_0": [
+      "0",
+      "0",
+      "2"
+    ],
+    "VL_charged_singlet_1_1_m1": [
+      "4/5",
+      "0",
+      "0"
+    ],
+    "VL_down_singlet_3_1_m1_3": [
+      "4/15",
+      "0",
+      "2/3"
+    ],
+    "VL_lepton_doublet_1_2_m1_2": [
+      "2/5",
+      "2/3",
+      "0"
+    ],
+    "VL_quark_doublet_3_2_1_6": [
+      "2/15",
+      "2",
+      "4/3"
+    ],
+    "VL_up_singlet_3_1_2_3": [
+      "16/15",
+      "0",
+      "2/3"
+    ],
+    "complex_scalar_doublet_1_2_1_2": [
+      "1/10",
+      "1/6",
+      "0"
+    ],
+    "complex_scalar_triplet_3_1_1_3": [
+      "1/15",
+      "0",
+      "1/6"
+    ]
+  },
+  "single_species_corner_uncertainty_envelopes": [
+    {
+      "GUT_scale_GeV_max": 253579661640107.94,
+      "GUT_scale_GeV_min": 233238461282805.4,
+      "multiplet": "Majorana_SU2_adjoint_1_3_0",
+      "new_mass_GeV_max": 9943482.186790088,
+      "new_mass_GeV_min": 6534830.554690474,
+      "specified_electroweak_input_uncertainty_corners": 8
+    },
+    {
+      "GUT_scale_GeV_max": 2590586606313849.5,
+      "GUT_scale_GeV_min": 2254593769778888.5,
+      "multiplet": "VL_quark_doublet_3_2_1_6",
+      "new_mass_GeV_max": 1820899.0545978262,
+      "new_mass_GeV_min": 1139128.7699136918,
+      "specified_electroweak_input_uncertainty_corners": 8
+    }
+  ],
+  "solutions_count_by_added_species": {
+    "1": 2,
+    "2": 11,
+    "3": 46
+  },
+  "status": "PASS_SELECTED_ONE_THRESHOLD_INVERSE_UNIFICATION_SCREEN",
+  "valid_single_species_witnesses": [
+    {
+      "alpha_unified_inverse": 40.351044260528326,
+      "extra_beta_coefficients": [
+        "0",
+        "4/3",
+        "0"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 28.612250759344764,
+      "ln_GUT_over_new_mass": 17.223865542715377,
+      "new_common_mass_GeV": 8050978.055187406,
+      "new_multiplets": [
+        "Majorana_SU2_adjoint_1_3_0"
+      ],
+      "triple_crossing_mass_GeV": 243264314534077.47
+    },
+    {
+      "alpha_unified_inverse": 38.40170144077841,
+      "extra_beta_coefficients": [
+        "2/15",
+        "2",
+        "4/3"
+      ],
+      "inverse_coupling_residual": 0.0,
+      "is_two_loop_or_proton_safe": false,
+      "ln_GUT_over_MZ": 30.908766165040145,
+      "ln_GUT_over_new_mass": 21.24276750268229,
+      "new_common_mass_GeV": 1438221.1354121794,
+      "new_multiplets": [
+        "VL_quark_doublet_3_2_1_6"
+      ],
+      "triple_crossing_mass_GeV": 2417922482243991.0
+    }
+  ]
+}

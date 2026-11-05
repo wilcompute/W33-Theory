@@ -1,0 +1,192 @@
+{
+  "anomaly_and_hypercharge": {
+    "BL_basis": [
+      "1/3",
+      "-1/3",
+      "-1/3",
+      "-1",
+      "1",
+      "1"
+    ],
+    "SM_Y_basis": [
+      "1/6",
+      "-2/3",
+      "1/3",
+      "-1/2",
+      "1",
+      "0"
+    ],
+    "SU2_constraint": "l=-3q",
+    "SU2_doublets": 4,
+    "SU3_and_mixed_gravity_cancel_before_SU2": true,
+    "Witten_anomaly_cancelled": true,
+    "Yukawa_charges": {
+      "d": "-q+h",
+      "e": "3q+h",
+      "l": "-3q",
+      "n": "3q-h",
+      "u": "-q-h"
+    },
+    "anomaly_free_charge_basis": "X = alpha*Y_SM + beta*(B-L), alpha=2h, beta=3q-h",
+    "cubic_before_SU2_constraint": "-6*h**2*(l + 3*q)",
+    "no_unique_hypercharge_with_N_without_extra_input": true,
+    "one_generation_anomaly_free_integer_grid_cases": 49,
+    "representation": "one generation all left-handed Weyl Q,u^c,d^c,L,e^c,N^c, one Higgs H",
+    "status": "PASS",
+    "with_N_Majorana_mass_requires": "n=3q-h=0 => h=3q",
+    "without_N_cubic_anomaly": "-(-h + 3*q)**3",
+    "without_N_gravity_anomaly": "h - 3*q"
+  },
+  "causal_set_dimension": {
+    "assumption": "Minkowski Lorentzian causal cones imported to generate points; does NOT derive causal order or dimension from microscopic dynamics.",
+    "data": [
+      {
+        "dimension_input": 2,
+        "empirical_mean_order_fraction": 0.49516500309501704,
+        "predicted_order_fraction": 0.5,
+        "reconstructed_dimension_from_mean": 2.012946888716692,
+        "replicate_standard_error": 0.0037671699443613763,
+        "replicates": 16,
+        "sampled_interval_size_per_replicate": 360
+      },
+      {
+        "dimension_input": 3,
+        "empirical_mean_order_fraction": 0.22800023212627668,
+        "predicted_order_fraction": 0.22857142857142856,
+        "reconstructed_dimension_from_mean": 3.0030928119504665,
+        "replicate_standard_error": 0.003815863826087894,
+        "replicates": 16,
+        "sampled_interval_size_per_replicate": 360
+      },
+      {
+        "dimension_input": 4,
+        "empirical_mean_order_fraction": 0.09451214794181367,
+        "predicted_order_fraction": 0.10000000000000002,
+        "reconstructed_dimension_from_mean": 4.066992471725373,
+        "replicate_standard_error": 0.0032983483638492623,
+        "replicates": 16,
+        "sampled_interval_size_per_replicate": 360
+      }
+    ],
+    "status": "PASS",
+    "theory": "Myrheim-Meyer dimension estimator in a flat Alexandrov interval."
+  },
+  "epistemic_boundary": "Established physics constraints and reproducible finite benchmarks; none derives TOE, observed values of constants, E8 gauge dynamics or the Standard Model spectrum.",
+  "gauge_running_nonunification": {
+    "SU5_normalized_beta_coefficients": [
+      4.1,
+      -3.1666666666666665,
+      -7
+    ],
+    "SU5_normalized_inverse_couplings_at_MZ": [
+      59.02154694,
+      29.5857551,
+      8.474576271186441
+    ],
+    "boundary": "One-loop extrapolation only; no derived unification group, extra states, thresholds or direct new-particle prediction.",
+    "inputs_at_MZ": {
+      "MZ_GeV": 91.1876,
+      "alpha_EM_inverse_approx": 127.955,
+      "alpha_strong": 0.118,
+      "sin_squared_thetaW_MSbar": 0.23122
+    },
+    "model": "SU(3)xSU(2)xU(1) one-loop RG with minimal 3-generation 1-Higgs Standard Model field content",
+    "necessary_next_physics": "Nonminimal spectrum/thresholds and two-loop RG must be specified, with proton decay and neutrino constraints checked.",
+    "no_one_loop_triple_unification": true,
+    "pairwise_crossings": [
+      {
+        "crossing_GeV": 10317136647570.996,
+        "groups": [
+          1,
+          2
+        ],
+        "inverse_couplings_at_crossing": [
+          42.41327906697248,
+          42.41327906697248,
+          36.83015556659929
+        ],
+        "log_mu_over_MZ": 25.451908457929097,
+        "remaining_inverse_coupling_mismatch": 5.5831235003731905
+      },
+      {
+        "crossing_GeV": 243264314534077.47,
+        "groups": [
+          1,
+          3
+        ],
+        "inverse_couplings_at_crossing": [
+          40.351044260528326,
+          44.006062047559425,
+          40.351044260528326
+        ],
+        "log_mu_over_MZ": 28.612250759344764,
+        "remaining_inverse_coupling_mismatch": 3.655017787031099
+      },
+      {
+        "crossing_GeV": 9.72517562387689e+16,
+        "groups": [
+          2,
+          3
+        ],
+        "inverse_couplings_at_crossing": [
+          36.44176436657333,
+          47.025424567280766,
+          47.025424567280766
+        ],
+        "log_mu_over_MZ": 34.60316051333272,
+        "remaining_inverse_coupling_mismatch": 10.583660200707435
+      }
+    ],
+    "status": "PASS"
+  },
+  "minimal_chiral_u1": {
+    "no_n_le4_nonvectorlike_integer_anomaly_free_multiplet": "algebraic sum/cubic factorization",
+    "no_primitive_chiral_five_charge_set_maxabs_le8": true,
+    "physical_boundary": "4D local U1 anomaly cancellation is necessary, not a lattice measure, mass mechanism or global anomaly check.",
+    "primitive_chiral_five_fermion_solutions_maxabs_le9": [
+      [
+        -9,
+        -5,
+        -1,
+        7,
+        8
+      ]
+    ],
+    "status": "PASS"
+  },
+  "one_photon_locality": {
+    "A_and_B_coincidence": 0.0,
+    "A_occupancy": 0.5745320498170047,
+    "B_occupancy": 0.4254679501829948,
+    "boundary": "Does not exclude abstract time-bin high-dimensional qubit encodings; does exclude interpreting them as independent localized multiparticle Fock excitations under these assumptions.",
+    "escape_routes": "Additional excitations, matter/environment ancilla, nonlinear particle conversion, or a mathematical encoding not interpreting logical counts as direct local photon clicks.",
+    "no_go": "Passive one-excitation unitary evolution cannot generate joint local number-resolving detections in disjoint A and B.",
+    "number_conserved_one_excitation": 1,
+    "spatial_modes": 6,
+    "status": "PASS",
+    "two_excitation_A_and_B_coincidence": 1
+  },
+  "schema": "toe.physics_first.consistency_filters.20261105",
+  "status": "PASS_FIVE_INDEPENDENT_TOE_CONSISTENCY_FRONTS",
+  "universal_speed_guard": {
+    "boundary": "A counterexample to an inference, not a demonstration that the real universe violates Lorentz symmetry.",
+    "model": "two independent stable local scalar lattice Hamiltonians with different spatial stiffness",
+    "obstruction": "Locality, stable propagation and translation invariance by themselves do not require a shared limiting speed.",
+    "required_additional_input": "Emergent Lorentz invariance/renormalization-group mechanism or exact unifying symmetry enforcing equal light cones.",
+    "species": [
+      {
+        "group_speed_at_k_2pi_over19": 0.9999935922636038,
+        "microscopic_local_speed_coefficient": 1.0,
+        "phase_speed_at_k_2pi_over19": 0.9999978640895644,
+        "species": "A"
+      },
+      {
+        "group_speed_at_k_2pi_over19": 1.1999934384687716,
+        "microscopic_local_speed_coefficient": 1.2,
+        "phase_speed_at_k_2pi_over19": 1.199997812825864,
+        "species": "B"
+      }
+    ],
+    "status": "PASS"
+  }
+}
