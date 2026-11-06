@@ -75,3 +75,18 @@ Recorded in the Pass 12623 addendum: the ΛCDM n_s shift from adding DESI is +0.
 ## Sources
 
 arXiv:2506.20707, 2603.09973, 2507.03090; Bertotti et al. 2003 (Cassini).
+
+## Addendum: real DES Y3 shear at fixed background (`sign_des.py`)
+
+Cosmology is fixed at the full-data Dovekie fits. Only the ten DES nuisances (m_i, dz_i, A_IA, η) are fitted, using the class_des_fit.py likelihood (published covariance and n(z); scale cuts 10′/60′).
+
+| | S8 | shear χ² + nuisance priors | relative to ΛCDM |
+|---|---:|---:|---:|
+| ΛCDM | 0.807 | 202.55 | 0 |
+| fading c > 0 | 0.822 | 202.79 | +0.2 |
+| fading c < 0 | 0.833 | 204.14 | +1.6 |
+| CPL | 0.827 | 207.14 | **+4.6** |
+
+- **Sign:** shear prefers c > 0 by 1.35. That cancels most of the full-data preference for c < 0 (Δχ² 2.0), leaving net 0.7 toward c < 0. **The sign is undetermined by current data.**
+- **Fading vs CPL [N, indication]:** at fixed background, shear disfavours CPL by 2.8–4.3 relative to fading, although CPL's S8 lies between the two fading signs. So the shear responds to the growth history, not only to S8. DR3 BAO cannot separate fading from CPL (§3), so **cosmic shear is the candidate discriminator**.
+- **Caveats:** there is no joint refit, so a refit could absorb part of the CPL penalty. NLA intrinsic alignments only, no baryons, and my own scale cuts.
