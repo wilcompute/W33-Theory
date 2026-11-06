@@ -25,3 +25,11 @@ Claude track. Continues Pass 12621 §3, which gave point shifts only. Script: `a
 - plik-lite understates the published ACT-driven tension (n_s = 0.9743 ± 0.0034 for P+ACT+DESI).
 - Dovekie only.
 - Novelty is not claimed. arXiv:2507.12459 reports n_s only under ΛCDM. It says evolving dark energy accommodates CMB and BAO together and refers to SPT-3G D1 (arXiv:2506.20707), Table VII, for extended-model fits. I have not read that table. The n_s value under w₀wₐ is probably already there, so treat this pass as an in-house replication with a fading-coupling column added.
+
+## Addendum (2026-11-06): SPT-3G D1 read, prior-art note corrected; external check
+
+I extracted the text of arXiv:2506.20707 (v2). Its Table VII lists **χ² values only**, and the paper prints no n_s under w₀wₐ. The earlier note ("the n_s value under w₀wₐ is probably already there") was too pessimistic: that number is not in SPT-3G D1. Novelty is still not claimed, because other DESI-era analyses may report it.
+
+External checks against SPT-3G D1:
+- **ΛCDM n_s shift from adding DESI.** CMB-SPA alone gives 0.9679 ± 0.0033 (Table I); CMB-SPA + DESI gives 0.9726 ± 0.0028 (Table VI). That is +0.0047, or 1.4σ. My plik-lite pipeline gives +0.0066, or 1.7σ: the same sign and size.
+- **w₀wₐ.** CMB-SPA + DESI + Pantheon+ gives w₀ = −0.830 ± 0.054, wₐ = −0.66 ± 0.20 (§VII.D.7). My CPL fit (Dovekie) gives w₀ = −0.81, wₐ = −0.69.

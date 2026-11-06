@@ -1,0 +1,34 @@
+{
+ "dovekie_DR2_errors": {
+  "LCDM_vs_CPL": 2.6840465101769606,
+  "LCDM_vs_free_neg": 3.5650490852904513,
+  "LCDM_vs_free_pos": 2.686384588098745,
+  "CPL_vs_free_neg": 1.9984911161415235,
+  "CPL_vs_free_pos": 2.316297327832168,
+  "free_neg_vs_free_pos": 0.13435683527535444
+ },
+ "dovekie_DR3_sqrt35": {
+  "LCDM_vs_CPL": 4.473410850294933,
+  "LCDM_vs_free_neg": 5.941748475484086,
+  "LCDM_vs_free_pos": 4.477307646831242,
+  "CPL_vs_free_neg": 3.3308185269025388,
+  "CPL_vs_free_pos": 3.8604955463869457,
+  "free_neg_vs_free_pos": 0.22392805879225738
+ },
+ "desy5_DR2_errors": {
+  "LCDM_vs_CPL": 3.162471030055882,
+  "LCDM_vs_free_neg": 4.6598040160161975,
+  "LCDM_vs_free_pos": 3.9264928857120407,
+  "CPL_vs_free_neg": 2.336264067156023,
+  "CPL_vs_free_pos": 2.9840006184904526,
+  "free_neg_vs_free_pos": 0.1641782669132427
+ },
+ "desy5_DR3_sqrt35": {
+  "LCDM_vs_CPL": 5.270785050093134,
+  "LCDM_vs_free_neg": 7.766340026693662,
+  "LCDM_vs_free_pos": 6.544154809520066,
+  "CPL_vs_free_neg": 3.8937734452600377,
+  "CPL_vs_free_pos": 4.973334364150753,
+  "free_neg_vs_free_pos": 0.2736304448554045
+ }
+}

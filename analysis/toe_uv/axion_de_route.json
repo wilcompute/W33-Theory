@@ -1,0 +1,91 @@
+{
+ "b": 0.053,
+ "H0_per_yr": 6.934465437339989e-11,
+ "routes": {
+  "1+w=0.05": {
+   "Lambda_QCD": {
+    "alpha_N": 0.035333333333333335,
+    "gamma_minus_1": 0.002496888888888889,
+    "cassini_ratio": 108.56038647342997,
+    "mu_dot_per_yr": 7.882568860369994e-13,
+    "clock_ratio": 15765.137720739987,
+    "axion_mass_drift_per_yr": 1.182385329055499e-12
+   },
+   "higgs_vev": {
+    "alpha_N": 0.106,
+    "gamma_minus_1": 0.022472,
+    "cassini_ratio": 977.0434782608695,
+    "mu_dot_per_yr": 2.246532125205448e-12,
+    "clock_ratio": 44930.64250410896,
+    "axion_mass_drift_per_yr": 1.182385329055499e-12
+   },
+   "f_a": {
+    "alpha_N": 0.0,
+    "gamma_minus_1": 0.0,
+    "cassini_ratio": 0.0,
+    "mu_dot_per_yr": 0.0,
+    "clock_ratio": 0.0,
+    "axion_mass_drift_per_yr": 1.182385329055499e-12
+   }
+  },
+  "1+w=0.15": {
+   "Lambda_QCD": {
+    "alpha_N": 0.035333333333333335,
+    "gamma_minus_1": 0.002496888888888889,
+    "cassini_ratio": 108.56038647342997,
+    "mu_dot_per_yr": 1.365300976032113e-12,
+    "clock_ratio": 27306.01952064226,
+    "axion_mass_drift_per_yr": 2.047951464048169e-12
+   },
+   "higgs_vev": {
+    "alpha_N": 0.106,
+    "gamma_minus_1": 0.022472,
+    "cassini_ratio": 977.0434782608695,
+    "mu_dot_per_yr": 3.8911077816915215e-12,
+    "clock_ratio": 77822.15563383044,
+    "axion_mass_drift_per_yr": 2.047951464048169e-12
+   },
+   "f_a": {
+    "alpha_N": 0.0,
+    "gamma_minus_1": 0.0,
+    "cassini_ratio": 0.0,
+    "mu_dot_per_yr": 0.0,
+    "clock_ratio": 0.0,
+    "axion_mass_drift_per_yr": 2.047951464048169e-12
+   }
+  },
+  "1+w=0.3": {
+   "Lambda_QCD": {
+    "alpha_N": 0.035333333333333335,
+    "gamma_minus_1": 0.002496888888888889,
+    "cassini_ratio": 108.56038647342997,
+    "mu_dot_per_yr": 1.930827157025838e-12,
+    "clock_ratio": 38616.54314051676,
+    "axion_mass_drift_per_yr": 2.896240735538757e-12
+   },
+   "higgs_vev": {
+    "alpha_N": 0.106,
+    "gamma_minus_1": 0.022472,
+    "cassini_ratio": 977.0434782608695,
+    "mu_dot_per_yr": 5.502857397523638e-12,
+    "clock_ratio": 110057.14795047276,
+    "axion_mass_drift_per_yr": 2.896240735538757e-12
+   },
+   "f_a": {
+    "alpha_N": 0.0,
+    "gamma_minus_1": 0.0,
+    "cassini_ratio": 0.0,
+    "mu_dot_per_yr": 0.0,
+    "clock_ratio": 0.0,
+    "axion_mass_drift_per_yr": 2.896240735538757e-12
+   }
+  }
+ },
+ "higgs_portal_cap": {
+  "1000000000.0": 6.633862123666308e-19,
+  "100000000000.0": 6.633862123666308e-23,
+  "7000000000000.0": 1.3538494129931242e-26
+ },
+ "needed_for_threshold_stabilisation": "lambda_hs ~ 0.1 to 0.5 (Pass 12612 sigma-threshold mechanism)",
+ "radiative_floor_estimate": "two-loop via PQ quarks with SM gauge charges: of order g^4 y^2/(16 pi^2)^2 ~ 1e-7 to 1e-5 (rough)"
+}
