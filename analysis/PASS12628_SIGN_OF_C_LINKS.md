@@ -62,3 +62,20 @@ Each statement names the data that score it and what falsifies it. They were wri
 ## Prior art and sources
 
 The line-drift test was not found in two searches (standard and extended), so no novelty is claimed. Related work: arXiv:2601.05235, 2608.05032 (evolving DM mass and phantom); 2510.24560 (XRISM); 1602.04816 (sterile-neutrino white paper).
+
+## Addendum (same day): literature check, two corrections, and a geometry no-go for the sign
+
+**Crossing redshift in published reconstructions.** arXiv:2504.00985 uses a Gaussian-process fit to DESI DR2 + BAO-based + chronometer H(z) + Pantheon+. It finds w(z) crossing −1 at **z ≈ 0.4**, at about 2σ. With a DESI DR2 prior, it also finds about 2σ evidence for energy flowing **from dark matter to dark energy** at z < 0.5.
+
+In this model:
+- late DM→DE flow is the **c > 0** mode, where φ keeps rising and m ∝ e^(−c′φ) keeps falling;
+- c < 0 reverses that after its turnaround at z ≈ 1.6;
+- the z ≈ 0.4 crossing matches neither sign, since c < 0 crosses at 0.8 and c > 0 never crosses; CPL crosses at 0.4 by construction.
+
+So the published data-driven result also leaves the sign of c open: the energy direction favours c > 0, while the existence of a crossing favours c < 0. S2 stays as frozen.
+
+**Correction (Lyman-α).** §2's "Lyman-α pushes from below at roughly 10–15 keV" was recalled from memory and is probably too strict for scalar-decay production. Merle and Schneider (arXiv:1409.6311) find that decay of heavy singlets is the production mechanism most compatible with Lyman-α, with thresholds of a few keV (slide-level numbers). The 7 keV corridor is therefore less squeezed than stated. The upper edge (clocks) stands. A proper check needs the actual momentum distribution from S decays.
+
+**Geometry cannot fix the sign (`euclid_sign.py`).** The frozen c < 0 and c > 0 predictions differ in D_M/r_d by 0.04–0.11% and in D_H/r_d by 0.03–0.21% at z = 0.93–2.33. With uncorrelated 0.5%, 0.3% and 0.2% errors per quantity, the Asimov Δχ² is 0.35–0.55, 1.0–1.5 and 2.2–3.4. These are upper bounds. **No foreseeable BAO survey determines the sign of c.** It is set only by growth (ΔS8 = 0.011–0.015, about 1.5%), by a particle signal (the line drift), or by the energy-flow direction.
+
+Sources: arXiv:2504.00985, 1409.6311, 2204.08795, 2602.11085 (abstract only), 2503.14738.
