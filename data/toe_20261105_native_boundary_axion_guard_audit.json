@@ -1,0 +1,674 @@
+{
+  "mode": "Configured hook entries run directly with identical file patterns after both indexes regenerated. Existing Bash/CMD pre-commit launcher is unreliable; no --no-verify used.",
+  "records": [
+    {
+      "id": "stale-boundaries",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_stale_boundaries.py"
+      ],
+      "exit_code": 124,
+      "stdout": "Exceeded90s; no PASS asserted.",
+      "stderr": "",
+      "seconds": 90.462
+    },
+    {
+      "id": "shifted-adjacency-descendants",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_shifted_adjacency_descendants.py",
+        "--check-only",
+        "analysis/toe_20261105_native_boundary_axion.py",
+        "data/toe_20261105_native_boundary_axion.json",
+        "data/toe_20261105_native_boundary_axion_server.json",
+        "analysis/toe_20261105_native_boundary_axion_validation.py",
+        "data/toe_20261105_native_boundary_axion_validation.json",
+        "tests/test_toe_20261105_native_boundary_axion.py",
+        "analysis/2026-11-05_native_boundary_axion_and_two_UV_repairs.md",
+        "data/toe_20261105_native_boundary_axion_result_search.json",
+        "RESULTS_INDEX.md",
+        "TOPICAL_ALIASES.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 2.545
+    },
+    {
+      "id": "tag-540-check",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/tag_540_disambiguation.py",
+        "--check-only",
+        "--strict",
+        "analysis/toe_20261105_native_boundary_axion.py",
+        "data/toe_20261105_native_boundary_axion.json",
+        "data/toe_20261105_native_boundary_axion_server.json",
+        "analysis/toe_20261105_native_boundary_axion_validation.py",
+        "data/toe_20261105_native_boundary_axion_validation.json",
+        "tests/test_toe_20261105_native_boundary_axion.py",
+        "analysis/2026-11-05_native_boundary_axion_and_two_UV_repairs.md",
+        "data/toe_20261105_native_boundary_axion_result_search.json",
+        "RESULTS_INDEX.md",
+        "TOPICAL_ALIASES.md"
+      ],
+      "exit_code": 1,
+      "stdout": "ERROR: RESULTS_INDEX.md has ambiguous 540 occurrence(s)\n  line 218: frontiers.py` | | `[0,1440,31302]` | `analysis/bt3407_magnetic_exact_no_go.py` | | `[1080,540,540]` | `analysis/w33_pass4756_4758_4760_dependency_cube_fast_verify.py` | | `[1160,92\n  line 218: tiers.py` | | `[0,1440,31302]` | `analysis/bt3407_magnetic_exact_no_go.py` | | `[1080,540,540]` | `analysis/w33_pass4756_4758_4760_dependency_cube_fast_verify.py` | | `[1160,925,68\n  line 276: k_map.py` | | `[5,6912,1053]` | `analysis/w33_20261027_native_bloch_face_module.py` | | `[540,270,135]` | `analysis/w33_pass3989_3996_maximum_code_orbit_census.py` | | `[540,540,54\n  line 298: er_code.py` \u00b7 `analysis/w33_pass4772_4776_global_cube_cell_code.py` \u00b7 *(+2)* | | `[2025,540,3]` | `analysis/PASS4745_4752_RESERVATION.md` | | `[2025,567,4]` | `analysis/PASS4745_\n  line 408: o.py` | | `[54,72,432]` | `analysis/w33_pass1611_1615_torsion_xor_lattice_octet.py` | | `[540,141,4]` | `analysis/w33_pass4924_track_b_arithmetic_and_the_51840_warning.py` | | `[58\n  line 1494: ults_index.py` \u00b7 `analysis/w33_pass382_reversible_logic_switch_controller.g` | | `234360/540/90+360+90/6/22of48/0exact/S6-direction` | `analysis/PASS384_Q6_Q3_FOLD_OBSTRUCTION.md`\n  line 1619: ite_TOE_frontiers.md` \u00b7 `analysis/w33_20261019_round11_first_tits_jordan.py` | | `234360/540/90` | `analysis/PASS384_Q6_Q3_FOLD_OBSTRUCTION.md` \u00b7 `analysis/build_results_index.py\n  line 1630: KTHROUGH.md` \u00b7 `analysis/w33_20260924_history_pointline_cospectral_firewall.py` | | `270/540/1620` | `analysis/w33_pass2045_2049_the_sevens_and_a_numbering_collision.md` | | `343/\n  line 1977: py` \u00b7 `analysis/w33_pass10153_10160_c315_w52_structural_no_go.py` | | `totally-isotropic@540` | `analysis/BT1536_frame_dual_k44_code.md` \u00b7 `analysis/w33_frame_hoffman_resolution_\n  line 2387: it_iso.md` | | `tritangent@360` | `analysis/w33_pass4997_4999_bonkers.py` | | `tritangent@540` | `analysis/w33_e6_involution_ladder_flags.py` | | `tritangent@576` | `analysis/w33_2\n  line 2653: ic_closure.md` \u00b7 `analysis/BT3320_BT3331_global_cover_quantum_hypercube.md` | | `deficit@540` | `analysis/PASS5016_5023_EXECUTED_OUTCOMES.md` \u00b7 `analysis/w33_pass5016_radius_rp2_\n  line 2864: ity_spectral_E6_parallelism.md` \u00b7 `analysis/2026-10-10_toe43_five_fronts.md` | | `spread@540` | `analysis/PASS1074_1078_FIVE_STREAM_RELEASE.md` \u00b7 `analysis/w33_pass1067_outer_cla\n  line 3996: _matrix_cs.py` \u00b7 `analysis/w33_pass804_adversarial_calibration_failclosed.py` | | `alpha@540` | `analysis/2026-07-31_frame_hoffman_resolution_theorem.md` \u00b7 `exploration/w33_indep\n  Add an occurrence-local canonical tag: {540:point-nonedge}, {540:double-six-nonincident}, {540:gq42-arc}, {540:outer-4c}, {540:line-nonedge}; use {540:both} or {540:mixed} only for a genuinely mixed single occurrence, and {540:unrelated} only when the literal is not one of the five degree-540 carriers.\nERROR: TOPICAL_ALIASES.md has ambiguous 540 occurrence(s)\n  line 438: -code-outage-decoder.html](docs/pgsp-moduli-outer-code-outage-decoder.html) - `code:[2025,540,3]` \ufffd \u2014 [PASS4745_4752_RESERVATION.md](analysis/PASS4745_4752_RESERVATION.md), [PAS\n  Add an occurrence-local canonical tag: {540:point-nonedge}, {540:double-six-nonincident}, {540:gq42-arc}, {540:outer-4c}, {540:line-nonedge}; use {540:both} or {540:mixed} only for a genuinely mixed single occurrence, and {540:unrelated} only when the literal is not one of the five degree-540 carriers.\n",
+      "stderr": "",
+      "seconds": 2.127
+    },
+    {
+      "id": "pass-namespace-collision-guard",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "analysis/w33_pass1197_parallel_collision_guard.py",
+        "--check-only"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"C:\\Repos\\Theory of Everything\\analysis\\w33_pass1197_parallel_collision_guard.py\", line 189, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Repos\\Theory of Everything\\analysis\\w33_pass1197_parallel_collision_guard.py\", line 89, in main\n    registry, registry_blocks, supplements = load_registry_blocks()\n                                             ~~~~~~~~~~~~~~~~~~~~^^\n  File \"C:\\Repos\\Theory of Everything\\analysis\\w33_pass1197_parallel_collision_guard.py\", line 80, in load_registry_blocks\n    assert supplement.get(\"schema\") == \"w33.pass_namespace_registry.v2.supplement\", path\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: C:\\Repos\\Theory of Everything\\data\\w33_pass_namespace_registry_v2.d\\10049-10112.json\n",
+      "seconds": 1.671
+    },
+    {
+      "id": "s-min-formula-guard",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_smin_formula.py",
+        "analysis/toe_20261105_native_boundary_axion.py",
+        "analysis/toe_20261105_native_boundary_axion_validation.py",
+        "tests/test_toe_20261105_native_boundary_axion.py",
+        "analysis/2026-11-05_native_boundary_axion_and_two_UV_repairs.md",
+        "RESULTS_INDEX.md",
+        "TOPICAL_ALIASES.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.732
+    },
+    {
+      "id": "topical-aliases",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/build_topical_aliases.py",
+        "--check"
+      ],
+      "exit_code": 124,
+      "stdout": "Exceeded90s; no PASS asserted.",
+      "stderr": "",
+      "seconds": 90.38
+    },
+    {
+      "id": "certificate-digests",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_certificates.py",
+        "--quiet",
+        "data/toe_20261105_native_boundary_axion.json",
+        "data/toe_20261105_native_boundary_axion_server.json",
+        "data/toe_20261105_native_boundary_axion_validation.json",
+        "data/toe_20261105_native_boundary_axion_result_search.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 1.031
+    },
+    {
+      "id": "novelty-claims",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_novelty_claims.py",
+        "analysis/2026-11-05_native_boundary_axion_and_two_UV_repairs.md"
+      ],
+      "exit_code": 0,
+      "stdout": "checking 1 file(s) against index.html, photonic_holonet_body.tex, w33_paper_body.tex\nno novelty claim collides with the encyclopedia.\n",
+      "stderr": "",
+      "seconds": 1.996
+    },
+    {
+      "id": "rediscovery",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_rediscovery.py",
+        "analysis/toe_20261105_native_boundary_axion.py",
+        "analysis/toe_20261105_native_boundary_axion_validation.py",
+        "analysis/2026-11-05_native_boundary_axion_and_two_UV_repairs.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 1.155
+    },
+    {
+      "id": "search-power",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_search_power.py",
+        "analysis/toe_20261105_native_boundary_axion.py",
+        "analysis/toe_20261105_native_boundary_axion_validation.py",
+        "analysis/2026-11-05_native_boundary_axion_and_two_UV_repairs.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  scanned 3 files, 0 unpowered nulls\n  (a zero here means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.373
+    },
+    {
+      "id": "guard-selftests",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_guard_selftests.py"
+      ],
+      "exit_code": 0,
+      "stdout": "  stale-boundaries                 self-test green\n  shifted-adjacency-descendants    self-test green\n  tag-540-check                    self-test green\n  pass-namespace-collision-guard   self-test green\n  s-min-formula-guard              self-test green\n  topical-aliases                  self-test green\n  certificate-digests              self-test green\n  novelty-claims                   self-test green\n  rtl-folds                        self-test green\n  rediscovery                      self-test green\n  search-power                     self-test green\n  layer-conformance                self-test green\n  guard-selftests                  (this runner; skipped)\n  regex-deadends                   self-test green\n  retraction-propagation           self-test green\n  stdlib-shadow                    self-test green\n  pattern-inversions               self-test green\n  heredoc-regex                    self-test green\n  reservation-overlap              self-test green\n  cert-prose-vs-data               self-test green\n  convention-fixed-form            self-test green\n  key-nearmiss                     self-test green\n  certificate-rediscovery          self-test green\n  order-coincidence                self-test green\n  spectral-overreach               self-test green\n  hardcoded-keys                   self-test green\n  constant-claims                  no self-test\n\n  25 self-tested, 1 without a self-test, 0 failing\n\n  The guards without a self-test report numbers nobody can interpret. A zero from a checker\n  that has never been shown to detect anything is not evidence of a clean corpus -- it is\n  the absence of evidence, formatted to look like the presence of it.\n",
+      "stderr": "",
+      "seconds": 53.071
+    },
+    {
+      "id": "regex-deadends",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_regex_deadends.py",
+        "analysis/toe_20261105_native_boundary_axion.py",
+        "analysis/toe_20261105_native_boundary_axion_validation.py"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 unmatchable alternatives\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.416
+    },
+    {
+      "id": "retraction-propagation",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_retraction_propagation.py",
+        "analysis/toe_20261105_native_boundary_axion.py",
+        "analysis/toe_20261105_native_boundary_axion_validation.py",
+        "analysis/2026-11-05_native_boundary_axion_and_two_UV_repairs.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 live assertions of retracted claims across 3 registered\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.55
+    },
+    {
+      "id": "stdlib-shadow",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_stdlib_shadow.py",
+        "analysis/toe_20261105_native_boundary_axion.py",
+        "analysis/toe_20261105_native_boundary_axion_validation.py",
+        "tests/test_toe_20261105_native_boundary_axion.py"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 shadowing files, 0 high-risk\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.457
+    },
+    {
+      "id": "heredoc-regex",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_heredoc_regex.py",
+        "analysis/toe_20261105_native_boundary_axion.py",
+        "analysis/toe_20261105_native_boundary_axion_validation.py"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 collapsed escapes in regex context\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.703
+    },
+    {
+      "id": "cert-prose-vs-data",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_cert_prose_vs_data.py",
+        "data/toe_20261105_native_boundary_axion.json",
+        "data/toe_20261105_native_boundary_axion_server.json",
+        "data/toe_20261105_native_boundary_axion_validation.json",
+        "data/toe_20261105_native_boundary_axion_result_search.json"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 prose/data contradiction(s) in 4 certificate(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 1.433
+    },
+    {
+      "id": "convention-fixed-form",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_convention_fixed_form.py",
+        "analysis/toe_20261105_native_boundary_axion.py",
+        "analysis/toe_20261105_native_boundary_axion_validation.py",
+        "analysis/2026-11-05_native_boundary_axion_and_two_UV_repairs.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 convention-fixed choice(s) in 3 file(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 1.988
+    },
+    {
+      "id": "key-nearmiss",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_key_nearmiss.py",
+        "data/toe_20261105_native_boundary_axion.json",
+        "data/toe_20261105_native_boundary_axion_server.json",
+        "data/toe_20261105_native_boundary_axion_validation.json",
+        "data/toe_20261105_native_boundary_axion_result_search.json"
+      ],
+      "exit_code": 124,
+      "stdout": "Exceeded90s; no PASS asserted.",
+      "stderr": "",
+      "seconds": 90.212
+    },
+    {
+      "id": "certificate-rediscovery",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_certificate_rediscovery.py",
+        "data/toe_20261105_native_boundary_axion.json",
+        "data/toe_20261105_native_boundary_axion_server.json",
+        "data/toe_20261105_native_boundary_axion_validation.json",
+        "data/toe_20261105_native_boundary_axion_result_search.json"
+      ],
+      "exit_code": 0,
+      "stdout": "  RARE  toe_20261105_native_boundary_axion.json\n        shortest_paths@4  (stem reaches 1 file-slots)  already in: PART_4161_4168_BROADER_ANOMALY_HARDWARE_NOISY_STORAGE_LANDSCAPE_BONKERS.json\n  RARE  toe_20261105_native_boundary_axion.json\n        girth@8  (stem reaches 18 file-slots)  already in: PART_3989_3990_3994_3996_PHOTON_INCIDENCE_ECHO_CLOCK.json, PART_3997_4004_LAYOUT_TOMOGRAPHY_EDGE_MEMORY.json, PART_4169_4176_DISCRETE_C2_HAWKING_BACKREACTION_GRAY_LEVI_CASIMIR_AXION.json ...\n  RARE  toe_20261105_native_boundary_axion.json\n        cycle_rank@81  (stem reaches 20 file-slots)  already in: PART_4013_4018_INCIDENCE_LINK_H1_MEMORY.json, PART_W33_PASS5388_5392_ALLQ_LEVI_FLAG_HODGE.json\n        toe_20261105_native_boundary_axion.json\n        distance@4  (stem reaches 28 file-slots)  already in: PART_W33_PASS4748_CROSSFIBER_ROUTER_CODE.json, PART_W33_PASS4800_TRIANGLE_QUTRIT_CSS.json, PART_W33_PASS4819_OUTER_CODE_ALGEBRA.json ...\n        toe_20261105_native_boundary_axion.json\n        length@12  (stem reaches 139 file-slots)  already in: PART_BT3364_BT3375_CLEBSCH_PETERSEN_RESILIENT_results.json, PART_W33_PASS4237_4244_MINPOLY_AND_OUTSIDE_BOX.json, dcclxxi_perfect_codes_from_w33.json ...\n        toe_20261105_native_boundary_axion.json\n        length@16  (stem reaches 139 file-slots)  already in: w33_pass1911_stabilizer_weighted_primitive_holonomy.json\n        toe_20261105_native_boundary_axion.json\n        length@20  (stem reaches 139 file-slots)  already in: w33_pass1911_stabilizer_weighted_primitive_holonomy.json, w33_pass614_fault_detecting_selector_code.json\n        toe_20261105_native_boundary_axion.json\n        length@24  (stem reaches 139 file-slots)  already in: dcclxxi_perfect_codes_from_w33.json, w33_pass1911_stabilizer_weighted_primitive_holonomy.json\n        toe_20261105_native_boundary_axion.json\n        length@4  (stem reaches 139 file-slots)  already in: PART_W33_PASS4237_4244_MINPOLY_AND_OUTSIDE_BOX.json, PART_W33_PASS4425_4426_WILSON_AND_THE_29.json, w33_pass1911_stabilizer_weighted_primitive_holonomy.json\n        toe_20261105_native_boundary_axion.json\n        length@8  (stem reaches 139 file-slots)  already in: PART_BT1656_RUNTIME_WORD_CYCLE_BASIS_results.json, PART_W33_PASS4237_4244_MINPOLY_AND_OUTSIDE_BOX.json, bt1319_toroidal_q4_hypercube_holonet_bridge.json ...\n        toe_20261105_native_boundary_axion.json\n        edges@160  (stem reaches 293 file-slots)  already in: PART_4161_4168_BROADER_ANOMALY_HARDWARE_NOISY_STORAGE_LANDSCAPE_BONKERS.json, PART_4185_4192_ADAPTIVE_C2_HAWKING_HYSTERESIS_3LOCAL_COVER_HOLONOMY_IHARA_HEAT.json, PART_BT1654_HEAWOOD_CLOCK_HOMOLOGY_results.json ...\n        toe_20261105_native_boundary_axion.json\n        edges@480  (stem reaches 293 file-slots)  already in: PART_BT727_VISUAL_ATLAS_SPEC.json, PART_W33_PASS4409_4410_SIGNINGS.json, PART_W33_PASS4444_4446_PRIMES_CODES_FLOQUET.json ...\n        toe_20261105_native_boundary_axion.json\n        vertices@240  (stem reaches 313 file-slots)  already in: PART_BT3600_BT3613_CHAINED_BREAKTHROUGH_results.json, PART_BT697_CHART_INTERSECTION_GRAPH_summary.json, PART_W33_PASS4535_BOREL_EDGE_TRANSFER_QUOTIENT.json ...\n        toe_20261105_native_boundary_axion.json\n        vertices@80  (stem reaches 313 file-slots)  already in: PART_4161_4168_BROADER_ANOMALY_HARDWARE_NOISY_STORAGE_LANDSCAPE_BONKERS.json, PART_4185_4192_ADAPTIVE_C2_HAWKING_HYSTERESIS_3LOCAL_COVER_HOLONOMY_IHARA_HEAT.json, PART_BT1654_HEAWOOD_CLOCK_HOMOLOGY_results.json ...\n  RARE  toe_20261105_native_boundary_axion_server.json\n        degree@16  (stem reaches 206 file-slots)  already in: PART_W33_PASS4752_DECK_NORMALIZER_TWIST_COMPARISON.json, PART_W33_PASS4771_DEGREE16_NORMALIZER_COVER.json, PART_W33_PASS4840_LEVI_CYCLE_K33_INCIDENCE.json ...\n  RARE  toe_20261105_native_boundary_axion_server.json\n        degree@20  (stem reaches 206 file-slots)  already in: PART_4049_4056_FIVE_FRONT_OUTSIDE_BOX.json, PART_4081_4088_DEEP_PHYSICS.json, PART_W33_PASS4441_4443_RESCORE_COARSENESS_COVER.json ...\n  RARE  toe_20261105_native_boundary_axion_server.json\n        degree@24  (stem reaches 206 file-slots)  already in: PART_3965_3972_TOPOLOGY_CONTROL_CAUSAL_DENSITY_results.json, PART_4081_4088_DEEP_PHYSICS.json, PART_W33_PASS4745_INVARIANT_H1_CHARACTER.json ...\n        toe_20261105_native_boundary_axion_server.json\n        degree@8  (stem reaches 206 file-slots)  already in: PART_W33_PASS3100_3102_BASS_REGULAR_TAU.json, PART_W33_PASS3120_3122_BASS_COLLISIONS.json, PART_W33_PASS4201_REGULAR_COMPUTING_ZETA.json ...\n        toe_20261105_native_boundary_axion_server.json\n        edges@160  (stem reaches 293 file-slots)  already in: PART_4161_4168_BROADER_ANOMALY_HARDWARE_NOISY_STORAGE_LANDSCAPE_BONKERS.json, PART_4185_4192_ADAPTIVE_C2_HAWKING_HYSTERESIS_3LOCAL_COVER_HOLONOMY_IHARA_HEAT.json, PART_BT1654_HEAWOOD_CLOCK_HOMOLOGY_results.json ...\n\n  19 token(s) already present elsewhere, over 4 certificate(s)\n\n  CANDIDATES, RAREST FIRST. Pass 4800's `alpha@18` sat in a committed certificate while\n  six passes re-derived it. Read the RARE ones first: a stem with small reach names a\n  quantity, a stem with large reach names bookkeeping. Ranking is the fix that a stem\n  blocklist was not -- Pass 5635 A/B'd the blocklist and it moved two certificates.\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 3.227
+    },
+    {
+      "id": "order-coincidence",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_order_coincidence.py",
+        "analysis/toe_20261105_native_boundary_axion.py",
+        "analysis/toe_20261105_native_boundary_axion_validation.py",
+        "analysis/2026-11-05_native_boundary_axion_and_two_UV_repairs.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 order-coincidence claim(s) in 3 file(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.918
+    },
+    {
+      "id": "spectral-overreach",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_spectral_overreach.py",
+        "analysis/toe_20261105_native_boundary_axion.py",
+        "analysis/toe_20261105_native_boundary_axion_validation.py",
+        "analysis/2026-11-05_native_boundary_axion_and_two_UV_repairs.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 candidate spectral over-read(s) in 3 file(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.732
+    },
+    {
+      "id": "hardcoded-keys",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_hardcoded_keys.py",
+        "analysis/toe_20261105_native_boundary_axion.py",
+        "analysis/toe_20261105_native_boundary_axion_validation.py"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 single-key lookups beside a canonical list\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 1.082
+    },
+    {
+      "id": "constant-claims",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_constant_claims_hook.py",
+        "analysis/2026-11-05_native_boundary_axion_and_two_UV_repairs.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.779
+    }
+  ],
+  "all_exit_codes_zero": false,
+  "earlier_run_before_final_index_refresh": {
+    "mode": "Configured hook entries run directly with identical file patterns after both indexes regenerated. Existing Bash/CMD pre-commit launcher is unreliable; no --no-verify used.",
+    "records": [
+      {
+        "id": "stale-boundaries",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "scripts/check_stale_boundaries.py"
+        ],
+        "exit_code": 0,
+        "stdout": "==============================================================================\n[stale-boundary sweep] boundary sections a LATER file may have answered\n==============================================================================\nscanned 4053 analysis/*.md; 15 boundaries have a later file sharing >=2 result tokens\n\n  BT7171_BT7186_e8_d4_h27_q9.md\n    -> later: PASS7376_7384_deep_followup.md   (23 shared tokens, e.g. A2, D4, E6, E8)\n  2026-10-10_toe33_joint_decoder_p13_a6_bloch_hardware.md\n    -> later: w33_pass1117_1119_aliases_orbits_trees.md   (9 shared tokens, e.g. E6, E8, e6+e8, e6+levi)\n  PASS20260925_HESSE_PARABOLIC_CUBIC_CLOCK_BREAKTHROUGH.md\n    -> later: MARCELIS_DEEP_CRAWL_2026_09_09.md   (9 shared tokens, e.g. E6, E8, e6+e8, e6+hesse)\n  2026-07-08_pass70_15vector_doily_attack.md\n    -> later: 2026-07-08_pass72_cumulative_bijection.md   (4 shared tokens, e.g. doily, spread@15, spread@3, spread@5)\n  2026-07-08_pass76_QEC_codes_alpha_code.md\n    -> later: 2026-07-15_pass82_grand_synthesis.md   (3 shared tokens, e.g. [137,1,3], [[137,1,3]], monster+moonshine)\n  BT807_q3_antiflag_two_clocks.md\n    -> later: BT1710_BT1712_qubit_torus_hesse_breakthrough.md   (3 shared tokens, e.g. csaszar, csaszar+doily, doily)\n  BT809_register_f4_regular_spread.md\n    -> later: BT836_gc_hemicells_in_spreads.md   (3 shared tokens, e.g. spread@10, spread@2, spread@45)\n  2026-06-19_validation_thread_summary.md\n    -> later: 2026-06-19_bt1327_bt1330_summary.md   (2 shared tokens, e.g. [63,1,11], [[63,1,11]])\n  2026-10-31_tick_loop_algebra_rigidity.md\n    -> later: PASS20260924_EXECUTE_ALL5_TEMPORAL_E8_CONTROLLER.md   (2 shared tokens, e.g. clifford+eisenstein, edge240:signed)\n  2026-07-08_pass72_deep_structure.md\n    -> later: 2026-07-08_pass73_kneser_css_moonshine.md   (2 shared tokens, e.g. doily, doily+monster)\n  BT745_presentation_torsor_chirality.md\n    -> later: BT746_absolute_chirality_z12.md   (2 shared tokens, e.g. E6, e6+torsor)\n  BT795_spread_envelope_routing_cell.md\n    -> later: w33_pass1971_spread_treatments_concordance.md   (2 shared tokens, e.g. spread@180, spread@40)\n  BT1320_BT1325_hypercube_tower_holonet.md\n    -> later: BT1416_BT1418_css_optical_quartic_frontier.md   (2 shared tokens, e.g. clifford+csaszar, csaszar)\n  BT1425_BT1427_retwined_fano_pipeline.md\n    -> later: BT1428_BT1430_symmetry_pulse_holonet.md   (2 shared tokens, e.g. D4, d4+tomotope)\n  BT2560_BT2567_seven_frontiers.md\n    -> later: BT2567_seven_frontiers_insert.tex   (2 shared tokens, e.g. tritangent@27, tritangent@45)\n\n  CANDIDATES, not verdicts. Read the later file before spending a pass\n  re-answering the question. If it does answer it, EDIT THE ORIGINAL\n  boundary to point there -- leaving it stale is what caused this.\n\n",
+        "stderr": "",
+        "seconds": 67.157
+      },
+      {
+        "id": "shifted-adjacency-descendants",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "scripts/check_shifted_adjacency_descendants.py",
+          "--check-only",
+          "analysis/toe_20261105_native_boundary_axion.py",
+          "data/toe_20261105_native_boundary_axion.json",
+          "data/toe_20261105_native_boundary_axion_server.json",
+          "analysis/toe_20261105_native_boundary_axion_validation.py",
+          "data/toe_20261105_native_boundary_axion_validation.json",
+          "tests/test_toe_20261105_native_boundary_axion.py",
+          "analysis/2026-11-05_native_boundary_axion_and_two_UV_repairs.md",
+          "data/toe_20261105_native_boundary_axion_result_search.json",
+          "RESULTS_INDEX.md",
+          "TOPICAL_ALIASES.md"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "seconds": 1.997
+      },
+      {
+        "id": "tag-540-check",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "scripts/tag_540_disambiguation.py",
+          "--check-only",
+          "--strict",
+          "analysis/toe_20261105_native_boundary_axion.py",
+          "data/toe_20261105_native_boundary_axion.json",
+          "data/toe_20261105_native_boundary_axion_server.json",
+          "analysis/toe_20261105_native_boundary_axion_validation.py",
+          "data/toe_20261105_native_boundary_axion_validation.json",
+          "tests/test_toe_20261105_native_boundary_axion.py",
+          "analysis/2026-11-05_native_boundary_axion_and_two_UV_repairs.md",
+          "data/toe_20261105_native_boundary_axion_result_search.json",
+          "RESULTS_INDEX.md",
+          "TOPICAL_ALIASES.md"
+        ],
+        "exit_code": 1,
+        "stdout": "ERROR: RESULTS_INDEX.md has ambiguous 540 occurrence(s)\n  line 218: frontiers.py` | | `[0,1440,31302]` | `analysis/bt3407_magnetic_exact_no_go.py` | | `[1080,540,540]` | `analysis/w33_pass4756_4758_4760_dependency_cube_fast_verify.py` | | `[1160,92\n  line 218: tiers.py` | | `[0,1440,31302]` | `analysis/bt3407_magnetic_exact_no_go.py` | | `[1080,540,540]` | `analysis/w33_pass4756_4758_4760_dependency_cube_fast_verify.py` | | `[1160,925,68\n  line 276: k_map.py` | | `[5,6912,1053]` | `analysis/w33_20261027_native_bloch_face_module.py` | | `[540,270,135]` | `analysis/w33_pass3989_3996_maximum_code_orbit_census.py` | | `[540,540,54\n  line 298: er_code.py` \u00b7 `analysis/w33_pass4772_4776_global_cube_cell_code.py` \u00b7 *(+2)* | | `[2025,540,3]` | `analysis/PASS4745_4752_RESERVATION.md` | | `[2025,567,4]` | `analysis/PASS4745_\n  line 408: o.py` | | `[54,72,432]` | `analysis/w33_pass1611_1615_torsion_xor_lattice_octet.py` | | `[540,141,4]` | `analysis/w33_pass4924_track_b_arithmetic_and_the_51840_warning.py` | | `[58\n  line 1494: ults_index.py` \u00b7 `analysis/w33_pass382_reversible_logic_switch_controller.g` | | `234360/540/90+360+90/6/22of48/0exact/S6-direction` | `analysis/PASS384_Q6_Q3_FOLD_OBSTRUCTION.md`\n  line 1619: ite_TOE_frontiers.md` \u00b7 `analysis/w33_20261019_round11_first_tits_jordan.py` | | `234360/540/90` | `analysis/PASS384_Q6_Q3_FOLD_OBSTRUCTION.md` \u00b7 `analysis/build_results_index.py\n  line 1630: KTHROUGH.md` \u00b7 `analysis/w33_20260924_history_pointline_cospectral_firewall.py` | | `270/540/1620` | `analysis/w33_pass2045_2049_the_sevens_and_a_numbering_collision.md` | | `343/\n  line 1977: py` \u00b7 `analysis/w33_pass10153_10160_c315_w52_structural_no_go.py` | | `totally-isotropic@540` | `analysis/BT1536_frame_dual_k44_code.md` \u00b7 `analysis/w33_frame_hoffman_resolution_\n  line 2387: it_iso.md` | | `tritangent@360` | `analysis/w33_pass4997_4999_bonkers.py` | | `tritangent@540` | `analysis/w33_e6_involution_ladder_flags.py` | | `tritangent@576` | `analysis/w33_2\n  line 2653: ic_closure.md` \u00b7 `analysis/BT3320_BT3331_global_cover_quantum_hypercube.md` | | `deficit@540` | `analysis/PASS5016_5023_EXECUTED_OUTCOMES.md` \u00b7 `analysis/w33_pass5016_radius_rp2_\n  line 2864: ity_spectral_E6_parallelism.md` \u00b7 `analysis/2026-10-10_toe43_five_fronts.md` | | `spread@540` | `analysis/PASS1074_1078_FIVE_STREAM_RELEASE.md` \u00b7 `analysis/w33_pass1067_outer_cla\n  line 3995: _matrix_cs.py` \u00b7 `analysis/w33_pass804_adversarial_calibration_failclosed.py` | | `alpha@540` | `analysis/2026-07-31_frame_hoffman_resolution_theorem.md` \u00b7 `exploration/w33_indep\n  Add an occurrence-local canonical tag: {540:point-nonedge}, {540:double-six-nonincident}, {540:gq42-arc}, {540:outer-4c}, {540:line-nonedge}; use {540:both} or {540:mixed} only for a genuinely mixed single occurrence, and {540:unrelated} only when the literal is not one of the five degree-540 carriers.\nERROR: TOPICAL_ALIASES.md has ambiguous 540 occurrence(s)\n  line 435: -code-outage-decoder.html](docs/pgsp-moduli-outer-code-outage-decoder.html) - `code:[2025,540,3]` \ufffd \u2014 [PASS4745_4752_RESERVATION.md](analysis/PASS4745_4752_RESERVATION.md), [PAS\n  Add an occurrence-local canonical tag: {540:point-nonedge}, {540:double-six-nonincident}, {540:gq42-arc}, {540:outer-4c}, {540:line-nonedge}; use {540:both} or {540:mixed} only for a genuinely mixed single occurrence, and {540:unrelated} only when the literal is not one of the five degree-540 carriers.\n",
+        "stderr": "",
+        "seconds": 1.335
+      },
+      {
+        "id": "pass-namespace-collision-guard",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "analysis/w33_pass1197_parallel_collision_guard.py",
+          "--check-only"
+        ],
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"C:\\Repos\\Theory of Everything\\analysis\\w33_pass1197_parallel_collision_guard.py\", line 189, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Repos\\Theory of Everything\\analysis\\w33_pass1197_parallel_collision_guard.py\", line 89, in main\n    registry, registry_blocks, supplements = load_registry_blocks()\n                                             ~~~~~~~~~~~~~~~~~~~~^^\n  File \"C:\\Repos\\Theory of Everything\\analysis\\w33_pass1197_parallel_collision_guard.py\", line 80, in load_registry_blocks\n    assert supplement.get(\"schema\") == \"w33.pass_namespace_registry.v2.supplement\", path\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: C:\\Repos\\Theory of Everything\\data\\w33_pass_namespace_registry_v2.d\\10049-10112.json\n",
+        "seconds": 1.036
+      },
+      {
+        "id": "s-min-formula-guard",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "scripts/check_smin_formula.py",
+          "analysis/toe_20261105_native_boundary_axion.py",
+          "analysis/toe_20261105_native_boundary_axion_validation.py",
+          "tests/test_toe_20261105_native_boundary_axion.py",
+          "analysis/2026-11-05_native_boundary_axion_and_two_UV_repairs.md",
+          "RESULTS_INDEX.md",
+          "TOPICAL_ALIASES.md"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "seconds": 0.565
+      },
+      {
+        "id": "topical-aliases",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "scripts/build_topical_aliases.py",
+          "--check"
+        ],
+        "exit_code": 124,
+        "stdout": "Exceeded90s; no PASS asserted.",
+        "stderr": "",
+        "seconds": 90.266
+      },
+      {
+        "id": "certificate-digests",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "scripts/check_certificates.py",
+          "--quiet",
+          "data/toe_20261105_native_boundary_axion.json",
+          "data/toe_20261105_native_boundary_axion_server.json",
+          "data/toe_20261105_native_boundary_axion_validation.json",
+          "data/toe_20261105_native_boundary_axion_result_search.json"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "seconds": 0.485
+      },
+      {
+        "id": "novelty-claims",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "scripts/check_novelty_claims.py",
+          "analysis/2026-11-05_native_boundary_axion_and_two_UV_repairs.md"
+        ],
+        "exit_code": 0,
+        "stdout": "checking 1 file(s) against index.html, photonic_holonet_body.tex, w33_paper_body.tex\nno novelty claim collides with the encyclopedia.\n",
+        "stderr": "",
+        "seconds": 1.085
+      },
+      {
+        "id": "rediscovery",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "scripts/check_rediscovery.py",
+          "analysis/toe_20261105_native_boundary_axion.py",
+          "analysis/toe_20261105_native_boundary_axion_validation.py",
+          "analysis/2026-11-05_native_boundary_axion_and_two_UV_repairs.md"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "seconds": 0.613
+      },
+      {
+        "id": "search-power",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "scripts/check_search_power.py",
+          "analysis/toe_20261105_native_boundary_axion.py",
+          "analysis/toe_20261105_native_boundary_axion_validation.py",
+          "analysis/2026-11-05_native_boundary_axion_and_two_UV_repairs.md"
+        ],
+        "exit_code": 0,
+        "stdout": "\n  scanned 3 files, 0 unpowered nulls\n  (a zero here means nothing unless --selftest passes; run it)\n",
+        "stderr": "",
+        "seconds": 0.448
+      },
+      {
+        "id": "guard-selftests",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "scripts/check_guard_selftests.py"
+        ],
+        "exit_code": 0,
+        "stdout": "  stale-boundaries                 self-test green\n  shifted-adjacency-descendants    self-test green\n  tag-540-check                    self-test green\n  pass-namespace-collision-guard   self-test green\n  s-min-formula-guard              self-test green\n  topical-aliases                  self-test green\n  certificate-digests              self-test green\n  novelty-claims                   self-test green\n  rtl-folds                        self-test green\n  rediscovery                      self-test green\n  search-power                     self-test green\n  layer-conformance                self-test green\n  guard-selftests                  (this runner; skipped)\n  regex-deadends                   self-test green\n  retraction-propagation           self-test green\n  stdlib-shadow                    self-test green\n  pattern-inversions               self-test green\n  heredoc-regex                    self-test green\n  reservation-overlap              self-test green\n  cert-prose-vs-data               self-test green\n  convention-fixed-form            self-test green\n  key-nearmiss                     self-test green\n  certificate-rediscovery          self-test green\n  order-coincidence                self-test green\n  spectral-overreach               self-test green\n  hardcoded-keys                   self-test green\n  constant-claims                  no self-test\n\n  25 self-tested, 1 without a self-test, 0 failing\n\n  The guards without a self-test report numbers nobody can interpret. A zero from a checker\n  that has never been shown to detect anything is not evidence of a clean corpus -- it is\n  the absence of evidence, formatted to look like the presence of it.\n",
+        "stderr": "",
+        "seconds": 27.905
+      },
+      {
+        "id": "regex-deadends",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "scripts/check_regex_deadends.py",
+          "analysis/toe_20261105_native_boundary_axion.py",
+          "analysis/toe_20261105_native_boundary_axion_validation.py"
+        ],
+        "exit_code": 0,
+        "stdout": "\n  0 unmatchable alternatives\n  (zero means nothing unless --selftest passes; run it)\n",
+        "stderr": "",
+        "seconds": 0.596
+      },
+      {
+        "id": "retraction-propagation",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "scripts/check_retraction_propagation.py",
+          "analysis/toe_20261105_native_boundary_axion.py",
+          "analysis/toe_20261105_native_boundary_axion_validation.py",
+          "analysis/2026-11-05_native_boundary_axion_and_two_UV_repairs.md"
+        ],
+        "exit_code": 0,
+        "stdout": "\n  0 live assertions of retracted claims across 3 registered\n  (zero means nothing unless --selftest passes; run it)\n",
+        "stderr": "",
+        "seconds": 0.384
+      },
+      {
+        "id": "stdlib-shadow",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "scripts/check_stdlib_shadow.py",
+          "analysis/toe_20261105_native_boundary_axion.py",
+          "analysis/toe_20261105_native_boundary_axion_validation.py",
+          "tests/test_toe_20261105_native_boundary_axion.py"
+        ],
+        "exit_code": 0,
+        "stdout": "\n  0 shadowing files, 0 high-risk\n  (zero means nothing unless --selftest passes; run it)\n",
+        "stderr": "",
+        "seconds": 0.459
+      },
+      {
+        "id": "heredoc-regex",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "scripts/check_heredoc_regex.py",
+          "analysis/toe_20261105_native_boundary_axion.py",
+          "analysis/toe_20261105_native_boundary_axion_validation.py"
+        ],
+        "exit_code": 0,
+        "stdout": "\n  0 collapsed escapes in regex context\n  (zero means nothing unless --selftest passes; run it)\n",
+        "stderr": "",
+        "seconds": 1.793
+      },
+      {
+        "id": "cert-prose-vs-data",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "scripts/check_cert_prose_vs_data.py",
+          "data/toe_20261105_native_boundary_axion.json",
+          "data/toe_20261105_native_boundary_axion_server.json",
+          "data/toe_20261105_native_boundary_axion_validation.json",
+          "data/toe_20261105_native_boundary_axion_result_search.json"
+        ],
+        "exit_code": 0,
+        "stdout": "\n  0 prose/data contradiction(s) in 4 certificate(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+        "stderr": "",
+        "seconds": 2.668
+      },
+      {
+        "id": "convention-fixed-form",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "scripts/check_convention_fixed_form.py",
+          "analysis/toe_20261105_native_boundary_axion.py",
+          "analysis/toe_20261105_native_boundary_axion_validation.py",
+          "analysis/2026-11-05_native_boundary_axion_and_two_UV_repairs.md"
+        ],
+        "exit_code": 0,
+        "stdout": "\n  0 convention-fixed choice(s) in 3 file(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+        "stderr": "",
+        "seconds": 0.443
+      },
+      {
+        "id": "key-nearmiss",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "scripts/check_key_nearmiss.py",
+          "data/toe_20261105_native_boundary_axion.json",
+          "data/toe_20261105_native_boundary_axion_server.json",
+          "data/toe_20261105_native_boundary_axion_validation.json",
+          "data/toe_20261105_native_boundary_axion_result_search.json"
+        ],
+        "exit_code": 124,
+        "stdout": "Exceeded90s; no PASS asserted.",
+        "stderr": "",
+        "seconds": 90.186
+      },
+      {
+        "id": "certificate-rediscovery",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "scripts/check_certificate_rediscovery.py",
+          "data/toe_20261105_native_boundary_axion.json",
+          "data/toe_20261105_native_boundary_axion_server.json",
+          "data/toe_20261105_native_boundary_axion_validation.json",
+          "data/toe_20261105_native_boundary_axion_result_search.json"
+        ],
+        "exit_code": 0,
+        "stdout": "  RARE  toe_20261105_native_boundary_axion.json\n        shortest_paths@4  (stem reaches 1 file-slots)  already in: PART_4161_4168_BROADER_ANOMALY_HARDWARE_NOISY_STORAGE_LANDSCAPE_BONKERS.json\n  RARE  toe_20261105_native_boundary_axion.json\n        girth@8  (stem reaches 18 file-slots)  already in: PART_3989_3990_3994_3996_PHOTON_INCIDENCE_ECHO_CLOCK.json, PART_3997_4004_LAYOUT_TOMOGRAPHY_EDGE_MEMORY.json, PART_4169_4176_DISCRETE_C2_HAWKING_BACKREACTION_GRAY_LEVI_CASIMIR_AXION.json ...\n  RARE  toe_20261105_native_boundary_axion.json\n        cycle_rank@81  (stem reaches 20 file-slots)  already in: PART_4013_4018_INCIDENCE_LINK_H1_MEMORY.json, PART_W33_PASS5388_5392_ALLQ_LEVI_FLAG_HODGE.json\n        toe_20261105_native_boundary_axion.json\n        distance@4  (stem reaches 28 file-slots)  already in: PART_W33_PASS4748_CROSSFIBER_ROUTER_CODE.json, PART_W33_PASS4800_TRIANGLE_QUTRIT_CSS.json, PART_W33_PASS4819_OUTER_CODE_ALGEBRA.json ...\n        toe_20261105_native_boundary_axion.json\n        length@12  (stem reaches 139 file-slots)  already in: PART_BT3364_BT3375_CLEBSCH_PETERSEN_RESILIENT_results.json, PART_W33_PASS4237_4244_MINPOLY_AND_OUTSIDE_BOX.json, dcclxxi_perfect_codes_from_w33.json ...\n        toe_20261105_native_boundary_axion.json\n        length@16  (stem reaches 139 file-slots)  already in: w33_pass1911_stabilizer_weighted_primitive_holonomy.json\n        toe_20261105_native_boundary_axion.json\n        length@20  (stem reaches 139 file-slots)  already in: w33_pass1911_stabilizer_weighted_primitive_holonomy.json, w33_pass614_fault_detecting_selector_code.json\n        toe_20261105_native_boundary_axion.json\n        length@24  (stem reaches 139 file-slots)  already in: dcclxxi_perfect_codes_from_w33.json, w33_pass1911_stabilizer_weighted_primitive_holonomy.json\n        toe_20261105_native_boundary_axion.json\n        length@4  (stem reaches 139 file-slots)  already in: PART_W33_PASS4237_4244_MINPOLY_AND_OUTSIDE_BOX.json, PART_W33_PASS4425_4426_WILSON_AND_THE_29.json, w33_pass1911_stabilizer_weighted_primitive_holonomy.json\n        toe_20261105_native_boundary_axion.json\n        length@8  (stem reaches 139 file-slots)  already in: PART_BT1656_RUNTIME_WORD_CYCLE_BASIS_results.json, PART_W33_PASS4237_4244_MINPOLY_AND_OUTSIDE_BOX.json, bt1319_toroidal_q4_hypercube_holonet_bridge.json ...\n        toe_20261105_native_boundary_axion.json\n        edges@160  (stem reaches 293 file-slots)  already in: PART_4161_4168_BROADER_ANOMALY_HARDWARE_NOISY_STORAGE_LANDSCAPE_BONKERS.json, PART_4185_4192_ADAPTIVE_C2_HAWKING_HYSTERESIS_3LOCAL_COVER_HOLONOMY_IHARA_HEAT.json, PART_BT1654_HEAWOOD_CLOCK_HOMOLOGY_results.json ...\n        toe_20261105_native_boundary_axion.json\n        edges@480  (stem reaches 293 file-slots)  already in: PART_BT727_VISUAL_ATLAS_SPEC.json, PART_W33_PASS4409_4410_SIGNINGS.json, PART_W33_PASS4444_4446_PRIMES_CODES_FLOQUET.json ...\n        toe_20261105_native_boundary_axion.json\n        vertices@240  (stem reaches 313 file-slots)  already in: PART_BT3600_BT3613_CHAINED_BREAKTHROUGH_results.json, PART_BT697_CHART_INTERSECTION_GRAPH_summary.json, PART_W33_PASS4535_BOREL_EDGE_TRANSFER_QUOTIENT.json ...\n        toe_20261105_native_boundary_axion.json\n        vertices@80  (stem reaches 313 file-slots)  already in: PART_4161_4168_BROADER_ANOMALY_HARDWARE_NOISY_STORAGE_LANDSCAPE_BONKERS.json, PART_4185_4192_ADAPTIVE_C2_HAWKING_HYSTERESIS_3LOCAL_COVER_HOLONOMY_IHARA_HEAT.json, PART_BT1654_HEAWOOD_CLOCK_HOMOLOGY_results.json ...\n  RARE  toe_20261105_native_boundary_axion_server.json\n        degree@16  (stem reaches 206 file-slots)  already in: PART_W33_PASS4752_DECK_NORMALIZER_TWIST_COMPARISON.json, PART_W33_PASS4771_DEGREE16_NORMALIZER_COVER.json, PART_W33_PASS4840_LEVI_CYCLE_K33_INCIDENCE.json ...\n  RARE  toe_20261105_native_boundary_axion_server.json\n        degree@20  (stem reaches 206 file-slots)  already in: PART_4049_4056_FIVE_FRONT_OUTSIDE_BOX.json, PART_4081_4088_DEEP_PHYSICS.json, PART_W33_PASS4441_4443_RESCORE_COARSENESS_COVER.json ...\n  RARE  toe_20261105_native_boundary_axion_server.json\n        degree@24  (stem reaches 206 file-slots)  already in: PART_3965_3972_TOPOLOGY_CONTROL_CAUSAL_DENSITY_results.json, PART_4081_4088_DEEP_PHYSICS.json, PART_W33_PASS4745_INVARIANT_H1_CHARACTER.json ...\n        toe_20261105_native_boundary_axion_server.json\n        degree@8  (stem reaches 206 file-slots)  already in: PART_W33_PASS3100_3102_BASS_REGULAR_TAU.json, PART_W33_PASS3120_3122_BASS_COLLISIONS.json, PART_W33_PASS4201_REGULAR_COMPUTING_ZETA.json ...\n        toe_20261105_native_boundary_axion_server.json\n        edges@160  (stem reaches 293 file-slots)  already in: PART_4161_4168_BROADER_ANOMALY_HARDWARE_NOISY_STORAGE_LANDSCAPE_BONKERS.json, PART_4185_4192_ADAPTIVE_C2_HAWKING_HYSTERESIS_3LOCAL_COVER_HOLONOMY_IHARA_HEAT.json, PART_BT1654_HEAWOOD_CLOCK_HOMOLOGY_results.json ...\n\n  19 token(s) already present elsewhere, over 4 certificate(s)\n\n  CANDIDATES, RAREST FIRST. Pass 4800's `alpha@18` sat in a committed certificate while\n  six passes re-derived it. Read the RARE ones first: a stem with small reach names a\n  quantity, a stem with large reach names bookkeeping. Ranking is the fix that a stem\n  blocklist was not -- Pass 5635 A/B'd the blocklist and it moved two certificates.\n  (zero means nothing unless --selftest passes; run it)\n",
+        "stderr": "",
+        "seconds": 1.393
+      },
+      {
+        "id": "order-coincidence",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "scripts/check_order_coincidence.py",
+          "analysis/toe_20261105_native_boundary_axion.py",
+          "analysis/toe_20261105_native_boundary_axion_validation.py",
+          "analysis/2026-11-05_native_boundary_axion_and_two_UV_repairs.md"
+        ],
+        "exit_code": 0,
+        "stdout": "\n  0 order-coincidence claim(s) in 3 file(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+        "stderr": "",
+        "seconds": 0.245
+      },
+      {
+        "id": "spectral-overreach",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "scripts/check_spectral_overreach.py",
+          "analysis/toe_20261105_native_boundary_axion.py",
+          "analysis/toe_20261105_native_boundary_axion_validation.py",
+          "analysis/2026-11-05_native_boundary_axion_and_two_UV_repairs.md"
+        ],
+        "exit_code": 0,
+        "stdout": "\n  0 candidate spectral over-read(s) in 3 file(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+        "stderr": "",
+        "seconds": 0.248
+      },
+      {
+        "id": "hardcoded-keys",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "scripts/check_hardcoded_keys.py",
+          "analysis/toe_20261105_native_boundary_axion.py",
+          "analysis/toe_20261105_native_boundary_axion_validation.py"
+        ],
+        "exit_code": 0,
+        "stdout": "\n  0 single-key lookups beside a canonical list\n  (zero means nothing unless --selftest passes; run it)\n",
+        "stderr": "",
+        "seconds": 0.246
+      },
+      {
+        "id": "constant-claims",
+        "command": [
+          "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+          "scripts/check_constant_claims_hook.py",
+          "analysis/2026-11-05_native_boundary_axion_and_two_UV_repairs.md"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "seconds": 0.233
+      }
+    ],
+    "all_exit_codes_zero": false
+  },
+  "scope": "Configured hook entries run after13790file canonical index and topical aliases completed. Earlier concurrently-indexed guard run retained; nonzero exits/timeouts remain explicit. No --no-verify.",
+  "candidate_triage": "Native80vertex160edge1620apartment81cycle frame and resistance7/10 are credited prior mathematics. Degree16/20/24 here is local scalar-operator dimension in a supplied quiver, not permutation/code degree; no priority claim. Search hit source-line tokens are bookkeeping, not physical quantities."
+}

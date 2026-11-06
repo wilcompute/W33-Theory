@@ -1,0 +1,35 @@
+{
+  "UTC": "2026-11-05T20:54:14.059290+00:00",
+  "source_raw_sha256": {
+    "analysis/toe_20261105_native_boundary_axion.py": "c16568165170ceae1164d3dba85b86687bb4962efe8a44f048f2947d1d18d552",
+    "analysis/toe_20261105_native_boundary_axion_server.js": "508bb8bdf2909569c477b0813a77205393c0d40fa49d3874ed3bfbd29247021a",
+    "analysis/toe_20261105_native_boundary_axion_validation.py": "14f2c389fa6eefe749bcb95065a2f7c9c599eee1eafef9c4898aac20f60399fe",
+    "tests/test_toe_20261105_native_boundary_axion.py": "0d12f6ebdf72e798247feebd937e8abacddc25c2af557dc0c6540c235c247c1e"
+  },
+  "input_raw_sha256": {
+    "analysis/w33_levi_kirchhoff_cycle_projector.py": "f1b9a060ed0426c1fca09746ddf6e349138af4422676f0bbac53fa03bf322e34",
+    "data/PART_BT547_W33_LEVI_KIRCHHOFF_CYCLE_PROJECTOR_results.json": "cf1f3d0b66e91c0764bfa54afbc046dc64d0375a4b3e5722c2e6deefca3453cf",
+    "data/PART_W33_PASS5396_5401_ALLQ_APARTMENT_TIGHT_FRAME.json": "edc9572cfb5951558b233a3262304638abac96f1913c39369eea86b99736114e",
+    "analysis/toe_20261105_determinant_and_fermion_quality.py": "2de16b4286d7a3d9759af66520ae18c051bf1ae0c0cdc24308470e26470f53a7",
+    "analysis/toe_20261105_pq_quality_gauge_obstruction.py": "7099dba40617084b1dd19a9fadb74d9632bb6b97c2ae7566428f72d5aa4c5c87",
+    "analysis/toe_20261105_pq_normalization_cutoff.py": "816d5c5d737a29b3eed532495921a80033afdd4d1ad9cd27a3cdc5dfc6a62309"
+  },
+  "producer": {
+    "exit_code": 0,
+    "stdout": "PASS_NATIVE_BOUNDARY_EFT_AND_TWO_FAILED_UV_REPAIRS first_coherent_subdivision 4\n",
+    "stderr": "",
+    "seconds": 8.52395240002079
+  },
+  "pytest": {
+    "exit_code": 0,
+    "stdout": "...................................                                      [100%]\n35 passed in 86.36s (0:01:26)\n",
+    "stderr": "",
+    "seconds": 90.6560582999955
+  },
+  "initial_validation_history": "Before the extra phase/telescoping/scalar-mediator controls,14 new cases passed32.09s. Server direct powers overflowed the s6 Planck denominator; switched to logs, retained history and tested all six nonzero amplitudes againstPC.",
+  "output_raw_sha256": {
+    "data/toe_20261105_native_boundary_axion.json": "b71ce2312c7b5a3798ed627f2ecc7e0a854b0f289aa9045ca34651595cee3728",
+    "data/toe_20261105_native_boundary_axion_server.json": "cc0dce3d106447ceefbc1ab01f174f9107566d5bbf822ca57121a8b6a651f70c"
+  },
+  "status": "PASS_NATIVE_PRODUCER_AND_35_RELEVANT_TESTS"
+}

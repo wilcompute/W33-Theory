@@ -1,0 +1,52 @@
+{
+  "status": "PASS_INDEPENDENT_SERVER_NATIVE_GEOMETRY_AND_QUALITY",
+  "points": 40,
+  "lines": 40,
+  "edges": 160,
+  "cycles": 1620,
+  "exactFrameIdentity": true,
+  "cycleRank": 81,
+  "resistance": 0.7,
+  "shortestPaths": 4,
+  "quality": [
+    {
+      "s": 1,
+      "degree": 4,
+      "coherentAmplitudeOverChi": 3.0001218481487814e+48,
+      "passes": false
+    },
+    {
+      "s": 2,
+      "degree": 8,
+      "coherentAmplitudeOverChi": 16726269993703821000,
+      "passes": false
+    },
+    {
+      "s": 3,
+      "degree": 12,
+      "coherentAmplitudeOverChi": 2.6555034806675937e-10,
+      "passes": false
+    },
+    {
+      "s": 4,
+      "degree": 16,
+      "coherentAmplitudeOverChi": 8.318394325024259e-39,
+      "passes": true
+    },
+    {
+      "s": 5,
+      "degree": 20,
+      "coherentAmplitudeOverChi": 4.319165475700358e-67,
+      "passes": true
+    },
+    {
+      "s": 6,
+      "degree": 24,
+      "coherentAmplitudeOverChi": 3.354710366998834e-95,
+      "passes": true
+    }
+  ],
+  "scope": "Reproduces prior geometry independently and checks new supplied scalar-quality arithmetic. No UV completion or physical QCD anomaly derived.",
+  "execution": "functions.exec server V8",
+  "initial_numeric_correction": "Direct powers overflowed the Planck denominator at s6; final logarithmic evaluation avoids a false zero."
+}
