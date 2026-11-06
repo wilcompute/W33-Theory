@@ -60,3 +60,12 @@ For X = 3(B − 3L_e) with T(−9), S(−18) and a vectorlike (3,2,1/6) of X = �
 - The c′ band uses profile points, not posteriors.
 - The SMASH r bound is from search summaries, not from reading the papers.
 - No novelty is claimed for the heavy-axion mechanism. Aligned small-instanton heavy axions are an existing literature that I have not searched here.
+
+## Addendum (2026-11-06): §3 over-read, corrected by a Fisher calculation
+
+`analysis/toe_uv/ns_cp_fisher.py` computes the Fisher matrix at the full-data fading fit (Dovekie, all probes) and gives σ(c′) = 0.0079 with corr(n_s, c′) = −0.44.
+
+- Adding the inflation prior n_s ~ N(0.9665, 0.0015) moves c′ from 0.0530 to **0.0523 ± 0.0072**.
+- **Control:** the same prior centred on ΛCDM's 0.970 moves c′ only to 0.0495.
+
+So the data already measure c′ more tightly than an n_s prior can. The profile mapping in §3 (c′ ∈ [0.040, 0.055]) is right as a map along re-optimised profile points. It is **wrong as a claim** that the inflation prior "becomes a band on c′": the prior is weakly informative, shifting c′ by under 0.5σ. The joint target stands as a consistency statement: fading with c′ ≈ 0.05 and n_s ≈ 0.966 is compatible with SMASH-type inflation. The prior adds no new constraint.
