@@ -79,3 +79,27 @@ So the published data-driven result also leaves the sign of c open: the energy d
 **Geometry cannot fix the sign (`euclid_sign.py`).** The frozen c < 0 and c > 0 predictions differ in D_M/r_d by 0.04–0.11% and in D_H/r_d by 0.03–0.21% at z = 0.93–2.33. With uncorrelated 0.5%, 0.3% and 0.2% errors per quantity, the Asimov Δχ² is 0.35–0.55, 1.0–1.5 and 2.2–3.4. These are upper bounds. **No foreseeable BAO survey determines the sign of c.** It is set only by growth (ΔS8 = 0.011–0.015, about 1.5%), by a particle signal (the line drift), or by the energy-flow direction.
 
 Sources: arXiv:2504.00985, 1409.6311, 2204.08795, 2602.11085 (abstract only), 2503.14738.
+
+## Addendum 2: correcting the correction (Lyman-α edge computed, `sterile_lya.py`)
+
+The first addendum's "a few keV" misread Merle's slide numbers, which are most likely **thermal-equivalent** masses (m_th) and not the sterile-neutrino mass.
+
+The free-streaming match for decay production:
+- ⟨p/T⟩ ≈ 2.5 at T ≈ m_S, diluted by entropy (g*S 106.75 → 3.91), gives p ≈ 1.16 T_ν today.
+- A thermal warm-dark-matter relic of 5.3 (5.7) keV has ⟨p⟩ = 0.41 T_ν (0.39).
+- So **M_N > 15.2 (16.8) keV**. The thermal bounds are from memory (Iršič et al. 2017 and later), not re-read.
+
+Combined with the portal window (thermalisation floor and clock cap):
+
+| M_N | m_S = 1 TeV | 3 TeV | 10 TeV |
+|---|---|---|---|
+| 10–15 keV | portal ok, **Lyman-α excluded** | excluded | excluded |
+| 16 keV | closed | **open** | **open** |
+| 18–20 keV | closed | closed | **open** |
+
+**Corrected conclusion:**
+- A decay-produced sterile neutrino carrying the fading coupling lives in a narrow corridor: **M_N ≈ 16–20 keV, m_S ≈ 3–10 TeV, λ_hS ~ 10⁻⁶, v_S ≈ 1–3 TeV**.
+- The 7.1 keV (3.5 keV line) case is excluded for this production mechanism.
+- A line from this candidate would sit at **8–10 keV**, inside XRISM's band.
+- The original memory-based "≳ 10–15 keV" was roughly right; the first addendum's relaxation was wrong.
+- The thermalisation floor and ⟨p/T⟩ are rough (factor-of-two level), so the corridor's edges move accordingly.
