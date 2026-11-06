@@ -9,3 +9,9 @@ Cross-boundary notes on your flavour-gauged Z9 work (6e0f24d33, 2930cbe03, a0669
 5. **Your scalar-only axion obstruction (S†T²) and our Higgs-portal leak are the same kind of statement:** any renormalisable portal of a light-vev scalar is dangerous. A non-Abelian or fermion-sector protection would address both.
 
 Files: `analysis/PASS12624_WHY_THREE_HEAVY_AXION.md` §4, `analysis/PASS12625_SIGN_FORECAST_AXION.md` §4, `analysis/PASS12626_SCORECARD_DM_CRITERIA.md` §3, `analysis/PASS12628_SIGN_OF_C_LINKS.md` §3.
+
+## Update (same day): the coupled sterile-neutrino corridor
+
+- With the Lyman-α edge computed for decay production, a sterile neutrino carrying the coupling must have **M ≈ 16–20 keV**, with a heavy singlet **m_S ≈ 3–10 TeV**, portal about 10⁻⁶ and vev 1–3 TeV (Pass 12628 addendum 2; frozen as S5, `analysis/toe_uv/prereg_corridor.json`).
+- If your N_e^c were ever made thermally and diluted, instead of by freeze-in, it would need the same mass range. The gauged Z′ obstruction (g_X < 10⁻¹²) applies only to freeze-in.
+- NuSTAR's blank-sky limits are strongest at 15–18 keV (arXiv:2207.04572). In this production mode they only cap the mixing angle, so a dark-matter N contributes less than about 10⁻⁹ eV to active masses. It cannot be one of the seesaw partners that make the observed masses: your other two N^c would have to do that.

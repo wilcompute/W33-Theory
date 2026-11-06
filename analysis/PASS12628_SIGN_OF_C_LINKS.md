@@ -103,3 +103,9 @@ Combined with the portal window (thermalisation floor and clock cap):
 - A line from this candidate would sit at **8–10 keV**, inside XRISM's band.
 - The original memory-based "≳ 10–15 keV" was roughly right; the first addendum's relaxation was wrong.
 - The thermalisation floor and ⟨p/T⟩ are rough (factor-of-two level), so the corridor's edges move accordingly.
+
+## Addendum 3: X-ray limits, momentum shape, frozen S5
+
+- **X-ray.** NuSTAR blank-sky limits are leading at 15–18 keV (arXiv:2207.04572; also 1908.09037, 1901.01262, 1609.00667). In freeze-in from S decays the mixing angle is free, so these only cap the line's visibility, at roughly sin²2θ ≲ 10⁻¹²–10⁻¹³ (from memory). The dark-matter N then contributes ≲ 10⁻⁹ eV to active-neutrino masses: it decouples from the seesaw, and Pass 12626 §4's neutrino-drift link does not apply to it. The other two N's must make the observed masses.
+- **Momentum shape (`sterile_lya_rms.py`).** For f(q) ∝ q^(−1/2) e^(−q) (decay freeze-in shape, recalled from memory), matching the rms velocity instead of the mean momentum moves the Lyman-α edge by +3.7%: **15.8 (17.4) keV** for a 5.3 (5.7) keV thermal bound. The corridor stays at 16–20 keV, with 16 keV marginal under the stricter bound.
+- **Frozen S5** (`analysis/toe_uv/prereg_corridor.json`, separate from the d2624061 file, which stays unchanged) states the corridor and the 8–10 keV line drift. It names what falsifies it: a thermal-equivalent WDM bound above about 7 keV, or a detected line without the drift. It also notes that the absence of a line does not falsify it.
