@@ -3,9 +3,10 @@
   "range": [5150, 5157],
   "slug": "theta_curvature_centered_spectrum_q4_smith_modular_depth",
   "title": "Theta exterior curvature, centered spectral inversion, q4 Smith torsion, modular defect, root-depth synthesis, and three outside-box consequences",
-  "status": "RESERVED",
+  "status": "EXECUTED",
   "owner": "openai-gpt56-sol",
   "reserved_at": "2026-08-14",
-  "purpose": "Renumbered collision-clean continuation after live Pass5142-5149 ownership changed on master. Preserve only results not already owned by Pass5118-5149: exterior theta parity conservation, quantized second-moment curvature, centered Rayleigh weight inversion, q4 root-coset Smith form, two-step Markov curvature, augmentation hidden-defect decomposition, root volume/depth synthesis, and first-order Cheeger blindness.",
-  "boundary": "Do not claim q5/all-q minimum distance. Prior half-regularity, q7 rank falsifier, and safe Jennings theorem remain owned by Pass5118-5125. This packet uses them only as certified inputs."
+  "executed_at": "2026-08-14",
+  "purpose": "Collision-clean continuation preserving only results not already owned by Pass5118-5149: exterior theta parity conservation, quantized second-moment curvature, centered Rayleigh weight inversion, q4 root-coset Smith form, two-step Markov curvature, augmentation hidden-defect decomposition, root volume/depth synthesis, and first-order Cheeger blindness.",
+  "boundary": "Do not claim q5/all-q minimum distance. Prior half-regularity, q7 rank falsifier, and safe Jennings theorem remain owned by Pass5118-5125 and are used only as certified inputs. Markov statements are finite graph statements; Jennings depth is not physical latency."
 }
