@@ -21,10 +21,10 @@ g = dict(__name__="x", __file__=os.path.join(BG, "class_holdout.py"))
 exec(src, g)
 F, C, BMASK, SN, FREE, kind_of = g["F"], g["C"], g["BMASK"], g["SN"], g["FREE"], g["kind_of"]
 neu = json.load(open(f"class_holdout_{DS}_{HOLD}_neutral.json"))
-path = f"class_ppd_{DS}_{HOLD}{'_trunc' if os.environ.get('TRUNC', '0') == '1' else ''}.json"
+path = f"class_ppd_{DS}_{HOLD}{'_trunc' if os.environ.get('TRUNC', '1') == '1' else ''}.json"
 out = json.load(open(path)) if os.path.exists(path) else dict(hold=HOLD, rows={})
 rng = np.random.default_rng(20261105)
-TRUNC = os.environ.get("TRUNC", "0") == "1"
+TRUNC = os.environ.get("TRUNC", "1") == "1"  # default on since Pass 12626: draws outside the flat priors are resampled, rejections and CLASS failures are recorded per row
 BOUNDS = dict(c=(-3.0, 3.0), cp=(0.0, 0.2), w0=(-3.0, 1.0), wa=(-5.0, 3.0), tau=(0.01, 0.2))
 n_rej = [0]
 
