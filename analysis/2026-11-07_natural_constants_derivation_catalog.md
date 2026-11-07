@@ -85,7 +85,7 @@ These formulae assign graph **numbers** to masses in **chosen MeV/GeV units**. W
 | Matter clustering sigma8 | 13/16-1/2000=0.812 | 13/16=0.8125 | **R**. No amplitude power-spectrum calculation. |
 | Omega_DM/Omega_b | 27/5+1/100=5.41 | 27/5=5.4 | **R**. |
 | Omega_Lambda/Omega_DM | Phi3/(mu+1)=13/5=2.6 | Other dark-sector count assignments | **R**. |
-| Fractions Omega_b/Omega_DM/Omega_Lambda | Normalize 1 : 27/5 : (27/5)*(13/5) -> (0.04902,0.26471,0.68824) | historical docs use 9/13 or 351/511 etc. for Omega_Lambda | **R**. Component fractions are dependent on two input ratios. |
+| Fractions Omega_b/Omega_DM/Omega_Lambda | Normalize 1 : 27/5 : (27/5)*(13/5) -> (0.04892,0.26419,0.68689) | historical docs use 9/13 or 351/511 etc. for Omega_Lambda | **R**. Component fractions are dependent on two input ratios. |
 | Hubble constant early / CMB | 67 km/s/Mpc = (2^7+3!)/2 | different W33 old fit 67.2 | **D/R**. |
 | Hubble constant late / SH0ES | Phi12=73 km/s/Mpc | Different data sets and calibration disputes | **D/R**. |
 | Hubble discrepancy | 73-67=q!=6 km/s/Mpc | Not a fundamental constant; difference of two observational inferences | **D/R**. |
