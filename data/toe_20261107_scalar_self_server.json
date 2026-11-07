@@ -1,0 +1,35 @@
+{
+  "runtime": "Actual server V8; independent gamma-rejection ordinary MC",
+  "count": 262144,
+  "r": 1,
+  "scope": "Independent 3<->2 integration at r=1 on interpolated frozen parent histories. No self-consistent transport or remote-PC execution claimed.",
+  "rows": [
+    {
+      "M_keV": 16,
+      "gamma32_over_nS_H": 22475339.94219881,
+      "gamma23_over_nS_H": 33811544.01002263,
+      "estimated_standard_error": [
+        159246.78095094566,
+        169279.50065314313
+      ]
+    },
+    {
+      "M_keV": 30,
+      "gamma32_over_nS_H": 2277.020239591097,
+      "gamma23_over_nS_H": 18402.66139552728,
+      "estimated_standard_error": [
+        18.11923523538608,
+        96.14328071756843
+      ]
+    },
+    {
+      "M_keV": 100,
+      "gamma32_over_nS_H": 0.00004675856857211504,
+      "gamma23_over_nS_H": 0.012675298704548553,
+      "estimated_standard_error": [
+        3.7949438821595084e-7,
+        0.000066709246981574
+      ]
+    }
+  ]
+}

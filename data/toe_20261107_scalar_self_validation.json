@@ -1,0 +1,133 @@
+{
+  "status": "PASS9_TESTS_AND_INDEPENDENT_MC_FROZEN_HISTORY_DIAGNOSTIC",
+  "UTC": "2026-11-07T01:23:31.036636+00:00",
+  "seconds": 163.16149480000604,
+  "tests": {
+    "exit_code": 0,
+    "stdout": ".........                                                                [100%]\n9 passed in 14.38s\n",
+    "stderr": ""
+  },
+  "power_refinement": {
+    "from_power": 17,
+    "to_power": 18,
+    "comparisons": [
+      {
+        "M_keV": 16.0,
+        "r": 0.3,
+        "relative_changes": {
+          "gamma32_over_nS_H": 0.0006888526366055636,
+          "gamma23_over_nS_H": 0.00037122084088925256,
+          "elastic_entropy_production_over_nS_H": 0.0024631016463780853
+        }
+      },
+      {
+        "M_keV": 30.0,
+        "r": 0.3,
+        "relative_changes": {
+          "gamma32_over_nS_H": 8.157349882154108e-05,
+          "gamma23_over_nS_H": 0.0002257575860274974,
+          "elastic_entropy_production_over_nS_H": 0.00048362822063430233
+        }
+      },
+      {
+        "M_keV": 100.0,
+        "r": 0.3,
+        "relative_changes": {
+          "gamma32_over_nS_H": 0.0003365884845807354,
+          "gamma23_over_nS_H": 0.00015821225948575712,
+          "elastic_entropy_production_over_nS_H": 0.0012646444052578643
+        }
+      },
+      {
+        "M_keV": 16.0,
+        "r": 1.0,
+        "relative_changes": {
+          "gamma32_over_nS_H": 0.0007639547034216099,
+          "gamma23_over_nS_H": 0.0011010916548148675,
+          "elastic_entropy_production_over_nS_H": 0.0011464587833217577
+        }
+      },
+      {
+        "M_keV": 30.0,
+        "r": 1.0,
+        "relative_changes": {
+          "gamma32_over_nS_H": 0.0006903028046226778,
+          "gamma23_over_nS_H": 0.0011246935635732536,
+          "elastic_entropy_production_over_nS_H": 0.0011137584542099122
+        }
+      },
+      {
+        "M_keV": 100.0,
+        "r": 1.0,
+        "relative_changes": {
+          "gamma32_over_nS_H": 0.0006783741402760501,
+          "gamma23_over_nS_H": 0.0011287759632730987,
+          "elastic_entropy_production_over_nS_H": 0.0011581291639545244
+        }
+      },
+      {
+        "M_keV": 16.0,
+        "r": 3.0,
+        "relative_changes": {
+          "gamma32_over_nS_H": 0.0006830270072716305,
+          "gamma23_over_nS_H": 0.0006898342688145265,
+          "elastic_entropy_production_over_nS_H": 0.0007054704245297305
+        }
+      },
+      {
+        "M_keV": 30.0,
+        "r": 3.0,
+        "relative_changes": {
+          "gamma32_over_nS_H": 0.0013110852328149791,
+          "gamma23_over_nS_H": 0.0010823190606876754,
+          "elastic_entropy_production_over_nS_H": 0.001675435067865716
+        }
+      },
+      {
+        "M_keV": 100.0,
+        "r": 3.0,
+        "relative_changes": {
+          "gamma32_over_nS_H": 0.001503551822759408,
+          "gamma23_over_nS_H": 0.0012126393460873963,
+          "elastic_entropy_production_over_nS_H": 0.0018267451693293468
+        }
+      },
+      {
+        "M_keV": 16.0,
+        "r": 6.0,
+        "relative_changes": {
+          "gamma32_over_nS_H": 0.00011311267063551789,
+          "gamma23_over_nS_H": 0.00011191711667657422,
+          "elastic_entropy_production_over_nS_H": 0.002671753448634462
+        }
+      },
+      {
+        "M_keV": 30.0,
+        "r": 6.0,
+        "relative_changes": {
+          "gamma32_over_nS_H": 0.0003067028828841467,
+          "gamma23_over_nS_H": 0.00022708641011925934,
+          "elastic_entropy_production_over_nS_H": 6.876637860731005e-05
+        }
+      },
+      {
+        "M_keV": 100.0,
+        "r": 6.0,
+        "relative_changes": {
+          "gamma32_over_nS_H": 0.0009473838733845552,
+          "gamma23_over_nS_H": 0.0004253507165483672,
+          "elastic_entropy_production_over_nS_H": 0.0008509273827869146
+        }
+      }
+    ]
+  },
+  "artifact_raw_sha256": {
+    "analysis/toe_20261107_scalar_self_reactions.py": "b89bcf4d6cb6cc13e321dc3159fd2e1ba00410b932a3908d328e6c2fee5727eb",
+    "analysis/toe_20261107_scalar_self_server.js": "f3e4afbb212128a63e57403fa7a634230e7ce4037994a7cc279f9f4468b99273",
+    "tests/test_toe_20261107_scalar_self_reactions.py": "2043f0adf5d5423519cc21fb8fa63bba499aa64122687ce7f2e1f66a00d9c7e1",
+    "data/toe_20261107_scalar_self_reactions.json": "15523b0b1509756b3309a9132a91bf15a17b869b2f120309082db36b7afa51ba",
+    "data/toe_20261107_scalar_self_server_input.json": "3416800b12efc74772a28512280e0f60a2bc4a9575cbd23d1baf1320a6e45b71",
+    "data/toe_20261107_scalar_self_server.json": "d9205dbd2921c9010d7c4b1fa588b9d81972b08d9f41a0e555b7e8f70b85766d"
+  },
+  "limits": "Four scrambled Sobol replicates estimate sampling uncertainty, not a rigorous integration bound. No corrected parent history or sterile spectrum computed."
+}

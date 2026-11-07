@@ -1,0 +1,33 @@
+{
+  "status": "TARGETED_SEARCH_NOT_PRIORITY_PROOF",
+  "preconstruction_queries": [
+    {
+      "pattern": "(nullification|threshold.{0,30}(3.?2|3.to.2)|g3.{0,20}g4|3.?2.{0,30}cancel)",
+      "scope": "RESULTS_INDEX.md analysis scripts papers;1MB cap",
+      "result": "Hits included optical matrix nullification, gauge products and unrelated thresholds; no identified scalar-rate certificate"
+    },
+    {
+      "pattern": "(2212[.]09759|9211242|g_3^2.{0,20}3|3.*lambda.*m.*nullification)",
+      "scope": "RESULTS_INDEX.md analysis data papers docs;1MB cap",
+      "exit_code": 1,
+      "paths": []
+    }
+  ],
+  "prior_owners": [
+    "4b97ce7d110c296d8a6efe0387324b22ce38111f",
+    "analysis/2026-11-07_inverse_higgs_production_and_sterile_spectra.md"
+  ],
+  "literature": [
+    {
+      "url": "https://arxiv.org/abs/2212.09759",
+      "reading": "Abstract and selectedPDFsections1-2, including threshold normalization and momentum dependence; not entire paper"
+    },
+    {
+      "url": "https://arxiv.org/abs/hep-ph/9211242",
+      "reading": "Primary abstract on threshold amplitudes, not entire paper"
+    }
+  ],
+  "continuity": "Connected MCP points to empty project mirror; repo SESSION_NOTES and CLI fallback used. No conflict inferred from absence of matching mirror decisions.",
+  "remote": "Remote Desktop Commander TheHeavyCrown device75dccda9-254c-47a9-9d13-ef69565dedf7 authoritatively offline10h; actual server V8 ordinaryMC and available local computation used.",
+  "limits": "Targeted searches with file caps do not prove corpus-wide absence or novelty; full weekly and manuscript reading incomplete."
+}

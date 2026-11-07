@@ -1,0 +1,303 @@
+{
+  "status": "COMPUTED_FIRST_OMITTED_3TO2_COLLISION_NOT_CORRECTED_RELIC_DENSITY",
+  "parent_input_sha256": {
+    "analysis/toe_20261107_sterile_phase_space.py": "8ec1ff4479322c47eeefbb9b18176aa5785a0a0a6b0a9db416a87da51622cc0e",
+    "data/toe_20261107_sterile_phase_space.json": "4e03b3494c9dbf27b6a8b64991206c72050db3bf3349a24d8e9e7e90a96647f7"
+  },
+  "power": 18,
+  "scrambles": [
+    701,
+    1701,
+    2701,
+    3701
+  ],
+  "samples_per_temperature": 1048576,
+  "rows": [
+    {
+      "M_keV": 16.0,
+      "r": 0.3,
+      "T_GeV": 3333.3333333333335,
+      "lambda_S_if_minimal_Z2": 0.3706564425133963,
+      "gamma32_over_nS_H": 655006.0133613304,
+      "gamma23_over_nS_H": 11859765.095052706,
+      "net_number_gain_over_nS_H": 11204759.081691377,
+      "replicate_standard_error_over_nS_H": [
+        5459.3528075294225,
+        83320.8412415275,
+        79047.02099979918
+      ],
+      "gammaNN_over_nS_H": 5.3690587988130776e-05,
+      "elastic_event_density_over_nS_H": 861870578.692429,
+      "elastic_entropy_production_over_nS_H": 33017955.583850533,
+      "elastic_replicate_standard_error_over_nS_H": [
+        4654771.155752685,
+        305365.8345645783
+      ],
+      "quartic_for_max_oneway_rate_point1_at_fixed_history": 0.0007544194167428218,
+      "fraction_samples_touching_q70_cutoff": 0.0
+    },
+    {
+      "M_keV": 30.0,
+      "r": 0.3,
+      "T_GeV": 3333.3333333333335,
+      "lambda_S_if_minimal_Z2": 0.05649632217224762,
+      "gamma32_over_nS_H": 24.597383712908844,
+      "gamma23_over_nS_H": 4354.298358892425,
+      "net_number_gain_over_nS_H": 4329.700975179517,
+      "replicate_standard_error_over_nS_H": [
+        0.20510966102816727,
+        30.159984969079236,
+        29.98560310241666
+      ],
+      "gammaNN_over_nS_H": 2.868095285284792e-05,
+      "elastic_event_density_over_nS_H": 2053847.7044334994,
+      "elastic_entropy_production_over_nS_H": 73455.69970945154,
+      "elastic_replicate_standard_error_over_nS_H": [
+        10304.216706595973,
+        344.0713389009756
+      ],
+      "quartic_for_max_oneway_rate_point1_at_fixed_history": 0.0016058837945569714,
+      "fraction_samples_touching_q70_cutoff": 0.0
+    },
+    {
+      "M_keV": 100.0,
+      "r": 0.3,
+      "T_GeV": 3333.3333333333335,
+      "lambda_S_if_minimal_Z2": 0.0016270255155045813,
+      "gamma32_over_nS_H": 4.068669589915725e-07,
+      "gamma23_over_nS_H": 0.00274743338537345,
+      "net_number_gain_over_nS_H": 0.0027470265184144577,
+      "replicate_standard_error_over_nS_H": [
+        3.389949011175249e-09,
+        1.8872121727866022e-05,
+        1.886917433622774e-05
+      ],
+      "gammaNN_over_nS_H": 9.160728451710269e-06,
+      "elastic_event_density_over_nS_H": 44.7414651062106,
+      "elastic_entropy_production_over_nS_H": 1.554829208671817,
+      "elastic_replicate_standard_error_over_nS_H": [
+        0.218362637142679,
+        0.005316042438043573
+      ],
+      "quartic_for_max_oneway_rate_point1_at_fixed_history": 0.00539202594579532,
+      "fraction_samples_touching_q70_cutoff": 0.0
+    },
+    {
+      "M_keV": 16.0,
+      "r": 1.0,
+      "T_GeV": 1000.0,
+      "lambda_S_if_minimal_Z2": 0.3706564425133963,
+      "gamma32_over_nS_H": 22846200.55468131,
+      "gamma23_over_nS_H": 34194401.57441317,
+      "net_number_gain_over_nS_H": 11348201.01973186,
+      "replicate_standard_error_over_nS_H": [
+        15095.94007466891,
+        25586.865020472254,
+        13808.939878110681
+      ],
+      "gammaNN_over_nS_H": 0.0012483957965909683,
+      "elastic_event_density_over_nS_H": 32024764049.786514,
+      "elastic_entropy_production_over_nS_H": 226752224.24235618,
+      "elastic_replicate_standard_error_over_nS_H": [
+        16725502.66602884,
+        814554.0407342976
+      ],
+      "quartic_for_max_oneway_rate_point1_at_fixed_history": 0.0005300537164869812,
+      "fraction_samples_touching_q70_cutoff": 0.0
+    },
+    {
+      "M_keV": 30.0,
+      "r": 1.0,
+      "T_GeV": 1000.0,
+      "lambda_S_if_minimal_Z2": 0.05649632217224762,
+      "gamma32_over_nS_H": 2318.8449983161613,
+      "gamma23_over_nS_H": 18618.724758079912,
+      "net_number_gain_over_nS_H": 16299.87975976375,
+      "replicate_standard_error_over_nS_H": [
+        1.5190045847676446,
+        14.292148345068226,
+        13.16859236997267
+      ],
+      "gammaNN_over_nS_H": 0.0006846768198134073,
+      "elastic_event_density_over_nS_H": 132180190.14265493,
+      "elastic_entropy_production_over_nS_H": 1381494.2790387538,
+      "elastic_replicate_standard_error_over_nS_H": [
+        80710.17253110155,
+        5097.738642501698
+      ],
+      "quartic_for_max_oneway_rate_point1_at_fixed_history": 0.0009893961123411308,
+      "fraction_samples_touching_q70_cutoff": 0.0
+    },
+    {
+      "M_keV": 100.0,
+      "r": 1.0,
+      "T_GeV": 1000.0,
+      "lambda_S_if_minimal_Z2": 0.0016270255155045813,
+      "gamma32_over_nS_H": 4.763294900793308e-05,
+      "gamma23_over_nS_H": 0.012825040161814929,
+      "net_number_gain_over_nS_H": 0.012777407212806994,
+      "replicate_standard_error_over_nS_H": [
+        3.130377567503196e-08,
+        9.893539002961716e-06,
+        9.870630292294318e-06
+      ],
+      "gammaNN_over_nS_H": 0.00021995891520037525,
+      "elastic_event_density_over_nS_H": 3241.5907361973773,
+      "elastic_entropy_production_over_nS_H": 35.79224484061067,
+      "elastic_replicate_standard_error_over_nS_H": [
+        2.0318119473901013,
+        0.13185437688539758
+      ],
+      "quartic_for_max_oneway_rate_point1_at_fixed_history": 0.003226325042633097,
+      "fraction_samples_touching_q70_cutoff": 0.0
+    },
+    {
+      "M_keV": 16.0,
+      "r": 3.0,
+      "T_GeV": 333.3333333333333,
+      "lambda_S_if_minimal_Z2": 0.3706564425133963,
+      "gamma32_over_nS_H": 3883188.343511327,
+      "gamma23_over_nS_H": 2316988.003571241,
+      "net_number_gain_over_nS_H": -1566200.3399400855,
+      "replicate_standard_error_over_nS_H": [
+        2595.5955091534483,
+        1563.0719137528415,
+        1032.5485191206772
+      ],
+      "gammaNN_over_nS_H": 0.016152003890431334,
+      "elastic_event_density_over_nS_H": 78786971163.5672,
+      "elastic_entropy_production_over_nS_H": 620675.6161446356,
+      "elastic_replicate_standard_error_over_nS_H": [
+        8589980.288014827,
+        170.58465795170395
+      ],
+      "quartic_for_max_oneway_rate_point1_at_fixed_history": 0.0010945662881128827,
+      "fraction_samples_touching_q70_cutoff": 0.0
+    },
+    {
+      "M_keV": 30.0,
+      "r": 3.0,
+      "T_GeV": 333.3333333333333,
+      "lambda_S_if_minimal_Z2": 0.05649632217224762,
+      "gamma32_over_nS_H": 4489.077100659184,
+      "gamma23_over_nS_H": 1860.365420517572,
+      "net_number_gain_over_nS_H": -2628.711680141612,
+      "replicate_standard_error_over_nS_H": [
+        5.334917934270019,
+        1.4598152077579956,
+        3.892138008409251
+      ],
+      "gammaNN_over_nS_H": 0.00936167572629597,
+      "elastic_event_density_over_nS_H": 1307838952.167384,
+      "elastic_entropy_production_over_nS_H": 10906591.139001781,
+      "elastic_replicate_standard_error_over_nS_H": [
+        118611.97316376684,
+        16276.05170225022
+      ],
+      "quartic_for_max_oneway_rate_point1_at_fixed_history": 0.001589648685611431,
+      "fraction_samples_touching_q70_cutoff": 0.0
+    },
+    {
+      "M_keV": 100.0,
+      "r": 3.0,
+      "T_GeV": 333.3333333333333,
+      "lambda_S_if_minimal_Z2": 0.0016270255155045813,
+      "gamma32_over_nS_H": 0.00017519168387897035,
+      "gamma23_over_nS_H": 0.0013245111811862928,
+      "net_number_gain_over_nS_H": 0.0011493194973073227,
+      "replicate_standard_error_over_nS_H": [
+        2.472778113823411e-07,
+        1.0781167224020046e-06,
+        8.357445420425524e-07
+      ],
+      "gammaNN_over_nS_H": 0.0030673626465428697,
+      "elastic_event_density_over_nS_H": 47094.95769003121,
+      "elastic_entropy_production_over_nS_H": 756.213341356192,
+      "elastic_replicate_standard_error_over_nS_H": [
+        4.061358473459398,
+        1.275400255361013
+      ],
+      "quartic_for_max_oneway_rate_point1_at_fixed_history": 0.006876632584193452,
+      "fraction_samples_touching_q70_cutoff": 0.0
+    },
+    {
+      "M_keV": 16.0,
+      "r": 6.0,
+      "T_GeV": 166.66666666666666,
+      "lambda_S_if_minimal_Z2": 0.3706564425133963,
+      "gamma32_over_nS_H": 3284.00508988231,
+      "gamma23_over_nS_H": 2905.4541623467285,
+      "net_number_gain_over_nS_H": -378.5509275355811,
+      "replicate_standard_error_over_nS_H": [
+        2.15554060781309,
+        1.9103689538227175,
+        0.24517573501489004
+      ],
+      "gammaNN_over_nS_H": 0.07678289570881819,
+      "elastic_event_density_over_nS_H": 7608824830.499889,
+      "elastic_entropy_production_over_nS_H": 18.67750441508158,
+      "elastic_replicate_standard_error_over_nS_H": [
+        162181.40592051035,
+        0.08959672462351181
+      ],
+      "quartic_for_max_oneway_rate_point1_at_fixed_history": 0.011574536602062788,
+      "fraction_samples_touching_q70_cutoff": 0.0
+    },
+    {
+      "M_keV": 30.0,
+      "r": 6.0,
+      "T_GeV": 166.66666666666666,
+      "lambda_S_if_minimal_Z2": 0.05649632217224762,
+      "gamma32_over_nS_H": 50.510991586155285,
+      "gamma23_over_nS_H": 7.283096460505042,
+      "net_number_gain_over_nS_H": -43.227895125650235,
+      "replicate_standard_error_over_nS_H": [
+        0.049174103353944655,
+        0.00545617735525537,
+        0.043756825242682755
+      ],
+      "gammaNN_over_nS_H": 0.04267409999193659,
+      "elastic_event_density_over_nS_H": 422794541.2283162,
+      "elastic_entropy_production_over_nS_H": 1461331.158585787,
+      "elastic_replicate_standard_error_over_nS_H": [
+        7627.330230470584,
+        1760.9676151016338
+      ],
+      "quartic_for_max_oneway_rate_point1_at_fixed_history": 0.007094005900777255,
+      "fraction_samples_touching_q70_cutoff": 0.0
+    },
+    {
+      "M_keV": 100.0,
+      "r": 6.0,
+      "T_GeV": 166.66666666666666,
+      "lambda_S_if_minimal_Z2": 0.0016270255155045813,
+      "gamma32_over_nS_H": 2.9354695225506407e-05,
+      "gamma23_over_nS_H": 4.747372082485732e-06,
+      "net_number_gain_over_nS_H": -2.4607323143020673e-05,
+      "replicate_standard_error_over_nS_H": [
+        5.599617961925492e-08,
+        3.86822432301522e-09,
+        5.226475910595199e-08
+      ],
+      "gammaNN_over_nS_H": 0.014432504829484155,
+      "elastic_event_density_over_nS_H": 69338.8212175747,
+      "elastic_entropy_production_over_nS_H": 2492.2821243667045,
+      "elastic_replicate_standard_error_over_nS_H": [
+        2.440191080168203,
+        3.9067250435094225
+      ],
+      "quartic_for_max_oneway_rate_point1_at_fixed_history": 0.024481339230782485,
+      "fraction_samples_touching_q70_cutoff": 0.0
+    }
+  ],
+  "action": "V=1/2 m^2 s^2+g3/3! s^3+g4/4! s^4; minimal broken Z2: g3=3m^2/w, g4=3m^2/w^2=6lambdaS. Amplitude evaluated with m=1.",
+  "phase_space": "gamma32=1/(3!2!)*integral product_i=1..3[d^3pi/(2pi)^3/(2Ei) fi]*integral dPhi2 |M|^2. dPhi2=beta/(8pi) dOmega/(4pi). Both event directions share measure by detailed balance. dn/dt+3Hn=gamma23-gamma32.",
+  "elastic": "M22=g4+g3^2*(1/(s-1)+1/(t-1)+1/(u-1)) with m=1. Event density uses1/(2!2!); entropy production uses an additional1/2 times(forward-reverse)*log(forward/reverse). Positive entropy production shows the frozen distribution is not an elastic collision equilibrium. Elastic collisions conserve particle number and energy.",
+  "threshold": "M_threshold=-5*g3*(3*g4-g3^2)/8 in m=1 units; exact zero for g3^2=3g4. Known scalar threshold nullification, not a discovery here.",
+  "interpretation": "Positive or negative large first omitted collision invalidates treating the published frozen history as a minimal-Z2 solution. No self-consistent corrected spectrum or density is computed. Linear response cannot be extrapolated through a large change.",
+  "scope": "Tree, constant zero-temperature broken potential, classical statistics, fixed gstar and frozen incoming history. No Bose factors, thermal masses/restoration, mean-field evolution, 4<->2 collisions, loop corrections or transfer functions. Published weak-self-sector benchmark remains a separate conditional truncation.",
+  "sources": [
+    "https://arxiv.org/abs/2212.09759",
+    "https://arxiv.org/abs/hep-ph/9211242"
+  ]
+}
