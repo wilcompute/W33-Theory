@@ -1,0 +1,55 @@
+{
+  "status": "PASS_PRODUCER_AND_TWELVE_TARGETED_TESTS",
+  "UTC": "2026-11-07T00:18:19.829046+00:00",
+  "runs": [
+    {
+      "args": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "analysis/toe_20261106_sterile_parent_consistency.py"
+      ],
+      "exit_code": 0,
+      "seconds": 15.390708800056018,
+      "stdout": "PASS_STERILE_PARENT_CONDITIONAL_CONSISTENCY_AUDIT\nopen-grid quartics [(16, 3000, 9.988878686494559), (16, 10000, 369.95846987016887), (18, 10000, 259.8336578512024), (20, 10000, 189.41873657352662)]\nconditional cuts [{'lambda_S_cut_input': 1.0, 'maximum_M_keV': 14.308874554545437, 'boundary_parent_mS_GeV': 1245.7603443205255}, {'lambda_S_cut_input': 12.566370614359172, 'maximum_M_keV': 16.938936261848983, 'boundary_parent_mS_GeV': 3428.61284366367}, {'lambda_S_cut_input': 8.772981689857207, 'maximum_M_keV': 16.53796078454391, 'boundary_parent_mS_GeV': 2969.568797510899}]\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-m",
+        "pytest",
+        "--noconftest",
+        "-q",
+        "tests/test_toe_20261106_sterile_parent_consistency.py"
+      ],
+      "exit_code": 0,
+      "seconds": 18.98797250003554,
+      "stdout": "............                                                             [100%]\n12 passed in 12.80s\n",
+      "stderr": ""
+    }
+  ],
+  "source_raw_sha256": {
+    "analysis/toe_20261106_sterile_parent_consistency.py": "a26e36264c4186ba5c276f61beabbae385f7822b936a00b0ee0178a42edab4d6",
+    "analysis/toe_20261106_sterile_parent_server.js": "c97f05db2f05dc866c1bcbc19bb4d78953c7b61b1f02f558a6e5d823f0bd3070",
+    "analysis/toe_20261106_published_star_axion_server.js": "ee5c76531fb651b5ca00ac48a00d9cf066b6ac313ffe6f4a9298ad84e9867bd9",
+    "tests/test_toe_20261106_sterile_parent_consistency.py": "0a9991720200075cac9e7ff314582353f64b731bf889d22ecb81393c977e5f08",
+    "analysis/toe_20261106_sterile_parent_validation.py": "b7e2ed9bd73071995dba5eb5f87a727b7b97064d07fd9a376a91aa190adff647"
+  },
+  "input_raw_sha256": {
+    "analysis/toe_uv/sterile_window.py": "bfa6761b7290299d9a6801cb02fc148de21171233f8af7a2f81ef9c4d05f5f9b",
+    "analysis/toe_uv/sterile_window.json": "8583b164a3d06d43f907524799ed7abe6a93a4b5e78d56e677738fdabc8a4b41",
+    "analysis/toe_uv/sterile_lya.py": "db6b889d90bd79444841eec15c66497a5fe69532e11693464c463c8e340c329a",
+    "analysis/toe_uv/sterile_lya.json": "ca0a0570efee68ba20930f5da52ef831e1f817b694d30f7dd137558b9c1b5a4d",
+    "analysis/toe_uv/line_drift.json": "d1b5f4aaca51cf44d3b54f8c77877939df3dabc3e0012fec12e41b13d218f630",
+    "data/toe_20261103_dark_radiative_stability.json": "eab0adc3d8c083c37cf7d2eaed6a72b7532de6d7d1dfe0a2aeb578995ede9e1d",
+    "analysis/toe_20261103_dark_radiative_stability.py": "e56459920038902b640eab0a0b7f1d25805862b88619bc8ebdcd8f2ebe4ffde6",
+    "analysis/toe_20261103_mechanism_portal_protection.py": "fb9c3b17af7ba8c737cc78ff3b8ac3216ee89280474d8a630ec6d88f38f458b3"
+  },
+  "output_raw_sha256": {
+    "data/toe_20261106_sterile_parent_consistency.json": "6dfcdcec8c63a366bb812f79affbf00cf91d4b418c6b1496c6faf240dfaa46a5",
+    "data/toe_20261106_sterile_parent_server.json": "426432325bc1f686fd43bc4fba4135bd54d0656f1484df8e01ab197ee0e1b45a",
+    "data/toe_20261106_published_star_axion_server.json": "038c3e53e729d318013036a0eb6841b71b2b23e30c84c554a63ff018dfdcb11c"
+  },
+  "execution_scope": "PC Python producer plus twelve isolated tests, including comparison against both actual server-V8 artifacts. Remote Desktop Commander attempted but device offline; local exec used. No remote process success asserted.",
+  "earlier_runs": "Initial8 ordinary pytest tests passed175.07s; stop attempt saw already absent PID, so no process was stopped.9 isolated tests passed7.91s before final metadata cleanup. Initial symbolic test required algebraic difference simplification rather than structural equality. Earlier12test versions passed before a physical vev-normalization correction: incoming mN=y*vS/sqrt2 and Gamma=y^2*mS/(16pi) require canonical real S vev w=vS/sqrt2. Quartics double relative to the initial w=vS mapping; final tests explicitly check mN=y*w and mS^2=2lambda*w^2.",
+  "fixture_scope": "--noconftest omits unrelated repository legacy-fixture setup. Tests use explicit local imports and stored inputs; no full-repo test success asserted."
+}

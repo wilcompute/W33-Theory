@@ -1,0 +1,276 @@
+{
+  "status": "COMPLETED_TARGETED_RESULT_SEARCH_NOT_ABSENCE_PROOF",
+  "UTC": "2026-11-06T23:38:50.020185+00:00",
+  "patterns": [
+    {
+      "pattern": "sterile.*(radiative|Landau|quartic)",
+      "exit_code": 0,
+      "hits": [
+        {
+          "path": "analysis/PASS12626_SCORECARD_DM_CRITERIA.md",
+          "line": "65",
+          "excerpt": "- **Sterile neutrino** with Majorana mass from a gauge-singlet vev \u2272 10 TeV: survives. Its radiative portal is negligible, because the Yukawas are tiny (y_\u03bd ~ 10\u207b\u00b9\u00b9 for keV M).",
+          "full_line_characters": 176
+        },
+        {
+          "path": "data/toe_20261103_physical_completion_validation.json",
+          "line": "149",
+          "excerpt": "  \"earlier_repairs\": \"Initial sterile coefficient benchmark had a handwritten determinant coefficient2 instead of1; symbolic assertion caught it before output. Initial radiative producer had an unescaped derivative apostrophe in metadata; corrected before output. Charge-lattice refinement exposed a third allowed anomaly sector, preventing an unconditional two-sector claim.\"",
+          "full_line_characters": 376
+        },
+        {
+          "path": "data/toe_20261105_five_fronts_model_completion.json",
+          "line": "2207",
+          "excerpt": "  \"RG_limits\": \"A reproducible closed one-loop truncation for radial-before-all-heavy threshold ordering; other orderings explicitly rejected pending broken-phase EFT matching. Not complete SM flavor/sterile/mixing or two-loop finite matching. Higgs inputs illustrative. Sampled quartic minima are not a rigorous global vacuum-stability proof. This replaces the old common-y beta only within the stated model; no precise axion ceiling asserted.\",",
+          "full_line_characters": 446
+        },
+        {
+          "path": "analysis/toe_20261103_physical_completion_validation.py",
+          "line": "25",
+          "excerpt": "        earlier_repairs='Initial sterile coefficient benchmark had a handwritten determinant coefficient2 instead of1; symbolic assertion caught it before output. Initial radiative producer had an unescaped derivative apostrophe in metadata; corrected before output. Charge-lattice refinement exposed a third allowed anomaly sector, preventing an unconditional two-sector claim.')",
+          "full_line_characters": 380
+        },
+        {
+          "path": "analysis/toe_20261105_five_fronts_model_completion.py",
+          "line": "156",
+          "excerpt": "        RG_limits='A reproducible closed one-loop truncation for radial-before-all-heavy threshold ordering; other orderings explicitly rejected pending broken-phase EFT matching. Not complete SM flavor/sterile/mixing or two-loop finite matching. Higgs inputs illustrative. Sampled quartic minima are not a rigorous global vacuum-stability proof. This replaces the old common-y beta only within the stated model; no precise axion ceiling asserted.',",
+          "full_line_characters": 449
+        },
+        {
+          "path": "analysis/toe_20261106_sterile_parent_consistency.py",
+          "line": "123",
+          "excerpt": "                ownership='Nov3 dark_radiative_stability owns CW/subtracted-shape/soft/phase controls. This applies those controls to current Nov6 sterile points and adds a specified radial parent and portal-quartic scaling. No generic CW novelty claimed.',",
+          "full_line_characters": 257
+        }
+      ],
+      "stderr": ""
+    },
+    {
+      "pattern": "(moving.valley|radial.*quintessence)",
+      "exit_code": 1,
+      "hits": [],
+      "stderr": ""
+    },
+    {
+      "pattern": "(M\\^15|M_N\\^15|mass\\*\\*15)",
+      "exit_code": 0,
+      "hits": [
+        {
+          "path": "analysis/BT466_SEXTACTIC_MODULAR_WILSON.py",
+          "line": "67",
+          "excerpt": "chk(\"E2: j(k) numerator = lam^15 * q^6\", 2**15*3**6, 23887872)",
+          "full_line_characters": 62
+        },
+        {
+          "path": "analysis/toe_20261106_sterile_parent_consistency.py",
+          "line": "129",
+          "excerpt": "                             parent_mass_at_portal_boundary='M_N^6',quartic_at_portal_boundary='M_N^15'),",
+          "full_line_characters": 105
+        },
+        {
+          "path": "data/toe_20261106_sterile_parent_consistency.json",
+          "line": "203",
+          "excerpt": "    \"quartic_at_portal_boundary\": \"M_N^15\"",
+          "full_line_characters": 42
+        }
+      ],
+      "stderr": ""
+    },
+    {
+      "pattern": "18.*lambda.*16.*pi",
+      "exit_code": 0,
+      "hits": [
+        {
+          "path": "papers/forty_points/sec09_physics.tex",
+          "line": "1571",
+          "excerpt": "The two lines meet at a single orbit. The angular coefficient $C_G$ of the soft-supertrace selector near a Witting ray, which decides the direction in which an arbitrarily weak soft term displaces the E8 Higgs vacuum, is minimised exactly on the qutrit Clifford orbit of magic $M_2=\\log\\tfrac85$ (stabiliser of order 4, 54 points), below the strange, stabiliser and $T$ directions. The vacuum dynamics thus selects a definite W(3,3)/Clifford orbit for the flavour Higgs; it unlocks charm from up but with order-one ratios, so the up hierarchy must come from the radial displacement rather than the angle. \\cert{w33\\_pass11935\\_soft\\_supertrace\\_selects\\_log85\\_orbit.py} The radial part does feed the Yukawas: inverting the displaced vev $(1,t\\,u)$ to the Siegel modulus gives $\\mathrm{Im}\\,\\Omega\\sim(3/\\pi)\\ln(1/t)$ and a theta Yukawa with singular values $(1,0.465t,0.370t)$ on the selected orbit, and the exponents $(0,1,1)$ in every generic direction. The essential scaling $t\\propto e^{-\\kappa/32r}$ is therefore the top/charm hierarchy parameter -- $m_c/m_t$ is matched at $r\\approx0.055$ -- while $m_u/m_c=0.80$ is fixed by the direction, so the up hierarchy needs a second small parameter. \\",
+          "full_line_characters": 19804
+        },
+        {
+          "path": "data/PART_4005_4007_4010_4012_EXACT_PHOTON_REVIVAL.json",
+          "line": "1",
+          "excerpt": "{\"boundary\":\"Exact finite-dimensional matrix, revival, tomography-inversion, and controlled-gate statements only. No fabricated device, measured Wigner-Smith matrix, variable vacuum c, literal photon-node ontology, hardware scaling advantage, Monster embedding, or laboratory performance is claimed.\",\"geometry\":{\"identity\":\"N N^T=4I+A_W33\",\"incidences\":160,\"lines\":40,\"points\":40,\"singular_values\":{\"0\":15,\"4\":1,\"sqrt(6)\":24}},\"pass4005_exact_nondispersive_revival\":{\"claim\":\"Exact zero-leakage finite-detuning revival; no dispersive approximation is used.\",\"exact_interaction_g_t\":\"pi/sqrt(2)\",\"exact_ratio_Delta_over_g\":\"2*sqrt(2)\",\"full_unitary_operator_error\":6.541099498163725e-15,\"half_angle_windings\":{\"detuning\":1,\"sigma_4\":3,\"sigma_sqrt6\":2},\"hamiltonian\":\"H=g[[0,N],[N^T,(Delta/g)I]]\",\"line_action\":\"F16-F6+F0=I-2F6\",\"off_block_leakage_operator_norm\":2.872486850284518e-15,\"point_action\":\"E16-E6+E0=I-2E6=-(I+A)/3+2J/15\",\"sector_rabi_frequencies_over_g\":{\"bus_dark\":\"2*sqrt(2)\",\"sigma_4\":\"6*sqrt(2)\",\"sigma_sqrt6\":\"4*sqrt(2)\"}},\"pass4006_quadratic_form_wigner_smith_tomography\":{\"causal_firewall\":\"Measure precursor/front arrival separately from Q; Q is dwell/group-delay memory and is sub",
+          "full_line_characters": 8553
+        },
+        {
+          "path": "data/PART_4057_4064_ADVANCED_PHYSICS.json",
+          "line": "1",
+          "excerpt": "{\"all_checks_hold\":true,\"boundaries\":[\"All promoted statements are exact finite graph, group-character, projector, polynomial, lattice, Floquet, or canonical-ensemble results.\",\"No fabricated hardware, measured fidelity, chiral Standard Model, quantized pump, gravity, cosmology, or theory of everything is claimed.\"],\"checks\":{\"4057\":true,\"4058\":true,\"4059\":true,\"4060\":true,\"4061\":true,\"4062\":true,\"4063\":true,\"4064\":true},\"pass4057_counterdiabatic_holonomy\":{\"X_loop_fubini_study_action\":\"2*acos(1/4) + sqrt(15)*pi/2\",\"X_numeric\":8.719900157266053,\"Z_loop_fubini_study_action\":\"pi/3 + sqrt(3)*pi/2\",\"Z_numeric\":3.7678965975479244,\"boundary\":\"Exact transitionless projector transport and action budget only; synthesis of the required auxiliary couplings, smoothing of path corners, calibration, and measured fidelity remain open.\",\"constant_speed_peak_norm\":\"L/T for either loop\",\"counterdiabatic_term\":\"H_CD=i[dP_D/dt,P_D]=i(|Bdot_perp><B|-|B><Bdot_perp|)\",\"exactness\":\"Adding H_CD gives exact Kato parallel transport in the instantaneous dark space at arbitrary finite duration in the ideal control model.\",\"maximum_parameter_rate_X\":\"(4/sqrt(15)) L_X/T\",\"maximum_parameter_rate_Z\":\"(4/sqrt(3)) L",
+          "full_line_characters": 10452
+        },
+        {
+          "path": "data/PART_4089_4096_IMPLEMENTATION_OUTSIDE_BOX.json",
+          "line": "1",
+          "excerpt": "{\"schema\":\"w33.pass4089_4096.implementation_outside_box.v1\",\"status\":\"PASS_EXACT_LAYOUT_OPTIMAL_REFERENCE_EXTERIOR_ANOMALY_NOTCH_MECHANICS_CODE_TURING_RESISTANCE\",\"semantic_sha256\":\"598f80f12de4571824218228000fbfc874f339b59717009fb567e4268a5797dc\",\"boundaries\":[\"All promoted statements are exact finite algebra, deterministic graph constructions, exact representation-ring identities, or explicitly stated perturbative numerical simulations.\",\"No fabricated router, exact finite reusable irrational catalyst, derived Standard Model, measured pulse or mechanical prototype, laboratory sparse-error correction, nonlinear Turing experiment, gravity, cosmology, or theory of everything is claimed.\"],\"pass4089_router_layout\":{\"layout_file\":\"data/w33_pass4089_four_router_layout.json\",\"layout_semantic_sha256\":\"32e46ee39dde19ae936eb7334e79db5f083a75db9a9c4dafa6902f1190152556\",\"routers\":4,\"swaps_per_router\":40,\"total_assignments\":160,\"identity\":\"(<00|B^dagger tensor I) U_sel (B|00> tensor I)=A_Levi/4\",\"differential_error_bound\":\"eta_signal <= (1/4) sum_j |t_j exp(i theta_j)-1|\",\"qsp_error_bound\":\"||delta U_QSP|| <= 5 eta_signal+6 delta_phi\",\"example_budget\":{\"per_router_complex_error\":0.001,\"phase_",
+          "full_line_characters": 5262
+        },
+        {
+          "path": "data/PART_4105_4112_CARRIER_REFERENCE_NETLIST_DECODER_TURING_BONKERS.json",
+          "line": "1",
+          "excerpt": "{\"boundaries\":[\"All promoted statements are exact finite algebra, exact module and representation audits, exact correlated-channel formulas, deterministic netlist compilation contracts, rigorous sparse-syndrome bounds, or explicitly stated numerical nonlinear simulations.\",\"No derived Standard Model, fabricated router, exact reusable irrational catalyst, laboratory sparse decoder, measured Turing pattern, physical molecule, gravity, cosmology, or theory of everything is claimed.\"],\"pass4105_sector_faithful_chiral_carrier\":{\"anomalies\":{\"SU2_sq_U1\":0,\"SU3_cubed\":0,\"SU3_sq_U1\":0,\"U1_cubed\":0,\"Witten_SU2_doublets\":4,\"gravity_sq_U1\":0},\"boundary\":\"The 99-dimensional module is built and exactly audited; the 145-dimensional repair is a representation architecture, not observed matter, masses, Yukawas, generations, or couplings.\",\"candidate_99\":\"(C^6 tensor V_1) direct_sum (C^3 tensor V_15) direct_sum (C^2 tensor V_24)\",\"commutant_99\":\"M_6(C) direct_sum M_3(C) direct_sum M_2(C)\",\"corrected_dimension\":145,\"corrected_sector_faithful_carrier\":\"(C^7 tensor V_1) direct_sum (C^6 tensor V_15) direct_sum (C^2 tensor V_24)\",\"dimension_99\":99,\"minimality\":\"Under the sector assignment Q and e^c to V",
+          "full_line_characters": 8200
+        },
+        {
+          "path": "data/PART_4121_4128_EXPLICIT_GAUGE_DFS_DECODER_FOUNDRY_ATTRACTORS_BONKERS.json",
+          "line": "1",
+          "excerpt": "{\"boundaries\":[\"All promoted statements are exact finite representation, channel, graph, projector, spectral, or combinatorial results, except the explicitly labelled 64-seed nonlinear census and heuristic crossing-order optimization.\",\"No derived Standard Model, fabricated CORNERSTONE chip, measured decoder or pattern, physical antiferromagnet, quantum-walk processor, exceptional-point sensor, gravity, cosmology, or theory of everything is claimed.\"],\"pass4121_explicit_145_gauge_matrices\":{\"W33_mediator_requirements\":{\"down\":\"V15\",\"lepton\":\"V24\",\"up\":\"V15\"},\"W33_singlet_Higgs_Yukawa_dimension\":0,\"bare_gauge_invariant_mass_intertwiners\":0,\"basis_order\":[\"Q_color_weak plus e^c on V1\",\"u^c_color plus d^c_color tensor V15\",\"L_weak tensor V24\"],\"boundary\":\"Exact generator construction and anomaly/intertwiner audit. The repair options are representation architectures, not a dynamical chiral gauge theory.\",\"correction\":\"The anomaly cancellation in Pass 4105 applied only to the abstract multiplicity-space generation. Once the explicit 145x145 gauge matrices act identically across V15 and V24, those orbital dimensions multiply the chiral species and the full carrier is anomalous.\",\"dimensi",
+          "full_line_characters": 14994
+        },
+        {
+          "path": "data/PART_4129_4136_ANOMALY_GATES_DECODER_HYBRID_ORBITS_BONKERS.json",
+          "line": "1",
+          "excerpt": "{\"boundaries\":[\"All promoted results are exact finite representation, coding, graph, projector, spectral, or integer-optimization statements except explicit engineering design targets.\",\"No derived Standard Model, fabricated hybrid chip, laboratory decoder, complete mixed-attractor classification, physical tomography instrument, emergent time, gravity, cosmology, or theory of everything is claimed.\"],\"pass4129_anomaly_repair\":{\"PSp_module_respecting_targets\":{\"V1\":{\"added_dimension\":146,\"net_chiral_module\":\"one trivial V1 generation\",\"total_physical_dimension\":291},\"V15\":{\"added_dimension\":190,\"minimal_nontrivial\":true,\"net_chiral_module\":\"one nontrivial V15 generation\",\"total_physical_dimension\":335},\"V1_plus_V15_plus_V24\":{\"added_dimension\":455,\"net_chiral_module\":\"one generation in each W33 sector\",\"total_physical_dimension\":600},\"V24\":{\"added_dimension\":409,\"net_chiral_module\":\"one V24 generation\",\"total_physical_dimension\":554}},\"anomaly_coordinates\":[\"SU3_cubed\",\"6_SU3_sq_U1\",\"4_SU2_sq_U1\",\"gravity_sq_U1\"],\"boundary\":\"Exact optimization within standard-charge multiplets and conjugates. Arbitrary exotic gauge representations were not searched.\",\"global_standard_charge_optimiza",
+          "full_line_characters": 9125
+        },
+        {
+          "path": "data/PART_BT3320_BT3329_GLOBAL_COVER_QUANTUM_HYPERCUBE_results.json",
+          "line": "1",
+          "excerpt": "{\"checks\":{\"decoder_8192\":true,\"depth4_100_shards\":true,\"dual_compression\":true,\"exterior_histogram\":true,\"global_cover_arithmetic\":true,\"ordinary_hypercube_no_go\":true,\"q15_distance_host\":true,\"szegedy_phase_compiler\":true,\"tau_fourier\":true},\"evidence_boundary\":{\"not_proved\":\"chi(H) decision, terminal status of queued shards, quantum speedup, physical Q15 implementation, tomotope equivariance, RTL synthesis/placement, PDFs or laboratory claims\",\"proved\":\"exact finite counts, spectra, graph embeddings/no-go, vector hashes and proof-tree partitions\"},\"live_chromatic_boundary\":\"10 <= chi(H) <= 11\",\"pass3320_3321_global_cover_reconciliation\":{\"boundary\":\"The subtraction is an exact reconciliation of independently certified PSp orbit censuses. It does not by itself provide switch paths for the 192 exterior orbit classes.\",\"closed_hamming_component\":{\"covers\":1574640,\"orbits\":135,\"stabilizer_histogram\":{\"2\":108,\"4\":27,\"8\":0}},\"exterior_complement\":{\"cover_contributions\":{\"2\":1555200,\"4\":369360,\"8\":48600},\"covers\":1973160,\"orbits\":192,\"stabilizer_histogram\":{\"2\":120,\"4\":57,\"8\":15}},\"global_exact_census\":{\"PSp_order\":25920,\"covers\":3547800,\"orbit_size_by_stabilizer\":{\"2\":12960,\"4\":6480,\"",
+          "full_line_characters": 7986
+        },
+        {
+          "path": "data/PART_BT3325_SZEGEDY_PHASE_LEDGER.json",
+          "line": "1",
+          "excerpt": "{\"boundary\":\"This is an exact finite-dimensional quantum-walk spectral compiler. It proves neither a speedup nor a physical implementation.\",\"classical_states\":135,\"convention\":\"U=(2 Pi_B-I)(2 Pi_A-I); z=exp(+-2 i arccos(lambda))\",\"discriminant_eigenvalues\":[\"1\",\"7/10\",\"2/5\",\"1/10\",\"-1/5\",\"-1/2\"],\"exact_phase_quadratics\":[{\"lambda\":\"1\",\"phase_degrees\":0.0,\"phase_radians\":0.0,\"walk_quadratic\":\"z^2-(2)z+1\"},{\"lambda\":\"7/10\",\"phase_degrees\":91.1459919983886,\"phase_radians\":1.5907976603682872,\"walk_quadratic\":\"z^2-(-1/25)z+1\"},{\"lambda\":\"2/5\",\"phase_degrees\":132.84364304359633,\"phase_radians\":2.318558961454817,\"walk_quadratic\":\"z^2-(-34/25)z+1\"},{\"lambda\":\"1/10\",\"phase_degrees\":168.52165904546644,\"phase_radians\":2.9412578112666736,\"walk_quadratic\":\"z^2-(-49/25)z+1\"},{\"lambda\":\"-1/5\",\"phase_degrees\":203.073918065631,\"phase_radians\":3.544308495170455,\"walk_quadratic\":\"z^2-(-46/25)z+1\"},{\"lambda\":\"-1/2\",\"phase_degrees\":240.00000000000003,\"phase_radians\":4.188790204786391,\"walk_quadratic\":\"z^2-(-1)z+1\"}],\"nonzero_directed_transitions\":1242,\"schema\":\"w33.pass3325.szegedy_phase_ledger.v1\",\"sha256_without_hash_field\":\"f1ea98b9175929adb030e2bf7649edc13c641520d986380bb0fe32ee38d2f2e4\",\"smallest",
+          "full_line_characters": 1427
+        },
+        {
+          "path": "analysis/toe_20261106_sterile_parent_consistency.py",
+          "line": "132",
+          "excerpt": "                RG_scope='Scalar-only one-loop beta_lambda=18 lambda^2/(16pi^2) in V=lambda S^4/4 convention. Pole is a breakdown diagnostic; where beta/lambda >=1 its numerical location is uncontrolled. No actual nonperturbative pole or full UV cutoff is established.',",
+          "full_line_characters": 270
+        },
+        {
+          "path": "data/toe_20261106_sterile_parent_consistency.json",
+          "line": "599",
+          "excerpt": "  \"RG_scope\": \"Scalar-only one-loop beta_lambda=18 lambda^2/(16pi^2) in V=lambda S^4/4 convention. Pole is a breakdown diagnostic; where beta/lambda >=1 its numerical location is uncontrolled. No actual nonperturbative pole or full UV cutoff is established.\",",
+          "full_line_characters": 259
+        },
+        {
+          "path": "data/w33_MCLXI_MCLXX_alpha_precision_qcd_leech_neutron.json",
+          "line": "52",
+          "excerpt": "  \"headline\": \"MCLXI-MCLXX: ALPHA CODATA-PRECISION + QCD + LEECH + NEUTRON LIFETIME.\\n\\nalpha^-1 = 669969 / 4889 ~ 137.0359991817 (0.23 sigma from CODATA)\\n  Running tail 176/4889 = pure rational; substrate matches to 11 digits\\n\\nalpha_s = lambda * Theta / Phi_3^2 = 20/169 = 0.1183 (0.38 sigma)\\nQCD beta_3 = Phi_6 = 7 (asymptotic freedom is Heawood number)\\n\\ntau_n = mu^2 * N_eff = 16 * 55 = 880 s (obs 878.4, 0.2%)\\nT_CMB = p_Ih / mu = 11/4 = 2.75 K (obs 2.725, 0.9%)\\nGamma_W/m_W = Phi_6 / (Phi_4 * q^q) = 7/270 = 0.02593\\nLambda_QCD/v_EW = g/(H_1*137) = 15/11097 = 0.00135\\n\\nNEUTRINO MASS VIA LEECH LATTICE:\\n  m_e/m_{nu_3} = (T_7+f) * Leech_kissing = 52 * 196560 = 10,221,120\\n  vs obs ~10,220,000; the Leech lattice IS the neutrino bottleneck\\n\\nGOLDEN RATIO IN alpha RUNNING:\\n  delta_RG = phi / (g * q) = phi/45 ~ 0.035956 (vs CODATA 0.035999)\\n\\nTHERMODYNAMICS FROM GRAPH (4 laws):\\n  0th: diameter = lambda; 1st: f*Theta + g*lambda^mu = vk = 480\\n  2nd: |r| < |s| (irreversibility); 3rd: unique vacuum\\n  Spin-statistics: r*s = -2^q < 0 GUARANTEES opposite stats\\n\\nMETA: chi^2 / dof = 0.64 across 31 = 2^F_5 - 1 = M_5 (Mersenne)\\n  precision observables; 3091 checks; 39 = q*Phi_3 phas",
+          "full_line_characters": 1219
+        },
+        {
+          "path": "data/w33_pass500_galois_phase_cycle_compiler.json",
+          "line": "1",
+          "excerpt": "{\"actual_product_ring_witness\":{\"coefficient_digits\":153,\"minimum_significant_digits_for_direct_analog_rounding\":156,\"real_coefficients\":[\"-921366292686981417508536523073268873802285652287412201602781158965264771689803640418701260387545543717620996089303575783068837393522866766665699325341662\",\"898576891761306704878426475805018838325081544104451864603887723042076519505960726749489541321417881276966040841498411083432617778710415257450265294293909\",\"-215847334982048566018072925613833255712911587735447504155779048555887186125047584252155997130980894328675777392486927617433609666874507050841348372790849\"],\"recovered_lambda_depth\":24,\"relative_norm\":\"-109970681423697361723235220184077551543488911153617841760667868032042471329340371024852614324631744857692390800932556690755485565101369756395160338204501604775661162472972746137258138605271219810996612580173662810098709858008349772469725486306618013249448115235118987222714533422178361269136607452375855314478757521168414843174634154265815912471469080683253186806280809481172047684661992567271585736901884224774095526411521006206608795675308131189796842133281\",\"relative_norm_3_valuation\":12},\"checks\":{\"actual_depth_24\":true,\"actual_real_basis_",
+          "full_line_characters": 4988
+        },
+        {
+          "path": "data/w33_pass511_constant_orbit_theorem.json",
+          "line": "1",
+          "excerpt": "{\"boundary\":\"The forward implication is proved in general; ingredient (ii) is additionally verified numerically for p in {3,5,7,11,13} and k <= 24, and ingredients (i), (iii) exactly in Z[zeta_p] at p = 3,5,7.  The CONVERSE is verified on 28 cells and is NOT proved.  Part D is a divisor count, arithmetic only.  Part E is twelve sections at (p,m) = (3,6) and asserts no mechanism at even m -- the theorem is silent there and Pass 510's PARTIAL verdict stands.  Nothing here proves the factorial law.\",\"checks\":{\"cells_tested_at_least_28\":true,\"p3_inverse_closure_conjugates_d\":true,\"p3_m6_minimum_total_matches_factorial_law\":true,\"p3_m6_short_cancellation_is_not_generic\":true,\"p3_rho_pow_p_identity\":true,\"p5_inverse_closure_conjugates_d\":true,\"p5_rho_pow_p_identity\":true,\"p7_inverse_closure_conjugates_d\":true,\"p7_rho_pow_p_identity\":true,\"purely_imaginary_iff_k_odd_and_p_divides_k\":true,\"single_survivor_at_prime_powers\":true,\"survivor_count_equals_tau_of_prime_to_p_part\":true,\"theorem_and_converse_hold_on_every_cell\":true},\"consequences\":\"p does not divide m/d exactly when d carries the whole p-part of m, so at ODD m the decomposition COLLAPSES to the divisors of m / p^{v_p(m)} -- and fo",
+          "full_line_characters": 10642
+        },
+        {
+          "path": "data/w33_pass514_sieve_theorem.json",
+          "line": "1",
+          "excerpt": "{\"boundary\":\"The theorem is proved in general.  Part A validates the computational shortcut against the honest matrix computation on over ten thousand orbits over fields and on the constant class over Z/9 before any later part relies on it.  Parts B-E use the shortcut and are therefore restricted to cells with e | (m/d); classes outside that range are not computed here and nothing is claimed about them.  Part E compares against eight sections per cell, so 'vanishes in every section' means 'in every section sampled'.  Part F EMITS a patch and applies none of it.\",\"checks\":{\"character_order_holds_at_e_9_25_27\":true,\"collapsing_literal_joins_improves_the_locator\":true,\"e_and_p_predictions_differ_somewhere\":true,\"m18_derived_relation_is_not_two_separate_vanishings\":true,\"m18_two_relations_and_a_derived_one\":true,\"patch_emitted\":true,\"shortcut_matches_matrix_computation\":true,\"shortcut_tested_on_thousands_of_orbits\":true,\"shortcut_valid_over_Z9_too\":true,\"sieve_covers_three_primes\":true,\"sieve_is_exactly_the_universal_vanishing\":true,\"sieve_relations_exact_and_vanishing\":true},\"part_A_shortcut\":{\"mismatches_over_Z9\":0,\"mismatches_over_fields\":0,\"orbits_tested_over_fields\":15584,\"shortcu",
+          "full_line_characters": 33352
+        },
+        {
+          "path": "data/w33_pass535_image_closed.json",
+          "line": "1",
+          "excerpt": "{\"boundary\":\"Part A is arithmetic on the six polynomials Pass 528 enumerated exhaustively, and checks an equivalence rather than proving the bounds -- both bounds are cited, not re-proved.  What is NOT explained is which lattice points the sections realise: the bounds permit infinitely many and exactly six occur.  Part C is an editorial observation.\",\"checks\":{\"all_six_polynomials_checked\":true,\"divisibility_by_27_is_the_e3_bound\":true,\"divisibility_by_9_is_the_e2_bound\":true,\"q3_chain_complete\":true,\"second_instance_recorded\":true},\"headline\":\"THE q = 3 LATTICE IS TWO THEOREMS ALREADY IN THE PAPER.  For a rational coefficient, divisibility and valuation are the same statement: 9 | e_2 iff v_lambda(e_2) >= 4, and 27 | e_3 iff v_lambda(e_3) >= 6.  The first bound is Pass 487's v_lambda(e_k) >= 2k at k = 2; the second is the sharp determinant law's v_lambda(e_q) >= v_lambda(q) + 4, which at q = 3 reads 2 + 4 = 6.  Both directions verified on all six polynomials.  So the chain closes with no new input: inverse closure gives D Hermitian, hence a real characteristic polynomial, hence rational at p = 3 where the real subring has degree 1, and the two bounds give the lattice.  This is a S",
+          "full_line_characters": 4668
+        },
+        {
+          "path": "data/w33_pass625_anytime_poisson_eprocess.json",
+          "line": "1",
+          "excerpt": "{\"anytime_classification\":{\"alpha\":0.01,\"class_eprocess\":\"E_c=(1/3) sum_{d != c} LR_{d/c}.\",\"confidence_sequence\":\"C_t={c:E_c(t)<1/alpha}. Ville guarantees that the true class remains in C_t for all t with probability at least 1-alpha. Stopping when C_t is a singleton therefore has anytime misclassification probability at most alpha.\",\"paired_Poisson_reduction\":\"Conditioning independent Poisson plus/minus counts on their total gives a binomial observation. Common multiplicative loss cancels from the plus probability.\",\"pairwise_KL_per_detected_photon\":{\"flat_identity|tetrahedral_fixed_point_free_involution\":[0.4579279632480991,0.000729507229163158],\"flat_identity|top_double_transposition\":[0.24402058960425782,0.00032966451970081745],\"flat_identity|top_order_three\":[0.4866786311027234,0.28004907630989706],\"tetrahedral_fixed_point_free_involution|top_order_three\":[0.0005356328310913774,0.25639406230781775],\"top_double_transposition|tetrahedral_fixed_point_free_involution\":[0.04217105817318739,7.970719772542722e-05],\"top_double_transposition|top_order_three\":[0.0521117026787897,0.2641156050965151]},\"pairwise_eprocess\":\"LR_{d/c}(t)=product over predictably selected channels of (p_d/p_c",
+          "full_line_characters": 5047
+        },
+        {
+          "path": "data/w33_photonics_source_audit_20261023.json",
+          "line": "1",
+          "excerpt": "{\"audited_date\":\"2026-10-23\",\"commits\":{\"date_counts\":{\"2026-10-17\":42,\"2026-10-18\":32,\"2026-10-19\":70,\"2026-10-20\":31,\"2026-10-21\":87,\"2026-10-22\":89,\"2026-10-23\":23},\"indexed_count\":374,\"metadata\":[{\"date\":\"2026-10-23\",\"path_count\":1,\"sha\":\"b18003f6561c9451e92a58b13bfd11e1728ca65d\",\"subject\":\"Pass 398: freeze complete formula-search universe\"},{\"date\":\"2026-10-23\",\"path_count\":7,\"sha\":\"3ba7ed9d201945ef46fb5d0af8c111572bf342e6\",\"subject\":\"Certify GF16 transvection splitting, chiral tunneling, heralded fault law and native gauge Ward\"},{\"date\":\"2026-10-23\",\"path_count\":0,\"sha\":\"abc6a01348e802dbb58bb64f65cc9c26486d5379\",\"subject\":\"Passes12194-12198 reserved: angular flavour, native dynamics, magic conversion, quantum normalizer and Narain gluing (Codex)\"},{\"date\":\"2026-10-23\",\"path_count\":1,\"sha\":\"feaebe1ffe1a1665adce48d96e2faa301a04b89c\",\"subject\":\"Pass 398: freeze complete formula-search universe\"},{\"date\":\"2026-10-23\",\"path_count\":6,\"sha\":\"f2155010a3d86e4cffc650d5bfd659ef68b41a37\",\"subject\":\"Certify W33 scalar orbital obstruction, edge-local chirality and five-qutrit magic mismatch\"},{\"date\":\"2026-10-23\",\"path_count\":1,\"sha\":\"91e39357df5200e6f7b5ad67e59b26f9eb951a2b\",\"subject\":\"P",
+          "full_line_characters": 149074
+        }
+      ],
+      "stderr": ""
+    },
+    {
+      "pattern": "(1609\\.01289|1502\\.01011)",
+      "exit_code": 0,
+      "hits": [
+        {
+          "path": "analysis/toe_20261106_sterile_parent_consistency.py",
+          "line": "133",
+          "excerpt": "                Lyalpha_scope='Incoming 15.2/16.8keV numbers match mean momentum to a thermal relic. They are proxies, not a computed transfer function or data likelihood. Koenig-Merle-Totzauer1609.01289 AppC explicitly shows failure of mean/free-streaming classification for nonthermal scalar-decay spectra. Neither a universal7.1keV exclusion nor a precise16-20keV allowed corridor follows.',",
+          "full_line_characters": 394
+        },
+        {
+          "path": "analysis/toe_20261106_sterile_parent_consistency.py",
+          "line": "135",
+          "excerpt": "                sources=['https://arxiv.org/abs/hep-ph/0606120','https://arxiv.org/abs/1609.01289',",
+          "full_line_characters": 99
+        },
+        {
+          "path": "data/toe_20261106_sterile_parent_consistency.json",
+          "line": "600",
+          "excerpt": "  \"Lyalpha_scope\": \"Incoming 15.2/16.8keV numbers match mean momentum to a thermal relic. They are proxies, not a computed transfer function or data likelihood. Koenig-Merle-Totzauer1609.01289 AppC explicitly shows failure of mean/free-streaming classification for nonthermal scalar-decay spectra. Neither a universal7.1keV exclusion nor a precise16-20keV allowed corridor follows.\",",
+          "full_line_characters": 383
+        },
+        {
+          "path": "data/toe_20261106_sterile_parent_consistency.json",
+          "line": "604",
+          "excerpt": "    \"https://arxiv.org/abs/1609.01289\",",
+          "full_line_characters": 39
+        }
+      ],
+      "stderr": ""
+    }
+  ],
+  "original_capture_sha256": "afcd01968d2f2500ef0281a95d9e01cc9643048d9050fa5b1599ebb89c9c2bb5",
+  "scope": "rg scans py/md/json/tex/html in RESULTS_INDEX,analysis,data,docs,papers with max2MB per file and max8 hits per file. Own new source existed during this successful replay; self-hits identified. Initial CMD quoting and CP1252 decoding attempts failed and are not absence evidence. Prefix/radial no-hit and M15 unrelated elliptic hit do not establish novelty. Broad beta regex hits include long manuscript/history lines; no new beta theorem claimed.",
+  "prior_owners": [
+    "analysis/toe_20261103_dark_radiative_stability.py",
+    "analysis/toe_20261103_mechanism_portal_protection.py",
+    "analysis/PASS12626_SCORECARD_DM_CRITERIA.md"
+  ],
+  "scope_of_new_use": "Apply inherited CW controls to current sterile proposal and test a specified scalar parent and continuous portal/quartic relation.",
+  "additional_published_control_result_search": [
+    {
+      "pattern": "5,1,5,5",
+      "exit_code": 0,
+      "paths": [
+        "analysis\\2026-11-06_sterile_parent_and_changed_work_audit.md",
+        "analysis\\w33_20261028_five_fronts_followup.py",
+        "analysis\\w33_20261028_round12_five_frontiers.py",
+        "analysis\\w33_20261028_sixfront_ratio_and_12repair.py"
+      ],
+      "stderr": ""
+    },
+    {
+      "pattern": "2606.05276",
+      "exit_code": 0,
+      "paths": [
+        "analysis\\2026-11-06_sterile_parent_and_changed_work_audit.md",
+        "data\\toe_20261106_published_star_axion_server.json"
+      ],
+      "stderr": ""
+    },
+    {
+      "pattern": "247/9",
+      "exit_code": 0,
+      "paths": [
+        "analysis\\2026-11-06_sterile_parent_and_changed_work_audit.md"
+      ],
+      "stderr": ""
+    },
+    {
+      "pattern": "M_N^15",
+      "exit_code": 0,
+      "paths": [
+        "analysis\\toe_20261106_sterile_parent_consistency.py",
+        "data\\toe_20261106_sterile_parent_consistency.json",
+        "data\\toe_20261106_sterile_parent_result_search.json"
+      ],
+      "stderr": ""
+    }
+  ],
+  "additional_search_scope": "Post-construction cross-check of credited published reproduction, not priority claim; own-source hits included. Fullmatrix method owner new_front1 read in full.",
+  "additional_candidate_triage": "Three Oct28 hits contain E6 branching multiplicities [10,5,1,5,5,1] with two-charge lists [(1,1),(-3,1),(5,1),(-2,-2),(2,-2),(0,4)], verified by reading matching contexts. These differ from the four-site published star charge kernel. No new anomaly/RG method claimed."
+}

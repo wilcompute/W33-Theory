@@ -1,0 +1,2981 @@
+{
+  "status": "COMPLETE_CHANGED_PATH_AND_PATCH_STRUCTURE_CENSUS_PARTIAL_FULL_READING",
+  "UTC": "2026-11-06T23:54:03.231545+00:00",
+  "baseline": "829b86f29ac9a01d8e1f5ebbada00929851c8f84",
+  "incoming_tip": "bfbb685af",
+  "patches": [
+    {
+      "range": "829b..333",
+      "sha256": "4e14c6faaf0b14a07176dbcf17040466a09205b6b73e43e71a3751dae1981712",
+      "characters": 687067,
+      "lines": 17882
+    },
+    {
+      "range": "333..030",
+      "sha256": "992695235be853e6140ca439b7b6f481c8deaef653f7d28821d488f656375777",
+      "characters": 13061,
+      "lines": 467
+    },
+    {
+      "range": "030..6bb",
+      "sha256": "7ef6a65035f0544d3e72ba9c07ae8af6f8898c9833d210bbf088c761ed34a64d",
+      "characters": 12132,
+      "lines": 187
+    },
+    {
+      "range": "6bb..bfbb",
+      "sha256": "f619bd422f7af7bc7443d7e423d7001c9245108004dae91d011474e6f70c7b57",
+      "characters": 13903,
+      "lines": 226
+    }
+  ],
+  "changed_path_count": 161,
+  "paths": [
+    {
+      "path": "analysis/2026-11-05_five_plus_three_integrated_toe_falsifiers.md",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 268,
+          "removed_lines": 0,
+          "patch_block_sha256": "63f0f39fcd3f34f071d7bbb9e65e14dbaee6779fccd57c473dc788da0e010361",
+          "added_headings": [
+            "# 2026-11-05 \u2014 Five TOE integration fronts + three orthogonal physics falsifiers",
+            "## Artifacts",
+            "## Front 1 \u2014 An exact additive-Abelian operator obstruction",
+            "## Front 2 \u2014 Coupled gauge-only **two-loop** dynamics",
+            "## Front 3 \u2014 The flavor texture fits *any* invertible target light-neutrino mass matrix",
+            "## Front 4 \u2014 Exact finite causal history sum of BDG action polynomials",
+            "## Front 5 \u2014 A Page-like curve that actually respects Gauss's law",
+            "## Three independent physical falsification controls",
+            "## Shared-model verdict"
+          ],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": [
+            "**explicit inputs**, not derived black-hole dynamics. Exact"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "analysis/2026-11-05_joint_z9_seesaw_axion_uv_minimality_obstruction.md",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 128,
+          "removed_lines": 0,
+          "patch_block_sha256": "d1856befc36cf27568711531edb0f7f9ced086529ebebd1aaa35f0e4361d62f8",
+          "added_headings": [
+            "# 2026-11-05 \u2014 Proton-safe flavor \\(U(1)\\), generic neutrino masses, and the renormalizable axion-quality obstruction",
+            "## Proven starting no-go in the stated generation-universal field inventory",
+            "## A specific family-dependent escape",
+            "## A full-rank but *not predictive* type-I seesaw",
+            "## The decisive new *minimality obstruction*: renormalizable axion breaking",
+            "## An additional same-action UV pressure: the \\(Y\\)--\\(X\\) gauge kinetic matrix",
+            "## Source ownership / validation / next falsifiers",
+            "## Quantitative axion-quality stress test (conditional, not an axion solution)"
+          ],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/2026-11-05_latest_five_plus_three_physics_swing_report.md",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 364,
+          "removed_lines": 0,
+          "patch_block_sha256": "1ca98f91abd089c84bebc8ef23ec7f9fbdf71802b1d150bfd5004286e5fab967",
+          "added_headings": [
+            "# November 5, 2026 \u2014 TOE research: five physical fronts plus three independent home-run attempts",
+            "## Executable research matrix",
+            "## 1. Two-\\(U(1)\\) kinetic mixing: the complete matrix is the observable object",
+            "## 2. Causal spacetime: even a tuned global dimension-4 signature is insufficient",
+            "## 3. Gauge-invariant multiparticle dynamics beyond high-dimensional single photons",
+            "## 4. Predictive neutrino ans\u00e4tze face current solar + reactor constraints",
+            "## 5. Two gapless species still do not share a cone under generic local coupling",
+            "## Swing A (unrelated): exact proton protection may be a discrete symmetry, not just a huge GUT mass",
+            "## Swing B (unrelated): information return distinguishes a Page curve from endless pair creation",
+            "## Swing C (unrelated): dark energy can be confounded with redshift-dependent supernova calibration",
+            "## Integrated conclusions"
+          ],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": [
+            "properly retracted the strong fading-vs-CPL claim."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "analysis/2026-11-05_next_five_cross_sector_falsifiers_report.md",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 151,
+          "removed_lines": 0,
+          "patch_block_sha256": "2c7e59de4ec98d046b3ff75c1087d427992987e09fef947c6952650671071ac2",
+          "added_headings": [
+            "# November 5, 2026 \u2014 Five TOE cross-sector execution fronts: exact symmetry filters, flavor selection, thresholds, causal measures, and energy-preserving information dynamics",
+            "## Reproducible files",
+            "## Front 1 \u2014 Proton Z9 survives added scalar charges, but scalar-only axion quality is insufficient",
+            "## Front 2 \u2014 What an actual predictive flavor symmetry has to do",
+            "## Front 3 \u2014 Sharp vectorlike thresholds plus scalar quartic stability and exact proton veto",
+            "## Front 4 \u2014 Why the causal-action path-sum measure matters: exact multiplicities",
+            "## Front 5 \u2014 Remove the externally scheduled SWAP operations, enforce energy conservation and Gauss law",
+            "## Combined scientific verdict and next independent falsifiers"
+          ],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": [
+            "**Not a complete UV consistency proof.** The scalar quartics have NOT been RG-evolved; top/neutrino/vectorlike Yukawa beta functions and their feedback in gauge running are omitted, as are broken-phase one-loop finite matching, scalar masses, vacuum tunneling, flavor-changing currents, proton-decay Wilson coefficients, baryogenesis and experimental exclusions. Treat every scale and initial coupling as explicitly chosen, not derived or precision-fitted."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "analysis/HANDOFF_CLAUDE_TO_CHAT_20261106.md",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 11,
+          "removed_lines": 0,
+          "patch_block_sha256": "2a2e2ee041de8850f1585069c38b78a6c0b595ecd50c62e7c3e1fc62c80feb59",
+          "added_headings": [
+            "# Handoff, Claude track \u2192 Chat track, 2026-11-06"
+          ],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": [
+            "4. **Your N_e^c as that dark matter fails, if produced by freeze-in.** It gets its Majorana mass from S (X = \u221218), the right structure. But keeping the Z\u2032 from thermalising N_e^c needs g_X < 10\u207b\u00b9\u00b2. That makes the Z\u2032 light (10 eV to keV) and electron-coupled at about 10\u207b\u00b9\u00b9 (X(L_e) = \u22129), far above stellar-cooling limits (roughly 10\u207b\u00b9\u2074 to 10\u207b\u00b9\u2075, from memory). A thermal relic diluted afterwards was not checked."
+          ]
+        },
+        {
+          "range": "030_to6bb",
+          "added_lines": 6,
+          "removed_lines": 0,
+          "patch_block_sha256": "18f76f5ee1bd5510a5496d4f4be2a6ce4270751bd08f4daef602f94b65e53894",
+          "added_headings": [
+            "## Update (same day): the coupled sterile-neutrino corridor"
+          ],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS12616_12620_FIVE_ITEMS.md",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 77,
+          "removed_lines": 0,
+          "patch_block_sha256": "cb2b9930f67ef44e275cde25b978a07c5b138e6257f1da9debaf5c0918e2cff9",
+          "added_headings": [
+            "# Passes 12616\u201312620: complete multiplets, brane terms, E/N, brane instantons, posterior predictive",
+            "## 12616: trinification gives complete multiplets",
+            "## 12617: the orbifold at two loops, with brane terms",
+            "## 12618: E/N separates the embeddings",
+            "## 12619: brane instantons, an argument only",
+            "## 12620: posterior-predictive cross-validation, and a retraction",
+            "## Parallel work",
+            "## Sources"
+          ],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": [
+            "**Not a theory of everything.** One retraction (12620), one new candidate (12616).",
+            "Pass 12615 estimated the needed suppression as K e^(\u2212S) \u2272 10\u207b\u2077\u2077 and guessed K ~ 10\u207b\u2074\u2078 from Yukawa closure. **That guess ignored B+L.** In the SM the electroweak \u03b8 is unphysical, because the anomalous B+L rotates it away. A single SU(2) instanton's 't Hooft vertex, QQQL per generation, cannot close into a vacuum diagram without a further source of B+L violation, such as the seesaw's lepton-number violation, which adds suppression by small Majorana-related factors. So electroweak brane instantons ",
+            "## 12620: posterior-predictive cross-validation, and a retraction",
+            "**Retraction.** Pass 12597 said fading beats CPL by 7.4 to 22.6 in \u03c7\u00b2. That compared best-fit points. CPL trained without SN has a broad posterior whose better draws predict SN well (16th percentile \u03c7\u00b2 1631.1), so the posterior predictive is a **tie**: 0.56 in elpd, well within the noise of 24 draws. Both evolving models beat \u039bCDM out of sample by about 5.5 to 6 in elpd with the Fisher posterior. Fading's lead falls to 1.3 with its c, c\u2032 block widened, and in that variant 10 of 24 BAO draws fail",
+            "arXiv:2511.21830, 1705.05370, hep-ph/9902423, hep-ph/0103125, 1307.3536. Trinification decomposition: standard; not re-read."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS12621_OUTSIDE_LINKS.md",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 52,
+          "removed_lines": 0,
+          "patch_block_sha256": "4dfc4ef7e83d47ca6d4534431f921d384926eaffbb0f4bd84952a304adad2068",
+          "added_headings": [
+            "# Pass 12621: three cross-sector links from the axion-unification candidates",
+            "## 1. The trinification axion against DMRadio-m\u00b3",
+            "## 2. The PQ quarks do not stabilise the Higgs on their own",
+            "## 3. Evolving dark energy removes DESI's upward pull on n_s",
+            "## Sources"
+          ],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS12622_DESY5_PPD.md",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 43,
+          "removed_lines": 0,
+          "patch_block_sha256": "821f295b1683b9916f33705b3ba41bc8f1331f49ffdc8e8c1abe36b3f36281d0",
+          "added_headings": [
+            "# Pass 12622: on DES-SN5YR, evolving dark energy again beats \u039bCDM out of sample, but the leading model changes",
+            "## Reading",
+            "## Failed draws (disclosed)",
+            "## Limits"
+          ],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS12623_NS_FISHER.md",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 35,
+          "removed_lines": 0,
+          "patch_block_sha256": "169495f93c892c701aea90d0db33947ee0e7c7ba2e4b204aff44fe29556727da",
+          "added_headings": [
+            "# Pass 12623: DESI's pull on n_s is 1.7\u03c3 under \u039bCDM and 0.1\u03c3 when w crosses \u22121",
+            "## Addendum (2026-11-06): SPT-3G D1 read, prior-art note corrected; external check"
+          ],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS12624_WHY_THREE_HEAVY_AXION.md",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 71,
+          "removed_lines": 0,
+          "patch_block_sha256": "fafafba203b541675988dcfa0d3f0060b2482acada9b3480697855b5fc6b538e",
+          "added_headings": [
+            "# Pass 12624: unification does not select three copies; heavy brane-instanton axion; an inflation prior turns into a c\u2032 band",
+            "## 1. Why three vectorlike copies? Unification does not say",
+            "## 2. Heavy axion from brane SU(3) instantons (orbifold variant)",
+            "## 3. Joint target: inflation prior \u2192 band on c\u2032",
+            "## 4. Cross-check of Chat's 6e0f24d33",
+            "## Limits",
+            "## Addendum (2026-11-06): \u00a73 over-read, corrected by a Fisher calculation"
+          ],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": [
+            "On the SM brane, small instantons add K e^(\u22122\u03c0 \u03b1_b\u207b\u00b9) R\u207b\u2074 cos(a/f \u2212 \u03b8_b). I take K \u2248 \u220f y_q/(4\u03c0) \u2248 2\u00d710\u207b\u00b2\u2077 (rough high-scale Yukawas, from memory; uncertain by several orders), with 1/R = 5\u00d710\u00b9\u2075 and f = 10\u00b9\u00b9 GeV.",
+            "| 10 | 2\u00d710\u00b9\u00b3 | 244 eV | n/a (not computed) |"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS12625_SIGN_FORECAST_AXION.md",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 92,
+          "removed_lines": 0,
+          "patch_block_sha256": "a205b96773bce6419f216cdd5268ef7bac7e49da23065db296fa67cc93dae570",
+          "added_headings": [
+            "# Pass 12625: BAO cannot see the sign of the fading coupling, S8 can; DR3 BAO will not pick a dark-energy model; a fading coupling cannot live on a PQ-axion dark matter",
+            "## 1. Which sign of c? Laplace weights of the two optima",
+            "## 2. BAO is blind to the sign; S8 is not",
+            "## 3. Frozen DR3 BAO predictions and what DR3 can decide",
+            "## 4. Outside idea: a fading coupling cannot sit on PQ-axion dark matter",
+            "## 5. Neutrino link (cross-boundary)",
+            "## 6. SPT-3G D1 external check",
+            "## Sources",
+            "## Addendum: real DES Y3 shear at fixed background (`sign_des.py`)"
+          ],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": [
+            "- The clock bound is an order-of-magnitude figure from memory.",
+            "Chat's Z9 seesaw (2930cbe03) maps onto every non-singular light-neutrino matrix. So it allows any \u03a3m_\u03bd \u2265 0.0588 eV for normal ordering (\u2265 0.099 eV inverted, using NuFIT-like splittings from memory); the rank-2 ansatz fixes 0.0588 eV. The fading fit gain grows with \u03a3m_\u03bd (Passes 12558\u201312592), so fading is what makes the generic seesaw's larger masses compatible with DESI. That is compatibility, not a prediction."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS12626_SCORECARD_DM_CRITERIA.md",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 88,
+          "removed_lines": 0,
+          "patch_block_sha256": "289873b6be1d3033ffa9049619f39649d302b81dc91dfb8b7e20e2c96d1f5f90",
+          "added_headings": [
+            "# Pass 12626: CPL leads out of sample on DES-SN5YR once draws stay in the priors; a coupled dark matter must be Higgs-sequestered and light-vev, like a sterile neutrino; its decay line would drift with source redshift, and the sign of the drift is the sign of c",
+            "## 1. Prior-truncated posterior predictive (corrects Pass 12622)",
+            "## 2. Scorecard (`scorecard.py`, refresh after every run)",
+            "## 3. What a coupled dark matter must satisfy",
+            "## 4. Seesaw consequence: active neutrinos drift by only percent",
+            "## 5. Outside idea: the decay line's rest energy drifts with source redshift",
+            "## Sources"
+          ],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/PASS12628_SIGN_OF_C_LINKS.md",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 81,
+          "removed_lines": 0,
+          "patch_block_sha256": "1494543a5bd79ffa52edb62001fa6b378b43d0a3ebb5a49c3c57c912f57f0dc3",
+          "added_headings": [
+            "# Pass 12628: the sign of the fading coupling decides phantom crossing, line drift and shear together; a sterile-neutrino coupled dark matter fits only near 10 keV; Chat's gauged Z9 sector cannot host it",
+            "## 1. Sign of c \u21d4 phantom crossing (`weff_turnaround.py`)",
+            "## 2. Minimal sterile-neutrino coupled dark matter (`sterile_window.py`)",
+            "## 3. Chat's flavour-gauged Z9 sector cannot be this dark matter",
+            "## 4. Frozen statements (`prereg_statements.json`, sha256 d2624061)",
+            "## Prior art and sources",
+            "## Addendum (same day): literature check, two corrections, and a geometry no-go for the sign"
+          ],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": [
+            "Setup: a real singlet S with (y/2) S N N, so M_N = y v_S/\u221a2, and freeze-in from S \u2192 NN with S thermal (formula from Hall et al. 2010, recalled from memory). \u03a9h\u00b2 = 0.12 fixes y. The Higgs portal must lie between a rough thermalisation floor and the clock cap of Pass 12626:",
+            "- **The corridor is near 10 keV.** Lyman-\u03b1 bounds on decay-produced sterile neutrinos (roughly M \u2273 10\u201315 keV, recalled from memory) push from below, and the clock cap pushes from above. The thermalisation criterion is good to a factor of a few, so the edges move by that much.",
+            "- That makes the Z\u2032 light (10 eV to keV) and electron-coupled at 10\u207b\u00b9\u00b9, far above stellar-cooling limits (roughly 10\u207b\u00b9\u2074 to 10\u207b\u00b9\u2075, recalled from memory).",
+            "**Correction (Lyman-\u03b1).** \u00a72's \"Lyman-\u03b1 pushes from below at roughly 10\u201315 keV\" was recalled from memory and is probably too strict for scalar-decay production. Merle and Schneider (arXiv:1409.6311) find that decay of heavy singlets is the production mechanism most compatible with Lyman-\u03b1, with thresholds of a few keV (slide-level numbers). The 7 keV corridor is therefore less squeezed than stated. The upper edge (clocks) stands. A proper check needs the actual momentum distribution from S decay"
+          ]
+        },
+        {
+          "range": "333_to030",
+          "added_lines": 24,
+          "removed_lines": 0,
+          "patch_block_sha256": "f04b9d58def825f63fe8e8530d2c3e7d0fb4a79553be8a68eb69b0d7b3efe19a",
+          "added_headings": [
+            "## Addendum 2: correcting the correction (Lyman-\u03b1 edge computed, `sterile_lya.py`)"
+          ],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": [
+            "- So **M_N > 15.2 (16.8) keV**. The thermal bounds are from memory (Ir\u0161i\u010d et al. 2017 and later), not re-read."
+          ]
+        },
+        {
+          "range": "030_to6bb",
+          "added_lines": 6,
+          "removed_lines": 0,
+          "patch_block_sha256": "1a3ea0f36c6bfc01f8958623796efe78a86a2a40bec18195f3c9ef995ec7c6e9",
+          "added_headings": [
+            "## Addendum 3: X-ray limits, momentum shape, frozen S5"
+          ],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": [
+            "- **X-ray.** NuSTAR blank-sky limits are leading at 15\u201318 keV (arXiv:2207.04572; also 1908.09037, 1901.01262, 1609.00667). In freeze-in from S decays the mixing angle is free, so these only cap the line's visibility, at roughly sin\u00b22\u03b8 \u2272 10\u207b\u00b9\u00b2\u201310\u207b\u00b9\u00b3 (from memory). The dark-matter N then contributes \u2272 10\u207b\u2079 eV to active-neutrino masses: it decouples from the seesaw, and Pass 12626 \u00a74's neutrino-drift link does not apply to it. The other two N's must make the observed masses.",
+            "- **Momentum shape (`sterile_lya_rms.py`).** For f(q) \u221d q^(\u22121/2) e^(\u2212q) (decay freeze-in shape, recalled from memory), matching the rms velocity instead of the mean momentum moves the Lyman-\u03b1 edge by +3.7%: **15.8 (17.4) keV** for a 5.3 (5.7) keV thermal bound. The corridor stays at 16\u201320 keV, with 16 keV marginal under the stricter bound."
+          ]
+        },
+        {
+          "range": "6bb_to_bfbb",
+          "added_lines": 16,
+          "removed_lines": 0,
+          "patch_block_sha256": "5103707b0ce5586d7db42d70730e12c3210b40c184f39bcc64f9702a71ac81bf",
+          "added_headings": [
+            "## Addendum 4: S \u2192 hh, the corridor shrinks; XRISM stacking and a drifting line"
+          ],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": [
+            "**XRISM stacking (arXiv:2510.24560).** No unidentified line is found in 2.5\u201315 keV (rest frame), so there are no centroid data. The stack assumes a fixed rest energy. A coupled dark matter's line drifts by up to about 0.27% across z \u2272 0.1, about 25 eV at 9 keV, against a resolution of about 5 eV, so it would be smeared in a rest-frame stack. A search for this model would need a redshift-dependent template: E_rest(z) = E0 (1 + \u03ba z) with |\u03ba| \u2248 0.015\u20130.02, sign opposite to c, the slope at low z fro"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_20261105_abelian_seesaw_pq_operator_theorem.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 94,
+          "removed_lines": 0,
+          "patch_block_sha256": "3372e468e752f4c8a3a88774c2fe4991a3dba8010bdf575b120a30a3df0f8387",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def theorem():",
+            "def exhaustive_mod():",
+            "def continuous():",
+            "def high_dim_scalar_single_U1():",
+            "def main():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_20261105_autonomous_gauss_energy_emission.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 112,
+          "removed_lines": 0,
+          "patch_block_sha256": "62d224288ef660811a8b19b6ec9107e67d65c32a996bb55d1f7994f4e0af1cd1",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def Hmat(g):",
+            "def pure_entropy(rho):",
+            "def evolve(g,kind):",
+            "def main():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_20261105_causal_bdg_history_interference.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 121,
+          "removed_lines": 0,
+          "patch_block_sha256": "5b7d4e180e53071ea7cd7d2f207c57043e5267c7400f70a416940db2ad5d57e8",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def closure(mask):",
+            "def features(past):",
+            "def main():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_20261105_causal_poset_measure_correction.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 88,
+          "removed_lines": 0,
+          "patch_block_sha256": "863251da604d81c63857c239b914695965d662970a5ddea62e7b2cf0005dd427",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def covers_count(p):",
+            "def main():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_20261105_extra_pq_proton_color_scan.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 65,
+          "removed_lines": 0,
+          "patch_block_sha256": "33e67a385553eb00e5995233c8d493ba16d11b7471461db8fb93f8e395ae6284",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def min_A_monomial(n):",
+            "def main():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_20261105_flavor_inverse_mass_map_no_prediction.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 86,
+          "removed_lines": 0,
+          "patch_block_sha256": "3645851bdffac04565280f9be5a920ffc1d283f348feaf7c32a564177a1aecfc",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def mixing(t12,t23,t13,delta,alpha1,alpha2):",
+            "def reconstruct(masses,angles,phases,md):",
+            "def main():"
+          ],
+          "memory_or_scope_flags": [
+            "    # NuFIT-like approximate inputs are SUPPLIED, not computed."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_20261105_gauss_dressed_page_information.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 128,
+          "removed_lines": 0,
+          "patch_block_sha256": "a456b44b2d2492d0eeaa4eb644b81cdb9292db05869631ae2efb3d5d79685050",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def physical_state_from_link(link):",
+            "def logical_basis():",
+            "def entropy_rad(v):",
+            "def release(v,j):",
+            "def pauli(k,axis):",
+            "def remaining_scramble(v,left,jtime):",
+            "def main():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_20261105_joint_flavor_u1_uv_coupling_cost.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 88,
+          "removed_lines": 0,
+          "patch_block_sha256": "c065332998759b905999160a9e477e8f89a120093278dbcebc04a3e043587a15",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def main():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_20261105_joint_flavor_u1_z9_seesaw_scalar_quality.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 184,
+          "removed_lines": 0,
+          "patch_block_sha256": "bb87553a16b3bf03f5d04e878561f0c8ed8e84490926eb463ecf9e24c8e1f65e",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def spec():",
+            "def anomalies(fields):",
+            "def sm_qqql(fields):",
+            "def mass_matrices():",
+            "def scalar_quality():",
+            "def gen_universal_nogo():",
+            "def main():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_20261105_mu_tau_reflection_flavor_selector.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 83,
+          "removed_lines": 0,
+          "patch_block_sha256": "ad360fe3c27e1e7b651fd642f9502740cd9092356d53f4d59784dff6748af9b3",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def get_m(a,b,c,d):",
+            "def observables(M):",
+            "def main():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_20261105_new_front1_abelian_matrix.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 115,
+          "removed_lines": 0,
+          "patch_block_sha256": "ad42a62ae5567676d64fafd70b2aa564656765af3cda5c83b4ae24f79ce0e57a",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def c(x): return np.array([float(x[0]),float(x[1])])",
+            "def Bmat(weyl,scalars):",
+            "def spectrum():",
+            "def run_segment(K,B,l):",
+            "def qphys(K,q):return float(q@np.linalg.solve(K,q))",
+            "def main():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_20261105_new_front2_causal_manifold_guard.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 134,
+          "removed_lines": 0,
+          "patch_block_sha256": "dd4c3c9e1433c2fa8c6013c10c933aec53681646edd705057f05726d199f1338",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def interior_intervals(past,seed,attempts=4500):",
+            "def matrix_minkowski(n,seed):",
+            "def summarize(past,seed):",
+            "def main():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_20261105_new_front3_z2_gauge_pairs.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 127,
+          "removed_lines": 0,
+          "patch_block_sha256": "5d0c1b02ca251666d46f68d7cf8ef1b7f7ea15d3cf090e966504b558e571d52e",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def occ(bits,j):return (bits>>j)&1",
+            "def pop(bits):return bits.bit_count()",
+            "def gauss(bits,link,j):",
+            "def states():",
+            "def hamiltonian(t=1.,h=.6,m=.5,with_link=True):",
+            "def main():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_20261105_new_front4_flavor_rank2.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 102,
+          "removed_lines": 0,
+          "patch_block_sha256": "c3adb15dba71daa1e8ec339be8b97f7e999ba47b97def3aaa9d15a6d995f2ec2",
+          "added_headings": [
+            "# NuFIT6.1 2025 without SK atmospheric 3sigma ranges,",
+            "# published November 2025 at https://nu-fit.org/ .",
+            "# Range table v61.tbl-parameters.pdf; delta m3l conventions:",
+            "# NO dm31 positive, IO dm32 negative."
+          ],
+          "added_function_definitions": [
+            "def tm(s13):",
+            "def floorNO():",
+            "def floorIO():",
+            "def monte_carlo(order,n=45000):",
+            "def main():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_20261105_new_front5_gapless_velocity_lock.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 83,
+          "removed_lines": 0,
+          "patch_block_sha256": "0607fb2132e523b974dad78a62e27398d2cf750a00a21e76443dd2418fd0b288",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def model(vA,vB,k):",
+            "def main():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_20261105_new_swingA_z9_proton_rule.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 113,
+          "removed_lines": 0,
+          "patch_block_sha256": "195378e5952c605baed87af2d04ac4ee92a11a6805d3cd6649466abaa6fb69fe",
+          "added_headings": [
+            "# left handed Weyl: SU3 triality in {-1,0,1}, SU2 parity,",
+            "# Y in LH conjugate convention, B integer thirds, Z9=3B mod9."
+          ],
+          "added_function_definitions": [
+            "def properties(mono):",
+            "def necessary_sm_singlet(mono):",
+            "def show(mono):",
+            "def main():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_20261105_new_swingB_page_information.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 71,
+          "removed_lines": 0,
+          "patch_block_sha256": "09feb2e64fe905a9077fbe8feb4621c5d26a0cd98169fae510cc8ff6c94f93d3",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def page_exact(nrad,nBH):",
+            "def entropy_state(v,dr,db):",
+            "def main():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_20261105_new_swingC_de_calibration.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 117,
+          "removed_lines": 0,
+          "patch_block_sha256": "b4696d49affc0165e3524f2201c00319f87e15ea45fa5ec95114d16cca99a881",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def E(z,w0,wa):",
+            "def distances(z,w0,wa):",
+            "def chi2_optimal_common_scale(reference,template,sigma):",
+            "def synthetic():",
+            "def posterior_audit():",
+            "def main():"
+          ],
+          "memory_or_scope_flags": [
+            "      \"source_literature\":[\"DES-Dovekie 2026 updated photometry MNRAS548 2026 stag632\",\"Turyshev PRD113 103540 2026 dark energy SN calibration sensitivity\",\"DESI DR2 papers 2025-2026\",\"repo PASS12616-12620 posterior predictive retraction\"],"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_20261105_three_independent_home_run_guards.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 138,
+          "removed_lines": 0,
+          "patch_block_sha256": "85a01f9c5378b1d53eb7feb6698992c375d0f630c932cfeeeda62e07588f2324",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def vacuum():",
+            "def chsh():",
+            "def leptogenesis():",
+            "def main():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_20261105_threshold_bfb_uv_consistency.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 106,
+          "removed_lines": 0,
+          "patch_block_sha256": "b810aeab0ac981c9e5367fb6439f5ca80111860e0058ac0b2be9cfd44e0f9a56",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def step(y,mu1,mu2,active,two):",
+            "def rhs(t,y):",
+            "def run(mq,two):",
+            "def bfb(lamT,lamS,lamTS):",
+            "def main():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_20261105_two_loop_gauge_matrix_nonabelian.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 159,
+          "removed_lines": 0,
+          "patch_block_sha256": "a951762dad5f804ecbe7e545587634e3d69f01fd8bb60140fd5d8e8c9dbb130e",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def inventory(vectorlike=True):",
+            "def beta_one_mat(rows):",
+            "def two_loop_parts(rows,Ki,g2sq,g3sq):",
+            "def delta_b(vectorlike):",
+            "def check_SM_raw_Y():",
+            "def fb(K):",
+            "def integrate(M=np.eye(2),two=True):",
+            "def rhs(t,y):",
+            "def main():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/axion_de_route.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 91,
+          "removed_lines": 0,
+          "patch_block_sha256": "e1bd90be16b16a26b4c664e2fd4754b3e1b6e8e099c59b87e12c496a59a13955",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/axion_de_route.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 46,
+          "removed_lines": 0,
+          "patch_block_sha256": "1ab124614eaaf1a4d3b6aaed6c3ce83a046a2bd381848150af7f4196f61bb3d4",
+          "added_headings": [
+            "# f_a route leaks into the Higgs through the portal lambda_hs |H|^2 |sigma|^2 with <sigma> = f_a / sqrt(2) (up to N_DW):",
+            "#   V = mu^2 H^2 + lambda H^4 with mu^2 containing lambda_hs f_a(phi)^2 / 2; v^2 = -mu^2/lambda, m_h^2 = 2 lambda v^2, b = -d ln f_a/dphi  =>  d ln v / dphi = lambda_hs f_a^2 b / m_h^2",
+            "#   d ln m_e / dphi = d ln v / dphi; the clock bound on mu then caps lambda_hs."
+          ],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": [
+            "  atomic clocks |d ln mu/dt| < 5e-17 /yr for mu = m_p/m_e (order of magnitude from memory of Yb+/Cs comparisons; not re-read)."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/class_holdout_desy5_bao_neutral.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 410,
+          "removed_lines": 0,
+          "patch_block_sha256": "cf6ea448c15edec7b50d8b310048ff3484bb77591ec19c301166ceb845ef366c",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/class_holdout_desy5_sn_neutral.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 399,
+          "removed_lines": 0,
+          "patch_block_sha256": "70fe6811cd781a4afe148e0f7449d455d55ed89461690ed187886eaca42f6060",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/class_ppd.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 100,
+          "removed_lines": 0,
+          "patch_block_sha256": "dee108069b62f4626c66393bf752b86508c9eb2ca9f529bec10008b6bad2824d",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def in_prior(q):",
+            "def train_resid(p, k):",
+            "def held(p, k):"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/class_ppd_desy5_bao.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 105,
+          "removed_lines": 0,
+          "patch_block_sha256": "64e859f712a7afa4dfc7ec0f6123bed2efb53216198c91b123ebe3b430c09084",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/class_ppd_desy5_bao_trunc.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 39,
+          "removed_lines": 0,
+          "patch_block_sha256": "3e465273a6c8dc677d48c3a017f555dda7b377ae43552ca6590a014dca4677ab",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/class_ppd_desy5_sn.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 105,
+          "removed_lines": 0,
+          "patch_block_sha256": "3f0b2a51635730f11e7d0284ae93342b302c3d6101cbaa867e555d49d52b3f61",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/class_ppd_desy5_sn_trunc.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 37,
+          "removed_lines": 0,
+          "patch_block_sha256": "7034c1ec1b29f22d3f77a4a02ab7ae0e08a88b1b8363359916cdc70572923655",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/class_ppd_dovekie_bao.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 105,
+          "removed_lines": 0,
+          "patch_block_sha256": "65ca15b94ef8890ea2f5a1e22934b41c2c5385998b66ebe1e1511eb1eea50837",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/class_ppd_dovekie_bao_trunc.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 39,
+          "removed_lines": 0,
+          "patch_block_sha256": "abe8f31aa134907b98e38fd15108b2911f241657c147c497b9b711ee168be902",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/class_ppd_dovekie_sn.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 105,
+          "removed_lines": 0,
+          "patch_block_sha256": "3d4c958d415b9662ba97fe7b8d276c61b97fcac1a212b00d64991bac5df90167",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/class_ppd_dovekie_sn_trunc.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 37,
+          "removed_lines": 0,
+          "patch_block_sha256": "27133b16eb29d27cbfa021aea59e303470eec6dadfb477a67220e769c0cb2263",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/des_joint_cpl.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 22,
+          "removed_lines": 0,
+          "patch_block_sha256": "2f0d18fa8450ace4db271ec79029d452abb463bb112c4cab1054a2cd9581bcdb",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/dr3_forecast.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 34,
+          "removed_lines": 0,
+          "patch_block_sha256": "a8c9e67cf1bcf244156a5bb1a135ec1e2fe15239f7f1bb4578315870f8361702",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/dr3_forecast.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 45,
+          "removed_lines": 0,
+          "patch_block_sha256": "06e426138d99e054ae7f849e0ebf043e1d1451238a8fb99d2e71746a2ca6e261",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def vec(f):",
+            "def cov(scale):"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/dr3_prereg.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 328,
+          "removed_lines": 0,
+          "patch_block_sha256": "2ec1b70b23434f4b1c4d1b6aebdef5831f1e4bc76774fa0371891c088cf7a7b2",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/dr3_prereg.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 37,
+          "removed_lines": 0,
+          "patch_block_sha256": "0b24aaa8f7fe5c28381e9eafa44f74a5750679040571422e05c77a656db3aea7",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/dr3_prereg.sha256",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 1,
+          "removed_lines": 0,
+          "patch_block_sha256": "9f2b76229bd955d6bf06e4727595136773c94e796a098218d091834f98906119",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/en_discriminator.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 50,
+          "removed_lines": 0,
+          "patch_block_sha256": "13460d8c8f18e586c27f59716ecc979f709c2be4dc37e54374e3bf7c13f75e70",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/en_discriminator.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 38,
+          "removed_lines": 0,
+          "patch_block_sha256": "370986953ea04c34680ed16808e1b22f14d7794ae43c7059b3fbf8f970019907",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def EN(reps, q):"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/euclid_sign.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 8,
+          "removed_lines": 0,
+          "patch_block_sha256": "af23e7dc76623cadd068374268ee8049398152723f35bfcd9f931b70980eed81",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/euclid_sign.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 22,
+          "removed_lines": 0,
+          "patch_block_sha256": "ca8c9d3657c81af915e35adfcb74426edd186db7e9297d9a7672075fd1d67008",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/growth_prereg.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 136,
+          "removed_lines": 0,
+          "patch_block_sha256": "d7da75d5df0bce843ff01b22870d504eb36eed1cf65894ea8d00df5ce17908b9",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/growth_prereg.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 15,
+          "removed_lines": 0,
+          "patch_block_sha256": "cd02ef784e5d119d5f9dec2112fca7aedd0678f65156ed7349e6bb1ac0dbed94",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/growth_prereg.sha256",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 1,
+          "removed_lines": 0,
+          "patch_block_sha256": "543f3cd260c39b46cb004b527e2b4b6f26fdb723d436ca0275c66cb039438b1e",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/items_234.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 85,
+          "removed_lines": 0,
+          "patch_block_sha256": "f966c6f38ce67febc559855d3838fd90798b32def90315ef250a24ef3656e003",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": [
+            "  \"note\": \"SMASH values from memory, not re-read\""
+          ]
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/items_234.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 43,
+          "removed_lines": 0,
+          "patch_block_sha256": "5e1c812cf898da48c6484cf5deacb25fca95fa7cfbdcc71b12080a284fe7738e",
+          "added_headings": [
+            "# item 3",
+            "# item 4: E6 27 content under SM: Q(3,2,1/6) u^c d^c L e^c nu^c + D(3,1,-1/3) Dbar + Hu Hd + singlet: as vectorlike pairs",
+            "# item 2"
+          ],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": [
+            "Item 3, the heavy-axion orbifold variant.  Brane SU(3) small instantons add V = K e^(-S) (1/R)^4 cos(N a/f - theta_brane), S = 8 pi^2/g_b^2 = 2 pi alpha_b^-1, with alpha_b the brane-localised coupling (apparent unification wants brane terms small, alpha_b^-1 well below alpha_U^-1 ~ 38).  K: the 't Hooft vertex of six quark flavours closed by Yukawa loops, K ~ prod_q y_q/(4 pi), with high-scale Yukawas (rough values, from memory): an estimate to a few orders of magnitude.",
+            "Item 2, joint target for Model A with Higgs-portal inflation: n_s from my fits under fading and CPL; SMASH-type inflation predictions n_s ~ 0.965-0.968 and r ~ 0.004 (from memory of Ballesteros et al 2016, not re-read); w from the CPL fit.",
+            "out[\"joint_target\"] = dict(n_s_fading=ns[\"class_fit_dovekie.json\"][\"free_neg\"], n_s_CPL=ns[\"class_fit_dovekie.json\"][\"CPL\"], n_s_LCDM=ns[\"class_fit_dovekie.json\"][\"LCDM\"], n_s_SMASH=[0.965, 0.968], r_SMASH=0.004, note=\"SMASH values from memory, not re-read\")"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/items_more.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 109,
+          "removed_lines": 0,
+          "patch_block_sha256": "77c4d925cacd1e9a5da3860848997df301b263d579ee2761bad1f4c935acb297",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/items_more.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 69,
+          "removed_lines": 0,
+          "patch_block_sha256": "9c0dff84c1b069f0d59c65bfa5854485c48c5210375650680e3820bd0eebccbe",
+          "added_headings": [
+            "# (b)",
+            "# (c)"
+          ],
+          "added_function_definitions": [
+            "def F(x):"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/line_drift.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 150,
+          "removed_lines": 0,
+          "patch_block_sha256": "a5b22821d0bbab1249f93a073ef5b6d3e62f863190923ca0abd4004cf480e3b2",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/line_drift.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 20,
+          "removed_lines": 0,
+          "patch_block_sha256": "19138173ac231f1870e8e0234a42a17e8bee0d930612c051a7bfc7cf773a2daf",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/mcmc_holdout.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 89,
+          "removed_lines": 0,
+          "patch_block_sha256": "b20d0fc322b245c1feb8c67306da460007afa9d8b66fd5e5997356e4ab4ee46e",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def logp(x):"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/modes_laplace.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 44,
+          "removed_lines": 0,
+          "patch_block_sha256": "988c59f41e7f9d98a9b34783ed8186ffe8b51a212025f2835be197c0c3e9d297",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/modes_laplace.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 57,
+          "removed_lines": 0,
+          "patch_block_sha256": "2b808e8dafbd7e7c1dfef0dfc039b088b50fbf48ddd7044adb64534d35526fc9",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def res(p):"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/ns_by_model.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 48,
+          "removed_lines": 0,
+          "patch_block_sha256": "5fef5056cbd724118f4591a5e4391acc9ae8fc7d1f203d39388791f1df7db788",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/ns_by_model.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 14,
+          "removed_lines": 0,
+          "patch_block_sha256": "3fc8cf0c079eb9efc41ca483cd64c72d4e95ddd9b8b8b57b9c2430ec0735d34e",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/ns_cp_fisher.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 27,
+          "removed_lines": 0,
+          "patch_block_sha256": "8fe1940a8ad050111464466d2a2e32809d9cce6fea498ca0c90eebf1087846a0",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/ns_cp_fisher.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 53,
+          "removed_lines": 0,
+          "patch_block_sha256": "b2fc4b15226936f096132cd759684d16cb510b893f55dd4d013aa6d738ce82c1",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def res(p):"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/ns_fisher.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 60,
+          "removed_lines": 0,
+          "patch_block_sha256": "8a4b50246b8d1a86c130b5e60ef51f89935f1f7096eb275b3e6eb1de06fbfef0",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/ns_fisher.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 55,
+          "removed_lines": 0,
+          "patch_block_sha256": "b56216e0f52715d13a0d2769aa587919b6c8d91eeb4c19f4c3f0df90ae871828",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def tr(p):"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/orbifold_twoloop.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 72,
+          "removed_lines": 0,
+          "patch_block_sha256": "d184e334993baeeef709b7db11d82e741927f23cb22ec21d55476e486be69c5a",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/orbifold_twoloop.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 79,
+          "removed_lines": 0,
+          "patch_block_sha256": "c2da195d191c43865cec08a63de8394ca249ae7e88cafac92b998af02e988a8d",
+          "added_headings": [
+            "# sensitivity at Lambda R = 3",
+            "# random non-universal brane terms of size s"
+          ],
+          "added_function_definitions": [
+            "def ainv(lnMX, invR, LR, delta):",
+            "def solve(LR, delta, x0):"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/pq_complete_multiplets.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 329,
+          "removed_lines": 0,
+          "patch_block_sha256": "f030e0e4f01fd9b63280040228edb9b09c314e52fa9f44707f5980c1fbf112eb",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/pq_complete_multiplets.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 58,
+          "removed_lines": 0,
+          "patch_block_sha256": "2d5ea9fdb3471e0b6e688b8bd3de40f00c0eb47713d949361c3c95822df424d3",
+          "added_headings": [
+            "# flipped SU(5): only alpha2 = alpha3, scan threshold"
+          ],
+          "added_function_definitions": [
+            "def f(lnMU):"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/pq_higgs_selfstab.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 44,
+          "removed_lines": 0,
+          "patch_block_sha256": "b79c59021982c0c25173a882ecf0dfd9132fd71f42436aed27e8a5d1e7d5db8f",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/pq_higgs_selfstab.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 55,
+          "removed_lines": 0,
+          "patch_block_sha256": "f80f422fcce46d361e54032b5f38803d2b380f0bdd4ae1f94c99e223be14ca9b",
+          "added_headings": [
+            "# baseline shift: make lambda_SM cross zero at 2.7e10"
+          ],
+          "added_function_definitions": [
+            "def run(dB3, dB2, dB1, MX, mu_max=2.4e18):",
+            "def r(t, y):",
+            "def db(reps):"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/prereg_statements.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 24,
+          "removed_lines": 0,
+          "patch_block_sha256": "b5cf76a36a16f5e33ed3bcbcb1d97f5a01e46faab3e2903327490559b741c25f",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/prereg_statements.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 18,
+          "removed_lines": 0,
+          "patch_block_sha256": "ca1b07c8370e9ac979983667fa3a1b99dafaddb13ddf6079f604c873fae0c45c",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/prereg_statements.sha256",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 1,
+          "removed_lines": 0,
+          "patch_block_sha256": "65221ecc6142cbea6fb6ede2fb6ef3db026a58d3ea70aacfce478f0ae3c9f83d",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/scorecard.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 47,
+          "removed_lines": 0,
+          "patch_block_sha256": "132991cd0c29558479e0440ce857c132004bc42c7211650fd42075954c6b3d9a",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/scorecard.md",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 7,
+          "removed_lines": 0,
+          "patch_block_sha256": "6d1657504b84d397bac32a4c6a835bb3cf5b313601930ecd0dceb7b8ed3cc582",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/scorecard.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 64,
+          "removed_lines": 0,
+          "patch_block_sha256": "4ce7ff86bf368f68666833658314c0eb2e3403f829ff77790a25ef2ef05745af",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def ppd(ds, hold, m):"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/shear_ppd.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 88,
+          "removed_lines": 0,
+          "patch_block_sha256": "3df7a69579049b53404217d51748d2564542d1e40253ca648814190c69992e31",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def ok(q):",
+            "def tr(p):"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/sign_des.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 78,
+          "removed_lines": 0,
+          "patch_block_sha256": "d492ec89bbfaa3cca868e265e5e3e2e4bf896fc8106aae514fc90f6ca03f4a49",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/sign_des.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 27,
+          "removed_lines": 0,
+          "patch_block_sha256": "e3076a74cf4e8e8384e22f738cbd5d6321a3226a50df028526abef3ee0584154",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/sign_growth.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 138,
+          "removed_lines": 0,
+          "patch_block_sha256": "501f323669b0e44ef4e43fbfc2418896b3630042a9a81f0118d99ff8b5b78c3d",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/sign_growth.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 25,
+          "removed_lines": 0,
+          "patch_block_sha256": "77e28e07fcccefe9feab8a4c59b14c3f9d8a4fab248aadff86cd29d442f55c6f",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/sterile_window.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 160,
+          "removed_lines": 0,
+          "patch_block_sha256": "a403311907c9c1802cc0fc725ff81f5faae0b45a045387ed34df0925e5b98698",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/sterile_window.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 45,
+          "removed_lines": 0,
+          "patch_block_sha256": "b6d5e88410a10aaebd553012cb543ae9e41bec707e9719175424d9d77e0c5fae",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def omega(y, M, mS):"
+          ],
+          "memory_or_scope_flags": [
+            "Relic: freeze-in from S -> N N decays with S in equilibrium (Hall, Jedamzik, March-Russell, West 2010, eq. for decays, from memory):"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/trin_gates.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 242,
+          "removed_lines": 0,
+          "patch_block_sha256": "0f92ad6b7d741ceb7f81411bbe8ff916a5ef5e0638987e93d06d179fc2cbb5c6",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/trin_gates.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 50,
+          "removed_lines": 0,
+          "patch_block_sha256": "ae70e726d67a0f2418f586f64ca1cc75e665fcf40c5b87c903e0156da0584c23",
+          "added_headings": [
+            "# charges",
+            "# haloscopes"
+          ],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/trin_window.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 58,
+          "removed_lines": 0,
+          "patch_block_sha256": "c738844df2c1a1436b27f6c9ffeedfb5156f023f04853cac9f7974cbdf4992d2",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/trin_window.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 13,
+          "removed_lines": 0,
+          "patch_block_sha256": "727c7998e54980815c49de9fefa0b32c41ad3297e0d70c86abc854e8e79fc7d6",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": [
+            "DMRadio-m3 (arXiv:2204.13781): designed for 20-800 neV, DFSZ sensitivity above about 120 neV in a 5-year scan (projection, as summarised by the search tool; not re-read).",
+            "Isocurvature: pre-inflation axions need H_I below roughly 1e-5 theta f (order of magnitude, from memory), reported as a bound on H_I."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/weff_turnaround.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 88,
+          "removed_lines": 0,
+          "patch_block_sha256": "a9eb2e8d4abb0e6d6b384f473a0d8f03bf2b4b70da4887b198800beeb274fd3e",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/weff_turnaround.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 38,
+          "removed_lines": 0,
+          "patch_block_sha256": "46276d71ddffd019e5f8fc3a8604d6064920b159825ada5a683efd3b6140e8e2",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass12616_to_12620_five_items.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 49,
+          "removed_lines": 0,
+          "patch_block_sha256": "635759c3011c6aa34ae1e9a366b1b904196857d324f669edb47c55f8639494f5",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def load(n):",
+            "def main():"
+          ],
+          "memory_or_scope_flags": [
+            "    checks[\"12620: retraction: CPL's point estimate missed SN by 17 while its posterior predictive is within 1.1 of fading\"] = sn[\"cpl_infl1\"][\"chi2_best\"] - sn[\"LCDM_infl1\"][\"chi2_best\"] > 15 and abs(sn[\"cpl_infl1\"][\"elpd\"] - sn[\"free_neg_infl1\"][\"elpd\"]) < 1.1"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass12621_outside_links.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 27,
+          "removed_lines": 0,
+          "patch_block_sha256": "594aca2645b3036d3691315e0faacfeee7049a2a03882877fdefce47c09174de",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def main():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass12622_desy5_ppd.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 33,
+          "removed_lines": 0,
+          "patch_block_sha256": "1cc5c92acf232696ec28679c96303b2d87429fd1bb7fe1f815b60f6a58ef6fcb",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def L(n):"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass12623_ns_fisher.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 24,
+          "removed_lines": 0,
+          "patch_block_sha256": "a05714cdb4c79f2143863b10ff56e2beb8160e82ed56185eb05b7cd1f8e1172e",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass12624_why_three_heavy_axion.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 75,
+          "removed_lines": 0,
+          "patch_block_sha256": "e8ce4c15b4bf87707d2c67067876f5ebb72750e9b5355701099d82c66f59bfc0",
+          "added_headings": [
+            "# n_s along the fading profile -> c' band for an inflation prior n_s in [0.965, 0.968]"
+          ],
+          "added_function_definitions": [
+            "def load(n):",
+            "def tau(MU, ia):",
+            "def cp_at(ns):"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass12625_sign_forecast_axion.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 38,
+          "removed_lines": 0,
+          "patch_block_sha256": "e630293e1df0184c66d73d7304da3d825121a1cf6f11772d2d16d690836e8182",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def L(n):"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass12626_scorecard_dm_criteria.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 49,
+          "removed_lines": 0,
+          "patch_block_sha256": "1f8738ea4beeecd546e4e1909d4976752133186843793a09af437a9b5543cb8b",
+          "added_headings": [
+            "# seesaw drift since recombination: m_nu ~ 1/M ~ exp(+c' dphi)",
+            "# sterile-neutrino route: Higgs-portal cap with a singlet vev v_S (same clock bound and 1 + w = 0.05 as Pass 12625)"
+          ],
+          "added_function_definitions": [
+            "def L(n):"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/w33_pass12628_sign_of_c_links.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 37,
+          "removed_lines": 0,
+          "patch_block_sha256": "7a5aac5a659d6ba9c8d5a3f762128b6e4720337579c7dd1f44012ec882404cd9",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def L(n):"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "data/toe_20261105_abelian_seesaw_pq_operator_no_go.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 596,
+          "removed_lines": 0,
+          "patch_block_sha256": "dbca329825c9e846b636ad677443da5b7e35814c3561d3c89dc0dbb4050dfe3b",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "data/toe_20261105_autonomous_gauss_energy_page_recurrence.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 219,
+          "removed_lines": 0,
+          "patch_block_sha256": "4cd374a4079ea2c94fd89d9cc3aaeb1b5deab59b26c260ed44c8c84f0022e51d",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "data/toe_20261105_causal_bdg_exact_history_interference.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 182,
+          "removed_lines": 0,
+          "patch_block_sha256": "2c8cef64e4c210035470a5f3548ba0be7d8f07f829ef35e0c3eea1573d397b71",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "data/toe_20261105_causal_exact_measure_entropy_bias.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 157,
+          "removed_lines": 0,
+          "patch_block_sha256": "2717532b0552692f159266337e155f454e1d7749bf345dcfdc26b7e69f12ac91",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "data/toe_20261105_extra_pq_proton_color_scalar_scan.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 277,
+          "removed_lines": 0,
+          "patch_block_sha256": "b793f55d0637b3f90ca26cffe4e4ed49ea05eb4a6dc79273df1ca2c2756323ba",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "data/toe_20261105_full_u1matrix_su2_su3_gaugeonly_two_loop.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 140,
+          "removed_lines": 0,
+          "patch_block_sha256": "f57f14f8710b336ed333e40e6cf29059b4715c761248f442f336813c7309bdf9",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "data/toe_20261105_gauss_dressed_evaporation_page_curve.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 96,
+          "removed_lines": 0,
+          "patch_block_sha256": "b9e3d48016748141c234b9585950530b24d033fb9eff89c0528fc92e8e0fd817",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "data/toe_20261105_mu_tau_reflection_predictive_constraint.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 103,
+          "removed_lines": 0,
+          "patch_block_sha256": "7edbaa4affae537dd626a360aac9a324abfbc979cd2a746e5f730753399bc390",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "data/toe_20261105_new_front1_abelian_coupling_matrix.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 125,
+          "removed_lines": 0,
+          "patch_block_sha256": "c15be5ce090f1571cbc74534531a450a06788664d2ef410054bb60e91a8d529b",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "data/toe_20261105_new_front2_causal_matching_no_manifold.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 272,
+          "removed_lines": 0,
+          "patch_block_sha256": "b5d39917cdf8a3fb232acd805ae25323fe4d9f38cdea80906f80b19e1867bae1",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "data/toe_20261105_new_front3_z2_gauss_pairs.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 95,
+          "removed_lines": 0,
+          "patch_block_sha256": "8366a68119c3fac3b4f5108fa9ea3647e83663d8c019e11429d2f6010ab5cd63",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "data/toe_20261105_new_front4_flavor_rank2_selection.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 68,
+          "removed_lines": 0,
+          "patch_block_sha256": "2b63310aba1bf27cf80d408ecfbde7e25e177270c24c2e966bb165917b022d95",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "data/toe_20261105_new_front5_gapless_velocity_locking.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 150,
+          "removed_lines": 0,
+          "patch_block_sha256": "aadf538b17ab091f8b2f3da28594c1908c05495f3b101bf74b8cfee21f5dd09b",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "data/toe_20261105_new_joint_flavor_u1_uv_gauge_cost.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 111,
+          "removed_lines": 0,
+          "patch_block_sha256": "ee4cb78d46fd6e4cf55df6ce5d4acd3ac26a4c6d8a6929a92ddcbd65cc2235c0",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "data/toe_20261105_new_joint_symmetry_z9_seesaw_pq_obstruction.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 181,
+          "removed_lines": 0,
+          "patch_block_sha256": "7b27531e1974ce028e9e30d32a3d2e82c9eac7d8fc2b6cd022daa07ee62dd89f",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "data/toe_20261105_new_swingA_z9_proton_quality.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 87,
+          "removed_lines": 0,
+          "patch_block_sha256": "bddc5b1331d6e6900d206bfcb253ea0f023b363395ede634ee18a35b88307052",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "data/toe_20261105_new_swingB_page_information_transfer.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 124,
+          "removed_lines": 0,
+          "patch_block_sha256": "6482a4b2609eba52b9436c3e5725186e5237498979e571df755974e790a5cb5d",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "data/toe_20261105_new_swingC_cosmology_calibration_guard.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 193,
+          "removed_lines": 0,
+          "patch_block_sha256": "4db1e9742dd31cb4d5963f08aa80c4df973fc13bd4e54f8a0798dfafaeff1f7a",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": [
+            "    \"repo PASS12616-12620 posterior predictive retraction\""
+          ]
+        }
+      ]
+    },
+    {
+      "path": "data/toe_20261105_three_home_run_physics_no_gos.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 217,
+          "removed_lines": 0,
+          "patch_block_sha256": "8e17e09c8b01f5a719c5ddf4f77294c8e027d2198ad18397e3c82fb256ea0245",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "data/toe_20261105_threshold_gauge_scalar_stability_proton.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 317,
+          "removed_lines": 0,
+          "patch_block_sha256": "5e046e29067ddc0d8cd43574a90c970eb3c707fcba98774f911abaf7ba1d1334",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "data/toe_20261105_x_flavor_inverse_seesaw_surjectivity.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 803,
+          "removed_lines": 0,
+          "patch_block_sha256": "2e5fe66e0cc1e700d9db85ae466cbc50a3086b628b5e44f783f0686ed19b6371",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "data/w33_pass12616_to_12620_five_items.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 926,
+          "removed_lines": 0,
+          "patch_block_sha256": "e7ab919c92468c76f8f6ee15491589d3bf31ff1478c5b8c58bf867c9868203cc",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": [
+            "  \"12620: retraction: CPL's point estimate missed SN by 17 while its posterior predictive is within 1.1 of fading\": true,"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "data/w33_pass12621_outside_links.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 159,
+          "removed_lines": 0,
+          "patch_block_sha256": "5117c82e9cff03ece1fad5c7a5d7fc708739efdb043d03c8a3b8f96cfac85a4f",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "data/w33_pass12622_desy5_ppd.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 145,
+          "removed_lines": 0,
+          "patch_block_sha256": "1c29c826889b7635e1011a0b4c2456c0b722b88faf370a279011e9a05b7f7d25",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "data/w33_pass12623_ns_fisher.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 75,
+          "removed_lines": 0,
+          "patch_block_sha256": "9c22ec0bd0d611eb6f8f979274260118967539ae38923fb708e0f855b3a4feff",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "data/w33_pass12624_why_three_heavy_axion.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 242,
+          "removed_lines": 0,
+          "patch_block_sha256": "f2da9a0c6e0faea9e3dfde4561a7f4488554ad7c96a2d65a4deb07b0d77e4bbe",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "data/w33_pass12625_sign_forecast_axion.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 326,
+          "removed_lines": 0,
+          "patch_block_sha256": "507638ccf892e872b91422ea1b0428b948ddbd0d237cafe12fe85bbde03146ee",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "data/w33_pass12626_scorecard_dm_criteria.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 380,
+          "removed_lines": 0,
+          "patch_block_sha256": "14c8a382a40070d9beed62940924e857267b6f6d24002c767ec411cd5b3a906b",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "data/w33_pass12628_sign_of_c_links.json",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 265,
+          "removed_lines": 0,
+          "patch_block_sha256": "6cfe030b656441d4351b2861586233fc12870e5750edf6a4e86bfd45878e0050",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "tests/test_toe_20261105_joint_five_plus_three_integration.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 163,
+          "removed_lines": 0,
+          "patch_block_sha256": "df6996787b2083a263418a4233c4568f03ab9078acb8aea21d8c9e80d9537835",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def z():",
+            "def test_pq_operator_identity_with_bare_mass(z):",
+            "def test_pq_modular_complete_exhaustive(z):",
+            "def test_pq_replacing_bare_still_quartic(z):",
+            "def test_scalar_only_charge_quality_not_sufficient(z):",
+            "def test_rge_sm_rawY_independent_coefficients(z):",
+            "def test_rge_two_loop_multifactor_changes_K(z):",
+            "def test_rge_basis_covariance_two_loop(z):",
+            "def test_rge_missing_yukawa_threshold_not_misreported(z):",
+            "def test_seesaw_all_twelve_inverse_reconstructions(z):",
+            "def test_seesaw_all_allowed_scalar_sources(z):",
+            "def test_seesaw_phases_and_absolute_scale_not_predicted(z):",
+            "def test_causal_exact_exhaustive_history_count(z):",
+            "def test_causal_same_action_different_chain(z):",
+            "def test_causal_phase_cancellation(z):",
+            "def test_causal_not_uniform_poset_measure(z):",
+            "def test_page_dressed_local_flip_exact_gauss(z):",
+            "def test_page_entropy_returns_after_three_emissions(z):",
+            "def test_page_intermediate_entropy_and_bare_leakage(z):",
+            "def test_bell_lossy_local_postselection_fake_chsh(z):",
+            "def test_bell_quantum_optimum_and_fixed_settings(z):",
+            "def test_vacuum_radiative_sensitivity(z):",
+            "def test_leptogenesis_sign_not_determined(z):",
+            "def test_all_six_live_certificates_reproduced(z):",
+            "def test_scope_separation_all_sources(z):"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "tests/test_toe_20261105_joint_z9_proton_seesaw_pq_uv.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 116,
+          "removed_lines": 0,
+          "patch_block_sha256": "f2647c97d225b63b8db45bde6529fec64b93b48c026dd329a7c2437706811587",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def data():",
+            "def test_full_fermion_anomaly_cancel(data):",
+            "def test_exact_discrete_after_two_vevs(data):",
+            "def test_family_nonuniversal_fixes_qqql(data):",
+            "def test_universal_generation_SU2_anomaly_proton_no_go(data):",
+            "def test_seesaw_dirac_renormalizable_block_texture(data):",
+            "def test_neutrino_light_mass_fullrank_and_mixed(data):",
+            "def test_cubic_scalar_pq_quality_failure(data):",
+            "def test_cubic_breaks_relative_physical_phase_not_gauge_phase(data):",
+            "def test_mixed_kinetic_matrix_beta_large_and_positive(data):",
+            "def test_uv_pressure_and_counterexample_weak_coupling(data):",
+            "def test_charge_basis_covariance(data):",
+            "def test_independently_regenerated_certificates(data):",
+            "def test_cubic_naturalness_threshold_is_extremely_tuned_if_asked_for_axion(data):"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "tests/test_toe_20261105_latest_five_plus_three_swing.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 179,
+          "removed_lines": 0,
+          "patch_block_sha256": "181b3914c52fd282de825aab87e478e687fdd0709c96a83dcdcae4083dfe4e2b",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def r():",
+            "def test_matrix_two_U1_beta_has_required_mixing(r):",
+            "def test_matrix_symmetric_positive_and_covariant(r):",
+            "def test_abelian_threshold_mixing_nonzero(r):",
+            "def test_causal_global_relation_calibrated(r):",
+            "def test_causal_local_dim_not_simply_global_fraction(r):",
+            "def test_causal_endpoints_artifact_removed(r):",
+            "def test_local_fermion_gauss_sector_dim(r):",
+            "def test_gauge_coupled_hopping_preserves_gauss(r):",
+            "def test_relative_pair_creation_in_number_conserving_sector(r):",
+            "def test_flavor_exact_TM2_excluded_TM1_solar_only_not(r):",
+            "def test_rank2_neutrinoless_mass_zero_excluded_under_assumptions(r):",
+            "def test_2gapless_modes_not_equalized_by_gradient_coupling(r):",
+            "def test_bare_speed_equality_alone_not_sufficient(r):",
+            "def test_z9_forbids_proton_decay_operators(r):",
+            "def test_Z9_different_from_minimal_BL_Higgs_remnant(r):",
+            "def test_Page_curve_pure_global_information_returns(r):",
+            "def test_permanently_hidden_hawking_partners_do_not_purify_radiation(r):",
+            "def test_random_entanglement_matches_exact_Page_average(r):",
+            "def test_cosmology_synthetic_calibration_degeneracy(r):",
+            "def test_cosmology_ppd_survivorship_bias_audit(r):",
+            "def test_all_eight_certificates_recomputed_current_run(r):",
+            "def test_epistemic_scope_present_all_fronts(r):"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "tests/test_toe_20261105_next_five_cross_sector.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 128,
+          "removed_lines": 0,
+          "patch_block_sha256": "1a0e78fd29491ea52f5a10ead12c1ac645080bc3896e64a8bf915a33320b673c",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def out():",
+            "def test_pq_exact_z9_with_added_scalar(out):",
+            "def test_pq_dimension_formula_exhaustive(out):",
+            "def test_pq_preexisting_phase_breaker_not_removed(out):",
+            "def test_color_anomaly_pair_not_cancellable_by_single_chiral_pair(out):",
+            "def test_mu_tau_exact_reflection_5_samples(out):",
+            "def test_mu_tau_theta23_and_deltaCP_predicted(out):",
+            "def test_mu_tau_explicit_break_control(out):",
+            "def test_flavor_symmetry_NOT_derived_from_previous_X(out):",
+            "def test_uv_oneloop_exact_threshold_match(out):",
+            "def test_uv_threshold_effect_monotone(out):",
+            "def test_uv_tree_level_copositivity(out):",
+            "def test_uv_proton_Z9_screens_preserved(out):",
+            "def test_causal_poset_deduplication_counts(out):",
+            "def test_causal_hasse_multiplicities_exact(out):",
+            "def test_causal_measure_dependent_phase(out):",
+            "def test_causal_measure_bias_height(out):",
+            "def test_emission_gauge_encoded_and_energy_conserved(out):",
+            "def test_emission_perfect_rabi_page_recurrence(out):",
+            "def test_emission_detuning_breaks_purification(out):",
+            "def test_emission_no_false_black_hole_claim(out):",
+            "def test_all_five_fresh_certificates(out):",
+            "def test_all_five_explicit_epistemic_limit(out):"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "tests/test_w33_pass12616_to_12620.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 12,
+          "removed_lines": 0,
+          "patch_block_sha256": "85e290dc8c849705878baeaf08b8d95d4e35fa91f325976d368e10a2eab63a57",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def test_pass12616_to_12620_producer():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "tests/test_w33_pass12621.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 12,
+          "removed_lines": 0,
+          "patch_block_sha256": "dac69ba53fcf76b8f3e410e07aa8cea039c9d8231d3aa637d91b72a212412fae",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def test_pass12621_producer():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "tests/test_w33_pass12622.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 12,
+          "removed_lines": 0,
+          "patch_block_sha256": "7e65da4d4356046b97cfddf6693bc48c5cbe7820b39ba9170d02dda45ca031c6",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def test_pass12622_producer():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "tests/test_w33_pass12623.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 12,
+          "removed_lines": 0,
+          "patch_block_sha256": "b1ad498286a65fe73f3dc9cee7b23f2487812a88640beb88cb5f882e199b1da3",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def test_pass12623_producer():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "tests/test_w33_pass12624.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 12,
+          "removed_lines": 0,
+          "patch_block_sha256": "7162f8c3327f57d540c2444977232469ef80c1667ce038cad2fc0da48a482743",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def test_pass12624_producer():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "tests/test_w33_pass12625.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 12,
+          "removed_lines": 0,
+          "patch_block_sha256": "bcd869d7d47cebdd503242acfdf10e9da7e1f7fe5b70c536f7f3184acf657693",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def test_pass12625_producer():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "tests/test_w33_pass12626.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 12,
+          "removed_lines": 0,
+          "patch_block_sha256": "40228019daa336b8c8f014d6262f0d748a3804b04f839dc96c943123b0525fb9",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def test_pass12626_producer():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "tests/test_w33_pass12628.py",
+      "segments": [
+        {
+          "range": "829b_to333",
+          "added_lines": 12,
+          "removed_lines": 0,
+          "patch_block_sha256": "47f0d82c88594d766032533f6a3a8335e1ef17fc37897d5a87d4a9fca1a34dcd",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def test_pass12628_producer():"
+          ],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/sterile_lya.json",
+      "segments": [
+        {
+          "range": "333_to030",
+          "added_lines": 377,
+          "removed_lines": 0,
+          "patch_block_sha256": "73e33df7b8161978af6377af4d36a3953657acbf957c6bd70c279287337901be",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/sterile_lya.py",
+      "segments": [
+        {
+          "range": "333_to030",
+          "added_lines": 45,
+          "removed_lines": 0,
+          "patch_block_sha256": "9a988a4200718f445e042e82fa26994e18f982878d71192909cce3ade62307a9",
+          "added_headings": [],
+          "added_function_definitions": [
+            "def omega(y, M, mS):"
+          ],
+          "memory_or_scope_flags": [
+            "Bounds used (from memory, not re-read): m_th > 5.3 keV (Irsic et al 2017), 5.7 keV (later analyses); omega_dm = 0.12."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/prereg_corridor.json",
+      "segments": [
+        {
+          "range": "030_to6bb",
+          "added_lines": 9,
+          "removed_lines": 0,
+          "patch_block_sha256": "23f108ad9ae03f9a950fdfdc538564cf1c8f2af9c07e915915bcdd4ee1c65e11",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/prereg_corridor.py",
+      "segments": [
+        {
+          "range": "030_to6bb",
+          "added_lines": 19,
+          "removed_lines": 0,
+          "patch_block_sha256": "bbbc20608cbc5c27155568e3331577c22c742b5098e9f02c97d0d890692660a7",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/prereg_corridor.sha256",
+      "segments": [
+        {
+          "range": "030_to6bb",
+          "added_lines": 1,
+          "removed_lines": 0,
+          "patch_block_sha256": "abd701b5016cbef4d7198a3c689b123e0167f68c81333d58376009962fc9056d",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/sign_grid.py",
+      "segments": [
+        {
+          "range": "030_to6bb",
+          "added_lines": 60,
+          "removed_lines": 0,
+          "patch_block_sha256": "01c6a2ecedcc396821f85261d591a932ee89ff8a86438c2f640370e14ab52690",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/sterile_lya_rms.json",
+      "segments": [
+        {
+          "range": "030_to6bb",
+          "added_lines": 12,
+          "removed_lines": 0,
+          "patch_block_sha256": "59e4f903b3aebd3a5c3af2547f5e3d572bfb01d68f4d1c3f49a6761e3da77711",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/sterile_lya_rms.py",
+      "segments": [
+        {
+          "range": "030_to6bb",
+          "added_lines": 20,
+          "removed_lines": 0,
+          "patch_block_sha256": "b95111d8f91cd8253e3cfe6b3c1592ff03dba0de4e6b010a29e59ae055976a9e",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": [
+            "Freeze-in from decays of a heavy scalar in equilibrium: f(q) ~ q^(-1/2) e^(-q) (non-relativistic-decay freeze-in shape, from memory; q = p/T), so <q> = Gamma(3.5)/Gamma(2.5) = 2.5, <q^2> = Gamma(4.5)/Gamma(2.5) = 8.75."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "analysis/SUMMARY_PASSES_12620_12628.md",
+      "segments": [
+        {
+          "range": "6bb_to_bfbb",
+          "added_lines": 72,
+          "removed_lines": 0,
+          "patch_block_sha256": "c2fa2822f1afa5e06b337ae80242a5799321022094ae9510a11dfa789d7079a2",
+          "added_headings": [
+            "# What Passes 12620\u201312628 establish (Claude track, 2026-11-05/06)",
+            "## Data (cosmology)",
+            "## The sign of the coupling c is one switch for several observables (Pass 12628)",
+            "## Particle physics: what can carry the coupling (Passes 12625, 12626, 12628)",
+            "## Axion/unification side (Passes 12621, 12624)",
+            "## Frozen, falsifiable statements (in `analysis/toe_uv/`)",
+            "## Corrections made along the way (all recorded in the passes)",
+            "## Open, in order of leverage"
+          ],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": [
+            "A short reading guide to one line of work: is there evidence for evolving dark energy, which model, and what could carry it in particle physics? **Not a theory of everything.** Each claim cites its pass, and all numbers come from committed JSON certificates.",
+            "- **A sterile neutrino** whose mass comes from a singlet vev of about 1 TeV can carry it. After Lyman-\u03b1 (computed edge 15.8\u201317.4 keV) and the S \u2192 hh and late-decay estimate, the corridor is about **M \u2248 16 keV, m_S \u2248 3 TeV, portal about 10\u207b\u2076**. That is order-of-magnitude only and needs a Boltzmann solution. Its line would sit at about 8 keV and drift with source redshift."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/des_joint_cpos.py",
+      "segments": [
+        {
+          "range": "6bb_to_bfbb",
+          "added_lines": 22,
+          "removed_lines": 0,
+          "patch_block_sha256": "418407958d179ba4c826802c0d50d084dc0053d616fdd19dbfe8a6885edf9c53",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/sterile_hh.json",
+      "segments": [
+        {
+          "range": "6bb_to_bfbb",
+          "added_lines": 54,
+          "removed_lines": 0,
+          "patch_block_sha256": "9bd063b651d1c6a49fce1367ce2eb4e51e3c1bde3a8cbb52f2dd254796e6520b",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/sterile_hh.py",
+      "segments": [
+        {
+          "range": "6bb_to_bfbb",
+          "added_lines": 29,
+          "removed_lines": 0,
+          "patch_block_sha256": "dd3b4ed49d46e8f1614dd6c5015a072a7197b1944aa611b67daa8ac1ad1803a1",
+          "added_headings": [],
+          "added_function_definitions": [],
+          "memory_or_scope_flags": []
+        }
+      ]
+    }
+  ],
+  "full_text_read_paths": [
+    {
+      "path": "analysis/2026-11-05_latest_five_plus_three_physics_swing_report.md",
+      "current_raw_sha256": "2352a22dfa376081490927abd79f87fc61352d80d4857c2a8a1f14f7cb2a876a"
+    },
+    {
+      "path": "analysis/2026-11-05_joint_z9_seesaw_axion_uv_minimality_obstruction.md",
+      "current_raw_sha256": "9982b0ee76bd3b98c4a128d492b6a01ffa0e930ed89e8ae0b747406d0f4d0172"
+    },
+    {
+      "path": "analysis/2026-11-05_five_plus_three_integrated_toe_falsifiers.md",
+      "current_raw_sha256": "56490b72276f8d027ab4ca732f1cc681152c4ee966d610b5d385ec997db60029"
+    },
+    {
+      "path": "analysis/2026-11-05_next_five_cross_sector_falsifiers_report.md",
+      "current_raw_sha256": "73b8c54be6e971191ffe0d35b7b2a0fb58ba4f0b914397cd52bb7767e6c41748"
+    },
+    {
+      "path": "analysis/HANDOFF_CLAUDE_TO_CHAT_20261106.md",
+      "current_raw_sha256": "5dc3390eb85e5c2f5269712b85dbe05ef7ad303cafbb83fdab199fb86322ace8"
+    },
+    {
+      "path": "analysis/PASS12616_12620_FIVE_ITEMS.md",
+      "current_raw_sha256": "8ffc7c0d6642700cfc78b88c43a0e4c70db83b597fd4b00653ae9f0c0afa6055"
+    },
+    {
+      "path": "analysis/PASS12621_OUTSIDE_LINKS.md",
+      "current_raw_sha256": "81d1ad193a0644546d6b5f6d958b2f9b12faabbf9d740480bb67562975a07bf3"
+    },
+    {
+      "path": "analysis/PASS12622_DESY5_PPD.md",
+      "current_raw_sha256": "b942b24b86787b8d539351406b5e9930638cb546179f42b97c2bfa9783b91b1b"
+    },
+    {
+      "path": "analysis/PASS12623_NS_FISHER.md",
+      "current_raw_sha256": "4df2925a78d0aefdfe972b8ac7318da61f9894546d365207cbcb7677c27fb8fa"
+    },
+    {
+      "path": "analysis/PASS12624_WHY_THREE_HEAVY_AXION.md",
+      "current_raw_sha256": "15822de0d7ffc7b643b4bb3aa3d3a48c5afb58a28ca1cd707fc355a81647ca5a"
+    },
+    {
+      "path": "analysis/PASS12625_SIGN_FORECAST_AXION.md",
+      "current_raw_sha256": "9ef1e172136785ced9e5522110782e8b2c79c2c893497181de6884fe74357df3"
+    },
+    {
+      "path": "analysis/PASS12626_SCORECARD_DM_CRITERIA.md",
+      "current_raw_sha256": "0dac2b43c4bcc1b121fd568f59ce05c0924d309caf41bff3cd217c50924e1956"
+    },
+    {
+      "path": "analysis/PASS12628_SIGN_OF_C_LINKS.md",
+      "current_raw_sha256": "f8e52c4cabe80b16a8c74bce970c265f439d57492bbf2f9c3eccd62865a261fa"
+    },
+    {
+      "path": "analysis/toe_uv/sterile_window.py",
+      "current_raw_sha256": "bfa6761b7290299d9a6801cb02fc148de21171233f8af7a2f81ef9c4d05f5f9b"
+    },
+    {
+      "path": "analysis/toe_uv/sterile_lya.py",
+      "current_raw_sha256": "db6b889d90bd79444841eec15c66497a5fe69532e11693464c463c8e340c329a"
+    },
+    {
+      "path": "analysis/toe_uv/sterile_lya.json",
+      "current_raw_sha256": "ca0a0570efee68ba20930f5da52ef831e1f817b694d30f7dd137558b9c1b5a4d"
+    },
+    {
+      "path": "analysis/toe_uv/weff_turnaround.py",
+      "current_raw_sha256": "cf0134f19e597e629f67fdcecda3c7c741f5fe5711f21bb3a5441c8aaaf42e2e"
+    },
+    {
+      "path": "analysis/toe_uv/line_drift.py",
+      "current_raw_sha256": "1ac95624fdcb1ccc4688ede5e5bc297795f9ffab63a99360074c3310374f3d3e"
+    },
+    {
+      "path": "analysis/toe_uv/line_drift.json",
+      "current_raw_sha256": "d1b5f4aaca51cf44d3b54f8c77877939df3dabc3e0012fec12e41b13d218f630"
+    },
+    {
+      "path": "analysis/toe_uv/sterile_window.json",
+      "current_raw_sha256": "8583b164a3d06d43f907524799ed7abe6a93a4b5e78d56e677738fdabc8a4b41"
+    },
+    {
+      "path": "analysis/toe_uv/scorecard.md",
+      "current_raw_sha256": "f1cfa395c2ab0e9c6230e95e2c05ce2da1a5e12f76f8a822ca91a77dec441e49"
+    },
+    {
+      "path": "analysis/toe_uv/prereg_corridor.json",
+      "current_raw_sha256": "cddd3be39b53f81902c40134f7f9138a4deef62d715d2d799fa6e44e090f6dea"
+    },
+    {
+      "path": "analysis/toe_uv/prereg_corridor.py",
+      "current_raw_sha256": "32fed1ed560732703becfacb3a595716cc10820e719730954fe697f8e96b96b3"
+    },
+    {
+      "path": "analysis/toe_uv/prereg_corridor.sha256",
+      "current_raw_sha256": "665a2c3aa0d8de791a5b0d0258b6bf706c5435a883d0aeb05cbb1d9c535e34aa"
+    },
+    {
+      "path": "analysis/toe_uv/sign_grid.py",
+      "current_raw_sha256": "f9209bf0c2c2e3eae7799a8656cbb4a2cb0b6682c7679ad37159ae9ea8b332c3"
+    },
+    {
+      "path": "analysis/toe_uv/sterile_lya_rms.json",
+      "current_raw_sha256": "9b7b6a99ea2ca8ec6ca9e77ad1ca79439c515e3d0b9c6d62c6afe9d0883d2471"
+    },
+    {
+      "path": "analysis/toe_uv/sterile_lya_rms.py",
+      "current_raw_sha256": "5191f15c351d2ed622d3eb2baeddc722b09ecf7fee2e2fd722867904b5839ec7"
+    }
+  ],
+  "reading_coverage": "All14 top-level changed reports read fully, plus nested scorecard and selected sources/certificates:38 listed fulltext paths. All161 changed paths/patch structures enumerated; not all161 full contents or complete weekly commit history read.",
+  "PDF_coverage": "Full extracted text pages1-72 of215 read cumulatively; page69 rendered and visually inspected this continuation. Complete paper and all-figure review remain unfinished.",
+  "scientific_followup": "Newest Lyman-alpha mean/rms boundaries remain proxies; current scalar parent and old CW certificate require reconciliation before claiming viable coupled sterile DM. Latest fixed-base sign-grid is not marginalized posterior evidence.",
+  "additional_S5_scope": "The portal inequality alone has no absolute20keV ceiling: the current exact replay gives a30keV portal boundary at105810.6GeV parent mass.20keV reflects the10TeV parent scan boundary unless an extra cutoff or quartic assumption is imposed. Our minimal scalar potential supplies a conditional perturbativity restriction, not a universal model bound. Thus the incoming proposed7keV thermal-WDM falsifier additionally presumes its momentum mapping and parent-inventory restrictions.",
+  "additional_full_text_read_paths": [
+    {
+      "path": "analysis/toe_20261105_new_front1_abelian_matrix.py",
+      "current_raw_sha256": "1add1884157fed4c7b58011c71bf9a635488468204794ae22498275bf4df6f33"
+    },
+    {
+      "path": "analysis/toe_20261105_abelian_seesaw_pq_operator_theorem.py",
+      "current_raw_sha256": "69f04f32bea246a3537be9ea491e3a9089a6ea414f0b59e68c98af99f7777046"
+    },
+    {
+      "path": "data/toe_20261105_abelian_seesaw_pq_operator_no_go.json",
+      "current_raw_sha256": "9bc3c51fd57ca9ab41b606a5b4ff554d4e28e4f7f598eb1cba56c8c5552c43c7"
+    },
+    {
+      "path": "analysis/toe_20261105_autonomous_gauss_energy_emission.py",
+      "current_raw_sha256": "f879ceecfd76079b187a48e4dcf0e6288d731c2113db425021873059ffdadb55"
+    },
+    {
+      "path": "data/toe_20261105_autonomous_gauss_energy_page_recurrence.json",
+      "current_raw_sha256": "9ca35bb4cda59ee5bd221ae3c33ee4766c7337fbad8d966b368c075a3627475a"
+    },
+    {
+      "path": "analysis/SUMMARY_PASSES_12620_12628.md",
+      "current_raw_sha256": "c97fe388afe993e0b3e8396ff39a6e829cc365e5f1f6b1e4e747b8681759c49c"
+    },
+    {
+      "path": "analysis/toe_uv/des_joint_cpos.py",
+      "current_raw_sha256": "859d9819212804c5a4fe4238f8c80265e341a206e4151eac4655190e23a73ae0"
+    },
+    {
+      "path": "analysis/toe_uv/sterile_hh.py",
+      "current_raw_sha256": "909710d73fbdbf5ab06915bcc79f3eb51eeb63e785213208fbe0606f3f6fb2a3"
+    },
+    {
+      "path": "analysis/toe_uv/sterile_hh.json",
+      "current_raw_sha256": "bcea64eb18f01f083f2677e45438d41cb7d058bdc666734a21177e8bbe3d07ef"
+    },
+    {
+      "path": "analysis/toe_20261105_new_front5_gapless_velocity_lock.py",
+      "current_raw_sha256": "b79a2ae4a1f93d5864e1c433ed3259da8c150ceb7cc3c9c81233a0937d5643f6"
+    },
+    {
+      "path": "data/toe_20261105_new_front5_gapless_velocity_locking.json",
+      "current_raw_sha256": "67fbeae89901ab30a53053fc8e8d15b04932b0146d94be03d8931b8ce1113a5a"
+    }
+  ],
+  "additional_review_findings": "Fullmatrix RG is prior owner and explicitly credited. Abelian seesaw operator theorem and actual Zn certificate support only the stated monomial premises. Autonomous Gauss-dressed emission source/certificate show finite excitation-conserving Rabi recurrences, not gravitational energy or irreversible black-hole evaporation. These confirm scopes already in the full reports; not new results.",
+  "late_addendum_audit": {
+    "commit": "bfbb685af",
+    "scope": "Entire5-path patch read;4new paths extend census to161. New14th top-level report and actual new source/JSON read.",
+    "claims": "Late parent-decay estimate narrows proposed sterile corridor to16keV,3TeV; actual Boltzmann solution explicitly still open. Rest-frame line stacking drift discussed without actual sample redshifts.",
+    "stored_JSON_fields_not_generated_by_committed_producer": [
+      "T_decay_GeV",
+      "omega_if_whole_relativistic_population_decays"
+    ],
+    "reproducibility": "The shown producer writes only the x=20 estimate and lacks the two fields used for the new whole-population/decay-temperature table. Their derivation is not frozen in that producer; no recomputed late-abundance exclusion is accepted here.",
+    "normalization": "New hh source declares <S>=vS, while retained Majorana m=yvS/sqrt2 and Gamma=y^2*mS/(16pi) need an explicitly reconciled canonical convention; our separate parent audit uses w=vS/sqrt2 and does not independently match this portal width.",
+    "physics_scope": "Gamma_hh/H and relativistic-population estimates do not by themselves solve coupled annihilation, decays, inverse processes, thermal masses or momentum distributions. No universal corridor exclusion follows."
+  }
+}

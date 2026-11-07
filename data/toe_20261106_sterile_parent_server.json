@@ -1,0 +1,145 @@
+{
+  "status": "PASS_SERVER_INTEGRAL_CONTINUOUS_BOUNDARY_AND_MEAN_COUNTEREXAMPLE",
+  "execution": "JavaScript executed in functions.exec server V8; no PC Python imports",
+  "collision_integral": 4.712388980384608,
+  "collision_integral_exact": "3 pi / 2",
+  "incoming_points": [
+    {
+      "M_keV": 16,
+      "m_S_GeV": 3000,
+      "v_S_GeV": 949.2112686896162,
+      "canonical_real_scalar_vev_GeV": 671.1937248691136,
+      "lambda_S": 9.988878686494736,
+      "portal_floor": 6.511434143528489e-7,
+      "portal_clock_cap": 7.227307109821151e-7
+    },
+    {
+      "M_keV": 16,
+      "m_S_GeV": 10000,
+      "v_S_GeV": 519.9044236994,
+      "canonical_real_scalar_vev_GeV": 367.6279435667297,
+      "lambda_S": 369.9584698701754,
+      "portal_floor": 0.0000011888197873732949,
+      "portal_clock_cap": 0.0000024091023699403836
+    },
+    {
+      "M_keV": 18,
+      "m_S_GeV": 10000,
+      "v_S_GeV": 620.3721547688564,
+      "canonical_real_scalar_vev_GeV": 438.6693574963687,
+      "lambda_S": 259.83365785120685,
+      "portal_floor": 0.0000011888197873732949,
+      "portal_clock_cap": 0.000001691989593154289
+    },
+    {
+      "M_keV": 20,
+      "m_S_GeV": 10000,
+      "v_S_GeV": 726.5885207466943,
+      "canonical_real_scalar_vev_GeV": 513.77567015229,
+      "lambda_S": 189.41873657352988,
+      "portal_floor": 0.0000011888197873732949,
+      "portal_clock_cap": 0.0000012334604134094771
+    }
+  ],
+  "continuous_boundaries": [
+    {
+      "M_keV": 7.1,
+      "m_S_GeV": 18.593097080541824,
+      "v_S_GeV": 3564.1435987550967,
+      "canonical_real_scalar_vev_GeV": 2520.230107802354,
+      "lambda_S": 0.00002721404427690983,
+      "portal_floor": 5.1261568851536086e-8,
+      "portal_clock_cap": 5.126156885153608e-8
+    },
+    {
+      "M_keV": 15,
+      "m_S_GeV": 1653.2906091266495,
+      "v_S_GeV": 1160.6621656033808,
+      "canonical_real_scalar_vev_GeV": 820.7120879648141,
+      "lambda_S": 2.029021935178291,
+      "portal_floor": 4.833821672816268e-7,
+      "portal_clock_cap": 4.833821672816268e-7
+    },
+    {
+      "M_keV": 16,
+      "m_S_GeV": 2435.1265764687523,
+      "v_S_GeV": 1053.5684151456865,
+      "canonical_real_scalar_vev_GeV": 744.9853707934785,
+      "lambda_S": 5.3421686709340435,
+      "portal_floor": 5.866469206475686e-7,
+      "portal_clock_cap": 5.866469206475684e-7
+    },
+    {
+      "M_keV": 18,
+      "m_S_GeV": 4936.699306202434,
+      "v_S_GeV": 882.9456246441225,
+      "canonical_real_scalar_vev_GeV": 624.336838604851,
+      "lambda_S": 31.26118473060099,
+      "portal_floor": 8.352843850626516e-7,
+      "portal_clock_cap": 8.352843850626516e-7
+    },
+    {
+      "M_keV": 20,
+      "m_S_GeV": 9289.270692706114,
+      "v_S_GeV": 753.8721904679917,
+      "canonical_real_scalar_vev_GeV": 533.0681380278735,
+      "lambda_S": 151.83356569349482,
+      "portal_floor": 0.0000011457947668897822,
+      "portal_clock_cap": 0.000001145794766889782
+    },
+    {
+      "M_keV": 30,
+      "m_S_GeV": 105810.5989841056,
+      "v_S_GeV": 410.356043982407,
+      "canonical_real_scalar_vev_GeV": 290.16554140084514,
+      "lambda_S": 66486.9907719223,
+      "portal_floor": 0.000003867057338253015,
+      "portal_clock_cap": 0.000003867057338253016
+    }
+  ],
+  "cut_maxima": [
+    {
+      "lambda_S_cut_input": 1,
+      "maximum_M_keV": 14.308874554545522
+    },
+    {
+      "lambda_S_cut_input": 12.566370614359172,
+      "maximum_M_keV": 16.938936261849086
+    },
+    {
+      "lambda_S_cut_input": 8.772981689857207,
+      "maximum_M_keV": 16.537960784544005
+    }
+  ],
+  "same_mean_ballistic_counterexample": [
+    {
+      "name": "mono",
+      "normalization": 1,
+      "mean_momentum": 1,
+      "mean_squared_momentum": 1,
+      "ballistic_density_kernel_at_k_tau_pi": 3.8981718325193755e-17
+    },
+    {
+      "name": "two_shell",
+      "normalization": 1,
+      "mean_momentum": 1,
+      "mean_squared_momentum": 8.290000000000001,
+      "ballistic_density_kernel_at_k_tau_pi": 0.8841875648816211
+    }
+  ],
+  "same_mean_and_rms_ballistic_counterexample": [
+    {
+      "normalization": 1,
+      "mean_momentum": 2,
+      "mean_squared_momentum": 5,
+      "ballistic_density_kernel_at_k_tau_pi": 3.8981718325193755e-17
+    },
+    {
+      "normalization": 1,
+      "mean_momentum": 2,
+      "mean_squared_momentum": 5,
+      "ballistic_density_kernel_at_k_tau_pi": 0.12126090902239642
+    }
+  ],
+  "scope": "Isotropic momentum shells propagate freely with j0(k v tau). This proves a mean momentum does not fix even a ballistic density kernel. It does not compute gravity, actual scalar-decay distributions or a cosmological exclusion."
+}
