@@ -83,3 +83,11 @@ python analysis/w33_20261107_constants_five_fronts.py --root .
 3. Prove a UV/IR dynamical scale-breaking mechanism with experimentally defined units, then evaluate c/G/hbar and Lambda without inserting the measured target.
 4. Use the Pass398 frozen universe to generate an algebraically canonicalized provenance graph; audit equivalence classes and withdrawn candidates, not merely line-shape hashes.
 5. Register a calibrated null family and untouched holdout data **before** exploring any new rational corrections, then report the joint likelihood and familywise selection penalty.
+
+## CI execution receipt (verified)
+- Run: https://github.com/wilcompute/W33-Theory/actions/runs/42397448688 (success).
+- Seven focused regressions passed; generated JSON artifact ID `13583319103`.
+- Full-checkout scan visited **37,506** eligible text sources; **0 oversized files skipped** after switching to streamed windows for giant/minified lines.
+- Source-level matching line totals: alpha-inverse 12,652; strong coupling 2,863; weak angle 4,034; CKM 6,085; PMNS 5,754; masses/ratios 2,554; cosmology 9,383; dimensional scales 5,836. An occurrence can belong to multiple categories.
+- Full raw output is the workflow artifact `w33-constants-five-fronts-json`, and a compact attestation was committed as [`data/w33_20261107_constants_five_fronts_summary.json`](../data/w33_20261107_constants_five_fronts_summary.json).
+- This covers selected source extensions and syntactic patterns; a count of 37,506 is **not** a claim that every physical assertion was located or semantically verified.
