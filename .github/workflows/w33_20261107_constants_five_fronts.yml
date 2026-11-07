@@ -1,0 +1,44 @@
+name: W33 constants five-front certificate
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20261107_constants_five_fronts.py'
+      - 'tests/test_w33_20261107_constants_five_fronts.py'
+      - 'analysis/PASS20261107_CONSTANTS_FIVE_FRONTS.md'
+      - '.github/workflows/w33_20261107_constants_five_fronts.yml'
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  constants-five-fronts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run isolated regression tests
+        run: |
+          python -m pip install --disable-pip-version-check pytest
+          python -m pytest -q tests/test_w33_20261107_constants_five_fronts.py
+      - name: Run all five and scan repository provenance
+        run: |
+          python analysis/w33_20261107_constants_five_fronts.py --root . --output data/w33_20261107_constants_five_fronts.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          o=json.loads(Path('data/w33_20261107_constants_five_fronts.json').read_text())
+          assert o['provenance']['files_scanned'] > 1000
+          print('All-source scan:',o['provenance']['files_scanned'],'files')
+          print('Synthetic common-spurion solar:',o['flavor']['sin2_theta12_PMNS_common_spurion'])
+          print('CODATA22 alpha z:',o['EM']['formulas'][0]['residual_CODATA22_sigma'])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-constants-five-fronts-json
+          path: data/w33_20261107_constants_five_fronts.json
+          if-no-files-found: error
