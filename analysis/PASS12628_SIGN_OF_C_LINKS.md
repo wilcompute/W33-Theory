@@ -109,3 +109,19 @@ Combined with the portal window (thermalisation floor and clock cap):
 - **X-ray.** NuSTAR blank-sky limits are leading at 15–18 keV (arXiv:2207.04572; also 1908.09037, 1901.01262, 1609.00667). In freeze-in from S decays the mixing angle is free, so these only cap the line's visibility, at roughly sin²2θ ≲ 10⁻¹²–10⁻¹³ (from memory). The dark-matter N then contributes ≲ 10⁻⁹ eV to active-neutrino masses: it decouples from the seesaw, and Pass 12626 §4's neutrino-drift link does not apply to it. The other two N's must make the observed masses.
 - **Momentum shape (`sterile_lya_rms.py`).** For f(q) ∝ q^(−1/2) e^(−q) (decay freeze-in shape, recalled from memory), matching the rms velocity instead of the mean momentum moves the Lyman-α edge by +3.7%: **15.8 (17.4) keV** for a 5.3 (5.7) keV thermal bound. The corridor stays at 16–20 keV, with 16 keV marginal under the stricter bound.
 - **Frozen S5** (`analysis/toe_uv/prereg_corridor.json`, separate from the d2624061 file, which stays unchanged) states the corridor and the 8–10 keV line drift. It names what falsifies it: a thermal-equivalent WDM bound above about 7 keV, or a detected line without the drift. It also notes that the absence of a line does not falsify it.
+
+## Addendum 4: S → hh, the corridor shrinks; XRISM stacking and a drifting line
+
+**S → hh through the portal (`sterile_hh.py`).** Γ(S→hh) ≈ λ²v_S²/(8π m_S) (rough) is **below** H(T = m_S) at the corridor points, so decays do not keep S in equilibrium. With λ ~ 10⁻⁶, annihilation is only marginally faster than expansion, and S probably freezes out near T ~ m_S, then decays with BR(NN) = 0.6–10%. Treating the decay of the whole relativistic S population as an upper estimate:
+
+| M_N | m_S | S decays at m_S/T | Ω from the decaying population |
+|---|---:|---:|---:|
+| 16 keV | 3 TeV | 1.5 | 0.14 (consistent with 0.12) |
+| 16–20 keV | 10 TeV | 6.4 | 2.5 (overproduces about 20×, unless S stays thermal) |
+
+- At m_S ≈ 3 TeV, freeze-in and the decay of the population agree to order one.
+- At 10 TeV, the decaying population overproduces, unless the portal keeps S thermal down to T ≪ m_S. The clock cap forbids a much larger portal.
+
+**The corridor therefore shrinks to roughly M_N ≈ 16 keV, m_S ≈ 3 TeV.** A Boltzmann solution, not these order-one estimates, is needed to say whether it is a point, a sliver or empty. S5 (frozen) states 3–10 TeV, and this addendum flags its upper half as doubtful.
+
+**XRISM stacking (arXiv:2510.24560).** No unidentified line is found in 2.5–15 keV (rest frame), so there are no centroid data. The stack assumes a fixed rest energy. A coupled dark matter's line drifts by up to about 0.27% across z ≲ 0.1, about 25 eV at 9 keV, against a resolution of about 5 eV, so it would be smeared in a rest-frame stack. A search for this model would need a redshift-dependent template: E_rest(z) = E0 (1 + κ z) with |κ| ≈ 0.015–0.02, sign opposite to c, the slope at low z from `line_drift.json`. The cluster redshifts are not in the abstract, so this was not quantified for the actual sample.

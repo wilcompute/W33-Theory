@@ -1,0 +1,54 @@
+[
+ {
+  "M_keV": 16,
+  "m_S": 3000,
+  "lam": 6.860038941628162e-07,
+  "Gamma_NN": 3.3915294269885614e-14,
+  "Gamma_hh": 5.623643975770681e-12,
+  "H_at_mS": 1.2652452299073404e-11,
+  "prompt": false,
+  "BR_NN": 0.005994686516053491,
+  "omega_superwimp_upper": 1.3181232986227728e-08,
+  "omega_if_whole_relativistic_population_decays": 0.13691175323754892,
+  "T_decay_GeV": 2006.080962864591
+ },
+ {
+  "M_keV": 16,
+  "m_S": 10000,
+  "lam": 1.6923322862821527e-06,
+  "Gamma_NN": 3.76836602998729e-13,
+  "Gamma_hh": 3.080196660907638e-12,
+  "H_at_mS": 1.4058280332303783e-10,
+  "prompt": false,
+  "BR_NN": 0.10900577872164076,
+  "omega_superwimp_upper": 2.3968402056177026e-07,
+  "omega_if_whole_relativistic_population_decays": 2.489566758468171,
+  "T_decay_GeV": 1568.1430571583649
+ },
+ {
+  "M_keV": 18,
+  "m_S": 10000,
+  "lam": 1.4182632718827188e-06,
+  "Gamma_NN": 3.349658693322037e-13,
+  "Gamma_hh": 3.0801966609076376e-12,
+  "H_at_mS": 1.4058280332303783e-10,
+  "prompt": false,
+  "BR_NN": 0.09808197014526263,
+  "omega_superwimp_upper": 2.426226056803999e-07,
+  "omega_if_whole_relativistic_population_decays": 2.5200894600280117,
+  "T_decay_GeV": 1558.6176460971467
+ },
+ {
+  "M_keV": 20,
+  "m_S": 10000,
+  "lam": 1.210934410446249e-06,
+  "Gamma_NN": 3.0146928239898327e-13,
+  "Gamma_hh": 3.080196660907637e-12,
+  "H_at_mS": 1.4058280332303783e-10,
+  "prompt": false,
+  "BR_NN": 0.0891481558063669,
+  "omega_superwimp_upper": 2.4502586766410465e-07,
+  "omega_if_whole_relativistic_population_decays": 2.54505182978674,
+  "T_decay_GeV": 1550.9551966238587
+ }
+]
