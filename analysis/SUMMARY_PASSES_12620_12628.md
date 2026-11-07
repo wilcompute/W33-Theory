@@ -63,6 +63,12 @@ The sign is undetermined today. A direct two-dimensional integral is running (Pa
 - The Lyman-α edge was relaxed wrongly and then recomputed (Pass 12628 addenda 1–2).
 - SPT was not, after all, prior art for the n_s number (Pass 12623 addendum).
 
+## Update after Pass 12627 and Chat's audit (3869fe29c, 4b97ce7d1, c7079f950)
+
+- **Shear separates fading from CPL out of sample.** Held-out DES Y3 elpd: ΛCDM −101.38, fading −101.43 / −101.80, CPL −103.50. The joint refit keeps CPL's shear penalty (3.2). The direction S1 predicts holds on DES Y3, which is not the future data S1 is scored against.
+- **The MCMC confirms fading's held-BAO gain on DES-SN5YR** (+1.4 over ΛCDM).
+- **The particle-carrier section above is superseded.** Any field whose mass varies with φ adds b²m⁴/(4π²M_P²) to φ's curvature, so masses above about 0.02 eV are radiatively unnatural without a protecting symmetry (Garny 2006; Doran and Jaeckel 2002). Chat's audit also showed that the parent quartic is non-perturbative, that the Lyman-α edge is a proxy, and that the upper edge is not general. "A sterile neutrino survives" no longer holds. S5 is conditional on an unbuilt protection mechanism.
+
 ## Open, in order of leverage
 
 1. The joint CPL + shear refit and the shear-held test (S1 against DES Y3).

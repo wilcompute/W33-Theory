@@ -27,3 +27,13 @@ for w in d["window"]:
     out.append(row)
     print("M %d keV m_S %d: Gamma_hh %.1e GeV vs H %.1e (x%.0e), BR(NN) %.1e, late-decay Omega <= %.1e" % (w["M_keV"], mS, G_hh, H, G_hh / H, BR, om_late))
 json.dump(out, open("sterile_hh.json", "w"), indent=1)
+
+# Second estimate (added after Chat's audit 3869fe29c found these fields in the JSON but not in this producer):
+# if S drops out of equilibrium near T ~ m_S, the whole relativistic population decays; Y_S,rel = 45 zeta(3)/(2 pi^4 g*) for a real scalar.
+Yrel = 45 * 1.2020569 / (2 * math.pi ** 4) / GS
+for r in out:
+    Mr = r["M_keV"] * 1e-6
+    r["omega_if_whole_relativistic_population_decays"] = 2.744e8 * Mr * 2 * r["BR_NN"] * Yrel
+    r["T_decay_GeV"] = math.sqrt((r["Gamma_hh"] + r["Gamma_NN"]) * MPL / (1.66 * math.sqrt(GS)))
+    print("M %d keV m_S %d: whole-population decay Omega %.2f, decays at T ~ %.0f GeV" % (r["M_keV"], r["m_S"], r["omega_if_whole_relativistic_population_decays"], r["T_decay_GeV"]))
+json.dump(out, open("sterile_hh.json", "w"), indent=1)
