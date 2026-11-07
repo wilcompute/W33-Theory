@@ -59,3 +59,14 @@ def test_determinism_without_full_checkout():
     assert x==y
     assert x["provenance"]["status"]=="not_run_requires_full_checkout"
     assert x["scope"].startswith("Reanalysis")
+
+def test_unbounded_archive_lines_and_explicit_size_cap(tmp_path):
+    """Large one-line JSON is searched by overlapping windows, not silently skipped."""
+    (tmp_path/"giant.json").write_text("x"*51000 + r" \alpha^{-1} = 137 + 40/1111"+"\n")
+    all_files=mod.provenance(tmp_path)
+    assert all_files["oversized_skipped"]==0
+    assert all_files["files_scanned"]==1
+    assert all_files["families"]["alpha_inverse"]["total_matching_lines"] >= 1
+    capped=mod.provenance(tmp_path,max_bytes=1000)
+    assert capped["oversized_skipped"]==1
+    assert capped["files_scanned"]==0
