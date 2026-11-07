@@ -1,0 +1,97 @@
+{
+  "schema": "w33.constants.five_fronts.attestation.2026-11-07.v1",
+  "source_workflow_head": "7dee1b5ff3f3589d2db65c1be36d2f00e6e2d64e",
+  "completed_workflow_run": 42397448688,
+  "workflow_url": "https://github.com/wilcompute/W33-Theory/actions/runs/42397448688",
+  "artifact_id": 13583319103,
+  "artifact_name": "w33-constants-five-fronts-json",
+  "tests": {
+    "passed": 7,
+    "failed": 0
+  },
+  "provenance": {
+    "scanned_text_files": 37506,
+    "text_file_entries_seen": 37506,
+    "oversized_skipped": 0,
+    "classification": "syntactic heuristic; not semantic algebraic equivalence nor independent physics",
+    "families": {
+      "alpha_inverse": {
+        "matching_lines": 12652,
+        "distinct_line_signatures": 10772
+      },
+      "cabibbo_ckm": {
+        "matching_lines": 6085,
+        "distinct_line_signatures": 5098
+      },
+      "cosmology": {
+        "matching_lines": 9383,
+        "distinct_line_signatures": 8273
+      },
+      "dimensionful_scale": {
+        "matching_lines": 5836,
+        "distinct_line_signatures": 4907
+      },
+      "mass_ratio": {
+        "matching_lines": 2554,
+        "distinct_line_signatures": 2207
+      },
+      "pmns": {
+        "matching_lines": 5754,
+        "distinct_line_signatures": 5095
+      },
+      "strong_coupling": {
+        "matching_lines": 2863,
+        "distinct_line_signatures": 2461
+      },
+      "weak_angle": {
+        "matching_lines": 4034,
+        "distinct_line_signatures": 3245
+      }
+    }
+  },
+  "electromagnetic": {
+    "codata_2022_alpha_inverse": 137.035999177,
+    "codata_2022_sigma": 2.1e-8,
+    "inverse_alpha_candidates": [
+      {
+        "formula": "137+1/28+4/14045",
+        "value": 137.03599908457508,
+        "z": -4.401186970426352
+      },
+      {
+        "formula": "137+880/24445",
+        "value": 137.0359991818368,
+        "z": 0.23032276615032019
+      },
+      {
+        "formula": "137+40/1111",
+        "value": 137.03600360036003,
+        "z": 210.6361916633302
+      }
+    ],
+    "conclusion": "Postselected boundary candidates; electron-only spacelike running supplied by ordinary QED; no independent W33 beta function or prospective holdout"
+  },
+  "shared_flavor": {
+    "theta": "3/13",
+    "Vus_fixture": 0.22618820544494445,
+    "PMNS_solar_sin2_fixture": 0.053919695443884454,
+    "Jarlskog_fixture": 0.010885638273637678,
+    "conclusion": "Exact identical-alignment CKM=PMNS toy yields contradicted solar prediction; independent flavor rotations and physical mass operators remain needed"
+  },
+  "scale": {
+    "invariance": "H->sH,T->sT,t->t/s leaves normalized Gibbs distributions and phases unchanged",
+    "continuous_gauge_normalization": "g arbitrary unless Maxwell F² coefficient and physical charge normalized",
+    "conclusion": "No absolute c, G, hbar, masses or gravitational scales inferred from incidence alone"
+  },
+  "multiple_testing": {
+    "weak_reference": 0.23122,
+    "weak_W33": "3/13+1/2200",
+    "weak_W33_sigma": 0.12587412587343008,
+    "closest_local_rational_b_le_1000": "197/852",
+    "closest_local_rational_sigma": 0.021909233176760818,
+    "tested_local_reduced_rationals_b_le_1000": 1820,
+    "uniform_independent_null_M_1e6_probability": 0.9994751909481437,
+    "warning": "Uniform independent candidate null is sensitivity-only; adaptive correlated W33 search cannot be assigned this p-value"
+  },
+  "scope": "CI verified numerical and code facts; does not prove a TOE, a new particle-physics constant, complete semantic conflict resolution or any prospective physics result."
+}
