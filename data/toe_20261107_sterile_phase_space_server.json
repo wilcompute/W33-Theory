@@ -1,0 +1,178 @@
+{
+  "status": "PASS_INDEPENDENT_SERVER_POSITIVE_KINETIC_INTEGRATOR",
+  "execution": "Actual functions.exec server V8; independent Newton-Legendre quadrature and positive exponential midpoint. No PC Python calls.",
+  "input_source": "data/toe_20261106_sterile_parent_consistency.json, first two stored points; new family uses declared mass/clock inputs",
+  "rows": [
+    {
+      "M_keV": 16,
+      "m_S_GeV": 3000,
+      "initial_scalar": "zero",
+      "nq": 48,
+      "steps": 4096,
+      "omega_h2": 0.12993716140974987,
+      "mean_q": 2.9568936435785393,
+      "rms_q": 3.337057315747252,
+      "remaining_scalar_Y": 1.6238477938918581e-52,
+      "parameters": {
+        "M": 16,
+        "mS": 3000,
+        "w": 671.1937248691195,
+        "y": 2.3838125130147706e-8,
+        "lam": 6.860038941628162e-7,
+        "A": 0.11246052632530107,
+        "DN": 0.002680531288971498,
+        "DH": 0.22223533599816567
+      }
+    },
+    {
+      "M_keV": 16,
+      "m_S_GeV": 3000,
+      "initial_scalar": "thermal_MB",
+      "nq": 48,
+      "steps": 4096,
+      "omega_h2": 0.3374244067054777,
+      "mean_q": 2.60064378157255,
+      "rms_q": 2.9905316084442104,
+      "remaining_scalar_Y": 1.6238477938918581e-52,
+      "parameters": {
+        "M": 16,
+        "mS": 3000,
+        "w": 671.1937248691195,
+        "y": 2.3838125130147706e-8,
+        "lam": 6.860038941628162e-7,
+        "A": 0.11246052632530107,
+        "DN": 0.002680531288971498,
+        "DH": 0.22223533599816567
+      }
+    },
+    {
+      "M_keV": 16,
+      "m_S_GeV": 10000,
+      "initial_scalar": "zero",
+      "nq": 48,
+      "steps": 4096,
+      "omega_h2": 0.4439215122599581,
+      "mean_q": 5.971305571658561,
+      "rms_q": 6.619130393815958,
+      "remaining_scalar_Y": 8.298670825778957e-47,
+      "parameters": {
+        "M": 16,
+        "mS": 10000,
+        "w": 367.62794356673294,
+        "y": 4.3522262874708903e-8,
+        "lam": 0.0000016923322862821527,
+        "A": 0.2053238903242365,
+        "DN": 0.002680531288971497,
+        "DH": 0.010955097594084168
+      }
+    },
+    {
+      "M_keV": 16,
+      "m_S_GeV": 10000,
+      "initial_scalar": "thermal_MB",
+      "nq": 48,
+      "steps": 4096,
+      "omega_h2": 3.4448519567097784,
+      "mean_q": 6.011720984216032,
+      "rms_q": 6.6735931804097826,
+      "remaining_scalar_Y": 6.7364064737208826e-46,
+      "parameters": {
+        "M": 16,
+        "mS": 10000,
+        "w": 367.62794356673294,
+        "y": 4.3522262874708903e-8,
+        "lam": 0.0000016923322862821527,
+        "A": 0.2053238903242365,
+        "DN": 0.002680531288971497,
+        "DH": 0.010955097594084168
+      }
+    }
+  ],
+  "reopened": [
+    {
+      "M_keV": 16,
+      "m_S_GeV": 1000,
+      "initial_scalar": "zero",
+      "nq": 48,
+      "steps": 4096,
+      "omega_h2": 0.12038522465038291,
+      "mean_q": 2.6112202413066643,
+      "rms_q": 3.0406757664465403,
+      "remaining_scalar_Y": 1.6402661845723508e-52,
+      "parameters": {
+        "M": 16,
+        "mS": 1000,
+        "w": 1161.4465428157102,
+        "y": 1.3775924599345733e-8,
+        "lam": 1.930917952830858e-7,
+        "A": 0.026729808371673134,
+        "DN": 0.002685588444467015,
+        "DH": 1.4234887301914663
+      }
+    },
+    {
+      "M_keV": 30,
+      "m_S_GeV": 1000,
+      "initial_scalar": "zero",
+      "nq": 48,
+      "steps": 4096,
+      "omega_h2": 0.1200649500636668,
+      "mean_q": 3.0463744995303434,
+      "rms_q": 3.4197758520003765,
+      "remaining_scalar_Y": 1.6326275392076256e-52,
+      "parameters": {
+        "M": 30,
+        "mS": 1000,
+        "w": 2974.9174131974714,
+        "y": 1.008431355671003e-8,
+        "lam": 2.9431503203230116e-8,
+        "A": 0.0006210021339974837,
+        "DN": 0.00143909885400556,
+        "DH": 0.21697148271354852
+      }
+    },
+    {
+      "M_keV": 100,
+      "m_S_GeV": 1000,
+      "initial_scalar": "zero",
+      "nq": 48,
+      "steps": 4096,
+      "omega_h2": 0.12000149991854568,
+      "mean_q": 8.461533789706587,
+      "rms_q": 9.332888374654333,
+      "remaining_scalar_Y": 4.168089733774856e-26,
+      "parameters": {
+        "M": 100,
+        "mS": 1000,
+        "w": 17530.23832104613,
+        "y": 5.704429008243649e-9,
+        "lam": 8.475915746394e-10,
+        "A": 5.150406013591781e-7,
+        "DN": 0.0004604922280824201,
+        "DH": 0.006248515388940057
+      }
+    }
+  ],
+  "refined_branch16": {
+    "M_keV": 16,
+    "m_S_GeV": 1000,
+    "initial_scalar": "zero",
+    "nq": 64,
+    "steps": 8192,
+    "omega_h2": 0.12038799380518232,
+    "mean_q": 2.6112480549040322,
+    "rms_q": 3.0407096408707153,
+    "remaining_scalar_Y": 1.5074818431454115e-52,
+    "parameters": {
+      "M": 16,
+      "mS": 1000,
+      "w": 1161.4465428157102,
+      "y": 1.3775924599345733e-8,
+      "lam": 1.930917952830858e-7,
+      "A": 0.026729808371673134,
+      "DN": 0.002685588444467015,
+      "DH": 1.4234887301914663
+    }
+  },
+  "scope": "Same classical collision truncation as PC: contact annihilation, elastic bath scattering, bath decays/inverse decays and one-way sterile decays. Finite-temperature masses, quantum factors, varying degrees of freedom, NN backreaction, scalar self interactions, UV protection and cosmological transfer function absent. Numerical agreement does not validate those missing physical assumptions."
+}

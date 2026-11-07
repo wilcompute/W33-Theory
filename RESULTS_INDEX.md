@@ -22,9 +22,9 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **13794** files; **18669** distinctive results
+Indexed **13797** files; **18671** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
-**8137** appear in exactly one file — the sharpest signal.
+**8136** appear in exactly one file — the sharpest signal.
 
 ## Index
 
@@ -4434,7 +4434,8 @@ Indexed **13794** files; **18669** distinctive results
 | `20261028` | `analysis/2026-10-28_f2_klein_native_gauge_bridge.md` · `analysis/2026-10-28_five_fronts_followup.md` · `analysis/2026-10-28_round12_five_frontiers.md` · `analysis/2026-10-28_six_term_native_bloch_repair.md` · *(+14)* |
 | `20261038` | `analysis/w33_20261008_tetraquadric_explicit_smooth_modular_search.py` |
 | `20261101` | `analysis/2026-11-01_five_plus_three_w33_physics_continuation.md` · `analysis/2026-11-01_native_measurements_controls_and_quantum_geometry.md` · `analysis/w33_20261101_common_cubic_spinor_extension.py` · `analysis/w33_20261101_five_plus_three.py` · *(+9)* |
-| `20261106` | `analysis/2026-11-06_sterile_parent_and_changed_work_audit.md` · `analysis/SUMMARY_PASSES_12620_12628.md` · `analysis/toe_20261105_readout_decoder_error_exponents_hardware_guard.py` · `analysis/toe_20261106_sterile_parent_consistency.py` · *(+1)* |
+| `20261106` | `analysis/2026-11-06_sterile_parent_and_changed_work_audit.md` · `analysis/SUMMARY_PASSES_12620_12628.md` · `analysis/toe_20261105_readout_decoder_error_exponents_hardware_guard.py` · `analysis/toe_20261106_sterile_parent_consistency.py` · *(+2)* |
+| `20261107` | `analysis/2026-11-07_inverse_higgs_production_and_sterile_spectra.md` · `analysis/toe_20261107_sterile_phase_space.py` · `analysis/toe_20261107_sterile_phase_space_validation.py` |
 | `20262000` | `analysis/2026_11_03_csg_action_heldout.py` |
 | `20481813` | `analysis/PASS2560_2567_SEVEN_FRONTIERS_RELEASE.md` |
 | `20544048` | `analysis/w33_pass5430_q3_radius10_false_vote4_frontier.py` |
@@ -10984,7 +10985,7 @@ Indexed **13794** files; **18669** distinctive results
 | `30028` | `w33_paper_body.tex` |
 | `30030` | `analysis/PASS12346_RECOVERED_TORSION_AND_REPAIR.md` · `analysis/w33_pass12346_torsion_repair_certificate.py` |
 | `30042` | `analysis/w33_pass1907_1911_verify_frozen_v2.py` |
-| `30100` | `analysis/2026-11-03_toe_physical_completion.md` |
+| `30100` | `analysis/2026-11-03_toe_physical_completion.md` · `analysis/2026-11-07_inverse_higgs_production_and_sterile_spectra.md` |
 | `30103` | `analysis/PASS12021_12025_UV_CURVATURE_THRESHOLDS_AND_HOLONOMY.md` · `analysis/PASS12026_12033_THETA_SOFT_HEAT_AND_DETERMINANT_TOPOLOGY.md` |
 | `30104` | `analysis/w33_pass5264_hoffman13_cell_decomposition.py` |
 | `30109` | `analysis/toe_20261105_a5_tetrad_orbits_bhattacharyya.py` |
@@ -14668,6 +14669,7 @@ Indexed **13794** files; **18669** distinctive results
 | `3861` | `manuscripts/tex/part20_cyclic_number.tex` |
 | `3865` | `analysis/w33_BREAKTHROUGH_102_interpretive_descent_prelogical.py` |
 | `3867` | `analysis/2026-10-13_toe57_five_physics_native_gauge_fermionic_flux.md` |
+| `3869` | `analysis/2026-11-07_inverse_higgs_production_and_sterile_spectra.md` · `analysis/toe_20261107_sterile_phase_space.py` |
 | `3871` | `analysis/BT3871_BT3886_eight_front_closure.md` · `analysis/BT3887_BT3904_unmarked_wedderburn_monster_fouraxis_order192.md` · `analysis/bt3871_3886_eight_front_closure.py` · `analysis/w33_pass3887_3904_unmarked_wedderburn_monster_fouraxis_order192.py` |
 | `3872` | `analysis/BT3871_BT3886_eight_front_closure.md` |
 | `3873` | `analysis/BT3871_BT3886_eight_front_closure.md` |
@@ -18477,7 +18479,7 @@ Indexed **13794** files; **18669** distinctive results
 | `697` | `analysis/THEORY_OF_EVERYTHING.py` · `analysis/bt697_chart_intersection_graph_theorem.py` · `analysis/bt700_chart_overlap_idempotent_extraction.py` · `analysis/w33_pass5198_q5_leader34_full_apartment_cubic_correction.py` · *(+3)* |
 | `698` | `_jclosure_bundle/w33_grade2_j_closure_20260330/outputs/grade2_j_report.md` · `analysis/PASS_725_CLAY_MILLENNIUM_PRIZE.md` · `analysis/THEORY_OF_EVERYTHING.py` · `analysis/bt698_fibonacci_functor_prototype.py` · *(+1)* |
 | `699` | `analysis/2026-08-29_EIGHT_FRONT_RECONCILIATION_ADDENDUM.md` · `analysis/BT1831_1835_execute_all_five.md` · `analysis/BT2410_BT2415_five_frontiers.md` · `analysis/BT2809_BT2815_seven_frontiers.md` · *(+11)* |
-| `701` | `analysis/2026-10-13_toe53_five_fronts_clock_photonic_spectroscopy.md` · `analysis/PASS_725_CLAY_MILLENNIUM_PRIZE.md` · `analysis/THEORY_OF_EVERYTHING.py` · `analysis/bt1735_hesse_fano_8cycle_descent.py` · *(+6)* |
+| `701` | `analysis/2026-10-13_toe53_five_fronts_clock_photonic_spectroscopy.md` · `analysis/PASS_725_CLAY_MILLENNIUM_PRIZE.md` · `analysis/THEORY_OF_EVERYTHING.py` · `analysis/bt1735_hesse_fano_8cycle_descent.py` · *(+7)* |
 | `703` | `analysis/BT706_chart81_to_levi_e4_overlap_test.md` · `analysis/PASS11158_PERFECT_THREE_QUTRIT_GATES.md` · `analysis/PASS11204_SECOND_LAW_COUNTING.md` · `analysis/PASS11373_THREE_QUTRIT_EXACT_FRACTION.md` · *(+17)* |
 | `705` | `analysis/2026-10-09_five_frontiers_round10.md` · `analysis/BT705_fano_tomotope_selector_theorem.md` · `analysis/BT706_chart81_to_levi_e4_overlap_test.md` · `analysis/BT708_selector_bridge_synthesis.md` · *(+19)* |
 | `706` | `analysis/BT706_chart81_to_levi_e4_overlap_test.md` · `analysis/BT708_selector_bridge_synthesis.md` · `analysis/BT715_chart81_levi_e4_comparison.md` · `analysis/BT739_aggregate_parity_bridge_theorem.md` · *(+6)* |

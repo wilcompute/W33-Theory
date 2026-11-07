@@ -1,0 +1,127 @@
+{
+  "status": "COMPLETED_TARGETED_PRECONSTRUCTION_SEARCH_NOT_NOVELTY_PROOF",
+  "UTC": "2026-11-07T00:51:05.768571+00:00",
+  "queries": [
+    {
+      "pattern": "sterile.*(Boltzmann|solve_ivp|Radau|kinetic)",
+      "exit_code": 0,
+      "paths": [
+        "analysis\\2026-11-06_sterile_parent_and_changed_work_audit.md",
+        "data\\toe_20261106_changed_work_intake.json",
+        "analysis\\SUMMARY_PASSES_12620_12628.md"
+      ],
+      "stderr": ""
+    },
+    {
+      "pattern": "(dY_S|dYS|Yeq.*Gamma|Gamma.*Yeq)",
+      "exit_code": 0,
+      "paths": [
+        "RESULTS_INDEX.md",
+        "docs\\404.html",
+        "data\\bt1300_oscillator_instruction_isa.json",
+        "data\\bt1405_continuous_q6_path_router.json",
+        "data\\bt1447_otto_actual_equation_extraction.json",
+        "docs\\exceptional-geometry-41a8d733.html",
+        "data\\bt1702_holonet_scheduler_collision_audit.json",
+        "docs\\full-site-2026-08-06.html",
+        "data\\dccii_holonomy_remote_bipartite_frontier_bridge.json",
+        "data\\dcci_holonomy_active_sector_trisection_frontier_bridge.json",
+        "data\\dccxlvii_nilpotent_ward_recursion_bridge.json",
+        "data\\dcmlxxxiii_bass_cnub_entropy_branch_selector.json",
+        "data\\PART_BT2967_OPTIMAL_INFORMATION_SYSTEM_results.json",
+        "analysis\\bt1300_oscillator_instruction_isa.py",
+        "data\\PART_W33_PASS6104_6111_THE_SUBSTRATE_HAS_A_CANONICAL_CHIRALITY.json",
+        "data\\rediscovery_sweep.json",
+        "data\\w33_20261008_six_toe_frontier_followthrough.json",
+        "data\\w33_20261010_toe33_joint_spacetime_decoder.json",
+        "analysis\\BT1701_BT1703_holonet_runtime_safety.md",
+        "analysis\\bt1702_holonet_scheduler_collision_audit.py",
+        "data\\w33_BREAKTHROUGH_326_random_matrix_theory_substrate.json",
+        "data\\w33_fractal_nested_dyson_spheres.json",
+        "data\\w33_pass10944_five_front_computational_closure.json",
+        "data\\w33_pass10943_protected_metaplectic_five_front.json",
+        "data\\w33_pass11282_all_modulus_radial_self_energy.json",
+        "data\\w33_pass11277_radial_momentum_pole.json",
+        "analysis\\bt2967_2973_optimal_information_system.py",
+        "analysis\\PASS11275_11279_LOCAL_HIGGS_POLES_AND_GEOMETRY.md",
+        "analysis\\PASS11353_LEVEL_STATISTICS.md",
+        "analysis\\PASS11335_11341_ISOTROPIC_FLAVOR_NATIVE_FRAMES_AND_WALL_MODES.md",
+        "data\\w33_pass407_single_slip_decoder_q3.json",
+        "analysis\\THEORY_OF_EVERYTHING.py",
+        "analysis\\verify_dccxlvii_nilpotent_ward_recursion_bridge.py",
+        "analysis\\verify_dcci_holonomy_active_sector_trisection_frontier_bridge.py",
+        "analysis\\verify_dccii_holonomy_remote_bipartite_frontier_bridge.py",
+        "analysis\\verify_dcmlxxxiii_bass_cnub_entropy_branch_selector.py",
+        "data\\w33_pass500_galois_phase_cycle_compiler.json",
+        "data\\w33_pass610_optimal_wilson_inference.json",
+        "analysis\\w33_20261008_six_toe_frontier_followthrough.py",
+        "data\\w33_photon_geon_dyson_sphere.json",
+        "analysis\\w33_20261010_toe33_joint_spacetime_decoder.py",
+        "data\\w33_selector_tomotope_orientation_quotient.json",
+        "data\\w33_single_photon_timebin_recursion_guard_ice40_20261023.json",
+        "data\\w33_pass_namespace_registry_v2.d\\4097-4104.json",
+        "analysis\\w33_20261014_toe75_exact_120_flux.py",
+        "data\\w33_walsh_qutrit_frame_ice40_20261023.json",
+        "analysis\\w33_BREAKTHROUGH_326_random_matrix_theory_substrate.py",
+        "analysis\\w33_fractal_nested_dyson_spheres.py",
+        "analysis\\w33_MDCCCCXCIII_MM_biology_neuro_anatomy_substrate.py",
+        "analysis\\w33_pass10943_protected_metaplectic_five_front.py",
+        "analysis\\w33_pass10944_five_front_computational_closure.py",
+        "analysis\\w33_pass11282_all_modulus_radial_self_energy.py",
+        "analysis\\w33_pass11277_radial_momentum_pole.py",
+        "analysis\\w33_pass500_galois_phase_cycle_compiler.py",
+        "analysis\\w33_pass610_optimal_wilson_inference.py",
+        "analysis\\w33_photon_geon_dyson_sphere.py",
+        "analysis\\w33_qutrit_t_teleportation_port.py",
+        "analysis\\w33_rtl_microsequencer_refinement.py",
+        "analysis\\w33_selector_tomotope_orientation_quotient.py",
+        "analysis\\w33_snapshot_admission_certificate.json",
+        "analysis\\w33_snapshot_admission_scheduler.py",
+        "analysis\\w33_universal_to_holonet_refinement.py",
+        "analysis\\w33_wasm3_frontend.py"
+      ],
+      "stderr": ""
+    },
+    {
+      "pattern": "(sterile_boltzmann|sterile_kinetic)",
+      "exit_code": 1,
+      "paths": [],
+      "stderr": ""
+    },
+    {
+      "pattern": "Gamma_hh",
+      "exit_code": 0,
+      "paths": [
+        "data\\toe_20261106_changed_work_intake.json",
+        "analysis\\toe_uv\\sterile_hh.json",
+        "analysis\\toe_uv\\sterile_hh.py"
+      ],
+      "stderr": ""
+    }
+  ],
+  "scope": "rg -l case-insensitive over py/md/json/tex/html in RESULTS_INDEX,analysis,data,papers,docs; max2MB per file; each query completed. Generic dYS expression also matches Dyson/unrelated identifiers; these hits are not sterile-production certificates. No absence-based theorem or new kinetic-theory priority claimed.",
+  "prior_owners": [
+    "analysis/2026-11-06_sterile_parent_and_changed_work_audit.md",
+    "analysis/toe_20261106_sterile_parent_consistency.py",
+    "analysis/toe_uv/sterile_hh.py",
+    "analysis/toe_uv/sterile_hh.json",
+    "analysis/SUMMARY_PASSES_12620_12628.md"
+  ],
+  "prior_review": "Current AGENTS read; GitKraken fetched and reviewed master3869fe29c. Continuity MCP instance returned0 decisions for project mirror, so actual repo SESSION_NOTES/CLI fallback used. Recent reports and actual sterile_hh source/certificate read; no new incoming commits through latest fetch.",
+  "source_reading": {
+    "primary_URL": "https://arxiv.org/pdf/1502.01011",
+    "primary_download_sha256": "e1701610e72b23416f0fab14f61a44bfbc328df5220dfdd191f69665692309e2",
+    "selected_full_text_PDF_pages": [
+      10,
+      39,
+      40,
+      41
+    ],
+    "rendered_inspected_PDF_pages": [
+      40
+    ],
+    "scope": "Selected kinetic and invariant phase-space sections, not whole external paper. Earlier1609.01289 transfer-function caveat and0911.1120 freeze-in yield already read."
+  },
+  "new_use": "Compute an explicitly normalized contact/elastic/inverse-decay momentum benchmark on current repo inputs and examine a conditional inverse-production family outside the old annihilation-only floor. These mechanisms and integrated branching logic are established physics.",
+  "manuscript_coverage": "Cumulative full extracted text pages1-72of215 in papers/forty_points/main.pdf; exhaustive weekly/PDF reading remains incomplete."
+}

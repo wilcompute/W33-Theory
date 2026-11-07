@@ -1,0 +1,300 @@
+{
+  "status": "PASS_27_FULL_CASES_11_QUICK_CASES_13_TESTS_AND_REFINEMENT",
+  "UTC": "2026-11-07T00:53:53.440117+00:00",
+  "runs": [
+    {
+      "args": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/toe_20261107_sterile_phase_space.py"
+      ],
+      "exit_code": 0,
+      "seconds": 27.712327899993397,
+      "stdout": "16 3000 0.0 zero Omega 0.129816032627795 q 3.002242089110577 balance -6.086122738833241e-08\n16 3000 0.0 thermal_MB Omega 0.36157257634181983 q 2.636510534697806 balance -3.535126767492378e-08\n16 3000 0.5 zero Omega 0.12993824967223 q 2.956900320596873 balance -6.34357348012198e-08\n16 3000 0.5 thermal_MB Omega 0.3374261598765918 q 2.6006492397028107 balance -3.1119135299705644e-08\n16 3000 1.0 zero Omega 0.13003837496662227 q 2.9147233347240213 balance -6.179944033416097e-08\n16 3000 1.0 thermal_MB Omega 0.31564304498879164 q 2.569057238275991 balance -3.0680143321807083e-08\n16 10000 0.0 zero Omega 0.3735775379108387 q 7.479266913830234 balance -1.4486187975255145e-07\n16 10000 0.0 thermal_MB Omega 6.008682660975243 q 7.526332745381117 balance 1.0133253983194858e-09\n16 10000 0.5 zero Omega 0.4439253485179488 q 5.971323202260841 balance -1.21050056217241e-07\n16 10000 0.5 thermal_MB Omega 3.444862669656282 q 6.011735619856015 balance 8.45701507704227e-09\n16 10000 1.0 zero Omega 0.4744412746271408 q 4.705454339309786 balance -5.714647549489552e-08\n16 10000 1.0 thermal_MB Omega 1.8063680202220258 q 4.737239230438632 balance -1.375042148293283e-09\n18 10000 0.0 zero Omega 0.32690945023644297 q 6.8133355768391235 balance -1.2663383498792873e-07\n18 10000 0.0 thermal_MB Omega 4.855298029904031 q 6.833500453478257 balance 3.0586694070003617e-09\n18 10000 0.5 zero Omega 0.3503339345577351 q 6.048229217018781 balance -1.1620864442688197e-07\n18 10000 0.5 thermal_MB Omega 3.6265388827118357 q 6.064869971151932 balance 1.0131027115948109e-08\n18 10000 1.0 zero Omega 0.367447933174345 q 5.354134755177294 balance -1.0106932887611113e-07\n18 10000 1.0 thermal_MB Omega 2.6551850926771374 q 5.367036377877804 balance 9.607169759955674e-09\n20 10000 0.0 zero Omega 0.2863684935017478 q 6.20031787846018 balance -1.102487491900024e-07\n20 10000 0.0 thermal_MB Omega 3.8864383237523046 q 6.188880694932001 balance 1.1588685109943398e-08\n20 10000 0.5 zero Omega 0.2880511580892301 q 6.1211864397487785 balance -1.069619707432485e-07\n20 10000 0.5 thermal_MB Omega 3.765890015794614 q 6.109279476538464 balance 1.202759384096647e-08\n20 10000 1.0 zero Omega 0.2896845010188269 q 6.042919069684772 balance -1.0608672860086361e-07\n20 10000 1.0 thermal_MB Omega 3.6483718423177205 q 6.030541741817518 balance 6.730880325156536e-09\nINVERSE_BRANCH 16.0 Omega 0.12038891686023159 lambdaS 0.3706564425133963 portal 1.930917952830858e-07\nINVERSE_BRANCH 30.0 Omega 0.12006592924510877 lambdaS 0.05649632217224762 portal 2.9431503203230116e-08\nINVERSE_BRANCH 100.0 Omega 0.12000193119535503 lambdaS 0.0016270255155045813 portal 8.475915746394e-10\nPASS_DECLARED_MOMENTUM_RESOLVED_CLASSICAL_COLLISION_BENCHMARK\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-u",
+        "analysis/toe_20261107_sterile_phase_space.py",
+        "--quick"
+      ],
+      "exit_code": 0,
+      "seconds": 8.029026299947873,
+      "stdout": "16 3000 0.5 zero Omega 0.12993823529727888 q 2.9568998372415263 balance -1.3728418711496915e-07\n16 3000 0.5 thermal_MB Omega 0.3374261390579252 q 2.600648757680695 balance -8.247286364496348e-08\n16 10000 0.5 zero Omega 0.44392510748910213 q 5.971319447977111 balance -3.8699013627563465e-07\n16 10000 0.5 thermal_MB Omega 3.444862269255539 q 6.011732999154308 balance -4.3327353590830274e-08\n18 10000 0.5 zero Omega 0.3503337659562201 q 6.048226698090847 balance -3.6027436508228993e-07\n18 10000 0.5 thermal_MB Omega 3.626538528465605 q 6.064868021287393 balance -4.384969310540019e-08\n20 10000 0.5 zero Omega 0.288051031913962 q 6.121184709397588 balance -3.30923255978565e-07\n20 10000 0.5 thermal_MB Omega 3.7658898324410544 q 6.109278119683846 balance -2.2181663215144752e-08\nINVERSE_BRANCH 16.0 Omega 0.12038891518823633 lambdaS 0.3706564425133963 portal 1.930917952830858e-07\nINVERSE_BRANCH 30.0 Omega 0.12006592754415639 lambdaS 0.05649632217224762 portal 2.9431503203230116e-08\nINVERSE_BRANCH 100.0 Omega 0.12000192982485608 lambdaS 0.0016270255155045813 portal 8.475915746394e-10\nPASS_DECLARED_MOMENTUM_RESOLVED_CLASSICAL_COLLISION_BENCHMARK\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-m",
+        "pytest",
+        "--noconftest",
+        "-q",
+        "tests/test_toe_20261107_sterile_phase_space.py"
+      ],
+      "exit_code": 0,
+      "seconds": 9.81807200005278,
+      "stdout": ".............                                                            [100%]\n13 passed in 8.77s\n",
+      "stderr": ""
+    }
+  ],
+  "convergence": [
+    {
+      "M_keV": 16,
+      "m_S_GeV": 3000,
+      "initial_scalar": "zero",
+      "base_nq": 96,
+      "fine_nq": 144,
+      "fine_nr": 1801,
+      "relative_changes": {
+        "omega_h2": 1.2307538682492513e-08,
+        "mean_q": 2.9936460101490024e-08,
+        "rms_q": 1.6590099302192775e-08
+      },
+      "max_normalized_histogram_CDF_change": 3.5683251091028956e-06,
+      "fine_summary": {
+        "omega_h2": 0.12993825127145003,
+        "mean_q": 2.9569004091160016,
+        "rms_q": 3.337064945493778,
+        "Y_N": 2.9595993820938878e-05,
+        "scalar_integrated_number_balance_relative_error": -5.152917044204907e-08,
+        "integrated_number_sumrule_relative_error": 3.7862704901996304e-08,
+        "fraction_sterile_number_produced_below_temperature_GeV": {
+          "100.0": 2.2711035075171404e-10,
+          "160.0": 4.014221319383885e-06,
+          "200.0": 0.00010958123055057517
+        },
+        "max_final_bin_averaged_spin_summed_fN": 0.004285009268007389,
+        "fraction_N_in_bins_with_average_fN_above_point1": 0.0
+      }
+    },
+    {
+      "M_keV": 16,
+      "m_S_GeV": 10000,
+      "initial_scalar": "zero",
+      "base_nq": 96,
+      "fine_nq": 144,
+      "fine_nr": 1801,
+      "relative_changes": {
+        "omega_h2": 3.558160550459505e-08,
+        "mean_q": 1.2394010044861263e-07,
+        "rms_q": 1.2266944520291913e-07
+      },
+      "max_normalized_histogram_CDF_change": 1.1151137106784317e-05,
+      "fine_summary": {
+        "omega_h2": 0.4439253643135254,
+        "mean_q": 5.971323942347238,
+        "rms_q": 6.619150742724404,
+        "Y_N": 0.00010111273786295679,
+        "scalar_integrated_number_balance_relative_error": -1.0664156414621095e-07,
+        "integrated_number_sumrule_relative_error": 1.883511058064603e-07,
+        "fraction_sterile_number_produced_below_temperature_GeV": {
+          "100.0": 1.090305154789487e-14,
+          "160.0": 3.0068431320626015e-11,
+          "200.0": 5.008296162042084e-08
+        },
+        "max_final_bin_averaged_spin_summed_fN": 0.004334110043563452,
+        "fraction_N_in_bins_with_average_fN_above_point1": 0.0
+      }
+    },
+    {
+      "M_keV": 16.0,
+      "m_S_GeV": 1000.0,
+      "initial_scalar": "zero",
+      "base_nq": 96,
+      "fine_nq": 144,
+      "fine_nr": 1801,
+      "relative_changes": {
+        "omega_h2": 3.091729545253266e-09,
+        "mean_q": 1.2496282194861753e-09,
+        "rms_q": -2.4245318712331425e-12
+      },
+      "max_normalized_histogram_CDF_change": 8.729301939861462e-06,
+      "fine_summary": {
+        "omega_h2": 0.12038891723244156,
+        "mean_q": 2.611257375426568,
+        "rms_q": 3.0407209986286436,
+        "Y_N": 2.742094506934256e-05,
+        "scalar_integrated_number_balance_relative_error": -1.6583543926136558e-08,
+        "integrated_number_sumrule_relative_error": 4.195422243956896e-09,
+        "fraction_sterile_number_produced_below_temperature_GeV": {
+          "100.0": 0.005411173024788419,
+          "160.0": 0.08711846042077286,
+          "200.0": 0.19871575746565165
+        },
+        "max_final_bin_averaged_spin_summed_fN": 0.010678639654182314,
+        "fraction_N_in_bins_with_average_fN_above_point1": 0.0
+      }
+    },
+    {
+      "M_keV": 30.0,
+      "m_S_GeV": 1000.0,
+      "initial_scalar": "zero",
+      "base_nq": 96,
+      "fine_nq": 144,
+      "fine_nr": 1801,
+      "relative_changes": {
+        "omega_h2": 1.403635396041036e-09,
+        "mean_q": -1.7532659476431725e-10,
+        "rms_q": 6.079466297053707e-10
+      },
+      "max_normalized_histogram_CDF_change": 3.909424927690892e-06,
+      "fine_summary": {
+        "omega_h2": 0.12006592941363756,
+        "mean_q": 3.0463799424241587,
+        "rms_q": 3.4197819938258407,
+        "Y_N": 1.4585268393299024e-05,
+        "scalar_integrated_number_balance_relative_error": -4.1438303854788345e-08,
+        "integrated_number_sumrule_relative_error": 3.005687442523094e-08,
+        "fraction_sterile_number_produced_below_temperature_GeV": {
+          "100.0": 0.009393944969540075,
+          "160.0": 0.2002371205062698,
+          "200.0": 0.4254985570172809
+        },
+        "max_final_bin_averaged_spin_summed_fN": 0.0017427221918806994,
+        "fraction_N_in_bins_with_average_fN_above_point1": 0.0
+      }
+    },
+    {
+      "M_keV": 100.0,
+      "m_S_GeV": 1000.0,
+      "initial_scalar": "zero",
+      "base_nq": 96,
+      "fine_nq": 144,
+      "fine_nr": 1801,
+      "relative_changes": {
+        "omega_h2": 1.414321343706012e-09,
+        "mean_q": 2.2320436763767665e-09,
+        "rms_q": 7.336524646969314e-09
+      },
+      "max_normalized_histogram_CDF_change": 1.212843147130534e-05,
+      "fine_summary": {
+        "omega_h2": 0.12000193136507632,
+        "mean_q": 8.461540488302564,
+        "rms_q": 9.332896218122594,
+        "Y_N": 4.373248227590245e-06,
+        "scalar_integrated_number_balance_relative_error": -4.035045657809289e-08,
+        "integrated_number_sumrule_relative_error": 6.988025194171995e-08,
+        "fraction_sterile_number_produced_below_temperature_GeV": {
+          "100.0": 0.7773467775457806,
+          "160.0": 0.9320731838993596,
+          "200.0": 0.965729444914932
+        },
+        "max_final_bin_averaged_spin_summed_fN": 2.6078238571734847e-05,
+        "fraction_N_in_bins_with_average_fN_above_point1": 0.0
+      }
+    }
+  ],
+  "q_tail_control": {
+    "nq": 144,
+    "qmax": 70,
+    "summary": {
+      "omega_h2": 0.12000193071671515,
+      "mean_q": 8.46154046775008,
+      "rms_q": 9.332896196236854,
+      "Y_N": 4.373248203961922e-06,
+      "scalar_integrated_number_balance_relative_error": -4.345738763786072e-08,
+      "integrated_number_sumrule_relative_error": 7.526093732495093e-08,
+      "fraction_sterile_number_produced_below_temperature_GeV": {
+        "100.0": 0.777346774845122,
+        "160.0": 0.932073183627911,
+        "200.0": 0.96572944490618
+      },
+      "max_final_bin_averaged_spin_summed_fN": 2.6082075827688186e-05,
+      "fraction_N_in_bins_with_average_fN_above_point1": 0.0
+    }
+  },
+  "physical_scope_diagnostics": [
+    {
+      "M_keV": 16.0,
+      "fraction_inverse_hh_equilibrium_gain_below_160GeV": 0.07900733731495416,
+      "production": {
+        "omega_h2": 0.12038891686023159,
+        "mean_q": 2.6112573721634673,
+        "rms_q": 3.040720998636016,
+        "Y_N": 2.7420944984564414e-05,
+        "scalar_integrated_number_balance_relative_error": -1.5425265958369234e-08,
+        "integrated_number_sumrule_relative_error": 3.9024955993220485e-09,
+        "fraction_sterile_number_produced_below_temperature_GeV": {
+          "100.0": 0.005411166387311551,
+          "160.0": 0.08711845040873124,
+          "200.0": 0.1987157501488494
+        },
+        "max_final_bin_averaged_spin_summed_fN": 0.010684036625969081,
+        "fraction_N_in_bins_with_average_fN_above_point1": 0.0
+      },
+      "thermalization_rate_over_H_at_r1": {
+        "annihilation_chemical_linearized": 0.011919956039418148,
+        "inverse_hh_decay": 0.5273188372867125
+      }
+    },
+    {
+      "M_keV": 30.0,
+      "fraction_inverse_hh_equilibrium_gain_below_160GeV": 0.07900733731495416,
+      "production": {
+        "omega_h2": 0.12006592924510877,
+        "mean_q": 3.04637994295827,
+        "rms_q": 3.4197819917467958,
+        "Y_N": 1.4585268372826624e-05,
+        "scalar_integrated_number_balance_relative_error": -3.870790124185743e-08,
+        "integrated_number_sumrule_relative_error": 2.80750824367583e-08,
+        "fraction_sterile_number_produced_below_temperature_GeV": {
+          "100.0": 0.00939392573327994,
+          "160.0": 0.20023712428919735,
+          "200.0": 0.4254985633653209
+        },
+        "max_final_bin_averaged_spin_summed_fN": 0.0017429625806321348,
+        "fraction_N_in_bins_with_average_fN_above_point1": 0.0
+      },
+      "thermalization_rate_over_H_at_r1": {
+        "annihilation_chemical_linearized": 0.000276931208585822,
+        "inverse_hh_decay": 0.08037517091792734
+      }
+    },
+    {
+      "M_keV": 100.0,
+      "fraction_inverse_hh_equilibrium_gain_below_160GeV": 0.07900733731495416,
+      "production": {
+        "omega_h2": 0.12000193119535503,
+        "mean_q": 8.461540469416036,
+        "rms_q": 9.332896149651571,
+        "Y_N": 4.373248221405067e-06,
+        "scalar_integrated_number_balance_relative_error": -3.921403899168465e-08,
+        "integrated_number_sumrule_relative_error": 6.791128553113953e-08,
+        "fraction_sterile_number_produced_below_temperature_GeV": {
+          "100.0": 0.7773467775639451,
+          "160.0": 0.9320731838866373,
+          "200.0": 0.9657294448502208
+        },
+        "max_final_bin_averaged_spin_summed_fN": 2.6084413381154434e-05,
+        "fraction_N_in_bins_with_average_fN_above_point1": 0.0
+      },
+      "thermalization_rate_over_H_at_r1": {
+        "annihilation_chemical_linearized": 2.296784638838998e-07,
+        "inverse_hh_decay": 0.002314707380381446
+      }
+    }
+  ],
+  "source_raw_sha256": {
+    "analysis/toe_20261107_sterile_phase_space.py": "8ec1ff4479322c47eeefbb9b18176aa5785a0a0a6b0a9db416a87da51622cc0e",
+    "analysis/toe_20261107_sterile_phase_space_server.js": "79bfca9f90e4fba9c6f61510eaa06db7622e57f3c90be649d7a97e63be210caa",
+    "analysis/toe_20261107_sterile_phase_space_validation.py": "d372a63a9a10bb97a117fd561a353b85d379f1c28d0db5c78cf42fa366377b9f",
+    "tests/test_toe_20261107_sterile_phase_space.py": "951721687f8981df074bdb9c0ea721b0ffec401946355d2aade38a061c3ba0be"
+  },
+  "input_raw_sha256": {
+    "data/toe_20261106_sterile_parent_consistency.json": "6dfcdcec8c63a366bb812f79affbf00cf91d4b418c6b1496c6faf240dfaa46a5",
+    "analysis/toe_uv/sterile_hh.py": "909710d73fbdbf5ab06915bcc79f3eb51eeb63e785213208fbe0606f3f6fb2a3",
+    "analysis/toe_uv/sterile_hh.json": "bcea64eb18f01f083f2677e45438d41cb7d058bdc666734a21177e8bbe3d07ef"
+  },
+  "output_raw_sha256": {
+    "data/toe_20261107_sterile_phase_space.json": "4e03b3494c9dbf27b6a8b64991206c72050db3bf3349a24d8e9e7e90a96647f7",
+    "data/toe_20261107_sterile_phase_space_quick.json": "70e2ade6a72d702c94d97bc62a518b3717913f34fd95786574eacf97da92bebf",
+    "data/toe_20261107_sterile_phase_space_server.json": "9e3f963f12ac8352ad059c8f05c0534cbd890704a7317014912168739a77f038",
+    "data/toe_20261107_sterile_phase_space_spectra.png": "d92bc17b55c4d536dfc40cfdc0d797aa193c3e52ec9bcefc9b750050a2ac3326"
+  },
+  "source_search": "Targeted repo result search completed before source creation; generic methods are published kinetic theory. Actual server positive integrator independently checks PC BDF results.",
+  "hardware": "Remote Desktop Commander checked offline; Python used available local exec while actual server V8 independently computed four old histories, three inverse families and a refinement.",
+  "limits": "Numerical convergence within the declared classical fixed-g collision model. Thermal corrections, entropy evolution, UV stability/protection and self-collisions remain open; never infer a viable TOE, precise abundance prediction or Ly-alpha exclusion from these passing checks."
+}
