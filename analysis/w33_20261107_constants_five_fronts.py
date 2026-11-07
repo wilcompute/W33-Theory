@@ -209,7 +209,7 @@ def multiplicity():
                              "Retrospectively selected W33 formulas have no valid postselection p-value. "
                              "All candidates, aliases, scales and corrections must enter the frozen family."}
 
-def provenance(root:Path,max_bytes=1_500_000,max_files=0):
+def provenance(root:Path,max_bytes=0,max_files=0):
     """File/line provenance across text in the checkout; false positives retained."""
     pat={key:re.compile(expr,re.I) for key,expr in TOKENS.items()}
     occurrences={key:[] for key in TOKENS}
@@ -223,26 +223,33 @@ def provenance(root:Path,max_bytes=1_500_000,max_files=0):
             file_count+=1
             if max_files and file_count>max_files:break
             try:
-                if path.stat().st_size>max_bytes:oversized+=1;continue
+                if max_bytes and path.stat().st_size>max_bytes:oversized+=1;continue
                 with path.open(encoding="utf-8",errors="replace") as handle:
                     files_scanned+=1
                     for lineno,line in enumerate(handle,1):
-                        if len(line)>50000:continue
-                        if not re.search(r"=|≈|\\approx|\\simeq",line):continue
-                        if not re.search(r"\d",line):continue
-                        names=[key for key,regex in pat.items() if regex.search(line)]
-                        if not names:continue
-                        rel=path.relative_to(root).as_posix()
-                        # Syntactic key only. Different strings need not disagree.
-                        norm=re.sub(r"\s+","",line).strip()[:280]
-                        digest=hashlib.sha256(norm.encode()).hexdigest()[:16]
-                        for key in names:
-                            d=variants[key]
-                            d[digest]=d.get(digest,0)+1
-                            if len(occurrences[key])<12:
-                                occurrences[key].append({"path":rel,"line":lineno,
-                                                         "text":line.strip()[:220],
-                                                         "variant_id":digest})
+                        # Stream oversized JSON/TeX lines in bounded overlapping windows.
+                        # Archive and data files are included by default; any explicit
+                        # size cap must be requested by the caller.
+                        if len(line)>50000:
+                            segments=(line[i:i+20500] for i in range(0,len(line),20000))
+                        else:
+                            segments=(line,)
+                        for segment in segments:
+                            if not re.search(r"=|≈|\\approx|\\simeq",segment):continue
+                            if not re.search(r"\d",segment):continue
+                            names=[key for key,regex in pat.items() if regex.search(segment)]
+                            if not names:continue
+                            rel=path.relative_to(root).as_posix()
+                            # Syntactic key only. Different strings need not disagree.
+                            norm=re.sub(r"\s+","",segment).strip()[:280]
+                            digest=hashlib.sha256(norm.encode()).hexdigest()[:16]
+                            for key in names:
+                                d=variants[key]
+                                d[digest]=d.get(digest,0)+1
+                                if len(occurrences[key])<12:
+                                    occurrences[key].append({"path":rel,"line":lineno,
+                                                             "text":segment.strip()[:220],
+                                                             "variant_id":digest})
             except (OSError,UnicodeError):
                 continue
         if max_files and file_count>max_files:break
@@ -258,12 +265,12 @@ def provenance(root:Path,max_bytes=1_500_000,max_files=0):
                     "and false positives. A variant is a line signature, not a theorem "
                     "or distinct semantic expression. Verify each origin before promotion."}
 
-def evaluate(root=None,scan=True,max_files=0):
+def evaluate(root=None,scan=True,max_files=0,max_bytes=0):
     output={"schema":SCHEMA,
             "basis":{"q":3,"v":40,"k":12,"lambda":2,"mu":4},
             "EM":electromagnetic(),"flavor":flavor(),
             "scale":scale(),"multiple_testing":multiplicity(),
-            "provenance":provenance(Path(root),max_files=max_files) if scan and root else
+            "provenance":provenance(Path(root),max_files=max_files,max_bytes=max_bytes) if scan and root else
                          {"status":"not_run_requires_full_checkout"},
             "scope":"Reanalysis of existing source formulas and explicit new conditional "
                     "falsifiers. No new physical TOE constant, laboratory measurement "
@@ -275,9 +282,12 @@ def main():
     ap.add_argument("--root",default=".")
     ap.add_argument("--no-scan",action="store_true")
     ap.add_argument("--max-files",type=int,default=0)
+    ap.add_argument("--max-file-bytes",type=int,default=0,
+                    help="Optional explicit cap; 0 scans all sizes")
     ap.add_argument("--output",default="data/w33_20261107_constants_five_fronts.json")
     args=ap.parse_args()
-    out=evaluate(args.root,scan=not args.no_scan,max_files=args.max_files)
+    out=evaluate(args.root,scan=not args.no_scan,max_files=args.max_files,
+                 max_bytes=args.max_file_bytes)
     target=Path(args.output);target.parent.mkdir(parents=True,exist_ok=True)
     target.write_text(json.dumps(out,indent=2,sort_keys=True)+"\n",encoding="utf-8")
     print(json.dumps({"status":"PASS","output":str(target),
