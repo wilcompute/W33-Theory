@@ -53,3 +53,22 @@ That is stronger than their ε ≲ 10⁻¹² perturbative-control bound. They su
 ## Sources
 
 arXiv:2503.16415, 2607.16191 (Khoury, Lin and Trodden); 2610.30253 (cyclic partners, via Chat); 1605.00996 (DHK); 2604.09141 (Shiu, Tonioni and Tran); 2507.16970 (monodromic dark energy); 2511.23463 (axion–dilaton); Chat's `analysis/2026-11-08_physical_axion_modes_and_cyclic_protection.md`.
+
+## Addendum: shear joint refit of c > 0, and which qutrit symplectic group holds N ≥ 21
+
+**c > 0 joint refit including DES Y3 shear (`des_joint_cpos.py`):**
+- Total χ² 2457.70 (c = 0.68, c′ = 0.053, S8 = 0.820), against 2456.22 for c < 0.
+- With shear in, c < 0 leads by **1.5**, down from 2.0–2.3 without shear. After refitting, shear itself prefers c > 0 by 0.8 (202.54 against 203.34).
+- The corresponding odds give P(c > 0) ≈ 0.3. **The sign remains undetermined.**
+
+**Element orders of Sp(2n, 3)** (`sp_orders.py`, random products of symplectic transvections, symplecticity asserted):
+
+| group | orders found | max found |
+|---|---|---:|
+| Sp(4,3) (two qutrits, W(3,3)) | 1–6, 8, 9, 10, 12, 18 | **18** (control: matches the repo and Chat 75f2a7e02) |
+| Sp(6,3) (three qutrits) | … 20, 24, 26, 28, 30, **36** | **36** |
+
+- Three qutrits host cyclic elements of order 24, 26 (= 3³ − 1), 28 (= 3³ + 1), 30 and 36, all at or above the N ≥ 21 cyclic-partner threshold at 16 keV.
+- Sampling shows these orders exist; it does not prove that 36 is the maximum.
+- Whether a qutrit Clifford symmetry should act as the partner-protecting ℤ_N is a separate, unbuilt hypothesis. This is a group-theory fact relevant to it, nothing more.
+- It extends Chat's ℤ₂₄ construction, which it cites.
