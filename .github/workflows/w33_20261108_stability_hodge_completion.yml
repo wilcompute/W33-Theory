@@ -1,0 +1,48 @@
+name: Affine-symmetry stability and H1 polarization completion
+on:
+  push:
+    branches: [master]
+    paths:
+      - "analysis/w33_20261108_stability_hodge_completion.py"
+      - "tests/test_w33_20261108_stability_hodge_completion.py"
+      - "analysis/PASS20261108_STABILITY_HODGE_COMPLETION.md"
+      - ".github/workflows/w33_20261108_stability_hodge_completion.yml"
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  exact-symmetry-and-bundle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install fixed dependencies
+        run: python -m pip install --disable-pip-version-check numpy pytest
+      - name: Run all independent exact and numeric tests
+        run: python -m pytest -q tests/test_w33_20261108_stability_hodge_completion.py
+      - name: Recreate JSON theorem certificate
+        run: python analysis/w33_20261108_stability_hodge_completion.py --out data/w33_20261108_stability_hodge_completion.json
+      - name: Check cross-front mathematical invariants
+        run: |
+          python - <<'PY'
+          import json,math
+          x=json.load(open('data/w33_20261108_stability_hodge_completion.json'))
+          b=x['h1_bundle']
+          assert b['h1_momentum_rank_multiplicities']=={'0':1,'1':12,'2':8,'3':6}
+          assert b['minimal_selective_auxiliary_dimension']==12
+          assert b['deficient_orbit_projector_convolution_kernel_9x_values']=={'-1':12,'0':6,'1':8,'4':1}
+          assert x['p5_isometry_chirp']['full_operator_norm_twirl_difference']>0.95
+          for c in x['robust_affine']['cases']:
+              q=c['prime']
+              assert abs(c['contraction_commutant_amplitude_upper']-2/q**2)<1e-15
+              if q>=5:assert c['guaranteed_operator_norm_twirl_defect_if_flat']>0
+          print('PASS: robust affine symmetry no-go, explicit p5 chirp twirl, W33 minimal polarization completion')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-stability-hodge-completion-certificate
+          path: data/w33_20261108_stability_hodge_completion.json
+          if-no-files-found: error
