@@ -35,6 +35,10 @@ jobs:
           assert all(c['spectral_unitarity_error']<1e-12 for c in d['cases'])
           assert all(c['principal_log_generator_off_null_support']>0 for c in d['cases'])
           assert d['cases'][1]['minimal_symmetry_breaking_index_for_this_chirp']==2
+          z=d['SL2_strict_null_local_no_go']
+          assert len(z['checked_prime_cases'])==6
+          assert all(r['SL2_and_GL2_share_null_orbits'] for r in z['checked_prime_cases'])
+          assert all(r['strict_null_local_SL2_covariant_flat_mixing_forbidden'] for r in z['checked_prime_cases'] if r['p']>=5)
           print('PASS finite Lorentz-type determinant isometry/flat Gauss transform, NOT a local spacetime')
           PY
       - uses: actions/upload-artifact@v4
