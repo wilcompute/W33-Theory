@@ -53,3 +53,25 @@ def test_optical_scope_cannot_ignore_tritter_routing(cert):
     assert o["generic_27_port_unitary_couplers"]==351
     assert "NOT included" in o["critical_limit"]
     assert "interferometrically" in o["phase_witness"]
+
+
+def test_full_tritter_regroup_route_shows_hidden_cost(cert):
+    x=cert["optics"]
+    route=x["best_feasible_tritter_regroup_route"]
+    assert route["total_regroup_swaps"]==288
+    assert route["tritter_axis_sequence"] in ([0,2,1],[2,0,1])
+    assert sum(route["routing_swaps_by_transition"])==288
+    assert x["total_1d_adjacent_swaps_in_explicit_schedule"]==372
+    assert x["upper_bound_internal_plus_active_swap_interactions"]==453
+    assert x["not_global_tritter_routing_optimum"]
+
+def test_regrup_several_axis_groups_are_physically_contiguous():
+    import itertools
+    order=list(itertools.product(range(3),repeat=3))
+    for axis in range(3):
+        nxt,cost=M.tritter_regroup_nearest(order,axis)
+        assert 0<=cost<=27*26//2
+        for i in range(0,27,3):
+            triples=nxt[i:i+3]
+            assert len({tuple(v[k] for k in range(3) if k!=axis) for v in triples})==1
+            assert len({v[axis] for v in triples})==3
