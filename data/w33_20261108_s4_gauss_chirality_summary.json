@@ -1,0 +1,123 @@
+{
+  "schema": "w33.20261108.s4_gauss_chirality_summary.v1",
+  "source_files": [
+    "analysis/w33_20261108_s4_harmonic_qdual.py",
+    "analysis/w33_20261108_null_orbit_chirality.py"
+  ],
+  "tests": [
+    "tests/test_w33_20261108_s4_harmonic_qdual.py",
+    "tests/test_w33_20261108_null_orbit_chirality.py"
+  ],
+  "S4_harmonic": {
+    "graph_vertices": 27,
+    "edges": 108,
+    "triangles": 36,
+    "H1_dimension": 46,
+    "class_sizes": [
+      1,
+      6,
+      3,
+      8,
+      6
+    ],
+    "H1_character": [
+      46,
+      4,
+      -2,
+      -2,
+      0
+    ],
+    "irreducible_multiplicities": {
+      "trivial": 2,
+      "sign": 0,
+      "two_dimensional": 4,
+      "standard3": 7,
+      "signed_standard3": 5
+    },
+    "S4_fixed_dimension": 2,
+    "translation_fixed_dimension": 0,
+    "translation_span_of_two_S4_fixed_seeds": 18,
+    "remaining_harmonic_dimension": 28,
+    "seed_fourier_support": {
+      "n0_equals_1": {
+        "count": 8,
+        "per_character_weight": 0
+      },
+      "n0_equals_2": {
+        "count": 12,
+        "per_character_weight": "1/12"
+      },
+      "n0_equals_0": {
+        "count": 6,
+        "per_character_weight": "1/6"
+      }
+    },
+    "certificate_tiers": "Integer group-character census plus floating point projector rank, span and Fourier-support checks"
+  },
+  "prime_gauss_duality": {
+    "exact_phase": "q_star(d)=d0*d2-inverse_mod_p(4)*d1^2",
+    "fixed_chart_original_equals_dual_only_for_odd_prime": 3,
+    "flat_transition_probability": "1/p^3 for all p^6 input/output pairs",
+    "checked_primes": [
+      3,
+      5,
+      7,
+      11,
+      13,
+      17
+    ],
+    "weighted_Hamiltonian_offdiagonal_support": [
+      26,
+      100,
+      342,
+      1330,
+      2028,
+      4624
+    ],
+    "boundary": "nonlocal Hamiltonian; support counts numerical, not an all-prime theorem"
+  },
+  "null_orbit_chirality": {
+    "tested_primes": [
+      3,
+      5,
+      7,
+      11,
+      13
+    ],
+    "square_class_orbit_size_formula": "(p^2-1)/2 each",
+    "inversion_swaps_classes_if": "p congruent 3 modulo 4",
+    "independent_real_covariant_null_weights": [
+      1,
+      2,
+      1,
+      1,
+      2
+    ],
+    "provably_excluded_all_time_uniform_mixing_in_declared_family_for_tested_primes": [
+      7,
+      11
+    ],
+    "general_restricted_no_go": "odd primes p>=7 congruent 3 modulo 4; scalar real symmetric translation/PGL2 covariant strictly null-supported hopping",
+    "unexcluded": "odd p=1 modulo 4 two real orbital weights, complex Hermitian chirality at p=3 modulo 4, projective/magnetic translations, internal degrees of freedom, alternate geometries",
+    "p5_finite_control": {
+      "grid": 33,
+      "pairs": 1089,
+      "best_max_probability_deviation": 0.026323555856766954,
+      "status": "heuristic bounded grid, not a global impossibility proof"
+    }
+  },
+  "verification": {
+    "s4_clean_GitHub_CI": {
+      "run_id": 42500973007,
+      "tests_passed": 16
+    },
+    "s4_authorized_desktop": {
+      "tests_passed": 16
+    },
+    "chirality_authorized_desktop": {
+      "tests_passed": 14
+    },
+    "chirality_clean_GitHub_CI": "not claimed; see workflow run status"
+  },
+  "scope": "Exact conditional mathematics and simulation, no measured physics or demonstrated TOE."
+}
