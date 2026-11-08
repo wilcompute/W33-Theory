@@ -1,0 +1,55 @@
+{
+ "S8_highz_shear": {
+  "claim": "At the frozen full-data Dovekie backgrounds (class_fit_dovekie.json), the next cosmic-shear releases will give Delta chi2(CPL - fading c<0) > 0, with the excess carried by the high-z tomographic block (both bins in the upper half) and/or the mixed block, not by the low-z block; both the matter power history P(k,z) and the geometry contribute (current split: KiDS power +3.2, geometry +2.0; DES power +2.2, geometry +1.9).",
+  "current_values": {
+   "des": {
+    "all": {
+     "geometry_part": 1.9314047926654325,
+     "power_part": 2.2013167714623023,
+     "total": 2.8844828876623865
+    },
+    "high": {
+     "geometry_part": 1.826983713781118,
+     "power_part": 4.388308662449859,
+     "total": 4.943561676190413
+    },
+    "low": {
+     "geometry_part": 0.07600541390026905,
+     "power_part": -0.9536734912828706,
+     "total": -0.9505851571675876
+    },
+    "mixed": {
+     "geometry_part": 1.017617401401921,
+     "power_part": -3.0401077736740234,
+     "total": -2.409250084894481
+    }
+   },
+   "kids": {
+    "all": {
+     "geometry_part": 2.038891506609616,
+     "power_part": 3.1953582697721004,
+     "total": 4.503428628031344
+    },
+    "high": {
+     "geometry_part": 1.6049338328149858,
+     "power_part": 0.2922200610968275,
+     "total": 1.0806061981750759
+    },
+    "low": {
+     "geometry_part": 0.6601149820842949,
+     "power_part": 0.17442087467132694,
+     "total": 0.7698657441492003
+    },
+    "mixed": {
+     "geometry_part": 0.8610216451215962,
+     "power_part": 1.1311338391153924,
+     "total": 1.8067139549942368
+    }
+   }
+  },
+  "falsified_if": "Delta chi2(CPL - fading) <= 0, or a positive total dominated (> 60 percent) by the low-z block",
+  "scored_by": "DES Y6, HSC final, KiDS COSEBIs, Euclid DR1 shear analysed with class_des_fit.py-style block chi2 at the frozen backgrounds, nuisances refitted"
+ },
+ "supersedes": "mechanism clause of S7 (prereg_tilt.json, sha a05a56e8), contradicted by DES Y3 and KiDS-Legacy",
+ "written": "2026-11-08"
+}

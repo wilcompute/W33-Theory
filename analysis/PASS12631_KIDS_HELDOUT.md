@@ -107,3 +107,20 @@ The first addendum read the CPL/fading *model ratio* (CPL lower at low z, −4%;
 - Only one of two declared starts succeeded in each KLT holdout; θ_i = 2.5 failed in CLASS shooting.
 
 **f free (`klt_ffit.py`):** the optimiser did not move f from 0.250 (χ² unchanged at 2253.30, s = 0.0218, θ_i = 2.244). This says only that no improving direction was found from the start. f is strongly degenerate with θ_i (unrefitted χ² 2365 at f = 0.2 and 2272 at f = 0.5), so a joint scan or MCMC over (f, θ_i) is needed before f is called constrained.
+
+## Addendum: growth or geometry? Both (`shear_hybrid.py`); S8 frozen; overlap bound
+
+**Hybrid decomposition.** I swap CPL's matter power P(k, z) (growth and amplitude) or its geometry (χ, H, H₀, Ω_m(z), D) into the fading model, holding CPL's nuisances fixed for all four:
+
+| CPL − fading | power part | geometry part | interaction | total |
+|---|---:|---:|---:|---:|
+| KiDS, all | +3.20 | +2.04 | −0.73 | +4.50 |
+| KiDS, high / mixed | +0.29 / +1.13 | +1.60 / +0.86 | −0.82 / −0.19 | +1.08 / +1.81 |
+| DES, all | +2.20 | +1.93 | −1.25 | +2.88 |
+| DES, high | **+4.39** | +1.83 | −1.27 | +4.94 |
+
+**About 55–60% of CPL's penalty comes from its power history and 40–45% from its geometry.** The penalty concentrates at high z: CPL has the lower amplitude (σ8 0.812 against 0.825) but relatively more high-z power, and its larger Ω_m (0.312 against 0.306) and high-z distances add lensing efficiency. So my earlier "points to geometry" guess was only half right.
+
+**Frozen S8** (`prereg_highz.json`, sha 3074f15e) replaces S7's mechanism clause. The next releases should give Δχ²(CPL − fading) > 0, carried by the high-z and/or mixed blocks. It is falsified if the total is ≤ 0, or if more than 60% comes from the low-z block.
+
+**Overlap bound.** The DES Y3 + KiDS-1000 joint analysis (arXiv:2305.17173) found the overlap to be 8% of DES and 32% of KiDS, cut it from DES, and judged the cross-covariance negligible. Treating the overlap as fully redundant (KiDS term × 0.68, DES × 0.92), which overstates the effect, the Dovekie combined totals become **fading +4.9, CPL +1.5**. The gap stays at 3.4 or more, so the overlap does not change the conclusion.
