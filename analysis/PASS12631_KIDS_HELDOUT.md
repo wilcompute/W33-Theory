@@ -53,3 +53,25 @@ A COSEBIs version of the KiDS likelihood (KiDS's fiducial statistic) needs the C
 ## Sources
 
 KiDS-Legacy release (Wright et al. 2025, A&A 703, A158); arXiv:2512.11041 (KiDS-Legacy extended models); 2503.16415, 2607.16191 (Khoury, Lin and Trodden).
+
+## Addendum: the mechanism is a tomographic tilt, not an amplitude excess (`shear_diag.py`)
+
+At the fixed-background best fits (nuisances fitted), I compare the model and data ξ± per point and per tomographic pair.
+
+| | S8 | Ω_m | σ8 | mean (model − data)/σ, ξ₊ | ξ₋ |
+|---|---:|---:|---:|---:|---:|
+| ΛCDM (KiDS / DES) | 0.807 | 0.300 | 0.806 | +0.09 / +0.07 | +0.41 / +0.25 |
+| fading c < 0 | 0.833 | 0.306 | 0.825 | +0.14 / +0.11 | +0.50 / +0.34 |
+| CPL | 0.827 | 0.312 | 0.812 | **+0.07 / +0.01** | +0.51 / +0.33 |
+
+CPL / fading − 1 for ξ₊, by tomographic pair (low z → high z):
+- KiDS: −3.9% (bins 1-1) … −1.7% (3-3) … +1.1% (6-6);
+- DES: −4.4% (1-1) … −0.6% (3-3) … −0.3% (4-4).
+
+**Reading.**
+- On average, CPL over-predicts ξ₊ *less* than fading does, yet it is penalised more. The penalty comes from the **redshift tilt**: relative to fading, CPL moves about 4–5% of lensing power from the low-z bins toward the high-z bins.
+- With strongly correlated covariances, a uniform amplitude offset is cheap, because the nuisances and correlated modes absorb it. A tilt across tomographic bins is expensive, and the Δz and intrinsic-alignment nuisances only partly absorb it.
+- CPL's fit also needs a higher Ω_m (0.312, against 0.306 and 0.300), consistent with its phantom phase at z > 0.4 changing the growth history.
+- The tilt has the same sign and size in both surveys, so it is structural, not survey-specific.
+
+This is a diagnostic in our simplified likelihoods; whether the tilt survives full intrinsic-alignment and baryon modelling is open. It gives the next shear releases a specific target: **the low-z/high-z shear ratio**, not S8 alone.
