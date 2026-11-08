@@ -81,8 +81,7 @@ def null_clock():
     # Mode phases can be gauged by input/output; plaquettes are gauge invariant.
     plaquettes=[]
     a=(0,0,0);b=(1,0,0);c=(0,0,0)
-    for label,d in (("omega",(1,0,0)),("omega2",(2,0,0)),("unity",(0,1,0))):
-        ex=2*sum((a[i]-b[i])*s*(d[i]-c[i]) for i,s in enumerate((0,0,0))) # placeholder overwritten below
+    for label,d in (("omega",(0,0,2)),("omega2",(0,0,1)),("unity",(0,1,0))):
         # For q(a,b,c)=ac-b², polar dot is a*c'+c*a'-2*b*b'.
         ab=tuple((x-y)%3 for x,y in zip(a,b))
         dc=tuple((x-y)%3 for x,y in zip(d,c))
