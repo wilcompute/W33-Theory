@@ -1,0 +1,290 @@
+{
+  "status": "TWELVE_INCOMING_FULL_PATCHES_READ_PDF108_OF215_WEEK_UNFINISHED",
+  "utc": "2026-11-08T16:30:30.337092+00:00",
+  "baseline": "8f4f7d2aaf0299f7a94a24eee7c89971b174d916",
+  "incoming_tip": "0b129c0d15bf971bec24bacfd2586e9090c4f9bb",
+  "full_patches_read": [
+    "fd15f98aa5745232468aadeef159de5bb7e1043b",
+    "ed87a58cbf4dd36ecdbf56f78665d65b0283e5dc",
+    "c165519e2aaa6d9cd783e0eaaa264bb0c27b2c76",
+    "7fec78359534bc31e8d1940ce9e0bbe046696cc7",
+    "fbc8ce2c286bf0afd5e76e14ef8a2a0773034484",
+    "6b6497789fc35c75db9adae9ee029b42ef05affc",
+    "9d4ca9f3d396512b8348ef482645abb67e7d5027",
+    "6704557117760ed6235348ec40974fed05b8abb8",
+    "7f417a92e63d6dce3a6f1d57f56e9718b649d882",
+    "aa1155172dd612c19f3bd5503dfff29c93b86890",
+    "d892f963fa03fd4147a2ca232bfd2dc63e5e8a67",
+    "0b129c0d15bf971bec24bacfd2586e9090c4f9bb"
+  ],
+  "patch_lines": 1871,
+  "patch_raw_sha256": "2ec1cb6c6644db989de2dceafed24764e8d44a84c3cb2264ca29ecd9be0f3eb2",
+  "immutable_incoming_blob_raw_sha256": {
+    ".github/workflows/w33_20261108_deep_fivefronts.yml": "5375b021e415a9caa2946e93e2118af73076a2bff9eee911399ec288d71ff276",
+    "analysis/HANDOFF_CLAUDE_TO_CHAT_20261106.md": "6200f409362d39feffebec8420a8da87429cdd82ca4e80d147635f43b3de52aa",
+    "analysis/PASS12629_SIGN_NATURALNESS.md": "aa0e18669d808bc23f500c18e04cdc252ace3010257b2727f2a253dc6988a333",
+    "analysis/PASS20261108_DEEP_FIVE_FRONTS.md": "225c58b1b02ca02532c6f43a7925f996dc21eee11e894cf0b6c28c86ba9df33c",
+    "analysis/toe_uv/class_holdout.py": "2e5be5e721dfac7d6c5c4c7283366c7602cbec420a1a5c7848c88f65bd836be6",
+    "analysis/toe_uv/shear_ppd_desy5.json": "9732f15245069d6490f56b982debc35234ac86d309887cfb542bf77df26c50b1",
+    "analysis/w33_20261108_deep_fivefronts.py": "aaff7aa8f15ebbcf7f12218c913043480533a1380df765d3a4d3693d55eff4f4",
+    "data/w33_20261108_deep_fivefronts.json": "9198f0a494030bb7a60d7d059747509fd7b9660387573cb05488268963b3ef70",
+    "tests/test_w33_20261108_deep_fivefronts.py": "0a5b8742f5d9ccbedf311113277998d7de2d99706c8f99e9bb2b8e8248113859"
+  },
+  "incoming_scope": "All12 full patches read: holdout KLT fit settings; shear certificate; handoff sampled Sp6 orders and request for KLT algebra check; native tensor, weighted quadratic walk, Hodge and optical source/tests/report/CI; missing ignored E6 generator dependency handled honestly; latest964line desktop certificate and five file-history witnesses read. CLASS fits/likelihood and original desktop run not reproduced.13incoming current-source tests passed138.17s in local replay; not a theorem about continuum physics.",
+  "incoming_tests": {
+    "command": "py -3 -m pytest --noconftest -q tests/test_w33_20261108_deep_fivefronts.py",
+    "exit_code": 0,
+    "stdout": "13 passed in 138.17s (0:02:18)",
+    "source_raw_sha256": "aaff7aa8f15ebbcf7f12218c913043480533a1380df765d3a4d3693d55eff4f4",
+    "test_raw_sha256": "0a5b8742f5d9ccbedf311113277998d7de2d99706c8f99e9bb2b8e8248113859"
+  },
+  "manuscript": {
+    "path": "papers/forty_points/main.pdf",
+    "raw_sha256": "003b75482b6584e20e83a55d9e9ba0a181f93b8dff0f94c1d615039c21213cbb",
+    "full_extracted_text_this_packet": [
+      105,
+      108
+    ],
+    "cumulative_full_extracted_text": [
+      1,
+      108
+    ],
+    "total_pages": 215,
+    "visual_this_packet": false,
+    "scope": "Hash verified extracted text cache; no complete PDF/week reading or independent proof of manuscript census claims."
+  },
+  "searches": {
+    "scope": "RESULTS_INDEX.md analysis data papers docs; py/json/md/tex and prior source certificates, stated2MBcaps; result-specific searches before constructions.",
+    "patterns": [
+      "f_loop f_mass sqrt N closed ring Wilson line",
+      "1-u radial winding scalar quality species",
+      "2607.08814 extranatural 0301218 clockwork1804.01112",
+      "g4 tiny interval November5 mediator shortening",
+      "109 272 850 248.691"
+    ],
+    "prior_ownership": "November5 mediator canonical-operator warning and PQ cutoff/normalization/Wilson-line literature already in repo. Standard quiver/loop mechanisms credited. No priority theorem from search absence."
+  },
+  "literature": [
+    {
+      "url": "https://arxiv.org/html/hep-th/0301218v2",
+      "scope": "Short main text normalization, nonlocal potential and closed quiver; old inflation claims not adopted"
+    },
+    {
+      "url": "https://arxiv.org/html/1804.01112v2",
+      "scope": "Sections2.1-2.3, not whole paper"
+    },
+    {
+      "url": "https://arxiv.org/html/2607.08814v1",
+      "scope": "Selected gauge-origin/quality sections, interval differs from circle"
+    },
+    {
+      "url": "https://arxiv.org/html/1812.10451v2",
+      "scope": "Section2.2 massive fermions, regulator and CS mass-sign shifts; not full paper"
+    },
+    {
+      "url": "https://arxiv.org/abs/hep-th/0601001",
+      "scope": "Abstract and conjectural cutoff diagnostic context only"
+    }
+  ],
+  "execution": {
+    "final_RDC": {
+      "device": "75dccda9-254c-47a9-9d13-ef69565dedf7",
+      "pid": 6040,
+      "exit_code": 0,
+      "seconds": 23.74,
+      "tests": "37 passed in16.57s"
+    },
+    "server": "Actual functions.exec V8 positive worldline Simpson, scalar generating sums, ring/Wilson arithmetic; independent from PC Python. No radion/background/population solver."
+  },
+  "independent_KLT_arithmetic": {
+    "runtime": "Actual functions.exec server V8",
+    "input": "analysis/toe_uv/klt_check.json",
+    "formula": "eps=(0.0023 eV)^4*100*k/(sigma_over_m0*m0_eV^4); minimal integer N=ceil(log(eps)/log(z)).",
+    "rows": [
+      {
+        "m": 100,
+        "k": 2.8,
+        "s": 0.01,
+        "eps": 7.835547999999998e-15,
+        "N05": 47,
+        "N08": 146,
+        "relative_error": 2.220446049250313e-16
+      },
+      {
+        "m": 1000,
+        "k": 2.8,
+        "s": 0.01,
+        "eps": 7.835547999999998e-19,
+        "N05": 61,
+        "N08": 187,
+        "relative_error": 1.1102230246251565e-16
+      },
+      {
+        "m": 1000000,
+        "k": 2.8,
+        "s": 0.01,
+        "eps": 7.835547999999998e-31,
+        "N05": 101,
+        "N08": 311,
+        "relative_error": 1.1102230246251565e-16
+      },
+      {
+        "m": 1000000000,
+        "k": 2.8,
+        "s": 0.01,
+        "eps": 7.835547999999998e-43,
+        "N05": 140,
+        "N08": 435,
+        "relative_error": 2.220446049250313e-16
+      },
+      {
+        "m": 1000000000000,
+        "k": 2.8,
+        "s": 0.01,
+        "eps": 7.835547999999997e-55,
+        "N05": 180,
+        "N08": 559,
+        "relative_error": 2.220446049250313e-16
+      },
+      {
+        "m": 100,
+        "k": 2.8,
+        "s": 0.02,
+        "eps": 3.917773999999999e-15,
+        "N05": 48,
+        "N08": 149,
+        "relative_error": 2.220446049250313e-16
+      },
+      {
+        "m": 1000,
+        "k": 2.8,
+        "s": 0.02,
+        "eps": 3.917773999999999e-19,
+        "N05": 62,
+        "N08": 190,
+        "relative_error": 1.1102230246251565e-16
+      },
+      {
+        "m": 1000000,
+        "k": 2.8,
+        "s": 0.02,
+        "eps": 3.917773999999999e-31,
+        "N05": 102,
+        "N08": 314,
+        "relative_error": 1.1102230246251565e-16
+      },
+      {
+        "m": 1000000000,
+        "k": 2.8,
+        "s": 0.02,
+        "eps": 3.917773999999999e-43,
+        "N05": 141,
+        "N08": 438,
+        "relative_error": 2.220446049250313e-16
+      },
+      {
+        "m": 1000000000000,
+        "k": 2.8,
+        "s": 0.02,
+        "eps": 3.917773999999999e-55,
+        "N05": 181,
+        "N08": 562,
+        "relative_error": 2.220446049250313e-16
+      },
+      {
+        "m": 100,
+        "k": 4,
+        "s": 0.01,
+        "eps": 1.1193639999999999e-14,
+        "N05": 47,
+        "N08": 144,
+        "relative_error": 0
+      },
+      {
+        "m": 1000,
+        "k": 4,
+        "s": 0.01,
+        "eps": 1.1193639999999998e-18,
+        "N05": 60,
+        "N08": 186,
+        "relative_error": 0
+      },
+      {
+        "m": 1000000,
+        "k": 4,
+        "s": 0.01,
+        "eps": 1.1193639999999998e-30,
+        "N05": 100,
+        "N08": 310,
+        "relative_error": 1.1102230246251565e-16
+      },
+      {
+        "m": 1000000000,
+        "k": 4,
+        "s": 0.01,
+        "eps": 1.1193639999999998e-42,
+        "N05": 140,
+        "N08": 433,
+        "relative_error": 1.1102230246251565e-16
+      },
+      {
+        "m": 1000000000000,
+        "k": 4,
+        "s": 0.01,
+        "eps": 1.1193639999999998e-54,
+        "N05": 180,
+        "N08": 557,
+        "relative_error": 0
+      },
+      {
+        "m": 100,
+        "k": 4,
+        "s": 0.02,
+        "eps": 5.596819999999999e-15,
+        "N05": 48,
+        "N08": 148,
+        "relative_error": 0
+      },
+      {
+        "m": 1000,
+        "k": 4,
+        "s": 0.02,
+        "eps": 5.596819999999999e-19,
+        "N05": 61,
+        "N08": 189,
+        "relative_error": 0
+      },
+      {
+        "m": 1000000,
+        "k": 4,
+        "s": 0.02,
+        "eps": 5.596819999999999e-31,
+        "N05": 101,
+        "N08": 313,
+        "relative_error": 1.1102230246251565e-16
+      },
+      {
+        "m": 1000000000,
+        "k": 4,
+        "s": 0.02,
+        "eps": 5.596819999999999e-43,
+        "N05": 141,
+        "N08": 436,
+        "relative_error": 1.1102230246251565e-16
+      },
+      {
+        "m": 1000000000000,
+        "k": 4,
+        "s": 0.02,
+        "eps": 5.596819999999999e-55,
+        "N05": 181,
+        "N08": 560,
+        "relative_error": 0
+      }
+    ],
+    "maximum_relative_epsilon_error": 2.220446049250313e-16,
+    "scope": "Independent arithmetic check of supplied QCD-like scaling hypothesis, not a validation of that scaling or the underlying KLT model/CLASS likelihood."
+  },
+  "continuity": "Connected mirror empty; repo journal plus CLI used, bounded fallback/timeouts retained. Work remains progress toward active goal; no TOE completion.",
+  "git_exception": "GitKraken tools unavailable and previous plugin discovery empty; narrow authorized explicit-file CLI fallback. No broad staging, reset, stash or force push. Incoming prose/certificates referenced by immutable committed blob."
+}

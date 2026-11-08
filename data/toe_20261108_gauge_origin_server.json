@@ -1,0 +1,82 @@
+{
+  "runtime": "Actual functions.exec server V8",
+  "worldline": [
+    {
+      "a": 1,
+      "positive_integral": 487940220992.3033,
+      "closed_harmonic": 487940220992.30255
+    },
+    {
+      "a": 6,
+      "positive_integral": 0.00021434030567299837,
+      "closed_harmonic": 0.00021434030567299862
+    },
+    {
+      "a": 12,
+      "positive_integral": 2.185701901814943e-21,
+      "closed_harmonic": 2.1857019018149448e-21
+    }
+  ],
+  "ring": [
+    {
+      "N": 24,
+      "r": 1,
+      "nu": 0,
+      "u": 0.02083333333333334,
+      "leading": 103.33881661074102,
+      "all": 103.55825771729789
+    },
+    {
+      "N": 110,
+      "r": 1,
+      "nu": 0,
+      "u": 0.004545454545454545,
+      "leading": -3.997173099080044,
+      "all": -3.7795308410503763
+    },
+    {
+      "N": 850,
+      "r": 1,
+      "nu": 1,
+      "u": 0.5,
+      "leading": -7.184459181367174,
+      "all": 248.69103713301683
+    },
+    {
+      "N": 300,
+      "r": 0.15,
+      "nu": 9,
+      "u": 0.10124999999999997,
+      "leading": -28.698123778159285,
+      "all": -14.789794795440999
+    }
+  ],
+  "generating": [
+    {
+      "N": 2,
+      "u": 0.02,
+      "truncated": 0.022568348988339138,
+      "closed": 0.022568348988339156
+    },
+    {
+      "N": 3,
+      "u": 0.02,
+      "truncated": 0.0030393711379220795,
+      "closed": 0.003039371137922081
+    },
+    {
+      "N": 5,
+      "u": 0.02,
+      "truncated": 0.00006259546668753189,
+      "closed": 0.00006259546668753189
+    }
+  ],
+  "benchmark": {
+    "log10_two_Dirac_curvature_first_harmonic": -5.453115956222844,
+    "x": -0.4803009172675236,
+    "beta": 0.053,
+    "ground_max_log_mass": 0.000867302906104161,
+    "g4": 8.714849724402209e-24
+  },
+  "scope": "Independent positive proper-time quadrature, scalar-series sum and branch/normalization arithmetic. No independent full KK population kinetics, radial vacuum or cosmology."
+}

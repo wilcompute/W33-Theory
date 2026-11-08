@@ -1,0 +1,67 @@
+{
+  "status": "PASS_DECLARED_GAUGE_ORIGIN_NORMAL_MODE_OPERATOR_AND_WORLDLINE_CONTROLS_NOT_TOE",
+  "utc": "2026-11-08T16:17:08.136789+00:00",
+  "seconds": 18.4574500000017,
+  "tests": {
+    "command": [
+      "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+      "-m",
+      "pytest",
+      "--noconftest",
+      "-q",
+      "tests/test_toe_20261108_gauge_origin.py",
+      "tests/test_toe_20261108_cyclic_vector.py"
+    ],
+    "exit_code": 0,
+    "stdout": ".....................................                                    [100%]\n37 passed in 16.57s\n",
+    "stderr": ""
+  },
+  "extra_N300_matrix": [
+    {
+      "N": 300,
+      "phase_sum": 1.3699999999999828,
+      "singular_spectrum_residual": 2.220446049250313e-16,
+      "gauge_covariance_residual": 2.237209951598243e-16,
+      "full_spectrum_period_2pi": true,
+      "physical_branch": "m_k=M[1+eps*cos(phi/f_mass+2pi*k/N)] for eps<1; f_mass=sqrt(N)*F, f_loop=F/sqrt(N). Fixed k is an actual eigenbranch; winding psi by2pi permutes the full spectrum.",
+      "hopping_boundary": "Reverse hopping is gauge allowed and explicitly included, rather than silently set to zero. Translation/reflection-symmetric real equal couplings are supplied; general allowed site-dependent/complex couplings remain a different model."
+    }
+  ],
+  "artifact_raw_sha256": {
+    "analysis/toe_20261108_gauge_ring_quality.py": "1063c1ae850617d5d0e5a27db7e6583cf9d84c5ab759a84f9b94a09df6ed856c",
+    "analysis/toe_20261108_wilson_line_mass_probe.py": "41cc52ef0ffa6160b9053d3c6a526d9a18061e5ac43712c0086caabbcc47b8fa",
+    "analysis/toe_20261108_gauge_origin_server.js": "d9d836505448c6f49470056de2eaa44c9e600a9ce877c560ac521283ffeac44e",
+    "analysis/toe_20261108_gauge_origin_validation.py": "c4fcc58be931ab67ca184798f9dd069f3a1ab95db07c0606c637fba60e7d8807",
+    "tests/test_toe_20261108_gauge_origin.py": "8b4a87f3b457c1653a433bc79d6d3091da3c309aeb6ed28da1445afa5c79b06c",
+    "data/toe_20261108_gauge_ring_quality.json": "6842ed9097c7d69db0746145bfcb5f3271255c9dbcc4d4c9eafebde16067a304",
+    "data/toe_20261108_wilson_line_mass_probe.json": "1a02849b2fb9031bdf3c3a38f33c1b927089b825dad27976ea8d5cbfd7fd9e02",
+    "data/toe_20261108_gauge_origin_server.json": "6ab6bba5c27c90d8a9ff1b2b24b73cc4a9a0ebd374b130295ae3b6836d4211b5",
+    "tests/test_toe_20261108_cyclic_vector.py": "4c0a74e06045db0f939d4ad816ee60165a384d7dbb6d61a211e6326a42ee7dab"
+  },
+  "earlier_RDC_execution": {
+    "device": "75dccda9-254c-47a9-9d13-ef69565dedf7",
+    "ring": {
+      "pid": 28532,
+      "exit_code": 0,
+      "seconds": 7.63
+    },
+    "one_Dirac_probe": {
+      "pid": 27584,
+      "exit_code": 0,
+      "seconds": 24.7
+    },
+    "parity_pair_probe": {
+      "pid": 28996,
+      "exit_code": 0,
+      "seconds": 6.13
+    },
+    "parity_regulator_and_first_tests": {
+      "pid": 28828,
+      "exit_code": 0,
+      "seconds": 25.24,
+      "test_stdout": "19passed10.44s"
+    }
+  },
+  "actual_server": "Independent functions.exec V8 positive worldline quadrature, full scalar-generating-function partial sums, ring cutoff and KK-coupling arithmetic. No independent population, background or radion solver.",
+  "scope": "19new parameterized controls plus18previous vector-action/quality tests. Additional actualN300mass matrix. All operator/loop/weakgravity/species claims retain declared coefficient, cutoff, field-inventory and fixed-radius assumptions. No full vacuum, UV gravity, relic/perturbation or TOE completion."
+}
