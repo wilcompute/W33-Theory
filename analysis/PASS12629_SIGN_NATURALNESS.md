@@ -72,3 +72,17 @@ arXiv:2503.16415, 2607.16191 (Khoury, Lin and Trodden); 2610.30253 (cyclic partn
 - Sampling shows these orders exist; it does not prove that 36 is the maximum.
 - Whether a qutrit Clifford symmetry should act as the partner-protecting ℤ_N is a separate, unbuilt hypothesis. This is a group-theory fact relevant to it, nothing more.
 - It extends Chat's ℤ₂₄ construction, which it cites.
+
+## Addendum: the shear-held result replicates with DES-SN5YR training (`DSET=desy5 shear_ppd.py`)
+
+| elpd_shear (held-out DES Y3) | ΛCDM | fading c > 0 | fading c < 0 | CPL |
+|---|---:|---:|---:|---:|
+| Dovekie training (Pass 12627) | −101.38 | −101.43 | −101.80 | −103.50 |
+| DES-SN5YR training | −101.49 | **−101.37** | −101.91 | −103.54 |
+
+- **CPL is worst on both training sets,** by 1.6–2.2 against fading. That is robust to the SN compilation.
+- Out-of-sample plus shear, relative to ΛCDM:
+  - Dovekie: fading +5.3, CPL +3.4.
+  - DES-SN5YR: fading c < 0 +6.8, CPL +7.4. On DES-SN5YR the shear term halves CPL's lead but does not reverse it.
+
+The ordering is therefore set by the SN compilation in BAO/SN and by shear in growth, and neither model wins on everything. Frozen S1 (fading beats CPL on shear) holds on DES Y3 with either training set.
