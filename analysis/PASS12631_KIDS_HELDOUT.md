@@ -105,3 +105,5 @@ The first addendum read the CPL/fading *model ratio* (CPL lower at low z, −4%;
 - Its weak spot is BAO held out: −0.40 at the standard draw width, but **+2.75 at twice the width** (−8.72 against ΛCDM −11.47). Broadening a well-behaved Gaussian posterior should not help, so the Fisher draws misrepresent KLT's non-Gaussian, periodic posterior. **KLT's total is therefore provisional.**
 - The BAO-held MCMC (`mcmc_holdout.py dovekie bao klt25`; smoke test reproduces the holdout row exactly) is queued to settle it.
 - Only one of two declared starts succeeded in each KLT holdout; θ_i = 2.5 failed in CLASS shooting.
+
+**f free (`klt_ffit.py`):** the optimiser did not move f from 0.250 (χ² unchanged at 2253.30, s = 0.0218, θ_i = 2.244). This says only that no improving direction was found from the start. f is strongly degenerate with θ_i (unrefitted χ² 2365 at f = 0.2 and 2272 at f = 0.5), so a joint scan or MCMC over (f, θ_i) is needed before f is called constrained.
