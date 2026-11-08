@@ -1,0 +1,1127 @@
+{
+  "status": "NATIVE_ZERO_EXTERNAL_MOMENTUM_FULL_EDGE_TEMPORAL_GAUSS_SCALAR_KERNEL_NOT_TOE",
+  "rows": [
+    {
+      "sizes": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "mass": 0.8,
+      "transverse_dimension": 109,
+      "optical_dimension": 105,
+      "temporal_nonconstant_dimension": 26,
+      "static_gauge_residual": 1.1427490897997217e-16,
+      "direct_current_density_commutator_residual": 4.478979423118084e-15,
+      "direct_temporal_Ward_controls": [
+        {
+          "nu": 0.2,
+          "full161by161_Ward_residual": 1.5379104467630597e-18,
+          "omitted_temporal_contact_Ward_residual": 0.12863670215973985,
+          "direct_contact_minus_bubble_agreement": 2.7755575615628914e-16,
+          "direct_mixed_vs_spatial_max": 6.938893903907228e-18,
+          "direct_density_vs_spatial_max": 6.938893903907228e-18,
+          "uniform_charge_density_response": 1.7901628299194508e-31
+        },
+        {
+          "nu": 0.7,
+          "full161by161_Ward_residual": 5.204170427930421e-18,
+          "omitted_temporal_contact_Ward_residual": 0.45022845755908947,
+          "direct_contact_minus_bubble_agreement": 2.5326962749261384e-16,
+          "direct_mixed_vs_spatial_max": 3.469446951953614e-18,
+          "direct_density_vs_spatial_max": 8.673617379884035e-18,
+          "uniform_charge_density_response": 1.765424583419643e-31
+        }
+      ],
+      "static_harmonic_Hessian": [
+        [
+          0.004434060211298888,
+          0.0022170301056494467,
+          -0.0027068495796625553,
+          -6.142682933488186e-18
+        ],
+        [
+          0.0022170301056494467,
+          0.004434060211298888,
+          -4.018324301774401e-18,
+          -0.002706849579662553
+        ],
+        [
+          -0.002706849579662554,
+          -4.004771774618332e-18,
+          0.005413699159325108,
+          -0.0027068495796625553
+        ],
+        [
+          -6.349358972618235e-18,
+          -0.002706849579662553,
+          -0.002706849579662555,
+          0.005413699159325089
+        ]
+      ],
+      "restored_profile_invariance": {
+        "Gauss_reduced_profile_error": 5.329070518200751e-15,
+        "clamped_profile_change": 34.35201509271316,
+        "zero_static_gauge_block_error": 0.0
+      },
+      "magnetic_symmetry": {
+        "all_face_count": 1287,
+        "selected_basis_count": 105,
+        "zero_voltage_cycle_census": [
+          [
+            3,
+            45,
+            45
+          ],
+          [
+            4,
+            1080,
+            189
+          ],
+          [
+            5,
+            6912,
+            1053
+          ]
+        ],
+        "all_faces_H27_exact_max_error": 0,
+        "selected_basis_H27_exact_max_error": 15,
+        "selected_basis_broken_controller_count": 26,
+        "interpretation": "Same rank105magnetic rowspace at zero momentum, different positive Hessians. Equal weighting of a selected independent basis need not preserve the graph controller; all1287short zero-voltage faces do. Unit weights and relative face-length couplings remain supplied."
+      },
+      "magnetic_options": [
+        {
+          "name": "basis105",
+          "results": [
+            {
+              "g": 0.5,
+              "beta": 1.0,
+              "magnetic_prescription": "basis105",
+              "tree_optical_gap_squared": 0.013917859364315836,
+              "root_search_upper": 0.005567143745726335,
+              "full_gauss_and_optical_squared_frequencies": [
+                0.00021908814670110785,
+                0.0002190882208834671,
+                0.00022553605362491427,
+                0.00022553605362491698
+              ],
+              "clamped_temporal_and_optical_squared_frequencies": [
+                0.0002190882419752041,
+                0.00021908824197521028,
+                0.00022553605362262872,
+                0.00022553605362263143
+              ],
+              "gauss_but_optical_clamped_squared_frequencies": [
+                0.00021908824197644784,
+                0.000219088241976454,
+                0.00022553605362491425,
+                0.00022553605362491693
+              ],
+              "full_low_groups": [
+                {
+                  "s": 0.00021908814670110785,
+                  "multiplicity": 1,
+                  "theta4_residue": 1.008695779760347e-08,
+                  "unexpanded_low_kernel_residual": 6.675888815103999e-16,
+                  "reduced_slope_min_eigenvalue": 5.309070963248268,
+                  "moment_expansion_ratio": 8.558130730512024e-05,
+                  "mass_squared_residual_bound": 1.2576572806864013e-16,
+                  "unreduced_moment_kernel_remainder_bound": 2.44417174153427e-18
+                },
+                {
+                  "s": 0.0002190882208834671,
+                  "multiplicity": 1,
+                  "theta4_residue": 0.0370309009074955,
+                  "unexpanded_low_kernel_residual": 7.8289023267951e-18,
+                  "reduced_slope_min_eigenvalue": 5.309070963248263,
+                  "moment_expansion_ratio": 8.558133628260432e-05,
+                  "mass_squared_residual_bound": 1.4748711795199634e-18,
+                  "unreduced_moment_kernel_remainder_bound": 2.444175051953398e-18
+                },
+                {
+                  "s": 0.00022553605362491427,
+                  "multiplicity": 2,
+                  "theta4_residue": 0.0555469982563317,
+                  "unexpanded_low_kernel_residual": 1.0766666050659532e-16,
+                  "reduced_slope_min_eigenvalue": 5.309070963736519,
+                  "moment_expansion_ratio": 8.810002094723212e-05,
+                  "mass_squared_residual_bound": 2.0283105849060072e-17,
+                  "unreduced_moment_kernel_remainder_bound": 2.7448662930274734e-18
+                }
+              ],
+              "fixed_A0_loop_metric": [
+                [
+                  0.0032175429681257236,
+                  0.0016087714840628616,
+                  -0.0018486293281374977,
+                  -8.639736061993863e-20
+                ],
+                [
+                  0.0016087714840628611,
+                  0.0032175429681257227,
+                  3.3542504711270293e-19,
+                  -0.0018486293281374973
+                ],
+                [
+                  -0.0018486293281374977,
+                  3.4897757426877174e-19,
+                  0.0036972586562749954,
+                  -0.0018486293281374968
+                ],
+                [
+                  -1.9312351197398048e-19,
+                  -0.0018486293281374973,
+                  -0.0018486293281374964,
+                  0.0036972586562749954
+                ]
+              ],
+              "Gauss_reduced_loop_metric": [
+                [
+                  0.003217542818912733,
+                  0.0016087714094563665,
+                  -0.0018486292065169607,
+                  -8.413269716388999e-20
+                ],
+                [
+                  0.0016087714094563665,
+                  0.003217542818912733,
+                  3.355287269211721e-19,
+                  -0.0018486292065169607
+                ],
+                [
+                  -0.0018486292065169607,
+                  3.491669826271755e-19,
+                  0.0036972584130339214,
+                  -0.0018486292065169607
+                ],
+                [
+                  -1.9075627231359241e-19,
+                  -0.0018486292065169607,
+                  -0.0018486292065169607,
+                  0.0036972584130339214
+                ]
+              ],
+              "Gauss_metric_correction_norm": 5.125846861294454e-10,
+              "scope": "All135unitcell edge coordinates and26nonconstant temporal modes; zero external deck momentum. Four low poles of tree gauge plus scalar-loop quadratic action. Not a full interacting quantum-gauge or nonzero-momentum continuum result."
+            },
+            {
+              "g": 1.0,
+              "beta": 1.0,
+              "magnetic_prescription": "basis105",
+              "tree_optical_gap_squared": 0.013917859364315836,
+              "root_search_upper": 0.005567143745726335,
+              "full_gauss_and_optical_squared_frequencies": [
+                0.000875916889531249,
+                0.0008759179872704504,
+                0.0009017275207225208,
+                0.0009017275207230012
+              ],
+              "clamped_temporal_and_optical_squared_frequencies": [
+                0.0008759183185539889,
+                0.0008759183185559083,
+                0.0009017275205764474,
+                0.0009017275205769274
+              ],
+              "gauss_but_optical_clamped_squared_frequencies": [
+                0.0008759183186334815,
+                0.0008759183186354006,
+                0.0009017275207225209,
+                0.000901727520723001
+              ],
+              "full_low_groups": [
+                {
+                  "s": 0.000875916889531249,
+                  "multiplicity": 1,
+                  "theta4_residue": 1.62022505977237e-08,
+                  "unexpanded_low_kernel_residual": 3.0140978804113004e-15,
+                  "reduced_slope_min_eigenvalue": 1.3279255765541145,
+                  "moment_expansion_ratio": 0.0003421550349731441,
+                  "mass_squared_residual_bound": 2.271279375069502e-15,
+                  "unreduced_moment_kernel_remainder_bound": 6.246248335978577e-16
+                },
+                {
+                  "s": 0.0008759179872704504,
+                  "multiplicity": 1,
+                  "theta4_residue": 0.1480501583404336,
+                  "unexpanded_low_kernel_residual": 5.585195730540015e-17,
+                  "reduced_slope_min_eigenvalue": 1.3279255765542024,
+                  "moment_expansion_ratio": 0.0003421554637775196,
+                  "mass_squared_residual_bound": 4.208735207620636e-17,
+                  "unreduced_moment_kernel_remainder_bound": 6.246279651055855e-16
+                },
+                {
+                  "s": 0.0009017275207225208,
+                  "multiplicity": 2,
+                  "theta4_residue": 0.22208536155986855,
+                  "unexpanded_low_kernel_residual": 4.551355370932486e-15,
+                  "reduced_slope_min_eigenvalue": 1.3279255786851138,
+                  "moment_expansion_ratio": 0.0003522373127822346,
+                  "mass_squared_residual_bound": 3.429682775000037e-15,
+                  "unreduced_moment_kernel_remainder_bound": 7.01573736781881e-16
+                }
+              ],
+              "fixed_A0_loop_metric": [
+                [
+                  0.0032175429681257236,
+                  0.0016087714840628616,
+                  -0.0018486293281374977,
+                  -8.639736061993863e-20
+                ],
+                [
+                  0.0016087714840628611,
+                  0.0032175429681257227,
+                  3.3542504711270293e-19,
+                  -0.0018486293281374973
+                ],
+                [
+                  -0.0018486293281374977,
+                  3.4897757426877174e-19,
+                  0.0036972586562749954,
+                  -0.0018486293281374968
+                ],
+                [
+                  -1.9312351197398048e-19,
+                  -0.0018486293281374973,
+                  -0.0018486293281374964,
+                  0.0036972586562749954
+                ]
+              ],
+              "Gauss_reduced_loop_metric": [
+                [
+                  0.0032175423715647966,
+                  0.0016087711857823983,
+                  -0.001848628841893074,
+                  -8.413111977820825e-20
+                ],
+                [
+                  0.0016087711857823983,
+                  0.0032175423715647966,
+                  3.355298880431411e-19,
+                  -0.001848628841893074
+                ],
+                [
+                  -0.001848628841893074,
+                  3.4916932967947623e-19,
+                  0.003697257683786148,
+                  -0.001848628841893074
+                ],
+                [
+                  -1.90754366825376e-19,
+                  -0.001848628841893074,
+                  -0.001848628841893074,
+                  0.003697257683786148
+                ]
+              ],
+              "Gauss_metric_correction_norm": 2.0493372825408922e-09,
+              "scope": "All135unitcell edge coordinates and26nonconstant temporal modes; zero external deck momentum. Four low poles of tree gauge plus scalar-loop quadratic action. Not a full interacting quantum-gauge or nonzero-momentum continuum result."
+            }
+          ]
+        },
+        {
+          "name": "all1287",
+          "results": [
+            {
+              "g": 0.5,
+              "beta": 1.0,
+              "magnetic_prescription": "all1287",
+              "tree_optical_gap_squared": 17.695102466597188,
+              "root_search_upper": 1.2800000000000002,
+              "full_gauss_and_optical_squared_frequencies": [
+                0.00021908824179269067,
+                0.00021908824179711712,
+                0.00022553605362435924,
+                0.00022553605362566072
+              ],
+              "clamped_temporal_and_optical_squared_frequencies": [
+                0.00021908824197203997,
+                0.00021908824197646644,
+                0.0002255360536220738,
+                0.0002255360536233752
+              ],
+              "gauss_but_optical_clamped_squared_frequencies": [
+                0.00021908824197328374,
+                0.00021908824197771018,
+                0.00022553605362435924,
+                0.00022553605362566072
+              ],
+              "full_low_groups": [
+                {
+                  "s": 0.00021908824179269067,
+                  "multiplicity": 2,
+                  "theta4_residue": 0.037030911045738774,
+                  "unexpanded_low_kernel_residual": 3.780414238569663e-14,
+                  "reduced_slope_min_eigenvalue": 5.309070940790083,
+                  "moment_expansion_ratio": 8.558134445026977e-05,
+                  "mass_squared_residual_bound": 7.121846427985498e-15,
+                  "unreduced_moment_kernel_remainder_bound": 2.4441759850369424e-18
+                },
+                {
+                  "s": 0.00022553605362435924,
+                  "multiplicity": 2,
+                  "theta4_residue": 0.05554699825083377,
+                  "unexpanded_low_kernel_residual": 2.171370916964516e-14,
+                  "reduced_slope_min_eigenvalue": 5.309070941258915,
+                  "moment_expansion_ratio": 8.810002094701531e-05,
+                  "mass_squared_residual_bound": 4.090602043300491e-15,
+                  "unreduced_moment_kernel_remainder_bound": 2.7448662930004526e-18
+                }
+              ],
+              "fixed_A0_loop_metric": [
+                [
+                  0.0032175429681257236,
+                  0.0016087714840628616,
+                  -0.0018486293281374977,
+                  -8.639736061993863e-20
+                ],
+                [
+                  0.0016087714840628611,
+                  0.0032175429681257227,
+                  3.3542504711270293e-19,
+                  -0.0018486293281374973
+                ],
+                [
+                  -0.0018486293281374977,
+                  3.4897757426877174e-19,
+                  0.0036972586562749954,
+                  -0.0018486293281374968
+                ],
+                [
+                  -1.9312351197398048e-19,
+                  -0.0018486293281374973,
+                  -0.0018486293281374964,
+                  0.0036972586562749954
+                ]
+              ],
+              "Gauss_reduced_loop_metric": [
+                [
+                  0.003217542818912733,
+                  0.0016087714094563665,
+                  -0.0018486292065169607,
+                  -8.413269716388999e-20
+                ],
+                [
+                  0.0016087714094563665,
+                  0.003217542818912733,
+                  3.355287269211721e-19,
+                  -0.0018486292065169607
+                ],
+                [
+                  -0.0018486292065169607,
+                  3.491669826271755e-19,
+                  0.0036972584130339214,
+                  -0.0018486292065169607
+                ],
+                [
+                  -1.9075627231359241e-19,
+                  -0.0018486292065169607,
+                  -0.0018486292065169607,
+                  0.0036972584130339214
+                ]
+              ],
+              "Gauss_metric_correction_norm": 5.125846861294454e-10,
+              "scope": "All135unitcell edge coordinates and26nonconstant temporal modes; zero external deck momentum. Four low poles of tree gauge plus scalar-loop quadratic action. Not a full interacting quantum-gauge or nonzero-momentum continuum result."
+            },
+            {
+              "g": 1.0,
+              "beta": 1.0,
+              "magnetic_prescription": "all1287",
+              "tree_optical_gap_squared": 17.695102466597188,
+              "root_search_upper": 1.2800000000000002,
+              "full_gauss_and_optical_squared_frequencies": [
+                0.0008759183157453386,
+                0.0008759183157526738,
+                0.0009017275207220656,
+                0.0009017275207225817
+              ],
+              "clamped_temporal_and_optical_squared_frequencies": [
+                0.000875918318552423,
+                0.0008759183185597585,
+                0.0009017275205759921,
+                0.0009017275205765081
+              ],
+              "gauss_but_optical_clamped_squared_frequencies": [
+                0.0008759183186319156,
+                0.0008759183186392505,
+                0.0009017275207220654,
+                0.0009017275207225815
+              ],
+              "full_low_groups": [
+                {
+                  "s": 0.0008759183157453386,
+                  "multiplicity": 2,
+                  "theta4_residue": 0.148050175113621,
+                  "unexpanded_low_kernel_residual": 1.0125522889206037e-14,
+                  "reduced_slope_min_eigenvalue": 1.327925498128405,
+                  "moment_expansion_ratio": 0.00034215559208802284,
+                  "mass_squared_residual_bound": 7.630107651616662e-15,
+                  "unreduced_moment_kernel_remainder_bound": 6.246289021443306e-16
+                },
+                {
+                  "s": 0.0009017275207220656,
+                  "multiplicity": 2,
+                  "theta4_residue": 0.22208536155552208,
+                  "unexpanded_low_kernel_residual": 8.227324551110499e-15,
+                  "reduced_slope_min_eigenvalue": 1.3279255000052315,
+                  "moment_expansion_ratio": 0.0003522373127820568,
+                  "mass_squared_residual_bound": 6.199716567396371e-15,
+                  "unreduced_moment_kernel_remainder_bound": 7.015737367804642e-16
+                }
+              ],
+              "fixed_A0_loop_metric": [
+                [
+                  0.0032175429681257236,
+                  0.0016087714840628616,
+                  -0.0018486293281374977,
+                  -8.639736061993863e-20
+                ],
+                [
+                  0.0016087714840628611,
+                  0.0032175429681257227,
+                  3.3542504711270293e-19,
+                  -0.0018486293281374973
+                ],
+                [
+                  -0.0018486293281374977,
+                  3.4897757426877174e-19,
+                  0.0036972586562749954,
+                  -0.0018486293281374968
+                ],
+                [
+                  -1.9312351197398048e-19,
+                  -0.0018486293281374973,
+                  -0.0018486293281374964,
+                  0.0036972586562749954
+                ]
+              ],
+              "Gauss_reduced_loop_metric": [
+                [
+                  0.0032175423715647966,
+                  0.0016087711857823983,
+                  -0.001848628841893074,
+                  -8.413111977820825e-20
+                ],
+                [
+                  0.0016087711857823983,
+                  0.0032175423715647966,
+                  3.355298880431411e-19,
+                  -0.001848628841893074
+                ],
+                [
+                  -0.001848628841893074,
+                  3.4916932967947623e-19,
+                  0.003697257683786148,
+                  -0.001848628841893074
+                ],
+                [
+                  -1.90754366825376e-19,
+                  -0.001848628841893074,
+                  -0.001848628841893074,
+                  0.003697257683786148
+                ]
+              ],
+              "Gauss_metric_correction_norm": 2.0493372825408922e-09,
+              "scope": "All135unitcell edge coordinates and26nonconstant temporal modes; zero external deck momentum. Four low poles of tree gauge plus scalar-loop quadratic action. Not a full interacting quantum-gauge or nonzero-momentum continuum result."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sizes": [
+        3,
+        3,
+        3,
+        2
+      ],
+      "mass": 0.8,
+      "transverse_dimension": 109,
+      "optical_dimension": 105,
+      "temporal_nonconstant_dimension": 26,
+      "static_gauge_residual": 6.667843360785852e-17,
+      "direct_current_density_commutator_residual": 3.8904737748542505e-15,
+      "direct_temporal_Ward_controls": [
+        {
+          "nu": 0.2,
+          "full161by161_Ward_residual": 1.2692051331018876e-18,
+          "omitted_temporal_contact_Ward_residual": 0.12847216816239976,
+          "direct_contact_minus_bubble_agreement": 2.896988204881268e-16,
+          "direct_mixed_vs_spatial_max": 5.204170427930421e-18,
+          "direct_density_vs_spatial_max": 1.0408340855860843e-17,
+          "uniform_charge_density_response": 1.9291362423207552e-31
+        },
+        {
+          "nu": 0.7,
+          "full161by161_Ward_residual": 3.469446951953614e-18,
+          "omitted_temporal_contact_Ward_residual": 0.4496525885683991,
+          "direct_contact_minus_bubble_agreement": 2.185751579730777e-16,
+          "direct_mixed_vs_spatial_max": 5.204170427930421e-18,
+          "direct_density_vs_spatial_max": 5.204170427930421e-18,
+          "uniform_charge_density_response": 1.9026162756136232e-31
+        }
+      ],
+      "static_harmonic_Hessian": [
+        [
+          0.00023939595474545,
+          0.00011156098127327868,
+          -0.00015153920744072675,
+          1.5680243905800805e-05
+        ],
+        [
+          0.0001115609812732785,
+          0.00022156930336360856,
+          -1.5526591829458333e-06,
+          -0.0002013685220678559
+        ],
+        [
+          -0.00015153920744072683,
+          -1.5526591829458664e-06,
+          0.00030152575569850743,
+          -0.0002327290098794634
+        ],
+        [
+          1.568024390580094e-05,
+          -0.00020136852206785626,
+          -0.00023272900987946372,
+          0.001187054692835085
+        ]
+      ],
+      "restored_profile_invariance": {
+        "Gauss_reduced_profile_error": 2.6645352591003757e-15,
+        "clamped_profile_change": 18.897653653910428,
+        "zero_static_gauge_block_error": 0.0
+      },
+      "magnetic_symmetry": {
+        "all_face_count": 1287,
+        "selected_basis_count": 105,
+        "zero_voltage_cycle_census": [
+          [
+            3,
+            45,
+            45
+          ],
+          [
+            4,
+            1080,
+            189
+          ],
+          [
+            5,
+            6912,
+            1053
+          ]
+        ],
+        "all_faces_H27_exact_max_error": 0,
+        "selected_basis_H27_exact_max_error": 15,
+        "selected_basis_broken_controller_count": 26,
+        "interpretation": "Same rank105magnetic rowspace at zero momentum, different positive Hessians. Equal weighting of a selected independent basis need not preserve the graph controller; all1287short zero-voltage faces do. Unit weights and relative face-length couplings remain supplied."
+      },
+      "magnetic_options": [
+        {
+          "name": "basis105",
+          "results": [
+            {
+              "g": 0.5,
+              "beta": 1.0,
+              "magnetic_prescription": "basis105",
+              "tree_optical_gap_squared": 0.013917859364315836,
+              "root_search_upper": 0.005567143745726335,
+              "full_gauss_and_optical_squared_frequencies": [
+                2.491209618689615e-05,
+                2.695658805375448e-05,
+                2.8259799691907944e-05,
+                7.615561939232014e-05
+              ],
+              "clamped_temporal_and_optical_squared_frequencies": [
+                2.491209675767773e-05,
+                2.6956588911517802e-05,
+                2.825980571691063e-05,
+                7.615661904312695e-05
+              ],
+              "gauss_but_optical_clamped_squared_frequencies": [
+                2.4912096757855652e-05,
+                2.6956588911664545e-05,
+                2.8259805717241483e-05,
+                7.615661904380829e-05
+              ],
+              "full_low_groups": [
+                {
+                  "s": 2.491209618689615e-05,
+                  "multiplicity": 1,
+                  "theta4_residue": 4.437359221945876e-06,
+                  "unexpanded_low_kernel_residual": 1.8496982742665494e-19,
+                  "reduced_slope_min_eigenvalue": 2.3893753414574834,
+                  "moment_expansion_ratio": 9.731287573006307e-06,
+                  "mass_squared_residual_bound": 7.74274205793667e-20,
+                  "unreduced_moment_kernel_remainder_bound": 3.9066950746147385e-22
+                },
+                {
+                  "s": 2.695658805375448e-05,
+                  "multiplicity": 1,
+                  "theta4_residue": 7.0597713571568945e-15,
+                  "unexpanded_low_kernel_residual": 1.4462052774368384e-19,
+                  "reduced_slope_min_eigenvalue": 2.3893753415477152,
+                  "moment_expansion_ratio": 1.0529917208497841e-05,
+                  "mass_squared_residual_bound": 6.053741078641758e-20,
+                  "unreduced_moment_kernel_remainder_bound": 5.355850687409396e-22
+                },
+                {
+                  "s": 2.8259799691907944e-05,
+                  "multiplicity": 1,
+                  "theta4_residue": 2.133461240581406e-05,
+                  "unexpanded_low_kernel_residual": 3.989111113704755e-19,
+                  "reduced_slope_min_eigenvalue": 2.3893753416052284,
+                  "moment_expansion_ratio": 1.1038984254651538e-05,
+                  "mass_squared_residual_bound": 1.669821441884175e-19,
+                  "unreduced_moment_kernel_remainder_bound": 6.4691215530783275e-22
+                },
+                {
+                  "s": 7.615561939232014e-05,
+                  "multiplicity": 1,
+                  "theta4_residue": 0.09255157125124701,
+                  "unexpanded_low_kernel_residual": 1.2961988748834882e-18,
+                  "reduced_slope_min_eigenvalue": 2.389375343719182,
+                  "moment_expansion_ratio": 2.9748288825125048e-05,
+                  "mass_squared_residual_bound": 5.425821975203036e-19,
+                  "unreduced_moment_kernel_remainder_bound": 3.4118107950754735e-20
+                }
+              ],
+              "fixed_A0_loop_metric": [
+                [
+                  0.0015674703002556613,
+                  0.0007865471137487728,
+                  -0.0009012730427496419,
+                  -6.087969375635164e-06
+                ],
+                [
+                  0.000786547113748773,
+                  0.0015735464837713787,
+                  4.5225627383229286e-07,
+                  -0.0013628483373583492
+                ],
+                [
+                  -0.0009012730427496416,
+                  4.5225627383230133e-07,
+                  0.001802998341773116,
+                  -0.001350672398607078
+                ],
+                [
+                  -6.087969375635097e-06,
+                  -0.001362848337358349,
+                  -0.0013506723986070781,
+                  0.00396822720315578
+                ]
+              ],
+              "Gauss_reduced_loop_metric": [
+                [
+                  0.001567470231716328,
+                  0.0007865470823444909,
+                  -0.0009012729806325837,
+                  -6.08797474476512e-06
+                ],
+                [
+                  0.0007865470823444909,
+                  0.0015735464201291904,
+                  4.522554395992367e-07,
+                  -0.0013628482537129116
+                ],
+                [
+                  -0.0009012729806325837,
+                  4.522554395992452e-07,
+                  0.0018029982167035996,
+                  -0.0013506723042215896
+                ],
+                [
+                  -6.087974744765053e-06,
+                  -0.0013628482537129116,
+                  -0.0013506723042215896,
+                  0.003968226937764996
+                ]
+              ],
+              "Gauss_metric_correction_norm": 3.692987171011528e-10,
+              "scope": "All135unitcell edge coordinates and26nonconstant temporal modes; zero external deck momentum. Four low poles of tree gauge plus scalar-loop quadratic action. Not a full interacting quantum-gauge or nonzero-momentum continuum result."
+            },
+            {
+              "g": 1.0,
+              "beta": 1.0,
+              "magnetic_prescription": "basis105",
+              "tree_optical_gap_squared": 0.013917859364315836,
+              "root_search_upper": 0.005567143745726335,
+              "full_gauss_and_optical_squared_frequencies": [
+                9.959547686822797e-05,
+                0.00010776787011394152,
+                0.00011298184136981148,
+                0.00030446086428772136
+              ],
+              "clamped_temporal_and_optical_squared_frequencies": [
+                9.959548557084873e-05,
+                0.00010776788340458294,
+                0.00011298193599218786,
+                0.0003044761477718447
+              ],
+              "gauss_but_optical_clamped_squared_frequencies": [
+                9.959548558221784e-05,
+                0.00010776788341396026,
+                0.00011298193601333163,
+                0.000304476147815387
+              ],
+              "full_low_groups": [
+                {
+                  "s": 9.959547686822797e-05,
+                  "multiplicity": 1,
+                  "theta4_residue": 1.778594291457936e-05,
+                  "unexpanded_low_kernel_residual": 1.7922506229892848e-19,
+                  "reduced_slope_min_eigenvalue": 0.5976668098525466,
+                  "moment_expansion_ratio": 3.8904483151651546e-05,
+                  "mass_squared_residual_bound": 3.000907655057391e-19,
+                  "unreduced_moment_kernel_remainder_bound": 9.98020721152188e-20
+                },
+                {
+                  "s": 0.00010776787011394152,
+                  "multiplicity": 1,
+                  "theta4_residue": 3.9531223493927525e-13,
+                  "unexpanded_low_kernel_residual": 9.102180935439462e-20,
+                  "reduced_slope_min_eigenvalue": 0.5976668102165968,
+                  "moment_expansion_ratio": 4.20968242632584e-05,
+                  "mass_squared_residual_bound": 1.5240504925209352e-19,
+                  "unreduced_moment_kernel_remainder_bound": 1.3681687988137001e-19
+                },
+                {
+                  "s": 0.00011298184136981148,
+                  "multiplicity": 1,
+                  "theta4_residue": 8.527626880902669e-05,
+                  "unexpanded_low_kernel_residual": 4.692951853567266e-16,
+                  "reduced_slope_min_eigenvalue": 0.5976668104488645,
+                  "moment_expansion_ratio": 4.41335317850826e-05,
+                  "mass_squared_residual_bound": 7.857782255194104e-16,
+                  "unreduced_moment_kernel_remainder_bound": 1.65279108670972e-19
+                },
+                {
+                  "s": 0.00030446086428772136,
+                  "multiplicity": 1,
+                  "theta4_residue": 0.3700232588022357,
+                  "unexpanded_low_kernel_residual": 3.3701882218425473e-19,
+                  "reduced_slope_min_eigenvalue": 0.5976668189810213,
+                  "moment_expansion_ratio": 0.00011893002511239113,
+                  "mass_squared_residual_bound": 5.642973981531166e-19,
+                  "unreduced_moment_kernel_remainder_bound": 8.716492439557526e-18
+                }
+              ],
+              "fixed_A0_loop_metric": [
+                [
+                  0.0015674703002556613,
+                  0.0007865471137487728,
+                  -0.0009012730427496419,
+                  -6.087969375635164e-06
+                ],
+                [
+                  0.000786547113748773,
+                  0.0015735464837713787,
+                  4.5225627383229286e-07,
+                  -0.0013628483373583492
+                ],
+                [
+                  -0.0009012730427496416,
+                  4.5225627383230133e-07,
+                  0.001802998341773116,
+                  -0.001350672398607078
+                ],
+                [
+                  -6.087969375635097e-06,
+                  -0.001362848337358349,
+                  -0.0013506723986070781,
+                  0.00396822720315578
+                ]
+              ],
+              "Gauss_reduced_loop_metric": [
+                [
+                  0.001567470026223372,
+                  0.0007865469881911391,
+                  -0.0009012727943924492,
+                  -6.087990842475604e-06
+                ],
+                [
+                  0.0007865469881911391,
+                  0.0015735462293209324,
+                  4.5225293845096866e-07,
+                  -0.0013628480029295176
+                ],
+                [
+                  -0.0009012727943924492,
+                  4.5225293845097713e-07,
+                  0.0018029978417235526,
+                  -0.0013506720212443923
+                ],
+                [
+                  -6.0879908424755374e-06,
+                  -0.0013628480029295176,
+                  -0.0013506720212443923,
+                  0.003968226142074371
+                ]
+              ],
+              "Gauss_metric_correction_norm": 1.476519033171763e-09,
+              "scope": "All135unitcell edge coordinates and26nonconstant temporal modes; zero external deck momentum. Four low poles of tree gauge plus scalar-loop quadratic action. Not a full interacting quantum-gauge or nonzero-momentum continuum result."
+            }
+          ]
+        },
+        {
+          "name": "all1287",
+          "results": [
+            {
+              "g": 0.5,
+              "beta": 1.0,
+              "magnetic_prescription": "all1287",
+              "tree_optical_gap_squared": 17.695102466597188,
+              "root_search_upper": 1.2800000000000002,
+              "full_gauss_and_optical_squared_frequencies": [
+                2.4912096750521553e-05,
+                2.6956588908386843e-05,
+                2.825980567681381e-05,
+                7.615660958358328e-05
+              ],
+              "clamped_temporal_and_optical_squared_frequencies": [
+                2.4912096755918952e-05,
+                2.695658891725795e-05,
+                2.8259805715686913e-05,
+                7.615661904083183e-05
+              ],
+              "gauss_but_optical_clamped_squared_frequencies": [
+                2.4912096756096856e-05,
+                2.6956588917404698e-05,
+                2.8259805716017767e-05,
+                7.615661904151317e-05
+              ],
+              "full_low_groups": [
+                {
+                  "s": 2.4912096750521553e-05,
+                  "multiplicity": 1,
+                  "theta4_residue": 4.436821222504666e-06,
+                  "unexpanded_low_kernel_residual": 1.8394693534257265e-14,
+                  "reduced_slope_min_eigenvalue": 2.3893753399520414,
+                  "moment_expansion_ratio": 9.73128779317248e-06,
+                  "mass_squared_residual_bound": 7.699924320198904e-15,
+                  "unreduced_moment_kernel_remainder_bound": 3.906695428164755e-22
+                },
+                {
+                  "s": 2.6956588908386843e-05,
+                  "multiplicity": 1,
+                  "theta4_residue": 1.2619905739720716e-24,
+                  "unexpanded_low_kernel_residual": 1.1684101720831778e-14,
+                  "reduced_slope_min_eigenvalue": 2.3893753400418976,
+                  "moment_expansion_ratio": 1.0529917542338608e-05,
+                  "mass_squared_residual_bound": 4.890905022818751e-15,
+                  "unreduced_moment_kernel_remainder_bound": 5.35585136661933e-22
+                },
+                {
+                  "s": 2.825980567681381e-05,
+                  "multiplicity": 1,
+                  "theta4_residue": 2.1336054348765214e-05,
+                  "unexpanded_low_kernel_residual": 1.085368759754806e-14,
+                  "reduced_slope_min_eigenvalue": 2.389375340099173,
+                  "moment_expansion_ratio": 1.1038986592505392e-05,
+                  "mass_squared_residual_bound": 4.5432979321215955e-15,
+                  "unreduced_moment_kernel_remainder_bound": 6.469127033259092e-22
+                },
+                {
+                  "s": 7.615660958358328e-05,
+                  "multiplicity": 1,
+                  "theta4_residue": 0.09255157469020793,
+                  "unexpanded_low_kernel_residual": 1.0655871026449727e-14,
+                  "reduced_slope_min_eigenvalue": 2.389375342204171,
+                  "moment_expansion_ratio": 2.9748675618587216e-05,
+                  "mass_squared_residual_bound": 4.460492930564938e-15,
+                  "unreduced_moment_kernel_remainder_bound": 3.411988244161138e-20
+                }
+              ],
+              "fixed_A0_loop_metric": [
+                [
+                  0.0015674703002556613,
+                  0.0007865471137487728,
+                  -0.0009012730427496419,
+                  -6.087969375635164e-06
+                ],
+                [
+                  0.000786547113748773,
+                  0.0015735464837713787,
+                  4.5225627383229286e-07,
+                  -0.0013628483373583492
+                ],
+                [
+                  -0.0009012730427496416,
+                  4.5225627383230133e-07,
+                  0.001802998341773116,
+                  -0.001350672398607078
+                ],
+                [
+                  -6.087969375635097e-06,
+                  -0.001362848337358349,
+                  -0.0013506723986070781,
+                  0.00396822720315578
+                ]
+              ],
+              "Gauss_reduced_loop_metric": [
+                [
+                  0.001567470231716328,
+                  0.0007865470823444909,
+                  -0.0009012729806325837,
+                  -6.08797474476512e-06
+                ],
+                [
+                  0.0007865470823444909,
+                  0.0015735464201291904,
+                  4.522554395992367e-07,
+                  -0.0013628482537129116
+                ],
+                [
+                  -0.0009012729806325837,
+                  4.522554395992452e-07,
+                  0.0018029982167035996,
+                  -0.0013506723042215896
+                ],
+                [
+                  -6.087974744765053e-06,
+                  -0.0013628482537129116,
+                  -0.0013506723042215896,
+                  0.003968226937764996
+                ]
+              ],
+              "Gauss_metric_correction_norm": 3.692987171011528e-10,
+              "scope": "All135unitcell edge coordinates and26nonconstant temporal modes; zero external deck momentum. Four low poles of tree gauge plus scalar-loop quadratic action. Not a full interacting quantum-gauge or nonzero-momentum continuum result."
+            },
+            {
+              "g": 1.0,
+              "beta": 1.0,
+              "magnetic_prescription": "all1287",
+              "tree_optical_gap_squared": 17.695102466597188,
+              "root_search_upper": 1.2800000000000002,
+              "full_gauss_and_optical_squared_frequencies": [
+                9.959548549128206e-05,
+                0.00010776788327548467,
+                0.00011298193538537286,
+                0.0003044759965663835
+              ],
+              "clamped_temporal_and_optical_squared_frequencies": [
+                9.959548556909083e-05,
+                0.00010776788341031979,
+                0.00011298193599114461,
+                0.0003044761477695575
+              ],
+              "gauss_but_optical_clamped_squared_frequencies": [
+                9.959548558045997e-05,
+                0.00010776788341969708,
+                0.00011298193601228836,
+                0.00030447614781309995
+              ],
+              "full_low_groups": [
+                {
+                  "s": 9.959548549128206e-05,
+                  "multiplicity": 1,
+                  "theta4_residue": 1.7777777343689844e-05,
+                  "unexpanded_low_kernel_residual": 4.5987956718576535e-15,
+                  "reduced_slope_min_eigenvalue": 0.5976668045976652,
+                  "moment_expansion_ratio": 3.890448652003205e-05,
+                  "mass_squared_residual_bound": 7.700129077207155e-15,
+                  "unreduced_moment_kernel_remainder_bound": 9.980210667932456e-20
+                },
+                {
+                  "s": 0.00010776788327548467,
+                  "multiplicity": 1,
+                  "theta4_residue": 3.1277477763867335e-25,
+                  "unexpanded_low_kernel_residual": 2.9209018391133573e-15,
+                  "reduced_slope_min_eigenvalue": 0.5976668049568336,
+                  "moment_expansion_ratio": 4.209682940448619e-05,
+                  "mass_squared_residual_bound": 4.8906980844268286e-15,
+                  "unreduced_moment_kernel_remainder_bound": 1.368169467191222e-19
+                },
+                {
+                  "s": 0.00011298193538537286,
+                  "multiplicity": 1,
+                  "theta4_residue": 8.5298613247156e-05,
+                  "unexpanded_low_kernel_residual": 2.7133627326475157e-15,
+                  "reduced_slope_min_eigenvalue": 0.5976668051859866,
+                  "moment_expansion_ratio": 4.4133568509911266e-05,
+                  "mass_squared_residual_bound": 4.543198864547446e-15,
+                  "unreduced_moment_kernel_remainder_bound": 1.6527965881244063e-19
+                },
+                {
+                  "s": 0.0003044759965663835,
+                  "multiplicity": 1,
+                  "theta4_residue": 0.3700234892976581,
+                  "unexpanded_low_kernel_residual": 2.6583157574052777e-15,
+                  "reduced_slope_min_eigenvalue": 0.5976668136021466,
+                  "moment_expansion_ratio": 0.00011893593615874354,
+                  "mass_squared_residual_bound": 4.451029339106486e-15,
+                  "unreduced_moment_kernel_remainder_bound": 8.718225524690936e-18
+                }
+              ],
+              "fixed_A0_loop_metric": [
+                [
+                  0.0015674703002556613,
+                  0.0007865471137487728,
+                  -0.0009012730427496419,
+                  -6.087969375635164e-06
+                ],
+                [
+                  0.000786547113748773,
+                  0.0015735464837713787,
+                  4.5225627383229286e-07,
+                  -0.0013628483373583492
+                ],
+                [
+                  -0.0009012730427496416,
+                  4.5225627383230133e-07,
+                  0.001802998341773116,
+                  -0.001350672398607078
+                ],
+                [
+                  -6.087969375635097e-06,
+                  -0.001362848337358349,
+                  -0.0013506723986070781,
+                  0.00396822720315578
+                ]
+              ],
+              "Gauss_reduced_loop_metric": [
+                [
+                  0.001567470026223372,
+                  0.0007865469881911391,
+                  -0.0009012727943924492,
+                  -6.087990842475604e-06
+                ],
+                [
+                  0.0007865469881911391,
+                  0.0015735462293209324,
+                  4.5225293845096866e-07,
+                  -0.0013628480029295176
+                ],
+                [
+                  -0.0009012727943924492,
+                  4.5225293845097713e-07,
+                  0.0018029978417235526,
+                  -0.0013506720212443923
+                ],
+                [
+                  -6.0879908424755374e-06,
+                  -0.0013628480029295176,
+                  -0.0013506720212443923,
+                  0.003968226142074371
+                ]
+              ],
+              "Gauss_metric_correction_norm": 1.476519033171763e-09,
+              "scope": "All135unitcell edge coordinates and26nonconstant temporal modes; zero external deck momentum. Four low poles of tree gauge plus scalar-loop quadratic action. Not a full interacting quantum-gauge or nonzero-momentum continuum result."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "direct_density_integrals": "I0=p/[2ab(p\u00b2+nu\u00b2)], I1=(b-a)nu/[2ab(p\u00b2+nu\u00b2)], I2=p(4ab+nu\u00b2)/[2ab(p\u00b2+nu\u00b2)]. Temporal contact p/(2ab) minus I2 yields (a-b)\u00b2p/[2ab(p\u00b2+nu\u00b2)]. Mixed current/density bubble gives i nu Z_PL.",
+  "Gauss_reduction": "Spatial basis=(4harmonic,105coexact,26gradients). On zero external deck momentum remove26temporal A0 modes by Schur: Eeff=E_PP-E_PL E_LL^-1 E_LP, E=bare electric+Z(s). Then eliminate105optical coordinates below their gap. Uniform temporal charge is the redundant neutral-vacuum gauge mode.",
+  "ordering": "For harmonic representatives,0<=Zeff<=Z_HH in4holonomy truncation, so fixedA0 roots<=Gauss4 roots<=tree roots. Optical relaxation further lowers the4low roots relative to Gauss4. Net shift versus the earlier clamped model need not have one sign.",
+  "limits": "Supplied scalar/gauge action, torus sizes,mass,g,beta and continuous time. Zero external deck momentum only. Higher gauge loops, full charged fermion/scalar inventory, nonzeroexternal-momentum propagation, physical3+1 continuum, radius dynamics, relic/cosmological fit, measured units and TOE not supplied.",
+  "input_raw_sha256": {
+    "analysis\\toe_20261108_native_gauss_response.py": "a06c2b302d778cb41c1321f9a2a147db9b2657c8204bf06b764c264c2ca6763f",
+    "analysis/toe_20261108_coupled_holonomy_response.py": "455ce86c532191bca600bb6533828f20fbdbc6d79a2c451391484c6a28eee664",
+    "data/PART_20261023_NATIVE_ZERO_HOLONOMY_FACE_COMPLETION.json": "769573b37e1f4c3989d814466bee4a02393ac3e6fee7cf34e10715be89567e4a",
+    "data/w33_pass11991_native_four_period_cover.json": "d8fcc26b167d858876cbd8da8d8c434c8a50fea70974c37c99ec574814572d46"
+  }
+}

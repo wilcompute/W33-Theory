@@ -1,0 +1,45 @@
+{
+  "selected_inputs_unchanged_during_run": true,
+  "selected_source_and_input_raw_sha256": {
+    "analysis/toe_20261108_native_gauss_response.py": "a06c2b302d778cb41c1321f9a2a147db9b2657c8204bf06b764c264c2ca6763f",
+    "analysis/toe_20261108_native_gauss_server.js": "05526526881dba30500529d07fab7ccbd9592bb1d80abb41f4276ee1958111a2",
+    "tests/test_toe_20261108_native_gauss_response.py": "e8ff453603c664171f54792908e1cc11bb0d3802ddb38ca1257517d9fe64bbc8",
+    "data/toe_20261108_native_gauss_server.json": "eaf0c10b23b43667d283c51f11047f349ab313437886a21d8af28079edffe22c",
+    "analysis/toe_20261108_coupled_holonomy_response.py": "455ce86c532191bca600bb6533828f20fbdbc6d79a2c451391484c6a28eee664",
+    "analysis/toe_20261108_native_scalar_wilson.py": "7a224a382dd86327f4b7fe5b2ae7f306560977bec5e1f19cc5165b4bf16148e4",
+    "analysis/w33_20261027_native_bloch_face_module.py": "35b51978da7071f45f28ed32748948acab1bf0c2354a167be6c61eb1550c2fa6",
+    "analysis/w33_pass12188_native_period_symplectic_repair.py": "e2656023487251289c49d5bde1d1aa268437ec5292500d481072213d31110d7a",
+    "data/PART_20261023_NATIVE_ZERO_HOLONOMY_FACE_COMPLETION.json": "769573b37e1f4c3989d814466bee4a02393ac3e6fee7cf34e10715be89567e4a",
+    "data/w33_pass11991_native_four_period_cover.json": "d8fcc26b167d858876cbd8da8d8c434c8a50fea70974c37c99ec574814572d46"
+  },
+  "executions": [
+    {
+      "command": [
+        "py",
+        "-3",
+        "analysis/toe_20261108_native_gauss_response.py"
+      ],
+      "exit_code": 0,
+      "seconds": 28.647414499995648,
+      "stdout": "[{\"sizes\": [2, 2, 2, 2], \"Ward\": [{\"nu\": 0.2, \"full161by161_Ward_residual\": 1.5379104467630597e-18, \"omitted_temporal_contact_Ward_residual\": 0.12863670215973985, \"direct_contact_minus_bubble_agreement\": 2.7755575615628914e-16, \"direct_mixed_vs_spatial_max\": 6.938893903907228e-18, \"direct_density_vs_spatial_max\": 6.938893903907228e-18, \"uniform_charge_density_response\": 1.7901628299194508e-31}, {\"nu\": 0.7, \"full161by161_Ward_residual\": 5.204170427930421e-18, \"omitted_temporal_contact_Ward_residual\": 0.45022845755908947, \"direct_contact_minus_bubble_agreement\": 2.5326962749261384e-16, \"direct_mixed_vs_spatial_max\": 3.469446951953614e-18, \"direct_density_vs_spatial_max\": 8.673617379884035e-18, \"uniform_charge_density_response\": 1.765424583419643e-31}], \"magnetic_symmetry\": {\"all_face_count\": 1287, \"selected_basis_count\": 105, \"zero_voltage_cycle_census\": [[3, 45, 45], [4, 1080, 189], [5, 6912, 1053]], \"all_faces_H27_exact_max_error\": 0, \"selected_basis_H27_exact_max_error\": 15, \"selected_basis_broken_controller_count\": 26, \"interpretation\": \"Same rank105magnetic rowspace at zero momentum, different positive Hessians. Equal weighting of a selected independent basis need not preserve the graph controller; all1287short zero-voltage faces do. Unit weights and relative face-length couplings remain supplied.\"}, \"modes\": [{\"name\": \"basis105\", \"frequencies\": [[0.00021908814670110785, 0.0002190882208834671, 0.00022553605362491427, 0.00022553605362491698], [0.000875916889531249, 0.0008759179872704504, 0.0009017275207225208, 0.0009017275207230012]]}, {\"name\": \"all1287\", \"frequencies\": [[0.00021908824179269067, 0.00021908824179711712, 0.00022553605362435924, 0.00022553605362566072], [0.0008759183157453386, 0.0008759183157526738, 0.0009017275207220656, 0.0009017275207225817]]}]}, {\"sizes\": [3, 3, 3, 2], \"Ward\": [{\"nu\": 0.2, \"full161by161_Ward_residual\": 1.2692051331018876e-18, \"omitted_temporal_contact_Ward_residual\": 0.12847216816239976, \"direct_contact_minus_bubble_agreement\": 2.896988204881268e-16, \"direct_mixed_vs_spatial_max\": 5.204170427930421e-18, \"direct_density_vs_spatial_max\": 1.0408340855860843e-17, \"uniform_charge_density_response\": 1.9291362423207552e-31}, {\"nu\": 0.7, \"full161by161_Ward_residual\": 3.469446951953614e-18, \"omitted_temporal_contact_Ward_residual\": 0.4496525885683991, \"direct_contact_minus_bubble_agreement\": 2.185751579730777e-16, \"direct_mixed_vs_spatial_max\": 5.204170427930421e-18, \"direct_density_vs_spatial_max\": 5.204170427930421e-18, \"uniform_charge_density_response\": 1.9026162756136232e-31}], \"magnetic_symmetry\": {\"all_face_count\": 1287, \"selected_basis_count\": 105, \"zero_voltage_cycle_census\": [[3, 45, 45], [4, 1080, 189], [5, 6912, 1053]], \"all_faces_H27_exact_max_error\": 0, \"selected_basis_H27_exact_max_error\": 15, \"selected_basis_broken_controller_count\": 26, \"interpretation\": \"Same rank105magnetic rowspace at zero momentum, different positive Hessians. Equal weighting of a selected independent basis need not preserve the graph controller; all1287short zero-voltage faces do. Unit weights and relative face-length couplings remain supplied.\"}, \"modes\": [{\"name\": \"basis105\", \"frequencies\": [[2.491209618689615e-05, 2.695658805375448e-05, 2.8259799691907944e-05, 7.615561939232014e-05], [9.959547686822797e-05, 0.00010776787011394152, 0.00011298184136981148, 0.00030446086428772136]]}, {\"name\": \"all1287\", \"frequencies\": [[2.4912096750521553e-05, 2.6956588908386843e-05, 2.825980567681381e-05, 7.615660958358328e-05], [9.959548549128206e-05, 0.00010776788327548467, 0.00011298193538537286, 0.0003044759965663835]]}]}]\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "py",
+        "-3",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_toe_20261108_native_gauss_response.py",
+        "tests/test_toe_20261108_coupled_holonomy_response.py"
+      ],
+      "exit_code": 0,
+      "seconds": 181.29985209999722,
+      "stdout": "...............................................                          [100%]\n47 passed in 167.78s (0:02:47)\n",
+      "stderr": ""
+    }
+  ],
+  "result_raw_sha256": "ed3ad39b28ec78bfcbd1bec88b22f7fa37c2bfd74d96d67a2a25a79d4b2335e0",
+  "scope": "Full135edge zero external momentum response; direct temporal density/contact Ward tests and both magnetic prescriptions. Actual server integrals and generic nested Schur control, not native135edge server replay. Numerical tolerances are not roundoff-certified intervals."
+}
