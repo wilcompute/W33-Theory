@@ -1,0 +1,141 @@
+{
+  "status": "ACTUAL_INCOMING_PATCH_AND_MANUSCRIPT_READING_RECORD_NOT_COMPLETE_WEEK",
+  "UTC": "2026-11-08T14:25:40.610680+00:00",
+  "integration_HEAD": "a7132f92a4f4645af390e5d4d498bc8f3618e713",
+  "incoming_artifact_raw_sha256": {
+    "analysis/PASS12627_MCMC_SHEAR_RADIATIVE.md": "b46ffcde27e56c2ec7739fe3dce6e20b5ca9259c6c5b6c606e1d0772facdc683",
+    "analysis/SUMMARY_PASSES_12620_12628.md": "95693fce055ae7cd418bd847fb0cfb18c24edfa2dbec0ef9bccfb37a7fb85853",
+    "analysis/toe_uv/des_joint_cpl.json": "8400123204757177c12419a9a469849c0b3c880f8ffa8b604b463e660a178ddf",
+    "analysis/toe_uv/mcmc_desy5_bao_free_neg.json": "baaac61c1553cf317d2449848be23484f1c103dcfde919dd3dc738903fbcbedb",
+    "analysis/toe_uv/shear_ppd.json": "7b14669a5236c09620df9a422021dbfe62108530dae5bbd6810eced8de3eab64",
+    "analysis/toe_uv/sterile_boltzmann.py": "8db4f3c8ebc6d7a084c51341448420d79eab414d652abd3983045f5ffc3f1adf",
+    "analysis/toe_uv/sterile_hh.py": "62616155bf913bd37697ac7500894d484665b6deada6c97a27a161a8d9d17a7c",
+    "analysis/w33_pass12627_mcmc_shear_radiative.py": "ab28c367d7a0a7c2611d8e11ec5fe6ae20780d5c7fe5b79ce6c96a8649cca6f0",
+    "data/w33_pass12627_mcmc_shear_radiative.json": "e83587afff13e7505620ac64e9428c5af1cd6b0913570fbce86fc6d5cc8d5c4b",
+    "tests/test_w33_pass12627.py": "f9e74667174d4284fcb58a3a46cb18d741c83b92480f1d61c1995f470b467016",
+    ".github/workflows/w33_20261107_constants_five_fronts.yml": "118ac7a8125a5a5fc1b6f0e8206c76663d43ee108521ab0a0687ba69fa0b9b6c",
+    "analysis/2026-11-07_natural_constants_derivation_catalog.md": "da8a624cb0c30c211d4f01e7ca388dd17d9f0b336320badc2ec16e835a67471c",
+    "analysis/PASS20261107_CONSTANTS_FIVE_FRONTS.md": "7ae88439b7fb6746b04858ee7c5606a0821d2e757a279fceb9abfafb48ec4513",
+    "analysis/w33_20261107_constants_five_fronts.py": "7e56e510b183e3e88d3b42906048fc6b69133536440019bc0f7a59214a3f0c45",
+    "data/w33_20261107_constants_five_fronts_summary.json": "dfd083cc533d4a31f45481dfc461f54c90c17b4ba8696d2d036eca4ab6e65dfe",
+    "tests/test_w33_20261107_constants_five_fronts.py": "c3e6d0ec990e0422e600fee8777e246cbdf063bb99d94c54f76c69c284e126a5",
+    "papers/forty_points/main.pdf": "003b75482b6584e20e83a55d9e9ba0a181f93b8dff0f94c1d615039c21213cbb",
+    "analysis/HANDOFF_CLAUDE_TO_CHAT_20261106.md": "1b19fd0a06c44966ebda8fcaf77db2e2a208db79384cb8fded25396a1b3e837a",
+    "analysis/toe_uv/c_profile.py": "46e0ebf6c953c9510ed370584ceb9d91f45406e0a2f1faccf446fe9eedd78e29",
+    "analysis/toe_uv/scorecard.json": "769e59d184db580697f1f316d124208d499759c7e0eec29cabbc2709f7ba3cf7",
+    "analysis/toe_uv/scorecard.md": "0bdb7f9fc7fb15f9507ebdd356c6c2c09937eb5ebdca3e56cb086c8a726eff2a",
+    "analysis/toe_uv/scorecard.py": "e9b75eb3c7269e49cf401864498671bfe4a3dd094b0b7999c13f4d6e9be37246",
+    "analysis/toe_uv/shear_ppd.py": "02013a3aa2152f39191a8ac15bdb9f54db79dbcf80b6f4043a6b54e15beb37b9",
+    "analysis/toe_uv/sign_grid.json": "eff6f58df638b76e886bcb39df0ed9ef1887ca8d7d7b2740180a061f075adcff"
+  },
+  "incoming": {
+    "previous_accepted_audit": "47683e807f8fd9347d3a7a4632668cafb9f34113",
+    "read_report_and_producer_and_tests": true,
+    "complete_new_commit_patches": [
+      "0e87357a2a7e9e330adcc8751d76e4d1aca1997c",
+      "5155ec0357a848905e6b05112bfebadf57e6fe72",
+      "dc24bbe25711b6c34b597e757f91e2d1e704fee8",
+      "d624f9290b88de8e758c87283642bb13ddd6c3e0",
+      "b49379640a364dea6d2abf7cebc4819922f28a4c",
+      "85db9860390e15da1f75dc705a02769e729293fe",
+      "cf5ded026f224c8a5e1e9b678fdc2eeeef4e6971",
+      "7dee1b5ff3f3589d2db65c1be36d2f00e6e2d64e",
+      "662858c97de3024d33341681c128cc8e143cd6cc",
+      "87a973053132c78c18a430529e7649677fea7ad8",
+      "a7132f92a4f4645af390e5d4d498bc8f3618e713"
+    ],
+    "patch_lines": 1015,
+    "patch_raw_sha256": "383796aa8545fb06b1afd624c99120d879c3a0a1eb0970d18edf5df28b1de54f",
+    "scope": "All11new commit patches read; six final changed files reviewed via patches. Incoming37506file scan is a stored attestation, not rerun here; seven focused tests replayed in own validation."
+  },
+  "preconstruction_search": {
+    "pattern": "(cannibal.*(moment|energy|Boltzmann)|rho_S.*(Y_S|YS)|gamma32.*(solve_ivp|Radau)|chemical.*equilibrium.*sterile)",
+    "scope": "RESULTS_INDEX.md analysis data papers docs;1MB cap",
+    "exit_code": 1,
+    "limits": "No priority proof; existing source/branching/self-collision packets and published moment methods explicitly credited."
+  },
+  "manuscript": {
+    "path": "papers/forty_points/main.pdf",
+    "raw_sha256": "003b75482b6584e20e83a55d9e9ba0a181f93b8dff0f94c1d615039c21213cbb",
+    "total_pages": 215,
+    "full_extracted_text_read_this_packet": [
+      73,
+      84
+    ],
+    "cumulative_full_extracted_text_read": [
+      1,
+      84
+    ],
+    "visual_page": 75,
+    "rendered_image_raw_sha256": "42de2663a22b6c2a96ac43b9ed6d0129c25a0bda48e0871ac73a5d609d181ce1",
+    "limits": "Checked unchanged PDF against extracted cache before reading. Selected page visual inspection, not visual inspection of all215pages. No independent reproof of all manuscript computations."
+  },
+  "literature": [
+    {
+      "url": "https://arxiv.org/abs/2212.09759",
+      "reading": "Selected sections2-3 on threshold and number/energy evolution; not full paper"
+    },
+    {
+      "url": "https://arxiv.org/abs/2003.12606",
+      "reading": "Selected relevant fusion sections in previous packet"
+    }
+  ],
+  "execution": "Available local Python plus actual server V8 chemical-rate MC. RDC device75dccda9-254c-47a9-9d13-ef69565dedf7 offline47h at recheck. No actual remote-PC job.",
+  "git_exception": "GitKraken no longer present in enabled tools; Plugin Management GitKraken search returned no plugins. GitHub used for remote history; narrow git CLI fallback used for authorized local synchronization and publication, with explicit owned paths and preservation hashes.",
+  "continuity": "Connected MCP returned empty project mirror; actual repo journal fallback used. Prior decision-c25a7033 source71fc4c accepts radiative audit; it is not a protective UV mechanism.",
+  "historical_incoming_snapshot_before_parallel_commit": {
+    "analysis/PASS12627_MCMC_SHEAR_RADIATIVE.md": "bef728eafce78d64b1e28a83a1f7a7bb8e05b4fe79b26ea970c32dc43f792e78",
+    "analysis/SUMMARY_PASSES_12620_12628.md": "95693fce055ae7cd418bd847fb0cfb18c24edfa2dbec0ef9bccfb37a7fb85853",
+    "analysis/toe_uv/des_joint_cpl.json": "8400123204757177c12419a9a469849c0b3c880f8ffa8b604b463e660a178ddf",
+    "analysis/toe_uv/mcmc_desy5_bao_free_neg.json": "baaac61c1553cf317d2449848be23484f1c103dcfde919dd3dc738903fbcbedb",
+    "analysis/toe_uv/shear_ppd.json": "7b14669a5236c09620df9a422021dbfe62108530dae5bbd6810eced8de3eab64",
+    "analysis/toe_uv/sterile_boltzmann.py": "8db4f3c8ebc6d7a084c51341448420d79eab414d652abd3983045f5ffc3f1adf",
+    "analysis/toe_uv/sterile_hh.py": "62616155bf913bd37697ac7500894d484665b6deada6c97a27a161a8d9d17a7c",
+    "analysis/w33_pass12627_mcmc_shear_radiative.py": "ab28c367d7a0a7c2611d8e11ec5fe6ae20780d5c7fe5b79ce6c96a8649cca6f0",
+    "data/w33_pass12627_mcmc_shear_radiative.json": "e83587afff13e7505620ac64e9428c5af1cd6b0913570fbce86fc6d5cc8d5c4b",
+    "tests/test_w33_pass12627.py": "f9e74667174d4284fcb58a3a46cb18d741c83b92480f1d61c1995f470b467016",
+    ".github/workflows/w33_20261107_constants_five_fronts.yml": "118ac7a8125a5a5fc1b6f0e8206c76663d43ee108521ab0a0687ba69fa0b9b6c",
+    "analysis/2026-11-07_natural_constants_derivation_catalog.md": "da8a624cb0c30c211d4f01e7ca388dd17d9f0b336320badc2ec16e835a67471c",
+    "analysis/PASS20261107_CONSTANTS_FIVE_FRONTS.md": "7ae88439b7fb6746b04858ee7c5606a0821d2e757a279fceb9abfafb48ec4513",
+    "analysis/w33_20261107_constants_five_fronts.py": "7e56e510b183e3e88d3b42906048fc6b69133536440019bc0f7a59214a3f0c45",
+    "data/w33_20261107_constants_five_fronts_summary.json": "dfd083cc533d4a31f45481dfc461f54c90c17b4ba8696d2d036eca4ab6e65dfe",
+    "tests/test_w33_20261107_constants_five_fronts.py": "c3e6d0ec990e0422e600fee8777e246cbdf063bb99d94c54f76c69c284e126a5",
+    "papers/forty_points/main.pdf": "003b75482b6584e20e83a55d9e9ba0a181f93b8dff0f94c1d615039c21213cbb"
+  },
+  "incoming_during_validation": {
+    "commit": "126df657b33fdb29b9b8f1942e5d287ad8a7d988",
+    "all_patch_lines_read": true,
+    "patch_lines": 836,
+    "patch_raw_sha256": "7ec253d559fb3094b167c367e9b100ae276eea0acc06a082c9400529c179c6fa",
+    "changed_existing_paths": [
+      "analysis/PASS12627_MCMC_SHEAR_RADIATIVE.md"
+    ],
+    "new_paths": [
+      "analysis/HANDOFF_CLAUDE_TO_CHAT_20261106.md",
+      "analysis/PASS12627_MCMC_SHEAR_RADIATIVE.md",
+      "analysis/toe_uv/c_profile.py",
+      "analysis/toe_uv/scorecard.json",
+      "analysis/toe_uv/scorecard.md",
+      "analysis/toe_uv/scorecard.py",
+      "analysis/toe_uv/shear_ppd.py",
+      "analysis/toe_uv/sign_grid.json"
+    ],
+    "scope": "Read all eight-file patch, including withdrawn fixed-background sign grid, profile script, scorecard and proposed axion mapping. No running profile process restarted or its outputs overwritten. New proposal requires a full two-field action/eigenmass audit; literature abstracts in upstream report were not treated as verified completions."
+  },
+  "integration_HEAD_after_parallel_review": "31f833f38ea394a5b9059ab11c14e855617f6ff2",
+  "new_literature_lead": {
+    "url": "https://arxiv.org/abs/2610.30253",
+    "title": "Mass-Varying Dark Matter, Naturally",
+    "published": "2026-10-21",
+    "authors": "Delaunay, Lee, Yin, Yu",
+    "reading": "Abstract and HTML main model/population/conclusion/end-matter equations1-21; no independent numerical reproduction or figure validation.",
+    "repo_search": {
+      "pattern": "(2610[.]30253|Mass.Varying Dark Matter, Naturally|cyclic.{0,30}(partner|relic)|Z_N.{0,30}(mass|radiative)|abundance.{0,20}bias)",
+      "scope": "analysis data papers docs RESULTS_INDEX.md;2MBcap;py/json/md/tex",
+      "exit_code": 1
+    },
+    "mechanism": "The paper proposes cyclic symmetry to suppress vacuum harmonics while internally equilibrated, mass-split partners acquire unequal relic populations. This is a published candidate for protection, not an implementation or discovery here.",
+    "cross_boundary": "Reread analysis/2026-11-05_native_boundary_axion_and_two_UV_repairs.md in full: its gauge-allowed closing mass and mediator shortcuts remain obstacles for that inventory. A cyclic partner action and conversion processes would require a fresh full-inventory audit.",
+    "status": "Next investigation, not validated native W33 symmetry, coupled cosmological fit or UV completion."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "runtime": "Actual server V8; independent ordinary MC gamma-rejection sampler",
+  "rows": [
+    {
+      "inverse_dark_temperature": 1,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 0.0010930166641914495,
+      "estimated_standard_error": 0.0000031191229229390502,
+      "count": 262144
+    },
+    {
+      "inverse_dark_temperature": 3,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 0.007276464462667618,
+      "estimated_standard_error": 0.000010428767530774357,
+      "count": 262144
+    }
+  ],
+  "scope": "Thermal chemical rate coefficients only; not an independent coupled ODE integration."
+}

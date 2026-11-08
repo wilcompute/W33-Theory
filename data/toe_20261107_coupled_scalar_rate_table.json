@@ -1,0 +1,600 @@
+{
+  "power": 16,
+  "scrambles": [
+    4107,
+    84107
+  ],
+  "rows": [
+    {
+      "inverse_dark_temperature": 0.0001,
+      "Tdark_over_m": 10000.0,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 2.7820571152364388e-25,
+      "replicate_values": [
+        4.360944878784066e-25,
+        1.2031693516888116e-25
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.0001333521432163324,
+      "Tdark_over_m": 7498.942093324558,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 2.0836344379097642e-24,
+      "replicate_values": [
+        3.2652587643233865e-24,
+        9.020101114961417e-25
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.00017782794100389227,
+      "Tdark_over_m": 5623.413251903491,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 1.5590355086596713e-23,
+      "replicate_values": [
+        2.4419780194406657e-23,
+        6.760929978786769e-24
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.00023713737056616554,
+      "Tdark_over_m": 4216.965034285822,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 1.1645222043245899e-22,
+      "replicate_values": [
+        1.8224709078027728e-22,
+        5.065735008464068e-23
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.00031622776601683794,
+      "Tdark_over_m": 3162.277660168379,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 8.672360834146838e-22,
+      "replicate_values": [
+        1.3551599205967933e-21,
+        3.793122462325742e-22
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.00042169650342858224,
+      "Tdark_over_m": 2371.3737056616555,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 6.4249300484827875e-21,
+      "replicate_values": [
+        1.0012895355461959e-20,
+        2.836964741503617e-21
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.0005623413251903491,
+      "Tdark_over_m": 1778.2794100389228,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 4.717979364876935e-20,
+      "replicate_values": [
+        7.318389961697025e-20,
+        2.117568768056845e-20
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.0007498942093324559,
+      "Tdark_over_m": 1333.5214321633239,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 3.414395105205257e-19,
+      "replicate_values": [
+        5.253715177139981e-19,
+        1.5750750332705327e-19
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.001,
+      "Tdark_over_m": 1000.0,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 2.4154927560801397e-18,
+      "replicate_values": [
+        3.6664231746712814e-18,
+        1.1645623374889978e-18
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.001333521432163324,
+      "Tdark_over_m": 749.8942093324558,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 1.6543434418770907e-17,
+      "replicate_values": [
+        2.4562005093112508e-17,
+        8.524863744429307e-18
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.0017782794100389228,
+      "Tdark_over_m": 562.3413251903492,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 1.0879839714127714e-16,
+      "replicate_values": [
+        1.5617980155266943e-16,
+        6.141699272988487e-17
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.0023713737056616554,
+      "Tdark_over_m": 421.6965034285822,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 6.850130490594978e-16,
+      "replicate_values": [
+        9.38007138502882e-16,
+        4.3201895961611377e-16
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.0031622776601683794,
+      "Tdark_over_m": 316.2277660168379,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 4.132242496845861e-15,
+      "replicate_values": [
+        5.325137801712992e-15,
+        2.9393471919787302e-15
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.004216965034285823,
+      "Tdark_over_m": 237.13737056616552,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 2.3805667720715524e-14,
+      "replicate_values": [
+        2.847010716108573e-14,
+        1.914122828034532e-14
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.005623413251903491,
+      "Tdark_over_m": 177.82794100389228,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 1.2964143566377618e-13,
+      "replicate_values": [
+        1.415822159989024e-13,
+        1.1770065532864994e-13
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.007498942093324558,
+      "Tdark_over_m": 133.35214321633242,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 6.598358456759313e-13,
+      "replicate_values": [
+        6.490832210940105e-13,
+        6.705884702578522e-13
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.01,
+      "Tdark_over_m": 100.0,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 3.1153267510991893e-12,
+      "replicate_values": [
+        2.7616658386142425e-12,
+        3.468987663584136e-12
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.01333521432163324,
+      "Tdark_over_m": 74.98942093324558,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 1.3645272259800193e-11,
+      "replicate_values": [
+        1.1151512618343324e-11,
+        1.613903190125706e-11
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.01778279410038923,
+      "Tdark_over_m": 56.2341325190349,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 5.621494269676066e-11,
+      "replicate_values": [
+        4.410250788170605e-11,
+        6.832737751181527e-11
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.023713737056616554,
+      "Tdark_over_m": 42.169650342858226,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 2.2360317309470342e-10,
+      "replicate_values": [
+        1.7645843496441253e-10,
+        2.7074791122499433e-10
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.03162277660168379,
+      "Tdark_over_m": 31.622776601683796,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 8.771504682658657e-10,
+      "replicate_values": [
+        7.286971582268185e-10,
+        1.025603778304913e-09
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.042169650342858224,
+      "Tdark_over_m": 23.71373705661655,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 3.4087601710851107e-09,
+      "replicate_values": [
+        3.0890721396924704e-09,
+        3.728448202477751e-09
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.05623413251903491,
+      "Tdark_over_m": 17.78279410038923,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 1.319811199460213e-08,
+      "replicate_values": [
+        1.3095724411569539e-08,
+        1.3300499577634719e-08
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.07498942093324558,
+      "Tdark_over_m": 13.335214321633241,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 5.1640759661994356e-08,
+      "replicate_values": [
+        5.390511833471984e-08,
+        4.937640098926887e-08
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.1,
+      "Tdark_over_m": 10.0,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 2.0187191778651574e-07,
+      "replicate_values": [
+        2.1103977490342516e-07,
+        1.9270406066960631e-07
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.1333521432163324,
+      "Tdark_over_m": 7.498942093324558,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 7.600542437153137e-07,
+      "replicate_values": [
+        7.788352946676857e-07,
+        7.412731927629417e-07
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.1778279410038923,
+      "Tdark_over_m": 5.62341325190349,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 2.6876066515166994e-06,
+      "replicate_values": [
+        2.7039536113333767e-06,
+        2.6712596917000225e-06
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.23713737056616552,
+      "Tdark_over_m": 4.216965034285822,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 8.866262863497185e-06,
+      "replicate_values": [
+        8.835372831028916e-06,
+        8.897152895965455e-06
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.31622776601683794,
+      "Tdark_over_m": 3.162277660168379,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 2.7317805310983808e-05,
+      "replicate_values": [
+        2.7183694605078832e-05,
+        2.7451916016888784e-05
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.4216965034285822,
+      "Tdark_over_m": 2.3713737056616555,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 7.844661764044346e-05,
+      "replicate_values": [
+        7.827779092328804e-05,
+        7.861544435759887e-05
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.5623413251903491,
+      "Tdark_over_m": 1.7782794100389228,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 0.00020811376452654505,
+      "replicate_values": [
+        0.00020827331266255977,
+        0.0002079542163905303
+      ]
+    },
+    {
+      "inverse_dark_temperature": 0.7498942093324559,
+      "Tdark_over_m": 1.333521432163324,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 0.0005040566535339135,
+      "replicate_values": [
+        0.0005051320252488626,
+        0.0005029812818189643
+      ]
+    },
+    {
+      "inverse_dark_temperature": 1.0,
+      "Tdark_over_m": 1.0,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 0.001101170565757118,
+      "replicate_values": [
+        0.0011035638614376197,
+        0.0010987772700766165
+      ]
+    },
+    {
+      "inverse_dark_temperature": 1.333521432163324,
+      "Tdark_over_m": 0.7498942093324559,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 0.002147172208515181,
+      "replicate_values": [
+        0.0021505082635182686,
+        0.0021438361535120933
+      ]
+    },
+    {
+      "inverse_dark_temperature": 1.7782794100389228,
+      "Tdark_over_m": 0.5623413251903491,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 0.0037088496539910846,
+      "replicate_values": [
+        0.0037116775782881166,
+        0.003706021729694053
+      ]
+    },
+    {
+      "inverse_dark_temperature": 2.371373705661655,
+      "Tdark_over_m": 0.4216965034285823,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 0.005651389830230993,
+      "replicate_values": [
+        0.0056519863658820255,
+        0.0056507932945799606
+      ]
+    },
+    {
+      "inverse_dark_temperature": 3.1622776601683795,
+      "Tdark_over_m": 0.31622776601683794,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 0.007594527791552317,
+      "replicate_values": [
+        0.007591916410999982,
+        0.007597139172104653
+      ]
+    },
+    {
+      "inverse_dark_temperature": 4.216965034285822,
+      "Tdark_over_m": 0.23713737056616555,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 0.009036546177434487,
+      "replicate_values": [
+        0.009030434270201127,
+        0.009042658084667846
+      ]
+    },
+    {
+      "inverse_dark_temperature": 5.623413251903491,
+      "Tdark_over_m": 0.17782794100389226,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 0.009593129245889023,
+      "replicate_values": [
+        0.009583920973757036,
+        0.009602337518021009
+      ]
+    },
+    {
+      "inverse_dark_temperature": 7.498942093324558,
+      "Tdark_over_m": 0.1333521432163324,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 0.009177781596234197,
+      "replicate_values": [
+        0.009166995456812741,
+        0.009188567735655651
+      ]
+    },
+    {
+      "inverse_dark_temperature": 10.0,
+      "Tdark_over_m": 0.1,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 0.008003223943695459,
+      "replicate_values": [
+        0.007993033410945401,
+        0.008013414476445515
+      ]
+    },
+    {
+      "inverse_dark_temperature": 13.33521432163324,
+      "Tdark_over_m": 0.07498942093324558,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 0.006436574050545285,
+      "replicate_values": [
+        0.006428648131502858,
+        0.006444499969587712
+      ]
+    },
+    {
+      "inverse_dark_temperature": 17.78279410038923,
+      "Tdark_over_m": 0.056234132519034905,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 0.004829802919329383,
+      "replicate_values": [
+        0.004824660414975867,
+        0.004834945423682898
+      ]
+    },
+    {
+      "inverse_dark_temperature": 23.71373705661655,
+      "Tdark_over_m": 0.042169650342858224,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 0.003418480939855148,
+      "replicate_values": [
+        0.0034157064563442065,
+        0.0034212554233660894
+      ]
+    },
+    {
+      "inverse_dark_temperature": 31.622776601683793,
+      "Tdark_over_m": 0.03162277660168379,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 0.002305195147962379,
+      "replicate_values": [
+        0.002304007649471506,
+        0.0023063826464532517
+      ]
+    },
+    {
+      "inverse_dark_temperature": 42.169650342858226,
+      "Tdark_over_m": 0.02371373705661655,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 0.0014942268689644594,
+      "replicate_values": [
+        0.0014939103160658861,
+        0.0014945434218630329
+      ]
+    },
+    {
+      "inverse_dark_temperature": 56.23413251903491,
+      "Tdark_over_m": 0.01778279410038923,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 0.0009382324131065511,
+      "replicate_values": [
+        0.0009383008021758672,
+        0.000938164024037235
+      ]
+    },
+    {
+      "inverse_dark_temperature": 74.98942093324558,
+      "Tdark_over_m": 0.01333521432163324,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 0.0005744168043296939,
+      "replicate_values": [
+        0.000574603366056918,
+        0.0005742302426024699
+      ]
+    },
+    {
+      "inverse_dark_temperature": 100.0,
+      "Tdark_over_m": 0.01,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 0.00034476142472235306,
+      "replicate_values": [
+        0.00034494699549487295,
+        0.0003445758539498332
+      ]
+    },
+    {
+      "inverse_dark_temperature": 133.3521432163324,
+      "Tdark_over_m": 0.007498942093324559,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 0.0002037499629982284,
+      "replicate_values": [
+        0.00020389535023468348,
+        0.00020360457576177327
+      ]
+    },
+    {
+      "inverse_dark_temperature": 177.82794100389228,
+      "Tdark_over_m": 0.005623413251903491,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 0.00011898537922910051,
+      "replicate_values": [
+        0.00011908701604036131,
+        0.00011888374241783974
+      ]
+    },
+    {
+      "inverse_dark_temperature": 237.13737056616552,
+      "Tdark_over_m": 0.004216965034285823,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 6.885157434312933e-05,
+      "replicate_values": [
+        6.891802249703319e-05,
+        6.878512618922546e-05
+      ]
+    },
+    {
+      "inverse_dark_temperature": 316.22776601683796,
+      "Tdark_over_m": 0.003162277660168379,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 3.9563988213920824e-05,
+      "replicate_values": [
+        3.960558637005177e-05,
+        3.9522390057789886e-05
+      ]
+    },
+    {
+      "inverse_dark_temperature": 421.6965034285823,
+      "Tdark_over_m": 0.002371373705661655,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 2.2614149690829187e-05,
+      "replicate_values": [
+        2.2639431754992836e-05,
+        2.2588867626665538e-05
+      ]
+    },
+    {
+      "inverse_dark_temperature": 562.341325190349,
+      "Tdark_over_m": 0.001778279410038923,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 1.2873997378305105e-05,
+      "replicate_values": [
+        1.2889046327108174e-05,
+        1.2858948429502035e-05
+      ]
+    },
+    {
+      "inverse_dark_temperature": 749.8942093324558,
+      "Tdark_over_m": 0.001333521432163324,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 7.306783592327615e-06,
+      "replicate_values": [
+        7.315608471046327e-06,
+        7.297958713608904e-06
+      ]
+    },
+    {
+      "inverse_dark_temperature": 1000.0,
+      "Tdark_over_m": 0.001,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 4.137548813302857e-06,
+      "replicate_values": [
+        4.142667814398906e-06,
+        4.13242981220681e-06
+      ]
+    },
+    {
+      "inverse_dark_temperature": 1333.521432163324,
+      "Tdark_over_m": 0.0007498942093324557,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 2.338890144909039e-06,
+      "replicate_values": [
+        2.3418359388157904e-06,
+        2.335944351002288e-06
+      ]
+    },
+    {
+      "inverse_dark_temperature": 1778.2794100389228,
+      "Tdark_over_m": 0.0005623413251903491,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 1.320419924476835e-06,
+      "replicate_values": [
+        1.322105177301504e-06,
+        1.318734671652166e-06
+      ]
+    },
+    {
+      "inverse_dark_temperature": 2371.373705661655,
+      "Tdark_over_m": 0.0004216965034285823,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 7.447147571794415e-07,
+      "replicate_values": [
+        7.456746715436052e-07,
+        7.437548428152777e-07
+      ]
+    },
+    {
+      "inverse_dark_temperature": 3162.2776601683795,
+      "Tdark_over_m": 0.00031622776601683794,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 4.197097298137506e-07,
+      "replicate_values": [
+        4.202547258772497e-07,
+        4.1916473375025146e-07
+      ]
+    },
+    {
+      "inverse_dark_temperature": 4216.965034285822,
+      "Tdark_over_m": 0.00023713737056616554,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 2.3641154836691094e-07,
+      "replicate_values": [
+        2.3672022414265425e-07,
+        2.361028725911676e-07
+      ]
+    },
+    {
+      "inverse_dark_temperature": 5623.413251903491,
+      "Tdark_over_m": 0.00017782794100389227,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 1.3310936114570996e-07,
+      "replicate_values": [
+        1.3328387639710137e-07,
+        1.3293484589431857e-07
+      ]
+    },
+    {
+      "inverse_dark_temperature": 7498.942093324558,
+      "Tdark_over_m": 0.0001333521432163324,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 7.492273571218025e-08,
+      "replicate_values": [
+        7.502126721541731e-08,
+        7.482420420894318e-08
+      ]
+    },
+    {
+      "inverse_dark_temperature": 10000.0,
+      "Tdark_over_m": 0.0001,
+      "gamma32_over_n_eq_cubed_per_lambdaS_cubed": 4.2161633840109375e-08,
+      "replicate_values": [
+        4.2217208853904714e-08,
+        4.210605882631403e-08
+      ]
+    }
+  ],
+  "definition": "gamma32=m^4*lambdaS^3*k32(Tdark/m)*(nS/m^3)^3; inverse gamma23 replaces one actual nS by equilibrium n_eq(Tdark). All3!2! factors included.",
+  "source_raw_sha256": {
+    "analysis/toe_20261107_scalar_self_reactions.py": "b89bcf4d6cb6cc13e321dc3159fd2e1ba00410b932a3908d328e6c2fee5727eb",
+    "analysis/toe_20261107_coupled_scalar_moments.py": "6b7a266da6703293b18246d7e8645b824e3d481bf32275c971ce831ac0e82543"
+  },
+  "ownership": "Full finite-momentum25diagram amplitude from c7079f950; established cannibal kinetics2212.09759. No new threshold theorem."
+}
