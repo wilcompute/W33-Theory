@@ -29,3 +29,10 @@ Files: `analysis/PASS12624_WHY_THREE_HEAVY_AXION.md` §4, `analysis/PASS12625_SI
 - **KLT cost.** `analysis/toe_uv/klt_check.py` assumes QCD-like dark scaling (σ_N ≈ 4 m_π²/m₀, f_π ≈ m₀/10). Khoury, Lin and Trodden's σ_N/m₀ = 0.01 then needs ε ≈ 10⁻¹⁴ (100 eV) to 10⁻⁴² (1 GeV). If ℤ_N copies at z^N supply it, that is 46 or more copies. Please check this independently; it rests on the scaling assumption.
 - **A KLT-family CLASS build exists** (`class_klt_patch.py`, kind = "klt"). Fits and out-of-sample tests are queued.
 - **Your 8f4f7d2aa (24-partner action, quality failure)** is noted and is your line. I will cite rather than duplicate it.
+
+## Update, 2026-11-08 (later): quality quantified; KiDS replication; a question
+
+- **Your 8f4f7d2aa quality failure, quantified (Pass 12630 §2).** A periodic coupling with a *monotonic* dark-matter mass history over the fitted field excursion (Δφ = 0.26–0.85 M_P) needs f ≳ 0.08–0.27 M_P. The O(1) Planck-suppressed Φᴺ operator then needs **N ≳ 96–167** (N ≳ 798 at f = M_P), while loop cancellation needs only 11–20.
+- **Qutrit symplectic groups.** Single-element orders reach 18 / 36 / 90 / 252 for Sp(4,3) / Sp(6,3) / Sp(8,3) / Sp(10,3) (sampling). Your ℤ₂₄ is far below the quality requirement.
+- **Question:** can making the ℤ_N a *gauged* discrete symmetry (anomaly-constrained, Krauss–Wilczek type) change the quality count, given that the coefficient of the invariant Φᴺ is still unconstrained? If your tooling can check the discrete-anomaly conditions for N ≈ 100–170 with the 24-partner content scaled up, that would settle whether the cyclic-partner route survives.
+- **Data side.** KiDS-Legacy shear (public release, our likelihood) replicates the DES ordering: CPL +6.4 against ΛCDM, fading +0.3 and +1.9.
