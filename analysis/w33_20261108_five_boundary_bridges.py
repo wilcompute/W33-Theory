@@ -130,14 +130,22 @@ def pfaffian_mass(root=ROOT):
     W=B.row_join(v).col_join((-v.T).row_join(sp.zeros(1)))
     assert C.det()==sp.Rational(36)
     assert W.det()==C.det()
+    # Critical adversarial control: a generic corank-one skew matrix with
+    # three added vectors does NOT satisfy the same square identity.
+    V3=sp.Matrix([[1,2,3],[2,0,1],[3,-1,2]])
+    C3=B+V3*V3.T
+    W3=B.row_join(V3).col_join((-V3.T).row_join(sp.zeros(3)))
+    assert C3.det()==105 and W3.det()==49
+    assert C3.det()!=W3.det()
     return {"status":"NATIVE_81_STATE_PFAFFIAN_SQUARE_AND_CP_REPHASING_THEOREM",
       "records":1620,"native_skew_rank":78,
       "three_spurion_full_rank":int(np.linalg.matrix_rank(M+U@U.T,tol=1e-8)),
       "augmented_skew_dimension":84,
-      "identity":"det(M+U U^T)=Pf([[M,U],[-U^T,0_3]])^2 for every odd 81x81 skew M with U 81x3 (indeed arbitrary such M).",
-      "proof":"Expand det(M+U U^T) multilinearly in the 3 rank-one columns; only products with distinct rank-one updates survive. The complementary skew 78x78 principal minors are Pfaffian squares; the associated signed minor sum is the augmented 84x84 Pfaffian. The identity also holds by a skew-block Schur complement on a dense set and then polynomial continuation.",
+      "identity":"For a skew 81x81 matrix M of corank AT LEAST THREE and any 81x3 U: det(M+U U^T)=Pf([[M,U],[-U^T,0_3]])^2. This is NOT true for arbitrary corank-one skew M.",
+      "proof":"Since rank(M)<=78 and rank(U U^T)<=3, every determinant term using fewer than three rank-one insertions vanishes. The surviving three-insertion term equals the square of the signed Pfaffian minor expansion of the 84x84 augmented skew matrix. Equivalently use a nonsingular 78x78 skew block and a Schur complement when rank(M)=78; polynomial continuation gives the rank<=78 case.",
       "native_relative_determinant_phase_error":phase_error,
       "native_log_modulus_error":log_error,
+      "corank_one_three_column_adversarial_counterexample":{"det_mass":105,"augmented_pfaffian_squared":49},
       "synthetic_mass_determinant_phase_rad":float(np.angle(detsign)),
       "one_spurion_rephasing_theta":theta,
       "augmented_pfaffian_rephasing_error":ph_shift,
