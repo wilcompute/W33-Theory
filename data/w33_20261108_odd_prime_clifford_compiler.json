@@ -1,0 +1,455 @@
+{
+  "cases": [
+    {
+      "finite_field_coordinate_change": "t=(a+c)/2, transverse=b, x=(a-c)/2; det(a,b,c)=t^2-b^2-x^2",
+      "full_kernel_difference_type_count": 27,
+      "full_kernel_from_factorization_max_residual": 1.2828094719680204e-16,
+      "generic_n_rail_mesh_two_mode_bound": 351,
+      "if_expanded_local_Fourier_gates": 3,
+      "if_expanded_local_quadratic_phase_gates": 6,
+      "independent_input_output_samples": 729,
+      "independent_rail_p_port_Gauss_units": 27,
+      "internal_generic_two_mode_upper_bound_without_routing": 81,
+      "internal_upper_to_generic_mesh_ratio": 0.23076923076923078,
+      "local_multiplier_forward": "(-1/2) on x",
+      "local_multiplier_inverse": "(-2) on x",
+      "local_one_qupit_Gauss_gate_count": 3,
+      "local_port_Pauli_normalizer_certificates": {
+        "H_minus": [
+          {
+            "generator": "X",
+            "image_X_exponent": 1,
+            "image_Z_exponent": 0,
+            "max_matrix_residual": 2.7755575615628914e-16,
+            "phase_imag": 0,
+            "phase_real": 1
+          },
+          {
+            "generator": "Z",
+            "image_X_exponent": 1,
+            "image_Z_exponent": 1,
+            "max_matrix_residual": 3.1044820809782243e-16,
+            "phase_imag": -0.8660254037844386,
+            "phase_real": -0.4999999999999999
+          }
+        ],
+        "H_plus": [
+          {
+            "generator": "X",
+            "image_X_exponent": 1,
+            "image_Z_exponent": 0,
+            "max_matrix_residual": 1.1102230246251565e-16,
+            "phase_imag": 0,
+            "phase_real": 1.0000000000000002
+          },
+          {
+            "generator": "Z",
+            "image_X_exponent": 2,
+            "image_Z_exponent": 1,
+            "max_matrix_residual": 3.554447978966673e-16,
+            "phase_imag": 0.8660254037844388,
+            "phase_real": -0.5
+          }
+        ]
+      },
+      "logical_SUM_count": 4,
+      "nontrivial_local_multipliers": 0,
+      "prime": 3,
+      "quadratic_port_gates": [
+        {
+          "circuit": "H_sigma = D_sigma F_(-2sigma) D_sigma; two quadratic phase gates and one scaled Fourier gate",
+          "gaussian_port_unitarity_error": 2.220446049250313e-16,
+          "quadratic_phase_Fourier_factorization_error": 4.0412728104402656e-16,
+          "sign": 1
+        },
+        {
+          "circuit": "H_sigma = D_sigma F_(-2sigma) D_sigma; two quadratic phase gates and one scaled Fourier gate",
+          "gaussian_port_unitarity_error": 2.7755575615628914e-16,
+          "quadratic_phase_Fourier_factorization_error": 7.816041058999314e-16,
+          "sign": -1
+        }
+      ],
+      "rails": 27,
+      "sample_pair_max_residual": 1.2828094719680204e-16,
+      "two_forward_SUM_gates": 2,
+      "two_inverse_SUM_gates": 2
+    },
+    {
+      "finite_field_coordinate_change": "t=(a+c)/2, transverse=b, x=(a-c)/2; det(a,b,c)=t^2-b^2-x^2",
+      "full_kernel_difference_type_count": 125,
+      "full_kernel_from_factorization_max_residual": 3.469446951953614e-17,
+      "generic_n_rail_mesh_two_mode_bound": 7750,
+      "if_expanded_local_Fourier_gates": 3,
+      "if_expanded_local_quadratic_phase_gates": 6,
+      "independent_input_output_samples": 4096,
+      "independent_rail_p_port_Gauss_units": 75,
+      "internal_generic_two_mode_upper_bound_without_routing": 750,
+      "internal_upper_to_generic_mesh_ratio": 0.0967741935483871,
+      "local_multiplier_forward": "(-1/2) on x",
+      "local_multiplier_inverse": "(-2) on x",
+      "local_one_qupit_Gauss_gate_count": 3,
+      "local_port_Pauli_normalizer_certificates": {
+        "H_minus": [
+          {
+            "generator": "X",
+            "image_X_exponent": 1,
+            "image_Z_exponent": 0,
+            "max_matrix_residual": 1.1102230246251565e-16,
+            "phase_imag": 0,
+            "phase_real": 0.9999999999999999
+          },
+          {
+            "generator": "Z",
+            "image_X_exponent": 2,
+            "image_Z_exponent": 1,
+            "max_matrix_residual": 1.1483549065287399e-16,
+            "phase_imag": 0.9510565162951535,
+            "phase_real": 0.3090169943749474
+          }
+        ],
+        "H_plus": [
+          {
+            "generator": "X",
+            "image_X_exponent": 1,
+            "image_Z_exponent": 0,
+            "max_matrix_residual": 1.1102230246251565e-16,
+            "phase_imag": 0,
+            "phase_real": 0.9999999999999999
+          },
+          {
+            "generator": "Z",
+            "image_X_exponent": 3,
+            "image_Z_exponent": 1,
+            "max_matrix_residual": 1.5700924586837752e-16,
+            "phase_imag": -0.9510565162951535,
+            "phase_real": 0.3090169943749474
+          }
+        ]
+      },
+      "logical_SUM_count": 4,
+      "nontrivial_local_multipliers": 2,
+      "prime": 5,
+      "quadratic_port_gates": [
+        {
+          "circuit": "H_sigma = D_sigma F_(-2sigma) D_sigma; two quadratic phase gates and one scaled Fourier gate",
+          "gaussian_port_unitarity_error": 2.220446049250313e-16,
+          "quadratic_phase_Fourier_factorization_error": 1.8619006149354548e-16,
+          "sign": 1
+        },
+        {
+          "circuit": "H_sigma = D_sigma F_(-2sigma) D_sigma; two quadratic phase gates and one scaled Fourier gate",
+          "gaussian_port_unitarity_error": 2.220446049250313e-16,
+          "quadratic_phase_Fourier_factorization_error": 1.8619006149354548e-16,
+          "sign": -1
+        }
+      ],
+      "rails": 125,
+      "sample_pair_max_residual": 3.469446951953614e-17,
+      "two_forward_SUM_gates": 2,
+      "two_inverse_SUM_gates": 2
+    },
+    {
+      "finite_field_coordinate_change": "t=(a+c)/2, transverse=b, x=(a-c)/2; det(a,b,c)=t^2-b^2-x^2",
+      "full_kernel_difference_type_count": 343,
+      "full_kernel_from_factorization_max_residual": 7.730639848188062e-17,
+      "generic_n_rail_mesh_two_mode_bound": 58653,
+      "if_expanded_local_Fourier_gates": 3,
+      "if_expanded_local_quadratic_phase_gates": 6,
+      "independent_input_output_samples": 4096,
+      "independent_rail_p_port_Gauss_units": 147,
+      "internal_generic_two_mode_upper_bound_without_routing": 3087,
+      "internal_upper_to_generic_mesh_ratio": 0.05263157894736842,
+      "local_multiplier_forward": "(-1/2) on x",
+      "local_multiplier_inverse": "(-2) on x",
+      "local_one_qupit_Gauss_gate_count": 3,
+      "local_port_Pauli_normalizer_certificates": {
+        "H_minus": [
+          {
+            "generator": "X",
+            "image_X_exponent": 1,
+            "image_Z_exponent": 0,
+            "max_matrix_residual": 2.7755575615628914e-16,
+            "phase_imag": 4.961413545631454e-19,
+            "phase_real": 1.0000000000000002
+          },
+          {
+            "generator": "Z",
+            "image_X_exponent": 3,
+            "image_Z_exponent": 1,
+            "max_matrix_residual": 4.485920973495449e-16,
+            "phase_imag": -0.9749279121818241,
+            "phase_real": -0.2225209339563145
+          }
+        ],
+        "H_plus": [
+          {
+            "generator": "X",
+            "image_X_exponent": 1,
+            "image_Z_exponent": 0,
+            "max_matrix_residual": 1.6491313799841623e-16,
+            "phase_imag": -1.0378086219283786e-18,
+            "phase_real": 1
+          },
+          {
+            "generator": "Z",
+            "image_X_exponent": 4,
+            "image_Z_exponent": 1,
+            "max_matrix_residual": 6.473657049138937e-16,
+            "phase_imag": 0.9749279121818241,
+            "phase_real": -0.22252093395631445
+          }
+        ]
+      },
+      "logical_SUM_count": 4,
+      "nontrivial_local_multipliers": 2,
+      "prime": 7,
+      "quadratic_port_gates": [
+        {
+          "circuit": "H_sigma = D_sigma F_(-2sigma) D_sigma; two quadratic phase gates and one scaled Fourier gate",
+          "gaussian_port_unitarity_error": 1.6491313799841623e-16,
+          "quadratic_phase_Fourier_factorization_error": 5.479125576466829e-16,
+          "sign": 1
+        },
+        {
+          "circuit": "H_sigma = D_sigma F_(-2sigma) D_sigma; two quadratic phase gates and one scaled Fourier gate",
+          "gaussian_port_unitarity_error": 4.440894120403905e-16,
+          "quadratic_phase_Fourier_factorization_error": 5.389157964038493e-16,
+          "sign": -1
+        }
+      ],
+      "rails": 343,
+      "sample_pair_max_residual": 7.730639848188062e-17,
+      "two_forward_SUM_gates": 2,
+      "two_inverse_SUM_gates": 2
+    },
+    {
+      "finite_field_coordinate_change": "t=(a+c)/2, transverse=b, x=(a-c)/2; det(a,b,c)=t^2-b^2-x^2",
+      "full_kernel_difference_type_count": 1331,
+      "full_kernel_from_factorization_max_residual": 3.037314548289872e-17,
+      "generic_n_rail_mesh_two_mode_bound": 885115,
+      "if_expanded_local_Fourier_gates": 3,
+      "if_expanded_local_quadratic_phase_gates": 6,
+      "independent_input_output_samples": 4096,
+      "independent_rail_p_port_Gauss_units": 363,
+      "internal_generic_two_mode_upper_bound_without_routing": 19965,
+      "internal_upper_to_generic_mesh_ratio": 0.022556390977443608,
+      "local_multiplier_forward": "(-1/2) on x",
+      "local_multiplier_inverse": "(-2) on x",
+      "local_one_qupit_Gauss_gate_count": 3,
+      "local_port_Pauli_normalizer_certificates": {
+        "H_minus": [
+          {
+            "generator": "X",
+            "image_X_exponent": 1,
+            "image_Z_exponent": 0,
+            "max_matrix_residual": 4.441109511356301e-16,
+            "phase_imag": -4.2589172113503495e-20,
+            "phase_real": 1
+          },
+          {
+            "generator": "Z",
+            "image_X_exponent": 5,
+            "image_Z_exponent": 1,
+            "max_matrix_residual": 3.510833468576701e-16,
+            "phase_imag": -0.989821441880933,
+            "phase_real": -0.14231483827328517
+          }
+        ],
+        "H_plus": [
+          {
+            "generator": "X",
+            "image_X_exponent": 1,
+            "image_Z_exponent": 0,
+            "max_matrix_residual": 2.220468426714962e-16,
+            "phase_imag": -9.968771573969929e-19,
+            "phase_real": 1
+          },
+          {
+            "generator": "Z",
+            "image_X_exponent": 6,
+            "image_Z_exponent": 1,
+            "max_matrix_residual": 4.478818118094367e-16,
+            "phase_imag": 0.989821441880933,
+            "phase_real": -0.14231483827328517
+          }
+        ]
+      },
+      "logical_SUM_count": 4,
+      "nontrivial_local_multipliers": 2,
+      "prime": 11,
+      "quadratic_port_gates": [
+        {
+          "circuit": "H_sigma = D_sigma F_(-2sigma) D_sigma; two quadratic phase gates and one scaled Fourier gate",
+          "gaussian_port_unitarity_error": 2.220446049250313e-16,
+          "quadratic_phase_Fourier_factorization_error": 2.7755575615628914e-16,
+          "sign": 1
+        },
+        {
+          "circuit": "H_sigma = D_sigma F_(-2sigma) D_sigma; two quadratic phase gates and one scaled Fourier gate",
+          "gaussian_port_unitarity_error": 4.441113745884132e-16,
+          "quadratic_phase_Fourier_factorization_error": 2.4552312978479334e-16,
+          "sign": -1
+        }
+      ],
+      "rails": 1331,
+      "sample_pair_max_residual": 3.037314548289872e-17,
+      "two_forward_SUM_gates": 2,
+      "two_inverse_SUM_gates": 2
+    },
+    {
+      "finite_field_coordinate_change": "t=(a+c)/2, transverse=b, x=(a-c)/2; det(a,b,c)=t^2-b^2-x^2",
+      "full_kernel_difference_type_count": 2197,
+      "full_kernel_from_factorization_max_residual": 4.039522543615107e-17,
+      "generic_n_rail_mesh_two_mode_bound": 2412306,
+      "if_expanded_local_Fourier_gates": 3,
+      "if_expanded_local_quadratic_phase_gates": 6,
+      "independent_input_output_samples": 4096,
+      "independent_rail_p_port_Gauss_units": 507,
+      "internal_generic_two_mode_upper_bound_without_routing": 39546,
+      "internal_upper_to_generic_mesh_ratio": 0.01639344262295082,
+      "local_multiplier_forward": "(-1/2) on x",
+      "local_multiplier_inverse": "(-2) on x",
+      "local_one_qupit_Gauss_gate_count": 3,
+      "local_port_Pauli_normalizer_certificates": {
+        "H_minus": [
+          {
+            "generator": "X",
+            "image_X_exponent": 1,
+            "image_Z_exponent": 0,
+            "max_matrix_residual": 2.5018537765542007e-16,
+            "phase_imag": 4.928578298799188e-18,
+            "phase_real": 1.0000000000000002
+          },
+          {
+            "generator": "Z",
+            "image_X_exponent": 6,
+            "image_Z_exponent": 1,
+            "max_matrix_residual": 4.965068306494546e-16,
+            "phase_imag": 0.9927088740980543,
+            "phase_real": 0.12053668025532313
+          }
+        ],
+        "H_plus": [
+          {
+            "generator": "X",
+            "image_X_exponent": 1,
+            "image_Z_exponent": 0,
+            "max_matrix_residual": 2.645311186244828e-16,
+            "phase_imag": 4.997254593926904e-18,
+            "phase_real": 1.0000000000000002
+          },
+          {
+            "generator": "Z",
+            "image_X_exponent": 7,
+            "image_Z_exponent": 1,
+            "max_matrix_residual": 5.578801654593729e-16,
+            "phase_imag": -0.9927088740980544,
+            "phase_real": 0.12053668025532308
+          }
+        ]
+      },
+      "logical_SUM_count": 4,
+      "nontrivial_local_multipliers": 2,
+      "prime": 13,
+      "quadratic_port_gates": [
+        {
+          "circuit": "H_sigma = D_sigma F_(-2sigma) D_sigma; two quadratic phase gates and one scaled Fourier gate",
+          "gaussian_port_unitarity_error": 4.441426326633656e-16,
+          "quadratic_phase_Fourier_factorization_error": 4.0029660424867215e-16,
+          "sign": 1
+        },
+        {
+          "circuit": "H_sigma = D_sigma F_(-2sigma) D_sigma; two quadratic phase gates and one scaled Fourier gate",
+          "gaussian_port_unitarity_error": 4.441394754604708e-16,
+          "quadratic_phase_Fourier_factorization_error": 4.0029660424867215e-16,
+          "sign": -1
+        }
+      ],
+      "rails": 2197,
+      "sample_pair_max_residual": 4.039522543615107e-17,
+      "two_forward_SUM_gates": 2,
+      "two_inverse_SUM_gates": 2
+    },
+    {
+      "finite_field_coordinate_change": "t=(a+c)/2, transverse=b, x=(a-c)/2; det(a,b,c)=t^2-b^2-x^2",
+      "full_kernel_difference_type_count": 4913,
+      "full_kernel_from_factorization_max_residual": 2.7809732887839817e-17,
+      "generic_n_rail_mesh_two_mode_bound": 12066328,
+      "if_expanded_local_Fourier_gates": 3,
+      "if_expanded_local_quadratic_phase_gates": 6,
+      "independent_input_output_samples": 4096,
+      "independent_rail_p_port_Gauss_units": 867,
+      "internal_generic_two_mode_upper_bound_without_routing": 117912,
+      "internal_upper_to_generic_mesh_ratio": 0.009771986970684038,
+      "local_multiplier_forward": "(-1/2) on x",
+      "local_multiplier_inverse": "(-2) on x",
+      "local_one_qupit_Gauss_gate_count": 3,
+      "local_port_Pauli_normalizer_certificates": {
+        "H_minus": [
+          {
+            "generator": "X",
+            "image_X_exponent": 1,
+            "image_Z_exponent": 0,
+            "max_matrix_residual": 2.2204486749120934e-16,
+            "phase_imag": 3.4147163204239006e-19,
+            "phase_real": 0.9999999999999998
+          },
+          {
+            "generator": "Z",
+            "image_X_exponent": 8,
+            "image_Z_exponent": 1,
+            "max_matrix_residual": 5.578801654593729e-16,
+            "phase_imag": 0.995734176295034,
+            "phase_real": 0.09226835946330196
+          }
+        ],
+        "H_plus": [
+          {
+            "generator": "X",
+            "image_X_exponent": 1,
+            "image_Z_exponent": 0,
+            "max_matrix_residual": 1.114570784236674e-16,
+            "phase_imag": 3.6847485610612885e-19,
+            "phase_real": 0.9999999999999998
+          },
+          {
+            "generator": "Z",
+            "image_X_exponent": 9,
+            "image_Z_exponent": 1,
+            "max_matrix_residual": 4.577566798522237e-16,
+            "phase_imag": -0.995734176295034,
+            "phase_real": 0.09226835946330193
+          }
+        ]
+      },
+      "logical_SUM_count": 4,
+      "nontrivial_local_multipliers": 2,
+      "prime": 17,
+      "quadratic_port_gates": [
+        {
+          "circuit": "H_sigma = D_sigma F_(-2sigma) D_sigma; two quadratic phase gates and one scaled Fourier gate",
+          "gaussian_port_unitarity_error": 3.3306743277367806e-16,
+          "quadratic_phase_Fourier_factorization_error": 2.604628232417064e-16,
+          "sign": 1
+        },
+        {
+          "circuit": "H_sigma = D_sigma F_(-2sigma) D_sigma; two quadratic phase gates and one scaled Fourier gate",
+          "gaussian_port_unitarity_error": 4.440892098500626e-16,
+          "quadratic_phase_Fourier_factorization_error": 2.536495558929408e-16,
+          "sign": -1
+        }
+      ],
+      "rails": 4913,
+      "sample_pair_max_residual": 2.7809732887839817e-17,
+      "two_forward_SUM_gates": 2,
+      "two_inverse_SUM_gates": 2
+    }
+  ],
+  "fixed_prime_test_scope": "Explicit code tests primes 3,5,7,11,13,17; extension to odd prime powers follows finite-field arithmetic but has no extension-field implementation in this certificate.",
+  "p3_special": "(-1/2)=1 modulo 3, so both local multipliers disappear. This recovers the previously-owned 27-mode four-SUM/27-tritter compiler up to a global phase.",
+  "physics_limit": "Constant *logical* three-qudit gate count does not imply local propagation, constant physical photonic depth, or feasible loss. A Clifford circuit is not universal quantum computation by itself; non-Clifford resources and physically justified dynamics remain separate requirements.",
+  "prior_owner": "papers/forty_points/sec04_time.tex explicitly identifies the 27-mode clock as Clifford. This contribution generalizes the concrete circuit and scaling to odd prime fields and counts local multipliers.",
+  "schema": "w33.20261108.odd_prime_clifford_compiler.v1",
+  "status": "EXACT_ODD_PRIME_GAUSSIAN_CLIFFORD_COMPILER_NUMERICALLY_VERIFIED",
+  "theorem": "For every odd prime power q, the q^3-dimensional flat Gaussian kernel q^-3/2 psi(det(S-T)) is conjugate under an invertible 3-coordinate linear permutation to H_plus tensor H_minus tensor H_minus. Each H_sigma is D_sigma F_-2sigma D_sigma and is a generalized Clifford gate, as are the two forward and two inverse SUM gates and local coordinate multipliers. The whole clock is Clifford in the 3-qudit tensor factorization."
+}
