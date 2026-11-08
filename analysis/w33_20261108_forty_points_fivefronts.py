@@ -6,7 +6,7 @@ Uses numpy and sympy; runs without network; does not modify existing fixtures.
 Original clock owners: Pass 20260924, Pass 11166, Pass 11541.
 """
 from __future__ import annotations
-import argparse, ast, itertools, json, math
+import argparse, ast, itertools, json, math, re
 from collections import Counter, defaultdict
 from fractions import Fraction
 from pathlib import Path
@@ -210,6 +210,40 @@ def safe_rational(expression):
         raise ValueError("unsupported syntax: only rational arithmetic")
     return calc(ast.parse(expression,mode="eval").body)
 
+def scan_catalog_rational_arithmetic(text):
+    """Conservative automated arithmetic scan; identities do not imply same observable."""
+    pattern=re.compile(r"(?<![A-Za-z_0-9.])\d+(?:\s*[-+*/]\s*\d+){1,8}")
+    members={}
+    successes=0
+    failures=0
+    for lineno,line in enumerate(text.splitlines(),1):
+        for match in pattern.finditer(line):
+            expr=match.group().strip()
+            # Focus on literal rationals and additive corrections; skip dates and
+            # bare hyphen ranges which otherwise resemble false 'subtraction'.
+            if "/" not in expr and "+" not in expr:continue
+            try:
+                val=safe_rational(expr)
+            except (ValueError,ZeroDivisionError,SyntaxError,OverflowError):
+                failures+=1;continue
+            successes+=1
+            key=str(val)
+            grp=members.setdefault(key,{"canonical_fraction":key,"occurrences":0,
+                                        "expression_examples":[],"source_lines":[]})
+            grp["occurrences"]+=1
+            if len(grp["expression_examples"])<6 and expr not in grp["expression_examples"]:
+                grp["expression_examples"].append(expr)
+            if len(grp["source_lines"])<12:grp["source_lines"].append(lineno)
+    equivalence=[x for x in members.values() if len(x["expression_examples"])>1]
+    equivalence.sort(key=lambda x:(-len(x["expression_examples"]),-x["occurrences"],x["canonical_fraction"]))
+    return {"status":"PURE_RATIONAL_ALIAS_GROUPS_NOT_PHYSICAL_CLAIM_EQUIVALENCE",
+            "literal_occurrences_parsed":successes,
+            "parse_failures":failures,
+            "canonical_numerical_groups":len(members),
+            "multi_expression_groups":len(equivalence),
+            "largest_20_alias_groups":equivalence[:20],
+            "method":"Regex candidates with / or +, exact Fraction AST parser, source line retention; excludes symbolic TeX and independent RG/scheme meaning."}
+
 def provenance_front(root):
     catalog=Path(root)/"analysis/2026-11-07_natural_constants_derivation_catalog.md"
     text=catalog.read_text(encoding="utf-8") if catalog.exists() else ""
@@ -235,6 +269,7 @@ def provenance_front(root):
     return {"status":"CANONICAL_EXACT_RATIONAL_COMPARISONS_WITH_PROVENANCE_GAPS",
             "repository_catalog_present":bool(text),"source_catalog":str(catalog) if text else None,
             "aliases_are_equivalent":True,"canonicalized_candidates":entries,
+            "catalog_arithmetic":scan_catalog_rational_arithmetic(text),
             "parser_limit":"Integer rational arithmetic only; no TeX, RG scheme, symbolic group actions or archived source proofs are normalized.",
             "caveat":"Found in catalog means mentioned, not derived; retrospectively closest formula gets no prospective evidence."}
 
