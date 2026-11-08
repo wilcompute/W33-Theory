@@ -10,7 +10,7 @@ to guess: `grep -i gow TOPICAL_ALIASES.md` reaches
 `2026-07-15_pass355_sp43_frobenius_schur.md`, which no search for
 "phase" or "complex structure" ever would.
 
-Files scanned: **6136** · distinct tokens: **1378**
+Files scanned: **6137** · distinct tokens: **1379**
 
 Tokens marked ⚠ appear ONLY in topically opaque filenames (dated or
 numbered), so they are invisible to any topic search — read those first.
@@ -1150,6 +1150,7 @@ numbered), so they are invisible to any topic search — read those first.
 - `named:Open` ⚠ — [PASS5016_5023_index_insert.html](analysis/PASS5016_5023_index_insert.html), [PASS5036_5043_index_insert.html](analysis/PASS5036_5043_index_insert.html)
 - `named:Operator` — [PART_LXXXI_TRIANGLE_DIRAC_INVOLUTION.md](manuscripts/parts/PART_LXXXI_TRIANGLE_DIRAC_INVOLUTION.md)
 - `named:Ostrowski` — [404.html](docs/404.html), [exceptional-geometry-41a8d733.html](docs/exceptional-geometry-41a8d733.html), [full-site-2026-08-06.html](docs/full-site-2026-08-06.html), [index.html](docs/index.html)
+- `named:Overlap` ⚠ — [PASS12631_KIDS_HELDOUT.md](analysis/PASS12631_KIDS_HELDOUT.md)
 - `named:Pappus` ⚠ — [PASS20260922_maximal_compiler_symmetry_pappus_insert.tex](analysis/PASS20260922_maximal_compiler_symmetry_pappus_insert.tex)
 - `named:Parent` ⚠ — [2026-10-14_toe76_six_fronts_rh_ihara.md](analysis/2026-10-14_toe76_six_fronts_rh_ihara.md)
 - `named:Pareto` ⚠ — [PASS5090_5097_index_insert.html](analysis/PASS5090_5097_index_insert.html)

@@ -1,0 +1,55 @@
+{
+  "status": "NATIVE_COUPLED_RESPONSE_INTAKE_PDF118_OF215_NOT_FULL_WEEK",
+  "utc": "2026-11-08T22:21:26.906648+00:00",
+  "baseline": "a040a352be811f6ebd5c104a985df49acb694025",
+  "intake_HEAD": "a040a352be811f6ebd5c104a985df49acb694025",
+  "new_history_inventory": [],
+  "incoming_scope": "At initial fetch and later22:17UTC fetch there were no commits beyond own a040baseline. Earlier large concurrent batch remains incompletely read; no claim every weekly patch read.",
+  "manuscript": {
+    "path": "papers/forty_points/main.pdf",
+    "raw_sha256": "003b75482b6584e20e83a55d9e9ba0a181f93b8dff0f94c1d615039c21213cbb",
+    "new_full_text": [
+      117,
+      118
+    ],
+    "cumulative_full_text": [
+      1,
+      118
+    ],
+    "total_pages": 215,
+    "visual_this_packet": false,
+    "scope": "Hash verified cache; two bounded page outputs read. BosonicSU9one-loop selection, charged-spectrum and hidden-modulus claims read, not independently reproduced. Not complete manuscript/week reading."
+  },
+  "searches": {
+    "scope": "RESULTS_INDEX and analysis/data py/md/json with700KB caps; native135source and past80site holonomy sources read; broad output truncation followed by selected source reads.",
+    "patterns": [
+      "four holonomy Hessian",
+      "holonomy frequency bubble",
+      "oscillator bath holonomy",
+      "coupled holonomy",
+      "native Wilson Dirac overlap"
+    ],
+    "prior_owners": [
+      "TOE56 80site Gaussian-boson logdet positivewalk theorem and3Hessian",
+      "TOE57 spinless thermal fermion/boson competition",
+      "Pass11991 108D Euclidean GWkernel and primitivefourcover",
+      "October27 temporal-density Ward response",
+      "a040full27bandscalarpotential and finiteN diagnostic correction"
+    ],
+    "scope_limit": "Current model is full4homogeneous harmonic coordinates with treeG and scalarloop, not all local temporal/gauge modes. No priority theorem from absent search hits."
+  },
+  "literature": [
+    {
+      "url": "https://arxiv.org/html/2212.07049v2#S2",
+      "reading": "SectionII revisited; standard graph scalar propagator and twist context, not wholepaper"
+    },
+    {
+      "url": "https://arxiv.org/abs/hep-th/0506164",
+      "reading": "Abstract only; v3HTML404, actualv1abstract checked; no toroidal continuum result transplanted"
+    }
+  ],
+  "server": "ActualfunctionsV8 frequencybubble Simpson65536panels and independent generic2channel bath roots/residues. Not a separate fullnative server replay.",
+  "precision": "70digitmpmath check of genericbath residues; firstdenseeigenvector2e-14 comparison failed at4.03e-14, budget changed to1e-12 after higherprecision evidence; numericalfailure retained.",
+  "continuity": "Connected mirror context/search0records; actualrepo journal plus boundedCLI used. Previous goal turn progress: published a04012owned artifacts with41tests and130parents39unrelated preserved. Goal active, not solved.",
+  "git_exception": "GitKraken unavailable from enabled tools; prior plugin search empty. Authorized narrowCLI fallback, explicitfile staging only, normalmasterpush and immutable preservation."
+}

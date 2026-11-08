@@ -1,0 +1,1355 @@
+{
+  "status": "DECLARED_NATIVE_FOUR_HOLONOMY_SCALAR_ONELOOP_DYNAMIC_KERNEL_NOT_TOE",
+  "primitive_winding_paths": [
+    {
+      "axis": 0,
+      "steps": 8,
+      "period": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "signed_edges": [
+        [
+          5,
+          1
+        ],
+        [
+          31,
+          -1
+        ],
+        [
+          19,
+          -1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          19,
+          1
+        ],
+        [
+          32,
+          1
+        ],
+        [
+          6,
+          -1
+        ]
+      ]
+    },
+    {
+      "axis": 1,
+      "steps": 8,
+      "period": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "signed_edges": [
+        [
+          1,
+          1
+        ],
+        [
+          19,
+          1
+        ],
+        [
+          30,
+          1
+        ],
+        [
+          4,
+          -1
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          32,
+          -1
+        ],
+        [
+          19,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ]
+    },
+    {
+      "axis": 2,
+      "steps": 4,
+      "period": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "signed_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          12,
+          1
+        ],
+        [
+          53,
+          1
+        ],
+        [
+          4,
+          -1
+        ]
+      ]
+    },
+    {
+      "axis": 3,
+      "steps": 8,
+      "period": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "signed_edges": [
+        [
+          6,
+          1
+        ],
+        [
+          32,
+          -1
+        ],
+        [
+          19,
+          -1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          12,
+          1
+        ],
+        [
+          53,
+          1
+        ],
+        [
+          4,
+          -1
+        ]
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "sizes": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "mass": 0.8,
+      "static_Hessian": [
+        [
+          0.004434060211298885,
+          0.0022170301056494424,
+          -0.0027068495796625583,
+          -3.496552006265752e-18
+        ],
+        [
+          0.0022170301056494424,
+          0.004434060211298885,
+          -3.767602549387128e-18,
+          -0.0027068495796625514
+        ],
+        [
+          -0.0027068495796625583,
+          -3.767602549387128e-18,
+          0.005413699159325117,
+          -0.0027068495796625652
+        ],
+        [
+          -3.496552006265752e-18,
+          -0.0027068495796625514,
+          -0.0027068495796625652,
+          0.0054136991593251305
+        ]
+      ],
+      "tree_electric_metric_g1": [
+        [
+          5.0,
+          2.5,
+          -3.0,
+          0.0
+        ],
+        [
+          2.5,
+          5.0,
+          0.0,
+          -3.0
+        ],
+        [
+          -3.0,
+          0.0,
+          6.0,
+          -3.0
+        ],
+        [
+          0.0,
+          -3.0,
+          -3.0,
+          6.0
+        ]
+      ],
+      "loop_kinetic_Z0": [
+        [
+          0.0032175429681257223,
+          0.0016087714840628607,
+          -0.0018486293281374977,
+          -1.0842021724855044e-19
+        ],
+        [
+          0.0016087714840628607,
+          0.0032175429681257227,
+          4.743384504624082e-19,
+          -0.0018486293281374975
+        ],
+        [
+          -0.0018486293281374977,
+          4.743384504624082e-19,
+          0.003697258656274995,
+          -0.0018486293281374975
+        ],
+        [
+          -1.0842021724855044e-19,
+          -0.0018486293281374975,
+          -0.0018486293281374975,
+          0.003697258656274995
+        ]
+      ],
+      "loop_kinetic_min_eigenvalue": 0.0008768386720081739,
+      "static_squared_frequencies_over_g2": [
+        0.0008764979416190584,
+        0.0008764979416190651,
+        0.000902283193220852,
+        0.000902283193220855
+      ],
+      "theta4_static_weights": [
+        0.11365512647532959,
+        0.2863448735245725,
+        0.1578450126206267,
+        0.442154987379471
+      ],
+      "exact_positive_Hessian_bound": "K >= diag(c_i)>0, c_i = L Gamma(r_i-1/2)/(sqrt(pi) r_i! (10+m\u00b2)^(r_i-1/2)), r_i=sizes_i*primitive_path_steps_i. Omitted winding outer products are PSD.",
+      "numeric_log10_diagonal_lower_bound": [
+        -17.660924237597413,
+        -17.660924237597413,
+        -8.982994861139751,
+        -17.660924237597413
+      ],
+      "modes": [
+        {
+          "g": 0.1,
+          "static_tree_inertia_squared_frequencies": [
+            8.76497941619059e-06,
+            8.764979416190653e-06,
+            9.022831932208525e-06,
+            9.022831932208555e-06
+          ],
+          "static_theta4_weights": [
+            0.122504760355887,
+            0.2774952396440227,
+            0.2358481251064515,
+            0.36415187489363926
+          ],
+          "static_theta4_weights_scope": "Individual weights depend on basis inside a degenerate eigenspace; summed degenerate weights are invariant.",
+          "static_theta4_weighted_squared_frequency": 8.919690925801407e-06,
+          "old_single_coordinate_curvature_diagnostic": 2.0050737627130115e-05,
+          "dynamic_subthreshold_groups": [
+            {
+              "s": 8.764921417995605e-06,
+              "multiplicity": 2,
+              "theta4_residue": 0.0014814716784930207,
+              "theta4_residue_over_tree_sum_rule": 0.3999973531931156,
+              "null_residual": 1.2451778652681362e-15,
+              "resolvent_remainder_operator_bound": 2.2084247846888455e-24,
+              "exact_kernel_residual_mass_squared_error_bound": 9.383062249095436e-18
+            },
+            {
+              "s": 9.022776332954281e-06,
+              "multiplicity": 2,
+              "theta4_residue": 0.00222220852868853,
+              "theta4_residue_over_tree_sum_rule": 0.599996302745903,
+              "null_residual": 4.814516678495923e-15,
+              "resolvent_remainder_operator_bound": 2.4799979164554174e-24,
+              "exact_kernel_residual_mass_squared_error_bound": 3.6279884949534895e-17
+            }
+          ],
+          "subthreshold_mode_count": 4,
+          "theta4_subthreshold_residue_fraction": 0.9999936559390186,
+          "pair_threshold_squared_conservative": 2.5600000000000005,
+          "fractional_dynamic_shift_vs_static": [
+            -6.6170372149398915e-06,
+            -6.617036612088789e-06,
+            -6.162062494485809e-06,
+            -6.162061927494911e-06
+          ],
+          "model_scope": "Poles of the explicitly retained tree-electric plus scalar-one-loop homogeneous quadratic kernel. Not complete gauge-QFT poles: higher gauge loops, local A0/inhomogeneous gauge response, radius and charged inventories remain unbuilt. Finite lattice units."
+        },
+        {
+          "g": 0.5,
+          "static_tree_inertia_squared_frequencies": [
+            0.0002191244854047646,
+            0.00021912448540476628,
+            0.000225570798305213,
+            0.00022557079830521376
+          ],
+          "static_theta4_weights": [
+            0.11365512647532959,
+            0.2863448735245725,
+            0.1578450126206267,
+            0.442154987379471
+          ],
+          "static_theta4_weights_scope": "Individual weights depend on basis inside a degenerate eigenspace; summed degenerate weights are invariant.",
+          "static_theta4_weighted_squared_frequency": 0.00022299227314503506,
+          "old_single_coordinate_curvature_diagnostic": 0.0005012684406782529,
+          "dynamic_subthreshold_groups": [
+            {
+              "s": 0.00021908824197522408,
+              "multiplicity": 2,
+              "theta4_residue": 0.03703091101478827,
+              "theta4_residue_over_tree_sum_rule": 0.39993383895971324,
+              "null_residual": 1.5549142820295664e-16,
+              "resolvent_remainder_operator_bound": 8.621889835711583e-19,
+              "exact_kernel_residual_mass_squared_error_bound": 2.929271774588848e-17
+            },
+            {
+              "s": 0.00022553605362263447,
+              "multiplicity": 2,
+              "theta4_residue": 0.05554699825583698,
+              "theta4_residue_over_tree_sum_rule": 0.5999075811630393,
+              "null_residual": 7.401853869341161e-17,
+              "resolvent_remainder_operator_bound": 9.682582128821416e-19,
+              "exact_kernel_residual_mass_squared_error_bound": 1.3944203786456722e-17
+            }
+          ],
+          "subthreshold_mode_count": 4,
+          "theta4_subthreshold_residue_fraction": 0.9998414201227526,
+          "pair_threshold_squared_conservative": 2.5600000000000005,
+          "fractional_dynamic_shift_vs_static": [
+            -0.00016540109369145295,
+            -0.00016540109356089072,
+            -0.000154030055484089,
+            -0.00015403005533587422
+          ],
+          "model_scope": "Poles of the explicitly retained tree-electric plus scalar-one-loop homogeneous quadratic kernel. Not complete gauge-QFT poles: higher gauge loops, local A0/inhomogeneous gauge response, radius and charged inventories remain unbuilt. Finite lattice units."
+        }
+      ],
+      "contact_minus_bubble_static_cancellation": 0.045425357714692416
+    },
+    {
+      "sizes": [
+        3,
+        3,
+        3,
+        2
+      ],
+      "mass": 0.8,
+      "static_Hessian": [
+        [
+          0.00023939595474543884,
+          0.00011156098127328498,
+          -0.0001515392074407304,
+          1.5680243905800822e-05
+        ],
+        [
+          0.00011156098127328498,
+          0.00022156930336360292,
+          -1.552659182946675e-06,
+          -0.00020136852206784767
+        ],
+        [
+          -0.0001515392074407304,
+          -1.552659182946675e-06,
+          0.0003015257556985215,
+          -0.0002327290098794732
+        ],
+        [
+          1.5680243905800822e-05,
+          -0.00020136852206784767,
+          -0.0002327290098794732,
+          0.0011870546928351017
+        ]
+      ],
+      "tree_electric_metric_g1": [
+        [
+          2.222222222222222,
+          1.111111111111111,
+          -1.3333333333333333,
+          0.0
+        ],
+        [
+          1.111111111111111,
+          2.222222222222222,
+          0.0,
+          -2.0
+        ],
+        [
+          -1.3333333333333333,
+          0.0,
+          2.6666666666666665,
+          -2.0
+        ],
+        [
+          0.0,
+          -2.0,
+          -2.0,
+          6.0
+        ]
+      ],
+      "loop_kinetic_Z0": [
+        [
+          0.0015674703002556613,
+          0.0007865471137487727,
+          -0.0009012730427496417,
+          -6.087969375635001e-06
+        ],
+        [
+          0.0007865471137487727,
+          0.0015735464837713787,
+          4.522562738323077e-07,
+          -0.001362848337358349
+        ],
+        [
+          -0.0009012730427496417,
+          4.522562738323077e-07,
+          0.0018029983417731158,
+          -0.0013506723986070786
+        ],
+        [
+          -6.087969375635001e-06,
+          -0.001362848337358349,
+          -0.0013506723986070786,
+          0.003968227203155781
+        ]
+      ],
+      "loop_kinetic_min_eigenvalue": 0.0004305288610394745,
+      "static_squared_frequencies_over_g2": [
+        9.96660332462911e-05,
+        0.00010784586038842798,
+        0.00011305833130037437,
+        0.00030467661802120705
+      ],
+      "theta4_static_weights": [
+        4.789020692662181e-05,
+        7.1663853230649055e-31,
+        0.00023047045942317055,
+        0.9997216393336505
+      ],
+      "exact_positive_Hessian_bound": "K >= diag(c_i)>0, c_i = L Gamma(r_i-1/2)/(sqrt(pi) r_i! (10+m\u00b2)^(r_i-1/2)), r_i=sizes_i*primitive_path_steps_i. Omitted winding outer products are PSD.",
+      "numeric_log10_diagonal_lower_bound": [
+        -26.144108467734615,
+        -26.144108467734615,
+        -13.362184720156263,
+        -17.660924237597413
+      ],
+      "modes": [
+        {
+          "g": 0.1,
+          "static_tree_inertia_squared_frequencies": [
+            9.966603324629111e-07,
+            1.07845860388428e-06,
+            1.1305833130037438e-06,
+            3.046766180212071e-06
+          ],
+          "static_theta4_weights": [
+            4.789020692662334e-05,
+            6.039716305598372e-31,
+            0.00023047045942316965,
+            0.99972163933365
+          ],
+          "static_theta4_weights_scope": "Individual weights depend on basis inside a degenerate eigenspace; summed degenerate weights are invariant.",
+          "static_theta4_weighted_squared_frequency": 3.046226376673056e-06,
+          "old_single_coordinate_curvature_diagnostic": 4.396498862352228e-06,
+          "dynamic_subthreshold_groups": [
+            {
+              "s": 9.96653272785876e-07,
+              "multiplicity": 1,
+              "theta4_residue": 1.773752014800939e-07,
+              "theta4_residue_over_tree_sum_rule": 4.789130439962536e-05,
+              "null_residual": 1.2469054390004831e-19,
+              "resolvent_remainder_operator_bound": 2.9768935424359576e-28,
+              "exact_kernel_residual_mass_squared_error_bound": 2.0877928728451128e-21
+            },
+            {
+              "s": 1.078450800642838e-06,
+              "multiplicity": 1,
+              "theta4_residue": 7.395517475414587e-34,
+              "theta4_residue_over_tree_sum_rule": 1.996789718361939e-31,
+              "null_residual": 2.3521603186498004e-19,
+              "resolvent_remainder_operator_bound": 4.081203757117854e-28,
+              "exact_kernel_residual_mass_squared_error_bound": 3.938408956658854e-21
+            },
+            {
+              "s": 1.1305756684003163e-06,
+              "multiplicity": 1,
+              "theta4_residue": 8.535881956500068e-07,
+              "theta4_residue_over_tree_sum_rule": 0.00023046881282550184,
+              "null_residual": 1.5402220199743147e-18,
+              "resolvent_remainder_operator_bound": 4.929302562939157e-28,
+              "exact_kernel_residual_mass_squared_error_bound": 2.5789161353559796e-20
+            },
+            {
+              "s": 3.0467461203620807e-06,
+              "multiplicity": 1,
+              "theta4_residue": 0.0037026483445575134,
+              "theta4_residue_over_tree_sum_rule": 0.9997150530305287,
+              "null_residual": 1.0715923607407831e-17,
+              "resolvent_remainder_operator_bound": 2.5997544486583563e-26,
+              "exact_kernel_residual_mass_squared_error_bound": 1.7942522531165326e-19
+            }
+          ],
+          "subthreshold_mode_count": 4,
+          "theta4_subthreshold_residue_fraction": 0.9999934131477538,
+          "pair_threshold_squared_conservative": 2.5600000000000005,
+          "fractional_dynamic_shift_vs_static": [
+            -7.083333012580795e-06,
+            -7.235550269379942e-06,
+            -6.761645373276615e-06,
+            -6.583980786123433e-06
+          ],
+          "model_scope": "Poles of the explicitly retained tree-electric plus scalar-one-loop homogeneous quadratic kernel. Not complete gauge-QFT poles: higher gauge loops, local A0/inhomogeneous gauge response, radius and charged inventories remain unbuilt. Finite lattice units."
+        },
+        {
+          "g": 0.5,
+          "static_tree_inertia_squared_frequencies": [
+            2.4916508311572775e-05,
+            2.6961465097106995e-05,
+            2.8264582825093592e-05,
+            7.616915450530176e-05
+          ],
+          "static_theta4_weights": [
+            4.789020692662181e-05,
+            7.1663853230649055e-31,
+            0.00023047045942317055,
+            0.9997216393336505
+          ],
+          "static_theta4_weights_scope": "Individual weights depend on basis inside a degenerate eigenspace; summed degenerate weights are invariant.",
+          "static_theta4_weighted_squared_frequency": 7.615565941682643e-05,
+          "old_single_coordinate_curvature_diagnostic": 0.0001099124715588057,
+          "dynamic_subthreshold_groups": [
+            {
+              "s": 2.49120967576771e-05,
+              "multiplicity": 1,
+              "theta4_residue": 4.4368184545783285e-06,
+              "theta4_residue_over_tree_sum_rule": 4.7917639309445954e-05,
+              "null_residual": 6.384318239747272e-20,
+              "resolvent_remainder_operator_bound": 1.1620694936087228e-22,
+              "exact_kernel_residual_mass_squared_error_bound": 2.6724428537267426e-20
+            },
+            {
+              "s": 2.6956588911513065e-05,
+              "multiplicity": 1,
+              "theta4_residue": 4.159256309692919e-32,
+              "theta4_residue_over_tree_sum_rule": 4.491996814468353e-31,
+              "null_residual": 2.4797244417774817e-19,
+              "resolvent_remainder_operator_bound": 1.5931294352554882e-22,
+              "exact_kernel_residual_mass_squared_error_bound": 1.037999926504619e-19
+            },
+            {
+              "s": 2.825980571691206e-05,
+              "multiplicity": 1,
+              "theta4_residue": 2.1336046444925953e-05,
+              "theta4_residue_over_tree_sum_rule": 0.0002304293016052003,
+              "null_residual": 1.4895433684121664e-18,
+              "resolvent_remainder_operator_bound": 1.9242798287942187e-22,
+              "exact_kernel_residual_mass_squared_error_bound": 6.235152103549798e-19
+            },
+            {
+              "s": 7.615661904313076e-05,
+              "multiplicity": 1,
+              "theta4_residue": 0.09255157470029858,
+              "theta4_residue_over_tree_sum_rule": 0.9995570067632247,
+              "null_residual": 1.0532460950849036e-17,
+              "resolvent_remainder_operator_bound": 1.0149164401065057e-20,
+              "exact_kernel_residual_mass_squared_error_bound": 4.408834106203126e-18
+            }
+          ],
+          "subthreshold_mode_count": 4,
+          "theta4_subthreshold_residue_fraction": 0.9998353537041393,
+          "pair_threshold_squared_conservative": 2.5600000000000005,
+          "fractional_dynamic_shift_vs_static": [
+            -0.0001770534555046721,
+            -0.00018085758976249533,
+            -0.00016901392852997077,
+            -0.000164573996553119
+          ],
+          "model_scope": "Poles of the explicitly retained tree-electric plus scalar-one-loop homogeneous quadratic kernel. Not complete gauge-QFT poles: higher gauge loops, local A0/inhomogeneous gauge response, radius and charged inventories remain unbuilt. Finite lattice units."
+        }
+      ],
+      "contact_minus_bubble_static_cancellation": 0.008203756730646265
+    },
+    {
+      "sizes": [
+        4,
+        4,
+        4,
+        2
+      ],
+      "mass": 0.8,
+      "static_Hessian": [
+        [
+          2.018561155668966e-05,
+          8.909003807998708e-06,
+          -1.3176674796841828e-05,
+          2.435967449728794e-06
+        ],
+        [
+          8.909003807998708e-06,
+          1.7818007004233305e-05,
+          -6.117615747273518e-13,
+          -2.1481412877010636e-05
+        ],
+        [
+          -1.3176674796841828e-05,
+          -6.117615747273518e-13,
+          2.6353348981926483e-05,
+          -2.635334777646367e-05
+        ],
+        [
+          2.435967449728794e-06,
+          -2.1481412877010636e-05,
+          -2.635334777646367e-05,
+          0.0007606130304688569
+        ]
+      ],
+      "tree_electric_metric_g1": [
+        [
+          1.25,
+          0.625,
+          -0.75,
+          0.0
+        ],
+        [
+          0.625,
+          1.25,
+          0.0,
+          -1.5
+        ],
+        [
+          -0.75,
+          0.0,
+          1.5,
+          -1.5
+        ],
+        [
+          0.0,
+          -1.5,
+          -1.5,
+          6.0
+        ]
+      ],
+      "loop_kinetic_Z0": [
+        [
+          0.0009035444296719011,
+          0.00045272993212362684,
+          -0.000520453789445046,
+          -2.775102406689098e-06
+        ],
+        [
+          0.00045272993212362684,
+          0.0009054740883725115,
+          1.4224125257960879e-08,
+          -0.0010464938144083738
+        ],
+        [
+          -0.000520453789445046,
+          1.4224125257960879e-08,
+          0.0010409218030153497,
+          -0.001040943609594997
+        ],
+        [
+          -2.775102406689098e-06,
+          -0.0010464938144083738,
+          -0.001040943609594997,
+          0.004026386061494738
+        ]
+      ],
+      "loop_kinetic_min_eigenvalue": 0.00024829453189321765,
+      "static_squared_frequencies_over_g2": [
+        1.4254393707376856e-05,
+        1.625381734092419e-05,
+        1.756889932128439e-05,
+        0.00026235639027041656
+      ],
+      "theta4_static_weights": [
+        4.79480612653299e-08,
+        3.8776358204495843e-28,
+        9.736199238019916e-19,
+        0.9999999520519384
+      ],
+      "exact_positive_Hessian_bound": "K >= diag(c_i)>0, c_i = L Gamma(r_i-1/2)/(sqrt(pi) r_i! (10+m\u00b2)^(r_i-1/2)), r_i=sizes_i*primitive_path_steps_i. Omitted winding outer products are PSD.",
+      "numeric_log10_diagonal_lower_bound": [
+        -34.54878815815295,
+        -34.54878815815295,
+        -17.660924237597413,
+        -17.660924237597413
+      ],
+      "modes": [
+        {
+          "g": 0.1,
+          "static_tree_inertia_squared_frequencies": [
+            1.4254393707376854e-07,
+            1.6253817340924195e-07,
+            1.7568899321284388e-07,
+            2.623563902704167e-06
+          ],
+          "static_theta4_weights": [
+            4.794806126530105e-08,
+            3.8629610693445413e-28,
+            9.736197218226434e-19,
+            0.9999999520519386
+          ],
+          "static_theta4_weights_scope": "Individual weights depend on basis inside a degenerate eigenspace; summed degenerate weights are invariant.",
+          "static_theta4_weighted_squared_frequency": 2.6235637837440695e-06,
+          "old_single_coordinate_curvature_diagnostic": 2.8170852980328034e-06,
+          "dynamic_subthreshold_groups": [
+            {
+              "s": 1.4254290450889017e-07,
+              "multiplicity": 1,
+              "theta4_residue": 1.7760444835469207e-10,
+              "theta4_residue_over_tree_sum_rule": 4.7953201055766856e-08,
+              "null_residual": 4.0291998651556215e-20,
+              "resolvent_remainder_operator_bound": 1.1377182502045607e-31,
+              "exact_kernel_residual_mass_squared_error_bound": 1.1980343808625762e-21
+            },
+            {
+              "s": 1.6253696860555808e-07,
+              "multiplicity": 1,
+              "theta4_residue": 1.4535476164715724e-30,
+              "theta4_residue_over_tree_sum_rule": 3.9245785644732453e-28,
+              "null_residual": 5.764255766140149e-20,
+              "resolvent_remainder_operator_bound": 1.9233615739918695e-31,
+              "exact_kernel_residual_mass_squared_error_bound": 1.7139324975269063e-21
+            },
+            {
+              "s": 1.756877740431495e-07,
+              "multiplicity": 1,
+              "theta4_residue": 3.645781015966496e-21,
+              "theta4_residue_over_tree_sum_rule": 9.843608743109539e-19,
+              "null_residual": 1.78210049741194e-15,
+              "resolvent_remainder_operator_bound": 2.6255390150525085e-31,
+              "exact_kernel_residual_mass_squared_error_bound": 5.298862646440948e-17
+            },
+            {
+              "s": 2.623546628819285e-06,
+              "multiplicity": 1,
+              "theta4_residue": 0.003703679140077269,
+              "theta4_residue_over_tree_sum_rule": 0.9999933678208626,
+              "null_residual": 1.0963819436408134e-19,
+              "resolvent_remainder_operator_bound": 1.3055932004202103e-26,
+              "exact_kernel_residual_mass_squared_error_bound": 3.2599605554387107e-21
+            }
+          ],
+          "subthreshold_mode_count": 4,
+          "theta4_subthreshold_residue_fraction": 0.9999934157740636,
+          "pair_threshold_squared_conservative": 2.5600000000000005,
+          "fractional_dynamic_shift_vs_static": [
+            -7.243835827508427e-06,
+            -7.41243523660895e-06,
+            -6.939362973579222e-06,
+            -6.584129650599735e-06
+          ],
+          "model_scope": "Poles of the explicitly retained tree-electric plus scalar-one-loop homogeneous quadratic kernel. Not complete gauge-QFT poles: higher gauge loops, local A0/inhomogeneous gauge response, radius and charged inventories remain unbuilt. Finite lattice units."
+        },
+        {
+          "g": 0.5,
+          "static_tree_inertia_squared_frequencies": [
+            3.563598426844214e-06,
+            4.063454335231048e-06,
+            4.392224830321097e-06,
+            6.558909756760414e-05
+          ],
+          "static_theta4_weights": [
+            4.79480612653299e-08,
+            3.8776358204495843e-28,
+            9.736199238019916e-19,
+            0.9999999520519384
+          ],
+          "static_theta4_weights_scope": "Individual weights depend on basis inside a degenerate eigenspace; summed degenerate weights are invariant.",
+          "static_theta4_weighted_squared_frequency": 6.558909459360168e-05,
+          "old_single_coordinate_curvature_diagnostic": 7.042713245082008e-05,
+          "dynamic_subthreshold_groups": [
+            {
+              "s": 3.562953185842481e-06,
+              "multiplicity": 1,
+              "theta4_residue": 4.451537398075079e-09,
+              "theta4_residue_over_tree_sum_rule": 4.807660389921086e-08,
+              "null_residual": 7.707820372554482e-20,
+              "resolvent_remainder_operator_bound": 4.441128649191979e-26,
+              "exact_kernel_residual_mass_squared_error_bound": 5.729570458697411e-20
+            },
+            {
+              "s": 4.062701466697542e-06,
+              "multiplicity": 1,
+              "theta4_residue": 3.6880630184347765e-29,
+              "theta4_residue_over_tree_sum_rule": 3.983108059909559e-28,
+              "null_residual": 5.3032089305545984e-20,
+              "resolvent_remainder_operator_bound": 7.507798664815133e-26,
+              "exact_kernel_residual_mass_squared_error_bound": 3.9421143405208674e-20
+            },
+            {
+              "s": 4.391462968549239e-06,
+              "multiplicity": 1,
+              "theta4_residue": 9.860874531503597e-20,
+              "theta4_residue_over_tree_sum_rule": 1.0649744494023886e-18,
+              "null_residual": 8.235601637860314e-20,
+              "resolvent_remainder_operator_bound": 1.0249199090582178e-25,
+              "exact_kernel_residual_mass_squared_error_bound": 6.121894072921447e-20
+            },
+            {
+              "s": 6.55783030677704e-05,
+              "multiplicity": 1,
+              "theta4_residue": 0.0925773492047464,
+              "theta4_residue_over_tree_sum_rule": 0.9998353714112612,
+              "null_residual": 2.9572017235810517e-19,
+              "resolvent_remainder_operator_bound": 5.096876471556451e-21,
+              "exact_kernel_residual_mass_squared_error_bound": 2.198221392933648e-19
+            }
+          ],
+          "subthreshold_mode_count": 4,
+          "theta4_subthreshold_residue_fraction": 0.9998354194878651,
+          "pair_threshold_squared_conservative": 2.5600000000000005,
+          "fractional_dynamic_shift_vs_static": [
+            -0.00018106445352339406,
+            -0.0001852779609158306,
+            -0.00017345691563852572,
+            -0.0001645776544282329
+          ],
+          "model_scope": "Poles of the explicitly retained tree-electric plus scalar-one-loop homogeneous quadratic kernel. Not complete gauge-QFT poles: higher gauge loops, local A0/inhomogeneous gauge response, radius and charged inventories remain unbuilt. Finite lattice units."
+        }
+      ],
+      "contact_minus_bubble_static_cancellation": 0.005508485775110506
+    },
+    {
+      "sizes": [
+        6,
+        6,
+        6,
+        2
+      ],
+      "mass": 0.8,
+      "static_Hessian": [
+        [
+          2.674980930338078e-07,
+          1.0493801228840527e-07,
+          -1.839051949345874e-07,
+          8.550914880594932e-08
+        ],
+        [
+          1.0493801228840527e-07,
+          2.0987602459415777e-07,
+          2.318608432809818e-17,
+          -3.806972873401926e-07
+        ],
+        [
+          -1.839051949345874e-07,
+          2.318608432809818e-17,
+          3.6781038988825676e-07,
+          -5.517155849572852e-07
+        ],
+        [
+          8.550914880594932e-08,
+          -3.806972873401926e-07,
+          -5.517155849572852e-07,
+          0.0006941818129726635
+        ]
+      ],
+      "tree_electric_metric_g1": [
+        [
+          0.5555555555555555,
+          0.27777777777777773,
+          -0.3333333333333333,
+          0.0
+        ],
+        [
+          0.27777777777777773,
+          0.5555555555555555,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.3333333333333333,
+          0.0,
+          0.6666666666666666,
+          -1.0
+        ],
+        [
+          0.0,
+          -1.0,
+          -1.0,
+          6.0
+        ]
+      ],
+      "loop_kinetic_Z0": [
+        [
+          0.0004047065320850338,
+          0.00020257759093355215,
+          -0.00023335200146961906,
+          -1.23215419933286e-06
+        ],
+        [
+          0.00020257759093355215,
+          0.0004051613383315604,
+          6.15646445629843e-09,
+          -0.0007025434068824041
+        ],
+        [
+          -0.00023335200146961906,
+          6.15646445629843e-09,
+          0.0004667101594036943,
+          -0.0007000790984837389
+        ],
+        [
+          -1.23215419933286e-06,
+          -0.0007025434068824041,
+          -0.0007000790984837389,
+          0.0040441994572691315
+        ]
+      ],
+      "loop_kinetic_min_eigenvalue": 0.00011125413929215117,
+      "static_squared_frequencies_over_g2": [
+        3.7777682207282117e-07,
+        4.923059576792642e-07,
+        5.517155848323589e-07,
+        0.0002565421213853174
+      ],
+      "theta4_static_weights": [
+        8.665005837452423e-11,
+        7.076655795566074e-30,
+        5.962625593752892e-26,
+        0.9999999999133504
+      ],
+      "exact_positive_Hessian_bound": "K >= diag(c_i)>0, c_i = L Gamma(r_i-1/2)/(sqrt(pi) r_i! (10+m\u00b2)^(r_i-1/2)), r_i=sizes_i*primitive_path_steps_i. Omitted winding outer products are PSD.",
+      "numeric_log10_diagonal_lower_bound": [
+        -51.245717451812475,
+        -51.245717451812475,
+        -26.144108467734615,
+        -17.660924237597413
+      ],
+      "modes": [
+        {
+          "g": 0.1,
+          "static_tree_inertia_squared_frequencies": [
+            3.777768220728275e-09,
+            4.9230595767929645e-09,
+            5.517155848323805e-09,
+            2.565421213853173e-06
+          ],
+          "static_theta4_weights": [
+            8.665005837458883e-11,
+            7.559952116465976e-30,
+            5.968303094094393e-26,
+            0.9999999999133501
+          ],
+          "static_theta4_weights_scope": "Individual weights depend on basis inside a degenerate eigenspace; summed degenerate weights are invariant.",
+          "static_theta4_weighted_squared_frequency": 2.5654212136312066e-06,
+          "old_single_coordinate_curvature_diagnostic": 2.571043751750605e-06,
+          "dynamic_subthreshold_groups": [
+            {
+              "s": 3.777740669844935e-09,
+              "multiplicity": 1,
+              "theta4_residue": 3.209460197283082e-13,
+              "theta4_residue_over_tree_sum_rule": 8.665542532664322e-11,
+              "null_residual": 9.312876318534604e-18,
+              "resolvent_remainder_operator_bound": 5.218696723266547e-38,
+              "exact_kernel_residual_mass_squared_error_bound": 6.226966766392291e-19
+            },
+            {
+              "s": 4.923022803300058e-09,
+              "multiplicity": 1,
+              "theta4_residue": 4.622197340298643e-33,
+              "theta4_residue_over_tree_sum_rule": 1.2479932818806337e-30,
+              "null_residual": 2.335087748908107e-18,
+              "resolvent_remainder_operator_bound": 1.5050844975264236e-37,
+              "exact_kernel_residual_mass_squared_error_bound": 1.5613343624162444e-19
+            },
+            {
+              "s": 5.517117227770812e-09,
+              "multiplicity": 1,
+              "theta4_residue": 1.5066684105595924e-27,
+              "theta4_residue_over_tree_sum_rule": 4.0680047085109e-25,
+              "null_residual": 1.9112558579553003e-16,
+              "resolvent_remainder_operator_bound": 2.3740088889458805e-37,
+              "exact_kernel_residual_mass_squared_error_bound": 1.277943172709603e-17
+            },
+            {
+              "s": 2.5654043234323143e-06,
+              "multiplicity": 1,
+              "theta4_residue": 0.003703679318630828,
+              "theta4_residue_over_tree_sum_rule": 0.9999934160303237,
+              "null_residual": 4.0756581541804485e-20,
+              "resolvent_remainder_operator_bound": 1.1098319328164149e-26,
+              "exact_kernel_residual_mass_squared_error_bound": 2.7251503197511404e-21
+            }
+          ],
+          "subthreshold_mode_count": 4,
+          "theta4_subthreshold_residue_fraction": 0.9999934161169791,
+          "pair_threshold_squared_conservative": 2.5600000000000005,
+          "fractional_dynamic_shift_vs_static": [
+            -7.292899333766201e-06,
+            -7.469642065660587e-06,
+            -7.000083748764929e-06,
+            -6.58387822138895e-06
+          ],
+          "model_scope": "Poles of the explicitly retained tree-electric plus scalar-one-loop homogeneous quadratic kernel. Not complete gauge-QFT poles: higher gauge loops, local A0/inhomogeneous gauge response, radius and charged inventories remain unbuilt. Finite lattice units."
+        },
+        {
+          "g": 0.5,
+          "static_tree_inertia_squared_frequencies": [
+            9.444420551820529e-08,
+            1.2307648941981606e-07,
+            1.3792889620808972e-07,
+            6.413553034632935e-05
+          ],
+          "static_theta4_weights": [
+            8.665005837452423e-11,
+            7.076655795566074e-30,
+            5.962625593752892e-26,
+            0.9999999999133504
+          ],
+          "static_theta4_weights_scope": "Individual weights depend on basis inside a degenerate eigenspace; summed degenerate weights are invariant.",
+          "static_theta4_weighted_squared_frequency": 6.413553034078021e-05,
+          "old_single_coordinate_curvature_diagnostic": 6.427609379376513e-05,
+          "dynamic_subthreshold_groups": [
+            {
+              "s": 9.442698932989298e-08,
+              "multiplicity": 1,
+              "theta4_residue": 8.035576017677658e-12,
+              "theta4_residue_over_tree_sum_rule": 8.678422099091872e-11,
+              "null_residual": 9.326454253661678e-18,
+              "resolvent_remainder_operator_bound": 2.0371268840054325e-32,
+              "exact_kernel_residual_mass_squared_error_bound": 1.559011381109147e-17
+            },
+            {
+              "s": 1.2305351019013016e-07,
+              "multiplicity": 1,
+              "theta4_residue": 1.155342216031223e-31,
+              "theta4_residue_over_tree_sum_rule": 1.247769593313721e-30,
+              "null_residual": 2.2863597565793546e-18,
+              "resolvent_remainder_operator_bound": 5.875022578452506e-32,
+              "exact_kernel_residual_mass_squared_error_bound": 3.821882126766132e-18
+            },
+            {
+              "s": 1.3790476062560206e-07,
+              "multiplicity": 1,
+              "theta4_residue": 8.28761310737605e-26,
+              "theta4_residue_over_tree_sum_rule": 8.950622155966134e-25,
+              "null_residual": 8.430952332593371e-20,
+              "resolvent_remainder_operator_bound": 9.26724298879754e-32,
+              "exact_kernel_residual_mass_squared_error_bound": 1.4093191563065142e-19
+            },
+            {
+              "s": 6.412497547474319e-05,
+              "multiplicity": 1,
+              "theta4_residue": 0.09257735444366498,
+              "theta4_residue_over_tree_sum_rule": 0.9998354279915819,
+              "null_residual": 2.2970760372697978e-20,
+              "resolvent_remainder_operator_bound": 4.332646124157675e-21,
+              "exact_kernel_residual_mass_squared_error_bound": 3.839795476368422e-20
+            }
+          ],
+          "subthreshold_mode_count": 4,
+          "theta4_subthreshold_residue_fraction": 0.9998354280783661,
+          "pair_threshold_squared_conservative": 2.5600000000000005,
+          "fractional_dynamic_shift_vs_static": [
+            -0.00018228951387588843,
+            -0.00018670689905297966,
+            -0.00017498568574958462,
+            -0.0001645713620697098
+          ],
+          "model_scope": "Poles of the explicitly retained tree-electric plus scalar-one-loop homogeneous quadratic kernel. Not complete gauge-QFT poles: higher gauge loops, local A0/inhomogeneous gauge response, radius and charged inventories remain unbuilt. Finite lattice units."
+        }
+      ],
+      "contact_minus_bubble_static_cancellation": 0.005631728629667457
+    },
+    {
+      "sizes": [
+        8,
+        8,
+        8,
+        2
+      ],
+      "mass": 0.8,
+      "static_Hessian": [
+        [
+          5.265649648082682e-09,
+          1.7920827656038585e-09,
+          -3.801842778962394e-09,
+          3.2722920578916363e-09
+        ],
+        [
+          1.7920827656038585e-09,
+          3.584165524268823e-09,
+          -3.014907896633275e-20,
+          -8.662787001623151e-09
+        ],
+        [
+          -3.801842778962394e-09,
+          -3.014907896633275e-20,
+          7.603685556190065e-09,
+          -1.5207371114114854e-08
+        ],
+        [
+          3.2722920578916363e-09,
+          -8.662787001623151e-09,
+          -1.5207371114114854e-08,
+          0.0006923729585092686
+        ]
+      ],
+      "tree_electric_metric_g1": [
+        [
+          0.3125,
+          0.15625,
+          -0.1875,
+          0.0
+        ],
+        [
+          0.15625,
+          0.3125,
+          0.0,
+          -0.75
+        ],
+        [
+          -0.1875,
+          0.0,
+          0.375,
+          -0.75
+        ],
+        [
+          0.0,
+          -0.75,
+          -0.75,
+          6.0
+        ]
+      ],
+      "loop_kinetic_Z0": [
+        [
+          0.0002277496827716777,
+          0.00011398871463768176,
+          -0.00013133149184461017,
+          -8.75373240602408e-07
+        ],
+        [
+          0.00011398871463768176,
+          0.00022798089093854697,
+          3.4616631834084377e-09,
+          -0.0005270940249603697
+        ],
+        [
+          -0.00013133149184461017,
+          3.4616631834084377e-09,
+          0.0002626664453524038,
+          -0.0005253432784791651
+        ],
+        [
+          -8.75373240602408e-07,
+          -0.0005270940249603697,
+          -0.0005253432784791651,
+          0.004045216069167745
+        ]
+      ],
+      "loop_kinetic_min_eigenvalue": 6.261781409999278e-05,
+      "static_squared_frequencies_over_g2": [
+        1.146932966058555e-08,
+        1.7555106657081757e-08,
+        2.0276494816537893e-08,
+        0.00025641541006773884
+      ],
+      "theta4_static_weights": [
+        6.661889785622873e-14,
+        2.6397611782002896e-27,
+        5.145309925526632e-29,
+        0.9999999999999337
+      ],
+      "exact_positive_Hessian_bound": "K >= diag(c_i)>0, c_i = L Gamma(r_i-1/2)/(sqrt(pi) r_i! (10+m\u00b2)^(r_i-1/2)), r_i=sizes_i*primitive_path_steps_i. Omitted winding outer products are PSD.",
+      "numeric_log10_diagonal_lower_bound": [
+        -67.86505025114732,
+        -67.86505025114732,
+        -34.54878815815295,
+        -17.660924237597413
+      ],
+      "modes": [
+        {
+          "g": 0.1,
+          "static_tree_inertia_squared_frequencies": [
+            1.1469329660582668e-10,
+            1.7555106657063896e-10,
+            2.027649481652473e-10,
+            2.5641541006773887e-06
+          ],
+          "static_theta4_weights": [
+            6.661889791533085e-14,
+            2.6442640443519057e-27,
+            4.7572202963314674e-29,
+            0.9999999999999336
+          ],
+          "static_theta4_weights_scope": "Individual weights depend on basis inside a degenerate eigenspace; summed degenerate weights are invariant.",
+          "static_theta4_weighted_squared_frequency": 2.5641541006772184e-06,
+          "old_single_coordinate_curvature_diagnostic": 2.564344290775069e-06,
+          "dynamic_subthreshold_groups": [
+            {
+              "s": 1.146924596311934e-10,
+              "multiplicity": 1,
+              "theta4_residue": 2.4675369304533727e-16,
+              "theta4_residue_over_tree_sum_rule": 6.662349712224106e-14,
+              "null_residual": 7.766658338112573e-18,
+              "resolvent_remainder_operator_bound": 4.3171214574303154e-44,
+              "exact_kernel_residual_mass_squared_error_bound": 9.230685563039224e-19
+            },
+            {
+              "s": 1.7554975925911394e-10,
+              "multiplicity": 1,
+              "theta4_residue": 2.6623856399547185e-32,
+              "theta4_residue_over_tree_sum_rule": 7.188441227877739e-30,
+              "null_residual": 4.2923830091698206e-17,
+              "resolvent_remainder_operator_bound": 2.3694947688432143e-43,
+              "exact_kernel_residual_mass_squared_error_bound": 5.101503909261372e-18
+            },
+            {
+              "s": 2.027635267581838e-10,
+              "multiplicity": 1,
+              "theta4_residue": 4.365679539760781e-28,
+              "theta4_residue_over_tree_sum_rule": 1.1787334757354108e-25,
+              "null_residual": 4.3583384206353284e-17,
+              "resolvent_remainder_operator_bound": 4.217102405855652e-43,
+              "exact_kernel_residual_mass_squared_error_bound": 5.179892018782219e-18
+            },
+            {
+              "s": 2.564137218582014e-06,
+              "multiplicity": 1,
+              "theta4_residue": 0.0037036793189399527,
+              "theta4_residue_over_tree_sum_rule": 0.9999934161137872,
+              "null_residual": 2.802496525158085e-17,
+              "resolvent_remainder_operator_bound": 1.0785003401468714e-26,
+              "exact_kernel_residual_mass_squared_error_bound": 3.3307714964491295e-18
+            }
+          ],
+          "subthreshold_mode_count": 4,
+          "theta4_subthreshold_residue_fraction": 0.9999934161138538,
+          "pair_threshold_squared_conservative": 2.5600000000000005,
+          "fractional_dynamic_shift_vs_static": [
+            -7.297502626957275e-06,
+            -7.44690163700934e-06,
+            -7.010122194950341e-06,
+            -6.583884864852507e-06
+          ],
+          "model_scope": "Poles of the explicitly retained tree-electric plus scalar-one-loop homogeneous quadratic kernel. Not complete gauge-QFT poles: higher gauge loops, local A0/inhomogeneous gauge response, radius and charged inventories remain unbuilt. Finite lattice units."
+        },
+        {
+          "g": 0.5,
+          "static_tree_inertia_squared_frequencies": [
+            2.8673324151463874e-09,
+            4.388776664270439e-09,
+            5.069123704134473e-09,
+            6.410385251693471e-05
+          ],
+          "static_theta4_weights": [
+            6.661889785622873e-14,
+            2.6397611782002896e-27,
+            5.145309925526632e-29,
+            0.9999999999999337
+          ],
+          "static_theta4_weights_scope": "Individual weights depend on basis inside a degenerate eigenspace; summed degenerate weights are invariant.",
+          "static_theta4_weighted_squared_frequency": 6.410385251693046e-05,
+          "old_single_coordinate_curvature_diagnostic": 6.410860726937672e-05,
+          "dynamic_subthreshold_groups": [
+            {
+              "s": 2.8668095466469454e-09,
+              "multiplicity": 1,
+              "theta4_residue": 6.178973787320705e-15,
+              "theta4_residue_over_tree_sum_rule": 6.673291690306362e-14,
+              "null_residual": 7.818658282266943e-18,
+              "resolvent_remainder_operator_bound": 1.6851950309785557e-38,
+              "exact_kernel_residual_mass_squared_error_bound": 2.323121894467111e-17
+            },
+            {
+              "s": 4.387956880145434e-09,
+              "multiplicity": 1,
+              "theta4_residue": 2.4874053664235174e-28,
+              "theta4_residue_over_tree_sum_rule": 2.686397795737399e-27,
+              "null_residual": 4.782427116631316e-20,
+              "resolvent_remainder_operator_bound": 9.249200771098036e-38,
+              "exact_kernel_residual_mass_squared_error_bound": 1.420980524054588e-19
+            },
+            {
+              "s": 5.06823622138064e-09,
+              "multiplicity": 1,
+              "theta4_residue": 7.213328606874935e-27,
+              "theta4_residue_over_tree_sum_rule": 7.79039489542493e-26,
+              "null_residual": 3.147390873405277e-17,
+              "resolvent_remainder_operator_bound": 1.6461984772376474e-37,
+              "exact_kernel_residual_mass_squared_error_bound": 9.351697419795389e-17
+            },
+            {
+              "s": 6.40933028473028e-05,
+              "multiplicity": 1,
+              "theta4_residue": 0.09257735444450396,
+              "theta4_residue_over_tree_sum_rule": 0.9998354280006428,
+              "null_residual": 2.106903658299243e-17,
+              "resolvent_remainder_operator_bound": 4.210331422080828e-21,
+              "exact_kernel_residual_mass_squared_error_bound": 6.260145719923553e-17
+            }
+          ],
+          "subthreshold_mode_count": 4,
+          "theta4_subthreshold_residue_fraction": 0.9998354280007096,
+          "pair_threshold_squared_conservative": 2.5600000000000005,
+          "fractional_dynamic_shift_vs_static": [
+            -0.0001823536387619562,
+            -0.00018679103260810237,
+            -0.00017507616811751614,
+            -0.00016457153849092077
+          ],
+          "model_scope": "Poles of the explicitly retained tree-electric plus scalar-one-loop homogeneous quadratic kernel. Not complete gauge-QFT poles: higher gauge loops, local A0/inhomogeneous gauge response, radius and charged inventories remain unbuilt. Finite lattice units."
+        }
+      ],
+      "contact_minus_bubble_static_cancellation": 0.005812794578285446
+    }
+  ],
+  "kernel": "Pi(nu)=D-sum_ab C_ab*(omega_a+omega_b)/[(omega_a+omega_b)^2+nu^2], C_ijab=Re(X_iab conj(X_jab))/(2omega_a omega_b), X_i=Udag H_i U.",
+  "analytic_continuation": "F(s)=K-s[Gtree+Z(s)], Z(s)=sum C/[p(p\u00b2-s)], p=omega_a+omega_b. For s<4m\u00b2 each matrix coefficient is a positive Gram matrix. F'(s)=-Gtree-sum C*p/(p\u00b2-s)^2 <0.",
+  "root_algorithm": "Root search uses Z0+sZ1+s\u00b2Z2 with Zr=sum C/p^(3+2r). For r=s/(4m\u00b2)<1 the omitted PSD matrix is bounded above by r\u00b3/(1-r)*Z0. Each candidate null vector/residue is checked against the unexpanded kernel. Formula bounds analytic truncation, not floating roundoff.",
+  "bath": "Equivalent Schur kernel of a positive oscillator bath with squared frequencies p\u00b2, coupling WW^T=C*p and contact D. K=D-sum C/p>0 plus Gtree>0 gives positive full quadratic Hamiltonian. This is an algebraic spectral representation of the retained one-loop kernel, not new microscopic matter.",
+  "strict_stability": "Full winding potential is sum c_w(1-cos(w.Theta)), c_w>=0. Four literal primitive-axis paths make its global minimum unique modulo2pi in every coordinate and give positive diagonal lower bound on K.",
+  "dynamic_gauge": "Time-dependent backgrounds use rational harmonic profiles h, temporal A0=0. Integer-tree-gauge profiles V have the same static Hessian but different frequency response unless the induced temporal vertex is included.",
+  "fermion_audit": "Pass11991 owns a108D Euclidean GW/overlap kernel. Its finite Euclidean eigenvalues are not assigned physical continuous-time energies here. A compatible Hamiltonian/transfer construction, full charged spectrum and parity/anomaly treatment are needed before using a fermion vacuum loop. Older TOE57 spinless thermal fermions are also a distinct model.",
+  "scope": "External torus sizes, mass, gauge coupling and continuous time. Exact free-scalar Gaussian contribution at fixed background plus tree electric term, restricted homogeneous harmonic sector. Not full dynamical gauge theory, stabilized compactification, physical particle mass, complete perturbative pole order, SM/gravity or TOE.",
+  "input_raw_sha256": {
+    "analysis/toe_20261108_native_scalar_wilson.py": "7a224a382dd86327f4b7fe5b2ae7f306560977bec5e1f19cc5165b4bf16148e4",
+    "data/w33_pass11991_native_four_period_cover.json": "d8fcc26b167d858876cbd8da8d8c434c8a50fea70974c37c99ec574814572d46",
+    "analysis/w33_pass12189_12193_five_bridges.py": "fab9b39b71e189649dbcdf07c1a46e9967e3afb879488eadaac7d4ff8e2ce4ce",
+    "analysis\\toe_20261108_coupled_holonomy_response.py": "455ce86c532191bca600bb6533828f20fbdbc6d79a2c451391484c6a28eee664"
+  }
+}

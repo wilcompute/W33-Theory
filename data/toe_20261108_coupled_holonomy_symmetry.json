@@ -1,0 +1,88 @@
+{
+  "status": "N2_EQUAL_TORUS_NATIVE_H27_STATIC_DOUBLET_SYMMETRY_AND_EXACT_OBSERVABLE_WEIGHTS",
+  "exact_projectors": [
+    [
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "2/3",
+        "1/3",
+        "0",
+        "0"
+      ],
+      [
+        "1/3",
+        "2/3",
+        "0",
+        "0"
+      ]
+    ],
+    [
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "-2/3",
+        "-1/3",
+        "1",
+        "0"
+      ],
+      [
+        "-1/3",
+        "-2/3",
+        "0",
+        "1"
+      ]
+    ]
+  ],
+  "real_character_planes": [
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "exact_theta4_plane_weights": [
+    "2/5",
+    "3/5"
+  ],
+  "squared_frequencies_over_g2": [
+    0.0008764979416190619,
+    0.0009022831932208534
+  ],
+  "numeric_invariance_residuals": {
+    "K": 7.006960088749519e-17,
+    "G": 0.0,
+    "Z0": 3.941013378843582e-18
+  },
+  "reconstruction_residual": 2.335826709475773e-17,
+  "proof": "Prior native H27 action has two inequivalent real2D C3 character planes. On the equal-period finite torus the invariant symmetric Hessian and electric metric restrict to scalars relative to one another on each plane. Thus static frequencies are doublets; projection of the physical fourth holonomy through exact G gives the displayed rational weights. These are representation-sector weights, not generations or particle spins.",
+  "prior_owner": "Pass11991 exact native character-plane/deck action and invariant metric dimension2. This is an application to the new finite holonomy response, not new group classification.",
+  "input_raw_sha256": {
+    "data/w33_pass11991_native_four_period_cover.json": "d8fcc26b167d858876cbd8da8d8c434c8a50fea70974c37c99ec574814572d46",
+    "data/toe_20261108_coupled_holonomy_response.json": "dd909766a1cd6354d92c62b30111841129f4b3ea30ec3b08bc2dcfc379167f2b"
+  },
+  "source_raw_sha256": "b6d9c72ab371927f21351401a50cb74e22187994e2abb3809bde548cb7680394"
+}
