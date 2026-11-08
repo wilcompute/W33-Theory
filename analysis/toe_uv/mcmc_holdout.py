@@ -21,12 +21,13 @@ exec(src, g)
 F, C, BMASK, SN, FREE, kind_of = g["F"], g["C"], g["BMASK"], g["SN"], g["FREE"], g["kind_of"]
 K = kind_of(MODEL)
 FREEP = C.NAMES + FREE[MODEL]
-BOUNDS = dict(c=(-3.0, 3.0), cp=(0.0, 0.2), w0=(-3.0, 1.0), wa=(-5.0, 3.0), tau=(0.01, 0.2), ns=(0.9, 1.05), h=(0.55, 0.8))
+BOUNDS = dict(c=(-3.0, 3.0), cp=(0.0, 0.2), w0=(-3.0, 1.0), wa=(-5.0, 3.0), tau=(0.01, 0.2), ns=(0.9, 1.05), h=(0.55, 0.8), ks=(0.0, 0.1), kth=(0.05, 6.2))
+FIXED = {}  # parameters a model needs but does not sample (e.g. kf for klt25), filled from the start point
 HKEY = "sn" if HOLD == "sn" else "bao"
 
 
 def logp(x):
-    q = dict(zip(FREEP, x))
+    q = dict(FIXED, **dict(zip(FREEP, x)))
     if any(n in q and not (lo <= q[n] <= hi) for n, (lo, hi) in BOUNDS.items()):
         return -np.inf, np.nan
     if "w0" in q and q["w0"] + q["wa"] >= 0:
@@ -50,6 +51,7 @@ if __name__ == "__main__":
     neu = json.load(open(f"class_holdout_{DS}_{HOLD}_neutral.json"))["rows"][MODEL]
     rows = sorted(neu, key=lambda r: r["train_chi2"])
     centres = [rows[0]["p"]] if MODEL != "free_neg" else [rows[0]["p"], rows[1]["p"]]
+    FIXED.update({k: v for k, v in centres[0].items() if k not in FREEP})
     rng = np.random.default_rng(20261106)
     scale = np.array([C.STEP[n] for n in FREEP])
     p0 = []
