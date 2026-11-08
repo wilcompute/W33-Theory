@@ -13,7 +13,7 @@ BG = os.path.dirname(os.path.abspath(__file__))
 os.chdir(BG)
 sys.path.insert(0, BG)
 ND = int(sys.argv[1]) if len(sys.argv) > 1 else 20
-sys.argv = ["x", "dovekie", "sn"]
+sys.argv = ["x", os.environ.get("DSET", "dovekie"), "sn"]
 src = open("class_holdout.py", encoding="utf-8").read().split('if HOLD == "evidence":')[0]
 g = dict(__name__="x", __file__=os.path.join(BG, "class_holdout.py"))
 exec(src, g)
@@ -27,9 +27,10 @@ SF, NUIS, PRIM = g2["SF"], g2["NUIS"], g2["PRIM"]
 D = SF("dovekie")
 BOUNDS = dict(c=(-3.0, 3.0), cp=(0.0, 0.2), w0=(-3.0, 1.0), wa=(-5.0, 3.0), tau=(0.01, 0.2))
 FREE = dict(LCDM=[], free_neg=["c", "cp"], free_pos=["c", "cp"], CPL=["w0", "wa"])
-fits = json.load(open("class_fit_dovekie.json"))
+DSET = os.environ.get("DSET", "dovekie")
+fits = json.load(open(f"class_fit_{DSET}.json"))
 rng = np.random.default_rng(20261106)
-path = "shear_ppd.json"
+path = "shear_ppd.json" if DSET == "dovekie" else f"shear_ppd_{DSET}.json"
 out = json.load(open(path)) if os.path.exists(path) else {}
 start_n = {f"m{i}": float(PRIM[0][i]) for i in range(4)}
 start_n.update({f"dz{i}": 0.0 for i in range(4)}, Aia=0.3, eta=0.0)

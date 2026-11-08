@@ -61,3 +61,24 @@ This general statement is old: Doran and Jaeckel 2002 on loop corrections to qui
 ## Sources
 
 Chat's track: `analysis/2026-11-06_sterile_parent_and_changed_work_audit.md`, `..._inverse_higgs_production_and_sterile_spectra.md`, `..._scalar_self_reactions_and_threshold_cancellation.md`. Literature: hep-ph/0606120 (Garny); astro-ph/0203018 (Doran and Jaeckel, as recalled); arXiv:1609.01289; 0911.1120.
+
+## Addendum (2026-11-08): the sign grid failed by design; naturalness literature; the one natural home
+
+**`sign_grid.py` is withdrawn as an evidence estimator.** With the base cosmology held at each mode's best fit, χ² changes by tens per grid step in c′ (for example 2298 → 2329 → 3010 at c = −0.9), because nothing compensates the shift in today's dark-matter density. The fixed-base conditional width is far below the marginal σ(c′) = 0.035. Its 15×15 grid cannot resolve the posterior, and its minima (2261–2263) sit 18 above the refitted optimum (2243.75). This was my design error. The partial `sign_grid.json` is kept as a record. The valid estimates are:
+- the Pass 12625 Laplace weight on Dovekie, P(c > 0) = 0.26 (both modes well inside the prior);
+- the profile likelihood in c (`c_profile.py`, running: all other parameters refitted at 11 fixed values of c).
+
+**Literature on natural couplings (abstracts read, full texts not):**
+- "The Impossible Triangle" (arXiv:2607.10859): energy-transfer portals (trilinear, quartic, Yukawa) between dark matter and dark energy at the sizes needed for S8 require tuning of 10⁵²–10⁸⁷, even with SUSY. Derivative couplings saturate at about 4% S8 suppression.
+- arXiv:2603.07879: a pseudo-Goldstone dark energy is radiatively stable only if the renormalisable portals are forbidden, which leaves derivative (pure momentum-exchange) couplings with no background energy transfer.
+- arXiv:2512.11639: pure momentum exchange breaks down at w = −1 unless energy is also transferred, which matters for CPL's crossing.
+- Tsedrik and Bose (arXiv:2512.17684): dark scattering plus CPL against DES Y3 3×2pt + DESI DR2 + DES-SN5YR + Planck gives an interaction **consistent with zero**. So "CPL + momentum exchange removes CPL's shear penalty" is already tested and null. Our CPL shear penalty (1.7–3.2) is a 1–2σ effect consistent with that.
+
+**The one natural home for a fading coupling: axion monodromy (D'Amico, Hamill and Kaloper, arXiv:1605.00996).** Take a dark-matter axion a (decay constant f) mixed with a dark-energy axion φ (decay constant F) through Λ⁴ cos(a/f + φ/F).
+- The dark-matter mass varies as m² ∝ cos θ, so **b = (M_P / 2F) tan θ**. Our fitted b ≈ 0.05 needs **F ≈ 10 M_P / tan θ**, which is super-Planckian, hence monodromy.
+- φ enters only through a phase protected by shift symmetry, so the 0.02 eV cap does not bite: the φ-dependence is the axion potential itself, not an extra loop term.
+- The dark matter is then an axion lighter than 0.02 eV and heavier than about 2×10⁻²⁰ eV (Lyman-α on wave dark matter, recalled from memory). Averaged over oscillations, it behaves as the fading model's mass-varying, number-conserving dark matter.
+- **Distinctive prediction:** the coupling runs, b ∝ tan θ(φ), whereas every fit here assumed a constant b. A fit with b(φ) = b₀ tan(θ₀ + φ/F)/tan θ₀ would test this.
+- The mechanism is D'Amico, Hamill and Kaloper's, so no novelty is claimed. The mapping onto the fitted b is the framing added here.
+
+**Scorecard** (`scorecard.py`) now has a shear-held column. Dovekie out-of-sample plus shear gives fading +5.3 and CPL +3.4 over ΛCDM.
