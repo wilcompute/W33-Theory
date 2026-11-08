@@ -1,0 +1,107 @@
+{
+  "E6": {
+    "alternating_odd_size_never_full_rank": true,
+    "dimension": 81,
+    "max_antisymmetry_residual": 0,
+    "max_zero_singular_value": 3.07039804805976e-15,
+    "min_nonzero_singular_value": 0.015409796471351505,
+    "native_rank": 78,
+    "physical_limit": "The rank3 correction is built after inspecting the mass matrix and is not E6-invariant, not a vacuum construction, not a chiral Standard Model assignment, and not a Nelson-Barr loop calculation.",
+    "proof": "rank(M+delta)<=rank(M)+rank(delta), so a rank78 native operator needs >=3 correction rank for full 81 rank. SVD left/right kernel partial isometries provide algebraic rank3 witness, but not an invariant Yukawa operator.",
+    "rank_after_rank_k_artificial_corrections": {
+      "0": 78,
+      "1": 79,
+      "2": 80,
+      "3": 81
+    },
+    "records": 1620,
+    "status": "NATIVE_SIGNED_E6_RANK_THREE_LIFT_CONDITIONAL"
+  },
+  "gauge": {
+    "S4_seed_rank": 2,
+    "S4_seed_translation_commutator_norm": 1.8371173070873834,
+    "T27_averaged_frame_eigenvalues": {
+      "0": 90,
+      "1/12": 12,
+      "1/6": 6
+    },
+    "affine_generated_sector_rank": 18,
+    "charge_source": "vertex-edge gradients are orthogonal to H1, so matter charges require nontrivial circulation/gauge coupling to excite the harmonic sector.",
+    "constraint": "No translation-covariant self-adjoint operator can have the exact two S4-fixed seed modes as an isolated spectral eigenspace: a spectral subspace of a translation-covariant operator must be translation stable.",
+    "frame_trace": 2,
+    "scope": "No normalized physical photon/gauge coupling or matter action was derived.",
+    "status": "EXACT_S4_ORBIT_FRAME_SPECTRUM_NUMERIC",
+    "unreached_H1_dim": 28
+  },
+  "limit": "Symmetry constraints and synthetic compiler accounting, not a complete theory of fundamental interactions.",
+  "optics": {
+    "b_first_lexicographic_crossing_counts": [
+      12,
+      54,
+      54,
+      12
+    ],
+    "critical_limit": "Counts only adjacent swaps needed by the four SUM permutations in a one-dimensional rail order; additional routing to bring all 27 tritter groups together, phase shifters, losses, crossings and physical layer switching are NOT included. A full chip could erase the apparent resource advantage.",
+    "full_permutation_swaps_after": 84,
+    "full_permutation_swaps_before": 348,
+    "generic_27_port_unitary_couplers": 351,
+    "initial_lexicographic_crossing_counts": [
+      12,
+      162,
+      162,
+      12
+    ],
+    "optimized_b_block_pair_order": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "optimized_crossing_counts": [
+      12,
+      30,
+      30,
+      12
+    ],
+    "phase_witness": "The previously frozen three four-amplitude gauge-invariant plaquettes must be measured interferometrically; uniform port intensities cannot certify phases.",
+    "reduction_fraction": 0.7586206896551724,
+    "status": "EXHAUSTIVE_WITHIN_THREE_B_BLOCKS_ROUTING_OPTIMUM",
+    "tested_orders": 362880,
+    "tritter_count": 27,
+    "upper_bound_internal_two_mode_couplers": 81
+  },
+  "schema": "w33.20261108.gauge_E6_optics.followthrough.v1",
+  "status": "THREE_CHECKED_CONDITIONAL_FRONTS_PLUS_THE_FULL_AFFINE_NO_GO"
+}
