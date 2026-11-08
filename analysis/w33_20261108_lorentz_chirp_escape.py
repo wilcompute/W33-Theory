@@ -49,15 +49,37 @@ def certify(p):
       "scope":"The principal spectral logarithm is a Hermitian generator but is not null-local; an alternate local logarithm remains a separate question."
     }
 
+def exact_sl2_null_orbits(p):
+    """Orbit of e1e1T under SL2 is all vvT, v != 0; SL2 is transitive on vectors."""
+    assert prime(p) and p%2
+    sq=set()
+    for a in range(p):
+        for b in range(p):
+            if a==b==0:continue
+            sq.add((a*a%p,a*b%p,b*b%p))
+    nonsquare=next(n for n in range(2,p) if n not in {t*t%p for t in range(1,p)})
+    nss={tuple(nonsquare*x%p for x in v) for v in sq}
+    assert sq.isdisjoint(nss)
+    assert len(sq)==len(nss)==(p*p-1)//2
+    return {"square_orbit_size":len(sq),"nonsquare_orbit_size":len(nss),
+      "partition_of_all_nonzero_null_displacements":len(sq|nss)==p*p-1,
+      "SL2_and_GL2_share_null_orbits":True,
+      "strict_null_local_SL2_covariant_flat_mixing_forbidden":p>=5}
+
 def produce():
     cases=[certify(p) for p in [3,5,7,11,13,17]]
-    return {"schema":"w33.20261108.lorentz_isometry_chirp_escape.v1",
+    return {"schema":"w33.20261108.lorentz_isometry_chirp_escape.v2",
       "status":"EXACT_ISOMETRY_COVARIANT_UNIFORM_CHIRP_AND_NUMERICAL_FOURIER_CHECK",
       "theorem":"For any odd prime power q, K(S,T)=q^-3/2 psi(det(S-T)) is unitary because det is a nondegenerate quadratic form; it commutes with translations and with the GL2(q) determinant-pm1 congruence subgroup. That subgroup has index (q-1)/2 in GL2(q); at q=5 it is index two, the minimal possible proper subgroup index. Uniformity requires only the character sum, not a special measured constant.",
       "proof":"For S!=T, det(S-Z)-det(T-Z) is a nontrivial linear polynomial in Z plus a constant, because det is nondegenerate over odd characteristic. Character orthogonality makes distinct rows orthogonal; every entry has modulus q^-3/2. Congruence scales determinant by det(G)^2; requiring det(G)^2=1 fixes the polynomial. Full GL2 contains nonisometric similitudes when q>3.",
       "connection":"Sym2(Fq) has a 2+1 dimensional quadratic form of Lorentzian type. SL2(q) congruence transformations preserve it, analogous to SL2(R) spin covering SO+(2,1), but no physical continuum or propagation law follows.",
-      "no_go_comparison":"Does not contradict the full-affine GL2 no-go, since full GL2 congruence is explicitly broken at q>3. Does not guarantee locality of the generator.",
-      "cases":cases}
+      "no_go_comparison":"Does not contradict full-affine GL2 no-go: full GL2 is broken. The stronger null-local SL2 result below shows why a local isometric clock cannot be exactly flat at q>=5.",
+      "cases":cases,
+      "SL2_strict_null_local_no_go":{
+        "proof":"SL2(q) acts transitively on nonzero vectors v of Fq^2, hence on each of the two rank-one orbits {s vvT} distinguished by the square class of s. GL2(q) has the same null orbits. A translation-invariant null-supported SL2-covariant convolution is automatically fully GL2-covariant and inherits the all-time affine flat-mixing obstruction at q>=5, even for complex Hermitian hopping.",
+        "scope":"Strict null-supported hopping only; flat Gaussian chirp is not null-local, and physical Lorentz propagation need not be flat.",
+        "checked_prime_cases":[{"p":p,**exact_sl2_null_orbits(p)} for p in [3,5,7,11,13,17]]
+      }}
 def main():
     ap=argparse.ArgumentParser()
     ap.add_argument("--out",type=Path,default=Path("data/w33_20261108_lorentz_chirp_escape.json"))
