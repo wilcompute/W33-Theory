@@ -12,6 +12,7 @@ import dark_like as L
 
 HOME = os.path.expanduser("~/cosmo")
 CLASSBIN = HOME + "/class_fading/class"
+MONOBIN = os.path.expanduser("~/cosmo/class_mono/class")
 PL = HOME + "/planck-lite-py/data"
 SND = HOME + "/snsdata"
 TCMB = 2.7255e6
@@ -98,6 +99,11 @@ def run_class(p, kind="fading", extra="", binp=CLASSBIN, keep=None):
     ini = [f"h={p['h']}", f"omega_b={p['wb']}", f"omega_cdm={p['wc']}", "N_ur=2.0328", "N_ncdm=1", f"m_ncdm={p.get('mnu', 0.06)}", "T_cmb=2.7255", f"ln10^{{10}}A_s={p['lnA']}", f"n_s={p['ns']}", f"tau_reio={p['tau']}", "output=tCl,pCl,lCl,mPk", "lensing=yes", "non_linear=halofit", "l_max_scalars=2600", "P_k_max_1/Mpc=10", f"root={tag}/o", "write_background=yes", "overwrite_root=yes", "thermodynamics_verbose=1", "fourier_verbose=1"]
     if kind == "fading":
         ini += ["Omega_Lambda=0", "Omega_fld=0", "Omega_scf=-1", "attractor_ic_scf=no", f"scf_parameters={p.get('c', 0.0)},{p.get('cp', 0.0)},2.0,0.0,0.0", "scf_tuning_index=2"]
+    elif kind == "mono":
+        # axion-monodromy running coupling (class_monodromy_patch.py): Fi = 1/F; Fi = 0 is the constant-c' fading model
+        ini += ["Omega_Lambda=0", "Omega_fld=0", "Omega_scf=-1", "attractor_ic_scf=no", f"scf_parameters={p.get('c', 0.0)},{p.get('cp', 0.0)},2.0,{p.get('Fi', 0.0)},0.0,0.0", "scf_tuning_index=2"]
+        if binp == CLASSBIN:
+            binp = MONOBIN
     elif kind == "cpl":
         ini += ["Omega_Lambda=0", f"w0_fld={p['w0']}", f"wa_fld={p['wa']}", "fluid_equation_of_state=CLP", "use_ppf=yes"]
     ini.append(PRECISION)

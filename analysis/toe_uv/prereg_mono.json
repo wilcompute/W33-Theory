@@ -1,0 +1,8 @@
+{
+ "S6_running_floor": {
+  "claim": "In the periodic (axion-monodromy) completion, the coupling c' = -d ln m_DM/dphi obeys dc'/dphi >= 2 c'^2, so c' grows toward today by at least 2 c' Delta_phi (about 3 percent for the c<0 mode, 8-9 percent for c>0) between recombination and today, for any F.",
+  "falsified_if": "data prefer a decreasing c' (c'_1 < 0) at more than 2 sigma, or the minimal-running monodromy model (F -> infinity) fits worse than constant c' by Delta chi2 > 4 after refitting",
+  "scored_by": "a fit with c'(phi) free to run (e.g. c'(phi) = c'_0 + c'_1 phi) to Planck/ACT + DESI + SN + lensing + shear, and the mono_fit.py refits"
+ },
+ "written": "2026-11-08"
+}
