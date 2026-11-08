@@ -45,6 +45,12 @@ def test_actual_q5_gaussian_chirp_breaks_full_affine_symmetry(cert):
     assert x["selected_entry_twirl_difference"]>x["general_proven_minimum"]
     assert x["twirled_selected_amplitude"]<2/25
 
+def test_group_commutant_amplitude_ceiling_is_sharp_but_not_flat(cert):
+    w=cert["p5_isometry_chirp"]
+    assert w["selected_output_bound_is_sharp_among_affine_invariant_unitaries"]
+    assert w["affine_invariant_involution_selected_amplitude"]==pytest.approx(2/25,abs=1e-12)
+    assert w["saturating_involution_is_flat"] is False
+
 def test_H1_momentum_dimension_census_exact(cert):
     b=cert["h1_bundle"]
     assert b["vertices"]==27 and b["null_graph_degree"]==8 and b["h1_dimension"]==46
