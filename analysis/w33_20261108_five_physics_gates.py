@@ -35,7 +35,11 @@ def gauge_maxwell(root=ROOT):
     rng=np.random.default_rng(20261108)
     A=rng.normal(size=108);chi=rng.normal(size=27)
     err=abs(np.linalg.norm(B2.T@A)**2-np.linalg.norm(B2.T@(A+B1.T@chi))**2)
-    assert err<1e-10
+    Adot=rng.normal(size=108);A0=rng.normal(size=27);chidot=rng.normal(size=27)
+    E=Adot-B1.T@A0
+    E_gauge=Adot+B1.T@chidot-B1.T@(A0+chidot)
+    electric_err=float(np.max(abs(E-E_gauge)))
+    assert max(err,electric_err)<1e-10
     momentum={}
     for k in S.V:
         n0=sum(sum(k[j]*d[j] for j in range(3))%3==0 for d in S.DIRS) if hasattr(S,"DIRS") else sum(
@@ -51,12 +55,13 @@ def gauge_maxwell(root=ROOT):
       "orthogonal_chain_dimensions":{"gradient_gauge":26,"harmonic":46,"coexact":36},
       "magnetic_curvature_operator_eigenvalue_multiplicity":counts,
       "coexact_angular_frequency":"sqrt(3) in chosen unit kinetic normalization",
-      "gauge_shift_action_error":float(err),
+      "magnetic_gradient_shift_error":float(err),
+      "temporal_gauge_covariant_electric_error":electric_err,
       "H1_zero_curvature_residual":float(np.max(abs(K@Ph))),
       "momentum_fibers_coexact_harmonic_gradient":momentum,
       "no_two_dispersing_photons_from_this_unmodified_action":True,
-      "proof":"For S[A]=int(1/2||dot A||^2-1/2||B2^T A||^2)dt, B1 B2=0 guarantees gradient-shift invariance of curvature. Edge Hodge decomposition C1=im B1^T(26) + im B2(36) + H1(46); B2^T B2=3I yields K=B2B2^T=3Pcoexact, zero on gradients and harmonics.",
-      "physical_limit":"This is the unmodified DEC triangle curvature fixture, not a complete Gauss-law constrained Maxwell theory. Other kinetic terms, dynamical coexact sectors and matter representations may evade it; gauge charge and c are not derived."}
+      "proof":"Use A0 as temporal 0-cochain and E=dot A-B1^T A0, B=B2^T A, S=int(1/2||E||^2-1/2||B||^2)dt. Under A->A+B1^T chi and A0->A0+dot chi, E and B are invariant because B1 B2=0. Gauss constraint is B1 E=0. Edge Hodge decomposition C1=im B1^T(26) + im B2(36) + H1(46); B2^T B2=3I yields K=B2B2^T=3Pcoexact.",
+      "physical_limit":"This is a gauge-invariant quadratic DEC Maxwell fixture with A0 enforcing Gauss law, but it lacks a physical continuum/dispersion, photon selection, electric charges or coupling normalization. Other kinetic terms and matter representations may evade its spectral obstruction."}
 
 def local_hamiltonians():
     """Two results: exact stability bound, and an explicitly non-exhaustive q5 search."""
