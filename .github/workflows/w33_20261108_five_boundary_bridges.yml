@@ -1,0 +1,45 @@
+name: Five Boundary Bridges - compact gauge, Pfaffian, locality, photon, S7
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20261108_five_boundary_bridges.py'
+      - 'tests/test_w33_20261108_five_boundary_bridges.py'
+      - 'analysis/PASS20261108_FIVE_BOUNDARY_BRIDGES.md'
+      - '.github/workflows/w33_20261108_five_boundary_bridges.yml'
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  five-independent-boundaries:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install reproducibility dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy sympy mpmath pytest
+      - name: Run all 19 adversarial regressions
+        run: python -m pytest -q tests/test_w33_20261108_five_boundary_bridges.py
+      - name: Build actual native E6 and S7 data certificate
+        run: python analysis/w33_20261108_five_boundary_bridges.py --root . --out data/w33_20261108_five_boundary_bridges.json
+      - name: Assert exact main boundaries and non-overclaims
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('data/w33_20261108_five_boundary_bridges.json'))
+          assert d['gauge_reduction']['scalar_mass_gap_squared']=='1/27'
+          assert d['native_E6_augmented_pfaffian']['three_spurion_full_rank']==81
+          assert d['native_E6_augmented_pfaffian']['corank_one_three_column_adversarial_counterexample']=={'det_mass':105,'augmented_pfaffian_squared':49}
+          assert d['native_E6_augmented_pfaffian']['native_log_modulus_error']<1e-7
+          assert d['one_photon_photonic_scaling']['example_n20_orthogonal_modes']==3486784401
+          assert not d['cosmology_prereg_and_PPD']['new_release_holdout_scored']
+          print('PASS: native compact gauge, qualified Pfaffian, local speed, one-photon simulation and preliminary cosmology')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-five-boundary-bridges-certificate
+          path: data/w33_20261108_five_boundary_bridges.json
+          if-no-files-found: error
