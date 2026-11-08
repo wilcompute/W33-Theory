@@ -1,0 +1,125 @@
+{
+  "schema": "w33.20261108.five_boundary_bridges.partial_independent.v1",
+  "verification_status": "SERVER_SIDE_INDEPENDENT_MATH_ONLY_NATIVE_PIPELINE_UNVERIFIED",
+  "verified_math": {
+    "native_metric": [
+      [
+        10,
+        5,
+        -6,
+        0
+      ],
+      [
+        5,
+        10,
+        0,
+        -6
+      ],
+      [
+        -6,
+        0,
+        12,
+        -6
+      ],
+      [
+        0,
+        -6,
+        -6,
+        12
+      ]
+    ],
+    "metric_det": 2916,
+    "inv_M_44": "5/27",
+    "supplied_mu2": "1/5",
+    "scalar_gap2": "1/27",
+    "k4_zero_example_eigenvalues": [
+      {
+        "k": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "photons_each": "10/27",
+        "scalar": "11/27"
+      },
+      {
+        "k": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "photons_each": "142/27",
+        "scalar": "143/27"
+      },
+      {
+        "k": [
+          2,
+          -1,
+          1,
+          0
+        ],
+        "photons_each": "2/3",
+        "scalar": "19/27"
+      }
+    ],
+    "E6_pfaffian_synthetic_not_native": {
+      "size": 81,
+      "skew_rank": 78,
+      "update_columns": 3,
+      "augmented_size": 84,
+      "relative_log_modulus_error": 2.842170943040401e-14,
+      "relative_phase_error": 1.2959183397659664e-14,
+      "generic_corank_one_counterexample": {
+        "det_mass": 105,
+        "augmented_skew_det": 49
+      },
+      "limit": "Full signed native E6 1620-record matrix still requires CI/desktop verification"
+    },
+    "null_local_q5": {
+      "min_t_norm_H": 0.42294850537622564,
+      "tested": [
+        {
+          "tH": 0.05,
+          "amplitude": 0.00003653907505542184,
+          "bound": 0.00125
+        },
+        {
+          "tH": 0.1,
+          "amplitude": 0.00014689505263831875,
+          "bound": 0.005
+        },
+        {
+          "tH": 0.25,
+          "amplitude": 0.0009305961268784635,
+          "bound": 0.03125
+        }
+      ]
+    },
+    "one_photon": {
+      "n_modes": 27,
+      "unitarity_residual": 8.88178424423081e-16,
+      "minimum_modes_for_20_qutrits": 3486784401
+    },
+    "S7_existing_frozen_pair_derived_log_contrasts": {
+      "DES": -0.042088887293098426,
+      "KiDS": -0.0505380482685487
+    }
+  },
+  "unverified": {
+    "integrated_tests_committed": 19,
+    "integrated_tests_passed": null,
+    "desktop": "Authorized machine listed but stopped responding at time of verification",
+    "github_CI": "Queued at last check",
+    "S7_sha256_file_check": "Not executed against native checkout",
+    "native_E6_eightfour_pfaffian": "Not executed against native signed 1620-record matrix",
+    "physical_claims": "None"
+  },
+  "prior_owners": [
+    "analysis/w33_20261027_native_bloch_face_module.py",
+    "analysis/w33_pass11218_e8_cubic_cartan_kernel.py",
+    "analysis/w33_20260924_photonic_universality_architecture_atlas.py",
+    "analysis/toe_uv/prereg_tilt.json"
+  ]
+}
