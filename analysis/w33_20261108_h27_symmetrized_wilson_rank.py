@@ -26,7 +26,7 @@ def reconstruct(root=ROOT):
     assert len(R)==27 and len({tuple(g) for g in R})==9
     assert all(g.det() in (1,-1) for g in R)
     # Equal compactification sizes [2,2,2,2] and g=1:
-    G=sp.Matrix([[sp.Rational(x) for x in row] for row in obj["exact_acoustic_metric"])*sp.Rational(27,2)
+    G=sp.Matrix([[sp.Rational(x) for x in row] for row in obj["exact_acoustic_metric"]])*sp.Rational(27,2)
     assert G==sp.Matrix([[10,5,-6,0],[5,10,0,-6],[-6,0,12,-6],[0,-6,-6,12]])/2
     assert all(g.T*G*g==G for g in R)
     X=[sp.Matrix([[1 if j==i else 0] for j in range(4)]) for i in range(4)]
