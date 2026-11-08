@@ -1,12 +1,13 @@
 """Five adversarial physics gates: finite Maxwell, null-local clock, E6, magic, cosmology."""
 from __future__ import annotations
-import importlib.util,math,json
+import importlib.util,math,json,os
 from pathlib import Path
 import numpy as np
 import pytest
 
-ROOT=Path(__file__).resolve().parents[1]
-SPEC=importlib.util.spec_from_file_location("five_gates",ROOT/"analysis/w33_20261108_five_physics_gates.py")
+SOURCE_ROOT=Path(__file__).resolve().parents[1]
+ROOT=Path(os.environ.get("W33_REPO_ROOT",str(SOURCE_ROOT)))
+SPEC=importlib.util.spec_from_file_location("five_gates",SOURCE_ROOT/"analysis/w33_20261108_five_physics_gates.py")
 M=importlib.util.module_from_spec(SPEC);SPEC.loader.exec_module(M)
 
 @pytest.fixture(scope="module")
@@ -21,7 +22,8 @@ def test_finite_maxwell_hodge_sums_to_all_edges(cert):
 def test_gauge_action_invariance_and_curvature_eigenvalues(cert):
     x=cert["gauge"]
     assert x["magnetic_curvature_operator_eigenvalue_multiplicity"]=={"zero":72,"three":36}
-    assert x["gauge_shift_action_error"]<1e-10
+    assert x["magnetic_gradient_shift_error"]<1e-10
+    assert x["temporal_gauge_covariant_electric_error"]<1e-10
     assert x["H1_zero_curvature_residual"]<1e-9
 
 def test_momentum_fiber_census_and_no_naive_photon_dispersion(cert):
@@ -29,7 +31,8 @@ def test_momentum_fiber_census_and_no_naive_photon_dispersion(cert):
     assert x["momentum_fibers_coexact_harmonic_gradient"]=={
         "(4, 0, 0)":1,"(2, 1, 1)":12,"(1, 2, 1)":8,"(0, 3, 1)":6}
     assert x["no_two_dispersing_photons_from_this_unmodified_action"] is True
-    assert "not a complete" in x["physical_limit"]
+    assert "physical continuum" in x["physical_limit"]
+    assert "A0" in x["proof"]
 
 def test_q5_exact_locality_stability_deficit(cert):
     d=cert["local_hamiltonian"]
