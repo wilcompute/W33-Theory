@@ -1,0 +1,335 @@
+{
+  "checked_prime_cases": [
+    {
+      "GL2_mod_pm_identity_order": 24,
+      "GL2_order": 48,
+      "PGL2_order": 24,
+      "distinct_from_PGL2": false,
+      "dual_orbits": [
+        {
+          "count_each_nonzero_phase": 0,
+          "count_phase_zero": 1,
+          "dimension": 1,
+          "fourier_coefficient_at_010": 1,
+          "name": "zero"
+        },
+        {
+          "count_each_nonzero_phase": 1,
+          "count_phase_zero": 2,
+          "dimension": 4,
+          "fourier_coefficient_at_010": 1,
+          "name": "rank1_square"
+        },
+        {
+          "count_each_nonzero_phase": 1,
+          "count_phase_zero": 2,
+          "dimension": 4,
+          "fourier_coefficient_at_010": 1,
+          "name": "rank1_nonsquare"
+        },
+        {
+          "count_each_nonzero_phase": 2,
+          "count_phase_zero": 2,
+          "dimension": 6,
+          "fourier_coefficient_at_010": 0,
+          "name": "rank2_det_square"
+        },
+        {
+          "count_each_nonzero_phase": 5,
+          "count_phase_zero": 2,
+          "dimension": 12,
+          "fourier_coefficient_at_010": -3,
+          "name": "rank2_det_nonsquare"
+        }
+      ],
+      "max_unitary_transition_amplitude": 0.2222222222222222,
+      "orbit_character_coefficients_at_010": [
+        1,
+        1,
+        1,
+        0,
+        -3
+      ],
+      "p": 3,
+      "uniform_amplitude_required": 0.19245008972987526,
+      "uniform_mixing_forbidden": false
+    },
+    {
+      "GL2_mod_pm_identity_order": 240,
+      "GL2_order": 480,
+      "PGL2_order": 120,
+      "distinct_from_PGL2": true,
+      "dual_orbits": [
+        {
+          "count_each_nonzero_phase": 0,
+          "count_phase_zero": 1,
+          "dimension": 1,
+          "fourier_coefficient_at_010": 1,
+          "name": "zero"
+        },
+        {
+          "count_each_nonzero_phase": 2,
+          "count_phase_zero": 4,
+          "dimension": 12,
+          "fourier_coefficient_at_010": 2,
+          "name": "rank1_square"
+        },
+        {
+          "count_each_nonzero_phase": 2,
+          "count_phase_zero": 4,
+          "dimension": 12,
+          "fourier_coefficient_at_010": 2,
+          "name": "rank1_nonsquare"
+        },
+        {
+          "count_each_nonzero_phase": 13,
+          "count_phase_zero": 8,
+          "dimension": 60,
+          "fourier_coefficient_at_010": -5,
+          "name": "rank2_det_square"
+        },
+        {
+          "count_each_nonzero_phase": 8,
+          "count_phase_zero": 8,
+          "dimension": 40,
+          "fourier_coefficient_at_010": 0,
+          "name": "rank2_det_nonsquare"
+        }
+      ],
+      "max_unitary_transition_amplitude": 0.08,
+      "orbit_character_coefficients_at_010": [
+        1,
+        2,
+        2,
+        -5,
+        0
+      ],
+      "p": 5,
+      "uniform_amplitude_required": 0.08944271909999159,
+      "uniform_mixing_forbidden": true
+    },
+    {
+      "GL2_mod_pm_identity_order": 1008,
+      "GL2_order": 2016,
+      "PGL2_order": 336,
+      "distinct_from_PGL2": true,
+      "dual_orbits": [
+        {
+          "count_each_nonzero_phase": 0,
+          "count_phase_zero": 1,
+          "dimension": 1,
+          "fourier_coefficient_at_010": 1,
+          "name": "zero"
+        },
+        {
+          "count_each_nonzero_phase": 3,
+          "count_phase_zero": 6,
+          "dimension": 24,
+          "fourier_coefficient_at_010": 3,
+          "name": "rank1_square"
+        },
+        {
+          "count_each_nonzero_phase": 3,
+          "count_phase_zero": 6,
+          "dimension": 24,
+          "fourier_coefficient_at_010": 3,
+          "name": "rank1_nonsquare"
+        },
+        {
+          "count_each_nonzero_phase": 18,
+          "count_phase_zero": 18,
+          "dimension": 126,
+          "fourier_coefficient_at_010": 0,
+          "name": "rank2_det_square"
+        },
+        {
+          "count_each_nonzero_phase": 25,
+          "count_phase_zero": 18,
+          "dimension": 168,
+          "fourier_coefficient_at_010": -7,
+          "name": "rank2_det_nonsquare"
+        }
+      ],
+      "max_unitary_transition_amplitude": 0.04081632653061224,
+      "orbit_character_coefficients_at_010": [
+        1,
+        3,
+        3,
+        0,
+        -7
+      ],
+      "p": 7,
+      "uniform_amplitude_required": 0.05399492471560389,
+      "uniform_mixing_forbidden": true
+    },
+    {
+      "GL2_mod_pm_identity_order": 6600,
+      "GL2_order": 13200,
+      "PGL2_order": 1320,
+      "distinct_from_PGL2": true,
+      "dual_orbits": [
+        {
+          "count_each_nonzero_phase": 0,
+          "count_phase_zero": 1,
+          "dimension": 1,
+          "fourier_coefficient_at_010": 1,
+          "name": "zero"
+        },
+        {
+          "count_each_nonzero_phase": 5,
+          "count_phase_zero": 10,
+          "dimension": 60,
+          "fourier_coefficient_at_010": 5,
+          "name": "rank1_square"
+        },
+        {
+          "count_each_nonzero_phase": 5,
+          "count_phase_zero": 10,
+          "dimension": 60,
+          "fourier_coefficient_at_010": 5,
+          "name": "rank1_nonsquare"
+        },
+        {
+          "count_each_nonzero_phase": 50,
+          "count_phase_zero": 50,
+          "dimension": 550,
+          "fourier_coefficient_at_010": 0,
+          "name": "rank2_det_square"
+        },
+        {
+          "count_each_nonzero_phase": 61,
+          "count_phase_zero": 50,
+          "dimension": 660,
+          "fourier_coefficient_at_010": -11,
+          "name": "rank2_det_nonsquare"
+        }
+      ],
+      "max_unitary_transition_amplitude": 0.01652892561983471,
+      "orbit_character_coefficients_at_010": [
+        1,
+        5,
+        5,
+        0,
+        -11
+      ],
+      "p": 11,
+      "uniform_amplitude_required": 0.02741012223434215,
+      "uniform_mixing_forbidden": true
+    },
+    {
+      "GL2_mod_pm_identity_order": 13104,
+      "GL2_order": 26208,
+      "PGL2_order": 2184,
+      "distinct_from_PGL2": true,
+      "dual_orbits": [
+        {
+          "count_each_nonzero_phase": 0,
+          "count_phase_zero": 1,
+          "dimension": 1,
+          "fourier_coefficient_at_010": 1,
+          "name": "zero"
+        },
+        {
+          "count_each_nonzero_phase": 6,
+          "count_phase_zero": 12,
+          "dimension": 84,
+          "fourier_coefficient_at_010": 6,
+          "name": "rank1_square"
+        },
+        {
+          "count_each_nonzero_phase": 6,
+          "count_phase_zero": 12,
+          "dimension": 84,
+          "fourier_coefficient_at_010": 6,
+          "name": "rank1_nonsquare"
+        },
+        {
+          "count_each_nonzero_phase": 85,
+          "count_phase_zero": 72,
+          "dimension": 1092,
+          "fourier_coefficient_at_010": -13,
+          "name": "rank2_det_square"
+        },
+        {
+          "count_each_nonzero_phase": 72,
+          "count_phase_zero": 72,
+          "dimension": 936,
+          "fourier_coefficient_at_010": 0,
+          "name": "rank2_det_nonsquare"
+        }
+      ],
+      "max_unitary_transition_amplitude": 0.011834319526627219,
+      "orbit_character_coefficients_at_010": [
+        1,
+        6,
+        6,
+        -13,
+        0
+      ],
+      "p": 13,
+      "uniform_amplitude_required": 0.021334622931739582,
+      "uniform_mixing_forbidden": true
+    },
+    {
+      "GL2_mod_pm_identity_order": 39168,
+      "GL2_order": 78336,
+      "PGL2_order": 4896,
+      "distinct_from_PGL2": true,
+      "dual_orbits": [
+        {
+          "count_each_nonzero_phase": 0,
+          "count_phase_zero": 1,
+          "dimension": 1,
+          "fourier_coefficient_at_010": 1,
+          "name": "zero"
+        },
+        {
+          "count_each_nonzero_phase": 8,
+          "count_phase_zero": 16,
+          "dimension": 144,
+          "fourier_coefficient_at_010": 8,
+          "name": "rank1_square"
+        },
+        {
+          "count_each_nonzero_phase": 8,
+          "count_phase_zero": 16,
+          "dimension": 144,
+          "fourier_coefficient_at_010": 8,
+          "name": "rank1_nonsquare"
+        },
+        {
+          "count_each_nonzero_phase": 145,
+          "count_phase_zero": 128,
+          "dimension": 2448,
+          "fourier_coefficient_at_010": -17,
+          "name": "rank2_det_square"
+        },
+        {
+          "count_each_nonzero_phase": 128,
+          "count_phase_zero": 128,
+          "dimension": 2176,
+          "fourier_coefficient_at_010": 0,
+          "name": "rank2_det_nonsquare"
+        }
+      ],
+      "max_unitary_transition_amplitude": 0.006920415224913495,
+      "orbit_character_coefficients_at_010": [
+        1,
+        8,
+        8,
+        -17,
+        0
+      ],
+      "p": 17,
+      "uniform_amplitude_required": 0.014266801472725469,
+      "uniform_mixing_forbidden": true
+    }
+  ],
+  "group_correction": "The faithful congruence action is GL2(q)/{I,-I}, not PGL2(q), except q=3. Scalar lambda I acts as multiplication by lambda^2 on symmetric matrices.",
+  "proof": "Contragredient GL2 dual momentum classes: zero, two rank-one square classes, two rank-two determinant classes. At d=(0,1,0), their additive character sums are 1,(q-1)/2,(q-1)/2,-q,0, with the last two reversed if q=3 mod 4. Sum absolute values=2q. Translation symmetry gives Fourier diagonal U and full congruence covariance forces a single unit-modulus eigenphase on each class. Every coefficient above follows by counting zero and nonzero middle-coordinate phases; the prime-power extension uses additive-character orthogonality.",
+  "schema": "w33.20261108.full_affine_covariance_no_go.v1",
+  "scope": "Pure finite quantum walk representation theory, not measured physics or a TOE.",
+  "status": "EXACT_CHARACTER_PROOF_CHECKED_BY_INTEGER_FFT_CENSUS",
+  "theorem": "For every odd prime power q>=5, every unitary on l2(Sym2(Fq)) commuting with all translations and GL2(q) congruences has |U(0,(0,1,0))| <= 2/q^2 < 1/sqrt(q^3). Thus no such unitary can be complex Hadamard or perfectly mix at any time, independent of range, realness, or Hamiltonian coefficients.",
+  "why_Gaussian_chirp_survives": "Weighted quadratic chirp violates full GL2 congruence covariance at q>=5; hence it is not a counterexample."
+}
