@@ -21,7 +21,7 @@ jobs:
           python-version: '3.11'
       - name: Install reproducibility dependencies
         run: python -m pip install --disable-pip-version-check numpy scipy sympy mpmath pytest
-      - name: Run all 18 adversarial regressions
+      - name: Run all 19 adversarial regressions
         run: python -m pytest -q tests/test_w33_20261108_five_boundary_bridges.py
       - name: Build actual native E6 and S7 data certificate
         run: python analysis/w33_20261108_five_boundary_bridges.py --root . --out data/w33_20261108_five_boundary_bridges.json
