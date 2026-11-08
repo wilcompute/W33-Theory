@@ -38,15 +38,20 @@ def native_e6(root=ROOT):
     assert antisym_residual<1e-12 and ranks==Counter({0:459,2:270})
     assert np.max(abs(M+M.T))<1e-12
     # A fiber P_i = |i><i| (x) I3 commutes with SL3 but not with E6.
-    e6=np.load(root/"artifacts/e6_27rep_basis_export/E6_basis_78.npy")
-    assert e6.shape==(78,27,27)
+    e6_file=root/"artifacts/e6_27rep_basis_export/E6_basis_78.npy"
+    e6_available=e6_file.is_file()
     commutator_norm_sq=[]
-    for i in range(27):
-        # Frobenius norm^2 of [P_i,G_a] (real gauge generators not needed for >0).
-        val=float(sum(np.linalg.norm(e6[a,i,:])**2+np.linalg.norm(e6[a,:,i])**2
-                 -2*abs(e6[a,i,i])**2 for a in range(78)))
-        commutator_norm_sq.append(val)
-    assert min(commutator_norm_sq)>1e-8
+    if e6_available:
+        e6=np.load(e6_file)
+        assert e6.shape==(78,27,27)
+        for i in range(27):
+            # Frobenius norm^2 of [P_i,G_a] using the *local* exact-basis export.
+            val=float(sum(np.linalg.norm(e6[a,i,:])**2+np.linalg.norm(e6[a,:,i])**2
+                     -2*abs(e6[a,i,i])**2 for a in range(78)))
+            commutator_norm_sq.append(val)
+        assert min(commutator_norm_sq)>1e-8
+    # The 78-generator .npy export is local/ignored, absent from clean GitHub CI.
+    # Absence cannot be silently converted into a passing E6 covariance check.
     # Verify exact algebraic rank statement in the 3x3 epsilon model independently.
     eps=np.array([[[0,0,0],[0,0,1],[0,-1,0]],
                   [[0,0,-1],[0,0,0],[1,0,0]],
@@ -55,13 +60,15 @@ def native_e6(root=ROOT):
     assert {int(np.linalg.matrix_rank(eps[a])) for a in range(3)}=={2}
     return {
        "status":"NATIVE_E6_DIRECT_FIBER_PROJECTOR_OBSTRUCTION",
-       "signed_tensor_records":len(records),"e6_irrep_generators":len(e6),
+       "signed_tensor_records":len(records),
+       "e6_irrep_generators":78 if e6_available else 0,
+       "generator_basis_status":"DESKTOP_78_BASIS_CHECKED" if e6_available else "NOT_CHECKED_78_BASIS_ABSENT",
        "field_space":"C^27 tensor C^3; 27 E6 fibers x 3 qutrit labels",
        "block_count":27**2,"block_rank_census":{str(k):v for k,v in sorted(ranks.items())},
        "max_block_antisymmetry_residual":antisym_residual,
-       "fiber_projectors_tested":27,
-       "all_fiber_projectors_break_full_E6":min(commutator_norm_sq)>1e-8,
-       "min_commutator_norm_squared":min(commutator_norm_sq),
+       "fiber_projectors_tested":27 if e6_available else 0,
+       "all_fiber_projectors_break_full_E6":(min(commutator_norm_sq)>1e-8) if e6_available else None,
+       "min_commutator_norm_squared":min(commutator_norm_sq) if e6_available else None,
        "native_rank_fixture_path":"data/w33_20261001_dflat_cartan_mass_loop.json",
        "conclusion":"Every direct 3x3 fiber-to-fiber mass block is skew and singular; naive 3-family selection from one E6-index pair fails. A gauge-invariant proper projector is forbidden before symmetry breaking because the E6 27 is irreducible.",
        "limits":"No physical 3-generation Yukawa or symmetry-broken projector was found. Mixed E6-coordinate projectors and added operators are not excluded."}
