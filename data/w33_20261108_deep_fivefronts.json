@@ -1,0 +1,964 @@
+{
+  "gauge": {
+    "conclusion": "All 108 oriented edges have same harmonic leverage 23/54; vertex-charge gradients excite none of H1, but divergence-free noncontractible cycle currents can. This does not select a unique photon coupling.",
+    "conserved_nonlocal_cycle_divergence": 1.9317793315734763e-15,
+    "edges": 108,
+    "exact_single_edge_leverage": "23/54",
+    "faces": 36,
+    "gradient_charge_harmonic_norm": 5.173068221977937e-15,
+    "harmonic_rank": 46,
+    "per_edge_uniformity_deviation": 2.7755575615628914e-16,
+    "projector_idempotence_and_closure_residual": 1.6237011735142914e-15,
+    "single_oriented_edge_harmonic_leverage_squared": 0.42592592592592604,
+    "single_triangle_boundary_harmonic_norm": 1.2009123653026677e-16,
+    "status": "EXACT_GAUGE_HODGE_CHARGE_SOURCE_FALISIFIER",
+    "vertices": 27
+  },
+  "limits": "No actual E6 quark/lepton assignment, vacuum, physical photon, causal continuum or optical device constructed.",
+  "native_e6": {
+    "all_fiber_projectors_break_full_E6": true,
+    "block_count": 729,
+    "block_rank_census": {
+      "0": 459,
+      "2": 270
+    },
+    "conclusion": "Every direct 3x3 fiber-to-fiber mass block is skew and singular; naive 3-family selection from one E6-index pair fails. A gauge-invariant proper projector is forbidden before symmetry breaking because the E6 27 is irreducible.",
+    "e6_irrep_generators": 78,
+    "fiber_projectors_tested": 27,
+    "field_space": "C^27 tensor C^3; 27 E6 fibers x 3 qutrit labels",
+    "limits": "No physical 3-generation Yukawa or symmetry-broken projector was found. Mixed E6-coordinate projectors and added operators are not excluded.",
+    "max_block_antisymmetry_residual": 0,
+    "min_commutator_norm_squared": 32,
+    "native_rank_fixture_path": "data/w33_20261001_dflat_cartan_mass_loop.json",
+    "signed_tensor_records": 1620,
+    "status": "NATIVE_E6_DIRECT_FIBER_PROJECTOR_OBSTRUCTION",
+    "generator_basis_status": "DESKTOP_78_BASIS_CHECKED",
+    "generator_check_source": "ignored local artifacts/e6_27rep_basis_export/E6_basis_78.npy, absent in clean GitHub checkout"
+  },
+  "optical": {
+    "calibration": {
+      "bias_after_exact_synthetic_calibration": 2.7755575615628914e-17,
+      "cyclic_crosstalk": 0.005,
+      "detector_efficiency": [
+        0.98,
+        0.9768089792097024,
+        0.9679147577510836,
+        0.955209445330008,
+        0.9413959030186674,
+        0.929412750863938,
+        0.9218092213764227,
+        0.9202028492677418,
+        0.9249353656576119,
+        0.935,
+        0.9482556551326857,
+        0.9618823929811747,
+        0.9729813332935694,
+        0.9791913461173948,
+        0.9791913461173948,
+        0.9729813332935694,
+        0.9618823929811747,
+        0.9482556551326857,
+        0.935,
+        0.9249353656576119,
+        0.9202028492677418,
+        0.9218092213764228,
+        0.929412750863938,
+        0.9413959030186673,
+        0.955209445330008,
+        0.9679147577510836,
+        0.9768089792097024
+      ],
+      "first_input_synthetic_click_counts": [
+        198,
+        197,
+        173,
+        187,
+        182,
+        176,
+        177,
+        194,
+        183,
+        187,
+        172,
+        189,
+        167,
+        189,
+        194,
+        191,
+        207,
+        174,
+        195,
+        167,
+        186,
+        159,
+        194,
+        187,
+        185,
+        187,
+        203
+      ],
+      "per_input_accepted_counts": 5000,
+      "postselected_bias_before_correction": 0.0011683465805885987
+    },
+    "generic_unitary_two_mode_bound": 351,
+    "matrix_max_residual": 2.242025235105681e-16,
+    "max_two_mode_beamsplitters_excluding_permutation_routing": 81,
+    "permutation_stages": [
+      {
+        "map": [
+          {
+            "from": 0,
+            "to": 0
+          },
+          {
+            "from": 1,
+            "to": 1
+          },
+          {
+            "from": 2,
+            "to": 2
+          },
+          {
+            "from": 3,
+            "to": 3
+          },
+          {
+            "from": 4,
+            "to": 4
+          },
+          {
+            "from": 5,
+            "to": 5
+          },
+          {
+            "from": 6,
+            "to": 6
+          },
+          {
+            "from": 7,
+            "to": 7
+          },
+          {
+            "from": 8,
+            "to": 8
+          },
+          {
+            "from": 9,
+            "to": 11
+          },
+          {
+            "from": 10,
+            "to": 9
+          },
+          {
+            "from": 11,
+            "to": 10
+          },
+          {
+            "from": 12,
+            "to": 14
+          },
+          {
+            "from": 13,
+            "to": 12
+          },
+          {
+            "from": 14,
+            "to": 13
+          },
+          {
+            "from": 15,
+            "to": 17
+          },
+          {
+            "from": 16,
+            "to": 15
+          },
+          {
+            "from": 17,
+            "to": 16
+          },
+          {
+            "from": 18,
+            "to": 19
+          },
+          {
+            "from": 19,
+            "to": 20
+          },
+          {
+            "from": 20,
+            "to": 18
+          },
+          {
+            "from": 21,
+            "to": 22
+          },
+          {
+            "from": 22,
+            "to": 23
+          },
+          {
+            "from": 23,
+            "to": 21
+          },
+          {
+            "from": 24,
+            "to": 25
+          },
+          {
+            "from": 25,
+            "to": 26
+          },
+          {
+            "from": 26,
+            "to": 24
+          }
+        ],
+        "name": "SUM_c_plus_2a"
+      },
+      {
+        "map": [
+          {
+            "from": 0,
+            "to": 0
+          },
+          {
+            "from": 1,
+            "to": 19
+          },
+          {
+            "from": 2,
+            "to": 11
+          },
+          {
+            "from": 3,
+            "to": 3
+          },
+          {
+            "from": 4,
+            "to": 22
+          },
+          {
+            "from": 5,
+            "to": 14
+          },
+          {
+            "from": 6,
+            "to": 6
+          },
+          {
+            "from": 7,
+            "to": 25
+          },
+          {
+            "from": 8,
+            "to": 17
+          },
+          {
+            "from": 9,
+            "to": 9
+          },
+          {
+            "from": 10,
+            "to": 1
+          },
+          {
+            "from": 11,
+            "to": 20
+          },
+          {
+            "from": 12,
+            "to": 12
+          },
+          {
+            "from": 13,
+            "to": 4
+          },
+          {
+            "from": 14,
+            "to": 23
+          },
+          {
+            "from": 15,
+            "to": 15
+          },
+          {
+            "from": 16,
+            "to": 7
+          },
+          {
+            "from": 17,
+            "to": 26
+          },
+          {
+            "from": 18,
+            "to": 18
+          },
+          {
+            "from": 19,
+            "to": 10
+          },
+          {
+            "from": 20,
+            "to": 2
+          },
+          {
+            "from": 21,
+            "to": 21
+          },
+          {
+            "from": 22,
+            "to": 13
+          },
+          {
+            "from": 23,
+            "to": 5
+          },
+          {
+            "from": 24,
+            "to": 24
+          },
+          {
+            "from": 25,
+            "to": 16
+          },
+          {
+            "from": 26,
+            "to": 8
+          }
+        ],
+        "name": "SUM_a_plus_2c"
+      },
+      {
+        "map": [
+          {
+            "from": 0,
+            "to": 0
+          },
+          {
+            "from": 1,
+            "to": 10
+          },
+          {
+            "from": 2,
+            "to": 20
+          },
+          {
+            "from": 3,
+            "to": 3
+          },
+          {
+            "from": 4,
+            "to": 13
+          },
+          {
+            "from": 5,
+            "to": 23
+          },
+          {
+            "from": 6,
+            "to": 6
+          },
+          {
+            "from": 7,
+            "to": 16
+          },
+          {
+            "from": 8,
+            "to": 26
+          },
+          {
+            "from": 9,
+            "to": 9
+          },
+          {
+            "from": 10,
+            "to": 19
+          },
+          {
+            "from": 11,
+            "to": 2
+          },
+          {
+            "from": 12,
+            "to": 12
+          },
+          {
+            "from": 13,
+            "to": 22
+          },
+          {
+            "from": 14,
+            "to": 5
+          },
+          {
+            "from": 15,
+            "to": 15
+          },
+          {
+            "from": 16,
+            "to": 25
+          },
+          {
+            "from": 17,
+            "to": 8
+          },
+          {
+            "from": 18,
+            "to": 18
+          },
+          {
+            "from": 19,
+            "to": 1
+          },
+          {
+            "from": 20,
+            "to": 11
+          },
+          {
+            "from": 21,
+            "to": 21
+          },
+          {
+            "from": 22,
+            "to": 4
+          },
+          {
+            "from": 23,
+            "to": 14
+          },
+          {
+            "from": 24,
+            "to": 24
+          },
+          {
+            "from": 25,
+            "to": 7
+          },
+          {
+            "from": 26,
+            "to": 17
+          }
+        ],
+        "name": "SUM_a_plus_c_inverse"
+      },
+      {
+        "map": [
+          {
+            "from": 0,
+            "to": 0
+          },
+          {
+            "from": 1,
+            "to": 1
+          },
+          {
+            "from": 2,
+            "to": 2
+          },
+          {
+            "from": 3,
+            "to": 3
+          },
+          {
+            "from": 4,
+            "to": 4
+          },
+          {
+            "from": 5,
+            "to": 5
+          },
+          {
+            "from": 6,
+            "to": 6
+          },
+          {
+            "from": 7,
+            "to": 7
+          },
+          {
+            "from": 8,
+            "to": 8
+          },
+          {
+            "from": 9,
+            "to": 10
+          },
+          {
+            "from": 10,
+            "to": 11
+          },
+          {
+            "from": 11,
+            "to": 9
+          },
+          {
+            "from": 12,
+            "to": 13
+          },
+          {
+            "from": 13,
+            "to": 14
+          },
+          {
+            "from": 14,
+            "to": 12
+          },
+          {
+            "from": 15,
+            "to": 16
+          },
+          {
+            "from": 16,
+            "to": 17
+          },
+          {
+            "from": 17,
+            "to": 15
+          },
+          {
+            "from": 18,
+            "to": 20
+          },
+          {
+            "from": 19,
+            "to": 18
+          },
+          {
+            "from": 20,
+            "to": 19
+          },
+          {
+            "from": 21,
+            "to": 23
+          },
+          {
+            "from": 22,
+            "to": 21
+          },
+          {
+            "from": 23,
+            "to": 22
+          },
+          {
+            "from": 24,
+            "to": 26
+          },
+          {
+            "from": 25,
+            "to": 24
+          },
+          {
+            "from": 26,
+            "to": 25
+          }
+        ],
+        "name": "SUM_c_plus_a_inverse"
+      }
+    ],
+    "port_order": "lexicographic (a,b,c) over F3",
+    "scope": "Port/permutation schedule and idealized loss/crosstalk only; not a lithographic layout, MZI phase calibration, lab result or TOE-specific test.",
+    "status": "EXPLICIT_27_PORT_STAGE_NETLIST_AND_CALIBRATION_TOY",
+    "sum_permutation_networks": 4,
+    "tritter_layers": [
+      {
+        "axis": 0,
+        "phase_sign": 1,
+        "ports": [
+          0,
+          9,
+          18
+        ]
+      },
+      {
+        "axis": 0,
+        "phase_sign": 1,
+        "ports": [
+          1,
+          10,
+          19
+        ]
+      },
+      {
+        "axis": 0,
+        "phase_sign": 1,
+        "ports": [
+          2,
+          11,
+          20
+        ]
+      },
+      {
+        "axis": 0,
+        "phase_sign": 1,
+        "ports": [
+          3,
+          12,
+          21
+        ]
+      },
+      {
+        "axis": 0,
+        "phase_sign": 1,
+        "ports": [
+          4,
+          13,
+          22
+        ]
+      },
+      {
+        "axis": 0,
+        "phase_sign": 1,
+        "ports": [
+          5,
+          14,
+          23
+        ]
+      },
+      {
+        "axis": 0,
+        "phase_sign": 1,
+        "ports": [
+          6,
+          15,
+          24
+        ]
+      },
+      {
+        "axis": 0,
+        "phase_sign": 1,
+        "ports": [
+          7,
+          16,
+          25
+        ]
+      },
+      {
+        "axis": 0,
+        "phase_sign": 1,
+        "ports": [
+          8,
+          17,
+          26
+        ]
+      },
+      {
+        "axis": 1,
+        "phase_sign": -1,
+        "ports": [
+          0,
+          3,
+          6
+        ]
+      },
+      {
+        "axis": 1,
+        "phase_sign": -1,
+        "ports": [
+          1,
+          4,
+          7
+        ]
+      },
+      {
+        "axis": 1,
+        "phase_sign": -1,
+        "ports": [
+          2,
+          5,
+          8
+        ]
+      },
+      {
+        "axis": 1,
+        "phase_sign": -1,
+        "ports": [
+          9,
+          12,
+          15
+        ]
+      },
+      {
+        "axis": 1,
+        "phase_sign": -1,
+        "ports": [
+          10,
+          13,
+          16
+        ]
+      },
+      {
+        "axis": 1,
+        "phase_sign": -1,
+        "ports": [
+          11,
+          14,
+          17
+        ]
+      },
+      {
+        "axis": 1,
+        "phase_sign": -1,
+        "ports": [
+          18,
+          21,
+          24
+        ]
+      },
+      {
+        "axis": 1,
+        "phase_sign": -1,
+        "ports": [
+          19,
+          22,
+          25
+        ]
+      },
+      {
+        "axis": 1,
+        "phase_sign": -1,
+        "ports": [
+          20,
+          23,
+          26
+        ]
+      },
+      {
+        "axis": 2,
+        "phase_sign": -1,
+        "ports": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "axis": 2,
+        "phase_sign": -1,
+        "ports": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "axis": 2,
+        "phase_sign": -1,
+        "ports": [
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "axis": 2,
+        "phase_sign": -1,
+        "ports": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "axis": 2,
+        "phase_sign": -1,
+        "ports": [
+          12,
+          13,
+          14
+        ]
+      },
+      {
+        "axis": 2,
+        "phase_sign": -1,
+        "ports": [
+          15,
+          16,
+          17
+        ]
+      },
+      {
+        "axis": 2,
+        "phase_sign": -1,
+        "ports": [
+          18,
+          19,
+          20
+        ]
+      },
+      {
+        "axis": 2,
+        "phase_sign": -1,
+        "ports": [
+          21,
+          22,
+          23
+        ]
+      },
+      {
+        "axis": 2,
+        "phase_sign": -1,
+        "ports": [
+          24,
+          25,
+          26
+        ]
+      }
+    ],
+    "tritters": 27
+  },
+  "provenance": {
+    "candidates": [
+      {
+        "changes_count": 2,
+        "first_change_on_file_history": {
+          "author_date": "2026-11-07T12:18:36-05:00",
+          "commit": "0e87357a2a7e9e330adcc8751d76e4d1aca1997c",
+          "message": "Audit natural-constant derivations, rank candidates, preserve conflicting formulas and evidence boundaries"
+        },
+        "most_recent_change_on_file_history": {
+          "author_date": "2026-11-07T12:43:22-05:00",
+          "commit": "a7132f92a4f4645af390e5d4d498bc8f3618e713",
+          "message": "Reconcile constants catalog with CODATA2022 4.4-sigma result and seven-test scan followup"
+        },
+        "needle": "137+1/28+4/14045",
+        "path": "analysis/2026-11-07_natural_constants_derivation_catalog.md",
+        "status": "file_history_pickaxe"
+      },
+      {
+        "changes_count": 2,
+        "first_change_on_file_history": {
+          "author_date": "2026-11-07T12:18:36-05:00",
+          "commit": "0e87357a2a7e9e330adcc8751d76e4d1aca1997c",
+          "message": "Audit natural-constant derivations, rank candidates, preserve conflicting formulas and evidence boundaries"
+        },
+        "most_recent_change_on_file_history": {
+          "author_date": "2026-11-07T12:43:22-05:00",
+          "commit": "a7132f92a4f4645af390e5d4d498bc8f3618e713",
+          "message": "Reconcile constants catalog with CODATA2022 4.4-sigma result and seven-test scan followup"
+        },
+        "needle": "137+880/24445",
+        "path": "analysis/2026-11-07_natural_constants_derivation_catalog.md",
+        "status": "file_history_pickaxe"
+      },
+      {
+        "changes_count": 1,
+        "first_change_on_file_history": {
+          "author_date": "2026-11-07T12:18:36-05:00",
+          "commit": "0e87357a2a7e9e330adcc8751d76e4d1aca1997c",
+          "message": "Audit natural-constant derivations, rank candidates, preserve conflicting formulas and evidence boundaries"
+        },
+        "most_recent_change_on_file_history": {
+          "author_date": "2026-11-07T12:18:36-05:00",
+          "commit": "0e87357a2a7e9e330adcc8751d76e4d1aca1997c",
+          "message": "Audit natural-constant derivations, rank candidates, preserve conflicting formulas and evidence boundaries"
+        },
+        "needle": "3/13+1/2200",
+        "path": "analysis/2026-11-07_natural_constants_derivation_catalog.md",
+        "status": "file_history_pickaxe"
+      },
+      {
+        "changes_count": 4,
+        "first_change_on_file_history": {
+          "author_date": "2026-10-17T22:05:58-04:00",
+          "commit": "cf3e93860996c08f18c7598c99b00bd296e23f41",
+          "message": "Pass 12004: the bare CP-real theta quark sector cannot fit -- with Pass 12005 the vectorlike row is necessary as well as sufficient, so with exact CP the theta flavour chain is a Nelson-Barr theory (Claude track). On the theta-group generalised-CP locus (Re tau, Re tau_d in Z; Omega12 and the 5bar Wilson line imaginary mod Z/6) both theta Yukawas satisfy Y = Ph o conj(Y) with a common left factor e^{2 pi i a^2/3} (120 points to 5e-11; off-locus control 1e-2), so J = 0 identically and tree-level theta-bar in {0, pi}. The up sector fits exactly there (Weber point tau = 1 + 0.8745i); at that tau a complex down sector fits exactly (positive control), but the bare CP-real down sector does not: a full grid of 746,496 points with a centred-window theta accurate in the cusp (validated to 2e-13) gives global chi2 = 329 for 5 observables and 3 parameters; the Codex 12005 bare point scores 2.5e5; letting tau move gives at best 213 at the cost of the up sector. Two corrections along the way are recorded: a 'robust' minimum that was a shared basin, and an N=40 deep-cusp value (257) that was a truncation artefact (357). Any CP-invariant moduli potential is stationary across the locus (Palais symmetric criticality; transverse gradients 5e-9 vs 65). Scope: T^2-type gCP, 11942 down model, search-based. Search drivers and run records in analysis/search_drivers_12004/. Forty Points sentence and ledger row."
+        },
+        "most_recent_change_on_file_history": {
+          "author_date": "2026-10-18T19:24:27-04:00",
+          "commit": "b8a3c339b2c1a1fc992267529de24dad7b92dd8d",
+          "message": "Pass 12049: the coloured threshold inventory for the 11950 strong-CP divisor -- a hypercharge Wilson line restoring SU(5) at Omega_12 = 0 gives XY (-4) + one vectorlike 5+5bar (+1) = -3, exactly the 3/2 log chi10 that regularity needs; the one pair is the single Nelson-Barr row, and its hypercharge masses give the 2/3 lepton Clebsch (Claude track; conditional on the identification)"
+        },
+        "needle": "Nelson",
+        "path": "papers/forty_points/sec09_physics.tex",
+        "status": "file_history_pickaxe"
+      },
+      {
+        "changes_count": 5,
+        "first_change_on_file_history": {
+          "author_date": "2026-10-12T12:20:24-04:00",
+          "commit": "dbe3a4117d2afe5d2f96f53e4ae61d1711a452e2",
+          "message": "Pass 11938: the second small parameter and the Weber law for the up texture. Every tangent direction orthogonal to the stabiliser state (the polar line, any magic) maps the E8 Cartan vev into the reducible locus: the theta Yukawa is exactly rank one (11936's 'locked deep cusp' was rank one). Off it by theta = arcsin|u1| the spectrum is (1, A theta t, B theta^2 t) -- a geometric texture carried by Omega12 (cites 11912). The heat-equation expansion about a product torus gives the Omega12-independent law m_u m_t/m_c^2 = |f(tau1) f(tau2)|^8/4 (Weber f; per factor |eta(t)^2/(eta(t/2)eta(2t))|^8/sqrt2; checked to 3e-8): 4 for two square tori, 2^(2/3) for two hexagonal, >= 1 for any CM elliptic-point product. Data 0.54: CM excluded; E8 cusp regime excluded (search floor R >= 0.80/t over all directions); reachable at most at t = O(1), where the inversion is branch-dependent. Forty Points sentence and ledger row (Claude track)"
+        },
+        "most_recent_change_on_file_history": {
+          "author_date": "2026-10-17T22:05:58-04:00",
+          "commit": "cf3e93860996c08f18c7598c99b00bd296e23f41",
+          "message": "Pass 12004: the bare CP-real theta quark sector cannot fit -- with Pass 12005 the vectorlike row is necessary as well as sufficient, so with exact CP the theta flavour chain is a Nelson-Barr theory (Claude track). On the theta-group generalised-CP locus (Re tau, Re tau_d in Z; Omega12 and the 5bar Wilson line imaginary mod Z/6) both theta Yukawas satisfy Y = Ph o conj(Y) with a common left factor e^{2 pi i a^2/3} (120 points to 5e-11; off-locus control 1e-2), so J = 0 identically and tree-level theta-bar in {0, pi}. The up sector fits exactly there (Weber point tau = 1 + 0.8745i); at that tau a complex down sector fits exactly (positive control), but the bare CP-real down sector does not: a full grid of 746,496 points with a centred-window theta accurate in the cusp (validated to 2e-13) gives global chi2 = 329 for 5 observables and 3 parameters; the Codex 12005 bare point scores 2.5e5; letting tau move gives at best 213 at the cost of the up sector. Two corrections along the way are recorded: a 'robust' minimum that was a shared basin, and an N=40 deep-cusp value (257) that was a truncation artefact (357). Any CP-invariant moduli potential is stationary across the locus (Palais symmetric criticality; transverse gradients 5e-9 vs 65). Scope: T^2-type gCP, 11942 down model, search-based. Search drivers and run records in analysis/search_drivers_12004/. Forty Points sentence and ledger row."
+        },
+        "needle": "Weber",
+        "path": "papers/forty_points/sec09_physics.tex",
+        "status": "file_history_pickaxe"
+      }
+    ],
+    "scope": "First count-changing occurrence *within each named file's traversable history*, not first discovery in all repo, no semantic equivalence or selected-observable independence.",
+    "shallow_note": "CI shallow checkout is explicitly excluded; only a full local clone can yield history metadata.",
+    "status": "CHRONOLOGICAL_FILE_PICKAXE_WITH_BOUNDARIES"
+  },
+  "schema": "w33.20261108.five_frontrunner_deep_v1",
+  "weighted": {
+    "cases": [
+      {
+        "dual_symbol": "lambda(k)=canonical_integer_representative(det(k)) in {0,...,p-1}",
+        "flatness_max_abs_probability_residual": 3.469446951953614e-17,
+        "fraction_off_null": 0.6923076923076923,
+        "nonzero_offdiagonal_weighted_differences": 26,
+        "null_differences": 8,
+        "off_null_support_differences": 18,
+        "physical_boundary": "Real symmetric weighted Cayley Hamiltonian, but couplings extend beyond null links and grow nonlocal with p. Spectral values are folded integers, not a controlled smooth Lorentz dispersion.",
+        "prime": 3,
+        "sum_probabilities": 0.9999999999999998,
+        "t_star": "2*pi/p",
+        "unitary_kernel": "inverse_Fourier[exp(-2*pi*i*det(k)/p)]",
+        "vertices": 27
+      },
+      {
+        "dual_symbol": "lambda(k)=canonical_integer_representative(det(k)) in {0,...,p-1}",
+        "flatness_max_abs_probability_residual": 6.938893903907228e-18,
+        "fraction_off_null": 0.84,
+        "nonzero_offdiagonal_weighted_differences": 100,
+        "null_differences": 24,
+        "off_null_support_differences": 84,
+        "physical_boundary": "Real symmetric weighted Cayley Hamiltonian, but couplings extend beyond null links and grow nonlocal with p. Spectral values are folded integers, not a controlled smooth Lorentz dispersion.",
+        "prime": 5,
+        "sum_probabilities": 1.0000000000000004,
+        "t_star": "2*pi/p",
+        "unitary_kernel": "inverse_Fourier[exp(-2*pi*i*det(k)/p)]",
+        "vertices": 125
+      },
+      {
+        "dual_symbol": "lambda(k)=canonical_integer_representative(det(k)) in {0,...,p-1}",
+        "flatness_max_abs_probability_residual": 3.0357660829594124e-18,
+        "fraction_off_null": 0.8596491228070176,
+        "nonzero_offdiagonal_weighted_differences": 342,
+        "null_differences": 48,
+        "off_null_support_differences": 294,
+        "physical_boundary": "Real symmetric weighted Cayley Hamiltonian, but couplings extend beyond null links and grow nonlocal with p. Spectral values are folded integers, not a controlled smooth Lorentz dispersion.",
+        "prime": 7,
+        "sum_probabilities": 0.9999999999999994,
+        "t_star": "2*pi/p",
+        "unitary_kernel": "inverse_Fourier[exp(-2*pi*i*det(k)/p)]",
+        "vertices": 343
+      },
+      {
+        "dual_symbol": "lambda(k)=canonical_integer_representative(det(k)) in {0,...,p-1}",
+        "flatness_max_abs_probability_residual": 1.1926223897340549e-18,
+        "fraction_off_null": 0.9097744360902256,
+        "nonzero_offdiagonal_weighted_differences": 1330,
+        "null_differences": 120,
+        "off_null_support_differences": 1210,
+        "physical_boundary": "Real symmetric weighted Cayley Hamiltonian, but couplings extend beyond null links and grow nonlocal with p. Spectral values are folded integers, not a controlled smooth Lorentz dispersion.",
+        "prime": 11,
+        "sum_probabilities": 1.0000000000000002,
+        "t_star": "2*pi/p",
+        "unitary_kernel": "inverse_Fourier[exp(-2*pi*i*det(k)/p)]",
+        "vertices": 1331
+      }
+    ],
+    "future_target": "Find finite-support weights with locally controlled generator and continuum low-k limit; not demonstrated here.",
+    "prior_no_go": "Only unweighted null-support adjacency was excluded for odd q>=5; dense weighted Hamiltonians fall outside that theorem.",
+    "proof": "The inverse finite Fourier transform of a nondegenerate quadratic chirp has constant modulus p^-3/2 by completing the square and the quadratic Gauss-sum norm p^(3/2).",
+    "status": "EXACT_WEIGHTED_ESCAPE_WITH_NONLOCALITY_OBSTRUCTION"
+  },
+  "verification_scope": "Verified desktop five-front run preceding optional local-generator CI adjustment. Numerical math is unchanged; clean CI separately declares missing 78-generator basis."
+}
