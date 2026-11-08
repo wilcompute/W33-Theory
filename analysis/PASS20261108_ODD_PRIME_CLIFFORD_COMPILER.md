@@ -80,8 +80,8 @@ An arbitrary q-by-q unitary can be decomposed into no more than q(q−1)/2 two-m
 | 5 | 125 | 75 | 750 | 7,750 |
 | 7 | 343 | 147 | 3,087 | 58,653 |
 | 11 | 1,331 | 363 | 19,965 | 885,115 |
-| 13 | 2,197 | 507 | 39,546 | 2,412,606 |
-| 17 | 4,913 | 867 | 117,912 | 12,067,328 |
+| 13 | 2,197 | 507 | 39,546 | 2,412,306 |
+| 17 | 4,913 | 867 | 117,912 | 12,066,328 |
 
 The internal-local gate bound scales as O(p^4), versus O(p^6) for a generic full unitary mesh. **This is not a complete physical resource advantage.** The four controlled-SUMs are large rail permutations that may introduce routing, crossings, switch depth, loss, crosstalk and phase drift. Multiplication by field scalars is also an internal rail permutation, not free hardware. The earlier 84-adjacent-swap optimized arrangement applies specifically to the q=3 three-b-block layout; it is not automatically transferable to p=5 or higher. No fabricated device or quantitative loss model is produced here.
 
