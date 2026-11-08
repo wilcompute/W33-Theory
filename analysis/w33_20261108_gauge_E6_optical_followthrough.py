@@ -76,6 +76,34 @@ def native_e6(root=ROOT):
       "proof":"rank(M+delta)<=rank(M)+rank(delta), so a rank78 native operator needs >=3 correction rank for full 81 rank. SVD left/right kernel partial isometries provide algebraic rank3 witness, but not an invariant Yukawa operator.",
       "physical_limit":"The rank3 correction is built after inspecting the mass matrix and is not E6-invariant, not a vacuum construction, not a chiral Standard Model assignment, and not a Nelson-Barr loop calculation."}
 
+def tritter_regroup_nearest(order,axis):
+    """Exact min adjacent swaps to ANY ordering with axis triples contiguous.
+    Internal order in each triple is preserved; only the next stage is optimized.
+    """
+    pos={v:i for i,v in enumerate(order)}
+    groups={}
+    for v in order:
+        k=tuple(v[j] for j in range(3) if j!=axis)
+        groups.setdefault(k,[]).append(v)
+    keys=sorted(groups);n=len(keys)
+    assert n==9 and all(len(groups[k])==3 for k in keys)
+    cost=[[sum(pos[a]>pos[b] for a in groups[keys[i]] for b in groups[keys[j]])
+           for j in range(n)] for i in range(n)]
+    dp=[10**9]*(1<<n);path=[None]*(1<<n)
+    dp[0]=0;path[0]=()
+    for mask in range(1,1<<n):
+        for j in range(n):
+            if not mask>>j&1:continue
+            prev=mask^(1<<j)
+            value=dp[prev]+sum(cost[k][j] for k in range(n) if prev>>k&1)
+            if value<dp[mask]:dp[mask]=value;path[mask]=path[prev]+(j,)
+    final=[v for j in path[-1] for v in groups[keys[j]]]
+    ix={v:i for i,v in enumerate(final)}
+    mapped=[ix[v] for v in order]
+    actual=sum(mapped[i]>mapped[j] for i in range(27) for j in range(i+1,27))
+    assert actual==dp[-1]
+    return final,actual
+
 def optical():
     """Exhaustively minimize adjacent permutation swaps for 3 b-blocks of 9 rails."""
     w=list(itertools.product(range(3),repeat=2))
@@ -114,6 +142,24 @@ def optical():
     assert original==[12,162,162,12]
     assert b_lex==[12,54,54,12]
     assert optimized==[12,30,30,12]
+    # Concrete stage-by-stage 1D regrouping for every three-qutrit axis order.
+    # Each DP transition is exact for its fixed incoming order; the full path
+    # is a feasible greedy schedule, NOT a global chip/routing optimum.
+    routes=[]
+    for axes in itertools.permutations((0,1,2)):
+        active=positions
+        legs=[]
+        for axis in axes:
+            active,cost=tritter_regroup_nearest(active,axis)
+            legs.append(cost)
+        back={v:i for i,v in enumerate(positions)}
+        perm=[back[v] for v in active]
+        legs.append(inversions(perm))
+        routes.append({"tritter_axis_sequence":list(axes),
+                       "routing_swaps_by_transition":legs,
+                       "total_regroup_swaps":sum(legs)})
+    best_route=min(routes,key=lambda x:(x["total_regroup_swaps"],x["tritter_axis_sequence"]))
+    assert best_route["total_regroup_swaps"]==288
     return {"status":"EXHAUSTIVE_WITHIN_THREE_B_BLOCKS_ROUTING_OPTIMUM",
       "tested_orders":evaluated,"optimized_b_block_pair_order":base,
       "initial_lexicographic_crossing_counts":original,
@@ -122,6 +168,11 @@ def optical():
       "full_permutation_swaps_before":sum(original),
       "full_permutation_swaps_after":sum(optimized),
       "reduction_fraction":1-sum(optimized)/sum(original),
+      "tritter_route_candidates_1d":routes,
+      "best_feasible_tritter_regroup_route":best_route,
+      "total_1d_adjacent_swaps_in_explicit_schedule":sum(optimized)+best_route["total_regroup_swaps"],
+      "upper_bound_internal_plus_active_swap_interactions":81+sum(optimized)+best_route["total_regroup_swaps"],
+      "not_global_tritter_routing_optimum":True,
       "tritter_count":27,"upper_bound_internal_two_mode_couplers":81,
       "generic_27_port_unitary_couplers":351,
       "critical_limit":"Counts only adjacent swaps needed by the four SUM permutations in a one-dimensional rail order; additional routing to bring all 27 tritter groups together, phase shifters, losses, crossings and physical layer switching are NOT included. A full chip could erase the apparent resource advantage.",
