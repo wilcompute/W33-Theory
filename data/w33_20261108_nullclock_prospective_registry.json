@@ -1,0 +1,112 @@
+{
+  "schema": "w33.prospective.null27.full_mode.v1",
+  "freeze_date": "2026-11-08",
+  "title": "Thirty-seven-thousand-source evidence firewall: 27-mode finite-clock photonic benchmark",
+  "hypotheses": {
+    "null27_quantum_walk": {
+      "structural_input": "27 vertices indexed by Sym_2(F3); edge iff det(S_i-S_j)=0 and i != j",
+      "time": "t_star=2*pi/9 for L=8*I-A, with absolute generator calibration fixed separately",
+      "complete_probability_matrix": "P_ij=1/27 for all 729 entries",
+      "q_shell_counts": {
+        "equal": 1,
+        "null_nonzero": 8,
+        "q_one": 6,
+        "q_two": 12
+      },
+      "outcome_shell_probabilities": {
+        "equal": "1/27",
+        "null_nonzero": "8/27",
+        "q_one": "6/27",
+        "q_two": "12/27"
+      },
+      "closed_form": "U_ij=exp(-i*pi/6)*omega^(1+det(S_i-S_j))/sqrt(27); omega=exp(2*pi*i/3)",
+      "group_phase_plaquettes": [
+        {
+          "a": [
+            0,
+            0,
+            0
+          ],
+          "b": [
+            1,
+            0,
+            0
+          ],
+          "c": [
+            0,
+            0,
+            0
+          ],
+          "d": [
+            0,
+            0,
+            2
+          ],
+          "root": "omega"
+        },
+        {
+          "a": [
+            0,
+            0,
+            0
+          ],
+          "b": [
+            1,
+            0,
+            0
+          ],
+          "c": [
+            0,
+            0,
+            0
+          ],
+          "d": [
+            0,
+            0,
+            1
+          ],
+          "root": "omega^2"
+        },
+        {
+          "a": [
+            0,
+            0,
+            0
+          ],
+          "b": [
+            1,
+            0,
+            0
+          ],
+          "c": [
+            0,
+            0,
+            0
+          ],
+          "d": [
+            0,
+            1,
+            0
+          ],
+          "root": "1"
+        }
+      ]
+    }
+  },
+  "data_freeze": "First laboratory detector-click/count and interferometric-phase data recorded after this file has been committed and hardware calibration has been independently locked.",
+  "measurement_protocol": "27 prepared basis inputs, at least 5000 independently heralded accepted detections per input, all 27 output ports read; three preselected 2-input/2-output plaquette phases measured with separate phase-reference calibration.",
+  "decision_rule": "For each of 27 inputs, evaluate a fixed 26-degree-of-freedom multinomial Pearson goodness-of-fit statistic for the vector P=1/27; reject globally if any corrected Holm familywise p-value <0.05. Separately compare each plaquette phase with its exact cyclotomic target under a phase-noise standard deviation determined exclusively by independent calibration; Holm-correct the three phase residual tests at familywise 0.05. Report all failed and passed cells, no post-hoc selection.",
+  "noise_model": "Detector-loss efficiencies and cross-talk matrices estimated on separate control data with blind analysis; propagate uncertainties by a frozen bootstrap with fixed seed 20261108 and a pre-published uncertainty budget. Conditioned-count selection must be frozen before data are viewed.",
+  "comparator_family": [
+    "ordinary quantum mechanics for exactly the same calibrated Laplacian (identical prediction, so no TOE discrimination)",
+    "27 uncoupled rails with free phases",
+    "degree-preserving graph rewiring chosen without looking at observed counts",
+    "time calibration t=t_star+delta with delta drawn from independent reference uncertainty",
+    "measured phase-loss/crosstalk nuisance model, fixed before the holdout"
+  ],
+  "multiplicity": "The full 27x27 probability table and three plaquette phases count as one joint vector. No dropping difficult outputs, changing graph labeling, shifting t, or replacing formulas after observation.",
+  "status": "preregistered_not_physically_run",
+  "physical_scope": "Tests the ability to implement the selected W33 finite-clock quantum walk as ordinary quantum mechanics. Not a new physical law; neither a dimensionful universal constant nor E6 vacuum nor Lorentzian gravity is being predicted.",
+  "source_code": "analysis/w33_20261108_forty_points_fivefronts.py",
+  "test_code": "tests/test_w33_20261108_forty_points_fivefronts.py"
+}
