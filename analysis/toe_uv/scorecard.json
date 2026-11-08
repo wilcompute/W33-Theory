@@ -9,7 +9,9 @@
   "des_shear_fixed_bg_rel_lcdm": 0.0,
   "joint_des_chi2_gain": 0.0,
   "shear_heldout_elpd_rel_lcdm": 0.0,
-  "oos_gain_dovekie_plus_shear": 0.0
+  "oos_gain_dovekie_plus_shear": 0.0,
+  "shear_heldout_kids_rel_lcdm": 0.0,
+  "oos_gain_dovekie_plus_des_kids_shear": 0.0
  },
  "fading_cneg": {
   "full_chi2_gain": 10.653512481029338,
@@ -18,19 +20,22 @@
   "oos_gain_desy5": 7.180099184733422,
   "oos_truncated_desy5": true,
   "ns_bao_pull_sigma": 0.10733695640416019,
-  "des_shear_fixed_bg_rel_lcdm": 1.5835048482129537,
+  "des_shear_fixed_bg_rel_lcdm": 1.58350484821284,
   "dr3_bao_vs_lcdm_dovekie": 5.941748475484086,
   "joint_des_chi2_gain": 10.70564093228495,
   "shear_heldout_elpd_rel_lcdm": -0.41802226998085246,
   "oos_gain_dovekie_plus_shear": 5.276235622157159,
+  "shear_heldout_kids_rel_lcdm": -0.5532496121455068,
+  "oos_gain_dovekie_plus_des_kids_shear": 4.7229860100116525,
   "mcmc_desy5_bao_elpd": -10.97049114295524,
   "mcmc_frac_c_positive": 0.55
  },
  "fading_cpos": {
   "full_chi2_gain": 8.42073087884728,
-  "des_shear_fixed_bg_rel_lcdm": 0.23284093722099897,
+  "des_shear_fixed_bg_rel_lcdm": 0.23284093722097055,
   "dr3_bao_vs_lcdm_dovekie": 4.477307646831242,
-  "shear_heldout_elpd_rel_lcdm": -0.044196018842839635
+  "shear_heldout_elpd_rel_lcdm": -0.044196018842839635,
+  "shear_heldout_kids_rel_lcdm": -0.057314694962300905
  },
  "CPL": {
   "full_chi2_gain": 11.87814144647109,
@@ -43,7 +48,9 @@
   "dr3_bao_vs_lcdm_dovekie": 4.473410850294933,
   "joint_des_chi2_gain": 9.017491063215402,
   "shear_heldout_elpd_rel_lcdm": -2.1220689149796215,
-  "oos_gain_dovekie_plus_shear": 3.3610321034533683
+  "oos_gain_dovekie_plus_shear": 3.3610321034533683,
+  "shear_heldout_kids_rel_lcdm": -3.0431257334722517,
+  "oos_gain_dovekie_plus_des_kids_shear": 0.31790636998111665
  },
  "exp": {
   "full_chi2_gain": 3.7878024267383807,

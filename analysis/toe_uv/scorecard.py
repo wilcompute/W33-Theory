@@ -13,6 +13,7 @@ fc = J("dr3_forecast.json")
 mc = J("mcmc_desy5_bao_free_neg.json")
 dj = J("des_joint_cpl.json")
 sp = J("shear_ppd.json")
+spk = J("shear_ppd_kids_dovekie.json")
 desj = J("class_des_dovekie_joint.json")
 
 
@@ -60,11 +61,19 @@ if sp:
     for lab in rows:
         if rows[lab].get("oos_gain_dovekie") is not None and rows[lab].get("shear_heldout_elpd_rel_lcdm") is not None:
             rows[lab]["oos_gain_dovekie_plus_shear"] = rows[lab]["oos_gain_dovekie"] + rows[lab]["shear_heldout_elpd_rel_lcdm"]
+if spk:
+    for lab, k in (("LCDM", "LCDM"), ("fading_cneg", "free_neg"), ("fading_cpos", "free_pos"), ("CPL", "CPL")):
+        if k in spk:
+            rows[lab]["shear_heldout_kids_rel_lcdm"] = spk[k]["elpd_shear"] - spk["LCDM"]["elpd_shear"]
+    for lab in rows:
+        r = rows[lab]
+        if None not in (r.get("oos_gain_dovekie_plus_shear"), r.get("shear_heldout_kids_rel_lcdm")):
+            r["oos_gain_dovekie_plus_des_kids_shear"] = r["oos_gain_dovekie_plus_shear"] + r["shear_heldout_kids_rel_lcdm"]
 if mc:
     rows["fading_cneg"]["mcmc_desy5_bao_elpd"] = mc["elpd_held"]
     rows["fading_cneg"]["mcmc_frac_c_positive"] = mc.get("frac_c_positive")
 json.dump(rows, open("scorecard.json", "w"), indent=1)
-cols = ["full_chi2_gain", "oos_gain_dovekie", "oos_gain_desy5", "shear_heldout_elpd_rel_lcdm", "oos_gain_dovekie_plus_shear", "ns_bao_pull_sigma", "des_shear_fixed_bg_rel_lcdm", "joint_des_chi2_gain", "dr3_bao_vs_lcdm_dovekie", "mcmc_desy5_bao_elpd"]
+cols = ["full_chi2_gain", "oos_gain_dovekie", "oos_gain_desy5", "shear_heldout_elpd_rel_lcdm", "shear_heldout_kids_rel_lcdm", "oos_gain_dovekie_plus_shear", "oos_gain_dovekie_plus_des_kids_shear", "ns_bao_pull_sigma", "des_shear_fixed_bg_rel_lcdm", "joint_des_chi2_gain", "dr3_bao_vs_lcdm_dovekie", "mcmc_desy5_bao_elpd"]
 md = ["| model | " + " | ".join(cols) + " |", "|---" * (len(cols) + 1) + "|"]
 for lab, r in rows.items():
     md.append(f"| {lab} | " + " | ".join("" if r.get(c) is None else f"{r[c]:+.2f}" for c in cols) + " |")

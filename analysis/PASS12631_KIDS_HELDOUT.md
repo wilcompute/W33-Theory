@@ -1,0 +1,55 @@
+# Pass 12631: held-out shear on two independent surveys erases CPL's out-of-sample advantage, while the fading coupling keeps it; the natural (KLT) completion faces a dark-energy-or-quality choice
+
+Claude track. Producer: `analysis/w33_pass12631_kids_heldout.py`. Test: `tests/test_w33_pass12631.py`. Scripts in `analysis/toe_uv/`: `shear_ppd.py` (`SURVEY=kids`, `MODELS`), `scorecard.py`, `class_klt_guess_patch.py`, `klt2_check.py`, `klt_ffit.py`. KLT out-of-sample and held-out shear tests are still running, for an addendum.
+
+**Not a theory of everything.**
+
+## 1. KiDS-Legacy held out
+
+Train on everything except shear (Dovekie fits), draw 20 truncated Fisher samples per model, refit the KiDS nuisances per draw, and score the KiDS-Legacy ξ±. The likelihood is ours, not KiDS's pipeline; see Pass 12630 §1.
+
+| elpd_shear relative to ΛCDM | fading c > 0 | fading c < 0 | CPL |
+|---|---:|---:|---:|
+| DES Y3, Dovekie training | −0.04 | −0.42 | −2.12 |
+| DES Y3, DES-SN5YR training | +0.12 | −0.42 | −2.05 |
+| **KiDS-Legacy, Dovekie training** | −0.06 | −0.55 | **−3.04** |
+
+**[N, replication]** CPL predicts held-out shear worst in every case, by 2.5–3.0 against fading on KiDS. ΛCDM and fading c > 0 predict shear equally well (within 0.12). **Frozen S1 (fading beats CPL on shear) holds out of sample on two independent surveys.** Its formal scoring target, the next shear release, still lies ahead.
+
+## 2. The combined out-of-sample ledger (Dovekie)
+
+| elpd gain over ΛCDM | BAO+SN held out | + DES shear held out | **+ KiDS shear held out** |
+|---|---:|---:|---:|
+| fading c < 0 | +5.69 | +5.28 | **+4.72** |
+| CPL | +5.48 | +3.36 | **+0.32** |
+
+**Reading.**
+- Once both shear surveys are predicted out of sample, **CPL's advantage over ΛCDM almost vanishes (+0.3), while the fading coupling keeps most of its gain (+4.7).**
+- The evolving-dark-energy preference survives only in a form that does not over-grow structure.
+- **Caveats:**
+  - DES and KiDS overlap a little on the sky, so treating them as independent slightly overstates the combination.
+  - Our shear likelihoods are simplified (NLA intrinsic alignments, no baryons, conservative cuts).
+  - Only Dovekie has the full set; on DES-SN5YR, CPL's BAO+SN lead (+9.5 against +7.2) is larger.
+- **Context:** KiDS's own w₀wₐ analysis (arXiv:2512.11041) finds lensing alone prefers ΛCDM (Bayes factor 0.07), and its all-probe w₀wₐ fit pushes S8 up by 2.3σ. That is the same tension, seen from their side. The new element here is that a dark-matter–dark-energy coupling largely avoids it while keeping the expansion-data gain.
+
+## 3. The natural completion's dark-energy-or-quality choice
+
+The KLT-family build (Pass 12630 addendum) uses no constant term (v = 0). With an improved shooting guess (`class_klt_guess_patch.py`; control reproduces the fit to 2253.299):
+
+| f (M_P) | 0.05 | 0.10 | 0.12 | 0.15 | 0.20 | 0.25 (fit) | 0.50 |
+|---|---|---|---|---|---|---|---|
+| dark-energy solution | no | no | no | yes (χ² 13510, unfitted) | yes (2365, unfitted) | yes (2253.3) | yes (2272, unfitted) |
+
+**Below f ≈ 0.12–0.15 M_P the field is too heavy to act as dark energy without a separate constant.** This gives a dichotomy for this family:
+- **small f** needs a cosmological constant v, which brings back the cosmological-constant fine-tuning;
+- **large f** (≳ 0.15 M_P) lets the axion itself be the dark energy, but Planck-suppressed operator quality then needs a protecting ℤ_N with **N ≳ 140** (Pass 12630 §2, O(1) coefficients).
+
+KLT's own small-f model (f = 0.035 M_P) keeps v ≠ 0, consistent with this. A fit with f free is queued.
+
+## 4. Not done, and why
+
+A COSEBIs version of the KiDS likelihood (KiDS's fiducial statistic) needs the COSEBI filter functions T±(θ) from their code, not the data release. Deferred.
+
+## Sources
+
+KiDS-Legacy release (Wright et al. 2025, A&A 703, A158); arXiv:2512.11041 (KiDS-Legacy extended models); 2503.16415, 2607.16191 (Khoury, Lin and Trodden).

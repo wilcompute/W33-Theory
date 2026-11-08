@@ -1,0 +1,75 @@
+{
+ "pass_number": 12631,
+ "track": "claude",
+ "heldout_shear_rel_lcdm": {
+  "des_dovekie": {
+   "LCDM": 0.0,
+   "free_neg": -0.41802226998085246,
+   "free_pos": -0.044196018842839635,
+   "CPL": -2.1220689149796215
+  },
+  "des_desy5": {
+   "LCDM": 0.0,
+   "free_neg": -0.42450600664335525,
+   "free_pos": 0.12288040705928438,
+   "CPL": -2.0523735052206575
+  },
+  "kids_dovekie": {
+   "LCDM": 0.0,
+   "free_neg": -0.5532496121455068,
+   "free_pos": -0.057314694962300905,
+   "CPL": -3.0431257334722517
+  }
+ },
+ "combined": {
+  "fading": 4.7229860100116525,
+  "CPL": 0.31790636998111665
+ },
+ "klt_boundary": {
+  "check": {
+   "control_f0.25": {
+    "chi2": 2253.299197094898,
+    "S8": 0.8267343063772152
+   },
+   "f0.1": {
+    "error": "(x1)) ), pfzw, &f1, &f2, xzero, fevals, errmsg);\n=>input_fzero_ridder(L:1118) :error; root must be bracketed in zriddr.\n"
+   },
+   "f0.1_th1.5": {
+    "error": "(x1)) ), pfzw, &f1, &f2, xzero, fevals, errmsg);\n=>input_fzero_ridder(L:1118) :error; root must be bracketed in zriddr.\n"
+   },
+   "f0.1_th3.0": {
+    "error": "(x1)) ), pfzw, &f1, &f2, xzero, fevals, errmsg);\n=>input_fzero_ridder(L:1118) :error; root must be bracketed in zriddr.\n"
+   },
+   "f0.05": {
+    "error": "(x1)) ), pfzw, &f1, &f2, xzero, fevals, errmsg);\n=>input_fzero_ridder(L:1118) :error; root must be bracketed in zriddr.\n"
+   },
+   "f0.5": {
+    "chi2": 2272.0385816043117,
+    "S8": 0.8243119043494676
+   }
+  },
+  "scan": {
+   "f0.12": {
+    "error": "(x1)) ), pfzw, &f1, &f2, xzero, fevals, errmsg);\n=>input_fzero_ridder(L:1118) :error; root must be bracketed in zriddr.\n"
+   },
+   "f0.15": {
+    "chi2": 13510.278546275793,
+    "S8": 0.7830782676628975
+   },
+   "f0.2": {
+    "chi2": 2365.061852951076,
+    "S8": 0.8316348816420468
+   }
+  }
+ },
+ "checks": {
+  "cpl_worst_on_all_three": true,
+  "kids_cpl_penalty_vs_fading_above_2": true,
+  "lcdm_within_0p6_of_best_on_all": true,
+  "combined_fading_beats_cpl_by_3": true,
+  "combined_cpl_near_lcdm": true,
+  "klt2_control_reproduces_fit": true,
+  "klt_small_f_no_dark_energy": true
+ },
+ "all_checks_pass": true
+}
