@@ -1,0 +1,43 @@
+{
+ "S7_tomographic_tilt": {
+  "claim": "Relative to the fading coupling (c<0), CPL predicts a redder shear tomography: xi+ low-z/high-z ratio lower by ~4-5 percent (lowest pair -3.9 to -4.4 percent, highest pair -0.3 to +1.1 percent). Next shear releases will prefer the fading (or LCDM) tilt over CPL's, i.e. a positive Delta chi2(CPL - fading) driven by the low-z bins.",
+  "des_pairs": {
+   "00": -0.04393519098390475,
+   "01": -0.03564330761477286,
+   "02": -0.03178690504680126,
+   "03": -0.030703410462678327,
+   "11": -0.023411838900227133,
+   "12": -0.016802183018072903,
+   "13": -0.016151193722528268,
+   "22": -0.006031603302809052,
+   "23": -0.004597230187382673,
+   "33": -0.0028366581381288336
+  },
+  "falsified_if": "Delta chi2(CPL - fading) <= 0, or a positive Delta chi2 that is driven by the high-z bins rather than the low-z bins",
+  "kids_pairs": {
+   "00": -0.039230973044627304,
+   "01": -0.034559769418921804,
+   "02": -0.03394330636265863,
+   "03": -0.0321951468343874,
+   "04": -0.03132871089159617,
+   "05": -0.030421824662032138,
+   "11": -0.023859114821172867,
+   "12": -0.020894036215914347,
+   "13": -0.01640803141256042,
+   "14": -0.01477338504345882,
+   "15": -0.013329233482785696,
+   "22": -0.0170215061231741,
+   "23": -0.010685158220218205,
+   "24": -0.007505643972371523,
+   "25": -0.004732688843194999,
+   "33": -0.004525368846246991,
+   "34": -0.0006906955410096449,
+   "35": 0.0037699272459745803,
+   "44": 0.00199022070716226,
+   "45": 0.006746437758598844,
+   "55": 0.01057229875503185
+  },
+  "scored_by": "DES Y6, HSC Y3/final, KiDS COSEBIs, Euclid DR1 cosmic shear analysed at the frozen backgrounds (class_fit_dovekie.json) with nuisances refitted"
+ },
+ "written": "2026-11-08"
+}
