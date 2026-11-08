@@ -1,0 +1,304 @@
+{
+  "date": "2026-11-08",
+  "flavor": {
+    "E6_original": {
+      "mass_kernel": 3,
+      "mass_rank": [
+        78,
+        79
+      ],
+      "source": "data/w33_20261001_dflat_cartan_mass_loop.json"
+    },
+    "caveat": "Hypothetical insertion, not a derived one-loop diagram; symmetry and native E6 embedding still missing.",
+    "derivative": 0.029014049060798453,
+    "derivative_im_trace_Minv_delta": "33*sqrt(3)/1970",
+    "eps_bound_if_imposed_theta_lt_1e_minus10": 3.4466061524350385e-9,
+    "perturbation": "one REAL upper-right entry deltaM[0,3]=eps",
+    "rank_obstruction": "81x81 E6 skew map has rank 78; the stated dim-5 update reaches 79 and still leaves two exact zeros. The full determinant vanishes, so its complex argument cannot be identified with the toy 4x4 determinant.",
+    "status": "CONDITIONAL_FIRST_ORDER_STRONG_CP_SENSITIVITY",
+    "toy_det": "985/27",
+    "toy_det_after_perturbation": "I*(33*sqrt(3)*eps + 489*I*eps - 1970*I)/54"
+  },
+  "gauge": {
+    "H1": 46,
+    "S4_orbits": [
+      {
+        "dim": 0,
+        "harmonic_per_character": 0,
+        "rep": [
+          0,
+          0,
+          0
+        ],
+        "size": 1
+      },
+      {
+        "dim": 8,
+        "harmonic_per_character": 2,
+        "rep": [
+          0,
+          0,
+          1
+        ],
+        "size": 4
+      },
+      {
+        "dim": 8,
+        "harmonic_per_character": 2,
+        "rep": [
+          0,
+          0,
+          2
+        ],
+        "size": 4
+      },
+      {
+        "dim": 18,
+        "harmonic_per_character": 3,
+        "rep": [
+          1,
+          0,
+          1
+        ],
+        "size": 6
+      },
+      {
+        "dim": 12,
+        "harmonic_per_character": 1,
+        "rep": [
+          0,
+          1,
+          0
+        ],
+        "size": 12
+      }
+    ],
+    "caveat": "No translation-fixed harmonic mode; a photon identification needs additional physical selection and kinetic normalization.",
+    "character_census": {
+      "(0, 3)": 6,
+      "(1, 2)": 8,
+      "(2, 1)": 12,
+      "(4, 0)": 1
+    },
+    "proof": "For each momentum k, four edge directions; face rank n0(k), vertex rank 1 except k=0; at k=0 all four face directions are boundaries.",
+    "status": "EXACT_FOURIER_CHARACTER_DECOMPOSITION",
+    "translation_invariants": 0
+  },
+  "higher_q": {
+    "boundary": "Unweighted affine null graph only; weighted Hamiltonians and different towers remain open.",
+    "checked_primes": [
+      {
+        "all_time_amplitude_bound": 0.2222222222222222,
+        "anisotropic_good_values": [
+          2
+        ],
+        "certified_character_coefficients": [
+          1,
+          2,
+          -3,
+          0
+        ],
+        "q": 3,
+        "spectrum": {
+          "2": 12,
+          "8": 1,
+          "-4": 6,
+          "-1": 8
+        },
+        "strictly_excluded": false,
+        "uniform_amplitude_required": 0.19245008972987526,
+        "vertices": 27
+      },
+      {
+        "all_time_amplitude_bound": 0.08,
+        "anisotropic_good_values": [
+          1,
+          4
+        ],
+        "certified_character_coefficients": [
+          1,
+          4,
+          -5,
+          0
+        ],
+        "q": 5,
+        "spectrum": {
+          "4": 60,
+          "24": 1,
+          "-6": 40,
+          "-1": 24
+        },
+        "strictly_excluded": true,
+        "uniform_amplitude_required": 0.08944271909999159,
+        "vertices": 125
+      },
+      {
+        "all_time_amplitude_bound": 0.04081632653061224,
+        "anisotropic_good_values": [
+          3,
+          5,
+          6
+        ],
+        "certified_character_coefficients": [
+          1,
+          6,
+          -7,
+          0
+        ],
+        "q": 7,
+        "spectrum": {
+          "6": 168,
+          "48": 1,
+          "-8": 126,
+          "-1": 48
+        },
+        "strictly_excluded": true,
+        "uniform_amplitude_required": 0.05399492471560389,
+        "vertices": 343
+      },
+      {
+        "all_time_amplitude_bound": 0.01652892561983471,
+        "anisotropic_good_values": [
+          2,
+          6,
+          7,
+          8,
+          10
+        ],
+        "certified_character_coefficients": [
+          1,
+          10,
+          -11,
+          0
+        ],
+        "q": 11,
+        "spectrum": {
+          "10": 660,
+          "120": 1,
+          "-12": 550,
+          "-1": 120
+        },
+        "strictly_excluded": true,
+        "uniform_amplitude_required": 0.02741012223434215,
+        "vertices": 1331
+      }
+    ],
+    "field_character_lemma": "Finite quadratic Gauss sums give the spectral values q^2-1,-1,q-1,-q-1 and a non-null shell with Fourier coefficient q-1 on the dual null sector. Orthogonality and A(d)=0 yield remaining projector coefficients -q,0.",
+    "status": "ALL_TIME_NO_GO_ODD_PRIME_POWER_Q_GE_5_UNWEIGHTED",
+    "theorem": "For an anisotropic difference in one class, U_t(0,d)=q^-3[1+(q-1)e^(-iq^2 t)-q e^(-i(q^2-q)t)]. Thus |U|<=2/q^2<q^-3/2 for q>4, ruling out exact instantaneous uniform mixing at every time."
+  },
+  "optics": {
+    "bad_tritter_max_probability_deviation": 0.00590067431904618,
+    "caveat": "27 rails represent 3 qutrit degrees of freedom; no calibrated optical chip, loss/error budget, or measurement exists. A Clifford circuit within ordinary quantum mechanics makes identical predictions.",
+    "circuit": "c<-c+2a; a<-a+2c; H+ on a, H- on b,c; undo two SUMs; global phase",
+    "forward_SUM": 2,
+    "full_matrix_residual": 2.242025235105681e-16,
+    "generic_27_mode_bound": 351,
+    "inverse_SUM": 2,
+    "nonClifford_count": 0,
+    "status": "EXACT_27_MODE_CLIFFORD_COMPILATION_WITH_SYNTHETIC_FALSIFIERS",
+    "tick_drift_max_probability_deviation": 0.0023515504828173564,
+    "tick_drift_rad": 0.03,
+    "tritter_error_rad": 0.08,
+    "tritters_3x3": 27,
+    "two_mode_MZI_upper_bound": 81
+  },
+  "provenance": {
+    "caveat": "No claim that current line or first current source is the earliest commit or an independent physical proof. Full historical rename-aware git log and semantic scheme matching remain outstanding.",
+    "formulas": [
+      "137\\s*\\+\\s*1\\s*/\\s*28",
+      "137\\s*\\+\\s*880\\s*/\\s*24445",
+      "3\\s*/\\s*13\\s*\\+\\s*1\\s*/\\s*2200",
+      "1\\s*/\\s*600",
+      "Weber",
+      "Nelson.?Barr"
+    ],
+    "matching_line_count": 9,
+    "selected_sources": [
+      "analysis/2026-11-07_natural_constants_derivation_catalog.md",
+      "papers/standalone/toe_constants_companion.tex",
+      "docs/index.html",
+      "papers/forty_points/sec09_physics.tex"
+    ],
+    "source_line_hits": [
+      {
+        "line": 22,
+        "matches": [
+          "137\\s*\\+\\s*1\\s*/\\s*28",
+          "137\\s*\\+\\s*880\\s*/\\s*24445"
+        ],
+        "path": "analysis/2026-11-07_natural_constants_derivation_catalog.md",
+        "text": "| Fine structure, alpha_EM^-1(0) | **Numerically closest documented:** 137 + 1/28 + 4/14045 ≈ 137.035999085 (BT53; TOE master synthesis) | Exact graph skeleton 144-(2+4+1)=137=(11)^2+4^2=2^7+3^2; 137+1/28; spectral inverse respons"
+      },
+      {
+        "line": 27,
+        "matches": [
+          "3\\s*/\\s*13\\s*\\+\\s*1\\s*/\\s*2200"
+        ],
+        "path": "analysis/2026-11-07_natural_constants_derivation_catalog.md",
+        "text": "| Weak mixing sin^2 theta_W(M_Z), MS-bar | 3/13+1/2200≈0.231224 (BT53 corrected) | 3/13≈0.230769 (simplest tree/finite ratio); thetaW from coupled running and EW thresholds | **R/C**. Precise correction chosen retrospectively. |"
+      },
+      {
+        "line": 41,
+        "matches": [
+          "1\\s*/\\s*600"
+        ],
+        "path": "analysis/2026-11-07_natural_constants_derivation_catalog.md",
+        "text": "| CKM |V_cb|^2 | 1/[(mu+1)kPhi4]=1/600≈0.00166667 | Detailed paper section4 one-loop Hashimoto correction with input alpha_s(m_b) | **R/C**. |"
+      },
+      {
+        "line": 148,
+        "matches": [
+          "137\\s*\\+\\s*1\\s*/\\s*28",
+          "137\\s*\\+\\s*880\\s*/\\s*24445"
+        ],
+        "path": "analysis/2026-11-07_natural_constants_derivation_catalog.md",
+        "text": "1. **alpha(0):** 137, 137+1/28, 137+40/1111, 137+880/24445, 137+1/28+4/14045. The two 137+40/1111 and 137+880/24445 are explicitly documented as inconsistent in docs/consistency_notes.md. The best numerical match is not the best t"
+      },
+      {
+        "line": 150,
+        "matches": [
+          "3\\s*/\\s*13\\s*\\+\\s*1\\s*/\\s*2200"
+        ],
+        "path": "analysis/2026-11-07_natural_constants_derivation_catalog.md",
+        "text": "3. **thetaW:** 3/13 and 3/13+1/2200 are weak-scale candidates; 3/8 is GUT-group normalization. Do not report as one numerical output."
+      },
+      {
+        "line": 169,
+        "matches": [
+          "137\\s*\\+\\s*1\\s*/\\s*28",
+          "137\\s*\\+\\s*880\\s*/\\s*24445"
+        ],
+        "path": "analysis/2026-11-07_natural_constants_derivation_catalog.md",
+        "text": "The preference for `137+1/28+4/14045` was based on the earlier numerical target. Against the **latest available 2022 CODATA recommended value** `137.035999177(21)`, it differs by `-4.4012 sigma`; the existing alternative `137+880/"
+      },
+      {
+        "line": 25487,
+        "matches": [
+          "137\\s*\\+\\s*880\\s*/\\s*24445"
+        ],
+        "path": "docs/index.html",
+        "text": "<span class=\"eq\">= 137 + 40/(1111 + 3/22) = 137 + 880/24445</span><br><br>"
+      },
+      {
+        "line": 27108,
+        "matches": [
+          "137\\s*\\+\\s*880\\s*/\\s*24445"
+        ],
+        "path": "docs/index.html",
+        "text": "&alpha;<sup>&minus;1</sup><sub>W33</sub> = 137 + 880/24445 = 669969/4889 has CF expansion"
+      },
+      {
+        "line": 1571,
+        "matches": [
+          "Weber"
+        ],
+        "path": "papers/forty_points/sec09_physics.tex",
+        "text": "The two lines meet at a single orbit. The angular coefficient $C_G$ of the soft-supertrace selector near a Witting ray, which decides the direction in which an arbitrarily weak soft term displaces the E8 Higgs vacuum, is minimised"
+      }
+    ],
+    "status": "SCOPED_SOURCE_LINE_EVIDENCE_NO_FALSE_HISTORICAL_PRIORITY"
+  },
+  "schema": "w33.20261108.fivefront_continuation.v1",
+  "scope": "Exact mathematical claims and conditional modeling only; not a demonstrated TOE."
+}
