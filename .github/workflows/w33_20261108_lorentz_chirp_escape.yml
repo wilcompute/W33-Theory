@@ -1,0 +1,44 @@
+name: Finite Lorentz isometry Gaussian-flat clock
+on:
+  push:
+    branches: [master]
+    paths:
+      - "analysis/w33_20261108_lorentz_chirp_escape.py"
+      - "tests/test_w33_20261108_lorentz_chirp_escape.py"
+      - "analysis/PASS20261108_LORENTZ_CHIRP_ESCAPE.md"
+      - ".github/workflows/w33_20261108_lorentz_chirp_escape.yml"
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  isometric-hadamard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check numpy pytest
+      - name: Run all six-field exact symmetry and Fourier checks
+        run: python -m pytest -q tests/test_w33_20261108_lorentz_chirp_escape.py
+      - name: Generate independent symmetry-shedding certificate
+        run: python analysis/w33_20261108_lorentz_chirp_escape.py --out data/w33_20261108_lorentz_chirp_escape.json
+      - name: Check proof identity and physical evidence boundary
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('data/w33_20261108_lorentz_chirp_escape.json'))
+          assert [c['prime'] for c in d['cases']]==[3,5,7,11,13,17]
+          assert [c['minimal_symmetry_breaking_index_for_this_chirp'] for c in d['cases']]==[1,2,3,5,6,8]
+          assert all(c['spectral_unitarity_error']<1e-12 for c in d['cases'])
+          assert all(c['principal_log_generator_off_null_support']>0 for c in d['cases'])
+          assert d['cases'][1]['minimal_symmetry_breaking_index_for_this_chirp']==2
+          print('PASS finite Lorentz-type determinant isometry/flat Gauss transform, NOT a local spacetime')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-lorentz-chirp-isometry-certificate
+          path: data/w33_20261108_lorentz_chirp_escape.json
+          if-no-files-found: error
