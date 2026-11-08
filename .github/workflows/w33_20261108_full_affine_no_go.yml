@@ -1,0 +1,47 @@
+name: Exact affine-congruence all-time no-flat-mixing theorem
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/w33_20261108_full_affine_covariance_no_go.py'
+      - 'tests/test_w33_20261108_full_affine_covariance_no_go.py'
+      - 'analysis/PASS20261108_AFFINE_COVARIANCE_NO_GO.md'
+      - '.github/workflows/w33_20261108_full_affine_no_go.yml'
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  exact-five-orbit-counts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install numpy and pytest
+        run: python -m pip install --disable-pip-version-check numpy pytest
+      - name: Execute all 24 integer-orbit checks
+        run: python -m pytest -q tests/test_w33_20261108_full_affine_covariance_no_go.py
+      - name: Regenerate independent finite certificate
+        run: python analysis/w33_20261108_full_affine_covariance_no_go.py --out data/w33_20261108_full_affine_covariance_no_go.json
+      - name: Verify proof's integer coefficients and proper symmetry group
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('data/w33_20261108_full_affine_covariance_no_go.json'))
+          assert len(d['checked_prime_cases'])==6
+          for x in d['checked_prime_cases']:
+              q=x['p']
+              expected=[1,(q-1)//2,(q-1)//2,-q if q%4==1 else 0,-q if q%4==3 else 0]
+              assert x['orbit_character_coefficients_at_010']==expected
+              assert x['max_unitary_transition_amplitude']==2/q**2
+              if q>=5: assert x['max_unitary_transition_amplitude']<x['uniform_amplitude_required']
+              assert x['GL2_mod_pm_identity_order']==x['PGL2_order']*((q-1)//2)
+          print('Exact integer Fourier census: full affine GL2 congruence no-go PASS')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-full-affine-no-go-certificate
+          path: data/w33_20261108_full_affine_covariance_no_go.json
+          if-no-files-found: error
