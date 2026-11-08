@@ -1,0 +1,162 @@
+[
+ {
+  "ds": "dovekie",
+  "mode": "free_neg",
+  "cp": 0.05299751293406564,
+  "dphi": 0.2795940882598428,
+  "theta_today": 0.3,
+  "F_over_MP": 2.9184034540872643,
+  "dtheta": 0.095803781985067,
+  "cprime_change_rec_to_today": 0.4937831979510132
+ },
+ {
+  "ds": "dovekie",
+  "mode": "free_neg",
+  "cp": 0.05299751293406564,
+  "dphi": 0.2795940882598428,
+  "theta_today": 0.7853981633974483,
+  "F_over_MP": 9.4344049808913,
+  "dtheta": 0.029635582617678617,
+  "cprime_change_rec_to_today": 0.06109978121962856
+ },
+ {
+  "ds": "dovekie",
+  "mode": "free_neg",
+  "cp": 0.05299751293406564,
+  "dphi": 0.2795940882598428,
+  "theta_today": 1.2,
+  "F_over_MP": 24.26672007539618,
+  "dtheta": 0.011521709048076952,
+  "cprime_change_rec_to_today": 0.03427001343109781
+ },
+ {
+  "ds": "dovekie",
+  "mode": "free_neg",
+  "cp": 0.05299751293406564,
+  "dphi": 0.2795940882598428,
+  "theta_today": 1.45,
+  "F_over_MP": 77.72150330162323,
+  "dtheta": 0.0035973839463036145,
+  "cprime_change_rec_to_today": 0.03008552684563548
+ },
+ {
+  "ds": "dovekie",
+  "mode": "free_pos",
+  "cp": 0.05332644447000557,
+  "dphi": 0.7708436023814321,
+  "theta_today": 0.3,
+  "F_over_MP": 2.900401973955108,
+  "dtheta": 0.265771299738249,
+  "cprime_change_rec_to_today": 8.03380587889958
+ },
+ {
+  "ds": "dovekie",
+  "mode": "free_pos",
+  "cp": 0.05332644447000557,
+  "dphi": 0.7708436023814321,
+  "theta_today": 0.7853981633974483,
+  "F_over_MP": 9.376211089438637,
+  "dtheta": 0.082212697114905,
+  "cprime_change_rec_to_today": 0.1795952066616826
+ },
+ {
+  "ds": "dovekie",
+  "mode": "free_pos",
+  "cp": 0.05332644447000557,
+  "dphi": 0.7708436023814321,
+  "theta_today": 1.2,
+  "F_over_MP": 24.117036563098374,
+  "dtheta": 0.031962616980931426,
+  "cprime_change_rec_to_today": 0.0958629896814891
+ },
+ {
+  "ds": "dovekie",
+  "mode": "free_pos",
+  "cp": 0.05332644447000557,
+  "dphi": 0.7708436023814321,
+  "theta_today": 1.45,
+  "F_over_MP": 77.24209662618019,
+  "dtheta": 0.009979578960835261,
+  "cprime_change_rec_to_today": 0.0835280497920885
+ },
+ {
+  "ds": "desy5",
+  "mode": "free_neg",
+  "cp": 0.05529712169229763,
+  "dphi": 0.2595432393390964,
+  "theta_today": 0.3,
+  "F_over_MP": 2.7970375323595813,
+  "dtheta": 0.09279219042875898,
+  "cprime_change_rec_to_today": 0.47145226382025385
+ },
+ {
+  "ds": "desy5",
+  "mode": "free_neg",
+  "cp": 0.05529712169229763,
+  "dphi": 0.2595432393390964,
+  "theta_today": 0.7853981633974483,
+  "F_over_MP": 9.042061950028138,
+  "dtheta": 0.028703988180294286,
+  "cprime_change_rec_to_today": 0.05912122935461461
+ },
+ {
+  "ds": "desy5",
+  "mode": "free_neg",
+  "cp": 0.05529712169229763,
+  "dphi": 0.2595432393390964,
+  "theta_today": 1.2,
+  "F_over_MP": 23.257554312131543,
+  "dtheta": 0.011159524163884858,
+  "cprime_change_rec_to_today": 0.033187949951089424
+ },
+ {
+  "ds": "desy5",
+  "mode": "free_neg",
+  "cp": 0.05529712169229763,
+  "dphi": 0.2595432393390964,
+  "theta_today": 1.45,
+  "F_over_MP": 74.48934502239285,
+  "dtheta": 0.0034843001943576355,
+  "cprime_change_rec_to_today": 0.029139380460240893
+ },
+ {
+  "ds": "desy5",
+  "mode": "free_pos",
+  "cp": 0.05612299439197691,
+  "dphi": 0.8467771255649208,
+  "theta_today": 0.3,
+  "F_over_MP": 2.755877986918714,
+  "dtheta": 0.30726219723235404,
+  "cprime_change_rec_to_today": -43.59465856033077
+ },
+ {
+  "ds": "desy5",
+  "mode": "free_pos",
+  "cp": 0.05612299439197691,
+  "dphi": 0.8467771255649208,
+  "theta_today": 0.7853981633974483,
+  "F_over_MP": 8.90900432909684,
+  "dtheta": 0.09504733573866876,
+  "cprime_change_rec_to_today": 0.21076210530824468
+ },
+ {
+  "ds": "desy5",
+  "mode": "free_pos",
+  "cp": 0.05612299439197691,
+  "dphi": 0.8467771255649208,
+  "theta_today": 1.2,
+  "F_over_MP": 22.915309936616833,
+  "dtheta": 0.03695246225807484,
+  "cprime_change_rec_to_today": 0.11105977785125654
+ },
+ {
+  "ds": "desy5",
+  "mode": "free_pos",
+  "cp": 0.05612299439197691,
+  "dphi": 0.8467771255649208,
+  "theta_today": 1.45,
+  "F_over_MP": 73.39320399967188,
+  "dtheta": 0.011537541344682356,
+  "cprime_change_rec_to_today": 0.09658740448170455
+ }
+]

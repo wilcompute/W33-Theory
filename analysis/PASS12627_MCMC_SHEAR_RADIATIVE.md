@@ -82,3 +82,16 @@ Chat's track: `analysis/2026-11-06_sterile_parent_and_changed_work_audit.md`, `.
 - The mechanism is D'Amico, Hamill and Kaloper's, so no novelty is claimed. The mapping onto the fitted b is the framing added here.
 
 **Scorecard** (`scorecard.py`) now has a shear-held column. Dovekie out-of-sample plus shear gives fading +5.3 and CPL +3.4 over ΛCDM.
+
+**How much the coupling runs in that completion (`monodromy_running.py`).** I fix F by c′(φ₀) = c′_fit and use each fit's field excursion since recombination (Δφ = 0.26–0.85 M_P).
+
+| θ₀ today | F | c′ change since recombination, c < 0 | c > 0 |
+|---|---:|---:|---:|
+| 0.30 | ≈ 3 M_P | +47 to +49% | breaks down (θ crosses 0) |
+| π/4 | ≈ 9 M_P | +6% | +18 to +21% |
+| 1.20 | ≈ 23–24 M_P | +3% | +10 to +11% |
+| 1.45 | ≈ 73–78 M_P | +3% | +8 to +10% |
+
+- For F ≳ 9 M_P, the constant-c′ fits approximate the natural completion to ≲ 6% (c < 0) or ≲ 21% (c > 0).
+- For F ≈ 3 M_P, they do not.
+- The completion predicts that c′ grows toward today. A fit with this one-parameter running (F) is the next CLASS patch (`class_fading_patch.py` would need c′ → tan(θ₀ + φ/F)/(2F), including the dc′/dφ terms in the perturbation equations).
