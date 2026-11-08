@@ -86,3 +86,11 @@ def test_gauge_free_plaquette_values_and_preregistration(bundle):
     assert r["status"]=="PREREGISTERED_SYNTHETIC_TARGET_NO_LAB_COUNTS"
     assert len(r["phase_gauge_invariants"])==3
     assert "NOT the existence of a new force" in r["identifiability"]
+
+def test_catalog_scan_merges_exact_rational_aliases_without_executing_text():
+    fake="alpha = 137+1/2\nalternate = 137+2/4\nanother = 3/13+1/2200\nbad = __import__('os').system('not executed')\n"
+    scan=front.scan_catalog_rational_arithmetic(fake)
+    assert scan["literal_occurrences_parsed"]==3
+    assert scan["canonical_numerical_groups"]==2
+    assert scan["multi_expression_groups"]>=1
+    assert any(g["canonical_fraction"]=="275/2" for g in scan["largest_20_alias_groups"])
