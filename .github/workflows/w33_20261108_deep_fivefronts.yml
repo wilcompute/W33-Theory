@@ -1,0 +1,47 @@
+name: Five deep physics gates - E6, weighted q, Hodge, history, optics
+on:
+  push:
+    branches: [master]
+    paths:
+      - "analysis/w33_20261108_deep_fivefronts.py"
+      - "tests/test_w33_20261108_deep_fivefronts.py"
+      - "analysis/PASS20261108_DEEP_FIVE_FRONTS.md"
+      - ".github/workflows/w33_20261108_deep_fivefronts.yml"
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  deep-five-verified:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install native E6 and optics dependencies
+        run: python -m pip install --disable-pip-version-check numpy sympy scipy networkx pytest mpmath
+      - name: Check all native and synthetic control regressions
+        run: python -m pytest -q tests/test_w33_20261108_deep_fivefronts.py
+      - name: Export reproducible five-front certificate
+        run: python analysis/w33_20261108_deep_fivefronts.py --root . --out data/w33_20261108_deep_fivefronts_ci.json
+      - name: Structural validation
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('data/w33_20261108_deep_fivefronts_ci.json'))
+          assert d['native_e6']['block_rank_census']=={'0':459,'2':270}
+          assert d['native_e6']['all_fiber_projectors_break_full_E6']
+          assert d['gauge']['harmonic_rank']==46
+          assert d['gauge']['exact_single_edge_leverage']=='23/54'
+          assert [x['off_null_support_differences'] for x in d['weighted']['cases']]==[18,84,294,1210]
+          assert d['optical']['tritters']==27
+          assert d['optical']['matrix_max_residual'] < 1e-12
+          assert len(d['provenance']['candidates'])==5
+          print('PASS five separate physics/provenance/optical gates')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-20261108-deep-fivefronts
+          path: data/w33_20261108_deep_fivefronts_ci.json
+          if-no-files-found: error
