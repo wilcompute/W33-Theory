@@ -1,0 +1,13 @@
+{
+ "f0.12": {
+  "error": "(x1)) ), pfzw, &f1, &f2, xzero, fevals, errmsg);\n=>input_fzero_ridder(L:1118) :error; root must be bracketed in zriddr.\n"
+ },
+ "f0.15": {
+  "chi2": 13510.278546275793,
+  "S8": 0.7830782676628975
+ },
+ "f0.2": {
+  "chi2": 2365.061852951076,
+  "S8": 0.8316348816420468
+ }
+}

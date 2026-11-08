@@ -1,0 +1,22 @@
+{
+ "control_f0.25": {
+  "chi2": 2253.299197094898,
+  "S8": 0.8267343063772152
+ },
+ "f0.1": {
+  "error": "(x1)) ), pfzw, &f1, &f2, xzero, fevals, errmsg);\n=>input_fzero_ridder(L:1118) :error; root must be bracketed in zriddr.\n"
+ },
+ "f0.1_th1.5": {
+  "error": "(x1)) ), pfzw, &f1, &f2, xzero, fevals, errmsg);\n=>input_fzero_ridder(L:1118) :error; root must be bracketed in zriddr.\n"
+ },
+ "f0.1_th3.0": {
+  "error": "(x1)) ), pfzw, &f1, &f2, xzero, fevals, errmsg);\n=>input_fzero_ridder(L:1118) :error; root must be bracketed in zriddr.\n"
+ },
+ "f0.05": {
+  "error": "(x1)) ), pfzw, &f1, &f2, xzero, fevals, errmsg);\n=>input_fzero_ridder(L:1118) :error; root must be bracketed in zriddr.\n"
+ },
+ "f0.5": {
+  "chi2": 2272.0385816043117,
+  "S8": 0.8243119043494676
+ }
+}
