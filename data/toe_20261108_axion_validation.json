@@ -1,0 +1,65 @@
+{
+  "status": "PASS_CANONICAL_EIGENMODES_CYCLIC_SPECTRUM_AND_INCOMING_FINITE_CLOCK_CONTROLS",
+  "UTC": "2026-11-08T15:15:33.126778+00:00",
+  "seconds": 33.865297700001975,
+  "tests": {
+    "command": [
+      "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+      "-m",
+      "pytest",
+      "--noconftest",
+      "-q",
+      "tests/test_toe_20261108_axion_and_cyclic.py",
+      "tests/test_w33_20261108_forty_points_fivefronts.py"
+    ],
+    "environment_overrides": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1"
+    },
+    "exit_code": 0,
+    "stdout": "..........................                                               [100%]\n26 passed in 31.61s\n",
+    "stderr": ""
+  },
+  "artifact_raw_sha256": {
+    "analysis/toe_20261108_axion_eigenmode_audit.py": "80f9df1f83b913d969453dad339087536e1944f070d6305a0821267943c34a19",
+    "analysis/toe_20261108_native_cyclic_orders.py": "87680793bfb38c64b9d18c99247c727a93810cace85b1e34c1bf2dd1878999d7",
+    "analysis/toe_20261108_cyclic_partner_control.py": "2eba7313d45219f1d2a53eb206849527e310c63c66ef69fbf0a633d393d5fe40",
+    "analysis/toe_20261108_axion_server_control.js": "ee51666190147ddb0d1834b136a359063a7803671964bb22d10826f35dcd9850",
+    "analysis/toe_20261108_axion_validation.py": "ce3fe2e5d28bda30f6c3ab5c2bd3836d592a0805e87db5a766fb08a2d8b5fa64",
+    "tests/test_toe_20261108_axion_and_cyclic.py": "b97639f4f92963f0a95730266752647f819546fbfd018cde05624b51a7e0acdf",
+    "data/toe_20261108_axion_eigenmode_audit.json": "aa851394e77b1413ea26889785dca7f8d8725a11aa2ede1d07c6fa221d4aed3c",
+    "data/toe_20261108_native_cyclic_orders.json": "712bc6ef2b274c84870871b630fb6becc0d26ffc47e939f0fbc529e642dcc40b",
+    "data/toe_20261108_cyclic_partner_control.json": "f7fbd70ad95896ac6d1245d586d047502ce8a56d9d3e2e787ce8ceacbe60a062",
+    "data/toe_20261108_axion_server_control.json": "20fc00b695589da51204f2ce6687b82b7fd316a21177ec9dd3f3120e8f41659e",
+    "analysis/w33_20261108_forty_points_fivefronts.py": "359c6776c94cf22916aa4bfe0540855a9a7009d35ba74a70f96088d4b3265302",
+    "tests/test_w33_20261108_forty_points_fivefronts.py": "92bfab8bd2dad099c58acf857cc40d79364a087c03ae1869f571bfdd45e10965"
+  },
+  "execution": {
+    "RDC_device": "75dccda9-254c-47a9-9d13-ef69565dedf7",
+    "group_job": {
+      "pid": 7640,
+      "exit_code": 0,
+      "runtime_seconds": 6.06
+    },
+    "original_axion_job": {
+      "pid": 26120,
+      "exit_code": 1,
+      "reason": "Sampling allowed a negative cosine, violating bound premise; corrected sampler before successful rerun."
+    },
+    "corrected_axion_job": {
+      "pid": 16092,
+      "exit_code": 0,
+      "runtime_seconds": 7.63
+    },
+    "cyclic_partner_job": {
+      "pid": 30456,
+      "exit_code": 0,
+      "runtime_seconds": 3.19
+    },
+    "final_axion_source": "Subsequent local rerun added the independently tested incoming phenomenological Fi-limit control.",
+    "server": "Actual functions.exec server V8 ran independent bisection/spectra/leading-envelope/population calculation and persisted its output. No independent full cosmological solve.",
+    "initial_test_attempt": "First command omitted --noconftest and stalled in unrelated legacy setup before test output. Its exact owned pytest PID25932 was stopped; focused tests use --noconftest. No PASS claimed for interrupted attempt."
+  },
+  "scope": "Own parameterized physical controls plus incoming finite-clock/catalog controls; exact current test count in captured stdout. No cosmological likelihood rerun, physical UV completion, general axion no-go or solved TOE."
+}

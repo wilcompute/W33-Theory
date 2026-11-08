@@ -1,0 +1,152 @@
+{
+  "status": "EXHAUSTIVE_NATIVE_MATRIX_GROUP_ORDER_CONTROL",
+  "Sp43": {
+    "1": 1,
+    "2": 91,
+    "3": 800,
+    "4": 1620,
+    "5": 5184,
+    "6": 8000,
+    "8": 6480,
+    "9": 5760,
+    "10": 5184,
+    "12": 12960,
+    "18": 5760
+  },
+  "PSp43": {
+    "1": 1,
+    "2": 315,
+    "3": 800,
+    "4": 3780,
+    "5": 5184,
+    "6": 5760,
+    "9": 5760,
+    "12": 4320
+  },
+  "PGSp43": {
+    "1": 1,
+    "2": 891,
+    "3": 800,
+    "4": 5940,
+    "5": 5184,
+    "6": 12960,
+    "8": 6480,
+    "9": 5760,
+    "10": 5184,
+    "12": 8640
+  },
+  "enlarged_three_qutrit_control": {
+    "matrix": [
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "symplectic_form": [
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0
+      ]
+    ],
+    "order": 24,
+    "projective_order": 24,
+    "construction": "Order8 Sp4 block plus independent order3 transvection Sp2 block; direct-sum symplectic space dimension6. The8block fourth power is -I4, not a scalar on the full6space, so projectivizing retains24.",
+    "scope": "Explicit Z24 subgroup in Sp6(3) and PSp6(3), corresponding to three-qutrit symplectic labels. Does not identify a24-partner regular fermion representation or a protected physical action. This deliberately enlarges the original W33 label space."
+  },
+  "sizes": {
+    "Sp43": 51840,
+    "PSp43": 25920,
+    "PGSp43": 51840
+  },
+  "proof": "80choicesforfirstnonzeroa,27forbwithomega(a,b)=1,8fornonzerocintheorthogonalcomplement,3fordwithomega(c,d)=1. Unique matrices checked. Similitude coset D=diag(1,1,2,2). Projective orders hit+Ior-I, then central pairs counted once.",
+  "ownership": "BT542 already records Sp43 element orders including18. Its other Sylow/physical identifications are not used or validated. Groups Sp43 and PGSp43 have equal order but are distinguished.",
+  "scope": "Only protecting cyclic symmetries required to embed as an element of these particular groups are screened. Does not rule out larger Clifford extensions, additional global symmetries, larger qudit systems or added sector replication."
+}

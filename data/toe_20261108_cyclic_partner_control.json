@@ -1,0 +1,845 @@
+{
+  "status": "DECLARED_CYCLIC_PARTNER_SPECTRUM_AND_FROZEN_POPULATION_CONTROL_NOT_NATIVE_COMPLETION",
+  "reference": "https://arxiv.org/abs/2610.30253",
+  "supplied": {
+    "individual_beta_at_pi_over2": 0.053,
+    "eps": 0.05314971931113116,
+    "mass_eV": 16000.0,
+    "f_eV": 2.435e+27,
+    "H0_eV": 1.44667e-33,
+    "arbitrary_precision_digits": 100
+  },
+  "radiative_scan": [
+    {
+      "N": 3,
+      "leading_envelope_over_H0_squared": 9.038549724455807e+22,
+      "exact_theta0_over_H0_squared": 9.025519954406996e+22,
+      "theta0_exact_over_leading": 0.9985584224852404
+    },
+    {
+      "N": 4,
+      "leading_envelope_over_H0_squared": 2.8467933679083145e+21,
+      "exact_theta0_over_H0_squared": 2.8403708691532575e+21,
+      "theta0_exact_over_leading": 0.997743953309904
+    },
+    {
+      "N": 5,
+      "leading_envelope_over_H0_squared": 1.1820802221962238e+20,
+      "exact_theta0_over_H0_squared": 1.1787435011639902e+20,
+      "theta0_exact_over_leading": 0.9971772465442031
+    },
+    {
+      "N": 6,
+      "leading_envelope_over_H0_squared": 5.428272845920508e+18,
+      "exact_theta0_over_H0_squared": 5.410763460113316e+18,
+      "theta0_exact_over_leading": 0.9967744094108403
+    },
+    {
+      "N": 7,
+      "leading_envelope_over_H0_squared": 2.6179718013223325e+17,
+      "exact_theta0_over_H0_squared": 2.6087361432314544e+17,
+      "theta0_exact_over_leading": 0.9964722087204251
+    },
+    {
+      "N": 8,
+      "leading_envelope_over_H0_squared": 1.298140794446539e+16,
+      "exact_theta0_over_H0_squared": 1.2932561508929042e+16,
+      "theta0_exact_over_leading": 0.9962372004835442
+    },
+    {
+      "N": 9,
+      "leading_envelope_over_H0_squared": 654921249251267.8,
+      "exact_theta0_over_H0_squared": 652333794779432.5,
+      "theta0_exact_over_leading": 0.9960492128255217
+    },
+    {
+      "N": 10,
+      "leading_envelope_over_H0_squared": 33424165155034.527,
+      "exact_theta0_over_H0_squared": 33286972926874.727,
+      "theta0_exact_over_leading": 0.9958954179551397
+    },
+    {
+      "N": 11,
+      "leading_envelope_over_H0_squared": 1719637476320.6086,
+      "exact_theta0_over_H0_squared": 1712358706350.9578,
+      "theta0_exact_over_leading": 0.9957672648625775
+    },
+    {
+      "N": 12,
+      "leading_envelope_over_H0_squared": 88994839174.76456,
+      "exact_theta0_over_H0_squared": 88608497838.2309,
+      "theta0_exact_over_leading": 0.9956588343760588
+    },
+    {
+      "N": 13,
+      "leading_envelope_over_H0_squared": 4626033403.153827,
+      "exact_theta0_over_H0_squared": 4605521103.6762705,
+      "theta0_exact_over_leading": 0.9955658989700396
+    },
+    {
+      "N": 14,
+      "leading_envelope_over_H0_squared": 241283952.9356969,
+      "exact_theta0_over_H0_squared": 240194642.44917193,
+      "theta0_exact_over_leading": 0.9954853587514986
+    },
+    {
+      "N": 15,
+      "leading_envelope_over_H0_squared": 12618538.92368574,
+      "exact_theta0_over_H0_squared": 12560681.52198844,
+      "theta0_exact_over_leading": 0.9954148889941056
+    },
+    {
+      "N": 16,
+      "leading_envelope_over_H0_squared": 661332.0760764675,
+      "exact_theta0_over_H0_squared": 658258.6755197486,
+      "theta0_exact_over_leading": 0.9953527120974492
+    },
+    {
+      "N": 17,
+      "leading_envelope_over_H0_squared": 34720.541775765014,
+      "exact_theta0_over_H0_squared": 34557.266538396754,
+      "theta0_exact_over_leading": 0.9952974455749355
+    },
+    {
+      "N": 18,
+      "leading_envelope_over_H0_squared": 1825.4795566053012,
+      "exact_theta0_over_H0_squared": 1816.804874201381,
+      "theta0_exact_over_leading": 0.995247998054795
+    },
+    {
+      "N": 19,
+      "leading_envelope_over_H0_squared": 96.09208532532936,
+      "exact_theta0_over_H0_squared": 95.63117930046334,
+      "theta0_exact_over_leading": 0.9952034964866714
+    },
+    {
+      "N": 20,
+      "leading_envelope_over_H0_squared": 5.063335481677379,
+      "exact_theta0_over_H0_squared": 5.0388453135332485,
+      "theta0_exact_over_leading": 0.9951632341501463
+    },
+    {
+      "N": 21,
+      "leading_envelope_over_H0_squared": 0.2670292194671171,
+      "exact_theta0_over_H0_squared": 0.26572788803961933,
+      "theta0_exact_over_leading": 0.9951266328452941
+    },
+    {
+      "N": 22,
+      "leading_envelope_over_H0_squared": 0.01409291524275875,
+      "exact_theta0_over_H0_squared": 0.01402376433691056,
+      "theta0_exact_over_leading": 0.9950932149482896
+    },
+    {
+      "N": 23,
+      "leading_envelope_over_H0_squared": 0.0007442510234926976,
+      "exact_theta0_over_H0_squared": 0.0007405763454308977,
+      "theta0_exact_over_leading": 0.9950625824542976
+    },
+    {
+      "N": 24,
+      "leading_envelope_over_H0_squared": 3.932590139849517e-05,
+      "exact_theta0_over_H0_squared": 3.913062474383851e-05,
+      "theta0_exact_over_leading": 0.995034401050903
+    },
+    {
+      "N": 25,
+      "leading_envelope_over_H0_squared": 2.0789719718297547e-06,
+      "exact_theta0_over_H0_squared": 2.06859455011203e-06,
+      "theta0_exact_over_leading": 0.9950083878674943
+    },
+    {
+      "N": 26,
+      "leading_envelope_over_H0_squared": 1.0995224864259465e-07,
+      "exact_theta0_over_H0_squared": 1.0940076136320284e-07,
+      "theta0_exact_over_leading": 0.994984301947435
+    },
+    {
+      "N": 27,
+      "leading_envelope_over_H0_squared": 5.817331557383148e-09,
+      "exact_theta0_over_H0_squared": 5.788023473121945e-09,
+      "theta0_exact_over_leading": 0.9949619367622246
+    },
+    {
+      "N": 28,
+      "leading_envelope_over_H0_squared": 3.078857375668402e-10,
+      "exact_theta0_over_H0_squared": 3.0632817880403583e-10,
+      "theta0_exact_over_leading": 0.9949411142746869
+    },
+    {
+      "N": 29,
+      "leading_envelope_over_H0_squared": 1.6299932136638473e-11,
+      "exact_theta0_over_H0_squared": 1.6217155868362322e-11,
+      "theta0_exact_over_leading": 0.9949216801896931
+    },
+    {
+      "N": 30,
+      "leading_envelope_over_H0_squared": 8.631753935718379e-13,
+      "exact_theta0_over_H0_squared": 8.587762202857321e-13,
+      "theta0_exact_over_leading": 0.994903500124231
+    },
+    {
+      "N": 31,
+      "leading_envelope_over_H0_squared": 4.5721206449455947e-14,
+      "exact_theta0_over_H0_squared": 4.548740907120698e-14,
+      "theta0_exact_over_leading": 0.994886456495687
+    },
+    {
+      "N": 32,
+      "leading_envelope_over_H0_squared": 2.4223200838065862e-15,
+      "exact_theta0_over_H0_squared": 2.4098946620732102e-15,
+      "theta0_exact_over_leading": 0.9948704459759711
+    },
+    {
+      "N": 33,
+      "leading_envelope_over_H0_squared": 1.2836059005591702e-16,
+      "exact_theta0_over_H0_squared": 1.2770022326272088e-16,
+      "theta0_exact_over_leading": 0.9948553773949742
+    },
+    {
+      "N": 34,
+      "leading_envelope_over_H0_squared": 6.803155353661469e-18,
+      "exact_theta0_over_H0_squared": 6.768059031752014e-18,
+      "theta0_exact_over_leading": 0.9948411700034799
+    },
+    {
+      "N": 35,
+      "leading_envelope_over_H0_squared": 3.606290265902542e-19,
+      "exact_theta0_over_H0_squared": 3.5876376383797286e-19,
+      "theta0_exact_over_leading": 0.9948277520256276
+    },
+    {
+      "N": 36,
+      "leading_envelope_over_H0_squared": 1.9119497032021255e-20,
+      "exact_theta0_over_H0_squared": 1.902036357649052e-20,
+      "theta0_exact_over_leading": 0.9948150594461399
+    },
+    {
+      "N": 37,
+      "leading_envelope_over_H0_squared": 1.0138000340866894e-21,
+      "exact_theta0_over_H0_squared": 1.008531350781457e-21,
+      "theta0_exact_over_leading": 0.9948030349890656
+    },
+    {
+      "N": 38,
+      "leading_envelope_over_H0_squared": 5.376298113795375e-23,
+      "exact_theta0_over_H0_squared": 5.348296349223264e-23,
+      "theta0_exact_over_leading": 0.9947916272536561
+    },
+    {
+      "N": 39,
+      "leading_envelope_over_H0_squared": 2.8514465977108788e-24,
+      "exact_theta0_over_H0_squared": 2.8365642990562592e-24,
+      "theta0_exact_over_leading": 0.9947807899798766
+    },
+    {
+      "N": 40,
+      "leading_envelope_over_H0_squared": 1.5124955425582996e-25,
+      "exact_theta0_over_H0_squared": 1.5045859190184647e-25,
+      "theta0_exact_over_leading": 0.9947704814214153
+    }
+  ],
+  "first_N_leading_envelope_below_H0_squared": 21,
+  "high_precision_derivative_controls": [
+    {
+      "N": 3,
+      "theta": "0.0",
+      "analytic": "0.00001708949314157699479011581914468629519736184669148667812978535573684172510493014313858677451160955209",
+      "independent_mpmath_differentiation": "0.00001708949314157699479011581914468629519736184669148667812978535573684172510493014313858677451160955208"
+    },
+    {
+      "N": 3,
+      "theta": "0.37",
+      "analytic": "0.000007599577346067949198312666251981233026179576398876819092803621280955587904875253878186169845246739448",
+      "independent_mpmath_differentiation": "0.000007599577346067949198312666251981233026179576398876819092803621280955587904875253878186169845246739457"
+    },
+    {
+      "N": 9,
+      "theta": "0.0",
+      "analytic": "0.0000000000001235170269216303242491811496431455282913489044981879464198777849682183238496739100920297802433885545",
+      "independent_mpmath_differentiation": "0.0000000000001235170269216303242491811496431455282913489044981879464198777849682183238496739100920297801659581283"
+    },
+    {
+      "N": 9,
+      "theta": "0.37",
+      "analytic": "-0.0000000000001213312419875173912743835099315403215355970321942698334518376142821982156461195328839716887271650044",
+      "independent_mpmath_differentiation": "-0.000000000000121331241987517391274383509931540321535597032194269833451837614282198215646119532883971688778288022"
+    },
+    {
+      "N": 18,
+      "theta": "0.0",
+      "analytic": "-0.0000000000000000000000003440053824498814789232967319123129508470071144280764607216379371894387913918429535787506447151331545",
+      "independent_mpmath_differentiation": "-0.0000000000000000000000003440053824498814789232967319123129508470071144280764607216379371894387913918430758939594081229494303"
+    },
+    {
+      "N": 18,
+      "theta": "0.37",
+      "analytic": "-0.0000000000000000000000003198704526225754945723269948519125639680017915929698873860282202641275121130318329914460930409432801",
+      "independent_mpmath_differentiation": "-0.0000000000000000000000003198704526225754945723269948519125639680017915929698873860282202641275121130318860791345117867584766"
+    },
+    {
+      "N": 21,
+      "theta": "0.0",
+      "analytic": "0.00000000000000000000000000005031460728156112163244140294754707866427471786686984863453395066606292029781892878581315971655619658",
+      "independent_mpmath_differentiation": "0.00000000000000000000000000005031460728156112163244140294754707866427471786686984863453395066606292029778997066897040001316445893"
+    },
+    {
+      "N": 21,
+      "theta": "0.37",
+      "analytic": "0.000000000000000000000000000004220537664867349270724358435142683201718508166423047136639131130250832136944779966322331200814501784",
+      "independent_mpmath_differentiation": "0.00000000000000000000000000000422053766486734927072435843514268320171850816642304713663913113025083213689652722936224384434593941"
+    },
+    {
+      "N": 27,
+      "theta": "0.0",
+      "analytic": "1.095941152940513471050671339417720019235897780635536893631527750334976984097246897375792865615267806e-36",
+      "independent_mpmath_differentiation": "1.095941152940513471050671339417720019235897780635536893631527750334991745471316232980199170844844941e-36"
+    },
+    {
+      "N": 27,
+      "theta": "0.37",
+      "analytic": "-9.254890925740425848063248642492412872307010093229519549810099507205250894726421725193619059703382884e-37",
+      "independent_mpmath_differentiation": "-9.254890925740425848063248642492412872307010093229519549810099507205379769943089782284901391848547146e-37"
+    }
+  ],
+  "populations": [
+    {
+      "N": 12,
+      "Td_over_M": 0.1,
+      "formation_phase": 0.37,
+      "minimum_m_over_Td": 9.475109128043348,
+      "frozen_weights": [
+        0.05219288149022382,
+        0.05964694298203416,
+        0.07359878143095495,
+        0.09293743236576832,
+        0.11276607596996768,
+        0.12439386356701546,
+        0.12115805107795019,
+        0.10502284749035098,
+        0.08449645186119752,
+        0.0670559674990504,
+        0.055787332511470666,
+        0.050943371754015754
+      ],
+      "population_first_fourier_abs": 0.22074870522307777,
+      "uniform_fractional_rms": 2.972736023692588e-16,
+      "biased_fractional_rms": 0.008287520788283813,
+      "max_abs_collective_beta_f_equals_MP": 0.01172189880804189,
+      "angular_nodes": 4096,
+      "scope": "Supplied instantaneous internal-equilibrium/freeze approximation; weights held fixed during subsequent field scan. No proof of efficient conversions, total relic abundance or realized field excursion."
+    },
+    {
+      "N": 12,
+      "Td_over_M": 0.03,
+      "formation_phase": 0.37,
+      "minimum_m_over_Td": 31.58369709347783,
+      "frozen_weights": [
+        0.009384687650045749,
+        0.015432178643098485,
+        0.03383377077546518,
+        0.08109908182593013,
+        0.1678029994685449,
+        0.24290550996232002,
+        0.21992168564604372,
+        0.12838760962122428,
+        0.05674094044708668,
+        0.023889768005220868,
+        0.012026378113431963,
+        0.008575389841587894
+      ],
+      "population_first_fourier_abs": 0.6442340342902777,
+      "uniform_fractional_rms": 2.972736023692588e-16,
+      "biased_fractional_rms": 0.024186635300907543,
+      "max_abs_collective_beta_f_equals_MP": 0.03424637514966497,
+      "angular_nodes": 4096,
+      "scope": "Supplied instantaneous internal-equilibrium/freeze approximation; weights held fixed during subsequent field scan. No proof of efficient conversions, total relic abundance or realized field excursion."
+    },
+    {
+      "N": 12,
+      "Td_over_M": 0.01,
+      "formation_phase": 0.37,
+      "minimum_m_over_Td": 94.75109128043349,
+      "frozen_weights": [
+        1.89401051902878e-05,
+        8.808572446695963e-05,
+        0.000997902041010739,
+        0.014928847112602653,
+        0.14193329739275487,
+        0.44659496159015005,
+        0.3281772076630435,
+        0.06192404556171236,
+        0.004941487374897882,
+        0.00034013290008971683,
+        4.0758081348905204e-05,
+        1.433445273196764e-05
+      ],
+      "population_first_fourier_abs": 0.9024812579261763,
+      "uniform_fractional_rms": 2.972736023692588e-16,
+      "biased_fractional_rms": 0.03388325244845978,
+      "max_abs_collective_beta_f_equals_MP": 0.04805319781506806,
+      "angular_nodes": 4096,
+      "scope": "Supplied instantaneous internal-equilibrium/freeze approximation; weights held fixed during subsequent field scan. No proof of efficient conversions, total relic abundance or realized field excursion."
+    },
+    {
+      "N": 12,
+      "Td_over_M": 0.003,
+      "formation_phase": 0.37,
+      "minimum_m_over_Td": 315.83697093477826,
+      "frozen_weights": [
+        1.3504278806628084e-15,
+        2.3894589568941245e-13,
+        8.489639023966955e-10,
+        7.71405038342426e-06,
+        0.015251070624987284,
+        0.7266101144058907,
+        0.2571992570032397,
+        0.0009316570741341943,
+        1.85969526968221e-07,
+        2.2615029618319707e-11,
+        1.783240169275642e-14,
+        5.285018444713994e-16
+      ],
+      "population_first_fourier_abs": 0.9706973266352292,
+      "uniform_fractional_rms": 2.972736023692588e-16,
+      "biased_fractional_rms": 0.03644532028514107,
+      "max_abs_collective_beta_f_equals_MP": 0.051737225067045096,
+      "angular_nodes": 4096,
+      "scope": "Supplied instantaneous internal-equilibrium/freeze approximation; weights held fixed during subsequent field scan. No proof of efficient conversions, total relic abundance or realized field excursion."
+    },
+    {
+      "N": 18,
+      "Td_over_M": 0.1,
+      "formation_phase": 0.37,
+      "minimum_m_over_Td": 9.46862580023939,
+      "frozen_weights": [
+        0.03479525432681568,
+        0.03763140604188845,
+        0.04238594092077181,
+        0.04906585428730302,
+        0.05739698445026536,
+        0.06658210684609976,
+        0.07517738397997803,
+        0.0813186546258715,
+        0.08338299124922766,
+        0.08077203405196633,
+        0.07423817809756865,
+        0.06547743028749049,
+        0.05633096790746468,
+        0.048168155612362755,
+        0.04171252658786938,
+        0.0371915550076469,
+        0.03457977258310719,
+        0.03379280313630228
+      ],
+      "population_first_fourier_abs": 0.220748705223144,
+      "uniform_fractional_rms": 1.2301737675718829e-16,
+      "biased_fractional_rms": 0.0082875207882863,
+      "max_abs_collective_beta_f_equals_MP": 0.011721898808048869,
+      "angular_nodes": 4096,
+      "scope": "Supplied instantaneous internal-equilibrium/freeze approximation; weights held fixed during subsequent field scan. No proof of efficient conversions, total relic abundance or realized field excursion."
+    },
+    {
+      "N": 18,
+      "Td_over_M": 0.03,
+      "formation_phase": 0.37,
+      "minimum_m_over_Td": 31.562086000797972,
+      "frozen_weights": [
+        0.006256458429579148,
+        0.008376625945105935,
+        0.013054923241667932,
+        0.022555847169998866,
+        0.04058154522500369,
+        0.070849207709509,
+        0.11186866624469118,
+        0.15039098513171648,
+        0.16530492190274232,
+        0.1466144570086718,
+        0.10669627983157799,
+        0.06653206477056185,
+        0.037827293608508464,
+        0.021050698309593486,
+        0.01229747623633068,
+        0.008017585404104608,
+        0.006113452633462843,
+        0.005611511197173715
+      ],
+      "population_first_fourier_abs": 0.6442340370542495,
+      "uniform_fractional_rms": 1.2301737675718829e-16,
+      "biased_fractional_rms": 0.024186635404752244,
+      "max_abs_collective_beta_f_equals_MP": 0.03424637541586146,
+      "angular_nodes": 4096,
+      "scope": "Supplied instantaneous internal-equilibrium/freeze approximation; weights held fixed during subsequent field scan. No proof of efficient conversions, total relic abundance or realized field excursion."
+    },
+    {
+      "N": 18,
+      "Td_over_M": 0.01,
+      "formation_phase": 0.37,
+      "minimum_m_over_Td": 94.68625800239391,
+      "frozen_weights": [
+        1.2626593023348607e-05,
+        3.11109179366196e-05,
+        0.00012262295795400583,
+        0.0006652604524853787,
+        0.004094791441245202,
+        0.02298738247280841,
+        0.09462112087736457,
+        0.2367256628958851,
+        0.31734265398643746,
+        0.2187823139876261,
+        0.08171242657944233,
+        0.018920553636138492,
+        0.0032942874068537698,
+        0.0005373017388318793,
+        0.00010193402551989818,
+        2.7171744846964148e-05,
+        1.1756037015007835e-05,
+        9.022248585441586e-06
+      ],
+      "population_first_fourier_abs": 0.9024966052735933,
+      "uniform_fractional_rms": 1.2301737675718829e-16,
+      "biased_fractional_rms": 0.033883829043686586,
+      "max_abs_collective_beta_f_equals_MP": 0.04805370436099912,
+      "angular_nodes": 4096,
+      "scope": "Supplied instantaneous internal-equilibrium/freeze approximation; weights held fixed during subsequent field scan. No proof of efficient conversions, total relic abundance or realized field excursion."
+    },
+    {
+      "N": 18,
+      "Td_over_M": 0.003,
+      "formation_phase": 0.37,
+      "minimum_m_over_Td": 315.6208600079797,
+      "frozen_weights": [
+        8.893766239492078e-16,
+        1.8527364451862892e-14,
+        1.87849817400682e-12,
+        5.591180841125182e-10,
+        2.548830011595211e-07,
+        8.53057322716285e-05,
+        0.010044183697840093,
+        0.2209406267125214,
+        0.593370069607977,
+        0.16938853984821003,
+        0.0061266331259701825,
+        4.426308046289968e-05,
+        1.224774402400878e-07,
+        2.722683705416713e-10,
+        1.0081570177988056e-12,
+        1.1744219325970726e-14,
+        6.992285955941375e-16,
+        2.8680385948669224e-16
+      ],
+      "population_first_fourier_abs": 0.9728213664614339,
+      "uniform_fractional_rms": 1.2301737675718829e-16,
+      "biased_fractional_rms": 0.03652510678131898,
+      "max_abs_collective_beta_f_equals_MP": 0.051836064654608716,
+      "angular_nodes": 4096,
+      "scope": "Supplied instantaneous internal-equilibrium/freeze approximation; weights held fixed during subsequent field scan. No proof of efficient conversions, total relic abundance or realized field excursion."
+    },
+    {
+      "N": 21,
+      "Td_over_M": 0.1,
+      "formation_phase": 0.37,
+      "minimum_m_over_Td": 9.470244476844965,
+      "frozen_weights": [
+        0.029824503708699154,
+        0.03180914105672098,
+        0.034995535289808845,
+        0.03940757455000552,
+        0.044971015077484404,
+        0.051416023555710046,
+        0.058189061367573375,
+        0.06443775769712401,
+        0.06913798385456828,
+        0.07137383857870058,
+        0.07066683216916214,
+        0.06717121840654133,
+        0.061609437746871165,
+        0.05499047778911404,
+        0.04828368677782687,
+        0.04220583847098745,
+        0.037168064459376406,
+        0.03333492707913761,
+        0.030723101098181566,
+        0.02929004581353398,
+        0.028993935452872228
+      ],
+      "population_first_fourier_abs": 0.22074870522314427,
+      "uniform_fractional_rms": 2.7365136582379514e-16,
+      "biased_fractional_rms": 0.008287520788286306,
+      "max_abs_collective_beta_f_equals_MP": 0.011721898808048872,
+      "angular_nodes": 4096,
+      "scope": "Supplied instantaneous internal-equilibrium/freeze approximation; weights held fixed during subsequent field scan. No proof of efficient conversions, total relic abundance or realized field excursion."
+    },
+    {
+      "N": 21,
+      "Td_over_M": 0.03,
+      "formation_phase": 0.37,
+      "minimum_m_over_Td": 31.56748158948322,
+      "frozen_weights": [
+        0.0053626786539249845,
+        0.006816693820811858,
+        0.009730677915687694,
+        0.0151593986877279,
+        0.024843759814025264,
+        0.041042359645928485,
+        0.06532482351299701,
+        0.0958874282097353,
+        0.12501930991600924,
+        0.14096363043263033,
+        0.1357683325723776,
+        0.11213278496776237,
+        0.08098046458383248,
+        0.05282139280064468,
+        0.032423394521578684,
+        0.01959173008950683,
+        0.012183358886095777,
+        0.008117188871274378,
+        0.00598934318126201,
+        0.005013640248466225,
+        0.004827608667720833
+      ],
+      "population_first_fourier_abs": 0.6442340370542458,
+      "uniform_fractional_rms": 2.7365136582379514e-16,
+      "biased_fractional_rms": 0.024186635404752094,
+      "max_abs_collective_beta_f_equals_MP": 0.034246375415861244,
+      "angular_nodes": 4096,
+      "scope": "Supplied instantaneous internal-equilibrium/freeze approximation; weights held fixed during subsequent field scan. No proof of efficient conversions, total relic abundance or realized field excursion."
+    },
+    {
+      "N": 21,
+      "Td_over_M": 0.01,
+      "formation_phase": 0.37,
+      "minimum_m_over_Td": 94.70244476844965,
+      "frozen_weights": [
+        1.0822794040754466e-05,
+        2.271348040104953e-05,
+        6.823708361420224e-05,
+        0.00026874224506153236,
+        0.0012386931945915862,
+        0.005857209579389044,
+        0.024699506735790723,
+        0.08110381805031557,
+        0.18453673283568015,
+        0.2677091363471783,
+        0.23829299957671787,
+        0.13172373656574993,
+        0.048050013516109276,
+        0.012792333571698955,
+        0.002823674925571814,
+        0.0005941058951908124,
+        0.00013672086032707795,
+        3.896207794081707e-05,
+        1.5227848010126136e-05,
+        8.790996932995733e-06,
+        7.821819687522092e-06
+      ],
+      "population_first_fourier_abs": 0.9024966011719893,
+      "uniform_fractional_rms": 2.7365136582379514e-16,
+      "biased_fractional_rms": 0.033883828889556745,
+      "max_abs_collective_beta_f_equals_MP": 0.0480537041320053,
+      "angular_nodes": 4096,
+      "scope": "Supplied instantaneous internal-equilibrium/freeze approximation; weights held fixed during subsequent field scan. No proof of efficient conversions, total relic abundance or realized field excursion."
+    },
+    {
+      "N": 21,
+      "Td_over_M": 0.003,
+      "formation_phase": 0.37,
+      "minimum_m_over_Td": 315.6748158948322,
+      "frozen_weights": [
+        7.626866965729047e-16,
+        9.256001990542882e-15,
+        3.7605063143379743e-13,
+        3.804345299083546e-11,
+        6.542313664374716e-09,
+        1.2272991082326743e-06,
+        0.00015666735446474289,
+        0.008613409750147176,
+        0.13759669064193844,
+        0.4822416408888565,
+        0.32573257318299115,
+        0.04416509452853682,
+        0.001475519646334474,
+        1.7064541601733284e-05,
+        1.0503077299989017e-07,
+        5.505385355846164e-10,
+        3.905952855304074e-12,
+        5.69671936726632e-14,
+        2.408248581512095e-15,
+        3.786958942243001e-16,
+        2.5555124613553126e-16
+      ],
+      "population_first_fourier_abs": 0.972633725220199,
+      "uniform_fractional_rms": 2.7365136582379514e-16,
+      "biased_fractional_rms": 0.0365180575853807,
+      "max_abs_collective_beta_f_equals_MP": 0.05182582935689261,
+      "angular_nodes": 4096,
+      "scope": "Supplied instantaneous internal-equilibrium/freeze approximation; weights held fixed during subsequent field scan. No proof of efficient conversions, total relic abundance or realized field excursion."
+    },
+    {
+      "N": 27,
+      "Td_over_M": 0.1,
+      "formation_phase": 0.37,
+      "minimum_m_over_Td": 9.46862580023939,
+      "frozen_weights": [
+        0.023196836217877125,
+        0.02431797141309644,
+        0.025999699034516596,
+        0.02825729394718121,
+        0.031089134863760248,
+        0.034457257609771995,
+        0.038264656300176905,
+        0.04233455946699235,
+        0.046400560780906125,
+        0.05011825598665202,
+        0.053105821114686376,
+        0.05501106948941257,
+        0.055588660832818444,
+        0.0547610624718051,
+        0.05263891284494023,
+        0.04949211873171244,
+        0.04568391556330438,
+        0.041593707809046566,
+        0.03755397860497646,
+        0.03381510753215631,
+        0.030538331838389436,
+        0.02780835105857954,
+        0.025654963154261155,
+        0.02407545557473636,
+        0.02305318172207146,
+        0.022570797707568833,
+        0.022618338328603448
+      ],
+      "population_first_fourier_abs": 0.22074870522314424,
+      "uniform_fractional_rms": 3.020867636494504e-16,
+      "biased_fractional_rms": 0.008287520788286309,
+      "max_abs_collective_beta_f_equals_MP": 0.011721898808048872,
+      "angular_nodes": 4096,
+      "scope": "Supplied instantaneous internal-equilibrium/freeze approximation; weights held fixed during subsequent field scan. No proof of efficient conversions, total relic abundance or realized field excursion."
+    },
+    {
+      "N": 27,
+      "Td_over_M": 0.03,
+      "formation_phase": 0.37,
+      "minimum_m_over_Td": 31.562086000797972,
+      "frozen_weights": [
+        0.004170972286386103,
+        0.004972382326506413,
+        0.006379467511577961,
+        0.008703282161111965,
+        0.01243396567338998,
+        0.01826877624533414,
+        0.02705436348333583,
+        0.03953300082548876,
+        0.0558012540415934,
+        0.07457911082979421,
+        0.09276008976984558,
+        0.10594569065370274,
+        0.11020328126849503,
+        0.10414105815476843,
+        0.08972326628555008,
+        0.07113085322105209,
+        0.05262871957808843,
+        0.03699722611070857,
+        0.02521819573900567,
+        0.01702667799302935,
+        0.011630440679329624,
+        0.008198317490887072,
+        0.006069800608573868,
+        0.004790187205813069,
+        0.004075635088975234,
+        0.0037671872927888513,
+        0.0037967974748677074
+      ],
+      "population_first_fourier_abs": 0.6442340370542455,
+      "uniform_fractional_rms": 3.020867636494504e-16,
+      "biased_fractional_rms": 0.024186635404752087,
+      "max_abs_collective_beta_f_equals_MP": 0.03424637541586124,
+      "angular_nodes": 4096,
+      "scope": "Supplied instantaneous internal-equilibrium/freeze approximation; weights held fixed during subsequent field scan. No proof of efficient conversions, total relic abundance or realized field excursion."
+    },
+    {
+      "N": 27,
+      "Td_over_M": 0.01,
+      "formation_phase": 0.37,
+      "minimum_m_over_Td": 94.68625800239391,
+      "frozen_weights": [
+        8.417728698359147e-06,
+        1.448880222670217e-05,
+        3.1295215002641766e-05,
+        8.174863879261848e-05,
+        0.0002463461595334276,
+        0.0008099143116317104,
+        0.0027298609660600212,
+        0.00883238396224784,
+        0.0256824460311676,
+        0.06308074737242692,
+        0.12401996137286897,
+        0.18723933425349476,
+        0.2115617697296031,
+        0.17752920695551347,
+        0.11186395493786157,
+        0.05447495115732504,
+        0.021423843327117248,
+        0.0071934179729944165,
+        0.002196191608776659,
+        0.000651376550170916,
+        0.00020036300692814906,
+        6.795601714345413e-05,
+        2.683414155859132e-05,
+        1.291032079151111e-05,
+        7.837358025020087e-06,
+        6.145820191738398e-06,
+        6.2962818476115765e-06
+      ],
+      "population_first_fourier_abs": 0.9024966011736227,
+      "uniform_fractional_rms": 3.020867636494504e-16,
+      "biased_fractional_rms": 0.03388382888961815,
+      "max_abs_collective_beta_f_equals_MP": 0.04805370413226929,
+      "angular_nodes": 4096,
+      "scope": "Supplied instantaneous internal-equilibrium/freeze approximation; weights held fixed during subsequent field scan. No proof of efficient conversions, total relic abundance or realized field excursion."
+    },
+    {
+      "N": 27,
+      "Td_over_M": 0.003,
+      "formation_phase": 0.37,
+      "minimum_m_over_Td": 315.6208600079797,
+      "frozen_weights": [
+        5.93199082305944e-16,
+        3.692531894530345e-15,
+        4.9380911058909577e-14,
+        1.2529263339373265e-12,
+        5.146075264923868e-11,
+        2.8356107028488664e-09,
+        1.7000262690943806e-07,
+        8.884753277333805e-06,
+        0.00032416322719088777,
+        0.0066992997023174955,
+        0.06540364872978184,
+        0.2622099906901949,
+        0.3957677448236688,
+        0.21912457288780096,
+        0.04619467070956275,
+        0.004086360097719709,
+        0.00017595932519863782,
+        4.449084279247729e-06,
+        8.169036963327072e-08,
+        1.3612681536760817e-09,
+        2.5659383147050516e-11,
+        6.724235848733849e-13,
+        2.9419688337725334e-14,
+        2.504014411531354e-15,
+        4.663735812919281e-16,
+        2.0568515884711988e-16,
+        2.231369980248554e-16
+      ],
+      "population_first_fourier_abs": 0.9726351601853279,
+      "uniform_fractional_rms": 3.020867636494504e-16,
+      "biased_fractional_rms": 0.03651811149537247,
+      "max_abs_collective_beta_f_equals_MP": 0.05182585373911739,
+      "angular_nodes": 4096,
+      "scope": "Supplied instantaneous internal-equilibrium/freeze approximation; weights held fixed during subsequent field scan. No proof of efficient conversions, total relic abundance or realized field excursion."
+    }
+  ],
+  "interpretation": "N is a supplied field-replication parameter. Leading one-loop curvature at this benchmark does not establish full radiative stability or a physical vacuum. The maximal native Sp43 element order18, PSp43 order12 and PGSp43 order12 cannot supply an element of orderN>=first_N under the specific single-generator embedding requirement; added symmetries/extensions are not excluded.",
+  "scope": "No shared W33 action, conversion collision terms, scalar background/perturbation solver, portal audit, Planck-suppressed operator audit or physical TOE. Uniform-population values below float precision are numerical floors, not measured tiny harmonics."
+}

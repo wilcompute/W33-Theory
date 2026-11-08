@@ -1,0 +1,83 @@
+{
+  "status": "TEN_NEW_COMMIT_PATCHES_READ_FULL_MANUSCRIPT_READING_UNFINISHED",
+  "utc": "2026-11-08T15:15:40.850057+00:00",
+  "baseline": "6fcbfcb99684e3ef3d8183a5b0c45b89dc7cafdd",
+  "incoming_tip": "9e0aa0b7246dcd67f98820848c425c61ddfc66b3",
+  "full_patches_read": [
+    "db5c05e9280ea73e7839f38780106489d71b59c3",
+    "517e7abe7db03db62ad33ed9a797144fb02ea154",
+    "d4c3be9c75c6f428fdf4840712ed8e8ca305adbc",
+    "98872106b62d2e7135ee38a0d9a32d7ff0d7f894",
+    "de339644cca39f4080585df6427ada54c68bcf1f",
+    "b68a706b16fbcafe3899e896bc8e4b7f425df47d",
+    "1259789ab0012f96b82a26265d7005202862729c",
+    "80f3d6cf3f42fd3c061a03af91f3204d150ef045",
+    "321ac07d32c9fbba327932de21a890b3323a80fa",
+    "9e0aa0b7246dcd67f98820848c425c61ddfc66b3"
+  ],
+  "patch_lines": 1167,
+  "patch_utf8_sha256": "7c47e1af5c82152671e97a43a09c91331c2024a51b6b2971f5f54abd7a2f09e4",
+  "immutable_incoming_blob_sha256": {
+    ".github/workflows/w33_20261108_forty_points_fivefronts.yml": "848c82cecdb408c58455a824f966c8df222550cc572a18b00049f374bed3bca3",
+    "analysis/PASS20261108_FORTY_POINTS_FIVE_FRONTS.md": "dd85e1207f3b70acad6dc9d96e837bf221e3f3350d0e5600d18c54ede3bf9ff7",
+    "analysis/toe_uv/class_cmb.py": "09bee9b9f42db1889fcbf080947f9c15a8d34908ba025ab91deb81f27fb6a369",
+    "analysis/toe_uv/class_monodromy_patch.py": "b998ef43fe2040874181927cc35ddf9b8639891c48edfa97180ef13b7bf96dd8",
+    "analysis/toe_uv/mono_control.json": "28f13fb18f8cb3eb1bb2e3af64115ee111fe0219aa1fb858c5a3534a66541556",
+    "analysis/toe_uv/mono_control.py": "76514321c6139084b99f8d75f6b4a3c19185d5cda258842247e7a73113563451",
+    "analysis/toe_uv/mono_fit.py": "a1c05399e95e4840f744aa99f51446798a7623106d2aafcaf49bcb8e3bd50c4f",
+    "analysis/toe_uv/prereg_mono.json": "b1ab7dcf5b9ecfa5fec521235f10e09b224066062c0f32512b6e6ad774140f3a",
+    "analysis/toe_uv/prereg_mono.py": "4101ec56d5bde8382818d6d722588e2439c0229e5dc9b7019325cf29005a500d",
+    "analysis/toe_uv/prereg_mono.sha256": "aed2da118e21b790e3774ae09c01f0153530b6fcd4b3129133f180342b2f7304",
+    "analysis/w33_20261108_forty_points_fivefronts.py": "359c6776c94cf22916aa4bfe0540855a9a7009d35ba74a70f96088d4b3265302",
+    "data/w33_20261108_nullclock_prospective_registry.json": "d73b3358594d240c0cb7ad93e248db6cb982d7ab5344635dd32c4282d80f9606",
+    "tests/test_w33_20261108_forty_points_fivefronts.py": "92bfab8bd2dad099c58acf857cc40d79364a087c03ae1869f571bfdd45e10965"
+  },
+  "incoming_scope": "Full six initial patches: new clock and corrected plaquettes, nine tests, CLASS running patch/controls/preregistration, reservation, extraction workflow. All659 initial net inserted lines read. Four later full patches:729channel registry, exact rational alias scanner, tenth test and117line report. Upstream CLASS likelihood values and workflow receipts not rerun or treated as a full physical action.",
+  "manuscript": {
+    "pdf_sha256": "003b75482b6584e20e83a55d9e9ba0a181f93b8dff0f94c1d615039c21213cbb",
+    "total_pages": 215,
+    "full_extracted_pages_this_packet": [
+      85,
+      96
+    ],
+    "cumulative_full_extracted_pages": [
+      1,
+      96
+    ],
+    "scope": "Hash-verified cache read completely for these pages. No new visual inspection or full-proof reproduction. Other agent automated215page extraction is not personal reading."
+  },
+  "searches": [
+    {
+      "scope": "RESULTS_INDEX.md analysis data papers docs;py/json/md/tex;2MBcap",
+      "patterns": [
+        "Schur with axion; eigenmass/rank-one/trough",
+        "2610.30253 and1605.00996",
+        "1825.479;1816.804;0.053149719;cos Fi sinc;661250;934912190"
+      ],
+      "limits": "Result-specific search, no priority proof. Later numeric matches include two unrelated prior files sharing approximate decimal subsequences; these are not an axion-spectrum ownership claim."
+    },
+    {
+      "known_result": "Sp43 list including18 already in BREAKTHROUGH542",
+      "scope": "Known group invariant credited, not rediscovered"
+    }
+  ],
+  "primary_literature": [
+    {
+      "url": "https://arxiv.org/html/1605.00996v3",
+      "reading": "Selected model/normal-mode sections plus older-version background sections, not full paper"
+    },
+    {
+      "url": "https://arxiv.org/html/2610.30253v1",
+      "reading": "Model, Coleman-Weinberg and population equations1-16, not full paper"
+    }
+  ],
+  "execution": "RDC three producers, actual server V8 independent controls, local final mass-law update and focused validation. Full weekly reading, full PDF reading, CLASS refits and full TOE remain incomplete.",
+  "enlarged_RDC_group_job": {
+    "pid": 12404,
+    "exit_code": 0,
+    "seconds": 5.94,
+    "scope": "Final native-group producer includes explicit order24 and projective-order24 witness on enlarged three-qutrit symplectic labels."
+  },
+  "continuity": "Connected mirror empty in prior startup; actual repo journal and20s CLI fallback used; timeouts explicitly retained.",
+  "git_exception": "GitKraken absent from exposed tool inventory; prior plugin search empty. Authorized narrow CLI fallback, explicit owned paths, immutable incoming references, live numerical/unrelated preservation checks."
+}

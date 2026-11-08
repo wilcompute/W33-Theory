@@ -10,7 +10,7 @@ to guess: `grep -i gow TOPICAL_ALIASES.md` reaches
 `2026-07-15_pass355_sp43_frobenius_schur.md`, which no search for
 "phase" or "complex structure" ever would.
 
-Files scanned: **6116** · distinct tokens: **1374**
+Files scanned: **6118** · distinct tokens: **1374**
 
 Tokens marked ⚠ appear ONLY in topically opaque filenames (dated or
 numbered), so they are invisible to any topic search — read those first.
@@ -859,7 +859,7 @@ numbered), so they are invisible to any topic search — read those first.
 - `group:Sp(12,3)` ⚠ — [PASS20260916_execute_all5_intertwiner_magic_closure.md](analysis/PASS20260916_execute_all5_intertwiner_magic_closure.md), [PASS20260916_execute_all5_intertwiner_magic_closure_insert.tex](analysis/PASS20260916_execute_all5_intertwiner_magic_closure_insert.tex), [PASS20260916_suzuki_e6_instanton_qc_frontier.md](analysis/PASS20260916_suzuki_e6_instanton_qc_frontier.md), [PASS9197_9260_eight_front_breakthroughs.md](analysis/PASS9197_9260_eight_front_breakthroughs.md), [PASS9465_9528_RESERVATION.md](analysis/PASS9465_9528_RESERVATION.md), [PASS9465_9528_eight_front_breakthroughs.md](analysis/PASS9465_9528_eight_front_breakthroughs.md), [PASS9725_9788_eight_front_breakthroughs.md](analysis/PASS9725_9788_eight_front_breakthroughs.md)
 - `group:Sp(16,2)` — [PART_CII_RESIDUAL_LEVI_FACTORS.md](manuscripts/parts/PART_CII_RESIDUAL_LEVI_FACTORS.md)
 - `group:Sp(18,2)` — [PART_CII_RESIDUAL_LEVI_FACTORS.md](manuscripts/parts/PART_CII_RESIDUAL_LEVI_FACTORS.md), [PART_CI_LOCAL_STABILIZERS_ORBIT_QUOTIENTS.md](manuscripts/parts/PART_CI_LOCAL_STABILIZERS_ORBIT_QUOTIENTS.md)
-- `group:Sp(2,3)` — [BT810_completed_geography_schlafli.md](analysis/BT810_completed_geography_schlafli.md), [BT811_platonic_fine_print.md](analysis/BT811_platonic_fine_print.md), [PASS11330_ORBIT_CENSUS.md](analysis/PASS11330_ORBIT_CENSUS.md), [PASS11511_GOOD_RULES_ALL_N.md](analysis/PASS11511_GOOD_RULES_ALL_N.md), [w33_pass1109_1110_sl23_and_steinberg.md](analysis/w33_pass1109_1110_sl23_and_steinberg.md), [404.html](docs/404.html), [exceptional-geometry-41a8d733.html](docs/exceptional-geometry-41a8d733.html), [full-site-2026-08-06.html](docs/full-site-2026-08-06.html), [index.html](docs/index.html)
+- `group:Sp(2,3)` — [2026-11-08_physical_axion_modes_and_cyclic_protection.md](analysis/2026-11-08_physical_axion_modes_and_cyclic_protection.md), [BT810_completed_geography_schlafli.md](analysis/BT810_completed_geography_schlafli.md), [BT811_platonic_fine_print.md](analysis/BT811_platonic_fine_print.md), [PASS11330_ORBIT_CENSUS.md](analysis/PASS11330_ORBIT_CENSUS.md), [PASS11511_GOOD_RULES_ALL_N.md](analysis/PASS11511_GOOD_RULES_ALL_N.md), [w33_pass1109_1110_sl23_and_steinberg.md](analysis/w33_pass1109_1110_sl23_and_steinberg.md), [404.html](docs/404.html), [exceptional-geometry-41a8d733.html](docs/exceptional-geometry-41a8d733.html), [full-site-2026-08-06.html](docs/full-site-2026-08-06.html), [index.html](docs/index.html)
 - `group:Sp(20,2)` — [404.html](docs/404.html), [exceptional-geometry-41a8d733.html](docs/exceptional-geometry-41a8d733.html), [full-site-2026-08-06.html](docs/full-site-2026-08-06.html), [index.html](docs/index.html)
 - `group:Sp(4,11)` ⚠ — [PASS12075_THE_GALOIS_LIST_Q11.md](analysis/PASS12075_THE_GALOIS_LIST_Q11.md)
 - `group:Sp(4,16)` ⚠ — [2026-10-23_round9_five_frontiers.md](analysis/2026-10-23_round9_five_frontiers.md)
