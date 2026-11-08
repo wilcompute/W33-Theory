@@ -1,0 +1,52 @@
+{
+  "status": "NATIVE_LOCAL_19_BOUNDARY_BRIDGE_TESTS_PASS_NOT_PHYSICAL_COMPLETION",
+  "utc": "2026-11-08T21:06:24.102233+00:00",
+  "source_HEAD": "65c8ae8e92785daf82066dc92ed432fc7319e1df",
+  "command": [
+    "py",
+    "-3",
+    "-m",
+    "pytest",
+    "--noconftest",
+    "-q",
+    "tests/test_w33_20261108_five_boundary_bridges.py"
+  ],
+  "exit_code": 0,
+  "stdout": "...................                                                      [100%]\n19 passed in 8.53s\n",
+  "stderr": "",
+  "selected_source_and_input_raw_sha256": {
+    "analysis/w33_20261108_five_boundary_bridges.py": "96f0396862889e74f7f94ab3746f476602752aa99e65b9d8a034792fec523229",
+    "tests/test_w33_20261108_five_boundary_bridges.py": "2f70eaebf62e63d9e1eda99de8a631c8f253844923ace028eda30e37827c04a2",
+    "analysis/w33_pass11261_g26_cartan_coordinate_map.py": "fad38cdb3d4931e5c09e6ea8681eaa3ee07bd7696a88c810c37dd326973a9f8f",
+    "analysis/w33_pass11218_e8_cubic_cartan_kernel.py": "52b1a6619826b0b61801c0d58c3560d6240aa1f19e09cad2068d69e136766871",
+    "data/w33_20261027_native_bloch_face_module.json": "a9fb6555221aaf4b862aac092597920d3e26f08145cbe33914d2c8d86324dc6f",
+    "analysis/toe_uv/prereg_tilt.json": "5e60e4664fc02592728cdff85d895433055b7268cdfc7088d9aae15769997282",
+    "analysis/toe_uv/prereg_tilt.sha256": "28ab3120731aae660beb4ae64bc3d004e9cbf582bb5a9a266801834e80eb4c81",
+    "analysis/toe_uv/class_ppd_dovekie_bao_trunc.json": "314ab9639232b3f987eaae741d047ab8c0f03cf69663f4d1067c161aeaabe226",
+    "analysis/toe_uv/class_ppd_dovekie_sn_trunc.json": "a4f1941c2aee04c3ca343237d5dd79da2d4802c15229dca62e51a0ec27661b6f"
+  },
+  "selected_inputs_unchanged_during_test": true,
+  "earlier_actual_RDC": {
+    "device": "75dccda9-254c-47a9-9d13-ef69565dedf7",
+    "pid": 10720,
+    "exit_code": 0,
+    "seconds": 17.0,
+    "stdout": "19 passed in12.84s"
+  },
+  "scope": "Actual repository-backed native81state/1620record augmentedPfaffian, qualified corank counterexample, reduced native metric, local speed, one-photon trajectory, frozenS7 and preliminaryPPD suite. Selected direct input hashes recorded, not an exhaustive transitive dependency lock or hostedCI receipt. Supplied compactification and Wilson mass do not become derived dynamics. Missing solver rows are not physical exclusions. No full week/PDF or TOE completion.",
+  "publication": "Additional validation of independently authored incoming code; does not overwrite its earlier honest partial certificate. Gauge-origin science528571d775996d14b71f2359e707378f3db659bc already synchronized at003b18ada0d97e3be5384a6678eba030ea64dcc5.",
+  "selected_lf_normalized_inputs_unchanged_during_test": true,
+  "selected_input_raw_sha256_after_test": {
+    "analysis/w33_20261108_five_boundary_bridges.py": "96f0396862889e74f7f94ab3746f476602752aa99e65b9d8a034792fec523229",
+    "tests/test_w33_20261108_five_boundary_bridges.py": "2f70eaebf62e63d9e1eda99de8a631c8f253844923ace028eda30e37827c04a2",
+    "analysis/w33_pass11261_g26_cartan_coordinate_map.py": "fad38cdb3d4931e5c09e6ea8681eaa3ee07bd7696a88c810c37dd326973a9f8f",
+    "analysis/w33_pass11218_e8_cubic_cartan_kernel.py": "52b1a6619826b0b61801c0d58c3560d6240aa1f19e09cad2068d69e136766871",
+    "data/w33_20261027_native_bloch_face_module.json": "a9fb6555221aaf4b862aac092597920d3e26f08145cbe33914d2c8d86324dc6f",
+    "analysis/toe_uv/prereg_tilt.json": "5e60e4664fc02592728cdff85d895433055b7268cdfc7088d9aae15769997282",
+    "analysis/toe_uv/prereg_tilt.sha256": "28ab3120731aae660beb4ae64bc3d004e9cbf582bb5a9a266801834e80eb4c81",
+    "analysis/toe_uv/class_ppd_dovekie_bao_trunc.json": "314ab9639232b3f987eaae741d047ab8c0f03cf69663f4d1067c161aeaabe226",
+    "analysis/toe_uv/class_ppd_dovekie_sn_trunc.json": "a4f1941c2aee04c3ca343237d5dd79da2d4802c15229dca62e51a0ec27661b6f"
+  },
+  "changed_selected_paths": [],
+  "provenance_limit": "Previous selected-input snapshot attempt encountered concurrent changes and was not certified frozen. This actual rerun records before/after hashes and claims frozen selected inputs only if equal; all19 tests returned PASS."
+}
