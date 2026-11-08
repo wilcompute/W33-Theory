@@ -30,17 +30,19 @@ g = dict(__name__="x", __file__=os.path.join(BG, "class_growth_fit.py"))
 exec(src, g)
 C, FS8, MBIN, lens_resid, sigma8_from = (g[k] for k in ("C", "FS8", "MBIN", "lens_resid", "sigma8_from"))
 
-D = np.load(os.environ.get("DESNPZ", "/mnt/c/tmp/dl/des_y3.npz"))
+SURVEY = os.environ.get("SURVEY", "des")  # des (default, unchanged) or kids (KiDS-Legacy via kids_convert.py)
+D = np.load(os.environ.get("DESNPZ", "/mnt/c/tmp/dl/kids/kids_legacy.npz" if SURVEY == "kids" else "/mnt/c/tmp/dl/des_y3.npz"))
 keep = np.r_[D["xip_ang"] > THP, D["xim_ang"] > THM]
 ANG = np.r_[D["xip_ang"], D["xim_ang"]] * math.pi / 180 / 60
 BI = np.r_[D["xip_i"], D["xim_i"]]
 BJ = np.r_[D["xip_j"], D["xim_j"]]
-ISM = np.r_[np.zeros(200, bool), np.ones(200, bool)]
+ISM = np.r_[np.zeros(len(D["xip"]), bool), np.ones(len(D["xim"]), bool)]
 DATA = np.r_[D["xip"], D["xim"]]
 COV = D["cov"][np.ix_(keep, keep)]
 UCOV = np.linalg.cholesky(np.linalg.inv(COV)).T
 NDATA = int(keep.sum())
 ZN, NZ = D["z"], D["nz"]
+NB = NZ.shape[0]
 ZSH = [0.01, 0.05, 0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.2, 1.4, 1.6, 1.8, 2.0, 2.3, 2.6, 3.0]
 ZS = sorted(set(ZSH) | {round(z + d, 3) for z, _, _ in FS8 for d in (-0.03, 0.03)})
 ZG = ZN[ZN <= 3.0]
@@ -58,16 +60,24 @@ for n, (th, im) in enumerate(UA):
     J = jv(4 if im else 0, ELLF * th)
     HK[n] = (ELLF ** 2 * J * taper / (2 * math.pi) * dl) @ basis
 ELLN = np.exp(LN)
-PAIRS = [(i, j) for i in range(4) for j in range(i, 4)]
+PAIRS = [(i, j) for i in range(NB) for j in range(i, NB)]
 PIDX = {p: n for n, p in enumerate(PAIRS)}
 KB = BI[keep]
 KJ = BJ[keep]
 IM = np.array([PIDX[(int(min(a, b)), int(max(a, b)))] for a, b in zip(KB, KJ)])
-PRIM = (np.array([-0.0063, -0.0198, -0.0241, -0.0369]), np.array([0.0091, 0.0078, 0.0076, 0.0076]))
-PRIZ = np.array([0.018, 0.015, 0.011, 0.017])
-NUIS = [f"m{i}" for i in range(4)] + [f"dz{i}" for i in range(4)] + ["Aia", "eta"]
-C.STEP.update({f"m{i}": 0.004 for i in range(4)})
-C.STEP.update({f"dz{i}": 0.005 for i in range(4)})
+if SURVEY == "kids":
+    # KiDS-Legacy: shear calibration is inside the covariance, so m_i are pinned (prior sd 1e-5); correlated dz prior from Nz_covariance (kids_convert.py)
+    PRIM = (np.zeros(NB), np.full(NB, 1e-5))
+    DZM = np.array(D["dz_mean"])
+    DZU = np.linalg.cholesky(np.linalg.inv(np.array(D["dz_cov"]))).T
+else:
+    PRIM = (np.array([-0.0063, -0.0198, -0.0241, -0.0369]), np.array([0.0091, 0.0078, 0.0076, 0.0076]))
+    DZM = np.zeros(NB)
+    DZU = np.diag(1 / np.array([0.018, 0.015, 0.011, 0.017]))
+PRIZ = 1 / np.diag(DZU)
+NUIS = [f"m{i}" for i in range(NB)] + [f"dz{i}" for i in range(NB)] + ["Aia", "eta"]
+C.STEP.update({f"m{i}": (1e-5 if SURVEY == "kids" else 0.004) for i in range(NB)})
+C.STEP.update({f"dz{i}": 0.005 for i in range(NB)})
 C.STEP.update(Aia=0.1, eta=0.3)
 C.STEP.update(prod=0.004, Zn=0.002)
 
@@ -121,7 +131,7 @@ def xi_model(T, p):
     W = []
     dzg = np.gradient(ZG)
     F = -p["Aia"] * 0.0134 * T.om / T.D * ((1 + ZG) / 1.62) ** p["eta"]
-    for i in range(4):
+    for i in range(NB):
         n = np.interp(ZG - p[f"dz{i}"], ZG, NZG[i], left=0.0, right=0.0)
         n = n / np.sum(n * dzg)
         cum = np.cumsum((n * dzg)[::-1])[::-1]
@@ -131,7 +141,7 @@ def xi_model(T, p):
     W = np.array(W)
     res = np.zeros(len(PAIRS) * len(UA))
     fac = dzg / T.H / T.chi ** 2
-    pm = [(1 + p[f"m{i}"]) for i in range(4)]
+    pm = [(1 + p[f"m{i}"]) for i in range(NB)]
     cl = np.zeros((len(PAIRS), len(LN)))
     for n, (i, j) in enumerate(PAIRS):
         cl[n] = np.sum((W[i] * W[j] * fac)[:, None] * T.P, axis=0) * pm[i] * pm[j]
@@ -185,14 +195,14 @@ class SF(C.Fitter):
         parts, T, info = self.cosmo(p, kind)
         parts = dict(parts)
         parts["des"] = UCOV @ (xi_model(T, p) - DATA[keep])
-        parts["desp"] = np.r_[[(p[f"m{i}"] - PRIM[0][i]) / PRIM[1][i] for i in range(4)], [p[f"dz{i}"] / PRIZ[i] for i in range(4)], [p["Aia"] / 3.0, p["eta"] / 4.0]]
+        parts["desp"] = np.r_[[(p[f"m{i}"] - PRIM[0][i]) / PRIM[1][i] for i in range(NB)], DZU @ (np.array([p[f"dz{i}"] for i in range(NB)]) - DZM), [p["Aia"] / 3.0, p["eta"] / 4.0]]
         return np.concatenate(list(parts.values())), {k: float(v @ v) for k, v in parts.items()}, info
 
 
 F = SF(ds_)
 base = json.load(open(f"class_growth_{ds_}_none.json"))
-start_nuis = {f"m{i}": float(PRIM[0][i]) for i in range(4)}
-start_nuis.update({f"dz{i}": 0.0 for i in range(4)}, Aia=0.3, eta=0.0)
+start_nuis = {f"m{i}": float(PRIM[0][i]) for i in range(NB)}
+start_nuis.update({f"dz{i}": float(DZM[i]) for i in range(NB)}, Aia=0.3, eta=0.0)
 suffix = f"_{TAG}" if TAG else ""
 path = f"class_des_{ds_}_{SET}{suffix}.json"
 out = json.load(open(path)) if os.path.exists(path) else dict(dataset=ds_, set=SET, ndata=NDATA, cuts=[THP, THM], mnu=MNU, rows={})

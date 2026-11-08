@@ -30,10 +30,12 @@ FREE = dict(LCDM=[], free_neg=["c", "cp"], free_pos=["c", "cp"], CPL=["w0", "wa"
 DSET = os.environ.get("DSET", "dovekie")
 fits = json.load(open(f"class_fit_{DSET}.json"))
 rng = np.random.default_rng(20261106)
-path = "shear_ppd.json" if DSET == "dovekie" else f"shear_ppd_{DSET}.json"
+SURV = os.environ.get("SURVEY", "des")
+path = ("shear_ppd.json" if DSET == "dovekie" else f"shear_ppd_{DSET}.json") if SURV == "des" else f"shear_ppd_{SURV}_{DSET}.json"
 out = json.load(open(path)) if os.path.exists(path) else {}
-start_n = {f"m{i}": float(PRIM[0][i]) for i in range(4)}
-start_n.update({f"dz{i}": 0.0 for i in range(4)}, Aia=0.3, eta=0.0)
+NB, DZM = g2["NB"], g2["DZM"]
+start_n = {f"m{i}": float(PRIM[0][i]) for i in range(NB)}
+start_n.update({f"dz{i}": float(DZM[i]) for i in range(NB)}, Aia=0.3, eta=0.0)
 
 
 def ok(q):
