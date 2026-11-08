@@ -239,7 +239,12 @@ def prereg_cosmology(root=ROOT):
     uv=root/"analysis/toe_uv"
     prereg_path=uv/"prereg_tilt.json"
     data=json.loads(prereg_path.read_text(encoding="utf8"))
-    h=hashlib.sha256(prereg_path.read_bytes()).hexdigest()
+    raw=prereg_path.read_bytes()
+    h_raw=hashlib.sha256(raw).hexdigest()
+    # Git on the user's Windows machine may check out CRLF while CI on
+    # Linux sees the committed LF bytes. Verify canonical tracked LF content.
+    lf_bytes=raw.replace(b"\r\n",b"\n")
+    h=hashlib.sha256(lf_bytes).hexdigest()
     recorded=(uv/"prereg_tilt.sha256").read_text(encoding="utf8").split()[0]
     assert h==recorded
     tilt=data["S7_tomographic_tilt"]
@@ -281,6 +286,7 @@ def prereg_cosmology(root=ROOT):
     assert ppd["sn"]["klt25_infl1"]["accepted"]==12
     return {"status":"FROZEN_S7_HASH_VERIFIED_AND_PRELIMINARY_KLT_PPD_COMPLETENESS_AUDIT",
       "S7_frozen_hash_sha256":h,
+      "S7_local_line_ending_translation_detected":h_raw!=h,
       "S7_prediction":"CPL/fading low tomographic xi+ ratios are lower; sign-only prediction not a new observed release.",
       "S7_tomographic_signed_ratios":b,
       "new_release_holdout_scored":False,
