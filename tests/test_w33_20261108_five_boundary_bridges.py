@@ -109,6 +109,12 @@ def test_s7_tomography_signs_and_pair_counts(cert):
     assert b["des_pairs"]["minimum_low_z_relative_tilt"]<-.04
     assert b["kids_pairs"]["minimum_low_z_relative_tilt"]<-.03
 
+def test_frozen_s7_amplitude_free_log_ratio_contrast(cert):
+    b=cert["cosmology_prereg_and_PPD"]["S7_tomographic_signed_ratios"]
+    assert b["des_pairs"]["frozen_low_over_high_log_ratio_contrast"]==pytest.approx(-0.042088887293098426,abs=1e-12)
+    assert b["kids_pairs"]["frozen_low_over_high_log_ratio_contrast"]==pytest.approx(-0.0505380482685487,abs=1e-12)
+    assert "not a new observed release" in b["kids_pairs"]["comparison"]
+
 def test_KLT_samples_are_in_progress_and_failures_visible(cert):
     x=cert["cosmology_prereg_and_PPD"]
     assert x["KLT_preliminary_PPD_rows"]["bao"]["klt25_infl1"]["accepted"]==18
