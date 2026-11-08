@@ -1,0 +1,65 @@
+{
+  "status": "PASS_NATIVE_FULL27BAND_SCALAR_HOLONOMY_AND41_CONTROLS_NOT_TOE",
+  "utc": "2026-11-08T21:35:21.338785+00:00",
+  "seconds": 324.17495630000485,
+  "executions": [
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "analysis/toe_20261108_native_scalar_wilson.py",
+        "--extended"
+      ],
+      "exit_code": 0,
+      "stdout": "[{\"L\": 2, \"mass\": 0.3, \"curvature\": 0.0020565628747725227, \"relative_change\": 0.02714208761609327}, {\"L\": 2, \"mass\": 0.8, \"curvature\": 0.0006923121481644866, \"relative_change\": 8.782888464087257e-05}, {\"L\": 3, \"mass\": 0.3, \"curvature\": 0.00028497845207453045, \"relative_change\": 0.08213017782442589}, {\"L\": 3, \"mass\": 0.8, \"curvature\": 3.931802900578542e-05, \"relative_change\": 0.0006855388175236454}, {\"L\": 4, \"mass\": 0.3, \"curvature\": 6.274715817419447e-05, \"relative_change\": 0.18549792749092953}, {\"L\": 4, \"mass\": 0.8, \"curvature\": 3.2666280116802634e-06, \"relative_change\": 0.004536719004344936}, {\"L\": 6, \"mass\": 0.3, \"curvature\": 5.742751428248925e-06, \"relative_change\": 0.5425835751164638}, {\"L\": 6, \"mass\": 0.8, \"curvature\": 3.718665476427245e-08, \"relative_change\": 0.1849903044970561}]\n",
+      "stderr": "",
+      "seconds": 275.0443809999997
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-m",
+        "pytest",
+        "--noconftest",
+        "-q",
+        "tests/test_toe_20261108_native_scalar_wilson.py",
+        "tests/test_toe_20261108_gauge_origin.py"
+      ],
+      "exit_code": 0,
+      "stdout": ".........................................                                [100%]\n41 passed in 41.83s\n",
+      "stderr": "",
+      "seconds": 49.07367470000463
+    }
+  ],
+  "selected_source_and_input_raw_sha256": {
+    "analysis/toe_20261108_native_scalar_wilson.py": "7a224a382dd86327f4b7fe5b2ae7f306560977bec5e1f19cc5165b4bf16148e4",
+    "analysis/toe_20261108_native_scalar_wilson_server.js": "72da4c252cc956a4156de6a62a69378cc83e22e11ed9aa1771f64e47c38eb5c5",
+    "tests/test_toe_20261108_native_scalar_wilson.py": "db1c6dfe5818801e5751dcdbeb22e326391429749108dcd7158057988df8c1c7",
+    "data/toe_20261108_native_scalar_wilson_server.json": "1f4e764e4d82f9bb096e4547d3d3cd514d20cea98ae46b7f809830e751114faa",
+    "analysis/w33_pass12189_12193_five_bridges.py": "fab9b39b71e189649dbcdf07c1a46e9967e3afb879488eadaac7d4ff8e2ce4ce",
+    "data/w33_pass11991_native_four_period_cover.json": "d8fcc26b167d858876cbd8da8d8c434c8a50fea70974c37c99ec574814572d46",
+    "analysis/w33_20261027_native_bloch_face_module.py": "35b51978da7071f45f28ed32748948acab1bf0c2354a167be6c61eb1550c2fa6"
+  },
+  "selected_inputs_unchanged_during_run": true,
+  "result_raw_sha256": "a70e6bcac01ccdb7969c2127d73da6958bbb6ec27ffd67f0c6eb3824cc46c2e6",
+  "earlier_actual_RDC": {
+    "base_producer": {
+      "pid": 14736,
+      "exit_code": 0,
+      "seconds": 32.47
+    },
+    "new18tests": {
+      "pid": 21592,
+      "exit_code": 0,
+      "seconds": 9.65,
+      "stdout": "18passed7.22s"
+    },
+    "extended_diagnostic": {
+      "pid": 22372,
+      "exit_code": 0,
+      "seconds": 207.02,
+      "scope": "Loaded before addition of analytic-lower-bound metadata. Final extended producer above regenerates the final frozen source; no prior executed-source hash inferred from end-of-run file."
+    }
+  },
+  "server": "Actual functions.exec V8 full27complex binomial matrix series; different from desktop Python spectral eigensolver and Frechet derivative.",
+  "scope": "22new independent controls plus19prior gauge-origin controls. Full-band declared free complex scalar at fixed gauge background and external compactification; numerical finite-volume grids, not rigorous infinite-volume coefficients or physical mass units. Positive-walk sign and formula are analytic. No radion, complete charged spectrum, physical quark/chiral anomaly completion or TOE."
+}

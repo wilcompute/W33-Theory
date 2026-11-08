@@ -1,0 +1,617 @@
+{
+  "status": "NATIVE_27_BAND_CHARGED_COMPLEX_SCALAR_WILSON_POTENTIAL_NOT_TOE",
+  "action": "S_matter=sum_sites |D_t chi|^2-m^2|chi|^2-sum_actual_edges |exp(i a_e)chi_head-chi_tail|^2. One complex charge1 scalar, continuous time, unit hopping; canonical time kinetic. Free scalar integrated exactly at fixed gauge background.",
+  "normalization": {
+    "native_M": [
+      [
+        10,
+        5,
+        -6,
+        0
+      ],
+      [
+        5,
+        10,
+        0,
+        -6
+      ],
+      [
+        -6,
+        0,
+        12,
+        -6
+      ],
+      [
+        0,
+        -6,
+        -6,
+        12
+      ]
+    ],
+    "noncompact_block_det": 540,
+    "Schur_scalar_kinetic": "27/5",
+    "inverse_M44": "5/27",
+    "field_redefinition": "A_noncompact'=A_noncompact+(0,-3/5,-1/2)*A4",
+    "compact_kinetic": "f_theta^2=27/(5*g^2*L), theta=L*A4; sum electric energy over L cells, unit microscopic link kinetic 1/g^2.",
+    "reduced_quadratic_symbol": "k^T M k/27 = (k3+A^-1*b*k4)^T A (k3+A^-1*b*k4)/27 + k4^2/5",
+    "continuum_radius": "For this supplied leading common metric, R_effective=sqrt(5)*L/(2*pi) in lattice units. It is not a measured radius or a full-band dispersion identity.",
+    "caveat": "Metric and engineered leading common cone are prior inputs. Scalar potential below uses actual full native covariant vertex Laplacian, not the engineered gauge magnetic matrix."
+  },
+  "literal_winding_witness": {
+    "start_end_vertex": 0,
+    "primitive_period": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "steps": 8,
+    "signed_edges": [
+      [
+        6,
+        1
+      ],
+      [
+        32,
+        -1
+      ],
+      [
+        19,
+        -1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        12,
+        1
+      ],
+      [
+        53,
+        1
+      ],
+      [
+        4,
+        -1
+      ]
+    ],
+    "winding_one_on_L_compact_cover": "Repeat this literal based path L times; it has zero noncompact period and one compact winding. This proves a positive nonzero heat-walk coefficient, not minimal loop length."
+  },
+  "rows": [
+    {
+      "L": 2,
+      "mass": 0.3,
+      "samples": [
+        {
+          "noncompact_grid": 4,
+          "full_bands": 27,
+          "compact_cells": 2,
+          "mass": 0.3,
+          "E0": 169.03275485014464,
+          "delta_V_pi": 0.004640970346230233,
+          "V_theta_second_at_zero": 0.004083244102461943,
+          "single_holonomy_normalized_curvature_at_g1": 0.0015123126305414602
+        },
+        {
+          "noncompact_grid": 6,
+          "full_bands": 27,
+          "compact_cells": 2,
+          "mass": 0.3,
+          "E0": 169.03345303941728,
+          "delta_V_pi": 0.003891580126150984,
+          "V_theta_second_at_zero": 0.002358676252981138,
+          "single_holonomy_normalized_curvature_at_g1": 0.0008735837974004215
+        },
+        {
+          "noncompact_grid": 8,
+          "full_bands": 27,
+          "compact_cells": 2,
+          "mass": 0.3,
+          "E0": 169.0335077704638,
+          "delta_V_pi": 0.0038371254005369337,
+          "V_theta_second_at_zero": 0.002113939608851089,
+          "single_holonomy_normalized_curvature_at_g1": 0.0007829405958707737
+        },
+        {
+          "noncompact_grid": 12,
+          "full_bands": 27,
+          "compact_cells": 2,
+          "mass": 0.3,
+          "E0": 169.03351542406853,
+          "delta_V_pi": 0.003829492816379343,
+          "V_theta_second_at_zero": 0.0020565628747725227,
+          "single_holonomy_normalized_curvature_at_g1": 0.0007616899536194529
+        }
+      ],
+      "analytic_curvature_lower_bound": {
+        "walk_length": 16,
+        "log10_numeric_lower_bound": -17.30364208090457,
+        "exact_formula": "V_theta_second(0)>=L*Gamma(r-1/2)/[sqrt(pi)*r!*(10+m^2)^(r-1/2)]>0; r=L times the literal based primitive winding-walk length.",
+        "proof": "Keep only the forward/reverse winding-one walks based at vertex0 in each of L compact cells in exp(tA). All remaining walk coefficients are nonnegative after BZ3 projection. Integrate that one term in the trace-sqrt proper-time representation. Formula exact; printed log uses ordinary floating arithmetic."
+      },
+      "last_two_curvature_relative_change": 0.02714208761609327,
+      "numerical_scope": "Deterministic finite-torus samples; last-grid difference is a convergence diagnostic, not a rigorous infinite-volume error bound."
+    },
+    {
+      "L": 2,
+      "mass": 0.8,
+      "samples": [
+        {
+          "noncompact_grid": 4,
+          "full_bands": 27,
+          "compact_cells": 2,
+          "mass": 0.8,
+          "E0": 173.88627747513664,
+          "delta_V_pi": 0.0014182822308725918,
+          "V_theta_second_at_zero": 0.0007606130304688447,
+          "single_holonomy_normalized_curvature_at_g1": 0.00028170852980327583
+        },
+        {
+          "noncompact_grid": 6,
+          "full_bands": 27,
+          "compact_cells": 2,
+          "mass": 0.8,
+          "E0": 173.88631571070653,
+          "delta_V_pi": 0.001371874046128596,
+          "V_theta_second_at_zero": 0.0006941818129727041,
+          "single_holonomy_normalized_curvature_at_g1": 0.0002571043751750756
+        },
+        {
+          "noncompact_grid": 8,
+          "full_bands": 27,
+          "compact_cells": 2,
+          "mass": 0.8,
+          "E0": 173.88631622697602,
+          "delta_V_pi": 0.001371369451959481,
+          "V_theta_second_at_zero": 0.0006923729585091879,
+          "single_holonomy_normalized_curvature_at_g1": 0.000256434429077477
+        },
+        {
+          "noncompact_grid": 12,
+          "full_bands": 27,
+          "compact_cells": 2,
+          "mass": 0.8,
+          "E0": 173.88631623742646,
+          "delta_V_pi": 0.0013713593305624272,
+          "V_theta_second_at_zero": 0.0006923121481644866,
+          "single_holonomy_normalized_curvature_at_g1": 0.0002564119067275876
+        }
+      ],
+      "analytic_curvature_lower_bound": {
+        "walk_length": 16,
+        "log10_numeric_lower_bound": -17.660924237597413,
+        "exact_formula": "V_theta_second(0)>=L*Gamma(r-1/2)/[sqrt(pi)*r!*(10+m^2)^(r-1/2)]>0; r=L times the literal based primitive winding-walk length.",
+        "proof": "Keep only the forward/reverse winding-one walks based at vertex0 in each of L compact cells in exp(tA). All remaining walk coefficients are nonnegative after BZ3 projection. Integrate that one term in the trace-sqrt proper-time representation. Formula exact; printed log uses ordinary floating arithmetic."
+      },
+      "last_two_curvature_relative_change": 8.782888464087257e-05,
+      "numerical_scope": "Deterministic finite-torus samples; last-grid difference is a convergence diagnostic, not a rigorous infinite-volume error bound."
+    },
+    {
+      "L": 3,
+      "mass": 0.3,
+      "samples": [
+        {
+          "noncompact_grid": 4,
+          "full_bands": 27,
+          "compact_cells": 3,
+          "mass": 0.3,
+          "E0": 253.55215968831578,
+          "delta_V_pi": 0.001419692433671571,
+          "V_theta_second_at_zero": 0.0012041050532554786,
+          "single_holonomy_normalized_curvature_at_g1": 0.0006689472518085992
+        },
+        {
+          "noncompact_grid": 6,
+          "full_bands": 27,
+          "compact_cells": 3,
+          "mass": 0.3,
+          "E0": 253.55285364760877,
+          "delta_V_pi": 0.0006135978356383021,
+          "V_theta_second_at_zero": 0.00041898662386347405,
+          "single_holonomy_normalized_curvature_at_g1": 0.00023277034659081893
+        },
+        {
+          "noncompact_grid": 8,
+          "full_bands": 27,
+          "compact_cells": 3,
+          "mass": 0.3,
+          "E0": 253.55290846689684,
+          "delta_V_pi": 0.0005520580946267728,
+          "V_theta_second_at_zero": 0.0003104780712792827,
+          "single_holonomy_normalized_curvature_at_g1": 0.0001724878173773793
+        },
+        {
+          "noncompact_grid": 12,
+          "full_bands": 27,
+          "compact_cells": 3,
+          "mass": 0.3,
+          "E0": 253.55291611996927,
+          "delta_V_pi": 0.0005442955285559492,
+          "V_theta_second_at_zero": 0.00028497845207453045,
+          "single_holonomy_normalized_curvature_at_g1": 0.00015832136226362804
+        }
+      ],
+      "analytic_curvature_lower_bound": {
+        "walk_length": 24,
+        "log10_numeric_lower_bound": -25.426331358209143,
+        "exact_formula": "V_theta_second(0)>=L*Gamma(r-1/2)/[sqrt(pi)*r!*(10+m^2)^(r-1/2)]>0; r=L times the literal based primitive winding-walk length.",
+        "proof": "Keep only the forward/reverse winding-one walks based at vertex0 in each of L compact cells in exp(tA). All remaining walk coefficients are nonnegative after BZ3 projection. Integrate that one term in the trace-sqrt proper-time representation. Formula exact; printed log uses ordinary floating arithmetic."
+      },
+      "last_two_curvature_relative_change": 0.08213017782442589,
+      "numerical_scope": "Deterministic finite-torus samples; last-grid difference is a convergence diagnostic, not a rigorous infinite-volume error bound."
+    },
+    {
+      "L": 3,
+      "mass": 0.8,
+      "samples": [
+        {
+          "noncompact_grid": 4,
+          "full_bands": 27,
+          "compact_cells": 3,
+          "mass": 0.8,
+          "E0": 260.8304282003308,
+          "delta_V_pi": 0.00013007313219759453,
+          "V_theta_second_at_zero": 7.268763071232578e-05,
+          "single_holonomy_normalized_curvature_at_g1": 4.0382017062403215e-05
+        },
+        {
+          "noncompact_grid": 6,
+          "full_bands": 27,
+          "compact_cells": 3,
+          "mass": 0.8,
+          "E0": 260.83046552956137,
+          "delta_V_pi": 7.92241166891472e-05,
+          "V_theta_second_at_zero": 4.013705782755192e-05,
+          "single_holonomy_normalized_curvature_at_g1": 2.2298365459751067e-05
+        },
+        {
+          "noncompact_grid": 8,
+          "full_bands": 27,
+          "compact_cells": 3,
+          "mass": 0.8,
+          "E0": 260.83046605248546,
+          "delta_V_pi": 7.849820843830457e-05,
+          "V_theta_second_at_zero": 3.934500153161087e-05,
+          "single_holonomy_normalized_curvature_at_g1": 2.185833418422826e-05
+        },
+        {
+          "noncompact_grid": 12,
+          "full_bands": 27,
+          "compact_cells": 3,
+          "mass": 0.8,
+          "E0": 260.8304660629206,
+          "delta_V_pi": 7.848687278055877e-05,
+          "V_theta_second_at_zero": 3.931802900578542e-05,
+          "single_holonomy_normalized_curvature_at_g1": 2.1843349447658568e-05
+        }
+      ],
+      "analytic_curvature_lower_bound": {
+        "walk_length": 24,
+        "log10_numeric_lower_bound": -25.968017208678937,
+        "exact_formula": "V_theta_second(0)>=L*Gamma(r-1/2)/[sqrt(pi)*r!*(10+m^2)^(r-1/2)]>0; r=L times the literal based primitive winding-walk length.",
+        "proof": "Keep only the forward/reverse winding-one walks based at vertex0 in each of L compact cells in exp(tA). All remaining walk coefficients are nonnegative after BZ3 projection. Integrate that one term in the trace-sqrt proper-time representation. Formula exact; printed log uses ordinary floating arithmetic."
+      },
+      "last_two_curvature_relative_change": 0.0006855388175236454,
+      "numerical_scope": "Deterministic finite-torus samples; last-grid difference is a convergence diagnostic, not a rigorous infinite-volume error bound."
+    },
+    {
+      "L": 4,
+      "mass": 0.3,
+      "samples": [
+        {
+          "noncompact_grid": 4,
+          "full_bands": 27,
+          "compact_cells": 4,
+          "mass": 0.3,
+          "E0": 338.0701506706355,
+          "delta_V_pi": 0.0008634326917444923,
+          "V_theta_second_at_zero": 0.0005811389353573815,
+          "single_holonomy_normalized_curvature_at_g1": 0.00043047328544991225
+        },
+        {
+          "noncompact_grid": 6,
+          "full_bands": 27,
+          "compact_cells": 4,
+          "mass": 0.3,
+          "E0": 338.07079765896077,
+          "delta_V_pi": 0.000197610829104633,
+          "V_theta_second_at_zero": 0.00013983103143257593,
+          "single_holonomy_normalized_curvature_at_g1": 0.0001035785418019081
+        },
+        {
+          "noncompact_grid": 8,
+          "full_bands": 27,
+          "compact_cells": 4,
+          "mass": 0.3,
+          "E0": 338.07085266632816,
+          "delta_V_pi": 0.00013014689625379106,
+          "V_theta_second_at_zero": 7.703744446088651e-05,
+          "single_holonomy_normalized_curvature_at_g1": 5.706477367473075e-05
+        },
+        {
+          "noncompact_grid": 12,
+          "full_bands": 27,
+          "compact_cells": 4,
+          "mass": 0.3,
+          "E0": 338.0708603409534,
+          "delta_V_pi": 0.00012122018455329453,
+          "V_theta_second_at_zero": 6.274715817419447e-05,
+          "single_holonomy_normalized_curvature_at_g1": 4.647937642532924e-05
+        }
+      ],
+      "analytic_curvature_lower_bound": {
+        "walk_length": 32,
+        "log10_numeric_lower_bound": -33.521668618242224,
+        "exact_formula": "V_theta_second(0)>=L*Gamma(r-1/2)/[sqrt(pi)*r!*(10+m^2)^(r-1/2)]>0; r=L times the literal based primitive winding-walk length.",
+        "proof": "Keep only the forward/reverse winding-one walks based at vertex0 in each of L compact cells in exp(tA). All remaining walk coefficients are nonnegative after BZ3 projection. Integrate that one term in the trace-sqrt proper-time representation. Formula exact; printed log uses ordinary floating arithmetic."
+      },
+      "last_two_curvature_relative_change": 0.18549792749092953,
+      "numerical_scope": "Deterministic finite-torus samples; last-grid difference is a convergence diagnostic, not a rigorous infinite-volume error bound."
+    },
+    {
+      "L": 4,
+      "mass": 0.8,
+      "samples": [
+        {
+          "noncompact_grid": 4,
+          "full_bands": 27,
+          "compact_cells": 4,
+          "mass": 0.8,
+          "E0": 347.77397323250415,
+          "delta_V_pi": 4.0087771196795075e-05,
+          "V_theta_second_at_zero": 2.074285604075415e-05,
+          "single_holonomy_normalized_curvature_at_g1": 1.5365078548706777e-05
+        },
+        {
+          "noncompact_grid": 6,
+          "full_bands": 27,
+          "compact_cells": 4,
+          "mass": 0.8,
+          "E0": 347.7740032954592,
+          "delta_V_pi": 7.36336227191714e-06,
+          "V_theta_second_at_zero": 3.797306793473684e-06,
+          "single_holonomy_normalized_curvature_at_g1": 2.812819847017544e-06
+        },
+        {
+          "noncompact_grid": 8,
+          "full_bands": 27,
+          "compact_cells": 4,
+          "mass": 0.8,
+          "E0": 347.77400382340403,
+          "delta_V_pi": 6.5475307451379194e-06,
+          "V_theta_second_at_zero": 3.2815153246165e-06,
+          "single_holonomy_normalized_curvature_at_g1": 2.4307520923085186e-06
+        },
+        {
+          "noncompact_grid": 12,
+          "full_bands": 27,
+          "compact_cells": 4,
+          "mass": 0.8,
+          "E0": 347.77400383418353,
+          "delta_V_pi": 6.530914220093109e-06,
+          "V_theta_second_at_zero": 3.2666280116802634e-06,
+          "single_holonomy_normalized_curvature_at_g1": 2.4197244530964914e-06
+        }
+      ],
+      "analytic_curvature_lower_bound": {
+        "walk_length": 32,
+        "log10_numeric_lower_bound": -34.24775816248897,
+        "exact_formula": "V_theta_second(0)>=L*Gamma(r-1/2)/[sqrt(pi)*r!*(10+m^2)^(r-1/2)]>0; r=L times the literal based primitive winding-walk length.",
+        "proof": "Keep only the forward/reverse winding-one walks based at vertex0 in each of L compact cells in exp(tA). All remaining walk coefficients are nonnegative after BZ3 projection. Integrate that one term in the trace-sqrt proper-time representation. Formula exact; printed log uses ordinary floating arithmetic."
+      },
+      "last_two_curvature_relative_change": 0.004536719004344936,
+      "numerical_scope": "Deterministic finite-torus samples; last-grid difference is a convergence diagnostic, not a rigorous infinite-volume error bound."
+    },
+    {
+      "L": 6,
+      "mass": 0.3,
+      "samples": [
+        {
+          "noncompact_grid": 4,
+          "full_bands": 27,
+          "compact_cells": 6,
+          "mass": 0.3,
+          "E0": 507.10573906906524,
+          "delta_V_pi": 0.00035397355969735145,
+          "V_theta_second_at_zero": 0.0001941412107851324,
+          "single_holonomy_normalized_curvature_at_g1": 0.00021571245642792487
+        },
+        {
+          "noncompact_grid": 6,
+          "full_bands": 27,
+          "compact_cells": 6,
+          "mass": 0.3,
+          "E0": 507.10632089305324,
+          "delta_V_pi": 7.004560166024021e-05,
+          "V_theta_second_at_zero": 4.0303660962171913e-05,
+          "single_holonomy_normalized_curvature_at_g1": 4.4781845513524345e-05
+        },
+        {
+          "noncompact_grid": 8,
+          "full_bands": 27,
+          "compact_cells": 6,
+          "mass": 0.3,
+          "E0": 507.10636899188836,
+          "delta_V_pi": 2.0729928507989825e-05,
+          "V_theta_second_at_zero": 1.25547556140143e-05,
+          "single_holonomy_normalized_curvature_at_g1": 1.3949728460015889e-05
+        },
+        {
+          "noncompact_grid": 12,
+          "full_bands": 27,
+          "compact_cells": 6,
+          "mass": 0.3,
+          "E0": 507.10637653546706,
+          "delta_V_pi": 1.0956488267765963e-05,
+          "V_theta_second_at_zero": 5.742751428248925e-06,
+          "single_holonomy_normalized_curvature_at_g1": 6.380834920276584e-06
+        }
+      ],
+      "analytic_curvature_lower_bound": {
+        "walk_length": 48,
+        "log10_numeric_lower_bound": -49.67369926529216,
+        "exact_formula": "V_theta_second(0)>=L*Gamma(r-1/2)/[sqrt(pi)*r!*(10+m^2)^(r-1/2)]>0; r=L times the literal based primitive winding-walk length.",
+        "proof": "Keep only the forward/reverse winding-one walks based at vertex0 in each of L compact cells in exp(tA). All remaining walk coefficients are nonnegative after BZ3 projection. Integrate that one term in the trace-sqrt proper-time representation. Formula exact; printed log uses ordinary floating arithmetic."
+      },
+      "last_two_curvature_relative_change": 0.5425835751164638,
+      "numerical_scope": "Deterministic finite-torus samples; last-grid difference is a convergence diagnostic, not a rigorous infinite-volume error bound."
+    },
+    {
+      "L": 6,
+      "mass": 0.8,
+      "samples": [
+        {
+          "noncompact_grid": 4,
+          "full_bands": 27,
+          "compact_cells": 6,
+          "mass": 0.8,
+          "E0": 521.6609864737939,
+          "delta_V_pi": 7.399453352263663e-06,
+          "V_theta_second_at_zero": 3.703942362346009e-06,
+          "single_holonomy_normalized_curvature_at_g1": 4.115491513717788e-06
+        },
+        {
+          "noncompact_grid": 6,
+          "full_bands": 27,
+          "compact_cells": 6,
+          "mass": 0.8,
+          "E0": 521.6610102832395,
+          "delta_V_pi": 4.4867340420751134e-07,
+          "V_theta_second_at_zero": 2.2632264916966375e-07,
+          "single_holonomy_normalized_curvature_at_g1": 2.5146961018851526e-07
+        },
+        {
+          "noncompact_grid": 8,
+          "full_bands": 27,
+          "compact_cells": 6,
+          "mass": 0.8,
+          "E0": 521.6610106031793,
+          "delta_V_pi": 9.004804724099813e-08,
+          "V_theta_second_at_zero": 4.562725446023621e-08,
+          "single_holonomy_normalized_curvature_at_g1": 5.0696949400262455e-08
+        },
+        {
+          "noncompact_grid": 12,
+          "full_bands": 27,
+          "compact_cells": 6,
+          "mass": 0.8,
+          "E0": 521.6610106127139,
+          "delta_V_pi": 7.436801752191968e-08,
+          "V_theta_second_at_zero": 3.718665476427245e-08,
+          "single_holonomy_normalized_curvature_at_g1": 4.131850529363606e-08
+        }
+      ],
+      "analytic_curvature_lower_bound": {
+        "walk_length": 48,
+        "log10_numeric_lower_bound": -50.76859619709281,
+        "exact_formula": "V_theta_second(0)>=L*Gamma(r-1/2)/[sqrt(pi)*r!*(10+m^2)^(r-1/2)]>0; r=L times the literal based primitive winding-walk length.",
+        "proof": "Keep only the forward/reverse winding-one walks based at vertex0 in each of L compact cells in exp(tA). All remaining walk coefficients are nonnegative after BZ3 projection. Integrate that one term in the trace-sqrt proper-time representation. Formula exact; printed log uses ordinary floating arithmetic."
+      },
+      "last_two_curvature_relative_change": 0.1849903044970561,
+      "numerical_scope": "Deterministic finite-torus samples; last-grid difference is a convergence diagnostic, not a rigorous infinite-volume error bound."
+    }
+  ],
+  "shape_control": [
+    {
+      "theta": 0,
+      "delta_V": 0.0
+    },
+    {
+      "theta": 0.3,
+      "delta_V": 1.290134687792488e-05
+    },
+    {
+      "theta": 1.0,
+      "delta_V": 0.00013031219828008034
+    },
+    {
+      "theta": 2.0,
+      "delta_V": 0.0003908817543845089
+    },
+    {
+      "theta": 3.141592653589793,
+      "delta_V": 0.0005452908710594784
+    }
+  ],
+  "potential": "V(theta)-V(0)=int_BZ3 dk/(2pi)^3 sum_n=0..L-1 sum_j=1..27 [sqrt(m^2+lambda_j(k,(2pi*n+theta)/L))-sqrt(m^2+lambda_j(k,2pi*n/L))]. Complex scalar has two real oscillators, hence coefficient1, not1/2.",
+  "analytic_curvature": "For X=U^dag H' U,Y=U^dag H'' U,omega=sqrt(m^2+lambda): E''=sum_a Yaa/(2omega_a)-sum_ab |Xab|^2/[2omega_a omega_b(omega_a+omega_b)]. Stable at eigenvalue degeneracy.",
+  "positivity_proof": "Regular native graph H=10I-A(theta). Exp(tA) expands into positive-weight walks. BZ3 integration projects zero noncompact period; sum compact momenta selects period multiple L. Paired winding walks give nonnegative coefficients times cos(w theta). In sqrt(X)=-1/(2sqrt(pi))*integral dt t^-3/2[exp(-tX)-I], this yields V(theta)-V(0)=sum_w>=1 c_w(1-cos(w theta)), c_w>=0. At positive mass all derivatives converge. Literal primitive e4 walk repeated L gives c_1>0, so theta=0 mod2pi is the unique global minimum and V''(0)>0 for this scalar inventory.",
+  "finite_grid_scope": "Unshifted trapezoid is an actual periodic finite torus. Extra noncompact winding walks can alias at finite grid; this preserves positivity there but changes coefficients. Infinite-volume numerical limit needs controlled extrapolation.",
+  "finite_volume_upper_bound": "Coefficientwise c_w(infinite BZ3)<=c_w(Nperiodic torus), since the latter adds nonnegative walks whose noncompact periods are multiples of N. Thus 0<Vtheta_second_infinite(0)<=Vtheta_second_N(0), and DeltaV_infinite(theta)<=DeltaV_N(theta). If N2 is a multiple of N1, the N2 winding set is a subset, so both upper bounds decrease. Analytic comparison of exact finite-volume quantities; floating results are not interval-certified roundoff bounds.",
+  "mass_normalization_boundary": "At finite noncompact torus size N, all four holonomies are physical and the potential can mix them. The quantity C*5*g^2*L/27 is a single-holonomy normalized curvature diagnostic, NOT automatically a finite-torus pole eigenmass. The Schur single-scalar mass formula requires infinite noncompact volume, where constant noncompact connections shift the BZ integral and the potential is independent of them. A full finite-volume pole calculation needs the four-variable potential Hessian.",
+  "boundary": "Scalar-only contribution, external L compactification, mass and unit microscopic scale. No native charged Dirac construction, SM charge identification, gauge quantum corrections, radion potential, selected lattice spacing, observed scalar mass, CC value, relic populations, Lorentzian quantum continuum or TOE completion. A stable scalar holonomy is not radius stabilization. Fermionic/boundary twists or extra fields can change the minimum.",
+  "prior_owners": [
+    "data/w33_pass11991_native_four_period_cover.json",
+    "analysis/w33_pass12189_12193_five_bridges.py",
+    "analysis/w33_20261027_native_bloch_face_module.py",
+    "analysis/2026-10-27_acoustic_vacuum_density.md",
+    "analysis/w33_20261108_five_boundary_bridges.py"
+  ],
+  "primary_context": [
+    "https://arxiv.org/html/2212.07049v2#S2",
+    "https://arxiv.org/abs/hep-ph/0105021"
+  ],
+  "extended_finite_volume_controls": [
+    {
+      "L": 3,
+      "mass": 0.3,
+      "noncompact_grid": 20,
+      "E0": 253.55291634098182,
+      "V_theta_second_at_zero": 0.0002834891799494958,
+      "single_holonomy_normalized_curvature_at_g1": 0.00015749398886083098
+    },
+    {
+      "L": 3,
+      "mass": 0.3,
+      "noncompact_grid": 28,
+      "E0": 253.55291634143808,
+      "V_theta_second_at_zero": 0.0002834817663880973,
+      "single_holonomy_normalized_curvature_at_g1": 0.00015748987021560958
+    },
+    {
+      "L": 6,
+      "mass": 0.3,
+      "noncompact_grid": 20,
+      "E0": 507.10637675808096,
+      "V_theta_second_at_zero": 5.373611526591233e-06,
+      "single_holonomy_normalized_curvature_at_g1": 5.970679473990258e-06
+    },
+    {
+      "L": 6,
+      "mass": 0.3,
+      "noncompact_grid": 28,
+      "E0": 507.1063767585374,
+      "V_theta_second_at_zero": 5.3717576360750285e-06,
+      "single_holonomy_normalized_curvature_at_g1": 5.968619595638921e-06
+    },
+    {
+      "L": 6,
+      "mass": 0.8,
+      "noncompact_grid": 20,
+      "E0": 521.6610106127216,
+      "V_theta_second_at_zero": 3.717755641715649e-08,
+      "single_holonomy_normalized_curvature_at_g1": 4.130839601906276e-08
+    },
+    {
+      "L": 6,
+      "mass": 0.8,
+      "noncompact_grid": 28,
+      "E0": 521.6610106127216,
+      "V_theta_second_at_zero": 3.717755639088938e-08,
+      "single_holonomy_normalized_curvature_at_g1": 4.130839598987709e-08
+    }
+  ],
+  "input_raw_sha256": {
+    "data/w33_pass11991_native_four_period_cover.json": "d8fcc26b167d858876cbd8da8d8c434c8a50fea70974c37c99ec574814572d46",
+    "analysis/w33_pass12189_12193_five_bridges.py": "fab9b39b71e189649dbcdf07c1a46e9967e3afb879488eadaac7d4ff8e2ce4ce",
+    "analysis/w33_20261027_native_bloch_face_module.py": "35b51978da7071f45f28ed32748948acab1bf0c2354a167be6c61eb1550c2fa6",
+    "analysis/2026-10-27_acoustic_vacuum_density.md": "b90dcccc68f0cb3809200f5c25f5bfcd487ec27832087bad4b94f387ed0be7cc",
+    "analysis/w33_20261108_five_boundary_bridges.py": "96f0396862889e74f7f94ab3746f476602752aa99e65b9d8a034792fec523229",
+    "analysis\\toe_20261108_native_scalar_wilson.py": "7a224a382dd86327f4b7fe5b2ae7f306560977bec5e1f19cc5165b4bf16148e4"
+  }
+}

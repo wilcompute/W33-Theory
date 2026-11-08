@@ -1,0 +1,70 @@
+{
+  "status": "THREE_NEW_FULL_PATCHES_READ_PDF116_OF215_WEEK_AND_OLDER_BATCH_UNFINISHED",
+  "utc": "2026-11-08T21:23:57.380948+00:00",
+  "baseline": "334e2242560e05991891877c9d201711b2e606cd",
+  "incoming_tip": "5200a426cf184ae8fcb22d1f549a17cf89a1205d",
+  "full_patches_read": [
+    "239eba0af4e188c2358cd7d6ff0893b25c9f1424",
+    "cc805746445a68e807617f12a57da04458ff4aa6",
+    "5200a426cf184ae8fcb22d1f549a17cf89a1205d"
+  ],
+  "patch_lines": 291,
+  "patch_raw_sha256": "26fc3f6c64d3000bd1f754df9c1f98f45d92d39657be2e1fa7e1448349025c55",
+  "immutable_incoming_blob_raw_sha256": {
+    "analysis/PASS12631_KIDS_HELDOUT.md": "0275a9d044e294e4e5ffb52cb53286ba3c2414b2fc5e00dac4db0158c027574b",
+    "analysis/toe_uv/scorecard.json": "6ae468d036a43e83a7c77ee4a1daec245970153cd74966adb8f7ff1e09044365",
+    "analysis/toe_uv/scorecard.md": "180ab1e32a78ef4b65a30990153935f1eea56e9d74fb734e0ff1c488d6b510c7",
+    "analysis/toe_uv/scorecard.py": "aea1fa415fbcc0ef53bfe86b2f7acc9123cce5a1ce8c727a7a554f086ca69d18",
+    "analysis/toe_uv/shear_diag.py": "9980652df8411f7e44b68d552d1f9777be3945ff9f003e04858a667bbd0931de",
+    "analysis/toe_uv/shear_diag_des.json": "aed4adc3c1a72cf3ae79942cf3eafb5e76d1794d4e0ba43d785e94bd711be663",
+    "analysis/toe_uv/shear_diag_kids.json": "d46406810f8037a0c67ae6f95caa4247d54be72ff2a2bf7a0a3a2dc80da925ed",
+    "analysis/toe_uv/shear_ppd_kids_dovekie.json": "e9a757e0a55a4c4d8fe3a72876abfe1082d4d72f8d67b65a9799307d30e65b79"
+  },
+  "incoming_scope": "Three full patches read: frozenS7 low-z mechanism correction, provisional KiDS KLT predictive row, provisional width-sensitive KLT scorecard. High/mixed-block covariance data replace the prior incorrect explanation. Original CLASS likelihood/covariance and posterior/MCMC not rerun. Prior native19-test receipt remains only finite-model/record-integrity evidence, not S7 success. Previous much larger concurrent batch remains incompletely read.",
+  "manuscript": {
+    "path": "papers/forty_points/main.pdf",
+    "raw_sha256": "003b75482b6584e20e83a55d9e9ba0a181f93b8dff0f94c1d615039c21213cbb",
+    "new_full_text": [
+      109,
+      112
+    ],
+    "cumulative_full_text": [
+      1,
+      116
+    ],
+    "total_pages": 215,
+    "visual_this_packet": false,
+    "scope": "Page110 reread after combined-output truncation. No complete PDF/week audit or independent proof of string/flavour claims.",
+    "supplemental_full_text_read_while_final_validation_runs": [
+      113,
+      116
+    ],
+    "supplement_scope": "Initial report records109-112. Additional113-116 read in full in two bounded outputs while frozen model validation runs: finite antiunitary/coset, residual flavour/alignment, area-law and Siegel-theta claims read, not independently reproved or adopted as a physical CPT/gravity theorem."
+  },
+  "search": {
+    "scope": "RESULTS_INDEX.md,docs/index.html head and analysis/py/md,data/json,papers/tex with1MB/700KB caps; initial wide result output truncated, narrowed file-specific reads followed.",
+    "result_patterns": [
+      "radion Casimir stabilization",
+      "Schur Wilson anisotropic",
+      "native scalar vacuum",
+      "27band holonomy",
+      "trace sqrt Laplacian",
+      "heatkernel winding"
+    ],
+    "prior_owners": "Full October27 propagation and October28 mixed-loop reports read. Selected October27 density-response/radion sections and Pass12029 heattrace source read. Native135geometry/metric, prior thermal response, heatvariation and Casimir mechanisms credited. No global novelty theorem."
+  },
+  "literature": [
+    {
+      "url": "https://arxiv.org/html/2212.07049v2#S2",
+      "reading": "Introduction and sectionII twisted scalar graph Laplacian, heat trace and loop potential; not full paper or UV modified prescription"
+    },
+    {
+      "url": "https://arxiv.org/abs/hep-ph/0105021",
+      "reading": "Abstract; prior repo massiveCasimir calculation reread, no new radius minimum here"
+    }
+  ],
+  "server": "Actual functions.exec V8 all27complexmatrix binomial64terms with analytic truncation bound and5pointderivative; localPython eigensolver/Frechet is independent.",
+  "continuity": "Connected mirror has0decisions; realrepo journal and boundedCLI fallback used. Previous goal turn was progress: published gauge-origin packet plus actual native19-test receipt. Active goal not achieved.",
+  "workflow": "GitKraken absent from enabled tools and prior plugin discovery empty. Authorized narrow CLI fallback; explicit owned staging only; unrelated work and frozen numerical parents preserved.",
+  "additional_older_batch_reading": "Full odd-prime Clifford compiler report and S4 harmonic report through first65lines read; incoming execution claims not independently adopted. Still not the full older batch."
+}

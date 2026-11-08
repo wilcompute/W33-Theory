@@ -1,0 +1,45 @@
+{
+  "runtime": "Actual functions.exec V8",
+  "method": "Full27x27 complex binomial matrix powers; independent of Python eigensolver/Frechet curvature.",
+  "grid": 2,
+  "L": 2,
+  "mass": 3,
+  "terms": 64,
+  "alpha": 19,
+  "rho": 0.5263157894736842,
+  "rows": [
+    {
+      "theta": -0.08,
+      "energy": 234.52308476894058,
+      "rigorous_series_tail_bound": 2.0456959786752779e-19
+    },
+    {
+      "theta": -0.04,
+      "energy": 234.52308473038175,
+      "rigorous_series_tail_bound": 2.0456959786752779e-19
+    },
+    {
+      "theta": 0,
+      "energy": 234.52308471752173,
+      "rigorous_series_tail_bound": 2.0456959786752779e-19
+    },
+    {
+      "theta": 0.04,
+      "energy": 234.52308473038175,
+      "rigorous_series_tail_bound": 2.0456959786752779e-19
+    },
+    {
+      "theta": 0.08,
+      "energy": 234.52308476894058,
+      "rigorous_series_tail_bound": 2.0456959786752779e-19
+    },
+    {
+      "theta": 3.141592653589793,
+      "energy": 234.5231166692185,
+      "rigorous_series_tail_bound": 2.0456959786752779e-19
+    }
+  ],
+  "five_point_curvature": 0.00001607725212219672,
+  "delta_V_pi": 0.000031951696769283444,
+  "truncation_scope": "Scalar binomial coefficient positive and decreasing; ||A/alpha||<=10/alpha by graph degree10. Geometric bound controls analytic series truncation only, not floating point or finite-difference/infinite-volume error."
+}
