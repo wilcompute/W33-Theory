@@ -1,0 +1,468 @@
+{
+  "background": "Equal four-period compactification [2,2,2,2]; kinetic gauge coupling g=1. The Wilson-loop amplitude mu^2 is a supplied positive coefficient.",
+  "distinct_matrices_in_four_real_dimensional_representation": 9,
+  "electric_metric_G": [
+    [
+      "5",
+      "5/2",
+      "-3",
+      "0"
+    ],
+    [
+      "5/2",
+      "5",
+      "0",
+      "-3"
+    ],
+    [
+      "-3",
+      "0",
+      "6",
+      "-3"
+    ],
+    [
+      "0",
+      "-3",
+      "-3",
+      "6"
+    ]
+  ],
+  "extra_combined_forms": {
+    "generalized_eigenvalues_for_B_e1_plus_B_e4": {
+      "1/9": 2,
+      "8/27": 2
+    },
+    "native_fourth_holonomy_H27_average_hessian_determinant": "1/81",
+    "rank_G_inverse_B_e1_plus_B_e4": 4
+  },
+  "four_coordinate_orbits": [
+    {
+      "charge_lattice_rank": 2,
+      "charge_multiplicities": [
+        9,
+        9,
+        9
+      ],
+      "cosine_potential_minimum_modulo_2pi": "continuous or discrete extra minima possible",
+      "distinct_symmetry_related_integer_wilson_charges": 3,
+      "gauge_invariant_periodic_potential": "V(theta)=mu^2/27*sum_{g in H27}[1-cos((g^T e_i) dot theta)], Hessian=mu^2*B_i",
+      "generalized_mass_squared_eigenvalues": {
+        "0": 2,
+        "2/9": 2
+      },
+      "mass_hessian_numerator_27": [
+        [
+          18,
+          9,
+          0,
+          0
+        ],
+        [
+          9,
+          18,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "selected_holonomy_index_zero_based": 0,
+      "symmetry_averaged_mass_hessian_rank": 2,
+      "unique_integer_wilson_charges": [
+        [
+          -1,
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "wilson_charge_smith_normal_form": [
+        1,
+        1
+      ]
+    },
+    {
+      "charge_lattice_rank": 2,
+      "charge_multiplicities": [
+        9,
+        9,
+        9
+      ],
+      "cosine_potential_minimum_modulo_2pi": "continuous or discrete extra minima possible",
+      "distinct_symmetry_related_integer_wilson_charges": 3,
+      "gauge_invariant_periodic_potential": "V(theta)=mu^2/27*sum_{g in H27}[1-cos((g^T e_i) dot theta)], Hessian=mu^2*B_i",
+      "generalized_mass_squared_eigenvalues": {
+        "0": 2,
+        "2/9": 2
+      },
+      "mass_hessian_numerator_27": [
+        [
+          18,
+          9,
+          0,
+          0
+        ],
+        [
+          9,
+          18,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "selected_holonomy_index_zero_based": 1,
+      "symmetry_averaged_mass_hessian_rank": 2,
+      "unique_integer_wilson_charges": [
+        [
+          -1,
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "wilson_charge_smith_normal_form": [
+        1,
+        1
+      ]
+    },
+    {
+      "charge_lattice_rank": 4,
+      "charge_multiplicities": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "cosine_potential_minimum_modulo_2pi": "unique",
+      "distinct_symmetry_related_integer_wilson_charges": 9,
+      "gauge_invariant_periodic_potential": "V(theta)=mu^2/27*sum_{g in H27}[1-cos((g^T e_i) dot theta)], Hessian=mu^2*B_i",
+      "generalized_mass_squared_eigenvalues": {
+        "1/9": 2,
+        "2/27": 2
+      },
+      "mass_hessian_numerator_27": [
+        [
+          12,
+          6,
+          -9,
+          0
+        ],
+        [
+          6,
+          12,
+          0,
+          -9
+        ],
+        [
+          -9,
+          0,
+          18,
+          -9
+        ],
+        [
+          0,
+          -9,
+          -9,
+          18
+        ]
+      ],
+      "selected_holonomy_index_zero_based": 2,
+      "symmetry_averaged_mass_hessian_rank": 4,
+      "unique_integer_wilson_charges": [
+        [
+          -1,
+          -1,
+          1,
+          0
+        ],
+        [
+          -1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          -1,
+          -1,
+          1
+        ],
+        [
+          0,
+          0,
+          -1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          -1
+        ],
+        [
+          1,
+          0,
+          -1,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          -1
+        ]
+      ],
+      "wilson_charge_smith_normal_form": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "charge_lattice_rank": 4,
+      "charge_multiplicities": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "cosine_potential_minimum_modulo_2pi": "unique",
+      "distinct_symmetry_related_integer_wilson_charges": 9,
+      "gauge_invariant_periodic_potential": "V(theta)=mu^2/27*sum_{g in H27}[1-cos((g^T e_i) dot theta)], Hessian=mu^2*B_i",
+      "generalized_mass_squared_eigenvalues": {
+        "1/9": 2,
+        "2/27": 2
+      },
+      "mass_hessian_numerator_27": [
+        [
+          12,
+          6,
+          -9,
+          0
+        ],
+        [
+          6,
+          12,
+          0,
+          -9
+        ],
+        [
+          -9,
+          0,
+          18,
+          -9
+        ],
+        [
+          0,
+          -9,
+          -9,
+          18
+        ]
+      ],
+      "selected_holonomy_index_zero_based": 3,
+      "symmetry_averaged_mass_hessian_rank": 4,
+      "unique_integer_wilson_charges": [
+        [
+          -1,
+          -1,
+          0,
+          1
+        ],
+        [
+          -1,
+          0,
+          1,
+          -1
+        ],
+        [
+          0,
+          -1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          -1
+        ],
+        [
+          0,
+          1,
+          1,
+          -1
+        ],
+        [
+          1,
+          0,
+          -1,
+          0
+        ],
+        [
+          1,
+          1,
+          -1,
+          0
+        ]
+      ],
+      "wilson_charge_smith_normal_form": [
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "input_file": "data\\w33_pass11991_native_four_period_cover.json",
+  "native_H27_controller_elements": 27,
+  "native_holonomy_dimension": 4,
+  "nonzero_H27_invariant_quadratic_mass_rank_choices": [
+    2,
+    4
+  ],
+  "physical_limit": "This is a small-fluctuation quadratic theorem for a supplied equal-period Wilson scalar potential. Compactification itself might break H27; the independent scalar-loop action does not predict the Wilson coupling or its experimental mass. No physical photon, E6 vacuum, stabilized radius, or TOE follows.",
+  "prior_owners": [
+    "data/w33_pass11991_native_four_period_cover.json",
+    "analysis/toe_20261108_holonomy_doublet_symmetry.py",
+    "analysis/2026-11-08_coupled_holonomy_dynamic_response.md",
+    "analysis/2026-11-08_native_gauss_and_magnetic_symmetry.md"
+  ],
+  "proof_rank": "Native real H27 holonomy representation is a direct sum of two inequivalent real C3 irreducible planes, each occurring once. An invariant positive semidefinite form relative to the invariant electric metric is scalar on each plane; any nonzero invariant mass deformation has rank 2 or 4, never rank 1 or 3.",
+  "proof_unique_wilson_minimum": "For e_3 or e_4, the 9 distinct orbit-charge rows span Z^4 with Smith invariants [1,1,1,1]. Each 1-cos contribution is nonnegative; simultaneous zeros therefore force all theta_i=0 modulo 2pi. For e_1/e_2 only rank-2 integer charges occur, leaving a continuous T^2 minimum family.",
+  "real_character_plane_projectors": [
+    [
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "2/3",
+        "1/3",
+        "0",
+        "0"
+      ],
+      [
+        "1/3",
+        "2/3",
+        "0",
+        "0"
+      ]
+    ],
+    [
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "-2/3",
+        "-1/3",
+        "1",
+        "0"
+      ],
+      [
+        "-1/3",
+        "-2/3",
+        "0",
+        "1"
+      ]
+    ]
+  ],
+  "schema": "w33.20261108.h27_symmetrized_wilson_rank.v1",
+  "status": "EXACT_NATIVE_H27_ORBIT_MASS_RANK_AND_WILSON_LATTICE_THEOREM"
+}
