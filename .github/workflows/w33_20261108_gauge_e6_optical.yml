@@ -34,6 +34,9 @@ jobs:
           assert d['E6']['rank_after_rank_k_artificial_corrections']=={'0':78,'1':79,'2':80,'3':81}
           assert d['optics']['tested_orders']==362880
           assert d['optics']['full_permutation_swaps_after']==84
+          assert d['optics']['best_feasible_tritter_regroup_route']['total_regroup_swaps']==288
+          assert d['optics']['total_1d_adjacent_swaps_in_explicit_schedule']==372
+          assert d['optics']['upper_bound_internal_plus_active_swap_interactions']==453
           assert 'not E6-invariant' in d['E6']['physical_limit']
           assert 'NOT included' in d['optics']['critical_limit']
           print('PASS: Hodge frame; genuine 1620-tensor E6 rank; exhaustive optical ordering')
