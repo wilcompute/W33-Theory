@@ -73,6 +73,16 @@ def p5_chirp_twirl():
     assert abs(twirled_entry)<2/p**2+1e-12
     assert op_norm>=entry_difference>=delta-1e-12
     assert abs(op_norm-math.sin(2*math.pi/5))<1e-12
+    # A different GL2-invariant *unitary involution* exactly saturates the
+    # amplitude ceiling at this selected port. Saturation is not flat mixing.
+    signs=[1 if c>=0 else -1 for c in coeff]
+    sat_spectrum=np.zeros_like(lam)
+    for m,z in zip(masks,signs):sat_spectrum[m]=z
+    sat_kernel=np.fft.ifftn(sat_spectrum)
+    sat_amplitude=float(abs(sat_kernel[0,1,0]))
+    assert np.max(abs(abs(sat_spectrum)-1))<1e-12
+    assert np.max(abs(sat_kernel.imag))<1e-12
+    assert abs(sat_amplitude-2/p**2)<1e-12
     return {"status":"FULL_AFFINE_TWIRL_OF_EXPLICIT_P5_LORENTZ_CHIRP",
       "group_orbit_dimensions":[int(m.sum()) for m in masks],
       "original_flat_amplitude":float(abs(raw_entry)),
@@ -81,6 +91,9 @@ def p5_chirp_twirl():
       "full_operator_norm_twirl_difference":op_norm,
       "exact_norm_twirl_difference":"sin(2*pi/5)",
       "general_proven_minimum":delta,
+      "affine_invariant_involution_selected_amplitude":sat_amplitude,
+      "selected_output_bound_is_sharp_among_affine_invariant_unitaries":True,
+      "saturating_involution_is_flat":False,
       "interpretation":"The index-two determinant-isometry Gaussian clock is exactly flat but fails full GL2 congruence; its large orbit-twirl difference demonstrates concrete symmetry breaking, not a locality solution."}
 
 def momentum_bundle():
