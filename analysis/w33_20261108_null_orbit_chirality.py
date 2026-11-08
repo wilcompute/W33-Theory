@@ -1,5 +1,6 @@
+# Correction: the faithful action for p>3 is GL2(p)/{±I}, not PGL2(p).
 #!/usr/bin/env python3
-"""Square-class chirality obstruction for real PGL2-covariant null-local clocks.
+"""Square-class chirality obstruction for real GL2-congruence-covariant null-local clocks.
 
 Primes p=3 mod 4 require equal orbit weights by edge inversion;
 for p>=7 this extends the prior unweighted all-time uniform-mixing no-go.
@@ -80,9 +81,9 @@ def produce():
         cases.append(row)
     return {
       "schema":"w33.20261108.null_orbit_chirality.v1",
-      "status":"EXACT_PGL2_ORBIT_REVERSAL_AND_CONDITIONAL_ALL_TIME_NO_GO",
-      "theorem":"For p congruent 3 modulo 4, a real symmetric translation- and PGL2-invariant null-supported convolution is a scalar multiple of the unweighted adjacency (plus arbitrary diagonal identity). For odd primes p>=7 in this class, instantaneous uniform mixing is impossible at any time by the established spectral amplitude bound.",
-      "proof":"Nonzero rank-one symmetric matrices S=s vv^T have two PGL2-orbits distinguished by the quadratic character of s. Reversing a displacement sends s to -s and swaps the orbits exactly when Legendre(-1)=-1. Real symmetric hopping forces equal coefficients on inverse displacements. Its Fourier clock is then the unweighted-null clock with rescaled time.",
+      "status":"EXACT_GL2_CONGRUENCE_ORBIT_REVERSAL_AND_CONDITIONAL_ALL_TIME_NO_GO",
+      "theorem":"For p congruent 3 modulo 4, a real symmetric translation- and GL2-congruence-invariant null-supported convolution is a scalar multiple of the unweighted adjacency (plus arbitrary diagonal identity). For odd primes p>=7 in this class, instantaneous uniform mixing is impossible at any time by the established spectral amplitude bound.",
+      "proof":"Nonzero rank-one symmetric matrices S=s vv^T have two GL2-congruence-orbits distinguished by the quadratic character of s. Reversing a displacement sends s to -s and swaps the orbits exactly when Legendre(-1)=-1. Real symmetric hopping forces equal coefficients on inverse displacements. Its Fourier clock is then the unweighted-null clock with rescaled time.",
       "limitation":"When p congruent 1 mod 4, two real null-orbit weights are allowed; when p congruent 3 mod 4, complex Hermitian chiral weights related by conjugation are allowed. Both escape this no-go's hypotheses.",
       "physical_scope":"Finite symmetry constrained quantum walks, not an emergent locality or Lorentz-invariance proof, nor a physical coupling prediction.",
       "cases":cases,
