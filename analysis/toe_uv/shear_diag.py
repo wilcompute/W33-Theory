@@ -29,6 +29,25 @@ for m in ("LCDM", "free_neg", "CPL"):
             per[f"{i}{j}"] = dict(plus=float(r[sel & ~ism].sum()), minus=float(r[sel & ism].sum()))
     out[m] = dict(S8=info["S8"], om=info["om"], s8=info["s8"], mean_resid_plus=float(r[~ism].mean()), mean_resid_minus=float(r[ism].mean()), per_pair=per)
     print(m, "S8 %.4f Om %.4f s8 %.4f | mean (model-data)/err: xi+ %+.3f xi- %+.3f" % (info["S8"], info["om"], info["s8"], r[~ism].mean(), r[ism].mean()), flush=True)
+# chi2 decomposition with proper sub-covariances: low-z pairs (both bins in the lower half) vs high-z pairs (both in the upper half) vs mixed; xi+ and xi- together
+half = NB // 2
+lowsel = (KB < half) & (KJ < half)
+highsel = (KB >= half) & (KJ >= half)
+mixsel = ~(lowsel | highsel)
+dec = {}
+for m, mod in models.items():
+    r = mod - d
+    row = {}
+    for lab, sel in (("low", lowsel), ("high", highsel), ("mixed", mixsel), ("all", np.ones_like(lowsel))):
+        Cs = COV[np.ix_(sel, sel)]
+        rs = r[sel]
+        row[lab] = float(rs @ np.linalg.solve(Cs, rs))
+    dec[m] = row
+    print(m, "chi2 blocks", {k: round(v, 2) for k, v in row.items()}, flush=True)
+out["chi2_blocks"] = dec
+out["cpl_minus_fading_blocks"] = {k: dec["CPL"][k] - dec["free_neg"][k] for k in dec["CPL"]}
+out["cpl_minus_lcdm_blocks"] = {k: dec["CPL"][k] - dec["LCDM"][k] for k in dec["CPL"]}
+print("CPL - fading by block", {k: round(v, 2) for k, v in out["cpl_minus_fading_blocks"].items()}, flush=True)
 rat = models["CPL"] / models["free_neg"]
 byp = {}
 for i in range(NB):

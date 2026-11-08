@@ -75,3 +75,20 @@ CPL / fading − 1 for ξ₊, by tomographic pair (low z → high z):
 - The tilt has the same sign and size in both surveys, so it is structural, not survey-specific.
 
 This is a diagnostic in our simplified likelihoods; whether the tilt survives full intrinsic-alignment and baryon modelling is open. It gives the next shear releases a specific target: **the low-z/high-z shear ratio**, not S8 alone.
+
+## Correction (same day): where the penalty actually sits; frozen S7's mechanism clause is wrong
+
+The first addendum read the CPL/fading *model ratio* (CPL lower at low z, −4%; equal or higher at high z) as "the penalty is a low-z deficit". Two checks show this was an over-read.
+
+**(a) Diagonal residuals do not separate the models.** Summed (model − data)/σ over the three lowest and three highest pairs gives a tilt of +23.4 / +23.8 / +24.6 (KiDS) and −9.2 / −8.6 / −8.8 (DES) for ΛCDM / fading / CPL. All models share the same tilt relative to the data, so the penalty comes through the covariance.
+
+**(b) χ² with proper sub-covariances** (low pairs: both bins in the lower half; high: both in the upper half; mixed: the rest):
+
+| CPL − fading | low | high | mixed | all |
+|---|---:|---:|---:|---:|
+| KiDS-Legacy | +0.80 | +1.54 | +1.90 | +4.69 |
+| DES Y3 | −1.12 | **+5.16** | −2.07 | +3.10 |
+
+**Corrected statement.** CPL's shear penalty sits in the **high-z** (DES) and high-z plus mixed (KiDS) blocks. Relative to fading, CPL predicts more high-redshift lensing power than the data allow. Its lower low-z prediction is not what is penalised. (The blocks do not add to the total because of cross-covariance.)
+
+**Frozen S7 (`prereg_tilt.json`, sha a05a56e8).** Its claim that the penalty is "driven by the low-z bins", and the matching falsification clause, are **already contradicted by DES Y3 and KiDS-Legacy**. The clause was mis-specified when frozen, from the model ratio. The frozen file stays unedited as a record. The sign part of S7 and S1 (CPL worse than fading on shear) still holds. Any future scoring should use the block result above: the discriminator is CPL's excess **high-z** shear.
