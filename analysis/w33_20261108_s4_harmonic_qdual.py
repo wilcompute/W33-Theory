@@ -94,11 +94,31 @@ def s4_harmonic():
     err=float(max(np.max(abs(P@P-P)),np.max(abs(B1@P)),np.max(abs(B2.T@P))))
     assert err<1e-10 and abs(np.trace(P)-2)<1e-10
     translations=np.zeros((108,108))
+    _,vec=np.linalg.eigh(P)
+    seed=vec[:,-2:]
+    translated=[];overlaps=[]
     for sh in V:
         perm=[IX[tuple((v[i]+sh[i])%3 for i in range(3))] for v in V]
-        translations+=edge_action(perm,edges,ei)/27
+        R=edge_action(perm,edges,ei)
+        translations+=R/27
+        translated.extend((R@seed[:,0],R@seed[:,1]))
+        overlaps.append(seed.T@R@seed)
     invariant_under_translations=float(np.trace(PH@translations))
     assert abs(invariant_under_translations)<1e-10
+    orbit_singular=np.linalg.svd(np.column_stack(translated),compute_uv=False)
+    orbit_span=int(np.count_nonzero(orbit_singular>1e-8))
+    assert orbit_span==18
+    root=np.exp(2j*np.pi/3)
+    null_dirs=[(1,0,0),(0,0,1),(1,1,1),(1,2,1)]
+    weights=defaultdict(list)
+    for k in V:
+        G=sum(root**((-sum(k[i]*sh[i] for i in range(3)))%3)*overlap
+              for sh,overlap in zip(V,overlaps))/27
+        n0=sum(sum(k[i]*d[i] for i in range(3))%3==0 for d in null_dirs)
+        weights[n0].append(float(np.trace(G).real))
+    targets={4:(1,0),1:(8,0),2:(12,1/12),0:(6,1/6)}
+    assert all(len(weights[k])==n and max(abs(z-w) for z in weights[k])<1e-10
+               for k,(n,w) in targets.items())
     return {'status':'S4_CHARACTER_EXACT_AND_INDEPENDENT_HODGE_NUMERIC',
         'vertices':27,'edges':108,'faces':36,'harmonic_dimension':46,
         'class_order':[str(c) for c in CLASSES],'class_sizes':sizes,
@@ -109,6 +129,10 @@ def s4_harmonic():
         'independent_projector_trace':float(np.trace(P)),
         'independent_projector_max_residual':err,
         'translation_averaged_harmonic_trace':invariant_under_translations,
+        'S4_seed_translation_span_dimension_numeric':orbit_span,
+        'unspanned_harmonic_dimensions':46-orbit_span,
+        'S4_seed_fourier_weight_by_n0':{str(k):{'characters':len(v),'weight_per_character':sum(v)/len(v)}
+                                       for k,v in weights.items()},
         'proof':'H1 character=chi(C1)-chi(C0)-chi(C2)+chi(H0), since triangle boundaries independent and H2=0. Decompose using S4 character table.',
         'boundary':'Two S4-invariant harmonic cochains are not identified as two photon polarizations; they are not translation invariant and lack physical dynamics.'}
 def gauss_clocks(primes=(3,5,7,11,13,17)):
