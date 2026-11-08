@@ -35,4 +35,17 @@ def test_principal_log_generator_is_not_null_local(p):
 
 def test_not_physical_lorentz_or_new_qm(cert):
     assert "no physical continuum" in cert["connection"]
-    assert "Does not guarantee locality" in cert["no_go_comparison"]
+    assert "not null-local" in cert["no_go_comparison"]
+
+@pytest.mark.parametrize("p", [3,5,7,11,13,17])
+def test_SL2_null_orbits_agree_with_full_GL2(p):
+    o=M.exact_sl2_null_orbits(p)
+    assert o["square_orbit_size"]==o["nonsquare_orbit_size"]==(p*p-1)//2
+    assert o["partition_of_all_nonzero_null_displacements"]
+    assert o["SL2_and_GL2_share_null_orbits"]
+    assert o["strict_null_local_SL2_covariant_flat_mixing_forbidden"]==(p>=5)
+
+def test_SL2_null_local_no_go_physical_boundary(cert):
+    x=cert["SL2_strict_null_local_no_go"]
+    assert len(x["checked_prime_cases"])==6
+    assert "need not be flat" in x["scope"]
