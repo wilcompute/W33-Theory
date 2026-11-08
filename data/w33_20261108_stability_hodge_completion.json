@@ -1,0 +1,178 @@
+{
+  "h1_bundle": {
+    "adjacency_eigenvalue_multiplicities": {
+      "2": 12,
+      "8": 1,
+      "-1": 8,
+      "-4": 6
+    },
+    "deficient_orbit_projector_convolution_kernel_9x_values": {
+      "0": 6,
+      "1": 8,
+      "4": 1,
+      "-1": 12
+    },
+    "deficient_orbit_spectral_projector": "P_2=(8I-A)(A+I)(A+4I)/108, an exact rank-12 orthogonal projector",
+    "graph_distance_upper_bound_for_polynomial": 3,
+    "h1_dimension": 46,
+    "h1_momentum_rank_multiplicities": {
+      "0": 1,
+      "1": 12,
+      "2": 8,
+      "3": 6
+    },
+    "identity": "For momentum k!=0, h1(k)=(5-lambda_A(k))/3; h1(0)=0. Sum h1=46.",
+    "minimal_selective_auxiliary_dimension": 12,
+    "minimum_completed_H1_dimension": 58,
+    "momentum_rank_deficit_for_two_polarizations": 12,
+    "null_graph_degree": 8,
+    "onsite_uniform_scalar_auxiliary_dimension": 27,
+    "physical_boundary": "H1 finite cohomology is not the space of physical Maxwell radiative modes. This is a conditional no-go ONLY if one assumes a rank-two polarization bundle contained entirely in H1 over every nonzero translation momentum.",
+    "rank_two_every_nonzero_momentum_possible_with_H1_alone": false,
+    "rank_two_nonzero_momentum_subbundle_dimension": 52,
+    "remaining_modes_after_minimal_completion": 6,
+    "spatial_kernel_nonzero_displacement_types": 20,
+    "status": "EXACT_SPECTRAL_H1_POLARIZATION_CAPACITY_OBSTRUCTION",
+    "vertices": 27
+  },
+  "p5_isometry_chirp": {
+    "affine_invariant_involution_selected_amplitude": 0.08000000000000002,
+    "exact_norm_twirl_difference": "sin(2*pi/5)",
+    "full_operator_norm_twirl_difference": 0.9510565162951538,
+    "general_proven_minimum": 0.009442719099991587,
+    "group_orbit_dimensions": [
+      1,
+      12,
+      12,
+      60,
+      40
+    ],
+    "interpretation": "The index-two determinant-isometry Gaussian clock is exactly flat but fails full GL2 congruence; its large orbit-twirl difference demonstrates concrete symmetry breaking, not a locality solution.",
+    "original_flat_amplitude": 0.08944271909999159,
+    "saturating_involution_is_flat": false,
+    "selected_entry_twirl_difference": 0.085065080835204,
+    "selected_output_bound_is_sharp_among_affine_invariant_unitaries": true,
+    "status": "FULL_AFFINE_TWIRL_OF_EXPLICIT_P5_LORENTZ_CHIRP",
+    "twirled_selected_amplitude": 0.02763932022500209
+  },
+  "prior_owners": [
+    "analysis/PASS20261108_AFFINE_COVARIANCE_NO_GO.md",
+    "analysis/w33_20261108_lorentz_chirp_escape.py",
+    "analysis/PASS20261108_S4_HARMONIC_QDUAL.md"
+  ],
+  "robust_affine": {
+    "approximate_flatness": "If a unitary has |U_(0,d)|>=q^-3/2-epsilon, replace delta_q by max(0,delta_q-epsilon).",
+    "cases": [
+      {
+        "contraction_commutant_amplitude_upper": 0.2222222222222222,
+        "exact_flat_output_probability": 0.037037037037037035,
+        "five_orbit_coefficients": [
+          1,
+          1,
+          1,
+          0,
+          -3
+        ],
+        "flat_amplitude": 0.19245008972987526,
+        "forbidden_if_fully_affine_covariant": false,
+        "guaranteed_max_group_commutator_if_flat": 0,
+        "guaranteed_operator_norm_twirl_defect_if_flat": 0,
+        "max_symmetric_output_probability": 0.04938271604938271,
+        "prime": 3
+      },
+      {
+        "contraction_commutant_amplitude_upper": 0.08,
+        "exact_flat_output_probability": 0.008,
+        "five_orbit_coefficients": [
+          1,
+          2,
+          2,
+          -5,
+          0
+        ],
+        "flat_amplitude": 0.08944271909999159,
+        "forbidden_if_fully_affine_covariant": true,
+        "guaranteed_max_group_commutator_if_flat": 0.009442719099991587,
+        "guaranteed_operator_norm_twirl_defect_if_flat": 0.009442719099991587,
+        "max_symmetric_output_probability": 0.0064,
+        "prime": 5
+      },
+      {
+        "contraction_commutant_amplitude_upper": 0.04081632653061224,
+        "exact_flat_output_probability": 0.0029154518950437317,
+        "five_orbit_coefficients": [
+          1,
+          3,
+          3,
+          0,
+          -7
+        ],
+        "flat_amplitude": 0.05399492471560389,
+        "forbidden_if_fully_affine_covariant": true,
+        "guaranteed_max_group_commutator_if_flat": 0.013178598184991647,
+        "guaranteed_operator_norm_twirl_defect_if_flat": 0.013178598184991647,
+        "max_symmetric_output_probability": 0.0016659725114535606,
+        "prime": 7
+      },
+      {
+        "contraction_commutant_amplitude_upper": 0.01652892561983471,
+        "exact_flat_output_probability": 0.0007513148009015778,
+        "five_orbit_coefficients": [
+          1,
+          5,
+          5,
+          0,
+          -11
+        ],
+        "flat_amplitude": 0.02741012223434215,
+        "forbidden_if_fully_affine_covariant": true,
+        "guaranteed_max_group_commutator_if_flat": 0.010881196614507437,
+        "guaranteed_operator_norm_twirl_defect_if_flat": 0.010881196614507437,
+        "max_symmetric_output_probability": 0.0002732053821460283,
+        "prime": 11
+      },
+      {
+        "contraction_commutant_amplitude_upper": 0.011834319526627219,
+        "exact_flat_output_probability": 0.0004551661356395084,
+        "five_orbit_coefficients": [
+          1,
+          6,
+          6,
+          -13,
+          0
+        ],
+        "flat_amplitude": 0.021334622931739582,
+        "forbidden_if_fully_affine_covariant": true,
+        "guaranteed_max_group_commutator_if_flat": 0.009500303405112364,
+        "guaranteed_operator_norm_twirl_defect_if_flat": 0.009500303405112364,
+        "max_symmetric_output_probability": 0.0001400511186583103,
+        "prime": 13
+      },
+      {
+        "contraction_commutant_amplitude_upper": 0.006920415224913495,
+        "exact_flat_output_probability": 0.0002035416242621616,
+        "five_orbit_coefficients": [
+          1,
+          8,
+          8,
+          -17,
+          0
+        ],
+        "flat_amplitude": 0.014266801472725469,
+        "forbidden_if_fully_affine_covariant": true,
+        "guaranteed_max_group_commutator_if_flat": 0.007346386247811974,
+        "guaranteed_operator_norm_twirl_defect_if_flat": 0.007346386247811974,
+        "max_symmetric_output_probability": 0.000047892146885214497,
+        "prime": 17
+      }
+    ],
+    "hamiltonian_version": "If U=e^(-itH), and H is bounded self-adjoint, then sup_g||[H,R_g]||_op >= delta_q/|t| for t nonzero, because the Duhamel integral bounds ||[U,R_g]||<=|t| ||[H,R_g]||.",
+    "proof": "T(U) is a contraction commuting with G. Translation diagonalization and five dual GL2 orbits give |T(U)_(0,d)|<=2/q^2 for d=(0,1,0), even if the Fourier orbit scalars are not unit modulus. Flatness gives |U_(0,d)|=q^-3/2. Reverse triangle inequality bounds the entry, hence the operator norm. Also ||U-T(U)||<=sup_g||U-R_g U R_g^-1||.",
+    "scope": "Operator-norm finite-symmetry witness, not a physical coupling, emergent Lorentz invariant action or new measurement.",
+    "status": "RIGOROUS_STABLE_AFFINE_OBSTRUCTION",
+    "theorem": "For odd prime power q>=5 and any exactly flat unitary U on Sym2(Fq), with G=Fq^3 rtimes GL2(q), the group twirl T(U)=avg_g R_g U R_g^-1 obeys ||U-T(U)||_op >= delta_q=q^(-3/2)-2/q^2 >0, and sup_g ||[U,R_g]||_op >= delta_q."
+  },
+  "schema": "w33.20261108.stability_hodge_completion.v1",
+  "scientific_boundary": "Finite representation theory and group-averaging inequalities; no empirically verified TOE, physical photon identification or derived constants.",
+  "status": "TWO_EXACT_THEOREMS_PLUS_P5_SYMMETRY_TWIRL_NUMERICAL_CROSSCHECK"
+}
