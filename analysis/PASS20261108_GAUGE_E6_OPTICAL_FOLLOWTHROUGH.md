@@ -68,3 +68,16 @@ The latest other-agent commits include Pass12630's KiDS-Legacy weak-lensing fit,
 3. Embed a rank-three mass-lifting operator into an explicit, anomaly-checked broken E6 vacuum with a radiatively stable strong-CP phase.
 4. Account for *all 27 tritter regrouping routings* and calibrated phase/loss propagation before claiming a hardware resource advantage.
 5. Adversarially reproduce the parallel KiDS/KLT holdout and gauged discrete Z_N quality calculations under independent physical assumptions.
+
+
+## Hardware addendum — counting the missing tritter regrouping
+
+The 84-swap optimum above concerns only the four SUM permutation gates; it is **not** the whole chip layout. For each of the three independent qutrit Fourier/chirp layers, the nine relevant sets of three optical modes must be made contiguous in a one-dimensional nearest-neighbor rail arrangement.
+
+The extended script solves the exact *next-stage* regrouping problem: given a fixed incoming rail order, partition all 27 rails into nine three-port groups for one selected axis, with the members of each group preserving their incoming relative order. The cheapest sequence of nine groups is solved by a dynamic program over 2^9 subsets; its result is checked by explicit Kendall-tau inversion counting. We test all six permutations of the three axis-layer orders, from the already optimized b-block SUM layout, and include returning to that layout before the inverse SUM gates.
+
+**Best feasible greedy sequence:** axis order (a,c,b) or (c,a,b) requires **288 additional adjacent swaps for tritter regrouping**. Combined with the 84 SUM swaps, this concrete one-dimensional schedule uses **372 adjacent routing swaps**. If every swap required one active two-mode device, adding the 81 internal 3-port gate interactions would give **453 active interactions**, compared with 351 two-mode operations in a generic 27×27 universal decomposition.
+
+These are **not universally comparable chip costs**. Passive crossings need not consume active couplers; phase shifters, waveguide depth and loss are still missing. Moreover the 288 figure is a *feasible greedy transition-by-transition route*, not a global optimum over all stage placements or all 27! rail orderings. It is therefore wrong to conclude that the architecture is globally worse; it is equally wrong to claim the 81+84=165 device was physically complete.
+
+The useful engineering breakthrough is a precise falsifier of an optimistic resource accounting: any claimed hardware advantage must include all three tritter regroupings and their coherent phase/loss overhead, not just the four reversible SUM permutations.
