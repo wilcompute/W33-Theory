@@ -26,11 +26,11 @@ def ppd(ds, hold, m):
 
 
 rows = {}
-MAP = dict(LCDM="LCDM", fading_cneg="free_neg", fading_cpos="free_pos", CPL="CPL", exp="exp_neg")
-PPDM = dict(LCDM="LCDM", fading_cneg="free_neg", CPL="cpl", exp="exp")
+MAP = dict(LCDM="LCDM", fading_cneg="free_neg", fading_cpos="free_pos", CPL="CPL", exp="exp_neg", KLT=None)
+PPDM = dict(LCDM="LCDM", fading_cneg="free_neg", CPL="cpl", exp="exp", KLT="klt25")
 NSM = dict(LCDM="LCDM", fading_cneg="free_neg", CPL="cpl", exp="exp")
 for lab, key in MAP.items():
-    r = dict(full_chi2_gain=fit["LCDM"]["chi2"] - fit[key]["chi2"])
+    r = dict(full_chi2_gain=(fit["LCDM"]["chi2"] - fit[key]["chi2"]) if key else None)
     for ds in ("dovekie", "desy5"):
         if lab in PPDM:
             a, ta = ppd(ds, "sn", PPDM[lab])
@@ -55,14 +55,14 @@ if desj:
     if dj:
         rows["CPL"]["joint_des_chi2_gain"] = desj["rows"]["LCDM"]["chi2"] - dj["chi2"]
 if sp:
-    for lab, k in (("LCDM", "LCDM"), ("fading_cneg", "free_neg"), ("fading_cpos", "free_pos"), ("CPL", "CPL")):
+    for lab, k in (("LCDM", "LCDM"), ("fading_cneg", "free_neg"), ("fading_cpos", "free_pos"), ("CPL", "CPL"), ("KLT", "KLT")):
         if k in sp:
             rows[lab]["shear_heldout_elpd_rel_lcdm"] = sp[k]["elpd_shear"] - sp["LCDM"]["elpd_shear"]
     for lab in rows:
         if rows[lab].get("oos_gain_dovekie") is not None and rows[lab].get("shear_heldout_elpd_rel_lcdm") is not None:
             rows[lab]["oos_gain_dovekie_plus_shear"] = rows[lab]["oos_gain_dovekie"] + rows[lab]["shear_heldout_elpd_rel_lcdm"]
 if spk:
-    for lab, k in (("LCDM", "LCDM"), ("fading_cneg", "free_neg"), ("fading_cpos", "free_pos"), ("CPL", "CPL")):
+    for lab, k in (("LCDM", "LCDM"), ("fading_cneg", "free_neg"), ("fading_cpos", "free_pos"), ("CPL", "CPL"), ("KLT", "KLT")):
         if k in spk:
             rows[lab]["shear_heldout_kids_rel_lcdm"] = spk[k]["elpd_shear"] - spk["LCDM"]["elpd_shear"]
     for lab in rows:

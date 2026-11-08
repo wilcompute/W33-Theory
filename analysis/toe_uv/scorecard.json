@@ -60,5 +60,16 @@
   "oos_truncated_desy5": true,
   "ns_bao_pull_sigma": 1.3885638734316474,
   "joint_des_chi2_gain": 2.9697663734827984
+ },
+ "KLT": {
+  "full_chi2_gain": null,
+  "oos_gain_dovekie": 1.6070124482077972,
+  "oos_truncated_dovekie": true,
+  "oos_gain_desy5": null,
+  "oos_truncated_desy5": false,
+  "shear_heldout_elpd_rel_lcdm": -0.6742946093479105,
+  "oos_gain_dovekie_plus_shear": 0.9327178388598867,
+  "shear_heldout_kids_rel_lcdm": -0.8253716222379666,
+  "oos_gain_dovekie_plus_des_kids_shear": 0.10734621662192012
  }
 }

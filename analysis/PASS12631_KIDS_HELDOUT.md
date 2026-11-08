@@ -92,3 +92,16 @@ The first addendum read the CPL/fading *model ratio* (CPL lower at low z, −4%;
 **Corrected statement.** CPL's shear penalty sits in the **high-z** (DES) and high-z plus mixed (KiDS) blocks. Relative to fading, CPL predicts more high-redshift lensing power than the data allow. Its lower low-z prediction is not what is penalised. (The blocks do not add to the total because of cross-covariance.)
 
 **Frozen S7 (`prereg_tilt.json`, sha a05a56e8).** Its claim that the penalty is "driven by the low-z bins", and the matching falsification clause, are **already contradicted by DES Y3 and KiDS-Legacy**. The clause was mis-specified when frozen, from the model ratio. The frozen file stays unedited as a record. The sign part of S7 and S1 (CPL worse than fading on shear) still holds. Any future scoring should use the block result above: the discriminator is CPL's excess **high-z** shear.
+
+## Addendum: the KLT-family model out of sample and on held-out shear (provisional)
+
+| elpd relative to ΛCDM (Dovekie training) | SN held | BAO held | DES shear held | KiDS shear held | **total** |
+|---|---:|---:|---:|---:|---:|
+| fading c < 0 | +1.94 | +3.75 | −0.42 | −0.55 | **+4.72** |
+| CPL | +0.89 | +4.59 | −2.12 | −3.04 | **+0.32** |
+| **KLT family (f = 0.25 M_P)** | +2.00 | −0.40 | −0.67 | −0.83 | **+0.11** |
+
+- **On shear, KLT behaves like fading** (−0.7/−0.8 against −0.4/−0.6), far from CPL.
+- Its weak spot is BAO held out: −0.40 at the standard draw width, but **+2.75 at twice the width** (−8.72 against ΛCDM −11.47). Broadening a well-behaved Gaussian posterior should not help, so the Fisher draws misrepresent KLT's non-Gaussian, periodic posterior. **KLT's total is therefore provisional.**
+- The BAO-held MCMC (`mcmc_holdout.py dovekie bao klt25`; smoke test reproduces the holdout row exactly) is queued to settle it.
+- Only one of two declared starts succeeded in each KLT holdout; θ_i = 2.5 failed in CLASS shooting.
