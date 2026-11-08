@@ -1,0 +1,1079 @@
+{
+  "status": "PASS_DECLARED_VECTOR_CONVERSION_ENERGY_AND_QUALITY_CONTROLS_NOT_UV_COMPLETION",
+  "utc": "2026-11-08T15:41:55.060987+00:00",
+  "seconds": 63.20909020000545,
+  "experiments": [
+    {
+      "label": "higher_quadrature_and_temperature_grid",
+      "changes": {
+        "population_L1": 4.808123195247649e-08,
+        "beta_relative": -2.1451485254786462e-08,
+        "temperature_relative": 1.3498175577275617e-07
+      },
+      "row": {
+        "strength": 100.0,
+        "method": "Radau",
+        "heating": true,
+        "initial": "uniform",
+        "background": {
+          "tau0": 0.1,
+          "xi": 0.1,
+          "Y_particles": 0.00137,
+          "g_rho": 3.36,
+          "g_s": 3.91,
+          "mA_GeV": 0.01,
+          "Tgamma0_GeV": 1.6e-05,
+          "n_particles0_GeV3": 9.624418512498297e-18,
+          "H_radiation0_GeV": 6.381742202828231e-29,
+          "equality_Tgamma_GeV": 8e-10
+        },
+        "gD_for_supplied_mediator": 0.01268618960063808,
+        "contact_coefficient_GeV_minus2": 1.6093940658333776,
+        "initial_phase": 0.37,
+        "masses_over_M": [
+          1.0497289012468682,
+          1.043362322577199,
+          1.034134100601744,
+          1.0226057326287277,
+          1.009498999899099,
+          0.995663425848314,
+          0.9820312496289666,
+          0.9695590144551213,
+          0.9591571077499116,
+          0.9516121132379337,
+          0.9475109128043349,
+          0.9471784893930506,
+          0.950641372554733,
+          0.9576245867520408,
+          0.9675827857596093,
+          0.9797587973172618,
+          0.9932580503214776,
+          1.0071266691701213,
+          1.0204236424534048,
+          1.032281503667734,
+          1.0419536592279564,
+          1.04884897447847,
+          1.0525553930517861,
+          1.0528545457739178
+        ],
+        "final_populations": [
+          0.0043582394936784825,
+          0.004980731804295177,
+          0.0060378800905494115,
+          0.007704891814336015,
+          0.01032587898664444,
+          0.014590050647971744,
+          0.021936037679326323,
+          0.035526027679463154,
+          0.06243560207633047,
+          0.11559769777454529,
+          0.19103897705406123,
+          0.20235831149243047,
+          0.13044934818590334,
+          0.07047554871621473,
+          0.039428584180240485,
+          0.023930070524390955,
+          0.01568844222353878,
+          0.010972804297751947,
+          0.008105061161366755,
+          0.00629090323798428,
+          0.005136836937291264,
+          0.004443080243619665,
+          0.004107755675621732,
+          0.004081238022444096
+        ],
+        "final_temperature_over_M": 3.223104874062249e-08,
+        "initial_temperature_over_M": 0.1,
+        "final_mean_speed_over_c": 0.0002923755923086557,
+        "final_Tgamma_eV": 0.09830739765325136,
+        "max_temperature_over_M": 0.10000000000000002,
+        "min_population": 0.004081238022444096,
+        "maximum_number_fraction_error": 6.661338147750939e-16,
+        "maximum_first_law_absolute_residual": 2.8381053063242234e-10,
+        "maximum_MB_zero_momentum_occupation": 0.03131026291956696,
+        "minimum_heat_capacity": 1.5000001259014537,
+        "final_total_variation_from_instantaneous_equilibrium": 0.7976416885075697,
+        "final_pair_kernel_prefactor_ceiling": 4.398912980643981e-05,
+        "final_response": {
+          "fractional_rms": 0.028141891222981347,
+          "max_abs_beta_f_equals_MP": 0.03987706856011031
+        },
+        "evaluations": 1756,
+        "rate_table": {
+          "laguerre_order": 144,
+          "temperature_points": 256
+        },
+        "history": [
+          {
+            "log_a": 0.0,
+            "temperature_over_M": 0.10000000000000002,
+            "mean_energy_over_M": 1.167703982998007,
+            "first_fourier_population_abs": 1.0357789287608108e-16
+          },
+          {
+            "log_a": 0.5,
+            "temperature_over_M": 0.04896468819081173,
+            "mean_energy_over_M": 1.057726282326754,
+            "first_fourier_population_abs": 0.3902394146942018
+          },
+          {
+            "log_a": 1.0,
+            "temperature_over_M": 0.023089657559247207,
+            "mean_energy_over_M": 1.0061373295674003,
+            "first_fourier_population_abs": 0.5656890784136686
+          },
+          {
+            "log_a": 1.5,
+            "temperature_over_M": 0.010762878495671075,
+            "mean_energy_over_M": 0.9818695398138148,
+            "first_fourier_population_abs": 0.6580814257549468
+          },
+          {
+            "log_a": 2.0,
+            "temperature_over_M": 0.004955066976092595,
+            "mean_energy_over_M": 0.9706367609789719,
+            "first_fourier_population_abs": 0.701282097003663
+          },
+          {
+            "log_a": 2.5,
+            "temperature_over_M": 0.002301676436802029,
+            "mean_energy_over_M": 0.9654540789152201,
+            "first_fourier_population_abs": 0.7227059151644282
+          },
+          {
+            "log_a": 3.0,
+            "temperature_over_M": 0.001098160499798405,
+            "mean_energy_over_M": 0.9630212628113166,
+            "first_fourier_population_abs": 0.7340929524209008
+          },
+          {
+            "log_a": 3.5,
+            "temperature_over_M": 0.0005442178366205257,
+            "mean_energy_over_M": 0.9618417262834303,
+            "first_fourier_population_abs": 0.7404676930927315
+          },
+          {
+            "log_a": 4.0,
+            "temperature_over_M": 0.000281297033732682,
+            "mean_energy_over_M": 0.9612461967213464,
+            "first_fourier_population_abs": 0.7441569462570459
+          },
+          {
+            "log_a": 4.5,
+            "temperature_over_M": 0.0001513207648989576,
+            "mean_energy_over_M": 0.9609327145073472,
+            "first_fourier_population_abs": 0.7463332549898736
+          },
+          {
+            "log_a": 5.0,
+            "temperature_over_M": 8.41949345827221e-05,
+            "mean_energy_over_M": 0.9607613960174026,
+            "first_fourier_population_abs": 0.7476308324568138
+          },
+          {
+            "log_a": 5.5,
+            "temperature_over_M": 4.8082737987828926e-05,
+            "mean_energy_over_M": 0.9606648816320561,
+            "first_fourier_population_abs": 0.7484089564065474
+          },
+          {
+            "log_a": 6.0,
+            "temperature_over_M": 2.797606004708496e-05,
+            "mean_energy_over_M": 0.960609262713097,
+            "first_fourier_population_abs": 0.7488768172485202
+          },
+          {
+            "log_a": 6.5,
+            "temperature_over_M": 1.6478896365455182e-05,
+            "mean_energy_over_M": 0.9605767044565404,
+            "first_fourier_population_abs": 0.7491582301636036
+          },
+          {
+            "log_a": 7.0,
+            "temperature_over_M": 9.77627484740865e-06,
+            "mean_energy_over_M": 0.9605574564022564,
+            "first_fourier_population_abs": 0.7493272036871096
+          },
+          {
+            "log_a": 7.5,
+            "temperature_over_M": 5.816364930513985e-06,
+            "mean_energy_over_M": 0.9605460186598588,
+            "first_fourier_population_abs": 0.7494282474186942
+          },
+          {
+            "log_a": 8.0,
+            "temperature_over_M": 3.4566512150170864e-06,
+            "mean_energy_over_M": 0.9605392150208385,
+            "first_fourier_population_abs": 0.7494882371526591
+          },
+          {
+            "log_a": 8.5,
+            "temperature_over_M": 2.043817729794679e-06,
+            "mean_energy_over_M": 0.9605351796349622,
+            "first_fourier_population_abs": 0.7495234536284673
+          },
+          {
+            "log_a": 9.0,
+            "temperature_over_M": 1.1970366509532508e-06,
+            "mean_energy_over_M": 0.9605328030255662,
+            "first_fourier_population_abs": 0.7495437887985822
+          },
+          {
+            "log_a": 9.5,
+            "temperature_over_M": 6.912141185030928e-07,
+            "mean_energy_over_M": 0.960531419482441,
+            "first_fourier_population_abs": 0.7495552721599512
+          },
+          {
+            "log_a": 10.0,
+            "temperature_over_M": 3.91755531208368e-07,
+            "mean_energy_over_M": 0.9605306270584884,
+            "first_fourier_population_abs": 0.7495615804970894
+          },
+          {
+            "log_a": 10.5,
+            "temperature_over_M": 2.171921028647661e-07,
+            "mean_energy_over_M": 0.9605301822875534,
+            "first_fourier_population_abs": 0.7495649424931401
+          },
+          {
+            "log_a": 11.0,
+            "temperature_over_M": 1.1760443439331799e-07,
+            "mean_energy_over_M": 0.9605299382995224,
+            "first_fourier_population_abs": 0.7495666812687543
+          },
+          {
+            "log_a": 11.5,
+            "temperature_over_M": 6.222221493039169e-08,
+            "mean_energy_over_M": 0.9605298075639703,
+            "first_fourier_population_abs": 0.7495675572541013
+          },
+          {
+            "log_a": 12.0,
+            "temperature_over_M": 3.223104874062249e-08,
+            "mean_energy_over_M": 0.9605297390597015,
+            "first_fourier_population_abs": 0.7495679894833309
+          }
+        ],
+        "scope": "Common kinetic temperature and classical dilute MB distributions assumed; kinetic-equilibrium collision hierarchy not solved. Scalar phase frozen throughout formation. Fixed total initial abundance, supplied radiation+matter background; no abundance prediction, scalar/metric perturbations, full portals or UV completion. Heating-off row is an intentionally nonconserving diagnostic, not a physical closed-gas solution."
+      }
+    },
+    {
+      "label": "independent_BDF_solver",
+      "changes": {
+        "population_L1": 9.720227823941524e-08,
+        "beta_relative": -3.948756810423504e-08,
+        "temperature_relative": -2.8047650632023746e-06
+      },
+      "row": {
+        "strength": 100.0,
+        "method": "BDF",
+        "heating": true,
+        "initial": "uniform",
+        "background": {
+          "tau0": 0.1,
+          "xi": 0.1,
+          "Y_particles": 0.00137,
+          "g_rho": 3.36,
+          "g_s": 3.91,
+          "mA_GeV": 0.01,
+          "Tgamma0_GeV": 1.6e-05,
+          "n_particles0_GeV3": 9.624418512498297e-18,
+          "H_radiation0_GeV": 6.381742202828231e-29,
+          "equality_Tgamma_GeV": 8e-10
+        },
+        "gD_for_supplied_mediator": 0.01268618960063808,
+        "contact_coefficient_GeV_minus2": 1.6093940658333776,
+        "initial_phase": 0.37,
+        "masses_over_M": [
+          1.0497289012468682,
+          1.043362322577199,
+          1.034134100601744,
+          1.0226057326287277,
+          1.009498999899099,
+          0.995663425848314,
+          0.9820312496289666,
+          0.9695590144551213,
+          0.9591571077499116,
+          0.9516121132379337,
+          0.9475109128043349,
+          0.9471784893930506,
+          0.950641372554733,
+          0.9576245867520408,
+          0.9675827857596093,
+          0.9797587973172618,
+          0.9932580503214776,
+          1.0071266691701213,
+          1.0204236424534048,
+          1.032281503667734,
+          1.0419536592279564,
+          1.04884897447847,
+          1.0525553930517861,
+          1.0528545457739178
+        ],
+        "final_populations": [
+          0.004358239857874109,
+          0.004980732160992078,
+          0.006037880469251041,
+          0.0077048922399862545,
+          0.010325879483434226,
+          0.014590051257526136,
+          0.021936038549695516,
+          0.035526030322426995,
+          0.06243560857817933,
+          0.11559769350997329,
+          0.19103897008683518,
+          0.20235830280179898,
+          0.13044934351739523,
+          0.07047555352159547,
+          0.03942858718483705,
+          0.023930071368384934,
+          0.015688442788066467,
+          0.010972804773189387,
+          0.008105061576299389,
+          0.006290903611052111,
+          0.005136837285821381,
+          0.004443080602768452,
+          0.004107756052107745,
+          0.0040812384005088995
+        ],
+        "final_temperature_over_M": 3.223095398951227e-08,
+        "initial_temperature_over_M": 0.1,
+        "final_mean_speed_over_c": 0.0002923751624447071,
+        "final_Tgamma_eV": 0.09830739765325136,
+        "max_temperature_over_M": 0.10000000000000002,
+        "min_population": 0.0040812384005088995,
+        "maximum_number_fraction_error": 6.661338147750939e-16,
+        "maximum_first_law_absolute_residual": 3.630185707592659e-09,
+        "maximum_MB_zero_momentum_occupation": 0.03131026173844482,
+        "minimum_heat_capacity": 1.500000125901083,
+        "final_total_variation_from_instantaneous_equilibrium": 0.7976416971982008,
+        "final_pair_kernel_prefactor_ceiling": 4.398912980628198e-05,
+        "final_response": {
+          "fractional_rms": 0.02814189071725091,
+          "max_abs_beta_f_equals_MP": 0.03987706784088418
+        },
+        "evaluations": 874,
+        "rate_table": {
+          "laguerre_order": 96,
+          "temperature_points": 160
+        },
+        "history": [
+          {
+            "log_a": 0.0,
+            "temperature_over_M": 0.10000000000000002,
+            "mean_energy_over_M": 1.167703982998007,
+            "first_fourier_population_abs": 1.0357789287608108e-16
+          },
+          {
+            "log_a": 0.5,
+            "temperature_over_M": 0.04896468747447583,
+            "mean_energy_over_M": 1.0577262834442371,
+            "first_fourier_population_abs": 0.3902393712294207
+          },
+          {
+            "log_a": 1.0,
+            "temperature_over_M": 0.023089657911858682,
+            "mean_energy_over_M": 1.0061373304779435,
+            "first_fourier_population_abs": 0.5656890718932118
+          },
+          {
+            "log_a": 1.5,
+            "temperature_over_M": 0.0107628791756335,
+            "mean_energy_over_M": 0.9818695396529155,
+            "first_fourier_population_abs": 0.6580814481108117
+          },
+          {
+            "log_a": 2.0,
+            "temperature_over_M": 0.0049550673330161325,
+            "mean_energy_over_M": 0.9706367602276536,
+            "first_fourier_population_abs": 0.7012821207895508
+          },
+          {
+            "log_a": 2.5,
+            "temperature_over_M": 0.0023016764940224995,
+            "mean_energy_over_M": 0.9654540777420516,
+            "first_fourier_population_abs": 0.722705938373956
+          },
+          {
+            "log_a": 3.0,
+            "temperature_over_M": 0.0010981604758371324,
+            "mean_energy_over_M": 0.963021261707096,
+            "first_fourier_population_abs": 0.734092972073003
+          },
+          {
+            "log_a": 3.5,
+            "temperature_over_M": 0.0005442178165679301,
+            "mean_energy_over_M": 0.9618417253443,
+            "first_fourier_population_abs": 0.7404677097851678
+          },
+          {
+            "log_a": 4.0,
+            "temperature_over_M": 0.0002812970189195659,
+            "mean_energy_over_M": 0.961246195988791,
+            "first_fourier_population_abs": 0.7441569592969629
+          },
+          {
+            "log_a": 4.5,
+            "temperature_over_M": 0.00015132075424814068,
+            "mean_energy_over_M": 0.9609327139524344,
+            "first_fourier_population_abs": 0.7463332648826742
+          },
+          {
+            "log_a": 5.0,
+            "temperature_over_M": 8.419492682185395e-05,
+            "mean_energy_over_M": 0.9607613956160508,
+            "first_fourier_population_abs": 0.7476308396074733
+          },
+          {
+            "log_a": 5.5,
+            "temperature_over_M": 4.808273259644961e-05,
+            "mean_energy_over_M": 0.9606648814030826,
+            "first_fourier_population_abs": 0.7484089604543843
+          },
+          {
+            "log_a": 6.0,
+            "temperature_over_M": 2.7976056247396705e-05,
+            "mean_energy_over_M": 0.9606092625774607,
+            "first_fourier_population_abs": 0.7488768196240055
+          },
+          {
+            "log_a": 6.5,
+            "temperature_over_M": 1.6478894372352366e-05,
+            "mean_energy_over_M": 0.9605767044423598,
+            "first_fourier_population_abs": 0.7491582303560064
+          },
+          {
+            "log_a": 7.0,
+            "temperature_over_M": 9.77627365877106e-06,
+            "mean_energy_over_M": 0.9605574565701718,
+            "first_fourier_population_abs": 0.7493272005541334
+          },
+          {
+            "log_a": 7.5,
+            "temperature_over_M": 5.816364609740723e-06,
+            "mean_energy_over_M": 0.9605460189393533,
+            "first_fourier_population_abs": 0.7494282422586072
+          },
+          {
+            "log_a": 8.0,
+            "temperature_over_M": 3.4566515993012555e-06,
+            "mean_energy_over_M": 0.9605392154379855,
+            "first_fourier_population_abs": 0.7494882294817792
+          },
+          {
+            "log_a": 8.5,
+            "temperature_over_M": 2.043818492887873e-06,
+            "mean_energy_over_M": 0.9605351801527738,
+            "first_fourier_population_abs": 0.7495234441178056
+          },
+          {
+            "log_a": 9.0,
+            "temperature_over_M": 1.197037735066021e-06,
+            "mean_energy_over_M": 0.9605328036609846,
+            "first_fourier_population_abs": 0.7495437771351814
+          },
+          {
+            "log_a": 9.5,
+            "temperature_over_M": 6.91215129803686e-07,
+            "mean_energy_over_M": 0.9605314201937236,
+            "first_fourier_population_abs": 0.7495552591002117
+          },
+          {
+            "log_a": 10.0,
+            "temperature_over_M": 3.9175585701818184e-07,
+            "mean_energy_over_M": 0.9605306278019026,
+            "first_fourier_population_abs": 0.7495615668278883
+          },
+          {
+            "log_a": 10.5,
+            "temperature_over_M": 2.1719202299546192e-07,
+            "mean_energy_over_M": 0.9605301830616197,
+            "first_fourier_population_abs": 0.7495649282493944
+          },
+          {
+            "log_a": 11.0,
+            "temperature_over_M": 1.1760417906156977e-07,
+            "mean_energy_over_M": 0.9605299390672059,
+            "first_fourier_population_abs": 0.74956666713748
+          },
+          {
+            "log_a": 11.5,
+            "temperature_over_M": 6.222198518654822e-08,
+            "mean_energy_over_M": 0.9605298082946475,
+            "first_fourier_population_abs": 0.749567543803673
+          },
+          {
+            "log_a": 12.0,
+            "temperature_over_M": 3.223095398951227e-08,
+            "mean_energy_over_M": 0.9605297397915744,
+            "first_fourier_population_abs": 0.7495679760146474
+          }
+        ],
+        "scope": "Common kinetic temperature and classical dilute MB distributions assumed; kinetic-equilibrium collision hierarchy not solved. Scalar phase frozen throughout formation. Fixed total initial abundance, supplied radiation+matter background; no abundance prediction, scalar/metric perturbations, full portals or UV completion. Heating-off row is an intentionally nonconserving diagnostic, not a physical closed-gas solution."
+      }
+    },
+    {
+      "label": "initial_equilibrium_control",
+      "changes": {
+        "population_L1": 0.012435379362458407,
+        "beta_relative": 0.006726548991274672,
+        "temperature_relative": -0.040095549609046266
+      },
+      "row": {
+        "strength": 100.0,
+        "method": "Radau",
+        "heating": true,
+        "initial": "equilibrium",
+        "background": {
+          "tau0": 0.1,
+          "xi": 0.1,
+          "Y_particles": 0.00137,
+          "g_rho": 3.36,
+          "g_s": 3.91,
+          "mA_GeV": 0.01,
+          "Tgamma0_GeV": 1.6e-05,
+          "n_particles0_GeV3": 9.624418512498297e-18,
+          "H_radiation0_GeV": 6.381742202828231e-29,
+          "equality_Tgamma_GeV": 8e-10
+        },
+        "gD_for_supplied_mediator": 0.01268618960063808,
+        "contact_coefficient_GeV_minus2": 1.6093940658333776,
+        "initial_phase": 0.37,
+        "masses_over_M": [
+          1.0497289012468682,
+          1.043362322577199,
+          1.034134100601744,
+          1.0226057326287277,
+          1.009498999899099,
+          0.995663425848314,
+          0.9820312496289666,
+          0.9695590144551213,
+          0.9591571077499116,
+          0.9516121132379337,
+          0.9475109128043349,
+          0.9471784893930506,
+          0.950641372554733,
+          0.9576245867520408,
+          0.9675827857596093,
+          0.9797587973172618,
+          0.9932580503214776,
+          1.0071266691701213,
+          1.0204236424534048,
+          1.032281503667734,
+          1.0419536592279564,
+          1.04884897447847,
+          1.0525553930517861,
+          1.0528545457739178
+        ],
+        "final_populations": [
+          0.004234533843294028,
+          0.004842248402601683,
+          0.0058746039370502585,
+          0.007503582683380339,
+          0.010067999851682899,
+          0.01424896312486833,
+          0.021475672595105754,
+          0.034916103997853665,
+          0.061765554146910595,
+          0.11561044436778492,
+          0.19364667764711607,
+          0.20554386838929176,
+          0.1308610577941784,
+          0.06985537132442121,
+          0.038795740107280645,
+          0.02344400186216513,
+          0.015328442470573175,
+          0.01070198549566875,
+          0.007895036527996105,
+          0.006121849870237883,
+          0.004994703478035589,
+          0.004317367071099008,
+          0.003990038065175675,
+          0.003964152946228058
+        ],
+        "final_temperature_over_M": 3.0938722950728124e-08,
+        "initial_temperature_over_M": 0.1,
+        "final_mean_speed_over_c": 0.0002864935615176337,
+        "final_Tgamma_eV": 0.09830739765325136,
+        "max_temperature_over_M": 0.10000000000000002,
+        "min_population": 0.003964152946228058,
+        "maximum_number_fraction_error": 5.551115123125783e-16,
+        "maximum_first_law_absolute_residual": 4.0944603263426416e-10,
+        "maximum_MB_zero_momentum_occupation": 0.03544588669815145,
+        "minimum_heat_capacity": 1.5000001208863027,
+        "final_total_variation_from_instantaneous_equilibrium": 0.794456131610708,
+        "final_pair_kernel_prefactor_ceiling": 4.398912968490171e-05,
+        "final_response": {
+          "fractional_rms": 0.02833035482983236,
+          "max_abs_beta_f_equals_MP": 0.040145304476584716
+        },
+        "evaluations": 1450,
+        "rate_table": {
+          "laguerre_order": 96,
+          "temperature_points": 160
+        },
+        "history": [
+          {
+            "log_a": 0.0,
+            "temperature_over_M": 0.10000000000000002,
+            "mean_energy_over_M": 1.1559150195038743,
+            "first_fourier_population_abs": 0.22498114541656514
+          },
+          {
+            "log_a": 0.5,
+            "temperature_over_M": 0.046059789305477085,
+            "mean_energy_over_M": 1.0518828602637158,
+            "first_fourier_population_abs": 0.40889639849571924
+          },
+          {
+            "log_a": 1.0,
+            "temperature_over_M": 0.021767703687010448,
+            "mean_energy_over_M": 1.0032904535871783,
+            "first_fourier_population_abs": 0.5796903570182069
+          },
+          {
+            "log_a": 1.5,
+            "temperature_over_M": 0.010145697358681217,
+            "mean_energy_over_M": 0.9804133797442295,
+            "first_fourier_population_abs": 0.6674325886763438
+          },
+          {
+            "log_a": 2.0,
+            "temperature_over_M": 0.004674737204936875,
+            "mean_energy_over_M": 0.9698219652491649,
+            "first_fourier_population_abs": 0.708464330884592
+          },
+          {
+            "log_a": 2.5,
+            "temperature_over_M": 0.002175406555092534,
+            "mean_energy_over_M": 0.964928949730441,
+            "first_fourier_population_abs": 0.7288795633777675
+          },
+          {
+            "log_a": 3.0,
+            "temperature_over_M": 0.001040449534269266,
+            "mean_energy_over_M": 0.9626272157616822,
+            "first_fourier_population_abs": 0.7397599822464026
+          },
+          {
+            "log_a": 3.5,
+            "temperature_over_M": 0.0005170007700813879,
+            "mean_energy_over_M": 0.9615083488958965,
+            "first_fourier_population_abs": 0.7458620022244851
+          },
+          {
+            "log_a": 4.0,
+            "temperature_over_M": 0.0002679168533393415,
+            "mean_energy_over_M": 0.9609419423085374,
+            "first_fourier_population_abs": 0.749397256160289
+          },
+          {
+            "log_a": 4.5,
+            "temperature_over_M": 0.00014444164139320963,
+            "mean_energy_over_M": 0.9606430642546582,
+            "first_fourier_population_abs": 0.7514839968907294
+          },
+          {
+            "log_a": 5.0,
+            "temperature_over_M": 8.050712720765883e-05,
+            "mean_energy_over_M": 0.9604793991394167,
+            "first_fourier_population_abs": 0.7527286048209445
+          },
+          {
+            "log_a": 5.5,
+            "temperature_over_M": 4.6035458159523716e-05,
+            "mean_energy_over_M": 0.960387055411752,
+            "first_fourier_population_abs": 0.7534751157704156
+          },
+          {
+            "log_a": 6.0,
+            "temperature_over_M": 2.680883779354957e-05,
+            "mean_energy_over_M": 0.9603337814540347,
+            "first_fourier_population_abs": 0.7539240239153702
+          },
+          {
+            "log_a": 6.5,
+            "temperature_over_M": 1.5800887699506602e-05,
+            "mean_energy_over_M": 0.9603025724283883,
+            "first_fourier_population_abs": 0.754194055019885
+          },
+          {
+            "log_a": 7.0,
+            "temperature_over_M": 9.377759795712205e-06,
+            "mean_energy_over_M": 0.9602841126834729,
+            "first_fourier_population_abs": 0.7543562023548087
+          },
+          {
+            "log_a": 7.5,
+            "temperature_over_M": 5.580701661102674e-06,
+            "mean_energy_over_M": 0.9602731398023902,
+            "first_fourier_population_abs": 0.7544531661194527
+          },
+          {
+            "log_a": 8.0,
+            "temperature_over_M": 3.3171412606403744e-06,
+            "mean_energy_over_M": 0.9602666112609224,
+            "first_fourier_population_abs": 0.7545107352501763
+          },
+          {
+            "log_a": 8.5,
+            "temperature_over_M": 1.9615334570567503e-06,
+            "mean_energy_over_M": 0.960262738550844,
+            "first_fourier_population_abs": 0.7545445304887445
+          },
+          {
+            "log_a": 9.0,
+            "temperature_over_M": 1.1489191166049327e-06,
+            "mean_energy_over_M": 0.9602604575756857,
+            "first_fourier_population_abs": 0.7545640446961753
+          },
+          {
+            "log_a": 9.5,
+            "temperature_over_M": 6.634566641894287e-07,
+            "mean_energy_over_M": 0.9602591296199455,
+            "first_fourier_population_abs": 0.7545750647608371
+          },
+          {
+            "log_a": 10.0,
+            "temperature_over_M": 3.7603322712068003e-07,
+            "mean_energy_over_M": 0.9602583689968038,
+            "first_fourier_population_abs": 0.7545811187991465
+          },
+          {
+            "log_a": 10.5,
+            "temperature_over_M": 2.0847899033621164e-07,
+            "mean_energy_over_M": 0.960257942076113,
+            "first_fourier_population_abs": 0.7545843450935004
+          },
+          {
+            "log_a": 11.0,
+            "temperature_over_M": 1.1288768627247869e-07,
+            "mean_energy_over_M": 0.9602577078759031,
+            "first_fourier_population_abs": 0.7545860137051179
+          },
+          {
+            "log_a": 11.5,
+            "temperature_over_M": 5.972709735287732e-08,
+            "mean_energy_over_M": 0.9602575823851243,
+            "first_fourier_population_abs": 0.7545868543183925
+          },
+          {
+            "log_a": 12.0,
+            "temperature_over_M": 3.0938722950728124e-08,
+            "mean_energy_over_M": 0.9602575166278282,
+            "first_fourier_population_abs": 0.7545872691089454
+          }
+        ],
+        "scope": "Common kinetic temperature and classical dilute MB distributions assumed; kinetic-equilibrium collision hierarchy not solved. Scalar phase frozen throughout formation. Fixed total initial abundance, supplied radiation+matter background; no abundance prediction, scalar/metric perturbations, full portals or UV completion. Heating-off row is an intentionally nonconserving diagnostic, not a physical closed-gas solution."
+      }
+    },
+    {
+      "label": "later_endpoint",
+      "changes": {
+        "population_L1": 1.2099847313141315e-06,
+        "beta_relative": 5.128049307412397e-07,
+        "temperature_relative": -0.938283617278811
+      },
+      "row": {
+        "strength": 100.0,
+        "method": "Radau",
+        "heating": true,
+        "initial": "uniform",
+        "background": {
+          "tau0": 0.1,
+          "xi": 0.1,
+          "Y_particles": 0.00137,
+          "g_rho": 3.36,
+          "g_s": 3.91,
+          "mA_GeV": 0.01,
+          "Tgamma0_GeV": 1.6e-05,
+          "n_particles0_GeV3": 9.624418512498297e-18,
+          "H_radiation0_GeV": 6.381742202828231e-29,
+          "equality_Tgamma_GeV": 8e-10
+        },
+        "gD_for_supplied_mediator": 0.01268618960063808,
+        "contact_coefficient_GeV_minus2": 1.6093940658333776,
+        "initial_phase": 0.37,
+        "masses_over_M": [
+          1.0497289012468682,
+          1.043362322577199,
+          1.034134100601744,
+          1.0226057326287277,
+          1.009498999899099,
+          0.995663425848314,
+          0.9820312496289666,
+          0.9695590144551213,
+          0.9591571077499116,
+          0.9516121132379337,
+          0.9475109128043349,
+          0.9471784893930506,
+          0.950641372554733,
+          0.9576245867520408,
+          0.9675827857596093,
+          0.9797587973172618,
+          0.9932580503214776,
+          1.0071266691701213,
+          1.0204236424534048,
+          1.032281503667734,
+          1.0419536592279564,
+          1.04884897447847,
+          1.0525553930517861,
+          1.0528545457739178
+        ],
+        "final_populations": [
+          0.004358231449935004,
+          0.004980722727057473,
+          0.0060378691407803236,
+          0.007704877781875756,
+          0.010325859976519849,
+          0.014590023487458496,
+          0.021935996925965377,
+          0.03552596496438288,
+          0.06243551365879318,
+          0.1155976463469713,
+          0.1910392289922345,
+          0.20235868183993225,
+          0.13044935493320967,
+          0.07047546660918418,
+          0.03942851920371098,
+          0.023930027475979884,
+          0.015688413540740753,
+          0.010972784334642861,
+          0.008105046534080035,
+          0.006290891921744672,
+          0.005136827648708765,
+          0.004443072102509245,
+          0.004107748023050681,
+          0.004081230380531611
+        ],
+        "final_temperature_over_M": 1.9891834710780743e-09,
+        "initial_temperature_over_M": 0.1,
+        "final_mean_speed_over_c": 7.26342294905777e-05,
+        "final_Tgamma_eV": 0.013304459505657087,
+        "max_temperature_over_M": 0.10000000000000002,
+        "min_population": 0.004081230380531611,
+        "maximum_number_fraction_error": 6.661338147750939e-16,
+        "maximum_first_law_absolute_residual": 2.88218782173999e-10,
+        "maximum_MB_zero_momentum_occupation": 0.0313102627015647,
+        "minimum_heat_capacity": 1.5000000077701814,
+        "final_total_variation_from_instantaneous_equilibrium": 0.7976413181600676,
+        "final_pair_kernel_prefactor_ceiling": 2.301695180294073e-06,
+        "final_response": {
+          "fractional_rms": 0.02814190618073982,
+          "max_abs_beta_f_equals_MP": 0.03987708986469049
+        },
+        "evaluations": 1807,
+        "rate_table": {
+          "laguerre_order": 96,
+          "temperature_points": 160
+        },
+        "history": [
+          {
+            "log_a": 0.0,
+            "temperature_over_M": 0.10000000000000002,
+            "mean_energy_over_M": 1.167703982998007,
+            "first_fourier_population_abs": 1.0357789287608108e-16
+          },
+          {
+            "log_a": 0.5833333333333334,
+            "temperature_over_M": 0.043149631635176,
+            "mean_energy_over_M": 1.046228188229923,
+            "first_fourier_population_abs": 0.4243476651194054
+          },
+          {
+            "log_a": 1.1666666666666667,
+            "temperature_over_M": 0.01794686368563508,
+            "mean_energy_over_M": 0.9959299910244135,
+            "first_fourier_population_abs": 0.6046019566226161
+          },
+          {
+            "log_a": 1.75,
+            "temperature_over_M": 0.007304373931489763,
+            "mean_energy_over_M": 0.9751768499467826,
+            "first_fourier_population_abs": 0.6836058405929504
+          },
+          {
+            "log_a": 2.3333333333333335,
+            "temperature_over_M": 0.0029653912112898905,
+            "mean_energy_over_M": 0.9667635454385692,
+            "first_fourier_population_abs": 0.7170611775658386
+          },
+          {
+            "log_a": 2.916666666666667,
+            "temperature_over_M": 0.0012393040068841804,
+            "mean_energy_over_M": 0.9633130638852376,
+            "first_fourier_population_abs": 0.7326329089637388
+          },
+          {
+            "log_a": 3.5,
+            "temperature_over_M": 0.0005442178254094041,
+            "mean_energy_over_M": 0.9618417253096965,
+            "first_fourier_population_abs": 0.740467710671457
+          },
+          {
+            "log_a": 4.083333333333334,
+            "temperature_over_M": 0.00025301159015364083,
+            "mean_energy_over_M": 0.9611794758020167,
+            "first_fourier_population_abs": 0.7446028991280517
+          },
+          {
+            "log_a": 4.666666666666667,
+            "temperature_over_M": 0.00012403951410599635,
+            "mean_energy_over_M": 0.9608641200500887,
+            "first_fourier_population_abs": 0.7468415973623319
+          },
+          {
+            "log_a": 5.25,
+            "temperature_over_M": 6.345022978891068e-05,
+            "mean_energy_over_M": 0.9607064220261414,
+            "first_fourier_population_abs": 0.7480691992905514
+          },
+          {
+            "log_a": 5.833333333333334,
+            "temperature_over_M": 3.345560846896742e-05,
+            "mean_energy_over_M": 0.9606245770431727,
+            "first_fourier_population_abs": 0.7487464286171683
+          },
+          {
+            "log_a": 6.416666666666667,
+            "temperature_over_M": 1.7987357169723792e-05,
+            "mean_energy_over_M": 0.9605810090267917,
+            "first_fourier_population_abs": 0.7491207040320846
+          },
+          {
+            "log_a": 7.0,
+            "temperature_over_M": 9.776273725024574e-06,
+            "mean_energy_over_M": 0.9605574555621033,
+            "first_fourier_population_abs": 0.749327219084293
+          },
+          {
+            "log_a": 7.583333333333334,
+            "temperature_over_M": 5.334137473762625e-06,
+            "mean_energy_over_M": 0.9605446248389488,
+            "first_fourier_population_abs": 0.7494405700056505
+          },
+          {
+            "log_a": 8.166666666666668,
+            "temperature_over_M": 2.903493859097658e-06,
+            "mean_energy_over_M": 0.9605376280161105,
+            "first_fourier_population_abs": 0.7495021548952222
+          },
+          {
+            "log_a": 8.75,
+            "temperature_over_M": 1.5664475508859514e-06,
+            "mean_energy_over_M": 0.9605338325306092,
+            "first_fourier_population_abs": 0.7495350516330771
+          },
+          {
+            "log_a": 9.333333333333334,
+            "temperature_over_M": 8.31612547315513e-07,
+            "mean_energy_over_M": 0.9605317982992485,
+            "first_fourier_population_abs": 0.7495521804479224
+          },
+          {
+            "log_a": 9.916666666666668,
+            "temperature_over_M": 4.312690079030069e-07,
+            "mean_energy_over_M": 0.960530728983456,
+            "first_fourier_population_abs": 0.7495607965318506
+          },
+          {
+            "log_a": 10.5,
+            "temperature_over_M": 2.1719206128474268e-07,
+            "mean_energy_over_M": 0.9605301814152709,
+            "first_fourier_population_abs": 0.7495649585105861
+          },
+          {
+            "log_a": 11.083333333333334,
+            "temperature_over_M": 1.0593166038515907e-07,
+            "mean_energy_over_M": 0.9605299095095123,
+            "first_fourier_population_abs": 0.7495668885866693
+          },
+          {
+            "log_a": 11.666666666666668,
+            "temperature_over_M": 5.008260835756897e-08,
+            "mean_energy_over_M": 0.9605297787200598,
+            "first_fourier_population_abs": 0.749567752692802
+          },
+          {
+            "log_a": 12.25,
+            "temperature_over_M": 2.3034003445495914e-08,
+            "mean_energy_over_M": 0.9605297176528056,
+            "first_fourier_population_abs": 0.7495681293590633
+          },
+          {
+            "log_a": 12.833333333333334,
+            "temperature_over_M": 1.0354106081303325e-08,
+            "mean_energy_over_M": 0.9605296898526341,
+            "first_fourier_population_abs": 0.7495682907329636
+          },
+          {
+            "log_a": 13.416666666666668,
+            "temperature_over_M": 4.5703966132768415e-09,
+            "mean_energy_over_M": 0.9605296774574018,
+            "first_fourier_population_abs": 0.7495683590968713
+          },
+          {
+            "log_a": 14.0,
+            "temperature_over_M": 1.9891834710780743e-09,
+            "mean_energy_over_M": 0.9605296720218748,
+            "first_fourier_population_abs": 0.7495683878363025
+          }
+        ],
+        "scope": "Common kinetic temperature and classical dilute MB distributions assumed; kinetic-equilibrium collision hierarchy not solved. Scalar phase frozen throughout formation. Fixed total initial abundance, supplied radiation+matter background; no abundance prediction, scalar/metric perturbations, full portals or UV completion. Heating-off row is an intentionally nonconserving diagnostic, not a physical closed-gas solution."
+      }
+    }
+  ],
+  "tests": {
+    "command": [
+      "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+      "-m",
+      "pytest",
+      "--noconftest",
+      "-q",
+      "tests/test_toe_20261108_cyclic_vector.py",
+      "tests/test_toe_20261108_axion_and_cyclic.py"
+    ],
+    "exit_code": 0,
+    "stdout": "..................................                                       [100%]\n34 passed in 31.61s\n",
+    "stderr": ""
+  },
+  "artifact_raw_sha256": {
+    "analysis/toe_20261108_cyclic_action_quality.py": "4e7f7c2ccd73a31ce7be3a011afaf0907c7355dae918042f6acf9db212da889e",
+    "analysis/toe_20261108_cyclic_conversion_moments.py": "01951758d17ce385475ec8216d374da00ea071765041e3815fdc9217d20a9de8",
+    "analysis/toe_20261108_cyclic_conversion_server.js": "ce774436f4c0b2b79780f78988bb426bd85a4730936400c07a304b3502569760",
+    "analysis/toe_20261108_cyclic_vector_validation.py": "8a09fbce37b0fbeaab842a071c07a51ee97dd53397b64bf7071116e8592a6fc2",
+    "tests/test_toe_20261108_cyclic_vector.py": "4c0a74e06045db0f939d4ad816ee60165a384d7dbb6d61a211e6326a42ee7dab",
+    "data/toe_20261108_cyclic_action_quality.json": "fc100da2802c4b340d96d692d215da882f7267e68955a1585c7a28ff33f2ac11",
+    "data/toe_20261108_cyclic_conversion_moments.json": "f32b694e364aeed2ac58121c673c9fbf135b43de3c8928ada54e651d5f44c454",
+    "data/toe_20261108_cyclic_conversion_server.json": "832bfae30132b23892c2dc516ee248a2d452de144a9846cccbddb11bf248ef4e",
+    "tests/test_toe_20261108_axion_and_cyclic.py": "b97639f4f92963f0a95730266752647f819546fbfd018cde05624b51a7e0acdf"
+  },
+  "execution": {
+    "RDC_device": "75dccda9-254c-47a9-9d13-ef69565dedf7",
+    "quality_initial": {
+      "pid": 13596,
+      "exit_code": 0,
+      "seconds": 1.64
+    },
+    "first_conversion": {
+      "pid": 24004,
+      "exit_code": 1,
+      "reason": "Large-argument SciPy scaled-Bessel NaN; replaced with standard asymptotics and stable threshold products."
+    },
+    "corrected_conversion": {
+      "pid": 22544,
+      "exit_code": 0,
+      "seconds": 17.3
+    },
+    "final_conversion_and_first_tests": {
+      "pid": 20956,
+      "exit_code": 0,
+      "seconds": 33.62,
+      "tests": "17PASS10.50s"
+    },
+    "final_quality_inventory": "Locally regenerated after explicitly distinguishing anomalous global shift current from anomaly-free vector gauge group.",
+    "actual_server": "Functions.exec V8: independent nested Simpson/Bessel thermal integrals, conditional quality and regular24orbit; no independent complete ODE."
+  },
+  "scope": "18 new parameterized tests plus16 previous axion/cyclic controls. Four ODE sensitivity experiments. Common kinetic temperature, classical MB and constant scalar phase assumed, no complete collision hierarchy or UV protection. Strong scalar-operator quality obstruction under specified cutoff/coefficient assumptions; no universal quantum-gravity no-go or solved TOE."
+}

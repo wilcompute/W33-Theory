@@ -1,0 +1,372 @@
+{
+  "mode": "Configured hook entries run directly with identical file patterns after both indexes regenerated. Existing Bash/CMD pre-commit launcher is unreliable; no --no-verify used.",
+  "records": [
+    {
+      "id": "stale-boundaries",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_stale_boundaries.py"
+      ],
+      "exit_code": 0,
+      "stdout": "==============================================================================\n[stale-boundary sweep] boundary sections a LATER file may have answered\n==============================================================================\nscanned 4066 analysis/*.md; 15 boundaries have a later file sharing >=2 result tokens\n\n  BT7171_BT7186_e8_d4_h27_q9.md\n    -> later: PASS7376_7384_deep_followup.md   (23 shared tokens, e.g. A2, D4, E6, E8)\n  2026-10-10_toe33_joint_decoder_p13_a6_bloch_hardware.md\n    -> later: w33_pass1117_1119_aliases_orbits_trees.md   (9 shared tokens, e.g. E6, E8, e6+e8, e6+levi)\n  PASS20260925_HESSE_PARABOLIC_CUBIC_CLOCK_BREAKTHROUGH.md\n    -> later: THE_27_FOLD_WAY.md   (9 shared tokens, e.g. A2, E6, E8, a2+e6)\n  2026-07-08_pass70_15vector_doily_attack.md\n    -> later: 2026-07-08_pass72_cumulative_bijection.md   (4 shared tokens, e.g. doily, spread@15, spread@3, spread@5)\n  2026-07-08_pass76_QEC_codes_alpha_code.md\n    -> later: 2026-07-15_pass82_grand_synthesis.md   (3 shared tokens, e.g. [137,1,3], [[137,1,3]], monster+moonshine)\n  BT807_q3_antiflag_two_clocks.md\n    -> later: BT1710_BT1712_qubit_torus_hesse_breakthrough.md   (3 shared tokens, e.g. csaszar, csaszar+doily, doily)\n  BT809_register_f4_regular_spread.md\n    -> later: BT836_gc_hemicells_in_spreads.md   (3 shared tokens, e.g. spread@10, spread@2, spread@45)\n  2026-06-19_validation_thread_summary.md\n    -> later: 2026-06-19_bt1327_bt1330_summary.md   (2 shared tokens, e.g. [63,1,11], [[63,1,11]])\n  2026-10-31_tick_loop_algebra_rigidity.md\n    -> later: PASS20260924_EXECUTE_ALL5_TEMPORAL_E8_CONTROLLER.md   (2 shared tokens, e.g. clifford+eisenstein, edge240:signed)\n  2026-07-08_pass72_deep_structure.md\n    -> later: 2026-07-08_pass73_kneser_css_moonshine.md   (2 shared tokens, e.g. doily, doily+monster)\n  BT745_presentation_torsor_chirality.md\n    -> later: BT746_absolute_chirality_z12.md   (2 shared tokens, e.g. E6, e6+torsor)\n  BT795_spread_envelope_routing_cell.md\n    -> later: w33_pass1971_spread_treatments_concordance.md   (2 shared tokens, e.g. spread@180, spread@40)\n  BT1320_BT1325_hypercube_tower_holonet.md\n    -> later: BT1416_BT1418_css_optical_quartic_frontier.md   (2 shared tokens, e.g. clifford+csaszar, csaszar)\n  BT1425_BT1427_retwined_fano_pipeline.md\n    -> later: BT1428_BT1430_symmetry_pulse_holonet.md   (2 shared tokens, e.g. D4, d4+tomotope)\n  BT2560_BT2567_seven_frontiers.md\n    -> later: BT2567_seven_frontiers_insert.tex   (2 shared tokens, e.g. tritangent@27, tritangent@45)\n\n  CANDIDATES, not verdicts. Read the later file before spending a pass\n  re-answering the question. If it does answer it, EDIT THE ORIGINAL\n  boundary to point there -- leaving it stale is what caused this.\n\n",
+      "stderr": "",
+      "seconds": 51.316
+    },
+    {
+      "id": "shifted-adjacency-descendants",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_shifted_adjacency_descendants.py",
+        "--check-only",
+        "analysis/toe_20261108_cyclic_action_quality.py",
+        "analysis/toe_20261108_cyclic_conversion_moments.py",
+        "analysis/toe_20261108_cyclic_vector_validation.py",
+        "analysis/2026-11-08_cyclic_vector_action_conversions_and_quality.md",
+        "tests/test_toe_20261108_cyclic_vector.py",
+        "data/toe_20261108_cyclic_action_quality.json",
+        "data/toe_20261108_cyclic_conversion_moments.json",
+        "data/toe_20261108_cyclic_conversion_server.json",
+        "data/toe_20261108_cyclic_vector_validation.json",
+        "data/toe_20261108_cyclic_vector_intake.json",
+        "RESULTS_INDEX.md",
+        "TOPICAL_ALIASES.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 1.443
+    },
+    {
+      "id": "tag-540-check",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/tag_540_disambiguation.py",
+        "--check-only",
+        "--strict",
+        "analysis/toe_20261108_cyclic_action_quality.py",
+        "analysis/toe_20261108_cyclic_conversion_moments.py",
+        "analysis/toe_20261108_cyclic_vector_validation.py",
+        "analysis/2026-11-08_cyclic_vector_action_conversions_and_quality.md",
+        "tests/test_toe_20261108_cyclic_vector.py",
+        "data/toe_20261108_cyclic_action_quality.json",
+        "data/toe_20261108_cyclic_conversion_moments.json",
+        "data/toe_20261108_cyclic_conversion_server.json",
+        "data/toe_20261108_cyclic_vector_validation.json",
+        "data/toe_20261108_cyclic_vector_intake.json",
+        "RESULTS_INDEX.md",
+        "TOPICAL_ALIASES.md"
+      ],
+      "exit_code": 1,
+      "stdout": "ERROR: RESULTS_INDEX.md has ambiguous 540 occurrence(s)\n  line 218: frontiers.py` | | `[0,1440,31302]` | `analysis/bt3407_magnetic_exact_no_go.py` | | `[1080,540,540]` | `analysis/w33_pass4756_4758_4760_dependency_cube_fast_verify.py` | | `[1160,92\n  line 218: tiers.py` | | `[0,1440,31302]` | `analysis/bt3407_magnetic_exact_no_go.py` | | `[1080,540,540]` | `analysis/w33_pass4756_4758_4760_dependency_cube_fast_verify.py` | | `[1160,925,68\n  line 276: k_map.py` | | `[5,6912,1053]` | `analysis/w33_20261027_native_bloch_face_module.py` | | `[540,270,135]` | `analysis/w33_pass3989_3996_maximum_code_orbit_census.py` | | `[540,540,54\n  line 298: er_code.py` \u00b7 `analysis/w33_pass4772_4776_global_cube_cell_code.py` \u00b7 *(+2)* | | `[2025,540,3]` | `analysis/PASS4745_4752_RESERVATION.md` | | `[2025,567,4]` | `analysis/PASS4745_\n  line 408: o.py` | | `[54,72,432]` | `analysis/w33_pass1611_1615_torsion_xor_lattice_octet.py` | | `[540,141,4]` | `analysis/w33_pass4924_track_b_arithmetic_and_the_51840_warning.py` | | `[58\n  line 1495: ults_index.py` \u00b7 `analysis/w33_pass382_reversible_logic_switch_controller.g` | | `234360/540/90+360+90/6/22of48/0exact/S6-direction` | `analysis/PASS384_Q6_Q3_FOLD_OBSTRUCTION.md`\n  line 1620: ite_TOE_frontiers.md` \u00b7 `analysis/w33_20261019_round11_first_tits_jordan.py` | | `234360/540/90` | `analysis/PASS384_Q6_Q3_FOLD_OBSTRUCTION.md` \u00b7 `analysis/build_results_index.py\n  line 1631: KTHROUGH.md` \u00b7 `analysis/w33_20260924_history_pointline_cospectral_firewall.py` | | `270/540/1620` | `analysis/w33_pass2045_2049_the_sevens_and_a_numbering_collision.md` | | `343/\n  line 1978: py` \u00b7 `analysis/w33_pass10153_10160_c315_w52_structural_no_go.py` | | `totally-isotropic@540` | `analysis/BT1536_frame_dual_k44_code.md` \u00b7 `analysis/w33_frame_hoffman_resolution_\n  line 2388: it_iso.md` | | `tritangent@360` | `analysis/w33_pass4997_4999_bonkers.py` | | `tritangent@540` | `analysis/w33_e6_involution_ladder_flags.py` | | `tritangent@576` | `analysis/w33_2\n  line 2654: ic_closure.md` \u00b7 `analysis/BT3320_BT3331_global_cover_quantum_hypercube.md` | | `deficit@540` | `analysis/PASS5016_5023_EXECUTED_OUTCOMES.md` \u00b7 `analysis/w33_pass5016_radius_rp2_\n  line 2865: ity_spectral_E6_parallelism.md` \u00b7 `analysis/2026-10-10_toe43_five_fronts.md` | | `spread@540` | `analysis/PASS1074_1078_FIVE_STREAM_RELEASE.md` \u00b7 `analysis/w33_pass1067_outer_cla\n  line 3997: _matrix_cs.py` \u00b7 `analysis/w33_pass804_adversarial_calibration_failclosed.py` | | `alpha@540` | `analysis/2026-07-31_frame_hoffman_resolution_theorem.md` \u00b7 `exploration/w33_indep\n  Add an occurrence-local canonical tag: {540:point-nonedge}, {540:double-six-nonincident}, {540:gq42-arc}, {540:outer-4c}, {540:line-nonedge}; use {540:both} or {540:mixed} only for a genuinely mixed single occurrence, and {540:unrelated} only when the literal is not one of the five degree-540 carriers.\nERROR: TOPICAL_ALIASES.md has ambiguous 540 occurrence(s)\n  line 438: -code-outage-decoder.html](docs/pgsp-moduli-outer-code-outage-decoder.html) - `code:[2025,540,3]` \ufffd \u2014 [PASS4745_4752_RESERVATION.md](analysis/PASS4745_4752_RESERVATION.md), [PAS\n  Add an occurrence-local canonical tag: {540:point-nonedge}, {540:double-six-nonincident}, {540:gq42-arc}, {540:outer-4c}, {540:line-nonedge}; use {540:both} or {540:mixed} only for a genuinely mixed single occurrence, and {540:unrelated} only when the literal is not one of the five degree-540 carriers.\n",
+      "stderr": "",
+      "seconds": 0.927
+    },
+    {
+      "id": "pass-namespace-collision-guard",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "analysis/w33_pass1197_parallel_collision_guard.py",
+        "--check-only"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"C:\\Repos\\Theory of Everything\\analysis\\w33_pass1197_parallel_collision_guard.py\", line 189, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Repos\\Theory of Everything\\analysis\\w33_pass1197_parallel_collision_guard.py\", line 89, in main\n    registry, registry_blocks, supplements = load_registry_blocks()\n                                             ~~~~~~~~~~~~~~~~~~~~^^\n  File \"C:\\Repos\\Theory of Everything\\analysis\\w33_pass1197_parallel_collision_guard.py\", line 80, in load_registry_blocks\n    assert supplement.get(\"schema\") == \"w33.pass_namespace_registry.v2.supplement\", path\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: C:\\Repos\\Theory of Everything\\data\\w33_pass_namespace_registry_v2.d\\10049-10112.json\n",
+      "seconds": 0.661
+    },
+    {
+      "id": "s-min-formula-guard",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_smin_formula.py",
+        "analysis/toe_20261108_cyclic_action_quality.py",
+        "analysis/toe_20261108_cyclic_conversion_moments.py",
+        "analysis/toe_20261108_cyclic_vector_validation.py",
+        "analysis/2026-11-08_cyclic_vector_action_conversions_and_quality.md",
+        "tests/test_toe_20261108_cyclic_vector.py",
+        "RESULTS_INDEX.md",
+        "TOPICAL_ALIASES.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.408
+    },
+    {
+      "id": "topical-aliases",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/build_topical_aliases.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "TOPICAL_ALIASES.md up to date\n",
+      "stderr": "",
+      "seconds": 30.867
+    },
+    {
+      "id": "certificate-digests",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_certificates.py",
+        "--quiet",
+        "data/toe_20261108_cyclic_action_quality.json",
+        "data/toe_20261108_cyclic_conversion_moments.json",
+        "data/toe_20261108_cyclic_conversion_server.json",
+        "data/toe_20261108_cyclic_vector_validation.json",
+        "data/toe_20261108_cyclic_vector_intake.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.462
+    },
+    {
+      "id": "novelty-claims",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_novelty_claims.py",
+        "analysis/2026-11-08_cyclic_vector_action_conversions_and_quality.md"
+      ],
+      "exit_code": 0,
+      "stdout": "checking 1 file(s) against index.html, photonic_holonet_body.tex, w33_paper_body.tex\nno novelty claim collides with the encyclopedia.\n",
+      "stderr": "",
+      "seconds": 0.725
+    },
+    {
+      "id": "rediscovery",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_rediscovery.py",
+        "analysis/toe_20261108_cyclic_action_quality.py",
+        "analysis/toe_20261108_cyclic_conversion_moments.py",
+        "analysis/toe_20261108_cyclic_vector_validation.py",
+        "analysis/2026-11-08_cyclic_vector_action_conversions_and_quality.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.622
+    },
+    {
+      "id": "search-power",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_search_power.py",
+        "analysis/toe_20261108_cyclic_action_quality.py",
+        "analysis/toe_20261108_cyclic_conversion_moments.py",
+        "analysis/toe_20261108_cyclic_vector_validation.py",
+        "analysis/2026-11-08_cyclic_vector_action_conversions_and_quality.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  scanned 4 files, 0 unpowered nulls\n  (a zero here means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.467
+    },
+    {
+      "id": "guard-selftests",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_guard_selftests.py"
+      ],
+      "exit_code": 0,
+      "stdout": "  stale-boundaries                 self-test green\n  shifted-adjacency-descendants    self-test green\n  tag-540-check                    self-test green\n  pass-namespace-collision-guard   self-test green\n  s-min-formula-guard              self-test green\n  topical-aliases                  self-test green\n  certificate-digests              self-test green\n  novelty-claims                   self-test green\n  rtl-folds                        self-test green\n  rediscovery                      self-test green\n  search-power                     self-test green\n  layer-conformance                self-test green\n  guard-selftests                  (this runner; skipped)\n  regex-deadends                   self-test green\n  retraction-propagation           self-test green\n  stdlib-shadow                    self-test green\n  pattern-inversions               self-test green\n  heredoc-regex                    self-test green\n  reservation-overlap              self-test green\n  cert-prose-vs-data               self-test green\n  convention-fixed-form            self-test green\n  key-nearmiss                     self-test green\n  certificate-rediscovery          self-test green\n  order-coincidence                self-test green\n  spectral-overreach               self-test green\n  hardcoded-keys                   self-test green\n  constant-claims                  no self-test\n\n  25 self-tested, 1 without a self-test, 0 failing\n\n  The guards without a self-test report numbers nobody can interpret. A zero from a checker\n  that has never been shown to detect anything is not evidence of a clean corpus -- it is\n  the absence of evidence, formatted to look like the presence of it.\n",
+      "stderr": "",
+      "seconds": 22.731
+    },
+    {
+      "id": "regex-deadends",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_regex_deadends.py",
+        "analysis/toe_20261108_cyclic_action_quality.py",
+        "analysis/toe_20261108_cyclic_conversion_moments.py",
+        "analysis/toe_20261108_cyclic_vector_validation.py"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 unmatchable alternatives\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.49
+    },
+    {
+      "id": "retraction-propagation",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_retraction_propagation.py",
+        "analysis/toe_20261108_cyclic_action_quality.py",
+        "analysis/toe_20261108_cyclic_conversion_moments.py",
+        "analysis/toe_20261108_cyclic_vector_validation.py",
+        "analysis/2026-11-08_cyclic_vector_action_conversions_and_quality.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 live assertions of retracted claims across 3 registered\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.579
+    },
+    {
+      "id": "stdlib-shadow",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_stdlib_shadow.py",
+        "analysis/toe_20261108_cyclic_action_quality.py",
+        "analysis/toe_20261108_cyclic_conversion_moments.py",
+        "analysis/toe_20261108_cyclic_vector_validation.py",
+        "tests/test_toe_20261108_cyclic_vector.py"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 shadowing files, 0 high-risk\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.559
+    },
+    {
+      "id": "heredoc-regex",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_heredoc_regex.py",
+        "analysis/toe_20261108_cyclic_action_quality.py",
+        "analysis/toe_20261108_cyclic_conversion_moments.py",
+        "analysis/toe_20261108_cyclic_vector_validation.py"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 collapsed escapes in regex context\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.544
+    },
+    {
+      "id": "cert-prose-vs-data",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_cert_prose_vs_data.py",
+        "data/toe_20261108_cyclic_action_quality.json",
+        "data/toe_20261108_cyclic_conversion_moments.json",
+        "data/toe_20261108_cyclic_conversion_server.json",
+        "data/toe_20261108_cyclic_vector_validation.json",
+        "data/toe_20261108_cyclic_vector_intake.json"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 prose/data contradiction(s) in 5 certificate(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.64
+    },
+    {
+      "id": "convention-fixed-form",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_convention_fixed_form.py",
+        "analysis/toe_20261108_cyclic_action_quality.py",
+        "analysis/toe_20261108_cyclic_conversion_moments.py",
+        "analysis/toe_20261108_cyclic_vector_validation.py",
+        "analysis/2026-11-08_cyclic_vector_action_conversions_and_quality.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 convention-fixed choice(s) in 4 file(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.589
+    },
+    {
+      "id": "key-nearmiss",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_key_nearmiss.py",
+        "data/toe_20261108_cyclic_action_quality.json",
+        "data/toe_20261108_cyclic_conversion_moments.json",
+        "data/toe_20261108_cyclic_conversion_server.json",
+        "data/toe_20261108_cyclic_vector_validation.json",
+        "data/toe_20261108_cyclic_vector_intake.json"
+      ],
+      "exit_code": 124,
+      "stdout": "Exceeded90s; no PASS asserted.",
+      "stderr": "",
+      "seconds": 90.266
+    },
+    {
+      "id": "certificate-rediscovery",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_certificate_rediscovery.py",
+        "data/toe_20261108_cyclic_action_quality.json",
+        "data/toe_20261108_cyclic_conversion_moments.json",
+        "data/toe_20261108_cyclic_conversion_server.json",
+        "data/toe_20261108_cyclic_vector_validation.json",
+        "data/toe_20261108_cyclic_vector_intake.json"
+      ],
+      "exit_code": 0,
+      "stdout": "  RARE  toe_20261108_cyclic_action_quality.json\n        linear_order@24  (stem reaches 2 file-slots)  already in: w33_pass1093_dual_hesse_firewall_fiber_equivalence.json\n  RARE  toe_20261108_cyclic_action_quality.json\n        orbit@2  (stem reaches 45 file-slots)  already in: bt780_rank32_suborbit_atlas_summary.json, dclxiv_holonomy_qutrit_transvection_bridge.json, w33_BREAKTHROUGH_276_now_fan_cap_pullback.json ...\n  RARE  toe_20261108_cyclic_action_quality.json\n        degree@24  (stem reaches 206 file-slots)  already in: PART_3965_3972_TOPOLOGY_CONTROL_CAUSAL_DENSITY_results.json, PART_4081_4088_DEEP_PHYSICS.json, PART_W33_PASS4745_INVARIANT_H1_CHARACTER.json ...\n        toe_20261108_cyclic_action_quality.json\n        degree@26  (stem reaches 206 file-slots)  already in: w33_pass393_the_cover_law_of_the_tower.json\n        toe_20261108_cyclic_action_quality.json\n        degree@28  (stem reaches 206 file-slots)  already in: w33_pass402_quantum_classical_frontier.json\n\n  5 token(s) already present elsewhere, over 5 certificate(s)\n\n  CANDIDATES, RAREST FIRST. Pass 4800's `alpha@18` sat in a committed certificate while\n  six passes re-derived it. Read the RARE ones first: a stem with small reach names a\n  quantity, a stem with large reach names bookkeeping. Ranking is the fix that a stem\n  blocklist was not -- Pass 5635 A/B'd the blocklist and it moved two certificates.\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.927
+    },
+    {
+      "id": "order-coincidence",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_order_coincidence.py",
+        "analysis/toe_20261108_cyclic_action_quality.py",
+        "analysis/toe_20261108_cyclic_conversion_moments.py",
+        "analysis/toe_20261108_cyclic_vector_validation.py",
+        "analysis/2026-11-08_cyclic_vector_action_conversions_and_quality.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 order-coincidence claim(s) in 4 file(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.337
+    },
+    {
+      "id": "spectral-overreach",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_spectral_overreach.py",
+        "analysis/toe_20261108_cyclic_action_quality.py",
+        "analysis/toe_20261108_cyclic_conversion_moments.py",
+        "analysis/toe_20261108_cyclic_vector_validation.py",
+        "analysis/2026-11-08_cyclic_vector_action_conversions_and_quality.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 candidate spectral over-read(s) in 4 file(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.261
+    },
+    {
+      "id": "hardcoded-keys",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_hardcoded_keys.py",
+        "analysis/toe_20261108_cyclic_action_quality.py",
+        "analysis/toe_20261108_cyclic_conversion_moments.py",
+        "analysis/toe_20261108_cyclic_vector_validation.py"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 single-key lookups beside a canonical list\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.286
+    },
+    {
+      "id": "constant-claims",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_constant_claims_hook.py",
+        "analysis/2026-11-08_cyclic_vector_action_conversions_and_quality.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.255
+    }
+  ],
+  "all_exit_codes_zero": false,
+  "frozen_tested_artifact_raw_sha256": {
+    "analysis/toe_20261108_cyclic_action_quality.py": "4e7f7c2ccd73a31ce7be3a011afaf0907c7355dae918042f6acf9db212da889e",
+    "analysis/toe_20261108_cyclic_conversion_moments.py": "01951758d17ce385475ec8216d374da00ea071765041e3815fdc9217d20a9de8",
+    "analysis/toe_20261108_cyclic_conversion_server.js": "ce774436f4c0b2b79780f78988bb426bd85a4730936400c07a304b3502569760",
+    "analysis/toe_20261108_cyclic_vector_validation.py": "8a09fbce37b0fbeaab842a071c07a51ee97dd53397b64bf7071116e8592a6fc2",
+    "analysis/2026-11-08_cyclic_vector_action_conversions_and_quality.md": "5c27f8f2e9d7cadbf26af52716158e49f3b95f50861f6844ecec32b84404440f",
+    "tests/test_toe_20261108_cyclic_vector.py": "4c0a74e06045db0f939d4ad816ee60165a384d7dbb6d61a211e6326a42ee7dab",
+    "data/toe_20261108_cyclic_action_quality.json": "fc100da2802c4b340d96d692d215da882f7267e68955a1585c7a28ff33f2ac11",
+    "data/toe_20261108_cyclic_conversion_moments.json": "f32b694e364aeed2ac58121c673c9fbf135b43de3c8928ada54e651d5f44c454",
+    "data/toe_20261108_cyclic_conversion_server.json": "832bfae30132b23892c2dc516ee248a2d452de144a9846cccbddb11bf248ef4e",
+    "data/toe_20261108_cyclic_vector_validation.json": "a6d6493e2bcbef778f53e01bfb862ebc796c2e3f3e80ca30d5ad700b59bed3b9",
+    "data/toe_20261108_cyclic_vector_intake.json": "311ef77d403820e0ea9c094d2865c6e2e71a55f369323b45a2d771936f9c00ac",
+    "RESULTS_INDEX.md": "13b2b44875cac9c658edbea9ab705c9959c211cdc20c231c599099dbacf8670c",
+    "TOPICAL_ALIASES.md": "7d96cd02e35806174f5efef1a575198c3e093b16167a5bcdfa60a8f712d5ee8c"
+  },
+  "candidate_triage": "17496 is the explicit standard semidirect-product order729*24, not an identification with prior optical numerators/q9orbit counts.24/729/99 are declared finite-model sizes/counts.130/842 are supplied coefficient/cutoff-dependent quality thresholds, not physical predictions.96/144/160/256 are quadrature/grid parameters. Standard EFT/thermal and induced-representation methods credited.",
+  "additional_candidate_triage": "Rarest linear_order@24 match inspected in w33_pass1093_dual_hesse_firewall_fiber_equivalence.json: it is group size of SL2(3) in ASL2(3), not an element order24 or the constructed17496 affine group. degree26/28 matches in pass393/pass402 concern graph valencies, not scalar operator degrees; inspected pertinent certificates. No new group-theory priority claimed."
+}

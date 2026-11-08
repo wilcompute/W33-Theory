@@ -1,0 +1,371 @@
+{
+  "status": "EXPLICIT_REGULAR_CYCLIC_LABEL_MAP_AND_DECLARED_VECTOR_EFT_WITH_QUALITY_OBSTRUCTION",
+  "orbit": {
+    "seed": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      1
+    ],
+    "orbit": [
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        2,
+        1
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        2,
+        0,
+        2,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        2,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        2,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        2,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        2,
+        1
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        2,
+        1
+      ],
+      [
+        0,
+        0,
+        2,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        2,
+        1
+      ]
+    ],
+    "linear_order": 24,
+    "projective_orbit_length": 24,
+    "map": "Assign psi_k to the kth element of this explicit orbit of three-qutrit Pauli labels. M advances k by1. This constructs a regular cyclic label permutation, not a derivation of particle fields from Pauli operators."
+  },
+  "inventory": {
+    "spacetime": "Supplied four-dimensional canonical EFT in natural units, not derived from the finite graph.",
+    "gauge": "U1_D with coupling gD; all24 Dirac psi_k have vector charge+1; Phi is neutral; complex dark Higgs S has charge+1.",
+    "cyclic": "omega=exp(2pi*i/24); Phi -> omega Phi; psi_k -> psi_(k+1); S,A_D unchanged.",
+    "action": "L=|dPhi|^2+|D S|^2-lambdaPhi(|Phi|^2-f^2/2)^2-lambdaS(|S|^2-vD^2/2)^2-F_D^2/4+sum_k psiBar_k iDslash psi_k -sum_k[(M+y omega^k Phi)psiBar_kL psi_kR+h.c.] -V_break.",
+    "physical_masses": "Phi=f/sqrt2 exp(i phi/f); m_k=M sqrt(1+eps^2+2eps cos(phi/f+2pi*k/24)); eps=y*f/(sqrt2*M). mA=gD*vD; choose mA and dark-radial mass much larger than all2*m_k and thermal energies.",
+    "extra_flavor_assumption": "Independent vector U1_k fermion numbers forbid cyclic-invariant off-diagonal circulant masses/Yukawas. They are additional assumed global selection rules, not consequences of Z24. Pair conversions conserve every net U1_k charge and can redistribute symmetric pairs.",
+    "shift_control": "At M=0 the displayed classical action has Phi->exp(i alpha)Phi, psi_kR->exp(-i alpha)psi_kR. The vector interaction respects this classical symmetry. Its chiral current has mixed U1_D^2 anomaly coefficient24 in LH Weyl convention; it is not asserted to be an exact quantum symmetry. Perturbative Abelian FtildeF does not by itself establish a potential, but magnetic/UV sectors require a fresh audit. M and V_break explicitly break it.",
+    "anomalies": {
+      "left_weyl_charges_per_Dirac": [
+        1,
+        -1
+      ],
+      "sum_q": 0,
+      "sum_q_cubed": 0,
+      "classical_shift_U1D_squared_coefficient_LH_convention": 24,
+      "scope": "Continuous U1_D cubic and mixed gravitational gauge anomalies cancel pairwise; this is distinct from the anomalous global chiral shift current. No proof that global cyclic/flavor symmetries can be gauged or survive quantum gravity."
+    },
+    "contact_operator": "-G/2*(sum_k psiBar_k gamma_mu psi_k)^2, G=gD^2/mA^2; sign is convention dependent and rates useG^2.",
+    "retained_processes": "psi_i antiPsi_i <-> psi_j antiPsi_j through virtual A_D, and elastic scattering. CP-symmetric number/energy moments assume n_i=nbar_i and common kinetic temperature.",
+    "excluded_channels": "On-shell A_D,A_D and dark-radial final pairs are kinematically closed in the nonrelativistic/contact benchmark. Radiation through tiny y, off-shell multi-particle channels and portals are not computed.",
+    "allowed_but_unfixed": [
+      "Phi^24/MP^20+h.c.",
+      "|Phi|^2|S|^2",
+      "|Phi|^2|H_SM|^2",
+      "F_D B kinetic mixing",
+      "(S*)^2 psi_L psi_L /Lambda plus flavor/cyclic orbit sums if the extra global fermion numbers are not imposed"
+    ],
+    "not_a_completion": "Additional scalar couplings, initial abundance, vD,f,M,y and Wilson coefficients are inputs; no complete renormalization/kinetic-equilibrium/operator/SM/gravity completion."
+  },
+  "finite_flavor_extension": {
+    "group": "(F3^6 additive) semidirect C24, generator action on additive x is M^T",
+    "order": 17496,
+    "representation_dimension": 24,
+    "distinct_abelian_character_signatures": 729,
+    "representation": "D(x)_kk=exp(2pi*i*q_k dot x/3), (C psi)_k=psi_(k+1). Phi neutral under additive subgroup, transforms exp(2pi*i/24) underC. Both Dirac chiralities in the same representation.",
+    "generator_covariance_max_residual": 0.0,
+    "offdiagonal_Dirac_bilinears_allowed_by_additive_subgroup": [],
+    "Majorana_bilinears_allowed_by_additive_subgroup": [],
+    "bilinear_conclusion": "Only diagonal Dirac masses remain under additive subgroup; C forces the constant mass to be universal and the linear Phi Yukawa coefficients proportional to exp(2pi*i*k/24). Neutral Phi,S,H insertions cannot neutralize a forbidden additive charge.",
+    "four_fermion_charge_sum_classes": 99,
+    "four_fermion_rearrangement_witness": {
+      "incoming": [
+        0,
+        1
+      ],
+      "outgoing": [
+        8,
+        17
+      ]
+    },
+    "higher_operator_boundary": "A nontrivial pair-sum collision permits charge-level current-current flavor rearrangements; its cyclic orbit sum is invariant. Such extra dimension6 coefficients are not fixed by the symmetry or included in the chosen vector-only transport kernel.",
+    "gauge_interpretation": "Can be posited as an extra finite gauge symmetry: vectorlike Dirac representation admits a gauge-invariant bare mass/regulator, so the displayed fermions do not carry a chiral gauge anomaly. No microscopic embedding, topological sector or quantum-gravity realization is computed.",
+    "cost": "An explicit enlargement using the affine subgroup of three-qutrit symplectic labels, not the original two-qutrit W33 group or27dimensional quantum-state module. The24fermions and finite gauge symmetry are new physical inputs.",
+    "remaining_quality": "Phi^24 is invariant under this entire extension. It repairs the bilinear selection problem but not the scalar quality obstruction."
+  },
+  "scalar_monomials": {
+    "max_degree": 28,
+    "phase_breaking": [
+      {
+        "Phi_power": 0,
+        "Phibar_power": 24,
+        "degree": 24,
+        "charge_difference": -24
+      },
+      {
+        "Phi_power": 1,
+        "Phibar_power": 25,
+        "degree": 26,
+        "charge_difference": -24
+      },
+      {
+        "Phi_power": 2,
+        "Phibar_power": 26,
+        "degree": 28,
+        "charge_difference": -24
+      },
+      {
+        "Phi_power": 24,
+        "Phibar_power": 0,
+        "degree": 24,
+        "charge_difference": 24
+      },
+      {
+        "Phi_power": 25,
+        "Phibar_power": 1,
+        "degree": 26,
+        "charge_difference": 24
+      },
+      {
+        "Phi_power": 26,
+        "Phibar_power": 2,
+        "degree": 28,
+        "charge_difference": 24
+      }
+    ],
+    "first_degree": 24,
+    "scope": "Complete monomial enumeration only for Phi and Phi*. Does not enumerate all spinor, derivative, multi-field or gravitational operators."
+  },
+  "quality": {
+    "local_beta_at_pi_over2": 0.053,
+    "supplied_target_excursion_over_MP": 0.3,
+    "target_integrated_log_mass_change": 0.015899999999999997,
+    "necessary_eps_for_full_spectrum_amplitude": 0.00794983251760912,
+    "necessary_f_over_MP_on_small_eps_branch": 0.14998736077812713,
+    "maximum_f_over_MP_for_unit_coefficient_degree24_quality": 3.5476320330468343e-06,
+    "maximum_available_log_mass_at_quality24": 3.7604899540223116e-07,
+    "rows": [
+      {
+        "f_over_MP": 1.0,
+        "eps": 0.053149719311131154,
+        "available_max_log_mass_ratio": 0.10639970345438292,
+        "log10_quality24_curvature_over_H0_squared": 119.90135151128027,
+        "first_operator_degree_with_unit_coefficient_envelope_below_H0_squared": 842
+      },
+      {
+        "f_over_MP": 0.3,
+        "eps": 0.015904021712715547,
+        "available_max_log_mass_ratio": 0.03181072565247767,
+        "log10_quality24_curvature_over_H0_squared": 108.39801911511285,
+        "first_operator_degree_with_unit_coefficient_envelope_below_H0_squared": 188
+      },
+      {
+        "f_over_MP": 0.14998736077812713,
+        "eps": 0.00794983251760912,
+        "available_max_log_mass_ratio": 0.015899999999999952,
+        "log10_quality24_curvature_over_H0_squared": 101.77455410208545,
+        "first_operator_degree_with_unit_coefficient_envelope_below_H0_squared": 130
+      },
+      {
+        "f_over_MP": 0.1,
+        "eps": 0.005300148885364497,
+        "available_max_log_mass_ratio": 0.010600397032099957,
+        "log10_quality24_curvature_over_H0_squared": 97.90135151128027,
+        "first_operator_degree_with_unit_coefficient_envelope_below_H0_squared": 111
+      },
+      {
+        "f_over_MP": 0.01,
+        "eps": 0.0005300001488770837,
+        "available_max_log_mass_ratio": 0.0010600003970055154,
+        "log10_quality24_curvature_over_H0_squared": 75.90135151128027,
+        "first_operator_degree_with_unit_coefficient_envelope_below_H0_squared": 60
+      },
+      {
+        "f_over_MP": 3.5476320330468343e-06,
+        "eps": 1.8802449775148887e-07,
+        "available_max_log_mass_ratio": 3.7604899540223116e-07,
+        "log10_quality24_curvature_over_H0_squared": 8.881784197001252e-16,
+        "first_operator_degree_with_unit_coefficient_envelope_below_H0_squared": 25
+      },
+      {
+        "f_over_MP": 1e-06,
+        "eps": 5.300000000000015e-08,
+        "available_max_log_mass_ratio": 1.0600000004385465e-07,
+        "log10_quality24_curvature_over_H0_squared": -12.098648488719732,
+        "first_operator_degree_with_unit_coefficient_envelope_below_H0_squared": 23
+      }
+    ],
+    "scope": "Conditional EFT screen: coefficient1 and cutoffMP, canonical f/sqrt2 convention, scalar-only leading operator. Quantum gravity is modeled, not calculated. No universal lower bound on coefficients; UV gauge locality or other mechanisms may suppress them. The amplitude condition is necessary, not sufficient for a cosmological trajectory."
+  },
+  "ownership": "Cyclic fermion mass/cancellation mechanism2610.30253; standard scalar quality formula already in toe_20261105_pq_quality_gauge_obstruction.py and primary2606.14098. New use is this declared24partner conversion inventory and its supplied ultralight/finite-excursion compatibility screen, not discovery of the mechanisms."
+}

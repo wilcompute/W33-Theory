@@ -1,0 +1,65 @@
+{
+  "runtime": "Actual functions.exec server V8",
+  "rates": [
+    {
+      "mh": 1.03,
+      "ml": 0.97,
+      "T": 0.1,
+      "rate": 0.22059871410253593,
+      "refined_rate": 0.2205987141025354
+    },
+    {
+      "mh": 1,
+      "ml": 1,
+      "T": 0.1,
+      "rate": 0.16019458403975617,
+      "refined_rate": 0.1601945844375146
+    },
+    {
+      "mh": 1.03,
+      "ml": 0.97,
+      "T": 0.03,
+      "rate": 0.18428985665812442,
+      "refined_rate": 0.1842898566581244
+    },
+    {
+      "mh": 1,
+      "ml": 1,
+      "T": 0.03,
+      "rate": 0.0910792022879801,
+      "refined_rate": 0.09107920256314284
+    },
+    {
+      "mh": 1.03,
+      "ml": 0.97,
+      "T": 0.003,
+      "rate": 0.16624438945734737,
+      "refined_rate": 0.1662443894573476
+    },
+    {
+      "mh": 1,
+      "ml": 1,
+      "T": 0.003,
+      "rate": 0.02943075335733835,
+      "refined_rate": 0.029430753452985698
+    }
+  ],
+  "quality": {
+    "r_min": 0.14998736077812713,
+    "log10_Q24": 101.77455410208545,
+    "first_degree": 130,
+    "rmax24": 0.0000035476320330468343
+  },
+  "orbit": {
+    "seed": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      1
+    ],
+    "orbit_length": 24
+  },
+  "scope": "Independent integral, algebraic and conditional EFT controls. No independent full population/energy ODE or quantum gravity calculation."
+}
