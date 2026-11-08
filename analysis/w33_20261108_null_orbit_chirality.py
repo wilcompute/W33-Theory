@@ -1,5 +1,5 @@
-# Correction: the faithful action for p>3 is GL2(p)/{±I}, not PGL2(p).
 #!/usr/bin/env python3
+# Correction: the faithful action for p>3 is GL2(p)/{±I}, not PGL2(p).
 """Square-class chirality obstruction for real GL2-congruence-covariant null-local clocks.
 
 Primes p=3 mod 4 require equal orbit weights by edge inversion;
