@@ -61,3 +61,22 @@ Within this sampling, five qutrits is the smallest qutrit symplectic structure w
 ## Sources
 
 Wright et al. 2025 (KiDS-Legacy, A&A 703, A158; release via kids.strw.leidenuniv.nl); arXiv:2503.19441, 2512.11041, 2512.17684, 2610.30253 (via Chat); Chat's 75f2a7e02, 8f4f7d2aa.
+
+## Addendum: the natural (KLT-family) model fits as well as phenomenological fading (`klt_fit.py`)
+
+Same fitter and likelihood (full Dovekie growth likelihood). The CLASS build is `class_klt_patch.py`, implementing Khoury, Lin and Trodden's dark-baryon mass 1 + 2s√(1 − ξ sin²(φ/2f)) and a pion-type potential, read from their summaries, not their code.
+
+| model | χ² | Δχ² vs ΛCDM | extra parameters | fitted values |
+|---|---:|---:|---|---|
+| ΛCDM | 2263.97 | 0 | — | — |
+| fading (exponential mass, Pass 12597 onward) | 2252.67 | −11.3 | 2 (c, c′) | c = −0.90, c′ = 0.053 |
+| **KLT family, f = 0.25 M_P** | **2253.30** | **−10.7** | 2 (s, θ_i) | **s = 0.022**, θ_i = 2.24, S8 = 0.827 |
+| KLT family, f = 0.1 M_P | — | — | — | CLASS shooting failed (untested) |
+
+- **The published, potentially natural model reaches the same fit as our phenomenological one** (within 0.6), with the same number of parameters.
+- Its fitted s = σ_N/m₀ = 0.022 sits at the edge of their fiducial 0.01–0.02.
+- Their own Δχ² = −14.5 used full CMB + DESI DR2 + DES-Dovekie, against our plik-lite set.
+- Our fitted S8 is not lower than ΛCDM's (0.827 against 0.807), unlike their reported 0.776–0.793, so the S8 claim is not reproduced in this likelihood. That remains open: our likelihood and parametrisation differ.
+- Its naturalness cost (Pass 12629 §2, under QCD-like scaling) still stands.
+
+Out-of-sample and held-out-shear tests of this model are queued.
