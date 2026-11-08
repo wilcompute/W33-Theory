@@ -15,7 +15,9 @@ The leader changes with the compilation, so the data prefer evolving dark energy
 
 **2. Cosmic shear separates the models; BAO cannot.**
 
-Held-out DES Y3 shear prefers fading (and ΛCDM) over CPL by 1.6–2.2 elpd, with either SN training set. CPL's shear penalty survives a joint refit (Δχ² = 3.2). A KiDS-Legacy replication is in progress.
+Held-out DES Y3 shear prefers fading (and ΛCDM) over CPL by 1.6–2.2 elpd, with either SN training set. CPL's shear penalty survives a joint refit (Δχ² = 3.2). 
+
+**Update (Pass 12631):** KiDS-Legacy held out replicates this. CPL is worst by 2.5–3.0 on KiDS, and fading matches ΛCDM. With BAO+SN, DES and KiDS all held out (Dovekie), the gain over ΛCDM is **fading +4.7, CPL +0.3**. CPL's advantage nearly vanishes once structure growth is predicted. KiDS's own w₀wₐ analysis (arXiv:2512.11041) sees the same S8 tension.
 
 BAO at DESI DR3 depth cannot split fading from CPL (Δχ² < 4) or fix the sign of the coupling (Δχ² < 0.3, and below 3.4 even at 0.2% precision). *Moderate: a 1–2σ effect from one survey so far.*
 
