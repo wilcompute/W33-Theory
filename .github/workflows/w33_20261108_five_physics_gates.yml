@@ -1,0 +1,45 @@
+name: Five TOE physics gates - Maxwell, locality, E6, photonic magic, cosmology
+on:
+  push:
+    branches: [master]
+    paths:
+      - "analysis/w33_20261108_five_physics_gates.py"
+      - "tests/test_w33_20261108_five_physics_gates.py"
+      - "analysis/PASS20261108_FIVE_PHYSICS_GATES.md"
+      - ".github/workflows/w33_20261108_five_physics_gates.yml"
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  five-physics-gates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install numerical reproducibility requirements
+        run: python -m pip install --disable-pip-version-check numpy scipy sympy mpmath networkx pytest
+      - name: Run all five independent falsifier regressions
+        run: python -m pytest -q tests/test_w33_20261108_five_physics_gates.py
+      - name: Produce all-five signed-tensor, topological, magic and cosmology certificate
+        run: python analysis/w33_20261108_five_physics_gates.py --root . --out data/w33_20261108_five_physics_gates.json
+      - name: Assert claims and boundaries
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('data/w33_20261108_five_physics_gates.json'))
+          assert d['gauge']['magnetic_curvature_operator_eigenvalue_multiplicity']=={'zero':72,'three':36}
+          assert d['gauge']['temporal_gauge_covariant_electric_error']<1e-10
+          assert d['E6_three_scalar_spurions']['rank_with_three_independent_extra_scalar_directions']==[78,79,80,81]
+          assert d['photonic_nonclifford']['wigner_minimum']<0
+          assert d['cosmology']['solver_error_is_proof_of_no_physical_solution'] is False
+          assert d['local_hamiltonian']['q5_local_anisotropic_best_mean_squared_probability_error']>0
+          print('PASS five fronts with falsification scope: source native, no measured TOE claims')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-five-physics-gates-20261108-json
+          path: data/w33_20261108_five_physics_gates.json
+          if-no-files-found: error
