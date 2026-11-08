@@ -1,0 +1,42 @@
+name: Null-cone chirality and PGL2 real-locality obstruction
+on:
+  push:
+    branches: [master]
+    paths:
+      - "analysis/w33_20261108_null_orbit_chirality.py"
+      - "tests/test_w33_20261108_null_orbit_chirality.py"
+      - "analysis/PASS20261108_NULL_ORBIT_CHIRALITY.md"
+      - ".github/workflows/w33_20261108_null_orbit_chirality.yml"
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  orbit-symmetry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check numpy pytest
+      - name: Run rank-one orbit and Hermiticity tests
+        run: python -m pytest -q tests/test_w33_20261108_null_orbit_chirality.py
+      - name: Rebuild finite symmetry certificate
+        run: python analysis/w33_20261108_null_orbit_chirality.py --out data/w33_20261108_null_orbit_chirality.json
+      - name: Assert exact structural outcomes
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('data/w33_20261108_null_orbit_chirality.json'))
+          assert [(x['prime'],x['real_symmetric_covariant_null_weights']) for x in d['cases']]==[(3,1),(5,2),(7,1),(11,1),(13,2)]
+          assert [(x['prime'],x['all_time_no_flat_mixing_under_these_symmetries']) for x in d['cases'] if x['all_time_no_flat_mixing_under_these_symmetries']]==[(7,True),(11,True)]
+          assert d['p5_bounded_grid_control']['candidate_pairs_tested']==1089
+          print('PASS null-orbit chirality, mandatory real-weight equality for p=3mod4 and explicit open escape classes')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-null-orbit-chirality-certificate
+          path: data/w33_20261108_null_orbit_chirality.json
+          if-no-files-found: error
