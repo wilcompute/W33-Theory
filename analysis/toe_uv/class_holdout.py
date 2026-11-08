@@ -26,7 +26,8 @@ base = json.load(open(f"class_growth_{ds_}_none.json"))
 fit = json.load(open(f"class_fit_{ds_}.json"))
 if "cpl" not in base:
     base["cpl"] = next(fit[k] for k in fit if k.lower() in ("cpl", "cpl_free"))
-FREE = dict(LCDM=[], exp=["c"], free_neg=["c", "cp"], relax=["prod", "Zn"], cpl=["w0", "wa"])
+FREE = dict(LCDM=[], exp=["c"], free_neg=["c", "cp"], relax=["prod", "Zn"], cpl=["w0", "wa"], klt25=["ks", "kth"])
+C.STEP.update(ks=0.002, kth=0.05)
 C.STEP.update(w0=0.02, wa=0.08)
 BAO_REAL = C.bao_resid
 BMASK = {"on": True}
@@ -54,6 +55,8 @@ out = json.load(open(path)) if os.path.exists(path) else dict(dataset=ds_, hold=
 
 
 def kind_of(m):
+    if m.startswith("klt"):
+        return "klt"
     return "cpl" if m == "cpl" else "fading"
 
 
@@ -93,7 +96,7 @@ if HOLD == "evidence":
     sys.exit(0)
 
 # Every start comes from the LCDM fit TRAINED on the same reduced data, never from a fit that saw the held probe.  The first version started from the full-data optimum and the optimiser did not move along the flat direction, so it leaked the answer; those numbers are withdrawn.  Starting points are declared here, and the spread across starts is part of the result.
-STARTS = dict(LCDM=[{}], exp=[dict(c=-0.3), dict(c=-0.8), dict(c=0.3)], free_neg=[dict(c=-0.3, cp=0.01), dict(c=-0.9, cp=0.05), dict(c=0.5, cp=0.02), dict(c=-0.5, cp=0.08)], cpl=[dict(w0=-1.0, wa=0.0), dict(w0=-0.8, wa=-0.6), dict(w0=-0.5, wa=-1.5)])
+STARTS = dict(LCDM=[{}], exp=[dict(c=-0.3), dict(c=-0.8), dict(c=0.3)], free_neg=[dict(c=-0.3, cp=0.01), dict(c=-0.9, cp=0.05), dict(c=0.5, cp=0.02), dict(c=-0.5, cp=0.08)], cpl=[dict(w0=-1.0, wa=0.0), dict(w0=-0.8, wa=-0.6), dict(w0=-0.5, wa=-1.5)], klt25=[dict(ks=0.01, kth=2.8, kf=0.25), dict(ks=0.005, kth=2.5, kf=0.25)])
 path = f"class_holdout_{ds_}_{HOLD}_neutral.json"
 out = json.load(open(path)) if os.path.exists(path) else dict(dataset=ds_, hold=HOLD, rows={})
 lcdm = dict(base["LCDM"]["p"])
