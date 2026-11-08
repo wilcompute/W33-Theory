@@ -251,10 +251,19 @@ def prereg_cosmology(root=ROOT):
         high=[float(v) for k,v in pairs.items() if k.startswith(str(highest))]
         assert all(x<0 for x in low)
         assert min(low)<min(high)
+        lowest=pair00=float(pairs["00"])
+        highest_pair=str(highest)*2
+        r_hi=float(pairs[highest_pair])
+        # Fixed prospective amplitude-free ratio contrast. Cancels an overall
+        # common multiplicative amplitude, but not redshift calibration errors.
+        contrast=math.log1p(pair00)-math.log1p(r_hi)
+        assert contrast<0
         b[survey]={"count":len(pairs),"lowest_bin_pair_count":len(low),
                    "minimum_low_z_relative_tilt":min(low),
                    "highest_bin_pair_count":len(high),
-                   "highest_z_relative_tilt":high}
+                   "highest_z_relative_tilt":high,
+                   "frozen_low_over_high_log_ratio_contrast":contrast,
+                   "comparison":"log[(xi_low/xi_high)_CPL/(xi_low/xi_high)_fading], derived only from already frozen ratios; not a new observed release"}
     ppd={}
     for hold,filename in (("bao","class_ppd_dovekie_bao_trunc.json"),
                           ("sn","class_ppd_dovekie_sn_trunc.json")):
