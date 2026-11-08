@@ -25,10 +25,15 @@ g2 = dict(__name__="x", __file__=os.path.join(BG, "class_des_fit.py"))
 exec(src2, g2)
 SF, NUIS, PRIM = g2["SF"], g2["NUIS"], g2["PRIM"]
 D = SF("dovekie")
-BOUNDS = dict(c=(-3.0, 3.0), cp=(0.0, 0.2), w0=(-3.0, 1.0), wa=(-5.0, 3.0), tau=(0.01, 0.2))
-FREE = dict(LCDM=[], free_neg=["c", "cp"], free_pos=["c", "cp"], CPL=["w0", "wa"])
+BOUNDS = dict(c=(-3.0, 3.0), cp=(0.0, 0.2), w0=(-3.0, 1.0), wa=(-5.0, 3.0), tau=(0.01, 0.2), ks=(0.0, 0.1), kth=(0.05, 6.2))
+FREE = dict(LCDM=[], free_neg=["c", "cp"], free_pos=["c", "cp"], CPL=["w0", "wa"], KLT=["ks", "kth"])
+C.STEP.update(ks=0.002, kth=0.05)
 DSET = os.environ.get("DSET", "dovekie")
 fits = json.load(open(f"class_fit_{DSET}.json"))
+MODELS = os.environ.get("MODELS", "LCDM,free_neg,free_pos,CPL").split(",")
+if "KLT" in MODELS:
+    # KLT-family best fit from klt_fit.py (full Dovekie growth likelihood, f = 0.25 M_P)
+    fits["KLT"] = dict(p=json.load(open("klt_fit.json"))["klt_f0.25"]["p"])
 rng = np.random.default_rng(20261106)
 SURV = os.environ.get("SURVEY", "des")
 path = ("shear_ppd.json" if DSET == "dovekie" else f"shear_ppd_{DSET}.json") if SURV == "des" else f"shear_ppd_{SURV}_{DSET}.json"
@@ -44,10 +49,10 @@ def ok(q):
     return not ("w0" in q and q["w0"] + q["wa"] >= 0)
 
 
-for m in ("LCDM", "free_neg", "free_pos", "CPL"):
+for m in MODELS:
     if m in out:
         continue
-    kind = "cpl" if m == "CPL" else "fading"
+    kind = "cpl" if m == "CPL" else ("klt" if m == "KLT" else "fading")
     p0 = dict(fits[m]["p"])
     free = C.NAMES + FREE[m]
 
