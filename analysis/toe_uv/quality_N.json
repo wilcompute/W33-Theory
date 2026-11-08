@@ -1,0 +1,73 @@
+{
+ "lnMP4_over_rho": 276.53836169368327,
+ "rows": [
+  {
+   "f_over_MP": 1.0,
+   "N_quality": 797.9210460620706,
+   "N_loop": 19.73087147817166,
+   "eps": 0.053,
+   "monotonic_possible": true
+  },
+  {
+   "f_over_MP": 0.5,
+   "N_quality": 265.9736820206902,
+   "N_loop": 15.963902324680102,
+   "eps": 0.0265,
+   "monotonic_possible": true
+  },
+  {
+   "f_over_MP": 0.27,
+   "N_quality": 167.00115204521927,
+   "N_loop": 13.647630538613871,
+   "eps": 0.01431,
+   "monotonic_possible": true
+  },
+  {
+   "f_over_MP": 0.1,
+   "N_quality": 104.38723940534871,
+   "N_loop": 11.060720639321767,
+   "eps": 0.0053,
+   "monotonic_possible": true
+  },
+  {
+   "f_over_MP": 0.08,
+   "N_quality": 96.27759863276633,
+   "N_loop": 10.608946570397752,
+   "eps": 0.00424,
+   "monotonic_possible": false
+  },
+  {
+   "f_over_MP": 0.01,
+   "N_quality": 55.846662143350926,
+   "N_loop": 7.684147949125845,
+   "eps": 0.00053,
+   "monotonic_possible": false
+  },
+  {
+   "f_over_MP": 0.001,
+   "N_quality": 38.12046113120482,
+   "N_loop": 5.886990856016472,
+   "eps": 5.3e-05,
+   "monotonic_possible": false
+  },
+  {
+   "f_over_MP": 1e-06,
+   "N_quality": 19.52667127231886,
+   "N_loop": 3.4596073747958367,
+   "eps": 5.3e-08,
+   "monotonic_possible": false
+  }
+ ],
+ "delta_phi": [
+  0.2795940882598428,
+  0.7708436023814321,
+  0.2595432393390964,
+  0.8467771255649208
+ ],
+ "f_min_monotonic": [
+  0.08899756241165128,
+  0.24536713933953685,
+  0.08261517897380012,
+  0.2695375304616074
+ ]
+}
