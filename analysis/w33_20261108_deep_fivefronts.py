@@ -51,7 +51,8 @@ def native_e6(root=ROOT):
     eps=np.array([[[0,0,0],[0,0,1],[0,-1,0]],
                   [[0,0,-1],[0,0,0],[1,0,0]],
                   [[0,1,0],[-1,0,0],[0,0,0]]],int)
-    assert np.all(np.einsum("aij,ji->a",eps,eps[0])==np.einsum("aij,ji->a",eps,eps[0]))
+    assert np.max(abs(eps+eps.transpose(0,2,1)))==0
+    assert {int(np.linalg.matrix_rank(eps[a])) for a in range(3)}=={2}
     return {
        "status":"NATIVE_E6_DIRECT_FIBER_PROJECTOR_OBSTRUCTION",
        "signed_tensor_records":len(records),"e6_irrep_generators":len(e6),
@@ -134,7 +135,7 @@ def gauge_selector():
     cycle_leverage=float(np.linalg.norm(PH@conserved_cycle)**2)
     assert charge_harmonic<1e-11 and face_harmonic<1e-11 and div_cycle<1e-11
     assert abs(cycle_leverage-23/54)<1e-11
-    return {"status":"EXACT_GAUGE_HODGE_CHARGE_SOURCE_FALISIFIER",
+    return {"status":"EXACT_GAUGE_HODGE_CHARGE_SOURCE_FALSIFIER",
        "vertices":27,"edges":108,"faces":36,"harmonic_rank":rank,
        "projector_idempotence_and_closure_residual":residual,
        "single_oriented_edge_harmonic_leverage_squared":cycle_leverage,
