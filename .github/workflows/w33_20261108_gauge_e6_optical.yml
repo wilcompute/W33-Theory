@@ -1,0 +1,45 @@
+name: W33 affine Hodge, native E6 rank, and optical routing
+on:
+  push:
+    branches: [master]
+    paths:
+      - "analysis/w33_20261108_gauge_E6_optical_followthrough.py"
+      - "tests/test_w33_20261108_gauge_E6_optical_followthrough.py"
+      - "analysis/PASS20261108_GAUGE_E6_OPTICAL_FOLLOWTHROUGH.md"
+      - ".github/workflows/w33_20261108_gauge_e6_optical.yml"
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  three-independent-falsifiers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install precise fixed dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy sympy pytest networkx mpmath
+      - name: Run all six independent gate regressions
+        run: python -m pytest -q tests/test_w33_20261108_gauge_E6_optical_followthrough.py
+      - name: Generate native mass / Hodge / route artifact
+        run: python analysis/w33_20261108_gauge_E6_optical_followthrough.py --root . --out data/w33_20261108_gauge_E6_optical_followthrough.json
+      - name: Check independent data certificate and limits
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('data/w33_20261108_gauge_E6_optical_followthrough.json'))
+          assert d['gauge']['T27_averaged_frame_eigenvalues']=={'0':90,'1/12':12,'1/6':6}
+          assert d['E6']['rank_after_rank_k_artificial_corrections']=={'0':78,'1':79,'2':80,'3':81}
+          assert d['optics']['tested_orders']==362880
+          assert d['optics']['full_permutation_swaps_after']==84
+          assert 'not E6-invariant' in d['E6']['physical_limit']
+          assert 'NOT included' in d['optics']['critical_limit']
+          print('PASS: Hodge frame; genuine 1620-tensor E6 rank; exhaustive optical ordering')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-gauge-E6-optical-verified
+          path: data/w33_20261108_gauge_E6_optical_followthrough.json
+          if-no-files-found: error
