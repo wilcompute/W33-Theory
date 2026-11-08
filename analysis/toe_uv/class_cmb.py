@@ -13,6 +13,7 @@ import dark_like as L
 HOME = os.path.expanduser("~/cosmo")
 CLASSBIN = HOME + "/class_fading/class"
 MONOBIN = os.path.expanduser("~/cosmo/class_mono/class")
+KLTBIN = os.path.expanduser("~/cosmo/class_klt/class")
 PL = HOME + "/planck-lite-py/data"
 SND = HOME + "/snsdata"
 TCMB = 2.7255e6
@@ -104,6 +105,11 @@ def run_class(p, kind="fading", extra="", binp=CLASSBIN, keep=None):
         ini += ["Omega_Lambda=0", "Omega_fld=0", "Omega_scf=-1", "attractor_ic_scf=no", f"scf_parameters={p.get('c', 0.0)},{p.get('cp', 0.0)},2.0,{p.get('Fi', 0.0)},0.0,0.0", "scf_tuning_index=2"]
         if binp == CLASSBIN:
             binp = MONOBIN
+    elif kind == "klt":
+        # Khoury-Lin-Trodden-family model (class_klt_patch.py): s = sigma_N/m0 (ks), f in M_P (kf), initial angle theta_i (kth), phi_ini = theta_i f
+        ini += ["Omega_Lambda=0", "Omega_fld=0", "Omega_scf=-1", "attractor_ic_scf=no", f"scf_parameters=0.0,{p['ks']},2.0,{p['kf']},{p['kth'] * p['kf']},0.0", "scf_tuning_index=2"]
+        if binp == CLASSBIN:
+            binp = KLTBIN
     elif kind == "cpl":
         ini += ["Omega_Lambda=0", f"w0_fld={p['w0']}", f"wa_fld={p['wa']}", "fluid_equation_of_state=CLP", "use_ppf=yes"]
     ini.append(PRECISION)
