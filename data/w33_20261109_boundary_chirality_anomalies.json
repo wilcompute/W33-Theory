@@ -1,0 +1,136 @@
+{
+  "anomaly_gate": {
+    "SU2_left_doublet_count": 4,
+    "SU2_sq_U1": "0",
+    "SU3_sq_U1": "0",
+    "U1_cubed": "0",
+    "Witten_global_SU2_even_doublets": true,
+    "gravitational_U1": "0",
+    "status": "PASS_EXACT_IF_STANDARD_MODEL_REPS_SUPPLIED",
+    "warning": "This only checks established Standard Model hypercharges input by hand. No W33 construction derives these representations, their observed masses/couplings or their chiral realization."
+  },
+  "complex_disorder": {
+    "boundary_index_is_site_imbalance": true,
+    "independent_edge_holonomy_controls": [
+      {
+        "boundary_zero_mode_inverse_participation_ratio": 0.03970306312845732,
+        "boundary_zero_mode_support_estimate": 25.186973528076383,
+        "closed_min_singular": 0.02403143704116333,
+        "open_index": -1,
+        "open_min_nonzero_singular": 0.11667244021051157,
+        "trial": 0
+      },
+      {
+        "boundary_zero_mode_inverse_participation_ratio": 0.043282999038381856,
+        "boundary_zero_mode_support_estimate": 23.103759494882386,
+        "closed_min_singular": 0.09298267166379465,
+        "open_index": -1,
+        "open_min_nonzero_singular": 0.1051766896255189,
+        "trial": 1
+      },
+      {
+        "boundary_zero_mode_inverse_participation_ratio": 0.050475584213504766,
+        "boundary_zero_mode_support_estimate": 19.811558708664723,
+        "closed_min_singular": 0.09669909365859705,
+        "open_index": -1,
+        "open_min_nonzero_singular": 0.12087600366155606,
+        "trial": 2
+      },
+      {
+        "boundary_zero_mode_inverse_participation_ratio": 0.041167735063299536,
+        "boundary_zero_mode_support_estimate": 24.290867555924546,
+        "closed_min_singular": 0.12186204220068228,
+        "open_index": -1,
+        "open_min_nonzero_singular": 0.13932687343969838,
+        "trial": 3
+      },
+      {
+        "boundary_zero_mode_inverse_participation_ratio": 0.05018345879373584,
+        "boundary_zero_mode_support_estimate": 19.926884755197964,
+        "closed_min_singular": 0.06256105788862455,
+        "open_index": -1,
+        "open_min_nonzero_singular": 0.06813250016770932,
+        "trial": 4
+      },
+      {
+        "boundary_zero_mode_inverse_participation_ratio": 0.04284351801473468,
+        "boundary_zero_mode_support_estimate": 23.340753662107797,
+        "closed_min_singular": 0.05566451175997008,
+        "open_index": -1,
+        "open_min_nonzero_singular": 0.13069283587727754,
+        "trial": 5
+      },
+      {
+        "boundary_zero_mode_inverse_participation_ratio": 0.0425629968755507,
+        "boundary_zero_mode_support_estimate": 23.49458622295523,
+        "closed_min_singular": 0.034531885880892656,
+        "open_index": -1,
+        "open_min_nonzero_singular": 0.03893539576484314,
+        "trial": 6
+      },
+      {
+        "boundary_zero_mode_inverse_participation_ratio": 0.04805559773238137,
+        "boundary_zero_mode_support_estimate": 20.80923029131669,
+        "closed_min_singular": 0.08208696453648673,
+        "open_index": -1,
+        "open_min_nonzero_singular": 0.1662146866696007,
+        "trial": 7
+      }
+    ],
+    "limitation": "Stable -1 index is forced by the imposed rectangular matrix, not by an intrinsic W33 topological invariant. An unpaired null state in a finite charged system does not imply anomaly cancellation, a Weyl cone, locality of a 3+1D theory, or emergent chiral matter.",
+    "vertex_phase_gauge_covariance_singular_error": 1.3322676295501878e-15
+  },
+  "rational_rank": {
+    "all_single_point_deleted_boundary_ranks": [
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25
+    ],
+    "closed_incidence_rank_over_Q": 25,
+    "closed_index": 0,
+    "closed_minus_zero_modes": 15,
+    "closed_plus_zero_modes": 15,
+    "deleted_index": -1,
+    "deleted_minus_zero_modes": 15,
+    "deleted_plus_zero_modes": 14
+  },
+  "scope": "A stringent negative test: an index can be created by an externally imposed boundary imbalance and survives edge phases, but no evidence that W33 predicts a stable anomaly-free chiral fermion sector.",
+  "status": "PASS_W33_BOUNDARY_INDEX_VERSUS_NATIVE_AND_INPUT_ANOMALIES"
+}

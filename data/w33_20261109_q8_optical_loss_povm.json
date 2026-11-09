@@ -1,0 +1,888 @@
+{
+  "assumptions": "Each coupled rail experiences sqrt(t) field transmission after each of 36 programmed Givens; phase errors independently perturb output rails. First eight Bell contexts ideal to isolate generic analyzer effects. State preparation IID, no Poisson noise; detector postselection is normalized.",
+  "generic_programmed_two_mode_elements_each": 36,
+  "input_programs": 2,
+  "loss_noise_controls": [
+    {
+      "generic_output_rail_gate_exposures": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        8
+      ],
+      "lowest_approx_intensity_if_fixed_rail_path": 1.0,
+      "per_gate_intensity_transmission": 1.0,
+      "per_gate_rms_phase_error_rad": 0.0,
+      "results": [
+        {
+          "accepted_rate_generic_1": 0.9999999999999998,
+          "accepted_rate_generic_2": 0.9999999999999993,
+          "calibration_free_false_positive": false,
+          "naive_recon_min_eigenvalue": 0.11111111111111076,
+          "naive_reconstructed_CCNR": 0.3333333333333335,
+          "source": "I9_over_9",
+          "true_CCNR": 0.3333333333333333
+        },
+        {
+          "accepted_rate_generic_1": 0.9999999999999998,
+          "accepted_rate_generic_2": 0.9999999999999996,
+          "calibration_free_false_positive": false,
+          "naive_recon_min_eigenvalue": -4.104382359021296e-17,
+          "naive_reconstructed_CCNR": 1.0030587940982738,
+          "source": "Horodecki_a0p236",
+          "true_CCNR": 1.0030587940982738
+        },
+        {
+          "accepted_rate_generic_1": 0.9999999999999997,
+          "accepted_rate_generic_2": 0.9999999999999996,
+          "calibration_free_false_positive": false,
+          "naive_recon_min_eigenvalue": -8.082277734716722e-16,
+          "naive_reconstructed_CCNR": 1.0000000000000029,
+          "source": "separable_product_0",
+          "true_CCNR": 1.0
+        },
+        {
+          "accepted_rate_generic_1": 0.9999999999999994,
+          "accepted_rate_generic_2": 0.9999999999999996,
+          "calibration_free_false_positive": false,
+          "naive_recon_min_eigenvalue": -1.0687772332699871e-15,
+          "naive_reconstructed_CCNR": 1.0000000000000036,
+          "source": "separable_product_1",
+          "true_CCNR": 0.9999999999999999
+        },
+        {
+          "accepted_rate_generic_1": 0.9999999999999998,
+          "accepted_rate_generic_2": 0.9999999999999992,
+          "calibration_free_false_positive": false,
+          "naive_recon_min_eigenvalue": -7.951633226414857e-16,
+          "naive_reconstructed_CCNR": 1.0000000000000038,
+          "source": "separable_product_2",
+          "true_CCNR": 1.0000000000000002
+        },
+        {
+          "accepted_rate_generic_1": 0.9999999999999997,
+          "accepted_rate_generic_2": 0.9999999999999998,
+          "calibration_free_false_positive": false,
+          "naive_recon_min_eigenvalue": -6.752948495011201e-16,
+          "naive_reconstructed_CCNR": 1.0000000000000027,
+          "source": "separable_product_3",
+          "true_CCNR": 0.9999999999999998
+        },
+        {
+          "accepted_rate_generic_1": 0.9999999999999996,
+          "accepted_rate_generic_2": 0.9999999999999992,
+          "calibration_free_false_positive": false,
+          "naive_recon_min_eigenvalue": -1.20879183445413e-15,
+          "naive_reconstructed_CCNR": 1.0000000000000042,
+          "source": "separable_product_4",
+          "true_CCNR": 1.0000000000000002
+        },
+        {
+          "accepted_rate_generic_1": 0.9999999999999998,
+          "accepted_rate_generic_2": 0.9999999999999998,
+          "calibration_free_false_positive": false,
+          "naive_recon_min_eigenvalue": -1.1063203868339457e-15,
+          "naive_reconstructed_CCNR": 1.0000000000000033,
+          "source": "separable_product_5",
+          "true_CCNR": 1.0
+        },
+        {
+          "accepted_rate_generic_1": 1.0,
+          "accepted_rate_generic_2": 0.9999999999999999,
+          "calibration_free_false_positive": false,
+          "naive_recon_min_eigenvalue": -7.693489281698659e-16,
+          "naive_reconstructed_CCNR": 1.0000000000000033,
+          "source": "separable_product_6",
+          "true_CCNR": 1.0000000000000002
+        },
+        {
+          "accepted_rate_generic_1": 0.9999999999999999,
+          "accepted_rate_generic_2": 1.0,
+          "calibration_free_false_positive": false,
+          "naive_recon_min_eigenvalue": -1.0094325640568157e-15,
+          "naive_reconstructed_CCNR": 1.0000000000000036,
+          "source": "separable_product_7",
+          "true_CCNR": 1.0
+        },
+        {
+          "accepted_rate_generic_1": 0.9999999999999997,
+          "accepted_rate_generic_2": 1.0,
+          "calibration_free_false_positive": false,
+          "naive_recon_min_eigenvalue": -9.241957987554539e-16,
+          "naive_reconstructed_CCNR": 1.0000000000000024,
+          "source": "separable_product_8",
+          "true_CCNR": 1.0
+        },
+        {
+          "accepted_rate_generic_1": 0.9999999999999999,
+          "accepted_rate_generic_2": 0.9999999999999997,
+          "calibration_free_false_positive": false,
+          "naive_recon_min_eigenvalue": -7.830855085205878e-16,
+          "naive_reconstructed_CCNR": 1.0000000000000038,
+          "source": "separable_product_9",
+          "true_CCNR": 0.9999999999999999
+        },
+        {
+          "accepted_rate_generic_1": 1.0,
+          "accepted_rate_generic_2": 1.0,
+          "calibration_free_false_positive": false,
+          "naive_recon_min_eigenvalue": -9.556425692641409e-16,
+          "naive_reconstructed_CCNR": 1.0000000000000033,
+          "source": "separable_product_10",
+          "true_CCNR": 1.0000000000000002
+        },
+        {
+          "accepted_rate_generic_1": 0.9999999999999994,
+          "accepted_rate_generic_2": 0.999999999999999,
+          "calibration_free_false_positive": false,
+          "naive_recon_min_eigenvalue": -1.369137881533914e-15,
+          "naive_reconstructed_CCNR": 1.0000000000000044,
+          "source": "separable_product_11",
+          "true_CCNR": 0.9999999999999998
+        }
+      ],
+      "separable_false_positive_count": 0,
+      "total_separable_controls": 12
+    },
+    {
+      "generic_output_rail_gate_exposures": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        8
+      ],
+      "lowest_approx_intensity_if_fixed_rail_path": 0.985104546362002,
+      "per_gate_intensity_transmission": 0.999,
+      "per_gate_rms_phase_error_rad": 0.0,
+      "results": [
+        {
+          "accepted_rate_generic_1": 0.9920317624769877,
+          "accepted_rate_generic_2": 0.9920317578271083,
+          "calibration_free_false_positive": false,
+          "naive_recon_min_eigenvalue": 0.10920236137054634,
+          "naive_reconstructed_CCNR": 0.3333596397736889,
+          "source": "I9_over_9",
+          "true_CCNR": 0.3333333333333333
+        },
+        {
+          "accepted_rate_generic_1": 0.9913514585118843,
+          "accepted_rate_generic_2": 0.9918951219307823,
+          "calibration_free_false_positive": false,
+          "naive_recon_min_eigenvalue": -0.0002470797222125703,
+          "naive_reconstructed_CCNR": 1.0030400450116999,
+          "source": "Horodecki_a0p236",
+          "true_CCNR": 1.0030587940982738
+        },
+        {
+          "accepted_rate_generic_1": 0.992125205569733,
+          "accepted_rate_generic_2": 0.9923768430647029,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.0015614798615608853,
+          "naive_reconstructed_CCNR": 1.003562591875791,
+          "source": "separable_product_0",
+          "true_CCNR": 1.0
+        },
+        {
+          "accepted_rate_generic_1": 0.9927888510471209,
+          "accepted_rate_generic_2": 0.9930231683150748,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.0014996553440361966,
+          "naive_reconstructed_CCNR": 1.0030745573714257,
+          "source": "separable_product_1",
+          "true_CCNR": 0.9999999999999999
+        },
+        {
+          "accepted_rate_generic_1": 0.991597896721998,
+          "accepted_rate_generic_2": 0.9925172380626498,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.0018522289478921524,
+          "naive_reconstructed_CCNR": 1.004137815529156,
+          "source": "separable_product_2",
+          "true_CCNR": 1.0000000000000002
+        },
+        {
+          "accepted_rate_generic_1": 0.9945295992387481,
+          "accepted_rate_generic_2": 0.9947036504032645,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.0030839798558941426,
+          "naive_reconstructed_CCNR": 1.0062243019533395,
+          "source": "separable_product_3",
+          "true_CCNR": 0.9999999999999998
+        },
+        {
+          "accepted_rate_generic_1": 0.9928052871125792,
+          "accepted_rate_generic_2": 0.9913020473404586,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.002286995269548113,
+          "naive_reconstructed_CCNR": 1.0044028086503716,
+          "source": "separable_product_4",
+          "true_CCNR": 1.0000000000000002
+        },
+        {
+          "accepted_rate_generic_1": 0.9911742878080652,
+          "accepted_rate_generic_2": 0.9916754818647737,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.0014425562890389293,
+          "naive_reconstructed_CCNR": 1.0031754293696125,
+          "source": "separable_product_5",
+          "true_CCNR": 1.0
+        },
+        {
+          "accepted_rate_generic_1": 0.9916439381437634,
+          "accepted_rate_generic_2": 0.9927801746482185,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.0018193352834374372,
+          "naive_reconstructed_CCNR": 1.0041240147968973,
+          "source": "separable_product_6",
+          "true_CCNR": 1.0000000000000002
+        },
+        {
+          "accepted_rate_generic_1": 0.9900454295395485,
+          "accepted_rate_generic_2": 0.9907558754066134,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.0011928380057281715,
+          "naive_reconstructed_CCNR": 1.0027106339210596,
+          "source": "separable_product_7",
+          "true_CCNR": 1.0
+        },
+        {
+          "accepted_rate_generic_1": 0.9912645104525739,
+          "accepted_rate_generic_2": 0.9910552805061185,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.0013463603753272706,
+          "naive_reconstructed_CCNR": 1.0026870986156025,
+          "source": "separable_product_8",
+          "true_CCNR": 1.0
+        },
+        {
+          "accepted_rate_generic_1": 0.9908230583076755,
+          "accepted_rate_generic_2": 0.9918116156972874,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.0014762618063141855,
+          "naive_reconstructed_CCNR": 1.0031691758731143,
+          "source": "separable_product_9",
+          "true_CCNR": 0.9999999999999999
+        },
+        {
+          "accepted_rate_generic_1": 0.9910780409786724,
+          "accepted_rate_generic_2": 0.9908008523394876,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.0016885814346180336,
+          "naive_reconstructed_CCNR": 1.0031093282440542,
+          "source": "separable_product_10",
+          "true_CCNR": 1.0000000000000002
+        },
+        {
+          "accepted_rate_generic_1": 0.9921642825693681,
+          "accepted_rate_generic_2": 0.9915395968450661,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.002260549570239757,
+          "naive_reconstructed_CCNR": 1.0043681092351306,
+          "source": "separable_product_11",
+          "true_CCNR": 0.9999999999999998
+        }
+      ],
+      "separable_false_positive_count": 12,
+      "total_separable_controls": 12
+    },
+    {
+      "generic_output_rail_gate_exposures": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        8
+      ],
+      "lowest_approx_intensity_if_fixed_rail_path": 0.9275689688183278,
+      "per_gate_intensity_transmission": 0.995,
+      "per_gate_rms_phase_error_rad": 0.0,
+      "results": [
+        {
+          "accepted_rate_generic_1": 0.9607860059249579,
+          "accepted_rate_generic_2": 0.9607859008195218,
+          "calibration_free_false_positive": false,
+          "naive_recon_min_eigenvalue": 0.1015172907527528,
+          "naive_reconstructed_CCNR": 0.3339968721293116,
+          "source": "I9_over_9",
+          "true_CCNR": 0.3333333333333333
+        },
+        {
+          "accepted_rate_generic_1": 0.9574888911989254,
+          "accepted_rate_generic_2": 0.9601134407560025,
+          "calibration_free_false_positive": false,
+          "naive_recon_min_eigenvalue": -0.0013129304985436707,
+          "naive_reconstructed_CCNR": 1.0030830009962177,
+          "source": "Horodecki_a0p236",
+          "true_CCNR": 1.0030587940982738
+        },
+        {
+          "accepted_rate_generic_1": 0.9612516179448701,
+          "accepted_rate_generic_2": 0.9624592731133457,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.007831639279257306,
+          "naive_reconstructed_CCNR": 1.0178576306256868,
+          "source": "separable_product_0",
+          "true_CCNR": 1.0
+        },
+        {
+          "accepted_rate_generic_1": 0.96444064834637,
+          "accepted_rate_generic_2": 0.9656262632183161,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.007508666338177285,
+          "naive_reconstructed_CCNR": 1.015389754732784,
+          "source": "separable_product_1",
+          "true_CCNR": 0.9999999999999999
+        },
+        {
+          "accepted_rate_generic_1": 0.9586769673270525,
+          "accepted_rate_generic_2": 0.963137238802346,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.009304725606514061,
+          "naive_reconstructed_CCNR": 1.02078230206158,
+          "source": "separable_product_2",
+          "true_CCNR": 1.0000000000000002
+        },
+        {
+          "accepted_rate_generic_1": 0.9729716525312867,
+          "accepted_rate_generic_2": 0.9738230573051132,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.015471313817967626,
+          "naive_reconstructed_CCNR": 1.0313036529977828,
+          "source": "separable_product_3",
+          "true_CCNR": 0.9999999999999998
+        },
+        {
+          "accepted_rate_generic_1": 0.9645169202389441,
+          "accepted_rate_generic_2": 0.9572270904781496,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.01148461004481902,
+          "naive_reconstructed_CCNR": 1.0221562040659637,
+          "source": "separable_product_4",
+          "true_CCNR": 1.0000000000000002
+        },
+        {
+          "accepted_rate_generic_1": 0.9566095452076209,
+          "accepted_rate_generic_2": 0.9590441536779144,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.007223286123326698,
+          "naive_reconstructed_CCNR": 1.0159336212769916,
+          "source": "separable_product_5",
+          "true_CCNR": 1.0
+        },
+        {
+          "accepted_rate_generic_1": 0.9589378184032771,
+          "accepted_rate_generic_2": 0.9644076143957182,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.009144050198565465,
+          "naive_reconstructed_CCNR": 1.0207579863512728,
+          "source": "separable_product_6",
+          "true_CCNR": 1.0000000000000002
+        },
+        {
+          "accepted_rate_generic_1": 0.951153322745285,
+          "accepted_rate_generic_2": 0.9545635075764489,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.00594482520224903,
+          "naive_reconstructed_CCNR": 1.013532927832768,
+          "source": "separable_product_7",
+          "true_CCNR": 1.0
+        },
+        {
+          "accepted_rate_generic_1": 0.9570309515645118,
+          "accepted_rate_generic_2": 0.9560447625581373,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.006731578249114309,
+          "naive_reconstructed_CCNR": 1.0134906783871989,
+          "source": "separable_product_8",
+          "true_CCNR": 1.0
+        },
+        {
+          "accepted_rate_generic_1": 0.954911816837966,
+          "accepted_rate_generic_2": 0.959699411103618,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.007401706622787352,
+          "naive_reconstructed_CCNR": 1.015908551411023,
+          "source": "separable_product_9",
+          "true_CCNR": 0.9999999999999999
+        },
+        {
+          "accepted_rate_generic_1": 0.9561267417865085,
+          "accepted_rate_generic_2": 0.9548149634428765,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.008468532362823898,
+          "naive_reconstructed_CCNR": 1.0156120736072984,
+          "source": "separable_product_10",
+          "true_CCNR": 1.0000000000000002
+        },
+        {
+          "accepted_rate_generic_1": 0.9614634236896044,
+          "accepted_rate_generic_2": 0.9584131719668667,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.01143959145223251,
+          "naive_reconstructed_CCNR": 1.0221204862020348,
+          "source": "separable_product_11",
+          "true_CCNR": 0.9999999999999998
+        }
+      ],
+      "separable_false_positive_count": 12,
+      "total_separable_controls": 12
+    },
+    {
+      "generic_output_rail_gate_exposures": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        8
+      ],
+      "lowest_approx_intensity_if_fixed_rail_path": 0.8600583546412884,
+      "per_gate_intensity_transmission": 0.99,
+      "per_gate_rms_phase_error_rad": 0.0,
+      "results": [
+        {
+          "accepted_rate_generic_1": 0.9231044014645399,
+          "accepted_rate_generic_2": 0.923104026353112,
+          "calibration_free_false_positive": false,
+          "naive_recon_min_eigenvalue": 0.09179643676405096,
+          "naive_reconstructed_CCNR": 0.3360126290641283,
+          "source": "I9_over_9",
+          "true_CCNR": 0.3333333333333333
+        },
+        {
+          "accepted_rate_generic_1": 0.9167623803119247,
+          "accepted_rate_generic_2": 0.9217858709394979,
+          "calibration_free_false_positive": false,
+          "naive_recon_min_eigenvalue": -0.0028476139154821794,
+          "naive_reconstructed_CCNR": 1.0034121691009457,
+          "source": "Horodecki_a0p236",
+          "true_CCNR": 1.0030587940982738
+        },
+        {
+          "accepted_rate_generic_1": 0.9240307620311528,
+          "accepted_rate_generic_2": 0.9263246989790146,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.015726591498851056,
+          "naive_reconstructed_CCNR": 1.0358290378937511,
+          "source": "separable_product_0",
+          "true_CCNR": 1.0
+        },
+        {
+          "accepted_rate_generic_1": 0.9300985819811369,
+          "accepted_rate_generic_2": 0.9325008544362984,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.015044754251954295,
+          "naive_reconstructed_CCNR": 1.0308232501576264,
+          "source": "separable_product_1",
+          "true_CCNR": 0.9999999999999999
+        },
+        {
+          "accepted_rate_generic_1": 0.9190326816686932,
+          "accepted_rate_generic_2": 0.9276229566948707,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.01872022783783687,
+          "naive_reconstructed_CCNR": 1.0418014272816074,
+          "source": "separable_product_2",
+          "true_CCNR": 1.0000000000000002
+        },
+        {
+          "accepted_rate_generic_1": 0.9467389104501115,
+          "accepted_rate_generic_2": 0.9483945402089153,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.031071345666178772,
+          "naive_reconstructed_CCNR": 1.0630614467017208,
+          "source": "separable_product_3",
+          "true_CCNR": 0.9999999999999998
+        },
+        {
+          "accepted_rate_generic_1": 0.9302362529118667,
+          "accepted_rate_generic_2": 0.9162049884947462,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.023093899679428022,
+          "naive_reconstructed_CCNR": 1.0446683449675007,
+          "source": "separable_product_4",
+          "true_CCNR": 1.0000000000000002
+        },
+        {
+          "accepted_rate_generic_1": 0.9150204314544416,
+          "accepted_rate_generic_2": 0.9197176750551179,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.014472481802851996,
+          "naive_reconstructed_CCNR": 1.0320087491687107,
+          "source": "separable_product_5",
+          "true_CCNR": 1.0
+        },
+        {
+          "accepted_rate_generic_1": 0.9196257198842599,
+          "accepted_rate_generic_2": 0.930056302857576,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.018408125603115326,
+          "naive_reconstructed_CCNR": 1.0418646588751783,
+          "source": "separable_product_6",
+          "true_CCNR": 1.0000000000000002
+        },
+        {
+          "accepted_rate_generic_1": 0.9045611295396336,
+          "accepted_rate_generic_2": 0.9110412432232011,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.011840513979109847,
+          "naive_reconstructed_CCNR": 1.0270133946162832,
+          "source": "separable_product_7",
+          "true_CCNR": 1.0
+        },
+        {
+          "accepted_rate_generic_1": 0.9157935845572083,
+          "accepted_rate_generic_2": 0.9139632803327544,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.013462041565143294,
+          "naive_reconstructed_CCNR": 1.027117708193635,
+          "source": "separable_product_8",
+          "true_CCNR": 1.0
+        },
+        {
+          "accepted_rate_generic_1": 0.9117664288686065,
+          "accepted_rate_generic_2": 0.920966738118218,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.01485486154700398,
+          "naive_reconstructed_CCNR": 1.031974061836482,
+          "source": "separable_product_9",
+          "true_CCNR": 0.9999999999999999
+        },
+        {
+          "accepted_rate_generic_1": 0.914052985468063,
+          "accepted_rate_generic_2": 0.9116061808473601,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.017000979193370742,
+          "naive_reconstructed_CCNR": 1.0313873813010477,
+          "source": "separable_product_10",
+          "true_CCNR": 1.0000000000000002
+        },
+        {
+          "accepted_rate_generic_1": 0.9244934925806079,
+          "accepted_rate_generic_2": 0.918571455629232,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.023226886416651465,
+          "naive_reconstructed_CCNR": 1.0449558545738324,
+          "source": "separable_product_11",
+          "true_CCNR": 0.9999999999999998
+        }
+      ],
+      "separable_false_positive_count": 12,
+      "total_separable_controls": 12
+    },
+    {
+      "generic_output_rail_gate_exposures": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        8
+      ],
+      "lowest_approx_intensity_if_fixed_rail_path": 0.9275689688183278,
+      "per_gate_intensity_transmission": 0.995,
+      "per_gate_rms_phase_error_rad": 0.003,
+      "results": [
+        {
+          "accepted_rate_generic_1": 0.9607859876796787,
+          "accepted_rate_generic_2": 0.960785881039775,
+          "calibration_free_false_positive": false,
+          "naive_recon_min_eigenvalue": 0.10152002674212005,
+          "naive_reconstructed_CCNR": 0.33399664890745717,
+          "source": "I9_over_9",
+          "true_CCNR": 0.3333333333333333
+        },
+        {
+          "accepted_rate_generic_1": 0.9574897736355164,
+          "accepted_rate_generic_2": 0.9601064925240037,
+          "calibration_free_false_positive": false,
+          "naive_recon_min_eigenvalue": -0.0015870032877552422,
+          "naive_reconstructed_CCNR": 1.0032874037030408,
+          "source": "Horodecki_a0p236",
+          "true_CCNR": 1.0030587940982738
+        },
+        {
+          "accepted_rate_generic_1": 0.9612625677399388,
+          "accepted_rate_generic_2": 0.9624665018698007,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.010335680467382615,
+          "naive_reconstructed_CCNR": 1.0234359221610787,
+          "source": "separable_product_0",
+          "true_CCNR": 1.0
+        },
+        {
+          "accepted_rate_generic_1": 0.9643805472342603,
+          "accepted_rate_generic_2": 0.9656208011693757,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.008847046398166754,
+          "naive_reconstructed_CCNR": 1.0188816063488628,
+          "source": "separable_product_1",
+          "true_CCNR": 0.9999999999999999
+        },
+        {
+          "accepted_rate_generic_1": 0.9586995058877947,
+          "accepted_rate_generic_2": 0.9631573231047487,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.011975075086167896,
+          "naive_reconstructed_CCNR": 1.0259762854909935,
+          "source": "separable_product_2",
+          "true_CCNR": 1.0000000000000002
+        },
+        {
+          "accepted_rate_generic_1": 0.9729588280753476,
+          "accepted_rate_generic_2": 0.9738173161500082,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.016809381051859234,
+          "naive_reconstructed_CCNR": 1.0339979575785596,
+          "source": "separable_product_3",
+          "true_CCNR": 0.9999999999999998
+        },
+        {
+          "accepted_rate_generic_1": 0.9644995186556677,
+          "accepted_rate_generic_2": 0.9572144390126136,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.010875978765682814,
+          "naive_reconstructed_CCNR": 1.0223137216110936,
+          "source": "separable_product_4",
+          "true_CCNR": 1.0000000000000002
+        },
+        {
+          "accepted_rate_generic_1": 0.9566354880869303,
+          "accepted_rate_generic_2": 0.9590624635907468,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.010558955575949918,
+          "naive_reconstructed_CCNR": 1.0230870861518833,
+          "source": "separable_product_5",
+          "true_CCNR": 1.0
+        },
+        {
+          "accepted_rate_generic_1": 0.9589259000266838,
+          "accepted_rate_generic_2": 0.9644331350140791,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.01194067344231532,
+          "naive_reconstructed_CCNR": 1.0303221258898854,
+          "source": "separable_product_6",
+          "true_CCNR": 1.0000000000000002
+        },
+        {
+          "accepted_rate_generic_1": 0.9511724996764731,
+          "accepted_rate_generic_2": 0.9545786585685644,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.010617120763706432,
+          "naive_reconstructed_CCNR": 1.0268181477271436,
+          "source": "separable_product_7",
+          "true_CCNR": 1.0
+        },
+        {
+          "accepted_rate_generic_1": 0.9570310030204191,
+          "accepted_rate_generic_2": 0.9560031332532285,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.007485073735971049,
+          "naive_reconstructed_CCNR": 1.0131489642326432,
+          "source": "separable_product_8",
+          "true_CCNR": 1.0
+        },
+        {
+          "accepted_rate_generic_1": 0.9549134985607365,
+          "accepted_rate_generic_2": 0.9597343709788348,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.006130653813272396,
+          "naive_reconstructed_CCNR": 1.0152414340249318,
+          "source": "separable_product_9",
+          "true_CCNR": 0.9999999999999999
+        },
+        {
+          "accepted_rate_generic_1": 0.9560997640387878,
+          "accepted_rate_generic_2": 0.9547939797986752,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.011605554415220478,
+          "naive_reconstructed_CCNR": 1.0231345817734403,
+          "source": "separable_product_10",
+          "true_CCNR": 1.0000000000000002
+        },
+        {
+          "accepted_rate_generic_1": 0.9614137457557036,
+          "accepted_rate_generic_2": 0.9583963867903887,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.01186256070770885,
+          "naive_reconstructed_CCNR": 1.0237627197758778,
+          "source": "separable_product_11",
+          "true_CCNR": 0.9999999999999998
+        }
+      ],
+      "separable_false_positive_count": 12,
+      "total_separable_controls": 12
+    },
+    {
+      "generic_output_rail_gate_exposures": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        8
+      ],
+      "lowest_approx_intensity_if_fixed_rail_path": 0.8600583546412884,
+      "per_gate_intensity_transmission": 0.99,
+      "per_gate_rms_phase_error_rad": 0.01,
+      "results": [
+        {
+          "accepted_rate_generic_1": 0.923104172127025,
+          "accepted_rate_generic_2": 0.9231037819776731,
+          "calibration_free_false_positive": false,
+          "naive_recon_min_eigenvalue": 0.09181420598473242,
+          "naive_reconstructed_CCNR": 0.33600980882327336,
+          "source": "I9_over_9",
+          "true_CCNR": 0.3333333333333333
+        },
+        {
+          "accepted_rate_generic_1": 0.9167693962805548,
+          "accepted_rate_generic_2": 0.9217411097319048,
+          "calibration_free_false_positive": false,
+          "naive_recon_min_eigenvalue": -0.004156896162880683,
+          "naive_reconstructed_CCNR": 1.0044353979806857,
+          "source": "Horodecki_a0p236",
+          "true_CCNR": 1.0030587940982738
+        },
+        {
+          "accepted_rate_generic_1": 0.9241035204430298,
+          "accepted_rate_generic_2": 0.9263702421490493,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.02444418445484394,
+          "naive_reconstructed_CCNR": 1.0554597268791062,
+          "source": "separable_product_0",
+          "true_CCNR": 1.0
+        },
+        {
+          "accepted_rate_generic_1": 0.9297112053599514,
+          "accepted_rate_generic_2": 0.9324647973209217,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.02173882490303082,
+          "naive_reconstructed_CCNR": 1.0476857721467696,
+          "source": "separable_product_1",
+          "true_CCNR": 0.9999999999999999
+        },
+        {
+          "accepted_rate_generic_1": 0.9191782769562837,
+          "accepted_rate_generic_2": 0.9277519434657912,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.02868131868255363,
+          "naive_reconstructed_CCNR": 1.063313845079846,
+          "source": "separable_product_2",
+          "true_CCNR": 1.0000000000000002
+        },
+        {
+          "accepted_rate_generic_1": 0.9466573856943733,
+          "accepted_rate_generic_2": 0.9483576601126253,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.036012846011758984,
+          "naive_reconstructed_CCNR": 1.0732705270256766,
+          "source": "separable_product_3",
+          "true_CCNR": 0.9999999999999998
+        },
+        {
+          "accepted_rate_generic_1": 0.9301227205964381,
+          "accepted_rate_generic_2": 0.9161261010243571,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.02544784425405077,
+          "naive_reconstructed_CCNR": 1.0523844685225487,
+          "source": "separable_product_4",
+          "true_CCNR": 1.0000000000000002
+        },
+        {
+          "accepted_rate_generic_1": 0.9151897704408103,
+          "accepted_rate_generic_2": 0.9198350746157198,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.026626824461944698,
+          "naive_reconstructed_CCNR": 1.0594049009493003,
+          "source": "separable_product_5",
+          "true_CCNR": 1.0
+        },
+        {
+          "accepted_rate_generic_1": 0.9195526936135848,
+          "accepted_rate_generic_2": 0.930221309062733,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.030240184835908547,
+          "naive_reconstructed_CCNR": 1.079998828300162,
+          "source": "separable_product_6",
+          "true_CCNR": 1.0000000000000002
+        },
+        {
+          "accepted_rate_generic_1": 0.9046810114809547,
+          "accepted_rate_generic_2": 0.9111359610634854,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.028284502457533882,
+          "naive_reconstructed_CCNR": 1.0731054192966802,
+          "source": "separable_product_7",
+          "true_CCNR": 1.0
+        },
+        {
+          "accepted_rate_generic_1": 0.9157990684995772,
+          "accepted_rate_generic_2": 0.9136963831057485,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.022969285711209354,
+          "naive_reconstructed_CCNR": 1.037344270894331,
+          "source": "separable_product_8",
+          "true_CCNR": 1.0
+        },
+        {
+          "accepted_rate_generic_1": 0.9117824987130927,
+          "accepted_rate_generic_2": 0.921188881654587,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.015470206181335221,
+          "naive_reconstructed_CCNR": 1.0346554759541369,
+          "source": "separable_product_9",
+          "true_CCNR": 0.9999999999999999
+        },
+        {
+          "accepted_rate_generic_1": 0.913886902231589,
+          "accepted_rate_generic_2": 0.9114772479972157,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.03367252295495413,
+          "naive_reconstructed_CCNR": 1.0675301458371937,
+          "source": "separable_product_10",
+          "true_CCNR": 1.0000000000000002
+        },
+        {
+          "accepted_rate_generic_1": 0.9241710197105508,
+          "accepted_rate_generic_2": 0.9184639396188374,
+          "calibration_free_false_positive": true,
+          "naive_recon_min_eigenvalue": -0.02860312868380471,
+          "naive_reconstructed_CCNR": 1.0604030805244415,
+          "source": "separable_product_11",
+          "true_CCNR": 0.9999999999999998
+        }
+      ],
+      "separable_false_positive_count": 12,
+      "total_separable_controls": 12
+    }
+  ],
+  "max_rail_coupler_exposure": 15,
+  "min_rail_coupler_exposure": 1,
+  "scope": "Not a fabricated photonic circuit, calibration, source certification, or proof of a physical platform budget. Results only apply to this explicit toy network.",
+  "status": "PASS_9MODE_Q8_LOSS_NONCOMMUTING_COUPLERS_HARDWARE_TOY",
+  "warning": "A noncommuting internal loss cannot generically be repaired by per-output detector-efficiency correction; calibrate full POVMs."
+}

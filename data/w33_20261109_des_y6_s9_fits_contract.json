@@ -1,0 +1,60 @@
+{
+  "S9_scored": false,
+  "actual_DES_Y6_FITS_access": false,
+  "bad_covariance_rejected": {
+    "issues": [
+      "covariance not positive definite"
+    ],
+    "valid": false
+  },
+  "frozen": "2026-11-08",
+  "missing_unblinding_rejected": {
+    "issues": [
+      "not explicitly unblinded"
+    ],
+    "valid": false
+  },
+  "scope": "Contract/unit tests only; fully synthetic 8-row two-point FITS, not authentic DES Y6 data or a cosmology model comparison.",
+  "status": "PASS_SYNTHETIC_DES_Y6_S9_FITS_CONTRACT_NOT_SCORED",
+  "synthetic_as_real_rejected": {
+    "issues": [
+      "synthetic fixture cannot be a DES observation"
+    ],
+    "valid": false
+  },
+  "synthetic_fixture_sha256": "a29727feeddee79096f72626367ce7f8d070f4e47753e5420e83dee0c4edd5e8",
+  "synthetic_valid_contract": {
+    "covariance_min_eig": 0.0001,
+    "cut_covariance_min_eig": 0.0001,
+    "cut_size": 6,
+    "frozen_S9_scored": false,
+    "full_data_size": 8,
+    "has_complete_model_predictions": false,
+    "has_data_and_covariance": true,
+    "issues": [],
+    "selection": {
+      "XIM": {
+        "all_rows": 4,
+        "kept_positions": [
+          1,
+          2,
+          3
+        ],
+        "kept_rows": 3,
+        "scale_cut_arcmin_strict_gt": 60.0
+      },
+      "XIP": {
+        "all_rows": 4,
+        "kept_positions": [
+          1,
+          2,
+          3
+        ],
+        "kept_rows": 3,
+        "scale_cut_arcmin_strict_gt": 10.0
+      }
+    },
+    "valid": true,
+    "warning": "Passing data schema is NOT a likelihood: still require corrected CLASS/Halofit theories, full nuisance priors/refits, bin/covariance and scale unit validation against the actual collaboration release."
+  }
+}
