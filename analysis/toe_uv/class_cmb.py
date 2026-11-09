@@ -11,8 +11,8 @@ from scipy.io import FortranFile
 import dark_like as L
 
 HOME = os.path.expanduser("~/cosmo")
-CLASSBIN = HOME + "/class_fading/class"
-MONOBIN = os.path.expanduser("~/cosmo/class_mono/class")
+CLASSBIN = os.environ.get("CLASSBIN", HOME + "/class_fading/class")
+MONOBIN = os.environ.get("MONOBIN", os.path.expanduser("~/cosmo/class_mono/class"))
 KLTBIN = os.environ.get("KLTBIN", os.path.expanduser("~/cosmo/class_klt/class"))
 PL = HOME + "/planck-lite-py/data"
 SND = HOME + "/snsdata"
