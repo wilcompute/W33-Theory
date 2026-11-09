@@ -156,7 +156,7 @@ def build_clock_albert():
             prod[j, i, :] = c
     idx_of = {next(iter(x)): k for k, x in enumerate(basis) if len(x) == 1 and next(iter(x.values())) == one}
     return {"n": n, "prod": prod, "frame": frame, "G": G, "idx": idx_of, "labels": labels,
-            "dsign": dsign}
+            "dsign": dsign, "complex_basis": basis, "root_to_i27": lab}
 
 
 def main(write=True):

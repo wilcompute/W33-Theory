@@ -1,0 +1,387 @@
+{
+  "status": "EXACT_SEXTIC_AND_ARONHOLD_SPECIES_SELECTORS",
+  "restriction": "-t0**3*y0*y1*y2 + t0*t1*t2*y0**3 + t0*t1*t2*y1**3 + t0*t1*t2*y2**3 - t1**3*y0*y1*y2 - t2**3*y0*y1*y2",
+  "hesse_aronhold_raw_coefficients": {
+    "3": -24,
+    "0": 24
+  },
+  "normalized_invariant_restriction": "216*t0**3*t1**3*t2**3*(t0**3 + t1**3 + t2**3) + (t0**3 + t1**3 + t2**3)**4",
+  "normalization": "Aronhold(F)/24, F(y,y,y)=6 N(X(t)y)",
+  "gauge_invariance": "Internal transformations preserve the signed cubic N. Family transformations preserve the two volume tensors of the sextic and four of the Aronhold contraction. The sextic uses the invariant dual cubic to contract three cross products.",
+  "species_probes": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      1,
+      0,
+      2
+    ],
+    [
+      0,
+      1,
+      2
+    ]
+  ],
+  "normalized_sextic_restriction": "t0**6 - 10*t0**3*t1**3 - 10*t0**3*t2**3 + t1**6 - 10*t1**3*t2**3 + t2**6",
+  "sextic_normalization": "October 1 raw6 divided by 12, equivalently I6 divided by 27",
+  "degree_six_selector": {
+    "targets": [
+      1,
+      1,
+      1,
+      -15,
+      -15,
+      -15
+    ],
+    "real_and_imaginary_jacobian": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        -540,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        -234,
+        144,
+        0,
+        0,
+        -396,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        -540,
+        0,
+        0,
+        0
+      ],
+      [
+        -234,
+        0,
+        144,
+        0,
+        0,
+        0,
+        -396,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -540,
+        0
+      ],
+      [
+        0,
+        -234,
+        144,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -396
+      ]
+    ],
+    "independent_row_indices": [
+      1,
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "nonzero_minor": 2112129723838464000
+  },
+  "degree_twelve_selector": {
+    "targets": [
+      1,
+      1,
+      1,
+      6561,
+      6561,
+      6561
+    ],
+    "real_and_imaginary_jacobian": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        12,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        12,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        12,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        -17496,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        8748,
+        69984,
+        0,
+        0,
+        52488,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        -17496,
+        0,
+        0,
+        0
+      ],
+      [
+        8748,
+        0,
+        69984,
+        0,
+        0,
+        0,
+        52488,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -17496,
+        0
+      ],
+      [
+        0,
+        8748,
+        69984,
+        0,
+        0,
+        0,
+        0,
+        0,
+        52488
+      ]
+    ],
+    "independent_row_indices": [
+      1,
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "nonzero_minor": -1338258845052394702439737982976
+  },
+  "u3_direction_order": [
+    "iE00",
+    "iE11",
+    "iE22",
+    "E01-E10",
+    "i(E01+E10)",
+    "E02-E20",
+    "i(E02+E20)",
+    "E12-E21",
+    "i(E12+E21)"
+  ],
+  "prior_tangent_ranks": {
+    "complex_F_derivative_rank": 156,
+    "real_constraint_rank": 204,
+    "imaginary_constraint_rank": 195,
+    "Hessian_nullity": 87,
+    "compact_gauge_orbit_dimension": 78,
+    "physical_Hessian_nullity": 9,
+    "gauge_plus_species_orbit_dimension": 87,
+    "species_tangents_span_physical_kernel": true
+  },
+  "selector_real_rank_on_species": 9,
+  "new_hessian_nullity": 78,
+  "physical_hessian_nullity": 0,
+  "scope": "Positive squares of six degree-6 holomorphic invariant residuals are supplied bosonic operators. The degree-12 alternative has the same rank. The selected minimum is locally isolated modulo compact gauge. Coefficients, radiative origin, and global minimum classification remain open.",
+  "input_sha256": {
+    "data/toe_20261108_three_copy_cubic_vacuum.json": "664bf686ac3914a3a3073174f02ad5e085ed3a2cd2b48dd10529f2d7103e7d29",
+    "artifacts/canonical_su3_gauge_and_cubic.json": "13ea38ed37a8c1c9723db7168e1e056a2827ebf060bc096e227f8d9047d78cb1",
+    "analysis/w33_20261001_global_e6_cartan_covariants.py": "07ef92b174a99eafe663de99a5f0b957ad174ce1daa7db229cd999ef8e560273"
+  }
+}
