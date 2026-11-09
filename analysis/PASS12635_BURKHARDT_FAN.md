@@ -51,3 +51,23 @@ Checks:
 - Degree-2 del Pezzo surfaces correspond to E7. Their real moduli space has 60,480 regions: 6-dimensional homology balls with f-vector (579, 1737, 2000, 1105, 297, 34) and stabiliser of order |W(E7)|/60480 = 48. Their positive-geometry status is conjectured (Early, Geiger, Panizzut, Sturmfels and Yun).
 - W(E7)/±1 ≅ Sp(6,2), so the E7 rung's polar space is W(5,2), with 63 points matching the 63 positive roots.
 - Testing whether the E7 pezzotope's 34 facets are a W(5,2) configuration, as the E6 pezzotope's 15 facets are a W(3,3) S5-pentad, is the natural next computation.
+
+## Addendum: an explicit dictionary between the two fans (`w33_split_bridge.py`, `data/w33_split_bridge.json`)
+
+The map is an explicit graph isomorphism φ (VF2) from the 40 A2³ subsystems, related by root-disjointness, to the 40 isotropic lines of W(3,3) in F₃⁴, related by meeting. Through φ:
+- **36 roots ↔ the 36 spreads**, bijectively. For every root, the 10 A2³ containing it go to 10 pairwise disjoint lines covering all 40 points. This is the classical roots ↔ double-sixes ↔ spreads correspondence, made explicit.
+- **40 points ↔ partitions of the 36 positive roots into four A2³ blocks.** For every point, the 4 lines through it are 4 pairwise root-disjoint A2³ whose roots partition all 36 positive roots.
+- **45 D4 ↔ 45 splits**, bijectively.
+  - Every D4 meets every A2³ in 3 roots: an A2 for 16 of them, an orthogonal triple for 24.
+  - Every split {b, b⊥} is met by 16 lines in one point of b and one of b⊥, and missed by 24 lines.
+  - Under φ, each D4's 16/24 partition equals exactly one split's.
+  - The coarser invariant |D4 ∩ T| is constant (3) and separates nothing; it was recorded as the failed first attempt.
+
+| cubic-surface (Naruki) fan | W(3,3) / two-qutrit | Burkhardt (flavour-modulus) fan |
+|---|---|---|
+| 36 positive roots (type-a rays) | 36 spreads = double-sixes | — |
+| 40 A2³ (type-b rays, cusps) | 40 lines = maximal commuting sets | the 160 aaa triangles (4 per line) |
+| 45 D4 (classes of the 135 aaaa cones) | 45 tensor splits | 45 type-(b) rays |
+| partitions of the 36 roots into four A2³ | 40 points | 40 type-(a) rays |
+
+Because φ is an isomorphism between strongly regular graphs, it is unique up to automorphisms. The bijections above are φ-dependent as maps but not as statements: they hold for every φ.

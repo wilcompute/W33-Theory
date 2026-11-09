@@ -1,0 +1,70 @@
+{
+ "isomorphism_found": true,
+ "roots_to_spreads": {
+  "sizes": [
+   10
+  ],
+  "all_pairwise_disjoint": true,
+  "all_cover_40_points": true,
+  "distinct": 36
+ },
+ "d4_class_sizes": [
+  [
+   40,
+   1
+  ]
+ ],
+ "split_class_sizes": [
+  [
+   16,
+   1
+  ],
+  [
+   24,
+   1
+  ]
+ ],
+ "d4_to_split_matches": {
+  "0": 45
+ },
+ "d4_to_split_bijective": false,
+ "points_as_A2cubed_4cliques": {
+  "(4, 36)": 40
+ },
+ "d4_shape_classes": [
+  [
+   [
+    3,
+    0
+   ],
+   16
+  ],
+  [
+   [
+    3,
+    3
+   ],
+   24
+  ]
+ ],
+ "d4_to_split_matches_shape": {
+  "1": 45
+ },
+ "d4_to_split_bijective_shape": true,
+ "split_line_types": [
+  [
+   [
+    0,
+    0
+   ],
+   24
+  ],
+  [
+   [
+    1,
+    1
+   ],
+   16
+  ]
+ ]
+}
