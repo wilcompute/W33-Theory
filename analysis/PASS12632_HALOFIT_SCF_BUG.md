@@ -53,3 +53,37 @@ The patched ΛCDM moves to within 0.3 of the plain-Λ value, and refitting close
 - **Anything derived from those numbers on the other track**, including the S8 hybrid Shapley certificate (46e2945e2), which uses the original-build hybrid values.
 
 The reruns with the patched builds are running (`/mnt/c/tmp/q18.sh`). This notice will be followed by the corrected tables, whichever way they come out.
+
+## Addendum 1: independent check of the patch, and the corrected fixed-background shear
+
+**Matched-fluid check (`hf_matched_fluid.py`).** Halofit depends only on Ω_m(z), Ω_v(z), w(z), f_ν and the linear P. For each scalar-field best fit I fit (w0, wa) to the field's own w(a) over z < 3. I then run the same parameters through CLASS's untouched fluid path and compare the nonlinear boost at k = 0.3, 1 and 3 h/Mpc, z = 0.01 and 1:
+
+| largest deviation from the matched fluid | exponential (uncoupled) | fading c < 0 | fading c > 0 |
+|---|---:|---:|---:|
+| patched build | **0.04%** | 3.9% | 4.4% |
+| original build | 57% | 57% | 58% |
+
+The uncoupled model agrees to 0.04%, so the patch reproduces the fluid path's halofit inputs. The roughly 4% residual for the coupled models is plausibly the coupling, which changes Ω_m(z) and linear growth so they are not the same physics as the fluid. That attribution is not separately tested. Halofit is in any case uncalibrated for coupled dark matter, a caveat that applied before the fix too.
+
+The patched scalar-field path matches plain Λ to 2×10⁻⁶. This is the numerical Ω_scf-tuning precision; the original build was off by 0.58.
+
+**Corrected fixed-background shear** (Dovekie full-data cosmologies, nuisances refitted; `sign_des*.json`, originals in `*_orig.json`). The table shows χ²_shear relative to ΛCDM:
+
+| | fading c < 0 | fading c > 0 | CPL | **CPL − fading c < 0** |
+|---|---:|---:|---:|---:|
+| DES Y3, original build | +1.19 | +0.31 | +4.29 | +3.10 |
+| DES Y3, **patched** | +1.94 | +1.00 | +1.29 | **−0.64** |
+| KiDS-Legacy, original build | +1.73 | +0.34 | +6.41 | +4.68 |
+| KiDS-Legacy, **patched** | +2.49 | +1.06 | +2.21 | **−0.28** |
+
+CPL's raw χ² is unchanged; it is a control. **CPL's apparent shear penalty was entirely the bug.** With correct nonlinear power, the evolving-dark-energy models all sit 1–2.5 behind ΛCDM on shear, and shear does not separate CPL from fading: |Δχ²| < 0.7.
+
+The hybrid split is now small: CPL − fading = −0.60 (DES) and −0.32 (KiDS), made of power −1.3/−1.6 and geometry +1.6/+1.9. The earlier "55–60% power, high-z" mechanism is withdrawn.
+
+**Frozen statements.**
+- **S1** ("fading beats CPL on shear") is **not supported by current data**: the difference is within 0.7, slightly favouring CPL. Its formal target, the next release, still stands.
+- **S8**, as frozen (Δχ²(CPL − fading) > 0, carried by high z), **would be falsified if current data counted**. They don't formally, but I now expect it to fail.
+- **S7's** sign clause goes the same way.
+- The frozen files stay unedited as the record.
+
+The held-out shear rerun (`q19`) and the patched refit of the training fits (`q20`) are running.
