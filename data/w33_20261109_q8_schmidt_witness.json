@@ -1,0 +1,117 @@
+{
+  "aligned_coset_index": 0,
+  "aligned_maxent_exact_binomial_power_95pct": {
+    "1": {
+      "accepted_preparations_per_coset": 1856,
+      "pairs_per_basis": 116,
+      "reference_aligned_maxent_power": 0.952648867409545
+    },
+    "2": {
+      "accepted_preparations_per_coset": 30112,
+      "pairs_per_basis": 1882,
+      "reference_aligned_maxent_power": 0.9504882573387984
+    }
+  },
+  "coset_pair_collision_var_times_M": [
+    0.6913580246913574,
+    1.2839506172839517,
+    1.2839506172839517
+  ],
+  "isotropic_F8_error": 2.886579864025407e-15,
+  "isotropic_visibility_cutoffs": {
+    "entangled_witness": 0.7071067811865475,
+    "schmidt3_witness": 0.9354143466934853
+  },
+  "known_prior_art": "Purity separability, Schmidt number and complex unitary 2-design witness methods are known. Contribution is a W33 Q8 coset-specific proof, tight bounds and exact variance-control connection.",
+  "largest_mixed_rank1_or_rank2_observed": {
+    "1": 0.444444444444448,
+    "2": 0.7703202642567661
+  },
+  "limitations": "Ideal calibrated 9-outcome projective measurements, iid preparations, no loss, known settings. Only sufficient Schmidt number witnesses; physical nonlocal Bell entanglement not established by two internal DOFs of one photon. Not a TOE.",
+  "max_coset_consistency_error": 2.55351295663786e-15,
+  "maxent_basis_collision_profiles": [
+    [
+      0.11111111111111127,
+      0.11111111111111127,
+      1.0000000000000013,
+      0.11111111111111129,
+      0.11111111111111117,
+      0.11111111111111124,
+      0.11111111111111129,
+      0.11111111111111123
+    ],
+    [
+      0.1111111111111113,
+      0.33333333333333376,
+      0.3333333333333334,
+      0.1111111111111113,
+      0.33333333333333404,
+      0.11111111111111123,
+      0.11111111111111126,
+      0.33333333333333376
+    ],
+    [
+      0.3333333333333338,
+      0.11111111111111124,
+      0.3333333333333337,
+      0.33333333333333404,
+      0.11111111111111127,
+      0.11111111111111124,
+      0.33333333333333387,
+      0.11111111111111124
+    ]
+  ],
+  "one_sided_hoeffding_radius": "sqrt(4*ln(1/alpha)/M), M independent shot pairs per basis",
+  "paired_collision_variance_ratio_worst_to_best": 1.8571428571428603,
+  "product_state_outcome_dependent_loss": {
+    "calibrated_F8_by_coset": [
+      0.44444444444444464,
+      0.44444444444444464,
+      0.44444444444444464
+    ],
+    "cross_coset_spread": 2.220446049250313e-16,
+    "false_entanglement_if_uncalibrated": true,
+    "true_F8": 0.4444444444444444,
+    "uncalibrated_F8_by_coset": [
+      0.4601371742112481,
+      0.46013717421124833,
+      0.4601371742112481
+    ]
+  },
+  "random_mixtures_tested": 112,
+  "status": "PASS_EXACT_SCHMIDT_NUMBER_BOUNDS_NUMERIC_CONSISTENCY_AND_VARIANCE",
+  "tight_schmidt_number_bounds": [
+    {
+      "observed_by_coset": [
+        0.44444444444444575,
+        0.44444444444444575,
+        0.44444444444444553
+      ],
+      "schmidt_rank": 1,
+      "tight_bound": 0.44444444444444453
+    },
+    {
+      "observed_by_coset": [
+        0.7777777777777781,
+        0.7777777777777786,
+        0.7777777777777783
+      ],
+      "schmidt_rank": 2,
+      "tight_bound": 0.7777777777777779
+    },
+    {
+      "observed_by_coset": [
+        0.8888888888888913,
+        0.8888888888888913,
+        0.8888888888888915
+      ],
+      "schmidt_rank": 3,
+      "tight_bound": 0.888888888888889
+    }
+  ],
+  "witness": {
+    "F8_greater_than_4_over_9": "Schmidt number at least 2 (mixed-state entanglement)",
+    "F8_greater_than_7_over_9": "Schmidt number 3 (genuine qutrit dimension)",
+    "convexity_argument": "F8 is a sum of squares of affine functionals in rho; mixture cannot exceed maximal pure Schmidt-k bound"
+  }
+}
