@@ -1,0 +1,428 @@
+{
+  "arithmetic": "Z[omega], omega^2+omega+1=0; signed integer-pair ring only",
+  "decomposition": {
+    "block_dimension": 5,
+    "center_of_mass_blocks": 9,
+    "original_symmetric_square_dimension": 45,
+    "reason": "W(u) tensor W(-u) preserves z+w; diagonal shifts transitively identify all nine s sectors"
+  },
+  "exact_checks": {
+    "all_spread_polynomials": 603,
+    "individual_projector_identities": 40,
+    "pairwise_disjoint_overlap_traces": 540,
+    "pentad_positive_triple_traces": 4320
+  },
+  "geometry": {
+    "disjoint_context_pairs": 540,
+    "lines": 40,
+    "maximal_partial_spreads": {
+      "10": 36,
+      "5": 432,
+      "8": 135
+    },
+    "points": 40
+  },
+  "integer_polynomials": {
+    "10": "R=18I; tr(R)=90",
+    "5": "R^2 - 27R + 126I = 0; tr(R)=45",
+    "8": "R^2 - 36R + 288I = 0; tr(R)=72"
+  },
+  "qualification": "Mathematically exact positivity and strong unextendibility for all Pauli-class maximal partial spreads of sizes 5 and 8. Does not prove a unique physical realization, a noise threshold, or an exact minimum of the pure-state quartic for size 5.",
+  "representatives": {
+    "10": {
+      "line_indices": [
+        0,
+        5,
+        10,
+        15,
+        23,
+        25,
+        30,
+        32,
+        34,
+        39
+      ],
+      "sum_numerator_5x5": [
+        [
+          [
+            18,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            18,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            18,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            18,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            18,
+            0
+          ]
+        ]
+      ]
+    },
+    "5": {
+      "line_indices": [
+        0,
+        5,
+        11,
+        23,
+        33
+      ],
+      "sum_numerator_5x5": [
+        [
+          [
+            13,
+            0
+          ],
+          [
+            -4,
+            -6
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            6,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          [
+            8,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            -1
+          ],
+          [
+            -2,
+            -2
+          ],
+          [
+            8,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            2,
+            -1
+          ],
+          [
+            -2,
+            -2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            8,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            2,
+            -1
+          ],
+          [
+            -2,
+            -2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            8,
+            0
+          ]
+        ]
+      ]
+    },
+    "8": {
+      "line_indices": [
+        0,
+        5,
+        10,
+        15,
+        23,
+        28,
+        33,
+        34
+      ],
+      "sum_numerator_5x5": [
+        [
+          [
+            16,
+            0
+          ],
+          [
+            0,
+            -4
+          ],
+          [
+            0,
+            -4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        [
+          [
+            2,
+            2
+          ],
+          [
+            14,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            14,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            -2
+          ],
+          [
+            -2,
+            -2
+          ],
+          [
+            -2,
+            -2
+          ],
+          [
+            14,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            -2
+          ],
+          [
+            -2,
+            -2
+          ],
+          [
+            -2,
+            -2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            14,
+            0
+          ]
+        ]
+      ]
+    }
+  },
+  "schema": "w33.exact_mub_sym2_block_certificate.v1",
+  "spectra_of_H_on_Sym2": {
+    "10": {
+      "eigenvalue_ninths": {
+        "8": 45
+      },
+      "lower_bound": "8/9"
+    },
+    "5": {
+      "eigenvalue_ninths": {
+        "1": 36,
+        "16": 9
+      },
+      "lower_bound": "1/9"
+    },
+    "8": {
+      "eigenvalue_ninths": {
+        "16": 9,
+        "4": 36
+      },
+      "lower_bound": "4/9"
+    }
+  },
+  "status": "PASS_EXACT_Z_OMEGA_EXHAUSTIVE"
+}
