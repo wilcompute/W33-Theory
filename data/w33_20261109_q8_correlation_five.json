@@ -1,0 +1,205 @@
+{
+  "not_a_TOE": true,
+  "status": "PASS_FIVE_FRONTS_EXACT_FINITE_QM_TOY_SCALING_WITH_COSMO_GATE",
+  "track_1_exact_tight_schmidt": {
+    "columns": 64,
+    "exact_Gram": "A.T @ A = I_64",
+    "frame_rank": 64,
+    "isotropic_checks": {
+      "0.2": {
+        "Schmidt_number_3": false,
+        "Schmidt_number_at_least_2": false,
+        "correlation_trace_norm": 0.5333333333333337
+      },
+      "0.3": {
+        "Schmidt_number_3": false,
+        "Schmidt_number_at_least_2": true,
+        "correlation_trace_norm": 0.8000000000000003
+      },
+      "0.5": {
+        "Schmidt_number_3": false,
+        "Schmidt_number_at_least_2": true,
+        "correlation_trace_norm": 1.333333333333334
+      },
+      "0.65": {
+        "Schmidt_number_3": true,
+        "Schmidt_number_at_least_2": true,
+        "correlation_trace_norm": 1.733333333333334
+      },
+      "0.8": {
+        "Schmidt_number_3": true,
+        "Schmidt_number_at_least_2": true,
+        "correlation_trace_norm": 2.133333333333334
+      },
+      "1.0": {
+        "Schmidt_number_3": true,
+        "Schmidt_number_at_least_2": true,
+        "correlation_trace_norm": 2.666666666666668
+      }
+    },
+    "max_mixed_correlation_reconstruction_error": 5.551115123125783e-16,
+    "max_orthonormal_frame_error": 2.4424906541753444e-15,
+    "max_pure_Schmidt_trace_norm_identity_error": 8.881784197001252e-16,
+    "pure_formula": "||T||_*=(sum_i sqrt(lambda_i))^2-1/3",
+    "random_mixed_density_matrices": 40,
+    "random_pure_schmidt_vectors": 54,
+    "rows": 72,
+    "tight_mixed_bounds": {
+      "Schmidt_number_le_1": 0.6666666666666666,
+      "Schmidt_number_le_2": 1.6666666666666667,
+      "Schmidt_number_le_3": 2.6666666666666665
+    },
+    "unmeasured_local_bloch_components": 16,
+    "visibility_2": 0.25,
+    "visibility_3": 0.625
+  },
+  "track_2_detector_confidence_LP": {
+    "caveat": "synthetic IID accepted samples, trusted efficiency intervals, no actual detector or hardware; independent source drift invalidates confidence",
+    "confidence_radius_method": "union bound over 72 binomial outcomes, Hoeffding",
+    "efficiency_intervals": "nominal +/-1% relative, or universal broad [0.63,0.99]",
+    "experiments": {
+      "isotropic_0p5": {
+        "finite_sample_control": null,
+        "nominal_calibrated_interval": {
+          "SN2_certified": true,
+          "SN3_certified": false,
+          "lower_bound": 1.31850203930293,
+          "nominal": 1.333333333333334,
+          "radius_per_outcome": 0
+        },
+        "true_trace_norm": 1.333333333333333,
+        "wide_efficiency_interval": {
+          "SN2_certified": true,
+          "SN3_certified": false,
+          "lower_bound": 0.7323841949721811,
+          "nominal": 1.148733088471379,
+          "radius_per_outcome": 0
+        }
+      },
+      "isotropic_0p8": {
+        "finite_sample_control": {
+          "SN2_certified": true,
+          "SN3_certified": true,
+          "lower_bound": 2.1000844254498494,
+          "nominal": 2.131450107905423,
+          "radius_per_outcome": 0.005152845677594078
+        },
+        "nominal_calibrated_interval": {
+          "SN2_certified": true,
+          "SN3_certified": true,
+          "lower_bound": 2.1245060761947365,
+          "nominal": 2.133333333333335,
+          "radius_per_outcome": 0
+        },
+        "true_trace_norm": 2.133333333333333,
+        "wide_efficiency_interval": {
+          "SN2_certified": true,
+          "SN3_certified": true,
+          "lower_bound": 1.700962254222171,
+          "nominal": 2.0124361743849297,
+          "radius_per_outcome": 0
+        }
+      },
+      "max_entangled": {
+        "finite_sample_control": null,
+        "nominal_calibrated_interval": {
+          "SN2_certified": true,
+          "SN3_certified": true,
+          "lower_bound": 2.666666666666667,
+          "nominal": 2.666666666666667,
+          "radius_per_outcome": 0
+        },
+        "true_trace_norm": 2.666666666666666,
+        "wide_efficiency_interval": {
+          "SN2_certified": true,
+          "SN3_certified": true,
+          "lower_bound": 2.638671556325738,
+          "nominal": 2.675774831838787,
+          "radius_per_outcome": 0
+        }
+      },
+      "product": {
+        "finite_sample_control": null,
+        "nominal_calibrated_interval": {
+          "SN2_certified": false,
+          "SN3_certified": false,
+          "lower_bound": 0.6453373214194575,
+          "nominal": 0.6666666666666675,
+          "radius_per_outcome": 0
+        },
+        "true_trace_norm": 0.6666666666666666,
+        "wide_efficiency_interval": {
+          "SN2_certified": false,
+          "SN3_certified": false,
+          "lower_bound": 0.2677686681667202,
+          "nominal": 0.8231179823536988,
+          "radius_per_outcome": 0
+        }
+      }
+    },
+    "finite_count_accepted_per_setting": 150000,
+    "finite_count_alpha": 0.05,
+    "per_setting_efficiency": [
+      0.63,
+      0.675,
+      0.72,
+      0.765,
+      0.81,
+      0.855,
+      0.9,
+      0.9450000000000001,
+      0.99
+    ],
+    "status": "ROBUST_LINEAR_PROGRAM_VALID_CONSERVATIVE_CERTIFICATE"
+  },
+  "track_3_optical_compilation": {
+    "bell_transform": "3 qutrit Fourier tritters plus 9-mode modular-difference permutation",
+    "formula": "W_S=W_Bell @ (conjugate(U_S) tensor I3)",
+    "local_context": "conjugate(U_S) tensor identity_3; 3 copies of U3 with <=3 Givens each",
+    "max_two_mode_couplers_per_9mode_context": 18,
+    "number_of_contexts": 24,
+    "scope": "nine resolved single-photon optical modes; phase, crossing, switching, encoding, loss and feedforward not budgeted",
+    "verified_matrix_error": 1.5700924586837752e-16
+  },
+  "track_4_scaling_null": {
+    "conclusion": "Neither dimension is selected by W33: it is an input from the added lattice; not a native continuum TOE or Lorentz proof",
+    "dispersion": "lambda_W+4*sum_i sin(pi*k_i/256)^2",
+    "exact_spectral_gap": "4-sqrt(6)",
+    "model": "Levi(W33) Cartesian Z_256^d, d supplied as 3 or 4",
+    "running_dimensions": {
+      "3": {
+        "16": 3.0242082369333922,
+        "32": 3.011906477256501,
+        "64": 3.005905719428623,
+        "8": 3.0525774399335153
+      },
+      "4": {
+        "16": 4.032277642566225,
+        "32": 4.015875303008668,
+        "64": 4.007874292571497,
+        "8": 4.069289266232398
+      }
+    }
+  },
+  "track_5_cosmology_prereg": {
+    "DES_Y6_public_LambdaCDM_S8": 0.789,
+    "DES_Y6_public_LambdaCDM_S8_sigma": 0.012,
+    "DES_Y6_published_source": "https://www.darkenergysurvey.org/des-y6-cosmology-results-papers/ (published 2026 paper arXiv:2601.14559)",
+    "Euclid_DR1_foundation_scheduled": "2026-11-12; not available as of 2026-11-09 and DR1 higher-level shear products expected later",
+    "S9_scored": false,
+    "frozen_Dovekie_pre_Halofit_refit_S8": {
+      "CPL": 0.8270865686770321,
+      "LCDM_native": 0.8072549321176206,
+      "free_neg": 0.8331275778072653,
+      "free_pos": 0.8220237939447738
+    },
+    "raw_one_dimensional_differences_from_DES_Y6_over_reported_sigma": {
+      "CPL": 3.173880723086007,
+      "LCDM_native": 1.5212443431350438,
+      "free_neg": 3.67729815060544,
+      "free_pos": 2.751982828731144
+    },
+    "warning": "S8 summary pull is illustrative and NOT chi2 evidence against CPL or fading or a test of the pre-registered S9 threshold",
+    "why_not_scored": "DES Y6 published LambdaCDM S8 is NOT a model-specific cosmic shear data-vector likelihood; S9 requires DES Y6 xi+/- covariance, matching scale cuts, patched CLASS/Halofit predictions, nuisance refits, and a blinded held-out protocol."
+  }
+}
