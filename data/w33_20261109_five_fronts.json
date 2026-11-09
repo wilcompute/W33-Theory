@@ -1,0 +1,152 @@
+{
+  "chirality": {
+    "all_family_counts_from_1_to_10_anomaly_free": true,
+    "finite_parity_symmetric_double_well_minima": {
+      "-1": {
+        "even_potential": 0,
+        "second_derivative": 8
+      },
+      "1": {
+        "even_potential": 0,
+        "second_derivative": 8
+      }
+    },
+    "per_family_anomalies": {
+      "SU2square_U1": "0",
+      "SU3_cubic": 0,
+      "SU3square_U1": "0",
+      "U1_cubic": "0",
+      "Witten_SU2_doublets": 4,
+      "gravsquare_U1": "0"
+    },
+    "regulator": "must build gauge-covariant Weyl operator, prove anomaly cancellation and no light mirrors, controlled continuum",
+    "scope": "anomaly cancellation alone does not select three families or chiral handedness; E8 order-3 shift restriction is an additional assumption",
+    "selection": "no unique sign without extra symmetry breaking or boundary/thermodynamic prescription"
+  },
+  "cosmology": {
+    "controls": {
+      "des_y3": {
+        "delta_chi2_CPL_minus_fading": -0.6436234537538894,
+        "largest_abs_delta_chi2_from_LCDM": 1.935258390095413,
+        "margin_to_predicted_2_gap": 1.3563765462461106,
+        "margin_to_predicted_4_LCDM": 2.064741609904587
+      },
+      "kids_legacy": {
+        "delta_chi2_CPL_minus_fading": -0.28040066798615726,
+        "largest_abs_delta_chi2_from_LCDM": 2.492875218130081,
+        "margin_to_predicted_2_gap": 1.7195993320138427,
+        "margin_to_predicted_4_LCDM": 1.5071247818699192
+      }
+    },
+    "evidence": "baseline control passes frozen numerical criterion; future independent survey not evaluated",
+    "frozen_date": "2026-11-08",
+    "interpretation": "current data do not distinguish fading from CPL; no unique scalar-field dynamics derived",
+    "nonlinear_model": "only corrected scalar-field Halofit/HMcode; original scalar-field shear comparisons withdrawn",
+    "predictions_apply_only_to": "FUTURE DES Y6, KiDS successor, HSC Y3 or Euclid DR1 using same pipeline and cuts",
+    "reuses_repository_numbers_not_new_likelihood": true
+  },
+  "gauge_dynamics": {
+    "binary_cycle_rank": 81,
+    "cycle_dependencies": 1539,
+    "distinct_eight_cycles": 1620,
+    "finite_gauge_action": "sum |psi_p-exp(i theta_e)psi_l|^2 + .13 sum_(8cycles)(1-cos holonomy) + .15 sum|psi|^2 + .02 sum|psi|^4",
+    "free_U1_cycle_fluxes": 81,
+    "girth": 8,
+    "if_all_loops_attached_as_2cells_beta2": 1539,
+    "incidence_edges": 160,
+    "incidence_graph_vertices": 80,
+    "laplacian_covariance_error": 3.722145839155691e-15,
+    "lines": 40,
+    "points": 40,
+    "relative_gauge_action_error": 0.0,
+    "scope": "kinematic, U(1) covariant finite-graph action; not time evolution, 3+1D limit or Einstein gravity"
+  },
+  "pentad": {
+    "high_M_S5_singlets": 9,
+    "high_M_eigenvalue": "16/9",
+    "low_M_eigenvalue": "1/9",
+    "low_M_standard_S5_copies": 9,
+    "projection_formula": "P_high=(4*I-R)/5, P_low=(R+I)/5",
+    "scope": "abstract S6 calculation; W33 identification is the prior sentinel theorem",
+    "star_eigenvalues": [
+      -1.0,
+      4.0,
+      4.0,
+      4.0,
+      4.0
+    ]
+  },
+  "photonic": {
+    "Hoeffding_95pct_epsilon_0_1_pairs_per_basis": 3320,
+    "Hoeffding_95pct_epsilon_0_1_total_preparations_per_coset": 53120,
+    "Monte_Carlo_variance_ratio": 0.9801141766559825,
+    "calibrated_eta_recovers_pure_entanglement": true,
+    "depolarizing_eta": 0.82,
+    "depolarizing_scale_factor": 0.6724,
+    "diagnostic_warning": "product state exhibits zero three-coset spread but a positive apparent entanglement under identical outcome-dependent loss; cross-coset agreement is NOT a loss-free certificate",
+    "exact_N3_variance_error": 4.440892098500626e-16,
+    "exact_Ustat_variance": "[2(c-c^2)+4(N-2)(r-c^2)]/[N(N-1)], r=sum p_j^3",
+    "exact_formula": "L_pure=3/2*(sum_(8 bases,j) p_bj^2-4/3)",
+    "input_cases": {
+      "maximally_entangled": {
+        "actual_linear_entropy": 0.6666666666666665,
+        "apparent_entropy_if_loss_ignored": 0.7023525139903458,
+        "efficiency_distorted_max_minus_min": 0.014766780108315336,
+        "max_calibrated_loss_correction_error": 2.4424906541753444e-15,
+        "mean_efficiency_distorted_collision": 1.8015683426602305,
+        "per_coset_collision_sums": [
+          1.7777777777777801,
+          1.7777777777777801,
+          1.7777777777777803
+        ],
+        "recovered_linear_entropies": [
+          0.6666666666666703,
+          0.6666666666666703,
+          0.6666666666666706
+        ],
+        "u_stat_256_shots_per_basis_standard_error": 0.00690347391316077
+      },
+      "partially_entangled": {
+        "actual_linear_entropy": 0.45999999999999996,
+        "apparent_entropy_if_loss_ignored": 0.43760262103205616,
+        "efficiency_distorted_max_minus_min": 0.016896167438977372,
+        "max_calibrated_loss_correction_error": 1.5543122344752192e-15,
+        "mean_efficiency_distorted_collision": 1.6250684140213707,
+        "per_coset_collision_sums": [
+          1.6400000000000015,
+          1.6400000000000017,
+          1.6400000000000015
+        ],
+        "recovered_linear_entropies": [
+          0.4600000000000023,
+          0.46000000000000263,
+          0.4600000000000023
+        ],
+        "u_stat_256_shots_per_basis_standard_error": 0.05619344921812677
+      },
+      "product": {
+        "actual_linear_entropy": 0.0,
+        "apparent_entropy_if_loss_ignored": 0.023539094650205872,
+        "efficiency_distorted_max_minus_min": 0.0,
+        "max_calibrated_loss_correction_error": 1.1102230246251565e-15,
+        "mean_efficiency_distorted_collision": 1.3490260631001372,
+        "per_coset_collision_sums": [
+          1.3333333333333344,
+          1.3333333333333346,
+          1.3333333333333344
+        ],
+        "recovered_linear_entropies": [
+          1.6653345369377348e-15,
+          1.9984014443252818e-15,
+          1.6653345369377348e-15
+        ],
+        "u_stat_256_shots_per_basis_standard_error": 0.008454994269931326
+      }
+    },
+    "nine_outcomes_per_basis": 9,
+    "scope": "ideal projective measurements, IID source, known settings; mixed-state entropy is not determined without purity/depolarization model",
+    "three_Q8_cosets": 3,
+    "unbiased_estimator": "c_hat_b=sum_j n_bj(n_bj-1)/(N(N-1))"
+  },
+  "status": "PASS_ALL_FIVE_NUMERICAL_AND_EXACT_INTERNAL_CHECKS_WITH_LIMITATIONS"
+}
