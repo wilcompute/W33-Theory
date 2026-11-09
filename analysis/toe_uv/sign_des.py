@@ -25,4 +25,4 @@ for m in ("LCDM", "free_neg", "free_pos", "CPL"):
     r = F.fit(x0, NUIS, kind="cpl" if m == "CPL" else "fading", iters=6)
     out[m] = dict(des=r["parts"]["des"], desp=r["parts"]["desp"], S8=r["info"]["S8"], c=fits[m]["p"].get("c"), cp=fits[m]["p"].get("cp"), nuis={k: r["p"][k] for k in NUIS})
     print(m, "des chi2 %.2f  nuisance prior %.2f  S8 %.4f" % (r["parts"]["des"], r["parts"]["desp"], r["info"]["S8"]), flush=True)
-    json.dump(out, open("sign_des.json" if os.environ.get("SURVEY", "des") == "des" else "sign_des_%s.json" % os.environ["SURVEY"], "w"), indent=1, default=float)
+    json.dump(out, open(("sign_des.json" if os.environ.get("SURVEY", "des") == "des" else "sign_des_%s.json" % os.environ["SURVEY"]).replace(".json", os.environ.get("OUTTAG", "") + ".json"), "w"), indent=1, default=float)

@@ -1,53 +1,41 @@
-# What the data say about evolving dark energy (one page, 2026-11-08)
+# What the data say about evolving dark energy (one page; revised 2026-11-08 after the CLASS halofit correction)
 
-> **PARTIAL RETRACTION — PASS12632, 2026-11-08.** Every post-Pass12629 scalar-field cosmic-shear, joint-held-out, and S8 power/geometry comparison below is WITHDRAWN due to the CLASS/Halofit scalar-field nonlinear-power bug. Expansion-only BAO/SN statements from earlier passes are distinct, though their significance also needs calibrated inference. Do not treat prior shear claims as established. See `analysis/PASS12632_HALOFIT_SCF_BUG.md`.
+> **Revised after Pass 12632.** The previous version claimed that cosmic shear separates the models (fading +4.7 against CPL +0.3 on the combined ledger). That claim came from a CLASS halofit bug: scalar-field dark energy was read as Ω_m ≈ 3, so every scalar-field model had nonlinear power 0.4–0.7 of the true value, while CPL was computed correctly. **It is withdrawn.** The bug is reproduced on stock CLASS and reported as lesgourg/class_public#682. The other track's retraction and fail-closed gate are in 5b2766be1. The previous text is in git history (44f94393d).
 
-Claude track, Passes 12620–12630. All numbers come from committed JSON certificates in `analysis/toe_uv/` and `data/`. **Not a theory of everything.**
+Claude track, Passes 12620–12633. All numbers come from committed JSON in `analysis/toe_uv/` and `data/`. **Not a theory of everything.**
 
-**1. Evolving dark energy beats ΛCDM out of sample, on two supernova compilations.**
+**1. Evolving dark energy beats ΛCDM out of sample on expansion data, with two supernova compilations.** The models are trained without one probe and scored on predicting it (elpd, prior-truncated draws):
 
-The models are trained without one probe and then scored on predicting it (elpd, prior-truncated draws):
-
-| elpd gain over ΛCDM | fading coupling (c < 0) | CPL (w₀wₐ) | thawing exponential |
+| elpd gain over ΛCDM (BAO + SN held out) | fading coupling (c < 0) | CPL (w₀wₐ) | thawing exponential |
 |---|---:|---:|---:|
 | Dovekie | +5.7 | +5.5 | +3.5 |
 | DES-SN5YR | +7.2 | +9.5 | +6.0 |
 
-The leader changes with the compilation, so the data prefer evolving dark energy, not a particular model. *Robust.*
+- These probes are linear and never touched halofit. The training fits move by less than 1 in χ² under the patch, only through CMB lensing, and against ΛCDM rather than for it (`hf_impact.json`).
+- The leader changes with the compilation, so the data prefer *evolving* dark energy, not a particular model.
+- *Caveat (other track):* the significance still needs calibrated inference beyond Fisher draws. The MCMC replacements run so far agree.
 
-**2. Cosmic shear separates the models; BAO cannot.**
+**2. Cosmic shear does not separate the models.** With correct nonlinear power (patched halofit, confirmed by a matched-fluid check and by a patched HMcode):
 
-Held-out DES Y3 shear prefers fading (and ΛCDM) over CPL by 1.6–2.2 elpd, with either SN training set. CPL's shear penalty survives a joint refit (Δχ² = 3.2). 
+| | fixed-background χ²_shear vs ΛCDM: fading c < 0 / CPL | held-out elpd vs ΛCDM: fading c < 0 / c > 0 / CPL |
+|---|---|---|
+| DES Y3 | +1.94 / +1.29 | −0.69 / −0.38 / −0.68 |
+| KiDS-Legacy | +2.49 / +2.21 | *rerun in progress* |
 
-**Update (Pass 12631):** KiDS-Legacy held out replicates this. CPL is worst by 2.5–3.0 on KiDS, and fading matches ΛCDM. With BAO+SN, DES and KiDS all held out (Dovekie), the gain over ΛCDM is **fading +4.7, CPL +0.3**. CPL's advantage nearly vanishes once structure growth is predicted. KiDS's own w₀wₐ analysis (arXiv:2512.11041) sees the same S8 tension.
+- All the evolving models sit slightly behind ΛCDM on shear, by less than 2.5 in χ² and less than 0.7 in elpd, and |CPL − fading| < 0.7.
+- This agrees with KiDS-Legacy's own extended-model analysis: no significant w₀wₐ improvement from shear plus CMB lensing (Reischke et al., A&A 709, A82, 2026; arXiv:2512.11041).
+- Frozen S1 (fading beats CPL on shear) is not supported by current data. Frozen S8 and S7's sign clause would fail if scored now. Their formal targets are future releases.
 
-BAO at DESI DR3 depth cannot split fading from CPL (Δχ² < 4) or fix the sign of the coupling (Δχ² < 0.3, and below 3.4 even at 0.2% precision). *Moderate: a 1–2σ effect from one survey so far.*
+**3. The sign of the coupling is undetermined, mildly favouring c < 0** (P(c > 0) = 0.25–0.30 from the expansion data). The shear-based odds are withdrawn. c < 0 gives the dark-matter mass a dip and rise with an apparent phantom crossing at z ≈ 0.8. That is the phenomenology of Khoury, Lin and Trodden's dark axion with dark baryons (arXiv:2503.16415, 2607.16191).
 
-**3. The sign of the coupling is undetermined, mildly c < 0.**
+**4. A DESI-driven upward shift of n_s depends on the dark-energy model.** Adding BAO moves n_s by 1.7σ under ΛCDM and by 0.1σ under CPL or fading. SPT-3G D1's ΛCDM shift agrees. *Replication of arXiv:2512.05108's mechanism.*
 
-Profile and Laplace estimates agree: P(c > 0) = 0.25–0.30, falling to about 0.3 odds once shear is added. The sign fixes a lot: c < 0 means the dark-matter mass dips and then rises, with an apparent phantom crossing at z ≈ 0.8. That is the published dark-axion/dark-baryon phenomenology of Khoury, Lin and Trodden (arXiv:2503.16415, 2607.16191). c > 0 never goes phantom. *Robust that it is undetermined.*
+**5. Naturalness and sequestering favour an axion-type completion.**
+- An unprotected field-dependent mass must be lighter than about 0.02 eV (one-loop correction vs H₀²; old, Garny 2006).
+- A protected mass needs a ℤ_N with N ≳ 100–170 for Planck-operator quality.
+- **The dark-energy field cannot be the level-3 flavour modulus.** Atomic clocks are violated by at least 10⁶, fixed points included (Pass 12633). The flavour modulus must be stabilised, and the dark-energy field must couple to the visible sector at less than 5×10⁻⁵ of its dark-matter coupling.
+- A shift-symmetric axion talking only to a dark gauge sector (the KLT structure) provides this by symmetry. A modulus-like fading coupling needs it added by hand.
 
-**4. A DESI-driven upward shift of n_s depends on the dark-energy model.**
+**Frozen statements** (hashes in `analysis/toe_uv/*.sha256`): DR3 BAO (`dr3_prereg.json`), growth (`growth_prereg.json`), S1–S4, S5 (conditional), S6, S7, S8. They stay unedited as the record. The status of S1, S7 and S8 is given in §2.
 
-Adding BAO moves n_s by 1.7σ under ΛCDM and by 0.1σ under CPL or fading. SPT-3G D1's ΛCDM shift agrees. *Replication of arXiv:2512.05108's mechanism.*
-
-**5. Any particle carrier of the coupling is unnatural unless a large discrete symmetry protects it.**
-
-- An unprotected field-dependent mass must be lighter than about 0.02 eV, because otherwise the one-loop correction exceeds H₀². This is old (Garny 2006; Doran and Jaeckel 2002), reproduced here and in Chat's audit.
-- Protected options cost a cyclic symmetry ℤ_N. Loop cancellation needs N ≳ 11–21.
-- A monotonic mass history over the fitted field excursion needs f ≳ 0.1 M_P. Planck-suppressed operator quality then needs **N ≳ 100–170**.
-- Among qutrit symplectic groups, single elements reach orders of 18 (two qutrits), 36 (three), 90 (four) and 252 (five), from sampling.
-
-*Conditional on O(1) Planck-operator coefficients.*
-
-**Frozen, falsifiable statements** (hashes in `analysis/toe_uv/*.sha256`):
-
-| file | what it freezes |
-|---|---|
-| `dr3_prereg.json` | DESI DR3 BAO predictions |
-| `growth_prereg.json` | S8 and fσ8 predictions |
-| `prereg_statements.json` | S1 shear (fading beats CPL), S2 phantom iff c < 0, S3 line drift, S4 DR3 BAO no split |
-| `prereg_corridor.json` | S5, the sterile-neutrino corridor (now conditional) |
-| `prereg_mono.json` | S6, the running floor |
-
-**Corrections made along the way:** see `analysis/SUMMARY_PASSES_12620_12628.md` and the addenda of Passes 12627–12629. The main ones are the point-estimate CV lead, the inflation-prior band, the Lyman-α edge, the sign grid and the single-cosine mapping.
+**The main lesson.** When two models go through different code paths (scalar field against fluid), run the *same* physics through both paths and require identical outputs for every observable used. One such check, run after the shear claims were made, found the error.
