@@ -53,6 +53,10 @@ the current frontier. “Retracted” means the claim should not be repeated.
 | internal `C6` is a Dirac/homological flux quantum | 1934 reading | **retracted** | integral boundary complex is torsion-free at tested primes |
 | internal `C6` is QCD colour, generation, or neutrino label | exploratory wording | **not derived; withdrawn from promotion** | no supporting intertwiner or physical map |
 | internal `C6` is linearly confined to the coexact 90 | 1954/1963/1968 | **stands, exact** | multiplicity-free `Hom_PSp(90,X)=0` for other blocks |
+| no invariant phase because `W(E6)` is a reflection group | 1866 | **result stands for every odd q; stated reason is a q=3 coincidence** (Pass 12642) | GAP: PGSp(4,5) 47/47 FS=+1; PGSp(4,q) = SO(5,q) totally orthogonal (Gow 1985) |
+| 2-qudit Pauli geometry has `W(E_{q+3})` symmetry for general q | MCCCLXXI | **false as stated** (Pass 12642 triage) | q=2: 1920 vs 720; q=5: 696,729,600 vs 9,360,000 |
+| three-qubit size-5 Pauli MUB sets strongly unextendible | 12642/12643 | **published for one example** (Mandayam et al. 2014, Groebner); **all 24,192 follow** (single Sp(6,2) orbit, P12643); exact constant (3-sqrt5)/8 = 1/(4 phi^2) via Lovasz theta <= 4+sqrt5 (exact dual over Q(sqrt5)), uncertainty relation of de Gois et al. 2023; tight 1/8 numerical only | data/w33_mirror_orbits.json, w33_lovasz_theta_unextendible.json |
+| the certified bound 1/d is tight on every rung | 12642 wording | **corrected**: tight at d=4, 8; not at d=9 (min F = 0.14711, P12639) | w33_minF_covered_points.json |
 | internal `C6` equals the `E8` Coxeter six-cycle action | 1948 question | **refuted** | incompatible full-carrier character multiplicities |
 | `C6` plus chirality gives `D12` on the phase label | 1968 | **stands, exact algebraically** | outer involution acts by inversion |
 | the Pass-1970 manuscript is peer reviewed/published | none | **not claimed** | computational referee-shaped draft only |

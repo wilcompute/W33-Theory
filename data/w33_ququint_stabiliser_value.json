@@ -1,0 +1,50 @@
+{
+ "d25_m2_cover0": {
+  "meeting_histogram": {
+   "1": 26,
+   "2": 39,
+   "3": 52,
+   "4": 13,
+   "6": 13
+  },
+  "m_star": 1,
+  "stabiliser_value": "4/25",
+  "min_F": 0.160000000016091,
+  "min_F_equals_stabiliser": true
+ },
+ "d25_m2_cover1": {
+  "meeting_histogram": {
+   "1": 26,
+   "2": 39,
+   "3": 52,
+   "4": 13,
+   "6": 13
+  },
+  "m_star": 1,
+  "stabiliser_value": "4/25",
+  "min_F": 0.16000000003091122,
+  "min_F_equals_stabiliser": true
+ },
+ "d25_m1_cover0": {
+  "meeting_histogram": {
+   "2": 90,
+   "4": 36,
+   "6": 16
+  },
+  "m_star": 2,
+  "stabiliser_value": "8/25",
+  "min_F": 0.1733333333413462,
+  "min_F_equals_stabiliser": false
+ },
+ "d25_m1_cover1": {
+  "meeting_histogram": {
+   "2": 90,
+   "4": 36,
+   "6": 16
+  },
+  "m_star": 2,
+  "stabiliser_value": "8/25",
+  "min_F": 0.17333333336382314,
+  "min_F_equals_stabiliser": false
+ }
+}

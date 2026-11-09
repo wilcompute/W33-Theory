@@ -1,0 +1,48 @@
+{
+ "closure_rank": 21,
+ "vertex_class_sizes": [
+  12,
+  15,
+  1
+ ],
+ "n_edge_classes": 8,
+ "theta": 6.236087992320655,
+ "identified": "sqrt(5)*(499/931 + 134*sqrt(5)/133)",
+ "dual_y_rounded": [
+  "-3*sqrt(5)/2 - 1/2",
+  "-(-199/983 + 89*sqrt(5)/983)**2",
+  "7/2 - sqrt(5)/2",
+  "-3*sqrt(5)/2 - 1/2",
+  "-2 - sqrt(5)/2",
+  "-2 - sqrt(5)/2"
+ ],
+ "dual_lambda_max_rounded": 6.236067977627812,
+ "exact_dual_y": [
+  "-3*sqrt(5)/2 - 1/2",
+  "0",
+  "7/2 - sqrt(5)/2",
+  "-3*sqrt(5)/2 - 1/2",
+  "-2 - sqrt(5)/2",
+  "-2 - sqrt(5)/2"
+ ],
+ "exact_charpoly_factors": [
+  [
+   "lam + 11",
+   3
+  ],
+  [
+   "lam + sqrt(5) + 4",
+   5
+  ],
+  [
+   "lam - 4 - sqrt(5)",
+   18
+  ],
+  [
+   "lam**2 - lam*(9 - 13*sqrt(5)) - 95/2 + sqrt(5)/2",
+   1
+  ]
+ ],
+ "theta_upper_exact": "4+sqrt(5)",
+ "max_root": 6.23606797749979
+}

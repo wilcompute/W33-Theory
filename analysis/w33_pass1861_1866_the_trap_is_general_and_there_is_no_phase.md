@@ -206,3 +206,11 @@ product (invariant, real, symmetric) survives, the star does not.
 - `χ(H) = 9`.
 - The `1/q` law at `q = 7`, and a proof rather than three data points.
 - What the fibre-10 over the 27 lines is.
+
+
+---
+
+**Scope note (Pass 12642, added 2026-11-09).** The no-invariant-phase result of Pass 1866 holds for **every odd q**, not only q = 3.
+PGSp(4,q) is isomorphic to SO(5,q), which is totally orthogonal for odd q (Gow 1985, applied to O(5,q) = SO(5,q) x {+-1}). GAP confirms
+this at q = 5, where all 47 irreducibles have FS = +1. "W(E6) is a reflection group" is therefore the q = 3 coincidence W(E6) = SO(5,3), not the mechanism.
+The photonic reading (amplitude-only sectors) is unchanged.

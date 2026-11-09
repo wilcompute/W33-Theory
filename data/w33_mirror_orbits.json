@@ -1,0 +1,17 @@
+{
+ "two_qutrits": {
+  "orbit_sizes": [
+   216,
+   216
+  ],
+  "fibres": 216,
+  "partners_in_same_orbit": 0
+ },
+ "three_qubits": {
+  "orbit_sizes": [
+   24192
+  ],
+  "fibres": 12096,
+  "partners_in_same_orbit": 12096
+ }
+}

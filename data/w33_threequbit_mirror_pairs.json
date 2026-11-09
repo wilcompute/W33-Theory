@@ -1,0 +1,40 @@
+{
+ "control_two_qutrit_pentads": {
+  "n_sets": 432,
+  "n_covered_sets": 216,
+  "fibre_sizes": {
+   "2": 216
+  },
+  "collinear_pairs_per_set": 30,
+  "pair_overlaps_in_a_fibre": {
+   "0": 1
+  },
+  "lines_shared_in_a_fibre": {
+   "0": 1
+  },
+  "max_witness": 0.5925925925542292,
+  "witness_on_left_stabiliser_states": [
+   0.592592593
+  ],
+  "second_moment_diff": 6.661338147750939e-16
+ },
+ "three_qubit_size5": {
+  "n_sets": 24192,
+  "n_covered_sets": 12096,
+  "fibre_sizes": {
+   "2": 12096
+  },
+  "collinear_pairs_per_set": 105,
+  "pair_overlaps_in_a_fibre": {
+   "15": 1
+  },
+  "lines_shared_in_a_fibre": {
+   "0": 1
+  },
+  "max_witness": 0.5624999999758201,
+  "witness_on_left_stabiliser_states": [
+   0.5625
+  ],
+  "second_moment_diff": 2.886579864025407e-15
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "p2_n2_size3": {
+  "d": 4,
+  "size": 3,
+  "n_uncovered": 6,
+  "anticommutation_degrees": [
+   2
+  ],
+  "theta": 2.0000000108086247,
+  "theta_complement": 2.9999999999765667,
+  "theta_product": 6.000000032379007,
+  "alpha": 2,
+  "lower_bound_minF": 0.24999999729784383,
+  "upper_bound_minF": 0.25,
+  "known_min_F": 0.25
+ },
+ "p2_n3_size5": {
+  "d": 8,
+  "size": 5,
+  "n_uncovered": 28,
+  "anticommutation_degrees": [
+   12
+  ],
+  "theta": 6.236068068781614,
+  "theta_complement": 5.000000051796032,
+  "theta_product": 31.18034066691165,
+  "alpha": 6,
+  "lower_bound_minF": 0.09549149140229829,
+  "upper_bound_minF": 0.125,
+  "known_min_F": 0.125
+ }
+}
