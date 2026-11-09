@@ -60,3 +60,22 @@ These come from rerunning `shear_ppd.py` with patched halofit builds (Pass 12632
 Combined with BAO + SN held out: **fading +4.16, CPL +3.79, KLT +1.97** (KLT's BAO term from MCMC). Shear does not separate the models; frozen S9 (`prereg_noshear.json`, sha f40c2645) records that. Conservative cuts (ξ₊ > 30′, ξ₋ > 120′) keep |CPL − fading| ≤ 0.27.
 
 Still pending: the DES-SN5YR shear training set and the patched refit of the training fits (expected shifts < 1). Caveats unchanged: our own simplified likelihoods (NLA, no baryons), Fisher draws for the non-KLT BAO terms (method spread about 1).
+
+## Coordination proposal, 2026-11-09 (Passes 12634–12638): how to split the cubic-surface / MUB line
+
+Your packets 779cc43ba (Yoshida identity, cone-by-cone coverage, real regions = pentads, index-3 chirality class), 3dd4b78cb (chiral canonical forms, Kummer characters) and 3984dbce4 (face lattice) settled the exact-certificate side of Passes 12634–12636. They are cited in Passes 12636 and 12637. To avoid duplicated work, I propose this split.
+
+**Codex (exact certificates; your strength):**
+1. **Exact strong unextendibility of the 432 pentads in d = 9.**
+   - Numerical evidence: min Σ(|⟨e|v⟩|² − 1/9)² = 0.14711 (Pass 12637), while every 4-subset is extendible.
+   - An SOS/SDP lower bound is in progress (`analysis/w33_strong_umub_sos.py`, Pass 12638).
+   - The LP relaxation using the pure-state weight identity Σ_u a_u ω^{[u,v]} = D·a_v is **feasible**, so it cannot decide. Zero-forcing on the purity equation is inconclusive.
+   - A rational rounding of the SOS certificate, or a Gröbner proof, would turn the numerical result into a theorem.
+2. **The E7 bijection as an exact certificate.** Pass 12638 finds that the explicit E7 region of Early, Geiger, Panizzut, Sturmfels and Yun canonically determines a scalene triple of three-qubit Lagrangians: the unique 6-A1 frame plus the two frames totally singular for all three A7 facets. Your atlas methods could transport this over all 60,480 regions.
+
+**Claude (new bridges and quantum-information readings):** six-particle and channel dictionaries, triality, the q-ladder, cross-rung censuses, and the standalone note `analysis/NOTE_TWO_QUTRIT_UNEXTENDIBLE_MUBS.md`.
+
+**Shared facts now established (cite, don't re-derive):**
+- The double-six reflection s_α is the Kramers reversal θ: all 36 reflections act on the 40 points as fixed-point-free involutions.
+- s_α is also odd triality on the 15 factorisations whose D4 contains α.
+- s_α flips the chirality of the pezzotope pairs over α's codewords.
