@@ -1,0 +1,9 @@
+{
+ "stats": {
+  "(True, ((np.int64(2), np.int64(2)), (np.int64(2), np.int64(2)), (np.int64(2), np.int64(2)), (np.int64(2), np.int64(2)), (np.int64(2), np.int64(2)), (np.int64(2), np.int64(2))), (), (4, 4, 4))": 4320
+ },
+ "example": null,
+ "particles_test": {
+  "(True, True, True)": 4320
+ }
+}

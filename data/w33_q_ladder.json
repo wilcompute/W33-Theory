@@ -1,0 +1,38 @@
+[
+ {
+  "q": 2,
+  "points": 15,
+  "lines": 15,
+  "point_graph_perp_perp": {
+   "3": 60
+  },
+  "line_graph_perp_perp": {
+   "3": 60
+  },
+  "self_dual_by_perp_perp": true
+ },
+ {
+  "q": 3,
+  "points": 40,
+  "lines": 40,
+  "point_graph_perp_perp": {
+   "4": 400
+  },
+  "line_graph_perp_perp": {
+   "2": 400
+  },
+  "self_dual_by_perp_perp": false
+ },
+ {
+  "q": 5,
+  "points": 156,
+  "lines": 156,
+  "point_graph_perp_perp": {
+   "6": 400
+  },
+  "line_graph_perp_perp": {
+   "2": 400
+  },
+  "self_dual_by_perp_perp": false
+ }
+]
