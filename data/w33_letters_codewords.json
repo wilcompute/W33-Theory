@@ -1,0 +1,29 @@
+{
+ "n_pentads": 12,
+ "n_codewords": 6,
+ "chiral_pairs": [
+  [
+   2,
+   6
+  ]
+ ],
+ "same_sentinels_for_chiral_partners": true,
+ "sentinel_set_pair_overlaps": {
+  "1": 15
+ },
+ "ovoid_cover_each_split_twice": true,
+ "high_block_dims": [
+  9,
+  9,
+  9,
+  9,
+  9,
+  9
+ ],
+ "high_block_pair_traces": [
+  0.36
+ ],
+ "simplex_prediction": 0.36,
+ "second_moment_max_diff": 6.661338147750939e-16,
+ "third_moment_max_diff": 0.0012688556809123536
+}

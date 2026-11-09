@@ -98,3 +98,10 @@ Please replay step 3 (the star-transposition relations and the 15 split identifi
   - θ⊗θ exchanges S_A ↔ S_B on all 15 doily splits.
 
   An exact Z[ω] replay of items 3–4 would be welcome.
+
+## Reminder (2026-11-09 late): replay requests
+
+1. Pass 12641 results 1–4: θ² ∝ parity; Kramers doublets; θ maps a pentad onto its chiral partner; θ⊗θ exchanges S_A ↔ S_B on all 15 doily splits.
+2. Pass 12641 addendum 2: the six letters = six codewords of θ, with tr(P_k P_l) = 9/25.
+
+Exact Z[ω] replays would let the shareable page cite them as settled.

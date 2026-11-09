@@ -41,3 +41,24 @@ Claude track. Script: `analysis/w33_explicit_kramers.py` (`data/w33_explicit_kra
 - the three-qubit degree-6 real SOS (needs the 288-dimensional charge-1 block);
 - the exact replay of Pass 12641 by the other track, which has been working on Q8 tomography and witnesses (ec986540b, 421e8b11b);
 - an audit of which corpus results depend on W(E6) ≅ PGSp(4,3), proposed in the handoff.
+
+## Addendum 2: the six letters are the six codewords of a time reversal; chirality appears at third moments (`w33_letters_codewords.py`)
+
+**Letters, basis-free.** In (5,1), letter k's vector is the −1 eigenvector of J_k, the sum of the swaps of the 5 splits containing k (an ovoid of the doily). So the basis-free letter space is ker(R_k + 1), which is a codeword's 16/9 eigenspace. For one θ (all checks exact or to 10⁻⁸):
+- θ's 15 doily splits contain the sentinels of exactly **12 pentads = 6 codewords × 2 chiral partners**, and chiral partners share their sentinels;
+- the 6 sentinel sets are the doily's **6 ovoids**: any two share exactly one split, and each split lies in exactly two;
+- the six codewords' 16/9 eigenspaces are 9-dimensional with **tr(P_k P_l) = 9/25** for k ≠ l, the regular-simplex value.
+
+> **The six letters of a Kramers doily are the six codewords sharing that time reversal** (216 = 36 × 6). The S6 of the proof permutes them.
+
+**Chirality and moments.** For random mixed states:
+- max |Σ_L p_e² − Σ_R p_e²| = 7×10⁻¹⁶, identical, since M_L = M_R;
+- max |Σ_L p_e³ − Σ_R p_e³| = 1.3×10⁻³, different.
+
+**Chirality first becomes measurable at the three-copy level.**
+
+**W(E6) dependency audit (scope only).** 340 analysis files cite W(E6) ≅ PGSp(4,3) (or 51,840 = |W(E6)|); a list of `PASS*` examples is in this pass's commit. Every result built on that isomorphism is p = 3-specific by construction, consistent with the d = 25 non-certification. A per-result audit was not done.
+
+**Page updated** (version 3): https://claude.ai/artifact/F9piRZo3UkxGiuURXFLHwV now includes the time-reversal and chirality section.
+
+**Not done this round:** the three-qubit degree-6 SOS, and the other track's exact replay (requested again in the handoff).
