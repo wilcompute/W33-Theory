@@ -1,0 +1,67 @@
+{
+  "parent": "adacccd3d720e7acce29d8a92be70b008b4c5367",
+  "artifact_raw_sha256": {
+    "analysis/toe_20261109_pezzotope_canonical_partner.py": "4e91376347a66c8dec72fddbcc21d662c7b8cb5715bcddbd838be394d0c1292d",
+    "analysis/2026-11-09_pezzotope_canonical_reflection.md": "60d2f63370e0f5ddce32af7f27422b3e841370fe8003084ca5478bd19364fa0f",
+    "data/toe_20261109_pezzotope_canonical_partner.json": "a1cc4b3442c7b6024ec9761146535bddfe8196167b070527025d2284be21522a",
+    "data/toe_20261109_real_yoshida_pezzotope_labels.json": "1d08a8ed3c698e5b3790354b0937c7fc14d921aed751bb5f9a5d7c8e6556f2dd"
+  },
+  "producer": {
+    "exit_code": 0,
+    "status": "Exact rational form pullback, 45 residues, full Weyl transport, Smith characters, and 19-vertex Schwinger specialization verified"
+  },
+  "parent_test": {
+    "command": "python -m pytest -q -p no:cacheprovider tests/test_toe_20261109_yoshida_partner_code.py",
+    "exit_code": 0,
+    "result": "1 passed in 178.81s"
+  },
+  "independent_modular_checks": [
+    {
+      "prime": 101,
+      "valid_points": 30,
+      "checks": [
+        "Cremona involution with differential",
+        "canonical coefficient ratio equals signed facet monomial"
+      ]
+    },
+    {
+      "prime": 103,
+      "valid_points": 30,
+      "checks": [
+        "Cremona involution with differential",
+        "canonical coefficient ratio equals signed facet monomial"
+      ]
+    },
+    {
+      "prime": 107,
+      "valid_points": 30,
+      "checks": [
+        "Cremona involution with differential",
+        "canonical coefficient ratio equals signed facet monomial"
+      ]
+    }
+  ],
+  "independent_cone_check": {
+    "method": "Independent V8 reconstruction from the published binary incompatibilities",
+    "source_cones": 45,
+    "distinct_newton_vertices": 19,
+    "cone_multiplicity": {
+      "1": 5,
+      "2": 8,
+      "4": 6
+    },
+    "exponent_support": 66,
+    "schwinger_integral": 25
+  },
+  "desktop_commander": "The registered desktop was offline. The exact producer ran in the Windows checkout and the independent checks ran in server V8.",
+  "candidate_triage": "Pass 12634 owns the pentad structure. The 432 incident flags in Pass 1139 and w33_paper_body.tex count a different incidence set. The canonical forms and Schwinger integral framework are published prior art.",
+  "prototypes": [
+    "A direct Gale test gives a different atlas mask from the correct partner. An exact minimizer check rejected the hypothesis of 45 distinct Newton vertices at the selected weights."
+  ],
+  "continuity_decision": "1794242609684-0foxyj",
+  "literature": [
+    "https://arxiv.org/html/2306.13604v3#S9",
+    "https://arxiv.org/html/2306.13604v3#S10",
+    "https://arxiv.org/abs/math/9807127"
+  ]
+}
