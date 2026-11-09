@@ -1,0 +1,64 @@
+{
+  "Bell_contexts": 8,
+  "extra_modes": 9,
+  "families": [
+    {
+      "full_rank_found": false,
+      "mode": "asymmetric",
+      "snapshots": [
+        {
+          "best_condition": Infinity,
+          "fullrank_candidates": 0,
+          "trial": 10
+        },
+        {
+          "best_condition": Infinity,
+          "fullrank_candidates": 0,
+          "trial": 100
+        },
+        {
+          "best_condition": Infinity,
+          "fullrank_candidates": 0,
+          "trial": 300
+        },
+        {
+          "best_condition": Infinity,
+          "fullrank_candidates": 0,
+          "trial": 900
+        }
+      ],
+      "trials": 900
+    },
+    {
+      "full_rank_found": false,
+      "mode": "symmetric",
+      "snapshots": [
+        {
+          "best_condition": Infinity,
+          "fullrank_candidates": 0,
+          "trial": 10
+        },
+        {
+          "best_condition": Infinity,
+          "fullrank_candidates": 0,
+          "trial": 100
+        },
+        {
+          "best_condition": Infinity,
+          "fullrank_candidates": 0,
+          "trial": 300
+        },
+        {
+          "best_condition": Infinity,
+          "fullrank_candidates": 0,
+          "trial": 900
+        }
+      ],
+      "trials": 900
+    }
+  ],
+  "no_novelty_claim": true,
+  "optical_scope": "Symmetric and asymmetric structured Fourier-phase Fourier designs are fixed-phase physical network proposals, not proof of hardware feasibility or globally optimal condition numbers.",
+  "reference_generic_tunable_Givens_per_basis": 36,
+  "status": "STRUCTURED_FOURIER_10_SETTING_PHASE_MASK_SEARCH"
+}

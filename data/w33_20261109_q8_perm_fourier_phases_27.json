@@ -1,0 +1,102 @@
+{
+  "8_W33_Q8_Bell_basis_contexts": 8,
+  "candidate_counts_by_adjacent_walk_length": {
+    "1": {
+      "full_rank_among_180_pairs": 0
+    },
+    "12": {
+      "full_rank_among_180_pairs": 143
+    },
+    "2": {
+      "full_rank_among_180_pairs": 51
+    },
+    "20": {
+      "full_rank_among_180_pairs": 160
+    },
+    "3": {
+      "full_rank_among_180_pairs": 75
+    },
+    "36": {
+      "full_rank_among_180_pairs": 162
+    },
+    "4": {
+      "full_rank_among_180_pairs": 93
+    },
+    "5": {
+      "full_rank_among_180_pairs": 125
+    },
+    "6": {
+      "full_rank_among_180_pairs": 128
+    },
+    "8": {
+      "full_rank_among_180_pairs": 131
+    }
+  },
+  "earlier_generic_Givens_per_extra_basis_upper": 36,
+  "extra_structured_9mode_basis_contexts": 2,
+  "first_permutation": [
+    0,
+    1,
+    3,
+    2,
+    4,
+    8,
+    6,
+    7,
+    5
+  ],
+  "fixed_qutrit_Fourier_blocks_per_extra_basis": 9,
+  "initial_single_phase_no_permutation_local_rank_per_basis": 4,
+  "low_budget_qualified": true,
+  "matrix_digest_sha256": "1f7e0afc41c4fa5f1a0bcf793f1f5794b5773749c3b0619f242a315bb5239c75",
+  "max_tested_reconstruction_error": 1.2224287517543076e-15,
+  "novelty_scope": "Reproducible structured design and phase-covariance obstruction; NOT a newly discovered universal quantum computation theorem or a fabricated optical device.",
+  "phase_only_two_basis_max_possible_local_rank": 8,
+  "phase_optimization_moves_accepted": 118,
+  "physical_selection": "minimal_routing_budget_max_10",
+  "post_phase_optimization_condition_number": 17.842817576067358,
+  "pre_phase_optimization_condition_number": 30.474224896182683,
+  "programmed_diagonal_phase_masks": [
+    [
+      2.376014074459855,
+      -1.3498888619675375,
+      -0.27668150653613494,
+      3.0380679810420608,
+      -0.42649217002179823,
+      -2.9685478324939605,
+      0.6405106293405846,
+      -0.9847275114828103,
+      3.322386139351924
+    ],
+    [
+      -1.6006028289270513,
+      -2.2424979892646433,
+      -1.3455569490951316,
+      1.1171685251515544,
+      -2.523998454865527,
+      -2.255554095991092,
+      -2.7548793714222954,
+      0.14025055215462753,
+      0.37452109516819526
+    ]
+  ],
+  "rank_after_extra": 80,
+  "reconstructed_density_samples": 40,
+  "second_permutation": [
+    0,
+    2,
+    1,
+    3,
+    5,
+    7,
+    4,
+    6,
+    8
+  ],
+  "selected_permutation_walk_length": 20,
+  "selected_total_fixed_adjacent_routing_inversions": 10,
+  "status": "PASS_STRUCTURED_FOURIER_PHASE_PERMUTATION_10SETTING_TOMOGRAPHY",
+  "strict_hardware_scope": "Fixed nine-mode permutation crossings may be lossy and count as components on a chip. The 27 figures exclude routing as tunable couplers; actual compactness must account for crossings, path/timebin conversion and phase drift.",
+  "tunable_optical_phases_per_extra_basis": 9,
+  "two_mode_givens_per_extra_basis_upper": 27
+}

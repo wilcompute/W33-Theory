@@ -1,0 +1,57 @@
+{
+  "internal_degree_of_freedom": {
+    "CHSH_abs": 2.8284271247461894,
+    "Tsirelson_bound": 2.8284271247461903,
+    "correlators": [
+      [
+        0.7071067811865474,
+        0.7071067811865474
+      ],
+      [
+        0.7071067811865474,
+        -0.7071067811865474
+      ]
+    ],
+    "embedded_qutrit_state": "(|00>+|11>)/sqrt(2) inside C3 tensor C3, one photon internal degrees of freedom",
+    "local_realist_bound": 2,
+    "meaning": "If the two qutrit subsystems are both degrees of freedom of a single photon at one laboratory, CHSH algebra violates the abstract local-hidden-variable factorability inequality but no spacelike separation or independent-party locality is established.",
+    "spatial_nonlocality_certified": false
+  },
+  "passive_spatial_detection": {
+    "example_distribution": [
+      0.6568453733922084,
+      0.3431546266077915,
+      0.0
+    ],
+    "independent_detector_regions": [
+      "A modes 0..8",
+      "B modes 9..17"
+    ],
+    "max_normalization_error": 3.3306690738754696e-16,
+    "no_go_scope": "Vacuum ancillas, passive photon-number preserving interferometry and photon counting; NOT a prohibition on single-photon spatial mode entanglement, homodyne measurements with local oscillators, heralding, or multi-photon resource protocols.",
+    "random_optical_wavefunction_controls": 16,
+    "single_photon_number_constraint": "N_A+N_B=1, so P(N_A>=1 and N_B>=1)=0 for photon-number-resolving or ideal threshold counters",
+    "single_photon_two_party_coincidence_probability": 0.0
+  },
+  "prior_art": "Single-photon contextuality/nonseparability and Bell network locality are distinct. PRL 134 010203 (2025) studies conversion of contextuality into NONLOCALITY using two-photon OAM entanglement. Nonlocality cannot be certified merely by formal C3 tensor C3 decomposition.",
+  "scope": "Symbolic finite-state algebra plus numerical controls; no spacelike-separated Bell apparatus implemented or loophole-free experimental Bell score asserted.",
+  "status": "PASS_SINGLE_PHOTON_INTERNAL_CHSH_VERSUS_SPATIAL_CAUSAL_NO_GO",
+  "untrusted_POVM_ambiguity": {
+    "consequence": "If all measurement POVMs and subsystem-local operations are untrusted, the same 90 observed probabilities are compatible with a maximally entangled internal state OR a pure product state and a globally rotated measurement instrument. Operational tensor-local calibration is essential.",
+    "contexts": 10,
+    "entangled_schmidt_coefficients": [
+      0.7071067811865475,
+      0.7071067811865475,
+      0.0
+    ],
+    "max_indistinguishability_error": 2.7755575615628914e-17,
+    "outcome_probabilities": 90,
+    "physical_effects_all_projective": true,
+    "separable_schmidt_coefficients": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "untrusted_POVM_global_unitary": "E_sep= W^dag E_ent W with rho_ent=W rho_sep W^dag"
+  }
+}

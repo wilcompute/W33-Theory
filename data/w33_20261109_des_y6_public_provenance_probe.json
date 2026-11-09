@@ -1,0 +1,149 @@
+{
+  "S8_misuse_warning": "S8=0.789 +/- 0.012 is a DES 3x2 LambdaCDM conditional posterior and CANNOT be used as the frozen S9 alternate-model full-covariance chi-squared.",
+  "S9_model_likelihood_scored": false,
+  "actual_unblinded_cosmic_shear_FITS_downloaded_and_parsed": false,
+  "matched_full_covariance_downloaded_and_validated": false,
+  "next_data_requirements": [
+    "verified official unblinded FITS plus SHA256 and provenance",
+    "precise xi-plus/minus angular tomographic bin/row mapping",
+    "matched covariance and source n(z) distributions",
+    "nuisance priors and scale-cut masks in same DES pipeline version",
+    "model-specific CLASS/Halofit predictions with original frozen parameter priors",
+    "reoptimized nuisance and held-out likelihood control for all frozen S9 model alternatives"
+  ],
+  "original_preregistration_date": "2026-11-08",
+  "patched_CLASS_Halofit_predictions_completed": false,
+  "public_endpoint_checks": {
+    "DES_Y6_3x2_analysis_arxiv": {
+      "Content_Length_header": "74433",
+      "FITS_or_script_href_candidates": [
+        "//cdn.jsdelivr.net/npm/dompurify@2.3.5/dist/purify.min.js",
+        "//cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js",
+        "//code.jquery.com/jquery-latest.min.js",
+        "/static/browse/0.3.4/js/accordion.js",
+        "/static/browse/0.3.4/js/alphaxiv.js",
+        "/static/browse/0.3.4/js/catalyzex.js",
+        "/static/browse/0.3.4/js/cite.js",
+        "/static/browse/0.3.4/js/connectedpapers.js",
+        "/static/browse/0.3.4/js/dagshub.js",
+        "/static/browse/0.3.4/js/gotitpub.js",
+        "/static/browse/0.3.4/js/huggingface.js",
+        "/static/browse/0.3.4/js/iarxiv.js",
+        "/static/browse/0.3.4/js/influenceflower.js",
+        "/static/browse/0.3.4/js/mathjaxToggle.min.js",
+        "/static/browse/0.3.4/js/replicate.js",
+        "/static/browse/0.3.4/js/sciencecast.js",
+        "/static/browse/0.3.4/js/spaces.js",
+        "/static/browse/0.3.4/js/txyz.js",
+        "https://static.arxiv.org/static/design-system/latest/chrome/banner.js",
+        "https://static.arxiv.org/static/design-system/latest/chrome/header.js"
+      ],
+      "HTML_SHA256_prefix": "4618cf2e7c15b906",
+      "HTML_bytes_inspected": 74433,
+      "HTTP_status": 200,
+      "contains_unblinded_FITS_filename": false,
+      "content_type": "text/html; charset=utf-8",
+      "final_url": "https://arxiv.org/abs/2601.14559",
+      "is_Polymer_or_JS_shell": true,
+      "is_actual_verified_data_vector": false
+    },
+    "DES_Y6_old_3x2_directory": {
+      "Content_Length_header": "146",
+      "HTTP_status": 404,
+      "content_type": "text/html",
+      "final_url": "https://desdr-server.ncsa.illinois.edu/despublic/y6a2_files/y6key_products/final_version/",
+      "is_actual_verified_data_vector": false
+    },
+    "DES_Y6_old_pipeline_notebook": {
+      "Content_Length_header": "146",
+      "HTTP_status": 404,
+      "content_type": "text/html",
+      "final_url": "https://desdr-server.ncsa.illinois.edu/despublic/y6a2_files/y6key_products/final_version/3x2pt_pipeline_public.ipynb",
+      "is_actual_verified_data_vector": false
+    },
+    "DES_Y6_old_unblinded_FITS": {
+      "Content_Length_header": "146",
+      "HTTP_status": 404,
+      "content_type": "text/html",
+      "final_url": "https://desdr-server.ncsa.illinois.edu/despublic/y6a2_files/y6key_products/final_version/3x2pt_2025-07-28-20h_UNBLINDED_wmask_nob2.fits",
+      "is_actual_verified_data_vector": false
+    },
+    "DES_Y6_papers": {
+      "Content_Length_header": "",
+      "FITS_or_script_href_candidates": [
+        "gtm.js",
+        "https://www.darkenergysurvey.org/wp-content/themes/fermilab-partnership/assets/js/html5shiv.min.js",
+        "https://www.darkenergysurvey.org/wp-content/themes/fermilab-partnership/assets/js/respond.min.js"
+      ],
+      "HTML_SHA256_prefix": "4cd6cf9a834c6a2c",
+      "HTML_bytes_inspected": 123061,
+      "HTTP_status": 200,
+      "contains_unblinded_FITS_filename": false,
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://www.darkenergysurvey.org/des-y6-cosmology-results-papers/",
+      "is_Polymer_or_JS_shell": true,
+      "is_actual_verified_data_vector": false
+    },
+    "DES_Y6_public_PPD_repo": {
+      "Content_Length_header": "",
+      "FITS_or_script_href_candidates": [
+        "/des-science/y6-ppd-public/archive/refs/heads/main.zip",
+        "https://github.githubassets.com/assets/0dc-53ca0efddcf3617a.js",
+        "https://github.githubassets.com/assets/1di-3e3397f36ab39c00.js",
+        "https://github.githubassets.com/assets/1pd-7d88f0795e085a74.js",
+        "https://github.githubassets.com/assets/25-89f02e9b5b057a43.js",
+        "https://github.githubassets.com/assets/252-a33f44cc65c05eb8.js",
+        "https://github.githubassets.com/assets/36-236a337660d0e713.js",
+        "https://github.githubassets.com/assets/360-fd75fa985cb61e08.js",
+        "https://github.githubassets.com/assets/4m-5cfe796006256af3.js",
+        "https://github.githubassets.com/assets/4u-239741f82c1b95c5.js",
+        "https://github.githubassets.com/assets/55-9be65a88178b9710.js",
+        "https://github.githubassets.com/assets/5q-2ec8e4655c3be1bf.js",
+        "https://github.githubassets.com/assets/6l-9d12928593f38dde.js",
+        "https://github.githubassets.com/assets/77-e8c0198d1df0365a.js",
+        "https://github.githubassets.com/assets/7a-d1fd9a01b6c9a370.js",
+        "https://github.githubassets.com/assets/7ra-4ee91a7f5d62b528.js",
+        "https://github.githubassets.com/assets/8hw-7f01c5150f8cde1f.js",
+        "https://github.githubassets.com/assets/9rm-f0a582977a2a3d8f.js",
+        "https://github.githubassets.com/assets/9zy-e78f10d7ecbef4b6.js",
+        "https://github.githubassets.com/assets/aeu-36c2d0739f5acaba.js",
+        "https://github.githubassets.com/assets/app-install-banner-partial-2c782dd7d0768ea2.js",
+        "https://github.githubassets.com/assets/app-runtime-2064adc7ee9f25d8.js",
+        "https://github.githubassets.com/assets/bl-34ffd2566ebc5a99.js",
+        "https://github.githubassets.com/assets/btj-94ef665a646d9f2e.js",
+        "https://github.githubassets.com/assets/bv-745ce3e21fd0c584.js",
+        "https://github.githubassets.com/assets/code-menu-6943bba4d96d85e3.js",
+        "https://github.githubassets.com/assets/code-view-bb3f3de7f54a967d.js",
+        "https://github.githubassets.com/assets/codespaces-cadad963ab042602.js",
+        "https://github.githubassets.com/assets/core-d93a40ee622b96ca.js",
+        "https://github.githubassets.com/assets/cso-e746c5a0b9e9860a.js"
+      ],
+      "HTML_SHA256_prefix": "63f710b8ec8b34fe",
+      "HTML_bytes_inspected": 157722,
+      "HTTP_status": 200,
+      "contains_unblinded_FITS_filename": false,
+      "content_type": "text/html; charset=utf-8",
+      "final_url": "https://github.com/des-science/y6-ppd-public",
+      "is_Polymer_or_JS_shell": true,
+      "is_actual_verified_data_vector": false
+    },
+    "DES_Y6_release": {
+      "Content_Length_header": "998",
+      "FITS_or_script_href_candidates": [
+        "/static/bower_components/webcomponentsjs/webcomponents-loader.js"
+      ],
+      "HTML_SHA256_prefix": "bc5f5ba77968ad38",
+      "HTML_bytes_inspected": 998,
+      "HTTP_status": 200,
+      "contains_unblinded_FITS_filename": false,
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://des.ncsa.illinois.edu/releases/y6a2/",
+      "is_Polymer_or_JS_shell": true,
+      "is_actual_verified_data_vector": false
+    }
+  },
+  "public_provenance_notes": "The Dark Energy Survey Y6 paper page links releases/y6a2/ and says some Y6 cosmology products released, more coming. The Y6 public PPD README explicitly requires a 2pt FITS for data-vector element order and scale-cut files; the public software repo is not itself that FITS.",
+  "record_date": "2026-11-09",
+  "same_data_nuisance_refits_completed": false,
+  "status": "S9_UNSCORED_DV_COV_PROVENANCE_GATED"
+}
