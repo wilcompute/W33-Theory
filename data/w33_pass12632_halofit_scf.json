@@ -308,6 +308,21 @@
     "KLT": -0.8253716222379666
    },
    "cpl_raw_unchanged": true
+  },
+  "shear_ppd_desy5.json": {
+   "patched": {
+    "CPL": -0.6223293544268387,
+    "LCDM": 0.0,
+    "free_neg": -0.7374122809580399,
+    "free_pos": -0.2700537976199797
+   },
+   "original": {
+    "LCDM": 0.0,
+    "free_neg": -0.42450600664335525,
+    "free_pos": 0.12288040705928438,
+    "CPL": -2.0523735052206575
+   },
+   "cpl_raw_unchanged": true
   }
  },
  "checks": {

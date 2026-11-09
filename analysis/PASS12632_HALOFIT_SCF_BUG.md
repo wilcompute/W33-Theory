@@ -174,3 +174,5 @@ Held-out shear with the patched builds (`shear_ppd.json`, `shear_ppd_kids_doveki
 - **Fading and CPL end up tied** (a gap of 0.4, below the method spread), and both keep a clear out-of-sample gain over ΛCDM of about 4.
 - KLT is behind, mainly on held-out BAO.
 - The earlier "shear erases CPL's advantage" result was entirely the bug.
+
+**DES-SN5YR training** (`shear_ppd_desy5.json`). Held-out DES shear relative to ΛCDM: fading c < 0 −0.74, c > 0 −0.27, CPL −0.62. The original build gave −0.42, +0.12 and −2.05. With the expansion terms (+7.18 and +9.46), the DES-SN5YR totals are **fading +6.44, CPL +8.84**. Here CPL leads, as it already did on expansion data alone. Across both compilations the leader follows the supernova sample, not the shear.
