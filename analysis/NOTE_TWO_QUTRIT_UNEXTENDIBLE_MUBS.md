@@ -40,7 +40,7 @@ These 3 × 45 = 135 sets are all the size-8 sets.
 - The size-5 sets appear to be **strongly unextendible MUB sets of 5 bases in dimension 9**.
 - Szántó (arXiv:1502.05245) constructs strongly unextendible sets in dimension p², p ≡ 3 (mod 4), which for p = 3 have 8 bases. Our size-8 result agrees with that.
 - I did not find a 5-basis strongly unextendible set in dimension 9 in the literature I could reach.
-- *This is numerical global optimisation, not a proof.* An exact certificate, such as an algebraic infeasibility proof, is the next step.
+- **Certified (Pass 12638).** F is a Hermitian (2,2)-form whose representing operator on Sym²(C⁹) is unique. Its smallest eigenvalue gives F(v) ≥ |v|⁴/9 for every size-5 set and F(v) ≥ 4|v|⁴/9 for every size-8 set (tight in the size-8 case). So strong unextendibility holds, up to a floating-point margin of 4×10⁻⁹; a fully exact recomputation over Q(ω) is the remaining formality. The same bound proves the two-qubit size-3 sets strongly unextendible (min = 1/4) but fails for the three-qubit size-5 sets.
 
 **4. Symmetry and chirality.**
 - The 432 size-5 sets form one orbit under the extended Clifford group PGSp(4,3) and two orbits of 216 under PSp(4,3). The extended group adds the antiunitary coset.
