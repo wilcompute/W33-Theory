@@ -1,0 +1,12080 @@
+{
+  "projective_root_chambers": 25920,
+  "projective_yoshida_sign_regions": 432,
+  "root_chambers_per_region": 60,
+  "determinant_parity_counts": {
+    "0": 216,
+    "1": 216
+  },
+  "root_labels": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      -2
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      2
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      -2,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      -2
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      2
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      2,
+      -2,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      -2,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      -2
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      2
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      2,
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      2,
+      -2,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      2,
+      0,
+      -2,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      -2,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      -2
+    ],
+    [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      2
+    ],
+    [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      2,
+      0,
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      2,
+      2,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1
+    ],
+    [
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      1
+    ],
+    [
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    [
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      1
+    ],
+    [
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1
+    ],
+    [
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      -1
+    ],
+    [
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1
+    ],
+    [
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      -1
+    ],
+    [
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      -1
+    ],
+    [
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      1
+    ],
+    [
+      1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      1
+    ],
+    [
+      1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1
+    ]
+  ],
+  "yoshida_row_labels": [
+    [
+      [
+        0,
+        2,
+        3
+      ],
+      [
+        12,
+        27,
+        31
+      ],
+      [
+        19,
+        20,
+        32
+      ]
+    ],
+    [
+      [
+        0,
+        4,
+        5
+      ],
+      [
+        12,
+        26,
+        30
+      ],
+      [
+        19,
+        21,
+        33
+      ]
+    ],
+    [
+      [
+        0,
+        7,
+        8
+      ],
+      [
+        13,
+        27,
+        33
+      ],
+      [
+        18,
+        20,
+        30
+      ]
+    ],
+    [
+      [
+        0,
+        9,
+        10
+      ],
+      [
+        13,
+        26,
+        32
+      ],
+      [
+        18,
+        21,
+        31
+      ]
+    ],
+    [
+      [
+        0,
+        14,
+        15
+      ],
+      [
+        6,
+        31,
+        33
+      ],
+      [
+        11,
+        20,
+        26
+      ]
+    ],
+    [
+      [
+        0,
+        16,
+        17
+      ],
+      [
+        6,
+        30,
+        32
+      ],
+      [
+        11,
+        21,
+        27
+      ]
+    ],
+    [
+      [
+        0,
+        22,
+        23
+      ],
+      [
+        1,
+        32,
+        33
+      ],
+      [
+        11,
+        12,
+        18
+      ]
+    ],
+    [
+      [
+        0,
+        24,
+        25
+      ],
+      [
+        1,
+        30,
+        31
+      ],
+      [
+        11,
+        13,
+        19
+      ]
+    ],
+    [
+      [
+        0,
+        28,
+        29
+      ],
+      [
+        1,
+        26,
+        27
+      ],
+      [
+        6,
+        18,
+        19
+      ]
+    ],
+    [
+      [
+        0,
+        34,
+        35
+      ],
+      [
+        1,
+        20,
+        21
+      ],
+      [
+        6,
+        12,
+        13
+      ]
+    ],
+    [
+      [
+        1,
+        2,
+        4
+      ],
+      [
+        12,
+        24,
+        28
+      ],
+      [
+        19,
+        23,
+        35
+      ]
+    ],
+    [
+      [
+        1,
+        3,
+        5
+      ],
+      [
+        12,
+        25,
+        29
+      ],
+      [
+        19,
+        22,
+        34
+      ]
+    ],
+    [
+      [
+        1,
+        7,
+        9
+      ],
+      [
+        13,
+        22,
+        28
+      ],
+      [
+        18,
+        25,
+        35
+      ]
+    ],
+    [
+      [
+        1,
+        8,
+        10
+      ],
+      [
+        13,
+        23,
+        29
+      ],
+      [
+        18,
+        24,
+        34
+      ]
+    ],
+    [
+      [
+        1,
+        14,
+        16
+      ],
+      [
+        6,
+        22,
+        24
+      ],
+      [
+        11,
+        29,
+        35
+      ]
+    ],
+    [
+      [
+        1,
+        15,
+        17
+      ],
+      [
+        6,
+        23,
+        25
+      ],
+      [
+        11,
+        28,
+        34
+      ]
+    ],
+    [
+      [
+        2,
+        6,
+        7
+      ],
+      [
+        15,
+        27,
+        35
+      ],
+      [
+        16,
+        20,
+        28
+      ]
+    ],
+    [
+      [
+        2,
+        10,
+        11
+      ],
+      [
+        15,
+        24,
+        32
+      ],
+      [
+        16,
+        23,
+        31
+      ]
+    ],
+    [
+      [
+        2,
+        13,
+        14
+      ],
+      [
+        8,
+        31,
+        35
+      ],
+      [
+        9,
+        20,
+        24
+      ]
+    ],
+    [
+      [
+        2,
+        17,
+        18
+      ],
+      [
+        8,
+        28,
+        32
+      ],
+      [
+        9,
+        23,
+        27
+      ]
+    ],
+    [
+      [
+        2,
+        21,
+        22
+      ],
+      [
+        5,
+        32,
+        35
+      ],
+      [
+        9,
+        12,
+        16
+      ]
+    ],
+    [
+      [
+        2,
+        25,
+        26
+      ],
+      [
+        5,
+        28,
+        31
+      ],
+      [
+        9,
+        15,
+        19
+      ]
+    ],
+    [
+      [
+        2,
+        29,
+        30
+      ],
+      [
+        5,
+        24,
+        27
+      ],
+      [
+        8,
+        16,
+        19
+      ]
+    ],
+    [
+      [
+        2,
+        33,
+        34
+      ],
+      [
+        5,
+        20,
+        23
+      ],
+      [
+        8,
+        12,
+        15
+      ]
+    ],
+    [
+      [
+        3,
+        6,
+        8
+      ],
+      [
+        14,
+        27,
+        34
+      ],
+      [
+        17,
+        20,
+        29
+      ]
+    ],
+    [
+      [
+        3,
+        9,
+        11
+      ],
+      [
+        14,
+        25,
+        32
+      ],
+      [
+        17,
+        22,
+        31
+      ]
+    ],
+    [
+      [
+        3,
+        13,
+        15
+      ],
+      [
+        7,
+        31,
+        34
+      ],
+      [
+        10,
+        20,
+        25
+      ]
+    ],
+    [
+      [
+        3,
+        16,
+        18
+      ],
+      [
+        7,
+        29,
+        32
+      ],
+      [
+        10,
+        22,
+        27
+      ]
+    ],
+    [
+      [
+        3,
+        21,
+        23
+      ],
+      [
+        4,
+        32,
+        34
+      ],
+      [
+        10,
+        12,
+        17
+      ]
+    ],
+    [
+      [
+        3,
+        24,
+        26
+      ],
+      [
+        4,
+        29,
+        31
+      ],
+      [
+        10,
+        14,
+        19
+      ]
+    ],
+    [
+      [
+        3,
+        28,
+        30
+      ],
+      [
+        4,
+        25,
+        27
+      ],
+      [
+        7,
+        17,
+        19
+      ]
+    ],
+    [
+      [
+        3,
+        33,
+        35
+      ],
+      [
+        4,
+        20,
+        22
+      ],
+      [
+        7,
+        12,
+        14
+      ]
+    ],
+    [
+      [
+        4,
+        6,
+        9
+      ],
+      [
+        14,
+        21,
+        28
+      ],
+      [
+        17,
+        26,
+        35
+      ]
+    ],
+    [
+      [
+        4,
+        8,
+        11
+      ],
+      [
+        14,
+        23,
+        30
+      ],
+      [
+        17,
+        24,
+        33
+      ]
+    ],
+    [
+      [
+        4,
+        13,
+        16
+      ],
+      [
+        7,
+        21,
+        24
+      ],
+      [
+        10,
+        30,
+        35
+      ]
+    ],
+    [
+      [
+        4,
+        15,
+        18
+      ],
+      [
+        7,
+        23,
+        26
+      ],
+      [
+        10,
+        28,
+        33
+      ]
+    ],
+    [
+      [
+        5,
+        6,
+        10
+      ],
+      [
+        15,
+        21,
+        29
+      ],
+      [
+        16,
+        26,
+        34
+      ]
+    ],
+    [
+      [
+        5,
+        7,
+        11
+      ],
+      [
+        15,
+        22,
+        30
+      ],
+      [
+        16,
+        25,
+        33
+      ]
+    ],
+    [
+      [
+        5,
+        13,
+        17
+      ],
+      [
+        8,
+        21,
+        25
+      ],
+      [
+        9,
+        30,
+        34
+      ]
+    ],
+    [
+      [
+        5,
+        14,
+        18
+      ],
+      [
+        8,
+        22,
+        26
+      ],
+      [
+        9,
+        29,
+        33
+      ]
+    ]
+  ],
+  "regions": [
+    {
+      "projective_negative_mask": "0x0",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        1,
+        2,
+        6,
+        12,
+        19,
+        20,
+        27,
+        28,
+        35
+      ],
+      "type_b_cusp_facets": [
+        0,
+        8,
+        9,
+        10,
+        16
+      ]
+    },
+    {
+      "projective_negative_mask": "0x3ff",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        1,
+        3,
+        6,
+        12,
+        19,
+        20,
+        27,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        0,
+        8,
+        9,
+        11,
+        24
+      ]
+    },
+    {
+      "projective_negative_mask": "0xfc3f",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        1,
+        5,
+        6,
+        12,
+        19,
+        21,
+        26,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        1,
+        8,
+        9,
+        11,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0xffc0",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        1,
+        4,
+        6,
+        12,
+        19,
+        21,
+        26,
+        28,
+        35
+      ],
+      "type_b_cusp_facets": [
+        1,
+        8,
+        9,
+        10,
+        32
+      ]
+    },
+    {
+      "projective_negative_mask": "0xff0401",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        3,
+        4,
+        7,
+        12,
+        19,
+        20,
+        27,
+        28,
+        35
+      ],
+      "type_b_cusp_facets": [
+        0,
+        10,
+        16,
+        30,
+        31
+      ]
+    },
+    {
+      "projective_negative_mask": "0xf0f0c3f",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        2,
+        5,
+        9,
+        12,
+        19,
+        21,
+        26,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        0,
+        1,
+        3,
+        20,
+        21
+      ]
+    },
+    {
+      "projective_negative_mask": "0xf0f0fc0",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        3,
+        4,
+        10,
+        12,
+        19,
+        21,
+        26,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        0,
+        1,
+        3,
+        28,
+        29
+      ]
+    },
+    {
+      "projective_negative_mask": "0xff0083e",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        3,
+        5,
+        9,
+        12,
+        19,
+        22,
+        25,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        0,
+        11,
+        20,
+        21,
+        25
+      ]
+    },
+    {
+      "projective_negative_mask": "0x15150c56",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        2,
+        9,
+        12,
+        13,
+        20,
+        21,
+        31,
+        32,
+        35
+      ],
+      "type_b_cusp_facets": [
+        0,
+        3,
+        9,
+        18,
+        20
+      ]
+    },
+    {
+      "projective_negative_mask": "0x15150fa9",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        3,
+        10,
+        12,
+        13,
+        20,
+        21,
+        31,
+        32,
+        34
+      ],
+      "type_b_cusp_facets": [
+        0,
+        3,
+        9,
+        26,
+        28
+      ]
+    },
+    {
+      "projective_negative_mask": "0x15ea0857",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        3,
+        9,
+        12,
+        14,
+        20,
+        22,
+        31,
+        32,
+        35
+      ],
+      "type_b_cusp_facets": [
+        0,
+        18,
+        20,
+        25,
+        31
+      ]
+    },
+    {
+      "projective_negative_mask": "0x29290ca6",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        2,
+        9,
+        18,
+        19,
+        26,
+        27,
+        28,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        0,
+        3,
+        8,
+        19,
+        21
+      ]
+    },
+    {
+      "projective_negative_mask": "0x29290f59",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        3,
+        10,
+        18,
+        19,
+        26,
+        27,
+        29,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        0,
+        3,
+        8,
+        27,
+        29
+      ]
+    },
+    {
+      "projective_negative_mask": "0x29d608a7",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        3,
+        9,
+        17,
+        19,
+        25,
+        27,
+        28,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        0,
+        19,
+        21,
+        25,
+        30
+      ]
+    },
+    {
+      "projective_negative_mask": "0x33330ccf",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        2,
+        8,
+        9,
+        13,
+        18,
+        20,
+        27,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        0,
+        2,
+        3,
+        18,
+        19
+      ]
+    },
+    {
+      "projective_negative_mask": "0x33330f30",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        3,
+        7,
+        10,
+        13,
+        18,
+        20,
+        27,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        0,
+        2,
+        3,
+        26,
+        27
+      ]
+    },
+    {
+      "projective_negative_mask": "0x33cc08ce",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        3,
+        8,
+        9,
+        14,
+        17,
+        20,
+        27,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        0,
+        18,
+        19,
+        24,
+        25
+      ]
+    },
+    {
+      "projective_negative_mask": "0x49490125",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        2,
+        6,
+        15,
+        19,
+        20,
+        26,
+        27,
+        28,
+        31
+      ],
+      "type_b_cusp_facets": [
+        0,
+        4,
+        8,
+        16,
+        21
+      ]
+    },
+    {
+      "projective_negative_mask": "0x494902da",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        3,
+        6,
+        14,
+        19,
+        20,
+        26,
+        27,
+        29,
+        31
+      ],
+      "type_b_cusp_facets": [
+        0,
+        4,
+        8,
+        24,
+        29
+      ]
+    },
+    {
+      "projective_negative_mask": "0x49b60524",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        3,
+        7,
+        15,
+        19,
+        20,
+        25,
+        27,
+        28,
+        31
+      ],
+      "type_b_cusp_facets": [
+        0,
+        16,
+        21,
+        26,
+        30
+      ]
+    },
+    {
+      "projective_negative_mask": "0x60600d83",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        1,
+        2,
+        12,
+        18,
+        19,
+        23,
+        27,
+        28,
+        32
+      ],
+      "type_b_cusp_facets": [
+        0,
+        6,
+        8,
+        10,
+        19
+      ]
+    },
+    {
+      "projective_negative_mask": "0x60600e7c",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        1,
+        3,
+        12,
+        18,
+        19,
+        22,
+        27,
+        29,
+        32
+      ],
+      "type_b_cusp_facets": [
+        0,
+        6,
+        8,
+        11,
+        27
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6060f1bc",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        1,
+        5,
+        12,
+        18,
+        19,
+        22,
+        26,
+        29,
+        33
+      ],
+      "type_b_cusp_facets": [
+        1,
+        6,
+        8,
+        11,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6060f243",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        1,
+        4,
+        12,
+        18,
+        19,
+        23,
+        26,
+        28,
+        33
+      ],
+      "type_b_cusp_facets": [
+        1,
+        6,
+        8,
+        10,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x609f0982",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        3,
+        4,
+        12,
+        17,
+        19,
+        23,
+        27,
+        28,
+        32
+      ],
+      "type_b_cusp_facets": [
+        0,
+        10,
+        19,
+        28,
+        30
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6f6f01bc",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        2,
+        5,
+        12,
+        15,
+        19,
+        20,
+        26,
+        31,
+        33
+      ],
+      "type_b_cusp_facets": [
+        0,
+        1,
+        4,
+        21,
+        23
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6f6f0243",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        3,
+        4,
+        12,
+        14,
+        19,
+        20,
+        26,
+        31,
+        33
+      ],
+      "type_b_cusp_facets": [
+        0,
+        1,
+        4,
+        29,
+        31
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6f9005bd",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        3,
+        5,
+        12,
+        15,
+        19,
+        20,
+        25,
+        31,
+        34
+      ],
+      "type_b_cusp_facets": [
+        0,
+        11,
+        21,
+        23,
+        26
+      ]
+    },
+    {
+      "projective_negative_mask": "0x7a7a0dea",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        2,
+        8,
+        12,
+        18,
+        20,
+        23,
+        27,
+        32,
+        33
+      ],
+      "type_b_cusp_facets": [
+        0,
+        2,
+        6,
+        19,
+        23
+      ]
+    },
+    {
+      "projective_negative_mask": "0x7a7a0e15",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        3,
+        7,
+        12,
+        18,
+        20,
+        22,
+        27,
+        32,
+        33
+      ],
+      "type_b_cusp_facets": [
+        0,
+        2,
+        6,
+        27,
+        31
+      ]
+    },
+    {
+      "projective_negative_mask": "0x7a8509eb",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        3,
+        8,
+        12,
+        17,
+        20,
+        23,
+        27,
+        32,
+        34
+      ],
+      "type_b_cusp_facets": [
+        0,
+        19,
+        23,
+        24,
+        28
+      ]
+    },
+    {
+      "projective_negative_mask": "0x857a0614",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        3,
+        7,
+        12,
+        16,
+        20,
+        22,
+        27,
+        32,
+        35
+      ],
+      "type_b_cusp_facets": [
+        0,
+        16,
+        20,
+        27,
+        31
+      ]
+    },
+    {
+      "projective_negative_mask": "0x858501ea",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        3,
+        6,
+        12,
+        17,
+        20,
+        21,
+        27,
+        32,
+        34
+      ],
+      "type_b_cusp_facets": [
+        0,
+        5,
+        9,
+        24,
+        28
+      ]
+    },
+    {
+      "projective_negative_mask": "0x85850215",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        2,
+        6,
+        12,
+        16,
+        20,
+        21,
+        27,
+        32,
+        35
+      ],
+      "type_b_cusp_facets": [
+        0,
+        5,
+        9,
+        16,
+        20
+      ]
+    },
+    {
+      "projective_negative_mask": "0x906f0a42",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        3,
+        4,
+        12,
+        14,
+        19,
+        20,
+        24,
+        31,
+        35
+      ],
+      "type_b_cusp_facets": [
+        0,
+        10,
+        18,
+        29,
+        31
+      ]
+    },
+    {
+      "projective_negative_mask": "0x90900dbc",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        1,
+        3,
+        12,
+        13,
+        19,
+        20,
+        25,
+        31,
+        34
+      ],
+      "type_b_cusp_facets": [
+        0,
+        7,
+        9,
+        11,
+        26
+      ]
+    },
+    {
+      "projective_negative_mask": "0x90900e43",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        1,
+        2,
+        12,
+        13,
+        19,
+        20,
+        24,
+        31,
+        35
+      ],
+      "type_b_cusp_facets": [
+        0,
+        7,
+        9,
+        10,
+        18
+      ]
+    },
+    {
+      "projective_negative_mask": "0x9090f183",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        1,
+        4,
+        12,
+        13,
+        19,
+        21,
+        24,
+        30,
+        35
+      ],
+      "type_b_cusp_facets": [
+        1,
+        7,
+        9,
+        10,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x9090f27c",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        1,
+        5,
+        12,
+        13,
+        19,
+        21,
+        25,
+        30,
+        34
+      ],
+      "type_b_cusp_facets": [
+        1,
+        7,
+        9,
+        11,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x9f60067d",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        3,
+        5,
+        12,
+        16,
+        19,
+        22,
+        27,
+        29,
+        32
+      ],
+      "type_b_cusp_facets": [
+        0,
+        11,
+        20,
+        22,
+        27
+      ]
+    },
+    {
+      "projective_negative_mask": "0x9f9f0183",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        3,
+        4,
+        12,
+        17,
+        19,
+        21,
+        27,
+        30,
+        32
+      ],
+      "type_b_cusp_facets": [
+        0,
+        1,
+        5,
+        28,
+        30
+      ]
+    },
+    {
+      "projective_negative_mask": "0x9f9f027c",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        2,
+        5,
+        12,
+        16,
+        19,
+        21,
+        27,
+        30,
+        32
+      ],
+      "type_b_cusp_facets": [
+        0,
+        1,
+        5,
+        20,
+        22
+      ]
+    },
+    {
+      "projective_negative_mask": "0xb6490adb",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        3,
+        8,
+        14,
+        19,
+        20,
+        24,
+        27,
+        29,
+        31
+      ],
+      "type_b_cusp_facets": [
+        0,
+        18,
+        22,
+        24,
+        29
+      ]
+    },
+    {
+      "projective_negative_mask": "0xb6b60d25",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        3,
+        7,
+        13,
+        19,
+        20,
+        25,
+        27,
+        30,
+        31
+      ],
+      "type_b_cusp_facets": [
+        0,
+        2,
+        7,
+        26,
+        30
+      ]
+    },
+    {
+      "projective_negative_mask": "0xb6b60eda",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        2,
+        8,
+        13,
+        19,
+        20,
+        24,
+        27,
+        30,
+        31
+      ],
+      "type_b_cusp_facets": [
+        0,
+        2,
+        7,
+        18,
+        22
+      ]
+    },
+    {
+      "projective_negative_mask": "0xcc330731",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        3,
+        7,
+        10,
+        15,
+        16,
+        20,
+        27,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        0,
+        16,
+        17,
+        26,
+        27
+      ]
+    },
+    {
+      "projective_negative_mask": "0xcccc00cf",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        3,
+        6,
+        11,
+        14,
+        17,
+        20,
+        27,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        0,
+        4,
+        5,
+        24,
+        25
+      ]
+    },
+    {
+      "projective_negative_mask": "0xcccc0330",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        2,
+        6,
+        11,
+        15,
+        16,
+        20,
+        27,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        0,
+        4,
+        5,
+        16,
+        17
+      ]
+    },
+    {
+      "projective_negative_mask": "0xd6290758",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        3,
+        10,
+        16,
+        19,
+        24,
+        27,
+        29,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        0,
+        17,
+        22,
+        27,
+        29
+      ]
+    },
+    {
+      "projective_negative_mask": "0xd6d600a6",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        3,
+        11,
+        17,
+        19,
+        25,
+        27,
+        30,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        0,
+        5,
+        7,
+        25,
+        30
+      ]
+    },
+    {
+      "projective_negative_mask": "0xd6d60359",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        2,
+        11,
+        16,
+        19,
+        24,
+        27,
+        30,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        0,
+        5,
+        7,
+        17,
+        22
+      ]
+    },
+    {
+      "projective_negative_mask": "0xea1507a8",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        3,
+        10,
+        12,
+        15,
+        20,
+        23,
+        31,
+        32,
+        34
+      ],
+      "type_b_cusp_facets": [
+        0,
+        17,
+        23,
+        26,
+        28
+      ]
+    },
+    {
+      "projective_negative_mask": "0xeaea0056",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        3,
+        11,
+        12,
+        14,
+        20,
+        22,
+        31,
+        32,
+        33
+      ],
+      "type_b_cusp_facets": [
+        0,
+        4,
+        6,
+        25,
+        31
+      ]
+    },
+    {
+      "projective_negative_mask": "0xeaea03a9",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        2,
+        11,
+        12,
+        15,
+        20,
+        23,
+        31,
+        32,
+        33
+      ],
+      "type_b_cusp_facets": [
+        0,
+        4,
+        6,
+        17,
+        23
+      ]
+    },
+    {
+      "projective_negative_mask": "0xf00f07c1",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        3,
+        4,
+        10,
+        12,
+        19,
+        23,
+        24,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        0,
+        10,
+        17,
+        28,
+        29
+      ]
+    },
+    {
+      "projective_negative_mask": "0xf0f0003f",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        1,
+        3,
+        11,
+        12,
+        19,
+        22,
+        25,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        0,
+        6,
+        7,
+        11,
+        25
+      ]
+    },
+    {
+      "projective_negative_mask": "0xf0f003c0",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        1,
+        2,
+        11,
+        12,
+        19,
+        23,
+        24,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        0,
+        6,
+        7,
+        10,
+        17
+      ]
+    },
+    {
+      "projective_negative_mask": "0xf0f0fc00",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        1,
+        4,
+        11,
+        12,
+        19,
+        23,
+        24,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        1,
+        6,
+        7,
+        10,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0xf0f0ffff",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        1,
+        5,
+        11,
+        12,
+        19,
+        22,
+        25,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        1,
+        6,
+        7,
+        11,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0xff000bfe",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        3,
+        5,
+        8,
+        12,
+        19,
+        20,
+        27,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        0,
+        11,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "projective_negative_mask": "0xffff0c00",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        3,
+        4,
+        7,
+        12,
+        19,
+        20,
+        27,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        0,
+        1,
+        2,
+        30,
+        31
+      ]
+    },
+    {
+      "projective_negative_mask": "0xffff0fff",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        2,
+        5,
+        8,
+        12,
+        19,
+        20,
+        27,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        0,
+        1,
+        2,
+        22,
+        23
+      ]
+    },
+    {
+      "projective_negative_mask": "0x1c1fcd8f6",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        5,
+        8,
+        9,
+        11,
+        14,
+        17,
+        22,
+        25,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        25,
+        33,
+        37,
+        38,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x2c20ce8fa",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        5,
+        6,
+        8,
+        9,
+        14,
+        17,
+        21,
+        26,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        24,
+        32,
+        36,
+        38,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x3303c38c2",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        4,
+        8,
+        9,
+        14,
+        17,
+        23,
+        24,
+        28,
+        35
+      ],
+      "type_b_cusp_facets": [
+        10,
+        18,
+        19,
+        32,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0x330c33cc3",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        2,
+        8,
+        9,
+        13,
+        18,
+        23,
+        24,
+        28,
+        35
+      ],
+      "type_b_cusp_facets": [
+        10,
+        12,
+        13,
+        18,
+        19
+      ]
+    },
+    {
+      "projective_negative_mask": "0x330c3c303",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        4,
+        7,
+        10,
+        13,
+        18,
+        23,
+        24,
+        28,
+        35
+      ],
+      "type_b_cusp_facets": [
+        10,
+        12,
+        13,
+        34,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x43463771d",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        5,
+        7,
+        10,
+        15,
+        16,
+        18,
+        22,
+        26,
+        29,
+        33
+      ],
+      "type_b_cusp_facets": [
+        27,
+        35,
+        36,
+        37,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x5056f5014",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        5,
+        7,
+        12,
+        15,
+        16,
+        20,
+        22,
+        33,
+        35
+      ],
+      "type_b_cusp_facets": [
+        16,
+        20,
+        23,
+        31,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x505905415",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        5,
+        6,
+        12,
+        15,
+        16,
+        20,
+        21,
+        34,
+        35
+      ],
+      "type_b_cusp_facets": [
+        9,
+        16,
+        20,
+        23,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x5107a5c42",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        4,
+        8,
+        12,
+        14,
+        20,
+        23,
+        24,
+        33,
+        35
+      ],
+      "type_b_cusp_facets": [
+        10,
+        18,
+        23,
+        31,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0x510855843",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        2,
+        8,
+        12,
+        13,
+        20,
+        23,
+        24,
+        34,
+        35
+      ],
+      "type_b_cusp_facets": [
+        9,
+        10,
+        13,
+        18,
+        23
+      ]
+    },
+    {
+      "projective_negative_mask": "0x51085a783",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        4,
+        10,
+        12,
+        13,
+        21,
+        23,
+        24,
+        34,
+        35
+      ],
+      "type_b_cusp_facets": [
+        9,
+        10,
+        13,
+        28,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x580155600",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        2,
+        6,
+        12,
+        15,
+        20,
+        23,
+        28,
+        34,
+        35
+      ],
+      "type_b_cusp_facets": [
+        9,
+        10,
+        15,
+        16,
+        23
+      ]
+    },
+    {
+      "projective_negative_mask": "0x58015a9c0",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        4,
+        6,
+        12,
+        17,
+        21,
+        23,
+        28,
+        34,
+        35
+      ],
+      "type_b_cusp_facets": [
+        9,
+        10,
+        15,
+        28,
+        32
+      ]
+    },
+    {
+      "projective_negative_mask": "0x580ea5201",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        4,
+        7,
+        12,
+        15,
+        20,
+        23,
+        28,
+        33,
+        35
+      ],
+      "type_b_cusp_facets": [
+        10,
+        16,
+        23,
+        31,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x595005a56",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        5,
+        8,
+        9,
+        12,
+        13,
+        20,
+        21,
+        34,
+        35
+      ],
+      "type_b_cusp_facets": [
+        9,
+        18,
+        20,
+        23,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x595ff5e57",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        5,
+        8,
+        9,
+        12,
+        14,
+        20,
+        22,
+        33,
+        35
+      ],
+      "type_b_cusp_facets": [
+        18,
+        20,
+        23,
+        31,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6960f6e5b",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        5,
+        8,
+        9,
+        14,
+        19,
+        24,
+        26,
+        29,
+        31
+      ],
+      "type_b_cusp_facets": [
+        18,
+        21,
+        22,
+        29,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x696f06a5a",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        5,
+        8,
+        9,
+        13,
+        19,
+        24,
+        25,
+        30,
+        31
+      ],
+      "type_b_cusp_facets": [
+        7,
+        18,
+        21,
+        22,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6b0296ec2",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        4,
+        9,
+        14,
+        19,
+        24,
+        26,
+        28,
+        31,
+        35
+      ],
+      "type_b_cusp_facets": [
+        10,
+        18,
+        21,
+        29,
+        32
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6b0d66ac3",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        2,
+        9,
+        13,
+        19,
+        24,
+        25,
+        28,
+        31,
+        35
+      ],
+      "type_b_cusp_facets": [
+        7,
+        10,
+        12,
+        18,
+        21
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6b0d69503",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        4,
+        7,
+        13,
+        19,
+        24,
+        25,
+        28,
+        30,
+        35
+      ],
+      "type_b_cusp_facets": [
+        7,
+        10,
+        12,
+        30,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6d0496341",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        4,
+        10,
+        15,
+        19,
+        23,
+        24,
+        26,
+        28,
+        31
+      ],
+      "type_b_cusp_facets": [
+        10,
+        17,
+        21,
+        29,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6d0b66740",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        2,
+        11,
+        15,
+        19,
+        23,
+        24,
+        25,
+        28,
+        31
+      ],
+      "type_b_cusp_facets": [
+        7,
+        10,
+        15,
+        17,
+        21
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6d0b69880",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        4,
+        11,
+        17,
+        19,
+        23,
+        24,
+        25,
+        28,
+        30
+      ],
+      "type_b_cusp_facets": [
+        7,
+        10,
+        15,
+        30,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6f66f63d8",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        5,
+        10,
+        15,
+        16,
+        19,
+        24,
+        26,
+        29,
+        31
+      ],
+      "type_b_cusp_facets": [
+        17,
+        21,
+        22,
+        29,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6f69067d9",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        5,
+        11,
+        15,
+        16,
+        19,
+        24,
+        25,
+        30,
+        31
+      ],
+      "type_b_cusp_facets": [
+        7,
+        17,
+        21,
+        22,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x7c79c40d0",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        5,
+        6,
+        11,
+        15,
+        16,
+        17,
+        21,
+        25,
+        30,
+        34
+      ],
+      "type_b_cusp_facets": [
+        5,
+        15,
+        36,
+        37,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x83893b72d",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        5,
+        7,
+        10,
+        13,
+        15,
+        16,
+        21,
+        25,
+        30,
+        34
+      ],
+      "type_b_cusp_facets": [
+        26,
+        34,
+        36,
+        37,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x909609425",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        5,
+        6,
+        15,
+        16,
+        19,
+        26,
+        27,
+        28,
+        29
+      ],
+      "type_b_cusp_facets": [
+        8,
+        16,
+        21,
+        22,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x9099f9024",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        5,
+        7,
+        15,
+        16,
+        19,
+        25,
+        27,
+        28,
+        30
+      ],
+      "type_b_cusp_facets": [
+        16,
+        21,
+        22,
+        30,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x920496743",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        4,
+        10,
+        18,
+        19,
+        23,
+        24,
+        26,
+        28,
+        29
+      ],
+      "type_b_cusp_facets": [
+        8,
+        10,
+        13,
+        29,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x920499883",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        2,
+        8,
+        18,
+        19,
+        23,
+        24,
+        27,
+        28,
+        29
+      ],
+      "type_b_cusp_facets": [
+        8,
+        10,
+        13,
+        19,
+        22
+      ]
+    },
+    {
+      "projective_negative_mask": "0x920b69c82",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        4,
+        8,
+        17,
+        19,
+        23,
+        24,
+        27,
+        28,
+        30
+      ],
+      "type_b_cusp_facets": [
+        10,
+        19,
+        22,
+        30,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0x940296ac0",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        4,
+        6,
+        14,
+        19,
+        24,
+        26,
+        28,
+        29,
+        35
+      ],
+      "type_b_cusp_facets": [
+        8,
+        10,
+        14,
+        29,
+        32
+      ]
+    },
+    {
+      "projective_negative_mask": "0x940299500",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        2,
+        6,
+        16,
+        19,
+        24,
+        27,
+        28,
+        29,
+        35
+      ],
+      "type_b_cusp_facets": [
+        8,
+        10,
+        14,
+        16,
+        22
+      ]
+    },
+    {
+      "projective_negative_mask": "0x940d69101",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        4,
+        7,
+        16,
+        19,
+        24,
+        27,
+        28,
+        30,
+        35
+      ],
+      "type_b_cusp_facets": [
+        10,
+        16,
+        22,
+        30,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x9690099a6",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        5,
+        8,
+        9,
+        18,
+        19,
+        26,
+        27,
+        28,
+        29
+      ],
+      "type_b_cusp_facets": [
+        8,
+        19,
+        21,
+        22,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x969ff9da7",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        5,
+        8,
+        9,
+        17,
+        19,
+        25,
+        27,
+        28,
+        30
+      ],
+      "type_b_cusp_facets": [
+        19,
+        21,
+        22,
+        30,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0xa6a0fadab",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        5,
+        8,
+        9,
+        12,
+        17,
+        21,
+        23,
+        32,
+        34
+      ],
+      "type_b_cusp_facets": [
+        19,
+        20,
+        23,
+        28,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0xa6af0a9aa",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        5,
+        8,
+        9,
+        12,
+        18,
+        22,
+        23,
+        32,
+        33
+      ],
+      "type_b_cusp_facets": [
+        6,
+        19,
+        20,
+        23,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0xa7015adc2",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        4,
+        9,
+        12,
+        17,
+        21,
+        23,
+        28,
+        32,
+        35
+      ],
+      "type_b_cusp_facets": [
+        10,
+        19,
+        20,
+        28,
+        32
+      ]
+    },
+    {
+      "projective_negative_mask": "0xa70ea5603",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        4,
+        7,
+        12,
+        18,
+        22,
+        23,
+        28,
+        33,
+        35
+      ],
+      "type_b_cusp_facets": [
+        6,
+        10,
+        12,
+        31,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0xa70eaa9c3",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        2,
+        9,
+        12,
+        18,
+        22,
+        23,
+        28,
+        32,
+        35
+      ],
+      "type_b_cusp_facets": [
+        6,
+        10,
+        12,
+        19,
+        20
+      ]
+    },
+    {
+      "projective_negative_mask": "0xae07a5840",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        4,
+        11,
+        12,
+        14,
+        22,
+        23,
+        24,
+        33,
+        35
+      ],
+      "type_b_cusp_facets": [
+        6,
+        10,
+        14,
+        31,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0xae07aa780",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        2,
+        11,
+        12,
+        16,
+        22,
+        23,
+        24,
+        32,
+        35
+      ],
+      "type_b_cusp_facets": [
+        6,
+        10,
+        14,
+        17,
+        20
+      ]
+    },
+    {
+      "projective_negative_mask": "0xae085a381",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        4,
+        10,
+        12,
+        16,
+        21,
+        23,
+        24,
+        32,
+        35
+      ],
+      "type_b_cusp_facets": [
+        10,
+        17,
+        20,
+        28,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0xafa60a7e9",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        5,
+        11,
+        12,
+        15,
+        16,
+        22,
+        23,
+        32,
+        33
+      ],
+      "type_b_cusp_facets": [
+        6,
+        17,
+        20,
+        23,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0xafa9fa3e8",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        5,
+        10,
+        12,
+        15,
+        16,
+        21,
+        23,
+        32,
+        34
+      ],
+      "type_b_cusp_facets": [
+        17,
+        20,
+        23,
+        28,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0xbcb6c80e0",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        5,
+        6,
+        11,
+        14,
+        15,
+        16,
+        22,
+        26,
+        29,
+        33
+      ],
+      "type_b_cusp_facets": [
+        4,
+        14,
+        36,
+        37,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0xcc03c3cc0",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        4,
+        6,
+        11,
+        14,
+        17,
+        23,
+        24,
+        28,
+        35
+      ],
+      "type_b_cusp_facets": [
+        10,
+        14,
+        15,
+        32,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0xcc03cc300",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        2,
+        6,
+        11,
+        15,
+        16,
+        23,
+        24,
+        28,
+        35
+      ],
+      "type_b_cusp_facets": [
+        10,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "projective_negative_mask": "0xcc0c3c701",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        4,
+        7,
+        10,
+        15,
+        16,
+        23,
+        24,
+        28,
+        35
+      ],
+      "type_b_cusp_facets": [
+        10,
+        16,
+        17,
+        34,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0xd3d031f07",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        5,
+        8,
+        9,
+        10,
+        13,
+        18,
+        21,
+        26,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        3,
+        13,
+        36,
+        38,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0xe3ef32f0b",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        5,
+        7,
+        8,
+        9,
+        13,
+        18,
+        22,
+        25,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        2,
+        12,
+        37,
+        38,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0xf000f03c3",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        3,
+        4,
+        10,
+        12,
+        19,
+        23,
+        24,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        10,
+        11,
+        13,
+        28,
+        29
+      ]
+    },
+    {
+      "projective_negative_mask": "0xf000ffc03",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        2,
+        5,
+        8,
+        12,
+        19,
+        23,
+        24,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        10,
+        11,
+        13,
+        22,
+        23
+      ]
+    },
+    {
+      "projective_negative_mask": "0xf00f0f802",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        4,
+        5,
+        8,
+        12,
+        19,
+        23,
+        24,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        1,
+        10,
+        22,
+        23,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0xf0fff0802",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        4,
+        5,
+        7,
+        12,
+        19,
+        22,
+        25,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        1,
+        11,
+        30,
+        31,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0xf606f0e40",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        3,
+        4,
+        12,
+        14,
+        19,
+        22,
+        24,
+        29,
+        35
+      ],
+      "type_b_cusp_facets": [
+        10,
+        11,
+        14,
+        29,
+        31
+      ]
+    },
+    {
+      "projective_negative_mask": "0xf606ff180",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        2,
+        5,
+        12,
+        16,
+        19,
+        22,
+        24,
+        29,
+        35
+      ],
+      "type_b_cusp_facets": [
+        10,
+        11,
+        14,
+        20,
+        22
+      ]
+    },
+    {
+      "projective_negative_mask": "0xf6090f581",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        4,
+        5,
+        12,
+        16,
+        19,
+        21,
+        24,
+        30,
+        35
+      ],
+      "type_b_cusp_facets": [
+        1,
+        10,
+        20,
+        22,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0xf6f9f0581",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        4,
+        5,
+        12,
+        17,
+        19,
+        21,
+        25,
+        30,
+        34
+      ],
+      "type_b_cusp_facets": [
+        1,
+        11,
+        28,
+        30,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0xf9060f641",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        4,
+        5,
+        12,
+        15,
+        19,
+        23,
+        26,
+        28,
+        33
+      ],
+      "type_b_cusp_facets": [
+        1,
+        10,
+        21,
+        23,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0xf909f0d80",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        3,
+        4,
+        12,
+        17,
+        19,
+        23,
+        25,
+        28,
+        34
+      ],
+      "type_b_cusp_facets": [
+        10,
+        11,
+        15,
+        28,
+        30
+      ]
+    },
+    {
+      "projective_negative_mask": "0xf909ff240",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        2,
+        5,
+        12,
+        15,
+        19,
+        23,
+        25,
+        28,
+        34
+      ],
+      "type_b_cusp_facets": [
+        10,
+        11,
+        15,
+        21,
+        23
+      ]
+    },
+    {
+      "projective_negative_mask": "0xf9f6f0641",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        4,
+        5,
+        12,
+        14,
+        19,
+        22,
+        26,
+        29,
+        33
+      ],
+      "type_b_cusp_facets": [
+        1,
+        11,
+        29,
+        31,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0xff000fbc2",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        4,
+        5,
+        9,
+        12,
+        19,
+        21,
+        26,
+        28,
+        35
+      ],
+      "type_b_cusp_facets": [
+        1,
+        10,
+        20,
+        21,
+        32
+      ]
+    },
+    {
+      "projective_negative_mask": "0xff0ff0003",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        3,
+        4,
+        7,
+        12,
+        19,
+        22,
+        25,
+        28,
+        35
+      ],
+      "type_b_cusp_facets": [
+        10,
+        11,
+        12,
+        30,
+        31
+      ]
+    },
+    {
+      "projective_negative_mask": "0xff0ffffc3",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        2,
+        5,
+        9,
+        12,
+        19,
+        22,
+        25,
+        28,
+        35
+      ],
+      "type_b_cusp_facets": [
+        10,
+        11,
+        12,
+        20,
+        21
+      ]
+    },
+    {
+      "projective_negative_mask": "0xfff0f0bc2",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        4,
+        5,
+        10,
+        12,
+        19,
+        21,
+        26,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        1,
+        11,
+        28,
+        29,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x10fcc1e709",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        4,
+        7,
+        10,
+        11,
+        15,
+        16,
+        23,
+        24,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        17,
+        33,
+        34,
+        35,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x1101013cf0",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        1,
+        6,
+        9,
+        13,
+        18,
+        21,
+        26,
+        28,
+        35
+      ],
+      "type_b_cusp_facets": [
+        3,
+        8,
+        9,
+        12,
+        32
+      ]
+    },
+    {
+      "projective_negative_mask": "0x1101013f0f",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        1,
+        6,
+        10,
+        13,
+        18,
+        21,
+        26,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        3,
+        8,
+        9,
+        13,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x110101c0cf",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        1,
+        6,
+        8,
+        13,
+        18,
+        20,
+        27,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        2,
+        8,
+        9,
+        13,
+        24
+      ]
+    },
+    {
+      "projective_negative_mask": "0x110101c330",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        1,
+        6,
+        7,
+        13,
+        18,
+        20,
+        27,
+        28,
+        35
+      ],
+      "type_b_cusp_facets": [
+        2,
+        8,
+        9,
+        12,
+        16
+      ]
+    },
+    {
+      "projective_negative_mask": "0x114848c1ea",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        6,
+        8,
+        14,
+        18,
+        20,
+        26,
+        27,
+        29,
+        33
+      ],
+      "type_b_cusp_facets": [
+        2,
+        4,
+        8,
+        24,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x114848c215",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        6,
+        7,
+        15,
+        18,
+        20,
+        26,
+        27,
+        28,
+        33
+      ],
+      "type_b_cusp_facets": [
+        2,
+        4,
+        8,
+        16,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x118484c125",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        6,
+        7,
+        13,
+        16,
+        20,
+        21,
+        27,
+        30,
+        35
+      ],
+      "type_b_cusp_facets": [
+        2,
+        5,
+        9,
+        16,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x118484c2da",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        6,
+        8,
+        13,
+        17,
+        20,
+        21,
+        27,
+        30,
+        34
+      ],
+      "type_b_cusp_facets": [
+        2,
+        5,
+        9,
+        24,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x11cdcdc000",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        6,
+        7,
+        11,
+        15,
+        16,
+        20,
+        27,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        2,
+        4,
+        5,
+        16,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x11cdcdc3ff",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        6,
+        8,
+        11,
+        14,
+        17,
+        20,
+        27,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        2,
+        4,
+        5,
+        24,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0x133c0d23cb",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        4,
+        8,
+        10,
+        14,
+        17,
+        23,
+        24,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        13,
+        24,
+        28,
+        29,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0x13c30d2bca",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        4,
+        6,
+        10,
+        14,
+        17,
+        21,
+        26,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        24,
+        28,
+        29,
+        32,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x1404919725",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        6,
+        7,
+        10,
+        13,
+        15,
+        16,
+        20,
+        21,
+        34,
+        35
+      ],
+      "type_b_cusp_facets": [
+        9,
+        16,
+        26,
+        34,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x1481146af0",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        6,
+        9,
+        13,
+        17,
+        21,
+        25,
+        28,
+        34,
+        35
+      ],
+      "type_b_cusp_facets": [
+        9,
+        12,
+        15,
+        32,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x1481149530",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        6,
+        7,
+        13,
+        15,
+        20,
+        25,
+        28,
+        34,
+        35
+      ],
+      "type_b_cusp_facets": [
+        9,
+        12,
+        15,
+        16,
+        26
+      ]
+    },
+    {
+      "projective_negative_mask": "0x151c4b474b",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        4,
+        8,
+        10,
+        14,
+        18,
+        23,
+        24,
+        26,
+        29,
+        33
+      ],
+      "type_b_cusp_facets": [
+        13,
+        29,
+        33,
+        35,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x16c69d83e0",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        6,
+        10,
+        11,
+        15,
+        16,
+        17,
+        21,
+        23,
+        32,
+        34
+      ],
+      "type_b_cusp_facets": [
+        5,
+        15,
+        17,
+        28,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x16dc878389",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        4,
+        10,
+        11,
+        16,
+        17,
+        21,
+        23,
+        24,
+        30,
+        32
+      ],
+      "type_b_cusp_facets": [
+        5,
+        17,
+        28,
+        33,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x1808615715",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        6,
+        7,
+        10,
+        15,
+        16,
+        18,
+        26,
+        27,
+        28,
+        29
+      ],
+      "type_b_cusp_facets": [
+        8,
+        16,
+        27,
+        35,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x1841285630",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        6,
+        7,
+        16,
+        18,
+        22,
+        27,
+        28,
+        29,
+        35
+      ],
+      "type_b_cusp_facets": [
+        8,
+        12,
+        14,
+        16,
+        27
+      ]
+    },
+    {
+      "projective_negative_mask": "0x184128a9f0",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        6,
+        9,
+        14,
+        18,
+        22,
+        26,
+        28,
+        29,
+        35
+      ],
+      "type_b_cusp_facets": [
+        8,
+        12,
+        14,
+        32,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x192c87878b",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        4,
+        8,
+        10,
+        13,
+        17,
+        21,
+        23,
+        24,
+        30,
+        34
+      ],
+      "type_b_cusp_facets": [
+        13,
+        28,
+        33,
+        34,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x1aca6d43d0",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        6,
+        10,
+        11,
+        14,
+        15,
+        16,
+        24,
+        26,
+        29,
+        31
+      ],
+      "type_b_cusp_facets": [
+        4,
+        14,
+        17,
+        29,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x1aec4b4349",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        4,
+        10,
+        11,
+        14,
+        15,
+        23,
+        24,
+        26,
+        31,
+        33
+      ],
+      "type_b_cusp_facets": [
+        4,
+        17,
+        29,
+        33,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x1c0f312f38",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        7,
+        9,
+        10,
+        13,
+        18,
+        22,
+        25,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        3,
+        12,
+        25,
+        26,
+        27
+      ]
+    },
+    {
+      "projective_negative_mask": "0x1c152b2f51",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        9,
+        10,
+        14,
+        18,
+        22,
+        26,
+        29,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        3,
+        25,
+        27,
+        29,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x1c29172fa1",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        9,
+        10,
+        13,
+        17,
+        21,
+        25,
+        31,
+        32,
+        34
+      ],
+      "type_b_cusp_facets": [
+        3,
+        25,
+        26,
+        28,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x1c330d2fc8",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        4,
+        9,
+        10,
+        14,
+        17,
+        21,
+        26,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        3,
+        25,
+        28,
+        29,
+        32
+      ]
+    },
+    {
+      "projective_negative_mask": "0x1ccc0d27c9",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        4,
+        10,
+        11,
+        14,
+        17,
+        23,
+        24,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        17,
+        25,
+        28,
+        29,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0x1cd61727a0",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        10,
+        11,
+        15,
+        17,
+        23,
+        25,
+        31,
+        32,
+        34
+      ],
+      "type_b_cusp_facets": [
+        15,
+        17,
+        25,
+        26,
+        28
+      ]
+    },
+    {
+      "projective_negative_mask": "0x1cea2b2750",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        10,
+        11,
+        14,
+        16,
+        22,
+        24,
+        29,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        14,
+        17,
+        25,
+        27,
+        29
+      ]
+    },
+    {
+      "projective_negative_mask": "0x1cf0312739",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        7,
+        10,
+        11,
+        15,
+        16,
+        22,
+        25,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        17,
+        25,
+        26,
+        27,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x1dc13d0030",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        6,
+        7,
+        11,
+        15,
+        16,
+        22,
+        25,
+        28,
+        35
+      ],
+      "type_b_cusp_facets": [
+        12,
+        14,
+        15,
+        16,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x1dc13dfff0",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        6,
+        9,
+        11,
+        14,
+        17,
+        22,
+        25,
+        28,
+        35
+      ],
+      "type_b_cusp_facets": [
+        12,
+        14,
+        15,
+        25,
+        32
+      ]
+    },
+    {
+      "projective_negative_mask": "0x1f0cc1e30b",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        4,
+        7,
+        8,
+        10,
+        13,
+        18,
+        23,
+        24,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        2,
+        13,
+        33,
+        34,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x200cc2d705",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        4,
+        6,
+        7,
+        10,
+        15,
+        16,
+        21,
+        26,
+        28,
+        35
+      ],
+      "type_b_cusp_facets": [
+        16,
+        32,
+        34,
+        35,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x22cecec03f",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        6,
+        9,
+        11,
+        14,
+        17,
+        21,
+        26,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        3,
+        4,
+        5,
+        25,
+        32
+      ]
+    },
+    {
+      "projective_negative_mask": "0x22cecec3c0",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        6,
+        10,
+        11,
+        15,
+        16,
+        21,
+        26,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        3,
+        4,
+        5,
+        17,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x22d4d4c056",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        9,
+        11,
+        13,
+        17,
+        21,
+        25,
+        30,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        3,
+        5,
+        7,
+        25,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x22d4d4c3a9",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        10,
+        11,
+        13,
+        16,
+        21,
+        24,
+        30,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        3,
+        5,
+        7,
+        17,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x22e8e8c0a6",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        9,
+        11,
+        14,
+        18,
+        22,
+        26,
+        31,
+        32,
+        33
+      ],
+      "type_b_cusp_facets": [
+        3,
+        4,
+        6,
+        25,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x22e8e8c359",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        10,
+        11,
+        15,
+        18,
+        23,
+        26,
+        31,
+        32,
+        33
+      ],
+      "type_b_cusp_facets": [
+        3,
+        4,
+        6,
+        17,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x22f2f23cf0",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        1,
+        8,
+        11,
+        13,
+        18,
+        23,
+        24,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        2,
+        6,
+        7,
+        13,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0x22f2f23f0f",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        1,
+        7,
+        11,
+        13,
+        18,
+        22,
+        25,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        2,
+        6,
+        7,
+        12,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x22f2f2c0cf",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        1,
+        9,
+        11,
+        13,
+        18,
+        22,
+        25,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        3,
+        6,
+        7,
+        12,
+        25
+      ]
+    },
+    {
+      "projective_negative_mask": "0x22f2f2c330",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        1,
+        10,
+        11,
+        13,
+        18,
+        23,
+        24,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        3,
+        6,
+        7,
+        13,
+        17
+      ]
+    },
+    {
+      "projective_negative_mask": "0x233cfe1007",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        4,
+        7,
+        9,
+        14,
+        17,
+        22,
+        25,
+        28,
+        35
+      ],
+      "type_b_cusp_facets": [
+        12,
+        25,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "projective_negative_mask": "0x23c3fe1806",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        4,
+        7,
+        11,
+        14,
+        17,
+        22,
+        25,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        25,
+        30,
+        31,
+        33,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x24d2b45870",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        8,
+        11,
+        13,
+        17,
+        23,
+        24,
+        25,
+        30,
+        34
+      ],
+      "type_b_cusp_facets": [
+        7,
+        13,
+        15,
+        33,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x24d2b4a7b0",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        10,
+        11,
+        13,
+        15,
+        23,
+        24,
+        25,
+        31,
+        34
+      ],
+      "type_b_cusp_facets": [
+        7,
+        13,
+        15,
+        17,
+        26
+      ]
+    },
+    {
+      "projective_negative_mask": "0x24f492a729",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        7,
+        10,
+        11,
+        13,
+        15,
+        16,
+        24,
+        25,
+        30,
+        31
+      ],
+      "type_b_cusp_facets": [
+        7,
+        17,
+        26,
+        34,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x258cd78105",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        4,
+        6,
+        7,
+        16,
+        17,
+        21,
+        27,
+        28,
+        30,
+        35
+      ],
+      "type_b_cusp_facets": [
+        5,
+        16,
+        30,
+        32,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x25c59e8020",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        6,
+        7,
+        11,
+        15,
+        16,
+        17,
+        25,
+        27,
+        28,
+        30
+      ],
+      "type_b_cusp_facets": [
+        5,
+        15,
+        16,
+        30,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x26bceb4607",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        4,
+        7,
+        9,
+        14,
+        18,
+        22,
+        26,
+        28,
+        33,
+        35
+      ],
+      "type_b_cusp_facets": [
+        12,
+        31,
+        32,
+        35,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x28e2786770",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        10,
+        11,
+        16,
+        18,
+        22,
+        23,
+        24,
+        29,
+        32
+      ],
+      "type_b_cusp_facets": [
+        6,
+        13,
+        14,
+        17,
+        27
+      ]
+    },
+    {
+      "projective_negative_mask": "0x28e27898b0",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        8,
+        11,
+        14,
+        18,
+        22,
+        23,
+        24,
+        29,
+        33
+      ],
+      "type_b_cusp_facets": [
+        6,
+        13,
+        14,
+        33,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x28f8626719",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        7,
+        10,
+        11,
+        15,
+        16,
+        18,
+        22,
+        23,
+        32,
+        33
+      ],
+      "type_b_cusp_facets": [
+        6,
+        17,
+        27,
+        35,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x294ceb4205",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        4,
+        6,
+        7,
+        14,
+        15,
+        20,
+        26,
+        28,
+        33,
+        35
+      ],
+      "type_b_cusp_facets": [
+        4,
+        16,
+        31,
+        32,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x29c96e4010",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        6,
+        7,
+        11,
+        14,
+        15,
+        16,
+        20,
+        22,
+        33,
+        35
+      ],
+      "type_b_cusp_facets": [
+        4,
+        14,
+        16,
+        31,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x2a7cd78507",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        4,
+        7,
+        9,
+        13,
+        17,
+        21,
+        25,
+        28,
+        30,
+        35
+      ],
+      "type_b_cusp_facets": [
+        12,
+        30,
+        32,
+        34,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x2c00321735",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        6,
+        7,
+        10,
+        15,
+        16,
+        20,
+        27,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        16,
+        24,
+        26,
+        27,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x2c33fe1c04",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        4,
+        7,
+        8,
+        14,
+        17,
+        20,
+        27,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        2,
+        24,
+        30,
+        31,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0x2c497b1610",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        6,
+        7,
+        14,
+        16,
+        20,
+        22,
+        27,
+        29,
+        35
+      ],
+      "type_b_cusp_facets": [
+        14,
+        16,
+        24,
+        27,
+        31
+      ]
+    },
+    {
+      "projective_negative_mask": "0x2c7ab71d21",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        7,
+        8,
+        13,
+        17,
+        20,
+        25,
+        27,
+        30,
+        34
+      ],
+      "type_b_cusp_facets": [
+        2,
+        24,
+        26,
+        30,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x2c85b71520",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        6,
+        7,
+        15,
+        17,
+        20,
+        25,
+        27,
+        28,
+        34
+      ],
+      "type_b_cusp_facets": [
+        15,
+        16,
+        24,
+        26,
+        30
+      ]
+    },
+    {
+      "projective_negative_mask": "0x2cb67b1e11",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        7,
+        8,
+        14,
+        18,
+        20,
+        22,
+        27,
+        29,
+        33
+      ],
+      "type_b_cusp_facets": [
+        2,
+        24,
+        27,
+        31,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x2cccfe1405",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        4,
+        6,
+        7,
+        14,
+        17,
+        20,
+        27,
+        28,
+        35
+      ],
+      "type_b_cusp_facets": [
+        16,
+        24,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "projective_negative_mask": "0x2cff321f34",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        7,
+        8,
+        10,
+        13,
+        18,
+        20,
+        27,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        2,
+        13,
+        24,
+        26,
+        27
+      ]
+    },
+    {
+      "projective_negative_mask": "0x2ec23e03f0",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        6,
+        10,
+        11,
+        15,
+        16,
+        23,
+        24,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        13,
+        14,
+        15,
+        17,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x2ec23efc30",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        6,
+        8,
+        11,
+        14,
+        17,
+        23,
+        24,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        13,
+        14,
+        15,
+        24,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0x2ffcc2d307",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        4,
+        7,
+        9,
+        10,
+        13,
+        18,
+        21,
+        26,
+        28,
+        35
+      ],
+      "type_b_cusp_facets": [
+        3,
+        12,
+        32,
+        34,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x303c30373d",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        5,
+        7,
+        10,
+        15,
+        16,
+        22,
+        25,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        11,
+        26,
+        27,
+        36,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x30c3303f3c",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        3,
+        7,
+        10,
+        13,
+        18,
+        22,
+        25,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        11,
+        12,
+        13,
+        26,
+        27
+      ]
+    },
+    {
+      "projective_negative_mask": "0x30c330c0fc",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        5,
+        8,
+        9,
+        13,
+        18,
+        22,
+        25,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        11,
+        12,
+        13,
+        38,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x310d3c1034",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        5,
+        7,
+        9,
+        15,
+        16,
+        22,
+        25,
+        28,
+        35
+      ],
+      "type_b_cusp_facets": [
+        12,
+        16,
+        20,
+        21,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x310dc31435",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        5,
+        6,
+        9,
+        15,
+        16,
+        21,
+        26,
+        28,
+        35
+      ],
+      "type_b_cusp_facets": [
+        16,
+        20,
+        21,
+        32,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x32fe3c23f8",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        5,
+        8,
+        10,
+        15,
+        16,
+        23,
+        24,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        13,
+        17,
+        22,
+        23,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x32fec327f9",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        5,
+        8,
+        11,
+        15,
+        16,
+        23,
+        24,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        17,
+        22,
+        23,
+        33,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x33c0c0f0f0",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        5,
+        8,
+        9,
+        13,
+        18,
+        21,
+        26,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        1,
+        2,
+        3,
+        38,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x33c0c0f30f",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        4,
+        7,
+        10,
+        13,
+        18,
+        21,
+        26,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        1,
+        2,
+        3,
+        34,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x33cfcf00f0",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        5,
+        6,
+        11,
+        15,
+        16,
+        21,
+        26,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        1,
+        4,
+        5,
+        36,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x33cfcf030f",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        4,
+        6,
+        11,
+        14,
+        17,
+        21,
+        26,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        1,
+        4,
+        5,
+        32,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0x348d294634",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        7,
+        9,
+        16,
+        18,
+        22,
+        27,
+        28,
+        32,
+        35
+      ],
+      "type_b_cusp_facets": [
+        12,
+        16,
+        19,
+        20,
+        27
+      ]
+    },
+    {
+      "projective_negative_mask": "0x348dd64235",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        6,
+        9,
+        16,
+        17,
+        21,
+        27,
+        28,
+        32,
+        35
+      ],
+      "type_b_cusp_facets": [
+        5,
+        16,
+        19,
+        20,
+        32
+      ]
+    },
+    {
+      "projective_negative_mask": "0x349733465d",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        5,
+        8,
+        9,
+        16,
+        18,
+        22,
+        27,
+        29,
+        32
+      ],
+      "type_b_cusp_facets": [
+        19,
+        20,
+        22,
+        27,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x3497cc425c",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        5,
+        8,
+        9,
+        16,
+        17,
+        21,
+        27,
+        30,
+        32
+      ],
+      "type_b_cusp_facets": [
+        5,
+        19,
+        20,
+        22,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x34c4604711",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        7,
+        10,
+        15,
+        16,
+        18,
+        23,
+        27,
+        28,
+        32
+      ],
+      "type_b_cusp_facets": [
+        16,
+        17,
+        19,
+        27,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x34c49f4310",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        6,
+        11,
+        15,
+        16,
+        17,
+        23,
+        27,
+        28,
+        32
+      ],
+      "type_b_cusp_facets": [
+        5,
+        15,
+        16,
+        17,
+        19
+      ]
+    },
+    {
+      "projective_negative_mask": "0x34de7a4778",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        8,
+        10,
+        16,
+        18,
+        23,
+        24,
+        27,
+        29,
+        32
+      ],
+      "type_b_cusp_facets": [
+        13,
+        17,
+        19,
+        22,
+        27
+      ]
+    },
+    {
+      "projective_negative_mask": "0x34de854379",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        8,
+        11,
+        16,
+        17,
+        23,
+        24,
+        27,
+        30,
+        32
+      ],
+      "type_b_cusp_facets": [
+        5,
+        17,
+        19,
+        22,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0x37943c7250",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        5,
+        8,
+        9,
+        15,
+        17,
+        23,
+        25,
+        28,
+        34
+      ],
+      "type_b_cusp_facets": [
+        15,
+        19,
+        21,
+        23,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x3794c37651",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        5,
+        8,
+        9,
+        15,
+        18,
+        23,
+        26,
+        28,
+        33
+      ],
+      "type_b_cusp_facets": [
+        19,
+        21,
+        23,
+        35,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x384d158534",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        7,
+        9,
+        13,
+        15,
+        20,
+        25,
+        28,
+        31,
+        35
+      ],
+      "type_b_cusp_facets": [
+        12,
+        16,
+        18,
+        21,
+        26
+      ]
+    },
+    {
+      "projective_negative_mask": "0x384dea8135",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        6,
+        9,
+        14,
+        15,
+        20,
+        26,
+        28,
+        31,
+        35
+      ],
+      "type_b_cusp_facets": [
+        4,
+        16,
+        18,
+        21,
+        32
+      ]
+    },
+    {
+      "projective_negative_mask": "0x386b3385ad",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        5,
+        8,
+        9,
+        13,
+        15,
+        20,
+        25,
+        31,
+        34
+      ],
+      "type_b_cusp_facets": [
+        18,
+        21,
+        23,
+        26,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x386bcc81ac",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        5,
+        8,
+        9,
+        14,
+        15,
+        20,
+        26,
+        31,
+        33
+      ],
+      "type_b_cusp_facets": [
+        4,
+        18,
+        21,
+        23,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x38c86f8320",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        6,
+        11,
+        14,
+        15,
+        16,
+        20,
+        24,
+        31,
+        35
+      ],
+      "type_b_cusp_facets": [
+        4,
+        14,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "projective_negative_mask": "0x38c8908721",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        7,
+        10,
+        13,
+        15,
+        16,
+        20,
+        24,
+        31,
+        35
+      ],
+      "type_b_cusp_facets": [
+        16,
+        17,
+        18,
+        26,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x38ee4983b9",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        8,
+        11,
+        14,
+        15,
+        20,
+        23,
+        24,
+        31,
+        33
+      ],
+      "type_b_cusp_facets": [
+        4,
+        17,
+        18,
+        23,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0x38eeb687b8",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        8,
+        10,
+        13,
+        15,
+        20,
+        23,
+        24,
+        31,
+        34
+      ],
+      "type_b_cusp_facets": [
+        13,
+        17,
+        18,
+        23,
+        26
+      ]
+    },
+    {
+      "projective_negative_mask": "0x3b683cb1a0",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        5,
+        8,
+        9,
+        14,
+        16,
+        22,
+        24,
+        29,
+        35
+      ],
+      "type_b_cusp_facets": [
+        14,
+        18,
+        20,
+        22,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x3b68c3b5a1",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        5,
+        8,
+        9,
+        13,
+        16,
+        21,
+        24,
+        30,
+        35
+      ],
+      "type_b_cusp_facets": [
+        18,
+        20,
+        22,
+        34,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x3c30c0f70d",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        4,
+        5,
+        7,
+        10,
+        15,
+        16,
+        21,
+        26,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        1,
+        34,
+        35,
+        36,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x3c3fcf070d",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        4,
+        5,
+        8,
+        9,
+        14,
+        17,
+        21,
+        26,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        1,
+        32,
+        33,
+        38,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x3d0133d405",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        5,
+        6,
+        8,
+        15,
+        16,
+        20,
+        27,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        16,
+        22,
+        23,
+        24,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x3d01ccd004",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        5,
+        7,
+        8,
+        15,
+        16,
+        20,
+        27,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        2,
+        16,
+        22,
+        23,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x3d487ad520",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        6,
+        8,
+        14,
+        16,
+        20,
+        24,
+        27,
+        29,
+        35
+      ],
+      "type_b_cusp_facets": [
+        14,
+        16,
+        18,
+        22,
+        24
+      ]
+    },
+    {
+      "projective_negative_mask": "0x3d4885d121",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        7,
+        8,
+        13,
+        16,
+        20,
+        24,
+        27,
+        30,
+        35
+      ],
+      "type_b_cusp_facets": [
+        2,
+        16,
+        18,
+        22,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x3d8449d211",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        7,
+        8,
+        15,
+        18,
+        20,
+        23,
+        27,
+        28,
+        33
+      ],
+      "type_b_cusp_facets": [
+        2,
+        16,
+        19,
+        23,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x3d84b6d610",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        6,
+        8,
+        15,
+        17,
+        20,
+        23,
+        27,
+        28,
+        34
+      ],
+      "type_b_cusp_facets": [
+        15,
+        16,
+        19,
+        23,
+        24
+      ]
+    },
+    {
+      "projective_negative_mask": "0x3dcd00d334",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        7,
+        8,
+        9,
+        13,
+        18,
+        20,
+        27,
+        28,
+        35
+      ],
+      "type_b_cusp_facets": [
+        2,
+        12,
+        16,
+        18,
+        19
+      ]
+    },
+    {
+      "projective_negative_mask": "0x3dcdffd735",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        6,
+        8,
+        9,
+        14,
+        17,
+        20,
+        27,
+        28,
+        35
+      ],
+      "type_b_cusp_facets": [
+        16,
+        18,
+        19,
+        24,
+        32
+      ]
+    },
+    {
+      "projective_negative_mask": "0x3ece0fe739",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        8,
+        9,
+        11,
+        14,
+        17,
+        23,
+        24,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        17,
+        18,
+        19,
+        25,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0x3ecef0e338",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        8,
+        9,
+        10,
+        13,
+        18,
+        23,
+        24,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        3,
+        13,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "projective_negative_mask": "0x3ed415e750",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        9,
+        11,
+        15,
+        17,
+        23,
+        25,
+        28,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        15,
+        17,
+        19,
+        21,
+        25
+      ]
+    },
+    {
+      "projective_negative_mask": "0x3ed4eae351",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        9,
+        10,
+        15,
+        18,
+        23,
+        26,
+        28,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        3,
+        17,
+        19,
+        21,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x3ee829e7a0",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        9,
+        11,
+        14,
+        16,
+        22,
+        24,
+        31,
+        32,
+        35
+      ],
+      "type_b_cusp_facets": [
+        14,
+        17,
+        18,
+        20,
+        25
+      ]
+    },
+    {
+      "projective_negative_mask": "0x3ee8d6e3a1",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        9,
+        10,
+        13,
+        16,
+        21,
+        24,
+        31,
+        32,
+        35
+      ],
+      "type_b_cusp_facets": [
+        3,
+        17,
+        18,
+        20,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x3ef233e7c9",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        2,
+        5,
+        9,
+        11,
+        15,
+        16,
+        22,
+        25,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        17,
+        20,
+        21,
+        25,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x3ef2cce3c8",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        2,
+        5,
+        9,
+        10,
+        15,
+        16,
+        21,
+        26,
+        31,
+        32
+      ],
+      "type_b_cusp_facets": [
+        3,
+        17,
+        20,
+        21,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x3f3c3f3701",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        5,
+        8,
+        9,
+        14,
+        17,
+        22,
+        25,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        11,
+        24,
+        25,
+        38,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x3fc33f3f00",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        3,
+        6,
+        11,
+        14,
+        17,
+        22,
+        25,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        11,
+        14,
+        15,
+        24,
+        25
+      ]
+    },
+    {
+      "projective_negative_mask": "0x3fc33fc0c0",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        5,
+        6,
+        11,
+        15,
+        16,
+        22,
+        25,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        11,
+        14,
+        15,
+        36,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x406334b8e2",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        4,
+        8,
+        9,
+        14,
+        17,
+        18,
+        23,
+        26,
+        28,
+        33
+      ],
+      "type_b_cusp_facets": [
+        19,
+        32,
+        33,
+        35,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x4114816acf",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        6,
+        8,
+        13,
+        14,
+        20,
+        24,
+        29,
+        34,
+        35
+      ],
+      "type_b_cusp_facets": [
+        9,
+        13,
+        14,
+        18,
+        24
+      ]
+    },
+    {
+      "projective_negative_mask": "0x411481950f",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        6,
+        10,
+        13,
+        16,
+        21,
+        24,
+        29,
+        34,
+        35
+      ],
+      "type_b_cusp_facets": [
+        9,
+        13,
+        14,
+        34,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x41910468da",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        6,
+        8,
+        9,
+        13,
+        14,
+        17,
+        20,
+        21,
+        34,
+        35
+      ],
+      "type_b_cusp_facets": [
+        9,
+        18,
+        24,
+        32,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x4292f458d6",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        8,
+        9,
+        11,
+        13,
+        14,
+        17,
+        24,
+        25,
+        30,
+        31
+      ],
+      "type_b_cusp_facets": [
+        7,
+        18,
+        25,
+        33,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x42b4d2584f",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        9,
+        11,
+        13,
+        14,
+        22,
+        24,
+        25,
+        31,
+        35
+      ],
+      "type_b_cusp_facets": [
+        7,
+        12,
+        14,
+        18,
+        25
+      ]
+    },
+    {
+      "projective_negative_mask": "0x42b4d2a78f",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        7,
+        11,
+        13,
+        16,
+        22,
+        24,
+        25,
+        30,
+        35
+      ],
+      "type_b_cusp_facets": [
+        7,
+        12,
+        14,
+        34,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x43298d89cb",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        8,
+        10,
+        17,
+        18,
+        23,
+        27,
+        29,
+        32,
+        34
+      ],
+      "type_b_cusp_facets": [
+        13,
+        19,
+        24,
+        27,
+        28
+      ]
+    },
+    {
+      "projective_negative_mask": "0x43339789a2",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        4,
+        7,
+        10,
+        17,
+        18,
+        23,
+        27,
+        28,
+        32
+      ],
+      "type_b_cusp_facets": [
+        19,
+        27,
+        28,
+        30,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x4360c488ee",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        8,
+        9,
+        14,
+        17,
+        18,
+        22,
+        27,
+        29,
+        32
+      ],
+      "type_b_cusp_facets": [
+        19,
+        24,
+        25,
+        27,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x437ade8887",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        7,
+        9,
+        17,
+        18,
+        22,
+        25,
+        27,
+        28,
+        32
+      ],
+      "type_b_cusp_facets": [
+        12,
+        19,
+        25,
+        27,
+        30
+      ]
+    },
+    {
+      "projective_negative_mask": "0x4385de8086",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        7,
+        11,
+        16,
+        17,
+        22,
+        25,
+        27,
+        30,
+        32
+      ],
+      "type_b_cusp_facets": [
+        5,
+        25,
+        27,
+        30,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x439fc480ef",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        6,
+        11,
+        14,
+        16,
+        17,
+        22,
+        27,
+        29,
+        32
+      ],
+      "type_b_cusp_facets": [
+        5,
+        14,
+        24,
+        25,
+        27
+      ]
+    },
+    {
+      "projective_negative_mask": "0x43cc9781a3",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        4,
+        7,
+        10,
+        16,
+        17,
+        21,
+        27,
+        30,
+        32
+      ],
+      "type_b_cusp_facets": [
+        5,
+        27,
+        28,
+        30,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x43d68d81ca",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        6,
+        10,
+        16,
+        17,
+        21,
+        27,
+        29,
+        32,
+        34
+      ],
+      "type_b_cusp_facets": [
+        5,
+        24,
+        27,
+        28,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x4411113d25",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        6,
+        10,
+        13,
+        15,
+        20,
+        21,
+        26,
+        31,
+        34
+      ],
+      "type_b_cusp_facets": [
+        3,
+        4,
+        9,
+        26,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x4411113eda",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        6,
+        9,
+        13,
+        14,
+        20,
+        21,
+        26,
+        31,
+        35
+      ],
+      "type_b_cusp_facets": [
+        3,
+        4,
+        9,
+        18,
+        32
+      ]
+    },
+    {
+      "projective_negative_mask": "0x4437373dbc",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        7,
+        10,
+        13,
+        15,
+        18,
+        20,
+        26,
+        31,
+        33
+      ],
+      "type_b_cusp_facets": [
+        2,
+        3,
+        4,
+        26,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x4437373e43",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        8,
+        9,
+        13,
+        14,
+        18,
+        20,
+        26,
+        31,
+        33
+      ],
+      "type_b_cusp_facets": [
+        2,
+        3,
+        4,
+        18,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x4494943ccf",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        1,
+        6,
+        11,
+        13,
+        14,
+        20,
+        24,
+        31,
+        35
+      ],
+      "type_b_cusp_facets": [
+        4,
+        7,
+        9,
+        14,
+        18
+      ]
+    },
+    {
+      "projective_negative_mask": "0x4494943f30",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        1,
+        6,
+        11,
+        13,
+        15,
+        20,
+        25,
+        31,
+        34
+      ],
+      "type_b_cusp_facets": [
+        4,
+        7,
+        9,
+        15,
+        26
+      ]
+    },
+    {
+      "projective_negative_mask": "0x449494c0f0",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        1,
+        6,
+        11,
+        13,
+        17,
+        21,
+        25,
+        30,
+        34
+      ],
+      "type_b_cusp_facets": [
+        5,
+        7,
+        9,
+        15,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x449494c30f",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        1,
+        6,
+        11,
+        13,
+        16,
+        21,
+        24,
+        30,
+        35
+      ],
+      "type_b_cusp_facets": [
+        5,
+        7,
+        9,
+        14,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x44b2b23c56",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        8,
+        11,
+        13,
+        14,
+        20,
+        24,
+        30,
+        31,
+        33
+      ],
+      "type_b_cusp_facets": [
+        2,
+        4,
+        7,
+        18,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0x44b2b23fa9",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        7,
+        11,
+        13,
+        15,
+        20,
+        25,
+        30,
+        31,
+        33
+      ],
+      "type_b_cusp_facets": [
+        2,
+        4,
+        7,
+        26,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x4583be18a0",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        4,
+        7,
+        11,
+        15,
+        17,
+        23,
+        25,
+        28,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        15,
+        30,
+        33,
+        35,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x46d31d29e0",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        4,
+        6,
+        10,
+        15,
+        17,
+        21,
+        23,
+        26,
+        28,
+        34
+      ],
+      "type_b_cusp_facets": [
+        15,
+        28,
+        32,
+        35,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x4734c70e4f",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        8,
+        9,
+        13,
+        14,
+        18,
+        22,
+        24,
+        29,
+        35
+      ],
+      "type_b_cusp_facets": [
+        12,
+        13,
+        14,
+        18,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x4734c7f18f",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        7,
+        10,
+        13,
+        16,
+        18,
+        22,
+        24,
+        29,
+        35
+      ],
+      "type_b_cusp_facets": [
+        12,
+        13,
+        14,
+        27,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x49231d2de2",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        4,
+        9,
+        10,
+        17,
+        18,
+        21,
+        23,
+        26,
+        28,
+        32
+      ],
+      "type_b_cusp_facets": [
+        3,
+        19,
+        28,
+        32,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x4939072d8b",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        8,
+        9,
+        10,
+        13,
+        17,
+        18,
+        21,
+        23,
+        32,
+        34
+      ],
+      "type_b_cusp_facets": [
+        3,
+        13,
+        19,
+        28,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x4a3af71d87",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        7,
+        8,
+        9,
+        13,
+        17,
+        18,
+        25,
+        27,
+        28,
+        30
+      ],
+      "type_b_cusp_facets": [
+        2,
+        12,
+        19,
+        30,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x4a73be1ca2",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        4,
+        7,
+        8,
+        17,
+        18,
+        23,
+        27,
+        28,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        2,
+        19,
+        30,
+        33,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x4c3c9785a1",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        4,
+        7,
+        10,
+        13,
+        17,
+        21,
+        25,
+        30,
+        34
+      ],
+      "type_b_cusp_facets": [
+        26,
+        28,
+        30,
+        34,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x4cc3978da0",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        4,
+        7,
+        10,
+        15,
+        17,
+        23,
+        25,
+        28,
+        34
+      ],
+      "type_b_cusp_facets": [
+        15,
+        26,
+        28,
+        30,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x4f9334bce0",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        4,
+        6,
+        11,
+        14,
+        15,
+        17,
+        23,
+        26,
+        28,
+        33
+      ],
+      "type_b_cusp_facets": [
+        4,
+        15,
+        32,
+        33,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x500095a5a9",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        4,
+        7,
+        10,
+        12,
+        13,
+        20,
+        21,
+        34,
+        35
+      ],
+      "type_b_cusp_facets": [
+        9,
+        26,
+        28,
+        31,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x501580563f",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        5,
+        6,
+        12,
+        16,
+        21,
+        22,
+        29,
+        34,
+        35
+      ],
+      "type_b_cusp_facets": [
+        9,
+        11,
+        14,
+        20,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x501580a9ff",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        3,
+        6,
+        12,
+        14,
+        20,
+        22,
+        29,
+        34,
+        35
+      ],
+      "type_b_cusp_facets": [
+        9,
+        11,
+        14,
+        24,
+        31
+      ]
+    },
+    {
+      "projective_negative_mask": "0x506f05a3eb",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        4,
+        8,
+        12,
+        14,
+        17,
+        20,
+        23,
+        33,
+        34
+      ],
+      "type_b_cusp_facets": [
+        23,
+        24,
+        28,
+        31,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0x507a10afbd",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        5,
+        7,
+        12,
+        15,
+        20,
+        22,
+        25,
+        33,
+        34
+      ],
+      "type_b_cusp_facets": [
+        11,
+        23,
+        26,
+        31,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x508510587c",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        5,
+        9,
+        12,
+        13,
+        21,
+        22,
+        25,
+        34,
+        35
+      ],
+      "type_b_cusp_facets": [
+        9,
+        11,
+        12,
+        20,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x508510a7bc",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        3,
+        7,
+        12,
+        13,
+        20,
+        22,
+        25,
+        34,
+        35
+      ],
+      "type_b_cusp_facets": [
+        9,
+        11,
+        12,
+        26,
+        31
+      ]
+    },
+    {
+      "projective_negative_mask": "0x509005abea",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        4,
+        6,
+        12,
+        14,
+        17,
+        20,
+        21,
+        34,
+        35
+      ],
+      "type_b_cusp_facets": [
+        9,
+        24,
+        28,
+        31,
+        32
+      ]
+    },
+    {
+      "projective_negative_mask": "0x50ea80a1fe",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        5,
+        8,
+        12,
+        14,
+        20,
+        22,
+        29,
+        33,
+        34
+      ],
+      "type_b_cusp_facets": [
+        11,
+        23,
+        24,
+        31,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x50ff95ada8",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        4,
+        7,
+        10,
+        12,
+        15,
+        20,
+        23,
+        33,
+        34
+      ],
+      "type_b_cusp_facets": [
+        23,
+        26,
+        28,
+        31,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x514b1c88b4",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        5,
+        7,
+        9,
+        15,
+        18,
+        22,
+        25,
+        26,
+        28,
+        33
+      ],
+      "type_b_cusp_facets": [
+        12,
+        21,
+        35,
+        37,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x529ec543df",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        6,
+        8,
+        11,
+        14,
+        16,
+        17,
+        24,
+        27,
+        29,
+        30
+      ],
+      "type_b_cusp_facets": [
+        5,
+        14,
+        22,
+        24,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0x52d78c42fa",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        5,
+        6,
+        8,
+        16,
+        17,
+        21,
+        27,
+        29,
+        30,
+        34
+      ],
+      "type_b_cusp_facets": [
+        5,
+        22,
+        24,
+        36,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x54be83275f",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        5,
+        8,
+        11,
+        14,
+        16,
+        22,
+        24,
+        29,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        14,
+        22,
+        33,
+        37,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x5505050d83",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        1,
+        10,
+        12,
+        13,
+        18,
+        21,
+        23,
+        32,
+        34
+      ],
+      "type_b_cusp_facets": [
+        3,
+        6,
+        9,
+        13,
+        28
+      ]
+    },
+    {
+      "projective_negative_mask": "0x5505050e7c",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        1,
+        9,
+        12,
+        13,
+        18,
+        21,
+        22,
+        32,
+        35
+      ],
+      "type_b_cusp_facets": [
+        3,
+        6,
+        9,
+        12,
+        20
+      ]
+    },
+    {
+      "projective_negative_mask": "0x550505f1bc",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        1,
+        7,
+        12,
+        13,
+        18,
+        20,
+        22,
+        33,
+        35
+      ],
+      "type_b_cusp_facets": [
+        2,
+        6,
+        9,
+        12,
+        31
+      ]
+    },
+    {
+      "projective_negative_mask": "0x550505f243",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        1,
+        8,
+        12,
+        13,
+        18,
+        20,
+        23,
+        33,
+        34
+      ],
+      "type_b_cusp_facets": [
+        2,
+        6,
+        9,
+        13,
+        23
+      ]
+    },
+    {
+      "projective_negative_mask": "0x551010fdea",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        4,
+        6,
+        12,
+        14,
+        20,
+        21,
+        26,
+        33,
+        35
+      ],
+      "type_b_cusp_facets": [
+        1,
+        4,
+        9,
+        31,
+        32
+      ]
+    },
+    {
+      "projective_negative_mask": "0x551010fe15",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        5,
+        6,
+        12,
+        15,
+        20,
+        21,
+        26,
+        33,
+        34
+      ],
+      "type_b_cusp_facets": [
+        1,
+        4,
+        9,
+        23,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x551f1f0dea",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        4,
+        10,
+        12,
+        18,
+        21,
+        23,
+        26,
+        32,
+        33
+      ],
+      "type_b_cusp_facets": [
+        1,
+        3,
+        6,
+        28,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x551f1f0e15",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        5,
+        9,
+        12,
+        18,
+        21,
+        22,
+        26,
+        32,
+        33
+      ],
+      "type_b_cusp_facets": [
+        1,
+        3,
+        6,
+        20,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x558080f056",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        5,
+        8,
+        12,
+        13,
+        20,
+        21,
+        30,
+        33,
+        34
+      ],
+      "type_b_cusp_facets": [
+        1,
+        2,
+        9,
+        23,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x558080f3a9",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        4,
+        7,
+        12,
+        13,
+        20,
+        21,
+        30,
+        33,
+        35
+      ],
+      "type_b_cusp_facets": [
+        1,
+        2,
+        9,
+        31,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x558f8f0056",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        5,
+        11,
+        12,
+        16,
+        21,
+        22,
+        30,
+        32,
+        33
+      ],
+      "type_b_cusp_facets": [
+        1,
+        5,
+        6,
+        20,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x558f8f03a9",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        4,
+        11,
+        12,
+        17,
+        21,
+        23,
+        30,
+        32,
+        33
+      ],
+      "type_b_cusp_facets": [
+        1,
+        5,
+        6,
+        28,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0x559595003f",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        1,
+        6,
+        11,
+        12,
+        16,
+        21,
+        22,
+        32,
+        35
+      ],
+      "type_b_cusp_facets": [
+        5,
+        6,
+        9,
+        14,
+        20
+      ]
+    },
+    {
+      "projective_negative_mask": "0x55959503c0",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        1,
+        6,
+        11,
+        12,
+        17,
+        21,
+        23,
+        32,
+        34
+      ],
+      "type_b_cusp_facets": [
+        5,
+        6,
+        9,
+        15,
+        28
+      ]
+    },
+    {
+      "projective_negative_mask": "0x559595fc00",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        1,
+        6,
+        11,
+        12,
+        15,
+        20,
+        23,
+        33,
+        34
+      ],
+      "type_b_cusp_facets": [
+        4,
+        6,
+        9,
+        15,
+        23
+      ]
+    },
+    {
+      "projective_negative_mask": "0x559595ffff",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        1,
+        6,
+        11,
+        12,
+        14,
+        20,
+        22,
+        33,
+        35
+      ],
+      "type_b_cusp_facets": [
+        4,
+        6,
+        9,
+        14,
+        31
+      ]
+    },
+    {
+      "projective_negative_mask": "0x57d21cead0",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        5,
+        6,
+        9,
+        15,
+        17,
+        21,
+        25,
+        26,
+        28,
+        34
+      ],
+      "type_b_cusp_facets": [
+        15,
+        21,
+        32,
+        36,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x580b351db4",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        7,
+        9,
+        10,
+        13,
+        15,
+        18,
+        25,
+        26,
+        28,
+        31
+      ],
+      "type_b_cusp_facets": [
+        3,
+        12,
+        21,
+        26,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x582d131d2d",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        5,
+        9,
+        10,
+        13,
+        15,
+        21,
+        25,
+        26,
+        31,
+        34
+      ],
+      "type_b_cusp_facets": [
+        3,
+        21,
+        26,
+        36,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x5a7080f7ab",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        4,
+        5,
+        7,
+        12,
+        16,
+        21,
+        22,
+        30,
+        33,
+        35
+      ],
+      "type_b_cusp_facets": [
+        1,
+        20,
+        31,
+        34,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x5a7f8f07ab",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        4,
+        5,
+        8,
+        12,
+        17,
+        21,
+        23,
+        30,
+        33,
+        34
+      ],
+      "type_b_cusp_facets": [
+        1,
+        23,
+        28,
+        33,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x5ae010f9e8",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        4,
+        5,
+        9,
+        12,
+        14,
+        21,
+        22,
+        26,
+        33,
+        35
+      ],
+      "type_b_cusp_facets": [
+        1,
+        20,
+        31,
+        32,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x5aef1f09e8",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        4,
+        5,
+        10,
+        12,
+        15,
+        21,
+        23,
+        26,
+        33,
+        34
+      ],
+      "type_b_cusp_facets": [
+        1,
+        23,
+        28,
+        35,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x5b08c5d187",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        7,
+        8,
+        10,
+        13,
+        16,
+        18,
+        24,
+        27,
+        29,
+        30
+      ],
+      "type_b_cusp_facets": [
+        2,
+        13,
+        22,
+        27,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x5b418cd0a2",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        5,
+        7,
+        8,
+        16,
+        18,
+        22,
+        27,
+        29,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        2,
+        22,
+        27,
+        37,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x5d2883b507",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        5,
+        8,
+        10,
+        13,
+        16,
+        21,
+        24,
+        29,
+        30,
+        34
+      ],
+      "type_b_cusp_facets": [
+        13,
+        22,
+        34,
+        36,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x5e92357fd0",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        6,
+        9,
+        11,
+        14,
+        15,
+        17,
+        25,
+        26,
+        28,
+        31
+      ],
+      "type_b_cusp_facets": [
+        4,
+        15,
+        21,
+        25,
+        32
+      ]
+    },
+    {
+      "projective_negative_mask": "0x5eb4137f49",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        5,
+        9,
+        11,
+        14,
+        15,
+        22,
+        25,
+        26,
+        31,
+        33
+      ],
+      "type_b_cusp_facets": [
+        4,
+        21,
+        25,
+        37,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x5f0f95a9aa",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        4,
+        7,
+        10,
+        12,
+        18,
+        22,
+        23,
+        32,
+        33
+      ],
+      "type_b_cusp_facets": [
+        6,
+        27,
+        28,
+        31,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x5f158f5603",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        5,
+        8,
+        12,
+        18,
+        22,
+        23,
+        29,
+        33,
+        34
+      ],
+      "type_b_cusp_facets": [
+        6,
+        11,
+        13,
+        23,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x5f158fa9c3",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        3,
+        10,
+        12,
+        18,
+        22,
+        23,
+        29,
+        32,
+        34
+      ],
+      "type_b_cusp_facets": [
+        6,
+        11,
+        13,
+        27,
+        28
+      ]
+    },
+    {
+      "projective_negative_mask": "0x5f6005afe8",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        4,
+        9,
+        12,
+        14,
+        17,
+        21,
+        22,
+        32,
+        35
+      ],
+      "type_b_cusp_facets": [
+        20,
+        25,
+        28,
+        31,
+        32
+      ]
+    },
+    {
+      "projective_negative_mask": "0x5f7a1faf81",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        5,
+        9,
+        12,
+        17,
+        21,
+        22,
+        25,
+        32,
+        34
+      ],
+      "type_b_cusp_facets": [
+        11,
+        20,
+        25,
+        28,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x5f851f5840",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        5,
+        11,
+        12,
+        15,
+        22,
+        23,
+        25,
+        33,
+        34
+      ],
+      "type_b_cusp_facets": [
+        6,
+        11,
+        15,
+        23,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x5f851fa780",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        3,
+        11,
+        12,
+        17,
+        22,
+        23,
+        25,
+        32,
+        34
+      ],
+      "type_b_cusp_facets": [
+        6,
+        11,
+        15,
+        25,
+        28
+      ]
+    },
+    {
+      "projective_negative_mask": "0x5f9f05a7e9",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        4,
+        11,
+        12,
+        14,
+        17,
+        22,
+        23,
+        32,
+        33
+      ],
+      "type_b_cusp_facets": [
+        6,
+        25,
+        28,
+        31,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0x5fea8fa1c2",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        5,
+        10,
+        12,
+        16,
+        21,
+        22,
+        29,
+        32,
+        34
+      ],
+      "type_b_cusp_facets": [
+        11,
+        20,
+        27,
+        28,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x5ff095a1ab",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        4,
+        7,
+        10,
+        12,
+        16,
+        21,
+        22,
+        32,
+        35
+      ],
+      "type_b_cusp_facets": [
+        20,
+        27,
+        28,
+        31,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x600f969da4",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        4,
+        7,
+        10,
+        15,
+        19,
+        25,
+        26,
+        28,
+        31
+      ],
+      "type_b_cusp_facets": [
+        21,
+        26,
+        29,
+        30,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6029b09d3d",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        5,
+        10,
+        15,
+        19,
+        25,
+        26,
+        29,
+        31,
+        34
+      ],
+      "type_b_cusp_facets": [
+        11,
+        21,
+        26,
+        29,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6049d090be",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        5,
+        9,
+        14,
+        19,
+        22,
+        25,
+        26,
+        29,
+        31
+      ],
+      "type_b_cusp_facets": [
+        11,
+        21,
+        25,
+        29,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x606ff69027",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        4,
+        9,
+        14,
+        17,
+        19,
+        25,
+        26,
+        28,
+        31
+      ],
+      "type_b_cusp_facets": [
+        21,
+        25,
+        29,
+        30,
+        32
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6090f69826",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        4,
+        11,
+        14,
+        17,
+        19,
+        24,
+        25,
+        30,
+        31
+      ],
+      "type_b_cusp_facets": [
+        7,
+        25,
+        29,
+        30,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0x60b6d0677f",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        5,
+        11,
+        16,
+        19,
+        22,
+        24,
+        25,
+        29,
+        30
+      ],
+      "type_b_cusp_facets": [
+        7,
+        11,
+        14,
+        22,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x60b6d098bf",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        3,
+        11,
+        14,
+        19,
+        22,
+        24,
+        25,
+        29,
+        31
+      ],
+      "type_b_cusp_facets": [
+        7,
+        11,
+        14,
+        25,
+        29
+      ]
+    },
+    {
+      "projective_negative_mask": "0x60d6b06afc",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        5,
+        8,
+        13,
+        19,
+        24,
+        25,
+        29,
+        30,
+        34
+      ],
+      "type_b_cusp_facets": [
+        7,
+        11,
+        13,
+        22,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x60d6b0953c",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        3,
+        10,
+        13,
+        19,
+        24,
+        25,
+        29,
+        31,
+        34
+      ],
+      "type_b_cusp_facets": [
+        7,
+        11,
+        13,
+        26,
+        29
+      ]
+    },
+    {
+      "projective_negative_mask": "0x60f09695a5",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        4,
+        7,
+        10,
+        13,
+        19,
+        24,
+        25,
+        30,
+        31
+      ],
+      "type_b_cusp_facets": [
+        7,
+        26,
+        29,
+        30,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6187dc4076",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        5,
+        9,
+        11,
+        16,
+        17,
+        21,
+        22,
+        25,
+        30,
+        32
+      ],
+      "type_b_cusp_facets": [
+        5,
+        20,
+        25,
+        37,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x619dc6401f",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        6,
+        9,
+        11,
+        14,
+        16,
+        17,
+        21,
+        22,
+        32,
+        35
+      ],
+      "type_b_cusp_facets": [
+        5,
+        14,
+        20,
+        25,
+        32
+      ]
+    },
+    {
+      "projective_negative_mask": "0x62ebbc89f8",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        5,
+        8,
+        10,
+        15,
+        18,
+        23,
+        26,
+        29,
+        33,
+        34
+      ],
+      "type_b_cusp_facets": [
+        13,
+        23,
+        35,
+        36,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x641dd3161f",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        5,
+        6,
+        9,
+        14,
+        16,
+        21,
+        22,
+        26,
+        29,
+        35
+      ],
+      "type_b_cusp_facets": [
+        14,
+        20,
+        32,
+        36,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6696960000",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        1,
+        6,
+        11,
+        17,
+        19,
+        25,
+        27,
+        28,
+        30
+      ],
+      "type_b_cusp_facets": [
+        5,
+        7,
+        8,
+        15,
+        30
+      ]
+    },
+    {
+      "projective_negative_mask": "0x66969603ff",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        1,
+        6,
+        11,
+        16,
+        19,
+        24,
+        27,
+        29,
+        30
+      ],
+      "type_b_cusp_facets": [
+        5,
+        7,
+        8,
+        14,
+        22
+      ]
+    },
+    {
+      "projective_negative_mask": "0x669696fc3f",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        1,
+        6,
+        11,
+        14,
+        19,
+        24,
+        26,
+        29,
+        31
+      ],
+      "type_b_cusp_facets": [
+        4,
+        7,
+        8,
+        14,
+        29
+      ]
+    },
+    {
+      "projective_negative_mask": "0x669696ffc0",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        1,
+        6,
+        11,
+        15,
+        19,
+        25,
+        26,
+        28,
+        31
+      ],
+      "type_b_cusp_facets": [
+        4,
+        7,
+        8,
+        15,
+        21
+      ]
+    },
+    {
+      "projective_negative_mask": "0x66b0b0fca6",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        4,
+        11,
+        14,
+        19,
+        24,
+        26,
+        30,
+        31,
+        33
+      ],
+      "type_b_cusp_facets": [
+        1,
+        4,
+        7,
+        29,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0x66b0b0ff59",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        5,
+        11,
+        15,
+        19,
+        25,
+        26,
+        30,
+        31,
+        33
+      ],
+      "type_b_cusp_facets": [
+        1,
+        4,
+        7,
+        21,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x66bfbf0ca6",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        4,
+        7,
+        18,
+        19,
+        26,
+        27,
+        28,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        1,
+        2,
+        8,
+        30,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x66bfbf0f59",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        5,
+        8,
+        18,
+        19,
+        26,
+        27,
+        29,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        1,
+        2,
+        8,
+        22,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x66d0d0f125",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        4,
+        10,
+        13,
+        19,
+        21,
+        24,
+        26,
+        30,
+        31
+      ],
+      "type_b_cusp_facets": [
+        1,
+        3,
+        7,
+        29,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x66d0d0f2da",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        5,
+        9,
+        13,
+        19,
+        21,
+        25,
+        26,
+        30,
+        31
+      ],
+      "type_b_cusp_facets": [
+        1,
+        3,
+        7,
+        21,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x66dfdf0125",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        4,
+        6,
+        17,
+        19,
+        21,
+        26,
+        27,
+        28,
+        30
+      ],
+      "type_b_cusp_facets": [
+        1,
+        5,
+        8,
+        30,
+        32
+      ]
+    },
+    {
+      "projective_negative_mask": "0x66dfdf02da",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        5,
+        6,
+        16,
+        19,
+        21,
+        26,
+        27,
+        29,
+        30
+      ],
+      "type_b_cusp_facets": [
+        1,
+        5,
+        8,
+        22,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x66f6f60d83",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        1,
+        7,
+        13,
+        18,
+        19,
+        25,
+        27,
+        28,
+        30
+      ],
+      "type_b_cusp_facets": [
+        2,
+        7,
+        8,
+        12,
+        30
+      ]
+    },
+    {
+      "projective_negative_mask": "0x66f6f60e7c",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        1,
+        8,
+        13,
+        18,
+        19,
+        24,
+        27,
+        29,
+        30
+      ],
+      "type_b_cusp_facets": [
+        2,
+        7,
+        8,
+        13,
+        22
+      ]
+    },
+    {
+      "projective_negative_mask": "0x66f6f6f1bc",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        1,
+        10,
+        13,
+        18,
+        19,
+        24,
+        26,
+        29,
+        31
+      ],
+      "type_b_cusp_facets": [
+        3,
+        7,
+        8,
+        13,
+        29
+      ]
+    },
+    {
+      "projective_negative_mask": "0x66f6f6f243",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        1,
+        9,
+        13,
+        18,
+        19,
+        25,
+        26,
+        28,
+        31
+      ],
+      "type_b_cusp_facets": [
+        3,
+        7,
+        8,
+        12,
+        21
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6781bcd850",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        5,
+        8,
+        11,
+        15,
+        17,
+        23,
+        25,
+        30,
+        33,
+        34
+      ],
+      "type_b_cusp_facets": [
+        15,
+        23,
+        33,
+        37,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x687eb32fad",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        5,
+        7,
+        8,
+        13,
+        15,
+        20,
+        25,
+        30,
+        33,
+        34
+      ],
+      "type_b_cusp_facets": [
+        2,
+        23,
+        26,
+        37,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x68fb362db8",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        7,
+        8,
+        10,
+        13,
+        15,
+        18,
+        20,
+        23,
+        33,
+        34
+      ],
+      "type_b_cusp_facets": [
+        2,
+        13,
+        23,
+        26,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6920d0f527",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        4,
+        5,
+        10,
+        16,
+        19,
+        21,
+        24,
+        26,
+        29,
+        30
+      ],
+      "type_b_cusp_facets": [
+        1,
+        22,
+        29,
+        34,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x692fdf0527",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        4,
+        5,
+        9,
+        17,
+        19,
+        21,
+        25,
+        26,
+        28,
+        30
+      ],
+      "type_b_cusp_facets": [
+        1,
+        21,
+        30,
+        32,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6940b0f8a4",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        4,
+        5,
+        8,
+        14,
+        19,
+        24,
+        26,
+        29,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        1,
+        22,
+        29,
+        33,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x694fbf08a4",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        4,
+        5,
+        7,
+        15,
+        19,
+        25,
+        26,
+        28,
+        30,
+        33
+      ],
+      "type_b_cusp_facets": [
+        1,
+        21,
+        30,
+        35,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6be2dce1e2",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        5,
+        9,
+        10,
+        16,
+        18,
+        21,
+        22,
+        26,
+        29,
+        32
+      ],
+      "type_b_cusp_facets": [
+        3,
+        20,
+        27,
+        36,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6bf8c6e18b",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        7,
+        9,
+        10,
+        13,
+        16,
+        18,
+        21,
+        22,
+        32,
+        35
+      ],
+      "type_b_cusp_facets": [
+        3,
+        12,
+        20,
+        27,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6d14b37e05",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        5,
+        6,
+        8,
+        14,
+        15,
+        20,
+        26,
+        29,
+        33,
+        34
+      ],
+      "type_b_cusp_facets": [
+        4,
+        23,
+        24,
+        36,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6d91367c10",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        6,
+        8,
+        11,
+        14,
+        15,
+        17,
+        20,
+        23,
+        33,
+        34
+      ],
+      "type_b_cusp_facets": [
+        4,
+        15,
+        23,
+        24,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6e78d3b78b",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        5,
+        7,
+        9,
+        13,
+        16,
+        21,
+        22,
+        25,
+        30,
+        35
+      ],
+      "type_b_cusp_facets": [
+        12,
+        20,
+        34,
+        37,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6f009691a7",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        4,
+        7,
+        10,
+        16,
+        19,
+        24,
+        27,
+        29,
+        30
+      ],
+      "type_b_cusp_facets": [
+        22,
+        27,
+        29,
+        30,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6f29bf9d01",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        5,
+        8,
+        17,
+        19,
+        25,
+        27,
+        29,
+        30,
+        34
+      ],
+      "type_b_cusp_facets": [
+        11,
+        22,
+        24,
+        30,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6f49df9082",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        5,
+        7,
+        16,
+        19,
+        22,
+        25,
+        27,
+        29,
+        30
+      ],
+      "type_b_cusp_facets": [
+        11,
+        22,
+        27,
+        30,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6f60f69c24",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        4,
+        8,
+        14,
+        17,
+        19,
+        24,
+        27,
+        29,
+        30
+      ],
+      "type_b_cusp_facets": [
+        22,
+        24,
+        29,
+        30,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6f9ff69425",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        4,
+        6,
+        14,
+        17,
+        19,
+        26,
+        27,
+        28,
+        29
+      ],
+      "type_b_cusp_facets": [
+        8,
+        24,
+        29,
+        30,
+        32
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6fb6df6743",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        5,
+        9,
+        18,
+        19,
+        22,
+        25,
+        26,
+        28,
+        29
+      ],
+      "type_b_cusp_facets": [
+        8,
+        11,
+        12,
+        21,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6fb6df9883",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        3,
+        7,
+        18,
+        19,
+        22,
+        25,
+        27,
+        28,
+        29
+      ],
+      "type_b_cusp_facets": [
+        8,
+        11,
+        12,
+        27,
+        30
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6fd6bf6ac0",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        5,
+        6,
+        15,
+        19,
+        25,
+        26,
+        28,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        8,
+        11,
+        15,
+        21,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6fd6bf9500",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        3,
+        6,
+        17,
+        19,
+        25,
+        27,
+        28,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        8,
+        11,
+        15,
+        24,
+        30
+      ]
+    },
+    {
+      "projective_negative_mask": "0x6fff9699a6",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        4,
+        7,
+        10,
+        18,
+        19,
+        26,
+        27,
+        28,
+        29
+      ],
+      "type_b_cusp_facets": [
+        8,
+        27,
+        29,
+        30,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x709cc7832f",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        4,
+        6,
+        11,
+        14,
+        16,
+        17,
+        21,
+        24,
+        30,
+        35
+      ],
+      "type_b_cusp_facets": [
+        5,
+        14,
+        32,
+        33,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x733c94b1af",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        4,
+        7,
+        10,
+        14,
+        16,
+        22,
+        24,
+        29,
+        35
+      ],
+      "type_b_cusp_facets": [
+        14,
+        27,
+        29,
+        31,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x73c394b9ae",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        4,
+        7,
+        10,
+        14,
+        18,
+        22,
+        26,
+        29,
+        33
+      ],
+      "type_b_cusp_facets": [
+        27,
+        29,
+        31,
+        35,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x74c7340db0",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        7,
+        10,
+        13,
+        15,
+        18,
+        23,
+        25,
+        28,
+        34
+      ],
+      "type_b_cusp_facets": [
+        12,
+        13,
+        15,
+        26,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x74c734f270",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        8,
+        9,
+        13,
+        17,
+        18,
+        23,
+        25,
+        28,
+        34
+      ],
+      "type_b_cusp_facets": [
+        12,
+        13,
+        15,
+        19,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x751cd2d52f",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        4,
+        6,
+        10,
+        14,
+        16,
+        21,
+        24,
+        26,
+        29,
+        35
+      ],
+      "type_b_cusp_facets": [
+        14,
+        29,
+        32,
+        34,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x76bc81e7af",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        4,
+        7,
+        11,
+        14,
+        16,
+        22,
+        24,
+        30,
+        33,
+        35
+      ],
+      "type_b_cusp_facets": [
+        14,
+        31,
+        33,
+        34,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x778d8dc0a6",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        7,
+        11,
+        16,
+        18,
+        22,
+        27,
+        30,
+        32,
+        33
+      ],
+      "type_b_cusp_facets": [
+        2,
+        5,
+        6,
+        27,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x778d8dc359",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        8,
+        11,
+        17,
+        18,
+        23,
+        27,
+        30,
+        32,
+        33
+      ],
+      "type_b_cusp_facets": [
+        2,
+        5,
+        6,
+        19,
+        33
+      ]
+    },
+    {
+      "projective_negative_mask": "0x7797973cf0",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        1,
+        6,
+        11,
+        15,
+        18,
+        23,
+        26,
+        28,
+        33
+      ],
+      "type_b_cusp_facets": [
+        4,
+        6,
+        8,
+        15,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x7797973f0f",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        1,
+        6,
+        11,
+        14,
+        18,
+        22,
+        26,
+        29,
+        33
+      ],
+      "type_b_cusp_facets": [
+        4,
+        6,
+        8,
+        14,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x779797c0cf",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        1,
+        6,
+        11,
+        16,
+        18,
+        22,
+        27,
+        29,
+        32
+      ],
+      "type_b_cusp_facets": [
+        5,
+        6,
+        8,
+        14,
+        27
+      ]
+    },
+    {
+      "projective_negative_mask": "0x779797c330",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        1,
+        6,
+        11,
+        17,
+        18,
+        23,
+        27,
+        28,
+        32
+      ],
+      "type_b_cusp_facets": [
+        5,
+        6,
+        8,
+        15,
+        19
+      ]
+    },
+    {
+      "projective_negative_mask": "0x77c4c4c183",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        7,
+        10,
+        13,
+        16,
+        18,
+        21,
+        27,
+        30,
+        32
+      ],
+      "type_b_cusp_facets": [
+        2,
+        3,
+        5,
+        27,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x77c4c4c27c",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        8,
+        9,
+        13,
+        17,
+        18,
+        21,
+        27,
+        30,
+        32
+      ],
+      "type_b_cusp_facets": [
+        2,
+        3,
+        5,
+        19,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x77dedec1ea",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        0,
+        6,
+        10,
+        16,
+        18,
+        21,
+        26,
+        27,
+        29,
+        32
+      ],
+      "type_b_cusp_facets": [
+        3,
+        5,
+        8,
+        27,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x77dedec215",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        0,
+        6,
+        9,
+        17,
+        18,
+        21,
+        26,
+        27,
+        28,
+        32
+      ],
+      "type_b_cusp_facets": [
+        3,
+        5,
+        8,
+        19,
+        32
+      ]
+    },
+    {
+      "projective_negative_mask": "0x794c81e3ad",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        4,
+        7,
+        8,
+        13,
+        14,
+        20,
+        24,
+        30,
+        33,
+        35
+      ],
+      "type_b_cusp_facets": [
+        2,
+        18,
+        31,
+        33,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x79c904e1b8",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        7,
+        8,
+        9,
+        13,
+        14,
+        18,
+        20,
+        22,
+        33,
+        35
+      ],
+      "type_b_cusp_facets": [
+        2,
+        12,
+        18,
+        31,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x7acaf4d1b4",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        8,
+        9,
+        10,
+        13,
+        14,
+        18,
+        24,
+        26,
+        29,
+        31
+      ],
+      "type_b_cusp_facets": [
+        3,
+        13,
+        18,
+        29,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x7aecd2d12d",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        4,
+        9,
+        10,
+        13,
+        14,
+        21,
+        24,
+        26,
+        31,
+        35
+      ],
+      "type_b_cusp_facets": [
+        3,
+        18,
+        29,
+        32,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x7c15b2bd35",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        6,
+        10,
+        14,
+        15,
+        20,
+        26,
+        29,
+        31,
+        34
+      ],
+      "type_b_cusp_facets": [
+        4,
+        24,
+        26,
+        29,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x7c3394bdac",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        4,
+        7,
+        10,
+        14,
+        15,
+        20,
+        26,
+        31,
+        33
+      ],
+      "type_b_cusp_facets": [
+        4,
+        26,
+        29,
+        31,
+        35
+      ]
+    },
+    {
+      "projective_negative_mask": "0x7c4911b7b8",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        7,
+        9,
+        13,
+        14,
+        20,
+        22,
+        25,
+        31,
+        35
+      ],
+      "type_b_cusp_facets": [
+        12,
+        18,
+        25,
+        26,
+        31
+      ]
+    },
+    {
+      "projective_negative_mask": "0x7c6f37b721",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        8,
+        9,
+        13,
+        14,
+        17,
+        20,
+        25,
+        31,
+        34
+      ],
+      "type_b_cusp_facets": [
+        18,
+        24,
+        25,
+        26,
+        38
+      ]
+    },
+    {
+      "projective_negative_mask": "0x7c9037bf20",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        6,
+        11,
+        14,
+        15,
+        17,
+        20,
+        25,
+        31,
+        34
+      ],
+      "type_b_cusp_facets": [
+        4,
+        15,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "projective_negative_mask": "0x7cb611bfb9",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        7,
+        11,
+        14,
+        15,
+        20,
+        22,
+        25,
+        31,
+        33
+      ],
+      "type_b_cusp_facets": [
+        4,
+        25,
+        26,
+        31,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x7ccc94b5ad",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        3,
+        4,
+        7,
+        10,
+        13,
+        14,
+        20,
+        24,
+        31,
+        35
+      ],
+      "type_b_cusp_facets": [
+        18,
+        26,
+        29,
+        31,
+        34
+      ]
+    },
+    {
+      "projective_negative_mask": "0x7ceab2b534",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        3,
+        8,
+        10,
+        13,
+        14,
+        20,
+        24,
+        29,
+        31,
+        34
+      ],
+      "type_b_cusp_facets": [
+        13,
+        18,
+        24,
+        26,
+        29
+      ]
+    },
+    {
+      "projective_negative_mask": "0x7d871d6770",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        9,
+        11,
+        17,
+        18,
+        22,
+        23,
+        25,
+        28,
+        32
+      ],
+      "type_b_cusp_facets": [
+        6,
+        12,
+        15,
+        19,
+        25
+      ]
+    },
+    {
+      "projective_negative_mask": "0x7d871d98b0",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        7,
+        11,
+        15,
+        18,
+        22,
+        23,
+        25,
+        28,
+        33
+      ],
+      "type_b_cusp_facets": [
+        6,
+        12,
+        15,
+        35,
+        37
+      ]
+    },
+    {
+      "projective_negative_mask": "0x7d9d076719",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        8,
+        9,
+        11,
+        14,
+        17,
+        18,
+        22,
+        23,
+        32,
+        33
+      ],
+      "type_b_cusp_facets": [
+        6,
+        19,
+        25,
+        33,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x7e9ef75715",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        6,
+        8,
+        9,
+        14,
+        17,
+        18,
+        26,
+        27,
+        28,
+        29
+      ],
+      "type_b_cusp_facets": [
+        8,
+        19,
+        24,
+        32,
+        39
+      ]
+    },
+    {
+      "projective_negative_mask": "0x7ed7be5630",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        1,
+        6,
+        8,
+        17,
+        18,
+        23,
+        27,
+        28,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        8,
+        13,
+        15,
+        19,
+        24
+      ]
+    },
+    {
+      "projective_negative_mask": "0x7ed7bea9f0",
+      "determinant_parity": 0,
+      "type_a_root_facets": [
+        1,
+        6,
+        10,
+        15,
+        18,
+        23,
+        26,
+        28,
+        29,
+        34
+      ],
+      "type_b_cusp_facets": [
+        8,
+        13,
+        15,
+        35,
+        36
+      ]
+    },
+    {
+      "projective_negative_mask": "0x7f6cc7872d",
+      "determinant_parity": 1,
+      "type_a_root_facets": [
+        4,
+        8,
+        9,
+        13,
+        14,
+        17,
+        21,
+        24,
+        30,
+        35
+      ],
+      "type_b_cusp_facets": [
+        18,
+        32,
+        33,
+        34,
+        38
+      ]
+    }
+  ],
+  "chiral_pairs": {
+    "n_pairs": 216,
+    "reflection_root_by_pair": [
+      [
+        "0x0",
+        "0x1c1fcd8f6",
+        10
+      ],
+      [
+        "0x10fcc1e709",
+        "0x3ff",
+        9
+      ],
+      [
+        "0x1101013cf0",
+        "0x32fec327f9",
+        3
+      ],
+      [
+        "0x110101c0cf",
+        "0x3ef233e7c9",
+        4
+      ],
+      [
+        "0x114848c215",
+        "0x5f7a1faf81",
+        24
+      ],
+      [
+        "0x118484c125",
+        "0x6049d090be",
+        23
+      ],
+      [
+        "0x11cdcdc3ff",
+        "0xff0ffffc3",
+        10
+      ],
+      [
+        "0x13c30d2bca",
+        "0x22f2f23f0f",
+        2
+      ],
+      [
+        "0x1481149530",
+        "0x6940b0f8a4",
+        32
+      ],
+      [
+        "0x15150c56",
+        "0x4583be18a0",
+        29
+      ],
+      [
+        "0x151c4b474b",
+        "0x85850215",
+        25
+      ],
+      [
+        "0x16c69d83e0",
+        "0x79c904e1b8",
+        19
+      ],
+      [
+        "0x1841285630",
+        "0x5a7f8f07ab",
+        31
+      ],
+      [
+        "0x192c87878b",
+        "0x49490125",
+        22
+      ],
+      [
+        "0x1aca6d43d0",
+        "0x4a3af71d87",
+        12
+      ],
+      [
+        "0x1c152b2f51",
+        "0x580155600",
+        30
+      ],
+      [
+        "0x1c29172fa1",
+        "0x940299500",
+        33
+      ],
+      [
+        "0x1ccc0d27c9",
+        "0x110101c330",
+        5
+      ],
+      [
+        "0x1cf0312739",
+        "0xffc0",
+        8
+      ],
+      [
+        "0x1dc13dfff0",
+        "0xffff0fff",
+        10
+      ],
+      [
+        "0x200cc2d705",
+        "0xf0f0003f",
+        8
+      ],
+      [
+        "0x22cecec03f",
+        "0xf000ffc03",
+        7
+      ],
+      [
+        "0x22d4d4c3a9",
+        "0x50ea80a1fe",
+        28
+      ],
+      [
+        "0x22e8e8c359",
+        "0x6f29bf9d01",
+        35
+      ],
+      [
+        "0x22f2f23cf0",
+        "0x310dc31435",
+        3
+      ],
+      [
+        "0x22f2f2c0cf",
+        "0x3d0133d405",
+        4
+      ],
+      [
+        "0x23c3fe1806",
+        "0x1101013f0f",
+        2
+      ],
+      [
+        "0x24d2b4a7b0",
+        "0x5ae010f9e8",
+        27
+      ],
+      [
+        "0x25c59e8020",
+        "0x7acaf4d1b4",
+        12
+      ],
+      [
+        "0x26bceb4607",
+        "0xd6d60359",
+        34
+      ],
+      [
+        "0x28e2786770",
+        "0x692fdf0527",
+        20
+      ],
+      [
+        "0x29290ca6",
+        "0x76bc81e7af",
+        34
+      ],
+      [
+        "0x29c96e4010",
+        "0x4939072d8b",
+        19
+      ],
+      [
+        "0x2a7cd78507",
+        "0xeaea03a9",
+        29
+      ],
+      [
+        "0x2c00321735",
+        "0xf0f0fc00",
+        9
+      ],
+      [
+        "0x2c7ab71d21",
+        "0xae07aa780",
+        26
+      ],
+      [
+        "0x2cb67b1e11",
+        "0x6d0b66740",
+        21
+      ],
+      [
+        "0x2cccfe1405",
+        "0x22f2f2c330",
+        5
+      ],
+      [
+        "0x2ec23efc30",
+        "0xf0f0c3f",
+        7
+      ],
+      [
+        "0x30c3303f3c",
+        "0x33cfcf030f",
+        2
+      ],
+      [
+        "0x310d3c1034",
+        "0x133c0d23cb",
+        0
+      ],
+      [
+        "0x32fe3c23f8",
+        "0x233cfe1007",
+        0
+      ],
+      [
+        "0x3303c38c2",
+        "0x303c30373d",
+        0
+      ],
+      [
+        "0x330c3c303",
+        "0xcccc00cf",
+        5
+      ],
+      [
+        "0x33330f30",
+        "0xcc03c3cc0",
+        5
+      ],
+      [
+        "0x33c0c0f30f",
+        "0x3fc33f3f00",
+        2
+      ],
+      [
+        "0x33cc08ce",
+        "0x3c30c0f70d",
+        1
+      ],
+      [
+        "0x33cfcf00f0",
+        "0x330c33cc3",
+        3
+      ],
+      [
+        "0x348dd64235",
+        "0x60d6b0953c",
+        33
+      ],
+      [
+        "0x349733465d",
+        "0x4494943f30",
+        4
+      ],
+      [
+        "0x34c4604711",
+        "0x9090f27c",
+        14
+      ],
+      [
+        "0x34de854379",
+        "0x508510a7bc",
+        26
+      ],
+      [
+        "0x3794c37651",
+        "0x449494c30f",
+        3
+      ],
+      [
+        "0x384dea8135",
+        "0x5f158fa9c3",
+        30
+      ],
+      [
+        "0x386b3385ad",
+        "0x779797c0cf",
+        4
+      ],
+      [
+        "0x38c8908721",
+        "0x6060f1bc",
+        17
+      ],
+      [
+        "0x38ee4983b9",
+        "0x6fb6df9883",
+        21
+      ],
+      [
+        "0x3b68c3b5a1",
+        "0x7797973cf0",
+        3
+      ],
+      [
+        "0x3c3fcf070d",
+        "0xcc330731",
+        1
+      ],
+      [
+        "0x3d01ccd004",
+        "0x1c330d2fc8",
+        1
+      ],
+      [
+        "0x3d487ad520",
+        "0x551f1f0dea",
+        25
+      ],
+      [
+        "0x3d84b6d610",
+        "0x66d0d0f125",
+        22
+      ],
+      [
+        "0x3dcd00d334",
+        "0xfff0f0bc2",
+        11
+      ],
+      [
+        "0x3ecef0e338",
+        "0xf0fff0802",
+        6
+      ],
+      [
+        "0x3ed415e750",
+        "0x558080f3a9",
+        29
+      ],
+      [
+        "0x3ee829e7a0",
+        "0x66bfbf0ca6",
+        34
+      ],
+      [
+        "0x3ef2cce3c8",
+        "0x2c33fe1c04",
+        1
+      ],
+      [
+        "0x3f3c3f3701",
+        "0xcc0c3c701",
+        0
+      ],
+      [
+        "0x3fc33fc0c0",
+        "0x33330ccf",
+        4
+      ],
+      [
+        "0x411481950f",
+        "0x29d608a7",
+        33
+      ],
+      [
+        "0x41910468da",
+        "0x28f8626719",
+        19
+      ],
+      [
+        "0x4292f458d6",
+        "0x1808615715",
+        12
+      ],
+      [
+        "0x42b4d2a78f",
+        "0x7a8509eb",
+        26
+      ],
+      [
+        "0x43298d89cb",
+        "0x66b0b0ff59",
+        35
+      ],
+      [
+        "0x43463771d",
+        "0x90900e43",
+        17
+      ],
+      [
+        "0x437ade8887",
+        "0x551010fe15",
+        24
+      ],
+      [
+        "0x439fc480ef",
+        "0xf9060f641",
+        13
+      ],
+      [
+        "0x43cc9781a3",
+        "0x386bcc81ac",
+        1
+      ],
+      [
+        "0x4411113d25",
+        "0x920b69c82",
+        22
+      ],
+      [
+        "0x4437373e43",
+        "0xf909f0d80",
+        16
+      ],
+      [
+        "0x4494943ccf",
+        "0x43339789a2",
+        5
+      ],
+      [
+        "0x449494c0f0",
+        "0x73c394b9ae",
+        2
+      ],
+      [
+        "0x44b2b23fa9",
+        "0xa7015adc2",
+        29
+      ],
+      [
+        "0x4734c70e4f",
+        "0x9f9f0183",
+        15
+      ],
+      [
+        "0x49231d2de2",
+        "0x60b6d0677f",
+        20
+      ],
+      [
+        "0x494902da",
+        "0x6e78d3b78b",
+        23
+      ],
+      [
+        "0x49b60524",
+        "0x28e27898b0",
+        21
+      ],
+      [
+        "0x4a73be1ca2",
+        "0x501580563f",
+        31
+      ],
+      [
+        "0x4cc3978da0",
+        "0x3b683cb1a0",
+        0
+      ],
+      [
+        "0x4f9334bce0",
+        "0x9f60067d",
+        13
+      ],
+      [
+        "0x500095a5a9",
+        "0x9690099a6",
+        11
+      ],
+      [
+        "0x501580a9ff",
+        "0x3ed4eae351",
+        30
+      ],
+      [
+        "0x505905415",
+        "0x6090f69826",
+        18
+      ],
+      [
+        "0x506f05a3eb",
+        "0x66f6f6f243",
+        16
+      ],
+      [
+        "0x507a10afbd",
+        "0x77dedec215",
+        24
+      ],
+      [
+        "0x508510587c",
+        "0x1aec4b4349",
+        27
+      ],
+      [
+        "0x510855843",
+        "0x4385de8086",
+        26
+      ],
+      [
+        "0x52d78c42fa",
+        "0xa70ea5603",
+        31
+      ],
+      [
+        "0x54be83275f",
+        "0x15150fa9",
+        28
+      ],
+      [
+        "0x5505050d83",
+        "0x9099f9024",
+        14
+      ],
+      [
+        "0x550505f1bc",
+        "0x6f66f63d8",
+        17
+      ],
+      [
+        "0x551010fdea",
+        "0x34de7a4778",
+        25
+      ],
+      [
+        "0x551f1f0e15",
+        "0x2c85b71520",
+        24
+      ],
+      [
+        "0x558080f056",
+        "0x1cea2b2750",
+        28
+      ],
+      [
+        "0x558f8f03a9",
+        "0x384d158534",
+        29
+      ],
+      [
+        "0x559595003f",
+        "0x600f969da4",
+        8
+      ],
+      [
+        "0x559595fc00",
+        "0x6f009691a7",
+        9
+      ],
+      [
+        "0x57d21cead0",
+        "0x7a7a0e15",
+        24
+      ],
+      [
+        "0x58015a9c0",
+        "0x5b418cd0a2",
+        31
+      ],
+      [
+        "0x580b351db4",
+        "0x529ec543df",
+        12
+      ],
+      [
+        "0x580ea5201",
+        "0x22d4d4c056",
+        29
+      ],
+      [
+        "0x595ff5e57",
+        "0x6696960000",
+        10
+      ],
+      [
+        "0x5a7080f7ab",
+        "0x7ed7be5630",
+        31
+      ],
+      [
+        "0x5aef1f09e8",
+        "0x42b4d2584f",
+        27
+      ],
+      [
+        "0x5b08c5d187",
+        "0x5e92357fd0",
+        12
+      ],
+      [
+        "0x5eb4137f49",
+        "0x51085a783",
+        27
+      ],
+      [
+        "0x5f0f95a9aa",
+        "0x696f06a5a",
+        6
+      ],
+      [
+        "0x5f158f5603",
+        "0x258cd78105",
+        31
+      ],
+      [
+        "0x5f6005afe8",
+        "0x66f6f60e7c",
+        15
+      ],
+      [
+        "0x5f851fa780",
+        "0x3d4885d121",
+        26
+      ],
+      [
+        "0x5fea8fa1c2",
+        "0x44b2b23c56",
+        28
+      ],
+      [
+        "0x6029b09d3d",
+        "0x778d8dc359",
+        35
+      ],
+      [
+        "0x60600e7c",
+        "0x7f6cc7872d",
+        15
+      ],
+      [
+        "0x6060f243",
+        "0x7c6f37b721",
+        16
+      ],
+      [
+        "0x606ff69027",
+        "0x550505f243",
+        16
+      ],
+      [
+        "0x609f0982",
+        "0xbcb6c80e0",
+        13
+      ],
+      [
+        "0x60b6d098bf",
+        "0x3d8449d211",
+        21
+      ],
+      [
+        "0x60d6b06afc",
+        "0x294ceb4205",
+        32
+      ],
+      [
+        "0x60f09695a5",
+        "0xa6af0a9aa",
+        6
+      ],
+      [
+        "0x6187dc4076",
+        "0x920496743",
+        20
+      ],
+      [
+        "0x641dd3161f",
+        "0xb6b60d25",
+        23
+      ],
+      [
+        "0x66969603ff",
+        "0x50ff95ada8",
+        9
+      ],
+      [
+        "0x669696ffc0",
+        "0x5ff095a1ab",
+        8
+      ],
+      [
+        "0x66b0b0fca6",
+        "0x348d294634",
+        34
+      ],
+      [
+        "0x66bfbf0f59",
+        "0x1cd61727a0",
+        35
+      ],
+      [
+        "0x66d0d0f2da",
+        "0x2c497b1610",
+        23
+      ],
+      [
+        "0x66dfdf0125",
+        "0x38eeb687b8",
+        22
+      ],
+      [
+        "0x66f6f60d83",
+        "0xafa9fa3e8",
+        14
+      ],
+      [
+        "0x66f6f6f1bc",
+        "0x5056f5014",
+        17
+      ],
+      [
+        "0x6781bcd850",
+        "0x29290f59",
+        35
+      ],
+      [
+        "0x68fb362db8",
+        "0x619dc6401f",
+        19
+      ],
+      [
+        "0x6920d0f527",
+        "0x7d871d6770",
+        20
+      ],
+      [
+        "0x694fbf08a4",
+        "0x4114816acf",
+        32
+      ],
+      [
+        "0x6960f6e5b",
+        "0x55959503c0",
+        7
+      ],
+      [
+        "0x6b0d66ac3",
+        "0x43d68d81ca",
+        33
+      ],
+      [
+        "0x6bf8c6e18b",
+        "0x6d91367c10",
+        19
+      ],
+      [
+        "0x6d0496341",
+        "0x118484c2da",
+        22
+      ],
+      [
+        "0x6d0b69880",
+        "0x6be2dce1e2",
+        20
+      ],
+      [
+        "0x6d14b37e05",
+        "0x6b0d69503",
+        32
+      ],
+      [
+        "0x6f49df9082",
+        "0x4411113eda",
+        23
+      ],
+      [
+        "0x6f60f69c24",
+        "0x5505050e7c",
+        15
+      ],
+      [
+        "0x6f69067d9",
+        "0x509005abea",
+        18
+      ],
+      [
+        "0x6f6f01bc",
+        "0x4734c7f18f",
+        17
+      ],
+      [
+        "0x6fb6df6743",
+        "0x16dc878389",
+        20
+      ],
+      [
+        "0x6fd6bf9500",
+        "0x3ee8d6e3a1",
+        33
+      ],
+      [
+        "0x6fff9699a6",
+        "0x595005a56",
+        11
+      ],
+      [
+        "0x709cc7832f",
+        "0x6f9005bd",
+        18
+      ],
+      [
+        "0x733c94b1af",
+        "0x37943c7250",
+        0
+      ],
+      [
+        "0x74c734f270",
+        "0x6f6f0243",
+        16
+      ],
+      [
+        "0x778d8dc0a6",
+        "0x6b0296ec2",
+        34
+      ],
+      [
+        "0x7797973f0f",
+        "0x4c3c9785a1",
+        2
+      ],
+      [
+        "0x779797c330",
+        "0x7ccc94b5ad",
+        5
+      ],
+      [
+        "0x77c4c4c27c",
+        "0xf606f0e40",
+        15
+      ],
+      [
+        "0x77dedec1ea",
+        "0x5107a5c42",
+        25
+      ],
+      [
+        "0x794c81e3ad",
+        "0x6fd6bf6ac0",
+        32
+      ],
+      [
+        "0x7a7a0dea",
+        "0x751cd2d52f",
+        25
+      ],
+      [
+        "0x7aecd2d12d",
+        "0x5f851f5840",
+        27
+      ],
+      [
+        "0x7c3394bdac",
+        "0x3497cc425c",
+        1
+      ],
+      [
+        "0x7c4911b7b8",
+        "0x66dfdf02da",
+        23
+      ],
+      [
+        "0x7c9037bf20",
+        "0xf6090f581",
+        18
+      ],
+      [
+        "0x7ceab2b534",
+        "0x558f8f0056",
+        28
+      ],
+      [
+        "0x7d871d98b0",
+        "0xb6490adb",
+        21
+      ],
+      [
+        "0x7d9d076719",
+        "0x1404919725",
+        19
+      ],
+      [
+        "0x7e9ef75715",
+        "0x24f492a729",
+        12
+      ],
+      [
+        "0x7ed7bea9f0",
+        "0x15ea0857",
+        30
+      ],
+      [
+        "0x83893b72d",
+        "0x60600d83",
+        14
+      ],
+      [
+        "0x857a0614",
+        "0x24d2b45870",
+        26
+      ],
+      [
+        "0x858501ea",
+        "0x514b1c88b4",
+        24
+      ],
+      [
+        "0x906f0a42",
+        "0x7c79c40d0",
+        18
+      ],
+      [
+        "0x90900dbc",
+        "0x406334b8e2",
+        16
+      ],
+      [
+        "0x9090f183",
+        "0x4360c488ee",
+        15
+      ],
+      [
+        "0x909609425",
+        "0x5f9f05a7e9",
+        13
+      ],
+      [
+        "0x920499883",
+        "0x7cb611bfb9",
+        21
+      ],
+      [
+        "0x940296ac0",
+        "0x687eb32fad",
+        32
+      ],
+      [
+        "0x940d69101",
+        "0x22e8e8c0a6",
+        34
+      ],
+      [
+        "0x969ff9da7",
+        "0x559595ffff",
+        10
+      ],
+      [
+        "0x9f9f027c",
+        "0x74c7340db0",
+        14
+      ],
+      [
+        "0xa6a0fadab",
+        "0x669696fc3f",
+        7
+      ],
+      [
+        "0xa70eaa9c3",
+        "0x7c15b2bd35",
+        30
+      ],
+      [
+        "0xae07a5840",
+        "0x582d131d2d",
+        27
+      ],
+      [
+        "0xae085a381",
+        "0x114848c1ea",
+        25
+      ],
+      [
+        "0xafa60a7e9",
+        "0x6f9ff69425",
+        13
+      ],
+      [
+        "0xb6b60eda",
+        "0x46d31d29e0",
+        22
+      ],
+      [
+        "0xcc03cc300",
+        "0x33c0c0f0f0",
+        3
+      ],
+      [
+        "0xcccc0330",
+        "0x30c330c0fc",
+        4
+      ],
+      [
+        "0xd3d031f07",
+        "0xff0401",
+        11
+      ],
+      [
+        "0xd6290758",
+        "0x1481146af0",
+        33
+      ],
+      [
+        "0xd6d600a6",
+        "0x62ebbc89f8",
+        35
+      ],
+      [
+        "0xe3ef32f0b",
+        "0xf00f07c1",
+        6
+      ],
+      [
+        "0xea1507a8",
+        "0x184128a9f0",
+        30
+      ],
+      [
+        "0xeaea0056",
+        "0x5d2883b507",
+        28
+      ],
+      [
+        "0xf000f03c3",
+        "0x11cdcdc000",
+        9
+      ],
+      [
+        "0xf00f0f802",
+        "0x1c0f312f38",
+        6
+      ],
+      [
+        "0xf0f003c0",
+        "0x2c20ce8fa",
+        7
+      ],
+      [
+        "0xf0f0fc0",
+        "0x1dc13d0030",
+        8
+      ],
+      [
+        "0xf0f0ffff",
+        "0x3dcdffd735",
+        10
+      ],
+      [
+        "0xf606ff180",
+        "0x4437373dbc",
+        17
+      ],
+      [
+        "0xf6f9f0581",
+        "0x38c86f8320",
+        18
+      ],
+      [
+        "0xf909ff240",
+        "0x77c4c4c183",
+        14
+      ],
+      [
+        "0xf9f6f0641",
+        "0x34c49f4310",
+        13
+      ],
+      [
+        "0xfc3f",
+        "0x3ece0fe739",
+        7
+      ],
+      [
+        "0xff000bfe",
+        "0x2ffcc2d307",
+        11
+      ],
+      [
+        "0xff000fbc2",
+        "0x2cff321f34",
+        11
+      ],
+      [
+        "0xff0083e",
+        "0x1f0cc1e30b",
+        6
+      ],
+      [
+        "0xff0ff0003",
+        "0x22cecec3c0",
+        8
+      ],
+      [
+        "0xffff0c00",
+        "0x2ec23e03f0",
+        9
+      ]
+    ],
+    "projective_sign_hamming_distance": {
+      "20": 216
+    }
+  },
+  "boundary": "For a simple-root coordinate of a root chamber, assign valuation one and give the other coordinates valuation zero. For an adjacent pair do this to both coordinates. Positivity prevents cancellation. Their A1 and A2 flats map to the indicated A and B rays."
+}
