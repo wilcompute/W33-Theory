@@ -91,3 +91,20 @@ Ren, Shaw and Sturmfels: the rays of trop(Y⁰) are the images of the 750 rays o
 The rays produced are exactly the 36 + 40. A random 0/1 matrix with 9 ones per row produces 750 distinct images instead (control).
 
 **Status.** The image is *contained in* the reconstructed fan and produces exactly its rays. Not shown here: that the images of Bergman cones cover all 1215 maximal cones (that needs the 142,560 maximal nested sets), and that this incidence matrix equals the Yoshida matrix rather than merely being equivalent to it.
+
+## Addendum 3: each pezzotope is a double-six with a synthematic total; the 432 regions double-cover the corpus's 216 codewords (`w33_pezzotope_gosset.py`)
+
+The 27 lines of the cubic surface are built in the same E8 model: E8 roots of a fixed A2 class, projected to E6. Meeting pairs (135) and skew pairs (216) are told apart by the inner product. Against a pentad's 10 roots, the 27 lines **always split 12 + 15**. For **all 432** pentads:
+1. **The 12 lines form a double-six.**
+2. Each of those 12 lines pairs non-trivially with 5 roots r_ab, and these 5 duads form a **Hamiltonian 5-cycle of K5**. The 12 lines are the 12 Hamiltonian cycles.
+3. **The two sixes are the two A5-orbits of 5-cycles.** The pentad's S5 is the exotic, transitive S5 inside S6, the structure behind S6's outer automorphism, and it swaps the two sixes.
+4. Each of the other 15 lines sees a 4-cycle of K5 (missing vertex m, one of 3 four-cycles). Grouped by the missing vertex m, the 15 lines give 5 triples of duads of the six. **They are 5 synthemes forming a synthematic total**, and the m-th syntheme belongs to the m-th cube facet.
+5. **The (double-six, total) pairs number exactly 216, each carried by exactly 2 pezzotopes:** 432 = 2 × 216, and each double-six carries 12 = 2 × 6.
+
+**Reading.** The 432 positive-geometry regions of the moduli space of marked cubic surfaces (the E6 pezzotopes of Early, Geiger, Panizzut, Sturmfels and Yun) double-cover the 216 synthematic totals of the 36 double-sixes. Pass 12523 identified these with the corpus's **216 q = 9 even-set codewords**, which fibre over the Hesse SIC and MUB structure (Passes 12518–12523). In each pezzotope:
+- its 5 cube facets are the 5 synthemes of the total;
+- its 10 associahedron facets are 10 roots, i.e. 10 double-sixes, labelled by the edges of K5.
+
+**Negative result recorded.** The pezzotopes are *not* the 432 four-simplices of the Gosset polytope 2₂₁. No line is orthogonal to all 10 roots, and the stabilisers differ: the Gosset simplex's S5 fixes a six, while the pezzotope's swaps the sixes. The equal count 432 is a coincidence of orbit sizes, 51840/120 for two non-conjugate S5's.
+
+**Status.** Exact on all 432 regions. The match to Pass 12523's codewords is at the level of "totals of double-sixes", the objects that pass identified; a codeword-by-codeword comparison with its data files is still to be done. What distinguishes the two pezzotopes over each codeword is not determined here.
