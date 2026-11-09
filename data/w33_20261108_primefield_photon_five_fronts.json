@@ -1,0 +1,280 @@
+{
+  "E6": {
+    "caveat": "Flat-moduli bound pertains to this isolated quartic potential, not a complete gauged E6 Lagrangian. A VEV rephasing might be an anomalous field redefinition; it is NOT by itself physical theta-bar, and no anomaly or radiative CP cancellation is claimed.",
+    "conditional_lower_bound_if_extra_U3_flavor_is_gauged": 390,
+    "determinant_log_magnitude_invariance_error": 2.4158453015843406e-13,
+    "determinant_ratio_law": "Under Xi[:,0]->exp(i theta)Xi[:,0], det(M+U T U^T) -> exp(-2i theta) times det, at corank=3 with U=conj(Xi) and positive coefficient T.",
+    "determinant_ratio_phase_error": 1.0110499417548692e-13,
+    "lower_bound_unlifted_flat_moduli_after_E6_quotient": 399,
+    "minimum_manifold": "V_3(C^81)",
+    "native_rank_after": 81,
+    "native_rank_before": 78,
+    "native_signed_records": 1620,
+    "potential": "Tr((Xi^dagger Xi-v^2 I3)^2) with lambda>0",
+    "potential_invariant_phase_rotation_of_first_spurion": 0.4487989505128276,
+    "real_dimensions": 477,
+    "status": "E6_POTENTIAL_HAS_GAUGE_INEQUIVALENT_FLAT_MODULI_AND_UNPINNED_CP_PHASE",
+    "upper_bound_E6_gauge_orbit_dimension": 78
+  },
+  "cosmology": {
+    "S7_S8_original_shear_claims_withdrawn": true,
+    "comparison_scope": "Replays already committed patched reference spectra and fixed-background nuisance-refitted chi2; no raw KiDS/DES likelihood or cross-survey covariance was executed. 4% coupled-model residual vs fluid is NOT a validation of uncalibrated coupled-dark-matter Halofit physics.",
+    "fixed_background_pairwise_chi2": {
+      "DES_Y3": {
+        "original_CPL_minus_fading": 3.099677854248341,
+        "patched_CPL_minus_fading": -0.6436234537538894,
+        "patched_min_chi2_pairwise_absolute_difference": 0.6436234537538894,
+        "shift_due_to_recomputed_model_comparison": -3.7433013080022306
+      },
+      "KiDS_Legacy": {
+        "original_CPL_minus_fading": 4.686205771511283,
+        "patched_CPL_minus_fading": -0.28040066798615726,
+        "patched_min_chi2_pairwise_absolute_difference": 0.28040066798615726,
+        "shift_due_to_recomputed_model_comparison": -4.96660643949744
+      }
+    },
+    "heldout_likelihood_recomputed": false,
+    "lambda_control_cells": [
+      {
+        "k": "0.1",
+        "original_scf_to_Lambda": 1.0387722260691508,
+        "patched_scf_to_Lambda": 1.000000168234212,
+        "z": "0.01"
+      },
+      {
+        "k": "1.0",
+        "original_scf_to_Lambda": 0.7143594063267252,
+        "patched_scf_to_Lambda": 1.0000006268034216,
+        "z": "0.01"
+      },
+      {
+        "k": "3.0",
+        "original_scf_to_Lambda": 0.41675662343061765,
+        "patched_scf_to_Lambda": 1.0000001444833977,
+        "z": "0.01"
+      },
+      {
+        "k": "0.1",
+        "original_scf_to_Lambda": 1.014310743960959,
+        "patched_scf_to_Lambda": 0.999999930747799,
+        "z": "1.0"
+      },
+      {
+        "k": "1.0",
+        "original_scf_to_Lambda": 0.9776499534283571,
+        "patched_scf_to_Lambda": 0.9999982114892594,
+        "z": "1.0"
+      },
+      {
+        "k": "3.0",
+        "original_scf_to_Lambda": 0.8490434954715801,
+        "patched_scf_to_Lambda": 0.9999980343417598,
+        "z": "1.0"
+      }
+    ],
+    "matched_fluid_max_deviation": {
+      "exp_neg": {
+        "original": 0.5697336037711231,
+        "patched": 0.00039959464225503005
+      },
+      "free_neg": {
+        "original": 0.5718294643123019,
+        "patched": 0.0391836713716085
+      },
+      "free_pos": {
+        "original": 0.5751803101734205,
+        "patched": 0.04389003549827941
+      }
+    },
+    "source": "analysis/PASS12632_HALOFIT_SCF_BUG.md",
+    "status": "HALOFIT_HMCODE_TWO_PRESCRIPTION_CHECK_AND_WITHDRAWN_HELDOUT_INFERENCE",
+    "two_nonlinear_prescriptions_at_z001_k1": {
+      "HMcode_fading_over_CPL_minus_one": 0.01885903533526978,
+      "HMcode_scalar_LCDM_control_relative_error": 0.002877031143388331,
+      "Halofit_fading_over_CPL_minus_one": 0.006217889286438405,
+      "physical_scope": "Two patched CLASS prescriptions; neither is calibrated as a general interacting-dark-matter simulation or a fresh shear likelihood."
+    }
+  },
+  "evidence_boundary": "Exact finite algebra, native tensor replay, ideal single-photon permutation, and sourced corrected Halofit control only. No predictive TOE, two-polarization continuum, physical E6 SM vacuum, scalable single photon quantum computer, or new cosmological evidence.",
+  "photonic": {
+    "Fourier_control_basis_readout_distribution_after": [
+      0.5886814810396594,
+      0.02010245973803057,
+      0.39121605922230995
+    ],
+    "Fourier_control_basis_readout_distribution_before": [
+      0.6666666666666666,
+      0.16666666666666677,
+      0.16666666666666652
+    ],
+    "intensity_blindness_to_direct_ninth_root_phase": true,
+    "intra_particle_qutrit_nonseparability_Schmidt_rank": 3,
+    "logical_encoding": "|a,b,c> represented by one photon in rail 9a+3b+c",
+    "mapping": "(a,b,c)->(a,b+a mod3,c)",
+    "max_phase_sensitive_readout_difference": 0.22454939255564343,
+    "minimum_arbitrary_rail_swap_count": 12,
+    "mode_count": 27,
+    "ninth_root_phase_required_nontrivial_rails": 18,
+    "path_csum_deterministic_conditional_on_lossless_routing": true,
+    "permutation_cycle_lengths": {
+      "1": 9,
+      "3": 6
+    },
+    "physical_distinction": "Controlled-SUM of tensor factors inside ONE photon is a passive unitary rail permutation; independent photons' entangling gates are NOT implemented by this argument. Destructive photodetection of an ancilla mode also destroys the same photon; direct T9 rail phases avoid the ideal magic-state measurement.",
+    "rail_requirement_by_logical_qutrit_count": {
+      "1": 3,
+      "10": 59049,
+      "2": 9,
+      "3": 27,
+      "4": 81,
+      "5": 243,
+      "8": 6561
+    },
+    "scalability_limit": "n logical qutrit factors encoded in orthogonal single-photon modes require >=3^n distinguishable mode states. Passive routing does not evade this Hilbert-space counting bound.",
+    "status": "IDEAL_ONE_PHOTON_27_RAIL_CSUM_WITH_EXPLICIT_RESOURCE_BOUND"
+  },
+  "prime_Maxwell": {
+    "Fourier_proof": "K_square(k)=||a(k)||^2 I-a(k)a(k)^*, a_i=e^(2pi i k.dot(d_i)/p)-1, rank=p at all k !=0; four uniform modes remain at p3. q3 triangular p-gons add eigenvalue p only when k.dot(d_i)=0.",
+    "limits": "This is the unprojected complete-null-direction square model and fixed-coordinate p->infinity identification; additional gauge constraints, Wilson/matter sectors, anisotropic stiffness, subquotients or nontrivial embeddings might alter the conclusion.",
+    "natural_full_null_direction_family": [
+      {
+        "edge_directions": 4,
+        "exact_lateral": 6,
+        "exact_soft": 8.999999999999998,
+        "lateral_over_soft": 0.6666666666666669,
+        "local_square_Bloch_lateral_axis": 6.0,
+        "local_square_Bloch_quadratic_axis": 8.999999999999998,
+        "local_square_Bloch_soft_axis": 8.999999999999998,
+        "nonzero_momentum_transverse_branch_count": 3,
+        "p": 3,
+        "physical_nonzero_k_modes": 78,
+        "quadratic_Gauss_lower_bound": 2.5358983848622456,
+        "square_only_global_harmonics": 4,
+        "vertices": 27
+      },
+      {
+        "edge_directions": 6,
+        "exact_lateral": 10,
+        "exact_soft": 6.9098300562505255,
+        "lateral_over_soft": 1.447213595499958,
+        "local_square_Bloch_lateral_axis": 10.0,
+        "local_square_Bloch_quadratic_axis": 6.909830056250526,
+        "local_square_Bloch_soft_axis": 6.9098300562505255,
+        "nonzero_momentum_transverse_branch_count": 5,
+        "p": 5,
+        "physical_nonzero_k_modes": 620,
+        "quadratic_Gauss_lower_bound": 5.52786404500042,
+        "square_only_global_harmonics": 6,
+        "vertices": 125
+      },
+      {
+        "edge_directions": 8,
+        "exact_lateral": 14,
+        "exact_soft": 5.271142773977729,
+        "lateral_over_soft": 2.6559705552113644,
+        "local_square_Bloch_lateral_axis": 14.0,
+        "local_square_Bloch_quadratic_axis": 14.753020396282531,
+        "local_square_Bloch_soft_axis": 5.271142773977729,
+        "nonzero_momentum_transverse_branch_count": 7,
+        "p": 7,
+        "physical_nonzero_k_modes": 2394,
+        "quadratic_Gauss_lower_bound": 8.708497377870819,
+        "square_only_global_harmonics": 8,
+        "vertices": 343
+      },
+      {
+        "edge_directions": 12,
+        "exact_lateral": 22,
+        "exact_soft": 3.4924222777140135,
+        "lateral_over_soft": 6.299352784566543,
+        "local_square_Bloch_lateral_axis": 22.0,
+        "local_square_Bloch_quadratic_axis": 22.31749293433764,
+        "local_square_Bloch_soft_axis": 3.4924222777140135,
+        "nonzero_momentum_transverse_branch_count": 11,
+        "p": 11,
+        "physical_nonzero_k_modes": 14630,
+        "quadratic_Gauss_lower_bound": 15.3667504192892,
+        "square_only_global_harmonics": 12,
+        "vertices": 1331
+      },
+      {
+        "edge_directions": 18,
+        "exact_lateral": 34,
+        "exact_soft": 2.2959442002519026,
+        "lateral_over_soft": 14.808722266102828,
+        "local_square_Bloch_lateral_axis": 34.0,
+        "local_square_Bloch_quadratic_axis": 25.88884428995597,
+        "local_square_Bloch_soft_axis": 2.2959442002519026,
+        "nonzero_momentum_transverse_branch_count": 17,
+        "p": 17,
+        "physical_nonzero_k_modes": 83504,
+        "quadratic_Gauss_lower_bound": 25.753788748764677,
+        "square_only_global_harmonics": 18,
+        "vertices": 4913
+      },
+      {
+        "edge_directions": 32,
+        "exact_lateral": 62,
+        "exact_soft": 1.269143642345342,
+        "lateral_over_soft": 48.851838303681475,
+        "local_square_Bloch_lateral_axis": 62.0,
+        "local_square_Bloch_quadratic_axis": 62.04094011749501,
+        "local_square_Bloch_soft_axis": 1.269143642345342,
+        "nonzero_momentum_transverse_branch_count": 31,
+        "p": 31,
+        "physical_nonzero_k_modes": 923490,
+        "quadratic_Gauss_lower_bound": 50.864471274339955,
+        "square_only_global_harmonics": 32,
+        "vertices": 29791
+      }
+    ],
+    "q3_gradient_modes": 26,
+    "q3_square_only_boundary_rank": 78,
+    "q3_square_only_harmonic_modes": 4,
+    "q3_triangle_plus_square_spectral_multiplicities": {
+      "12": 26,
+      "3": 4,
+      "6": 12,
+      "9": 40
+    },
+    "rigorous_asymptotic": "Soft k=(1,0,0): lambda=2p(1-cos(2pi/p))~4pi^2/p; lateral k=(0,1,0): lambda=2p; quadratic k=(0,0,1): lambda>=2(p-sqrt(p)). No common scalar stiffness rescales all three to isotropic 3D massless Maxwell; p extra transverse branches remain at nonzero k.",
+    "status": "EXACT_PRIME_BLOCH_STRUCTURAL_DISPERSION_BOUND"
+  },
+  "quantum_clock": {
+    "condition": "Fixed principal continuous-time Hermitian logarithm H(k)=(2pi/p)*centered(det(k)) and translation-invariant convolutions.",
+    "data": [
+      {
+        "flat_probability": 0.037037037037037035,
+        "max_flat_error": 3.469446951953614e-17,
+        "minimum_relative_offdiagonal_Frobenius_distance_for_fixed_principal_H": 0.6,
+        "off_null_hopping_count": 18,
+        "off_null_possible_count": 18,
+        "p": 3,
+        "principal_log_off_null_energy_fraction": 0.36
+      },
+      {
+        "flat_probability": 0.008,
+        "max_flat_error": 6.938893903907228e-18,
+        "minimum_relative_offdiagonal_Frobenius_distance_for_fixed_principal_H": 0.8420753583206845,
+        "off_null_hopping_count": 84,
+        "off_null_possible_count": 100,
+        "p": 5,
+        "principal_log_off_null_energy_fraction": 0.7090909090909091
+      },
+      {
+        "flat_probability": 0.0029154518950437317,
+        "max_flat_error": 3.0357660829594124e-18,
+        "minimum_relative_offdiagonal_Frobenius_distance_for_fixed_principal_H": 0.9367769320431429,
+        "off_null_hopping_count": 258,
+        "off_null_possible_count": 294,
+        "p": 7,
+        "principal_log_off_null_energy_fraction": 0.8775510204081632
+      }
+    ],
+    "scope": "Other 2pi spectral branch lifts, other flat unitaries and time-dependent/null-supported products are NOT excluded. An exact finite Gaussian Hadamard is already known in the repo; the new datum is the energetic projection penalty.",
+    "status": "EXACT_FLAT_CHIRP_WITH_PRINCIPAL_BRANCH_LOCALITY_PENALTY",
+    "theorem": "Fourier projection onto supported null displacements minimizes Frobenius distance for this fixed H, so energy fraction on excluded links is the exact squared relative projection error."
+  },
+  "schema": "w33.20261108.primefield_photon_five_fronts.v1",
+  "sixth_connection": "Projective null direction count p+1 yields p transverse edge modes at nonzero k, not two; single-photon SUM does not require photon-photon interactions but incurs 3^n modes."
+}
