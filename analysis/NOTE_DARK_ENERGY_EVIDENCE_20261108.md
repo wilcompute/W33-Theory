@@ -1,5 +1,7 @@
 # What the data say about evolving dark energy (one page, 2026-11-08)
 
+> **PARTIAL RETRACTION — PASS12632, 2026-11-08.** Every post-Pass12629 scalar-field cosmic-shear, joint-held-out, and S8 power/geometry comparison below is WITHDRAWN due to the CLASS/Halofit scalar-field nonlinear-power bug. Expansion-only BAO/SN statements from earlier passes are distinct, though their significance also needs calibrated inference. Do not treat prior shear claims as established. See `analysis/PASS12632_HALOFIT_SCF_BUG.md`.
+
 Claude track, Passes 12620–12630. All numbers come from committed JSON certificates in `analysis/toe_uv/` and `data/`. **Not a theory of everything.**
 
 **1. Evolving dark energy beats ΛCDM out of sample, on two supernova compilations.**

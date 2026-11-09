@@ -1,5 +1,7 @@
 # Five physics gates, plus H27: exact extensions and empirical boundary
 
+> **CORRECTION / PHYSICAL WITHDRAWAL — PASS12632, 2026-11-08.** Section 5's DES/KiDS shear and S8 Shapley *model ranking* is withdrawn because it used the defective CLASS scalar-field nonlinear spectrum. The old chi-square arithmetic is only a historical replay, NOT valid physical evidence. Sections 1–4 and 6 retain their separately scoped mathematical/synthetic status. See `analysis/PASS12632_HALOFIT_SCF_BUG.md` and `analysis/PASS20261108_FIVE_PHYSICAL_FALSIFIERS.md`.
+
 Date: 2026-11-08. Producer: `analysis/w33_20261108_five_gate_extensions.py`. Regression: `tests/test_w33_20261108_five_gate_extensions.py`. Machine-generated certificate: `data/w33_20261108_five_gate_extensions.json`.
 
 **Status:** Five independent follow-on physics gates executed against the *native* W33 repository plus a sixth exact-arithmetic H27 orbit audit. Geometry and E6 claims below are mathematical identities or numerical consistency witnesses, not a constructed photon, confirmed unification theory, successful strong-CP solution, or detection of new cosmology. The photonic study is explicitly synthetic; the shear study replays existing fixed-background certificates, not raw survey likelihoods.

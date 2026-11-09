@@ -1,0 +1,40 @@
+name: W33 post-Halofit five physical falsifiers
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "analysis/w33_20261108_five_physical_falsifiers.py"
+      - "tests/test_w33_20261108_five_physical_falsifiers.py"
+      - "data/w33_20261108_five_physical_falsifiers.json"
+      - ".github/workflows/w33_20261108_five_physical_falsifiers.yml"
+  push:
+    paths:
+      - "analysis/w33_20261108_five_physical_falsifiers.py"
+      - "tests/test_w33_20261108_five_physical_falsifiers.py"
+      - "data/w33_20261108_five_physical_falsifiers.json"
+      - ".github/workflows/w33_20261108_five_physical_falsifiers.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  native-five-front-falsifiers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install finite geometry, algebra and tests
+        run: python -m pip install --disable-pip-version-check numpy scipy sympy pytest
+      - name: Verify post-retraction five-front contract
+        run: python -m pytest -q tests/test_w33_20261108_five_physical_falsifiers.py
+      - name: Independently reproduce five-front numerical certificate
+        run: python analysis/w33_20261108_five_physical_falsifiers.py --output data/w33_20261108_five_physical_falsifiers_ci.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-posthalofit-falsifiers
+          path: data/w33_20261108_five_physical_falsifiers_ci.json
+          retention-days: 30

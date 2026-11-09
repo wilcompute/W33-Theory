@@ -1,5 +1,7 @@
 # Five physics gates: gauge dispersion, local clock, native E6 mass lifting, photonic magic, and cosmology evidence
 
+> **CORRECTION / PHYSICAL WITHDRAWAL — PASS12632, 2026-11-08.** Section 5's DES/KiDS shear ranking and combined S8-derived model scores are withdrawn following a CLASS/Halofit scalar-field nonlinear-power bug. The old numbers reproduce prepatch file arithmetic only and must NOT be cited as likelihood evidence or model preference. Sections 1–4 remain as separately scoped finite mathematics and synthetic controls. See `analysis/PASS12632_HALOFIT_SCF_BUG.md`.
+
 **Date:** 2026-11-08. **Code:** analysis/w33_20261108_five_physics_gates.py. **Tests:** tests/test_w33_20261108_five_physics_gates.py. **CI:** .github/workflows/w33_20261108_five_physics_gates.yml. **Certificate:** data/w33_20261108_five_physics_gates.json. **Desktop validation:** 16/16 focused tests passed in a separate temporary directory, with the original dirty repo checkout untouched.
 
 **Claim boundary:** These are independent finite mathematical results, conditional physical/EFT constructions, calibrated synthetic tests, and a re-audit of existing likelihood scores. None establishes a quantum theory of gravity, measured SM masses/couplings, a working physical photon, a built fault-tolerant photonic computer, or evidence for a completed TOE.

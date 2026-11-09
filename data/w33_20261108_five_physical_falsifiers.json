@@ -1,0 +1,203 @@
+{
+  "clock": {
+    "best_24_parameter_MSE": 1.1357675443700142e-05,
+    "best_coefficients": [
+      -2.5769852026701674,
+      -2.6631317899727365,
+      -1.1582255052152457,
+      -1.5204206184500897,
+      1.5516026362943818,
+      1.8944439303182092,
+      0.8063988353031443,
+      0.10720777296677353,
+      -2.11313152213278,
+      -2.4810354905897682,
+      -0.7518480609252326,
+      -1.7098927982756604,
+      0.13362570403852747,
+      -0.056572871709283414,
+      0.2678569535565529,
+      0.5698383625764953,
+      0.15845923623753197,
+      -0.27754595325199705,
+      -0.037712373212928765,
+      0.22719156235208288,
+      0.16765337646916165,
+      0.601877772150956,
+      -0.03220391673585338,
+      0.15388799499317973
+    ],
+    "best_iteration_count": 31,
+    "best_max_probability_residual": 0.007466811859492971,
+    "conjugate_hopping_pairs": 12,
+    "hilbert_dimension": 125,
+    "improvement_factor": 1.9745338359555418,
+    "independent_real_hopping_parameters": 24,
+    "initial_recomputed_MSE": 2.2426114461387317e-05,
+    "initial_six_real_parameter_MSE": 2.24261144613873e-05,
+    "optimizer": "Four deterministic L-BFGS-B starts, exact FFT objective + checked analytic gradient",
+    "p": 5,
+    "projective_null_directions": 6,
+    "proof_boundary": "Local optimization is not a proof of global impossibility or a physical qutrit photonic clock. Hamiltonian is translation invariant, complex Hermitian and null supported; no translation-breaking/time-dependent search.",
+    "status": "NUMERICAL_HEURISTIC_COMPLEX_NULL_LOCALITY_SEARCH"
+  },
+  "cosmology": {
+    "correctness_statement": "The patched CLASS control numerically matches ordinary LCDM/nonlinear halofit at six measured k,z cells; it DOES NOT independently rerun DES or KiDS likelihoods. All pre-patch S8/shear rankings remain withdrawn.",
+    "external_data": "KiDS-Legacy extended cosmology A&A 709 A82 (2026), DOI 10.1051/0004-6361/202558581",
+    "fail_closed": true,
+    "failed_previous_model_assessment": [
+      "data/w33_20261108_S8_hybrid_shapley_audit.json",
+      "data/w33_pass12631_kids_heldout.json",
+      "analysis/PASS20261108_FIVE_GATE_EXTENSIONS.md section 5",
+      "analysis/NOTE_DARK_ENERGY_EVIDENCE_20261108.md shear comparison",
+      "analysis/PASS20261108_FIVE_PHYSICS_GATES.md section 5"
+    ],
+    "original_and_patched_controls": [
+      {
+        "k_h_per_Mpc": "0.1",
+        "original_scalar_to_lambda_ratio": 1.0387722260691508,
+        "patched_relative_error": 1.6823421189471333e-07,
+        "patched_scalar_to_lambda_ratio": 1.000000168234212,
+        "redshift": "0.01"
+      },
+      {
+        "k_h_per_Mpc": "1.0",
+        "original_scalar_to_lambda_ratio": 0.7143594063267252,
+        "patched_relative_error": 6.268034216105889e-07,
+        "patched_scalar_to_lambda_ratio": 1.0000006268034216,
+        "redshift": "0.01"
+      },
+      {
+        "k_h_per_Mpc": "3.0",
+        "original_scalar_to_lambda_ratio": 0.41675662343061765,
+        "patched_relative_error": 1.444833976904647e-07,
+        "patched_scalar_to_lambda_ratio": 1.0000001444833977,
+        "redshift": "0.01"
+      },
+      {
+        "k_h_per_Mpc": "0.1",
+        "original_scalar_to_lambda_ratio": 1.014310743960959,
+        "patched_relative_error": 6.925220097375728e-08,
+        "patched_scalar_to_lambda_ratio": 0.999999930747799,
+        "redshift": "1.0"
+      },
+      {
+        "k_h_per_Mpc": "1.0",
+        "original_scalar_to_lambda_ratio": 0.9776499534283571,
+        "patched_relative_error": 1.7885107406190315e-06,
+        "patched_scalar_to_lambda_ratio": 0.9999982114892594,
+        "redshift": "1.0"
+      },
+      {
+        "k_h_per_Mpc": "3.0",
+        "original_scalar_to_lambda_ratio": 0.8490434954715801,
+        "patched_relative_error": 1.9656582401772482e-06,
+        "patched_scalar_to_lambda_ratio": 0.9999980343417598,
+        "redshift": "1.0"
+      }
+    ],
+    "patch_change_training_chi2_max_less_than_1p1": true,
+    "source_notice": "analysis/PASS12632_HALOFIT_SCF_BUG.md",
+    "status": "WITHDRAWN_SHEAR_CLAIMS_AND_REPRODUCED_NONLINEAR_CONTROL"
+  },
+  "e6": {
+    "expected_normal_coefficient": 5.25,
+    "mass_det_factorization_log_error": 2.842170943040401e-14,
+    "mass_det_phase_radians": 3.1355887323941416,
+    "missing_physics": "The potential alone leaves 477 flat real directions; it does not select an isolated E6-breaking SM vacuum, enforce anomaly-free chiral reps, or protect strong CP at loop order.",
+    "native_mass_rank_after": 81,
+    "native_mass_rank_before": 78,
+    "normal_Gram_constraints": 9,
+    "normal_quadratic_numerical_coefficient": 5.250356260666847,
+    "potential": "V=lambda*Tr[(Xi^dagger Xi-v^2 I_3)^2], lambda>0, Xi in C^(81x3)",
+    "real_scalar_components": 486,
+    "stable_radial_hessian_eigenvalue_for_lambda_v2_one": 8,
+    "status": "EXACT_INVARIANT_SCALAR_POTENTIAL_VACUUM_DEGENERACY_AND_MASS_RANK",
+    "symmetries": "Invariant under any unitary 81-dimensional representation acting on Xi at left and U(3) flavor acting at right; spurion couplings need not preserve full U(3).",
+    "tangent_quadratic_numerical_coefficient": 1.066406298794055e-08,
+    "vacuum_flat_real_dimension": 477,
+    "zero_potential_vacuum_manifold": "V_3(C^81), complex Stiefel manifold"
+  },
+  "maxwell": {
+    "additional_translation_squares": 162,
+    "completed_boundary_rank": 82,
+    "completed_harmonic_dimension": 0,
+    "edges": 108,
+    "exact_integer_annihilator": "K(K-3I)(K-6I)(K-9I)(K-12I)=0",
+    "gradient_rank": 26,
+    "magnetic_spectrum": {
+      "0": 26,
+      "3": 4,
+      "6": 12,
+      "9": 40,
+      "12": 26
+    },
+    "modular_rank_prime": 101,
+    "modular_rank_witness": 82,
+    "moment_checks": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "original_harmonic_dimension": 46,
+    "original_triangles": 36,
+    "physical_gap_in_equal_stiffness_units": 3,
+    "square_unique_count": 162,
+    "status": "EXACT_NATIVE_LOCAL_SQUARE_CURVATURE_COMPLETION",
+    "triangle_boundary_rank": 36,
+    "vertices": 27,
+    "warning": "Local squares cure flat H1 but gap all 82 gauge-invariant real modes. No two gapless transverse photons, charged matter, or continuum limit is established."
+  },
+  "photonic": {
+    "circuit": "Use SUM^-1 (data control, ancilla target), measure ancilla in Z, feedforward C_m=diag(t_x/t_(x+m)), m=0,1,2",
+    "correction_outcomes": [
+      {
+        "correction_is_qutrit_diagonal_Clifford": true,
+        "outcome": 0,
+        "phase_exponents_mod_nine": [
+          0,
+          0,
+          0
+        ],
+        "probability": 0.3333333333333333
+      },
+      {
+        "correction_is_qutrit_diagonal_Clifford": true,
+        "outcome": 1,
+        "phase_exponents_mod_nine": [
+          8,
+          2,
+          8
+        ],
+        "probability": 0.3333333333333333
+      },
+      {
+        "correction_is_qutrit_diagonal_Clifford": true,
+        "outcome": 2,
+        "phase_exponents_mod_nine": [
+          1,
+          1,
+          7
+        ],
+        "probability": 0.3333333333333333
+      }
+    ],
+    "deterministic_conditional_on_ideal_gate_and_detection": true,
+    "hardware_boundary": "SUM^-1 is a TWO-qutrit entangling gate, not supplied by passive single-photon path rephasing. Logical circuit success says nothing about a physical one-photon deterministic gate, state source, detectors, or fault-tolerant overhead.",
+    "ideal_27_mode_tritters": 27,
+    "ideal_channel_intensity_values": 729,
+    "illustrative_end_to_end_success_formula": "eta_source * eta_SUM * eta_meas * eta_tritter**27 * eta_feedforward",
+    "input_magic_phase_729_intensity_max_change": 3.469446951953614e-17,
+    "mode_dimension": 27,
+    "necessary_validation": "Intensities alone cannot certify the magic phase; basis-referenced interferometry/process tomography is needed.",
+    "parameters_not_measured": true,
+    "resource_state": "T9|+> in a separate ancilla qutrit",
+    "single_port_intensity": 0.037037037037037035,
+    "stage_count": 3,
+    "status": "EXACT_ALGEBRAIC_QUTRIT_MAGIC_INJECTION_CLIFFORD_FEEDFORWARD",
+    "target_gate": "T9=diag(1,zeta9,zeta9^-1)"
+  },
+  "schema": "w33.20261108.five_physical_falsifiers.v1",
+  "scientific_boundary": "Three exact finite mathematical/algebraic conclusions, one bounded numerical heuristic, one source-controlled retraction; no physical TOE or new observational model ranking."
+}
