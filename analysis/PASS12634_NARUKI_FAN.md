@@ -54,3 +54,23 @@ Pass 11899 found that the 40 zero-dimensional cusps of the Siegel level-3 genus-
 1. Compute the fan's actual rays from the 40×36 Yoshida matrix (Ren, Shaw and Sturmfels Thm 6.1 / Hacking, Keel and Tevelev) and compare cone by cone, upgrading the count match to an identity.
 2. Do the same for the Burkhardt side: tropicalise A₂(3) (or its ball-quotient model) and test whether its cusp rays carry W(3,3)'s point graph or line graph.
 3. Use the fan as a phase diagram: the 1080 + 135 maximal cones are the tropical limits of cubic surfaces. Ask whether the two-qutrit context labels (line × root triple) give a degeneration-indexed basis for the 27-dimensional representation.
+
+## Addendum: the positive-geometry regions (E6 pezzotopes) are S5-pentads of W(3,3) lines (`w33_pezzotope_check.py`)
+
+The real moduli space of marked cubic surfaces has 432 W(E6)-equivalent regions. Each is a simple 4-polytope, the **E6 pezzotope**, with f-vector (45, 90, 60, 15) and 15 facets: 10 of root (A1) type, which are associahedra, and 5 of A2³ type, which are cubes. Each region is a positive geometry in Arkani-Hamed's sense (Early, Geiger, Panizzut, Sturmfels and Yun, arXiv:2306.13604; Sturmfels and Telen, arXiv:2605.11909).
+
+**Derived from the fan.**
+- No cone contains two cusp rays, so the 5 cube facets are pairwise disjoint.
+- Hence each cube meets 6 root facets, and each root facet meets 3 cubes and 6 roots.
+- With S5 labels (cubes T₁…T₅, roots r_ab), r_ab lies in T_i iff i ∉ {a, b}.
+
+**Search over all 5-sets of pairwise disjoint W(3,3) lines** (13,824 of them):
+- **Exactly 432** satisfy "every three share exactly one positive root, and the 10 roots are distinct". That is the number of pezzotope regions.
+- For **all 432**, the subfan of the reconstructed Naruki fan on those 15 rays has face numbers **[15, 60, 90, 45]**: the pezzotope's f-vector read in reverse.
+- The root facets meet as the line graph of K5: r_ab ⊥ r_cd iff {a,b} ∩ {c,d} ≠ ∅, giving 30 adjacent pairs and 15 non-adjacent.
+
+**W(3,3) reading.** A pezzotope is a pentad of pairwise disjoint W(3,3) lines (5 maximal commuting two-qutrit contexts) in which every three have a unique common root. In the finite-AdS₄ language of Pass 11831 (121 = 40 contexts + 45 splits + 36 Kramers), the root facets are 10 Kramers points.
+- **None of the 432 pentads extends to a spread.** W(3,3) has 36 spreads, one per double-six (BT810). The pezzotope pentads are partial spreads that cannot be completed.
+- So the positive-geometry regions of cubic-surface moduli are *not* built from the double-six/spread structure. They come from a separate S5 configuration, and 13,824 = 432 × 32.
+
+**Status.** The face-number identity is a count match on every region. It is not yet a facet-by-facet identification with the paper's explicit regions. The identification of facets with roots and A2³ subsystems follows Early, Geiger, Panizzut, Sturmfels and Yun's labels (10 of type A1, 5 of type A2^×3). The W(3,3) reading and the "no spread" property are this pass's.

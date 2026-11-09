@@ -1,0 +1,5196 @@
+{
+ "n_disjoint_5sets": 13824,
+ "n_pezzotope_configs": 432,
+ "sample": [
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  },
+  {
+   "fan_faces": [
+    15,
+    60,
+    90,
+    45
+   ],
+   "orth_pattern": {
+    "(True, np.True_)": 30,
+    "(False, np.False_)": 15
+   }
+  }
+ ],
+ "n_spreads": 36,
+ "spread_extensions": {
+  "0": 432
+ },
+ "expect_432": true,
+ "faces_match": true
+}
