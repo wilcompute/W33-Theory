@@ -1,0 +1,788 @@
+{
+  "E6": {
+    "Cartan_torus_finite_rescaling_invariance_relative_error": 2.5771394520680327e-16,
+    "actual_conclusion": "Proved invariance under six explicitly solved diagonal E6-torus weights and the external SL3 on qutrit fiber. This is a 14-dimensional Lie subalgebra; the other 72 E6 generators and supersymmetric F/D-term potential remain unchecked.",
+    "candidate_VEV_cubic_interaction_physically_allowed_certified": false,
+    "e6_torus_nullspace_dimension": 6,
+    "e6_triad_incidence_rank": 21,
+    "external_SL3_complex_finite_invariance_relative_error": 2.2206752718584145e-16,
+    "full_78_generators_present": false,
+    "full_E6_covariance_certified": false,
+    "known_source": "analysis/w33_e6_cubic_jacobian_rank_stratification.py; 45 signed E6 triples with epsilon_abc",
+    "ordered_signed_records": 1620,
+    "status": "NATIVE_E6_CUBIC_VERIFIED_ON_CARTAN6_AND_EXTERNAL_SL3_NOT_ALL_E6_78",
+    "unordered_signed_E6_triples": 45
+  },
+  "Maxwell": {
+    "discrete_charge_continuity_residual": 3.552713678800501e-15,
+    "edges": 81,
+    "energy": "S=sum_{x,i}|psi_(x+e_i)-exp(iA_xi)psi_x|\u00b2 +0.8 sum_plaquette(1-cos(curlA))+0.6sum_x|psi_x|\u00b2",
+    "finite_difference_gauge_Ward_residual": 2.8421709430404007e-08,
+    "gauge_map": "psi_x -> exp(i chi_x) psi_x; A_xi -> A_xi+chi_(x+e_i)-chi_x",
+    "neutral_Gauss_constraint_residual": 6.661338147750939e-16,
+    "nonlinear_gauge_action_difference": 0.0,
+    "oriented_square_plaquettes": 81,
+    "original_native_graph_edges": 108,
+    "proof_boundary": "This is exactly the standard U(1) scalar lattice coupling on a deliberately selected cubic frame with externally assigned continuous time for the Schroedinger current. Not a derivation of charge, qED fermions, 3+1 Minkowski spacetime, physical photon masses or fine structure constant.",
+    "selected_81_edges_native_subset_verified": true,
+    "status": "EXPLICIT_SELECTED_FRAME_LATTICE_U1_CHARGED_MATTER_GAUSS_AND_WARD",
+    "vertex_gradient_rank": 26,
+    "vertices": 27
+  },
+  "clock": {
+    "exact_bound": "For Hermitian H and H+D at time t=1: ||exp(-i(H+D))-exp(-iH)||_op <= ||D||_op. Therefore every entry intensity changes by at most 2||D||_op (a conservative bound).",
+    "ideal_supported_edges": 81,
+    "perturbations": [
+      {
+        "mean_probability_error": 0.0004883212229879448,
+        "sigma": 0.005,
+        "trials": 8,
+        "type": "onsite_detuning",
+        "worst_TV": 0.0024439488474228416,
+        "worst_operator_norm": 0.01201862908123921,
+        "worst_probability_error": 0.0006405554088469573
+      },
+      {
+        "mean_probability_error": 0.00167506578939237,
+        "sigma": 0.02,
+        "trials": 8,
+        "type": "onsite_detuning",
+        "worst_TV": 0.0082098864382973,
+        "worst_operator_norm": 0.05392785437211928,
+        "worst_probability_error": 0.0020686818749256833
+      },
+      {
+        "mean_probability_error": 0.005548311038012926,
+        "sigma": 0.06,
+        "trials": 8,
+        "type": "onsite_detuning",
+        "worst_TV": 0.03439355508736619,
+        "worst_operator_norm": 0.21112129997635035,
+        "worst_probability_error": 0.007274595365708906
+      },
+      {
+        "mean_probability_error": 0.0004947509229463621,
+        "sigma": 0.005,
+        "trials": 8,
+        "type": "null_edge_coupling",
+        "worst_TV": 0.0022656788946285346,
+        "worst_operator_norm": 0.008104158172408433,
+        "worst_probability_error": 0.0006092971522765819
+      },
+      {
+        "mean_probability_error": 0.001873246155792362,
+        "sigma": 0.02,
+        "trials": 8,
+        "type": "null_edge_coupling",
+        "worst_TV": 0.008710415819972846,
+        "worst_operator_norm": 0.035657944045511675,
+        "worst_probability_error": 0.0026214160266948144
+      },
+      {
+        "mean_probability_error": 0.007251173226281009,
+        "sigma": 0.06,
+        "trials": 8,
+        "type": "null_edge_coupling",
+        "worst_TV": 0.03016231999229692,
+        "worst_operator_norm": 0.10854090927665369,
+        "worst_probability_error": 0.008720534742789401
+      }
+    ],
+    "scope": "Reproducible synthetic Gaussian detuning/coupling noise, not a measured error budget or hardware-achievable fabrication precision.",
+    "status": "NULL_CLOCK_DUHAMEL_BOUND_PLUS_REPRODUCIBLE_PERTURBATION_SWEEP",
+    "tested_matrix_dimension": 27,
+    "total_trials": 48,
+    "uniform_common_onsite_shift_probability_error_less_than_1e_minus_12": true
+  },
+  "cosmology": {
+    "A4_flavour_modulus_clock_violation_factor_min": 1688912.9319007536,
+    "DES_fixed_background_CPL_minus_fading_old_chi2": 3.099677854248341,
+    "DES_fixed_background_CPL_minus_fading_patched_chi2": -0.6436234537538894,
+    "KiDS_corrected_heldout_reanalysis_executed_here": false,
+    "S9_preregistration_exists": true,
+    "S9_preregistration_not_future_data": true,
+    "S9_preregistration_path": "analysis/toe_uv/prereg_noshear.json",
+    "corrected_control_rows": [
+      {
+        "HMcode_fading_over_CPL_boost": 1.0089451463169559,
+        "Halofit_fading_over_CPL_boost": 0.9994129750595643,
+        "corrected_scf_over_Lambda": 1.000000168234212,
+        "k": "0.1",
+        "uncorrected_scf_over_Lambda": 1.0387722260691508,
+        "z": "0.01"
+      },
+      {
+        "HMcode_fading_over_CPL_boost": 1.0188590353352698,
+        "Halofit_fading_over_CPL_boost": 1.0062178892864384,
+        "corrected_scf_over_Lambda": 1.0000006268034216,
+        "k": "1.0",
+        "uncorrected_scf_over_Lambda": 0.7143594063267252,
+        "z": "0.01"
+      },
+      {
+        "HMcode_fading_over_CPL_boost": 1.0162245599431836,
+        "Halofit_fading_over_CPL_boost": 0.9966513671051491,
+        "corrected_scf_over_Lambda": 1.0000001444833977,
+        "k": "3.0",
+        "uncorrected_scf_over_Lambda": 0.41675662343061765,
+        "z": "0.01"
+      },
+      {
+        "HMcode_fading_over_CPL_boost": 1.0053399347092733,
+        "Halofit_fading_over_CPL_boost": 1.0001492055899226,
+        "corrected_scf_over_Lambda": 0.999999930747799,
+        "k": "0.1",
+        "uncorrected_scf_over_Lambda": 1.014310743960959,
+        "z": "1.0"
+      },
+      {
+        "HMcode_fading_over_CPL_boost": 1.0328761929887071,
+        "Halofit_fading_over_CPL_boost": 1.0293711291850252,
+        "corrected_scf_over_Lambda": 0.9999982114892594,
+        "k": "1.0",
+        "uncorrected_scf_over_Lambda": 0.9776499534283571,
+        "z": "1.0"
+      },
+      {
+        "HMcode_fading_over_CPL_boost": 1.0307539468574882,
+        "Halofit_fading_over_CPL_boost": 1.0349964525959348,
+        "corrected_scf_over_Lambda": 0.9999980343417598,
+        "k": "3.0",
+        "uncorrected_scf_over_Lambda": 0.8490434954715801,
+        "z": "1.0"
+      }
+    ],
+    "future_independent_shear_likelihood_executed": false,
+    "safety": "Old S7/S8 shear rankings remain withdrawn. No claim of true evidence from a frozen forecast or numeric source replay.",
+    "source_crosscheck": "PASS12632 stock CLASS bug reproduction (issue 682); later S9 is a preregistered forecast, not observational validation; external 2026 single-scalar PRD status paper cautions sensitivity to priors and data selection.",
+    "status": "COSMO_RETRACTION_LEDGER_SOURCE_REPLAY_NO_NEW_LIKELIHOOD"
+  },
+  "frame": {
+    "cases": [
+      {
+        "GL2_orbit_size": 4,
+        "collective_radial_mass_squared": 7.6,
+        "degenerate_minima": 4,
+        "frame_directions": 4,
+        "p": 3,
+        "quartic_local_radial_mass_squared": 2,
+        "zero_temperature_minima_entropy_log": 1.3862943611198906
+      },
+      {
+        "GL2_orbit_size": 20,
+        "collective_radial_mass_squared": 10.399999999999999,
+        "degenerate_minima": 20,
+        "frame_directions": 6,
+        "p": 5,
+        "quartic_local_radial_mass_squared": 2,
+        "zero_temperature_minima_entropy_log": 2.995732273553991
+      },
+      {
+        "GL2_orbit_size": 56,
+        "collective_radial_mass_squared": 13.2,
+        "degenerate_minima": 56,
+        "frame_directions": 8,
+        "p": 7,
+        "quartic_local_radial_mass_squared": 2,
+        "zero_temperature_minima_entropy_log": 4.02535169073515
+      },
+      {
+        "GL2_orbit_size": 220,
+        "collective_radial_mass_squared": 18.799999999999997,
+        "degenerate_minima": 220,
+        "frame_directions": 12,
+        "p": 11,
+        "quartic_local_radial_mass_squared": 2,
+        "zero_temperature_minima_entropy_log": 5.393627546352362
+      }
+    ],
+    "caveat": "Order parameter is a global finite-symmetry toy. Exact local gauge symmetry cannot be interpreted as spontaneously broken by a gauge-variant VEV (Elitzur). Spatial/domain-wall dynamics, metric, physical frame masses and experimental Lorentz constraints uncomputed.",
+    "example_potential": "V(w)=sum_j w_j^2(1-w_j)^2 + 0.7(sum_j w_j-3)^2",
+    "frame_hessian_has_positive_gap": true,
+    "local_minima_exactly_binary_occupancy_three": true,
+    "no_unique_symmetry_invariant_minimum_theorem": "If an invariant V has one frame f as a global minimum, every G-translated frame is also a minimum; PGL2(Fp) acts transitively on the unordered null triples.",
+    "selected_frames_are_PGL2_equivalent": true,
+    "status": "EXPLICIT_DISCRETE_GLOBAL_ORDER_PARAMETER_HAS_GAPPED_MINIMA_BUT_NO_CANONICAL_FRAME"
+  },
+  "schema": "w33.20261108.five_physical_followthrough_plus_coherence.v1",
+  "scientific_boundary": "A mathematically consistent global toy frame, standard chosen-lattice U1 charged matter, bounded synthetic clock noise, 14/86 E6xSL3 generator-sector coverage, historical cosmology audit, and a frame-mixture coherence signature. No TOE, emergent metric, all-78 E6 covariance, measured quantum hardware or new likelihood.",
+  "sixth": {
+    "all_channel_intensities": 0.037037037037037035,
+    "exact_purity_class_census": {
+      "0": {
+        "0.25": 8,
+        "1.0": 1
+      },
+      "1": {
+        "0.25": 6
+      },
+      "2": {
+        "0.375": 12
+      }
+    },
+    "frame_matched_inverse_echo_probabilities": {
+      "origin": 1.0,
+      "q0_nonzero": 0.25,
+      "q2_duplicated_reference": 0.5,
+      "q2_singleton_reference": 0.25
+    },
+    "frames": 4,
+    "observation": "Frame randomness is invisible to the entire 27x27 transition-intensity matrix, but detectable by basis-referenced coherence or purity measurements; this is ordinary quantum theory, not evidence for a new physical force.",
+    "point_count": 27,
+    "points": [
+      {
+        "frame_character_multiplicity": [
+          4
+        ],
+        "point": [
+          0,
+          0,
+          0
+        ],
+        "purity": 1.0,
+        "q": 0,
+        "rho_nonzero_eigenvalues": [
+          1.0
+        ]
+      },
+      {
+        "frame_character_multiplicity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "point": [
+          0,
+          0,
+          1
+        ],
+        "purity": 0.25,
+        "q": 0,
+        "rho_nonzero_eigenvalues": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "frame_character_multiplicity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "point": [
+          0,
+          0,
+          2
+        ],
+        "purity": 0.25,
+        "q": 0,
+        "rho_nonzero_eigenvalues": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "frame_character_multiplicity": [
+          2,
+          1,
+          1
+        ],
+        "point": [
+          0,
+          1,
+          0
+        ],
+        "purity": 0.375,
+        "q": 2,
+        "rho_nonzero_eigenvalues": [
+          0.5,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "frame_character_multiplicity": [
+          2,
+          1,
+          1
+        ],
+        "point": [
+          0,
+          1,
+          1
+        ],
+        "purity": 0.375,
+        "q": 2,
+        "rho_nonzero_eigenvalues": [
+          0.5,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "frame_character_multiplicity": [
+          2,
+          1,
+          1
+        ],
+        "point": [
+          0,
+          1,
+          2
+        ],
+        "purity": 0.375,
+        "q": 2,
+        "rho_nonzero_eigenvalues": [
+          0.5,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "frame_character_multiplicity": [
+          2,
+          1,
+          1
+        ],
+        "point": [
+          0,
+          2,
+          0
+        ],
+        "purity": 0.375,
+        "q": 2,
+        "rho_nonzero_eigenvalues": [
+          0.5,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "frame_character_multiplicity": [
+          2,
+          1,
+          1
+        ],
+        "point": [
+          0,
+          2,
+          1
+        ],
+        "purity": 0.375,
+        "q": 2,
+        "rho_nonzero_eigenvalues": [
+          0.5,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "frame_character_multiplicity": [
+          2,
+          1,
+          1
+        ],
+        "point": [
+          0,
+          2,
+          2
+        ],
+        "purity": 0.375,
+        "q": 2,
+        "rho_nonzero_eigenvalues": [
+          0.5,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "frame_character_multiplicity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "point": [
+          1,
+          0,
+          0
+        ],
+        "purity": 0.25,
+        "q": 0,
+        "rho_nonzero_eigenvalues": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "frame_character_multiplicity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "point": [
+          1,
+          0,
+          1
+        ],
+        "purity": 0.25,
+        "q": 1,
+        "rho_nonzero_eigenvalues": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "frame_character_multiplicity": [
+          2,
+          1,
+          1
+        ],
+        "point": [
+          1,
+          0,
+          2
+        ],
+        "purity": 0.375,
+        "q": 2,
+        "rho_nonzero_eigenvalues": [
+          0.5,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "frame_character_multiplicity": [
+          2,
+          1,
+          1
+        ],
+        "point": [
+          1,
+          1,
+          0
+        ],
+        "purity": 0.375,
+        "q": 2,
+        "rho_nonzero_eigenvalues": [
+          0.5,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "frame_character_multiplicity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "point": [
+          1,
+          1,
+          1
+        ],
+        "purity": 0.25,
+        "q": 0,
+        "rho_nonzero_eigenvalues": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "frame_character_multiplicity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "point": [
+          1,
+          1,
+          2
+        ],
+        "purity": 0.25,
+        "q": 1,
+        "rho_nonzero_eigenvalues": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "frame_character_multiplicity": [
+          2,
+          1,
+          1
+        ],
+        "point": [
+          1,
+          2,
+          0
+        ],
+        "purity": 0.375,
+        "q": 2,
+        "rho_nonzero_eigenvalues": [
+          0.5,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "frame_character_multiplicity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "point": [
+          1,
+          2,
+          1
+        ],
+        "purity": 0.25,
+        "q": 0,
+        "rho_nonzero_eigenvalues": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "frame_character_multiplicity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "point": [
+          1,
+          2,
+          2
+        ],
+        "purity": 0.25,
+        "q": 1,
+        "rho_nonzero_eigenvalues": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "frame_character_multiplicity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "point": [
+          2,
+          0,
+          0
+        ],
+        "purity": 0.25,
+        "q": 0,
+        "rho_nonzero_eigenvalues": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "frame_character_multiplicity": [
+          2,
+          1,
+          1
+        ],
+        "point": [
+          2,
+          0,
+          1
+        ],
+        "purity": 0.375,
+        "q": 2,
+        "rho_nonzero_eigenvalues": [
+          0.5,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "frame_character_multiplicity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "point": [
+          2,
+          0,
+          2
+        ],
+        "purity": 0.25,
+        "q": 1,
+        "rho_nonzero_eigenvalues": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "frame_character_multiplicity": [
+          2,
+          1,
+          1
+        ],
+        "point": [
+          2,
+          1,
+          0
+        ],
+        "purity": 0.375,
+        "q": 2,
+        "rho_nonzero_eigenvalues": [
+          0.5,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "frame_character_multiplicity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "point": [
+          2,
+          1,
+          1
+        ],
+        "purity": 0.25,
+        "q": 1,
+        "rho_nonzero_eigenvalues": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "frame_character_multiplicity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "point": [
+          2,
+          1,
+          2
+        ],
+        "purity": 0.25,
+        "q": 0,
+        "rho_nonzero_eigenvalues": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "frame_character_multiplicity": [
+          2,
+          1,
+          1
+        ],
+        "point": [
+          2,
+          2,
+          0
+        ],
+        "purity": 0.375,
+        "q": 2,
+        "rho_nonzero_eigenvalues": [
+          0.5,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "frame_character_multiplicity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "point": [
+          2,
+          2,
+          1
+        ],
+        "purity": 0.25,
+        "q": 1,
+        "rho_nonzero_eigenvalues": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "frame_character_multiplicity": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "point": [
+          2,
+          2,
+          2
+        ],
+        "purity": 0.25,
+        "q": 0,
+        "rho_nonzero_eigenvalues": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ]
+      }
+    ],
+    "proof": "For frame basis B, U_B=F3^tensor3 conjugated by the physical coordinate permutation. Its column at input x is the normalized character y -> omega^(y^T B^(-T)B^(-1) x). Distinct character labels are exactly orthogonal; equal labels are identical. Uniform classical frame mixing gives purity sum multiplicity^2/4^2, while every output diagonal is 1/27.",
+    "representative_density_checks": {
+      "(0, 0, 0)": {
+        "Tr_rho_squared": 1.0000000000000007,
+        "intensity_deviation": 6.938893903907228e-18
+      },
+      "(0, 0, 1)": {
+        "Tr_rho_squared": 0.25,
+        "intensity_deviation": 6.942531338158176e-18
+      },
+      "(0, 1, 0)": {
+        "Tr_rho_squared": 0.37500000000000017,
+        "intensity_deviation": 6.942531338158176e-18
+      }
+    },
+    "status": "EXACT_Q3_FOUR_FRAME_COHERENCE_WITNESS"
+  }
+}
