@@ -245,7 +245,33 @@ def spectator_hessian(x, dual):
     return dict(meson_index_pairs=terms, determinant=8, rank=10)
 
 
-def dual_repair(gauge, internal, y, records):
+def field_charges(internal, charge):
+    return np.concatenate([np.tile(np.repeat(charge, 3), 3),
+                           np.tile(np.repeat(-charge, 3), 2),
+                           adjoint_charges(internal, charge)])
+
+
+def sm_weight_check(hessian, orbit, internal, color, weak, y):
+    roots = [color[0], color[1], weak]
+    coroots = np.stack([(root @ root.T - root.T @ root).diagonal() for root in roots])
+    assert vacuum.rank(coroots) == 3
+    fundamental = np.vstack([coroots, y]).T
+    weights = np.stack([field_charges(internal, h) for h in fundamental.T], axis=1)
+    ledger = []
+    for weight in sorted(set(map(tuple, weights))):
+        selected = (weights == weight).all(axis=1)
+        opposite = (weights == -np.array(weight)).all(axis=1)
+        holomorphic_rank = vacuum.rank(hessian[opposite, :][:, selected])
+        orbit_rank = vacuum.rank(orbit[:, selected])
+        massless = int(selected.sum()) - holomorphic_rank - orbit_rank
+        expected = 3 * int((fundamental == weight).all(axis=1).sum())
+        assert massless == expected + (8 if not any(weight) else 0)
+        if massless:
+            ledger.append(dict(weight=list(map(int, weight)), massless=massless))
+    return ledger
+
+
+def dual_repair(gauge, internal, color, weak, y, records):
     basis = np.eye(81, dtype=np.int64).reshape(27, 3, 81)
     x = np.stack([basis[0, 0], basis[1, 1], basis[0, 2] + basis[1, 2]])
     dual = np.stack([x[0] + x[1], x[2]])
@@ -267,8 +293,7 @@ def dual_repair(gauge, internal, y, records):
     allowed = [(0, 2), (1, 0), (1, 1)]
     assert vacuum.rank(adjoint_derivative) == 3
     assert not adjoint_derivative[:, [3 * j + k for j, k in allowed]].any()
-    charges = np.concatenate([np.tile(np.repeat(y, 3), 3), np.tile(np.repeat(-y, 3), 2),
-                              adjoint_charges(internal, y)])
+    charges = field_charges(internal, y)
     omega = holomorphic_hessian(x, dual, internal, y, records, [])
     mixed = [holomorphic_hessian(x, dual, internal, y, records, [term], signed_cubic=False)
              for term in allowed]
@@ -285,6 +310,7 @@ def dual_repair(gauge, internal, y, records):
     sextic_spectrum = mass_spectrum(sextic_hessian, charges, all_orbit, y)
     sextic_massless = sum(row['uneaten_massless'] for row in sextic_spectrum)
     assert sextic_massless == 89
+    sextic_weights = sm_weight_check(sextic_hessian, all_orbit, internal, color, weak, y)
     return dict(fundamental_supports=[np.flatnonzero(v).tolist() for v in x],
                 dual_supports=[np.flatnonzero(v).tolist() for v in dual],
                 mixed_cubic='dual[0] * (A tensor I) * X[2]',
@@ -300,6 +326,8 @@ def dual_repair(gauge, internal, y, records):
                 sextic_adjoint_hessian_rank=16,
                 sextic_uneaten_massless=sextic_massless,
                 sextic_spectrum=sextic_spectrum,
+                sextic_sm_weight_ledger=sextic_weights,
+                sextic_massless_character='3 times restricted 27 plus 8 trivial',
                 sextic_spectator_mass=spectator_hessian(x, dual))
 
 
@@ -315,7 +343,7 @@ def calculate():
     return dict(status='PASS', original_field_content='three (27,3) with the alternating cubic',
                 scope='fixed canonical internal projection; compact Lie-algebra graphs; canonical D terms',
                 family_embeddings=result, adjoint_center_check_rank=adjoint_rank,
-                repair=dual_repair(gauge, internal, y, records),
+                repair=dual_repair(gauge, internal, color, weak, y, records),
                 perturbative_family_anomaly=dict(fundamental_minus_duals=27,
                                                  conjugate_symmetric_cube_spectator=-27,
                                                  total=0, net_SM_families=3))
