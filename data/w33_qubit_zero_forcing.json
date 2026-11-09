@@ -1,0 +1,18 @@
+{
+ "d4_size3": {
+  "result": "alive",
+  "nodes": 11
+ },
+ "d4_spread": {
+  "result": "alive",
+  "nodes": 7
+ },
+ "d8_size5": {
+  "result": "alive",
+  "nodes": 1
+ },
+ "d8_spread": {
+  "result": "alive",
+  "nodes": 1
+ }
+}

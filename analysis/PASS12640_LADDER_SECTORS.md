@@ -57,3 +57,24 @@ The integer program finds maximal partial spreads whose uncovered points are uni
 Both runs hit the time limit, so minimality is not proved.
 
 **Refined principle.** A uniform split cover makes M affine in the swaps, but certification also needs λ_max(R) below the threshold. The two-qutrit pentads pass because their five swaps generate the doily S6, whose Jucys–Murphy element has λ_max = 4. The d = 25 double covers found here do not have that structure. Whether some d = 25 double cover generates a symmetric group with a small enough Jucys–Murphy spectrum is open; a search could add "the swaps satisfy star-transposition relations" as a constraint.
+
+## Round of 2026-11-09 evening: audit, package, zero forcing, Kramers sectors
+
+**Item 5: audit of this session's claims against the older corpus.** Results grepped by content across `analysis/*.md`, excluding this session's files:
+
+| result | finding |
+|---|---|
+| Jucys–Murphy / doily-S6 proof | no earlier hits |
+| strong unextendibility | no earlier hits; only the other track's audits of these passes |
+| unextendible 8-MUB sets | no earlier hits |
+| Sym² block structure | no earlier hits |
+| reflection = Kramers time reversal | **prior art, Pass 11210** (corrected above) |
+| triality on 135 = 45 × 3 frames | **related prior art, BT3769** ("a triality-twisted Lagrangian frame action") |
+
+BT3769 does not state the unitary-Z₃ / antiunitary-transposition split of Pass 12637, but it should be cited alongside it.
+
+**Item 3: packaged.** One shareable page (private until shared): https://claude.ai/artifact/F9piRZo3UkxGiuURXFLHwV. It contains the theorem, the four-step proof, the sentinel theorem with its table of cases, the operational corollary (the other track's) and the geometry. The repository version is `analysis/NOTE_STRONG_UNEXTENDIBILITY_PROOF.md`.
+
+**Item 2: three qubits by zero forcing** (`w33_qubit_zero_forcing.py`). The qubit version keeps only commuting pairs, because anticommuting terms cancel. It is inconclusive, and too weak: it leaves alive even the two-qubit size-3 sets, which the SOS bound proves strongly unextendible. The three-qubit size-5 sets remain open; the next honest step is a symmetry-reduced degree-6 real SOS.
+
+**Item 4: Kramers sectors (structural only).** By Pass 11210, θ² equals the parity operator P: x → −x on F₃⁴, so P is the Pauli group's −1 automorphism realised on C⁹. On the parity −1 sector (dimension 4), θ² = −1. Hence any θ-invariant Hamiltonian commuting with P has Kramers doublets there: two doublets in the 4-dimensional sector. Whether these align with a pentad's sentinel structure would need an explicit antiunitary Clifford θ on C⁹, which is not constructed here.
