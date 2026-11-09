@@ -1,0 +1,20 @@
+{
+ "control_d4_size3": {
+  "delta": 0.24999999966330894,
+  "status": "optimal",
+  "seconds": 0.19373726844787598,
+  "identity_max_rel_residual": 7.361571188121467e-12,
+  "eig_min_G": -1.9393182505346223e-09,
+  "eig_min_H": -9.280901448779673e-10,
+  "numeric_min_F": 0.24999999999999978
+ },
+ "d8_size5": {
+  "delta": 0.12499998313155855,
+  "status": "optimal",
+  "seconds": 366.8635981082916,
+  "identity_max_rel_residual": 1.1133160758930609e-11,
+  "eig_min_G": -1.696819193830353e-07,
+  "eig_min_H": -1.7080450711106704e-08,
+  "numeric_min_F": 0.12500000015568524
+ }
+}

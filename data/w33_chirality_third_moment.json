@@ -1,0 +1,57 @@
+{
+ "order2_difference_norm": 5.480320658296077e-15,
+ "order3_difference_norm": 0.5925925925925921,
+ "T_eig_min": -0.8164965809277327,
+ "T_eig_max": 0.8164965809277331,
+ "max_Delta_pure": 0.592592592450838,
+ "min_Delta_pure": -0.5925925925323814,
+ "same_covered_points": true,
+ "collinear_pairs_L": 30,
+ "collinear_pairs_R": 30,
+ "shared_collinear_pairs": 0,
+ "closed_form": "16/27",
+ "closed_form_float": 0.5925925925925926,
+ "Delta_on_left_states": [
+  0.5925925926
+ ],
+ "Delta_on_right_states": [
+  -0.5925925926
+ ],
+ "left_line_meets_right_lines": [
+  [
+   0,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   0,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   0,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   0,
+   1,
+   1,
+   1,
+   1
+  ],
+  [
+   0,
+   1,
+   1,
+   1,
+   1
+  ]
+ ]
+}
