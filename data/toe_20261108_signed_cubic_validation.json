@@ -1,0 +1,60 @@
+{
+  "selected_inputs_unchanged_during_run": true,
+  "selected_source_and_input_raw_sha256": {
+    "analysis/toe_20261108_exact_signed_cubic_stabilizer.py": "e585f163c0d6301038441d90382b22104b6a601587534f80b1e24209a24f61bd",
+    "analysis/toe_20261108_three_copy_cubic_vacuum.py": "39b093ebbb644574899e5d9fb40ad421c2f27220c7e6abcd27b01cb74ec9f59e",
+    "analysis/toe_20261108_signed_cubic_server.js": "8a2849656272caa219ee44345eabc07c3221df24d70df8a6aeacde7f93b53d66",
+    "data/toe_20261108_signed_cubic_server.json": "350e7208122e67450a57d12661f5ac61e793ec827d977807ce1149e05c6b7b24",
+    "tests/test_toe_20261108_signed_cubic_vacuum.py": "e17d440a03e07573839638a0501d15cff0ccd635b01632ceb8d2a356323ab30e",
+    "analysis/w33_e6_cubic_jacobian_rank_stratification.py": "44c009c28392c3aa38370ea2a024696e6b85edab59b520c8ad7b94d61ee99c4e",
+    "artifacts/canonical_su3_gauge_and_cubic.json": "13ea38ed37a8c1c9723db7168e1e056a2827ebf060bc096e227f8d9047d78cb1",
+    "extracted_v13/W33-Theory-master/artifacts/canonical_su3_gauge_and_cubic.json": "81444a3d3f2c93a2078bf23e3eea52f6b043ccb39b115aed4a9fbc62062ce135"
+  },
+  "executions": [
+    {
+      "command": [
+        "py",
+        "-3",
+        "analysis/toe_20261108_exact_signed_cubic_stabilizer.py"
+      ],
+      "exit_code": 0,
+      "seconds": 12.63452769999276,
+      "stdout": "{\"alternating_81\": {\"terms\": 270, \"equation_rows\": 48870, \"exact_rank\": 6475, \"modular_prime\": 101, \"independent_exact_kernel_generators\": 86, \"lift\": \"T tensor I3 plus I27 tensor S, with T from the serialized basis and traceless S.\"}, \"invariants\": {\"zero_weight_terms\": 45, \"symmetric_27_cubic_rank\": 44, \"alternating_27_cubic_rank\": 45, \"single_commuting_81_holomorphic_cubic_dimension\": 0, \"three_species_alternating_81_coupling\": \"T(X1,X2,X3) with independent fields.\"}, \"anomalies\": {\"E6_cartan_cubic_trace_identically_zero\": true, \"family_probe_diagonal\": [1, 1, -2], \"fundamental_family_probe_trace\": -6, \"chiral_81_family_probe_trace\": -162, \"normalized_external_SU3_anomaly\": 27, \"prior_owner\": \"Pass11613 and October1 decuplet work.\"}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "py",
+        "-3",
+        "analysis/toe_20261108_three_copy_cubic_vacuum.py"
+      ],
+      "exit_code": 0,
+      "seconds": 16.72756020000088,
+      "stdout": "{\"chosen_supports\": [[0, 52, 80], [5, 37, 75], [26, 40, 54]], \"unbroken_complex_Lie_dimension\": 8, \"unbroken_Killing_rank\": 8, \"tangent_ranks\": {\"complex_F_derivative_rank\": 156, \"real_constraint_rank\": 204, \"imaginary_constraint_rank\": 195, \"Hessian_nullity\": 87, \"compact_gauge_orbit_dimension\": 78, \"physical_Hessian_nullity\": 9, \"gauge_plus_species_orbit_dimension\": 87, \"species_tangents_span_physical_kernel\": true}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "py",
+        "-3",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_toe_20261108_signed_cubic_vacuum.py",
+        "tests/test_w33_20261108_five_followthrough_plus_coherence.py",
+        "tests/test_w33_20261108_five_physical_falsifiers.py",
+        "-k",
+        "signed_cubic_vacuum or e6"
+      ],
+      "exit_code": 0,
+      "seconds": 54.474670600000536,
+      "stdout": "............                                                             [100%]\n12 passed, 34 deselected in 47.45s\n",
+      "stderr": ""
+    }
+  ],
+  "result_raw_sha256": {
+    "data/toe_20261108_exact_signed_cubic_stabilizer.json": "35ae15909d9cea51e549b6090a40e8a6e98aafc39b31046f0dd2c9ea90df164a",
+    "data/toe_20261108_three_copy_cubic_vacuum.json": "664bf686ac3914a3a3073174f02ad5e085ed3a2cd2b48dd10529f2d7103e7d29"
+  },
+  "scope": "Exact signed cubic and alternating tensor kernels, full integer generators, supplied three-copy potential, residual A2 and physical species zero modes. Server prime103 control. No clean-checkout requirement for legacy binaries."
+}
