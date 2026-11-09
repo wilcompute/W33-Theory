@@ -1,0 +1,44 @@
+{
+  "counterexample": "The completely mixed rho=I/9 gives uniform probabilities for every ideal basis; this result does not extend to arbitrary mixed states without a purity/distance hypothesis",
+  "derivation": "sqrt(sum_j(p_j-1/9)^2) >= sqrt(delta); perturbation L2 <= sqrt(9k)*epsilon; uniform simultaneous Hoeffding error <= sqrt(ln(18k/alpha)/(2N)); therefore some observed |p_hat-1/9| >= sqrt(delta/(9k))-epsilon-Hoeffding with probability >= 1-alpha",
+  "hypotheses": [
+    "input state pure in dimension 9",
+    "nine labelled outcomes per each of k measurement contexts",
+    "actual POVM effects E_j satisfy ||E_j - P_j||_op <= epsilon",
+    "each of k contexts sampled N times from independent identical trials",
+    "all deviations are from exactly 1/9; alpha is union-bound failure probability"
+  ],
+  "qualification": "Conservative conditional finite-shot bound, not a lab measurement, detector calibration, quantum error threshold, or TOE prediction.",
+  "rows": [
+    {
+      "bases": 5,
+      "each_effect_operator_norm_error_bound": "1/100",
+      "failure_probability_max": 0.01,
+      "guaranteed_observed_one_outcome_bias": 0.024603169919719198,
+      "one_outcome_ideal_minimum_absolute_bias": 0.049690399499995326,
+      "one_outcome_minimum_bias_squared": "1/405",
+      "outcomes": 45,
+      "positive_detection_margin": true,
+      "shots_per_basis": 20000,
+      "simultaneous_hoeffding_error": 0.015087229580276126,
+      "sos_delta": "1/9",
+      "total_shots": 100000
+    },
+    {
+      "bases": 8,
+      "each_effect_operator_norm_error_bound": "1/100",
+      "failure_probability_max": 0.01,
+      "guaranteed_observed_one_outcome_bias": 0.053095685027491,
+      "one_outcome_ideal_minimum_absolute_bias": 0.07856742013183861,
+      "one_outcome_minimum_bias_squared": "1/162",
+      "outcomes": 72,
+      "positive_detection_margin": true,
+      "shots_per_basis": 20000,
+      "simultaneous_hoeffding_error": 0.015471735104347614,
+      "sos_delta": "4/9",
+      "total_shots": 160000
+    }
+  ],
+  "source": "data/w33_exact_mub_sym2_blocks_20261109.json",
+  "status": "PASS_CONDITIONAL_OPERATIONAL_BIAS_BOUNDS"
+}
