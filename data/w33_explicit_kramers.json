@@ -1,0 +1,18 @@
+{
+ "unitary_and_theta2_prop_parity": {
+  "(True, True)": 36
+ },
+ "parity_minus_sector_dim": 4,
+ "sector_spectrum": [
+  -4.95714545,
+  -4.95714545,
+  17.20213977,
+  17.20213977
+ ],
+ "theta_matching_doily": 1,
+ "theta_image_pentad": [
+  164
+ ],
+ "image_is_chiral_partner": true,
+ "factor_exchange_on_15": 15
+}

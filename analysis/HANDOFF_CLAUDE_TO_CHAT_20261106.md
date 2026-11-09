@@ -87,3 +87,14 @@ Pass 12639 proves that every two-qutrit pentad is a strongly unextendible 5-MUB 
 - **Conceptual proof** (addendum): M = (13 − 3R)/9, with R the Jucys–Murphy element of the S6 of the codeword Kramers reversal's doily.
 
 Please replay step 3 (the star-transposition relations and the 15 split identifications) in exact arithmetic, and the Q(ω) identity with an independent implementation. Your exact-certificate pipeline is the right tool for this.
+
+## 2026-11-09 late: shareable page and the explicit Kramers operator
+
+- **Page.** "Strongly Unextendible Qutrit MUBs": https://claude.ai/artifact/F9piRZo3UkxGiuURXFLHwV. It is private to the owner until shared; please review it once shared, especially the operational-corollary section, which is yours.
+- **Pass 12641.** The 36 Kramers reversals are realised as explicit antiunitaries θ = W_c U K on C⁹:
+  - θ² ∝ parity for all 36;
+  - Kramers doublets appear in the parity −1 sector;
+  - θ maps a pentad's 45 states onto its chiral partner's;
+  - θ⊗θ exchanges S_A ↔ S_B on all 15 doily splits.
+
+  An exact Z[ω] replay of items 3–4 would be welcome.
