@@ -1,0 +1,26 @@
+{
+ "f0.18": {
+  "error": "bs(x1))<(fabs(x2))) ? (fabs(x2)) : (fabs(x1)) ), pfzw, &f1, &f2, xzero, fevals, errmsg);\n=>input_fzero_ridder(L:1118) :error; root must be bracketed in zriddr.\n"
+ },
+ "f0.35": {
+  "chi2": 2252.503984123626,
+  "p": {
+   "wb": 0.022346323140529648,
+   "wc": 0.12209979130443185,
+   "h": 0.6745420321567119,
+   "lnA": 3.05362514524286,
+   "ns": 0.9663158825913826,
+   "tau": 0.05892621299767648,
+   "A": 1.0006190919714395,
+   "c": 0.0,
+   "cp": 0.0,
+   "ks": 0.02150105004644878,
+   "kf": 0.35,
+   "kth": 1.7285121914440176
+  },
+  "S8": 0.8303364605945077
+ },
+ "f0.5": {
+  "error": "bs(x1))<(fabs(x2))) ? (fabs(x2)) : (fabs(x1)) ), pfzw, &f1, &f2, xzero, fevals, errmsg);\n=>input_fzero_ridder(L:1118) :error; root must be bracketed in zriddr.\n"
+ }
+}

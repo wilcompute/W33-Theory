@@ -134,3 +134,14 @@ The run used 20 walkers for 60 steps, discarding the first 20 as burn-in: 800 sa
 - Training χ² used the unpatched KLT build. Under the halofit patch it moves by 0.27 (`hf_impact.json`), which is negligible here.
 
 **KLT expansion-data total (Dovekie): SN +2.00, BAO +1.74, giving +3.7**, against fading +5.7 and CPL +5.5. The held-out shear terms of this file are withdrawn (Pass 12632). Corrected DES held-out shear for KLT is −0.80 relative to ΛCDM, and KiDS is pending.
+
+## Addendum: KLT f-scan (`klt_fscan.py`, patched halofit build `class_klt2`)
+
+At fixed f, the seven base parameters plus s and θ_i are refitted, starting from φ_ini = 0.561 M_P.
+
+| f (M_P) | 0.18 | 0.25 | 0.35 | 0.5 |
+|---|---|---|---|---|
+| χ² | shooting failed | 2253.57 (patched; 2253.30 original build) | **2252.50** (s = 0.0215, θ_i = 1.73, S8 0.830) | shooting failed |
+| quality N ≳ 276.5/ln(√2 M_P/f) | 140 | 160 | 198 | 272 |
+
+The data do not push f down. The profile is flat to slightly favouring larger f (−1.07 at 0.35), where the protecting ℤ_N must be larger (N ≳ 198). Small f is unreachable without a separate constant (§3), so the dark-energy-or-quality dichotomy stands, with the quality side at N ≳ 160–200. The two failures are CLASS shooting failures during the refit, not fitted values.
