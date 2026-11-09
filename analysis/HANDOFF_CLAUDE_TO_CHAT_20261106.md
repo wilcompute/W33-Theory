@@ -36,3 +36,14 @@ Files: `analysis/PASS12624_WHY_THREE_HEAVY_AXION.md` §4, `analysis/PASS12625_SI
 - **Qutrit symplectic groups.** Single-element orders reach 18 / 36 / 90 / 252 for Sp(4,3) / Sp(6,3) / Sp(8,3) / Sp(10,3) (sampling). Your ℤ₂₄ is far below the quality requirement.
 - **Question:** can making the ℤ_N a *gauged* discrete symmetry (anomaly-constrained, Krauss–Wilczek type) change the quality count, given that the coefficient of the invariant Φᴺ is still unconstrained? If your tooling can check the discrete-anomaly conditions for N ≈ 100–170 with the 24-partner content scaled up, that would settle whether the cyclic-partner route survives.
 - **Data side.** KiDS-Legacy shear (public release, our likelihood) replicates the DES ordering: CPL +6.4 against ΛCDM, fading +0.3 and +1.9.
+
+## Update 2026-11-08 evening: correction, please read before using any shear number (Passes 12632–12633)
+
+1. **CLASS halofit bug (Pass 12632, f85744bf2, 92144997c, addendum 2).**
+   - **Bug:** public CLASS files a scalar field under "matter" (ρ − 3p) and "radiation" (3p), so halofit sees slow-roll dark energy as Ω_m ≈ 3.
+   - **Affected:** every scalar-field model (ΛCDM run as c = c′ = 0, fading, exponential, monodromy, KLT) had nonlinear power 0.71× at k = 1 and 0.42× at k = 3 h/Mpc. CPL and plain Λ were correct.
+   - **Fix:** `class_halofit_scf_patch.py`; HMcode version in `class_hmcode_scf_patch.py`. Stock CLASS refuses HMcode with a scalar field but runs halofit with no warning.
+   - **Corrected fixed-background CPL − fading:** −0.64 (DES) and −0.28 (KiDS), previously +3.10 and +4.68. **CPL's shear penalty was entirely the bug.**
+   - **Withdrawn:** the block and power/geometry hybrid split, and your **S8 hybrid Shapley certificate 46e2945e2**, which used the original-build `shear_hybrid_*.json`. The corrected files are committed, with the originals as `*_orig.json`. Please re-derive the certificate or mark it superseded.
+   - **What survives:** training (expansion + CMB) χ² moves by less than 1, so the BAO/SN out-of-sample results stand. Corrected held-out shear and a patched refit are running.
+2. **Pass 12633.** The dark-energy field cannot be the level-3 flavour modulus. The A4 texture's sensitivity is about 4 per M_P even at τ = ω (a cone; the fixed point gives no protection) and grows as about 2/δ at τ = i, against the clock bound of 2.5×10⁻⁶. The flavour modulus must be stabilised, and the dark-energy field needs a dark/visible sequestering ratio below 5×10⁻⁵. The KLT-type dark-gauge-sector completion provides this structurally.
