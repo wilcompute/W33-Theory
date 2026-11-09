@@ -51,4 +51,4 @@ E7 corresponds to three qubits: W(E7) = Z₂ × Sp(6,2), and W(5,2) is the three
 
 **Prediction tested and failed:** the E7 pezzotope count 60,480 = |Sp(6,2)|/24 does not occur as an orbit. The E7 positive-geometry regions are not unextendible three-qubit MUB sets, and the E6 coincidence (regions = size-5 unextendible sets) does not carry over as stated.
 
-**What does carry over:** both rungs have exactly two non-complete-or-complete classes apart from E6's extra size 8. In both, the smallest unextendible sets have size 5, with S5 symmetry for two qutrits and A5 for three qubits. Mandayam et al. report unextendible Pauli MUBs in d = 8, so the three-qubit size-5 sets are probably prior art.
+**What does carry over:** W(5,2) has two size classes (5 and 9), and W(3,3) has three (5, 8 and 10). In both, the smallest unextendible sets have size 5, with S5 symmetry for two qutrits and A5 for three qubits. Mandayam et al. report unextendible Pauli MUBs in d = 8, so the three-qubit size-5 sets are probably prior art.
