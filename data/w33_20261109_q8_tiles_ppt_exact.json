@@ -1,0 +1,216 @@
+{
+  "exact_certificate": {
+    "centered_eight_MUB_F8_exact": "17/144",
+    "density_rank": 4,
+    "dual_operator_norm_upper_bound": "1001/1000",
+    "exact_dual_lower": "111431*sqrt(3)/600600 + 4982501/13104000",
+    "exact_dual_lower_decimal": 0.7015797247833404,
+    "five_projectors_orthonormal_exact": true,
+    "gram_infinity_upper_bound_exact": "500001262203/500000000000",
+    "partial_transpose_equals_density_exact": true,
+    "prior_art": "Bennett et al. (1999) Tiles UPB bound entanglement; CCNR/correlation witness paradigm known; new here is explicit W33/Q8 eight-setting dual certificate.",
+    "proof_status": "PASS_EXACT_Q_SQRT3_BOUND_ENTANGLED_TILES",
+    "purity": "1/4",
+    "rational_dual_matrix_denominator": 1000000,
+    "rational_dual_matrix_rows": [
+      [
+        -316478,
+        0,
+        -108319,
+        0,
+        -316478,
+        0,
+        111165,
+        -880678
+      ],
+      [
+        0,
+        86137,
+        0,
+        996283,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        -108319,
+        0,
+        -936068,
+        0,
+        -108319,
+        0,
+        -274287,
+        158360
+      ],
+      [
+        0,
+        -996283,
+        0,
+        86137,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        -316478,
+        0,
+        -108319,
+        0,
+        -316478,
+        0,
+        818272,
+        344067
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1000000,
+        0,
+        0
+      ],
+      [
+        818272,
+        0,
+        -274287,
+        0,
+        111165,
+        0,
+        426767,
+        -246394
+      ],
+      [
+        344067,
+        0,
+        158360,
+        0,
+        -880678,
+        0,
+        -246394,
+        142256
+      ]
+    ],
+    "rational_excess_over_separable": "125778727/3603600000",
+    "rational_lower_using_sqrt3_gt_433_over_250": "2528178727/3603600000",
+    "separable_trace_norm_threshold_exact": "2/3",
+    "valid_ppt_entanglement_witness": true
+  },
+  "measurement_and_shots": {
+    "confidence_warning": "qhat was set to expected conditional probabilities, not an observed multinomial sample; these thresholds are analytic design diagnostics, not statistical power or experimental data",
+    "exact_Q8_frame_reconstruction_errors": [
+      2.498001805406602e-16,
+      3.0531133177191805e-16,
+      2.220446049250313e-16
+    ],
+    "expected_counts_only_design_table": [
+      {
+        "accepted_shots_per_setting": 100000,
+        "conservative_lower_bound": 0.5754423291060468,
+        "detects_bound_entanglement": false,
+        "efficiency_relative_uncertainty": 0.0001,
+        "nominal_ideal_expected_q_used": true,
+        "simultaneous_confidence_radius": 0.006310921316705665
+      },
+      {
+        "accepted_shots_per_setting": 1000000,
+        "conservative_lower_bound": 0.6619828431210811,
+        "detects_bound_entanglement": false,
+        "efficiency_relative_uncertainty": 0.0001,
+        "nominal_ideal_expected_q_used": true,
+        "simultaneous_confidence_radius": 0.0019956885494898735
+      },
+      {
+        "accepted_shots_per_setting": 10000000,
+        "conservative_lower_bound": 0.6893929992760478,
+        "detects_bound_entanglement": true,
+        "efficiency_relative_uncertainty": 0.0001,
+        "nominal_ideal_expected_q_used": true,
+        "simultaneous_confidence_radius": 0.0006310921316705665
+      },
+      {
+        "accepted_shots_per_setting": 100000000,
+        "conservative_lower_bound": 0.6980652314912263,
+        "detects_bound_entanglement": true,
+        "efficiency_relative_uncertainty": 0.0001,
+        "nominal_ideal_expected_q_used": true,
+        "simultaneous_confidence_radius": 0.00019956885494898735
+      },
+      {
+        "accepted_shots_per_setting": 100000,
+        "conservative_lower_bound": 0.5742545369713702,
+        "detects_bound_entanglement": false,
+        "efficiency_relative_uncertainty": 0.001,
+        "nominal_ideal_expected_q_used": true,
+        "simultaneous_confidence_radius": 0.006310921316705665
+      },
+      {
+        "accepted_shots_per_setting": 1000000,
+        "conservative_lower_bound": 0.660357146638889,
+        "detects_bound_entanglement": false,
+        "efficiency_relative_uncertainty": 0.001,
+        "nominal_ideal_expected_q_used": true,
+        "simultaneous_confidence_radius": 0.0019956885494898735
+      },
+      {
+        "accepted_shots_per_setting": 10000000,
+        "conservative_lower_bound": 0.6876268625907511,
+        "detects_bound_entanglement": true,
+        "efficiency_relative_uncertainty": 0.001,
+        "nominal_ideal_expected_q_used": true,
+        "simultaneous_confidence_radius": 0.0006310921316705665
+      },
+      {
+        "accepted_shots_per_setting": 100000000,
+        "conservative_lower_bound": 0.6962548090010249,
+        "detects_bound_entanglement": true,
+        "efficiency_relative_uncertainty": 0.001,
+        "nominal_ideal_expected_q_used": true,
+        "simultaneous_confidence_radius": 0.00019956885494898735
+      },
+      {
+        "accepted_shots_per_setting": 100000,
+        "conservative_lower_bound": 0.5549077158047462,
+        "detects_bound_entanglement": false,
+        "efficiency_relative_uncertainty": 0.01,
+        "nominal_ideal_expected_q_used": true,
+        "simultaneous_confidence_radius": 0.006310921316705665
+      },
+      {
+        "accepted_shots_per_setting": 1000000,
+        "conservative_lower_bound": 0.6416427583273824,
+        "detects_bound_entanglement": false,
+        "efficiency_relative_uncertainty": 0.01,
+        "nominal_ideal_expected_q_used": true,
+        "simultaneous_confidence_radius": 0.0019956885494898735
+      },
+      {
+        "accepted_shots_per_setting": 10000000,
+        "conservative_lower_bound": 0.6691199718637837,
+        "detects_bound_entanglement": true,
+        "efficiency_relative_uncertainty": 0.01,
+        "nominal_ideal_expected_q_used": true,
+        "simultaneous_confidence_radius": 0.0006310921316705665
+      },
+      {
+        "accepted_shots_per_setting": 100000000,
+        "conservative_lower_bound": 0.6778145365116107,
+        "detects_bound_entanglement": true,
+        "efficiency_relative_uncertainty": 0.01,
+        "nominal_ideal_expected_q_used": true,
+        "simultaneous_confidence_radius": 0.00019956885494898735
+      }
+    ],
+    "realized_T_trace_norm": 0.7022810881801117,
+    "trace_norm_measured_by_each_coset": [
+      0.7022810881801126,
+      0.7022810881801129,
+      0.7022810881801128
+    ]
+  },
+  "scope": "Known Tiles UPB/PPT bound entangled state; computational test of W33 Q8 correlation analyzer, not discovery of bound entanglement or physical experiment.",
+  "status": "PASS_EXACT_PPT_BOUND_ENTANGLEMENT_FROM_ONE_W33_Q8_FRAME"
+}
