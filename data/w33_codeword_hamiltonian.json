@@ -1,0 +1,44 @@
+{
+ "theta_invariant": true,
+ "commutes_with_parity": true,
+ "spectrum": [
+  10.0,
+  10.0,
+  10.0,
+  10.0,
+  10.0,
+  10.0,
+  10.0,
+  10.0,
+  10.0
+ ],
+ "odd_sector_spectrum": [
+  10.0,
+  10.0,
+  10.0,
+  10.0
+ ],
+ "HL_spectrum": [
+  5.0,
+  5.0,
+  5.0,
+  5.0,
+  5.0,
+  5.0,
+  5.0,
+  5.0,
+  5.0
+ ],
+ "two_copy_swap": true,
+ "two_copy_spectrum_times9": [
+  [
+   2.0,
+   36
+  ],
+  [
+   32.0,
+   9
+  ]
+ ],
+ "ML_MR_commute": true
+}

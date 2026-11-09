@@ -1,0 +1,38 @@
+{
+ "sum_zero": true,
+ "gram_diag": 0.9999999999999989,
+ "gram_off": [
+  -0.2
+ ],
+ "permuted": true,
+ "ranks": [
+  9,
+  9,
+  9,
+  9,
+  9,
+  9
+ ],
+ "svals_first": [
+  0.516398,
+  0.516398,
+  0.258199,
+  0.258199,
+  0.258199,
+  0.258199,
+  0.258199,
+  0.258199,
+  0.258199
+ ],
+ "top2_in_parity_odd": [
+  false,
+  false,
+  false,
+  false,
+  false,
+  false
+ ],
+ "principal_cosines_vs_letter6": [
+  "[0.0, 0.0]"
+ ]
+}

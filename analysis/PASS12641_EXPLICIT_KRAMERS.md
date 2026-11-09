@@ -27,3 +27,17 @@ Claude track. Script: `analysis/w33_explicit_kramers.py` (`data/w33_explicit_kra
 - **d = 25 targeted search** (`w33_ququint_diverse.py`). Random-objective integer programs return 6 distinct size-13 double covers, all with λ_max(R) = 9 against a threshold of 7.4 (δ* = −0.32), and 5 distinct size-14 single covers, all with λ_max(R) = 4 against 3.6 (δ* = −0.16). These minimal uniform covers appear to be single orbit types, and **none certifies**. The pentad mechanism appears special to p = 3, where the doily S6 comes from W(E6) ≅ PGSp(4,3).
 - **Three qubits.** Not advanced this round. A symmetry-reduced degree-6 real SOS needs the charge-1 block (Sym²(C⁸)⊗C⁸, dimension 288) and a reshuffled linear map onto Sym³. It is proposed as the next step rather than attempted.
 - **Toward a structural proof of Sym²(C⁹) = 9·(5,1).** The other track's sector s = 0 is span{|0,0⟩} ⊕ span{|z,−z⟩ + |−z,z⟩ : z ∈ P¹(F₃)}, i.e. 1 + 4 = 5 dimensions. The doily S6 acts on it with character 3 on a transposition and 2 on a 3-cycle (Pass 12640), so it is (5,1). A computation-free identification of the six letters is still open.
+
+## Addendum: the six letters, the codeword operator, and status
+
+**Six letters** (`w33_six_letters.py`). In the sector s = 0, the vector fixed by the point stabiliser S5, together with its five images under the star transpositions, gives **six vectors forming a regular simplex**: they sum to 0, have unit norm and pairwise overlap −1/5, and S6 permutes them up to sign. This is exactly the standard representation (5,1) as the six letters minus their centroid. They are **not product states**: each reshaped 9×9 matrix has full rank, with singular values 0.516 (×2) and 0.258 (×7). Their distinguished 2-planes are computational-basis pairs {|z⟩, |−z⟩}, which depends on the other track's computational-basis sectors, not on invariant structure. **No basis-independent state interpretation of the letters was found; this remains open.**
+
+**The codeword operator** (`w33_codeword_hamiltonian.py`).
+- At first moment, Σ|e⟩⟨e| over any k bases is k·I, which carries no information.
+- At second moment, θ⊗θ maps M_L to M_R, and **M_L = M_R exactly**: by the twirl identity, M depends only on the covered point set, which the two chiral pentads share. So spec(M_L + M_R) = 2·{1/9, 16/9}, and the certificate is automatically time-reversal invariant.
+- **The theorem's bound is a property of the codeword's covered half and cannot see chirality.** The chirality lives in the regions and states (Pass 12641, results 3–4), not in the second-moment operator.
+
+**Not advanced:**
+- the three-qubit degree-6 real SOS (needs the 288-dimensional charge-1 block);
+- the exact replay of Pass 12641 by the other track, which has been working on Q8 tomography and witnesses (ec986540b, 421e8b11b);
+- an audit of which corpus results depend on W(E6) ≅ PGSp(4,3), proposed in the handoff.
