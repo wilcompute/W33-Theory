@@ -1,0 +1,14 @@
+{
+ "n_disjoint_5": 13824,
+ "n_maximal_5": 432,
+ "pezzotopes_equal_maximal": true,
+ "psp_orbits_on_pezzotopes": [
+  216,
+  216
+ ],
+ "orbits_closed_on_pentads": true,
+ "orbit_pairs_over_codewords": {
+  "(0, 1)": 216
+ },
+ "two_per_codeword_are_opposite_chirality": true
+}
