@@ -104,3 +104,17 @@ Stock CLASS **refuses** to run HMcode with a scalar field ("Cannot use scalar fi
 The patched scalar-field ΛCDM residual is 0.3% at k = 1 and 1.1% at k = 0.1. This is from HMcode's approximate growth with fitted (w0, wa); it is not chased further.
 
 **The fading/CPL boost ratio at k = 1, z ≈ 0 is +1.9% in HMcode and +0.6% in patched halofit.** Both nonlinear models put fading and CPL within about 2% in nonlinear power, consistent with the corrected shear result that the shear data do not separate them.
+
+## Addendum 3: reproduced on stock CLASS and reported upstream (lesgourg/class_public#682)
+
+Stock CLASS v3.3.1 (commit 5668031) with a thawing exponential scalar field (λ = 1, w = −0.848 today, Ω_scf = 0.686) gives the following P_nl/P_lin at z = 0:
+
+| | k = 1 h/Mpc | k = 3 |
+|---|---:|---:|
+| scalar field | 4.21 | 8.58 |
+| matched w0 = −0.85 fluid | 5.71 | 19.58 |
+| Λ | 5.87 | 19.45 |
+
+Halofit reads Ω_m = 2.75 and Ω_v = 0, while the true Ω_m is 0.313.
+
+The input files and the issue text are in `analysis/toe_uv/class_issue_682/`. The documented explanatory.ini scalar field is a tracker with w ≈ 0 today, behaving like matter, so it does not show the problem; that is why a thawing potential is used. Posted as https://github.com/lesgourg/class_public/issues/682 from the wilcompute account.
