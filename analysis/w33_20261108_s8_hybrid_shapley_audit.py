@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
-"""Reconstruct frozen S8 shear power/geometry two-factor experiment exactly.
+"""Replay the archived S8 shear power/geometry arithmetic.
 
-Shapley two-player attribution is an algebraic decomposition, not calibrated
-observational significance. Do not edit or re-freeze prereg_highz.json.
+PASS12632 withdrew the physical interpretation of these inputs. The archived
+files reproduce the original preregistration arithmetic for the research record.
 """
 from __future__ import annotations
 import argparse,json
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
-FILE={"des":"shear_hybrid_des.json","kids":"shear_hybrid_kids.json"}
+FILE = {
+    "des": "shear_hybrid_des_orig.json",
+    "kids": "shear_hybrid_kids_orig.json",
+}
 BLOCKS=("all","low","high","mixed")
 
 def produce(root=ROOT):
@@ -64,6 +67,7 @@ def produce(root=ROOT):
       frozen_claim=prereg["claim"],
       original_hybrid_implementation="analysis/toe_uv/shear_hybrid.py",
       sources=list(FILE.values()),
+      physical_evidence_status="WITHDRAWN_PASS12632",
       additive_identification_warning="The one-factor power and geometry effects both use the fading baseline. Their sum is NOT generally the observed CPL-fading difference; the nonadditive interaction is nonzero.",
       algebra="Let F=fading power+geometry, C=CPL power+geometry, P=CPL power with fading geometry, G=fading power with CPL geometry. Delta=C-F, interaction=C-P-G+F. Shapley_power=((P-F)+(C-G))/2, Shapley_geometry=((G-F)+(C-P))/2; their sum equals Delta exactly.",
       evidence_limit="These are deterministic recombinations of two already computed fixed-background hybrid likelihoods. No new raw DES/KiDS fit, covariance estimation, independent priors, posterior sampling, causal intervention or calibrated evidence ratio is derived. The frozen S8 claim remains untouched.",

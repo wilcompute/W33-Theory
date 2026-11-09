@@ -1,6 +1,6 @@
 # What the data say about evolving dark energy (one page; revised 2026-11-08 after the CLASS halofit correction)
 
-> **Revised after Pass 12632.** The previous version claimed that cosmic shear separates the models (fading +4.7 against CPL +0.3 on the combined ledger). That claim came from a CLASS halofit bug: scalar-field dark energy was read as Ω_m ≈ 3, so every scalar-field model had nonlinear power 0.4–0.7 of the true value, while CPL was computed correctly. **It is withdrawn.** The bug is reproduced on stock CLASS and reported as lesgourg/class_public#682. The other track's retraction and fail-closed gate are in 5b2766be1. The previous text is in git history (44f94393d).
+> **PASS12632 WITHDRAWAL.** The previous version claimed that cosmic shear separates the models (fading +4.7 against CPL +0.3 on the combined ledger). A CLASS Halofit bug treated scalar-field dark energy as Ω_m ≈ 3 and suppressed the scalar-field nonlinear power by a factor of 0.4–0.7 relative to the corrected calculation. The bug is reproduced on stock CLASS and reported as lesgourg/class_public#682. The other track's retraction and fail-closed gate are in 5b2766be1. The previous text is in git history (44f94393d).
 
 Claude track, Passes 12620–12633. All numbers come from committed JSON in `analysis/toe_uv/` and `data/`. **Not a theory of everything.**
 
