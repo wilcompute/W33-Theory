@@ -1,0 +1,14 @@
+{
+ "control_d9_pentad": [
+  0.11111110275564945,
+  "optimal"
+ ],
+ "control_d9_spread4": [
+  -1.968745271337534e-08,
+  "optimal"
+ ],
+ "three_qubit_size5": [
+  -4.6582498652577595e-08,
+  "optimal"
+ ]
+}

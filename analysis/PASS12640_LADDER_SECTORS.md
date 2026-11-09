@@ -40,3 +40,10 @@ Not attempted, for the reason given in Pass 12639.
 The S6 that proves the bound is the doily of the 15 splits swapped by a Kramers reversal θ. By Pass 11210, θ is a genuine time reversal with **θ² = −1**: it is the T² = parity class, which needs an even number of qutrits. **So the strong unextendibility of the two-qutrit pentads follows from the Kramers time-reversal structure of two qutrits.** Each pentad's 5 sentinels are a star in the doily of one time reversal, and the bound is the content spectrum of that doily's Jucys–Murphy element.
 
 This is a structural statement about the substrate's own time-reversal operator. It is not a dynamical prediction.
+
+## Item 4: three qubits with charge-0 SOS terms (`w33_real_sos_threequbit.py`)
+
+The full degree-4 real SOS for a U(1)-invariant quartic consists of Hermitian charge ±2 terms plus charge-0 terms (v†Cv)². It is an SDP over a 64×64 Gram matrix of Hermitian C's plus a Sym² block.
+- **Controls.** The two-qutrit pentad gives 1/9, unchanged. Four spread bases give 0, against −4/9 for the Hermitian bound: tighter, as expected.
+- **Three-qubit size-5 sets: δ = 0.** The bound improves from −5/8 to 0 but does not become positive. That is only the trivial F ≥ 0, since F is a sum of squares.
+- **Conclusion.** No degree-4 SOS certificate exists for the three-qubit case. Their strong unextendibility (numerical min 1/8) needs a higher-degree real SOS or an algebraic argument; it stays open.
