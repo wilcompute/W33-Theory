@@ -74,3 +74,20 @@ The real moduli space of marked cubic surfaces has 432 W(E6)-equivalent regions.
 - So the positive-geometry regions of cubic-surface moduli are *not* built from the double-six/spread structure. They come from a separate S5 configuration, and 13,824 = 432 × 32.
 
 **Status.** The face-number identity is a count match on every region. It is not yet a facet-by-facet identification with the paper's explicit regions. The identification of facets with roots and A2³ subsystems follows Early, Geiger, Panizzut, Sturmfels and Yun's labels (10 of type A1, 5 of type A2^×3). The W(3,3) reading and the "no spread" property are this pass's.
+
+## Addendum 2: the E6 Bergman fan maps into the reconstructed fan (`w33_bergman_to_naruki.py`)
+
+Ren, Shaw and Sturmfels: the rays of trop(Y⁰) are the images of the 750 rays of the E6 Bergman fan Berg(E6) under a 40×36 matrix.
+- **The 750 rays are recomputed** as the proper connected flats of the E6 root arrangement: A1 36, A2 120, A3 270, A4 216, D4 45, A5 36, D5 27.
+- **Map used:** the root / A2³ incidence matrix (M[T, r] = 1 iff r ∈ T), on the hypothesis that it is equivalent to the Yoshida map.
+
+**All 750 images lie in the reconstructed Naruki fan** (non-negative least squares over its 1215 maximal cones, modulo R·1):
+- A1 goes to its own type-(a) ray.
+- **A2 goes to the type-(b) ray of its unique A2³, the W(3,3) line.**
+- A3 goes to the interior of the 2-cone of two orthogonal roots, one-to-one with the 270 such cones.
+- A4 and A5 go to type-(a) rays.
+- D4 and D5 go to 0, the lineality direction.
+
+The rays produced are exactly the 36 + 40. A random 0/1 matrix with 9 ones per row produces 750 distinct images instead (control).
+
+**Status.** The image is *contained in* the reconstructed fan and produces exactly its rays. Not shown here: that the images of Bergman cones cover all 1215 maximal cones (that needs the 142,560 maximal nested sets), and that this incidence matrix equals the Yoshida matrix rather than merely being equivalent to it.

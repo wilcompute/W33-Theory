@@ -1,0 +1,33 @@
+{
+ "n_connected_flats": 750,
+ "flat_sizes": {
+  "1": 36,
+  "3": 120,
+  "6": 270,
+  "12": 45,
+  "10": 216,
+  "15": 36,
+  "20": 27
+ },
+ "n_image_rays_incidence": 346,
+ "n_image_rays_random_control": 750,
+ "distinct_images_by_flat_size": {
+  "1": 36,
+  "3": 40,
+  "6": 270,
+  "12": 1,
+  "10": 36,
+  "15": 36,
+  "20": 1
+ },
+ "images_outside_fan": 0,
+ "image_support_by_flat_size": {
+  "1:a": 36,
+  "3:b": 120,
+  "6:aa": 270,
+  "10:a": 216,
+  "12:zero": 45,
+  "15:a": 36,
+  "20:zero": 27
+ }
+}
