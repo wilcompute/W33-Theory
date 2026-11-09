@@ -1,0 +1,23 @@
+{
+ "S9_shear_no_split": {
+  "claim": "With correct nonlinear power (CLASS halofit patched for scalar fields, class_halofit_scf_patch.py), at the frozen full-data Dovekie backgrounds (class_fit_dovekie.json), the next cosmic-shear releases (DES Y6, KiDS successor, HSC Y3 or Euclid DR1, scored with this repo's likelihood conventions: NLA, no baryons, cuts xi+ > 10', xi- > 60') will NOT separate CPL from the fading coupling: |Delta chi2(CPL - fading c<0)| < 2 per survey after refitting nuisances, and every evolving model (fading c<0, c>0, CPL) within 4 in chi2 of LCDM.",
+  "current_values": {
+   "des_y3": {
+    "CPL": 1.2916349363415236,
+    "LCDM": 0.0,
+    "free_neg": 1.935258390095413,
+    "free_pos": 1.0017799260053266
+   },
+   "kids_legacy": {
+    "CPL": 2.2124745501439236,
+    "LCDM": 0.0,
+    "free_neg": 2.492875218130081,
+    "free_pos": 1.0645998720943908
+   }
+  },
+  "falsified_if": "|Delta chi2(CPL - fading c<0)| >= 2 on any one release, or any evolving model better than LCDM by more than 4 or worse by more than 4.",
+  "frozen": "2026-11-08",
+  "pass": 12632,
+  "supersedes": "S8 (prereg_highz.json, sha 3074f15e) and the sign clauses of S1/S7, whose evidence was the halofit bug (Pass 12632); those files stay unedited"
+ }
+}
