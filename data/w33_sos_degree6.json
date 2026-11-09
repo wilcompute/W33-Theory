@@ -1,0 +1,60 @@
+{
+ "d4_size3": {
+  "d": 4,
+  "degree4_spectrum_times_d": [
+   [
+    1.0,
+    9
+   ],
+   [
+    9.0,
+    1
+   ]
+  ]
+ },
+ "d8_size5": {
+  "d": 8,
+  "degree4_spectrum_times_d": [
+   [
+    -5.0,
+    6
+   ],
+   [
+    3.0,
+    20
+   ],
+   [
+    11.0,
+    10
+   ]
+  ],
+  "degree6_delta": -0.1643446629166349
+ },
+ "d9_size5": {
+  "d": 9,
+  "degree4_spectrum_times_d": [
+   [
+    1.0,
+    36
+   ],
+   [
+    16.0,
+    9
+   ]
+  ],
+  "degree6_delta": 0.11111111111110746
+ },
+ "d9_size8": {
+  "d": 9,
+  "degree4_spectrum_times_d": [
+   [
+    4.0,
+    36
+   ],
+   [
+    16.0,
+    9
+   ]
+  ]
+ }
+}

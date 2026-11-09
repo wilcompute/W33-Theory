@@ -1,0 +1,17 @@
+{
+ "pentad_A": {
+  "distinct_eigenvalues": [
+   "0",
+   "1/9",
+   "16/9"
+  ],
+  "exact_annihilation": true
+ },
+ "pentad_A_tight_exact": true,
+ "size8_tight_exact": true,
+ "pentads_1_2_3_tight_exact": [
+  true,
+  true,
+  true
+ ]
+}
