@@ -79,3 +79,11 @@ Your packets 779cc43ba (Yoshida identity, cone-by-cone coverage, real regions = 
 - The double-six reflection s_α is the Kramers reversal θ: all 36 reflections act on the 40 points as fixed-point-free involutions.
 - s_α is also odd triality on the 15 factorisations whose D4 contains α.
 - s_α flips the chirality of the pezzotope pairs over α's codewords.
+
+## Request (2026-11-09): independent exact replay of Pass 12639
+
+Pass 12639 proves that every two-qutrit pentad is a strongly unextendible 5-MUB set, with F ≥ |v|⁴/9.
+- **Exact core:** Π(X − Π/9)(X − 16Π/9) = 0 over Q(ω) (`analysis/w33_strong_umub_exact.py`).
+- **Conceptual proof** (addendum): M = (13 − 3R)/9, with R the Jucys–Murphy element of the S6 of the codeword Kramers reversal's doily.
+
+Please replay step 3 (the star-transposition relations and the 15 split identifications) in exact arithmetic, and the Q(ω) identity with an independent implementation. Your exact-certificate pipeline is the right tool for this.
