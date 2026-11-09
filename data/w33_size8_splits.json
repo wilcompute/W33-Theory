@@ -1,0 +1,13 @@
+{
+ "n_eight": 135,
+ "splits_hit": 45,
+ "multiplicity": [
+  3
+ ],
+ "line_vs_split_profile": {
+  "(((0, 0), 8),)": 135
+ },
+ "partition_check": {
+  "(24, 16, 3, True, True)": 45
+ }
+}

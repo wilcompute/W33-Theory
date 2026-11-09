@@ -52,3 +52,19 @@ E7 corresponds to three qubits: W(E7) = Z₂ × Sp(6,2), and W(5,2) is the three
 **Prediction tested and failed:** the E7 pezzotope count 60,480 = |Sp(6,2)|/24 does not occur as an orbit. The E7 positive-geometry regions are not unextendible three-qubit MUB sets, and the E6 coincidence (regions = size-5 unextendible sets) does not carry over as stated.
 
 **What does carry over:** W(5,2) has two size classes (5 and 9), and W(3,3) has three (5, 8 and 10). In both, the smallest unextendible sets have size 5, with S5 symmetry for two qutrits and A5 for three qubits. Mandayam et al. report unextendible Pauli MUBs in d = 8, so the three-qubit size-5 sets are probably prior art.
+
+## Addendum 2: the size-8 sets are the entangled bases of a factorisation (`w33_size8_splits.py`, `data/w33_size8_splits.json`)
+
+**The chain.** A size-8 set gives an orthogonal root frame (via its multiplicity-6 roots), the frame spans a D4, and the D4 is a tensor split (Pass 12635 dictionary). This chain sends the 135 size-8 maximal partial spreads **3-to-1 onto the 45 tensor splits**: these are the corpus's 135 "splits" (45 × 3).
+
+**For every split {b, b⊥}**, a factorisation C⁹ = C³ ⊗ C³ with b and b⊥ the two local Pauli groups (all 45 cases):
+- all 8 lines of each of its three size-8 sets miss b ∪ b⊥;
+- the three sets are pairwise disjoint;
+- together they are **exactly the 24 lines missing b ∪ b⊥**;
+- the other 16 lines meet both b and b⊥.
+
+The 16/24 split is Pass 11143's: product contexts, and contexts whose eigenbases are maximally entangled with respect to the factorisation (Pass 12523 checked the flat Schmidt spectra).
+
+> **For every factorisation of two qutrits, the 24 maximally entangled stabiliser bases split into exactly three unextendible sets of 8 mutually unbiased bases. These 135 sets are all the weakly unextendible 8-MUB sets in dimension 9.**
+
+**Status.** Exact on all 45 splits. Entanglement patterns of complete MUB sets have been studied in the literature (Lawrence; Wieśniak et al.). Whether this three-way partition is stated there is not checked. Corpus prior: Pass 11143 (16 + 24).
