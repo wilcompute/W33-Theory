@@ -47,3 +47,13 @@ The full degree-4 real SOS for a U(1)-invariant quartic consists of Hermitian ch
 - **Controls.** The two-qutrit pentad gives 1/9, unchanged. Four spread bases give 0, against −4/9 for the Hermitian bound: tighter, as expected.
 - **Three-qubit size-5 sets: δ = 0.** The bound improves from −5/8 to 0 but does not become positive. That is only the trivial F ≥ 0, since F is a sum of squares.
 - **Conclusion.** No degree-4 SOS certificate exists for the three-qubit case. Their strong unextendibility (numerical min 1/8) needs a higher-degree real SOS or an algebraic argument; it stays open.
+
+## Item 2: structured sets in d = 25, and a refinement of the principle (`w33_ququint_sentinel_search.py`)
+
+The integer program finds maximal partial spreads whose uncovered points are uniformly covered by splits, minimising size; HiGHS was given 600 s per run. The control (q = 3, m = 2) finds a pentad: 5 lines, 5 sentinels, δ* = 1/9.
+- **q = 5, m = 2:** a set of 13 lines with 13 sentinels covering every uncovered point exactly twice (the pentad analogue). **δ* = −0.32: not certified.** Here λ_max(R) = 9, above the threshold m(d − 1)/(2p) + s/p = 7.4.
+- **q = 5, m = 1:** 14 lines, 6 disjoint sentinels. δ* = −0.16, with λ_max(R) = 4 against a threshold of 3.6.
+
+Both runs hit the time limit, so minimality is not proved.
+
+**Refined principle.** A uniform split cover makes M affine in the swaps, but certification also needs λ_max(R) below the threshold. The two-qutrit pentads pass because their five swaps generate the doily S6, whose Jucys–Murphy element has λ_max = 4. The d = 25 double covers found here do not have that structure. Whether some d = 25 double cover generates a symmetric group with a small enough Jucys–Murphy spectrum is open; a search could add "the swaps satisfy star-transposition relations" as a constraint.
