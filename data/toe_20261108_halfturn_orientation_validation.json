@@ -1,0 +1,133 @@
+{
+  "baseline": "a49a1e97e72f560880af69eef811f6f2fc9eb1c0",
+  "utc": "2026-11-09T02:59:00.659420+00:00",
+  "artifact_raw_sha256": {
+    "analysis/w33_pass10950_clock_albert_lorentz_spinor.py": "22a29ab73d04bdb42b54a1c802bb14183dfb68746df836835693f0ec85adacae",
+    "analysis/toe_20261108_native_spin_halfturn.py": "2ab0814224f4a9c960f4bc84e4e0afea94581bcc4bedafc999788664a6093afd",
+    "analysis/toe_20261108_species_orientation_selector.py": "8206f5f95f8ae62b2ded018ca8266c178028028dda325e3ef652eb67956f90c8",
+    "analysis/2026-11-08_native_halfturn_and_species_orientation.md": "c6cfb0f4a1b6e8097975ad1c1a80d9dac9e42e07de835b1d1c5119ed5971c108",
+    "data/toe_20261108_native_spin_halfturn.json": "8aff6fadd229f9f3405955d1e1255404a55b2f54e7ff7dd5be8c164c1763ee44",
+    "data/toe_20261108_species_orientation_selector.json": "91939b107ee9908e0f761a185763a0ca6a3968de803de3af6aff88cd7a77418d"
+  },
+  "desktop": [
+    {
+      "pid": 27532,
+      "exit_code": 0,
+      "runtime_seconds": 42.49,
+      "scope": "Final half-turn producer, earlier Aronhold-only selector and six parent tests",
+      "tests": "6 passed in 27.41s"
+    },
+    {
+      "pid": 18700,
+      "exit_code": 0,
+      "runtime_seconds": 4.23,
+      "scope": "Final degree-six and degree-twelve selector producer"
+    }
+  ],
+  "independent_server": {
+    "engine": "Independent server V8",
+    "preserved_cubic_terms": 45,
+    "compression_exact": true,
+    "power_ranks": [
+      1,
+      2,
+      2,
+      2
+    ],
+    "sextic_exact_integer_points": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        2,
+        0
+      ],
+      [
+        1,
+        0,
+        2
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        2,
+        -1,
+        3
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        -2,
+        3,
+        -1
+      ]
+    ]
+  },
+  "prior_spinor_control": "Exact saved Pass10956 half-turn and generator agree in the reconstructed native spinor basis. Chirality agrees up to orientation. Saved local artifact is comparison only.",
+  "prior_ownership": "The October 1 sparse D-flat Cartan plane has exactly the same ordered basis. The global sextic and Aronhold restrictions were previously derived there. The six residuals and their exact rank on the three-field species orbit are the extension.",
+  "parallel_branch_tips": [
+    "4cf94a14e",
+    "b067a6009",
+    "e334099c5",
+    "a8ae78560",
+    "006b9227b"
+  ],
+  "manuscript": {
+    "cumulative_layout_text_pages": 170,
+    "total_pages": 215,
+    "new_layout_text_pages": [
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170
+    ],
+    "full_week_patch_review_complete": false
+  },
+  "continuity_decision": "1794193005469-y0plkd",
+  "rediscovery_guard": {
+    "exit_code": 0,
+    "candidate": "e_6+hesse",
+    "resolution": "October 1 owns the identical Cartan support and invariant restrictions. Pass11561 has a characteristic-three Hesse law; Pass11575 identifies independent fermion mass channels. The rank-nine species selector and the half-turn action are different calculations."
+  },
+  "generic_field_control": {
+    "sextic": 2125,
+    "verified_equal_under": [
+      "E6 root transvection",
+      "family SL3 shear",
+      "native half-turn"
+    ]
+  },
+  "parallel_integration": {
+    "integration_parent": "84f21f0a9a17dfa71816272f1d24ac4291d315c0",
+    "incoming_science": "3a43e7a4ff447f8172550bd609913050db8e9373",
+    "review": "Both incoming changed files read. The short held-out BAO MCMC gives KLT elpd -9.7255 and reports about 120 effective samples. Its shear withdrawals remain in force. No science artifact overlaps this packet."
+  }
+}
