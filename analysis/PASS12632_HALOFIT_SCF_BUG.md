@@ -87,3 +87,20 @@ The hybrid split is now small: CPL − fading = −0.60 (DES) and −0.32 (KiDS)
 - The frozen files stay unedited as the record.
 
 The held-out shear rerun (`q19`) and the patched refit of the training fits (`q20`) are running.
+
+## Addendum 2: a second nonlinear model (HMcode) agrees
+
+Stock CLASS **refuses** to run HMcode with a scalar field ("Cannot use scalar field scf with HMcode (not yet coded)"). Halofit has no such guard and returns wrong answers without warning, which is the bug above.
+
+`class_hmcode_scf_patch.py` supplies the missing treatment and lifts the guard (`~/cosmo/class_fading_hm`). It applies the same Ω correction, sets Ω_w = Ω_φ, and takes w0, wa from the field's w at a = 1 and 1/2. Results (`hmcode_check.py`, `hmcode_check.json`):
+
+| HMcode P_nl/P_lin, z = 0.01 | k = 0.1 h/Mpc | k = 1 | k = 3 |
+|---|---:|---:|---:|
+| ΛCDM, plain Λ = w = −1 fluid | 1.017 | 5.585 | 18.817 |
+| ΛCDM, scalar field, patched | 1.028 | 5.601 | 18.825 |
+| fading c < 0 best fit, patched | 1.022 | 5.641 | 18.903 |
+| CPL best fit | 1.013 | 5.537 | 18.601 |
+
+The patched scalar-field ΛCDM residual is 0.3% at k = 1 and 1.1% at k = 0.1. This is from HMcode's approximate growth with fitted (w0, wa); it is not chased further.
+
+**The fading/CPL boost ratio at k = 1, z ≈ 0 is +1.9% in HMcode and +0.6% in patched halofit.** Both nonlinear models put fading and CPL within about 2% in nonlinear power, consistent with the corrected shear result that the shear data do not separate them.
