@@ -1,0 +1,50 @@
+{
+  "Q8_coset_count": 3,
+  "Q8_normal": true,
+  "Q8_order": 8,
+  "SL2_3_element_orders": {
+    "1": 1,
+    "2": 1,
+    "3": 8,
+    "4": 6,
+    "6": 8
+  },
+  "SL2_3_order": 24,
+  "conditional_purity_ceilings": "Combining Pass12639: unbiased 8-MUB states have tr(rho^2)<=1/3; unbiased 5-MUB states <=2/3",
+  "exact_centered_identity": "F8(rho)=tr(rho^2)+1/9-(tr(rho_A^2)+tr(rho_B^2))/3",
+  "exact_frame_potential": "(81+63)/72 = 2",
+  "exact_purity_identity": "sum_{e in any 72-Choi family}(tr(rho |e><e|))^2 = 1+tr(rho^2)-(tr(rho_A^2)+tr(rho_B^2))/3",
+  "family_checks": [
+    {
+      "MUB_bases": 8,
+      "clifford_gates": 72,
+      "frame_potential_2": 2,
+      "max_collision_purity_error": 1.7763568394002505e-15,
+      "mixed_state_trials": 72
+    },
+    {
+      "MUB_bases": 8,
+      "clifford_gates": 72,
+      "frame_potential_2": 2,
+      "max_collision_purity_error": 1.9984014443252818e-15,
+      "mixed_state_trials": 72
+    },
+    {
+      "MUB_bases": 8,
+      "clifford_gates": 72,
+      "frame_potential_2": 2,
+      "max_collision_purity_error": 1.5543122344752192e-15,
+      "mixed_state_trials": 72
+    }
+  ],
+  "limitations": "Finite geometry and known unitary-2-design criterion, not TOE dynamics or observed physics.",
+  "maximal_clique_sizes": {
+    "5": 144,
+    "6": 24,
+    "8": 3
+  },
+  "maximal_eight_cliques_equal_Q8_cosets": true,
+  "pure_state_entanglement": "F8=10/9-(2/3)tr(rho_A^2) in [4/9,8/9]",
+  "single_qutrit_Clifford_partition": "216=3*72",
+  "status": "PASS_EXACT_Q8_CLIQUE_AND_UNITARY2DESIGN_WITH_MIXED_PURITY_CONTROLS"
+}
