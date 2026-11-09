@@ -118,3 +118,23 @@ Stock CLASS v3.3.1 (commit 5668031) with a thawing exponential scalar field (λ 
 Halofit reads Ω_m = 2.75 and Ω_v = 0, while the true Ω_m is 0.313.
 
 The input files and the issue text are in `analysis/toe_uv/class_issue_682/`. The documented explanatory.ini scalar field is a tracker with w ≈ 0 today, behaving like matter, so it does not show the problem; that is why a thawing potential is used. Posted as https://github.com/lesgourg/class_public/issues/682 from the wilcompute account.
+
+## Addendum 4: scale-cut robustness, S9 frozen, and an audit of every other halofit consumer
+
+**Conservative cuts** (ξ₊ > 30′, ξ₋ > 120′; `sign_des*_cut30.json`, patched builds). χ²_shear relative to ΛCDM:
+
+| | fading c < 0 | fading c > 0 | CPL | CPL − fading |
+|---|---:|---:|---:|---:|
+| DES Y3 | +1.35 | +0.45 | +1.17 | −0.18 |
+| KiDS-Legacy | +0.13 | −0.24 | +0.40 | +0.27 |
+
+The no-split result holds and tightens: |CPL − fading| ≤ 0.27, and every model is within 1.4 of ΛCDM. The baryon-feedback check was conditional on a shift above 0.5, so it was not needed.
+
+**Frozen S9** (`prereg_noshear.json`, sha f40c2645). The next shear releases will not separate CPL from fading (|Δχ²| < 2 per survey), and every evolving model will stay within 4 of ΛCDM. S9 supersedes S8 and the sign clauses of S1 and S7.
+
+**Audit of every script that reads `pk_nl`.**
+- `class_des_fit.py`: corrected above.
+- `class_shear_equiv.py` (Pass 12583, the shear-equivalent S8): both the mocks and the ΛCDM family it fits went through the scalar-field path. Rerun with patched builds, including a patched `class_massive_hf` for the relaxing radion: **pending** (`class_shear_dovekie_hf.json`).
+- `nbody_ic.py` and `nbody_pm.py` (Pass 12573): the coupled/control power ratio, the N-body result itself, never used halofit and stands. The **control-vs-halofit check** used the faulty scalar-field halofit. Against the patched halofit (`nbody_halofit_recheck.py`), the 100 Mpc/h control reaches 0.54–0.94 of the nonlinear power at k = 0.3–2.9 h/Mpc, so the largest deviation is 59%, not the "within 22 percent" stated in Pass 12573. The particle-mesh run under-resolves small-scale power, as expected at that resolution. The earlier agreement came from comparing against a wrong reference.
+- Pass 12593 §(DES shear χ², ΛCDM 201.48 against fading 201.83) used the unpatched likelihood. The patched fixed-background values are ΛCDM +0 and fading +1.94 (DES), so the shear data still absorb fading's higher S8, at a cost of about 2 rather than 0.35.
+- Everything else (BAO, SN, CMB, fσ8 from linear σ8, S8 priors) uses linear quantities. CMB lensing moved by less than 1 (`hf_impact.json`).

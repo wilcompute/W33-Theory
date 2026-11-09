@@ -123,3 +123,6 @@ Brane matter couples to it at about gravitational strength, so its range must li
 ## Sources
 
 arXiv:2209.09249, 2301.07719, 2512.20570, 2507.03090, 2601.14559 (DES Y6), 2503.19442 (KiDS-Legacy), 2007.08993 (eBOSS), 2506.24011. Parallel track: `f3593b2ae`, `b2f605041`.
+
+
+> **Correction (Pass 12632, 2026-11-08).** A CLASS halofit bug (scalar-field dark energy read as Omega_m ~ 3) affected the halofit-based numbers in this file: the N-body control is 0.54-0.94 of the corrected halofit at k = 0.3-2.9 h/Mpc, not within 22 percent; the coupled/control ratio is unaffected. See `analysis/PASS12632_HALOFIT_SCF_BUG.md`, addendum 4.

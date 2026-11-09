@@ -18,7 +18,7 @@ ZS = [0.02, 0.05, 0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.2, 1
 ELL = np.geomspace(30, 2000, 18)
 MEANS = (0.33, 0.52, 0.75, 0.95)
 SIG = 0.15
-MBIN = C.HOME + "/class_massive/class"
+MBIN = os.environ.get("MASSBIN", C.HOME + "/class_massive/class")
 FSKY = 5000 / 41253.0
 NEFF = 8.0 / 4 * (180 * 60 / math.pi) ** 2
 SIGE = 0.26
@@ -133,5 +133,5 @@ for name, p, kind, ex, binp in models:
         key = name + ("_nbody" if boost else "")
         out["rows"][key] = dict(S8_true=im["S8"], S8_equiv=se, resid_chi2=r, total_chi2_from_LCDM=d, om=im["om"], s8=im["s8"])
         print(key, out["rows"][key], flush=True)
-        json.dump(out, open(os.path.join(BG, f"class_shear_{ds}.json"), "w"), indent=1, default=float)
+        json.dump(out, open(os.path.join(BG, f"class_shear_{ds}{os.environ.get('OUTTAG', '')}.json"), "w"), indent=1, default=float)
 print("sheardone", flush=True)

@@ -166,3 +166,6 @@ Sorkin's 1987 argument is the one framework that gave the size of Λ in advance.
 ## Sources
 
 arXiv:hep-th/0002073, 0907.1602, hep-th/0005067, hep-th/0011289, 1705.05430, 2406.01689, 1703.06265, gr-qc/0612128, 2307.13743. DES Y3 public 2pt file at desdr-server.ncsa.illinois.edu.
+
+
+> **Correction (Pass 12632, 2026-11-08).** A CLASS halofit bug (scalar-field dark energy read as Omega_m ~ 3) affected the halofit-based numbers in this file: the DES shear chi2 comparison (LCDM 201.48 vs fading 201.83) used the unpatched likelihood; patched, fading is +1.94 behind LCDM at fixed background. See `analysis/PASS12632_HALOFIT_SCF_BUG.md`, addendum 4.

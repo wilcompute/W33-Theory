@@ -15,7 +15,7 @@ b = p["b"]
 f = p["prod"] / b
 extra = f"scf_parameters={4 * b},{b},2.0,{p['Zn']},{p['lnxi']},2,0.0,0.0\nf_idm={1 - f}\nz_pk=49,48,0\nz_max_pk=60\nk_output_values=0.2\nP_k_max_1/Mpc=60"
 kp = {}
-C.run_class(p, "fading", extra=extra, binp=C.HOME + "/class_massive/class", keep=kp)
+C.run_class(p, "fading", extra=extra, binp=os.environ.get("MASSBIN", C.HOME + "/class_massive/class"), keep=kp)
 t = kp["tag"]
 d49 = np.loadtxt(f"{t}/o_z1_pk.dat")
 d48 = np.loadtxt(f"{t}/o_z2_pk.dat")
