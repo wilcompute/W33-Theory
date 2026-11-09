@@ -1,0 +1,26 @@
+{
+  "eleven": {
+    "condition": 9.782844395091644,
+    "generic_9mode_contexts": 3,
+    "max_reconstruction_error": 8.881784197001252e-16,
+    "min_singular": 0.16835596247533818,
+    "rank": 80,
+    "settings": 11,
+    "third_context_index": 110,
+    "third_context_optimizations": 300
+  },
+  "scope": "11-setting design adds a third generic non-MUB nine-mode basis. 300 seeded candidates; not proven globally optimal. A local 3mode product protocol in 12 contexts is much better conditioned.",
+  "status": "PASS_11_SETTING_ADAPTIVE_EXTRA_FRAME_TRADEOFF",
+  "ten": {
+    "condition": 29.468942303378018,
+    "generic_9mode_contexts": 2,
+    "rank": 80,
+    "settings": 10
+  },
+  "twelve": {
+    "condition": 1.414213562373097,
+    "matched_product_contexts": 4,
+    "rank": 80,
+    "settings": 12
+  }
+}
