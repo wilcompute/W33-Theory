@@ -153,3 +153,6 @@ Fading is flat to 0.12 eV, where the gain over ΛCDM is 15.95. So the mass and t
 ## Sources
 
 arXiv:2503.14744, 2603.13208, 2606.05005, 2303.00746, 2311.16377, 2111.09343, 2601.14559, 2503.19442, 2507.03090, 2301.07719, hep-th/0209178, hep-th/0310190, hep-th/0504002, hep-ph/0402143.
+
+
+> **Correction (Pass 12632, 2026-11-08).** The shear-equivalent S8 shifts in Pass 12583 used CLASS halofit, which mishandles scalar-field dark energy. Patched, the shifts are smaller by 30-46%: fading c<0 -0.0083, not -0.0124; relaxing radion -0.0082, not -0.0120. The "c' gain under DES 6.7, not 4.0" lies in between (about 5.8 if the gain is linear in the S8 shift; not refitted). See `analysis/PASS12632_HALOFIT_SCF_BUG.md`, addendum 5.

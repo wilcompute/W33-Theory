@@ -138,3 +138,14 @@ The no-split result holds and tightens: |CPL − fading| ≤ 0.27, and every mod
 - `nbody_ic.py` and `nbody_pm.py` (Pass 12573): the coupled/control power ratio, the N-body result itself, never used halofit and stands. The **control-vs-halofit check** used the faulty scalar-field halofit. Against the patched halofit (`nbody_halofit_recheck.py`), the 100 Mpc/h control reaches 0.54–0.94 of the nonlinear power at k = 0.3–2.9 h/Mpc, so the largest deviation is 59%, not the "within 22 percent" stated in Pass 12573. The particle-mesh run under-resolves small-scale power, as expected at that resolution. The earlier agreement came from comparing against a wrong reference.
 - Pass 12593 §(DES shear χ², ΛCDM 201.48 against fading 201.83) used the unpatched likelihood. The patched fixed-background values are ΛCDM +0 and fading +1.94 (DES), so the shear data still absorb fading's higher S8, at a cost of about 2 rather than 0.35.
 - Everything else (BAO, SN, CMB, fσ8 from linear σ8, S8 priors) uses linear quantities. CMB lensing moved by less than 1 (`hf_impact.json`).
+
+## Addendum 5: Pass 12583's shear-equivalent S8, rerun with patched builds
+
+`class_shear_equiv.py dovekie` with `OUTTAG=_hf` uses patched `class_fading_hf` and `class_massive_hf`, writing `class_shear_dovekie_hf.json`:
+
+| S8 equivalent − S8 true | ΛCDM control | fading c < 0 | fading c > 0 | exponential | relaxing radion | radion, N-body P(k) |
+|---|---:|---:|---:|---:|---:|---:|
+| original build | −0.0001 | −0.0124 | −0.0122 | −0.0047 | −0.0120 | −0.0130 |
+| patched | −0.0001 | **−0.0083** | **−0.0066** | **−0.0035** | **−0.0082** | **−0.0087** |
+
+The direction is unchanged: a ΛCDM shear analysis still reports a lower S8 for these models. **The size shrinks by 30–46%.** Pass 12583's claim that "the c′ gain under DES is 6.7, not 4.0" used the original shift of about 0.012. With about 0.008 the corrected gain lies between those values. If the gain is linear in the S8 shift, it is roughly 5.8; that is an estimate, not a refit.
