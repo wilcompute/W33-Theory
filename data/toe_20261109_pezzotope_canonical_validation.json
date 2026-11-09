@@ -4,7 +4,8 @@
     "analysis/toe_20261109_pezzotope_canonical_partner.py": "4e91376347a66c8dec72fddbcc21d662c7b8cb5715bcddbd838be394d0c1292d",
     "analysis/2026-11-09_pezzotope_canonical_reflection.md": "60d2f63370e0f5ddce32af7f27422b3e841370fe8003084ca5478bd19364fa0f",
     "data/toe_20261109_pezzotope_canonical_partner.json": "a1cc4b3442c7b6024ec9761146535bddfe8196167b070527025d2284be21522a",
-    "data/toe_20261109_real_yoshida_pezzotope_labels.json": "1d08a8ed3c698e5b3790354b0937c7fc14d921aed751bb5f9a5d7c8e6556f2dd"
+    "data/toe_20261109_real_yoshida_pezzotope_labels.json": "1d08a8ed3c698e5b3790354b0937c7fc14d921aed751bb5f9a5d7c8e6556f2dd",
+    "tests/test_toe_20261109_pezzotope_canonical_newton.py": "549933960c06bcfae369ad434d34bff63a1cd0e6978416adc35f1cd96b3c13cd"
   },
   "producer": {
     "exit_code": 0,
@@ -63,5 +64,33 @@
     "https://arxiv.org/html/2306.13604v3#S9",
     "https://arxiv.org/html/2306.13604v3#S10",
     "https://arxiv.org/abs/math/9807127"
-  ]
+  ],
+  "newton_face_replay": {
+    "exit_code": 0,
+    "result": "1 passed in 17.60s",
+    "face_vector_by_dimension_0_to_3": [
+      19,
+      41,
+      32,
+      10
+    ],
+    "support_dimensions_in_u_order": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      2,
+      1,
+      2,
+      1,
+      1
+    ],
+    "scope": "The selected Newton polytope retains the ten root facets. All cusp directions support lower-dimensional faces."
+  }
 }
