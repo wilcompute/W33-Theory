@@ -176,3 +176,14 @@ Held-out shear with the patched builds (`shear_ppd.json`, `shear_ppd_kids_doveki
 - The earlier "shear erases CPL's advantage" result was entirely the bug.
 
 **DES-SN5YR training** (`shear_ppd_desy5.json`). Held-out DES shear relative to ΛCDM: fading c < 0 −0.74, c > 0 −0.27, CPL −0.62. The original build gave −0.42, +0.12 and −2.05. With the expansion terms (+7.18 and +9.46), the DES-SN5YR totals are **fading +6.44, CPL +8.84**. Here CPL leads, as it already did on expansion data alone. Across both compilations the leader follows the supernova sample, not the shear.
+
+## Addendum 7: patched refit of the training fits (`hf_refit.py`, `hf_refit_dovekie.json`)
+
+Each fit restarts from the original-build optimum, so the only change is the bug.
+- **ΛCDM through the scalar-field path refits to χ² = 2238.114, against 2238.11 for plain Λ (`LCDM_native`).** The 0.39 gap between the two ΛCDM fits, present in `class_fit_dovekie.json` all along, was this bug, and it is now closed.
+- Full-data Δχ² relative to ΛCDM, original → patched:
+  - fading c < 0: −10.65 → −10.79
+  - fading c > 0: −8.42 → −8.54
+  - exponential: −3.79 → −3.75
+  - CPL: −11.88 → −12.27 (CPL itself is unchanged; it gains only because the ΛCDM reference rises by 0.40)
+- Every shift is at most 0.4, so the expansion-data conclusions stand as stated.
