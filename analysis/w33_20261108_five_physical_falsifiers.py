@@ -282,8 +282,26 @@ def cosmology_halofit_firewall(root=ROOT):
     impact=rjson("analysis/toe_uv/hf_impact.json",root)
     assert max(abs(v["delta_hf_minus_orig"]["total"])
                for v in impact.values())<1.1
-    return dict(status="WITHDRAWN_SHEAR_CLAIMS_AND_REPRODUCED_NONLINEAR_CONTROL",
+    # This newest independent parallel correction is a FIXED-BACKGROUND shear
+    # refit, not an updated held-out posterior predictive likelihood.
+    fixed_shear={}
+    for label,newfile,oldfile in (
+        ("DES_Y3","analysis/toe_uv/sign_des.json","analysis/toe_uv/sign_des_orig.json"),
+        ("KiDS_Legacy","analysis/toe_uv/sign_des_kids.json","analysis/toe_uv/sign_des_kids_orig.json")):
+        old=rjson(oldfile,root)
+        new=rjson(newfile,root)
+        delta_before=float(old["CPL"]["des"]-old["free_neg"]["des"])
+        delta_after=float(new["CPL"]["des"]-new["free_neg"]["des"])
+        assert delta_before>2.5 and -1<delta_after<0,(label,delta_before,delta_after)
+        assert abs(new["CPL"]["des"]-old["CPL"]["des"])<1e-8
+        fixed_shear[label]=dict(prepatch_CPL_minus_fading_chi2=delta_before,
+            patched_CPL_minus_fading_chi2=delta_after,
+            absolute_patched_delta_less_than_one=abs(delta_after)<1,
+            original_positive_ordering_reversed=True,
+            evidence_layer="fixed-background nuisance-refitted shear only, not held-out model evidence")
+    return dict(status="WITHDRAWN_OLD_SHEAR_AND_FIXED_BACKGROUND_PATCHED_REVERSAL",
         original_and_patched_controls=cases,
+        corrected_fixed_background_shear=fixed_shear,
         patch_change_training_chi2_max_less_than_1p1=True,
         failed_previous_model_assessment=[
          "data/w33_20261108_S8_hybrid_shapley_audit.json",

@@ -98,7 +98,9 @@ Pass12632 (\`analysis/PASS12632_HALOFIT_SCF_BUG.md\`) disclosed a serious model-
 
 Reproduce original and patched scalar-field controls against ordinary \(\Lambda\)CDM across \(z=0.01,1\) and \(k=0.1,1,3\;h/{\rm Mpc}\). The patched scalar-field path matches the ordinary \(\Lambda\)CDM Halofit boost to relative error below \(3\times10^{-6}\) at all six cells; the prepatch control drops to about 0.417 of the reference at \(k=3,z=0.01\). The existing training-fit archive shows fixed-parameter \(\Delta\chi^2<1.1\) across the listed models, which says **nothing** about unrerun nonlinear shear likelihoods.
 
-**Fail-closed output:** The result certificate embeds the withdrawn file ledger and has \`fail_closed=true\`; there is **no refreshed DES/KiDS elpd, Bayes factor, or model-discovery claim**.
+**Fail-closed output:** The result certificate embeds the withdrawn file ledger and has \`fail_closed=true\`; there is **no refreshed held-out DES/KiDS elpd, Bayes factor, or model-discovery claim**.
+
+**Pass12632 addendum 1 (new parallel commit 92144997c):** The *patched fixed-background nuisance-refitted shear* now exists and reverses the old ordering. Direct arithmetic from `analysis/toe_uv/sign_des{,_orig}.json` gives CPL minus fading \(\Delta\chi^2\) **+3.09968 (old) versus −0.64362 (patched) for DES Y3**. Analogously `sign_des_kids{,_orig}.json` gives **+4.68621 versus −0.28040 for KiDS-Legacy**. The producer replays and asserts both reversals, while holding the prepatch S8/Held-out Shapley model ranking withdrawn. No evidence of a statistically significant difference between fading and CPL survives in these fixed-background results, and a properly held-out likelihood requires a separate rerun.
 
 Independent external context: KiDS-Legacy extended cosmology, Reischke et al., *Astronomy & Astrophysics* **709 A82** (May 2026), https://doi.org/10.1051/0004-6361/202558581, finds no significant w0waCDM improvement over \(\Lambda\)CDM from shear+CMB lensing. This is not a validation or rejection of the repo's particular fading model.
 

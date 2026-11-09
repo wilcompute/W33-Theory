@@ -42,6 +42,22 @@
     "status": "NUMERICAL_HEURISTIC_COMPLEX_NULL_LOCALITY_SEARCH"
   },
   "cosmology": {
+    "corrected_fixed_background_shear": {
+      "DES_Y3": {
+        "absolute_patched_delta_less_than_one": true,
+        "evidence_layer": "fixed-background nuisance-refitted shear only, not held-out model evidence",
+        "original_positive_ordering_reversed": true,
+        "patched_CPL_minus_fading_chi2": -0.6436234537538894,
+        "prepatch_CPL_minus_fading_chi2": 3.099677854248341
+      },
+      "KiDS_Legacy": {
+        "absolute_patched_delta_less_than_one": true,
+        "evidence_layer": "fixed-background nuisance-refitted shear only, not held-out model evidence",
+        "original_positive_ordering_reversed": true,
+        "patched_CPL_minus_fading_chi2": -0.28040066798615726,
+        "prepatch_CPL_minus_fading_chi2": 4.686205771511283
+      }
+    },
     "correctness_statement": "The patched CLASS control numerically matches ordinary LCDM/nonlinear halofit at six measured k,z cells; it DOES NOT independently rerun DES or KiDS likelihoods. All pre-patch S8/shear rankings remain withdrawn.",
     "external_data": "KiDS-Legacy extended cosmology A&A 709 A82 (2026), DOI 10.1051/0004-6361/202558581",
     "fail_closed": true,
@@ -98,7 +114,7 @@
     ],
     "patch_change_training_chi2_max_less_than_1p1": true,
     "source_notice": "analysis/PASS12632_HALOFIT_SCF_BUG.md",
-    "status": "WITHDRAWN_SHEAR_CLAIMS_AND_REPRODUCED_NONLINEAR_CONTROL"
+    "status": "WITHDRAWN_OLD_SHEAR_AND_FIXED_BACKGROUND_PATCHED_REVERSAL"
   },
   "e6": {
     "expected_normal_coefficient": 5.25,

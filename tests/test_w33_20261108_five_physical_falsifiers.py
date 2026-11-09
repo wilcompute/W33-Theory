@@ -102,3 +102,13 @@ def test_stale_s8_and_cosmology_reports_have_visible_retractions():
         head=(ROOT/path).read_text(encoding="utf-8")[:1000]
         assert "PASS12632" in head
         assert "WITHDRAWN" in head or "WITHDRAWAL" in head
+
+
+def test_latest_patched_fixed_background_shear_reverses_old_ranking(cert):
+    rows=cert["cosmology"]["corrected_fixed_background_shear"]
+    assert set(rows)=={"DES_Y3","KiDS_Legacy"}
+    for row in rows.values():
+        assert row["prepatch_CPL_minus_fading_chi2"]>2.5
+        assert -1<row["patched_CPL_minus_fading_chi2"]<0
+        assert row["original_positive_ordering_reversed"]
+        assert "not held-out" in row["evidence_layer"]
