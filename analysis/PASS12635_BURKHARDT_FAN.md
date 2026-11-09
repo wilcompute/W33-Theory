@@ -71,3 +71,15 @@ The map is an explicit graph isomorphism φ (VF2) from the 40 A2³ subsystems, r
 | partitions of the 36 roots into four A2³ | 40 points | 40 type-(a) rays |
 
 Because φ is an isomorphism between strongly regular graphs, it is unique up to automorphisms. The bijections above are φ-dependent as maps but not as statements: they hold for every φ.
+
+## Addendum: the level ladder explains the duality (`w33_level2_ladder.py`)
+
+**Level 2** is the genus-2 level-2 moduli space, the Segre cubic and its dual Igusa quartic, with symmetry S6 = Sp(4,2) acting on the doily W(3,2): 15 points = duads, 15 lines = synthemes.
+- Ren, Sam, Schrader and Sturmfels (arXiv:1303.1132, Thm 2.4) show the two tropical fans are **affinely isomorphic**, differing only in multiplicity (1 against 2). Both are trop M₀,₆ with 25 rays (15 duads + 10 three-three splits), 105 edges and 105 maximal cones; the Segre fan's coordinates are indexed by the 15 synthemes.
+- **Reconstruction from split compatibility**: all counts match. The edges split as 45 duad–duad, which is **exactly the doily collinearity graph SRG(15,6,1,3)**, and 60 duad–split. The doily's point graph (duads) and line graph (synthemes) are **isomorphic**.
+
+**Level 3** (Passes 12634–12635): the Burkhardt (genus-2 level-3) fan sees W(3,3)'s **points**, and the cubic-surface fan sees its **lines**. Their graphs have the same SRG parameters but are **not** isomorphic: the double-perp test gives 4 for W(3,3) against 2 for Q(4,3).
+
+**Reading.** The doily W(3,2) ≅ Q(4,2) is self-dual, and at level 2 the two dual moduli spaces' tropical fans coincide. W(3,3) is not self-dual (W(3,q) ≅ Q(4,q) only for even q), and at level 3 the two moduli spaces' fans split into its two halves. The point/line duality of Passes 12634–12635 is therefore the level-3 shadow of W(3,q) failing to be self-dual for odd q.
+
+At both levels, rays and coordinates are dual halves. At level 2 the rays are duads (points) and the coordinates synthemes (lines). At level 3 the Burkhardt rays are points and its coordinates the 40 isotropic planes (lines).

@@ -1,0 +1,24 @@
+{
+ "rays": 25,
+ "edges": 105,
+ "max_cones": 105,
+ "edge_types": {
+  "2": 45,
+  "1": 60
+ },
+ "duad_graph": [
+  15,
+  6,
+  1,
+  3
+ ],
+ "syntheme_graph": [
+  15,
+  6,
+  1,
+  3
+ ],
+ "point_and_line_graphs_isomorphic": true,
+ "n_synthemes": 15,
+ "matches_theorem": true
+}
