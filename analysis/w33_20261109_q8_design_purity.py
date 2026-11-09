@@ -138,5 +138,3 @@ def main(out_file=None):
     return result
 if __name__=='__main__':
     main(sys.argv[1] if len(sys.argv)>1 else None)
-
-[executed on device: TheHeavyCrown (75dccda9-254c-47a9-9d13-ef69565dedf7)]
