@@ -1,0 +1,52 @@
+{
+  "status": "INVARIANT_MAGNETIC_CONE_COMPLETION_INTAKE_PDF134_OF215",
+  "utc": "2026-11-08T23:33:55.179100+00:00",
+  "baseline": "75f5dc379db52d88a962f25443e5a8c2c9119044",
+  "intake_HEAD": "75f5dc379db52d88a962f25443e5a8c2c9119044",
+  "incoming_after_fetch": [],
+  "history_scope": "No new incoming after75f5dc379 on checked fetches. Previous larger concurrent batch and full-week patch reading remain incomplete.",
+  "manuscript": {
+    "path": "papers/forty_points/main.pdf",
+    "raw_sha256": "003b75482b6584e20e83a55d9e9ba0a181f93b8dff0f94c1d615039c21213cbb",
+    "new_full_text": [
+      121,
+      134
+    ],
+    "cumulative_full_text": [
+      1,
+      134
+    ],
+    "total_pages": 215,
+    "visual_this_packet": true,
+    "scope": "Pages121-126 covered in report; pages127-134 read in full during final validation/index jobs. Includes flavour qutrit/Hesse lock, Weber/lepton constraints, explicitly withdrawn axiflavon reading, Nelson-Barr stability and charged-lepton no-go, then Holonet stack, basis-only photonic SUM caption, compiler and magic claims. No independent rerun of manuscript fits, device process fidelity or compiler census.",
+    "visually_inspected_pages": [
+      133
+    ],
+    "render": "Poppler120dpi singlepage; figures33 and34 inspected"
+  },
+  "repo_search": {
+    "patterns": [
+      "29857/5775",
+      "all1287 Schur",
+      "short-face area tensor",
+      "controller-averaged commutator",
+      "rank106 1287",
+      "H27 deck lift"
+    ],
+    "scope": "analysis py/md, bounded data json and result index; broad integer hits truncated then narrowed to exact fraction and file-list probes. October27 propagation report selected sections, full core geometry/curl and matched cone sections, Pass11991 integral controller source, Gauss/coupled prior read. No novelty by absent hit.",
+    "cup_product_context": "Read selected TOE59/60 topology excerpts; prior three-period Levi missing higher cells is distinct. Searched short-face/voltage period cup-product results before exact polygon supplement."
+  },
+  "literature": [
+    {
+      "url": "https://arxiv.org/html/0706.2193v1",
+      "reading": "Rubilar abstract, selected introduction and sections4.1/4.3.2; four-spacetime-dimensional closure results context only, not transferred to four spatial plus external time"
+    },
+    {
+      "url": "https://pi.math.cornell.edu/~hatcher/AT/ATch3.pdf#page=32",
+      "reading": "Section3.2 selected exterior-algebra discussion and Example3.16 torus cohomology. Native polygon area coboundary and rank proven independently."
+    }
+  ],
+  "server": "Actual functions V8 executes repository JS; independent6area Cholesky/linear solve and transverse energy identity, not native135edge or exact rational projection replay.",
+  "continuity": "Compact context and result search returned0decisions. Durable session note and bounded CLI fallback; connected logging not claimed. Previous goal turn progress, published75f5dc379. TOE remains active.",
+  "workflow": "GitKraken unavailable from enabled tools; prior discovery empty; authorized narrowCLI fallback, explicit12path normalmaster publication and preservation."
+}

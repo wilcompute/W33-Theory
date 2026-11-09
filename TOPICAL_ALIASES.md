@@ -10,7 +10,7 @@ to guess: `grep -i gow TOPICAL_ALIASES.md` reaches
 `2026-07-15_pass355_sp43_frobenius_schur.md`, which no search for
 "phase" or "complex structure" ever would.
 
-Files scanned: **6138** · distinct tokens: **1379**
+Files scanned: **6149** · distinct tokens: **1382**
 
 Tokens marked ⚠ appear ONLY in topically opaque filenames (dated or
 numbered), so they are invisible to any topic search — read those first.
@@ -79,6 +79,7 @@ numbered), so they are invisible to any topic search — read those first.
 - `cite:Gottschling(1961)` ⚠ — [PASS11874_11878_SIEGEL_FIXED_POINTS_CP_MAGIC.md](analysis/PASS11874_11878_SIEGEL_FIXED_POINTS_CP_MAGIC.md), [PASS11890_11892_VACUUM_PHASE_DIAGRAM.md](analysis/PASS11890_11892_VACUUM_PHASE_DIAGRAM.md)
 - `cite:Gow(1985)` — [2026-07-15_pass353_weil_chirality_theorem.md](analysis/2026-07-15_pass353_weil_chirality_theorem.md), [2026-07-15_pass355_sp43_frobenius_schur.md](analysis/2026-07-15_pass355_sp43_frobenius_schur.md), [BT1907_1911_u6_mixed_phase_spread_holonomy.md](analysis/BT1907_1911_u6_mixed_phase_spread_holonomy.md), [CROSS_TRACK_FIVE_RESULTS_FOR_THE_DRAFT.md](analysis/CROSS_TRACK_FIVE_RESULTS_FOR_THE_DRAFT.md), [CROSS_TRACK_NOTICE_pass355_collision.md](analysis/CROSS_TRACK_NOTICE_pass355_collision.md), [PASS1907_1911_U6_MIXED_PHASE_SPREAD_HOLONOMY_RELEASE.md](analysis/PASS1907_1911_U6_MIXED_PHASE_SPREAD_HOLONOMY_RELEASE.md), [w33_pass1912_1916_a_rediscovery_caught_and_one_equation_two_geometries.md](analysis/w33_pass1912_1916_a_rediscovery_caught_and_one_equation_two_geometries.md), [w33_pass1972_1977_it_is_a_resolvable_design_question.md](analysis/w33_pass1972_1977_it_is_a_resolvable_design_question.md), [w33_pass2071_2075_three_conditions_one_congruence.md](analysis/w33_pass2071_2075_three_conditions_one_congruence.md), [w33_pass2076_the_substrate_cannot_keep_both_i.md](analysis/w33_pass2076_the_substrate_cannot_keep_both_i.md), [w33_pass2488_2495_seventy_three_solved_and_the_gauss_sum.md](analysis/w33_pass2488_2495_seventy_three_solved_and_the_gauss_sum.md), [w33_pass2749_2756_cx_and_time_reversal.md](analysis/w33_pass2749_2756_cx_and_time_reversal.md)
 - `cite:Grayson(2000)` — [404.html](docs/404.html), [exceptional-geometry-41a8d733.html](docs/exceptional-geometry-41a8d733.html), [full-site-2026-08-06.html](docs/full-site-2026-08-06.html), [index.html](docs/index.html)
+- `cite:Gross(2006)` ⚠ — [PASS20261108_FIVE_GATE_EXTENSIONS.md](analysis/PASS20261108_FIVE_GATE_EXTENSIONS.md)
 - `cite:Group(2024)` — [W36_PAPER_DRAFT.md](analysis/W36_PAPER_DRAFT.md), [README_LIVING_PAPER_2026_02_11.md](docs/README_LIVING_PAPER_2026_02_11.md)
 - `cite:Gwilliam(2017)` — [404.html](docs/404.html), [exceptional-geometry-41a8d733.html](docs/exceptional-geometry-41a8d733.html), [full-site-2026-08-06.html](docs/full-site-2026-08-06.html), [index.html](docs/index.html)
 - `cite:Haine(2019)` — [404.html](docs/404.html), [exceptional-geometry-41a8d733.html](docs/exceptional-geometry-41a8d733.html), [full-site-2026-08-06.html](docs/full-site-2026-08-06.html), [index.html](docs/index.html)
@@ -113,6 +114,7 @@ numbered), so they are invisible to any topic search — read those first.
 - `cite:Lam(2009)` — [monster_connection.md](docs/monster_connection.md)
 - `cite:Lam(2011)` — [404.html](docs/404.html), [exceptional-geometry-41a8d733.html](docs/exceptional-geometry-41a8d733.html), [full-site-2026-08-06.html](docs/full-site-2026-08-06.html), [index.html](docs/index.html)
 - `cite:Lavoura(2004)` ⚠ — [2026-11-05_next_five_cross_sector_falsifiers_report.md](analysis/2026-11-05_next_five_cross_sector_falsifiers_report.md)
+- `cite:Legacy(2025)` ⚠ — [PASS20261108_FIVE_GATE_EXTENSIONS.md](analysis/PASS20261108_FIVE_GATE_EXTENSIONS.md)
 - `cite:Leray(1946)` — [404.html](docs/404.html), [exceptional-geometry-41a8d733.html](docs/exceptional-geometry-41a8d733.html), [full-site-2026-08-06.html](docs/full-site-2026-08-06.html), [index.html](docs/index.html)
 - `cite:Levit(2018)` — [PART_DCMLXVII_IDENTIFICATION_STRATEGY.md](manuscripts/parts/PART_DCMLXVII_IDENTIFICATION_STRATEGY.md)
 - `cite:Lieb(1994)` ⚠ — [2026-10-13_toe62_connected_research_recovery_record.md](analysis/2026-10-13_toe62_connected_research_recovery_record.md)
@@ -732,6 +734,7 @@ numbered), so they are invisible to any topic search — read those first.
 - `group:A2,8` — [PART_CCCCCXCI_TOMOTOPE_24_CELL_D4_BRIDGE.md](docs/PART_CCCCCXCI_TOMOTOPE_24_CELL_D4_BRIDGE.md)
 - `group:A2,p` ⚠ — [PASS5118_5125_EXECUTED_OUTCOMES.md](analysis/PASS5118_5125_EXECUTED_OUTCOMES.md)
 - `group:A67,042114` ⚠ — [2026-10-31_tick_loop_algebra_rigidity.md](analysis/2026-10-31_tick_loop_algebra_rigidity.md)
+- `group:A82,2026` — [NOTE_DARK_ENERGY_EVIDENCE_20261108.md](analysis/NOTE_DARK_ENERGY_EVIDENCE_20261108.md)
 - `group:C2(3)` ⚠ — [2026-07-15_pass354_gap_weil_q3_script.md](analysis/2026-07-15_pass354_gap_weil_q3_script.md)
 - `group:C3(3)` ⚠ — [2026-10-29_W33_five_fronts_sp43_three_photon.md](analysis/2026-10-29_W33_five_fronts_sp43_three_photon.md)
 - `group:D4(3)` ⚠ — [PASS7501_7508_MONSTER_TRIALITY_AFFINE_PORT.md](analysis/PASS7501_7508_MONSTER_TRIALITY_AFFINE_PORT.md), [PASS7509_7516_MONSTER_HESSE_DIRECTION_COUPLING.md](analysis/PASS7509_7516_MONSTER_HESSE_DIRECTION_COUPLING.md), [PASS7517_7524_PROJECTIVE_E8_MONSTER_SUBGROUP_CHAIN.md](analysis/PASS7517_7524_PROJECTIVE_E8_MONSTER_SUBGROUP_CHAIN.md), [PASS7525_7532_MONSTER_EVIDENCE_BOUNDARY_REPAIR.md](analysis/PASS7525_7532_MONSTER_EVIDENCE_BOUNDARY_REPAIR.md), [PASS8101_8180_SAGE_E8_LEECH_MONSTER_FRONTIER_RESERVATION.md](analysis/PASS8101_8180_SAGE_E8_LEECH_MONSTER_FRONTIER_RESERVATION.md)
@@ -1001,7 +1004,7 @@ numbered), so they are invisible to any topic search — read those first.
 - `named:Duhamel` ⚠ — [2026-10-08_physical_TOE_robustness_followthrough.md](analysis/2026-10-08_physical_TOE_robustness_followthrough.md), [PASS10941_TRIALITY_VM_FIVE_FRONT_INSERT.tex](analysis/PASS10941_TRIALITY_VM_FIVE_FRONT_INSERT.tex)
 - `named:Dynamics` ⚠ — [BT913_sentinel_coordinate_dynamics.md](analysis/BT913_sentinel_coordinate_dynamics.md)
 - `named:Eigenvalue` — [PART_CCCLII_CLIQUE_GEOMETRY_BRIDGE.md](manuscripts/parts/PART_CCCLII_CLIQUE_GEOMETRY_BRIDGE.md)
-- `named:Elitzur` ⚠ — [2026-11-04_five_fronts_actual_A5_spectral_temporal_gauge_optics_lorentz.md](analysis/2026-11-04_five_fronts_actual_A5_spectral_temporal_gauge_optics_lorentz.md)
+- `named:Elitzur` ⚠ — [2026-11-04_five_fronts_actual_A5_spectral_temporal_gauge_optics_lorentz.md](analysis/2026-11-04_five_fronts_actual_A5_spectral_temporal_gauge_optics_lorentz.md), [PASS20261108_FIVE_FOLLOWTHROUGH_PLUS_COHERENCE.md](analysis/PASS20261108_FIVE_FOLLOWTHROUGH_PLUS_COHERENCE.md)
 - `named:Elliott` — [PART_DCMXXXV_TWIN_PRIME_BEST_BOUND.md](manuscripts/parts/PART_DCMXXXV_TWIN_PRIME_BEST_BOUND.md)
 - `named:Empirical` — [PART_CCCCCXXIII_VERIFICATION_LADDER.md](manuscripts/parts/PART_CCCCCXXIII_VERIFICATION_LADDER.md)
 - `named:Entry` ⚠ — [BT771_null_15_sector_certificate.md](analysis/BT771_null_15_sector_certificate.md)
@@ -1064,7 +1067,7 @@ numbered), so they are invisible to any topic search — read those first.
 - `named:Hom` ⚠ — [PASS4870_steiner_w33_quadratic_index_insert.html](analysis/PASS4870_steiner_w33_quadratic_index_insert.html), [PASS4951_4958_EXECUTED_OUTCOMES.md](analysis/PASS4951_4958_EXECUTED_OUTCOMES.md), [PASS4960_4967_EXECUTED_OUTCOMES.md](analysis/PASS4960_4967_EXECUTED_OUTCOMES.md), [pass4870-steiner-w33-quadratic.html](docs/pass4870-steiner-w33-quadratic.html)
 - `named:Homology` — [README_LIVING_PAPER_2026_02_11.md](docs/README_LIVING_PAPER_2026_02_11.md)
 - `named:Honest` ⚠ — [2026-09-02_w33_typed_universal_microvm_architecture.md](analysis/2026-09-02_w33_typed_universal_microvm_architecture.md)
-- `named:Hudson` — [PASS12189_12193_FIVE_NATIVE_BRIDGES.md](analysis/PASS12189_12193_FIVE_NATIVE_BRIDGES.md), [PASS12498_12505_INFORMATION_PHYSICS_AUDITS.md](analysis/PASS12498_12505_INFORMATION_PHYSICS_AUDITS.md), [PASS20261108_FIVE_PHYSICS_GATES.md](analysis/PASS20261108_FIVE_PHYSICS_GATES.md), [PART_CCLXXXIII_DISCRETE_WIGNER_BRIDGE.md](manuscripts/parts/PART_CCLXXXIII_DISCRETE_WIGNER_BRIDGE.md)
+- `named:Hudson` — [PASS12189_12193_FIVE_NATIVE_BRIDGES.md](analysis/PASS12189_12193_FIVE_NATIVE_BRIDGES.md), [PASS12498_12505_INFORMATION_PHYSICS_AUDITS.md](analysis/PASS12498_12505_INFORMATION_PHYSICS_AUDITS.md), [PASS20261108_FIVE_GATE_EXTENSIONS.md](analysis/PASS20261108_FIVE_GATE_EXTENSIONS.md), [PASS20261108_FIVE_PHYSICS_GATES.md](analysis/PASS20261108_FIVE_PHYSICS_GATES.md), [PART_CCLXXXIII_DISCRETE_WIGNER_BRIDGE.md](manuscripts/parts/PART_CCLXXXIII_DISCRETE_WIGNER_BRIDGE.md)
 - `named:Hurwitz` — [404.html](docs/404.html), [exceptional-geometry-41a8d733.html](docs/exceptional-geometry-41a8d733.html), [full-site-2026-08-06.html](docs/full-site-2026-08-06.html), [index.html](docs/index.html), [PART_CCLXXV_KLEIN_E7_BRIDGE.md](manuscripts/parts/PART_CCLXXV_KLEIN_E7_BRIDGE.md), [PART_DCCLXX_HOPF_CAYLEY_DICKSON_TOWER.md](manuscripts/parts/PART_DCCLXX_HOPF_CAYLEY_DICKSON_TOWER.md), [part10_tangled_universe.tex](manuscripts/tex/part10_tangled_universe.tex), [part22_fano_synthesis.tex](manuscripts/tex/part22_fano_synthesis.tex)
 - `named:Ibarra` ⚠ — [PASS11940_SEESAW_PRESERVES_WEBER.md](analysis/PASS11940_SEESAW_PRESERVES_WEBER.md)
 - `named:Ideal` ⚠ — [2026-10-09_toe27_five_fronts_decoder_allq_e8_causality_spectroscopy.md](analysis/2026-10-09_toe27_five_fronts_decoder_allq_e8_causality_spectroscopy.md)
