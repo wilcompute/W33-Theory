@@ -1,0 +1,341 @@
+{
+  "E6": {
+    "completed_mass_rank": 81,
+    "complex_native_cubic_contraction_magnitude": 0.11182415810007804,
+    "conditional_invariant": "Adding kappa*abs(C(Xi)-C0)^2 is a *candidate* tensor-anchored scalar interaction only if invariance of this exact 81-index contraction under the desired actual E6 gauge action is independently certified.",
+    "conditional_remaining_gauge_inequivalent_moduli_lower_bound": 397,
+    "continuous_relative_spurion_phase_preserves_Gram_and_cubic": true,
+    "evidence_boundary": "Computes exact mass contraction and generic Jacobian witness, not full E6 generators, gauge invariant vacuum, anomaly cancellation, SM masses, RG stability, or theta-bar; 397 bound is conditional on accepted extra cubic interaction.",
+    "maximal_E6_gauge_orbit_dimension": 78,
+    "original_81_state_alternating_mass_rank": 78,
+    "phase_unpinned_in_quartic_only_mass_determinant_error": 5.551115123125783e-15,
+    "quartic_Stiefel_real_minimum_dimension": 477,
+    "quartic_plus_complex_cubic_regular_level_set_dimension": 475,
+    "source_cubic_signed_records": 1620,
+    "status": "NATIVE_CUBIC_ANCHOR_ONLY_REMOVES_AT_MOST_TWO_SCALAR_MODULI",
+    "two_real_component_cubic_Jacobian_nondegeneracy_witness": 0.008297594957634455
+  },
+  "Maxwell": {
+    "cases": [
+      {
+        "p": 3,
+        "relative_dispersion_error": 0.3160820104142199,
+        "single_axis_lattice_to_continuum_omega_squared_ratio": 0.6839179895857801,
+        "spatial_edge_channels": 3,
+        "spatial_sites": 27,
+        "total_gauge_inequivalent_real_edge_modes": 55,
+        "transverse_modes_per_nonzero_momentum": 2,
+        "transverse_nonzero_momentum_degrees": 52,
+        "uniform_Wilson_holonomy_modes": 3
+      },
+      {
+        "p": 5,
+        "relative_dispersion_error": 0.12485979991661911,
+        "single_axis_lattice_to_continuum_omega_squared_ratio": 0.8751402000833809,
+        "spatial_edge_channels": 3,
+        "spatial_sites": 125,
+        "total_gauge_inequivalent_real_edge_modes": 251,
+        "transverse_modes_per_nonzero_momentum": 2,
+        "transverse_nonzero_momentum_degrees": 248,
+        "uniform_Wilson_holonomy_modes": 3
+      },
+      {
+        "p": 7,
+        "relative_dispersion_error": 0.06536275623743604,
+        "single_axis_lattice_to_continuum_omega_squared_ratio": 0.934637243762564,
+        "spatial_edge_channels": 3,
+        "spatial_sites": 343,
+        "total_gauge_inequivalent_real_edge_modes": 687,
+        "transverse_modes_per_nonzero_momentum": 2,
+        "transverse_nonzero_momentum_degrees": 684,
+        "uniform_Wilson_holonomy_modes": 3
+      },
+      {
+        "p": 11,
+        "relative_dispersion_error": 0.0268950128686537,
+        "single_axis_lattice_to_continuum_omega_squared_ratio": 0.9731049871313463,
+        "spatial_edge_channels": 3,
+        "spatial_sites": 1331,
+        "total_gauge_inequivalent_real_edge_modes": 2663,
+        "transverse_modes_per_nonzero_momentum": 2,
+        "transverse_nonzero_momentum_degrees": 2660,
+        "uniform_Wilson_holonomy_modes": 3
+      },
+      {
+        "p": 17,
+        "relative_dispersion_error": 0.011331918228295712,
+        "single_axis_lattice_to_continuum_omega_squared_ratio": 0.9886680817717043,
+        "spatial_edge_channels": 3,
+        "spatial_sites": 4913,
+        "total_gauge_inequivalent_real_edge_modes": 9827,
+        "transverse_modes_per_nonzero_momentum": 2,
+        "transverse_nonzero_momentum_degrees": 9824,
+        "uniform_Wilson_holonomy_modes": 3
+      },
+      {
+        "p": 31,
+        "relative_dispersion_error": 0.003418695577022235,
+        "single_axis_lattice_to_continuum_omega_squared_ratio": 0.9965813044229778,
+        "spatial_edge_channels": 3,
+        "spatial_sites": 29791,
+        "total_gauge_inequivalent_real_edge_modes": 59583,
+        "transverse_modes_per_nonzero_momentum": 2,
+        "transverse_nonzero_momentum_degrees": 59580,
+        "uniform_Wilson_holonomy_modes": 3
+      }
+    ],
+    "choice_of_frame_cost": "Select 3 projective null directions out of p+1, generating binomial(p+1,3) symmetry-related frames. GL2(p) setwise frame stabilizer has 6(p-1) elements.",
+    "continuum_dispersion": "omega_p(k)^2 = 4p^2 sum_i sin\u00b2(pi k_i/p) -> 4pi\u00b2 |k|\u00b2 at fixed integer spatial momentum.",
+    "exact_Bloch_operator": "K(k)=||a(k)||^2 I3-a(k) a(k)^dagger, a_i(k)=exp(2pi i k_i/p)-1; eigenvalues (0,||a||\u00b2,||a||\u00b2) for k !=0.",
+    "fixed_physical_setup": "Unit-length spatial 3-torus T3, lattice spacing 1/p, added continuous time, positive Maxwell action with ordinary temporal electric kinetic term and square-plaquette magnetic curvature.",
+    "material_limitation": "This recovers standard lattice U(1) by explicitly installing external time, a Euclidean positive spatial metric and an anisotropic frame. It DOES NOT derive 3+1 Lorentz invariance from the original determinant's 2+1 analogy, dynamical frame selection, a measured coupling, or physical charged matter.",
+    "status": "EXPLICIT_3_SPATIAL_AXES_DISCRETE_MAXWELL_NOT_NATIVE_LORENTZ_EMERGENCE"
+  },
+  "clock": {
+    "all_odd_prime_theorem": "Choose 3 independent isotropic vectors as a basis. The one-site Fourier F_p has F_p^4=I and Hermitian polynomial logarithm h_p. Its tensor sum H is Hermitian, strictly supported on one of those 3 null line families off diagonal, and exp(-iH)=F_p^tensor3, a complex Hadamard matrix. No translation invariance or SL2 covariance is claimed.",
+    "commuting_directional_generators": 3,
+    "earlier_affine_no_go_not_contradicted": true,
+    "first_pulse_count_is_one": true,
+    "frame_symmetry_orbit_checks": [
+      {
+        "GL2_orbit_size": 4,
+        "GL2_order": 48,
+        "binomial_frame_choices": 4,
+        "p": 3,
+        "setwise_frame_stabilizer_order": 12
+      },
+      {
+        "GL2_orbit_size": 20,
+        "GL2_order": 480,
+        "binomial_frame_choices": 20,
+        "p": 5,
+        "setwise_frame_stabilizer_order": 24
+      },
+      {
+        "GL2_orbit_size": 56,
+        "GL2_order": 2016,
+        "binomial_frame_choices": 56,
+        "p": 7,
+        "setwise_frame_stabilizer_order": 36
+      }
+    ],
+    "physical_caveat": "An inhomogeneous finite-dimensional exact mixer is not a relativistic clock, calibrated Hamiltonian, quantum gravity, or universal one-photon computer.",
+    "status": "EXACT_STRICTLY_NULL_SUPPORTED_STATIC_HAMILTONIAN_FLAT_MIXING",
+    "stronger_novelty_boundary": "Fourier tensor products and Hermitian matrix logarithms are standard. The W33-specific point is that three isotropic basis directions realize the full transform with strict null-edge support, provided homogeneous finite-Lorentz covariance is relinquished.",
+    "tested_cases": [
+      {
+        "actual_undirected_null_hopping_edges": 81,
+        "architecture": "H=h_F tensor I tensor I + I tensor h_F tensor I + I tensor I tensor h_F, with exp(-i h_F)=DFT_p and zero couplings outside three null directions",
+        "exact_flat_probability": 0.037037037037037035,
+        "max_flat_probability_error": 3.469446951953614e-17,
+        "maximal_forbidden_nonnull_hopping_magnitude": 0.0,
+        "modes": 27,
+        "native_27_graph_edge_count": 108,
+        "operator_norm_upper_bound_3pi": 9.42477796076938,
+        "p": 3,
+        "selected_hops_are_subset_of_native_27_graph": true,
+        "selected_rank_one_directions": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "translation_shift_commutator_Frobenius": 5.869841538704912
+      },
+      {
+        "actual_undirected_null_hopping_edges": 750,
+        "architecture": "H=h_F tensor I tensor I + I tensor h_F tensor I + I tensor I tensor h_F, with exp(-i h_F)=DFT_p and zero couplings outside three null directions",
+        "exact_flat_probability": 0.008,
+        "max_flat_probability_error": 2.2551405187698492e-17,
+        "maximal_forbidden_nonnull_hopping_magnitude": 0.0,
+        "modes": 125,
+        "native_27_graph_edge_count": null,
+        "operator_norm_upper_bound_3pi": 9.42477796076938,
+        "p": 5,
+        "selected_hops_are_subset_of_native_27_graph": false,
+        "selected_rank_one_directions": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "translation_shift_commutator_Frobenius": 5.918321471720088
+      },
+      {
+        "actual_undirected_null_hopping_edges": 3087,
+        "architecture": "H=h_F tensor I tensor I + I tensor h_F tensor I + I tensor I tensor h_F, with exp(-i h_F)=DFT_p and zero couplings outside three null directions",
+        "exact_flat_probability": 0.0029154518950437317,
+        "max_flat_probability_error": 3.209238430557093e-17,
+        "maximal_forbidden_nonnull_hopping_magnitude": 0.0,
+        "modes": 343,
+        "native_27_graph_edge_count": null,
+        "operator_norm_upper_bound_3pi": 9.42477796076938,
+        "p": 7,
+        "selected_hops_are_subset_of_native_27_graph": false,
+        "selected_rank_one_directions": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "translation_shift_commutator_Frobenius": 7.144007052053998
+      }
+    ]
+  },
+  "conclusion_boundary": "Exact finite linear algebra and toy controls only. No quantum gravitation, calibrated energy scale, native 3+1 derivation, anomaly-free E6 vacuum, experimentally demonstrated one-photon processor, or new DES/KiDS likelihood.",
+  "cosmology": {
+    "Lambda_control_cells": [
+      {
+        "k": "0.1",
+        "original_scf_Lambda_ratio": 1.0387722260691508,
+        "patched_scf_Lambda_ratio": 1.000000168234212,
+        "z": "0.01"
+      },
+      {
+        "k": "1.0",
+        "original_scf_Lambda_ratio": 0.7143594063267252,
+        "patched_scf_Lambda_ratio": 1.0000006268034216,
+        "z": "0.01"
+      },
+      {
+        "k": "3.0",
+        "original_scf_Lambda_ratio": 0.41675662343061765,
+        "patched_scf_Lambda_ratio": 1.0000001444833977,
+        "z": "0.01"
+      },
+      {
+        "k": "0.1",
+        "original_scf_Lambda_ratio": 1.014310743960959,
+        "patched_scf_Lambda_ratio": 0.999999930747799,
+        "z": "1.0"
+      },
+      {
+        "k": "1.0",
+        "original_scf_Lambda_ratio": 0.9776499534283571,
+        "patched_scf_Lambda_ratio": 0.9999982114892594,
+        "z": "1.0"
+      },
+      {
+        "k": "3.0",
+        "original_scf_Lambda_ratio": 0.8490434954715801,
+        "patched_scf_Lambda_ratio": 0.9999980343417598,
+        "z": "1.0"
+      }
+    ],
+    "S7_S8_prepatch_shear_results_withdrawn": true,
+    "fixed_background_shear_model_comparison": {
+      "DES_Y3": {
+        "corrected_fixed_background_delta_chi2": -0.6436234537538894,
+        "original_CPL_minus_fading_chi2": 3.099677854248341
+      },
+      "KiDS_Legacy": {
+        "corrected_fixed_background_delta_chi2": -0.28040066798615726,
+        "original_CPL_minus_fading_chi2": 4.686205771511283
+      }
+    },
+    "independent_corrected_heldout_DES_KiDS_likelihood_executed": false,
+    "maximum_visible_rolling_flavour_admixture_under_proxy": 5.92096834070996e-07,
+    "min_A4_flavour_mass_ratio_sensitivity_per_Mp": 4.225104770467971,
+    "patched_two_prescription_fading_CPL_ratio_cells": [
+      {
+        "HMcode_fading_over_CPL_minus_one": 0.008945146316955865,
+        "Halofit_fading_over_CPL_minus_one": -0.0005870249404357208,
+        "k": "0.1",
+        "two_prescription_difference": 0.009532171257391586,
+        "z": "0.01"
+      },
+      {
+        "HMcode_fading_over_CPL_minus_one": 0.01885903533526978,
+        "Halofit_fading_over_CPL_minus_one": 0.006217889286438405,
+        "k": "1.0",
+        "two_prescription_difference": 0.012641146048831375,
+        "z": "0.01"
+      },
+      {
+        "HMcode_fading_over_CPL_minus_one": 0.016224559943183614,
+        "Halofit_fading_over_CPL_minus_one": -0.003348632894850878,
+        "k": "3.0",
+        "two_prescription_difference": 0.019573192838034492,
+        "z": "0.01"
+      },
+      {
+        "HMcode_fading_over_CPL_minus_one": 0.005339934709273297,
+        "Halofit_fading_over_CPL_minus_one": 0.00014920558992259636,
+        "k": "0.1",
+        "two_prescription_difference": 0.005190729119350701,
+        "z": "1.0"
+      },
+      {
+        "HMcode_fading_over_CPL_minus_one": 0.03287619298870714,
+        "Halofit_fading_over_CPL_minus_one": 0.029371129185025158,
+        "k": "1.0",
+        "two_prescription_difference": 0.0035050638036819848,
+        "z": "1.0"
+      },
+      {
+        "HMcode_fading_over_CPL_minus_one": 0.030753946857488224,
+        "Halofit_fading_over_CPL_minus_one": 0.03499645259593476,
+        "k": "3.0",
+        "two_prescription_difference": -0.004242505738446534,
+        "z": "1.0"
+      }
+    ],
+    "provenance": "Uses already committed PASS12632 corrected CLASS/Halofit/HMcode numbers and PASS12633 sensitivity proxy; no new CLASS run, no independent raw shear chains, no coupled-dark-matter nonlinear calibration. The flavour admixture bound assumes linear inherited proxy sensitivity and no cancellations.",
+    "sequestering_ratio_visible_over_dark_upper_bound": 5.003342316424696e-05,
+    "status": "HALOFIT_AND_HMCODE_PATCHED_FINITE_GRID_REPLAY_PLUS_FLAVOUR_CLOCK_GUARD"
+  },
+  "photonic": {
+    "common_mode_transmission_conditional_total_variation": 0.0,
+    "differential_rail_intensity_transmission": [
+      0.98,
+      1.0,
+      1.0
+    ],
+    "differential_transmission_average_survival": 0.9933333333333333,
+    "differential_transmission_conditional_total_variation": 0.004474272930648809,
+    "max_two_mode_couplers_in_naive_DFT_triangular_synthesis": 81,
+    "p_mode_DFT_blocks_total": 27,
+    "phase_error_echo_radians": 1.0471975511965976,
+    "physical_modes": 27,
+    "physical_scope": "Optical unitary and toy rail-loss/phase controls only; routing, propagation delays, correlated drifts, error correction, total chip losses, heralding, and real process tomography unmeasured. Cubic mode count 3^n remains exponential for n logical qutrit factors.",
+    "selected_null_directions": 3,
+    "single_address_phase_echo_return_probability": 0.7777777777777776,
+    "source_and_detector_efficiency_not_assumed": true,
+    "status": "IDEAL_OPTICAL_HARDWARE_COUNTS_AND_PHASE_SENSITIVE_ECHO"
+  },
+  "schema": "w33.20261108.frame_selection_null_clock_five_fronts.v1",
+  "sixth_connection": "One symmetry-breaking choice of three independent null directions gives both a p^3-mode exact static flat-mixing Hamiltonian and an explicitly time-augmented cubic spatial Maxwell model with two transverse k!=0 branches. This is a *counterexample to an overbroad no-go*, not emergence of physics from finite Lorentz symmetry."
+}
