@@ -1,0 +1,18 @@
+{
+ "reflection_in_double_six_root_maps_left_to_right": {
+  "true": 216
+ },
+ "control_orthogonal_root": {
+  "false": 216
+ },
+ "all_216": true,
+ "unions_size": [
+  10
+ ],
+ "unions_even": true,
+ "union_point_degree_profile": {
+  "((0, 20), (2, 20))": 216
+ },
+ "n_distinct_unions": 216,
+ "corpus_count_pass173": 216
+}

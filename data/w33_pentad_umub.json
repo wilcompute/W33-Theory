@@ -1,0 +1,20 @@
+{
+ "maximal_partial_spread_sizes": {
+  "10": 36,
+  "8": 135,
+  "5": 432
+ },
+ "n_size5": 432,
+ "unbiased_iff_disjoint_all_pairs": true,
+ "pentad_is_5_MUBs": true,
+ "pauli_class_extensions": 0,
+ "smallest_size": 5,
+ "size8_root_multiplicity_profile": {
+  "((0, 8), (2, 24), (6, 4))": 135
+ },
+ "size8_missing_roots": {
+  "(8, False)": 135
+ },
+ "size8_multiplicity6_roots_form_orthogonal_frame": true,
+ "size8_to_frames_bijective": true
+}
