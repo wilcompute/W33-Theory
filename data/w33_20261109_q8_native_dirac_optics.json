@@ -1,0 +1,74 @@
+{
+  "native_chirality": {
+    "additional_generic_edge_phase_min_singulars": [
+      0.0473305001934499,
+      0.11882923929540097,
+      0.02283491902776441,
+      0.020078603365216063,
+      0.0859704244814648,
+      0.04835146266909852,
+      0.018976692478316685,
+      0.0581557184108261
+    ],
+    "chiral_anticommutator_max": 0.0,
+    "generic_edge_phase_min_singular": 0.04382491392107945,
+    "graded_minus_zero_modes": 15,
+    "graded_plus_zero_modes": 15,
+    "incidence_rank_over_Q_exact": 25,
+    "incidence_shape": [
+      40,
+      40
+    ],
+    "interpretation": "The naive bipartite incidence Dirac operator has paired left/right zero modes and index zero; its 30 zero modes are generically lifted by independent edge holonomies. It does not force unpaired Weyl fermions.",
+    "local_U1_pure_gauge_singular_error": 8.881784197001252e-16,
+    "scope": "This is a no-go for this specific naive square incidence Dirac, not a theorem excluding all modified overlap/domain-wall/chiral discretizations or Standard Model physics.",
+    "singular_square_spectrum": {
+      "0": 15,
+      "16": 1,
+      "6": 24
+    },
+    "status": "PASS_EXACT_NATIVE_W33_NAIVE_DIRAC_CHIRAL_INDEX_ZERO",
+    "total_Dirac_zero_modes": 30,
+    "zero_mode_index_plus_minus": 0
+  },
+  "optical_compilation": {
+    "conditioning_penalty_ten_vs_twelve": 20.83768893711371,
+    "eight_W33_Bell_contexts_couplers_upper_per_basis": 18,
+    "extra_10setting_bases": [
+      {
+        "adjacent_only": true,
+        "couplers": 36,
+        "max_QR_offdiagonal_error": 4.787161136551348e-16,
+        "max_measurement_unitary_error": 5.900916318210353e-16,
+        "note": "A rectangular Clements mesh can typically reduce depth; this is a rigorously checked adjacent-Givens Reck-type elimination, not an optimal placement.",
+        "phase_shifters_upper_bound": 9,
+        "serial_Givens_upper_depth": 36
+      },
+      {
+        "adjacent_only": true,
+        "couplers": 36,
+        "max_QR_offdiagonal_error": 5.313580053477775e-16,
+        "max_measurement_unitary_error": 6.665154349771345e-16,
+        "note": "A rectangular Clements mesh can typically reduce depth; this is a rigorously checked adjacent-Givens Reck-type elimination, not an optimal placement.",
+        "phase_shifters_upper_bound": 9,
+        "serial_Givens_upper_depth": 36
+      }
+    ],
+    "operational_note": "Coupler sums are across programs, not simultaneously needed physical components. Any universal reprogrammable nine-mode mesh can implement either family; timing, phase cross-talk, loss and switch routing require separate hardware models.",
+    "optical_build_not_demonstrated": true,
+    "status": "PASS_GENERIC_9MODE_QR_36_TWO_MODE_COUPLERS_PER_NONBELL_CONTEXT",
+    "sum_of_per_context_couplers_ten_if_not_shared": 216,
+    "sum_per_context_couplers_twelve_if_not_shared": 198,
+    "ten_setting_projective_lower_bound": 10,
+    "ten_settings_condition_number": 29.468942303378018,
+    "twelve_matched_product_context_couplers_upper_each": [
+      0,
+      18,
+      18,
+      18
+    ],
+    "twelve_settings_condition_number": 1.4142135623730951,
+    "two_generic_contexts_couplers_upper_per_basis": 36
+  },
+  "status": "PASS_W33_NATIVE_DIRAC_ZERO_INDEX_AND_10SETTING_GIVENS"
+}

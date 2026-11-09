@@ -1,0 +1,44 @@
+{
+  "accepted_improvements": 186,
+  "baseline_condition": 29.468942303378423,
+  "baseline_min_singular": 1.536049909903957,
+  "claim_scope": "Best among a deterministic local stochastic search only, not proof of globally optimal near-tight tomography.",
+  "max_mixed_reconstruction_error": 1.2663481374630692e-15,
+  "rank": 80,
+  "refined_2bases_sha256": "41a02193d207147d016b503a9f1370a4d2de18ca0f3a8c5d320c2b0bccc3f435",
+  "refined_condition": 9.359126485181296,
+  "refined_max_singular": 0.1653805676515416,
+  "refined_min_singular": 1.5478176508418602,
+  "relative_improvement": 0.6824071122461585,
+  "schedule": [
+    {
+      "accepted": 43,
+      "achieved_cond": 13.342659853555983,
+      "step_scale": 0.42,
+      "trials": 400
+    },
+    {
+      "accepted": 42,
+      "achieved_cond": 10.514303610859125,
+      "step_scale": 0.18,
+      "trials": 400
+    },
+    {
+      "accepted": 33,
+      "achieved_cond": 9.870456333981311,
+      "step_scale": 0.075,
+      "trials": 400
+    },
+    {
+      "accepted": 68,
+      "achieved_cond": 9.359126485181296,
+      "step_scale": 0.025,
+      "trials": 400
+    }
+  ],
+  "seed": 20261109228,
+  "settings": 10,
+  "status": "PASS_W33_Q8_TEN_SETTING_CONDITIONING_REFINED",
+  "synthesizability": "Both are 9x9 unitaries: each can be compiled with 36 adjacent complex Givens and 9 phases; no physical photonic loss model implemented here",
+  "total_candidate_rotations": 1600
+}

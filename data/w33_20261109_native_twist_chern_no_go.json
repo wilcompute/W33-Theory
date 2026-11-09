@@ -1,0 +1,34 @@
+{
+  "analytical_gap_lower": 0.05853073425511958,
+  "berry_curvature_max_plaquette_abs": 4.0505780461083664e-16,
+  "bipartite_incidence_cols": 40,
+  "bipartite_incidence_rows": 40,
+  "exact_chiral_anticommutator_zero_for_all_twists": true,
+  "full_rank_base_with_two_weak_edges_removed_min_singular": 0.06689226772013666,
+  "global_negative_energy_occupied_frame": "1/sqrt(2) * vstack([-polar(B(theta,phi)),I_40])",
+  "native_W33_incidence_vertices": 80,
+  "nonzero_graph_edges": 160,
+  "not_TOE": true,
+  "phase_twists_fixed_hopping_modulus": true,
+  "random_phase_seed": 20261109248,
+  "sampled_first_chern_number": 8.670811108066103e-20,
+  "sampled_min_gap": 0.06659146857841951,
+  "scope": "Only balanced, gapped, bipartite offdiagonal Dirac models. Does not exclude chiral 3D topological AIII winding, modified gauge theories, mass-breaking class-A Chern systems, overlap fermions, or an actual 3+1D emergent chiral continuum. The two twist parameters themselves are externally imposed.",
+  "status": "PASS_W33_CHIRAL_AIII_GAPPED_TWO_TWIST_CHERN_ZERO",
+  "topological_proof": "For any continuous periodic invertible square B(theta,phi), polar(B) is continuous and periodic, giving a global frame of all occupied negative-energy states; the first Chern class on the 2-torus vanishes identically. This is a standard class-AIII even-dimensional obstruction.",
+  "twist_amplitude": 0.0041807667325085415,
+  "two_torus_grid_shape": [
+    13,
+    13
+  ],
+  "two_twisted_graph_edges": [
+    [
+      0,
+      0
+    ],
+    [
+      4,
+      15
+    ]
+  ]
+}

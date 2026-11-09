@@ -1,0 +1,568 @@
+{
+  "best_eleventh_basis_candidate_index": 110,
+  "not_real_experiment": true,
+  "refined_ten_settings": [
+    {
+      "CCNR_excess": 0.0030587940982738093,
+      "Horodecki_a": 0.236,
+      "LP_efficiency_relative_envelope": 0.001,
+      "coefficient_centered_l1": 15.319894633920565,
+      "condition": 9.359126485181303,
+      "frame_rank": 80,
+      "min_singular": 0.1653805676515416,
+      "reporting_scope": "Observed q_j replaced by EXACT EXPECTED q_j for design-point resource estimation. A listed 95pct Hoeffding interval is a prospective coverage construction, NOT an observed 95pct successful experiment.",
+      "sample_count_sweep": [
+        {
+          "LP_certifies_entangled_on_expected_frequencies": false,
+          "accepted_shots_per_basis": 100000,
+          "accepted_total": 1000000,
+          "calibrated_LP_lower": 0.8933502437053518,
+          "perfect_efficiency_certifies": false,
+          "perfect_efficiency_expected_rectangle_lower": 0.9050312838281624,
+          "simultaneous_95pct_Hoeffding_radius": 0.006398706558533608
+        },
+        {
+          "LP_certifies_entangled_on_expected_frequencies": false,
+          "accepted_shots_per_basis": 1000000,
+          "accepted_total": 10000000,
+          "calibrated_LP_lower": 0.9668956013971228,
+          "perfect_efficiency_certifies": false,
+          "perfect_efficiency_expected_rectangle_lower": 0.9720597735173638,
+          "simultaneous_95pct_Hoeffding_radius": 0.0020234486804023718
+        },
+        {
+          "LP_certifies_entangled_on_expected_frequencies": false,
+          "accepted_shots_per_basis": 10000000,
+          "accepted_total": 100000000,
+          "calibrated_LP_lower": 0.990204826393331,
+          "perfect_efficiency_certifies": false,
+          "perfect_efficiency_expected_rectangle_lower": 0.9932560430712627,
+          "simultaneous_95pct_Hoeffding_radius": 0.0006398706558533607
+        },
+        {
+          "LP_certifies_entangled_on_expected_frequencies": false,
+          "accepted_shots_per_basis": 100000000,
+          "accepted_total": 1000000000,
+          "calibrated_LP_lower": 0.997581087995313,
+          "perfect_efficiency_certifies": false,
+          "perfect_efficiency_expected_rectangle_lower": 0.9999588920401828,
+          "simultaneous_95pct_Hoeffding_radius": 0.00020234486804023718
+        },
+        {
+          "LP_certifies_entangled_on_expected_frequencies": false,
+          "accepted_shots_per_basis": 1000000000,
+          "accepted_total": 10000000000,
+          "calibrated_LP_lower": 0.9999141912107052,
+          "perfect_efficiency_certifies": true,
+          "perfect_efficiency_expected_rectangle_lower": 1.0020785189955728,
+          "simultaneous_95pct_Hoeffding_radius": 6.398706558533608e-05
+        },
+        {
+          "LP_certifies_entangled_on_expected_frequencies": true,
+          "accepted_shots_per_basis": 10000000000,
+          "accepted_total": 100000000000,
+          "calibrated_LP_lower": 1.0006520357006359,
+          "perfect_efficiency_certifies": true,
+          "perfect_efficiency_expected_rectangle_lower": 1.0027488038924648,
+          "simultaneous_95pct_Hoeffding_radius": 2.023448680402372e-05
+        }
+      ],
+      "settings": 10,
+      "true_realignment_norm": 1.0030587940982738,
+      "uncertainty_scope": "Conservative for IID accepted multinomial counts conditional on independent trusted efficiency intervals; no dark counts, crosstalk, preparation drift, calibration uncertainty beyond envelope, or adversarial detection selection."
+    },
+    {
+      "CCNR_excess": 0.0023272046579456696,
+      "Horodecki_a": 0.5,
+      "LP_efficiency_relative_envelope": 0.001,
+      "coefficient_centered_l1": 12.948729215691545,
+      "condition": 9.359126485181303,
+      "frame_rank": 80,
+      "min_singular": 0.1653805676515416,
+      "reporting_scope": "Observed q_j replaced by EXACT EXPECTED q_j for design-point resource estimation. A listed 95pct Hoeffding interval is a prospective coverage construction, NOT an observed 95pct successful experiment.",
+      "sample_count_sweep": [
+        {
+          "LP_certifies_entangled_on_expected_frequencies": false,
+          "accepted_shots_per_basis": 100000,
+          "accepted_total": 1000000,
+          "calibrated_LP_lower": 0.9134611043363403,
+          "perfect_efficiency_certifies": false,
+          "perfect_efficiency_expected_rectangle_lower": 0.9194720861008244,
+          "simultaneous_95pct_Hoeffding_radius": 0.006398706558533608
+        },
+        {
+          "LP_certifies_entangled_on_expected_frequencies": false,
+          "accepted_shots_per_basis": 1000000,
+          "accepted_total": 10000000,
+          "calibrated_LP_lower": 0.9729466041385325,
+          "perfect_efficiency_certifies": false,
+          "perfect_efficiency_expected_rectangle_lower": 0.976126115613567,
+          "simultaneous_95pct_Hoeffding_radius": 0.0020234486804023718
+        },
+        {
+          "LP_certifies_entangled_on_expected_frequencies": false,
+          "accepted_shots_per_basis": 10000000,
+          "accepted_total": 100000000,
+          "calibrated_LP_lower": 0.9917478938156066,
+          "perfect_efficiency_certifies": false,
+          "perfect_efficiency_expected_rectangle_lower": 0.9940416928022335,
+          "simultaneous_95pct_Hoeffding_radius": 0.0006398706558533607
+        },
+        {
+          "LP_certifies_entangled_on_expected_frequencies": false,
+          "accepted_shots_per_basis": 100000000,
+          "accepted_total": 1000000000,
+          "calibrated_LP_lower": 0.9976924236389525,
+          "perfect_efficiency_certifies": false,
+          "perfect_efficiency_expected_rectangle_lower": 0.9997070957535078,
+          "simultaneous_95pct_Hoeffding_radius": 0.00020234486804023718
+        },
+        {
+          "LP_certifies_entangled_on_expected_frequencies": false,
+          "accepted_shots_per_basis": 1000000000,
+          "accepted_total": 10000000000,
+          "calibrated_LP_lower": 0.99957215326748,
+          "perfect_efficiency_certifies": true,
+          "perfect_efficiency_expected_rectangle_lower": 1.0014986534723744,
+          "simultaneous_95pct_Hoeffding_radius": 6.398706558533608e-05
+        },
+        {
+          "LP_certifies_entangled_on_expected_frequencies": true,
+          "accepted_shots_per_basis": 10000000000,
+          "accepted_total": 100000000000,
+          "calibrated_LP_lower": 1.0001665664005706,
+          "perfect_efficiency_certifies": true,
+          "perfect_efficiency_expected_rectangle_lower": 1.0020651937675018,
+          "simultaneous_95pct_Hoeffding_radius": 2.023448680402372e-05
+        }
+      ],
+      "settings": 10,
+      "true_realignment_norm": 1.0023272046579457,
+      "uncertainty_scope": "Conservative for IID accepted multinomial counts conditional on independent trusted efficiency intervals; no dark counts, crosstalk, preparation drift, calibration uncertainty beyond envelope, or adversarial detection selection."
+    }
+  ],
+  "source": "known W33 Q8 eight-context Bell design; full tomography completed by 2/3/4 extra bases",
+  "status": "PASS_FINITE_SHOT_LOSS_AWARE_CCNR_PPT_SYNTHETIC_GATE",
+  "tests": {
+    "10": [
+      {
+        "CCNR_excess": 0.0030587940982738093,
+        "Horodecki_a": 0.236,
+        "LP_efficiency_relative_envelope": 0.001,
+        "coefficient_centered_l1": 15.1309797423327,
+        "condition": 29.468942303378018,
+        "frame_rank": 80,
+        "min_singular": 0.052124365173699505,
+        "reporting_scope": "Observed q_j replaced by EXACT EXPECTED q_j for design-point resource estimation. A listed 95pct Hoeffding interval is a prospective coverage construction, NOT an observed 95pct successful experiment.",
+        "sample_count_sweep": [
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 100000,
+            "accepted_total": 1000000,
+            "calibrated_LP_lower": 0.895089639018882,
+            "perfect_efficiency_certifies": false,
+            "perfect_efficiency_expected_rectangle_lower": 0.9062400947839704,
+            "simultaneous_95pct_Hoeffding_radius": 0.006398706558533608
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 1000000,
+            "accepted_total": 10000000,
+            "calibrated_LP_lower": 0.9674516917472533,
+            "perfect_efficiency_certifies": false,
+            "perfect_efficiency_expected_rectangle_lower": 0.9724420331054557,
+            "simultaneous_95pct_Hoeffding_radius": 0.0020234486804023718
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 10000000,
+            "accepted_total": 100000000,
+            "calibrated_LP_lower": 0.9903873700987315,
+            "perfect_efficiency_certifies": false,
+            "perfect_efficiency_expected_rectangle_lower": 0.9933769241668434,
+            "simultaneous_95pct_Hoeffding_radius": 0.0006398706558533607
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 100000000,
+            "accepted_total": 1000000000,
+            "calibrated_LP_lower": 0.9976455978855499,
+            "perfect_efficiency_certifies": false,
+            "perfect_efficiency_expected_rectangle_lower": 0.999997117998992,
+            "simultaneous_95pct_Hoeffding_radius": 0.00020234486804023718
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 1000000000,
+            "accepted_total": 10000000000,
+            "calibrated_LP_lower": 0.9999413709306381,
+            "perfect_efficiency_certifies": true,
+            "perfect_efficiency_expected_rectangle_lower": 1.0020906071051308,
+            "simultaneous_95pct_Hoeffding_radius": 6.398706558533608e-05
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": true,
+            "accepted_shots_per_basis": 10000000000,
+            "accepted_total": 100000000000,
+            "calibrated_LP_lower": 1.000667411523237,
+            "perfect_efficiency_certifies": true,
+            "perfect_efficiency_expected_rectangle_lower": 1.0027526264883457,
+            "simultaneous_95pct_Hoeffding_radius": 2.023448680402372e-05
+          }
+        ],
+        "settings": 10,
+        "true_realignment_norm": 1.0030587940982738,
+        "uncertainty_scope": "Conservative for IID accepted multinomial counts conditional on independent trusted efficiency intervals; no dark counts, crosstalk, preparation drift, calibration uncertainty beyond envelope, or adversarial detection selection."
+      },
+      {
+        "CCNR_excess": 0.0023272046579456696,
+        "Horodecki_a": 0.5,
+        "LP_efficiency_relative_envelope": 0.001,
+        "coefficient_centered_l1": 13.007886983675663,
+        "condition": 29.468942303378018,
+        "frame_rank": 80,
+        "min_singular": 0.052124365173699505,
+        "reporting_scope": "Observed q_j replaced by EXACT EXPECTED q_j for design-point resource estimation. A listed 95pct Hoeffding interval is a prospective coverage construction, NOT an observed 95pct successful experiment.",
+        "sample_count_sweep": [
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 100000,
+            "accepted_total": 1000000,
+            "calibrated_LP_lower": 0.9137125880210816,
+            "perfect_efficiency_certifies": false,
+            "perfect_efficiency_expected_rectangle_lower": 0.9190935529028362,
+            "simultaneous_95pct_Hoeffding_radius": 0.006398706558533608
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 1000000,
+            "accepted_total": 10000000,
+            "calibrated_LP_lower": 0.9730321763543024,
+            "perfect_efficiency_certifies": false,
+            "perfect_efficiency_expected_rectangle_lower": 0.976006412906004,
+            "simultaneous_95pct_Hoeffding_radius": 0.0020234486804023718
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 10000000,
+            "accepted_total": 100000000,
+            "calibrated_LP_lower": 0.9917839034526555,
+            "perfect_efficiency_certifies": false,
+            "perfect_efficiency_expected_rectangle_lower": 0.9940038394824348,
+            "simultaneous_95pct_Hoeffding_radius": 0.0006398706558533607
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 100000000,
+            "accepted_total": 1000000000,
+            "calibrated_LP_lower": 0.9977130831735808,
+            "perfect_efficiency_certifies": false,
+            "perfect_efficiency_expected_rectangle_lower": 0.9996951254827515,
+            "simultaneous_95pct_Hoeffding_radius": 0.00020234486804023718
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 1000000000,
+            "accepted_total": 10000000000,
+            "calibrated_LP_lower": 0.999587991042578,
+            "perfect_efficiency_certifies": true,
+            "perfect_efficiency_expected_rectangle_lower": 1.0014948681403946,
+            "simultaneous_95pct_Hoeffding_radius": 6.398706558533608e-05
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": true,
+            "accepted_shots_per_basis": 10000000000,
+            "accepted_total": 100000000000,
+            "calibrated_LP_lower": 1.0001808826406393,
+            "perfect_efficiency_certifies": true,
+            "perfect_efficiency_expected_rectangle_lower": 1.0020639967404263,
+            "simultaneous_95pct_Hoeffding_radius": 2.023448680402372e-05
+          }
+        ],
+        "settings": 10,
+        "true_realignment_norm": 1.0023272046579457,
+        "uncertainty_scope": "Conservative for IID accepted multinomial counts conditional on independent trusted efficiency intervals; no dark counts, crosstalk, preparation drift, calibration uncertainty beyond envelope, or adversarial detection selection."
+      }
+    ],
+    "11": [
+      {
+        "CCNR_excess": 0.0030587940982738093,
+        "Horodecki_a": 0.236,
+        "LP_efficiency_relative_envelope": 0.001,
+        "coefficient_centered_l1": 15.658987408442092,
+        "condition": 9.782844395091644,
+        "frame_rank": 80,
+        "min_singular": 0.16835596247533818,
+        "reporting_scope": "Observed q_j replaced by EXACT EXPECTED q_j for design-point resource estimation. A listed 95pct Hoeffding interval is a prospective coverage construction, NOT an observed 95pct successful experiment.",
+        "sample_count_sweep": [
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 100000,
+            "accepted_total": 1100000,
+            "calibrated_LP_lower": 0.8915736029086341,
+            "perfect_efficiency_certifies": false,
+            "perfect_efficiency_expected_rectangle_lower": 0.902280105218337,
+            "simultaneous_95pct_Hoeffding_radius": 0.006435836893617071
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 1000000,
+            "accepted_total": 11000000,
+            "calibrated_LP_lower": 0.9662766832912261,
+            "perfect_efficiency_certifies": false,
+            "perfect_efficiency_expected_rectangle_lower": 0.9711897744516654,
+            "simultaneous_95pct_Hoeffding_radius": 0.0020351903233172723
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 10000000,
+            "accepted_total": 110000000,
+            "calibrated_LP_lower": 0.9899608880897457,
+            "perfect_efficiency_certifies": false,
+            "perfect_efficiency_expected_rectangle_lower": 0.9929809252102801,
+            "simultaneous_95pct_Hoeffding_radius": 0.0006435836893617071
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 100000000,
+            "accepted_total": 1100000000,
+            "calibrated_LP_lower": 0.9974566237121935,
+            "perfect_efficiency_certifies": false,
+            "perfect_efficiency_expected_rectangle_lower": 0.9998718921336129,
+            "simultaneous_95pct_Hoeffding_radius": 0.00020351903233172723
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 1000000000,
+            "accepted_total": 11000000000,
+            "calibrated_LP_lower": 0.9998275976656608,
+            "perfect_efficiency_certifies": true,
+            "perfect_efficiency_expected_rectangle_lower": 1.0020510072094744,
+            "simultaneous_95pct_Hoeffding_radius": 6.435836893617071e-05
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": true,
+            "accepted_shots_per_basis": 10000000000,
+            "accepted_total": 110000000000,
+            "calibrated_LP_lower": 1.000577426915512,
+            "perfect_efficiency_certifies": true,
+            "perfect_efficiency_expected_rectangle_lower": 1.0027401039018078,
+            "simultaneous_95pct_Hoeffding_radius": 2.0351903233172723e-05
+          }
+        ],
+        "settings": 11,
+        "true_realignment_norm": 1.0030587940982738,
+        "uncertainty_scope": "Conservative for IID accepted multinomial counts conditional on independent trusted efficiency intervals; no dark counts, crosstalk, preparation drift, calibration uncertainty beyond envelope, or adversarial detection selection."
+      },
+      {
+        "CCNR_excess": 0.0023272046579456696,
+        "Horodecki_a": 0.5,
+        "LP_efficiency_relative_envelope": 0.001,
+        "coefficient_centered_l1": 13.889344270506838,
+        "condition": 9.782844395091644,
+        "frame_rank": 80,
+        "min_singular": 0.16835596247533818,
+        "reporting_scope": "Observed q_j replaced by EXACT EXPECTED q_j for design-point resource estimation. A listed 95pct Hoeffding interval is a prospective coverage construction, NOT an observed 95pct successful experiment.",
+        "sample_count_sweep": [
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 100000,
+            "accepted_total": 1100000,
+            "calibrated_LP_lower": 0.9078506217559638,
+            "perfect_efficiency_certifies": false,
+            "perfect_efficiency_expected_rectangle_lower": 0.9129376503736689,
+            "simultaneous_95pct_Hoeffding_radius": 0.006435836893617071
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 1000000,
+            "accepted_total": 11000000,
+            "calibrated_LP_lower": 0.9711018663372024,
+            "perfect_efficiency_certifies": false,
+            "perfect_efficiency_expected_rectangle_lower": 0.974059745601388,
+            "simultaneous_95pct_Hoeffding_radius": 0.0020351903233172723
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 10000000,
+            "accepted_total": 110000000,
+            "calibrated_LP_lower": 0.9911053405352335,
+            "perfect_efficiency_certifies": false,
+            "perfect_efficiency_expected_rectangle_lower": 0.993388249229518,
+            "simultaneous_95pct_Hoeffding_radius": 0.0006435836893617071
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 100000000,
+            "accepted_total": 1100000000,
+            "calibrated_LP_lower": 0.9974311723080408,
+            "perfect_efficiency_certifies": false,
+            "perfect_efficiency_expected_rectangle_lower": 0.9995004587522899,
+            "simultaneous_95pct_Hoeffding_radius": 0.00020351903233172723
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 1000000000,
+            "accepted_total": 11000000000,
+            "calibrated_LP_lower": 0.9994315940680046,
+            "perfect_efficiency_certifies": true,
+            "perfect_efficiency_expected_rectangle_lower": 1.0014333091151029,
+            "simultaneous_95pct_Hoeffding_radius": 6.435836893617071e-05
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": true,
+            "accepted_shots_per_basis": 10000000000,
+            "accepted_total": 110000000000,
+            "calibrated_LP_lower": 1.00006418479368,
+            "perfect_efficiency_certifies": true,
+            "perfect_efficiency_expected_rectangle_lower": 1.0020445300673801,
+            "simultaneous_95pct_Hoeffding_radius": 2.0351903233172723e-05
+          }
+        ],
+        "settings": 11,
+        "true_realignment_norm": 1.0023272046579457,
+        "uncertainty_scope": "Conservative for IID accepted multinomial counts conditional on independent trusted efficiency intervals; no dark counts, crosstalk, preparation drift, calibration uncertainty beyond envelope, or adversarial detection selection."
+      }
+    ],
+    "12": [
+      {
+        "CCNR_excess": 0.0030587940982738093,
+        "Horodecki_a": 0.236,
+        "LP_efficiency_relative_envelope": 0.001,
+        "coefficient_centered_l1": 15.383485792380634,
+        "condition": 1.414213562373097,
+        "frame_rank": 80,
+        "min_singular": 0.999999999999999,
+        "reporting_scope": "Observed q_j replaced by EXACT EXPECTED q_j for design-point resource estimation. A listed 95pct Hoeffding interval is a prospective coverage construction, NOT an observed 95pct successful experiment.",
+        "sample_count_sweep": [
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 100000,
+            "accepted_total": 1200000,
+            "calibrated_LP_lower": 0.8937858673640929,
+            "perfect_efficiency_certifies": false,
+            "perfect_efficiency_expected_rectangle_lower": 0.9035345918819628,
+            "simultaneous_95pct_Hoeffding_radius": 0.006469548160898934
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 1000000,
+            "accepted_total": 12000000,
+            "calibrated_LP_lower": 0.9671255575953509,
+            "perfect_efficiency_certifies": false,
+            "perfect_efficiency_expected_rectangle_lower": 0.9715864779668018,
+            "simultaneous_95pct_Hoeffding_radius": 0.002045850762059412
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 10000000,
+            "accepted_total": 120000000,
+            "calibrated_LP_lower": 0.9903408344718112,
+            "perfect_efficiency_certifies": false,
+            "perfect_efficiency_expected_rectangle_lower": 0.9931063738766427,
+            "simultaneous_95pct_Hoeffding_radius": 0.0006469548160898934
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 100000000,
+            "accepted_total": 1200000000,
+            "calibrated_LP_lower": 0.9976844891383406,
+            "perfect_efficiency_certifies": false,
+            "perfect_efficiency_expected_rectangle_lower": 0.9999115624851266,
+            "simultaneous_95pct_Hoeffding_radius": 0.00020458507620594124
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": true,
+            "accepted_shots_per_basis": 1000000000,
+            "accepted_total": 12000000000,
+            "calibrated_LP_lower": 1.0000069911220877,
+            "perfect_efficiency_certifies": true,
+            "perfect_efficiency_expected_rectangle_lower": 1.0020635520761108,
+            "simultaneous_95pct_Hoeffding_radius": 6.469548160898933e-05
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": true,
+            "accepted_shots_per_basis": 10000000000,
+            "accepted_total": 120000000000,
+            "calibrated_LP_lower": 1.0007414541999065,
+            "perfect_efficiency_certifies": true,
+            "perfect_efficiency_expected_rectangle_lower": 1.002744070936959,
+            "simultaneous_95pct_Hoeffding_radius": 2.045850762059412e-05
+          }
+        ],
+        "settings": 12,
+        "true_realignment_norm": 1.0030587940982738,
+        "uncertainty_scope": "Conservative for IID accepted multinomial counts conditional on independent trusted efficiency intervals; no dark counts, crosstalk, preparation drift, calibration uncertainty beyond envelope, or adversarial detection selection."
+      },
+      {
+        "CCNR_excess": 0.0023272046579456696,
+        "Horodecki_a": 0.5,
+        "LP_efficiency_relative_envelope": 0.001,
+        "coefficient_centered_l1": 12.95250989751192,
+        "condition": 1.414213562373097,
+        "frame_rank": 80,
+        "min_singular": 0.999999999999999,
+        "reporting_scope": "Observed q_j replaced by EXACT EXPECTED q_j for design-point resource estimation. A listed 95pct Hoeffding interval is a prospective coverage construction, NOT an observed 95pct successful experiment.",
+        "sample_count_sweep": [
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 100000,
+            "accepted_total": 1200000,
+            "calibrated_LP_lower": 0.9099446938842168,
+            "perfect_efficiency_certifies": false,
+            "perfect_efficiency_expected_rectangle_lower": 0.9185303180714722,
+            "simultaneous_95pct_Hoeffding_radius": 0.006469548160898934
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 1000000,
+            "accepted_total": 12000000,
+            "calibrated_LP_lower": 0.9718280545661333,
+            "perfect_efficiency_certifies": false,
+            "perfect_efficiency_expected_rectangle_lower": 0.9758283024135388,
+            "simultaneous_95pct_Hoeffding_radius": 0.002045850762059412
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 10000000,
+            "accepted_total": 120000000,
+            "calibrated_LP_lower": 0.9914052731221742,
+            "perfect_efficiency_certifies": false,
+            "perfect_efficiency_expected_rectangle_lower": 0.9939475159992983,
+            "simultaneous_95pct_Hoeffding_radius": 0.0006469548160898934
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 100000000,
+            "accepted_total": 1200000000,
+            "calibrated_LP_lower": 0.9975969416959062,
+            "perfect_efficiency_certifies": false,
+            "perfect_efficiency_expected_rectangle_lower": 0.9996773144335049,
+            "simultaneous_95pct_Hoeffding_radius": 0.00020458507620594124
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": false,
+            "accepted_shots_per_basis": 1000000000,
+            "accepted_total": 12000000000,
+            "calibrated_LP_lower": 0.999555000391528,
+            "perfect_efficiency_certifies": true,
+            "perfect_efficiency_expected_rectangle_lower": 1.001489235792081,
+            "simultaneous_95pct_Hoeffding_radius": 6.469548160898933e-05
+          },
+          {
+            "LP_certifies_entangled_on_expected_frequencies": true,
+            "accepted_shots_per_basis": 10000000000,
+            "accepted_total": 120000000000,
+            "calibrated_LP_lower": 1.0001742010463495,
+            "perfect_efficiency_certifies": true,
+            "perfect_efficiency_expected_rectangle_lower": 1.0020622156355017,
+            "simultaneous_95pct_Hoeffding_radius": 2.045850762059412e-05
+          }
+        ],
+        "settings": 12,
+        "true_realignment_norm": 1.0023272046579457,
+        "uncertainty_scope": "Conservative for IID accepted multinomial counts conditional on independent trusted efficiency intervals; no dark counts, crosstalk, preparation drift, calibration uncertainty beyond envelope, or adversarial detection selection."
+      }
+    ]
+  }
+}

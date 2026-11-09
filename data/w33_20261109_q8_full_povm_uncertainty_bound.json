@@ -1,0 +1,203 @@
+{
+  "Horodecki_a": 0.236,
+  "adversarial_full_complex_POVM_phase_stress": {
+    "Horodecki_a0p236": [
+      {
+        "actual_max_POVM_effect_Frobenius_error": 1.0629391994733197e-07,
+        "actual_rho_error_Frobenius": 5.159538167332593e-08,
+        "conservative": {
+          "bound_is_finite": true,
+          "ccnr_conservative_lower": 1.0029921979135676,
+          "certified": true,
+          "condition_failed": false,
+          "matrix_perturbation_upper": 1.0083926653835218e-06,
+          "nominal_ccnr": 1.0030587963487763,
+          "nominal_unknown_vector_l2": 3.1563400410391838,
+          "per_effect_frobenius_error_upper": 1.0629391994733197e-07,
+          "per_probability_95pct_error_upper": 0.0,
+          "rhs_perturbation_upper": 3.3613088846117394e-07,
+          "sigma_min_augmented": 0.15851649111901153,
+          "state_coefficients_error_upper": 2.2199478402853457e-05
+        },
+        "nominal_ccnr": 1.0030587963487763,
+        "phase_error_input_radians_max": 1e-07,
+        "true_ccnr": 1.0030587940982738
+      },
+      {
+        "actual_max_POVM_effect_Frobenius_error": 1.0492530403049985e-06,
+        "actual_rho_error_Frobenius": 7.305008310141898e-07,
+        "conservative": {
+          "bound_is_finite": true,
+          "ccnr_conservative_lower": 1.0024013067605912,
+          "certified": true,
+          "condition_failed": false,
+          "matrix_perturbation_upper": 9.954088347660747e-06,
+          "nominal_ccnr": 1.0030587531505484,
+          "nominal_unknown_vector_l2": 3.1563400362187295,
+          "per_effect_frobenius_error_upper": 1.0492530403049985e-06,
+          "per_probability_95pct_error_upper": 0.0,
+          "rhs_perturbation_upper": 3.318029449220249e-06,
+          "sigma_min_augmented": 0.15851649190934294,
+          "state_coefficients_error_upper": 0.00021914879665234298
+        },
+        "nominal_ccnr": 1.0030587531505484,
+        "phase_error_input_radians_max": 1e-06,
+        "true_ccnr": 1.0030587940982738
+      },
+      {
+        "actual_max_POVM_effect_Frobenius_error": 1.0705198544145929e-05,
+        "actual_rho_error_Frobenius": 5.181944399933994e-06,
+        "conservative": {
+          "bound_is_finite": true,
+          "ccnr_conservative_lower": 0.9963474626759091,
+          "certified": false,
+          "condition_failed": false,
+          "matrix_perturbation_upper": 0.00010155843061145919,
+          "nominal_ccnr": 1.0030590597513083,
+          "nominal_unknown_vector_l2": 3.156340052891315,
+          "per_effect_frobenius_error_upper": 1.0705198544145929e-05,
+          "per_probability_95pct_error_upper": 0.0,
+          "rhs_perturbation_upper": 3.385281020381973e-05,
+          "sigma_min_augmented": 0.1585164998238896,
+          "state_coefficients_error_upper": 0.002237199025133054
+        },
+        "nominal_ccnr": 1.0030590597513083,
+        "phase_error_input_radians_max": 1e-05,
+        "true_ccnr": 1.0030587940982738
+      },
+      {
+        "actual_max_POVM_effect_Frobenius_error": 0.00010177305526105237,
+        "actual_rho_error_Frobenius": 4.3834348775891415e-05,
+        "conservative": {
+          "bound_is_finite": true,
+          "ccnr_conservative_lower": 0.9389036387174711,
+          "certified": false,
+          "condition_failed": false,
+          "matrix_perturbation_upper": 0.0009655039771773236,
+          "nominal_ccnr": 1.0030599785433387,
+          "nominal_unknown_vector_l2": 3.1563399211218663,
+          "per_effect_frobenius_error_upper": 0.00010177305526105237,
+          "per_probability_95pct_error_upper": 0.0,
+          "rhs_perturbation_upper": 0.00032183465905910786,
+          "sigma_min_augmented": 0.15851626585218717,
+          "state_coefficients_error_upper": 0.021385446608622558
+        },
+        "nominal_ccnr": 1.0030599785433387,
+        "phase_error_input_radians_max": 0.0001,
+        "true_ccnr": 1.0030587940982738
+      }
+    ],
+    "pure_separable_control": [
+      {
+        "actual_max_POVM_effect_Frobenius_error": 1.0629391994733197e-07,
+        "actual_rho_error_Frobenius": 9.823354782206206e-08,
+        "conservative": {
+          "bound_is_finite": true,
+          "ccnr_conservative_lower": 0.999922762287788,
+          "certified": false,
+          "condition_failed": false,
+          "matrix_perturbation_upper": 1.0083926653835218e-06,
+          "nominal_ccnr": 1.0000002174598197,
+          "nominal_unknown_vector_l2": 3.2743226982156846,
+          "per_effect_frobenius_error_upper": 1.0629391994733197e-07,
+          "per_probability_95pct_error_upper": 0.0,
+          "rhs_perturbation_upper": 3.3613088846117394e-07,
+          "sigma_min_augmented": 0.1409057583020532,
+          "state_coefficients_error_upper": 2.581839067724909e-05
+        },
+        "nominal_ccnr": 1.0000002174598197,
+        "phase_error_input_radians_max": 1e-07,
+        "true_ccnr": 1.0000000000000002
+      },
+      {
+        "actual_max_POVM_effect_Frobenius_error": 1.0492530403049985e-06,
+        "actual_rho_error_Frobenius": 1.6485707047585773e-06,
+        "conservative": {
+          "bound_is_finite": true,
+          "ccnr_conservative_lower": 0.9992383078666721,
+          "certified": false,
+          "condition_failed": false,
+          "matrix_perturbation_upper": 9.954088347660747e-06,
+          "nominal_ccnr": 1.0000029351019888,
+          "nominal_unknown_vector_l2": 3.2743227291484187,
+          "per_effect_frobenius_error_upper": 1.0492530403049985e-06,
+          "per_probability_95pct_error_upper": 0.0,
+          "rhs_perturbation_upper": 3.318029449220249e-06,
+          "sigma_min_augmented": 0.1409057743596998,
+          "state_coefficients_error_upper": 0.00025487574510554096
+        },
+        "nominal_ccnr": 1.0000029351019888,
+        "phase_error_input_radians_max": 1e-06,
+        "true_ccnr": 1.0000000000000002
+      },
+      {
+        "actual_max_POVM_effect_Frobenius_error": 1.0705198544145929e-05,
+        "actual_rho_error_Frobenius": 1.5503743967392537e-05,
+        "conservative": {
+          "bound_is_finite": true,
+          "ccnr_conservative_lower": 0.9922183479864342,
+          "certified": false,
+          "condition_failed": false,
+          "matrix_perturbation_upper": 0.00010155843061145919,
+          "nominal_ccnr": 1.0000246639900905,
+          "nominal_unknown_vector_l2": 3.274322817500326,
+          "per_effect_frobenius_error_upper": 1.0705198544145929e-05,
+          "per_probability_95pct_error_upper": 0.0,
+          "rhs_perturbation_upper": 3.385281020381973e-05,
+          "sigma_min_augmented": 0.1409059647701076,
+          "state_coefficients_error_upper": 0.002602105334552098
+        },
+        "nominal_ccnr": 1.0000246639900905,
+        "phase_error_input_radians_max": 1e-05,
+        "true_ccnr": 1.0000000000000002
+      },
+      {
+        "actual_max_POVM_effect_Frobenius_error": 0.00010177305526105237,
+        "actual_rho_error_Frobenius": 0.00015593214928131882,
+        "conservative": {
+          "bound_is_finite": true,
+          "ccnr_conservative_lower": 0.9255361865599584,
+          "certified": false,
+          "condition_failed": false,
+          "matrix_perturbation_upper": 0.0009655039771773236,
+          "nominal_ccnr": 1.0002082166141522,
+          "nominal_unknown_vector_l2": 3.2743097641356926,
+          "per_effect_frobenius_error_upper": 0.00010177305526105237,
+          "per_probability_95pct_error_upper": 0.0,
+          "rhs_perturbation_upper": 0.00032183465905910786,
+          "sigma_min_augmented": 0.14090520119639222,
+          "state_coefficients_error_upper": 0.02489067668473125
+        },
+        "nominal_ccnr": 1.0002082166141522,
+        "phase_error_input_radians_max": 0.0001,
+        "true_ccnr": 1.0000000000000002
+      }
+    ]
+  },
+  "assumptions": "Effect error bounded in Frobenius per outcome; independent IID accepted shots with simultaneous Hoeffding union bound; source stationary; full POVM basis/normalization trusted; q measured conditional on clicks; no claim of device independence.",
+  "calibration_mesh_intensity_per_element": 0.995,
+  "calibration_mesh_phase_rms": 0.003,
+  "ideal_CCNR": 1.0030587940982738,
+  "joint_error_example": {
+    "bound_is_finite": true,
+    "ccnr_conservative_lower": 1.0015296322369256,
+    "certified": true,
+    "condition_failed": false,
+    "each_conditional_probability_error": 4.265776927197433e-06,
+    "matrix_perturbation_upper": 2.437261855857198e-05,
+    "nominal_ccnr": 1.003058794098274,
+    "nominal_unknown_vector_l2": 3.1563400402365946,
+    "per_effect_Frobenius_error": 1.220142464905432e-06,
+    "per_effect_frobenius_error_upper": 1.220142464905432e-06,
+    "per_probability_95pct_error_upper": 4.265776927197433e-06,
+    "rhs_perturbation_upper": 3.858429258993228e-06,
+    "sigma_min_augmented": 0.15851649135918966,
+    "state_coefficients_error_upper": 0.0005097206204494821
+  },
+  "maximum_each_conditional_frequency_error_zero_calibration_error": 1.7063107708789732e-05,
+  "maximum_effect_Frobenius_error_for_expected_values_zero_statistical_noise": 4.880569859621728e-06,
+  "prospective_95pct_independent_accepted_shots_per_setting_for_zero_calibration_error": 14062680952,
+  "scope": "A deterministic Lipschitz guarantee and synthetic expected-frequency resource benchmark, not a measured confidence interval, new entanglement theorem, or viable present-day experimental shot budget.",
+  "selfnormalizing_augmented_sigma_min": 0.15851649135918966,
+  "status": "PASS_BOUND_FULL_POVM_CALIBRATION_AND_SHOTS_DETERMINISTIC"
+}

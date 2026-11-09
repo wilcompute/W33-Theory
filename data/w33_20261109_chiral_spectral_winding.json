@@ -1,0 +1,179 @@
+{
+  "W33_point_operator": "C=B B^T/16, spectrum 0(15),3/8(24),1(1)",
+  "critical_scope": "A 1D AIII winding is robust but is supplied by an EXTRA circle/momentum plus tunable m,t,lambda. The closed native W33 graph does not choose any of the distinct indices. The protected boundary modes are not 3+1D Weyl particles, nor does this give SM hypercharges, anomaly cancellation or cosmology.",
+  "distinct_indices": [
+    0,
+    15,
+    24,
+    39,
+    40
+  ],
+  "gap_protection": [
+    {
+      "allowed_generic_uniform_Q_perturbation_op_norm_strictly_below": "11/10",
+      "certified_stability_reason": "sigma_min(Q(k)+Delta)>=sigma_min(Q(k))-||Delta||_op >0 for all k; winding is homotopy invariant",
+      "winding": 0
+    },
+    {
+      "allowed_generic_uniform_Q_perturbation_op_norm_strictly_below": "1/10",
+      "certified_stability_reason": "sigma_min(Q(k)+Delta)>=sigma_min(Q(k))-||Delta||_op >0 for all k; winding is homotopy invariant",
+      "winding": 15
+    },
+    {
+      "allowed_generic_uniform_Q_perturbation_op_norm_strictly_below": "7/40",
+      "certified_stability_reason": "sigma_min(Q(k)+Delta)>=sigma_min(Q(k))-||Delta||_op >0 for all k; winding is homotopy invariant",
+      "winding": 24
+    },
+    {
+      "allowed_generic_uniform_Q_perturbation_op_norm_strictly_below": "3/40",
+      "certified_stability_reason": "sigma_min(Q(k)+Delta)>=sigma_min(Q(k))-||Delta||_op >0 for all k; winding is homotopy invariant",
+      "winding": 39
+    },
+    {
+      "allowed_generic_uniform_Q_perturbation_op_norm_strictly_below": "2/5",
+      "certified_stability_reason": "sigma_min(Q(k)+Delta)>=sigma_min(Q(k))-||Delta||_op >0 for all k; winding is homotopy invariant",
+      "winding": 40
+    }
+  ],
+  "models": [
+    {
+      "AIII_chiral_winding_index_exact": 0,
+      "Hermitian_chiral_Bloch_H": "H(k)=[[0,Q(k)],[Q(k)^dag,0]], Gamma=diag(I40,-I40)",
+      "discretized_independent_winding": 0,
+      "lambda": "1",
+      "local_1D_hopping": "The exp(ik) factor is one externally introduced nearest-neighbor oriented 1D hopping term.",
+      "m": "3/2",
+      "rational_band_centers": [
+        {
+          "center": "3/2",
+          "inside": false,
+          "multiplicity": 15
+        },
+        {
+          "center": "15/8",
+          "inside": false,
+          "multiplicity": 24
+        },
+        {
+          "center": "5/2",
+          "inside": false,
+          "multiplicity": 1
+        }
+      ],
+      "spectral_gap_lower_bound": "11/10",
+      "t": "2/5"
+    },
+    {
+      "AIII_chiral_winding_index_exact": 15,
+      "Hermitian_chiral_Bloch_H": "H(k)=[[0,Q(k)],[Q(k)^dag,0]], Gamma=diag(I40,-I40)",
+      "discretized_independent_winding": 15,
+      "lambda": "1",
+      "local_1D_hopping": "The exp(ik) factor is one externally introduced nearest-neighbor oriented 1D hopping term.",
+      "m": "3/10",
+      "rational_band_centers": [
+        {
+          "center": "3/10",
+          "inside": true,
+          "multiplicity": 15
+        },
+        {
+          "center": "27/40",
+          "inside": false,
+          "multiplicity": 24
+        },
+        {
+          "center": "13/10",
+          "inside": false,
+          "multiplicity": 1
+        }
+      ],
+      "spectral_gap_lower_bound": "1/10",
+      "t": "2/5"
+    },
+    {
+      "AIII_chiral_winding_index_exact": 24,
+      "Hermitian_chiral_Bloch_H": "H(k)=[[0,Q(k)],[Q(k)^dag,0]], Gamma=diag(I40,-I40)",
+      "discretized_independent_winding": 24,
+      "lambda": "1",
+      "local_1D_hopping": "The exp(ik) factor is one externally introduced nearest-neighbor oriented 1D hopping term.",
+      "m": "-2/5",
+      "rational_band_centers": [
+        {
+          "center": "-2/5",
+          "inside": false,
+          "multiplicity": 15
+        },
+        {
+          "center": "-1/40",
+          "inside": true,
+          "multiplicity": 24
+        },
+        {
+          "center": "3/5",
+          "inside": false,
+          "multiplicity": 1
+        }
+      ],
+      "spectral_gap_lower_bound": "7/40",
+      "t": "1/5"
+    },
+    {
+      "AIII_chiral_winding_index_exact": 39,
+      "Hermitian_chiral_Bloch_H": "H(k)=[[0,Q(k)],[Q(k)^dag,0]], Gamma=diag(I40,-I40)",
+      "discretized_independent_winding": 39,
+      "lambda": "1",
+      "local_1D_hopping": "The exp(ik) factor is one externally introduced nearest-neighbor oriented 1D hopping term.",
+      "m": "1/20",
+      "rational_band_centers": [
+        {
+          "center": "1/20",
+          "inside": true,
+          "multiplicity": 15
+        },
+        {
+          "center": "17/40",
+          "inside": true,
+          "multiplicity": 24
+        },
+        {
+          "center": "21/20",
+          "inside": false,
+          "multiplicity": 1
+        }
+      ],
+      "spectral_gap_lower_bound": "3/40",
+      "t": "1/2"
+    },
+    {
+      "AIII_chiral_winding_index_exact": 40,
+      "Hermitian_chiral_Bloch_H": "H(k)=[[0,Q(k)],[Q(k)^dag,0]], Gamma=diag(I40,-I40)",
+      "discretized_independent_winding": 40,
+      "lambda": "1",
+      "local_1D_hopping": "The exp(ik) factor is one externally introduced nearest-neighbor oriented 1D hopping term.",
+      "m": "0",
+      "rational_band_centers": [
+        {
+          "center": "0",
+          "inside": true,
+          "multiplicity": 15
+        },
+        {
+          "center": "3/8",
+          "inside": true,
+          "multiplicity": 24
+        },
+        {
+          "center": "1",
+          "inside": true,
+          "multiplicity": 1
+        }
+      ],
+      "spectral_gap_lower_bound": "2/5",
+      "t": "7/5"
+    }
+  ],
+  "native_W33_Dirac_index": 0,
+  "positive_contribution": "Provides explicit symmetry-covariant, W33-spectral, gap-protected topological benchmark with a built-in falsifier: identical finite input geometry admits distinct indices by varying external couplings.",
+  "pure_point_gauge_phase_spectrum_error": 4.440892098500626e-16,
+  "status": "PASS_W33_EQUIVARIANT_EXTERNAL_1D_CHIRAL_WINDING_NOT_PREDICTED"
+}

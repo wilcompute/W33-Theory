@@ -1,0 +1,99 @@
+{
+  "S9_chi2_computed": false,
+  "alternative_public_inputs": "DES Y6 publishes LambdaCDM S8=0.789 +/-0.012 and a public PPD code repository; neither by itself provides the model-specific frozen S9 likelihood.",
+  "exact_prereg": {
+    "claim": "With correct nonlinear power (CLASS halofit patched for scalar fields, class_halofit_scf_patch.py), at the frozen full-data Dovekie backgrounds (class_fit_dovekie.json), the next cosmic-shear releases (DES Y6, KiDS successor, HSC Y3 or Euclid DR1, scored with this repo's likelihood conventions: NLA, no baryons, cuts xi+ > 10', xi- > 60') will NOT separate CPL from the fading coupling: |Delta chi2(CPL - fading c<0)| < 2 per survey after refitting nuisances, and every evolving model (fading c<0, c>0, CPL) within 4 in chi2 of LCDM.",
+    "current_values": {
+      "des_y3": {
+        "CPL": 1.2916349363415236,
+        "LCDM": 0.0,
+        "free_neg": 1.935258390095413,
+        "free_pos": 1.0017799260053266
+      },
+      "kids_legacy": {
+        "CPL": 2.2124745501439236,
+        "LCDM": 0.0,
+        "free_neg": 2.492875218130081,
+        "free_pos": 1.0645998720943908
+      }
+    },
+    "falsified_if": "|Delta chi2(CPL - fading c<0)| >= 2 on any one release, or any evolving model better than LCDM by more than 4 or worse by more than 4.",
+    "frozen": "2026-11-08",
+    "pass": 12632,
+    "supersedes": "S8 (prereg_highz.json, sha 3074f15e) and the sign clauses of S1/S7, whose evidence was the halofit bug (Pass 12632); those files stay unedited"
+  },
+  "frozen_S9_date": "2026-11-08",
+  "python_theory_tools_available": {
+    "astropy": true,
+    "classy": false,
+    "cosmosis": false,
+    "pyccl": false
+  },
+  "record_date": "2026-11-09",
+  "release_endpoint_test": {
+    "DES_Y6_public_PPD_code": {
+      "Content_Length_header": "",
+      "Content_Type": "text/html; charset=utf-8",
+      "HTTP_GET_status": 200,
+      "actual_data_bytes_downloaded": 0,
+      "final_host": "github.com",
+      "verified_complete_FITS": false
+    },
+    "DES_Y6_public_papers": {
+      "Content_Length_header": "",
+      "Content_Type": "text/html; charset=UTF-8",
+      "HTTP_GET_status": 200,
+      "actual_data_bytes_downloaded": 0,
+      "final_host": "www.darkenergysurvey.org",
+      "verified_complete_FITS": false
+    },
+    "former_public_directory": {
+      "Content_Length_header": "146",
+      "Content_Type": "text/html",
+      "HTTP_GET_status": 404,
+      "actual_data_bytes_downloaded": 0,
+      "final_host": "desdr-server.ncsa.illinois.edu",
+      "verified_complete_FITS": false
+    },
+    "former_public_pipeline_notebook": {
+      "Content_Length_header": "146",
+      "Content_Type": "text/html",
+      "HTTP_GET_status": 404,
+      "actual_data_bytes_downloaded": 0,
+      "final_host": "desdr-server.ncsa.illinois.edu",
+      "verified_complete_FITS": false
+    },
+    "former_unblinded_3x2pt_FITS": {
+      "Content_Length_header": "146",
+      "Content_Type": "text/html",
+      "HTTP_GET_status": 404,
+      "actual_data_bytes_downloaded": 0,
+      "final_host": "desdr-server.ncsa.illinois.edu",
+      "verified_complete_FITS": false
+    },
+    "official_release": {
+      "Content_Length_header": "998",
+      "Content_Type": "text/html; charset=UTF-8",
+      "HTTP_GET_status": 200,
+      "actual_data_bytes_downloaded": 0,
+      "final_host": "des.ncsa.illinois.edu",
+      "verified_complete_FITS": false
+    }
+  },
+  "required_pipeline_artifacts": [
+    "actual unblinded xi+/- vector with correct bin and scale metadata",
+    "matched full covariance, and exact scale-cut indices",
+    "source redshift n(z) and calibration covariance",
+    "intrinsic alignment and other systematics nuisance priors",
+    "patched CLASS/Halofit for CPL and fading c<0 cosmologies",
+    "same-data nuisance refits for each model",
+    "frozen absolute Delta_chi2 score and LCDM-envelope checks"
+  ],
+  "scientific_disposition": "Fail closed. No claim of S9 success or failure, no fake sigma from LambdaCDM-only S8 marginal.",
+  "source_prior_art": [
+    "https://www.darkenergysurvey.org/des-y6-cosmology-results-papers/",
+    "https://github.com/des-science/y6-ppd-public/"
+  ],
+  "status": "S9_UNSCORED_PUBLIC_Y6_DV_NOT_DOWNLOADED",
+  "why": "No validated complete unblinded DES Y6 xi+/- FITS vector plus matching covariance and corrected CLASS/Halofit scalar-field predictions/nuisance re-optimization in this run."
+}

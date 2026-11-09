@@ -1,0 +1,61 @@
+{
+  "Bell_contexts": 8,
+  "CZ_layers_per_extra_analyzer": 2,
+  "best_candidate_index": 889,
+  "best_condition": 25.020259118093588,
+  "best_min_singular": 0.06115026097143131,
+  "engineering_scope": "Block-local U3 transformations and one joint-diagonal phase. Real routing, cross-talk, switching, losses, and fabrication constraints need a calibrated physical chip.",
+  "entangler": "CZ=diag(omega^(a*b)), omega=exp(2pi*i/3), internal qutrit modes a,b",
+  "extra_contexts": 2,
+  "extra_programmed_internal_joint_phases_per_basis": 18,
+  "first_basis_linear_entropy": [
+    0.44832471743361446,
+    0.20451733626519197,
+    0.5783962055708008
+  ],
+  "full_operator_rank": 80,
+  "local_only_two_contexts_ranks": [
+    72,
+    72,
+    72,
+    72,
+    72,
+    72,
+    72,
+    72,
+    72,
+    72,
+    72,
+    72,
+    72,
+    72,
+    72,
+    72,
+    72,
+    72,
+    72,
+    72
+  ],
+  "max_local_only_rank": 72,
+  "max_test_density_reconstruction_error": 1.487709209519727e-15,
+  "max_two_local_basis_added_local_dimension": 8,
+  "needed_local_dimension": 16,
+  "second_basis_linear_entropy": [
+    0.301356028976177,
+    0.0695828835895318,
+    0.49756162701446416
+  ],
+  "single_CZ_rank_histogram": {
+    "76": 950
+  },
+  "status": "PASS_STRUCTURED_CZ_TWO_GLOBAL_BASES_W33_Q8_FULL_RANK",
+  "structured_candidates_evaluated_per_CZ_family": 950,
+  "subsystem_scope": "All operations act on two encoded qutrit factors inside ONE nine-mode optical carrier. The diagonal phase mask does not implement an inter-photon nonlinear gate or spatial Bell nonlocality.",
+  "total_projective_contexts": 10,
+  "two_CZ_rank_histogram": {
+    "80": 950
+  },
+  "two_basis_complex_sha256": "7d947a88f9adba9dfec536bcc05008aebe4c5553f13eeb9a6472a18c985f85bf",
+  "upper_total_two_mode_givens_over_two_extra_programs": 72,
+  "upper_two_mode_givens_per_extra_context": 36
+}
