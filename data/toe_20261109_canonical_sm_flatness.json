@@ -336,7 +336,125 @@
       "5": 0,
       "6": 6
     },
-    "minimum_uneaten_massless_at_fixed_vev": 101
+    "minimum_uneaten_massless_at_fixed_vev": 101,
+    "sextic_adjoint_trace_coefficients": {
+      "2": "-283/2",
+      "5": "-3/5",
+      "6": "1/6"
+    },
+    "sextic_adjoint_hessian_rank": 16,
+    "sextic_uneaten_massless": 89,
+    "sextic_spectrum": [
+      {
+        "six_Y": -6,
+        "dimension": 8,
+        "holomorphic_rank": 6,
+        "orbit_rank": 2,
+        "uneaten_massless": 0
+      },
+      {
+        "six_Y": -5,
+        "dimension": 6,
+        "holomorphic_rank": 0,
+        "orbit_rank": 6,
+        "uneaten_massless": 0
+      },
+      {
+        "six_Y": -4,
+        "dimension": 33,
+        "holomorphic_rank": 18,
+        "orbit_rank": 6,
+        "uneaten_massless": 9
+      },
+      {
+        "six_Y": -3,
+        "dimension": 50,
+        "holomorphic_rank": 36,
+        "orbit_rank": 2,
+        "uneaten_massless": 12
+      },
+      {
+        "six_Y": -2,
+        "dimension": 66,
+        "holomorphic_rank": 54,
+        "orbit_rank": 3,
+        "uneaten_massless": 9
+      },
+      {
+        "six_Y": -1,
+        "dimension": 48,
+        "holomorphic_rank": 36,
+        "orbit_rank": 12,
+        "uneaten_massless": 0
+      },
+      {
+        "six_Y": 0,
+        "dimension": 46,
+        "holomorphic_rank": 20,
+        "orbit_rank": 12,
+        "uneaten_massless": 14
+      },
+      {
+        "six_Y": 1,
+        "dimension": 66,
+        "holomorphic_rank": 36,
+        "orbit_rank": 12,
+        "uneaten_massless": 18
+      },
+      {
+        "six_Y": 2,
+        "dimension": 75,
+        "holomorphic_rank": 54,
+        "orbit_rank": 3,
+        "uneaten_massless": 18
+      },
+      {
+        "six_Y": 3,
+        "dimension": 44,
+        "holomorphic_rank": 36,
+        "orbit_rank": 2,
+        "uneaten_massless": 6
+      },
+      {
+        "six_Y": 4,
+        "dimension": 24,
+        "holomorphic_rank": 18,
+        "orbit_rank": 6,
+        "uneaten_massless": 0
+      },
+      {
+        "six_Y": 5,
+        "dimension": 6,
+        "holomorphic_rank": 0,
+        "orbit_rank": 6,
+        "uneaten_massless": 0
+      },
+      {
+        "six_Y": 6,
+        "dimension": 11,
+        "holomorphic_rank": 6,
+        "orbit_rank": 2,
+        "uneaten_massless": 3
+      }
+    ],
+    "sextic_spectator_mass": {
+      "meson_index_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "determinant": 8,
+      "rank": 10
+    }
   },
   "perturbative_family_anomaly": {
     "fundamental_minus_duals": 27,

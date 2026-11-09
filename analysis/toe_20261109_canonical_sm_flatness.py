@@ -1,6 +1,6 @@
 """Exact canonical-SM family embeddings and a two-dual flat vacuum."""
 
-from itertools import combinations
+from itertools import combinations, combinations_with_replacement, permutations
 import json
 
 import numpy as np
@@ -200,6 +200,51 @@ def generic_mass_ranks(blocks, charges):
     return result
 
 
+def sextic_adjoint_hessian(internal, y):
+    """Hessian of Tr[-283 A^2/2 - 3 A^5/5 + A^6/6] at A = 6Y."""
+    def derivative(value):
+        return -283 * value - 3 * value**4 + value**5
+
+    diagonals = np.diagonal(internal, axis1=1, axis2=2)
+    assert not (diagonals @ derivative(y)).any()
+    assert vacuum.rank((diagonals @ np.stack([y, y**4]).T).T) == 2
+    divided = np.empty((27, 27), dtype=np.int64)
+    for i, left in enumerate(y):
+        for j, right in enumerate(y):
+            if left == right:
+                divided[i, j] = -283 - 12 * left**3 + 5 * left**4
+            else:
+                delta = derivative(left) - derivative(right)
+                assert delta % (left - right) == 0
+                divided[i, j] = delta // (left - right)
+    block = np.einsum('aij,ij,bji->ab', internal, divided, internal)
+    adjoint_y = adjoint_charges(internal, y)
+    assert not block[adjoint_y != 0, :].any()
+    assert vacuum.rank(block) == sum(adjoint_y == 0) == 16
+    return block
+
+
+def spectator_hessian(x, dual):
+    """A sixth-degree direct mass for the conjugate family decuplet."""
+    mesons = [fundamental.reshape(27, 3).T @ conjugate.reshape(27, 3)
+              for conjugate in dual for fundamental in x]
+    basis = {key: i for i, key in enumerate(combinations_with_replacement(range(3), 3))}
+    epsilon = [(word, vacuum.cubic.parity(word)) for word in permutations(range(3))]
+    terms = [(0, 0), (0, 2), (3, 4)]
+    bilinear = np.zeros((10, 10), dtype=np.int64)
+    for a, b in terms:
+        for (i, j, k), sign in epsilon:
+            for (l, m, n), other_sign in epsilon:
+                for p, q in np.ndindex(3, 3):
+                    left, right = tuple(sorted([i, l, p])), tuple(sorted([j, m, q]))
+                    bilinear[basis[left], basis[right]] += (
+                        sign * other_sign * mesons[a][p, k] * mesons[b][q, n]
+                    )
+    hessian = bilinear + bilinear.T
+    assert sp.Matrix(hessian).det() == 8
+    return dict(meson_index_pairs=terms, determinant=8, rank=10)
+
+
 def dual_repair(gauge, internal, y, records):
     basis = np.eye(81, dtype=np.int64).reshape(27, 3, 81)
     x = np.stack([basis[0, 0], basis[1, 1], basis[0, 2] + basis[1, 2]])
@@ -235,6 +280,11 @@ def dual_repair(gauge, internal, y, records):
     generic_ranks = generic_mass_ranks(blocks, charges)
     assert generic_ranks == {row['six_Y']: row['holomorphic_rank'] for row in richer_spectrum}
     assert richer_massless == 101 and sum(generic_ranks.values()) == 308
+    sextic_hessian = blocks.sum(axis=0)
+    sextic_hessian[405:, 405:] += sextic_adjoint_hessian(internal, y)
+    sextic_spectrum = mass_spectrum(sextic_hessian, charges, all_orbit, y)
+    sextic_massless = sum(row['uneaten_massless'] for row in sextic_spectrum)
+    assert sextic_massless == 89
     return dict(fundamental_supports=[np.flatnonzero(v).tolist() for v in x],
                 dual_supports=[np.flatnonzero(v).tolist() for v in dual],
                 mixed_cubic='dual[0] * (A tensor I) * X[2]',
@@ -245,7 +295,12 @@ def dual_repair(gauge, internal, y, records):
                 all_allowed_terms_unit_coupling_uneaten_massless=richer_massless,
                 all_allowed_terms_unit_coupling_spectrum=richer_spectrum,
                 generic_rank_by_hypercharge=generic_ranks,
-                minimum_uneaten_massless_at_fixed_vev=richer_massless)
+                minimum_uneaten_massless_at_fixed_vev=richer_massless,
+                sextic_adjoint_trace_coefficients={'2': '-283/2', '5': '-3/5', '6': '1/6'},
+                sextic_adjoint_hessian_rank=16,
+                sextic_uneaten_massless=sextic_massless,
+                sextic_spectrum=sextic_spectrum,
+                sextic_spectator_mass=spectator_hessian(x, dual))
 
 
 def calculate():
