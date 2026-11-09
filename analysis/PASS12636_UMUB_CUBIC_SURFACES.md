@@ -40,3 +40,15 @@ Pass 12523 characterised a codeword as "a Kramers reversal θ + a doily spread",
 - The size spectrum of maximal partial spreads of W(3,3): probably Cimráková and Fack.
 
 **New here:** the three-way identification of the whole spectrum {10, 8, 5} with roots, aaaa cones and pezzotopes; the chirality-as-reflection test; and codeword = chiral pezzotope pair.
+
+## Addendum: the E7 rung does not lift naively (`w33_e7_rung_mubs.py`, negative result)
+
+E7 corresponds to three qubits: W(E7) = Z₂ × Sp(6,2), and W(5,2) is the three-qubit Pauli geometry. W(5,2) has 135 Lagrangian planes (the maximal commuting sets, matching E7's 135 orthogonal 7-frames), and each is disjoint from 64 others.
+
+**All maximal partial spreads of W(5,2)**, i.e. weakly unextendible three-qubit Pauli MUB sets, enumerated exhaustively:
+- **size 9:** 960, one Sp(6,2)-orbit, stabiliser of order 1512 (the classical spreads);
+- **size 5:** 24,192, one orbit, stabiliser of order 60 (A5).
+
+**Prediction tested and failed:** the E7 pezzotope count 60,480 = |Sp(6,2)|/24 does not occur as an orbit. The E7 positive-geometry regions are not unextendible three-qubit MUB sets, and the E6 coincidence (regions = size-5 unextendible sets) does not carry over as stated.
+
+**What does carry over:** both rungs have exactly two non-complete-or-complete classes apart from E6's extra size 8. In both, the smallest unextendible sets have size 5, with S5 symmetry for two qutrits and A5 for three qubits. Mandayam et al. report unextendible Pauli MUBs in d = 8, so the three-qubit size-5 sets are probably prior art.
