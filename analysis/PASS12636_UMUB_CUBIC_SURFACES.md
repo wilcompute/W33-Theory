@@ -68,3 +68,20 @@ The 16/24 split is Pass 11143's: product contexts, and contexts whose eigenbases
 > **For every factorisation of two qutrits, the 24 maximally entangled stabiliser bases split into exactly three unextendible sets of 8 mutually unbiased bases. These 135 sets are all the weakly unextendible 8-MUB sets in dimension 9.**
 
 **Status.** Exact on all 45 splits. Entanglement patterns of complete MUB sets have been studied in the literature (Lawrence; Wieśniak et al.). Whether this three-way partition is stated there is not checked. Corpus prior: Pass 11143 (16 + 24).
+
+## Addendum 3: the pezzotope amplitude factorises into 6-particle φ³ amplitudes, with contexts as the 3-particle channels (`w33_pezzotope_amplitude.py`)
+
+Take a simple 4-polytope with a variable X_f for each facet. Its amplitude is m = Σ over vertices of Π 1/X_f, and the residue of m at X_f = 0 is the amplitude of facet f.
+
+**For all 432 E6 pezzotopes:**
+- 45 vertices;
+- every **cube (cusp) facet** has 8 vertices: a product of three two-point factors;
+- every **root facet** has 14 vertices and 9 neighbours (6 roots and 3 cusps). Its compatibility graph is isomorphic to the non-crossing graph of the 9 diagonals of a hexagon **with the 3 cusps on the 3 long diagonals** (types matched in the isomorphism).
+
+**Reading.** On each of its 10 double-six facets, a pezzotope's amplitude has the residue of a **6-particle tree-level φ³ amplitude** (the associahedron K₅):
+- the **3 three-particle channels** are the 3 adjacent cusp facets, i.e. 3 maximal commuting two-qutrit contexts (lines of W(3,3));
+- the **6 two-particle channels** are the 6 orthogonal root facets, i.e. double-sixes or complete MUB sets.
+
+Long diagonals never cross-compatibly coexist, matching the fan fact that no cone holds two cusp rays. That the facets are associahedra and cubes is Early, Geiger, Panizzut, Sturmfels and Yun's. The channel-type identification with two-qutrit objects is this addendum's.
+
+**Prior art added to this pass.** A size-5 maximal partial spread of W₃(3), unique as a neighbour-transitive code, appears in arXiv:2105.05833. The full size spectrum {5, 8, 10} could not be checked against Cimráková and Fack's tables, which were not accessible. The cone-by-cone identity of the reconstructed Naruki fan, the identification of the real regions with the pentads by facet labels, and the index-3 chirality class are the other track's (779cc43ba, `analysis/2026-11-09_yoshida_integral_fibers_and_chirality.md`).
