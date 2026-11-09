@@ -119,3 +119,10 @@ def test_two_patched_nonlinear_prescriptions_are_distinct_and_close(cert):
     assert c["HMcode_fading_over_CPL_minus_one"]>c["Halofit_fading_over_CPL_minus_one"]
     assert c["HMcode_scalar_LCDM_control_relative_error"]<.004
     assert "neither is calibrated" in c["physical_scope"]
+
+
+def test_finite_lorentz_2plus1_is_not_automatically_3plus1_photon():
+    g=M.prime_bloch_maxwell()
+    assert g["reference_Maxwell_polarizations_in_2plus1_spacetime"]==1
+    assert g["reference_Maxwell_polarizations_in_3plus1_spacetime"]==2
+    assert "derive a 3+1 spacetime" in g["missing_dimension_bridge"]

@@ -87,6 +87,10 @@ def prime_bloch_maxwell():
        q3_triangle_plus_square_spectral_multiplicities=physical,
        q3_gradient_modes=gradients,q3_square_only_boundary_rank=78,
        q3_square_only_harmonic_modes=4,
+       finite_history_carrier="Sym2(Fp) has 3 coordinate components and the determinant is algebraically of 2+1 Lorentzian type; it is not a demonstrated 3-spatial-plus-time physical continuum.",
+       reference_Maxwell_polarizations_in_2plus1_spacetime=1,
+       reference_Maxwell_polarizations_in_3plus1_spacetime=2,
+       missing_dimension_bridge="Any claim of two physical photon polarizations must derive a 3+1 spacetime or an independent effective polarization bundle; the native 2+1 finite quadratic analogy alone supplies neither.",
        Fourier_proof="K_square(k)=||a(k)||^2 I-a(k)a(k)^*, a_i=e^(2pi i k.dot(d_i)/p)-1, rank=p at all k !=0; four uniform modes remain at p3. q3 triangular p-gons add eigenvalue p only when k.dot(d_i)=0.",
        rigorous_asymptotic="Soft k=(1,0,0): lambda=2p(1-cos(2pi/p))~4pi^2/p; lateral k=(0,1,0): lambda=2p; quadratic k=(0,0,1): lambda>=2(p-sqrt(p)). No common scalar stiffness rescales all three to isotropic 3D massless Maxwell; p extra transverse branches remain at nonzero k.",
        limits="This is the unprojected complete-null-direction square model and fixed-coordinate p->infinity identification; additional gauge constraints, Wilson/matter sectors, anisotropic stiffness, subquotients or nontrivial embeddings might alter the conclusion.")
