@@ -34,3 +34,9 @@ The degree-8 Hermitian bound (Sym⁴(C⁸), dimension 330) is **−0.164**, the 
 ## Item 5: E8
 
 Not attempted, for the reason given in Pass 12639.
+
+## Item 5: the substrate link, on prior-art footing
+
+The S6 that proves the bound is the doily of the 15 splits swapped by a Kramers reversal θ. By Pass 11210, θ is a genuine time reversal with **θ² = −1**: it is the T² = parity class, which needs an even number of qutrits. **So the strong unextendibility of the two-qutrit pentads follows from the Kramers time-reversal structure of two qutrits.** Each pentad's 5 sentinels are a star in the doily of one time reversal, and the bound is the content spectrum of that doily's Jucys–Murphy element.
+
+This is a structural statement about the substrate's own time-reversal operator. It is not a dynamical prediction.

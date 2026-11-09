@@ -34,3 +34,31 @@ A **pentad** is a set of 5 pairwise trivially-intersecting planes that cannot be
 - **Where it stops.** Three-qubit unextendible 5-sets have uncovered sets with no factorisation cover (8 = 2·4 is unbalanced), and the Hermitian bound is negative there (−5/8 at degree 4).
 - **Symmetry.** A pentad's stabiliser (order 120) is the S5 fixing the sixth letter of this S6. It acts faithfully on the five sentinels.
 - **Geometry.** The 432 pentads are the 432 real regions of the moduli space of marked cubic surfaces (positive geometries; Early, Geiger, Panizzut, Sturmfels and Yun, arXiv:2306.13604). The Kramers reversal is the Weyl reflection exchanging the two chiralities.
+
+## The general mechanism (sentinel theorem, d = p²)
+
+**Theorem (sentinel principle).** Let S be a maximal partial spread of W(3,p) (a weakly unextendible set of two-qupit Pauli MUBs in C^{p²}). Suppose its uncovered points are covered exactly m times by s splits {b_k, b_k⊥}, i.e. tensor factorisations, with swap involutions S_k on Sym²(C^{p²}). Then on Sym²:
+
+  M = (d − 1 + 2s/m − (2p/m)·R)/d,  R = S₁ + … + S_s,  d = p²,
+
+so that
+
+  F(v) ≥ δ|v|⁴ with δ = (d − 1 + 2s/m − (2p/m)·λ_max(R))/d.
+
+*Proof.* As in steps 1–2 above: Σ_{u∈⟨b⟩, u≠0} W_u⊗W_u† = p·S_A − 1 for a p-dimensional factor, and S_A = S_B on Sym². ∎
+
+**Instances.**
+
+| case | (p, s, m) | spectrum of R | δ |
+|---|---|---|---|
+| two-qutrit pentads | (3, 5, 2) | R = J₆ of the doily S6, spec {4, −1} | 1/9 |
+| two-qutrit size-8 sets | (3, 1, 1) | R = S, spec {±1} | 4/9 |
+| two-ququint size-24 sets | (5, 1, 1) | R = S | 16/25 |
+| two-ququint size-22 sets | (5, 2, 1) | R = S₁ + S₂, spec ⊂ {2, 0, −2} | 8/25 |
+| general one-split case | (p, 1, 1) | R = S | (p − 1)²/p² |
+
+In the random d = 25 sample (Pass 12640), every certified set was of this form and every non-uniform set failed: δ* ≤ 0 for all 20 of them.
+
+## Operational corollary (the other track, `analysis/2026-11-09_umub_operational_margin.md`)
+
+From Σ_j (p_j − 1/9)² ≥ δ_k over the 9k outcomes, **some outcome deviates by at least √(δ_k/9k)**. That is 1/(9√5) ≈ 0.0497 for the pentads and 1/(9√2) ≈ 0.0786 for the size-8 sets. With calibrated measurement errors of operator norm ≤ ε, the deviation survives up to ε, which gives a finite-shot witness that a prepared pure state cannot be unbiased to all five bases. Exact Z[ω] replay of all 603 maximal partial spreads: the other track's 7332f3b48.

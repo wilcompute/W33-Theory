@@ -84,3 +84,10 @@ min F = min over unit v of Σ_e(|⟨e|v⟩|² − 1/d)². A value above 0 means 
 - The canonical-form ratio of a chiral pair is the other track's (3dd4b78cb).
 
 **Item 5: the ladder note** is `analysis/NOTE_POSITIVE_GEOMETRY_QUDIT_LADDER.md`. Prior art for the E7 root ↔ three-qubit dictionary: Cerchiai and van Geemen (arXiv:1003.4255) and Lévay–Saniga–Vrana. The region-level statement is this pass's.
+
+## Correction (prior art, found 2026-11-09): reflection = Kramers is Pass 11210's
+
+The statement "the 36 E6 reflections are exactly the Kramers time reversals" (θ² = −1) was **already proved in Pass 11210** (`analysis/PASS11210_KRAMERS_TIME_REVERSAL.md`) and cited in Pass 11202. The "creative 3" check above (fixed-point-free on the 40 points, matched against Pass 12523's 36 involutions) is an independent re-derivation; this pass claims no priority for it. What this pass adds:
+- the reflection's role as the chirality flip of the pezzotope pairs (Pass 12636);
+- its role as odd triality on 15 factorisations (540/540);
+- the channel statement (time reversal moves exactly the 20 channel roots).
