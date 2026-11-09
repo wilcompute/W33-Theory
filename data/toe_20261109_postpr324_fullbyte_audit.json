@@ -1,0 +1,5469 @@
+{
+  "schema": "w33.20261109.postpr324.fullbyte.change_audit.v1",
+  "base": "9e2f9b9e859ee4d7b39555c0052886653a90e3be",
+  "head": "3b8f728dd45289e77e11bc3196576077d7eb4643",
+  "commits": 43,
+  "versioned_file_reads": 190,
+  "revision_bytes_read": 21938365,
+  "whole_final_files_read": 112,
+  "final_file_bytes": 4320465,
+  "versions": [
+    {
+      "sha": "af2bcab7e23aeb23647eb4e3665ce8bb7f1fac23",
+      "parents": [
+        "507d2d9f7da050578e13706318de82c2677939dc"
+      ],
+      "full_message": "af2bcab7e23aeb23647eb4e3665ce8bb7f1fac23\n2026-11-08T21:04:48-05:00\nRegression guard for the CLASS halofit scalar-field bug: patched class_fading_hf and class_massive_hf must match plain Lambda for LCDM-as-scf (<1e-5), unpatched must still differ (>25%, control); runs only with RUN_CLASS_TESTS=1 (WSL builds), skipped in CI; passed locally in 199 s. GitKraken MCP unavailable; shell git used.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "blobs": [
+        {
+          "path": "tests/test_class_scf_halofit_builds.py",
+          "bytes": 2320,
+          "sha256": "3fdf70b5d53eecddfb54c5314644a7a9036158a0c49396f5990c061984ad0c38",
+          "lines": 48,
+          "kind": "Python",
+          "functions": [
+            "test_patched_builds_match_lambda"
+          ]
+        }
+      ]
+    },
+    {
+      "sha": "25817b5f189ddb8eccafe664f873659f9d5775e6",
+      "parents": [
+        "af2bcab7e23aeb23647eb4e3665ce8bb7f1fac23",
+        "9e2f9b9e859ee4d7b39555c0052886653a90e3be"
+      ],
+      "full_message": "25817b5f189ddb8eccafe664f873659f9d5775e6\n2026-11-08T21:04:53-05:00\nMerge remote-tracking branch 'origin/master' into HEAD",
+      "blobs": [
+        {
+          "path": ".github/workflows/w33_20261108_five_followthrough_plus_coherence.yml",
+          "bytes": 2878,
+          "sha256": "de55e4237d70f33aea8e71c512b72ecc63ee2490d5abe2649a850ffc8fbac7f2",
+          "lines": 56,
+          "kind": "Text"
+        },
+        {
+          "path": "analysis/PASS20261108_FIVE_FOLLOWTHROUGH_PLUS_COHERENCE.md",
+          "bytes": 15237,
+          "sha256": "6a108498a03f5fa644c8ff4d045261d59661c40a0e8f2507816accce45ddcc26",
+          "lines": 147,
+          "kind": "Markdown",
+          "headings": [
+            "# Five followthrough gates + a determinant-resolved quantum-frame coherence witness",
+            "## The full evidence firewall",
+            "## Gate 1 — A constructive globally symmetric null-frame potential with a rigorous non-unique-vacuum theorem",
+            "## Gate 2 — Matter-coupled 27-site U(1) lattice: full nonlinear gauge invariance and continuity",
+            "## Gate 3 — A robust exact 27-mode null clock with a certified Duhamel perturbation bound",
+            "## Gate 4 — Native E6 cubic covariance: six Cartan directions + external SL(3), but not all 78 generators",
+            "## Gate 5 — Cosmology evidence firewall, source replay and prospective S9",
+            "## Sixth connection — determinant-resolved hidden frame decoherence",
+            "## Scientific interpretation and priorities",
+            "### Reproduction"
+          ]
+        },
+        {
+          "path": "analysis/w33_20261108_five_followthrough_plus_coherence.py",
+          "bytes": 19037,
+          "sha256": "f2d79745ef7a6ef39047a0d26d538538a3f49e1940d2db00a998e8164f9243c4",
+          "lines": 357,
+          "kind": "Python",
+          "functions": [
+            "jread",
+            "q",
+            "frame_order_parameter",
+            "modinv",
+            "four_frame_coherence",
+            "gauge_matter_ward",
+            "clock_noise",
+            "e6_partial_covariance",
+            "corrected_cosmology",
+            "produce",
+            "main"
+          ]
+        },
+        {
+          "path": "data/w33_20261108_five_followthrough_plus_coherence.json",
+          "bytes": 19999,
+          "sha256": "f51a35ca8584918a5dd2bf5669493bb31eda80f2c7b5610f9eb26587be5a9348",
+          "lines": 788,
+          "kind": "JSON",
+          "top_keys": [
+            "E6",
+            "Maxwell",
+            "clock",
+            "cosmology",
+            "frame",
+            "schema",
+            "scientific_boundary",
+            "sixth"
+          ],
+          "length": 8
+        },
+        {
+          "path": "tests/test_w33_20261108_five_followthrough_plus_coherence.py",
+          "bytes": 6176,
+          "sha256": "b1c017ecee9aca6afc237dba104b01587679935d87f070ee9d28ea5895d06065",
+          "lines": 145,
+          "kind": "Python",
+          "functions": [
+            "cert",
+            "test_frame_potential_exact_orbit_minimum_count",
+            "test_frame_potential_radial_hessian_is_positive",
+            "test_frame_cannot_have_unique_symmetry_respecting_vacuum",
+            "test_gauge_matter_native_selected_lattice_dimensions",
+            "test_full_nonlinear_U1_action_invariant",
+            "test_gauge_Ward_and_Gauss",
+            "test_discrete_charge_continuity",
+            "test_no_false_qed_or_fine_structure_constant",
+            "test_clock_noise_has_48_independent_trials",
+            "test_clock_error_levels_monotonic_with_sigma",
+            "test_clock_noise_all_realistic_nonzero_and_bounded",
+            "test_uniform_global_detuning_only_adds_phase",
+            "test_native_E6_cubic_triad_torus_dimension",
+            "test_native_E6_torus_and_external_SL3_transform_covariance",
+            "test_E6_all_generator_covariance_not_assumed",
+            "test_old_shear_claims_remain_withdrawn",
+            "test_s9_preregistry_is_not_observation",
+            "test_halofit_corrected_control_six_cells",
+            "test_source_only_dark_energy_and_flavour_coupling_boundary",
+            "test_four_frame_coherence_has_all_physical_points",
+            "test_q0_q1_q2_exact_purity_census",
+            "test_frame_mixture_classical_information_invisible_to_intensity",
+            "test_frame_eigenvalue_census_is_exact_character_multiplicity",
+            "test_evidence_layers_are_separate",
+            "test_reference_frame_inverse_echo_separates_hidden_frame_mixture",
+            "test_charged_matter_links_reuse_native_null_graph_not_replacement"
+          ]
+        }
+      ]
+    },
+    {
+      "sha": "30f390f1439bd509af451963cea4e677e77334cc",
+      "parents": [
+        "25817b5f189ddb8eccafe664f873659f9d5775e6"
+      ],
+      "full_message": "30f390f1439bd509af451963cea4e677e77334cc\n2026-11-08T21:22:40-05:00\nReplay withdrawn S8 arithmetic from archived Halofit inputs\n\nRoute the frozen Shapley replay to the original archived DES and KiDS hybrid records. Mark the replay certificate as withdrawn physical evidence and restore the machine-readable PASS12632 withdrawal banner. Preserve every historical numeric row, both frozen predictions, and the corrected inputs. All seven focused parallel suites pass.",
+      "blobs": [
+        {
+          "path": "analysis/NOTE_DARK_ENERGY_EVIDENCE_20261108.md",
+          "bytes": 4392,
+          "sha256": "d167f380d222c67c98fd89d55ff9a958a856f5efd233ecdeb460d943312b53e2",
+          "lines": 41,
+          "kind": "Markdown",
+          "headings": [
+            "# What the data say about evolving dark energy (one page; revised 2026-11-08 after the CLASS halofit correction)"
+          ]
+        },
+        {
+          "path": "analysis/w33_20261108_s8_hybrid_shapley_audit.py",
+          "bytes": 4772,
+          "sha256": "ca37937a1bd73f02a371809f58731c1a37f51045c6ca80b27e6365ba8d5202bb",
+          "lines": 83,
+          "kind": "Python",
+          "functions": [
+            "produce",
+            "main"
+          ]
+        },
+        {
+          "path": "data/w33_20261108_S8_hybrid_shapley_audit.json",
+          "bytes": 7574,
+          "sha256": "9989c75695f59574e0c99db05367fe5115b2961e14a34262f40fbe60bb3c9450",
+          "lines": 133,
+          "kind": "JSON",
+          "top_keys": [
+            "additive_identification_warning",
+            "algebra",
+            "evidence_limit",
+            "frozen_claim",
+            "frozen_prereg",
+            "original_hybrid_implementation",
+            "physical_evidence_status",
+            "schema",
+            "sources",
+            "status",
+            "surveys"
+          ],
+          "length": 11
+        },
+        {
+          "path": "tests/test_w33_20261108_s8_hybrid_shapley_audit.py",
+          "bytes": 2652,
+          "sha256": "579111e2db4998bb2288863df0daefacbe5fd2dc2ee74fbe0240795b20b17b27",
+          "lines": 46,
+          "kind": "Python",
+          "functions": [
+            "cert",
+            "test_fixed_Hybrid_cells_and_unchanged_frozen_ledger",
+            "test_exact_nonadditive_decomposition",
+            "test_DES_interaction_is_sizeable_negative",
+            "test_KiDS_interaction_is_sizeable_negative",
+            "test_provenance_and_scientific_limits"
+          ]
+        }
+      ]
+    },
+    {
+      "sha": "72081a475ef28be6172fd257d9817ee30ac62bd3",
+      "parents": [
+        "30f390f1439bd509af451963cea4e677e77334cc"
+      ],
+      "full_message": "72081a475ef28be6172fd257d9817ee30ac62bd3\n2026-11-08T21:23:09-05:00\nResolve native short-face magnetic obstruction with an invariant positive completion\n\nCompute exact all-short-face optical Schur area tensor and certify its rank-one period cup product image, so positive reweighting cannot supply missing leading polarizations. A decomposable overshoot witness bounds the unit-weight action. Construct positive controller-averaged finite-loop compensation, exact integral lifts and common leading scalar cone with sampled finite-k covariance and splitting. 18 focused tests pass; 12 owned paths. Supplied bare harmonic action, not selected 3+1 spacetime or TOE.",
+      "blobs": [
+        {
+          "path": "RESULTS_INDEX.md",
+          "bytes": 2668815,
+          "sha256": "fed8ef66d7c3ccde71709b8ad301b0be206c34162bd0bca0494a972c9c1919cb",
+          "lines": 18798,
+          "kind": "Markdown",
+          "headings": [
+            "# RESULTS INDEX — search for the RESULT, not the topic",
+            "## Why this file exists",
+            "## How to use it",
+            "## Index"
+          ]
+        },
+        {
+          "path": "TOPICAL_ALIASES.md",
+          "bytes": 360136,
+          "sha256": "406c7a93b0854004894ac4a32094f6bc8835a1f6b9ed827540ca13a7d5f0a320",
+          "lines": 1301,
+          "kind": "Markdown",
+          "headings": [
+            "# Topical aliases — result tokens to files"
+          ]
+        },
+        {
+          "path": "analysis/2026-11-08_invariant_magnetic_cone_completion.md",
+          "bytes": 10959,
+          "sha256": "96a178b47e274abb44b2eda5e93f6c2bddef553f51b8296d121bc50e8a5a087c",
+          "lines": 80,
+          "kind": "Markdown",
+          "headings": [
+            "# Native magnetic homogenization: an obstruction and a positive invariant completion",
+            "## Prior ownership and intake",
+            "## Exact optical elimination of all 1,287 short faces",
+            "## Why positive reweighting cannot repair the short faces",
+            "## A positivity obstruction at the original unit weights",
+            "## A positive finite-loop construction",
+            "## Numerical evidence and limits"
+          ]
+        },
+        {
+          "path": "analysis/toe_20261108_invariant_magnetic_completion.py",
+          "bytes": 13598,
+          "sha256": "faf7023044f899b2c89cbf027f4c2b1125fe815b181ee163507cff1d53115104",
+          "lines": 217,
+          "kind": "Python",
+          "functions": [
+            "compound",
+            "wedge",
+            "model",
+            "exact_short_tensor",
+            "cup_certificate",
+            "first_area",
+            "completion",
+            "full_curl",
+            "spectrum",
+            "covariance",
+            "produce"
+          ]
+        },
+        {
+          "path": "analysis/toe_20261108_invariant_magnetic_server.js",
+          "bytes": 2172,
+          "sha256": "0f1410291628a1fa87cdfbad91013d5621f4d0203c724eeddd82b14808cc2a9c",
+          "lines": 27,
+          "kind": "Text"
+        },
+        {
+          "path": "data/toe_20261108_invariant_magnetic_completion.json",
+          "bytes": 139878,
+          "sha256": "e7b7e40630304e77b828dfae46cc9c4e36402f0df970b6b68077afe36a468e81",
+          "lines": 11334,
+          "kind": "JSON",
+          "top_keys": [
+            "status",
+            "area_pair_order",
+            "exact_short_area_tensor",
+            "short_tensor_proof",
+            "period_cup_product_obstruction",
+            "short_face_weight",
+            "short_weight_PSD_compensation_threshold",
+            "unit_weight_overshoot_witness",
+            "target_area_tensor",
+            "complement_area_tensor",
+            "commutator_area_matrix",
+            "supplied_six_flux_coupling",
+            "leading_identity",
+            "exact_controller_count",
+            "exact_integral_vertex_lifts",
+            "commutator_blocks",
+            "finite_momentum_covariance",
+            "generic_completed_spectrum",
+            "generic_short_only_spectrum",
+            "rays",
+            "scope",
+            "prior_owners",
+            "input_raw_sha256"
+          ],
+          "length": 23
+        },
+        {
+          "path": "data/toe_20261108_invariant_magnetic_guard_audit.json",
+          "bytes": 25000,
+          "sha256": "4a3af92653af120c342abc37f32a45686d4f7158086c171f523cbb91cdb5e360",
+          "lines": 337,
+          "kind": "JSON",
+          "top_keys": [
+            "mode",
+            "records",
+            "all_exit_codes_zero",
+            "frozen_tested_artifact_raw_sha256",
+            "candidate_triage",
+            "rare_candidate_context"
+          ],
+          "length": 6
+        },
+        {
+          "path": "data/toe_20261108_invariant_magnetic_intake.json",
+          "bytes": 3147,
+          "sha256": "bd78a53445b87a7b95dd1e3169185ea6310f5b51f3b4e8a714300fcc4247e08e",
+          "lines": 52,
+          "kind": "JSON",
+          "top_keys": [
+            "status",
+            "utc",
+            "baseline",
+            "intake_HEAD",
+            "incoming_after_fetch",
+            "history_scope",
+            "manuscript",
+            "repo_search",
+            "literature",
+            "server",
+            "continuity",
+            "workflow"
+          ],
+          "length": 12
+        },
+        {
+          "path": "data/toe_20261108_invariant_magnetic_publication_manifest.json",
+          "bytes": 128433,
+          "sha256": "39c10f8a76747965de4f8115a4e2ddfd7f8a656cbca46c9be4e45cfa34ad3601",
+          "lines": 2308,
+          "kind": "JSON",
+          "top_keys": [
+            "status",
+            "utc",
+            "integration_HEAD",
+            "artifact_raw_sha256",
+            "unchanged_parent_raw_sha256",
+            "preserved_unrelated_raw_sha256",
+            "all_guards_passed",
+            "guard_limits",
+            "science",
+            "verification",
+            "limits",
+            "executions",
+            "source_and_input_scope",
+            "workflow",
+            "final_actual_RDC",
+            "earlier_actual_RDC",
+            "post_intake_manuscript_reading",
+            "late_integration_review"
+          ],
+          "length": 18
+        },
+        {
+          "path": "data/toe_20261108_invariant_magnetic_server.json",
+          "bytes": 4503,
+          "sha256": "fe7d5d83bf4a0625b3e19a7e32ebb1e135821ded0d9a2ae869fbeddb54aadf68",
+          "lines": 247,
+          "kind": "JSON",
+          "top_keys": [
+            "runtime",
+            "M",
+            "pairs",
+            "short_coefficient",
+            "alpha",
+            "target",
+            "complement",
+            "Cholesky_diagonal",
+            "Cholesky_max_error",
+            "cases",
+            "relative_rank_one_eigenvalue",
+            "PSD_short_weight_threshold",
+            "scope"
+          ],
+          "length": 13
+        },
+        {
+          "path": "data/toe_20261108_invariant_magnetic_validation.json",
+          "bytes": 6678,
+          "sha256": "9405f4569c0da9f7f35c9d75a6a2a8ae27685662a9836b8783abad29ad6737d3",
+          "lines": 44,
+          "kind": "JSON",
+          "top_keys": [
+            "selected_inputs_unchanged_during_run",
+            "selected_source_and_input_raw_sha256",
+            "executions",
+            "result_raw_sha256",
+            "scope"
+          ],
+          "length": 5
+        },
+        {
+          "path": "tests/test_toe_20261108_invariant_magnetic_completion.py",
+          "bytes": 4343,
+          "sha256": "783e3a4db53a13682165f9d53c23dc5f26ce1d02d09046046a1971b0f0258dcd",
+          "lines": 90,
+          "kind": "Python",
+          "functions": [
+            "m",
+            "test_exact_short_face_projection",
+            "test_integer_period_cup_rank_and_nonuniform_weight_control",
+            "test_positive_compensation_boundary",
+            "test_every_mapped_commutator_is_literal_closed_zero_voltage",
+            "test_exact_leading_common_cone",
+            "test_independent_finite_difference_optical_homogenization",
+            "test_nonzero_momentum_controller_covariance",
+            "test_propagating_completion_vs_short_only_flat_modes",
+            "test_numerical_acoustic_limit_and_finite_k_splitting",
+            "test_actual_server_independent_six_area_control"
+          ]
+        }
+      ]
+    },
+    {
+      "sha": "a49a1e97e72f560880af69eef811f6f2fc9eb1c0",
+      "parents": [
+        "72081a475ef28be6172fd257d9817ee30ac62bd3"
+      ],
+      "full_message": "a49a1e97e72f560880af69eef811f6f2fc9eb1c0\n2026-11-08T21:47:42-05:00\nCertify the full signed cubic stabilizer and a three-copy vacuum\n\nRecover all 78 E6 generators and prove the complete 86-dimensional alternating tensor stabilizer. Distinguish single-field cubic obstruction from a three-copy coupling. Verify an exact balanced vacuum, internal A2 branching and nine physical species moduli. Focused source and parallel tests pass.",
+      "blobs": [
+        {
+          "path": "RESULTS_INDEX.md",
+          "bytes": 2669043,
+          "sha256": "4f75b02ad412a9f909bf44fd245514689ee7ee2339948b92ee0b692493485c67",
+          "lines": 18799,
+          "kind": "Markdown",
+          "headings": [
+            "# RESULTS INDEX — search for the RESULT, not the topic",
+            "## Why this file exists",
+            "## How to use it",
+            "## Index"
+          ]
+        },
+        {
+          "path": "TOPICAL_ALIASES.md",
+          "bytes": 360136,
+          "sha256": "142e496f7345774626dcaf0486e8b891a96ca04022f5f7acc2631596fa799fb7",
+          "lines": 1301,
+          "kind": "Markdown",
+          "headings": [
+            "# Topical aliases — result tokens to files"
+          ]
+        },
+        {
+          "path": "analysis/2026-11-08_exact_signed_cubic_and_three_copy_vacuum.md",
+          "bytes": 7823,
+          "sha256": "8d9438a9da4427bf1621ba0579803a147c9ecbae0604bfb9375887516a97f0b8",
+          "lines": 50,
+          "kind": "Markdown",
+          "headings": [
+            "# Exact signed cubic generators and a three-copy vacuum",
+            "## Scope and prior work",
+            "## The exact coefficient kernel",
+            "## What the invariant permits",
+            "## A balanced three-copy point and its physical zero modes"
+          ]
+        },
+        {
+          "path": "analysis/toe_20261108_exact_signed_cubic_stabilizer.py",
+          "bytes": 10838,
+          "sha256": "e585f163c0d6301038441d90382b22104b6a601587534f80b1e24209a24f61bd",
+          "lines": 230,
+          "kind": "Python",
+          "functions": [
+            "parity",
+            "signed_terms",
+            "coefficient_rows",
+            "echelon",
+            "integer_kernel",
+            "entries",
+            "matrix",
+            "vector",
+            "verify_basis",
+            "root_certificate",
+            "cubic_invariant_rank",
+            "alternating_terms",
+            "calculate"
+          ]
+        },
+        {
+          "path": "analysis/toe_20261108_signed_cubic_server.js",
+          "bytes": 3001,
+          "sha256": "8a2849656272caa219ee44345eabc07c3221df24d70df8a6aeacde7f93b53d66",
+          "lines": 67,
+          "kind": "Text"
+        },
+        {
+          "path": "analysis/toe_20261108_three_copy_cubic_vacuum.py",
+          "bytes": 10541,
+          "sha256": "39b093ebbb644574899e5d9fb40ad421c2f27220c7e6abcd27b01cb74ec9f59e",
+          "lines": 210,
+          "kind": "Python",
+          "functions": [
+            "exact_echelon",
+            "rank",
+            "traceless_basis",
+            "gauge_generators",
+            "bracket",
+            "commuting_supports",
+            "stabilizer_type",
+            "residual_branching",
+            "tangent_ranks",
+            "calculate"
+          ]
+        },
+        {
+          "path": "data/toe_20261108_exact_signed_cubic_stabilizer.json",
+          "bytes": 44795,
+          "sha256": "c207255bb3f44317013091aa4c68cb4eb55eb9bdee45d4c52799ae32daa7f7c9",
+          "lines": 3561,
+          "kind": "JSON",
+          "top_keys": [
+            "status",
+            "cubic_27",
+            "alternating_81",
+            "invariants",
+            "anomalies",
+            "scope",
+            "raw_sha256"
+          ],
+          "length": 7
+        },
+        {
+          "path": "data/toe_20261108_signed_cubic_guard_audit.json",
+          "bytes": 31715,
+          "sha256": "261796a6c2dec693d11080868396b38b77c16aa0dcc5167215a064b72ee94f27",
+          "lines": 363,
+          "kind": "JSON",
+          "top_keys": [
+            "mode",
+            "records",
+            "all_exit_codes_zero",
+            "frozen_tested_artifact_raw_sha256",
+            "candidate_triage",
+            "rare_candidate_context"
+          ],
+          "length": 6
+        },
+        {
+          "path": "data/toe_20261108_signed_cubic_intake.json",
+          "bytes": 1965,
+          "sha256": "92b0c08fcf12d027c5ac24d404b422e1adbeaab134f3c9a504bd4227aedd3727",
+          "lines": 44,
+          "kind": "JSON",
+          "top_keys": [
+            "status",
+            "baseline",
+            "head",
+            "remote",
+            "context",
+            "searches",
+            "prior_review",
+            "manuscript",
+            "literature",
+            "workflow"
+          ],
+          "length": 10
+        },
+        {
+          "path": "data/toe_20261108_signed_cubic_publication_manifest.json",
+          "bytes": 38432,
+          "sha256": "a8481cf0ced69c81bcb5f7338fa06967330c68110ddff43791b6245b7eae49e7",
+          "lines": 392,
+          "kind": "JSON",
+          "top_keys": [
+            "status",
+            "integration_HEAD",
+            "utc",
+            "artifact_raw_sha256",
+            "unchanged_parent_raw_sha256",
+            "preserved_unrelated_raw_sha256",
+            "all_guards_passed",
+            "guard_limits",
+            "science",
+            "limits",
+            "verification",
+            "final_actual_RDC",
+            "local_legacy_control",
+            "prototype_history",
+            "manuscript_supplement",
+            "workflow"
+          ],
+          "length": 16
+        },
+        {
+          "path": "data/toe_20261108_signed_cubic_server.json",
+          "bytes": 635,
+          "sha256": "350e7208122e67450a57d12661f5ac61e793ec827d977807ce1149e05c6b7b24",
+          "lines": 38,
+          "kind": "JSON",
+          "top_keys": [
+            "runtime",
+            "prime",
+            "symmetric27",
+            "exterior81",
+            "bracketL1",
+            "selectedSupports",
+            "orderedBracketRecords",
+            "scope"
+          ],
+          "length": 8
+        },
+        {
+          "path": "data/toe_20261108_signed_cubic_validation.json",
+          "bytes": 3928,
+          "sha256": "3e482eb0edbd778b6589a8e93ee163a4a87b2e4bb70c3f61fc3e4a4d2a73090d",
+          "lines": 60,
+          "kind": "JSON",
+          "top_keys": [
+            "selected_inputs_unchanged_during_run",
+            "selected_source_and_input_raw_sha256",
+            "executions",
+            "result_raw_sha256",
+            "scope"
+          ],
+          "length": 5
+        },
+        {
+          "path": "data/toe_20261108_three_copy_cubic_vacuum.json",
+          "bytes": 3392,
+          "sha256": "4a0b26d846fbda690f54e4dbdb563b047293cfa4f8041358404941e960bdcc90",
+          "lines": 164,
+          "kind": "JSON",
+          "top_keys": [
+            "status",
+            "commuting_disjoint_all_plus_triad_triples",
+            "chosen_supports",
+            "Gram",
+            "F_zero",
+            "D_zero",
+            "unbroken_complex_Lie_dimension",
+            "unbroken_Killing_rank",
+            "unbroken_branching",
+            "unbroken_Lie_basis_coefficients",
+            "tangent_ranks",
+            "action",
+            "flat_directions",
+            "scope",
+            "raw_sha256"
+          ],
+          "length": 15
+        },
+        {
+          "path": "tests/test_toe_20261108_signed_cubic_vacuum.py",
+          "bytes": 3961,
+          "sha256": "e17d440a03e07573839638a0501d15cff0ccd635b01632ceb8d2a356323ab30e",
+          "lines": 99,
+          "kind": "Python",
+          "functions": [
+            "test_root_transvections_preserve_the_cubic_in_integer_coordinates",
+            "test_ordered_bracket_contracts_to_alternating_three_copy_form",
+            "test_prior_conjugate_decuplet_cancels_the_family_trace_probe",
+            "point",
+            "test_independent_complex_species_rotation_preserves_zero_residuals",
+            "test_actual_potential_quartic_along_species_tangent_and_quadratic_radially",
+            "test_server_replay_at_different_prime_certifies_native_ranks_and_brackets"
+          ]
+        }
+      ]
+    },
+    {
+      "sha": "3a43e7a4ff447f8172550bd609913050db8e9373",
+      "parents": [
+        "25817b5f189ddb8eccafe664f873659f9d5775e6"
+      ],
+      "full_message": "3a43e7a4ff447f8172550bd609913050db8e9373\n2026-11-08T22:00:13-05:00\nPass 12631 addendum: KLT BAO-held MCMC elpd -9.73 vs LCDM -11.47 (+1.74; between Fisher std -0.40 and double +2.75); KLT expansion total +3.7 vs fading +5.7, CPL +5.5; method spread ~1 (fading desy5 MCMC vs Fisher). GitKraken MCP unavailable; shell git used.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "blobs": [
+        {
+          "path": "analysis/PASS12631_KIDS_HELDOUT.md",
+          "bytes": 11599,
+          "sha256": "ab45a6e6baa4b1bc354f11675092ee6c0dce33b47ed1c931bfe3e79b0ceeffa2",
+          "lines": 136,
+          "kind": "Markdown",
+          "headings": [
+            "# Pass 12631: held-out shear on two independent surveys erases CPL's out-of-sample advantage, while the fading coupling keeps it; the natural (KLT) completion faces a dark-energy-or-quality choice",
+            "## 1. KiDS-Legacy held out",
+            "## 2. The combined out-of-sample ledger (Dovekie)",
+            "## 3. The natural completion's dark-energy-or-quality choice",
+            "## 4. Not done, and why",
+            "## Sources",
+            "## Addendum: the mechanism is a tomographic tilt, not an amplitude excess (`shear_diag.py`)",
+            "## Correction (same day): where the penalty actually sits; frozen S7's mechanism clause is wrong",
+            "## Addendum: the KLT-family model out of sample and on held-out shear (provisional)",
+            "## Addendum: growth or geometry? Both (`shear_hybrid.py`); S8 frozen; overlap bound",
+            "## Addendum: KLT BAO-held MCMC (`mcmc_holdout.py dovekie bao klt25 20 60 1`)"
+          ]
+        },
+        {
+          "path": "analysis/toe_uv/mcmc_dovekie_bao_klt25.json",
+          "bytes": 1032,
+          "sha256": "6054058d4733f60d5ca1cabf87faabd2f68044a193fe820b6fc84cdf3a4c431a",
+          "lines": 49,
+          "kind": "JSON",
+          "top_keys": [
+            "DS",
+            "HOLD",
+            "model",
+            "nwalk",
+            "nstep",
+            "burn",
+            "n_samples",
+            "elpd_held",
+            "held_chi2_q",
+            "acceptance",
+            "mean",
+            "sd",
+            "tau_int"
+          ],
+          "length": 13
+        }
+      ]
+    },
+    {
+      "sha": "84f21f0a9a17dfa71816272f1d24ac4291d315c0",
+      "parents": [
+        "3a43e7a4ff447f8172550bd609913050db8e9373",
+        "a49a1e97e72f560880af69eef811f6f2fc9eb1c0"
+      ],
+      "full_message": "84f21f0a9a17dfa71816272f1d24ac4291d315c0\n2026-11-08T22:00:18-05:00\nMerge remote-tracking branch 'origin/master' into HEAD",
+      "blobs": [
+        {
+          "path": "RESULTS_INDEX.md",
+          "bytes": 2669043,
+          "sha256": "4f75b02ad412a9f909bf44fd245514689ee7ee2339948b92ee0b692493485c67",
+          "lines": 18799,
+          "kind": "Markdown",
+          "headings": [
+            "# RESULTS INDEX — search for the RESULT, not the topic",
+            "## Why this file exists",
+            "## How to use it",
+            "## Index"
+          ]
+        },
+        {
+          "path": "TOPICAL_ALIASES.md",
+          "bytes": 360136,
+          "sha256": "142e496f7345774626dcaf0486e8b891a96ca04022f5f7acc2631596fa799fb7",
+          "lines": 1301,
+          "kind": "Markdown",
+          "headings": [
+            "# Topical aliases — result tokens to files"
+          ]
+        },
+        {
+          "path": "analysis/2026-11-08_exact_signed_cubic_and_three_copy_vacuum.md",
+          "bytes": 7823,
+          "sha256": "8d9438a9da4427bf1621ba0579803a147c9ecbae0604bfb9375887516a97f0b8",
+          "lines": 50,
+          "kind": "Markdown",
+          "headings": [
+            "# Exact signed cubic generators and a three-copy vacuum",
+            "## Scope and prior work",
+            "## The exact coefficient kernel",
+            "## What the invariant permits",
+            "## A balanced three-copy point and its physical zero modes"
+          ]
+        },
+        {
+          "path": "analysis/2026-11-08_invariant_magnetic_cone_completion.md",
+          "bytes": 10959,
+          "sha256": "96a178b47e274abb44b2eda5e93f6c2bddef553f51b8296d121bc50e8a5a087c",
+          "lines": 80,
+          "kind": "Markdown",
+          "headings": [
+            "# Native magnetic homogenization: an obstruction and a positive invariant completion",
+            "## Prior ownership and intake",
+            "## Exact optical elimination of all 1,287 short faces",
+            "## Why positive reweighting cannot repair the short faces",
+            "## A positivity obstruction at the original unit weights",
+            "## A positive finite-loop construction",
+            "## Numerical evidence and limits"
+          ]
+        },
+        {
+          "path": "analysis/NOTE_DARK_ENERGY_EVIDENCE_20261108.md",
+          "bytes": 4392,
+          "sha256": "d167f380d222c67c98fd89d55ff9a958a856f5efd233ecdeb460d943312b53e2",
+          "lines": 41,
+          "kind": "Markdown",
+          "headings": [
+            "# What the data say about evolving dark energy (one page; revised 2026-11-08 after the CLASS halofit correction)"
+          ]
+        },
+        {
+          "path": "analysis/toe_20261108_exact_signed_cubic_stabilizer.py",
+          "bytes": 10838,
+          "sha256": "e585f163c0d6301038441d90382b22104b6a601587534f80b1e24209a24f61bd",
+          "lines": 230,
+          "kind": "Python",
+          "functions": [
+            "parity",
+            "signed_terms",
+            "coefficient_rows",
+            "echelon",
+            "integer_kernel",
+            "entries",
+            "matrix",
+            "vector",
+            "verify_basis",
+            "root_certificate",
+            "cubic_invariant_rank",
+            "alternating_terms",
+            "calculate"
+          ]
+        },
+        {
+          "path": "analysis/toe_20261108_invariant_magnetic_completion.py",
+          "bytes": 13598,
+          "sha256": "faf7023044f899b2c89cbf027f4c2b1125fe815b181ee163507cff1d53115104",
+          "lines": 217,
+          "kind": "Python",
+          "functions": [
+            "compound",
+            "wedge",
+            "model",
+            "exact_short_tensor",
+            "cup_certificate",
+            "first_area",
+            "completion",
+            "full_curl",
+            "spectrum",
+            "covariance",
+            "produce"
+          ]
+        },
+        {
+          "path": "analysis/toe_20261108_invariant_magnetic_server.js",
+          "bytes": 2172,
+          "sha256": "0f1410291628a1fa87cdfbad91013d5621f4d0203c724eeddd82b14808cc2a9c",
+          "lines": 27,
+          "kind": "Text"
+        },
+        {
+          "path": "analysis/toe_20261108_signed_cubic_server.js",
+          "bytes": 3001,
+          "sha256": "8a2849656272caa219ee44345eabc07c3221df24d70df8a6aeacde7f93b53d66",
+          "lines": 67,
+          "kind": "Text"
+        },
+        {
+          "path": "analysis/toe_20261108_three_copy_cubic_vacuum.py",
+          "bytes": 10541,
+          "sha256": "39b093ebbb644574899e5d9fb40ad421c2f27220c7e6abcd27b01cb74ec9f59e",
+          "lines": 210,
+          "kind": "Python",
+          "functions": [
+            "exact_echelon",
+            "rank",
+            "traceless_basis",
+            "gauge_generators",
+            "bracket",
+            "commuting_supports",
+            "stabilizer_type",
+            "residual_branching",
+            "tangent_ranks",
+            "calculate"
+          ]
+        },
+        {
+          "path": "analysis/w33_20261108_s8_hybrid_shapley_audit.py",
+          "bytes": 4772,
+          "sha256": "ca37937a1bd73f02a371809f58731c1a37f51045c6ca80b27e6365ba8d5202bb",
+          "lines": 83,
+          "kind": "Python",
+          "functions": [
+            "produce",
+            "main"
+          ]
+        },
+        {
+          "path": "data/toe_20261108_exact_signed_cubic_stabilizer.json",
+          "bytes": 44795,
+          "sha256": "c207255bb3f44317013091aa4c68cb4eb55eb9bdee45d4c52799ae32daa7f7c9",
+          "lines": 3561,
+          "kind": "JSON",
+          "top_keys": [
+            "status",
+            "cubic_27",
+            "alternating_81",
+            "invariants",
+            "anomalies",
+            "scope",
+            "raw_sha256"
+          ],
+          "length": 7
+        },
+        {
+          "path": "data/toe_20261108_invariant_magnetic_completion.json",
+          "bytes": 139878,
+          "sha256": "e7b7e40630304e77b828dfae46cc9c4e36402f0df970b6b68077afe36a468e81",
+          "lines": 11334,
+          "kind": "JSON",
+          "top_keys": [
+            "status",
+            "area_pair_order",
+            "exact_short_area_tensor",
+            "short_tensor_proof",
+            "period_cup_product_obstruction",
+            "short_face_weight",
+            "short_weight_PSD_compensation_threshold",
+            "unit_weight_overshoot_witness",
+            "target_area_tensor",
+            "complement_area_tensor",
+            "commutator_area_matrix",
+            "supplied_six_flux_coupling",
+            "leading_identity",
+            "exact_controller_count",
+            "exact_integral_vertex_lifts",
+            "commutator_blocks",
+            "finite_momentum_covariance",
+            "generic_completed_spectrum",
+            "generic_short_only_spectrum",
+            "rays",
+            "scope",
+            "prior_owners",
+            "input_raw_sha256"
+          ],
+          "length": 23
+        },
+        {
+          "path": "data/toe_20261108_invariant_magnetic_guard_audit.json",
+          "bytes": 25000,
+          "sha256": "4a3af92653af120c342abc37f32a45686d4f7158086c171f523cbb91cdb5e360",
+          "lines": 337,
+          "kind": "JSON",
+          "top_keys": [
+            "mode",
+            "records",
+            "all_exit_codes_zero",
+            "frozen_tested_artifact_raw_sha256",
+            "candidate_triage",
+            "rare_candidate_context"
+          ],
+          "length": 6
+        },
+        {
+          "path": "data/toe_20261108_invariant_magnetic_intake.json",
+          "bytes": 3147,
+          "sha256": "bd78a53445b87a7b95dd1e3169185ea6310f5b51f3b4e8a714300fcc4247e08e",
+          "lines": 52,
+          "kind": "JSON",
+          "top_keys": [
+            "status",
+            "utc",
+            "baseline",
+            "intake_HEAD",
+            "incoming_after_fetch",
+            "history_scope",
+            "manuscript",
+            "repo_search",
+            "literature",
+            "server",
+            "continuity",
+            "workflow"
+          ],
+          "length": 12
+        },
+        {
+          "path": "data/toe_20261108_invariant_magnetic_publication_manifest.json",
+          "bytes": 128433,
+          "sha256": "39c10f8a76747965de4f8115a4e2ddfd7f8a656cbca46c9be4e45cfa34ad3601",
+          "lines": 2308,
+          "kind": "JSON",
+          "top_keys": [
+            "status",
+            "utc",
+            "integration_HEAD",
+            "artifact_raw_sha256",
+            "unchanged_parent_raw_sha256",
+            "preserved_unrelated_raw_sha256",
+            "all_guards_passed",
+            "guard_limits",
+            "science",
+            "verification",
+            "limits",
+            "executions",
+            "source_and_input_scope",
+            "workflow",
+            "final_actual_RDC",
+            "earlier_actual_RDC",
+            "post_intake_manuscript_reading",
+            "late_integration_review"
+          ],
+          "length": 18
+        },
+        {
+          "path": "data/toe_20261108_invariant_magnetic_server.json",
+          "bytes": 4503,
+          "sha256": "fe7d5d83bf4a0625b3e19a7e32ebb1e135821ded0d9a2ae869fbeddb54aadf68",
+          "lines": 247,
+          "kind": "JSON",
+          "top_keys": [
+            "runtime",
+            "M",
+            "pairs",
+            "short_coefficient",
+            "alpha",
+            "target",
+            "complement",
+            "Cholesky_diagonal",
+            "Cholesky_max_error",
+            "cases",
+            "relative_rank_one_eigenvalue",
+            "PSD_short_weight_threshold",
+            "scope"
+          ],
+          "length": 13
+        },
+        {
+          "path": "data/toe_20261108_invariant_magnetic_validation.json",
+          "bytes": 6678,
+          "sha256": "9405f4569c0da9f7f35c9d75a6a2a8ae27685662a9836b8783abad29ad6737d3",
+          "lines": 44,
+          "kind": "JSON",
+          "top_keys": [
+            "selected_inputs_unchanged_during_run",
+            "selected_source_and_input_raw_sha256",
+            "executions",
+            "result_raw_sha256",
+            "scope"
+          ],
+          "length": 5
+        },
+        {
+          "path": "data/toe_20261108_signed_cubic_guard_audit.json",
+          "bytes": 31715,
+          "sha256": "261796a6c2dec693d11080868396b38b77c16aa0dcc5167215a064b72ee94f27",
+          "lines": 363,
+          "kind": "JSON",
+          "top_keys": [
+            "mode",
+            "records",
+            "all_exit_codes_zero",
+            "frozen_tested_artifact_raw_sha256",
+            "candidate_triage",
+            "rare_candidate_context"
+          ],
+          "length": 6
+        },
+        {
+          "path": "data/toe_20261108_signed_cubic_intake.json",
+          "bytes": 1965,
+          "sha256": "92b0c08fcf12d027c5ac24d404b422e1adbeaab134f3c9a504bd4227aedd3727",
+          "lines": 44,
+          "kind": "JSON",
+          "top_keys": [
+            "status",
+            "baseline",
+            "head",
+            "remote",
+            "context",
+            "searches",
+            "prior_review",
+            "manuscript",
+            "literature",
+            "workflow"
+          ],
+          "length": 10
+        },
+        {
+          "path": "data/toe_20261108_signed_cubic_publication_manifest.json",
+          "bytes": 38432,
+          "sha256": "a8481cf0ced69c81bcb5f7338fa06967330c68110ddff43791b6245b7eae49e7",
+          "lines": 392,
+          "kind": "JSON",
+          "top_keys": [
+            "status",
+            "integration_HEAD",
+            "utc",
+            "artifact_raw_sha256",
+            "unchanged_parent_raw_sha256",
+            "preserved_unrelated_raw_sha256",
+            "all_guards_passed",
+            "guard_limits",
+            "science",
+            "limits",
+            "verification",
+            "final_actual_RDC",
+            "local_legacy_control",
+            "prototype_history",
+            "manuscript_supplement",
+            "workflow"
+          ],
+          "length": 16
+        },
+        {
+          "path": "data/toe_20261108_signed_cubic_server.json",
+          "bytes": 635,
+          "sha256": "350e7208122e67450a57d12661f5ac61e793ec827d977807ce1149e05c6b7b24",
+          "lines": 38,
+          "kind": "JSON",
+          "top_keys": [
+            "runtime",
+            "prime",
+            "symmetric27",
+            "exterior81",
+            "bracketL1",
+            "selectedSupports",
+            "orderedBracketRecords",
+            "scope"
+          ],
+          "length": 8
+        },
+        {
+          "path": "data/toe_20261108_signed_cubic_validation.json",
+          "bytes": 3928,
+          "sha256": "3e482eb0edbd778b6589a8e93ee163a4a87b2e4bb70c3f61fc3e4a4d2a73090d",
+          "lines": 60,
+          "kind": "JSON",
+          "top_keys": [
+            "selected_inputs_unchanged_during_run",
+            "selected_source_and_input_raw_sha256",
+            "executions",
+            "result_raw_sha256",
+            "scope"
+          ],
+          "length": 5
+        },
+        {
+          "path": "data/toe_20261108_three_copy_cubic_vacuum.json",
+          "bytes": 3392,
+          "sha256": "4a0b26d846fbda690f54e4dbdb563b047293cfa4f8041358404941e960bdcc90",
+          "lines": 164,
+          "kind": "JSON",
+          "top_keys": [
+            "status",
+            "commuting_disjoint_all_plus_triad_triples",
+            "chosen_supports",
+            "Gram",
+            "F_zero",
+            "D_zero",
+            "unbroken_complex_Lie_dimension",
+            "unbroken_Killing_rank",
+            "unbroken_branching",
+            "unbroken_Lie_basis_coefficients",
+            "tangent_ranks",
+            "action",
+            "flat_directions",
+            "scope",
+            "raw_sha256"
+          ],
+          "length": 15
+        },
+        {
+          "path": "data/w33_20261108_S8_hybrid_shapley_audit.json",
+          "bytes": 7574,
+          "sha256": "9989c75695f59574e0c99db05367fe5115b2961e14a34262f40fbe60bb3c9450",
+          "lines": 133,
+          "kind": "JSON",
+          "top_keys": [
+            "additive_identification_warning",
+            "algebra",
+            "evidence_limit",
+            "frozen_claim",
+            "frozen_prereg",
+            "original_hybrid_implementation",
+            "physical_evidence_status",
+            "schema",
+            "sources",
+            "status",
+            "surveys"
+          ],
+          "length": 11
+        },
+        {
+          "path": "tests/test_toe_20261108_invariant_magnetic_completion.py",
+          "bytes": 4343,
+          "sha256": "783e3a4db53a13682165f9d53c23dc5f26ce1d02d09046046a1971b0f0258dcd",
+          "lines": 90,
+          "kind": "Python",
+          "functions": [
+            "m",
+            "test_exact_short_face_projection",
+            "test_integer_period_cup_rank_and_nonuniform_weight_control",
+            "test_positive_compensation_boundary",
+            "test_every_mapped_commutator_is_literal_closed_zero_voltage",
+            "test_exact_leading_common_cone",
+            "test_independent_finite_difference_optical_homogenization",
+            "test_nonzero_momentum_controller_covariance",
+            "test_propagating_completion_vs_short_only_flat_modes",
+            "test_numerical_acoustic_limit_and_finite_k_splitting",
+            "test_actual_server_independent_six_area_control"
+          ]
+        },
+        {
+          "path": "tests/test_toe_20261108_signed_cubic_vacuum.py",
+          "bytes": 3961,
+          "sha256": "e17d440a03e07573839638a0501d15cff0ccd635b01632ceb8d2a356323ab30e",
+          "lines": 99,
+          "kind": "Python",
+          "functions": [
+            "test_root_transvections_preserve_the_cubic_in_integer_coordinates",
+            "test_ordered_bracket_contracts_to_alternating_three_copy_form",
+            "test_prior_conjugate_decuplet_cancels_the_family_trace_probe",
+            "point",
+            "test_independent_complex_species_rotation_preserves_zero_residuals",
+            "test_actual_potential_quartic_along_species_tangent_and_quadratic_radially",
+            "test_server_replay_at_different_prime_certifies_native_ranks_and_brackets"
+          ]
+        },
+        {
+          "path": "tests/test_w33_20261108_s8_hybrid_shapley_audit.py",
+          "bytes": 2652,
+          "sha256": "579111e2db4998bb2288863df0daefacbe5fd2dc2ee74fbe0240795b20b17b27",
+          "lines": 46,
+          "kind": "Python",
+          "functions": [
+            "cert",
+            "test_fixed_Hybrid_cells_and_unchanged_frozen_ledger",
+            "test_exact_nonadditive_decomposition",
+            "test_DES_interaction_is_sizeable_negative",
+            "test_KiDS_interaction_is_sizeable_negative",
+            "test_provenance_and_scientific_limits"
+          ]
+        }
+      ]
+    },
+    {
+      "sha": "320b40024e1a7970508a27a8b7b2bdab6146af61",
+      "parents": [
+        "84f21f0a9a17dfa71816272f1d24ac4291d315c0"
+      ],
+      "full_message": "320b40024e1a7970508a27a8b7b2bdab6146af61\n2026-11-08T22:02:57-05:00\nTransport the Albert half-turn and isolate the three-copy vacuum",
+      "blobs": [
+        {
+          "path": "analysis/2026-11-08_native_halfturn_and_species_orientation.md",
+          "bytes": 6885,
+          "sha256": "5ca82dc9d1555fd81e8b7370c9c8eb69c3290a38166461e019404de70d474a00",
+          "lines": 31,
+          "kind": "Markdown",
+          "headings": [
+            "# Native Albert half-turn and an isolated three-copy vacuum",
+            "## The half-turn induces a two-qutrit operation on the vacuum support",
+            "## A degree-six invariant lifts the species modes",
+            "## Reproduction and parallel work"
+          ]
+        },
+        {
+          "path": "analysis/toe_20261108_native_spin_halfturn.py",
+          "bytes": 7222,
+          "sha256": "3e07ac995a702fe29d4c3ca9bba8ac8c78d083104c560e91a9946d40c77c9433",
+          "lines": 161,
+          "kind": "Python",
+          "functions": [
+            "pullback",
+            "halfturn",
+            "matrix_entries",
+            "calculate"
+          ]
+        },
+        {
+          "path": "analysis/toe_20261108_species_orientation_selector.py",
+          "bytes": 6294,
+          "sha256": "8c01099af36d822ccfbc8eb2bacba7e747c1cca3169761523245f282973fbf09",
+          "lines": 143,
+          "kind": "Python",
+          "functions": [
+            "weighted_field",
+            "restricted_cubic",
+            "restricted_sextic",
+            "hesse_aronhold_coefficients",
+            "selector_jet",
+            "calculate"
+          ]
+        },
+        {
+          "path": "analysis/w33_pass10950_clock_albert_lorentz_spinor.py",
+          "bytes": 23703,
+          "sha256": "22a29ab73d04bdb42b54a1c802bb14183dfb68746df836835693f0ec85adacae",
+          "lines": 528,
+          "kind": "Python",
+          "functions": [
+            "dm",
+            "rank",
+            "nullspace",
+            "ints",
+            "inertia_int",
+            "build_clock_albert",
+            "main"
+          ]
+        },
+        {
+          "path": "data/toe_20261108_halfturn_orientation_validation.json",
+          "bytes": 3842,
+          "sha256": "9af8a5b9de7f3e184e4f2205a0703b6bed7a693f5b6edd42c27a266d311bde62",
+          "lines": 133,
+          "kind": "JSON",
+          "top_keys": [
+            "baseline",
+            "utc",
+            "artifact_raw_sha256",
+            "desktop",
+            "independent_server",
+            "prior_spinor_control",
+            "prior_ownership",
+            "parallel_branch_tips",
+            "manuscript",
+            "continuity_decision",
+            "rediscovery_guard",
+            "generic_field_control",
+            "parallel_integration"
+          ],
+          "length": 13
+        },
+        {
+          "path": "data/toe_20261108_native_spin_halfturn.json",
+          "bytes": 6066,
+          "sha256": "c8f18b8fab22e57c21ad725077f5b934eb811f33834a12354cf96079f8c30f8c",
+          "lines": 528,
+          "kind": "JSON",
+          "top_keys": [
+            "status",
+            "coordinate_order",
+            "frame",
+            "rotation",
+            "infinitesimal_generator",
+            "peirce_spinor_projector",
+            "chirality_on_spinor_and_zero_elsewhere",
+            "eigenvalue_multiplicities",
+            "signed_cubic_coefficients_preserved",
+            "rotation_order",
+            "chirality_exchanged",
+            "species_projection_overlap",
+            "species_projection_defect_squared",
+            "internal_density_defect_squared",
+            "forced_family_species_operator",
+            "forced_operator_schmidt_ranks_for_powers_0_to_3",
+            "example_product_input",
+            "example_output_reduced_density_eigenvalues",
+            "scope",
+            "input_sha256"
+          ],
+          "length": 20
+        },
+        {
+          "path": "data/toe_20261108_species_orientation_selector.json",
+          "bytes": 5950,
+          "sha256": "a3636005b54570d529c4efba500d727c508da0fb07c32b204f061f3627d335f5",
+          "lines": 387,
+          "kind": "JSON",
+          "top_keys": [
+            "status",
+            "restriction",
+            "hesse_aronhold_raw_coefficients",
+            "normalized_invariant_restriction",
+            "normalization",
+            "gauge_invariance",
+            "species_probes",
+            "normalized_sextic_restriction",
+            "sextic_normalization",
+            "degree_six_selector",
+            "degree_twelve_selector",
+            "u3_direction_order",
+            "prior_tangent_ranks",
+            "selector_real_rank_on_species",
+            "new_hessian_nullity",
+            "physical_hessian_nullity",
+            "scope",
+            "input_sha256"
+          ],
+          "length": 18
+        }
+      ]
+    },
+    {
+      "sha": "34504b8794e143675077267867d3bf3eb661395f",
+      "parents": [
+        "320b40024e1a7970508a27a8b7b2bdab6146af61"
+      ],
+      "full_message": "34504b8794e143675077267867d3bf3eb661395f\n2026-11-08T22:07:28-05:00\nVerify qutrit magic from compressed Albert matter parity",
+      "blobs": [
+        {
+          "path": "RESULTS_INDEX.md",
+          "bytes": 2669098,
+          "sha256": "51955cb51442fc3059fd9fc54119915f93644e194a36b3266e240b254efa1a6f",
+          "lines": 18799,
+          "kind": "Markdown",
+          "headings": [
+            "# RESULTS INDEX — search for the RESULT, not the topic",
+            "## Why this file exists",
+            "## How to use it",
+            "## Index"
+          ]
+        },
+        {
+          "path": "data/toe_20261108_halfturn_orientation_validation.json",
+          "bytes": 8252,
+          "sha256": "baad8ed2f7d44ecc10ae69ddc987db029188fcc6b75d4f844df72431c7980dfb",
+          "lines": 352,
+          "kind": "JSON",
+          "top_keys": [
+            "baseline",
+            "utc",
+            "artifact_raw_sha256",
+            "desktop",
+            "independent_server",
+            "prior_spinor_control",
+            "prior_ownership",
+            "parallel_branch_tips",
+            "manuscript",
+            "continuity_decision",
+            "rediscovery_guard",
+            "generic_field_control",
+            "parallel_integration",
+            "additional_validation",
+            "results_index"
+          ],
+          "length": 15
+        },
+        {
+          "path": "tests/test_toe_20261108_halfturn_qutrit_magic.py",
+          "bytes": 1553,
+          "sha256": "d78275b5339c6ade5bb3b9902d1117fcd7941fda1cd940d9ab31bbd48c37bb5b",
+          "lines": 38,
+          "kind": "Python",
+          "functions": [
+            "test_compressed_matter_parity_wigner_negativity"
+          ]
+        }
+      ]
+    },
+    {
+      "sha": "6bb87db0719b721e51b46f1e409110a4a62b6dfa",
+      "parents": [
+        "84f21f0a9a17dfa71816272f1d24ac4291d315c0"
+      ],
+      "full_message": "6bb87db0719b721e51b46f1e409110a4a62b6dfa\n2026-11-08T22:10:12-05:00\nPass 12631 addendum: KLT f-scan on patched build: f=0.35 chi2 2252.50 (-1.07 vs f=0.25), f=0.18 and 0.5 shooting failed; data do not push f down; quality side N >~ 160-200. GitKraken MCP unavailable; shell git used.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "blobs": [
+        {
+          "path": "analysis/PASS12631_KIDS_HELDOUT.md",
+          "bytes": 12429,
+          "sha256": "2a6c0d692b0b1a3a7d3b81e3e9127d2a0414dc5865cb1565296232930739beec",
+          "lines": 147,
+          "kind": "Markdown",
+          "headings": [
+            "# Pass 12631: held-out shear on two independent surveys erases CPL's out-of-sample advantage, while the fading coupling keeps it; the natural (KLT) completion faces a dark-energy-or-quality choice",
+            "## 1. KiDS-Legacy held out",
+            "## 2. The combined out-of-sample ledger (Dovekie)",
+            "## 3. The natural completion's dark-energy-or-quality choice",
+            "## 4. Not done, and why",
+            "## Sources",
+            "## Addendum: the mechanism is a tomographic tilt, not an amplitude excess (`shear_diag.py`)",
+            "## Correction (same day): where the penalty actually sits; frozen S7's mechanism clause is wrong",
+            "## Addendum: the KLT-family model out of sample and on held-out shear (provisional)",
+            "## Addendum: growth or geometry? Both (`shear_hybrid.py`); S8 frozen; overlap bound",
+            "## Addendum: KLT BAO-held MCMC (`mcmc_holdout.py dovekie bao klt25 20 60 1`)",
+            "## Addendum: KLT f-scan (`klt_fscan.py`, patched halofit build `class_klt2`)"
+          ]
+        },
+        {
+          "path": "analysis/toe_uv/klt_fscan.json",
+          "bytes": 777,
+          "sha256": "3a75ea7e4bcdea4d0b559f4d62fd8b9a2d0c50ddaa0411b8667f53a48962e4d5",
+          "lines": 26,
+          "kind": "JSON",
+          "top_keys": [
+            "f0.18",
+            "f0.35",
+            "f0.5"
+          ],
+          "length": 3
+        }
+      ]
+    },
+    {
+      "sha": "10ff0f6a588507888376a923d15d910918c9a275",
+      "parents": [
+        "6bb87db0719b721e51b46f1e409110a4a62b6dfa",
+        "34504b8794e143675077267867d3bf3eb661395f"
+      ],
+      "full_message": "10ff0f6a588507888376a923d15d910918c9a275\n2026-11-08T22:10:16-05:00\nMerge remote-tracking branch 'origin/master' into HEAD",
+      "blobs": [
+        {
+          "path": "RESULTS_INDEX.md",
+          "bytes": 2669098,
+          "sha256": "51955cb51442fc3059fd9fc54119915f93644e194a36b3266e240b254efa1a6f",
+          "lines": 18799,
+          "kind": "Markdown",
+          "headings": [
+            "# RESULTS INDEX — search for the RESULT, not the topic",
+            "## Why this file exists",
+            "## How to use it",
+            "## Index"
+          ]
+        },
+        {
+          "path": "analysis/2026-11-08_native_halfturn_and_species_orientation.md",
+          "bytes": 6885,
+          "sha256": "5ca82dc9d1555fd81e8b7370c9c8eb69c3290a38166461e019404de70d474a00",
+          "lines": 31,
+          "kind": "Markdown",
+          "headings": [
+            "# Native Albert half-turn and an isolated three-copy vacuum",
+            "## The half-turn induces a two-qutrit operation on the vacuum support",
+            "## A degree-six invariant lifts the species modes",
+            "## Reproduction and parallel work"
+          ]
+        },
+        {
+          "path": "analysis/toe_20261108_native_spin_halfturn.py",
+          "bytes": 7222,
+          "sha256": "3e07ac995a702fe29d4c3ca9bba8ac8c78d083104c560e91a9946d40c77c9433",
+          "lines": 161,
+          "kind": "Python",
+          "functions": [
+            "pullback",
+            "halfturn",
+            "matrix_entries",
+            "calculate"
+          ]
+        },
+        {
+          "path": "analysis/toe_20261108_species_orientation_selector.py",
+          "bytes": 6294,
+          "sha256": "8c01099af36d822ccfbc8eb2bacba7e747c1cca3169761523245f282973fbf09",
+          "lines": 143,
+          "kind": "Python",
+          "functions": [
+            "weighted_field",
+            "restricted_cubic",
+            "restricted_sextic",
+            "hesse_aronhold_coefficients",
+            "selector_jet",
+            "calculate"
+          ]
+        },
+        {
+          "path": "analysis/w33_pass10950_clock_albert_lorentz_spinor.py",
+          "bytes": 23703,
+          "sha256": "22a29ab73d04bdb42b54a1c802bb14183dfb68746df836835693f0ec85adacae",
+          "lines": 528,
+          "kind": "Python",
+          "functions": [
+            "dm",
+            "rank",
+            "nullspace",
+            "ints",
+            "inertia_int",
+            "build_clock_albert",
+            "main"
+          ]
+        },
+        {
+          "path": "data/toe_20261108_halfturn_orientation_validation.json",
+          "bytes": 8252,
+          "sha256": "baad8ed2f7d44ecc10ae69ddc987db029188fcc6b75d4f844df72431c7980dfb",
+          "lines": 352,
+          "kind": "JSON",
+          "top_keys": [
+            "baseline",
+            "utc",
+            "artifact_raw_sha256",
+            "desktop",
+            "independent_server",
+            "prior_spinor_control",
+            "prior_ownership",
+            "parallel_branch_tips",
+            "manuscript",
+            "continuity_decision",
+            "rediscovery_guard",
+            "generic_field_control",
+            "parallel_integration",
+            "additional_validation",
+            "results_index"
+          ],
+          "length": 15
+        },
+        {
+          "path": "data/toe_20261108_native_spin_halfturn.json",
+          "bytes": 6066,
+          "sha256": "c8f18b8fab22e57c21ad725077f5b934eb811f33834a12354cf96079f8c30f8c",
+          "lines": 528,
+          "kind": "JSON",
+          "top_keys": [
+            "status",
+            "coordinate_order",
+            "frame",
+            "rotation",
+            "infinitesimal_generator",
+            "peirce_spinor_projector",
+            "chirality_on_spinor_and_zero_elsewhere",
+            "eigenvalue_multiplicities",
+            "signed_cubic_coefficients_preserved",
+            "rotation_order",
+            "chirality_exchanged",
+            "species_projection_overlap",
+            "species_projection_defect_squared",
+            "internal_density_defect_squared",
+            "forced_family_species_operator",
+            "forced_operator_schmidt_ranks_for_powers_0_to_3",
+            "example_product_input",
+            "example_output_reduced_density_eigenvalues",
+            "scope",
+            "input_sha256"
+          ],
+          "length": 20
+        },
+        {
+          "path": "data/toe_20261108_species_orientation_selector.json",
+          "bytes": 5950,
+          "sha256": "a3636005b54570d529c4efba500d727c508da0fb07c32b204f061f3627d335f5",
+          "lines": 387,
+          "kind": "JSON",
+          "top_keys": [
+            "status",
+            "restriction",
+            "hesse_aronhold_raw_coefficients",
+            "normalized_invariant_restriction",
+            "normalization",
+            "gauge_invariance",
+            "species_probes",
+            "normalized_sextic_restriction",
+            "sextic_normalization",
+            "degree_six_selector",
+            "degree_twelve_selector",
+            "u3_direction_order",
+            "prior_tangent_ranks",
+            "selector_real_rank_on_species",
+            "new_hessian_nullity",
+            "physical_hessian_nullity",
+            "scope",
+            "input_sha256"
+          ],
+          "length": 18
+        },
+        {
+          "path": "tests/test_toe_20261108_halfturn_qutrit_magic.py",
+          "bytes": 1553,
+          "sha256": "d78275b5339c6ade5bb3b9902d1117fcd7941fda1cd940d9ab31bbd48c37bb5b",
+          "lines": 38,
+          "kind": "Python",
+          "functions": [
+            "test_compressed_matter_parity_wigner_negativity"
+          ]
+        }
+      ]
+    },
+    {
+      "sha": "5d301078637062cacf445c5b0f636f5f4c941a0a",
+      "parents": [
+        "10ff0f6a588507888376a923d15d910918c9a275"
+      ],
+      "full_message": "5d301078637062cacf445c5b0f636f5f4c941a0a\n2026-11-08T22:13:51-05:00\nPass 12632 addendum 6: corrected combined out-of-sample ledger (Dovekie; BAO, SN, DES, KiDS held out): fading +4.16, CPL +3.79, KLT +1.97 over LCDM (withdrawn: fading +4.72, CPL +0.32); corrected held-out shear DES -0.69/-0.38/-0.68/-0.80, KiDS -0.84/-0.39/-1.01/-0.98; scorecard uses MCMC BAO for KLT; note and handoff updated for the other track's fail-closed gate. GitKraken MCP unavailable; shell git used.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "blobs": [
+        {
+          "path": "analysis/HANDOFF_CLAUDE_TO_CHAT_20261106.md",
+          "bytes": 9106,
+          "sha256": "8d5d8d50bc012efc53b17fb378eb28cacc8610471bfaf225676ca5c9c42af622",
+          "lines": 62,
+          "kind": "Markdown",
+          "headings": [
+            "# Handoff, Claude track → Chat track, 2026-11-06",
+            "## Update (same day): the coupled sterile-neutrino corridor",
+            "## Reply, 2026-11-08: your audit (3869fe29c, 4b97ce7d1, c7079f950) is accepted",
+            "## Update, 2026-11-08 (afternoon): for your audit tooling",
+            "## Update, 2026-11-08 (later): quality quantified; KiDS replication; a question",
+            "## Update 2026-11-08 evening: correction, please read before using any shear number (Passes 12632–12633)",
+            "## Update 2026-11-08 night: corrected held-out shear, for your fail-closed cosmology gate (5b2766be1)"
+          ]
+        },
+        {
+          "path": "analysis/NOTE_DARK_ENERGY_EVIDENCE_20261108.md",
+          "bytes": 4601,
+          "sha256": "a81484d0d9ca6d902c2c38967187e0e82878eb609ca8ab1c3b97a8ba2e776de1",
+          "lines": 42,
+          "kind": "Markdown",
+          "headings": [
+            "# What the data say about evolving dark energy (one page; revised 2026-11-08 after the CLASS halofit correction)"
+          ]
+        },
+        {
+          "path": "analysis/PASS12632_HALOFIT_SCF_BUG.md",
+          "bytes": 13480,
+          "sha256": "b83790240c5bd653fb2002aab17d781ddfc65eb740f92d9e785c3638c87cebed",
+          "lines": 176,
+          "kind": "Markdown",
+          "headings": [
+            "# Pass 12632: a CLASS halofit bug invalidates every scalar-field shear prediction since Pass 12629 (correction notice; corrected numbers to follow)",
+            "## The bug",
+            "## Controls (`analysis/toe_uv/halofit_check.py`)",
+            "## The fix (`analysis/toe_uv/class_halofit_scf_patch.py`)",
+            "## Impact on the training fits is small (`hf_impact.py`; same parameters, no refit)",
+            "## What is withdrawn until rerun",
+            "## Addendum 1: independent check of the patch, and the corrected fixed-background shear",
+            "## Addendum 2: a second nonlinear model (HMcode) agrees",
+            "## Addendum 3: reproduced on stock CLASS and reported upstream (lesgourg/class_public#682)",
+            "## Addendum 4: scale-cut robustness, S9 frozen, and an audit of every other halofit consumer",
+            "## Addendum 5: Pass 12583's shear-equivalent S8, rerun with patched builds",
+            "## Addendum 6: the corrected combined out-of-sample ledger (Dovekie)"
+          ]
+        },
+        {
+          "path": "analysis/toe_uv/scorecard.json",
+          "bytes": 2714,
+          "sha256": "8dac1abb44a68a53b715b897e467eb5a36f32e52e9c86f83f8bcc7f4940db527",
+          "lines": 76,
+          "kind": "JSON",
+          "top_keys": [
+            "LCDM",
+            "fading_cneg",
+            "fading_cpos",
+            "CPL",
+            "exp",
+            "KLT"
+          ],
+          "length": 6
+        },
+        {
+          "path": "analysis/toe_uv/scorecard.py",
+          "bytes": 5252,
+          "sha256": "fc770b47c5176b514cd68c3174037477882d04516348a788611dc05873be2674",
+          "lines": 85,
+          "kind": "Python",
+          "functions": [
+            "ppd"
+          ]
+        },
+        {
+          "path": "analysis/toe_uv/shear_ppd.json",
+          "bytes": 1217,
+          "sha256": "5bffb8d6f0cccb94c325b64e7fa7703bcafa9c7697de8b0e6b5a200b27cb45e7",
+          "lines": 74,
+          "kind": "JSON",
+          "top_keys": [
+            "CPL",
+            "LCDM",
+            "free_neg",
+            "free_pos",
+            "KLT"
+          ],
+          "length": 5
+        },
+        {
+          "path": "analysis/toe_uv/shear_ppd_kids_dovekie.json",
+          "bytes": 1216,
+          "sha256": "f94e370d21fc1d57c5f4a1e40ba9ee70ffa45062f29739b5e4faa4d1e1593a28",
+          "lines": 74,
+          "kind": "JSON",
+          "top_keys": [
+            "CPL",
+            "LCDM",
+            "free_neg",
+            "free_pos",
+            "KLT"
+          ],
+          "length": 5
+        },
+        {
+          "path": "data/w33_pass12632_halofit_scf.json",
+          "bytes": 6957,
+          "sha256": "a005284f351d021d2ae73bc58d20e569f357e2aceb9f1ef7251cb31a0bdb5188",
+          "lines": 329,
+          "kind": "JSON",
+          "top_keys": [
+            "pass_number",
+            "track",
+            "halofit_rows",
+            "training_impact",
+            "matched_fluid",
+            "shear_fixed_background_rel_lcdm",
+            "hybrid_all",
+            "heldout_shear_rel_lcdm",
+            "checks",
+            "all_checks_pass"
+          ],
+          "length": 10
+        }
+      ]
+    },
+    {
+      "sha": "ce98cdbe29e0bc50a008e7aa1154756693eac9bb",
+      "parents": [
+        "5d301078637062cacf445c5b0f636f5f4c941a0a"
+      ],
+      "full_message": "ce98cdbe29e0bc50a008e7aa1154756693eac9bb\n2026-11-08T22:24:05-05:00\nPass 12632: DES-SN5YR-trained held-out DES shear corrected (fading -0.74, CPL -0.62 vs LCDM; was -0.42/-2.05); totals fading +6.44, CPL +8.84: leader follows the SN sample, not shear. GitKraken MCP unavailable; shell git used.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "blobs": [
+        {
+          "path": "analysis/PASS12632_HALOFIT_SCF_BUG.md",
+          "bytes": 13908,
+          "sha256": "3002bb08566dac607ea6abb7d8cf4e6a09501a66c688e4dedfb3d85732c63817",
+          "lines": 178,
+          "kind": "Markdown",
+          "headings": [
+            "# Pass 12632: a CLASS halofit bug invalidates every scalar-field shear prediction since Pass 12629 (correction notice; corrected numbers to follow)",
+            "## The bug",
+            "## Controls (`analysis/toe_uv/halofit_check.py`)",
+            "## The fix (`analysis/toe_uv/class_halofit_scf_patch.py`)",
+            "## Impact on the training fits is small (`hf_impact.py`; same parameters, no refit)",
+            "## What is withdrawn until rerun",
+            "## Addendum 1: independent check of the patch, and the corrected fixed-background shear",
+            "## Addendum 2: a second nonlinear model (HMcode) agrees",
+            "## Addendum 3: reproduced on stock CLASS and reported upstream (lesgourg/class_public#682)",
+            "## Addendum 4: scale-cut robustness, S9 frozen, and an audit of every other halofit consumer",
+            "## Addendum 5: Pass 12583's shear-equivalent S8, rerun with patched builds",
+            "## Addendum 6: the corrected combined out-of-sample ledger (Dovekie)"
+          ]
+        },
+        {
+          "path": "analysis/toe_uv/shear_ppd_desy5.json",
+          "bytes": 959,
+          "sha256": "0099bb8c338c8753b6afa64e0cec82e3f95aad248ec0638a59a716d249cb379a",
+          "lines": 59,
+          "kind": "JSON",
+          "top_keys": [
+            "CPL",
+            "LCDM",
+            "free_neg",
+            "free_pos"
+          ],
+          "length": 4
+        },
+        {
+          "path": "data/w33_pass12632_halofit_scf.json",
+          "bytes": 7309,
+          "sha256": "d320c6f5e38da15c64af5e696ed0758f238e02b26430fb041f57a035b15f5069",
+          "lines": 344,
+          "kind": "JSON",
+          "top_keys": [
+            "pass_number",
+            "track",
+            "halofit_rows",
+            "training_impact",
+            "matched_fluid",
+            "shear_fixed_background_rel_lcdm",
+            "hybrid_all",
+            "heldout_shear_rel_lcdm",
+            "checks",
+            "all_checks_pass"
+          ],
+          "length": 10
+        }
+      ]
+    },
+    {
+      "sha": "75cf2141d9d0ec189ee83d2f5eadb183e47e3b23",
+      "parents": [
+        "ce98cdbe29e0bc50a008e7aa1154756693eac9bb"
+      ],
+      "full_message": "75cf2141d9d0ec189ee83d2f5eadb183e47e3b23\n2026-11-08T22:30:52-05:00\nPass 12632 addendum 7: patched refit: LCDM-as-scf now 2238.114 = LCDM_native 2238.11 (the old 0.39 gap was the bug); full-data gains shift <= 0.4 (fading -10.79, CPL -12.27, exp -3.75). GitKraken MCP unavailable; shell git used.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "blobs": [
+        {
+          "path": "analysis/PASS12632_HALOFIT_SCF_BUG.md",
+          "bytes": 14692,
+          "sha256": "4022b2c6c0c065025b89fedfea9284a61baa67e60daaa29c1a84e896dc215bf5",
+          "lines": 189,
+          "kind": "Markdown",
+          "headings": [
+            "# Pass 12632: a CLASS halofit bug invalidates every scalar-field shear prediction since Pass 12629 (correction notice; corrected numbers to follow)",
+            "## The bug",
+            "## Controls (`analysis/toe_uv/halofit_check.py`)",
+            "## The fix (`analysis/toe_uv/class_halofit_scf_patch.py`)",
+            "## Impact on the training fits is small (`hf_impact.py`; same parameters, no refit)",
+            "## What is withdrawn until rerun",
+            "## Addendum 1: independent check of the patch, and the corrected fixed-background shear",
+            "## Addendum 2: a second nonlinear model (HMcode) agrees",
+            "## Addendum 3: reproduced on stock CLASS and reported upstream (lesgourg/class_public#682)",
+            "## Addendum 4: scale-cut robustness, S9 frozen, and an audit of every other halofit consumer",
+            "## Addendum 5: Pass 12583's shear-equivalent S8, rerun with patched builds",
+            "## Addendum 6: the corrected combined out-of-sample ledger (Dovekie)",
+            "## Addendum 7: patched refit of the training fits (`hf_refit.py`, `hf_refit_dovekie.json`)"
+          ]
+        },
+        {
+          "path": "analysis/toe_uv/hf_refit_dovekie.json",
+          "bytes": 3155,
+          "sha256": "f4ad3b39aa8c38537867d5b5427e29848d35d3b5e3de1cbd5fe2adec82babefd",
+          "lines": 135,
+          "kind": "JSON",
+          "top_keys": [
+            "classbin",
+            "LCDM",
+            "exp_neg",
+            "free_neg",
+            "free_pos",
+            "LCDM_native",
+            "CPL",
+            "delta_vs_LCDM",
+            "delta_vs_LCDM_orig"
+          ],
+          "length": 9
+        }
+      ]
+    },
+    {
+      "sha": "41abb5cb935dc0e180c672c7347f0aaffe245ec4",
+      "parents": [
+        "75cf2141d9d0ec189ee83d2f5eadb183e47e3b23"
+      ],
+      "full_message": "41abb5cb935dc0e180c672c7347f0aaffe245ec4\n2026-11-09T09:41:09-05:00\nPass 12634 reserved: W(3,3) in the tropical moduli space of cubic surfaces (Naruki fan) (claude track)\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "blobs": []
+    },
+    {
+      "sha": "991a2067160e2fd8985dad97503a68a3968ff2eb",
+      "parents": [
+        "41abb5cb935dc0e180c672c7347f0aaffe245ec4"
+      ],
+      "full_message": "991a2067160e2fd8985dad97503a68a3968ff2eb\n2026-11-09T09:44:47-05:00\nPass 12634: W(3,3) in the tropical moduli space of cubic surfaces (Naruki fan): reconstruction (36 roots + 40 A2^3; orthogonal sets + flags) reproduces f-vector (76,630,1620,1215) exactly; cusp rays collinear iff stars share no root -> SRG(40,12,2,4), and it is Q(4,3) = W(3,3) LINES (|{x,y}^pp|=2; W33/Q43 controls); aaaa = 45 D4 x 3 (corpus 135 splits); same 40 cusps as Siegel A2(3) (P11899). Corrects Pass 84 (45 tritangent planes; 40 = Steiner triads = lines). No novelty claimed for the identification. GitKraken MCP unavailable; shell git used.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "blobs": [
+        {
+          "path": "analysis/2026-07-15_pass84_e6_w33_explicit_iso.md",
+          "bytes": 5282,
+          "sha256": "08fa85af66364fd874f6cde64b4c248d7c696d54c3e77c45c494fa3956a2995e",
+          "lines": 151,
+          "kind": "Markdown",
+          "headings": [
+            "# W33-Theory: Pass 84 — Explicit E₆/W(E₆) ≅ PSp(4,3) Isomorphism",
+            "## Date: 2026-07-15",
+            "## The Exceptional Isomorphism",
+            "## E₆ Root System Data",
+            "## W(3,3) in E₆ Language",
+            "## The Explicit Dictionary",
+            "## Generators: PSp(4,3) from W(E₆)",
+            "## The 27 Lines ↔ W33 Geometry",
+            "## Code-Level Isomorphism",
+            "## Summary"
+          ]
+        },
+        {
+          "path": "analysis/PASS12634_NARUKI_FAN.md",
+          "bytes": 5663,
+          "sha256": "fb8602154062e68cac1e5b1b2e159ee9d021d5b28f32272c2fc39eb05c7fff29",
+          "lines": 56,
+          "kind": "Markdown",
+          "headings": [
+            "# Pass 12634: W(3,3) inside the tropical moduli space of cubic surfaces; the same 40 cusps as the Siegel level-3 moduli space",
+            "## The object",
+            "## Results (all checks pass, with controls)",
+            "## The bridge this makes",
+            "## Corrections to the corpus",
+            "## Prior art and novelty",
+            "## Next"
+          ]
+        },
+        {
+          "path": "analysis/w33_pass12634_naruki_fan.py",
+          "bytes": 10005,
+          "sha256": "73c3f108ddd2ce13b26e43c0f39fd08c6b82870b0d3c0e5e5056a5c70eedc5d8",
+          "lines": 195,
+          "kind": "Python",
+          "functions": [
+            "key",
+            "orth",
+            "srg",
+            "pair_type",
+            "gq_test",
+            "pg_points",
+            "span_roots"
+          ]
+        },
+        {
+          "path": "data/w33_pass12634_naruki_fan.json",
+          "bytes": 1115,
+          "sha256": "13572e68878fe501a692b0e1e9f3ee159b13ffe4e93b8183d647e34515994808",
+          "lines": 67,
+          "kind": "JSON",
+          "top_keys": [
+            "fvector_reconstructed",
+            "fvector_literature",
+            "max_orth_set",
+            "aaaa",
+            "aaab",
+            "pair_types",
+            "graphs",
+            "w33_found",
+            "control_noninvariant",
+            "perp_perp_sizes_noncollinear",
+            "gq_type",
+            "control_W33",
+            "control_Q43",
+            "aaaa_by_D4",
+            "checks",
+            "all_checks_pass",
+            "pass_number"
+          ],
+          "length": 17
+        },
+        {
+          "path": "tests/test_w33_pass12634.py",
+          "bytes": 391,
+          "sha256": "f719d21bc0bc049fbae54b2759b101c3d171483ec2fd0a09fb08c368822e9441",
+          "lines": 12,
+          "kind": "Python",
+          "functions": [
+            "test_pass12634_producer"
+          ]
+        }
+      ]
+    },
+    {
+      "sha": "c0735cec7fd6b2526e2a46cff0b2eef7c4500307",
+      "parents": [
+        "991a2067160e2fd8985dad97503a68a3968ff2eb"
+      ],
+      "full_message": "c0735cec7fd6b2526e2a46cff0b2eef7c4500307\n2026-11-09T09:48:30-05:00\nPass 12634 addendum: E6 pezzotopes (432 positive-geometry regions of cubic-surface moduli, arXiv:2306.13604) = S5-pentads of pairwise disjoint W(3,3) lines with unique triple roots: exactly 432 of 13824 disjoint 5-sets; all 432 induce fan faces [15,60,90,45] = pezzotope dual f-vector; root facets meet as L(K5); none extends to one of the 36 spreads. GitKraken MCP unavailable; shell git used.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "blobs": [
+        {
+          "path": "analysis/PASS12634_NARUKI_FAN.md",
+          "bytes": 8025,
+          "sha256": "59facef1a5870ef568a64b74a008b9a9afc8df5896ee1a44b1088976d26601c7",
+          "lines": 76,
+          "kind": "Markdown",
+          "headings": [
+            "# Pass 12634: W(3,3) inside the tropical moduli space of cubic surfaces; the same 40 cusps as the Siegel level-3 moduli space",
+            "## The object",
+            "## Results (all checks pass, with controls)",
+            "## The bridge this makes",
+            "## Corrections to the corpus",
+            "## Prior art and novelty",
+            "## Next",
+            "## Addendum: the positive-geometry regions (E6 pezzotopes) are S5-pentads of W(3,3) lines (`w33_pezzotope_check.py`)"
+          ]
+        },
+        {
+          "path": "analysis/w33_pezzotope_check.py",
+          "bytes": 4799,
+          "sha256": "5a14109b05738721656ac2fb10b87278da5aa16d5b1788db3f4f81808d4f0cea",
+          "lines": 92,
+          "kind": "Python",
+          "functions": [
+            "extend",
+            "fan_faces",
+            "ext10"
+          ]
+        },
+        {
+          "path": "data/w33_pezzotope_check.json",
+          "bytes": 63679,
+          "sha256": "7250685dfd921f66db523ce6980268fd8cb2dd15c262594c6beee266a94aa735",
+          "lines": 5196,
+          "kind": "JSON",
+          "top_keys": [
+            "n_disjoint_5sets",
+            "n_pezzotope_configs",
+            "sample",
+            "n_spreads",
+            "spread_extensions",
+            "expect_432",
+            "faces_match"
+          ],
+          "length": 7
+        }
+      ]
+    },
+    {
+      "sha": "9f82e8fea4818e6a2791e95c26e1a10899bdb5d1",
+      "parents": [
+        "c0735cec7fd6b2526e2a46cff0b2eef7c4500307"
+      ],
+      "full_message": "9f82e8fea4818e6a2791e95c26e1a10899bdb5d1\n2026-11-09T10:10:14-05:00\nPass 12634 addendum 2: E6 Bergman fan (750 connected flats recomputed) maps under the root/A2^3 incidence matrix into the reconstructed Naruki fan with no exceptions: A1->(a), A2->(b) = the W(3,3) line, A3->aa 2-cones (1:1, 270), A4/A5->(a), D4/D5->0; rays produced exactly 36+40 (random-matrix control 750). GitKraken MCP unavailable this session; shell git used.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "blobs": [
+        {
+          "path": "analysis/PASS12634_NARUKI_FAN.md",
+          "bytes": 9398,
+          "sha256": "63fea89eb58caf64b2cc27a7b45e30f7cf4f0f139368a9d857c232a5ded4f6ff",
+          "lines": 93,
+          "kind": "Markdown",
+          "headings": [
+            "# Pass 12634: W(3,3) inside the tropical moduli space of cubic surfaces; the same 40 cusps as the Siegel level-3 moduli space",
+            "## The object",
+            "## Results (all checks pass, with controls)",
+            "## The bridge this makes",
+            "## Corrections to the corpus",
+            "## Prior art and novelty",
+            "## Next",
+            "## Addendum: the positive-geometry regions (E6 pezzotopes) are S5-pentads of W(3,3) lines (`w33_pezzotope_check.py`)",
+            "## Addendum 2: the E6 Bergman fan maps into the reconstructed fan (`w33_bergman_to_naruki.py`)"
+          ]
+        },
+        {
+          "path": "analysis/w33_bergman_to_naruki.py",
+          "bytes": 5410,
+          "sha256": "b7743ecdc458f96ecfd23443ea9bf12361f25079eed0c04aea86400433c6eae7",
+          "lines": 127,
+          "kind": "Python",
+          "functions": [
+            "closure",
+            "connected",
+            "rays_from",
+            "ext",
+            "in_fan"
+          ]
+        },
+        {
+          "path": "data/w33_bergman_to_naruki.json",
+          "bytes": 487,
+          "sha256": "ee46a7558ef07ee498624ad5ccfb514324d13785165d2cbeabd0e5ea746fa94e",
+          "lines": 33,
+          "kind": "JSON",
+          "top_keys": [
+            "n_connected_flats",
+            "flat_sizes",
+            "n_image_rays_incidence",
+            "n_image_rays_random_control",
+            "distinct_images_by_flat_size",
+            "images_outside_fan",
+            "image_support_by_flat_size"
+          ],
+          "length": 7
+        }
+      ]
+    },
+    {
+      "sha": "a4efdd37e9cd8218492f715d8201894e67a7abc7",
+      "parents": [
+        "9f82e8fea4818e6a2791e95c26e1a10899bdb5d1"
+      ],
+      "full_message": "a4efdd37e9cd8218492f715d8201894e67a7abc7\n2026-11-09T10:11:35-05:00\nPass 12635 reserved: tropical Burkhardt fan = W(3,3) points + 45 splits; duality with the Naruki fan (claude track)\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "blobs": []
+    },
+    {
+      "sha": "8415258b8112a98819877185ad526ecbfed4d8a7",
+      "parents": [
+        "a4efdd37e9cd8218492f715d8201894e67a7abc7"
+      ],
+      "full_message": "8415258b8112a98819877185ad526ecbfed4d8a7\n2026-11-09T10:14:35-05:00\nPass 12635: tropical Burkhardt (= trop A2(3), corpus flavour modulus; Ren-Sam-Schrader-Sturmfels Thm 4.3) reconstructed in W(3,3) terms: (a) rays = 40 W(3,3) POINTS, (b) = 45 tensor splits; aa = 240 collinear pairs, aaa = 160 line triples, ab = 360 point-in-factor, aab = 720 one-point-per-factor: all counts match; aa graph = W(3,3) point graph (perp-perp 4). Duality with Pass 12634 (Naruki cusps = W(3,3) LINES); both fans share the 45 splits. GitKraken MCP unavailable this session; shell git used.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "blobs": [
+        {
+          "path": "analysis/PASS12635_BURKHARDT_FAN.md",
+          "bytes": 3805,
+          "sha256": "e4f4d296ce495135498f96559d7122fd8299a4f079051d3129e3d573baf41f22",
+          "lines": 53,
+          "kind": "Markdown",
+          "headings": [
+            "# Pass 12635: the two tropical moduli spaces of the corpus see the two halves of W(3,3)",
+            "## The object",
+            "## Reconstruction (every count matches the theorem)",
+            "## The duality",
+            "## The E7 next rung (literature, not computed)"
+          ]
+        },
+        {
+          "path": "analysis/w33_pass12635_burkhardt_fan.py",
+          "bytes": 4680,
+          "sha256": "6e6f3b499daa10a4063f204cbfc5243af80d920b779a1cd0e1d39cee7405e328",
+          "lines": 77,
+          "kind": "Python",
+          "functions": [
+            "span_pts"
+          ]
+        },
+        {
+          "path": "data/w33_pass12635_burkhardt_fan.json",
+          "bytes": 633,
+          "sha256": "4d1b5a2643e21934bd2874639af7b8d5b3a3dfae8adeb8f327d2b2c223932808",
+          "lines": 31,
+          "kind": "JSON",
+          "top_keys": [
+            "n_points",
+            "n_isotropic_lines",
+            "n_nondeg_planes",
+            "n_splits",
+            "rays",
+            "edges_aa",
+            "edges_ab",
+            "triangles_aaa",
+            "triangles_aab",
+            "edges",
+            "triangles",
+            "split_orthogonality_ok",
+            "aa_graph_perp_perp",
+            "checks",
+            "all_checks_pass",
+            "pass_number"
+          ],
+          "length": 16
+        },
+        {
+          "path": "tests/test_w33_pass12635.py",
+          "bytes": 397,
+          "sha256": "f2ff3ce417c0936b2974c29da0b918c4453f1e7892cf6d04581a7c000a5b8090",
+          "lines": 12,
+          "kind": "Python",
+          "functions": [
+            "test_pass12635_producer"
+          ]
+        }
+      ]
+    },
+    {
+      "sha": "57a4c02a3054badd0f94831d12ac1e83ca9d4356",
+      "parents": [
+        "8415258b8112a98819877185ad526ecbfed4d8a7"
+      ],
+      "full_message": "57a4c02a3054badd0f94831d12ac1e83ca9d4356\n2026-11-09T10:25:02-05:00\nPass 12635 addendum: explicit dictionary between the two tropical fans: via a VF2 isomorphism A2^3 -> W(3,3) lines, 36 roots <-> 36 spreads (each root's 10 A2^3 = a spread), 40 points <-> partitions of the 36 positive roots into four A2^3, 45 D4 <-> 45 splits bijectively (16 A2-meets <-> 16 lines meeting b and b-perp; 24 orthogonal-triple meets <-> 24 missing lines). GitKraken MCP unavailable this session; shell git used.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "blobs": [
+        {
+          "path": "analysis/PASS12635_BURKHARDT_FAN.md",
+          "bytes": 5591,
+          "sha256": "a95b3a0c949167d85b07f8ba784747b9c43e54889645186a0e76500dd49bc581",
+          "lines": 73,
+          "kind": "Markdown",
+          "headings": [
+            "# Pass 12635: the two tropical moduli spaces of the corpus see the two halves of W(3,3)",
+            "## The object",
+            "## Reconstruction (every count matches the theorem)",
+            "## The duality",
+            "## The E7 next rung (literature, not computed)",
+            "## Addendum: an explicit dictionary between the two fans (`w33_split_bridge.py`, `data/w33_split_bridge.json`)"
+          ]
+        },
+        {
+          "path": "analysis/w33_split_bridge.py",
+          "bytes": 6609,
+          "sha256": "b800b2067516b7e1e4cd4471ed4ecb4c10ce7a1f706010ce8902bd72db7187f4",
+          "lines": 109,
+          "kind": "Python",
+          "functions": [
+            "span_roots",
+            "ext",
+            "partition",
+            "shape"
+          ]
+        },
+        {
+          "path": "data/w33_split_bridge.json",
+          "bytes": 694,
+          "sha256": "09be81e87c471ee5556b3c0d00563483ad12f8a7fa65cee6aa80483035e3c259",
+          "lines": 70,
+          "kind": "JSON",
+          "top_keys": [
+            "isomorphism_found",
+            "roots_to_spreads",
+            "d4_class_sizes",
+            "split_class_sizes",
+            "d4_to_split_matches",
+            "d4_to_split_bijective",
+            "points_as_A2cubed_4cliques",
+            "d4_shape_classes",
+            "d4_to_split_matches_shape",
+            "d4_to_split_bijective_shape",
+            "split_line_types"
+          ],
+          "length": 11
+        }
+      ]
+    },
+    {
+      "sha": "2075b52ee47724b8665d1e465bb1c9569be05d94",
+      "parents": [
+        "57a4c02a3054badd0f94831d12ac1e83ca9d4356"
+      ],
+      "full_message": "2075b52ee47724b8665d1e465bb1c9569be05d94\n2026-11-09T10:28:25-05:00\nPass 12634 addendum 3: every E6 pezzotope = a double-six (12 lines = the 12 Hamiltonian 5-cycles of K5, sixes = the two A5 orbits; exotic S5 in S6) whose 5 cube facets are a synthematic total; the 432 positive-geometry regions double-cover the 216 (double-six, total) pairs = the corpus's 216 codewords (P12523). Not the Gosset 2_21 4-simplices (different S5). GitKraken MCP unavailable this session; shell git used.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "blobs": [
+        {
+          "path": "analysis/PASS12634_NARUKI_FAN.md",
+          "bytes": 11864,
+          "sha256": "eb9c76e60ac4c05bbc70394b6af57d811fde01326ff255ffd44c4008663c77ba",
+          "lines": 110,
+          "kind": "Markdown",
+          "headings": [
+            "# Pass 12634: W(3,3) inside the tropical moduli space of cubic surfaces; the same 40 cusps as the Siegel level-3 moduli space",
+            "## The object",
+            "## Results (all checks pass, with controls)",
+            "## The bridge this makes",
+            "## Corrections to the corpus",
+            "## Prior art and novelty",
+            "## Next",
+            "## Addendum: the positive-geometry regions (E6 pezzotopes) are S5-pentads of W(3,3) lines (`w33_pezzotope_check.py`)",
+            "## Addendum 2: the E6 Bergman fan maps into the reconstructed fan (`w33_bergman_to_naruki.py`)",
+            "## Addendum 3: each pezzotope is a double-six with a synthematic total; the 432 regions double-cover the corpus's 216 codewords (`w33_pezzotope_gosset.py`)"
+          ]
+        },
+        {
+          "path": "analysis/w33_pezzotope_gosset.py",
+          "bytes": 10171,
+          "sha256": "b1b3c30cbb56dc260f9a15cea005a38fbbfe1d6dcd8b102d1bf0c589d85ebaac",
+          "lines": 183,
+          "kind": "Python",
+          "functions": [
+            "ext",
+            "candidates",
+            "is_ham_cycle",
+            "cyc_parity"
+          ]
+        },
+        {
+          "path": "data/w33_pezzotope_gosset.json",
+          "bytes": 1529,
+          "sha256": "1f8ed8cc96e13e2877892d41b1f408abc898b89b122605be84861b7d276b24f3",
+          "lines": 60,
+          "kind": "JSON",
+          "top_keys": [
+            "line_inner_products",
+            "n_skew5",
+            "n_sixes",
+            "orth_lines_per_pentad",
+            "pattern_counts_first_pentad",
+            "pentad_summary",
+            "distinct_double_sixes",
+            "pentads_per_double_six",
+            "cubes_form_synthematic_total",
+            "distinct_double_six_total_pairs",
+            "pentads_per_pair"
+          ],
+          "length": 11
+        }
+      ]
+    },
+    {
+      "sha": "c55bcb85c2e6c7af468008afc76fa17e25be787d",
+      "parents": [
+        "2075b52ee47724b8665d1e465bb1c9569be05d94"
+      ],
+      "full_message": "c55bcb85c2e6c7af468008afc76fa17e25be787d\n2026-11-09T10:32:51-05:00\nPass 12634 addendum 4: prior art for addendum 3 cited (P12523 totals/12+15/codewords; BT844/BT845 432 pentads in two chiral orbits; BT837 cores). New: the 432 E6 pezzotopes (positive-geometry regions of real cubic-surface moduli) = exactly the 432 maximal 5-line partial spreads = BT845's chiral pentads; PSp(4,3) has two orbits of 216; the two pezzotopes over every codeword have opposite chirality (216/216). GitKraken MCP unavailable this session; shell git used.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "blobs": [
+        {
+          "path": "analysis/PASS12634_NARUKI_FAN.md",
+          "bytes": 13962,
+          "sha256": "0a0f57914ce6f1ea2ae5f907d03340b2b36463fc9391a39c9e1b0b894b9f819a",
+          "lines": 128,
+          "kind": "Markdown",
+          "headings": [
+            "# Pass 12634: W(3,3) inside the tropical moduli space of cubic surfaces; the same 40 cusps as the Siegel level-3 moduli space",
+            "## The object",
+            "## Results (all checks pass, with controls)",
+            "## The bridge this makes",
+            "## Corrections to the corpus",
+            "## Prior art and novelty",
+            "## Next",
+            "## Addendum: the positive-geometry regions (E6 pezzotopes) are S5-pentads of W(3,3) lines (`w33_pezzotope_check.py`)",
+            "## Addendum 2: the E6 Bergman fan maps into the reconstructed fan (`w33_bergman_to_naruki.py`)",
+            "## Addendum 3: each pezzotope is a double-six with a synthematic total; the 432 regions double-cover the corpus's 216 codewords (`w33_pezzotope_gosset.py`)",
+            "## Addendum 4: prior art for addendum 3, and the chirality (`w33_pezzotope_chirality.py`)"
+          ]
+        },
+        {
+          "path": "analysis/w33_pezzotope_chirality.py",
+          "bytes": 4543,
+          "sha256": "293e12fc08303344648c37b896ed35342aae9231a29c88c7e89e0789fc617b51",
+          "lines": 85,
+          "kind": "Python",
+          "functions": [
+            "ext",
+            "transvection",
+            "act_line"
+          ]
+        },
+        {
+          "path": "data/w33_pezzotope_chirality.json",
+          "bytes": 268,
+          "sha256": "b59aebddb720171fa828cfaffa76511f861e99d2704348fa1a41863d1fe0283f",
+          "lines": 14,
+          "kind": "JSON",
+          "top_keys": [
+            "n_disjoint_5",
+            "n_maximal_5",
+            "pezzotopes_equal_maximal",
+            "psp_orbits_on_pezzotopes",
+            "orbits_closed_on_pentads",
+            "orbit_pairs_over_codewords",
+            "two_per_codeword_are_opposite_chirality"
+          ],
+          "length": 7
+        }
+      ]
+    },
+    {
+      "sha": "b00a35e6efb7e401709d7a1dbc1e5f2b38a3d2a4",
+      "parents": [
+        "c55bcb85c2e6c7af468008afc76fa17e25be787d"
+      ],
+      "full_message": "b00a35e6efb7e401709d7a1dbc1e5f2b38a3d2a4\n2026-11-09T10:59:30-05:00\nPass 12636 reserved: unextendible two-qutrit MUBs = cubic-surface geometry; chiral pezzotope pairs = codewords (claude track)\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "blobs": []
+    },
+    {
+      "sha": "68c5fde4061858f19f44fe2af853b3af15ad9575",
+      "parents": [
+        "b00a35e6efb7e401709d7a1dbc1e5f2b38a3d2a4"
+      ],
+      "full_message": "68c5fde4061858f19f44fe2af853b3af15ad9575\n2026-11-09T11:00:48-05:00\nPass 12636: maximal partial spreads of W(3,3) (= weakly unextendible two-qutrit Pauli MUB sets; Hilbert check: unbiased <=> disjoint on all 780 pairs) have exactly sizes 10/8/5 with counts 36/135/432 = roots / aaaa cones (orthogonal frames, bijective via multiplicity-6 roots) / E6 pezzotopes; no size 7. Chirality = reflection in the double-six root (216/216, control 0/216); left U right pentad = even 10-line set = corpus codeword (216 distinct; P173). Prior art cited (P12523, BT844/845, P173, MBGW, Thas, Cimrakova-Fack). GitKraken MCP unavailable this session; shell git used.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "blobs": [
+        {
+          "path": "analysis/PASS12636_UMUB_CUBIC_SURFACES.md",
+          "bytes": 3893,
+          "sha256": "a87858643b8f9eb4f0d88c50cac3d84a870e130044d2b8c6a0d05cf3f8ba5d2b",
+          "lines": 42,
+          "kind": "Markdown",
+          "headings": [
+            "# Pass 12636: every unextendible set of two-qutrit Pauli MUBs is a piece of cubic-surface geometry; a codeword is a chiral pair of positive-geometry regions",
+            "## 1. The spectrum of unextendible Pauli MUB sets in dimension 9",
+            "## 2. Chirality is one Weyl reflection, and a codeword is a left-right pair",
+            "## Prior art"
+          ]
+        },
+        {
+          "path": "analysis/w33_pentad_umub.py",
+          "bytes": 5744,
+          "sha256": "58c5930e3eda5d790396643327f4768d5639c8f3eea0e286348745dea33fed57",
+          "lines": 105,
+          "kind": "Python",
+          "functions": [
+            "bk",
+            "pauli",
+            "basis_of_line",
+            "unbiased",
+            "bk8"
+          ]
+        },
+        {
+          "path": "analysis/w33_pezzotope_reflection.py",
+          "bytes": 4276,
+          "sha256": "28afaa2940108911eb57c61d2babe574397c1f40a3306dddee3caebf92a0158a",
+          "lines": 69,
+          "kind": "Python",
+          "functions": [
+            "reflect_perm",
+            "image_pentad",
+            "point_degrees"
+          ]
+        },
+        {
+          "path": "data/w33_pentad_umub.json",
+          "bytes": 434,
+          "sha256": "022194e3ccfc2943c7e52355f2bd681b6614aabcecdbfbf7ee908979b0c4b808",
+          "lines": 20,
+          "kind": "JSON",
+          "top_keys": [
+            "maximal_partial_spread_sizes",
+            "n_size5",
+            "unbiased_iff_disjoint_all_pairs",
+            "pentad_is_5_MUBs",
+            "pauli_class_extensions",
+            "smallest_size",
+            "size8_root_multiplicity_profile",
+            "size8_missing_roots",
+            "size8_multiplicity6_roots_form_orthogonal_frame",
+            "size8_to_frames_bijective"
+          ],
+          "length": 10
+        },
+        {
+          "path": "data/w33_pezzotope_reflection.json",
+          "bytes": 313,
+          "sha256": "28fdeaf8a8c3f446ee7ffa7f5a48a263bd753c8bd66aad62a5ae27217a6cff84",
+          "lines": 18,
+          "kind": "JSON",
+          "top_keys": [
+            "reflection_in_double_six_root_maps_left_to_right",
+            "control_orthogonal_root",
+            "all_216",
+            "unions_size",
+            "unions_even",
+            "union_point_degree_profile",
+            "n_distinct_unions",
+            "corpus_count_pass173"
+          ],
+          "length": 8
+        }
+      ]
+    },
+    {
+      "sha": "2fc6db5483170e3916c49d101bf2332a960214e8",
+      "parents": [
+        "68c5fde4061858f19f44fe2af853b3af15ad9575"
+      ],
+      "full_message": "2fc6db5483170e3916c49d101bf2332a960214e8\n2026-11-09T11:02:33-05:00\nPass 12636 addendum (negative): E7 rung test: maximal partial spreads of W(5,2) (3-qubit Pauli UMUBs) = 960 spreads (stab 1512) + 24192 size-5 (stab A5); no orbit 60480, so E7 pezzotopes are not 3-qubit UMUB sets; E6 identification does not lift naively. GitKraken MCP unavailable this session; shell git used.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "blobs": [
+        {
+          "path": "analysis/PASS12636_UMUB_CUBIC_SURFACES.md",
+          "bytes": 5113,
+          "sha256": "13a66cb417fcf5a2ce3599dedd0eec46aa088b00d2f8671509a66fbf90773b78",
+          "lines": 54,
+          "kind": "Markdown",
+          "headings": [
+            "# Pass 12636: every unextendible set of two-qutrit Pauli MUBs is a piece of cubic-surface geometry; a codeword is a chiral pair of positive-geometry regions",
+            "## 1. The spectrum of unextendible Pauli MUB sets in dimension 9",
+            "## 2. Chirality is one Weyl reflection, and a codeword is a left-right pair",
+            "## Prior art",
+            "## Addendum: the E7 rung does not lift naively (`w33_e7_rung_mubs.py`, negative result)"
+          ]
+        },
+        {
+          "path": "analysis/w33_e7_rung_mubs.py",
+          "bytes": 3175,
+          "sha256": "4eb7ee4f8aebe1eb06fe302b471bcfd035cdd91882e9fdc2a6e981ea5a24d3f0",
+          "lines": 68,
+          "kind": "Python",
+          "functions": []
+        },
+        {
+          "path": "data/w33_e7_rung_mubs.json",
+          "bytes": 146,
+          "sha256": "2147db737e58e046cc894ffe50651da23be49084db22999cbce3b1e39c384e9e",
+          "lines": 16,
+          "kind": "JSON",
+          "top_keys": [
+            "n_lagrangian",
+            "sizes",
+            "orbits",
+            "has_60480"
+          ],
+          "length": 4
+        }
+      ]
+    },
+    {
+      "sha": "3776e1a0e1a18df20183083daffdfa92437f60d2",
+      "parents": [
+        "2fc6db5483170e3916c49d101bf2332a960214e8"
+      ],
+      "full_message": "3776e1a0e1a18df20183083daffdfa92437f60d2\n2026-11-09T11:03:31-05:00\nPass 12636: fix garbled sentence in E7 addendum. GitKraken MCP unavailable this session; shell git used.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "blobs": [
+        {
+          "path": "analysis/PASS12636_UMUB_CUBIC_SURFACES.md",
+          "bytes": 5097,
+          "sha256": "3d1cd268ad29a87f97e2df7983a6cab03daab3fddf87e6347801de7bdba4654d",
+          "lines": 54,
+          "kind": "Markdown",
+          "headings": [
+            "# Pass 12636: every unextendible set of two-qutrit Pauli MUBs is a piece of cubic-surface geometry; a codeword is a chiral pair of positive-geometry regions",
+            "## 1. The spectrum of unextendible Pauli MUB sets in dimension 9",
+            "## 2. Chirality is one Weyl reflection, and a codeword is a left-right pair",
+            "## Prior art",
+            "## Addendum: the E7 rung does not lift naively (`w33_e7_rung_mubs.py`, negative result)"
+          ]
+        }
+      ]
+    },
+    {
+      "sha": "76da3c2eaea6902ac05f7ece695ddc6c44b7c3f5",
+      "parents": [
+        "3776e1a0e1a18df20183083daffdfa92437f60d2"
+      ],
+      "full_message": "76da3c2eaea6902ac05f7ece695ddc6c44b7c3f5\n2026-11-09T11:07:00-05:00\nPass 12635 addendum: level ladder: level-2 (Segre/Igusa) tropical fans are affinely isomorphic (RSSS Thm 2.4), reconstructed: 25 rays, 105 edges (45 duad-duad = doily SRG(15,6,1,3)), 105 cones; doily point and line graphs isomorphic (self-dual). Level 3 splits into W(3,3) points (Burkhardt) vs lines (cubic surfaces) because W(3,q) is self-dual only for even q. GitKraken MCP unavailable this session; shell git used.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "blobs": [
+        {
+          "path": "analysis/PASS12635_BURKHARDT_FAN.md",
+          "bytes": 7335,
+          "sha256": "d475ab897156d9e314ef706c94e26a010e5f3d23c5f839dee9c6747ac03dbde6",
+          "lines": 85,
+          "kind": "Markdown",
+          "headings": [
+            "# Pass 12635: the two tropical moduli spaces of the corpus see the two halves of W(3,3)",
+            "## The object",
+            "## Reconstruction (every count matches the theorem)",
+            "## The duality",
+            "## The E7 next rung (literature, not computed)",
+            "## Addendum: an explicit dictionary between the two fans (`w33_split_bridge.py`, `data/w33_split_bridge.json`)",
+            "## Addendum: the level ladder explains the duality (`w33_level2_ladder.py`)"
+          ]
+        },
+        {
+          "path": "analysis/w33_level2_ladder.py",
+          "bytes": 3397,
+          "sha256": "7fa9261778bb082fd6fd7001e6a467814b97c4c166cfacdd6c0f92956c022dfe",
+          "lines": 42,
+          "kind": "Python",
+          "functions": [
+            "side",
+            "compatible",
+            "is_duad",
+            "srg"
+          ]
+        },
+        {
+          "path": "data/w33_level2_ladder.json",
+          "bytes": 266,
+          "sha256": "1ddfa93cf2447fd18c1f85189320504c3b40f7c06eb722eaf5287c1180267879",
+          "lines": 24,
+          "kind": "JSON",
+          "top_keys": [
+            "rays",
+            "edges",
+            "max_cones",
+            "edge_types",
+            "duad_graph",
+            "syntheme_graph",
+            "point_and_line_graphs_isomorphic",
+            "n_synthemes",
+            "matches_theorem"
+          ],
+          "length": 9
+        }
+      ]
+    },
+    {
+      "sha": "779cc43baffafb5f9200be878515880218cb5195",
+      "parents": [
+        "76da3c2eaea6902ac05f7ece695ddc6c44b7c3f5"
+      ],
+      "full_message": "779cc43baffafb5f9200be878515880218cb5195\n2026-11-09T11:22:46-05:00\nCertify integral Yoshida fibers and label the real pezzotope regions\n\nEnumerate and map all maximal nested cones, verify primitive integral lifting and balancing, and compute the two generic tropical slice graphs. Identify the inversion action on the projective order-three quotient and match the real Yoshida sign chambers to their pentad facets and partners.",
+      "blobs": [
+        {
+          "path": "analysis/2026-11-09_yoshida_integral_fibers_and_chirality.md",
+          "bytes": 9465,
+          "sha256": "1734c1068d6d1efd5a63ec29e64f4765872c03fbeef94b342cc0681a7e54392e",
+          "lines": 46,
+          "kind": "Markdown",
+          "headings": [
+            "# The integral Yoshida map, its fibers, and the pezzotope chirality character",
+            "## The matrix and all cones",
+            "## What the Yoshida valuations forget",
+            "## The global order-three obstruction carries chirality",
+            "## The real regions and their facet labels",
+            "## Reproduction and attribution"
+          ]
+        },
+        {
+          "path": "analysis/toe_20261109_real_yoshida_pezzotope_labels.py",
+          "bytes": 7701,
+          "sha256": "d53cb9e2c75e229b8e4979d37511480b355d9ef81170d485f1fec7cd314bd5ed",
+          "lines": 165,
+          "kind": "Python",
+          "functions": [
+            "canonical",
+            "root_reflections",
+            "chamber_regions",
+            "paired_regions",
+            "calculate"
+          ]
+        },
+        {
+          "path": "analysis/toe_20261109_yoshida_cone_census.py",
+          "bytes": 19467,
+          "sha256": "0ea511ed0b09aa33e5bdda8f6ad0d7002d2fda3c280a32b7cd4390e901ae40aa",
+          "lines": 459,
+          "kind": "Python",
+          "functions": [
+            "root_system",
+            "spans",
+            "components",
+            "nested_sets",
+            "yoshida",
+            "vector_key",
+            "images",
+            "maximal_cones",
+            "lattice_invariants",
+            "cone_images",
+            "verify_cover",
+            "weyl_reflections",
+            "cone_orbits",
+            "fiber_graph",
+            "fiber_census",
+            "balance",
+            "torsion_character",
+            "calculate"
+          ]
+        },
+        {
+          "path": "data/toe_20261109_real_yoshida_pezzotope_labels.json",
+          "bytes": 175331,
+          "sha256": "f12b0570b96a1ed11cba530e2b7b42af19e7707352e1c2095c19fc8ee1f6928f",
+          "lines": 12080,
+          "kind": "JSON",
+          "top_keys": [
+            "projective_root_chambers",
+            "projective_yoshida_sign_regions",
+            "root_chambers_per_region",
+            "determinant_parity_counts",
+            "root_labels",
+            "yoshida_row_labels",
+            "regions",
+            "chiral_pairs",
+            "boundary"
+          ],
+          "length": 9
+        },
+        {
+          "path": "data/toe_20261109_yoshida_cone_census.json",
+          "bytes": 12826,
+          "sha256": "a93fad72b9ee6e0d01492fdfb12567c246a804b0f5b141ad85f84f6a9d9f5551",
+          "lines": 1262,
+          "kind": "JSON",
+          "top_keys": [
+            "root_labels",
+            "yoshida_row_labels",
+            "flat_counts_by_rank",
+            "connected_flat_sizes",
+            "nested_maximal_cones",
+            "projected_support_dimensions",
+            "primitive_b_ray_scales",
+            "coverage_key",
+            "coverage",
+            "unit_weight_balancing",
+            "generic_set_theoretic_tropical_fibers",
+            "ambient_integral_smith_by_cone_type",
+            "yoshida_smith_nonzero",
+            "projectivized_yoshida_smith_nonzero",
+            "projective_torsion_character"
+          ],
+          "length": 15
+        },
+        {
+          "path": "data/toe_20261109_yoshida_validation.json",
+          "bytes": 12367,
+          "sha256": "f8a6892023ccdcdeadd848099bdc96142fafb8c9437f475b09af2ee8ce1ccc0d",
+          "lines": 964,
+          "kind": "JSON",
+          "top_keys": [
+            "attachment",
+            "parallel_inputs",
+            "artifact_raw_sha256",
+            "execution",
+            "desktop_commander",
+            "independent_modular_control",
+            "goepel_smith_control",
+            "literature",
+            "real_chamber_execution",
+            "parent_replay",
+            "continuity_decision"
+          ],
+          "length": 11
+        }
+      ]
+    },
+    {
+      "sha": "771410e3bdd8a73a171f8fb5b47a7a3288127df6",
+      "parents": [
+        "779cc43baffafb5f9200be878515880218cb5195"
+      ],
+      "full_message": "771410e3bdd8a73a171f8fb5b47a7a3288127df6\n2026-11-09T11:26:27-05:00\nRecover the binary cusp adjacency code from real chamber transitions",
+      "blobs": [
+        {
+          "path": "analysis/2026-11-09_yoshida_integral_fibers_and_chirality.md",
+          "bytes": 10618,
+          "sha256": "670baf13ad322a3ec12767de93b3d94b1204006fb4d7b371256edd609bd4b26a",
+          "lines": 50,
+          "kind": "Markdown",
+          "headings": [
+            "# The integral Yoshida map, its fibers, and the pezzotope chirality character",
+            "## The matrix and all cones",
+            "## What the Yoshida valuations forget",
+            "## The global order-three obstruction carries chirality",
+            "## The real regions and their facet labels",
+            "## A classical code from the partner sign changes",
+            "## Reproduction and attribution"
+          ]
+        },
+        {
+          "path": "data/toe_20261109_yoshida_validation.json",
+          "bytes": 13101,
+          "sha256": "01846b7daf263291dcfe346e92d4cd91e5050a30c4cbf425e782a89f868f4afc",
+          "lines": 983,
+          "kind": "JSON",
+          "top_keys": [
+            "attachment",
+            "parallel_inputs",
+            "artifact_raw_sha256",
+            "execution",
+            "desktop_commander",
+            "independent_modular_control",
+            "goepel_smith_control",
+            "literature",
+            "real_chamber_execution",
+            "parent_replay",
+            "continuity_decision",
+            "chiral_transition_code"
+          ],
+          "length": 12
+        },
+        {
+          "path": "tests/test_toe_20261109_yoshida_partner_code.py",
+          "bytes": 1420,
+          "sha256": "6ccc49506f171f682bcb15e31d95f8182a4f312dafa1463e64a37fd3447682af",
+          "lines": 40,
+          "kind": "Python",
+          "functions": [
+            "binary_span",
+            "test_yoshida_partner_differences_generate_h10"
+          ]
+        }
+      ]
+    },
+    {
+      "sha": "adacccd3d720e7acce29d8a92be70b008b4c5367",
+      "parents": [
+        "771410e3bdd8a73a171f8fb5b47a7a3288127df6"
+      ],
+      "full_message": "adacccd3d720e7acce29d8a92be70b008b4c5367\n2026-11-09T11:29:55-05:00\nIndex the Yoshida cone and pezzotope sign certificates",
+      "blobs": [
+        {
+          "path": "RESULTS_INDEX.md",
+          "bytes": 2669994,
+          "sha256": "b07348099ac52c367ba7389443a2f1d6a7350cd967d1d74d6789b1e8f9cdeff7",
+          "lines": 18809,
+          "kind": "Markdown",
+          "headings": [
+            "# RESULTS INDEX — search for the RESULT, not the topic",
+            "## Why this file exists",
+            "## How to use it",
+            "## Index"
+          ]
+        }
+      ]
+    },
+    {
+      "sha": "21bb7b2114be45355dd1685fb7278d7d241ba135",
+      "parents": [
+        "adacccd3d720e7acce29d8a92be70b008b4c5367"
+      ],
+      "full_message": "21bb7b2114be45355dd1685fb7278d7d241ba135\n2026-11-09T11:36:26-05:00\nPass 12636 addendum 2: the 135 size-8 unextendible MUB sets map 3-to-1 onto the 45 tensor splits; for every split the 24 maximally entangled stabiliser bases (P11143) are exactly the disjoint union of its three 8-sets (all 45). Cites Codex's Yoshida packet (779cc43ba) for the cone-by-cone and real-region identification. GitKraken MCP unavailable this session; shell git used.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "blobs": [
+        {
+          "path": "analysis/PASS12636_UMUB_CUBIC_SURFACES.md",
+          "bytes": 6545,
+          "sha256": "7d0e8667d897d00b6617216f3c0d3f19fca0509c3cde77c64532b8abc0f83ad7",
+          "lines": 70,
+          "kind": "Markdown",
+          "headings": [
+            "# Pass 12636: every unextendible set of two-qutrit Pauli MUBs is a piece of cubic-surface geometry; a codeword is a chiral pair of positive-geometry regions",
+            "## 1. The spectrum of unextendible Pauli MUB sets in dimension 9",
+            "## 2. Chirality is one Weyl reflection, and a codeword is a left-right pair",
+            "## Prior art",
+            "## Addendum: the E7 rung does not lift naively (`w33_e7_rung_mubs.py`, negative result)",
+            "## Addendum 2: the size-8 sets are the entangled bases of a factorisation (`w33_size8_splits.py`, `data/w33_size8_splits.json`)"
+          ]
+        },
+        {
+          "path": "analysis/w33_size8_splits.py",
+          "bytes": 3423,
+          "sha256": "2321e70d742a2c74ad84ccfa897b8680322605c0e8d19216b6aa54fd1d0fcee9",
+          "lines": 57,
+          "kind": "Python",
+          "functions": [
+            "bk"
+          ]
+        },
+        {
+          "path": "data/w33_size8_splits.json",
+          "bytes": 179,
+          "sha256": "4a37acdc3c3e461120f90e68ca0dabd0b56f99b2603673ef560e227597c051b0",
+          "lines": 13,
+          "kind": "JSON",
+          "top_keys": [
+            "n_eight",
+            "splits_hit",
+            "multiplicity",
+            "line_vs_split_profile",
+            "partition_check"
+          ],
+          "length": 5
+        }
+      ]
+    },
+    {
+      "sha": "f41f2d2ee539830c140fb5f1b94be98a8de0360c",
+      "parents": [
+        "21bb7b2114be45355dd1685fb7278d7d241ba135"
+      ],
+      "full_message": "f41f2d2ee539830c140fb5f1b94be98a8de0360c\n2026-11-09T11:39:57-05:00\nPass 12636 addendum 3: pezzotope amplitude: on every root (double-six) facet the residue is the 6-particle phi^3 tree amplitude with the 3 cusp facets (two-qutrit contexts) = 3-particle channels (long hexagon diagonals) and 6 orthogonal roots = 2-particle channels (all 432); cubes 8 vertices; prior art 2105.05833 and Codex 779cc43ba cited. GitKraken MCP unavailable this session; shell git used.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "blobs": [
+        {
+          "path": "analysis/PASS12636_UMUB_CUBIC_SURFACES.md",
+          "bytes": 8468,
+          "sha256": "def8fcf075fd8bf2ab3a9453c9b75f49c67dc5ad4b01425d8ad1b20cd804f573",
+          "lines": 87,
+          "kind": "Markdown",
+          "headings": [
+            "# Pass 12636: every unextendible set of two-qutrit Pauli MUBs is a piece of cubic-surface geometry; a codeword is a chiral pair of positive-geometry regions",
+            "## 1. The spectrum of unextendible Pauli MUB sets in dimension 9",
+            "## 2. Chirality is one Weyl reflection, and a codeword is a left-right pair",
+            "## Prior art",
+            "## Addendum: the E7 rung does not lift naively (`w33_e7_rung_mubs.py`, negative result)",
+            "## Addendum 2: the size-8 sets are the entangled bases of a factorisation (`w33_size8_splits.py`, `data/w33_size8_splits.json`)",
+            "## Addendum 3: the pezzotope amplitude factorises into 6-particle φ³ amplitudes, with contexts as the 3-particle channels (`w33_pezzotope_amplitude.py`)"
+          ]
+        },
+        {
+          "path": "analysis/w33_pezzotope_amplitude.py",
+          "bytes": 3614,
+          "sha256": "6cc5d5e0119f338a8994000028fdfea84c6afdb05e85aae87dd989f6e4102a63",
+          "lines": 58,
+          "kind": "Python",
+          "functions": [
+            "cross"
+          ]
+        },
+        {
+          "path": "data/w33_pezzotope_amplitude.json",
+          "bytes": 63,
+          "sha256": "9b09586235bc7efb8b4573bd8750dc8272b54a35f2beb7ec7bf0fdb7bb5a1c6f",
+          "lines": 6,
+          "kind": "JSON",
+          "top_keys": [
+            "summary",
+            "all_ok"
+          ],
+          "length": 2
+        }
+      ]
+    },
+    {
+      "sha": "3dd4b78cb004c3aeaf1afb1fa1d8b375a9aac4d0",
+      "parents": [
+        "f41f2d2ee539830c140fb5f1b94be98a8de0360c"
+      ],
+      "full_message": "3dd4b78cb004c3aeaf1afb1fa1d8b375a9aac4d0\n2026-11-09T11:47:38-05:00\nCompare chiral pezzotope canonical forms and their Kummer characters\n\nIdentify the correct Cremona partner in the exact atlas, compute the rational form ratio and its boundary orders, and certify 45 residues and integral character witnesses. The ratio-selected Schwinger potential has 19 Newton vertices and integral 25.",
+      "blobs": [
+        {
+          "path": "analysis/2026-11-09_pezzotope_canonical_reflection.md",
+          "bytes": 7328,
+          "sha256": "0cddd16cdccbb1b61fd2bbf86b3a892359769c53db1279b243366ad48a367f82",
+          "lines": 44,
+          "kind": "Markdown",
+          "headings": [
+            "# The canonical differential across a chiral pezzotope pair",
+            "## Identify the reflection before comparing the forms",
+            "## Residues separate the boundary supports",
+            "## The boundary comparison uses the order-three character",
+            "## The ratio fixes one scattering potential",
+            "## Reproduce"
+          ]
+        },
+        {
+          "path": "analysis/toe_20261109_pezzotope_canonical_partner.py",
+          "bytes": 18405,
+          "sha256": "4814b2c61114f9fcf6d2ded401671fe9b907d158167da32b21ac83a55b172595",
+          "lines": 429,
+          "kind": "Python",
+          "functions": [
+            "minors",
+            "conic",
+            "chart",
+            "normalize",
+            "cremona",
+            "positive_chart",
+            "u_functions",
+            "dlog_parameters",
+            "root_labels",
+            "yoshida_signs",
+            "root_exponents",
+            "u_and_y_exponents",
+            "facet_certificate",
+            "residue_certificate",
+            "kummer_certificate",
+            "transport_words",
+            "scattering_certificate",
+            "calculate"
+          ]
+        },
+        {
+          "path": "data/toe_20261109_pezzotope_canonical_partner.json",
+          "bytes": 59121,
+          "sha256": "fd9e1f0896ff73eaf7bacc3fe6b211c44a1469102091bff556d2f416af19005f",
+          "lines": 4770,
+          "kind": "JSON",
+          "top_keys": [
+            "seed_mask",
+            "partner_mask",
+            "partner_root",
+            "gale_negative_control_mask",
+            "canonical_chart_coefficient",
+            "partner_chart_coefficient",
+            "reflection_chart",
+            "reflection_jacobian",
+            "ratio",
+            "ratio_in_positive_chart",
+            "positive_chamber_bound",
+            "partner_chamber_bound",
+            "ordered_facet_labels",
+            "facet_residue_contractions",
+            "ordered_vertex_residues",
+            "seed_facet_orders_of_ratio",
+            "disjoint_facet_support_pairs",
+            "kummer_character_lattice",
+            "ratio_selected_scattering_potential",
+            "seed_to_region_weyl_words_in_application_order",
+            "orientation_convention",
+            "residues_scope",
+            "atlas_sha256"
+          ],
+          "length": 23
+        },
+        {
+          "path": "data/toe_20261109_pezzotope_canonical_validation.json",
+          "bytes": 2731,
+          "sha256": "ce441b488d932025a2e8a0b729795c1f67ef9b3cd0e88dfa03adf4a9fed12af9",
+          "lines": 67,
+          "kind": "JSON",
+          "top_keys": [
+            "parent",
+            "artifact_raw_sha256",
+            "producer",
+            "parent_test",
+            "independent_modular_checks",
+            "independent_cone_check",
+            "desktop_commander",
+            "candidate_triage",
+            "prototypes",
+            "continuity_decision",
+            "literature"
+          ],
+          "length": 11
+        }
+      ]
+    },
+    {
+      "sha": "3984dbce46520e9326ec9486a954616a57679005",
+      "parents": [
+        "3dd4b78cb004c3aeaf1afb1fa1d8b375a9aac4d0"
+      ],
+      "full_message": "3984dbce46520e9326ec9486a954616a57679005\n2026-11-09T11:50:57-05:00\nReplay the coarsened pezzotope face lattice and index the result",
+      "blobs": [
+        {
+          "path": "RESULTS_INDEX.md",
+          "bytes": 2670294,
+          "sha256": "0966fbc90d440305ad34655ffa58b689ac96dd3ea595dfdc353b5770f150de90",
+          "lines": 18810,
+          "kind": "Markdown",
+          "headings": [
+            "# RESULTS INDEX — search for the RESULT, not the topic",
+            "## Why this file exists",
+            "## How to use it",
+            "## Index"
+          ]
+        },
+        {
+          "path": "data/toe_20261109_pezzotope_canonical_validation.json",
+          "bytes": 3340,
+          "sha256": "6e57beb7db8c08b05b97db6c8017bb4ef6a3814adcee5faba8c2c6304f1815c3",
+          "lines": 96,
+          "kind": "JSON",
+          "top_keys": [
+            "parent",
+            "artifact_raw_sha256",
+            "producer",
+            "parent_test",
+            "independent_modular_checks",
+            "independent_cone_check",
+            "desktop_commander",
+            "candidate_triage",
+            "prototypes",
+            "continuity_decision",
+            "literature",
+            "newton_face_replay"
+          ],
+          "length": 12
+        },
+        {
+          "path": "tests/test_toe_20261109_pezzotope_canonical_newton.py",
+          "bytes": 1591,
+          "sha256": "5e071721df89c57368cf41571ea80718617812e51d888a47dae3d560c0c3051b",
+          "lines": 40,
+          "kind": "Python",
+          "functions": [
+            "test_selected_newton_face_lattice"
+          ]
+        }
+      ]
+    },
+    {
+      "sha": "6bdb21f397ff7ca46bc8a68b593f6889148958bf",
+      "parents": [
+        "3984dbce46520e9326ec9486a954616a57679005"
+      ],
+      "full_message": "6bdb21f397ff7ca46bc8a68b593f6889148958bf\n2026-11-09T11:58:05-05:00\nPass 12637 reserved: six particles of the double-six amplitude, hidden zeros, strong unextendibility, triality, region graph, E7 and q=5 (claude track)\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "blobs": []
+    },
+    {
+      "sha": "88c504a7ae6eacafcfc0942918eb44c2eb676350",
+      "parents": [
+        "6bdb21f397ff7ca46bc8a68b593f6889148958bf"
+      ],
+      "full_message": "88c504a7ae6eacafcfc0942918eb44c2eb676350\n2026-11-09T12:05:06-05:00\nCertify canonical Standard Model flatness obstruction and chiral repair",
+      "blobs": [
+        {
+          "path": "analysis/2026-11-09_canonical_sm_flatness.md",
+          "bytes": 8411,
+          "sha256": "3c8b7304414ede7111d72b143e077db099b11c7a419ca9e569f6adfd201b8ae6",
+          "lines": 43,
+          "kind": "Markdown",
+          "headings": [
+            "# A flatness obstruction for the canonical Standard Model and its family twists",
+            "## Every compact family twist of the fixed internal embedding",
+            "## An exact two-dual repair",
+            "## Anomaly and mass ledger",
+            "## Sources and replay"
+          ]
+        },
+        {
+          "path": "analysis/toe_20261109_canonical_sm_flatness.py",
+          "bytes": 12443,
+          "sha256": "32259b2fe9fdde88519e2f6462acf696ab5ad6102459c5a255da91026010ccbc",
+          "lines": 229,
+          "kind": "Python",
+          "functions": [
+            "read",
+            "compact_chart",
+            "family_embeddings",
+            "central_adjoint_check",
+            "adjoint_charges",
+            "mass_spectrum",
+            "dual_repair",
+            "calculate"
+          ]
+        },
+        {
+          "path": "data/toe_20261109_canonical_sm_flatness.json",
+          "bytes": 6858,
+          "sha256": "aae805ceda4197a2702f6bb8d58d95fa489f3640c4a4ae817897687243e48b14",
+          "lines": 331,
+          "kind": "JSON",
+          "top_keys": [
+            "status",
+            "original_field_content",
+            "scope",
+            "family_embeddings",
+            "adjoint_center_check_rank",
+            "repair",
+            "perturbative_family_anomaly"
+          ],
+          "length": 7
+        }
+      ]
+    },
+    {
+      "sha": "767cdd3e2e4d9b4c702c78a45a8257461b2c095c",
+      "parents": [
+        "88c504a7ae6eacafcfc0942918eb44c2eb676350"
+      ],
+      "full_message": "767cdd3e2e4d9b4c702c78a45a8257461b2c095c\n2026-11-09T12:10:04-05:00\nBound the mass rank for all compatible renormalizable couplings",
+      "blobs": [
+        {
+          "path": "analysis/2026-11-09_canonical_sm_flatness.md",
+          "bytes": 9119,
+          "sha256": "663084beb379c5ec89d70086c3814f9d1f78e0a53ee0065f4bacff7db007c355",
+          "lines": 45,
+          "kind": "Markdown",
+          "headings": [
+            "# A flatness obstruction for the canonical Standard Model and its family twists",
+            "## Every compact family twist of the fixed internal embedding",
+            "## An exact two-dual repair",
+            "## Anomaly and mass ledger",
+            "## Sources and replay"
+          ]
+        },
+        {
+          "path": "analysis/toe_20261109_canonical_sm_flatness.py",
+          "bytes": 14495,
+          "sha256": "517a2fb8d7e522346d0989c5d0a1f174abeac98c72c518af675f14fb45ac1ab7",
+          "lines": 270,
+          "kind": "Python",
+          "functions": [
+            "read",
+            "compact_chart",
+            "family_embeddings",
+            "central_adjoint_check",
+            "adjoint_charges",
+            "holomorphic_hessian",
+            "mass_spectrum",
+            "generic_mass_ranks",
+            "dual_repair",
+            "calculate"
+          ]
+        },
+        {
+          "path": "data/toe_20261109_canonical_sm_flatness.json",
+          "bytes": 7147,
+          "sha256": "3c991ae6243f8ce01998a589eff667868c7d9655d9455250306c389629584bb0",
+          "lines": 347,
+          "kind": "JSON",
+          "top_keys": [
+            "status",
+            "original_field_content",
+            "scope",
+            "family_embeddings",
+            "adjoint_center_check_rank",
+            "repair",
+            "perturbative_family_anomaly"
+          ],
+          "length": 7
+        }
+      ]
+    },
+    {
+      "sha": "9b129a7273692861da2d722b5f68a268937e454c",
+      "parents": [
+        "767cdd3e2e4d9b4c702c78a45a8257461b2c095c"
+      ],
+      "full_message": "9b129a7273692861da2d722b5f68a268937e454c\n2026-11-09T12:13:51-05:00\nLift the adjoint and anomaly spectator at the exact Standard Model vacuum",
+      "blobs": [
+        {
+          "path": "analysis/2026-11-09_canonical_sm_flatness.md",
+          "bytes": 10585,
+          "sha256": "80ea3aed068a938a212aaea450fc88ca5daa5ddbf7fd91e31353db5530ba1ecb",
+          "lines": 51,
+          "kind": "Markdown",
+          "headings": [
+            "# A flatness obstruction for the canonical Standard Model and its family twists",
+            "## Every compact family twist of the fixed internal embedding",
+            "## An exact two-dual repair",
+            "## Anomaly and mass ledger",
+            "## Two higher-degree masses at the same VEV",
+            "## Sources and replay"
+          ]
+        },
+        {
+          "path": "analysis/toe_20261109_canonical_sm_flatness.py",
+          "bytes": 17190,
+          "sha256": "fc5d57ce1c61cfdadace27220c26502a73a7f599791dc29526ba8eff73415af3",
+          "lines": 325,
+          "kind": "Python",
+          "functions": [
+            "read",
+            "compact_chart",
+            "family_embeddings",
+            "central_adjoint_check",
+            "adjoint_charges",
+            "holomorphic_hessian",
+            "mass_spectrum",
+            "generic_mass_ranks",
+            "sextic_adjoint_hessian",
+            "spectator_hessian",
+            "dual_repair",
+            "calculate"
+          ]
+        },
+        {
+          "path": "data/toe_20261109_canonical_sm_flatness.json",
+          "bytes": 9556,
+          "sha256": "08b38199cb421413aee53753b6fb723a9e11807e34a4d318317782545b2d73fe",
+          "lines": 465,
+          "kind": "JSON",
+          "top_keys": [
+            "status",
+            "original_field_content",
+            "scope",
+            "family_embeddings",
+            "adjoint_center_check_rank",
+            "repair",
+            "perturbative_family_anomaly"
+          ],
+          "length": 7
+        }
+      ]
+    },
+    {
+      "sha": "ac5a4fd5058ef1d7d1b361f085b10cc17eb7690a",
+      "parents": [
+        "9b129a7273692861da2d722b5f68a268937e454c"
+      ],
+      "full_message": "ac5a4fd5058ef1d7d1b361f085b10cc17eb7690a\n2026-11-09T12:17:21-05:00\nResolve the repaired vacuum into exact Standard Model multiplets",
+      "blobs": [
+        {
+          "path": "analysis/2026-11-09_canonical_sm_flatness.md",
+          "bytes": 10910,
+          "sha256": "ada735f822330253feffb8dfaa5bfac594d2437bd343010b4110d7c50792d330",
+          "lines": 53,
+          "kind": "Markdown",
+          "headings": [
+            "# A flatness obstruction for the canonical Standard Model and its family twists",
+            "## Every compact family twist of the fixed internal embedding",
+            "## An exact two-dual repair",
+            "## Anomaly and mass ledger",
+            "## Two higher-degree masses at the same VEV",
+            "## Sources and replay"
+          ]
+        },
+        {
+          "path": "analysis/toe_20261109_canonical_sm_flatness.py",
+          "bytes": 18554,
+          "sha256": "fb83ad0b542d0e9580fcf9b420c70bc4c2bedd791d705828a26bc6fe369e888d",
+          "lines": 353,
+          "kind": "Python",
+          "functions": [
+            "read",
+            "compact_chart",
+            "family_embeddings",
+            "central_adjoint_check",
+            "adjoint_charges",
+            "holomorphic_hessian",
+            "mass_spectrum",
+            "generic_mass_ranks",
+            "sextic_adjoint_hessian",
+            "spectator_hessian",
+            "field_charges",
+            "sm_weight_check",
+            "dual_repair",
+            "calculate"
+          ]
+        },
+        {
+          "path": "data/toe_20261109_canonical_sm_flatness.json",
+          "bytes": 12233,
+          "sha256": "9b40ffac6b478f278c6ff0142c531d4f87fb528d4720621563ed3112419acf15",
+          "lines": 657,
+          "kind": "JSON",
+          "top_keys": [
+            "status",
+            "original_field_content",
+            "scope",
+            "family_embeddings",
+            "adjoint_center_check_rank",
+            "repair",
+            "perturbative_family_anomaly"
+          ],
+          "length": 7
+        }
+      ]
+    },
+    {
+      "sha": "6b642d5dc92ea900352c786c86744e68f6b426c8",
+      "parents": [
+        "6bdb21f397ff7ca46bc8a68b593f6889148958bf"
+      ],
+      "full_message": "6b642d5dc92ea900352c786c86744e68f6b426c8\n2026-11-09T12:35:02-05:00\nPass 12637: six particles of each double-six facet amplitude = the six lines of a six in cyclic order (4320/4320; residue zeros 1200/1200); hidden zeros do not lift (44 single-point hits all failed re-test); pentads numerically STRONGLY unextendible 5-MUB sets in d=9 (min 0.1471 vs controls 1e-17; size-8 0.444 consistent with Szanto); triality on the 3 entangled 8-MUB classes = Z3 in PSp(4,3), S3 in PGSp(4,3) with transpositions only antiunitary (45/45); E7 candidate: unique 60480 Sp(6,2)-orbit of Lagrangian triples (dims 0,1,2), stabiliser exactly S4; q-ladder 2/3/5 (3-3, 4-2, 6-2); standalone QI note. GitKraken MCP unavailable this session; shell git used.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "blobs": [
+        {
+          "path": "analysis/NOTE_TWO_QUTRIT_UNEXTENDIBLE_MUBS.md",
+          "bytes": 4014,
+          "sha256": "2d888d69d9cf03a2e73e8c7c0727e2d76b5b1e9e1411a8765da0654274c28f99",
+          "lines": 56,
+          "kind": "Markdown",
+          "headings": [
+            "# Unextendible mutually unbiased bases of two qutrits: the complete Pauli-class picture",
+            "## Setting",
+            "## Results",
+            "## Where this comes from"
+          ]
+        },
+        {
+          "path": "analysis/PASS12637_SIX_PARTICLES_TRIALITY.md",
+          "bytes": 4966,
+          "sha256": "4296ffcb0fc84ee8d4deda5d248d34a00a9ae40a774936a9fcfffb4d6e6bcf61",
+          "lines": 65,
+          "kind": "Markdown",
+          "headings": [
+            "# Pass 12637: the six particles are a six; no lifted hidden zeros; strongly unextendible MUBs; triality needs the antiunitary coset; an E7 candidate; the q-ladder",
+            "## 1. The six external particles (`w33_six_particles.py`, all 4320 root facets of the 432 pezzotopes)",
+            "## 2. Hidden zeros do not lift (`w33_pezzotope_hidden_zeros.py`; negative)",
+            "## 3. Item 3: standalone note",
+            "## 4. Strongly unextendible MUBs (`w33_pentad_strong_umub.py`; outside-the-box 1)",
+            "## 5. Triality (`w33_split_triality.py`; outside-the-box 2)",
+            "## 6. The E7 rung: a candidate (`w33_e7_orbit_census.py`, `w33_e7_scalene.py`; item 4 + outside-the-box 3)",
+            "## 7. The q-ladder (`w33_q_ladder.py`; item 5)"
+          ]
+        },
+        {
+          "path": "analysis/w33_e7_orbit_census.py",
+          "bytes": 2856,
+          "sha256": "9d54933cb01b624394b65e7d4fdf4a456c51af3e20d7e779c2991e6ec4162bfe",
+          "lines": 51,
+          "kind": "Python",
+          "functions": [
+            "inter_dim",
+            "orbits_of"
+          ]
+        },
+        {
+          "path": "analysis/w33_e7_scalene.py",
+          "bytes": 4324,
+          "sha256": "cda3aeeff6060c4b5e661e43e34f4f4728672b1bf10e5ec7427a565997f7dfb4",
+          "lines": 87,
+          "kind": "Python",
+          "functions": [
+            "perp_to_plane",
+            "inv2",
+            "act",
+            "order",
+            "orbits"
+          ]
+        },
+        {
+          "path": "analysis/w33_pentad_strong_umub.py",
+          "bytes": 2894,
+          "sha256": "36beaed2627d0efef68220f550abb44953d5f14dc63184ca14525dcee7b6d218",
+          "lines": 53,
+          "kind": "Python",
+          "functions": [
+            "states",
+            "minF",
+            "bk"
+          ]
+        },
+        {
+          "path": "analysis/w33_pezzotope_hidden_zeros.py",
+          "bytes": 10533,
+          "sha256": "c0cc57790a9c646a113c4188cad7083b73c87db9c2d0e89edf02b049e971d01b",
+          "lines": 199,
+          "kind": "Python",
+          "functions": [
+            "crosses",
+            "A6",
+            "Xget",
+            "zero_point",
+            "pezzo",
+            "hexagon_labels",
+            "m_of",
+            "rect_eqs"
+          ]
+        },
+        {
+          "path": "analysis/w33_q_ladder.py",
+          "bytes": 2735,
+          "sha256": "6ef7cb76026eec9ad39a9eb5f16e845c8e938d4af6407d0ae47c4f564c373aed",
+          "lines": 48,
+          "kind": "Python",
+          "functions": [
+            "ladder"
+          ]
+        },
+        {
+          "path": "analysis/w33_six_particles.py",
+          "bytes": 6782,
+          "sha256": "5bad6871ab815328ac7d37f4e69c1ed74c42b29a9119600a12aeb4fbec8d60e1",
+          "lines": 102,
+          "kind": "Python",
+          "functions": []
+        },
+        {
+          "path": "analysis/w33_split_triality.py",
+          "bytes": 5055,
+          "sha256": "5fa689e65308946db5e7c0aa4afcb871215766991ba05e9e153720d4fa570615",
+          "lines": 86,
+          "kind": "Python",
+          "functions": [
+            "lines_of"
+          ]
+        },
+        {
+          "path": "data/w33_e7_orbit_census.json",
+          "bytes": 779,
+          "sha256": "7e16e4d531bb9407fc3526ef288c45e963e69ecfc886b2ed38ba6592428c61a1",
+          "lines": 124,
+          "kind": "JSON",
+          "top_keys": [
+            "pair_orbits",
+            "triple_orbits",
+            "orbits_60480_or_120960"
+          ],
+          "length": 3
+        },
+        {
+          "path": "data/w33_e7_scalene.json",
+          "bytes": 620,
+          "sha256": "6cf3409e1f77cb40b7f43ce3fc25e2a1f39b3b8514f25869e06a3e42b8f2b009",
+          "lines": 68,
+          "kind": "JSON",
+          "top_keys": [
+            "classes",
+            "sizes",
+            "has_10",
+            "has_12",
+            "has_9",
+            "stab_order",
+            "element_orders",
+            "point_orbits",
+            "plane_orbits"
+          ],
+          "length": 9
+        },
+        {
+          "path": "data/w33_pentad_strong_umub.json",
+          "bytes": 321,
+          "sha256": "f2110bc8c65b70bed2c7b1485a0d8e56d9700eb1da2130a995d089e2e79e1db0",
+          "lines": 16,
+          "kind": "JSON",
+          "top_keys": [
+            "control_spread4_min",
+            "pentad_4subsets_min",
+            "pentads_min",
+            "strongly_unextendible"
+          ],
+          "length": 4
+        },
+        {
+          "path": "data/w33_pezzotope_hidden_zeros.json",
+          "bytes": 1297,
+          "sha256": "2c4789085abd0df74f2fcce3e079f1233a14dc6b4abd014070e65e0323c605c1",
+          "lines": 152,
+          "kind": "JSON",
+          "top_keys": [
+            "control_zero",
+            "control_random_nonzero",
+            "summary",
+            "simultaneous",
+            "simultaneous_examples",
+            "verified_hits",
+            "genuine_zero_shapes",
+            "genuine_zero_list"
+          ],
+          "length": 8
+        },
+        {
+          "path": "data/w33_q_ladder.json",
+          "bytes": 520,
+          "sha256": "2b5573a67cac697bfdef66f11d7ace703d9928d214e0c95653684c863a28db7e",
+          "lines": 38,
+          "kind": "JSON",
+          "top_keys": [],
+          "length": 3
+        },
+        {
+          "path": "data/w33_six_particles.json",
+          "bytes": 292,
+          "sha256": "95266af7513d422446c4e02cc057911d99d3780b68dabd88c4ada0710973f080",
+          "lines": 9,
+          "kind": "JSON",
+          "top_keys": [
+            "stats",
+            "example",
+            "particles_test"
+          ],
+          "length": 3
+        },
+        {
+          "path": "data/w33_split_triality.json",
+          "bytes": 97,
+          "sha256": "10e76f4c6124f765d1387ddd828eec6f5f5d6dd50075320b42b2e5ee5e2fa3be",
+          "lines": 8,
+          "kind": "JSON",
+          "top_keys": [
+            "summary",
+            "pgsp"
+          ],
+          "length": 2
+        }
+      ]
+    },
+    {
+      "sha": "5a005197ff49929214c7fbe9aea4fc802d4b6d8d",
+      "parents": [
+        "6b642d5dc92ea900352c786c86744e68f6b426c8",
+        "ac5a4fd5058ef1d7d1b361f085b10cc17eb7690a"
+      ],
+      "full_message": "5a005197ff49929214c7fbe9aea4fc802d4b6d8d\n2026-11-09T12:35:10-05:00\nMerge remote-tracking branch 'origin/master' into HEAD",
+      "blobs": [
+        {
+          "path": "analysis/2026-11-09_canonical_sm_flatness.md",
+          "bytes": 10910,
+          "sha256": "ada735f822330253feffb8dfaa5bfac594d2437bd343010b4110d7c50792d330",
+          "lines": 53,
+          "kind": "Markdown",
+          "headings": [
+            "# A flatness obstruction for the canonical Standard Model and its family twists",
+            "## Every compact family twist of the fixed internal embedding",
+            "## An exact two-dual repair",
+            "## Anomaly and mass ledger",
+            "## Two higher-degree masses at the same VEV",
+            "## Sources and replay"
+          ]
+        },
+        {
+          "path": "analysis/toe_20261109_canonical_sm_flatness.py",
+          "bytes": 18554,
+          "sha256": "fb83ad0b542d0e9580fcf9b420c70bc4c2bedd791d705828a26bc6fe369e888d",
+          "lines": 353,
+          "kind": "Python",
+          "functions": [
+            "read",
+            "compact_chart",
+            "family_embeddings",
+            "central_adjoint_check",
+            "adjoint_charges",
+            "holomorphic_hessian",
+            "mass_spectrum",
+            "generic_mass_ranks",
+            "sextic_adjoint_hessian",
+            "spectator_hessian",
+            "field_charges",
+            "sm_weight_check",
+            "dual_repair",
+            "calculate"
+          ]
+        },
+        {
+          "path": "data/toe_20261109_canonical_sm_flatness.json",
+          "bytes": 12233,
+          "sha256": "9b40ffac6b478f278c6ff0142c531d4f87fb528d4720621563ed3112419acf15",
+          "lines": 657,
+          "kind": "JSON",
+          "top_keys": [
+            "status",
+            "original_field_content",
+            "scope",
+            "family_embeddings",
+            "adjoint_center_check_rank",
+            "repair",
+            "perturbative_family_anomaly"
+          ],
+          "length": 7
+        }
+      ]
+    },
+    {
+      "sha": "3b8f728dd45289e77e11bc3196576077d7eb4643",
+      "parents": [
+        "5a005197ff49929214c7fbe9aea4fc802d4b6d8d"
+      ],
+      "full_message": "3b8f728dd45289e77e11bc3196576077d7eb4643\n2026-11-09T12:54:36-05:00\nPass 12638 reserved: exact strong-unextendibility certificate, cube channels, triality/chirality element, E7 facets, cross-rung (claude track)\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "blobs": []
+    }
+  ],
+  "final_files": [
+    {
+      "path": "RESULTS_INDEX.md",
+      "bytes": 2670294,
+      "sha256": "0966fbc90d440305ad34655ffa58b689ac96dd3ea595dfdc353b5770f150de90",
+      "lines": 18810,
+      "kind": "Markdown",
+      "headings": [
+        "# RESULTS INDEX — search for the RESULT, not the topic",
+        "## Why this file exists",
+        "## How to use it",
+        "## Index"
+      ]
+    },
+    {
+      "path": "TOPICAL_ALIASES.md",
+      "bytes": 360136,
+      "sha256": "142e496f7345774626dcaf0486e8b891a96ca04022f5f7acc2631596fa799fb7",
+      "lines": 1301,
+      "kind": "Markdown",
+      "headings": [
+        "# Topical aliases — result tokens to files"
+      ]
+    },
+    {
+      "path": "analysis/2026-07-15_pass84_e6_w33_explicit_iso.md",
+      "bytes": 5282,
+      "sha256": "08fa85af66364fd874f6cde64b4c248d7c696d54c3e77c45c494fa3956a2995e",
+      "lines": 151,
+      "kind": "Markdown",
+      "headings": [
+        "# W33-Theory: Pass 84 — Explicit E₆/W(E₆) ≅ PSp(4,3) Isomorphism",
+        "## Date: 2026-07-15",
+        "## The Exceptional Isomorphism",
+        "## E₆ Root System Data",
+        "## W(3,3) in E₆ Language",
+        "## The Explicit Dictionary",
+        "## Generators: PSp(4,3) from W(E₆)",
+        "## The 27 Lines ↔ W33 Geometry",
+        "## Code-Level Isomorphism",
+        "## Summary"
+      ]
+    },
+    {
+      "path": "analysis/2026-11-08_exact_signed_cubic_and_three_copy_vacuum.md",
+      "bytes": 7823,
+      "sha256": "8d9438a9da4427bf1621ba0579803a147c9ecbae0604bfb9375887516a97f0b8",
+      "lines": 50,
+      "kind": "Markdown",
+      "headings": [
+        "# Exact signed cubic generators and a three-copy vacuum",
+        "## Scope and prior work",
+        "## The exact coefficient kernel",
+        "## What the invariant permits",
+        "## A balanced three-copy point and its physical zero modes"
+      ]
+    },
+    {
+      "path": "analysis/2026-11-08_invariant_magnetic_cone_completion.md",
+      "bytes": 10959,
+      "sha256": "96a178b47e274abb44b2eda5e93f6c2bddef553f51b8296d121bc50e8a5a087c",
+      "lines": 80,
+      "kind": "Markdown",
+      "headings": [
+        "# Native magnetic homogenization: an obstruction and a positive invariant completion",
+        "## Prior ownership and intake",
+        "## Exact optical elimination of all 1,287 short faces",
+        "## Why positive reweighting cannot repair the short faces",
+        "## A positivity obstruction at the original unit weights",
+        "## A positive finite-loop construction",
+        "## Numerical evidence and limits"
+      ]
+    },
+    {
+      "path": "analysis/2026-11-08_native_halfturn_and_species_orientation.md",
+      "bytes": 6885,
+      "sha256": "5ca82dc9d1555fd81e8b7370c9c8eb69c3290a38166461e019404de70d474a00",
+      "lines": 31,
+      "kind": "Markdown",
+      "headings": [
+        "# Native Albert half-turn and an isolated three-copy vacuum",
+        "## The half-turn induces a two-qutrit operation on the vacuum support",
+        "## A degree-six invariant lifts the species modes",
+        "## Reproduction and parallel work"
+      ]
+    },
+    {
+      "path": "analysis/2026-11-09_canonical_sm_flatness.md",
+      "bytes": 10910,
+      "sha256": "ada735f822330253feffb8dfaa5bfac594d2437bd343010b4110d7c50792d330",
+      "lines": 53,
+      "kind": "Markdown",
+      "headings": [
+        "# A flatness obstruction for the canonical Standard Model and its family twists",
+        "## Every compact family twist of the fixed internal embedding",
+        "## An exact two-dual repair",
+        "## Anomaly and mass ledger",
+        "## Two higher-degree masses at the same VEV",
+        "## Sources and replay"
+      ]
+    },
+    {
+      "path": "analysis/2026-11-09_pezzotope_canonical_reflection.md",
+      "bytes": 7328,
+      "sha256": "0cddd16cdccbb1b61fd2bbf86b3a892359769c53db1279b243366ad48a367f82",
+      "lines": 44,
+      "kind": "Markdown",
+      "headings": [
+        "# The canonical differential across a chiral pezzotope pair",
+        "## Identify the reflection before comparing the forms",
+        "## Residues separate the boundary supports",
+        "## The boundary comparison uses the order-three character",
+        "## The ratio fixes one scattering potential",
+        "## Reproduce"
+      ]
+    },
+    {
+      "path": "analysis/2026-11-09_yoshida_integral_fibers_and_chirality.md",
+      "bytes": 10618,
+      "sha256": "670baf13ad322a3ec12767de93b3d94b1204006fb4d7b371256edd609bd4b26a",
+      "lines": 50,
+      "kind": "Markdown",
+      "headings": [
+        "# The integral Yoshida map, its fibers, and the pezzotope chirality character",
+        "## The matrix and all cones",
+        "## What the Yoshida valuations forget",
+        "## The global order-three obstruction carries chirality",
+        "## The real regions and their facet labels",
+        "## A classical code from the partner sign changes",
+        "## Reproduction and attribution"
+      ]
+    },
+    {
+      "path": "analysis/HANDOFF_CLAUDE_TO_CHAT_20261106.md",
+      "bytes": 9106,
+      "sha256": "8d5d8d50bc012efc53b17fb378eb28cacc8610471bfaf225676ca5c9c42af622",
+      "lines": 62,
+      "kind": "Markdown",
+      "headings": [
+        "# Handoff, Claude track → Chat track, 2026-11-06",
+        "## Update (same day): the coupled sterile-neutrino corridor",
+        "## Reply, 2026-11-08: your audit (3869fe29c, 4b97ce7d1, c7079f950) is accepted",
+        "## Update, 2026-11-08 (afternoon): for your audit tooling",
+        "## Update, 2026-11-08 (later): quality quantified; KiDS replication; a question",
+        "## Update 2026-11-08 evening: correction, please read before using any shear number (Passes 12632–12633)",
+        "## Update 2026-11-08 night: corrected held-out shear, for your fail-closed cosmology gate (5b2766be1)"
+      ]
+    },
+    {
+      "path": "analysis/NOTE_DARK_ENERGY_EVIDENCE_20261108.md",
+      "bytes": 4601,
+      "sha256": "a81484d0d9ca6d902c2c38967187e0e82878eb609ca8ab1c3b97a8ba2e776de1",
+      "lines": 42,
+      "kind": "Markdown",
+      "headings": [
+        "# What the data say about evolving dark energy (one page; revised 2026-11-08 after the CLASS halofit correction)"
+      ]
+    },
+    {
+      "path": "analysis/NOTE_TWO_QUTRIT_UNEXTENDIBLE_MUBS.md",
+      "bytes": 4014,
+      "sha256": "2d888d69d9cf03a2e73e8c7c0727e2d76b5b1e9e1411a8765da0654274c28f99",
+      "lines": 56,
+      "kind": "Markdown",
+      "headings": [
+        "# Unextendible mutually unbiased bases of two qutrits: the complete Pauli-class picture",
+        "## Setting",
+        "## Results",
+        "## Where this comes from"
+      ]
+    },
+    {
+      "path": "analysis/PASS12631_KIDS_HELDOUT.md",
+      "bytes": 12429,
+      "sha256": "2a6c0d692b0b1a3a7d3b81e3e9127d2a0414dc5865cb1565296232930739beec",
+      "lines": 147,
+      "kind": "Markdown",
+      "headings": [
+        "# Pass 12631: held-out shear on two independent surveys erases CPL's out-of-sample advantage, while the fading coupling keeps it; the natural (KLT) completion faces a dark-energy-or-quality choice",
+        "## 1. KiDS-Legacy held out",
+        "## 2. The combined out-of-sample ledger (Dovekie)",
+        "## 3. The natural completion's dark-energy-or-quality choice",
+        "## 4. Not done, and why",
+        "## Sources",
+        "## Addendum: the mechanism is a tomographic tilt, not an amplitude excess (`shear_diag.py`)",
+        "## Correction (same day): where the penalty actually sits; frozen S7's mechanism clause is wrong",
+        "## Addendum: the KLT-family model out of sample and on held-out shear (provisional)",
+        "## Addendum: growth or geometry? Both (`shear_hybrid.py`); S8 frozen; overlap bound",
+        "## Addendum: KLT BAO-held MCMC (`mcmc_holdout.py dovekie bao klt25 20 60 1`)",
+        "## Addendum: KLT f-scan (`klt_fscan.py`, patched halofit build `class_klt2`)"
+      ]
+    },
+    {
+      "path": "analysis/PASS12632_HALOFIT_SCF_BUG.md",
+      "bytes": 14692,
+      "sha256": "4022b2c6c0c065025b89fedfea9284a61baa67e60daaa29c1a84e896dc215bf5",
+      "lines": 189,
+      "kind": "Markdown",
+      "headings": [
+        "# Pass 12632: a CLASS halofit bug invalidates every scalar-field shear prediction since Pass 12629 (correction notice; corrected numbers to follow)",
+        "## The bug",
+        "## Controls (`analysis/toe_uv/halofit_check.py`)",
+        "## The fix (`analysis/toe_uv/class_halofit_scf_patch.py`)",
+        "## Impact on the training fits is small (`hf_impact.py`; same parameters, no refit)",
+        "## What is withdrawn until rerun",
+        "## Addendum 1: independent check of the patch, and the corrected fixed-background shear",
+        "## Addendum 2: a second nonlinear model (HMcode) agrees",
+        "## Addendum 3: reproduced on stock CLASS and reported upstream (lesgourg/class_public#682)",
+        "## Addendum 4: scale-cut robustness, S9 frozen, and an audit of every other halofit consumer",
+        "## Addendum 5: Pass 12583's shear-equivalent S8, rerun with patched builds",
+        "## Addendum 6: the corrected combined out-of-sample ledger (Dovekie)",
+        "## Addendum 7: patched refit of the training fits (`hf_refit.py`, `hf_refit_dovekie.json`)"
+      ]
+    },
+    {
+      "path": "analysis/PASS12634_NARUKI_FAN.md",
+      "bytes": 13962,
+      "sha256": "0a0f57914ce6f1ea2ae5f907d03340b2b36463fc9391a39c9e1b0b894b9f819a",
+      "lines": 128,
+      "kind": "Markdown",
+      "headings": [
+        "# Pass 12634: W(3,3) inside the tropical moduli space of cubic surfaces; the same 40 cusps as the Siegel level-3 moduli space",
+        "## The object",
+        "## Results (all checks pass, with controls)",
+        "## The bridge this makes",
+        "## Corrections to the corpus",
+        "## Prior art and novelty",
+        "## Next",
+        "## Addendum: the positive-geometry regions (E6 pezzotopes) are S5-pentads of W(3,3) lines (`w33_pezzotope_check.py`)",
+        "## Addendum 2: the E6 Bergman fan maps into the reconstructed fan (`w33_bergman_to_naruki.py`)",
+        "## Addendum 3: each pezzotope is a double-six with a synthematic total; the 432 regions double-cover the corpus's 216 codewords (`w33_pezzotope_gosset.py`)",
+        "## Addendum 4: prior art for addendum 3, and the chirality (`w33_pezzotope_chirality.py`)"
+      ]
+    },
+    {
+      "path": "analysis/PASS12635_BURKHARDT_FAN.md",
+      "bytes": 7335,
+      "sha256": "d475ab897156d9e314ef706c94e26a010e5f3d23c5f839dee9c6747ac03dbde6",
+      "lines": 85,
+      "kind": "Markdown",
+      "headings": [
+        "# Pass 12635: the two tropical moduli spaces of the corpus see the two halves of W(3,3)",
+        "## The object",
+        "## Reconstruction (every count matches the theorem)",
+        "## The duality",
+        "## The E7 next rung (literature, not computed)",
+        "## Addendum: an explicit dictionary between the two fans (`w33_split_bridge.py`, `data/w33_split_bridge.json`)",
+        "## Addendum: the level ladder explains the duality (`w33_level2_ladder.py`)"
+      ]
+    },
+    {
+      "path": "analysis/PASS12636_UMUB_CUBIC_SURFACES.md",
+      "bytes": 8468,
+      "sha256": "def8fcf075fd8bf2ab3a9453c9b75f49c67dc5ad4b01425d8ad1b20cd804f573",
+      "lines": 87,
+      "kind": "Markdown",
+      "headings": [
+        "# Pass 12636: every unextendible set of two-qutrit Pauli MUBs is a piece of cubic-surface geometry; a codeword is a chiral pair of positive-geometry regions",
+        "## 1. The spectrum of unextendible Pauli MUB sets in dimension 9",
+        "## 2. Chirality is one Weyl reflection, and a codeword is a left-right pair",
+        "## Prior art",
+        "## Addendum: the E7 rung does not lift naively (`w33_e7_rung_mubs.py`, negative result)",
+        "## Addendum 2: the size-8 sets are the entangled bases of a factorisation (`w33_size8_splits.py`, `data/w33_size8_splits.json`)",
+        "## Addendum 3: the pezzotope amplitude factorises into 6-particle φ³ amplitudes, with contexts as the 3-particle channels (`w33_pezzotope_amplitude.py`)"
+      ]
+    },
+    {
+      "path": "analysis/PASS12637_SIX_PARTICLES_TRIALITY.md",
+      "bytes": 4966,
+      "sha256": "4296ffcb0fc84ee8d4deda5d248d34a00a9ae40a774936a9fcfffb4d6e6bcf61",
+      "lines": 65,
+      "kind": "Markdown",
+      "headings": [
+        "# Pass 12637: the six particles are a six; no lifted hidden zeros; strongly unextendible MUBs; triality needs the antiunitary coset; an E7 candidate; the q-ladder",
+        "## 1. The six external particles (`w33_six_particles.py`, all 4320 root facets of the 432 pezzotopes)",
+        "## 2. Hidden zeros do not lift (`w33_pezzotope_hidden_zeros.py`; negative)",
+        "## 3. Item 3: standalone note",
+        "## 4. Strongly unextendible MUBs (`w33_pentad_strong_umub.py`; outside-the-box 1)",
+        "## 5. Triality (`w33_split_triality.py`; outside-the-box 2)",
+        "## 6. The E7 rung: a candidate (`w33_e7_orbit_census.py`, `w33_e7_scalene.py`; item 4 + outside-the-box 3)",
+        "## 7. The q-ladder (`w33_q_ladder.py`; item 5)"
+      ]
+    },
+    {
+      "path": "analysis/toe_20261108_exact_signed_cubic_stabilizer.py",
+      "bytes": 10838,
+      "sha256": "e585f163c0d6301038441d90382b22104b6a601587534f80b1e24209a24f61bd",
+      "lines": 230,
+      "kind": "Python",
+      "functions": [
+        "parity",
+        "signed_terms",
+        "coefficient_rows",
+        "echelon",
+        "integer_kernel",
+        "entries",
+        "matrix",
+        "vector",
+        "verify_basis",
+        "root_certificate",
+        "cubic_invariant_rank",
+        "alternating_terms",
+        "calculate"
+      ]
+    },
+    {
+      "path": "analysis/toe_20261108_invariant_magnetic_completion.py",
+      "bytes": 13598,
+      "sha256": "faf7023044f899b2c89cbf027f4c2b1125fe815b181ee163507cff1d53115104",
+      "lines": 217,
+      "kind": "Python",
+      "functions": [
+        "compound",
+        "wedge",
+        "model",
+        "exact_short_tensor",
+        "cup_certificate",
+        "first_area",
+        "completion",
+        "full_curl",
+        "spectrum",
+        "covariance",
+        "produce"
+      ]
+    },
+    {
+      "path": "analysis/toe_20261108_invariant_magnetic_server.js",
+      "bytes": 2199,
+      "sha256": "d8a8aa440f030b7054bb8e49a65b1ba583d54751501726f3120a567c16cb7b08",
+      "lines": 27,
+      "kind": "Text"
+    },
+    {
+      "path": "analysis/toe_20261108_native_spin_halfturn.py",
+      "bytes": 7222,
+      "sha256": "3e07ac995a702fe29d4c3ca9bba8ac8c78d083104c560e91a9946d40c77c9433",
+      "lines": 161,
+      "kind": "Python",
+      "functions": [
+        "pullback",
+        "halfturn",
+        "matrix_entries",
+        "calculate"
+      ]
+    },
+    {
+      "path": "analysis/toe_20261108_signed_cubic_server.js",
+      "bytes": 3068,
+      "sha256": "522adc98bc0ee5cdc09e789447a8f60fa0f81bde4e026c3ee416f5ee24c4c86f",
+      "lines": 67,
+      "kind": "Text"
+    },
+    {
+      "path": "analysis/toe_20261108_species_orientation_selector.py",
+      "bytes": 6294,
+      "sha256": "8c01099af36d822ccfbc8eb2bacba7e747c1cca3169761523245f282973fbf09",
+      "lines": 143,
+      "kind": "Python",
+      "functions": [
+        "weighted_field",
+        "restricted_cubic",
+        "restricted_sextic",
+        "hesse_aronhold_coefficients",
+        "selector_jet",
+        "calculate"
+      ]
+    },
+    {
+      "path": "analysis/toe_20261108_three_copy_cubic_vacuum.py",
+      "bytes": 10541,
+      "sha256": "39b093ebbb644574899e5d9fb40ad421c2f27220c7e6abcd27b01cb74ec9f59e",
+      "lines": 210,
+      "kind": "Python",
+      "functions": [
+        "exact_echelon",
+        "rank",
+        "traceless_basis",
+        "gauge_generators",
+        "bracket",
+        "commuting_supports",
+        "stabilizer_type",
+        "residual_branching",
+        "tangent_ranks",
+        "calculate"
+      ]
+    },
+    {
+      "path": "analysis/toe_20261109_canonical_sm_flatness.py",
+      "bytes": 18554,
+      "sha256": "fb83ad0b542d0e9580fcf9b420c70bc4c2bedd791d705828a26bc6fe369e888d",
+      "lines": 353,
+      "kind": "Python",
+      "functions": [
+        "read",
+        "compact_chart",
+        "family_embeddings",
+        "central_adjoint_check",
+        "adjoint_charges",
+        "holomorphic_hessian",
+        "mass_spectrum",
+        "generic_mass_ranks",
+        "sextic_adjoint_hessian",
+        "spectator_hessian",
+        "field_charges",
+        "sm_weight_check",
+        "dual_repair",
+        "calculate"
+      ]
+    },
+    {
+      "path": "analysis/toe_20261109_pezzotope_canonical_partner.py",
+      "bytes": 18405,
+      "sha256": "4814b2c61114f9fcf6d2ded401671fe9b907d158167da32b21ac83a55b172595",
+      "lines": 429,
+      "kind": "Python",
+      "functions": [
+        "minors",
+        "conic",
+        "chart",
+        "normalize",
+        "cremona",
+        "positive_chart",
+        "u_functions",
+        "dlog_parameters",
+        "root_labels",
+        "yoshida_signs",
+        "root_exponents",
+        "u_and_y_exponents",
+        "facet_certificate",
+        "residue_certificate",
+        "kummer_certificate",
+        "transport_words",
+        "scattering_certificate",
+        "calculate"
+      ]
+    },
+    {
+      "path": "analysis/toe_20261109_real_yoshida_pezzotope_labels.py",
+      "bytes": 7701,
+      "sha256": "d53cb9e2c75e229b8e4979d37511480b355d9ef81170d485f1fec7cd314bd5ed",
+      "lines": 165,
+      "kind": "Python",
+      "functions": [
+        "canonical",
+        "root_reflections",
+        "chamber_regions",
+        "paired_regions",
+        "calculate"
+      ]
+    },
+    {
+      "path": "analysis/toe_20261109_yoshida_cone_census.py",
+      "bytes": 19467,
+      "sha256": "0ea511ed0b09aa33e5bdda8f6ad0d7002d2fda3c280a32b7cd4390e901ae40aa",
+      "lines": 459,
+      "kind": "Python",
+      "functions": [
+        "root_system",
+        "spans",
+        "components",
+        "nested_sets",
+        "yoshida",
+        "vector_key",
+        "images",
+        "maximal_cones",
+        "lattice_invariants",
+        "cone_images",
+        "verify_cover",
+        "weyl_reflections",
+        "cone_orbits",
+        "fiber_graph",
+        "fiber_census",
+        "balance",
+        "torsion_character",
+        "calculate"
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/hf_refit_dovekie.json",
+      "bytes": 3289,
+      "sha256": "ee6edf590e8338315593bc35b534c97a1a752fc5635240b279f035c4f57c1d78",
+      "lines": 135,
+      "kind": "JSON",
+      "top_keys": [
+        "classbin",
+        "LCDM",
+        "exp_neg",
+        "free_neg",
+        "free_pos",
+        "LCDM_native",
+        "CPL",
+        "delta_vs_LCDM",
+        "delta_vs_LCDM_orig"
+      ],
+      "length": 9
+    },
+    {
+      "path": "analysis/toe_uv/klt_fscan.json",
+      "bytes": 802,
+      "sha256": "e52174cc3741f8e2d080e4b895ed10f99b42bb1b654ef8dc1de5d216b8fb6ce3",
+      "lines": 26,
+      "kind": "JSON",
+      "top_keys": [
+        "f0.18",
+        "f0.35",
+        "f0.5"
+      ],
+      "length": 3
+    },
+    {
+      "path": "analysis/toe_uv/mcmc_dovekie_bao_klt25.json",
+      "bytes": 1080,
+      "sha256": "be6fe8905de94094344ffb60cbde7756d09bb00a6a8eb3ae6b48907672647bbb",
+      "lines": 49,
+      "kind": "JSON",
+      "top_keys": [
+        "DS",
+        "HOLD",
+        "model",
+        "nwalk",
+        "nstep",
+        "burn",
+        "n_samples",
+        "elpd_held",
+        "held_chi2_q",
+        "acceptance",
+        "mean",
+        "sd",
+        "tau_int"
+      ],
+      "length": 13
+    },
+    {
+      "path": "analysis/toe_uv/scorecard.json",
+      "bytes": 2789,
+      "sha256": "67b88a8832c808b69eda89cb32db2a141fb70cc50c7a19bea9a566a266090738",
+      "lines": 76,
+      "kind": "JSON",
+      "top_keys": [
+        "LCDM",
+        "fading_cneg",
+        "fading_cpos",
+        "CPL",
+        "exp",
+        "KLT"
+      ],
+      "length": 6
+    },
+    {
+      "path": "analysis/toe_uv/scorecard.py",
+      "bytes": 5252,
+      "sha256": "fc770b47c5176b514cd68c3174037477882d04516348a788611dc05873be2674",
+      "lines": 85,
+      "kind": "Python",
+      "functions": [
+        "ppd"
+      ]
+    },
+    {
+      "path": "analysis/toe_uv/shear_ppd.json",
+      "bytes": 1290,
+      "sha256": "12cb36558da95cfb1f625494afb2b7c6a695fcd75dd18716e5b24cfb3e3e65be",
+      "lines": 74,
+      "kind": "JSON",
+      "top_keys": [
+        "CPL",
+        "LCDM",
+        "free_neg",
+        "free_pos",
+        "KLT"
+      ],
+      "length": 5
+    },
+    {
+      "path": "analysis/toe_uv/shear_ppd_desy5.json",
+      "bytes": 1017,
+      "sha256": "c195e1fe30967baa380c94d143c8b2153d150a3cd3ba44f8b952ee7309cadc45",
+      "lines": 59,
+      "kind": "JSON",
+      "top_keys": [
+        "CPL",
+        "LCDM",
+        "free_neg",
+        "free_pos"
+      ],
+      "length": 4
+    },
+    {
+      "path": "analysis/toe_uv/shear_ppd_kids_dovekie.json",
+      "bytes": 1289,
+      "sha256": "87334fe01516a762629ce600e0bfc804e69e5a3c224705468ca5eccf293035dd",
+      "lines": 74,
+      "kind": "JSON",
+      "top_keys": [
+        "CPL",
+        "LCDM",
+        "free_neg",
+        "free_pos",
+        "KLT"
+      ],
+      "length": 5
+    },
+    {
+      "path": "analysis/w33_20261108_s8_hybrid_shapley_audit.py",
+      "bytes": 4772,
+      "sha256": "ca37937a1bd73f02a371809f58731c1a37f51045c6ca80b27e6365ba8d5202bb",
+      "lines": 83,
+      "kind": "Python",
+      "functions": [
+        "produce",
+        "main"
+      ]
+    },
+    {
+      "path": "analysis/w33_bergman_to_naruki.py",
+      "bytes": 5410,
+      "sha256": "b7743ecdc458f96ecfd23443ea9bf12361f25079eed0c04aea86400433c6eae7",
+      "lines": 127,
+      "kind": "Python",
+      "functions": [
+        "closure",
+        "connected",
+        "rays_from",
+        "ext",
+        "in_fan"
+      ]
+    },
+    {
+      "path": "analysis/w33_e7_orbit_census.py",
+      "bytes": 2856,
+      "sha256": "9d54933cb01b624394b65e7d4fdf4a456c51af3e20d7e779c2991e6ec4162bfe",
+      "lines": 51,
+      "kind": "Python",
+      "functions": [
+        "inter_dim",
+        "orbits_of"
+      ]
+    },
+    {
+      "path": "analysis/w33_e7_rung_mubs.py",
+      "bytes": 3175,
+      "sha256": "4eb7ee4f8aebe1eb06fe302b471bcfd035cdd91882e9fdc2a6e981ea5a24d3f0",
+      "lines": 68,
+      "kind": "Python",
+      "functions": []
+    },
+    {
+      "path": "analysis/w33_e7_scalene.py",
+      "bytes": 4324,
+      "sha256": "cda3aeeff6060c4b5e661e43e34f4f4728672b1bf10e5ec7427a565997f7dfb4",
+      "lines": 87,
+      "kind": "Python",
+      "functions": [
+        "perp_to_plane",
+        "inv2",
+        "act",
+        "order",
+        "orbits"
+      ]
+    },
+    {
+      "path": "analysis/w33_level2_ladder.py",
+      "bytes": 3397,
+      "sha256": "7fa9261778bb082fd6fd7001e6a467814b97c4c166cfacdd6c0f92956c022dfe",
+      "lines": 42,
+      "kind": "Python",
+      "functions": [
+        "side",
+        "compatible",
+        "is_duad",
+        "srg"
+      ]
+    },
+    {
+      "path": "analysis/w33_pass10950_clock_albert_lorentz_spinor.py",
+      "bytes": 23703,
+      "sha256": "22a29ab73d04bdb42b54a1c802bb14183dfb68746df836835693f0ec85adacae",
+      "lines": 528,
+      "kind": "Python",
+      "functions": [
+        "dm",
+        "rank",
+        "nullspace",
+        "ints",
+        "inertia_int",
+        "build_clock_albert",
+        "main"
+      ]
+    },
+    {
+      "path": "analysis/w33_pass12634_naruki_fan.py",
+      "bytes": 10005,
+      "sha256": "73c3f108ddd2ce13b26e43c0f39fd08c6b82870b0d3c0e5e5056a5c70eedc5d8",
+      "lines": 195,
+      "kind": "Python",
+      "functions": [
+        "key",
+        "orth",
+        "srg",
+        "pair_type",
+        "gq_test",
+        "pg_points",
+        "span_roots"
+      ]
+    },
+    {
+      "path": "analysis/w33_pass12635_burkhardt_fan.py",
+      "bytes": 4680,
+      "sha256": "6e6f3b499daa10a4063f204cbfc5243af80d920b779a1cd0e1d39cee7405e328",
+      "lines": 77,
+      "kind": "Python",
+      "functions": [
+        "span_pts"
+      ]
+    },
+    {
+      "path": "analysis/w33_pentad_strong_umub.py",
+      "bytes": 2894,
+      "sha256": "36beaed2627d0efef68220f550abb44953d5f14dc63184ca14525dcee7b6d218",
+      "lines": 53,
+      "kind": "Python",
+      "functions": [
+        "states",
+        "minF",
+        "bk"
+      ]
+    },
+    {
+      "path": "analysis/w33_pentad_umub.py",
+      "bytes": 5744,
+      "sha256": "58c5930e3eda5d790396643327f4768d5639c8f3eea0e286348745dea33fed57",
+      "lines": 105,
+      "kind": "Python",
+      "functions": [
+        "bk",
+        "pauli",
+        "basis_of_line",
+        "unbiased",
+        "bk8"
+      ]
+    },
+    {
+      "path": "analysis/w33_pezzotope_amplitude.py",
+      "bytes": 3614,
+      "sha256": "6cc5d5e0119f338a8994000028fdfea84c6afdb05e85aae87dd989f6e4102a63",
+      "lines": 58,
+      "kind": "Python",
+      "functions": [
+        "cross"
+      ]
+    },
+    {
+      "path": "analysis/w33_pezzotope_check.py",
+      "bytes": 4799,
+      "sha256": "5a14109b05738721656ac2fb10b87278da5aa16d5b1788db3f4f81808d4f0cea",
+      "lines": 92,
+      "kind": "Python",
+      "functions": [
+        "extend",
+        "fan_faces",
+        "ext10"
+      ]
+    },
+    {
+      "path": "analysis/w33_pezzotope_chirality.py",
+      "bytes": 4543,
+      "sha256": "293e12fc08303344648c37b896ed35342aae9231a29c88c7e89e0789fc617b51",
+      "lines": 85,
+      "kind": "Python",
+      "functions": [
+        "ext",
+        "transvection",
+        "act_line"
+      ]
+    },
+    {
+      "path": "analysis/w33_pezzotope_gosset.py",
+      "bytes": 10171,
+      "sha256": "b1b3c30cbb56dc260f9a15cea005a38fbbfe1d6dcd8b102d1bf0c589d85ebaac",
+      "lines": 183,
+      "kind": "Python",
+      "functions": [
+        "ext",
+        "candidates",
+        "is_ham_cycle",
+        "cyc_parity"
+      ]
+    },
+    {
+      "path": "analysis/w33_pezzotope_hidden_zeros.py",
+      "bytes": 10533,
+      "sha256": "c0cc57790a9c646a113c4188cad7083b73c87db9c2d0e89edf02b049e971d01b",
+      "lines": 199,
+      "kind": "Python",
+      "functions": [
+        "crosses",
+        "A6",
+        "Xget",
+        "zero_point",
+        "pezzo",
+        "hexagon_labels",
+        "m_of",
+        "rect_eqs"
+      ]
+    },
+    {
+      "path": "analysis/w33_pezzotope_reflection.py",
+      "bytes": 4276,
+      "sha256": "28afaa2940108911eb57c61d2babe574397c1f40a3306dddee3caebf92a0158a",
+      "lines": 69,
+      "kind": "Python",
+      "functions": [
+        "reflect_perm",
+        "image_pentad",
+        "point_degrees"
+      ]
+    },
+    {
+      "path": "analysis/w33_q_ladder.py",
+      "bytes": 2735,
+      "sha256": "6ef7cb76026eec9ad39a9eb5f16e845c8e938d4af6407d0ae47c4f564c373aed",
+      "lines": 48,
+      "kind": "Python",
+      "functions": [
+        "ladder"
+      ]
+    },
+    {
+      "path": "analysis/w33_six_particles.py",
+      "bytes": 6782,
+      "sha256": "5bad6871ab815328ac7d37f4e69c1ed74c42b29a9119600a12aeb4fbec8d60e1",
+      "lines": 102,
+      "kind": "Python",
+      "functions": []
+    },
+    {
+      "path": "analysis/w33_size8_splits.py",
+      "bytes": 3423,
+      "sha256": "2321e70d742a2c74ad84ccfa897b8680322605c0e8d19216b6aa54fd1d0fcee9",
+      "lines": 57,
+      "kind": "Python",
+      "functions": [
+        "bk"
+      ]
+    },
+    {
+      "path": "analysis/w33_split_bridge.py",
+      "bytes": 6609,
+      "sha256": "b800b2067516b7e1e4cd4471ed4ecb4c10ce7a1f706010ce8902bd72db7187f4",
+      "lines": 109,
+      "kind": "Python",
+      "functions": [
+        "span_roots",
+        "ext",
+        "partition",
+        "shape"
+      ]
+    },
+    {
+      "path": "analysis/w33_split_triality.py",
+      "bytes": 5055,
+      "sha256": "5fa689e65308946db5e7c0aa4afcb871215766991ba05e9e153720d4fa570615",
+      "lines": 86,
+      "kind": "Python",
+      "functions": [
+        "lines_of"
+      ]
+    },
+    {
+      "path": "data/toe_20261108_exact_signed_cubic_stabilizer.json",
+      "bytes": 48356,
+      "sha256": "35ae15909d9cea51e549b6090a40e8a6e98aafc39b31046f0dd2c9ea90df164a",
+      "lines": 3561,
+      "kind": "JSON",
+      "top_keys": [
+        "status",
+        "cubic_27",
+        "alternating_81",
+        "invariants",
+        "anomalies",
+        "scope",
+        "raw_sha256"
+      ],
+      "length": 7
+    },
+    {
+      "path": "data/toe_20261108_halfturn_orientation_validation.json",
+      "bytes": 8604,
+      "sha256": "0eeba547b2025345ddbc46b90c499055cfd0ae7c5d02a038ad0c64760eb21381",
+      "lines": 352,
+      "kind": "JSON",
+      "top_keys": [
+        "baseline",
+        "utc",
+        "artifact_raw_sha256",
+        "desktop",
+        "independent_server",
+        "prior_spinor_control",
+        "prior_ownership",
+        "parallel_branch_tips",
+        "manuscript",
+        "continuity_decision",
+        "rediscovery_guard",
+        "generic_field_control",
+        "parallel_integration",
+        "additional_validation",
+        "results_index"
+      ],
+      "length": 15
+    },
+    {
+      "path": "data/toe_20261108_invariant_magnetic_completion.json",
+      "bytes": 151212,
+      "sha256": "5351f1b5905063b0a018a9cb97c2f40955c4af703369ff2b2aebca6482e1ad4f",
+      "lines": 11334,
+      "kind": "JSON",
+      "top_keys": [
+        "status",
+        "area_pair_order",
+        "exact_short_area_tensor",
+        "short_tensor_proof",
+        "period_cup_product_obstruction",
+        "short_face_weight",
+        "short_weight_PSD_compensation_threshold",
+        "unit_weight_overshoot_witness",
+        "target_area_tensor",
+        "complement_area_tensor",
+        "commutator_area_matrix",
+        "supplied_six_flux_coupling",
+        "leading_identity",
+        "exact_controller_count",
+        "exact_integral_vertex_lifts",
+        "commutator_blocks",
+        "finite_momentum_covariance",
+        "generic_completed_spectrum",
+        "generic_short_only_spectrum",
+        "rays",
+        "scope",
+        "prior_owners",
+        "input_raw_sha256"
+      ],
+      "length": 23
+    },
+    {
+      "path": "data/toe_20261108_invariant_magnetic_guard_audit.json",
+      "bytes": 25337,
+      "sha256": "5d6bf79ef1d193a7593199d59beeb49fbebad69f433a01574135da316f93457b",
+      "lines": 337,
+      "kind": "JSON",
+      "top_keys": [
+        "mode",
+        "records",
+        "all_exit_codes_zero",
+        "frozen_tested_artifact_raw_sha256",
+        "candidate_triage",
+        "rare_candidate_context"
+      ],
+      "length": 6
+    },
+    {
+      "path": "data/toe_20261108_invariant_magnetic_intake.json",
+      "bytes": 3199,
+      "sha256": "9281db9eac1bfb4a964d8cf4c93fbfc85b5cc01c31e7c51dbfad23922b9d67a2",
+      "lines": 52,
+      "kind": "JSON",
+      "top_keys": [
+        "status",
+        "utc",
+        "baseline",
+        "intake_HEAD",
+        "incoming_after_fetch",
+        "history_scope",
+        "manuscript",
+        "repo_search",
+        "literature",
+        "server",
+        "continuity",
+        "workflow"
+      ],
+      "length": 12
+    },
+    {
+      "path": "data/toe_20261108_invariant_magnetic_publication_manifest.json",
+      "bytes": 130741,
+      "sha256": "5377460e3351db22c2e5adee1823444356bc3171f3ceeca0544b6595a92e9b35",
+      "lines": 2308,
+      "kind": "JSON",
+      "top_keys": [
+        "status",
+        "utc",
+        "integration_HEAD",
+        "artifact_raw_sha256",
+        "unchanged_parent_raw_sha256",
+        "preserved_unrelated_raw_sha256",
+        "all_guards_passed",
+        "guard_limits",
+        "science",
+        "verification",
+        "limits",
+        "executions",
+        "source_and_input_scope",
+        "workflow",
+        "final_actual_RDC",
+        "earlier_actual_RDC",
+        "post_intake_manuscript_reading",
+        "late_integration_review"
+      ],
+      "length": 18
+    },
+    {
+      "path": "data/toe_20261108_invariant_magnetic_server.json",
+      "bytes": 4750,
+      "sha256": "e856f068099eb17b3f7a1bbf9c45605a69eb5d3ac60ba48f47a20fff04714638",
+      "lines": 247,
+      "kind": "JSON",
+      "top_keys": [
+        "runtime",
+        "M",
+        "pairs",
+        "short_coefficient",
+        "alpha",
+        "target",
+        "complement",
+        "Cholesky_diagonal",
+        "Cholesky_max_error",
+        "cases",
+        "relative_rank_one_eigenvalue",
+        "PSD_short_weight_threshold",
+        "scope"
+      ],
+      "length": 13
+    },
+    {
+      "path": "data/toe_20261108_invariant_magnetic_validation.json",
+      "bytes": 6722,
+      "sha256": "0fa3613b30c29c28b1da532fdb61d2bf02b87963a87f1923ddd5cae2bb128170",
+      "lines": 44,
+      "kind": "JSON",
+      "top_keys": [
+        "selected_inputs_unchanged_during_run",
+        "selected_source_and_input_raw_sha256",
+        "executions",
+        "result_raw_sha256",
+        "scope"
+      ],
+      "length": 5
+    },
+    {
+      "path": "data/toe_20261108_native_spin_halfturn.json",
+      "bytes": 6594,
+      "sha256": "8aff6fadd229f9f3405955d1e1255404a55b2f54e7ff7dd5be8c164c1763ee44",
+      "lines": 528,
+      "kind": "JSON",
+      "top_keys": [
+        "status",
+        "coordinate_order",
+        "frame",
+        "rotation",
+        "infinitesimal_generator",
+        "peirce_spinor_projector",
+        "chirality_on_spinor_and_zero_elsewhere",
+        "eigenvalue_multiplicities",
+        "signed_cubic_coefficients_preserved",
+        "rotation_order",
+        "chirality_exchanged",
+        "species_projection_overlap",
+        "species_projection_defect_squared",
+        "internal_density_defect_squared",
+        "forced_family_species_operator",
+        "forced_operator_schmidt_ranks_for_powers_0_to_3",
+        "example_product_input",
+        "example_output_reduced_density_eigenvalues",
+        "scope",
+        "input_sha256"
+      ],
+      "length": 20
+    },
+    {
+      "path": "data/toe_20261108_signed_cubic_guard_audit.json",
+      "bytes": 32078,
+      "sha256": "8e2d3d271b49ae0c4940226559f90c5ec698829a97e0d7d7c5b108e63185483d",
+      "lines": 363,
+      "kind": "JSON",
+      "top_keys": [
+        "mode",
+        "records",
+        "all_exit_codes_zero",
+        "frozen_tested_artifact_raw_sha256",
+        "candidate_triage",
+        "rare_candidate_context"
+      ],
+      "length": 6
+    },
+    {
+      "path": "data/toe_20261108_signed_cubic_intake.json",
+      "bytes": 2009,
+      "sha256": "4170b69034ebc15995f8ca6529e664e5b49b162e09f160a277dc8cb341774266",
+      "lines": 44,
+      "kind": "JSON",
+      "top_keys": [
+        "status",
+        "baseline",
+        "head",
+        "remote",
+        "context",
+        "searches",
+        "prior_review",
+        "manuscript",
+        "literature",
+        "workflow"
+      ],
+      "length": 10
+    },
+    {
+      "path": "data/toe_20261108_signed_cubic_publication_manifest.json",
+      "bytes": 38824,
+      "sha256": "4c84c412e55f7c8464c71f5ad976cc7af5091721acc4e15b7c06453d46c6fe63",
+      "lines": 392,
+      "kind": "JSON",
+      "top_keys": [
+        "status",
+        "integration_HEAD",
+        "utc",
+        "artifact_raw_sha256",
+        "unchanged_parent_raw_sha256",
+        "preserved_unrelated_raw_sha256",
+        "all_guards_passed",
+        "guard_limits",
+        "science",
+        "limits",
+        "verification",
+        "final_actual_RDC",
+        "local_legacy_control",
+        "prototype_history",
+        "manuscript_supplement",
+        "workflow"
+      ],
+      "length": 16
+    },
+    {
+      "path": "data/toe_20261108_signed_cubic_server.json",
+      "bytes": 673,
+      "sha256": "117608e0ee5a67708cda21235e9c12fa53a86a2d52c208834074a4c1b207a357",
+      "lines": 38,
+      "kind": "JSON",
+      "top_keys": [
+        "runtime",
+        "prime",
+        "symmetric27",
+        "exterior81",
+        "bracketL1",
+        "selectedSupports",
+        "orderedBracketRecords",
+        "scope"
+      ],
+      "length": 8
+    },
+    {
+      "path": "data/toe_20261108_signed_cubic_validation.json",
+      "bytes": 3988,
+      "sha256": "6b98c307b6027a3ead2d5c3689ab16a8de4299bb7bf8bb62d3c84dff05833dd0",
+      "lines": 60,
+      "kind": "JSON",
+      "top_keys": [
+        "selected_inputs_unchanged_during_run",
+        "selected_source_and_input_raw_sha256",
+        "executions",
+        "result_raw_sha256",
+        "scope"
+      ],
+      "length": 5
+    },
+    {
+      "path": "data/toe_20261108_species_orientation_selector.json",
+      "bytes": 6337,
+      "sha256": "91939b107ee9908e0f761a185763a0ca6a3968de803de3af6aff88cd7a77418d",
+      "lines": 387,
+      "kind": "JSON",
+      "top_keys": [
+        "status",
+        "restriction",
+        "hesse_aronhold_raw_coefficients",
+        "normalized_invariant_restriction",
+        "normalization",
+        "gauge_invariance",
+        "species_probes",
+        "normalized_sextic_restriction",
+        "sextic_normalization",
+        "degree_six_selector",
+        "degree_twelve_selector",
+        "u3_direction_order",
+        "prior_tangent_ranks",
+        "selector_real_rank_on_species",
+        "new_hessian_nullity",
+        "physical_hessian_nullity",
+        "scope",
+        "input_sha256"
+      ],
+      "length": 18
+    },
+    {
+      "path": "data/toe_20261108_three_copy_cubic_vacuum.json",
+      "bytes": 3556,
+      "sha256": "664bf686ac3914a3a3073174f02ad5e085ed3a2cd2b48dd10529f2d7103e7d29",
+      "lines": 164,
+      "kind": "JSON",
+      "top_keys": [
+        "status",
+        "commuting_disjoint_all_plus_triad_triples",
+        "chosen_supports",
+        "Gram",
+        "F_zero",
+        "D_zero",
+        "unbroken_complex_Lie_dimension",
+        "unbroken_Killing_rank",
+        "unbroken_branching",
+        "unbroken_Lie_basis_coefficients",
+        "tangent_ranks",
+        "action",
+        "flat_directions",
+        "scope",
+        "raw_sha256"
+      ],
+      "length": 15
+    },
+    {
+      "path": "data/toe_20261109_canonical_sm_flatness.json",
+      "bytes": 12890,
+      "sha256": "99dae68244b3e61340807bc1dedf25e9bf0270e0f9851649066ed77270f9927e",
+      "lines": 657,
+      "kind": "JSON",
+      "top_keys": [
+        "status",
+        "original_field_content",
+        "scope",
+        "family_embeddings",
+        "adjoint_center_check_rank",
+        "repair",
+        "perturbative_family_anomaly"
+      ],
+      "length": 7
+    },
+    {
+      "path": "data/toe_20261109_pezzotope_canonical_partner.json",
+      "bytes": 63891,
+      "sha256": "a1cc4b3442c7b6024ec9761146535bddfe8196167b070527025d2284be21522a",
+      "lines": 4770,
+      "kind": "JSON",
+      "top_keys": [
+        "seed_mask",
+        "partner_mask",
+        "partner_root",
+        "gale_negative_control_mask",
+        "canonical_chart_coefficient",
+        "partner_chart_coefficient",
+        "reflection_chart",
+        "reflection_jacobian",
+        "ratio",
+        "ratio_in_positive_chart",
+        "positive_chamber_bound",
+        "partner_chamber_bound",
+        "ordered_facet_labels",
+        "facet_residue_contractions",
+        "ordered_vertex_residues",
+        "seed_facet_orders_of_ratio",
+        "disjoint_facet_support_pairs",
+        "kummer_character_lattice",
+        "ratio_selected_scattering_potential",
+        "seed_to_region_weyl_words_in_application_order",
+        "orientation_convention",
+        "residues_scope",
+        "atlas_sha256"
+      ],
+      "length": 23
+    },
+    {
+      "path": "data/toe_20261109_pezzotope_canonical_validation.json",
+      "bytes": 3436,
+      "sha256": "01abdaa4f3c881ae8208da1d53c1bbc790a7ee86c77aaa652e08b342d736fcb4",
+      "lines": 96,
+      "kind": "JSON",
+      "top_keys": [
+        "parent",
+        "artifact_raw_sha256",
+        "producer",
+        "parent_test",
+        "independent_modular_checks",
+        "independent_cone_check",
+        "desktop_commander",
+        "candidate_triage",
+        "prototypes",
+        "continuity_decision",
+        "literature",
+        "newton_face_replay"
+      ],
+      "length": 12
+    },
+    {
+      "path": "data/toe_20261109_real_yoshida_pezzotope_labels.json",
+      "bytes": 187411,
+      "sha256": "1d08a8ed3c698e5b3790354b0937c7fc14d921aed751bb5f9a5d7c8e6556f2dd",
+      "lines": 12080,
+      "kind": "JSON",
+      "top_keys": [
+        "projective_root_chambers",
+        "projective_yoshida_sign_regions",
+        "root_chambers_per_region",
+        "determinant_parity_counts",
+        "root_labels",
+        "yoshida_row_labels",
+        "regions",
+        "chiral_pairs",
+        "boundary"
+      ],
+      "length": 9
+    },
+    {
+      "path": "data/toe_20261109_yoshida_cone_census.json",
+      "bytes": 14088,
+      "sha256": "72b63dfbb71242a67d31ba72361b38efd86500d8ce0020b4afe66f17c6a5970b",
+      "lines": 1262,
+      "kind": "JSON",
+      "top_keys": [
+        "root_labels",
+        "yoshida_row_labels",
+        "flat_counts_by_rank",
+        "connected_flat_sizes",
+        "nested_maximal_cones",
+        "projected_support_dimensions",
+        "primitive_b_ray_scales",
+        "coverage_key",
+        "coverage",
+        "unit_weight_balancing",
+        "generic_set_theoretic_tropical_fibers",
+        "ambient_integral_smith_by_cone_type",
+        "yoshida_smith_nonzero",
+        "projectivized_yoshida_smith_nonzero",
+        "projective_torsion_character"
+      ],
+      "length": 15
+    },
+    {
+      "path": "data/toe_20261109_yoshida_validation.json",
+      "bytes": 14084,
+      "sha256": "99e3550317fa40e6432db5566b96cc10ee41330198f6aab93afef6c63f77dc8d",
+      "lines": 983,
+      "kind": "JSON",
+      "top_keys": [
+        "attachment",
+        "parallel_inputs",
+        "artifact_raw_sha256",
+        "execution",
+        "desktop_commander",
+        "independent_modular_control",
+        "goepel_smith_control",
+        "literature",
+        "real_chamber_execution",
+        "parent_replay",
+        "continuity_decision",
+        "chiral_transition_code"
+      ],
+      "length": 12
+    },
+    {
+      "path": "data/w33_20261108_S8_hybrid_shapley_audit.json",
+      "bytes": 7707,
+      "sha256": "8ab752f71da7d4768563ded5a42f201a9160f4d3a0d91078a02d4f3827fe3767",
+      "lines": 133,
+      "kind": "JSON",
+      "top_keys": [
+        "additive_identification_warning",
+        "algebra",
+        "evidence_limit",
+        "frozen_claim",
+        "frozen_prereg",
+        "original_hybrid_implementation",
+        "physical_evidence_status",
+        "schema",
+        "sources",
+        "status",
+        "surveys"
+      ],
+      "length": 11
+    },
+    {
+      "path": "data/w33_bergman_to_naruki.json",
+      "bytes": 519,
+      "sha256": "09dc00b2f8b57aaab718cb677c1cdbebfee0476704904df48ac3e8b2357818b4",
+      "lines": 33,
+      "kind": "JSON",
+      "top_keys": [
+        "n_connected_flats",
+        "flat_sizes",
+        "n_image_rays_incidence",
+        "n_image_rays_random_control",
+        "distinct_images_by_flat_size",
+        "images_outside_fan",
+        "image_support_by_flat_size"
+      ],
+      "length": 7
+    },
+    {
+      "path": "data/w33_e7_orbit_census.json",
+      "bytes": 902,
+      "sha256": "81c4cfe7f9f1780e660183ffd4ead873a072be3f25d1fe30cc8fa90cad84c80c",
+      "lines": 124,
+      "kind": "JSON",
+      "top_keys": [
+        "pair_orbits",
+        "triple_orbits",
+        "orbits_60480_or_120960"
+      ],
+      "length": 3
+    },
+    {
+      "path": "data/w33_e7_rung_mubs.json",
+      "bytes": 161,
+      "sha256": "fc503e4061b775f7d096ad476e7f9925908233837ec484ec531a475ed0c12a73",
+      "lines": 16,
+      "kind": "JSON",
+      "top_keys": [
+        "n_lagrangian",
+        "sizes",
+        "orbits",
+        "has_60480"
+      ],
+      "length": 4
+    },
+    {
+      "path": "data/w33_e7_scalene.json",
+      "bytes": 687,
+      "sha256": "39279aa5e9a69c2dbb2f4d9642e04f39608e592419aee820775ce3099fc74732",
+      "lines": 68,
+      "kind": "JSON",
+      "top_keys": [
+        "classes",
+        "sizes",
+        "has_10",
+        "has_12",
+        "has_9",
+        "stab_order",
+        "element_orders",
+        "point_orbits",
+        "plane_orbits"
+      ],
+      "length": 9
+    },
+    {
+      "path": "data/w33_level2_ladder.json",
+      "bytes": 289,
+      "sha256": "e6220d42eef6c9c6dd3eb9307985b8a387c3ba0863c079a6bd30af7842ab8d32",
+      "lines": 24,
+      "kind": "JSON",
+      "top_keys": [
+        "rays",
+        "edges",
+        "max_cones",
+        "edge_types",
+        "duad_graph",
+        "syntheme_graph",
+        "point_and_line_graphs_isomorphic",
+        "n_synthemes",
+        "matches_theorem"
+      ],
+      "length": 9
+    },
+    {
+      "path": "data/w33_pass12632_halofit_scf.json",
+      "bytes": 7652,
+      "sha256": "09bfeb20fb00cbbdc0969fdb02d6de9ef4fcc62d5b25487443bbc6c90ce583d7",
+      "lines": 344,
+      "kind": "JSON",
+      "top_keys": [
+        "pass_number",
+        "track",
+        "halofit_rows",
+        "training_impact",
+        "matched_fluid",
+        "shear_fixed_background_rel_lcdm",
+        "hybrid_all",
+        "heldout_shear_rel_lcdm",
+        "checks",
+        "all_checks_pass"
+      ],
+      "length": 10
+    },
+    {
+      "path": "data/w33_pass12634_naruki_fan.json",
+      "bytes": 1181,
+      "sha256": "07c923ef3e835bfcb3e5539b0583bd138989a5760623baa1e819516588a5f4f6",
+      "lines": 67,
+      "kind": "JSON",
+      "top_keys": [
+        "fvector_reconstructed",
+        "fvector_literature",
+        "max_orth_set",
+        "aaaa",
+        "aaab",
+        "pair_types",
+        "graphs",
+        "w33_found",
+        "control_noninvariant",
+        "perp_perp_sizes_noncollinear",
+        "gq_type",
+        "control_W33",
+        "control_Q43",
+        "aaaa_by_D4",
+        "checks",
+        "all_checks_pass",
+        "pass_number"
+      ],
+      "length": 17
+    },
+    {
+      "path": "data/w33_pass12635_burkhardt_fan.json",
+      "bytes": 663,
+      "sha256": "a0b07faa5265a512cf7684f7f058683bac92d6f8a8d7d0014ecd7992beed507f",
+      "lines": 31,
+      "kind": "JSON",
+      "top_keys": [
+        "n_points",
+        "n_isotropic_lines",
+        "n_nondeg_planes",
+        "n_splits",
+        "rays",
+        "edges_aa",
+        "edges_ab",
+        "triangles_aaa",
+        "triangles_aab",
+        "edges",
+        "triangles",
+        "split_orthogonality_ok",
+        "aa_graph_perp_perp",
+        "checks",
+        "all_checks_pass",
+        "pass_number"
+      ],
+      "length": 16
+    },
+    {
+      "path": "data/w33_pentad_strong_umub.json",
+      "bytes": 336,
+      "sha256": "21a415d852072c03d1cb1082aa05377230f71f1746fa26c66745c9295a033a1e",
+      "lines": 16,
+      "kind": "JSON",
+      "top_keys": [
+        "control_spread4_min",
+        "pentad_4subsets_min",
+        "pentads_min",
+        "strongly_unextendible"
+      ],
+      "length": 4
+    },
+    {
+      "path": "data/w33_pentad_umub.json",
+      "bytes": 453,
+      "sha256": "c4dc836e1580ddf78d3645e83bd61aaecfdfe57a6c4fcccd2f93b76d168f32ff",
+      "lines": 20,
+      "kind": "JSON",
+      "top_keys": [
+        "maximal_partial_spread_sizes",
+        "n_size5",
+        "unbiased_iff_disjoint_all_pairs",
+        "pentad_is_5_MUBs",
+        "pauli_class_extensions",
+        "smallest_size",
+        "size8_root_multiplicity_profile",
+        "size8_missing_roots",
+        "size8_multiplicity6_roots_form_orthogonal_frame",
+        "size8_to_frames_bijective"
+      ],
+      "length": 10
+    },
+    {
+      "path": "data/w33_pezzotope_amplitude.json",
+      "bytes": 68,
+      "sha256": "15792942de9f219ebbbdf14053769a4d86f30e948f4b0381d3e4cf40d36f0171",
+      "lines": 6,
+      "kind": "JSON",
+      "top_keys": [
+        "summary",
+        "all_ok"
+      ],
+      "length": 2
+    },
+    {
+      "path": "data/w33_pezzotope_check.json",
+      "bytes": 68874,
+      "sha256": "ce0c4adbff63f524ceb2048d6753642df6990bc15816f52eaef1f486e708a649",
+      "lines": 5196,
+      "kind": "JSON",
+      "top_keys": [
+        "n_disjoint_5sets",
+        "n_pezzotope_configs",
+        "sample",
+        "n_spreads",
+        "spread_extensions",
+        "expect_432",
+        "faces_match"
+      ],
+      "length": 7
+    },
+    {
+      "path": "data/w33_pezzotope_chirality.json",
+      "bytes": 281,
+      "sha256": "139caa553d4119bd36f0f110bd5bd3096d3374508c8f2ebb12e9e3d97316e111",
+      "lines": 14,
+      "kind": "JSON",
+      "top_keys": [
+        "n_disjoint_5",
+        "n_maximal_5",
+        "pezzotopes_equal_maximal",
+        "psp_orbits_on_pezzotopes",
+        "orbits_closed_on_pentads",
+        "orbit_pairs_over_codewords",
+        "two_per_codeword_are_opposite_chirality"
+      ],
+      "length": 7
+    },
+    {
+      "path": "data/w33_pezzotope_gosset.json",
+      "bytes": 1588,
+      "sha256": "566fec8f5fef67cc8893beab7358ccf0fb23a26edeba695162d307f998253d28",
+      "lines": 60,
+      "kind": "JSON",
+      "top_keys": [
+        "line_inner_products",
+        "n_skew5",
+        "n_sixes",
+        "orth_lines_per_pentad",
+        "pattern_counts_first_pentad",
+        "pentad_summary",
+        "distinct_double_sixes",
+        "pentads_per_double_six",
+        "cubes_form_synthematic_total",
+        "distinct_double_six_total_pairs",
+        "pentads_per_pair"
+      ],
+      "length": 11
+    },
+    {
+      "path": "data/w33_pezzotope_hidden_zeros.json",
+      "bytes": 1448,
+      "sha256": "882a32afb187a910cc8f6fa5ac33a8237342db382a064e7828f284aa2adc8fe5",
+      "lines": 152,
+      "kind": "JSON",
+      "top_keys": [
+        "control_zero",
+        "control_random_nonzero",
+        "summary",
+        "simultaneous",
+        "simultaneous_examples",
+        "verified_hits",
+        "genuine_zero_shapes",
+        "genuine_zero_list"
+      ],
+      "length": 8
+    },
+    {
+      "path": "data/w33_pezzotope_reflection.json",
+      "bytes": 330,
+      "sha256": "9e3850a0e5b4573653b4bb9738a8709d1ac0d90f5cf1e94d3d0fc3224c985b3b",
+      "lines": 18,
+      "kind": "JSON",
+      "top_keys": [
+        "reflection_in_double_six_root_maps_left_to_right",
+        "control_orthogonal_root",
+        "all_216",
+        "unions_size",
+        "unions_even",
+        "union_point_degree_profile",
+        "n_distinct_unions",
+        "corpus_count_pass173"
+      ],
+      "length": 8
+    },
+    {
+      "path": "data/w33_q_ladder.json",
+      "bytes": 557,
+      "sha256": "3bf89310d99acc22afba83f1e79e9765190bf64fef1eb4207168730a8df40ea6",
+      "lines": 38,
+      "kind": "JSON",
+      "top_keys": [],
+      "length": 3
+    },
+    {
+      "path": "data/w33_six_particles.json",
+      "bytes": 300,
+      "sha256": "31fd4e89536602d7d2c2b77fc2f369a2f62463b65b4adaff4fcc91f9fc91b4c4",
+      "lines": 9,
+      "kind": "JSON",
+      "top_keys": [
+        "stats",
+        "example",
+        "particles_test"
+      ],
+      "length": 3
+    },
+    {
+      "path": "data/w33_size8_splits.json",
+      "bytes": 191,
+      "sha256": "f3bf21a799ffe391cd72d63c6ad3b41ca3f57b2d79a8243df01088caf214db01",
+      "lines": 13,
+      "kind": "JSON",
+      "top_keys": [
+        "n_eight",
+        "splits_hit",
+        "multiplicity",
+        "line_vs_split_profile",
+        "partition_check"
+      ],
+      "length": 5
+    },
+    {
+      "path": "data/w33_split_bridge.json",
+      "bytes": 763,
+      "sha256": "0ade2723d2690585059d87e0a8d258a5781e8e9c9bb7fcfb71e94e18e15c8361",
+      "lines": 70,
+      "kind": "JSON",
+      "top_keys": [
+        "isomorphism_found",
+        "roots_to_spreads",
+        "d4_class_sizes",
+        "split_class_sizes",
+        "d4_to_split_matches",
+        "d4_to_split_bijective",
+        "points_as_A2cubed_4cliques",
+        "d4_shape_classes",
+        "d4_to_split_matches_shape",
+        "d4_to_split_bijective_shape",
+        "split_line_types"
+      ],
+      "length": 11
+    },
+    {
+      "path": "data/w33_split_triality.json",
+      "bytes": 104,
+      "sha256": "0befd02c30b186ef8094492857a743110b67553866d73e498f8eb451700e9354",
+      "lines": 8,
+      "kind": "JSON",
+      "top_keys": [
+        "summary",
+        "pgsp"
+      ],
+      "length": 2
+    },
+    {
+      "path": "tests/test_class_scf_halofit_builds.py",
+      "bytes": 2320,
+      "sha256": "3fdf70b5d53eecddfb54c5314644a7a9036158a0c49396f5990c061984ad0c38",
+      "lines": 48,
+      "kind": "Python",
+      "functions": [
+        "test_patched_builds_match_lambda"
+      ]
+    },
+    {
+      "path": "tests/test_toe_20261108_halfturn_qutrit_magic.py",
+      "bytes": 1553,
+      "sha256": "d78275b5339c6ade5bb3b9902d1117fcd7941fda1cd940d9ab31bbd48c37bb5b",
+      "lines": 38,
+      "kind": "Python",
+      "functions": [
+        "test_compressed_matter_parity_wigner_negativity"
+      ]
+    },
+    {
+      "path": "tests/test_toe_20261108_invariant_magnetic_completion.py",
+      "bytes": 4343,
+      "sha256": "783e3a4db53a13682165f9d53c23dc5f26ce1d02d09046046a1971b0f0258dcd",
+      "lines": 90,
+      "kind": "Python",
+      "functions": [
+        "m",
+        "test_exact_short_face_projection",
+        "test_integer_period_cup_rank_and_nonuniform_weight_control",
+        "test_positive_compensation_boundary",
+        "test_every_mapped_commutator_is_literal_closed_zero_voltage",
+        "test_exact_leading_common_cone",
+        "test_independent_finite_difference_optical_homogenization",
+        "test_nonzero_momentum_controller_covariance",
+        "test_propagating_completion_vs_short_only_flat_modes",
+        "test_numerical_acoustic_limit_and_finite_k_splitting",
+        "test_actual_server_independent_six_area_control"
+      ]
+    },
+    {
+      "path": "tests/test_toe_20261108_signed_cubic_vacuum.py",
+      "bytes": 3961,
+      "sha256": "e17d440a03e07573839638a0501d15cff0ccd635b01632ceb8d2a356323ab30e",
+      "lines": 99,
+      "kind": "Python",
+      "functions": [
+        "test_root_transvections_preserve_the_cubic_in_integer_coordinates",
+        "test_ordered_bracket_contracts_to_alternating_three_copy_form",
+        "test_prior_conjugate_decuplet_cancels_the_family_trace_probe",
+        "point",
+        "test_independent_complex_species_rotation_preserves_zero_residuals",
+        "test_actual_potential_quartic_along_species_tangent_and_quadratic_radially",
+        "test_server_replay_at_different_prime_certifies_native_ranks_and_brackets"
+      ]
+    },
+    {
+      "path": "tests/test_toe_20261109_pezzotope_canonical_newton.py",
+      "bytes": 1591,
+      "sha256": "5e071721df89c57368cf41571ea80718617812e51d888a47dae3d560c0c3051b",
+      "lines": 40,
+      "kind": "Python",
+      "functions": [
+        "test_selected_newton_face_lattice"
+      ]
+    },
+    {
+      "path": "tests/test_toe_20261109_yoshida_partner_code.py",
+      "bytes": 1420,
+      "sha256": "6ccc49506f171f682bcb15e31d95f8182a4f312dafa1463e64a37fd3447682af",
+      "lines": 40,
+      "kind": "Python",
+      "functions": [
+        "binary_span",
+        "test_yoshida_partner_differences_generate_h10"
+      ]
+    },
+    {
+      "path": "tests/test_w33_20261108_s8_hybrid_shapley_audit.py",
+      "bytes": 2652,
+      "sha256": "579111e2db4998bb2288863df0daefacbe5fd2dc2ee74fbe0240795b20b17b27",
+      "lines": 46,
+      "kind": "Python",
+      "functions": [
+        "cert",
+        "test_fixed_Hybrid_cells_and_unchanged_frozen_ledger",
+        "test_exact_nonadditive_decomposition",
+        "test_DES_interaction_is_sizeable_negative",
+        "test_KiDS_interaction_is_sizeable_negative",
+        "test_provenance_and_scientific_limits"
+      ]
+    },
+    {
+      "path": "tests/test_w33_pass12634.py",
+      "bytes": 391,
+      "sha256": "f719d21bc0bc049fbae54b2759b101c3d171483ec2fd0a09fb08c368822e9441",
+      "lines": 12,
+      "kind": "Python",
+      "functions": [
+        "test_pass12634_producer"
+      ]
+    },
+    {
+      "path": "tests/test_w33_pass12635.py",
+      "bytes": 397,
+      "sha256": "f2ff3ce417c0936b2974c29da0b918c4453f1e7892cf6d04581a7c000a5b8090",
+      "lines": 12,
+      "kind": "Python",
+      "functions": [
+        "test_pass12635_producer"
+      ]
+    }
+  ],
+  "failures": [],
+  "limit": "Machine-read and parsed all complete accessible changed blobs; not independent semantic mathematical validation."
+}
