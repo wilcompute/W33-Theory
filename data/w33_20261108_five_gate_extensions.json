@@ -1,0 +1,270 @@
+{
+  "cosmology": {
+    "exact_certificate_replay": true,
+    "inference_boundary": "Full shear chi2 differences must not be replaced by a sum of separately evaluated blocks. Fixed-background hybrid results are not independent-likelihood replication, calibrated sigma, a Bayes factor, nor proof of temporal physics.",
+    "surveys": {
+      "des": {
+        "all": {
+          "delta_chi2_CPL_minus_fading": 2.8844828876623865,
+          "naively_summed_block_delta": 1.5837264341283444,
+          "nonadditive_interaction": -1.2482386764653484,
+          "nonadditive_subblock_difference": 1.3007564535340421,
+          "shapley_geometry": 1.3072854544327583,
+          "shapley_power": 1.5771974332296281
+        },
+        "high": {
+          "delta_chi2_CPL_minus_fading": 4.943561676190413,
+          "nonadditive_interaction": -1.271730700040564,
+          "shapley_geometry": 1.191118363760836,
+          "shapley_power": 3.752443312429577
+        },
+        "low": {
+          "delta_chi2_CPL_minus_fading": -0.9505851571675876,
+          "nonadditive_interaction": -0.07291707978498607,
+          "shapley_geometry": 0.03954687400777601,
+          "shapley_power": -0.9901320311753636
+        },
+        "mixed": {
+          "delta_chi2_CPL_minus_fading": -2.409250084894481,
+          "nonadditive_interaction": -0.3867597126223785,
+          "shapley_geometry": 0.8242375450907318,
+          "shapley_power": -3.2334876299852127
+        }
+      },
+      "kids": {
+        "all": {
+          "delta_chi2_CPL_minus_fading": 4.503428628031344,
+          "naively_summed_block_delta": 3.657185897318513,
+          "nonadditive_interaction": -0.7308211483503726,
+          "nonadditive_subblock_difference": 0.8462427307128308,
+          "shapley_geometry": 1.6734809324344297,
+          "shapley_power": 2.829947695596914
+        },
+        "high": {
+          "delta_chi2_CPL_minus_fading": 1.0806061981750759,
+          "nonadditive_interaction": -0.8165476957367375,
+          "shapley_geometry": 1.196659984946617,
+          "shapley_power": -0.11605378677154121
+        },
+        "low": {
+          "delta_chi2_CPL_minus_fading": 0.7698657441492003,
+          "nonadditive_interaction": -0.06467011260642153,
+          "shapley_geometry": 0.6277799257810841,
+          "shapley_power": 0.14208581836811618
+        },
+        "mixed": {
+          "delta_chi2_CPL_minus_fading": 1.8067139549942368,
+          "nonadditive_interaction": -0.1854415292427518,
+          "shapley_geometry": 0.7683008805002203,
+          "shapley_power": 1.0384130744940165
+        }
+      }
+    }
+  },
+  "e6": {
+    "augmented_determinant_is_pfaffian_square": true,
+    "augmented_skew_dimension": 84,
+    "checks": [
+      {
+        "determinant_phase_radians": -2.6672952994771784,
+        "identity_log_error": 8.384404281969182e-13,
+        "identity_phase_complex_error": 9.003599409688721e-13,
+        "log_coefficient_magnitude": 98.279914831249,
+        "positive_coefficients": [
+          0.4,
+          0.4,
+          0.4
+        ]
+      },
+      {
+        "determinant_phase_radians": -2.6672952994779497,
+        "identity_log_error": 6.252776074688882e-13,
+        "identity_phase_complex_error": 1.2894607287229197e-13,
+        "log_coefficient_magnitude": 98.27991483124922,
+        "positive_coefficients": [
+          0.3,
+          0.9,
+          0.2
+        ]
+      },
+      {
+        "determinant_phase_radians": -2.6672952994785244,
+        "identity_log_error": 8.526512829121202e-14,
+        "identity_phase_complex_error": 4.457364908676302e-13,
+        "log_coefficient_magnitude": 98.27991483124976,
+        "positive_coefficients": [
+          2.0,
+          0.7,
+          0.9
+        ]
+      },
+      {
+        "determinant_phase_radians": -2.6672952994782677,
+        "identity_log_error": 7.105427357601002e-14,
+        "identity_phase_complex_error": 1.8894175047226974e-13,
+        "log_coefficient_magnitude": 98.27991483124991,
+        "positive_coefficients": [
+          0.8,
+          1.2,
+          0.45
+        ]
+      }
+    ],
+    "completed_rank": 81,
+    "determinant_identity": "det(M+U diag(t1,t2,t3) U^T) = t1*t2*t3*det([[M,U],[-U^T,0]]) for rank(M)=n-3",
+    "native_alternating_rank": 78,
+    "native_coefficient_phase_radians": -2.6672952994780785,
+    "physical_limit": "This 81-state determinant is NOT theta_bar or an SM mass determinant. This algebra does not provide a vacuum, anomalies, CKM/PMNS, or loop-level CP protection; phases of U could change it.",
+    "positive_vev_magnitudes_do_not_change_phase": true,
+    "spurion_directions": 3
+  },
+  "extra_h27": {
+    "independent_numeric_and_integer_replay": true,
+    "limitation": "The coupling amplitude is supplied rather than derived; the H27 holonomy basis is not identified with the separate Maxwell 46D harmonic subspace.",
+    "native_holonomy_dimension": 4,
+    "orbits": [
+      {
+        "generalized_mass_eigenvalues": [
+          -0.0,
+          0.0,
+          0.222222222222,
+          0.222222222222
+        ],
+        "index": 0,
+        "integer_charge_snf": [
+          1,
+          1
+        ]
+      },
+      {
+        "generalized_mass_eigenvalues": [
+          -0.0,
+          0.0,
+          0.222222222222,
+          0.222222222222
+        ],
+        "index": 1,
+        "integer_charge_snf": [
+          1,
+          1
+        ]
+      },
+      {
+        "generalized_mass_eigenvalues": [
+          0.074074074074,
+          0.074074074074,
+          0.111111111111,
+          0.111111111111
+        ],
+        "index": 2,
+        "integer_charge_snf": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "generalized_mass_eigenvalues": [
+          0.074074074074,
+          0.074074074074,
+          0.111111111111,
+          0.111111111111
+        ],
+        "index": 3,
+        "integer_charge_snf": [
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "possible_positive_mass_ranks": [
+      2,
+      4
+    ]
+  },
+  "geometry": {
+    "coexact_eigenvalue_formula": "lambda_i=3*w_i, i=1..36",
+    "conditional_H27_rank_cap": 4,
+    "gauge_gradients": 26,
+    "harmonic_modes_after_arbitrary_face_weight": 46,
+    "harmonic_zero_modes_after_rank4_lift": 42,
+    "harmonic_zero_modes_before": 46,
+    "illustrative_lift_rank": 40,
+    "native_complex": [
+      27,
+      108,
+      36
+    ],
+    "positive_face_weights_36": true,
+    "warning": "The native 4D H27 holonomy carrier has NOT been shown to embed into the 46D Maxwell harmonic sector; the 42 bound applies only if the added gauge-invariant stiffness has rank <=4.",
+    "weighted_magnetic_rank": 36
+  },
+  "photonic": {
+    "correlated_phase_results": {
+      "0.0": {
+        "analytic_conditional_fidelity": 0.9171189191500715,
+        "equal_rail_survival_eta07_unconditional_success_weighted_fidelity": 0.64198324340505,
+        "simulated_conditional_fidelity": 0.9174016679291065
+      },
+      "0.5": {
+        "analytic_conditional_fidelity": 0.9576272047281702,
+        "equal_rail_survival_eta07_unconditional_success_weighted_fidelity": 0.670339043309719,
+        "simulated_conditional_fidelity": 0.9576051427409059
+      },
+      "0.9": {
+        "analytic_conditional_fidelity": 0.9913722165961101,
+        "equal_rail_survival_eta07_unconditional_success_weighted_fidelity": 0.693960551617277,
+        "simulated_conditional_fidelity": 0.9913687730833374
+      },
+      "1.0": {
+        "analytic_conditional_fidelity": 1.0,
+        "equal_rail_survival_eta07_unconditional_success_weighted_fidelity": 0.7,
+        "simulated_conditional_fidelity": 1.0
+      }
+    },
+    "equicorrelated_formula": "E[F] = 1/N + (1-1/N)*exp(-sigma^2*(1-rho))",
+    "general_formula": "E[F] = N^-2 sum_ij exp(-(Cii+Cjj-2Cij)/2), Gaussian rail-phase covariance C",
+    "modes": 27,
+    "samples": 15000,
+    "scope": "Common phase is gauge-invisible in this idealized interference fidelity. Uniform loss is an erasure/success penalty, not an improvement in physical success. No physical photon experiment.",
+    "sigma_radians": 0.3,
+    "synthetic": true
+  },
+  "quantum_walk": {
+    "derivation": "Duhamel: ||U(T)-U0(T)||op <= integral ||E(t)||op dt, also valid when [E(t),H0] != 0.",
+    "limitations": "Only relative to the prior, explicitly symmetric H0 family and its 2/q^2 bound; not a no-go for general strictly local Hamiltonians.",
+    "q_values": {
+      "11": {
+        "baseline_upper_bound": 0.01652892561983471,
+        "necessary_integrated_operator_norm": 0.010881196614507437,
+        "target_flat_amplitude": 0.02741012223434215
+      },
+      "13": {
+        "baseline_upper_bound": 0.011834319526627219,
+        "necessary_integrated_operator_norm": 0.009500303405112364,
+        "target_flat_amplitude": 0.021334622931739582
+      },
+      "3": {
+        "baseline_upper_bound": 0.2222222222222222,
+        "necessary_integrated_operator_norm": 0.0,
+        "target_flat_amplitude": 0.19245008972987526
+      },
+      "5": {
+        "baseline_upper_bound": 0.08,
+        "necessary_integrated_operator_norm": 0.009442719099991587,
+        "target_flat_amplitude": 0.08944271909999159
+      },
+      "7": {
+        "baseline_upper_bound": 0.04081632653061224,
+        "necessary_integrated_operator_norm": 0.013178598184991647,
+        "target_flat_amplitude": 0.05399492471560389
+      }
+    },
+    "statement": "For H(t)=H0+E(t), integral_0^T ||E(t)||op dt >= q^(-3/2)-2/q^2 is necessary for a uniform amplitude on a previously bound output (q>=5)."
+  },
+  "schema": "w33.20261108.five_gate_extensions.v1",
+  "scientific_status": "Exact conditional math / synthetic optical control / source-certificate observational arithmetic; no unified physics or experimental photon established."
+}

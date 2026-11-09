@@ -1,0 +1,40 @@
+name: Five W33 physics-gate extensions (native six-front replay)
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "analysis/w33_20261108_five_gate_extensions.py"
+      - "tests/test_w33_20261108_five_gate_extensions.py"
+      - "data/w33_20261108_five_gate_extensions.json"
+      - ".github/workflows/w33_20261108_five_gate_extensions.yml"
+  push:
+    paths:
+      - "analysis/w33_20261108_five_gate_extensions.py"
+      - "tests/test_w33_20261108_five_gate_extensions.py"
+      - "data/w33_20261108_five_gate_extensions.json"
+      - ".github/workflows/w33_20261108_five_gate_extensions.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  native-six-front-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install focused numerical verification dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy sympy pytest
+      - name: Run focused native finite-matrix and certificate regressions
+        run: python -m pytest -q tests/test_w33_20261108_five_gate_extensions.py
+      - name: Independently regenerate certificate
+        run: python analysis/w33_20261108_five_gate_extensions.py --output data/w33_20261108_five_gate_extensions_ci.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-20261108-native-six-front-replay
+          path: data/w33_20261108_five_gate_extensions_ci.json
+          retention-days: 30
