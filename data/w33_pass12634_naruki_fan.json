@@ -1,0 +1,67 @@
+{
+ "fvector_reconstructed": [
+  76,
+  630,
+  1620,
+  1215
+ ],
+ "fvector_literature": [
+  76,
+  630,
+  1620,
+  1215
+ ],
+ "max_orth_set": 4,
+ "aaaa": 135,
+ "aaab": 1080,
+ "pair_types": {
+  "(3, ((0, 36), (4, 42), (8, 3)))": 540,
+  "(0, ((0, 27), (4, 54)))": 240
+ },
+ "graphs": {
+  "(3, ((0, 36), (4, 42), (8, 3)))": [
+   40,
+   27,
+   18,
+   18
+  ],
+  "(0, ((0, 27), (4, 54)))": [
+   40,
+   12,
+   2,
+   4
+  ]
+ },
+ "w33_found": true,
+ "control_noninvariant": "('regular', 13, [np.int64(0), np.int64(12)], [np.int64(0), np.int64(13)])",
+ "perp_perp_sizes_noncollinear": {
+  "2": 540
+ },
+ "gq_type": "Q(4,3) points = W(3,3) lines",
+ "control_W33": {
+  "4": 540
+ },
+ "control_Q43": {
+  "2": 540
+ },
+ "aaaa_by_D4": {
+  "n_D4": 45,
+  "frames_per_D4": [
+   3
+  ],
+  "roots_per_D4": [
+   12
+  ]
+ },
+ "checks": {
+  "fvector_matches_literature": true,
+  "no_orthogonal_5_sets": true,
+  "root_disjoint_graph_is_srg_40_12_2_4": true,
+  "cusp_graph_is_Q43_not_W33": true,
+  "controls_distinguish": true,
+  "noninvariant_control_not_srg": true,
+  "aaaa_is_45_D4_times_3": true
+ },
+ "all_checks_pass": true,
+ "pass_number": 12634
+}

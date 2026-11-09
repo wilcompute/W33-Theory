@@ -146,3 +146,6 @@ The isomorphism PSp(4,3) ≅ W(E₆)/Z₂ establishes:
 4. **Generator map:** W(E₆) simple reflections ↔ Sp(4,3) transvections (explicit above)
 
 The W33 theory is **not just analogous** to E₆ — it IS E₆ geometry viewed through coding theory.
+
+
+> **Correction (Pass 12634, 2026-11-09).** A smooth cubic surface has 45 tritangent planes, not 40. The W(E6) orbit of size 40 (stabiliser order 1296) is the 40 A2^3 subsystems (Steiner triads), and its incidence structure (root-disjointness) is Q(4,3) = the 40 LINES of W(3,3), not the points. See `analysis/PASS12634_NARUKI_FAN.md`.
