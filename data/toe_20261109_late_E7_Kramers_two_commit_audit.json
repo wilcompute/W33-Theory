@@ -1,0 +1,112 @@
+{
+  "baseline": "3b8f728dd45289e77e11bc3196576077d7eb4643",
+  "head": "f55fe000e7a1b095642773bd71fd0faeee62370f",
+  "commits": [
+    {
+      "sha": "8234ecb2589d80cd007626563dd2d1ed07e90c1d",
+      "full_commit_message": "Handoff to Codex: coordination proposal for the cubic-surface/MUB line (Codex: exact certificates for strong unextendibility and the E7 bijection; Claude: bridges/QI readings); shared facts list. GitKraken MCP unavailable this session; shell git used.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "files": [
+        {
+          "path": "analysis/HANDOFF_CLAUDE_TO_CHAT_20261106.md",
+          "bytes": 11092,
+          "sha256": "9fb672f40ea059d7b6f97d26e3215bea230aedfa1db993529ec205c3ab440be0",
+          "complete_utf8_parsed": true
+        }
+      ]
+    },
+    {
+      "sha": "f55fe000e7a1b095642773bd71fd0faeee62370f",
+      "full_commit_message": "Pass 12638: E7 pezzotopes = scalene triples of 3-qubit Lagrangians (explicit region's facets determine the triple: unique 6-A1 frame + two all-A7-singular frames, dims 0/1/2; bijection by equivariance + matching orbits/stabiliser S4); the double-six reflection = Kramers reversal (36/36 fixed-point-free) = chirality flip = odd triality on 15 factorisations (540/540); cube residues = three 2-point channels = the 3 A2 factors (2160/2160); strong-unextendibility: pure-state weight LP feasible (cannot decide), zero forcing inconclusive, SOS running; census: no strongly unextendible 4-set in d=9 (pentads smallest), d=4 3-sets 0.25 and d=8 5-sets 0.125 strongly unextendible (numerical). GitKraken MCP unavailable this session; shell git used.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+      "files": [
+        {
+          "path": "analysis/PASS12638_E7_KRAMERS_CHANNELS.md",
+          "bytes": 5502,
+          "sha256": "08ad4469b95d0102a4aeece784d195e2a27b0ad7fc6e62c6a278a50d11693280",
+          "complete_utf8_parsed": true
+        },
+        {
+          "path": "analysis/w33_cube_channels.py",
+          "bytes": 1735,
+          "sha256": "e2cf222d0f8424e7c9607742e24f74bfdfe3c347faac67456c217246ebc261e7",
+          "complete_utf8_parsed": true
+        },
+        {
+          "path": "analysis/w33_e7_facet_test.py",
+          "bytes": 5756,
+          "sha256": "e5f1261089c1715b4d317d54b4a6df9948e93cd852fb0168405e2a476dc88c95",
+          "complete_utf8_parsed": true
+        },
+        {
+          "path": "analysis/w33_reflection_is_kramers.py",
+          "bytes": 2152,
+          "sha256": "bc8159985a87d271690c29d39afba7bef41835d86244660a0013b4dcd7c4145a",
+          "complete_utf8_parsed": true
+        },
+        {
+          "path": "analysis/w33_strong_umub_census.py",
+          "bytes": 5910,
+          "sha256": "76403e82a31eb424a1d06713a0aecd16a8c18eb458fdb1dc6e282eca0f2af1b4",
+          "complete_utf8_parsed": true
+        },
+        {
+          "path": "analysis/w33_strong_umub_certificate.py",
+          "bytes": 8310,
+          "sha256": "ce2f40d6ab3b21d5b87b0dde3952a9571a82756dc5587417ca548d037ea9b272",
+          "complete_utf8_parsed": true
+        },
+        {
+          "path": "analysis/w33_strong_umub_sos.py",
+          "bytes": 2908,
+          "sha256": "86a78b58c43a6c9a5b07f18b0df1e3a53cfaece629744d49c7fd6cd23b3b22fe",
+          "complete_utf8_parsed": true
+        },
+        {
+          "path": "analysis/w33_triality_chirality_element.py",
+          "bytes": 2843,
+          "sha256": "d7216a2b983f1775953c007025bbce91b47a6a060b21c46fe046a660055c64ce",
+          "complete_utf8_parsed": true
+        },
+        {
+          "path": "data/w33_cube_channels.json",
+          "bytes": 36,
+          "sha256": "1ae9ffb30d4fb0616b3ddf94938436b8686bed04cfb65f319876fc203a463c8e",
+          "complete_utf8_parsed": true
+        },
+        {
+          "path": "data/w33_e7_facet_test.json",
+          "bytes": 511,
+          "sha256": "a6f41bc218e4e895ea6316047fe20aec4f2355798b77f90aa080f9a14f257c0e",
+          "complete_utf8_parsed": true
+        },
+        {
+          "path": "data/w33_reflection_is_kramers.json",
+          "bytes": 74,
+          "sha256": "3b7bf568fa74a90a39072d7f23a71a6bd932924315f00332b8ba222e9d85308a",
+          "complete_utf8_parsed": true
+        },
+        {
+          "path": "data/w33_strong_umub_census.json",
+          "bytes": 878,
+          "sha256": "2d7df3255cb6d11113bc0fba34e5eaa4c645907a34a467f21850b85b23e59f88",
+          "complete_utf8_parsed": true
+        },
+        {
+          "path": "data/w33_strong_umub_certificate.json",
+          "bytes": 431,
+          "sha256": "3563a2dc702516a75fd67d2437fa396abb3d09f9a84c16dfacd47e1e61108cfd",
+          "complete_utf8_parsed": true
+        },
+        {
+          "path": "data/w33_triality_chirality_element.json",
+          "bytes": 174,
+          "sha256": "b468b811410d34665560f28dc3afd2499c5724ec1692296a6d847e42ebbe3e7f",
+          "complete_utf8_parsed": true
+        }
+      ]
+    }
+  ],
+  "revision_count": 15,
+  "revision_bytes": 48312,
+  "errors": [],
+  "scope": "All added commit messages and complete modified file revisions read; not all physics claims semantically validated"
+}

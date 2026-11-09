@@ -1,0 +1,64 @@
+name: W33 audit five strengthened gates and three creative controls
+
+on:
+  workflow_dispatch: {}
+  pull_request:
+    paths:
+      - "analysis/toe_20261109_post_pr324_full_audit.py"
+      - "analysis/toe_20261109_audit_fiveplus3_falsifiers.py"
+      - "analysis/PASS20261109_POST_PR324_FULLBYTE_CHANGE_AUDIT.md"
+      - "analysis/PASS20261109_AUDIT_FIVEPLUS3_FALSIFIERS.md"
+      - "data/toe_20261109_postpr324_fullbyte_audit.json"
+      - "data/toe_20261109_audit_fiveplus3_falsifiers.json"
+      - "tests/test_toe_20261109_audit_fiveplus3_falsifiers.py"
+      - ".github/workflows/w33_20261109_eight_falsifiers.yml"
+  push:
+    paths:
+      - "analysis/toe_20261109_post_pr324_full_audit.py"
+      - "analysis/toe_20261109_audit_fiveplus3_falsifiers.py"
+      - "tests/test_toe_20261109_audit_fiveplus3_falsifiers.py"
+      - ".github/workflows/w33_20261109_eight_falsifiers.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  eight-falsifiers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install finite algebra and test harness
+        run: python -m pip install --disable-pip-version-check numpy scipy sympy pytest
+      - name: Verify all 26 focused regressions
+        run: python -m pytest -q tests/test_toe_20261109_audit_fiveplus3_falsifiers.py
+      - name: Independently regenerate all eight machine certificate sections
+        run: python analysis/toe_20261109_audit_fiveplus3_falsifiers.py --out data/toe_20261109_eight_falsifiers_ci.json
+      - name: Evidence claim and numerical identity firewall
+        run: |
+          python - <<'PY'
+          import json
+          j=json.load(open("data/toe_20261109_eight_falsifiers_ci.json",encoding="utf-8"))
+          assert j["audit"]["commits"]==43
+          assert j["audit"]["revisions"]==190
+          assert j["frame"]["first_nonzero_interface_energy"]==3
+          assert j["magnetic"]["critical_positive_short_weight"]=="5775/29857"
+          assert j["magnetic"]["source_spatial_deck_rank"]==4
+          assert j["optics"]["minimum_accepted_heralded_events"]==17
+          assert j["E6"]["signed_matter_repaired_sextic_uneaten_chiral_modes"]==89
+          assert j["cosmology"]["S9_future_releases_observed_here"] is False
+          p7=j["prime_frames"]["tested"][2]
+          q6=next(x for x in p7["counterexample_same_Q_different_purity"] if x["Q"]==6)
+          assert (q6["first_purity"],q6["second_purity"])==("82/3136","90/3136")
+          assert j["lattice_fermions"]["corner_Dirac_zeros_without_Wilson"]==8
+          assert j["triality"]["two_basis_state_linear_extension_fidelity_to_conjugation"]<1e-14
+          print("PASS: exact math, experimental calibration only conditional, full E6 massless and cosmology fail-closed")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe-20261109-eight-falsifiers
+          path: data/toe_20261109_eight_falsifiers_ci.json
+          retention-days: 30
