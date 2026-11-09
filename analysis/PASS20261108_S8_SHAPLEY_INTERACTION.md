@@ -1,5 +1,7 @@
 # Frozen S8: nonlinear interaction and symmetric power/geometry attribution
 
+> **WITHDRAWN AS PHYSICAL SHEAR EVIDENCE — PASS12632, 2026-11-08.** A CLASS/Halofit scalar-field nonlinear-power bug invalidated the original fading/KLT power spectra. The arithmetic Shapley decomposition below is internally reproducible for its original inputs but has NO valid model-comparison or empirical standing. Do not cite its DES/KiDS rankings or fractions until independent patched likelihood reruns. Source: `analysis/PASS12632_HALOFIT_SCF_BUG.md`.
+
 **Date:** 2026-11-08. **Source:** analysis/w33_20261108_s8_hybrid_shapley_audit.py. **Tests:** tests/test_w33_20261108_s8_hybrid_shapley_audit.py (13/13 desktop pass). **CI:** .github/workflows/w33_20261108_s8_shapley.yml. **Certificate:** data/w33_20261108_S8_hybrid_shapley_audit.json.
 
 **Protocol boundary:** The previously frozen forward prediction analysis/toe_uv/prereg_highz.json was **not edited or re-frozen**. This is arithmetic reconstruction of previously computed fixed-background survey models. It is not new observational evidence, a calibrated p-value or a causal cosmological parameter isolation.
