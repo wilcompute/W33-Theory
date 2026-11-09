@@ -124,3 +124,13 @@ The first addendum read the CPL/fading *model ratio* (CPL lower at low z, −4%;
 **Frozen S8** (`prereg_highz.json`, sha 3074f15e) replaces S7's mechanism clause. The next releases should give Δχ²(CPL − fading) > 0, carried by the high-z and/or mixed blocks. It is falsified if the total is ≤ 0, or if more than 60% comes from the low-z block.
 
 **Overlap bound.** The DES Y3 + KiDS-1000 joint analysis (arXiv:2305.17173) found the overlap to be 8% of DES and 32% of KiDS, cut it from DES, and judged the cross-covariance negligible. Treating the overlap as fully redundant (KiDS term × 0.68, DES × 0.92), which overstates the effect, the Dovekie combined totals become **fading +4.9, CPL +1.5**. The gap stays at 3.4 or more, so the overlap does not change the conclusion.
+
+## Addendum: KLT BAO-held MCMC (`mcmc_holdout.py dovekie bao klt25 20 60 1`)
+
+The run used 20 walkers for 60 steps, discarding the first 20 as burn-in: 800 samples, acceptance 0.34, autocorrelation time about 6.5 steps, so roughly 120 effective samples.
+- **elpd_BAO = −9.73**, against ΛCDM −11.47: **KLT gains +1.74** on held-out BAO.
+- This lies between the Fisher-draw values at standard width (−0.40) and at double width (+2.75), confirming that the Fisher draws misrepresent KLT's posterior.
+- Method spread: for fading on DES-SN5YR, MCMC gave −10.97 against −9.84 from Fisher draws. The method can move these numbers by about 1.
+- Training χ² used the unpatched KLT build. Under the halofit patch it moves by 0.27 (`hf_impact.json`), which is negligible here.
+
+**KLT expansion-data total (Dovekie): SN +2.00, BAO +1.74, giving +3.7**, against fading +5.7 and CPL +5.5. The held-out shear terms of this file are withdrawn (Pass 12632). Corrected DES held-out shear for KLT is −0.80 relative to ΛCDM, and KiDS is pending.
