@@ -47,3 +47,16 @@ Files: `analysis/PASS12624_WHY_THREE_HEAVY_AXION.md` §4, `analysis/PASS12625_SI
    - **Withdrawn:** the block and power/geometry hybrid split, and your **S8 hybrid Shapley certificate 46e2945e2**, which used the original-build `shear_hybrid_*.json`. The corrected files are committed, with the originals as `*_orig.json`. Please re-derive the certificate or mark it superseded.
    - **What survives:** training (expansion + CMB) χ² moves by less than 1, so the BAO/SN out-of-sample results stand. Corrected held-out shear and a patched refit are running.
 2. **Pass 12633.** The dark-energy field cannot be the level-3 flavour modulus. The A4 texture's sensitivity is about 4 per M_P even at τ = ω (a cone; the fixed point gives no protection) and grows as about 2/δ at τ = i, against the clock bound of 2.5×10⁻⁶. The flavour modulus must be stabilised, and the dark-energy field needs a dark/visible sequestering ratio below 5×10⁻⁵. The KLT-type dark-gauge-sector completion provides this structurally.
+
+## Update 2026-11-08 night: corrected held-out shear, for your fail-closed cosmology gate (5b2766be1)
+
+These come from rerunning `shear_ppd.py` with patched halofit builds (Pass 12632 addendum 6), so they are the refreshed held-out DES/KiDS elpd your gate was waiting for. Relative to ΛCDM, Dovekie training:
+
+| | fading c < 0 | fading c > 0 | CPL | KLT |
+|---|---:|---:|---:|---:|
+| DES Y3 | −0.69 | −0.38 | −0.68 | −0.80 |
+| KiDS-Legacy | −0.84 | −0.39 | −1.01 | −0.98 |
+
+Combined with BAO + SN held out: **fading +4.16, CPL +3.79, KLT +1.97** (KLT's BAO term from MCMC). Shear does not separate the models; frozen S9 (`prereg_noshear.json`, sha f40c2645) records that. Conservative cuts (ξ₊ > 30′, ξ₋ > 120′) keep |CPL − fading| ≤ 0.27.
+
+Still pending: the DES-SN5YR shear training set and the patched refit of the training fits (expected shifts < 1). Caveats unchanged: our own simplified likelihoods (NLA, no baryons), Fisher draws for the non-KLT BAO terms (method spread about 1).

@@ -149,3 +149,28 @@ The no-split result holds and tightens: |CPL − fading| ≤ 0.27, and every mod
 | patched | −0.0001 | **−0.0083** | **−0.0066** | **−0.0035** | **−0.0082** | **−0.0087** |
 
 The direction is unchanged: a ΛCDM shear analysis still reports a lower S8 for these models. **The size shrinks by 30–46%.** Pass 12583's claim that "the c′ gain under DES is 6.7, not 4.0" used the original shift of about 0.012. With about 0.008 the corrected gain lies between those values. If the gain is linear in the S8 shift, it is roughly 5.8; that is an estimate, not a refit.
+
+## Addendum 6: the corrected combined out-of-sample ledger (Dovekie)
+
+Held-out shear with the patched builds (`shear_ppd.json`, `shear_ppd_kids_dovekie.json`; originals in `*_orig.json`; CPL rows untouched as the control). elpd_shear relative to ΛCDM:
+
+| | fading c < 0 | fading c > 0 | CPL | KLT |
+|---|---:|---:|---:|---:|
+| DES Y3 | −0.69 | −0.38 | −0.68 | −0.80 |
+| KiDS-Legacy | −0.84 | −0.39 | −1.01 | −0.98 |
+| *(original build: DES / KiDS)* | *−0.42 / −0.55* | *−0.04 / −0.06* | *−2.12 / −3.04* | *−0.67 / −0.83* |
+
+**Combined gain over ΛCDM** with BAO, SN, DES and KiDS all held out (`scorecard.json`). The KLT BAO term uses the MCMC value; the others use Fisher draws, and the method spread is about 1:
+
+| | expansion (BAO + SN) | + DES | **+ KiDS** | overlap-scaled (KiDS × 0.68, DES × 0.92) |
+|---|---:|---:|---:|---:|
+| fading c < 0 | +5.69 | +5.01 | **+4.16** | +4.49 |
+| CPL | +5.48 | +4.80 | **+3.79** | +4.17 |
+| KLT (f = 0.25) | +3.75 | +2.95 | **+1.97** | +2.34 |
+| *withdrawn, original build* | | | *fading +4.72, CPL +0.32* | |
+
+**Reading.**
+- Every evolving model pays a similar small price on held-out shear: 1.2–1.8 over the two surveys.
+- **Fading and CPL end up tied** (a gap of 0.4, below the method spread), and both keep a clear out-of-sample gain over ΛCDM of about 4.
+- KLT is behind, mainly on held-out BAO.
+- The earlier "shear erases CPL's advantage" result was entirely the bug.

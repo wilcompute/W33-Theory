@@ -20,8 +20,9 @@ Claude track, Passes 12620–12633. All numbers come from committed JSON in `ana
 | | fixed-background χ²_shear vs ΛCDM: fading c < 0 / CPL | held-out elpd vs ΛCDM: fading c < 0 / c > 0 / CPL |
 |---|---|---|
 | DES Y3 | +1.94 / +1.29 | −0.69 / −0.38 / −0.68 |
-| KiDS-Legacy | +2.49 / +2.21 | *rerun in progress* |
+| KiDS-Legacy | +2.49 / +2.21 | −0.84 / −0.39 / −1.01 |
 
+- **Combined (BAO, SN, DES, KiDS all held out, Dovekie): fading +4.16, CPL +3.79, KLT +2.0 over ΛCDM** (overlap-scaled +4.5 / +4.2 / +2.3). Fading and CPL are tied; both keep the expansion-data gain.
 - All the evolving models sit slightly behind ΛCDM on shear, by less than 2.5 in χ² and less than 0.7 in elpd, and |CPL − fading| < 0.7.
 - This agrees with KiDS-Legacy's own extended-model analysis: no significant w₀wₐ improvement from shear plus CMB lensing (Reischke et al., A&A 709, A82, 2026; arXiv:2512.11041).
 - Frozen S1 (fading beats CPL on shear) is not supported by current data. Frozen S8 and S7's sign clause would fail if scored now. Their formal targets are future releases.

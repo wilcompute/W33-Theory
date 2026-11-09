@@ -35,6 +35,10 @@ for lab, key in MAP.items():
         if lab in PPDM:
             a, ta = ppd(ds, "sn", PPDM[lab])
             b, tb = ppd(ds, "bao", PPDM[lab])
+            mcf = os.path.join(os.path.dirname(os.path.abspath(__file__)), f"mcmc_{ds}_bao_{PPDM[lab]}.json")
+            if lab == "KLT" and os.path.exists(mcf):  # Fisher draws misrepresent KLT's periodic posterior (Pass 12631): use the MCMC held-out BAO elpd
+                b = json.load(open(mcf))["elpd_held"]
+                r[f"bao_elpd_source_{ds}"] = "mcmc"
             l1, _ = ppd(ds, "sn", "LCDM")
             l2, _ = ppd(ds, "bao", "LCDM")
             r[f"oos_gain_{ds}"] = (a + b) - (l1 + l2) if None not in (a, b) else None

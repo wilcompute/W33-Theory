@@ -274,7 +274,42 @@
    }
   }
  },
- "heldout_shear_rel_lcdm": {},
+ "heldout_shear_rel_lcdm": {
+  "shear_ppd.json": {
+   "patched": {
+    "CPL": -0.6816841132882558,
+    "LCDM": 0.0,
+    "free_neg": -0.6852720046285157,
+    "free_pos": -0.3801592392790809,
+    "KLT": -0.7992779375728958
+   },
+   "original": {
+    "LCDM": 0.0,
+    "free_neg": -0.41802226998085246,
+    "free_pos": -0.044196018842839635,
+    "CPL": -2.1220689149796215,
+    "KLT": -0.6742946093479105
+   },
+   "cpl_raw_unchanged": true
+  },
+  "shear_ppd_kids_dovekie.json": {
+   "patched": {
+    "CPL": -1.0098851112852572,
+    "LCDM": 0.0,
+    "free_neg": -0.8448910664585298,
+    "free_pos": -0.3877103206214372,
+    "KLT": -0.9791103891057134
+   },
+   "original": {
+    "LCDM": 0.0,
+    "free_neg": -0.5532496121455068,
+    "free_pos": -0.057314694962300905,
+    "CPL": -3.0431257334722517,
+    "KLT": -0.8253716222379666
+   },
+   "cpl_raw_unchanged": true
+  }
+ },
  "checks": {
   "patched_scf_equals_lambda": true,
   "fluid_equals_lambda_both_builds": true,
@@ -287,7 +322,8 @@
   "matched_fluid_original_off_by_50pct": true,
   "cpl_fixed_background_shear_unchanged": true,
   "corrected_cpl_minus_fading_below_1": true,
-  "original_cpl_minus_fading_above_2p5": true
+  "original_cpl_minus_fading_above_2p5": true,
+  "heldout_cpl_rows_untouched": true
  },
  "all_checks_pass": true
 }
