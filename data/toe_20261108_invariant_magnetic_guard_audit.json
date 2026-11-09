@@ -1,0 +1,337 @@
+{
+  "mode": "Configured hook entries run directly with identical file patterns after both indexes regenerated. Existing Bash/CMD pre-commit launcher is unreliable; no --no-verify used.",
+  "records": [
+    {
+      "id": "stale-boundaries",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_stale_boundaries.py"
+      ],
+      "exit_code": 0,
+      "stdout": "==============================================================================\n[stale-boundary sweep] boundary sections a LATER file may have answered\n==============================================================================\nscanned 4093 analysis/*.md; 15 boundaries have a later file sharing >=2 result tokens\n\n  BT7171_BT7186_e8_d4_h27_q9.md\n    -> later: PASS7376_7384_deep_followup.md   (23 shared tokens, e.g. A2, D4, E6, E8)\n  PASS20260925_HESSE_PARABOLIC_CUBIC_CLOCK_BREAKTHROUGH.md\n    -> later: PASS20261108_S4_HARMONIC_QDUAL.md   (10 shared tokens, e.g. A2, E6, E8, a2+e6)\n  2026-10-10_toe33_joint_decoder_p13_a6_bloch_hardware.md\n    -> later: w33_pass1117_1119_aliases_orbits_trees.md   (9 shared tokens, e.g. E6, E8, e6+e8, e6+levi)\n  2026-07-08_pass70_15vector_doily_attack.md\n    -> later: 2026-07-08_pass72_cumulative_bijection.md   (4 shared tokens, e.g. doily, spread@15, spread@3, spread@5)\n  2026-07-08_pass76_QEC_codes_alpha_code.md\n    -> later: 2026-07-15_pass82_grand_synthesis.md   (3 shared tokens, e.g. [137,1,3], [[137,1,3]], monster+moonshine)\n  BT807_q3_antiflag_two_clocks.md\n    -> later: BT1710_BT1712_qubit_torus_hesse_breakthrough.md   (3 shared tokens, e.g. csaszar, csaszar+doily, doily)\n  BT809_register_f4_regular_spread.md\n    -> later: BT836_gc_hemicells_in_spreads.md   (3 shared tokens, e.g. spread@10, spread@2, spread@45)\n  2026-06-19_validation_thread_summary.md\n    -> later: 2026-06-19_bt1327_bt1330_summary.md   (2 shared tokens, e.g. [63,1,11], [[63,1,11]])\n  2026-10-31_tick_loop_algebra_rigidity.md\n    -> later: PASS20260924_EXECUTE_ALL5_TEMPORAL_E8_CONTROLLER.md   (2 shared tokens, e.g. clifford+eisenstein, edge240:signed)\n  2026-07-08_pass72_deep_structure.md\n    -> later: 2026-07-08_pass73_kneser_css_moonshine.md   (2 shared tokens, e.g. doily, doily+monster)\n  BT745_presentation_torsor_chirality.md\n    -> later: BT746_absolute_chirality_z12.md   (2 shared tokens, e.g. E6, e6+torsor)\n  BT795_spread_envelope_routing_cell.md\n    -> later: w33_pass1971_spread_treatments_concordance.md   (2 shared tokens, e.g. spread@180, spread@40)\n  BT1320_BT1325_hypercube_tower_holonet.md\n    -> later: BT1416_BT1418_css_optical_quartic_frontier.md   (2 shared tokens, e.g. clifford+csaszar, csaszar)\n  BT1425_BT1427_retwined_fano_pipeline.md\n    -> later: BT1428_BT1430_symmetry_pulse_holonet.md   (2 shared tokens, e.g. D4, d4+tomotope)\n  BT2560_BT2567_seven_frontiers.md\n    -> later: BT2567_seven_frontiers_insert.tex   (2 shared tokens, e.g. tritangent@27, tritangent@45)\n\n  CANDIDATES, not verdicts. Read the later file before spending a pass\n  re-answering the question. If it does answer it, EDIT THE ORIGINAL\n  boundary to point there -- leaving it stale is what caused this.\n\n",
+      "stderr": "",
+      "seconds": 33.822
+    },
+    {
+      "id": "shifted-adjacency-descendants",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_shifted_adjacency_descendants.py",
+        "--check-only",
+        "analysis/toe_20261108_invariant_magnetic_completion.py",
+        "analysis/2026-11-08_invariant_magnetic_cone_completion.md",
+        "tests/test_toe_20261108_invariant_magnetic_completion.py",
+        "data/toe_20261108_invariant_magnetic_completion.json",
+        "data/toe_20261108_invariant_magnetic_server.json",
+        "data/toe_20261108_invariant_magnetic_validation.json",
+        "data/toe_20261108_invariant_magnetic_intake.json",
+        "RESULTS_INDEX.md",
+        "TOPICAL_ALIASES.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 1.286
+    },
+    {
+      "id": "tag-540-check",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/tag_540_disambiguation.py",
+        "--check-only",
+        "--strict",
+        "analysis/toe_20261108_invariant_magnetic_completion.py",
+        "analysis/2026-11-08_invariant_magnetic_cone_completion.md",
+        "tests/test_toe_20261108_invariant_magnetic_completion.py",
+        "data/toe_20261108_invariant_magnetic_completion.json",
+        "data/toe_20261108_invariant_magnetic_server.json",
+        "data/toe_20261108_invariant_magnetic_validation.json",
+        "data/toe_20261108_invariant_magnetic_intake.json",
+        "RESULTS_INDEX.md",
+        "TOPICAL_ALIASES.md"
+      ],
+      "exit_code": 1,
+      "stdout": "ERROR: RESULTS_INDEX.md has ambiguous 540 occurrence(s)\n  line 218: frontiers.py` | | `[0,1440,31302]` | `analysis/bt3407_magnetic_exact_no_go.py` | | `[1080,540,540]` | `analysis/w33_pass4756_4758_4760_dependency_cube_fast_verify.py` | | `[1160,92\n  line 218: tiers.py` | | `[0,1440,31302]` | `analysis/bt3407_magnetic_exact_no_go.py` | | `[1080,540,540]` | `analysis/w33_pass4756_4758_4760_dependency_cube_fast_verify.py` | | `[1160,925,68\n  line 276: k_map.py` | | `[5,6912,1053]` | `analysis/w33_20261027_native_bloch_face_module.py` | | `[540,270,135]` | `analysis/w33_pass3989_3996_maximum_code_orbit_census.py` | | `[540,540,54\n  line 298: er_code.py` \u00b7 `analysis/w33_pass4772_4776_global_cube_cell_code.py` \u00b7 *(+2)* | | `[2025,540,3]` | `analysis/PASS4745_4752_RESERVATION.md` | | `[2025,567,4]` | `analysis/PASS4745_\n  line 409: o.py` | | `[54,72,432]` | `analysis/w33_pass1611_1615_torsion_xor_lattice_octet.py` | | `[540,141,4]` | `analysis/w33_pass4924_track_b_arithmetic_and_the_51840_warning.py` | | `[58\n  line 1496: ults_index.py` \u00b7 `analysis/w33_pass382_reversible_logic_switch_controller.g` | | `234360/540/90+360+90/6/22of48/0exact/S6-direction` | `analysis/PASS384_Q6_Q3_FOLD_OBSTRUCTION.md`\n  line 1621: ite_TOE_frontiers.md` \u00b7 `analysis/w33_20261019_round11_first_tits_jordan.py` | | `234360/540/90` | `analysis/PASS384_Q6_Q3_FOLD_OBSTRUCTION.md` \u00b7 `analysis/build_results_index.py\n  line 1632: KTHROUGH.md` \u00b7 `analysis/w33_20260924_history_pointline_cospectral_firewall.py` | | `270/540/1620` | `analysis/w33_pass2045_2049_the_sevens_and_a_numbering_collision.md` | | `343/\n  line 1979: py` \u00b7 `analysis/w33_pass10153_10160_c315_w52_structural_no_go.py` | | `totally-isotropic@540` | `analysis/BT1536_frame_dual_k44_code.md` \u00b7 `analysis/w33_frame_hoffman_resolution_\n  line 2389: it_iso.md` | | `tritangent@360` | `analysis/w33_pass4997_4999_bonkers.py` | | `tritangent@540` | `analysis/w33_e6_involution_ladder_flags.py` | | `tritangent@576` | `analysis/w33_2\n  line 2655: ic_closure.md` \u00b7 `analysis/BT3320_BT3331_global_cover_quantum_hypercube.md` | | `deficit@540` | `analysis/PASS5016_5023_EXECUTED_OUTCOMES.md` \u00b7 `analysis/w33_pass5016_radius_rp2_\n  line 2866: ity_spectral_E6_parallelism.md` \u00b7 `analysis/2026-10-10_toe43_five_fronts.md` | | `spread@540` | `analysis/PASS1074_1078_FIVE_STREAM_RELEASE.md` \u00b7 `analysis/w33_pass1067_outer_cla\n  line 4002: _matrix_cs.py` \u00b7 `analysis/w33_pass804_adversarial_calibration_failclosed.py` | | `alpha@540` | `analysis/2026-07-31_frame_hoffman_resolution_theorem.md` \u00b7 `exploration/w33_indep\n  Add an occurrence-local canonical tag: {540:point-nonedge}, {540:double-six-nonincident}, {540:gq42-arc}, {540:outer-4c}, {540:line-nonedge}; use {540:both} or {540:mixed} only for a genuinely mixed single occurrence, and {540:unrelated} only when the literal is not one of the five degree-540 carriers.\nERROR: TOPICAL_ALIASES.md has ambiguous 540 occurrence(s)\n  line 442: -code-outage-decoder.html](docs/pgsp-moduli-outer-code-outage-decoder.html) - `code:[2025,540,3]` \ufffd \u2014 [PASS4745_4752_RESERVATION.md](analysis/PASS4745_4752_RESERVATION.md), [PAS\n  Add an occurrence-local canonical tag: {540:point-nonedge}, {540:double-six-nonincident}, {540:gq42-arc}, {540:outer-4c}, {540:line-nonedge}; use {540:both} or {540:mixed} only for a genuinely mixed single occurrence, and {540:unrelated} only when the literal is not one of the five degree-540 carriers.\n",
+      "stderr": "",
+      "seconds": 0.656
+    },
+    {
+      "id": "pass-namespace-collision-guard",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "analysis/w33_pass1197_parallel_collision_guard.py",
+        "--check-only"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"C:\\Repos\\Theory of Everything\\analysis\\w33_pass1197_parallel_collision_guard.py\", line 189, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Repos\\Theory of Everything\\analysis\\w33_pass1197_parallel_collision_guard.py\", line 89, in main\n    registry, registry_blocks, supplements = load_registry_blocks()\n                                             ~~~~~~~~~~~~~~~~~~~~^^\n  File \"C:\\Repos\\Theory of Everything\\analysis\\w33_pass1197_parallel_collision_guard.py\", line 80, in load_registry_blocks\n    assert supplement.get(\"schema\") == \"w33.pass_namespace_registry.v2.supplement\", path\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: C:\\Repos\\Theory of Everything\\data\\w33_pass_namespace_registry_v2.d\\10049-10112.json\n",
+      "seconds": 0.388
+    },
+    {
+      "id": "s-min-formula-guard",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_smin_formula.py",
+        "analysis/toe_20261108_invariant_magnetic_completion.py",
+        "analysis/2026-11-08_invariant_magnetic_cone_completion.md",
+        "tests/test_toe_20261108_invariant_magnetic_completion.py",
+        "RESULTS_INDEX.md",
+        "TOPICAL_ALIASES.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.25
+    },
+    {
+      "id": "topical-aliases",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/build_topical_aliases.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "TOPICAL_ALIASES.md up to date\n",
+      "stderr": "",
+      "seconds": 16.454
+    },
+    {
+      "id": "certificate-digests",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_certificates.py",
+        "--quiet",
+        "data/toe_20261108_invariant_magnetic_completion.json",
+        "data/toe_20261108_invariant_magnetic_server.json",
+        "data/toe_20261108_invariant_magnetic_validation.json",
+        "data/toe_20261108_invariant_magnetic_intake.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.274
+    },
+    {
+      "id": "novelty-claims",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_novelty_claims.py",
+        "analysis/2026-11-08_invariant_magnetic_cone_completion.md"
+      ],
+      "exit_code": 0,
+      "stdout": "checking 1 file(s) against index.html, photonic_holonet_body.tex, w33_paper_body.tex\nno novelty claim collides with the encyclopedia.\n",
+      "stderr": "",
+      "seconds": 0.325
+    },
+    {
+      "id": "rediscovery",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_rediscovery.py",
+        "analysis/toe_20261108_invariant_magnetic_completion.py",
+        "analysis/2026-11-08_invariant_magnetic_cone_completion.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.984
+    },
+    {
+      "id": "search-power",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_search_power.py",
+        "analysis/toe_20261108_invariant_magnetic_completion.py",
+        "analysis/2026-11-08_invariant_magnetic_cone_completion.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  scanned 2 files, 0 unpowered nulls\n  (a zero here means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.628
+    },
+    {
+      "id": "guard-selftests",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_guard_selftests.py"
+      ],
+      "exit_code": 0,
+      "stdout": "  stale-boundaries                 self-test green\n  shifted-adjacency-descendants    self-test green\n  tag-540-check                    self-test green\n  pass-namespace-collision-guard   self-test green\n  s-min-formula-guard              self-test green\n  topical-aliases                  self-test green\n  certificate-digests              self-test green\n  novelty-claims                   self-test green\n  rtl-folds                        self-test green\n  rediscovery                      self-test green\n  search-power                     self-test green\n  layer-conformance                self-test green\n  guard-selftests                  (this runner; skipped)\n  regex-deadends                   self-test green\n  retraction-propagation           self-test green\n  stdlib-shadow                    self-test green\n  pattern-inversions               self-test green\n  heredoc-regex                    self-test green\n  reservation-overlap              self-test green\n  cert-prose-vs-data               self-test green\n  convention-fixed-form            self-test green\n  key-nearmiss                     self-test green\n  certificate-rediscovery          self-test green\n  order-coincidence                self-test green\n  spectral-overreach               self-test green\n  hardcoded-keys                   self-test green\n  constant-claims                  no self-test\n\n  25 self-tested, 1 without a self-test, 0 failing\n\n  The guards without a self-test report numbers nobody can interpret. A zero from a checker\n  that has never been shown to detect anything is not evidence of a clean corpus -- it is\n  the absence of evidence, formatted to look like the presence of it.\n",
+      "stderr": "",
+      "seconds": 14.278
+    },
+    {
+      "id": "regex-deadends",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_regex_deadends.py",
+        "analysis/toe_20261108_invariant_magnetic_completion.py"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 unmatchable alternatives\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.232
+    },
+    {
+      "id": "retraction-propagation",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_retraction_propagation.py",
+        "analysis/toe_20261108_invariant_magnetic_completion.py",
+        "analysis/2026-11-08_invariant_magnetic_cone_completion.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 live assertions of retracted claims across 3 registered\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.315
+    },
+    {
+      "id": "stdlib-shadow",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_stdlib_shadow.py",
+        "analysis/toe_20261108_invariant_magnetic_completion.py",
+        "tests/test_toe_20261108_invariant_magnetic_completion.py"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 shadowing files, 0 high-risk\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.26
+    },
+    {
+      "id": "heredoc-regex",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_heredoc_regex.py",
+        "analysis/toe_20261108_invariant_magnetic_completion.py"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 collapsed escapes in regex context\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.268
+    },
+    {
+      "id": "cert-prose-vs-data",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_cert_prose_vs_data.py",
+        "data/toe_20261108_invariant_magnetic_completion.json",
+        "data/toe_20261108_invariant_magnetic_server.json",
+        "data/toe_20261108_invariant_magnetic_validation.json",
+        "data/toe_20261108_invariant_magnetic_intake.json"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 prose/data contradiction(s) in 4 certificate(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.201
+    },
+    {
+      "id": "convention-fixed-form",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_convention_fixed_form.py",
+        "analysis/toe_20261108_invariant_magnetic_completion.py",
+        "analysis/2026-11-08_invariant_magnetic_cone_completion.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 convention-fixed choice(s) in 2 file(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.207
+    },
+    {
+      "id": "key-nearmiss",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_key_nearmiss.py",
+        "data/toe_20261108_invariant_magnetic_completion.json",
+        "data/toe_20261108_invariant_magnetic_server.json",
+        "data/toe_20261108_invariant_magnetic_validation.json",
+        "data/toe_20261108_invariant_magnetic_intake.json"
+      ],
+      "exit_code": 124,
+      "stdout": "Exceeded90s; no PASS asserted.",
+      "stderr": "",
+      "seconds": 90.194
+    },
+    {
+      "id": "certificate-rediscovery",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_certificate_rediscovery.py",
+        "data/toe_20261108_invariant_magnetic_completion.json",
+        "data/toe_20261108_invariant_magnetic_server.json",
+        "data/toe_20261108_invariant_magnetic_validation.json",
+        "data/toe_20261108_invariant_magnetic_intake.json"
+      ],
+      "exit_code": 0,
+      "stdout": "  RARE  toe_20261108_invariant_magnetic_server.json\n        pairs@2  (stem reaches 90 file-slots)  already in: bt1446_frobenius_involution_canonicalizer.json, w33_pass4089_four_router_layout.json\n  RARE  toe_20261108_invariant_magnetic_server.json\n        pairs@3  (stem reaches 90 file-slots)  already in: bt1446_frobenius_involution_canonicalizer.json, w33_pass4089_four_router_layout.json\n  RARE  toe_20261108_invariant_magnetic_server.json\n        target@4  (stem reaches 144 file-slots)  already in: PART_BT3226_BT3234_PORT_SPIRAL_results.json, bt1374_q6_tomotope_packet_route_compiler.json, bt1414_csaszar_szilassi_dual_physical_port.json ...\n\n  3 token(s) already present elsewhere, over 4 certificate(s)\n\n  CANDIDATES, RAREST FIRST. Pass 4800's `alpha@18` sat in a committed certificate while\n  six passes re-derived it. Read the RARE ones first: a stem with small reach names a\n  quantity, a stem with large reach names bookkeeping. Ranking is the fix that a stem\n  blocklist was not -- Pass 5635 A/B'd the blocklist and it moved two certificates.\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.715
+    },
+    {
+      "id": "order-coincidence",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_order_coincidence.py",
+        "analysis/toe_20261108_invariant_magnetic_completion.py",
+        "analysis/2026-11-08_invariant_magnetic_cone_completion.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 order-coincidence claim(s) in 2 file(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.196
+    },
+    {
+      "id": "spectral-overreach",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_spectral_overreach.py",
+        "analysis/toe_20261108_invariant_magnetic_completion.py",
+        "analysis/2026-11-08_invariant_magnetic_cone_completion.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 candidate spectral over-read(s) in 2 file(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.187
+    },
+    {
+      "id": "hardcoded-keys",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_hardcoded_keys.py",
+        "analysis/toe_20261108_invariant_magnetic_completion.py"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 single-key lookups beside a canonical list\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.197
+    },
+    {
+      "id": "constant-claims",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_constant_claims_hook.py",
+        "analysis/2026-11-08_invariant_magnetic_cone_completion.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.152
+    }
+  ],
+  "all_exit_codes_zero": false,
+  "frozen_tested_artifact_raw_sha256": {
+    "analysis/toe_20261108_invariant_magnetic_completion.py": "faf7023044f899b2c89cbf027f4c2b1125fe815b181ee163507cff1d53115104",
+    "analysis/toe_20261108_invariant_magnetic_server.js": "0f1410291628a1fa87cdfbad91013d5621f4d0203c724eeddd82b14808cc2a9c",
+    "analysis/2026-11-08_invariant_magnetic_cone_completion.md": "96a178b47e274abb44b2eda5e93f6c2bddef553f51b8296d121bc50e8a5a087c",
+    "tests/test_toe_20261108_invariant_magnetic_completion.py": "783e3a4db53a13682165f9d53c23dc5f26ce1d02d09046046a1971b0f0258dcd",
+    "data/toe_20261108_invariant_magnetic_completion.json": "5351f1b5905063b0a018a9cb97c2f40955c4af703369ff2b2aebca6482e1ad4f",
+    "data/toe_20261108_invariant_magnetic_server.json": "fe7d5d83bf4a0625b3e19a7e32ebb1e135821ded0d9a2ae869fbeddb54aadf68",
+    "data/toe_20261108_invariant_magnetic_validation.json": "0fa3613b30c29c28b1da532fdb61d2bf02b87963a87f1923ddd5cae2bb128170",
+    "data/toe_20261108_invariant_magnetic_intake.json": "9281db9eac1bfb4a964d8cf4c93fbfc85b5cc01c31e7c51dbfad23922b9d67a2",
+    "RESULTS_INDEX.md": "da9b8e4d0ac78025a49cab6d2b956fef8d42fc65b0b9ca88f500eacf88c58023",
+    "TOPICAL_ALIASES.md": "93c295d18eb96891e1467077fcfc411c3d7757e9aaeedd8c8f118447e65006f7"
+  },
+  "candidate_triage": "Native counts27/135/105/1287, 16-step loops and existing metric construction are October27/Pass11991 priors. 162=27*6 is an action-row count, not a particle count. The fraction29857/5775 is obtained from exact normal equations for this tensor, not numerical matching to a prior constant. 935550 is a common denominator of the optical solution, not a physical scale.",
+  "rare_candidate_context": "Server pairs@2/3 are coordinate indices in the exterior-square basis. Read bt1446 canonical Frobenius involution pairs [2,6] and [3,5], and w33_pass4089 router endpoint pairs [2,8] and [3,0]. Server target@4 refers to an entry of the six-area constitutive matrix. The other exact target contexts are the Kempe-Vizing target vertex4, tomotope route target packet [39,32,25,18], and physical-port destination4. These are distinct constructions."
+}

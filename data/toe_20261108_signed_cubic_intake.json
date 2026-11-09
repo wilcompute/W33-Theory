@@ -1,0 +1,44 @@
+{
+  "status": "SIGNED_CUBIC_AND_VACUUM_INTAKE",
+  "baseline": "72081a475ef28be6172fd257d9817ee30ac62bd3",
+  "head": "72081a475ef28be6172fd257d9817ee30ac62bd3",
+  "remote": "72081a475ef28be6172fd257d9817ee30ac62bd3",
+  "context": "Continuity compact and result search found zero connected decisions. Actual repo notes and bounded CLI fallback used. Prior goal turn progressed by publishing propagation and S8 archive repair.",
+  "searches": [
+    "full cubic Lie stabilizer",
+    "e6 78 generator exports",
+    "rank651 and rank6475",
+    "triad F/D flat Cartan",
+    "family SU3 anomaly and spectator"
+  ],
+  "prior_review": "Read canonical cubic producer, parallel 14-direction gate implementation, prior native SU5 intertwiner, Chevalley generator builder, selected Cartan and spectator sources and reports. The local ignored legacy basis exists and agrees numerically. The clean-checkout result derives its basis from committed JSON. Previous large parallel review recorded in parent manifest. Full week patch reading remains incomplete.",
+  "manuscript": {
+    "path": "papers/forty_points/main.pdf",
+    "raw_sha256": "003b75482b6584e20e83a55d9e9ba0a181f93b8dff0f94c1d615039c21213cbb",
+    "total": 215,
+    "new_full_text": [
+      149,
+      150
+    ],
+    "cumulative_full_text": [
+      1,
+      150
+    ],
+    "new_visual": false
+  },
+  "literature": [
+    {
+      "url": "https://arxiv.org/abs/math/0507118",
+      "scope": "Manivel abstract and selected tritangent/minimal rep and E8 ternary construction passages"
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.07538",
+      "scope": "Baez and Pumpluen abstract"
+    },
+    {
+      "url": "https://arxiv.org/abs/2505.07931",
+      "scope": "Goh et al abstract, context on strong dynamics with global family symmetry"
+    }
+  ],
+  "workflow": "GitKraken unavailable in callable tools. Explicit authorized CLI staging and normal master push. Prior artifacts and parallel repair hashes checked."
+}

@@ -1,0 +1,38 @@
+{
+  "runtime": "Actual functions.exec V8",
+  "prime": 103,
+  "symmetric27": {
+    "rows": 2475,
+    "rank": 651,
+    "nullity": 78
+  },
+  "exterior81": {
+    "rows": 48870,
+    "rank": 6475,
+    "nullity": 86
+  },
+  "bracketL1": [
+    0,
+    0,
+    0
+  ],
+  "selectedSupports": [
+    [
+      0,
+      52,
+      80
+    ],
+    [
+      5,
+      37,
+      75
+    ],
+    [
+      26,
+      40,
+      54
+    ]
+  ],
+  "orderedBracketRecords": 1620,
+  "scope": "Independent descending-pivot modular coefficient ranks and exact selected support brackets. Rational root basis and vacuum Hessian are certified by the separate Python producers."
+}

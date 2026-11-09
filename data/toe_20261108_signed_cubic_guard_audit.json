@@ -1,0 +1,363 @@
+{
+  "mode": "Configured hook entries run directly with identical file patterns after both indexes regenerated. Existing Bash/CMD pre-commit launcher is unreliable; no --no-verify used.",
+  "records": [
+    {
+      "id": "stale-boundaries",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_stale_boundaries.py"
+      ],
+      "exit_code": 0,
+      "stdout": "==============================================================================\n[stale-boundary sweep] boundary sections a LATER file may have answered\n==============================================================================\nscanned 4094 analysis/*.md; 15 boundaries have a later file sharing >=2 result tokens\n\n  BT7171_BT7186_e8_d4_h27_q9.md\n    -> later: PASS7376_7384_deep_followup.md   (23 shared tokens, e.g. A2, D4, E6, E8)\n  PASS20260925_HESSE_PARABOLIC_CUBIC_CLOCK_BREAKTHROUGH.md\n    -> later: PASS20261108_S4_HARMONIC_QDUAL.md   (10 shared tokens, e.g. A2, E6, E8, a2+e6)\n  2026-10-10_toe33_joint_decoder_p13_a6_bloch_hardware.md\n    -> later: w33_pass1117_1119_aliases_orbits_trees.md   (9 shared tokens, e.g. E6, E8, e6+e8, e6+levi)\n  2026-07-08_pass70_15vector_doily_attack.md\n    -> later: 2026-07-08_pass72_cumulative_bijection.md   (4 shared tokens, e.g. doily, spread@15, spread@3, spread@5)\n  2026-07-08_pass76_QEC_codes_alpha_code.md\n    -> later: 2026-07-15_pass82_grand_synthesis.md   (3 shared tokens, e.g. [137,1,3], [[137,1,3]], monster+moonshine)\n  BT807_q3_antiflag_two_clocks.md\n    -> later: BT1710_BT1712_qubit_torus_hesse_breakthrough.md   (3 shared tokens, e.g. csaszar, csaszar+doily, doily)\n  BT809_register_f4_regular_spread.md\n    -> later: BT836_gc_hemicells_in_spreads.md   (3 shared tokens, e.g. spread@10, spread@2, spread@45)\n  2026-06-19_validation_thread_summary.md\n    -> later: 2026-06-19_bt1327_bt1330_summary.md   (2 shared tokens, e.g. [63,1,11], [[63,1,11]])\n  2026-10-31_tick_loop_algebra_rigidity.md\n    -> later: PASS20260924_EXECUTE_ALL5_TEMPORAL_E8_CONTROLLER.md   (2 shared tokens, e.g. clifford+eisenstein, edge240:signed)\n  2026-07-08_pass72_deep_structure.md\n    -> later: 2026-07-08_pass73_kneser_css_moonshine.md   (2 shared tokens, e.g. doily, doily+monster)\n  BT745_presentation_torsor_chirality.md\n    -> later: BT746_absolute_chirality_z12.md   (2 shared tokens, e.g. E6, e6+torsor)\n  BT795_spread_envelope_routing_cell.md\n    -> later: w33_pass1971_spread_treatments_concordance.md   (2 shared tokens, e.g. spread@180, spread@40)\n  BT1320_BT1325_hypercube_tower_holonet.md\n    -> later: BT1416_BT1418_css_optical_quartic_frontier.md   (2 shared tokens, e.g. clifford+csaszar, csaszar)\n  BT1425_BT1427_retwined_fano_pipeline.md\n    -> later: BT1428_BT1430_symmetry_pulse_holonet.md   (2 shared tokens, e.g. D4, d4+tomotope)\n  BT2560_BT2567_seven_frontiers.md\n    -> later: BT2567_seven_frontiers_insert.tex   (2 shared tokens, e.g. tritangent@27, tritangent@45)\n\n  CANDIDATES, not verdicts. Read the later file before spending a pass\n  re-answering the question. If it does answer it, EDIT THE ORIGINAL\n  boundary to point there -- leaving it stale is what caused this.\n\n",
+      "stderr": "",
+      "seconds": 47.505
+    },
+    {
+      "id": "shifted-adjacency-descendants",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_shifted_adjacency_descendants.py",
+        "--check-only",
+        "analysis/toe_20261108_exact_signed_cubic_stabilizer.py",
+        "analysis/toe_20261108_three_copy_cubic_vacuum.py",
+        "analysis/2026-11-08_exact_signed_cubic_and_three_copy_vacuum.md",
+        "tests/test_toe_20261108_signed_cubic_vacuum.py",
+        "data/toe_20261108_exact_signed_cubic_stabilizer.json",
+        "data/toe_20261108_three_copy_cubic_vacuum.json",
+        "data/toe_20261108_signed_cubic_server.json",
+        "data/toe_20261108_signed_cubic_validation.json",
+        "data/toe_20261108_signed_cubic_intake.json",
+        "RESULTS_INDEX.md",
+        "TOPICAL_ALIASES.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 1.42
+    },
+    {
+      "id": "tag-540-check",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/tag_540_disambiguation.py",
+        "--check-only",
+        "--strict",
+        "analysis/toe_20261108_exact_signed_cubic_stabilizer.py",
+        "analysis/toe_20261108_three_copy_cubic_vacuum.py",
+        "analysis/2026-11-08_exact_signed_cubic_and_three_copy_vacuum.md",
+        "tests/test_toe_20261108_signed_cubic_vacuum.py",
+        "data/toe_20261108_exact_signed_cubic_stabilizer.json",
+        "data/toe_20261108_three_copy_cubic_vacuum.json",
+        "data/toe_20261108_signed_cubic_server.json",
+        "data/toe_20261108_signed_cubic_validation.json",
+        "data/toe_20261108_signed_cubic_intake.json",
+        "RESULTS_INDEX.md",
+        "TOPICAL_ALIASES.md"
+      ],
+      "exit_code": 1,
+      "stdout": "ERROR: RESULTS_INDEX.md has ambiguous 540 occurrence(s)\n  line 218: frontiers.py` | | `[0,1440,31302]` | `analysis/bt3407_magnetic_exact_no_go.py` | | `[1080,540,540]` | `analysis/w33_pass4756_4758_4760_dependency_cube_fast_verify.py` | | `[1160,92\n  line 218: tiers.py` | | `[0,1440,31302]` | `analysis/bt3407_magnetic_exact_no_go.py` | | `[1080,540,540]` | `analysis/w33_pass4756_4758_4760_dependency_cube_fast_verify.py` | | `[1160,925,68\n  line 276: k_map.py` | | `[5,6912,1053]` | `analysis/w33_20261027_native_bloch_face_module.py` | | `[540,270,135]` | `analysis/w33_pass3989_3996_maximum_code_orbit_census.py` | | `[540,540,54\n  line 298: er_code.py` \u00b7 `analysis/w33_pass4772_4776_global_cube_cell_code.py` \u00b7 *(+2)* | | `[2025,540,3]` | `analysis/PASS4745_4752_RESERVATION.md` | | `[2025,567,4]` | `analysis/PASS4745_\n  line 409: o.py` | | `[54,72,432]` | `analysis/w33_pass1611_1615_torsion_xor_lattice_octet.py` | | `[540,141,4]` | `analysis/w33_pass4924_track_b_arithmetic_and_the_51840_warning.py` | | `[58\n  line 1496: ults_index.py` \u00b7 `analysis/w33_pass382_reversible_logic_switch_controller.g` | | `234360/540/90+360+90/6/22of48/0exact/S6-direction` | `analysis/PASS384_Q6_Q3_FOLD_OBSTRUCTION.md`\n  line 1621: ite_TOE_frontiers.md` \u00b7 `analysis/w33_20261019_round11_first_tits_jordan.py` | | `234360/540/90` | `analysis/PASS384_Q6_Q3_FOLD_OBSTRUCTION.md` \u00b7 `analysis/build_results_index.py\n  line 1632: KTHROUGH.md` \u00b7 `analysis/w33_20260924_history_pointline_cospectral_firewall.py` | | `270/540/1620` | `analysis/w33_pass2045_2049_the_sevens_and_a_numbering_collision.md` | | `343/\n  line 1979: py` \u00b7 `analysis/w33_pass10153_10160_c315_w52_structural_no_go.py` | | `totally-isotropic@540` | `analysis/BT1536_frame_dual_k44_code.md` \u00b7 `analysis/w33_frame_hoffman_resolution_\n  line 2389: it_iso.md` | | `tritangent@360` | `analysis/w33_pass4997_4999_bonkers.py` | | `tritangent@540` | `analysis/w33_e6_involution_ladder_flags.py` | | `tritangent@576` | `analysis/w33_2\n  line 2655: ic_closure.md` \u00b7 `analysis/BT3320_BT3331_global_cover_quantum_hypercube.md` | | `deficit@540` | `analysis/PASS5016_5023_EXECUTED_OUTCOMES.md` \u00b7 `analysis/w33_pass5016_radius_rp2_\n  line 2866: ity_spectral_E6_parallelism.md` \u00b7 `analysis/2026-10-10_toe43_five_fronts.md` | | `spread@540` | `analysis/PASS1074_1078_FIVE_STREAM_RELEASE.md` \u00b7 `analysis/w33_pass1067_outer_cla\n  line 4002: _matrix_cs.py` \u00b7 `analysis/w33_pass804_adversarial_calibration_failclosed.py` | | `alpha@540` | `analysis/2026-07-31_frame_hoffman_resolution_theorem.md` \u00b7 `exploration/w33_indep\n  Add an occurrence-local canonical tag: {540:point-nonedge}, {540:double-six-nonincident}, {540:gq42-arc}, {540:outer-4c}, {540:line-nonedge}; use {540:both} or {540:mixed} only for a genuinely mixed single occurrence, and {540:unrelated} only when the literal is not one of the five degree-540 carriers.\nERROR: TOPICAL_ALIASES.md has ambiguous 540 occurrence(s)\n  line 442: -code-outage-decoder.html](docs/pgsp-moduli-outer-code-outage-decoder.html) - `code:[2025,540,3]` \ufffd \u2014 [PASS4745_4752_RESERVATION.md](analysis/PASS4745_4752_RESERVATION.md), [PAS\n  Add an occurrence-local canonical tag: {540:point-nonedge}, {540:double-six-nonincident}, {540:gq42-arc}, {540:outer-4c}, {540:line-nonedge}; use {540:both} or {540:mixed} only for a genuinely mixed single occurrence, and {540:unrelated} only when the literal is not one of the five degree-540 carriers.\n",
+      "stderr": "",
+      "seconds": 0.774
+    },
+    {
+      "id": "pass-namespace-collision-guard",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "analysis/w33_pass1197_parallel_collision_guard.py",
+        "--check-only"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"C:\\Repos\\Theory of Everything\\analysis\\w33_pass1197_parallel_collision_guard.py\", line 189, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Repos\\Theory of Everything\\analysis\\w33_pass1197_parallel_collision_guard.py\", line 89, in main\n    registry, registry_blocks, supplements = load_registry_blocks()\n                                             ~~~~~~~~~~~~~~~~~~~~^^\n  File \"C:\\Repos\\Theory of Everything\\analysis\\w33_pass1197_parallel_collision_guard.py\", line 80, in load_registry_blocks\n    assert supplement.get(\"schema\") == \"w33.pass_namespace_registry.v2.supplement\", path\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: C:\\Repos\\Theory of Everything\\data\\w33_pass_namespace_registry_v2.d\\10049-10112.json\n",
+      "seconds": 0.644
+    },
+    {
+      "id": "s-min-formula-guard",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_smin_formula.py",
+        "analysis/toe_20261108_exact_signed_cubic_stabilizer.py",
+        "analysis/toe_20261108_three_copy_cubic_vacuum.py",
+        "analysis/2026-11-08_exact_signed_cubic_and_three_copy_vacuum.md",
+        "tests/test_toe_20261108_signed_cubic_vacuum.py",
+        "RESULTS_INDEX.md",
+        "TOPICAL_ALIASES.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.406
+    },
+    {
+      "id": "topical-aliases",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/build_topical_aliases.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "TOPICAL_ALIASES.md up to date\n",
+      "stderr": "",
+      "seconds": 35.231
+    },
+    {
+      "id": "certificate-digests",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_certificates.py",
+        "--quiet",
+        "data/toe_20261108_exact_signed_cubic_stabilizer.json",
+        "data/toe_20261108_three_copy_cubic_vacuum.json",
+        "data/toe_20261108_signed_cubic_server.json",
+        "data/toe_20261108_signed_cubic_validation.json",
+        "data/toe_20261108_signed_cubic_intake.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.366
+    },
+    {
+      "id": "novelty-claims",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_novelty_claims.py",
+        "analysis/2026-11-08_exact_signed_cubic_and_three_copy_vacuum.md"
+      ],
+      "exit_code": 0,
+      "stdout": "checking 1 file(s) against index.html, photonic_holonet_body.tex, w33_paper_body.tex\nno novelty claim collides with the encyclopedia.\n",
+      "stderr": "",
+      "seconds": 0.57
+    },
+    {
+      "id": "rediscovery",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_rediscovery.py",
+        "analysis/toe_20261108_exact_signed_cubic_stabilizer.py",
+        "analysis/toe_20261108_three_copy_cubic_vacuum.py",
+        "analysis/2026-11-08_exact_signed_cubic_and_three_copy_vacuum.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n========================================================================\n[rediscovery guard] results that already exist elsewhere\n========================================================================\n  analysis/2026-11-08_exact_signed_cubic_and_three_copy_vacuum.md\n    a_2+e6  ->  W33_FOR_EVERYONE.tex analysis/2026-07-10_levi_next5_v2.md analysis/2026-07-10_levi_next5_v3.md (+1)\n\n  These are CANDIDATES, not verdicts -- the same integer recurs\n  legitimately. But Passes 322/323 lost ~19 passes to exactly this,\n  so: open the prior file and READ it (end to end -- Pass 286 shows\n  shallow reads cause retractions) before asserting novelty.\n  Cite the prior art in the file and this warning goes away.\n\n",
+      "stderr": "",
+      "seconds": 0.97
+    },
+    {
+      "id": "search-power",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_search_power.py",
+        "analysis/toe_20261108_exact_signed_cubic_stabilizer.py",
+        "analysis/toe_20261108_three_copy_cubic_vacuum.py",
+        "analysis/2026-11-08_exact_signed_cubic_and_three_copy_vacuum.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  scanned 3 files, 0 unpowered nulls\n  (a zero here means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.375
+    },
+    {
+      "id": "guard-selftests",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_guard_selftests.py"
+      ],
+      "exit_code": 0,
+      "stdout": "  stale-boundaries                 self-test green\n  shifted-adjacency-descendants    self-test green\n  tag-540-check                    self-test green\n  pass-namespace-collision-guard   self-test green\n  s-min-formula-guard              self-test green\n  topical-aliases                  self-test green\n  certificate-digests              self-test green\n  novelty-claims                   self-test green\n  rtl-folds                        self-test green\n  rediscovery                      self-test green\n  search-power                     self-test green\n  layer-conformance                self-test green\n  guard-selftests                  (this runner; skipped)\n  regex-deadends                   self-test green\n  retraction-propagation           self-test green\n  stdlib-shadow                    self-test green\n  pattern-inversions               self-test green\n  heredoc-regex                    self-test green\n  reservation-overlap              self-test green\n  cert-prose-vs-data               self-test green\n  convention-fixed-form            self-test green\n  key-nearmiss                     self-test green\n  certificate-rediscovery          self-test green\n  order-coincidence                self-test green\n  spectral-overreach               self-test green\n  hardcoded-keys                   self-test green\n  constant-claims                  no self-test\n\n  25 self-tested, 1 without a self-test, 0 failing\n\n  The guards without a self-test report numbers nobody can interpret. A zero from a checker\n  that has never been shown to detect anything is not evidence of a clean corpus -- it is\n  the absence of evidence, formatted to look like the presence of it.\n",
+      "stderr": "",
+      "seconds": 24.869
+    },
+    {
+      "id": "regex-deadends",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_regex_deadends.py",
+        "analysis/toe_20261108_exact_signed_cubic_stabilizer.py",
+        "analysis/toe_20261108_three_copy_cubic_vacuum.py"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 unmatchable alternatives\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.352
+    },
+    {
+      "id": "retraction-propagation",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_retraction_propagation.py",
+        "analysis/toe_20261108_exact_signed_cubic_stabilizer.py",
+        "analysis/toe_20261108_three_copy_cubic_vacuum.py",
+        "analysis/2026-11-08_exact_signed_cubic_and_three_copy_vacuum.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 live assertions of retracted claims across 3 registered\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.47
+    },
+    {
+      "id": "stdlib-shadow",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_stdlib_shadow.py",
+        "analysis/toe_20261108_exact_signed_cubic_stabilizer.py",
+        "analysis/toe_20261108_three_copy_cubic_vacuum.py",
+        "tests/test_toe_20261108_signed_cubic_vacuum.py"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 shadowing files, 0 high-risk\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.441
+    },
+    {
+      "id": "heredoc-regex",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_heredoc_regex.py",
+        "analysis/toe_20261108_exact_signed_cubic_stabilizer.py",
+        "analysis/toe_20261108_three_copy_cubic_vacuum.py"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 collapsed escapes in regex context\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.803
+    },
+    {
+      "id": "cert-prose-vs-data",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_cert_prose_vs_data.py",
+        "data/toe_20261108_exact_signed_cubic_stabilizer.json",
+        "data/toe_20261108_three_copy_cubic_vacuum.json",
+        "data/toe_20261108_signed_cubic_server.json",
+        "data/toe_20261108_signed_cubic_validation.json",
+        "data/toe_20261108_signed_cubic_intake.json"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 prose/data contradiction(s) in 5 certificate(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.495
+    },
+    {
+      "id": "convention-fixed-form",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_convention_fixed_form.py",
+        "analysis/toe_20261108_exact_signed_cubic_stabilizer.py",
+        "analysis/toe_20261108_three_copy_cubic_vacuum.py",
+        "analysis/2026-11-08_exact_signed_cubic_and_three_copy_vacuum.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 convention-fixed choice(s) in 3 file(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.356
+    },
+    {
+      "id": "key-nearmiss",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_key_nearmiss.py",
+        "data/toe_20261108_exact_signed_cubic_stabilizer.json",
+        "data/toe_20261108_three_copy_cubic_vacuum.json",
+        "data/toe_20261108_signed_cubic_server.json",
+        "data/toe_20261108_signed_cubic_validation.json",
+        "data/toe_20261108_signed_cubic_intake.json"
+      ],
+      "exit_code": 124,
+      "stdout": "Exceeded90s; no PASS asserted.",
+      "stderr": "",
+      "seconds": 90.129
+    },
+    {
+      "id": "certificate-rediscovery",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_certificate_rediscovery.py",
+        "data/toe_20261108_exact_signed_cubic_stabilizer.json",
+        "data/toe_20261108_three_copy_cubic_vacuum.json",
+        "data/toe_20261108_signed_cubic_server.json",
+        "data/toe_20261108_signed_cubic_validation.json",
+        "data/toe_20261108_signed_cubic_intake.json"
+      ],
+      "exit_code": 0,
+      "stdout": "  RARE  toe_20261108_exact_signed_cubic_stabilizer.json\n        terms@270  (stem reaches 4 file-slots)  already in: PART_W33_PASS4757_HAMILTONIAN_LOW_ENERGY_NOISE.json\n  RARE  toe_20261108_exact_signed_cubic_stabilizer.json\n        cartan_matrix@2  (stem reaches 11 file-slots)  already in: dccxxvii_e8_cartan_as_tomotope.json, w33_center_quad_transport_a2_bridge_summary.json, w33_pass1340_1344_cartan_atlas_selector_padic.json ...\n  RARE  toe_20261108_exact_signed_cubic_stabilizer.json\n        generators@10  (stem reaches 554 file-slots)  already in: w33_pass2510_frame_action.json\n        toe_20261108_exact_signed_cubic_stabilizer.json\n        generators@11  (stem reaches 554 file-slots)  already in: w33_pass2510_frame_action.json\n        toe_20261108_exact_signed_cubic_stabilizer.json\n        generators@12  (stem reaches 554 file-slots)  already in: w33_pass2510_frame_action.json\n        toe_20261108_exact_signed_cubic_stabilizer.json\n        generators@13  (stem reaches 554 file-slots)  already in: w33_pass2510_frame_action.json\n        toe_20261108_exact_signed_cubic_stabilizer.json\n        generators@14  (stem reaches 554 file-slots)  already in: w33_pass2510_frame_action.json\n        toe_20261108_exact_signed_cubic_stabilizer.json\n        generators@15  (stem reaches 554 file-slots)  already in: w33_pass2510_frame_action.json\n        toe_20261108_exact_signed_cubic_stabilizer.json\n        generators@16  (stem reaches 554 file-slots)  already in: w33_pass2510_frame_action.json\n        toe_20261108_exact_signed_cubic_stabilizer.json\n        generators@17  (stem reaches 554 file-slots)  already in: w33_pass2510_frame_action.json\n        toe_20261108_exact_signed_cubic_stabilizer.json\n        generators@18  (stem reaches 554 file-slots)  already in: w33_pass2510_frame_action.json\n        toe_20261108_exact_signed_cubic_stabilizer.json\n        generators@19  (stem reaches 554 file-slots)  already in: w33_pass2510_frame_action.json\n        toe_20261108_exact_signed_cubic_stabilizer.json\n        generators@2  (stem reaches 554 file-slots)  already in: w33_pass1909_complete_s6_subgroup_phase_poset_certificate.json, w33_pass2510_frame_action.json, w33_phase_bundle_hilbert_transport_kernel.json\n        toe_20261108_exact_signed_cubic_stabilizer.json\n        generators@20  (stem reaches 554 file-slots)  already in: w33_pass2510_frame_action.json\n        toe_20261108_exact_signed_cubic_stabilizer.json\n        generators@21  (stem reaches 554 file-slots)  already in: w33_pass2510_frame_action.json\n        toe_20261108_exact_signed_cubic_stabilizer.json\n        generators@22  (stem reaches 554 file-slots)  already in: w33_pass2510_frame_action.json\n        toe_20261108_exact_signed_cubic_stabilizer.json\n        generators@23  (stem reaches 554 file-slots)  already in: w33_pass2510_frame_action.json\n        toe_20261108_exact_signed_cubic_stabilizer.json\n        generators@24  (stem reaches 554 file-slots)  already in: w33_pass2510_frame_action.json\n        toe_20261108_exact_signed_cubic_stabilizer.json\n        generators@25  (stem reaches 554 file-slots)  already in: w33_pass2510_frame_action.json\n        toe_20261108_exact_signed_cubic_stabilizer.json\n        generators@26  (stem reaches 554 file-slots)  already in: w33_pass2510_frame_action.json\n        toe_20261108_exact_signed_cubic_stabilizer.json\n        generators@3  (stem reaches 554 file-slots)  already in: w33_pass1909_complete_s6_subgroup_phase_poset_certificate.json, w33_pass2510_frame_action.json\n        toe_20261108_exact_signed_cubic_stabilizer.json\n        generators@4  (stem reaches 554 file-slots)  already in: w33_pass1909_complete_s6_subgroup_phase_poset_certificate.json, w33_pass2510_frame_action.json\n        toe_20261108_exact_signed_cubic_stabilizer.json\n        generators@5  (stem reaches 554 file-slots)  already in: PART_W33_PASS4496_H10_EXTENSION_COHOMOLOGY.json, w33_pass1909_complete_s6_subgroup_phase_poset_certificate.json, w33_pass2510_frame_action.json\n        toe_20261108_exact_signed_cubic_stabilizer.json\n        generators@6  (stem reaches 554 file-slots)  already in: bt1550_weyl_equivariant_sign_bridge_attempt.json, w33_pass1001_full_signed_edge_equivariance.json, w33_pass2510_frame_action.json\n        toe_20261108_exact_signed_cubic_stabilizer.json\n        generators@7  (stem reaches 554 file-slots)  already in: PART_W33_PASS4897_Q8_POLARITY_WITNESS.json, w33_pass2510_frame_action.json\n        toe_20261108_exact_signed_cubic_stabilizer.json\n        generators@8  (stem reaches 554 file-slots)  already in: bt1516_calibration_fixture_validator.json, bt980_aut_action_on_homology.json, w33_pass2510_frame_action.json\n        toe_20261108_exact_signed_cubic_stabilizer.json\n        generators@9  (stem reaches 554 file-slots)  already in: w33_pass2510_frame_action.json\n\n  27 token(s) already present elsewhere, over 5 certificate(s)\n\n  CANDIDATES, RAREST FIRST. Pass 4800's `alpha@18` sat in a committed certificate while\n  six passes re-derived it. Read the RARE ones first: a stem with small reach names a\n  quantity, a stem with large reach names bookkeeping. Ranking is the fix that a stem\n  blocklist was not -- Pass 5635 A/B'd the blocklist and it moved two certificates.\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 2.023
+    },
+    {
+      "id": "order-coincidence",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_order_coincidence.py",
+        "analysis/toe_20261108_exact_signed_cubic_stabilizer.py",
+        "analysis/toe_20261108_three_copy_cubic_vacuum.py",
+        "analysis/2026-11-08_exact_signed_cubic_and_three_copy_vacuum.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 order-coincidence claim(s) in 3 file(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.805
+    },
+    {
+      "id": "spectral-overreach",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_spectral_overreach.py",
+        "analysis/toe_20261108_exact_signed_cubic_stabilizer.py",
+        "analysis/toe_20261108_three_copy_cubic_vacuum.py",
+        "analysis/2026-11-08_exact_signed_cubic_and_three_copy_vacuum.md"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 candidate spectral over-read(s) in 3 file(s)\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.612
+    },
+    {
+      "id": "hardcoded-keys",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_hardcoded_keys.py",
+        "analysis/toe_20261108_exact_signed_cubic_stabilizer.py",
+        "analysis/toe_20261108_three_copy_cubic_vacuum.py"
+      ],
+      "exit_code": 0,
+      "stdout": "\n  0 single-key lookups beside a canonical list\n  (zero means nothing unless --selftest passes; run it)\n",
+      "stderr": "",
+      "seconds": 0.461
+    },
+    {
+      "id": "constant-claims",
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/check_constant_claims_hook.py",
+        "analysis/2026-11-08_exact_signed_cubic_and_three_copy_vacuum.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.339
+    }
+  ],
+  "all_exit_codes_zero": false,
+  "frozen_tested_artifact_raw_sha256": {
+    "analysis/toe_20261108_exact_signed_cubic_stabilizer.py": "e585f163c0d6301038441d90382b22104b6a601587534f80b1e24209a24f61bd",
+    "analysis/toe_20261108_three_copy_cubic_vacuum.py": "39b093ebbb644574899e5d9fb40ad421c2f27220c7e6abcd27b01cb74ec9f59e",
+    "analysis/toe_20261108_signed_cubic_server.js": "8a2849656272caa219ee44345eabc07c3221df24d70df8a6aeacde7f93b53d66",
+    "analysis/2026-11-08_exact_signed_cubic_and_three_copy_vacuum.md": "8d9438a9da4427bf1621ba0579803a147c9ecbae0604bfb9375887516a97f0b8",
+    "tests/test_toe_20261108_signed_cubic_vacuum.py": "e17d440a03e07573839638a0501d15cff0ccd635b01632ceb8d2a356323ab30e",
+    "data/toe_20261108_exact_signed_cubic_stabilizer.json": "35ae15909d9cea51e549b6090a40e8a6e98aafc39b31046f0dd2c9ea90df164a",
+    "data/toe_20261108_three_copy_cubic_vacuum.json": "664bf686ac3914a3a3073174f02ad5e085ed3a2cd2b48dd10529f2d7103e7d29",
+    "data/toe_20261108_signed_cubic_server.json": "350e7208122e67450a57d12661f5ac61e793ec827d977807ce1149e05c6b7b24",
+    "data/toe_20261108_signed_cubic_validation.json": "6b98c307b6027a3ead2d5c3689ab16a8de4299bb7bf8bb62d3c84dff05833dd0",
+    "data/toe_20261108_signed_cubic_intake.json": "4170b69034ebc15995f8ca6529e664e5b49b162e09f160a277dc8cb341774266",
+    "RESULTS_INDEX.md": "a0d3ae2228617e9c410f650a4f5b67b7579741b7a9531a658df43b57dee50632",
+    "TOPICAL_ALIASES.md": "c220dab2ed8bf594477e1dfad8283ffcb43911bb18d2c3d534f6aab467f5f0db"
+  },
+  "candidate_triage": "The dimensions27/78/81/86, signed45/1620 counts, cubic group identification and family anomaly27 are established prior results. 651 and6475 are ranks of the explicit coefficient maps. 1440 counts unordered commuting all-plus support triples in the selected chart. Hessian nullity9 after gauge is verified by exact derivative ranks and the species orbit. No identification by integer coincidence.",
+  "rare_candidate_context": {
+    "a_2+e6": "Classical group and root-system labels. The ternary E8 construction is credited to Manivel in the report. The vacuum certificate instead computes the residual algebra of the specific Gram/F/D point.",
+    "terms@270": "Pass4757 counts 270 syndrome-check Hamiltonian terms. The alternating cubic count here is 45 signed tritangents times six distinct copy assignments. No term correspondence was verified.",
+    "cartan_matrix@2": "The tomotope artifact gives the E8 Cartan matrix. The center-quad artifact gives the same standard A2 Cartan type for a transport fiber. The p-adic atlas matrices are modular Cartan matrices from decomposition data. No representation intertwiner to the transport fiber was computed.",
+    "generators@2..26": "The cubic generator entries include sparse matrix coordinate indices. Pass2510 uses discrete frame action labels. No common generator action was established."
+  }
+}

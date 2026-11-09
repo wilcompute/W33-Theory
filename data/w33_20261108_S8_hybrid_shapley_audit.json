@@ -5,10 +5,11 @@
   "frozen_claim": "At the frozen full-data Dovekie backgrounds (class_fit_dovekie.json), the next cosmic-shear releases will give Delta chi2(CPL - fading c<0) > 0, with the excess carried by the high-z tomographic block (both bins in the upper half) and/or the mixed block, not by the low-z block; both the matter power history P(k,z) and the geometry contribute (current split: KiDS power +3.2, geometry +2.0; DES power +2.2, geometry +1.9).",
   "frozen_prereg": "analysis/toe_uv/prereg_highz.json",
   "original_hybrid_implementation": "analysis/toe_uv/shear_hybrid.py",
+  "physical_evidence_status": "WITHDRAWN_PASS12632",
   "schema": "w33.20261108.S8_hybrid_shapley_audit.v1",
   "sources": [
-    "shear_hybrid_des.json",
-    "shear_hybrid_kids.json"
+    "shear_hybrid_des_orig.json",
+    "shear_hybrid_kids_orig.json"
   ],
   "status": "EXACT_FROZEN_HYBRID_ARITHMETIC_INTERACTION_AND_ORDER_INDEPENDENT_SHAPLEY",
   "surveys": {

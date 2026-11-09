@@ -39,6 +39,8 @@ def test_KiDS_interaction_is_sizeable_negative(cert):
     assert x["order_independent_shapley_geometry"]==pytest.approx(1.6734809324344297,abs=1e-11)
 
 def test_provenance_and_scientific_limits(cert):
+    assert cert["sources"] == ["shear_hybrid_des_orig.json", "shear_hybrid_kids_orig.json"]
+    assert cert["physical_evidence_status"] == "WITHDRAWN_PASS12632"
     assert "NOT generally" in cert["additive_identification_warning"]
     assert "No new raw" in cert["evidence_limit"]
     assert "not" in cert["frozen_claim"].lower()

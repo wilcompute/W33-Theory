@@ -1,0 +1,44 @@
+{
+  "selected_inputs_unchanged_during_run": true,
+  "selected_source_and_input_raw_sha256": {
+    "analysis/toe_20261108_invariant_magnetic_completion.py": "faf7023044f899b2c89cbf027f4c2b1125fe815b181ee163507cff1d53115104",
+    "analysis/toe_20261108_invariant_magnetic_server.js": "0f1410291628a1fa87cdfbad91013d5621f4d0203c724eeddd82b14808cc2a9c",
+    "tests/test_toe_20261108_invariant_magnetic_completion.py": "783e3a4db53a13682165f9d53c23dc5f26ce1d02d09046046a1971b0f0258dcd",
+    "data/toe_20261108_invariant_magnetic_server.json": "fe7d5d83bf4a0625b3e19a7e32ebb1e135821ded0d9a2ae869fbeddb54aadf68",
+    "analysis/w33_20261027_native_bloch_face_module.py": "35b51978da7071f45f28ed32748948acab1bf0c2354a167be6c61eb1550c2fa6",
+    "data/w33_20261027_native_bloch_face_module.json": "a9fb6555221aaf4b862aac092597920d3e26f08145cbe33914d2c8d86324dc6f",
+    "analysis/w33_pass12188_native_period_symplectic_repair.py": "e2656023487251289c49d5bde1d1aa268437ec5292500d481072213d31110d7a",
+    "data/w33_pass11991_native_four_period_cover.json": "d8fcc26b167d858876cbd8da8d8c434c8a50fea70974c37c99ec574814572d46",
+    "data/PART_20261023_NATIVE_ZERO_HOLONOMY_FACE_COMPLETION.json": "769573b37e1f4c3989d814466bee4a02393ac3e6fee7cf34e10715be89567e4a"
+  },
+  "executions": [
+    {
+      "command": [
+        "py",
+        "-3",
+        "analysis/toe_20261108_invariant_magnetic_completion.py"
+      ],
+      "exit_code": 0,
+      "seconds": 9.619731200000388,
+      "stdout": "{\"status\": \"EXACT_NATIVE_SHORT_FACE_AREA_TENSOR_AND_SUPPLIED_INVARIANT_COMMON_CONE_COMPLETION_NOT_TOE\", \"short_tensor\": [[\"29857/5775\", \"0\", \"0\", \"0\", \"0\", \"0\"], [\"0\", \"0\", \"0\", \"0\", \"0\", \"0\"], [\"0\", \"0\", \"0\", \"0\", \"0\", \"0\"], [\"0\", \"0\", \"0\", \"0\", \"0\", \"0\"], [\"0\", \"0\", \"0\", \"0\", \"0\", \"0\"], [\"0\", \"0\", \"0\", \"0\", \"0\", \"0\"]], \"covariance\": [{\"controller\": 1, \"gradient_covariance_max\": 0.0, \"magnetic_covariance_max\": 8.881784197225159e-16}, {\"controller\": 3, \"gradient_covariance_max\": 2.220777661021828e-16, \"magnetic_covariance_max\": 9.171986106481122e-16}, {\"controller\": 9, \"gradient_covariance_max\": 2.2205248956538115e-16, \"magnetic_covariance_max\": 8.970177831170404e-16}, {\"controller\": 17, \"gradient_covariance_max\": 1.5700924586837752e-16, \"magnetic_covariance_max\": 1.333721391491658e-15}, {\"controller\": 26, \"gradient_covariance_max\": 2.2887833992611187e-16, \"magnetic_covariance_max\": 8.960763983383087e-16}], \"rays\": [{\"direction\": [1.0, 0.0, 0.0, 0.0], \"scalar_target_squared_speed\": 0.37037037037037035, \"samples\": [{\"lowest_squared_frequencies\": [0.0001481327932290391, 0.00014813918578972346, 0.00014815745434377392, 1.104045479558632, 1.10405724017949, 1.1081579564374888, 1.1081692128341725], \"Ward_max\": 1.934093093504972e-17, \"t\": 0.02, \"scaled_lowest_three\": [0.37033198307259774, 0.3703479644743086, 0.3703936358594348]}, {\"lowest_squared_frequencies\": [3.7036077275059347e-05, 3.703647684164284e-05, 3.703761876519865e-05, 1.1049552942275145, 1.104958202241549, 1.1070114279435541, 1.1070142729113055], \"Ward_max\": 1.2636204096379856e-17, \"t\": 0.01, \"scaled_lowest_three\": [0.3703607727505934, 0.3703647684164284, 0.3703761876519865]}, {\"lowest_squared_frequencies\": [9.259199267651127e-06, 9.259224241436101e-06, 9.259295621156365e-06, 1.1054397417282644, 1.1054404647519092, 1.1064677954910367, 1.1064685106333254], \"Ward_max\": 2.9155489614730626e-18, \"t\": 0.005, \"scaled_lowest_three\": [0.37036797070604505, 0.37036896965744404, 0.3703718248462546]}]}, {\"direction\": [0.0, 0.0, 1.0, 0.0], \"scalar_target_squared_speed\": 0.4444444444444444, \"samples\": [{\"lowest_squared_frequencies\": [0.0001777547133672286, 0.00017777623985421728, 0.00017777623986620577, 1.105997475626931, 1.1059974767669178, 1.106186147132763, 1.1061866679384869], \"Ward_max\": 1.4079715163988505e-17, \"t\": 0.02, \"scaled_lowest_three\": [0.4443867834180715, 0.44444059963554317, 0.4444405996655144]}, {\"lowest_squared_frequencies\": [4.444300275318337e-05, 4.444434839525389e-05, 4.4444348405470506e-05, 1.1059572978703356, 1.1059572980140318, 1.1060045045035511, 1.1060045696171885], \"Ward_max\": 1.5453447148236253e-17, \"t\": 0.01, \"scaled_lowest_three\": [0.4444300275318337, 0.4444434839525389, 0.444443484054705]}, {\"lowest_squared_frequencies\": [1.1111021007775214e-05, 1.1111105101755868e-05, 1.1111105112812247e-05, 1.1059472526465093, 1.1059472526645089, 1.105959058758005, 1.1059590668976136], \"Ward_max\": 6.5969817423711385e-18, \"t\": 0.005, \"scaled_lowest_three\": [0.4444408403110085, 0.4444442040702347, 0.44444420451248984]}]}, {\"direction\": [1.0, 2.0, -1.0, 1.0], \"scalar_target_squared_speed\": 3.4814814814814814, \"samples\": [{\"lowest_squared_frequencies\": [0.0013912297510212676, 0.0013920603660154917, 0.0013932185532297269, 1.101889427581608, 1.101975931622731, 1.1127949299890576, 1.1128744738852305], \"Ward_max\": 1.3460619695417666e-16, \"t\": 0.02, \"scaled_lowest_three\": [3.478074377553169, 3.480150915038729, 3.483046383074317]}, {\"lowest_squared_frequencies\": [0.00034806289490772133, 0.000348114878250699, 0.0003481873358496068, 1.1035721814153985, 1.1035933478900843, 1.1090153273472783, 1.1090356148721705], \"Ward_max\": 5.0934972611141215e-17, \"t\": 0.01, \"scaled_lowest_three\": [3.480628949077213, 3.48114878250699, 3.481873358496068]}, {\"lowest_squared_frequencies\": [8.703170751699498e-05, 8.703495756598098e-05, 8.703948727777011e-05, 1.1046712013436766, 1.1046764363746948, 1.1073915672913957, 1.107396692172823], \"Ward_max\": 2.9197202538660455e-17, \"t\": 0.005, \"scaled_lowest_three\": [3.4812683006797993, 3.481398302639239, 3.4815794911108044]}]}]}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "py",
+        "-3",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_toe_20261108_invariant_magnetic_completion.py",
+        "tests/test_w33_20261027_native_bloch_face_module.py"
+      ],
+      "exit_code": 0,
+      "seconds": 175.1289991000085,
+      "stdout": "..................                                                       [100%]\n18 passed in 157.48s (0:02:37)\n",
+      "stderr": ""
+    }
+  ],
+  "result_raw_sha256": "5351f1b5905063b0a018a9cb97c2f40955c4af703369ff2b2aebca6482e1ad4f",
+  "scope": "Exact allshortface rankone area tensor and polygon cup-product certificate, weight-independent obstruction, decomposable overshoot witness and positive controller-averaged finite-loop completion. Finite-k covariance and dispersion sampled. Actualserver6area algebra, not nativefullBloch replay. Bare harmonicaction, no interactingQFT or TOE."
+}
