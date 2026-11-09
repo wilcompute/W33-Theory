@@ -1,0 +1,28 @@
+{
+  "physical_claim_limit": "Same 4d Hilbert-space Schmidt form has different operational nonlocality depending on tensor-factor locality and available reference/measurement resources. This is prior-art quantum foundations, not a novel Bell inequality or experimental result.",
+  "result": {
+    "S_at_eta_0p8": 1.890193359837562,
+    "S_at_eta_0p85": 2.0885385976291224,
+    "accessible_CHSH_max_under_local_number_SSR_no_phase_reference": 1.9999999999999996,
+    "does_internal_CHSH_alone_establish_spacelike_Bell_nonlocality": false,
+    "internal_tensor_CHSH": 2.8284271247461894,
+    "internal_two_DOF_state": "one single photon with two internal qubit factors, |Phi+>=(|00>+|11>)/sqrt2",
+    "known_literature": [
+      "Brask Chaves Brunner 2013, Phys Rev A 88 012111 single photon nonlocality reference frames, doi:10.1103/PhysRevA.88.012111",
+      "Hessmo et al 2004 Phys Rev Lett 92 180401 experimental single photon nonlocality doi:10.1103/PhysRevLett.92.180401",
+      "Shalm et al 2015 loophole-free local realism test with separated parties NIST",
+      "Forbes et al 2026 Optica Quantum path-transverse-mode degree-of-freedom hyperentanglement doi:10.1364/OPTICAQ.597128"
+    ],
+    "local_phase_twirled_mixture": [
+      "|10><10|/2",
+      "|01><01|/2"
+    ],
+    "loss_model": "IID independent detection success probability eta per remote party, maximally entangled state, independent setting choices, zero single-party marginals, assign +1 to no clicks: S=2sqrt2 eta^2 + 2(1-eta)^2. This is NOT a general Bell-detection threshold.",
+    "physical_pitfalls": "Physical spatial separation and independent settings, causal isolation, local coherent reference resources, heralding/postselection assumptions and detection efficiency are extra resources; Hilbert-space factorization inside one photon alone supplies none of these.",
+    "separable_accessible_local_phase_twirled_purity": 0.4999999999999998,
+    "spatial_CHSH_if_non_number_commuting_measurements_and_shared_reference_available": 2.8284271247461894,
+    "spatial_single_photon_two_local_fock_modes": "(|10>+|01>)/sqrt2",
+    "specific_equal_eta_no_click_as_plus_1_CHSH_threshold": 0.8284271247461902
+  },
+  "status": "PASS_SINGLE_PHOTON_INTERNAL_DOF_VS_SPATIAL_BELL_SSR_OPERATIONAL_GATES"
+}

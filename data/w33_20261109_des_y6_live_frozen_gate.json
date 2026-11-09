@@ -1,0 +1,70 @@
+{
+  "DES_papers_confirm_some_cosmology_products_available": true,
+  "S9_chi_squared_scored": false,
+  "audit_date": "2026-11-09",
+  "blocked_inference": "The published DES Y6 LambdaCDM/wCDM posterior and summary S8 cannot substitute for held-out exact likelihood vectors under the frozen S9 model. A URL index, response 200 HTML, or unverified FITS listing is not a data product.",
+  "corrected_SCALAR_CLASS_Halofit_predictions_refit": false,
+  "frozen_preregistration": "2026-11-08",
+  "frozen_procedure_preserved": true,
+  "genuine_DES_cosmic_shear_data_vector_acquired": false,
+  "genuine_matching_full_covariance_acquired": false,
+  "next_acquisition_gate": "Obtain official actual unblinded xi+/- 2pt FITS with checksum, complete covariance, redshift bins/scale cuts, nuisance priors, patched scalar-field CLASS/Halofit, and run independent model-specific nuisance refits.",
+  "previously_indexed_FITS_size": "22 MB according to cached NCSA search index, not current verified object",
+  "remote_endpoints": {
+    "formerly_indexed_NCSA_directory": {
+      "complete_bytes_downloaded": 0,
+      "content_type": "text/html",
+      "final_host": "desdr-server.ncsa.illinois.edu",
+      "full_checksum_verified": false,
+      "reported_content_length": "146",
+      "status_code": 404
+    },
+    "formerly_indexed_pipeline_notebook": {
+      "complete_bytes_downloaded": 0,
+      "content_type": "text/html",
+      "final_host": "desdr-server.ncsa.illinois.edu",
+      "full_checksum_verified": false,
+      "reported_content_length": "146",
+      "status_code": 404
+    },
+    "formerly_indexed_redshift_distribution_H5": {
+      "complete_bytes_downloaded": 0,
+      "content_type": "text/html",
+      "final_host": "desdr-server.ncsa.illinois.edu",
+      "full_checksum_verified": false,
+      "reported_content_length": "146",
+      "status_code": 404
+    },
+    "formerly_indexed_unblinded_3x2pt_FITS": {
+      "complete_bytes_downloaded": 0,
+      "content_type": "text/html",
+      "final_host": "desdr-server.ncsa.illinois.edu",
+      "full_checksum_verified": false,
+      "reported_content_length": "146",
+      "status_code": 404
+    },
+    "official_DES_Y6_data_release_app": {
+      "complete_bytes_downloaded": 0,
+      "content_type": "text/html; charset=UTF-8",
+      "final_host": "des.ncsa.illinois.edu",
+      "full_checksum_verified": false,
+      "reported_content_length": "998",
+      "status_code": 200
+    },
+    "official_DES_Y6_paper_index": {
+      "complete_bytes_downloaded": 0,
+      "content_type": "text/html; charset=UTF-8",
+      "final_host": "www.darkenergysurvey.org",
+      "full_checksum_verified": false,
+      "reported_content_length": null,
+      "status_code": 200
+    }
+  },
+  "source_nz_priors_and_cuts_matched": false,
+  "sources": [
+    "https://www.darkenergysurvey.org/des-y6-cosmology-results-papers/",
+    "https://des.ncsa.illinois.edu/releases/y6a2/",
+    "https://github.com/des-science/y6-ppd-public"
+  ],
+  "status": "S9_FAIL_CLOSED_NO_VALIDATED_Y6_LIKELIHOOD_VECTOR"
+}

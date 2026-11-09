@@ -1,0 +1,506 @@
+{
+  "analytic_theorem": "For calibrated normalized POVM Ehat and ||E-Ehat||op<=delta per outcome, |q-qhat|<=epsilon simultaneously, 0<=survival<=1, and trace-one positive rho: nuclear norm R(rho)>=w(rhohat)-(delta+epsilon)*||v||1, v=M(qhat)^(-T)[h;0], with h_k=Re Tr W\u2020R(Hk), ||W||op<=1. W can depend on observed data.",
+  "confidence_scope": "Simultaneous scalar Hoeffding event for independent accepted counts, conditional on trusted per-POVM-effect operator bounds and stable state preparation. No device-independent or adversarial-source claim.",
+  "no_empirical_photonic_experiment": true,
+  "one_realized_simulated_multinomial": {
+    "CCNR_lower": 1.0029371942774212,
+    "N_per_setting": 100000000000,
+    "certifies": true,
+    "maximum_frequency_error": 2.6561119852441806e-06,
+    "simultaneous_Hoeffding_epsilon": 6.3987065585336076e-06
+  },
+  "per_setting_accepted_idealized_counts_grid": [
+    1000000,
+    100000000,
+    10000000000,
+    1000000000000,
+    100000000000000
+  ],
+  "source_controls": {
+    "Horodecki_a0p236": {
+      "calibration_tests": [
+        {
+          "actual_max_K_difference": 0.0,
+          "actual_max_POVM_effect_difference": 0.0,
+          "conservative_effect_guard": 0.0,
+          "dual_l1": 18.55742985551507,
+          "kappa_operator_analyzer_calibration": 0.0,
+          "shot_grid": [
+            {
+              "CCNR_lower": 0.9655087871454725,
+              "accepted_shots_per_setting": 1000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 0.0020234486804023718
+            },
+            {
+              "CCNR_lower": 0.9993037934029939,
+              "accepted_shots_per_setting": 100000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 0.00020234486804023718
+            },
+            {
+              "CCNR_lower": 1.002683294028746,
+              "accepted_shots_per_setting": 10000000000,
+              "prospective_certifies": true,
+              "simultaneous_radius": 2.023448680402372e-05
+            },
+            {
+              "CCNR_lower": 1.0030212440913213,
+              "accepted_shots_per_setting": 1000000000000,
+              "prospective_certifies": true,
+              "simultaneous_radius": 2.023448680402372e-06
+            },
+            {
+              "CCNR_lower": 1.0030550390975788,
+              "accepted_shots_per_setting": 100000000000000,
+              "prospective_certifies": true,
+              "simultaneous_radius": 2.023448680402372e-07
+            }
+          ]
+        },
+        {
+          "actual_max_K_difference": 1.0000000000299203e-07,
+          "actual_max_POVM_effect_difference": 7.811209418470271e-08,
+          "conservative_effect_guard": 2.0000001e-07,
+          "dual_l1": 18.557428669234294,
+          "kappa_operator_analyzer_calibration": 1e-07,
+          "shot_grid": [
+            {
+              "CCNR_lower": 0.9655050887182793,
+              "accepted_shots_per_setting": 1000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 0.0020234486804023718
+            },
+            {
+              "CCNR_lower": 0.9993000928154603,
+              "accepted_shots_per_setting": 100000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 0.00020234486804023718
+            },
+            {
+              "CCNR_lower": 1.0026795932251784,
+              "accepted_shots_per_setting": 10000000000,
+              "prospective_certifies": true,
+              "simultaneous_radius": 2.023448680402372e-05
+            },
+            {
+              "CCNR_lower": 1.0030175432661501,
+              "accepted_shots_per_setting": 1000000000000,
+              "prospective_certifies": true,
+              "simultaneous_radius": 2.023448680402372e-06
+            },
+            {
+              "CCNR_lower": 1.0030513382702473,
+              "accepted_shots_per_setting": 100000000000000,
+              "prospective_certifies": true,
+              "simultaneous_radius": 2.023448680402372e-07
+            }
+          ]
+        },
+        {
+          "actual_max_K_difference": 1.0000000000583531e-06,
+          "actual_max_POVM_effect_difference": 7.81120941386306e-07,
+          "conservative_effect_guard": 2.0000009999999997e-06,
+          "dual_l1": 18.557417992689647,
+          "kappa_operator_analyzer_calibration": 1e-06,
+          "shot_grid": [
+            {
+              "CCNR_lower": 0.9654718028783696,
+              "accepted_shots_per_setting": 1000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 0.0020234486804023718
+            },
+            {
+              "CCNR_lower": 0.9992667875324545,
+              "accepted_shots_per_setting": 100000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 0.00020234486804023718
+            },
+            {
+              "CCNR_lower": 1.0026462859978629,
+              "accepted_shots_per_setting": 10000000000,
+              "prospective_certifies": true,
+              "simultaneous_radius": 2.023448680402372e-05
+            },
+            {
+              "CCNR_lower": 1.0029842358444037,
+              "accepted_shots_per_setting": 1000000000000,
+              "prospective_certifies": true,
+              "simultaneous_radius": 2.023448680402372e-06
+            },
+            {
+              "CCNR_lower": 1.0030180308290577,
+              "accepted_shots_per_setting": 100000000000000,
+              "prospective_certifies": true,
+              "simultaneous_radius": 2.023448680402372e-07
+            }
+          ]
+        },
+        {
+          "actual_max_K_difference": 9.999999999974695e-06,
+          "actual_max_POVM_effect_difference": 7.811209413100596e-06,
+          "conservative_effect_guard": 2.0000100000000002e-05,
+          "dual_l1": 18.55731122544172,
+          "kappa_operator_analyzer_calibration": 1e-05,
+          "shot_grid": [
+            {
+              "CCNR_lower": 0.9651389449570018,
+              "accepted_shots_per_setting": 1000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 0.0020234486804023718
+            },
+            {
+              "CCNR_lower": 0.9989337351768444,
+              "accepted_shots_per_setting": 100000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 0.00020234486804023718
+            },
+            {
+              "CCNR_lower": 1.0023132141988287,
+              "accepted_shots_per_setting": 10000000000,
+              "prospective_certifies": true,
+              "simultaneous_radius": 2.023448680402372e-05
+            },
+            {
+              "CCNR_lower": 1.002651162101027,
+              "accepted_shots_per_setting": 1000000000000,
+              "prospective_certifies": true,
+              "simultaneous_radius": 2.023448680402372e-06
+            },
+            {
+              "CCNR_lower": 1.0026849568912468,
+              "accepted_shots_per_setting": 100000000000000,
+              "prospective_certifies": true,
+              "simultaneous_radius": 2.023448680402372e-07
+            }
+          ]
+        }
+      ],
+      "true_CCNR": 1.0030587940982738
+    },
+    "maximally_mixed": {
+      "calibration_tests": [
+        {
+          "actual_max_K_difference": 0.0,
+          "actual_max_POVM_effect_difference": 0.0,
+          "conservative_effect_guard": 0.0,
+          "dual_l1": 17.397590160692314,
+          "kappa_operator_analyzer_calibration": 0.0,
+          "shot_grid": [
+            {
+              "CCNR_lower": 0.2981302024805042,
+              "accepted_shots_per_setting": 1000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 0.0020234486804023718
+            },
+            {
+              "CCNR_lower": 0.329813020248055,
+              "accepted_shots_per_setting": 100000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 0.00020234486804023718
+            },
+            {
+              "CCNR_lower": 0.33298130202481,
+              "accepted_shots_per_setting": 10000000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 2.023448680402372e-05
+            },
+            {
+              "CCNR_lower": 0.33329813020248555,
+              "accepted_shots_per_setting": 1000000000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 2.023448680402372e-06
+            },
+            {
+              "CCNR_lower": 0.3333298130202531,
+              "accepted_shots_per_setting": 100000000000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 2.023448680402372e-07
+            }
+          ]
+        },
+        {
+          "actual_max_K_difference": 1.0000000000299203e-07,
+          "actual_max_POVM_effect_difference": 7.811209418470271e-08,
+          "conservative_effect_guard": 2.0000001e-07,
+          "dual_l1": 18.432532718880967,
+          "kappa_operator_analyzer_calibration": 1e-07,
+          "shot_grid": [
+            {
+              "CCNR_lower": 0.2960323628201163,
+              "accepted_shots_per_setting": 1000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 0.0020234486804023718
+            },
+            {
+              "CCNR_lower": 0.3295999184259602,
+              "accepted_shots_per_setting": 100000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 0.00020234486804023718
+            },
+            {
+              "CCNR_lower": 0.3329566739865446,
+              "accepted_shots_per_setting": 10000000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 2.023448680402372e-05
+            },
+            {
+              "CCNR_lower": 0.33329234954260306,
+              "accepted_shots_per_setting": 1000000000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 2.023448680402372e-06
+            },
+            {
+              "CCNR_lower": 0.3333259170982089,
+              "accepted_shots_per_setting": 100000000000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 2.023448680402372e-07
+            }
+          ]
+        },
+        {
+          "actual_max_K_difference": 1.0000000000583531e-06,
+          "actual_max_POVM_effect_difference": 7.81120941386306e-07,
+          "conservative_effect_guard": 2.0000009999999997e-06,
+          "dual_l1": 16.456904301794406,
+          "kappa_operator_analyzer_calibration": 1e-06,
+          "shot_grid": [
+            {
+              "CCNR_lower": 0.3000007182153024,
+              "accepted_shots_per_setting": 1000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 0.0020234486804023718
+            },
+            {
+              "CCNR_lower": 0.32997044937897896,
+              "accepted_shots_per_setting": 100000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 0.00020234486804023718
+            },
+            {
+              "CCNR_lower": 0.3329674224953466,
+              "accepted_shots_per_setting": 10000000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 2.023448680402372e-05
+            },
+            {
+              "CCNR_lower": 0.3332671198069834,
+              "accepted_shots_per_setting": 1000000000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 2.023448680402372e-06
+            },
+            {
+              "CCNR_lower": 0.3332970895381471,
+              "accepted_shots_per_setting": 100000000000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 2.023448680402372e-07
+            }
+          ]
+        },
+        {
+          "actual_max_K_difference": 9.999999999974695e-06,
+          "actual_max_POVM_effect_difference": 7.811209413100596e-06,
+          "conservative_effect_guard": 2.0000100000000002e-05,
+          "dual_l1": 18.35374812617256,
+          "kappa_operator_analyzer_calibration": 1e-05,
+          "shot_grid": [
+            {
+              "CCNR_lower": 0.2958283891090977,
+              "accepted_shots_per_setting": 1000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 0.0020234486804023718
+            },
+            {
+              "CCNR_lower": 0.3292524697928049,
+              "accepted_shots_per_setting": 100000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 0.00020234486804023718
+            },
+            {
+              "CCNR_lower": 0.33259487786117564,
+              "accepted_shots_per_setting": 10000000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 2.023448680402372e-05
+            },
+            {
+              "CCNR_lower": 0.3329291186680127,
+              "accepted_shots_per_setting": 1000000000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 2.023448680402372e-06
+            },
+            {
+              "CCNR_lower": 0.3329625427486964,
+              "accepted_shots_per_setting": 100000000000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 2.023448680402372e-07
+            }
+          ]
+        }
+      ],
+      "true_CCNR": 0.3333333333333333
+    },
+    "separable_pure_product": {
+      "calibration_tests": [
+        {
+          "actual_max_K_difference": 0.0,
+          "actual_max_POVM_effect_difference": 0.0,
+          "conservative_effect_guard": 0.0,
+          "dual_l1": 57.34819886690988,
+          "kappa_operator_analyzer_calibration": 0.0,
+          "shot_grid": [
+            {
+              "CCNR_lower": 0.8839588626793042,
+              "accepted_shots_per_setting": 1000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 0.0020234486804023718
+            },
+            {
+              "CCNR_lower": 0.9883958862679356,
+              "accepted_shots_per_setting": 100000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 0.00020234486804023718
+            },
+            {
+              "CCNR_lower": 0.9988395886267988,
+              "accepted_shots_per_setting": 10000000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 2.023448680402372e-05
+            },
+            {
+              "CCNR_lower": 0.9998839588626851,
+              "accepted_shots_per_setting": 1000000000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 2.023448680402372e-06
+            },
+            {
+              "CCNR_lower": 0.9999883958862738,
+              "accepted_shots_per_setting": 100000000000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 2.023448680402372e-07
+            }
+          ]
+        },
+        {
+          "actual_max_K_difference": 1.0000000000299203e-07,
+          "actual_max_POVM_effect_difference": 7.811209418470271e-08,
+          "conservative_effect_guard": 2.0000001e-07,
+          "dual_l1": 53.15137406973124,
+          "kappa_operator_analyzer_calibration": 1e-07,
+          "shot_grid": [
+            {
+              "CCNR_lower": 0.8924405841237757,
+              "accepted_shots_per_setting": 1000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 0.0020234486804023718
+            },
+            {
+              "CCNR_lower": 0.9892347540744492,
+              "accepted_shots_per_setting": 100000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 0.00020234486804023718
+            },
+            {
+              "CCNR_lower": 0.9989141710695164,
+              "accepted_shots_per_setting": 10000000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 2.023448680402372e-05
+            },
+            {
+              "CCNR_lower": 0.9998821127690232,
+              "accepted_shots_per_setting": 1000000000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 2.023448680402372e-06
+            },
+            {
+              "CCNR_lower": 0.9999789069389738,
+              "accepted_shots_per_setting": 100000000000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 2.023448680402372e-07
+            }
+          ]
+        },
+        {
+          "actual_max_K_difference": 1.0000000000583531e-06,
+          "actual_max_POVM_effect_difference": 7.81120941386306e-07,
+          "conservative_effect_guard": 2.0000009999999997e-06,
+          "dual_l1": 53.15139120370568,
+          "kappa_operator_analyzer_calibration": 1e-06,
+          "shot_grid": [
+            {
+              "CCNR_lower": 0.8923475059924973,
+              "accepted_shots_per_setting": 1000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 0.0020234486804023718
+            },
+            {
+              "CCNR_lower": 0.989141707145917,
+              "accepted_shots_per_setting": 100000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 0.00020234486804023718
+            },
+            {
+              "CCNR_lower": 0.9988211272612589,
+              "accepted_shots_per_setting": 10000000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 2.023448680402372e-05
+            },
+            {
+              "CCNR_lower": 0.9997890692727931,
+              "accepted_shots_per_setting": 1000000000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 2.023448680402372e-06
+            },
+            {
+              "CCNR_lower": 0.9998858634739466,
+              "accepted_shots_per_setting": 100000000000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 2.023448680402372e-07
+            }
+          ]
+        },
+        {
+          "actual_max_K_difference": 9.999999999974695e-06,
+          "actual_max_POVM_effect_difference": 7.811209413100596e-06,
+          "conservative_effect_guard": 2.0000100000000002e-05,
+          "dual_l1": 53.15156060284418,
+          "kappa_operator_analyzer_calibration": 1e-05,
+          "shot_grid": [
+            {
+              "CCNR_lower": 0.8914167204987679,
+              "accepted_shots_per_setting": 1000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 0.0020234486804023718
+            },
+            {
+              "CCNR_lower": 0.9882112301456044,
+              "accepted_shots_per_setting": 100000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 0.00020234486804023718
+            },
+            {
+              "CCNR_lower": 0.9978906811102881,
+              "accepted_shots_per_setting": 10000000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 2.023448680402372e-05
+            },
+            {
+              "CCNR_lower": 0.9988586262067565,
+              "accepted_shots_per_setting": 1000000000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 2.023448680402372e-06
+            },
+            {
+              "CCNR_lower": 0.9989554207164033,
+              "accepted_shots_per_setting": 100000000000000,
+              "prospective_certifies": false,
+              "simultaneous_radius": 2.023448680402372e-07
+            }
+          ]
+        }
+      ],
+      "true_CCNR": 1.0000000000000002
+    }
+  },
+  "status": "PASS_FULL_POVM_EFFECT_NORM_AND_FINITE_SHOT_DUAL_CERTIFICATE",
+  "true_full_POVM_effects_are_assumed_calibratable": true
+}
