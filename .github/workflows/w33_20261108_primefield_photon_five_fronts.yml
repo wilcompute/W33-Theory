@@ -1,0 +1,55 @@
+name: W33 prime-field photon architecture five fronts
+
+on:
+  workflow_dispatch: {}
+  push:
+    paths:
+      - "analysis/w33_20261108_primefield_photon_five_fronts.py"
+      - "tests/test_w33_20261108_primefield_photon_five_fronts.py"
+      - "analysis/PASS20261108_PRIMEFIELD_PHOTON_FIVE_FRONTS.md"
+      - ".github/workflows/w33_20261108_primefield_photon_five_fronts.yml"
+  pull_request:
+    paths:
+      - "analysis/w33_20261108_primefield_photon_five_fronts.py"
+      - "tests/test_w33_20261108_primefield_photon_five_fronts.py"
+      - "analysis/PASS20261108_PRIMEFIELD_PHOTON_FIVE_FRONTS.md"
+      - ".github/workflows/w33_20261108_primefield_photon_five_fronts.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  primefield-five-fronts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install exact finite-matrix replay requirements
+        run: python -m pip install --disable-pip-version-check numpy scipy sympy pytest
+      - name: Assert five scientific evidence tiers
+        run: python -m pytest -q tests/test_w33_20261108_primefield_photon_five_fronts.py
+      - name: Independently regenerate five-front certificate
+        run: python analysis/w33_20261108_primefield_photon_five_fronts.py --out data/w33_20261108_primefield_photon_five_fronts_ci.json
+      - name: Fail closed on physical overclaims
+        run: |
+          python - <<'PY'
+          import json
+          p='data/w33_20261108_primefield_photon_five_fronts_ci.json'
+          j=json.load(open(p,encoding='utf-8'))
+          assert j['prime_Maxwell']['q3_square_only_harmonic_modes']==4
+          assert j['E6']['lower_bound_unlifted_flat_moduli_after_E6_quotient']>=399
+          assert j['quantum_clock']['data'][1]['principal_log_off_null_energy_fraction']>.70
+          assert j['photonic']['minimum_arbitrary_rail_swap_count']==12
+          assert j['photonic']['rail_requirement_by_logical_qutrit_count']['10']==59049
+          assert j['cosmology']['heldout_likelihood_recomputed'] is False
+          assert j['cosmology']['S7_S8_original_shear_claims_withdrawn'] is True
+          print('PASS: exact finite and logical boundaries; observational inference not claimed')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w33-primefield-photon-five-fronts
+          path: data/w33_20261108_primefield_photon_five_fronts_ci.json
+          retention-days: 30
