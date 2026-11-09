@@ -54,3 +54,18 @@ The spectrum {1/9, 16/9} is a fact about the symmetric group S6. All steps were 
 The pentad's 9-dimensional block (item 1) is thus ker(R + 1): the one box of each standard representation where the sixth letter sits in the second row. The size-8 sets are the degenerate case: their uncovered set is a single split, R = S_A, and the spectrum is {(8 − 4)/9, (8 + 8)/9} = {4/9, 16/9}.
 
 **Status.** Steps 1–2 are algebraic identities verified on all 432 pentads. Step 3's relations and split identifications are checked numerically, as exact matrix identities up to 10⁻⁸, on one pentad. Step 4 is standard (Okounkov–Vershik). An independent exact replay is requested from the other track.
+
+## Addendum 2: the sentinel principle across rungs, and the pentad's S5 (`w33_sentinel_rungs.py`, `w33_pentad_stab_doily.py`)
+
+**One formula.** On Sym²(C^d), M = (d − 1 − T_U)/d with T_U summed over the uncovered Pauli vectors. Certification works exactly when the uncovered set is covered uniformly by tensor factorisations:
+
+| set | uncovered points | factorisation cover | spec M |
+|---|---:|---|---|
+| two qubits, size 3 | 6 | 1 split, covered once | {1/4, 9/4}: proved |
+| two qutrits, size 8 | 8 | 1 split, covered once | {4/9, 16/9}: proved |
+| two qutrits, size 5 | 20 | 5 splits, covered twice (doily S6, J₆) | {1/9, 16/9}: proved |
+| three qubits, size 5 | 28 | none; not a quadric set of any of the 64 forms | contains −5/8: fails |
+
+**The pentad's S5.** Its stabiliser in PSp(4,3) has order 120 and acts faithfully on the 5 sentinels as the full S5, preserving the doily's 15 splits. It is the stabiliser of the doily letter shared by the sentinels. **Write-up:** `analysis/NOTE_STRONG_UNEXTENDIBILITY_PROOF.md` (two pages).
+
+**Item 5 (E8): not attempted.** The degree-1 del Pezzo region count remains unknown, and computing it needs the E8 analogue of the Yoshida sign-pattern machinery.

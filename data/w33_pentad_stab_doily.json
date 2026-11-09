@@ -1,0 +1,13 @@
+{
+ "stabiliser_order": 120,
+ "sentinels": [
+  3,
+  7,
+  20,
+  28,
+  37
+ ],
+ "sentinels_in_doily": true,
+ "image_on_sentinels": 120,
+ "preserves_doily_15": true
+}

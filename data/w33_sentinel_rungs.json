@@ -1,0 +1,34 @@
+{
+ "d4_size3": {
+  "points": 15,
+  "uncovered": 6,
+  "splits_inside": 1,
+  "multiplicities": [
+   1
+  ],
+  "covers_all": true
+ },
+ "d9_size5": {
+  "points": 40,
+  "uncovered": 20,
+  "splits_inside": 5,
+  "multiplicities": [
+   2
+  ],
+  "covers_all": true
+ },
+ "d9_size8": {
+  "points": 40,
+  "uncovered": 8,
+  "splits_inside": 1,
+  "multiplicities": [
+   1
+  ],
+  "covers_all": true
+ },
+ "d8_size5": {
+  "points": 63,
+  "uncovered": 28,
+  "uncovered_is_quadric_class": []
+ }
+}
