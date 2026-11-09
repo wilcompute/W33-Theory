@@ -320,7 +320,23 @@
         "orbit_rank": 2,
         "uneaten_massless": 3
       }
-    ]
+    ],
+    "generic_rank_by_hypercharge": {
+      "-6": 6,
+      "-5": 0,
+      "-4": 18,
+      "-3": 36,
+      "-2": 54,
+      "-1": 36,
+      "0": 8,
+      "1": 36,
+      "2": 54,
+      "3": 36,
+      "4": 18,
+      "5": 0,
+      "6": 6
+    },
+    "minimum_uneaten_massless_at_fixed_vev": 101
   },
   "perturbative_family_anomaly": {
     "fundamental_minus_duals": 27,

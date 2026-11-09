@@ -5,6 +5,9 @@ import json
 
 import numpy as np
 import sympy as sp
+from scipy.sparse import csr_matrix
+from scipy.sparse.csgraph import connected_components
+from sympy.polys.matrices import DomainMatrix
 
 import toe_20261108_three_copy_cubic_vacuum as vacuum
 
@@ -130,11 +133,11 @@ def adjoint_charges(internal, y):
     return np.array(charges)
 
 
-def mass_spectrum(x, dual, internal, y, orbit, records, mixed_terms):
-    """Holomorphic Hessian ranks and the quotient by the Higgs orbit."""
+def holomorphic_hessian(x, dual, internal, y, records, mixed_terms, signed_cubic=True):
     adjoint = slice(405, 483)
     hessian = np.zeros((483, 483), dtype=np.int64)
-    for i, j, k in [(0, 1, 2), (0, 2, 1), (1, 2, 0)]:
+    cubic_blocks = [(0, 1, 2), (0, 2, 1), (1, 2, 0)] if signed_cubic else []
+    for i, j, k in cubic_blocks:
         left = slice(81 * i, 81 * (i + 1))
         right = slice(81 * j, 81 * (j + 1))
         derivative = np.array(vacuum.native.jacobian(x[k], records))
@@ -150,9 +153,12 @@ def mass_spectrum(x, dual, internal, y, orbit, records, mixed_terms):
             hessian[i, xk] = hessian[xk, i]
             hessian[zj, i] += lifted @ x[k]
             hessian[i, zj] = hessian[zj, i]
+    return hessian
+
+
+def mass_spectrum(hessian, charges, orbit, y):
+    """Holomorphic Hessian ranks and the quotient by the Higgs orbit."""
     assert not (orbit @ hessian).any()
-    charges = np.concatenate([np.tile(np.repeat(y, 3), 3), np.tile(np.repeat(-y, 3), 2),
-                              adjoint_charges(internal, y)])
     assert not hessian[(charges[:, None] + charges[None, :]) != 0].any()
     rows = []
     for charge in sorted(set(charges)):
@@ -167,6 +173,31 @@ def mass_spectrum(x, dual, internal, y, orbit, records, mixed_terms):
     assert all(by_charge[q] - by_charge.get(-q, 0) == 3 * (sum(y == q) - sum(y == -q))
                for q in by_charge)
     return rows
+
+
+def generic_mass_ranks(blocks, charges):
+    """Compute universal rank bounds over the rational function field."""
+    couplings = sp.symbols('omega a b c')
+    result = {}
+    for charge in sorted(set(charges)):
+        tensor = blocks[:, charges == -charge, :][:, :, charges == charge]
+        pattern = tensor.any(axis=0)
+        rows, cols = pattern.shape
+        bipartite = np.block([[np.zeros((rows, rows), dtype=bool), pattern],
+                              [pattern.T, np.zeros((cols, cols), dtype=bool)]])
+        _, labels = connected_components(csr_matrix(bipartite), directed=False)
+        rank = 0
+        for label in set(labels):
+            left, right = labels[:rows] == label, labels[rows:] == label
+            if not left.any() or not right.any():
+                continue
+            component = tensor[:, left, :][:, :, right]
+            entries = {(int(i), int(j)): sum(int(v) * k for v, k in zip(component[:, i, j], couplings))
+                       for i, j in zip(*np.nonzero(component.any(axis=0)))}
+            matrix = sp.SparseMatrix(component.shape[1], component.shape[2], entries)
+            rank += DomainMatrix.from_Matrix(matrix).to_field().rank()
+        result[int(charge)] = rank
+    return result
 
 
 def dual_repair(gauge, internal, y, records):
@@ -191,11 +222,19 @@ def dual_repair(gauge, internal, y, records):
     allowed = [(0, 2), (1, 0), (1, 1)]
     assert vacuum.rank(adjoint_derivative) == 3
     assert not adjoint_derivative[:, [3 * j + k for j, k in allowed]].any()
-    spectrum = mass_spectrum(x, dual, internal, y, all_orbit, records, [allowed[0]])
+    charges = np.concatenate([np.tile(np.repeat(y, 3), 3), np.tile(np.repeat(-y, 3), 2),
+                              adjoint_charges(internal, y)])
+    omega = holomorphic_hessian(x, dual, internal, y, records, [])
+    mixed = [holomorphic_hessian(x, dual, internal, y, records, [term], signed_cubic=False)
+             for term in allowed]
+    blocks = np.stack([omega, *mixed])
+    spectrum = mass_spectrum(omega + mixed[0], charges, all_orbit, y)
     assert sum(row['uneaten_massless'] for row in spectrum) == 211
-    richer_spectrum = mass_spectrum(x, dual, internal, y, all_orbit, records, allowed)
+    richer_spectrum = mass_spectrum(blocks.sum(axis=0), charges, all_orbit, y)
     richer_massless = sum(row['uneaten_massless'] for row in richer_spectrum)
-    assert richer_massless < 211
+    generic_ranks = generic_mass_ranks(blocks, charges)
+    assert generic_ranks == {row['six_Y']: row['holomorphic_rank'] for row in richer_spectrum}
+    assert richer_massless == 101 and sum(generic_ranks.values()) == 308
     return dict(fundamental_supports=[np.flatnonzero(v).tolist() for v in x],
                 dual_supports=[np.flatnonzero(v).tolist() for v in dual],
                 mixed_cubic='dual[0] * (A tensor I) * X[2]',
@@ -204,7 +243,9 @@ def dual_repair(gauge, internal, y, records):
                 uneaten_massless_by_hypercharge=spectrum,
                 allowed_mixed_cubic_indices_zero_based=allowed,
                 all_allowed_terms_unit_coupling_uneaten_massless=richer_massless,
-                all_allowed_terms_unit_coupling_spectrum=richer_spectrum)
+                all_allowed_terms_unit_coupling_spectrum=richer_spectrum,
+                generic_rank_by_hypercharge=generic_ranks,
+                minimum_uneaten_massless_at_fixed_vev=richer_massless)
 
 
 def calculate():
