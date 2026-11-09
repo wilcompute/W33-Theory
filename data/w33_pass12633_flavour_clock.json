@@ -1,0 +1,38 @@
+{
+ "pass_number": 12633,
+ "track": "claude",
+ "kappa_mu_max": 2.501671158212348e-06,
+ "sensitivity_h3": {
+  "omega": {
+   "0.001": 4.225104770467971,
+   "0.01": 4.318023604886478,
+   "0.03": 4.528803788105921,
+   "0.1": 5.331426303284981,
+   "0.3": 9.165907069130416
+  },
+  "i": {
+   "0.001": 2001.7699791345933,
+   "0.01": 201.76669726126303,
+   "0.03": 68.42609810878326,
+   "0.1": 21.7169874994827,
+   "0.3": 8.346787166400768
+  },
+  "generic": {
+   "0.001": 7.876713254528767,
+   "0.01": 8.193175594217728,
+   "0.03": 8.978126247975263,
+   "0.1": 13.167051435372112,
+   "0.3": 33.40999533654484
+  }
+ },
+ "min_violation_factor": 1688912.9319007536,
+ "checks": {
+  "forms_satisfy_weight4_identity": true,
+  "omega_has_degenerate_pair": true,
+  "omega_cone_no_suppression": true,
+  "i_sensitivity_grows_as_inverse_distance": true,
+  "generic_control_order_one": true,
+  "every_case_violates_clock_by_1e6": true
+ },
+ "all_checks_pass": true
+}
