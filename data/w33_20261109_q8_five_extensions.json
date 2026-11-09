@@ -1,0 +1,290 @@
+{
+  "DES_Y6_gate": {
+    "S9_scored": false,
+    "direct_download_status": "FAILED_404; stale cached indexed listing cannot be treated as current download access",
+    "external_dataset_manifest_2026_11_04": "https://glama.ai/mcp/servers/nesar-ai-assistant/weak-lensing-mcp-server",
+    "official_Y6_papers": "https://www.darkenergysurvey.org/des-y6-cosmology-results-papers/",
+    "prior_report": "External survey directory indexed an unblinded 22 MB 3x2pt FITS three months earlier, but direct exact GET on 2026-11-09 returned 404. No data-vector bytes or covariance were acquired.",
+    "public_data_release": "https://des.ncsa.illinois.edu/releases/y6a2/",
+    "public_des_index_cached": "https://desdr-server.ncsa.illinois.edu/despublic/y6a2_files/y6key_products/final_version/",
+    "public_pipeline_examples": "https://github.com/des-science/y6-ppd-public/",
+    "required_named_inputs": [
+      "unblinded cosmic shear xi+/- data-vector",
+      "matched complete covariance",
+      "redshift-bin n(z)",
+      "NLA nuisance priors",
+      "corrected scalar-field CLASS/Halofit theory",
+      "scale cuts xi+>10',xi->60'",
+      "held-out nuisance refit"
+    ],
+    "safe_null": "No model-specific chi-squared, p-value, sigma or falsification status may be inferred from a conditional Y6 LambdaCDM S8 number.",
+    "survey": "DES Year 6, 2026-11-09 readiness audit",
+    "unblinded_candidate_direct_HTTP_2026_11_09": 404,
+    "unblinded_candidate_url": "https://desdr-server.ncsa.illinois.edu/despublic/y6a2_files/y6key_products/final_version/3x2pt_2025-07-28-20h_UNBLINDED_wmask_nob2.fits",
+    "why_not": "Could not verify and process complete unblinded Y6 xi+/- 2pt FITS plus matched covariance and theory refit; published conditional S8 posterior is NOT the S9 likelihood."
+  },
+  "PPT_benchmarks": {
+    "Horodecki_PPT_family_scan": [
+      {
+        "a": 0.01,
+        "difference_from_2_over_3": 1.1102230246251565e-16,
+        "trace_norm": 0.6666666666666667
+      },
+      {
+        "a": 0.05,
+        "difference_from_2_over_3": 2.220446049250313e-16,
+        "trace_norm": 0.6666666666666669
+      },
+      {
+        "a": 0.1,
+        "difference_from_2_over_3": 0.0,
+        "trace_norm": 0.6666666666666666
+      },
+      {
+        "a": 0.2,
+        "difference_from_2_over_3": -1.1102230246251565e-16,
+        "trace_norm": 0.6666666666666665
+      },
+      {
+        "a": 0.3,
+        "difference_from_2_over_3": 0.0,
+        "trace_norm": 0.6666666666666666
+      },
+      {
+        "a": 0.4,
+        "difference_from_2_over_3": -1.1102230246251565e-16,
+        "trace_norm": 0.6666666666666665
+      },
+      {
+        "a": 0.5,
+        "difference_from_2_over_3": -1.1102230246251565e-16,
+        "trace_norm": 0.6666666666666665
+      },
+      {
+        "a": 0.6,
+        "difference_from_2_over_3": -2.220446049250313e-16,
+        "trace_norm": 0.6666666666666664
+      },
+      {
+        "a": 0.7,
+        "difference_from_2_over_3": -1.1102230246251565e-16,
+        "trace_norm": 0.6666666666666665
+      },
+      {
+        "a": 0.8,
+        "difference_from_2_over_3": -1.1102230246251565e-16,
+        "trace_norm": 0.6666666666666665
+      },
+      {
+        "a": 0.9,
+        "difference_from_2_over_3": -1.1102230246251565e-16,
+        "trace_norm": 0.6666666666666665
+      },
+      {
+        "a": 0.99,
+        "difference_from_2_over_3": -1.1102230246251565e-16,
+        "trace_norm": 0.6666666666666665
+      }
+    ],
+    "Horodecki_all_a_exact_proof": {
+      "block_frobenius_squared": "(7*a**2 - 2*a + 4)/(9*(8*a + 1)**2)",
+      "block_gram_determinant": "a**2*(a - 1)**2/(9*(8*a + 1)**4)",
+      "exact_nuclear_norm": "2/3 for every 0<a<1",
+      "proof": "five independent |a/(8a+1)| singular values and a rank-2 2x3 block with sum (a+2)/(3*(8a+1))",
+      "trace_norm_witness_blind_spot": true
+    },
+    "pyramid_UPB_orthogonality_error": 3.3306690738754696e-16,
+    "two_UPB_benchmarks": {
+      "Pyramids": {
+        "F8": 0.11862527309023385,
+        "PPT_min_eigenvalue": -1.8741832550202313e-17,
+        "correlation_trace_norm": 0.7114378384034103,
+        "purity": 0.25,
+        "witness_excess": 0.04477117173674372
+      },
+      "Tiles": {
+        "F8": 0.11805555555555552,
+        "PPT_min_eigenvalue": -1.1238848576532942e-16,
+        "correlation_trace_norm": 0.7022810881801118,
+        "purity": 0.24999999999999997,
+        "witness_excess": 0.03561442151344518
+      }
+    }
+  },
+  "gauge_continuum": {
+    "continuum": {
+      "3": {
+        "16": 3.0242082369333922,
+        "32": 3.011906477256501,
+        "64": 3.005905719428623,
+        "8": 3.0525774399335153
+      },
+      "4": {
+        "16": 4.032277642566225,
+        "32": 4.015875303008668,
+        "64": 4.007874292571497,
+        "8": 4.069289266232398
+      }
+    },
+    "native_gauge": {
+      "distinct_eight_cycles": 1620,
+      "free_U1_cycle_fluxes": 81,
+      "incidence_edges": 160,
+      "incidence_graph_vertices": 80,
+      "laplacian_covariance_error": 3.722145839155691e-15,
+      "relative_gauge_action_error": 0.0
+    },
+    "not_established": "nonperturbative Ward-identity-controlled continuum, anomaly-free chiral fermions, dynamical metric, Lorentz invariance",
+    "quantitative_falsifier": "The native 80-vertex finite incidence graph has no continuum 3+1D Weyl law; any 3D/4D plateau in Levi x Z^d is determined by the externally input d."
+  },
+  "information_kernel": {
+    "all_24_Choi_MUB_bases_unable_to_distinguish_these_two_states": true,
+    "consequence": "Do not infer pure-state entanglement entropy or source purity without independent local measurements or a trusted preparation promise",
+    "density_example": "rho0=I9/9; rho1=|0><0| tensor I3/3",
+    "global_purities": [
+      0.1111111111111111,
+      0.3333333333333333
+    ],
+    "max_outcome_probability_difference": 5.551115123125783e-17,
+    "reason": "Every maximally entangled measurement vector has maximally mixed local reductions, so the 16 local Bloch coefficients are in the exact kernel"
+  },
+  "limitations": "Tight Schmidt witness is finite quantum information; SDP numerical optimality not rigorous; no experimental chip, continuum TOE or new Y6 likelihood.",
+  "optical_routing": {
+    "caution": "Crossings may implement ideal permutations geometrically; counting them as tunable 2-mode couplers is conservative hardware-specific; exposure loss assumes independent identical 0.5% intensity loss per crossing.",
+    "conditional_transmissions_for_t_per_swap_0p995": [
+      1.0,
+      0.990025,
+      0.9801495006,
+      0.9801495006,
+      0.985074875,
+      0.985074875,
+      0.985074875,
+      0.995,
+      0.9703725094
+    ],
+    "constructed_parallel_layers": [
+      [
+        [
+          3,
+          4
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      [
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      [
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      [
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      [
+        [
+          2,
+          3
+        ]
+      ]
+    ],
+    "if_all_13_SWAPS_require_2mode_components_total_upper_budget": 31,
+    "logical_permutation_input_to_output": [
+      0,
+      3,
+      6,
+      7,
+      1,
+      4,
+      5,
+      8,
+      2
+    ],
+    "max_rail_swap_exposures": 6,
+    "minimal_adjacent_swaps_in_one_linear_rail_order": 13,
+    "parallel_layer_depth": 6,
+    "per_logical_mode_swap_exposures": [
+      0,
+      2,
+      4,
+      4,
+      3,
+      3,
+      3,
+      1,
+      6
+    ],
+    "previous_unitary_two_mode_couplers": 18
+  },
+  "robust_SDP": {
+    "Pyramids": {
+      "95pct_simultaneous_radius": 0.0006310921316705665,
+      "accepted_N_per_basis": 10000000,
+      "assumed_efficiency_relative_error": 0.001,
+      "certifies_PPT_entanglement_numerically": true,
+      "expected_conditional_frequencies_only": true,
+      "gain_over_fixed_dual": 0.0016107576830401982,
+      "prior_lp_rigorous_dual_lower_bound": 0.6980325632599516,
+      "scope": "Numerical SDP is diagnostic, not a machine-certified lower bound; only LP dual plus interval proof is conservative and robust to solver numerical error",
+      "solver": "CLARABEL",
+      "solver_approx_full_min_nuclear_norm": 0.6996433209429918,
+      "solver_status": "optimal",
+      "true_trace_norm": 0.7114378384034103
+    },
+    "Tiles": {
+      "95pct_simultaneous_radius": 0.0006310921316705665,
+      "accepted_N_per_basis": 10000000,
+      "assumed_efficiency_relative_error": 0.001,
+      "certifies_PPT_entanglement_numerically": true,
+      "expected_conditional_frequencies_only": true,
+      "gain_over_fixed_dual": 0.005596741038740194,
+      "prior_lp_rigorous_dual_lower_bound": 0.6876268625907511,
+      "scope": "Numerical SDP is diagnostic, not a machine-certified lower bound; only LP dual plus interval proof is conservative and robust to solver numerical error",
+      "solver": "CLARABEL",
+      "solver_approx_full_min_nuclear_norm": 0.6932236036294913,
+      "solver_status": "optimal",
+      "true_trace_norm": 0.7022810881801118
+    }
+  },
+  "status": "PASS_EXACT_PPT_BLINDSPOT_OPTICAL_ROUTING_TOY_SDP_AND_S9_NOT_SCORED"
+}
