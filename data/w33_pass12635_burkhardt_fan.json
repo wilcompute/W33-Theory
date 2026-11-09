@@ -1,0 +1,31 @@
+{
+ "n_points": 40,
+ "n_isotropic_lines": 40,
+ "n_nondeg_planes": 90,
+ "n_splits": 45,
+ "rays": 85,
+ "edges_aa": 240,
+ "edges_ab": 360,
+ "triangles_aaa": 160,
+ "triangles_aab": 720,
+ "edges": 600,
+ "triangles": 880,
+ "split_orthogonality_ok": true,
+ "aa_graph_perp_perp": {
+  "4": 540
+ },
+ "checks": {
+  "rays_matches": true,
+  "edges_matches": true,
+  "triangles_matches": true,
+  "edges_aa_matches": true,
+  "edges_ab_matches": true,
+  "triangles_aaa_matches": true,
+  "triangles_aab_matches": true,
+  "splits_45": true,
+  "split_orthogonality": true,
+  "aa_is_W33_points": true
+ },
+ "all_checks_pass": true,
+ "pass_number": 12635
+}
