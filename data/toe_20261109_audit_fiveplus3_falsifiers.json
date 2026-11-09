@@ -1,0 +1,429 @@
+{
+  "E6": {
+    "E6_plus_SL3_infinitesimal_generators": 86,
+    "canonical_untwisted_SM_minimum_duals": 2,
+    "character_certificate": "3 x 27 + 8 x 1",
+    "decomposition_after_SO10_branch": {
+      "chiral_16s": 3,
+      "extra_1s_outside_each_16": 11,
+      "vectorlike_10s": 3
+    },
+    "exact_e6_infinitesimal_generators": 78,
+    "open_gates": "These results hold for the selected fixed VEV and supplied operators. 89 remaining massless fields, full vectorlike decoupling, radiative mass stability, global anomalies and phenomenological mixing remain open.",
+    "perturbative_family_anomaly_net": 0,
+    "signed_matter_repaired_sextic_uneaten_chiral_modes": 89,
+    "source_audit": "The 78/86 exact source results were new in 43-commit audit; no claim of reproducing the high-cost 48870x6561 exact elimination in this lightweight test.",
+    "status": "FULL_NATIVE_E6_STABILIZER_SUPERSEDES_14_GENERATOR_GATE_BUT_89_MODES_SURVIVE"
+  },
+  "audit": {
+    "audited_head": "3b8f728dd45289e77e11bc3196576077d7eb4643",
+    "baseline": "9e2f9b9e859ee4d7b39555c0052886653a90e3be",
+    "bytes_read": 21938365,
+    "commits": 43,
+    "evidence_scope": "Machine-read and complete-byte checksum/JSON/AST audit, plus selected complete semantic document reviews; not 43 independent proof verifications.",
+    "final_changed_files": 112,
+    "revisions": 190,
+    "status": "ALL_43_FULL_COMMIT_MESSAGES_190_WHOLE_BLOBS_112_FINAL_FILES_CHECKED"
+  },
+  "claim_boundary": "Exact finite combinatorics, rational algebra and binomial statistics plus source certificate replay. No new measured data, 3+1 native continuum, anomaly-safe chiral lattice SM, complete GUT mass spectrum, experimental quantum computer or validated TOE.",
+  "cosmology": {
+    "S9_future_releases_observed_here": false,
+    "S9_preregistered_content_sha256": "2d0637669bd7c33b72200fb34accf8bc0d51cc706fd7be33a462e3bd2c9b1ea2",
+    "best_model_claim_not_significant": true,
+    "caveat": "Exact addition of already fitted/held-out source scorecard rows. Covariance/overlap and prior-truncation, multiple comparisons and nonlinear calibration are not independently estimated; these are not recalculated likelihoods or proof of dark energy dynamics.",
+    "fading_minus_CPL_combined_elpd": 0.3725630271914895,
+    "model_ordering_source_conditional": true,
+    "status": "POST_HALOFIT_CORRECTED_SCORECARD_INDEPENDENT_ARITHMETIC_NO_NEW_CHAIN",
+    "three_models": [
+      {
+        "DES_heldout_elpd": -0.6852720046285157,
+        "KiDS_heldout_elpd": -0.8448910664585298,
+        "all_heldout_elpd_total": 4.164094821050966,
+        "cosmic_shear_discrimination_magnitude": 1.5301630710870455,
+        "linear_expansion_elpd": 5.694257892138012,
+        "name": "fading_cneg"
+      },
+      {
+        "DES_heldout_elpd": -0.6816841132882558,
+        "KiDS_heldout_elpd": -1.0098851112852572,
+        "all_heldout_elpd_total": 3.791531793859477,
+        "cosmic_shear_discrimination_magnitude": 1.691569224573513,
+        "linear_expansion_elpd": 5.48310101843299,
+        "name": "CPL"
+      },
+      {
+        "DES_heldout_elpd": -0.7992779375728958,
+        "KiDS_heldout_elpd": -0.9791103891057134,
+        "all_heldout_elpd_total": 1.9745875924969738,
+        "cosmic_shear_discrimination_magnitude": 1.7783883266786091,
+        "linear_expansion_elpd": 3.752975919175583,
+        "name": "KLT"
+      }
+    ]
+  },
+  "frame": {
+    "all_configs": 65536,
+    "beta_energy_sweeps": [
+      {
+        "all_equal_probability": 0.01743615247423798,
+        "beta_J": 0.7,
+        "expectation_largest_frame_fraction": 0.5492310179073361,
+        "finite_Z": 229.40840910344323
+      },
+      {
+        "all_equal_probability": 0.620383210775026,
+        "beta_J": 1.5,
+        "expectation_largest_frame_fraction": 0.9005842091190583,
+        "finite_Z": 6.447627741251928
+      },
+      {
+        "all_equal_probability": 0.9841447557449814,
+        "beta_J": 2.5,
+        "expectation_largest_frame_fraction": 0.9974945750749844,
+        "finite_Z": 4.064442732280848
+      }
+    ],
+    "caveat": "Only eight sites and a classical global 4-state order field. Finite volume has no spontaneous breaking; temperature-dependent domain-wall physics, thermodynamic criticality, local gauge Elitzur constraint, Lorentz bounds and a fundamental frame metric remain unresolved.",
+    "exact_energy_histogram": {
+      "0": 4,
+      "10": 15264,
+      "11": 7200,
+      "12": 2652,
+      "3": 96,
+      "4": 180,
+      "5": 576,
+      "6": 2784,
+      "7": 5760,
+      "8": 13932,
+      "9": 17088
+    },
+    "exactly_degenerate_zero_energy_vacua": 4,
+    "finite_volume_symmetric_mean_occupancy_per_frame": 2.0,
+    "first_nonzero_interface_energy": 3,
+    "single_site_flip_states": 96,
+    "status": "EXACT_FOUR_FRAME_Q3_POTTS_CUBE_PARTITION_AND_DOMAIN_WALL_GAP",
+    "undirected_couplings": 12,
+    "vertices": 8
+  },
+  "lattice_fermions": {
+    "Weyl_orientation_signs": {
+      "-1": 4,
+      "1": 4
+    },
+    "Wilson_gap_by_pi_axis_count": {
+      "0": 0,
+      "1": 2,
+      "2": 4,
+      "3": 6
+    },
+    "corner_Dirac_zeros_without_Wilson": 8,
+    "one_Dirac_cone_remains_after_Wilson": true,
+    "original_chiral_symmetry_broken_by_Wilson_term": true,
+    "scope": "Three-spatial-dimensional naive free Dirac lattice; classic species doubling, Wilson resolution, not a new SM chiral spectrum, not an anomaly-free Weyl construction. Temporal and interacting-gauge continuum unprovided.",
+    "status": "STANDARD_NIELSEN_NINOMIYA_FINITE_LATTICE_NEGATIVE_CONTROL"
+  },
+  "magnetic": {
+    "commutator_area_unimodular_determinant": 1,
+    "critical_positive_short_weight": "5775/29857",
+    "determinant_lemma_verified_at_five_rational_alphas": true,
+    "dimensionality_gap_explicit": true,
+    "exact_ratio_short_over_target": "29857/5775",
+    "observed_three_spatial_Maxwell_transverse_branches": 2,
+    "original_unweighted_short_weight_obstructed": true,
+    "physically_missing": "A dimensional reduction/compactification and dynamical matter normalization: four spatial directions plus external time is 4+1, not 3+1. Existing native exact proof is source-derived, not independently regenerated 1287 face FFT here.",
+    "positive_H_sylvester_leading_minors": [
+      "680429/277200",
+      "21127/3300",
+      "41381/3465",
+      "383953/17325",
+      "80143/2475",
+      "250172/5775"
+    ],
+    "source_spatial_deck_rank": 4,
+    "source_transverse_branches_per_nonzero_momentum": 3,
+    "status": "INDEPENDENT_EXACT_RANK_ONE_COMPENSATION_AND_SPATIAL_DIMENSION_FIREWALL",
+    "supplied_short_weight": "1/16"
+  },
+  "optics": {
+    "accept_frame_lock_if_echo_returns_at_least": 12,
+    "caveat": "Exact finite binomial tails only, not a demonstrated heralding rate, detector efficiency, independent calibration of 0.30/0.90, coherent reference stability or real experimental samples.",
+    "design_alternative_locked_frame_p_return_lower": 0.9,
+    "design_null_hidden_frame_p_return_upper": 0.3,
+    "does_not_include_multiple_hypothesis_correction": true,
+    "exact_false_positive_probability": 0.0006559779592326597,
+    "exact_minimum_power": 0.9953325238756106,
+    "ideal_fully_random_nonzero_q0_return": 0.25,
+    "ideal_q2_duplicated_character_reference_return": 0.5,
+    "ideal_reference_locked_return": 1.0,
+    "minimum_accepted_heralded_events": 17,
+    "need_independent_loss_reference": true,
+    "nominal_familywise_single_test_alpha": 0.001,
+    "status": "EXACT_BINOMIAL_SAMPLE_SIZE_FOR_FRAME_ECHO_WITH_STATED_NUISANCE_ENVELOPE",
+    "target_power": 0.99
+  },
+  "prime_frames": {
+    "normalization_warning": "For p>3, projective isotropic directions have no canonical scalar representatives; the specific F_p tensor mixer uses chosen representatives. A purity-class split at fixed determinant Q exposes that the simple p=3 determinant-only census need not be a basis-free PGL2-covariant physical law.",
+    "phase_visibility": "All intensity tables remain uniform; differences require a phase-reference or two-copy purity experiment.",
+    "status": "EXACT_HIGHER_PRIME_NULL_FRAME_MIXTURE_PURITY_AND_GEOMETRIC_COVARIANCE_TEST",
+    "tested": [
+      {
+        "Q_residue_classes_with_nonuniform_purity": {
+          "0": 2
+        },
+        "all_frame_and_mixture_output_intensities": "1/27",
+        "counterexample_same_Q_different_purity": [
+          {
+            "Q": 0,
+            "first_input": [
+              0,
+              0,
+              1
+            ],
+            "first_purity": "4/16",
+            "second_input": [
+              0,
+              0,
+              0
+            ],
+            "second_purity": "16/16"
+          }
+        ],
+        "exact_purity_census_by_Q": {
+          "0": {
+            "16/16": 1,
+            "4/16": 8
+          },
+          "1": {
+            "4/16": 6
+          },
+          "2": {
+            "6/16": 12
+          }
+        },
+        "frames": 4,
+        "p": 3,
+        "points": 27
+      },
+      {
+        "Q_residue_classes_with_nonuniform_purity": {
+          "0": 2
+        },
+        "all_frame_and_mixture_output_intensities": "1/125",
+        "counterexample_same_Q_different_purity": [
+          {
+            "Q": 0,
+            "first_input": [
+              0,
+              0,
+              1
+            ],
+            "first_purity": "20/400",
+            "second_input": [
+              0,
+              0,
+              0
+            ],
+            "second_purity": "400/400"
+          }
+        ],
+        "exact_purity_census_by_Q": {
+          "0": {
+            "20/400": 24,
+            "400/400": 1
+          },
+          "1": {
+            "24/400": 30
+          },
+          "2": {
+            "44/400": 20
+          },
+          "3": {
+            "44/400": 20
+          },
+          "4": {
+            "24/400": 30
+          }
+        },
+        "frames": 20,
+        "p": 5,
+        "points": 125
+      },
+      {
+        "Q_residue_classes_with_nonuniform_purity": {
+          "0": 3,
+          "1": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 3
+        },
+        "all_frame_and_mixture_output_intensities": "1/343",
+        "counterexample_same_Q_different_purity": [
+          {
+            "Q": 0,
+            "first_input": [
+              0,
+              0,
+              1
+            ],
+            "first_purity": "56/3136",
+            "second_input": [
+              0,
+              0,
+              0
+            ],
+            "second_purity": "3136/3136"
+          },
+          {
+            "Q": 6,
+            "first_input": [
+              2,
+              0,
+              3
+            ],
+            "first_purity": "82/3136",
+            "second_input": [
+              0,
+              1,
+              0
+            ],
+            "second_purity": "90/3136"
+          },
+          {
+            "Q": 3,
+            "first_input": [
+              1,
+              0,
+              3
+            ],
+            "first_purity": "82/3136",
+            "second_input": [
+              0,
+              2,
+              0
+            ],
+            "second_purity": "90/3136"
+          },
+          {
+            "Q": 5,
+            "first_input": [
+              1,
+              0,
+              5
+            ],
+            "first_purity": "82/3136",
+            "second_input": [
+              0,
+              3,
+              0
+            ],
+            "second_purity": "90/3136"
+          },
+          {
+            "Q": 1,
+            "first_input": [
+              2,
+              0,
+              4
+            ],
+            "first_purity": "76/3136",
+            "second_input": [
+              3,
+              0,
+              5
+            ],
+            "second_purity": "82/3136"
+          },
+          {
+            "Q": 2,
+            "first_input": [
+              1,
+              0,
+              2
+            ],
+            "first_purity": "76/3136",
+            "second_input": [
+              2,
+              0,
+              1
+            ],
+            "second_purity": "82/3136"
+          },
+          {
+            "Q": 4,
+            "first_input": [
+              3,
+              0,
+              6
+            ],
+            "first_purity": "76/3136",
+            "second_input": [
+              1,
+              0,
+              4
+            ],
+            "second_purity": "82/3136"
+          }
+        ],
+        "exact_purity_census_by_Q": {
+          "0": {
+            "3136/3136": 1,
+            "56/3136": 6,
+            "72/3136": 42
+          },
+          "1": {
+            "76/3136": 14,
+            "78/3136": 14,
+            "82/3136": 14
+          },
+          "2": {
+            "76/3136": 14,
+            "78/3136": 14,
+            "82/3136": 14
+          },
+          "3": {
+            "82/3136": 28,
+            "86/3136": 14,
+            "90/3136": 14
+          },
+          "4": {
+            "76/3136": 14,
+            "78/3136": 14,
+            "82/3136": 14
+          },
+          "5": {
+            "82/3136": 28,
+            "86/3136": 14,
+            "90/3136": 14
+          },
+          "6": {
+            "82/3136": 28,
+            "86/3136": 14,
+            "90/3136": 14
+          }
+        },
+        "frames": 56,
+        "p": 7,
+        "points": 343
+      }
+    ]
+  },
+  "schema": "w33.20261109.audit_5plus3_independent_falsifiers.v1",
+  "triality": {
+    "E7_60480_candidate_canonical_scalene_triple_passes": true,
+    "E7_A7_singular_planes_only_two_not_three": true,
+    "cannot_infer_physical_CP_from_combinatorial_reflection": true,
+    "caveat": "General antiunitary no-go is elementary Wigner/complex-linearity mathematics. It is not new to the W33 paper and does not rule out implementing a fixed basis-label transposition as a unitary permutation, or probabilistic state-specific operations.",
+    "inner_product_conjugation_contradiction": true,
+    "native_double_six_kramers_reflections": 36,
+    "native_each_fixed_lines": 10,
+    "native_each_fixed_points": 0,
+    "source_triality_key_inventory": [
+      "pgsp",
+      "summary"
+    ],
+    "status": "NO_DETERMINISTIC_UNITARY_REALIZES_THE_ODD_ANTIUNITARY_TRIALITY_ON_ALL_STATES",
+    "two_basis_state_linear_extension_fidelity_to_conjugation": 0.0
+  }
+}
