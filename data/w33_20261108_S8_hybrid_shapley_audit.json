@@ -1,0 +1,132 @@
+{
+  "additive_identification_warning": "The one-factor power and geometry effects both use the fading baseline. Their sum is NOT generally the observed CPL-fading difference; the nonadditive interaction is nonzero.",
+  "algebra": "Let F=fading power+geometry, C=CPL power+geometry, P=CPL power with fading geometry, G=fading power with CPL geometry. Delta=C-F, interaction=C-P-G+F. Shapley_power=((P-F)+(C-G))/2, Shapley_geometry=((G-F)+(C-P))/2; their sum equals Delta exactly.",
+  "evidence_limit": "These are deterministic recombinations of two already computed fixed-background hybrid likelihoods. No new raw DES/KiDS fit, covariance estimation, independent priors, posterior sampling, causal intervention or calibrated evidence ratio is derived. The frozen S8 claim remains untouched.",
+  "frozen_claim": "At the frozen full-data Dovekie backgrounds (class_fit_dovekie.json), the next cosmic-shear releases will give Delta chi2(CPL - fading c<0) > 0, with the excess carried by the high-z tomographic block (both bins in the upper half) and/or the mixed block, not by the low-z block; both the matter power history P(k,z) and the geometry contribute (current split: KiDS power +3.2, geometry +2.0; DES power +2.2, geometry +1.9).",
+  "frozen_prereg": "analysis/toe_uv/prereg_highz.json",
+  "original_hybrid_implementation": "analysis/toe_uv/shear_hybrid.py",
+  "schema": "w33.20261108.S8_hybrid_shapley_audit.v1",
+  "sources": [
+    "shear_hybrid_des.json",
+    "shear_hybrid_kids.json"
+  ],
+  "status": "EXACT_FROZEN_HYBRID_ARITHMETIC_INTERACTION_AND_ORDER_INDEPENDENT_SHAPLEY",
+  "surveys": {
+    "des": {
+      "all": {
+        "CPL_minus_fading_total": 2.8844828876623865,
+        "chi2_CPL_C": 205.61507175681132,
+        "chi2_fading_F": 202.73058886914893,
+        "chi2_hybrid_CPL_power_fading_geometry": 204.93190564061123,
+        "chi2_hybrid_fading_power_CPL_geometry": 204.66199366181436,
+        "fractional_geometry_share": 0.4532131079800565,
+        "fractional_power_share": 0.5467868920199435,
+        "nonadditive_interaction": -1.2482386764653484,
+        "one_factor_geometry_at_fading_baseline": 1.9314047926654325,
+        "one_factor_power_at_fading_baseline": 2.2013167714623023,
+        "order_independent_shapley_geometry": 1.3072854544327583,
+        "order_independent_shapley_power": 1.5771974332296281
+      },
+      "high": {
+        "CPL_minus_fading_total": 4.943561676190413,
+        "chi2_CPL_C": 73.3254452265902,
+        "chi2_fading_F": 68.38188355039979,
+        "chi2_hybrid_CPL_power_fading_geometry": 72.77019221284965,
+        "chi2_hybrid_fading_power_CPL_geometry": 70.20886726418091,
+        "fractional_geometry_share": 0.24094336063360916,
+        "fractional_power_share": 0.7590566393663909,
+        "nonadditive_interaction": -1.271730700040564,
+        "one_factor_geometry_at_fading_baseline": 1.826983713781118,
+        "one_factor_power_at_fading_baseline": 4.388308662449859,
+        "order_independent_shapley_geometry": 1.191118363760836,
+        "order_independent_shapley_power": 3.752443312429577
+      },
+      "low": {
+        "CPL_minus_fading_total": -0.9505851571675876,
+        "chi2_CPL_C": 46.0137156652668,
+        "chi2_fading_F": 46.96430082243439,
+        "chi2_hybrid_CPL_power_fading_geometry": 46.01062733115152,
+        "chi2_hybrid_fading_power_CPL_geometry": 47.04030623633466,
+        "fractional_geometry_share": -0.04160266306451903,
+        "fractional_power_share": 1.041602663064519,
+        "nonadditive_interaction": -0.07291707978498607,
+        "one_factor_geometry_at_fading_baseline": 0.07600541390026905,
+        "one_factor_power_at_fading_baseline": -0.9536734912828706,
+        "order_independent_shapley_geometry": 0.03954687400777601,
+        "order_independent_shapley_power": -0.9901320311753636
+      },
+      "mixed": {
+        "CPL_minus_fading_total": -2.409250084894481,
+        "chi2_CPL_C": 85.28029905635128,
+        "chi2_fading_F": 87.68954914124576,
+        "chi2_hybrid_CPL_power_fading_geometry": 84.64944136757174,
+        "chi2_hybrid_fading_power_CPL_geometry": 88.70716654264768,
+        "fractional_geometry_share": -0.3421137349993416,
+        "fractional_power_share": 1.3421137349993417,
+        "nonadditive_interaction": -0.3867597126223785,
+        "one_factor_geometry_at_fading_baseline": 1.017617401401921,
+        "one_factor_power_at_fading_baseline": -3.0401077736740234,
+        "order_independent_shapley_geometry": 0.8242375450907318,
+        "order_independent_shapley_power": -3.2334876299852127
+      }
+    },
+    "kids": {
+      "all": {
+        "CPL_minus_fading_total": 4.503428628031344,
+        "chi2_CPL_C": 215.0116551441732,
+        "chi2_fading_F": 210.50822651614186,
+        "chi2_hybrid_CPL_power_fading_geometry": 213.70358478591396,
+        "chi2_hybrid_fading_power_CPL_geometry": 212.54711802275148,
+        "fractional_geometry_share": 0.37160152200879565,
+        "fractional_power_share": 0.6283984779912044,
+        "nonadditive_interaction": -0.7308211483503726,
+        "one_factor_geometry_at_fading_baseline": 2.038891506609616,
+        "one_factor_power_at_fading_baseline": 3.1953582697721004,
+        "order_independent_shapley_geometry": 1.6734809324344297,
+        "order_independent_shapley_power": 2.829947695596914
+      },
+      "high": {
+        "CPL_minus_fading_total": 1.0806061981750759,
+        "chi2_CPL_C": 60.78236792577157,
+        "chi2_fading_F": 59.70176172759649,
+        "chi2_hybrid_CPL_power_fading_geometry": 59.99398178869332,
+        "chi2_hybrid_fading_power_CPL_geometry": 61.30669556041148,
+        "fractional_geometry_share": 1.107396928656834,
+        "fractional_power_share": -0.10739692865683396,
+        "nonadditive_interaction": -0.8165476957367375,
+        "one_factor_geometry_at_fading_baseline": 1.6049338328149858,
+        "one_factor_power_at_fading_baseline": 0.2922200610968275,
+        "order_independent_shapley_geometry": 1.196659984946617,
+        "order_independent_shapley_power": -0.11605378677154121
+      },
+      "low": {
+        "CPL_minus_fading_total": 0.7698657441492003,
+        "chi2_CPL_C": 76.65296448574729,
+        "chi2_fading_F": 75.88309874159809,
+        "chi2_hybrid_CPL_power_fading_geometry": 76.05751961626942,
+        "chi2_hybrid_fading_power_CPL_geometry": 76.54321372368238,
+        "fractional_geometry_share": 0.8154407837367291,
+        "fractional_power_share": 0.18455921626327082,
+        "nonadditive_interaction": -0.06467011260642153,
+        "one_factor_geometry_at_fading_baseline": 0.6601149820842949,
+        "one_factor_power_at_fading_baseline": 0.17442087467132694,
+        "order_independent_shapley_geometry": 0.6277799257810841,
+        "order_independent_shapley_power": 0.14208581836811618
+      },
+      "mixed": {
+        "CPL_minus_fading_total": 1.8067139549942368,
+        "chi2_CPL_C": 81.50298750828085,
+        "chi2_fading_F": 79.69627355328662,
+        "chi2_hybrid_CPL_power_fading_geometry": 80.82740739240201,
+        "chi2_hybrid_fading_power_CPL_geometry": 80.55729519840821,
+        "fractional_geometry_share": 0.4252476593632505,
+        "fractional_power_share": 0.5747523406367495,
+        "nonadditive_interaction": -0.1854415292427518,
+        "one_factor_geometry_at_fading_baseline": 0.8610216451215962,
+        "one_factor_power_at_fading_baseline": 1.1311338391153924,
+        "order_independent_shapley_geometry": 0.7683008805002203,
+        "order_independent_shapley_power": 1.0384130744940165
+      }
+    }
+  }
+}

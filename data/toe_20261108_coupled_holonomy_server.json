@@ -1,0 +1,86 @@
+{
+  "runtime": "Actual functions.exec V8",
+  "bubbles": [
+    {
+      "a": 1.3,
+      "b": 2.7,
+      "nu": 0,
+      "integral": 0.03561253561253563,
+      "closed": 0.03561253561253561
+    },
+    {
+      "a": 1.3,
+      "b": 2.7,
+      "nu": 0.4,
+      "integral": 0.03525993625003524,
+      "closed": 0.03525993625003526
+    },
+    {
+      "a": 1.3,
+      "b": 2.7,
+      "nu": 1.2,
+      "integral": 0.03267205102067448,
+      "closed": 0.032672051020674865
+    }
+  ],
+  "bath": {
+    "G": [
+      [
+        2,
+        0.2
+      ],
+      [
+        0.2,
+        1.5
+      ]
+    ],
+    "K": [
+      [
+        0.8,
+        0.1
+      ],
+      [
+        0.1,
+        0.6
+      ]
+    ],
+    "D": [
+      [
+        0.820625,
+        0.09677083333333333
+      ],
+      [
+        0.09677083333333333,
+        0.6108506944444444
+      ]
+    ],
+    "p": [
+      2,
+      3,
+      4
+    ],
+    "W": [
+      [
+        0.2,
+        0.3,
+        -0.1
+      ],
+      [
+        0.1,
+        -0.2,
+        0.25
+      ]
+    ],
+    "poles": [
+      {
+        "s": 0.3864267483860866,
+        "second_coordinate_residue": 0.3706505462781156
+      },
+      {
+        "s": 0.4096985053878527,
+        "second_coordinate_residue": 0.3043456049078885
+      }
+    ]
+  },
+  "scope": "Independent compactified-frequency integral and generic positive two-channel oscillator-bath Schur check. Native27band spectrum remains the independent Python/RDC computation."
+}

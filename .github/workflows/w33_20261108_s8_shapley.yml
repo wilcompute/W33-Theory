@@ -1,0 +1,44 @@
+name: Frozen S8 DES KiDS nonlinear power geometry decomposition
+on:
+  push:
+    branches: [master]
+    paths:
+      - "analysis/w33_20261108_s8_hybrid_shapley_audit.py"
+      - "tests/test_w33_20261108_s8_hybrid_shapley_audit.py"
+      - "analysis/PASS20261108_S8_SHAPLEY_INTERACTION.md"
+      - ".github/workflows/w33_20261108_s8_shapley.yml"
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  frozen-two-factor-reconstruction:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install pytest
+        run: python -m pip install --disable-pip-version-check pytest
+      - name: Check exact eight block decompositions and S8 frozen values
+        run: python -m pytest -q tests/test_w33_20261108_s8_hybrid_shapley_audit.py
+      - name: Reproduce interaction and Shapley certificate
+        run: python analysis/w33_20261108_s8_hybrid_shapley_audit.py --out data/w33_20261108_S8_hybrid_shapley_audit.json
+      - name: Reject falsely additive interpretation
+        run: |
+          python - <<'PY'
+          import json
+          x=json.load(open('data/w33_20261108_S8_hybrid_shapley_audit.json'))
+          d=x['surveys']['des']['all'];k=x['surveys']['kids']['all']
+          assert abs(d['nonadditive_interaction']+1.2482386764653484)<1e-10
+          assert abs(k['nonadditive_interaction']+0.7308211483503726)<1e-10
+          assert d['order_independent_shapley_power']+d['order_independent_shapley_geometry']==d['CPL_minus_fading_total']
+          assert k['order_independent_shapley_power']+k['order_independent_shapley_geometry']==k['CPL_minus_fading_total']
+          print('PASS immutable S8 hybrid attribution with nonzero interaction')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: frozen-S8-shapley-interaction-audit
+          path: data/w33_20261108_S8_hybrid_shapley_audit.json
+          if-no-files-found: error

@@ -1,0 +1,45 @@
+name: Native H27 Wilson-orbit mass rank and integer charge lattice
+on:
+  push:
+    branches: [master]
+    paths:
+      - "analysis/w33_20261108_h27_symmetrized_wilson_rank.py"
+      - "tests/test_w33_20261108_h27_symmetrized_wilson_rank.py"
+      - "analysis/PASS20261108_H27_WILSON_ORBIT_MASS.md"
+      - ".github/workflows/w33_20261108_h27_wilson_mass.yml"
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  exact-native-wilson:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install exact arithmetic and tests
+        run: python -m pip install --disable-pip-version-check sympy pytest
+      - name: Verify native 27-action Wilson orbit and Smith form
+        run: python -m pytest -q tests/test_w33_20261108_h27_symmetrized_wilson_rank.py
+      - name: Regenerate exact mass spectrum JSON
+        run: python analysis/w33_20261108_h27_symmetrized_wilson_rank.py --out data/w33_20261108_h27_symmetrized_wilson_rank.json
+      - name: Assert exact H27 symmetry and selected compact Wilson mass restrictions
+        run: |
+          python - <<'PY'
+          import json
+          x=json.load(open('data/w33_20261108_h27_symmetrized_wilson_rank.json'))
+          rows=x['four_coordinate_orbits']
+          assert [z['symmetry_averaged_mass_hessian_rank'] for z in rows]==[2,2,4,4]
+          assert rows[3]['generalized_mass_squared_eigenvalues']=={'1/9':2,'2/27':2}
+          assert rows[3]['wilson_charge_smith_normal_form']==[1,1,1,1]
+          assert x['distinct_matrices_in_four_real_dimensional_representation']==9
+          assert x['nonzero_H27_invariant_quadratic_mass_rank_choices']==[2,4]
+          print('PASS native four-holonomy rank-even Wilson mass theorem')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: native-h27-wilson-orbit-rank-certificate
+          path: data/w33_20261108_h27_symmetrized_wilson_rank.json
+          if-no-files-found: error

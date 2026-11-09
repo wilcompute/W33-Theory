@@ -1,0 +1,92 @@
+{
+  "status": "PASS_NATIVE_COUPLED_HOLONOMY_KERNEL_AND44_CONTROLS_NOT_TOE",
+  "utc": "2026-11-08T22:31:47.891345+00:00",
+  "seconds": 63.694655300001614,
+  "executions": [
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "analysis/toe_20261108_coupled_holonomy_response.py"
+      ],
+      "exit_code": 0,
+      "stdout": "[{\"sizes\": [2, 2, 2, 2], \"static\": [0.0008764979416190584, 0.0008764979416190651, 0.000902283193220852, 0.000902283193220855], \"theta4weights\": [0.11365512647532959, 0.2863448735245725, 0.1578450126206267, 0.442154987379471], \"dynamic\": [-0.00016540109369145295, -0.00016540109356089072, -0.000154030055484089, -0.00015403005533587422]}, {\"sizes\": [3, 3, 3, 2], \"static\": [9.96660332462911e-05, 0.00010784586038842798, 0.00011305833130037437, 0.00030467661802120705], \"theta4weights\": [4.789020692662181e-05, 7.1663853230649055e-31, 0.00023047045942317055, 0.9997216393336505], \"dynamic\": [-0.0001770534555046721, -0.00018085758976249533, -0.00016901392852997077, -0.000164573996553119]}, {\"sizes\": [4, 4, 4, 2], \"static\": [1.4254393707376856e-05, 1.625381734092419e-05, 1.756889932128439e-05, 0.00026235639027041656], \"theta4weights\": [4.79480612653299e-08, 3.8776358204495843e-28, 9.736199238019916e-19, 0.9999999520519384], \"dynamic\": [-0.00018106445352339406, -0.0001852779609158306, -0.00017345691563852572, -0.0001645776544282329]}, {\"sizes\": [6, 6, 6, 2], \"static\": [3.7777682207282117e-07, 4.923059576792642e-07, 5.517155848323589e-07, 0.0002565421213853174], \"theta4weights\": [8.665005837452423e-11, 7.076655795566074e-30, 5.962625593752892e-26, 0.9999999999133504], \"dynamic\": [-0.00018228951387588843, -0.00018670689905297966, -0.00017498568574958462, -0.0001645713620697098]}, {\"sizes\": [8, 8, 8, 2], \"static\": [1.146932966058555e-08, 1.7555106657081757e-08, 2.0276494816537893e-08, 0.00025641541006773884], \"theta4weights\": [6.661889785622873e-14, 2.6397611782002896e-27, 5.145309925526632e-29, 0.9999999999999337], \"dynamic\": [-0.0001823536387619562, -0.00018679103260810237, -0.00017507616811751614, -0.00016457153849092077]}]\n",
+      "stderr": "",
+      "seconds": 40.0514647999953
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "-m",
+        "pytest",
+        "--noconftest",
+        "-q",
+        "tests/test_toe_20261108_coupled_holonomy_response.py",
+        "tests/test_toe_20261108_native_scalar_wilson.py"
+      ],
+      "exit_code": 0,
+      "stdout": "............................................                             [100%]\n44 passed in 16.29s\n",
+      "stderr": "",
+      "seconds": 21.63632299999881
+    },
+    {
+      "command": [
+        "C:\\Users\\wiljd\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "analysis/toe_20261108_holonomy_doublet_symmetry.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"N2_EQUAL_TORUS_NATIVE_H27_STATIC_DOUBLET_SYMMETRY_AND_EXACT_OBSERVABLE_WEIGHTS\",\n  \"exact_projectors\": [\n    [\n      [\n        \"1\",\n        \"0\",\n        \"0\",\n        \"0\"\n      ],\n      [\n        \"0\",\n        \"1\",\n        \"0\",\n        \"0\"\n      ],\n      [\n        \"2/3\",\n        \"1/3\",\n        \"0\",\n        \"0\"\n      ],\n      [\n        \"1/3\",\n        \"2/3\",\n        \"0\",\n        \"0\"\n      ]\n    ],\n    [\n      [\n        \"0\",\n        \"0\",\n        \"0\",\n        \"0\"\n      ],\n      [\n        \"0\",\n        \"0\",\n        \"0\",\n        \"0\"\n      ],\n      [\n        \"-2/3\",\n        \"-1/3\",\n        \"1\",\n        \"0\"\n      ],\n      [\n        \"-1/3\",\n        \"-2/3\",\n        \"0\",\n        \"1\"\n      ]\n    ]\n  ],\n  \"real_character_planes\": [\n    [\n      1,\n      0\n    ],\n    [\n      0,\n      1\n    ]\n  ],\n  \"exact_theta4_plane_weights\": [\n    \"2/5\",\n    \"3/5\"\n  ],\n  \"squared_frequencies_over_g2\": [\n    0.0008764979416190619,\n    0.0009022831932208534\n  ],\n  \"numeric_invariance_residuals\": {\n    \"K\": 7.006960088749519e-17,\n    \"G\": 0.0,\n    \"Z0\": 3.941013378843582e-18\n  },\n  \"reconstruction_residual\": 2.335826709475773e-17,\n  \"proof\": \"Prior native H27 action has two inequivalent real2D C3 character planes. On the equal-period finite torus the invariant symmetric Hessian and electric metric restrict to scalars relative to one another on each plane. Thus static frequencies are doublets; projection of the physical fourth holonomy through exact G gives the displayed rational weights. These are representation-sector weights, not generations or particle spins.\",\n  \"prior_owner\": \"Pass11991 exact native character-plane/deck action and invariant metric dimension2. This is an application to the new finite holonomy response, not new group classification.\",\n  \"input_raw_sha256\": {\n    \"data/w33_pass11991_native_four_period_cover.json\": \"d8fcc26b167d858876cbd8da8d8c434c8a50fea70974c37c99ec574814572d46\",\n    \"data/toe_20261108_coupled_holonomy_response.json\": \"dd909766a1cd6354d92c62b30111841129f4b3ea30ec3b08bc2dcfc379167f2b\"\n  },\n  \"source_raw_sha256\": \"b6d9c72ab371927f21351401a50cb74e22187994e2abb3809bde548cb7680394\"\n}\n",
+      "stderr": "",
+      "seconds": 1.9999406000133604
+    }
+  ],
+  "selected_source_and_input_raw_sha256": {
+    "analysis/toe_20261108_coupled_holonomy_response.py": "455ce86c532191bca600bb6533828f20fbdbc6d79a2c451391484c6a28eee664",
+    "analysis/toe_20261108_coupled_holonomy_server.js": "27e19939db944d23a03a7f89846c3078aff1c6f6bda401eff8468609d838dd6d",
+    "tests/test_toe_20261108_coupled_holonomy_response.py": "072ef10715f6a8ced7838c107a0144a5ee191b732cffad1bae6cb62776052cc1",
+    "data/toe_20261108_coupled_holonomy_server.json": "25eda0a2882b2a4176cee396af37d47b83bb2c5381da5e0da0a419d69c524432",
+    "analysis/toe_20261108_native_scalar_wilson.py": "7a224a382dd86327f4b7fe5b2ae7f306560977bec5e1f19cc5165b4bf16148e4",
+    "data/w33_pass11991_native_four_period_cover.json": "d8fcc26b167d858876cbd8da8d8c434c8a50fea70974c37c99ec574814572d46",
+    "analysis/w33_pass12189_12193_five_bridges.py": "fab9b39b71e189649dbcdf07c1a46e9967e3afb879488eadaac7d4ff8e2ce4ce",
+    "analysis/toe_20261108_holonomy_doublet_symmetry.py": "b6d9c72ab371927f21351401a50cb74e22187994e2abb3809bde548cb7680394"
+  },
+  "selected_inputs_unchanged_during_run": true,
+  "result_raw_sha256": "dd909766a1cd6354d92c62b30111841129f4b3ea30ec3b08bc2dcfc379167f2b",
+  "earlier_actual_RDC": {
+    "direct_root_prototype": {
+      "pid": 30540,
+      "exit_code": 0,
+      "seconds": 1577.12,
+      "scope": "Prior prototype before bounded-resolvent acceleration, same physical kernel. No executed-source hash inferred from end-of-run file."
+    },
+    "optimized_constructor": {
+      "pid": 21684,
+      "exit_code": 0,
+      "seconds": 9.49
+    },
+    "combined44": {
+      "pid": 23028,
+      "exit_code": 0,
+      "seconds": 32.53,
+      "stdout": "44 passed in26.63s"
+    }
+  },
+  "server": "Actual functions.exec V8 independently integrated frequency bubble and solved generic2channel3bath Schur roots/residues; full native graph calculation is Python/RDC. Not a separate server replay of the native27band spectrum.",
+  "precision_control": {
+    "method": "70digit mpmath determinant roots of generic2channel Schur kernel",
+    "s": [
+      "0.386426748386086629793870188909988493038431682",
+      "0.409698505387852681057320249642479116682364014"
+    ],
+    "residue": [
+      "0.370650546278113809805098997331678124634773102",
+      "0.304345604907889035490571326495254987263373066"
+    ],
+    "server_residue_errors": [
+      1.80147105e-15,
+      5.570718731e-16
+    ],
+    "prior_test_failure": "Dense generalized-eigenvector residue differed4.03e-14; first2e-14 comparison failed although server agreed with70digit reference. Dense comparison budget now1e-12; original failure retained."
+  },
+  "scope": "22new controls plus22prior full-band scalar controls. Four holonomy coordinates, tree electric inertia plus retained scalar-one-loop homogeneous frequency kernel, conditional subthreshold numerical poles/residues and geometric moment remainder. Missing higher gauge loops, complete temporal/local Gauss reduction, charged fermion inventory, radius dynamics, physical units and TOE.",
+  "symmetry_result_raw_sha256": "5770757943447b43cd99ca6cc9c8257d860300733562c21da3c25ca3755ec6f7"
+}
