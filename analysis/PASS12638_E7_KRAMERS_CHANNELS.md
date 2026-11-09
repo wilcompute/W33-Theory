@@ -62,3 +62,25 @@ min F = min over unit v of Σ_e(|⟨e|v⟩|² − 1/d)². A value above 0 means 
 - **No 4-set of disjoint W(3,3) lines is strongly unextendible.** There are 5 PSp(4,3)-orbits of sizes 270, 6480, 540, 1080 and 1080, covering subsets of spreads and of pentads, and every one has min F ≈ 10⁻¹⁸. **The pentads are the smallest strongly unextendible Pauli-class MUB sets in d = 9.**
 - On the qubit rungs, the smallest weakly unextendible sets also appear strongly unextendible, with minima of exactly 1/d. The qutrit pentad's 0.14711 is not 1/9, so no closed form is claimed.
 - Whether Mandayam et al.'s d = 4 three-sets were already known to be strongly unextendible was not checked.
+
+## Addendum: the certificate is in, plus the rungs, time-reversal channels, and the ladder note
+
+**Item 1 is proved** (`w33_strong_umub_hermitian_sos.py`). F(v) = (v⊗v)† M (v⊗v) is a Hermitian (2,2)-form, and on Sym²(C⁹) its representing operator is unique. The best Hermitian-SOS bound is therefore δ* = λ_min(P_S M P_S).
+- **All 432 pentads: δ* = 1/9**, so F(v) ≥ |v|⁴/9 > 0 and **every pentad is strongly unextendible**.
+- **All 135 size-8 sets: δ* = 4/9**, equal to their numerical minimum, so the bound is tight.
+- Controls (4 spread bases; the pentad's 4-subsets) give −4/9, as they must for extendible sets.
+- Rigour: the basis vectors are exact to 2×10⁻¹⁴, giving a crude Weyl margin of 3.9×10⁻⁹. A fully exact version would rebuild H with exact stabiliser states over Q(ω).
+- Pass 12637's numerical minimum 0.14711 is consistent with this (≥ 1/9). The general SOS attempt in `w33_strong_umub_sos.py` was stopped as too large; it is superseded.
+
+**Item 3: the rungs** (`w33_sos_rungs.py`). δ*·d is 1 for the two-qubit 3-sets (tight: min F = 1/4, so **proved strongly unextendible**) and 1 for the two-qutrit pentads (not tight). For the three-qubit 5-sets δ* = −5/8: the Hermitian relaxation fails, and their strong unextendibility (numerical min 1/8) needs a higher-degree certificate.
+
+**Item 2: E8.** No region count for the real moduli of degree-1 del Pezzo surfaces exists in the literature found, so no test is possible. A method is suggested: sign patterns over W(E8) chambers, as the other track did for E6.
+
+**Item 4: time reversal on the channels** (`w33_kramers_channels.py`, all 216 codewords).
+- The left and right pezzotopes over a codeword share no facets.
+- Their 30 channels are the codeword's 10 contexts plus **exactly the 20 roots not orthogonal to α**, i.e. the roots θ = s_α moves.
+- θ maps the left channels onto the right ones.
+- The θ-fixed roots (α and its orthogonal A5, 16 in all) are never channels.
+- The canonical-form ratio of a chiral pair is the other track's (3dd4b78cb).
+
+**Item 5: the ladder note** is `analysis/NOTE_POSITIVE_GEOMETRY_QUDIT_LADDER.md`. Prior art for the E7 root ↔ three-qubit dictionary: Cerchiai and van Geemen (arXiv:1003.4255) and Lévay–Saniga–Vrana. The region-level statement is this pass's.
