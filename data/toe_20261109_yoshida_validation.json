@@ -13,10 +13,11 @@
   ],
   "artifact_raw_sha256": {
     "analysis/toe_20261109_yoshida_cone_census.py": "3cfde35fec6403b62e9c2deea63eb53fa29b96b68be2d92bd202f4252e3d7bf8",
-    "analysis/2026-11-09_yoshida_integral_fibers_and_chirality.md": "76464e4186d79252e816ce0c20e66f05cf93cff253d4ab37a30bdf9c1c21a56e",
+    "analysis/2026-11-09_yoshida_integral_fibers_and_chirality.md": "7191dab5449743577229b8af8cbdfdbd63a3e5eb48860b642969a6fdd88b56cd",
     "data/toe_20261109_yoshida_cone_census.json": "72b63dfbb71242a67d31ba72361b38efd86500d8ce0020b4afe66f17c6a5970b",
     "analysis/toe_20261109_real_yoshida_pezzotope_labels.py": "80c5a3e1881fac90cd98871962bff8a57e741b074241ad75a90394687bf67ae3",
-    "data/toe_20261109_real_yoshida_pezzotope_labels.json": "1d08a8ed3c698e5b3790354b0937c7fc14d921aed751bb5f9a5d7c8e6556f2dd"
+    "data/toe_20261109_real_yoshida_pezzotope_labels.json": "1d08a8ed3c698e5b3790354b0937c7fc14d921aed751bb5f9a5d7c8e6556f2dd",
+    "tests/test_toe_20261109_yoshida_partner_code.py": "a75ccded1a58dcd34ec6663182630216eb3ff8fdadb446488efcd66a1cd6175e"
   },
   "execution": {
     "producer": "python analysis/toe_20261109_yoshida_cone_census.py",
@@ -942,7 +943,8 @@
     "https://arxiv.org/abs/1402.5651",
     "https://arxiv.org/abs/math/0411260",
     "https://ananddeopurkar.org/papers/lines_on_tropical_cubics.pdf",
-    "https://mathweb.ucsd.edu/~ssam/supp/univ_kummer/"
+    "https://mathweb.ucsd.edu/~ssam/supp/univ_kummer/",
+    "https://pure.uvt.nl/ws/files/327256/fulltext.pdf"
   ],
   "real_chamber_execution": {
     "exit_code": 0,
@@ -960,5 +962,22 @@
     "exit_code": 0,
     "result": "2 passed in 163.73s"
   },
-  "continuity_decision": "1794241028699-6i8sry"
+  "continuity_decision": "1794241028699-6i8sry",
+  "chiral_transition_code": {
+    "prior_owner": "Haemers, Peeters and van Rijckevorsel and repo Passes 4725\u20134726",
+    "equality": "The partner sign differences and the common-sign word span exactly the binary cusp-adjacency row code in the same coordinates.",
+    "distinct_projective_differences": 216,
+    "difference_weight": 20,
+    "binary_codewords": 1024,
+    "weight_enumerator": {
+      "0": 1,
+      "12": 40,
+      "16": 135,
+      "20": 672,
+      "24": 135,
+      "28": 40,
+      "40": 1
+    },
+    "replay": "1 passed in 20.65s"
+  }
 }
