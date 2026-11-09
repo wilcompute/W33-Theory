@@ -1,0 +1,12 @@
+{
+ "sentinel_swaps_preserve_all_sectors": true,
+ "per_swap": [
+  true,
+  true,
+  true,
+  true,
+  true
+ ],
+ "trace_transposition": 2.999999999999999,
+ "trace_3cycle": 1.9999999999999987
+}
