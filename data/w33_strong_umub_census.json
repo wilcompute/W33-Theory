@@ -1,0 +1,51 @@
+{
+ "d4": {
+  "sizes": {
+   "5": 6,
+   "3": 20
+  },
+  "min_unextendible": 0.24999999999999908,
+  "control_spread_subset": 3.9250407628536365e-18
+ },
+ "d8": {
+  "sizes": {
+   "9": 960,
+   "5": 24192
+  },
+  "min_size5": 0.12499999999999911,
+  "control_spread5": 8.121569990938121e-18
+ },
+ "d9_foursets": [
+  {
+   "orbit": 270,
+   "in_pentad": false,
+   "in_spread": true,
+   "minF": 5.56589097043039e-18
+  },
+  {
+   "orbit": 6480,
+   "in_pentad": false,
+   "in_spread": true,
+   "minF": 2.1469920441634366e-18
+  },
+  {
+   "orbit": 540,
+   "in_pentad": false,
+   "in_spread": true,
+   "minF": 6.4924910773333485e-18
+  },
+  {
+   "orbit": 1080,
+   "in_pentad": true,
+   "in_spread": false,
+   "minF": 7.965993459258411e-18
+  },
+  {
+   "orbit": 1080,
+   "in_pentad": true,
+   "in_spread": false,
+   "minF": 4.970859388992212e-18
+  }
+ ],
+ "d9_strongly_unextendible_4set_exists": false
+}

@@ -1,0 +1,9 @@
+{
+ "stats": {
+  "('alpha_in_D4', True, 'fixed_frames', 1, 'fixes_own_frame', True)": 540,
+  "('alpha_in_D4', False, 'preserves', False)": 1080
+ },
+ "D4_per_root": [
+  15
+ ]
+}

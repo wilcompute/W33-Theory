@@ -1,0 +1,20 @@
+{
+ "control_4_spread_bases_feasible": true,
+ "control_pentad_4subsets_feasible": [
+  true,
+  true,
+  true,
+  true,
+  true
+ ],
+ "n_pentads": 432,
+ "lp_infeasible": 0,
+ "exact_farkas_certificates": 0,
+ "pure_identity_err": 2.0807427796300308e-15,
+ "mixed_identity_err": 4.7847500183171645,
+ "zero_forcing": {
+  "control_4_spread": "('alive', 1)",
+  "control_pentad_4subset": "('alive', 1)",
+  "pentads": "Counter({'alive': 24})"
+ }
+}
