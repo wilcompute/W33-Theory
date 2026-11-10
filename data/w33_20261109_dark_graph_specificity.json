@@ -1,0 +1,30 @@
+{
+  "connected_four_consecutive_cyclic_hopping": {
+    "degree_each": 4,
+    "incidences": 160,
+    "rank": 37,
+    "zero_modes_of_80_chiral_walk": 6
+  },
+  "native_W33": {
+    "degree_each": 4,
+    "incidence_rank": 25,
+    "incidences": 160,
+    "lines": 40,
+    "points": 40,
+    "zero_modes_of_80_chiral_walk": 30
+  },
+  "random_configuration_sampler": {
+    "equal_or_exceed_W33_flat_band_count": 0,
+    "incidence_rank_max": 40,
+    "incidence_rank_min": 40,
+    "rank_histogram": {
+      "40": 128
+    },
+    "sampled_graphs": 128,
+    "seed": 202611092111,
+    "type": "four independent random perfect matchings conditioned on no multiedges and connectedness; not uniform on all connected regular bipartite graphs"
+  },
+  "scientific_interpretation": "W33's large 15+15 flat sector depends on its highly constrained geometry and not solely having 40+40 vertices with degree four. This does not prove W33 is uniquely identifiable by the 30-mode spectrum; many other nonisomorphic graphs can share spectral features. A useful lab falsifier must measure more than one bulk number, e.g. the 40-state Gram signature and gauge-flux robustness.",
+  "scope": "Seeded graph controls, not systematic enumeration of nonisomorphic 4-regular graphs. No claim of uniqueness, phase continuum, gravity, SM masses, or experimental observation.",
+  "status": "PASS_W33_DARK_MODES_NOT_EXPLAINED_BY_DEGREE_REGULARITY"
+}
