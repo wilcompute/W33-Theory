@@ -1,0 +1,224 @@
+{
+  "contexts_with_dense_better_than_forest": 10,
+  "mean_forest_over_dense_local_trace_CRLB": 1.3693412164929568,
+  "model": "known K_cal with ONLY input phase offsets; 9 input basis probes plus 2 real/imag coherent probes per edge; every click and no-click outcome contributes Fisher information",
+  "novelty": "Repository-specific optimality diagnostic for observable phase-support graph; experimental design criterion is standard classical Fisher/A-optimal design.",
+  "per_setting": [
+    {
+      "all_observable_pair_edges": 36,
+      "connected_components": 1,
+      "context": 0,
+      "dense": {
+        "local_Fisher_smallest_eigenvalue_per_total_launch": 0.02571071569239408,
+        "phase_parameter_count": 8,
+        "phase_trace_Cramer_Rao_per_total_launch": 70.42564630920754,
+        "phase_worst_axis_variance_per_total_launch": 38.894288745755404,
+        "probe_count": 81
+      },
+      "forest": {
+        "local_Fisher_smallest_eigenvalue_per_total_launch": 0.010960636281719598,
+        "phase_parameter_count": 8,
+        "phase_trace_Cramer_Rao_per_total_launch": 170.94674988851582,
+        "phase_worst_axis_variance_per_total_launch": 91.2355792398497,
+        "probe_count": 25
+      },
+      "forest_edge_count": 8,
+      "forest_trace_variance_over_dense": 2.427336614533363
+    },
+    {
+      "all_observable_pair_edges": 36,
+      "connected_components": 1,
+      "context": 1,
+      "dense": {
+        "local_Fisher_smallest_eigenvalue_per_total_launch": 0.18001654823842028,
+        "phase_parameter_count": 8,
+        "phase_trace_Cramer_Rao_per_total_launch": 36.39530813435061,
+        "phase_worst_axis_variance_per_total_launch": 5.555044854407299,
+        "probe_count": 81
+      },
+      "forest": {
+        "local_Fisher_smallest_eigenvalue_per_total_launch": 0.12481813340575132,
+        "phase_parameter_count": 8,
+        "phase_trace_Cramer_Rao_per_total_launch": 45.0473679746195,
+        "phase_worst_axis_variance_per_total_launch": 8.011656421341119,
+        "probe_count": 25
+      },
+      "forest_edge_count": 8,
+      "forest_trace_variance_over_dense": 1.237724593739678
+    },
+    {
+      "all_observable_pair_edges": 9,
+      "connected_components": 3,
+      "context": 2,
+      "dense": {
+        "local_Fisher_smallest_eigenvalue_per_total_launch": 0.024193245647168047,
+        "phase_parameter_count": 6,
+        "phase_trace_Cramer_Rao_per_total_launch": 131.86200994917897,
+        "phase_worst_axis_variance_per_total_launch": 41.33385055415479,
+        "probe_count": 27
+      },
+      "forest": {
+        "local_Fisher_smallest_eigenvalue_per_total_launch": 0.015321195949301222,
+        "phase_parameter_count": 6,
+        "phase_trace_Cramer_Rao_per_total_launch": 170.69599494115974,
+        "phase_worst_axis_variance_per_total_launch": 65.26905623484363,
+        "probe_count": 21
+      },
+      "forest_edge_count": 6,
+      "forest_trace_variance_over_dense": 1.2945047251057966
+    },
+    {
+      "all_observable_pair_edges": 36,
+      "connected_components": 1,
+      "context": 3,
+      "dense": {
+        "local_Fisher_smallest_eigenvalue_per_total_launch": 0.1807747643350068,
+        "phase_parameter_count": 8,
+        "phase_trace_Cramer_Rao_per_total_launch": 37.466973279526606,
+        "phase_worst_axis_variance_per_total_launch": 5.531745560164734,
+        "probe_count": 81
+      },
+      "forest": {
+        "local_Fisher_smallest_eigenvalue_per_total_launch": 0.12717207668553884,
+        "phase_parameter_count": 8,
+        "phase_trace_Cramer_Rao_per_total_launch": 42.59142186040254,
+        "phase_worst_axis_variance_per_total_launch": 7.863361408123591,
+        "probe_count": 25
+      },
+      "forest_edge_count": 8,
+      "forest_trace_variance_over_dense": 1.1367724193423474
+    },
+    {
+      "all_observable_pair_edges": 36,
+      "connected_components": 1,
+      "context": 4,
+      "dense": {
+        "local_Fisher_smallest_eigenvalue_per_total_launch": 0.18473329341495376,
+        "phase_parameter_count": 8,
+        "phase_trace_Cramer_Rao_per_total_launch": 36.84344394783259,
+        "phase_worst_axis_variance_per_total_launch": 5.413209397797983,
+        "probe_count": 81
+      },
+      "forest": {
+        "local_Fisher_smallest_eigenvalue_per_total_launch": 0.11742636114388676,
+        "phase_parameter_count": 8,
+        "phase_trace_Cramer_Rao_per_total_launch": 45.757809943292145,
+        "phase_worst_axis_variance_per_total_launch": 8.515975376045793,
+        "probe_count": 25
+      },
+      "forest_edge_count": 8,
+      "forest_trace_variance_over_dense": 1.2419525712113557
+    },
+    {
+      "all_observable_pair_edges": 9,
+      "connected_components": 3,
+      "context": 5,
+      "dense": {
+        "local_Fisher_smallest_eigenvalue_per_total_launch": 0.02415313367979814,
+        "phase_parameter_count": 6,
+        "phase_trace_Cramer_Rao_per_total_launch": 152.015819761755,
+        "phase_worst_axis_variance_per_total_launch": 41.40249514854494,
+        "probe_count": 27
+      },
+      "forest": {
+        "local_Fisher_smallest_eigenvalue_per_total_launch": 0.01491264676042602,
+        "phase_parameter_count": 6,
+        "phase_trace_Cramer_Rao_per_total_launch": 236.79465492763978,
+        "phase_worst_axis_variance_per_total_launch": 67.05717744577169,
+        "probe_count": 21
+      },
+      "forest_edge_count": 6,
+      "forest_trace_variance_over_dense": 1.5576974508229038
+    },
+    {
+      "all_observable_pair_edges": 36,
+      "connected_components": 1,
+      "context": 6,
+      "dense": {
+        "local_Fisher_smallest_eigenvalue_per_total_launch": 0.19219023742219216,
+        "phase_parameter_count": 8,
+        "phase_trace_Cramer_Rao_per_total_launch": 36.500748222085306,
+        "phase_worst_axis_variance_per_total_launch": 5.203177921068171,
+        "probe_count": 81
+      },
+      "forest": {
+        "local_Fisher_smallest_eigenvalue_per_total_launch": 0.12486089726948756,
+        "phase_parameter_count": 8,
+        "phase_trace_Cramer_Rao_per_total_launch": 41.03514071895686,
+        "phase_worst_axis_variance_per_total_launch": 8.008912492769436,
+        "probe_count": 25
+      },
+      "forest_edge_count": 8,
+      "forest_trace_variance_over_dense": 1.1242273848547564
+    },
+    {
+      "all_observable_pair_edges": 36,
+      "connected_components": 1,
+      "context": 7,
+      "dense": {
+        "local_Fisher_smallest_eigenvalue_per_total_launch": 0.19165552493994945,
+        "phase_parameter_count": 8,
+        "phase_trace_Cramer_Rao_per_total_launch": 36.878219476542235,
+        "phase_worst_axis_variance_per_total_launch": 5.217694612838975,
+        "probe_count": 81
+      },
+      "forest": {
+        "local_Fisher_smallest_eigenvalue_per_total_launch": 0.11450368676913607,
+        "phase_parameter_count": 8,
+        "phase_trace_Cramer_Rao_per_total_launch": 44.01835245798774,
+        "phase_worst_axis_variance_per_total_launch": 8.733343250477288,
+        "probe_count": 25
+      },
+      "forest_edge_count": 8,
+      "forest_trace_variance_over_dense": 1.193613820916361
+    },
+    {
+      "all_observable_pair_edges": 36,
+      "connected_components": 1,
+      "context": 8,
+      "dense": {
+        "local_Fisher_smallest_eigenvalue_per_total_launch": 0.4604318754817132,
+        "phase_parameter_count": 8,
+        "phase_trace_Cramer_Rao_per_total_launch": 10.176600290510622,
+        "phase_worst_axis_variance_per_total_launch": 2.1718739584521156,
+        "probe_count": 81
+      },
+      "forest": {
+        "local_Fisher_smallest_eigenvalue_per_total_launch": 0.28766480363154434,
+        "phase_parameter_count": 8,
+        "phase_trace_Cramer_Rao_per_total_launch": 11.637311536229419,
+        "phase_worst_axis_variance_per_total_launch": 3.476268168283982,
+        "probe_count": 25
+      },
+      "forest_edge_count": 8,
+      "forest_trace_variance_over_dense": 1.1435362698759886
+    },
+    {
+      "all_observable_pair_edges": 36,
+      "connected_components": 1,
+      "context": 9,
+      "dense": {
+        "local_Fisher_smallest_eigenvalue_per_total_launch": 0.4183016366412009,
+        "phase_parameter_count": 8,
+        "phase_trace_Cramer_Rao_per_total_launch": 10.971348302459145,
+        "phase_worst_axis_variance_per_total_launch": 2.390619381816457,
+        "probe_count": 81
+      },
+      "forest": {
+        "local_Fisher_smallest_eigenvalue_per_total_launch": 0.2548245137087792,
+        "phase_parameter_count": 8,
+        "phase_trace_Cramer_Rao_per_total_launch": 14.658229464892786,
+        "phase_worst_axis_variance_per_total_launch": 3.924269237075162,
+        "probe_count": 25
+      },
+      "forest_edge_count": 8,
+      "forest_trace_variance_over_dense": 1.3360463145270172
+    }
+  ],
+  "scope": "Asymptotic local CRLB under exact known K and phase-only stationary calibration. Unlike finite-shot simultaneous coverage certificates, does not yield a rigorous effect-norm confidence bound; overcomplete calibration may improve phase covariance but costs more probe configurations and does not automatically beat the 81-probe generic uncertainty certificate.",
+  "status": "PASS_AOPTICAL_POVM_PHASE_INFORMATION_FOREST_VS_REDUNDANCY",
+  "two_methods": [
+    "maximum-overlap spanning forest of observable edges",
+    "all observable input pair-interference edges"
+  ]
+}

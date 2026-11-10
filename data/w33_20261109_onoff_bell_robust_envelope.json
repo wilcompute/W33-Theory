@@ -1,0 +1,166 @@
+{
+  "baseline_optimized_nominal_CHSH": 2.021789902796233,
+  "best_fixed_settings": {
+    "dark_mean_per_trial": 0.0,
+    "eta": 0.87,
+    "fixed_displacement_CHSH_oriented": 2.072535501104219,
+    "gamma": 0.93,
+    "source_survival": 1.0
+  },
+  "corners": [
+    {
+      "dark_mean_per_trial": 0.0,
+      "eta": 0.85,
+      "fixed_displacement_CHSH_oriented": 1.904114198322584,
+      "gamma": 0.91,
+      "source_survival": 0.98
+    },
+    {
+      "dark_mean_per_trial": 0.0002,
+      "eta": 0.85,
+      "fixed_displacement_CHSH_oriented": 1.9034733435089517,
+      "gamma": 0.91,
+      "source_survival": 0.98
+    },
+    {
+      "dark_mean_per_trial": 0.0,
+      "eta": 0.85,
+      "fixed_displacement_CHSH_oriented": 1.971809517300867,
+      "gamma": 0.91,
+      "source_survival": 1.0
+    },
+    {
+      "dark_mean_per_trial": 0.0002,
+      "eta": 0.85,
+      "fixed_displacement_CHSH_oriented": 1.9711292156440676,
+      "gamma": 0.91,
+      "source_survival": 1.0
+    },
+    {
+      "dark_mean_per_trial": 0.0,
+      "eta": 0.85,
+      "fixed_displacement_CHSH_oriented": 1.9243877135994665,
+      "gamma": 0.93,
+      "source_survival": 0.98
+    },
+    {
+      "dark_mean_per_trial": 0.0002,
+      "eta": 0.85,
+      "fixed_displacement_CHSH_oriented": 1.9237387510013884,
+      "gamma": 0.93,
+      "source_survival": 0.98
+    },
+    {
+      "dark_mean_per_trial": 0.0,
+      "eta": 0.85,
+      "fixed_displacement_CHSH_oriented": 1.9924967777874816,
+      "gamma": 0.93,
+      "source_survival": 1.0
+    },
+    {
+      "dark_mean_per_trial": 0.0002,
+      "eta": 0.85,
+      "fixed_displacement_CHSH_oriented": 1.9918082028812478,
+      "gamma": 0.93,
+      "source_survival": 1.0
+    },
+    {
+      "dark_mean_per_trial": 0.0,
+      "eta": 0.87,
+      "fixed_displacement_CHSH_oriented": 1.9822051493129602,
+      "gamma": 0.91,
+      "source_survival": 0.98
+    },
+    {
+      "dark_mean_per_trial": 0.0002,
+      "eta": 0.87,
+      "fixed_displacement_CHSH_oriented": 1.9815185179857737,
+      "gamma": 0.91,
+      "source_survival": 0.98
+    },
+    {
+      "dark_mean_per_trial": 0.0,
+      "eta": 0.87,
+      "fixed_displacement_CHSH_oriented": 2.051151242013919,
+      "gamma": 0.91,
+      "source_survival": 1.0
+    },
+    {
+      "dark_mean_per_trial": 0.0002,
+      "eta": 0.87,
+      "fixed_displacement_CHSH_oriented": 2.0504244008590566,
+      "gamma": 0.91,
+      "source_survival": 1.0
+    },
+    {
+      "dark_mean_per_trial": 0.0,
+      "eta": 0.87,
+      "fixed_displacement_CHSH_oriented": 2.003161723221454,
+      "gamma": 0.93,
+      "source_survival": 0.98
+    },
+    {
+      "dark_mean_per_trial": 0.0002,
+      "eta": 0.87,
+      "fixed_displacement_CHSH_oriented": 2.0024667109410066,
+      "gamma": 0.93,
+      "source_survival": 0.98
+    },
+    {
+      "dark_mean_per_trial": 0.0,
+      "eta": 0.87,
+      "fixed_displacement_CHSH_oriented": 2.072535501104219,
+      "gamma": 0.93,
+      "source_survival": 1.0
+    },
+    {
+      "dark_mean_per_trial": 0.0002,
+      "eta": 0.87,
+      "fixed_displacement_CHSH_oriented": 2.071800107956233,
+      "gamma": 0.93,
+      "source_survival": 1.0
+    }
+  ],
+  "fixed_settings_corner_count": 16,
+  "independent_pessimistic_reoptimized_device": {
+    "CHSH": 1.9065173536796551,
+    "converged": true,
+    "correlations": [
+      -0.5129602064837236,
+      -0.5168761091038557,
+      -0.5168754480862495,
+      0.35980559000582635
+    ],
+    "displacements_real_imag": [
+      -0.3195759964285079,
+      0.0052576697843709,
+      0.31148282205954997,
+      0.5830516549427943,
+      0.060274142874351476,
+      -0.3138844860455174,
+      0.5206202849134572,
+      0.4073370504139704
+    ],
+    "mean_displaced_photons_per_local_setting": [
+      0.10215646058483518,
+      0.4369707807697126,
+      0.10215644287929633,
+      0.43696895370332284
+    ],
+    "optimizer_objective": -1.9065173536796551,
+    "signed_CHSH": -1.9065173536796551
+  },
+  "nominal_95pct_power_95pct_size_sufficient_Hoeffding_trial_budget_under_perfect_IID_source_model": 807612,
+  "novelty_scope": "Prior art on on/off displaced Bell tests, numerical sensitivity analysis for our constrained benchmark only.",
+  "scope": "Corners are NOT rigorously the global worst values over the continuous parameter box; they are sampled parameter corners. Source eta model is independent global erasure. No instrument-independent Bell claim, no causality timing validation. The Hoeffding size/power budget is an ideal IID sufficient upper schedule, NOT an observed trial count.",
+  "source_heralding_and_reference_requirements": "Actual photon source survival, local detection efficiency and mode coherence must be calibrated independently, and trials must include all no-click events. Displacement amplitudes require an actual coherent reference; no measured hardware source meets these specifications in this simulation.",
+  "status": "PASS_ONOFF_BELL_PARAMETER_ENVELOPE_NO_ROBUST_VIOLATION",
+  "worst_corner_95pct_power_95pct_size_sufficient_Hoeffding_trial_budget": null,
+  "worst_fixed_settings": {
+    "dark_mean_per_trial": 0.0002,
+    "eta": 0.85,
+    "fixed_displacement_CHSH_oriented": 1.9034733435089517,
+    "gamma": 0.91,
+    "source_survival": 0.98
+  }
+}

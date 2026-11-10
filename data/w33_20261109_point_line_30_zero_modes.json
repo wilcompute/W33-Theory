@@ -1,0 +1,122 @@
+{
+  "B_singular_spectrum": {
+    "0": 15,
+    "4": 1,
+    "sqrt6": 24
+  },
+  "chiral_H0_spectrum": {
+    "minus4": 1,
+    "minus_sqrt6": 24,
+    "plus4": 1,
+    "plus_sqrt6": 24,
+    "zero": 30
+  },
+  "direct_sum_80_dim_commutant_dimension": 10,
+  "exact_theorem": "Every linear point-to-line map intertwining the FULL PSp(4,3) action equals a B+b(J-B), hence has rank <=25 and at least 15 point and 15 line zero vectors. An 80-dimensional bipartite chiral H=[[0,T],[T\u2020,0]] has >=30 exact flat zero modes, with chiral index (#point zero-#line zero)=0. This does not uniquely isolate a 3-family sector or an unpaired Weyl cone.",
+  "explicit_15D_dark_tight_frames": [
+    {
+      "frame_constant": "8/3",
+      "pair_inner_product_if_collinear": "-1/3",
+      "pair_inner_product_if_noncollinear": "1/9",
+      "projector_formula": "(8I-4A+J)/24",
+      "projector_full_group_invariant": true,
+      "projector_rank": 15,
+      "side": "points",
+      "unit_norm_40vector_tight_frame_rank": 15
+    },
+    {
+      "frame_constant": "8/3",
+      "pair_inner_product_if_collinear": "-1/3",
+      "pair_inner_product_if_noncollinear": "1/9",
+      "projector_formula": "(8I-4A+J)/24",
+      "projector_full_group_invariant": true,
+      "projector_rank": 15,
+      "side": "lines",
+      "unit_norm_40vector_tight_frame_rank": 15
+    }
+  ],
+  "incidence_point_line_pair_orbits": [
+    {
+      "size": 160,
+      "type": "incident"
+    },
+    {
+      "size": 1440,
+      "type": "nonincident"
+    }
+  ],
+  "native_B_rank": 25,
+  "novelty_scope": "Incidence spectrum and representation theory are classical. Original added value is an independently executable repo-specific exact constraint on candidate W33-symmetric TOE bilinears.",
+  "one_detuned_edge_dark_state_test": {
+    "edge_phase_radians": 0.6283185307179586,
+    "exact_short_time_line_leakage_t2_coefficient": 0.1432372542187894,
+    "incident_line": 0,
+    "incident_point": 0,
+    "independent_matrix_leakage_t2_coefficient": 0.14323725421878947,
+    "leakage_formula": "3/2 sin\u00b2(theta/2) for projector-column dark state centered at perturbed point"
+  },
+  "permutation_line_module_dimension": 40,
+  "permutation_point_module_dimension": 40,
+  "point_and_line_commutant_dimensions": [
+    3,
+    3
+  ],
+  "point_line_intertwiner_basis": [
+    "incidence B",
+    "all_ones_minus_incidence J-B"
+  ],
+  "point_line_intertwiner_dimension": 2,
+  "projective_symplectic_transvection_generators": 40,
+  "scope": "Only full group-equivariant linear point/line couplings; interactions or selected backgrounds, nontrivial gauge bundles, symmetry breaking, other representations and extended spatial hopping can evade it. Zero at energy zero also requires chiral grading. This finite obstruction does NOT constitute the continuum Nielsen-Ninomiya theorem, a 3+1D Dirac theory or a physical SM derivation.",
+  "six_invariant_coupling_controls": [
+    {
+      "a": 1,
+      "b": 0,
+      "line_chiral_kernel_dimension": 15,
+      "point_chiral_kernel_dimension": 15,
+      "rank": 25,
+      "zero_eigenvalue_multiplicity": 30
+    },
+    {
+      "a": 0,
+      "b": 1,
+      "line_chiral_kernel_dimension": 15,
+      "point_chiral_kernel_dimension": 15,
+      "rank": 25,
+      "zero_eigenvalue_multiplicity": 30
+    },
+    {
+      "a": 1,
+      "b": 1,
+      "line_chiral_kernel_dimension": 39,
+      "point_chiral_kernel_dimension": 39,
+      "rank": 1,
+      "zero_eigenvalue_multiplicity": 78
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "line_chiral_kernel_dimension": 15,
+      "point_chiral_kernel_dimension": 15,
+      "rank": 25,
+      "zero_eigenvalue_multiplicity": 30
+    },
+    {
+      "a": 1,
+      "b": -1,
+      "line_chiral_kernel_dimension": 15,
+      "point_chiral_kernel_dimension": 15,
+      "rank": 25,
+      "zero_eigenvalue_multiplicity": 30
+    },
+    {
+      "a": 0,
+      "b": 0,
+      "line_chiral_kernel_dimension": 40,
+      "point_chiral_kernel_dimension": 40,
+      "rank": 0,
+      "zero_eigenvalue_multiplicity": 80
+    }
+  ],
+  "status": "PASS_EXACT_W33_INCIDENT_160_NONINCIDENT_1440_30_FLAT_ZERO_MODES"
+}
