@@ -1,0 +1,54 @@
+{
+  "all_six_integer_point_full_160x160_certificates": [
+    {
+      "integer_values_within_safe_range": true,
+      "max_absolute_integer_residual": 0,
+      "t": 1,
+      "tested_off_diagonal_entries": 25440
+    },
+    {
+      "integer_values_within_safe_range": true,
+      "max_absolute_integer_residual": 0,
+      "t": 2,
+      "tested_off_diagonal_entries": 25440
+    },
+    {
+      "integer_values_within_safe_range": true,
+      "max_absolute_integer_residual": 0,
+      "t": 3,
+      "tested_off_diagonal_entries": 25440
+    },
+    {
+      "integer_values_within_safe_range": true,
+      "max_absolute_integer_residual": 0,
+      "t": 4,
+      "tested_off_diagonal_entries": 25440
+    },
+    {
+      "integer_values_within_safe_range": true,
+      "max_absolute_integer_residual": 0,
+      "t": 5,
+      "tested_off_diagonal_entries": 25440
+    },
+    {
+      "integer_values_within_safe_range": true,
+      "max_absolute_integer_residual": 0,
+      "t": 6,
+      "tested_off_diagonal_entries": 25440
+    }
+  ],
+  "consequence_all_beta": "For half-filled spinless W33 fermions Fbeta=-2/beta sum_s log(2cosh(beta singular(B)/2)), the exact quadratic form about flat connection is Hess_phi Fbeta|flat = -kappa_critical(beta) C8.T C8 with kappa_critical(beta) = (4/beta) SUM_{n>=0} [t_n^4/((1+16t_n)(1+6t_n)^2)], t_n=beta\u00b2/[pi\u00b2(2n+1)\u00b2]. Under all-octagon Wilson action with coefficient kappa, Hess total=(kappa-kappa_critical) C8.T C8, with the 79 pure gauge null directions on full 160-edge coordinates and 81 physical directions.",
+  "exact_matrix_identity": "Hess_phi log det(I+t B(phi)B(phi)^dagger)|phi=0 = [2 t^4 / ((1+16t)(1+6t)^2)] C8.T C8 for ALL t >=0; C8 is 1620x160 oriented octagon-edge incidence",
+  "graph": {
+    "cycle_rank": 81,
+    "edges": 160,
+    "length8_octagons": 1620,
+    "vertices": 80
+  },
+  "local_stability_beta1_approx": 6.225567742678611e-05,
+  "positive_eigenvalue_count_Physical": 81,
+  "proof_by_polynomial_identity": "For D(t)=(1+16t)(1+6t), the inverse Q=(I+t BB^T)^-1=N/(120D), with N(t)=D(120P0)+(1+16t)(120P6)+(1+6t)(120P16), where 120P0=40I-20A+5J; 120P16=3J; 120P6=120I-P0num-P16num. Jacobi's formula expresses Hess logP via Q, QB, B^TQB and edge deltas. Multiply both sides by 120^2 D^2/(2t): each resulting entry is an integer polynomial in t of degree<=5. All 25600 matrix entries agree at the six distinct integers t=1..6 by exact int64 arithmetic. Polynomial identity theorem proves equality for all t, including t=0 by continuity.",
+  "scope": "This EXACT identity and local flat-vacuum stability threshold apply to a finite W33 tight-binding free-fermion and all-1620-octagon compact U1 gauge model; do not infer global ground-state selection, continuum phase transition, gravity, or physical coupling values. No proof that all1620 octagons are local plaquettes in a 3D manifold.",
+  "status": "PASS_EXACT_ALL_T_W33_OCTAGON_GAUGE_FERMION_HESSIAN_IDENTITY",
+  "zero_eigenvalue_count_Gauge": 79
+}

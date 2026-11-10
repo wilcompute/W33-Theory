@@ -1,0 +1,241 @@
+{
+  "core_negative_result": "At .99 per addressed pair the W33 40-rail state fidelity 0.99748 does NOT yield a guaranteed statistical gap between zero-flux and one-flux hypotheses from this fidelity-only envelope, no matter how many trials are taken. The 14/15 edge cases remain distinguishable. A higher fidelity or a tighter *structure-aware* hardware model is necessary to certify one-edge response.",
+  "gate_transmission_cases": {
+    "0.99": {
+      "phase_flip_cases": {
+        "1": {
+          "alternative_click_lower": 0.0008,
+          "ideal_target_line_probability": 0.011090863815350111,
+          "null_click_upper": 0.00313409777477523,
+          "p_line_alternative_lower_using_trace_distance": 0.0,
+          "robust_certificate_possible_from_fidelity_only": false,
+          "robust_exact_binomial_size5_power95_if_possible": null,
+          "true_preparation_infidelity": 0.002518679922619116
+        },
+        "14": {
+          "alternative_click_lower": 0.4172003527976744,
+          "ideal_target_line_probability": 0.5922269701529017,
+          "null_click_upper": 0.00313409777477523,
+          "p_line_alternative_lower_using_trace_distance": 0.5420405185686433,
+          "robust_certificate_possible_from_fidelity_only": true,
+          "robust_exact_binomial_size5_power95_if_possible": {
+            "exact_false_positive_probability": 0.018657862368118353,
+            "exact_power_under_pessimistic_alternative": 0.9608153762363869,
+            "launched_trials": 6,
+            "required_line_click_count": 1
+          },
+          "true_preparation_infidelity": 0.002518679922619116
+        },
+        "15": {
+          "alternative_click_lower": 0.4847452030154471,
+          "ideal_target_line_probability": 0.6801520773068631,
+          "null_click_upper": 0.00313409777477523,
+          "p_line_alternative_lower_using_trace_distance": 0.6299656257226047,
+          "robust_certificate_possible_from_fidelity_only": true,
+          "robust_exact_binomial_size5_power95_if_possible": {
+            "exact_false_positive_probability": 0.015572570552057855,
+            "exact_power_under_pessimistic_alternative": 0.963682978878993,
+            "launched_trials": 5,
+            "required_line_click_count": 1
+          },
+          "true_preparation_infidelity": 0.002518679922619116
+        }
+      },
+      "prepared_state_fidelity": 0.9974813200773809,
+      "source_survival": 0.904498780427549
+    },
+    "0.995": {
+      "phase_flip_cases": {
+        "1": {
+          "alternative_click_lower": 0.0008,
+          "ideal_target_line_probability": 0.011090863815350111,
+          "null_click_upper": 0.0017154376673611297,
+          "p_line_alternative_lower_using_trace_distance": 0.0,
+          "robust_certificate_possible_from_fidelity_only": false,
+          "robust_exact_binomial_size5_power95_if_possible": null,
+          "true_preparation_infidelity": 0.0006390981568832332
+        },
+        "14": {
+          "alternative_click_lower": 0.45822997368839874,
+          "ideal_target_line_probability": 0.5922269701529017,
+          "null_click_upper": 0.0017154376673611297,
+          "p_line_alternative_lower_using_trace_distance": 0.5669465793947819,
+          "robust_certificate_possible_from_fidelity_only": true,
+          "robust_exact_binomial_size5_power95_if_possible": {
+            "exact_false_positive_probability": 0.008547811510253248,
+            "exact_power_under_pessimistic_alternative": 0.953326016424085,
+            "launched_trials": 5,
+            "required_line_click_count": 1
+          },
+          "true_preparation_infidelity": 0.0006390981568832332
+        },
+        "15": {
+          "alternative_click_lower": 0.5291706600135915,
+          "ideal_target_line_probability": 0.6801520773068631,
+          "null_click_upper": 0.0017154376673611297,
+          "p_line_alternative_lower_using_trace_distance": 0.6548716865487433,
+          "robust_certificate_possible_from_fidelity_only": true,
+          "robust_exact_binomial_size5_power95_if_possible": {
+            "exact_false_positive_probability": 0.0068441144946960525,
+            "exact_power_under_pessimistic_alternative": 0.950857859048995,
+            "launched_trials": 4,
+            "required_line_click_count": 1
+          },
+          "true_preparation_infidelity": 0.0006390981568832332
+        }
+      },
+      "prepared_state_fidelity": 0.9993609018431168,
+      "source_survival": 0.9499727078667288
+    },
+    "0.999": {
+      "phase_flip_cases": {
+        "1": {
+          "alternative_click_lower": 0.005848902049542684,
+          "ideal_target_line_probability": 0.011090863815350111,
+          "null_click_upper": 0.0012217136867598724,
+          "p_line_alternative_lower_using_trace_distance": 0.006007080895724058,
+          "robust_certificate_possible_from_fidelity_only": true,
+          "robust_exact_binomial_size5_power95_if_possible": {
+            "exact_false_positive_probability": 0.02449612077353961,
+            "exact_power_under_pessimistic_alternative": 0.9500549643089496,
+            "launched_trials": 1795,
+            "required_line_click_count": 6
+          },
+          "true_preparation_infidelity": 2.58448487738816e-05
+        },
+        "14": {
+          "alternative_click_lower": 0.49428901618875143,
+          "ideal_target_line_probability": 0.5922269701529017,
+          "null_click_upper": 0.0012217136867598724,
+          "p_line_alternative_lower_using_trace_distance": 0.5871431872332756,
+          "robust_certificate_possible_from_fidelity_only": true,
+          "robust_exact_binomial_size5_power95_if_possible": {
+            "exact_false_positive_probability": 0.006093660814445955,
+            "exact_power_under_pessimistic_alternative": 0.9669240800592529,
+            "launched_trials": 5,
+            "required_line_click_count": 1
+          },
+          "true_preparation_infidelity": 2.58448487738816e-05
+        },
+        "15": {
+          "alternative_click_lower": 0.568189345054289,
+          "ideal_target_line_probability": 0.6801520773068631,
+          "null_click_upper": 0.0012217136867598724,
+          "p_line_alternative_lower_using_trace_distance": 0.675068294387237,
+          "robust_certificate_possible_from_fidelity_only": true,
+          "robust_exact_binomial_size5_power95_if_possible": {
+            "exact_false_positive_probability": 0.004877906532860013,
+            "exact_power_under_pessimistic_alternative": 0.9652325036718507,
+            "launched_trials": 4,
+            "required_line_click_count": 1
+          },
+          "true_preparation_infidelity": 2.58448487738816e-05
+        }
+      },
+      "prepared_state_fidelity": 0.9999741551512261,
+      "source_survival": 0.9896055304966175
+    },
+    "0.9995": {
+      "phase_flip_cases": {
+        "1": {
+          "alternative_click_lower": 0.008021492896025802,
+          "ideal_target_line_probability": 0.011090863815350111,
+          "null_click_upper": 0.0012054639182555297,
+          "p_line_alternative_lower_using_trace_distance": 0.008547313337059582,
+          "robust_certificate_possible_from_fidelity_only": true,
+          "robust_exact_binomial_size5_power95_if_possible": {
+            "exact_false_positive_probability": 0.03057992104380829,
+            "exact_power_under_pessimistic_alternative": 0.9502064374985939,
+            "launched_trials": 965,
+            "required_line_click_count": 4
+          },
+          "true_preparation_infidelity": 6.4696490356119796e-06
+        },
+        "14": {
+          "alternative_click_lower": 0.4990144047089965,
+          "ideal_target_line_probability": 0.5922269701529017,
+          "null_click_upper": 0.0012054639182555297,
+          "p_line_alternative_lower_using_trace_distance": 0.5896834196746111,
+          "robust_certificate_possible_from_fidelity_only": true,
+          "robust_exact_binomial_size5_power95_if_possible": {
+            "exact_false_positive_probability": 0.006012805665257565,
+            "exact_power_under_pessimistic_alternative": 0.9684407848280909,
+            "launched_trials": 5,
+            "required_line_click_count": 1
+          },
+          "true_preparation_infidelity": 6.4696490356119796e-06
+        },
+        "15": {
+          "alternative_click_lower": 0.5733009684110209,
+          "ideal_target_line_probability": 0.6801520773068631,
+          "null_click_upper": 0.0012054639182555297,
+          "p_line_alternative_lower_using_trace_distance": 0.6776085268285725,
+          "robust_certificate_possible_from_fidelity_only": true,
+          "robust_exact_binomial_size5_power95_if_possible": {
+            "exact_false_positive_probability": 0.00481314381820826,
+            "exact_power_under_pessimistic_alternative": 0.9668497636713774,
+            "launched_trials": 4,
+            "required_line_click_count": 1
+          },
+          "true_preparation_infidelity": 6.4696490356119796e-06
+        }
+      },
+      "prepared_state_fidelity": 0.9999935303509644,
+      "source_survival": 0.9947776337352014
+    },
+    "0.9999": {
+      "phase_flip_cases": {
+        "1": {
+          "alternative_click_lower": 0.009777987863989361,
+          "ideal_target_line_probability": 0.011090863815350111,
+          "null_click_upper": 0.0012002197008042096,
+          "p_line_alternative_lower_using_trace_distance": 0.010581890637116639,
+          "robust_certificate_possible_from_fidelity_only": true,
+          "robust_exact_binomial_size5_power95_if_possible": {
+            "exact_false_positive_probability": 0.015971930867965528,
+            "exact_power_under_pessimistic_alternative": 0.9501343559898701,
+            "launched_trials": 791,
+            "required_line_click_count": 4
+          },
+          "true_preparation_infidelity": 2.590536961610823e-07
+        },
+        "14": {
+          "alternative_click_lower": 0.5028309865147313,
+          "ideal_target_line_probability": 0.5922269701529017,
+          "null_click_upper": 0.0012002197008042096,
+          "p_line_alternative_lower_using_trace_distance": 0.5917179969746682,
+          "robust_certificate_possible_from_fidelity_only": true,
+          "robust_exact_binomial_size5_power95_if_possible": {
+            "exact_false_positive_probability": 0.00598671050983877,
+            "exact_power_under_pessimistic_alternative": 0.9696247217418922,
+            "launched_trials": 5,
+            "required_line_click_count": 1
+          },
+          "true_preparation_infidelity": 2.590536961610823e-07
+        },
+        "15": {
+          "alternative_click_lower": 0.5774292385699352,
+          "ideal_target_line_probability": 0.6801520773068631,
+          "null_click_upper": 0.0012002197008042096,
+          "p_line_alternative_lower_using_trace_distance": 0.6796431041286296,
+          "robust_certificate_possible_from_fidelity_only": true,
+          "robust_exact_binomial_size5_power95_if_possible": {
+            "exact_false_positive_probability": 0.004792242552957653,
+            "exact_power_under_pessimistic_alternative": 0.9681141663532431,
+            "launched_trials": 4,
+            "required_line_click_count": 1
+          },
+          "true_preparation_infidelity": 2.590536961610823e-07
+        }
+      },
+      "prepared_state_fidelity": 0.9999997409463038,
+      "source_survival": 0.9989514787347149
+    }
+  },
+  "lossy_state_input": "Exact 40-rail nearest-neighbor 39-step state preparation, equal addressed-pair intensity transmission per coupler",
+  "model": "Prepared normalized pure state fidelity to target f; at ANY subsequent lossless graph evolution and any projection, probability difference <=sqrt(1-f). Null line probability <=1-f. Detection efficiency .85, independent dark count interval [.0008,.0012], source survival from actual gate-by-gate loss.",
+  "previous_ideal_input_results": "data/w33_20261109_dark_photon_binomial_gate.json; its 793/5/4 counts are valid only under ideal initial dark state and independent readout assumptions.",
+  "scope": "Only preparator loss, ideal subsequent 80-mode graph, uniform independent detector, adversarial pure-state input error bounded by fidelity. Does not account internal graph loss, correlated detector errors, unknown phase evolution, calibration of f, or adversarial source drift. The threshold is a sufficient sensitivity constraint for the stated witness, not fundamental detectability limit.",
+  "single_link_detection_minimum_per_gate_intensity_survival_from_fidelity_only": 0.9979317858857661,
+  "status": "PASS_W33_FINITE_SHOTS_PREPARATION_LOSS_ROBUST_NULL_P0_P1"
+}

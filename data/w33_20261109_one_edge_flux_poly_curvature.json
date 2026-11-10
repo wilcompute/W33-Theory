@@ -1,0 +1,52 @@
+{
+  "P_flat_factored": "(6*t + 1)**24*(16*t + 1)",
+  "P_one_pi_minus_flat_exact_factored": "324*t**4*(6*t + 1)**22",
+  "beta_curvature_controls": [
+    {
+      "beta": 0.3,
+      "bound_coarse_truncation_tail": 1.612670989078154e-26,
+      "kappa_local_single_link_Matsubara": 7.233969996862764e-08,
+      "summation_terms": 250
+    },
+    {
+      "beta": 0.5,
+      "bound_coarse_truncation_tail": 9.601409326137992e-25,
+      "kappa_local_single_link_Matsubara": 1.7664928783713087e-06,
+      "summation_terms": 250
+    },
+    {
+      "beta": 1.0,
+      "bound_coarse_truncation_tail": 2.4579399514157747e-22,
+      "kappa_local_single_link_Matsubara": 6.225567742678611e-05,
+      "summation_terms": 250
+    },
+    {
+      "beta": 2.0,
+      "bound_coarse_truncation_tail": 6.292112920623964e-20,
+      "kappa_local_single_link_Matsubara": 0.0006152499873611133,
+      "summation_terms": 250
+    },
+    {
+      "beta": 5.0,
+      "bound_coarse_truncation_tail": 9.598723942388026e-17,
+      "kappa_local_single_link_Matsubara": 0.0031634834738462885,
+      "summation_terms": 250
+    },
+    {
+      "beta": 10.0,
+      "bound_coarse_truncation_tail": 2.4551917869849454e-14,
+      "kappa_local_single_link_Matsubara": 0.007503684830082129,
+      "summation_terms": 250
+    }
+  ],
+  "matsubara_local_threshold_formula": "kappa_c(beta)=(1/(81*beta))*SUM_n[(P_pi(t_n)-P_flat(t_n))/P_flat(t_n)], t_n=beta\u00b2/(pi\u00b2(2n+1)\u00b2)",
+  "modified_edge": [
+    0,
+    0
+  ],
+  "prior": "Analytic secular rank-one phase perturbations and fermionic cosh Matsubara products are standard; W33 rational polynomial coefficients are specific to this finite graph.",
+  "ratio_difference_over_flat": "324*t**4/(576*t**3 + 228*t**2 + 28*t + 1)",
+  "scope": "Exact rational characteristic-poly identity for a single phase link, plus truncated positive convergent Matsubara sum; exact full 81x81 Hessian proportionality to octagon Gram has been numerically observed but is NOT proved by the single-link test alone.",
+  "single_edge_octagons": 81,
+  "status": "PASS_EXACT_SINGLE_EDGE_W33_CHARACTERISTIC_POLYNOMIAL_FLUX_CURVATURE"
+}

@@ -1,0 +1,63 @@
+{
+  "boundary_defect_extra_point_four_link_lines": [
+    3,
+    6,
+    26,
+    36
+  ],
+  "boundary_zero_exact_vector_residual": 4.735492491430378e-16,
+  "boundary_zero_inverse_participation": 0.04712087949944025,
+  "boundary_zero_probability_at_defect_site": 0.07138103780837131,
+  "original_balanced_gapped_40x40": {
+    "columns": 40,
+    "left_chiral_zero_count": 0,
+    "net_left_minus_right": 0,
+    "rank": 40,
+    "right_chiral_zero_count": 0,
+    "rows": 40,
+    "total_chiral_zero_modes": 0
+  },
+  "phase_disorder_controls": [
+    {
+      "defect_amplitude_probability": 0.07138103780837131,
+      "inverse_participation": 0.04712087949944024,
+      "random_link_phase_scale": 0.0,
+      "residual": 1.5188789416795136e-15,
+      "zero_mode_count": 1
+    },
+    {
+      "defect_amplitude_probability": 0.07142869643920852,
+      "inverse_participation": 0.04704404363966015,
+      "random_link_phase_scale": 0.01,
+      "residual": 1.383837611075751e-15,
+      "zero_mode_count": 1
+    },
+    {
+      "defect_amplitude_probability": 0.0618286637410094,
+      "inverse_participation": 0.04518984485334724,
+      "random_link_phase_scale": 0.1,
+      "residual": 1.626094905092192e-15,
+      "zero_mode_count": 1
+    },
+    {
+      "defect_amplitude_probability": 0.00016117156624386434,
+      "inverse_participation": 0.04677779275506191,
+      "random_link_phase_scale": 1.0,
+      "residual": 1.6773974474385683e-15,
+      "zero_mode_count": 1
+    }
+  ],
+  "prior_art": "Lieb sublattice imbalance and the chiral matrix index theorem are standard. The user project already has separate lattice chirality no-go work; this numerical W33 boundary construction is an explicit falsifiable alternative, not a novel general theorem.",
+  "proof": "For any complex matrix T with n_p point and n_l line modes, H(T)=[0,T;T\u2020,0] anticommutes with \u0393=diag(+I_np,-I_nl). Index dim ker T\u2020\u2212dim ker T=np\u2212nl, independent of flux and rank. A square 40x40 matrix necessarily has index zero; adding one boundary point produces index +1 and one exact protected zero whenever its 41x40 coupling has full column rank.",
+  "rectangular_41x40_index": {
+    "columns": 40,
+    "left_chiral_zero_count": 1,
+    "net_left_minus_right": 1,
+    "rank": 40,
+    "right_chiral_zero_count": 0,
+    "rows": 41,
+    "total_chiral_zero_modes": 1
+  },
+  "scope": "This is a finite chiral-sublattice imbalance zero mode at an explicitly added boundary defect, NOT an unpaired 3+1D Weyl fermion, protected bulk band, anomaly-free standard model, or physical chirality selection. The induced zero amplitude spreads over the original gapped graph through T^{-\u2020}. The extra point is an additional primitive, not derived from W33 symmetry.",
+  "status": "PASS_FINITE_W33_SQUARE_CHIRAL_NO_INDEX_VS_BOUNDARY_DEFECT_INDEX1"
+}

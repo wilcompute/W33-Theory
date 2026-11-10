@@ -1,0 +1,202 @@
+{
+  "calibration_model": "Independent uniform classical outcome mislabel r=0.01 with certified r in [.0095, .0105]; residual absolute per-outcome difference <=2e-5 relative to this response in each basis and any state (not measured here). Outcome-independent detected-pair survival eta=0.85. These are hypothetical stipulated controls, not proven detector calibrations.",
+  "finite_sampling": "Each accepted pair in a fixed basis gives one Bernoulli match of two independent source preparations. M accepted pairs per basis in 8 bases, with separate independent calibration. Hoeffding: Pr(Fhat8-F8>=z)\u2264exp(-M z\u00b2/4). Two such tails give a conservative 95%-size and >=95%-power threshold using alpha=.05 and beta=.05 under the specified IID alternative.",
+  "largest_observed_ratio_collision_over_l1": 0.4639259778381587,
+  "null_thresholds": {
+    "Schmidt_leq2": 0.7777777777777778,
+    "separable_SN1": 0.4444444444444444
+  },
+  "outcome_dependent_attack_exceeds_certified_max_l1": true,
+  "outcome_dependent_detector_postselection_attack_l1_shift": 0.11111111111111116,
+  "parameters": {
+    "certified_response_r_max": 0.0105,
+    "certified_response_r_min": 0.0095,
+    "hypothetical_detector_efficiency": 0.85,
+    "independent_per_outcome_residual_bound_eps": 2e-05,
+    "source_photons_per_successful_pair_expected_if_uniform_losses": 2.768166089965398,
+    "uniform_response_r_true": 0.01
+  },
+  "prior_art": [
+    "https://doi.org/10.1038/s41534-025-00990-6",
+    "https://doi.org/10.1103/PhysRevA.109.062417"
+  ],
+  "readout": "8 MUB bases per coset, each has 9 COMPLETE mutually exclusive accepted outcomes",
+  "results": [
+    {
+      "ideal_F8": 0.375555555555557,
+      "isotropic_eta": 0.65,
+      "observed_F8_after_known_response": 0.3680820000000007,
+      "rank_witnesses": [
+        {
+          "budget": {
+            "feasible": false,
+            "margin": -0.06939811111111044
+          },
+          "certified_Schmidt_number_at_least": 2,
+          "null_SN_leq": 1,
+          "threshold": 0.4444444444444444
+        },
+        {
+          "budget": {
+            "feasible": false,
+            "margin": -0.39642819444444377
+          },
+          "certified_Schmidt_number_at_least": 3,
+          "null_SN_leq": 2,
+          "threshold": 0.7777777777777778
+        }
+      ],
+      "uniform_mislabel_r": 0.01
+    },
+    {
+      "ideal_F8": 0.5688888888888903,
+      "isotropic_eta": 0.8,
+      "observed_F8_after_known_response": 0.5575680000000016,
+      "rank_witnesses": [
+        {
+          "budget": {
+            "Hoeffding_power_lower_bound": 0.9500251413249268,
+            "M_accepted_pairs_per_basis": 3324,
+            "Q8_total_accepted_pairs": 26592,
+            "epsilon_calibration_worst_case_72eps": 0.00144,
+            "expected_launched_signal_photons_if_pair_detection_independent": 73611.07266435988,
+            "feasible": true,
+            "lower_confidence_radius_for_Fobs": 0.060041424464194054,
+            "true_expected_vs_null_gap_after_errors": 0.12008788888889049
+          },
+          "certified_Schmidt_number_at_least": 2,
+          "null_SN_leq": 1,
+          "threshold": 0.4444444444444444
+        },
+        {
+          "budget": {
+            "feasible": false,
+            "margin": -0.20694219444444284
+          },
+          "certified_Schmidt_number_at_least": 3,
+          "null_SN_leq": 2,
+          "threshold": 0.7777777777777778
+        }
+      ],
+      "uniform_mislabel_r": 0.01
+    },
+    {
+      "ideal_F8": 0.7854222222222236,
+      "isotropic_eta": 0.94,
+      "observed_F8_after_known_response": 0.7697923200000012,
+      "rank_witnesses": [
+        {
+          "budget": {
+            "Hoeffding_power_lower_bound": 0.9506581482567681,
+            "M_accepted_pairs_per_basis": 435,
+            "Q8_total_accepted_pairs": 3480,
+            "epsilon_calibration_worst_case_72eps": 0.00144,
+            "expected_launched_signal_photons_if_pair_detection_independent": 9633.217993079586,
+            "feasible": true,
+            "lower_confidence_radius_for_Fobs": 0.1659727791988169,
+            "true_expected_vs_null_gap_after_errors": 0.33231220888889007
+          },
+          "certified_Schmidt_number_at_least": 2,
+          "null_SN_leq": 1,
+          "threshold": 0.4444444444444444
+        },
+        {
+          "budget": {
+            "Hoeffding_power_lower_bound": 0.9500001214080841,
+            "M_accepted_pairs_per_basis": 1717931,
+            "Q8_total_accepted_pairs": 13743448,
+            "epsilon_calibration_worst_case_72eps": 0.00144,
+            "expected_launched_signal_photons_if_pair_detection_independent": 38044146.712802775,
+            "feasible": true,
+            "lower_confidence_radius_for_Fobs": 0.002641062242605994,
+            "true_expected_vs_null_gap_after_errors": 0.005282125555556738
+          },
+          "certified_Schmidt_number_at_least": 3,
+          "null_SN_leq": 2,
+          "threshold": 0.7777777777777778
+        }
+      ],
+      "uniform_mislabel_r": 0.01
+    },
+    {
+      "ideal_F8": 0.802222222222224,
+      "isotropic_eta": 0.95,
+      "observed_F8_after_known_response": 0.7862580000000015,
+      "rank_witnesses": [
+        {
+          "budget": {
+            "Hoeffding_power_lower_bound": 0.9507353696777762,
+            "M_accepted_pairs_per_basis": 395,
+            "Q8_total_accepted_pairs": 3160,
+            "epsilon_calibration_worst_case_72eps": 0.00144,
+            "expected_launched_signal_photons_if_pair_detection_independent": 8747.404844290659,
+            "feasible": true,
+            "lower_confidence_radius_for_Fobs": 0.17417384807268133,
+            "true_expected_vs_null_gap_after_errors": 0.34877788888889033
+          },
+          "certified_Schmidt_number_at_least": 2,
+          "null_SN_leq": 1,
+          "threshold": 0.4444444444444444
+        },
+        {
+          "budget": {
+            "Hoeffding_power_lower_bound": 0.9500011438304674,
+            "M_accepted_pairs_per_basis": 101343,
+            "Q8_total_accepted_pairs": 810744,
+            "epsilon_calibration_worst_case_72eps": 0.00144,
+            "expected_launched_signal_photons_if_pair_detection_independent": 2244274.0484429067,
+            "feasible": true,
+            "lower_confidence_radius_for_Fobs": 0.010873882018253046,
+            "true_expected_vs_null_gap_after_errors": 0.021747805555556998
+          },
+          "certified_Schmidt_number_at_least": 3,
+          "null_SN_leq": 2,
+          "threshold": 0.7777777777777778
+        }
+      ],
+      "uniform_mislabel_r": 0.01
+    },
+    {
+      "ideal_F8": 0.8712000000000015,
+      "isotropic_eta": 0.99,
+      "observed_F8_after_known_response": 0.8538631200000011,
+      "rank_witnesses": [
+        {
+          "budget": {
+            "Hoeffding_power_lower_bound": 0.9505788185365436,
+            "M_accepted_pairs_per_basis": 277,
+            "Q8_total_accepted_pairs": 2216,
+            "epsilon_calibration_worst_case_72eps": 0.00144,
+            "expected_launched_signal_photons_if_pair_detection_independent": 6134.256055363322,
+            "feasible": true,
+            "lower_confidence_radius_for_Fobs": 0.2079895954615861,
+            "true_expected_vs_null_gap_after_errors": 0.41638300888888996
+          },
+          "certified_Schmidt_number_at_least": 2,
+          "null_SN_leq": 1,
+          "threshold": 0.4444444444444444
+        },
+        {
+          "budget": {
+            "Hoeffding_power_lower_bound": 0.950024314806927,
+            "M_accepted_pairs_per_basis": 6004,
+            "Q8_total_accepted_pairs": 48032,
+            "epsilon_calibration_worst_case_72eps": 0.00144,
+            "expected_launched_signal_photons_if_pair_detection_independent": 132960.55363321802,
+            "feasible": true,
+            "lower_confidence_radius_for_Fobs": 0.04467464940548489,
+            "true_expected_vs_null_gap_after_errors": 0.08935292555555663
+          },
+          "certified_Schmidt_number_at_least": 3,
+          "null_SN_leq": 2,
+          "threshold": 0.7777777777777778
+        }
+      ],
+      "uniform_mislabel_r": 0.01
+    }
+  ],
+  "rigorous_L1_lipschitz": "For two complete probability distributions p,q, |sum_j p_j\u00b2-sum_j q_j\u00b2|\u2264||p-q||_1. For eight bases with 9 effects and independently bounded |qactual_bj-qbase_bj|\u2264eps, the bias |F8(qactual)-F8(qbase)|\u226472eps. Under uniform mislabel F8(qbase)=(1-r)^2 F8(ideal).",
+  "scope": "Purely conditional finite-shot *theoretical* certificate, not live measured calibration or PPT state certification. Schmidt-number proof and Q8 2-design identities are prior repo results. This extension explicitly carries hypothetical readout drift and complete source launch count. Lost events depending on outcome, detector efficiency correlations, heralding loopholes and source-model errors invalidate the bound. For isotropic states the witness is weaker than aligned fidelity tests.",
+  "simulated_simplex_L1_bound_random_controls": 2000,
+  "status": "PASS_Q8_SCHMIDT_WITNESS_MIXED_FINITE_SHOTS_CALIBRATED_READOUT"
+}

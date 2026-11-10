@@ -1,0 +1,51 @@
+{
+  "beta_direction_controls": [
+    {
+      "beta": 0.1,
+      "ratio_mean": 4.099229676851215e-11,
+      "ratio_spread": 6.871112374610835e-15,
+      "worst_operator_relative_residual": 0.0003522159127040865
+    },
+    {
+      "beta": 0.3,
+      "ratio_mean": 7.233969759544751e-08,
+      "ratio_spread": 1.692719858570251e-14,
+      "worst_operator_relative_residual": 3.4296298134536557e-07
+    },
+    {
+      "beta": 0.5,
+      "ratio_mean": 1.766492875492461e-06,
+      "ratio_spread": 1.6159970065183636e-14,
+      "worst_operator_relative_residual": 3.2023249563699564e-08
+    },
+    {
+      "beta": 1.0,
+      "ratio_mean": 6.22556773627153e-05,
+      "ratio_spread": 5.301926161559861e-14,
+      "worst_operator_relative_residual": 1.0624821492451149e-09
+    },
+    {
+      "beta": 2.0,
+      "ratio_mean": 0.0006152499864957229,
+      "ratio_spread": 2.4637215011169555e-13,
+      "worst_operator_relative_residual": 7.195383378300357e-10
+    },
+    {
+      "beta": 5.0,
+      "ratio_mean": 0.003163483464818665,
+      "ratio_spread": 5.7629452425433936e-12,
+      "worst_operator_relative_residual": 1.4655495230311474e-09
+    },
+    {
+      "beta": 10.0,
+      "ratio_mean": 0.007503684755057695,
+      "ratio_spread": 6.410657855254742e-11,
+      "worst_operator_relative_residual": 6.977464011245155e-09
+    }
+  ],
+  "do_not_claim": "Spontaneous symmetry breaking, thermodynamic phase transition, global gauge vacuum or SM mass from finite matrix numerics.",
+  "octagon_metric_max_positive_eigenvalue": 160.00000000000023,
+  "octagon_metric_min_positive_eigenvalue": 0.9999999999999948,
+  "scientific_scope": "Numerical Hessian directional tests. A rigorous analytic coefficient and identity for general beta are NOT proved here; high beta may be nonanalytic in flat zero eigenvalues, so check residuals. A positive all-octagon gauge \u03ba stabilizes the flat stationary point quadratically only when \u03ba exceeds the beta-dependent negative fermion Hessian direction.",
+  "status": "PASS_W33_FLAT_HESSIAN_EIGHT_CYCLE_METRIC_PROPORTIONALITY_NUMERIC"
+}
