@@ -1,0 +1,151 @@
+{
+  "at_previous_worst_corner": {
+    "dark_mean_per_trial": 0.0002,
+    "eta": 0.85,
+    "fixed_displacement_CHSH_oriented": 1.9034733435089517,
+    "gamma": 0.91,
+    "source_survival": 0.98
+  },
+  "critical_detector_efficiency_for_fixed_analyzer_optimized_at_94pct": 0.8762581457753132,
+  "falsifier": "If calibrated efficiencies, coherence or source survival lie below the stated settings-specific crossing, this chosen protocol cannot yield a positive expected CHSH margin regardless of trial count.",
+  "fixed_94pct_analyzer_CHSH_at_critical_efficiency": 2.0,
+  "fixed_nominal_analyzer_critical_global_source_survival": 0.9936392997815132,
+  "multi_seed_reoptimized_efficiency_scan": {
+    "0.85": {
+      "displacements_real_imag": [
+        -0.3195626977286452,
+        0.0058014053392371895,
+        0.29111729243556067,
+        -0.5934797962923366,
+        0.07109964700323196,
+        0.3116095338202656,
+        0.5062217126248609,
+        -0.42510083510459346
+      ],
+      "mean_displacement_photons_each": [
+        0.10215397408351959,
+        0.43696754656220516,
+        0.10215566137166747,
+        0.4369711423394701
+      ],
+      "optimized_abs_CHSH": 1.9065173534818527,
+      "optimizer_converged": false
+    },
+    "0.88": {
+      "displacements_real_imag": [
+        0.03383541365506147,
+        -0.18549441839102707,
+        -0.11113125709676756,
+        0.6092488124172649,
+        0.03383497150231988,
+        -0.18549799161895655,
+        -0.11113149841576064,
+        0.6092451171510426
+      ],
+      "mean_displacement_photons_each": [
+        0.035553014471434524,
+        0.38353427173575555,
+        0.035554310191229274,
+        0.38352982271251973
+      ],
+      "optimized_abs_CHSH": 2.021017328272173,
+      "optimizer_converged": false
+    },
+    "0.9": {
+      "displacements_real_imag": [
+        0.0034651774022839625,
+        0.1819882570917759,
+        -0.011551349379528938,
+        -0.6064726005786468,
+        0.0034665631017989215,
+        0.18198776259082794,
+        -0.011550427177272183,
+        -0.6064721583610855
+      ],
+      "mean_displacement_photons_each": [
+        0.033131733173731616,
+        0.36794244892511485,
+        0.033131562792554296,
+        0.367941891235131
+      ],
+      "optimized_abs_CHSH": 2.1011991401048866,
+      "optimizer_converged": false
+    },
+    "0.92": {
+      "displacements_real_imag": [
+        0.1583387698785479,
+        -0.07681377204917378,
+        -0.5349798784329958,
+        0.2595206096707229,
+        0.15833670804574082,
+        -0.07680697193084116,
+        -0.5349839472833154,
+        0.2595265948458123
+      ],
+      "mean_displacement_photons_each": [
+        0.03097152162307417,
+        0.35355441717204655,
+        0.030969824051947183,
+        0.35356187728309973
+      ],
+      "optimized_abs_CHSH": 2.181743816819661,
+      "optimizer_converged": false
+    },
+    "0.94": {
+      "displacements_real_imag": [
+        -0.13863794034158058,
+        -0.09906009783481944,
+        0.47460138981014355,
+        0.33910948572482635,
+        -0.1386398645024865,
+        -0.09905998567310087,
+        0.47459995005700634,
+        0.33910929547038576
+      ],
+      "mean_displacement_photons_each": [
+        0.029033381485199655,
+        0.34024172251827606,
+        0.029033892790822767,
+        0.34024022686853433
+      ],
+      "optimized_abs_CHSH": 2.262613892964367,
+      "optimizer_converged": false
+    },
+    "0.96": {
+      "displacements_real_imag": [
+        0.16504744560439824,
+        -0.0070765129112050585,
+        -0.5720839082167364,
+        0.02452942433180125,
+        0.16504738719740591,
+        -0.007076657425228076,
+        -0.5720828206892825,
+        0.02452891087204265
+      ],
+      "mean_displacement_photons_each": [
+        0.027290736335519247,
+        0.32788169069858486,
+        0.02729071910100446,
+        0.32788042119637434
+      ],
+      "optimized_abs_CHSH": 2.343776765924145,
+      "optimizer_converged": true
+    }
+  },
+  "nominal_all_vacuum_oriented_CHSH": -1.4039182814854454,
+  "nominal_dark_count_mean": 0.0001,
+  "nominal_detector_efficiency": 0.86,
+  "nominal_no_source_loss_CHSH": 2.021789902796233,
+  "nominal_relative_coherence": 0.92,
+  "pessimistic_scenario": {
+    "coherence": 0.91,
+    "dark_counts": 0.0002,
+    "source_survival": 0.98
+  },
+  "scope": "Thresholds are numerical sufficient crossings for the explicitly optimized displaced on/off protocol at fixed source, phase and dark assumptions. Multiple seeds check local optimizer reliability but cannot prove global optical optimality or demonstrate actual experimental device capabilities. A single signal photon plus coherent LO resource is not a total one-photon apparatus. Full event-ready loopholes and spacelike station clocks remain unmeasured.",
+  "sources": [
+    "https://arxiv.org/abs/2607.29012",
+    "https://doi.org/10.1103/PhysRevA.88.012111"
+  ],
+  "status": "PASS_ONOFF_SINGLE_PHOTON_SOURCE_AND_DETECTOR_THRESHOLDS"
+}

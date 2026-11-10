@@ -23,7 +23,7 @@ def fi_per_launch(K,theta,edges,roots):
     amps=inputs@KD.T
     click=np.abs(amps)**2
     p=np.column_stack([click,1-click.sum(axis=1)])
-    phase_diff=(2*np.real(np.conj(amps)[:,:,None]*(1j*inputs[:,None,:]*KD.T[None,:,:])))
+    phase_diff=(2*np.real(np.conj(amps)[:,:,None]*(1j*inputs[:,None,:]*KD[None,:,:])))
     deriv=np.concatenate([phase_diff,-phase_diff.sum(axis=1,keepdims=True)],axis=1)
     assert deriv.shape==(len(inputs),10,9)
     assert np.min(p)>-1e-10

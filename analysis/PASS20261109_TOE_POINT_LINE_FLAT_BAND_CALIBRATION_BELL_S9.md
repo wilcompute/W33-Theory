@@ -1,6 +1,8 @@
 # W33/TOE: five rigorous continuation fronts and an 80-mode symmetry no-go
 
-**Research date:** 2026-11-09 (US Eastern); corresponding remote UTC logs can fall on Nov 10. **Source:** latest wilcompute/W33-Theory master plus established quantum optics and DES Y6 publications. **Reproducibility:** four new Python producers, one fresh official-data audit, five frozen JSON results, eleven regression tests. No physical TOE validation is claimed.
+**Research date:** 2026-11-09 (US Eastern); corresponding remote UTC logs can fall on Nov 10.
+
+**Correction / audit addendum (2026-11-09):** A later independent finite-difference test uncovered a transposed output/input tensor index in the Fisher derivative of `analysis/w33_20261109_phase_fisher_information.py`. Its original numerical A-optimal ratios (mean 1.3693) were INVALID. The producer, matching frozen JSON and the ratios in Section 2 were corrected to the proper derivative (mean 3.2526) and cross-validated against an independent joint multinomial likelihood derivative, both analytic and finite difference. The qualitative dense-pair advantage persists, but the previous numbers must not be cited. New permanent regression: `tests/test_w33_20261109_seven_physics_fronts.py`. **Source:** latest wilcompute/W33-Theory master plus established quantum optics and DES Y6 publications. **Reproducibility:** four new Python producers, one fresh official-data audit, five frozen JSON results, eleven regression tests. No physical TOE validation is claimed.
 
 This round deliberately examines what finite geometry genuinely determines and which photonic tests are experimentally feasible, rather than assigning physics to numerical coincidences.
 
@@ -53,9 +55,9 @@ One gauge root per disconnected support component is removed; only physically ob
 
 All ten contexts have positive nonsingular Fisher matrices on their gauge-fixed phase coordinates. The trace of the inverse Fisher matrix (A-optimal local phase variance lower bound) for the minimal tree divided by the redundant-pair design is:
 
-    [2.427,1.238,1.295,1.137,1.242,1.558,1.124,1.194,1.144,1.336];
+    [2.60417,3.64583,1.75000,3.29861,2.95139,1.16667,5.38194,4.16667,2.32188,5.23882];
 
-mean **1.3693**. Redundant pairs improve the local asymptotic variance in every tested context despite the extra configurations. But this is a **local Cramér–Rao lower bound**, not a rigorous finite-count calibration radius, a device-independent source calibration, or a proof that the dense design is globally optimal.
+mean **3.2526**. Redundant pairs improve the local asymptotic variance in every tested context despite the extra configurations. But this is a **local Cramér–Rao lower bound**, not a rigorous finite-count calibration radius, a device-independent source calibration, or a proof that the dense design is globally optimal.
 
 Producer: analysis/w33_20261109_phase_fisher_information.py
 

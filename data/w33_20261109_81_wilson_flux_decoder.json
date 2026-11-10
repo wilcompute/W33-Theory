@@ -1,0 +1,20 @@
+{
+  "canonical_reconstructed_twisted_incidence_max_error": 7.021666937153402e-16,
+  "cycle_matrix_times_gradient_transpose_zero": true,
+  "cycle_rank": 81,
+  "exact_81_by_81_chord_syndrome_submatrix": "signed diagonal with \u00b11 entries",
+  "generic_flux_independent_nonzero_chords": 81,
+  "interpretation": "Every 160-element U1 edge configuration on connected W33 Levi graph has 79 removable gauge degrees and 81 physically gauge-invariant chord fluxes. All 81 vanish iff phase assignment is vertex gauge (mod 2pi), which preserves W33 rank25/30 dark modes. A nonzero flux does not automatically lift all 30 but can do so; generic independent phases have full rank in the companion experiment.",
+  "native_80_vertex_160_edge_incidence": {
+    "links": 160,
+    "off_tree_chords": 81,
+    "spanning_tree_links": 79,
+    "vertices": 80
+  },
+  "prior_art": "Graph cycle space/homology rank 81 and 1620 minimal W33 octagons already documented in repo. This executable constructive decoder is a native-geometry witness, not a novel continuum field theory.",
+  "pure_gauge_residual_max_abs_radians": 8.881784197001252e-16,
+  "scope": "A purely finite U(1) tight-binding gauge model with exact phases. Real experiments must estimate Wilson loop phases with uncertainty and account for losses, nonuniform hopping, source preparation and detector imperfections. No physical gauge coupling constant, spacetime continuum or dynamical gauge equations derived.",
+  "status": "PASS_W33_81_INDEPENDENT_WILSON_SYNDROME_GAUGE_DECODER",
+  "under_vertex_rephasing_canonical_chord_residual_max_error": 1.3322676295501878e-15,
+  "vertex_edge_boundary_rank": 79
+}
