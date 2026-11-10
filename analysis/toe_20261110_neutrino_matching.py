@@ -169,7 +169,7 @@ def coefficient(vectors, x, dual, y, adjoint, records, specification):
     return total
 
 
-def matching_data():
+def matching_data(*, include_down_higgs=False):
     gauge, adjoint, _, color, weak, y = flat.compact_chart()
     records = flat.vacuum.native.build_records()
     x, dual, _, fundamental, spaces, quadratic = flavor.projected_space(
@@ -196,8 +196,13 @@ def matching_data():
     down = spaces[tuple(plus)]
     hu, = spaces[tuple(minus)]
     h_row = sp.Matrix([previous['completion']['down_higgs_covector']])
-    leptons = [sum((v * c for v, c in zip(down, mix)), np.zeros(483, dtype=object))
-               for mix in h_row.nullspace()]
+    combinations = h_row.nullspace()
+    if include_down_higgs:
+        higgs, = sp.Matrix(previous['completion']['lepton_covectors']).nullspace()
+        assert (h_row * higgs)[0] != 0
+        combinations.append(higgs)
+    doublets = [sum((v * c for v, c in zip(down, mix)), np.zeros(483, dtype=object))
+                for mix in combinations]
     q, u = (spaces[tuple(fundamental[i])][0] for i in (9, 7))
     assert coefficient([q, u, hu], *args) == previous['completion']['up_matrix'][0][0]
     # Replay one nonzero Hessian entry from each tested field-sector pair.
@@ -209,10 +214,10 @@ def matching_data():
         i, j = np.argwhere(hessian[left, right])[0]
         i, j = int(i) + left.start, int(j) + right.start
         assert coefficient([units[i], units[j]], *args) == hessian[i, j]
-    return args, hessian, orbit, weights, leptons, hu
+    return args, hessian, orbit, weights, doublets, hu
 
 
-def neutral_matching(args, hessian, orbit, weights, leptons, hu):
+def neutral_matching(args, hessian, orbit, weights, doublets, hu):
     cols = np.flatnonzero(~weights.any(axis=1))
     mass = sp.Matrix(hessian[np.ix_(cols, cols)])
     assert mass.rows == 38 and mass.rank() == 26
@@ -221,14 +226,18 @@ def neutral_matching(args, hessian, orbit, weights, leptons, hu):
     for index in cols:
         unit = np.zeros(483, dtype=object)
         unit[index] = 1
-        sources.append([coefficient([lepton, hu, unit], *args) for lepton in leptons])
+        sources.append([coefficient([doublet, hu, unit], *args) for doublet in doublets])
     source = sp.Matrix(sources)
-    assert source.rank() == 3
-    assert sp.Matrix(orbit[:, cols]) * source == sp.zeros(len(orbit), 3)
+    size = len(doublets)
+    assert sp.Matrix(orbit[:, cols]) * source == sp.zeros(len(orbit), size)
     solution = mass.gauss_jordan_solve(source)[0]
     exchange = -source.T * solution
     assert not exchange.free_symbols
-    direct = sp.Matrix(3, 3, lambda i, j: coefficient([leptons[i], hu, leptons[j], hu], *args) / sp.Integer(2))
+    direct = sp.zeros(size)
+    for i in range(size):
+        for j in range(i, size):
+            value = coefficient([doublets[i], hu, doublets[j], hu], *args) / sp.Integer(2)
+            direct[i, j] = direct[j, i] = value
     kappa = direct + exchange
     assert kappa == kappa.T
     return mass, source, direct, exchange, kappa, cols, solution
@@ -245,6 +254,13 @@ def inertia_count(matrix):
     return sum(bool(value > 0) for value in pivots)
 
 
+def quotient_metric(representatives, orbit_vectors, metric):
+    basis = sp.Matrix.vstack(*orbit_vectors.rowspace())
+    coupling = basis * metric * representatives
+    return (representatives.T * metric * representatives
+            - coupling.T * (basis * metric * basis.T).inv() * coupling)
+
+
 def kinetic_comparison(adjoint, orbit, weights, leptons, kappa):
     """Bound the mass hierarchy for any positive adjoint kinetic scale."""
     cols = np.flatnonzero((weights == [0, 0, 1, -3]).all(axis=1))
@@ -256,16 +272,11 @@ def kinetic_comparison(adjoint, orbit, weights, leptons, kappa):
     lift = representatives[matter, :]
     assert representatives[len(matter):, :] == sp.zeros(len(adjoint_cols), 3)
 
-    def quotient(v, orbit_vectors, metric):
-        basis = sp.Matrix.vstack(*orbit_vectors.rowspace())
-        coupling = basis * metric * v
-        return v.T * metric * v - coupling.T * (basis * metric * basis.T).inv() * coupling
-
-    lower = quotient(lift, orbit[:, matter], sp.eye(len(matter)))
+    lower = quotient_metric(lift, orbit[:, matter], sp.eye(len(matter)))
     upper = lift.T * lift
     generators = adjoint[adjoint_cols].reshape(len(adjoint_cols), -1)
     unit_metric = sp.diag(sp.eye(len(matter)), sp.Matrix(generators @ generators.T))
-    unit = quotient(representatives, orbit, unit_metric)
+    unit = quotient_metric(representatives, orbit, unit_metric)
     positive_mass = -kappa
     assert positive_mass.is_positive_definite and lower.is_positive_definite
     for target in (270 * lower - positive_mass, 48000 * upper - positive_mass):
@@ -302,6 +313,7 @@ def single_coupling_bracket(kappa, currents, alignment, gram):
 def calculate():
     data = matching_data()
     mass, source, direct, exchange, kappa, cols, solution = neutral_matching(*data)
+    assert source.rank() == 3
     x, dual, y, adjoint, *_ = data[0]
     leptons, hu = data[-2:]
     gradients = np.zeros((483, 3), dtype=np.int64)
