@@ -1,0 +1,102 @@
+{
+  "confidence_calibration": {
+    "calibration_sufficient_for_CCNR_at_1e10_trials_each": false,
+    "effect_operator_error_radius_below_required_necessary_even_infinite_physics_shots": 0.00016482854156470207,
+    "phase_only_1e10_rigorous_radius_over_required": 88.98350430950822,
+    "phase_only_at_1e10_calibration_trials_each_rigorous_radius": 0.01466702123865262,
+    "true_oracle_dual_l1": 18.55742985551507
+  },
+  "gaussian_normal_quantile_one_sided": 1.6448536269514722,
+  "one_sided_type_I_alpha": 0.05,
+  "optical_architecture_sample_budgets": [
+    {
+      "architecture": "generic_9mode",
+      "optimistic_gaussian_known_witness_95pct_size_95pct_power_launched_photon_budget": 14046155,
+      "oracle_CCNR_CRLB_coefficient": 12.143487608436487,
+      "scenario": "harsh",
+      "source_click_survival_fraction": 0.9689883212538507
+    },
+    {
+      "architecture": "matched_12_product",
+      "optimistic_gaussian_known_witness_95pct_size_95pct_power_launched_photon_budget": 10858458,
+      "oracle_CCNR_CRLB_coefficient": 9.38759012400345,
+      "scenario": "harsh",
+      "source_click_survival_fraction": 0.976428829290162
+    },
+    {
+      "architecture": "permutation_Fourier",
+      "optimistic_gaussian_known_witness_95pct_size_95pct_power_launched_photon_budget": 12333912,
+      "oracle_CCNR_CRLB_coefficient": 10.663181915687828,
+      "scenario": "harsh",
+      "source_click_survival_fraction": 0.9656018353908412
+    },
+    {
+      "architecture": "two_CZ_local",
+      "optimistic_gaussian_known_witness_95pct_size_95pct_power_launched_photon_budget": 14866253,
+      "oracle_CCNR_CRLB_coefficient": 12.85249636322631,
+      "scenario": "harsh",
+      "source_click_survival_fraction": 0.9679635319048006
+    },
+    {
+      "architecture": "generic_9mode",
+      "optimistic_gaussian_known_witness_95pct_size_95pct_power_launched_photon_budget": 14122041,
+      "oracle_CCNR_CRLB_coefficient": 12.209093808184692,
+      "scenario": "ideal",
+      "source_click_survival_fraction": 1.0
+    },
+    {
+      "architecture": "matched_12_product",
+      "optimistic_gaussian_known_witness_95pct_size_95pct_power_launched_photon_budget": 10705188,
+      "oracle_CCNR_CRLB_coefficient": 9.255081655697113,
+      "scenario": "ideal",
+      "source_click_survival_fraction": 1.0
+    },
+    {
+      "architecture": "permutation_Fourier",
+      "optimistic_gaussian_known_witness_95pct_size_95pct_power_launched_photon_budget": 12235095,
+      "oracle_CCNR_CRLB_coefficient": 10.577750412658945,
+      "scenario": "ideal",
+      "source_click_survival_fraction": 1.0
+    },
+    {
+      "architecture": "two_CZ_local",
+      "optimistic_gaussian_known_witness_95pct_size_95pct_power_launched_photon_budget": 14862447,
+      "oracle_CCNR_CRLB_coefficient": 12.849206179239225,
+      "scenario": "ideal",
+      "source_click_survival_fraction": 1.0
+    },
+    {
+      "architecture": "generic_9mode",
+      "optimistic_gaussian_known_witness_95pct_size_95pct_power_launched_photon_budget": 14095357,
+      "oracle_CCNR_CRLB_coefficient": 12.186024540549782,
+      "scenario": "moderate",
+      "source_click_survival_fraction": 0.9917595981014786
+    },
+    {
+      "architecture": "matched_12_product",
+      "optimistic_gaussian_known_witness_95pct_size_95pct_power_launched_photon_budget": 10742855,
+      "oracle_CCNR_CRLB_coefficient": 9.28764647576835,
+      "scenario": "moderate",
+      "source_click_survival_fraction": 0.99397837702657
+    },
+    {
+      "architecture": "permutation_Fourier",
+      "optimistic_gaussian_known_witness_95pct_size_95pct_power_launched_photon_budget": 12248117,
+      "oracle_CCNR_CRLB_coefficient": 10.589008579646237,
+      "scenario": "moderate",
+      "source_click_survival_fraction": 0.9902792658483702
+    },
+    {
+      "architecture": "two_CZ_local",
+      "optimistic_gaussian_known_witness_95pct_size_95pct_power_launched_photon_budget": 14859902,
+      "oracle_CCNR_CRLB_coefficient": 12.84700579415376,
+      "scenario": "moderate",
+      "source_click_survival_fraction": 0.9916057658303421
+    }
+  ],
+  "required_nominal_power": 0.95,
+  "scope": "Fisher Cram\u00e9r-Rao supplies a MINIMUM optimistic asymptotic photon count if an unbiased efficient oracle-dual estimator exists. It is not an achievable sample-complexity result, not a finite-shot confidence certificate, ignores dual selection bias, stationary-source calibration uncertainty and unmodeled systematic errors. The effect calibration separately fails its necessary statistical gate. No lab result.",
+  "status": "PASS_OPTIMISTIC_ORACLE_FISHER_PPT_POWER_LEDGER_WITH_SYSTEMATICS_NO_GO",
+  "target": "mixed Horodecki PPT entangled two-qutrit rho(a=.236) via fixed oracle CCNR polar witness",
+  "true_CCN_norm_separability_excess": 0.0030587940982738093
+}

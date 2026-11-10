@@ -1,0 +1,100 @@
+{
+  "connected_components": 1,
+  "cycle_space_dimension_E_minus_V_plus_1": 81,
+  "edges": 160,
+  "exact_mathematical_claim": "Any 80-node bipartite W33 incidence network has 81 independent U(1) cycle phases. Vertex rephasings preserve rank25 and 30 zero modes. Changing k individual incidence entries increases rank by at most k, leaving >=max(0,30-2k) zero modes. The single nontrivial incidence edge change always raises rank to26 because both endpoint standard basis vectors have nonzero projections onto the left/right 15D kernels. The generic all-link phase assignment is full rank40, so flat-band degeneracy is not protected under unrestricted physical flux.",
+  "gauge_covariant_dark_projector_error": 2.177751704867561e-16,
+  "generic_nonzero_flux_rank": 40,
+  "generic_nonzero_flux_smallest_singular_value": 0.034854112967077217,
+  "independent_disjoint_edge_detuning_controls": [
+    {
+      "dark_zero_modes": 30,
+      "independently_detuned_edges": 0,
+      "matrix_rank": 25,
+      "rigorous_rank_upper_bound": 25,
+      "rigorous_zero_mode_lower_bound": 30,
+      "smallest_singular_value": 1.9178642674200363e-17
+    },
+    {
+      "dark_zero_modes": 28,
+      "independently_detuned_edges": 1,
+      "matrix_rank": 26,
+      "rigorous_rank_upper_bound": 26,
+      "rigorous_zero_mode_lower_bound": 28,
+      "smallest_singular_value": 1.1569156578460165e-17
+    },
+    {
+      "dark_zero_modes": 26,
+      "independently_detuned_edges": 2,
+      "matrix_rank": 27,
+      "rigorous_rank_upper_bound": 27,
+      "rigorous_zero_mode_lower_bound": 26,
+      "smallest_singular_value": 9.777241307136456e-17
+    },
+    {
+      "dark_zero_modes": 24,
+      "independently_detuned_edges": 3,
+      "matrix_rank": 28,
+      "rigorous_rank_upper_bound": 28,
+      "rigorous_zero_mode_lower_bound": 24,
+      "smallest_singular_value": 3.4377246993421426e-17
+    },
+    {
+      "dark_zero_modes": 22,
+      "independently_detuned_edges": 5,
+      "matrix_rank": 29,
+      "rigorous_rank_upper_bound": 30,
+      "rigorous_zero_mode_lower_bound": 20,
+      "smallest_singular_value": 4.56086228741958e-17
+    },
+    {
+      "dark_zero_modes": 16,
+      "independently_detuned_edges": 8,
+      "matrix_rank": 32,
+      "rigorous_rank_upper_bound": 33,
+      "rigorous_zero_mode_lower_bound": 14,
+      "smallest_singular_value": 6.97564057375436e-17
+    },
+    {
+      "dark_zero_modes": 12,
+      "independently_detuned_edges": 10,
+      "matrix_rank": 34,
+      "rigorous_rank_upper_bound": 35,
+      "rigorous_zero_mode_lower_bound": 10,
+      "smallest_singular_value": 4.5154197728161685e-17
+    },
+    {
+      "dark_zero_modes": 12,
+      "independently_detuned_edges": 12,
+      "matrix_rank": 34,
+      "rigorous_rank_upper_bound": 37,
+      "rigorous_zero_mode_lower_bound": 6,
+      "smallest_singular_value": 1.0770693084123941e-16
+    },
+    {
+      "dark_zero_modes": 8,
+      "independently_detuned_edges": 15,
+      "matrix_rank": 36,
+      "rigorous_rank_upper_bound": 40,
+      "rigorous_zero_mode_lower_bound": 0,
+      "smallest_singular_value": 9.392416317305368e-17
+    }
+  ],
+  "number_fundamental_Wilson_holonomies": 81,
+  "one_detuned_incidence_edge": [
+    0,
+    0
+  ],
+  "one_edge_chiral_zero_modes": 28,
+  "one_edge_phase": 0.6283185307179586,
+  "one_edge_rank": 26,
+  "pure_gauge_dark_mode_count": 30,
+  "pure_gauge_max_cycle_flux_abs": 8.881784197001252e-16,
+  "pure_gauge_spectrum_max_error": 8.881784197001252e-16,
+  "scope": "Finite chiral one-body tight-binding graph and U1 edge phase model only. Prior repo already established E\u2212V+1=81 and 1620 minimal 8-cycles. This test adds transparent rank/flux comparison with explicit symmetry hypotheses; neither a continuum chiral index nor a physical photon/gravity derivation.",
+  "shortest_incidence_cycle_edges": 8,
+  "single_edge_flux_gauge_invariance_max_error": 1.7763568394002505e-15,
+  "single_edge_number_nonzero_independent_Wilson_holonomies": 81,
+  "status": "PASS_W33_81_U1_FLUX_CYCLES_AND_RANK_FRAGILITY",
+  "vertices": 80
+}

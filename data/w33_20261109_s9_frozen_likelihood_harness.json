@@ -1,0 +1,94 @@
+{
+  "S9_real_survey_chi2_scored": false,
+  "analytic_nuisance_profile_vs_BFGS_max_difference_less_than": 1e-07,
+  "fail_closed_conditions": [
+    "verified unblinded full Y6 FITS actual bytes & official hash",
+    "covariance/correlation function bin order, photometric redshift and exact cuts",
+    "corrected nonlinear predictions for each frozen model",
+    "matched nuisance priors and refitted likelihood for CPL,fading c<0,c>0,LCDM"
+  ],
+  "frozen_S9_date": "2026-11-08",
+  "frozen_claim_sha256": "70951becb3bfe08644e11c56c6cf5939b8970b554810665f5fc60bd6525173da",
+  "frozen_scale_cuts": {
+    "xi_minus_arcmin_strict_gt": 60,
+    "xi_plus_arcmin_strict_gt": 10
+  },
+  "live_endpoint_get": {
+    "former_unblinded_FITS": {
+      "complete_bytes_downloaded": 0,
+      "content_type": "text/html",
+      "final_host": "desdr-server.ncsa.illinois.edu",
+      "full_checksum_verified": false,
+      "reported_content_length": "146",
+      "status_code": 404
+    },
+    "official_release_app": {
+      "complete_bytes_downloaded": 0,
+      "content_type": "text/html; charset=UTF-8",
+      "final_host": "des.ncsa.illinois.edu",
+      "full_checksum_verified": false,
+      "reported_content_length": "998",
+      "status_code": 200
+    }
+  },
+  "matched_real_covariance_and_nz_acquired": false,
+  "negative_controls_rejected": [
+    "permuted theory bin labels",
+    "permuted covariance bin labels",
+    "indefinite covariance"
+  ],
+  "patched_CLASS_Halofit_model_predictions_and_nuisance_refits_executed": false,
+  "scope": "This is only a statistical pipeline unit test against a synthetic data vector; the preregistered S9 comparison is not evaluated. An official web HTML page or a conditional LambdaCDM S8 posterior is not valid substitute data.",
+  "status": "PASS_S9_PREREG_GAUSSIAN_LIKELIHOOD_SYNTHETIC_VALIDATION_ONLY",
+  "synthetic_bin_covariance_joint_permutation_invariance_error": 4.440892098500626e-16,
+  "synthetic_profile_scores_NOT_DES": {
+    "synthetic_CPL": {
+      "best_synthetic_nuisance": [
+        -0.0960983002131887,
+        -0.16934857826866423
+      ],
+      "synthetic_profile_chi2": 1.1858300460627986
+    },
+    "synthetic_LCDM": {
+      "best_synthetic_nuisance": [
+        -0.002225231810902311,
+        -0.35640146523699523
+      ],
+      "synthetic_profile_chi2": 3.0000837250714762
+    },
+    "synthetic_fading_cneg": {
+      "best_synthetic_nuisance": [
+        -0.00664004350551485,
+        -0.49803826771640103
+      ],
+      "synthetic_profile_chi2": 2.99988255694175
+    },
+    "synthetic_fading_cpos": {
+      "best_synthetic_nuisance": [
+        0.0030725422226326976,
+        -0.18643730226170815
+      ],
+      "synthetic_profile_chi2": 4.60378306677782
+    }
+  },
+  "synthetic_source": {
+    "all_bins": 8,
+    "independent_test_models": [
+      "synthetic_LCDM",
+      "synthetic_CPL",
+      "synthetic_fading_cneg",
+      "synthetic_fading_cpos"
+    ],
+    "kept_bins": 6,
+    "kept_indices": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7
+    ],
+    "nuisance_prior": "2D Gaussian synthetic, NOT calibrated DES NLA"
+  },
+  "unblinded_DES_Y6_real_fits_complete_and_verified": false
+}

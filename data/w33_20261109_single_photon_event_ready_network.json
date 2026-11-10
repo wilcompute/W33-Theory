@@ -1,0 +1,110 @@
+{
+  "additional_phase_reference_resource_ledger": {
+    "example_local_oscillator_mean_photons_each": 10000,
+    "needs_two_coherent_local_ancilla_resources": true,
+    "phase_stability_and_ancilla_bell_loopholes_not_verified": true,
+    "signal_source_photons_per_trial": 1,
+    "total_reference_mean_photons_per_trial": 20000
+  },
+  "detector_model_limit": "Per-party detection efficiencies, photon-number resolution, dark counts, local oscillator shot noise and heralding are NOT included in eta; no claim of loophole-free Bell test.",
+  "expected_CHSH_formula": "S=2*sqrt(2)*eta*gamma for these fixed measurements",
+  "expected_signal_eta_phase_grid": [
+    {
+      "idealised_Hoeffding_trials_for_expected_margin": null,
+      "quantum_CHSH": 1.7465537495307721,
+      "quantum_CHSH_above_local_bound": false,
+      "relative_phase_coherence": 0.95,
+      "signal_photon_survival": 0.65
+    },
+    {
+      "idealised_Hoeffding_trials_for_expected_margin": 411972,
+      "quantum_CHSH": 2.01525432638166,
+      "quantum_CHSH_above_local_bound": true,
+      "relative_phase_coherence": 0.95,
+      "signal_photon_survival": 0.75
+    },
+    {
+      "idealised_Hoeffding_trials_for_expected_margin": null,
+      "quantum_CHSH": 1.7819090885900997,
+      "quantum_CHSH_above_local_bound": false,
+      "relative_phase_coherence": 0.7,
+      "signal_photon_survival": 0.9
+    },
+    {
+      "idealised_Hoeffding_trials_for_expected_margin": 548,
+      "quantum_CHSH": 2.4183051916579923,
+      "quantum_CHSH_above_local_bound": true,
+      "relative_phase_coherence": 0.95,
+      "signal_photon_survival": 0.9
+    },
+    {
+      "idealised_Hoeffding_trials_for_expected_margin": 314,
+      "quantum_CHSH": 2.5526554800834362,
+      "quantum_CHSH_above_local_bound": true,
+      "relative_phase_coherence": 0.95,
+      "signal_photon_survival": 0.95
+    },
+    {
+      "idealised_Hoeffding_trials_for_expected_margin": null,
+      "quantum_CHSH": 0.0,
+      "quantum_CHSH_above_local_bound": false,
+      "relative_phase_coherence": 0,
+      "signal_photon_survival": 0.95
+    }
+  ],
+  "falsification": "Inside one lab internal-DOF CHSH does not establish causal separation. Without a coherent reference, this fixed X/Y protocol cannot be implemented on number-superselected local Fock spaces; added coherent ancillas carry extra optical photons and reference-frame assumptions.",
+  "ideal_phase_coherent_signal_survival_threshold": 0.7071067811865475,
+  "measurement_observables": "Local sigma_X / sigma_Y in vacuum\u2013one-photon Fock qubit basis; B0=(X+Y)/sqrt2, B1=(X-Y)/sqrt2",
+  "mode_state": "( |10>_AB+|01>_AB )/sqrt(2) with one signal photon",
+  "no_phase_reference_negative_control": {
+    "certified_lower": -0.03898662644089579,
+    "max_single_trial_score_abs": 4.0,
+    "no_postselection_on_remote_clicks": true,
+    "observed_synthetic_CHSH": 0.0048,
+    "one_sided_95pct_Hoeffding_halfwidth": 0.04378662644089579,
+    "settings_histogram": [
+      12462,
+      12408,
+      12532,
+      12598
+    ],
+    "synthetic_rejects_CHSH_local_bound": false,
+    "trials": 50000,
+    "true_CHSH": 0.0
+  },
+  "one_realized_synthetic_IID_CHSH_50k": {
+    "certified_lower": 2.499413373559104,
+    "max_single_trial_score_abs": 4.0,
+    "no_postselection_on_remote_clicks": true,
+    "observed_synthetic_CHSH": 2.5432,
+    "one_sided_95pct_Hoeffding_halfwidth": 0.04378662644089579,
+    "settings_histogram": [
+      12593,
+      12487,
+      12274,
+      12646
+    ],
+    "synthetic_rejects_CHSH_local_bound": true,
+    "trials": 50000,
+    "true_CHSH": 2.5526554800834367
+  },
+  "source_loss_channel": "rho=eta*dephased_PsiPlus(gamma)+(1-eta)|00><00|, not two independent-party Bernoulli losses",
+  "source_prior_art": [
+    "https://doi.org/10.1103/PhysRevA.88.012111",
+    "https://doi.org/10.1103/PhysRevLett.92.180401",
+    "https://www.nist.gov/publications/strong-loophole-free-test-local-realism"
+  ],
+  "status": "PASS_CAUSAL_SINGLE_PHOTON_BELL_PHASE_REFERENCE_AND_TRIAL_LEDGER",
+  "two_party_spacelike_proposal": {
+    "all_times_are_design_targets_not_measured": true,
+    "clock_uncertainty_ns": 5.0,
+    "detection_and_readout_ns": 40.0,
+    "extra_safety_buffer_ns": 20.0,
+    "independent_RNG_setting_ns": 12.0,
+    "light_travel_ns": 333.564095198152,
+    "local_setting_to_record_padded_ns": 107.0,
+    "local_switching_ns": 30.0,
+    "minimum_cross_site_spacelike_margin_ns": 226.56409519815202,
+    "separation_m": 100.0
+  }
+}

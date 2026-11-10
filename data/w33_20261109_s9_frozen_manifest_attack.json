@@ -1,0 +1,123 @@
+{
+  "corrected_four_model_nuisance_fits_executed_on_DES_Y6": false,
+  "deliberately_invalid_evidence_manifests_rejected": {
+    "empty_manifest": [
+      "not full xi+ xi- survey correlation vector",
+      "file URL outside official DES data hosts",
+      "no independently authenticated publisher digest",
+      "missing publisher full SHA256",
+      "full downloaded FITS absent",
+      "missing matched_covariance_nz",
+      "missing corrected_CLASS_Halofit_scf_model",
+      "missing NLA_no_baryons",
+      "missing full_nuisance_profiled_each_model",
+      "angular scale cuts differ from freeze",
+      "frozen competing theory model set mismatch",
+      "data/covariance/model vector index mismatch"
+    ],
+    "fabricated_fits_header_only": [
+      "no independently authenticated publisher digest",
+      "full downloaded FITS absent",
+      "missing matched_covariance_nz",
+      "missing corrected_CLASS_Halofit_scf_model",
+      "missing NLA_no_baryons",
+      "missing full_nuisance_profiled_each_model",
+      "angular scale cuts differ from freeze",
+      "frozen competing theory model set mismatch",
+      "data/covariance/model vector index mismatch"
+    ],
+    "publisher_web_paper_masquerade": [
+      "not full xi+ xi- survey correlation vector",
+      "file URL outside official DES data hosts",
+      "no independently authenticated publisher digest",
+      "missing publisher full SHA256",
+      "full downloaded FITS absent",
+      "missing matched_covariance_nz",
+      "missing corrected_CLASS_Halofit_scf_model",
+      "missing NLA_no_baryons",
+      "missing full_nuisance_profiled_each_model",
+      "angular scale cuts differ from freeze",
+      "frozen competing theory model set mismatch",
+      "data/covariance/model vector index mismatch"
+    ],
+    "unverifiable_local_path": [
+      "not full xi+ xi- survey correlation vector",
+      "file URL outside official DES data hosts",
+      "no independently authenticated publisher digest",
+      "full downloaded FITS absent",
+      "missing matched_covariance_nz",
+      "missing corrected_CLASS_Halofit_scf_model",
+      "missing NLA_no_baryons",
+      "missing full_nuisance_profiled_each_model",
+      "angular scale cuts differ from freeze",
+      "frozen competing theory model set mismatch",
+      "data/covariance/model vector index mismatch"
+    ],
+    "wrong_scales_and_model_list": [
+      "not full xi+ xi- survey correlation vector",
+      "file URL outside official DES data hosts",
+      "no independently authenticated publisher digest",
+      "missing publisher full SHA256",
+      "full downloaded FITS absent",
+      "missing matched_covariance_nz",
+      "missing corrected_CLASS_Halofit_scf_model",
+      "missing NLA_no_baryons",
+      "missing full_nuisance_profiled_each_model",
+      "angular scale cuts differ from freeze",
+      "frozen competing theory model set mismatch",
+      "data/covariance/model vector index mismatch"
+    ]
+  },
+  "frozen_claim_sha256": "70951becb3bfe08644e11c56c6cf5939b8970b554810665f5fc60bd6525173da",
+  "frozen_date": "2026-11-08",
+  "independent_publisher_SHA256_and_full_FITS": false,
+  "prereg_directives": {
+    "intrinsic_alignment": "NLA no baryons; refit every model's nuisance parameters",
+    "models": [
+      "LCDM",
+      "CPL",
+      "fading_c_negative",
+      "fading_c_positive"
+    ],
+    "nonlinear": "CLASS Halofit scalar field patch required",
+    "strict_xi_minus_gt_arcmin": 60,
+    "strict_xi_plus_gt_arcmin": 10
+  },
+  "public_archive_html_direct_links": {
+    "https://des.ncsa.illinois.edu/releases/y6a2": [],
+    "https://desdr-server.ncsa.illinois.edu/despublic/y6a2_files/": [],
+    "https://desdr-server.ncsa.illinois.edu/despublic/y6a2_files/y6key_products/": []
+  },
+  "public_archive_probe": {
+    "https://des.ncsa.illinois.edu/releases/y6a2": {
+      "content_length_header": "998",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://des.ncsa.illinois.edu/releases/y6a2",
+      "fully_downloaded": false,
+      "html_bytes_inspected": 998,
+      "status_code": 200,
+      "text_is_html": true
+    },
+    "https://desdr-server.ncsa.illinois.edu/despublic/y6a2_files/": {
+      "content_length_header": "1562",
+      "content_type": "text/html",
+      "final_url": "https://desdr-server.ncsa.illinois.edu/despublic/y6a2_files/",
+      "fully_downloaded": false,
+      "html_bytes_inspected": 1562,
+      "status_code": 200,
+      "text_is_html": true
+    },
+    "https://desdr-server.ncsa.illinois.edu/despublic/y6a2_files/y6key_products/": {
+      "content_length_header": "808",
+      "content_type": "application/octet-stream",
+      "final_url": "https://desdr-server.ncsa.illinois.edu/despublic/y6a2_files/y6key_products/",
+      "fully_downloaded": false,
+      "html_bytes_inspected": 808,
+      "status_code": 200,
+      "text_is_html": true
+    }
+  },
+  "real_S9_Delta_chi2_scored": false,
+  "scope": "The provenance gate deliberately refuses to infer data availability from HTTP 200, a printed published S8 posterior, or a first FITS card. This is a security/identifiability unit test, not a new cosmology result. Even an all-true user-supplied manifest would not prove an independent publisher digest; authenticated release metadata and real bytes must be established outside it. No official model comparison was computed.",
+  "status": "PASS_S9_STRICT_FROZEN_SOURCE_SHA256_AND_FIVE_FAIL_CLOSED_ATTACKS"
+}

@@ -1,0 +1,99 @@
+{
+  "calibration_probe_count_per_setting": [
+    25,
+    25,
+    21,
+    25,
+    25,
+    21,
+    25,
+    25,
+    25,
+    25
+  ],
+  "exact_expected_full_POVM_effect_reconstruction_error": 3.901131578512596e-16,
+  "finite_trials": {
+    "10000": {
+      "launched_trials_per_probe_context": 10000,
+      "max_frequency_Hoeffding_radius": 0.023992629560940407,
+      "observed_max_effect_operator_error": 0.05730621596501086,
+      "simultaneous_95pct_effect_error_bound_conditioned_on_model": 2.0,
+      "smallest_selected_edge_interference_amplitude": 0.11111111111111115,
+      "total_trusted_calibration_pulses": 2420000
+    },
+    "1000000": {
+      "launched_trials_per_probe_context": 1000000,
+      "max_frequency_Hoeffding_radius": 0.0023992629560940404,
+      "observed_max_effect_operator_error": 0.004559578796594934,
+      "simultaneous_95pct_effect_error_bound_conditioned_on_model": 1.561154238663323,
+      "smallest_selected_edge_interference_amplitude": 0.11111111111111115,
+      "total_trusted_calibration_pulses": 242000000
+    },
+    "100000000": {
+      "launched_trials_per_probe_context": 100000000,
+      "max_frequency_Hoeffding_radius": 0.00023992629560940407,
+      "observed_max_effect_operator_error": 0.0003961175675851798,
+      "simultaneous_95pct_effect_error_bound_conditioned_on_model": 0.1474813795840255,
+      "smallest_selected_edge_interference_amplitude": 0.11111111111111115,
+      "total_trusted_calibration_pulses": 24200000000
+    },
+    "10000000000": {
+      "launched_trials_per_probe_context": 10000000000,
+      "max_frequency_Hoeffding_radius": 2.3992629560940407e-05,
+      "observed_max_effect_operator_error": 5.422584441180474e-05,
+      "simultaneous_95pct_effect_error_bound_conditioned_on_model": 0.01466702123865262,
+      "smallest_selected_edge_interference_amplitude": 0.11111111111111115,
+      "total_trusted_calibration_pulses": 2420000000000
+    }
+  },
+  "forest_edges_per_setting": [
+    8,
+    8,
+    6,
+    8,
+    8,
+    6,
+    8,
+    8,
+    8,
+    8
+  ],
+  "heldout_model_falsifier": {
+    "basis_only_independent_sample_count_per_input": 100000,
+    "basis_only_model_rejected_at_95pct_simultaneous_confidence": true,
+    "basis_only_sampled_95pct_falsifier_threshold": 0.006398706558533608,
+    "basis_only_sampled_max_probability_deviation": 0.03196517352540351,
+    "exact_max_heldout_outcome_probability_residual": 0.032956464187157364,
+    "heldout_note": "Heldout discrepancy uses exact expected frequencies, not a sampled 95% fitted-model test",
+    "heldout_superposition_probe_count": 28,
+    "heldout_trial_count_per_probe": 100000,
+    "two_simultaneous_95pct_Hoeffding_radii": 0.013655525663469118,
+    "unknown_coherent_crosstalk_rotation_opnorm_parameter": 0.09,
+    "unmodeled_crosstalk_expected_frequency_heldout_screen": true
+  },
+  "known_transfer_assumption": "Kactual=Kcal@diag(e^{i theta_j}); exact Kcal including loss known, only unknown input phases. Per-component common phases are gauge and cannot be estimated.",
+  "model_free_81probe_effect_radius_comparator": {
+    "10000": 0.6092114491267815,
+    "1000000": 0.06092114491267815,
+    "100000000": 0.0060921144912678155,
+    "10000000000": 0.0006092114491267815
+  },
+  "modes_per_setting": 9,
+  "number_of_settings": 10,
+  "priority": "Standard phase interferometric calibration; novel only in repo-specific application of observable spanning forest to the W33 Bell optical construction.",
+  "scope": "Rigorous finite-shot phase estimate only when model true, Kcal itself known, all trials count click/no-click and trusted probes. Under unmodeled crosstalk or drift the bounds are invalid; heldout falsifier can detect some (not all) such failures. Does not establish device independent or experimentally affordable PPT entanglement certification.",
+  "status": "PASS_STRUCTURED_PHASE_FOREST_CALIBRATION_WITH_MODEL_FALSIFIER",
+  "support_graph_connected_components_per_setting": [
+    1,
+    1,
+    3,
+    1,
+    1,
+    3,
+    1,
+    1,
+    1,
+    1
+  ],
+  "total_calibration_probes_per_full_cycle": 242
+}

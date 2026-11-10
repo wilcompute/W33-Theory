@@ -1,0 +1,222 @@
+{
+  "caveats": "Numerical optimizers are locally validated only; no global CHSH optimum theorem. Phase coherence lumps source and LO mode overlap. Detector efficiency is *local* on/off detection, src is independent source loss. No event-ready heralding implementation, independently calibrated time windows, causal spacelike device, measured dark counts or finite local-oscillator technical noise. No laboratory Bell claim.",
+  "literature_and_scope": [
+    "https://arxiv.org/abs/2607.29012",
+    "https://doi.org/10.1103/PhysRevA.88.012111",
+    "https://dakic.univie.ac.at/details/news/testing-single-photon-entanglement-using-self-referential-measurements/"
+  ],
+  "minimum_local_oscillator_mean_photons_for_displacement_at_each_setting": {
+    "high_eff": [
+      3.1424892670546956,
+      34.50623798688392,
+      3.141249104007017,
+      34.504148834266616
+    ],
+    "ideal": [
+      2.734132726738625,
+      31.687212635111926,
+      2.732310861330338,
+      31.694763469475234
+    ],
+    "phase_randomized": [
+      391.99999999999994,
+      3.032057784891005e-14,
+      391.99999999999994,
+      2.2302615872123353e-14
+    ],
+    "realistic_2026_telecom_proxy": [
+      5.473211204927127,
+      40.353413174652815,
+      5.473236557757482,
+      40.353449238268254
+    ],
+    "source_and_detector_loss": [
+      23.600357565562128,
+      50.60377690326949,
+      23.606608845808456,
+      50.60293156923798
+    ]
+  },
+  "one_realized_all_trial_ideal_case": {
+    "certificate_passes_no_postselection": true,
+    "confidence_lower": 2.6620797794374433,
+    "detector_model": "on/off with dark events: four joint outcomes including both no-click",
+    "observed_all_trials_CHSH": 2.68736,
+    "one_sided_95pct_Hoeffding_halfwidth": 0.025280220562556768,
+    "trials": 150000
+  },
+  "optimized_cases": {
+    "high_eff": {
+      "CHSH": 2.477115953280888,
+      "converged": true,
+      "correlations": [
+        -0.6911681104440159,
+        -0.6753495930015285,
+        -0.67529338402654,
+        0.4353048658088031
+      ],
+      "detector_efficiency": 0.95,
+      "displacements_real_imag": [
+        0.041029906463461434,
+        0.17245706551529444,
+        -0.13583936698458318,
+        -0.5714980719530617,
+        0.04096548218550735,
+        0.17243642396367145,
+        -0.1358703109251875,
+        -0.571472437613363
+      ],
+      "global_source_survival": 1.0,
+      "mean_dark_counts_per_trial": 1e-05,
+      "mean_displaced_photons_per_local_setting": [
+        0.031424892670546954,
+        0.3450623798688392,
+        0.03141249104007017,
+        0.3450414883426662
+      ],
+      "optimizer_objective": -2.477115953280888,
+      "relative_phase_or_mode_coherence": 1.0,
+      "signed_CHSH": -2.477115953280888
+    },
+    "ideal": {
+      "CHSH": 2.688398638248348,
+      "converged": false,
+      "correlations": [
+        -0.7922406677660461,
+        -0.7347457154023375,
+        -0.7347561126937242,
+        0.42665614238624017
+      ],
+      "detector_efficiency": 1.0,
+      "displacements_real_imag": [
+        -0.052668959403556315,
+        -0.15673961842091103,
+        0.1792171618107195,
+        0.5336228399006452,
+        -0.052608515122232156,
+        -0.1567017956181015,
+        0.17926527243810567,
+        0.5336774276587348
+      ],
+      "global_source_survival": 1.0,
+      "mean_dark_counts_per_trial": 0.0,
+      "mean_displaced_photons_per_local_setting": [
+        0.02734132726738625,
+        0.3168721263511193,
+        0.027323108613303383,
+        0.31694763469475234
+      ],
+      "optimizer_objective": -2.688398638248348,
+      "relative_phase_or_mode_coherence": 1.0,
+      "signed_CHSH": -2.688398638248348
+    },
+    "phase_randomized": {
+      "CHSH": 1.7166408708474183,
+      "converged": false,
+      "correlations": [
+        0.7868896107350649,
+        0.014884130023677278,
+        0.014884130023677278,
+        -0.8999830000649989
+      ],
+      "detector_efficiency": 0.95,
+      "displacements_real_imag": [
+        -1.4,
+        1.4,
+        -1.4061912611616498e-08,
+        -1.0269780532823542e-08,
+        -1.4,
+        -1.4,
+        -7.646275058133555e-09,
+        -1.2828118975773427e-08
+      ],
+      "global_source_survival": 1.0,
+      "mean_dark_counts_per_trial": 1e-05,
+      "mean_displaced_photons_per_local_setting": [
+        3.9199999999999995,
+        3.032057784891005e-16,
+        3.9199999999999995,
+        2.2302615872123354e-16
+      ],
+      "optimizer_objective": -1.7166408708474183,
+      "relative_phase_or_mode_coherence": 0.0,
+      "signed_CHSH": 1.7166408708474183
+    },
+    "realistic_2026_telecom_proxy": {
+      "CHSH": 2.021789902796233,
+      "converged": false,
+      "correlations": [
+        -0.5450940563509736,
+        -0.5500135753466757,
+        -0.5500142462601245,
+        0.37666802483845896
+      ],
+      "detector_efficiency": 0.86,
+      "displacements_real_imag": [
+        0.1641619164645004,
+        -0.16668226429939592,
+        -0.04193995939798769,
+        0.6338573747715043,
+        -0.09410984355363551,
+        -0.21418614083055204,
+        -0.18634281435511263,
+        0.6072979893930973
+      ],
+      "global_source_survival": 1.0,
+      "mean_dark_counts_per_trial": 0.0001,
+      "mean_displaced_photons_per_local_setting": [
+        0.054732112049271274,
+        0.40353413174652814,
+        0.05473236557757482,
+        0.4035344923826825
+      ],
+      "optimizer_objective": -2.021789902796233,
+      "relative_phase_or_mode_coherence": 0.92,
+      "signed_CHSH": -2.021789902796233
+    },
+    "source_and_detector_loss": {
+      "CHSH": 1.7593814174434075,
+      "converged": false,
+      "correlations": [
+        -0.469264938694676,
+        -0.47109945970783373,
+        -0.471087266361062,
+        0.3479297526798357
+      ],
+      "detector_efficiency": 0.86,
+      "displacements_real_imag": [
+        0.47324259310107314,
+        -0.10974982337385955,
+        -0.262645945307844,
+        -0.6611012603573252,
+        -0.1874262925112197,
+        0.4482604971816982,
+        -0.6078393275967632,
+        -0.3695411580853946
+      ],
+      "global_source_survival": 0.9,
+      "mean_dark_counts_per_trial": 0.0001,
+      "mean_displaced_photons_per_local_setting": [
+        0.23600357565562127,
+        0.5060377690326949,
+        0.23606608845808458,
+        0.5060293156923799
+      ],
+      "optimizer_objective": -1.7593814174434075,
+      "relative_phase_or_mode_coherence": 0.95,
+      "signed_CHSH": -1.7593814174434075
+    }
+  },
+  "phase_randomized_negative_control": {
+    "certificate_passes_no_postselection": false,
+    "confidence_lower": 1.6794664461041098,
+    "detector_model": "on/off with dark events: four joint outcomes including both no-click",
+    "observed_all_trials_CHSH": 1.7047466666666666,
+    "one_sided_95pct_Hoeffding_halfwidth": 0.025280220562556768,
+    "trials": 150000
+  },
+  "povm_formula": "E_no_click=exp(-dark-eta|alpha|\u00b2)*[[1,-eta alpha*],[-eta alpha,1-eta+eta\u00b2|alpha|\u00b2]] on local Fock span{|0>,|1>}, O=2E-I",
+  "reference_beamsplitter_reflectivity_toy": 0.01,
+  "source_model": "rho=(1-src)|00><00|+src/2(|01><01|+|10><10|+coh(|01><10|+h.c.))",
+  "status": "PASS_SINGLE_PHOTON_DISPLACEMENT_ONOFF_DETECTOR_LOSS_CHSH"
+}

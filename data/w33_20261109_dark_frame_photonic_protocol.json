@@ -1,0 +1,94 @@
+{
+  "balanced_binary_split_layers": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    8
+  ],
+  "differential_preparation_loss": {
+    "central_port_intensity_survival": 0.9,
+    "conditional_line_probability": 1.6400709451281482e-06,
+    "conditional_survival_t2_coefficient": 0.00410400607632064,
+    "exact_t2_formula": "(3/2)(1-sqrt(eta))\u00b2",
+    "exact_t2_raw_line_leakage_coefficient": 0.003950105848458617,
+    "finite_time": 0.02,
+    "leading_conditional_prediction": 1.6416024305282561e-06,
+    "unconditional_total_photon_survival": 0.9625000000000002
+  },
+  "incident_edge_phase_detuning": {
+    "finite_time_controls": [
+      {
+        "exact_line_click_probability": 3.5808119938763486e-06,
+        "leading_t2_prediction": 3.5809313554697355e-06,
+        "relative_t4_correction": -3.333255556670078e-05,
+        "time_dimensionless": 0.005
+      },
+      {
+        "exact_line_click_probability": 5.7264355811967034e-05,
+        "leading_t2_prediction": 5.729490168751577e-05,
+        "relative_t4_correction": -0.0005331342693514207,
+        "time_dimensionless": 0.02
+      },
+      {
+        "exact_line_click_probability": 0.00035690227281443807,
+        "leading_t2_prediction": 0.0003580931355469736,
+        "relative_t4_correction": -0.0033255670503611334,
+        "time_dimensionless": 0.05
+      },
+      {
+        "exact_line_click_probability": 0.0014134514422788208,
+        "leading_t2_prediction": 0.0014323725421878943,
+        "relative_t4_correction": -0.013209622044396574,
+        "time_dimensionless": 0.1
+      }
+    ],
+    "leading_line_click_probability_coefficient": 0.1432372542187894,
+    "line": 0,
+    "point": 0,
+    "theta": 0.6283185307179586
+  },
+  "max_split_depth": 6,
+  "max_state_preparation_amplitude_error": 5.551115123125783e-17,
+  "phase_corrected_ports": [
+    1,
+    2,
+    3,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "physical_implementation_caveats": "The six-layer 39-coupler construction assumes arbitrary two-mode pairing by layer; actual photonic layout requires routing, coherent single-photon injection, coupler calibration, phase masks, memory, 80-mode unitary Hamiltonian synthesis and detector efficiency. Source total throughput and reference photons not modeled. Exact interference null alone does not demonstrate TOE, quantum advantage or any new physical law.",
+  "prior_art_scope": "Balanced binary linear-optical state preparation, strongly regular graph tight frames, dark states and first-order perturbation theory are established mathematics; this is one explicit W33 test target.",
+  "required_pi_phase_corrections": 12,
+  "selected_point": 0,
+  "signed_amplitude_formula": "psi = P_dark[:,0]/sqrt(3/8); negative real phases on precisely the 12 collinear neighbors",
+  "status": "PASS_W33_DARK_FRAME_39_COUPLER_SIX_LAYER_PREP_AND_NULL_FALSIFIERS",
+  "target_intensities": {
+    "12_collinear": {
+      "count": 12,
+      "per_mode": "1/24",
+      "total": "1/2"
+    },
+    "27_noncollinear": {
+      "count": 27,
+      "per_mode": "1/216",
+      "total": "1/8"
+    },
+    "central": {
+      "count": 1,
+      "per_mode": "3/8",
+      "total": "3/8"
+    }
+  },
+  "target_state_dimensionality": 40,
+  "two_mode_tunable_splits": 39,
+  "unperturbed_H_exact_no_line_leakage_at_tested_times": true
+}

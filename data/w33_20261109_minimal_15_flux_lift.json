@@ -1,0 +1,142 @@
+{
+  "constructed_phase_only_pi_flip_links": [
+    {
+      "line": 17,
+      "point": 5
+    },
+    {
+      "line": 26,
+      "point": 31
+    },
+    {
+      "line": 32,
+      "point": 24
+    },
+    {
+      "line": 36,
+      "point": 32
+    },
+    {
+      "line": 3,
+      "point": 19
+    },
+    {
+      "line": 11,
+      "point": 25
+    },
+    {
+      "line": 33,
+      "point": 27
+    },
+    {
+      "line": 4,
+      "point": 4
+    },
+    {
+      "line": 29,
+      "point": 9
+    },
+    {
+      "line": 10,
+      "point": 29
+    },
+    {
+      "line": 23,
+      "point": 7
+    },
+    {
+      "line": 12,
+      "point": 26
+    },
+    {
+      "line": 38,
+      "point": 23
+    },
+    {
+      "line": 5,
+      "point": 11
+    },
+    {
+      "line": 20,
+      "point": 16
+    }
+  ],
+  "continuous_phase_numerical_controls": [
+    {
+      "relative_phase_determinant_error": 3.8778423131653425e-15,
+      "smallest_singular_value": 0.02010139072858115,
+      "theta": 0.5235987755982988
+    },
+    {
+      "relative_phase_determinant_error": 1.4655364458042825e-15,
+      "smallest_singular_value": 0.04090489177860807,
+      "theta": 1.0471975511965976
+    },
+    {
+      "relative_phase_determinant_error": 1.5895974606912448e-15,
+      "smallest_singular_value": 0.06290700942655558,
+      "theta": 1.5707963267948966
+    },
+    {
+      "relative_phase_determinant_error": 0.0,
+      "smallest_singular_value": 0.11547329684735773,
+      "theta": 3.141592653589793
+    }
+  ],
+  "exact_determinant_polynomial": "det(B+(z-1) E_selected)=-2*(z-1)^15; phase-only z=e^(i theta)",
+  "exact_three_integer_controls": {
+    "z_minus1": "65536",
+    "z_two": "-2",
+    "z_zero": "2"
+  },
+  "independent_pair_matroid_search_trials": 1,
+  "necessary_and_sufficient_within_link_support_model": "At least 15 link entry changes are required to lift 15+15 W33 chiral flat modes, and this explicit 15-link phase-flip assignment suffices. Thus minimum support is exactly 15. This is a finite integer matrix theorem, not a mechanism selecting physical gauge fluxes.",
+  "ordered_edge_flip_chiral_zero_mode_staircase": [
+    30,
+    28,
+    26,
+    24,
+    22,
+    20,
+    18,
+    16,
+    14,
+    12,
+    10,
+    8,
+    6,
+    4,
+    2,
+    0
+  ],
+  "ordered_edge_flip_incidence_rank_staircase": [
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40
+  ],
+  "original_40x40_incidence_rank": 25,
+  "perturbed_incidence_matrix_rank": 40,
+  "perturbed_integer_matrix_determinant": "65536",
+  "perturbed_smallest_singular_value": 0.11547329684735728,
+  "prior_art": "Rank perturbation bounds, matroid common bases, bipartite tight binding and Wilson phases are standard mathematical tools; native W33 setting and exact certificate are the project-specific advance.",
+  "proof": "Rank(B+Delta) <=25+rank(Delta)<=25+k. Selected distinct incident edges have 15 independently projected endpoint columns in each 15D null space. Actual phase-only pi flips B_ij->-B_ij on these edges yield a 40x40 integer matrix whose nonzero exact determinant verifies rank40. In particular all zero modes are gone. No hopping magnitudes changed.",
+  "remaining_exact_chiral_zero_modes": 0,
+  "required_number_of_link_changes_lower_bound": 15,
+  "scope": "A free choice of fifteen U1 Wilson phases is not derived from dynamics; it is an adversarial link assignment. Preserving only bipartite chirality does not guarantee zero eigenvalues on equal-size sublattices. No continuum Weyl index or SM particle spectrum is established.",
+  "selected_line_dark_projector_smallest_Gram_eigenvalue": 0.01073912670592624,
+  "selected_point_dark_projector_smallest_Gram_eigenvalue": 0.025616834323422027,
+  "status": "PASS_MINIMUM_15_INCIDENCE_PI_FLIPS_LIFT_30_FLAT_ZERO_MODES"
+}

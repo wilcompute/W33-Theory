@@ -1,0 +1,121 @@
+{
+  "contexts_evaluated": [
+    0,
+    2,
+    8
+  ],
+  "designs": [
+    {
+      "component_count": 1,
+      "mean_error_forest_over_all_pairs": 1.2777086998216662,
+      "setting_index": 0,
+      "two_designs": {
+        "all_observable_phase_pairs": {
+          "effect_opnorm_error_max": 0.002932557787782569,
+          "effect_opnorm_error_mean": 0.0023105737736746935,
+          "empirical_nominal_95pct_ellipsoid_fraction": 1.0,
+          "full_multinomial_Fisher_min_eig_per_launched_trial": 0.02777777777777772,
+          "independent_model_check_number_probe_configs": 9,
+          "launched_photons_per_coherent_probe": 8888,
+          "local_CR_trace_per_launched_trial": 64.00000000000003,
+          "optimizer_converged_count": 12,
+          "phase_dim": 8,
+          "phase_probe_configuration_count": 72,
+          "replications": 12,
+          "total_launched_phase_calibration_photons": 639936
+        },
+        "forest_phase_only": {
+          "effect_opnorm_error_max": 0.00482842450948046,
+          "effect_opnorm_error_mean": 0.0029522402122039338,
+          "empirical_nominal_95pct_ellipsoid_fraction": 1.0,
+          "full_multinomial_Fisher_min_eig_per_launched_trial": 0.014623609739497972,
+          "independent_model_check_number_probe_configs": 9,
+          "launched_photons_per_coherent_probe": 40000,
+          "local_CR_trace_per_launched_trial": 120.0,
+          "optimizer_converged_count": 12,
+          "phase_dim": 8,
+          "phase_probe_configuration_count": 16,
+          "replications": 12,
+          "total_launched_phase_calibration_photons": 640000
+        }
+      }
+    },
+    {
+      "component_count": 3,
+      "mean_error_forest_over_all_pairs": 0.9684046685655173,
+      "setting_index": 2,
+      "two_designs": {
+        "all_observable_phase_pairs": {
+          "effect_opnorm_error_max": 0.003363709974862262,
+          "effect_opnorm_error_mean": 0.0022996854891709742,
+          "empirical_nominal_95pct_ellipsoid_fraction": 1.0,
+          "full_multinomial_Fisher_min_eig_per_launched_trial": 0.1111111111111111,
+          "independent_model_check_number_probe_configs": 9,
+          "launched_photons_per_coherent_probe": 35555,
+          "local_CR_trace_per_launched_trial": 36.0,
+          "optimizer_converged_count": 12,
+          "phase_dim": 6,
+          "phase_probe_configuration_count": 18,
+          "replications": 12,
+          "total_launched_phase_calibration_photons": 639990
+        },
+        "forest_phase_only": {
+          "effect_opnorm_error_max": 0.0032489228685512296,
+          "effect_opnorm_error_mean": 0.002227026163945547,
+          "empirical_nominal_95pct_ellipsoid_fraction": 1.0,
+          "full_multinomial_Fisher_min_eig_per_launched_trial": 0.0636610018750173,
+          "independent_model_check_number_probe_configs": 9,
+          "launched_photons_per_coherent_probe": 53333,
+          "local_CR_trace_per_launched_trial": 54.0,
+          "optimizer_converged_count": 12,
+          "phase_dim": 6,
+          "phase_probe_configuration_count": 12,
+          "replications": 12,
+          "total_launched_phase_calibration_photons": 639996
+        }
+      }
+    },
+    {
+      "component_count": 1,
+      "mean_error_forest_over_all_pairs": 1.344984288461864,
+      "setting_index": 8,
+      "two_designs": {
+        "all_observable_phase_pairs": {
+          "effect_opnorm_error_max": 0.006136594320301056,
+          "effect_opnorm_error_mean": 0.004059417945201023,
+          "empirical_nominal_95pct_ellipsoid_fraction": 1.0,
+          "full_multinomial_Fisher_min_eig_per_launched_trial": 0.01189756150856543,
+          "independent_model_check_number_probe_configs": 9,
+          "launched_photons_per_coherent_probe": 8888,
+          "local_CR_trace_per_launched_trial": 143.97440825374045,
+          "optimizer_converged_count": 12,
+          "phase_dim": 8,
+          "phase_probe_configuration_count": 72,
+          "replications": 12,
+          "total_launched_phase_calibration_photons": 639936
+        },
+        "forest_phase_only": {
+          "effect_opnorm_error_max": 0.010861799243734559,
+          "effect_opnorm_error_mean": 0.00545985335659552,
+          "empirical_nominal_95pct_ellipsoid_fraction": 0.8333333333333334,
+          "full_multinomial_Fisher_min_eig_per_launched_trial": 0.006602303679504745,
+          "independent_model_check_number_probe_configs": 9,
+          "launched_photons_per_coherent_probe": 40000,
+          "local_CR_trace_per_launched_trial": 243.86818015248454,
+          "optimizer_converged_count": 12,
+          "phase_dim": 8,
+          "phase_probe_configuration_count": 16,
+          "replications": 12,
+          "total_launched_phase_calibration_photons": 640000
+        }
+      }
+    }
+  ],
+  "each_design_fixed_phase_calibration_launch_budget_target": 640000,
+  "mean_empirical_forest_over_all_pairs_effect_error": 1.1970325522830159,
+  "model_assumptions": "Known complete stationary lossy 9x9 Kcal, only unknown diagonal input phases. One gauge root per disjoint interferometric component. All 9 clicks and no-click used jointly. Input basis preparations cannot infer phase and are reserved for separate model-falsifier acquisitions, NOT included in quoted phase-only photons.",
+  "number_replications_each": 12,
+  "prior_art": "Multinomial MLE, Fisher information and optimal experimental design are standard; W33-specific geometry and observed gauge-identifiability are the application.",
+  "statistical_scope": "Optimization and Monte Carlo coverage are empirical and local-asymptotic only; 12 replicates/context cannot establish 95% confidence coverage. No rigorous nonasymptotic effect error guarantee or PPT witness certificate. Full physical calibration would also estimate Kcal amplitudes, losses, detector effects, drifts and source state deviations.",
+  "status": "PASS_JOINT_MULTINOMIAL_PHASE_MLE_3_CONTEXTS_FINITE_TRIALS"
+}

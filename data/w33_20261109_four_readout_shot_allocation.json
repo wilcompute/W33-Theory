@@ -1,0 +1,199 @@
+{
+  "benchmark_state": "known Horodecki a=0.236 PPT entangled, CCNR fixed polar dual",
+  "loss_scenarios": {
+    "ideal": {
+      "crossing_intensity": 1,
+      "gate_intensity": 1,
+      "mask_intensity": 1,
+      "phase_rms": 0
+    },
+    "moderate": {
+      "crossing_intensity": 0.99,
+      "gate_intensity": 0.995,
+      "mask_intensity": 0.999,
+      "phase_rms": 0.003
+    }
+  },
+  "model_limitations": "Oracle source state and its witness known in advance; optimization can bias adaptive state estimators and must use separate pilot data. Full fixed synthetic POVMs known exactly, real hardware losses, calibration uncertainty, crosstalk and clock overhead are not validated. CRLB is asymptotic and not a finite-shot statistical certificate. Optimizing variance for one chosen state is not universal tomography optimality.",
+  "optimization_constraints": "All settings keep at least 1% of launched source photon budget (floor=.01 absolute). Total launched photons identical before and after allocation.",
+  "per_launched_source_photon_optimization": {
+    "ideal": {
+      "generic_9mode": {
+        "fractional_variance_reduction": 0.5069843108560668,
+        "iterations": 20,
+        "min_per_setting_shot_fraction": 0.01,
+        "optimization_message": "Optimization terminated successfully",
+        "optimization_success": true,
+        "optimized_per_launch_CCNR_CRLB": 6.0192747976651,
+        "shot_fractions_by_setting": [
+          0.06162792451195871,
+          0.060510834980014076,
+          0.3932426891010979,
+          0.055734493236936404,
+          0.05505165535955484,
+          0.1449804198093381,
+          0.06287810683053625,
+          0.07199961368212694,
+          0.05048004617094784,
+          0.043494216317488794
+        ],
+        "uniform_per_launch_CCNR_CRLB": 12.209093808184685
+      },
+      "matched_12_product": {
+        "fractional_variance_reduction": 0.4657339707426129,
+        "iterations": 27,
+        "min_per_setting_shot_fraction": 0.01,
+        "optimization_message": "Optimization terminated successfully",
+        "optimization_success": true,
+        "optimized_per_launch_CCNR_CRLB": 4.944675726642181,
+        "shot_fractions_by_setting": [
+          0.06480659159617476,
+          0.06480658926656664,
+          0.37364121203338607,
+          0.06541145605177641,
+          0.0654114574126239,
+          0.03909263694097765,
+          0.06541145589926307,
+          0.06541145599442488,
+          0.14763480982390084,
+          0.01794295258196843,
+          0.015214690959964243,
+          0.01521469143897312
+        ],
+        "uniform_per_launch_CCNR_CRLB": 9.255081655697115
+      },
+      "permutation_Fourier": {
+        "fractional_variance_reduction": 0.4099731408522659,
+        "iterations": 19,
+        "min_per_setting_shot_fraction": 0.01,
+        "optimization_message": "Optimization terminated successfully",
+        "optimization_success": true,
+        "optimized_per_launch_CCNR_CRLB": 6.241156852829806,
+        "shot_fractions_by_setting": [
+          0.08072895503957622,
+          0.058749898114915974,
+          0.342631631271069,
+          0.06487036895721425,
+          0.05593917620380419,
+          0.12870951183715929,
+          0.06462720987526317,
+          0.056878357444900635,
+          0.07648987534215274,
+          0.07037501591394467
+        ],
+        "uniform_per_launch_CCNR_CRLB": 10.577750412658945
+      },
+      "two_CZ_local": {
+        "fractional_variance_reduction": 0.4290921152061682,
+        "iterations": 21,
+        "min_per_setting_shot_fraction": 0.01,
+        "optimization_message": "Optimization terminated successfully",
+        "optimization_success": true,
+        "optimized_per_launch_CCNR_CRLB": 7.335713121069295,
+        "shot_fractions_by_setting": [
+          0.06457927864185381,
+          0.0868247786353484,
+          0.34653562466125853,
+          0.053933961987715766,
+          0.06687467857816376,
+          0.14504981521779972,
+          0.06853771745660839,
+          0.058345395328303386,
+          0.07547043118315339,
+          0.03384831830979491
+        ],
+        "uniform_per_launch_CCNR_CRLB": 12.849206179239218
+      }
+    },
+    "moderate": {
+      "generic_9mode": {
+        "fractional_variance_reduction": 0.5047277837403403,
+        "iterations": 19,
+        "min_per_setting_shot_fraction": 0.01,
+        "optimization_message": "Optimization terminated successfully",
+        "optimization_success": true,
+        "optimized_per_launch_CCNR_CRLB": 6.032560766187266,
+        "shot_fractions_by_setting": [
+          0.061502392247211386,
+          0.060526853472381396,
+          0.3928009671201118,
+          0.055789031742590964,
+          0.054847980941128166,
+          0.14467774559379107,
+          0.06289589411926333,
+          0.07183187623771867,
+          0.05125706859518093,
+          0.04387018993062215
+        ],
+        "uniform_per_launch_CCNR_CRLB": 12.180293115866075
+      },
+      "matched_12_product": {
+        "fractional_variance_reduction": 0.4660237624154473,
+        "iterations": 26,
+        "min_per_setting_shot_fraction": 0.01,
+        "optimization_message": "Optimization terminated successfully",
+        "optimization_success": true,
+        "optimized_per_launch_CCNR_CRLB": 4.959627183056453,
+        "shot_fractions_by_setting": [
+          0.06472505076284996,
+          0.0647244738569182,
+          0.37380361696476677,
+          0.06530092064427932,
+          0.06532449328191892,
+          0.04038624973001597,
+          0.0653138327939837,
+          0.06531821968223717,
+          0.1466501360780875,
+          0.01778051039701172,
+          0.015330007667615948,
+          0.01534248814031489
+        ],
+        "uniform_per_launch_CCNR_CRLB": 9.288104664528483
+      },
+      "permutation_Fourier": {
+        "fractional_variance_reduction": 0.4143899172887555,
+        "iterations": 20,
+        "min_per_setting_shot_fraction": 0.01,
+        "optimization_message": "Optimization terminated successfully",
+        "optimization_success": true,
+        "optimized_per_launch_CCNR_CRLB": 6.17374126472502,
+        "shot_fractions_by_setting": [
+          0.07855366897963306,
+          0.059720590015688954,
+          0.3453301857641934,
+          0.06361817292039139,
+          0.05611943110350094,
+          0.12848508520781943,
+          0.06324249044959365,
+          0.05615573261347894,
+          0.08223378132898593,
+          0.06654086161671414
+        ],
+        "uniform_per_launch_CCNR_CRLB": 10.542409441008889
+      },
+      "two_CZ_local": {
+        "fractional_variance_reduction": 0.42950338983418734,
+        "iterations": 21,
+        "min_per_setting_shot_fraction": 0.01,
+        "optimization_message": "Optimization terminated successfully",
+        "optimization_success": true,
+        "optimized_per_launch_CCNR_CRLB": 7.320216959725096,
+        "shot_fractions_by_setting": [
+          0.06461691221564685,
+          0.0863950003215908,
+          0.3469806427457365,
+          0.05380512806183014,
+          0.06664711325095964,
+          0.1449444327084087,
+          0.067640277853034,
+          0.05825876488449054,
+          0.07576978316413972,
+          0.03494194479416317
+        ],
+        "uniform_per_launch_CCNR_CRLB": 12.831306670862608
+      }
+    }
+  },
+  "prior_art": "Classical optimal experimental design and convex inverse Fisher objectives are standard; W33 experimental geometry supplies the numeric matrices.",
+  "status": "PASS_FOUR_OPTICAL_POVM_ORACLE_SOURCE_SHOT_ALLOCATION"
+}

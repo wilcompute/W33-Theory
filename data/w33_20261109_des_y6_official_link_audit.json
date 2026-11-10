@@ -1,0 +1,46 @@
+{
+  "DES_Y6_3x2pt_GitHub_repo_public_status": 404,
+  "PPD_public_GitHub_repo_root_status": 200,
+  "S9_claim_sha256": "70951becb3bfe08644e11c56c6cf5939b8970b554810665f5fc60bd6525173da",
+  "S9_frozen": "2026-11-08",
+  "complete_covariance_nz_model_refits_verified": false,
+  "frozen_S9_scored": false,
+  "official_pages": {
+    "https://des.ncsa.illinois.edu/releases/y6a2": {
+      "content_length_header": "998",
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://des.ncsa.illinois.edu/releases/y6a2",
+      "fully_downloaded": false,
+      "html_bytes_inspected": 998,
+      "status_code": 200,
+      "text_is_html": true
+    },
+    "https://www.darkenergysurvey.org/des-y6-cosmology-results-papers/": {
+      "content_length_header": null,
+      "content_type": "text/html; charset=UTF-8",
+      "final_url": "https://www.darkenergysurvey.org/des-y6-cosmology-results-papers/",
+      "fully_downloaded": false,
+      "html_bytes_inspected": 123061,
+      "status_code": 200,
+      "text_is_html": true
+    }
+  },
+  "official_relevant_link_total": 1,
+  "official_relevant_links": [
+    "https://www.darkenergysurvey.org/des-y6-3x2pt-results-webinar-january-22-2026/"
+  ],
+  "official_unblinded_validated_full_file_download": false,
+  "real_FITS_magic_found_unverified": [],
+  "safety_rule": "HTTP 200 HTML, a cached FITS path, README explaining measurement formats, published S8, and a first FITS magic card are NOT full provenance. The real-data S9 can run only after official raw bytes, hash, matching covariance, n(z), exact prereg cuts and CLASS/Halofit model-specific nuisance refits.",
+  "scope": "Live read-only HTTPS provenance audit; online availability is time-sensitive. This is neither an observed cosmological test nor a proof that no public Y6 vector exists elsewhere.",
+  "status": "PASS_DES_Y6_OFFICIAL_LINK_PROVENANCE_AUDIT_S9_UNSCORED",
+  "tested_FITS_candidate_first_cards": {
+    "https://desdr-server.ncsa.illinois.edu/despublic/y6a2_files/y6key_products/final_version/3x2pt_2025-07-28-20h_UNBLINDED_wmask_nob2.fits": {
+      "content_length_header": "146",
+      "content_type": "text/html",
+      "final_url": "https://desdr-server.ncsa.illinois.edu/despublic/y6a2_files/y6key_products/final_version/3x2pt_2025-07-28-20h_UNBLINDED_wmask_nob2.fits",
+      "fully_downloaded": false,
+      "status_code": 404
+    }
+  }
+}

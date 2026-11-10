@@ -1,0 +1,378 @@
+{
+  "architecture_input_hashes": {
+    "Fourier": "1f7e0afc41c4fa5f1a0bcf793f1f5794b5773749c3b0619f242a315bb5239c75",
+    "generic": "41a02193d207147d016b503a9f1370a4d2de18ca0f3a8c5d320c2b0bccc3f435",
+    "two_CZ": "7d947a88f9adba9dfec536bcc05008aebe4c5553f13eeb9a6472a18c985f85bf"
+  },
+  "benchmark_state": "two-qutrit Horodecki a=0.236 PPT entangled",
+  "comparison_principle": "A lower Cramer\u2013Rao variance coefficient is better for the chosen trace-norm polar dual in the independent idealized shot model; it does not guarantee finite-sample entanglement confidence.",
+  "model_outputs": {
+    "harsh": {
+      "generic_9mode": {
+        "contexts": 10,
+        "extra_context_records": [
+          {
+            "context": 8,
+            "nominal_photon_survival_fraction": 0.7348762571321767,
+            "per_mode_gate_exposure_proxy": 15,
+            "phase_mask_exposure": 1,
+            "routing_crossing_upper_proxy": 0
+          },
+          {
+            "context": 9,
+            "nominal_photon_survival_fraction": 0.7348762571321767,
+            "per_mode_gate_exposure_proxy": 15,
+            "phase_mask_exposure": 1,
+            "routing_crossing_upper_proxy": 0
+          }
+        ],
+        "ideal_frame_condition": 9.359126485181303,
+        "min_extra_analyzer_survival": 0.7348762571321767,
+        "per_launched_photon_CCNR_dual_Cramer_Rao_variance_coefficient": 12.305512183059449,
+        "per_launched_photon_Fisher_smallest_eigenvalue": 0.018596244947959324,
+        "per_launched_photon_inverse_Fisher_trace": 428.41907528472825,
+        "uniform_transmission_model": "T=t_gate^max_rail_exposure * t_cross^fixed_swap_count * t_phase^phase_mask_passes, first 8 Bell contexts assumed ideal"
+      },
+      "matched_12_product": {
+        "contexts": 12,
+        "extra_context_records": [
+          {
+            "context": 8,
+            "nominal_photon_survival_fraction": 1.0,
+            "per_mode_gate_exposure_proxy": 0,
+            "phase_mask_exposure": 0,
+            "routing_crossing_upper_proxy": 0
+          },
+          {
+            "context": 9,
+            "nominal_photon_survival_fraction": 0.8814131689596799,
+            "per_mode_gate_exposure_proxy": 6,
+            "phase_mask_exposure": 1,
+            "routing_crossing_upper_proxy": 0
+          },
+          {
+            "context": 10,
+            "nominal_photon_survival_fraction": 0.8814131689596799,
+            "per_mode_gate_exposure_proxy": 6,
+            "phase_mask_exposure": 1,
+            "routing_crossing_upper_proxy": 0
+          },
+          {
+            "context": 11,
+            "nominal_photon_survival_fraction": 0.8814131689596799,
+            "per_mode_gate_exposure_proxy": 6,
+            "phase_mask_exposure": 1,
+            "routing_crossing_upper_proxy": 0
+          }
+        ],
+        "ideal_frame_condition": 1.414213562373097,
+        "min_extra_analyzer_survival": 0.8814131689596799,
+        "per_launched_photon_CCNR_dual_Cramer_Rao_variance_coefficient": 9.364642953466781,
+        "per_launched_photon_Fisher_smallest_eigenvalue": 0.5229796546599239,
+        "per_launched_photon_inverse_Fisher_trace": 95.79760601998629,
+        "uniform_transmission_model": "T=t_gate^max_rail_exposure * t_cross^fixed_swap_count * t_phase^phase_mask_passes, first 8 Bell contexts assumed ideal"
+      },
+      "permutation_Fourier": {
+        "contexts": 10,
+        "extra_context_records": [
+          {
+            "context": 8,
+            "nominal_photon_survival_fraction": 0.6910161023014846,
+            "per_mode_gate_exposure_proxy": 9,
+            "phase_mask_exposure": 1,
+            "routing_crossing_upper_proxy": 6
+          },
+          {
+            "context": 9,
+            "nominal_photon_survival_fraction": 0.7344203446715747,
+            "per_mode_gate_exposure_proxy": 9,
+            "phase_mask_exposure": 1,
+            "routing_crossing_upper_proxy": 4
+          }
+        ],
+        "ideal_frame_condition": 17.842817576067482,
+        "min_extra_analyzer_survival": 0.6910161023014846,
+        "per_launched_photon_CCNR_dual_Cramer_Rao_variance_coefficient": 10.852802711017898,
+        "per_launched_photon_Fisher_smallest_eigenvalue": 0.005094215963707679,
+        "per_launched_photon_inverse_Fisher_trace": 866.0697937631562,
+        "uniform_transmission_model": "T=t_gate^max_rail_exposure * t_cross^fixed_swap_count * t_phase^phase_mask_passes, first 8 Bell contexts assumed ideal"
+      },
+      "two_CZ_local": {
+        "contexts": 10,
+        "extra_context_records": [
+          {
+            "context": 8,
+            "nominal_photon_survival_fraction": 0.7768891744155453,
+            "per_mode_gate_exposure_proxy": 12,
+            "phase_mask_exposure": 2,
+            "routing_crossing_upper_proxy": 0
+          },
+          {
+            "context": 9,
+            "nominal_photon_survival_fraction": 0.7768891744155453,
+            "per_mode_gate_exposure_proxy": 12,
+            "phase_mask_exposure": 2,
+            "routing_crossing_upper_proxy": 0
+          }
+        ],
+        "ideal_frame_condition": 25.020259118093588,
+        "min_extra_analyzer_survival": 0.7768891744155453,
+        "per_launched_photon_CCNR_dual_Cramer_Rao_variance_coefficient": 12.993336208261471,
+        "per_launched_photon_Fisher_smallest_eigenvalue": 0.002858163037466346,
+        "per_launched_photon_inverse_Fisher_trace": 1023.5679491348865,
+        "uniform_transmission_model": "T=t_gate^max_rail_exposure * t_cross^fixed_swap_count * t_phase^phase_mask_passes, first 8 Bell contexts assumed ideal"
+      }
+    },
+    "ideal": {
+      "generic_9mode": {
+        "contexts": 10,
+        "extra_context_records": [
+          {
+            "context": 8,
+            "nominal_photon_survival_fraction": 1.0,
+            "per_mode_gate_exposure_proxy": 15,
+            "phase_mask_exposure": 1,
+            "routing_crossing_upper_proxy": 0
+          },
+          {
+            "context": 9,
+            "nominal_photon_survival_fraction": 1.0,
+            "per_mode_gate_exposure_proxy": 15,
+            "phase_mask_exposure": 1,
+            "routing_crossing_upper_proxy": 0
+          }
+        ],
+        "ideal_frame_condition": 9.359126485181303,
+        "min_extra_analyzer_survival": 1.0,
+        "per_launched_photon_CCNR_dual_Cramer_Rao_variance_coefficient": 12.20909380818469,
+        "per_launched_photon_Fisher_smallest_eigenvalue": 0.02247086744151422,
+        "per_launched_photon_inverse_Fisher_trace": 368.21602036814124,
+        "uniform_transmission_model": "T=t_gate^max_rail_exposure * t_cross^fixed_swap_count * t_phase^phase_mask_passes, first 8 Bell contexts assumed ideal"
+      },
+      "matched_12_product": {
+        "contexts": 12,
+        "extra_context_records": [
+          {
+            "context": 8,
+            "nominal_photon_survival_fraction": 1.0,
+            "per_mode_gate_exposure_proxy": 0,
+            "phase_mask_exposure": 0,
+            "routing_crossing_upper_proxy": 0
+          },
+          {
+            "context": 9,
+            "nominal_photon_survival_fraction": 1.0,
+            "per_mode_gate_exposure_proxy": 6,
+            "phase_mask_exposure": 1,
+            "routing_crossing_upper_proxy": 0
+          },
+          {
+            "context": 10,
+            "nominal_photon_survival_fraction": 1.0,
+            "per_mode_gate_exposure_proxy": 6,
+            "phase_mask_exposure": 1,
+            "routing_crossing_upper_proxy": 0
+          },
+          {
+            "context": 11,
+            "nominal_photon_survival_fraction": 1.0,
+            "per_mode_gate_exposure_proxy": 6,
+            "phase_mask_exposure": 1,
+            "routing_crossing_upper_proxy": 0
+          }
+        ],
+        "ideal_frame_condition": 1.414213562373097,
+        "min_extra_analyzer_survival": 1.0,
+        "per_launched_photon_CCNR_dual_Cramer_Rao_variance_coefficient": 9.255081655697113,
+        "per_launched_photon_Fisher_smallest_eigenvalue": 0.5446986190669691,
+        "per_launched_photon_inverse_Fisher_trace": 93.24435447240168,
+        "uniform_transmission_model": "T=t_gate^max_rail_exposure * t_cross^fixed_swap_count * t_phase^phase_mask_passes, first 8 Bell contexts assumed ideal"
+      },
+      "permutation_Fourier": {
+        "contexts": 10,
+        "extra_context_records": [
+          {
+            "context": 8,
+            "nominal_photon_survival_fraction": 1.0,
+            "per_mode_gate_exposure_proxy": 9,
+            "phase_mask_exposure": 1,
+            "routing_crossing_upper_proxy": 6
+          },
+          {
+            "context": 9,
+            "nominal_photon_survival_fraction": 1.0,
+            "per_mode_gate_exposure_proxy": 9,
+            "phase_mask_exposure": 1,
+            "routing_crossing_upper_proxy": 4
+          }
+        ],
+        "ideal_frame_condition": 17.842817576067482,
+        "min_extra_analyzer_survival": 1.0,
+        "per_launched_photon_CCNR_dual_Cramer_Rao_variance_coefficient": 10.577750412658943,
+        "per_launched_photon_Fisher_smallest_eigenvalue": 0.006198828784336728,
+        "per_launched_photon_inverse_Fisher_trace": 722.3613224002422,
+        "uniform_transmission_model": "T=t_gate^max_rail_exposure * t_cross^fixed_swap_count * t_phase^phase_mask_passes, first 8 Bell contexts assumed ideal"
+      },
+      "two_CZ_local": {
+        "contexts": 10,
+        "extra_context_records": [
+          {
+            "context": 8,
+            "nominal_photon_survival_fraction": 1.0,
+            "per_mode_gate_exposure_proxy": 12,
+            "phase_mask_exposure": 2,
+            "routing_crossing_upper_proxy": 0
+          },
+          {
+            "context": 9,
+            "nominal_photon_survival_fraction": 1.0,
+            "per_mode_gate_exposure_proxy": 12,
+            "phase_mask_exposure": 2,
+            "routing_crossing_upper_proxy": 0
+          }
+        ],
+        "ideal_frame_condition": 25.020259118093588,
+        "min_extra_analyzer_survival": 1.0,
+        "per_launched_photon_CCNR_dual_Cramer_Rao_variance_coefficient": 12.849206179239216,
+        "per_launched_photon_Fisher_smallest_eigenvalue": 0.0033118849091301446,
+        "per_launched_photon_inverse_Fisher_trace": 898.4810244228524,
+        "uniform_transmission_model": "T=t_gate^max_rail_exposure * t_cross^fixed_swap_count * t_phase^phase_mask_passes, first 8 Bell contexts assumed ideal"
+      }
+    },
+    "moderate": {
+      "generic_9mode": {
+        "contexts": 10,
+        "extra_context_records": [
+          {
+            "context": 8,
+            "nominal_photon_survival_fraction": 0.9266413998495096,
+            "per_mode_gate_exposure_proxy": 15,
+            "phase_mask_exposure": 1,
+            "routing_crossing_upper_proxy": 0
+          },
+          {
+            "context": 9,
+            "nominal_photon_survival_fraction": 0.9266413998495096,
+            "per_mode_gate_exposure_proxy": 15,
+            "phase_mask_exposure": 1,
+            "routing_crossing_upper_proxy": 0
+          }
+        ],
+        "ideal_frame_condition": 9.359126485181303,
+        "min_extra_analyzer_survival": 0.9266413998495096,
+        "per_launched_photon_CCNR_dual_Cramer_Rao_variance_coefficient": 12.230251327064757,
+        "per_launched_photon_Fisher_smallest_eigenvalue": 0.02149624563000622,
+        "per_launched_photon_inverse_Fisher_trace": 381.4266482457624,
+        "uniform_transmission_model": "T=t_gate^max_rail_exposure * t_cross^fixed_swap_count * t_phase^phase_mask_passes, first 8 Bell contexts assumed ideal"
+      },
+      "matched_12_product": {
+        "contexts": 12,
+        "extra_context_records": [
+          {
+            "context": 8,
+            "nominal_photon_survival_fraction": 1.0,
+            "per_mode_gate_exposure_proxy": 0,
+            "phase_mask_exposure": 0,
+            "routing_crossing_upper_proxy": 0
+          },
+          {
+            "context": 9,
+            "nominal_photon_survival_fraction": 0.9694021368469093,
+            "per_mode_gate_exposure_proxy": 6,
+            "phase_mask_exposure": 1,
+            "routing_crossing_upper_proxy": 0
+          },
+          {
+            "context": 10,
+            "nominal_photon_survival_fraction": 0.9694021368469093,
+            "per_mode_gate_exposure_proxy": 6,
+            "phase_mask_exposure": 1,
+            "routing_crossing_upper_proxy": 0
+          },
+          {
+            "context": 11,
+            "nominal_photon_survival_fraction": 0.9694021368469093,
+            "per_mode_gate_exposure_proxy": 6,
+            "phase_mask_exposure": 1,
+            "routing_crossing_upper_proxy": 0
+          }
+        ],
+        "ideal_frame_condition": 1.414213562373097,
+        "min_extra_analyzer_survival": 0.9694021368469093,
+        "per_launched_photon_CCNR_dual_Cramer_Rao_variance_coefficient": 9.282070257807714,
+        "per_launched_photon_Fisher_smallest_eigenvalue": 0.5443606404695006,
+        "per_launched_photon_inverse_Fisher_trace": 93.84961728098074,
+        "uniform_transmission_model": "T=t_gate^max_rail_exposure * t_cross^fixed_swap_count * t_phase^phase_mask_passes, first 8 Bell contexts assumed ideal"
+      },
+      "permutation_Fourier": {
+        "contexts": 10,
+        "extra_context_records": [
+          {
+            "context": 8,
+            "nominal_photon_survival_fraction": 0.8990511119798912,
+            "per_mode_gate_exposure_proxy": 9,
+            "phase_mask_exposure": 1,
+            "routing_crossing_upper_proxy": 6
+          },
+          {
+            "context": 9,
+            "nominal_photon_survival_fraction": 0.9173054912558832,
+            "per_mode_gate_exposure_proxy": 9,
+            "phase_mask_exposure": 1,
+            "routing_crossing_upper_proxy": 4
+          }
+        ],
+        "ideal_frame_condition": 17.842817576067482,
+        "min_extra_analyzer_survival": 0.8990511119798912,
+        "per_launched_photon_CCNR_dual_Cramer_Rao_variance_coefficient": 10.646616372761738,
+        "per_launched_photon_Fisher_smallest_eigenvalue": 0.005880631190013388,
+        "per_launched_photon_inverse_Fisher_trace": 758.3489012623492,
+        "uniform_transmission_model": "T=t_gate^max_rail_exposure * t_cross^fixed_swap_count * t_phase^phase_mask_passes, first 8 Bell contexts assumed ideal"
+      },
+      "two_CZ_local": {
+        "contexts": 10,
+        "extra_context_records": [
+          {
+            "context": 8,
+            "nominal_photon_survival_fraction": 0.9397405029233539,
+            "per_mode_gate_exposure_proxy": 12,
+            "phase_mask_exposure": 2,
+            "routing_crossing_upper_proxy": 0
+          },
+          {
+            "context": 9,
+            "nominal_photon_survival_fraction": 0.9397405029233539,
+            "per_mode_gate_exposure_proxy": 12,
+            "phase_mask_exposure": 2,
+            "routing_crossing_upper_proxy": 0
+          }
+        ],
+        "ideal_frame_condition": 25.020259118093588,
+        "min_extra_analyzer_survival": 0.9397405029233539,
+        "per_launched_photon_CCNR_dual_Cramer_Rao_variance_coefficient": 12.881387988611813,
+        "per_launched_photon_Fisher_smallest_eigenvalue": 0.0031986200201942544,
+        "per_launched_photon_inverse_Fisher_trace": 926.4108291512289,
+        "uniform_transmission_model": "T=t_gate^max_rail_exposure * t_cross^fixed_swap_count * t_phase^phase_mask_passes, first 8 Bell contexts assumed ideal"
+      }
+    }
+  },
+  "scenario_rates": {
+    "harsh": {
+      "coupler": 0.98,
+      "fixed_crossing": 0.97,
+      "phase_mask": 0.995
+    },
+    "ideal": {
+      "coupler": 1.0,
+      "fixed_crossing": 1.0,
+      "phase_mask": 1.0
+    },
+    "moderate": {
+      "coupler": 0.995,
+      "fixed_crossing": 0.99,
+      "phase_mask": 0.999
+    }
+  },
+  "scope": "The optical loss is UNIFORM per context with component-exposure proxies, not a measured photonic device or true internal noncommuting-loss POVM. No detector efficiency/crosstalk/phase drift is included. Fisher bound is locally evaluated at one Horodecki state and assumes trusted ideal projective probabilities with losses, equal total source pulses split among contexts, and asymptotic unbiased estimation. Real architecture decisions need calibrated full POVMs.",
+  "status": "PASS_EQUAL_TOTAL_SOURCE_PULSES_4_ARCHITECTURE_FISHER_PROXY"
+}
