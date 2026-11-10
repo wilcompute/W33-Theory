@@ -1,0 +1,41 @@
+{
+ "n2_size3_k2": {
+  "k": 2,
+  "found": true,
+  "verified": true,
+  "class_sizes": [
+   3,
+   3
+  ],
+  "seconds": 0.01967906951904297
+ },
+ "n3_size5_k6": {
+  "k": 6,
+  "found": false,
+  "status": 2,
+  "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+  "seconds": 0.06705665588378906
+ },
+ "n3_size5_k7": {
+  "k": 7,
+  "found": true,
+  "verified": true,
+  "class_sizes": [
+   3,
+   4,
+   4,
+   4,
+   4,
+   4,
+   5
+  ],
+  "seconds": 0.027076005935668945
+ },
+ "n4_size9_k14": {
+  "k": 14,
+  "found": false,
+  "status": 1,
+  "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+  "seconds": 2400.790828704834
+ }
+}

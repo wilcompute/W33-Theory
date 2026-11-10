@@ -1,0 +1,18 @@
+{
+ "n_lagrangians": 2295,
+ "min_size_found": 9,
+ "ilp_status": 1,
+ "ilp_message": "Time limit reached. (HiGHS Status 13: Time limit reached)",
+ "ilp_seconds": 919.237386226654,
+ "mip_dual_bound": 2.0,
+ "n_uncovered": 120,
+ "anticommutation_degrees": [
+  56
+ ],
+ "theta": 13.999999591230562,
+ "alpha": 14,
+ "minF_lower_theta": 0.06250002554808987,
+ "stabiliser_value": 0.0625,
+ "m_star": 1,
+ "numeric_min_F": 0.06250000000177068
+}
