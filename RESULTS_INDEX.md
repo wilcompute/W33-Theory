@@ -22,9 +22,9 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **14089** files; **18978** distinctive results
+Indexed **14093** files; **18981** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
-**8345** appear in exactly one file — the sharpest signal.
+**8348** appear in exactly one file — the sharpest signal.
 
 ## Index
 
@@ -1600,6 +1600,7 @@ Indexed **14089** files; **18978** distinctive results
 | `1938/1946/1955` | `analysis/w33_pass1956_1960_the_cut_compounds_with_generators.md` |
 | `1951/1955/1958` | `analysis/w33_pass1961_1965_combining_hurts_and_the_checker_fails_again.md` |
 | `1954/1963/1968` | `analysis/W33_CLAIM_STATUS_LEDGER.md` |
+| `2010/0014/0002` | `analysis/2026-11-10_global_gauge_topology.md` |
 | `2042/2047/2054` | `analysis/w33_pass2059_2063_why_q_plus_one_is_four.md` |
 | `2051/1942/1953` | `analysis/w33_pass2436_2441_the_chiral_tower_and_the_achiral_one.md` |
 | `2441/2458/2462` | `analysis/w33_pass2674_2681_the_paper_warned_me_three_times.md` |
@@ -4483,7 +4484,7 @@ Indexed **14089** files; **18978** distinctive results
 | `20261101` | `analysis/2026-11-01_five_plus_three_w33_physics_continuation.md` · `analysis/2026-11-01_native_measurements_controls_and_quantum_geometry.md` · `analysis/w33_20261101_common_cubic_spinor_extension.py` · `analysis/w33_20261101_five_plus_three.py` · *(+9)* |
 | `20261106` | `analysis/2026-11-06_sterile_parent_and_changed_work_audit.md` · `analysis/PASS12638_E7_KRAMERS_CHANNELS.md` · `analysis/PASS12645_EXACT_FOUR_QUBIT_ONE_SIXTEENTH.md` · `analysis/PASS20261108_GAUGE_E6_OPTICAL_FOLLOWTHROUGH.md` · *(+6)* |
 | `20261107` | `analysis/2026-11-07_inverse_higgs_production_and_sterile_spectra.md` · `analysis/2026-11-07_natural_constants_derivation_catalog.md` · `analysis/PASS20261107_CONSTANTS_FIVE_FRONTS.md` · `analysis/toe_20261107_coupled_scalar_moments.py` · *(+6)* |
-| `20261110` | `analysis/2026-11-10_four_qubit_equality.md` · `analysis/2026-11-10_light_yukawa_completion.md` · `analysis/2026-11-10_neutral_higgs_alignment.md` · `analysis/2026-11-10_neutrino_matching.md` · *(+7)* |
+| `20261110` | `analysis/2026-11-10_four_qubit_equality.md` · `analysis/2026-11-10_global_gauge_topology.md` · `analysis/2026-11-10_light_yukawa_completion.md` · `analysis/2026-11-10_neutral_higgs_alignment.md` · *(+11)* |
 | `20262000` | `analysis/2026_11_03_csg_action_heldout.py` |
 | `20481813` | `analysis/PASS2560_2567_SEVEN_FRONTIERS_RELEASE.md` |
 | `20544048` | `analysis/w33_pass5430_q3_radius10_false_vote4_frontier.py` |
@@ -5377,6 +5378,7 @@ Indexed **14089** files; **18978** distinctive results
 | `0406039` | `analysis/w33_pass10969_rpv_heavy_superpartners_vs_higgs_quartic.py` |
 | `0408139` | `analysis/BT5872_BT5879_coherent_css_rankmetric_clifford_discriminant.md` |
 | `0408190` | `analysis/2026-10-19_round9_five_fronts_potential_phase_triality_tomography_thresholds.md` · `analysis/PASS10941_RESERVATION.md` · `analysis/PASS7310_7312_Q7_PAULI_VALIDATOR.md` · `analysis/w33_allq_cz_orbit_adjoint_weld.py` · *(+1)* |
+| `0409095` | `analysis/2026-11-10_vector_proton_decay.md` |
 | `0411036` | `analysis/PASS11630_REYE_WITTING_INSTRUMENT.md` · `analysis/PASS11631_11635_PHYSICAL_INTERFACES.md` · `analysis/w33_pass11630_reye_witting_instrument.py` |
 | `0411260` | `analysis/2026-11-09_yoshida_integral_fibers_and_chirality.md` |
 | `0412001` | `analysis/PASS11189_ORIENTED_HOLONOMY.md` · `analysis/PASS11192_TIME_REVERSAL_MEREOLOGY.md` · `papers/forty_points/appC_references.tex` |
@@ -12625,11 +12627,12 @@ Indexed **14089** files; **18978** distinctive results
 | `99909` | `analysis/BT1531_1535_frame_resolution_continuation.md` · `analysis/BT1601_1605_integral_frame_cokernel.md` · `analysis/w33_pass1480_1484_the_sign_lives_on_the_540.md` · `analysis/w33_pass1485_1489_the_36_are_the_spreads.md` · *(+4)* |
 | `0000` | `analysis/2026-05-29_ternary_knight_snake_genus_lift.md` · `analysis/2026-10-08_early_torus_archaeology_five_fronts.md` · `analysis/BT2820_BT2824_blueprint_hardening.md` · `analysis/bt2820_2824_blueprint_hardening.py` · *(+9)* |
 | `0001` | `analysis/2026-05-29_ternary_knight_snake_genus_lift.md` · `analysis/2026-06-19_validation_thread_summary.md` · `analysis/2026-10-15_toe94_five.md` · `analysis/2026-10-28_f2_klein_native_gauge_bridge.md` · *(+16)* |
-| `0002` | `analysis/2026-11-04_tomotope_literature_sixfront_reye_contextuality.md` · `analysis/PASS11389_PARABOLIC_SPATIAL_COVER.md` · `analysis/PASS11988_11992_TANGENT_CLOCK_AND_PHYSICAL_INTERFACES.md` · `analysis/PASS540_SYMPLECTIC_CHIRALITY_CHAINRING.md` · *(+3)* |
+| `0002` | `analysis/2026-11-04_tomotope_literature_sixfront_reye_contextuality.md` · `analysis/2026-11-10_global_gauge_topology.md` · `analysis/PASS11389_PARABOLIC_SPATIAL_COVER.md` · `analysis/PASS11988_11992_TANGENT_CLOCK_AND_PHYSICAL_INTERFACES.md` · *(+4)* |
 | `0003` | `exploration/PART_CCCXCVI_PHOTONIC_LIFE_RUNTIME_ARCHITECTURE.py` |
 | `0004` | `analysis/2026-11-03_cross_domain_TOE_falsifiers.md` · `analysis/2026-11-03_lensing_tilt_sparse_q15_and_wkb_TOE_fronts.md` · `analysis/PASS20261108_FIVE_PHYSICAL_FALSIFIERS.md` · `analysis/toe_20261103_class_RSD_PV_holdout.py` · *(+1)* |
 | `0010` | `analysis/2026-10-15_toe94_five.md` · `analysis/BT2901_BT2907_seven_frontiers.md` · `analysis/holonet_cli.py` · `analysis/w33_BREAKTHROUGH_159_gray_code_clifford_compiler.py` · *(+7)* |
 | `0011` | `analysis/2026-05-29_ternary_knight_snake_genus_lift.md` · `analysis/BT2901_BT2907_seven_frontiers.md` · `analysis/BT705_fano_tomotope_selector_theorem.md` · `analysis/BT713_selector_sheet_rank_filter.md` · *(+8)* |
+| `0014` | `analysis/2026-11-10_global_gauge_topology.md` |
 | `0016` | `analysis/2026-11-03_pascal_spectral_gap_addendum.md` · `analysis/2026-11-03_pascal_w33_transport_scale_audit.md` · `analysis/2026_11_03_pascal_schur_rg_exact.py` · `analysis/BT4205_BT4212_carrier_native_hodge_delay_interval_bonkers.md` |
 | `0022` | `analysis/PASS11786_11793_SPECTRAL_FIELD_GRAVITY.md` · `analysis/w33_pass11787_11788_current_dirac_nonlinear_action.py` |
 | `0025` | `analysis/w33_projective_symplectic_lift_control_abi.py` |
