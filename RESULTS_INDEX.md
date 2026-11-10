@@ -22,9 +22,9 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **14093** files; **18981** distinctive results
+Indexed **14095** files; **18983** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
-**8348** appear in exactly one file — the sharpest signal.
+**8350** appear in exactly one file — the sharpest signal.
 
 ## Index
 
@@ -4484,7 +4484,7 @@ Indexed **14093** files; **18981** distinctive results
 | `20261101` | `analysis/2026-11-01_five_plus_three_w33_physics_continuation.md` · `analysis/2026-11-01_native_measurements_controls_and_quantum_geometry.md` · `analysis/w33_20261101_common_cubic_spinor_extension.py` · `analysis/w33_20261101_five_plus_three.py` · *(+9)* |
 | `20261106` | `analysis/2026-11-06_sterile_parent_and_changed_work_audit.md` · `analysis/PASS12638_E7_KRAMERS_CHANNELS.md` · `analysis/PASS12645_EXACT_FOUR_QUBIT_ONE_SIXTEENTH.md` · `analysis/PASS20261108_GAUGE_E6_OPTICAL_FOLLOWTHROUGH.md` · *(+6)* |
 | `20261107` | `analysis/2026-11-07_inverse_higgs_production_and_sterile_spectra.md` · `analysis/2026-11-07_natural_constants_derivation_catalog.md` · `analysis/PASS20261107_CONSTANTS_FIVE_FRONTS.md` · `analysis/toe_20261107_coupled_scalar_moments.py` · *(+6)* |
-| `20261110` | `analysis/2026-11-10_four_qubit_equality.md` · `analysis/2026-11-10_global_gauge_topology.md` · `analysis/2026-11-10_light_yukawa_completion.md` · `analysis/2026-11-10_neutral_higgs_alignment.md` · *(+11)* |
+| `20261110` | `analysis/2026-11-10_four_qubit_equality.md` · `analysis/2026-11-10_global_gauge_topology.md` · `analysis/2026-11-10_light_yukawa_completion.md` · `analysis/2026-11-10_monopole_core_channels.md` · *(+13)* |
 | `20262000` | `analysis/2026_11_03_csg_action_heldout.py` |
 | `20481813` | `analysis/PASS2560_2567_SEVEN_FRONTIERS_RELEASE.md` |
 | `20544048` | `analysis/w33_pass5430_q3_radius10_false_vote4_frontier.py` |
@@ -5612,6 +5612,7 @@ Indexed **14093** files; **18981** distinctive results
 | `1489163` | `analysis/BT900_holonet_patch_compile.md` |
 | `1490975` | `analysis/w33_20260923_cubic_jacobi_levi.g` |
 | `1492992` | `analysis/PASS20261001_PHASE_CHIRALITY_QUANTUM_GRAVITY_UV.md` · `analysis/w33_20261001_degree18_phase_completion.py` · `analysis/w33_pass11287_quotient_self_energy_matrix.py` · `analysis/w33_pass11476_11480_cubic_geometry_correlated.py` · *(+2)* |
+| `1503375` | `analysis/2026-11-10_monopole_core_channels.md` · `analysis/toe_20261110_monopole_core_channels.py` |
 | `1503522` | `analysis/w33_20260923_cubic_jacobi_levi.g` |
 | `1503940` | `analysis/w33_20260923_cubic_jacobi_levi.g` |
 | `1513702` | `analysis/w33_pass1460_1464_the_complete_hodge_decomposition.md` |
@@ -7410,6 +7411,7 @@ Indexed **14093** files; **18981** distinctive results
 | `282015` | `analysis/2026-11-03_c3_fusion_refinement_gravity_flavor_ramsey.md` |
 | `282021` | `analysis/PASS20261108_DEEP_FIVE_FRONTS.md` |
 | `282022` | `analysis/2026-11-03_fivefront_symmetry_gravity_hardware_audit.md` |
+| `282023` | `analysis/2026-11-10_monopole_core_channels.md` |
 | `282024` | `analysis/2026-11-10_neutral_higgs_alignment.md` · `analysis/2026-11-10_neutrino_matching.md` |
 | `282026` | `analysis/2026-10-10_toe40_five_independent_fronts.md` · `analysis/2026-11-03_cross_domain_TOE_falsifiers.md` · `analysis/2026-11-03_eight_fronts_class_ultralight_uv_falsifiers.md` · `analysis/toe_20261103_chiral_messenger_naturalness_floor.py` · *(+1)* |
 | `283446` | `analysis/PASS11506_11510_FIVE_PHYSICS_TARGETS.md` |
@@ -11169,6 +11171,7 @@ Indexed **14093** files; **18981** distinctive results
 | `29118` | `analysis/PASS456_Q5_COLLISION_ANATOMY.md` |
 | `29120` | `analysis/PASS11710_11711_SINGLE_TICK_AND_N_QUTRIT_VACUA.md` · `analysis/w33_BREAKTHROUGH_44_hermitian_curve_family.py` · `analysis/w33_pass11710_11711_single_tick_and_n_qutrit_vacua.py` · `analysis/w33_pass4897_the_q8_polarity_exists_and_has_65_absolute_points.py` · *(+3)* |
 | `29155` | `scripts/w33_monster_permrep_suborbit_signatures.py` |
+| `29159` | `analysis/2026-11-10_monopole_core_channels.md` |
 | `29160` | `analysis/BT1367_BT1369_phase_q6_scheduler_lifts.md` · `analysis/BT1370_BT1372_counterconnection_address_scheduler_lifts.md` · `analysis/BT3286_BT3295_signature_port_common_envelope.md` · `analysis/BT3308_BT3319_knight_hypercube_gauge_closure.md` · *(+8)* |
 | `29172` | `analysis/2026-11-03_fivefront_symmetry_gravity_hardware_audit.md` |
 | `29203` | `analysis/PASS20261108_DEEP_FIVE_FRONTS.md` |
@@ -18585,7 +18588,6 @@ Indexed **14093** files; **18981** distinctive results
 | `098` | `analysis/2026-08-28_FIVE_FRONT_CLOSURE_TRADE_S5_Q5_TENSOR.md` · `analysis/PASS20261108_FORTY_POINTS_FIVE_FRONTS.md` · `analysis/PASS2300_2305_FIVE_FRONTIERS_RELEASE.md` · `analysis/w33_pass2300_2305_verify_frozen.py` |
 | `099` | `analysis/BT3837_BT3854_ovoid_wedderburn_code_leech_triality.md` · `analysis/w33_20261021_five_physical_candidates.py` |
 | `277` | `analysis/2026-08-29_EIGHT_FRONT_RECOVERY_PHYSICS_CLOSURE.md` · `analysis/PASS11088_BARYONIC_HIDDEN_CONDENSATES.md` · `analysis/PASS11108_TACHYON_FREE_MODULI_RESCAN.md` · `analysis/PASS20261109_EXACT_W33_OCTAGON_HESSIAN_81D_GAUGE_FIVE.md` · *(+21)* |
-| `283` | `analysis/BREAKTHROUGH_DCCLXXXII.md` · `analysis/BT3687_BT3693_realized_octad_borel_psd_proof_tomography_architecture.md` · `analysis/PASS11254_TM1_YUKAWA_BREAKING.md` · `analysis/THEORY_OF_EVERYTHING.py` · *(+20)* |
 | `307` | `analysis/PASS11418_J8_COMPLETENESS.md` · `analysis/PASS20260924_triality_class_field_closure.md` · `analysis/PASS20261109_POST_PR324_FULLBYTE_CHANGE_AUDIT.md` · `analysis/PASS4976_4983_EXECUTED_OUTCOMES.md` · *(+21)* |
 | `326` | `analysis/2026-10-14_toe66_five_fronts.md` · `analysis/2026-11-03_pascal_w33_transport_scale_audit.md` · `analysis/PASS11246_DISCRETE_ANOMALY_ESCAPES.md` · `analysis/PASS11268_PERFECT_MAGIC_TICKS.md` · *(+18)* |
 | `329` | `analysis/2026-11-05_pq_protection_normalization_and_shared_uv_audit.md` · `analysis/PASS12004_CP_REAL_BARE_THETA_NO_FIT.md` · `analysis/THEORY_OF_EVERYTHING.py` · `analysis/THE_SELECTION_LAYER.md` · *(+9)* |
