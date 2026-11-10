@@ -1,0 +1,29 @@
+# Exact light Yukawa obstruction and a gauge-invariant completion
+
+The preceding W33 vacuum has 49 uneaten chiral components. Its supplied superpotential has **zero light cubic**, including all three Yukawa sectors. The certificate below shows why and constructs a separate deformation at the same D- and F-flat vacuum. Its three charged-fermion Yukawa matrices have rank three. The light cubic admits a common down-type Higgs direction and vanishing renormalizable baryon- and lepton-number violating couplings. [Canonical flat vacuum and mass ledger](2026-11-09_canonical_sm_flatness.md)
+
+## The original cubic vanishes
+
+The exact four-Cartan nullspace calculation quotients the holomorphic Hessian kernel by the broken gauge orbit. Each of the 49 light representatives has zero adjoint fluctuation, zero fluctuation in the third fundamental species, and opposite fluctuations in the first two fundamental species. Every fundamental and conjugate representative has zero component in the neutral internal plane spanned by the first two internal coordinates.
+
+A family meson is `M[j,k] = X[k]^T Z[j]` with the transpose over the internal index. Its linear variation vanishes on these light directions because the VEVs occupy the neutral plane. The centered trace squares therefore begin at fourth order on the light slice. The adjoint trace and the original mixed adjoint couplings contribute no light cubic. The original alternating cubic has no cubic light term because the third species has zero fluctuation. In each split-mass operator, the constant meson contribution to the cubic vanishes because the first two light legs are opposite. A meson variation can enter the cubic only with at least two neutral internal VEV legs, and the signed internal cubic vanishes on two such legs. This proves vanishing on the whole light space, including combinations of different Cartan weights.
+
+The tree-level integration of heavy chiral fields preserves this conclusion. In a linear slice with zero mixed heavy-light Hessian, the solution for the massive fluctuations starts at quadratic order in the light fields, so their substitution first changes the light superpotential at fourth order.
+
+## Covariant construction
+
+A word in the family mesons transforms by family conjugation. At the stated VEV, words of length at most two span all family matrix units. The certificate records a polynomial `F[out,in]` for each unit. At the VEV it selects family coordinate `in` and sends it to coordinate `out`.
+
+Use the signed invariant tensor `d` and its dual `dᵛ` to build three internal covariants. In each contraction, the dual tensor acts on the zeroth conjugate field and the ordinary tensor acts on the zeroth fundamental field. Explicitly, define `K(B)^i_j = sum_(a,u,v,w) dᵛ^{iuv} Z[0]_(u,a) d_(vwj) (X[0] B^T)^(w,a)`, where `B` is a family endomorphism. The first two maps are `E = K(I)` and `O = I−E`. At the VEV, `E` projects to the ten exotic internal components. The cross map `C = K(F[1,0])` converts an exotic down-antiquark component into its ordinary slot. Combining `O` and `C` gives three independent down-antiquark flavor covectors. The ordinary and exotic weak components distinguish the three lepton covectors and one down-type Higgs covector.
+
+Each added operator is a sum of alternating-cubic contractions of three covariantly dressed copies of `X[0]`. On leg `i`, apply the adjoint power in the certificate, then the indicated internal map, and place the indicated input family in output slot `i` using `F[i,in]`. For each ordered charge target the certificate supplies coefficients of the adjoint-power monomials. These evaluate to one at the target and zero at the other 26 ordered nonzero triples with total charge zero in the fundamental. The maximum degree of the nine-operator witness is 30.
+
+Every leg contains a positive power of `A`, and `A X[0] = 0` at the VEV. Each entire operator therefore starts at cubic order in the full fluctuation space. This leaves the original F equations and Hessian intact, and the D equations are unchanged. For any nonzero charge `q = 6Y`, the first variation of `A^n X[0]` at the VEV is `q^(n−1)(q δX[0] + δA X[0])`. The filter therefore applies also to adjoint contributions to charged heavy legs. In particular the new operators supply no cubic vertex with a charge `−2` triplet and two other nonzero-charge legs. The base superpotential may still supply heavy vertices.
+
+## Exact light interactions and scope
+
+The integral light lift basis gives Yukawa determinants `−27`, `−108`, and `−729` in the up, down, and charged-lepton sectors. These certify rank and depend on basis and normalization. The four down-charge doublets give a rank-one map into the down-quark Yukawa matrix space. Its kernel is the three-dimensional lepton doublet space. Every charged-lepton alternating form vanishes on the exterior square of this kernel. The light `Uᶜ Dᶜ Dᶜ` tensor is zero. This is a basis-independent statement about the light renormalizable superpotential. [Basis-independent lepton and Higgs separation](https://arxiv.org/abs/hep-ph/9702247)
+
+The deformation uses supplied operators and coefficients. Family covectors can be paired independently, so full rank here provides no predicted mass ratios or mixing angles. Dimension-five proton decay from the complete heavy spectrum, electroweak symmetry breaking, neutrino masses, and the origin of the operators remain open.
+
+Run `python analysis/toe_20261110_light_yukawa_completion.py` from the repository root. [Frozen operators and matrices](../data/toe_20261110_light_yukawa_completion.json)

@@ -320,10 +320,21 @@ def meson_trace_mass(x, dual, mesons, orbit):
                                    for word, center in zip(words, centers)]
 
 
-def dual_repair(gauge, internal, color, weak, y, records):
+def repair_vevs():
     basis = np.eye(81, dtype=np.int64).reshape(27, 3, 81)
     x = np.stack([basis[0, 0], basis[1, 1], basis[0, 2] + basis[1, 2]])
-    dual = np.stack([x[0] + x[1], x[2]])
+    return x, np.stack([x[0] + x[1], x[2]])
+
+
+def repair_orbit(x, dual, gauge, internal, y):
+    orbit = np.stack([(x @ g.T).ravel() for g in gauge])
+    orbit_dual = np.stack([(-dual @ g).ravel() for g in gauge])
+    y_action = np.vstack([np.diag(-adjoint_charges(internal, y)), np.zeros((8, 78), dtype=np.int64)])
+    return np.hstack([orbit, orbit_dual, y_action])
+
+
+def dual_repair(gauge, internal, color, weak, y, records):
+    x, dual = repair_vevs()
     assert all(not vacuum.bracket(a, b, records).any() for a, b in combinations(x, 2))
     assert all(np.einsum('ni,ij,nj->', x, g, x) == np.einsum('ni,ij,nj->', dual, g.T, dual)
                for g in gauge)
@@ -331,13 +342,10 @@ def dual_repair(gauge, internal, color, weak, y, records):
     # kills the VEVs. Family support makes the adjoint derivative vanish.
     assert not (np.repeat(y, 3) * x).any() and not (np.repeat(y, 3) * dual).any()
     assert all(not (dual[0] @ g @ x[2]) for g in gauge[:78])
-    orbit = np.stack([(x @ g.T).ravel() for g in gauge])
-    orbit_dual = np.stack([(-dual @ g).ravel() for g in gauge])
-    y_action = np.vstack([np.diag(-adjoint_charges(internal, y)), np.zeros((8, 78), dtype=np.int64)])
-    rank = vacuum.rank(np.hstack([orbit, orbit_dual]))
-    rank_y = vacuum.rank(np.hstack([orbit, orbit_dual, y_action]))
+    all_orbit = repair_orbit(x, dual, gauge, internal, y)
+    rank = vacuum.rank(all_orbit[:, :405])
+    rank_y = vacuum.rank(all_orbit)
     assert (rank, rank_y) == (62, 74)
-    all_orbit = np.hstack([orbit, orbit_dual, y_action])
     adjoint_derivative = np.stack([(dual @ g @ x.T).ravel() for g in gauge[:78]])
     allowed = [(0, 2), (1, 0), (1, 1)]
     assert vacuum.rank(adjoint_derivative) == 3
