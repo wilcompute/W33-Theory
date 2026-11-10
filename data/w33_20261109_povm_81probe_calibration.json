@@ -1,0 +1,42 @@
+{
+  "Hilbert_space_dimension": 9,
+  "Horodecki_a0p236_dual_margin": 0.0030587940982740314,
+  "Horodecki_dual_l1": 18.55742985551507,
+  "actual_contexts": 10,
+  "corresponding_total_calibration_pulses": 110651243836320,
+  "critical_scope": "A sufficient radius for all effects under independent trusted probe preparations and all raw pulse outcomes. This is conservative and extremely costly: structured device calibration, lower-dimensional parameter fits, or sharper multivariate statistics may improve enormously. The calculation assumes absolute no-click counts and stationary source brightness/calibration and is not a demonstrated experiment.",
+  "exact_expected_probability_reconstruction_operator_error": 5.925093922209363e-16,
+  "finite_calibration_trials": {
+    "1000": {
+      "certified_each_POVM_effect_operator_norm_radius": 1.9264957558924265,
+      "maximum_simulated_operator_norm_effect_error": 0.12596458089459406,
+      "pulses_per_probe_context": 1000,
+      "simultaneous_95pct_elementary_frequency_radius": 0.07965079658978455,
+      "total_trusted_calibration_pulses": 810000,
+      "true_error_below_conservative_bound": true
+    },
+    "100000": {
+      "certified_each_POVM_effect_operator_norm_radius": 0.1926495755892426,
+      "maximum_simulated_operator_norm_effect_error": 0.011395824169425387,
+      "pulses_per_probe_context": 100000,
+      "simultaneous_95pct_elementary_frequency_radius": 0.007965079658978453,
+      "total_trusted_calibration_pulses": 81000000,
+      "true_error_below_conservative_bound": true
+    },
+    "1000000": {
+      "certified_each_POVM_effect_operator_norm_radius": 0.06092114491267815,
+      "maximum_simulated_operator_norm_effect_error": 0.004781270135110076,
+      "pulses_per_probe_context": 1000000,
+      "simultaneous_95pct_elementary_frequency_radius": 0.002518779346704914,
+      "total_trusted_calibration_pulses": 810000000,
+      "true_error_below_conservative_bound": true
+    }
+  },
+  "formal_81_state_linear_inversion": "9 computational projectors plus 36 real and 36 imaginary pair-superposition probes; recover E_jk from unconditioned click probabilities, with no-click recorded",
+  "independent_probe_states": 81,
+  "joint_95pct_coverage_formula": "eps=sqrt(log(2*10*81*10/0.05)/(2*N)); norm(Ehat_j-E_j)_op<=sqrt(585)*eps by Frobenius bound under all marginal concentration events",
+  "necessary_per_probe_calibration_pulses_for_this_worst_case_Hoeffding_cert_even_with_infinite_physics_shots": 136606473872,
+  "needed_per_effect_calibration_radius_exclusive": 0.00016482854156471406,
+  "registered_click_outcomes_per_context": 10,
+  "status": "PASS_81_PROBE_ABSOLUTE_POVM_CALIBRATION_AND_RESOURCE_NO_GO"
+}

@@ -1,0 +1,352 @@
+{
+  "3D_lattice_Wilson_Dirac_models": [
+    {
+      "exact_global_gap": "1",
+      "exact_total_3D_AIII_degree": 0,
+      "lambda": "0",
+      "m": "4",
+      "protected_uniform_perturbation_threshold": "1",
+      "sector_contributions": [
+        {
+          "W33_eigenvalue": "0",
+          "Wilson_mass": "4",
+          "exact_sector_gap": "1",
+          "individual_degree": 0,
+          "multiplicity": 15,
+          "multiplicity_weighted_degree": 0
+        },
+        {
+          "W33_eigenvalue": "3/8",
+          "Wilson_mass": "4",
+          "exact_sector_gap": "1",
+          "individual_degree": 0,
+          "multiplicity": 24,
+          "multiplicity_weighted_degree": 0
+        },
+        {
+          "W33_eigenvalue": "1",
+          "Wilson_mass": "4",
+          "exact_sector_gap": "1",
+          "individual_degree": 0,
+          "multiplicity": 1,
+          "multiplicity_weighted_degree": 0
+        }
+      ],
+      "theory": "Norm perturbations <min_k sigma_min(Q(k)) preserve integer winding under chiral symmetry; here minimum attained at TRIM because E\u00b2 is multi-affine in cos(k_i)."
+    },
+    {
+      "exact_global_gap": "1",
+      "exact_total_3D_AIII_degree": 40,
+      "lambda": "0",
+      "m": "2",
+      "protected_uniform_perturbation_threshold": "1",
+      "sector_contributions": [
+        {
+          "W33_eigenvalue": "0",
+          "Wilson_mass": "2",
+          "exact_sector_gap": "1",
+          "individual_degree": 1,
+          "multiplicity": 15,
+          "multiplicity_weighted_degree": 15
+        },
+        {
+          "W33_eigenvalue": "3/8",
+          "Wilson_mass": "2",
+          "exact_sector_gap": "1",
+          "individual_degree": 1,
+          "multiplicity": 24,
+          "multiplicity_weighted_degree": 24
+        },
+        {
+          "W33_eigenvalue": "1",
+          "Wilson_mass": "2",
+          "exact_sector_gap": "1",
+          "individual_degree": 1,
+          "multiplicity": 1,
+          "multiplicity_weighted_degree": 1
+        }
+      ],
+      "theory": "Norm perturbations <min_k sigma_min(Q(k)) preserve integer winding under chiral symmetry; here minimum attained at TRIM because E\u00b2 is multi-affine in cos(k_i)."
+    },
+    {
+      "exact_global_gap": "1",
+      "exact_total_3D_AIII_degree": -80,
+      "lambda": "0",
+      "m": "0",
+      "protected_uniform_perturbation_threshold": "1",
+      "sector_contributions": [
+        {
+          "W33_eigenvalue": "0",
+          "Wilson_mass": "0",
+          "exact_sector_gap": "1",
+          "individual_degree": -2,
+          "multiplicity": 15,
+          "multiplicity_weighted_degree": -30
+        },
+        {
+          "W33_eigenvalue": "3/8",
+          "Wilson_mass": "0",
+          "exact_sector_gap": "1",
+          "individual_degree": -2,
+          "multiplicity": 24,
+          "multiplicity_weighted_degree": -48
+        },
+        {
+          "W33_eigenvalue": "1",
+          "Wilson_mass": "0",
+          "exact_sector_gap": "1",
+          "individual_degree": -2,
+          "multiplicity": 1,
+          "multiplicity_weighted_degree": -2
+        }
+      ],
+      "theory": "Norm perturbations <min_k sigma_min(Q(k)) preserve integer winding under chiral symmetry; here minimum attained at TRIM because E\u00b2 is multi-affine in cos(k_i)."
+    },
+    {
+      "exact_global_gap": "1",
+      "exact_total_3D_AIII_degree": 40,
+      "lambda": "0",
+      "m": "-2",
+      "protected_uniform_perturbation_threshold": "1",
+      "sector_contributions": [
+        {
+          "W33_eigenvalue": "0",
+          "Wilson_mass": "-2",
+          "exact_sector_gap": "1",
+          "individual_degree": 1,
+          "multiplicity": 15,
+          "multiplicity_weighted_degree": 15
+        },
+        {
+          "W33_eigenvalue": "3/8",
+          "Wilson_mass": "-2",
+          "exact_sector_gap": "1",
+          "individual_degree": 1,
+          "multiplicity": 24,
+          "multiplicity_weighted_degree": 24
+        },
+        {
+          "W33_eigenvalue": "1",
+          "Wilson_mass": "-2",
+          "exact_sector_gap": "1",
+          "individual_degree": 1,
+          "multiplicity": 1,
+          "multiplicity_weighted_degree": 1
+        }
+      ],
+      "theory": "Norm perturbations <min_k sigma_min(Q(k)) preserve integer winding under chiral symmetry; here minimum attained at TRIM because E\u00b2 is multi-affine in cos(k_i)."
+    },
+    {
+      "exact_global_gap": "1/80",
+      "exact_total_3D_AIII_degree": 39,
+      "lambda": "1/2",
+      "m": "14/5",
+      "protected_uniform_perturbation_threshold": "1/80",
+      "sector_contributions": [
+        {
+          "W33_eigenvalue": "0",
+          "Wilson_mass": "14/5",
+          "exact_sector_gap": "1/5",
+          "individual_degree": 1,
+          "multiplicity": 15,
+          "multiplicity_weighted_degree": 15
+        },
+        {
+          "W33_eigenvalue": "3/8",
+          "Wilson_mass": "239/80",
+          "exact_sector_gap": "1/80",
+          "individual_degree": 1,
+          "multiplicity": 24,
+          "multiplicity_weighted_degree": 24
+        },
+        {
+          "W33_eigenvalue": "1",
+          "Wilson_mass": "33/10",
+          "exact_sector_gap": "3/10",
+          "individual_degree": 0,
+          "multiplicity": 1,
+          "multiplicity_weighted_degree": 0
+        }
+      ],
+      "theory": "Norm perturbations <min_k sigma_min(Q(k)) preserve integer winding under chiral symmetry; here minimum attained at TRIM because E\u00b2 is multi-affine in cos(k_i)."
+    },
+    {
+      "exact_global_gap": "1/20",
+      "exact_total_3D_AIII_degree": 15,
+      "lambda": "2/5",
+      "m": "29/10",
+      "protected_uniform_perturbation_threshold": "1/20",
+      "sector_contributions": [
+        {
+          "W33_eigenvalue": "0",
+          "Wilson_mass": "29/10",
+          "exact_sector_gap": "1/10",
+          "individual_degree": 1,
+          "multiplicity": 15,
+          "multiplicity_weighted_degree": 15
+        },
+        {
+          "W33_eigenvalue": "3/8",
+          "Wilson_mass": "61/20",
+          "exact_sector_gap": "1/20",
+          "individual_degree": 0,
+          "multiplicity": 24,
+          "multiplicity_weighted_degree": 0
+        },
+        {
+          "W33_eigenvalue": "1",
+          "Wilson_mass": "33/10",
+          "exact_sector_gap": "3/10",
+          "individual_degree": 0,
+          "multiplicity": 1,
+          "multiplicity_weighted_degree": 0
+        }
+      ],
+      "theory": "Norm perturbations <min_k sigma_min(Q(k)) preserve integer winding under chiral symmetry; here minimum attained at TRIM because E\u00b2 is multi-affine in cos(k_i)."
+    },
+    {
+      "exact_global_gap": "1/40",
+      "exact_total_3D_AIII_degree": 25,
+      "lambda": "-3/5",
+      "m": "16/5",
+      "protected_uniform_perturbation_threshold": "1/40",
+      "sector_contributions": [
+        {
+          "W33_eigenvalue": "0",
+          "Wilson_mass": "16/5",
+          "exact_sector_gap": "1/5",
+          "individual_degree": 0,
+          "multiplicity": 15,
+          "multiplicity_weighted_degree": 0
+        },
+        {
+          "W33_eigenvalue": "3/8",
+          "Wilson_mass": "119/40",
+          "exact_sector_gap": "1/40",
+          "individual_degree": 1,
+          "multiplicity": 24,
+          "multiplicity_weighted_degree": 24
+        },
+        {
+          "W33_eigenvalue": "1",
+          "Wilson_mass": "13/5",
+          "exact_sector_gap": "2/5",
+          "individual_degree": 1,
+          "multiplicity": 1,
+          "multiplicity_weighted_degree": 1
+        }
+      ],
+      "theory": "Norm perturbations <min_k sigma_min(Q(k)) preserve integer winding under chiral symmetry; here minimum attained at TRIM because E\u00b2 is multi-affine in cos(k_i)."
+    },
+    {
+      "exact_global_gap": "9/40",
+      "exact_total_3D_AIII_degree": -77,
+      "lambda": "1",
+      "m": "2/5",
+      "protected_uniform_perturbation_threshold": "9/40",
+      "sector_contributions": [
+        {
+          "W33_eigenvalue": "0",
+          "Wilson_mass": "2/5",
+          "exact_sector_gap": "3/5",
+          "individual_degree": -2,
+          "multiplicity": 15,
+          "multiplicity_weighted_degree": -30
+        },
+        {
+          "W33_eigenvalue": "3/8",
+          "Wilson_mass": "31/40",
+          "exact_sector_gap": "9/40",
+          "individual_degree": -2,
+          "multiplicity": 24,
+          "multiplicity_weighted_degree": -48
+        },
+        {
+          "W33_eigenvalue": "1",
+          "Wilson_mass": "7/5",
+          "exact_sector_gap": "2/5",
+          "individual_degree": 1,
+          "multiplicity": 1,
+          "multiplicity_weighted_degree": 1
+        }
+      ],
+      "theory": "Norm perturbations <min_k sigma_min(Q(k)) preserve integer winding under chiral symmetry; here minimum attained at TRIM because E\u00b2 is multi-affine in cos(k_i)."
+    }
+  ],
+  "W33_internal_point_spectrum": "0^15,(3/8)^24,1^1",
+  "critical_warning": "3D periodic k-space and Wilson regulator are EXTERNALLY supplied; the same W33 input permits -80,-77,0,15,25,39,40 indices. Tunable AIII winding does not supply a chiral Standard Model, spacetime geometry, gauge anomalies or gravity.",
+  "four_naive_critical_masses": [
+    "-3",
+    "-1",
+    "1",
+    "3"
+  ],
+  "independently_integrated_unit_sector_degrees": [
+    {
+      "abs_error": 4.068776225859838e-15,
+      "exact_one_sector_degree": 0,
+      "independent_48cubed_integral": 4.068776225859838e-15,
+      "mass": "4"
+    },
+    {
+      "abs_error": 2.275957200481571e-14,
+      "exact_one_sector_degree": 1,
+      "independent_48cubed_integral": 0.9999999999999772,
+      "mass": "2"
+    },
+    {
+      "abs_error": 5.46229728115577e-14,
+      "exact_one_sector_degree": -2,
+      "independent_48cubed_integral": -1.9999999999999454,
+      "mass": "0"
+    },
+    {
+      "abs_error": 2.19824158875781e-14,
+      "exact_one_sector_degree": 1,
+      "independent_48cubed_integral": 0.999999999999978,
+      "mass": "-2"
+    }
+  ],
+  "naive_8_doubler_zero_net_chirality": [
+    {
+      "TRIM_pi_axes": 0,
+      "multiplicity": 1,
+      "naive_local_chirality": 1
+    },
+    {
+      "TRIM_pi_axes": 1,
+      "multiplicity": 3,
+      "naive_local_chirality": -1
+    },
+    {
+      "TRIM_pi_axes": 2,
+      "multiplicity": 3,
+      "naive_local_chirality": 1
+    },
+    {
+      "TRIM_pi_axes": 3,
+      "multiplicity": 1,
+      "naive_local_chirality": -1
+    }
+  ],
+  "novelty_scope": "Standard Wilson-Dirac AIII degree and fermion doubling are prior art. This is a W33 multisection exact benchmark demonstrating underdetermination, not a discovered physical generation count.",
+  "point_gauge_rephasing_spectrum_error": 2.220446049250313e-16,
+  "status": "PASS_EXTERNAL_3D_AIII_W33_WILSON_EXACT_MULTISECTOR_FALSIFIER",
+  "tuned_massless_cone_control": [
+    {
+      "delta": 0.1,
+      "positive_gap": 0.09995833854135662,
+      "slope_E_over_delta": 0.9995833854135662
+    },
+    {
+      "delta": 0.01,
+      "positive_gap": 0.009999958333385083,
+      "slope_E_over_delta": 0.9999958333385083
+    },
+    {
+      "delta": 0.001,
+      "positive_gap": 0.0009999999583331011,
+      "slope_E_over_delta": 0.9999999583331011
+    }
+  ]
+}
