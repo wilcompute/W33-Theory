@@ -126,157 +126,181 @@
           "first_A_power": 1,
           "second_A_power": 1,
           "third_A_power": 1,
-          "coefficient": "-2/525"
+          "coefficient": "976/45675"
         },
         {
           "first_A_power": 1,
           "second_A_power": 2,
           "third_A_power": 1,
-          "coefficient": "-1/450"
+          "coefficient": "-589/19575"
         },
         {
           "first_A_power": 2,
           "second_A_power": 1,
           "third_A_power": 1,
-          "coefficient": "-2/225"
+          "coefficient": "-904/45675"
         },
         {
           "first_A_power": 1,
           "second_A_power": 3,
           "third_A_power": 1,
-          "coefficient": "11/1800"
+          "coefficient": "253/234900"
         },
         {
           "first_A_power": 2,
           "second_A_power": 2,
           "third_A_power": 1,
-          "coefficient": "47/5400"
+          "coefficient": "241/8700"
         },
         {
           "first_A_power": 3,
           "second_A_power": 1,
           "third_A_power": 1,
-          "coefficient": "-1/600"
+          "coefficient": "-101/26100"
         },
         {
           "first_A_power": 1,
           "second_A_power": 4,
           "third_A_power": 1,
-          "coefficient": "11/9000"
+          "coefficient": "221/39150"
         },
         {
           "first_A_power": 2,
           "second_A_power": 3,
           "third_A_power": 1,
-          "coefficient": "67/12000"
+          "coefficient": "-329/939600"
         },
         {
           "first_A_power": 3,
           "second_A_power": 2,
           "third_A_power": 1,
-          "coefficient": "83/12000"
+          "coefficient": "1813/313200"
         },
         {
           "first_A_power": 4,
           "second_A_power": 1,
           "third_A_power": 1,
-          "coefficient": "7/4500"
+          "coefficient": "-59/26100"
         },
         {
           "first_A_power": 1,
           "second_A_power": 5,
           "third_A_power": 1,
-          "coefficient": "-1/720"
+          "coefficient": "-121/187920"
         },
         {
           "first_A_power": 2,
           "second_A_power": 4,
           "third_A_power": 1,
-          "coefficient": "-61/10800"
+          "coefficient": "-251/39150"
         },
         {
           "first_A_power": 3,
           "second_A_power": 3,
           "third_A_power": 1,
-          "coefficient": "-1/180"
+          "coefficient": "83/104400"
         },
         {
           "first_A_power": 4,
           "second_A_power": 2,
           "third_A_power": 1,
-          "coefficient": "-19/10800"
+          "coefficient": "13/6960"
+        },
+        {
+          "first_A_power": 5,
+          "second_A_power": 1,
+          "third_A_power": 1,
+          "coefficient": "-2/6525"
         },
         {
           "first_A_power": 1,
           "second_A_power": 6,
           "third_A_power": 1,
-          "coefficient": "1/21000"
+          "coefficient": "-7/52200"
         },
         {
           "first_A_power": 2,
           "second_A_power": 5,
           "third_A_power": 1,
-          "coefficient": "-1/50400"
+          "coefficient": "2593/3758400"
         },
         {
           "first_A_power": 3,
           "second_A_power": 4,
           "third_A_power": 1,
-          "coefficient": "-29/126000"
+          "coefficient": "-1361/1252800"
         },
         {
           "first_A_power": 4,
           "second_A_power": 3,
           "third_A_power": 1,
-          "coefficient": "-41/126000"
+          "coefficient": "-1/3480"
         },
         {
           "first_A_power": 5,
           "second_A_power": 2,
           "third_A_power": 1,
-          "coefficient": "-13/50400"
+          "coefficient": "13/104400"
         },
         {
           "first_A_power": 6,
           "second_A_power": 1,
           "third_A_power": 1,
-          "coefficient": "-1/21000"
+          "coefficient": "7/52200"
         },
         {
           "first_A_power": 1,
           "second_A_power": 7,
           "third_A_power": 1,
-          "coefficient": "1/25200"
+          "coefficient": "121/6577200"
         },
         {
           "first_A_power": 2,
           "second_A_power": 6,
           "third_A_power": 1,
-          "coefficient": "17/63000"
+          "coefficient": "167/626400"
         },
         {
           "first_A_power": 3,
           "second_A_power": 5,
           "third_A_power": 1,
-          "coefficient": "3/5600"
+          "coefficient": "1/23200"
         },
         {
           "first_A_power": 4,
           "second_A_power": 4,
           "third_A_power": 1,
-          "coefficient": "1/1890"
+          "coefficient": "-7/104400"
         },
         {
           "first_A_power": 5,
           "second_A_power": 3,
           "third_A_power": 1,
-          "coefficient": "13/50400"
+          "coefficient": "-1/6960"
         },
         {
           "first_A_power": 6,
           "second_A_power": 2,
           "third_A_power": 1,
-          "coefficient": "1/21000"
+          "coefficient": "-1/13050"
+        },
+        {
+          "first_A_power": 7,
+          "second_A_power": 1,
+          "third_A_power": 1,
+          "coefficient": "1/52200"
+        },
+        {
+          "first_A_power": 2,
+          "second_A_power": 7,
+          "third_A_power": 1,
+          "coefficient": "-929/26308800"
+        },
+        {
+          "first_A_power": 3,
+          "second_A_power": 6,
+          "third_A_power": 1,
+          "coefficient": "19/1252800"
         }
       ]
     },
@@ -291,151 +315,181 @@
           "first_A_power": 1,
           "second_A_power": 1,
           "third_A_power": 1,
-          "coefficient": "8/75"
+          "coefficient": "2216/15225"
         },
         {
           "first_A_power": 1,
           "second_A_power": 2,
           "third_A_power": 1,
-          "coefficient": "-1/180"
+          "coefficient": "-28/1305"
         },
         {
           "first_A_power": 2,
           "second_A_power": 1,
           "third_A_power": 1,
-          "coefficient": "4/75"
+          "coefficient": "1549/30450"
         },
         {
           "first_A_power": 1,
           "second_A_power": 3,
           "third_A_power": 1,
-          "coefficient": "-43/432"
+          "coefficient": "-21203/156600"
         },
         {
           "first_A_power": 2,
           "second_A_power": 2,
           "third_A_power": 1,
-          "coefficient": "-43/720"
+          "coefficient": "-4121/52200"
         },
         {
           "first_A_power": 3,
           "second_A_power": 1,
           "third_A_power": 1,
-          "coefficient": "-29/1200"
+          "coefficient": "-503/10440"
         },
         {
           "first_A_power": 1,
           "second_A_power": 4,
           "third_A_power": 1,
-          "coefficient": "-43/3600"
+          "coefficient": "-223/26100"
         },
         {
           "first_A_power": 2,
           "second_A_power": 3,
           "third_A_power": 1,
-          "coefficient": "-71/14400"
+          "coefficient": "12001/626400"
         },
         {
           "first_A_power": 3,
           "second_A_power": 2,
           "third_A_power": 1,
-          "coefficient": "37/2880"
+          "coefficient": "7939/208800"
         },
         {
           "first_A_power": 4,
           "second_A_power": 1,
           "third_A_power": 1,
-          "coefficient": "-1/300"
+          "coefficient": "-73/17400"
         },
         {
           "first_A_power": 1,
           "second_A_power": 5,
           "third_A_power": 1,
-          "coefficient": "211/21600"
+          "coefficient": "9079/626400"
         },
         {
           "first_A_power": 2,
           "second_A_power": 4,
           "third_A_power": 1,
-          "coefficient": "37/3600"
+          "coefficient": "1009/69600"
         },
         {
           "first_A_power": 3,
           "second_A_power": 3,
           "third_A_power": 1,
-          "coefficient": "37/3600"
+          "coefficient": "689/41760"
         },
         {
           "first_A_power": 4,
           "second_A_power": 2,
           "third_A_power": 1,
-          "coefficient": "11/3600"
+          "coefficient": "487/104400"
         },
         {
           "first_A_power": 5,
           "second_A_power": 1,
           "third_A_power": 1,
-          "coefficient": "1/1200"
+          "coefficient": "121/104400"
         },
         {
           "first_A_power": 1,
           "second_A_power": 6,
           "third_A_power": 1,
-          "coefficient": "1/1200"
+          "coefficient": "193/243600"
         },
         {
           "first_A_power": 2,
           "second_A_power": 5,
           "third_A_power": 1,
-          "coefficient": "17/14400"
+          "coefficient": "-26783/17539200"
         },
         {
           "first_A_power": 3,
           "second_A_power": 4,
           "third_A_power": 1,
-          "coefficient": "1/900"
+          "coefficient": "-353/129920"
         },
         {
           "first_A_power": 4,
           "second_A_power": 3,
           "third_A_power": 1,
-          "coefficient": "1/2400"
+          "coefficient": "-9/8120"
         },
         {
           "first_A_power": 5,
           "second_A_power": 2,
           "third_A_power": 1,
-          "coefficient": "-1/1600"
+          "coefficient": "-53/40600"
+        },
+        {
+          "first_A_power": 6,
+          "second_A_power": 1,
+          "third_A_power": 1,
+          "coefficient": "1/24360"
         },
         {
           "first_A_power": 1,
           "second_A_power": 7,
           "third_A_power": 1,
-          "coefficient": "-1/4320"
+          "coefficient": "-1607/4384800"
         },
         {
           "first_A_power": 2,
           "second_A_power": 6,
           "third_A_power": 1,
-          "coefficient": "-1/7200"
+          "coefficient": "-1199/2923200"
         },
         {
           "first_A_power": 3,
           "second_A_power": 5,
           "third_A_power": 1,
-          "coefficient": "-1/14400"
+          "coefficient": "-1979/2923200"
         },
         {
           "first_A_power": 4,
           "second_A_power": 4,
           "third_A_power": 1,
-          "coefficient": "-1/7200"
+          "coefficient": "-127/182700"
         },
         {
           "first_A_power": 5,
           "second_A_power": 3,
           "third_A_power": 1,
-          "coefficient": "-1/4800"
+          "coefficient": "-53/121800"
+        },
+        {
+          "first_A_power": 6,
+          "second_A_power": 2,
+          "third_A_power": 1,
+          "coefficient": "1/16240"
+        },
+        {
+          "first_A_power": 7,
+          "second_A_power": 1,
+          "third_A_power": 1,
+          "coefficient": "1/29232"
+        },
+        {
+          "first_A_power": 2,
+          "second_A_power": 7,
+          "third_A_power": 1,
+          "coefficient": "913/17539200"
+        },
+        {
+          "first_A_power": 3,
+          "second_A_power": 6,
+          "third_A_power": 1,
+          "coefficient": "53/835200"
         }
       ]
     },
@@ -450,150 +504,191 @@
           "first_A_power": 1,
           "second_A_power": 1,
           "third_A_power": 1,
-          "coefficient": "-7/4050"
+          "coefficient": "2512/1233225"
+        },
+        {
+          "first_A_power": 1,
+          "second_A_power": 2,
+          "third_A_power": 1,
+          "coefficient": "-893/422820"
         },
         {
           "first_A_power": 2,
           "second_A_power": 1,
           "third_A_power": 1,
-          "coefficient": "-7/8100"
+          "coefficient": "-31/20300"
         },
         {
           "first_A_power": 1,
           "second_A_power": 3,
           "third_A_power": 1,
-          "coefficient": "29/14580"
+          "coefficient": "-1321/3171150"
         },
         {
           "first_A_power": 2,
           "second_A_power": 2,
           "third_A_power": 1,
-          "coefficient": "29/14580"
+          "coefficient": "2159/1409400"
         },
         {
           "first_A_power": 3,
           "second_A_power": 1,
           "third_A_power": 1,
-          "coefficient": "19/16200"
+          "coefficient": "-101/176175"
+        },
+        {
+          "first_A_power": 1,
+          "second_A_power": 4,
+          "third_A_power": 1,
+          "coefficient": "3157/8456400"
         },
         {
           "first_A_power": 2,
           "second_A_power": 3,
           "third_A_power": 1,
-          "coefficient": "-11/16200"
+          "coefficient": "17987/50738400"
         },
         {
           "first_A_power": 3,
           "second_A_power": 2,
           "third_A_power": 1,
-          "coefficient": "-11/16200"
+          "coefficient": "10937/16912800"
         },
         {
           "first_A_power": 4,
           "second_A_power": 1,
           "third_A_power": 1,
-          "coefficient": "1/3888"
+          "coefficient": "71/2818800"
         },
         {
           "first_A_power": 1,
           "second_A_power": 5,
           "third_A_power": 1,
-          "coefficient": "-157/583200"
+          "coefficient": "973/25369200"
         },
         {
           "first_A_power": 2,
           "second_A_power": 4,
           "third_A_power": 1,
-          "coefficient": "-157/291600"
+          "coefficient": "-4493/16912800"
         },
         {
           "first_A_power": 3,
           "second_A_power": 3,
           "third_A_power": 1,
-          "coefficient": "-133/194400"
+          "coefficient": "577/5637600"
         },
         {
           "first_A_power": 4,
           "second_A_power": 2,
           "third_A_power": 1,
-          "coefficient": "-121/291600"
+          "coefficient": "-1/31320"
         },
         {
           "first_A_power": 5,
           "second_A_power": 1,
           "third_A_power": 1,
-          "coefficient": "-1/16200"
+          "coefficient": "1/1127520"
+        },
+        {
+          "first_A_power": 1,
+          "second_A_power": 6,
+          "third_A_power": 1,
+          "coefficient": "-109/9865800"
         },
         {
           "first_A_power": 2,
           "second_A_power": 5,
           "third_A_power": 1,
-          "coefficient": "13/194400"
+          "coefficient": "-48193/1420675200"
         },
         {
           "first_A_power": 3,
           "second_A_power": 4,
           "third_A_power": 1,
-          "coefficient": "13/97200"
+          "coefficient": "-54379/473558400"
         },
         {
           "first_A_power": 4,
           "second_A_power": 3,
           "third_A_power": 1,
-          "coefficient": "17/194400"
+          "coefficient": "-607/39463200"
         },
         {
           "first_A_power": 5,
           "second_A_power": 2,
           "third_A_power": 1,
-          "coefficient": "1/48600"
+          "coefficient": "-23/2630880"
         },
         {
           "first_A_power": 6,
           "second_A_power": 1,
           "third_A_power": 1,
-          "coefficient": "-1/97200"
+          "coefficient": "1/1315440"
         },
         {
           "first_A_power": 1,
           "second_A_power": 7,
           "third_A_power": 1,
-          "coefficient": "1/116640"
+          "coefficient": "-19/88792200"
         },
         {
           "first_A_power": 2,
           "second_A_power": 6,
           "third_A_power": 1,
-          "coefficient": "1/38880"
+          "coefficient": "1957/236779200"
         },
         {
           "first_A_power": 3,
           "second_A_power": 5,
           "third_A_power": 1,
-          "coefficient": "11/194400"
+          "coefficient": "-137/15785280"
         },
         {
           "first_A_power": 4,
           "second_A_power": 4,
           "third_A_power": 1,
-          "coefficient": "41/583200"
+          "coefficient": "-17/6577200"
         },
         {
           "first_A_power": 5,
           "second_A_power": 3,
           "third_A_power": 1,
-          "coefficient": "1/24300"
+          "coefficient": "-23/7892640"
         },
         {
           "first_A_power": 6,
           "second_A_power": 2,
           "third_A_power": 1,
-          "coefficient": "1/97200"
+          "coefficient": "1/876960"
+        },
+        {
+          "first_A_power": 7,
+          "second_A_power": 1,
+          "third_A_power": 1,
+          "coefficient": "1/1578528"
+        },
+        {
+          "first_A_power": 2,
+          "second_A_power": 7,
+          "third_A_power": 1,
+          "coefficient": "659/1420675200"
+        },
+        {
+          "first_A_power": 3,
+          "second_A_power": 6,
+          "third_A_power": 1,
+          "coefficient": "239/67651200"
         }
       ]
     }
   ],
-  "maximum_operator_degree": 30,
+  "maximum_operator_degree": 31,
+  "direct_baryon_quartic_filter": [
+    "QQQL",
+    "QQQH_d",
+    "U^cU^cD^cE^c"
+  ],
   "completion": {
     "operator_legs": [
       [
@@ -851,5 +946,31 @@
     },
     "lepton_number_violating_cubics": 0,
     "baryon_number_violating_cubic": 0
+  },
+  "heavy_triplet_exchange": {
+    "QQQL": {
+      "source_ranks": [
+        3,
+        3
+      ],
+      "triplet_mass_rank": 21,
+      "exchange_flavor_shape": [
+        9,
+        9
+      ],
+      "exchange_rank": 0
+    },
+    "UcUcDcEc": {
+      "source_ranks": [
+        3,
+        5
+      ],
+      "triplet_mass_rank": 21,
+      "exchange_flavor_shape": [
+        9,
+        9
+      ],
+      "exchange_rank": 0
+    }
   }
 }

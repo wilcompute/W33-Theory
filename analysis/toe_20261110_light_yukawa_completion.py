@@ -50,7 +50,7 @@ def projected_space(gauge, internal, color, weak, y, records):
         if lifts:
             spaces[weight] = lifts
     assert sum(map(len, spaces.values())) == 49
-    return x, dual, mesons, fundamental, spaces
+    return x, dual, mesons, fundamental, spaces, (hessian, orbit, weights)
 
 
 def check_old_cubic(spaces):
@@ -144,22 +144,25 @@ def repaired_cubic(records, y, internal, terms, vectors):
             for output, ((charge, mode, source), (weight, vector)) in enumerate(zip(term, order)):
                 if charge != weight:
                     break
-                selected = (y == charge)[:, None] * vector[:81].reshape(27, 3)
+                selected = (y == charge).astype(int)[:, None] * vector[:81].reshape(27, 3)
                 leg = np.zeros((27, 3), dtype=object)
                 leg[:, output] = (internal[mode] @ selected)[:, source]
                 legs.append(leg.ravel())
             if len(legs) == 3:
-                total += int(flat.vacuum.bracket(legs[0], legs[1], records) @ legs[2])
+                total += flat.vacuum.bracket(legs[0], legs[1], records) @ legs[2]
     return total
 
 
 def charge_filters(charges, targets):
     """Separate the charged cubic channels including the heavy triplet charge."""
     triples = [t for t in product(charges, repeat=3) if sum(t) == 0]
-    powers = [(a, degree - a) for degree in range(7) for a in range(degree + 1)]
+    # The fourth-order filter varies one internal covariant and depends
+    # only on the first two external charges, since the third is linear.
+    triples += [(-4, -4, 1), (2, 6, 1), (6, 2, 1)]
+    powers = [(a, degree - a) for degree in range(8) for a in range(degree + 1)]
     matrix = sp.Matrix([[q * r * t * q**a * r**b for a, b in powers] for q, r, t in triples])
     pivots = DomainMatrix.from_Matrix(matrix).to_field().rref()[1]
-    assert len(pivots) == len(triples) == 27
+    assert len(pivots) == len(triples) == 30
     inverse = matrix[:, list(pivots)].inv()
     filters = []
     for target in targets:
@@ -170,6 +173,10 @@ def charge_filters(charges, targets):
                  third_A_power=1, coefficient=str(value))
             for pivot, value in zip(pivots, inverse[:, index]) if value
         ]))
+        for external in ((1, 1, 1, -3), (-4, -4, 2, 6)):
+            for q, r, t, _ in set(permutations(external)):
+                assert sum(value * q**(powers[pivot][0] + 1) * r**(powers[pivot][1] + 1) * t
+                           for pivot, value in zip(pivots, inverse[:, index])) == 0
     return filters
 
 
@@ -228,10 +235,96 @@ def flavor_operators(spaces, fundamental, y, internal, weak, records):
                 lepton_number_violating_cubics=0, baryon_number_violating_cubic=0)
 
 
+def colored_exchange(x, mesons, fundamental, spaces, quadratic, adjoint, weak, y,
+                     maps, records, completion):
+    """Pair exact triplet sources through the heavy holomorphic mass block."""
+    hessian, orbit, weights = quadratic
+    triplet_weights = {tuple(row) for row in fundamental if abs(row[-1]) == 2}
+    assert {tuple(row) for row in weights if abs(row[-1]) == 2} == triplet_weights
+    assert len(triplet_weights) == 6 and not (np.abs(weights[:, -1]) == 8).any()
+    terms = completion['operator_legs']
+    adjoint_vev = np.diag(y).astype(object)
+    old_split = [(mesons[5], np.diag(y * y - 9)), (mesons[1], np.diag(y * y - 4))]
+    first, second = x[:2].reshape(2, 27, 3)
+    left, mid, right, signs = np.array(records).T
+
+    def omega(a, b, c):
+        if not a.any() or not b.any() or not c.any():
+            return 0
+        return sum(signs * a.ravel()[left] * b.ravel()[mid] * c.ravel()[right])
+
+    def cubic(vectors, charges):
+        # Each charge is nonzero and no pair has zero charge. Mesons have
+        # zero first and second variations on the three inputs.
+        assert all(charges) and sum(charges) == 0
+        matter = [v[:243].reshape(3, 27, 3) for v in vectors]
+        conjugate = [v[243:405].reshape(2, 27, 3) for v in vectors]
+        aa = [np.einsum('a,aij->ij', np.array(v[405:], dtype=np.int64), adjoint).astype(object)
+              for v in vectors]
+        total = 0
+        for i, j, k in permutations(range(3)):
+            # native.jacobian(v) pairs the last slot against the first
+            # Hessian index, giving the minus sign in the base certificate.
+            total -= omega(matter[i][0], matter[j][1], matter[k][2])
+            for z, t in [(0, 2), (1, 0), (1, 1)]:
+                if aa[j].any():
+                    total += (conjugate[i][z] * (aa[j] @ matter[k][t])).sum()
+            for meson, polynomial in old_split:
+                total -= omega(matter[i][0], matter[j][1], polynomial @ matter[k][0] @ meson.T)
+                if aa[j].any():
+                    derivative = adjoint_vev @ aa[j] + aa[j] @ adjoint_vev
+                    value = derivative @ matter[k][0] @ meson.T
+                    total -= omega(matter[i][0], second, value) + omega(first, matter[i][1], value)
+        dressed = []
+        for vector, charge, da in zip(vectors, charges, aa):
+            lift = vector.copy()
+            if da.any():
+                lift[:81] += (da @ first).ravel() * sp.Rational(1, charge)
+            dressed.append((charge, lift))
+        return total + repaired_cubic(records, y, maps, terms, dressed)
+
+    def sources(indices, first_basis, second_basis):
+        w1, w2 = fundamental[list(indices)]
+        weight = -w1 - w2
+        cols = np.flatnonzero((weights == weight).all(axis=1))
+        assert len(cols) and tuple(weight) in triplet_weights
+        units = []
+        for column in cols:
+            unit = np.zeros(483, dtype=object)
+            unit[column] = 1
+            units.append(unit)
+        charges = tuple(map(int, (w1[-1], w2[-1], weight[-1])))
+        matrix = sp.Matrix([[cubic([a, b, unit], charges) for a, b in product(first_basis, second_basis)]
+                            for unit in units])
+        assert sp.Matrix(orbit[:, cols]) * matrix == sp.zeros(len(orbit), matrix.cols)
+        return cols, matrix
+
+    def check(first_pair, second_pair, last_basis):
+        a, b = first_pair
+        c, _ = second_pair
+        left_cols, l = sources(first_pair, spaces[tuple(fundamental[a])], spaces[tuple(fundamental[b])])
+        right_cols, r = sources(second_pair, spaces[tuple(fundamental[c])], last_basis)
+        mass = sp.Matrix(hessian[np.ix_(left_cols, right_cols)])
+        solution = mass.gauss_jordan_solve(l)[0]
+        mass.T.gauss_jordan_solve(r)
+        exchange = r.T * solution
+        assert exchange == sp.zeros(r.cols, l.cols)
+        return dict(source_ranks=[l.rank(), r.rank()], triplet_mass_rank=mass.rank(),
+                    exchange_flavor_shape=list(exchange.shape), exchange_rank=0)
+
+    doublets = spaces[tuple(fundamental[15])]
+    h_row = sp.Matrix([completion['down_higgs_covector']])
+    leptons = [lower_doublet(sum((v * c for v, c in zip(doublets, coefficients)),
+                                np.zeros(483, dtype=object)), weak)
+               for coefficients in h_row.nullspace()]
+    return dict(QQQL=check((3, 6), (9, 16), leptons),
+                UcUcDcEc=check((7, 2), (11, 14), spaces[tuple(fundamental[14])]))
+
+
 def calculate():
     gauge, internal, _, color, weak, y = flat.compact_chart()
     records = flat.vacuum.native.build_records()
-    x, dual, mesons, fundamental, spaces = projected_space(gauge, internal, color, weak, y, records)
+    x, dual, mesons, fundamental, spaces, quadratic = projected_space(gauge, internal, color, weak, y, records)
     check_old_cubic(spaces)
     maps = internal_maps(x, dual, y)
     completion = flavor_operators(spaces, fundamental, y, maps, weak, records)
@@ -249,11 +342,15 @@ def calculate():
                   + sum(internal_degrees[mode] + family_degrees[f'{i},{source}']
                         for i, (_, mode, source) in enumerate(term))
                   for term in completion['operator_legs'])
-    assert maximum == 30
+    assert maximum == 31
     return dict(status='PASS', original_light_cubic='identically zero on 49 uneaten components',
                 family_matrix_unit_words=family, light_six_Y=charges,
                 filter_six_Y=filter_charges, charge_filters=filters,
-                maximum_operator_degree=maximum, completion=completion)
+                maximum_operator_degree=maximum,
+                direct_baryon_quartic_filter=['QQQL', 'QQQH_d', 'U^cU^cD^cE^c'],
+                completion=completion,
+                heavy_triplet_exchange=colored_exchange(x, mesons, fundamental, spaces, quadratic,
+                                                        internal, weak, y, maps, records, completion))
 
 
 if __name__ == '__main__':
