@@ -1,0 +1,270 @@
+{
+  "all_four_operators_have_160_unit_magnitude_links": true,
+  "all_positive_beta_numerical_controls": [
+    {
+      "F_old15_minus_threepi": -4.201274350634776e-08,
+      "F_opt15_minus_threepi": -4.0697500480746385e-08,
+      "F_pi_deck_minus_flat": -1.91041635844158e-08,
+      "F_values": {
+        "deck_three_pi": -558.5061417407246,
+        "flat": -558.5061417216205,
+        "old_15edge": -558.5061417827374,
+        "optimized_15edge": -558.5061417814221
+      },
+      "beta": 0.1
+    },
+    {
+      "F_old15_minus_threepi": -4.963411527114658e-06,
+      "F_opt15_minus_threepi": -4.807352979696589e-06,
+      "F_pi_deck_minus_flat": -2.252159276849852e-06,
+      "F_values": {
+        "deck_three_pi": -285.16754074719375,
+        "flat": -285.1675384950345,
+        "old_15edge": -285.1675457106053,
+        "optimized_15edge": -285.16754555454673
+      },
+      "beta": 0.2
+    },
+    {
+      "F_old15_minus_threepi": -0.0018366753780867384,
+      "F_opt15_minus_threepi": -0.0017774715234963878,
+      "F_pi_deck_minus_flat": -0.0008250132217426653,
+      "F_values": {
+        "deck_three_pi": -129.61557271863404,
+        "flat": -129.6147477054123,
+        "old_15edge": -129.61740939401213,
+        "optimized_15edge": -129.61735019015754
+      },
+      "beta": 0.5
+    },
+    {
+      "F_old15_minus_threepi": -0.06545036727042941,
+      "F_opt15_minus_threepi": -0.0632312178889407,
+      "F_pi_deck_minus_flat": -0.02905238972577706,
+      "F_values": {
+        "deck_three_pi": -87.62250066041194,
+        "flat": -87.59344827068617,
+        "old_15edge": -87.68795102768237,
+        "optimized_15edge": -87.68573187830089
+      },
+      "beta": 1.0
+    },
+    {
+      "F_old15_minus_threepi": -0.6239635242765758,
+      "F_opt15_minus_threepi": -0.6008968493699172,
+      "F_pi_deck_minus_flat": -0.2744521663243944,
+      "F_values": {
+        "deck_three_pi": -73.63798609537533,
+        "flat": -73.36353392905093,
+        "old_15edge": -74.2619496196519,
+        "optimized_15edge": -74.23888294474524
+      },
+      "beta": 2.0
+    },
+    {
+      "F_old15_minus_threepi": -1.8932602075109486,
+      "F_opt15_minus_threepi": -1.8216727916715172,
+      "F_pi_deck_minus_flat": -0.8167936789520382,
+      "F_values": {
+        "deck_three_pi": -68.80381817641133,
+        "flat": -67.98702449745929,
+        "old_15edge": -70.69707838392227,
+        "optimized_15edge": -70.62549096808284
+      },
+      "beta": 4.0
+    },
+    {
+      "F_old15_minus_threepi": -3.4344961531400884,
+      "F_opt15_minus_threepi": -3.336743554068562,
+      "F_pi_deck_minus_flat": -1.3863857395510024,
+      "F_values": {
+        "deck_three_pi": -66.25358110813758,
+        "flat": -64.86719536858658,
+        "old_15edge": -69.68807726127767,
+        "optimized_15edge": -69.59032466220614
+      },
+      "beta": 10.0
+    },
+    {
+      "F_old15_minus_threepi": -4.79389367240978,
+      "F_opt15_minus_threepi": -4.711891706801012,
+      "F_pi_deck_minus_flat": -1.7604374442708561,
+      "F_values": {
+        "deck_three_pi": -64.7561354252352,
+        "flat": -62.995697980964344,
+        "old_15edge": -69.55002909764498,
+        "optimized_15edge": -69.46802713203621
+      },
+      "beta": 100.0
+    }
+  ],
+  "both_fifteen_link_masks_preserve_native_incidence_support": true,
+  "comparison_coefficientwise_15_vs_threepi": {
+    "old_15edge": {
+      "all_coefficients_dominate_threepi": true,
+      "first_nonzero_degree": 4,
+      "full_exact_difference_decimal": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "2048",
+        "272208",
+        "17242816",
+        "692725024",
+        "19815901184",
+        "429557882752",
+        "7332512672832",
+        "101107529528320",
+        "1146303068335872",
+        "10820438909560320",
+        "85797772541068288",
+        "574983675212324864",
+        "3269638696052215808",
+        "15810207991722102784",
+        "65044927844054523904",
+        "227486726542181097472",
+        "674882500155761541120",
+        "1692669004298687578112",
+        "3573292760423451017216",
+        "6315860834139966406656",
+        "9293313163615300354048",
+        "11319347839304813117440",
+        "11356675144200719958016",
+        "9351032549911690215424",
+        "6300674212165922848768",
+        "3459698545497507627008",
+        "1535323574933402943488",
+        "542904864044778258432",
+        "150061470324581466112",
+        "31668799739418116096",
+        "4955593788371238912",
+        "553927831168483328",
+        "42114465163902976",
+        "2037363907756032",
+        "57085752508416",
+        "805306368000",
+        "4294967296"
+      ],
+      "max_coefficient_difference": "11356675144200719958016",
+      "min_coefficient_difference": "0",
+      "negative_coefficients": 0,
+      "positive_coefficients": 37
+    },
+    "optimized_15edge": {
+      "all_coefficients_dominate_threepi": true,
+      "first_nonzero_degree": 4,
+      "full_exact_difference_decimal": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "1984",
+        "263600",
+        "16691680",
+        "670363744",
+        "19170208000",
+        "415429963776",
+        "7088999772864",
+        "97713899505152",
+        "1107357542369280",
+        "10447486385571328",
+        "82788465274075136",
+        "554378546879936512",
+        "3149307018674942976",
+        "15208799260123385856",
+        "62467217191787859968",
+        "218003945166075674624",
+        "644949190549956444160",
+        "1611701046212704370688",
+        "3386060117248468516864",
+        "5946993223242889166848",
+        "8676990144983075389440",
+        "10450978562735476310016",
+        "10332210737992782577664",
+        "8347611340434428657664",
+        "5493010826515817955328",
+        "2931913892743457275904",
+        "1259343909621556314112",
+        "429407230623475564544",
+        "114107672752344268800",
+        "23116673363396788224",
+        "3476385358571110400",
+        "375558985182347264",
+        "27974213792956416",
+        "1363243826151424",
+        "40463155331072",
+        "650687545344",
+        "4294967296"
+      ],
+      "max_coefficient_difference": "10450978562735476310016",
+      "min_coefficient_difference": "0",
+      "negative_coefficients": 0,
+      "positive_coefficients": 37
+    }
+  },
+  "exact_40degree_characteristic_coefficients_hashes_sha256": {
+    "deck_three_pi": "cac83ec4b5a7f72dba669379d6516fb171605f0180b052a91360d9e139291552",
+    "flat": "37dc193240dd33bb521bcd2550e2a5d4894e8d752bc3c397ed588025843735fc",
+    "old_15edge": "210ece057df9b06fb7919ad34279e2e49fc78c340c8583637e33c5ac6432c445",
+    "optimized_15edge": "b6b8d139ab7271a332ff60c00f82065ab5c0beed7baf3b24eb9e78010e216932"
+  },
+  "frozen_TOE61_0_and_111_characteristic_polynomials_exactly_reproduced": true,
+  "new_exact_all_temperature_theorem": "Both the old and gap-optimized 15-edge Z2 pi-flux patterns have det(I+t B B\u2020) coefficientwise >= the TOE61 (1,1,1) three-pi deck sector, with strict positivity in 37 coefficients for t>0. By the same Weierstrass cosh product proof used in TOE61, their half-filled free fermion free energies are STRICTLY LOWER than the three-pi sector for EVERY finite beta>0. This explicitly refutes extension of TOE61's eight-sector minimization to the unrestricted link-Z2 gauge configuration space.",
+  "note_on_deck_vertex_labels": "TOE38 deck B111 is encoded in a different bipartition vertex ordering from native B. Its signed matrix support need not match native B elementwise; the coefficient and spectral invariants are basis-order independent.",
+  "old_vs_gap_optimized_15edge_coefficientwise": {
+    "full_difference_decimal": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "64",
+      "8608",
+      "551136",
+      "22361280",
+      "645693184",
+      "14127918976",
+      "243512899968",
+      "3393630023168",
+      "38945525966592",
+      "372952523988992",
+      "3009307266993152",
+      "20605128332388352",
+      "120331677377272832",
+      "601408731598716928",
+      "2577710652266663936",
+      "9482781376105422848",
+      "29933309605805096960",
+      "80967958085983207424",
+      "187232643174982500352",
+      "368867610897077239808",
+      "616323018632224964608",
+      "868369276569336807424",
+      "1024464406207937380352",
+      "1003421209477261557760",
+      "807663385650104893440",
+      "527784652754050351104",
+      "275979665311846629376",
+      "113497633421302693888",
+      "35953797572237197312",
+      "8552126376021327872",
+      "1479208429800128512",
+      "178368845986136064",
+      "14140251370946560",
+      "674120081604608",
+      "16622597177344",
+      "154618822656",
+      "0"
+    ],
+    "number_coefficients_old_below_optimized": 0,
+    "number_coefficients_old_exceed_optimized": 36,
+    "old15_coefficientwise_dominates_optimized15": true
+  },
+  "references": [
+    "analysis/2026-10-13_toe61_all_beta_flux_manifold_no_go.md",
+    "analysis/w33_20261109_minimal_15_flux_lift.py"
+  ],
+  "scope": "If one 15-edge configuration has lower free energy at some beta, the three-pi DECK corner is demonstrably not a global minimizer over ALL Z2 link phases at that beta. That does not find a global minimizer or a dynamic gauge vacuum. If every exact difference coefficient is nonnegative, a stronger all-beta comparison follows from the previously established cosh product argument. Topology/gauge Wilson penalties, source hardware and fermion interactions are not dynamically optimized.",
+  "status": "PASS_W33_15_LINK_Z2_FLUX_COUNTEREXAMPLE_TO_UNRESTRICTED_3PI_SELECTION",
+  "theorem_prior": "TOE61 exact coefficientwise threepi dominance across EIGHT selected deck holonomy corners, not arbitrary all-link real Z2 or U1 flux."
+}

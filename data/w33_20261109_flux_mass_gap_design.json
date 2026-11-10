@@ -1,0 +1,131 @@
+{
+  "best_15_edge_minimum_singular_gap_pi": 0.15596086806434725,
+  "best_15_edges": [
+    {
+      "line": 13,
+      "point": 4
+    },
+    {
+      "line": 8,
+      "point": 32
+    },
+    {
+      "line": 25,
+      "point": 37
+    },
+    {
+      "line": 27,
+      "point": 8
+    },
+    {
+      "line": 0,
+      "point": 1
+    },
+    {
+      "line": 20,
+      "point": 16
+    },
+    {
+      "line": 39,
+      "point": 26
+    },
+    {
+      "line": 24,
+      "point": 20
+    },
+    {
+      "line": 28,
+      "point": 39
+    },
+    {
+      "line": 16,
+      "point": 13
+    },
+    {
+      "line": 2,
+      "point": 17
+    },
+    {
+      "line": 22,
+      "point": 14
+    },
+    {
+      "line": 7,
+      "point": 31
+    },
+    {
+      "line": 18,
+      "point": 29
+    },
+    {
+      "line": 36,
+      "point": 21
+    }
+  ],
+  "best_exact_signed_integer_determinant": "-65536",
+  "best_first_order_minimal_mass_slope": 0.038761754248361126,
+  "best_production_still_uses_only_15_phase_flips": true,
+  "dark_effective_mass_matrix_dimension": [
+    15,
+    15
+  ],
+  "dark_effective_mass_singular_spectrum_initial": [
+    0.782272132382956,
+    0.6907264251514956,
+    0.6126138061310409,
+    0.4735154946442944,
+    0.4363898779820739,
+    0.37371074261554355,
+    0.3382283718119534,
+    0.2369562939788439,
+    0.19679820742240045,
+    0.18596164226900044,
+    0.13891671020714816,
+    0.106181873923122,
+    0.09841271729953417,
+    0.055307872998497376,
+    0.038158737109055554
+  ],
+  "first_order_mass_formula": "low singular masses = |exp(i theta)-1| singular_values(U_dark\u2020 E_selected V_dark) + O(theta\u00b2), where E_selected is the rank-15 selected-edge indicator",
+  "first_order_minimal_mass_slope_initial": 0.038158737109055554,
+  "gap_improvement_ratio": 1.3506228047728643,
+  "honesty": "Stochastic search is not a global optimum or a dynamical flux law. The first-order mass matrix is an effective *spectral perturbation* on a finite one-body Hamiltonian, not standard-model fermion masses, topological protection or a Weyl index. Changing 15 links breaks full PSp symmetry.",
+  "initial_15_edge_minimum_singular_gap_pi": 0.11547329684735728,
+  "native_chiral_zero_modes": 30,
+  "near_zero_phase_comparison": [
+    {
+      "minimum_exact_gap": 0.0007631815652875977,
+      "minimum_first_order_gap": 0.0007631620226656726,
+      "relative_15_mass_spectrum_error": 7.959900938157294e-06,
+      "theta": 0.02
+    },
+    {
+      "minimum_exact_gap": 0.0003815882239853157,
+      "minimum_first_order_gap": 0.0003815857811451634,
+      "relative_15_mass_spectrum_error": 1.989977209211087e-06,
+      "theta": 0.01
+    },
+    {
+      "minimum_exact_gap": 0.00019079379215749108,
+      "minimum_first_order_gap": 0.00019079348680191744,
+      "relative_15_mass_spectrum_error": 4.974944322791515e-07,
+      "theta": 0.005
+    },
+    {
+      "minimum_exact_gap": 7.631748104113154e-05,
+      "minimum_first_order_gap": 7.631746149853272e-05,
+      "relative_15_mass_spectrum_error": 7.959907346452266e-08,
+      "theta": 0.002
+    }
+  ],
+  "status": "PASS_W33_15_DARK_MASSES_GAP_DESIGN",
+  "stochastic_gap_search": {
+    "found_valid_matroid_bases": 497,
+    "hill_accepted_improvements": 0,
+    "hill_swaps_tested": 2197,
+    "random_start_max_gap": 0.15596086806434725,
+    "random_start_median_gap": 0.07669723892228075,
+    "random_start_min_gap": 0.02392116810728234,
+    "random_starts_attempted": 500
+  }
+}

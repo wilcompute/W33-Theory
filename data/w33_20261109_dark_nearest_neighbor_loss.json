@@ -1,0 +1,396 @@
+{
+  "constructive_depth": 39,
+  "constructive_serial_2port_Givens_count": 39,
+  "exact_ideal_preparation_amplitude_error": 2.7755575615628914e-17,
+  "full_coupler_program_natural_order": [
+    {
+      "cos": 0.6123724356957946,
+      "sin": 0.7905694150420951,
+      "source_physical_port": 0,
+      "target_physical_port": 1
+    },
+    {
+      "cos": 0.2581988897471611,
+      "sin": 0.9660917830792959,
+      "source_physical_port": 1,
+      "target_physical_port": 2
+    },
+    {
+      "cos": 0.26726124191242434,
+      "sin": 0.9636241116594317,
+      "source_physical_port": 2,
+      "target_physical_port": 3
+    },
+    {
+      "cos": 0.27735009811261446,
+      "sin": 0.9607689228305226,
+      "source_physical_port": 3,
+      "target_physical_port": 4
+    },
+    {
+      "cos": 0.09622504486493759,
+      "sin": 0.9953596037316067,
+      "source_physical_port": 4,
+      "target_physical_port": 5
+    },
+    {
+      "cos": 0.09667364890456631,
+      "sin": 0.9953161335010483,
+      "source_physical_port": 5,
+      "target_physical_port": 6
+    },
+    {
+      "cos": 0.09712858623572637,
+      "sin": 0.9952718411247496,
+      "source_physical_port": 6,
+      "target_physical_port": 7
+    },
+    {
+      "cos": 0.09759000729485327,
+      "sin": 0.9952267030562386,
+      "source_physical_port": 7,
+      "target_physical_port": 8
+    },
+    {
+      "cos": 0.09805806756909197,
+      "sin": 0.9951806948412009,
+      "source_physical_port": 8,
+      "target_physical_port": 9
+    },
+    {
+      "cos": 0.09853292781642926,
+      "sin": 0.995133791073302,
+      "source_physical_port": 9,
+      "target_physical_port": 10
+    },
+    {
+      "cos": 0.09901475429766739,
+      "sin": 0.9950859653474029,
+      "source_physical_port": 10,
+      "target_physical_port": 11
+    },
+    {
+      "cos": 0.09950371902099886,
+      "sin": 0.995037190209989,
+      "source_physical_port": 11,
+      "target_physical_port": 12
+    },
+    {
+      "cos": 0.09999999999999995,
+      "sin": 0.9949874371066201,
+      "source_physical_port": 12,
+      "target_physical_port": 13
+    },
+    {
+      "cos": 0.30151134457776346,
+      "sin": 0.9534625892455922,
+      "source_physical_port": 13,
+      "target_physical_port": 14
+    },
+    {
+      "cos": 0.31622776601683783,
+      "sin": 0.948683298050514,
+      "source_physical_port": 14,
+      "target_physical_port": 15
+    },
+    {
+      "cos": 0.33333333333333315,
+      "sin": 0.9428090415820635,
+      "source_physical_port": 15,
+      "target_physical_port": 16
+    },
+    {
+      "cos": 0.35355339059327356,
+      "sin": 0.935414346693485,
+      "source_physical_port": 16,
+      "target_physical_port": 17
+    },
+    {
+      "cos": 0.37796447300922714,
+      "sin": 0.925820099772551,
+      "source_physical_port": 17,
+      "target_physical_port": 18
+    },
+    {
+      "cos": 0.4082482904638632,
+      "sin": 0.9128709291752769,
+      "source_physical_port": 18,
+      "target_physical_port": 19
+    },
+    {
+      "cos": 0.4472135954999581,
+      "sin": 0.8944271909999159,
+      "source_physical_port": 19,
+      "target_physical_port": 20
+    },
+    {
+      "cos": 0.5000000000000002,
+      "sin": 0.8660254037844385,
+      "source_physical_port": 20,
+      "target_physical_port": 21
+    },
+    {
+      "cos": 0.5773502691896261,
+      "sin": 0.8164965809277264,
+      "source_physical_port": 21,
+      "target_physical_port": 22
+    },
+    {
+      "cos": 0.23570226039551587,
+      "sin": 0.9718253158075502,
+      "source_physical_port": 22,
+      "target_physical_port": 23
+    },
+    {
+      "cos": 0.24253562503633297,
+      "sin": 0.9701425001453319,
+      "source_physical_port": 23,
+      "target_physical_port": 24
+    },
+    {
+      "cos": 0.25,
+      "sin": 0.9682458365518543,
+      "source_physical_port": 24,
+      "target_physical_port": 25
+    },
+    {
+      "cos": 0.2581988897471611,
+      "sin": 0.9660917830792959,
+      "source_physical_port": 25,
+      "target_physical_port": 26
+    },
+    {
+      "cos": 0.2672612419124244,
+      "sin": 0.9636241116594314,
+      "source_physical_port": 26,
+      "target_physical_port": 27
+    },
+    {
+      "cos": 0.2773500981126146,
+      "sin": 0.9607689228305228,
+      "source_physical_port": 27,
+      "target_physical_port": 28
+    },
+    {
+      "cos": 0.28867513459481287,
+      "sin": 0.9574271077563381,
+      "source_physical_port": 28,
+      "target_physical_port": 29
+    },
+    {
+      "cos": 0.30151134457776363,
+      "sin": 0.9534625892455924,
+      "source_physical_port": 29,
+      "target_physical_port": 30
+    },
+    {
+      "cos": 0.31622776601683794,
+      "sin": 0.9486832980505139,
+      "source_physical_port": 30,
+      "target_physical_port": 31
+    },
+    {
+      "cos": 0.3333333333333333,
+      "sin": 0.9428090415820634,
+      "source_physical_port": 31,
+      "target_physical_port": 32
+    },
+    {
+      "cos": 0.35355339059327373,
+      "sin": 0.9354143466934853,
+      "source_physical_port": 32,
+      "target_physical_port": 33
+    },
+    {
+      "cos": 0.37796447300922725,
+      "sin": 0.9258200997725514,
+      "source_physical_port": 33,
+      "target_physical_port": 34
+    },
+    {
+      "cos": 0.408248290463863,
+      "sin": 0.9128709291752769,
+      "source_physical_port": 34,
+      "target_physical_port": 35
+    },
+    {
+      "cos": 0.4472135954999579,
+      "sin": 0.8944271909999159,
+      "source_physical_port": 35,
+      "target_physical_port": 36
+    },
+    {
+      "cos": 0.5,
+      "sin": 0.8660254037844386,
+      "source_physical_port": 36,
+      "target_physical_port": 37
+    },
+    {
+      "cos": 0.5773502691896257,
+      "sin": 0.816496580927726,
+      "source_physical_port": 37,
+      "target_physical_port": 38
+    },
+    {
+      "cos": 0.7071067811865475,
+      "sin": 0.7071067811865475,
+      "source_physical_port": 38,
+      "target_physical_port": 39
+    }
+  ],
+  "minimum_optical_interference_depth_from_locality": 39,
+  "mode_line_geometry": "40 rails in physical chain, nearest-neighbor adjacent two-port Givens only",
+  "per_two_mode_gate_intensity_survival_controls": {
+    "0.95": {
+      "intensity_sorted_output_label_order": {
+        "conditional_short_time_line_leakage_t2_coefficient": 0.2739693020902476,
+        "conditional_target_state_fidelity": 0.966878480402058,
+        "source_survival": 0.735819611872649
+      },
+      "natural_40port_label_order": {
+        "conditional_short_time_line_leakage_t2_coefficient": 0.30390790406222973,
+        "conditional_target_state_fidelity": 0.9464037532477988,
+        "source_survival": 0.6574582437289715
+      }
+    },
+    "0.98": {
+      "intensity_sorted_output_label_order": {
+        "conditional_short_time_line_leakage_t2_coefficient": 0.057501162177871705,
+        "conditional_target_state_fidelity": 0.9933840184042257,
+        "source_survival": 0.8716342571437686
+      },
+      "natural_40port_label_order": {
+        "conditional_short_time_line_leakage_t2_coefficient": 0.05522444836326205,
+        "conditional_target_state_fidelity": 0.99025774128792,
+        "source_survival": 0.8253672275098484
+      }
+    },
+    "0.99": {
+      "intensity_sorted_output_label_order": {
+        "conditional_short_time_line_leakage_t2_coefficient": 0.01570924801246186,
+        "conditional_target_state_fidelity": 0.9982189520790642,
+        "source_survival": 0.9308421434116187
+      },
+      "natural_40port_label_order": {
+        "conditional_short_time_line_leakage_t2_coefficient": 0.014293811375370969,
+        "conditional_target_state_fidelity": 0.9974813200773809,
+        "source_survival": 0.904498780427549
+      }
+    },
+    "0.995": {
+      "intensity_sorted_output_label_order": {
+        "conditional_short_time_line_leakage_t2_coefficient": 0.004102153072273834,
+        "conditional_target_state_fidelity": 0.9995381387906772,
+        "source_survival": 0.9640287824687594
+      },
+      "natural_40port_label_order": {
+        "conditional_short_time_line_leakage_t2_coefficient": 0.003630036442678947,
+        "conditional_target_state_fidelity": 0.9993609018431168,
+        "source_survival": 0.9499727078667288
+      }
+    },
+    "1.0": {
+      "intensity_sorted_output_label_order": {
+        "conditional_short_time_line_leakage_t2_coefficient": 2.4651903288156624e-32,
+        "conditional_target_state_fidelity": 1.0000000000000004,
+        "source_survival": 1.0000000000000002
+      },
+      "natural_40port_label_order": {
+        "conditional_short_time_line_leakage_t2_coefficient": 5.623715437610728e-32,
+        "conditional_target_state_fidelity": 1.0000000000000004,
+        "source_survival": 1.0000000000000002
+      }
+    }
+  },
+  "phase_pi_flips": 12,
+  "physical_caution": "Sorting labels to increase throughput changes physical W33 incidence wiring and may add costly routing; sorting is not free under fixed hardware adjacency. This only prepares an initial 40-mode state, not an 80-mode W33 graph Hamiltonian, heralded single-photon source, readout, Bell test, or fault-tolerant device. Loss assumes independent equal intensity eta per addressed pair after each gate; no disconnected detector efficiencies or phase jitter.",
+  "port_label_order_for_sorted_intensity": [
+    0,
+    1,
+    2,
+    3,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+  ],
+  "prior_art": "Linear-optical Givens preparation and one-dimensional causal light-cone bounds are standard; native W33 amplitudes make the resource comparison specific.",
+  "proof": "A nearest-neighbor unitary layer can enlarge support by at most one rail from the initial end port. Port39 has nonzero W33 dark amplitude, so depth is at least39. This explicit sequential chain of 39 Givens rotations and 12 pi sign phases reaches the target exactly, saturating the light-cone bound.",
+  "single_initial_photon_port": 0,
+  "status": "PASS_W33_DARK_STATE_NEAREST_NEIGHBOR_39_DEPTH_LIGHT_CONE_AND_LOSS",
+  "target_photonic_mode_amplitudes": [
+    0.6123724356957946,
+    -0.20412414523193154,
+    -0.20412414523193154,
+    -0.20412414523193154,
+    0.06804138174397717,
+    0.06804138174397717,
+    0.06804138174397717,
+    0.06804138174397717,
+    0.06804138174397717,
+    0.06804138174397717,
+    0.06804138174397717,
+    0.06804138174397717,
+    0.06804138174397717,
+    -0.20412414523193154,
+    -0.20412414523193154,
+    -0.20412414523193154,
+    -0.20412414523193154,
+    -0.20412414523193154,
+    -0.20412414523193154,
+    -0.20412414523193154,
+    -0.20412414523193154,
+    -0.20412414523193154,
+    0.06804138174397717,
+    0.06804138174397717,
+    0.06804138174397717,
+    0.06804138174397717,
+    0.06804138174397717,
+    0.06804138174397717,
+    0.06804138174397717,
+    0.06804138174397717,
+    0.06804138174397717,
+    0.06804138174397717,
+    0.06804138174397717,
+    0.06804138174397717,
+    0.06804138174397717,
+    0.06804138174397717,
+    0.06804138174397717,
+    0.06804138174397717,
+    0.06804138174397717,
+    0.06804138174397717
+  ],
+  "target_support_size": 40
+}
