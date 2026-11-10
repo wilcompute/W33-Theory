@@ -1,0 +1,43 @@
+{
+  "commutant_basis": "I40, A, J40-I40-A; equivalently I40,A,A\u00b2",
+  "consequence": "Any one-body operator invariant under this FULL projective symplectic point action is a polynomial in the collinearity adjacency and acts as scalar on irreducible 1,24,15 eigenspaces. It cannot single out a nontrivial 3D invariant subspace in the native 40-point module; an observed three-generation label would need extra spaces, symmetry breaking, or a different representation.",
+  "full_Sp4F3_point_commutant_dimension": 3,
+  "full_ordered_pair_count": 1600,
+  "generators_used": 40,
+  "native_collinearity_adjacency_eigenspaces": [
+    {
+      "dimension": 1,
+      "eigenvalue": 12
+    },
+    {
+      "dimension": 24,
+      "eigenvalue": 2
+    },
+    {
+      "dimension": 15,
+      "eigenvalue": -4
+    }
+  ],
+  "native_collinearity_graph_SRG_parameters": [
+    40,
+    12,
+    2,
+    4
+  ],
+  "ordered_pair_orbits": [
+    {
+      "relation": "same point",
+      "size": 40
+    },
+    {
+      "relation": "symplectically collinear",
+      "size": 480
+    },
+    {
+      "relation": "distinct noncollinear",
+      "size": 1080
+    }
+  ],
+  "scope": "Exact finite invariant-subspace obstruction on the 40-point permutation module only, not a no-go theorem for all W33 derived higher tensors, all interactions, chirality, spontaneous symmetry breaking or the physical SM.",
+  "status": "PASS_EXACT_PROJECTIVE_SYMPLECTIC_RANK3_COMMUTANT_NO_NATIVE_3_GENERATIONS"
+}

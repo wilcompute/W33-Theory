@@ -1,0 +1,184 @@
+{
+  "benchmark_state": "Horodecki PPT a=0.236",
+  "difference_from_prior_proxy": "Each stage is composed as a potentially nonunitary matrix K, with real mode-dependent transmission between noncommuting Givens, crossing SWAP and mask elements, and all nine clicks PLUS no-click FIM terms. The prior scalar-throughput test did not model these effects.",
+  "full_POVM_results": {
+    "harsh": {
+      "generic_9mode": {
+        "average_programmed_two_mode_gates_and_crossings": 72.0,
+        "mean_click_survival": 0.9689883212538507,
+        "mean_full_POVM_min_Fisher_eig": 0.019195854907329796,
+        "mean_true_full_POVM_CCNR_CRLB": 12.143487608436487,
+        "min_and_max_true_full_POVM_CCNR_CRLB": [
+          12.113847253609165,
+          12.165554685694381
+        ],
+        "replicates": 7,
+        "std_true_full_POVM_CCNR_CRLB": 0.02153517117836216
+      },
+      "matched_12_product": {
+        "average_programmed_two_mode_gates_and_crossings": 66.0,
+        "mean_click_survival": 0.976428829290162,
+        "mean_full_POVM_min_Fisher_eig": 0.535069382934838,
+        "mean_true_full_POVM_CCNR_CRLB": 9.38759012400345,
+        "min_and_max_true_full_POVM_CCNR_CRLB": [
+          9.383616942381972,
+          9.390278078763382
+        ],
+        "replicates": 7,
+        "std_true_full_POVM_CCNR_CRLB": 0.0022089289450382345
+      },
+      "permutation_Fourier": {
+        "average_programmed_two_mode_gates_and_crossings": 76.0,
+        "mean_click_survival": 0.9656018353908412,
+        "mean_full_POVM_min_Fisher_eig": 0.005691900476557646,
+        "mean_true_full_POVM_CCNR_CRLB": 10.663181915687828,
+        "min_and_max_true_full_POVM_CCNR_CRLB": [
+          10.637345706377959,
+          10.700647606674394
+        ],
+        "replicates": 7,
+        "std_true_full_POVM_CCNR_CRLB": 0.022418353494752154
+      },
+      "two_CZ_local": {
+        "average_programmed_two_mode_gates_and_crossings": 72.0,
+        "mean_click_survival": 0.9679635319048006,
+        "mean_full_POVM_min_Fisher_eig": 0.0027709868377615923,
+        "mean_true_full_POVM_CCNR_CRLB": 12.85249636322631,
+        "min_and_max_true_full_POVM_CCNR_CRLB": [
+          12.784141763549897,
+          12.911537604736074
+        ],
+        "replicates": 7,
+        "std_true_full_POVM_CCNR_CRLB": 0.04189361867321532
+      }
+    },
+    "ideal": {
+      "generic_9mode": {
+        "average_programmed_two_mode_gates_and_crossings": 72.0,
+        "mean_click_survival": 1.0,
+        "mean_full_POVM_min_Fisher_eig": 0.02247086744151522,
+        "mean_true_full_POVM_CCNR_CRLB": 12.209093808184692,
+        "min_and_max_true_full_POVM_CCNR_CRLB": [
+          12.209093808184692,
+          12.209093808184692
+        ],
+        "replicates": 1,
+        "std_true_full_POVM_CCNR_CRLB": 0.0
+      },
+      "matched_12_product": {
+        "average_programmed_two_mode_gates_and_crossings": 66.0,
+        "mean_click_survival": 1.0,
+        "mean_full_POVM_min_Fisher_eig": 0.5446986190669663,
+        "mean_true_full_POVM_CCNR_CRLB": 9.255081655697113,
+        "min_and_max_true_full_POVM_CCNR_CRLB": [
+          9.255081655697113,
+          9.255081655697113
+        ],
+        "replicates": 1,
+        "std_true_full_POVM_CCNR_CRLB": 0.0
+      },
+      "permutation_Fourier": {
+        "average_programmed_two_mode_gates_and_crossings": 76.0,
+        "mean_click_survival": 1.0,
+        "mean_full_POVM_min_Fisher_eig": 0.006198828784336787,
+        "mean_true_full_POVM_CCNR_CRLB": 10.577750412658945,
+        "min_and_max_true_full_POVM_CCNR_CRLB": [
+          10.577750412658945,
+          10.577750412658945
+        ],
+        "replicates": 1,
+        "std_true_full_POVM_CCNR_CRLB": 0.0
+      },
+      "two_CZ_local": {
+        "average_programmed_two_mode_gates_and_crossings": 72.0,
+        "mean_click_survival": 1.0,
+        "mean_full_POVM_min_Fisher_eig": 0.00331188490913011,
+        "mean_true_full_POVM_CCNR_CRLB": 12.849206179239225,
+        "min_and_max_true_full_POVM_CCNR_CRLB": [
+          12.849206179239225,
+          12.849206179239225
+        ],
+        "replicates": 1,
+        "std_true_full_POVM_CCNR_CRLB": 0.0
+      }
+    },
+    "moderate": {
+      "generic_9mode": {
+        "average_programmed_two_mode_gates_and_crossings": 72.0,
+        "mean_click_survival": 0.9917595981014786,
+        "mean_full_POVM_min_Fisher_eig": 0.021660466850481435,
+        "mean_true_full_POVM_CCNR_CRLB": 12.186024540549782,
+        "min_and_max_true_full_POVM_CCNR_CRLB": [
+          12.178221884818306,
+          12.192330810179488
+        ],
+        "replicates": 7,
+        "std_true_full_POVM_CCNR_CRLB": 0.0063946470360173495
+      },
+      "matched_12_product": {
+        "average_programmed_two_mode_gates_and_crossings": 66.0,
+        "mean_click_survival": 0.99397837702657,
+        "mean_full_POVM_min_Fisher_eig": 0.5424294033176629,
+        "mean_true_full_POVM_CCNR_CRLB": 9.28764647576835,
+        "min_and_max_true_full_POVM_CCNR_CRLB": [
+          9.286448780222386,
+          9.288458943019105
+        ],
+        "replicates": 7,
+        "std_true_full_POVM_CCNR_CRLB": 0.0006525480728998127
+      },
+      "permutation_Fourier": {
+        "average_programmed_two_mode_gates_and_crossings": 76.0,
+        "mean_click_survival": 0.9902792658483702,
+        "mean_full_POVM_min_Fisher_eig": 0.006232582937551673,
+        "mean_true_full_POVM_CCNR_CRLB": 10.589008579646237,
+        "min_and_max_true_full_POVM_CCNR_CRLB": [
+          10.579835187500084,
+          10.602218687080667
+        ],
+        "replicates": 7,
+        "std_true_full_POVM_CCNR_CRLB": 0.0071782760533557755
+      },
+      "two_CZ_local": {
+        "average_programmed_two_mode_gates_and_crossings": 72.0,
+        "mean_click_survival": 0.9916057658303421,
+        "mean_full_POVM_min_Fisher_eig": 0.0031650364673912012,
+        "mean_true_full_POVM_CCNR_CRLB": 12.84700579415376,
+        "min_and_max_true_full_POVM_CCNR_CRLB": [
+          12.825432646338829,
+          12.863936313086317
+        ],
+        "replicates": 7,
+        "std_true_full_POVM_CCNR_CRLB": 0.01240719621673529
+      }
+    }
+  },
+  "scenarios": {
+    "harsh": {
+      "cross_intensity": 0.97,
+      "gate_intensity": 0.98,
+      "mask_intensity": 0.995,
+      "rms_phase": 0.01
+    },
+    "ideal": {
+      "cross_intensity": 1,
+      "gate_intensity": 1,
+      "mask_intensity": 1,
+      "rms_phase": 0
+    },
+    "moderate": {
+      "cross_intensity": 0.99,
+      "gate_intensity": 0.995,
+      "mask_intensity": 0.999,
+      "rms_phase": 0.003
+    }
+  },
+  "scope": "Physically explicit toy circuits, not actual fabricated optical hardware. Stage decomposition, independent Gaussian phases and per-gate fixed intensity assumptions are synthetic, and the Bell eight bases are lossless controls. Full POVMs assumed known; no finite calibration uncertainty, source drift, mode-dependent detector error or certification power is included. CRLB is asymptotic at one fixed state.",
+  "settings_compared": [
+    "generic_9mode",
+    "permutation_Fourier",
+    "two_CZ_local",
+    "matched_12_product"
+  ],
+  "status": "PASS_FOUR_STRUCTURED_TRUE_NONCOMMUTING_LOSS_POVM_FISHER"
+}
