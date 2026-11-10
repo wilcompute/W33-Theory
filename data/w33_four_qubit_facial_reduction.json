@@ -1,0 +1,29 @@
+{
+ "n_alpha_sets": 3,
+ "n_equations": 318,
+ "rank": 315,
+ "t": 14.000000038869052,
+ "attempts": [
+  {
+   "D": 1,
+   "equations_exact": true,
+   "exact_psd": false,
+   "min_eig_float": -4.134854854963183
+  },
+  {
+   "D": 2,
+   "equations_exact": true,
+   "exact_psd": false,
+   "min_eig_float": -0.38058036417473046
+  },
+  {
+   "D": 4,
+   "equations_exact": true,
+   "exact_psd": true,
+   "min_eig_float": -5.840066081868493e-15
+  }
+ ],
+ "certified": true,
+ "denominator": 4,
+ "conclusion": "theta <= 14 EXACTLY => F >= |v|^4/16 for all v in C^16; attained (m* = 1): min F = 1/16 exactly"
+}

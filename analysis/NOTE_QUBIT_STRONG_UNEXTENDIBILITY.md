@@ -31,7 +31,7 @@ and an exact dual certificate over Q(√5), built in the rank-21 coherent closur
 
 **3. The true minimum** is 1/8. It is attained by stabiliser states of a Pauli class meeting the covered set in one point. It is certified numerically by a degree-6 sum-of-squares decomposition, with a 120-dimensional symmetric block and a 288-dimensional block of monomials vᵢvⱼv̄ₖ, and residual 10⁻¹¹. An exact certificate for 1/8 is open. Pairwise information cannot reach it, since ϑ > α = 6. A Shor-type relaxation of the pure-state constraints is also vacuous (bound 7): for a convex objective that is being maximised, the lifted variables can exceed the squares they stand for.
 
-**4. Four qubits.** A nine-element (d/2 + 1) set in d = 16 satisfies F ≥ (1999/32000)|v|⁴ exactly, within 0.05% of its attained minimum 1/16, via ϑ ≤ 14 + 1/2000. So strongly unextendible Pauli MUB sets of size d/2 + 1 exist in d = 16.
+**4. Four qubits.** A nine-element (d/2 + 1) set in d = 16 satisfies F ≥ |v|⁴/16 **exactly and tightly** (Pass 12645): ϑ = α = 14, certified by a facially reduced dual over (1/4)Z, where complementary slackness with the three stabiliser optima is imposed and the result checked by exact LDLᵀ. So strongly unextendible Pauli MUB sets of size d/2 + 1 exist in d = 16, with min F = 1/d.
 
 **5. Two qubits.** For the three-element sets, ϑ = α = 2, so min F = 1/4 exactly from the same inequality.
 
@@ -44,7 +44,7 @@ and an exact dual certificate over Q(√5), built in the rank-21 coherent closur
 ## What is not claimed
 
 - No exact proof of the tight value 1/8.
-- For d = 16, only one nine-element set (Pass 12644) is certified: F ≥ 1999/32000 |v|⁴ exactly (ϑ ≤ 14 + 1/2000 by an exact rational dual), against an attained minimum of 1/16. Whether all nine-element sets are equivalent was not computed.
+- For d = 16, only one nine-element set is certified (min F = 1/16 exactly). Whether all nine-element sets are equivalent was not computed, and that set has no mirror partner.
 - The Lovász equality ϑ = 4 + √5 is numerical; only the upper bound is certified.
 
 ## References

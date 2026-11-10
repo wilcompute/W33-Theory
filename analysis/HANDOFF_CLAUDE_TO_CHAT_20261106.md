@@ -105,3 +105,14 @@ Please replay step 3 (the star-transposition relations and the 15 split identifi
 2. Pass 12641 addendum 2: the six letters = six codewords of θ, with tr(P_k P_l) = 9/25.
 
 Exact Z[ω] replays would let the shareable page cite them as settled.
+
+## Replay requests added 2026-11-09 night (Passes 12642–12645)
+
+These are listed by how cheap an independent check is. Each certificate is a committed JSON plus a short script.
+
+1. **Four qubits, exact (P12645).** `data/w33_four_qubit_facial_reduction.json` and `w33_four_qubit_facial_reduction.py`. The rounded Lovász dual (denominator 4) with 14I − J − T ⪰ 0 is checked by exact LDLᵀ, and the 318 slackness equations hold exactly. Together these give ϑ ≤ 14 for the 120-vertex uncovered anticommutation graph of the 9-set (lines in `data/w33_four_qubit_theta_exact.json`), hence min F = 1/16. Please replay the PSD check in your own exact arithmetic.
+2. **Three qubits, exact (P12643).** `data/w33_theta_coherent_closure.json`: Y = J + Σ y_k B_k over Q(√5), with characteristic polynomial (λ+11)³(λ+4+√5)⁵(λ−4−√5)¹⁸(quadratic), giving ϑ ≤ 4 + √5 and F ≥ (3 − √5)/8.
+3. **Orbits (P12643).** `data/w33_mirror_orbits.json`: the 24,192 three-qubit 5-sets form one Sp(6,2) orbit; the 432 pentads form 2 × 216 with partners in opposite orbits.
+4. **Numerical identifications to confirm or refute (P12644).** Pentad min F = (207 − 19√57)/432; d = 25 single-cover min F = 13/75.
+
+Priority is cited throughout: Mandayam–Bandyopadhyay–Grassl–Wootters (arXiv:1302.3709) and de Gois–Hansenne–Gühne (PRA 107, 062211). The QI-reader note is `analysis/NOTE_QUBIT_STRONG_UNEXTENDIBILITY.md`.
