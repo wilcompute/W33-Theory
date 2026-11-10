@@ -44,6 +44,18 @@ The decuplet also admits a direct mass at degree six. For a symmetric lower tens
 
 The two supplied sixth-degree terms leave **89** uneaten massless components in the anomaly-cancelled model. Resolving the Hessian and gauge orbit by all four Standard Model Cartan weights gives exactly three copies of the restricted `27` character and eight extra trivial characters. This is three charged chiral families, three vectorlike color-triplet pairs, three vectorlike weak-doublet pairs, and fourteen Standard Model singlets. The operators are explicit choices of effective couplings. Vacuum selection and the remaining vectorlike spectrum are open.
 
+## Split masses for the remaining vectorlike pairs
+
+Insert the adjoint on one leg of the signed cubic. Add two terms of the form `Omega(X[0], X[1], ((A²−r² I) ⊗ M[j,k]) X[0])`, with zero-based species labels. Use `(r,j,k) = (3,1,2)` for the triplet masses and `(2,0,1)` for the doublet masses. The meson transforms by family conjugation and the adjoint polynomial by internal conjugation, so both terms are gauge invariant. On the VEV, each selected meson annihilates the last field and the signed cubic vanishes whenever two internal legs are in the neutral singlet plane. These facts make the gradient vanish and eliminate derivatives of the inserted meson and adjoint from the Hessian. The surviving derivative on the last matter leg is multiplied by `(6Y)²−r²`, which separates the two charged sectors exactly.
+
+At unit coefficients the full weight ledger leaves **63** uneaten chiral components. They comprise three Standard Model families, one vectorlike weak-doublet pair with the Higgs quantum numbers, and fourteen singlets. All vectorlike color triplets in the previous ledger acquire mass. The displayed interactions are supplied operators of degrees five and seven. The calculation fixes the perturbative gauge representation content at the stated vacuum. Electroweak symmetry breaking, the Yukawa matrices, and a dynamical origin for these operators remain open.
+
+## Removing the fourteen neutral singlets
+
+For each of the fourteen selected meson words in the certificate, let `I` be the trace of that word and `I0` its value at the VEV. Add `(I−I0)²/2` to the superpotential. These are gauge-invariant holomorphic terms of degrees up to twelve. Centering makes their first derivatives vanish at the VEV, and their Hessian is the sum of the outer products of the invariant gradients. Those gradients vanish on all gauge orbit directions and have support only in the neutral sector. The combined integer Hessian lifts all fourteen previously massless singlets without shifting the charged weights.
+
+The final uneaten chiral kernel has **49 components**. Its complete Standard Model character is three families of quarks and charged leptons in chiral supermultiplets, together with one pair of weak doublets of hypercharges `±1/2`. This is the chiral representation content of the MSSM above electroweak breaking. The conjugate decuplet remains fully massive and the continuous stabilizer remains the canonical Standard Model. The operators and their centers are supplied inputs. A dynamical origin, electroweak symmetry breaking, realistic Yukawa textures, and a gravity sector remain to be established.
+
 ## Sources and replay
 
 - [Canonical Standard Model embedding, Pass 11271](w33_pass11271_canonical_sm_higgs_bridge.py)

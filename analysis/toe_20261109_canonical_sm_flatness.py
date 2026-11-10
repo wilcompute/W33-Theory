@@ -224,10 +224,13 @@ def sextic_adjoint_hessian(internal, y):
     return block
 
 
-def spectator_hessian(x, dual):
+def family_mesons(x, dual):
+    return [fundamental.reshape(27, 3).T @ conjugate.reshape(27, 3)
+            for conjugate in dual for fundamental in x]
+
+
+def spectator_hessian(mesons):
     """A sixth-degree direct mass for the conjugate family decuplet."""
-    mesons = [fundamental.reshape(27, 3).T @ conjugate.reshape(27, 3)
-              for conjugate in dual for fundamental in x]
     basis = {key: i for i, key in enumerate(combinations_with_replacement(range(3), 3))}
     epsilon = [(word, vacuum.cubic.parity(word)) for word in permutations(range(3))]
     terms = [(0, 0), (0, 2), (3, 4)]
@@ -251,7 +254,7 @@ def field_charges(internal, charge):
                            adjoint_charges(internal, charge)])
 
 
-def sm_weight_check(hessian, orbit, internal, color, weak, y):
+def sm_weight_check(hessian, orbit, internal, color, weak, y, multiplicities, extra_singlets=8):
     roots = [color[0], color[1], weak]
     coroots = np.stack([(root @ root.T - root.T @ root).diagonal() for root in roots])
     assert vacuum.rank(coroots) == 3
@@ -264,11 +267,57 @@ def sm_weight_check(hessian, orbit, internal, color, weak, y):
         holomorphic_rank = vacuum.rank(hessian[opposite, :][:, selected])
         orbit_rank = vacuum.rank(orbit[:, selected])
         massless = int(selected.sum()) - holomorphic_rank - orbit_rank
-        expected = 3 * int((fundamental == weight).all(axis=1).sum())
-        assert massless == expected + (8 if not any(weight) else 0)
+        expected = sum(multiplicities[(fundamental == weight).all(axis=1)])
+        assert massless == expected + (extra_singlets if not any(weight) else 0)
         if massless:
             ledger.append(dict(weight=list(map(int, weight)), massless=massless))
     return ledger
+
+
+def split_exotic_hessian(x, y, mesons, records, orbit):
+    """Adjoint and meson insertions giving independent triplet/doublet ranks."""
+    block = np.zeros((483, 483), dtype=np.int64)
+    legs = (0, 1, 0)
+    identity = np.eye(81, dtype=np.int64)
+    for meson, zero_charge in [(mesons[5], 3), (mesons[1], 2)]:
+        assert not (np.kron(np.eye(27, dtype=np.int64), meson) @ x[0]).any()
+        projector = np.diag(y * y - zero_charge**2)
+        maps = [identity, identity, np.kron(projector, meson)]
+        values = [matrix @ x[leg] for matrix, leg in zip(maps, legs)]
+        for left, right in combinations(range(3), 2):
+            derivative = np.array(vacuum.native.jacobian(values[3 - left - right], records))
+            term = (-1) ** (left + right + 1) * (maps[left].T @ derivative @ maps[right])
+            i, j = 81 * legs[left], 81 * legs[right]
+            block[i:i + 81, j:j + 81] += term
+            block[j:j + 81, i:i + 81] += term.T
+    assert not (orbit @ block).any()
+    return block
+
+
+def meson_trace_mass(x, dual, mesons, orbit):
+    """Centered squares of trace invariants on the Standard Model singlets."""
+    words = [(0,), (1,), (2,), (3,), (5,), (0, 0), (0, 1), (0, 2), (0, 3),
+             (2, 3), (2, 4), (2, 5), (3, 5), (0, 4, 2)]
+    gradients, centers = [], []
+    for word in words:
+        product = np.eye(3, dtype=np.int64)
+        for label in word:
+            product = product @ mesons[label]
+        centers.append(int(np.trace(product)))
+        dx = np.zeros((3, 27, 3), dtype=np.int64)
+        dz = np.zeros((2, 27, 3), dtype=np.int64)
+        for position, label in enumerate(word):
+            cyclic = np.eye(3, dtype=np.int64)
+            for other in word[position + 1:] + word[:position]:
+                cyclic = cyclic @ mesons[other]
+            j, k = divmod(label, 3)
+            dx[k] += dual[j].reshape(27, 3) @ cyclic
+            dz[j] += x[k].reshape(27, 3) @ cyclic.T
+        gradients.append(np.concatenate([dx.ravel(), dz.ravel(), np.zeros(78, dtype=np.int64)]))
+    jacobian = np.stack(gradients)
+    assert vacuum.rank(jacobian) == 14 and not (orbit @ jacobian.T).any()
+    return jacobian.T @ jacobian, [dict(meson_trace=list(word), center=center)
+                                   for word, center in zip(words, centers)]
 
 
 def dual_repair(gauge, internal, color, weak, y, records):
@@ -310,7 +359,23 @@ def dual_repair(gauge, internal, color, weak, y, records):
     sextic_spectrum = mass_spectrum(sextic_hessian, charges, all_orbit, y)
     sextic_massless = sum(row['uneaten_massless'] for row in sextic_spectrum)
     assert sextic_massless == 89
-    sextic_weights = sm_weight_check(sextic_hessian, all_orbit, internal, color, weak, y)
+    copies = np.full(27, 3, dtype=np.int64)
+    sextic_weights = sm_weight_check(sextic_hessian, all_orbit, internal, color, weak, y, copies)
+    mesons = family_mesons(x, dual)
+    split_hessian = sextic_hessian + split_exotic_hessian(x, y, mesons, records, all_orbit)
+    split_spectrum = mass_spectrum(split_hessian, charges, all_orbit, y)
+    assert sum(row['uneaten_massless'] for row in split_spectrum) == 63
+    exotic_indices = read(SM)['exotic_mass_support']
+    for index in exotic_indices:
+        copies[index] = int(abs(y[index]) == 3)
+    split_weights = sm_weight_check(split_hessian, all_orbit, internal, color, weak, y, copies)
+    trace_mass, trace_terms = meson_trace_mass(x, dual, mesons, all_orbit)
+    final_hessian = split_hessian + trace_mass
+    final_spectrum = mass_spectrum(final_hessian, charges, all_orbit, y)
+    assert sum(row['uneaten_massless'] for row in final_spectrum) == 49
+    copies[:2] = 0
+    final_weights = sm_weight_check(final_hessian, all_orbit, internal, color, weak, y, copies,
+                                    extra_singlets=0)
     return dict(fundamental_supports=[np.flatnonzero(v).tolist() for v in x],
                 dual_supports=[np.flatnonzero(v).tolist() for v in dual],
                 mixed_cubic='dual[0] * (A tensor I) * X[2]',
@@ -328,7 +393,15 @@ def dual_repair(gauge, internal, color, weak, y, records):
                 sextic_spectrum=sextic_spectrum,
                 sextic_sm_weight_ledger=sextic_weights,
                 sextic_massless_character='3 times restricted 27 plus 8 trivial',
-                sextic_spectator_mass=spectator_hessian(x, dual))
+                sextic_spectator_mass=spectator_hessian(mesons),
+                split_exotic_terms=[{'meson': [1, 2], 'projector_zero_six_Y': 3},
+                                    {'meson': [0, 1], 'projector_zero_six_Y': 2}],
+                split_exotic_massless=63,
+                split_exotic_spectrum=split_spectrum,
+                split_exotic_sm_weight_ledger=split_weights,
+                centered_trace_squared_terms=trace_terms,
+                final_massless_components=49,
+                final_sm_weight_ledger=final_weights)
 
 
 def calculate():
