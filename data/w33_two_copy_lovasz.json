@@ -1,0 +1,32 @@
+{
+ "two_qubits_control": {
+  "n_U": 6,
+  "four_param_bound": 6.000000000000011,
+  "four_param_x": [
+   -3.329980030995891,
+   -0.25704869415817316,
+   -2.6700199690041098,
+   -2.742951305841829
+  ],
+  "closure_dual_bound": 5.99999997992938,
+  "closure_terms": 4,
+  "closure_rank": 3,
+  "sqrt_bound": 2.44948973868628,
+  "minF_lower": 0.13762756532843
+ },
+ "three_qubits": {
+  "n_U": 28,
+  "four_param_bound": 56.14973294013767,
+  "four_param_x": [
+   1.9328659789885365,
+   -2.266034886722393,
+   -6.5683382831268995,
+   -1.468546221112165
+  ],
+  "closure_dual_bound": 38.98333409194625,
+  "closure_terms": 208,
+  "closure_rank": 21,
+  "sqrt_bound": 6.243663515272604,
+  "minF_lower": 0.09454206059092451
+ }
+}

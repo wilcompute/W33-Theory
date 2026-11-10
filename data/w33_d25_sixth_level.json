@@ -1,0 +1,15 @@
+{
+ "min_F": 0.17333333333333323,
+ "n_vectors": 144,
+ "max_dev_from_one_sixth": 3.6161497962705624e-09,
+ "n_points": 36,
+ "whole_points": true,
+ "points_on_covered": 12,
+ "per_covered_line_intersections": {
+  "0": 8,
+  "2": 6
+ },
+ "commuting_pairs": 180,
+ "anticommuting_pairs": 450,
+ "full_lines_inside": 6
+}
