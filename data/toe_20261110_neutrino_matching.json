@@ -1,0 +1,173 @@
+{
+  "status": "PASS",
+  "convention": "W = (L Hu)^T kappa (L Hu) / 2",
+  "neutral_dimension": 38,
+  "neutral_hessian_rank": 26,
+  "source_rank": 3,
+  "direct": [
+    [
+      "117",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "54",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0"
+    ]
+  ],
+  "exchange": [
+    [
+      "-31191633/6020",
+      "0",
+      "-1205280/301"
+    ],
+    [
+      "0",
+      "-3834",
+      "-4590"
+    ],
+    [
+      "-1205280/301",
+      "-4590",
+      "-294143400/301"
+    ]
+  ],
+  "kappa": [
+    [
+      "-30487293/6020",
+      "0",
+      "-1205280/301"
+    ],
+    [
+      "0",
+      "-3780",
+      "-4590"
+    ],
+    [
+      "-1205280/301",
+      "-4590",
+      "-294143400/301"
+    ]
+  ],
+  "rank": 3,
+  "kinetic_comparison": {
+    "assumptions": "unit matter kinetic matrices and positive relative adjoint normalization",
+    "gram_lower": [
+      [
+        "19",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "19",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "71/4"
+      ]
+    ],
+    "gram_unit_adjoint": [
+      [
+        "19",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "19",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1151/58"
+      ]
+    ],
+    "gram_upper": [
+      [
+        "19",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "19",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "20"
+      ]
+    ],
+    "masses_up_to_common_factor": [
+      197.7935457648813,
+      265.6902538818247,
+      49245.095828177946
+    ],
+    "squared_gap_ratio": 1.2976701348666202e-05,
+    "squared_gap_ratio_upper_for_all_positive_adjoint_scales": "81/2559919"
+  },
+  "neutral_current_extension": {
+    "current_matrix": [
+      [
+        "0",
+        "0",
+        "-162"
+      ],
+      [
+        "0",
+        "162",
+        "0"
+      ],
+      [
+        "162",
+        "0",
+        "0"
+      ]
+    ],
+    "current_determinant": "4251528",
+    "centered_trace_mass_pairing": "I3",
+    "direct_minus_exchange_alignment": [
+      [
+        "45",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "completed_square": "kappa(T) = kappa + D^T D - (TJ-D)^T(TJ-D)",
+    "image": "all complex symmetric 3 by 3 matrices",
+    "one_coupling_ratio_bracket": {
+      "zero_based_T_index": [
+        1,
+        1
+      ],
+      "coupling_interval": [
+        "12/5",
+        "5/2"
+      ],
+      "left_ratio_upper": "6889/240091",
+      "right_ratio_lower": "1547/49005",
+      "target": "37/1250"
+    }
+  }
+}
