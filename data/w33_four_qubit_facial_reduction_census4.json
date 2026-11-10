@@ -1,0 +1,49 @@
+{
+ "census_index": 4,
+ "lines": [
+  296,
+  518,
+  574,
+  877,
+  1110,
+  1305,
+  1570,
+  1796,
+  2279
+ ],
+ "m_star": 1,
+ "alpha": 14,
+ "n_alpha_sets": 3,
+ "n_equations": 318,
+ "rank": 315,
+ "t": 14.000000001016353,
+ "attempts": [
+  {
+   "D": 1,
+   "equations_exact": true,
+   "exact_psd": false,
+   "min_eig_float": -2.601463475479179
+  },
+  {
+   "D": 2,
+   "equations_exact": true,
+   "exact_psd": false,
+   "min_eig_float": -1.384452021866377
+  },
+  {
+   "D": 4,
+   "equations_exact": true,
+   "exact_psd": false,
+   "min_eig_float": -0.09807594471000662
+  },
+  {
+   "D": 8,
+   "equations_exact": true,
+   "exact_psd": true,
+   "min_eig_float": -1.930139825538041e-15
+  }
+ ],
+ "certified": true,
+ "denominator": 8,
+ "conclusion": "theta <= 14 EXACTLY => min F = 1/16 exactly (attained by stabiliser states, m* = 1)"
+}

@@ -1,0 +1,97 @@
+{
+ "census_index": 1,
+ "lines": [
+  120,
+  209,
+  308,
+  512,
+  648,
+  964,
+  1036,
+  1235,
+  1787
+ ],
+ "m_star": 2,
+ "alpha": 13,
+ "n_alpha_sets": 16,
+ "n_equations": 1712,
+ "rank": 1592,
+ "t": 13.000000000000039,
+ "attempts": [
+  {
+   "D": 1,
+   "equations_exact": true,
+   "exact_psd": false,
+   "min_eig_float": -2003.5059955961851
+  },
+  {
+   "D": 2,
+   "equations_exact": true,
+   "exact_psd": false,
+   "min_eig_float": -792.3857520879467
+  },
+  {
+   "D": 4,
+   "equations_exact": true,
+   "exact_psd": false,
+   "min_eig_float": -420.1378777786678
+  },
+  {
+   "D": 8,
+   "equations_exact": true,
+   "exact_psd": false,
+   "min_eig_float": -63.61872978560384
+  },
+  {
+   "D": 16,
+   "equations_exact": true,
+   "exact_psd": false,
+   "min_eig_float": -25.57040473746021
+  },
+  {
+   "D": 32,
+   "equations_exact": true,
+   "exact_psd": false,
+   "min_eig_float": -13.551017348962212
+  },
+  {
+   "D": 64,
+   "equations_exact": true,
+   "exact_psd": false,
+   "min_eig_float": -11.023680092777628
+  },
+  {
+   "D": 128,
+   "equations_exact": true,
+   "exact_psd": false,
+   "min_eig_float": -0.7658528393443469
+  },
+  {
+   "D": 256,
+   "equations_exact": true,
+   "exact_psd": false,
+   "min_eig_float": -5.272650920737501
+  },
+  {
+   "D": 512,
+   "equations_exact": true,
+   "exact_psd": false,
+   "min_eig_float": -0.5223264839798326
+  },
+  {
+   "D": 1024,
+   "equations_exact": true,
+   "exact_psd": false,
+   "min_eig_float": -0.22661481209560852
+  },
+  {
+   "D": 4096,
+   "equations_exact": true,
+   "exact_psd": true,
+   "min_eig_float": -8.103182390706554e-15
+  }
+ ],
+ "certified": true,
+ "denominator": 4096,
+ "conclusion": "theta <= 13 EXACTLY => min F = 2/16 exactly (attained by stabiliser states, m* = 2)"
+}

@@ -1,0 +1,57 @@
+[
+ {
+  "index": 0,
+  "n_inside": 17,
+  "n_partitions": 1,
+  "m_star": 1,
+  "theta": 13.999998644324034,
+  "stabiliser_value": 0.0625,
+  "lovasz_lower": 0.06250008472974788,
+  "numeric_min_F": 0.06250000000514329,
+  "non_stabiliser_optimum": false
+ },
+ {
+  "index": 1,
+  "n_inside": 26,
+  "n_partitions": 1,
+  "m_star": 2,
+  "theta": 12.999999256231161,
+  "stabiliser_value": 0.125,
+  "lovasz_lower": 0.1250000464855524,
+  "numeric_min_F": 0.12500000001161,
+  "non_stabiliser_optimum": false
+ },
+ {
+  "index": 2,
+  "n_inside": 14,
+  "n_partitions": 1,
+  "m_star": 1,
+  "theta": 14.00000018186803,
+  "stabiliser_value": 0.0625,
+  "lovasz_lower": 0.06249998863324813,
+  "numeric_min_F": 0.06250000000695632,
+  "non_stabiliser_optimum": false
+ },
+ {
+  "index": 3,
+  "n_inside": 32,
+  "n_partitions": 2,
+  "m_star": 2,
+  "theta": 13.011076096381748,
+  "stabiliser_value": 0.125,
+  "lovasz_lower": 0.12430774397614075,
+  "numeric_min_F": 0.12500000000349326,
+  "non_stabiliser_optimum": false
+ },
+ {
+  "index": 4,
+  "n_inside": 12,
+  "n_partitions": 1,
+  "m_star": 1,
+  "theta": 14.000000125618687,
+  "stabiliser_value": 0.0625,
+  "lovasz_lower": 0.06249999214883206,
+  "numeric_min_F": 0.06250000001161861,
+  "non_stabiliser_optimum": false
+ }
+]
