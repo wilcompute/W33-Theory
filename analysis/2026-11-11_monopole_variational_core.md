@@ -1,6 +1,6 @@
 # A lower-energy W33 monopole trial with a charged phase
 
-For the primitive W33 monopole, a smooth trial configuration with moving adjoint and matter fields has energy strictly below 1422 at unit gauge and adjoint kinetic normalizations. Direct evaluation gives about 1420.62, compared with 4490.87 for the radius-optimized trial with those fields frozen. The rational certificate bounds the infimum in the charge-one sector. The trial uses prescribed radial shapes, and stationarity and stability remain open. [Frozen trial and normalization](2026-11-10_monopole_core_channels.md)
+For the primitive W33 monopole, a smooth trial configuration with moving adjoint and matter fields has energy strictly below 1038 at unit gauge and adjoint kinetic normalizations. Moving the scalar fields lowers the trial energy from 4490.87 to 1420.62. A subsequent gauge variation lowers it to 1036.63. The rational certificate bounds the infimum in the charge-one sector. The trial uses prescribed radial shapes, and stationarity and stability remain open. [Frozen trial and normalization](2026-11-10_monopole_core_channels.md)
 
 ## Color symmetry and an exactly D-flat family
 
@@ -15,6 +15,8 @@ The remaining F terms come from the adjoint trace polynomial, the three mixed cu
 ## Exact energy and the phase equation
 
 The radial energy takes the form 4π(a/R + b R + c R³). Here a = 63π/32 and b = π[225/16+(Tr(v²)+2u0²)/8], with u = u0 K. The potential is an even polynomial in s divisible by (1−s²)². After removing that factor the potential integrals are the moments of s²/sqrt(1−s²) on [0,1]. Their values are rational multiples of π. The baseline calculation reproduces the earlier exact coefficient c = 449843766875π/196608. A numerical search suggested the amplitudes, which were then rounded and fixed as rationals for the replay. The certificate uses R = 747/10000 and π < 22/7 to prove the strict upper bound without numerical integration.
+
+The gauge profile itself can also vary. Keeping the same scalar shapes and coefficients, set K_gauge = (1−s²)(1+4s²/3) while the singlet scalar and matter corrections still use 1−s². The exact gauge coefficient a/π becomes 1039/864 and the scalar-gradient coefficient b/π becomes 8249503679/240000000. With R = 647/10000 the rational certificate gives energy about 1036.63 and a strict bound below 1038. The analytic electric phase below uses the first gauge profile.
 
 The collective phase has generator m/2 at infinity, normalized to give the embedded raising step unit phase charge. Write its regular Gauss field as p(r) times the radially rotated generator. The scalar commutators and matter action of this generator vanish along the trial. Gauss's equation is
 

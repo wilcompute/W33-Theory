@@ -123,6 +123,30 @@ def radius_and_energy(a, b, c):
     return radius, 4 * np.pi * (a / radius + b * radius + c * radius**3)
 
 
+def relaxed_gauge_bound(b, c):
+    """Vary the gauge profile while keeping the same scalar shapes."""
+    s = sp.Symbol('s', real=True)
+    amplitude = sp.Rational(4, 3)
+    radius = sp.Rational(647, 10000)
+    k = (1 - s**2) * (1 + amplitude * s**2)
+
+    def moment(expression):
+        polynomial = sp.Poly(sp.cancel(expression), s)
+        assert all(power[0] % 2 == 0 for power, _ in polynomial.terms())
+        return sum(coefficient * sp.binomial(power[0], power[0] // 2)
+                   / 2**(power[0] + 1) for power, coefficient in polynomial.terms())
+
+    a = 3 * moment(2 * sp.diff(k, s)**2 * (1 - s**2)**2 + (1 - k**2)**2 / s**2)
+    b += 150 * moment((k**2 - (1 - s**2)**2) * s**2 / (1 - s**2))
+    assert a == sp.Rational(1039, 864) and b == sp.Rational(8249503679, 240000000)
+    e_over_pi2 = 4 * (a / radius + b * radius + c * radius**3)
+    assert e_over_pi2 * sp.Rational(22, 7)**2 < 1038
+    return dict(profile='K=(1-s^2)*(1+4*s^2/3)', radius=str(radius),
+                coefficients_over_pi=list(map(str, (a, b, c))),
+                energy_over_pi_squared=str(e_over_pi2),
+                energy=float(e_over_pi2 * sp.pi**2), upper_bound=1038)
+
+
 def phase_inertia(radius):
     """Solve Gauss's equation for the electric phase on the trial configuration."""
     angle = sp.Symbol('angle', positive=True)
@@ -213,7 +237,8 @@ def trial():
                 coefficients_over_pi=list(map(str, (sp.Rational(63, 32), b, c))),
                 energy_over_pi_squared=str(e_over_pi2), trial_energy=float(e_over_pi2 * sp.pi**2),
                 baseline_energy=energy(np.zeros(5)),
-                variational_upper_bound=1422, electric_phase=phase_inertia(trial_radius))
+                variational_upper_bound=1422, electric_phase=phase_inertia(trial_radius),
+                relaxed_gauge=relaxed_gauge_bound(b, c))
 
 
 if __name__ == '__main__':
