@@ -22,9 +22,9 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **14099** files; **18983** distinctive results
+Indexed **14103** files; **18987** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
-**8350** appear in exactly one file — the sharpest signal.
+**8353** appear in exactly one file — the sharpest signal.
 
 ## Index
 
@@ -69,6 +69,7 @@ Indexed **14099** files; **18983** distinctive results
 | `[[548,4,21]]` | `analysis/PASS363_367_QR_CLIFFORD_REFINEMENT_SYNTHESIS.md` · `analysis/THE_SELECTION_LAYER.md` · `analysis/w33_pass364_qr548_e8_phase_space.g` · `analysis/w33_pass366_qr137m_real_clifford_refinement_tower.g` · *(+2)* |
 | `[[822,6,21]]` | `analysis/w33_pass368_eisenstein_rank_parity_law.py` · `analysis/w33_pass369_the_27_is_a_heisenberg_torsor.py` · `w33_paper_body.tex` |
 | `[[0,13,26]]` | `analysis/w33_pass11148_scan_polygamy.py` |
+| `[[0,27,28]]` | `analysis/toe_20261111_monopole_radial_solution.py` |
 | `[[135,4,4]]` | `analysis/2026-10-23_native_gq24_css_135_4_4.md` · `analysis/2026-10-27_native_gauge_propagation_completion.md` · `analysis/w33_20261023_native_135_4_4_css.py` |
 | `[[137,1,3]]` | `analysis/2026-07-08_pass76_QEC_codes_alpha_code.md` · `analysis/2026-07-15_pass77_alpha_code_exact_distance.md` · `analysis/2026-07-15_pass82_grand_synthesis.md` · `analysis/2026-07-15_pass86_alpha_running_correction.md` · *(+19)* |
 | `[[160,1,3]]` | `analysis/2026-10-09_toe25_five_quantum_e6_e8_fronts.md` · `analysis/2026-10-09_toe26_seven_code_e8_e6_physics_fronts.md` · `analysis/2026-10-15_toe83_h27_square_css_surgery.md` · `analysis/w33_20261009_toe25_css_distance_three.py` |
@@ -699,6 +700,7 @@ Indexed **14099** files; **18983** distinctive results
 | `[0,17,26]` | `analysis/PASS11471_11475_FRAMES_CURRENTS_MATCHING.md` · `analysis/PASS11521_11525_EXACT_FRONTIERS.md` · `analysis/w33_pass11526_11530_validated_dynamics.py` |
 | `[0,18,90]` | `exploration/w33_line_spread_intertwiner_bridge.py` · `exploration/w33_spread_overlap_algebra_bridge.py` |
 | `[0,21,22]` | `formal/W33/Pass1106CliffordFirewallCarrier.lean` |
+| `[0,27,28]` | `analysis/toe_20261111_monopole_radial_solution.py` |
 | `[0,30,30]` | `analysis/w33_pass7081_7096_e8_z3_z4_z12_common_refinement.py` · `analysis/w33_physical_fi_matter_parity_z6_quotient.py` |
 | `[0,52,68]` | `analysis/2026-10-09_round17_exact_interaction_trace_witness.md` · `analysis/2026-10-09_round19_five_physics_frontiers.md` |
 | `[0,52,70]` | `analysis/2026-10-09_round17_exact_interaction_trace_witness.md` · `analysis/2026-10-09_round19_five_physics_frontiers.md` |
@@ -3362,6 +3364,7 @@ Indexed **14099** files; **18983** distinctive results
 | `239243257` | `analysis/w33_pass1511_1515_cover_resolution_frontiers.py` |
 | `239256258` | `analysis/w33_pass1421_1424_outer_integral_cover_extension.py` |
 | `239500800` | `analysis/w33_pass5667_5674_q5_reye_equivariant_orientation.g` · `scripts/w33_monster_centralizer_cofactor_groups.py` |
+| `240000000` | `analysis/2026-11-11_monopole_variational_core.md` · `analysis/toe_20261111_monopole_variational_core.py` |
 | `240108108` | `analysis/w33_20261015_toe93_affine_H27_chain.py` |
 | `240150150` | `analysis/w33_pass1968_internal_mu6_structural_role.py` |
 | `240183134` | `docs/index.html` |
@@ -4242,6 +4245,7 @@ Indexed **14099** files; **18983** distinctive results
 | `01160586` | `analysis/PASS4480_4484_RESERVATION.md` |
 | `01204717` | `analysis/2026-10-31_conic_exterior_arc_bridge.md` · `analysis/2026-10-31_five_front_continuation.md` · `analysis/w33_20261031_conic_exterior_arc_bridge.py` |
 | `01212295` | `analysis/2026-10-31_signed_lifts_local_dynamics_native_index.md` · `analysis/w33_20261031_local_tick_mediator.py` |
+| `01941322` | `analysis/2026-11-11_monopole_variational_core.md` |
 | `02119075` | `analysis/PASS11797_11801_FIVE_PHYSICAL_FRONTS.md` |
 | `02414187` | `analysis/W33_K12_GENUS_POLARIZATION.md` · `exploration/PART_CCCXCVI_PHOTONIC_LIFE_RUNTIME_ARCHITECTURE.py` · `manuscripts/tex/part21_lock_table.tex` · `papers/standalone/w33_paper_v2.tex` |
 | `03103436` | `analysis/2026-10-14_toe72_five_fronts.md` |
@@ -4484,7 +4488,8 @@ Indexed **14099** files; **18983** distinctive results
 | `20261101` | `analysis/2026-11-01_five_plus_three_w33_physics_continuation.md` · `analysis/2026-11-01_native_measurements_controls_and_quantum_geometry.md` · `analysis/w33_20261101_common_cubic_spinor_extension.py` · `analysis/w33_20261101_five_plus_three.py` · *(+9)* |
 | `20261106` | `analysis/2026-11-06_sterile_parent_and_changed_work_audit.md` · `analysis/PASS12638_E7_KRAMERS_CHANNELS.md` · `analysis/PASS12645_EXACT_FOUR_QUBIT_ONE_SIXTEENTH.md` · `analysis/PASS20261108_GAUGE_E6_OPTICAL_FOLLOWTHROUGH.md` · *(+6)* |
 | `20261107` | `analysis/2026-11-07_inverse_higgs_production_and_sterile_spectra.md` · `analysis/2026-11-07_natural_constants_derivation_catalog.md` · `analysis/PASS20261107_CONSTANTS_FIVE_FRONTS.md` · `analysis/toe_20261107_coupled_scalar_moments.py` · *(+6)* |
-| `20261110` | `analysis/2026-11-10_four_qubit_equality.md` · `analysis/2026-11-10_global_gauge_topology.md` · `analysis/2026-11-10_light_yukawa_completion.md` · `analysis/2026-11-10_monopole_boundary_lattice.md` · *(+17)* |
+| `20261110` | `analysis/2026-11-10_four_qubit_equality.md` · `analysis/2026-11-10_global_gauge_topology.md` · `analysis/2026-11-10_light_yukawa_completion.md` · `analysis/2026-11-10_monopole_boundary_lattice.md` · *(+18)* |
+| `20261111` | `analysis/2026-11-11_monopole_radial_solution.md` · `analysis/2026-11-11_monopole_variational_core.md` · `analysis/toe_20261111_monopole_radial_solution.py` · `analysis/toe_20261111_monopole_variational_core.py` |
 | `20262000` | `analysis/2026_11_03_csg_action_heldout.py` |
 | `20481813` | `analysis/PASS2560_2567_SEVEN_FRONTIERS_RELEASE.md` |
 | `20544048` | `analysis/w33_pass5430_q3_radius10_false_vote4_frontier.py` |
@@ -7158,6 +7163,7 @@ Indexed **14099** files; **18983** distinctive results
 | `196319` | `analysis/2026-10-09_five_fronts_round14.md` |
 | `196359` | `analysis/2026-09-20_five_day_crossrepo_research_pass.md` |
 | `196387` | `analysis/2026-10-10_toe49_parallel_five_physics_audit.md` |
+| `196608` | `analysis/2026-11-11_monopole_variational_core.md` · `analysis/toe_20261111_monopole_variational_core.py` |
 | `196811` | `analysis/w33_20260923_cubic_jacobi_levi.g` |
 | `196830` | `exploration/THE_323_FORMULA.py` |
 | `196882` | `exploration/WITTING_W33_S12_SYNTHESIS.py` |
@@ -12823,7 +12829,6 @@ Indexed **14099** files; **18983** distinctive results
 | `1035` | `analysis/BT1035_ncg_inner_fluctuation_gap_audit.md` · `analysis/BT1036_finite_to_ncg_gauge_bridge.md` · `analysis/BT1037_inner_fluctuation_test_harness.md` · `analysis/BT3549_BT3555_borel_pentad_quantum_walk.md` · *(+6)* |
 | `1036` | `analysis/BT1036_finite_to_ncg_gauge_bridge.md` · `analysis/BT1037_inner_fluctuation_test_harness.md` · `analysis/BT3025_BT3031_predictive_photonic_overhaul.md` · `analysis/PASS1034_1037_SELECTOR_CONTROLLER_SYNTHESIS.md` · *(+8)* |
 | `1037` | `analysis/BREAKTHROUGH_JULY_2026.md` · `analysis/BT1037_inner_fluctuation_test_harness.md` · `analysis/PASS1034_1037_SELECTOR_CONTROLLER_SYNTHESIS.md` · `analysis/PASS12131_12135_KY_LAW_MODULI_EXOTICS.md` · *(+7)* |
-| `1038` | `analysis/BREAKTHROUGH_JULY_2026.md` · `analysis/BT1038_af_representation_candidate.md` · `analysis/BT1039_commutator_span_harness.md` · `analysis/BT1040_higgs_trace_ledger.md` · *(+20)* |
 | `1041` | `analysis/2026-10-10_toe34_five_fronts_spin_cover_qec_dim_c8.md` · `analysis/BT1041_real_chiral_dirac_candidate.md` · `analysis/BT1042_first_order_condition_verifier.md` · `analysis/BT1045_ko_sign_verifier.md` · *(+17)* |
 | `1042` | `analysis/BREAKTHROUGH_JULY_2026.md` · `analysis/BT1041_real_chiral_dirac_candidate.md` · `analysis/BT1042_first_order_condition_verifier.md` · `analysis/BT1044_higgs_sweep_summary.md` · *(+17)* |
 | `1043` | `analysis/BT1043_phi_240_extension.md` · `analysis/BT1046_heavy_sector_phi_ansatz.md` · `analysis/PASS1054_1059_SIX_WAY_BREAKTHROUGH.md` · `analysis/PASS1060_1064_FIVE_STREAM_RELEASE.md` · *(+15)* |
@@ -12934,7 +12939,7 @@ Indexed **14099** files; **18983** distinctive results
 | `1165` | `analysis/PASS1163_1167_EXECUTION_RELEASE.md` · `analysis/THEORY_OF_EVERYTHING.py` · `analysis/bt1165_grade_type_relation_decomposition.py` · `analysis/bt1167_tritangent_45_layer_model.py` · *(+2)* |
 | `1166` | `analysis/PASS1163_1167_EXECUTION_RELEASE.md` · `analysis/THEORY_OF_EVERYTHING.py` · `analysis/w33_pass1166_ihara_zeta_degree10.py` · `analysis/w33_pass1192_parallel_synthesis_guard.py` |
 | `1167` | `analysis/PASS10962_HIDDEN_SECTOR_DFLAT_TIERS.md` · `analysis/PASS10968_R_SYMMETRY_PARITY_AND_MASSLESS_EXOTICS.md` · `analysis/PASS1163_1167_EXECUTION_RELEASE.md` · `analysis/THEORY_OF_EVERYTHING.py` · *(+6)* |
-| `1168` | `analysis/2026-10-09_five_fronts_round13.md` · `analysis/2026-10-09_five_more_toe_frontiers_round9.md` · `analysis/PASS1168_1172_EXECUTION_RELEASE.md` · `analysis/PASS5158_5165_EXECUTED_OUTCOMES.md` · *(+7)* |
+| `1168` | `analysis/2026-10-09_five_fronts_round13.md` · `analysis/2026-10-09_five_more_toe_frontiers_round9.md` · `analysis/2026-11-11_monopole_radial_solution.md` · `analysis/PASS1168_1172_EXECUTION_RELEASE.md` · *(+8)* |
 | `1169` | `analysis/PASS1168_1172_EXECUTION_RELEASE.md` · `analysis/THEORY_OF_EVERYTHING.py` · `analysis/w33_pass1169_sp43_432_orbit_source.py` · `analysis/w33_pass1192_parallel_synthesis_guard.py` |
 | `1170` | `analysis/BT3628_BT3634_octad_borel_matrix_proof_tomography.md` · `analysis/PASS1168_1172_EXECUTION_RELEASE.md` · `analysis/PASS53_parity_tablefree_promotion_review.md` · `analysis/THEORY_OF_EVERYTHING.py` · *(+19)* |
 | `1171` | `analysis/PASS1168_1172_EXECUTION_RELEASE.md` · `analysis/THEORY_OF_EVERYTHING.py` · `analysis/bt1171_mask_pair_dictionary.py` · `analysis/bt1173_s6_sp42_naturality.py` · *(+2)* |
@@ -13012,7 +13017,7 @@ Indexed **14099** files; **18983** distinctive results
 | `1247` | `analysis/BT1247_clifford_word_metric_structural_lock.md` · `analysis/BT1247_promote_structural_invariants_into_bt1242.md` · `analysis/BT1252_jun17_session_roadmap.md` · `analysis/BT1254_bijection_pytest_suite.md` · *(+6)* |
 | `1248` | `analysis/BT1247_clifford_word_metric_structural_lock.md` · `analysis/BT1248_four_transvection_stabilizer_regimes.md` · `analysis/BT1248_sm_bijection_hardening.md` · `analysis/BT1250_regression_through_bt1249.md` · *(+20)* |
 | `1249` | `analysis/BT1249_photonic_lattice_experiment_protocol.md` · `analysis/BT1250_regression_through_bt1249.md` · `analysis/BT1252_jun17_session_roadmap.md` · `analysis/BT1261_clifford_tomography_ladder_manifest.md` · *(+7)* |
-| `1250` | `analysis/2026-11-10_neutral_higgs_alignment.md` · `analysis/BT1250_regression_through_bt1249.md` · `analysis/BT1250_zenodo_deposit_manifest.md` · `analysis/BT1252_jun17_session_roadmap.md` · *(+17)* |
+| `1250` | `analysis/2026-11-10_neutral_higgs_alignment.md` · `analysis/2026-11-11_monopole_variational_core.md` · `analysis/BT1250_regression_through_bt1249.md` · `analysis/BT1250_zenodo_deposit_manifest.md` · *(+19)* |
 | `1251` | `analysis/ARXIV_COVER_LETTER.md` · `analysis/BT1247_clifford_word_metric_structural_lock.md` · `analysis/BT1251_arxiv_abstract_v2.md` · `analysis/BT1251_ordered_oriented_gate_invariance.md` · *(+11)* |
 | `1252` | `analysis/ARXIV_COVER_LETTER.md` · `analysis/BT1252_jun17_session_roadmap.md` · `analysis/BT1252_polar_path_tetrahedron_identifier.md` · `analysis/BT1253_regression_through_bt1252.md` · *(+15)* |
 | `1253` | `analysis/2026-10-09_toe26_seven_code_e8_e6_physics_fronts.md` · `analysis/BT1253_paper_build_ci_hardened.md` · `analysis/BT1253_regression_through_bt1252.md` · `analysis/BT1255_arxiv_cover_letter.md` · *(+9)* |
@@ -13163,7 +13168,7 @@ Indexed **14099** files; **18983** distinctive results
 | `1418` | `analysis/BT1416_BT1418_css_optical_quartic_frontier.md` · `analysis/BT1419_BT1421_frontend_unitary_magic_optimizer.md` · `analysis/PASS540_SYMPLECTIC_CHIRALITY_CHAINRING.md` · `analysis/THEORY_OF_EVERYTHING.py` · *(+9)* |
 | `1419` | `analysis/BT1419_BT1421_frontend_unitary_magic_optimizer.md` · `analysis/BT1422_BT1424_fano_native_shear_frontier.md` · `analysis/THEORY_OF_EVERYTHING.py` · `analysis/W33_REYE_PORTS_FRAMES_ECHO_STREAMS.md` · *(+2)* |
 | `1421` | `analysis/BT1419_BT1421_frontend_unitary_magic_optimizer.md` · `analysis/THEORY_OF_EVERYTHING.py` · `analysis/W33_REYE_PORTS_FRAMES_ECHO_STREAMS.md` · `analysis/w33_pass10701_10708_fano_clock_active_bus_factorization.py` · *(+2)* |
-| `1422` | `analysis/BT1422_BT1424_fano_native_shear_frontier.md` · `analysis/THEORY_OF_EVERYTHING.py` · `analysis/w33_20260924_e8_metric_fano_latch_orbits.py` · `analysis/w33_pass10701_10708_fano_clock_active_bus_factorization.py` · *(+2)* |
+| `1422` | `analysis/BT1422_BT1424_fano_native_shear_frontier.md` · `analysis/THEORY_OF_EVERYTHING.py` · `analysis/toe_20261111_monopole_variational_core.py` · `analysis/w33_20260924_e8_metric_fano_latch_orbits.py` · *(+3)* |
 | `1423` | `analysis/BT1422_BT1424_fano_native_shear_frontier.md` · `analysis/THEORY_OF_EVERYTHING.py` · `analysis/w33_pass1421_1424_outer_integral_cover_extension.py` · `analysis/w33_pass1421_1425_full_weyl_integral_cover_release.md` |
 | `1424` | `analysis/2026-11-08_native_fullband_scalar_holonomy.md` · `analysis/BT1422_BT1424_fano_native_shear_frontier.md` · `analysis/BT1425_BT1427_retwined_fano_pipeline.md` · `analysis/THEORY_OF_EVERYTHING.py` · *(+2)* |
 | `1425` | `analysis/BT1425_BT1427_retwined_fano_pipeline.md` · `analysis/BT1428_BT1430_symmetry_pulse_holonet.md` · `analysis/BT1431_BT1434_defect_decoder_golden_mobius.md` · `analysis/BT1447_BT1449_equation_fano_closure_decoder.md` · *(+14)* |
@@ -13584,7 +13589,7 @@ Indexed **14099** files; **18983** distinctive results
 | `1878` | `analysis/BT1875_BT1879_execution_summary.md` · `analysis/BT1878_BT1880_summary.md` · `analysis/BT1878_css_decoder_table.md` · `analysis/BT1880_BT1884_execution_summary.md` · *(+14)* |
 | `1879` | `analysis/BT1875_BT1879_execution_summary.md` · `analysis/BT1878_BT1880_summary.md` · `analysis/BT1879_optical_resource_noise_budget.md` · `analysis/BT1882_loss_reuse_architecture.md` · *(+13)* |
 | `1880` | `analysis/2026-07-10_levi_closure.md` · `analysis/BT1852_BT1855_summary.md` · `analysis/BT1878_BT1880_summary.md` · `analysis/BT1880_BT1884_execution_summary.md` · *(+21)* |
-| `1881` | `analysis/BT1880_BT1884_execution_summary.md` · `analysis/BT1881_BT1883_summary.md` · `analysis/BT1881_repeated_syndrome_decoder.md` · `analysis/BT1884_detector_time_decoder_graph.md` · *(+6)* |
+| `1881` | `analysis/2026-11-11_monopole_radial_solution.md` · `analysis/BT1880_BT1884_execution_summary.md` · `analysis/BT1881_BT1883_summary.md` · `analysis/BT1881_repeated_syndrome_decoder.md` · *(+7)* |
 | `1883` | `analysis/2026-11-03_fivefront_symmetry_gravity_hardware_audit.md` · `analysis/BT1880_BT1884_execution_summary.md` · `analysis/BT1881_BT1883_summary.md` · `analysis/BT1882_1886_decoder_order_carrier_clock.md` · *(+13)* |
 | `1884` | `analysis/BT1880_BT1884_execution_summary.md` · `analysis/BT1882_1886_decoder_order_carrier_clock.md` · `analysis/BT1884_BT1886_summary.md` · `analysis/BT1884_detector_time_decoder_graph.md` · *(+8)* |
 | `1885` | `analysis/BT1882_1886_decoder_order_carrier_clock.md` · `analysis/BT1884_BT1886_summary.md` · `analysis/BT1885_BT1889_execution_summary.md` · `analysis/BT1885_switch_fabric_lowering.md` · *(+19)* |
@@ -14160,7 +14165,7 @@ Indexed **14099** files; **18983** distinctive results
 | `2715` | `analysis/PASS2716_2721_NAMESPACE.md` · `analysis/w33_pass2708_2715_three_of_eight_and_one_field.md` · `analysis/w33_pass2716_2721_incidence_transceiver_implemented.md` · `analysis/w33_pass5199_q5_leader35_edgetype_full_apartment_correction.py` |
 | `2716` | `analysis/PASS11663_ODD_WEIL_NORMAL_MAP.md` · `analysis/PASS2716_2721_NAMESPACE.md` · `analysis/w33_pass2716_2721_incidence_transceiver_implemented.md` · `analysis/w33_pass2716_2723_the_photon_reads_its_own_character.md` · *(+3)* |
 | `2717` | `analysis/BT466_SEXTACTIC_MODULAR_WILSON.py` · `analysis/PASS2716_2721_NAMESPACE.md` · `analysis/verify_w33_full.py` · `analysis/w33_27_triple_identity.py` · *(+8)* |
-| `2718` | `analysis/PASS2716_2721_NAMESPACE.md` · `analysis/w33_pass2716_2721_incidence_transceiver_implemented.md` · `analysis/w33_pass2716_2723_the_photon_reads_its_own_character.md` · `analysis/w33_pass2716_integer_transceiver_reference.py` · *(+2)* |
+| `2718` | `analysis/PASS2716_2721_NAMESPACE.md` · `analysis/toe_20261111_monopole_radial_solution.py` · `analysis/toe_20261111_monopole_variational_core.py` · `analysis/w33_pass2716_2721_incidence_transceiver_implemented.md` · *(+4)* |
 | `2719` | `analysis/PASS2716_2721_NAMESPACE.md` · `analysis/w33_pass2716_2721_incidence_transceiver_implemented.md` · `analysis/w33_pass2716_2723_the_photon_reads_its_own_character.md` · `analysis/w33_pass2716_integer_transceiver_reference.py` |
 | `2720` | `analysis/2026-10-09_toe31_compact_cover_cat_spin16_lorentz_C8.md` · `analysis/2026-10-10_toe32_five_frontier_breakthroughs.md` · `analysis/PASS2716_2721_NAMESPACE.md` · `analysis/w33_pass1138_explicit_cubic_incidence_bridge.g` · *(+5)* |
 | `2721` | `analysis/PASS2716_2721_NAMESPACE.md` · `analysis/w33_pass2716_2721_incidence_transceiver_implemented.md` · `analysis/w33_pass2716_2723_the_photon_reads_its_own_character.md` · `analysis/w33_pass2716_integer_transceiver_reference.py` |
@@ -16162,7 +16167,7 @@ Indexed **14099** files; **18983** distinctive results
 | `5206` | `analysis/PASS5206_5213_RESULTS.md` · `analysis/PASS5214_5221_EXECUTED_OUTCOMES.md` · `analysis/w33_pass5206_q5_leader36_fullcut_degreeclass_diagnostic.py` |
 | `5207` | `analysis/2026-10-08_five_frontiers_quantum_heterotic_photonic_causality.md` · `analysis/2026-10-08_single_edge_photonic_kurtosis_witness.md` · `analysis/PASS5206_5213_RESULTS.md` · `analysis/PASS5214_5221_EXECUTED_OUTCOMES.md` · *(+6)* |
 | `5208` | `analysis/PASS5206_5213_RESULTS.md` · `analysis/w33_pass5208_oddq_dualgrid_spanning_rank_reduction.py` |
-| `5209` | `analysis/PASS5206_5213_RESULTS.md` · `analysis/PASS5214_5221_EXECUTED_OUTCOMES.md` · `analysis/w33_pass5209_q5_footprint_code_hull_mod4.py` · `analysis/w33_pass5238_q5_footprint_tanner_moment_distance.py` · *(+3)* |
+| `5209` | `analysis/PASS5206_5213_RESULTS.md` · `analysis/PASS5214_5221_EXECUTED_OUTCOMES.md` · `analysis/toe_20261111_monopole_radial_solution.py` · `analysis/toe_20261111_monopole_variational_core.py` · *(+5)* |
 | `5210` | `analysis/PASS5206_5213_RESULTS.md` · `analysis/w33_pass5210_root_controller_dualgrid_equivariance.py` |
 | `5211` | `analysis/PASS20260923_execute_next5_plus3_representation_physics.md` · `analysis/PASS5206_5213_RESULTS.md` · `analysis/w33_pass5211_oddq_pblock_graph_NO5plus.py` · `analysis/w33_pass5212_q5_dualgrid_Hoffman_13_cover.py` · *(+1)* |
 | `5212` | `analysis/PASS5206_5213_RESULTS.md` · `analysis/w33_pass5212_q5_dualgrid_Hoffman_13_cover.py` · `analysis/w33_pass5213_q5_footprint_dual_325_260_8.py` · `analysis/w33_pass5226_5227_the_witness_decays_without_an_object.py` · *(+9)* |
@@ -18587,7 +18592,6 @@ Indexed **14099** files; **18983** distinctive results
 | `097` | `analysis/bt2847_2853_protected_observer_noisy_m36.py` |
 | `098` | `analysis/2026-08-28_FIVE_FRONT_CLOSURE_TRADE_S5_Q5_TENSOR.md` · `analysis/PASS20261108_FORTY_POINTS_FIVE_FRONTS.md` · `analysis/PASS2300_2305_FIVE_FRONTIERS_RELEASE.md` · `analysis/w33_pass2300_2305_verify_frozen.py` |
 | `099` | `analysis/BT3837_BT3854_ovoid_wedderburn_code_leech_triality.md` · `analysis/w33_20261021_five_physical_candidates.py` |
-| `277` | `analysis/2026-08-29_EIGHT_FRONT_RECOVERY_PHYSICS_CLOSURE.md` · `analysis/PASS11088_BARYONIC_HIDDEN_CONDENSATES.md` · `analysis/PASS11108_TACHYON_FREE_MODULI_RESCAN.md` · `analysis/PASS20261109_EXACT_W33_OCTAGON_HESSIAN_81D_GAUGE_FIVE.md` · *(+21)* |
 | `307` | `analysis/PASS11418_J8_COMPLETENESS.md` · `analysis/PASS20260924_triality_class_field_closure.md` · `analysis/PASS20261109_POST_PR324_FULLBYTE_CHANGE_AUDIT.md` · `analysis/PASS4976_4983_EXECUTED_OUTCOMES.md` · *(+21)* |
 | `326` | `analysis/2026-10-14_toe66_five_fronts.md` · `analysis/2026-11-03_pascal_w33_transport_scale_audit.md` · `analysis/PASS11246_DISCRETE_ANOMALY_ESCAPES.md` · `analysis/PASS11268_PERFECT_MAGIC_TICKS.md` · *(+18)* |
 | `329` | `analysis/2026-11-05_pq_protection_normalization_and_shared_uv_audit.md` · `analysis/PASS12004_CP_REAL_BARE_THETA_NO_FIT.md` · `analysis/THEORY_OF_EVERYTHING.py` · `analysis/THE_SELECTION_LAYER.md` · *(+9)* |
@@ -18743,7 +18747,7 @@ Indexed **14099** files; **18983** distinctive results
 | `632` | `analysis/2026-08-29_EIGHT_FRONT_RECONCILIATION_ADDENDUM.md` · `analysis/2026-10-09_five_frontiers_round10.md` · `analysis/2026-10-29_five_fronts_seven_flags_four_lines_physics_optics.md` · `analysis/2026-11-03_non_W33_dark_sector_independent_falsifiers.md` · *(+15)* |
 | `633` | `analysis/BT631_635_five_frontier_release.md` · `analysis/BT639_bt633_latex_sanity_manifest.md` · `analysis/THEORY_OF_EVERYTHING.py` · `analysis/w33_20260923_cubic_jacobi_levi.g` · *(+1)* |
 | `634` | `analysis/2026-10-13_toe62_connected_research_recovery_record.md` · `analysis/2026-10-13_toe62_continuous_holonomy_seven_front_physics.md` · `analysis/BT631_635_five_frontier_release.md` · `analysis/PASS11092_NONSUSY_Z6I_TWINS_ARE_TACHYONIC.md` · *(+11)* |
-| `635` | `analysis/BT3787_BT3794_twirl_floquet_clock_control_hybrid.md` · `analysis/BT631_635_five_frontier_release.md` · `analysis/THEORY_OF_EVERYTHING.py` · `analysis/bt635_e2_duad_basis_intertwiner_test.py` · *(+5)* |
+| `635` | `analysis/2026-11-11_monopole_radial_solution.md` · `analysis/2026-11-11_monopole_variational_core.md` · `analysis/BT3787_BT3794_twirl_floquet_clock_control_hybrid.md` · `analysis/BT631_635_five_frontier_release.md` · *(+9)* |
 | `636` | `analysis/2026-08-29_EIGHT_FRONT_RECOVERY_PHYSICS_CLOSURE.md` · `analysis/BT636_640_five_frontier_release.md` · `analysis/BT671_675_five_frontier_release.md` · `analysis/PASS4656_4663_RESERVATION.md` · *(+6)* |
 | `637` | `analysis/BT1843_multivariate_covariance_SPRT.md` · `analysis/BT636_640_five_frontier_release.md` · `analysis/BT641_645_five_frontier_release.md` · `analysis/PASS11220_QUBIT_MEAN_PROTECTION.md` · *(+17)* |
 | `638` | `analysis/2026-10-13_toe61_all_beta_flux_manifold_no_go.md` · `analysis/BT3829_BT3836_adaptive_virtual_autonomous_thermo_substrate.md` · `analysis/BT636_640_five_frontier_release.md` · `analysis/PASS10960_MATTER_EVEN_DFLAT_CLOSURE.md` · *(+17)* |
@@ -18753,7 +18757,7 @@ Indexed **14099** files; **18983** distinctive results
 | `644` | `analysis/BT3701_BT3714_d4_f4_triality_axial_lattice.md` · `analysis/BT3913_BT3920_multidefect_lindbladian_process_fusion_phase.md` · `analysis/BT641_645_five_frontier_release.md` · `analysis/BT647_synthesis_bridge.md` · *(+16)* |
 | `645` | `analysis/BT641_645_five_frontier_release.md` · `analysis/BT645_period_two_note.md` · `analysis/BT647_synthesis_bridge.md` · `analysis/PASS20260924_temporal_self_entanglement_event_time.md` · *(+5)* |
 | `646` | `analysis/BT646_650_five_frontier_release.md` · `analysis/BT650_static_verification_note.md` · `analysis/BT653_preprint_direct_integration_boundary.md` · `analysis/BT656_preprint_patch_route.md` · *(+7)* |
-| `647` | `analysis/BT646_650_five_frontier_release.md` · `analysis/BT647_synthesis_bridge.md` · `analysis/BT650_static_verification_note.md` · `analysis/BT653_preprint_direct_integration_boundary.md` · *(+7)* |
+| `647` | `analysis/2026-11-11_monopole_variational_core.md` · `analysis/BT646_650_five_frontier_release.md` · `analysis/BT647_synthesis_bridge.md` · `analysis/BT650_static_verification_note.md` · *(+9)* |
 | `649` | `analysis/BT646_650_five_frontier_release.md` · `analysis/BT649_projector_comparison.md` · `analysis/BT651_central_minus_sheet_projector.md` · `analysis/PASS11373_THREE_QUTRIT_EXACT_FRACTION.md` · *(+17)* |
 | `652` | `analysis/BT651_655_five_frontier_release.md` · `analysis/BT654_minus_sheet_trace_bridge.md` · `analysis/BT655_s4_complement_q4_codec_boundary.md` · `analysis/PASS12151_12155_CORRECTIONS_FRICKE_LEPTONS_RUNNING.md` · *(+4)* |
 | `653` | `analysis/2026-10-29_W33_five_fronts_sp43_three_photon.md` · `analysis/2026-10-29_W33_integral_cover_quantum_walk_five_fronts.md` · `analysis/BT651_655_five_frontier_release.md` · `analysis/BT653_preprint_direct_integration_boundary.md` · *(+9)* |
@@ -18829,7 +18833,7 @@ Indexed **14099** files; **18983** distinctive results
 | `739` | `analysis/ARXIV_HOLONET_SUBMISSION.md` · `analysis/BT739_aggregate_parity_bridge_theorem.md` · `analysis/BT741_selector_glued_global_register.md` · `analysis/BT742_steinberg_identification_schur.md` · *(+18)* |
 | `743` | `analysis/BT3506_BT3512_seven_graph_csp_scheme_symmetry.md` · `analysis/BT743_selected_face_homological_code.md` · `analysis/BT745_presentation_torsor_chirality.md` · `analysis/PASS11220_QUBIT_MEAN_PROTECTION.md` · *(+3)* |
 | `745` | `analysis/2026-10-09_five_fronts_round16.md` · `analysis/BT744_tits_building_dictionary.md` · `analysis/BT745_presentation_torsor_chirality.md` · `analysis/BT746_absolute_chirality_z12.md` · *(+12)* |
-| `747` | `analysis/2026-08-28_FIVE_FRONT_CLOSURE_TRADE_S5_Q5_TENSOR.md` · `analysis/2026-08-28_MINIMUM_VECTOR_STABILIZER_576_STRUCTURE.md` · `analysis/2026-10-27_native_operator_closure.md` · `analysis/BT747_e6_triple_root_map.md` · *(+10)* |
+| `747` | `analysis/2026-08-28_FIVE_FRONT_CLOSURE_TRADE_S5_Q5_TENSOR.md` · `analysis/2026-08-28_MINIMUM_VECTOR_STABILIZER_576_STRUCTURE.md` · `analysis/2026-10-27_native_operator_closure.md` · `analysis/2026-11-11_monopole_variational_core.md` · *(+12)* |
 | `749` | `analysis/2026-06-23_full_commit_analysis.md` · `analysis/2026-10-09_five_fronts_round13.md` · `analysis/BT3514_BT3527_multicircuit_rm_biplane_a5.md` · `analysis/BT3549_BT3555_borel_pentad_quantum_walk.md` · *(+21)* |
 | `751` | `analysis/2026-11-02_eight_native_topology_cubic_quantum_fronts.md` · `analysis/BT1801_1805_brauer_xor_orbit_decoder_outer.md` · `analysis/BT751_root_natural_selector_harness.md` · `analysis/BT752_selector_program_continuity.md` · *(+5)* |
 | `752` | `analysis/2026-11-03_fivefront_symmetry_gravity_hardware_audit.md` · `analysis/BT1907_1911_u6_mixed_phase_spread_holonomy.md` · `analysis/BT752_selector_program_continuity.md` · `analysis/PASS11487_MAGIC_AXIS_EXTENSION.md` · *(+12)* |
