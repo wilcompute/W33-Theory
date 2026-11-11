@@ -6,7 +6,7 @@ from itertools import combinations
 import numpy as np
 import sympy as sp
 from scipy.interpolate import CubicSpline, PchipInterpolator
-from scipy.sparse import coo_matrix, diags
+from scipy.sparse import coo_matrix, diags, vstack
 from scipy.sparse.linalg import spsolve
 
 import toe_20261111_monopole_radial_solution as paired
@@ -179,7 +179,7 @@ def initial_profile(grid, vacuum, embedding, matter0):
     return result
 
 
-def minimize(residual, grid, state):
+def minimize(residual, grid, state, boundary=None):
     # Quadratic elements with five Gauss points per element.
     nodes, weights = np.polynomial.legendre.leggauss(5)
     count = (len(grid) - 1) // 2
@@ -195,6 +195,13 @@ def minimize(residual, grid, state):
     quadrature = np.sqrt(np.tile(weights, count) * width / 2)
     dimension = state.shape[1]
     free = np.arange(state.size)[2:-dimension]
+    if boundary is not None:
+        center, tail_matrix = boundary
+        free = np.r_[free, np.arange(state.size-dimension+1, state.size)]
+        tail_jacobian = coo_matrix((tail_matrix.ravel(),
+                                    (np.repeat(np.arange(dimension-1), dimension-1),
+                                     np.tile(np.arange(state.size-dimension+1, state.size), dimension-1))),
+                                   shape=(dimension-1, state.size)).tocsc()[:, free]
     kinetic = np.column_stack([np.ones_like(radius), np.broadcast_to(radius[:, None], (len(radius), dimension-1))])
     angular = np.sqrt(2)
     eye = np.eye(dimension)
@@ -219,8 +226,10 @@ def minimize(residual, grid, state):
         mid = np.einsum('ni,nij->nj', shape, element)
         slope = np.einsum('ni,nij->nj', slope_shape, element)
         result = local(mid, derivatives)
+        tail = np.empty(0) if boundary is None else tail_matrix @ (fields[-1, 1:] - center)
         if not derivatives:
-            return (quadrature[:, None] * np.column_stack([kinetic*slope, result])).ravel()
+            bulk = (quadrature[:, None] * np.column_stack([kinetic*slope, result])).ravel()
+            return np.r_[bulk, tail]
         values, jacobian = result
         values = quadrature[:, None] * np.column_stack([kinetic*slope, values])
         total_rows = values.shape[1]
@@ -236,7 +245,10 @@ def minimize(residual, grid, state):
         sparse = coo_matrix((np.concatenate(entries), (np.tile(row, 3), np.concatenate(columns))),
                             shape=(values.size, fields.size)).tocsc()
         sparse.eliminate_zeros()
-        return values.ravel(), sparse[:, free]
+        jacobian = sparse[:, free]
+        if boundary is not None:
+            jacobian = vstack([jacobian, tail_jacobian], format='csc')
+        return np.r_[values.ravel(), tail], jacobian
 
     damping = 1e-3
     for iteration in range(140):
@@ -265,15 +277,20 @@ def minimize(residual, grid, state):
             raise RuntimeError(f'Neutral radial solve stalled at residual {error}')
     else:
         raise RuntimeError(f'Neutral radial solve exceeded iterations, residual {error}')
-    blocks = values.reshape(len(radius), -1)**2
+    extra = 0 if boundary is None else dimension-1
+    tail_energy = 0. if not extra else 4*np.pi*np.sum(values[-extra:]**2)
+    blocks = values[:len(values)-extra].reshape(len(radius), -1)**2
     gauge = 4*np.pi*(np.sum(blocks[:, [0, dimension]]) + 3/grid[-1])
     scalar = 4*np.pi*(np.sum(blocks[:, 1:dimension]) + np.sum(blocks[:, dimension+1]))
     potential = 4*np.pi*np.sum(blocks[:, dimension+2:])
     d_energy = 4*np.pi*np.sum(blocks[:, -16:])
-    return state, dict(energy=float(gauge+scalar+potential), iterations=iteration,
+    result = dict(energy=float(gauge+scalar+potential+tail_energy), iterations=iteration,
                        scaled_discrete_residual=float(error), elements=count,
                        gauge=float(gauge), scalar_gradient=float(scalar), potential=float(potential),
                        d_energy=float(d_energy), virial_defect=float(gauge-scalar-3*potential))
+    if boundary is not None:
+        result['linear_scalar_tail_energy'] = float(tail_energy)
+    return state, result
 
 
 def calculate():
