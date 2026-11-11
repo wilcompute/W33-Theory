@@ -22,7 +22,7 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **14103** files; **18987** distinctive results
+Indexed **14105** files; **18987** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
 **8353** appear in exactly one file — the sharpest signal.
 
@@ -4489,7 +4489,7 @@ Indexed **14103** files; **18987** distinctive results
 | `20261106` | `analysis/2026-11-06_sterile_parent_and_changed_work_audit.md` · `analysis/PASS12638_E7_KRAMERS_CHANNELS.md` · `analysis/PASS12645_EXACT_FOUR_QUBIT_ONE_SIXTEENTH.md` · `analysis/PASS20261108_GAUGE_E6_OPTICAL_FOLLOWTHROUGH.md` · *(+6)* |
 | `20261107` | `analysis/2026-11-07_inverse_higgs_production_and_sterile_spectra.md` · `analysis/2026-11-07_natural_constants_derivation_catalog.md` · `analysis/PASS20261107_CONSTANTS_FIVE_FRONTS.md` · `analysis/toe_20261107_coupled_scalar_moments.py` · *(+6)* |
 | `20261110` | `analysis/2026-11-10_four_qubit_equality.md` · `analysis/2026-11-10_global_gauge_topology.md` · `analysis/2026-11-10_light_yukawa_completion.md` · `analysis/2026-11-10_monopole_boundary_lattice.md` · *(+18)* |
-| `20261111` | `analysis/2026-11-11_monopole_radial_solution.md` · `analysis/2026-11-11_monopole_variational_core.md` · `analysis/toe_20261111_monopole_radial_solution.py` · `analysis/toe_20261111_monopole_variational_core.py` |
+| `20261111` | `analysis/2026-11-11_monopole_independent_matter.md` · `analysis/2026-11-11_monopole_radial_solution.md` · `analysis/2026-11-11_monopole_variational_core.md` · `analysis/toe_20261111_monopole_independent_matter.py` · *(+2)* |
 | `20262000` | `analysis/2026_11_03_csg_action_heldout.py` |
 | `20481813` | `analysis/PASS2560_2567_SEVEN_FRONTIERS_RELEASE.md` |
 | `20544048` | `analysis/w33_pass5430_q3_radius10_false_vote4_frontier.py` |
@@ -6312,7 +6312,7 @@ Indexed **14103** files; **18987** distinctive results
 | `9705052` | `analysis/W33_VM_RETENTION_AND_OUTPUT_AUDIT.md` · `analysis/w33_three_copy_output_rank_audit.py` |
 | `9706069` | `analysis/PASS12369_12372_INFORMATION_DUALITY.md` · `analysis/w33_pass12369_to_12372_information_duality.py` |
 | `9707022` | `analysis/2026-11-03_toe_mechanism_completion.md` · `analysis/PASS11390_11394_CONTEXT_MATTER_CLOCK.md` · `analysis/toe_20261103_mechanism_four_dimensional_overlap.py` |
-| `9709356` | `analysis/2026-11-02_conditional_native_symplectic_vacuum.md` · `analysis/2026-11-03_toe_mechanism_completion.md` · `analysis/2026-11-03_toe_physical_completion.md` · `analysis/2026-11-10_neutral_higgs_alignment.md` · *(+14)* |
+| `9709356` | `analysis/2026-11-02_conditional_native_symplectic_vacuum.md` · `analysis/2026-11-03_toe_mechanism_completion.md` · `analysis/2026-11-03_toe_physical_completion.md` · `analysis/2026-11-10_neutral_higgs_alignment.md` · *(+15)* |
 | `9710043` | `analysis/BT3965_BT3972_topology_control_causal_density.md` · `analysis/BT4025_BT4032_physics_first_universal_computer.md` |
 | `9710102` | `analysis/PASS11988_11992_TANGENT_CLOCK_AND_PHYSICAL_INTERFACES.md` · `analysis/w33_pass11992_nonlinear_einstein_benchmark.py` · `analysis/w33_pass11995_native_metric_gr_lift.py` |
 | `9711178` | `analysis/W33_VACUUM_HARMONIC_PROSPECTIVE.md` |
