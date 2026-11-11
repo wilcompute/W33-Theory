@@ -78,6 +78,13 @@ def matter_data(u):
     z = [x[0] + x[1], x[2]]
     assert sum((v * v.T for v in x), sp.zeros(2)) == sum((v * v.T for v in z), sp.zeros(2))
     assert sum((v.T * v for v in x), sp.zeros(3)) == sum((v.T * v for v in z), sp.zeros(3))
+    source = sum((z[j] * x[k].T for j, k in MIXED), sp.zeros(2))
+    assert source == sp.Matrix([[2 * u, u], [u, 0]])
+    return x, z, centered_gradient(x, z)
+
+
+def centered_gradient(x, z):
+    """Differentiate the centered family invariants before restricting the fields."""
     mesons = [w.T * v for v in z for w in x]
     _, _, terms = centered_terms()
     gradients = [sp.zeros(2, 3) for _ in range(5)]
@@ -94,9 +101,7 @@ def matter_data(u):
             j, k = divmod(label, 3)
             gradients[k] += shift * z[j] * cyclic
             gradients[3 + j] += shift * x[k] * cyclic.T
-    source = sum((z[j] * x[k].T for j, k in MIXED), sp.zeros(2))
-    assert source == sp.Matrix([[2 * u, u], [u, 0]])
-    return x, z, [g.applyfunc(sp.expand) for g in gradients]
+    return [g.applyfunc(sp.expand) for g in gradients]
 
 
 def centered_terms():
