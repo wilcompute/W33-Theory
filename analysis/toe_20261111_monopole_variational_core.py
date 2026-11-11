@@ -165,6 +165,20 @@ def phase_inertia(radius):
                 inertia_at_unit_g=float(inertia_times_g2))
 
 
+def separated_radius_bound(b, c):
+    """Use independent radii for the scalar profiles and the gauge field."""
+    scalar_radius = sp.Rational(277, 10000)
+    gauge_radius = sp.Rational(291, 1250)
+    radial_gradient = b - sp.Rational(150, 16)
+    angular_gradient = sp.Rational(75, 2) * gauge_radius**3 / (gauge_radius + scalar_radius)**2
+    e_over_pi2 = 4 * (sp.Rational(63, 32) / gauge_radius + radial_gradient * scalar_radius
+                     + angular_gradient + c * scalar_radius**3)
+    assert e_over_pi2 * sp.Rational(22, 7)**2 < 635
+    return dict(scalar_radius=str(scalar_radius), gauge_radius=str(gauge_radius),
+                energy_over_pi_squared=str(e_over_pi2), energy=float(e_over_pi2 * sp.pi**2),
+                upper_bound=635, electric_phase=phase_inertia(gauge_radius))
+
+
 def trial():
     y, m, singlets, projector, sector = sector_and_geometry()
     u, s = sp.symbols('u s', real=True)
@@ -238,7 +252,8 @@ def trial():
                 energy_over_pi_squared=str(e_over_pi2), trial_energy=float(e_over_pi2 * sp.pi**2),
                 baseline_energy=energy(np.zeros(5)),
                 variational_upper_bound=1422, electric_phase=phase_inertia(trial_radius),
-                relaxed_gauge=relaxed_gauge_bound(b, c))
+                relaxed_gauge=relaxed_gauge_bound(b, c),
+                separated_radii=separated_radius_bound(b, c))
 
 
 if __name__ == '__main__':
