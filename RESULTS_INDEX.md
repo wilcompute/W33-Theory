@@ -22,9 +22,9 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **14107** files; **18987** distinctive results
+Indexed **14109** files; **18988** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
-**8352** appear in exactly one file — the sharpest signal.
+**8353** appear in exactly one file — the sharpest signal.
 
 ## Index
 
@@ -4489,7 +4489,7 @@ Indexed **14107** files; **18987** distinctive results
 | `20261106` | `analysis/2026-11-06_sterile_parent_and_changed_work_audit.md` · `analysis/PASS12638_E7_KRAMERS_CHANNELS.md` · `analysis/PASS12645_EXACT_FOUR_QUBIT_ONE_SIXTEENTH.md` · `analysis/PASS20261108_GAUGE_E6_OPTICAL_FOLLOWTHROUGH.md` · *(+6)* |
 | `20261107` | `analysis/2026-11-07_inverse_higgs_production_and_sterile_spectra.md` · `analysis/2026-11-07_natural_constants_derivation_catalog.md` · `analysis/PASS20261107_CONSTANTS_FIVE_FRONTS.md` · `analysis/toe_20261107_coupled_scalar_moments.py` · *(+6)* |
 | `20261110` | `analysis/2026-11-10_four_qubit_equality.md` · `analysis/2026-11-10_global_gauge_topology.md` · `analysis/2026-11-10_light_yukawa_completion.md` · `analysis/2026-11-10_monopole_boundary_lattice.md` · *(+18)* |
-| `20261111` | `analysis/2026-11-11_monopole_independent_matter.md` · `analysis/2026-11-11_monopole_neutral_core.md` · `analysis/2026-11-11_monopole_radial_solution.md` · `analysis/2026-11-11_monopole_variational_core.md` · *(+4)* |
+| `20261111` | `analysis/2026-11-11_monopole_independent_matter.md` · `analysis/2026-11-11_monopole_neutral_core.md` · `analysis/2026-11-11_monopole_neutral_tail.md` · `analysis/2026-11-11_monopole_radial_solution.md` · *(+6)* |
 | `20262000` | `analysis/2026_11_03_csg_action_heldout.py` |
 | `20481813` | `analysis/PASS2560_2567_SEVEN_FRONTIERS_RELEASE.md` |
 | `20544048` | `analysis/w33_pass5430_q3_radius10_false_vote4_frontier.py` |
@@ -12701,6 +12701,7 @@ Indexed **14107** files; **18987** distinctive results
 | `0264` | `analysis/2026-11-04_physical_fivefronts_gauge_memory_regge_mzi_povm_collision_report.md` |
 | `0266` | `analysis/2026-10-13_toe50_inverse_spectral_dual_visibility.md` · `analysis/BT3795_BT3812_plane_ovoid_scheme_leech_axial.md` |
 | `0272` | `analysis/w33_pass1500_1504_five_frontiers.py` |
+| `0275` | `analysis/toe_20261111_monopole_neutral_tail.py` |
 | `0280` | `analysis/2026-08-29_EIGHT_FRONT_RECONCILIATION_ADDENDUM.md` |
 | `0283` | `analysis/BT4057_BT4064_advanced_physics.md` |
 | `0284` | `docs/index.html` |
