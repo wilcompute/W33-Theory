@@ -1,0 +1,490 @@
+{
+ "sizes": {
+  "9": 304,
+  "11": 23,
+  "8": 96,
+  "13": 10,
+  "17": 10
+ },
+ "classes": [
+  {
+   "size": 9,
+   "lines": [
+    191,
+    562,
+    573,
+    1797,
+    1878,
+    1913,
+    2089,
+    2229,
+    2242
+   ],
+   "n_inside": 14,
+   "n_partitions": 1,
+   "m_star": 1,
+   "theta": 13.999998678036617,
+   "alpha": 14,
+   "theta_gt_alpha": false,
+   "count": 28
+  },
+  {
+   "size": 9,
+   "lines": [
+    92,
+    179,
+    467,
+    552,
+    626,
+    751,
+    947,
+    961,
+    2090
+   ],
+   "n_inside": 12,
+   "n_partitions": 1,
+   "m_star": 1,
+   "theta": 14.00000104827921,
+   "alpha": 14,
+   "theta_gt_alpha": false,
+   "count": 18
+  },
+  {
+   "size": 9,
+   "lines": [
+    16,
+    202,
+    621,
+    939,
+    1242,
+    1643,
+    1931,
+    1976,
+    2280
+   ],
+   "n_inside": 16,
+   "n_partitions": 1,
+   "m_star": 1,
+   "theta": 13.999998954035867,
+   "alpha": 14,
+   "theta_gt_alpha": false,
+   "count": 2
+  },
+  {
+   "size": 9,
+   "lines": [
+    366,
+    395,
+    726,
+    1029,
+    1102,
+    1505,
+    1589,
+    1754,
+    1884
+   ],
+   "n_inside": 32,
+   "n_partitions": 2,
+   "m_star": 2,
+   "theta": 13.011077650454059,
+   "alpha": 13,
+   "theta_gt_alpha": true,
+   "count": 1
+  },
+  {
+   "size": 8,
+   "lines": [
+    538,
+    637,
+    875,
+    1476,
+    1579,
+    1633,
+    1849,
+    1982
+   ],
+   "n_inside": 10,
+   "n_partitions": 1,
+   "m_star": 1,
+   "theta": 14.000000628165562,
+   "alpha": 14,
+   "theta_gt_alpha": false,
+   "count": 18
+  },
+  {
+   "size": 9,
+   "lines": [
+    200,
+    405,
+    534,
+    677,
+    1095,
+    1313,
+    1629,
+    1837,
+    1916
+   ],
+   "n_inside": 14,
+   "n_partitions": 1,
+   "m_star": 1,
+   "theta": 13.999998793757449,
+   "alpha": 14,
+   "theta_gt_alpha": false,
+   "count": 9
+  },
+  {
+   "size": 9,
+   "lines": [
+    27,
+    249,
+    320,
+    435,
+    521,
+    899,
+    1006,
+    1061,
+    1971
+   ],
+   "n_inside": 18,
+   "n_partitions": 1,
+   "m_star": 1,
+   "theta": 13.999999355834191,
+   "alpha": 14,
+   "theta_gt_alpha": false,
+   "count": 11
+  },
+  {
+   "size": 9,
+   "lines": [
+    56,
+    246,
+    355,
+    577,
+    1177,
+    1801,
+    1893,
+    2136,
+    2265
+   ],
+   "n_inside": 28,
+   "n_partitions": 1,
+   "m_star": 3,
+   "theta": 12.461912619217586,
+   "alpha": 12,
+   "theta_gt_alpha": true,
+   "count": 1
+  },
+  {
+   "size": 8,
+   "lines": [
+    260,
+    1318,
+    1386,
+    1433,
+    1563,
+    1679,
+    2167,
+    2285
+   ],
+   "n_inside": 8,
+   "n_partitions": 1,
+   "m_star": 1,
+   "theta": 14.00000078702366,
+   "alpha": 14,
+   "theta_gt_alpha": false,
+   "count": 9
+  },
+  {
+   "size": 9,
+   "lines": [
+    150,
+    344,
+    625,
+    1139,
+    1254,
+    1410,
+    1550,
+    2039,
+    2161
+   ],
+   "n_inside": 17,
+   "n_partitions": 1,
+   "m_star": 1,
+   "theta": 13.999999067869854,
+   "alpha": 14,
+   "theta_gt_alpha": false,
+   "count": 7
+  },
+  {
+   "size": 9,
+   "lines": [
+    685,
+    866,
+    1454,
+    1527,
+    1668,
+    1761,
+    1792,
+    2164,
+    2229
+   ],
+   "n_inside": 29,
+   "n_partitions": 1,
+   "m_star": 2,
+   "theta": 13.000000422059781,
+   "alpha": 13,
+   "theta_gt_alpha": false,
+   "count": 13
+  },
+  {
+   "size": 9,
+   "lines": [
+    338,
+    541,
+    1189,
+    1224,
+    1287,
+    1782,
+    1925,
+    2047,
+    2128
+   ],
+   "n_inside": 28,
+   "n_partitions": 1,
+   "m_star": 2,
+   "theta": 12.99999910600637,
+   "alpha": 13,
+   "theta_gt_alpha": false,
+   "count": 3
+  },
+  {
+   "size": 9,
+   "lines": [
+    93,
+    142,
+    287,
+    496,
+    711,
+    1069,
+    1092,
+    2048,
+    2266
+   ],
+   "n_inside": 14,
+   "n_partitions": 1,
+   "m_star": 1,
+   "theta": 14.000001151659495,
+   "alpha": 14,
+   "theta_gt_alpha": false,
+   "count": 1
+  },
+  {
+   "size": 9,
+   "lines": [
+    187,
+    485,
+    732,
+    788,
+    949,
+    1561,
+    1596,
+    1907,
+    1954
+   ],
+   "n_inside": 30,
+   "n_partitions": 1,
+   "m_star": 2,
+   "theta": 13.00000025939575,
+   "alpha": 13,
+   "theta_gt_alpha": false,
+   "count": 5
+  },
+  {
+   "size": 8,
+   "lines": [
+    164,
+    738,
+    857,
+    1023,
+    1423,
+    1497,
+    1636,
+    1912
+   ],
+   "n_inside": 10,
+   "n_partitions": 1,
+   "m_star": 1,
+   "theta": 13.99999961496405,
+   "alpha": 14,
+   "theta_gt_alpha": false,
+   "count": 6
+  },
+  {
+   "size": 9,
+   "lines": [
+    266,
+    573,
+    975,
+    1035,
+    1397,
+    1725,
+    1885,
+    2041,
+    2272
+   ],
+   "n_inside": 11,
+   "n_partitions": 1,
+   "m_star": 1,
+   "theta": 13.999998525550648,
+   "alpha": 14,
+   "theta_gt_alpha": false,
+   "count": 8
+  },
+  {
+   "size": 8,
+   "lines": [
+    98,
+    473,
+    654,
+    1012,
+    1210,
+    1377,
+    1624,
+    2163
+   ],
+   "n_inside": 8,
+   "n_partitions": 1,
+   "m_star": 1,
+   "theta": 14.000001075321446,
+   "alpha": 14,
+   "theta_gt_alpha": false,
+   "count": 6
+  },
+  {
+   "size": 9,
+   "lines": [
+    302,
+    922,
+    951,
+    1325,
+    1511,
+    1626,
+    1741,
+    1956,
+    2143
+   ],
+   "n_inside": 22,
+   "n_partitions": 1,
+   "m_star": 2,
+   "theta": 13.015562272365418,
+   "alpha": 13,
+   "theta_gt_alpha": true,
+   "count": 2
+  },
+  {
+   "size": 9,
+   "lines": [
+    3,
+    437,
+    631,
+    699,
+    1166,
+    1217,
+    1694,
+    1869,
+    2130
+   ],
+   "n_inside": 12,
+   "n_partitions": 1,
+   "m_star": 1,
+   "theta": 13.999998817491623,
+   "alpha": 14,
+   "theta_gt_alpha": false,
+   "count": 2
+  },
+  {
+   "size": 9,
+   "lines": [
+    43,
+    261,
+    588,
+    981,
+    1133,
+    1315,
+    1756,
+    2072,
+    2109
+   ],
+   "n_inside": 28,
+   "n_partitions": 2,
+   "m_star": 3,
+   "theta": 12.607702507008712,
+   "alpha": 12,
+   "theta_gt_alpha": true,
+   "count": 1
+  },
+  {
+   "size": 9,
+   "lines": [
+    663,
+    1098,
+    1178,
+    1331,
+    1485,
+    1702,
+    2070,
+    2140,
+    2195
+   ],
+   "n_inside": 24,
+   "n_partitions": 2,
+   "m_star": 1,
+   "theta": 13.999999570988415,
+   "alpha": 14,
+   "theta_gt_alpha": false,
+   "count": 1
+  },
+  {
+   "size": 9,
+   "lines": [
+    76,
+    314,
+    598,
+    1361,
+    1502,
+    1561,
+    1741,
+    1855,
+    2192
+   ],
+   "n_inside": 24,
+   "n_partitions": 1,
+   "m_star": 1,
+   "theta": 14.000000067383585,
+   "alpha": 14,
+   "theta_gt_alpha": false,
+   "count": 2
+  },
+  {
+   "size": 9,
+   "lines": [
+    399,
+    654,
+    772,
+    1173,
+    1420,
+    1589,
+    1778,
+    1999,
+    2283
+   ],
+   "n_inside": 42,
+   "n_partitions": 2,
+   "m_star": 3,
+   "theta": 12.21320665760356,
+   "alpha": 12,
+   "theta_gt_alpha": true,
+   "count": 1
+  }
+ ]
+}

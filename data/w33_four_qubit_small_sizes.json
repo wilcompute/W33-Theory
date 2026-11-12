@@ -1,0 +1,47 @@
+{
+ "k5": {
+  "status": 0,
+  "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "found": true,
+  "lines": [
+   129,
+   190,
+   287,
+   444,
+   530
+  ],
+  "seconds": 124.29739141464233
+ },
+ "smallest": {
+  "k": 5,
+  "lines": [
+   129,
+   190,
+   287,
+   444,
+   530
+  ],
+  "n_uncovered": 180,
+  "m_star": 1,
+  "theta": 14.784594206627553,
+  "alpha_candidate": 14,
+  "numeric_min_F": 0.052362560794649335,
+  "stabiliser_value": 0.0625,
+  "meeting_histogram": {
+   "1": 300,
+   "3": 840,
+   "5": 624,
+   "7": 330,
+   "9": 180,
+   "11": 15,
+   "15": 1
+  }
+ },
+ "k4": {
+  "status": 1,
+  "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+  "found": false,
+  "lines": [],
+  "seconds": 12038.508493423462
+ }
+}

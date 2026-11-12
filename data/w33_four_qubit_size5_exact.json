@@ -1,0 +1,31 @@
+{
+ "lines": [
+  129,
+  190,
+  287,
+  444,
+  530
+ ],
+ "n_uncovered": 180,
+ "theta_numerical": 14.784595714182748,
+ "attempts": [
+  {
+   "D": 4096,
+   "target": "149/10",
+   "exact_psd": true,
+   "F_lower": "1/160"
+  },
+  {
+   "D": 16384,
+   "target": "297/20",
+   "exact_psd": true,
+   "F_lower": "3/320"
+  },
+  {
+   "D": 65536,
+   "target": "74/5",
+   "exact_psd": true,
+   "F_lower": "1/80"
+  }
+ ]
+}

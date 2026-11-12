@@ -44,3 +44,8 @@ The other track's commits since Pass 12645 concern flux and dark-mode results; t
 
 - **Exact three-qubit 1/8:** the two-copy route fails (§2). The remaining route is symmetry-reduced degree-6 rounding.
 - **Five qubits:** W(9,2) has 75,735 Lagrangians and 1,023 points. The transvection-orbit construction and the integer program used at four qubits do not scale in pure Python. A constructive route (Mandayam et al.'s d/2 + 1 construction) would be needed.
+
+
+---
+
+**Correction (Pass 12647, 2026-11-12).** The conjecture "mirror partner ⟺ ϑ > α" is **refuted** by a 23-class census: 2 classes have ϑ > α but no partner, and 1 has a partner but ϑ = α (`data/w33_four_qubit_greedy_census.json`). The nine-element sets are also not minimal. Maximal partial spreads of size 8 (greedy) and size 5 (integer program; Grassl's size, per Kantor 2017) exist. The exact certificates above stand for the sets they name.

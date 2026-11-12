@@ -1,0 +1,78 @@
+{
+ "n_minimisers": 160,
+ "complement_K": 0,
+ "complement_G": 16,
+ "n_equations": 3464,
+ "n_variables": 256,
+ "rank": 100,
+ "margin": 2.1776198602636044e-06,
+ "attempts": [
+  {
+   "D": 1,
+   "equations_exact": true,
+   "psd_K": true,
+   "psd_G": false
+  },
+  {
+   "D": 2,
+   "equations_exact": true,
+   "psd_K": true,
+   "psd_G": false
+  },
+  {
+   "D": 4,
+   "equations_exact": true,
+   "psd_K": true,
+   "psd_G": false
+  },
+  {
+   "D": 8,
+   "equations_exact": true,
+   "psd_K": true,
+   "psd_G": false
+  },
+  {
+   "D": 16,
+   "equations_exact": true,
+   "psd_K": true,
+   "psd_G": false
+  },
+  {
+   "D": 32,
+   "equations_exact": true,
+   "psd_K": true,
+   "psd_G": false
+  },
+  {
+   "D": 64,
+   "equations_exact": true,
+   "psd_K": true,
+   "psd_G": false
+  },
+  {
+   "D": 128,
+   "equations_exact": true,
+   "psd_K": true,
+   "psd_G": false
+  },
+  {
+   "D": 256,
+   "equations_exact": true,
+   "psd_K": true,
+   "psd_G": false
+  },
+  {
+   "D": 1024,
+   "equations_exact": true,
+   "psd_K": true,
+   "psd_G": false
+  },
+  {
+   "D": 4096,
+   "equations_exact": true,
+   "psd_K": true,
+   "psd_G": false
+  }
+ ],
+ "certified": false
+}
