@@ -1,0 +1,14 @@
+[
+ {
+  "n_inside": 6,
+  "n_partitions": 1,
+  "theta": 14.78459788772075,
+  "lift_points": 0
+ },
+ {
+  "n_inside": 10,
+  "n_partitions": 2,
+  "theta": 14.609389444004112,
+  "lift_points": 120
+ }
+]

@@ -1,0 +1,26 @@
+{
+ "min_F": 0.0523625607566847,
+ "n_optima": 198,
+ "starts": 200,
+ "n_profiles": 15,
+ "covered_levels": {
+  "0.0355327": 40,
+  "0.0845167": 5,
+  "0.0865558": 5,
+  "0.13384": 10,
+  "0.1505789": 5,
+  "0.2053343": 10
+ },
+ "stabiliser_value": 0.0625,
+ "identification_rejected": {
+  "degree": 3,
+  "coefficients": [
+   9216,
+   -7344,
+   4217,
+   -202
+  ],
+  "residual": 2.502842893116377e-13
+ },
+ "identification_note": "cubic fit with coefficients up to 9216 rejected: ~1e17 candidate cubics make a 2.5e-13 match expected by chance; value unidentified"
+}

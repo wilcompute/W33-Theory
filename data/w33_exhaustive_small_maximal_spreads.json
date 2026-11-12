@@ -1,0 +1,63 @@
+{
+ "two_qubits": {
+  "n": 2,
+  "n_lagrangians": 15,
+  "candidates_disjoint_from_pair": 4,
+  "k3": {
+   "count_containing_fixed_pair": 1,
+   "exists": true,
+   "example": [
+    0,
+    7,
+    11
+   ],
+   "seconds": 0.0
+  }
+ },
+ "three_qubits": {
+  "n": 3,
+  "n_lagrangians": 135,
+  "candidates_disjoint_from_pair": 28,
+  "k3": {
+   "count_containing_fixed_pair": 0,
+   "exists": false,
+   "example": null,
+   "seconds": 0.0
+  },
+  "k4": {
+   "count_containing_fixed_pair": 0,
+   "exists": false,
+   "example": null,
+   "seconds": 0.0
+  },
+  "k5": {
+   "count_containing_fixed_pair": 56,
+   "exists": true,
+   "example": [
+    0,
+    71,
+    82,
+    92,
+    129
+   ],
+   "seconds": 0.0
+  }
+ },
+ "four_qubits": {
+  "n": 4,
+  "n_lagrangians": 2295,
+  "candidates_disjoint_from_pair": 448,
+  "k3": {
+   "count_containing_fixed_pair": 0,
+   "exists": false,
+   "example": null,
+   "seconds": 0.0
+  },
+  "k4": {
+   "count_containing_fixed_pair": 0,
+   "exists": false,
+   "example": null,
+   "seconds": 0.0
+  }
+ }
+}

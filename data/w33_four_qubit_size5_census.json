@@ -1,0 +1,39 @@
+{
+ "sets_through_pair": 896,
+ "N5": 105283584.0,
+ "n_types": 2,
+ "types": [
+  {
+   "n_inside": 6,
+   "n_partitions": 1,
+   "m_star": 1,
+   "count_through_pair": 840,
+   "example": [
+    0,
+    1271,
+    1346,
+    1412,
+    1865
+   ],
+   "theta": 14.78459788772075,
+   "numeric_min_F": 0.052362560918211946,
+   "stabiliser_value": 0.0625
+  },
+  {
+   "n_inside": 10,
+   "n_partitions": 2,
+   "m_star": 1,
+   "count_through_pair": 56,
+   "example": [
+    0,
+    1271,
+    1403,
+    1563,
+    1687
+   ],
+   "theta": 14.609389444004112,
+   "numeric_min_F": 0.06250000009609225,
+   "stabiliser_value": 0.0625
+  }
+ ]
+}

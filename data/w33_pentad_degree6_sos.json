@@ -1,0 +1,13 @@
+{
+ "pentad_degree6": {
+  "delta": 0.13654232413641956,
+  "status": "optimal",
+  "seconds": 912.8183891773224,
+  "identity_max_rel_residual": 1.9670991935545773e-10,
+  "eig_min_G": -6.362600817362366e-07,
+  "eig_min_H": -6.929142708059811e-07,
+  "numeric_min_F": 0.1471137636828882
+ },
+ "degree4": 0.1111111111111111,
+ "numeric_min": 0.1471137632635549
+}
