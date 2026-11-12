@@ -1,0 +1,502 @@
+{
+  "status": "PASS",
+  "scope": "numerical fixed real profile with vacuum exterior at radius 5",
+  "profiles": "reconstructed finite-element mesh",
+  "sectors": [
+    {
+      "mesh": 60,
+      "weight": [
+        -2,
+        3,
+        1,
+        5
+      ],
+      "variants": [
+        {
+          "matching_radius": 0.14,
+          "origin_cutoff": 1e-05,
+          "gauge_yukawa": 1.0,
+          "phase": 0.0,
+          "matching_sigma_min": 0.5496661147016896,
+          "reflection": [
+            -5.3936024515629656e-17,
+            -0.9999999999999991
+          ]
+        },
+        {
+          "matching_radius": 0.21,
+          "origin_cutoff": 1e-07,
+          "gauge_yukawa": 1.0,
+          "phase": 0.0,
+          "matching_sigma_min": 0.6275797488780527,
+          "reflection": [
+            -9.046455857801051e-17,
+            -1.000000000000001
+          ]
+        },
+        {
+          "matching_radius": 0.14,
+          "origin_cutoff": 1e-05,
+          "gauge_yukawa": 1.0,
+          "phase": 0.71,
+          "matching_sigma_min": 0.5496661210875244,
+          "reflection": [
+            0.6518337710215365,
+            -0.7583618759905082
+          ]
+        },
+        {
+          "matching_radius": 0.14,
+          "origin_cutoff": 1e-05,
+          "gauge_yukawa": 1.4142135623730951,
+          "phase": 0.0,
+          "matching_sigma_min": 0.5562826363535103,
+          "reflection": [
+            -9.486114459394109e-17,
+            -1.000000000000001
+          ]
+        }
+      ]
+    },
+    {
+      "mesh": 60,
+      "weight": [
+        2,
+        1,
+        1,
+        5
+      ],
+      "variants": [
+        {
+          "matching_radius": 0.14,
+          "origin_cutoff": 1e-05,
+          "gauge_yukawa": 1.0,
+          "phase": 0.0,
+          "matching_sigma_min": 0.5496661147016892,
+          "reflection": [
+            5.590254480599537e-17,
+            -1.0000000000000004
+          ]
+        },
+        {
+          "matching_radius": 0.21,
+          "origin_cutoff": 1e-07,
+          "gauge_yukawa": 1.0,
+          "phase": 0.0,
+          "matching_sigma_min": 0.6275797488780507,
+          "reflection": [
+            1.1077786945240285e-16,
+            -1.0000000000000002
+          ]
+        },
+        {
+          "matching_radius": 0.14,
+          "origin_cutoff": 1e-05,
+          "gauge_yukawa": 1.0,
+          "phase": 0.71,
+          "matching_sigma_min": 0.5496661210875248,
+          "reflection": [
+            0.6518337710215348,
+            -0.7583618759905072
+          ]
+        },
+        {
+          "matching_radius": 0.14,
+          "origin_cutoff": 1e-05,
+          "gauge_yukawa": 1.4142135623730951,
+          "phase": 0.0,
+          "matching_sigma_min": 0.5562826363535097,
+          "reflection": [
+            1.079974138554523e-18,
+            -1.0000000000000007
+          ]
+        }
+      ]
+    },
+    {
+      "mesh": 60,
+      "weight": [
+        0,
+        -1,
+        -3,
+        5
+      ],
+      "variants": [
+        {
+          "matching_radius": 0.14,
+          "origin_cutoff": 1e-05,
+          "gauge_yukawa": 1.0,
+          "phase": 0.0,
+          "matching_sigma_min": 0.5834137547547951,
+          "reflection": [
+            3.570679235790415e-17,
+            1.000000000000001
+          ]
+        },
+        {
+          "matching_radius": 0.21,
+          "origin_cutoff": 1e-07,
+          "gauge_yukawa": 1.0,
+          "phase": 0.0,
+          "matching_sigma_min": 0.6333943956193694,
+          "reflection": [
+            1.9285781704702923e-16,
+            0.9999999999999996
+          ]
+        },
+        {
+          "matching_radius": 0.14,
+          "origin_cutoff": 1e-05,
+          "gauge_yukawa": 1.0,
+          "phase": 0.71,
+          "matching_sigma_min": 0.5834137547547928,
+          "reflection": [
+            -0.651833771021537,
+            0.7583618759905079
+          ]
+        },
+        {
+          "matching_radius": 0.14,
+          "origin_cutoff": 1e-05,
+          "gauge_yukawa": 1.4142135623730951,
+          "phase": 0.0,
+          "matching_sigma_min": 0.5953255424862016,
+          "reflection": [
+            -2.94682338038883e-18,
+            0.9999999999999999
+          ]
+        }
+      ]
+    },
+    {
+      "mesh": 100,
+      "weight": [
+        -2,
+        3,
+        1,
+        5
+      ],
+      "variants": [
+        {
+          "matching_radius": 0.14,
+          "origin_cutoff": 1e-05,
+          "gauge_yukawa": 1.0,
+          "phase": 0.0,
+          "matching_sigma_min": 0.5495061504673949,
+          "reflection": [
+            1.2612184278246644e-17,
+            -1.0000000000000007
+          ]
+        },
+        {
+          "matching_radius": 0.21,
+          "origin_cutoff": 1e-07,
+          "gauge_yukawa": 1.0,
+          "phase": 0.0,
+          "matching_sigma_min": 0.6275962363816512,
+          "reflection": [
+            -2.1910636000386664e-17,
+            -0.999999999999999
+          ]
+        },
+        {
+          "matching_radius": 0.14,
+          "origin_cutoff": 1e-05,
+          "gauge_yukawa": 1.0,
+          "phase": 0.71,
+          "matching_sigma_min": 0.5495061463599581,
+          "reflection": [
+            0.6518337710215365,
+            -0.7583618759905083
+          ]
+        },
+        {
+          "matching_radius": 0.14,
+          "origin_cutoff": 1e-05,
+          "gauge_yukawa": 1.4142135623730951,
+          "phase": 0.0,
+          "matching_sigma_min": 0.5561237250050652,
+          "reflection": [
+            -8.46446106713875e-18,
+            -0.9999999999999991
+          ]
+        }
+      ]
+    },
+    {
+      "mesh": 100,
+      "weight": [
+        2,
+        1,
+        1,
+        5
+      ],
+      "variants": [
+        {
+          "matching_radius": 0.14,
+          "origin_cutoff": 1e-05,
+          "gauge_yukawa": 1.0,
+          "phase": 0.0,
+          "matching_sigma_min": 0.5495061504674861,
+          "reflection": [
+            1.2395068706305536e-17,
+            -1.0000000000000004
+          ]
+        },
+        {
+          "matching_radius": 0.21,
+          "origin_cutoff": 1e-07,
+          "gauge_yukawa": 1.0,
+          "phase": 0.0,
+          "matching_sigma_min": 0.6275962363816502,
+          "reflection": [
+            1.2235043726026193e-17,
+            -0.9999999999999996
+          ]
+        },
+        {
+          "matching_radius": 0.14,
+          "origin_cutoff": 1e-05,
+          "gauge_yukawa": 1.0,
+          "phase": 0.71,
+          "matching_sigma_min": 0.5495061463600315,
+          "reflection": [
+            0.6518337710215364,
+            -0.7583618759905086
+          ]
+        },
+        {
+          "matching_radius": 0.14,
+          "origin_cutoff": 1e-05,
+          "gauge_yukawa": 1.4142135623730951,
+          "phase": 0.0,
+          "matching_sigma_min": 0.556123725005075,
+          "reflection": [
+            -1.334910619288586e-16,
+            -0.9999999999999992
+          ]
+        }
+      ]
+    },
+    {
+      "mesh": 100,
+      "weight": [
+        0,
+        -1,
+        -3,
+        5
+      ],
+      "variants": [
+        {
+          "matching_radius": 0.14,
+          "origin_cutoff": 1e-05,
+          "gauge_yukawa": 1.0,
+          "phase": 0.0,
+          "matching_sigma_min": 0.5834497098063586,
+          "reflection": [
+            -2.837539144612468e-17,
+            0.9999999999999999
+          ]
+        },
+        {
+          "matching_radius": 0.21,
+          "origin_cutoff": 1e-07,
+          "gauge_yukawa": 1.0,
+          "phase": 0.0,
+          "matching_sigma_min": 0.6333306118533049,
+          "reflection": [
+            1.1747539248655483e-16,
+            1.0000000000000007
+          ]
+        },
+        {
+          "matching_radius": 0.14,
+          "origin_cutoff": 1e-05,
+          "gauge_yukawa": 1.0,
+          "phase": 0.71,
+          "matching_sigma_min": 0.583449709806359,
+          "reflection": [
+            -0.6518337710215364,
+            0.7583618759905081
+          ]
+        },
+        {
+          "matching_radius": 0.14,
+          "origin_cutoff": 1e-05,
+          "gauge_yukawa": 1.4142135623730951,
+          "phase": 0.0,
+          "matching_sigma_min": 0.5953536297281695,
+          "reflection": [
+            -1.2884656023188622e-17,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "mesh": 160,
+      "weight": [
+        -2,
+        3,
+        1,
+        5
+      ],
+      "variants": [
+        {
+          "matching_radius": 0.14,
+          "origin_cutoff": 1e-05,
+          "gauge_yukawa": 1.0,
+          "phase": 0.0,
+          "matching_sigma_min": 0.549489525024389,
+          "reflection": [
+            4.324236084136341e-17,
+            -0.9999999999999998
+          ]
+        },
+        {
+          "matching_radius": 0.21,
+          "origin_cutoff": 1e-07,
+          "gauge_yukawa": 1.0,
+          "phase": 0.0,
+          "matching_sigma_min": 0.6275997018141077,
+          "reflection": [
+            -6.129706430179815e-17,
+            -0.9999999999999998
+          ]
+        },
+        {
+          "matching_radius": 0.14,
+          "origin_cutoff": 1e-05,
+          "gauge_yukawa": 1.0,
+          "phase": 0.71,
+          "matching_sigma_min": 0.5494895337095187,
+          "reflection": [
+            0.6518337710215367,
+            -0.7583618759905082
+          ]
+        },
+        {
+          "matching_radius": 0.14,
+          "origin_cutoff": 1e-05,
+          "gauge_yukawa": 1.4142135623730951,
+          "phase": 0.0,
+          "matching_sigma_min": 0.556107509632231,
+          "reflection": [
+            1.3014813138616345e-16,
+            -0.9999999999999998
+          ]
+        }
+      ]
+    },
+    {
+      "mesh": 160,
+      "weight": [
+        2,
+        1,
+        1,
+        5
+      ],
+      "variants": [
+        {
+          "matching_radius": 0.14,
+          "origin_cutoff": 1e-05,
+          "gauge_yukawa": 1.0,
+          "phase": 0.0,
+          "matching_sigma_min": 0.549489525024384,
+          "reflection": [
+            -8.653969672116546e-17,
+            -0.9999999999999999
+          ]
+        },
+        {
+          "matching_radius": 0.21,
+          "origin_cutoff": 1e-07,
+          "gauge_yukawa": 1.0,
+          "phase": 0.0,
+          "matching_sigma_min": 0.627599701814122,
+          "reflection": [
+            1.522835773757773e-16,
+            -1.0000000000000004
+          ]
+        },
+        {
+          "matching_radius": 0.14,
+          "origin_cutoff": 1e-05,
+          "gauge_yukawa": 1.0,
+          "phase": 0.71,
+          "matching_sigma_min": 0.5494895337095128,
+          "reflection": [
+            0.6518337710215373,
+            -0.7583618759905086
+          ]
+        },
+        {
+          "matching_radius": 0.14,
+          "origin_cutoff": 1e-05,
+          "gauge_yukawa": 1.4142135623730951,
+          "phase": 0.0,
+          "matching_sigma_min": 0.5561075096322275,
+          "reflection": [
+            9.915712316590885e-17,
+            -1.0
+          ]
+        }
+      ]
+    },
+    {
+      "mesh": 160,
+      "weight": [
+        0,
+        -1,
+        -3,
+        5
+      ],
+      "variants": [
+        {
+          "matching_radius": 0.14,
+          "origin_cutoff": 1e-05,
+          "gauge_yukawa": 1.0,
+          "phase": 0.0,
+          "matching_sigma_min": 0.5834571685689243,
+          "reflection": [
+            -1.0356981184705774e-16,
+            1.0
+          ]
+        },
+        {
+          "matching_radius": 0.21,
+          "origin_cutoff": 1e-07,
+          "gauge_yukawa": 1.0,
+          "phase": 0.0,
+          "matching_sigma_min": 0.6333242253709102,
+          "reflection": [
+            8.839721312322501e-17,
+            0.9999999999999983
+          ]
+        },
+        {
+          "matching_radius": 0.14,
+          "origin_cutoff": 1e-05,
+          "gauge_yukawa": 1.0,
+          "phase": 0.71,
+          "matching_sigma_min": 0.5834571685689239,
+          "reflection": [
+            -0.6518337710215367,
+            0.7583618759905075
+          ]
+        },
+        {
+          "matching_radius": 0.14,
+          "origin_cutoff": 1e-05,
+          "gauge_yukawa": 1.4142135623730951,
+          "phase": 0.0,
+          "matching_sigma_min": 0.5953601421502562,
+          "reflection": [
+            3.022011823086562e-18,
+            0.9999999999999993
+          ]
+        }
+      ]
+    }
+  ]
+}

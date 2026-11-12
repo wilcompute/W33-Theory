@@ -38,7 +38,7 @@ def mass_blocks(a, left, right):
     return holomorphic, gauge_left, gauge_right
 
 
-def calculate():
+def native_sectors():
     flat = core.flat
     _, adjoint, cartan, color, weak, y = flat.compact_chart()
     five = core.topology.representation_check(adjoint, cartan, weak, y)['fundamental5_chart']
@@ -49,12 +49,7 @@ def calculate():
     adjoint_weights = np.stack([flat.adjoint_charges(adjoint, h) for h in weights.T], axis=1)
     adjoint_flux = flat.adjoint_charges(adjoint, magnetic)
     ledger = flat.read('data/toe_20261113_monopole_grand_spin.json')
-    embedding, _, _, _ = neutral.geometry()
-    profile = flat.read(neutral.OUT)
-    a0 = np.diag(y)
-    canonical_hessian = flat.sextic_adjoint_hessian(adjoint, y)
-    np.testing.assert_array_equal(mass_blocks(a0, adjoint, adjoint)[0], canonical_hessian)
-    rows = []
+    sectors = []
     for entry in ledger['winding_charge_blocks']['adjoint']:
         q = np.array(entry['doubled_perpendicular_weight'])
         pair = []
@@ -71,6 +66,20 @@ def calculate():
         assert not left[:, :2, :].any() and not left[:, :, :2].any()
         assert np.array_equal(step.T @ left[0] - left[0] @ step.T, left[1]) or np.array_equal(
             step.T @ left[0] - left[0] @ step.T, -left[1])
+        sectors.append((q, left))
+    return np.diag(y), sectors
+
+
+def calculate():
+    a0, sectors = native_sectors()
+    flat = core.flat
+    _, adjoint, _, _, _, y = flat.compact_chart()
+    embedding, _, _, _ = neutral.geometry()
+    profile = flat.read(neutral.OUT)
+    canonical_hessian = flat.sextic_adjoint_hessian(adjoint, y)
+    np.testing.assert_array_equal(mass_blocks(a0, adjoint, adjoint)[0], canonical_hessian)
+    rows = []
+    for q, left in sectors:
         exact = mass_blocks(a0, left, left.transpose(0, 2, 1))
         assert np.all(np.array(exact) == np.array([np.diag(np.diag(m)) for m in exact]))
         assert exact[0][0, 0] != 0 and exact[0][1, 1] == 0
@@ -104,16 +113,71 @@ def calculate():
                          generator_trace_norm_squared=norm.tolist(), samples=samples))
 
     overlaps = []
+    matter_phase_sources = []
+    odd_scalar_sources = []
+    ward_errors = []
+    trace_at_vacuum = trace_gradient(a0)
     for state in profile['normalized_profile_samples']:
         a = np.einsum('a,aij->ij', np.array(state[1:8]), embedding)
         matter = np.array(state[8:]).reshape(5, 2, 3)
-        source = sum(matter[3+j] @ matter[k].T for j, k in neutral.trial.MIXED)
-        mixed = np.einsum('aij,ij->a', embedding[:, :2, :2], source)
-        trace = np.einsum('aij,ji->a', embedding, trace_gradient(a)-trace_gradient(a0))
+        plane = embedding[:, :2, :2]
+
+        def mixed_residual(fields):
+            source = sum(fields[3+j] @ fields[k].T for j, k in neutral.trial.MIXED)
+            return np.einsum('aij,ij->a', plane, source)
+
+        def trace_residual(adjoint_field):
+            return np.einsum('aij,ji->a', embedding,
+                             trace_gradient(adjoint_field)-trace_at_vacuum)
+
+        mixed = mixed_residual(matter)
+        trace = trace_residual(a)
         overlaps.append(float(np.dot(mixed, trace)))
+        trace_plane = np.einsum('a,aij->ij', trace, plane)
+        source = np.zeros_like(matter)
+        for j, k in neutral.trial.MIXED:
+            source[k] += 2 * trace_plane.T @ matter[3+j]
+            source[3+j] += 2 * trace_plane @ matter[k]
+        magnitude = np.linalg.norm(source)
+        matter_phase_sources.append(float(magnitude))
+        source_adjoint = -2 * np.array([np.dot(mixed, np.einsum(
+            'aij,ji->a', embedding, trace_derivative(a, direction)))
+            for direction in embedding])
+        scalar_source = np.r_[source_adjoint, source.ravel()]
+        total_norm = np.linalg.norm(scalar_source)
+        odd_scalar_sources.append(scalar_source.tolist())
+        if total_norm > 1e-6:
+            z = np.exp(.4j)
+            step = 1e-5j / total_norm
+            delta_a = step * np.einsum('a,aij->ij', source_adjoint, embedding)
+            delta_matter = step * source
+            plus = np.linalg.norm(mixed_residual(matter + delta_matter)
+                                  + z * trace_residual(a + delta_a))**2
+            minus = np.linalg.norm(mixed_residual(matter - delta_matter)
+                                   + z * trace_residual(a - delta_a))**2
+            np.testing.assert_allclose((plus-minus) / 2e-5, z.imag * total_norm, atol=1e-7)
+        dual_sign = np.array([1, 1, 1, -1, -1])[:, None, None]
+        ward = []
+        for direction in embedding[1:]:
+            generator = (direction + direction.T) / 2
+            tangent_a = np.einsum('aij,ij->a', embedding, generator @ a-a @ generator)
+            tangent_matter = dual_sign * (generator[:2, :2] @ matter)
+            ward.append(source_adjoint @ tangent_a + np.sum(source * tangent_matter))
+        for i in range(3):
+            for j in range(i, 3):
+                generator = np.zeros((3, 3))
+                generator[i, j] = generator[j, i] = 1
+                ward.append(np.sum(source * dual_sign * (matter @ generator)))
+        ward_error = max(map(abs, ward))
+        assert ward_error < 1e-8
+        ward_errors.append(float(ward_error))
     assert max(map(abs, overlaps)) > 1e-6
+    assert max(matter_phase_sources) > 1e-6
     return dict(status='PASS', blocks=rows, radial_mass_phase='M(z)=diag(t,1/t) M(1) diag(t,1/t), t^2=z',
                 sampled_bosonic_trace_mixed_F_interference=overlaps,
+                sampled_imaginary_matter_force_norm_divided_by_sin_phase=matter_phase_sources,
+                sampled_odd_scalar_force_divided_by_sin_phase=odd_scalar_sources,
+                sampled_odd_force_gauge_ward_max_error=ward_errors,
                 scope='canonical two-dual real hedgehog, fixed background, no soft gaugino masses')
 
 
