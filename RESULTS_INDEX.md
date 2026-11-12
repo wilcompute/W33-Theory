@@ -22,7 +22,7 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **14177** files; **19017** distinctive results
+Indexed **14179** files; **19017** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
 **8371** appear in exactly one file — the sharpest signal.
 
@@ -18586,7 +18586,7 @@ Indexed **14177** files; **19017** distinctive results
 | `057` | `analysis/w33_BREAKTHROUGH_58_master_cubic_Z_anomaly.py` · `analysis/w33_pass4691_the_premise_is_false_and_my_denominator_was_wrong.py` · `analysis/w33_pass4720_the_search_space_is_26_not_315_million.py` |
 | `059` | `analysis/BT3025_BT3031_predictive_photonic_overhaul.md` · `analysis/w33_e8_full_hybrid_chevalley_compiler.py` · `analysis/w33_pass1902_1906_verify_frozen.py` · `analysis/w33_pass7310_7312_q7_pauli_validator.py` |
 | `060` | `analysis/BT3430_BT3443_cover_perkel_oracle_shell.md` · `analysis/PASS20261110_NONLINEAR_FLUX_PUBLIC_CERTIFICATE.md` · `analysis/w33_pass11636_11640_operator_selector_transitions.py` · `analysis/w33_pass12334_to_12339_towers_potential_leads.py` |
-| `061` | `analysis/2026-08-28_FIVE_FRONT_CLOSURE_TRADE_S5_Q5_TENSOR.md` · `analysis/2026-08-28_MINIMUM_VECTOR_STABILIZER_576_STRUCTURE.md` · `analysis/w33_pass12334_to_12339_towers_potential_leads.py` |
+| `061` | `analysis/2026-08-28_FIVE_FRONT_CLOSURE_TRADE_S5_Q5_TENSOR.md` · `analysis/2026-08-28_MINIMUM_VECTOR_STABILIZER_576_STRUCTURE.md` · `analysis/2026-11-13_monopole_rotor_winding_modes.md` · `analysis/w33_pass12334_to_12339_towers_potential_leads.py` |
 | `062` | `analysis/BT3486_BT3499_radius_code_biplane_supplement.md` · `scripts/w33_leech_monster.py` |
 | `063` | `analysis/2026-10-27_five_front_followthrough.md` · `analysis/PASS12259_12264_PLOGER_CONDITIONS.md` · `analysis/PASS2560_2567_SEVEN_FRONTIERS_RELEASE.md` · `analysis/bt1835_raw_artifact_importer.py` · *(+1)* |
 | `064` | `analysis/2026-11-05_five_fronts_h27_lorentz_mub_overlap_report.md` · `analysis/w33_pass4805_q9_blt_minimum_shell.py` |
