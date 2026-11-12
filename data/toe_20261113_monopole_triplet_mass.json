@@ -1,0 +1,212 @@
+{
+  "status": "PASS",
+  "triplet_mass_squared_power_sums": [
+    {
+      "0": "1577/3"
+    },
+    {
+      "0": "634543/9"
+    },
+    {
+      "0": "334701971/27"
+    },
+    {
+      "-2": "-200/3",
+      "0": "191325201055/81",
+      "2": "-200/3"
+    }
+  ],
+  "whole_block_unitary_rephasing_excluded": true,
+  "north_pole_holomorphic_blocks": [
+    {
+      "weight": [
+        0,
+        1,
+        0,
+        -2
+      ],
+      "chiral_shape": [
+        25,
+        22
+      ],
+      "radial": [
+        {
+          "radius": 0.002,
+          "phase_piece_rank": 6,
+          "phase_piece_frobenius": 35.341633162281475,
+          "dressed_frobenius": 0.034176559786886766,
+          "fixed_frobenius": 216.73900488177964
+        },
+        {
+          "radius": 0.01,
+          "phase_piece_rank": 6,
+          "phase_piece_frobenius": 35.12660165298385,
+          "dressed_frobenius": 0.03813158706861057,
+          "fixed_frobenius": 235.61608332640893
+        },
+        {
+          "radius": 0.02,
+          "phase_piece_rank": 6,
+          "phase_piece_frobenius": 34.504999583562395,
+          "dressed_frobenius": 0.046396628049288444,
+          "fixed_frobenius": 249.03362584633535
+        },
+        {
+          "radius": 0.05,
+          "phase_piece_rank": 6,
+          "phase_piece_frobenius": 31.484848792114352,
+          "dressed_frobenius": 0.04239477615697052,
+          "fixed_frobenius": 238.34281898754304
+        },
+        {
+          "radius": 0.1,
+          "phase_piece_rank": 6,
+          "phase_piece_frobenius": 26.122098275893574,
+          "dressed_frobenius": 0.008147500953449576,
+          "fixed_frobenius": 168.6617458989521
+        },
+        {
+          "radius": 0.2,
+          "phase_piece_rank": 6,
+          "phase_piece_frobenius": 19.208722279129674,
+          "dressed_frobenius": 0.0630520754282563,
+          "fixed_frobenius": 38.70589481810913
+        },
+        {
+          "radius": 0.4,
+          "phase_piece_rank": 6,
+          "phase_piece_frobenius": 19.906183245659435,
+          "dressed_frobenius": 0.001017333682771407,
+          "fixed_frobenius": 11.734585231113938
+        },
+        {
+          "radius": 0.8,
+          "phase_piece_rank": 6,
+          "phase_piece_frobenius": 19.99981407527655,
+          "dressed_frobenius": 0.00015102283333004674,
+          "fixed_frobenius": 11.626132730733216
+        },
+        {
+          "radius": 1.6,
+          "phase_piece_rank": 6,
+          "phase_piece_frobenius": 19.99985875780716,
+          "dressed_frobenius": 6.834120198469934e-05,
+          "fixed_frobenius": 11.595902936581654
+        }
+      ],
+      "directional_second_difference_error": 5.0512070105916684e-06
+    },
+    {
+      "weight": [
+        0,
+        0,
+        1,
+        3
+      ],
+      "chiral_shape": [
+        25,
+        22
+      ],
+      "radial": [
+        {
+          "radius": 0.002,
+          "phase_piece_rank": 6,
+          "phase_piece_frobenius": 35.34170845287921,
+          "dressed_frobenius": 0.033964700628060285,
+          "fixed_frobenius": 204.89429773201772
+        },
+        {
+          "radius": 0.01,
+          "phase_piece_rank": 6,
+          "phase_piece_frobenius": 35.126980423293475,
+          "dressed_frobenius": 0.03710083721210384,
+          "fixed_frobenius": 177.80693354540887
+        },
+        {
+          "radius": 0.02,
+          "phase_piece_rank": 6,
+          "phase_piece_frobenius": 34.50576940509205,
+          "dressed_frobenius": 0.04451500217301921,
+          "fixed_frobenius": 141.42801464263133
+        },
+        {
+          "radius": 0.05,
+          "phase_piece_rank": 6,
+          "phase_piece_frobenius": 31.485726067720915,
+          "dressed_frobenius": 0.04014876063553314,
+          "fixed_frobenius": 55.46448249434685
+        },
+        {
+          "radius": 0.1,
+          "phase_piece_rank": 6,
+          "phase_piece_frobenius": 25.777812945332446,
+          "dressed_frobenius": 0.011701435516208586,
+          "fixed_frobenius": 13.21678641320509
+        },
+        {
+          "radius": 0.2,
+          "phase_piece_rank": 6,
+          "phase_piece_frobenius": 8.913978448882364,
+          "dressed_frobenius": 0.390303918769109,
+          "fixed_frobenius": 22.412202686966964
+        },
+        {
+          "radius": 0.4,
+          "phase_piece_rank": 6,
+          "phase_piece_frobenius": 0.5568515391557735,
+          "dressed_frobenius": 0.07914475081004717,
+          "fixed_frobenius": 17.980858231171002
+        },
+        {
+          "radius": 0.8,
+          "phase_piece_rank": 6,
+          "phase_piece_frobenius": 0.2891024940225843,
+          "dressed_frobenius": 0.0055182112436427365,
+          "fixed_frobenius": 17.894826878240266
+        },
+        {
+          "radius": 1.6,
+          "phase_piece_rank": 6,
+          "phase_piece_frobenius": 0.14001421075157894,
+          "dressed_frobenius": 0.0021029415023510285,
+          "fixed_frobenius": 17.870170667271513
+        }
+      ],
+      "directional_second_difference_error": 3.763040502846593e-05
+    }
+  ],
+  "exterior_phase_sign_symmetry": {
+    "negative_row_coordinates": [
+      44,
+      59,
+      125,
+      140,
+      204,
+      220,
+      315,
+      316,
+      398
+    ],
+    "negative_column_coordinates": [
+      74,
+      155,
+      234,
+      235,
+      285,
+      301,
+      368,
+      383,
+      407
+    ]
+  },
+  "paired_north_pole_shape": [
+    26,
+    23
+  ],
+  "angular_radial_dimension": 98,
+  "exterior_mass_ranks": [
+    23,
+    22
+  ],
+  "regular_origin_flux_slot_mass_agreement": true
+}

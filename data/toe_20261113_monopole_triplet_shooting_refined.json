@@ -1,0 +1,918 @@
+{
+  "status": "PASS",
+  "scope": "fixed real radius-five core with piecewise exponential transfer",
+  "meshes": [
+    {
+      "radial_cells": 120,
+      "phases": [
+        {
+          "angle": 0.0,
+          "matching_sigma_min": 0.0011592186255712717,
+          "reflection_determinant": [
+            -0.6462914322495049,
+            -0.7630906791506055
+          ],
+          "reflection_unitarity_error": 5.309463791252668e-12
+        },
+        {
+          "angle": 0.1308996938995747,
+          "matching_sigma_min": 0.0011643197512947847,
+          "reflection_determinant": [
+            -0.5452405306576481,
+            -0.8382796453024183
+          ],
+          "reflection_unitarity_error": 6.511543536023477e-13
+        },
+        {
+          "angle": 0.2617993877991494,
+          "matching_sigma_min": 0.0011811283832773322,
+          "reflection_determinant": [
+            -0.4351538914603364,
+            -0.9003560910819791
+          ],
+          "reflection_unitarity_error": 1.5740222651889427e-12
+        },
+        {
+          "angle": 0.39269908169872414,
+          "matching_sigma_min": 0.0012133238676179793,
+          "reflection_determinant": [
+            -0.3172217355201078,
+            -0.9483513961177679
+          ],
+          "reflection_unitarity_error": 5.1163778927006405e-12
+        },
+        {
+          "angle": 0.5235987755982988,
+          "matching_sigma_min": 0.0012646713108568554,
+          "reflection_determinant": [
+            -0.19253846470088018,
+            -0.9812894270342558
+          ],
+          "reflection_unitarity_error": 2.382301880187226e-12
+        },
+        {
+          "angle": 0.6544984694978735,
+          "matching_sigma_min": 0.0013367906448247735,
+          "reflection_determinant": [
+            -0.062036082560306446,
+            -0.9980739073129323
+          ],
+          "reflection_unitarity_error": 1.6383297127796876e-12
+        },
+        {
+          "angle": 0.7853981633974483,
+          "matching_sigma_min": 0.0014279664132636931,
+          "reflection_determinant": [
+            0.0735581908336299,
+            -0.997290926742777
+          ],
+          "reflection_unitarity_error": 3.3519477854486947e-12
+        },
+        {
+          "angle": 0.916297857297023,
+          "matching_sigma_min": 0.0015334114170012265,
+          "reflection_determinant": [
+            0.21370705375197105,
+            -0.976897791569927
+          ],
+          "reflection_unitarity_error": 3.2893591742349637e-12
+        },
+        {
+          "angle": 1.0471975511965976,
+          "matching_sigma_min": 0.0016464609639802448,
+          "reflection_determinant": [
+            0.35792803491134517,
+            -0.9337491750087766
+          ],
+          "reflection_unitarity_error": 6.06015606990969e-12
+        },
+        {
+          "angle": 1.1780972450961724,
+          "matching_sigma_min": 0.0017599102038396968,
+          "reflection_determinant": [
+            0.505401810978403,
+            -0.8628841228490505
+          ],
+          "reflection_unitarity_error": 4.635516400816112e-12
+        },
+        {
+          "angle": 1.308996938995747,
+          "matching_sigma_min": 0.0018670407808218717,
+          "reflection_determinant": [
+            0.6540146354508836,
+            -0.7564818944445402
+          ],
+          "reflection_unitarity_error": 5.719066607374241e-12
+        },
+        {
+          "angle": 1.4398966328953218,
+          "matching_sigma_min": 0.0019622499253710117,
+          "reflection_determinant": [
+            0.7981289572567785,
+            -0.6024866534598882
+          ],
+          "reflection_unitarity_error": 9.301241620525715e-12
+        },
+        {
+          "angle": 1.5707963267948966,
+          "matching_sigma_min": 0.002041341573128902,
+          "reflection_determinant": [
+            0.923541863405944,
+            -0.38349762261046155
+          ],
+          "reflection_unitarity_error": 1.1563759562883537e-11
+        },
+        {
+          "angle": 1.7016960206944711,
+          "matching_sigma_min": 0.002101541665449432,
+          "reflection_determinant": [
+            0.9968719202432071,
+            -0.07903400921309732
+          ],
+          "reflection_unitarity_error": 1.8330660529205724e-11
+        },
+        {
+          "angle": 1.832595714594046,
+          "matching_sigma_min": 0.0021412738637089403,
+          "reflection_determinant": [
+            0.948196907997873,
+            0.31768321273869327
+          ],
+          "reflection_unitarity_error": 9.430493716370105e-12
+        },
+        {
+          "angle": 1.9634954084936205,
+          "matching_sigma_min": 0.0021597127822925058,
+          "reflection_determinant": [
+            0.66755019126112,
+            0.744564800478383
+          ],
+          "reflection_unitarity_error": 3.5596898074896175e-11
+        },
+        {
+          "angle": 2.0943951023931953,
+          "matching_sigma_min": 0.0021560970392863186,
+          "reflection_determinant": [
+            0.10062920117282755,
+            0.9949239990540749
+          ],
+          "reflection_unitarity_error": 2.4124907830833363e-11
+        },
+        {
+          "angle": 2.22529479629277,
+          "matching_sigma_min": 0.002128698078517036,
+          "reflection_determinant": [
+            -0.5480801557977638,
+            0.8364258142980661
+          ],
+          "reflection_unitarity_error": 4.69860949034707e-12
+        },
+        {
+          "angle": 2.356194490192345,
+          "matching_sigma_min": 0.002073188512169125,
+          "reflection_determinant": [
+            -0.9367643056444599,
+            0.34996090589890166
+          ],
+          "reflection_unitarity_error": 1.2916157305426255e-11
+        },
+        {
+          "angle": 2.4870941840919194,
+          "matching_sigma_min": 0.00198007848372122,
+          "reflection_determinant": [
+            -0.9844054932162374,
+            -0.175914254560087
+          ],
+          "reflection_unitarity_error": 3.2256705546858627e-11
+        },
+        {
+          "angle": 2.617993877991494,
+          "matching_sigma_min": 0.0018319589767441789,
+          "reflection_determinant": [
+            -0.8083122983414666,
+            -0.588753962424253
+          ],
+          "reflection_unitarity_error": 8.011314029646233e-11
+        },
+        {
+          "angle": 2.748893571891069,
+          "matching_sigma_min": 0.0016075342635291797,
+          "reflection_determinant": [
+            -0.49022272308161646,
+            -0.8715972015567263
+          ],
+          "reflection_unitarity_error": 1.2419334045506022e-11
+        },
+        {
+          "angle": 2.8797932657906435,
+          "matching_sigma_min": 0.0013105797685978025,
+          "reflection_determinant": [
+            -0.004058759922894263,
+            -0.9999917631881041
+          ],
+          "reflection_unitarity_error": 2.3993322975853866e-11
+        },
+        {
+          "angle": 3.010692959690218,
+          "matching_sigma_min": 0.0010181881771850877,
+          "reflection_determinant": [
+            0.7352415621693144,
+            -0.6778051676155131
+          ],
+          "reflection_unitarity_error": 1.2638629736702144e-11
+        },
+        {
+          "angle": 3.141592653589793,
+          "matching_sigma_min": 0.00088586017795244,
+          "reflection_determinant": [
+            0.6462914322536284,
+            0.7630906791496602
+          ],
+          "reflection_unitarity_error": 8.659950720375308e-12
+        },
+        {
+          "angle": 3.2724923474893677,
+          "matching_sigma_min": 0.0010181881771856444,
+          "reflection_determinant": [
+            -0.7895901261819072,
+            0.61363460843919
+          ],
+          "reflection_unitarity_error": 3.7934290061761576e-11
+        },
+        {
+          "angle": 3.4033920413889422,
+          "matching_sigma_min": 0.0013105797685980841,
+          "reflection_determinant": [
+            -0.9856816796843432,
+            -0.168616803367041
+          ],
+          "reflection_unitarity_error": 4.33906387328605e-11
+        },
+        {
+          "angle": 3.534291735288517,
+          "matching_sigma_min": 0.001607534263529012,
+          "reflection_determinant": [
+            -0.7790089162698387,
+            -0.627012845483235
+          ],
+          "reflection_unitarity_error": 2.967772272425018e-11
+        },
+        {
+          "angle": 3.665191429188092,
+          "matching_sigma_min": 0.001831958976744467,
+          "reflection_determinant": [
+            -0.44766200071674017,
+            -0.8942028479003944
+          ],
+          "reflection_unitarity_error": 7.876000470873442e-11
+        },
+        {
+          "angle": 3.7960911230876664,
+          "matching_sigma_min": 0.0019800784837215764,
+          "reflection_determinant": [
+            -0.011466737977778222,
+            -0.9999342547954478
+          ],
+          "reflection_unitarity_error": 7.290271528994268e-12
+        },
+        {
+          "angle": 3.926990816987241,
+          "matching_sigma_min": 0.0020731885121691293,
+          "reflection_determinant": [
+            0.49939195679486437,
+            -0.8663761731818405
+          ],
+          "reflection_unitarity_error": 3.124614824459266e-11
+        },
+        {
+          "angle": 4.057890510886816,
+          "matching_sigma_min": 0.0021286980785171954,
+          "reflection_determinant": [
+            0.9152373280659333,
+            -0.4029151688195547
+          ],
+          "reflection_unitarity_error": 5.0124430431886955e-11
+        },
+        {
+          "angle": 4.1887902047863905,
+          "matching_sigma_min": 0.0021560970392864543,
+          "reflection_determinant": [
+            0.964786129369943,
+            0.26303559561392137
+          ],
+          "reflection_unitarity_error": 1.638994196198932e-11
+        },
+        {
+          "angle": 4.319689898685965,
+          "matching_sigma_min": 0.0021597127822924962,
+          "reflection_determinant": [
+            0.6245187791194378,
+            0.7810097915964062
+          ],
+          "reflection_unitarity_error": 4.164530440169828e-11
+        },
+        {
+          "angle": 4.45058959258554,
+          "matching_sigma_min": 0.002141273863708859,
+          "reflection_determinant": [
+            0.1572621428371254,
+            0.9875568937708461
+          ],
+          "reflection_unitarity_error": 4.144171991301064e-12
+        },
+        {
+          "angle": 4.581489286485114,
+          "matching_sigma_min": 0.0021015416654491747,
+          "reflection_determinant": [
+            -0.2420556632692946,
+            0.9702623644594975
+          ],
+          "reflection_unitarity_error": 8.018312902098026e-12
+        },
+        {
+          "angle": 4.71238898038469,
+          "matching_sigma_min": 0.002041341573128909,
+          "reflection_determinant": [
+            -0.5302945541576009,
+            0.8478134734802465
+          ],
+          "reflection_unitarity_error": 1.783796529179659e-11
+        },
+        {
+          "angle": 4.843288674284264,
+          "matching_sigma_min": 0.0019622499253707034,
+          "reflection_determinant": [
+            -0.7256513060151837,
+            0.6880626294554181
+          ],
+          "reflection_unitarity_error": 2.5670638956993537e-11
+        },
+        {
+          "angle": 4.974188368183839,
+          "matching_sigma_min": 0.001867040780821922,
+          "reflection_determinant": [
+            -0.8538223882367962,
+            0.5205644334219229
+          ],
+          "reflection_unitarity_error": 2.3526953215370257e-12
+        },
+        {
+          "angle": 5.105088062083413,
+          "matching_sigma_min": 0.001759910203839541,
+          "reflection_determinant": [
+            -0.9343092048176002,
+            0.3564636163505318
+          ],
+          "reflection_unitarity_error": 1.1300789964589099e-11
+        },
+        {
+          "angle": 5.235987755982988,
+          "matching_sigma_min": 0.0016464609639800505,
+          "reflection_determinant": [
+            -0.9799311497863459,
+            0.19933625278310435
+          ],
+          "reflection_unitarity_error": 5.809548683210757e-12
+        },
+        {
+          "angle": 5.3668874498825625,
+          "matching_sigma_min": 0.0015334114170010597,
+          "reflection_determinant": [
+            -0.9987502266343923,
+            0.04997984393148046
+          ],
+          "reflection_unitarity_error": 2.1407790064516904e-12
+        },
+        {
+          "angle": 5.497787143782138,
+          "matching_sigma_min": 0.0014279664132635795,
+          "reflection_determinant": [
+            -0.9957945846263888,
+            -0.09161411045642599
+          ],
+          "reflection_unitarity_error": 6.4083055891905626e-12
+        },
+        {
+          "angle": 5.6286868376817125,
+          "matching_sigma_min": 0.001336790644824317,
+          "reflection_determinant": [
+            -0.974246063702032,
+            -0.22548748824815382
+          ],
+          "reflection_unitarity_error": 4.1083039824553975e-12
+        },
+        {
+          "angle": 5.759586531581287,
+          "matching_sigma_min": 0.0012646713108572798,
+          "reflection_determinant": [
+            -0.936207938864215,
+            -0.3514465751848882
+          ],
+          "reflection_unitarity_error": 1.9803119689662526e-12
+        },
+        {
+          "angle": 5.890486225480862,
+          "matching_sigma_min": 0.0012133238676177648,
+          "reflection_determinant": [
+            -0.8831945428200174,
+            -0.46900682247693926
+          ],
+          "reflection_unitarity_error": 2.9527927046984193e-12
+        },
+        {
+          "angle": 6.021385919380436,
+          "matching_sigma_min": 0.0011811283832775575,
+          "reflection_determinant": [
+            -0.8164406181837712,
+            -0.5774294043255422
+          ],
+          "reflection_unitarity_error": 7.54768216978531e-13
+        },
+        {
+          "angle": 6.152285613280011,
+          "matching_sigma_min": 0.0011643197512944744,
+          "reflection_determinant": [
+            -0.7370891365516218,
+            -0.6757955347441572
+          ],
+          "reflection_unitarity_error": 2.2801323141594613e-12
+        }
+      ],
+      "sampled_winding": 3.0,
+      "maximum_sampled_phase_increment": 1.6128552091440946
+    },
+    {
+      "radial_cells": 240,
+      "phases": [
+        {
+          "angle": 0.0,
+          "matching_sigma_min": 0.0011636291636750074,
+          "reflection_determinant": [
+            -0.6462914322460683,
+            -0.7630906791472727
+          ],
+          "reflection_unitarity_error": 3.2979280093485254e-12
+        },
+        {
+          "angle": 0.1308996938995747,
+          "matching_sigma_min": 0.0011686905579371188,
+          "reflection_determinant": [
+            -0.5453311848310665,
+            -0.8382206743173266
+          ],
+          "reflection_unitarity_error": 4.812397502540861e-12
+        },
+        {
+          "angle": 0.2617993877991494,
+          "matching_sigma_min": 0.001185391584130647,
+          "reflection_determinant": [
+            -0.4353472275852096,
+            -0.9002626235900651
+          ],
+          "reflection_unitarity_error": 4.838327322001168e-13
+        },
+        {
+          "angle": 0.39269908169872414,
+          "matching_sigma_min": 0.0012174447743045138,
+          "reflection_determinant": [
+            -0.3175239976429438,
+            -0.9482502364456363
+          ],
+          "reflection_unitarity_error": 2.4751642999510645e-12
+        },
+        {
+          "angle": 0.5235987755982988,
+          "matching_sigma_min": 0.0012686629886909783,
+          "reflection_determinant": [
+            -0.19295053892302508,
+            -0.9812084842344471
+          ],
+          "reflection_unitarity_error": 3.734007045239997e-12
+        },
+        {
+          "angle": 0.6544984694978735,
+          "matching_sigma_min": 0.0013407138398082103,
+          "reflection_determinant": [
+            -0.06255426089115566,
+            -0.9980415644891476
+          ],
+          "reflection_unitarity_error": 3.674850363370184e-12
+        },
+        {
+          "angle": 0.7853981633974483,
+          "matching_sigma_min": 0.0014319125721336298,
+          "reflection_determinant": [
+            0.07294166824031943,
+            -0.9973362086240396
+          ],
+          "reflection_unitarity_error": 4.263701304649997e-12
+        },
+        {
+          "angle": 0.916297857297023,
+          "matching_sigma_min": 0.0015374765670267154,
+          "reflection_determinant": [
+            0.21300438089188237,
+            -0.9770512441591053
+          ],
+          "reflection_unitarity_error": 7.658342494353372e-12
+        },
+        {
+          "angle": 1.0471975511965976,
+          "matching_sigma_min": 0.0016507221287022885,
+          "reflection_determinant": [
+            0.3571579992874784,
+            -0.9340439837333006
+          ],
+          "reflection_unitarity_error": 4.212265278297766e-12
+        },
+        {
+          "angle": 1.1780972450961724,
+          "matching_sigma_min": 0.001764411313488125,
+          "reflection_determinant": [
+            0.5045948188623862,
+            -0.8633562814868829
+          ],
+          "reflection_unitarity_error": 5.77202241029552e-12
+        },
+        {
+          "angle": 1.308996938995747,
+          "matching_sigma_min": 0.0018717886800574905,
+          "reflection_determinant": [
+            0.653221861199913,
+            -0.7571665603044399
+          ],
+          "reflection_unitarity_error": 6.504444150221977e-12
+        },
+        {
+          "angle": 1.4398966328953218,
+          "matching_sigma_min": 0.0019672178898509558,
+          "reflection_determinant": [
+            0.797435789855157,
+            -0.6034038125745522
+          ],
+          "reflection_unitarity_error": 2.922903502460684e-11
+        },
+        {
+          "angle": 1.5707963267948966,
+          "matching_sigma_min": 0.0020464772424785916,
+          "reflection_determinant": [
+            0.9230783261574794,
+            -0.38461201715313786
+          ],
+          "reflection_unitarity_error": 3.9577416309704495e-11
+        },
+        {
+          "angle": 1.7016960206944711,
+          "matching_sigma_min": 0.0021067767424109048,
+          "reflection_determinant": [
+            0.9967814357245103,
+            -0.08016713424080744
+          ],
+          "reflection_unitarity_error": 1.648640543179977e-11
+        },
+        {
+          "angle": 1.832595714594046,
+          "matching_sigma_min": 0.0021465335379117164,
+          "reflection_determinant": [
+            0.9484391812928429,
+            0.3169591762312382
+          ],
+          "reflection_unitarity_error": 9.148446846825123e-12
+        },
+        {
+          "angle": 1.9634954084936205,
+          "matching_sigma_min": 0.002164923517221644,
+          "reflection_determinant": [
+            0.6674042049637542,
+            0.7446956606861085
+          ],
+          "reflection_unitarity_error": 1.5250397850294763e-10
+        },
+        {
+          "angle": 2.0943951023931953,
+          "matching_sigma_min": 0.0021611920852560767,
+          "reflection_determinant": [
+            0.09872846240861151,
+            0.9951144108663076
+          ],
+          "reflection_unitarity_error": 6.094434995086969e-12
+        },
+        {
+          "angle": 2.22529479629277,
+          "matching_sigma_min": 0.0021336207534278576,
+          "reflection_determinant": [
+            -0.5513652265385347,
+            0.8342639791762552
+          ],
+          "reflection_unitarity_error": 1.3006972200297511e-11
+        },
+        {
+          "angle": 2.356194490192345,
+          "matching_sigma_min": 0.002077893936145995,
+          "reflection_determinant": [
+            -0.9386664808127104,
+            0.34482638791068637
+          ],
+          "reflection_unitarity_error": 2.8873152902695897e-12
+        },
+        {
+          "angle": 2.4870941840919194,
+          "matching_sigma_min": 0.0019845351361039527,
+          "reflection_determinant": [
+            -0.983258865142454,
+            -0.18221417132368045
+          ],
+          "reflection_unitarity_error": 1.1263724983583503e-10
+        },
+        {
+          "angle": 2.617993877991494,
+          "matching_sigma_min": 0.001836150635039494,
+          "reflection_determinant": [
+            -0.8040886608286221,
+            -0.5945093990176834
+          ],
+          "reflection_unitarity_error": 6.422097417003623e-12
+        },
+        {
+          "angle": 2.748893571891069,
+          "matching_sigma_min": 0.0016114536986321273,
+          "reflection_determinant": [
+            -0.4831033861813247,
+            -0.8755633147627733
+          ],
+          "reflection_unitarity_error": 1.0134293738902744e-10
+        },
+        {
+          "angle": 2.8797932657906435,
+          "matching_sigma_min": 0.0013142112420550117,
+          "reflection_determinant": [
+            0.005708546399401109,
+            -0.9999837060674713
+          ],
+          "reflection_unitarity_error": 9.794513779269615e-11
+        },
+        {
+          "angle": 3.010692959690218,
+          "matching_sigma_min": 0.0010215747360234528,
+          "reflection_determinant": [
+            0.7425230163844433,
+            -0.669820550670288
+          ],
+          "reflection_unitarity_error": 3.932535087410183e-11
+        },
+        {
+          "angle": 3.141592653589793,
+          "matching_sigma_min": 0.0008891697449816106,
+          "reflection_determinant": [
+            0.6462914322538598,
+            0.7630906791583626
+          ],
+          "reflection_unitarity_error": 2.3742037938308173e-11
+        },
+        {
+          "angle": 3.2724923474893677,
+          "matching_sigma_min": 0.0010215747360232666,
+          "reflection_determinant": [
+            -0.7829130707860574,
+            0.622131114475235
+          ],
+          "reflection_unitarity_error": 7.308453777694801e-12
+        },
+        {
+          "angle": 3.4033920413889422,
+          "matching_sigma_min": 0.001314211242055832,
+          "reflection_determinant": [
+            -0.9872815753859131,
+            -0.15898141696330598
+          ],
+          "reflection_unitarity_error": 3.6670027269376547e-11
+        },
+        {
+          "angle": 3.534291735288517,
+          "matching_sigma_min": 0.0016114536986318018,
+          "reflection_determinant": [
+            -0.7840928714765752,
+            -0.6206435118338136
+          ],
+          "reflection_unitarity_error": 1.177187656204494e-10
+        },
+        {
+          "angle": 3.665191429188092,
+          "matching_sigma_min": 0.0018361506350393364,
+          "reflection_determinant": [
+            -0.4540341943527661,
+            -0.8909842592829852
+          ],
+          "reflection_unitarity_error": 6.759402981417347e-11
+        },
+        {
+          "angle": 3.7960911230876664,
+          "matching_sigma_min": 0.001984535136103561,
+          "reflection_determinant": [
+            -0.01786946270812422,
+            -0.9998403283797999
+          ],
+          "reflection_unitarity_error": 4.878734227648157e-11
+        },
+        {
+          "angle": 3.926990816987241,
+          "matching_sigma_min": 0.0020778939361459515,
+          "reflection_determinant": [
+            0.49464061035352114,
+            -0.8690976162549442
+          ],
+          "reflection_unitarity_error": 1.103945225700886e-11
+        },
+        {
+          "angle": 4.057890510886816,
+          "matching_sigma_min": 0.0021336207534277105,
+          "reflection_determinant": [
+            0.9136457559640448,
+            -0.4065112943548839
+          ],
+          "reflection_unitarity_error": 1.7077636619157044e-10
+        },
+        {
+          "angle": 4.1887902047863905,
+          "matching_sigma_min": 0.0021611920852562688,
+          "reflection_determinant": [
+            0.9652868332308543,
+            0.2611921314688588
+          ],
+          "reflection_unitarity_error": 4.935958866500991e-11
+        },
+        {
+          "angle": 4.319689898685965,
+          "matching_sigma_min": 0.002164923517221399,
+          "reflection_determinant": [
+            0.6246718856714766,
+            0.7808873383907463
+          ],
+          "reflection_unitarity_error": 8.354520657292492e-12
+        },
+        {
+          "angle": 4.45058959258554,
+          "matching_sigma_min": 0.0021465335379121163,
+          "reflection_determinant": [
+            0.15650810191405637,
+            0.9876766748436312
+          ],
+          "reflection_unitarity_error": 6.34847897950739e-12
+        },
+        {
+          "angle": 4.581489286485114,
+          "matching_sigma_min": 0.0021067767424108705,
+          "reflection_determinant": [
+            -0.24315843505487372,
+            0.9699865852103081
+          ],
+          "reflection_unitarity_error": 2.7058292784887308e-11
+        },
+        {
+          "angle": 4.71238898038469,
+          "matching_sigma_min": 0.0020464772424788015,
+          "reflection_determinant": [
+            -0.5313174409894257,
+            0.8471728140609643
+          ],
+          "reflection_unitarity_error": 1.609352898559712e-11
+        },
+        {
+          "angle": 4.843288674284264,
+          "matching_sigma_min": 0.001967217889850742,
+          "reflection_determinant": [
+            -0.7264418476058985,
+            0.6872279403829101
+          ],
+          "reflection_unitarity_error": 5.312756342149598e-12
+        },
+        {
+          "angle": 4.974188368183839,
+          "matching_sigma_min": 0.0018717886800578352,
+          "reflection_determinant": [
+            -0.8543672114943914,
+            0.5196697681364439
+          ],
+          "reflection_unitarity_error": 9.728162206096414e-12
+        },
+        {
+          "angle": 5.105088062083413,
+          "matching_sigma_min": 0.0017644113134875842,
+          "reflection_determinant": [
+            -0.9346420794225913,
+            0.3555899089905264
+          ],
+          "reflection_unitarity_error": 3.9020319427698404e-12
+        },
+        {
+          "angle": 5.235987755982988,
+          "matching_sigma_min": 0.0016507221287029217,
+          "reflection_determinant": [
+            -0.9800951774784171,
+            0.1985281921619412
+          ],
+          "reflection_unitarity_error": 1.4633198234852311e-12
+        },
+        {
+          "angle": 5.3668874498825625,
+          "matching_sigma_min": 0.0015374765670267904,
+          "reflection_determinant": [
+            -0.9987859154836463,
+            0.049261496418920504
+          ],
+          "reflection_unitarity_error": 2.080493491795514e-12
+        },
+        {
+          "angle": 5.497787143782138,
+          "matching_sigma_min": 0.0014319125721328537,
+          "reflection_determinant": [
+            -0.9957377600455671,
+            -0.09222967648075373
+          ],
+          "reflection_unitarity_error": 4.525152838001893e-12
+        },
+        {
+          "angle": 5.6286868376817125,
+          "matching_sigma_min": 0.0013407138398075086,
+          "reflection_determinant": [
+            -0.9741288622952297,
+            -0.22599327345443418
+          ],
+          "reflection_unitarity_error": 3.1855857535026215e-12
+        },
+        {
+          "angle": 5.759586531581287,
+          "matching_sigma_min": 0.001268662988690952,
+          "reflection_determinant": [
+            -0.9360602667827083,
+            -0.35183970347986915
+          ],
+          "reflection_unitarity_error": 5.135787066531784e-12
+        },
+        {
+          "angle": 5.890486225480862,
+          "matching_sigma_min": 0.0012174447743038262,
+          "reflection_determinant": [
+            -0.8830450063691363,
+            -0.4692883087446417
+          ],
+          "reflection_unitarity_error": 2.3232908365381973e-12
+        },
+        {
+          "angle": 6.021385919380436,
+          "matching_sigma_min": 0.0011853915841302002,
+          "reflection_determinant": [
+            -0.8163165997971487,
+            -0.5776047168200628
+          ],
+          "reflection_unitarity_error": 3.200430207935924e-12
+        },
+        {
+          "angle": 6.152285613280011,
+          "matching_sigma_min": 0.001168690557937194,
+          "reflection_determinant": [
+            -0.7370160470343579,
+            -0.6758752447132486
+          ],
+          "reflection_unitarity_error": 3.3795836154245876e-12
+        }
+      ],
+      "sampled_winding": 3.0,
+      "maximum_sampled_phase_increment": 1.602048969284763
+    }
+  ],
+  "origin_cutoff": 1e-06,
+  "same_data_downsampled_winding": [
+    0.9999999999999999,
+    0.9999999999999999
+  ],
+  "maximum_radial_refinement_determinant_phase_difference": 0.01080623986111763,
+  "minimum_matching_sigma_min_each_mesh": [
+    0.00088586017795244,
+    0.0008891697449816106
+  ],
+  "maximum_unitarity_error": 1.7077636619157044e-10,
+  "origin_control": {
+    "status": "PASS",
+    "scope": "fixed real radius-five core with piecewise exponential transfer",
+    "origin_cutoff": 1e-08,
+    "meshes": [
+      {
+        "radial_cells": 240,
+        "phases": [
+          {
+            "angle": 3.14159265358979,
+            "matching_sigma_min": 0.0008881824221517537,
+            "reflection_determinant": [
+              0.6462914322319597,
+              0.7630906791310412
+            ],
+            "reflection_unitarity_error": 4.727745394280304e-11
+          }
+        ],
+        "sampled_winding": null,
+        "maximum_sampled_phase_increment": null
+      }
+    ]
+  }
+}
