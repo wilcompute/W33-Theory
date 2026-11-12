@@ -65,6 +65,24 @@ def stabilizer_witness(repair):
                 spectator_mixed_coefficient=coefficient)
 
 
+def odd_deformation_witness():
+    """A gauge-invariant spectator-odd quartic with zero vacuum Hessian."""
+    cubic = flat.vacuum.cubic
+    terms = cubic.signed_terms(cubic.CUBIC)
+    x, _ = flat.repair_vevs()
+    support = np.flatnonzero(x[0].reshape(27, 3).any(axis=1)).tolist()
+    assert support == [0]
+    assert len(terms) == 45 and all(len(set(word)) == 3 for word in terms)
+    # Two copies of the VEV on any tritangent coefficient give zero.
+    assert all(sum(index in support for index in word) <= 1 for word in terms)
+    example, sign = min(terms.items())
+    assert sign in (-1, 1)
+    return dict(cubic_support_count=len(terms), X0_internal_vev_support=support,
+                nonzero_S000_example=list(example), example_coefficient=int(sign),
+                vacuum_value_gradient_hessian_zero=True,
+                deformed_theta_period_generators_in_pi_units=[[2, 2], [0, 6]])
+
+
 def calculate():
     repair = flat.read(CANONICAL)['repair']
     parent = flat.read(THETA)
@@ -119,6 +137,7 @@ def calculate():
     return dict(
         status='PASS',
         species_witness=witness,
+        spectator_odd_deformation=odd_deformation_witness(),
         diagonal_character_smith=smith,
         angle_coefficient_labels=names,
         gauge_anomaly_rows=gauge.tolist(),

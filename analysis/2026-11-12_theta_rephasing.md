@@ -29,6 +29,12 @@ exp[i T N + i (V + 4πp/3) K].
 
 The lattice identifies allowed harmonics. Their coefficients require a dynamical calculation. When the other couplings admit orientation reversal, the topological weights on these sectors are invariant at the four points given by `T,V+4πp/3 ∈ {0,π}` modulo `2π`.
 
+## A gauge-invariant deformation that removes the identification
+
+The symmetric E6 cubic supplies a spectator-odd quartic `κ S_{abc} d_{ijk} X0^{ia} X0^{jb} X0^{kc}`. Here the symmetric family indices of S contract the three family fundamentals. This is invariant under the faithful gauge group and nonzero, as seen by using the same family component for all three X factors and a tritangent monomial for the internal coordinates. At the canonical vacuum S is zero and X0 has just one internal coordinate in its support. Every tritangent term has three distinct internal indices. The quartic therefore vanishes through quadratic order in fluctuations. It preserves the exact D- and F-flat point and its tree-level quadratic spectrum while changing interactions at cubic and higher order in fluctuations. [Signed tritangent cubic](2026-11-08_exact_signed_cubic_and_three_copy_vacuum.md)
+
+For fixed nonzero κ the spectator sign changes this quartic's coefficient. The earlier constraints on the linear stabilizer still apply, because the new term has its own field multidegree. The gauge center and fermion parity remain, so the lattice of shifts induced by field redefinitions returns to the geometric one, with family-only period 6π. Equivalently the sign change relates `(θ_f,κ)` to `(θ_f+3π,−κ)`. The allowed quartic demonstrates that the same classical spectrum can coexist with different quantum selection rules. Whether the new interaction generates a nonzero odd-sector amplitude requires zero-mode saturation.
+
 ## Coupling phase invariants
 
 For diagonal field redefinitions, let `φ` be the coefficient phases in this order

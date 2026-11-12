@@ -21,6 +21,29 @@
     "spectator_neutral_coefficient": -2,
     "spectator_mixed_coefficient": -2
   },
+  "spectator_odd_deformation": {
+    "cubic_support_count": 45,
+    "X0_internal_vev_support": [
+      0
+    ],
+    "nonzero_S000_example": [
+      0,
+      17,
+      26
+    ],
+    "example_coefficient": -1,
+    "vacuum_value_gradient_hessian_zero": true,
+    "deformed_theta_period_generators_in_pi_units": [
+      [
+        2,
+        2
+      ],
+      [
+        0,
+        6
+      ]
+    ]
+  },
   "diagonal_character_smith": [
     1,
     1,
