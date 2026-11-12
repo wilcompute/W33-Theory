@@ -1,0 +1,342 @@
+{
+  "status": "PASS",
+  "sectors": [
+    {
+      "sector": [
+        0,
+        1,
+        -1,
+        7
+      ],
+      "steps": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "sector": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "steps": [
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "sector": [
+        0,
+        1,
+        3,
+        -5
+      ],
+      "steps": [
+        0
+      ]
+    },
+    {
+      "sector": [
+        2,
+        -3,
+        -1,
+        -5
+      ],
+      "steps": [
+        0
+      ]
+    },
+    {
+      "sector": [
+        2,
+        -1,
+        -1,
+        3
+      ],
+      "steps": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "sector": [
+        2,
+        -1,
+        1,
+        -3
+      ],
+      "steps": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "sector": [
+        2,
+        1,
+        1,
+        5
+      ],
+      "steps": [
+        0
+      ]
+    }
+  ],
+  "winding_defects": [
+    {
+      "winding": -2,
+      "kernel_by_sector": [
+        0,
+        6,
+        0,
+        0,
+        6,
+        0,
+        0
+      ],
+      "cokernel_by_sector": [
+        6,
+        0,
+        0,
+        0,
+        0,
+        6,
+        0
+      ],
+      "minimum_total_insertions": 24
+    },
+    {
+      "winding": -1,
+      "kernel_by_sector": [
+        0,
+        3,
+        0,
+        0,
+        3,
+        0,
+        0
+      ],
+      "cokernel_by_sector": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0
+      ],
+      "minimum_total_insertions": 12
+    },
+    {
+      "winding": 0,
+      "kernel_by_sector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "cokernel_by_sector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "minimum_total_insertions": 0
+    },
+    {
+      "winding": 1,
+      "kernel_by_sector": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0
+      ],
+      "cokernel_by_sector": [
+        0,
+        3,
+        0,
+        0,
+        3,
+        0,
+        0
+      ],
+      "minimum_total_insertions": 12
+    },
+    {
+      "winding": 2,
+      "kernel_by_sector": [
+        6,
+        0,
+        0,
+        0,
+        0,
+        6,
+        0
+      ],
+      "cokernel_by_sector": [
+        0,
+        6,
+        0,
+        0,
+        6,
+        0,
+        0
+      ],
+      "minimum_total_insertions": 24
+    }
+  ],
+  "smooth_loop_max_projected_residual": 7.401041715206327e-16,
+  "charge_neutral_quartic": {
+    "primitive_active_relation": [
+      1,
+      -1,
+      -1,
+      1
+    ],
+    "legs": [
+      {
+        "side": "incoming",
+        "magnetic_pairing": -1,
+        "signed_occupation": 1,
+        "left_weyl_weight": [
+          0,
+          0,
+          0,
+          6
+        ],
+        "formal_3B_L": [
+          [
+            0,
+            -1
+          ]
+        ]
+      },
+      {
+        "side": "conjugate outgoing",
+        "magnetic_pairing": 1,
+        "signed_occupation": -1,
+        "left_weyl_weight": [
+          0,
+          0,
+          -1,
+          -3
+        ],
+        "formal_3B_L": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "side": "conjugate outgoing",
+        "magnetic_pairing": 1,
+        "signed_occupation": -1,
+        "left_weyl_weight": [
+          -1,
+          1,
+          0,
+          -4
+        ],
+        "formal_3B_L": [
+          [
+            -1,
+            0
+          ]
+        ]
+      },
+      {
+        "side": "incoming",
+        "magnetic_pairing": -1,
+        "signed_occupation": 1,
+        "left_weyl_weight": [
+          1,
+          -1,
+          1,
+          1
+        ],
+        "formal_3B_L": [
+          [
+            1,
+            0
+          ]
+        ]
+      }
+    ],
+    "names": [
+      "E^c",
+      "L or H_d",
+      "U^c",
+      "Q"
+    ],
+    "minimum_quartic_insertions_per_full_turn": 3
+  },
+  "periodic_spin_holonomy_control": [
+    {
+      "electric_holonomy_in_turns": "-1/2",
+      "effective_winding_offset": -1,
+      "vanishing_defect_winding": 1
+    },
+    {
+      "electric_holonomy_in_turns": "-1/3",
+      "effective_winding_offset": -1,
+      "vanishing_defect_winding": 1
+    },
+    {
+      "electric_holonomy_in_turns": "1/5",
+      "effective_winding_offset": 1,
+      "vanishing_defect_winding": -1
+    },
+    {
+      "electric_holonomy_in_turns": "1/2",
+      "effective_winding_offset": 1,
+      "vanishing_defect_winding": -1
+    }
+  ],
+  "conditional_factorized_yukawa_witness": {
+    "integral_lift_determinants": [
+      -27,
+      -729
+    ],
+    "absolute_factorized_grassmann_coefficient": 118098
+  },
+  "sampled_active_triplet_lepton_overlap": [
+    {
+      "radial_cells": 120,
+      "phase_count": 48,
+      "min_sampled_lepton_wedge_probability": 0.006087529399299744,
+      "max_sampled_lepton_wedge_probability": 0.1346889501844646
+    },
+    {
+      "radial_cells": 240,
+      "phase_count": 48,
+      "min_sampled_lepton_wedge_probability": 0.006098001939527588,
+      "max_sampled_lepton_wedge_probability": 0.13429351754079036
+    },
+    {
+      "radial_cells": 120,
+      "phase_count": 96,
+      "min_sampled_lepton_wedge_probability": 0.006087529399299744,
+      "max_sampled_lepton_wedge_probability": 0.13565486265669624
+    }
+  ]
+}
