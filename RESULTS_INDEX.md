@@ -22,9 +22,9 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **14164** files; **19014** distinctive results
+Indexed **14168** files; **19015** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
-**8368** appear in exactly one file — the sharpest signal.
+**8369** appear in exactly one file — the sharpest signal.
 
 ## Index
 
@@ -6344,6 +6344,7 @@ Indexed **14164** files; **19014** distinctive results
 | `9808010` | `analysis/2026-10-27_gap_matter_radion.md` · `analysis/2026-10-31_complex_phases_cross_fields_and_refinement.md` · `analysis/PASS11999_12003_NATIVE_CANONICAL_CLOCK_PORTAL_MEASURE_AND_FAMILY.md` · `analysis/PASS12006_12010_SHARED_FLAVOUR_DENSITY_AND_CHIRAL_INDEX.md` · *(+4)* |
 | `9808021` | `analysis/2026-10-14_toe73_five_fronts.md` · `analysis/PASS11493_11497_EXACT_MATCHING_INFERENCE.md` · `analysis/PASS11506_11510_FIVE_PHYSICS_TARGETS.md` · `analysis/PASS11516_11520_LOCAL_GEOMETRY_QUANTUM.md` |
 | `9808101` | `analysis/PASS11758_11765_PLUS11767_11768_GEOMETRY_GLOBAL_CURRENTS.md` · `analysis/w33_pass11759_11765_geometry_flavor_stabilization.py` |
+| `9808347` | `analysis/2026-11-13_monopole_triplet_charge.md` |
 | `9820100` | `analysis/w33_20261022_five_frontiers_round6.py` |
 | `9844834` | `analysis/BT4081_BT4088_deep_physics.md` |
 | `9846784` | `analysis/2026-10-09_toe28_five_frontier_quantum_spacetime_roadblocks.md` · `analysis/2026-10-09_toe29_cat_covers_e7_ads_c8.md` |
