@@ -63,6 +63,15 @@ coefficient equation is verified in integer arithmetic, and positivity is checke
 $\varepsilon=10^{-3},\dots,10^{-6}$. At $\delta=1/8$ the 160 stabiliser minimisers force the 15-block to vanish, and facial reduction
 leaves a 16-dimensional face with zero interior margin. This suggests that the degree-6 bound approaches $1/8$ without attaining it.
 
+\begin{remark}[an analytic reduction]
+Let $P_0$ be the uncovered Pauli fixed by the stabiliser of the set, and let $t=\langle P_0\rangle$. The 15 uncovered Paulis that
+commute with $P_0$ map bijectively onto $p_0^\perp/\langle p_0\rangle\cong W(3,2)$, so they contribute at most $3$ by two-qubit purity.
+The 12 that anticommute form six pairs $\{a,aP_0\}$, and they contribute exactly
+$(1-t^2)\sum_{j=1}^6|\langle\psi_+|a_j|\psi_-\rangle|^2$. Hence $\min\F=1/8$ follows from the single $4\otimes4$ inequality
+$\kappa=\max_{x,y}\sum_j|\langle x|M_j|y\rangle|^2\le3$, which holds numerically with equality. The five non-identity $M_jM_1^{-1}$
+anticommute along a pentagon. An exact proof of $\kappa\le3$ is open; it has no decomposable certificate.
+\end{remark}
+
 \begin{theorem}[four qubits]\label{t:4}
 (i) $W(7,2)$ has no maximal partial spread of size 3 or 4. The smallest size is 5, and there are $105\,283\,584$ such sets.
 (ii) They fall into two invariant types. For a set of the first type (lines listed in the repository), $\vartheta\le74/5$, so
@@ -71,6 +80,15 @@ of them, 120 uncovered points $p$ project the set onto a maximal five-set of $p^
 type has no such point. They inherit a mirror partner (a second partition of the same covered set) and have numerical minimum $1/16$.
 (iii) For several inequivalent nine-element sets, $\min\F=m^*/16$ exactly ($1/16$ or $1/8$), via a facially reduced Lovász dual.
 \end{theorem}
+\begin{proposition}[five qubits]
+$W(9,2)$ has no maximal partial spread of size at most 6.
+\end{proposition}
+\noindent\emph{Method.} Fixing the $X$- and $Z$-type Lagrangians, a Lagrangian disjoint from both is the graph of a nonsingular
+symmetric matrix $S$ over $\mathbb{F}_2$, and two graphs are disjoint iff $S+S'$ is nonsingular. A maximal partial spread is thus a set
+of nonsingular symmetric matrices with nonsingular pairwise differences that leaves no nonsingular $T$ with all $T+S_i$ nonsingular.
+For $n=5$ there are 13\,888 such matrices; $S_1=I$ without loss of generality, and $S_2$ is reduced modulo the orthogonal group of
+order 720. The same code reproduces the counts 56 ($n=3$) and 896 ($n=4$) found by direct enumeration.
+
 \noindent\emph{Method for (i).} By Witt's theorem, $\mathrm{Sp}(8,2)$ is transitive on ordered pairs of complementary Lagrangians, so
 every candidate can be taken to contain a fixed pair. The remaining one or two Lagrangians are enumerated exhaustively. As a control,
 the same code finds no sizes 3 and 4 for three qubits, and finds 56 five-sets through a fixed pair, matching

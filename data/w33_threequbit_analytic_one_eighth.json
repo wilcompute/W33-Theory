@@ -1,0 +1,52 @@
+{
+ "n_A": 12,
+ "n_B": 15,
+ "lemmaA_bijection": true,
+ "lemmaB_six_pairs": true,
+ "kappa_numeric": 2.9999999999956657,
+ "decomposable_margin": -2.0000000000000115,
+ "sdp_status": "optimal",
+ "exact_attempts": [
+  {
+   "D": 2,
+   "Q_psd": false,
+   "P_psd": false
+  },
+  {
+   "D": 4,
+   "Q_psd": false,
+   "P_psd": false
+  },
+  {
+   "D": 8,
+   "Q_psd": false,
+   "P_psd": false
+  },
+  {
+   "D": 16,
+   "Q_psd": false,
+   "P_psd": false
+  },
+  {
+   "D": 64,
+   "Q_psd": false,
+   "P_psd": false
+  },
+  {
+   "D": 256,
+   "Q_psd": false,
+   "P_psd": false
+  },
+  {
+   "D": 1024,
+   "Q_psd": false,
+   "P_psd": false
+  },
+  {
+   "D": 4096,
+   "Q_psd": false,
+   "P_psd": false
+  }
+ ],
+ "kappa_le_3_exact": false
+}

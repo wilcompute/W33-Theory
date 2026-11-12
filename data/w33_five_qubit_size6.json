@@ -1,0 +1,36 @@
+{
+ "control_n3_size5": {
+  "n": 3,
+  "size": 5,
+  "ordered_completions": 12,
+  "sets_containing_I": 6.0,
+  "sets_through_pair": 56.0,
+  "exists": true,
+  "example": [
+   41,
+   14,
+   53
+  ],
+  "seconds": 0.0
+ },
+ "control_n3_size6": {
+  "n": 3,
+  "size": 6,
+  "ordered_completions": 0,
+  "sets_containing_I": 0.0,
+  "sets_through_pair": 0.0,
+  "exists": false,
+  "example": null,
+  "seconds": 0.0
+ },
+ "n5_size6": {
+  "n": 5,
+  "size": 6,
+  "ordered_completions": 0,
+  "sets_containing_I": 0.0,
+  "sets_through_pair": 0.0,
+  "exists": false,
+  "example": null,
+  "seconds": 2.5
+ }
+}

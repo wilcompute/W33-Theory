@@ -1,0 +1,90 @@
+{
+ "n3": {
+  "n": 3,
+  "n_nonsingular_symmetric": 28,
+  "classes": {
+   "41": 28
+  },
+  "k1_size3": {
+   "sets_containing_rep": {
+    "41": 0
+   },
+   "sets_through_pair": 0.0,
+   "exists": false
+  },
+  "k2_size4": {
+   "sets_containing_rep": {
+    "41": 0
+   },
+   "sets_through_pair": 0.0,
+   "exists": false
+  },
+  "k3_size5": {
+   "sets_containing_rep": {
+    "41": 6
+   },
+   "sets_through_pair": 56.0,
+   "exists": true
+  }
+ },
+ "n4": {
+  "n": 4,
+  "n_nonsingular_symmetric": 448,
+  "classes": {
+   "657": 420,
+   "258": 28
+  },
+  "k1_size3": {
+   "sets_containing_rep": {
+    "657": 0,
+    "258": 0
+   },
+   "sets_through_pair": 0.0,
+   "exists": false
+  },
+  "k2_size4": {
+   "sets_containing_rep": {
+    "657": 0,
+    "258": 0
+   },
+   "sets_through_pair": 0.0,
+   "exists": false
+  },
+  "k3_size5": {
+   "sets_containing_rep": {
+    "657": 6,
+    "258": 6
+   },
+   "sets_through_pair": 896.0,
+   "exists": true
+  }
+ },
+ "n5": {
+  "n": 5,
+  "n_nonsingular_symmetric": 13888,
+  "classes": {
+   "21025": 13888
+  },
+  "k1_size3": {
+   "sets_containing_rep": {
+    "21025": 0
+   },
+   "sets_through_pair": 0.0,
+   "exists": false
+  },
+  "k2_size4": {
+   "sets_containing_rep": {
+    "21025": 0
+   },
+   "sets_through_pair": 0.0,
+   "exists": false
+  },
+  "k3_size5": {
+   "sets_containing_rep": {
+    "21025": 0
+   },
+   "sets_through_pair": 0.0,
+   "exists": false
+  }
+ }
+}
