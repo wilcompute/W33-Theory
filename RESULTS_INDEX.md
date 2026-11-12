@@ -22,9 +22,9 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **14131** files; **19006** distinctive results
+Indexed **14133** files; **19006** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
-**8364** appear in exactly one file — the sharpest signal.
+**8365** appear in exactly one file — the sharpest signal.
 
 ## Index
 
@@ -1234,7 +1234,7 @@ Indexed **14131** files; **19006** distinctive results
 | `[0,1,6]` | `analysis/verify_dccxxiii_genus_equation_spectrum.py` |
 | `[0,1,8]` | `analysis/2026-10-15_toe88_five_followups.md` · `analysis/w33_BREAKTHROUGH_483_fractal_RG_fixed_point_holography.py` · `analysis/w33_nonclifford_extension_search.py` · `analysis/w33_pass10941_qutrit_universal_instruction_bridge.py` |
 | `[0,2,0]` | `analysis/bt3570_3576_cyclotomic_core_quadratic_locator.py` · `analysis/toe_20261112_theta_rephasing.py` · `analysis/w33_20261108_five_boundary_bridges.py` · `scripts/w33_golay_lie_algebra.py` |
-| `[0,2,2]` | `analysis/w33_20261022_allfive_deeper_frontiers.py` · `analysis/w33_pass341_selector_extension_cohomology.g` |
+| `[0,2,2]` | `analysis/toe_20261113_complex_triplet_proton_decay.py` · `analysis/w33_20261022_allfive_deeper_frontiers.py` · `analysis/w33_pass341_selector_extension_cohomology.g` |
 | `[0,2,3]` | `analysis/bt1716_q2025_domain_chart_extractor.py` · `analysis/bt1720_q2025_connected_domain_triples.py` · `analysis/bt962_selector_rail_faces.py` · `analysis/bt976_selector_face_representation_labels.py` · *(+5)* |
 | `[0,2,4]` | `analysis/toe_20261109_pezzotope_canonical_partner.py` · `analysis/w33_20261027_five_front_followthrough.py` · `analysis/w33_pass11107_winding_tachyons.py` · `analysis/w33_pass11182_paper_ticks_mereology.py` · *(+5)* |
 | `[0,2,5]` | `analysis/w33_pass286_sqrt21_found_retraction.py` · `analysis/w33_pass294_paths_in_the_dual.py` · `analysis/w33_pass301_is_the_4cycle_canonical.py` · `analysis/w33_pass305_aut_csaszar_is_AGL_1_7.py` |
@@ -4488,10 +4488,9 @@ Indexed **14131** files; **19006** distinctive results
 | `20261101` | `analysis/2026-11-01_five_plus_three_w33_physics_continuation.md` · `analysis/2026-11-01_native_measurements_controls_and_quantum_geometry.md` · `analysis/w33_20261101_common_cubic_spinor_extension.py` · `analysis/w33_20261101_five_plus_three.py` · *(+9)* |
 | `20261106` | `analysis/2026-11-06_sterile_parent_and_changed_work_audit.md` · `analysis/PASS12638_E7_KRAMERS_CHANNELS.md` · `analysis/PASS12645_EXACT_FOUR_QUBIT_ONE_SIXTEENTH.md` · `analysis/PASS20261108_GAUGE_E6_OPTICAL_FOLLOWTHROUGH.md` · *(+6)* |
 | `20261107` | `analysis/2026-11-07_inverse_higgs_production_and_sterile_spectra.md` · `analysis/2026-11-07_natural_constants_derivation_catalog.md` · `analysis/PASS20261107_CONSTANTS_FIVE_FRONTS.md` · `analysis/toe_20261107_coupled_scalar_moments.py` · *(+6)* |
-| `20261110` | `analysis/2026-11-10_four_qubit_equality.md` · `analysis/2026-11-10_global_gauge_topology.md` · `analysis/2026-11-10_light_yukawa_completion.md` · `analysis/2026-11-10_monopole_boundary_lattice.md` · *(+21)* |
 | `20261111` | `analysis/2026-11-11_monopole_electric_phase.md` · `analysis/2026-11-11_monopole_independent_matter.md` · `analysis/2026-11-11_monopole_neutral_core.md` · `analysis/2026-11-11_monopole_neutral_tail.md` · *(+12)* |
 | `20261112` | `analysis/2026-11-12_canonical_uv_fixed_point.md` · `analysis/2026-11-12_e6_only_weak_gauging.md` · `analysis/2026-11-12_mixed_rank_relevance.md` · `analysis/2026-11-12_parent_theta_lattice.md` · *(+9)* |
-| `20261113` | `analysis/2026-11-13_bifundamental_mediator_uv.md` · `analysis/2026-11-13_canonical_strong_cp.md` · `analysis/2026-11-13_mixed_mediator_threshold.md` · `analysis/toe_20261113_bifundamental_mediator_uv.py` · *(+2)* |
+| `20261113` | `analysis/2026-11-13_bifundamental_mediator_uv.md` · `analysis/2026-11-13_canonical_strong_cp.md` · `analysis/2026-11-13_complex_triplet_proton_decay.md` · `analysis/2026-11-13_mixed_mediator_threshold.md` · *(+4)* |
 | `20262000` | `analysis/2026_11_03_csg_action_heldout.py` |
 | `20481813` | `analysis/PASS2560_2567_SEVEN_FRONTIERS_RELEASE.md` |
 | `20544048` | `analysis/w33_pass5430_q3_radius10_false_vote4_frontier.py` |
@@ -6336,6 +6335,7 @@ Indexed **14131** files; **19006** distinctive results
 | `9803116` | `analysis/PASS11342_11349_EIGHT_TOE_FRONTIER_PROBES.md` · `analysis/w33_pass11342_11349_eight_frontier_probes.py` |
 | `9803315` | `analysis/toe_20261105_pq_normalization_cutoff.py` |
 | `9806013` | `analysis/PASS12006_12010_SHARED_FLAVOUR_DENSITY_AND_CHIRAL_INDEX.md` · `analysis/w33_pass12010_nonabelian_native_index.py` |
+| `9807289` | `analysis/2026-11-13_complex_triplet_proton_decay.md` |
 | `9808010` | `analysis/2026-10-27_gap_matter_radion.md` · `analysis/2026-10-31_complex_phases_cross_fields_and_refinement.md` · `analysis/PASS11999_12003_NATIVE_CANONICAL_CLOCK_PORTAL_MEASURE_AND_FAMILY.md` · `analysis/PASS12006_12010_SHARED_FLAVOUR_DENSITY_AND_CHIRAL_INDEX.md` · *(+4)* |
 | `9808021` | `analysis/2026-10-14_toe73_five_fronts.md` · `analysis/PASS11493_11497_EXACT_MATCHING_INFERENCE.md` · `analysis/PASS11506_11510_FIVE_PHYSICS_TARGETS.md` · `analysis/PASS11516_11520_LOCAL_GEOMETRY_QUANTUM.md` |
 | `9808101` | `analysis/PASS11758_11765_PLUS11767_11768_GEOMETRY_GLOBAL_CURRENTS.md` · `analysis/w33_pass11759_11765_geometry_flavor_stabilization.py` |
@@ -15177,7 +15177,7 @@ Indexed **14131** files; **19006** distinctive results
 | `4109` | `analysis/BT4105_BT4112_carrier_reference_netlist_decoder_turing_bonkers.md` |
 | `4110` | `analysis/BT4105_BT4112_carrier_reference_netlist_decoder_turing_bonkers.md` · `analysis/PASS11330_ORBIT_CENSUS.md` · `analysis/w33_pass11331_twisted_fixed_point.py` · `papers/forty_points/appA_ledger.tex` · *(+1)* |
 | `4111` | `analysis/BT4105_BT4112_carrier_reference_netlist_decoder_turing_bonkers.md` |
-| `4112` | `analysis/BT4105_BT4112_carrier_reference_netlist_decoder_turing_bonkers.md` · `analysis/PASS11770_11777_VACUUM_CONE_CONSTRAINTS_FERMIONS_MODULAR.md` · `analysis/PASS4439_4440_CROSS_TRACK_AND_BLOBS.md` · `analysis/w33_pass11771_11773_11777_cones_fermions_propagation.py` · *(+3)* |
+| `4112` | `analysis/2026-11-13_complex_triplet_proton_decay.md` · `analysis/BT4105_BT4112_carrier_reference_netlist_decoder_turing_bonkers.md` · `analysis/PASS11770_11777_VACUUM_CONE_CONSTRAINTS_FERMIONS_MODULAR.md` · `analysis/PASS4439_4440_CROSS_TRACK_AND_BLOBS.md` · *(+5)* |
 | `4113` | `analysis/2026-10-23_round9_five_frontiers.md` · `analysis/BT4113_BT4120_gauge_horizon_dimension_scar_curvature.md` · `analysis/PASS4439_4440_CROSS_TRACK_AND_BLOBS.md` · `analysis/w33_pass4113_4120_gauge_horizon_dimension_scar_curvature.py` · *(+2)* |
 | `4114` | `analysis/BT4113_BT4120_gauge_horizon_dimension_scar_curvature.md` · `analysis/w33_pass4113_4120_gauge_horizon_dimension_scar_curvature.py` |
 | `4115` | `analysis/BT4113_BT4120_gauge_horizon_dimension_scar_curvature.md` · `analysis/w33_pass4113_4120_gauge_horizon_dimension_scar_curvature.py` |
