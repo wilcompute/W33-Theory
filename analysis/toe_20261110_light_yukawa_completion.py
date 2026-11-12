@@ -235,16 +235,16 @@ def flavor_operators(spaces, fundamental, y, internal, weak, records):
                 lepton_number_violating_cubics=0, baryon_number_violating_cubic=0)
 
 
-def colored_exchange(x, mesons, fundamental, spaces, quadratic, adjoint, weak, y,
-                     maps, records, completion):
-    """Pair exact triplet sources through the heavy holomorphic mass block."""
-    hessian, orbit, weights = quadratic
+def colored_sources(x, mesons, fundamental, spaces, orbit, weights, adjoint, weak, y,
+                    maps, records, completion, *, triplet_coefficient=1, include_higgs=False):
+    """Differentiate both color-triplet source tensors on the light slice."""
     triplet_weights = {tuple(row) for row in fundamental if abs(row[-1]) == 2}
     assert {tuple(row) for row in weights if abs(row[-1]) == 2} == triplet_weights
     assert len(triplet_weights) == 6 and not (np.abs(weights[:, -1]) == 8).any()
     terms = completion['operator_legs']
     adjoint_vev = np.diag(y).astype(object)
-    old_split = [(mesons[5], np.diag(y * y - 9)), (mesons[1], np.diag(y * y - 4))]
+    old_split = [(triplet_coefficient, mesons[5], np.diag(y * y - 9)),
+                 (1, mesons[1], np.diag(y * y - 4))]
     first, second = x[:2].reshape(2, 27, 3)
     left, mid, right, signs = np.array(records).T
 
@@ -269,12 +269,16 @@ def colored_exchange(x, mesons, fundamental, spaces, quadratic, adjoint, weak, y
             for z, t in [(0, 2), (1, 0), (1, 1)]:
                 if aa[j].any():
                     total += (conjugate[i][z] * (aa[j] @ matter[k][t])).sum()
-            for meson, polynomial in old_split:
-                total -= omega(matter[i][0], matter[j][1], polynomial @ matter[k][0] @ meson.T)
+            for coefficient, meson, polynomial in old_split:
+                total -= coefficient * omega(
+                    matter[i][0], matter[j][1], polynomial @ matter[k][0] @ meson.T
+                )
                 if aa[j].any():
                     derivative = adjoint_vev @ aa[j] + aa[j] @ adjoint_vev
                     value = derivative @ matter[k][0] @ meson.T
-                    total -= omega(matter[i][0], second, value) + omega(first, matter[i][1], value)
+                    total -= coefficient * (
+                        omega(matter[i][0], second, value) + omega(first, matter[i][1], value)
+                    )
         dressed = []
         for vector, charge, da in zip(vectors, charges, aa):
             lift = vector.copy()
@@ -299,26 +303,47 @@ def colored_exchange(x, mesons, fundamental, spaces, quadratic, adjoint, weak, y
         assert sp.Matrix(orbit[:, cols]) * matrix == sp.zeros(len(orbit), matrix.cols)
         return cols, matrix
 
-    def check(first_pair, second_pair, last_basis):
+    def channel(first_pair, second_pair, last_basis):
         a, b = first_pair
         c, _ = second_pair
         left_cols, l = sources(first_pair, spaces[tuple(fundamental[a])], spaces[tuple(fundamental[b])])
         right_cols, r = sources(second_pair, spaces[tuple(fundamental[c])], last_basis)
-        mass = sp.Matrix(hessian[np.ix_(left_cols, right_cols)])
-        solution = mass.gauss_jordan_solve(l)[0]
-        mass.T.gauss_jordan_solve(r)
-        exchange = r.T * solution
-        assert exchange == sp.zeros(r.cols, l.cols)
-        return dict(source_ranks=[l.rank(), r.rank()], triplet_mass_rank=mass.rank(),
-                    exchange_flavor_shape=list(exchange.shape), exchange_rank=0)
+        return left_cols, right_cols, l, r
 
     doublets = spaces[tuple(fundamental[15])]
     h_row = sp.Matrix([completion['down_higgs_covector']])
     leptons = [lower_doublet(sum((v * c for v, c in zip(doublets, coefficients)),
                                 np.zeros(483, dtype=object)), weak)
                for coefficients in h_row.nullspace()]
-    return dict(QQQL=check((3, 6), (9, 16), leptons),
-                UcUcDcEc=check((7, 2), (11, 14), spaces[tuple(fundamental[14])]))
+    result = dict(QQQL=channel((3, 6), (9, 16), leptons),
+                  UcUcDcEc=channel((7, 2), (11, 14), spaces[tuple(fundamental[14])]))
+    if include_higgs:
+        higgs, = sp.Matrix(completion['lepton_covectors']).nullspace()
+        lift = sum((vector*coefficient for vector, coefficient in zip(doublets, higgs)),
+                   np.zeros(483, dtype=object))
+        light_higgs = [lower_doublet(lift, weak)]
+        result['QQQHd_Q1Q2'] = channel((3, 6), (9, 16), light_higgs)
+        result['QQQHd_Q2Q3'] = channel((6, 9), (3, 16), light_higgs)
+        assert not (weights == -fundamental[3]-fundamental[9]).all(axis=1).any()
+    return result
+
+
+def colored_exchange(x, mesons, fundamental, spaces, quadratic, adjoint, weak, y,
+                     maps, records, completion):
+    """Pair exact triplet sources through the heavy holomorphic mass block."""
+    hessian, orbit, weights = quadratic
+    sources = colored_sources(x, mesons, fundamental, spaces, orbit, weights,
+                              adjoint, weak, y, maps, records, completion)
+    result = {}
+    for name, (left_cols, right_cols, left, right) in sources.items():
+        mass = sp.Matrix(hessian[np.ix_(left_cols, right_cols)])
+        solution = mass.gauss_jordan_solve(left)[0]
+        mass.T.gauss_jordan_solve(right)
+        exchange = right.T * solution
+        assert exchange == sp.zeros(right.cols, left.cols)
+        result[name] = dict(source_ranks=[left.rank(), right.rank()], triplet_mass_rank=mass.rank(),
+                            exchange_flavor_shape=list(exchange.shape), exchange_rank=0)
+    return result
 
 
 def calculate():
