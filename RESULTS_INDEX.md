@@ -22,9 +22,9 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **14146** files; **19009** distinctive results
+Indexed **14149** files; **19010** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
-**8366** appear in exactly one file — the sharpest signal.
+**8367** appear in exactly one file — the sharpest signal.
 
 ## Index
 
@@ -1010,6 +1010,7 @@ Indexed **14146** files; **19009** distinctive results
 | `[0,0,64]` | `analysis/w33_pass7370_7372_global_triality_glue_atlas.py` |
 | `[0,0,81]` | `analysis/w33_e8_a2_center_vs_coxeter_order3.py` |
 | `[0,1,10]` | `analysis/w33_pass332_integral_halfspin_lift.g` |
+| `[0,1,38]` | `analysis/toe_20261113_monopole_nonlinear_phase.py` |
 | `[0,1,57]` | `analysis/w33_20261102_q7_exhaustive_triple_moments.py` |
 | `[0,10,1]` | `analysis/w33_20261015_toe89_cyclic_tate_chain.py` |
 | `[0,11,7]` | `analysis/w33_pass470_integral_conductor_coupling.py` |
@@ -4490,9 +4491,9 @@ Indexed **14146** files; **19009** distinctive results
 | `20261101` | `analysis/2026-11-01_five_plus_three_w33_physics_continuation.md` · `analysis/2026-11-01_native_measurements_controls_and_quantum_geometry.md` · `analysis/w33_20261101_common_cubic_spinor_extension.py` · `analysis/w33_20261101_five_plus_three.py` · *(+9)* |
 | `20261106` | `analysis/2026-11-06_sterile_parent_and_changed_work_audit.md` · `analysis/PASS12638_E7_KRAMERS_CHANNELS.md` · `analysis/PASS12645_EXACT_FOUR_QUBIT_ONE_SIXTEENTH.md` · `analysis/PASS20261108_GAUGE_E6_OPTICAL_FOLLOWTHROUGH.md` · *(+6)* |
 | `20261107` | `analysis/2026-11-07_inverse_higgs_production_and_sterile_spectra.md` · `analysis/2026-11-07_natural_constants_derivation_catalog.md` · `analysis/PASS20261107_CONSTANTS_FIVE_FRONTS.md` · `analysis/toe_20261107_coupled_scalar_moments.py` · *(+6)* |
-| `20261111` | `analysis/2026-11-11_monopole_electric_phase.md` · `analysis/2026-11-11_monopole_independent_matter.md` · `analysis/2026-11-11_monopole_neutral_core.md` · `analysis/2026-11-11_monopole_neutral_tail.md` · *(+14)* |
+| `20261111` | `analysis/2026-11-11_monopole_electric_phase.md` · `analysis/2026-11-11_monopole_independent_matter.md` · `analysis/2026-11-11_monopole_neutral_core.md` · `analysis/2026-11-11_monopole_neutral_tail.md` · *(+15)* |
 | `20261112` | `analysis/2026-11-12_canonical_uv_fixed_point.md` · `analysis/2026-11-12_e6_only_weak_gauging.md` · `analysis/2026-11-12_mixed_rank_relevance.md` · `analysis/2026-11-12_parent_theta_lattice.md` · *(+9)* |
-| `20261113` | `analysis/2026-11-13_bifundamental_mediator_uv.md` · `analysis/2026-11-13_canonical_strong_cp.md` · `analysis/2026-11-13_complex_triplet_proton_decay.md` · `analysis/2026-11-13_mixed_mediator_threshold.md` · *(+17)* |
+| `20261113` | `analysis/2026-11-13_bifundamental_mediator_uv.md` · `analysis/2026-11-13_canonical_strong_cp.md` · `analysis/2026-11-13_complex_triplet_proton_decay.md` · `analysis/2026-11-13_mixed_mediator_threshold.md` · *(+20)* |
 | `20262000` | `analysis/2026_11_03_csg_action_heldout.py` |
 | `20481813` | `analysis/PASS2560_2567_SEVEN_FRONTIERS_RELEASE.md` |
 | `20544048` | `analysis/w33_pass5430_q3_radius10_false_vote4_frontier.py` |
@@ -18959,7 +18960,7 @@ Indexed **14146** files; **19009** distinctive results
 | `902` | `analysis/2026-08-29_EIGHT_FRONT_RECOVERY_PHYSICS_CLOSURE.md` · `analysis/BT902_holonet_profile_cross_index.md` · `analysis/BT905_holonet_profile_ci.md` · `analysis/BT906_clean_context_bt905_run.md` · *(+7)* |
 | `903` | `analysis/BT1097_tex_ci_status_latest.md` · `analysis/BT2470_BT2475_five_frontiers.md` · `analysis/BT903_holonet_root_patch.md` · `analysis/BT905_holonet_profile_ci.md` · *(+9)* |
 | `904` | `analysis/BT3973_BT3980_extremal_mesh_photon_tensor_monster.md` · `analysis/BT3973_BT3980_rank48_literal_tensor_amendment.md` · `analysis/BT3981_BT3988_five_front_three_photon_closure.md` · `analysis/BT4005_BT4012_exact_photon_revival_memory.md` · *(+12)* |
-| `905` | `analysis/BT905_holonet_profile_ci.md` · `analysis/BT906_clean_context_bt905_run.md` · `analysis/BT908_holonet_pdf_release_protocol.md` · `analysis/BT909_holonet_release_wrapper.md` · *(+9)* |
+| `905` | `analysis/BT905_holonet_profile_ci.md` · `analysis/BT906_clean_context_bt905_run.md` · `analysis/BT908_holonet_pdf_release_protocol.md` · `analysis/BT909_holonet_release_wrapper.md` · *(+10)* |
 | `906` | `analysis/BT3965_BT3972_topology_control_causal_density.md` · `analysis/BT906_clean_context_bt905_run.md` · `analysis/BT908_holonet_pdf_release_protocol.md` · `analysis/PASS12280_12285_SCHERK_SCHWARZ_BROTHERS_AND_COPRIME_RULE.md` · *(+5)* |
 | `907` | `analysis/BT907_profile_parameter_search.md` · `analysis/BT910_neutral_coordinate_investigation.md` · `analysis/BT911_profile_observable_fitter.md` · `analysis/THEORY_OF_EVERYTHING.py` · *(+5)* |
 | `908` | `analysis/2026-07-31_frame_hoffman_resolution_theorem.md` · `analysis/BT908_holonet_pdf_release_protocol.md` · `analysis/BT909_holonet_release_wrapper.md` · `analysis/BT916_release_ci_dictionary_patch.md` · *(+6)* |
