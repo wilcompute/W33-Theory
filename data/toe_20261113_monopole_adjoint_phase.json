@@ -1,0 +1,417 @@
+{
+  "status": "PASS",
+  "blocks": [
+    {
+      "doubled_perpendicular_weight": [
+        -2,
+        3,
+        1,
+        5
+      ],
+      "vacuum_integer_trace_hessian": [
+        [
+          480,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "vacuum_integer_gauge_commutator": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          30
+        ]
+      ],
+      "generator_trace_norm_squared": [
+        6,
+        6
+      ],
+      "samples": [
+        {
+          "radius": 0.002,
+          "trace_hessian_diagonal": [
+            -25.301426493275372,
+            -26.933463620257214
+          ],
+          "gauge_commutator_diagonal": [
+            15.292602447688228,
+            15.861516292331256
+          ]
+        },
+        {
+          "radius": 0.01,
+          "trace_hessian_diagonal": [
+            -20.736132222055787,
+            -28.398118261304603
+          ],
+          "gauge_commutator_diagonal": [
+            14.167320101638772,
+            16.98652710372333
+          ]
+        },
+        {
+          "radius": 0.02,
+          "trace_hessian_diagonal": [
+            -14.153675150576348,
+            -26.842210411337987
+          ],
+          "gauge_commutator_diagonal": [
+            12.82704897728288,
+            18.316321168884294
+          ]
+        },
+        {
+          "radius": 0.05,
+          "trace_hessian_diagonal": [
+            -2.4934470666971436,
+            -12.898827770605692
+          ],
+          "gauge_commutator_diagonal": [
+            9.515844644797527,
+            21.39490348250672
+          ]
+        },
+        {
+          "radius": 0.1,
+          "trace_hessian_diagonal": [
+            9.845823426731641,
+            3.1133863170879295
+          ],
+          "gauge_commutator_diagonal": [
+            5.521733229742507,
+            24.482821345267553
+          ]
+        },
+        {
+          "radius": 0.2,
+          "trace_hessian_diagonal": [
+            235.96928881759092,
+            4.4452368795513735
+          ],
+          "gauge_commutator_diagonal": [
+            0.5284825153962565,
+            29.039788738852746
+          ]
+        },
+        {
+          "radius": 0.4,
+          "trace_hessian_diagonal": [
+            466.98585988063047,
+            0.0571605934795798
+          ],
+          "gauge_commutator_diagonal": [
+            0.0022704628754306455,
+            29.98458217941586
+          ]
+        },
+        {
+          "radius": 0.8,
+          "trace_hessian_diagonal": [
+            479.1752976618218,
+            0.0003020479662723119
+          ],
+          "gauge_commutator_diagonal": [
+            1.1751820901295673e-05,
+            29.999616337989316
+          ]
+        },
+        {
+          "radius": 1.6,
+          "trace_hessian_diagonal": [
+            479.6900216102008,
+            -1.0372526162427675e-06
+          ],
+          "gauge_commutator_diagonal": [
+            1.0979468445526663e-09,
+            29.99987256155293
+          ]
+        }
+      ]
+    },
+    {
+      "doubled_perpendicular_weight": [
+        2,
+        1,
+        1,
+        5
+      ],
+      "vacuum_integer_trace_hessian": [
+        [
+          480,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "vacuum_integer_gauge_commutator": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          30
+        ]
+      ],
+      "generator_trace_norm_squared": [
+        6,
+        6
+      ],
+      "samples": [
+        {
+          "radius": 0.002,
+          "trace_hessian_diagonal": [
+            -25.301426493275315,
+            -26.93346362025727
+          ],
+          "gauge_commutator_diagonal": [
+            15.292602447688228,
+            15.861516292331256
+          ]
+        },
+        {
+          "radius": 0.01,
+          "trace_hessian_diagonal": [
+            -20.736132222055673,
+            -28.398118261304717
+          ],
+          "gauge_commutator_diagonal": [
+            14.167320101638772,
+            16.98652710372333
+          ]
+        },
+        {
+          "radius": 0.02,
+          "trace_hessian_diagonal": [
+            -14.15367515057629,
+            -26.8422104113381
+          ],
+          "gauge_commutator_diagonal": [
+            12.82704897728288,
+            18.31632116888429
+          ]
+        },
+        {
+          "radius": 0.05,
+          "trace_hessian_diagonal": [
+            -2.4934470666971436,
+            -12.898827770605749
+          ],
+          "gauge_commutator_diagonal": [
+            9.515844644797527,
+            21.39490348250672
+          ]
+        },
+        {
+          "radius": 0.1,
+          "trace_hessian_diagonal": [
+            9.845823426731698,
+            3.113386317087901
+          ],
+          "gauge_commutator_diagonal": [
+            5.521733229742507,
+            24.482821345267556
+          ]
+        },
+        {
+          "radius": 0.2,
+          "trace_hessian_diagonal": [
+            235.9692888175908,
+            4.445236879551317
+          ],
+          "gauge_commutator_diagonal": [
+            0.5284825153962565,
+            29.039788738852746
+          ]
+        },
+        {
+          "radius": 0.4,
+          "trace_hessian_diagonal": [
+            466.98585988063024,
+            0.05716059347955138
+          ],
+          "gauge_commutator_diagonal": [
+            0.0022704628754306455,
+            29.98458217941586
+          ]
+        },
+        {
+          "radius": 0.8,
+          "trace_hessian_diagonal": [
+            479.1752976618218,
+            0.0003020479662438902
+          ],
+          "gauge_commutator_diagonal": [
+            1.1751820901295673e-05,
+            29.999616337989316
+          ]
+        },
+        {
+          "radius": 1.6,
+          "trace_hessian_diagonal": [
+            479.6900216102008,
+            -1.0372526162427675e-06
+          ],
+          "gauge_commutator_diagonal": [
+            1.0979468445526663e-09,
+            29.99987256155293
+          ]
+        }
+      ]
+    },
+    {
+      "doubled_perpendicular_weight": [
+        0,
+        -1,
+        -3,
+        5
+      ],
+      "vacuum_integer_trace_hessian": [
+        [
+          -180,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "vacuum_integer_gauge_commutator": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          30
+        ]
+      ],
+      "generator_trace_norm_squared": [
+        6,
+        6
+      ],
+      "samples": [
+        {
+          "radius": 0.002,
+          "trace_hessian_diagonal": [
+            25.72708285833744,
+            23.50656780464064
+          ],
+          "gauge_commutator_diagonal": [
+            24.162919803371977,
+            24.731833648015005
+          ]
+        },
+        {
+          "radius": 0.01,
+          "trace_hessian_diagonal": [
+            29.899879319756053,
+            19.30775278702538
+          ],
+          "gauge_commutator_diagonal": [
+            22.94558451329815,
+            25.764791515382708
+          ]
+        },
+        {
+          "radius": 0.02,
+          "trace_hessian_diagonal": [
+            33.45844669314096,
+            15.05803651225807
+          ],
+          "gauge_commutator_diagonal": [
+            21.345085225695772,
+            26.834357417297184
+          ]
+        },
+        {
+          "radius": 0.05,
+          "trace_hessian_diagonal": [
+            27.704086044151012,
+            7.490671166163452
+          ],
+          "gauge_commutator_diagonal": [
+            16.881068629390853,
+            28.760127467100048
+          ]
+        },
+        {
+          "radius": 0.1,
+          "trace_hessian_diagonal": [
+            -10.4552534271902,
+            -3.130100310380044
+          ],
+          "gauge_commutator_diagonal": [
+            11.086263603103479,
+            30.047351718628523
+          ]
+        },
+        {
+          "radius": 0.2,
+          "trace_hessian_diagonal": [
+            -125.58248895636711,
+            -7.039014354819869
+          ],
+          "gauge_commutator_diagonal": [
+            1.7299525852150086,
+            30.241258808671496
+          ]
+        },
+        {
+          "radius": 0.4,
+          "trace_hessian_diagonal": [
+            -177.58424039125282,
+            -0.10144373854558353
+          ],
+          "gauge_commutator_diagonal": [
+            0.020819934747830393,
+            30.00313165128826
+          ]
+        },
+        {
+          "radius": 0.8,
+          "trace_hessian_diagonal": [
+            -179.8477703327399,
+            -0.0004538153108910592
+          ],
+          "gauge_commutator_diagonal": [
+            9.477161535631495e-05,
+            29.99969935778377
+          ]
+        },
+        {
+          "radius": 1.6,
+          "trace_hessian_diagonal": [
+            -179.94281420468934,
+            -1.1072444294768502e-06
+          ],
+          "gauge_commutator_diagonal": [
+            8.742055968014029e-09,
+            29.999872569197038
+          ]
+        }
+      ]
+    }
+  ],
+  "radial_mass_phase": "M(z)=diag(t,1/t) M(1) diag(t,1/t), t^2=z",
+  "sampled_bosonic_trace_mixed_F_interference": [
+    17.714945151531573,
+    17.21364622155057,
+    15.763585378381325,
+    8.940613618575735,
+    -0.6559774102487685,
+    -3.5691675342771947,
+    -0.10598896601351528,
+    -0.00315641514386676,
+    -0.0004883144712128734
+  ],
+  "scope": "canonical two-dual real hedgehog, fixed background, no soft gaugino masses"
+}
