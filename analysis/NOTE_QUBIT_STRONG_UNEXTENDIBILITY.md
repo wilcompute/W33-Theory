@@ -29,7 +29,7 @@ and an exact dual certificate over Q(√5), built in the rank-21 coherent closur
 > **For every five-element weakly unextendible set of three-qubit Pauli MUBs and every v ∈ C⁸,**
 > F(v) ≥ (3 − √5)/8 · |v|⁴ = |v|⁴/(4φ²) ≈ 0.0955 |v|⁴.
 
-**3. The true minimum** is 1/8. It is attained by stabiliser states of a Pauli class meeting the covered set in one point. It is certified numerically by a degree-6 sum-of-squares decomposition, with a 120-dimensional symmetric block and a 288-dimensional block of monomials vᵢvⱼv̄ₖ, and residual 10⁻¹¹. An exact certificate for 1/8 is open. Pairwise information cannot reach it, since ϑ > α = 6. A Shor-type relaxation of the pure-state constraints is also vacuous (bound 7): for a convex objective that is being maximised, the lifted variables can exceed the squares they stand for.
+**3. The true minimum** is 1/8, and min F ∈ [1/8 − 10⁻⁶, 1/8] is proved exactly (Pass 12647): the Pauli group reduces the degree-6 SOS to blocks of size 15 and 36 over Q(i), and strictly interior certificates at δ = 1/8 − ε are verified in exact arithmetic. The minimum It is attained by stabiliser states of a Pauli class meeting the covered set in one point. It is certified numerically by a degree-6 sum-of-squares decomposition, with a 120-dimensional symmetric block and a 288-dimensional block of monomials vᵢvⱼv̄ₖ, and residual 10⁻¹¹. An exact certificate for 1/8 is open. Pairwise information cannot reach it, since ϑ > α = 6. A Shor-type relaxation of the pure-state constraints is also vacuous (bound 7): for a convex objective that is being maximised, the lifted variables can exceed the squares they stand for.
 
 **4. Four qubits.** A nine-element (d/2 + 1) set in d = 16 satisfies F ≥ |v|⁴/16 **exactly and tightly** (Pass 12645): ϑ = α = 14, certified by a facially reduced dual over (1/4)Z, where complementary slackness with the three stabiliser optima is imposed and the result checked by exact LDLᵀ. So strongly unextendible Pauli MUB sets of size d/2 + 1 exist in d = 16, with min F = 1/d.
 
@@ -52,3 +52,9 @@ and an exact dual certificate over Q(√5), built in the rank-21 coherent closur
 - P. Mandayam, S. Bandyopadhyay, M. Grassl, W. K. Wootters, *Unextendible mutually unbiased bases from Pauli classes*, Quantum Inf. Comput. 14 (2014); arXiv:1302.3709.
 - C. de Gois, K. Hansenne, O. Gühne, *Uncertainty relations from graph theory*, Phys. Rev. A 107, 062211 (2023); arXiv:2207.02197.
 - L. Lovász, *On the Shannon capacity of a graph*, IEEE Trans. Inf. Theory 25 (1979).
+
+
+## Update (Pass 12647)
+
+- **Smaller four-qubit sets.** Maximal Pauli MUB sets of size 8 and of size **5** exist in d = 16. Size 5 = q^{n/2} + 1 is Grassl's size, reported by Kantor (*On maximal symplectic partial spreads*, Adv. Geom. 2017). For one size-5 set, ϑ ≤ 74/5 exactly, so **F ≥ |v|⁴/80**: five bases are strongly unextendible in d = 16. Its numerical minimum, 0.0524, lies below the stabiliser value 1/16.
+- **Withdrawn.** A conjectured link between mirror partners and ϑ > α (Pass 12646) is refuted by a larger census.
