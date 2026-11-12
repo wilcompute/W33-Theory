@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "branches": [
+    {
+      "alternating_cubic": true,
+      "axis_derivative": "9*(288*r**2 - 612*r + 245)/64",
+      "unique_uncorrected_local_max_R_A": "17/16 - sqrt(641)/48",
+      "local_max_scalar_charges": [
+        "7/48 + sqrt(641)/144",
+        "7/48 + sqrt(641)/144",
+        "41/24 - sqrt(641)/72",
+        "sqrt(641)/72 + 19/24",
+        "sqrt(641)/72 + 19/24",
+        "17/16 - sqrt(641)/48",
+        "2/3"
+      ],
+      "weak_family_b_at_trial_max": "-447/8 + 9*sqrt(641)/8",
+      "a_trial_minus_massless_gaussian": "-83831/4096 + 641*sqrt(641)/4096",
+      "max_R_A_in_bare_hessian_region": "17/16",
+      "no_charged_free_through_R_A": "1/6",
+      "required_charged_free_anomaly_correction_strictly_above": "5/2",
+      "minimum_slope_with_all_adjoint_corrections_through_R_A_one_third": "189/64"
+    },
+    {
+      "alternating_cubic": false,
+      "axis_derivative": "9*(369*r**2 - 936*r + 488)/64",
+      "unique_uncorrected_local_max_R_A": "52/41 - 2*sqrt(1082)/123",
+      "local_max_scalar_charges": [
+        "sqrt(1082)/123 + 15/41",
+        "sqrt(1082)/123 + 15/41",
+        "227/123 - 4*sqrt(1082)/369",
+        "sqrt(1082)/123 + 15/41",
+        "sqrt(1082)/123 + 15/41",
+        "52/41 - 2*sqrt(1082)/123",
+        "2/3"
+      ],
+      "weak_family_b_at_trial_max": "-5493/82 + 36*sqrt(1082)/41",
+      "a_trial_minus_massless_gaussian": "-221267/26896 + 541*sqrt(1082)/3362",
+      "max_R_A_in_bare_hessian_region": "52/41",
+      "no_charged_free_through_R_A": "1/3",
+      "required_charged_free_anomaly_correction_strictly_above": "11/2",
+      "minimum_slope_with_all_adjoint_corrections_through_R_A_one_third": "1953/64"
+    }
+  ]
+}
