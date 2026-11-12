@@ -18,7 +18,7 @@ Every sum is symmetric, so one singularity table over all 2^{n(n+1)/2} symmetric
 |---|---|---|---|---|---|---|
 | 3 | 28 | none | none | **56** (= Pass 12648) | none | none |
 | 4 | 448 | none | none | **896** (= Pass 12648) | — | — |
-| **5** | **13,888** | **none** | **none** | **none** | **none** (`w33_five_qubit_size6.py`; S₂ reduced mod O(5) of order 720, 8 orbits) | pending (time-limited search; see addendum) |
+| **5** | **13,888** | **none** | **none** | **none** | **none** (`w33_five_qubit_size6.py`; S₂ reduced mod O(5) of order 720, 8 orbits) | a first run reported none, but its pruning was **invalid** (see below); rerunning |
 
 **Two independent methods agree.** Pass 12648 used an explicit Lagrangian enumeration; this method uses only symmetric matrices. They give identical counts at n = 3 and n = 4.
 
@@ -52,7 +52,8 @@ Condition on the distinguished uncovered Pauli P₀ (the singleton class of Pass
 - Numerically κ = 3.0000000000 (the maximiser has four contributing terms: 1, 1, 0.622, 0.378).
 - A decomposable certificate (PSD + partial-transpose PSD) is **infeasible** (margin −2), so the inequality is not provable that way.
 - Structure: the six 4×4 unitaries are I and five two-qubit Paulis whose **anticommutation graph is the pentagon C₅** (Lovász number √5).
-- **Open:** an exact proof of κ ≤ 3, perhaps from the pentagon structure or a degree-higher (symmetric-extension) certificate. This is a 16-variable problem, against the 8-dimensional degree-6 SOS it replaces.
+- **A degree-raised certificate fails too** (`w33_kappa_symmetric_extension.py`). Writing |y|²·(3|x|²|y|² − Σ_j |x†M_j y|²) as an SOS over the monomials x⊗Sym²(y), with or without a partial-transpose block, is infeasible (margins −3.64 and −1.82). The positive control (constant 4, which holds trivially by operator-basis completeness) is feasible (margin 1), so the construction is correct.
+- **Open:** an exact proof of κ ≤ 3. Neither of the two lowest certificate levels works. A proof probably has to use the pentagon structure directly. It is still a 16-variable problem, against the 8-dimensional degree-6 SOS it replaces.
 
 **An earlier slip in this pass.** My first write-up of Lemma B carried a spurious factor 2 and asked for κ ≤ 3/2. The corrected statement is above; the 3/2 SDP was infeasible for that reason.
 
@@ -65,3 +66,8 @@ Condition on the distinguished uncovered Pauli P₀ (the singleton class of Pass
 - An exact proof of κ ≤ 3 (and hence 1/8).
 - Five qubits: the size-7 search (see the table) and the true minimum.
 - A closed form for the isolated genuine four-qubit optimum.
+
+
+## Withdrawn within the pass: the first size-7 run
+
+The first five-qubit size-7 search reported "none" (8.67 million nodes, 1,221 s), but its pruning was invalid. It skipped any candidate c with coverage(c)·r < |R|. Sets are enumerated in increasing order, so a set can have a low-coverage smallest member and still be completed by high-coverage larger ones. That result is **withdrawn**. The corrected search uses only the global prune (the top-r coverages must sum to at least |R|) and is rerunning. The size-6 result is unaffected: it filtered S₄ exactly against the uncovered set.

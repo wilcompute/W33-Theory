@@ -1,6 +1,6 @@
 """Pass 12649: does W(9,2) have a maximal partial spread of size 7?  Rank-code form with S1 = I, S2 over O(5)-orbit representatives,
-then S3, S4, S5 by depth-first search with covering pruning: after k chosen matrices the uncovered set R must be covered by the
-remaining r matrices, so some candidate must cover >= |R|/r of it (necessary).  Existence search with a time limit; reports
+then S3, S4, S5 by depth-first search with a valid covering prune: the top-r coverages of the remaining candidates must sum to >= |R|.
+(Pass 12649 fix: an earlier per-candidate break was INVALID and its 'none' result is withdrawn.)  Existence search with a time limit; reports
 'exists' with an example, 'none' if the search completes, or 'undecided'.  Control: n = 3 size 7 (must be none: sizes 5 and 9 only).
 usage: py -3 analysis/w33_five_qubit_size7.py"""
 import json, os, time
@@ -32,11 +32,9 @@ def search(n, k_total, tlimit):
         if len(cands) == 0: return
         NBc = sing[R[None, :] ^ cands[:, None]]  # cands x |R|
         covc = NBc.sum(1)
-        keep = covc * remaining >= len(R) - 0  # crude: best possible
-        if covc.max() * remaining < len(R): return
-        order = np.argsort(-covc)
-        for idx in order:
-            if covc[idx] * remaining < len(R): break
+        # valid global prune: the remaining matrices come from cands, so the top-r coverages must reach |R|
+        if np.sort(covc)[-remaining:].sum() < len(R): return
+        for idx in range(len(cands)):  # increasing code order; every set is reached with its smallest member first
             c = cands[idx]
             nc = cands[(cands > c) & ~sing[cands ^ c]] if remaining > 1 else cands[:0]
             dfs(chosen + [c], cov | nbm(c), nc, remaining - 1)
@@ -48,5 +46,5 @@ def search(n, k_total, tlimit):
     status = "exists" if state["found"] else ("undecided" if state["timeout"] else "none")
     r = dict(n=n, size=k_total, status=status, example=state["found"], nodes=state["nodes"], seconds=round(time.time() - t0, 1))
     print(r, flush=True); return r
-res = dict(control_n3_size7=search(3, 7, 600), control_n3_size5=search(3, 5, 600), n5_size7=search(5, 7, 5400))
+res = dict(control_n3_size7=search(3, 7, 600), control_n3_size5=search(3, 5, 600), n5_size7=search(5, 7, 6000))
 json.dump(res, open(os.path.join(ROOT, "data", "w33_five_qubit_size7.json"), "w"), indent=1)

@@ -1,0 +1,14 @@
+{
+ "const4_plain": {
+  "margin": 1.0000000000000138,
+  "status": "optimal"
+ },
+ "const3_plain": {
+  "margin": -3.638063864452102,
+  "status": "optimal"
+ },
+ "const3_pt": {
+  "margin": -1.8190319332098184,
+  "status": "optimal"
+ }
+}
