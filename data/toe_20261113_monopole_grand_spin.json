@@ -1,0 +1,241 @@
+{
+  "status": "PASS",
+  "Weyl_doublets": 130,
+  "radial_coefficients_before_Nambu_doubling": 260,
+  "angular_tensors": {
+    "radial_basis": [
+      "S",
+      "sigma_dot_rhat S"
+    ],
+    "kinetic_offdiagonal": [
+      "-i (d/dr + K/r)",
+      "-i (d/dr - K/r)"
+    ],
+    "mass_angle_map": "M0 tensor I - M1 tensor sigma1",
+    "regular_origin_radial_orders": [
+      1,
+      2
+    ],
+    "singular_radial_order": -1
+  },
+  "Cartan_step_weight": [
+    0,
+    1,
+    -1,
+    -5
+  ],
+  "charge_blocks": [
+    {
+      "doubled_perpendicular_weight": [
+        -2,
+        -1,
+        -1,
+        -5
+      ],
+      "Weyl_doublets": 2,
+      "light_positive_flux": 0,
+      "light_negative_flux": 1
+    },
+    {
+      "doubled_perpendicular_weight": [
+        -2,
+        1,
+        -1,
+        3
+      ],
+      "Weyl_doublets": 10,
+      "light_positive_flux": 0,
+      "light_negative_flux": 0
+    },
+    {
+      "doubled_perpendicular_weight": [
+        -2,
+        1,
+        1,
+        -3
+      ],
+      "Weyl_doublets": 13,
+      "light_positive_flux": 3,
+      "light_negative_flux": 3
+    },
+    {
+      "doubled_perpendicular_weight": [
+        -2,
+        3,
+        1,
+        5
+      ],
+      "Weyl_doublets": 2,
+      "light_positive_flux": 1,
+      "light_negative_flux": 0
+    },
+    {
+      "doubled_perpendicular_weight": [
+        0,
+        -1,
+        -3,
+        5
+      ],
+      "Weyl_doublets": 2,
+      "light_positive_flux": 1,
+      "light_negative_flux": 0
+    },
+    {
+      "doubled_perpendicular_weight": [
+        0,
+        -1,
+        -1,
+        -1
+      ],
+      "Weyl_doublets": 26,
+      "light_positive_flux": 4,
+      "light_negative_flux": 3
+    },
+    {
+      "doubled_perpendicular_weight": [
+        0,
+        -1,
+        1,
+        -7
+      ],
+      "Weyl_doublets": 10,
+      "light_positive_flux": 0,
+      "light_negative_flux": 0
+    },
+    {
+      "doubled_perpendicular_weight": [
+        0,
+        1,
+        -1,
+        7
+      ],
+      "Weyl_doublets": 13,
+      "light_positive_flux": 3,
+      "light_negative_flux": 3
+    },
+    {
+      "doubled_perpendicular_weight": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "Weyl_doublets": 23,
+      "light_positive_flux": 0,
+      "light_negative_flux": 1
+    },
+    {
+      "doubled_perpendicular_weight": [
+        0,
+        1,
+        3,
+        -5
+      ],
+      "Weyl_doublets": 2,
+      "light_positive_flux": 0,
+      "light_negative_flux": 1
+    },
+    {
+      "doubled_perpendicular_weight": [
+        2,
+        -3,
+        -1,
+        -5
+      ],
+      "Weyl_doublets": 2,
+      "light_positive_flux": 0,
+      "light_negative_flux": 1
+    },
+    {
+      "doubled_perpendicular_weight": [
+        2,
+        -1,
+        -1,
+        3
+      ],
+      "Weyl_doublets": 10,
+      "light_positive_flux": 0,
+      "light_negative_flux": 0
+    },
+    {
+      "doubled_perpendicular_weight": [
+        2,
+        -1,
+        1,
+        -3
+      ],
+      "Weyl_doublets": 13,
+      "light_positive_flux": 3,
+      "light_negative_flux": 3
+    },
+    {
+      "doubled_perpendicular_weight": [
+        2,
+        1,
+        1,
+        5
+      ],
+      "Weyl_doublets": 2,
+      "light_positive_flux": 1,
+      "light_negative_flux": 0
+    }
+  ],
+  "winding_charge_blocks": {
+    "adjoint": [
+      {
+        "doubled_perpendicular_weight": [
+          -2,
+          3,
+          1,
+          5
+        ],
+        "winding_multiplicity": 1,
+        "Weyl_doublets_in_paired_block": 4,
+        "light_each_direction": 1,
+        "heavy_each_direction": 3,
+        "minimum_unit_singular_values_in_full_heavy_compression": 2
+      },
+      {
+        "doubled_perpendicular_weight": [
+          2,
+          1,
+          1,
+          5
+        ],
+        "winding_multiplicity": 1,
+        "Weyl_doublets_in_paired_block": 4,
+        "light_each_direction": 1,
+        "heavy_each_direction": 3,
+        "minimum_unit_singular_values_in_full_heavy_compression": 2
+      },
+      {
+        "doubled_perpendicular_weight": [
+          0,
+          -1,
+          -3,
+          5
+        ],
+        "winding_multiplicity": 1,
+        "Weyl_doublets_in_paired_block": 4,
+        "light_each_direction": 1,
+        "heavy_each_direction": 3,
+        "minimum_unit_singular_values_in_full_heavy_compression": 2
+      }
+    ],
+    "triplet": [
+      {
+        "doubled_perpendicular_weight": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "winding_multiplicity": 3,
+        "Weyl_doublets_in_paired_block": 49,
+        "light_each_direction": 4,
+        "heavy_each_direction": 45,
+        "minimum_unit_singular_values_in_full_heavy_compression": 41
+      }
+    ]
+  }
+}
