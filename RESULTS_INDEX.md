@@ -22,9 +22,9 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **14115** files; **18990** distinctive results
+Indexed **14117** files; **18992** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
-**8355** appear in exactly one file — the sharpest signal.
+**8356** appear in exactly one file — the sharpest signal.
 
 ## Index
 
@@ -4488,8 +4488,9 @@ Indexed **14115** files; **18990** distinctive results
 | `20261101` | `analysis/2026-11-01_five_plus_three_w33_physics_continuation.md` · `analysis/2026-11-01_native_measurements_controls_and_quantum_geometry.md` · `analysis/w33_20261101_common_cubic_spinor_extension.py` · `analysis/w33_20261101_five_plus_three.py` · *(+9)* |
 | `20261106` | `analysis/2026-11-06_sterile_parent_and_changed_work_audit.md` · `analysis/PASS12638_E7_KRAMERS_CHANNELS.md` · `analysis/PASS12645_EXACT_FOUR_QUBIT_ONE_SIXTEENTH.md` · `analysis/PASS20261108_GAUGE_E6_OPTICAL_FOLLOWTHROUGH.md` · *(+6)* |
 | `20261107` | `analysis/2026-11-07_inverse_higgs_production_and_sterile_spectra.md` · `analysis/2026-11-07_natural_constants_derivation_catalog.md` · `analysis/PASS20261107_CONSTANTS_FIVE_FRONTS.md` · `analysis/toe_20261107_coupled_scalar_moments.py` · *(+6)* |
-| `20261110` | `analysis/2026-11-10_four_qubit_equality.md` · `analysis/2026-11-10_global_gauge_topology.md` · `analysis/2026-11-10_light_yukawa_completion.md` · `analysis/2026-11-10_monopole_boundary_lattice.md` · *(+19)* |
+| `20261110` | `analysis/2026-11-10_four_qubit_equality.md` · `analysis/2026-11-10_global_gauge_topology.md` · `analysis/2026-11-10_light_yukawa_completion.md` · `analysis/2026-11-10_monopole_boundary_lattice.md` · *(+20)* |
 | `20261111` | `analysis/2026-11-11_monopole_electric_phase.md` · `analysis/2026-11-11_monopole_independent_matter.md` · `analysis/2026-11-11_monopole_neutral_core.md` · `analysis/2026-11-11_monopole_neutral_tail.md` · *(+12)* |
+| `20261112` | `analysis/2026-11-12_parent_theta_lattice.md` · `analysis/toe_20261112_parent_theta_lattice.py` |
 | `20262000` | `analysis/2026_11_03_csg_action_heldout.py` |
 | `20481813` | `analysis/PASS2560_2567_SEVEN_FRONTIERS_RELEASE.md` |
 | `20544048` | `analysis/w33_pass5430_q3_radius10_false_vote4_frontier.py` |
@@ -5449,6 +5450,7 @@ Indexed **14115** files; **18990** distinctive results
 | `0661606` | `analysis/w33_pass1939_1943_verify_frozen.py` |
 | `0701023` | `analysis/toe_20261103_mechanism_portal_protection.py` |
 | `0701211` | `W36_PAPER.tex` · `analysis/PASS12506_12513_QUANTUM_BRIDGES.md` |
+| `0701244` | `analysis/2026-11-12_parent_theta_lattice.md` |
 | `0702176` | `analysis/PASS12259_12264_PLOGER_CONDITIONS.md` · `analysis/PASS12271_12273_ODD_ORDER_CARRIES_NO_TORSION.md` · `analysis/PASS12274_12279_TORSION_BICHARACTER_AND_BROTHERS.md` · `analysis/PASS12286_12291_LEFT_RIGHT_CANDIDATE_AND_VETTING.md` · *(+5)* |
 | `0703274` | `analysis/2026-11-02_eight_native_topology_cubic_quantum_fronts.md` |
 | `0709734` | `analysis/BT1370_BT1374_five_frontiers.md` · `analysis/w33_pass1516_1520_five_frontiers.py` |
