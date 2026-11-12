@@ -22,9 +22,9 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **14125** files; **19004** distinctive results
+Indexed **14127** files; **19005** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
-**8366** appear in exactly one file — the sharpest signal.
+**8364** appear in exactly one file — the sharpest signal.
 
 ## Index
 
@@ -3268,7 +3268,7 @@ Indexed **14125** files; **19004** distinctive results
 | `197207211` | `analysis/w33_pass1421_1424_outer_integral_cover_extension.py` |
 | `197230000` | `exploration/w33_affine_e8_eleventh_mode_bridge.py` · `exploration/w33_affine_e8_ninth_mode_bridge.py` · `exploration/w33_affine_e8_tenth_mode_bridge.py` |
 | `197278311` | `analysis/w33_pass5230_5237_footprint_rank4_breakthrough.py` |
-| `198109187` | `analysis/2026-11-09_canonical_sm_flatness.md` |
+| `198109187` | `analysis/2026-11-09_canonical_sm_flatness.md` · `analysis/2026-11-13_mixed_mediator_threshold.md` |
 | `198202203` | `analysis/bt3729_3742_five_front_website_restore.py` |
 | `198205210` | `analysis/w33_pass1417_exact_cover_orbit_frontier.py` · `analysis/w33_pass1421_1424_outer_integral_cover_extension.py` |
 | `198708716` | `analysis/PASS1021_E8_FIBRATION_OVER_FORTY.md` · `analysis/w33_pass1021_e8_fibration_over_forty.g` |
@@ -4490,7 +4490,8 @@ Indexed **14125** files; **19004** distinctive results
 | `20261107` | `analysis/2026-11-07_inverse_higgs_production_and_sterile_spectra.md` · `analysis/2026-11-07_natural_constants_derivation_catalog.md` · `analysis/PASS20261107_CONSTANTS_FIVE_FRONTS.md` · `analysis/toe_20261107_coupled_scalar_moments.py` · *(+6)* |
 | `20261110` | `analysis/2026-11-10_four_qubit_equality.md` · `analysis/2026-11-10_global_gauge_topology.md` · `analysis/2026-11-10_light_yukawa_completion.md` · `analysis/2026-11-10_monopole_boundary_lattice.md` · *(+20)* |
 | `20261111` | `analysis/2026-11-11_monopole_electric_phase.md` · `analysis/2026-11-11_monopole_independent_matter.md` · `analysis/2026-11-11_monopole_neutral_core.md` · `analysis/2026-11-11_monopole_neutral_tail.md` · *(+12)* |
-| `20261112` | `analysis/2026-11-12_canonical_uv_fixed_point.md` · `analysis/2026-11-12_e6_only_weak_gauging.md` · `analysis/2026-11-12_mixed_rank_relevance.md` · `analysis/2026-11-12_parent_theta_lattice.md` · *(+6)* |
+| `20261112` | `analysis/2026-11-12_canonical_uv_fixed_point.md` · `analysis/2026-11-12_e6_only_weak_gauging.md` · `analysis/2026-11-12_mixed_rank_relevance.md` · `analysis/2026-11-12_parent_theta_lattice.md` · *(+7)* |
+| `20261113` | `analysis/2026-11-13_mixed_mediator_threshold.md` · `analysis/toe_20261113_mixed_mediator_threshold.py` |
 | `20262000` | `analysis/2026_11_03_csg_action_heldout.py` |
 | `20481813` | `analysis/PASS2560_2567_SEVEN_FRONTIERS_RELEASE.md` |
 | `20544048` | `analysis/w33_pass5430_q3_radius10_false_vote4_frontier.py` |
@@ -5357,11 +5358,11 @@ Indexed **14125** files; **19004** distinctive results
 | `0303009` | `analysis/PASS12050_ENTANGLER_ORIGIN.md` · `analysis/w33_pass12050_entangler_origin.py` |
 | `0303016` | `analysis/PASS11919_TILT_MODULUS_HUMBERT.md` |
 | `0303849` | `analysis/PASS12048_CANONICAL_MODULI_POTENTIALS.md` |
-| `0304128` | `analysis/2026-11-12_canonical_uv_fixed_point.md` · `analysis/2026-11-12_mixed_rank_relevance.md` |
+| `0304128` | `analysis/2026-11-12_canonical_uv_fixed_point.md` · `analysis/2026-11-12_mixed_rank_relevance.md` · `analysis/2026-11-13_mixed_mediator_threshold.md` |
 | `0305116` | `analysis/PASS11750_11757_INTEGRAL_GEOMETRY_AND_FLUX_DYNAMICS.md` · `analysis/w33_pass11750_11757_integral_geometry_and_flux_dynamics.py` |
 | `0306138` | `analysis/PASS11601_MATCHED_METRIC_DIRAC.md` · `analysis/PASS11602_11606_GEOMETRY_FLAVOR_COMPLETION.md` · `analysis/PASS12006_12010_SHARED_FLAVOUR_DENSITY_AND_CHIRAL_INDEX.md` · `analysis/PASS12011_12015_SCALE_FLAVOUR_AND_INTERNAL_INDEX.md` · *(+4)* |
 | `0306354` | `analysis/2026-10-21_local_tick_chain_and_branching.md` |
-| `0308071` | `analysis/2026-11-12_canonical_uv_fixed_point.md` · `analysis/2026-11-12_e6_only_weak_gauging.md` · `analysis/2026-11-12_mixed_rank_relevance.md` |
+| `0308071` | `analysis/2026-11-12_canonical_uv_fixed_point.md` · `analysis/2026-11-12_e6_only_weak_gauging.md` · `analysis/2026-11-12_mixed_rank_relevance.md` · `analysis/2026-11-13_mixed_mediator_threshold.md` |
 | `0309002` | `analysis/PASS11542_11546_FIVE_DYNAMICAL_TARGETS.md` |
 | `0309120` | `analysis/PASS11506_11510_FIVE_PHYSICS_TARGETS.md` |
 | `0310087` | `analysis/BT4169_BT4176_discrete_c2_hawking_backreaction_gray_levi_casimir_axion.md` |
@@ -6880,7 +6881,7 @@ Indexed **14125** files; **19004** distinctive results
 | `134000` | `analysis/w33_mass_in_natural_units_substrate.py` |
 | `134173` | `analysis/w33_pass4960_degree7_moment_radius_barrier.py` · `analysis/w33_pass4976_signed_shell_correlations.py` · `analysis/w33_pass4984_residual_a4_orbit.py` · `analysis/w33_pass4992_4995_oct_radius_decoder_gauge_chain.py` · *(+3)* |
 | `134725` | `exploration/w33_zeta_functional_equation.py` |
-| `134739` | `analysis/2026-11-09_canonical_sm_flatness.md` |
+| `134739` | `analysis/2026-11-09_canonical_sm_flatness.md` · `analysis/2026-11-13_mixed_mediator_threshold.md` |
 | `134911` | `analysis/w33_20261009_shot_clipped_frame_optics.py` |
 | `135000` | `analysis/BT2967_BT2973_optimal_information_system.md` · `analysis/bt2967_2973_optimal_information_system.py` · `analysis/w33_20261108_forty_points_fivefronts.py` |
 | `135088` | `analysis/2026-10-14_toe67_continuous_all_beta_flux_and_symmetry.md` |
