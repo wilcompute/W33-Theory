@@ -1,0 +1,114 @@
+{
+  "status": "PASS",
+  "species_witness": {
+    "mixed_singular_values_squared": [
+      2,
+      1,
+      0
+    ],
+    "centered_bilinear_matrix": [
+      [
+        -1,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -2
+      ]
+    ],
+    "spectator_neutral_coefficient": -2,
+    "spectator_mixed_coefficient": -2
+  },
+  "diagonal_character_smith": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    6
+  ],
+  "angle_coefficient_labels": [
+    "A5",
+    "A6",
+    "Omega",
+    "Z0AX2",
+    "Z1AX0",
+    "Z1AX1",
+    "TrM00",
+    "SS_M00_M00"
+  ],
+  "gauge_anomaly_rows": [
+    [
+      18,
+      18,
+      18,
+      18,
+      18,
+      24,
+      0,
+      -90
+    ],
+    [
+      27,
+      27,
+      27,
+      27,
+      27,
+      0,
+      15,
+      -144
+    ]
+  ],
+  "invariant_phase_coefficients": [
+    [
+      24,
+      -21,
+      6,
+      12,
+      6,
+      12,
+      6,
+      0
+    ],
+    [
+      80,
+      -71,
+      2,
+      4,
+      2,
+      4,
+      -8,
+      5
+    ]
+  ],
+  "theta_period_generators_in_pi_units": [
+    [
+      2,
+      2
+    ],
+    [
+      0,
+      3
+    ]
+  ],
+  "spectator_even_sector_condition": "3*Q_family = 0 mod 2",
+  "fourier_charge_generators": [
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      1
+    ]
+  ],
+  "spin_flux_witness_charges": [
+    "4/3",
+    "2/3"
+  ],
+  "spin_flux_witness_spectator_index": 10
+}
