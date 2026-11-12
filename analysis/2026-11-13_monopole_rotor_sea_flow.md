@@ -1,0 +1,37 @@
+# Fermion sea flow and the finite-inertia dressed W33 channel
+
+A finite bare-particle calculation preserves the signed occupations of the seven opposite transverse-charge pairs. The regulated chiral sea changes four of those occupations during an electric phase turn. Its integer winding vector still cannot close the split-threshold channels with the same bare states. An explicit rotor dressing has a free propagator in the noncompact Gaussian oscillator model, including finite inertia. Compact momentum and winding sectors require a separate spectral calculation. [Bare-particle selection rule](2026-11-13_monopole_rotor_threshold_operators.md)
+
+## Exact sea-flow ledger
+
+Use the covariant bulk convention of the electric-phase calculation. A left-Weyl weight w of magnetic pairing n contributes n²/2 per 2π turn of χ. Each of the 32 lowest waves has |n| = 1. For a signed occupation N_s, multiply this contribution by the sign of q(w) relative to the chosen representative s of {q,−q}. This gives the following vector A on the seven sectors. [W33 electric-phase anomaly trace](2026-11-11_monopole_electric_phase.md) · [Fermion–rotor anomaly](https://arxiv.org/html/2408.04577v3)
+
+| Sector s | Bulk change A_s | Rotor determinant winding |
+| --- | ---: | ---: |
+| (0,1,−1,7) | +3 | −3 |
+| (0,1,1,1) | −3 | +3 |
+| (0,1,3,−5) | 0 | 0 |
+| (2,−3,−1,−5) | 0 | 0 |
+| (2,−1,−1,3) | −3 | +3 |
+| (2,−1,1,−3) | +3 | −3 |
+| (2,1,1,5) | 0 | 0 |
+
+The replay independently orients every incoming and outgoing channel to q = s, conjugating when required. Their dimensions agree in each sector. For a block R with arbitrary constant unitary mixing inside the sector, its rotor lift has matrix entry R_ij exp(iχ(n_in,j − n_out,i)/2). The determinant factors give the difference of the incoming and outgoing magnetic-pairing sums divided by two. This is −A_s in the above convention. The triplet gives +3, independently of mixing with the up-Higgsino. The weighted sum Σ_s s A_s vanishes, as required by transverse Cartan conservation. [Physical triplet charge frames](2026-11-13_monopole_triplet_charge.md)
+
+## Compact winding and the existing boundary candidates
+
+Let c_s be the linear functional that recovers magnetic pairing from signed occupations in the restricted incoming or outgoing spectrum. If the multiparticle state differs from the target single by kA, its pairing differs from the bare grading prediction by k c·A. The two values of c·A are −12 and +12. The corresponding deficits are −2 and +2. Matching the pairing alone would need k = 1/6 in the convention multiparticle minus single. Integer windings therefore fail at every multiplicity. Even allowing an arbitrary real k along this one direction gives half-integer occupation shifts, outside the bare integer lattice. Each named triple also changes an occupation with A_s = 0. That rules out using a multiple of A for those triples even if fractional shifts are allowed. These statements use the asymptotic lowest-wave trace and the specified flow direction.
+
+The half-integers have a concrete realization as occupation shifts in both previously proposed Abelian boundary lattices. In the collective candidate a unit incoming wave changes its outgoing vertex by one sixth in each of the 12 ordinary slots. In the family candidate it changes by one half in the four slots of its family. When projected to the seven signed charge pairs, both shifts are −A/6 in the outgoing-minus-incoming convention. The equality is exact for all three families because the four ordinary weights repeat. The aggregate anomaly and the split-threshold pairing test therefore leave the two candidates degenerate. [Existing collective and family boundary maps](2026-11-10_monopole_boundary_lattice.md)
+
+With free chiral bosons normalized so a unit fermion vertex has weight 1/2, the smallest unconstrained squared norm divided by two in the first shifted coset is 1/6 for the collective candidate and 1/2 for a single family. The six collective coset weights in order are 0, 1/6, 2/3, 3/2, 2/3, 1/6. The positive representatives of both first cosets carry full outgoing Cartan charge α. Their minimal weights are therefore attained even with that charge fixed. A rotor factor lowering p by one neutralizes α, and α(m) = 2 makes the twist charge even under the endpoint sign. This checks the Cartan and endpoint conditions. A physical boundary-state projection still has to be constructed. They give a way to distinguish the lattices with a flavor-resolved correlator if the corresponding twisted sectors exist. A quadratic model preserving every current orthogonal to the one shared rotor coupling would select the collective reflection in the flavor-diagonal reference frame. The family reflection reverses two additional orthogonal combinations. Whether the smooth W33 dynamics preserve those currents depends on flavor mixing and other light modes. [Bosonized monopole boundary currents](https://arxiv.org/abs/2109.11207) · [Twisted sectors and monopole scattering](https://arxiv.org/abs/2306.07318)
+
+## Finite-inertia oscillator calculation
+
+Freeze the W33 core reflection to an energy-independent unitary R and unfold the four triplet waves. In the R-rotated outgoing frame the instantaneous rotor factors are exp(iχ P), where P = diag(1,1,1,0). Dress an outgoing annihilation field with the inverse factor at retarded time s = t−x, using its Hermitian conjugate for a creation field. The three active fields have one unit of dressing and the up-Higgsino is a spectator.
+
+In the point-core Gaussian path integral the fermionic Wick kernel is multiplied by an exponential bilinear in the two frequency sources A(ω), B(ω) of Loladze and Okui. Here those frequency sources are distinct from the seven-component flow vector. Retaining inertia replaces the 1/ω kernel by the finite-inertia kernel in their Appendix A and preserves the bilinear dependence. An incoming leg contributes only to B. An outgoing bare leg contributes to A, and its retarded dressing cancels that contribution and moves it to B. Consequently A(ω) vanishes term by term for all four choices of endpoint sides. The correction is exactly one at finite inertia in this oscillator model, and the dressed propagator has the free chiral pole with unit residue in the rotated basis. A mistimed dressing leaves both sources nonzero. The code checks the cancellation at the level of signed time coefficients, prior to integrating over frequency. [Path integral equations 14–17 and finite-inertia kernel](https://arxiv.org/html/2408.04577v3)
+
+This calculation integrates the Gaussian fluctuations on a real phase line. The compact zero mode, fixed total electric charge, endpoint equivariance, finite core radius, and the energy dependence of R remain to be imposed. For comparison, a decoupled compact rotor at fixed p gives the Euclidean factor exp[−τ(E_(p+1)−E_p)] for a charge-raising insertion followed by its inverse. This follows from inserting the single rotor eigenstate p+1. Applying such a factor to the interacting oscillator result would require proving a factorization of the compact correlator. The oscillator pole by itself leaves the position and spectral weight in a physical fixed-charge sector open.
+
+Run `python analysis/toe_20261113_monopole_rotor_sea_flow.py` to reproduce the [sector ledger, source cancellation and twist checks](../data/toe_20261113_monopole_rotor_sea_flow.json).

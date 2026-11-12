@@ -1,0 +1,360 @@
+{
+  "status": "PASS",
+  "sectors": [
+    {
+      "sector": [
+        0,
+        1,
+        -1,
+        7
+      ],
+      "incoming_pairings": [
+        -1,
+        -1,
+        -1
+      ],
+      "outgoing_pairings": [
+        1,
+        1,
+        1
+      ],
+      "covariant_bulk_flow": 3,
+      "rotor_determinant_winding": -3
+    },
+    {
+      "sector": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "incoming_pairings": [
+        -1,
+        1,
+        1,
+        1
+      ],
+      "outgoing_pairings": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "covariant_bulk_flow": -3,
+      "rotor_determinant_winding": 3
+    },
+    {
+      "sector": [
+        0,
+        1,
+        3,
+        -5
+      ],
+      "incoming_pairings": [
+        -1
+      ],
+      "outgoing_pairings": [
+        -1
+      ],
+      "covariant_bulk_flow": 0,
+      "rotor_determinant_winding": 0
+    },
+    {
+      "sector": [
+        2,
+        -3,
+        -1,
+        -5
+      ],
+      "incoming_pairings": [
+        -1
+      ],
+      "outgoing_pairings": [
+        -1
+      ],
+      "covariant_bulk_flow": 0,
+      "rotor_determinant_winding": 0
+    },
+    {
+      "sector": [
+        2,
+        -1,
+        -1,
+        3
+      ],
+      "incoming_pairings": [
+        1,
+        1,
+        1
+      ],
+      "outgoing_pairings": [
+        -1,
+        -1,
+        -1
+      ],
+      "covariant_bulk_flow": -3,
+      "rotor_determinant_winding": 3
+    },
+    {
+      "sector": [
+        2,
+        -1,
+        1,
+        -3
+      ],
+      "incoming_pairings": [
+        -1,
+        -1,
+        -1
+      ],
+      "outgoing_pairings": [
+        1,
+        1,
+        1
+      ],
+      "covariant_bulk_flow": 3,
+      "rotor_determinant_winding": -3
+    },
+    {
+      "sector": [
+        2,
+        1,
+        1,
+        5
+      ],
+      "incoming_pairings": [
+        1
+      ],
+      "outgoing_pairings": [
+        1
+      ],
+      "covariant_bulk_flow": 0,
+      "rotor_determinant_winding": 0
+    }
+  ],
+  "compact_integer_flow": {
+    "incoming_without_Hu_or_its_hole": {
+      "pairing_deficit": -2,
+      "pairing_units_per_full_turn": -12,
+      "hypothetical_turns_required_by_pairing_alone": "1/6"
+    },
+    "outgoing_without_a_rotor_step": {
+      "pairing_deficit": 2,
+      "pairing_units_per_full_turn": 12,
+      "hypothetical_turns_required_by_pairing_alone": "1/6"
+    }
+  },
+  "noncompact_gaussian_oscillator": {
+    "triplet_steps": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "dressed_sources": {
+      "step_0_in_in": {
+        "A": [],
+        "B": []
+      },
+      "step_0_in_out": {
+        "A": [],
+        "B": []
+      },
+      "step_0_out_in": {
+        "A": [],
+        "B": []
+      },
+      "step_0_out_out": {
+        "A": [],
+        "B": []
+      },
+      "step_1_in_in": {
+        "A": [],
+        "B": [
+          [
+            "s1",
+            1
+          ],
+          [
+            "s2",
+            -1
+          ]
+        ]
+      },
+      "step_1_in_out": {
+        "A": [],
+        "B": [
+          [
+            "s1",
+            1
+          ],
+          [
+            "s2",
+            -1
+          ]
+        ]
+      },
+      "step_1_out_in": {
+        "A": [],
+        "B": [
+          [
+            "s1",
+            1
+          ],
+          [
+            "s2",
+            -1
+          ]
+        ]
+      },
+      "step_1_out_out": {
+        "A": [],
+        "B": [
+          [
+            "s1",
+            1
+          ],
+          [
+            "s2",
+            -1
+          ]
+        ]
+      }
+    },
+    "mistimed_control": {
+      "A": [
+        [
+          "offset",
+          -1
+        ],
+        [
+          "s1",
+          1
+        ]
+      ],
+      "B": [
+        [
+          "offset",
+          1
+        ],
+        [
+          "s2",
+          -1
+        ]
+      ]
+    },
+    "gaussian_correction": "1 for all dressed rows, including nonzero oscillator inertia"
+  },
+  "boundary_twist_candidates": {
+    "collective": {
+      "one_block_order": 6,
+      "nonzero_slots": 12,
+      "one_block_twist_coset_weights": [
+        "0",
+        "1/6",
+        "2/3",
+        "3/2",
+        "2/3",
+        "1/6"
+      ],
+      "first_twist_weight_at_charge_alpha": "1/6",
+      "first_twist_cartan_charge": [
+        0,
+        1,
+        -1,
+        -5
+      ],
+      "shift_by_sector": [
+        [
+          [
+            0,
+            1,
+            -1,
+            7
+          ],
+          "1/2"
+        ],
+        [
+          [
+            0,
+            1,
+            1,
+            1
+          ],
+          "-1/2"
+        ],
+        [
+          [
+            2,
+            -1,
+            -1,
+            3
+          ],
+          "-1/2"
+        ],
+        [
+          [
+            2,
+            -1,
+            1,
+            -3
+          ],
+          "1/2"
+        ]
+      ]
+    },
+    "family": {
+      "one_block_order": 2,
+      "nonzero_slots": 4,
+      "one_block_twist_coset_weights": [
+        "0",
+        "1/2"
+      ],
+      "first_twist_weight_at_charge_alpha": "1/2",
+      "first_twist_cartan_charge": [
+        0,
+        1,
+        -1,
+        -5
+      ],
+      "shift_by_sector": [
+        [
+          [
+            0,
+            1,
+            -1,
+            7
+          ],
+          "1/2"
+        ],
+        [
+          [
+            0,
+            1,
+            1,
+            1
+          ],
+          "-1/2"
+        ],
+        [
+          [
+            2,
+            -1,
+            -1,
+            3
+          ],
+          "-1/2"
+        ],
+        [
+          [
+            2,
+            -1,
+            1,
+            -3
+          ],
+          "1/2"
+        ]
+      ]
+    }
+  }
+}
