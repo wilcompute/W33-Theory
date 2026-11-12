@@ -1,0 +1,345 @@
+{
+  "elements": 60,
+  "samples": [
+    {
+      "angle": 0.05,
+      "sectors": [
+        {
+          "weight": [
+            -2,
+            3,
+            1,
+            5
+          ],
+          "matching_sigma_min": 0.5496665761692505,
+          "reflection": [
+            0.049931898606445174,
+            -0.9987526247783065
+          ]
+        },
+        {
+          "weight": [
+            0,
+            -1,
+            -3,
+            5
+          ],
+          "matching_sigma_min": 0.5834140250957027,
+          "reflection": [
+            -0.04999788330479559,
+            0.9987493237369628
+          ]
+        }
+      ]
+    },
+    {
+      "angle": 0.2,
+      "sectors": [
+        {
+          "weight": [
+            -2,
+            3,
+            1,
+            5
+          ],
+          "matching_sigma_min": 0.5496725438283104,
+          "reflection": [
+            0.19848495314508469,
+            -0.980103934985975
+          ]
+        },
+        {
+          "weight": [
+            0,
+            -1,
+            -3,
+            5
+          ],
+          "matching_sigma_min": 0.5834173201888784,
+          "reflection": [
+            -0.19874223627253795,
+            0.9800517963461883
+          ]
+        }
+      ]
+    },
+    {
+      "angle": 0.45,
+      "sectors": [
+        {
+          "weight": [
+            -2,
+            3,
+            1,
+            5
+          ],
+          "matching_sigma_min": 0.5497004508108145,
+          "reflection": [
+            0.43459336605388943,
+            -0.9006267851790498
+          ]
+        },
+        {
+          "weight": [
+            0,
+            -1,
+            -3,
+            5
+          ],
+          "matching_sigma_min": 0.5834323160764809,
+          "reflection": [
+            -0.4351109038211881,
+            0.9003768663042769
+          ]
+        }
+      ]
+    },
+    {
+      "angle": 0.8,
+      "sectors": [
+        {
+          "weight": [
+            -2,
+            3,
+            1,
+            5
+          ],
+          "matching_sigma_min": 0.5497713430744385,
+          "reflection": [
+            0.7168773756746037,
+            -0.6971992744157836
+          ]
+        },
+        {
+          "weight": [
+            0,
+            -1,
+            -3,
+            5
+          ],
+          "matching_sigma_min": 0.5834703317510563,
+          "reflection": [
+            -0.7175379804646885,
+            0.69651937991032
+          ]
+        }
+      ]
+    },
+    {
+      "angle": 1.2,
+      "sectors": [
+        {
+          "weight": [
+            -2,
+            3,
+            1,
+            5
+          ],
+          "matching_sigma_min": 0.5498873489336666,
+          "reflection": [
+            0.9317111021412654,
+            -0.3632002507525432
+          ]
+        },
+        {
+          "weight": [
+            0,
+            -1,
+            -3,
+            5
+          ],
+          "matching_sigma_min": 0.5835326049161763,
+          "reflection": [
+            -0.9321585416400264,
+            0.3620503462883849
+          ]
+        }
+      ]
+    },
+    {
+      "angle": 1.65,
+      "sectors": [
+        {
+          "weight": [
+            -2,
+            3,
+            1,
+            5
+          ],
+          "matching_sigma_min": 0.5500345356991467,
+          "reflection": [
+            0.9969421640176801,
+            0.07814295620044485
+          ]
+        },
+        {
+          "weight": [
+            0,
+            -1,
+            -3,
+            5
+          ],
+          "matching_sigma_min": 0.5836127145702619,
+          "reflection": [
+            -0.9968377051173967,
+            -0.07946439237975765
+          ]
+        }
+      ]
+    },
+    {
+      "angle": 2.1,
+      "sectors": [
+        {
+          "weight": [
+            -2,
+            3,
+            1,
+            5
+          ],
+          "matching_sigma_min": 0.5501728756942367,
+          "reflection": [
+            0.8636425188821717,
+            0.5041047506013564
+          ]
+        },
+        {
+          "weight": [
+            0,
+            -1,
+            -3,
+            5
+          ],
+          "matching_sigma_min": 0.5836894125892544,
+          "reflection": [
+            -0.8630597549403979,
+            -0.5051018307254679
+          ]
+        }
+      ]
+    },
+    {
+      "angle": 2.55,
+      "sectors": [
+        {
+          "weight": [
+            -2,
+            3,
+            1,
+            5
+          ],
+          "matching_sigma_min": 0.550280998946572,
+          "reflection": [
+            0.5581465694270897,
+            0.8297423738949161
+          ]
+        },
+        {
+          "weight": [
+            0,
+            -1,
+            -3,
+            5
+          ],
+          "matching_sigma_min": 0.5837498088692205,
+          "reflection": [
+            -0.5575238972131717,
+            -0.8301608904521085
+          ]
+        }
+      ]
+    },
+    {
+      "angle": 2.9,
+      "sectors": [
+        {
+          "weight": [
+            -2,
+            3,
+            1,
+            5
+          ],
+          "matching_sigma_min": 0.5503283218933402,
+          "reflection": [
+            0.23948205469657305,
+            0.9709007907496565
+          ]
+        },
+        {
+          "weight": [
+            0,
+            -1,
+            -3,
+            5
+          ],
+          "matching_sigma_min": 0.5837764937642678,
+          "reflection": [
+            -0.23916871536977347,
+            -0.9709780252860364
+          ]
+        }
+      ]
+    },
+    {
+      "angle": 3.141592653589793,
+      "sectors": [
+        {
+          "weight": [
+            -2,
+            3,
+            1,
+            5
+          ],
+          "matching_sigma_min": 0.5503383383616165,
+          "reflection": [
+            1.210232641954587e-17,
+            1.0000000000000002
+          ]
+        },
+        {
+          "weight": [
+            0,
+            -1,
+            -3,
+            5
+          ],
+          "matching_sigma_min": 0.5837821151853999,
+          "reflection": [
+            -1.9840737131775848e-17,
+            -1.0
+          ]
+        }
+      ]
+    }
+  ],
+  "pi_endpoint_max_imaginary_scalar": 1.7047818270049512e-17,
+  "conjugated_loop_summary": [
+    {
+      "weight": [
+        -2,
+        3,
+        1,
+        5
+      ],
+      "sampled_winding": 0.9999999999999999,
+      "max_sampled_step": 0.4503008974283023,
+      "max_sampled_phase_correction": 0.0009809700070892895,
+      "pi_endpoint_reduced_reflection_sign": 1,
+      "minimum_sampled_matching_gap": 0.5496665761692505
+    },
+    {
+      "weight": [
+        0,
+        -1,
+        -3,
+        5
+      ],
+      "sampled_winding": 1.0,
+      "max_sampled_step": 0.4500147864104211,
+      "max_sampled_phase_correction": 0.00034458855258667146,
+      "pi_endpoint_reduced_reflection_sign": 1,
+      "minimum_sampled_matching_gap": 0.5834140250957027
+    }
+  ],
+  "sampled_total_adjoint_winding": 3.0
+}

@@ -22,9 +22,9 @@ When two files state the same result in different language, consult the
 human-curated [RESULTS VOCABULARY](RESULTS_VOCABULARY.md) for semantic
 aliases, current status, supersessions, and primary artifacts.
 
-Indexed **14144** files; **19008** distinctive results
+Indexed **14146** files; **19009** distinctive results
 (a token in >25 files identifies a topic and is dropped unless explicitly pinned).
-**8365** appear in exactly one file — the sharpest signal.
+**8366** appear in exactly one file — the sharpest signal.
 
 ## Index
 
@@ -314,6 +314,7 @@ Indexed **14144** files; **19008** distinctive results
 | `[48,144,336]` | `exploration/w33_affine_e8_divisor_kernel_ladder_bridge.py` |
 | `[50,200,800]` | `analysis/toe_20261103_gravity_entanglement_models.py` |
 | `[54,108,108]` | `analysis/w33_20261014_toe77_H27_shared_octagon_group.py` |
+| `[60,100,160]` | `analysis/toe_20261113_monopole_complex_response.py` |
 | `[651,15,256]` | `analysis/w33_BREAKTHROUGH_42_grassmann_ag_codes_substrate.py` |
 | `[81,121,161]` | `analysis/w33_pass11601_matched_metric_dirac.py` |
 | `[820,620,10]` | `analysis/2026-10-22_pascals_golden_hamada_CSS_hidden_checks.md` |
@@ -4489,9 +4490,9 @@ Indexed **14144** files; **19008** distinctive results
 | `20261101` | `analysis/2026-11-01_five_plus_three_w33_physics_continuation.md` · `analysis/2026-11-01_native_measurements_controls_and_quantum_geometry.md` · `analysis/w33_20261101_common_cubic_spinor_extension.py` · `analysis/w33_20261101_five_plus_three.py` · *(+9)* |
 | `20261106` | `analysis/2026-11-06_sterile_parent_and_changed_work_audit.md` · `analysis/PASS12638_E7_KRAMERS_CHANNELS.md` · `analysis/PASS12645_EXACT_FOUR_QUBIT_ONE_SIXTEENTH.md` · `analysis/PASS20261108_GAUGE_E6_OPTICAL_FOLLOWTHROUGH.md` · *(+6)* |
 | `20261107` | `analysis/2026-11-07_inverse_higgs_production_and_sterile_spectra.md` · `analysis/2026-11-07_natural_constants_derivation_catalog.md` · `analysis/PASS20261107_CONSTANTS_FIVE_FRONTS.md` · `analysis/toe_20261107_coupled_scalar_moments.py` · *(+6)* |
-| `20261111` | `analysis/2026-11-11_monopole_electric_phase.md` · `analysis/2026-11-11_monopole_independent_matter.md` · `analysis/2026-11-11_monopole_neutral_core.md` · `analysis/2026-11-11_monopole_neutral_tail.md` · *(+13)* |
+| `20261111` | `analysis/2026-11-11_monopole_electric_phase.md` · `analysis/2026-11-11_monopole_independent_matter.md` · `analysis/2026-11-11_monopole_neutral_core.md` · `analysis/2026-11-11_monopole_neutral_tail.md` · *(+14)* |
 | `20261112` | `analysis/2026-11-12_canonical_uv_fixed_point.md` · `analysis/2026-11-12_e6_only_weak_gauging.md` · `analysis/2026-11-12_mixed_rank_relevance.md` · `analysis/2026-11-12_parent_theta_lattice.md` · *(+9)* |
-| `20261113` | `analysis/2026-11-13_bifundamental_mediator_uv.md` · `analysis/2026-11-13_canonical_strong_cp.md` · `analysis/2026-11-13_complex_triplet_proton_decay.md` · `analysis/2026-11-13_mixed_mediator_threshold.md` · *(+15)* |
+| `20261113` | `analysis/2026-11-13_bifundamental_mediator_uv.md` · `analysis/2026-11-13_canonical_strong_cp.md` · `analysis/2026-11-13_complex_triplet_proton_decay.md` · `analysis/2026-11-13_mixed_mediator_threshold.md` · *(+17)* |
 | `20262000` | `analysis/2026_11_03_csg_action_heldout.py` |
 | `20481813` | `analysis/PASS2560_2567_SEVEN_FRONTIERS_RELEASE.md` |
 | `20544048` | `analysis/w33_pass5430_q3_radius10_false_vote4_frontier.py` |

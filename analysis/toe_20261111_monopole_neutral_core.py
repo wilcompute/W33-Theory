@@ -76,7 +76,7 @@ def model():
         matter = state[:, 8:].reshape(-1, 5, 2, 3)
         return coordinates, matter
 
-    def residual(state):
+    def residual(state, holomorphic_only=False):
         coordinates, matter = fields(state)
         x, z = matter[:, :3], matter[:, 3:]
         ad = coordinates @ diagonal
@@ -114,6 +114,10 @@ def model():
                 f_x[:, k] += (z[:, j] @ factor) * shift[:, None, None]
                 f_z[:, j] += (x[:, k] @ np.swapaxes(factor, -1, -2)) * shift[:, None, None]
 
+        f = np.column_stack([f_adj, f_x.reshape(-1, 18), f_z.reshape(-1, 12)])
+        if holomorphic_only:
+            return f
+
         delta = ad[:, p] - ad[:, q]
         d_diag = np.zeros_like(ad)
         d_diag[:, p], d_diag[:, q] = left**2 - right**2, right**2 - left**2
@@ -124,8 +128,7 @@ def model():
         d_adj += np.einsum('nij,aij->na', d_matter, neutral)
         d_family = np.einsum('nkia,nkib->nab', x, x) - np.einsum('nkia,nkib->nab', z, z)
         d_family -= np.trace(d_family, axis1=1, axis2=2)[:, None, None] * np.eye(3) / 3
-        return np.column_stack([f_adj, f_x.reshape(-1, 18), f_z.reshape(-1, 12),
-                                d_adj / 2, d_family.reshape(-1, 9) / 2])
+        return np.column_stack([f, d_adj / 2, d_family.reshape(-1, 9) / 2])
 
     def generators(state):
         coordinates, matter = fields(state)
