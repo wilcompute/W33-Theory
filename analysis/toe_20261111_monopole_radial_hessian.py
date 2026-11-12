@@ -12,7 +12,7 @@ import toe_20261111_monopole_neutral_core as core
 OUT = 'data/toe_20261111_monopole_radial_hessian.json'
 
 
-def half_hessian(residual, state, radius, step):
+def potential_half_hessian(residual, state, step, curvature_sign=1):
     """Half the local potential Hessian, including the residual curvature."""
     count, dimension = state.shape
     basis = np.eye(dimension)
@@ -22,13 +22,17 @@ def half_hessian(residual, state, radius, step):
     hessian[:, 1:, 1:] = jacobian.transpose(0, 2, 1) @ jacobian
     single = [residual(state + 1j*step*v).real - base for v in basis[1:]]
     for i, curvature in enumerate(single, 1):
-        hessian[:, i, i] -= 2 * np.sum(base * curvature, axis=1) / step**2
+        hessian[:, i, i] -= curvature_sign * 2 * np.sum(base * curvature, axis=1) / step**2
         for j in range(1, i):
             mixed = residual(state + 1j*step*(basis[i] + basis[j])).real - base
             correction = np.sum(base * (mixed - single[i-1] - single[j-1]), axis=1) / step**2
-            hessian[:, i, j] -= correction
-            hessian[:, j, i] -= correction
-    hessian *= radius[:, None, None]**2
+            hessian[:, i, j] -= curvature_sign * correction
+            hessian[:, j, i] -= curvature_sign * correction
+    return hessian
+
+
+def half_hessian(residual, state, radius, step):
+    hessian = potential_half_hessian(residual, state, step) * radius[:, None, None]**2
 
     # Gauge angular potential 3(1-K^2)^2/r^2 + 2 K^2 H^2.
     k, h = state[:, 0] / core.SQRT6, state[:, 1]
@@ -38,7 +42,7 @@ def half_hessian(residual, state, radius, step):
     return hessian
 
 
-def assemble(residual, grid, state, boundary, step):
+def assemble(residual, grid, state, boundary, step, local_form=half_hessian):
     count = (len(grid)-1)//2
     dimension = state.shape[1]
     nodes, weights = np.polynomial.legendre.leggauss(5)
@@ -50,7 +54,7 @@ def assemble(residual, grid, state, boundary, step):
     radii = grid[indices[:, 0], None] + width[:, None]*x
     quadrature = width[:, None] * weights/2
     mid = np.einsum('qn,cna->cqa', shape, state[indices])
-    local = half_hessian(residual, mid.reshape(-1, dimension), radii.ravel(), step)
+    local = local_form(residual, mid.reshape(-1, dimension), radii.ravel(), step)
     local = local.reshape(count, len(x), dimension, dimension)
 
     # Both K and M are in the kinetic coordinates of the radial energy.
