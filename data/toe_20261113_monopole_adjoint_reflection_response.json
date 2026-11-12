@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "scope": "local reflection derivative at zero heavy phase",
+  "sectors": [
+    {
+      "elements": 60,
+      "weight": [
+        -2,
+        3,
+        1,
+        5
+      ],
+      "slopes": [
+        {
+          "step": 0.01,
+          "total_phase_slope": 0.9990532091380643,
+          "core_profile_contribution": -0.0009467908619357202
+        },
+        {
+          "step": 0.003,
+          "total_phase_slope": 0.9990532088890731,
+          "core_profile_contribution": -0.0009467911109268812
+        }
+      ]
+    },
+    {
+      "elements": 60,
+      "weight": [
+        0,
+        -1,
+        -3,
+        5
+      ],
+      "slopes": [
+        {
+          "step": 0.01,
+          "total_phase_slope": 1.0003749802866704,
+          "core_profile_contribution": 0.00037498028667037886
+        },
+        {
+          "step": 0.003,
+          "total_phase_slope": 1.0003749803420998,
+          "core_profile_contribution": 0.0003749803420998177
+        }
+      ]
+    },
+    {
+      "elements": 160,
+      "weight": [
+        -2,
+        3,
+        1,
+        5
+      ],
+      "slopes": [
+        {
+          "step": 0.01,
+          "total_phase_slope": 0.9990508042824516,
+          "core_profile_contribution": -0.0009491957175483678
+        },
+        {
+          "step": 0.003,
+          "total_phase_slope": 0.9990508042089241,
+          "core_profile_contribution": -0.0009491957910758853
+        }
+      ]
+    },
+    {
+      "elements": 160,
+      "weight": [
+        0,
+        -1,
+        -3,
+        5
+      ],
+      "slopes": [
+        {
+          "step": 0.01,
+          "total_phase_slope": 1.0003760445610546,
+          "core_profile_contribution": 0.00037604456105455597
+        },
+        {
+          "step": 0.003,
+          "total_phase_slope": 1.0003760445584176,
+          "core_profile_contribution": 0.00037604455841755424
+        }
+      ]
+    }
+  ]
+}

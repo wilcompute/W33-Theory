@@ -20,7 +20,7 @@ def trace_gradient(a):
 
 
 def trace_derivative(a, variation):
-    powers = [np.eye(len(a), dtype=a.dtype)]
+    powers = [np.eye(a.shape[-1], dtype=a.dtype)]
     for _ in range(4):
         powers.append(powers[-1] @ a)
     return (-283 * variation
@@ -29,13 +29,40 @@ def trace_derivative(a, variation):
 
 
 def mass_blocks(a, left, right):
+    adjoint = a.conj().T
     holomorphic = np.array([[np.trace(x @ trace_derivative(a, y))
                              for y in right] for x in left])
-    gauge_left = np.array([[np.trace(x @ (y @ a.T - a.T @ y))
+    gauge_left = np.array([[np.trace(x @ (y @ adjoint - adjoint @ y))
                             for y in right] for x in left])
-    gauge_right = np.array([[np.trace(y @ (x @ a.T - a.T @ x))
+    gauge_right = np.array([[np.trace(y @ (x @ adjoint - adjoint @ x))
                              for y in right] for x in left])
     return holomorphic, gauge_left, gauge_right
+
+
+def mixed_f_residual(embedding, matter):
+    source = sum(matter[..., 3+j, :, :] @ np.swapaxes(matter[..., k, :, :], -1, -2)
+                 for j, k in neutral.trial.MIXED)
+    return np.einsum('aij,...ij->...a', embedding[:, :2, :2], source)
+
+
+def trace_f_residual(embedding, a, trace_at_vacuum):
+    return np.einsum('aij,...ji->...a', embedding, trace_gradient(a)-trace_at_vacuum)
+
+
+def odd_force(embedding, a, matter, trace_at_vacuum):
+    """Coefficient of sin(phi) in the odd local scalar energy gradient."""
+    mixed = mixed_f_residual(embedding, matter)
+    trace = trace_f_residual(embedding, a, trace_at_vacuum)
+    trace_plane = np.einsum('...a,aij->...ij', trace, embedding[:, :2, :2])
+    source = np.zeros_like(matter)
+    for j, k in neutral.trial.MIXED:
+        source[..., k, :, :] += 2 * np.swapaxes(trace_plane, -1, -2) @ matter[..., 3+j, :, :]
+        source[..., 3+j, :, :] += 2 * trace_plane @ matter[..., k, :, :]
+    source_adjoint = -2 * np.stack([
+        np.sum(mixed * np.einsum('aij,...ji->...a', embedding, trace_derivative(a, direction)), axis=-1)
+        for direction in embedding
+    ], axis=-1)
+    return source_adjoint, source, np.sum(mixed * trace, axis=-1)
 
 
 def native_sectors():
@@ -120,29 +147,10 @@ def calculate():
     for state in profile['normalized_profile_samples']:
         a = np.einsum('a,aij->ij', np.array(state[1:8]), embedding)
         matter = np.array(state[8:]).reshape(5, 2, 3)
-        plane = embedding[:, :2, :2]
-
-        def mixed_residual(fields):
-            source = sum(fields[3+j] @ fields[k].T for j, k in neutral.trial.MIXED)
-            return np.einsum('aij,ij->a', plane, source)
-
-        def trace_residual(adjoint_field):
-            return np.einsum('aij,ji->a', embedding,
-                             trace_gradient(adjoint_field)-trace_at_vacuum)
-
-        mixed = mixed_residual(matter)
-        trace = trace_residual(a)
-        overlaps.append(float(np.dot(mixed, trace)))
-        trace_plane = np.einsum('a,aij->ij', trace, plane)
-        source = np.zeros_like(matter)
-        for j, k in neutral.trial.MIXED:
-            source[k] += 2 * trace_plane.T @ matter[3+j]
-            source[3+j] += 2 * trace_plane @ matter[k]
+        source_adjoint, source, overlap = odd_force(embedding, a, matter, trace_at_vacuum)
+        overlaps.append(float(overlap))
         magnitude = np.linalg.norm(source)
         matter_phase_sources.append(float(magnitude))
-        source_adjoint = -2 * np.array([np.dot(mixed, np.einsum(
-            'aij,ji->a', embedding, trace_derivative(a, direction)))
-            for direction in embedding])
         scalar_source = np.r_[source_adjoint, source.ravel()]
         total_norm = np.linalg.norm(scalar_source)
         odd_scalar_sources.append(scalar_source.tolist())
@@ -151,10 +159,10 @@ def calculate():
             step = 1e-5j / total_norm
             delta_a = step * np.einsum('a,aij->ij', source_adjoint, embedding)
             delta_matter = step * source
-            plus = np.linalg.norm(mixed_residual(matter + delta_matter)
-                                  + z * trace_residual(a + delta_a))**2
-            minus = np.linalg.norm(mixed_residual(matter - delta_matter)
-                                   + z * trace_residual(a - delta_a))**2
+            plus = np.linalg.norm(mixed_f_residual(embedding, matter + delta_matter)
+                                  + z * trace_f_residual(embedding, a + delta_a, trace_at_vacuum))**2
+            minus = np.linalg.norm(mixed_f_residual(embedding, matter - delta_matter)
+                                   + z * trace_f_residual(embedding, a - delta_a, trace_at_vacuum))**2
             np.testing.assert_allclose((plus-minus) / 2e-5, z.imag * total_norm, atol=1e-7)
         dual_sign = np.array([1, 1, 1, -1, -1])[:, None, None]
         ward = []

@@ -42,9 +42,8 @@ def half_hessian(residual, state, radius, step):
     return hessian
 
 
-def assemble(residual, grid, state, boundary, step, local_form=half_hessian):
+def quadratic_elements(grid):
     count = (len(grid)-1)//2
-    dimension = state.shape[1]
     nodes, weights = np.polynomial.legendre.leggauss(5)
     x = (1 + nodes)/2
     shape = np.column_stack([(1-x)*(1-2*x), 4*x*(1-x), x*(2*x-1)])
@@ -53,16 +52,23 @@ def assemble(residual, grid, state, boundary, step, local_form=half_hessian):
     width = grid[indices[:, 2]] - grid[indices[:, 0]]
     radii = grid[indices[:, 0], None] + width[:, None]*x
     quadrature = width[:, None] * weights/2
+    differential = derivatives[None] / width[:, None, None]
+    return indices, radii, shape, differential, quadrature
+
+
+def assemble(residual, grid, state, boundary, step, local_form=half_hessian):
+    indices, radii, shape, differential, quadrature = quadratic_elements(grid)
+    count, order = radii.shape
+    dimension = state.shape[1]
     mid = np.einsum('qn,cna->cqa', shape, state[indices])
     local = local_form(residual, mid.reshape(-1, dimension), radii.ravel(), step)
-    local = local.reshape(count, len(x), dimension, dimension)
+    local = local.reshape(count, order, dimension, dimension)
 
     # Both K and M are in the kinetic coordinates of the radial energy.
-    kinetic = np.broadcast_to(radii[:, :, None]**2, (count, len(x), dimension)).copy()
+    kinetic = np.broadcast_to(radii[:, :, None]**2, (count, order, dimension)).copy()
     kinetic[:, :, 0] = 1
     form = np.einsum('cq,qi,cqab,qj->ciajb', quadrature, shape, local, shape, optimize=True)
     mass = np.zeros_like(form)
-    differential = derivatives[None] / width[:, None, None]
     diagonal = np.arange(dimension)
     form[:, :, diagonal, :, diagonal] += np.einsum(
         'cq,cqi,cqa,cqj->acij', quadrature, differential, kinetic, differential, optimize=True)

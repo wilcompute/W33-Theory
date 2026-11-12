@@ -13,6 +13,8 @@ import toe_20261113_monopole_adjoint_phase as phase
 
 OUT = phase.ROOT / 'data/toe_20261113_monopole_adjoint_shooting.json'
 MESH = phase.ROOT / 'data/toe_20261113_monopole_adjoint_shooting_mesh.json'
+RESPONSE = phase.ROOT / 'data/toe_20261113_monopole_complex_response.json'
+RESPONSE_OUT = phase.ROOT / 'data/toe_20261113_monopole_adjoint_reflection_response.json'
 SIGMA1 = np.array([[0, 1], [1, 0]])
 ANGULAR = np.kron(SIGMA1, np.eye(2))
 FLUX = np.block([[-ANGULAR, np.zeros((4, 4))],
@@ -112,6 +114,14 @@ def reference_profiles(mesh):
                             state=np.vstack((origin, states, vacuum)).tolist())]
 
 
+def interpolate_scalar(grid, state, embedding):
+    origin_slopes = np.r_[0., (state[1, 1]-state[0, 1])/grid[1], np.zeros(6)]
+    scalar = CubicSpline(grid, state, bc_type=((1, origin_slopes), 'not-a-knot'))
+    fine = np.unique(np.r_[grid, np.geomspace(1e-6, grid[-1], 660)])
+    matrices = np.einsum('na,aij->nij', scalar(fine)[:, 1:8], embedding)
+    return scalar, fine, matrices
+
+
 def calculate(mesh):
     a0, sectors = phase.native_sectors()
     embedding, profiles = reference_profiles(mesh)
@@ -119,13 +129,9 @@ def calculate(mesh):
     for source in profiles:
         grid = np.array(source['grid'])
         state = np.array(source['state'])[:, :8]
-        scalar = CubicSpline(grid, state, bc_type=((1, np.r_[0., np.diff(state[:2, 1])[0] / grid[1],
-                                                                np.zeros(6)]), 'not-a-knot'))
+        scalar, fine, matrices = interpolate_scalar(grid, state, embedding)
         # Evaluate the polynomial mass on a refined mesh. The integration
         # samples a cubic interpolant of these values.
-        fine = np.unique(np.r_[grid, np.geomspace(1e-6, grid[-1], 660)])
-        dense = scalar(fine)
-        matrices = np.einsum('na,aij->nij', dense[:, 1:8], embedding)
         for weight, roots in sectors:
             asymptotic = coefficients(a0, roots)
             mass = CubicSpline(fine, np.array([coefficients(a, roots) for a in matrices]))
@@ -160,13 +166,65 @@ def calculate(mesh):
                 sectors=rows)
 
 
+def calculate_reflection_response(mesh, response_path):
+    a0, sectors = phase.native_sectors()
+    embedding, profiles = reference_profiles(mesh)
+    responses = {row['elements']: row for row in
+                 json.loads(response_path.read_text(encoding='utf-8'))['profiles']}
+    rows = []
+    for source in profiles:
+        count = source['count']
+        if count not in (min(responses), max(responses)):
+            continue
+        grid = np.array(source['grid'])
+        state = np.array(source['state'])[:, :8]
+        eta = np.array(responses[count]['response_at_nodes'])[:, :8]
+        scalar, fine, background = interpolate_scalar(grid, state, embedding)
+        _, _, tangent = interpolate_scalar(grid, eta, embedding)
+        for weight, roots in (sectors[0], sectors[-1]):
+            exterior = coefficients(a0, roots)
+            perturbation = np.array([coefficients(a + 1e-20j * v, roots)
+                                     for a, v in zip(background, tangent)])
+            mass = CubicSpline(fine, perturbation.real)
+            derivative = CubicSpline(fine, perturbation.imag / 1e-20)
+            np.testing.assert_allclose(derivative(grid[-1]), 0., atol=1e-10)
+            slopes = []
+            for step in (.01, .003):
+                reflected = []
+                for angle in (-step, step):
+                    def profile(radius):
+                        k = scalar(radius)[0] / phase.neutral.SQRT6
+                        return k, mass(radius) + 1j * angle * derivative(radius)
+
+                    gap, reflection = match(profile, exterior, grid[-1], 1e-6, .14,
+                                            np.exp(1j * angle), 1., 3e-9)
+                    assert gap > .4 and abs(abs(reflection)-1) < 2e-7
+                    reflected.append(reflection)
+                slope = float(np.angle(reflected[1] / reflected[0]) / (2*step))
+                slopes.append(dict(step=step, total_phase_slope=slope,
+                                   core_profile_contribution=slope-1))
+            assert abs(slopes[0]['total_phase_slope']-slopes[1]['total_phase_slope']) < 2e-5
+            result = dict(elements=count, weight=weight.tolist(), slopes=slopes)
+            rows.append(result)
+            print(result, flush=True)
+    return dict(status='PASS', scope='local reflection derivative at zero heavy phase', sectors=rows)
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     source = parser.add_mutually_exclusive_group()
     source.add_argument('--mesh', type=Path, default=MESH, help='JSON of converged scalar profile meshes')
     source.add_argument('--sampled', action='store_true', help='Print the nine-sample control')
+    parser.add_argument('--linear-response', type=Path, nargs='?', const=RESPONSE,
+                        help='Compute reflection derivatives from the frozen or specified response')
     arguments = parser.parse_args()
-    result = json.dumps(calculate(None if arguments.sampled else arguments.mesh), indent=2) + '\n'
-    if not arguments.sampled:
-        OUT.write_text(result, encoding='utf-8')
-    print(result)
+    if arguments.linear_response:
+        if arguments.sampled:
+            parser.error('reflection derivatives require a finite-element mesh')
+        result = calculate_reflection_response(arguments.mesh, arguments.linear_response)
+        RESPONSE_OUT.write_text(json.dumps(result, indent=2) + '\n', encoding='utf-8')
+    else:
+        result = json.dumps(calculate(None if arguments.sampled else arguments.mesh), indent=2) + '\n'
+        if not arguments.sampled:
+            OUT.write_text(result, encoding='utf-8')
+        print(result)

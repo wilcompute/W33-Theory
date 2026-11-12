@@ -63,50 +63,65 @@ def phase_form(embedding):
     return form, d_jacobian
 
 
-def vacuum_gauge_tangents(embedding, vacuum):
-    """Compact imaginary generators on the seven adjoint and thirty matter slots."""
-
+def imaginary_gauge_action(embedding):
+    """Hermitian generators after stripping i from the compact variations."""
     symmetric = ((embedding[1:] + embedding[1:].transpose(0, 2, 1))/2).reshape(6, -1)
     _, values, right = np.linalg.svd(symmetric, full_matrices=False)
     assert sum(values > 1e-10) == 5
     internal = right[values > 1e-10].reshape(5, 27, 27)
-    adj = np.einsum('a,aij->ij', vacuum[1:8], embedding)
-    matter = vacuum[8:].reshape(5, 2, 3)
-    dual_sign = np.array([1, 1, 1, -1, -1])[:, None, None]
-    tangents = []
-    for generator in internal:
-        adjoint = np.einsum('aij,ij->a', embedding, generator@adj-adj@generator)
-        variations = dual_sign * (generator[:2, :2] @ matter)
-        tangents.append(np.r_[adjoint, variations.ravel()])
     family = [np.diag([1., -1., 0.]), np.diag([0., 1., -1.])]
     for i, j in [(0, 1), (0, 2), (1, 2)]:
         symmetric = np.zeros((3, 3))
         symmetric[i, j] = symmetric[j, i] = 1
         family.append(symmetric)
-    for generator in family:
-        tangents.append(np.r_[np.zeros(7), (dual_sign*(matter @ generator)).ravel()])
-    tangents = np.asarray(tangents).T
+    dual_sign = np.array([1, 1, 1, -1, -1])[:, None, None]
+
+    def action(fields):
+        adj = np.einsum('...a,aij->...ij', fields[..., :7], embedding)
+        matter = fields[..., 7:].reshape(fields.shape[:-1] + (5, 2, 3))
+        tangents = []
+        for generator in internal:
+            adjoint = np.einsum('aij,...ij->...a', embedding, generator@adj-adj@generator)
+            variations = (dual_sign * (generator[:2, :2] @ matter)).reshape(fields.shape[:-1] + (30,))
+            tangents.append(np.concatenate((adjoint, variations), axis=-1))
+        for generator in family:
+            variations = (dual_sign * (matter @ generator)).reshape(fields.shape[:-1] + (30,))
+            tangents.append(np.concatenate((np.zeros_like(fields[..., :7]), variations), axis=-1))
+        return np.stack(tangents, axis=-1)
+
+    return action
+
+
+def vacuum_gauge_tangents(embedding, vacuum):
+    tangents = imaginary_gauge_action(embedding)(vacuum[1:])
     assert np.linalg.matrix_rank(tangents) == 8
     return tangents
 
 
+def odd_local_energy(residual, embedding, state, radii, trace_shift=None):
+    a = np.einsum('na,aij->nij', state[:, 1:8], embedding)
+    matter = state[:, 8:].reshape(-1, 5, 2, 3)
+    x, z = matter[:, :3], matter[:, 3:]
+    adjoint = a.conj().transpose(0, 2, 1)
+    moment = a @ adjoint-adjoint @ a
+    moment[:, :2, :2] += np.einsum('nkia,nkja->nij', x, x.conj())
+    moment[:, :2, :2] -= np.einsum('nkia,nkja->nij', z.conj(), z)
+    d_e = np.einsum('nij,aij->na', moment, embedding)
+    d_f = np.einsum('nkia,nkib->nab', x, x.conj()) - np.einsum('nkia,nkib->nab', z.conj(), z)
+    d_f -= np.trace(d_f, axis1=1, axis2=2)[:, None, None]*np.eye(3)/3
+    k = np.abs(state[:, 0]/core.SQRT6)**2
+    f = residual(state)[:, :37]
+    if trace_shift is not None:
+        f[:, :7] += trace_shift
+    return (radii**2 * (np.sum(np.abs(f)**2, axis=1)
+                        + np.sum(np.abs(d_e)**2, axis=1)/4
+                        + np.sum(np.abs(d_f)**2, axis=(1, 2))/4)
+            + 3*(1-k)**2/radii**2 + 2*k*np.abs(state[:, 1])**2)
+
+
 def verify_local_form(residual, form, embedding, points, radii):
     def energy(state):
-        a = np.einsum('na,aij->nij', state[:, 1:8], embedding)
-        matter = state[:, 8:].reshape(-1, 5, 2, 3)
-        x, z = matter[:, :3], matter[:, 3:]
-        adjoint = a.conj().transpose(0, 2, 1)
-        moment = a @ adjoint-adjoint @ a
-        moment[:, :2, :2] += np.einsum('nkia,nkja->nij', x, x.conj())
-        moment[:, :2, :2] -= np.einsum('nkia,nkja->nij', z.conj(), z)
-        d_e = np.einsum('nij,aij->na', moment, embedding)
-        d_f = np.einsum('nkia,nkib->nab', x, x.conj()) - np.einsum('nkia,nkib->nab', z.conj(), z)
-        d_f -= np.trace(d_f, axis1=1, axis2=2)[:, None, None]*np.eye(3)/3
-        k = np.abs(state[:, 0]/core.SQRT6)**2
-        return (radii**2 * (np.sum(np.abs(residual(state)[:, :37])**2, axis=1)
-                            + np.sum(np.abs(d_e)**2, axis=1)/4
-                            + np.sum(np.abs(d_f)**2, axis=(1, 2))/4)
-                + 3*(1-k)**2/radii**2 + 2*k*np.abs(state[:, 1])**2)
+        return odd_local_energy(residual, embedding, state, radii)
 
     base = energy(points)
     hessian = form(residual, points, radii, 5e-4)
