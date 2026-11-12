@@ -1,0 +1,204 @@
+{
+  "status": "PASS",
+  "one_loop_b0": [
+    -21,
+    -66
+  ],
+  "order": [
+    "X2",
+    "X+",
+    "X-",
+    "Z0",
+    "Z1",
+    "A",
+    "S"
+  ],
+  "trial_R": [
+    "-r/3 + t + 1/2",
+    "-r/3 - t + 1/2",
+    "2*r/3 + 1",
+    "-2*r/3 - t + 3/2",
+    "-2*r/3 + t + 3/2",
+    "r",
+    "12*r/5 + 3/5"
+  ],
+  "trial_a": "2619*r**3/50 - 49977*r**2/800 - 2187*r*t**2/16 + 56709*r/1600 + 339/200",
+  "hessian_domain_max_R_A": "617/1552",
+  "hessian_domain_max_t_squared": "380689/8380800",
+  "minimum_corrected_slopes": [
+    {
+      "interval": [
+        "0",
+        "1/18"
+      ],
+      "free_degrees": [
+        2,
+        5,
+        6,
+        8,
+        9,
+        12
+      ],
+      "minimum_slope": "6309/1600"
+    },
+    {
+      "interval": [
+        "1/18",
+        "2/27"
+      ],
+      "free_degrees": [
+        2,
+        5,
+        6,
+        8,
+        9
+      ],
+      "minimum_slope": "17627/800"
+    },
+    {
+      "interval": [
+        "2/27",
+        "1/12"
+      ],
+      "free_degrees": [
+        2,
+        5,
+        6,
+        8
+      ],
+      "minimum_slope": "13501/576"
+    },
+    {
+      "interval": [
+        "1/12",
+        "1/9"
+      ],
+      "free_degrees": [
+        2,
+        5,
+        6
+      ],
+      "minimum_slope": "107053/4800"
+    },
+    {
+      "interval": [
+        "1/9",
+        "2/15"
+      ],
+      "free_degrees": [
+        2,
+        5
+      ],
+      "minimum_slope": "834309/40000"
+    },
+    {
+      "interval": [
+        "2/15",
+        "1/3"
+      ],
+      "free_degrees": [
+        2
+      ],
+      "minimum_slope": "18009/1600"
+    },
+    {
+      "interval": [
+        "1/3",
+        "617/1552"
+      ],
+      "free_degrees": [],
+      "minimum_slope": "526815/49664"
+    }
+  ],
+  "without_alternating_cubic": {
+    "trial_a": "89883*r**3/1600 - 34101*r**2/400 - 2187*r*u**2/32 - 2187*r*v**2/32 + 13923*r/200 + 339/200",
+    "hessian_domain_max_R_A": "1684/3329",
+    "minimum_corrected_slopes": [
+      {
+        "interval": [
+          "0",
+          "1/18"
+        ],
+        "free_degrees": [
+          2,
+          5,
+          6,
+          8,
+          9,
+          12
+        ],
+        "minimum_slope": "7623/200"
+      },
+      {
+        "interval": [
+          "1/18",
+          "2/27"
+        ],
+        "free_degrees": [
+          2,
+          5,
+          6,
+          8,
+          9
+        ],
+        "minimum_slope": "343741/6400"
+      },
+      {
+        "interval": [
+          "2/27",
+          "1/12"
+        ],
+        "free_degrees": [
+          2,
+          5,
+          6,
+          8
+        ],
+        "minimum_slope": "1380411/25600"
+      },
+      {
+        "interval": [
+          "1/12",
+          "1/9"
+        ],
+        "free_degrees": [
+          2,
+          5,
+          6
+        ],
+        "minimum_slope": "247453/4800"
+      },
+      {
+        "interval": [
+          "1/9",
+          "2/15"
+        ],
+        "free_degrees": [
+          2,
+          5
+        ],
+        "minimum_slope": "491571/10000"
+      },
+      {
+        "interval": [
+          "2/15",
+          "1/3"
+        ],
+        "free_degrees": [
+          2
+        ],
+        "minimum_slope": "50409/1600"
+      },
+      {
+        "interval": [
+          "1/3",
+          "1684/3329"
+        ],
+        "free_degrees": [],
+        "minimum_slope": "705465/26632"
+      }
+    ]
+  },
+  "spectator_sextic_forced_R": "19/5",
+  "spectator_odd_quartic_forced_R_A": "-4/11"
+}
