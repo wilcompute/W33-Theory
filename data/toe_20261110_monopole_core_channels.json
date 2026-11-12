@@ -1,0 +1,265 @@
+{
+  "status": "PASS",
+  "adjoint_monopole_weights": {
+    "-1": 20,
+    "0": 36,
+    "1": 20,
+    "-2": 1,
+    "2": 1
+  },
+  "core": {
+    "profile": "A(s) = A_perp - (5/2)s m",
+    "adjoint_projection": "-5/2",
+    "potential": "625*(s - 1)**2*(s + 1)**2*(140625*s**6 + 2140625*s**4 + 7520875*s**2 + 4190643)/768",
+    "perpendicular_scalar_force": "125*(s - 1)*(s + 1)*(9296875*s**6 + 68011375*s**4 + 91814305*s**2 + 25472133)/384",
+    "perpendicular_force_at_core": "-1061338875/128",
+    "transverse_gradient_polynomial_span": 3,
+    "outside_su5_circle_gradient": "375*(s - 1)*(s + 1)*(2875*s**4 + 6990*s**2 - 4009)",
+    "outside_su5_circle_gradient_at_core": "1503375",
+    "matter_slot": "real X[0] at e0 tensor f2",
+    "matter_force": "100*(s - 1)*(s + 1)",
+    "matter_force_at_core": "-100",
+    "frozen_spectator_ansatz_stationary": false,
+    "trial": {
+      "scalar_profile": "s(r)=r/sqrt(r^2+R^2)",
+      "gauge_profile": "K(r)=R^2/(r^2+R^2)",
+      "energy": "4*pi*(a/(g^2*R)+b*t*R+c*R^3/t)",
+      "coefficients": [
+        "63*pi/32",
+        "225*pi/16",
+        "449843766875*pi/196608"
+      ],
+      "perpendicular_variation": "delta A = epsilon*K(r)*A_perp",
+      "energy_derivative": "4*pi*d*R^3/t",
+      "derivative_coefficient": "-378464532375*pi/32768",
+      "unit_radius_squared": "-18432/17993750675 + 96*sqrt(10076537242)/17993750675",
+      "unit_frozen_trial_energy": 4490.869954466805,
+      "bogomolny_lower_bound": "120*pi*sqrt(t)/g",
+      "smooth_fixed_sector_can_saturate_bound": false
+    }
+  },
+  "fixed_torus_sector": {
+    "torus_rank": 3,
+    "fixed_matter_internal_slots": [
+      0,
+      1
+    ],
+    "fixed_complex_matter_components": 30,
+    "fixed_internal_adjoint_slots": [
+      11,
+      22,
+      24,
+      27,
+      28,
+      36,
+      43,
+      46,
+      59,
+      77
+    ],
+    "internal_adjoint_monopole_singlets": 7,
+    "internal_adjoint_monopole_triplets": 1,
+    "fixed_real_gauge_algebra_dimension": 18,
+    "fixed_holomorphic_mass_rank": 26,
+    "fixed_broken_orbit_rank": 14,
+    "fixed_uneaten_massless": 0,
+    "family_spectator_zero_consistent": true
+  },
+  "radial": {
+    "coroot_coefficients": [
+      "1/3",
+      "2/3",
+      "-1/2",
+      "-1/6"
+    ],
+    "flux_charge_counts": {
+      "0": 23,
+      "-1": 13,
+      "1": 13
+    },
+    "gauge_anomaly_zero": true,
+    "unbroken_gaugino_flux_charge_counts": {
+      "0": 6,
+      "1": 3,
+      "-1": 3
+    },
+    "combined_massless_fermion_flux_charge_counts": {
+      "0": 29,
+      "-1": 16,
+      "1": 16
+    },
+    "projected_root_current_on_unbroken_gauginos_zero": true,
+    "baryon_anomaly": [
+      0,
+      0,
+      -3,
+      9
+    ],
+    "lepton_anomaly": [
+      0,
+      0,
+      -3,
+      9
+    ],
+    "mixed_baryon_lepton_trace_for_electric_and_dyon_generators": 0,
+    "cartan_convention": [
+      "color1",
+      "color2",
+      "2T3",
+      "6Y"
+    ],
+    "root_current_rank": 12,
+    "blocks": [
+      {
+        "input_weight": [
+          -1,
+          0,
+          1,
+          1
+        ],
+        "output_weight": [
+          -1,
+          1,
+          0,
+          -4
+        ],
+        "rank": 3,
+        "matrix": [
+          [
+            "369868/201663",
+            "-4261/201663",
+            "0"
+          ],
+          [
+            "-4261/201663",
+            "369868/201663",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "2"
+          ]
+        ]
+      },
+      {
+        "input_weight": [
+          0,
+          -1,
+          0,
+          2
+        ],
+        "output_weight": [
+          0,
+          0,
+          -1,
+          -3
+        ],
+        "rank": 3,
+        "matrix": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "6",
+            "-11",
+            "0"
+          ],
+          [
+            "2259/406",
+            "0",
+            "1"
+          ],
+          [
+            "-50601/8057",
+            "0",
+            "-12719/1151"
+          ]
+        ],
+        "orthogonal_higgs_row": [
+          "-50601/8057",
+          "0",
+          "-12719/1151"
+        ],
+        "lepton_submatrix_rank": 2
+      },
+      {
+        "input_weight": [
+          0,
+          0,
+          0,
+          6
+        ],
+        "output_weight": [
+          0,
+          1,
+          -1,
+          1
+        ],
+        "rank": 3,
+        "matrix": [
+          [
+            "209632/110887",
+            "-1509/110887",
+            "0"
+          ],
+          [
+            "-1509/110887",
+            "209632/110887",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "2"
+          ]
+        ]
+      },
+      {
+        "input_weight": [
+          1,
+          -1,
+          1,
+          1
+        ],
+        "output_weight": [
+          1,
+          0,
+          0,
+          -4
+        ],
+        "rank": 3,
+        "matrix": [
+          [
+            "369868/201663",
+            "-4261/201663",
+            "0"
+          ],
+          [
+            "-4261/201663",
+            "369868/201663",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "2"
+          ]
+        ]
+      }
+    ],
+    "unmatched_input": [
+      {
+        "weight": [
+          0,
+          0,
+          1,
+          3
+        ],
+        "dimension": 1
+      }
+    ]
+  }
+}

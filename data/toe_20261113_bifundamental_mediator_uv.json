@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "charge_order": [
+    "X+",
+    "U",
+    "X-",
+    "X2",
+    "Z1",
+    "Z0",
+    "D",
+    "A",
+    "S"
+  ],
+  "branches": [
+    {
+      "alternating_cubic": true,
+      "active_gauges": "E6 and family",
+      "trial_scalar_charges": [
+        "p",
+        "q",
+        "1 - p/2",
+        "1 - p/2",
+        "-p - r + 2",
+        "-q - r + 2",
+        "p + 2*r/3 + 1",
+        "r",
+        "12*r/5 + 3/5"
+      ],
+      "positive_forbidden_flavor_trace": "-153*p/4 + 2199*r/100 + 3549/25",
+      "rank_changing_mass_R_minus_two": "p/2 + 2*r/3",
+      "family_only_D_strict_upper_R_bound": "-13/7",
+      "family_only_trace_with_one_free_D_baryon": "-108*dual/25 + 1458*p/25 + 2916*r/25 - 741/25",
+      "E6_only_trace": "-153*p/4 - 465*r/4 + 165",
+      "E6_only_strict_R_A_lower_bound": "660/533",
+      "E6_only_strict_missing_mass_R_gap": "440/533",
+      "E6_only_strict_DU_mass_R_gap": "973/7995"
+    },
+    {
+      "alternating_cubic": false,
+      "active_gauges": "E6 and family",
+      "trial_scalar_charges": [
+        "p",
+        "q",
+        "u",
+        "u",
+        "-p - r + 2",
+        "-q - r + 2",
+        "2*r/3 - 2*u + 3",
+        "r",
+        "12*r/5 + 3/5"
+      ],
+      "positive_forbidden_flavor_trace": "216*r - 486*u + 486",
+      "rank_changing_mass_R_minus_two": "2*r/3 - u + 1",
+      "family_only_D_strict_upper_R_bound": "-13/7",
+      "family_only_trace_with_one_free_D_baryon": "-108*dual/25 + 2916*r/25 - 2916*u/25 + 87",
+      "E6_only_excluded": true
+    }
+  ]
+}

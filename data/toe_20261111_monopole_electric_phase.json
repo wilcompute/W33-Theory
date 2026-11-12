@@ -1,0 +1,89 @@
+{
+  "status": "PASS",
+  "exact": {
+    "root_step": [
+      0,
+      1,
+      -1,
+      -5
+    ],
+    "phase_period_over_pi": 2,
+    "full_lift_endpoint_on_five": [
+      -1,
+      1,
+      1,
+      -1,
+      1
+    ],
+    "holonomy_by_lowest_wave_sign": [
+      -1,
+      -1
+    ],
+    "bare_kinetic_charge": "integer - theta/(2*pi)",
+    "odd_dressing_momentum_shift": "1/2",
+    "trace_indices_27_and_78": [
+      6,
+      24
+    ],
+    "topological_number_per_full_phase_cycle": 1,
+    "light_occupation_trace": 16,
+    "chiral_and_gaugino_contributions": [
+      13,
+      3
+    ],
+    "formal_3B_L_and_Cartan_weighted_traces": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "one_step_particle_channels": 12,
+    "zero_step_hole_channels": 4
+  },
+  "numerical": {
+    "convergence": [
+      {
+        "outer_radius": 5.0,
+        "background": {
+          "energy": 573.9972310527314,
+          "iterations": 38,
+          "scaled_discrete_residual": 1.8834932732074465e-07,
+          "elements": 55,
+          "gauge": 311.3421657944029,
+          "scalar_gradient": 238.30270479582862,
+          "potential": 24.34328730155886,
+          "d_energy": 1.3875342573939922e-05,
+          "virial_defect": 0.009599093897691091,
+          "linear_scalar_tail_energy": 0.009073160941214171
+        },
+        "coulomb_length": 0.12251962136398228,
+        "inertia_at_unit_g": 9.237761817544555,
+        "max_collocation_residual": 9.983379265575131e-09
+      },
+      {
+        "outer_radius": 9.0,
+        "background": {
+          "energy": 573.9796939416146,
+          "iterations": 23,
+          "scaled_discrete_residual": 1.751937913114236e-07,
+          "elements": 70,
+          "gauge": 311.32677473922996,
+          "scalar_gradient": 238.31246951613923,
+          "potential": 24.336048591598612,
+          "d_energy": 1.3891082941231558e-05,
+          "virial_defect": 0.006159448294894787,
+          "linear_scalar_tail_energy": 0.004401094646849339
+        },
+        "coulomb_length": 0.1225251376333893,
+        "inertia_at_unit_g": 9.238177734459219,
+        "max_collocation_residual": 9.993145141385473e-09
+      }
+    ],
+    "bare_theta_zero_one_step": 0.054123228018763465,
+    "bare_theta_zero_three_steps": 0.4871090521688712,
+    "lightest_neutral_mass": 0.0015111513132894951,
+    "one_step_to_lightest_mass_ratio": 35.815889211615264
+  }
+}

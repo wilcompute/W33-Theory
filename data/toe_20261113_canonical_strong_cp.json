@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "color_embedding_index": 1,
+  "triplet_weight_blocks": [
+    {
+      "weak_and_six_Y": [
+        -1,
+        -5
+      ],
+      "rank": 0
+    },
+    {
+      "weak_and_six_Y": [
+        -1,
+        1
+      ],
+      "rank": 6
+    },
+    {
+      "weak_and_six_Y": [
+        0,
+        -2
+      ],
+      "rank": 21
+    },
+    {
+      "weak_and_six_Y": [
+        0,
+        4
+      ],
+      "rank": 6
+    },
+    {
+      "weak_and_six_Y": [
+        1,
+        -5
+      ],
+      "rank": 0
+    },
+    {
+      "weak_and_six_Y": [
+        1,
+        1
+      ],
+      "rank": 6
+    }
+  ],
+  "triplet_split_determinant_ratio": "z_T**3",
+  "octet_root_mass_numerator": 480,
+  "octet_root_metric": 6,
+  "octet_relative_majorana_mass": "z_A",
+  "octet_anomaly_weight": 3,
+  "broken_color_vector_triplet_pairs": 18,
+  "heavy_chiral_uniform_superpotential_phase_weight": 42,
+  "uniform_superpotential_phase_weight_including_light_yukawas": 48,
+  "reference_light_yukawa_determinants": [
+    -27,
+    -108
+  ],
+  "light_gluino_mass_phase_weight": 3
+}

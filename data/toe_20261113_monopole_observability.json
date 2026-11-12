@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "scope": "exact exterior controls with fixed unitary boundaries",
+  "controls": {
+    "adjoint": [
+      {
+        "heavy": 3,
+        "light": 1,
+        "winding_mass_channels": 1,
+        "heavy_compression_norm": 1,
+        "heavy_unit_singular_values": 2,
+        "observation_gramian_rank": 3,
+        "exact_zero_mode_multiplicity_at_z_1": 0,
+        "physical_reflection_determinant": "z",
+        "reflection_winding": 1
+      },
+      {
+        "heavy": 3,
+        "light": 1,
+        "winding_mass_channels": 1,
+        "heavy_compression_norm": 1,
+        "heavy_unit_singular_values": 2,
+        "observation_gramian_rank": 2,
+        "exact_zero_mode_multiplicity_at_z_1": 1,
+        "physical_reflection_determinant": "1",
+        "reflection_winding": 0
+      }
+    ],
+    "triplet": [
+      {
+        "heavy": 45,
+        "light": 4,
+        "winding_mass_channels": 3,
+        "heavy_compression_norm": 1,
+        "heavy_unit_singular_values": 44,
+        "observation_gramian_rank": 45,
+        "exact_zero_mode_multiplicity_at_z_1": 0,
+        "physical_reflection_determinant": "z**3",
+        "reflection_winding": 3
+      },
+      {
+        "heavy": 45,
+        "light": 4,
+        "winding_mass_channels": 3,
+        "heavy_compression_norm": 1,
+        "heavy_unit_singular_values": 44,
+        "observation_gramian_rank": 44,
+        "exact_zero_mode_multiplicity_at_z_1": 1,
+        "physical_reflection_determinant": "z**2",
+        "reflection_winding": 2
+      },
+      {
+        "heavy": 45,
+        "light": 4,
+        "winding_mass_channels": 3,
+        "heavy_compression_norm": 1,
+        "heavy_unit_singular_values": 44,
+        "observation_gramian_rank": 43,
+        "exact_zero_mode_multiplicity_at_z_1": 2,
+        "physical_reflection_determinant": "z",
+        "reflection_winding": 1
+      },
+      {
+        "heavy": 45,
+        "light": 4,
+        "winding_mass_channels": 3,
+        "heavy_compression_norm": 1,
+        "heavy_unit_singular_values": 44,
+        "observation_gramian_rank": 42,
+        "exact_zero_mode_multiplicity_at_z_1": 3,
+        "physical_reflection_determinant": "1",
+        "reflection_winding": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,321 @@
+{
+  "status": "PASS",
+  "channels": {
+    "QQQL": {
+      "shape": [
+        9,
+        9
+      ],
+      "mass_rank": 21,
+      "projector_rank": 3,
+      "removed_kernel_source_ranks": [
+        0,
+        0
+      ],
+      "source_variation_ranks": [
+        2,
+        2
+      ],
+      "separate_contraction_ranks_fixed_then_scaled": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "numerator_coefficient_ranks": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "reference_exchange_rank": 0,
+      "nonzero_exchange_entries": []
+    },
+    "UcUcDcEc": {
+      "shape": [
+        9,
+        9
+      ],
+      "mass_rank": 21,
+      "projector_rank": 3,
+      "removed_kernel_source_ranks": [
+        0,
+        0
+      ],
+      "source_variation_ranks": [
+        2,
+        3
+      ],
+      "separate_contraction_ranks_fixed_then_scaled": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "numerator_coefficient_ranks": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "reference_exchange_rank": 0,
+      "nonzero_exchange_entries": []
+    },
+    "QQQHd_Q1Q2": {
+      "shape": [
+        3,
+        9
+      ],
+      "mass_rank": 21,
+      "projector_rank": 3,
+      "removed_kernel_source_ranks": [
+        0,
+        3
+      ],
+      "source_variation_ranks": [
+        2,
+        1
+      ],
+      "separate_contraction_ranks_fixed_then_scaled": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "numerator_coefficient_ranks": [
+        0,
+        1,
+        2,
+        0
+      ],
+      "reference_exchange_rank": 2,
+      "nonzero_exchange_entries": [
+        [
+          0,
+          2,
+          "672*z_T/271"
+        ],
+        [
+          0,
+          5,
+          "42*(16*z_T - 3)/271"
+        ],
+        [
+          0,
+          6,
+          "672*z_T/271"
+        ],
+        [
+          0,
+          7,
+          "42*(16*z_T - 3)/271"
+        ],
+        [
+          1,
+          2,
+          "-224*z_T/813"
+        ],
+        [
+          1,
+          5,
+          "257*(16*z_T - 3)/813"
+        ],
+        [
+          1,
+          6,
+          "-224*z_T/813"
+        ],
+        [
+          1,
+          7,
+          "257*(16*z_T - 3)/813"
+        ],
+        [
+          2,
+          2,
+          "4112*z_T/813"
+        ],
+        [
+          2,
+          5,
+          "-14*(16*z_T - 3)/813"
+        ],
+        [
+          2,
+          6,
+          "4112*z_T/813"
+        ],
+        [
+          2,
+          7,
+          "-14*(16*z_T - 3)/813"
+        ]
+      ]
+    },
+    "QQQHd_Q2Q3": {
+      "shape": [
+        3,
+        9
+      ],
+      "mass_rank": 21,
+      "projector_rank": 3,
+      "removed_kernel_source_ranks": [
+        0,
+        3
+      ],
+      "source_variation_ranks": [
+        2,
+        1
+      ],
+      "separate_contraction_ranks_fixed_then_scaled": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "numerator_coefficient_ranks": [
+        0,
+        1,
+        2,
+        0
+      ],
+      "reference_exchange_rank": 2,
+      "nonzero_exchange_entries": [
+        [
+          0,
+          2,
+          "-672*z_T/271"
+        ],
+        [
+          0,
+          5,
+          "-42*(16*z_T - 3)/271"
+        ],
+        [
+          0,
+          6,
+          "-672*z_T/271"
+        ],
+        [
+          0,
+          7,
+          "-42*(16*z_T - 3)/271"
+        ],
+        [
+          1,
+          2,
+          "224*z_T/813"
+        ],
+        [
+          1,
+          5,
+          "-257*(16*z_T - 3)/813"
+        ],
+        [
+          1,
+          6,
+          "224*z_T/813"
+        ],
+        [
+          1,
+          7,
+          "-257*(16*z_T - 3)/813"
+        ],
+        [
+          2,
+          2,
+          "-4112*z_T/813"
+        ],
+        [
+          2,
+          5,
+          "14*(16*z_T - 3)/813"
+        ],
+        [
+          2,
+          6,
+          "-4112*z_T/813"
+        ],
+        [
+          2,
+          7,
+          "14*(16*z_T - 3)/813"
+        ]
+      ]
+    }
+  },
+  "QQQHd_summed_ordered_flavor_witness": {
+    "indices": [
+      0,
+      2,
+      2
+    ],
+    "coefficient": "4112*z_T/813"
+  },
+  "QQQHd_summed_nonzero_count": 14,
+  "down_yukawa_invertible_for_holomorphic_field_redefinition": true
+}

@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "interacting_E6_rank_relevance": [
+    {
+      "rank": 1,
+      "alternating_cubic": true,
+      "missing_R_minus_two": "q/2 + 2*r/3",
+      "flavor_anomaly_polynomials": [
+        "-81*q",
+        "243*q/4 - 108*r",
+        "-4149*q/4 - 1860*r + 1152*s/5 + 3768/5"
+      ],
+      "strict_gap_lower_bound": "0",
+      "strict_gap_lower_bound_both_gauges_active": "14864/34575"
+    },
+    {
+      "rank": 1,
+      "alternating_cubic": false,
+      "missing_R_minus_two": "2*r/3 - u + 1",
+      "flavor_anomaly_polynomials": [
+        "162*u - 162",
+        "-81*r"
+      ],
+      "strict_gap_lower_bound": "0"
+    },
+    {
+      "rank": 0,
+      "alternating_cubic": true,
+      "missing_R_minus_two": "r/3 + 1/6",
+      "flavor_anomaly_polynomials": [
+        "81 - 108*r"
+      ],
+      "strict_gap_lower_bound": "5/12"
+    },
+    {
+      "rank": 0,
+      "alternating_cubic": false,
+      "missing_R_minus_two": "-5*x/4 - z/2 + 7/4",
+      "flavor_anomaly_polynomials": [
+        "162*x - 162",
+        "162*z - 162"
+      ],
+      "strict_gap_lower_bound": "0"
+    }
+  ],
+  "family_only_fixed_point_tests": {
+    "rank_zero_with_alternating_cubic_trace": "486 - 7614*z/25",
+    "rank_two_baryon_tests": [
+      {
+        "alternating_cubic": true,
+        "bare_trace": "567*p/25 + 3807*r/50 - 891/25",
+        "uncoupled_X_strict_upper_bound": "-2/3",
+        "trace_with_one_free_baryon": "-108*p/25 + 3807*r/50 - 741/25"
+      },
+      {
+        "alternating_cubic": false,
+        "bare_trace": "567*p/25 + 2916*r/25 - 891/25",
+        "uncoupled_X_strict_upper_bound": "-13/7",
+        "trace_with_one_free_baryon": "-108*p/25 + 2916*r/25 - 741/25"
+      }
+    ]
+  }
+}

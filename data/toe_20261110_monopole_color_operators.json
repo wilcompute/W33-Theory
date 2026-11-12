@@ -1,0 +1,154 @@
+{
+  "status": "PASS",
+  "residual_group": "S(U(1) x U(2) x U(1) x U(1))",
+  "color_root": [
+    2,
+    -1,
+    0,
+    0
+  ],
+  "charge_labels": [
+    "c1",
+    "c2",
+    "2T3",
+    "6Y",
+    "3B",
+    "L"
+  ],
+  "wino_number_numerator": [
+    0,
+    0,
+    -3,
+    1,
+    -4,
+    0
+  ],
+  "wino_number_denominator": 6,
+  "phase_exchange_wino_shift_per_root_step": "-1/3",
+  "local_operators": {
+    "Q": {
+      "highest_weight": [
+        1,
+        -1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "incoming_family_copies": 3,
+      "color_dimension": 2,
+      "conserving_outgoing_fermions": 3,
+      "conserving_copies": 6,
+      "violating_outgoing_fermions": 5,
+      "delta_b_equals_delta_l": -1,
+      "minimum_radial_derivatives": 0,
+      "violating_copies": 36,
+      "free_boundary_dimension": 3,
+      "net_violating_winos": 1
+    },
+    "Dc": {
+      "highest_weight": [
+        0,
+        -1,
+        0,
+        2,
+        -1,
+        0
+      ],
+      "incoming_family_copies": 3,
+      "color_dimension": 1,
+      "conserving_outgoing_fermions": 3,
+      "conserving_copies": 3,
+      "violating_outgoing_fermions": 5,
+      "delta_b_equals_delta_l": 1,
+      "minimum_radial_derivatives": 0,
+      "violating_copies": 45,
+      "free_boundary_dimension": 3,
+      "net_violating_winos": -1
+    },
+    "Ec": {
+      "highest_weight": [
+        0,
+        0,
+        0,
+        6,
+        0,
+        -1
+      ],
+      "incoming_family_copies": 3,
+      "color_dimension": 1,
+      "conserving_outgoing_fermions": 3,
+      "conserving_copies": 3,
+      "violating_outgoing_fermions": 5,
+      "delta_b_equals_delta_l": 1,
+      "minimum_radial_derivatives": 0,
+      "violating_copies": 27,
+      "free_boundary_dimension": 3,
+      "net_violating_winos": -1
+    },
+    "Hu Higgsino": {
+      "highest_weight": [
+        0,
+        0,
+        1,
+        3,
+        0,
+        0
+      ],
+      "incoming_family_copies": 1,
+      "color_dimension": 1,
+      "conserving_outgoing_fermions": 1,
+      "conserving_copies": 1,
+      "violating_outgoing_fermions": 7,
+      "delta_b_equals_delta_l": 1,
+      "minimum_radial_derivatives": 1,
+      "violating_copies": 81,
+      "free_boundary_dimension": 5,
+      "net_violating_winos": -2
+    },
+    "gluino": {
+      "highest_weight": [
+        1,
+        -2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "incoming_family_copies": 1,
+      "color_dimension": 2,
+      "conserving_outgoing_fermions": 1,
+      "conserving_copies": 1,
+      "violating_outgoing_fermions": 7,
+      "delta_b_equals_delta_l": -1,
+      "minimum_radial_derivatives": 1,
+      "violating_copies": 30,
+      "free_boundary_dimension": 5,
+      "net_violating_winos": 2
+    },
+    "wino": {
+      "highest_weight": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "incoming_family_copies": 1,
+      "color_dimension": 1,
+      "conserving_outgoing_fermions": 1,
+      "conserving_copies": 1,
+      "violating_outgoing_fermions": 7,
+      "delta_b_equals_delta_l": -1,
+      "minimum_radial_derivatives": 0,
+      "violating_copies": 30,
+      "free_boundary_dimension": 4,
+      "net_violating_winos": 1
+    }
+  },
+  "gluing_color_current_exponents": {
+    "incoming_doublet_current_exponents": 4,
+    "both_gluings_send_each_to_an_outgoing_root_exponent": true
+  }
+}

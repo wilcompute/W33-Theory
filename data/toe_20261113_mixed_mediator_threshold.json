@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "threshold": {
+    "mass_input": 4,
+    "mixing_input": 3,
+    "cubic_input": "5/3",
+    "light_old_and_mediator_components": [
+      "4/5",
+      "3/5"
+    ],
+    "unbroken_heavy_singular_mass": 5,
+    "normalized_mixed_cubic": 1
+  },
+  "mixed_rank_before_after": [
+    1,
+    2
+  ],
+  "adjoint_pair_b0": [
+    -45,
+    -66
+  ],
+  "bifundamental_pair_b0": [
+    -39,
+    -93
+  ],
+  "one_adjoint_obstruction": {
+    "internal_indices": [
+      0,
+      17
+    ],
+    "singlet_source": 0,
+    "adjoint_square": "2/3"
+  },
+  "two_adjoint_UV_tests": [
+    {
+      "alternating_cubic": true,
+      "bare_C_current_trace": "1356*a/25 + 1356*b/25 + 606*c/25 + 162/25",
+      "C_current_trace_with_free_quintic": "1356*a/25 + 1356*b/25 - 2519*c/25 + 1736/75"
+    },
+    {
+      "alternating_cubic": false,
+      "bare_C_current_trace": "2256*a/25 + 2256*b/25 + 606*c/25 + 162/25",
+      "C_current_trace_with_free_quintic": "2256*a/25 + 2256*b/25 - 2519*c/25 + 1736/75"
+    }
+  ]
+}

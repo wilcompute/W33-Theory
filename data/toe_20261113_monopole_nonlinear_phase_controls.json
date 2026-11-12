@@ -1,0 +1,108 @@
+{
+  "status": "PASS",
+  "real_pi": {
+    "angle": 3.141592653589793,
+    "max_imaginary_scalar": 0.0,
+    "energy": 574.1926804355472,
+    "iterations": 34,
+    "scaled_discrete_residual": 1.743895893290377e-07,
+    "elements": 60,
+    "gauge": 311.4790920322481,
+    "scalar_gradient": 238.33525813555983,
+    "potential": 24.37833026773935,
+    "d_energy": 2.1642799558990896e-05,
+    "virial_defect": 0.008843093470233043
+  },
+  "secant_pi": {
+    "angle": 3.141592653589793,
+    "energy": 574.1926804380718,
+    "iterations": 14,
+    "scaled_discrete_residual": 2.468849154842129e-07,
+    "max_weighted_radial_current": 1.5121102264937966e-06,
+    "max_imaginary_scalar": 4.772730498175224e-07
+  },
+  "real_pi_scattering": {
+    "angle": 3.141592653589793,
+    "sectors": [
+      {
+        "weight": [
+          -2,
+          3,
+          1,
+          5
+        ],
+        "matching_sigma_min": 0.5503385701119096,
+        "reflection": [
+          1.363578517537428e-16,
+          1.0
+        ]
+      },
+      {
+        "weight": [
+          0,
+          -1,
+          -3,
+          5
+        ],
+        "matching_sigma_min": 0.583782199828201,
+        "reflection": [
+          2.7564919514933346e-17,
+          -0.9999999999999988
+        ]
+      }
+    ]
+  },
+  "fine_small": {
+    "angle": 0.05,
+    "energy": 573.9790231792674,
+    "iterations": 1,
+    "scaled_discrete_residual": 1.740374147698483e-07,
+    "max_weighted_radial_current": 1.235051752309821e-06,
+    "max_imaginary_scalar": 0.0070969046443974315,
+    "energy_excess": 0.0001264405731262741
+  },
+  "fine_mid": {
+    "angle": 1.65,
+    "energy": 574.0855681007857,
+    "iterations": 18,
+    "scaled_discrete_residual": 2.849097297454728e-07,
+    "max_weighted_radial_current": 9.715720279187072e-07,
+    "max_imaginary_scalar": 0.13979206362934976,
+    "energy_excess": 0.10667136209144701
+  },
+  "fine_mid_scattering": {
+    "angle": 1.65,
+    "sectors": [
+      {
+        "weight": [
+          -2,
+          3,
+          1,
+          5
+        ],
+        "matching_sigma_min": 0.5498710407599494,
+        "reflection": [
+          0.9969423328078434,
+          0.07814080275794644
+        ]
+      },
+      {
+        "weight": [
+          0,
+          -1,
+          -3,
+          5
+        ],
+        "matching_sigma_min": 0.583647947652442,
+        "reflection": [
+          -0.9968376291088976,
+          -0.07946534585939351
+        ]
+      }
+    ]
+  },
+  "fine_minus_coarse_midpoint_reflection_phase": [
+    -2.1600473868094766e-06,
+    9.565044212759495e-07
+  ]
+}

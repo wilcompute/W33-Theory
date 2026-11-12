@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "representation": {
+    "circle_charges": {
+      "singlet": 4,
+      "vector10": -2,
+      "spinor16": 1
+    },
+    "circle_cartan_coefficients": [
+      "-1",
+      "-2",
+      "-1",
+      "-1",
+      "-1",
+      "-1"
+    ],
+    "d5_line_roots": 40,
+    "spinor_slot": 1,
+    "su5_roots": 20,
+    "fundamental5_chart": [
+      24,
+      25,
+      26,
+      21,
+      23
+    ]
+  },
+  "cocharacters": {
+    "primitive_monopole": [
+      1,
+      0,
+      0,
+      -1,
+      0
+    ],
+    "hypercharge_projection": -1,
+    "electromagnetic_projection": -1,
+    "color_compensation": [
+      "2/3",
+      "-1/3",
+      "-1/3",
+      "0",
+      "0"
+    ],
+    "primitive_sm_u1_kernel_angle": "pi/3",
+    "primitive_em_u1_kernel_angle": "2*pi/3",
+    "common_color_determinant_winding": 1
+  },
+  "conditional_global_groups": {
+    "faithful_parent": "(E6_sc x SU(3))/Z3",
+    "faithful_stabilizer": "S(U(3) x U(2))",
+    "cover_stabilizer": "S(U(3) x U(2)) x Z3",
+    "electroweak_stabilizer": "(SU(3) x U(1)_em)/Z3"
+  },
+  "vacuum_homotopy": {
+    "pi2": "Z",
+    "pi1": "Z3",
+    "electroweak_pi2": 0,
+    "electroweak_pi1": 0,
+    "E8_parent_monopole_to_string_boundary": "isomorphism Z3 to Z3"
+  }
+}

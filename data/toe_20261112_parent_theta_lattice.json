@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "center_quadratic_values": [
+    "2/3",
+    "1/3"
+  ],
+  "lattice": {
+    "covering_gram_determinant": 9,
+    "quotient_gram_determinant": 1,
+    "glue_norm_squared": 2,
+    "root_counts_by_obstruction_coset": [
+      78,
+      81,
+      81
+    ],
+    "nonzero_cosets_are_bifundamental_weight_sets": true,
+    "E6_regular_A2_basic_embedding_index": 1
+  },
+  "theta_period_generators_in_2pi_units": [
+    [
+      1,
+      1
+    ],
+    [
+      0,
+      3
+    ]
+  ],
+  "discrete_counterterm_compensation": "p -> p - (2*a+b) mod 3",
+  "electric_trialities_added_by_unit_shifts": [
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "orientation_reversal_compatible_p_at_pi_corners": {
+    "0,0": 0,
+    "0,1": 1,
+    "1,0": 2,
+    "1,1": 0
+  },
+  "E8_embedding_indices": [
+    1,
+    1
+  ],
+  "spin_witness": {
+    "witness_instanton_numbers": [
+      "8/3",
+      "4/3"
+    ],
+    "representations": {
+      "27_tensor_3": {
+        "basic_trace_indices": [
+          18,
+          27
+        ],
+        "witness_dirac_index": 84
+      },
+      "E6_adjoint": {
+        "basic_trace_indices": [
+          24,
+          0
+        ],
+        "witness_dirac_index": 64
+      },
+      "family_adjoint": {
+        "basic_trace_indices": [
+          0,
+          6
+        ],
+        "witness_dirac_index": 8
+      },
+      "family_conjugate_decuplet": {
+        "basic_trace_indices": [
+          0,
+          15
+        ],
+        "witness_dirac_index": 20
+      }
+    },
+    "total_canonical_chiral_and_gaugino_witness_index": 576
+  }
+}

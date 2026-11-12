@@ -1,0 +1,128 @@
+{
+  "status": "PASS",
+  "monopole_channel_count": [
+    {
+      "phase": "adjoint",
+      "unit_flux_weights": [
+        [
+          1,
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          -1,
+          1
+        ]
+      ],
+      "individual_electric_Q": [
+        "0",
+        "0",
+        "-1"
+      ],
+      "massive_fixed_boundary_downward_crossings": 3,
+      "product_of_crossing_endpoint_characters": -1
+    },
+    {
+      "phase": "triplet",
+      "unit_flux_weights": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "individual_electric_Q": [
+        "-1/3",
+        "-1/3",
+        "-1/3"
+      ],
+      "massive_fixed_boundary_downward_crossings": 3,
+      "product_of_crossing_endpoint_characters": -1
+    }
+  ],
+  "massive_boundary": {
+    "decay": "M*sin(phi-beta)>0",
+    "eigenvalue": "M*cos(phi-beta)",
+    "zero_crossing": "phi=beta+pi/2 mod 2*pi",
+    "crossing_direction": "downward",
+    "unequal_mass_example_crossing_slope": "-150/59"
+  },
+  "mixed_boundary": {
+    "mixing_boundary": [
+      [
+        "3/5",
+        "4/5"
+      ],
+      [
+        "-4/5",
+        "3/5"
+      ]
+    ],
+    "outgoing_to_incoming_amplitude": "(3*z - 5)/(5*z - 3)",
+    "pole": "3/5",
+    "zero": "5/3",
+    "fixed_boundary_bound_crossings": 0,
+    "incoming_to_outgoing_reflection_winding": 1,
+    "winding_boundary_control": {
+      "boundary_determinant": "z",
+      "reflection": "-1"
+    },
+    "flux_preserving_boundary_transport": "(5*z + 4)/(4*z + 5)",
+    "three_channel_controls": [
+      {
+        "decoupled_heavy": 3,
+        "mixed_heavy": 0,
+        "downward_bound_crossings": 3,
+        "reflection_winding": 0
+      },
+      {
+        "decoupled_heavy": 2,
+        "mixed_heavy": 1,
+        "downward_bound_crossings": 2,
+        "reflection_winding": 1
+      },
+      {
+        "decoupled_heavy": 1,
+        "mixed_heavy": 2,
+        "downward_bound_crossings": 1,
+        "reflection_winding": 2
+      },
+      {
+        "decoupled_heavy": 0,
+        "mixed_heavy": 3,
+        "downward_bound_crossings": 0,
+        "reflection_winding": 3
+      }
+    ]
+  },
+  "asymptotic_mass_determinant_winding": 3,
+  "smooth_core_boundary_winding": "undetermined"
+}

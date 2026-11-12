@@ -1,0 +1,108 @@
+{
+  "status": "PASS",
+  "phase_order": [
+    "adjoint",
+    "triplet",
+    "parent_E6"
+  ],
+  "angle_coefficient_columns": [
+    [
+      3,
+      3,
+      1
+    ],
+    [
+      2,
+      0,
+      1
+    ],
+    [
+      0,
+      36,
+      30
+    ]
+  ],
+  "integral_spin_charge_coefficient_columns": [
+    [
+      3,
+      3,
+      1
+    ],
+    [
+      2,
+      0,
+      1
+    ],
+    [
+      3,
+      3,
+      2
+    ]
+  ],
+  "angle_period_generators_in_2pi_units": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      -24,
+      -18,
+      36
+    ]
+  ],
+  "heavy_phase_smith": [
+    1,
+    6
+  ],
+  "heavy_and_parent_smith": [
+    1,
+    1,
+    6
+  ],
+  "pure_determinant_flux_phase_indices": [
+    3,
+    3,
+    2
+  ],
+  "monopole_primitive": [
+    1,
+    0,
+    0,
+    -1,
+    0
+  ],
+  "monopole_electric_shift_representatives": [
+    [
+      2,
+      -1,
+      -1,
+      -1,
+      1
+    ],
+    [
+      3,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "shift_difference_mod_trivial_character": [
+    0,
+    0,
+    0,
+    0,
+    2
+  ],
+  "monopole_electric_Q_shift": -1,
+  "m_over_two_pairing": "3/2",
+  "kappa_character_of_both_shifts": -1,
+  "electromagnetic_theta_coefficient": 1,
+  "conditional_axion_E_over_N": "2/3"
+}

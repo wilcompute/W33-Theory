@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "static_radial_results": [
+    {
+      "outer_radius": 5.0,
+      "background": {
+        "energy": 573.9972310527314,
+        "iterations": 38,
+        "scaled_discrete_residual": 1.8834932732074465e-07,
+        "elements": 55,
+        "gauge": 311.3421657944029,
+        "scalar_gradient": 238.30270479582862,
+        "potential": 24.34328730155886,
+        "d_energy": 1.3875342573939922e-05,
+        "virial_defect": 0.009599093897691091,
+        "linear_scalar_tail_energy": 0.009073160941214171
+      },
+      "spectra": [
+        {
+          "step": 0.001,
+          "lowest_half_hessian_bracket": [
+            0.09807970386464149,
+            0.09807970398105681
+          ],
+          "positive_at_zero": true
+        },
+        {
+          "step": 0.0005,
+          "lowest_half_hessian_bracket": [
+            0.09807970270048827,
+            0.09807970281690359
+          ],
+          "positive_at_zero": true
+        }
+      ]
+    },
+    {
+      "outer_radius": 9.0,
+      "background": {
+        "energy": 573.9796939413592,
+        "iterations": 38,
+        "scaled_discrete_residual": 1.6558458515188305e-07,
+        "elements": 70,
+        "gauge": 311.32630119708307,
+        "scalar_gradient": 238.31251733347082,
+        "potential": 24.33647409999342,
+        "d_energy": 1.3892234306506324e-05,
+        "virial_defect": 0.004361563631988474,
+        "linear_scalar_tail_energy": 0.004401310811874262
+      },
+      "spectra": [
+        {
+          "step": 0.001,
+          "lowest_half_hessian_bracket": [
+            0.030373330344446003,
+            0.030373330460861325
+          ],
+          "positive_at_zero": true
+        },
+        {
+          "step": 0.0005,
+          "lowest_half_hessian_bracket": [
+            0.030373330460861325,
+            0.030373330577276647
+          ],
+          "positive_at_zero": true
+        }
+      ]
+    }
+  ]
+}

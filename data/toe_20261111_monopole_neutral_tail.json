@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "linear_massless_gauge_directions": 4,
+  "lightest_physical_radial_masses": [
+    0.0015111513132894951,
+    0.004852362914373725,
+    0.00936695996700628,
+    0.027505974460780694
+  ],
+  "prior_tail_fraction_in_0p0275_mode": 0.9166587409600387,
+  "linear_exterior": [
+    {
+      "energy": 573.9682271064199,
+      "iterations": 35,
+      "scaled_discrete_residual": 1.8052198642255558e-07,
+      "elements": 160,
+      "gauge": 311.3161568968981,
+      "scalar_gradient": 238.31075070411475,
+      "potential": 24.332241782974396,
+      "d_energy": 1.3890297482816164e-05,
+      "virial_defect": 0.008680843860176424,
+      "linear_scalar_tail_energy": 0.00907772243276617,
+      "outer_radius": 5.0,
+      "boundary_scalar_deviation_norm": 0.01124185991433787
+    },
+    {
+      "energy": 573.9681541077266,
+      "iterations": 35,
+      "scaled_discrete_residual": 1.7029389305841927e-07,
+      "elements": 185,
+      "gauge": 311.31610255952484,
+      "scalar_gradient": 238.3152994522427,
+      "potential": 24.332349961472783,
+      "d_energy": 1.389767443275967e-05,
+      "virial_defect": 0.003753222863792871,
+      "linear_scalar_tail_energy": 0.004402134486332119,
+      "outer_radius": 9.0,
+      "boundary_scalar_deviation_norm": 0.005586787159741674
+    }
+  ]
+}
