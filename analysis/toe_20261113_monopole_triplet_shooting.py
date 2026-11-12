@@ -15,8 +15,8 @@ import toe_20261113_monopole_adjoint_shooting as adjoint
 OUT = triplet.flat.ROOT / 'data/toe_20261113_monopole_triplet_shooting.json'
 
 
-def local_operators(count, inner):
-    embedding, evaluators, vacuum = triplet.radial_model()
+def local_operators(count, inner, model=None):
+    embedding, evaluators, vacuum = triplet.radial_model() if model is None else model
     source = json.loads(adjoint.MESH.read_text(encoding='utf-8'))[-1]
     fields = np.array(source['state'])
     origin_slopes = np.zeros(fields.shape[1])
@@ -37,6 +37,19 @@ def local_operators(count, inner):
     return data, widths, tuple(evaluate(*vacuum) for evaluate in evaluators)
 
 
+def transfer_pencil(data, widths):
+    """Separate the constant, cosine and sine generators once per radial cell."""
+    cells = []
+    for (masses, k, radius), width in zip(data, widths):
+        fixed, variation = zip(*masses)
+        flux, base = triplet.radial_hamiltonian(*fixed, k/radius)
+        _, cosine = triplet.radial_hamiltonian(*variation, 0.)
+        _, sine = triplet.radial_hamiltonian(*(1j*block for block in variation), 0.)
+        cells.append(tuple((-1j * flux @ matrix)*(width*radius)
+                           for matrix in (base, cosine, sine)))
+    return np.array(cells)
+
+
 def exterior_spaces(exterior, phase, light=None):
     masses = [fixed+phase*change for fixed, change in exterior]
     flux, potential = triplet.radial_hamiltonian(*masses, 0.)
@@ -54,7 +67,7 @@ def exterior_spaces(exterior, phase, light=None):
     return flux, stable, light
 
 
-def match(data, widths, exterior, phase, light):
+def match(data, widths, exterior, phase, light, pencil=None):
     flux, stable, light = exterior_spaces(exterior, phase, light)
     zero_plus = np.zeros_like(exterior[0][0])
     _, angular = triplet.radial_hamiltonian(zero_plus, zero_plus, 1.)
@@ -64,6 +77,9 @@ def match(data, widths, exterior, phase, light):
     middle = len(data)//2
 
     def transfer(index, sign):
+        if pencil is not None:
+            base, cosine, sine = pencil[index]
+            return expm(sign*(base+phase.real*cosine+phase.imag*sine))
         masses, k, radius = data[index]
         local = [fixed+phase*change for fixed, change in masses]
         _, potential = triplet.radial_hamiltonian(*local, k/radius)

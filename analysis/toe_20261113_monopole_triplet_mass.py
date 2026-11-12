@@ -311,7 +311,7 @@ def mass_evaluator(left, right, gaugino_left, gaugino_right, records, words, rul
     return evaluate
 
 
-def doublet_evaluators(adjoint, weights, step, records, words, rules):
+def doublet_frames(adjoint, weights, step):
     w = np.array(WEIGHTS[0])
 
     def bases(weight):
@@ -334,9 +334,13 @@ def doublet_evaluators(adjoint, weights, step, records, words, rules):
                                    np.eye(len(internal)), atol=1e-12)
     shape = (len(left[0])+len(gleft), len(right[0])+len(gright))
     assert sum(shape) == 49
-    return (mass_evaluator(left, right, gleft, gright, records, words, rules),
-            mass_evaluator(left_lower, right_lower, gleft_lower, gright_lower, records, words, rules),
-            shape)
+    return ((left, right, gleft, gright), (left_lower, right_lower, gleft_lower, gright_lower)), shape
+
+
+def doublet_evaluators(adjoint, weights, step, records, words, rules):
+    (plus, minus), shape = doublet_frames(adjoint, weights, step)
+    return (mass_evaluator(*plus, records, words, rules),
+            mass_evaluator(*minus, records, words, rules), shape)
 
 
 def radial_hamiltonian(plus, minus, k_over_r):
