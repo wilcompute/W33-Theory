@@ -1,0 +1,137 @@
+{
+  "dressed_compiler": {
+    "exact_product": "exp(t(X0-X0^-1))*exp(t(X2-X2^-1))*C111 exp(t(X0-X0^-1)) C111^-1 * C121 exp(t(X0-X0^-1)) C121^-1",
+    "global_gate_order": 3,
+    "max_absolute_matrix_error": 2.220446049250313e-16,
+    "optimization_status": "constructive, not demonstrated gate-count optimality",
+    "physical_scope": "requires coherent, accurately calibrated three-mode qutrit rotations and SUMs",
+    "primitive_gates": {
+      "one_qutrit_rotations": 4,
+      "qutrit_SUM": 8
+    },
+    "single_rotation_order": 9,
+    "t": "2pi/(9sqrt(3))"
+  },
+  "global_depolarizing_channel": {
+    "contrast": "(1-p)/27",
+    "exact_wigner_negativity_threshold": "p<3/4",
+    "model": "rho_p=(1-p) U|000><000|U^dag + p I_27/27",
+    "negative_mass_for_p_below_threshold": "(16/27)(3-4p)",
+    "noise_scenarios": [
+      {
+        "contrast": "1/27",
+        "forward_probability": "4/81",
+        "minimum_shots_hoeffding_two_sided_alpha_001": 7725,
+        "negative_wigner_mass": "16/9",
+        "p": "0",
+        "reverse_probability": "1/81",
+        "wigner_l1": "41/9"
+      },
+      {
+        "contrast": "11/300",
+        "forward_probability": "133/2700",
+        "minimum_shots_hoeffding_two_sided_alpha_001": 7882,
+        "negative_wigner_mass": "1184/675",
+        "p": "1/100",
+        "reverse_probability": "17/1350",
+        "wigner_l1": "3043/675"
+      },
+      {
+        "contrast": "1/30",
+        "forward_probability": "13/270",
+        "minimum_shots_hoeffding_two_sided_alpha_001": 9537,
+        "negative_wigner_mass": "208/135",
+        "p": "1/10",
+        "reverse_probability": "2/135",
+        "wigner_l1": "551/135"
+      },
+      {
+        "contrast": "1/36",
+        "forward_probability": "5/108",
+        "minimum_shots_hoeffding_two_sided_alpha_001": 13734,
+        "negative_wigner_mass": "32/27",
+        "p": "1/4",
+        "reverse_probability": "1/54",
+        "wigner_l1": "91/27"
+      },
+      {
+        "contrast": "1/54",
+        "forward_probability": "7/162",
+        "minimum_shots_hoeffding_two_sided_alpha_001": 30900,
+        "negative_wigner_mass": "16/27",
+        "p": "1/2",
+        "reverse_probability": "2/81",
+        "wigner_l1": "59/27"
+      },
+      {
+        "contrast": "1/108",
+        "forward_probability": "13/324",
+        "minimum_shots_hoeffding_two_sided_alpha_001": 123600,
+        "negative_wigner_mass": "0",
+        "p": "3/4",
+        "reverse_probability": "5/162",
+        "wigner_l1": "1"
+      },
+      {
+        "contrast": "0",
+        "forward_probability": "1/27",
+        "minimum_shots_hoeffding_two_sided_alpha_001": null,
+        "negative_wigner_mass": "0",
+        "p": "1",
+        "reverse_probability": "1/27",
+        "wigner_l1": "1"
+      }
+    ],
+    "scope": "output-global depolarization ONLY; not per-gate local noise, magic distillation or FT threshold"
+  },
+  "physics_firewall": "No material parameters, detector loss or real quantum device verified.",
+  "schema": "toe.chiral_action_compiler_noise.v1",
+  "status": "PASS_EXACT_COMPILER_CONDITIONAL_NOISE_AND_TOY_ACTION",
+  "symmetry_classification": {
+    "all_null_shells_transitive": true,
+    "null_hopping_Hermitian_real_dimension": 2,
+    "parity_even_hopping": "A=T+T^T",
+    "parity_odd_hopping": "iD=i(T-T^T)",
+    "parity_odd_nearest_null_direction_unique_up_to_real_scalar": true,
+    "selection_limitation": "Symmetry permits iD; it does not fix its coefficient or choose a sign.",
+    "translation_and_S4_orbit_dimensions": {
+      "negative_null": 4,
+      "positive_null": 4
+    }
+  },
+  "toy_chirality_selection": {
+    "exact_curvature": "F''(0)=kappa-8 beta",
+    "examples": [
+      {
+        "beta": 0.8,
+        "curvature_at_origin": 1.5999999999999996,
+        "lower_than_b0": 0.0,
+        "minima_at_b_pm": 0.0
+      },
+      {
+        "beta": 1.0,
+        "curvature_at_origin": 0.0,
+        "lower_than_b0": 0.0,
+        "minima_at_b_pm": 0.0
+      },
+      {
+        "beta": 1.25,
+        "curvature_at_origin": -2.0,
+        "lower_than_b0": -0.034831378019545056,
+        "minima_at_b_pm": 0.25638414107145
+      },
+      {
+        "beta": 1.5,
+        "curvature_at_origin": -4.0,
+        "lower_than_b0": -0.12044028543786345,
+        "minima_at_b_pm": 0.32844927330341894
+      }
+    ],
+    "kappa": 8.0,
+    "lambda": 32.0,
+    "local_instability_at": "beta>kappa/8",
+    "phenomenological_free_energy": "F(b)=kappa*b^2/2+lambda*b^4/4-(1/beta)*ln(Z(b))",
+    "scope": "Landau mean-field double well, not microscopic Hamiltonian derivation, finite-system spontaneous symmetry breaking, or observed CP/weak chirality",
+    "toy_partition": "Z(b)=19+8 cosh(beta*sqrt(27)*b)"
+  }
+}

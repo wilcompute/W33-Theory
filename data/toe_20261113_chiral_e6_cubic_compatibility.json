@@ -1,0 +1,70 @@
+{
+  "status": "DIRECT_ADDRESS_IDENTIFICATION_TEST",
+  "canonical_signed_triads": 45,
+  "address_table": "data/w33_e6id_current_h27_gauge_bridge.json",
+  "e6_normalization": "sum s_{ijk} x_i x_j x_k over 45 monomials",
+  "address_identification": "history Sym2(a,b,c) -> physical H27 normal-form address (a,b,c)",
+  "validity": "Address bijection, but NOT an H27-equivariant representation identification",
+  "nonzero_output_count": 27,
+  "nonzero_examples": [
+    {
+      "input_history": [
+        0,
+        0,
+        0
+      ],
+      "signed_norm_of_9Ue_cubed": 46
+    },
+    {
+      "input_history": [
+        0,
+        0,
+        1
+      ],
+      "signed_norm_of_9Ue_cubed": -32
+    },
+    {
+      "input_history": [
+        0,
+        0,
+        2
+      ],
+      "signed_norm_of_9Ue_cubed": -2
+    },
+    {
+      "input_history": [
+        0,
+        1,
+        0
+      ],
+      "signed_norm_of_9Ue_cubed": 4
+    },
+    {
+      "input_history": [
+        0,
+        1,
+        1
+      ],
+      "signed_norm_of_9Ue_cubed": -2
+    },
+    {
+      "input_history": [
+        0,
+        1,
+        2
+      ],
+      "signed_norm_of_9Ue_cubed": 28
+    },
+    {
+      "input_history": [
+        0,
+        2,
+        0
+      ],
+      "signed_norm_of_9Ue_cubed": 1
+    }
+  ],
+  "all_basis_inputs_have_cubic_zero": true,
+  "counterexample_to_naive_identification": true,
+  "interpretation": "Naive coordinate transport of U is not an E6 cubic automorphism if any N(Ue_j)!=0; no general embedding no-go follows."
+}

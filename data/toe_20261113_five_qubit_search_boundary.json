@@ -1,0 +1,33 @@
+{
+  "boundary": "A timeout is not a no-solution certificate. Need full no-8 proof or verified eight-set witness.",
+  "current_interval": "minimum is 8 or 9",
+  "eight": {
+    "all_orbits_timed_out": true,
+    "candidate_found": false,
+    "exhaustive_nonexistence_proved": false,
+    "nodes_explored": 4310000,
+    "orbit_representatives": 8,
+    "search_return": "undecided",
+    "source_file_sha256": "8915fed8b6cfa820277ea09dd1ba7f8df43cf076939b35600b583c36ef793d10",
+    "wall_seconds": 245.5
+  },
+  "literature": "2021 Mathematics 9(12) 1388 also reports five-qubit WUS sizes 9,11,13,15,17, without excluding size8",
+  "nine": {
+    "all_nonsingular_symmetric_matrices_checked": 13888,
+    "extendible_candidates": 0,
+    "maximal_partial_spread": true,
+    "seven_symmetric_matrix_codes": [
+      980,
+      30085,
+      20322,
+      22520,
+      4690,
+      21838,
+      7411
+    ],
+    "source_file_sha256": "bcd1620ffea591044e029d50df13da1617350d10a7aaa833b679f9983f8af5c6"
+  },
+  "prior_lower_bound": "Pass12649 independently states minimum >= 8, not rerun here",
+  "schema": "toe.five_qubit_eight_front.v1",
+  "status": "EIGHT_UNDECIDED_NINE_EXACT_WITNESS"
+}

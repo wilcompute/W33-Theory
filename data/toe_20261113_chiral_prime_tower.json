@@ -1,0 +1,101 @@
+{
+  "continuum_obstruction": "active-mode fraction (q^2-1)/q^3 ->0, not a smooth propagating continuum",
+  "opposite_arithmetic_controls": [
+    {
+      "antisymmetric_full_congruence_orbit_hopping": "zero",
+      "minus_one_is_square": true,
+      "prime": 5,
+      "rankone_orbit_inversion_stable": true
+    },
+    {
+      "antisymmetric_full_congruence_orbit_hopping": "zero",
+      "minus_one_is_square": true,
+      "prime": 13,
+      "rankone_orbit_inversion_stable": true
+    }
+  ],
+  "physics_boundary": "No physical metric, chosen time direction, gravity or experimental gate follows.",
+  "prior_work_boundary": "The q=3 oriented sheets and the unoriented general-q Laplacian/spectral-gap no-go are already in repo; this pass supplies the oriented cubic family and explicit higher-prime arithmetic tests",
+  "proof_ingredient": "quadratic Gauss sums for rank-0/rank-1/rank-2 binary quadratic forms; D Fourier eigenvalues vanish on ranks 0 and 2",
+  "schema": "toe.chiral_prime_tower.v1",
+  "status": "PASS_EXACT_CUBIC_CONVOLUTION_ALL_FOUR_PRIMES",
+  "theorem": "For odd primes q=3 mod4, the oriented rank-one Cayley matrix D has D^3=-q^3 D, rank q^2-1 and a qth-order unitary clock",
+  "verified_primes": [
+    {
+      "active_fraction": 0.2962962962962963,
+      "active_modes": 8,
+      "fourier_eigenvalues": "0 or +/-i*q^(3/2)",
+      "fourier_error": 0.0,
+      "frozen_modes": 19,
+      "integer_convolution_checked": true,
+      "integer_convolution_identity": "C*C*C = -q^3*C",
+      "negative_eigenvalue_mult": 4,
+      "negative_null_steps": 4,
+      "oriented_edges_each": 108,
+      "positive_eigenvalue_mult": 4,
+      "positive_null_steps": 4,
+      "prime": 3,
+      "states": 27,
+      "unitary": "exp[t D] with t=2pi/(q*q^(3/2))",
+      "unitary_exact_order_q": true,
+      "unitary_order_dividing_q": true
+    },
+    {
+      "active_fraction": 0.13994169096209913,
+      "active_modes": 48,
+      "fourier_eigenvalues": "0 or +/-i*q^(3/2)",
+      "fourier_error": 2.220446049250313e-16,
+      "frozen_modes": 295,
+      "integer_convolution_checked": true,
+      "integer_convolution_identity": "C*C*C = -q^3*C",
+      "negative_eigenvalue_mult": 24,
+      "negative_null_steps": 24,
+      "oriented_edges_each": 8232,
+      "positive_eigenvalue_mult": 24,
+      "positive_null_steps": 24,
+      "prime": 7,
+      "states": 343,
+      "unitary": "exp[t D] with t=2pi/(q*q^(3/2))",
+      "unitary_exact_order_q": true,
+      "unitary_order_dividing_q": true
+    },
+    {
+      "active_fraction": 0.09015777610818933,
+      "active_modes": 120,
+      "fourier_eigenvalues": "0 or +/-i*q^(3/2)",
+      "fourier_error": 1.9476063239908218e-16,
+      "frozen_modes": 1211,
+      "integer_convolution_checked": true,
+      "integer_convolution_identity": "C*C*C = -q^3*C",
+      "negative_eigenvalue_mult": 60,
+      "negative_null_steps": 60,
+      "oriented_edges_each": 79860,
+      "positive_eigenvalue_mult": 60,
+      "positive_null_steps": 60,
+      "prime": 11,
+      "states": 1331,
+      "unitary": "exp[t D] with t=2pi/(q*q^(3/2))",
+      "unitary_exact_order_q": true,
+      "unitary_order_dividing_q": true
+    },
+    {
+      "active_fraction": 0.05248578509986879,
+      "active_modes": 360,
+      "fourier_eigenvalues": "0 or +/-i*q^(3/2)",
+      "fourier_error": 5.551115123125783e-16,
+      "frozen_modes": 6499,
+      "integer_convolution_checked": true,
+      "integer_convolution_identity": "C*C*C = -q^3*C",
+      "negative_eigenvalue_mult": 180,
+      "negative_null_steps": 180,
+      "oriented_edges_each": 1234620,
+      "positive_eigenvalue_mult": 180,
+      "positive_null_steps": 180,
+      "prime": 19,
+      "states": 6859,
+      "unitary": "exp[t D] with t=2pi/(q*q^(3/2))",
+      "unitary_exact_order_q": true,
+      "unitary_order_dividing_q": true
+    }
+  ]
+}
