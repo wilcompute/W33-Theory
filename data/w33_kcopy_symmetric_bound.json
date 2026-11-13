@@ -1,0 +1,80 @@
+{
+ "controls": {
+  "all_n2_k2": 3.0000000000000004,
+  "all_n2_k3": 3.000000000000001,
+  "all_n3_k3": 7.000000000000002
+ },
+ "cases": [
+  {
+   "n": 3,
+   "name": "three-qubit five-set",
+   "truth": 6.0,
+   "k": 2,
+   "B": 12.000000000000023
+  },
+  {
+   "n": 3,
+   "name": "three-qubit five-set",
+   "truth": 6.0,
+   "k": 3,
+   "B": 8.314757303333058
+  },
+  {
+   "n": 3,
+   "name": "three-qubit five-set",
+   "truth": 6.0,
+   "k": 4,
+   "B": 8.314757303333057
+  },
+  {
+   "n": 3,
+   "name": "three-qubit five-set",
+   "truth": 6.0,
+   "k": 5,
+   "B": 7.427522555113727
+  },
+  {
+   "n": 4,
+   "name": "four-qubit type A",
+   "truth": 14.1622,
+   "k": 2,
+   "B": 20.000000000000036
+  },
+  {
+   "n": 4,
+   "name": "four-qubit type A",
+   "truth": 14.1622,
+   "k": 3,
+   "B": 20.000000000000007
+  },
+  {
+   "n": 4,
+   "name": "four-qubit type B",
+   "truth": 14.0,
+   "k": 2,
+   "B": 20.00000000000002
+  },
+  {
+   "n": 4,
+   "name": "four-qubit type B",
+   "truth": 14.0,
+   "k": 3,
+   "B": 17.333333333333393
+  },
+  {
+   "n": 5,
+   "name": "five-qubit 9-set",
+   "truth": 30.0,
+   "k": 2,
+   "B": 40.00000000000014
+  },
+  {
+   "n": 5,
+   "name": "five-qubit 9-set",
+   "truth": 30.0,
+   "k": 3,
+   "B": 39.04149104185971
+  }
+ ],
+ "seconds": 30.1
+}

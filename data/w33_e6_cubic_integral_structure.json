@@ -1,0 +1,93 @@
+{
+ "n_triads": 45,
+ "gf2_rank": 21,
+ "diagonal_sign_kernel_dim": 6,
+ "n_graph_automorphisms": 51840,
+ "n_permutations_with_sign_lift": 51840,
+ "monomial_group_order": 3317760,
+ "involutions": 891,
+ "involutions_with_order2_lift": 891,
+ "involution_classes_by_fixed_points": [
+  {
+   "fixed": 3,
+   "has_order2_lift": true,
+   "count": 585
+  },
+  {
+   "fixed": 7,
+   "has_order2_lift": true,
+   "count": 270
+  },
+  {
+   "fixed": 15,
+   "has_order2_lift": true,
+   "count": 36
+  }
+ ],
+ "charge_rank_table": [
+  {
+   "support": 1,
+   "meeting_pairs": 0,
+   "is_triad": false,
+   "rank": 1,
+   "N": 0,
+   "count": 54
+  },
+  {
+   "support": 2,
+   "meeting_pairs": 0,
+   "is_triad": false,
+   "rank": 1,
+   "N": 0,
+   "count": 864
+  },
+  {
+   "support": 2,
+   "meeting_pairs": 1,
+   "is_triad": false,
+   "rank": 2,
+   "N": 0,
+   "count": 540
+  },
+  {
+   "support": 3,
+   "meeting_pairs": 0,
+   "is_triad": false,
+   "rank": 1,
+   "N": 0,
+   "count": 5760
+  },
+  {
+   "support": 3,
+   "meeting_pairs": 1,
+   "is_triad": false,
+   "rank": 2,
+   "N": 0,
+   "count": 8640
+  },
+  {
+   "support": 3,
+   "meeting_pairs": 2,
+   "is_triad": false,
+   "rank": 2,
+   "N": 0,
+   "count": 8640
+  },
+  {
+   "support": 3,
+   "meeting_pairs": 3,
+   "is_triad": true,
+   "rank": 3,
+   "N": -1,
+   "count": 180
+  },
+  {
+   "support": 3,
+   "meeting_pairs": 3,
+   "is_triad": true,
+   "rank": 3,
+   "N": 1,
+   "count": 180
+  }
+ ]
+}

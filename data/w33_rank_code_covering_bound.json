@@ -1,0 +1,42 @@
+{
+ "3": {
+  "N_nonsingular": 28,
+  "kills_by_class": {
+   "False": 16
+  },
+  "covering_lower_bound_on_size": 4,
+  "seconds": 0.0
+ },
+ "4": {
+  "N_nonsingular": 448,
+  "kills_by_class": {
+   "True": 256,
+   "False": 256
+  },
+  "covering_lower_bound_on_size": 4,
+  "seconds": 0.0
+ },
+ "5": {
+  "N_nonsingular": 13888,
+  "kills_by_class": {
+   "False": 8128
+  },
+  "covering_lower_bound_on_size": 4,
+  "seconds": 0.4
+ },
+ "6": {
+  "N_nonsingular": 888832,
+  "kills_by_class": {
+   "True": 520192,
+   "False": 514048
+  },
+  "covering_lower_bound_on_size": 4,
+  "seconds": 36.9
+ },
+ "known_minima": {
+  "3": 5,
+  "4": 5,
+  "5": 9,
+  "6": "<= 9 (Grassl/Kantor value; exact minimum open)"
+ }
+}

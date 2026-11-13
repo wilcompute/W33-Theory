@@ -1,0 +1,19 @@
+{
+ "n_equations": 2295,
+ "nonlinear_equations": 0,
+ "terms_histogram": {
+  "(1, True)": 1215,
+  "(2, False)": 1080
+ },
+ "f2_rank": 24,
+ "consistent": true,
+ "solution_space_dim": 21,
+ "coboundary_dim": 21,
+ "sign_classes_total_log2": 24,
+ "repo_signs_satisfy": true,
+ "all_plus_satisfies": false,
+ "unique_up_to_diagonal_signs": true,
+ "random_coboundary_shift_stabiliser_dim": 78,
+ "single_sign_flip_satisfies": false,
+ "single_sign_flip_stabiliser_dim": 30
+}
