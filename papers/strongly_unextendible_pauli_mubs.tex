@@ -18,7 +18,8 @@ is $\min_{|v|=1}\F>0$. We prove exact, quantitative lower bounds. For two qubits
 24\,192 five-element sets form one Clifford orbit and satisfy $\F\ge(1/8-10^{-6})|v|^4$, while stabiliser states attain $1/8$. For
 four qubits, the smallest weakly unextendible sets have exactly five elements (an exhaustive search, matching Grassl's size
 $q^{n/2}+1$). There are $105\,283\,584$ of them in two types. One type satisfies $\F\ge|v|^4/80$ exactly, so five Pauli-class bases are strongly
-unextendible in $d=16$ (general, non-Pauli MUB triples are already strongly unextendible in many dimensions~\cite{gmmp}), and its minimum ($\approx0.0524$) lies below every stabiliser value. The proofs combine a twirl identity, the
+unextendible in $d=16$ (general, non-Pauli MUB triples are already strongly unextendible in many dimensions~\cite{gmmp}), and its minimum ($\approx0.0524$) lies below its stabiliser value $1/16$. For five qubits the smallest such sets have 8 or 9 elements (an exhaustive search
+excludes sizes up to 7, and one of size 9 exists). The proofs combine a twirl identity, the
 graph-theoretic uncertainty relation of de~Gois, Hansenne and G\"uhne, Pauli-symmetry reduction of sum-of-squares certificates, facial
 reduction, and verification in exact rational arithmetic.
 \end{abstract}
@@ -45,7 +46,8 @@ $\min\F\ge(d-1-\vartheta)/d$. The bound is tight when $\vartheta=\alpha(G)=d-1-m
 
 \section{Results}
 \begin{theorem}[two qubits]\label{t:2}
-For every three-element maximal partial spread of $W(3,2)$, $\min\F=1/4$ exactly. Here $\vartheta=\alpha=2$, and equivalently the six
+The three-element maximal partial spreads of $W(3,2)$ form one orbit, since exactly one passes through a fixed complementary pair
+(Witt), and for them $\min\F=1/4$ exactly. Here $\vartheta=\alpha=2$, and equivalently the six
 uncovered Paulis split into two pairwise-anticommuting triples.
 \end{theorem}
 
@@ -76,13 +78,15 @@ anticommute along a pentagon. An exact proof of $\kappa\le3$ is open; it has no 
 \begin{theorem}[four qubits]\label{t:4}
 (i) $W(7,2)$ has no maximal partial spread of size 3 or 4. The smallest size is 5, and there are $105\,283\,584$ such sets.
 (ii) They fall into two invariant types. For a set of the first type (lines listed in the repository), $\vartheta\le74/5$, so
-$\F\ge|v|^4/80$ exactly, while numerically $\min\F=0.0523626<1/16$. Sets of the second type are \emph{lifts} of the three-qubit five-sets. For each
-of them, 120 uncovered points $p$ project the set onto a maximal five-set of $p^\perp/\langle p\rangle\cong W(5,2)$, whereas the first
-type has no such point. They inherit a mirror partner (a second partition of the same covered set) and have numerical minimum $1/16$.
+$\F\ge|v|^4/80$ exactly, while numerically $\min\F=0.0523626<1/16$. A representative of the second type is a \emph{lift} of a three-qubit five-set: for it, 120
+uncovered points $p$ project the set onto a maximal five-set of $p^\perp/\langle p\rangle\cong W(5,2)$, whereas the representative of
+the first type has no such point. It inherits a mirror partner (a second partition of the same covered set) and have numerical minimum $1/16$.
 (iii) For several inequivalent nine-element sets, $\min\F=m^*/16$ exactly ($1/16$ or $1/8$), via a facially reduced Lovász dual.
 \end{theorem}
 \begin{proposition}[five qubits]
-$W(9,2)$ has no maximal partial spread of size at most 7, and it has one of size 9 (verified independently). Hence the smallest five-qubit maximal Pauli MUB set has 8 or 9 elements; local search finds none of size 8. The data $3,5,5,(9)$ for $n=2,\dots,5$ fit $2^{\lceil n/2ceil}+1$, which is a conjecture here.
+$W(9,2)$ has no maximal partial spread of size at most 7, and it has one of size 9 (verified independently). Hence the smallest five-qubit maximal Pauli MUB set has 8 or 9 elements; local search finds none of size 8. The data $3,5,5,(9)$ for $n=2,\dots,5$ fit $2^{\lceil n/2\rceil}+1$, which is a conjecture here. The size-9 set has numerical minimum $\F=1/32$, its stabiliser value. For $n=6$ a coverage-biased greedy search finds a maximal
+partial spread of size $9=2^{3}+1$ (verified over all 888\,832 nonsingular symmetric $6\times6$ matrices) and none smaller, consistent
+with the same pattern; this is evidence, not a proof.
 \end{proposition}
 \noindent\emph{Method.} Fixing the $X$- and $Z$-type Lagrangians, a Lagrangian disjoint from both is the graph of a nonsingular
 symmetric matrix $S$ over $\mathbb{F}_2$, and two graphs are disjoint iff $S+S'$ is nonsingular. A maximal partial spread is thus a set
@@ -111,7 +115,8 @@ $d$ & smallest size & $\min\F$ & status\\\midrule
 4 & 3 & $1/4$ & exact\\
 8 & 5 & $\in[1/8-10^{-6},\,1/8]$ & exact interval\\
 9 & 5 & $\ge1/9$; $\approx0.14711$ & exact bound; numerical value\\
-16 & 5 & $\ge1/80$; $\approx0.05236$ (one type) & exact bound; numerical value\\\bottomrule
+16 & 5 & $\ge1/80$; $\approx0.05236$ (one type) & exact bound; numerical value\\
+32 & 8 or 9 & $\approx1/32$ (size-9 set) & sizes exact; value numerical\\\bottomrule
 \end{tabular}
 \end{center}
 Open: an exact certificate at $1/8$ (degree 8, or a structural proof); closed forms for the non-stabiliser optima; the strong

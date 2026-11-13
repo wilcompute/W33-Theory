@@ -1,0 +1,25 @@
+{
+ "control_size9": {
+  "size": 9,
+  "found": true,
+  "example": [
+   7649,
+   18012,
+   20363,
+   18574,
+   11711,
+   12670,
+   21458
+  ],
+  "restarts": 1,
+  "seconds": 1.6
+ },
+ "size8": {
+  "size": 8,
+  "found": false,
+  "best_cost": 24,
+  "restarts": 1087,
+  "final_costs_min": 24,
+  "seconds": 2401.1
+ }
+}

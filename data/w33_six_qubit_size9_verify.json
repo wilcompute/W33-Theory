@@ -1,0 +1,17 @@
+{
+ "example": [
+  545926,
+  86834,
+  607162,
+  218024,
+  611364,
+  722734,
+  91796
+ ],
+ "size": 9,
+ "all_nonsingular": true,
+ "pairwise": true,
+ "nonsingular_T_checked": 888832,
+ "extendible_T": 0,
+ "maximal": true
+}
