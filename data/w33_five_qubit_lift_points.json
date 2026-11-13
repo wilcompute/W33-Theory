@@ -1,0 +1,12 @@
+{
+ "control_typeA_typeB": [
+  0,
+  120
+ ],
+ "n_uncovered": 744,
+ "disjoint_image_points": 0,
+ "lift_points": 0,
+ "n_inside_distribution": {},
+ "image_minF_by_n_inside": {},
+ "seconds": 17.0
+}

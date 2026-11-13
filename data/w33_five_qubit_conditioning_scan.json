@@ -1,0 +1,625 @@
+{
+ "control_n3_best": {
+  "p0": 53,
+  "coset_multiplicities": {
+   "0": 0,
+   "1": 15,
+   "2": 0
+  },
+  "n_anti_reps": 6,
+  "anti_pairs_both_uncovered": 6,
+  "lam_B": 2.9999999999999996,
+  "kappa_A": 3.000000000000001,
+  "moment_bound_kappa_sampled": 3.0,
+  "route_bound": 6.0,
+  "proves_target": true
+ },
+ "control_n3_route_bounds": [
+  6.0,
+  9.0
+ ],
+ "n5_rows": [
+  {
+   "p0": 1013,
+   "coset_multiplicities": {
+    "0": 14,
+    "1": 107,
+    "2": 134
+   },
+   "n_anti_reps": 234,
+   "anti_pairs_both_uncovered": 134,
+   "lam_B": 28.99999999750727,
+   "kappa_A": 16.00000000000002,
+   "moment_bound_kappa_sampled": 19.161799215357362,
+   "route_bound": 44.99999999750729,
+   "proves_target": false
+  },
+  {
+   "p0": 295,
+   "coset_multiplicities": {
+    "0": 17,
+    "1": 101,
+    "2": 137
+   },
+   "n_anti_reps": 237,
+   "anti_pairs_both_uncovered": 131,
+   "lam_B": 28.999999999867438,
+   "kappa_A": 16.0,
+   "moment_bound_kappa_sampled": 19.16685349327263,
+   "route_bound": 44.99999999986744,
+   "proves_target": false
+  },
+  {
+   "p0": 408,
+   "coset_multiplicities": {
+    "0": 17,
+    "1": 101,
+    "2": 137
+   },
+   "n_anti_reps": 237,
+   "anti_pairs_both_uncovered": 131,
+   "lam_B": 28.99999999922564,
+   "kappa_A": 16.000000000000025,
+   "moment_bound_kappa_sampled": 19.309335001157958,
+   "route_bound": 44.999999999225665,
+   "proves_target": false
+  },
+  {
+   "p0": 472,
+   "coset_multiplicities": {
+    "0": 18,
+    "1": 99,
+    "2": 138
+   },
+   "n_anti_reps": 238,
+   "anti_pairs_both_uncovered": 130,
+   "lam_B": 28.99999999719056,
+   "kappa_A": 16.00000000000003,
+   "moment_bound_kappa_sampled": 19.27300942645209,
+   "route_bound": 44.999999997190585,
+   "proves_target": false
+  },
+  {
+   "p0": 151,
+   "coset_multiplicities": {
+    "0": 16,
+    "1": 103,
+    "2": 136
+   },
+   "n_anti_reps": 236,
+   "anti_pairs_both_uncovered": 132,
+   "lam_B": 28.9999999985548,
+   "kappa_A": 16.000000000000004,
+   "moment_bound_kappa_sampled": 19.23711180455495,
+   "route_bound": 44.9999999985548,
+   "proves_target": false
+  },
+  {
+   "p0": 437,
+   "coset_multiplicities": {
+    "0": 18,
+    "1": 99,
+    "2": 138
+   },
+   "n_anti_reps": 238,
+   "anti_pairs_both_uncovered": 130,
+   "lam_B": 28.99999999904199,
+   "kappa_A": 16.000000000000014,
+   "moment_bound_kappa_sampled": 19.255292816500642,
+   "route_bound": 44.999999999042004,
+   "proves_target": false
+  },
+  {
+   "p0": 1023,
+   "coset_multiplicities": {
+    "0": 17,
+    "1": 101,
+    "2": 137
+   },
+   "n_anti_reps": 237,
+   "anti_pairs_both_uncovered": 131,
+   "lam_B": 28.999999998925002,
+   "kappa_A": 15.999999999999996,
+   "moment_bound_kappa_sampled": 19.131159416552507,
+   "route_bound": 44.999999998925,
+   "proves_target": false
+  },
+  {
+   "p0": 845,
+   "coset_multiplicities": {
+    "0": 13,
+    "1": 109,
+    "2": 133
+   },
+   "n_anti_reps": 233,
+   "anti_pairs_both_uncovered": 135,
+   "lam_B": 28.999999999129397,
+   "kappa_A": 16.000000000000032,
+   "moment_bound_kappa_sampled": 19.435213544471804,
+   "route_bound": 44.99999999912943,
+   "proves_target": false
+  },
+  {
+   "p0": 58,
+   "coset_multiplicities": {
+    "0": 19,
+    "1": 97,
+    "2": 139
+   },
+   "n_anti_reps": 239,
+   "anti_pairs_both_uncovered": 129,
+   "lam_B": 28.99999999715623,
+   "kappa_A": 16.00000000000002,
+   "moment_bound_kappa_sampled": 19.15110396574373,
+   "route_bound": 44.99999999715625,
+   "proves_target": false
+  },
+  {
+   "p0": 150,
+   "coset_multiplicities": {
+    "0": 16,
+    "1": 103,
+    "2": 136
+   },
+   "n_anti_reps": 236,
+   "anti_pairs_both_uncovered": 132,
+   "lam_B": 28.999999996992464,
+   "kappa_A": 16.000000000000014,
+   "moment_bound_kappa_sampled": 19.262192389321214,
+   "route_bound": 44.99999999699248,
+   "proves_target": false
+  },
+  {
+   "p0": 824,
+   "coset_multiplicities": {
+    "0": 17,
+    "1": 101,
+    "2": 137
+   },
+   "n_anti_reps": 237,
+   "anti_pairs_both_uncovered": 131,
+   "lam_B": 28.99999999789566,
+   "kappa_A": 16.000000000000014,
+   "moment_bound_kappa_sampled": 19.26410277172993,
+   "route_bound": 44.99999999789567,
+   "proves_target": false
+  },
+  {
+   "p0": 66,
+   "coset_multiplicities": {
+    "0": 17,
+    "1": 101,
+    "2": 137
+   },
+   "n_anti_reps": 237,
+   "anti_pairs_both_uncovered": 131,
+   "lam_B": 28.999999999967333,
+   "kappa_A": 16.000000000000014,
+   "moment_bound_kappa_sampled": 19.37870320489138,
+   "route_bound": 44.99999999996734,
+   "proves_target": false
+  },
+  {
+   "p0": 925,
+   "coset_multiplicities": {
+    "0": 19,
+    "1": 97,
+    "2": 139
+   },
+   "n_anti_reps": 239,
+   "anti_pairs_both_uncovered": 129,
+   "lam_B": 28.999999998035797,
+   "kappa_A": 16.000000000000007,
+   "moment_bound_kappa_sampled": 19.17941657981821,
+   "route_bound": 44.999999998035804,
+   "proves_target": false
+  },
+  {
+   "p0": 423,
+   "coset_multiplicities": {
+    "0": 19,
+    "1": 97,
+    "2": 139
+   },
+   "n_anti_reps": 239,
+   "anti_pairs_both_uncovered": 129,
+   "lam_B": 28.99999999949883,
+   "kappa_A": 16.00000000000002,
+   "moment_bound_kappa_sampled": 19.175443499283418,
+   "route_bound": 44.999999999498854,
+   "proves_target": false
+  },
+  {
+   "p0": 114,
+   "coset_multiplicities": {
+    "0": 17,
+    "1": 101,
+    "2": 137
+   },
+   "n_anti_reps": 237,
+   "anti_pairs_both_uncovered": 131,
+   "lam_B": 28.99999999547951,
+   "kappa_A": 16.000000000000014,
+   "moment_bound_kappa_sampled": 19.227917610943276,
+   "route_bound": 44.99999999547953,
+   "proves_target": false
+  },
+  {
+   "p0": 353,
+   "coset_multiplicities": {
+    "0": 15,
+    "1": 105,
+    "2": 135
+   },
+   "n_anti_reps": 235,
+   "anti_pairs_both_uncovered": 133,
+   "lam_B": 28.999999997967755,
+   "kappa_A": 16.000000000000004,
+   "moment_bound_kappa_sampled": 19.451025251810584,
+   "route_bound": 44.99999999796776,
+   "proves_target": false
+  },
+  {
+   "p0": 514,
+   "coset_multiplicities": {
+    "0": 17,
+    "1": 101,
+    "2": 137
+   },
+   "n_anti_reps": 237,
+   "anti_pairs_both_uncovered": 131,
+   "lam_B": 28.999999998977554,
+   "kappa_A": 16.0,
+   "moment_bound_kappa_sampled": 19.539261956149822,
+   "route_bound": 44.99999999897756,
+   "proves_target": false
+  },
+  {
+   "p0": 170,
+   "coset_multiplicities": {
+    "0": 20,
+    "1": 95,
+    "2": 140
+   },
+   "n_anti_reps": 240,
+   "anti_pairs_both_uncovered": 128,
+   "lam_B": 28.999999999001144,
+   "kappa_A": 16.000000000000018,
+   "moment_bound_kappa_sampled": 19.081205032645453,
+   "route_bound": 44.99999999900116,
+   "proves_target": false
+  },
+  {
+   "p0": 327,
+   "coset_multiplicities": {
+    "0": 17,
+    "1": 101,
+    "2": 137
+   },
+   "n_anti_reps": 237,
+   "anti_pairs_both_uncovered": 131,
+   "lam_B": 28.9999999985307,
+   "kappa_A": 16.000000000000018,
+   "moment_bound_kappa_sampled": 19.181959228665214,
+   "route_bound": 44.99999999853072,
+   "proves_target": false
+  },
+  {
+   "p0": 802,
+   "coset_multiplicities": {
+    "0": 19,
+    "1": 97,
+    "2": 139
+   },
+   "n_anti_reps": 239,
+   "anti_pairs_both_uncovered": 129,
+   "lam_B": 28.99999999742783,
+   "kappa_A": 16.000000000000014,
+   "moment_bound_kappa_sampled": 18.961654582801902,
+   "route_bound": 44.99999999742785,
+   "proves_target": false
+  },
+  {
+   "p0": 869,
+   "coset_multiplicities": {
+    "0": 19,
+    "1": 97,
+    "2": 139
+   },
+   "n_anti_reps": 239,
+   "anti_pairs_both_uncovered": 129,
+   "lam_B": 28.999999997720227,
+   "kappa_A": 16.000000000000004,
+   "moment_bound_kappa_sampled": 18.969117304520204,
+   "route_bound": 44.99999999772023,
+   "proves_target": false
+  },
+  {
+   "p0": 933,
+   "coset_multiplicities": {
+    "0": 16,
+    "1": 103,
+    "2": 136
+   },
+   "n_anti_reps": 236,
+   "anti_pairs_both_uncovered": 132,
+   "lam_B": 28.999999999736588,
+   "kappa_A": 16.000000000000007,
+   "moment_bound_kappa_sampled": 19.31175180966823,
+   "route_bound": 44.999999999736595,
+   "proves_target": false
+  },
+  {
+   "p0": 166,
+   "coset_multiplicities": {
+    "0": 16,
+    "1": 103,
+    "2": 136
+   },
+   "n_anti_reps": 236,
+   "anti_pairs_both_uncovered": 132,
+   "lam_B": 28.999999999256413,
+   "kappa_A": 16.000000000000007,
+   "moment_bound_kappa_sampled": 19.2040932004811,
+   "route_bound": 44.99999999925642,
+   "proves_target": false
+  },
+  {
+   "p0": 429,
+   "coset_multiplicities": {
+    "0": 20,
+    "1": 95,
+    "2": 140
+   },
+   "n_anti_reps": 240,
+   "anti_pairs_both_uncovered": 128,
+   "lam_B": 28.999999998206786,
+   "kappa_A": 16.000000000000004,
+   "moment_bound_kappa_sampled": 19.066836787428194,
+   "route_bound": 44.99999999820679,
+   "proves_target": false
+  },
+  {
+   "p0": 810,
+   "coset_multiplicities": {
+    "0": 16,
+    "1": 103,
+    "2": 136
+   },
+   "n_anti_reps": 236,
+   "anti_pairs_both_uncovered": 132,
+   "lam_B": 28.999999998597218,
+   "kappa_A": 16.00000000000003,
+   "moment_bound_kappa_sampled": 19.26788412943076,
+   "route_bound": 44.99999999859725,
+   "proves_target": false
+  },
+  {
+   "p0": 825,
+   "coset_multiplicities": {
+    "0": 21,
+    "1": 93,
+    "2": 141
+   },
+   "n_anti_reps": 241,
+   "anti_pairs_both_uncovered": 127,
+   "lam_B": 28.999999998923943,
+   "kappa_A": 16.000000000000014,
+   "moment_bound_kappa_sampled": 19.14464775534123,
+   "route_bound": 44.999999998923954,
+   "proves_target": false
+  },
+  {
+   "p0": 279,
+   "coset_multiplicities": {
+    "0": 15,
+    "1": 105,
+    "2": 135
+   },
+   "n_anti_reps": 235,
+   "anti_pairs_both_uncovered": 133,
+   "lam_B": 28.999999999568615,
+   "kappa_A": 16.000000000000014,
+   "moment_bound_kappa_sampled": 19.34866703624487,
+   "route_bound": 44.99999999956863,
+   "proves_target": false
+  },
+  {
+   "p0": 270,
+   "coset_multiplicities": {
+    "0": 19,
+    "1": 97,
+    "2": 139
+   },
+   "n_anti_reps": 239,
+   "anti_pairs_both_uncovered": 129,
+   "lam_B": 28.999999998296424,
+   "kappa_A": 16.000000000000025,
+   "moment_bound_kappa_sampled": 19.160671713132025,
+   "route_bound": 44.999999998296445,
+   "proves_target": false
+  },
+  {
+   "p0": 762,
+   "coset_multiplicities": {
+    "0": 15,
+    "1": 105,
+    "2": 135
+   },
+   "n_anti_reps": 235,
+   "anti_pairs_both_uncovered": 133,
+   "lam_B": 28.99999999832694,
+   "kappa_A": 16.00000000000001,
+   "moment_bound_kappa_sampled": 19.28408640608571,
+   "route_bound": 44.99999999832695,
+   "proves_target": false
+  },
+  {
+   "p0": 232,
+   "coset_multiplicities": {
+    "0": 19,
+    "1": 97,
+    "2": 139
+   },
+   "n_anti_reps": 239,
+   "anti_pairs_both_uncovered": 129,
+   "lam_B": 28.999999997751583,
+   "kappa_A": 16.00000000000002,
+   "moment_bound_kappa_sampled": 19.44078857951036,
+   "route_bound": 44.9999999977516,
+   "proves_target": false
+  },
+  {
+   "p0": 528,
+   "coset_multiplicities": {
+    "0": 22,
+    "1": 91,
+    "2": 142
+   },
+   "n_anti_reps": 242,
+   "anti_pairs_both_uncovered": 126,
+   "lam_B": 28.999999998628116,
+   "kappa_A": 16.00000000000003,
+   "moment_bound_kappa_sampled": 18.93318160178492,
+   "route_bound": 44.99999999862814,
+   "proves_target": false
+  },
+  {
+   "p0": 556,
+   "coset_multiplicities": {
+    "0": 18,
+    "1": 99,
+    "2": 138
+   },
+   "n_anti_reps": 238,
+   "anti_pairs_both_uncovered": 130,
+   "lam_B": 28.999999995867768,
+   "kappa_A": 16.00000000000002,
+   "moment_bound_kappa_sampled": 19.286810430878553,
+   "route_bound": 44.99999999586779,
+   "proves_target": false
+  },
+  {
+   "p0": 991,
+   "coset_multiplicities": {
+    "0": 20,
+    "1": 95,
+    "2": 140
+   },
+   "n_anti_reps": 240,
+   "anti_pairs_both_uncovered": 128,
+   "lam_B": 28.999999999036746,
+   "kappa_A": 16.000000000000014,
+   "moment_bound_kappa_sampled": 18.98057444878383,
+   "route_bound": 44.99999999903676,
+   "proves_target": false
+  },
+  {
+   "p0": 929,
+   "coset_multiplicities": {
+    "0": 17,
+    "1": 101,
+    "2": 137
+   },
+   "n_anti_reps": 237,
+   "anti_pairs_both_uncovered": 131,
+   "lam_B": 28.999999998091095,
+   "kappa_A": 16.000000000000004,
+   "moment_bound_kappa_sampled": 19.206289940654166,
+   "route_bound": 44.9999999980911,
+   "proves_target": false
+  },
+  {
+   "p0": 653,
+   "coset_multiplicities": {
+    "0": 21,
+    "1": 93,
+    "2": 141
+   },
+   "n_anti_reps": 241,
+   "anti_pairs_both_uncovered": 127,
+   "lam_B": 28.99999999364411,
+   "kappa_A": 16.000000000000007,
+   "moment_bound_kappa_sampled": 19.07321753989419,
+   "route_bound": 44.99999999364412,
+   "proves_target": false
+  },
+  {
+   "p0": 562,
+   "coset_multiplicities": {
+    "0": 19,
+    "1": 97,
+    "2": 139
+   },
+   "n_anti_reps": 239,
+   "anti_pairs_both_uncovered": 129,
+   "lam_B": 28.999999994926586,
+   "kappa_A": 16.00000000000002,
+   "moment_bound_kappa_sampled": 19.196823983298767,
+   "route_bound": 44.99999999492661,
+   "proves_target": false
+  },
+  {
+   "p0": 858,
+   "coset_multiplicities": {
+    "0": 19,
+    "1": 97,
+    "2": 139
+   },
+   "n_anti_reps": 239,
+   "anti_pairs_both_uncovered": 129,
+   "lam_B": 28.99999999848524,
+   "kappa_A": 16.00000000000003,
+   "moment_bound_kappa_sampled": 19.225373235149554,
+   "route_bound": 44.999999998485265,
+   "proves_target": false
+  },
+  {
+   "p0": 744,
+   "coset_multiplicities": {
+    "0": 14,
+    "1": 107,
+    "2": 134
+   },
+   "n_anti_reps": 234,
+   "anti_pairs_both_uncovered": 134,
+   "lam_B": 28.999999998748468,
+   "kappa_A": 16.0,
+   "moment_bound_kappa_sampled": 19.346813243845116,
+   "route_bound": 44.999999998748464,
+   "proves_target": false
+  },
+  {
+   "p0": 1008,
+   "coset_multiplicities": {
+    "0": 21,
+    "1": 93,
+    "2": 141
+   },
+   "n_anti_reps": 241,
+   "anti_pairs_both_uncovered": 127,
+   "lam_B": 28.999999999468358,
+   "kappa_A": 16.00000000000001,
+   "moment_bound_kappa_sampled": 19.33399374047538,
+   "route_bound": 44.99999999946837,
+   "proves_target": false
+  },
+  {
+   "p0": 475,
+   "coset_multiplicities": {
+    "0": 20,
+    "1": 95,
+    "2": 140
+   },
+   "n_anti_reps": 240,
+   "anti_pairs_both_uncovered": 128,
+   "lam_B": 28.99999999638733,
+   "kappa_A": 16.000000000000014,
+   "moment_bound_kappa_sampled": 19.104399852966782,
+   "route_bound": 44.999999996387345,
+   "proves_target": false
+  }
+ ],
+ "n5_best_route_bound": 44.99999999364412,
+ "seconds": 136.0
+}

@@ -94,7 +94,11 @@ orthogonal unitary basis. Combinatorially, the classes of $a_j+a_1$ ($j=1,\dots,
 pairwise sums are all the non-zero vectors. The five non-zero classes anticommute along a pentagon, and that alone forces the property:
 the pentagon's symplectic Gram matrix has kernel spanned by the all-ones vector, so the only linear relation among them is their sum. The
 inequality $\kappa\le3$ is tight and has no decomposable (PSD plus partial-transpose) certificate, and the SOS/PPT hierarchy fails at
-levels $(1,2)$, $(2,1)$ and $(2,2)$; the moment argument bypasses this.
+levels $(1,2)$, $(2,1)$ and $(2,2)$; the moment argument bypasses this. It uses only the property that the 15 pairwise sums of six
+labels are all the non-zero vectors of $\mathbb{F}_2^4$. There are 448 such six-element subsets of two-qubit Pauli labels, in three
+affine-symplectic orbits of sizes $16$, $192$ and $240$. The bound $\kappa\le3$ therefore holds on all of them, and it is attained on the
+orbits of sizes 192 (which contains the configuration above and has a PPT Choi matrix) and 240. On the orbit of size 16 (a twisted
+Werner--Holevo channel) $\kappa=2$. The equality locus contains non-stabiliser states, e.g.\ $y_t\propto(1,it,-it,1)$ for all real $t$.
 \end{remark}
 \noindent\emph{Independent SOS method.} $\F(v)|v|^2-\delta|v|^6$ is written as an SOS in the degree-3 monomials and in the monomials
 $v_iv_j\bar v_k$. The Pauli group acts on both monomial spaces with centre $-1$, so each is a multiple of the unique 8-dimensional
@@ -117,7 +121,10 @@ the first type has no such point. It inherits a mirror partner (a second partiti
 \begin{proposition}[five qubits]
 $W(9,2)$ has no maximal partial spread of size at most 7, and it has one of size 9 (verified independently). Hence the smallest five-qubit maximal Pauli MUB set has 8 or 9 elements; local search finds none of size 8. The data $3,5,5,(9)$ for $n=2,\dots,5$ fit $2^{\lceil n/2\rceil}+1$, which is a conjecture here. The size-9 set has numerical minimum $\F=1/32$, its stabiliser value. For $n=6$ a coverage-biased greedy search finds a maximal
 partial spread of size $9=2^{3}+1$ (verified over all 888\,832 nonsingular symmetric $6\times6$ matrices) and none smaller, consistent
-with the same pattern; this is evidence, not a proof.
+with the same pattern; this is evidence, not a proof. For the five-qubit size-9 set the Lovász number of the uncovered graph (744
+vertices, 368-regular) satisfies $30.340\le\vartheta\le30.449$ (floating-point certificates: an eigenvalue-form dual and
+$\vartheta(G)\vartheta(\bar G)\ge744$). Hence $\min\F\ge0.0172$, and the Lovász route cannot reach $1/32$; as at $d=8$, $\vartheta>\alpha$.
+Unlike type B at $d=16$, the set is not a lift: no uncovered point projects it onto a partial spread of $p^\perp/\langle p\rangle$.
 \end{proposition}
 \noindent\emph{Method.} Fixing the $X$- and $Z$-type Lagrangians, a Lagrangian disjoint from both is the graph of a nonsingular
 symmetric matrix $S$ over $\mathbb{F}_2$, and two graphs are disjoint iff $S+S'$ is nonsingular. A maximal partial spread is thus a set
@@ -147,7 +154,7 @@ $d$ & smallest size & $\min\F$ & status\\\midrule
 8 & 5 & $1/8$ & exact\\
 9 & 5 & $\ge1/9$; $\approx0.14711$ & exact bound; numerical value\\
 16 & 5 & $\ge1/80$; $\approx0.05236$ (one type) & exact bound; numerical value\\
-32 & 8 or 9 & $\approx1/32$ (size-9 set) & sizes exact; value numerical\\\bottomrule
+32 & 8 or 9 & $\ge0.0172$; $\approx1/32$ (size-9 set) & sizes exact; bound float-certified; value numerical\\\bottomrule
 \end{tabular}
 \end{center}
 Open: closed forms for the non-stabiliser optima; the strong

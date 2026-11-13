@@ -1,0 +1,200 @@
+{
+ "control_n3_size5": {
+  "n": 3,
+  "size": 5,
+  "status": "exists",
+  "example": [
+   41,
+   14,
+   53
+  ],
+  "nodes": 6,
+  "per_rep": [
+   {
+    "s2": 14,
+    "found": [
+     41,
+     14,
+     53
+    ],
+    "nodes": 3,
+    "timeout": false,
+    "seconds": 0.0
+   },
+   {
+    "s2": 15,
+    "found": [
+     41,
+     15,
+     50
+    ],
+    "nodes": 3,
+    "timeout": false,
+    "seconds": 0.0
+   }
+  ],
+  "wall": 1.0
+ },
+ "control_n3_size7": {
+  "n": 3,
+  "size": 7,
+  "status": "none",
+  "example": null,
+  "nodes": 6,
+  "per_rep": [
+   {
+    "s2": 14,
+    "found": null,
+    "nodes": 3,
+    "timeout": false,
+    "seconds": 0.0
+   },
+   {
+    "s2": 15,
+    "found": null,
+    "nodes": 3,
+    "timeout": false,
+    "seconds": 0.0
+   }
+  ],
+  "wall": 0.4
+ },
+ "control_n5_size9": {
+  "n": 5,
+  "size": 9,
+  "status": "exists",
+  "example": [
+   21025,
+   692,
+   1321,
+   1945,
+   3203,
+   2842,
+   3703
+  ],
+  "nodes": 514,
+  "per_rep": [
+   {
+    "s2": 692,
+    "found": [
+     21025,
+     692,
+     1321,
+     1945,
+     3203,
+     2842,
+     3703
+    ],
+    "nodes": 9,
+    "timeout": false,
+    "seconds": 0.1
+   },
+   {
+    "s2": 693,
+    "found": [
+     21025,
+     693,
+     1317,
+     1936,
+     2891,
+     2492,
+     3229
+    ],
+    "nodes": 164,
+    "timeout": false,
+    "seconds": 0.1
+   },
+   {
+    "s2": 694,
+    "found": [
+     21025,
+     694,
+     1321,
+     1945,
+     2842,
+     3207,
+     3697
+    ],
+    "nodes": 7,
+    "timeout": false,
+    "seconds": 0.1
+   },
+   {
+    "s2": 695,
+    "found": [
+     21025,
+     695,
+     1317,
+     1936,
+     2490,
+     2891,
+     3293
+    ],
+    "nodes": 80,
+    "timeout": false,
+    "seconds": 0.1
+   },
+   {
+    "s2": 700,
+    "found": [
+     21025,
+     700,
+     1317,
+     1945,
+     2261,
+     2665,
+     3568
+    ],
+    "nodes": 6,
+    "timeout": false,
+    "seconds": 0.1
+   },
+   {
+    "s2": 701,
+    "found": [
+     21025,
+     701,
+     1321,
+     1936,
+     2618,
+     3564,
+     3857
+    ],
+    "nodes": 7,
+    "timeout": false,
+    "seconds": 0.1
+   },
+   {
+    "s2": 702,
+    "found": [
+     21025,
+     702,
+     1317,
+     1945,
+     2263,
+     3504,
+     2603
+    ],
+    "nodes": 85,
+    "timeout": false,
+    "seconds": 0.1
+   },
+   {
+    "s2": 703,
+    "found": [
+     21025,
+     703,
+     1321,
+     1936,
+     3496,
+     2618,
+     3861
+    ],
+    "nodes": 156,
+    "timeout": false,
+    "seconds": 0.1
+   }
+  ],
+  "wall": 3.0
+ }
+}

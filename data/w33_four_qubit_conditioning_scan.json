@@ -1,0 +1,68 @@
+{
+ "A": {
+  "best": {
+   "p0": 109,
+   "coset_multiplicities": {
+    "0": 6,
+    "1": 23,
+    "2": 34
+   },
+   "n_anti_reps": 60,
+   "anti_pairs_both_uncovered": 28,
+   "lam_B": 12.999999999253518,
+   "kappa_A": 8.000000000000004,
+   "moment_bound_kappa_sampled": 9.617408956863219,
+   "route_bound": 20.99999999925352,
+   "proves_target": false
+  },
+  "profiles": [
+   {
+    "mult": "((0, 6), (1, 23), (2, 34))",
+    "lam_B": 13.0,
+    "kappa_A": 8.0,
+    "route": 21.0,
+    "count": 60
+   },
+   {
+    "mult": "((0, 4), (1, 27), (2, 32))",
+    "lam_B": 13.129,
+    "kappa_A": 8.0,
+    "route": 21.129,
+    "count": 120
+   }
+  ]
+ },
+ "B": {
+  "best": {
+   "p0": 119,
+   "coset_multiplicities": {
+    "0": 0,
+    "1": 35,
+    "2": 28
+   },
+   "n_anti_reps": 54,
+   "anti_pairs_both_uncovered": 34,
+   "lam_B": 12.99999999724559,
+   "kappa_A": 8.000000000000007,
+   "moment_bound_kappa_sampled": 9.95184044308842,
+   "route_bound": 20.999999997245595,
+   "proves_target": false
+  },
+  "profiles": [
+   {
+    "mult": "((0, 0), (1, 35), (2, 28))",
+    "lam_B": 13.0,
+    "kappa_A": 8.0,
+    "route": 21.0,
+    "count": 120
+   },
+   {
+    "mult": "((0, 10), (1, 15), (2, 38))",
+    "lam_B": 13.0,
+    "kappa_A": 8.0,
+    "route": 21.0,
+    "count": 60
+   }
+  ]
+ }
+}

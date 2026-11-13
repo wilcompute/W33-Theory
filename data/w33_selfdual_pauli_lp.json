@@ -1,0 +1,50 @@
+{
+ "identity_check": {
+  "2": 8.881784197001252e-16,
+  "3": 1.7763568394002505e-15,
+  "4": 3.552713678800501e-15
+ },
+ "cases": [
+  {
+   "n": 3,
+   "name": "three-qubit five-set",
+   "n_U": 28,
+   "truth_SigmaU_max": 6.0,
+   "LP": 7.000000000000001,
+   "LP_with_clique_cuts": 7.000000000000001,
+   "minF_bound": -1.1102230246251565e-16,
+   "exact_one_over_d": false
+  },
+  {
+   "n": 4,
+   "name": "four-qubit type A (genuine five-set)",
+   "n_U": 180,
+   "truth_SigmaU_max": 14.1622,
+   "LP": 15.000000000000492,
+   "LP_with_clique_cuts": 14.999999999999698,
+   "minF_bound": 1.887379141862766e-14,
+   "exact_one_over_d": false
+  },
+  {
+   "n": 4,
+   "name": "four-qubit type B (lifted five-set)",
+   "n_U": 180,
+   "truth_SigmaU_max": 14.0,
+   "LP": 15.000000000000098,
+   "LP_with_clique_cuts": 14.999999999999828,
+   "minF_bound": 1.0769163338864018e-14,
+   "exact_one_over_d": false
+  },
+  {
+   "n": 5,
+   "name": "five-qubit size-9",
+   "n_U": 744,
+   "truth_SigmaU_max": 30.0,
+   "LP": 31.000000000000796,
+   "LP_with_clique_cuts": 30.99999999999965,
+   "minF_bound": 1.099120794378905e-14,
+   "exact_one_over_d": false
+  }
+ ],
+ "seconds": 390.0
+}

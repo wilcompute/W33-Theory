@@ -1,0 +1,105 @@
+{
+ "n_supports": 448,
+ "orbit_sizes": [
+  16,
+  192,
+  240
+ ],
+ "orbits": [
+  {
+   "size": 240,
+   "rep": [
+    "II",
+    "XI",
+    "IX",
+    "ZI",
+    "IZ",
+    "YY"
+   ],
+   "contains_model": false,
+   "kappa": 3.000000000000003,
+   "choi_pt_min_eig": -2.0,
+   "moment_identities_all_members": true
+  },
+  {
+   "size": 192,
+   "rep": [
+    "II",
+    "XI",
+    "IX",
+    "ZI",
+    "XZ",
+    "ZY"
+   ],
+   "contains_model": true,
+   "kappa": 3.0000000000000027,
+   "choi_pt_min_eig": 0.0,
+   "moment_identities_all_members": true
+  },
+  {
+   "size": 16,
+   "rep": [
+    "II",
+    "XI",
+    "ZI",
+    "YX",
+    "YZ",
+    "YY"
+   ],
+   "contains_model": false,
+   "kappa": 2.0,
+   "choi_pt_min_eig": -6.0,
+   "moment_identities_all_members": true
+  }
+ ],
+ "y_t_family": [
+  {
+   "t": 0.0,
+   "identity_holds": true,
+   "spectrum": [
+    1.0,
+    1.0,
+    1.0,
+    3.0
+   ],
+   "XX_on_y": 0.9999999999999998,
+   "XX_on_v": 0.9999999999999998
+  },
+  {
+   "t": 0.5,
+   "identity_holds": true,
+   "spectrum": [
+    1.0,
+    1.0,
+    1.0,
+    3.0
+   ],
+   "XX_on_y": 0.6000000000000001,
+   "XX_on_v": 0.6000000000000001
+  },
+  {
+   "t": 2.0,
+   "identity_holds": true,
+   "spectrum": [
+    1.0,
+    1.0,
+    1.0,
+    3.0
+   ],
+   "XX_on_y": -0.6000000000000001,
+   "XX_on_v": -0.6000000000000001
+  },
+  {
+   "t": -3.0,
+   "identity_holds": true,
+   "spectrum": [
+    1.0,
+    1.0,
+    1.0,
+    3.0
+   ],
+   "XX_on_y": -0.8,
+   "XX_on_v": -0.8
+  }
+ ]
+}
