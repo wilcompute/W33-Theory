@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "profile": {
+    "energy": 573.9697522014352,
+    "iterations": 21,
+    "scaled_discrete_residual": 1.7658870586027258e-07,
+    "elements": 100,
+    "gauge": 311.31813628059604,
+    "scalar_gradient": 238.31044396253046,
+    "potential": 24.332095075196595,
+    "d_energy": 1.3887991317738498e-05,
+    "virial_defect": 0.011407092475792524,
+    "linear_scalar_tail_energy": 0.00907688311215888,
+    "outer_radius": 5.0,
+    "boundary_scalar_deviation": 0.011241340193079988,
+    "boundary_linear_gauge_tangent": 1.755746421260808e-06
+  },
+  "energy": 0.002,
+  "shell": [
+    20.0,
+    40.0
+  ],
+  "vacuum_resolvent_gap": 1.412573988334818,
+  "closed_perturbation_norm": 0.008843806952647498,
+  "integrated_coupling_norm_squared": 0.0004035761394436117,
+  "source_feedback_Linf_to_L1_bound": 0.0002875026445938735,
+  "conversion_at_inner": 0.7946209258332507,
+  "projected_conversion_at_outer": 0.8032440920957595,
+  "full_conversion_at_outer": 0.8032453505800771,
+  "reflection_operator_error": 2.4543164115632704e-06,
+  "conversion_error": 1.2584843175345028e-06
+}
