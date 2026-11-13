@@ -81,13 +81,13 @@ type has no such point. They inherit a mirror partner (a second partition of the
 (iii) For several inequivalent nine-element sets, $\min\F=m^*/16$ exactly ($1/16$ or $1/8$), via a facially reduced Lovász dual.
 \end{theorem}
 \begin{proposition}[five qubits]
-$W(9,2)$ has no maximal partial spread of size at most 6.
+$W(9,2)$ has no maximal partial spread of size at most 7.
 \end{proposition}
 \noindent\emph{Method.} Fixing the $X$- and $Z$-type Lagrangians, a Lagrangian disjoint from both is the graph of a nonsingular
 symmetric matrix $S$ over $\mathbb{F}_2$, and two graphs are disjoint iff $S+S'$ is nonsingular. A maximal partial spread is thus a set
 of nonsingular symmetric matrices with nonsingular pairwise differences that leaves no nonsingular $T$ with all $T+S_i$ nonsingular.
 For $n=5$ there are 13\,888 such matrices; $S_1=I$ without loss of generality, and $S_2$ is reduced modulo the orthogonal group of
-order 720. The same code reproduces the counts 56 ($n=3$) and 896 ($n=4$) found by direct enumeration.
+order 720, followed by an exhaustive depth-first search with a valid covering prune for size 7. The same code reproduces the counts 56 ($n=3$) and 896 ($n=4$) found by direct enumeration.
 
 \noindent\emph{Method for (i).} By Witt's theorem, $\mathrm{Sp}(8,2)$ is transitive on ordered pairs of complementary Lagrangians, so
 every candidate can be taken to contain a fixed pair. The remaining one or two Lagrangians are enumerated exhaustively. As a control,

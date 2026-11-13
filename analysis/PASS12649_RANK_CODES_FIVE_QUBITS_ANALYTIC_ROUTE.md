@@ -18,11 +18,11 @@ Every sum is symmetric, so one singularity table over all 2^{n(n+1)/2} symmetric
 |---|---|---|---|---|---|---|
 | 3 | 28 | none | none | **56** (= Pass 12648) | none | none |
 | 4 | 448 | none | none | **896** (= Pass 12648) | — | — |
-| **5** | **13,888** | **none** | **none** | **none** | **none** (`w33_five_qubit_size6.py`; S₂ reduced mod O(5) of order 720, 8 orbits) | a first run reported none, but its pruning was **invalid** (see below); rerunning |
+| **5** | **13,888** | **none** | **none** | **none** | **none** (`w33_five_qubit_size6.py`; S₂ reduced mod O(5) of order 720, 8 orbits) | **none** (corrected exhaustive DFS, 8,668,424 nodes, 2,695 s) |
 
 **Two independent methods agree.** Pass 12648 used an explicit Lagrangian enumeration; this method uses only symmetric matrices. They give identical counts at n = 3 and n = 4.
 
-> **Five qubits: W(9,2) has no maximal partial spread of size ≤ 6.** Every weakly unextendible five-qubit Pauli MUB set has at least 7 bases. Grassl's conjecture q^{n/2} + 1 concerns even n only. Kantor's survey notes that small cases have counterexamples; for n = 5 nothing is claimed beyond this lower bound.
+> **Five qubits: W(9,2) has no maximal partial spread of size ≤ 7.** Every weakly unextendible five-qubit Pauli MUB set has at least 8 bases. Grassl's conjecture q^{n/2} + 1 concerns even n only. Kantor's survey notes that small cases have counterexamples; for n = 5 nothing is claimed beyond this lower bound.
 
 ## 2. The genuine four-qubit optimum is isolated (`w33_optimum_hessian_nullity.py`)
 
@@ -71,3 +71,5 @@ Condition on the distinguished uncovered Pauli P₀ (the singleton class of Pass
 ## Withdrawn within the pass: the first size-7 run
 
 The first five-qubit size-7 search reported "none" (8.67 million nodes, 1,221 s), but its pruning was invalid. It skipped any candidate c with coverage(c)·r < |R|. Sets are enumerated in increasing order, so a set can have a low-coverage smallest member and still be completed by high-coverage larger ones. That result is **withdrawn**. The corrected search uses only the global prune (the top-r coverages must sum to at least |R|) and is rerunning. The size-6 result is unaffected: it filtered S₄ exactly against the uncovered set.
+
+**Corrected result.** The rerun with only the valid global prune also finds **no size-7 set**, and it visits exactly the same 8,668,424 nodes. The invalid per-candidate break therefore never pruned anything in practice; the corrected run confirms the result. **Five-qubit minimum ≥ 8.** Limitation: the positive control for this DFS is shallow (n = 3, size 5). No deeper known positive case was available.
