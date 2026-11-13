@@ -38,7 +38,7 @@ def horizontal_frames(a, matter, gauge, adjoint, bases):
     return result
 
 
-def calculate():
+def higgs_model():
     flat = triplet.flat
     gauge, adjoint, _, color, weak, y = flat.compact_chart()
     gauge = np.asarray(gauge, dtype=float)
@@ -69,6 +69,12 @@ def calculate():
         fixed, varying, _ = triplet.holomorphic_masses(a, matter, *directions, records, words, rules)
         return fixed + varying
 
+    return gauge, adjoint, directions, bases, higgs, vacuum, embedding, residual, meshes, mass, (records, words, rules)
+
+
+def calculate():
+    gauge, adjoint, directions, bases, higgs, vacuum, embedding, residual, meshes, mass, native = higgs_model()
+    records, words, rules = native
     results = []
     for mesh in meshes:
         state = np.array(mesh["state"])
