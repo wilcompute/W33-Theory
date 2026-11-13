@@ -80,5 +80,20 @@
       "anchor_zero_vertical_action_rank": 21,
       "effective_affine_operator_dimension": 63
     }
-  }
+  },
+  "constant_parameter_cohomology": {
+    "invisible_constants": 23,
+    "exact_constants": 20,
+    "dimension": 3,
+    "representatives": [
+      4,
+      5,
+      9
+    ]
+  },
+  "nonzero_fourier_symbol": {
+    "operator_rank": 17,
+    "exact_rank": 10
+  },
+  "periodic_torus_invisible_parameter_cohomology": 23
 }

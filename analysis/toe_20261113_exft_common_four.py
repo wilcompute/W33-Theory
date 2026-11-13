@@ -114,11 +114,36 @@ def calculate():
             flat_jets = sp.Matrix(jets.reshape(len(jets), -1).T.tolist())
             assert ambient_matrix * chart.inv() * flat_jets[list(independent_rows), :] == flat_jets
 
+    # Constant affine parameters act only through the anchor. The image
+    # of linear trivial potentials is the orthogonal complement of A.
+    linear_potentials = np.concatenate([tensor[:, s, :] for s in shared], axis=1)
+    assert not linear_potentials[list(annihilator), :].any()
+    exact_constants = rank_mod(linear_potentials)
+    assert exact_constants == 27-len(annihilator)
+    invisible_constants = 27-len(shared)
+    residual_constants = invisible_constants-exact_constants
+    assert residual_constants == 3
+    # For a nonzero Fourier covector, test the anchor and algebraic
+    # parts of the differential-operator symbol at a coordinate covector.
+    s = shared[0]
+    symbol = np.array([
+        np.r_[IDENTITY[s, l], (y_tensor[:, s, :, l]
+                              - np.outer(IDENTITY[:, l], IDENTITY[s])).ravel()]
+        for l in range(27)
+    ])
+    fourier_potential = tensor[:, s, :]
+    assert not (fourier_potential.T @ symbol).any()
+    fourier_rank, potential_rank = rank_mod(symbol), rank_mod(fourier_potential)
+    assert (fourier_rank, potential_rank) == (17, 10)
     assert controls["shared_four"]["vertical_action_rank"] == 45
     return dict(status="PASS", shared=shared, annihilator=annihilator, iib_transverse=line,
                 m_transverse=plane, mixed_cubic_terms=terms, joint_stabilizer_dimension=49,
                 conformal_stabilizer_dimension=50, transverse_quotient_dimension=5,
-                jets=controls)
+                jets=controls, constant_parameter_cohomology=dict(
+                    invisible_constants=invisible_constants, exact_constants=exact_constants,
+                    dimension=residual_constants, representatives=transverse),
+                nonzero_fourier_symbol=dict(operator_rank=fourier_rank, exact_rank=potential_rank),
+                periodic_torus_invisible_parameter_cohomology=invisible_constants)
 
 
 if __name__ == "__main__":
