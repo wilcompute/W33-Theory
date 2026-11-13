@@ -1,0 +1,46 @@
+{
+ "n": 3,
+ "k_more": 1,
+ "size": 5,
+ "orbits": [
+  {
+   "s2": 14,
+   "orbit_size": 6,
+   "n_cand": 6,
+   "n_uncovered": 6,
+   "n_conflicts": 5,
+   "status": "OPTIMAL",
+   "seconds": 0.1,
+   "solution": [
+    41,
+    14,
+    53
+   ],
+   "verified": true
+  },
+  {
+   "s2": 15,
+   "orbit_size": 6,
+   "n_cand": 6,
+   "n_uncovered": 6,
+   "n_conflicts": 5,
+   "status": "OPTIMAL",
+   "seconds": 0.0,
+   "solution": [
+    41,
+    15,
+    50
+   ],
+   "verified": true
+  }
+ ],
+ "summary": {
+  "all_infeasible": false,
+  "any_feasible": true,
+  "statuses": [
+   "OPTIMAL",
+   "OPTIMAL"
+  ],
+  "seconds": 0.1
+ }
+}

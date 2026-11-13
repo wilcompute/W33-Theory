@@ -6,7 +6,7 @@
 \theoremstyle{remark}\newtheorem*{remark}{Remark}
 \newcommand{\F}{\mathcal{F}}
 \title{Strong unextendibility of small Pauli MUB sets:\\ exact bounds for two, three and four qubits}
-\author{Draft (W33 repository, Passes 12636--12648)}
+\author{Draft (W33 repository, Passes 12636--12652)}
 \date{November 2026}
 \begin{document}
 \maketitle
@@ -15,7 +15,9 @@ A set of mutually unbiased stabiliser bases (Pauli MUBs) is \emph{weakly unexten
 them, and \emph{strongly unextendible} if no vector at all is. For a set $\mathcal{S}$ in dimension $d$ we study
 $\F(v)=\sum_{e}\bigl(|\langle e|v\rangle|^2-|v|^2/d\bigr)^2$, the sum over all basis vectors $e$ of the set; strong unextendibility
 is $\min_{|v|=1}\F>0$. We prove exact, quantitative lower bounds. For two qubits, the minimum is exactly $1/4$. For three qubits, all
-24\,192 five-element sets form one Clifford orbit and satisfy $\F\ge(1/8-10^{-6})|v|^4$, while stabiliser states attain $1/8$. For
+24\,192 five-element sets form one Clifford orbit and $\min\F=1/8$ exactly, attained by stabiliser states; the proof conditions on a
+distinguished uncovered Pauli and closes a $4\otimes4$ inequality, which resists low levels of the SOS/PPT hierarchy, with a two-moment
+eigenvalue bound. For
 four qubits, the smallest weakly unextendible sets have exactly five elements (an exhaustive search, matching Grassl's size
 $q^{n/2}+1$). There are $105\,283\,584$ of them in two types. One type satisfies $\F\ge|v|^4/80$ exactly, so five Pauli-class bases are strongly
 unextendible in $d=16$ (general, non-Pauli MUB triples are already strongly unextendible in many dimensions~\cite{gmmp}), and its minimum ($\approx0.0524$) lies below its stabiliser value $1/16$. For five qubits the smallest such sets have 8 or 9 elements (an exhaustive search
@@ -53,11 +55,48 @@ uncovered Paulis split into two pairwise-anticommuting triples.
 
 \begin{theorem}[three qubits]\label{t:3}
 The maximal partial spreads of $W(5,2)$ have sizes 5 (24\,192 sets, one $\mathrm{Sp}(6,2)$-orbit) and 9 (complete sets). For every
-five-element set and every $v\in\mathbb{C}^8$, $\F(v)\ge(1/8-10^{-6})|v|^4$, and stabiliser states attain $1/8$. A weaker but
-structural bound is $\F\ge\frac{3-\sqrt5}{8}|v|^4$, from $\vartheta\le4+\sqrt5$, certified over $\mathbb{Q}(\sqrt5)$ in the rank-21
+five-element set and every $v\in\mathbb{C}^8$, $\F(v)\ge|v|^4/8$, and stabiliser states attain $1/8$; so $\min\F=1/8$ exactly.
+(An independent degree-6 SOS certificate gives $\F\ge(1/8-10^{-6})|v|^4$.) A weaker but structural bound is $\F\ge\frac{3-\sqrt5}{8}|v|^4$, from $\vartheta\le4+\sqrt5$, certified over $\mathbb{Q}(\sqrt5)$ in the rank-21
 coherent closure of the uncovered graph.
 \end{theorem}
-\noindent\emph{Method.} $\F(v)|v|^2-\delta|v|^6$ is written as an SOS in the degree-3 monomials and in the monomials
+\begin{proof}[Proof of $\F\ge|v|^4/8$]
+By the twirl identity $\F=(7-\Sigma_U)/8$ for unit $v$, where $\Sigma_U=\sum_{P\in U}\langle P\rangle^2$ over the 27 uncovered
+non-identity Paulis; we show $\Sigma_U\le6$. By the single orbit it suffices to treat one set. Let $P_0\in U$ be the uncovered Pauli fixed by
+the stabiliser of the set, $V_\pm$ its eigenspaces, $v=c\psi_++s\psi_-$ with $\psi_\pm\in V_\pm$ unit and $t=\langle P_0\rangle=c^2-s^2$.
+
+\emph{Commuting part.} The 15 uncovered Paulis $B$ commuting with $P_0$ (other than $P_0$) map bijectively onto the points of
+$p_0^\perp/\langle p_0\rangle\cong W(3,2)$ (checked). On each $V_\pm$ they act, up to sign, as the 15 non-identity two-qubit Paulis, so
+two-qubit purity gives $\sum_B\langle\psi_\pm|P|\psi_\pm\rangle^2\le3$; since $\langle P\rangle=c^2\langle\psi_+|P|\psi_+\rangle+s^2\langle\psi_-|P|\psi_-\rangle$,
+convexity gives $\sum_B\langle P\rangle^2\le3$.
+
+\emph{Anticommuting part.} The 12 uncovered Paulis anticommuting with $P_0$ form six pairs $\{a_j,\,\pm ia_jP_0\}$ (checked). For such
+$Q$, $\langle Q\rangle=2cs\,\mathrm{Re}\langle\psi_+|Q|\psi_-\rangle$, and a pair contributes exactly $(1-t^2)|\langle\psi_+|a_j|\psi_-\rangle|^2$.
+Writing $M_j:V_-\to V_+$ for the restriction of $a_j$ (a unitary $4\times4$ matrix),
+$\sum_A\langle Q\rangle^2=(1-t^2)\sum_{j=1}^6|\langle\psi_+|M_j\psi_-\rangle|^2\le(1-t^2)\,\kappa$, with
+$\kappa=\max_{|x|=|y|=1}\sum_j|\langle x|M_jy\rangle|^2$.
+
+\emph{$\kappa\le3$.} Fix a unit $y\in V_-$ and let $W=[M_1y,\dots,M_6y]$, a $4\times6$ matrix. Then
+$\max_x\sum_j|\langle x|M_jy\rangle|^2=\lambda_{\max}(WW^*)$. The $4\times4$ matrix $WW^*$ is positive semidefinite with
+$\operatorname{Tr}WW^*=\sum_j|M_jy|^2=6$, and $\operatorname{Tr}(WW^*)^2=\operatorname{Tr}(W^*W)^2=\sum_{j,k}|\langle y|M_j^*M_k|y\rangle|^2$.
+The 15 products $M_j^*M_k$ ($j<k$) are the restrictions to $V_-$ of $a_ja_k$, whose classes $a_j+a_k$ are distinct modulo $p_0$ and
+different from $0,p_0$; so up to phase they are the 15 non-identity two-qubit Paulis on $V_-$ (verified exactly: with the identity they
+are pairwise Hilbert--Schmidt orthogonal). Purity of $y$ gives $\sum_{j<k}|\langle y|M_j^*M_k|y\rangle|^2=4-1=3$, hence
+$\operatorname{Tr}(WW^*)^2=6+2\cdot3=12$ for every $y$. If $\lambda_1\ge\dots\ge\lambda_4\ge0$ are the eigenvalues of $WW^*$, then
+Cauchy--Schwarz on $\lambda_2,\lambda_3,\lambda_4$ gives $(6-\lambda_1)^2\le3(12-\lambda_1^2)$, that is $4\lambda_1(\lambda_1-3)\le0$, so
+$\lambda_1\le3$ (the two-moment bound of Wolkowicz and Styan~\cite{ws}). Equality forces the spectrum $(3,1,1,1)$, which the numerical
+maximiser has.
+
+Therefore $\Sigma_U\le t^2+3(1-t^2)+3=6-2t^2\le6$.
+\end{proof}
+\begin{remark}
+The moment step uses only that the six operators are unitary and that their 15 pairwise quotients, with the identity, form part of an
+orthogonal unitary basis. Combinatorially, the classes of $a_j+a_1$ ($j=1,\dots,6$) modulo $p_0$ form a six-subset of $\mathbb{F}_2^4$ containing $0$ whose 15
+pairwise sums are all the non-zero vectors. The five non-zero classes anticommute along a pentagon, and that alone forces the property:
+the pentagon's symplectic Gram matrix has kernel spanned by the all-ones vector, so the only linear relation among them is their sum. The
+inequality $\kappa\le3$ is tight and has no decomposable (PSD plus partial-transpose) certificate, and the SOS/PPT hierarchy fails at
+levels $(1,2)$, $(2,1)$ and $(2,2)$; the moment argument bypasses this.
+\end{remark}
+\noindent\emph{Independent SOS method.} $\F(v)|v|^2-\delta|v|^6$ is written as an SOS in the degree-3 monomials and in the monomials
 $v_iv_j\bar v_k$. The Pauli group acts on both monomial spaces with centre $-1$, so each is a multiple of the unique 8-dimensional
 irrep, and invariant Gram matrices reduce to blocks of size 15 and 36. All coefficients are Gaussian rationals. At
 $\delta=1/8-\varepsilon$, a strictly interior certificate is rounded (denominator 16). Its pivot variables are restored exactly, every
@@ -65,15 +104,7 @@ coefficient equation is verified in integer arithmetic, and positivity is checke
 $\varepsilon=10^{-3},\dots,10^{-6}$. At $\delta=1/8$ the 160 stabiliser minimisers force the 15-block to vanish, and facial reduction
 leaves a 16-dimensional face with zero interior margin. This suggests that the degree-6 bound approaches $1/8$ without attaining it.
 
-\begin{remark}[an analytic reduction]
-Let $P_0$ be the uncovered Pauli fixed by the stabiliser of the set, and let $t=\langle P_0\rangle$. The 15 uncovered Paulis that
-commute with $P_0$ map bijectively onto $p_0^\perp/\langle p_0\rangle\cong W(3,2)$, so they contribute at most $3$ by two-qubit purity.
-The 12 that anticommute form six pairs $\{a,aP_0\}$, and they contribute exactly
-$(1-t^2)\sum_{j=1}^6|\langle\psi_+|a_j|\psi_-\rangle|^2$. Hence $\min\F=1/8$ follows from the single $4\otimes4$ inequality
-$\kappa=\max_{x,y}\sum_j|\langle x|M_j|y\rangle|^2\le3$, which holds numerically with equality. Equivalently, $\|\sum_jc_jR_j\|_{\mathrm{op}}^2\le3|c|^2$ for $R_j=M_jM_1^{-1}$ and
-all $c\in\mathbb{C}^6$, since the $R_j$ are Hilbert--Schmidt orthogonal. Low levels of the SOS/PPT hierarchy do not certify it. The five non-identity $M_jM_1^{-1}$
-anticommute along a pentagon. An exact proof of $\kappa\le3$ is open; it has no decomposable certificate.
-\end{remark}
+
 
 \begin{theorem}[four qubits]\label{t:4}
 (i) $W(7,2)$ has no maximal partial spread of size 3 or 4. The smallest size is 5, and there are $105\,283\,584$ such sets.
@@ -113,13 +144,13 @@ the corresponding partners are Clifford-equivalent.
 \begin{tabular}{llll}\toprule
 $d$ & smallest size & $\min\F$ & status\\\midrule
 4 & 3 & $1/4$ & exact\\
-8 & 5 & $\in[1/8-10^{-6},\,1/8]$ & exact interval\\
+8 & 5 & $1/8$ & exact\\
 9 & 5 & $\ge1/9$; $\approx0.14711$ & exact bound; numerical value\\
 16 & 5 & $\ge1/80$; $\approx0.05236$ (one type) & exact bound; numerical value\\
 32 & 8 or 9 & $\approx1/32$ (size-9 set) & sizes exact; value numerical\\\bottomrule
 \end{tabular}
 \end{center}
-Open: an exact certificate at $1/8$ (degree 8, or a structural proof); closed forms for the non-stabiliser optima; the strong
+Open: closed forms for the non-stabiliser optima; the strong
 unextendibility constant for all five-element sets in $d=16$ and beyond. \emph{Scope}: all statements concern \emph{Pauli-class} MUB sets; strongly unextendible sets of only three (non-Pauli) MUBs exist in many dimensions~\cite{gmmp}. \emph{Not claimed}: novelty of the weak-unextendibility
 census at $d=16$, which may already be in Grassl's tables~\cite{kantor}. All certificates are in the repository (\texttt{data/*.json})
 with the scripts that verify them.
@@ -132,6 +163,7 @@ Quantum Inf.\ Comput.\ 14 (2014); arXiv:1302.3709.
 \bibitem{dhg} C.~de~Gois, K.~Hansenne, O.~G\"uhne, Uncertainty relations from graph theory, Phys.\ Rev.\ A 107, 062211 (2023).
 \bibitem{gmmp} M.~Grassl, D.~McNulty, L.~Mi\v{s}ta, T.~Paterek, Small sets of complementary observables, Phys.\ Rev.\ A 95, 012118
 (2017); arXiv:1611.08962.
+\bibitem{ws} H.~Wolkowicz, G.~P.~H.~Styan, Bounds for eigenvalues using traces, Linear Algebra Appl.\ 29 (1980) 471--506.
 \bibitem{lovasz} L.~Lov\'asz, On the Shannon capacity of a graph, IEEE Trans.\ Inf.\ Theory 25 (1979).
 \end{thebibliography}
 \end{document}

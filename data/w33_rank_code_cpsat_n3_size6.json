@@ -1,0 +1,34 @@
+{
+ "n": 3,
+ "k_more": 2,
+ "size": 6,
+ "orbits": [
+  {
+   "s2": 14,
+   "orbit_size": 6,
+   "n_cand": 6,
+   "n_uncovered": 6,
+   "n_conflicts": 5,
+   "status": "INFEASIBLE",
+   "seconds": 0.0
+  },
+  {
+   "s2": 15,
+   "orbit_size": 6,
+   "n_cand": 6,
+   "n_uncovered": 6,
+   "n_conflicts": 5,
+   "status": "INFEASIBLE",
+   "seconds": 0.0
+  }
+ ],
+ "summary": {
+  "all_infeasible": true,
+  "any_feasible": false,
+  "statuses": [
+   "INFEASIBLE",
+   "INFEASIBLE"
+  ],
+  "seconds": 0.0
+ }
+}
