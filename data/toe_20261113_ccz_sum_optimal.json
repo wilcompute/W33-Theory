@@ -1,0 +1,66 @@
+{
+  "all_invertible_matrices_checked": 11232,
+  "cost_census": {
+    "0": 48,
+    "1": 576,
+    "2": 3600,
+    "3": 6336,
+    "4": 672
+  },
+  "four_SUM_witness": [
+    [
+      "sum",
+      2,
+      0,
+      1
+    ],
+    [
+      "sum",
+      0,
+      2,
+      1
+    ],
+    [
+      "sum",
+      1,
+      2,
+      1
+    ],
+    [
+      "sum",
+      2,
+      1,
+      1
+    ]
+  ],
+  "full_chiral_clock_compiler": {
+    "CCZ": 1,
+    "SUM": 8,
+    "formula": "U=F P_L^dag CCZ P_L F^dag with P_L and inverse each 4 SUM",
+    "local_qutrit_fourier": 6
+  },
+  "group": "GL(3,3)",
+  "optimality_boundary": "4-SUM minimum within linear reversible qutrit circuits with free SWAP/scalings; no claim this is the minimum over all qutrit Clifford circuits with arbitrary intermediate Fourier, ancillary or measurement gates.",
+  "physics_boundary": "No demonstrated optical device, fault-tolerance or physical TOE.",
+  "status": "PASS_EXHAUSTIVE_MINIMUM_FOUR_SUM_LINEAR_COMPILER",
+  "target_linear_map": [
+    [
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      2,
+      2
+    ],
+    [
+      1,
+      1,
+      2
+    ]
+  ],
+  "target_minimum_SUM_cost": 4,
+  "unit_cost_generators": "SUM(control, target, amount=1 or 2 mod3)",
+  "zero_cost_generators": "single-coordinate nonzero scalar multiplication and coordinate SWAP"
+}
