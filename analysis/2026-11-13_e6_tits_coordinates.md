@@ -19,3 +19,5 @@ Replay with `py -3 analysis/toe_20261113_e6_tits_coordinates.py`. The resulting 
 ## Relative positions of the two coordinate sections
 
 Holding one IIB section fixed, its Weyl stabilizer partitions the 72 M sections into six orbits. Three disjoint-section orbits have sizes 2, 5 and 20. Common dimensions 1, 2 and 4 occur in single orbits of sizes 20, 20 and 5. The largest common coordinate sector therefore has dimension four. A pair with a four-dimensional intersection belongs to one of 1,080 equivalent ordered pairs. There is no mixed coordinate pair with common dimension three or five. The three distinct disjoint orbits show that the overlap dimension alone cannot identify a relative placement. The certificate records a representative of each orbit for use in testing transition maps.
+
+The 1,080 ordered pairs with four common coordinates give 1,080 distinct four-spaces. Each such four-space extends to exactly one coordinate IIB section and exactly one coordinate M section. Thus specifying the four-space fixes the pair of maximal coordinate sections.

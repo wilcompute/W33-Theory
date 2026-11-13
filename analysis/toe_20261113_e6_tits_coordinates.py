@@ -162,9 +162,20 @@ def calculate():
                                  six_section=target, orbit_at_fixed_five=len(images),
                                  pair_orbit=216*len(images)))
     mixed_orbits.sort(key=lambda row: (row["common_dimension"], row["orbit_at_fixed_five"]))
+    # A maximal mixed overlap uniquely determines both coordinate sections.
+    four_spaces = {}
+    sixers = [set(c) for c in maximal if len(c) == 6]
+    for five in (set(c) for c in maximal if len(c) == 5):
+        for six in sixers:
+            common = tuple(sorted(five & six))
+            if len(common) == 4:
+                assert common not in four_spaces
+                four_spaces[common] = (five, six)
+    assert len(four_spaces) == 1080
     return dict(status="PASS", cartan=cartan.tolist(), signed_generators=[n.tolist() for n in lifts],
                 torus_order=len(kernel), quotient_order=len(group), group_order=64*len(group),
-                sections=sections, mixed_pair_orbits=mixed_orbits)
+                sections=sections, mixed_pair_orbits=mixed_orbits,
+                unique_four_dimensional_mixed_intersections=len(four_spaces))
 
 
 if __name__ == "__main__":
