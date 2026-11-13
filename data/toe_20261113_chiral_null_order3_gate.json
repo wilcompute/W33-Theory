@@ -1,0 +1,135 @@
+{
+  "D": {
+    "cubic_identity": "D^3=-27D",
+    "integer_skew_symmetric": true,
+    "minimal_polynomial": "x(x^2+27)",
+    "rank_over_Q": 8,
+    "spectrum": {
+      "+3i*sqrt(3)": 4,
+      "-3i*sqrt(3)": 4,
+      "0": 19
+    },
+    "square_polynomial": "3D^2=-(A-8I)(A-2I)(A+4I)"
+  },
+  "boundary": "No continuum Lorentz metric, physical weak chirality, irreversibility, or experimental calibration follows.",
+  "full_null_graph": {
+    "degree": 8,
+    "edges": 108,
+    "spectrum": {
+      "-1": 8,
+      "-4": 6,
+      "2": 12,
+      "8": 1
+    },
+    "vertices": 27
+  },
+  "future_directions": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      2,
+      1
+    ]
+  ],
+  "future_sum_zero_mod3": true,
+  "gate": {
+    "definition": "U=I+D/6+D^2/18",
+    "eigenvalues": {
+      "1": 19,
+      "omega": 4,
+      "omega^2": 4
+    },
+    "full_row_probability_profile": {
+      "1/81": 16,
+      "25/81": 1,
+      "4/81": 10
+    },
+    "integer_rescaling": "M=9U=(18I+3D+D^2)/2",
+    "order_three": "M^3=729 I",
+    "orthogonality": "M^T M = 81 I",
+    "per_forward_direction": [
+      {
+        "forward_amplitude": "2/9",
+        "forward_probability": "4/81",
+        "probability_difference": "1/27",
+        "reverse_amplitude": "-1/9",
+        "reverse_probability": "1/81",
+        "step": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "forward_amplitude": "2/9",
+        "forward_probability": "4/81",
+        "probability_difference": "1/27",
+        "reverse_amplitude": "-1/9",
+        "reverse_probability": "1/81",
+        "step": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "forward_amplitude": "2/9",
+        "forward_probability": "4/81",
+        "probability_difference": "1/27",
+        "reverse_amplitude": "-1/9",
+        "reverse_probability": "1/81",
+        "step": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "forward_amplitude": "2/9",
+        "forward_probability": "4/81",
+        "probability_difference": "1/27",
+        "reverse_amplitude": "-1/9",
+        "reverse_probability": "1/81",
+        "step": [
+          1,
+          2,
+          1
+        ]
+      }
+    ],
+    "row_M_profile": {
+      "-1": 16,
+      "2": 10,
+      "5": 1
+    },
+    "trace_U": 15
+  },
+  "gauge": {
+    "four_direction_loop_flux": "exp(4 i theta)",
+    "triangle_flux": "exp(3 i theta)",
+    "uniform_phase_pure_gauge_iff": "theta = 0 modulo 2pi"
+  },
+  "oriented_triangle_count": 36,
+  "schema": "toe.chiral_null_order3_gate.v1",
+  "source_geometry": "Sym_2(F_3) with q=ac-b^2, 27 vertices, 8 nonzero null steps",
+  "status": "PASS_EXACT_FINITE_MATHEMATICAL_GATE_PHYSICAL_INTERPRETATION_OPEN",
+  "symmetry": {
+    "S4_congruence_images": 24,
+    "inversion_flips_D": true,
+    "preserve_D": true
+  }
+}
