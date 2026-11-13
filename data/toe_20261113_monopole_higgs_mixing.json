@@ -1,0 +1,1017 @@
+{
+  "status": "PASS",
+  "scope": "real smooth-core profiles; local horizontal holomorphic Hessian",
+  "charge_sector_dimensions": [
+    22,
+    25
+  ],
+  "meshes": [
+    {
+      "mesh": 60,
+      "peak_higgs_pair": {
+        "radius": 0.0,
+        "f_norm": 79.53411095112337,
+        "gauge_ranks": [
+          1,
+          1
+        ],
+        "retained_higgs_norms": [
+          0.9999987173762374,
+          0.9999999878778792
+        ],
+        "horizontal_mixing_frobenius": 677.0548431759335,
+        "higgs_pair_f_hessian": 12.862423480188975,
+        "finite_difference_max_error": 2.7931200818898105e-07,
+        "native_gradient_error": 1.2789769243681803e-13
+      },
+      "samples": [
+        {
+          "radius": 0.0,
+          "f_norm": 79.53411095112337,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987173762374,
+            0.9999999878778792
+          ],
+          "horizontal_mixing_frobenius": 677.0548431759335,
+          "higgs_pair_f_hessian": 12.862423480188975,
+          "finite_difference_max_error": 2.7931200818898105e-07,
+          "native_gradient_error": 1.2789769243681803e-13
+        },
+        {
+          "radius": 0.00020824483450812022,
+          "f_norm": 79.533186104694,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987173755812,
+            0.999999987877888
+          ],
+          "horizontal_mixing_frobenius": 677.0462113117138,
+          "higgs_pair_f_hessian": 12.86146098177257,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.0005209451925309675,
+          "f_norm": 79.5283232749809,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987173721309,
+            0.9999999878779344
+          ],
+          "horizontal_mixing_frobenius": 677.0008265907388,
+          "higgs_pair_f_hessian": 12.856400710944387,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.0013031962798123774,
+          "f_norm": 79.49789223754104,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987173505157,
+            0.9999999878782236
+          ],
+          "horizontal_mixing_frobenius": 676.7168685126209,
+          "higgs_pair_f_hessian": 12.824754398074564,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.0032600752786788876,
+          "f_norm": 79.30747946496516,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.999998717214372,
+            0.9999999878800286
+          ],
+          "horizontal_mixing_frobenius": 674.9421958219965,
+          "higgs_pair_f_hessian": 12.627528193573104,
+          "finite_difference_max_error": 3.2280192030498256e-07,
+          "native_gradient_error": 1.0587086762825493e-12
+        },
+        {
+          "radius": 0.008155402979038094,
+          "f_norm": 78.1175406936712,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987163291104,
+            0.9999999878910991
+          ],
+          "horizontal_mixing_frobenius": 663.929139678234,
+          "higgs_pair_f_hessian": 11.425074658973315,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.020401552744958754,
+          "f_norm": 70.86057522472066,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987097016203,
+            0.9999999879535064
+          ],
+          "horizontal_mixing_frobenius": 598.8352290386698,
+          "higgs_pair_f_hessian": 5.076746674305818,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.05103651597292704,
+          "f_norm": 38.10245238482102,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999986498564074,
+            0.9999999882816248
+          ],
+          "horizontal_mixing_frobenius": 318.58278470758,
+          "higgs_pair_f_hessian": -8.004396695573497,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.12767292740982497,
+          "f_norm": 21.700798055687823,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999980650127663,
+            0.9999999911609802
+          ],
+          "horizontal_mixing_frobenius": 175.8440146064425,
+          "higgs_pair_f_hessian": 7.535014849391658,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.31938654280478657,
+          "f_norm": 2.717744376210685,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999958903319022,
+            0.9999999993781643
+          ],
+          "horizontal_mixing_frobenius": 21.23347318897093,
+          "higgs_pair_f_hessian": -1.1291112338348737,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.7989772443875508,
+          "f_norm": 0.016788936987563768,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999992271999523,
+            0.9999999992480354
+          ],
+          "horizontal_mixing_frobenius": 0.13332635412812727,
+          "higgs_pair_f_hessian": -0.0011449972625672442,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 1.9987211466179462,
+          "f_norm": 0.0024748812167554907,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999999385566161,
+            0.999999999958727
+          ],
+          "horizontal_mixing_frobenius": 0.011925111698706636,
+          "higgs_pair_f_hessian": -2.028346203045498e-05,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 5.0,
+          "f_norm": 2.7596738948822133e-12,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            1.0,
+            0.9999999999999998
+          ],
+          "horizontal_mixing_frobenius": 2.3988240746850762e-11,
+          "higgs_pair_f_hessian": -5.81180107679609e-14,
+          "finite_difference_max_error": 2.678658974139436e-10,
+          "native_gradient_error": 9.532137819582598e-13
+        }
+      ]
+    },
+    {
+      "mesh": 100,
+      "peak_higgs_pair": {
+        "radius": 0.0,
+        "f_norm": 79.51575570209984,
+        "gauge_ranks": [
+          1,
+          1
+        ],
+        "retained_higgs_norms": [
+          0.9999987178464975,
+          0.9999999878607451
+        ],
+        "horizontal_mixing_frobenius": 676.9160172256317,
+        "higgs_pair_f_hessian": 12.868726858251478,
+        "finite_difference_max_error": 2.8140721752833997e-07,
+        "native_gradient_error": 1.8900436771218665e-12
+      },
+      "samples": [
+        {
+          "radius": 0.0,
+          "f_norm": 79.51575570209984,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987178464975,
+            0.9999999878607451
+          ],
+          "horizontal_mixing_frobenius": 676.9160172256317,
+          "higgs_pair_f_hessian": 12.868726858251478,
+          "finite_difference_max_error": 2.8140721752833997e-07,
+          "native_gradient_error": 1.8900436771218665e-12
+        },
+        {
+          "radius": 0.0002149069221544338,
+          "f_norm": 79.51477225793715,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987178458013,
+            0.9999999878607544
+          ],
+          "horizontal_mixing_frobenius": 676.9068353149745,
+          "higgs_pair_f_hessian": 12.867702537675449,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.0005449359099672538,
+          "f_norm": 79.50943247580584,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.99999871784202,
+            0.9999999878608054
+          ],
+          "horizontal_mixing_frobenius": 676.8569823166015,
+          "higgs_pair_f_hessian": 12.862141450541744,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.001377666961405946,
+          "f_norm": 79.47534194625102,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987178178507,
+            0.9999999878611308
+          ],
+          "horizontal_mixing_frobenius": 676.5387762463083,
+          "higgs_pair_f_hessian": 12.826663519069717,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.0033026229256976325,
+          "f_norm": 79.28352882998665,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987176809366,
+            0.9999999878629555
+          ],
+          "horizontal_mixing_frobenius": 674.7505383380541,
+          "higgs_pair_f_hessian": 12.6278611673987,
+          "finite_difference_max_error": 6.743194305158795e-07,
+          "native_gradient_error": 1.5276668818842154e-12
+        },
+        {
+          "radius": 0.008374406051008733,
+          "f_norm": 78.02447814417334,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987167438464,
+            0.9999999878746986
+          ],
+          "horizontal_mixing_frobenius": 663.0983913950458,
+          "higgs_pair_f_hessian": 11.356412134817417,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.021171558575697566,
+          "f_norm": 70.21414564148645,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987095106455,
+            0.9999999879417962
+          ],
+          "horizontal_mixing_frobenius": 593.1420943493329,
+          "higgs_pair_f_hessian": 4.6004549823572916,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.05075368480455694,
+          "f_norm": 38.43234329416343,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.999998651315048,
+            0.9999999882604829
+          ],
+          "horizontal_mixing_frobenius": 321.1844900980751,
+          "higgs_pair_f_hessian": -7.967839673648772,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.1286952748468824,
+          "f_norm": 22.060185144465247,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999980509431386,
+            0.9999999912054618
+          ],
+          "horizontal_mixing_frobenius": 179.96842432853904,
+          "higgs_pair_f_hessian": 7.662680153715384,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.3253579457743238,
+          "f_norm": 2.470868692960251,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999959463883081,
+            0.9999999992684383
+          ],
+          "horizontal_mixing_frobenius": 19.28161342706339,
+          "higgs_pair_f_hessian": -1.0661795927548612,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.7799668866817984,
+          "f_norm": 0.017589277792037995,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999991817070639,
+            0.999999999203918
+          ],
+          "horizontal_mixing_frobenius": 0.14093759722146823,
+          "higgs_pair_f_hessian": -0.001454578437998465,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 1.9777490686541959,
+          "f_norm": 0.0025395277561485966,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999999363021409,
+            0.9999999999570178
+          ],
+          "horizontal_mixing_frobenius": 0.012169638963542862,
+          "higgs_pair_f_hessian": -2.0876441131376302e-05,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 5.0,
+          "f_norm": 2.7596738948822133e-12,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            1.0,
+            0.9999999999999998
+          ],
+          "horizontal_mixing_frobenius": 2.3988240746850762e-11,
+          "higgs_pair_f_hessian": -5.81180107679609e-14,
+          "finite_difference_max_error": 2.678658974139436e-10,
+          "native_gradient_error": 9.532137819582598e-13
+        }
+      ]
+    },
+    {
+      "mesh": 160,
+      "peak_higgs_pair": {
+        "radius": 0.0,
+        "f_norm": 79.51423530740168,
+        "gauge_ranks": [
+          1,
+          1
+        ],
+        "retained_higgs_norms": [
+          0.9999987178938565,
+          0.9999999878594403
+        ],
+        "horizontal_mixing_frobenius": 676.9045241655223,
+        "higgs_pair_f_hessian": 12.869249067833147,
+        "finite_difference_max_error": 7.611572527821409e-08,
+        "native_gradient_error": 1.6910917111090384e-12
+      },
+      "samples": [
+        {
+          "radius": 0.0,
+          "f_norm": 79.51423530740168,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987178938565,
+            0.9999999878594403
+          ],
+          "horizontal_mixing_frobenius": 676.9045241655223,
+          "higgs_pair_f_hessian": 12.869249067833147,
+          "finite_difference_max_error": 7.611572527821409e-08,
+          "native_gradient_error": 1.6910917111090384e-12
+        },
+        {
+          "radius": 0.0001312843873612737,
+          "f_norm": 79.51386832565305,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.999998717893593,
+            0.9999999878594438
+          ],
+          "horizontal_mixing_frobenius": 676.9010977471681,
+          "higgs_pair_f_hessian": 12.868866830767665,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.00018449280514898448,
+          "f_norm": 79.51351052756958,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987178933272,
+            0.999999987859447
+          ],
+          "horizontal_mixing_frobenius": 676.8977571659941,
+          "higgs_pair_f_hessian": 12.86849422994118,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.0002592661308467326,
+          "f_norm": 79.51280396363653,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987178928081,
+            0.9999999878594535
+          ],
+          "horizontal_mixing_frobenius": 676.8911603308326,
+          "higgs_pair_f_hessian": 12.867758406211822,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.0003643444336485289,
+          "f_norm": 79.51140868793398,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987178917966,
+            0.9999999878594665
+          ],
+          "horizontal_mixing_frobenius": 676.878133387265,
+          "higgs_pair_f_hessian": 12.866305301863914,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.0005120100566052785,
+          "f_norm": 79.50865335024287,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987178898189,
+            0.9999999878594925
+          ],
+          "horizontal_mixing_frobenius": 676.8524087154107,
+          "higgs_pair_f_hessian": 12.863435835506078,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.0007195232693408793,
+          "f_norm": 79.50321214114895,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987178859362,
+            0.9999999878595441
+          ],
+          "horizontal_mixing_frobenius": 676.801610036214,
+          "higgs_pair_f_hessian": 12.857769913368646,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.0010111397782995228,
+          "f_norm": 79.49246683406105,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987178782916,
+            0.9999999878596465
+          ],
+          "horizontal_mixing_frobenius": 676.7013013974909,
+          "higgs_pair_f_hessian": 12.846583938625926,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.0014209459163095366,
+          "f_norm": 79.47124702318504,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987178632098,
+            0.9999999878598488
+          ],
+          "horizontal_mixing_frobenius": 676.5032463062292,
+          "higgs_pair_f_hessian": 12.82450652824538,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.0019968429097630145,
+          "f_norm": 79.4293427389951,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987178334004,
+            0.9999999878602478
+          ],
+          "horizontal_mixing_frobenius": 676.1122661069242,
+          "higgs_pair_f_hessian": 12.780958475325562,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.002806145934552384,
+          "f_norm": 79.34659427683333,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987177743475,
+            0.9999999878610351
+          ],
+          "horizontal_mixing_frobenius": 675.3407139682558,
+          "higgs_pair_f_hessian": 12.695158312104299,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.0039434524205709375,
+          "f_norm": 79.1832053441364,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987176569232,
+            0.9999999878625843
+          ],
+          "horizontal_mixing_frobenius": 673.8192547944653,
+          "higgs_pair_f_hessian": 12.526497413668297,
+          "finite_difference_max_error": 1.6741281072540914e-07,
+          "native_gradient_error": 1.2434497875801753e-12
+        },
+        {
+          "radius": 0.0055416993114391746,
+          "f_norm": 78.86066739701224,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987174218424,
+            0.9999999878656223
+          ],
+          "horizontal_mixing_frobenius": 670.8233760567307,
+          "higgs_pair_f_hessian": 12.196457811888463,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.007787701735211797,
+          "f_norm": 78.22441230489069,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987169453762,
+            0.9999999878715399
+          ],
+          "horizontal_mixing_frobenius": 664.9415296484149,
+          "higgs_pair_f_hessian": 11.556477171396569,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.010943989362871163,
+          "f_norm": 76.9720848030509,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987159589094,
+            0.9999999878829243
+          ],
+          "horizontal_mixing_frobenius": 653.4629780459725,
+          "higgs_pair_f_hessian": 10.338106461771456,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.01537949285257006,
+          "f_norm": 74.52437044040526,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987138488523,
+            0.9999999879043698
+          ],
+          "horizontal_mixing_frobenius": 631.3435250750437,
+          "higgs_pair_f_hessian": 8.104596244867025,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.021612667242231296,
+          "f_norm": 69.83889677444827,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987091521043,
+            0.9999999879435828
+          ],
+          "horizontal_mixing_frobenius": 589.8491624594259,
+          "higgs_pair_f_hessian": 4.320933120428417,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.030372092877260257,
+          "f_norm": 61.34008981883366,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.999998698382705,
+            0.9999999880137581
+          ],
+          "horizontal_mixing_frobenius": 516.2359212780041,
+          "higgs_pair_f_hessian": -1.1019912171941548,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.042681637365999024,
+          "f_norm": 47.543085161896364,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999986737868258,
+            0.9999999881447842
+          ],
+          "horizontal_mixing_frobenius": 398.55963087130584,
+          "higgs_pair_f_hessian": -6.483933281389321,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.05998013293336716,
+          "f_norm": 28.58960871099858,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999986195467889,
+            0.9999999884276349
+          ],
+          "horizontal_mixing_frobenius": 237.58266729081507,
+          "higgs_pair_f_hessian": -7.896648747514911,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.08428955796270193,
+          "f_norm": 6.986830035065989,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.999998500098906,
+            0.9999999891116998
+          ],
+          "horizontal_mixing_frobenius": 59.33646774286351,
+          "higgs_pair_f_hessian": -2.4399094582547596,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.11845138105046273,
+          "f_norm": 17.573865675802505,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999981931893628,
+            0.9999999906378807
+          ],
+          "horizontal_mixing_frobenius": 149.60581173096017,
+          "higgs_pair_f_hessian": 6.408032699735982,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.1664586932460901,
+          "f_norm": 25.353761942687413,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999972943833891,
+            0.9999999938780646
+          ],
+          "horizontal_mixing_frobenius": 187.44430034906085,
+          "higgs_pair_f_hessian": 7.122584515108841,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.23392295059347182,
+          "f_norm": 10.641431997490896,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999958788927126,
+            0.9999999991897839
+          ],
+          "horizontal_mixing_frobenius": 79.56755797905863,
+          "higgs_pair_f_hessian": -0.31448230619176437,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.3287298833558587,
+          "f_norm": 2.340782086758347,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999959797356467,
+            0.9999999992053815
+          ],
+          "horizontal_mixing_frobenius": 18.32210044764883,
+          "higgs_pair_f_hessian": -1.0286285338613412,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.4619612395320578,
+          "f_norm": 0.28586730645050623,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.999997483907365,
+            0.999999998164101
+          ],
+          "horizontal_mixing_frobenius": 2.80354505933196,
+          "higgs_pair_f_hessian": -0.15840466135277784,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.6491901029848727,
+          "f_norm": 0.02917451334878566,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999987522945526,
+            0.9999999988155365
+          ],
+          "horizontal_mixing_frobenius": 0.28001959233172985,
+          "higgs_pair_f_hessian": -0.009324631692041748,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 0.9123011927156786,
+          "f_norm": 0.013108610896768784,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999994383276842,
+            0.999999999464381
+          ],
+          "horizontal_mixing_frobenius": 0.09948396355204531,
+          "higgs_pair_f_hessian": -0.0003004595568890917,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 1.282048913567377,
+          "f_norm": 0.00670640592352108,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999997659420515,
+            0.9999999998035108
+          ],
+          "horizontal_mixing_frobenius": 0.04070106207107653,
+          "higgs_pair_f_hessian": -5.8317472241273956e-05,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 1.8016521625786621,
+          "f_norm": 0.00316820820821449,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999999135520152,
+            0.9999999999387889
+          ],
+          "horizontal_mixing_frobenius": 0.014983189685757065,
+          "higgs_pair_f_hessian": -2.661389367320305e-05,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 2.5318460790176203,
+          "f_norm": 0.0013528559078034457,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.9999999745288773,
+            0.9999999999849405
+          ],
+          "horizontal_mixing_frobenius": 0.008559516239370554,
+          "higgs_pair_f_hessian": -1.0027729070850706e-05,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 3.5579812246677327,
+          "f_norm": 0.0004585334872314669,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            0.999999995709885,
+            0.999999999997902
+          ],
+          "horizontal_mixing_frobenius": 0.004527248364732877,
+          "higgs_pair_f_hessian": -2.6462711983256815e-06,
+          "finite_difference_max_error": null,
+          "native_gradient_error": null
+        },
+        {
+          "radius": 5.0,
+          "f_norm": 2.7596738948822133e-12,
+          "gauge_ranks": [
+            1,
+            1
+          ],
+          "retained_higgs_norms": [
+            1.0,
+            0.9999999999999998
+          ],
+          "horizontal_mixing_frobenius": 2.3988240746850762e-11,
+          "higgs_pair_f_hessian": -5.81180107679609e-14,
+          "finite_difference_max_error": 2.678658974139436e-10,
+          "native_gradient_error": 9.532137819582598e-13
+        }
+      ]
+    }
+  ]
+}

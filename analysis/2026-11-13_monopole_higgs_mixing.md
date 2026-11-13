@@ -1,0 +1,23 @@
+# Holomorphic Higgs mixing in the smooth W33 monopole
+
+The native W33 scalar potential has a nonzero local holomorphic Hessian between the neutral up- and down-Higgs directions inside the real monopole core. This supplies a possible scalar exchange for the winding operator (Q U^c)(L E^c). The matrix element survives removing the local gauge-orbit directions and changes sign with radius. [Winding modes and the semileptonic operator](2026-11-13_monopole_rotor_winding_modes.md)
+
+## Calculation
+
+In canonical kinetic coordinates write W_I for the superpotential gradient and M_JK = W_JK for the holomorphic fermion mass. The holomorphic Hessian of the F potential is
+
+    B_JK = ∂_J ∂_K V_F = Σ_I overline(W_I) W_IJK.
+
+It is the directional derivative of M along the conjugate F gradient. In the real north-pole chart the conjugation is trivial. The background gradient is given by the existing neutral-sector residual in its orthonormal coordinates. The residual includes the adjoint and matter components supported by the core ansatz. The split and dressed cubic terms have vanishing first jets there. The charged Hessian still receives their contributions through the higher jets. [Canonical supersymmetric scalar potential](https://arxiv.org/abs/hep-ph/9709356) · [Real neutral core](2026-11-11_monopole_variational_core.md) · [Native holomorphic mass jets](2026-11-13_monopole_triplet_mass.md)
+
+The two scalar blocks have Cartan weights (0,0,−1,3) and (0,0,1,−3). They carry zero magnetic pairing and are the neutral components that couple to the two matter bilinears in the winding operator. The positive block has 22 coordinates and the negative block has 25. At each sampled radius the code projects out one gauge-orbit direction from each block with the canonical kinetic inner product. It uses the vacuum light H_u direction and the H_d direction selected by the nullspace of the lepton covectors. It evaluates the full charged holomorphic mass jet at a complex-displaced background to differentiate it, and checks against symmetric real differences. In these charge blocks the linear variations of the centered gauge moments vanish on horizontal directions. Their holomorphic second derivatives also vanish because the moments are sesquilinear. Thus the projected holomorphic D Hessian is zero in this chart. [Higgs and lepton directions](2026-11-10_light_yukawa_completion.md)
+
+The largest sampled absolute matrix elements on the 60-, 100-, and 160-element profiles are 12.86242, 12.86873, and 12.86925 in the repo's units. The replay also checks the neutral residual against the first derivative of the full native superpotential in a fixed neutral direction at three nodes per mesh. The calculation samples both signs away from the origin, and the element vanishes at the imposed F-flat vacuum boundary. These are local finite-mesh results on the real core branch. The chart and Higgs basis fix the displayed signs. The two different signs across radius persist in that same frame.
+
+## Consequence for scalar exchange
+
+The local holomorphic block is the off-diagonal source in a doubled scalar fluctuation operator. Its nonzero projection onto the Higgs pair passes the vacuum chirality obstruction for the proposed exchange mechanism. The tree exchange still requires the inverse of the full doubled differential operator, including the Hermitian Hessian, gradients, angular terms, and gauge constraints, contracted with the actual radial fermion sources. The sign changes make an estimate based only on the peak value insufficient for the integrated coefficient. The light Higgs directions also preclude a local inverse-mass expansion uniform out to the vacuum.
+
+There is an operator-level consequence for a static horizontal scalar model. Suppose its closed, semibounded doubled spatial operator K has off-diagonal block B or its conjugate, according to the choice of doubled variables. For smooth compactly supported sources f and g in opposite doubled summands, the large Euclidean frequency limit of ω⁴⟨f,(ω²+K)⁻¹g⟩ is −⟨f,Kg⟩. This follows from the resolvent identity and strong convergence of ω²(ω²+K)⁻¹ to the identity. A Higgs test pair supported where B has fixed nonzero sign therefore gives a nonzero holomorphic resolvent matrix element at sufficiently large ω in that scalar model. This establishes that the local mixing can mediate propagation for some sources. The physical low-frequency amplitude uses the actual fermion bilinears and the full constrained fluctuation operator.
+
+Run `python analysis/toe_20261113_monopole_higgs_mixing.py` to regenerate the [projected Hessian and derivative controls](../data/toe_20261113_monopole_higgs_mixing.json).
