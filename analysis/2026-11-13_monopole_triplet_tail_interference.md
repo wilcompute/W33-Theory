@@ -9,3 +9,7 @@ Replay with `py -3 analysis/toe_20261113_monopole_triplet_tail_interference.py`.
 ## Radius-20 control
 
 The two contour estimates agree to a maximum relative error of 1.1e-11. At the sampled minimum E=0.002, the conversion is 79.46% and the additive pole–background cross term is −0.38541. The constant background gives a maximum holdout error of 0.297 percentage points. The unitary background with linear phase generator gives 0.0738 percentage points. The two incident projector directions have squared overlap 0.67968.
+
+## Radius-36 result
+
+The sampled conversion minimum is 80.215% near |E|=0.002, with a destructive cross term of −0.382812. The two residue estimates at each pole agree within 6e−12 relative. The maximum holdout error is 0.267 percentage points with a constant unitary background and 0.0823 percentage points with the fitted unitary generator. The same two-pole description therefore remains accurate on the tested energy grid through the larger finite attachment radius. The scattering limit at infinity and the full nonlinear exterior remain open.
