@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "pauli_axis": "IZI",
+  "gain": 2,
+  "finite_copy_exactness": "impossible on any nonempty interval",
+  "positive_full_rank_witness_input": "3/4",
+  "nonphysical_target_expectation": "3/2",
+  "general_endpoint_bound": "tanh(n atanh(r))",
+  "unanimous_controls": {
+    "1": {
+      "unanimous_success": "1",
+      "unanimous_expectation": "x"
+    },
+    "2": {
+      "unanimous_success": "(x**2 + 1)/2",
+      "unanimous_expectation": "2*x/(x**2 + 1)"
+    },
+    "3": {
+      "unanimous_success": "(3*x**2 + 1)/4",
+      "unanimous_expectation": "x*(x**2 + 3)/(3*x**2 + 1)"
+    },
+    "4": {
+      "unanimous_success": "(x**4 + 6*x**2 + 1)/8",
+      "unanimous_expectation": "4*x*(x**2 + 1)/(x**4 + 6*x**2 + 1)"
+    },
+    "5": {
+      "unanimous_success": "(5*x**4 + 10*x**2 + 1)/16",
+      "unanimous_expectation": "x*(x**4 + 10*x**2 + 5)/(5*x**4 + 10*x**2 + 1)"
+    },
+    "6": {
+      "unanimous_success": "(x**2 + 1)*(x**4 + 14*x**2 + 1)/32",
+      "unanimous_expectation": "2*x*(x**2 + 3)*(3*x**2 + 1)/((x**2 + 1)*(x**4 + 14*x**2 + 1))"
+    }
+  },
+  "two_copy_minimax_error": "2*r**3/(r**2 + 1)",
+  "two_copy_minimum_success": "1/2",
+  "deterministic_full_body_approximation": {
+    "independent_measurement_groups": 27,
+    "squared_gains": "81/2",
+    "trace_distance_bound": "sqrt(squared_gains / copies_per_group) / 2"
+  },
+  "example": {
+    "radius": "1/4",
+    "two_copy_worst_error": "1/34",
+    "one_copy_worst_error": "1/4"
+  }
+}
