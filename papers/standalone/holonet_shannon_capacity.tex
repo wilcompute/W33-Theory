@@ -73,6 +73,13 @@ maximum number of mutually distinguishable codewords per channel use.
 
 \section{Main Result}
 
+\noindent\fbox{\parbox{0.95\linewidth}{\textbf{Correction (first noted in BT818; Pass 12653).} Step 2 below is false: Lov\'asz proves
+$\Theta(G)\le\vartheta(G)$ for all graphs and $\vartheta(G)\vartheta(\bar G)=n$ for vertex-transitive $G$, but not
+$\Theta=\vartheta$. Haemers' rank bound gives vertex-transitive counterexamples; for the meeting graph of the 27 lines on a cubic
+surface, $\Theta\le7<\vartheta=9$ (reproduced in \texttt{analysis/w33\_shannon\_capacity\_audit.py}). What is proved is
+$\sqrt{57}\le\Theta(W(3,3))\le\vartheta=10$ (an independent set of size 57 in the strong square,
+\texttt{analysis/w33\_shannon\_square.py}, independently verified); the exact capacity is open, and the theorem below is withdrawn as stated.}}
+
 \begin{theorem}[Zero-Error Shannon Capacity]\label{thm:main}
 \[
   \Theta\bigl(W(3,3)\bigr) = 10 = \Phi_4 = q^2+1.

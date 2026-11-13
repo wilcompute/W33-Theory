@@ -16,6 +16,7 @@ src = open(os.path.join(HERE, "w33_five_qubit_size6.py"), encoding="utf-8").read
 exec(src[: src.index(chr(10) + "def run(")], g)
 setup, code_of, orthogonal_group, congr = g["setup"], g["code_of"], g["orthogonal_group"], g["congr"]
 _S = {}
+REVERSE = os.environ.get("DLX_REVERSE") == "1"  # independent second run: last-index tie-break and reversed killer order
 
 
 def prep(n):
@@ -50,7 +51,9 @@ def search_rep(args):
         cnt = K.sum(0)
         if cnt.min() == 0: return
         if np.sort(K.sum(1))[-remaining:].sum() < len(R): return
-        j = int(np.argmin(cnt)); killers = np.flatnonzero(K[:, j])
+        j = int(np.argmin(cnt)) if not REVERSE else int(len(cnt) - 1 - np.argmin(cnt[::-1]))
+        killers = np.flatnonzero(K[:, j])
+        if REVERSE: killers = killers[::-1]
         excluded = np.zeros(len(cands), bool)
         for kidx, ki in enumerate(killers):
             if len(chosen) == 2: st["top"] = f"{kidx + 1}/{len(killers)}"
@@ -70,6 +73,8 @@ def search_rep(args):
 
 def run(n, size, workers, tlimit):
     pos, sing, ns, I, cand, reps = prep(n); t0 = time.time()
+    if n == 5 and os.environ.get("DLX_REPS"):  # restrict to S3-class representatives (w33_rank_code_s3_symmetry.py)
+        reps = [r for r in reps if str(r) in os.environ["DLX_REPS"].split(",")]
     with Pool(workers) as P:
         rs = P.map(search_rep, [(n, size, s2, tlimit) for s2 in reps], chunksize=1)
     found = next((r["found"] for r in rs if r["found"]), None)
@@ -91,4 +96,5 @@ if __name__ == "__main__":
         res["control_n5_size9"] = run(5, 9, workers, 3600)
     if size == 8:
         res["n5_size8"] = run(5, 8, workers, tl)
-    json.dump(res, open(os.path.join(ROOT, "data", f"w33_five_qubit_size{size}_dlx.json"), "w"), indent=1)
+    tag = "_reverse" if REVERSE else ""
+    json.dump(res, open(os.path.join(ROOT, "data", f"w33_five_qubit_size{size}_dlx{tag}.json"), "w"), indent=1)

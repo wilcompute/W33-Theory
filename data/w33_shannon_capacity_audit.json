@@ -1,0 +1,52 @@
+{
+ "control_petersen_haemers": [
+  5,
+  [
+   2,
+   1
+  ]
+ ],
+ "control_cubic_meeting_graph_10reg": {
+  "theta_hoffman": 9.000000000000004,
+  "haemers": [
+   7,
+   [
+    2,
+    1
+   ]
+  ],
+  "alpha": [
+   6,
+   6,
+   "OPTIMAL"
+  ]
+ },
+ "control_cubic_skew_graph_16reg": {
+  "theta_hoffman": 3.000000000000006,
+  "haemers": [
+   7,
+   [
+    3,
+    2
+   ]
+  ],
+  "alpha": [
+   3,
+   3,
+   "OPTIMAL"
+  ]
+ },
+ "W33_theta_hoffman": 10.000000000000007,
+ "W33_haemers": [
+  11,
+  [
+   3,
+   1
+  ]
+ ],
+ "W33_alpha": [
+  7,
+  7,
+  "OPTIMAL"
+ ]
+}

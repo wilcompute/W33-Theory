@@ -2,9 +2,15 @@
 """
 w33_shannon_capacity.py  --  Pass 51: Zero-Error Shannon Capacity of W(3,3)
 
-RESULT: Theta(W(3,3)) = 10 = Phi_4 = q^2+1
+CORRECTION (first found in analysis/BT818_ovoid_nogo_theta_gap.md; Pass 12653 audit, analysis/w33_shannon_capacity_audit.py): step (2) below is FALSE.  Lovasz (1979) proves
+Theta <= theta for every graph and theta(G) theta(Gbar) = n for vertex-transitive G, but NOT Theta = theta for vertex-transitive G
+(Haemers' rank bound gives vertex-transitive counterexamples; the audit reproduces Theta <= 7 < theta = 9 for the 27-line meeting
+graph).  What is proved here is only  7 = alpha <= Theta(W(3,3)) <= theta = 10.  The value of Theta(W(3,3)) is OPEN.
+Every "Theta = 10" below should be read as "theta = 10 (upper bound on Theta)".
 
-Proof:
+ORIGINAL CLAIM (withdrawn): Theta(W(3,3)) = 10 = Phi_4 = q^2+1
+
+Original (invalid) proof:
   (1) W(3,3) is vertex-transitive (PSp(4,3) acts transitively on 40 points)
   (2) For vertex-transitive graphs, Theta(G) = theta(G)  [Lovasz 1979]
   (3) For SRG(v,k,lambda,mu) with negative eigenvalue s:
@@ -96,9 +102,9 @@ print(f"PASS: Lovász theta(W(3,3)) = -v*s/(k-s) = {theta_val}")
 
 
 # -- 5. Zero-error Shannon capacity --------------------------------------------
-# By Lovász 1979: for vertex-transitive G,  Theta(G) = theta(G)
-Theta = theta_val  # = 10
-print(f"PASS: Theta(W(3,3)) = theta(W(3,3)) = {Theta}  [Lovász, vertex-transitive]")
+# CORRECTED (Pass 12653): Lovasz gives only Theta(G) <= theta(G); 'Theta = theta for vertex-transitive G' is false in general.
+Theta = theta_val  # = 10 -- an UPPER BOUND on the Shannon capacity, kept under this name for the downstream identities
+print(f"NOTE: Theta(W(3,3)) <= theta(W(3,3)) = {Theta}  [Lovasz upper bound; the exact value is open, 7 <= Theta <= 10]")
 
 
 # -- 6. Thas no-ovoid: alpha = 7 < 10 = Phi_4 ---------------------------------

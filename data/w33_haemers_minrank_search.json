@@ -1,0 +1,29 @@
+{
+ "control_C5": {
+  "2": 3,
+  "3": 3
+ },
+ "runs": [
+  {
+   "p": 2,
+   "seed": 0,
+   "best_rank": 33
+  },
+  {
+   "p": 2,
+   "seed": 1,
+   "best_rank": 33
+  },
+  {
+   "p": 3,
+   "seed": 0,
+   "best_rank": 35
+  },
+  {
+   "p": 3,
+   "seed": 1,
+   "best_rank": 35
+  }
+ ],
+ "best": 33
+}

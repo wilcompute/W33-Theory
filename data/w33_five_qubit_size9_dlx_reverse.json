@@ -1,0 +1,110 @@
+{
+ "control_n3_size5": {
+  "n": 3,
+  "size": 5,
+  "status": "exists",
+  "example": [
+   41,
+   14,
+   53
+  ],
+  "nodes": 6,
+  "per_rep": [
+   {
+    "s2": 14,
+    "found": [
+     41,
+     14,
+     53
+    ],
+    "nodes": 3,
+    "timeout": false,
+    "seconds": 0.0
+   },
+   {
+    "s2": 15,
+    "found": [
+     41,
+     15,
+     50
+    ],
+    "nodes": 3,
+    "timeout": false,
+    "seconds": 0.0
+   }
+  ],
+  "wall": 1.0
+ },
+ "control_n3_size7": {
+  "n": 3,
+  "size": 7,
+  "status": "none",
+  "example": null,
+  "nodes": 6,
+  "per_rep": [
+   {
+    "s2": 14,
+    "found": null,
+    "nodes": 3,
+    "timeout": false,
+    "seconds": 0.0
+   },
+   {
+    "s2": 15,
+    "found": null,
+    "nodes": 3,
+    "timeout": false,
+    "seconds": 0.0
+   }
+  ],
+  "wall": 0.8
+ },
+ "control_n5_size9": {
+  "n": 5,
+  "size": 9,
+  "status": "exists",
+  "example": [
+   21025,
+   692,
+   32658,
+   32036,
+   30553,
+   5393,
+   12622
+  ],
+  "nodes": 1350,
+  "per_rep": [
+   {
+    "s2": 692,
+    "found": [
+     21025,
+     692,
+     32658,
+     32036,
+     30553,
+     5393,
+     12622
+    ],
+    "nodes": 463,
+    "timeout": false,
+    "seconds": 0.2
+   },
+   {
+    "s2": 694,
+    "found": [
+     21025,
+     694,
+     32658,
+     32036,
+     30746,
+     6639,
+     7420
+    ],
+    "nodes": 887,
+    "timeout": false,
+    "seconds": 0.2
+   }
+  ],
+  "wall": 2.8
+ }
+}
