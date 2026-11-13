@@ -58,3 +58,11 @@ def test_kcopy_hierarchy_valid_but_slow():
     assert abs(by[("five-qubit 9-set", 2)] - 40) < 1e-5 and 39 < by[("five-qubit 9-set", 3)] < 39.1
     for c in d["cases"]:
         assert c["B"] >= c["truth"] - 1e-5
+
+
+def test_sections_levi_types_and_t4_overlap():
+    d = load("w33_sections_levi_overlap.json")
+    assert (d["sixers"], d["fivers"], d["sixer_orbit"], d["fiver_orbit"]) == (72, 216, 72, 216)
+    assert d["sixer_stabiliser_order"] == 720 and d["fiver_stabiliser_order"] == 240
+    assert set(d["overlap_sixer_fiver"]) == {"0", "1", "2", "4"} and d["overlap_sixer_fiver"]["4"] == 1080
+    assert d["sixers_sharing_4_per_fiver"] == {"5": 216} and d["fivers_sharing_4_per_sixer"] == {"15": 72}

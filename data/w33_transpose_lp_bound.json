@@ -1,0 +1,58 @@
+{
+ "identity_residuals": {
+  "2": [
+   8.881784197001252e-16,
+   2.220446049250313e-16
+  ],
+  "3": [
+   1.7763568394002505e-15,
+   4.440892098500626e-16
+  ],
+  "4": [
+   3.552713678800501e-15,
+   2.7755575615628914e-16
+  ]
+ },
+ "cases": [
+  {
+   "n": 3,
+   "name": "three-qubit five-set",
+   "truth": 6.0,
+   "LP": 6.9999999999999964,
+   "trivial": 7,
+   "exact_target": 6,
+   "status": 0,
+   "closes": false
+  },
+  {
+   "n": 4,
+   "name": "four-qubit type A",
+   "truth": 14.1622,
+   "LP": 14.999999999999995,
+   "trivial": 15,
+   "exact_target": 14,
+   "status": 0,
+   "closes": false
+  },
+  {
+   "n": 4,
+   "name": "four-qubit type B",
+   "truth": 14.0,
+   "LP": 14.999999999999998,
+   "trivial": 15,
+   "exact_target": 14,
+   "status": 0,
+   "closes": false
+  },
+  {
+   "n": 5,
+   "name": "five-qubit 9-set",
+   "truth": 30.0,
+   "LP": 30.999999999997627,
+   "trivial": 31,
+   "exact_target": 30,
+   "status": 0,
+   "closes": false
+  }
+ ]
+}

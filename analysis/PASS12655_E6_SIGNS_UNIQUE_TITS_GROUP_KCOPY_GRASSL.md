@@ -81,3 +81,24 @@ Purity controls are exact. Convergence is far too slow: at five qubits the third
 - Six qubits: is 9 minimal? Exhaustive search is out of reach as built.
 - The exact 1/32 and 1/16 (type B).
 - Θ(W(3,3)) ∈ [√58, 10]: symmetric-code search in progress (addendum).
+
+## Addendum A: the M-theory and IIB sections, and T² ↔ S¹, in the 27 lines (`w33_sections_levi_overlap.py`)
+
+The other track found 72 six-coordinate and 216 five-coordinate maximal null sections (`toe_20261113_albert_six_coordinate_sections.py`); these are the maximal cocliques of the 27-line meeting graph. Two predictions were made before computing, and both hold.
+
+**Levi types.**
+- Each family is a single W(E6)-orbit.
+- Stabiliser orders are **720 = |W(A₅)|** for sixers and **240 = |W(A₄ × A₁)|** for fivers.
+- These are the Weyl groups of GL(6) and GL(5) × SL(2), the Levi subgroups of the M-theory and type IIB solutions of the E6(6) section constraint (Hohm–Samtleben, arXiv:1312.0614).
+- So the 72 sixers correspond to the 72 roots of E6, and the 216 fivers to the 216 A₄ × A₁ subsystems.
+
+**Overlaps.**
+- A sixer and a fiver share 0, 1, 2 or **4** coordinates, never 3 or 5.
+- Each sixer shares 4 coordinates with exactly **15 = C(6,4)** fivers: every 4-subset of a sixer lies in exactly one fiver.
+- Each fiver shares 4 coordinates with exactly **5** sixers: every 4-subset of a fiver lies in exactly one sixer.
+
+**Reading.** This is the combinatorial form of "M-theory on T² ↔ IIB on S¹". Choosing a T⁴ inside the M-theory T⁶ (15 ways) determines a unique IIB section, and choosing a T⁴ inside the IIB T⁵ (5 ways) determines a unique M-theory lift.
+
+**Scope.** These are counts on coordinate sections of the repository's cubic, matching the known exceptional-field-theory structure. No field theory is constructed.
+
+**Ownership.** The four-coordinate overlap statement was committed first by the other track (a4593c961, `2026-11-13_e6_tits_coordinates.md`); this addendum was computed independently and agrees. Cite theirs.

@@ -1,0 +1,25 @@
+{
+ "n_points": 27,
+ "n_lines": 45,
+ "TrX3_over_48_equals_N": true,
+ "adjoint_identity": true,
+ "sign_counts": {
+  "1": 32,
+  "-1": 13
+ },
+ "stabiliser_dim": 78,
+ "control_unsigned_adjoint_identity": false,
+ "n_stabiliser_states": 1080,
+ "stabiliser_states_(support,is_line,N)": [
+  {
+   "support": 3,
+   "is_line": true,
+   "N": 1,
+   "count": 1080
+  }
+ ],
+ "Z2_min": 2.999999999999998,
+ "Z2_max": 3.0000000000000027,
+ "N_min": 0.999999999999999,
+ "N_max": 1.0000000000000013
+}

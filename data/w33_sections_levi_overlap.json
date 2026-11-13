@@ -1,0 +1,36 @@
+{
+ "maximal_coclique_sizes": {
+  "5": 216,
+  "6": 72
+ },
+ "n_automorphisms": 51840,
+ "sixers": 72,
+ "fivers": 216,
+ "sixer_orbit": 72,
+ "fiver_orbit": 216,
+ "sixer_stabiliser_order": 720,
+ "fiver_stabiliser_order": 240,
+ "overlap_sixer_fiver": {
+  "0": 5832,
+  "1": 4320,
+  "2": 4320,
+  "4": 1080
+ },
+ "overlap_sixer_sixer": {
+  "0": 756,
+  "1": 1080,
+  "3": 720
+ },
+ "overlap_fiver_fiver": {
+  "0": 9720,
+  "1": 8100,
+  "2": 3240,
+  "3": 2160
+ },
+ "sixers_sharing_4_per_fiver": {
+  "5": 216
+ },
+ "fivers_sharing_4_per_sixer": {
+  "15": 72
+ }
+}
