@@ -1,0 +1,47 @@
+{
+  "chosen_packet": 5,
+  "magic": {
+    "Wigner_mana_natural_log": 0.45574639440832615,
+    "Wigner_one_norm": "sqrt(3)/3 + 1",
+    "Wigner_sum_negativity": "sqrt(3)/6",
+    "active_basis_input_computational_support": 2,
+    "active_basis_outputs_are_nonstabilizer_magic": true,
+    "discrete_qutrit_Wigner_entries": {
+      "0,0": "1/12",
+      "0,1": "1/12",
+      "0,2": "1/12",
+      "1,0": "1/4",
+      "1,1": "1/4",
+      "1,2": "1/4",
+      "2,0": "-sqrt(3)/6",
+      "2,1": "sqrt(3)/12",
+      "2,2": "sqrt(3)/12"
+    },
+    "note": "Any nonzero two-basis difference in F3^3 can be carried to a single-qutrit coordinate by invertible GL3(F3) Clifford permutation, so Wigner L1 is the same for any active pair. Inactive basis outputs are stabilizer basis states.",
+    "stabilizer_basis_support_cardinality_is_power_of_three": true
+  },
+  "optics": {
+    "active_paths": 12,
+    "active_power_transmission": 0.95,
+    "angular_sigma_rad": 0.01,
+    "beam_splitter_twoport_count": 6,
+    "conditioned_process_formula": "|Tr(V\u2020 A)|\u00b2/[27 Tr(A\u2020 A)]",
+    "hardware_model": "6 simultaneous two-port rotation gates with independent Gaussian angular jitter sigma_theta, 12 active output phases sigma_phi, active output arm power transmission eta, 15 idle ideal; no crosstalk, source/detector errors or interdevice loss",
+    "ideal_angle_and_phase_conditional_process_fidelity": 0.999838098222675,
+    "idle_paths": 15,
+    "mc_samples": 700,
+    "mean_photon_survival": 0.977777777777778,
+    "mode_count": 27,
+    "noisy_conditional_entanglement_fidelity_mean": 0.9996249646497758,
+    "noisy_conditional_entanglement_fidelity_q05_q50_q95": [
+      0.9994968056500012,
+      0.99963400767924,
+      0.9997310586011957
+    ],
+    "noisy_conditional_uniform_input_fidelity_mean": 0.9996345478233096,
+    "performance_limit": "Illustrative numerical error model only, no laboratory calibration or fault-tolerance threshold. This elementary V is E6-preserving but NOT Clifford-conjugate to original CCZ U because order-three spectra differ.",
+    "phase_sigma_rad": 0.02,
+    "worst_sample_fidelity": 0.9992789817456539
+  },
+  "status": "PASS_6_TWO_PORT_REPLACEMENT_MAGIC_AND_NOISE"
+}

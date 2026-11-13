@@ -1,0 +1,96 @@
+{
+  "Hadamard_root_basis_rotation": [
+    [
+      1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      1,
+      -1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      -1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      -1
+    ]
+  ],
+  "Lambda2_0_8_weights": 27,
+  "Lambda2_8_weights": 28,
+  "canonical_27_weight_counts": {
+    "(-1, -1, 0, 0)": 1,
+    "(-1, 0, -1, 0)": 1,
+    "(-1, 0, 0, -1)": 1,
+    "(-1, 0, 0, 1)": 1,
+    "(-1, 0, 1, 0)": 1,
+    "(-1, 1, 0, 0)": 1,
+    "(0, -1, -1, 0)": 1,
+    "(0, -1, 0, -1)": 1,
+    "(0, -1, 0, 1)": 1,
+    "(0, -1, 1, 0)": 1,
+    "(0, 0, -1, -1)": 1,
+    "(0, 0, -1, 1)": 1,
+    "(0, 0, 0, 0)": 3,
+    "(0, 0, 1, -1)": 1,
+    "(0, 0, 1, 1)": 1,
+    "(0, 1, -1, 0)": 1,
+    "(0, 1, 0, -1)": 1,
+    "(0, 1, 0, 1)": 1,
+    "(0, 1, 1, 0)": 1,
+    "(1, -1, 0, 0)": 1,
+    "(1, 0, -1, 0)": 1,
+    "(1, 0, 0, -1)": 1,
+    "(1, 0, 0, 1)": 1,
+    "(1, 0, 1, 0)": 1,
+    "(1, 1, 0, 0)": 1
+  },
+  "canonical_pattern": "24 weights {\u00b1e_i\u00b1e_j, i<j} and zero with multiplicity 3",
+  "character_equal_to_USp8_omega2": true,
+  "compact_Cartan_indices": [
+    0,
+    7,
+    26,
+    29
+  ],
+  "full_integer_charpoly_equal": true,
+  "global_intertwiner_not_yet_constructed": true,
+  "original_weight_counts": {
+    "(-1, -1, 0, 0)": 1,
+    "(-1, 0, -1, 0)": 1,
+    "(-1, 0, 0, -1)": 1,
+    "(-1, 0, 0, 1)": 1,
+    "(-1, 0, 1, 0)": 1,
+    "(-1, 1, 0, 0)": 1,
+    "(0, -1, -1, 0)": 1,
+    "(0, -1, 0, -1)": 1,
+    "(0, -1, 0, 1)": 1,
+    "(0, -1, 1, 0)": 1,
+    "(0, 0, -1, -1)": 1,
+    "(0, 0, -1, 1)": 1,
+    "(0, 0, 0, 0)": 3,
+    "(0, 0, 1, -1)": 1,
+    "(0, 0, 1, 1)": 1,
+    "(0, 1, -1, 0)": 1,
+    "(0, 1, 0, -1)": 1,
+    "(0, 1, 0, 1)": 1,
+    "(0, 1, 1, 0)": 1,
+    "(1, -1, 0, 0)": 1,
+    "(1, 0, -1, 0)": 1,
+    "(1, 0, 0, -1)": 1,
+    "(1, 0, 0, 1)": 1,
+    "(1, 0, 1, 0)": 1,
+    "(1, 1, 0, 0)": 1
+  },
+  "scope": "Identifies the 27D compact Cartan character with the irreducible \u03c92 representation \u039b\u00b2_0 of USp(8), and verifies a generic exact characteristic polynomial. A simultaneous 36-generator 27x27 intertwiner and its normalization remain separate construction work.",
+  "status": "PASS_EXACT_C4_27_CHARACTER_EQUALS_USP8_SYMPLECTIC_TRACELESS_WEDGE2"
+}

@@ -1,0 +1,25 @@
+{
+  "automorphisms_checked": 51840,
+  "complete": true,
+  "expected_when_complete": {
+    "5_extendable_orbit": 432,
+    "5_extendable_stabilizer": 120,
+    "5_maximal_orbit": 216,
+    "5_maximal_stabilizer": 240,
+    "6_maximal_orbit": 72,
+    "6_maximal_stabilizer": 720,
+    "W_E6_order": 51840
+  },
+  "extendable_fiver_orbit_seen": 432,
+  "extendable_fiver_stabilizer_count_seen": 120,
+  "maximal_fiver_orbit_seen": 216,
+  "maximal_fiver_stabilizer_count_seen": 240,
+  "maximal_sixer_orbit_seen": 72,
+  "maximal_sixer_stabilizer_count_seen": 720,
+  "schema": "toe.E6.Weyl.two.physical.section.orbits.v1",
+  "section_interpretation": "The order 240 and 720 are precisely the Weyl group orders of A4xA1 and A5 respectively, matching the Levi types of type IIB five-coordinate and M six-coordinate ExFT sections. Group stabilizer order alone does not prove the full connected parabolic identification.",
+  "status": "CERTIFIED_51840_FULL_W_E6_ACTION",
+  "validity": "Only completed full enumeration permits the numeric group-order and stabilizer conclusion; incomplete is data for follow-up only.",
+  "wall_budget_s": 115,
+  "wall_s": 106.49
+}

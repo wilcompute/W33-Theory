@@ -1,0 +1,52 @@
+{
+  "bundle": {
+    "K_bundle_sparse_nnz": 324,
+    "base_clock_packet_index": 5,
+    "base_clock_rank": 12,
+    "base_cubic_fixed_translation_no_go_not_evaded": true,
+    "base_signed_cubic_invariant": "N(x) signed 45 triads",
+    "covariant_clock": "K_bundle=direct_sum_h(P_h K P_h.T)",
+    "fiber_cubic_not_same_fixed_polynomial": true,
+    "fiber_cubic_transport": "N_h(y)=N(P_h.T y), with P_h translation permutation of 27 E6 mode labels",
+    "history_sites": 27,
+    "internal_real_modes_per_site": 27,
+    "interpretation": "The lifted transport commutes with the on-site clock because each fiber transports its cubic. This construction is a mathematically consistent but gauge-trivial pure relabeling and does not restore invariance of one fixed global N under the old 27 history permutations.",
+    "status": "PASS_EXPLICIT_729D_LIFTED_TRANSLATION_COVARIANT_CLOCK",
+    "total_real_modes": 729,
+    "translation_controls": {
+      "(0, 0, 1)": {
+        "commutator_with_bundle_clock_nnz": 0,
+        "sparse_permutation_nnz": 729
+      },
+      "(0, 1, 0)": {
+        "commutator_with_bundle_clock_nnz": 0,
+        "sparse_permutation_nnz": 729
+      },
+      "(1, 0, 0)": {
+        "commutator_with_bundle_clock_nnz": 0,
+        "sparse_permutation_nnz": 729
+      }
+    },
+    "transport": "T_a: |h,y> maps to |h+a,P_a y>"
+  },
+  "continuum": {
+    "Clifford_alpha_beta": "4x4 conventional complex Dirac alpha1,alpha2,alpha3 and beta",
+    "all_gamma_anticommutations_verified": 16,
+    "naive_massless_species_at_brillouin_corners": 8,
+    "selection_warning": "The 4-spinor Clifford matrices, integer lattice lifts, Wilson term, and scale parameter r are external design inputs, not derived from the finite W33/E6/H27 data. The finite 27-site torus has momenta only 0 and +/-2pi/3, so no controlled low-k continuum without a sequence of enlarging lattices.",
+    "seven_lifted_species_gaps": [
+      2,
+      2,
+      4,
+      2,
+      4,
+      4,
+      6
+    ],
+    "squared_energy": "sum_i sin(k_i)^2 + [m+r sum_i(1-cos k_i)]^2",
+    "status": "PASS_GAUGE_COVARIANCE_DOES_NOT_DERIVE_DIRAC",
+    "wilson_explicit_chiral_symmetry_breaking": true,
+    "wilson_massless_species_at_r_1_m_0": 1
+  },
+  "schema": "toe.20261113.gauge_lift_and_wilson.v1"
+}
