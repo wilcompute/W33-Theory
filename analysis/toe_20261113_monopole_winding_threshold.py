@@ -15,7 +15,16 @@ triplet = radial.triplet
 OUT = triplet.flat.ROOT / "data/toe_20261113_monopole_winding_threshold.json"
 
 
-def prepare(count):
+CORE_MATCH_RADIUS = .14
+
+
+def matching_index(grid):
+    index = int(np.searchsorted(grid, CORE_MATCH_RADIUS))
+    assert 0 < index < len(grid)-1 and grid[index] == CORE_MATCH_RADIUS
+    return index
+
+
+def prepare(count, sectors=None, profile_index=-1):
     model = radial.exchange.radial.mixing.higgs_model()
     gauge, adjoint, _, _, _, _, embedding, _, meshes, _, native = model
     _, _, cartan, color, weak, y = triplet.flat.compact_chart()
@@ -27,14 +36,16 @@ def prepare(count):
         gauge.astype(int), adjoint.astype(int), color, weak, y, records)
     alpha = fundamental[five[0]]-fundamental[five[3]]
     vacuum = np.diag(y).astype(float), np.concatenate((x, z)).reshape(5, 27, 3).astype(float)
-    mesh = meshes[-1]
+    mesh = meshes[profile_index]
     fields = np.array(mesh["state"])
     slopes = np.zeros(fields.shape[1])
     slopes[1] = fields[1, 1]/mesh["grid"][1]
     profile = CubicSpline(mesh["grid"], fields, bc_type=((1, slopes), "not-a-knot"))
-    grid = np.r_[np.geomspace(1e-6, .14, count+1), np.geomspace(.14, 5., count+1)[1:]]
+    grid = np.r_[np.geomspace(1e-6, CORE_MATCH_RADIUS, count+1), np.geomspace(CORE_MATCH_RADIUS, 5., count+1)[1:]]
     for label, positive in (("Q/Uc", np.array(radial.exchange.QU[0])+alpha),
                             ("L", radial.exchange.LE[0]), ("Ec", np.array(radial.exchange.LE[1])+alpha)):
+        if sectors is not None and label not in sectors:
+            continue
         frames = radial.sector_frames(adjoint, weights, root, positive)
         evaluators = [triplet.mass_evaluator(*f, records, words, rules) for f in frames]
         flux, stable, incoming, outgoing, masses = radial.exterior_basis(evaluators, vacuum)
@@ -64,7 +75,7 @@ def match(system, energy, outer_radius=5.):
     stable = np.linalg.qr(stable)[0]
     allowed = np.column_stack((stable, outgoing, incoming))
     cols = incoming.shape[1]
-    mid = (len(grid)-1)//2
+    mid = matching_index(grid)
     assert end > mid
     transport = np.eye(cols, dtype=complex)
     generators = (base[:end]+1j*energy*flux)*np.diff(grid[:end+1])[:, None, None]

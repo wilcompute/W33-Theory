@@ -23,7 +23,8 @@ def positive_qr(matrix):
 def outgoing_match(system, energy, cut=5.):
     _, grid, flux, regular, stable, _, outgoing, decay, base = system
     end = int(np.argmin(abs(grid-cut)))
-    mid = (len(grid)-1)//2
+    mid = threshold.matching_index(grid)
+    assert end > mid
     rate = np.sqrt(decay**2-energy**2)
     decaying = stable - (flux @ stable)*(1j*energy/(decay+rate))
     exterior = positive_qr(np.column_stack((decaying, outgoing)))

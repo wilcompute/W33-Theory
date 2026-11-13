@@ -1,0 +1,13 @@
+# Boundary and profile sensitivity of the monopole conversion dip
+
+The radial line-shape calculation uses a constant vacuum exterior attached at a finite radius. Moving the attachment point deletes part of the nonconstant background, so it can shift both the complex poles and real-axis scattering. The boundary sweep uses one 80-cell grid with nested cuts nearest to requested radii 5, 4 and 3. The actual radii are 5, 3.8239029083 and 2.9244466904. The core match stays fixed at 0.14. At each cut the producer refits both poles and recomputes the residues using the same outgoing boundary. It then evaluates six real energies in the native physical flavor frames. [Evans-function resonance framework](https://math.bu.edu/people/mabeck/Fall09/KapitulaSandstede98.pdf)
+
+The profile controls use the first and last stored solutions of the same adjoint shooting problem. These are 121- and 321-node background meshes. Varying the background resolution probes sensitivity to the solved profile. Both profiles share the same action and endpoint conditions.
+
+Appending a constant exterior layer at fixed physical attachment provides a separate check. All open channels in this matching problem have unit flux speeds of equal magnitude. Moving the amplitude reference through a vacuum layer of thickness h multiplies the reflection matrix by exp(2iEh). This scalar phase preserves every conversion probability and the pole locations. The producer checks the matrix phase relation directly at E=0.002. This control distinguishes moving the amplitude reference from deleting nonconstant material.
+
+Replay the fine profile with `py -3 analysis/toe_20261113_monopole_triplet_cut.py`. Replay the coarse profile with `py -3 analysis/toe_20261113_monopole_triplet_cut.py --profile-index 0 --output data/toe_20261113_monopole_triplet_cut_coarse_profile.json`.
+
+## Results
+
+At all six cut/profile combinations the sampled minimum lies at E=0.00183333. Conversion there is 72.69–72.88%, compared with 99.37–99.39% at zero. The most the cut changes any sampled probability is 0.219 percentage points. Switching between the two background profiles changes any sampled probability by at most 0.052 percentage points. The positive-real pole shifts by less than 0.00000193 across the two background resolutions at each cut. The additive interference at the dip stays between −0.512 and −0.510. The rank-one factor overlap stays between 0.701 and 0.703. These are finite-cut and sampled controls. The stored background ends at radius 5, so the test leaves the actual large-radius tail and the physical normalization of the energy scale open.

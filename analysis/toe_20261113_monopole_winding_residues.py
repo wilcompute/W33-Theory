@@ -18,7 +18,7 @@ def matching(system, energy):
     rates = np.sqrt(decay**2-energy**2)
     decaying = stable - (flux @ stable)*(1j*energy/(decay+rates))
     allowed = np.column_stack((decaying, outgoing, incoming))
-    mid = (len(grid)-1)//2
+    mid = poles.threshold.matching_index(grid)
     generators = (base+1j*energy*flux)*np.diff(grid)[:, None, None]
     for generator in generators[:mid]:
         regular = np.linalg.qr(expm(generator) @ regular)[0]
