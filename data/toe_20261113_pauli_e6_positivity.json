@@ -1,0 +1,125 @@
+{
+  "status": "PASS",
+  "pauli_labels": [
+    "IIX",
+    "IIZ",
+    "IXI",
+    "IXX",
+    "IXZ",
+    "IYY",
+    "IZI",
+    "IZX",
+    "IZZ",
+    "XIY",
+    "XXY",
+    "XYI",
+    "XYX",
+    "XYZ",
+    "XZY",
+    "YIY",
+    "YXY",
+    "YYI",
+    "YYX",
+    "YYZ",
+    "YZY",
+    "ZIY",
+    "ZXY",
+    "ZYI",
+    "ZYX",
+    "ZYZ",
+    "ZZY"
+  ],
+  "cubic_triads": 45,
+  "diagonal_split_torus_dimension": 6,
+  "boost_weights": {
+    "IIX": 0,
+    "IIZ": 0,
+    "IXI": 0,
+    "IXX": 0,
+    "IXZ": 0,
+    "IYY": 1,
+    "IZI": 1,
+    "IZX": -1,
+    "IZZ": -1,
+    "XIY": 0,
+    "XXY": 0,
+    "XYI": -1,
+    "XYX": 1,
+    "XYZ": 1,
+    "XZY": -1,
+    "YIY": -1,
+    "YXY": 1,
+    "YYI": 0,
+    "YYX": 0,
+    "YYZ": 0,
+    "YZY": 0,
+    "ZIY": -1,
+    "ZXY": 1,
+    "ZYI": 0,
+    "ZYX": 0,
+    "ZYZ": 0,
+    "ZZY": 0
+  },
+  "boost_scale": 2,
+  "input_line": [
+    "IIZ",
+    "IZI",
+    "IZZ"
+  ],
+  "input_cubic": 1,
+  "output_cubic": 1,
+  "input_density_spectrum": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "1/2",
+    "1/2"
+  ],
+  "output_density_spectrum": [
+    "-1/16",
+    "-1/16",
+    "-3/16",
+    "-3/16",
+    "3/16",
+    "3/16",
+    "9/16",
+    "9/16"
+  ],
+  "output_pauli_expectation_above_one": {
+    "label": "IZI",
+    "value": "2"
+  },
+  "equal_low_moment_control": {
+    "spectra": [
+      [
+        "1",
+        "-1",
+        "1/2",
+        "-1/2"
+      ],
+      [
+        "11/10",
+        "-11/10",
+        "1/5",
+        "-1/5"
+      ]
+    ],
+    "moments_1_to_4": [
+      [
+        "0",
+        "5/2",
+        "0",
+        "17/8"
+      ],
+      [
+        "0",
+        "5/2",
+        "0",
+        "14657/5000"
+      ]
+    ]
+  }
+}
