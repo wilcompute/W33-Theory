@@ -20,8 +20,8 @@ distinguished uncovered Pauli and closes a $4\otimes4$ inequality, which resists
 eigenvalue bound. For
 four qubits, the smallest weakly unextendible sets have exactly five elements (an exhaustive search, matching Grassl's size
 $q^{n/2}+1$). There are $105\,283\,584$ of them in two types. One type satisfies $\F\ge|v|^4/80$ exactly, so five Pauli-class bases are strongly
-unextendible in $d=16$ (general, non-Pauli MUB triples are already strongly unextendible in many dimensions~\cite{gmmp}), and its minimum ($\approx0.0524$) lies below its stabiliser value $1/16$. For five qubits the smallest such sets have 8 or 9 elements (an exhaustive search
-excludes sizes up to 7, and one of size 9 exists). The proofs combine a twirl identity, the
+unextendible in $d=16$ (general, non-Pauli MUB triples are already strongly unextendible in many dimensions~\cite{gmmp}), and its minimum ($\approx0.0524$) lies below its stabiliser value $1/16$. For five qubits the smallest such sets have exactly 9 elements (an exhaustive computer search
+excludes sizes up to 8, and one of size 9 exists). The proofs combine a twirl identity, the
 graph-theoretic uncertainty relation of de~Gois, Hansenne and G\"uhne, Pauli-symmetry reduction of sum-of-squares certificates, facial
 reduction, and verification in exact rational arithmetic.
 \end{abstract}
@@ -119,7 +119,10 @@ the first type has no such point. It inherits a mirror partner (a second partiti
 (iii) For several inequivalent nine-element sets, $\min\F=m^*/16$ exactly ($1/16$ or $1/8$), via a facially reduced Lovász dual.
 \end{theorem}
 \begin{proposition}[five qubits]
-$W(9,2)$ has no maximal partial spread of size at most 7, and it has one of size 9 (verified independently). Hence the smallest five-qubit maximal Pauli MUB set has 8 or 9 elements; local search finds none of size 8. The data $3,5,5,(9)$ for $n=2,\dots,5$ fit $2^{\lceil n/2\rceil}+1$, which is a conjecture here. The size-9 set has numerical minimum $\F=1/32$, its stabiliser value. For $n=6$ a coverage-biased greedy search finds a maximal
+$W(9,2)$ has no maximal partial spread of size at most 7, and it has one of size 9 (verified independently). An exhaustive search over all eight $O(5)$-orbits of the second matrix (exact-cover branching with a valid covering prune;
+433\,517\,130 nodes; controls reproduce the $n=3$ sizes and the size-7 exclusion) finds no maximal partial spread of size 8. Hence the
+smallest five-qubit maximal Pauli MUB set has exactly 9 elements. (This rests on one implementation; an independent re-run with a
+different traversal order is in progress.) The data $3,5,5,9$ for $n=2,\dots,5$ fit $2^{\lceil n/2\rceil}+1$, which is a conjecture here. The size-9 set has numerical minimum $\F=1/32$, its stabiliser value. For $n=6$ a coverage-biased greedy search finds a maximal
 partial spread of size $9=2^{3}+1$ (verified over all 888\,832 nonsingular symmetric $6\times6$ matrices) and none smaller, consistent
 with the same pattern; this is evidence, not a proof. For the five-qubit size-9 set the Lovász number of the uncovered graph (744
 vertices, 368-regular) satisfies $30.340\le\vartheta\le30.449$ (floating-point certificates: an eigenvalue-form dual and
@@ -154,7 +157,7 @@ $d$ & smallest size & $\min\F$ & status\\\midrule
 8 & 5 & $1/8$ & exact\\
 9 & 5 & $\ge1/9$; $\approx0.14711$ & exact bound; numerical value\\
 16 & 5 & $\ge1/80$; $\approx0.05236$ (one type) & exact bound; numerical value\\
-32 & 8 or 9 & $\ge0.0172$; $\approx1/32$ (size-9 set) & sizes exact; bound float-certified; value numerical\\\bottomrule
+32 & 9 & $\ge0.0172$; $\approx1/32$ (size-9 set) & sizes exact; bound float-certified; value numerical\\\bottomrule
 \end{tabular}
 \end{center}
 Open: closed forms for the non-stabiliser optima; the strong

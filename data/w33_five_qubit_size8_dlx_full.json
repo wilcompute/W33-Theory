@@ -1,0 +1,128 @@
+{
+ "control_n3_size5": {
+  "n": 3,
+  "size": 5,
+  "status": "exists",
+  "example": [
+   41,
+   14,
+   53
+  ],
+  "nodes": 6,
+  "per_rep": [
+   {
+    "s2": 14,
+    "found": [
+     41,
+     14,
+     53
+    ],
+    "nodes": 3,
+    "timeout": false,
+    "seconds": 0.0
+   },
+   {
+    "s2": 15,
+    "found": [
+     41,
+     15,
+     50
+    ],
+    "nodes": 3,
+    "timeout": false,
+    "seconds": 0.0
+   }
+  ],
+  "wall": 0.5
+ },
+ "control_n3_size7": {
+  "n": 3,
+  "size": 7,
+  "status": "none",
+  "example": null,
+  "nodes": 6,
+  "per_rep": [
+   {
+    "s2": 14,
+    "found": null,
+    "nodes": 3,
+    "timeout": false,
+    "seconds": 0.0
+   },
+   {
+    "s2": 15,
+    "found": null,
+    "nodes": 3,
+    "timeout": false,
+    "seconds": 0.0
+   }
+  ],
+  "wall": 0.3
+ },
+ "n5_size8": {
+  "n": 5,
+  "size": 8,
+  "status": "none",
+  "example": null,
+  "nodes": 433517130,
+  "per_rep": [
+   {
+    "s2": 692,
+    "found": null,
+    "nodes": 54189927,
+    "timeout": false,
+    "seconds": 16072.7
+   },
+   {
+    "s2": 693,
+    "found": null,
+    "nodes": 54173796,
+    "timeout": false,
+    "seconds": 16401.2
+   },
+   {
+    "s2": 694,
+    "found": null,
+    "nodes": 54241976,
+    "timeout": false,
+    "seconds": 15970.2
+   },
+   {
+    "s2": 695,
+    "found": null,
+    "nodes": 54102646,
+    "timeout": false,
+    "seconds": 15695.3
+   },
+   {
+    "s2": 700,
+    "found": null,
+    "nodes": 54174654,
+    "timeout": false,
+    "seconds": 15972.7
+   },
+   {
+    "s2": 701,
+    "found": null,
+    "nodes": 54206027,
+    "timeout": false,
+    "seconds": 16137.2
+   },
+   {
+    "s2": 702,
+    "found": null,
+    "nodes": 54190137,
+    "timeout": false,
+    "seconds": 15906.8
+   },
+   {
+    "s2": 703,
+    "found": null,
+    "nodes": 54237967,
+    "timeout": false,
+    "seconds": 16128.4
+   }
+  ],
+  "wall": 16403.3
+ }
+}

@@ -35,11 +35,15 @@ lines = [sorted(L) for L in lines]; assert len(lines) == 40 and all(len(L) == 4 
 # hint: product of a maximum independent set with itself (49)
 a7 = g["alpha_exact"](A, 60)
 t0 = time.time()
-best, bound, status, sol = solve(lines, n, tl, wk)
+hint = None
+if len(sys.argv) > 3 and sys.argv[3] == "hint" and os.path.exists(os.path.join(ROOT, "data", "w33_shannon_square.json")):
+    prev = json.load(open(os.path.join(ROOT, "data", "w33_shannon_square.json")))["set"]; hint = {u * n + v for u, v in prev}
+best, bound, status, sol = solve(lines, n, tl, wk, hint)
 # verify independence
 S = [(i // n, i % n) for i in sol]
 ok = all(not ((u == u2 or A[u, u2]) and (v == v2 or A[v, v2])) for (u, v), (u2, v2) in itertools.combinations(S, 2))
 res = dict(control_C5=ctrl[:3], alpha_G=a7, alpha_G2_best=best, solver_bound=bound, status=status, verified_independent=ok,
            Theta_lower=best ** 0.5, seconds=round(time.time() - t0, 1), set=S)
 print({k: v for k, v in res.items() if k != "set"}, flush=True)
-json.dump(res, open(os.path.join(ROOT, "data", "w33_shannon_square.json"), "w"), indent=1, default=int)
+out_name = "w33_shannon_square_long.json" if hint else "w33_shannon_square.json"
+json.dump(res, open(os.path.join(ROOT, "data", out_name), "w"), indent=1, default=int)

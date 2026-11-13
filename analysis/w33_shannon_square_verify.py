@@ -16,7 +16,9 @@ cl = [c for c in nx.find_cliques(G2)]; assert len(cl) == 40 and all(len(c) == 4 
 for p in range(40):  # GQ axiom: for a point p not on line L, exactly one point of L is collinear with p
     for L in cl:
         if p not in L: assert sum(1 for x in L if G2.has_edge(p, x)) == 1
-d = json.load(open(os.path.join(ROOT, "data", "w33_shannon_square.json")))
+import sys
+SRC = sys.argv[1] if len(sys.argv) > 1 else "w33_shannon_square.json"
+d = json.load(open(os.path.join(ROOT, "data", SRC)))
 g = {"__name__": "x", "__file__": os.path.join(HERE, "w33_shannon_capacity_audit.py")}
 exec(open(os.path.join(HERE, "w33_shannon_capacity_audit.py"), encoding="utf-8").read().split("t0 = time.time(); res = {}")[0], g)
 G1 = nx.from_numpy_array(g["w33"]())
@@ -27,4 +29,4 @@ close = lambda a, b: a == b or G2.has_edge(a, b)
 bad = [(x, y) for x, y in itertools.combinations(S, 2) if close(x[0], y[0]) and close(x[1], y[1])]
 res = dict(size=len(S), conflicts=len(bad), GQ_axiom=True, isomorphism_found=True, Theta_lower=len(S) ** 0.5)
 print(res); assert not bad
-json.dump(res, open(os.path.join(ROOT, "data", "w33_shannon_square_verify.json"), "w"), indent=1)
+json.dump(res, open(os.path.join(ROOT, "data", SRC.replace(".json", "_verify.json")), "w"), indent=1)

@@ -1,0 +1,39 @@
+{
+ "n_frames": 40,
+ "n_A2": 120,
+ "control_point_vs_line_noniso": true,
+ "invariant_distribution_from_frame0": {
+  "(0, 0)": 12,
+  "(6, 0)": 27
+ },
+ "relations": [
+  {
+   "relation": "(6, 0)",
+   "degrees": [
+    27
+   ]
+  },
+  {
+   "relation": "(0, 0)",
+   "degrees": [
+    12
+   ],
+   "spectrum": [
+    [
+     -4.0,
+     15
+    ],
+    [
+     2.0,
+     24
+    ],
+    [
+     12.0,
+     1
+    ]
+   ],
+   "iso_W33_points": false,
+   "iso_W33_lines": true
+  }
+ ]
+}

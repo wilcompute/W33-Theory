@@ -1,0 +1,14 @@
+{
+ "source_files_same_polynomial": true,
+ "sha256": {
+  "c:\\tmp\\toe_wt\\extracted_v13/W33-Theory-master/artifacts/canonical_su3_gauge_and_cubic.json": "13ea38ed37a8c1c9",
+  "c:\\tmp\\toe_wt\\artifacts/canonical_su3_gauge_and_cubic.json": "13ea38ed37a8c1c9"
+ },
+ "transpose_closure_residual": 5.121056735994417e-15,
+ "dim_k_skew": 36,
+ "dim_p_sym": 42,
+ "killing_positive": 42,
+ "killing_negative": 36,
+ "killing_signature_p_minus_k": 6,
+ "real_form": "E6(6) split"
+}
