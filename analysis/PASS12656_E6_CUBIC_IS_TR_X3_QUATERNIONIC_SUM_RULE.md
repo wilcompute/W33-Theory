@@ -63,7 +63,7 @@ The conjecture is false. (The script stops at its first assertion by design and 
 - Codes in G⊠G invariant under ⟨(g, g^a)⟩ for g of order 5 (no fixed points) reach **size 60**, proved optimal within that symmetry class for every twist a (CP-SAT OPTIMAL). C₅ control: 5.
 - The 60-code was **independently verified** on a separately built W(3) (GQ axiom, VF2 isomorphism): 0 conflicts.
 - Other classes: order 3 gives 58; order 4 gives 56; order 2 gives 56; with the coordinate swap at most 55.
-- Conjugate twists ⟨(g, c g^a c⁻¹)⟩ for 25 random c per class have not beaten 60 (orders 5, 6, 9 and the order-3 class with 4 fixed points done; the order-3 class with 13 fixed points was still running at commit).
+- Conjugate twists ⟨(g, c g^a c⁻¹)⟩ for 25 random c per class did not beat 60 in any class (orders 3, 5, 6, 9; best order-3 result 58; final verification of the 60-code passed).
 - **√60 ≈ 7.746 ≤ Θ(W(3,3)) ≤ 10.**
 
 ## Cross-track

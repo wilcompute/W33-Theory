@@ -1,0 +1,15 @@
+{
+ "control_norm_squared": {
+  "label": "control: LHS = norm^2 (expect 1)",
+  "delta": 0.9999997392251538,
+  "status": "optimal",
+  "seconds": 11.1
+ },
+ "typeB": {
+  "label": "type B (target 3/8 = 0.375)",
+  "delta": 0.31249999384724764,
+  "status": "optimal",
+  "seconds": 32.7
+ },
+ "proves_three_eighths_numerically": false
+}

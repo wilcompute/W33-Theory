@@ -1,0 +1,86 @@
+{
+ "control_n3_size5": {
+  "n": 3,
+  "size": 5,
+  "status": "exists",
+  "example": [
+   41,
+   14,
+   53
+  ],
+  "nodes": 6,
+  "per_rep": [
+   {
+    "s2": 14,
+    "found": [
+     41,
+     14,
+     53
+    ],
+    "nodes": 3,
+    "timeout": false,
+    "seconds": 0.0
+   },
+   {
+    "s2": 15,
+    "found": [
+     41,
+     15,
+     50
+    ],
+    "nodes": 3,
+    "timeout": false,
+    "seconds": 0.0
+   }
+  ],
+  "wall": 1.1
+ },
+ "control_n3_size7": {
+  "n": 3,
+  "size": 7,
+  "status": "none",
+  "example": null,
+  "nodes": 6,
+  "per_rep": [
+   {
+    "s2": 14,
+    "found": null,
+    "nodes": 3,
+    "timeout": false,
+    "seconds": 0.0
+   },
+   {
+    "s2": 15,
+    "found": null,
+    "nodes": 3,
+    "timeout": false,
+    "seconds": 0.0
+   }
+  ],
+  "wall": 1.2
+ },
+ "n5_size8": {
+  "n": 5,
+  "size": 8,
+  "status": "none",
+  "example": null,
+  "nodes": 107943913,
+  "per_rep": [
+   {
+    "s2": 692,
+    "found": null,
+    "nodes": 54001206,
+    "timeout": false,
+    "seconds": 18143.7
+   },
+   {
+    "s2": 694,
+    "found": null,
+    "nodes": 53942707,
+    "timeout": false,
+    "seconds": 18144.3
+   }
+  ],
+  "wall": 18146.4
+ }
+}

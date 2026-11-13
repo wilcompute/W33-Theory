@@ -68,3 +68,17 @@ This independently confirms the other track's C4/usp(8) identification (`analysi
 - The exact five-qubit min F = 1/32, and the exact 1/16 for type B.
 - The exact Θ(W(3,3)), now in [√58, 10].
 - The six-qubit minimum: the dense search would need about 1.4×10¹¹ root entries, so it needs a redesign.
+
+## Addendum: the reversed-order cross-check agrees (`data/w33_five_qubit_size8_dlx_reverse.json`)
+
+A second complete run with `DLX_REVERSE=1` (last-index tie-break for the pivot and reversed killer order), on the two S₃-class representatives:
+
+| rep | result | nodes | seconds |
+|---|---|---|---|
+| 692 | none | 54,001,206 | 18,144 |
+| 694 | none | 53,942,707 | 18,144 |
+
+- The node counts differ from the first run (54,189,927 and 54,241,976), so the traversal really was different.
+- Both runs share the same code base and the same rank-code model. This is a consistency check of the search, not an independent implementation or a proof-checkable certificate.
+- With it, **no maximal partial spread of size 8 exists in W(9,2)** on two traversals; the five-qubit minimum is 9.
+- The other track audited the certificate and the pruning logic (`2026-11-13_E6_generalized_gauge_USp8_full_clock_Z2.md` §10) without replaying the nodes.

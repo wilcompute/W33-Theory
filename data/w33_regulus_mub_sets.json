@@ -1,0 +1,67 @@
+{
+ "q2": {
+  "q": 2,
+  "n_qubits": 2,
+  "size": 3,
+  "covered": 9,
+  "covered_equals_quadric": true,
+  "n_nonsingular_T": 4,
+  "extendible_T": 0,
+  "maximal": true,
+  "codes": [
+   2
+  ]
+ },
+ "q4": {
+  "q": 4,
+  "n_qubits": 4,
+  "size": 5,
+  "covered": 75,
+  "covered_equals_quadric": true,
+  "n_nonsingular_T": 448,
+  "extendible_T": 0,
+  "maximal": true,
+  "codes": [
+   44,
+   68,
+   104
+  ],
+  "lagrangians_inside_C": 10,
+  "partitions_of_C": 2,
+  "census_types_(n_inside,n_partitions)": [
+   [
+    6,
+    1
+   ],
+   [
+    10,
+    2
+   ]
+  ]
+ },
+ "q8": {
+  "q": 8,
+  "n_qubits": 6,
+  "size": 9,
+  "covered": 567,
+  "covered_equals_quadric": true,
+  "n_nonsingular_T": 888832,
+  "extendible_T": 0,
+  "maximal": true,
+  "codes": [
+   4920,
+   9224,
+   14128,
+   16664,
+   21024,
+   25872,
+   30248
+  ]
+ },
+ "IC_formula_max_residual": {
+  "q2": 4.440892098500626e-16,
+  "q4": 3.3306690738754696e-16,
+  "q8": 5.551115123125783e-17
+ },
+ "q4_min_F_CZ_model": 0.06250000417664947
+}
