@@ -1,0 +1,607 @@
+{
+  "status": "PASS",
+  "cells": 80,
+  "scope": "real core with constant exterior at the selected cut",
+  "sectors": [
+    {
+      "sector": "Q/Uc",
+      "smallest_exterior_mass": 1.0468660451638478,
+      "samples": [
+        {
+          "energy": -0.02,
+          "outer_radius": 5.0,
+          "matching_singular_values": [
+            0.16008509951198782,
+            0.1342054661839408,
+            0.011158907139176924,
+            0.009066452228812355
+          ],
+          "heavy_only_sine": 0.016633517211979136,
+          "weakest_three_incident_overlap": 0.1628332165921349,
+          "weakest_three_core_response": 2.0148476549468315,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 2.5522124985846517,
+          "standing_flux_error": 1.1123893155135927e-16
+        },
+        {
+          "energy": -0.01,
+          "outer_radius": 5.0,
+          "matching_singular_values": [
+            0.15704346771006067,
+            0.1372782126051669,
+            0.005687435783246795,
+            0.0044288424108672704
+          ],
+          "heavy_only_sine": 0.012265131094916068,
+          "weakest_three_incident_overlap": 0.16496921120657712,
+          "weakest_three_core_response": 3.774493401558345,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 4.086958749496395,
+          "standing_flux_error": 3.895680680159941e-16
+        },
+        {
+          "energy": -0.005,
+          "outer_radius": 5.0,
+          "matching_singular_values": [
+            0.15612119000145197,
+            0.13820819695599,
+            0.0030029374741587724,
+            0.0020625559136211993
+          ],
+          "heavy_only_sine": 0.010902859427869864,
+          "weakest_three_incident_overlap": 0.16585013543546845,
+          "weakest_three_core_response": 7.61237653023602,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 7.771988570043827,
+          "standing_flux_error": 3.1086244689504383e-15
+        },
+        {
+          "energy": -0.002,
+          "outer_radius": 5.0,
+          "matching_singular_values": [
+            0.15584524139610137,
+            0.13848629838269838,
+            0.0014365125878957978,
+            0.0006124341500130144
+          ],
+          "heavy_only_sine": 0.010489764975278404,
+          "weakest_three_incident_overlap": 0.16614490332515433,
+          "weakest_three_core_response": 22.910150943720375,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 22.963668100828585,
+          "standing_flux_error": 3.557151798805476e-14
+        },
+        {
+          "energy": 0.0,
+          "outer_radius": 5.0,
+          "matching_singular_values": [
+            0.15579167008948477,
+            0.13854027950211145,
+            0.0005152447307351047,
+            0.00033123271471757136
+          ],
+          "heavy_only_sine": 0.010409221614206677,
+          "weakest_three_incident_overlap": 0.16620402996434946,
+          "weakest_three_core_response": 47.14309853430046,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 47.16912831646824,
+          "standing_flux_error": 1.4281732235759946e-13
+        },
+        {
+          "energy": 0.002,
+          "outer_radius": 5.0,
+          "matching_singular_values": [
+            0.15584524139610184,
+            0.13848629838269802,
+            0.001436512587896076,
+            0.0006124341500128788
+          ],
+          "heavy_only_sine": 0.010489764975257236,
+          "weakest_three_incident_overlap": 0.16614490332515533,
+          "weakest_three_core_response": 22.910150943722382,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 22.96366810083059,
+          "standing_flux_error": 3.275440170573379e-14
+        },
+        {
+          "energy": 0.005,
+          "outer_radius": 5.0,
+          "matching_singular_values": [
+            0.15612119000145205,
+            0.13820819695599007,
+            0.003002937474158481,
+            0.002062555913621354
+          ],
+          "heavy_only_sine": 0.010902859427951326,
+          "weakest_three_incident_overlap": 0.16585013543546645,
+          "weakest_three_core_response": 7.612376530235905,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 7.771988570043714,
+          "standing_flux_error": 2.220446049250313e-15
+        },
+        {
+          "energy": 0.01,
+          "outer_radius": 5.0,
+          "matching_singular_values": [
+            0.15704346771006103,
+            0.13727821260516723,
+            0.005687435783246947,
+            0.004428842410867246
+          ],
+          "heavy_only_sine": 0.012265131094897965,
+          "weakest_three_incident_overlap": 0.16496921120658264,
+          "weakest_three_core_response": 3.7744934015583693,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 4.0869587494964135,
+          "standing_flux_error": 5.578801654593729e-16
+        },
+        {
+          "energy": 0.02,
+          "outer_radius": 5.0,
+          "matching_singular_values": [
+            0.16008509951198768,
+            0.1342054661839405,
+            0.01115890713917707,
+            0.009066452228812366
+          ],
+          "heavy_only_sine": 0.01663351721198581,
+          "weakest_three_incident_overlap": 0.1628332165921332,
+          "weakest_three_core_response": 2.0148476549467933,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 2.552212498584617,
+          "standing_flux_error": 1.249000902703301e-16
+        }
+      ],
+      "shorter_exteriors": [
+        {
+          "energy": 0.0,
+          "outer_radius": 2.045311744617524,
+          "matching_singular_values": [
+            0.15579464175002833,
+            0.13854408562473056,
+            0.0005143962437902902,
+            0.00033024927978815924
+          ],
+          "heavy_only_sine": 0.010389420986334571,
+          "weakest_three_incident_overlap": 0.16619653692659844,
+          "weakest_three_core_response": 47.21705730309246,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 47.24304563188837,
+          "standing_flux_error": 1.4281732235759946e-13
+        },
+        {
+          "energy": 0.0,
+          "outer_radius": 2.9244466903957216,
+          "matching_singular_values": [
+            0.15579177873186847,
+            0.13854060840170032,
+            0.000515168966306865,
+            0.0003311601676640576
+          ],
+          "heavy_only_sine": 0.010406434144223133,
+          "weakest_three_incident_overlap": 0.16620233240086693,
+          "weakest_three_core_response": 47.144653472502846,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 47.17068225854865,
+          "standing_flux_error": 1.1368683772161603e-13
+        },
+        {
+          "energy": 0.0,
+          "outer_radius": 3.823902908283448,
+          "matching_singular_values": [
+            0.15579166918282145,
+            0.13854030706021214,
+            0.0005152393130010433,
+            0.0003312293834234728
+          ],
+          "heavy_only_sine": 0.01040892494985603,
+          "weakest_three_incident_overlap": 0.166203815974529,
+          "weakest_three_core_response": 47.142672564607125,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 47.16870256709497,
+          "standing_flux_error": 1.1718571004216928e-13
+        }
+      ]
+    },
+    {
+      "sector": "L",
+      "smallest_exterior_mass": 1.414573988334818,
+      "samples": [
+        {
+          "energy": -0.02,
+          "outer_radius": 5.0,
+          "matching_singular_values": [
+            0.009890103144968234,
+            0.008435002896669718,
+            0.007064949782071164,
+            0.005157531737832367
+          ],
+          "heavy_only_sine": 0.011749695161501887,
+          "weakest_three_incident_overlap": 0.10594412587959269,
+          "weakest_three_core_response": 13.229069731278086,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 17.027185347525155,
+          "standing_flux_error": 3.554447978966673e-15
+        },
+        {
+          "energy": -0.01,
+          "outer_radius": 5.0,
+          "matching_singular_values": [
+            0.010240836240448657,
+            0.004896060444288347,
+            0.0043012870903686665,
+            0.003175276849871082
+          ],
+          "heavy_only_sine": 0.006054193754063644,
+          "weakest_three_incident_overlap": 0.09400501594604942,
+          "weakest_three_core_response": 15.476681529661034,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 19.05997574760756,
+          "standing_flux_error": 4.148135544450461e-15
+        },
+        {
+          "energy": -0.005,
+          "outer_radius": 5.0,
+          "matching_singular_values": [
+            0.011009148585728707,
+            0.00388169279405521,
+            0.0026089679183697104,
+            0.0012796553342387016
+          ],
+          "heavy_only_sine": 0.003343612673071383,
+          "weakest_three_incident_overlap": 0.09441873872430034,
+          "weakest_three_core_response": 22.625476333425834,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 25.088858332005387,
+          "standing_flux_error": 1.0452618589287095e-14
+        },
+        {
+          "energy": -0.002,
+          "outer_radius": 5.0,
+          "matching_singular_values": [
+            0.011311641616433044,
+            0.00358791677765025,
+            0.001481054138822782,
+            0.00024163588713958271
+          ],
+          "heavy_only_sine": 0.002010013210862722,
+          "weakest_three_incident_overlap": 0.09457917578739976,
+          "weakest_three_core_response": 73.89122310665732,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 74.66941989561283,
+          "standing_flux_error": 8.549178668550125e-14
+        },
+        {
+          "energy": 0.0,
+          "outer_radius": 5.0,
+          "matching_singular_values": [
+            0.011375586058067261,
+            0.003529266746473751,
+            0.0008672773738707609,
+            0.000555832304513711
+          ],
+          "heavy_only_sine": 0.0016370400500875372,
+          "weakest_three_incident_overlap": 0.094610582292817,
+          "weakest_three_core_response": 39.56053178913592,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 40.991129188612625,
+          "standing_flux_error": 3.2862601528904634e-14
+        },
+        {
+          "energy": 0.002,
+          "outer_radius": 5.0,
+          "matching_singular_values": [
+            0.01131164161643319,
+            0.003587916777650151,
+            0.001481054138822919,
+            0.00024163588714017515
+          ],
+          "heavy_only_sine": 0.002010013210697018,
+          "weakest_three_incident_overlap": 0.09457917578739981,
+          "weakest_three_core_response": 73.891223106486,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 74.6694198954433,
+          "standing_flux_error": 1.0393112258343465e-13
+        },
+        {
+          "energy": 0.005,
+          "outer_radius": 5.0,
+          "matching_singular_values": [
+            0.011009148585728917,
+            0.0038816927940547685,
+            0.002608967918369649,
+            0.0012796553342388666
+          ],
+          "heavy_only_sine": 0.0033436126731045874,
+          "weakest_three_incident_overlap": 0.09441873872429937,
+          "weakest_three_core_response": 22.62547633342605,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 25.088858332005557,
+          "standing_flux_error": 7.588599744428075e-15
+        },
+        {
+          "energy": 0.01,
+          "outer_radius": 5.0,
+          "matching_singular_values": [
+            0.010240836240448395,
+            0.004896060444288143,
+            0.004301287090368906,
+            0.003175276849871023
+          ],
+          "heavy_only_sine": 0.006054193753935277,
+          "weakest_three_incident_overlap": 0.0940050159460519,
+          "weakest_three_core_response": 15.476681529660896,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 19.059975747607464,
+          "standing_flux_error": 4.311326371230795e-15
+        },
+        {
+          "energy": 0.02,
+          "outer_radius": 5.0,
+          "matching_singular_values": [
+            0.009890103144968401,
+            0.008435002896669841,
+            0.00706494978207111,
+            0.005157531737832732
+          ],
+          "heavy_only_sine": 0.011749695161530235,
+          "weakest_three_incident_overlap": 0.10594412587958518,
+          "weakest_three_core_response": 13.229069731277011,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 17.027185347524533,
+          "standing_flux_error": 2.7465400791133423e-15
+        }
+      ],
+      "shorter_exteriors": [
+        {
+          "energy": 0.0,
+          "outer_radius": 2.045311744617524,
+          "matching_singular_values": [
+            0.011278898931139055,
+            0.00356890337851516,
+            0.0008677512591059779,
+            0.0005527921678371453
+          ],
+          "heavy_only_sine": 0.0016369063562598647,
+          "weakest_three_incident_overlap": 0.09464824378863995,
+          "weakest_three_core_response": 39.56811659558858,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 41.029468492441474,
+          "standing_flux_error": 3.892816202865945e-14
+        },
+        {
+          "energy": 0.0,
+          "outer_radius": 2.9244466903957216,
+          "matching_singular_values": [
+            0.011335747060742335,
+            0.0035453392099479746,
+            0.0008672874142990837,
+            0.0005550084781488572
+          ],
+          "heavy_only_sine": 0.0016370342984219075,
+          "weakest_three_incident_overlap": 0.0946258593153,
+          "weakest_three_core_response": 39.53614940404922,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 40.98022654141485,
+          "standing_flux_error": 2.842170943040401e-14
+        },
+        {
+          "energy": 0.0,
+          "outer_radius": 3.823902908283448,
+          "matching_singular_values": [
+            0.011364742630616856,
+            0.0035336375364206926,
+            0.0008672654208011548,
+            0.0005556344403882192
+          ],
+          "heavy_only_sine": 0.0016370390768856208,
+          "weakest_three_incident_overlap": 0.09461510612530745,
+          "weakest_three_core_response": 39.55212647045088,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 40.98645901017541,
+          "standing_flux_error": 2.5121479338940402e-14
+        }
+      ]
+    },
+    {
+      "sector": "Ec",
+      "smallest_exterior_mass": 1.0468660451638452,
+      "samples": [
+        {
+          "energy": -0.02,
+          "outer_radius": 5.0,
+          "matching_singular_values": [
+            0.7777347521364344,
+            0.7680167932036334,
+            0.756154015226999,
+            0.7478597727571585
+          ],
+          "heavy_only_sine": 0.8997691255532165,
+          "weakest_three_incident_overlap": 0.2154764488188657,
+          "weakest_three_core_response": 0.20040285247657486,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 1.278643073059531,
+          "standing_flux_error": 1.3390143736309024e-17
+        },
+        {
+          "energy": -0.01,
+          "outer_radius": 5.0,
+          "matching_singular_values": [
+            0.7766502713252276,
+            0.7691333954975133,
+            0.7548134817119211,
+            0.7492253164327052
+          ],
+          "heavy_only_sine": 0.900926362986223,
+          "weakest_three_incident_overlap": 0.22310577850111288,
+          "weakest_three_core_response": 0.20718363316519187,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 1.2786265301325797,
+          "standing_flux_error": 1.447420051938283e-17
+        },
+        {
+          "energy": -0.005,
+          "outer_radius": 5.0,
+          "matching_singular_values": [
+            0.7763243592511385,
+            0.769467345315819,
+            0.7543589455152855,
+            0.7496860878423227
+          ],
+          "heavy_only_sine": 0.9013838658398912,
+          "weakest_three_incident_overlap": 0.22622471184516355,
+          "weakest_three_core_response": 0.20996856216382512,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 1.2786223944111084,
+          "standing_flux_error": 1.3552610165043421e-17
+        },
+        {
+          "energy": -0.002,
+          "outer_radius": 5.0,
+          "matching_singular_values": [
+            0.7762272494803066,
+            0.7695667060560267,
+            0.7542146117018017,
+            0.7498321664059917
+          ],
+          "heavy_only_sine": 0.9015496604378322,
+          "weakest_three_incident_overlap": 0.22725880506976065,
+          "weakest_three_core_response": 0.21089317935102822,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 1.2786212364098337,
+          "standing_flux_error": 4.52959134860941e-18
+        },
+        {
+          "energy": 0.0,
+          "outer_radius": 5.0,
+          "matching_singular_values": [
+            0.7762084218645218,
+            0.7695859624463819,
+            0.7541860142779983,
+            0.7498610961095851
+          ],
+          "heavy_only_sine": 0.9015845633097365,
+          "weakest_three_incident_overlap": 0.22746555203676078,
+          "weakest_three_core_response": 0.21107810781759867,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 1.278621015838198,
+          "standing_flux_error": 6.938893903907228e-18
+        },
+        {
+          "energy": 0.002,
+          "outer_radius": 5.0,
+          "matching_singular_values": [
+            0.7762272494803074,
+            0.7695667060560274,
+            0.7542146117018017,
+            0.749832166405992
+          ],
+          "heavy_only_sine": 0.9015496604378322,
+          "weakest_three_incident_overlap": 0.22725880506976326,
+          "weakest_three_core_response": 0.21089317935103044,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 1.2786212364098357,
+          "standing_flux_error": 7.61729189676734e-18
+        },
+        {
+          "energy": 0.005,
+          "outer_radius": 5.0,
+          "matching_singular_values": [
+            0.7763243592511379,
+            0.7694673453158193,
+            0.7543589455152857,
+            0.749686087842323
+          ],
+          "heavy_only_sine": 0.901383865839891,
+          "weakest_three_incident_overlap": 0.22622471184516665,
+          "weakest_three_core_response": 0.2099685621638279,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 1.27862239441111,
+          "standing_flux_error": 1.2685194376438707e-17
+        },
+        {
+          "energy": 0.01,
+          "outer_radius": 5.0,
+          "matching_singular_values": [
+            0.7766502713252268,
+            0.7691333954975138,
+            0.7548134817119211,
+            0.7492253164327058
+          ],
+          "heavy_only_sine": 0.900926362986223,
+          "weakest_three_incident_overlap": 0.22310577850111263,
+          "weakest_three_core_response": 0.20718363316519164,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 1.2786265301325828,
+          "standing_flux_error": 1.6181808228293428e-17
+        },
+        {
+          "energy": 0.02,
+          "outer_radius": 5.0,
+          "matching_singular_values": [
+            0.7777347521364336,
+            0.7680167932036326,
+            0.7561540152269989,
+            0.7478597727571589
+          ],
+          "heavy_only_sine": 0.8997691255532165,
+          "weakest_three_incident_overlap": 0.21547644881886516,
+          "weakest_three_core_response": 0.2004028524765744,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 1.2786430730595315,
+          "standing_flux_error": 1.17098853975357e-17
+        }
+      ],
+      "shorter_exteriors": [
+        {
+          "energy": 0.0,
+          "outer_radius": 2.045311744617524,
+          "matching_singular_values": [
+            0.7762099864610649,
+            0.7695871922845287,
+            0.7541868572558518,
+            0.7498614179052636
+          ],
+          "heavy_only_sine": 0.9015850938881848,
+          "weakest_three_incident_overlap": 0.22747587026355867,
+          "weakest_three_core_response": 0.2110875104828118,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 1.2786283466956931,
+          "standing_flux_error": 6.5594791454765704e-18
+        },
+        {
+          "energy": 0.0,
+          "outer_radius": 2.9244466903957216,
+          "matching_singular_values": [
+            0.776208519505579,
+            0.7695860511939231,
+            0.7541860574306093,
+            0.7498610824935878
+          ],
+          "heavy_only_sine": 0.9015845843145263,
+          "weakest_three_incident_overlap": 0.227466032987389,
+          "weakest_three_core_response": 0.21107855504000958,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 1.278620848999607,
+          "standing_flux_error": 7.264205124608043e-18
+        },
+        {
+          "energy": 0.0,
+          "outer_radius": 3.823902908283448,
+          "matching_singular_values": [
+            0.7762084274270029,
+            0.7695859680933153,
+            0.7541860166692218,
+            0.7498610927377956
+          ],
+          "heavy_only_sine": 0.9015845640010127,
+          "weakest_three_incident_overlap": 0.22746558520103136,
+          "weakest_three_core_response": 0.21107813975696085,
+          "matching_radius": 0.14,
+          "matching_radius_norm": 1.2786209907568922,
+          "standing_flux_error": 8.348400729733971e-18
+        }
+      ]
+    }
+  ]
+}
