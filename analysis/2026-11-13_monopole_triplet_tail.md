@@ -1,0 +1,15 @@
+# Monopole triplet scattering with a Robin scalar exterior
+
+The earlier boundary sweep attached constant vacuum to a background constrained to equal vacuum at radius 5. This calculation instead re-solves the 38 real neutral radial profiles with the known quadratic scalar exterior energy. Each scalar mass mode contributes (R+mR²)b² to the radial action divided by 4π, where b is its value relative to vacuum at R. The minimizer varies that boundary value. The gauge profile obeys K(R)=0 and retains the magnetic tail energy. Beyond R, the scalar fields follow their linear equations with the fitted coefficients bR exp[−m(r−R)]/r. The nonconstant scalar field then enters the same Yukawa and radial transfer matrices used in the finite-cut calculation. [Prior W33 scalar-tail derivation](2026-11-11_monopole_neutral_tail.md) · [Asymptotic monopole fields](https://osiris.df.unipi.it/~rossi/PhysRevD.22.2010.pdf)
+
+The background radius R and the scattering attachment radius have different meanings. The first selects where the scalar equations are linearized. The second selects where the resulting nonconstant background is replaced by the asymptotic channel basis. Tracking the same complex pole as the second radius increases checks a different sensitivity from changing the scalar finite-element resolution. Both calculations use unit couplings and the fixed native Weyl operator. A dimensionless calibration available within this operator is the pole energy divided by its lowest positive exterior fermion mass. Converting either quantity to laboratory energy needs a separately fixed physical mass or coupling normalization.
+
+This is an approximate infinite-background construction with a linearized scalar exterior, followed by finite-radius scattering. The four linear gauge tangent modes and the 33 positive-mass modes are tracked in the vacuum kinetic coordinates. Nonlinear exterior stationarity and the full complex core remain open.
+
+Replay the primary profile with `py -3 analysis/toe_20261113_monopole_triplet_tail.py`. Replay the alternate background match with `py -3 analysis/toe_20261113_monopole_triplet_tail.py --outer 5 --elements 100 --output data/toe_20261113_monopole_triplet_tail_robin5.json`.
+
+## Radius-five control
+
+With 100 elements and the Robin scalar match at radius 5, the positive-real pole at scattering radius 20 is 0.001937107737−0.000553697177i. Its real part is about 13.7% higher than the old Dirichlet-vacuum result. The sampled minimum moves from E=0.00183333 to E=0.002 and rises from 72.87% to 79.46%. The lightest massive exterior fermion is 1.414573988 in the same units, giving a pole-to-threshold ratio 0.001369393014−0.000391423271i.
+
+The initial transfer intervals became ill-conditioned at long range and failed the smallest-singular-value test. Splitting each piecewise-constant transfer into lengths no greater than 0.06 and inserting QR resets leaves the mathematical transfer unchanged. It recovers a root that passes the original residual criterion. This subdivision improves conditioning while retaining the original sampling error of the radial generator.

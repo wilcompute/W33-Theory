@@ -24,7 +24,7 @@ def matching_index(grid):
     return index
 
 
-def prepare(count, sectors=None, profile_index=-1):
+def prepare(count, sectors=None, profile_index=-1, *, profile_override=None, outer_radius=5.):
     model = radial.exchange.radial.mixing.higgs_model()
     gauge, adjoint, _, _, _, _, embedding, _, meshes, _, native = model
     _, _, cartan, color, weak, y = triplet.flat.compact_chart()
@@ -36,12 +36,17 @@ def prepare(count, sectors=None, profile_index=-1):
         gauge.astype(int), adjoint.astype(int), color, weak, y, records)
     alpha = fundamental[five[0]]-fundamental[five[3]]
     vacuum = np.diag(y).astype(float), np.concatenate((x, z)).reshape(5, 27, 3).astype(float)
-    mesh = meshes[profile_index]
-    fields = np.array(mesh["state"])
-    slopes = np.zeros(fields.shape[1])
-    slopes[1] = fields[1, 1]/mesh["grid"][1]
-    profile = CubicSpline(mesh["grid"], fields, bc_type=((1, slopes), "not-a-knot"))
-    grid = np.r_[np.geomspace(1e-6, CORE_MATCH_RADIUS, count+1), np.geomspace(CORE_MATCH_RADIUS, 5., count+1)[1:]]
+    if profile_override is None:
+        mesh = meshes[profile_index]
+        assert outer_radius <= mesh["grid"][-1]
+        fields = np.array(mesh["state"])
+        slopes = np.zeros(fields.shape[1])
+        slopes[1] = fields[1, 1]/mesh["grid"][1]
+        profile = CubicSpline(mesh["grid"], fields, bc_type=((1, slopes), "not-a-knot"))
+    else:
+        profile = profile_override
+    grid = np.r_[np.geomspace(1e-6, CORE_MATCH_RADIUS, count+1),
+                 np.geomspace(CORE_MATCH_RADIUS, outer_radius, count+1)[1:]]
     for label, positive in (("Q/Uc", np.array(radial.exchange.QU[0])+alpha),
                             ("L", radial.exchange.LE[0]), ("Ec", np.array(radial.exchange.LE[1])+alpha)):
         if sectors is not None and label not in sectors:
