@@ -1,0 +1,139 @@
+{
+  "status": "PASS",
+  "cells": 80,
+  "sectors": [
+    {
+      "sector": "Q/Uc",
+      "poles": [
+        {
+          "seed": [
+            0.00045,
+            -0.0006
+          ],
+          "energy": [
+            0.0007817845455269102,
+            -0.00025030157091853665
+          ],
+          "cut": 5.0,
+          "smallest_singular_values": [
+            0.13853805491019147,
+            0.0008065338233282241,
+            4.5051891967565183e-17
+          ],
+          "local_contour": {
+            "center": [
+              0.0007817845455269102,
+              -0.00025030157091853665
+            ],
+            "radius": 0.0001,
+            "samples": 16,
+            "sampled_winding": 1,
+            "max_phase_step": 0.41591314641628524,
+            "sampled_minimum_singular_value": 4.8933206015566335e-05
+          },
+          "shorter_cut": {
+            "seed": [
+              0.0007817845455269102,
+              -0.00025030157091853665
+            ],
+            "energy": [
+              0.0007816529474993335,
+              -0.0002502212334721533
+            ],
+            "cut": 3.0,
+            "smallest_singular_values": [
+              0.13853838479223982,
+              0.000806403793575556,
+              3.2581511496878115e-16
+            ]
+          }
+        }
+      ],
+      "broad_contour": {
+        "center": [
+          -0.0,
+          -0.0025
+        ],
+        "radius": 0.003,
+        "samples": 32,
+        "sampled_winding": 2,
+        "max_phase_step": 1.101441838750978,
+        "sampled_minimum_singular_value": 0.00031144249596219497
+      }
+    },
+    {
+      "sector": "L",
+      "poles": [
+        {
+          "seed": [
+            0.002,
+            -0.00055
+          ],
+          "energy": [
+            0.0017039429416048598,
+            -0.000566916924950756
+          ],
+          "cut": 5.0,
+          "smallest_singular_values": [
+            0.003392817285630282,
+            0.0013554364344086714,
+            1.3043820310196946e-16
+          ],
+          "local_contour": {
+            "center": [
+              0.0017039429416048598,
+              -0.000566916924950756
+            ],
+            "radius": 0.0001,
+            "samples": 16,
+            "sampled_winding": 1,
+            "max_phase_step": 0.40571856559053554,
+            "sampled_minimum_singular_value": 3.731564548377014e-05
+          },
+          "shorter_cut": {
+            "seed": [
+              0.0017039429416048598,
+              -0.000566916924950756
+            ],
+            "energy": [
+              0.0017021099142200864,
+              -0.0005665706758947649
+            ],
+            "cut": 3.0,
+            "smallest_singular_values": [
+              0.003408326108601779,
+              0.0013549900086536584,
+              3.1664366054211665e-17
+            ]
+          }
+        }
+      ],
+      "broad_contour": {
+        "center": [
+          -0.0,
+          -0.0025
+        ],
+        "radius": 0.003,
+        "samples": 32,
+        "sampled_winding": 2,
+        "max_phase_step": 1.3998675082499334,
+        "sampled_minimum_singular_value": 0.00017260381471243569
+      }
+    },
+    {
+      "sector": "Ec",
+      "poles": [],
+      "broad_contour": {
+        "center": [
+          -0.0,
+          -0.0025
+        ],
+        "radius": 0.003,
+        "samples": 32,
+        "sampled_winding": 0,
+        "max_phase_step": 0.008337055119177447,
+        "sampled_minimum_singular_value": 0.7498059065709175
+      }
+    }
+  ]
+}
