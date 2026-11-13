@@ -1,0 +1,87 @@
+{
+  "GL3_affine_coordinate_matrix_mod3": [
+    [
+      0,
+      0,
+      2
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      2
+    ]
+  ],
+  "Knill_Laflamme_shift_subcode": {
+    "all_49_overlap_matrices_are_delta_ab_I3": true,
+    "all_7_shift_error_Knill_Laflamme_pairs": 49,
+    "arbitrary_single_qudit_distance": 1,
+    "information_loss_heralded_photon_erasure": "A vacuum erasure destroys the sole photon carrying the entire logical state; syndrome correction cannot recover the lost photon.",
+    "logical_Z_matrix_diag": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        -0.4999999999999998,
+        0.8660254037844387
+      ],
+      [
+        -0.5000000000000004,
+        -0.8660254037844385
+      ]
+    ],
+    "probability_guaranteed_correctable_weight_le1": 0.9988159999999999,
+    "shift_X_distance": 3,
+    "shift_error_distribution": "Each of 3 qutrits independently has I probability (1-p), X/X\u00b2 each p/2; code correctly recovers any <=1 shift.",
+    "shift_error_rate": 0.02,
+    "single_Z_error_correctable": false,
+    "single_shift_errors": [
+      "X0^1",
+      "X0^2",
+      "X1^1",
+      "X1^2",
+      "X2^1",
+      "X2^2"
+    ]
+  },
+  "affine_permutation_is_a_qutrit_Clifford": true,
+  "affine_shift_negates_input_history": [
+    0,
+    0,
+    0
+  ],
+  "encoded_amplitude_magnitudes": [
+    0.5,
+    0.8660254037844386
+  ],
+  "encoded_output_code_basis": [
+    "000",
+    "111"
+  ],
+  "history_pair_addresses": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      2
+    ]
+  ],
+  "logical_magic_nonstabilizer": "two-support encoded output and a perfect Clifford decoding recover a one-qutrit nonstabilizer with mana ln(1+1/sqrt3)",
+  "photonic_scope": "The three qutrits are virtual degrees of freedom of ONE photon in 27 paths, not three spatially separate photons; this repetition encoding corrects restricted mode-shift errors, not phase noise or photon loss, and does not yield fault-tolerant multi-photon gates.",
+  "source_E6_input_index": 0,
+  "source_E6_output_indices": [
+    0,
+    1
+  ],
+  "source_E6_packet": 0,
+  "status": "PASS_EXPLICIT_CLIFFORD_TO_3QUTRIT_REPETITION_SHIFT_CODE_MAGIC"
+}

@@ -1,0 +1,18 @@
+{
+  "balanced_two_irrep_input_revival_probability_after_six": 1.0000000000001412,
+  "balanced_two_irrep_input_revival_probability_after_three": 8.246123279646611e-27,
+  "boundary": "This is a proposed 35-path coherent optical protocol using both representations and a phase reference. Not a physical measurement, not evidence of extra spacetime dimensions, and not a sub-8-path implementation of the full 27D clock. Phase drifts, optical losses and true gate synthesis must be calibrated.",
+  "clock_eight_order": 6,
+  "clock_twentyseven_order": 3,
+  "defining_representation_modes": 8,
+  "fourier_signature": "The relative Z2 center is detectable by interference across the direct sum, but NOT from probabilities within either standalone irrep.",
+  "independent_gaussian_relative_phase_noise_sigma_radians": 0.1,
+  "mean_bright_output_probability_after_six_with_relative_phase_noise": 0.9975062395963412,
+  "mean_dark_output_probability_after_three_with_relative_phase_noise": 0.00249376040365884,
+  "optical_mode_count": 35,
+  "single_irrep_initial_state_three_pulse_absolute_overlap": 1.0,
+  "sixth_pulse_action": "(+I8) direct_sum (+I27)",
+  "status": "PASS_35MODE_USP8_E6_CENTRAL_Z2_RELATIVE_PHASE_CLOCK_WITNESS",
+  "third_pulse_action": "(-I8) direct_sum (+I27)",
+  "wedge_traceless_representation_modes": 27
+}

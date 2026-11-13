@@ -1,0 +1,69 @@
+{
+  "algorithm_completeness_conditions": {
+    "S2_orbit_coverage": "The eight listed O(5) congruence representatives exhaust the normalized second-matrix choices.",
+    "branch_pivot": "Every still-compatible uncovered rank-code T must be killed by at least one remaining candidate, and all such candidates are branched.",
+    "safe_topr_pruning": "Sum of r largest individual coverage counts less than total uncovered implies no r candidates cover the uncovered set.",
+    "sibling_exclusion": "Earlier killer choices are excluded in later sibling subtrees to avoid duplicate unordered sets."
+  },
+  "all_eight_orbits_completed_no_witness": true,
+  "all_eight_orbits_timed_out": false,
+  "fresh_control_n3": [
+    {
+      "found": true,
+      "n": 3,
+      "nodes": 3,
+      "rep": 14,
+      "size": 5
+    },
+    {
+      "found": true,
+      "n": 3,
+      "nodes": 3,
+      "rep": 15,
+      "size": 5
+    },
+    {
+      "found": false,
+      "n": 3,
+      "nodes": 3,
+      "rep": 14,
+      "size": 7
+    },
+    {
+      "found": false,
+      "n": 3,
+      "nodes": 3,
+      "rep": 15,
+      "size": 7
+    }
+  ],
+  "fresh_control_n5_size9_found": true,
+  "fresh_control_n5_size9_nodes": 9,
+  "full_run_eight_O5_representatives": [
+    692,
+    693,
+    694,
+    695,
+    700,
+    701,
+    702,
+    703
+  ],
+  "limits": "This pass does NOT independently re-execute the 433,517,130-node negative search. The parallel author's reversed traversal on the two S3 classes is not yet independently certified in this file. Our separate lazy CP-SAT test remains undecided and does not contradict the completed full search.",
+  "parallel_commit": "cc65eb5d2dd3f806fc0168c9dff0314ba29c4e65",
+  "per_rep_nodes": {
+    "692": 54189927,
+    "693": 54173796,
+    "694": 54241976,
+    "695": 54102646,
+    "700": 54174654,
+    "701": 54206027,
+    "702": 54190137,
+    "703": 54237967
+  },
+  "source": "data/w33_five_qubit_size8_dlx_full.json",
+  "status": "PASS_CROSSAUDIT_OF_PARALLEL_COMPLETE_SIZE8_NO_GO_SINGLE_IMPLEMENTATION",
+  "strong_computational_conclusion": "Given the normalization to 0,infinity,I and exhaustive O5 orbits, no maximal partial 5-qubit symplectic spread of cardinality eight. Combined with certified size7-no and size9-yes gives minimum 9. The current exact-cover algorithm is a single solver family, not an externally checked UNSAT certificate.",
+  "total_exact_cover_DFS_nodes": 433517130,
+  "wall_seconds": 16403.3
+}

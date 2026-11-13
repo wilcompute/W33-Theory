@@ -1,0 +1,244 @@
+{
+  "Y_tensor": "Y^{MK}{}_{NL}=10d^{MKR}d_{NLR}=sum_R t^{MKR}t_{NLR}",
+  "bad_pair_control": {
+    "closure_residual_max_integer": 12,
+    "explicit_affine_counterexample": {
+      "V_const": [
+        0,
+        -1,
+        2,
+        1,
+        0,
+        2,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "V_jacobian_sparse": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          17
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          23,
+          0
+        ],
+        [
+          25,
+          0
+        ]
+      ],
+      "V_jacobian_values": [
+        1,
+        2,
+        -1,
+        -2,
+        -1
+      ],
+      "X_const": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        -2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "X_jacobian_sparse": [
+        [
+          1,
+          0
+        ],
+        [
+          4,
+          17
+        ],
+        [
+          5,
+          17
+        ],
+        [
+          8,
+          17
+        ],
+        [
+          17,
+          17
+        ]
+      ],
+      "X_jacobian_values": [
+        -1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "Z_const": [
+        0,
+        0,
+        0,
+        0,
+        -2,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -2,
+        0,
+        2,
+        0
+      ],
+      "Z_jacobian_sparse": [
+        [
+          2,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          11,
+          17
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          0
+        ]
+      ],
+      "Z_jacobian_values": [
+        1,
+        -2,
+        -2,
+        1,
+        2
+      ],
+      "closure_residual_const_nonzero": {
+        "1": -4,
+        "10": 6,
+        "12": 2,
+        "14": 12,
+        "17": 8,
+        "19": -12,
+        "21": 4,
+        "23": 10,
+        "25": 4,
+        "4": 4,
+        "5": 8,
+        "8": 8
+      },
+      "closure_residual_jacobian_nonzero": {
+        "10,0": 2,
+        "19,0": -4,
+        "2,0": -4,
+        "23,0": 2,
+        "6,0": 8
+      }
+    },
+    "section_constraint_nonzero_components": [
+      26
+    ],
+    "violating_coordinate_pair": [
+      0,
+      17
+    ]
+  },
+  "closure_identity": "2[L_X,L_Z]V = L_{L_X Z-L_Z X} V for all affine test coefficients",
+  "generalized_Lie_vector_weight": "1/3",
+  "reference": "Hohm Samtleben 2014 PRD89 066016 generalized Lie derivative and E bracket.",
+  "scope": "Tests exact affine generalized-vector fields with random integer coefficients, not a proof for all polynomial/smooth fields, and no physical action, gauge curvature or full tensor hierarchy. The closure formula is the published E6(6) exceptional-field-theory operation, not discovered from scratch.",
+  "section_cases": {
+    "5": {
+      "exact_affine_closure_trials": 32,
+      "exact_integer_closure_residual_max": 0,
+      "section_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "section_tensor_zero_for_all_pair_derivatives": true,
+      "trivial_d_gradient_parameters_act_as_zero": true
+    },
+    "6": {
+      "exact_affine_closure_trials": 32,
+      "exact_integer_closure_residual_max": 0,
+      "section_indices": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        9
+      ],
+      "section_tensor_zero_for_all_pair_derivatives": true,
+      "trivial_d_gradient_parameters_act_as_zero": true
+    }
+  },
+  "status": "PASS_E6_EXFT_AFFINE_GENERALIZED_LIE_CLOSURE_BOTH_SECTIONS_OFFSECTION_COUNTEREXAMPLE"
+}

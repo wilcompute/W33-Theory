@@ -1,0 +1,15 @@
+{
+  "all_45_produced_exact_det3_plus_det3_plus_det3_minus_trace_ABC": true,
+  "archive_bytes": 406854,
+  "archive_path": "extracted_v13/W33-Theory-master/artifacts/canonical_su3_gauge_and_cubic.json",
+  "archive_sha256": "81444a3d3f2c93a2078bf23e3eea52f6b043ccb39b115aed4a9fbc62062ce135",
+  "parsed_JSON_objects_equal": true,
+  "raw_bytes_identical": false,
+  "root_bytes": 433282,
+  "root_path": "artifacts/canonical_su3_gauge_and_cubic.json",
+  "root_sha256": "13ea38ed37a8c1c9723db7168e1e056a2827ebf060bc096e227f8d9047d78cb1",
+  "scope": "Corrects the other assistant's byte-identity claim at this local checked version. All relevant 45 signed cubic coefficients are identical across files; the difference is JSON serialization/formatting. Git bytes are NOT identical.",
+  "seven_coordinate_rephasing_Albert_45_terms_exact": true,
+  "signed_45_triads_equal": true,
+  "status": "PASS_TWO_JSON_SOURCES_BYTE_DIFFERENT_BUT_SEMANTICALLY_EQUAL_SIGNED_ALBERT"
+}

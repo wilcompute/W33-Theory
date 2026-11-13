@@ -1,0 +1,36 @@
+{
+  "E_bracket_jacobiator": "4J=[[X,Z]_2,V]_2+cyclic; it need not vanish as a parameter but its generalized action on V must vanish",
+  "identity": "2[L_X,L_Z]V=L_{L_X Z-L_Z X} V for degree<=2 parameters/vectors, polynomial coefficients checked exactly",
+  "records": {
+    "5": {
+      "Jacobiator_generates_zero_gauge_action_on_test_vector": true,
+      "closure_max_integer_residual": 0,
+      "independent_quadratic_polynomial_tests": 10,
+      "nonzero_Jacobiator_observed_trials": 10,
+      "section_E6_coordinates": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "6": {
+      "Jacobiator_generates_zero_gauge_action_on_test_vector": true,
+      "closure_max_integer_residual": 0,
+      "independent_quadratic_polynomial_tests": 10,
+      "nonzero_Jacobiator_observed_trials": 10,
+      "section_E6_coordinates": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        9
+      ]
+    }
+  },
+  "scope": "Finite exact polynomial tests on representative 5/6 sections only. This is not a symbolic general proof or a derivation of ExFT equations of motion.",
+  "source": "Hohm Samtleben E6(6) ExFT generalized Lie derivative and E-bracket, 2014",
+  "status": "PASS_QUADRATIC_E6_EXFT_CLOSURE_AND_TRIVIAL_JACOBIATORS"
+}

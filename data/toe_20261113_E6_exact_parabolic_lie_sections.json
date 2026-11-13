@@ -1,0 +1,58 @@
+{
+  "relation": "The full 78D cubic-preserving Lie algebra restricts surjectively to gl6 / gl5. The 6D kernel is a Heisenberg 21D nilpotent Lie algebra; the 5D kernel has sl2 Levi quotient and 25D two-step nilradical of center 5.",
+  "scope": "Lie stabilizer dimensions and radical bracket structure in signed canonical 27. No proof of unique physical vacuum, no gravitational field equations, no Weyl-extension-to-full-parabolic group integration.",
+  "sections": {
+    "5": {
+      "Lie_stabilizer_dim": 53,
+      "annihilator_dimension": 5,
+      "kernel_trace_nilradical": {
+        "Levi_quotient_dim": 3,
+        "kernel_dim": 28,
+        "nilpotency_class": 2,
+        "nilpotent_radical_dim": 25,
+        "nilradical_closed_under_brackets": "checked by annihilation of trace form and brackets of basis",
+        "radical_center_dim": 5,
+        "radical_commutator_dim": 5,
+        "trace_form_rank": 3
+      },
+      "real_skew_stabilizer_dim": 11,
+      "restriction_GL_dim": 25,
+      "restriction_kernel": 28,
+      "section": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "total_78_constraints_rank": 25
+    },
+    "6": {
+      "Lie_stabilizer_dim": 57,
+      "annihilator_dimension": 6,
+      "kernel_trace_nilradical": {
+        "Levi_quotient_dim": 0,
+        "kernel_dim": 21,
+        "nilpotency_class": 2,
+        "nilpotent_radical_dim": 21,
+        "nilradical_closed_under_brackets": "checked by annihilation of trace form and brackets of basis",
+        "radical_center_dim": 1,
+        "radical_commutator_dim": 1,
+        "trace_form_rank": 0
+      },
+      "real_skew_stabilizer_dim": 15,
+      "restriction_GL_dim": 36,
+      "restriction_kernel": 21,
+      "section": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        9
+      ],
+      "total_78_constraints_rank": 21
+    }
+  },
+  "status": "PASS_E6_CONNECTED_PARABOLIC_STABILIZERS_57_53_AND_NILRADICALS"
+}

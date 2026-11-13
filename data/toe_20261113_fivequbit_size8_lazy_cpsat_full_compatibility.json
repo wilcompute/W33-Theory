@@ -1,0 +1,33 @@
+{
+  "boundary": "A bounded lazy-cut search must NOT be relabeled as infeasibility. Full certified UNSAT would require reproducible solver settings and independent proof checks.",
+  "positive_control": "A full candidate requires 0, infinity, I, S2 plus 4 candidates; every pair sum nonsingular and all nonsingular extenders blocked",
+  "results": [
+    {
+      "class_rep": 692,
+      "cut_iterations": 1,
+      "elapsed_seconds": 28.44,
+      "last_fake_witness_number_incompatible_pairs": 6,
+      "modeling": "Exact 2336 covering clauses plus lazily added VALID pairwise-compatibility no-good cuts",
+      "pairwise_nogood_cuts_added": 6,
+      "proof_boundary": "No absence proof for UNKNOWN or non-compatible feasible examples; if both S3 representatives return PROVED_INFEASIBLE and no valid witness exists, a size-eight no-go would follow subject to an independently checkable SAT proof, which CP-SAT does not export here.",
+      "status": "UNKNOWN",
+      "valid_full_witness": null
+    },
+    {
+      "class_rep": 694,
+      "cut_iterations": 1,
+      "elapsed_seconds": 32.38,
+      "last_fake_witness_number_incompatible_pairs": 6,
+      "modeling": "Exact 2336 covering clauses plus lazily added VALID pairwise-compatibility no-good cuts",
+      "pairwise_nogood_cuts_added": 6,
+      "proof_boundary": "No absence proof for UNKNOWN or non-compatible feasible examples; if both S3 representatives return PROVED_INFEASIBLE and no valid witness exists, a size-eight no-go would follow subject to an independently checkable SAT proof, which CP-SAT does not export here.",
+      "status": "UNKNOWN",
+      "valid_full_witness": null
+    }
+  ],
+  "status": "UNDECIDED_SIZE8",
+  "two_S3_classes_checked": [
+    692,
+    694
+  ]
+}
