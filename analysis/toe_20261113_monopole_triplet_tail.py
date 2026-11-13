@@ -56,7 +56,7 @@ def split_transfers(system, maximum_step=.06):
     return label, refined, *frames, np.repeat(base, pieces, axis=0)
 
 
-def prepare_tail(outer, elements):
+def prepare_tail(outer, elements, *, exterior_nodes=()):
     spline, vacuum, masses, right, amplitudes, report = solve_profile(outer, elements)
 
     def profile(radius):
@@ -67,7 +67,7 @@ def prepare_tail(outer, elements):
         return state
 
     system = next(threshold.prepare(48, sectors=("L",), profile_override=profile,
-                                    outer_radius=4*outer))
+                                    outer_radius=4*outer, exterior_nodes=exterior_nodes))
     return system, profile, vacuum, report
 
 

@@ -24,7 +24,7 @@ def matching_index(grid):
     return index
 
 
-def prepare(count, sectors=None, profile_index=-1, *, profile_override=None, outer_radius=5.):
+def prepare(count, sectors=None, profile_index=-1, *, profile_override=None, outer_radius=5., exterior_nodes=()):
     model = radial.exchange.radial.mixing.higgs_model()
     gauge, adjoint, _, _, _, _, embedding, _, meshes, _, native = model
     _, _, cartan, color, weak, y = triplet.flat.compact_chart()
@@ -38,7 +38,7 @@ def prepare(count, sectors=None, profile_index=-1, *, profile_override=None, out
     vacuum = np.diag(y).astype(float), np.concatenate((x, z)).reshape(5, 27, 3).astype(float)
     if profile_override is None:
         mesh = meshes[profile_index]
-        assert outer_radius <= mesh["grid"][-1]
+        assert max((outer_radius, *exterior_nodes)) <= mesh["grid"][-1]
         fields = np.array(mesh["state"])
         slopes = np.zeros(fields.shape[1])
         slopes[1] = fields[1, 1]/mesh["grid"][1]
@@ -47,6 +47,9 @@ def prepare(count, sectors=None, profile_index=-1, *, profile_override=None, out
         profile = profile_override
     grid = np.r_[np.geomspace(1e-6, CORE_MATCH_RADIUS, count+1),
                  np.geomspace(CORE_MATCH_RADIUS, outer_radius, count+1)[1:]]
+    extra = np.asarray(exterior_nodes, dtype=float)
+    assert not len(extra) or (extra[0] > outer_radius and (np.diff(extra) > 0).all())
+    grid = np.r_[grid, extra]
     for label, positive in (("Q/Uc", np.array(radial.exchange.QU[0])+alpha),
                             ("L", radial.exchange.LE[0]), ("Ec", np.array(radial.exchange.LE[1])+alpha)):
         if sectors is not None and label not in sectors:

@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "profile": {
+    "energy": 573.9689823629523,
+    "iterations": 22,
+    "scaled_discrete_residual": 1.6683222143117572e-07,
+    "elements": 120,
+    "gauge": 311.3174830073491,
+    "scalar_gradient": 238.31512323107341,
+    "potential": 24.331974352743423,
+    "d_energy": 1.3895701656652856e-05,
+    "virial_defect": 0.00643671804542123,
+    "linear_scalar_tail_energy": 0.004401771786374227,
+    "outer_radius": 9.0,
+    "boundary_scalar_deviation": 0.005586556976708894,
+    "boundary_linear_gauge_tangent": 3.692580475359178e-07
+  },
+  "validation_start": 17.989980501370074,
+  "boundary": 36.0,
+  "max_open_closed_coupling_beyond_boundary": 0.0044475859842221304,
+  "max_direct_open_coupling_beyond_boundary": 0.0021997414334862255,
+  "rows": [
+    {
+      "energy": 0.0,
+      "full_conversion_at_validation_start": 0.9974987282266721,
+      "full_at_boundary": 0.9978339130895798,
+      "projected_at_boundary": 0.997834208321879,
+      "validation_matrix_error": 5.582957491141316e-06,
+      "extensions": [
+        {
+          "radius": 72.0,
+          "conversion": 0.9979819035113588
+        },
+        {
+          "radius": 144.0,
+          "conversion": 0.9980055793835536
+        },
+        {
+          "radius": 288.0,
+          "conversion": 0.997992851177481
+        }
+      ]
+    },
+    {
+      "energy": 0.002,
+      "full_conversion_at_validation_start": 0.7928301604641133,
+      "full_at_boundary": 0.802150847342941,
+      "projected_at_boundary": 0.8021492227009178,
+      "validation_matrix_error": 4.4618298763460695e-06,
+      "extensions": [
+        {
+          "radius": 72.0,
+          "conversion": 0.8065800069836178
+        },
+        {
+          "radius": 144.0,
+          "conversion": 0.8073811231038942
+        },
+        {
+          "radius": 288.0,
+          "conversion": 0.8072449419540197
+        }
+      ]
+    },
+    {
+      "energy": 0.004,
+      "full_conversion_at_validation_start": 0.9726614407294222,
+      "full_at_boundary": 0.9738802377438895,
+      "projected_at_boundary": 0.9738799415146523,
+      "validation_matrix_error": 5.458102439989358e-06,
+      "extensions": [
+        {
+          "radius": 72.0,
+          "conversion": 0.9745123994676598
+        },
+        {
+          "radius": 144.0,
+          "conversion": 0.9746309736396707
+        },
+        {
+          "radius": 288.0,
+          "conversion": 0.9746027331291618
+        }
+      ]
+    }
+  ]
+}
