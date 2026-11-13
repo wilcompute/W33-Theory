@@ -5,6 +5,8 @@ from itertools import combinations_with_replacement
 from pathlib import Path
 
 import numpy as np
+import sympy as sp
+from sympy.matrices.normalforms import smith_normal_form
 
 import toe_20261113_E6_exft_generalized_closure_affine as exft
 from toe_20261113_E6_exact_parabolic_stabilizer import rank_mod
@@ -107,7 +109,6 @@ def calculate():
                 assert not g[np.ix_(transverse, transverse)].any()
             # Exact rational inclusion in the ambient algebra, not a
             # modular rank test for membership.
-            import sympy as sp
             ambient_matrix = sp.Matrix(flat_ambient.T.tolist())
             _, independent_rows = ambient_matrix.T.rref()
             chart = ambient_matrix[list(independent_rows), :]
@@ -135,6 +136,27 @@ def calculate():
     assert not (fourier_potential.T @ symbol).any()
     fourier_rank, potential_rank = rank_mod(symbol), rank_mod(fourier_potential)
     assert (fourier_rank, potential_rank) == (17, 10)
+    # Lift every elementary SL(4,Z) transvection to an integral cubic
+    # symmetry. This transports Smith factors to every primitive covector.
+    for i in shared:
+        for j in shared:
+            if i == j:
+                continue
+            target = np.outer(IDENTITY[:, i], IDENTITY[j])[np.ix_(shared, shared)]
+            g = next(g for g in stabilizer
+                     if np.array_equal(abs(g.T[np.ix_(shared, shared)]), target))
+            g = g * g[j, i]
+            assert not (g @ g).any()
+            lift = IDENTITY + g
+            for matrix in (lift, lift.T):
+                assert np.array_equal(np.einsum("ia,jb,kc,ijk->abc", matrix, matrix, matrix,
+                                                 tensor, optimize=True), tensor)
+    symbol_factors = []
+    for matrix, rank in ((symbol, fourier_rank), (fourier_potential, potential_rank)):
+        smith = smith_normal_form(sp.Matrix(matrix.tolist()), domain=sp.ZZ)
+        factors = [abs(int(a)) for a in smith.diagonal() if a]
+        assert factors == [1]*rank
+        symbol_factors.append(factors)
     assert controls["shared_four"]["vertical_action_rank"] == 45
     return dict(status="PASS", shared=shared, annihilator=annihilator, iib_transverse=line,
                 m_transverse=plane, mixed_cubic_terms=terms, joint_stabilizer_dimension=49,
@@ -143,7 +165,8 @@ def calculate():
                     invisible_constants=invisible_constants, exact_constants=exact_constants,
                     dimension=residual_constants, representatives=transverse),
                 nonzero_fourier_symbol=dict(operator_rank=fourier_rank, exact_rank=potential_rank),
-                periodic_torus_invisible_parameter_cohomology=invisible_constants)
+                periodic_torus_invisible_parameter_cohomology=invisible_constants,
+                integral_primitive_symbol_smith_factors=symbol_factors)
 
 
 if __name__ == "__main__":

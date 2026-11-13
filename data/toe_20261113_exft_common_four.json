@@ -95,5 +95,38 @@
     "operator_rank": 17,
     "exact_rank": 10
   },
-  "periodic_torus_invisible_parameter_cohomology": 23
+  "periodic_torus_invisible_parameter_cohomology": 23,
+  "integral_primitive_symbol_smith_factors": [
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  ]
 }
