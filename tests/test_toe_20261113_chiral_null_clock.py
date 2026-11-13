@@ -37,3 +37,11 @@ def test_outside_orientation_flip():
     _,_,D=G.build()
     idx=[G.VID[tuple((-x)%3 for x in v)] for v in G.V]
     assert np.array_equal(D[np.ix_(idx,idx)],-D)
+
+if __name__=="__main__":
+    test_integer_clock_identities()
+    test_four_direction_probability_bias()
+    test_exact_wigner_mana_and_entanglement()
+    test_outside_orientation_flip()
+    print("PASS 4/4 exact chiral null clock regression checks")
+
