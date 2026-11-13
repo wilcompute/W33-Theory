@@ -1,0 +1,34 @@
+{
+ "A_genuine": {
+  "p": 19,
+  "n_U": 180,
+  "a_max": 13.999999999991877,
+  "b_max": 13.999999999974367,
+  "c_max": 35.99999999895654,
+  "SigmaU_max": 14.162199024774363,
+  "sufficient": false,
+  "n_lift_points": 0,
+  "used_lift_point": false
+ },
+ "B_lifted": {
+  "p": 17,
+  "n_U": 180,
+  "a_max": 13.99999999993782,
+  "b_max": 13.999999999946331,
+  "c_max": 35.99999999960116,
+  "SigmaU_max": 13.999999998342222,
+  "sufficient": false,
+  "n_lift_points": 120,
+  "used_lift_point": true,
+  "second_lift_point": {
+   "p": 140,
+   "n_U": 180,
+   "a_max": 13.9999999999418,
+   "b_max": 13.999999999979012,
+   "c_max": 35.99999999934926,
+   "SigmaU_max": 13.999999996999957,
+   "sufficient": false
+  }
+ },
+ "seconds": 236.3
+}

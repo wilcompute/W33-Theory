@@ -1,0 +1,100 @@
+{
+ "controls": {
+  "all_n2": 3,
+  "all_n3": 7,
+  "all_n4": 15
+ },
+ "sets": [
+  {
+   "n": 2,
+   "size": 5,
+   "B": 0,
+   "bound_minF": 0.75,
+   "numeric_minF": 0.7499999999999998,
+   "tight": true
+  },
+  {
+   "n": 2,
+   "size": 3,
+   "B": 2,
+   "bound_minF": 0.25,
+   "numeric_minF": 0.2500000000000002,
+   "tight": true
+  },
+  {
+   "n": 3,
+   "size": 9,
+   "B": 0,
+   "bound_minF": 0.875,
+   "numeric_minF": 0.8749999999999996,
+   "tight": true
+  },
+  {
+   "n": 3,
+   "size": 5,
+   "B": 12,
+   "bound_minF": -0.625,
+   "numeric_minF": 0.12500000001389927,
+   "tight": false
+  },
+  {
+   "n": 4,
+   "size": 8,
+   "B": 23,
+   "bound_minF": -0.5,
+   "numeric_minF": 0.06250000230353558,
+   "tight": false
+  },
+  {
+   "n": 4,
+   "size": 9,
+   "B": 24,
+   "bound_minF": -0.5625,
+   "numeric_minF": 0.0625000016968689,
+   "tight": false
+  },
+  {
+   "n": 4,
+   "size": 11,
+   "B": 26,
+   "bound_minF": -0.6875,
+   "numeric_minF": 0.18750000141911216,
+   "tight": false
+  },
+  {
+   "n": 5,
+   "size": 9,
+   "n_uncovered": 744,
+   "B": 40,
+   "argmax": [
+    1,
+    2
+   ],
+   "bound_minF": -0.28125,
+   "exact_one_over_d": false,
+   "top_V": [
+    -24,
+    8,
+    40
+   ]
+  },
+  {
+   "n": 6,
+   "size": 9,
+   "n_uncovered": 3528,
+   "B": 72,
+   "argmax": [
+    1,
+    2
+   ],
+   "bound_minF": -0.140625,
+   "exact_one_over_d": false,
+   "top_V": [
+    -504,
+    8,
+    72
+   ]
+  }
+ ],
+ "seconds": 26.5
+}

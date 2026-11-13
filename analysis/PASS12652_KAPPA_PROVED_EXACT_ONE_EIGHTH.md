@@ -55,17 +55,53 @@ So the landscape is dominated by 9-sets, and the annealing floor measures the sm
 The anticommutation graph on the 744 uncovered Paulis is **368-regular**, and greedy finds α = 30.
 - Spectrum: 368¹, 16²²⁵, −16²⁴⁸, and 270 simple eigenvalues in between.
 - Hoffman bound = 744·16/384 = **31 = d − 1**: trivial (F ≥ 0).
-- ϑ (SDP): still running when this was committed; see the addendum
+- ϑ: see the addendum (ϑ ≈ 30.449 > 30, so this route gives min F ≥ 0.0172, not 1/32).
 
 ## 4. Six qubits (`w33_six_qubit_size9_minF_size8.py`)
 
 - The verified size-9 set (Pass 12651) has **min F = 1/64 = 1/d** numerically: 60 L-BFGS starts, five lowest all 0.015625000.
 - This continues 1/8, 1/16, 1/32: every 2^⌈n/2⌉+1-type set tested has min F = 1/d.
-- Size-8 annealing: still running when this was committed; see the addendum
+- Size-8 annealing: **not run**. The size-9 control run failed (best cost 960, 8 restarts, 1200 s), so annealing at d = 64 is not yet a usable instrument. The process was stopped before the size-8 stage.
+
+## Addendum (same pass, after the main commit)
+
+### A. ϑ of the five-qubit 744-vertex graph is about 30.449, above α = 30 (`w33_five_qubit_size9_theta_eig.py`, `..._theta_lower.py`)
+
+- The cvxpy/SCS SDP (eps 1e-7) had not finished after 7 h and was stopped.
+- **Upper bound.** Lovász's eigenvalue form ϑ = min λ_max(A), with A = 1 on the diagonal and on commuting pairs and free on anticommuting pairs, makes every feasible A a certificate. L-BFGS on a smoothed λ_max, started from the Hoffman point (31), gives **ϑ ≤ 30.44917**. The top six eigenvalues coincide to 3×10⁻⁴, which is the signature of an optimum.
+- **Rigorous consequence (floating-point certificate).** min F ≥ (31 − 30.4492)/32 = **0.0172** for the five-qubit size-9 set. This is the first non-trivial lower bound there; Hoffman gives 0. The numerical value is 1/32 = 0.03125.
+- **Lower bound on ϑ.** ϑ(G)·ϑ(Ḡ) ≥ 744, with ϑ(Ḡ) bounded above the same way (Petersen control: 4.0001 and 2.5001). **ϑ(Ḡ) ≤ 24.5221**, so **ϑ(G) ≥ 30.340 > 30** (2119 s). Hence **30.340 ≤ ϑ ≤ 30.449**: the gap ϑ > α is real, not an optimiser stall (floating-point certificates on both sides).
+- **Calibration by re-check, not new.** Recomputing the three- and four-qubit graphs with the same code gives:
+  - ϑ = 6.236 at n = 3 (Pass 12645's ϑ ≤ 4 + √5 = 6.2361);
+  - ϑ = 14.0001 for the four-qubit 8- and 9-sets (Passes 12644–12646 certified ϑ = α = 14 exactly by facial reduction);
+  - ϑ = 12.045 for an 11-set.
+
+  So **the Lovász route is tight at n = 4 and fails at n = 3 and n = 5.** The exact 1/32 at n = 5 needs an algebraic argument, as §1 did at n = 3.
+
+### B. A swap/Bell bound: valid but too weak (`w33_swap_bell_bound.py`)
+
+Σ_U⟨P⟩² = Tr[(ρ⊗ρ) Σ_U P⊗P]. The P⊗P commute and are diagonal on Bell states, and ρ⊗ρ lives on the symmetric subspace. So:
+
+Σ_U ≤ max over a with s(a) = +1 of Σ_{b∈U} s(b)(−1)^{ω(a,b)}, with s = (−1)^{#Y}.
+
+This is an integer obtained with no optimisation.
+- **Controls.** U = all gives d − 1 at n = 2, 3, 4. The complete sets and the n = 2 triple are tight.
+- **But** B = 12 (three-qubit five-set; 6 needed), 23 to 26 (four-qubit sets), 40 (n = 5; 30 needed) and 72 (n = 6; 62 needed). On the symmetric subspace the maximum is attained by entangled symmetric Bell states, not by ρ⊗ρ.
+- **Negative result.** The first level of the symmetric relaxation is useless here; a product constraint (more copies) is needed.
+
+### C. Type B (lifted four-qubit five-set): a lift reduction, partially (`w33_four_qubit_typeB_lift_reduction.py`)
+
+Split v = t·u ⊕ s·w over the eigenspaces of a lift point p. Then Σ_U = t⁴a(u) + s⁴b(w) + t²s²c(u, w), checked at random points to 1e-9.
+- Max a = max b = 14, as the three-qubit theorem implies through the quotient p^⊥/⟨p⟩.
+- **But max c = 36 > 28** at two lift points, so the decoupled sufficient condition fails.
+- What is needed is copositivity: c(u, w) ≤ 28 + 2√((14 − a(u))(14 − b(w))). Equivalently, large cross terms force both eigenspace parts away from their three-qubit optima.
+- **Control.** Type A (genuine, no lift point) at an arbitrary uncovered point reaches Σ_U = 14.162 (min F 0.05236, Pass 12648), while type B gives exactly 14.
+- The exact 1/16 for type B stays open. It is now reduced to this coupled inequality on C⁸ × C⁸.
 
 ## Open
 
-- An exact 1/32 at five qubits (needs ϑ = 30, or a conditioning argument like §1).
+- An exact 1/32 at five qubits. ϑ ∈ [30.340, 30.449] rules out the Lovász route (Addendum A), so it needs a conditioning argument like §1.
+- Type B exact 1/16: prove the coupled inequality c ≤ 28 + 2√((14 − a)(14 − b)) (Addendum C).
 - Five-qubit size 8 (exhaustive, needs a better search than CP-SAT).
 - The six-qubit minimum.
 - Whether §1's conditioning plus moment method gives the four-qubit lifted type exactly (1/16).

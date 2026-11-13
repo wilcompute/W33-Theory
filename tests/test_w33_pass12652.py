@@ -56,6 +56,67 @@ def test_floor24_states_are_nine_sets_minus_one():
         assert 0 in {int(k) for k in s["degrees"]}
 
 
+def test_theta_eig_upper_bound_five_qubit():
+    d = json.load(open(os.path.join(ROOT, "data", "w33_five_qubit_size9_theta_eig.json")))
+    assert abs(d["hoffman_point"] - 31) < 1e-6
+    assert 30 < d["theta_upper"] < 30.46
+    assert (31 - d["theta_upper"]) / 32 > 0.017
+
+
+def test_theta_lower_bound_exceeds_alpha():
+    d = json.load(open(os.path.join(ROOT, "data", "w33_five_qubit_size9_theta_lower.json")))
+    assert abs(d["control"]["petersen"] - 4) < 1e-3 and abs(d["control"]["petersen_complement"] - 2.5) < 1e-3
+    assert d["theta_G_exceeds_30"] and 30.3 < 744 / d["theta_complement_upper"] < 30.45
+
+
+def test_swap_bell_bound_controls_and_weakness():
+    d = json.load(open(os.path.join(ROOT, "data", "w33_swap_bell_bound.json")))
+    assert d["controls"] == {"all_n2": 3, "all_n3": 7, "all_n4": 15}
+    for s in d["sets"]:
+        if "numeric_minF" in s:
+            assert s["bound_minF"] <= s["numeric_minF"] + 1e-7
+    assert {(s["n"], s["B"]) for s in d["sets"] if s["n"] >= 5} == {(5, 40), (6, 72)}
+
+
+def test_typeB_lift_reduction():
+    d = json.load(open(os.path.join(ROOT, "data", "w33_four_qubit_typeB_lift_reduction.json")))
+    A, B = d["A_genuine"], d["B_lifted"]
+    assert A["n_lift_points"] == 0 and B["n_lift_points"] == 120
+    assert abs(A["SigmaU_max"] - 14.1622) < 1e-3 and abs(B["SigmaU_max"] - 14) < 1e-6
+    for r in (B, B["second_lift_point"]):
+        assert abs(r["a_max"] - 14) < 1e-6 and abs(r["b_max"] - 14) < 1e-6
+        assert abs(r["c_max"] - 36) < 1e-6 and not r["sufficient"]
+
+
+def test_bell_bound_small_case_by_brute_force():
+    # independent check of the Bell-basis eigenvalue formula: two qubits, U = {XI, ZZ, YX}
+    import itertools as it
+    P1 = {"I": I2, "X": X, "Y": Y, "Z": Z}
+    U = ["XI", "ZZ", "YX"]
+    Q = sum(np.kron(np.kron(P1[a[0]], P1[a[1]]), np.kron(P1[a[0]], P1[a[1]])) for a in U)
+    SW = np.zeros((16, 16))
+    for i, j in it.product(range(4), repeat=2):
+        SW[4 * j + i, 4 * i + j] = 1
+    Pi = (np.eye(16) + SW) / 2
+    lam = np.linalg.eigvalsh(Pi @ Q @ Pi)[-1]
+    # formula
+    enc = {"I": (0, 0), "X": (1, 0), "Z": (0, 1), "Y": (1, 1)}
+    def xz(s):
+        return [enc[c] for c in s]
+    best = -99
+    for a in it.product("IXYZ", repeat=2):
+        A = xz(a)
+        if sum(x * z for x, z in A) % 2:
+            continue
+        v = 0
+        for b in U:
+            Bv = xz(b)
+            om = sum(A[k][0] * Bv[k][1] + A[k][1] * Bv[k][0] for k in range(2)) % 2
+            v += (-1) ** (sum(x * z for x, z in Bv) % 2) * (-1) ** om
+        best = max(best, v)
+    assert abs(lam - best) < 1e-9
+
+
 def test_six_qubit_size9_min_f():
     d = json.load(open(os.path.join(ROOT, "data", "w33_six_qubit_size9_minF_size8.json")))
     assert abs(d["min_F_times_64"] - 1) < 1e-6
