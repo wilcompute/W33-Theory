@@ -1,0 +1,36 @@
+{
+  "algorithm": "bounded exact-cover branching with Python integer compatibility bitsets; 40-candidate pivot sampling changes performance, NOT completeness when fully searched",
+  "example": null,
+  "logic": "If any timeout, status remains undecided; no negative conclusion. Independent algorithm from vectorized numpy DLX.",
+  "rank_code_uncovered_after_I_s2": 2336,
+  "schema": "toe.size8_twoS3_orbit_bitset.v1",
+  "states": [
+    {
+      "deepest": 6,
+      "elapsed_seconds": 45.01,
+      "example": null,
+      "lowest_uncovered_count_seen": 24,
+      "nodes": 4848640,
+      "s2": 692,
+      "status": "undecided",
+      "timeout": true,
+      "wall_limit_seconds": 45
+    },
+    {
+      "deepest": 6,
+      "elapsed_seconds": 45.0,
+      "example": null,
+      "lowest_uncovered_count_seen": 24,
+      "nodes": 5506048,
+      "s2": 694,
+      "status": "undecided",
+      "timeout": true,
+      "wall_limit_seconds": 45
+    }
+  ],
+  "status": "undecided",
+  "two_S3_orbit_representatives": [
+    692,
+    694
+  ]
+}

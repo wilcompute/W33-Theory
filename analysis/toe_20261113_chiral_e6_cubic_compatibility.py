@@ -28,11 +28,12 @@ def run():
     M=twice//2
     # Represent in E6 coordinates via fixed current H27 ADDRESS TABLE,
     # not by asserting a group-equivariant equivalence H27 ~= F3^3.
-    C=np.asarray([[M[G.VID[e_to_h[i]],j] for j in range(27)] for i in range(27)],dtype=np.int64)
+    # Coordinate re-identification must conjugate BOTH output and input histories.
+    C=np.asarray([[M[G.VID[e_to_h[i]],G.VID[e_to_h[j]]] for j in range(27)] for i in range(27)],dtype=np.int64)
     def norm(y):
         return sum(int(s)*int(y[i])*int(y[j])*int(y[k]) for (i,j,k),s in signs.items())
     signed_N_values=[norm(C[:,j]) for j in range(27)]
-    nonzero=[{"input_history":list(G.V[j]),"signed_norm_of_9Ue_cubed":int(v)}
+    nonzero=[{"input_e6_index":j,"input_history":list(e_to_h[j]),"signed_norm_of_9Ue_cubed":int(v)}
              for j,v in enumerate(signed_N_values) if v]
     # Since e_j is a coordinate basis vector, N(e_j)=0.
     # N(Ue_j)=N(M e_j)/9^3 exactly, and one nonzero proves direct incompatibility.

@@ -1,0 +1,357 @@
+{
+  "boundary": "Within fixed Euclidean E6 address metric and 27D signed cubic; not an unqualified E6(6) spacetime model or demonstration of a physical field theory.",
+  "coordinate_firewall": "D_E6 = D_history[np.ix_(E6_to_history,E6_to_history)] permutes BOTH axes",
+  "holographic_comparison": {
+    "boundary": "Tensor factorization is the original F3^3 history basis after inverse E6 address relabeling; basis-transport changes subsystem locality.",
+    "cut_records": [
+      {
+        "cut": "012",
+        "maximally_mixed": true,
+        "purity": 0.037037037037,
+        "schmidt_rank": 27
+      },
+      {
+        "cut": "013",
+        "maximally_mixed": false,
+        "purity": 0.171296296296,
+        "schmidt_rank": 12
+      },
+      {
+        "cut": "014",
+        "maximally_mixed": false,
+        "purity": 0.135802469136,
+        "schmidt_rank": 9
+      },
+      {
+        "cut": "015",
+        "maximally_mixed": false,
+        "purity": 0.055555555556,
+        "schmidt_rank": 27
+      },
+      {
+        "cut": "023",
+        "maximally_mixed": false,
+        "purity": 0.12037037037,
+        "schmidt_rank": 9
+      },
+      {
+        "cut": "024",
+        "maximally_mixed": true,
+        "purity": 0.037037037037,
+        "schmidt_rank": 27
+      },
+      {
+        "cut": "025",
+        "maximally_mixed": false,
+        "purity": 0.135802469136,
+        "schmidt_rank": 9
+      },
+      {
+        "cut": "034",
+        "maximally_mixed": false,
+        "purity": 0.171296296296,
+        "schmidt_rank": 12
+      },
+      {
+        "cut": "035",
+        "maximally_mixed": false,
+        "purity": 0.12037037037,
+        "schmidt_rank": 9
+      },
+      {
+        "cut": "045",
+        "maximally_mixed": false,
+        "purity": 0.055555555556,
+        "schmidt_rank": 27
+      },
+      {
+        "cut": "123",
+        "maximally_mixed": false,
+        "purity": 0.055555555556,
+        "schmidt_rank": 27
+      },
+      {
+        "cut": "124",
+        "maximally_mixed": false,
+        "purity": 0.12037037037,
+        "schmidt_rank": 9
+      },
+      {
+        "cut": "125",
+        "maximally_mixed": false,
+        "purity": 0.171296296296,
+        "schmidt_rank": 12
+      },
+      {
+        "cut": "134",
+        "maximally_mixed": false,
+        "purity": 0.135802469136,
+        "schmidt_rank": 9
+      },
+      {
+        "cut": "135",
+        "maximally_mixed": true,
+        "purity": 0.037037037037,
+        "schmidt_rank": 27
+      },
+      {
+        "cut": "145",
+        "maximally_mixed": false,
+        "purity": 0.12037037037,
+        "schmidt_rank": 9
+      },
+      {
+        "cut": "234",
+        "maximally_mixed": false,
+        "purity": 0.055555555556,
+        "schmidt_rank": 27
+      },
+      {
+        "cut": "235",
+        "maximally_mixed": false,
+        "purity": 0.135802469136,
+        "schmidt_rank": 9
+      },
+      {
+        "cut": "245",
+        "maximally_mixed": false,
+        "purity": 0.171296296296,
+        "schmidt_rank": 12
+      },
+      {
+        "cut": "345",
+        "maximally_mixed": true,
+        "purity": 0.037037037037,
+        "schmidt_rank": 27
+      }
+    ],
+    "maximally_mixed_cuts": 4,
+    "schmidt_rank_census": {
+      "12": 4,
+      "27": 8,
+      "9": 8
+    },
+    "six_leg_choi_3by3_cuts": 20
+  },
+  "original": {
+    "frobenius_norm_squared": 216,
+    "original_gate_eigen_multiplicities": [
+      19,
+      4,
+      4
+    ],
+    "rank": 8,
+    "undirected_null_edges": 108
+  },
+  "projection": {
+    "compatible_projection_frobenius_norm_squared": "46/3",
+    "exact_Frobenius_orthogonal": true,
+    "null_edge_support_obstruction_proof": "Each compatible K is a linear combination of 36 orthogonal six-edge root packets with disjoint edge supports. No complete packet lies in the original 108-edge null graph, so the only compatible generator entirely supported there is zero.",
+    "null_edge_supported_skew_cubic_kernel_dimension": 0,
+    "packet_null_edge_overlap_hist": {
+      "0": 12,
+      "2": 18,
+      "3": 6
+    },
+    "residual_frobenius_norm_squared": "602/3",
+    "retained_fraction": "23/324",
+    "root_packet_overlaps_signed": [
+      0,
+      0,
+      0,
+      2,
+      -2,
+      1,
+      0,
+      2,
+      -2,
+      2,
+      0,
+      0,
+      2,
+      1,
+      0,
+      0,
+      0,
+      -2,
+      -1,
+      -2,
+      0,
+      1,
+      -1,
+      2,
+      0,
+      2,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "sum_signed_overlap_squares": 46
+  },
+  "replacement": {
+    "45_monomials_exactly_preserved": true,
+    "active_rotation_pairs": 6,
+    "chosen_packet_index": 5,
+    "finite_gate": "V=I+(sqrt3/2) K+(3/2) K\u00b2",
+    "finite_gate_eigen_multiplicities": [
+      15,
+      6,
+      6
+    ],
+    "finite_gate_trace": 9,
+    "finite_polynomial_identity_in_Qsqrt3": true,
+    "infinitesimal_cubic_invariance_checked": true,
+    "matching_six_edges": [
+      [
+        0,
+        6,
+        1
+      ],
+      [
+        3,
+        17,
+        -1
+      ],
+      [
+        9,
+        19,
+        1
+      ],
+      [
+        11,
+        22,
+        -1
+      ],
+      [
+        12,
+        23,
+        -1
+      ],
+      [
+        15,
+        25,
+        -1
+      ]
+    ],
+    "matrix_M_is_orthogonal": true,
+    "order_three": true,
+    "overlap_edges_count": 3,
+    "rank": 12,
+    "rotation_matrix_on_each_pair": "cos(2pi/3) I + sin(2pi/3) J, with J^2=-I",
+    "signed_overlap_with_D_on_upper_triangle": 1,
+    "unavoidable_new_edges_for_this_root_generator": 3,
+    "untouched_E6_coordinates": 15
+  },
+  "root_system": {
+    "36_skew_root_pairs": 36,
+    "72_noncartan_root_generators": 72,
+    "different_root_packet_edges_never_overlap": true,
+    "each_pair_six_disjoint_two_coordinate_rotation_edges": true,
+    "remaining_skew_edges_outside_36_packet_span": 135,
+    "root_packet_bracket": {
+      "adjoint_ranks_trial": [
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32
+      ],
+      "bracket_closed_exact_integer": true,
+      "bracket_nonzero_structure_coefficients": 720,
+      "dimension": 36,
+      "generic_centralizer_dimension": 4,
+      "killing_diagonal": [
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20,
+        -20
+      ],
+      "killing_negative_definite": true,
+      "killing_off_diagonal_nonzero_count": 0,
+      "maximal_observed_adjoint_rank": 32,
+      "nonzero_pairs_of_basis_commutators": 360
+    },
+    "total_root_packet_edges": 216
+  },
+  "schema": "toe.e6.root_matching_projection_order3.v1",
+  "status": "PASS_ROOT_PACKET_SKIPS_DENSE_PROJECTION_LINEAR_SOLVE",
+  "torus_census": {
+    "original_spectrum": "19,4,4",
+    "original_trace": 15,
+    "original_trace_excluded_by_E6_order_three_torus": true,
+    "possible_traces_in_27": [
+      "0",
+      "9",
+      "9omega",
+      "9omega^2",
+      "27",
+      "27omega",
+      "27omega^2"
+    ],
+    "scope": "Uses the certified coroot representation and maximal-torus conjugacy theorem for connected complex E6; a torus-point census is not a conjugacy-class census.",
+    "spectral_multiplicity_census": {
+      "0,0,27": 1,
+      "0,27,0": 1,
+      "15,6,6": 72,
+      "27,0,0": 1,
+      "6,15,6": 72,
+      "6,6,15": 72,
+      "9,9,9": 510
+    },
+    "torus_3_torsion_points_checked": 729
+  }
+}
