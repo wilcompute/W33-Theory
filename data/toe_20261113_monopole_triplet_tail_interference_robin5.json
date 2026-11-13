@@ -1,0 +1,220 @@
+{
+  "status": "PASS",
+  "radius": 20.0,
+  "profile": {
+    "energy": 573.9697522014352,
+    "iterations": 21,
+    "scaled_discrete_residual": 1.7658870586027258e-07,
+    "elements": 100,
+    "gauge": 311.31813628059604,
+    "scalar_gradient": 238.31044396253046,
+    "potential": 24.332095075196595,
+    "d_energy": 1.3887991317738498e-05,
+    "virial_defect": 0.011407092475792524,
+    "linear_scalar_tail_energy": 0.00907688311215888,
+    "outer_radius": 5.0,
+    "boundary_scalar_deviation": 0.011241340193079988,
+    "boundary_linear_gauge_tangent": 1.755746421260808e-06
+  },
+  "poles": [
+    [
+      0.0019371077372942794,
+      -0.0005536971772991994
+    ],
+    [
+      -0.0019371077372947606,
+      -0.0005536971773007308
+    ]
+  ],
+  "residue_errors": [
+    5.7680801219880745e-12,
+    1.0069998995721819e-11
+  ],
+  "projector_overlap": 0.6796805391267758,
+  "holdout_maximum_errors": {
+    "constant_background": 0.00297222798568908,
+    "linear_unitary_background": 0.0007382142977078177
+  },
+  "sampled_minimum": {
+    "energy": 0.002,
+    "total": 0.7946209258332507,
+    "regular": 1.0793120497247877,
+    "poles": 0.10071447390720667,
+    "interference": -0.3854055977987436,
+    "constant_background": 0.7943727091144808,
+    "linear_unitary_background": 0.7952486239443972
+  },
+  "rows": [
+    {
+      "energy": -0.004,
+      "total": 0.9728772213526822,
+      "regular": 1.0670309077355207,
+      "poles": 0.008317146795496546,
+      "interference": -0.1024708331783353,
+      "constant_background": 0.9750154133840827,
+      "linear_unitary_background": 0.9734086460036844
+    },
+    {
+      "energy": -0.0035,
+      "total": 0.959922075233825,
+      "regular": 1.0705456420543804,
+      "poles": 0.013176745728594475,
+      "interference": -0.12380031254914986,
+      "constant_background": 0.962494016909567,
+      "linear_unitary_background": 0.9604712701801658
+    },
+    {
+      "energy": -0.003,
+      "total": 0.9334829971873757,
+      "regular": 1.073816712792632,
+      "poles": 0.02399172739494331,
+      "interference": -0.1643254430001992,
+      "constant_background": 0.9364552251723113,
+      "linear_unitary_background": 0.9340957862956414
+    },
+    {
+      "energy": -0.0025,
+      "total": 0.8716507661503035,
+      "regular": 1.0767651440032704,
+      "poles": 0.05251820410292486,
+      "interference": -0.2576325819558919,
+      "constant_background": 0.8744897876133979,
+      "linear_unitary_background": 0.8723889804475532
+    },
+    {
+      "energy": -0.002,
+      "total": 0.7946209258334807,
+      "regular": 1.0793120497248676,
+      "poles": 0.10071447390709357,
+      "interference": -0.3854055977984805,
+      "constant_background": 0.7943727091145366,
+      "linear_unitary_background": 0.795248623944266
+    },
+    {
+      "energy": -0.0019371077372942794,
+      "total": 0.7987721522378145,
+      "regular": 1.0796001720027923,
+      "poles": 0.10152996006641189,
+      "interference": -0.38235797983138975,
+      "constant_background": 0.7979563679867252,
+      "linear_unitary_background": 0.7993281941315364
+    },
+    {
+      "energy": -0.0015,
+      "total": 0.9055163194290224,
+      "regular": 1.0813831744800095,
+      "poles": 0.0612997633584872,
+      "interference": -0.23716661840947437,
+      "constant_background": 0.903415358045271,
+      "linear_unitary_background": 0.905610201562409
+    },
+    {
+      "energy": -0.001,
+      "total": 0.974440602403926,
+      "regular": 1.0829138187536094,
+      "poles": 0.026522149058417165,
+      "interference": -0.13499536540810012,
+      "constant_background": 0.9735119377049886,
+      "linear_unitary_background": 0.974430012240878
+    },
+    {
+      "energy": -0.0005,
+      "total": 0.9934565547343341,
+      "regular": 1.0838536148870046,
+      "poles": 0.015341328018238632,
+      "interference": -0.10573838817090936,
+      "constant_background": 0.9932454450006468,
+      "linear_unitary_background": 0.9934509804745605
+    },
+    {
+      "energy": 0.0,
+      "total": 0.9975627881812337,
+      "regular": 1.084170542941362,
+      "poles": 0.012714364555875754,
+      "interference": -0.0993221193160038,
+      "constant_background": 0.9975627881812335,
+      "linear_unitary_background": 0.9975627881812335
+    },
+    {
+      "energy": 0.0005000000000000004,
+      "total": 0.9934565547338711,
+      "regular": 1.0838536148863267,
+      "poles": 0.015341328018216954,
+      "interference": -0.1057383881706728,
+      "constant_background": 0.9932454450007085,
+      "linear_unitary_background": 0.9934509804746136
+    },
+    {
+      "energy": 0.001,
+      "total": 0.9744406024043847,
+      "regular": 1.0829138187536325,
+      "poles": 0.02652214905837324,
+      "interference": -0.13499536540762094,
+      "constant_background": 0.9735119377051361,
+      "linear_unitary_background": 0.9744300122410099
+    },
+    {
+      "energy": 0.0014999999999999996,
+      "total": 0.905516319429335,
+      "regular": 1.0813831744797358,
+      "poles": 0.061299763358489176,
+      "interference": -0.23716661840889014,
+      "constant_background": 0.9034153580454387,
+      "linear_unitary_background": 0.9056102015625853
+    },
+    {
+      "energy": 0.0019371077372942794,
+      "total": 0.7987721522377893,
+      "regular": 1.0796001720031094,
+      "poles": 0.10152996006655042,
+      "interference": -0.3823579798318703,
+      "constant_background": 0.7979563679866362,
+      "linear_unitary_background": 0.7993281941316077
+    },
+    {
+      "energy": 0.002,
+      "total": 0.7946209258332507,
+      "regular": 1.0793120497247877,
+      "poles": 0.10071447390720667,
+      "interference": -0.3854055977987436,
+      "constant_background": 0.7943727091144808,
+      "linear_unitary_background": 0.7952486239443972
+    },
+    {
+      "energy": 0.0025000000000000005,
+      "total": 0.8716507661504297,
+      "regular": 1.076765144003058,
+      "poles": 0.052518204102818176,
+      "interference": -0.25763258195544664,
+      "constant_background": 0.8744897876137201,
+      "linear_unitary_background": 0.8723889804481375
+    },
+    {
+      "energy": 0.003,
+      "total": 0.9334829971868513,
+      "regular": 1.073816712791971,
+      "poles": 0.023991727394868885,
+      "interference": -0.16432544299998847,
+      "constant_background": 0.9364552251725404,
+      "linear_unitary_background": 0.9340957862961083
+    },
+    {
+      "energy": 0.0034999999999999996,
+      "total": 0.9599220752331802,
+      "regular": 1.0705456420536177,
+      "poles": 0.013176745728552349,
+      "interference": -0.12380031254898938,
+      "constant_background": 0.9624940169097097,
+      "linear_unitary_background": 0.9604712701805264
+    },
+    {
+      "energy": 0.004,
+      "total": 0.972877221352604,
+      "regular": 1.0670309077353908,
+      "poles": 0.008317146795471147,
+      "interference": -0.10247083317825824,
+      "constant_background": 0.9750154133841779,
+      "linear_unitary_background": 0.9734086460039862
+    }
+  ]
+}

@@ -56,7 +56,7 @@ def split_transfers(system, maximum_step=.06):
     return label, refined, *frames, np.repeat(base, pieces, axis=0)
 
 
-def calculate(outer, elements):
+def prepare_tail(outer, elements):
     spline, vacuum, masses, right, amplitudes, report = solve_profile(outer, elements)
 
     def profile(radius):
@@ -66,11 +66,16 @@ def calculate(outer, elements):
         state[1:] += (amplitudes*(outer/radius)*np.exp(-masses*(radius-outer))) @ right
         return state
 
+    system = next(threshold.prepare(48, sectors=("L",), profile_override=profile,
+                                    outer_radius=4*outer))
+    return system, profile, vacuum, report
+
+
+def calculate(outer, elements):
+    system, profile, vacuum, report = prepare_tail(outer, elements)
     change_in, change_out = line.flavors.flavor_frames()
     pole_solver = line.residues.poles
     seed = complex(*json.loads(line.flavors.OUT.read_text(encoding="utf-8"))["poles"]["positive"]["energy"])
-    system = next(threshold.prepare(48, sectors=("L",), profile_override=profile,
-                                    outer_radius=4*outer))
     rows = []
     for requested in sorted({5., outer, 2*outer, 4*outer}):
         finite = cut.truncate(system, requested)
