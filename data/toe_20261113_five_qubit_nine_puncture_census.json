@@ -1,0 +1,60 @@
+{
+  "full_nine_bases_verified": true,
+  "lesson": "a size-eight counterexample, if any, must be independently maximal; no deduction from this one nine-set puncture census",
+  "nonsingular_candidate_matrices_checked": 13888,
+  "puncture_rows": [
+    {
+      "extendible_candidates": 40,
+      "induced_pairwise_compatible_edges": 258,
+      "puncture_can_be_extended_back": true,
+      "removed_code": 980
+    },
+    {
+      "extendible_candidates": 36,
+      "induced_pairwise_compatible_edges": 196,
+      "puncture_can_be_extended_back": true,
+      "removed_code": 30085
+    },
+    {
+      "extendible_candidates": 40,
+      "induced_pairwise_compatible_edges": 264,
+      "puncture_can_be_extended_back": true,
+      "removed_code": 20322
+    },
+    {
+      "extendible_candidates": 36,
+      "induced_pairwise_compatible_edges": 196,
+      "puncture_can_be_extended_back": true,
+      "removed_code": 22520
+    },
+    {
+      "extendible_candidates": 40,
+      "induced_pairwise_compatible_edges": 264,
+      "puncture_can_be_extended_back": true,
+      "removed_code": 4690
+    },
+    {
+      "extendible_candidates": 40,
+      "induced_pairwise_compatible_edges": 258,
+      "puncture_can_be_extended_back": true,
+      "removed_code": 21838
+    },
+    {
+      "extendible_candidates": 44,
+      "induced_pairwise_compatible_edges": 226,
+      "puncture_can_be_extended_back": true,
+      "removed_code": 7411
+    }
+  ],
+  "seven_nonsingular_codes": [
+    980,
+    30085,
+    20322,
+    22520,
+    4690,
+    21838,
+    7411
+  ],
+  "status": "PASS_EXACT_NINE_WITNESS_PUNCTURE_CENSUS",
+  "status_eight": "still undecided; deletion of the nine-witness is not an exhaustive search"
+}

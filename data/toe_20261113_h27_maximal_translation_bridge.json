@@ -1,0 +1,27 @@
+{
+  "center_order": 3,
+  "centralizer_size_census": {
+    "27": 3,
+    "9": 24
+  },
+  "checked_all_right_actions": 729,
+  "common_subgroup": "right H0={(A,0,C)} has v->v+C, a->a+A, b fixed",
+  "coordinate_change": "(a,b,c) -> (a,b,v=c+ab)",
+  "cross_fiber_cocycle": "aB+AB (mod3), not removable as one fixed translation for B!=0",
+  "four_maximal_abelian_subgroups_order9": 4,
+  "general_right_action": "(a,b,v)*(A,B,C)=(a+A,b+B,v+C+aB+AB)",
+  "maximal_common_commuting_translation_order": 9,
+  "no_full_F3_cube_translation_embedding_in_H27": true,
+  "nonabelian_group": "H27: (a,b,c)*(A,B,C)=(a+A,b+B,c+C-bA)",
+  "noncentral_elements": 24,
+  "pairwise_intersection": "common center Z3",
+  "physics_boundary": "No E6 cubic-preserving lift, masses, gauge action, or full F3^3-equivariance is implied.",
+  "prior_references": [
+    "analysis/w33_e6_cubic_diagonal_phase_weld.py",
+    "data/w33_e6id_current_h27_gauge_bridge.json",
+    "analysis/w33_pass10975_e6_cubic_reynolds_clock_weld.py",
+    "analysis/toe_20261113_chiral_e6_cubic_compatibility.py"
+  ],
+  "schema": "toe.h27_affine_bridge.v1",
+  "status": "PASS_MAXIMAL_NINE_TRANSLATION_INTERTWINER"
+}

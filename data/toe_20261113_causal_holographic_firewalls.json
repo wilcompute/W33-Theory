@@ -1,0 +1,111 @@
+{
+  "external_prior": [
+    "Surya 2019 Living Reviews Relativity causal sets",
+    "D'Ariano Perinotti 2014 Phys Rev A 90 062106 QCA continuum",
+    "Pastawski Yoshida Harlow Preskill 2015 JHEP HaPPY codes",
+    "Cree Dolev Calvera Williamson 2021 PRX Quantum 2 030337 transversal restrictions"
+  ],
+  "holographic_output": {
+    "input": "pure U|000> on three qutrits",
+    "is_one_uniform_AME_3_3": false,
+    "reduced_density_matrices_denominator_9": [
+      [
+        [
+          4,
+          -1,
+          1
+        ],
+        [
+          -1,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          3
+        ]
+      ],
+      [
+        [
+          5,
+          -1,
+          -1
+        ],
+        [
+          -1,
+          2,
+          2
+        ],
+        [
+          -1,
+          2,
+          2
+        ]
+      ],
+      [
+        [
+          4,
+          -1,
+          1
+        ],
+        [
+          -1,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          3
+        ]
+      ]
+    ],
+    "reduced_purities": [
+      "11/27",
+      "5/9",
+      "11/27"
+    ],
+    "scope": "Cannot treat this specific output as an absolutely maximally entangled three-leg seed. This is NOT a test of six-leg Choi perfection or a global holographic code. Transversal Clifford restrictions only follow when separate code assumptions hold.",
+    "single_qutrit_schmidt_ranks": [
+      3,
+      2,
+      3
+    ],
+    "three_party_pure_I3_exactly_zero": true
+  },
+  "schema": "toe.chiral_causal_holography.v1",
+  "status": "PASS_EXPLICIT_MICROCAUSAL_UNROLLING_AND_ENTROPIC_FIREWALL",
+  "unrolling": {
+    "all_27_amplitudes_nonzero_after_four_layers": true,
+    "events": 135,
+    "four_layer_support_counts": [
+      {
+        "microstep": 1,
+        "per_vertex_spacetime_out_degree": 3,
+        "supported_spatial_sites": 3
+      },
+      {
+        "microstep": 2,
+        "per_vertex_spacetime_out_degree": 3,
+        "supported_spatial_sites": 9
+      },
+      {
+        "microstep": 3,
+        "per_vertex_spacetime_out_degree": 3,
+        "supported_spatial_sites": 27
+      },
+      {
+        "microstep": 4,
+        "per_vertex_spacetime_out_degree": 3,
+        "supported_spatial_sites": 27
+      }
+    ],
+    "interlayer_links": 324,
+    "internal_chiral_graph_has_directed_3_cycles": true,
+    "interpretation": "internal cyclic memory + acyclic ordered circuit depth is algebraically consistent; only a finite schedule, no derived Lorentzian time or causal-set field equation",
+    "max_numerical_factorization_error": 2.220446049250313e-16,
+    "strict_temporal_unrolling_acyclic": true,
+    "temporal_slices": 5
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "ccz": "diag(omega^(uvw))",
+  "ccz_count": 1,
+  "ccz_count_optimal_with_free_cliffords": true,
+  "clock_D_cubic": "D\u00b3=-27D",
+  "compiler": "U=F P_L^dagger CCZ P_L F^dagger; P_L|k>=|Lk>",
+  "cyclotomic_integer_eigenmode_checks": 27,
+  "fourier": "F[x,k]=omega^(k dot x)/sqrt(27)",
+  "hierarchy_level": 3,
+  "linear_map_det_mod3": 1,
+  "linear_map_mod3": [
+    [
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      2,
+      2
+    ],
+    [
+      1,
+      1,
+      2
+    ]
+  ],
+  "nonclifford": true,
+  "numeric_max_matrix_error": 4.478616682112496e-16,
+  "original_gate": "U=(18I+3D+D\u00b2)/18 on Sym2(F3)",
+  "phase_polynomial": "f(a,b,c)=(a+c)(1-ac-b\u00b2)=(a+c)(a-c-b)(a-c+b) mod3",
+  "phase_value_counts": {
+    "0": 19,
+    "1": 4,
+    "2": 4
+  },
+  "schema": "toe.qutrit_ccz_chiral_clock.v1",
+  "scope": "one mathematical qutrit CCZ resource; not a native optical implementation, spacetime derivation, or fault-tolerant logical gate",
+  "status": "PASS_EXACT_SINGLE_CCZ_CLIFFORD_NORMAL_FORM",
+  "unique_polynomial_terms": [
+    {
+      "coefficient_mod3": 1,
+      "powers": [
+        0,
+        0,
+        1
+      ],
+      "total_degree": 1
+    },
+    {
+      "coefficient_mod3": 2,
+      "powers": [
+        0,
+        2,
+        1
+      ],
+      "total_degree": 3
+    },
+    {
+      "coefficient_mod3": 1,
+      "powers": [
+        1,
+        0,
+        0
+      ],
+      "total_degree": 1
+    },
+    {
+      "coefficient_mod3": 2,
+      "powers": [
+        1,
+        0,
+        2
+      ],
+      "total_degree": 3
+    },
+    {
+      "coefficient_mod3": 2,
+      "powers": [
+        1,
+        2,
+        0
+      ],
+      "total_degree": 3
+    },
+    {
+      "coefficient_mod3": 2,
+      "powers": [
+        2,
+        0,
+        1
+      ],
+      "total_degree": 3
+    }
+  ]
+}
