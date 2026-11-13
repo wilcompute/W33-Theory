@@ -1,0 +1,12 @@
+{
+ "delta0": 0.044,
+ "t": 0.0015605316247209327,
+ "status": "optimal",
+ "seconds": 49.0,
+ "residual_before": 3.963496197911809e-13,
+ "correction_frobenius": 7.727422522387264e-13,
+ "residual_after": 4.440892098500626e-16,
+ "min_eig_K_after": 0.0015605286831168528,
+ "min_eig_G_after": 0.0015605268522396918,
+ "validated": true
+}
