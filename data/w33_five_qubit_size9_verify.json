@@ -1,0 +1,18 @@
+{
+ "example": [
+  980,
+  30085,
+  20322,
+  22520,
+  4690,
+  21838,
+  7411
+ ],
+ "all_nonsingular": true,
+ "pairwise_disjoint": true,
+ "graphs_isotropic": true,
+ "nonsingular_T_checked": 13888,
+ "extendible_T": 0,
+ "maximal": true,
+ "size": 9
+}

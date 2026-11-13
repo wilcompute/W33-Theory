@@ -17,8 +17,8 @@ $\F(v)=\sum_{e}\bigl(|\langle e|v\rangle|^2-|v|^2/d\bigr)^2$, the sum over all b
 is $\min_{|v|=1}\F>0$. We prove exact, quantitative lower bounds. For two qubits, the minimum is exactly $1/4$. For three qubits, all
 24\,192 five-element sets form one Clifford orbit and satisfy $\F\ge(1/8-10^{-6})|v|^4$, while stabiliser states attain $1/8$. For
 four qubits, the smallest weakly unextendible sets have exactly five elements (an exhaustive search, matching Grassl's size
-$q^{n/2}+1$). There are $105\,283\,584$ of them in two types. One type satisfies $\F\ge|v|^4/80$ exactly, so five bases are strongly
-unextendible in $d=16$, and its minimum ($\approx0.0524$) lies below every stabiliser value. The proofs combine a twirl identity, the
+$q^{n/2}+1$). There are $105\,283\,584$ of them in two types. One type satisfies $\F\ge|v|^4/80$ exactly, so five Pauli-class bases are strongly
+unextendible in $d=16$ (general, non-Pauli MUB triples are already strongly unextendible in many dimensions~\cite{gmmp}), and its minimum ($\approx0.0524$) lies below every stabiliser value. The proofs combine a twirl identity, the
 graph-theoretic uncertainty relation of de~Gois, Hansenne and G\"uhne, Pauli-symmetry reduction of sum-of-squares certificates, facial
 reduction, and verification in exact rational arithmetic.
 \end{abstract}
@@ -68,7 +68,8 @@ Let $P_0$ be the uncovered Pauli fixed by the stabiliser of the set, and let $t=
 commute with $P_0$ map bijectively onto $p_0^\perp/\langle p_0\rangle\cong W(3,2)$, so they contribute at most $3$ by two-qubit purity.
 The 12 that anticommute form six pairs $\{a,aP_0\}$, and they contribute exactly
 $(1-t^2)\sum_{j=1}^6|\langle\psi_+|a_j|\psi_-\rangle|^2$. Hence $\min\F=1/8$ follows from the single $4\otimes4$ inequality
-$\kappa=\max_{x,y}\sum_j|\langle x|M_j|y\rangle|^2\le3$, which holds numerically with equality. The five non-identity $M_jM_1^{-1}$
+$\kappa=\max_{x,y}\sum_j|\langle x|M_j|y\rangle|^2\le3$, which holds numerically with equality. Equivalently, $\|\sum_jc_jR_j\|_{\mathrm{op}}^2\le3|c|^2$ for $R_j=M_jM_1^{-1}$ and
+all $c\in\mathbb{C}^6$, since the $R_j$ are Hilbert--Schmidt orthogonal. Low levels of the SOS/PPT hierarchy do not certify it. The five non-identity $M_jM_1^{-1}$
 anticommute along a pentagon. An exact proof of $\kappa\le3$ is open; it has no decomposable certificate.
 \end{remark}
 
@@ -81,7 +82,7 @@ type has no such point. They inherit a mirror partner (a second partition of the
 (iii) For several inequivalent nine-element sets, $\min\F=m^*/16$ exactly ($1/16$ or $1/8$), via a facially reduced Lovász dual.
 \end{theorem}
 \begin{proposition}[five qubits]
-$W(9,2)$ has no maximal partial spread of size at most 7.
+$W(9,2)$ has no maximal partial spread of size at most 7, and it has one of size 9 (verified independently). Hence the smallest five-qubit maximal Pauli MUB set has 8 or 9 elements; local search finds none of size 8. The data $3,5,5,(9)$ for $n=2,\dots,5$ fit $2^{\lceil n/2ceil}+1$, which is a conjecture here.
 \end{proposition}
 \noindent\emph{Method.} Fixing the $X$- and $Z$-type Lagrangians, a Lagrangian disjoint from both is the graph of a nonsingular
 symmetric matrix $S$ over $\mathbb{F}_2$, and two graphs are disjoint iff $S+S'$ is nonsingular. A maximal partial spread is thus a set
@@ -114,7 +115,7 @@ $d$ & smallest size & $\min\F$ & status\\\midrule
 \end{tabular}
 \end{center}
 Open: an exact certificate at $1/8$ (degree 8, or a structural proof); closed forms for the non-stabiliser optima; the strong
-unextendibility constant for all five-element sets in $d=16$ and beyond. \emph{Not claimed}: novelty of the weak-unextendibility
+unextendibility constant for all five-element sets in $d=16$ and beyond. \emph{Scope}: all statements concern \emph{Pauli-class} MUB sets; strongly unextendible sets of only three (non-Pauli) MUBs exist in many dimensions~\cite{gmmp}. \emph{Not claimed}: novelty of the weak-unextendibility
 census at $d=16$, which may already be in Grassl's tables~\cite{kantor}. All certificates are in the repository (\texttt{data/*.json})
 with the scripts that verify them.
 
@@ -124,6 +125,8 @@ Quantum Inf.\ Comput.\ 14 (2014); arXiv:1302.3709.
 \bibitem{thas} K.~Thas, Unextendible mutually unbiased bases (after Mandayam, Bandyopadhyay, Grassl and Wootters), arXiv:1407.2778.
 \bibitem{kantor} W.~M.~Kantor, On maximal symplectic partial spreads, Adv.\ Geom.\ (2017).
 \bibitem{dhg} C.~de~Gois, K.~Hansenne, O.~G\"uhne, Uncertainty relations from graph theory, Phys.\ Rev.\ A 107, 062211 (2023).
+\bibitem{gmmp} M.~Grassl, D.~McNulty, L.~Mi\v{s}ta, T.~Paterek, Small sets of complementary observables, Phys.\ Rev.\ A 95, 012118
+(2017); arXiv:1611.08962.
 \bibitem{lovasz} L.~Lov\'asz, On the Shannon capacity of a graph, IEEE Trans.\ Inf.\ Theory 25 (1979).
 \end{thebibliography}
 \end{document}

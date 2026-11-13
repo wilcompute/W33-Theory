@@ -1,0 +1,85 @@
+[
+ {
+  "level": [
+   1,
+   2
+  ],
+  "const": 4,
+  "blocks": [
+   "plain"
+  ],
+  "basis_size": 40,
+  "margin": 1.000000000000049,
+  "status": "optimal"
+ },
+ {
+  "level": [
+   1,
+   2
+  ],
+  "const": 3,
+  "blocks": [
+   "plain",
+   "pt_y"
+  ],
+  "basis_size": 40,
+  "margin": -1.81903191019212,
+  "status": "optimal"
+ },
+ {
+  "level": [
+   2,
+   1
+  ],
+  "const": 3,
+  "blocks": [
+   "plain",
+   "pt_x"
+  ],
+  "basis_size": 40,
+  "margin": -1.8190319101921082,
+  "status": "optimal"
+ },
+ {
+  "level": [
+   2,
+   2
+  ],
+  "const": 3,
+  "blocks": [
+   "plain"
+  ],
+  "basis_size": 100,
+  "margin": -5.051174216795722,
+  "status": "optimal"
+ },
+ {
+  "level": [
+   2,
+   2
+  ],
+  "const": 3,
+  "blocks": [
+   "plain",
+   "pt_y"
+  ],
+  "basis_size": 100,
+  "margin": -1.9409334988049818,
+  "status": "optimal"
+ },
+ {
+  "level": [
+   2,
+   2
+  ],
+  "const": 3,
+  "blocks": [
+   "plain",
+   "pt_x",
+   "pt_y"
+  ],
+  "basis_size": 100,
+  "margin": -1.29395564820925,
+  "status": "optimal"
+ }
+]

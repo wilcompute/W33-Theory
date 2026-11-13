@@ -116,3 +116,10 @@ These are listed by how cheap an independent check is. Each certificate is a com
 4. **Numerical identifications to confirm or refute (P12644).** Pentad min F = (207 − 19√57)/432; d = 25 single-cover min F = 13/75.
 
 Priority is cited throughout: Mandayam–Bandyopadhyay–Grassl–Wootters (arXiv:1302.3709) and de Gois–Hansenne–Gühne (PRA 107, 062211). The QI-reader note is `analysis/NOTE_QUBIT_STRONG_UNEXTENDIBILITY.md`.
+
+## Replay requests added 2026-11-12 (Passes 12647–12650), cheapest first
+
+1. **Four-qubit size-5 count (P12648 / P12649).** No maximal partial spread of W(7,2) has size 3 or 4, and there are 105,283,584 of size 5 (896 through a fixed complementary pair). Two independent methods agree: direct Lagrangian enumeration (`w33_exhaustive_small_maximal_spreads.py`) and symmetric-matrix rank codes (`w33_symmetric_rank_code_spreads.py`). A third, independent recount (for example in GAP, Sage or your own code) would settle it.
+2. **Five-qubit lower bound (P12649).** No maximal partial spread of W(9,2) of size ≤ 7 (`w33_five_qubit_size7.py`; the DFS visits 8,668,424 nodes). This is the least-tested claim. An independent search for size 6 or 7 would be valuable.
+3. **Three-qubit exact interval (P12647).** `data/w33_threequbit_epsilon_exact.json`: F ≥ (1/8 − 10⁻⁶)|v|⁴, from Pauli-reduced degree-6 certificates checked by exact LDLᵀ.
+4. **Open, and help welcome.** κ := max over unit x, y ∈ C⁴ of Σ_{j=1}^{6} |⟨x|M_j|y⟩|² ≤ 3 (`w33_threequbit_analytic_one_eighth.py`). Numerically it holds with equality (2,000 alternating runs). It is not certifiable by the SOS / partial-transpose hierarchy up to level (2,2). Proving it gives min F = 1/8 exactly.

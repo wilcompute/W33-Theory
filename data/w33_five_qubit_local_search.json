@@ -1,0 +1,38 @@
+{
+ "control_n4_size5": {
+  "n": 4,
+  "size": 5,
+  "found": true,
+  "example": [
+   507,
+   158,
+   355
+  ],
+  "restarts": 32,
+  "seconds": 16.8
+ },
+ "n5_size9": {
+  "n": 5,
+  "size": 9,
+  "found": true,
+  "example": [
+   980,
+   30085,
+   20322,
+   22520,
+   4690,
+   21838,
+   7411
+  ],
+  "restarts": 1,
+  "seconds": 0.7
+ },
+ "n5_size8": {
+  "n": 5,
+  "size": 8,
+  "found": false,
+  "best_cost": 24,
+  "restarts": 362,
+  "seconds": 1502.6
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "f_star": "0.0523625607566847337045811467000711344036651000400975049811514",
+ "double_precision": 0.05236256075668512,
+ "identification": null,
+ "rule": "accept only degree <= 4, |coef| <= 1e4, residual < 1e-45",
+ "higher_degree_search": {
+  "degrees": "5-8",
+  "maxcoeff": 100000,
+  "tol": "1e-40",
+  "found": null
+ }
+}
