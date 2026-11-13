@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "shared": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "annihilator": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    9
+  ],
+  "iib_transverse": [
+    4
+  ],
+  "m_transverse": [
+    5,
+    9
+  ],
+  "mixed_cubic_terms": [
+    [
+      4,
+      5,
+      26,
+      1
+    ],
+    [
+      4,
+      9,
+      25,
+      -1
+    ]
+  ],
+  "joint_stabilizer_dimension": 49,
+  "conformal_stabilizer_dimension": 50,
+  "transverse_quotient_dimension": 5,
+  "jets": {
+    "one": {
+      "gradient_parameters": 27,
+      "vertical_action_rank": 17,
+      "exact_parameter_jacobian_rank": 10,
+      "anchor_linear_action_rank": 1,
+      "anchor_zero_vertical_action_rank": 16,
+      "effective_affine_operator_dimension": 18
+    },
+    "two": {
+      "gradient_parameters": 54,
+      "vertical_action_rank": 29,
+      "exact_parameter_jacobian_rank": 25,
+      "anchor_linear_action_rank": 4,
+      "anchor_zero_vertical_action_rank": 25,
+      "effective_affine_operator_dimension": 31
+    },
+    "shared_four": {
+      "gradient_parameters": 108,
+      "vertical_action_rank": 45,
+      "exact_parameter_jacobian_rank": 63,
+      "anchor_linear_action_rank": 16,
+      "anchor_zero_vertical_action_rank": 29,
+      "effective_affine_operator_dimension": 49
+    },
+    "IIB": {
+      "gradient_parameters": 135,
+      "vertical_action_rank": 50,
+      "exact_parameter_jacobian_rank": 85,
+      "anchor_linear_action_rank": 25,
+      "anchor_zero_vertical_action_rank": 25,
+      "effective_affine_operator_dimension": 55
+    },
+    "M": {
+      "gradient_parameters": 162,
+      "vertical_action_rank": 57,
+      "exact_parameter_jacobian_rank": 105,
+      "anchor_linear_action_rank": 36,
+      "anchor_zero_vertical_action_rank": 21,
+      "effective_affine_operator_dimension": 63
+    }
+  }
+}
