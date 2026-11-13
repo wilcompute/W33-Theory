@@ -11,7 +11,7 @@ import toe_20261113_monopole_winding_residues as residues
 OUT = residues.OUT.with_name("toe_20261113_monopole_winding_residue_flavors.json")
 
 
-def calculate():
+def flavor_frames():
     threshold = residues.poles.threshold
     radial = threshold.radial
     triplet = threshold.triplet
@@ -55,6 +55,11 @@ def calculate():
     change_out = outgoing.conj().T @ physical_out
     np.testing.assert_allclose(incoming @ change_in, physical_in, atol=1e-11)
     np.testing.assert_allclose(outgoing @ change_out, physical_out, atol=1e-11)
+    return change_in, change_out
+
+
+def calculate():
+    change_in, change_out = flavor_frames()
     fixture = json.loads(residues.OUT.read_text(encoding="utf-8"))
     sector, = [row for row in fixture["sectors"] if row["sector"] == "L"]
     results = {}

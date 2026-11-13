@@ -15,3 +15,7 @@ The IIB image ties the parity of the sign flips to the permutation parity. This 
 This result concerns the finite integral subgroup acting on the repository's coordinate section representatives. The connected ExFT stabilizers and the continuum embeddings of the two sections use additional structure. [Repository parallel report](2026-11-13_E6_generalized_gauge_USp8_full_clock_Z2.md) · [Hohm and Samtleben, Exceptional Field Theory I](https://arxiv.org/abs/1312.0614).
 
 Replay with `py -3 analysis/toe_20261113_e6_tits_coordinates.py`. The resulting certificate records the six signed matrices and the section counts.
+
+## Relative positions of the two coordinate sections
+
+Holding one IIB section fixed, its Weyl stabilizer partitions the 72 M sections into six orbits. Three disjoint-section orbits have sizes 2, 5 and 20. Common dimensions 1, 2 and 4 occur in single orbits of sizes 20, 20 and 5. The largest common coordinate sector therefore has dimension four. A pair with a four-dimensional intersection belongs to one of 1,080 equivalent ordered pairs. There is no mixed coordinate pair with common dimension three or five. The three distinct disjoint orbits show that the overlap dimension alone cannot identify a relative placement. The certificate records a representative of each orbit for use in testing transition maps.

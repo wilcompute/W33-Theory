@@ -105,9 +105,10 @@ def calculate():
     graph = nx.Graph()
     graph.add_nodes_from(range(27))
     graph.add_edges_from(pair for t in cubic for pair in combinations(t, 2))
+    maximal = sorted(tuple(sorted(c)) for c in nx.find_cliques(nx.complement(graph)))
     sections = {}
     for size, expected in ((5,216), (6,72)):
-        section = min(tuple(sorted(c)) for c in nx.find_cliques(nx.complement(graph)) if len(c)==size)
+        section = min(c for c in maximal if len(c) == size)
         images = orbit(section, permutations, lambda p, c: tuple(sorted(p[i] for i in c)))
         assert len(images) == expected
         stabilizer = [p for p in group if tuple(sorted(p[i] for i in section)) == section]
@@ -147,12 +148,26 @@ def calculate():
             diagonal_kernel_fixing_section_pointwise=restricted_kernel,
             signed_stabilizer_order=64*len(stabilizer),
         )
+    # The unsigned action suffices for intersections of coordinate subspaces.
+    mixed_orbits = []
+    fixed = sections[5]["representative"]
+    isotropy = [p for p in group if tuple(sorted(p[i] for i in fixed)) == fixed]
+    targets = {c for c in maximal if len(c) == 6}
+    while targets:
+        target = min(targets)
+        images = {tuple(sorted(p[i] for i in target)) for p in isotropy}
+        assert images <= targets
+        targets -= images
+        mixed_orbits.append(dict(common_dimension=len(set(fixed) & set(target)),
+                                 six_section=target, orbit_at_fixed_five=len(images),
+                                 pair_orbit=216*len(images)))
+    mixed_orbits.sort(key=lambda row: (row["common_dimension"], row["orbit_at_fixed_five"]))
     return dict(status="PASS", cartan=cartan.tolist(), signed_generators=[n.tolist() for n in lifts],
                 torus_order=len(kernel), quotient_order=len(group), group_order=64*len(group),
-                sections=sections)
+                sections=sections, mixed_pair_orbits=mixed_orbits)
 
 
 if __name__ == "__main__":
     result = calculate()
     OUT.write_text(json.dumps(result, indent=2)+"\n", encoding="utf-8")
-    print(result["cartan"], result["group_order"], result["sections"], flush=True)
+    print(result["cartan"], result["group_order"], result["sections"], result["mixed_pair_orbits"], flush=True)

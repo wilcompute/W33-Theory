@@ -4808,5 +4808,85 @@
       "diagonal_kernel_fixing_section_pointwise": 1,
       "signed_stabilizer_order": 46080
     }
-  }
+  },
+  "mixed_pair_orbits": [
+    {
+      "common_dimension": 0,
+      "six_section": [
+        5,
+        6,
+        7,
+        8,
+        17,
+        25
+      ],
+      "orbit_at_fixed_five": 2,
+      "pair_orbit": 432
+    },
+    {
+      "common_dimension": 0,
+      "six_section": [
+        13,
+        14,
+        15,
+        16,
+        25,
+        26
+      ],
+      "orbit_at_fixed_five": 5,
+      "pair_orbit": 1080
+    },
+    {
+      "common_dimension": 0,
+      "six_section": [
+        5,
+        6,
+        13,
+        14,
+        19,
+        25
+      ],
+      "orbit_at_fixed_five": 20,
+      "pair_orbit": 4320
+    },
+    {
+      "common_dimension": 1,
+      "six_section": [
+        0,
+        5,
+        9,
+        13,
+        14,
+        15
+      ],
+      "orbit_at_fixed_five": 20,
+      "pair_orbit": 4320
+    },
+    {
+      "common_dimension": 2,
+      "six_section": [
+        0,
+        1,
+        5,
+        6,
+        7,
+        13
+      ],
+      "orbit_at_fixed_five": 20,
+      "pair_orbit": 4320
+    },
+    {
+      "common_dimension": 4,
+      "six_section": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        9
+      ],
+      "orbit_at_fixed_five": 5,
+      "pair_orbit": 1080
+    }
+  ]
 }
