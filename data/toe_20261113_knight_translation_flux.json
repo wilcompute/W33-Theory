@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "board_in_mask_order": [
+    [
+      0,
+      0
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "x_axis_permutation": [
+    1,
+    0,
+    2,
+    3
+  ],
+  "y_axis_permutation": [
+    0,
+    1,
+    3,
+    2
+  ],
+  "translation_fourth_powers": [
+    -1,
+    -1
+  ],
+  "translation_commutator_sign": -1,
+  "real_lift_group_order": 32,
+  "compensated_translation": {
+    "internal_dimension": 2,
+    "complex_period": 4,
+    "copies_of_regular_representation": 2
+  },
+  "gauge_defect": {
+    "derivative_axes": [
+      0,
+      1
+    ],
+    "operator_row": 217,
+    "potential_component": 26,
+    "site_in": 10,
+    "site_out": 0,
+    "value": -2
+  }
+}
