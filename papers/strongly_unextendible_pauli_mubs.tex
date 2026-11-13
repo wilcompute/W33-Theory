@@ -128,6 +128,24 @@ vertices, 368-regular) satisfies $30.340\le\vartheta\le30.449$ (floating-point c
 $\vartheta(G)\vartheta(\bar G)\ge744$). Hence $\min\F\ge0.0172$, and the Lovász route cannot reach $1/32$; as at $d=8$, $\vartheta>\alpha$.
 Unlike type B at $d=16$, the set is not a lift: no uncovered point projects it onto a partial spread of $p^\perp/\langle p\rangle$.
 \end{proposition}
+\begin{proposition}[regulus sets]\label{p:reg}
+Let $q=2^k$ and regard $2k$ qubits as two $\mathbb{F}_q$-qudits, with symplectic form $\mathrm{Tr}(x\cdot z'+z\cdot x')$ on
+$\mathbb{F}_q^4\ni(x_1,x_2,z_1,z_2)$. The $q+1$ Lagrangians $L_\infty=\{x=0\}$ and $L_t=\{z_1=tx_2,\ z_2=tx_1\}$, $t\in\mathbb{F}_q$,
+form a regulus of the hyperbolic quadric $Q=x_1z_1+x_2z_2$; their eigenbases are the computational basis and
+$\mathrm{CZ}_t(F\otimes F)|x_1,x_2\rangle$ with $\mathrm{CZ}_t=\mathrm{diag}\,(-1)^{\mathrm{Tr}(tx_1x_2)}$. This is the explicit form of
+Kantor's sets of size $q^k+1$~\cite{kantor}. For $q=2,4,8$ the set is maximal (checked against all nonsingular symmetric matrices;
+888\,832 for $q=8$) and its covered Paulis are exactly the points with $Q=0$.
+(i) With $A(x_1,x_2)$ the amplitudes and $B$ the row-wise Fourier transform of $A$,
+$\F+(q+1)/q^2=\sum_{\ell}\|\mathfrak{F}_\ell(B|_\ell)\|_4^4$, the sum running over the $q(q+1)$ affine lines of $AG(2,q)$ and
+$\mathfrak{F}_\ell$ being the additive Fourier transform on the line.
+(ii) For $q=4$ the set is the lifted type of Theorem~\ref{t:4} (same invariants), and
+$\F+\tfrac5{16}=\sum_p|A_p|^4+\tfrac14|\sum_pA_p^2|^2+\sum_{\ell}\sum_{ab|cd}|A_aA_b+A_cA_d|^2$, the last sum over the 20 lines of
+$AG(2,4)$ and their three pairings. Numerically $\min\F=1/16$; a Pauli-reduced degree-6 SOS gives $\F\ge0.0452$ (floating point), and
+the PSD-plus-partial-transpose level gives only $\F\ge0$.
+(iii) For $q=8$, numerically $\min\F=2.498509/64$ (300 starts, analytic gradients), which is not a stabiliser value. The quotients of
+this set at points with $\mathrm{Tr}\,Q=1$ are maximal five-qubit sets of size 9, of at least two types, with numerical minimum
+$2.498509/32$. So minimal sets of the same size differ in strength: the five- and six-qubit sets found by search have $\min\F=1/d$.
+\end{proposition}
 \noindent\emph{Method.} Fixing the $X$- and $Z$-type Lagrangians, a Lagrangian disjoint from both is the graph of a nonsingular
 symmetric matrix $S$ over $\mathbb{F}_2$, and two graphs are disjoint iff $S+S'$ is nonsingular. A maximal partial spread is thus a set
 of nonsingular symmetric matrices with nonsingular pairwise differences that leaves no nonsingular $T$ with all $T+S_i$ nonsingular.

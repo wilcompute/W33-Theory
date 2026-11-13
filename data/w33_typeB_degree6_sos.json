@@ -1,0 +1,16 @@
+{
+ "sector0_K": 51,
+ "sector0_G": 136,
+ "control_two_bases": {
+  "label": "control: two bases only (expect delta <= 0)",
+  "delta": -2.0540780512725075e-08,
+  "status": "optimal",
+  "seconds": 33.5
+ },
+ "typeB": {
+  "label": "type B regulus, 5 bases (1/16 = 0.0625)",
+  "delta": 0.04515591958844345,
+  "status": "optimal",
+  "seconds": 75.3
+ }
+}

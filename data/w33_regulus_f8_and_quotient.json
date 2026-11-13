@@ -1,0 +1,280 @@
+{
+ "line_fourier_identity_residual": {
+  "q2": 8.881784197001252e-16,
+  "q4": 0.0,
+  "q8": 1.6653345369377348e-16
+ },
+ "F8_regulus_min_F": 0.03905886070310774,
+ "F8_lowest": [
+  0.03905886070310774,
+  0.041963236970115086,
+  0.042233933748714314,
+  0.04243442456527752,
+  0.042575733808181415
+ ],
+ "F8_times_64": 2.4997670849988953,
+ "pass12650_set_invariants": {
+  "vanishing_quadrics": 0,
+  "n_uncovered": 744,
+  "degree": [
+   368
+  ],
+  "top_multiplicities": [
+   [
+    -16.0,
+    248
+   ],
+   [
+    16.0,
+    225
+   ]
+  ],
+  "n_simple_eigs": 271
+ },
+ "quotients": [
+  {
+   "p": 3929,
+   "Q0_p": 1,
+   "covered": 279,
+   "extendible_T": 0,
+   "maximal": true,
+   "codes": [
+    3900,
+    13363,
+    16329,
+    27003,
+    28417,
+    31952,
+    32364
+   ],
+   "vanishing_quadrics": 0,
+   "n_uncovered": 744,
+   "degree": [
+    368
+   ],
+   "top_multiplicities": [
+    [
+     -16.0,
+     248
+    ],
+    [
+     16.0,
+     233
+    ],
+    [
+     -11.2694,
+     27
+    ],
+    [
+     -7.6725,
+     27
+    ]
+   ],
+   "n_simple_eigs": 1
+  },
+  {
+   "p": 2495,
+   "Q0_p": 1,
+   "covered": 279,
+   "extendible_T": 0,
+   "maximal": true,
+   "codes": [
+    2765,
+    6025,
+    6476,
+    22712,
+    24111,
+    24948,
+    25579
+   ],
+   "vanishing_quadrics": 0,
+   "n_uncovered": 744,
+   "degree": [
+    368
+   ],
+   "top_multiplicities": [
+    [
+     -16.0,
+     248
+    ],
+    [
+     16.0,
+     233
+    ],
+    [
+     -11.2694,
+     27
+    ],
+    [
+     -7.6725,
+     27
+    ]
+   ],
+   "n_simple_eigs": 1
+  },
+  {
+   "p": 722,
+   "Q0_p": 1,
+   "covered": 279,
+   "extendible_T": 0,
+   "maximal": true,
+   "codes": [
+    1289,
+    6481,
+    7248,
+    16820,
+    17583,
+    30839,
+    32100
+   ],
+   "vanishing_quadrics": 0,
+   "n_uncovered": 744,
+   "degree": [
+    368
+   ],
+   "top_multiplicities": [
+    [
+     -16.0,
+     248
+    ],
+    [
+     16.0,
+     233
+    ],
+    [
+     -8.0,
+     17
+    ],
+    [
+     8.0,
+     17
+    ]
+   ],
+   "n_simple_eigs": 1
+  },
+  {
+   "p": 1463,
+   "Q0_p": 1,
+   "covered": 279,
+   "extendible_T": 0,
+   "maximal": true,
+   "codes": [
+    981,
+    12839,
+    13752,
+    24645,
+    27524,
+    29943,
+    31612
+   ],
+   "vanishing_quadrics": 0,
+   "n_uncovered": 744,
+   "degree": [
+    368
+   ],
+   "top_multiplicities": [
+    [
+     -16.0,
+     248
+    ],
+    [
+     16.0,
+     233
+    ],
+    [
+     -11.2694,
+     27
+    ],
+    [
+     -7.6725,
+     27
+    ]
+   ],
+   "n_simple_eigs": 1
+  },
+  {
+   "p": 2291,
+   "Q0_p": 1,
+   "covered": 279,
+   "extendible_T": 0,
+   "maximal": true,
+   "codes": [
+    4600,
+    8868,
+    14236,
+    17379,
+    22707,
+    26689,
+    30673
+   ],
+   "vanishing_quadrics": 0,
+   "n_uncovered": 744,
+   "degree": [
+    368
+   ],
+   "top_multiplicities": [
+    [
+     -16.0,
+     248
+    ],
+    [
+     16.0,
+     233
+    ],
+    [
+     -8.0,
+     17
+    ],
+    [
+     8.0,
+     17
+    ]
+   ],
+   "n_simple_eigs": 1
+  },
+  {
+   "p": 1299,
+   "Q0_p": 1,
+   "covered": 279,
+   "extendible_T": 0,
+   "maximal": true,
+   "codes": [
+    4919,
+    10228,
+    12357,
+    17903,
+    21808,
+    27485,
+    32516
+   ],
+   "vanishing_quadrics": 0,
+   "n_uncovered": 744,
+   "degree": [
+    368
+   ],
+   "top_multiplicities": [
+    [
+     -16.0,
+     248
+    ],
+    [
+     16.0,
+     233
+    ],
+    [
+     -8.0,
+     17
+    ],
+    [
+     8.0,
+     17
+    ]
+   ],
+   "n_simple_eigs": 1
+  }
+ ],
+ "control_singular_point_quotients": [
+  false,
+  false
+ ]
+}
