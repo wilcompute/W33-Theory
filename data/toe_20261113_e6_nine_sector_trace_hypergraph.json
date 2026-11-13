@@ -1,0 +1,122 @@
+{
+  "cross_sector_bipartite_projections": [
+    {
+      "b_pair": [
+        0,
+        1
+      ],
+      "bipartite_connected_components": [
+        6,
+        6,
+        6
+      ],
+      "component_edges": [
+        9,
+        9,
+        9
+      ],
+      "pairwise_projection_is_3K33": true
+    },
+    {
+      "b_pair": [
+        1,
+        2
+      ],
+      "bipartite_connected_components": [
+        6,
+        6,
+        6
+      ],
+      "component_edges": [
+        9,
+        9,
+        9
+      ],
+      "pairwise_projection_is_3K33": true
+    },
+    {
+      "b_pair": [
+        0,
+        2
+      ],
+      "bipartite_connected_components": [
+        6,
+        6,
+        6
+      ],
+      "component_edges": [
+        9,
+        9,
+        9
+      ],
+      "pairwise_projection_is_3K33": true
+    }
+  ],
+  "determinant_like_hypergraphs": [
+    {
+      "b": 0,
+      "degrees": {
+        "2": 9,
+        "3": 6
+      },
+      "internal_triples": 6,
+      "is_det_3x3_support": true,
+      "one_matrix_coordinate_map": {
+        "0": 0,
+        "11": 1,
+        "14": 6,
+        "17": 5,
+        "21": 8,
+        "22": 4,
+        "26": 7,
+        "3": 2,
+        "6": 3
+      }
+    },
+    {
+      "b": 1,
+      "degrees": {
+        "2": 9,
+        "3": 6
+      },
+      "internal_triples": 6,
+      "is_det_3x3_support": true,
+      "one_matrix_coordinate_map": {
+        "1": 0,
+        "12": 5,
+        "15": 8,
+        "19": 1,
+        "23": 4,
+        "25": 7,
+        "4": 3,
+        "7": 6,
+        "9": 2
+      }
+    },
+    {
+      "b": 2,
+      "degrees": {
+        "2": 9,
+        "3": 6
+      },
+      "internal_triples": 6,
+      "is_det_3x3_support": true,
+      "one_matrix_coordinate_map": {
+        "10": 2,
+        "13": 5,
+        "16": 8,
+        "18": 1,
+        "2": 0,
+        "20": 4,
+        "24": 7,
+        "5": 3,
+        "8": 6
+      }
+    }
+  ],
+  "next_proof_needed": "Choose compatible bases for all three 9-sets, and solve the signs/phases of the 27 cross terms to prove a simultaneous coordinate equivalence to det A + det B + det C - tr ABC.",
+  "no_claim_about_exact_signed_coordinate_equivalence": true,
+  "status": "PASS_THREE_DETERMINANT_SUPPORTS_AND_TRACE_PAIR_PROJECTIONS",
+  "total_signed_cubic_support_terms": 45,
+  "trace_cross_terms": 27
+}

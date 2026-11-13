@@ -1,0 +1,97 @@
+{
+  "boundary": "If either orbit times out, no conclusion on 8-versus-9; S3 reduces representative count only.",
+  "controls": {
+    "n3_size5": "exists",
+    "n3_size7": "none"
+  },
+  "elapsed_s": 287.82,
+  "limit_per_orbit_s": 150,
+  "s3_symmetry_exact": {
+    "O5_order": 720,
+    "S3_on_reps_inverse_and_plusI": [
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        6,
+        3
+      ],
+      [
+        7,
+        2
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "eight_orbit_reps": [
+      692,
+      693,
+      694,
+      695,
+      700,
+      701,
+      702,
+      703
+    ],
+    "two_classes": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "verified_orbit_elements": 5760
+  },
+  "schema": "toe.five_qubit.s3_two_class_dlx.v1",
+  "search": {
+    "example": null,
+    "n": 5,
+    "nodes": 230000,
+    "per_rep": [
+      {
+        "found": null,
+        "nodes": 120000,
+        "s2": 692,
+        "seconds": 152.6,
+        "timeout": true
+      },
+      {
+        "found": null,
+        "nodes": 110000,
+        "s2": 694,
+        "seconds": 154.3,
+        "timeout": true
+      }
+    ],
+    "size": 8,
+    "status": "undecided",
+    "wall": 204.6
+  },
+  "status": "undecided"
+}

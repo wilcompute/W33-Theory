@@ -1,0 +1,155 @@
+{
+  "all_18_intra_terms_become_3x3_determinant_support": true,
+  "all_27_cross_terms_become_trace_ABC_support": true,
+  "all_three_9fibers_form_3x3_coordinate_grids": true,
+  "explicit_E6_index_to_sector_matrix_coordinate": {
+    "0": [
+      0,
+      0,
+      0
+    ],
+    "1": [
+      1,
+      1,
+      0
+    ],
+    "10": [
+      2,
+      1,
+      2
+    ],
+    "11": [
+      0,
+      1,
+      0
+    ],
+    "12": [
+      1,
+      2,
+      2
+    ],
+    "13": [
+      2,
+      2,
+      2
+    ],
+    "14": [
+      0,
+      0,
+      1
+    ],
+    "15": [
+      1,
+      2,
+      1
+    ],
+    "16": [
+      2,
+      0,
+      2
+    ],
+    "17": [
+      0,
+      2,
+      2
+    ],
+    "18": [
+      2,
+      1,
+      0
+    ],
+    "19": [
+      1,
+      0,
+      0
+    ],
+    "2": [
+      2,
+      1,
+      1
+    ],
+    "20": [
+      2,
+      2,
+      0
+    ],
+    "21": [
+      0,
+      2,
+      1
+    ],
+    "22": [
+      0,
+      1,
+      2
+    ],
+    "23": [
+      1,
+      0,
+      2
+    ],
+    "24": [
+      2,
+      0,
+      0
+    ],
+    "25": [
+      1,
+      0,
+      1
+    ],
+    "26": [
+      0,
+      1,
+      1
+    ],
+    "3": [
+      0,
+      2,
+      0
+    ],
+    "4": [
+      1,
+      1,
+      2
+    ],
+    "5": [
+      2,
+      2,
+      1
+    ],
+    "6": [
+      0,
+      0,
+      2
+    ],
+    "7": [
+      1,
+      1,
+      1
+    ],
+    "8": [
+      2,
+      0,
+      1
+    ],
+    "9": [
+      1,
+      2,
+      0
+    ]
+  },
+  "proof_boundary": "If signs do not rephase consistently, only unsigned coordinate support is shown; a further GL(27) linear intertwiner may still exist. If yes, equality is exact for the canonical 45-term cubic after index permutation and diagonal signs; still no physical vacuum.",
+  "signed_pm1_rephasing_exists": true,
+  "signed_rephasing_negative_E6_indices": [
+    6,
+    7,
+    12,
+    16,
+    20,
+    25,
+    26
+  ],
+  "status": "PASS_UNSIGNED_ALBERT_CUBIC_COORDINATES_AND_SIGN_GAUGE_CHECK",
+  "tritangent_terms_checked": 45
+}

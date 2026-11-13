@@ -1,0 +1,531 @@
+{
+  "continuum": {
+    "dispersion": "D(k) symbol 2i sum_{v in steps} sin(k dot v); Hermitian iD eigenvalue -2 sum sin(k dot v)",
+    "escape_requirements": "additional spinor bands/local gauge constraints, selected lattice lifts, a scaling limit and rotational/Lorentz tests",
+    "low_k_linear_gradient_choices": [
+      [
+        6,
+        6,
+        6
+      ],
+      [
+        6,
+        0,
+        6
+      ]
+    ],
+    "no_emergent_4D_lorentzian_gravity": true,
+    "no_unique_continuum_cone_from_mod3_directions": true,
+    "scalar_single_band_linear_term": "advection along one drift vector; zero in its transverse plane, not isotropic Dirac |k|",
+    "scope": "Obstruction to this naive translation-invariant scalar lift only; no general theorem excluding all W33 multiband or interacting gravity models.",
+    "status": "EXACT_SCALAR_INFINITE_LATTICE_LIFT_DRIFT_OBSTRUCTION",
+    "two_valid_integer_lifts_of_F3_directions": [
+      [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          1
+        ]
+      ]
+    ]
+  },
+  "e6": {
+    "per_b_fiber": [
+      {
+        "b": 0,
+        "internal_signed_triples": 6,
+        "support_size": 9
+      },
+      {
+        "b": 1,
+        "internal_signed_triples": 6,
+        "support_size": 9
+      },
+      {
+        "b": 2,
+        "internal_signed_triples": 6,
+        "support_size": 9
+      }
+    ],
+    "per_element": [
+      {
+        "g": [
+          0,
+          0,
+          0
+        ],
+        "incidence": true,
+        "pure_permutation_signed": true,
+        "signed_monomial_possible": true
+      },
+      {
+        "g": [
+          0,
+          0,
+          1
+        ],
+        "incidence": true,
+        "pure_permutation_signed": false,
+        "signed_monomial_possible": true
+      },
+      {
+        "g": [
+          0,
+          0,
+          2
+        ],
+        "incidence": true,
+        "pure_permutation_signed": false,
+        "signed_monomial_possible": true
+      },
+      {
+        "g": [
+          0,
+          1,
+          0
+        ],
+        "incidence": false,
+        "pure_permutation_signed": false,
+        "signed_monomial_possible": false
+      },
+      {
+        "g": [
+          0,
+          1,
+          1
+        ],
+        "incidence": false,
+        "pure_permutation_signed": false,
+        "signed_monomial_possible": false
+      },
+      {
+        "g": [
+          0,
+          1,
+          2
+        ],
+        "incidence": false,
+        "pure_permutation_signed": false,
+        "signed_monomial_possible": false
+      },
+      {
+        "g": [
+          0,
+          2,
+          0
+        ],
+        "incidence": false,
+        "pure_permutation_signed": false,
+        "signed_monomial_possible": false
+      },
+      {
+        "g": [
+          0,
+          2,
+          1
+        ],
+        "incidence": false,
+        "pure_permutation_signed": false,
+        "signed_monomial_possible": false
+      },
+      {
+        "g": [
+          0,
+          2,
+          2
+        ],
+        "incidence": false,
+        "pure_permutation_signed": false,
+        "signed_monomial_possible": false
+      },
+      {
+        "g": [
+          1,
+          0,
+          0
+        ],
+        "incidence": false,
+        "pure_permutation_signed": false,
+        "signed_monomial_possible": false
+      },
+      {
+        "g": [
+          1,
+          0,
+          1
+        ],
+        "incidence": false,
+        "pure_permutation_signed": false,
+        "signed_monomial_possible": false
+      },
+      {
+        "g": [
+          1,
+          0,
+          2
+        ],
+        "incidence": false,
+        "pure_permutation_signed": false,
+        "signed_monomial_possible": false
+      },
+      {
+        "g": [
+          1,
+          1,
+          0
+        ],
+        "incidence": false,
+        "pure_permutation_signed": false,
+        "signed_monomial_possible": false
+      },
+      {
+        "g": [
+          1,
+          1,
+          1
+        ],
+        "incidence": false,
+        "pure_permutation_signed": false,
+        "signed_monomial_possible": false
+      },
+      {
+        "g": [
+          1,
+          1,
+          2
+        ],
+        "incidence": false,
+        "pure_permutation_signed": false,
+        "signed_monomial_possible": false
+      },
+      {
+        "g": [
+          1,
+          2,
+          0
+        ],
+        "incidence": false,
+        "pure_permutation_signed": false,
+        "signed_monomial_possible": false
+      },
+      {
+        "g": [
+          1,
+          2,
+          1
+        ],
+        "incidence": false,
+        "pure_permutation_signed": false,
+        "signed_monomial_possible": false
+      },
+      {
+        "g": [
+          1,
+          2,
+          2
+        ],
+        "incidence": false,
+        "pure_permutation_signed": false,
+        "signed_monomial_possible": false
+      },
+      {
+        "g": [
+          2,
+          0,
+          0
+        ],
+        "incidence": false,
+        "pure_permutation_signed": false,
+        "signed_monomial_possible": false
+      },
+      {
+        "g": [
+          2,
+          0,
+          1
+        ],
+        "incidence": false,
+        "pure_permutation_signed": false,
+        "signed_monomial_possible": false
+      },
+      {
+        "g": [
+          2,
+          0,
+          2
+        ],
+        "incidence": false,
+        "pure_permutation_signed": false,
+        "signed_monomial_possible": false
+      },
+      {
+        "g": [
+          2,
+          1,
+          0
+        ],
+        "incidence": false,
+        "pure_permutation_signed": false,
+        "signed_monomial_possible": false
+      },
+      {
+        "g": [
+          2,
+          1,
+          1
+        ],
+        "incidence": false,
+        "pure_permutation_signed": false,
+        "signed_monomial_possible": false
+      },
+      {
+        "g": [
+          2,
+          1,
+          2
+        ],
+        "incidence": false,
+        "pure_permutation_signed": false,
+        "signed_monomial_possible": false
+      },
+      {
+        "g": [
+          2,
+          2,
+          0
+        ],
+        "incidence": false,
+        "pure_permutation_signed": false,
+        "signed_monomial_possible": false
+      },
+      {
+        "g": [
+          2,
+          2,
+          1
+        ],
+        "incidence": false,
+        "pure_permutation_signed": false,
+        "signed_monomial_possible": false
+      },
+      {
+        "g": [
+          2,
+          2,
+          2
+        ],
+        "incidence": false,
+        "pure_permutation_signed": false,
+        "signed_monomial_possible": false
+      }
+    ],
+    "preserve_signed_cubic_by_pure_permutation": 1,
+    "preserve_unsigned_triple_incidence": 3,
+    "recover_signed_cubic_with_diagonal_pm1": 3,
+    "right_H27_permutations_checked": 27,
+    "scope": "Only coordinate permutation and \u00b11 diagonal lift of the fixed canonical 45-term E6 cubic. Does not exclude general E6 linear transformations or an independent physical action.",
+    "signed_cubic_triples": 45,
+    "status": "EXACT_H27_TRANSLATION_CUBIC_COMPATIBILITY_AUDIT"
+  },
+  "holography": {
+    "AME_6_3_perfect_tensor": false,
+    "choi_amplitudes": "M[out,in]/sqrt(2187), M=9U exactly integer",
+    "cuts": [
+      {
+        "cut": "012",
+        "maximally_mixed": true,
+        "purity": "1/27",
+        "rank": 27
+      },
+      {
+        "cut": "013",
+        "maximally_mixed": false,
+        "purity": "5/27",
+        "rank": 9
+      },
+      {
+        "cut": "014",
+        "maximally_mixed": false,
+        "purity": "5/27",
+        "rank": 6
+      },
+      {
+        "cut": "015",
+        "maximally_mixed": true,
+        "purity": "1/27",
+        "rank": 27
+      },
+      {
+        "cut": "023",
+        "maximally_mixed": false,
+        "purity": "5/27",
+        "rank": 6
+      },
+      {
+        "cut": "024",
+        "maximally_mixed": true,
+        "purity": "1/27",
+        "rank": 27
+      },
+      {
+        "cut": "025",
+        "maximally_mixed": false,
+        "purity": "5/27",
+        "rank": 6
+      },
+      {
+        "cut": "034",
+        "maximally_mixed": false,
+        "purity": "5/27",
+        "rank": 9
+      },
+      {
+        "cut": "035",
+        "maximally_mixed": false,
+        "purity": "5/27",
+        "rank": 6
+      },
+      {
+        "cut": "045",
+        "maximally_mixed": true,
+        "purity": "1/27",
+        "rank": 27
+      },
+      {
+        "cut": "123",
+        "maximally_mixed": true,
+        "purity": "1/27",
+        "rank": 27
+      },
+      {
+        "cut": "124",
+        "maximally_mixed": false,
+        "purity": "5/27",
+        "rank": 6
+      },
+      {
+        "cut": "125",
+        "maximally_mixed": false,
+        "purity": "5/27",
+        "rank": 9
+      },
+      {
+        "cut": "134",
+        "maximally_mixed": false,
+        "purity": "5/27",
+        "rank": 6
+      },
+      {
+        "cut": "135",
+        "maximally_mixed": true,
+        "purity": "1/27",
+        "rank": 27
+      },
+      {
+        "cut": "145",
+        "maximally_mixed": false,
+        "purity": "5/27",
+        "rank": 6
+      },
+      {
+        "cut": "234",
+        "maximally_mixed": true,
+        "purity": "1/27",
+        "rank": 27
+      },
+      {
+        "cut": "235",
+        "maximally_mixed": false,
+        "purity": "5/27",
+        "rank": 6
+      },
+      {
+        "cut": "245",
+        "maximally_mixed": false,
+        "purity": "5/27",
+        "rank": 9
+      },
+      {
+        "cut": "345",
+        "maximally_mixed": true,
+        "purity": "1/27",
+        "rank": 27
+      }
+    ],
+    "num_3_vs_3_cuts": 20,
+    "number_maximally_mixed": 8,
+    "purity_census": {
+      "1/27": 8,
+      "5/27": 12
+    },
+    "rank_census": {
+      "27": 8,
+      "6": 8,
+      "9": 4
+    },
+    "scope": "U Choi not an AME(6,3) perfect tensor; does not forbid adding ancillas/code encoders or separate holographic QECC constructions.",
+    "status": "EXACT_SIX_QUTRIT_CHOI_THREE_VS_THREE_CUT_CENSUS"
+  },
+  "optical": {
+    "assumed_phase_path_eta": 0.9,
+    "ccz_phase_sites": 8,
+    "conditional_fidelity_general": "(19+8 sqrt(eta_P))^2/[27(19+8 eta_P)] for each basis input",
+    "expected_process_fidelity_formula": "(369+304 exp(-sigma\u00b2/2)+56 exp(-sigma\u00b2))/729",
+    "expected_process_fidelity_phase_only": 0.9971558084561439,
+    "fourier_3mode_tritters": 54,
+    "important_hardware_distinction": "mode-encoded virtual 3-qutrit CCZ is not a deterministic entangling CCZ between three separated photons",
+    "independent_gaussian_phase_sigma_radians": 0.1,
+    "mode_count": 27,
+    "model": "six serial tritter crossings per path, each power transmission eta_T; eight special phase paths additionally have power transmission eta_P, rest unit. Coherent postselected no-click environment. No mode mixing, crosstalk, source or detector errors.",
+    "passive_27_mode_wiring_permutations": 2,
+    "phase_site_counts": {
+      "minus120": 4,
+      "plus120": 4,
+      "zero": 19
+    },
+    "postselected_state_fidelity_for_computational_input": 0.9994341569230368,
+    "postselected_survival_at_unit_tritter_eta": 0.9703703703703703,
+    "realization": "single photon with an experimentally addressable 27-dimensional mode space; arbitrary U(27) is linear optics",
+    "scope": "Theoretical mode-circuit synthesis with illustrative conditional noise models; not gate fidelity data nor universal scalable optical quantum processing.",
+    "status": "EXACT_27_MODE_INTERFEROMETER_COMPILATION",
+    "survival_general": "eta_T^6*(19+8 eta_P)/27 for any computational basis input"
+  },
+  "schema": "toe.20261113.second_pass.multifront.v1"
+}

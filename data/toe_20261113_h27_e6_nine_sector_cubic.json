@@ -1,0 +1,79 @@
+{
+  "b_fibre_patterns": {
+    "000": 6,
+    "012": 27,
+    "111": 6,
+    "222": 6
+  },
+  "canonical_E6_signed_cubic_triples": 45,
+  "central_h27_generator": [
+    0,
+    0,
+    1
+  ],
+  "central_permutation_cycle_lengths": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "decomposition": "18 intra-sector determinant-like monomials and 27 trilinear cross-sector monomials, exactly canonical det(A)+det(B)+det(C)-tr(ABC) support counts",
+  "explicit_target_coordinate_negative_sign_indices": [
+    4,
+    6,
+    10,
+    11,
+    14,
+    15,
+    23,
+    24,
+    25,
+    26
+  ],
+  "integer_random_vector_norm_invariance_tests": 100,
+  "negative_coordinate_sign_count": 10,
+  "nine_sector_ids_by_b": {
+    "0": [
+      0,
+      3,
+      6,
+      11,
+      14,
+      17,
+      21,
+      22,
+      26
+    ],
+    "1": [
+      1,
+      4,
+      7,
+      9,
+      12,
+      15,
+      19,
+      23,
+      25
+    ],
+    "2": [
+      2,
+      5,
+      8,
+      10,
+      13,
+      16,
+      18,
+      20,
+      24
+    ]
+  },
+  "nine_sectors_equal_standard_3_matrix_blocks_as_unordered_sets": false,
+  "scope": "Concrete monomial lift of center only; the 24 noncentral right H27 shifts violate unsigned 45-triple incidence with current address map. This is not a no-go against nonmonomial E6 representations or mass derivations.",
+  "signed_order_three_lift_exists": true,
+  "status": "ORDER3_SIGNED_LIFT"
+}
