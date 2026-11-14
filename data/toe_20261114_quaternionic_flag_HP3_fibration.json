@@ -1,0 +1,17 @@
+{
+  "balanced_top_eigenline_orbit_dimension": 12,
+  "boundary_to_horizon_tangent_rank": "42->28",
+  "exact_fiber_image_rank": 12,
+  "exact_tangent_stacked_rank": 24,
+  "forgotten_fiber": "Sp(3)/Sp(1)^3",
+  "full_flag": "Sp(4)/Sp(1)^4",
+  "generic_quaternionic_flag_orbit_dimension": 24,
+  "horizon_orbit": "HP^3=Sp(4)/(Sp(1)xSp(3))",
+  "kernel_decomposition": "14 = 12 angular quaternionic flag directions + 2 STU radial directions",
+  "limitations": "Compact homogeneous-space fibration and local STU tangent dimension decomposition only, not global uniqueness of physical radial boundary-value solutions.",
+  "physical_balanced_example": "Pauli triad (0.2,0.2,0.2), positive density",
+  "physical_generic_example": "Pauli triad (0.1,0.2,0.4), positive density",
+  "same_top_quaternionic_eigenline": true,
+  "status": "PASS_EXACT_QUATERNIONIC_FLAG_TO_HP3_ATTRACTOR_FIBRATION",
+  "two_equal_eigenvalues_orbit_dimension": 20
+}
