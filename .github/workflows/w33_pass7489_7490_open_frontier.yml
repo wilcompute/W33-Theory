@@ -1,0 +1,88 @@
+name: W33 Pass7489-7492 open frontier
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'analysis/w33_pass7489_third1440_marked_sixer_bundle.py'
+      - 'analysis/w33_pass7491_e8_1120_outer_triality.py'
+      - 'analysis/w33_pass7492_marked_triple_w33_point_equivariant.py'
+      - '.github/workflows/w33_pass7489_7490_open_frontier.yml'
+  workflow_dispatch:
+
+jobs:
+  third1440:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install networkx numpy
+      - name: Reconstruct 72 sixers and 1440 marked triples
+        run: python analysis/w33_pass7489_third1440_marked_sixer_bundle.py
+      - name: Check frozen invariants
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('data/PART_W33_PASS7489_THIRD1440_MARKED_SIXER_BUNDLE.json'))
+          assert d['status']=='PASS'
+          assert d['cubic_surface_counts']['marked_sixer_triples']==1440
+          assert d['orbit_stabilizer']['marked_sixer_triple_orbit']['stabilizer_order']==36
+          assert d['orbit_stabilizer']['double_six_stabilizer_on_its_marked_fibre']['fibre_size']==40
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass7489-third1440
+          path: data/PART_W33_PASS7489_THIRD1440_MARKED_SIXER_BUNDLE.json
+  outer-triality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy networkx pynauty
+      - name: Compute full automorphism group of uncoloured 3x1120 incidence graph
+        run: python analysis/w33_pass7491_e8_1120_outer_triality.py
+      - name: Check D4(2):S3 closure
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('data/PART_W33_PASS7491_E8_1120_OUTER_TRIALITY.json'))
+          assert d['status']=='PASS'
+          assert d['uncoloured_automorphism_order']==6*d['type_coloured_automorphism_order']
+          assert sorted(d['explicit_type_cycle'])==[0,1,2]
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass7491-outer-triality
+          path: data/PART_W33_PASS7491_E8_1120_OUTER_TRIALITY.json
+  marked-triple-w33:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy networkx
+      - name: Build common order-1440 stabilizer action on both 40-point sets
+        run: python analysis/w33_pass7492_marked_triple_w33_point_equivariant.py
+      - name: Check exact equivariant bridge
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('data/PART_W33_PASS7492_MARKED_TRIPLE_W33_POINT_EQUIVARIANT.json'))
+          assert d['status']=='PASS'
+          assert d['double_six_stabilizer_order']==1440
+          assert d['marked_point_stabilizer_order']==36
+          assert len(set(d['equivariant_bijection_marked_index_to_W33_point']))==40
+          assert d['elementwise_permutation_characters_equal']
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass7492-marked-triple-w33
+          path: data/PART_W33_PASS7492_MARKED_TRIPLE_W33_POINT_EQUIVARIANT.json
