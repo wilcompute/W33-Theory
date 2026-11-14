@@ -1,0 +1,150 @@
+{
+  "classification": "INDEPENDENT_SAT_FRONT_UNDECIDED",
+  "overall_proof_boundary": "The previously reported DFS exclusion is not itself a DRAT/LRAT certificate. A full independently checked no-size8 proof requires UNSAT for both n5 class reps and checker-verified proof logs.",
+  "records": [
+    {
+      "CDCL_conflict_budget": 100000,
+      "build_seconds": 0.015,
+      "clause_counts": {
+        "cover": 6,
+        "exact_cardinality": 15,
+        "incompatible_pairs": 5
+      },
+      "deterministic_CNF_clause_SHA256": "896d31df72e9f92b574b1f22c96540283be9eb5748922a4cd73a5a74c1661bfe",
+      "n": 3,
+      "number_CNF_variables": 11,
+      "picks_remaining": 1,
+      "portable_DRAT_path": null,
+      "proof_boundary": "If result is UNDECIDED, no UNSAT claim. If UNSAT, proof still requires independent DRAT checker and confirmation of CNF generator. This does not rely on full 433-million-node DFS.",
+      "proof_lines": 0,
+      "rep": 14,
+      "solver_seconds": 0.001,
+      "status": "SAT_WITNESS",
+      "target_maximal_Pauli_MUB_size": 5,
+      "total_clauses": 26,
+      "universe_candidates": 6,
+      "valid_witness": [
+        53
+      ]
+    },
+    {
+      "CDCL_conflict_budget": 100000,
+      "build_seconds": 0.003,
+      "clause_counts": {
+        "cover": 6,
+        "exact_cardinality": 15,
+        "incompatible_pairs": 5
+      },
+      "deterministic_CNF_clause_SHA256": "21ebd45830fa35462c214aab3ac0b4a3d90008264a0f626091c6d68269619873",
+      "n": 3,
+      "number_CNF_variables": 11,
+      "picks_remaining": 1,
+      "portable_DRAT_path": null,
+      "proof_boundary": "If result is UNDECIDED, no UNSAT claim. If UNSAT, proof still requires independent DRAT checker and confirmation of CNF generator. This does not rely on full 433-million-node DFS.",
+      "proof_lines": 0,
+      "rep": 15,
+      "solver_seconds": 0.0,
+      "status": "SAT_WITNESS",
+      "target_maximal_Pauli_MUB_size": 5,
+      "total_clauses": 26,
+      "universe_candidates": 6,
+      "valid_witness": [
+        50
+      ]
+    },
+    {
+      "CDCL_conflict_budget": 100000,
+      "build_seconds": 0.002,
+      "clause_counts": {
+        "cover": 6,
+        "exact_cardinality": 36,
+        "incompatible_pairs": 5
+      },
+      "deterministic_CNF_clause_SHA256": "b9ba196a5825dd6990612204bb2dc461acb80d14a553863fcbafc099d8cedfe6",
+      "n": 3,
+      "number_CNF_variables": 24,
+      "picks_remaining": 3,
+      "portable_DRAT_path": null,
+      "proof_boundary": "If result is UNDECIDED, no UNSAT claim. If UNSAT, proof still requires independent DRAT checker and confirmation of CNF generator. This does not rely on full 433-million-node DFS.",
+      "proof_lines": 0,
+      "rep": 14,
+      "solver_seconds": 0.001,
+      "status": "UNSAT_CADICAL",
+      "target_maximal_Pauli_MUB_size": 7,
+      "total_clauses": 47,
+      "universe_candidates": 6,
+      "valid_witness": null
+    },
+    {
+      "CDCL_conflict_budget": 100000,
+      "build_seconds": 0.003,
+      "clause_counts": {
+        "cover": 6,
+        "exact_cardinality": 36,
+        "incompatible_pairs": 5
+      },
+      "deterministic_CNF_clause_SHA256": "845b96f69ea5ca966c2f5c573ae3ab4f45618ed9301f6f9d8edfdd15a3d7cc9d",
+      "n": 3,
+      "number_CNF_variables": 24,
+      "picks_remaining": 3,
+      "portable_DRAT_path": null,
+      "proof_boundary": "If result is UNDECIDED, no UNSAT claim. If UNSAT, proof still requires independent DRAT checker and confirmation of CNF generator. This does not rely on full 433-million-node DFS.",
+      "proof_lines": 0,
+      "rep": 15,
+      "solver_seconds": 0.0,
+      "status": "UNSAT_CADICAL",
+      "target_maximal_Pauli_MUB_size": 7,
+      "total_clauses": 47,
+      "universe_candidates": 6,
+      "valid_witness": null
+    },
+    {
+      "CDCL_conflict_budget": 30000,
+      "build_seconds": 12.376,
+      "clause_counts": {
+        "cover": 2336,
+        "exact_cardinality": 37312,
+        "incompatible_pairs": 1646064
+      },
+      "deterministic_CNF_clause_SHA256": "554eb8521d4f0148f44ef001e64253ff711187e849ff217ee91ecda304a0174c",
+      "n": 5,
+      "number_CNF_variables": 20992,
+      "picks_remaining": 4,
+      "portable_DRAT_path": null,
+      "proof_boundary": "If result is UNDECIDED, no UNSAT claim. If UNSAT, proof still requires independent DRAT checker and confirmation of CNF generator. This does not rely on full 433-million-node DFS.",
+      "proof_lines": 0,
+      "rep": 692,
+      "solver_seconds": 77.68,
+      "status": "UNDECIDED_BOUNDED_CONFLICTS",
+      "target_maximal_Pauli_MUB_size": 8,
+      "total_clauses": 1685712,
+      "universe_candidates": 2336,
+      "valid_witness": null
+    },
+    {
+      "CDCL_conflict_budget": 30000,
+      "build_seconds": 9.11,
+      "clause_counts": {
+        "cover": 2336,
+        "exact_cardinality": 37312,
+        "incompatible_pairs": 1646064
+      },
+      "deterministic_CNF_clause_SHA256": "86cf802ba6f431603f033e0ea33e93d70113f857ec01c05053267ee7eb40af65",
+      "n": 5,
+      "number_CNF_variables": 20992,
+      "picks_remaining": 4,
+      "portable_DRAT_path": null,
+      "proof_boundary": "If result is UNDECIDED, no UNSAT claim. If UNSAT, proof still requires independent DRAT checker and confirmation of CNF generator. This does not rely on full 433-million-node DFS.",
+      "proof_lines": 0,
+      "rep": 694,
+      "solver_seconds": 56.747,
+      "status": "UNDECIDED_BOUNDED_CONFLICTS",
+      "target_maximal_Pauli_MUB_size": 8,
+      "total_clauses": 1685712,
+      "universe_candidates": 2336,
+      "valid_witness": null
+    }
+  ],
+  "solver": "PySAT CaDiCaL 195 with DRAT logging, conflict-budgeted",
+  "status": "PASS_INDEPENDENT_CADICAL_GF2_RANK_CODE_CNF_CONSTRUCTION"
+}

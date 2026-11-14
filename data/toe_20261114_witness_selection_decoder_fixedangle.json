@@ -1,0 +1,394 @@
+{
+  "records": {
+    "five_six_section_domainwall": {
+      "coordinate_intersection_histogram": {
+        "0": 5832,
+        "1": 4320,
+        "2": 4320,
+        "4": 1080
+      },
+      "cross_contraction_edges_histogram": {
+        "10": 432,
+        "11": 4320,
+        "16": 4320,
+        "2": 1080,
+        "22": 1080,
+        "6": 4320
+      },
+      "dynamical_test": "gradient descent to either endpoint for 4 initial weights; middle t=.5 unstable",
+      "five_sections": 216,
+      "limit": "The toy potential is not derived from the E6 exceptional-field-theory action or a covariant dynamical section-selection theory.",
+      "maximum_cross_tensor_squared_norm": 22,
+      "minimum_cross_tensor_squared_norm": 2,
+      "no_go": "Positive bilinear strong-constraint penalty excludes unconstrained simultaneous dependence on two different maximal coordinate sections; does NOT select 5D over 6D without other field data.",
+      "six_sections": 72,
+      "status": "PASS_STRONG_CONSTRAINT_CROSS_BRANCH_OBSTRUCTION",
+      "total_cross_pairs": 15552,
+      "toy_mixing_potential": "V_gamma(t)=gamma*B(S5,S6)*t*(1-t), gamma>0, t in [0,1]",
+      "two_equal_minima": "t=0 (IIB 5D) and t=1 (M 6D)"
+    },
+    "four_copy_design_witness": {
+      "HP3_Haar_E_z4": "1/33",
+      "caveat": "Visibility eta must be calibrated for the testing model; one quartet consumes four independently prepared copies. Ensemble preparations are independent between quartets.",
+      "exact_binomial_likelihood_thresholds": {
+        "0.8": {
+          "Haar_fourth_mean": 0.012412121212121215,
+          "false_positive_Haar": 0.04911556551538931,
+          "finite_fourth_mean": 0.04551111111111112,
+          "per_copy_visibility": 0.8,
+          "power_against_finite_180": 0.9014543586908299,
+          "prepared_copies": 31600,
+          "quartets": 7900,
+          "signal_gap": 0.033098989898989906,
+          "threshold_positive_quartets": 4073
+        },
+        "0.9": {
+          "Haar_fourth_mean": 0.01988181818181818,
+          "false_positive_Haar": 0.049337475119365204,
+          "finite_fourth_mean": 0.0729,
+          "per_copy_visibility": 0.9,
+          "power_against_finite_180": 0.9117680885712033,
+          "prepared_copies": 12800,
+          "quartets": 3200,
+          "signal_gap": 0.053018181818181825,
+          "threshold_positive_quartets": 1679
+        },
+        "1.0": {
+          "Haar_fourth_mean": 0.030303030303030304,
+          "false_positive_Haar": 0.04708078434410608,
+          "finite_fourth_mean": 0.1111111111111111,
+          "per_copy_visibility": 1.0,
+          "power_against_finite_180": 0.9128950747160975,
+          "prepared_copies": 5600,
+          "quartets": 1400,
+          "signal_gap": 0.0808080808080808,
+          "threshold_positive_quartets": 753
+        }
+      },
+      "finite_E_z4": "1/9",
+      "measurement": "four independent +/- measurements of a single J-even Pauli on four copies of same prepared pure state, product of signs",
+      "status": "PASS_FOUR_COPY_QUARTET_PHOTON_SHOT_WITNESS"
+    },
+    "noisy_logical_qubit_decoder": {
+      "Hoeffding_95percent_each_axis_error_bound_240_shots": 0.1997392413202366,
+      "adaptive_budget360_visibility081": {
+        "mean_fidelity_adaptive": 0.9946696156454984,
+        "mean_fidelity_equal": 0.9945816845025947,
+        "observed_adaptive_minus_equal": 8.793114290372994e-05,
+        "pilot_shots_per_axis": 12
+      },
+      "caveat": "Known one of 180 charge projectors, ideal independent Pauli shots, calibrated common visibility; this is a sampling model not hardware or fault tolerance. Adaptive estimation need not beat equal allocation at finite sample.",
+      "per_axis_shots": [
+        20,
+        80,
+        240
+      ],
+      "physical_visibility_levels": [
+        1,
+        0.81,
+        0.65
+      ],
+      "results": {
+        "0.65": {
+          "20": {
+            "calibration_not_needed_for_pure_direction": true,
+            "lower_fifth_percentile_fidelity": 0.8378014867526891,
+            "mean_fidelity": 0.9468621077556295,
+            "total_measurements": 60,
+            "upper_95_percentile_infidelity": 0.16219851324731097
+          },
+          "240": {
+            "calibration_not_needed_for_pure_direction": true,
+            "lower_fifth_percentile_fidelity": 0.9865031656160925,
+            "mean_fidelity": 0.9954705599458871,
+            "total_measurements": 720,
+            "upper_95_percentile_infidelity": 0.013496834383907447
+          },
+          "80": {
+            "calibration_not_needed_for_pure_direction": true,
+            "lower_fifth_percentile_fidelity": 0.9573874855695458,
+            "mean_fidelity": 0.9864644441133247,
+            "total_measurements": 240,
+            "upper_95_percentile_infidelity": 0.042612514430454246
+          }
+        },
+        "0.81": {
+          "20": {
+            "calibration_not_needed_for_pure_direction": true,
+            "lower_fifth_percentile_fidelity": 0.8982965271618769,
+            "mean_fidelity": 0.9673711147111076,
+            "total_measurements": 60,
+            "upper_95_percentile_infidelity": 0.10170347283812316
+          },
+          "240": {
+            "calibration_not_needed_for_pure_direction": true,
+            "lower_fifth_percentile_fidelity": 0.9915996104498851,
+            "mean_fidelity": 0.9972246109434505,
+            "total_measurements": 720,
+            "upper_95_percentile_infidelity": 0.008400389550114896
+          },
+          "80": {
+            "calibration_not_needed_for_pure_direction": true,
+            "lower_fifth_percentile_fidelity": 0.9743166936208159,
+            "mean_fidelity": 0.9916297773278239,
+            "total_measurements": 240,
+            "upper_95_percentile_infidelity": 0.025683306379184173
+          }
+        },
+        "1.0": {
+          "20": {
+            "calibration_not_needed_for_pure_direction": true,
+            "lower_fifth_percentile_fidelity": 0.9414686620404054,
+            "mean_fidelity": 0.980796080777803,
+            "total_measurements": 60,
+            "upper_95_percentile_infidelity": 0.0585313379595947
+          },
+          "240": {
+            "calibration_not_needed_for_pure_direction": true,
+            "lower_fifth_percentile_fidelity": 0.9950559449659823,
+            "mean_fidelity": 0.9983793527812096,
+            "total_measurements": 720,
+            "upper_95_percentile_infidelity": 0.004944055034017786
+          },
+          "80": {
+            "calibration_not_needed_for_pure_direction": true,
+            "lower_fifth_percentile_fidelity": 0.984656489574281,
+            "mean_fidelity": 0.9950199230710542,
+            "total_measurements": 240,
+            "upper_95_percentile_infidelity": 0.015343510425719012
+          }
+        }
+      },
+      "samples_pure_states": 4320,
+      "signed_12_measurement_menu": [
+        1,
+        8,
+        9,
+        21,
+        28,
+        29,
+        35,
+        42,
+        43,
+        55,
+        62,
+        63
+      ],
+      "status": "PASS_FINITE_SHOT_180_FIBER_HIDDEN_QUBIT_DECODER",
+      "visibility_explanation": "eta=(1-depolarizing_fraction)*(1-2*readout_bitflip_rate); 0.81 corresponds to 10% and 5%"
+    },
+    "one_radian_fixed_gate_compiler": {
+      "Clifford_signed_root_orbit_size": 72,
+      "depth_vs_fidelity": {
+        "1000": {
+          "all_five_trials": [
+            {
+              "Clifford_conjugation_gates_upper_bound": 132,
+              "certified_lower_bound_target_fidelity": 0.9996465827429388,
+              "continuous_vs_integer_state_fidelity": 0.9996465837131753,
+              "max_single_angle_mod_pi_error": 0.003976901063984073,
+              "sum_angles_mod_pi_error": 0.08523294139276949,
+              "unit_radian_ticks": 37025
+            },
+            {
+              "Clifford_conjugation_gates_upper_bound": 124,
+              "certified_lower_bound_target_fidelity": 0.9996614711503423,
+              "continuous_vs_integer_state_fidelity": 0.9996614711503423,
+              "max_single_angle_mod_pi_error": 0.004198643892705078,
+              "sum_angles_mod_pi_error": 0.0989607222420883,
+              "unit_radian_ticks": 37228
+            },
+            {
+              "Clifford_conjugation_gates_upper_bound": 128,
+              "certified_lower_bound_target_fidelity": 0.9996582401258008,
+              "continuous_vs_integer_state_fidelity": 0.9996582441360659,
+              "max_single_angle_mod_pi_error": 0.004259168191408591,
+              "sum_angles_mod_pi_error": 0.11415989286619599,
+              "unit_radian_ticks": 37575
+            },
+            {
+              "Clifford_conjugation_gates_upper_bound": 124,
+              "certified_lower_bound_target_fidelity": 0.9997953700242175,
+              "continuous_vs_integer_state_fidelity": 0.9997953718327469,
+              "max_single_angle_mod_pi_error": 0.004270299957694235,
+              "sum_angles_mod_pi_error": 0.09408086288369866,
+              "unit_radian_ticks": 36168
+            },
+            {
+              "Clifford_conjugation_gates_upper_bound": 132,
+              "certified_lower_bound_target_fidelity": 0.9996694137551579,
+              "continuous_vs_integer_state_fidelity": 0.999669414693543,
+              "max_single_angle_mod_pi_error": 0.004307318824510631,
+              "sum_angles_mod_pi_error": 0.10579957145851715,
+              "unit_radian_ticks": 35855
+            }
+          ],
+          "max_Clifford_conjugators": 132,
+          "max_signed_tick_bound": 1000,
+          "max_unit_ticks": 37575,
+          "mean_unit_ticks": 36770.2,
+          "min_certified_target_fidelity": 0.9996465827429388,
+          "min_fidelity_vs_continuous": 0.9996465837131753
+        },
+        "250": {
+          "all_five_trials": [
+            {
+              "Clifford_conjugation_gates_upper_bound": 126,
+              "certified_lower_bound_target_fidelity": 0.9996316887402104,
+              "continuous_vs_integer_state_fidelity": 0.9996316897306726,
+              "max_single_angle_mod_pi_error": 0.004038785324846472,
+              "sum_angles_mod_pi_error": 0.08803636625660771,
+              "unit_radian_ticks": 5044
+            },
+            {
+              "Clifford_conjugation_gates_upper_bound": 112,
+              "certified_lower_bound_target_fidelity": 0.9996445079180917,
+              "continuous_vs_integer_state_fidelity": 0.9996445079180917,
+              "max_single_angle_mod_pi_error": 0.004278611711574953,
+              "sum_angles_mod_pi_error": 0.10191486887322498,
+              "unit_radian_ticks": 4052
+            },
+            {
+              "Clifford_conjugation_gates_upper_bound": 124,
+              "certified_lower_bound_target_fidelity": 0.9996446893741182,
+              "continuous_vs_integer_state_fidelity": 0.9996446934630864,
+              "max_single_angle_mod_pi_error": 0.00431945689815727,
+              "sum_angles_mod_pi_error": 0.11702626952518091,
+              "unit_radian_ticks": 5115
+            },
+            {
+              "Clifford_conjugation_gates_upper_bound": 118,
+              "certified_lower_bound_target_fidelity": 0.9997851008912699,
+              "continuous_vs_integer_state_fidelity": 0.9997851027446141,
+              "max_single_angle_mod_pi_error": 0.004330588664364754,
+              "sum_angles_mod_pi_error": 0.09691443210093786,
+              "unit_radian_ticks": 3936
+            },
+            {
+              "Clifford_conjugation_gates_upper_bound": 128,
+              "certified_lower_bound_target_fidelity": 0.9996538171210662,
+              "continuous_vs_integer_state_fidelity": 0.9996538180813243,
+              "max_single_angle_mod_pi_error": 0.004397751884701151,
+              "sum_angles_mod_pi_error": 0.10857285196952371,
+              "unit_radian_ticks": 4653
+            }
+          ],
+          "max_Clifford_conjugators": 128,
+          "max_signed_tick_bound": 250,
+          "max_unit_ticks": 5115,
+          "mean_unit_ticks": 4560.0,
+          "min_certified_target_fidelity": 0.9996316887402104,
+          "min_fidelity_vs_continuous": 0.9996316897306726
+        },
+        "4000": {
+          "all_five_trials": [
+            {
+              "Clifford_conjugation_gates_upper_bound": 132,
+              "certified_lower_bound_target_fidelity": 0.9997001756122463,
+              "continuous_vs_integer_state_fidelity": 0.9997001765059196,
+              "max_single_angle_mod_pi_error": 0.003735746236960935,
+              "sum_angles_mod_pi_error": 0.07430483814960631,
+              "unit_radian_ticks": 166245
+            },
+            {
+              "Clifford_conjugation_gates_upper_bound": 124,
+              "certified_lower_bound_target_fidelity": 0.9997283197613724,
+              "continuous_vs_integer_state_fidelity": 0.9997283197613724,
+              "max_single_angle_mod_pi_error": 0.003947023824759199,
+              "sum_angles_mod_pi_error": 0.08801565734315453,
+              "unit_radian_ticks": 166448
+            },
+            {
+              "Clifford_conjugation_gates_upper_bound": 128,
+              "certified_lower_bound_target_fidelity": 0.9997099475814085,
+              "continuous_vs_integer_state_fidelity": 0.9997099512759617,
+              "max_single_angle_mod_pi_error": 0.003987869011234935,
+              "sum_angles_mod_pi_error": 0.10306677082279059,
+              "unit_radian_ticks": 168215
+            },
+            {
+              "Clifford_conjugation_gates_upper_bound": 124,
+              "certified_lower_bound_target_fidelity": 0.9998336478672676,
+              "continuous_vs_integer_state_fidelity": 0.9998336494979274,
+              "max_single_angle_mod_pi_error": 0.004015555045585373,
+              "sum_angles_mod_pi_error": 0.08342400358870528,
+              "unit_radian_ticks": 162193
+            },
+            {
+              "Clifford_conjugation_gates_upper_bound": 132,
+              "certified_lower_bound_target_fidelity": 0.9997281011395804,
+              "continuous_vs_integer_state_fidelity": 0.9997281019906303,
+              "max_single_angle_mod_pi_error": 0.004066163997260119,
+              "sum_angles_mod_pi_error": 0.09509921254753628,
+              "unit_radian_ticks": 161880
+            }
+          ],
+          "max_Clifford_conjugators": 132,
+          "max_signed_tick_bound": 4000,
+          "max_unit_ticks": 168215,
+          "mean_unit_ticks": 164996.2,
+          "min_certified_target_fidelity": 0.9997001756122463,
+          "min_fidelity_vs_continuous": 0.9997001765059196
+        },
+        "80": {
+          "all_five_trials": [
+            {
+              "Clifford_conjugation_gates_upper_bound": 114,
+              "certified_lower_bound_target_fidelity": 0.9750239458207013,
+              "continuous_vs_integer_state_fidelity": 0.9750239538759741,
+              "max_single_angle_mod_pi_error": 0.04189683566413116,
+              "sum_angles_mod_pi_error": 0.5680036040456373,
+              "unit_radian_ticks": 2325
+            },
+            {
+              "Clifford_conjugation_gates_upper_bound": 112,
+              "certified_lower_bound_target_fidelity": 0.9931816598112901,
+              "continuous_vs_integer_state_fidelity": 0.9931816598112901,
+              "max_single_angle_mod_pi_error": 0.038588664308432996,
+              "sum_angles_mod_pi_error": 0.39801242209623866,
+              "unit_radian_ticks": 2340
+            },
+            {
+              "Clifford_conjugation_gates_upper_bound": 124,
+              "certified_lower_bound_target_fidelity": 0.988709546643648,
+              "continuous_vs_integer_state_fidelity": 0.988709569566987,
+              "max_single_angle_mod_pi_error": 0.043910010773482,
+              "sum_angles_mod_pi_error": 0.6597544503183004,
+              "unit_radian_ticks": 2563
+            },
+            {
+              "Clifford_conjugation_gates_upper_bound": 114,
+              "certified_lower_bound_target_fidelity": 0.9888309854984748,
+              "continuous_vs_integer_state_fidelity": 0.988830998786324,
+              "max_single_angle_mod_pi_error": 0.04241194825313421,
+              "sum_angles_mod_pi_error": 0.47860145458734826,
+              "unit_radian_ticks": 2315
+            },
+            {
+              "Clifford_conjugation_gates_upper_bound": 128,
+              "certified_lower_bound_target_fidelity": 0.9813710194340929,
+              "continuous_vs_integer_state_fidelity": 0.9813710264135533,
+              "max_single_angle_mod_pi_error": 0.04364370305950338,
+              "sum_angles_mod_pi_error": 0.6472653609468224,
+              "unit_radian_ticks": 2421
+            }
+          ],
+          "max_Clifford_conjugators": 128,
+          "max_signed_tick_bound": 80,
+          "max_unit_ticks": 2563,
+          "mean_unit_ticks": 2392.8,
+          "min_certified_target_fidelity": 0.9750239458207013,
+          "min_fidelity_vs_continuous": 0.9750239538759741
+        }
+      },
+      "exhaustive_signed_tick_lookup": "Search integers k in [-B,B] minimizing |theta-k| modulo pi; finite gate word uses |k| copies of fixed R_P(1) conjugated to target Pauli.",
+      "maximum_minimal_Clifford_conjugation_word_length": 2,
+      "number_compiled_targets": 5,
+      "pauli_axis_segments_each": 45,
+      "root_generator_label": 1,
+      "scope": "Explicit valid (very inefficient) Clifford+single-fixed-radian gate sequence. Angles 1 rad are a mathematical primitive, not calibrated photonic gates. No Solovay-Kitaev efficiency claim.",
+      "status": "PASS_FIXED_ONE_RADIAN_PLUS_CLIFFORD_EXPLICIT_STATE_APPROXIMANT"
+    }
+  },
+  "status": "PASS_FOUR_EXPERIMENTAL_FALSIFIER_FRONTS"
+}
