@@ -1,0 +1,87 @@
+{
+  "status": "ALL_SEVEN_LIMITED_CONTROLS_PASS",
+  "front_count": 7,
+  "additional_independent_front": "analysis/toe_20261114_f8_exact_rational_witness_refinement.py",
+  "results": {
+    "one_flux_curvature_shape": {
+      "status": "EXACT_HOMOGENEOUS_STABLE_ADS",
+      "topology": "S2 x S2, not flat T4",
+      "V_at_critical": "-6/5",
+      "dV": [
+        "0",
+        "0"
+      ],
+      "Hessian": [
+        [
+          "112/3",
+          "0"
+        ],
+        [
+          "0",
+          "144/5"
+        ]
+      ],
+      "assumptions": "9D Einstein-Maxwell, independent positively-normalized 2-form magnetic fluxes, unwarped fixed round S2 factors; only volume and relative-radius fluctuations",
+      "limitations": "Not an E6 ExFT section solution, all-moduli stabilization, fluctuation/Kaluza-Klein stability proof, or four-dimensional phenomenology"
+    },
+    "two_local_qutrit_cptp": {
+      "status": "EXACTLY_SPECIFIED_CPTP_TOY",
+      "qutrits": 2,
+      "local_dephasing": 0.25,
+      "purity": 0.7083333333333334,
+      "negativity": 0.75,
+      "min_output_eigenvalue": -2.9582283945787964e-32,
+      "other_party_marginal_unchanged": true,
+      "limitations": "The SUM gate is an assumed 2-qutrit unitary, not a derived one-photon/holonet tick; channel is not a microscopic spacetime clock"
+    },
+    "three_continuum_spectral_control": {
+      "status": "FACTORISED_HEAT_SPECTRAL_CONTROL",
+      "time": 10.0,
+      "cycle_length": 256,
+      "w33_internal_spectral_dimension": 1.7856364684900013e-40,
+      "one_cycle_product_dimension": 1.0131796844077152,
+      "four_cycle_product_dimension": 4.052718737630861,
+      "cycle_return_probability": 0.08978031188482599,
+      "limitations": "The 4D spectral behavior is deliberately inserted by four growing cycles; it is NOT emergent from the fixed W33 geometry or a Lorentzian metric"
+    },
+    "five_photonic_erasure_budget": {
+      "status": "EXACT_LOSS_ONLY_ERASURE_BUDGET",
+      "mode_count": 40,
+      "logical_subspace_dimension": 16,
+      "photon_transmission_per_pass": "49/50",
+      "operations_per_photon": 20,
+      "conditional_gate_success": "4/5",
+      "conditional_gate_count": 4,
+      "one_photon_all_success": "6366805760909027985741435139224001/23283064365386962890625000000000000",
+      "one_photon_all_success_float": 0.2734522252308867,
+      "four_photon_all_success": "1643184774938171857917000410556544806341837419599523497069764671233207565562287891877564323818254449486910838997871467298047369612896001/20194839173657902218540251271239327479634084738790988922119140625000000000000000000000000000000000000000000000000000000000000000000000000",
+      "four_photon_all_success_float": 0.08136656899360396,
+      "asymptotic_single_photon_erasure_capacity_qubits_per_channel_use": "1598434178877777985741435139224001/1192092895507812500000000000000000",
+      "limitations": "Assumes mode-independent loss, heralded failures and ideal mode processing; no logical error correction or experimentally available non-Clifford gate is established"
+    },
+    "extra_six_causal_shift": {
+      "status": "FINITE_DEPTH_CAUSAL_SHIFT",
+      "cycle_length": 31,
+      "steps_checked": 10,
+      "maximal_hops_per_tick": 1,
+      "reversible": true,
+      "limitations": "An externally specified lattice spacing and tick period are required to turn 1 hop/tick into the physical speed of light; no microscopic time arrow emerges"
+    },
+    "extra_seven_gauge_clock": {
+      "status": "EXACT_Z3_GAUGE_INVARIANT_CYCLE",
+      "gauge_assignments_exhausted": 81,
+      "wilson_flux_mod3": 1,
+      "ideal_two_path_bright_port_probability": 0.2500000000000001,
+      "limitations": "Single U(1)/Z3 cycle interference benchmark, not physical E6 gauge holonomy or geometric curvature"
+    },
+    "extra_eight_hidden_seed": {
+      "status": "EXACT_UNBOUNDED_DISTINGUISHABILITY",
+      "seed_bits": 8,
+      "output_bits": 16,
+      "total_variation_distance": "255/256",
+      "total_variation_distance_float": 0.99609375,
+      "limitations": "Computationally bounded observers without knowledge of the generator may still regard a secure PRG as indistinguishable from random; does not decide quantum interpretations"
+    }
+  },
+  "epistemic_caveat": "All tests concern explicit toy models or mathematical controls. No unbroken TOE, E6 field-equation solution, quantum speed of light derivation, or physical qudit gate implementation is implied."
+}
