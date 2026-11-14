@@ -102,7 +102,7 @@ def calculate():
     margin = certify_gram(rows)
     sizes = [1 if len(set(t)) == 1 else 3 if len(set(t)) == 2 else 6 for t in triples]
     # There are 16 identical blocks for the normalized Pauli twirl.
-    bound = (1+margin)/ (16**2*sum(s*s for s in sizes))
+    bound = (1+margin)/sum(s*s for s in sizes)
     print(rows.shape, rank, margin, bound, float(bound), flush=True)
     return dict(status="PASS", variables=len(columns), constraints=len(rows), prime=101, modular_rank=rank, zero_objective_feasible=False,
                 gram_gershgorin_margin=str(margin), full_ppt_objective_lower_bound=str(bound),

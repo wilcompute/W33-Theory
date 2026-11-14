@@ -6,6 +6,6 @@
   "modular_rank": 1326,
   "zero_objective_feasible": false,
   "gram_gershgorin_margin": "468671887/1073741824",
-  "full_ppt_objective_lower_bound": "1542413711/383729558093824",
-  "decimal_lower_bound": 4.019533232367967e-06
+  "full_ppt_objective_lower_bound": "1542413711/1498943586304",
+  "decimal_lower_bound": 0.0010290005074861995
 }
