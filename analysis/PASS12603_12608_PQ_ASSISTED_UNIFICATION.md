@@ -93,3 +93,18 @@ For `193b7c00a`, by the same estimate its one-field witnesses give τ ≈ 5×10�
 ## Sources
 
 arXiv:1705.05370, 2502.02398, 2308.08585, 2001.05235, 1611.05478. Super-K p→e⁺π⁰ 2.4×10³⁴ yr as quoted in `193b7c00a`.
+
+## Addendum (Pass 12668, 2026-11-14): the haloscope comparison asked for above
+
+Prediction: N_DW = 1, E/N = 2/3, so g_aγγ = |E/N − 1.92|/1.92 ≈ **0.65 × g_KSVZ**, at **m_a ≈ 25–60 μeV** (about 6.0–14.5 GHz). Published limits found in a web search (November 2026):
+
+| experiment | mass range | reach | overlap with the prediction |
+|---|---|---|---|
+| HAYSTAC Phase II (PRL 134, 151006 (2025)) | 16.96–19.46 μeV | ≥ 2.86 × g_KSVZ excluded | below the window |
+| QUAX (arXiv:2506.11589, 2025) | ≈ 60 MHz near 10.2 GHz (≈ 42 μeV, about 0.25 μeV wide) | about g_KSVZ at best | inside the window, but not down to 0.65 × g_KSVZ |
+| ORGAN | 63–67 μeV; narrow band near 43 μeV | far above the QCD line | none at the predicted coupling |
+| CAPP above 6 GHz | — | no 2025 result found | — |
+
+**Result:** no published exclusion was found anywhere in 25–60 μeV at 0.65 × g_KSVZ. The prediction is **untested**, not supported.
+- The relevant future reach is high-frequency haloscopes and dielectric/plasma concepts (MADMAX, ALPHA) and quantum-limited receivers in the 6–15 GHz band.
+- The search was a web search of review and experiment pages. A systematic check against the AxionLimits compilation was not done.
