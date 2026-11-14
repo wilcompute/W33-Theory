@@ -1,0 +1,7 @@
+{
+ "points": 200007,
+ "points_with_N_positive": 158011,
+ "failures": 0,
+ "first_failures": [],
+ "worst_margin": -1.1102230246251565e-16
+}
