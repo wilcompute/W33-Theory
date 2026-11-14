@@ -1,0 +1,51 @@
+{
+  "Einstein_frame_total_radius_power": "-26/3",
+  "assumed_metric_ansatz": "unwarped block diagonal R^2 T4 metric, fixed normalized flat shape, no other fluxes/sources",
+  "exact_shape_star": "tau=(1+i sqrt3)/2",
+  "exact_volume_gradient_relation": "dV/dlogR=-(26/3)V",
+  "external_Einstein_Weyl_radius_power": "-20/3",
+  "external_dimension": 5,
+  "flux_discriminant": 3,
+  "flux_shape_minimal_energy": "2sqrt3",
+  "internal_compact_dimension": 4,
+  "necessary_additional_physics": "sources, higher curvature, negative/competing energy terms, warping/Einstein constraints, global flux/tadpole consistency, and consistent ExFT generalized Scherk-Schwarz twist or another genuine solution of field equations",
+  "no_simultaneous_finite_volume_and_shape_critical_point": true,
+  "original_E6_section_selector_status": "NOT OBTAINED",
+  "physical_dimension_correction": "Shared four ExFT internal coordinates are 9D physical directions (5 external+4 internal); compactifying those four on T4 leaves five external dimensions.",
+  "raw_integrated_flux_radius_power": "-2",
+  "sample_shape_minimized_volume_potential": [
+    {
+      "R": "1",
+      "V": "2*sqrt(3)"
+    },
+    {
+      "R": "2",
+      "V": "2**(1/3)*sqrt(3)/256"
+    },
+    {
+      "R": "3",
+      "V": "2*3**(5/6)/19683"
+    },
+    {
+      "R": "10",
+      "V": "10**(1/3)*sqrt(3)/500000000"
+    }
+  ],
+  "scholarly_basis": [
+    "https://arxiv.org/abs/1312.0614",
+    "https://link.springer.com/article/10.1007/JHEP01%282015%29131",
+    "https://www.classe.cornell.edu/~pt267/files/talks/RSKS.pdf"
+  ],
+  "shape_Hessian_at_minimum": [
+    [
+      "8 sqrt3 / 3",
+      "0"
+    ],
+    [
+      "0",
+      "8 sqrt3 / 3"
+    ]
+  ],
+  "status": "PASS_EXACT_FLUX_SHAPE_POSITIVE_HESSIAN_BUT_VOLUME_RUNAWAY",
+  "threeform_degree": 3
+}
