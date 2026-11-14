@@ -1,0 +1,32 @@
+{
+  "charge_fibers": 180,
+  "global_even_axis_menu": 21,
+  "global_odd_axis_menu": 12,
+  "ideal_greedy_per_state_expected_full_settings": 11.0,
+  "ideal_greedy_per_state_worst_full_settings": 17,
+  "menu_total": 33,
+  "noisy_charge_classification": {
+    "0.8": {
+      "correct": 718,
+      "empirical_accuracy": 0.9972222222222222,
+      "per_even_axis_shots": 85,
+      "total_even_copies_per_trial": 1785,
+      "trials": 720
+    },
+    "1.0": {
+      "correct": 719,
+      "empirical_accuracy": 0.9986111111111111,
+      "per_even_axis_shots": 54,
+      "total_even_copies_per_trial": 1134,
+      "trials": 720
+    }
+  },
+  "per_state_even_axis_nonadaptive": 21,
+  "per_state_nonadaptive_full_settings": 24,
+  "per_state_odd_axis_adaptive": 3,
+  "pure_state_max_matrix_error": 4.441312235365626e-16,
+  "pure_state_min_fidelity": 0.9999999999999992,
+  "random_pure_state_reconstructions": 720,
+  "scope": "This solves only state tomography conditioned on the known 180-charge ensemble. Requires repeated identical state preparations and charge-invariant even Pauli statistics. Finite-shot simulation does not propagate wrong charge hypotheses into odd tomography; no device experiment.",
+  "status": "PASS_FULL_E6_UNKNOWN_CHARGE_PLUS_LOGICAL_QUBIT_RECONSTRUCTION"
+}
