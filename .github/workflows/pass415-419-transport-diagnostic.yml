@@ -1,0 +1,42 @@
+name: Pass 415-419 Transport Diagnostic
+on:
+  pull_request:
+    branches: [master]
+permissions:
+  contents: read
+  issues: read
+jobs:
+  diagnose:
+    if: github.head_ref == 'agent/pass415-419-five-frontiers'
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Capture repaired transport hashes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import base64,hashlib,json,os,re,urllib.request
+          expected=['eec74e798831188a47b35b0df363df4ca2bf1d4588e34887928249ebc2414cd3','bb364531f78e616d20282e3f3fb2a8d84b934f210b0a2beffd837fc8d1f74101','b46d10a35b6c9ceb742f261b3a0a01c3c55e5ba83ae208338ed37c11e6f256f2','6dd28113eb330439aa080a14a1408b878b22e22d0676651738f8c0262f75e66c','d91b0d08a7640526ca03aa598435a74cb42e5e03fb28611458a53b44bb171e01','ebee36592c412f1be01db8214dfabdb2235fbc2ad388c8be5642d81e8099518d','d487472563b724083e88e90688d90d72ca36e8c88c637da7f067229a5ec1c0e8','dc41b18e243f8e562e0c734eca791c6a7e01e32d5a624650157778c9cd526d77','f95e977f9d6654ddeb56df22be487ad249a9fec351332a5cc6d425c14690bce9','04115060970853b40e27ea27c143ceeb757aff4dfe4ad171705a3a3d72e6f19f','b973146a20df1ad7f663e3b52ac8ea056c67c1151466b2a6de8e3275828bbd1c','01d464adda419df1987ed67bdaa98735ae731e3b9d2146631d074d56b0688e09']
+          def get(url):
+              req=urllib.request.Request(url,headers={'Authorization':f"Bearer {os.environ['GH_TOKEN']}",'Accept':'application/vnd.github+json'})
+              with urllib.request.urlopen(req) as r:return json.load(r)
+          base=f"https://api.github.com/repos/{os.environ['GITHUB_REPOSITORY']}/issues/117"; issue=get(base); comments=get(base+'/comments?per_page=100')
+          text='\n'.join([issue['body']]+[c['body'] for c in comments]); chunks={}
+          for i in range(12):
+              if i in (5,7,8):
+                  parts=[]
+                  for s in 'AB':
+                      m=re.findall(rf'PASS415_CHUNK_{i:02d}{s}_BEGIN -->\n(.*?)\n<!-- PASS415_CHUNK_{i:02d}{s}_END',text,re.S); parts.append(m[-1].strip() if m else '')
+                  chunks[i]=''.join(parts)
+              else:
+                  m=re.findall(rf'PASS415_CHUNK_{i:02d}_BEGIN -->\n(.*?)\n<!-- PASS415_CHUNK_{i:02d}_END',text,re.S); chunks[i]=m[-1].strip() if m else ''
+          report={'chunks':{str(i):{'length':len(chunks[i]),'sha256':hashlib.sha256(chunks[i].encode()).hexdigest(),'expected_sha256':expected[i],'matches':hashlib.sha256(chunks[i].encode()).hexdigest()==expected[i]} for i in range(12)}}
+          try:
+              blob=base64.b64decode(''.join(chunks[i] for i in range(12)),validate=True); report['archive']={'bytes':len(blob),'sha256':hashlib.sha256(blob).hexdigest()}
+          except Exception as exc:report['archive']={'error':repr(exc)}
+          open('transport-diagnostic.json','w').write(json.dumps(report,indent=2,sort_keys=True)+'\n')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass415-419-transport-diagnostic
+          path: transport-diagnostic.json
