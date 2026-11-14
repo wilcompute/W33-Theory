@@ -1,0 +1,96 @@
+{
+  "normalization": "T integer signed cubic entries; Y_{mknl}=\u03a3_r T_mkr T_nlr; hat\u2202\u03c7^m=\u03a3_{k,r}T_mkr \u2202_k \u03c7_r; (A\u2022B)_r=\u03a3_{n,l}T_nlr A_n B_l",
+  "references": [
+    "arxiv:1312.0614",
+    "PoS(CORFU2014)133 equations 2.7-2.15"
+  ],
+  "regions": {
+    "5": {
+      "E_bracket_jacobiators_nonzero": 16,
+      "Jacobiator_explicit_potential_numerator_ratio_observations": [
+        [
+          3
+        ],
+        [
+          3
+        ],
+        [
+          3
+        ],
+        [
+          3
+        ],
+        [
+          3
+        ],
+        [
+          3
+        ],
+        [
+          3
+        ],
+        [
+          3
+        ]
+      ],
+      "all_nonzero_Jacobiators_gauge_trivial": true,
+      "covariant_connection_commutator_matches_E_bracket": true,
+      "exact_polynomial_trials": 16,
+      "maximum_potential_integer_coefficient": 174,
+      "section_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "symmetric_Dorfman_derivative_identity": true,
+      "two_form_shift_is_gauge_trivial": true
+    },
+    "6": {
+      "E_bracket_jacobiators_nonzero": 16,
+      "Jacobiator_explicit_potential_numerator_ratio_observations": [
+        [
+          3
+        ],
+        [
+          3
+        ],
+        [
+          3
+        ],
+        [
+          3
+        ],
+        [
+          3
+        ],
+        [
+          3
+        ],
+        [
+          3
+        ],
+        [
+          3
+        ]
+      ],
+      "all_nonzero_Jacobiators_gauge_trivial": true,
+      "covariant_connection_commutator_matches_E_bracket": true,
+      "exact_polynomial_trials": 16,
+      "maximum_potential_integer_coefficient": 204,
+      "section_indices": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        9
+      ],
+      "symmetric_Dorfman_derivative_identity": true,
+      "two_form_shift_is_gauge_trivial": true
+    }
+  },
+  "scope": "Dorfman symmetrization, E-bracket commutator, Jacobiator triviality and two-form shift are exact finite polynomial checks. Does not implement the full external spacetime tensor hierarchy action/field equations.",
+  "status": "PASS_FIRST_E6_TENSOR_HIERARCHY_IDENTITIES_EXACT_POLYNOMIAL_ON_FIVE_AND_SIX"
+}

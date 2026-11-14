@@ -1,0 +1,84 @@
+{
+  "assumed_component_parameters_NOT_measured": {
+    "detector_efficiency": 0.82,
+    "per_pulse_27_branch_transmission": 0.95,
+    "per_pulse_8_branch_transmission": 0.98,
+    "per_shot_dark_click_probability": 1e-05,
+    "relative_phase_jitter_std_radians": 0.1
+  },
+  "branches": [
+    8,
+    27
+  ],
+  "control_no_loss_six_pulse_return": 1,
+  "control_no_loss_three_pulse_return": 0,
+  "full_loss_no_go": {
+    "example_projected_loss_Kraus_product": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "full_photon_loss_exactly_correctable": false,
+    "general_single_photon_loss_no_go": "For complete mode-resolved loss Kraus set {sqrt(1-eta)|vac><j|}, their pair products span the full End(C^27), so no code dim>=2 in the one-photon sector satisfies Knill-Laflamme for arbitrary photon loss. Classical heralding does not restore erased logical amplitudes.",
+    "logical_dim": 3,
+    "single_photon_modes": 27
+  },
+  "limitations": "Ideal equal coherent preparation; independent intensity loss per application; no mode-dependent crosstalk, leakage or temporal drift. The shot bound assumes known calibrated hypotheses and iid trials. An arbitrary imposed path phase pi produces the same interference: an observed dip is not uniquely evidence of USp8 or fundamental spacetime dynamics. Unrecoverable full photon loss of one carrier requires physical redundancy/ancilla photons, beyond virtual qutrit encoding.",
+  "mode_count": 35,
+  "photonic_trials": {
+    "3": {
+      "clock_central_prediction": {
+        "branch_intensity_27": 0.8573749999999999,
+        "branch_intensity_8": 0.9411919999999999,
+        "p_return_conditioned_survival": 0.0030342850573717474,
+        "p_survive": 0.8992834999999999,
+        "p_unconditioned_return": 0.0027286824863909653
+      },
+      "null_no_relative_pi": {
+        "branch_intensity_27": 0.8573749999999999,
+        "branch_intensity_8": 0.9411919999999999,
+        "p_return_conditioned_survival": 0.9969657149426282,
+        "p_survive": 0.8992834999999999,
+        "p_unconditioned_return": 0.8965548175136089
+      },
+      "return_detector_click_probability_null": 0.7351775986116555,
+      "return_detector_click_probability_pred": 0.0022474972636441493
+    },
+    "6": {
+      "clock_central_prediction": {
+        "branch_intensity_27": 0.7350918906249998,
+        "branch_intensity_8": 0.8858423808639999,
+        "p_return_conditioned_survival": 0.9953499983364549,
+        "p_survive": 0.8104671357444999,
+        "p_unconditioned_return": 0.8066984622150394
+      },
+      "null_no_relative_pi": {
+        "branch_intensity_27": 0.7350918906249998,
+        "branch_intensity_8": 0.8858423808639999,
+        "p_return_conditioned_survival": 0.9953499983364549,
+        "p_survive": 0.8104671357444999,
+        "p_unconditioned_return": 0.8066984622150394
+      },
+      "return_detector_click_probability_null": 0.6614961240889421,
+      "return_detector_click_probability_pred": 0.6614961240889421
+    }
+  },
+  "status": "PASS_LOSS_AND_NOISE_CALIBRATED_CENTRAL_Z2_AND_PHOTON_LOSS_KL_NOGO",
+  "three_pulse_classical_two_hypothesis_Bhattacharyya_bound": {
+    "Bhattacharyya_coefficient": 0.5546789744875286,
+    "shots_for_Bhattacharyya_upper_bound_error": 23,
+    "target_Bayes_error_upper_bound": 1e-06
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "all_forward_reverse_size9_witnesses_independently_checked": {
+    "data/w33_five_qubit_size9_dlx.json": {
+      "representatives": [
+        692,
+        693,
+        694,
+        695,
+        700,
+        701,
+        702,
+        703
+      ],
+      "witnesses_independently_verified": 8
+    },
+    "data/w33_five_qubit_size9_dlx_reverse.json": {
+      "representatives": [
+        692,
+        694
+      ],
+      "witnesses_independently_verified": 2
+    }
+  },
+  "all_nonsingular": 13888,
+  "all_symmetric_5x5": 32768,
+  "both_reported_complete_no_timeout": true,
+  "eight_O5_representatives": [
+    692,
+    693,
+    694,
+    695,
+    700,
+    701,
+    702,
+    703
+  ],
+  "eight_orbit_sizes": [
+    720,
+    720,
+    720,
+    720,
+    720,
+    720,
+    720,
+    720
+  ],
+  "forward_search_reported_nodes": 433517130,
+  "full_5760_candidate_orbit_partition_verified": true,
+  "inverse_S3_orbit_permutation": [
+    1,
+    0,
+    3,
+    2,
+    6,
+    7,
+    4,
+    5
+  ],
+  "nonsingular_second_candidates": 5760,
+  "orthogonal_group_O5_order": 720,
+  "proof_scope": "Independent GF2 core and exact positive-witness/canonical orbit checks. Read-only audit of negative-search logs, NOT an independent complete negative-search proof; reverse traversal is the same algorithm family and its claimed 107,943,913 nodes were not replayed.",
+  "reversed_search_reported_nodes": 107943913,
+  "shift_S3_orbit_permutation": [
+    1,
+    0,
+    5,
+    4,
+    3,
+    2,
+    7,
+    6
+  ],
+  "status": "PASS_INDEPENDENT_GF2_8_ORBITS_2_S3_CLASSES_AND_ALL_SIZE9_WITNESSES",
+  "theoretical_translation": "Two fixed graph Lagrangians plus seven nonsingular symmetric graph matrices: pairwise differences nonsingular and all 13,888 candidate extenders intersect one of the chosen.",
+  "two_S3_classes": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  ]
+}

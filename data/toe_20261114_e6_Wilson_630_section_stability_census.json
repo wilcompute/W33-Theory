@@ -1,0 +1,189 @@
+{
+  "best_nonflat_action_only_five": null,
+  "best_nonflat_action_only_six": null,
+  "distinct_action_fixed_section_signatures": [
+    {
+      "action": 0,
+      "count": 270,
+      "five": 216,
+      "six": 72
+    },
+    {
+      "action": 18,
+      "count": 360,
+      "five": 18,
+      "six": 12
+    }
+  ],
+  "flat_count": 270,
+  "lowest_action_only_five_example": null,
+  "lowest_action_only_six_example": null,
+  "nonflat_both_types": 360,
+  "nonflat_count": 360,
+  "nonflat_neither": 0,
+  "nonflat_only_five": 0,
+  "nonflat_only_six": 0,
+  "root_compact_quarter_turn_gates": 36,
+  "scope": "Only constant-link plaquettes from all 36 quarter-turn packet gates. The Wilson plaquette is gauge covariant and its trace is gauge invariant, but counting coordinate-aligned preserved sections is gauge-frame dependent unless sections are transformed too. A single-plaquette Wilson action does not establish a stable dynamical vacuum or select physical dimensions.",
+  "smallest_nonflat_examples": [
+    {
+      "fixed_sections": {
+        "5": 18,
+        "6": 12
+      },
+      "id": [
+        0,
+        1
+      ],
+      "nonflat": true,
+      "plaquette_action": 18,
+      "trace": 9
+    },
+    {
+      "fixed_sections": {
+        "5": 18,
+        "6": 12
+      },
+      "id": [
+        0,
+        2
+      ],
+      "nonflat": true,
+      "plaquette_action": 18,
+      "trace": 9
+    },
+    {
+      "fixed_sections": {
+        "5": 18,
+        "6": 12
+      },
+      "id": [
+        0,
+        3
+      ],
+      "nonflat": true,
+      "plaquette_action": 18,
+      "trace": 9
+    },
+    {
+      "fixed_sections": {
+        "5": 18,
+        "6": 12
+      },
+      "id": [
+        0,
+        4
+      ],
+      "nonflat": true,
+      "plaquette_action": 18,
+      "trace": 9
+    },
+    {
+      "fixed_sections": {
+        "5": 18,
+        "6": 12
+      },
+      "id": [
+        0,
+        5
+      ],
+      "nonflat": true,
+      "plaquette_action": 18,
+      "trace": 9
+    },
+    {
+      "fixed_sections": {
+        "5": 18,
+        "6": 12
+      },
+      "id": [
+        0,
+        6
+      ],
+      "nonflat": true,
+      "plaquette_action": 18,
+      "trace": 9
+    },
+    {
+      "fixed_sections": {
+        "5": 18,
+        "6": 12
+      },
+      "id": [
+        0,
+        8
+      ],
+      "nonflat": true,
+      "plaquette_action": 18,
+      "trace": 9
+    },
+    {
+      "fixed_sections": {
+        "5": 18,
+        "6": 12
+      },
+      "id": [
+        0,
+        9
+      ],
+      "nonflat": true,
+      "plaquette_action": 18,
+      "trace": 9
+    },
+    {
+      "fixed_sections": {
+        "5": 18,
+        "6": 12
+      },
+      "id": [
+        0,
+        10
+      ],
+      "nonflat": true,
+      "plaquette_action": 18,
+      "trace": 9
+    },
+    {
+      "fixed_sections": {
+        "5": 18,
+        "6": 12
+      },
+      "id": [
+        0,
+        12
+      ],
+      "nonflat": true,
+      "plaquette_action": 18,
+      "trace": 9
+    },
+    {
+      "fixed_sections": {
+        "5": 18,
+        "6": 12
+      },
+      "id": [
+        0,
+        16
+      ],
+      "nonflat": true,
+      "plaquette_action": 18,
+      "trace": 9
+    },
+    {
+      "fixed_sections": {
+        "5": 18,
+        "6": 12
+      },
+      "id": [
+        0,
+        17
+      ],
+      "nonflat": true,
+      "plaquette_action": 18,
+      "trace": 9
+    }
+  ],
+  "smallest_nonflat_wilson_action": 18,
+  "status": "PASS_EXHAUSTIVE_630_PAIR_ROOT_LINK_WILSON_SECTION_CENSUS",
+  "unordered_link_pairs": 630
+}
