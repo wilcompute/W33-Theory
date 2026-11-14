@@ -39,3 +39,16 @@ In the three-qubit dictionary of Passes 12665–12667:
 - that endpoint is majorised by the start.
 
 This is a statement about one map between two known structures, and it says nothing about gravity.
+
+## Addendum: the majorisation is a theorem
+
+Use the other track's diagonal frame (`analysis/2026-11-14_e6_attractor_torus.md`, 3e5e71b64). A compact transformation brings X to coefficients (a, b, c) on three commuting Paulis, with quaternionic spectrum {s₁a + s₂b + s₃c : s₁s₂s₃ = 1} and N = abc. For N > 0, flipping two signs only permutes this set, so take a ≥ b ≥ c > 0. Then x = (a+b+c, a−b−c, b−a−c, c−a−b) in decreasing order, and the endpoint is g·(3, −1, −1, −1) with g = (abc)^{1/3}.
+
+| partial sum | start | endpoint | reason |
+|---|---|---|---|
+| 1 | a + b + c | 3g | AM-GM |
+| 2 | 2a | 2g | the maximum is at least the geometric mean |
+| 3 | a + b − c | g | a + b − c ≥ a ≥ g, since b ≥ c |
+| 4 | 0 | 0 | traceless |
+
+**Theorem.** For every charge with N > 0 (in particular every state with N > 0), the quaternionic spectrum majorises N^{1/3}·(3, −1, −1, −1). Equality holds iff a = b = c, i.e. the charge is N^{1/3} times a pure-state charge. Consequently the pseudo-pure endpoint ρ* is a random-permutation mixture of ρ_J (Birkhoff), as found numerically in §3. The caveat about ρ ↦ ρ_J not being a channel stands.

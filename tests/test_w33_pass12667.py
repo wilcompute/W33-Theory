@@ -33,3 +33,15 @@ def test_majorisation_spot_checks_independent():
         b = np.array([c / 2 + (1 - c) / 8] * 2 + [(1 - c) / 8] * 6)
         assert np.all(np.cumsum(a) >= np.cumsum(b) - 1e-12)
         assert np.min(np.linalg.eigvalsh(np.diag(b))) >= -1e-15
+
+
+def test_majorisation_theorem_in_diagonal_frame():
+    """a >= b >= c > 0: spectrum (a+b+c, a-b-c, b-a-c, c-a-b) majorises g(3,-1,-1,-1), g = (abc)^(1/3)."""
+    rng = np.random.default_rng(5)
+    for _ in range(20000):
+        a, b, c = sorted(rng.exponential(size=3), reverse=True)
+        x = np.sort([a + b + c, a - b - c, b - a - c, c - a - b])[::-1]
+        g = (a * b * c) ** (1 / 3)
+        y = g * np.array([3, -1, -1, -1])
+        assert np.all(np.cumsum(x) >= np.cumsum(y) - 1e-12) and abs(x.sum()) < 1e-12
+        assert abs(x[0] - (a + b + c)) < 1e-12 and abs(x[1] - (a - b - c)) < 1e-12
