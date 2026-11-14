@@ -1,0 +1,21 @@
+{
+ "Mt_for_lambda_MPl_zero": 171.03945887445886,
+ "error": 0.37077321663879115,
+ "comparisons": {
+  "direct_run1_combination (MC mass, PDG 2026 still cites it)": {
+   "value": 172.52,
+   "sigma": 0.33,
+   "pull": 2.982799867062582
+  },
+  "preliminary pole combination (Nov 2025 talk; Pass 12537)": {
+   "value": 172.25,
+   "sigma": 0.95,
+   "pull": 1.187048770336393
+  },
+  "ATLAS pole mass, ttbar+1 jet, JHEP 12 (2025) 023": {
+   "value": 170.7,
+   "sigma": 1.4764823060233399,
+   "pull": -0.2229871547879514
+  }
+ }
+}
