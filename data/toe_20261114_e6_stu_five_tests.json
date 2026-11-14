@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "transfer": [
+    {
+      "charges": [
+        1,
+        64,
+        262144
+      ],
+      "rotated_stu_span": 2,
+      "horizon_rank": 28,
+      "squared_singular_values": {
+        "0": 14,
+        "1048576/68720001025": 4,
+        "16384/16785409": 4,
+        "256/4225": 4,
+        "1": 16
+      }
+    },
+    {
+      "charges": [
+        1,
+        64,
+        4096
+      ],
+      "rotated_stu_span": 2,
+      "horizon_rank": 28,
+      "squared_singular_values": {
+        "0": 14,
+        "16384/16785409": 4,
+        "256/4225": 8,
+        "1": 16
+      }
+    },
+    {
+      "charges": [
+        1,
+        1,
+        262144
+      ],
+      "rotated_stu_span": 6,
+      "horizon_rank": 28,
+      "squared_singular_values": {
+        "0": 14,
+        "1048576/68720001025": 8,
+        "1": 20
+      }
+    },
+    {
+      "charges": [
+        1,
+        1,
+        1
+      ],
+      "rotated_stu_span": 14,
+      "horizon_rank": 28,
+      "squared_singular_values": {
+        "0": 14,
+        "1": 28
+      }
+    }
+  ],
+  "circle_axion_hessian_units": {
+    "-1": [
+      2,
+      0,
+      2
+    ],
+    "1": [
+      6,
+      2,
+      0
+    ]
+  },
+  "circle_total_flat": {
+    "-1": 40,
+    "1": 42
+  },
+  "normal_lie_triple_dimension": 14,
+  "normal_bracket_dimension": 21,
+  "integral_root_subgroups": 24,
+  "primitive_same_cubic_gradient_gcd": [
+    1,
+    4
+  ],
+  "same_cubic_integral_obstruction": {
+    "original_gcd": 1,
+    "balanced_gcd": 64
+  }
+}
