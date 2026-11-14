@@ -1,0 +1,21 @@
+{
+ "q4": {
+  "q": 4,
+  "status": "exists",
+  "nodes": 4,
+  "seconds": 0.0,
+  "basis": [
+   1,
+   18,
+   68,
+   140
+  ]
+ },
+ "q8": {
+  "q": 8,
+  "status": "undecided",
+  "nodes": 4580000,
+  "seconds": 3006.9,
+  "basis": null
+ }
+}

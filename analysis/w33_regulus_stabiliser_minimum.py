@@ -11,7 +11,8 @@ g = {"__name__": "x", "__file__": os.path.join(HERE, "w33_regulus_constants_q16_
 exec(src[: src.index("def model(")], g)
 sec = float(sys.argv[1]) if len(sys.argv) > 1 else 120
 out = {}
-for k in (1, 2, 3, 4):
+KS = tuple(int(a) for a in sys.argv[2].split(",")) if len(sys.argv) > 2 else (1, 2, 3, 4)
+for k in KS:
     q, mul, trace = g["field"](k); n = 2 * k; N = 4 * k
     # vector = (x1, x2, z1, z2) each k bits, packed: x1 | x2<<k | z1<<2k | z2<<3k ; omega = Tr(x.z' + z.x'), Q = x1 z1 + x2 z2 in F_q
     msk = q - 1
@@ -44,4 +45,4 @@ for k in (1, 2, 3, 4):
     assert all(om(a, b) == 0 for a in best[1] for b in best[1]) and len(set(span(best[1]).tolist())) == 1 << n
     out[f"q{q}"] = dict(m_star_found=best[0], steps=steps, seconds=round(time.time() - t0, 1), basis=[int(b) for b in best[1]])
     print(q, {kk: v for kk, v in out[f"q{q}"].items() if kk != "basis"}, flush=True)
-json.dump(out, open(os.path.join(ROOT, "data", "w33_regulus_stabiliser_minimum.json"), "w"), indent=1)
+json.dump(out, open(os.path.join(ROOT, "data", "w33_regulus_stabiliser_minimum" + ("" if KS == (1, 2, 3, 4) else "_k" + "_".join(map(str, KS))) + ".json"), "w"), indent=1)

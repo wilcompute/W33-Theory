@@ -73,3 +73,7 @@ F ≥ c/d says Σ_t IC_t ≥ (m + c)/d for the m bases. By convexity of −log, 
 - c₃₂, and whether c_q = 1 for all q ≠ 8.
 - Why q = 8: no closed form for 2.498508646688. The minimiser has eight probability levels, each of multiplicity 8, in every basis.
 - Proofs: only q = 2 is proved (c = (d/2)(1 + |⟨ψ|ψ*⟩|²) − 1 ≥ 1).
+
+## Addendum (Pass 12661)
+
+The q = 32 run returned 15.164 from 16 random starts, all different, and the best stabiliser state has 11. So the optimiser did not find the minimum; only c₃₂ ≤ 11 stands. See `PASS12661_STABILISER_MINIMUM_THREE_AT_Q8_AND_Q_PLUS_1_OVER_3.md`.

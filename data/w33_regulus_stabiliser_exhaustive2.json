@@ -1,0 +1,87 @@
+{
+ "q4": {
+  "q": 4,
+  "covered_orbit": 75,
+  "n_schreier": 25,
+  "level2_candidates": 68,
+  "level2_orbit_reps": 4,
+  "subspaces_by_dim": {
+   "2": 4,
+   "3": 15,
+   "4": 3
+  },
+  "lagrangians_found": 3,
+  "status": "exists",
+  "example": [
+   0,
+   1,
+   22,
+   23,
+   68,
+   69,
+   82,
+   83,
+   142,
+   143,
+   152,
+   153,
+   202,
+   203,
+   220,
+   221
+  ],
+  "seconds": 0.0
+ },
+ "q4_exactly_two": {
+  "q": 4,
+  "covered_orbit": 75,
+  "n_schreier": 25,
+  "level2_candidates": 16,
+  "level2_orbit_reps": 1,
+  "subspaces_by_dim": {
+   "2": 1,
+   "3": 6,
+   "4": 0
+  },
+  "lagrangians_found": 0,
+  "status": "none",
+  "example": null,
+  "seconds": 0.0
+ },
+ "q8": {
+  "q": 8,
+  "covered_orbit": 567,
+  "n_schreier": 169,
+  "level2_candidates": 1544,
+  "level2_orbit_reps": 16,
+  "subspaces_by_dim": {
+   "2": 16,
+   "3": 2301,
+   "4": 15944,
+   "5": 3672,
+   "6": 0
+  },
+  "lagrangians_found": 0,
+  "status": "none",
+  "example": null,
+  "seconds": 23.4
+ },
+ "q8_exactly_two": {
+  "q": 8,
+  "covered_orbit": 567,
+  "n_schreier": 169,
+  "level2_candidates": 192,
+  "level2_orbit_reps": 3,
+  "subspaces_by_dim": {
+   "2": 3,
+   "3": 465,
+   "4": 3087,
+   "5": 882,
+   "6": 0
+  },
+  "lagrangians_found": 0,
+  "status": "none",
+  "example": null,
+  "seconds": 5.4
+ }
+}

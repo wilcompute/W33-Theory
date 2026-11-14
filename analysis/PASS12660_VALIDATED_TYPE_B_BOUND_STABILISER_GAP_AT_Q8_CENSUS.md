@@ -62,3 +62,7 @@ No linear argument can work: the pure-state relations linear in the squared expe
 - c₃₂ (still computing).
 - An exhaustive proof that no Lagrangian meets the F₈ quadric in fewer than 3 points.
 - Closed form of 2.498508646688; exact 1/16 for type B.
+
+## Addendum (Pass 12661)
+
+The stabiliser minimum at q = 8 is now exhaustive: no Lagrangian meets the quadric in one or two points, so m* = 3 exactly.
