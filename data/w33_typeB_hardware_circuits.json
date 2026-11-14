@@ -1,0 +1,84 @@
+{
+ "graphs": {
+  "0": [],
+  "1": [
+   [
+    "a0",
+    "b1"
+   ],
+   [
+    "a1",
+    "b0"
+   ],
+   [
+    "a1",
+    "b1"
+   ]
+  ],
+  "w": [
+   [
+    "a0",
+    "b0"
+   ],
+   [
+    "a0",
+    "b1"
+   ],
+   [
+    "a1",
+    "b0"
+   ]
+  ],
+  "w^2": [
+   [
+    "a0",
+    "b0"
+   ],
+   [
+    "a1",
+    "b1"
+   ]
+  ]
+ },
+ "cz_counts": {
+  "0": 0,
+  "1": 3,
+  "w": 3,
+  "w^2": 2
+ },
+ "circuit_vs_model_max_difference": 8.881784197001252e-16,
+ "min_F_from_circuits": 0.06250000088565966,
+ "min_F_times_16": 1.0000000141705545,
+ "proved_bound": "11/250",
+ "depolarised_value": 0.0,
+ "total_collision_floor_proved": 0.3565,
+ "total_collision_floor_numerical": 0.375,
+ "visibility_table": [
+  {
+   "lam": 1.0,
+   "F_floor_numerical": 0.0625,
+   "F_floor_proved": 0.044
+  },
+  {
+   "lam": 0.95,
+   "F_floor_numerical": 0.05640625,
+   "F_floor_proved": 0.03971
+  },
+  {
+   "lam": 0.9,
+   "F_floor_numerical": 0.050625,
+   "F_floor_proved": 0.03564
+  },
+  {
+   "lam": 0.8,
+   "F_floor_numerical": 0.04000000000000001,
+   "F_floor_proved": 0.028160000000000004
+  },
+  {
+   "lam": 0.7,
+   "F_floor_numerical": 0.030624999999999996,
+   "F_floor_proved": 0.02156
+  }
+ ],
+ "shots_per_setting_for_10pct_bias": 750
+}

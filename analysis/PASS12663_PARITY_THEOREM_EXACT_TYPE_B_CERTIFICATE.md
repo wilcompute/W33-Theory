@@ -21,6 +21,9 @@ Let q = 2^k, Q = x₁z₁ + x₂z₂ on F_q⁴ with polar form B, ω = Tr∘B, a
 
 This explains why "exactly two covered points" was empty in Pass 12661, and it uses the Lagrangian condition exactly once.
 
+**Ownership.** The other track proved this parity first, in a stronger form: every coset r + M contains an even number of Q-zeros, by a binary Chevalley-Warning degree count (`analysis/2026-11-14_regulus_stabilizer_variation.md`, commit 0b8e11c16, 08:12, before this pass's reservation at 08:20). Cite theirs. The Moore-determinant argument here is a second proof of the statement for M itself and all fibres Q = y.
+
+
 ## 2. Exact certificate: F ≥ (11/250)·|v|⁴ for the F₄ regulus (`w33_typeB_exact_certificate.py`)
 
 **Structure.** The coefficient equations of the Pauli-reduced degree-6 SOS split the 51² + 136² = 21,097 Gram entries into **2,601 disjoint groups**, each constrained only through the sum of its entries. Every group's 16 rows carry identical right-hand sides. All of this is verified in the script.
