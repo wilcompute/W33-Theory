@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "normalization": "Frobenius trace on the 27 representation",
+  "balanced_cubic": 1,
+  "norm_squared": 3,
+  "positive_eigenvalue_over_abs_N_two_thirds": "4/3",
+  "positive_directions": 14,
+  "flat_directions": 28,
+  "image": "traceless quaternionic Hermitian operators on the complementary three-plane"
+}
