@@ -36,3 +36,9 @@ def test_haemers_rank_ten():
     for r in runs:
         b = r["best"]
         assert b["verified_support"] and b["rank_recomputed"] == 10
+
+
+def test_minimiser_partial_identification_recorded():
+    d = load("w33_f8_minimiser_exact.json")
+    assert d["n_paulis"] == 4096 and d["n_zero"] == 3552 and d["n_failed"] == 288
+    assert d["n_identified"] - d["n_zero"] == 256 and d["purity_check"].startswith("1.0")

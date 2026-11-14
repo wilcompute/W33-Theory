@@ -79,7 +79,7 @@ for it in range(8):
             for j in range(n): step[j] += coef * Q[j, k]
     x = [xi - si for xi, si in zip(x, step)]
 c8 = f * 64
-res = dict(c8=mp.nstr(c8, 45), history=hist, seconds=round(time.time() - t0))
+res = dict(c8=mp.nstr(c8, 45), history=hist, seconds=round(time.time() - t0), minimiser=[mp.nstr(v, 55) for v in x])
 cands = {}
 for deg in range(2, 13):
     p = mp.findpoly(c8, deg, maxcoeff=10 ** 7)

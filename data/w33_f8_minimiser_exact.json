@@ -1,0 +1,24 @@
+{
+ "n_paulis": 4096,
+ "n_zero": 3552,
+ "n_identified": 3808,
+ "n_failed": 288,
+ "distinct_levels": 3539,
+ "sample_relations": [
+  {
+   "pauli": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "relation": [
+    1,
+    -1,
+    0,
+    0
+   ]
+  }
+ ],
+ "purity_check": "1.0"
+}

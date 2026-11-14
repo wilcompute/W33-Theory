@@ -47,3 +47,14 @@ Haemers' bound Θ ≤ rank(M), for M with nonzero diagonal and zeros on non-adja
 - The search covers only these subgroups, so this is evidence, not a proof that the Haemers bound equals 10.
 
 The long low-symmetry code searches (Pass 12668 §4) ended at 58 (order 2 and order 3 classes) and 56 (order 4, optimal), so √60 stands.
+
+## Addendum: is the minimiser itself algebraic? Not in the gauge found (`w33_f8_minimiser_exact.py`)
+
+From the minimiser saved at 55 digits, all 4,096 squared Pauli expectations |⟨X^aZ^b⟩|² were computed (purity check 1.000…):
+- 3,552 are zero;
+- 256 non-zero values (28 covered, 228 uncovered) are integer combinations of 1, γ, γ² (γ = 2cos(2π/9)), by pslq;
+- **288 are not** (36 covered, 252 uncovered), not even as roots of a degree-6 polynomial with coefficients up to 10⁸. They fall into 72 distinct levels, each taken exactly 4 times.
+
+The likeliest reading is that the minimum is a **positive-dimensional family**. F is constant on it, with the closed-form value, but the expectations at an arbitrary point of the family are not algebraic. An exact witness, and so an exact proof of the upper bound c₈ ≤ (47 − 32 cos(2π/9))/9, needs a canonical point of the family, which was not found. The other track's rational witness remains the best exact upper bound (2.49850865922, 1.3×10⁻⁸ above).
+
+**Other critical levels (weak, 10–14 digits only).** The level 2.757359313 seen in Pass 12660/12662 runs fits c² − 14c + 31 = 0, i.e. **7 − 3√2**, with tiny coefficients. The level 2.684836399985741 is not identified in Q(cos 2π/9) or by a quadratic. A high-precision refinement of these saddles was not done.
