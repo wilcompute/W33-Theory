@@ -1,0 +1,307 @@
+{
+  "status": "PASS_EIGHT_INDEPENDENT_CONDITIONAL_CONTROLS",
+  "n_fronts": 8,
+  "boundary": "No TOE solution, globally certified F8 optimum, complete KK stability, native W33 continuum, or scalable one-photon BQP.",
+  "results": {
+    "1_F8_lower_bound_spectral_relaxation": {
+      "status": "EXACT_BELL_SPECTRUM_AND_RELAXATION_OBSTRUCTION",
+      "n_bases": 9,
+      "Paulis_per_basis_nonidentity": 63,
+      "covered_Paulis": 567,
+      "full_K_spectrum": {
+        "567": 1,
+        "55": 567,
+        "-9": 3528
+      },
+      "symmetric_two_copy_spectrum": {
+        "567": 1,
+        "55": 567,
+        "-9": 1512
+      },
+      "antisymmetric_two_copy_spectrum": {
+        "-9": 2016
+      },
+      "independent_numeric_CZ_vs_Pauli_absolute_difference": 7.105427357601002e-15,
+      "convex_mixed_state_relaxation_min": 0,
+      "note": "min eig(K|Sym2)=-9 cannot bound pure-product minimum near 2.4985. Rank-one/product or PPT-type constraints remain essential."
+    },
+    "2_full_Einstein_Maxwell_compactification_background": {
+      "status": "EXACT_FULL_BACKGROUND_EINSTEIN_MAXWELL_EOM",
+      "action": "D9 integral sqrt(-g)(R-F_MN F^MN/4)",
+      "background": "AdS5 x S2 x S2, sphere radii 1, fixed magnetic flux magnitude sqrt(14/5) on each sphere",
+      "flux_component_squared": "14/5",
+      "F_MN_F_MN": "56/5",
+      "external_Ricci_tensor_coefficient": "-2/5",
+      "internal_Ricci_tensor_coefficient_each_sphere": "1",
+      "scalar_curvature_9D": "2",
+      "AdS5_radius_squared": "10",
+      "effective_potential_stationary_value": "-6/5",
+      "homogeneous_two_radion_Hessian": [
+        [
+          "112/3",
+          "0"
+        ],
+        [
+          "0",
+          "144/5"
+        ]
+      ],
+      "Maxwell_dF_and_dstarF": "both zero for constant sums of product-sphere volume forms",
+      "limitations": "Not E6 ExFT or full KK nonhomogeneous stability; flux quantization needs specified gauge coupling/charges; not cosmologically realistic de Sitter."
+    },
+    "3_microscopic_unitary_clock": {
+      "status": "FINITE_SPEED_REVERSIBLE_LOCAL_UNITARY_QCA",
+      "coin_angle_radians": 0.17,
+      "checked_ticks": 11,
+      "dispersion_exact": "cos(omega(k))=cos(theta)cos(k)",
+      "group_speed_bound_sites_per_tick": "|v| <= |cos(theta)| <= 1",
+      "max_observed_group_speed": 0.9855289403331342,
+      "max_dispersion_trace_error": 0,
+      "continuum": "omega~sqrt(k^2+theta^2), for small k,theta; requires external length and time scales",
+      "limitations": "Known quantum-walk dynamics, not derived from W33 geometry, ExFT, or 120 native Clifford ticks."
+    },
+    "4_intrinsic_W33_edge_refinement": {
+      "status": "EXACT_LOCAL_WEAK_LIMIT_ONE_DIMENSION",
+      "base_graph": "W33 40-vertex 12-regular collinearity graph, 240 edges",
+      "subdivided_vertex_count": "40+240(L-1)",
+      "exact_second_moment": "(120L-200)/(240L-200) -> 1/2",
+      "even_limiting_moments": "binomial(2k,k)/4^k, odd moments 0",
+      "limiting_heat_trace": "exp(-t)*I0(t)",
+      "limiting_spectral_dimension": "2t*(1-I1(t)/I0(t)) -> 1 for t >>1",
+      "order_of_limits": "First L->infinity at fixed diffusion t, then large t; not interchangeable without bounds",
+      "counts": [
+        {
+          "segments_per_original_edge": 2,
+          "vertices": 280,
+          "normalized_adjacency_second_moment": "1/7",
+          "numerical_mu2": 0.14285714285714285,
+          "distance4_branch_neighborhood_fraction_upper": 1
+        },
+        {
+          "segments_per_original_edge": 4,
+          "vertices": 760,
+          "normalized_adjacency_second_moment": "7/19",
+          "numerical_mu2": 0.3684210526315789,
+          "distance4_branch_neighborhood_fraction_upper": 1
+        },
+        {
+          "segments_per_original_edge": 8,
+          "vertices": 1720,
+          "normalized_adjacency_second_moment": "19/43",
+          "numerical_mu2": 0.4418604651162791,
+          "distance4_branch_neighborhood_fraction_upper": 1
+        },
+        {
+          "segments_per_original_edge": 16,
+          "vertices": 3640,
+          "normalized_adjacency_second_moment": "43/91",
+          "numerical_mu2": 0.4725274725274725,
+          "distance4_branch_neighborhood_fraction_upper": 0.5384615384615384
+        },
+        {
+          "segments_per_original_edge": 32,
+          "vertices": 7480,
+          "normalized_adjacency_second_moment": "91/187",
+          "numerical_mu2": 0.48663101604278075,
+          "distance4_branch_neighborhood_fraction_upper": 0.2620320855614973
+        },
+        {
+          "segments_per_original_edge": 64,
+          "vertices": 15160,
+          "normalized_adjacency_second_moment": "187/379",
+          "numerical_mu2": 0.49340369393139843,
+          "distance4_branch_neighborhood_fraction_upper": 0.12928759894459102
+        },
+        {
+          "segments_per_original_edge": 128,
+          "vertices": 30520,
+          "normalized_adjacency_second_moment": "379/763",
+          "numerical_mu2": 0.4967234600262123,
+          "distance4_branch_neighborhood_fraction_upper": 0.06422018348623854
+        },
+        {
+          "segments_per_original_edge": 256,
+          "vertices": 61240,
+          "normalized_adjacency_second_moment": "763/1531",
+          "numerical_mu2": 0.4983670803396473,
+          "distance4_branch_neighborhood_fraction_upper": 0.03200522534291313
+        }
+      ],
+      "limit_values": {
+        "1": {
+          "heat_return": 0.46575960759364043,
+          "spectral_dimension": 1.1072200682069306
+        },
+        "3": {
+          "heat_return": 0.24300035416182536,
+          "spectral_dimension": 1.1400882362609728
+        },
+        "10": {
+          "heat_return": 0.1278333371634286,
+          "spectral_dimension": 1.0280034809030814
+        },
+        "100": {
+          "heat_return": 0.03994437929909668,
+          "spectral_dimension": 1.0025253989662586
+        }
+      },
+      "limitations": "No Lorentzian metric, gravity, or intrinsic 4D diffusion; 1D geometry results from graph edge refinement."
+    },
+    "5_photonic_logical_gate_resource_experiment": {
+      "status": "EXACT_16_RAIL_GHZ_GATE_CIRCUIT_AND_SCALING_GUARD",
+      "GHZ_state": "(|0000>+|1111>)/sqrt(2) for one photon across 16 orthogonal modes",
+      "logical_H_requires_disjoint_50_50_couplers": 8,
+      "logical_CNOT_permutation_swap_pairs": 4,
+      "logical_CZ_mode_specific_pi_phase_shifts": 4,
+      "total_optical_mode_scaling": "M>=2^n to represent n independent logical qubits in one photon's M-dimensional one-particle space",
+      "resource_table": [
+        {
+          "logical_qubits": 2,
+          "orthogonal_modes": 4,
+          "one_qubit_H_disjoint_couplers": 2,
+          "CNOT_transpositions": 1
+        },
+        {
+          "logical_qubits": 3,
+          "orthogonal_modes": 8,
+          "one_qubit_H_disjoint_couplers": 4,
+          "CNOT_transpositions": 2
+        },
+        {
+          "logical_qubits": 4,
+          "orthogonal_modes": 16,
+          "one_qubit_H_disjoint_couplers": 8,
+          "CNOT_transpositions": 4
+        },
+        {
+          "logical_qubits": 5,
+          "orthogonal_modes": 32,
+          "one_qubit_H_disjoint_couplers": 16,
+          "CNOT_transpositions": 8
+        },
+        {
+          "logical_qubits": 6,
+          "orthogonal_modes": 64,
+          "one_qubit_H_disjoint_couplers": 32,
+          "CNOT_transpositions": 16
+        },
+        {
+          "logical_qubits": 7,
+          "orthogonal_modes": 128,
+          "one_qubit_H_disjoint_couplers": 64,
+          "CNOT_transpositions": 32
+        },
+        {
+          "logical_qubits": 8,
+          "orthogonal_modes": 256,
+          "one_qubit_H_disjoint_couplers": 128,
+          "CNOT_transpositions": 64
+        },
+        {
+          "logical_qubits": 9,
+          "orthogonal_modes": 512,
+          "one_qubit_H_disjoint_couplers": 256,
+          "CNOT_transpositions": 128
+        },
+        {
+          "logical_qubits": 10,
+          "orthogonal_modes": 1024,
+          "one_qubit_H_disjoint_couplers": 512,
+          "CNOT_transpositions": 256
+        },
+        {
+          "logical_qubits": 11,
+          "orthogonal_modes": 2048,
+          "one_qubit_H_disjoint_couplers": 1024,
+          "CNOT_transpositions": 512
+        },
+        {
+          "logical_qubits": 12,
+          "orthogonal_modes": 4096,
+          "one_qubit_H_disjoint_couplers": 2048,
+          "CNOT_transpositions": 1024
+        }
+      ],
+      "per_element_survival": 0.98,
+      "chosen_circuit_depth": 4,
+      "four_pass_success_probability": 0.9223681599999999,
+      "independent_Gaussian_mode_phase_sigma": 0.1,
+      "GHZ_X4_visibility_under_relative_phase_noise": 0.9900498337491681,
+      "Hoeffding_accepted_shots_for_0p05_absolute_precision_95pct": 2952,
+      "raw_shots_at_loss_only_survival": 3201,
+      "limitations": "Internal logical entanglement does not certify spacelike Bell nonlocality; exponential spatial/time modes prohibit polynomial mode scalability; Gaussian phase errors assumed, not measured."
+    },
+    "extra_6_gauge_chirality_spectral_blind_spot": {
+      "status": "EXACT_TIME_REVERSAL_SPECTRAL_DEGENERACY",
+      "ring_sites": 3,
+      "wilson_angle": "2*pi/3",
+      "energies_at_plus_flux": [
+        -1.8793852415718166,
+        0.34729635533385994,
+        1.532088886237956
+      ],
+      "energies_at_minus_flux": [
+        -1.8793852415718169,
+        0.34729635533386044,
+        1.532088886237956
+      ],
+      "oriented_current_at_plus_flux_groundlabel_k0": 0.4285250731243595,
+      "oriented_current_at_minus_flux_groundlabel_k0": -0.4285250731243595,
+      "limitation": "Minimal U(1) flux ring, not a proof of E6 chirality; spectroscopy without oriented current cannot select flux sign."
+    },
+    "extra_7_topological_flux_sector_guard": {
+      "status": "EXACT_INEQUIVALENT_COHOMOLOGY_AND_FLUX_GRADING",
+      "T4_Betti": [
+        1,
+        4,
+        6,
+        4,
+        1
+      ],
+      "S2xS2_Betti": [
+        1,
+        0,
+        2,
+        0,
+        1
+      ],
+      "T4_three_form_independent_topological_fluxes": 4,
+      "S2xS2_three_form_independent_topological_fluxes": 0,
+      "T4_two_form_flux_rank": 6,
+      "S2xS2_two_form_flux_rank": 2,
+      "Euler_characteristics": {
+        "T4": 0,
+        "S2xS2": 4
+      },
+      "limitation": "This prohibits a topology-preserving identification; topology change/duality with further fields is not ruled out."
+    },
+    "extra_8_clock_speed_dimensional_underdetermination": {
+      "status": "EXACT_DIMENSIONFUL_SPEED_UNDERDETERMINATION",
+      "same_dimensionless_coin_angle": "0.17 radians",
+      "same_lattice_unitary": true,
+      "physical_a_dt_and_max_hop_speed": [
+        {
+          "a": "1",
+          "delta_t": "1",
+          "a_over_delta_t": "1"
+        },
+        {
+          "a": "2",
+          "delta_t": "1",
+          "a_over_delta_t": "2"
+        },
+        {
+          "a": "1",
+          "delta_t": "3",
+          "a_over_delta_t": "1/3"
+        },
+        {
+          "a": "3",
+          "delta_t": "7",
+          "a_over_delta_t": "3/7"
+        }
+      ],
+      "limitation": "Absent an independent length/time anchor, a count-of-exchanges clock cannot derive c in SI units."
+    }
+  }
+}
