@@ -1,0 +1,13 @@
+# Integer dual bound for the common F8 regulus code
+
+The full one-versus-two positive-partial-transpose (PPT) relaxation from the [kernel certificate](2026-11-14_regulus_full_ppt.md) gives a lower bound of **2.08179999999993**. Together with the [rational pure-state witness](2026-11-14_regulus_quotient_witness.md), this places the dimension-scaled pure-state minimum on the common four-qubit code between approximately 2.08180 and 2.49851.
+
+After the Pauli and conjugation averages, let C be the 51-by-51 coefficient matrix in the permutation orbit sums. Use the convention in which the xor-zero block has trace one, with the global density equal to the sixteen translated blocks divided by sixteen. Let X(C) be the 256-by-256 block of the first-copy partial transpose in the same convention. Feasibility gives C and X(C) positive semidefinite. The normalization is the weighted diagonal sum of C with the orbit sizes as weights.
+
+For a Pauli label (x,z), choose the unnormalized Bell column with entries (-1) to the power of the binary inner product of z and t at coordinates (t,t xor x,x). In this convention the quadratic form of X(C) on the column is exactly the pair Pauli expectation. This follows by summing over the third label: all sixteen summands coincide by translation symmetry, and they cancel the normalization of the global density. The objective h(C) is the weighted sum of these quadratic forms.
+
+The numerical SDP suggested a rank-28 dual for X. The verifier freezes a rounded integer factor B and uses BB transpose divided by s squared as the exact positive semidefinite dual, with s = 2^20. It computes the remaining linear form h(C) minus the proposed bound times the trace minus the pairing of X(C) with that dual. In matrix form the linear form is the pairing with R divided by twice s squared. The integer matrix R has an explicit decomposition into a rounded Cholesky Gram matrix and a symmetric strictly diagonally dominant matrix with positive diagonal. Both pairings are nonnegative. This proves the bound using integer arithmetic. SCS supplies candidate factors during regeneration and is unnecessary for replay. The rounding strategy follows the numeric-symbolic approach to exact semidefinite certification. [Peyrl and Parrilo](https://www.mit.edu/~parrilo/pubs/files/PeyrlParrilo-ComputingSumOfSquaresDecompositionsWithRationalCoefficients.pdf)
+
+The relaxation's numerical value was about 2.081828. Each normalized pure state on the common code gives a feasible three-copy tensor power. The proof therefore supplies a common-code lower bound, and extending it to a parent space requires controlling coherent amplitudes across stabilizer sectors.
+
+Replay with `py -3 analysis/toe_20261114_regulus_ppt_dual.py`.
