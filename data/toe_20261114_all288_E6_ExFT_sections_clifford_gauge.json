@@ -1,0 +1,51 @@
+{
+  "Y": "Y^{MK}{}_{NL}=C^{MKR} C_{NLR}; 10 d^MKR d_NLR with C contracted C=10I",
+  "affine_generalized_gauge_tests": {
+    "5": {
+      "exact_affine_closure_trials": 32,
+      "exact_integer_closure_residual_max": 0,
+      "section_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "section_tensor_zero_for_all_pair_derivatives": true,
+      "trivial_d_gradient_parameters_act_as_zero": true
+    },
+    "6": {
+      "exact_affine_closure_trials": 32,
+      "exact_integer_closure_residual_max": 0,
+      "section_indices": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        9
+      ],
+      "section_tensor_zero_for_all_pair_derivatives": true,
+      "trivial_d_gradient_parameters_act_as_zero": true
+    }
+  },
+  "all_288_section_self_annihilator_verified_via_rank_mod101": 288,
+  "all_288_strong_section_constraints": true,
+  "conclusion": "All 288 maximal coordinate sections satisfy full bilinear strong E6 ExFT constraint and lie in exactly two signed Clifford orbits; existing exact affine and quadratic gauge tests cover one representative per orbit; published ExFT closure theorem extends to smooth constrained fields, not derived here.",
+  "explicit_off_section_nonzero_closure_residual": 12,
+  "five_section_orbits": [
+    216
+  ],
+  "limitations": "Not a classification of all non-coordinate sections or gauge-fixing dynamics; not independent physical derivation of ExFT equations or spacetime dimension.",
+  "max_coordinate_sections": {
+    "5": 216,
+    "6": 72
+  },
+  "quadratic_closure_jacobiator_reused_certified": true,
+  "signed_clifford_generators": 36,
+  "signed_cubic_preserving_actions_verified_36_times_45": true,
+  "six_section_orbits": [
+    72
+  ],
+  "status": "PASS_ALL_288_E6_COORDINATE_SECTIONS_STRONG_MAXIMAL_W_E6_ORBITS"
+}

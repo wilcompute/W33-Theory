@@ -1,0 +1,260 @@
+{
+  "caveat": "Menu optimal only among fixed J-odd Pauli measurement sets for all 180 discrete integral charge fibers. Not a minimum for arbitrary POVMs or all HP3 pure charges.",
+  "coset_cardinality": 4,
+  "cosets_containing_each_observable": 15,
+  "exact_integer_program_36_binary_135_constraints": true,
+  "global_menu_labels": [
+    1,
+    8,
+    9,
+    21,
+    28,
+    29,
+    35,
+    42,
+    43,
+    55,
+    62,
+    63
+  ],
+  "global_menu_size": 12,
+  "integer_charge_fibers": 180,
+  "literature": "Logical qubit Pauli tomography and topology of Bloch sphere are standard. Exact 12-menu covering design is specific to this E6 180-point incidence.",
+  "logical_cosets_to_hit": 135,
+  "lower_bound_per_fiber": "At least 3 scalar real expectation readings for globally continuous injective S2 -> Rk; no injection for k<=2",
+  "max_matrix_entry_reconstruction_error": 3.8858257978712187e-16,
+  "nonquadric_pauli_observables_total": 36,
+  "orbit_local_three_axes": {
+    "16,32,48": [
+      1,
+      8,
+      9
+    ],
+    "16,37,53": [
+      1,
+      28,
+      29
+    ],
+    "16,44,60": [
+      21,
+      8,
+      29
+    ],
+    "16,45,61": [
+      21,
+      9,
+      28
+    ],
+    "19,32,51": [
+      1,
+      42,
+      43
+    ],
+    "19,37,54": [
+      1,
+      29,
+      28
+    ],
+    "19,46,61": [
+      43,
+      55,
+      28
+    ],
+    "19,47,60": [
+      42,
+      55,
+      29
+    ],
+    "2,32,34": [
+      1,
+      8,
+      9
+    ],
+    "2,37,39": [
+      1,
+      43,
+      42
+    ],
+    "2,4,6": [
+      1,
+      8,
+      9
+    ],
+    "2,44,46": [
+      43,
+      8,
+      35
+    ],
+    "2,45,47": [
+      42,
+      9,
+      35
+    ],
+    "20,34,54": [
+      1,
+      8,
+      9
+    ],
+    "20,39,51": [
+      1,
+      43,
+      42
+    ],
+    "20,46,58": [
+      43,
+      8,
+      35
+    ],
+    "20,47,59": [
+      42,
+      9,
+      35
+    ],
+    "23,34,53": [
+      1,
+      29,
+      28
+    ],
+    "23,39,48": [
+      1,
+      62,
+      63
+    ],
+    "23,44,59": [
+      62,
+      29,
+      35
+    ],
+    "23,45,58": [
+      63,
+      28,
+      35
+    ],
+    "26,32,58": [
+      35,
+      8,
+      43
+    ],
+    "26,39,61": [
+      62,
+      43,
+      21
+    ],
+    "26,44,54": [
+      29,
+      8,
+      21
+    ],
+    "26,47,53": [
+      29,
+      62,
+      35
+    ],
+    "27,32,59": [
+      35,
+      9,
+      42
+    ],
+    "27,39,60": [
+      63,
+      42,
+      21
+    ],
+    "27,45,54": [
+      28,
+      9,
+      21
+    ],
+    "27,46,53": [
+      28,
+      63,
+      35
+    ],
+    "30,34,60": [
+      29,
+      8,
+      21
+    ],
+    "30,37,59": [
+      29,
+      55,
+      42
+    ],
+    "30,45,51": [
+      42,
+      21,
+      63
+    ],
+    "30,46,48": [
+      55,
+      8,
+      63
+    ],
+    "31,34,61": [
+      28,
+      9,
+      21
+    ],
+    "31,37,58": [
+      28,
+      55,
+      43
+    ],
+    "31,44,51": [
+      43,
+      21,
+      62
+    ],
+    "31,47,48": [
+      55,
+      9,
+      62
+    ],
+    "4,16,20": [
+      1,
+      8,
+      9
+    ],
+    "4,19,23": [
+      1,
+      29,
+      28
+    ],
+    "4,26,30": [
+      29,
+      8,
+      21
+    ],
+    "4,27,31": [
+      28,
+      9,
+      21
+    ],
+    "6,48,54": [
+      1,
+      8,
+      9
+    ],
+    "6,51,53": [
+      1,
+      63,
+      62
+    ],
+    "6,58,60": [
+      63,
+      8,
+      55
+    ],
+    "6,59,61": [
+      62,
+      9,
+      55
+    ]
+  },
+  "ortools_CP_SAT_global_size_le_11": "INFEASIBLE",
+  "pure_state_reconstruction_tests": 720,
+  "reconstruction_formula": "rho=(Pi + r1 Pi P_a Pi + r2 Pi P_b Pi + r3 Pi P_c Pi)/2",
+  "scipy_milp_status": "OPTIMAL_12",
+  "status": "PASS_GLOBAL_12_PAULI_MINIMUM_FOR_ALL_180_E6_TWISTOR_FIBERS",
+  "tritangent_supports": 45
+}

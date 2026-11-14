@@ -1,0 +1,56 @@
+{
+  "all_GF2_rank_codes_independently_checked": true,
+  "five_qubit_maximal_Pauli_MUB_minimum": "9 (conditional on prior full eight-orbit solver exhaustiveness)",
+  "independently_enumerated_n3_size5_exists_and_n3_size7_absent": {
+    "5": [
+      true,
+      true
+    ],
+    "7": [
+      false,
+      false
+    ]
+  },
+  "limits": "The 433M-node exhaustive search and reversed two-rep traversals are stored complete computational runs from one solver family. No independent full n5 size8 re-execution, DRAT proof log or external certificate checker in this script. This is not non-Pauli strongly unextendible MUB no-go.",
+  "n5_O5_representatives": [
+    692,
+    693,
+    694,
+    695,
+    700,
+    701,
+    702,
+    703
+  ],
+  "n5_binary_symmetric_matrix_codes": 32768,
+  "n5_nonsingular_symmetric_codes": 13888,
+  "negative_fullrun_8_reps_433517130_nodes": true,
+  "negative_fullrun_all_no_timeout": true,
+  "negative_per_rep_nodes": {
+    "692": 54189927,
+    "693": 54173796,
+    "694": 54241976,
+    "695": 54102646,
+    "700": 54174654,
+    "701": 54206027,
+    "702": 54190137,
+    "703": 54237967
+  },
+  "positive_n5_size9_codes": [
+    21025,
+    692,
+    1321,
+    1945,
+    3203,
+    2842,
+    3703
+  ],
+  "positive_n5_size9_maximality_all_13888_checked": true,
+  "positive_n5_size9_pairwise_Delta_full_rank": true,
+  "reversed_nodes": {
+    "692": 54001206,
+    "694": 53942707
+  },
+  "reversed_two_S3_reps_no_witness": true,
+  "status": "PASS_FIVE_QUBIT_MUB_SIZE8_FULLRUN_CERTIFICATE_INDEPENDENT_GF2_AUDIT"
+}

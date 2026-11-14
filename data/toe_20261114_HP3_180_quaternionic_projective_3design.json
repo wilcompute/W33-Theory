@@ -1,0 +1,22 @@
+{
+  "HP3_base_real_dim": 12,
+  "Haar_formula": "sum_{sigma in S3} product_cycle_traces / (8*9*10)",
+  "basis": "Native 27 signed E6 cubic mapped exactly to J-even 3-qubit Pauli observables",
+  "cardinality": 180,
+  "complex_total_CP7_real_dim": 14,
+  "exact_cubature": "(1/180) sum_z (z dot x)^3 = (2/15) N(x) for all x",
+  "exact_first_moment": "0",
+  "exact_second_moment": "I_27/9",
+  "exact_third_moment": "s_ijk/45 for every ordered tritangent triple; 0 otherwise",
+  "fourth_counterexample": {
+    "HP3_Haar_E_z0_4": "1/33",
+    "Haar_distribution": "2 Beta(4,4) - 1",
+    "finite_E_z0_4": "1/9"
+  },
+  "independently_compared_Haar_third_moment_entries": 19683,
+  "literature": "Kueng & Gross 2015 show 1080 3qubit stabilizer states form complex projective 3-design; this script independently verifies the projected HP3 design in signed cubic native basis.",
+  "not_4_design": true,
+  "projective_design_strength": 3,
+  "proof_scope": "Full finite first/second/third tensors plus exact Haar trace formula; fourth disproval. Not a physical spacetime design or dynamics.",
+  "status": "PASS_EXACT_180_POINT_HP3_PROJECTIVE_3_DESIGN_NOT_4"
+}
