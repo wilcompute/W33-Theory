@@ -1,0 +1,33 @@
+{
+ "rank2": {
+  "dim": 16,
+  "starts": 40,
+  "hits": 40,
+  "best": 2.4985086466880677
+ },
+ "cosets": {
+  "n": 256,
+  "covered_weight_histogram": {
+   "0": 156,
+   "1": 63,
+   "2": 36
+  }
+ },
+ "rank3": {
+  "dim": 8,
+  "groups_tested": 510,
+  "attaining_c8": 56,
+  "value_histogram": {
+   "2.498509": 56,
+   "2.74109": 126,
+   "3.0": 326,
+   "7.0": 2
+  },
+  "hit_cosets_all_uncovered": true
+ },
+ "rank4": {
+  "parents": 3,
+  "groups_tested": 756,
+  "attaining_c8": 0
+ }
+}

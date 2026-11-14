@@ -144,7 +144,11 @@ $AG(2,4)$ and their three pairings. Numerically $\min\F=1/16$; exactly, $\F\ge\t
 degree-6 SOS (Gram blocks of size 51 and 136 over $\mathbb{Q}(i)$) whose 41\,616 coefficient equations are verified in rational
 arithmetic and whose Gram matrices are proved positive definite in integer arithmetic (preconditioned diagonal dominance). The SDP
 optimum at this degree is $0.0452$, and the PSD-plus-partial-transpose level gives only $\F\ge0$.
-(iii) For $q=8$, numerically $\min\F=2.498509/64$ (300 starts, analytic gradients). This is not a stabiliser value: an exhaustive
+(iii) For $q=8$, numerically $\min\F=2.498509/64$ (300 starts, analytic gradients); at 45 digits this is
+$(47-32\cos\frac{2\pi}9)/576$, and exactly $\min\F\le(47-32\cos\frac{2\pi}9)/576$: the minimum is attained on the
+8-dimensional joint eigenspace of a rank-3 group of uncovered Paulis, where the minimiser is isolated and all its Pauli
+expectations lie in $\mathbb{Q}(\cos\frac{2\pi}9,\sqrt3)$, and the resulting density matrix is verified in exact arithmetic to
+be a pure state attaining this value. Optimality is numerical. This is not a stabiliser value: an exhaustive
 search shows that no stabiliser state has less than $3/64$. For $q=2,4,16$ a stabiliser state attains the numerical minimum $1/d$,
 and for $q=32$ the best value found is the stabiliser value $11/1024$. The quotients of the $q=8$
 set at points with $\mathrm{Tr}\,Q=1$ are maximal five-qubit sets of size 9, of at least two types, with numerical minimum
