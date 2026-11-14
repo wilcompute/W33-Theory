@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "blocks": {
+    "pair-0": 4,
+    "pair-1": 4,
+    "pair-2": 4,
+    "unit-1": 12,
+    "unit-4": 1
+  },
+  "squared_gain": [
+    "4*u**2*v**2/(u**2 + v**2)**2",
+    "4*u**4*v**2/(u**4*v**2 + 1)**2",
+    "4*u**2*v**4/(u**2*v**4 + 1)**2"
+  ],
+  "total_scalar_kernel": 14
+}
