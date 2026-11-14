@@ -1,0 +1,349 @@
+{
+  "GL1_fundamental_weights": [
+    4,
+    1,
+    -2,
+    -5
+  ],
+  "Levi_exact_commutation_and_block_decomposition": true,
+  "Levi_sl5_sl2_gl1_dimension": 28,
+  "canonical_cubic": "sum_i V_i(W_i0 S1-W_i1 S0) + sum_{i<j} Z_ij(W_i0 W_j1-W_i1 W_j0) - sum_i sum_pair_partitions epsilon_ijklm V_i Z_jk Z_lm",
+  "exact_sl5_block_action_on_V_W_W_Z_S": true,
+  "exact_sl5_bracket_reconstruction_checks": 576,
+  "explicit_SL2_doublets": 6,
+  "explicit_SL2_lowering_root_index": 71,
+  "explicit_SL2_raising_root_index": 55,
+  "literature": "E6(6) ExFT IIB branching, Eur.Phys.J.C 84 (2024) 13402-4, Hohm/Samtleben 1312.0614",
+  "native_coordinate_order_by_canonical_5_5_5_10_2": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    17,
+    8,
+    7,
+    6,
+    5,
+    18,
+    12,
+    11,
+    10,
+    9,
+    13,
+    14,
+    15,
+    16,
+    19,
+    20,
+    22,
+    21,
+    23,
+    24,
+    25,
+    26
+  ],
+  "native_coordinate_sign_by_canonical_5_5_5_10_2": [
+    -1,
+    1,
+    -1,
+    -1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    -1,
+    -1,
+    1,
+    -1,
+    -1,
+    -1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "native_cubic_type_count": {
+    "VWS": 10,
+    "VZZ": 15,
+    "WWZ": 20
+  },
+  "native_signed_terms_verified": 45,
+  "native_to_canonical_signed_permutation_is_unimodular": true,
+  "roots_by_GL1_grade": {
+    "-3": 20,
+    "-6": 5,
+    "0": 22,
+    "3": 20,
+    "6": 5
+  },
+  "scope": "Complete exact native signed cubic and 28D Levi-generator intertwiner to known IIB GL5xSL2 representation. Does not yet identify the dynamical fields, solve GSS twist equations beyond local flux, establish a physical duality transform, select a section, or derive a theory of everything.",
+  "sl2_exact_brackets_verified": true,
+  "sl5_diagonal_Cartan_count": 4,
+  "sl5_root_indices_by_5x5_pair": [
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "root_index": 11
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "root_index": 12
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "root_index": 13
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "root_index": 8
+    },
+    {
+      "pair": [
+        1,
+        0
+      ],
+      "root_index": 26
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "root_index": 27
+    },
+    {
+      "pair": [
+        1,
+        3
+      ],
+      "root_index": 28
+    },
+    {
+      "pair": [
+        1,
+        4
+      ],
+      "root_index": 19
+    },
+    {
+      "pair": [
+        2,
+        0
+      ],
+      "root_index": 31
+    },
+    {
+      "pair": [
+        2,
+        1
+      ],
+      "root_index": 33
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "root_index": 34
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "root_index": 23
+    },
+    {
+      "pair": [
+        3,
+        0
+      ],
+      "root_index": 38
+    },
+    {
+      "pair": [
+        3,
+        1
+      ],
+      "root_index": 41
+    },
+    {
+      "pair": [
+        3,
+        2
+      ],
+      "root_index": 42
+    },
+    {
+      "pair": [
+        3,
+        4
+      ],
+      "root_index": 22
+    },
+    {
+      "pair": [
+        4,
+        0
+      ],
+      "root_index": 37
+    },
+    {
+      "pair": [
+        4,
+        1
+      ],
+      "root_index": 39
+    },
+    {
+      "pair": [
+        4,
+        2
+      ],
+      "root_index": 40
+    },
+    {
+      "pair": [
+        4,
+        3
+      ],
+      "root_index": 32
+    }
+  ],
+  "sl5_root_matrix_unit_count": 20,
+  "status": "PASS_EXACT_NATIVE_SIGNED_E6_CUBIC_IIB_28D_LEVI_INTERTWINER",
+  "type_IIB_branching": {
+    "(1,2)_minus5": 2,
+    "(10,1)_minus2": 10,
+    "(5,1)_4": 5,
+    "(5bar,2)_1": 10
+  },
+  "type_IIB_native_S": [
+    25,
+    26
+  ],
+  "type_IIB_native_V": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "type_IIB_native_W0": [
+    17,
+    8,
+    7,
+    6,
+    5
+  ],
+  "type_IIB_native_W1": [
+    18,
+    12,
+    11,
+    10,
+    9
+  ],
+  "type_IIB_native_Z_ij": [
+    {
+      "native_index": 13,
+      "pair": [
+        0,
+        1
+      ],
+      "sign": 1
+    },
+    {
+      "native_index": 14,
+      "pair": [
+        0,
+        2
+      ],
+      "sign": -1
+    },
+    {
+      "native_index": 15,
+      "pair": [
+        0,
+        3
+      ],
+      "sign": -1
+    },
+    {
+      "native_index": 16,
+      "pair": [
+        0,
+        4
+      ],
+      "sign": 1
+    },
+    {
+      "native_index": 19,
+      "pair": [
+        1,
+        2
+      ],
+      "sign": -1
+    },
+    {
+      "native_index": 20,
+      "pair": [
+        1,
+        3
+      ],
+      "sign": -1
+    },
+    {
+      "native_index": 22,
+      "pair": [
+        1,
+        4
+      ],
+      "sign": -1
+    },
+    {
+      "native_index": 21,
+      "pair": [
+        2,
+        3
+      ],
+      "sign": 1
+    },
+    {
+      "native_index": 23,
+      "pair": [
+        2,
+        4
+      ],
+      "sign": 1
+    },
+    {
+      "native_index": 24,
+      "pair": [
+        3,
+        4
+      ],
+      "sign": 1
+    }
+  ]
+}

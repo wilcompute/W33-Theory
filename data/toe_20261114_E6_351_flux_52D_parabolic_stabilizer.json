@@ -1,0 +1,40 @@
+{
+  "E6_full_cubic_generator_count_78": 78,
+  "GL1_flux_relative_weight": -10,
+  "Levi_semisimple_type": "sl5(24)+sl2(3), dimension27",
+  "e6_stabilizer_scope": "Computes the full infinitesimal E6(6) stabilizer of THIS rank-two 351 embedding tensor in the signed split 27 basis; not a classification of all 351 orbits.",
+  "exact_351_flux_tensor_stabilizer_as_semidirect": "(sl5 + sl2) semidirect (20_{-3}+5_{-6})",
+  "exact_stabilizer_dimension": 52,
+  "fixed_dual_five_section_coordinates": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "fixed_flux_broken_relative_GL1_dimension": 1,
+  "full_IIB_dual_five_section_opposite_parabolic_dim": 53,
+  "grade_counts": {
+    "-3": 20,
+    "-6": 5,
+    "0": 22,
+    "3": 20,
+    "6": 5
+  },
+  "grade_negative_nilpotent_radical_dimension": 25,
+  "literature": "Hohm/Samtleben 1312.0614, E6 IIB GL5xSL2 grading EPJC2024 13402-4; 5D maximal gauged-supergravity embedding tensor 351",
+  "moving_root_count": 25,
+  "negative_radical_two_step_nilpotent": true,
+  "physical_limitations": "A parabolic stabilizer and constant local GSS flux do NOT prove global uplift, a stationary scalar potential, flux quantization, Einstein equations or dynamically preferred IIB vs M section.",
+  "radical_190_minus3_pair_commutators_checked": 190,
+  "radical_degree_minus3_dimension": 20,
+  "radical_degree_minus6_center_dimension": 5,
+  "radical_derived_algebra_exact_rank": 5,
+  "rank_of_linear_E6_action_on_embedding_tensor": 26,
+  "rank_witness_primes": [
+    101
+  ],
+  "stabilizing_Cartan_count": 5,
+  "stabilizing_root_count": 47,
+  "status": "PASS_EXACT_E6_351_GSS_FLUX_52D_OPPOSITE_PARABOLIC_STABILIZER"
+}

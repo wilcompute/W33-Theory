@@ -1,0 +1,59 @@
+{
+  "E6_signed_cubic_terms": 45,
+  "Z_invariant_under_gauge": true,
+  "Z_times_gauge_generator_zero": true,
+  "active_gauge_generator_count": 5,
+  "active_gauge_generator_labels": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "active_gauge_matrix_pairs_multiply_to_zero": true,
+  "all_27_gauge_generator_matrices_preserve_cubic": true,
+  "antisymmetric_Zraw_nonzero": [
+    [
+      25,
+      26,
+      10
+    ],
+    [
+      26,
+      25,
+      -10
+    ]
+  ],
+  "antisymmetric_Zraw_rank": 2,
+  "constant_gauge_tensor_shape": [
+    27,
+    27,
+    27
+  ],
+  "derivative_axis": 3,
+  "exactly_satisfied_351_linear_constraint": "10*(X_MN^P+X_NM^P)=sum_Q T_MNQ Zraw_QP",
+  "exclusions": "Not a globally consistent compactification or a solution of the Einstein/scalar/vector/tensor equations. No explicit source cancellation, fermionic supersymmetry, nontrivial cosmological vacuum, or dynamic five-versus-six section selection.",
+  "full_E6_generators_ambient": 78,
+  "full_Leibniz_identity_residual_nnz": 0,
+  "gauge_frame_generator_root_index": 1,
+  "linear_constraint_residual_nnz": 0,
+  "local_gauge_group_is_5D_abelian_unipotent": true,
+  "nonzero_full_generalized_frame_coefficients": 30,
+  "normalized_Z_covariant": "Z_QP=Zraw_QP/(2sqrt(10)); only \u00b1sqrt(10)/2 at 25,26",
+  "normalized_d_symbol": "d_MNP=T_MNP/sqrt(10), with T_iMN*T_jMN=10delta_ij",
+  "precise_claim": "An explicit, nonzero local E6(6) generalized Scherk-Schwarz frame whose constant 27D flux satisfies exact 351 linear and quadratic constraints with no trombone, and yields a five-generator abelian unipotent gauging. This uses established ExFT generalized geometry and does not independently discover a supergravity embedding tensor class.",
+  "quadratic_gauge_closure_residual_nnz": 0,
+  "references": [
+    "https://arxiv.org/abs/1312.0614",
+    "https://citeseerx.ist.psu.edu/document?doi=3daf582c22566670342ecdf5f3c96fde53293b35&repid=rep1&type=pdf",
+    "https://link.springer.com/article/10.1007/JHEP01%282015%29131"
+  ],
+  "section_constraint_allows_axis_in_both_M_and_IIB": true,
+  "status": "PASS_EXACT_E6_SPLIT_351_LINEAR_QUADRATIC_RANK2_Z_GAUGING",
+  "symmetric_frame_tensor_nnz": 20,
+  "trace_trombone_zero": true,
+  "two_form_ideal_coordinate_labels": [
+    25,
+    26
+  ]
+}
