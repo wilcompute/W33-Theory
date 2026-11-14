@@ -1,0 +1,28 @@
+{
+  "base": "HP^3=Sp(4)/(Sp(1)xSp(3)), real dimension 12",
+  "complex_projective_stabilizer_states": 1080,
+  "continuous_fiber": "CP^1=S^2, real dimension 2",
+  "continuous_random_complex_pure_states_tested": 24,
+  "each_discrete_fiber": "six single-qubit stabilizer states (Pauli octahedron)",
+  "each_fiber_exact_projective_2design": true,
+  "each_minimal_charge_has_cubic_N_1_and_norm2_3": true,
+  "exact_discrete_overlap_census": {
+    "0.0": 540,
+    "0.5": 2160
+  },
+  "exact_first_moment": "sum_{six} rho_i = 3 Pi",
+  "exact_second_moment": "sum_{six} rho_i tensor rho_i = (Pi tensor Pi)(I+SWAP)",
+  "fiber_cardinality": 6,
+  "lagrangian_three_qubit_stabilizer_bases": 135,
+  "max_complex_twirl_matrix_residual": 6.662792492343718e-16,
+  "number_signed_45_triads": 45,
+  "number_signed_BPS_per_triad": 4,
+  "packet_clifford_orbit_sizes_on_180_charges": [
+    180
+  ],
+  "physical_scope": "Known twistor fibration and qubit stabilizer 2-design, instantiated exactly for the repo signed three-qubit Pauli E6 cubic and all 1080 states; not a channel that measures or erases the fiber and not evidence of a TOE.",
+  "quaternionic_projective_integral_BPS_charge_points": 180,
+  "status": "PASS_EXACT_STABILIZER_TWISTOR_CP7_TO_HP3_2DESIGN",
+  "total": "CP^7=Sp(4)/(Sp(3)xU(1)), real dimension 14",
+  "twirl_identity": "Pi_psi=|psi><psi|+|Jpsi><Jpsi|=(I+sum_{Q(v)=0} z_v P_v)/4"
+}
