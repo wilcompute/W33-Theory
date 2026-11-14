@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "background": "equal-charge static electric, fixed charge, linear s-wave",
+  "fixed": {
+    "multiplicity": 14,
+    "mass_squared_ads_radius_squared": 2,
+    "indicial_exponents_r": [
+      2,
+      -4
+    ],
+    "ads_dimension": 2,
+    "horizon_series": "-r**4/q**2 + r**2/q + O(r**6)",
+    "infinity_series": "1 - q/r**2 + O(r**(-4), (r, oo))"
+  },
+  "flat": {
+    "multiplicity": 28,
+    "mass_squared_ads_radius_squared": 0,
+    "indicial_exponents_r": [
+      0,
+      -2
+    ],
+    "ads_dimension_standard": 1
+  },
+  "horizon_transfer_fixed": 0,
+  "horizon_transfer_flat": 1
+}
