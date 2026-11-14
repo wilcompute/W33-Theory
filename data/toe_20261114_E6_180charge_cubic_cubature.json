@@ -1,0 +1,51 @@
+{
+  "Schlaefli_two_section_edges": 135,
+  "Schlaefli_vertex_degree": 10,
+  "all_charges_integer_and_norm_squared_3": true,
+  "charges_positive_unit_cubic": 180,
+  "coordinate_degree": 5,
+  "cubic_cubature": "sum_{z in C} (z dot x)^3 = 24 N(x); N(x)=sum_{45 lines} s_ijk x_i x_j x_k",
+  "dimension": 27,
+  "exact_random_integer_cubature_trials": 40,
+  "first_moment": "sum_{z in C} z_i = 0",
+  "fourth_moment": "sum_{z in C} z_i^4=20; sum z_i^2 z_j^2=4 iff i,j collinear in 135-edge graph, else 0; all other index patterns vanish",
+  "is_spherical_3design": false,
+  "novelty_scope": "A finite exact signed cubic/moment identity instantiated in the repo native coordinate basis, not an assertion of new exceptional algebra or physical spacetime. The 180 set was previously counted in Pass12668.",
+  "positive_sign_patterns_per_line": 4,
+  "quartic_cubature": "sum_{z in C} (z dot x)^4 = 20 sum_i x_i^4 + 24 sum_{135 edges {i,j}} x_i^2 x_j^2",
+  "sample_checks": [
+    {
+      "cubic": 25,
+      "sums": [
+        0,
+        2200,
+        600,
+        71704
+      ]
+    },
+    {
+      "cubic": -41,
+      "sums": [
+        0,
+        1820,
+        -984,
+        46820
+      ]
+    },
+    {
+      "cubic": 63,
+      "sums": [
+        0,
+        2160,
+        1512,
+        65640
+      ]
+    }
+  ],
+  "second_moment": "sum_{z in C} z_i z_j = 20 delta_ij; mean covariance I27/9",
+  "source": "Canonical signed E6 cubic with 45 triple monomials in native repo coordinate order",
+  "spherical_design_strength": 2,
+  "status": "PASS_EXACT_180CHARGE_SIGNED_E6_CUBIC_CUBATURE",
+  "third_moment": "sum_{z in C} z_i z_j z_k = 4 s_ijk for any ordered distinct signed tritangent; 0 otherwise",
+  "tritangents": 45
+}
