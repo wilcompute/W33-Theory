@@ -1,0 +1,47 @@
+{
+ "q2": {
+  "lagrangians_sampled": 200,
+  "odd_fibres_found": 0,
+  "min_covered": 1,
+  "all_covered_counts_odd": true,
+  "moore_det_max_over_ker_trace_samples": 0,
+  "moore_det_of_field_basis": 1,
+  "control_nonisotropic_subspaces_with_an_odd_fibre": 200
+ },
+ "q4": {
+  "lagrangians_sampled": 2000,
+  "odd_fibres_found": 0,
+  "min_covered": 1,
+  "all_covered_counts_odd": true,
+  "moore_det_max_over_ker_trace_samples": 0,
+  "moore_det_of_field_basis": 1,
+  "control_nonisotropic_subspaces_with_an_odd_fibre": 103
+ },
+ "q8": {
+  "lagrangians_sampled": 4000,
+  "odd_fibres_found": 0,
+  "min_covered": 3,
+  "all_covered_counts_odd": true,
+  "moore_det_max_over_ker_trace_samples": 0,
+  "moore_det_of_field_basis": 1,
+  "control_nonisotropic_subspaces_with_an_odd_fibre": 97
+ },
+ "q16": {
+  "lagrangians_sampled": 3000,
+  "odd_fibres_found": 0,
+  "min_covered": 3,
+  "all_covered_counts_odd": true,
+  "moore_det_max_over_ker_trace_samples": 0,
+  "moore_det_of_field_basis": 1,
+  "control_nonisotropic_subspaces_with_an_odd_fibre": 98
+ },
+ "q32": {
+  "lagrangians_sampled": 600,
+  "odd_fibres_found": 0,
+  "min_covered": 17,
+  "all_covered_counts_odd": true,
+  "moore_det_max_over_ker_trace_samples": 0,
+  "moore_det_of_field_basis": 1,
+  "control_nonisotropic_subspaces_with_an_odd_fibre": 107
+ }
+}

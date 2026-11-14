@@ -1,0 +1,19 @@
+{
+ "delta": "11/250",
+ "n_groups": 2601,
+ "n_equations": 41616,
+ "equations_exact": true,
+ "hermitian_exact": true,
+ "max_group_correction": 3.637978807091713e-13,
+ "K_row_sum_bound": 3.798064329494613e-09,
+ "G_row_sum_bound": 2.0581032678990486e-08,
+ "K_min_eig_float": 0.001560528683152185,
+ "G_min_eig_float": 0.0015605268516123503,
+ "positive_definite_exact": true,
+ "certificate_sha256": "a164b6fb12a12ba7038a8abbd4226436df8f9bc39ea552ed1c93fec795531947",
+ "common_denominators": [
+  "9620726743040000",
+  "9620726743040000"
+ ],
+ "seconds": 1.0
+}

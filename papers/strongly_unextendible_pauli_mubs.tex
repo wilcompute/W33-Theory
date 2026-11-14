@@ -140,14 +140,20 @@ $\F+(q+1)/q^2=\sum_{\ell}\|\mathfrak{F}_\ell(B|_\ell)\|_4^4$, the sum running ov
 $\mathfrak{F}_\ell$ being the additive Fourier transform on the line.
 (ii) For $q=4$ the set is the lifted type of Theorem~\ref{t:4} (same invariants), and
 $\F+\tfrac5{16}=\sum_p|A_p|^4+\tfrac14|\sum_pA_p^2|^2+\sum_{\ell}\sum_{ab|cd}|A_aA_b+A_cA_d|^2$, the last sum over the 20 lines of
-$AG(2,4)$ and their three pairings. Numerically $\min\F=1/16$; a Pauli-reduced degree-6 SOS has optimum $0.0452$, and at $\delta=0.044$ a strictly
-interior certificate (smallest Gram eigenvalue $1.6\times10^{-3}$, equality residual $4\times10^{-16}$) gives $\F\ge0.044$ by validated
-floating-point numerics; the PSD-plus-partial-transpose level gives only $\F\ge0$.
-(iii) For $q=8$, numerically $\min\F=2.498509/64$ (300 starts, analytic gradients), which is not a stabiliser value: the best
-stabiliser state found has $3/64$, whereas for $q=2,4,16$ a stabiliser state attains the numerical minimum $1/d$.
-For odd primes $p=3,5,7$ the same construction has $\min\F=0$, with unbiased vectors $\omega^{ax_1^2+bx_2^2}/p$ for $ab$ a non-residue. The quotients of
-this set at points with $\mathrm{Tr}\,Q=1$ are maximal five-qubit sets of size 9, of at least two types, with numerical minimum
-$2.498509/32$. So minimal sets of the same size differ in strength: the five- and six-qubit sets found by search have $\min\F=1/d$.
+$AG(2,4)$ and their three pairings. Numerically $\min\F=1/16$; exactly, $\F\ge\tfrac{11}{250}|v|^4$: a Pauli-reduced
+degree-6 SOS (Gram blocks of size 51 and 136 over $\mathbb{Q}(i)$) whose 41\,616 coefficient equations are verified in rational
+arithmetic and whose Gram matrices are proved positive definite in integer arithmetic (preconditioned diagonal dominance). The SDP
+optimum at this degree is $0.0452$, and the PSD-plus-partial-transpose level gives only $\F\ge0$.
+(iii) For $q=8$, numerically $\min\F=2.498509/64$ (300 starts, analytic gradients). This is not a stabiliser value: an exhaustive
+search shows that no stabiliser state has less than $3/64$. For $q=2,4,16$ a stabiliser state attains the numerical minimum $1/d$,
+and for $q=32$ the best value found is the stabiliser value $11/1024$. The quotients of the $q=8$
+set at points with $\mathrm{Tr}\,Q=1$ are maximal five-qubit sets of size 9, of at least two types, with numerical minimum
+$2.498509/32$.
+(iv) For every Lagrangian $M$ and every $y\in\mathbb{F}_q$ the number of $v\in M$ with $Q(v)=y$ is even; in particular a stabiliser
+state has an odd number of covered Paulis in its stabiliser group. (The top coefficient of $\sum_{v\in M}Q(v)^{q-1}$ is a sum of Moore
+determinants of $k$ elements of $\ker\mathrm{Tr}$, which has dimension $k-1$.)
+(v) For odd primes $p=3,5,7$ the same construction has $\min\F=0$, with unbiased vectors $\omega^{ax_1^2+bx_2^2}/p$ for $ab$ a
+non-residue. So minimal sets of the same size differ in strength: the five- and six-qubit sets found by search have $\min\F=1/d$.
 \end{proposition}
 \noindent\emph{Method.} Fixing the $X$- and $Z$-type Lagrangians, a Lagrangian disjoint from both is the graph of a nonsingular
 symmetric matrix $S$ over $\mathbb{F}_2$, and two graphs are disjoint iff $S+S'$ is nonsingular. A maximal partial spread is thus a set
