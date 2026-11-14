@@ -1,0 +1,125 @@
+{
+ "q8": {
+  "runs": [
+   {
+    "seed": 0,
+    "best": 3,
+    "steps": 11344070
+   },
+   {
+    "seed": 1,
+    "best": 3,
+    "steps": 11399232
+   }
+  ],
+  "best": 3,
+  "conjectured": 3,
+  "basis": [
+   1488,
+   692,
+   1291,
+   605,
+   3768,
+   2427
+  ],
+  "covered_points": 3,
+  "points_per_hit_line": [
+   1,
+   1,
+   1
+  ],
+  "n_hit_lines": 3,
+  "hit_lines": [
+   "0",
+   "1",
+   "6"
+  ],
+  "hit_lines_are_cyclic_orbit_of_order_r": true,
+  "pgl_elements_checked": 165,
+  "radical_dims": {
+   "2": 6
+  },
+  "char_sums": {
+   "-16": 2,
+   "0": 5,
+   "64": 1
+  },
+  "check_count": 3
+ },
+ "q32": {
+  "runs": [
+   {
+    "seed": 0,
+    "best": 11,
+    "steps": 5728297
+   },
+   {
+    "seed": 1,
+    "best": 11,
+    "steps": 6271725
+   },
+   {
+    "seed": 2,
+    "best": 11,
+    "steps": 6010376
+   }
+  ],
+  "best": 11,
+  "conjectured": 11,
+  "basis": [
+   769332,
+   597873,
+   510592,
+   938164,
+   422484,
+   89813,
+   690973,
+   962190,
+   293424,
+   136946
+  ],
+  "covered_points": 11,
+  "points_per_hit_line": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "n_hit_lines": 11,
+  "hit_lines": [
+   "13",
+   "16",
+   "17",
+   "19",
+   "26",
+   "27",
+   "28",
+   "31",
+   "4",
+   "6",
+   "8"
+  ],
+  "hit_lines_are_cyclic_orbit_of_order_r": false,
+  "pgl_elements_checked": 32736,
+  "radical_dims": {
+   "0": 12,
+   "2": 18
+  },
+  "char_sums": {
+   "-64": 8,
+   "-32": 10,
+   "0": 9,
+   "32": 2,
+   "64": 2,
+   "1024": 1
+  },
+  "check_count": 11
+ }
+}
