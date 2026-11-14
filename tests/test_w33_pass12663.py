@@ -61,3 +61,9 @@ def test_exact_certificate_identity_end_to_end():
             rhs += np.vdot(qg, G @ qg).real
         assert abs(lhs - rhs) < 1e-9 * max(1.0, abs(lhs)), (lhs, rhs)
         assert rhs > 0
+
+
+def test_q128_annealing_consistent_with_conjecture_and_parity():
+    runs = [load(f"w33_regulus_stabiliser_q128_seed{s}.json") for s in (0, 1, 2)]
+    assert [r["best"] for r in runs] == [47, 49, 51]
+    assert all(r["all_counts_odd"] and r["best"] >= r["predicted"] == 43 and r["steps"] > 4 * 10 ** 6 for r in runs)

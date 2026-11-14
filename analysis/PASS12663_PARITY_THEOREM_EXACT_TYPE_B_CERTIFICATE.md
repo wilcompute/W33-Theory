@@ -51,3 +51,17 @@ Annealing over Lagrangians of F₂²⁸ against the prediction (q+1)/3 = 43: see
 
 - Closed form of 2.498509 through the 16-dimensional code space.
 - Why odd k forbids a one-point Lagrangian. The parity theorem uses all the mod-2 information; the (q+1)/3 pattern needs something else.
+
+## Addendum: q = 128
+
+Three annealing seeds over Lagrangians of F₂²⁸ (fourteen qubits, 129 regulus bases), 1,500 s and about 4.6 million steps each:
+
+| seed | best covered count | last improvement at step |
+|---|---|---|
+| 0 | 47 | 827,400 |
+| 1 | 49 | 3,106,968 |
+| 2 | 51 | 172,216 |
+
+- The prediction (q+1)/3 = 43 was **not reached**, and nothing below 43 was seen. So this gives only the upper bound m*(128) ≤ 47; it neither confirms nor refutes the conjecture.
+- The runs were still improving slowly, so 47 is not evidence that the minimum is above 43.
+- **Parity theorem check:** every one of the 13.8 million Lagrangians visited had an odd covered count.
