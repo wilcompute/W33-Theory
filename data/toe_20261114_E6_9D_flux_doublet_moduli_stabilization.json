@@ -1,0 +1,186 @@
+{
+  "arbitrary_integer_flux_rank_census": {
+    "0": 0,
+    "1": 1,
+    "2": 74
+  },
+  "common_four_3form_slots": 4,
+  "exact_SL2Z_duality_invariance_checks": 450,
+  "exclusions": "NOT the full ExFT action or a validated compactification: fixes base metric and volume, ignores flux Bianchi/tadpoles, warping, sources, Einstein eqns and other moduli; does NOT select five vs six spacetime dimensions.",
+  "flux_doublet_integer_components": 8,
+  "flux_energy": "E(tau) = ||F - tau H||\u00b2 / Im(tau), at fixed base metric and volume",
+  "integer_discriminant": "D=||F||\u00b2 ||H||\u00b2 - (F.H)\u00b2=sum_{i<j}(Fi Hj-Fj Hi)\u00b2",
+  "isolated_interior_shape_minimum_iff_flux_doublet_rank_two": true,
+  "normalized_shape_flux_Hessian_at_min": "2 ||H||^4 / sqrt(D) times identity in (Re tau, Im tau) coordinates",
+  "physical_interpretation": "An actual kinetic term for an axiodilaton/torus shape doublet can conditionally stabilize shape while preserving M(T2)-IIB(S1) duality.",
+  "rank_one_zero_energy_infimum_at_moduli_boundary": true,
+  "rank_two_minimal_energy": "2 sqrt(D)",
+  "rank_two_tau_star": "(F.H + i sqrt(D))/||H||\u00b2",
+  "references": [
+    "https://academic.oup.com/ptep/article/2017/4/043B05/3605261",
+    "https://jaxvacua.readthedocs.io/en/latest/intro/sugra.html"
+  ],
+  "sample_rank_two_minima": [
+    {
+      "D": 324,
+      "F": [
+        3,
+        3,
+        2,
+        -2
+      ],
+      "H": [
+        -3,
+        -1,
+        -2,
+        -2
+      ],
+      "energy_min": "36",
+      "tau_star": "-2/3 + I"
+    },
+    {
+      "D": 369,
+      "F": [
+        -3,
+        3,
+        0,
+        -3
+      ],
+      "H": [
+        2,
+        3,
+        1,
+        -1
+      ],
+      "energy_min": "6*sqrt(41)",
+      "tau_star": "2/5 + sqrt(41)*I/5"
+    },
+    {
+      "D": 51,
+      "F": [
+        -2,
+        0,
+        0,
+        -1
+      ],
+      "H": [
+        1,
+        -3,
+        -1,
+        1
+      ],
+      "energy_min": "2*sqrt(51)",
+      "tau_star": "-1/4 + sqrt(51)*I/12"
+    },
+    {
+      "D": 83,
+      "F": [
+        -3,
+        -2,
+        2,
+        2
+      ],
+      "H": [
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "energy_min": "2*sqrt(83)",
+      "tau_star": "-1/4 + sqrt(83)*I/4"
+    },
+    {
+      "D": 185,
+      "F": [
+        -1,
+        0,
+        3,
+        3
+      ],
+      "H": [
+        2,
+        -1,
+        3,
+        1
+      ],
+      "energy_min": "2*sqrt(185)",
+      "tau_star": "2/3 + sqrt(185)*I/15"
+    }
+  ],
+  "square_hex_and_runaway_examples": {
+    "hexagonal": {
+      "D": 3,
+      "F": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "H": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "energy_min": "2*sqrt(3)",
+      "rank": 2,
+      "tau_star": "1/2 + sqrt(3)*I/2"
+    },
+    "pure_F_runaway": {
+      "D": 0,
+      "F": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "H": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "has_finite_minimum": false,
+      "infimum_energy": 0,
+      "rank": 1
+    },
+    "rank_one_runaway": {
+      "D": 0,
+      "F": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "H": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "has_finite_minimum": false,
+      "infimum_energy": 0,
+      "rank": 1
+    },
+    "square": {
+      "D": 1,
+      "F": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "H": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "energy_min": "2",
+      "rank": 2,
+      "tau_star": "I"
+    }
+  },
+  "status": "PASS_EXACT_9D_M_IIB_FLUX_SHAPE_MINIMUM_SL2Z_DUALITY",
+  "zero_flux_has_flat_moduli_no_isolated_minimum": true
+}

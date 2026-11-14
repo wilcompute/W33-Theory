@@ -1,0 +1,24 @@
+{
+  "MUB_CaDiCaL_exclusion_status": "UNDECIDED_BOUNDED_CONFLICTS",
+  "all_single_axis_sign_inversion_cases": 1512,
+  "calibration_plus_minus_0_10_separates_means": true,
+  "calibration_plus_minus_0_15_makes_means_overlap": true,
+  "charge_aliases_when_inverted_axis_touches_five_omitted_neighbors": 20,
+  "charge_aliases_when_inverted_axis_touches_two_omitted_neighbors": 8,
+  "critical_absolute_visibility_uncertainty_at_eta08": 0.12879784564873084,
+  "eta_center": "4/5",
+  "exact_axis_inversion_alias_count_histogram": {
+    "20": 432,
+    "8": 1080
+  },
+  "false_charge_aliases_per_menu_summed_over_all_axes": 240,
+  "fixed_one_radian_gate_compiler_cert_reused": true,
+  "four_copies_must_share_one_latent_state": true,
+  "fourth_moment_Haar": "1/33",
+  "fourth_moment_finite": "1/9",
+  "if_four_latent_states_independent_product_expectation": "0 for both centered ensembles",
+  "key_physical_falsifier": "An undiagnosed persistent sign inversion cannot be fixed by more independent shots of the same axis; the 47-axis erasure-robust protocol assumes failure detection and reconfiguration.",
+  "limitations": "Only single fourth-moment statistic and one-axis sign errors considered; a richer experiment may estimate eta separately and correct the failure. This is not an impossibility theorem for arbitrary POVMs or optical platforms.",
+  "optimal_21_axis_menus_checked": 72,
+  "status": "PASS_HP3_FOURCOPY_CALIBRATION_BOUND_AND_UNDIAGNOSED_AXIS_SIGN_FLIP"
+}

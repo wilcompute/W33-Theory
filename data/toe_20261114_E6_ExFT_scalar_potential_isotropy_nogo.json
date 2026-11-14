@@ -1,0 +1,84 @@
+{
+  "Cartan_dim": 6,
+  "Hilbert_Schmidt_root_packet_norm_sq": 12,
+  "anisotropic_V5_minus_V6_sign_hist": {
+    "negative": 20,
+    "positive": 22
+  },
+  "anisotropic_basis_element_count": 42,
+  "anisotropic_opposite_sign_witnesses": {
+    "negative": {
+      "V5": [
+        1,
+        120
+      ],
+      "V6": [
+        1,
+        48
+      ],
+      "basis_element": 1,
+      "normalized_V5_minus_V6": [
+        -1,
+        80
+      ]
+    },
+    "positive": {
+      "V5": [
+        1,
+        120
+      ],
+      "V6": [
+        0,
+        1
+      ],
+      "basis_element": 0,
+      "normalized_V5_minus_V6": [
+        1,
+        120
+      ]
+    }
+  },
+  "common_four_anisotropic_scalar_potential_equal_cases": 168,
+  "compact_usp8_dimension": 36,
+  "cubic_generators_checked": 78,
+  "derivative_free_flat_M_equals_I_g_equals_eta_Vpot": 0,
+  "exact_ExFT_quadratic_scalar_potential_at_M_identity": "Tr(h^2) |q|^2 / 24 - |h q|^2 / 2",
+  "example_five_section": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "example_six_section": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    9
+  ],
+  "full_coset_projector_trace": 42,
+  "full_coset_square_resolution": "14/9 I27",
+  "isotropic_branch_preference_per_derivative_mode": false,
+  "isotropic_five_section_total_for_one_equal_derivative_mode_per_axis": "25/216",
+  "isotropic_six_section_total_for_one_equal_derivative_mode_per_axis": "5/36",
+  "isotropic_unit_Hilbert_Schmidt_coset_average_per_unit_derivative": "5/216",
+  "noncompact_coset_dimension": 42,
+  "normalized_root_square_resolution": "4/3 I27",
+  "orthogonal_Cartan_square_resolution": "2/9 I27",
+  "physics_scope": "Necessary no-go for selection by the homogeneous / quadratic isotropic scalar sector. Full five-dimensional ExFT includes tensor hierarchy, external gravity, flux, topological terms, boundary conditions, and possible quantum corrections; NO claim of complete action selection, 11D-vs-IIB cosmological vacuum energy, or underlying TOE.",
+  "reference_urls": [
+    "https://edoc.hu-berlin.de/server/api/core/bitstreams/c2e61a8e-6617-4d02-a91b-df26fe5ff80a/content",
+    "https://arxiv.org/abs/1312.0614"
+  ],
+  "shared_four_coordinate_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "source": "Hohm-Samtleben E6(6) ExFT; Vpot as Eq (3.103) of canonical formulation (2021)",
+  "status": "PASS_EXACT_E6_EXFT_SCALAR_POTENTIAL_ISOTROPIC_BRANCH_NO_GO",
+  "symmetric_root_packet_dim": 36
+}

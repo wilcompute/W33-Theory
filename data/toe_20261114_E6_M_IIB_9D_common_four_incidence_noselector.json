@@ -1,0 +1,79 @@
+{
+  "IIB_branch_interface_degree": 5,
+  "IIB_section_count": 216,
+  "M_IIB_pair_coordinate_intersection_histogram": {
+    "0": 5832,
+    "1": 4320,
+    "2": 4320,
+    "4": 1080
+  },
+  "M_M_common_IIB_neighbors_histogram": {
+    "0": 1836,
+    "3": 720
+  },
+  "M_M_incidence_Gram_annihilating_polynomial_product_3_9_21_45_75": true,
+  "M_M_incidence_Gram_exact_eigen_census": {
+    "21": 20,
+    "3": 15,
+    "45": 6,
+    "75": 1,
+    "9": 30
+  },
+  "M_M_incidence_Gram_exact_power_traces": [
+    72,
+    1080,
+    29160,
+    1176120,
+    60332040
+  ],
+  "M_branch_interface_degree": 15,
+  "M_section_count": 72,
+  "annihilator_dimension": 7,
+  "bipartite_graph_connected": true,
+  "common_core_9D_origin": "5 external + 4 common internal = 9 effective coordinates",
+  "common_core_coordinates": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "each_four_has_exactly_one_M_and_one_IIB_extension": true,
+  "example_IIB_5section": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "example_M_6section": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    9
+  ],
+  "incidence_edges": 1080,
+  "incidence_matrix_nullity_on_IIB_functions": 144,
+  "incidence_matrix_row_rank": 72,
+  "incidence_random_walk_stationary_branch_masses": {
+    "IIB5": "1/2",
+    "M6": "1/2"
+  },
+  "known_physics": "M-theory on T2 and type IIB on S1 yield 9D dual frames, Sakatani-Uehara PTEP 2017 043B05",
+  "local_section_equations": "x*y=x*z=0; solution = {x axis} union {y,z plane}",
+  "naive_equal_section_prior": {
+    "IIB5": "3/4",
+    "M6": "1/4"
+  },
+  "nonzero_singular_value_condition_number": 5,
+  "precise_limitation": "The 1080 finite incidence edges are an algebraic correspondence, not a derivation of Buscher rules, flux quantization, gravitational dynamics, or transition between physical sections. Both priors are optional and produce opposite apparent selection weights.",
+  "shared_coordinate_four_spaces": 1080,
+  "status": "PASS_E6_1080_UNIQUE_M_IIB_COMMON4_DUALITY_INTERFACE_NO_INTRINSIC_BRANCH_WEIGHT",
+  "transverse_one_dimensional_IIB_direction": 4,
+  "transverse_two_dimensional_M_directions": [
+    5,
+    9
+  ],
+  "unique_quadruple_extension_verification_count": 1080
+}
