@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "generators": [
+    17,
+    35,
+    72
+  ],
+  "rank": 2,
+  "purity": "1/2",
+  "probability_each_outcome": "1/16",
+  "collision_sum": "5/16",
+  "pure_collision_floor": "713/2000",
+  "purity_lower_bounds": [
+    {
+      "purity": 0.5,
+      "collision_lower_bound": 0.3125
+    },
+    {
+      "purity": 0.8,
+      "collision_lower_bound": 0.3184287459931875
+    },
+    {
+      "purity": 0.9,
+      "collision_lower_bound": 0.33427955640919765
+    },
+    {
+      "purity": 0.95,
+      "collision_lower_bound": 0.344733188590138
+    },
+    {
+      "purity": 0.99,
+      "collision_lower_bound": 0.35405155410571487
+    },
+    {
+      "purity": 1.0,
+      "collision_lower_bound": 0.3565
+    }
+  ]
+}

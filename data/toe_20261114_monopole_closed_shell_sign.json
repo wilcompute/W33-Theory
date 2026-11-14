@@ -1,0 +1,55 @@
+{
+  "energy": 0.002,
+  "inner_radius": 36.0,
+  "cells_per_interval": 32,
+  "rows": [
+    {
+      "radius": 72.0,
+      "projected": 0.8065800069832444,
+      "full": 0.806580220842572,
+      "full_minus_projected": 2.1385932758022363e-07,
+      "closed_block_only": 3.643063628544496e-11,
+      "coupling_odd": 4.420509014391172e-09,
+      "coupling_even": 2.0940238798505817e-07,
+      "matrix_odd_norm": 1.940652730530497e-08,
+      "matrix_even_norm": 4.088254965819644e-07
+    },
+    {
+      "radius": 144.0,
+      "projected": 0.8073811231035218,
+      "full": 0.8073813436232297,
+      "full_minus_projected": 2.2051970782754893e-07,
+      "closed_block_only": 3.6210145992754406e-11,
+      "coupling_odd": 4.378464313337105e-09,
+      "coupling_even": 2.1610503331270792e-07,
+      "matrix_odd_norm": 1.936280775179038e-08,
+      "matrix_even_norm": 4.2646833265679434e-07
+    },
+    {
+      "radius": 288.0,
+      "projected": 0.8072449419536468,
+      "full": 0.8072451627924112,
+      "full_minus_projected": 2.2083876438649952e-07,
+      "closed_block_only": 3.61923824243604e-11,
+      "coupling_odd": 4.3893558232532826e-09,
+      "coupling_even": 2.1641321612531073e-07,
+      "matrix_odd_norm": 1.9362155440382287e-08,
+      "matrix_even_norm": 4.2631754629642507e-07
+    }
+  ],
+  "profile": {
+    "energy": 573.9689823629523,
+    "iterations": 22,
+    "scaled_discrete_residual": 1.6683222143117572e-07,
+    "elements": 120,
+    "gauge": 311.3174830073491,
+    "scalar_gradient": 238.31512323107341,
+    "potential": 24.331974352743423,
+    "d_energy": 1.3895701656652856e-05,
+    "virial_defect": 0.00643671804542123,
+    "linear_scalar_tail_energy": 0.004401771786374227,
+    "outer_radius": 9.0,
+    "boundary_scalar_deviation": 0.005586556976708894,
+    "boundary_linear_gauge_tangent": 3.692580475359178e-07
+  }
+}

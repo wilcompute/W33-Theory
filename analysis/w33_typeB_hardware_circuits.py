@@ -7,7 +7,7 @@ product of two-qubit CZ gates between the pairs (a0, a1) and (b0, b1) along the 
    t = w   : a0-b0, a0-b1, a1-b0
    t = w^2 : a0-b0, a1-b1
 So each measurement is: apply the CZ gates of its graph, then a Hadamard on every qubit, then read out in the computational basis
-(at most 3 CZ gates).  The statement to test:  for every four-qubit state,  sum over the five settings of sum_outcomes p^2 >= 5/16 + 11/250
+(at most 3 CZ gates).  The statement to test:  for every pure four-qubit state,  sum over the five settings of sum_outcomes p^2 >= 5/16 + 11/250
 (proved, Pass 12663), with numerical optimum 5/16 + 1/16; a fully depolarised device gives exactly 5/16.
 This script (1) derives M_t, (2) builds the five measurement unitaries from H and CZ gates on a 16-dimensional state vector with NO
 finite-field code, (3) checks that F from the circuits equals F from the CZ model for random states up to an outcome relabelling,

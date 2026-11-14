@@ -22,11 +22,11 @@ For the F₄ regulus set, write each ququart as two qubits via the F₂-basis {1
 
 ## 2. The statement to test
 
-For every four-qubit state, the total collision probability over the five settings,
+For every pure four-qubit state, the total collision probability over the five settings,
 
 Σ over settings of Σ over outcomes of p²,
 
-is **at least 5/16 + 11/250 = 0.3565** (proved exactly, Pass 12663). Numerically it is at least 5/16 + 1/16 = 0.375, attained by stabiliser states. A maximally mixed state gives 5/16 = 0.3125.
+is **at least 5/16 + 11/250 = 0.3565** (proved exactly, Pass 12663). Numerically it is at least 5/16 + 1/16 = 0.375, attained by stabiliser states. A maximally mixed state gives 5/16 = 0.3125. An exact rank-two stabilizer mixture also gives 5/16. See the [mixed-state control and purity-aware bound](2026-11-14_typeB_mixed_control.md).
 
 **Noise.** Under global depolarisation ρ ↦ λρ + (1−λ)I/16, every p − 1/16 scales by λ, so the excess over 5/16 scales by λ²:
 
