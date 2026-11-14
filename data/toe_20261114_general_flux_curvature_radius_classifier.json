@@ -1,0 +1,39 @@
+{
+  "status": "PASS_CONDITIONAL_EINSTEIN_FRAME_SCALING_CLASSIFIER",
+  "formula": "V_p(R)=A_p R^(-2p-2n/(d-2)) for A_p>0",
+  "torus_T4_flux_only_runaway": true,
+  "torus_case": {
+    "d": "5",
+    "n": "4",
+    "p": "3",
+    "raw": "-2",
+    "weyl": "-20/3",
+    "flux_power": "-26/3",
+    "flux_decay": "26/3",
+    "curvature_decay": "14/3"
+  },
+  "curvature_formula": "V_curv(R)=-B R^(-2-2n/(d-2)), B>0 if integrated internal scalar curvature positive",
+  "positive_flux_only_no_critical_point": true,
+  "one_p3_example": {
+    "branch": "unique_stable_radial_AdS_extremum",
+    "radius_power": "4",
+    "radius_power_value": "13/7",
+    "vacuum_energy_over_A_RminusA": "-6/7",
+    "log_radius_hessian_over_A_RminusA": "104/3",
+    "full_background_solution_certified": "False"
+  },
+  "multiflux_p2_p3_example": {
+    "exists": true,
+    "unique": true,
+    "radially_stable": true,
+    "vacuum_energy_negative": true,
+    "full_background_solution_certified": false,
+    "effective_curvature_coefficient": "1",
+    "stationarity": "sum a_p*A_p*R**(-(a_p-c))=c*B_eff; LHS strictly decreasing",
+    "hessian": "sum a_p*(a_p-c)*A_p*R**(-a_p)>0",
+    "vacuum_energy": "sum (1-a_p/c)*A_p*R**-a_p<0"
+  },
+  "topology_guard": "No curvature term in the specified fixed flat T4 model. T4 does not support an everywhere-positive-scalar-curvature metric; this does not by itself rule out positive integrated curvature for a sign-changing metric. A different full compactification needs flux cohomology and field equations.",
+  "scope": "Unwarped, no warp factor, fixed normalized internal shape, one uniform radius, fixed internal quantized fluxes, d>2; no proof of full moduli stability, E6 section selector, consistent solution or TOE.",
+  "prior": "analysis/toe_20261114_E6_flux_shape_volume_runaway_nogo.py"
+}
