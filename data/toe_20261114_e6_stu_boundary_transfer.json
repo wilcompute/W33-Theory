@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "charges": [
+        1,
+        64,
+        4096
+      ],
+      "balanced_magnitude": 64,
+      "stabilizer_dimension": 52,
+      "boundary_stabilizer_rank": 40,
+      "horizon_stabilizer_rank": 28,
+      "augmented_boundary_rank": 42,
+      "kernel_dimension_within_augmented_boundary": 14
+    },
+    {
+      "charges": [
+        1,
+        1,
+        262144
+      ],
+      "balanced_magnitude": 64,
+      "stabilizer_dimension": 52,
+      "boundary_stabilizer_rank": 36,
+      "horizon_stabilizer_rank": 28,
+      "augmented_boundary_rank": 38,
+      "kernel_dimension_within_augmented_boundary": 10
+    },
+    {
+      "charges": [
+        1,
+        1,
+        1
+      ],
+      "balanced_magnitude": 1,
+      "stabilizer_dimension": 52,
+      "boundary_stabilizer_rank": 28,
+      "horizon_stabilizer_rank": 28,
+      "augmented_boundary_rank": 30,
+      "kernel_dimension_within_augmented_boundary": 2
+    }
+  ]
+}
