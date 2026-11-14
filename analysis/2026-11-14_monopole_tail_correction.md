@@ -31,3 +31,7 @@ Run the default 32-shells-per-octave replay with py -3 analysis/toe_20261114_mon
 | Operator norm of direct minus first-order matrix change | 1.57743530e-9 |
 
 The earlier 16-to-32 mesh difference at radius 4608 was about 3.14e-6 in probability. This exceeds the observed change from increasing the radius beyond 4608. The finite-radius comparison supports prioritizing shell discretization and channel feedback over a longer projected integration at this energy.
+
+## 64-shell refinement
+
+The finer replay gives 0.807419441272 at radius 4608 and 0.807419416708 at radius 36864. Its direct change is -2.45635253e-8, within 5.90e-11 of the infinite-radius first variation. The reflection-matrix discrepancy falls to 3.96e-10 in operator norm. The 32-to-64 shell shift at 4608 is 7.85e-7 in probability, about 32 times the finer post-cut change. The fixture records both mesh results, and both replays ran on TheHeavyCrown.
