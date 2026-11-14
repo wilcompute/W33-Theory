@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "energy": 0.002,
+  "profile": {
+    "energy": 573.9689823629523,
+    "iterations": 22,
+    "scaled_discrete_residual": 1.6683222143117572e-07,
+    "elements": 120,
+    "gauge": 311.3174830073491,
+    "scalar_gradient": 238.31512323107341,
+    "potential": 24.331974352743423,
+    "d_energy": 1.3895701656652856e-05,
+    "virial_defect": 0.00643671804542123,
+    "linear_scalar_tail_energy": 0.004401771786374227,
+    "outer_radius": 9.0,
+    "boundary_scalar_deviation": 0.005586556976708894,
+    "boundary_linear_gauge_tangent": 3.692580475359178e-07
+  },
+  "cells_per_octave": 16,
+  "projected_rows": [
+    {
+      "radius": 72.0,
+      "conversion": 0.8065780351136594
+    },
+    {
+      "radius": 144.0,
+      "conversion": 0.8073781069815211
+    },
+    {
+      "radius": 288.0,
+      "conversion": 0.8072418183549254
+    },
+    {
+      "radius": 576.0,
+      "conversion": 0.8073059486370882
+    },
+    {
+      "radius": 1152.0,
+      "conversion": 0.8074411561520506
+    },
+    {
+      "radius": 2304.0,
+      "conversion": 0.8074143271074938
+    },
+    {
+      "radius": 4608.0,
+      "conversion": 0.807415518190454
+    }
+  ],
+  "max_sampled_generator_norm": 0.0015200032414687792,
+  "massless_tail_coefficient_norm": 3.3233224277812415e-06,
+  "sampled_coulomb_derivative_norm": 1.845878033638498e-14,
+  "coulomb_off_diagonal_norm": 1.4979352217819313e-14,
+  "derivative_refinement_difference": 1.666725541598554e-14,
+  "slowest_positive_scalar_mass": 0.0015111513132894951,
+  "sampled_yukawa_envelope": 0.05833091326355555,
+  "conditional_yukawa_integral": 7.1164146038684534e-06
+}

@@ -56,8 +56,10 @@ def split_transfers(system, maximum_step=.06):
     return label, refined, *frames, np.repeat(base, pieces, axis=0)
 
 
-def prepare_tail(outer, elements, *, exterior_nodes=()):
-    spline, vacuum, masses, right, amplitudes, report = solve_profile(outer, elements)
+def prepare_tail(outer, elements, *, exterior_nodes=(), solution=None):
+    if solution is None:
+        solution = solve_profile(outer, elements)
+    spline, vacuum, masses, right, amplitudes, report = solution
 
     def profile(radius):
         if radius <= outer:
