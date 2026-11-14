@@ -16,7 +16,7 @@ From Pass 12656: the 27 three-qubit Paulis commuting with J = (Y⊗I⊗I)K form 
   - **V_min = 3·|N|^{2/3}** in every case (relative error ≤ 9×10⁻¹⁴);
   - the attractor charge Q* always has quaternionic spectrum |N|^{1/3}·(3, −1, −1, −1) (sign of N);
   - **N > 0 (3 cases):** Q*/N^{1/3} is the charge of an explicit pure state. (X*/N^{1/3} + I)/4 is a rank-2 projector, and a vector ψ in its range reproduces the charge to 2×10⁻⁸.
-  - **N < 0 (9 cases):** Q* is minus a pure-state charge, which is not the charge of any state (I + X* has eigenvalue −2).
+  - **N < 0 (9 cases):** Q* is minus a pure-state charge times |N|^{1/3}; the normalised version is not the charge of any state (I + X*/|N|^{1/3} has eigenvalue −2). See the addendum: the unnormalised endpoint is physical when |N| ≤ 1/27.
 - **N = 0:** V flows to 0 (6×10⁻¹⁶), so there is no attractor ("small" black holes).
 
 Mathematically this is the Kempf–Ness picture: minimal-norm points of closed orbits are where the moment map ⟨Q, PQ⟩ vanishes. The content here is that in this realisation the minimal-norm set with N > 0 is exactly the set of pure-state charges (times N^{1/3}).
@@ -31,6 +31,15 @@ Mathematically this is the Kempf–Ness picture: minimal-norm points of closed o
   - attractor projector equal to **the projector onto the top quaternionic eigenspace of ρ_J**, to 10⁻⁸–10⁻¹⁵ (four rank-4 states, analytic gradients, BFGS gtol 10⁻¹³; also overlap > 0.99999 for ten earlier states).
 - So, numerically: the 5D attractor flow, started at the origin, sends a mixed state's charge to N^{1/3} times the charge of its dominant quaternionic eigenvector.
 - "Nearest" means nearest among the minima found; no proof that it is the global geodesic projection.
+
+## Addendum: proof and a correction (other track, 3e5e71b64)
+
+`analysis/2026-11-14_e6_attractor_torus.md` **proves** V_min = 3|N|^{2/3}:
+- a compact transformation diagonalises X; in that frame the charge has three coefficients (a, b, c) with V = a² + b² + c² and N = abc, so AM-GM gives the bound;
+- a torus rescaling attains it, and the endpoint lies on the top quaternionic line for N > 0 (bottom for N < 0);
+- for N = 0 the infimum 0 is not attained.
+
+**Correction to §1:** "for N < 0 the attractor charge is not the charge of any state" holds only for the **normalised** endpoint X*/|N|^{1/3} (the script tested that). The actual endpoint −|N|^{1/3}(4Π − I) is a physical charge whenever |N| ≤ 1/27. For example, the state spread evenly over three quaternionic lines has N = −1/27 and lies on the boundary of state space. The N > 0 statements, and Pass 12667, are unaffected.
 
 ## Literature and scope
 
