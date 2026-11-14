@@ -42,6 +42,8 @@ This is a statement about one map between two known structures, and it says noth
 
 ## Addendum: the majorisation is a theorem
 
+**Ownership.** The other track proved this first, and in a stronger form (`analysis/2026-11-14_e6_attractor_gradient.md`, commit 8e73be5b5, 13:24, two minutes before this addendum). They show the leading spectral sums are non-increasing **along the whole gradient flow and along the geodesic**, for both signs of N, and that the nearest attractor to the moduli origin is unique and lies in the diagonal plane. That proves the "nearest attractor = top eigenspace" observation of Pass 12665 and the path statements of §2. Cite theirs. What follows is only the endpoint special case, written independently.
+
 Use the other track's diagonal frame (`analysis/2026-11-14_e6_attractor_torus.md`, 3e5e71b64). A compact transformation brings X to coefficients (a, b, c) on three commuting Paulis, with quaternionic spectrum {s₁a + s₂b + s₃c : s₁s₂s₃ = 1} and N = abc. For N > 0, flipping two signs only permutes this set, so take a ≥ b ≥ c > 0. Then x = (a+b+c, a−b−c, b−a−c, c−a−b) in decreasing order, and the endpoint is g·(3, −1, −1, −1) with g = (abc)^{1/3}.
 
 | partial sum | start | endpoint | reason |
