@@ -1,0 +1,98 @@
+{
+  "status": "PASS",
+  "nonflat_pairs": 64620,
+  "coordinate_counts": {
+    "11": 44100,
+    "00": 19440,
+    "01": 1080
+  },
+  "shared_link_counts": {
+    "11": 6840
+  },
+  "witness": {
+    "links": [
+      [
+        0,
+        1
+      ],
+      [
+        14,
+        15
+      ]
+    ],
+    "common_six": [
+      [
+        3,
+        4,
+        7,
+        8,
+        17,
+        24
+      ],
+      [
+        3,
+        4,
+        11,
+        12,
+        18,
+        24
+      ],
+      [
+        5,
+        6,
+        7,
+        8,
+        17,
+        25
+      ],
+      [
+        5,
+        6,
+        13,
+        14,
+        19,
+        25
+      ],
+      [
+        9,
+        10,
+        11,
+        12,
+        18,
+        26
+      ],
+      [
+        9,
+        10,
+        13,
+        14,
+        19,
+        26
+      ]
+    ],
+    "loop_actions": [
+      18,
+      18
+    ],
+    "trace_product": 0,
+    "commute": true
+  },
+  "marker_gate_squares": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    8
+  ],
+  "distinct_joint_characters": 27,
+  "closure_sizes": [
+    120,
+    726,
+    762
+  ],
+  "six_only_closure_counts": {
+    "6": 120,
+    "2": 36
+  }
+}
