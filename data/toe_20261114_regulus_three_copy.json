@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "symmetric_dimension": 816,
+  "identical_blocks": 16,
+  "reduced_dimension": 51,
+  "factors_for_three_times_objective": [
+    [
+      "lambda - 69",
+      8
+    ],
+    [
+      "lambda - 5",
+      8
+    ],
+    [
+      "lambda**2 - 26*lambda - 663",
+      7
+    ],
+    [
+      "lambda**3 - 63*lambda**2 + 555*lambda + 10963",
+      7
+    ]
+  ],
+  "relaxed_minimum_interval": [
+    "-462736/87615",
+    "-853475/161598"
+  ],
+  "approximate_minimum": -5.281470067804801,
+  "pair_marginal_ppt": {
+    "objective": 0,
+    "denominator": 119999999424,
+    "exact_positive_pivots": 51,
+    "zero_partial_transpose_eigenvalues": 99
+  },
+  "two_term_witness": {
+    "triples": [
+      [
+        3,
+        5,
+        6
+      ],
+      [
+        5,
+        10,
+        15
+      ]
+    ],
+    "signs": [
+      1,
+      -1
+    ],
+    "objective": "-1"
+  }
+}
