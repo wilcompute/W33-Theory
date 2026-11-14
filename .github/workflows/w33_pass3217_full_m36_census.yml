@@ -1,0 +1,137 @@
+name: Pass 3217 Full 256-Shard M36 Census
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'analysis/bt3217_m36_sharded_census.py'
+      - 'analysis/bt3217_3222_proof_accumulator.py'
+      - '.github/workflows/w33_pass3217_full_m36_census.yml'
+      - 'data/w33_pass_namespace_registry_v2.d/3214-3225.json'
+permissions:
+  contents: write
+concurrency:
+  group: pass3217-m36-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: "${{ github.event.pull_request.head.sha || github.sha }}"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy
+      - name: Build canonical 256-shard plan
+        run: python analysis/bt3217_m36_sharded_census.py --mode selftest
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3217-m36-plan
+          path: data/PART_BT3217_M36_SHARD_PLAN.json
+  bucket:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        bucket: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: "${{ github.event.pull_request.head.sha || github.sha }}"
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy
+      - uses: actions/download-artifact@v4
+        with:
+          name: pass3217-m36-plan
+          path: data
+      - name: Execute eight logical rank-three shards
+        run: |
+          for k in 0 1 2 3 4 5 6 7; do
+            index=$(( ${{ matrix.bucket }} + 32*k ))
+            python analysis/bt3217_m36_sharded_census.py --mode shard \
+              --shard-index "$index" --shard-count 256
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3217-m36-bucket-${{ matrix.bucket }}
+          path: data/PART_BT3217_M36_NORMALIZED_SHARD_*.json
+  aggregate:
+    needs: bucket
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: "${{ github.event.pull_request.head.sha || github.sha }}"
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy
+      - name: Reconcile latest head before evidence commit
+        env:
+          HEAD_BRANCH: "${{ github.event.pull_request.head.ref || github.ref_name }}"
+        run: |
+          git fetch origin "$HEAD_BRANCH"
+          git checkout -B "$HEAD_BRANCH" "origin/$HEAD_BRANCH"
+      - uses: actions/download-artifact@v4
+        with:
+          name: pass3217-m36-plan
+          path: data
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: pass3217-m36-bucket-*
+          path: data
+          merge-multiple: true
+      - name: Require complete identity and exact coverage
+        run: |
+          test "$(find data -maxdepth 1 -name 'PART_BT3217_M36_NORMALIZED_SHARD_*.json' | wc -l)" -eq 256
+          python analysis/bt3217_m36_sharded_census.py --mode aggregate \
+            --pattern 'PART_BT3217_M36_NORMALIZED_SHARD_*.json'
+          python - <<'PY'
+          import json,pathlib
+          p=pathlib.Path('data/PART_BT3217_M36_CENSUS_AGGREGATE.json')
+          d=json.loads(p.read_text())
+          assert d['coverage_exact'], d['status']
+          assert d['examined_subspaces']==50_868_675
+          assert d['status'] in {'COMPLETE_ZERO_CANDIDATE_CENSUS','COMPLETE_CENSUS_CANDIDATES_REQUIRE_CERTIFICATION'}
+          assert d['independent_certification_complete'] is False
+          PY
+          python analysis/bt3217_3222_proof_accumulator.py \
+            --m36-pattern 'data/PART_BT3217_M36_NORMALIZED_SHARD_*.json'
+      - name: Commit complete M36 evidence
+        env:
+          HEAD_BRANCH: "${{ github.event.pull_request.head.ref || github.ref_name }}"
+        run: |
+          mkdir -p evidence/pass3217_m36
+          sha256sum data/PART_BT3217_M36_SHARD_PLAN.json \
+            data/PART_BT3217_M36_NORMALIZED_SHARD_*.json \
+            data/PART_BT3217_M36_CENSUS_AGGREGATE.json \
+            data/PART_BT3217_BT3222_PROOF_ACCUMULATOR.json \
+            > evidence/pass3217_m36/SHA256SUMS
+          cp data/PART_BT3217_M36_CENSUS_AGGREGATE.json evidence/pass3217_m36/
+          git config user.name w33-exhaustive-bot
+          git config user.email actions@users.noreply.github.com
+          git add data/PART_BT3217_M36_SHARD_PLAN.json \
+            data/PART_BT3217_M36_NORMALIZED_SHARD_*.json \
+            data/PART_BT3217_M36_CENSUS_AGGREGATE.json \
+            data/PART_BT3217_BT3222_PROOF_ACCUMULATOR.json evidence/pass3217_m36
+          git commit -m 'Pass 3217: record complete 256-shard M36 census'
+          git push origin HEAD:"$HEAD_BRANCH"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3217-complete-m36-census
+          path: |
+            data/PART_BT3217_M36_SHARD_PLAN.json
+            data/PART_BT3217_M36_NORMALIZED_SHARD_*.json
+            data/PART_BT3217_M36_CENSUS_AGGREGATE.json
+            data/PART_BT3217_BT3222_PROOF_ACCUMULATOR.json
+            evidence/pass3217_m36/
