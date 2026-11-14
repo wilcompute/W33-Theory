@@ -1,0 +1,65 @@
+{
+  "N_constant": 1,
+  "cited_repo_input": "analysis/toe_20261114_e6_split_six_section.py root index 2 and exact USp8 Pauli dictionary.",
+  "count_new_density_not_positive": 240,
+  "count_new_norm_squared_gt3": 240,
+  "explicit_strongest_bad_example": {
+    "input_nonzero": [
+      [
+        0,
+        -1
+      ],
+      [
+        17,
+        -1
+      ],
+      [
+        26,
+        -1
+      ]
+    ],
+    "min_density_eigenvalue": -0.125,
+    "new_norm": 4,
+    "old_norm": 3,
+    "output_nonzero": [
+      [
+        0,
+        -1
+      ],
+      [
+        11,
+        1
+      ],
+      [
+        17,
+        -1
+      ],
+      [
+        26,
+        -1
+      ]
+    ],
+    "seed_signs": [
+      -1,
+      -1
+    ],
+    "shear_sign": -1,
+    "triad": [
+      0,
+      17,
+      26
+    ]
+  },
+  "new_norm_squared_distribution": {
+    "3": 120,
+    "4": 240
+  },
+  "no_go": "The cubic-preserving noncompact E6 section-isolating shear U=I+R cannot map all physical Pauli-charge expectation vectors to physical three-qubit states by any deterministic positive trace-preserving quantum channel: it maps explicit physical input charges to vectors outside the physical bound sum q\u00b2<=3.",
+  "old_norm_squared": 3,
+  "physical_quantum_bound": "For ANY three-qubit density matrix, the J-averaged density rho_J=(rho+Jrho J^-1)/2 has even spectral multiplicities, hence Tr(rho_J\u00b2)<=1/2. For X=8rho_J-I=sum_i q_i P_i this yields sum_i q_i\u00b2=(Tr X\u00b2)/8=8Tr(rho_J\u00b2)-1<=3.",
+  "scope": "The no-go applies to the AFFINE 27-Pauli expectation-value encoding and exact linear action U on it. It does not prohibit field-theoretic charge transformations, changes of frame with generalized metric, postselected nonlinear filters or noncompact E6 group dynamics on an unconstrained 27 real charge field.",
+  "status": "PASS_SPLIT_E6_ROOT_SHEAR_FAILS_PHYSICAL_PAULI_CHARGE_POSITIVITY",
+  "tested_J_twirl_rank2_stabilizer_states": 180,
+  "tested_signed_shears": 2,
+  "tested_total": 360
+}
