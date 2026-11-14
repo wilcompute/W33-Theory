@@ -1,0 +1,100 @@
+% Passes 3133--3142: certifiable predictive execution
+\section{Certifiable predictive execution}\label{sec:bt3133-certifiable-predictive}
+
+The adaptive controller must not convert the exact twenty-three-triangle panel into a hard
+fault label once the physical symbols are noisy.  Over the complete universe of
+$48{,}826$ no-fault, one-edge and two-edge $D_4$ hypotheses, the panel produces $46{,}284$
+signatures: $44{,}848$ hypotheses are unique immediately and the remaining collision
+classes have size at most three.  Pass~3133 therefore retains the full posterior through
+all twenty-three observations.  For the explicit positive synthetic channels used in the
+certificate, a batch log-domain update and the streaming normalized update agree within
+$3.45\times10^{-15}$.
+
+This distinction is operational.  Under the frozen prior
+\[
+ P_0=0.995,\qquad P_1=0.0045,\qquad P_2=0.0005,
+\]
+a transcript equal to a rare fault's noiseless signature may still have maximum posterior
+at no fault when the detector is noisy.  The exact-symbol collision class is therefore an
+optimization of the noiseless model, not the state variable of the physical controller.
+
+\subsection{Independent certification of a rank-three magic branch}
+
+A rank-three stabilizer group on six qubits defines an eight-dimensional accepted code.
+The Pass~3134 certifier accepts three signed binary symplectic generators and independently
+checks rank, commutation, projector Hermiticity and idempotence, trace eight, annihilation
+of all nine single-error vectors, nonzero clean success, and non-stabilizerness of the
+accepted clean output by the complete Pauli-expectation criterion.  The committed negative
+control has rank three and trace eight but is rejected because its range is not contained
+in the single-error complement.  The certifier is not a search: a parallel candidate is
+not promoted until it passes this independent path.
+
+\subsection{Spectral prediction and future-action state}
+
+For conjugation-invariant $D_4$ noise, prediction decomposes into four one-dimensional
+Fourier gains and one scalar two-dimensional block.  The fixed-point RTL uses Q1.15
+approximations to
+\[
+ \frac{43}{50},\quad\frac{22}{25},\quad\frac9{10},\quad
+ \frac{89}{100},\quad\frac{89}{100},
+\]
+with maximum coefficient error below $1.47\times10^{-5}$.  The same datapath updates the
+nine-bit future-action causal state.  Likelihood multiplication and Bayesian normalization
+remain explicit nonlinear operations; they are not hidden in the Fourier block.
+
+\subsection{Streaming synchronization after one edit}
+
+The per-tick index is the pair consisting of the omitted slot and the ordering of the three
+already-present curvature pilots, hence a $4\times6=24$ symbol alphabet.  Assuming phase
+was locked before the edit, exhaustive enumeration covers
+\[
+ 12(23+24+1)=576
+\]
+single substitutions, insertions and deletions.  Of these, $565$ relock within two received
+symbols and the remaining eleven within three.  Those eleven cases are precisely
+insertions equal to the expected symbol.  Thus one edit is tracked with delay at most three
+without another optical mode.  This is not blind acquisition and is not a multiple-edit
+claim.
+
+\subsection{The action-rate--distortion envelope}
+
+Pass~3137 jointly varies the syndrome alphabet, zero through six chirality copies, raw
+versus causal versus immediate-action retention, and the exact mean address-transport cost
+of $1.275$ symplectic shears.  The frozen dimensionless model contains $105$ policies and
+has eleven points on its lower convex envelope.  The envelope moves through no additional
+route measurement, $V_4$ sensing, conjugacy-class sensing and finally full $D_4$ sensing.
+Full nonabelian resolution is optimal only at the extreme low-distortion end; it is not the
+unconditional default.
+
+\subsection{Certified forgetting and recursive belief virtualization}
+
+For the moderate positive prediction kernel, the Dobrushin coefficient is
+$0.9969072165$ and Birkhoff's projective contraction coefficient is $0.9992044551$.
+The resulting conservative uniform memory horizons are $1{,}487$ steps to total-variation
+error at most $10^{-2}$ and $4{,}461$ steps to $10^{-6}$.  These are model-derived upper
+bounds, not measured coherence times.
+
+A raw post-base guest requires eleven fixed bits for $1{,}436$ class labels.  The exact
+future-action quotient has $470$ states and needs nine.  Recursive virtual belief machines
+therefore save two fixed bits per guest, or thirty-two bits across sixteen guests.  Updates
+on different guest contexts commute because they act on different Cartesian-product
+coordinates; the shared spectral predictor is read-only with respect to every context.
+
+\subsection{When fewer generator collisions are worth a longer program}
+
+The current computing ISA has $45$ generator collisions among $324$ labeled outgoing
+edges; the minimum-collision computing set has $18$.  The reduction is exactly
+\[
+ \frac{45-18}{324}=\frac1{12}
+\]
+per dispatch.  At the measured mean program length $14.175585$, this avoids
+$1.18129875$ collision exposures per program.  If one collision-resolution event costs the
+same as one instruction, a lower-collision ISA may therefore spend $1.1813$ additional mean
+instructions and still break even.  The statement is a decision boundary; the alternative
+ISA's actual path-length distribution and placed hardware remain separate evidence.
+
+\paragraph{Evidence boundary.}
+All posterior, synchronization, contraction and rate--distortion values above are exact
+for their stated finite objects or explicit synthetic kernels.  Rank-three candidate
+existence, FPGA timing, compiled front doors, laboratory likelihoods, physical edit rates
+and dissipated heat remain independently gated.
