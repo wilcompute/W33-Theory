@@ -1,0 +1,14 @@
+{
+ "n_states": 1080,
+ "n_images": 180,
+ "n_minimal_integral_charges": 180,
+ "image_equals_minimal_set": true,
+ "fibre_sizes": {
+  "6": 180
+ },
+ "fibre_span_dims": {
+  "2": 180
+ },
+ "fibres_equal_quaternionic_line": 180,
+ "fibres_with_qubit_stabiliser_overlaps": 180
+}
