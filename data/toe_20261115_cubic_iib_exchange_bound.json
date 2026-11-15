@@ -1,0 +1,9 @@
+{
+  "total_massive_overlap_lower_bound": 6,
+  "weighted_mean_mass_squared_ceiling_in_ads_units": "4*B",
+  "B_definition": "max_S lambda_max(2 W_minus - 8 I)",
+  "massive_exchange_trace_lower_bound": "6/(x+4*B)",
+  "half_weight_mass_squared_ceiling_in_ads_units": "8*B",
+  "unit_direction_average_exchange_lower_bound": "1/(4*(x+4*B))",
+  "rational_control_zero_shift_exchange": "1652/5083"
+}
