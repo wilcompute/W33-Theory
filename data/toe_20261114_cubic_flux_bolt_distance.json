@@ -1,0 +1,14 @@
+{
+  "orthonormal_TT_variation": [
+    "-2*a**3/r**4",
+    "2*a**3/r**4",
+    "2*a**3/r**4",
+    "-2*a**3/r**4"
+  ],
+  "integrated_squared_norm": "4*pi**2*a**2",
+  "norm_fraction_inside_radius_b": "1-(a/b)^4",
+  "canonical_radial_coordinate_core": "sqrt(3)*a**2/(6*R**2)",
+  "core_potential_times_AdS_radius_squared": "-160*sqrt(3)*Omega/(21*R**4*phi)",
+  "second_derivative_of_dimensionless_core_potential": "-7680*Omega*R**2/(7*a**6)",
+  "order_one_curvature_double_scaling": "a=ell^(2/3)*R^(1/3)"
+}
