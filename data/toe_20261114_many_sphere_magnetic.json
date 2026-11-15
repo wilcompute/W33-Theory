@@ -1,0 +1,38 @@
+[
+  {
+    "external_dimension": 3,
+    "sphere_count": 2,
+    "first_nonlinear_field_strength_power": 8,
+    "maxwell_mass_squared_gap_times_AdS_radius_squared_upper_bound": "6"
+  },
+  {
+    "external_dimension": 4,
+    "sphere_count": 2,
+    "first_nonlinear_field_strength_power": 10,
+    "maxwell_mass_squared_gap_times_AdS_radius_squared_upper_bound": "12"
+  },
+  {
+    "external_dimension": 4,
+    "sphere_count": 3,
+    "first_nonlinear_field_strength_power": 12,
+    "maxwell_mass_squared_gap_times_AdS_radius_squared_upper_bound": "10"
+  },
+  {
+    "external_dimension": 5,
+    "sphere_count": 2,
+    "first_nonlinear_field_strength_power": 12,
+    "maxwell_mass_squared_gap_times_AdS_radius_squared_upper_bound": "20"
+  },
+  {
+    "external_dimension": 5,
+    "sphere_count": 3,
+    "first_nonlinear_field_strength_power": 14,
+    "maxwell_mass_squared_gap_times_AdS_radius_squared_upper_bound": "16"
+  },
+  {
+    "external_dimension": 7,
+    "sphere_count": 5,
+    "first_nonlinear_field_strength_power": 22,
+    "maxwell_mass_squared_gap_times_AdS_radius_squared_upper_bound": "24"
+  }
+]
