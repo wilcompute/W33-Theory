@@ -1,0 +1,12 @@
+{
+ "q": 32,
+ "source": "log of w33_regulus_torus_invariant_codespaces.py 5 (MAXSPACES=25 STARTS=3 ATTEMPTS=3000; stopped by the 7000 s wall-clock limit before its JSON dump)",
+ "order_S": 33,
+ "fixed_subspace_dim": 10,
+ "uncovered_fixed_vectors": 1023,
+ "invariant_subspaces_found": 3000,
+ "spaces_completed": 3,
+ "sign_choices_per_space": 32,
+ "best": 11.0,
+ "note": "best equals the stabiliser value 11; nothing below"
+}

@@ -44,9 +44,11 @@ This is not a global bound. The degree-6 value at this level is 2.4967 (Pass 126
 
 **Structure at q = 8.** S = (g, g) with g of order 9 has order 9 on F₂¹². Its fixed space is 6-dimensional, and all 63 of its non-zero vectors are uncovered (det acts there like the norm of F₆₄). The complement is the Φ₉ block. T lies in the fixed space. Searching isotropic uncovered 3-subspaces of the fixed space reproduces c₈ (120 of 480 code-space/sign choices; the others give 3 or 7).
 
-**q = 32.** The search over isotropic uncovered 5-subspaces of S's fixed space is running (addendum).
+**q = 32.** The structure is the same. S = (g, g) with g of order 33 has order 33 on F₂²⁰, its fixed space is 10-dimensional, and all 1,023 non-zero vectors are uncovered (a copy of F₁₀₂₄ with det acting as a norm). The greedy search found 3,000 isotropic uncovered 5-subspaces in it. On the 32-dimensional code spaces of 3 of them (× 32 sign choices; stopped by the time limit), the best value is **exactly 11, the stabiliser value**, with nothing below it.
 
-**Unequal-trace torus pairs at q = 32.** First pair (traces 20, 28): best 15.044, above 11. The remaining pairs are running.
+**Unequal-trace torus pairs at q = 32.** Two pairs: (20, 28) gives 15.044 (33 eigenspaces, dimensions 29–32), and (20, 23) gives 13.597 (dimensions 20–33). Both are above 11.
+
+> **q = 32 conclusion.** Every torus construction tried (equal-trace eigenspaces 12.4896, unequal-trace 13.6 and 15.0, fixed-space code spaces 11) stays at or above the stabiliser value 11. The q = 8 phenomenon, a non-stabiliser optimum on a torus-fixed code space, does not recur at q = 32 in these searches. This is evidence, not a proof, that c₃₂ = 11.
 
 ## 4. A global degree-6 SOS by symmetry reduction (`w33_f8_global_sos6.py`)
 
