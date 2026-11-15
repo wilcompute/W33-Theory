@@ -116,13 +116,15 @@ for (ci, i, j, acc) in entry_terms:
     if i != j:
         blocks[ci][L + j][i] = -im_; blocks[ci][i][L + j] = -im_
 all_ok = True; worst = 1.0
+FACE = []                                          # facial structure: eigenvalues within 100 x margin of zero, per block
 for ci, Y in enumerate(blocks):
     n2 = len(Y)
     for a in range(n2):
         for b in range(n2):
             if Y[a][b] is None: Y[a][b] = Fr(0)
     Yf = np.array([[float(Y[a][b]) for b in range(n2)] for a in range(n2)])
-    lam = np.linalg.eigvalsh(Yf)[0]
+    evs = np.linalg.eigvalsh(Yf); lam = evs[0]
+    FACE.append(int((evs < 100 * max(s_val, 1e-12)).sum()))
     if lam <= 0: all_ok = False; log(f"block {ci}: float lambda_min {lam:.3e} <= 0"); break
     delta = Fr(lam / 4).limit_denominator(1 << 50)
     Cf = np.linalg.cholesky(Yf - float(delta) * np.eye(n2)); SC = 1 << int(os.environ.get("SCBITS", "40"))
@@ -135,5 +137,6 @@ for ci, Y in enumerate(blocks):
     ratio = float(E2 / (delta * delta)); worst = min(worst, 1 - ratio)
     if not E2 < delta * delta: all_ok = False; log(f"block {ci}: residual too large ({ratio:.3e})"); break
 log(f"CERTIFIED 64F >= {CC} = {float(CC):.10f} on the T code space (degree 8): {all_ok}   (c8 = {C8:.10f})")
-json.dump(dict(C=str(CC), C_float=float(CC), certified=all_ok, scs_margin=s_val, blocks=len(cones), max_block=max(cones), n_classes=NK,
+print("FACE_REPORT: near-zero eigenvalues per block (real embedding, < 100 x margin): total", sum(FACE), "over", len(FACE), "blocks; histogram", dict(sorted(collections.Counter(FACE).items())), flush=True)
+json.dump(dict(face_total=sum(FACE), face_hist={str(k): v for k, v in collections.Counter(FACE).items()}, C=str(CC), C_float=float(CC), certified=all_ok, scs_margin=s_val, blocks=len(cones), max_block=max(cones), n_classes=NK,
                n_vars=nV, c8=C8, gap=C8 - float(CC)), open(os.path.join(ROOT, "data", f"w33_f8_codespace_deg8_certificate_{str(CC).replace('/', '_')}.json"), "w"), indent=1)

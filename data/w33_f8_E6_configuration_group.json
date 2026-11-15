@@ -1,0 +1,347 @@
+{
+ "W_E6_order": 51840,
+ "config_stabiliser_order": 18,
+ "config_stabiliser_element_orders": {
+  "1": 1,
+  "2": 9,
+  "3": 2,
+  "9": 6
+ },
+ "config_stabiliser_line_orbits": [
+  9,
+  9,
+  9
+ ],
+ "config_stabiliser_on_bases": [],
+ "stab_F8_line_partition": 54,
+ "stab_line_1_10_16": 1920,
+ "n_steiner_trihedral_pairs": 120,
+ "stab_trinification_triple": 1296,
+ "F8_partition_is_trinification": false,
+ "other_orbits": [
+  {
+   "orbit": 0,
+   "size": 3,
+   "weights": [
+    [
+     1,
+     17
+    ],
+    [
+     2,
+     2
+    ]
+   ],
+   "min_c": 3.3216968114079164e-11,
+   "ours": false
+  },
+  {
+   "orbit": 0,
+   "size": 3,
+   "weights": [
+    [
+     1,
+     17
+    ],
+    [
+     2,
+     2
+    ]
+   ],
+   "min_c": 4.113945433308109e-11,
+   "ours": false
+  },
+  {
+   "orbit": 0,
+   "size": 3,
+   "weights": [
+    [
+     1,
+     17
+    ],
+    [
+     2,
+     2
+    ]
+   ],
+   "min_c": 5.378019196959794e-11,
+   "ours": false
+  },
+  {
+   "orbit": 1,
+   "size": 9,
+   "weights": [
+    [
+     1,
+     27
+    ],
+    [
+     2,
+     18
+    ]
+   ],
+   "min_c": 3.0000000000020557,
+   "ours": false
+  },
+  {
+   "orbit": 1,
+   "size": 9,
+   "weights": [
+    [
+     1,
+     27
+    ],
+    [
+     2,
+     18
+    ]
+   ],
+   "min_c": 3.000000000001945,
+   "ours": false
+  },
+  {
+   "orbit": 1,
+   "size": 9,
+   "weights": [
+    [
+     1,
+     18
+    ],
+    [
+     2,
+     9
+    ],
+    [
+     3,
+     9
+    ]
+   ],
+   "min_c": 2.4985086467325712,
+   "ours": false
+  },
+  {
+   "orbit": 2,
+   "size": 9,
+   "weights": [
+    [
+     1,
+     63
+    ]
+   ],
+   "min_c": 6.999999999999996,
+   "ours": false
+  },
+  {
+   "orbit": 2,
+   "size": 9,
+   "weights": [
+    [
+     1,
+     63
+    ]
+   ],
+   "min_c": 6.9999999999999964,
+   "ours": false
+  },
+  {
+   "orbit": 2,
+   "size": 9,
+   "weights": [
+    [
+     1,
+     63
+    ]
+   ],
+   "min_c": 6.999999999999995,
+   "ours": false
+  },
+  {
+   "orbit": 3,
+   "size": 9,
+   "weights": [
+    [
+     1,
+     18
+    ],
+    [
+     2,
+     9
+    ],
+    [
+     3,
+     9
+    ]
+   ],
+   "min_c": 2.4985086467634474,
+   "ours": false
+  },
+  {
+   "orbit": 3,
+   "size": 9,
+   "weights": [
+    [
+     1,
+     27
+    ],
+    [
+     2,
+     18
+    ]
+   ],
+   "min_c": 3.0000000000003437,
+   "ours": false
+  },
+  {
+   "orbit": 3,
+   "size": 9,
+   "weights": [
+    [
+     1,
+     27
+    ],
+    [
+     2,
+     18
+    ]
+   ],
+   "min_c": 3.00000000000299,
+   "ours": false
+  },
+  {
+   "orbit": 4,
+   "size": 9,
+   "weights": [
+    [
+     1,
+     18
+    ],
+    [
+     2,
+     9
+    ],
+    [
+     3,
+     9
+    ]
+   ],
+   "min_c": 2.498508646716572,
+   "ours": true
+  },
+  {
+   "orbit": 4,
+   "size": 9,
+   "weights": [
+    [
+     1,
+     27
+    ],
+    [
+     2,
+     18
+    ]
+   ],
+   "min_c": 3.00000000000128,
+   "ours": false
+  },
+  {
+   "orbit": 4,
+   "size": 9,
+   "weights": [
+    [
+     1,
+     27
+    ],
+    [
+     2,
+     18
+    ]
+   ],
+   "min_c": 3.000000000001241,
+   "ours": false
+  },
+  {
+   "orbit": 5,
+   "size": 3,
+   "weights": [
+    [
+     1,
+     19
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "min_c": 9.062817510552644e-11,
+   "ours": false
+  },
+  {
+   "orbit": 5,
+   "size": 3,
+   "weights": [
+    [
+     1,
+     19
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "min_c": 7.771305890489796e-11,
+   "ours": false
+  },
+  {
+   "orbit": 5,
+   "size": 3,
+   "weights": [
+    [
+     1,
+     19
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "min_c": 5.2343022157067876e-11,
+   "ours": false
+  },
+  {
+   "orbit": 6,
+   "size": 3,
+   "weights": [
+    [
+     1,
+     21
+    ]
+   ],
+   "min_c": 3.918099421454516e-11,
+   "ours": false
+  },
+  {
+   "orbit": 6,
+   "size": 3,
+   "weights": [
+    [
+     1,
+     21
+    ]
+   ],
+   "min_c": 5.177827439211711e-11,
+   "ours": false
+  },
+  {
+   "orbit": 6,
+   "size": 3,
+   "weights": [
+    [
+     1,
+     21
+    ]
+   ],
+   "min_c": 3.637511484001471e-11,
+   "ours": false
+  }
+ ]
+}
