@@ -219,3 +219,19 @@ The tensor already distinguishes native W33 adjacency without inserting a non-ge
 Fixing any ONE W33 point p gives a 40×27 channel `Q[p,:,:]` of **rank nine**: its 27 columns are exactly nine distinct octet indicators, each repeated three times. Equivalently each of the 40 W33 points selects **nine tritangent triples of E6 cubic lines, partitioning all 27 line labels**. This ninefold partition was verified for *all 40* p, not one sample. The independent incidence code also checks covariance under seven explicit nontrivial projective symplectic transvections, acting consistently on 40 points, 45 octets and 27 cubic lines. By definition the incidence construction is covariant under any automorphism preserving the three carriers.
 
 This yields a specific **symmetric bilinear candidate** on W33 point amplitudes `Phi(x,y)_ell=sum_{p,q}Q[p,q,ell] x_p y_q`. It is the simplest incidence-only way we have found in this pass to circumvent the linear 40→27 blindness **without an arbitrarily chosen phase function or fixed preferred point**. The map's coefficients are all combinatorial zeros or ones; nothing yet supplies its physical interaction Hamiltonian, gauge transformation law, coupling strength, wave propagation or experiment. Any comparison to H27's nine groups of three requires a further explicit group-action intertwiner; the matching 9×3 census alone is insufficient.
+
+### The 40 W33 points are exactly 40 intrinsic order-three clocks on the E6 27-line carrier
+
+This is a further **objectwise** extension of the same direct dictionary, rather than a fresh 27-object count match. Every projective W33 point `p=[v]` defines the usual finite symplectic transvection on F3^4,
+
+`tau_v(x)=x+omega(x,v)v`,
+
+which has exact order 3 (choice `v` versus `-v` gives the same transformation). It acts by permutation on the 40 W33 projective points, hence on all 45 K4,4 octets and their 27 reconstructed maximal-five-clique cubic line labels.
+
+For **each of all 40 axes**, the permutation on the 27 cubic lines is fixed-point-free and has **exactly nine 3-cycles**. Independently, each selected axis lies in exactly nine octet/tritangent supports; each tritangent identifies a triple of cubic lines. The nine clock orbits and the nine tritangent triples coincide **as nine explicit sets of line indices**, for every axis, not merely in their cardinalities.
+
+The order-three operators also reconstruct the W33 graph without referring to the ray coordinates once they are generated. For all 780 unordered distinct axis pairs, the induced permutations commute iff the corresponding W33 points are collinear/orthogonal: **240 commuting pairs**, with product order **3**. The remaining **540 noncommuting pairs** have product order **6**. Thus the native W33 SRG(40,12,2,4) adjacency is the commutation graph of the 40 order-three permutation operators acting on the reconstructed cubic 27-line carrier.
+
+This is the missing explicit action-level alignment of the quadratic point-conditioned 9×3 partitions with finite 3-cycle dynamics. Earlier repo BT874/BT875 already exhibited one long-root transvection with nine free 3-cycles on a 27-point matter shell and its Z3 eigengrading; it should be credited and not relabeled. The present new checks cover **all 40** point axes and prove their nine orbits coincide with the tritangent triples from the independent 45-octet component dictionary. The product-order/commutator census provides another exact operator falsifier.
+
+All generators are permutations in a finite symplectic/Weyl action on cubic-surface lines. Their order does **not** determine a physical unit of time, distinguish quark generations, produce SU(3) or E6 Yang-Mills gauge bosons, or solve quantum dynamics. A unitary pulse generator can be chosen from a 3-cycle permutation, but that choice needs a physical local-interaction model and energy normalization.

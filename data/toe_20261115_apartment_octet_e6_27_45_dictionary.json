@@ -468,13 +468,21 @@
     "2": 720
   },
   "45_representation_decomposition": "1 + 24 (W33 point-incidence visible) + 20 (E6 line-incidence visible)",
+  "W33_adjacency_iff_cubic_line_transvections_commute": true,
   "all_40_point_conditioned_40x27_transfer_matrices_rank": 9,
+  "all_40_point_transvections_on_E6_lines_order": 3,
+  "all_40_point_transvections_orbit_type": "3^9, nine free 3-cycles",
   "all_45_explicit_blowup_triads_match": true,
+  "all_780_pairs_checked": true,
   "all_order_disjoint_octet_walk_obstruction": "P C^m T = 12^m J for every integer m >= 0",
   "bilinear_map": "Phi(x,y)_l = sum_{p,q} Q[p,q,l] x[p] y[q]",
   "centered_rank_P": 24,
   "centered_rank_T": 20,
   "centered_transfer_exactly_zero": true,
+  "commuting_pair_count_and_product_order": {
+    "240": 3,
+    "540": 6
+  },
   "component_graph": "J(4,2) Cartesian-product J(4,2)",
   "component_graph_spectrum": {
     "-2": 12,
@@ -524,6 +532,7 @@
     1,
     5
   ],
+  "each_40_point_nine_cycles_equal_its_nine_tritangent_triples": true,
   "each_E6_line_40x40_pair_matrix_identity": "Q_l^2=8 Q_l and rank(Q_l)=5 (five K4,4 equivalence classes)",
   "each_W33_point_induces_nine_disjoint_E6_tritangent_triples": true,
   "equivariant_symplectic_transvection_witnesses": 7,
@@ -531,6 +540,8 @@
   "limitation": "Pure finite symplectic and cubic-surface graph geometry; no physical E6 gauge interaction, no new proof that 45 components or 45 octets exist, and no native frame-selection mechanism.",
   "n_frames": 1620,
   "naive_linear_observer_to_matter_obstruction": "Centered W33 point-octet incidence composed with centered E6 octet-line incidence is identically zero; nontrivial LINEAR 40-to-27 transfer needs phase/orientation, an operator insertion, or a different correspondence. The constructed native symmetric bilinear point-pair transfer bypasses this linear obstruction.",
+  "operator_prior_art": "BT874/BT875 already showed a selected long-root transvection has 9 free orbits on the 27 matter shell and Z3 grading; this pass identifies ALL 40 projective symplectic point-axis transvection cycles with exact point-conditioned tritangent triples in the direct octet dictionary.",
+  "operator_scope": "Finite permutation Weyl symmetry on 27 cubic lines, not continuous E6 gauge transformations, not autonomous physical time and not an energy-conserving Hamiltonian.",
   "point_octet_times_octet_line_incidence": "P_40x45 @ T_45x27 = J_40x27",
   "prior_art": "BT766 and Pass1536 already construct 45 K4,4 octets; TOE23 45x36 hopping components; TOE24 45 component-to-E6 tritangent bijection via dual XOR supports; this code provides a direct point-side octet equality and independently reconstructs cubic E6 27 lines from 45 disjoint-octet K5 cliques",
   "quadratic_bridge_scope": "All checks are finite exact combinatorial incidence or explicit GF(3) transvection covariance; a symmetric bilinear map is not a physical matter coupling, energy scale, gauge generator, or Lorentzian dynamics.",

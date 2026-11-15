@@ -89,3 +89,14 @@ def test_native_two_point_quadratic_bridge_breaks_linear_obstruction(result):
     assert result["equivariant_symplectic_transvection_witnesses"]==7
     assert result["each_E6_line_40x40_pair_matrix_identity"].startswith("Q_l^2=8")
     assert "not a physical matter coupling" in result["quadratic_bridge_scope"]
+
+
+def test_all_40_transvection_clocks_recover_27_E6_tritangent_triples(result):
+    assert result["all_40_point_transvections_on_E6_lines_order"]==3
+    assert result["all_40_point_transvections_orbit_type"]=="3^9, nine free 3-cycles"
+    assert result["each_40_point_nine_cycles_equal_its_nine_tritangent_triples"]
+    assert result["W33_adjacency_iff_cubic_line_transvections_commute"]
+    assert result["commuting_pair_count_and_product_order"]=={"240":3,"540":6}
+    assert result["all_780_pairs_checked"]
+    assert "BT875" in result["operator_prior_art"]
+    assert "not continuous E6 gauge" in result["operator_scope"]

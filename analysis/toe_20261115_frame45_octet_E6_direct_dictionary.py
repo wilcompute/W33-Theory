@@ -241,6 +241,54 @@ def reproduce():
         perm_l=[line_index[frozenset(perm_o[k] for k in clique)] for clique in lines]
         assert len(set(perm_l))==27
         assert np.array_equal(tensor[np.ix_(perm_p,perm_p,perm_l)],tensor)
+    # For every one of the 40 W33 point axes, derive the induced
+    # order-three action on the 27 cubic line objects directly.
+    # Its 9 three-cycles are EXACTLY the nine tritangent triples
+    # (one per octet support containing the chosen W33 point).
+    all_clocks=[]
+    for ip,v in enumerate(pts):
+        pp=[point_index[norm(tuple(w[k]+form(w,v)*v[k] for k in range(4)))]
+            for w in pts]
+        po=[octet_index[frozenset(pp[j] for j in S)] for S in supports]
+        pl=tuple(line_index[frozenset(po[k] for k in line)] for line in lines)
+        assert len(set(pl))==27
+        cycle_groups=set()
+        visited=set()
+        for seed in range(27):
+            if seed in visited:continue
+            cyc=[];cur=seed
+            while cur not in visited:
+                visited.add(cur);cyc.append(cur);cur=pl[cur]
+            assert cur==seed and len(cyc)==3
+            cycle_groups.add(frozenset(cyc))
+        assert len(cycle_groups)==9
+        exact_tritangent_groups={
+            frozenset(j for j,line in enumerate(lines) if a in line)
+            for a,S in enumerate(supports) if ip in S
+        }
+        assert len(exact_tritangent_groups)==9
+        assert cycle_groups==exact_tritangent_groups
+        all_clocks.append(pl)
+    def compose(g,h):
+        return tuple(g[h[i]] for i in range(27))
+    ident=tuple(range(27))
+    def order_of(g):
+        cur=ident
+        for k in range(1,13):
+            cur=compose(g,cur)
+            if cur==ident:return k
+        raise AssertionError("order > 12")
+    assert all(order_of(g)==3 for g in all_clocks)
+    pairs_by_relation=Counter()
+    for i,j in combinations(range(40),2):
+        c=(compose(all_clocks[i],all_clocks[j])==
+           compose(all_clocks[j],all_clocks[i]))
+        adjacent=bool(A[i,j])
+        assert c==adjacent
+        product_order=order_of(compose(all_clocks[i],all_clocks[j]))
+        assert product_order==(3 if adjacent else 6)
+        pairs_by_relation[(int(c),product_order)]+=1
+    assert pairs_by_relation=={(1,3):240,(0,6):540}
     # The natural 45-dimensional permutation carrier decomposes into
     # 1 + 24 (visible from W33 point incidence) + 20 (from cubic lines).
     # Their common nontrivial sectors are orthogonal, not equivalent.
@@ -278,6 +326,14 @@ def reproduce():
       "each_W33_point_induces_nine_disjoint_E6_tritangent_triples":True,
       "all_40_point_conditioned_40x27_transfer_matrices_rank":9,
       "equivariant_symplectic_transvection_witnesses":len(test_vectors),
+      "all_40_point_transvections_on_E6_lines_order":3,
+      "all_40_point_transvections_orbit_type":"3^9, nine free 3-cycles",
+      "each_40_point_nine_cycles_equal_its_nine_tritangent_triples":True,
+      "W33_adjacency_iff_cubic_line_transvections_commute":True,
+      "commuting_pair_count_and_product_order":{"240":3,"540":6},
+      "all_780_pairs_checked":True,
+      "operator_prior_art":"BT874/BT875 already showed a selected long-root transvection has 9 free orbits on the 27 matter shell and Z3 grading; this pass identifies ALL 40 projective symplectic point-axis transvection cycles with exact point-conditioned tritangent triples in the direct octet dictionary.",
+      "operator_scope":"Finite permutation Weyl symmetry on 27 cubic lines, not continuous E6 gauge transformations, not autonomous physical time and not an energy-conserving Hamiltonian.",
       "bilinear_map":"Phi(x,y)_l = sum_{p,q} Q[p,q,l] x[p] y[q]",
       "quadratic_bridge_scope":"All checks are finite exact combinatorial incidence or explicit GF(3) transvection covariance; a symmetric bilinear map is not a physical matter coupling, energy scale, gauge generator, or Lorentzian dynamics.",
       "tritangent_types":{"a_i_b_j_c_ij":30,"three_pair_partition":15},
