@@ -43,7 +43,7 @@ The exact witness's squared-expectation table on the effective space is invarian
 
 > The three roots of 243c³ − 3807c² + 17577c − 23941 are all exact critical values of F, realised by Galois-conjugate pure states. c₈ is the smallest. That the minimum is cubic-irrational, rather than of higher degree, is explained by the witness's field.
 
-**Not inherited from GL(2,8).** The normaliser of S in GL(2,8) has order 56 and contains no element of order 9. σ is a symmetry of the code-space problem that is not induced by the linear symmetry group used in Pass 12671 §1. Whether it lifts to another element of the full Clifford symmetry group of the regulus set is not checked.
+**Inherited from a global symmetry (corrected in the addendum).** The normaliser of S in GL(2,8), acting by index permutations, has order 56 and contains no element of order 9. But σ *is* induced by a global symmetry of the regulus set, a two-sided multiplication m ↦ g·m·hᵀ with g and h both of order 9; see the addendum, §A1. (The first version of this note said σ was not inherited; that was checked only against GL(2,8).)
 
 ## 2. Exact bounds for both five-qubit quotient 9-sets (`w33_f8_quotient_exact_corollary.py`)
 
@@ -70,7 +70,7 @@ These bound the minimum *on the code space* only. Even an exact match would not 
 |---|---|---|---|
 | degree-4 real SOS (16 real variables) | Gram 136 | 1.000 | 2.4985 |
 | Hermitian Quillen hierarchy, k = 0…6 | up to 6,435 monomials | −9, −3.67, −3.67, −0.91, −0.28, 0.367, **0.391** | 2.4985 |
-| degree-6 phase-block SOS (charge blocks 120 + 288) | SCS | running; reported in an addendum | 2.4985 |
+| degree-6 phase-block SOS (charge blocks 120 + 288) | SCS, ε = 10⁻⁷, 49 min | **2.49668** (numerical SDP; not rounded or certified) | 2.4985 |
 
 The k = 0 value −9 is the code-space analogue of the other track's global two-copy relaxation, which also gives −9 (9b576804d). The Quillen hierarchy converges, as it must (Catlin–D'Angelo), but slowly. The plain SOS hierarchies on this problem are far from tight at low degree, consistent with the degree-6 global bound 0.0452 at q = 4 (Pass 12660). A matching lower bound remains open.
 
@@ -80,7 +80,7 @@ Solver note: an interior-point solver on the 576×576 real PSD block needs a den
 
 Control: on random states, d·F from the CZ model equals the sum over the 33·1023 covered Paulis (det = 0), at q = 32 and at q = 8. The method also reproduces c₈ at q = 8 from random rank-3 uncovered groups.
 
-The 40-minute random search over rank 4–7 groups is running; its result will be reported in an addendum.
+Random search over 126 uncovered code spaces (ranks 4–7, 40 min): **minimum 11 in every rank** (medians 11, 11, 13, 13). No non-stabiliser improvement was found. This is a weak negative: undirected sampling found c₈ at q = 8 within a second, but the space of groups at q = 32 is vastly larger. The directed torus test is in §A3.
 
 ## Prior art and ownership
 
@@ -88,3 +88,27 @@ The 40-minute random search over rank 4–7 groups is running; its result will b
 - The quotient types, the shortening labels and the replay code are the other track's (3228ba7bf). Their rational witness bound is superseded only as an upper bound; their construction stands.
 - Quillen (1968) and Catlin–D'Angelo (1996) are used for the Hermitian Positivstellensatz.
 - Literature search: stabiliser states are known to be the worst case for Pauli/MUB uncertainty tasks, with magic states better (Howard, arXiv:1501.05319; Andersson et al., arXiv:1412.8181). No source found treats regulus subsets or this torus structure.
+
+## Addendum
+
+### A1. The torus is a global symmetry of the regulus set (`w33_f8_torus_global_origin.py`)
+
+The regulus set is preserved by m ↦ g·m·hᵀ (g, h ∈ SL(2,8)) and by Frobenius, with phase space = 2×2 matrices over F₈ and Q = det (other track's trace-pairing labels).
+- Among all 504²·3 such maps, **18 normalise T**. They act faithfully on the nine effective Lagrangians as the **dihedral group D₉**: 6 nine-cycles, 2 elements of order 3, 9 reflections and the identity.
+- The nine-cycles are exactly the pairs (g, h) with **g and h both of order 9**, non-split tori on both sides; Frobenius does not occur.
+- The six-qubit Clifford W of such a pair (with the Pauli correction for which the witness is an eigenvector; 8 such corrections = T × one lift) has projective order 18. Its eigenspaces are **16 spaces of dimension 4**.
+- **c₈ is attained in 8 of them**, including the witness's. The other minima are 13/3 (4 spaces) and 4.6048… (4 spaces, a conjugate cubic root).
+- So one global symmetry of the regulus MUB set reduces the problem from C⁶⁴ to C⁴, and the minimum lies there.
+
+### A2. Calibration of the torus-Clifford reduction (`w33_regulus_torus_clifford_eigenspaces.py`, q = 8)
+
+Across all 9 trace-class pairs (g, h) of order-9 elements, each with two Pauli corrections:
+- **equal traces** (g, h conjugate): 16 eigenspaces of dimension 4 (or 8 of dimension 8), and **c₈ is attained every time**;
+- **unequal traces**: 9 eigenspaces of dimension 5–8, with best 2.8439259824 (not identified at 14 digits). Other values seen: 3.0295, 3.04145494 (fits (127 − 16γ − 32γ²)/9 at 14 digits, weak), 13/3, 47/9 and 7.
+
+The reduction is therefore a reliable search method at q = 8. Its prediction for q = 32 (equal-trace order-33 tori) is tested in §A3.
+
+### A3. q = 16 control and q = 32
+
+- **q = 16 (control, k even, torus order 17 not divisible by 3):** for all 8 equal-trace classes, the torus Clifford gives 32 eigenspaces of dimension 8. The best eigenspace minimum is **5.596**, far above the true minimum 1 (a stabiliser state, Pass 12659). So the torus reduction is not a universal minimiser-finder. It captures the non-stabiliser optimum at q = 8, and at q = 16 the optimum is a stabiliser state outside these eigenspaces.
+- **q = 32 (k odd, torus order 33 = 3·11):** running; result to follow.

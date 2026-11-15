@@ -62,3 +62,30 @@ def test_clifford_eigenstates_carry_the_galois_orbit():
     assert d["n_lifts"] == 64 and d["n_eigenvectors"] == 512 and d["lifts_fixing_witness"] == 1
     assert d["max_deviation_from_closed_forms"] < 1e-10
     assert all(v == 64 for v in d["counts_per_j"].values()) and len(d["counts_per_j"]) == 8
+
+
+def test_torus_is_a_global_symmetry():
+    d = load("w33_f8_torus_global_origin.json")
+    assert d["n_normaliser"] == 18
+    assert d["cycle_type_hist"] == {"(9,)": 6, "(3, 3, 3)": 2, "(1, 2, 2, 2, 2)": 9, "(1, 1, 1, 1, 1, 1, 1, 1, 1)": 1}
+    assert all(e["order_g"] == 9 and e["order_h"] == 9 for e in d["elements"] if e["cycle_type"] == [9])
+    e = load("w33_f8_global_torus_eigenspaces.json")
+    assert e["projective_order"] == 18 and e["n_lifts_fixing"] == 8
+    sp = e["eigenspaces"].values()
+    assert all(s["dim"] == 4 for s in sp) and sum(abs(s["min_c"] - e["c8"]) < 1e-8 for s in sp) == 8
+    assert any(s["witness"] and abs(s["min_c"] - e["c8"]) < 1e-8 for s in sp)
+
+
+def test_torus_reduction_calibration_and_q16_control():
+    d = load("w33_regulus_torus_clifford_q8_calibration.json")
+    c8 = (47 - 32 * __import__("math").cos(2 * __import__("math").pi / 9)) / 9
+    for r in d["runs"]:
+        eq = (r["g"][0][0] ^ r["g"][1][1]) == (r["h"][0][0] ^ r["h"][1][1])
+        assert (abs(r["best"] - c8) < 1e-8) == eq
+    q16 = load("w33_regulus_torus_clifford_q16.json")
+    assert q16["overall_best"] > 5  # the q = 16 minimum 1 (stabiliser) is NOT in the torus eigenspaces
+
+
+def test_codespace_sos6_nearly_tight():
+    s = load("w33_f8_codespace_sos6.json")
+    assert s["status"] == "solved" and 2.49 < s["c_sos6"] < s["c8"]

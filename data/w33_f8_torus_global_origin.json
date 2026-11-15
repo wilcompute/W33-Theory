@@ -1,0 +1,203 @@
+{
+ "n_normaliser": 18,
+ "elements": [
+  {
+   "order_g": 2,
+   "order_h": 2,
+   "frob": 0,
+   "cycle_type": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "order_g": 3,
+   "order_h": 3,
+   "frob": 0,
+   "cycle_type": [
+    3,
+    3,
+    3
+   ]
+  },
+  {
+   "order_g": 1,
+   "order_h": 1,
+   "frob": 0,
+   "cycle_type": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "order_g": 2,
+   "order_h": 2,
+   "frob": 0,
+   "cycle_type": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "order_g": 2,
+   "order_h": 2,
+   "frob": 0,
+   "cycle_type": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "order_g": 3,
+   "order_h": 3,
+   "frob": 0,
+   "cycle_type": [
+    3,
+    3,
+    3
+   ]
+  },
+  {
+   "order_g": 9,
+   "order_h": 9,
+   "frob": 0,
+   "cycle_type": [
+    9
+   ]
+  },
+  {
+   "order_g": 2,
+   "order_h": 2,
+   "frob": 0,
+   "cycle_type": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "order_g": 2,
+   "order_h": 2,
+   "frob": 0,
+   "cycle_type": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "order_g": 9,
+   "order_h": 9,
+   "frob": 0,
+   "cycle_type": [
+    9
+   ]
+  },
+  {
+   "order_g": 9,
+   "order_h": 9,
+   "frob": 0,
+   "cycle_type": [
+    9
+   ]
+  },
+  {
+   "order_g": 2,
+   "order_h": 2,
+   "frob": 0,
+   "cycle_type": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "order_g": 2,
+   "order_h": 2,
+   "frob": 0,
+   "cycle_type": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "order_g": 9,
+   "order_h": 9,
+   "frob": 0,
+   "cycle_type": [
+    9
+   ]
+  },
+  {
+   "order_g": 2,
+   "order_h": 2,
+   "frob": 0,
+   "cycle_type": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "order_g": 9,
+   "order_h": 9,
+   "frob": 0,
+   "cycle_type": [
+    9
+   ]
+  },
+  {
+   "order_g": 9,
+   "order_h": 9,
+   "frob": 0,
+   "cycle_type": [
+    9
+   ]
+  },
+  {
+   "order_g": 2,
+   "order_h": 2,
+   "frob": 0,
+   "cycle_type": [
+    1,
+    2,
+    2,
+    2,
+    2
+   ]
+  }
+ ],
+ "cycle_type_hist": {
+  "(1, 2, 2, 2, 2)": 9,
+  "(3, 3, 3)": 2,
+  "(1, 1, 1, 1, 1, 1, 1, 1, 1)": 1,
+  "(9,)": 6
+ }
+}

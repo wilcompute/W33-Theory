@@ -1,0 +1,88 @@
+{
+ "n_lifts_fixing": 8,
+ "projective_order": 18,
+ "eigenspaces": {
+  "5": {
+   "dim": 4,
+   "min_c": 2.4985086467,
+   "witness": false
+  },
+  "6": {
+   "dim": 4,
+   "min_c": 2.4985086467,
+   "witness": false
+  },
+  "3": {
+   "dim": 4,
+   "min_c": 2.4985086467,
+   "witness": false
+  },
+  "7": {
+   "dim": 4,
+   "min_c": 4.3333333333,
+   "witness": false
+  },
+  "9": {
+   "dim": 4,
+   "min_c": 4.6048064794,
+   "witness": false
+  },
+  "8": {
+   "dim": 4,
+   "min_c": 4.6048064794,
+   "witness": false
+  },
+  "10": {
+   "dim": 4,
+   "min_c": 4.3333333333,
+   "witness": false
+  },
+  "12": {
+   "dim": 4,
+   "min_c": 2.4985086467,
+   "witness": false
+  },
+  "11": {
+   "dim": 4,
+   "min_c": 2.4985086467,
+   "witness": true
+  },
+  "14": {
+   "dim": 4,
+   "min_c": 2.4985086467,
+   "witness": false
+  },
+  "2": {
+   "dim": 4,
+   "min_c": 2.4985086467,
+   "witness": false
+  },
+  "15": {
+   "dim": 4,
+   "min_c": 2.4985086467,
+   "witness": false
+  },
+  "16": {
+   "dim": 4,
+   "min_c": 4.3333333333,
+   "witness": false
+  },
+  "17": {
+   "dim": 4,
+   "min_c": 4.6048064794,
+   "witness": false
+  },
+  "1": {
+   "dim": 4,
+   "min_c": 4.3333333333,
+   "witness": false
+  },
+  "0": {
+   "dim": 4,
+   "min_c": 4.6048064794,
+   "witness": false
+  }
+ },
+ "witness_k": 11,
+ "c8": 2.4985086466880784
+}
