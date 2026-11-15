@@ -1,0 +1,97 @@
+{
+  "fourier": [
+    {
+      "mesh_size": 5,
+      "positive_external_modes_exact": [
+        1
+      ],
+      "mixed_momentum_conserving_tuples_tested": 19,
+      "spectral_edge_relative_defect": "15/16",
+      "flat_dispersion_relative_defect": "3/4"
+    },
+    {
+      "mesh_size": 9,
+      "positive_external_modes_exact": [
+        1,
+        2
+      ],
+      "mixed_momentum_conserving_tuples_tested": 85,
+      "spectral_edge_relative_defect": "63/64",
+      "flat_dispersion_relative_defect": "3/4"
+    },
+    {
+      "mesh_size": 17,
+      "positive_external_modes_exact": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "mixed_momentum_conserving_tuples_tested": 489,
+      "spectral_edge_relative_defect": "255/256",
+      "flat_dispersion_relative_defect": "3/4"
+    },
+    {
+      "mesh_size": 33,
+      "positive_external_modes_exact": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "mixed_momentum_conserving_tuples_tested": 3281,
+      "spectral_edge_relative_defect": "1023/1024",
+      "flat_dispersion_relative_defect": "3/4"
+    },
+    {
+      "mesh_size": 65,
+      "positive_external_modes_exact": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "mixed_momentum_conserving_tuples_tested": 23969,
+      "spectral_edge_relative_defect": "4095/4096",
+      "flat_dispersion_relative_defect": "3/4"
+    }
+  ],
+  "sphere_product": [
+    {
+      "inverse_squared_radii": [
+        "1",
+        "1"
+      ],
+      "quartic_overlap": "81/25",
+      "weighted_exchange": "432/25",
+      "degree_sum_2_cutoff_missing_unweighted_fraction": "16/81",
+      "degree_sum_2_cutoff_missing_weighted_fraction": "4/9"
+    },
+    {
+      "inverse_squared_radii": [
+        "2/3",
+        "7/5"
+      ],
+      "quartic_overlap": "81/25",
+      "weighted_exchange": "2232/125",
+      "degree_sum_2_cutoff_missing_unweighted_fraction": "16/81",
+      "degree_sum_2_cutoff_missing_weighted_fraction": "4/9"
+    }
+  ]
+}
