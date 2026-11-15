@@ -1,0 +1,13 @@
+{
+  "fermat_diagonal_group_order": 27,
+  "primitive_residue_dimension": 6,
+  "symmetric_pair_dimensions": [
+    1,
+    2,
+    6,
+    12
+  ],
+  "off_diagonal_projective_character_matches": 12,
+  "forced_neutral_massive_eigenspace_multiplicity_lower_bound": 12,
+  "diagonal_projective_standard_triplet_overlap": 0
+}

@@ -1,0 +1,25 @@
+# Fermat symmetry selects the cubic-link gauge–graviton channels
+
+The [Betti-source result](2026-11-15_cubic_iib_betti_sources.md) found that the six RR gauge fields on a cubic link source neutral massive spin-two harmonics through their pointwise Gram matrix. At the Fermat cubic, symmetry resolves this map into four channels and forces a nonzero coupling in one of them. The calculation uses the Kähler–Einstein metric through its symmetry and harmonic representatives, without choosing an explicit numerical metric.
+
+## The 21 symmetric gauge pairs
+
+Write \(S=\{F=\sum_{i=0}^3 z_i^3=0\}\) and take its automorphisms \(D\rtimes S_4\), where \(D=\mu_3^4/\mu_3\) acts by coordinate phases. The normalized Kähler–Einstein metric is invariant, by uniqueness and the absence of continuous automorphisms. The complexification of the real six-dimensional primitive harmonic space \(V\) is given by the degree-two Jacobian ring under the Griffiths residue construction. For the Fermat equation the ideal is \((z_0^2,z_1^2,z_2^2,z_3^2)\). Its six residue basis elements \(v_I\) have numerator \(\prod_{i\in I}z_i\) with \(|I|=2\), times the projective volume form in the numerator of the residue. The latter transforms by the determinant. Thus a phase character is represented by the vector with entry two on \(I\) and one outside \(I\), modulo three. Complex conjugation exchanges each weight with the complementary pair. Permutations act on the six basis elements with the determinant sign. [Griffiths–Dwork cohomology of the Fermat cubic](https://arxiv.org/abs/2509.06785) · [Automorphisms of the Fermat cubic](https://doi.org/10.4213/sm10161e)
+
+In \(\mathrm{Sym}^2 V_\mathbb C\) the determinant signs cancel. The products \(v_I\odot v_J\) have three kinds of characters.
+
+- The three complementary products have trivial phase character. Permutations act on the three unordered partitions into complementary pairs. The permutation representation gives a singlet and an irreducible doublet.
+- The six squares have the six distinct complementary residue characters. Permutations act transitively on their one-dimensional character spaces, giving an irreducible six-dimensional channel.
+- The twelve products with \(|I\cap J|=1\) have one entry one at the shared label and one entry two at the missing label, with zeros elsewhere. The twelve distinct character spaces form one orbit under permutations, giving an irreducible twelve-dimensional channel.
+
+The Gram map from these pairs into scalar profiles is equivariant because the harmonic representatives and pointwise contraction are equivariant. Thus only the singlet, doublet, six-dimensional channel, and twelve-dimensional channel can appear in the spectral projections coupled to the gauge pairs. Constants can only come from the singlet. The 12-channel is equivalent to the one realized by the off-diagonal projective functions \(z_a\bar z_b/\sum_i |z_i|^2\) at \(a\ne b\): they have the same characters, and the permutation stabilizer of their two distinguished labels acts trivially in both descriptions. The three neutral diagonal projective functions obtained after subtracting the trace span the standard triplet of \(S_4\); any eigenfunction transforming in that triplet has zero Gram overlap.
+
+## Why the twelve-dimensional channel must couple
+
+Over the reals, the three conjugate pairs of residue characters define three real planes \(V_1,V_2,V_3\) in \(V\). The twelve-dimensional channel consists exactly of the mixed products between different planes. Suppose those profiles were all zero. At each point the three evaluation images in the rank-three anti-self-dual form fiber would then be mutually orthogonal.
+
+In any one plane take two independent real harmonic forms \(\alpha,\beta\). Their evaluations have rank two on an open dense subset. If rank were at most one on a nonempty open set, then on a smaller open set with \(\alpha\ne0\) one could write \(\beta=f\alpha\). Both forms are closed, so \(df\wedge\alpha=0\). A nonzero anti-self-dual form in four Euclidean dimensions is nondegenerate, and wedging with it is injective on one-forms. Hence \(f\) is constant on a connected open subset. Unique continuation for the harmonic equation would make the two forms dependent globally, a contradiction.
+
+On the common dense open subset, two orthogonal rank-two evaluations already exceed the available rank three. Thus the Gram map is nonzero on the 12-channel. Irreducibility gives injectivity on that channel. The neutral scalar Laplacian commutes with the group, so at least one of its eigenprojections on this image is nonzero and must carry the full 12-dimensional representation. The channel has no constant mode. **At least one neutral massive spin-two eigenspace that couples to the Betti sector therefore has multiplicity at least twelve.** The result leaves both its mass and the amount of its overlap undetermined. [Previous integrated overlap bounds](2026-11-15_cubic_iib_exchange_bound.md)
+
+Replay the character enumeration and permutation checks with `py -3 analysis/toe_20261115_fermat_betti_selection.py`.
