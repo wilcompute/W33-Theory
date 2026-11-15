@@ -111,4 +111,8 @@ The reduction is therefore a reliable search method at q = 8. Its prediction for
 ### A3. q = 16 control and q = 32
 
 - **q = 16 (control, k even, torus order 17 not divisible by 3):** for all 8 equal-trace classes, the torus Clifford gives 32 eigenspaces of dimension 8. The best eigenspace minimum is **5.596**, far above the true minimum 1 (a stabiliser state, Pass 12659). So the torus reduction is not a universal minimiser-finder. It captures the non-stabiliser optimum at q = 8, and at q = 16 the optimum is a stabiliser state outside these eigenspaces.
-- **q = 32 (k odd, torus order 33 = 3·11):** running; result to follow.
+- **q = 2 (k odd, torus order 3):** 4 one-dimensional eigenspaces; the best is **1 = c₂** (attained).
+- **q = 4 (k even, torus order 5):** 8 two-dimensional eigenspaces; the best is **1.2111456180 = 3 − 4/√5** (to 5×10⁻¹⁵), in Q(cos 2π/5) = Q(√5), and it **misses** c₄ = 1.
+- Pattern so far: the torus eigenspaces contain the optimum for odd k (q = 2, 8) and miss it for even k (q = 4, 16). The eigenspace values lie in the real cyclotomic field of the torus order where identified (Q(√5) at q = 4, Q(cos 2π/9) at q = 8).
+- **q = 32 (k odd, torus order 33 = 3·11):** 64 eigenspaces of dimension 16 per pair (MAXIT 4000, gtol 10⁻⁸, 3 starts). Two of the ten equal-trace classes were run (traces 29 and 20; stopped after these to free the machine). Both give the **same** best value, **12.489620768**, as at q = 8, where all equal-trace classes gave c₈. The value is not identified (a cubic fitted at 14 digits with coefficients near 4×10³ is not significant).
+- **So at q = 32 the torus eigenspaces stay above the stabiliser value 11**, and k odd does not by itself put the optimum there. Score so far: q = 2 hit, q = 8 hit (the only non-stabiliser optimum known), q = 32 miss; q = 4, 16 miss. The torus mechanism explains the q = 8 constant; it is not a general law for the family.

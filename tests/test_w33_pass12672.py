@@ -89,3 +89,11 @@ def test_torus_reduction_calibration_and_q16_control():
 def test_codespace_sos6_nearly_tight():
     s = load("w33_f8_codespace_sos6.json")
     assert s["status"] == "solved" and 2.49 < s["c_sos6"] < s["c8"]
+
+
+def test_torus_reduction_small_q_and_q32():
+    import math
+    assert abs(load("w33_regulus_torus_clifford_q2.json")["overall_best"] - 1) < 1e-9
+    assert abs(load("w33_regulus_torus_clifford_q4.json")["overall_best"] - (3 - 4 / math.sqrt(5))) < 1e-10
+    d = load("w33_regulus_torus_clifford_q32.json")
+    assert len(d["runs"]) >= 2 and all(abs(r["best"] - 12.489620768) < 1e-6 for r in d["runs"]) and d["overall_best"] > 11

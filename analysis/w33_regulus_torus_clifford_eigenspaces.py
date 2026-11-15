@@ -95,7 +95,7 @@ def eigen_minima(W):
         def f(w):
             A = Q @ (w[:m] + 1j * w[m:]); val, gr = fg(np.concatenate([A.real, A.imag]))
             G = Q.conj().T @ (gr[:d] + 1j * gr[d:]); return val, np.concatenate([G.real, G.imag])
-        best = min(minimize(f, rng.standard_normal(2 * m), jac=True, method="L-BFGS-B", options=dict(maxiter=20000, gtol=1e-11, ftol=1e-15)).fun * d
+        best = min(minimize(f, rng.standard_normal(2 * m), jac=True, method="L-BFGS-B", options=dict(maxiter=int(os.environ.get("MAXIT", "20000")), gtol=float(os.environ.get("GTOL", "1e-11")), ftol=1e-15)).fun * d
                    for _ in range(STARTS))
         res.append((m, best))
     return res
