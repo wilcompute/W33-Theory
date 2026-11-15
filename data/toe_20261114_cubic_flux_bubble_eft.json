@@ -1,0 +1,7 @@
+{
+  "curvature_cube_core_in_units_pi_squared": "192/(7*a**2)",
+  "gauss_bonnet_core_external_log_warp": "alpha*(8*a**4/r**6 + 24/r**2)/7",
+  "gauss_bonnet_exchange_core_in_units_pi_squared": "19968*alpha**2/(49*a**2)",
+  "combined_inner_action_coefficient_in_units_pi_squared": "192*(104*alpha**2 + 7*beta)/(49*a**2)",
+  "example_double_scaling": "a=sqrt(ell*R): local expansion ell/R, dimensionless reduced effect (ell/R)^3"
+}
