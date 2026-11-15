@@ -95,5 +95,81 @@
   [
    1
   ]
+ ],
+ "line_meet_degrees": {
+  "10": 27
+ },
+ "line_orbits_are_trihedral_pairs": [
+  false,
+  false,
+  false
+ ],
+ "grid_triangles_tritangent": 9,
+ "line_orbit_structure": [
+  {
+   "weight": 0,
+   "meet_degrees": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "meet_triangles": 3,
+   "tritangent_triangles": 3
+  },
+  {
+   "weight": 2,
+   "meet_degrees": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "meet_triangles": 3,
+   "tritangent_triangles": 3
+  },
+  {
+   "weight": 1,
+   "meet_degrees": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "meet_triangles": 3,
+   "tritangent_triangles": 3
+  }
+ ],
+ "line_cross_meetings": [
+  [
+   5,
+   3,
+   3
+  ],
+  [
+   3,
+   5,
+   3
+  ],
+  [
+   3,
+   3,
+   5
+  ]
  ]
 }

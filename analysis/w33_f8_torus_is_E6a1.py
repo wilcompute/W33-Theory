@@ -147,3 +147,40 @@ print("sigma-orbits on the 45 tritangent planes:", sorted(len(o) for o in orbs),
       "| line orbits (weights):", line_orbits)
 out.update(tritangent_orbit_sizes=sorted(len(o) for o in orbs), bases_form_one_orbit=len(our) == 1, line_orbit_weights=line_orbits)
 json.dump(out, open(os.path.join(ROOT, "data", "w33_f8_torus_is_E6a1.json"), "w"), indent=1, default=str)
+# ---- trinification test: are the three sigma-orbits of lines Steiner trihedral pairs (3x3 grids)?
+# Two distinct lines meet iff B(p,q) = 0 (each line is skew to 16 lines, B = 1, and meets 10).
+B = lambda p, r: 1 - form(p, r)
+meet_deg = collections.Counter(sum(B(p, r) for r in sing_pts if r != p) for p in sing_pts)
+orbit_sets = []
+seen_ = set()
+for p in sing_pts:
+    if p in seen_: continue
+    o = [p]; q_ = S(p)
+    while q_ != p: o.append(q_); q_ = S(q_)
+    seen_ |= set(o); orbit_sets.append(o)
+def is_rook(o):
+    deg = [sum(B(a, b) for b in o if b != a) for a in o]
+    if set(deg) != {4}: return False, deg
+    # rook graph K3 x K3: every edge in exactly one triangle-clique of size 3; check that the meet graph's maximal cliques are 6 triangles
+    import itertools as it
+    tri = [t for t in it.combinations(o, 3) if all(B(a, b) for a, b in it.combinations(t, 2))]
+    return len(tri) == 6, deg
+rook = [is_rook(o)[0] for o in orbit_sets]
+# each row/column triangle of a trihedral pair is a tritangent plane: count triangles that are zero-sum
+tri_planes = sum(1 for o in orbit_sets for t in itertools.combinations(o, 3) if all(B(a, b) for a, b in itertools.combinations(t, 2)) and
+                 (t[0][0] ^ t[1][0] ^ t[2][0], t[0][1] ^ t[1][1] ^ t[2][1]) == (0, 0))
+print("line meet degrees:", dict(meet_deg), "| the three sigma-orbits of lines are 3x3 grids (Steiner trihedral pairs):", rook,
+      "| row/column triangles that are tritangent planes:", tri_planes, "of 18")
+out.update(line_meet_degrees={str(k): v for k, v in meet_deg.items()}, line_orbits_are_trihedral_pairs=rook, grid_triangles_tritangent=tri_planes)
+json.dump(out, open(os.path.join(ROOT, "data", "w33_f8_torus_is_E6a1.json"), "w"), indent=1, default=str)
+# ---- structure inside each sigma-orbit of lines: meet degrees, meet triangles, and cross-orbit meeting numbers
+inside = []
+for o in orbit_sets:
+    deg = sorted(sum(B(a, b) for b in o if b != a) for a in o)
+    tri_ = [t for t in itertools.combinations(o, 3) if all(B(a, b) for a, b in itertools.combinations(t, 2))]
+    zs = sum(1 for t in tri_ if (t[0][0] ^ t[1][0] ^ t[2][0], t[0][1] ^ t[1][1] ^ t[2][1]) == (0, 0))
+    inside.append(dict(weight=wt[o[0]], meet_degrees=deg, meet_triangles=len(tri_), tritangent_triangles=zs))
+cross = [[sum(B(a, b) for b in orbit_sets[j]) for j in range(3)] for a in [orbit_sets[i][0] for i in range(3)]]
+print("inside orbits:", inside, "| meet numbers of one line with each orbit:", cross)
+out.update(line_orbit_structure=inside, line_cross_meetings=cross)
+json.dump(out, open(os.path.join(ROOT, "data", "w33_f8_torus_is_E6a1.json"), "w"), indent=1, default=str)

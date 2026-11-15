@@ -14,6 +14,9 @@ def test_torus_is_E6a1_on_E6_mod_2():
     assert all(d["tritangent_per_basis"]) and d["weight_equals_incidence"] and d["zero_sum_singular_triples"] == 45
     assert d["tritangent_orbit_sizes"] == [3, 3, 3, 9, 9, 9, 9] and d["bases_form_one_orbit"]
     assert sorted(d["line_orbit_weights"]) == [[0], [1], [2]]
+    # trinification rejected: line orbits are trihedra (3 disjoint tritangent triangles), not trihedral pairs
+    assert d["line_meet_degrees"] == {"10": 27} and d["line_orbits_are_trihedral_pairs"] == [False, False, False]
+    assert all(o["meet_degrees"] == [4] * 9 and o["meet_triangles"] == 3 and o["tritangent_triangles"] == 3 for o in d["line_orbit_structure"])
 
 
 def test_stabiliser_types():

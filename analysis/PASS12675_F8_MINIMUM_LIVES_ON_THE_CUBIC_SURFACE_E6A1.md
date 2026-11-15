@@ -49,3 +49,11 @@ The equal-trace torus eigenspace minimum is **12.48962077 for 4 of the 10 trace 
 ## 5. Degree 8 on 16-dimensional code spaces: not attempted
 
 With the Pauli group alone the problem has about 2×10⁶ pair variables and about 10⁸ nonzeros. No monomial (permutation) symmetry exists in the effective coordinates used (checked over GL(4,2) for types A, B and T). A useful reduction would need a basis adapted to the configuration, for example via the E₆(a₁) / tritangent structure of §1. That is now the natural route.
+
+## Addendum A: trinification tested and rejected; the line orbits are trihedra
+
+Motivation: the 27 lines are the mod-2 shadow of the 27 of E₆. Under trinification SU(3)³ ⊂ E₆ the 27 splits as 9 + 9 + 9, which in cubic-surface terms is three Steiner trihedral pairs. The 40 such triples correspond to the 40 points of W(3,3).
+- **Test.** Two distinct lines meet iff B(p,q) = 0; every line meets 10 lines, as it must.
+- **Result: negative.** Inside each σ-orbit of 9 lines, the meet graph is 4-regular with exactly **3** triangles, all tritangent planes and pairwise disjoint. A Steiner trihedral pair (3×3 grid) would have 6.
+- So each σ-orbit of lines is a **trihedron**: three disjoint tritangent planes covering its nine lines. These should be the three σ-orbits of size 3 on the 45 planes (the planes fixed by σ³). A line meets 4 lines of its own orbit and 3 of each other orbit.
+- The F₈ minimiser therefore does not select a trinification (a W(3,3) point) in this way. The three orbits of lines are distinguished by their weights 0, 1, 2 relative to the nine chosen planes.
