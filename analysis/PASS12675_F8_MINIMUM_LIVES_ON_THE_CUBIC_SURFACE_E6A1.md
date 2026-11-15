@@ -57,3 +57,27 @@ Motivation: the 27 lines are the mod-2 shadow of the 27 of E₆. Under trinifica
 - **Result: negative.** Inside each σ-orbit of 9 lines, the meet graph is 4-regular with exactly **3** triangles, all tritangent planes and pairwise disjoint. A Steiner trihedral pair (3×3 grid) would have 6.
 - So each σ-orbit of lines is a **trihedron**: three disjoint tritangent planes covering its nine lines. These should be the three σ-orbits of size 3 on the 45 planes (the planes fixed by σ³). A line meets 4 lines of its own orbit and 3 of each other orbit.
 - The F₈ minimiser therefore does not select a trinification (a W(3,3) point) in this way. The three orbits of lines are distinguished by their weights 0, 1, 2 relative to the nine chosen planes.
+
+## Addendum B: why q = 8? A conjecture from 2³ + 1 = 3²
+
+The torus-Clifford reduction (Pass 12672) finds the optimum at q = 2 and q = 8 and misses at q = 4, 16 and 32 (Pass 12672–12673).
+
+| q | torus order q + 1 | power of 3? | torus eigenspaces reach c_q? | optimum |
+|---|---|---|---|---|
+| 2 | 3 | yes (3¹) | yes | stabiliser = torus (tie) |
+| 4 | 5 | no | no (3 − 4/√5) | stabiliser |
+| 8 | 9 | yes (3²) | yes | non-stabiliser (E₆(a₁), §1) |
+| 16 | 17 | no | no (5.596) | stabiliser |
+| 32 | 33 | no | no (12.49 > 11) | stabiliser (best known) |
+
+- The hits are exactly the q with q + 1 a power of 3.
+- 2ᵏ + 1 = 3ʲ has only the solutions (k, j) = (1, 1), (3, 2). This is a classical result (Levi ben Gershon, 1343; a special case of Mihăilescu's theorem).
+- At both hits the cube of the torus generator acts without fixed points, and the eigenvalues are qutrit roots of unity. ζ₉ is the phase of the qutrit T gate, the source of the Q(cos 2π/9) fidelity levels in Pass 11253. At q = 8 the order-9 element is E₆(a₁) in W(E₆) ≅ O⁻(6,2) ≅ PSp(4,3):2, the two-qutrit symplectic group of W(3,3).
+
+> **Conjecture (data at k = 1, …, 5 only; mechanism unproved).** The F_{2^k}-regulus optimum is a non-stabiliser state reached by the torus construction iff 2ᵏ + 1 is a power of 3, i.e. only for k = 3 (with k = 1 degenerate). For every k ≥ 4 the optimum is a stabiliser state.
+>
+> Read this way, the six-qubit F₈ problem lands in the qutrit / E₆ / W(3,3) geometry because 8 + 1 = 9 is the unique non-trivial coincidence of a qubit torus order with a power of 3.
+
+What would falsify it: a non-stabiliser state below the stabiliser value at q = 16 or 32. Pass 12662 and 12673 found none, but that is search evidence, not proof. The identification of the q = 32 level 12.4896 (running) bears on whether that level carries any 3-adic structure.
+
+**Prior art (cited across the tracks).** The identity 3² − 2³ = 1 is already in the corpus as a selection rule for q = 3: `BREAKTHROUGH_DCCLXXIII.md` (row "F2: q² − 2^q = 1, Catalan–Mihăilescu") and `w33_BREAKTHROUGH_17_ljunggren_substrate.py` (Ljunggren 1942; Mihăilescu). The only new element here is that the same coincidence, read as 2³ + 1 = 3², appears on the qubit side as the torus order of the one regulus with a non-stabiliser optimum. If the conjecture holds, the W(3,3) selection rule and the F₈ anomaly are one arithmetic fact seen from both sides.
