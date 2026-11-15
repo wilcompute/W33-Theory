@@ -27,3 +27,11 @@ def test_tritangent_orbits():
 def test_face_size():
     d = load("w33_f8_codespace_deg8_certificate_1249254323_500000000.json")
     assert d["certified"] and d["face_total"] == 766
+
+
+def test_q32_level_identified_and_q16_search():
+    d = load("w33_q32_torus_level_identify.json")
+    assert d["tau_is_smallest_conjugate"] and d["above_stabiliser"] and d["minimal_polynomial_of_33tau"][:3] == ["1", "-9782", "42685421"]
+    s = load("w33_q16_codespace_search_seed7.json")
+    assert s["q"] == 16 and abs(s["best"] - 1) < 1e-9 and all(abs(v["min"] - 1) < 1e-9 for v in s["by_rank"].values())
+    assert sum(v["n"] for v in s["by_rank"].values()) > 6000

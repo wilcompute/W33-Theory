@@ -60,3 +60,12 @@ with residual 2.5×10⁻⁴⁴. The decisive check: the ten Galois conjugates (g
 > **Parallel with q = 8.** c₈ = (47 − 32cos 2π/9)/9 is the smallest root of a cyclic cubic, lies in the real cyclotomic field of the torus order 9, and has denominator q + 1 = 9. The q = 32 torus level is likewise the smallest conjugate of a degree-10 element of the real cyclotomic field of the torus order 33, with denominator q + 1 = 33. The torus construction produces the same arithmetic type of number at both q.
 >
 > The difference: τ₃₂ = 12.49 lies **above** the stabiliser value 11, consistent with the conjecture of Pass 12675 (a torus optimum only when q + 1 is a power of 3).
+
+## Addendum B: q = 16 falsification test (`w33_q32_codespace_search.py`, REG_K = 4)
+
+- Random uncovered isotropic Pauli groups at q = 16 (8 qubits, 17 bases), ranks 2, 3 and 4 (code spaces of dimension 64, 32 and 16), 50 minutes, **6,344 code spaces** (2,096 / 2,114 / 2,134).
+- **The minimum is exactly 1, the stabiliser value, in every rank.** The medians are 1, 3 and 3.
+- The covered-set control holds: 4,335 covered labels and d·F = covered sum.
+- The script's "beats 11" flag is the q = 32 threshold and is meaningless here.
+
+> **Status of the Pass 12675 conjecture** (a non-stabiliser torus optimum iff 2ᵏ + 1 is a power of 3): consistent at q = 16 (no state below 1 in 6,344 code spaces, nor in the torus eigenspaces, Pass 12672) and at q = 32 (nothing below 11; the torus level is the algebraic number 12.4896…, Addendum A). Still a conjecture: random code spaces are not all states.
