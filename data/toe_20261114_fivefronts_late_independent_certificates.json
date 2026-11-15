@@ -1,0 +1,307 @@
+{
+  "status": "FIVE_MODEL_SCOPED_CONTROLS",
+  "n_fronts": 5,
+  "results": {
+    "F8_full_tangent_Hessian": {
+      "status": "FULL_C64_PROJECTIVE_TANGENT_HESSIAN_NUMERIC_CERTIFICATE",
+      "exact_source": "Pass12671 exact algebraic rank-one 64x64 density matrix",
+      "Pauli_labels_in_objective": 567,
+      "projective_real_tangent_dim": 126,
+      "c8": 2.4985086466880775,
+      "exact_upper_formula": "(47-32*cos(2*pi/9))/9",
+      "gradient_full_euclidean_residual": 1.695012857329827e-14,
+      "negative_tangent_eigenvalues": 0,
+      "near_zero_tangent_eigenvalues": 2,
+      "positive_tangent_eigenvalues": 124,
+      "min_eigenvalue": 4.115084695117248e-15,
+      "max_eigenvalue": 74.92219526609205,
+      "seven_finite_difference_max_error": 1.00456162144269e-06,
+      "third_smallest_eigenvalue": 1.8595159913717405,
+      "flat_geodesic_controls": [
+        {
+          "index": 0,
+          "theta": 0.025,
+          "delta_plus": 1.126155987130062e-06,
+          "delta_minus": 1.1261559866859727e-06,
+          "symmetric_even_quartic_estimate": 2.882959327052958
+        },
+        {
+          "index": 0,
+          "theta": 0.05,
+          "delta_plus": 1.799598436802441e-05,
+          "delta_minus": 1.799598436802441e-05,
+          "symmetric_even_quartic_estimate": 2.879357498883905
+        },
+        {
+          "index": 0,
+          "theta": 0.1,
+          "delta_plus": 0.00028649906704281136,
+          "delta_minus": 0.0002864990670405909,
+          "symmetric_even_quartic_estimate": 2.8649906704192314
+        },
+        {
+          "index": 1,
+          "theta": 0.025,
+          "delta_plus": 1.126155987130062e-06,
+          "delta_minus": 1.126155987130062e-06,
+          "symmetric_even_quartic_estimate": 2.882959327052958
+        },
+        {
+          "index": 1,
+          "theta": 0.05,
+          "delta_plus": 1.799598436802441e-05,
+          "delta_minus": 1.7995984365803963e-05,
+          "symmetric_even_quartic_estimate": 2.879357498670742
+        },
+        {
+          "index": 1,
+          "theta": 0.1,
+          "delta_plus": 0.00028649906704325545,
+          "delta_minus": 0.0002864990670405909,
+          "symmetric_even_quartic_estimate": 2.8649906704192314
+        }
+      ],
+      "flat_mode_Lyapunov_Schmidt_quartics": [
+        {
+          "flat_mode_index": 0,
+          "unrelaxed_quartic": 2.884160829695161,
+          "relaxation_subtraction": 0.01187924263140737,
+          "effective_quartic": 2.8722815870637537,
+          "forcing_on_other_kernel_norm": 2.186192100031462e-15
+        },
+        {
+          "flat_mode_index": 1,
+          "unrelaxed_quartic": 2.884160829695145,
+          "relaxation_subtraction": 0.01187924263140731,
+          "effective_quartic": 2.8722815870637377,
+          "forcing_on_other_kernel_norm": 4.73744691893654e-16
+        },
+        {
+          "flat_mode_index": 2,
+          "unrelaxed_quartic": 0.0909675989623695,
+          "relaxation_subtraction": 0.0003746761167215402,
+          "effective_quartic": 0.09059292284564796,
+          "forcing_on_other_kernel_norm": 8.418370135528527e-16
+        },
+        {
+          "flat_mode_index": 3,
+          "unrelaxed_quartic": 1.6173305236167534,
+          "relaxation_subtraction": 0.006661439094315408,
+          "effective_quartic": 1.610669084522438,
+          "forcing_on_other_kernel_norm": 1.778459624641701e-15
+        },
+        {
+          "flat_mode_index": 4,
+          "unrelaxed_quartic": 4.410523754349531,
+          "relaxation_subtraction": 0.018166005609001203,
+          "effective_quartic": 4.39235774874053,
+          "forcing_on_other_kernel_norm": 1.0007415106216803e-15
+        },
+        {
+          "flat_mode_index": 5,
+          "unrelaxed_quartic": 0.0909675989623624,
+          "relaxation_subtraction": 0.00037467611672153397,
+          "effective_quartic": 0.09059292284564086,
+          "forcing_on_other_kernel_norm": 5.665513987587832e-16
+        },
+        {
+          "flat_mode_index": 6,
+          "unrelaxed_quartic": 1.617330523616757,
+          "relaxation_subtraction": 0.006661439094315443,
+          "effective_quartic": 1.6106690845224416,
+          "forcing_on_other_kernel_norm": 1.5828056563530538e-15
+        },
+        {
+          "flat_mode_index": 7,
+          "unrelaxed_quartic": 4.410523754349551,
+          "relaxation_subtraction": 0.018166005609001175,
+          "effective_quartic": 4.39235774874055,
+          "forcing_on_other_kernel_norm": 1.3762163871908227e-15
+        }
+      ],
+      "flat_quartic_trigonometric_coefficients": [
+        2.241475335793096,
+        0.6308062512706578,
+        -2.150882412947448
+      ],
+      "flat_quartic_square_discriminant": -3.552713678800501e-15,
+      "flat_null_curved_trajectory_controls": [
+        {
+          "angle_radians": 0.4640186734023375,
+          "effective_quartic": -8.881784197002554e-16,
+          "relaxed_geodesic_values": [
+            {
+              "h": 0.025,
+              "delta": 4.440892098500626e-16,
+              "delta_over_h6": 1.8189894035458558e-06
+            },
+            {
+              "h": 0.05,
+              "delta": 1.7763568394002505e-15,
+              "delta_over_h6": 1.1368683772161599e-07
+            },
+            {
+              "h": 0.1,
+              "delta": 1.3322676295501878e-15,
+              "delta_over_h6": 1.3322676295501874e-09
+            },
+            {
+              "h": 0.25,
+              "delta": 1.7763568394002505e-15,
+              "delta_over_h6": 7.275957614183426e-12
+            },
+            {
+              "h": 0.5,
+              "delta": 4.440892098500626e-16,
+              "delta_over_h6": 2.842170943040401e-14
+            },
+            {
+              "h": 1.0,
+              "delta": 0.0,
+              "delta_over_h6": 0.0
+            },
+            {
+              "h": 2.0,
+              "delta": 4.440892098500626e-16,
+              "delta_over_h6": 6.938893903907228e-18
+            }
+          ],
+          "degree8_identity_max_absolute_coefficient_residual": 2.6645352591003757e-15,
+          "degree8_identity_coefficient_residuals": [
+            -2.6645352591003757e-15,
+            6.826278610935206e-17,
+            0.0,
+            -1.3646995245019984e-17,
+            4.440892098500626e-16,
+            -3.827887388255148e-29,
+            4.6802030356306955e-28,
+            7.718756406634282e-44,
+            3.1746947009692574e-57
+          ],
+          "curve_transverse_quadratic_norm": 4.8517508291678865e-15
+        },
+        {
+          "angle_radians": 2.0348150001972343,
+          "effective_quartic": -5.773159728050966e-15,
+          "relaxed_geodesic_values": [
+            {
+              "h": 0.025,
+              "delta": 8.881784197001252e-16,
+              "delta_over_h6": 3.6379788070917117e-06
+            },
+            {
+              "h": 0.05,
+              "delta": -8.881784197001252e-16,
+              "delta_over_h6": -5.6843418860807995e-08
+            },
+            {
+              "h": 0.1,
+              "delta": 1.3322676295501878e-15,
+              "delta_over_h6": 1.3322676295501874e-09
+            },
+            {
+              "h": 0.25,
+              "delta": 1.7763568394002505e-15,
+              "delta_over_h6": 7.275957614183426e-12
+            },
+            {
+              "h": 0.5,
+              "delta": -4.440892098500626e-16,
+              "delta_over_h6": -2.842170943040401e-14
+            },
+            {
+              "h": 1.0,
+              "delta": 8.881784197001252e-16,
+              "delta_over_h6": 8.881784197001252e-16
+            },
+            {
+              "h": 2.0,
+              "delta": 1.3322676295501878e-15,
+              "delta_over_h6": 2.0816681711721685e-17
+            }
+          ],
+          "degree8_identity_max_absolute_coefficient_residual": 2.6645352591003757e-15,
+          "degree8_identity_coefficient_residuals": [
+            -2.6645352591003757e-15,
+            1.4608445657526104e-16,
+            8.881784197001252e-16,
+            -1.1648406396383882e-17,
+            4.440892098500626e-16,
+            8.948335199523254e-29,
+            8.644789836492288e-28,
+            2.0269521527697076e-43,
+            1.1040090449334482e-56
+          ],
+          "curve_transverse_quadratic_norm": 6.374790764921722e-15
+        }
+      ],
+      "limitation": "Numerical Hessian at one exact witness, not global lower certificate. Eigenvalue threshold 1e-6; flat directions may require higher order."
+    },
+    "D9_spin2_tower_uniform_Maxwell": {
+      "status": "COMPLETE_EXTERNAL_SPIN2_TOWER_AND_UNIFORM_U1_ZERO_MODE",
+      "model": "D9 R-F^2/4, AdS5 x S2(r1) x S2(r2), t=r1^2/r2^2",
+      "spin2_mass_squared_AdS_units": "20*(l1*(l1+1)+t*l2*(l2+1))/(1+t)",
+      "spin2_degeneracy": "(2*l1+1)*(2*l2+1)",
+      "harmonic_window_l1_l2_0_to_8": 81,
+      "summed_internal_harmonic_degeneracy": 6561,
+      "lowest_positive_spin2_m2L2": "40*min(1,t)/(1+t)",
+      "zero_mass_spin2": 1,
+      "uniform_5D_abelian_vector_m2": 0,
+      "limits": "Complete spin2 sector and one protected U1 zero mode only. Mixed Einstein-Maxwell scalar and vector KK sectors remain uncomputed; the prior homogeneous-radion matrix is not their substitute."
+    },
+    "H27_exact_local_hamiltonian_veto": {
+      "status": "EXACT_ANY_HERMITIAN_LOG_RING_DIAMETER_HOP_LOWER_BOUND",
+      "cycle_length": 12,
+      "any_log_opposite_site_magnitude_lower_bound": "pi/12 for one tick",
+      "derivation": "sum_k (-1)^k h_k /12 = (pi/12)*(1+2m), m integer",
+      "real_symmetric_hopping_no_go": true,
+      "principal_log_opposite_site_magnitude": 0.2617993877991494,
+      "random_branch_controls": 100,
+      "scope": "Single isolated 12-site directed shift generated exactly by a time-independent H; does not exclude driven finite-depth steps, inter-cycle ancillas, or approximations."
+    },
+    "W33_thermodynamic_Potts_frame_selector": {
+      "status": "EXACT_SYMMETRIC_MEAN_FIELD_1620_FRAME_SELECTOR_COEXISTENCE",
+      "frame_count": 1620,
+      "interaction": "-J/(2M) sum_{a,b=1}^M 1[frame_a=frame_b]",
+      "permutation_invariant": true,
+      "PSp43_invariant": true,
+      "critical_betaJ_closed_form": "2*(q-1)*ln(q-1)/(q-2)",
+      "critical_betaJ_numeric": 14.788262102600854,
+      "uniform_spatial_frame_probability": "1/q",
+      "ordered_dominant_frame_probability": "(q-1)/q",
+      "ordered_each_other_frame_probability": "1/(q*(q-1))",
+      "uniform_spinodal_betaJ": 1620,
+      "free_energy_difference_exact_zero_at_coexistence": true,
+      "finite_M_spontaneous_selector": false,
+      "thermodynamic_first_order_ordering_conditional": true,
+      "limits": "Engineered all-to-all Potts alignment over many copies. It selects one 8-neighbor C3^4 geometry conditionally in M->infinity, but microscopic native W33 interaction, Lorentz signature, and Einstein dynamics are not derived."
+    },
+    "photonic_16rail_confusion_calibration": {
+      "status": "CONFUSION_MATRIX_CORRECTED_TRUSTED_GHZ_CONFIDENCE_CERTIFICATE",
+      "physical_rails": 16,
+      "settings": 5,
+      "accepted_Z": 12000,
+      "accepted_equatorial_each": 8000,
+      "confusion_matrix_column_stochastic": true,
+      "mode_crosstalk_right": 0.023,
+      "mode_crosstalk_left": 0.017,
+      "dark_uniform_fraction": 0.006,
+      "matrix_condition_number_1norm": 1.0979512919711658,
+      "readout_weight_range": 1.055110608852165,
+      "readout_weight_max_absolute": 1.0296622797849917,
+      "parity_flip_plus_to_minus": 0.025,
+      "parity_flip_minus_to_plus": 0.018,
+      "parity_gain": 0.957,
+      "parity_offset": -0.007000000000000003,
+      "true_model_fidelity": 0.9643422025331637,
+      "synthetic_fidelity_estimator": 0.9659113823223175,
+      "statistical_99pct_union_width": 0.030661996579400073,
+      "assumed_column_l1_calibration_error": 0.002,
+      "assumed_each_flip_rate_calibration_error": 0.002,
+      "worst_case_calibration_bias": 0.005209390597444344,
+      "corrected_99pct_one_sided_fidelity_lower": 0.9300399951454732,
+      "nominal_expected_raw_launches": 54438,
+      "limits": "Synthetic independent click samples with trusted per-mode confusion calibration and bounded drift, not actual detector calibration. Internal four-qubit factorization is not spacelike Bell nonlocality."
+    }
+  }
+}
