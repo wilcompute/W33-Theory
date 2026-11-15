@@ -148,7 +148,11 @@ optimum at this degree is $0.0452$, and the PSD-plus-partial-transpose level giv
 $(47-32\cos\frac{2\pi}9)/576$, and exactly $\min\F\le(47-32\cos\frac{2\pi}9)/576$: the minimum is attained on the
 8-dimensional joint eigenspace of a rank-3 group of uncovered Paulis, where the minimiser is isolated and all its Pauli
 expectations lie in $\mathbb{Q}(\cos\frac{2\pi}9,\sqrt3)$, and the resulting density matrix is verified in exact arithmetic to
-be a pure state attaining this value. Optimality is numerical. This is not a stabiliser value: an exhaustive
+be a pure state attaining this value. Optimality is numerical. The minimiser is an eigenvector of the Clifford
+unitary implementing $m\mapsto gmh^{\mathsf T}$ for $g,h\in SL(2,8)$ of order $9$ (non-split tori), whose eigenspaces have
+dimension $4$; on the code space the nine bases become nine three-qubit stabiliser bases permuted by the norm-one torus of
+$\mathbb{F}_{64}$, and the Galois conjugates of the witness are exact pure critical states with values the two other roots of
+$243c^3-3807c^2+17577c-23941$. This is not a stabiliser value: an exhaustive
 search shows that no stabiliser state has less than $3/64$. For $q=2,4,16$ a stabiliser state attains the numerical minimum $1/d$,
 and for $q=32$ the best value found is the stabiliser value $11/1024$. The quotients of the $q=8$
 set at points with $\mathrm{Tr}\,Q=1$ are maximal five-qubit sets of size 9, of at least two types, with numerical minimum
