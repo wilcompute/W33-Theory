@@ -67,3 +67,7 @@ Identifying 12.489620768 needs about 40 digits, because the candidate field Q(co
 - The PPT-dual bound 2.0818 on the common code is the other track's (`toe_20261114_regulus_ppt_dual.py`). Its numerical equality with degree-6 SOS is computed here.
 - The code-space structure is Passes 12671–12673. Type-A stabilisers are Pass 12660's.
 - The certification method follows Pass 12673 / Pass 12660 (Peyrl–Parrilo-style rounding with exact projection).
+
+## Standalone write-up
+
+A self-contained summary for readers outside the repository (problem, closed form, status table with proved/numerical/open tags, the torus mechanism, the q = 2^k family, and what a proof still needs) is published as a private artifact: https://claude.ai/artifact/ENEQzx4bBuCS1urzExp7o7
