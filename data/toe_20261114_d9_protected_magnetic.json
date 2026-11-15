@@ -1,0 +1,27 @@
+{
+  "protected_magnetic_energy": "(X+Y) * f((X+Y)^3 * X * Y), f(0)=1/2",
+  "polynomial_kernel_dimensions": {
+    "1": 1,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 1,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 1,
+    "12": 0,
+    "13": 0,
+    "14": 0,
+    "15": 0,
+    "16": 1,
+    "17": 0,
+    "18": 0
+  },
+  "first_nonlinear_generator": "X*Y*(X + Y)**4",
+  "first_nonlinear_power_of_field_strength": 12,
+  "first_nonlinear_sourced_scale_equation": "-21952*gamma*scale**11*(7/5 - delta)*(delta + 7/5)/125 + k - scale",
+  "born_infeld_linear_source_slope_per_angular_eigenvalue_and_coupling": "4*delta*(245 - 100*delta**2)/(2520 - 600*delta**2)"
+}
