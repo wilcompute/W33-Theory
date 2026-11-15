@@ -48,7 +48,7 @@ This is not a global bound. The degree-6 value at this level is 2.4967 (Pass 126
 
 **Unequal-trace torus pairs at q = 32.** Two pairs: (20, 28) gives 15.044 (33 eigenspaces, dimensions 29–32), and (20, 23) gives 13.597 (dimensions 20–33). Both are above 11.
 
-> **q = 32 conclusion.** Every torus construction tried (equal-trace eigenspaces 12.4896, unequal-trace 13.6 and 15.0, fixed-space code spaces 11) stays at or above the stabiliser value 11. The q = 8 phenomenon, a non-stabiliser optimum on a torus-fixed code space, does not recur at q = 32 in these searches. This is evidence, not a proof, that c₃₂ = 11.
+> **q = 32 conclusion.** Every torus construction tried (equal-trace eigenspaces 12.4896, unequal-trace 13.6 and 15.0, fixed-space code spaces 11) stays at or above the stabiliser value 11. The q = 8 phenomenon, a non-stabiliser optimum on a torus-fixed code space, does not recur at q = 32 in these searches. This is evidence, not a proof, that c₃₂ = 11. The value 11 as the best known at q = 32 is Pass 12662's (annealing and five seeds); Pass 12662 also rejected a different cyclic-orbit explanation of the stabiliser optimum.
 
 ## 4. A global degree-6 SOS by symmetry reduction (`w33_f8_global_sos6.py`)
 
@@ -70,9 +70,9 @@ In that first formulation (`w33_f8_global_sos6.py`) the SDP has 156,406 variable
 | control: q = 4 (F₄ regulus, five MUBs of C¹⁶), same code | 16 × 0.0452 (Pass 12660, independent Pauli-reduced degree-6 SOS) = 0.723 | **0.7224946** (0.045156 in F) |
 | **q = 8, the nine F₈-regulus MUBs** | ? | **0.7603388** |
 
-> **Result (numerical SDP, validated by two known-answer controls).** The best global degree-6 SOS bound is 64F ≥ 0.760, about 30% of c₈. It is weaker than the existing 2.0818 bound (other track, PPT dual). On the code space the same degree gives 2.4967. At q = 4 degree 6 reaches 72% of the true value.
+> **Result (numerical SDP, validated by two known-answer controls).** The best global degree-6 SOS bound is 64F ≥ 0.760, about 30% of c₈. **Correction (Pass 12674):** the other track's 2.0818 (PPT dual, `2026-11-14_regulus_ppt_dual.md`) is a bound on the 16-dimensional common four-qubit code space of S, not on all of C⁶⁴; their note says extending it to the parent space is open. So the two numbers are not comparable, and 0.760 is, as far as the corpus search goes, the only positive global lower bound computed for q = 8 (numerical, uncertified). On the code space the same degree gives 2.4967. At q = 4 degree 6 reaches 72% of the true value.
 >
-> So degree-6 SOS is far from tight globally at q = 8, and it is not the route to a global proof. The positivity of F away from the code space needs more than degree 6. The two-copy PPT relaxation also fails (≤ 0; other track, 056c4fc9f); the PPT-dual construction behind 2.0818 is the stronger tool.
+> So degree-6 SOS is far from tight globally at q = 8, and it is not by itself the route to a global proof. The positivity of F away from the code space needs more than degree 6. The symmetric two-copy PPT relaxation also fails globally (≤ 0; other track, 056c4fc9f).
 
 **Ceiling (as predicted).** Any global degree-6 certificate restricts to one on the code space, so the global degree-6 bound is at most 2.4967 < c₈; the computed value 0.760 is far below even that. Proving c₈ needs degree 8 or more (or more copies). The other track's two-copy PPT counter-certificate (056c4fc9f) shows the symmetric two-copy relaxation gives at most 0.
 
