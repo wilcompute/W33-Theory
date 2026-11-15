@@ -1,4 +1,5 @@
-"""Pass 12673: a GLOBAL degree-6 SOS lower bound for the nine F_8-regulus MUBs of C^64, by symmetry reduction.
+"""Pass 12673 (SUPERSEDED by w33_f8_global_sos6_v2.py: this first formulation has nnz(A) = 3.6e7 and did not finish in SCS).
+A GLOBAL degree-6 SOS lower bound for the nine F_8-regulus MUBs of C^64, by symmetry reduction.
 Target (psi in C^64 unnormalised, covered Pauli set Ccov, |Ccov| = 567):
     f_c(psi) = |psi|^2 ( sum_{P in Ccov} |<psi|P|psi>|^2 - c |psi|^4 ) >= 0   <=>   64 F >= c on all states.
 Certificate: f_c = sum of Hermitian squares of degree-3 polynomials, charge blocks psi psi psi (B3) and psi psi conj(psi) (B1).
@@ -184,11 +185,11 @@ Aeq = sps.csr_matrix((valsE, (rowsE, colsE)), shape=(2 * NK, NV)); beq = np.conc
 Apsd = -sps.eye(NV, format="csr")[1:]
 A = sps.vstack([Aeq, Apsd]).tocsc(); b = np.concatenate([beq, np.zeros(NV - 1)])
 qv = np.zeros(NV); qv[0] = -1.0
-print(f"SDP: {NV} variables, {2 * NK} equalities, {len(cones)} PSD blocks (max size {max(cones)})", flush=True)
+print(f"SDP: {NV} variables, {2 * NK} equalities, {len(cones)} PSD blocks (max size {max(cones)}), nnz(A) = {A.nnz}", flush=True)
 t0 = time.time()
 if USE_SCS:
     import scs
-    sol = scs.SCS(dict(A=A, b=b, c=qv), dict(z=2 * NK, s=cones), eps_abs=1e-8, eps_rel=1e-8, max_iters=200000, verbose=False).solve()
+    sol = scs.SCS(dict(A=A, b=b, c=qv), dict(z=2 * NK, s=cones), eps_abs=float(os.environ.get("SCS_EPS", "1e-8")), eps_rel=float(os.environ.get("SCS_EPS", "1e-8")), max_iters=int(os.environ.get("SCS_ITERS", "200000")), verbose=bool(os.environ.get("SCS_VERBOSE")), acceleration_lookback=int(os.environ.get("SCS_AA", "10"))).solve()
     val = float(sol["x"][0]); status = sol["info"]["status"]
 else:
     P = sps.csc_matrix((NV, NV))

@@ -56,9 +56,25 @@ The problem is f_c = |ψ|²(Σ_{P∈Ccov}|⟨ψ|P|ψ⟩|² − c|ψ|⁴) over al
 - **Heisenberg group.** Monomials split by Z-character, and X-shifts relate the character blocks. One block of each charge suffices: B₁ = {ψ_xψ_y ψ̄_{x⊕y}} (2,080) and B₃ = {ψ_xψ_yψ_{x⊕y}} (715).
 - **Singer cycle Z₆₃ ⊂ GL(2,8).** It preserves F by index permutations. The block monomials form 34 + 13 orbits, the Fourier blocks have size at most 34 complex (68 real), and there are 8,131 coefficient classes under shifts ⋊ Z₆₃.
 
-The full problem is an SDP with 156,406 variables. Clarabel ran out of memory, and the SCS solve is running (addendum).
+In that first formulation (`w33_f8_global_sos6.py`) the SDP has 156,406 variables and nnz(A) = 3.6×10⁷. SCS's sparse factorisation alone took 1,240 s, and the run did not finish.
 
-**Ceiling.** Any global degree-6 certificate restricts to one on the code space, so the global degree-6 bound is at most 2.4967 < c₈. Proving c₈ needs degree 8 or more (or more copies). The other track's two-copy PPT counter-certificate (056c4fc9f) shows the symmetric two-copy relaxation gives at most 0.
+**Second formulation (`w33_f8_global_sos6_v2.py`).**
+- The symmetry group is enlarged to Γ = ΓL(1,64) (order 378): the Singer cycle, the F₈-linear x ↦ x⁸ and the coordinatewise Frobenius, all checked numerically to preserve F.
+- The variables are values of the invariant Gram matrix on Γ-orbits of monomial **pairs** (11,560 for B₁, 1,416 for B₃). Each feeds exactly one of the 1,416 coefficient classes.
+- PSD is imposed on one Z₆₃-Fourier block per orbit of characters.
+- The result is 12,977 variables, 2,832 equalities, 26 PSD blocks (at most 68 real) and nnz = 3.4×10⁶, solved by SCS in 979 s.
+
+| run | expected | SDP value |
+|---|---|---|
+| control: all 4,095 Paulis (the polynomial vanishes identically at 63) | 63 | **63.0000000000** |
+| control: q = 4 (F₄ regulus, five MUBs of C¹⁶), same code | 16 × 0.0452 (Pass 12660, independent Pauli-reduced degree-6 SOS) = 0.723 | **0.7224946** (0.045156 in F) |
+| **q = 8, the nine F₈-regulus MUBs** | ? | **0.7603388** |
+
+> **Result (numerical SDP, validated by two known-answer controls).** The best global degree-6 SOS bound is 64F ≥ 0.760, about 30% of c₈. It is weaker than the existing 2.0818 bound (other track, PPT dual). On the code space the same degree gives 2.4967. At q = 4 degree 6 reaches 72% of the true value.
+>
+> So degree-6 SOS is far from tight globally at q = 8, and it is not the route to a global proof. The positivity of F away from the code space needs more than degree 6. The two-copy PPT relaxation also fails (≤ 0; other track, 056c4fc9f); the PPT-dual construction behind 2.0818 is the stronger tool.
+
+**Ceiling (as predicted).** Any global degree-6 certificate restricts to one on the code space, so the global degree-6 bound is at most 2.4967 < c₈; the computed value 0.760 is far below even that. Proving c₈ needs degree 8 or more (or more copies). The other track's two-copy PPT counter-certificate (056c4fc9f) shows the symmetric two-copy relaxation gives at most 0.
 
 ## Prior art and ownership
 
