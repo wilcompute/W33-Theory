@@ -1,0 +1,22 @@
+{
+  "squared_speeds": [
+    "1 + 2*X*W_XX/W_X",
+    "W_T/(W_T+X*W_P)"
+  ],
+  "born_infeld_squared_speeds": [
+    "1/(1+s*X)",
+    "1/(1+s*X)"
+  ],
+  "example_X_Y": [
+    "1/4",
+    "1/9"
+  ],
+  "gamma_positive_squared_speeds": [
+    "76335277/75690373",
+    "33627472/33656033"
+  ],
+  "gamma_negative_squared_speeds": [
+    "74830163/75475067",
+    "33557168/33528607"
+  ]
+}

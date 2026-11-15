@@ -1,0 +1,20 @@
+# Static D9 shape protection forces a photon cone outside the Einstein cone
+
+The [static classification](2026-11-14_d9_protected_magnetic.md) gives the two-block magnetic energy \(W=T f(T^3P)\), where \(T=X+Y\), \(P=XY\), and \(f(0)=1/2\). Consider its realization by a local Lorentz-invariant Einstein and Abelian gauge action whose gauge Lagrangian is algebraic in \(F\), with no curvature or derivatives of \(F\). If both physical photon cones tested below are required to lie inside or on the local Einstein cone on sufficiently weak two-block magnetic backgrounds, **the restricted analytic energy is Maxwell**.
+
+## Principal gauge modes
+
+Use a local orthonormal frame with time \(x^0\) and background \(F_{12}=B_a,F_{34}=B_b\), both nonzero. Take a wave along \(x^1\). The quadratic gauge operator in this frame is determined by the invariants \(T=F_{MN}F^{MN}/2\) and \(P=\sum_I\mathrm{sign}(I)\operatorname{Pf}(F_I)^2\), where \(I\) enumerates four coordinate indices in the orthonormal frame and \(\mathrm{sign}(I)\) is negative if they include time. This convention restricts to \(P=B_a^2B_b^2\). The Maxwell limit fixes the normalization. The calculation is local in geometric optics. At principal order the Einstein equation sees at most one derivative of the gauge perturbation in the stress tensor, and the gauge equation sees at most one derivative of the metric perturbation, leaving the second-order symbols separate.
+
+- A potential polarized along \(x^2\) changes the first block to effective squared strength \(X_{\rm eff}=(B_a+b)^2-e^2\) and leaves \(Y\) fixed, with \(b=\partial_1 a_2\), \(e=\partial_0 a_2\). The quadratic action is \(W_X e^2-(W_X+2XW_{XX})b^2\), with \(X\)-derivatives taken at fixed \(Y\). The squared speed is \(c_2^2=1+2XW_{XX}/W_X\).
+- A potential polarized along \(x^4\) gives \(T\mapsto T+b^2-e^2\) and \(P\mapsto P-Xe^2\). Here the quadratic action is \((W_T+XW_P)e^2-W_T b^2\) and the squared speed is \(c_4^2=W_T/(W_T+XW_P)\), with the partial derivatives taken in coordinates \((T,P)\).
+
+The quadratic form in these polarizations and the longitudinal electric field is diagonal. Rotations of the second plane and of the unused spatial directions prevent mixing with the other transverse representations. The five-coordinate field variations used here are rank at most four, and near the background they admit the two purely magnetic blocks in a Lorentz frame. Algebraic invariants invisible on all such magnetic blocks therefore cannot change these modes. The verifier computes the quadratic matrix by signed Pfaffians and recovers \(c_2^2=c_4^2=1/(1+sX)\) for the determinant Born–Infeld energy \((\sqrt{1+sT+s^2P}-1)/s\). [Born–Infeld causal cones](https://arxiv.org/abs/hep-th/0008052)
+
+## Sign obstruction across the analytic family
+
+If \(f\) has a first nonlinear Taylor coefficient \(\gamma\ne0\) at order \(m\ge1\), its leading correction is \(\gamma T^{3m+1}X^mY^m\). At fixed positive \(X:Y\) and sufficiently small common scale, both \(W_{XX}\) and \(W_P\) have the sign of \(\gamma\). In the first derivative claim, differentiate the leading monomial twice with respect to \(X\) at fixed \(Y\); the resulting polynomial is strictly positive times \(\gamma\). In the second claim, differentiate \(\gamma T^{3m+1}P^m\) at fixed \(T\). The kinetic coefficients approach the positive Maxwell value \(1/2\). If \(\gamma>0\), then \(c_2>1\). If \(\gamma<0\), then \(c_4>1\). Interchanging the spheres gives the analogous tests along the other internal plane.
+
+This is a characteristic-cone obstruction for the specified derivative-free action. It leaves open UV completions in which higher-derivative gauge terms, curvature couplings, extra fields, or a different causal criterion matter. Turning the cone result into a photon-dispersion bound in a theory with dynamical gravity requires treating massless graviton exchange. [Analyticity and low-energy propagation](https://arxiv.org/abs/hep-th/0602178) · [Photon self-stress and gravitational causality](https://arxiv.org/abs/2108.05896)
+
+Replay with `py -3 analysis/toe_20261114_d9_protected_photon_cones.py`.
