@@ -41,3 +41,22 @@ At the certified constant C = 2.498508646 (Pass 12674), the SCS Gram blocks have
 ## 4. Testing the conjecture of Pass 12675 at q = 16 and q = 32
 
 See the addendum (runs in progress at the time of writing).
+
+## Addendum A: the q = 32 torus level is identified (`w33_q32_torus_level_eigenspace_newton.py`, `w33_q32_torus_level_identify.py`)
+
+Method:
+- The torus Clifford W has entries ±1/32 after a global phase is removed, so it is exact.
+- Its 16-dimensional minimising eigenspace was refined by iterative refinement to residual 1.7×10⁻⁵¹.
+- Newton in mpmath inside that eigenspace then converged quadratically (gradient 3×10⁻¹¹ → 2×10⁻¹⁹ → 4×10⁻³⁵ → 4×10⁻⁵³).
+
+  **τ₃₂ = 12.489620767640639497175105662221227358888999**
+
+pslq over Q(cos 2π/33) gives
+
+  **33·τ₃₂ = 1183 + 32g + 416g² + 960g³ − 1568g⁴ − 896g⁵ + 864g⁶ + 288g⁷ − 128g⁸ − 32g⁹**,  g = 2cos(2π/33),
+
+with residual 2.5×10⁻⁴⁴. The decisive check: the ten Galois conjugates (g ↦ 2cos(2πk/33), gcd(k, 33) = 1) give ∏(y − 33τₖ) **with integer coefficients to within 10⁻³⁰ or better**. So 33τ₃₂ is an algebraic integer of degree 10, with minimal polynomial y¹⁰ − 9782y⁹ + 42685421y⁸ − 109363495048y⁷ + …. **τ₃₂ is the smallest of its ten conjugates.**
+
+> **Parallel with q = 8.** c₈ = (47 − 32cos 2π/9)/9 is the smallest root of a cyclic cubic, lies in the real cyclotomic field of the torus order 9, and has denominator q + 1 = 9. The q = 32 torus level is likewise the smallest conjugate of a degree-10 element of the real cyclotomic field of the torus order 33, with denominator q + 1 = 33. The torus construction produces the same arithmetic type of number at both q.
+>
+> The difference: τ₃₂ = 12.49 lies **above** the stabiliser value 11, consistent with the conjecture of Pass 12675 (a torus optimum only when q + 1 is a power of 3).
