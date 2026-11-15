@@ -1,0 +1,172 @@
+{
+  "closed_vector_supports_by_rank": {
+    "0": 1,
+    "1": 27,
+    "2": 216,
+    "3": 765,
+    "4": 1080,
+    "5": 918,
+    "6": 72,
+    "7": 270,
+    "9": 255,
+    "11": 27,
+    "15": 36,
+    "27": 1
+  },
+  "maximal_proper_closed_supports": {
+    "6": 72,
+    "11": 27,
+    "15": 36
+  },
+  "maximal_weyl_orbit_representatives": {
+    "6": [
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E5",
+      "E6"
+    ],
+    "11": [
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E5",
+      "L16",
+      "L26",
+      "L36",
+      "L46",
+      "L56",
+      "Q6"
+    ],
+    "15": [
+      "L12",
+      "L13",
+      "L14",
+      "L15",
+      "L16",
+      "L23",
+      "L24",
+      "L25",
+      "L26",
+      "L34",
+      "L35",
+      "L36",
+      "L45",
+      "L46",
+      "L56"
+    ]
+  },
+  "sign_fixed_vector_supports": 1949,
+  "combined_vector_scalar_reflection_sectors": [
+    {
+      "vectors": 0,
+      "scalars": 6,
+      "sectors": 1
+    },
+    {
+      "vectors": 0,
+      "scalars": 7,
+      "sectors": 36
+    },
+    {
+      "vectors": 0,
+      "scalars": 9,
+      "sectors": 120
+    },
+    {
+      "vectors": 1,
+      "scalars": 6,
+      "sectors": 27
+    },
+    {
+      "vectors": 1,
+      "scalars": 8,
+      "sectors": 270
+    },
+    {
+      "vectors": 1,
+      "scalars": 12,
+      "sectors": 270
+    },
+    {
+      "vectors": 2,
+      "scalars": 7,
+      "sectors": 216
+    },
+    {
+      "vectors": 3,
+      "scalars": 6,
+      "sectors": 45
+    },
+    {
+      "vectors": 3,
+      "scalars": 10,
+      "sectors": 855
+    },
+    {
+      "vectors": 3,
+      "scalars": 18,
+      "sectors": 45
+    },
+    {
+      "vectors": 5,
+      "scalars": 8,
+      "sectors": 270
+    },
+    {
+      "vectors": 5,
+      "scalars": 16,
+      "sectors": 216
+    },
+    {
+      "vectors": 7,
+      "scalars": 14,
+      "sectors": 270
+    },
+    {
+      "vectors": 9,
+      "scalars": 12,
+      "sectors": 120
+    },
+    {
+      "vectors": 11,
+      "scalars": 26,
+      "sectors": 27
+    },
+    {
+      "vectors": 15,
+      "scalars": 22,
+      "sectors": 36
+    },
+    {
+      "vectors": 27,
+      "scalars": 42,
+      "sectors": 1
+    }
+  ],
+  "supersymmetric_flat_torus_reflection_sectors": [
+    {
+      "vectors": 3,
+      "scalars": 18,
+      "supercharges": 8,
+      "sectors": 45
+    },
+    {
+      "vectors": 11,
+      "scalars": 26,
+      "supercharges": 16,
+      "sectors": 27
+    },
+    {
+      "vectors": 27,
+      "scalars": 42,
+      "supercharges": 32,
+      "sectors": 1
+    }
+  ],
+  "rank_nine_quiver_blocks_that_are_consistent_bosonic_sectors": 120,
+  "two_block_truncation_omitted_vectors_sourced": 9,
+  "independent_cubic_terms_sourcing_each_omitted_vector": 3
+}
