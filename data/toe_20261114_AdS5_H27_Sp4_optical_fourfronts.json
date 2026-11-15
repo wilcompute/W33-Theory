@@ -1,0 +1,319 @@
+{
+  "status": "FOUR_FRONTS_PASS_WITH_LIMITATIONS",
+  "n": 4,
+  "results": {
+    "two_radion_AdS_BF_probeKK": {
+      "status": "EXACT_HOMOGENEOUS_BF_AND_PROBE_KK_CONTROL",
+      "kinetic_metric_uv": [
+        [
+          "56/3",
+          "0"
+        ],
+        [
+          "0",
+          "8"
+        ]
+      ],
+      "Hessian_uv": [
+        [
+          "112/3",
+          "0"
+        ],
+        [
+          "0",
+          "144/5"
+        ]
+      ],
+      "canonical_radion_m2": [
+        "2",
+        "18/5"
+      ],
+      "canonical_m2L2": [
+        "20",
+        "36"
+      ],
+      "AdS5_BF_bound_m2L2": -4,
+      "minimal_probe_KK_l1_l2_up_to_3": [
+        {
+          "l1": 0,
+          "l2": 0,
+          "mass_squared": 0,
+          "m2_L2": 0,
+          "degeneracy": 1
+        },
+        {
+          "l1": 0,
+          "l2": 1,
+          "mass_squared": 2,
+          "m2_L2": 20,
+          "degeneracy": 3
+        },
+        {
+          "l1": 0,
+          "l2": 2,
+          "mass_squared": 6,
+          "m2_L2": 60,
+          "degeneracy": 5
+        },
+        {
+          "l1": 0,
+          "l2": 3,
+          "mass_squared": 12,
+          "m2_L2": 120,
+          "degeneracy": 7
+        },
+        {
+          "l1": 1,
+          "l2": 0,
+          "mass_squared": 2,
+          "m2_L2": 20,
+          "degeneracy": 3
+        },
+        {
+          "l1": 1,
+          "l2": 1,
+          "mass_squared": 4,
+          "m2_L2": 40,
+          "degeneracy": 9
+        },
+        {
+          "l1": 1,
+          "l2": 2,
+          "mass_squared": 8,
+          "m2_L2": 80,
+          "degeneracy": 15
+        },
+        {
+          "l1": 1,
+          "l2": 3,
+          "mass_squared": 14,
+          "m2_L2": 140,
+          "degeneracy": 21
+        },
+        {
+          "l1": 2,
+          "l2": 0,
+          "mass_squared": 6,
+          "m2_L2": 60,
+          "degeneracy": 5
+        },
+        {
+          "l1": 2,
+          "l2": 1,
+          "mass_squared": 8,
+          "m2_L2": 80,
+          "degeneracy": 15
+        },
+        {
+          "l1": 2,
+          "l2": 2,
+          "mass_squared": 12,
+          "m2_L2": 120,
+          "degeneracy": 25
+        },
+        {
+          "l1": 2,
+          "l2": 3,
+          "mass_squared": 18,
+          "m2_L2": 180,
+          "degeneracy": 35
+        },
+        {
+          "l1": 3,
+          "l2": 0,
+          "mass_squared": 12,
+          "m2_L2": 120,
+          "degeneracy": 7
+        },
+        {
+          "l1": 3,
+          "l2": 1,
+          "mass_squared": 14,
+          "m2_L2": 140,
+          "degeneracy": 21
+        },
+        {
+          "l1": 3,
+          "l2": 2,
+          "mass_squared": 18,
+          "m2_L2": 180,
+          "degeneracy": 35
+        },
+        {
+          "l1": 3,
+          "l2": 3,
+          "mass_squared": 24,
+          "m2_L2": 240,
+          "degeneracy": 49
+        }
+      ],
+      "first_nonzero_probe_m2L2": 20,
+      "AdS_radius_squared_per_sphere_radius_squared": 10,
+      "limits": "Probe scalar tower is not the full coupled metric/Maxwell KK spectrum. No E6 ExFT or physical 4D vacuum."
+    },
+    "H27_commutator_microscopic_clock": {
+      "status": "EXACT_HEISENBERG27_FOUR_PULSE_CLOCK",
+      "group_order": 27,
+      "Cayley_degree": 4,
+      "Cayley_diameter": 4,
+      "four_pulse_commutator_center": "(0,0,1)",
+      "central_clock_cycles": 9,
+      "cycle_length_each": 3,
+      "full_return_elementary_pulses": 12,
+      "commutator_det_class_counts": {
+        "0": 33,
+        "2": 24,
+        "1": 24
+      },
+      "central_clock_spectrum": {
+        "1": 9,
+        "omega": 9,
+        "omega_squared": 9
+      },
+      "limits": "A finite nonabelian holonomy clock, not a rate in seconds, irreversibility, a native causal cone or Einstein dynamics."
+    },
+    "Sp4_address_frame_locality_continuum": {
+      "status": "EXACT_SP4_TRANSITIVITY_AND_FRAMED_4D_LIMIT",
+      "affine_symplectic_address_sites": 81,
+      "nonzero_displacement_orbit": 80,
+      "full_Sp_and_translation_invariant_nontrivial_Cayley_degree": 80,
+      "sparse_framed_degree": 8,
+      "example_transvection_breaks_frame": [
+        2,
+        0,
+        1,
+        0
+      ],
+      "C3_power4_adjacency_spectrum": {
+        "8": 1,
+        "5": 8,
+        "2": 24,
+        "-1": 32,
+        "-4": 16
+      },
+      "finite_q_and_large_q_heat_samples": [
+        {
+          "p": 3,
+          "t": 10.0,
+          "ds": 1.3476761413820846,
+          "H": 0.014837495304860228
+        },
+        {
+          "p": 3,
+          "t": 20.0,
+          "ds": 0.06629678898218595,
+          "H": 0.012400395333733888
+        },
+        {
+          "p": 3,
+          "t": 100.0,
+          "ds": 3.1053330034811104e-14,
+          "H": 0.012345679012345677
+        },
+        {
+          "p": 11,
+          "t": 10.0,
+          "ds": 4.700049959069713,
+          "H": 0.005318071677829469
+        },
+        {
+          "p": 11,
+          "t": 20.0,
+          "ds": 4.260268199177711,
+          "H": 0.0011351612930099887
+        },
+        {
+          "p": 11,
+          "t": 100.0,
+          "ds": 1.1564351584334926,
+          "H": 7.922844050292717e-05
+        },
+        {
+          "p": 31,
+          "t": 10.0,
+          "ds": 4.700065048223802,
+          "H": 0.005318067384514662
+        },
+        {
+          "p": 31,
+          "t": 20.0,
+          "ds": 4.2646745182365935,
+          "H": 0.0011348294578835444
+        },
+        {
+          "p": 31,
+          "t": 100.0,
+          "ds": 4.041704296484848,
+          "H": 4.136448834601014e-05
+        },
+        {
+          "p": 101,
+          "t": 10.0,
+          "ds": 4.700065048223803,
+          "H": 0.005318067384514658
+        },
+        {
+          "p": 101,
+          "t": 20.0,
+          "ds": 4.264674518236593,
+          "H": 0.0011348294578835444
+        },
+        {
+          "p": 101,
+          "t": 100.0,
+          "ds": 4.041709301896817,
+          "H": 4.136448150617416e-05
+        }
+      ],
+      "limiting_heat_trace": "exp(-t) I0(t/4)^4",
+      "limiting_diffusion_dimension_at_1ll_t_ll_p2": 4,
+      "limits": "Four-dimensional behavior arises only after selecting four coordinate axes (Sp-breaking) and extending q to large primes. W33 alone does not choose such a frame or Lorentzian dynamics."
+    },
+    "photonic_5_setting_GHZ_witness": {
+      "status": "FIVE_SETTING_INTERNAL_GHZ_ENTANGLEMENT_CERTIFICATE",
+      "logical_qubits": 4,
+      "physical_rails": 16,
+      "measurement_angles": [
+        "0pi/4",
+        "1pi/4",
+        "2pi/4",
+        "3pi/4"
+      ],
+      "exact_coherence_Fourier_filter": "A=(1/4)sum_{j=0}^3(-1)^j <(cos(j*pi/4)X+sin(j*pi/4)Y)^tensor4> = 2 Re rho[0,15]",
+      "GHZ_fidelity_exact_formula": "F=(p_0000+p_1111+A)/2",
+      "random_density_matrix_max_coherence_error": 1.5612511283791264e-17,
+      "nuisance_bad_state_naive_X4": 1.0,
+      "nuisance_bad_state_filtered_A": -5.551115123125783e-17,
+      "noise_assumptions": {
+        "depolarizing_weight": 0.03,
+        "phase_sigma_per_endpoint": 0.1,
+        "slow_relative_phase_std": 0.07,
+        "systematic_phase": 0.08,
+        "optical_eta_per_traversed_layer": 0.98
+      },
+      "expected_postselected_fidelity": 0.9643422025331637,
+      "N_accepted_per_setting": 4096,
+      "accepted_computational_endpoint_count": 3986,
+      "accepted_equatorial_plus_counts": [
+        3996,
+        103,
+        3985,
+        90
+      ],
+      "fidelity_estimate": 0.9619140625,
+      "Hoeffding_one_sided_lower_99pct": 0.9183563805994159,
+      "single_photon_virtual_qubit_genuine_entanglement_witness_pass": true,
+      "raw_Z_setting_expected_trials": 4441,
+      "raw_each_equatorial_setting_expected_trials": 4815,
+      "raw_total_5_settings_expected_trials": 23701,
+      "optical_components": {
+        "prep_layers": 4,
+        "equatorial_analysis_layers": 4,
+        "logical_H_pairwise_50_50_couplers_per_layer": 8,
+        "phase_settings": 4,
+        "rail_photon_detectors": 16
+      },
+      "limits": "Shot counts are simulated assumptions, NOT measured data; detector dark counts and correlated drifts absent. Internal qubit entanglement is NOT spacelike Bell evidence. Adaptive calibration and real chips remain open."
+    }
+  }
+}

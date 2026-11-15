@@ -1,0 +1,23 @@
+{
+  "status": "EXACT_SYMMETRIC_TWO_COPY_PPT_FEASIBLE_ZERO",
+  "n_bases": 9,
+  "covered_Pauli_labels": 567,
+  "Bell_weights": {
+    "identity": "0",
+    "covered_each": "1/4032",
+    "even_uncovered_each": "55/96768",
+    "antisymmetric_each": "0"
+  },
+  "state_positive": true,
+  "state_swap_symmetric": true,
+  "partial_transpose_spectrum": {
+    "1/64": 1,
+    "0": 567,
+    "1/4032": 2016,
+    "31/96768": 1512
+  },
+  "partial_transpose_trace": "1",
+  "K_expectation": "0",
+  "logical_conclusion": "A symmetric two-copy PPT relaxation has a feasible state with objective zero, so its global infimum is at most zero and cannot certify any positive pure-state lower bound. A negative PPT optimum is not excluded.",
+  "limitation": "Does not prove existence of a physical pure state with c8=0; stronger relaxations (higher moments, multi-copy extensions, purity identities) are not excluded. Does not invalidate a previously reported stronger PPT dual bound using additional constraints."
+}
