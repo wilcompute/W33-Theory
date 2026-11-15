@@ -1,0 +1,25 @@
+{
+  "H_times_L_squared": [
+    [
+      "1120/3",
+      "160*delta"
+    ],
+    [
+      "160*delta",
+      "288"
+    ]
+  ],
+  "static_log_mass_susceptibility_per_L_squared": "7/120 + 7*(-delta + z)**2/(24*(21 - 5*delta**2))",
+  "equal_angular_degrees": {
+    "static_log_mass_susceptibility_per_L_squared": "7/120",
+    "inverse_HL_squared_times_log_mass_gradient": [
+      "-1/80",
+      "0"
+    ],
+    "shape_response_per_log_mass_source_per_L_squared": "delta*x/(4*(-1200*delta**2/7 + (x + 20)*(x + 36)))",
+    "homogeneous_sourced_stationary_branch": "v=0, exp(2*u)=1/(1-J*n/2)",
+    "sourced_potential_parameter_range": "J*n < 2",
+    "mixed_11_spin2_m2_L2": 40,
+    "mixed_22_spin2_m2_L2": 120
+  }
+}
