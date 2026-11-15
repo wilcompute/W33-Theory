@@ -1,0 +1,13 @@
+{
+  "dimension_pairs_tested": 722,
+  "internal_warp_hessian_coefficient": "-2",
+  "internal_warp_gradient_coefficient": "-(d*n - 6*d + n**2 - 8*n + 16)/d",
+  "exceptional_external_internal_dimensions": [
+    [
+      8,
+      8
+    ]
+  ],
+  "exceptional_external_ricci_times_U_squared": "U**(5/2)*lambda + lap_U/4",
+  "physical_nonconstant_warp_branches_in_proven_ansatze": 0
+}
