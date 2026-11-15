@@ -1,0 +1,10 @@
+{
+  "cubic_internal_euler": 9,
+  "cubic_internal_signature": -5,
+  "integrated_curvature_operator_square_units_pi_squared": 72,
+  "integrated_curvature_operator_cube": "23*s*pi^2 + integral(|nabla W_minus|^2)/6",
+  "first_order_potential_from_parity_even_F_even_four_derivative_local_terms": "constant along fixed-flux family",
+  "six_derivative_cubic_operator_nodal_lower_bound_length_power": -2,
+  "fermat_symmetry_invariant_linear_terms": 0,
+  "fermat_symmetry_invariant_real_quadratic_terms_after_permutations": 1
+}
