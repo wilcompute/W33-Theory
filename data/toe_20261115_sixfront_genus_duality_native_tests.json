@@ -1,0 +1,1017 @@
+{
+  "status": "SEVEN_ORTHOGONAL_RESEARCH_CONTROLS",
+  "main_scope": "Csaszar Szilassi abstract incidence is not Euclidean realization",
+  "n_controls": 7,
+  "results": {
+    "topology_duality_Fano_and_genus6": {
+      "status": "FANO_DOUBLE_SYSTEM_CSASZAR_VS_NONBIPARTITE_GENUS6",
+      "source_Cs": "analysis/w33_csaszar_concrete_rotation_flag_orientation.py",
+      "source_N12": "analysis/w33_genus_six_execution.py: FACETS_ONE (Frank Lutz catalogue)",
+      "Csaszar": {
+        "V": 7,
+        "E": 21,
+        "F": 14,
+        "genus": 1,
+        "Euler": 0,
+        "Betti_mod2": [
+          1,
+          2,
+          1
+        ],
+        "triangles": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            5
+          ],
+          [
+            0,
+            4,
+            5
+          ],
+          [
+            0,
+            4,
+            6
+          ],
+          [
+            0,
+            3,
+            6
+          ],
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            1,
+            3,
+            4
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            1,
+            5,
+            6
+          ],
+          [
+            1,
+            2,
+            6
+          ],
+          [
+            2,
+            4,
+            6
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            3,
+            5,
+            6
+          ]
+        ],
+        "dual_vertices": 14,
+        "dual_edges": 21,
+        "dual_faces": 7,
+        "dual_face_degree": 6,
+        "dual_graph_bipartite": true,
+        "dual_graph_girth": 6,
+        "dual_graph_connected": true
+      },
+      "alternate_torus": {
+        "V": 7,
+        "E": 21,
+        "F": 14,
+        "genus": 1,
+        "Euler": 0,
+        "Betti_mod2": [
+          1,
+          2,
+          1
+        ],
+        "triangles": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            2,
+            6
+          ],
+          [
+            0,
+            4,
+            5
+          ],
+          [
+            0,
+            4,
+            6
+          ],
+          [
+            1,
+            2,
+            4
+          ],
+          [
+            1,
+            2,
+            6
+          ],
+          [
+            1,
+            3,
+            4
+          ],
+          [
+            1,
+            5,
+            6
+          ],
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            2,
+            4,
+            5
+          ],
+          [
+            3,
+            4,
+            6
+          ],
+          [
+            3,
+            5,
+            6
+          ]
+        ],
+        "dual_vertices": 14,
+        "dual_edges": 21,
+        "dual_faces": 7,
+        "dual_face_degree": 6,
+        "dual_graph_bipartite": true,
+        "dual_graph_girth": 6,
+        "dual_graph_connected": true
+      },
+      "neighborly_genus6": {
+        "V": 12,
+        "E": 66,
+        "F": 44,
+        "genus": 6,
+        "Euler": -10,
+        "Betti_mod2": [
+          1,
+          12,
+          1
+        ],
+        "triangles": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            1,
+            6
+          ],
+          [
+            0,
+            2,
+            7
+          ],
+          [
+            0,
+            2,
+            11
+          ],
+          [
+            0,
+            3,
+            10
+          ],
+          [
+            0,
+            4,
+            8
+          ],
+          [
+            0,
+            4,
+            10
+          ],
+          [
+            0,
+            5,
+            9
+          ],
+          [
+            0,
+            5,
+            11
+          ],
+          [
+            0,
+            6,
+            7
+          ],
+          [
+            0,
+            8,
+            9
+          ],
+          [
+            1,
+            2,
+            4
+          ],
+          [
+            1,
+            2,
+            5
+          ],
+          [
+            1,
+            3,
+            7
+          ],
+          [
+            1,
+            4,
+            11
+          ],
+          [
+            1,
+            5,
+            9
+          ],
+          [
+            1,
+            6,
+            8
+          ],
+          [
+            1,
+            7,
+            9
+          ],
+          [
+            1,
+            8,
+            10
+          ],
+          [
+            1,
+            10,
+            11
+          ],
+          [
+            2,
+            3,
+            6
+          ],
+          [
+            2,
+            3,
+            8
+          ],
+          [
+            2,
+            4,
+            7
+          ],
+          [
+            2,
+            5,
+            10
+          ],
+          [
+            2,
+            6,
+            10
+          ],
+          [
+            2,
+            8,
+            9
+          ],
+          [
+            2,
+            9,
+            11
+          ],
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            3,
+            4,
+            9
+          ],
+          [
+            3,
+            5,
+            8
+          ],
+          [
+            3,
+            6,
+            11
+          ],
+          [
+            3,
+            7,
+            11
+          ],
+          [
+            3,
+            9,
+            10
+          ],
+          [
+            4,
+            5,
+            7
+          ],
+          [
+            4,
+            6,
+            9
+          ],
+          [
+            4,
+            6,
+            10
+          ],
+          [
+            4,
+            8,
+            11
+          ],
+          [
+            5,
+            6,
+            8
+          ],
+          [
+            5,
+            6,
+            11
+          ],
+          [
+            5,
+            7,
+            10
+          ],
+          [
+            6,
+            7,
+            9
+          ],
+          [
+            7,
+            8,
+            10
+          ],
+          [
+            7,
+            8,
+            11
+          ],
+          [
+            9,
+            10,
+            11
+          ]
+        ],
+        "dual_vertices": 44,
+        "dual_edges": 66,
+        "dual_faces": 12,
+        "dual_face_degree": 11,
+        "dual_graph_bipartite": false,
+        "dual_graph_girth": 6,
+        "dual_graph_connected": true
+      },
+      "Cs_partition_two_STS7": [
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            4,
+            5
+          ],
+          [
+            0,
+            3,
+            6
+          ],
+          [
+            1,
+            3,
+            4
+          ],
+          [
+            1,
+            5,
+            6
+          ],
+          [
+            2,
+            4,
+            6
+          ],
+          [
+            2,
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            5
+          ],
+          [
+            0,
+            4,
+            6
+          ],
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            1,
+            2,
+            6
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            3,
+            5,
+            6
+          ]
+        ]
+      ],
+      "ordered_STS7_partitions": 2,
+      "unordered_STS7_partitions": 1,
+      "genus6_STS12_impossible": "each 12-point vertex must lie in (12-1)/2 = 5.5 triples of any Steiner triple system",
+      "topological_Heawood_map_coloring": {
+        "genus1": 7,
+        "genus6": 12
+      },
+      "geometric_status": "Schewe (2008/2010) forbids a 12-vertex straight triangular embedding in R3, not automatically a planar-hendecagon 12-face dual realization"
+    },
+    "Jungerman_Ringel_genus_ladder": {
+      "status": "RINGEL_YOUNGS_VERSUS_JUNGERMAN_RINGEL_EXACT_EQUALITY_AUDIT",
+      "admissible_vertex_residues_mod12": [
+        0,
+        3,
+        4,
+        7
+      ],
+      "rows": [
+        {
+          "n": 4,
+          "numerator": 0,
+          "orientable_triangular_embedding_possible": true,
+          "triangular_genus": 0,
+          "minimum_orientable_graph_genus": 0,
+          "complete_graph_edges": 6
+        },
+        {
+          "n": 5,
+          "numerator": 2,
+          "orientable_triangular_embedding_possible": false,
+          "triangular_genus": null,
+          "minimum_orientable_graph_genus": 1,
+          "complete_graph_edges": 10
+        },
+        {
+          "n": 6,
+          "numerator": 6,
+          "orientable_triangular_embedding_possible": false,
+          "triangular_genus": null,
+          "minimum_orientable_graph_genus": 1,
+          "complete_graph_edges": 15
+        },
+        {
+          "n": 7,
+          "numerator": 12,
+          "orientable_triangular_embedding_possible": true,
+          "triangular_genus": 1,
+          "minimum_orientable_graph_genus": 1,
+          "complete_graph_edges": 21
+        },
+        {
+          "n": 8,
+          "numerator": 20,
+          "orientable_triangular_embedding_possible": false,
+          "triangular_genus": null,
+          "minimum_orientable_graph_genus": 2,
+          "complete_graph_edges": 28
+        },
+        {
+          "n": 9,
+          "numerator": 30,
+          "orientable_triangular_embedding_possible": false,
+          "triangular_genus": null,
+          "minimum_orientable_graph_genus": 3,
+          "complete_graph_edges": 36
+        },
+        {
+          "n": 10,
+          "numerator": 42,
+          "orientable_triangular_embedding_possible": false,
+          "triangular_genus": null,
+          "minimum_orientable_graph_genus": 4,
+          "complete_graph_edges": 45
+        },
+        {
+          "n": 11,
+          "numerator": 56,
+          "orientable_triangular_embedding_possible": false,
+          "triangular_genus": null,
+          "minimum_orientable_graph_genus": 5,
+          "complete_graph_edges": 55
+        },
+        {
+          "n": 12,
+          "numerator": 72,
+          "orientable_triangular_embedding_possible": true,
+          "triangular_genus": 6,
+          "minimum_orientable_graph_genus": 6,
+          "complete_graph_edges": 66
+        },
+        {
+          "n": 13,
+          "numerator": 90,
+          "orientable_triangular_embedding_possible": false,
+          "triangular_genus": null,
+          "minimum_orientable_graph_genus": 8,
+          "complete_graph_edges": 78
+        },
+        {
+          "n": 14,
+          "numerator": 110,
+          "orientable_triangular_embedding_possible": false,
+          "triangular_genus": null,
+          "minimum_orientable_graph_genus": 10,
+          "complete_graph_edges": 91
+        },
+        {
+          "n": 15,
+          "numerator": 132,
+          "orientable_triangular_embedding_possible": true,
+          "triangular_genus": 11,
+          "minimum_orientable_graph_genus": 11,
+          "complete_graph_edges": 105
+        },
+        {
+          "n": 16,
+          "numerator": 156,
+          "orientable_triangular_embedding_possible": true,
+          "triangular_genus": 13,
+          "minimum_orientable_graph_genus": 13,
+          "complete_graph_edges": 120
+        },
+        {
+          "n": 17,
+          "numerator": 182,
+          "orientable_triangular_embedding_possible": false,
+          "triangular_genus": null,
+          "minimum_orientable_graph_genus": 16,
+          "complete_graph_edges": 136
+        },
+        {
+          "n": 18,
+          "numerator": 210,
+          "orientable_triangular_embedding_possible": false,
+          "triangular_genus": null,
+          "minimum_orientable_graph_genus": 18,
+          "complete_graph_edges": 153
+        },
+        {
+          "n": 19,
+          "numerator": 240,
+          "orientable_triangular_embedding_possible": true,
+          "triangular_genus": 20,
+          "minimum_orientable_graph_genus": 20,
+          "complete_graph_edges": 171
+        },
+        {
+          "n": 20,
+          "numerator": 272,
+          "orientable_triangular_embedding_possible": false,
+          "triangular_genus": null,
+          "minimum_orientable_graph_genus": 23,
+          "complete_graph_edges": 190
+        },
+        {
+          "n": 21,
+          "numerator": 306,
+          "orientable_triangular_embedding_possible": false,
+          "triangular_genus": null,
+          "minimum_orientable_graph_genus": 26,
+          "complete_graph_edges": 210
+        },
+        {
+          "n": 22,
+          "numerator": 342,
+          "orientable_triangular_embedding_possible": false,
+          "triangular_genus": null,
+          "minimum_orientable_graph_genus": 29,
+          "complete_graph_edges": 231
+        },
+        {
+          "n": 23,
+          "numerator": 380,
+          "orientable_triangular_embedding_possible": false,
+          "triangular_genus": null,
+          "minimum_orientable_graph_genus": 32,
+          "complete_graph_edges": 253
+        },
+        {
+          "n": 24,
+          "numerator": 420,
+          "orientable_triangular_embedding_possible": true,
+          "triangular_genus": 35,
+          "minimum_orientable_graph_genus": 35,
+          "complete_graph_edges": 276
+        },
+        {
+          "n": 25,
+          "numerator": 462,
+          "orientable_triangular_embedding_possible": false,
+          "triangular_genus": null,
+          "minimum_orientable_graph_genus": 39,
+          "complete_graph_edges": 300
+        },
+        {
+          "n": 26,
+          "numerator": 506,
+          "orientable_triangular_embedding_possible": false,
+          "triangular_genus": null,
+          "minimum_orientable_graph_genus": 43,
+          "complete_graph_edges": 325
+        },
+        {
+          "n": 27,
+          "numerator": 552,
+          "orientable_triangular_embedding_possible": true,
+          "triangular_genus": 46,
+          "minimum_orientable_graph_genus": 46,
+          "complete_graph_edges": 351
+        },
+        {
+          "n": 28,
+          "numerator": 600,
+          "orientable_triangular_embedding_possible": true,
+          "triangular_genus": 50,
+          "minimum_orientable_graph_genus": 50,
+          "complete_graph_edges": 378
+        },
+        {
+          "n": 29,
+          "numerator": 650,
+          "orientable_triangular_embedding_possible": false,
+          "triangular_genus": null,
+          "minimum_orientable_graph_genus": 55,
+          "complete_graph_edges": 406
+        },
+        {
+          "n": 30,
+          "numerator": 702,
+          "orientable_triangular_embedding_possible": false,
+          "triangular_genus": null,
+          "minimum_orientable_graph_genus": 59,
+          "complete_graph_edges": 435
+        },
+        {
+          "n": 31,
+          "numerator": 756,
+          "orientable_triangular_embedding_possible": true,
+          "triangular_genus": 63,
+          "minimum_orientable_graph_genus": 63,
+          "complete_graph_edges": 465
+        },
+        {
+          "n": 32,
+          "numerator": 812,
+          "orientable_triangular_embedding_possible": false,
+          "triangular_genus": null,
+          "minimum_orientable_graph_genus": 68,
+          "complete_graph_edges": 496
+        },
+        {
+          "n": 33,
+          "numerator": 870,
+          "orientable_triangular_embedding_possible": false,
+          "triangular_genus": null,
+          "minimum_orientable_graph_genus": 73,
+          "complete_graph_edges": 528
+        },
+        {
+          "n": 34,
+          "numerator": 930,
+          "orientable_triangular_embedding_possible": false,
+          "triangular_genus": null,
+          "minimum_orientable_graph_genus": 78,
+          "complete_graph_edges": 561
+        },
+        {
+          "n": 35,
+          "numerator": 992,
+          "orientable_triangular_embedding_possible": false,
+          "triangular_genus": null,
+          "minimum_orientable_graph_genus": 83,
+          "complete_graph_edges": 595
+        },
+        {
+          "n": 36,
+          "numerator": 1056,
+          "orientable_triangular_embedding_possible": true,
+          "triangular_genus": 88,
+          "minimum_orientable_graph_genus": 88,
+          "complete_graph_edges": 630
+        },
+        {
+          "n": 37,
+          "numerator": 1122,
+          "orientable_triangular_embedding_possible": false,
+          "triangular_genus": null,
+          "minimum_orientable_graph_genus": 94,
+          "complete_graph_edges": 666
+        },
+        {
+          "n": 38,
+          "numerator": 1190,
+          "orientable_triangular_embedding_possible": false,
+          "triangular_genus": null,
+          "minimum_orientable_graph_genus": 100,
+          "complete_graph_edges": 703
+        },
+        {
+          "n": 39,
+          "numerator": 1260,
+          "orientable_triangular_embedding_possible": true,
+          "triangular_genus": 105,
+          "minimum_orientable_graph_genus": 105,
+          "complete_graph_edges": 741
+        },
+        {
+          "n": 40,
+          "numerator": 1332,
+          "orientable_triangular_embedding_possible": true,
+          "triangular_genus": 111,
+          "minimum_orientable_graph_genus": 111,
+          "complete_graph_edges": 780
+        }
+      ],
+      "Jungerman_Ringel_minimal_triangulations": {
+        "0": {
+          "min_vertices": 4,
+          "min_triangles": 4
+        },
+        "1": {
+          "min_vertices": 7,
+          "min_triangles": 14
+        },
+        "2": {
+          "min_vertices": 10,
+          "min_triangles": 24
+        },
+        "3": {
+          "min_vertices": 10,
+          "min_triangles": 28
+        },
+        "4": {
+          "min_vertices": 11,
+          "min_triangles": 34
+        },
+        "5": {
+          "min_vertices": 12,
+          "min_triangles": 40
+        },
+        "6": {
+          "min_vertices": 12,
+          "min_triangles": 44
+        },
+        "7": {
+          "min_vertices": 13,
+          "min_triangles": 50
+        },
+        "8": {
+          "min_vertices": 14,
+          "min_triangles": 56
+        },
+        "9": {
+          "min_vertices": 14,
+          "min_triangles": 60
+        },
+        "10": {
+          "min_vertices": 15,
+          "min_triangles": 66
+        },
+        "11": {
+          "min_vertices": 15,
+          "min_triangles": 70
+        },
+        "12": {
+          "min_vertices": 16,
+          "min_triangles": 76
+        },
+        "13": {
+          "min_vertices": 16,
+          "min_triangles": 80
+        }
+      },
+      "not_equivalent": "genus(K_n)=ceil((n-3)(n-4)/12) does not assert triangular embedding or Euclidean realization",
+      "1996_vs_2010": "Altshuler et al list 59 abstract genus6 N12; Schewe 2010 proves no polyhedral R3 realization",
+      "repo_overclaims_to_qualify": [
+        "analysis/W33_Part_DXXXII_Csaszar_Szilassi_Genus_Unification.md calls both polyhedra no-diagonal and says both require 7 vertices; Szilassi has 14 vertices, 7 faces",
+        "same report says K12 neighbor graph of each W33 vertex; W33 point neighborhoods are not K12",
+        "analysis/w33_pass2017_2021_the_genus_ladder_was_already_ours.md uses the phrase genus-six polyhedron for an abstract K12 triangulation",
+        "geometric symmetry C2 of special R3 realizations differs from combinatorial automorphism group order42"
+      ]
+    },
+    "W33_native_overlap_frame_selector": {
+      "status": "NATIVE_W33_1620_FRAME_INTERSECTION_PSD_KERNEL",
+      "n_frames": 1620,
+      "n_rays": 40,
+      "srg_point_graph": [
+        40,
+        12,
+        2,
+        4
+      ],
+      "induced_12_vertex_neighborhood": "4 disjoint K3, NOT K12",
+      "projective_frame_overlap_census": {
+        "0": 1081,
+        "1": 440,
+        "2": 90,
+        "3": 8,
+        "4": 1
+      },
+      "frame_one_ray_move_graph_degree": 8,
+      "frame_one_ray_move_graph_connected_components": 45,
+      "frame_one_ray_move_graph_bipartite": false,
+      "frame_component_size_histogram": {
+        "36": 45
+      },
+      "frame_component_ray_union_sizes": {
+        "8": 45
+      },
+      "frame_component_induced_W33_degrees": {
+        "(4,)": 45
+      },
+      "frame_component_ray_membership_histogram": {
+        "9": 40
+      },
+      "frame_component_ray_sets_distinct": 45,
+      "all_45_induced_point_graphs": "K4,4",
+      "all_45_frame_transition_graphs": "J(4,2) Cartesian J(4,2)",
+      "two_ray_move_graph_degree": 90,
+      "two_ray_moves_within_K44_sector": 18,
+      "two_ray_moves_cross_K44_sectors": 72,
+      "two_ray_only_connected_components": 1,
+      "one_or_two_ray_connected_components": 1,
+      "one_component_transition_spectrum": {
+        "-4": 4,
+        "-2": 12,
+        "0": 9,
+        "2": 4,
+        "4": 6,
+        "8": 1
+      },
+      "B_gram_identity": "B^T B=156 I+21 A_W33+6 J",
+      "B_gram_eigenvalues": {
+        "648": 1,
+        "198": 24,
+        "72": 15
+      },
+      "frame_kernel_rank": 40,
+      "frame_kernel_zero_eigenvalue_multiplicity": 1580,
+      "uniform_mean_overlap": "2/5",
+      "overlap_same_frame": 4,
+      "sufficient_betaJ_aligned_beats_uniform": 4.105656349014683,
+      "uniform_local_spinodal_betaJ": 8.181818181818182,
+      "scope": "Canonical combinatorial kernel but postulated attractive interaction -J*|intersection|; finite Gibbs state symmetric, ordered phase only conditional M->infinity."
+    },
+    "H27_driven_local_Hamiltonian": {
+      "status": "EXACT_LOCAL_FOUR_PULSE_H27_FLOQUET_COMMUTATOR",
+      "Hilbert_dimension": 27,
+      "generator_order": 3,
+      "graph_degree_union_Xpm_Ypm": 4,
+      "nonzero_directed_hoppings_each_H": 54,
+      "H_X": "(2*pi/(3*sqrt(3))) i (U_X-U_X^dagger)",
+      "H_Y": "(2*pi/(3*sqrt(3))) i (U_Y-U_Y^dagger)",
+      "pulse_chronological": [
+        "-H_Y",
+        "-H_X",
+        "H_Y",
+        "H_X"
+      ],
+      "Floquet_4_pulse_U": "U_Z",
+      "recur_after_12_unit_pulses": true,
+      "max_matrix_unitary_error": 2.482534153247273e-15,
+      "scope": "Explicitly switched time-dependent local Hamiltonian (on H27 Cayley graph); not autonomous and not a universal physical time scale. Escapes isolated 12-cycle logarithm no-go by driving."
+    },
+    "D9_compensated_massless_KK_vectors": {
+      "status": "SIX_FLUX_COMPENSATED_KILLING_VECTORS_PLUS_U1",
+      "sphere_Killing_generators": [
+        "K_x",
+        "K_y",
+        "K_z"
+      ],
+      "identity": "i_K F=d(mu_K), hence Lie_K F = 0 for each SO3 Killing field",
+      "product_sphere_lifted_isometry_algebra": "so(3) + so(3), dimension 6",
+      "additional_constant_abelian_zero_mode": 1,
+      "symmetry_protected_massless_5D_vector_count": 7,
+      "limits": "Infinitesimal gauge-compensated isometries at classical linear level. Full coupled vector/scalar mass matrices, global bundle subtleties and ExFT embedding uncomputed."
+    },
+    "photonic_16rail_calibration_cost": {
+      "status": "FULL_16x16_READOUT_CERTIFICATION_SHOT_COST_UPPER_BOUND",
+      "confidence": 0.99,
+      "L1_column_tolerance": 0.002,
+      "n_independent_preparations_per_input_rail_sufficient": 9580631,
+      "n_total_16_input_preparations_sufficient": 153290096,
+      "previous_model_expected_signal_launches": 54438,
+      "calibration_to_signal_shot_ratio": 2815.8656820603255,
+      "proof": "2^(16+1)*16*exp(-n epsilon^2/2)<=0.01 via all-subset union and Bernoulli Hoeffding",
+      "limitations": "This bound is conservative and assumes IID samples per known preparation, no drift. Not a lower bound or optimized calibration method. It makes the previous assumed 0.002 column-L1 confidence operationally costly."
+    },
+    "F8_certified_codespace_gap": {
+      "status": "GLOBAL_VERSUS_CODESPACE_F8_LOWER_BOUND_SCOPE_FALSIFIER",
+      "exact_witness_upper": 2.4985086466880784,
+      "pass12673_certified_codespace_lower": 2.49,
+      "upper_minus_codespace_lower": 0.008508646688078159,
+      "certificate_top_keys": [
+        "C_cert",
+        "block1",
+        "block3",
+        "certified",
+        "gram",
+        "keys",
+        "round_bits",
+        "scs_margin"
+      ],
+      "previous_fullspace_Hessian_negative_eigenvalues": 0,
+      "previous_numerical_family_degree8_coefficient_residual_max": 2.6645352591003757e-15,
+      "limitation": "249/100 lower bound pertains only to the selected C8 code-space; no global C64 matching lower. Numerical equal-value families still lack exact algebraic tangent vectors."
+    }
+  }
+}
