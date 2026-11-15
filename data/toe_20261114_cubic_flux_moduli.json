@@ -1,0 +1,35 @@
+{
+  "fermat_slice_monomial_powers": [
+    [
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      1
+    ]
+  ],
+  "massless_real_complex_structure_scalars_at_fixed_flux": 8,
+  "nodal_root_reflections_checked": 72,
+  "line_cycle_type_of_each_root_reflection": {
+    "fixed": 15,
+    "transpositions": 6
+  },
+  "flux_pairing_with_vanishing_root": 0
+}
