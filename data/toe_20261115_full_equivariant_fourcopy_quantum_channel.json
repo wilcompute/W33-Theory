@@ -1,0 +1,41 @@
+{
+  "Haar_random_pure_40_mode_state_4copy_mean_success": 0.00011933613748701667,
+  "K_contraction_verified": true,
+  "all_40_symplectic_transvections_covariant": true,
+  "cannot_implement_on_single_copy": "Homogeneous fourth-power amplitudes are not a linear map on C40. A single-copy CPTP channel cannot implement the normalized quartic pure-state output on arbitrary unknown inputs; four coherent copies and postselection are a sufficient abstract construction.",
+  "coherent_uniform_to_Haar_success_ratio": 1666.034999999999,
+  "coherent_uniform_to_random_phase_success_ratio": 1439.999999999999,
+  "disjoint_octet_pairs": 270,
+  "distinct_unordered_fourpoint_inputs": 22680,
+  "exact_Gram_diagonal_adjacent_nonadjacent": [
+    1440,
+    24,
+    60
+  ],
+  "exact_Gram_eigenvalues_mult": {
+    "schlafli_20": 1344,
+    "schlafli_dark_6": 1560,
+    "uniform_1": 2640
+  },
+  "fixed_uniform_magnitudes_random_independent_phases_mean_success": 0.00013806818181818183,
+  "kraus_normalization_lambda_max": 2640,
+  "limits": "This constructs a finite-dimensional CP trace-nonincreasing map on four copies and an abstract unitary dilation; NOT a low-depth optical circuit, not deterministic, and not E6 gauge dynamics. Success varies with input.",
+  "no_singlecopy_POVM_can_reproduce_success_law": true,
+  "no_singlecopy_POVM_proof": "Every basis state |p> has success 0, so any positive 40x40 POVM effect reproducing the probabilities has zero diagonal and must be 0, contradicting the positive success at |+>.",
+  "nonedge_point_pairs_per_octet": 12,
+  "point_pair_decompositions": 38880,
+  "postselection_construction": "K=M/sqrt(lambda_max) on Sym^4(C40), zero on repeated-index basis. Success Kraus K; failure sqrt(I-K^dag K). Exact CPTP two-outcome quantum instrument by Stinespring.",
+  "quartet_distinct_E6_output_labels": {
+    "1": 6480,
+    "2": 16200
+  },
+  "quartet_pair_decomposition_multiplicity": {
+    "1": 6480,
+    "2": 16200
+  },
+  "rank_output": 27,
+  "source": "Existing Pass1536 45 octets and prior quartic 270-row map",
+  "status": "EXACT_W33_COVARIANT_SYM4_FOURCOPY_E6_HERALDED_CHANNEL",
+  "symmetric_fourcopy_Hilbert_dimension": 123410,
+  "uniform_superposition_4copy_success_probability": 0.1988181818181817
+}

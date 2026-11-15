@@ -1,0 +1,25 @@
+{
+  "status": "EXACT_RATIONAL_SIGN_CHECK_OF_NONEMBEDDED_12_PLANE_CANDIDATE",
+  "optimization_candidate_planes": 12,
+  "exact_Fraction_parsing_of_input_decimal_strings": true,
+  "dual_vertices_verified": 44,
+  "face_boundary_length": 11,
+  "exact_proper_crossings_each_face": [
+    1,
+    0,
+    1,
+    1,
+    1,
+    0,
+    0,
+    2,
+    0,
+    2,
+    0,
+    0
+  ],
+  "exact_total_proper_crossings": 8,
+  "nonadjacent_segment_orientation_zero_tests": 0,
+  "failure_of_local_face_simplicity": true,
+  "limits": "This exact arithmetic ONLY certifies crossings in a particular failed candidate. It proves neither genus-6 dual nonrealizability nor optimality of the local search."
+}

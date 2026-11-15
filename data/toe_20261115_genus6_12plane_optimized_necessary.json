@@ -1,0 +1,82 @@
+{
+  "best_total_face_self_crossings": 8,
+  "dual_abstract_VEF": [
+    44,
+    66,
+    12
+  ],
+  "each_face_length": 11,
+  "improvements": 0,
+  "local_trials": 90000,
+  "max_vertex_distance_from_origin": 29.57083691894212,
+  "minimum_absolute_triple_plane_normal_determinant": 0.6175883832391564,
+  "necessary_local_facet_simplicity_passed": false,
+  "parameters": [
+    [
+      0.5611768077350081,
+      -0.8761333582520099,
+      -3.756936689973661
+    ],
+    [
+      -2.01676474799605,
+      -1.6976236911796416,
+      -0.8225099490577461
+    ],
+    [
+      -0.5622159269350109,
+      2.9009997820210103,
+      0.6840322669736791
+    ],
+    [
+      -3.2137131931376315,
+      -2.8835289114528138,
+      0.3404375222410403
+    ],
+    [
+      -0.4798485339290741,
+      4.087755092810966,
+      -0.8195059982143045
+    ],
+    [
+      0.3937648529773231,
+      1.5425004164340046,
+      5.5213432008488486
+    ],
+    [
+      5.107794185021545,
+      -0.8513320196224612,
+      1.8094647903396541
+    ],
+    [
+      0.1729856105575781,
+      5.995864589296638,
+      -1.019739248303597
+    ],
+    [
+      -2.4856997936054013,
+      4.014452068028724,
+      -4.065605511046532
+    ],
+    [
+      1.6203895851606371,
+      -1.992369510779919,
+      -2.182012221293428
+    ],
+    [
+      -1.583067953949424,
+      0.19606696559793058,
+      -1.4715646568983551
+    ],
+    [
+      -1.2969904607102891,
+      -1.884021442983761,
+      1.714201005713043
+    ]
+  ],
+  "prior_random_search_best_total_face_self_crossings": 41,
+  "restarts": 6,
+  "scope": "Only self-crossings of 12 individual planar face polygons. A zero would still NOT be a 3D embedded genus-six polyhedron; must test all nonincident triangle/edge/face intersections and orientation. A nonzero numerical minimum is not a proof of impossibility.",
+  "seeds": 913,
+  "source_facets": "analysis/w33_genus_six_execution.py FACETS_ONE",
+  "status": "GENUS6_12_PLANE_LOCAL_SELF_CROSSING_OPTIMIZATION"
+}

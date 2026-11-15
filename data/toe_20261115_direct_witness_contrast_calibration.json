@@ -1,0 +1,35 @@
+{
+  "absolute_rail_contrast_tolerance_radius": 0.01,
+  "accepted_parity_calibrations_each": 147556,
+  "accepted_rail_preparations_each": 52642,
+  "accepted_total_calibration": 1137384,
+  "accepted_total_rail_calibration": 842272,
+  "assumptions": "Can prepare all 16 known rail states, stationary memoryless column-stochastic readout for calibration/signal, independent calibration trials, and trusted parity reference preparations. Does NOT assume circulant or uniform crosstalk.",
+  "calibration_half_width": 0.010653391233783813,
+  "end_to_end_confidence": "P(all rail contrast errors <= r, both parity flip errors <= d, all 5 witness means inside Hoeffding intervals) >= 0.99",
+  "joint_99pct_corrected_fidelity_lower": 0.920456069774382,
+  "joint_failure_split": {
+    "16_contrasts": 0.0025,
+    "2_parity_rates": 0.0025,
+    "5_witness_settings": 0.005
+  },
+  "limits": "Synthetic independent data, not a hardware measurement. Counts are sufficient accepted preparations. Genuine drift between calibration and signal, imperfect known rail preparations, and correlated detection invalidate bound.",
+  "max_observed_contrast_deviation": 0.0008566408245081345,
+  "observable_contrast": "v_j=delta(j,0)+delta(j,15), w=C_nominal^{-T} v",
+  "observed_synthetic_witness_fidelity": 0.9632748417019122,
+  "parity_flip_error_radius": 0.005,
+  "parity_flip_estimates": [
+    0.02457372116349047,
+    0.018501450296836454
+  ],
+  "previous_4class_pooled_calibration_accepted_total": 6573041,
+  "prior_unstructured_16x16_l1_calibration_accepted_total": 153290096,
+  "rail_specific_anomaly_detectable_without_circulant_assumption": true,
+  "sample_weight_range": 1.055110608852165,
+  "simulated_true_C_is_circulant_but_validity_does_not_require_it": true,
+  "simultaneous_Z_observable_calibration_bias_bound": 0.010856640824508134,
+  "single_corrupted_rail_analytic_contrast_anomaly": 1.0,
+  "statistical_half_width": 0.03216538069374639,
+  "status": "MODEL_FREE_16_RAIL_WITNESS_CONTRAST_JOINT_99PCT_CALIBRATION",
+  "true_synthetic_witness_fidelity": 0.9643422025331637
+}
