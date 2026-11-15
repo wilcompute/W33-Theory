@@ -1,0 +1,60 @@
+{
+ "tau0": {
+  "hermitian": true,
+  "trace_one": true,
+  "idempotent": true,
+  "critical": true,
+  "c": [
+   "47/9",
+   "-16/9",
+   "0"
+  ],
+  "c_rest_zero": true,
+  "expected": [
+   "47/9",
+   "-16/9",
+   "0"
+  ],
+  "matches": true,
+  "numeric": 2.4985086466880784
+ },
+ "tau1": {
+  "hermitian": true,
+  "trace_one": true,
+  "idempotent": true,
+  "critical": true,
+  "c": [
+   "79/9",
+   "0",
+   "-16/9"
+  ],
+  "c_rest_zero": true,
+  "expected": [
+   "79/9",
+   "0",
+   "-16/9"
+  ],
+  "matches": true,
+  "numeric": 4.604806479406471
+ },
+ "tau2": {
+  "hermitian": true,
+  "trace_one": true,
+  "idempotent": true,
+  "critical": true,
+  "c": [
+   "5/3",
+   "16/9",
+   "16/9"
+  ],
+  "c_rest_zero": true,
+  "expected": [
+   "5/3",
+   "16/9",
+   "16/9"
+  ],
+  "matches": true,
+  "numeric": 8.563351540572118
+ },
+ "all_exact": true
+}

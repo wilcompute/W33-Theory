@@ -1,0 +1,22 @@
+{
+ "n_lifts": 64,
+ "n_eigenvectors": 512,
+ "max_deviation_from_closed_forms": 2.3092638912203256e-14,
+ "counts_per_j": {
+  "1": 64,
+  "2": 64,
+  "3": 64,
+  "4": 64,
+  "5": 64,
+  "6": 64,
+  "7": 64,
+  "8": 64
+ },
+ "lifts_fixing_witness": 1,
+ "witness_lift": [
+  [
+   9,
+   "1"
+  ]
+ ]
+}

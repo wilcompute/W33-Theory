@@ -1,0 +1,52 @@
+{
+ "parent": [
+  "47/9",
+  "-16/9",
+  "0",
+  "0",
+  "0",
+  "0"
+ ],
+ "parent_equals_closed_form": true,
+ "quotients": {
+  "12,51": {
+   "determinant": 1,
+   "type": 27,
+   "stabilises": true,
+   "anticommuting_nonzero": 0,
+   "quotient_covered": 279,
+   "restricted": [
+    "47/9",
+    "-16/9",
+    "0",
+    "0",
+    "0",
+    "0"
+   ],
+   "equals_parent": true
+  },
+  "57,34": {
+   "determinant": 3,
+   "type": 17,
+   "stabilises": true,
+   "anticommuting_nonzero": 0,
+   "quotient_covered": 279,
+   "restricted": [
+    "47/9",
+    "-16/9",
+    "0",
+    "0",
+    "0",
+    "0"
+   ],
+   "equals_parent": true
+  },
+  "53,17": {
+   "determinant": 2,
+   "trace": 0,
+   "stabilises": true,
+   "note": "trace 0: not a shortening point"
+  }
+ },
+ "both_quotients_exact": true
+}
