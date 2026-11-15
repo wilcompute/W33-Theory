@@ -1,0 +1,234 @@
+{
+  "status": "FIVE_FRONT_CONTROLS_PASS_WITH_EXPLICIT_LIMITATIONS",
+  "n_fronts": 5,
+  "results": {
+    "1_F8_PPT_two_copy_covariance": {
+      "status": "EXACT_TWO_COPY_PAULI_COVARIANCE_SHELLS",
+      "twocopy_symmetric_PPT_K_objective": 0,
+      "second_moments_multiset": {
+        "identity": {
+          "value": "1",
+          "count": 1
+        },
+        "covered": {
+          "value": "0",
+          "count": 567
+        },
+        "odd_uncovered": {
+          "value": "1/63",
+          "count": 2016
+        },
+        "even_uncovered": {
+          "value": "31/1512",
+          "count": 1512
+        }
+      },
+      "all_diagonal_Pauli_covariances_nonnegative": true,
+      "pure_one_copy_identity": "sum_nonidentity_Pauli_squared_expectations=63",
+      "limitation": "The PPT state is not certified to have a symmetric 3-copy extension; covariance positivity is necessary, not sufficient. No new global c8 bound."
+    },
+    "2_unequal_quantized_flux_compactification": {
+      "status": "EXACT_UNIQUE_POSITIVE_UNEQUAL_CHARGE_BRANCH",
+      "flux_quantization": "integral_{S2_i}F=2*pi*N_i/e; f_i=N_i/(2e*r_i^2)",
+      "charge_radius_equation": "(N1/N2)^2=t^2(t+6)/(6t+1), t=r1^2/r2^2",
+      "monotone_derivative": "3t(4t^2+13t+4)/(6t+1)^2>0",
+      "r2_squared": "5*N2^2*t/[8*e^2*(6t+1)]",
+      "r1_squared": "t*r2_squared",
+      "AdS_L2_over_r1_squared": "20/(1+t)",
+      "AdS_L2_over_r2_squared": "20t/(1+t)",
+      "radion_m2L2": "28 +/- 8 sqrt(1+(75/28)*((t-1)/(t+1))^2)",
+      "radion_m2L2_strict_lower_limit": 12.656318191888511,
+      "lightest_probe_KK_m2L2": "40*min(1,t)/(1+t)",
+      "branch_examples": [
+        {
+          "charges": [
+            1,
+            1
+          ],
+          "t": 0.9999999999999999,
+          "radii_squared": [
+            0.08928571428571427,
+            0.08928571428571429
+          ],
+          "radion_m2L2": [
+            20.0,
+            36.0
+          ],
+          "first_probe_levels_m2L2": [
+            20.0,
+            19.999999999999996
+          ]
+        },
+        {
+          "charges": [
+            2,
+            1
+          ],
+          "t": 2.864831021378215,
+          "radii_squared": [
+            0.2820132717669473,
+            0.09843975775970067
+          ],
+          "radion_m2L2": [
+            17.80628696905907,
+            38.19371303094093
+          ],
+          "first_probe_levels_m2L2": [
+            10.34974097929276,
+            29.650259020707242
+          ]
+        },
+        {
+          "charges": [
+            7,
+            2
+          ],
+          "t": 6.191224455561638,
+          "radii_squared": [
+            2.5120528386325356,
+            0.40574410710888276
+          ],
+          "radion_m2L2": [
+            15.617186416435713,
+            40.382813583564285
+          ],
+          "first_probe_levels_m2L2": [
+            5.562335072028562,
+            34.43766492797144
+          ]
+        },
+        {
+          "charges": [
+            20,
+            1
+          ],
+          "t": 46.169743567701204,
+          "radii_squared": [
+            4.792049623084163,
+            0.10379199130827574
+          ],
+          "radion_m2L2": [
+            13.127219627632778,
+            42.872780372367224
+          ],
+          "first_probe_levels_m2L2": [
+            0.8480012180390444,
+            39.151998781960955
+          ]
+        },
+        {
+          "charges": [
+            100,
+            1
+          ],
+          "t": 242.05165474999254,
+          "radii_squared": [
+            25.196364871257476,
+            0.10409499120046091
+          ],
+          "radion_m2L2": [
+            12.748150625044419,
+            43.25184937495558
+          ],
+          "first_probe_levels_m2L2": [
+            0.16457406982538236,
+            39.835425930174615
+          ]
+        }
+      ],
+      "limitation": "Classical D9 Einstein-Maxwell only; no gauge coupling selected, no complete interacting KK stability, no E6 ExFT embedding. Extreme charge ratios give light KK modes."
+    },
+    "3_autonomous_H27_cursor_clock": {
+      "status": "EXACT_AUTONOMOUS_108_STATE_H27_CURSOR",
+      "permutation_sites": 108,
+      "cycles_of_length_12": 9,
+      "clock_phases": 4,
+      "H27_addresses": 27,
+      "one_step_operator": "fixed cursor-conditioned left-translation permutation",
+      "four_step_operator": "(g,c)->(Zg,c), central Z order 3",
+      "twelve_step_operator": "identity",
+      "Floquet_eigenphases": "all 12th roots of unity, each multiplicity 9",
+      "exact_H_log_offdiagonal_nonzero_per_12cycle": 132,
+      "limits": "A static discrete-time quantum cursor, not an autonomous sparse continuous-time local Hamiltonian. Exact Hermitian logarithm is long-range and energy scales remain externally set."
+    },
+    "4_exact_W33_frame_second_moments": {
+      "status": "EXACT_FRAME_COVARIANCE_RECOVERS_W33_INCIDENCE",
+      "apartments": 1620,
+      "affine_address_sites": 81,
+      "each_frame_degree": 8,
+      "each_displacement_frame_incidence": 162,
+      "frame_pair_count_types": [
+        {
+          "pair_type": "opposite",
+          "cooccurrence": 162,
+          "number_of_unordered_nonzero_displacement_pairs": 40,
+          "joint_probability": "1/10"
+        },
+        {
+          "pair_type": "symplectic_nonorthogonal",
+          "cooccurrence": 6,
+          "number_of_unordered_nonzero_displacement_pairs": 2160,
+          "joint_probability": "1/270"
+        },
+        {
+          "pair_type": "symplectic_orthogonal",
+          "cooccurrence": 27,
+          "number_of_unordered_nonzero_displacement_pairs": 960,
+          "joint_probability": "1/60"
+        }
+      ],
+      "uniform_averaged_adjacency": "(J-I)/10, nonlocal complete weighted graph",
+      "single_frame_adjacency_spectrum": {
+        "8": 1,
+        "5": 8,
+        "2": 24,
+        "-1": 32,
+        "-4": 16
+      },
+      "nonconstant_Fourier_mode_frame_spectrum_distribution": {
+        "5": "1/10",
+        "2": "3/10",
+        "-1": "2/5",
+        "-4": "1/5"
+      },
+      "nonconstant_Fourier_mode_mean": "-1/10",
+      "nonconstant_Fourier_mode_variance": "729/100",
+      "limitations": "Apartment as symplectic frame already known (Pass4474/TOE23). Novel scope here is exact neighbor covariance/annealed no-locality control; finite invariant thermal ensembles cannot spontaneously select a frame."
+    },
+    "5_photonic_detector_optimized_witness": {
+      "status": "DETECTOR_AWARE_HOEFFDING_FIVE_SETTING_BUDGET",
+      "assumed_detector_efficiency": 0.93,
+      "optical_loss_per_layer": 0.98,
+      "survival_accepted_Z": 0.8578023887999999,
+      "survival_accepted_each_equatorial": 0.7912096110010606,
+      "confidence": 0.99,
+      "statistical_fidelity_halfwidth_target": 0.055,
+      "Hoeffding_allocated_accepted_shots": {
+        "Z": 3678,
+        "each_equatorial": 2195
+      },
+      "Hoeffding_actual_statistical_width": 0.054989702280309645,
+      "raw_optimal_expected_launches": 15388,
+      "raw_equal_allocation_expected_launches": 15983,
+      "synthetic_accepted_counts": {
+        "endpoint": 3524,
+        "plus_each_equatorial": [
+          2126,
+          68,
+          2129,
+          76
+        ]
+      },
+      "synthetic_estimated_conditional_fidelity": 0.947287943705168,
+      "contamination_max_accepted_fraction": 0.01,
+      "detector_calibration_bias_bounds": {
+        "Z_probability": 0.005,
+        "equatorial_parity": 0.01
+      },
+      "worst_case_adversarial_fidelity_bias": "9/400",
+      "model_conditional_fidelity_lower_99pct": 0.8697982414248584,
+      "negative_control_filtered_false_GHZ": 0,
+      "limitations": "Synthetic IID accepted-event model; nominal detector efficiency, contamination and calibration radii are inputs, not measurements. Expected launch count is NOT a 99% finite-trial guarantee. One-photon internal virtual qubits are not spacelike Bell parties."
+    }
+  }
+}
