@@ -1,0 +1,2993 @@
+{
+  "wrapped_charges": {
+    "betti_rank": 6,
+    "root_discriminant": 3,
+    "line_charges_in_dual_root_basis": {
+      "E1": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "E2": [
+        1,
+        -1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "E3": [
+        0,
+        1,
+        -1,
+        0,
+        0,
+        1
+      ],
+      "E4": [
+        0,
+        0,
+        1,
+        -1,
+        0,
+        0
+      ],
+      "E5": [
+        0,
+        0,
+        0,
+        1,
+        -1,
+        0
+      ],
+      "E6": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "L12": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "L13": [
+        1,
+        -1,
+        1,
+        0,
+        0,
+        -1
+      ],
+      "L14": [
+        1,
+        0,
+        -1,
+        1,
+        0,
+        0
+      ],
+      "L15": [
+        1,
+        0,
+        0,
+        -1,
+        1,
+        0
+      ],
+      "L16": [
+        1,
+        0,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "L23": [
+        -1,
+        0,
+        1,
+        0,
+        0,
+        -1
+      ],
+      "L24": [
+        -1,
+        1,
+        -1,
+        1,
+        0,
+        0
+      ],
+      "L25": [
+        -1,
+        1,
+        0,
+        -1,
+        1,
+        0
+      ],
+      "L26": [
+        -1,
+        1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "L34": [
+        0,
+        -1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "L35": [
+        0,
+        -1,
+        1,
+        -1,
+        1,
+        0
+      ],
+      "L36": [
+        0,
+        -1,
+        1,
+        0,
+        -1,
+        0
+      ],
+      "L45": [
+        0,
+        0,
+        -1,
+        0,
+        1,
+        1
+      ],
+      "L46": [
+        0,
+        0,
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "L56": [
+        0,
+        0,
+        0,
+        -1,
+        0,
+        1
+      ],
+      "Q1": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Q2": [
+        1,
+        -1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Q3": [
+        0,
+        1,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "Q4": [
+        0,
+        0,
+        1,
+        -1,
+        0,
+        -1
+      ],
+      "Q5": [
+        0,
+        0,
+        0,
+        1,
+        -1,
+        -1
+      ],
+      "Q6": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        -1
+      ]
+    },
+    "neutral_degree_three_monomials": 45,
+    "nonzero_cubic_at_zero_total_betti_charge_witness": [
+      "E1",
+      "L12",
+      "Q2"
+    ]
+  },
+  "freudenthal_pairing": {
+    "same_tritangent_gradient_products": 135,
+    "ordered_distinct_gradient_products": 540,
+    "all_chart_multiplicities": [
+      24,
+      12
+    ],
+    "ovoid_distinct_pair_histogram": {
+      "2": 90,
+      "3": 120,
+      "4": 45,
+      "6": 15
+    },
+    "ovoid_ordered_pairing_constraint_rank": 100,
+    "chart_diagonal_weight_sum_for_same_terms": "5/3",
+    "chart_diagonal_weight_sum_for_distinct_terms": "10/3"
+  },
+  "fermat": {
+    "exceptional_line_marking": [
+      0,
+      3,
+      1,
+      4,
+      2,
+      5
+    ],
+    "fermat_marked_points": [
+      [
+        "1",
+        "3/2 - sqrt(3)*I/2",
+        "1/2 - sqrt(3)*I/2"
+      ],
+      [
+        "1",
+        "1/2 - sqrt(3)*I/2",
+        "-1/2 - sqrt(3)*I/2"
+      ]
+    ],
+    "alternate_marking_zero_coefficients": [
+      "123",
+      "223",
+      "323"
+    ],
+    "coefficients": {
+      "111": "1",
+      "112": "1",
+      "113": "sqrt(3)*I",
+      "121": "-1",
+      "122": "-1",
+      "123": "-1 - sqrt(3)*I",
+      "131": "1",
+      "132": "1",
+      "133": "1",
+      "211": "1/2 - sqrt(3)*I/2",
+      "212": "1",
+      "213": "3/2 - sqrt(3)*I/2",
+      "221": "-1/2 + sqrt(3)*I/2",
+      "222": "-3/2 + sqrt(3)*I/2",
+      "223": "-3 + sqrt(3)*I",
+      "231": "3/2 - sqrt(3)*I/2",
+      "232": "3/2 - sqrt(3)*I/2",
+      "233": "3/2 - sqrt(3)*I/2",
+      "311": "-1/2 - sqrt(3)*I/2",
+      "312": "1",
+      "313": "-3/2 - sqrt(3)*I/2",
+      "321": "1/2 + sqrt(3)*I/2",
+      "322": "-1/2 + sqrt(3)*I/2",
+      "323": "1 + sqrt(3)*I",
+      "331": "1/2 - sqrt(3)*I/2",
+      "332": "1/2 - sqrt(3)*I/2",
+      "333": "1/2 - sqrt(3)*I/2"
+    },
+    "field_rescaling_invariants": [
+      "3/2 - sqrt(3)*I/2",
+      "3/2 + sqrt(3)*I/2",
+      "1/2 - sqrt(3)*I/2",
+      "1/2 + sqrt(3)*I/2",
+      "1/2 - sqrt(3)*I/2",
+      "1/2 + sqrt(3)*I/2",
+      "-1/2 - sqrt(3)*I/2",
+      "-1/2 + sqrt(3)*I/2"
+    ],
+    "directed_stabilizer_by_block_rotation": {
+      "0": 4,
+      "1": 4,
+      "2": 4
+    },
+    "directed_stabilizer_order": 12,
+    "directed_stabilizer_element_orders": {
+      "1": 1,
+      "2": 3,
+      "3": 8
+    }
+  },
+  "duality": {
+    "direct_moves": 9,
+    "direct_dual_rank_in_units_of_N": 2,
+    "mass_pairs_with_nonzero_couplings": 9,
+    "arrows_after_reduction": 18,
+    "levels": [
+      {
+        "new_states": 9,
+        "new_equal_rank_states": 0,
+        "old_quiver_up_to_relabeling": 0,
+        "matching_path_example": null
+      },
+      {
+        "new_states": 63,
+        "new_equal_rank_states": 0,
+        "old_quiver_up_to_relabeling": 0,
+        "matching_path_example": null
+      },
+      {
+        "new_states": 354,
+        "new_equal_rank_states": 0,
+        "old_quiver_up_to_relabeling": 0,
+        "matching_path_example": null
+      },
+      {
+        "new_states": 2088,
+        "new_equal_rank_states": 27,
+        "old_quiver_up_to_relabeling": 27,
+        "matching_path_example": [
+          1,
+          4,
+          7,
+          1
+        ]
+      }
+    ],
+    "shortest_path_charge_grading": {
+      "shared_cubics_15": 162
+    },
+    "shortest_path_distinct_supports": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      23,
+      24,
+      25,
+      27,
+      28,
+      33
+    ],
+    "exact_four_step_potential_paths": [
+      {
+        "endpoint_support": 15,
+        "path": [
+          1,
+          4,
+          7,
+          1
+        ],
+        "steps": [
+          {
+            "node": 1,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 4,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 7,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 1,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      {
+        "endpoint_support": 11,
+        "path": [
+          1,
+          4,
+          8,
+          1
+        ],
+        "steps": [
+          {
+            "node": 1,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 4,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 8,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 1,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      {
+        "endpoint_support": 5,
+        "path": [
+          1,
+          4,
+          9,
+          1
+        ],
+        "steps": [
+          {
+            "node": 1,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 4,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 9,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 1,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      {
+        "endpoint_support": 23,
+        "path": [
+          1,
+          5,
+          7,
+          1
+        ],
+        "steps": [
+          {
+            "node": 1,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 5,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 7,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 1,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      {
+        "endpoint_support": 18,
+        "path": [
+          1,
+          5,
+          8,
+          1
+        ],
+        "steps": [
+          {
+            "node": 1,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 5,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 8,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 1,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      {
+        "endpoint_support": 10,
+        "path": [
+          1,
+          5,
+          9,
+          1
+        ],
+        "steps": [
+          {
+            "node": 1,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 5,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 9,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 1,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      {
+        "endpoint_support": 33,
+        "path": [
+          1,
+          6,
+          7,
+          1
+        ],
+        "steps": [
+          {
+            "node": 1,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 6,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 7,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 1,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      {
+        "endpoint_support": 20,
+        "path": [
+          1,
+          6,
+          8,
+          1
+        ],
+        "steps": [
+          {
+            "node": 1,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 6,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 8,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 1,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      {
+        "endpoint_support": 12,
+        "path": [
+          1,
+          6,
+          9,
+          1
+        ],
+        "steps": [
+          {
+            "node": 1,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 6,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 9,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 1,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      {
+        "endpoint_support": 19,
+        "path": [
+          2,
+          4,
+          7,
+          2
+        ],
+        "steps": [
+          {
+            "node": 2,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 4,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 7,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 2,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      {
+        "endpoint_support": 7,
+        "path": [
+          2,
+          4,
+          8,
+          2
+        ],
+        "steps": [
+          {
+            "node": 2,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 4,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 8,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 2,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      {
+        "endpoint_support": 2,
+        "path": [
+          2,
+          4,
+          9,
+          2
+        ],
+        "steps": [
+          {
+            "node": 2,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 4,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 9,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 2,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      {
+        "endpoint_support": 28,
+        "path": [
+          2,
+          5,
+          7,
+          2
+        ],
+        "steps": [
+          {
+            "node": 2,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 5,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 7,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 2,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      {
+        "endpoint_support": 14,
+        "path": [
+          2,
+          5,
+          8,
+          2
+        ],
+        "steps": [
+          {
+            "node": 2,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 5,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 8,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 2,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      {
+        "endpoint_support": 6,
+        "path": [
+          2,
+          5,
+          9,
+          2
+        ],
+        "steps": [
+          {
+            "node": 2,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 5,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 9,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 2,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      {
+        "endpoint_support": 25,
+        "path": [
+          2,
+          6,
+          7,
+          2
+        ],
+        "steps": [
+          {
+            "node": 2,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 6,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 7,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 2,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      {
+        "endpoint_support": 21,
+        "path": [
+          2,
+          6,
+          8,
+          2
+        ],
+        "steps": [
+          {
+            "node": 2,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 6,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 8,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 2,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      {
+        "endpoint_support": 13,
+        "path": [
+          2,
+          6,
+          9,
+          2
+        ],
+        "steps": [
+          {
+            "node": 2,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 6,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 9,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 2,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      {
+        "endpoint_support": 27,
+        "path": [
+          3,
+          4,
+          7,
+          3
+        ],
+        "steps": [
+          {
+            "node": 3,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 4,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 7,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 3,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      {
+        "endpoint_support": 4,
+        "path": [
+          3,
+          4,
+          8,
+          3
+        ],
+        "steps": [
+          {
+            "node": 3,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 4,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 8,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 3,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      {
+        "endpoint_support": 1,
+        "path": [
+          3,
+          4,
+          9,
+          3
+        ],
+        "steps": [
+          {
+            "node": 3,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 4,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 9,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 3,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      {
+        "endpoint_support": 24,
+        "path": [
+          3,
+          5,
+          7,
+          3
+        ],
+        "steps": [
+          {
+            "node": 3,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 5,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 7,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 3,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      {
+        "endpoint_support": 9,
+        "path": [
+          3,
+          5,
+          8,
+          3
+        ],
+        "steps": [
+          {
+            "node": 3,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 5,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 8,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 3,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      {
+        "endpoint_support": 3,
+        "path": [
+          3,
+          5,
+          9,
+          3
+        ],
+        "steps": [
+          {
+            "node": 3,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 5,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 9,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 3,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      {
+        "endpoint_support": 17,
+        "path": [
+          3,
+          6,
+          7,
+          3
+        ],
+        "steps": [
+          {
+            "node": 3,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 6,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 7,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 3,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      {
+        "endpoint_support": 16,
+        "path": [
+          3,
+          6,
+          8,
+          3
+        ],
+        "steps": [
+          {
+            "node": 3,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 6,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 8,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 3,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      {
+        "endpoint_support": 8,
+        "path": [
+          3,
+          6,
+          9,
+          3
+        ],
+        "steps": [
+          {
+            "node": 3,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 6,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 9,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 3,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      }
+    ],
+    "eight_step_paths_to_all_adjacent_supports": {
+      "22": {
+        "intermediate_support": 15,
+        "first_path": [
+          1,
+          4,
+          7,
+          1
+        ],
+        "node_relabeling_before_second_path": {
+          "1": 8,
+          "4": 1,
+          "5": 2,
+          "6": 3,
+          "7": 5,
+          "2": 9,
+          "3": 4,
+          "8": 6,
+          "9": 7
+        },
+        "second_path": [
+          1,
+          5,
+          8,
+          1
+        ],
+        "second_path_steps": [
+          {
+            "node": 1,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 5,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 8,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 1,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      "26": {
+        "intermediate_support": 15,
+        "first_path": [
+          1,
+          4,
+          7,
+          1
+        ],
+        "node_relabeling_before_second_path": {
+          "1": 8,
+          "4": 1,
+          "5": 2,
+          "6": 3,
+          "7": 5,
+          "2": 9,
+          "3": 4,
+          "8": 6,
+          "9": 7
+        },
+        "second_path": [
+          7,
+          2,
+          5,
+          7
+        ],
+        "second_path_steps": [
+          {
+            "node": 7,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 2,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 5,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 7,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      "29": {
+        "intermediate_support": 18,
+        "first_path": [
+          1,
+          5,
+          8,
+          1
+        ],
+        "node_relabeling_before_second_path": {
+          "1": 1,
+          "4": 8,
+          "7": 9,
+          "2": 2,
+          "3": 3,
+          "5": 4,
+          "8": 5,
+          "6": 6,
+          "9": 7
+        },
+        "second_path": [
+          7,
+          3,
+          6,
+          7
+        ],
+        "second_path_steps": [
+          {
+            "node": 7,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 3,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 6,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 7,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      "30": {
+        "intermediate_support": 15,
+        "first_path": [
+          1,
+          4,
+          7,
+          1
+        ],
+        "node_relabeling_before_second_path": {
+          "1": 8,
+          "4": 1,
+          "5": 2,
+          "6": 3,
+          "7": 5,
+          "2": 9,
+          "3": 4,
+          "8": 6,
+          "9": 7
+        },
+        "second_path": [
+          1,
+          5,
+          7,
+          1
+        ],
+        "second_path_steps": [
+          {
+            "node": 1,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 5,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 7,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 1,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      "31": {
+        "intermediate_support": 15,
+        "first_path": [
+          1,
+          4,
+          7,
+          1
+        ],
+        "node_relabeling_before_second_path": {
+          "1": 8,
+          "4": 1,
+          "5": 2,
+          "6": 3,
+          "7": 5,
+          "2": 9,
+          "3": 4,
+          "8": 6,
+          "9": 7
+        },
+        "second_path": [
+          1,
+          6,
+          8,
+          1
+        ],
+        "second_path_steps": [
+          {
+            "node": 1,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 6,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 8,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 1,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      "32": {
+        "intermediate_support": 11,
+        "first_path": [
+          1,
+          4,
+          8,
+          1
+        ],
+        "node_relabeling_before_second_path": {
+          "1": 1,
+          "4": 8,
+          "7": 9,
+          "2": 2,
+          "3": 3,
+          "8": 4,
+          "5": 5,
+          "6": 6,
+          "9": 7
+        },
+        "second_path": [
+          7,
+          2,
+          5,
+          7
+        ],
+        "second_path_steps": [
+          {
+            "node": 7,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 2,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 5,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 7,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      "34": {
+        "intermediate_support": 15,
+        "first_path": [
+          1,
+          4,
+          7,
+          1
+        ],
+        "node_relabeling_before_second_path": {
+          "1": 8,
+          "4": 1,
+          "5": 2,
+          "6": 3,
+          "7": 5,
+          "2": 9,
+          "3": 4,
+          "8": 6,
+          "9": 7
+        },
+        "second_path": [
+          7,
+          2,
+          6,
+          7
+        ],
+        "second_path_steps": [
+          {
+            "node": 7,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 2,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 6,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 7,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      "35": {
+        "intermediate_support": 15,
+        "first_path": [
+          1,
+          4,
+          7,
+          1
+        ],
+        "node_relabeling_before_second_path": {
+          "1": 8,
+          "4": 1,
+          "5": 2,
+          "6": 3,
+          "7": 5,
+          "2": 9,
+          "3": 4,
+          "8": 6,
+          "9": 7
+        },
+        "second_path": [
+          1,
+          6,
+          7,
+          1
+        ],
+        "second_path_steps": [
+          {
+            "node": 1,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 6,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 7,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 1,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      "36": {
+        "intermediate_support": 18,
+        "first_path": [
+          1,
+          5,
+          8,
+          1
+        ],
+        "node_relabeling_before_second_path": {
+          "1": 1,
+          "4": 8,
+          "7": 9,
+          "2": 2,
+          "3": 3,
+          "5": 4,
+          "8": 5,
+          "6": 6,
+          "9": 7
+        },
+        "second_path": [
+          7,
+          2,
+          6,
+          7
+        ],
+        "second_path_steps": [
+          {
+            "node": 7,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 2,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 6,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 7,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      "37": {
+        "intermediate_support": 11,
+        "first_path": [
+          1,
+          4,
+          8,
+          1
+        ],
+        "node_relabeling_before_second_path": {
+          "1": 1,
+          "4": 8,
+          "7": 9,
+          "2": 2,
+          "3": 3,
+          "8": 4,
+          "5": 5,
+          "6": 6,
+          "9": 7
+        },
+        "second_path": [
+          7,
+          3,
+          6,
+          7
+        ],
+        "second_path_steps": [
+          {
+            "node": 7,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 3,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 6,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 7,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      "38": {
+        "intermediate_support": 11,
+        "first_path": [
+          1,
+          4,
+          8,
+          1
+        ],
+        "node_relabeling_before_second_path": {
+          "1": 1,
+          "4": 8,
+          "7": 9,
+          "2": 2,
+          "3": 3,
+          "8": 4,
+          "5": 5,
+          "6": 6,
+          "9": 7
+        },
+        "second_path": [
+          7,
+          2,
+          6,
+          7
+        ],
+        "second_path_steps": [
+          {
+            "node": 7,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 2,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 6,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 7,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      },
+      "39": {
+        "intermediate_support": 11,
+        "first_path": [
+          1,
+          4,
+          8,
+          1
+        ],
+        "node_relabeling_before_second_path": {
+          "1": 1,
+          "4": 8,
+          "7": 9,
+          "2": 2,
+          "3": 3,
+          "8": 4,
+          "5": 5,
+          "6": 6,
+          "9": 7
+        },
+        "second_path": [
+          7,
+          3,
+          5,
+          7
+        ],
+        "second_path_steps": [
+          {
+            "node": 7,
+            "new_rank": 2,
+            "mesons": 9,
+            "eliminated_pairs": 9,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 3,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 0,
+            "arrows": 20,
+            "potential_degrees": {
+              "3": 8,
+              "4": 12
+            }
+          },
+          {
+            "node": 5,
+            "new_rank": 1,
+            "mesons": 2,
+            "eliminated_pairs": 2,
+            "arrows": 18,
+            "potential_degrees": {
+              "4": 18
+            }
+          },
+          {
+            "node": 7,
+            "new_rank": 1,
+            "mesons": 9,
+            "eliminated_pairs": 0,
+            "arrows": 27,
+            "potential_degrees": {
+              "3": 27
+            }
+          }
+        ]
+      }
+    }
+  },
+  "nonnegative_reconstruction": {
+    "dimension": 15,
+    "verified_vertices": [
+      {
+        "weights_in_unit_line_normalization": {
+          "0": "1",
+          "1": "1",
+          "2": "1",
+          "3": "1",
+          "5": "1",
+          "6": "1",
+          "8": "1",
+          "10": "1",
+          "12": "1",
+          "13": "1"
+        },
+        "support_size": 10,
+        "constraint_rank": 10
+      },
+      {
+        "weights_in_unit_line_normalization": {
+          "0": "1/2",
+          "4": "1/2",
+          "9": "1/2",
+          "10": "1/2",
+          "11": "1/2",
+          "14": "1/2",
+          "15": "1/2",
+          "17": "1/2",
+          "18": "1/2",
+          "19": "1/2",
+          "20": "1/2",
+          "21": "1/2",
+          "22": "1/2",
+          "23": "1/2",
+          "24": "1/2",
+          "28": "1/2",
+          "29": "1/2",
+          "30": "1/2",
+          "33": "1/2",
+          "37": "1/2"
+        },
+        "support_size": 20,
+        "constraint_rank": 20
+      },
+      {
+        "weights_in_unit_line_normalization": {
+          "0": "1/3",
+          "1": "2/3",
+          "2": "2/3",
+          "4": "1/3",
+          "5": "1/3",
+          "6": "1/3",
+          "8": "1/3",
+          "10": "2/3",
+          "11": "2/3",
+          "12": "2/3",
+          "15": "2/3",
+          "18": "1/3",
+          "19": "1/3",
+          "21": "1/3",
+          "22": "2/3",
+          "24": "1/3",
+          "29": "1/3",
+          "30": "2/3",
+          "31": "2/3",
+          "33": "1/3",
+          "39": "1/3"
+        },
+        "support_size": 21,
+        "constraint_rank": 21
+      },
+      {
+        "weights_in_unit_line_normalization": {
+          "2": "2/3",
+          "4": "1/3",
+          "5": "1/3",
+          "6": "1/3",
+          "7": "1/3",
+          "8": "2/3",
+          "15": "1/3",
+          "19": "1/3",
+          "21": "1/3",
+          "24": "1/3",
+          "25": "2/3",
+          "27": "2/3",
+          "28": "1/3",
+          "29": "1/3",
+          "30": "1/3",
+          "31": "2/3",
+          "33": "1/3",
+          "34": "2/3",
+          "36": "2/3",
+          "37": "1/3",
+          "38": "1/3",
+          "39": "2/3"
+        },
+        "support_size": 22,
+        "constraint_rank": 22
+      }
+    ],
+    "census": [
+      {
+        "denominator_divides": 1,
+        "solutions": 36,
+        "vertices": 36,
+        "counts_by_numerator_multiplicities": [
+          {
+            "counts": [
+              30,
+              10
+            ],
+            "solutions": 36,
+            "vertices": 36
+          }
+        ],
+        "weyl_orbits_of_vertices": [
+          {
+            "counts": [
+              30,
+              10
+            ],
+            "orbit_size": 36
+          }
+        ]
+      },
+      {
+        "denominator_divides": 2,
+        "solutions": 990,
+        "vertices": 360,
+        "counts_by_numerator_multiplicities": [
+          {
+            "counts": [
+              20,
+              20,
+              0
+            ],
+            "solutions": 324,
+            "vertices": 324
+          },
+          {
+            "counts": [
+              21,
+              18,
+              1
+            ],
+            "solutions": 360,
+            "vertices": 0
+          },
+          {
+            "counts": [
+              24,
+              12,
+              4
+            ],
+            "solutions": 270,
+            "vertices": 0
+          },
+          {
+            "counts": [
+              30,
+              0,
+              10
+            ],
+            "solutions": 36,
+            "vertices": 36
+          }
+        ],
+        "weyl_orbits_of_vertices": [
+          {
+            "counts": [
+              30,
+              0,
+              10
+            ],
+            "orbit_size": 36
+          },
+          {
+            "counts": [
+              20,
+              20,
+              0
+            ],
+            "orbit_size": 324
+          }
+        ]
+      },
+      {
+        "denominator_divides": 3,
+        "solutions": 19768,
+        "vertices": 1908,
+        "counts_by_numerator_multiplicities": [
+          {
+            "counts": [
+              10,
+              30,
+              0,
+              0
+            ],
+            "solutions": 36,
+            "vertices": 0
+          },
+          {
+            "counts": [
+              12,
+              26,
+              2,
+              0
+            ],
+            "solutions": 1080,
+            "vertices": 0
+          },
+          {
+            "counts": [
+              12,
+              27,
+              0,
+              1
+            ],
+            "solutions": 40,
+            "vertices": 0
+          },
+          {
+            "counts": [
+              13,
+              24,
+              3,
+              0
+            ],
+            "solutions": 1080,
+            "vertices": 0
+          },
+          {
+            "counts": [
+              15,
+              20,
+              5,
+              0
+            ],
+            "solutions": 5616,
+            "vertices": 432
+          },
+          {
+            "counts": [
+              16,
+              18,
+              6,
+              0
+            ],
+            "solutions": 3240,
+            "vertices": 0
+          },
+          {
+            "counts": [
+              18,
+              14,
+              8,
+              0
+            ],
+            "solutions": 4320,
+            "vertices": 1080
+          },
+          {
+            "counts": [
+              18,
+              15,
+              6,
+              1
+            ],
+            "solutions": 2160,
+            "vertices": 0
+          },
+          {
+            "counts": [
+              19,
+              12,
+              9,
+              0
+            ],
+            "solutions": 360,
+            "vertices": 360
+          },
+          {
+            "counts": [
+              20,
+              12,
+              6,
+              2
+            ],
+            "solutions": 540,
+            "vertices": 0
+          },
+          {
+            "counts": [
+              21,
+              9,
+              9,
+              1
+            ],
+            "solutions": 720,
+            "vertices": 0
+          },
+          {
+            "counts": [
+              24,
+              6,
+              6,
+              4
+            ],
+            "solutions": 540,
+            "vertices": 0
+          },
+          {
+            "counts": [
+              30,
+              0,
+              0,
+              10
+            ],
+            "solutions": 36,
+            "vertices": 36
+          }
+        ],
+        "weyl_orbits_of_vertices": [
+          {
+            "counts": [
+              19,
+              12,
+              9,
+              0
+            ],
+            "orbit_size": 360
+          },
+          {
+            "counts": [
+              30,
+              0,
+              0,
+              10
+            ],
+            "orbit_size": 36
+          },
+          {
+            "counts": [
+              18,
+              14,
+              8,
+              0
+            ],
+            "orbit_size": 1080
+          },
+          {
+            "counts": [
+              15,
+              20,
+              5,
+              0
+            ],
+            "orbit_size": 432
+          }
+        ]
+      }
+    ]
+  }
+}
