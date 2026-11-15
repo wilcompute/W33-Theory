@@ -104,7 +104,8 @@ def eigen_minima(W):
 t0 = time.time(); tor = torus_elements(); print(f"q = {q}: {len(tor)} torus classes", flush=True)
 out = dict(q=q, runs=[]); overall = 1e9
 pairs = [(g, h) for g in tor for h in tor]; rng.shuffle(pairs)
-if "equal" in sys.argv: pairs = [(g, g) for g in tor] + [(g, h) for g, h in pairs if g != h and (g[0][0] ^ g[1][1]) == (h[0][0] ^ h[1][1])]
+if "unequal" in sys.argv: pairs = [(g, h) for g, h in pairs if (g[0][0] ^ g[1][1]) != (h[0][0] ^ h[1][1])]
+elif "equal" in sys.argv: pairs = [(g, g) for g in tor] + [(g, h) for g, h in pairs if g != h and (g[0][0] ^ g[1][1]) == (h[0][0] ^ h[1][1])]
 for g, h in pairs[:NPAIRS]:
     W0 = clifford(g, h)
     for cidx in range(NCORR):
@@ -116,5 +117,5 @@ for g, h in pairs[:NPAIRS]:
         out["runs"].append(dict(g=g, h=h, correction=cidx, dims=dims, best=best, values=sorted(round(v, 8) for _, v in mins)))
         print(f"trace(g)={g[0][0] ^ g[1][1]} trace(h)={h[0][0] ^ h[1][1]} corr {cidx}: {len(mins)} eigenspaces, dims {min(dims)}-{max(dims)}, "
               f"best {best:.10f}   ({time.time() - t0:.0f}s)", flush=True)
-        json.dump(dict(out, overall_best=overall), open(os.path.join(ROOT, "data", f"w33_regulus_torus_clifford_q{q}.json"), "w"), indent=1)
+        json.dump(dict(out, overall_best=overall), open(os.path.join(ROOT, "data", f"w33_regulus_torus_clifford_q{q}" + ("_unequal" if "unequal" in sys.argv else "") + ".json"), "w"), indent=1)
 print("overall best", overall, flush=True)

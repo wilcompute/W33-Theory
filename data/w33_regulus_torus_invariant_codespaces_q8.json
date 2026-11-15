@@ -1,0 +1,17 @@
+{
+ "q": 8,
+ "order_S": 9,
+ "ker_dims": {
+  "1": 6,
+  "3": 6,
+  "9": 12
+ },
+ "n_invariant_codespaces": 997,
+ "n_spaces_tested": 60,
+ "best": 2.498508646688073,
+ "value_histogram": {
+  "2.498509": 104,
+  "3.0": 304,
+  "7.0": 72
+ }
+}

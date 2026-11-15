@@ -1,0 +1,65 @@
+# Pass 12673: exact torus eigenvalue formula; certified code-space lower bound 2.49; torus code spaces at q = 32; a global symmetry-reduced degree-6 SOS
+
+Claude track. Follows Pass 12672. **Not a theory of everything.**
+
+## 1. Exact: the torus eigenvalue formula (`w33_f8_torus_eigen_exact.py`)
+
+On the code space, c(ρ) = Σ_t Σ_{a∈L_t∖0} tr(ρE_a)² depends only on the nine effective Lagrangians as point sets. It is evaluated in a standard three-qubit Pauli model reached by a symplectic basis change; signs are irrelevant for squares.
+
+The lift of σ is built exactly over Q(ζ₇₂), normalised so that U⁹ = I, and the eigenprojectors are P_j = (1/9)Σ_k ζ₉^{−jk} Uᵏ. **In exact arithmetic**, for every lift checked (16 in a first run, 3 in the recorded run):
+- one projector is zero (index j₀) and the other eight have rank one;
+- with r = j − j₀, **c(P_j) = (47 − 16(ζ₉^{2r} + ζ₉^{−2r}))/9 = (47 − 32cos(4πr/9))/9** for r = ±1, ±2, ±4, and **37/3** for r = ±3.
+
+**All 64 lifts follow.** H_d V H_d† ∝ V·H_{(σ⁻¹+1)d}, and σ⁻¹ + 1 is invertible over F₂ because σ has no fixed points (checked). So every lift V·H_c is Pauli-conjugate to V. Pauli conjugation preserves c and shifts the spectrum by a common phase, which leaves r unchanged.
+
+> **Theorem (exact).** The 512 eigenstates of the Clifford lifts of the order-9 torus on the code space carry exactly the values (47 − 32cos(4πr/9))/9 (r = ±1, ±2, ±4) and 37/3 (r = ±3). The minimum c₈ is r = ±4.
+
+This upgrades Pass 12672 §1b from numerical (2.3×10⁻¹⁴) to exact.
+
+## 2. Certified: 64F ≥ 2.49 on the code space (`w33_f8_codespace_sos6_certify.py`)
+
+Basis: the 8 projector columns B₀, with entries in {0, ±1/8, ±i/8}, so every coefficient is a Gaussian rational. Certificate:
+
+  (tᴴGt)·(64Σ|w_j·t|⁴ − (9 + C)(tᴴGt)²) = m₃ᴴX₃m₃ + m₁ᴴX₁m₁,
+
+with charge blocks of size 120 and 288.
+
+Method:
+1. SCS solves at fixed C, maximising the minimum Gram eigenvalue.
+2. Round to denominator 2⁴⁰.
+3. Exact orthogonal projection onto the 14,400 coefficient constraints. Each Gram entry feeds one coefficient, so the projection is closed-form and preserves Hermiticity.
+4. Exact PSD proof on the real embedding: Y − δI = LLᵀ + E with a dyadic L and an integer-exact residual E, where ‖E‖_F < δ.
+
+| C | SCS margin | ‖E‖²_F/δ² (blocks 3, 1) | certified |
+|---|---|---|---|
+| 49/20 = 2.45 | 1.09×10⁻⁴ | 3×10⁻²³, 8×10⁻²⁰ | yes |
+| 62/25 = 2.48 | 3.89×10⁻⁵ | 1×10⁻²², 1×10⁻¹⁸ | yes |
+| **249/100 = 2.49** | 1.56×10⁻⁵ | 2×10⁻²², 7×10⁻¹⁸ | **yes** |
+
+> **Theorem (exact certificate).** On the 8-dimensional code space of T, 64F ≥ 249/100. With the Pass 12671 witness, the code-space minimum lies in [2.49, (47 − 32cos 2π/9)/9 = 2.498508…].
+
+This is not a global bound. The degree-6 value at this level is 2.4967 (Pass 12672), so degree 6 can never reach c₈ here.
+
+## 3. Torus code spaces at q = 32 (`w33_regulus_torus_invariant_codespaces.py`, `w33_regulus_torus_clifford_eigenspaces.py`)
+
+**Structure at q = 8.** S = (g, g) with g of order 9 has order 9 on F₂¹². Its fixed space is 6-dimensional, and all 63 of its non-zero vectors are uncovered (det acts there like the norm of F₆₄). The complement is the Φ₉ block. T lies in the fixed space. Searching isotropic uncovered 3-subspaces of the fixed space reproduces c₈ (120 of 480 code-space/sign choices; the others give 3 or 7).
+
+**q = 32.** The search over isotropic uncovered 5-subspaces of S's fixed space is running (addendum).
+
+**Unequal-trace torus pairs at q = 32.** First pair (traces 20, 28): best 15.044, above 11. The remaining pairs are running.
+
+## 4. A global degree-6 SOS by symmetry reduction (`w33_f8_global_sos6.py`)
+
+The problem is f_c = |ψ|²(Σ_{P∈Ccov}|⟨ψ|P|ψ⟩|² − c|ψ|⁴) over all of C⁶⁴. Two symmetries reduce it:
+- **Heisenberg group.** Monomials split by Z-character, and X-shifts relate the character blocks. One block of each charge suffices: B₁ = {ψ_xψ_y ψ̄_{x⊕y}} (2,080) and B₃ = {ψ_xψ_yψ_{x⊕y}} (715).
+- **Singer cycle Z₆₃ ⊂ GL(2,8).** It preserves F by index permutations. The block monomials form 34 + 13 orbits, the Fourier blocks have size at most 34 complex (68 real), and there are 8,131 coefficient classes under shifts ⋊ Z₆₃.
+
+The full problem is an SDP with 156,406 variables. Clarabel ran out of memory, and the SCS solve is running (addendum).
+
+**Ceiling.** Any global degree-6 certificate restricts to one on the code space, so the global degree-6 bound is at most 2.4967 < c₈. Proving c₈ needs degree 8 or more (or more copies). The other track's two-copy PPT counter-certificate (056c4fc9f) shows the symmetric two-copy relaxation gives at most 0.
+
+## Prior art and ownership
+
+- The code space, torus mechanism and witness are Passes 12671–12672 (Claude track).
+- The exact rational witness and the two-copy PPT obstruction are the other track's (3c373c924, 056c4fc9f). The PPT-dual bound 2.0818 is common code.
+- The certification method follows Pass 12660's validated type-B bound, here with an exact LDLᵀ residual instead of diagonal dominance.

@@ -1,0 +1,36 @@
+{
+ "n_lifts_exact": 3,
+ "all_exact": true,
+ "sigma_fixed_points": 0,
+ "all_64_by_pauli_conjugacy": true,
+ "earlier_run_lifts_0_15_exact": true,
+ "symplectic_basis": {
+  "E": [
+   1,
+   2,
+   6
+  ],
+  "F": [
+   8,
+   17,
+   49
+  ]
+ },
+ "lifts": [
+  {
+   "correction": 0,
+   "absent": 5,
+   "formula_holds": true
+  },
+  {
+   "correction": 1,
+   "absent": 7,
+   "formula_holds": true
+  },
+  {
+   "correction": 2,
+   "absent": 5,
+   "formula_holds": true
+  }
+ ]
+}

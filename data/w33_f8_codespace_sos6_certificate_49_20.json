@@ -1,0 +1,23 @@
+{
+ "C_cert": "49/20",
+ "scs_margin": 0.00010891835149567143,
+ "gram": [
+  120,
+  288
+ ],
+ "keys": 14400,
+ "round_bits": 40,
+ "block3": {
+  "lam_min_float": 0.0001089182274493202,
+  "delta": "28539614/1048111584933",
+  "frob_E_sq_over_delta_sq": 3.2306772867500616e-23,
+  "psd_certified": true
+ },
+ "block1": {
+  "lam_min_float": 0.00010891814279168953,
+  "delta": "7874167/289177424373",
+  "frob_E_sq_over_delta_sq": 7.892131258648734e-20,
+  "psd_certified": true
+ },
+ "certified": true
+}
