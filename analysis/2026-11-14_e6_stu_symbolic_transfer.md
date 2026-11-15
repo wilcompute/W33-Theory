@@ -13,3 +13,19 @@ For the dimension of that span, identify the balanced normal representation with
 The attenuation depends only on the log charge ratio: the singular value is sech of half that log ratio. Every nonzero gain is at most one, and a mode in a pair with a large hierarchy approaches zero response while remaining nonzero at finite positive charges. The formula determines the full linear response spectrum of this local family. It does not address uniqueness of all static solutions or the singular zero-charge limit of the boundary-value problem.
 
 Replay with py -3 analysis/toe_20261114_e6_stu_symbolic_transfer.py.
+
+## Finite-radius response and the two-charge crossover
+
+Use the same exact family of stabilizer-generated solutions and fix the seed radial coordinate r while varying its boundary scalars. Write tau=1/r^2, H_a=1+a tau, H_b=1+b tau, and let the local tangent norm be the invariant trace metric, with right translation back to the scalar origin. On each of the four two-generator blocks for an unequal pair a,b, the two squared singular values of boundary-to-radius transfer are
+
+    G_plus  = (a+b+2ab tau)^2 / [(a+b)^2 H_a H_b]
+    G_minus = 1 / (H_a H_b).
+
+These are the roots of the symbolically verified generalized Gram determinant. The radial conjugation is by the scalar exponential along the harmonic STU solution, rather than by its terminal value. The local dressed ratio is (a/b) H_b/H_a. Substituting it into the two Gram roots gives the expressions above. The sixteen unit modes remain isometries at every radius. For repeated charges the stabilizer block is one-dimensional and its gain remains one. The finite-radius formulas concern the stabilizer-generated directions. The asymptotic harmonic constant variations were needed to fill the remaining directions, and their full finite-radius spectrum is a separate question.
+
+At spatial infinity both gains equal one. At the horizon the plus gain becomes 4ab/(a+b)^2 and the minus gain vanishes. For a positive spectator charge a and a small charge b, both gains instead tend to 1/(1+a tau) at any fixed finite tau. Thus the singular two-charge background has a shared leading profile for these branches outside the scale r^2 of order b. The unscaled iterated limits at the horizon both give zero for a pair involving b, but the asymptotics are nonuniform. This is visible by holding z=b tau>0 fixed and dividing the squared gains by b:
+
+    G_plus/b  -> (1+2z)^2 / [a z(1+z)]
+    G_minus/b -> 1 / [a z(1+z)].
+
+For a second positive spectator c the square of the sphere area divided by (2 pi^2)^2 is H_a H_b H_c / tau^3. In the same scaling its ratio to b tends to ac(1+z)/z. The large-z values recover the regular horizon scales, while small z recovers the two-charge behavior. The verifier checks these limits symbolically. They describe a crossover in the two-derivative family and give no extension of the singular surface to a finite-area horizon at b=0. [Harmonic STU radial solution](2026-11-14_e6_stu_radial.md)

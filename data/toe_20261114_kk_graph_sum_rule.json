@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "graph_controls": [
+    {
+      "graph": "4x4 toroidal knight",
+      "sites": 16,
+      "edges": 32,
+      "mass": "8",
+      "normalized_defect": "1"
+    },
+    {
+      "graph": "W(3,3) point graph",
+      "sites": 40,
+      "edges": 240,
+      "mass": "16",
+      "normalized_defect": "4/7"
+    }
+  ],
+  "smooth_sphere": {
+    "mass_r_squared": 2,
+    "quartic": "9/5",
+    "exchange_r_squared": "24/5",
+    "defect": 0
+  },
+  "cycle_relative_defect": "sin(pi/N)^2 for the first real Fourier mode, N>=5"
+}

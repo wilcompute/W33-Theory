@@ -12,5 +12,10 @@
     "4*u**4*v**2/(u**4*v**2 + 1)**2",
     "4*u**2*v**4/(u**2*v**4 + 1)**2"
   ],
-  "total_scalar_kernel": 14
+  "total_scalar_kernel": 14,
+  "finite_radius_blocks_verified": true,
+  "double_scaling_squared_gains_over_small_charge": [
+    "(1+2*z)^2/(a*z*(1+z))",
+    "1/(a*z*(1+z))"
+  ]
 }
