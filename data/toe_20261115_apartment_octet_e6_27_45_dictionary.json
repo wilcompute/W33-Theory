@@ -1,0 +1,565 @@
+{
+  "27_line_45_tritangent_incidence_degree": [
+    5,
+    3
+  ],
+  "27_partitions_of_W33_40_points_into_five_disjoint_K44": true,
+  "45_SRG_identity": "C^2=9 I+3 J",
+  "45_component_supports_in_our_point_indices": [
+    [
+      0,
+      1,
+      4,
+      5,
+      6,
+      13,
+      16,
+      19
+    ],
+    [
+      0,
+      1,
+      7,
+      8,
+      9,
+      14,
+      17,
+      20
+    ],
+    [
+      0,
+      1,
+      10,
+      11,
+      12,
+      15,
+      18,
+      21
+    ],
+    [
+      0,
+      2,
+      13,
+      17,
+      21,
+      31,
+      32,
+      33
+    ],
+    [
+      0,
+      2,
+      14,
+      18,
+      19,
+      37,
+      38,
+      39
+    ],
+    [
+      0,
+      2,
+      15,
+      16,
+      20,
+      34,
+      35,
+      36
+    ],
+    [
+      0,
+      3,
+      13,
+      18,
+      20,
+      22,
+      23,
+      24
+    ],
+    [
+      0,
+      3,
+      14,
+      16,
+      21,
+      25,
+      26,
+      27
+    ],
+    [
+      0,
+      3,
+      15,
+      17,
+      19,
+      28,
+      29,
+      30
+    ],
+    [
+      1,
+      2,
+      4,
+      8,
+      12,
+      31,
+      34,
+      37
+    ],
+    [
+      1,
+      2,
+      5,
+      9,
+      10,
+      33,
+      36,
+      39
+    ],
+    [
+      1,
+      2,
+      6,
+      7,
+      11,
+      32,
+      35,
+      38
+    ],
+    [
+      1,
+      3,
+      4,
+      9,
+      11,
+      22,
+      25,
+      28
+    ],
+    [
+      1,
+      3,
+      5,
+      7,
+      12,
+      23,
+      26,
+      29
+    ],
+    [
+      1,
+      3,
+      6,
+      8,
+      10,
+      24,
+      27,
+      30
+    ],
+    [
+      2,
+      3,
+      22,
+      26,
+      30,
+      31,
+      36,
+      38
+    ],
+    [
+      2,
+      3,
+      23,
+      27,
+      28,
+      33,
+      35,
+      37
+    ],
+    [
+      2,
+      3,
+      24,
+      25,
+      29,
+      32,
+      34,
+      39
+    ],
+    [
+      4,
+      7,
+      13,
+      14,
+      23,
+      25,
+      32,
+      37
+    ],
+    [
+      4,
+      7,
+      16,
+      17,
+      26,
+      28,
+      31,
+      35
+    ],
+    [
+      4,
+      7,
+      19,
+      20,
+      22,
+      29,
+      34,
+      38
+    ],
+    [
+      4,
+      10,
+      13,
+      15,
+      24,
+      28,
+      33,
+      34
+    ],
+    [
+      4,
+      10,
+      16,
+      18,
+      22,
+      27,
+      36,
+      37
+    ],
+    [
+      4,
+      10,
+      19,
+      21,
+      25,
+      30,
+      31,
+      39
+    ],
+    [
+      5,
+      8,
+      13,
+      14,
+      24,
+      26,
+      31,
+      39
+    ],
+    [
+      5,
+      8,
+      16,
+      17,
+      27,
+      29,
+      33,
+      34
+    ],
+    [
+      5,
+      8,
+      19,
+      20,
+      23,
+      30,
+      36,
+      37
+    ],
+    [
+      5,
+      11,
+      13,
+      15,
+      22,
+      29,
+      32,
+      36
+    ],
+    [
+      5,
+      11,
+      16,
+      18,
+      23,
+      25,
+      35,
+      39
+    ],
+    [
+      5,
+      11,
+      19,
+      21,
+      26,
+      28,
+      33,
+      38
+    ],
+    [
+      6,
+      9,
+      13,
+      14,
+      22,
+      27,
+      33,
+      38
+    ],
+    [
+      6,
+      9,
+      16,
+      17,
+      25,
+      30,
+      32,
+      36
+    ],
+    [
+      6,
+      9,
+      19,
+      20,
+      24,
+      28,
+      35,
+      39
+    ],
+    [
+      6,
+      12,
+      13,
+      15,
+      23,
+      30,
+      31,
+      35
+    ],
+    [
+      6,
+      12,
+      16,
+      18,
+      24,
+      26,
+      34,
+      38
+    ],
+    [
+      6,
+      12,
+      19,
+      21,
+      27,
+      29,
+      32,
+      37
+    ],
+    [
+      7,
+      10,
+      14,
+      15,
+      27,
+      29,
+      35,
+      39
+    ],
+    [
+      7,
+      10,
+      17,
+      18,
+      23,
+      30,
+      33,
+      38
+    ],
+    [
+      7,
+      10,
+      20,
+      21,
+      24,
+      26,
+      32,
+      36
+    ],
+    [
+      8,
+      11,
+      14,
+      15,
+      25,
+      30,
+      34,
+      38
+    ],
+    [
+      8,
+      11,
+      17,
+      18,
+      24,
+      28,
+      32,
+      37
+    ],
+    [
+      8,
+      11,
+      20,
+      21,
+      22,
+      27,
+      31,
+      35
+    ],
+    [
+      9,
+      12,
+      14,
+      15,
+      26,
+      28,
+      36,
+      37
+    ],
+    [
+      9,
+      12,
+      17,
+      18,
+      22,
+      29,
+      31,
+      39
+    ],
+    [
+      9,
+      12,
+      20,
+      21,
+      23,
+      25,
+      33,
+      34
+    ]
+  ],
+  "45_disjoint_support_SRG": [
+    45,
+    12,
+    3,
+    3
+  ],
+  "45_pair_octet_support_intersections": {
+    "0": 270,
+    "2": 720
+  },
+  "45_representation_decomposition": "1 + 24 (W33 point-incidence visible) + 20 (E6 line-incidence visible)",
+  "all_40_point_conditioned_40x27_transfer_matrices_rank": 9,
+  "all_45_explicit_blowup_triads_match": true,
+  "all_order_disjoint_octet_walk_obstruction": "P C^m T = 12^m J for every integer m >= 0",
+  "bilinear_map": "Phi(x,y)_l = sum_{p,q} Q[p,q,l] x[p] y[q]",
+  "centered_rank_P": 24,
+  "centered_rank_T": 20,
+  "centered_transfer_exactly_zero": true,
+  "component_graph": "J(4,2) Cartesian-product J(4,2)",
+  "component_graph_spectrum": {
+    "-2": 12,
+    "-4": 4,
+    "0": 9,
+    "2": 4,
+    "4": 6,
+    "8": 1
+  },
+  "component_graph_triangle_count": 96,
+  "component_isomorphism_verified_all_45": true,
+  "component_support_points": 8,
+  "component_to_prior_BT1536_octets_exact_set_equality": true,
+  "components": 45,
+  "cubic_27_intersection_graph_isomorphism": {
+    "0": "a0",
+    "1": "b1",
+    "2": "c01",
+    "3": "c02",
+    "4": "a2",
+    "5": "b0",
+    "6": "b2",
+    "7": "c12",
+    "8": "a1",
+    "9": "b5",
+    "10": "a3",
+    "11": "c35",
+    "12": "a4",
+    "13": "c34",
+    "14": "b3",
+    "15": "c45",
+    "16": "b4",
+    "17": "a5",
+    "18": "c05",
+    "19": "c13",
+    "20": "c24",
+    "21": "c23",
+    "22": "c04",
+    "23": "c15",
+    "24": "c14",
+    "25": "c25",
+    "26": "c03"
+  },
+  "cubic_27_line_graph_SRG": [
+    27,
+    10,
+    1,
+    5
+  ],
+  "each_E6_line_40x40_pair_matrix_identity": "Q_l^2=8 Q_l and rank(Q_l)=5 (five K4,4 equivalence classes)",
+  "each_W33_point_induces_nine_disjoint_E6_tritangent_triples": true,
+  "equivariant_symplectic_transvection_witnesses": 7,
+  "frame_count_per_component": 36,
+  "limitation": "Pure finite symplectic and cubic-surface graph geometry; no physical E6 gauge interaction, no new proof that 45 components or 45 octets exist, and no native frame-selection mechanism.",
+  "n_frames": 1620,
+  "naive_linear_observer_to_matter_obstruction": "Centered W33 point-octet incidence composed with centered E6 octet-line incidence is identically zero; nontrivial LINEAR 40-to-27 transfer needs phase/orientation, an operator insertion, or a different correspondence. The constructed native symmetric bilinear point-pair transfer bypasses this linear obstruction.",
+  "point_octet_times_octet_line_incidence": "P_40x45 @ T_45x27 = J_40x27",
+  "prior_art": "BT766 and Pass1536 already construct 45 K4,4 octets; TOE23 45x36 hopping components; TOE24 45 component-to-E6 tritangent bijection via dual XOR supports; this code provides a direct point-side octet equality and independently reconstructs cubic E6 27 lines from 45 disjoint-octet K5 cliques",
+  "quadratic_bridge_scope": "All checks are finite exact combinatorial incidence or explicit GF(3) transvection covariance; a symmetric bilinear map is not a physical matter coupling, energy scale, gauge generator, or Lorentzian dynamics.",
+  "rank_P": 25,
+  "rank_T": 21,
+  "status": "PASS_EXACT_COMPONENT_OCTET_SCHLAFLI_DICTIONARY",
+  "symplectic_coordinate_conversion": "(a,b,c,d)->(a,c,b,d)",
+  "tritangent_graph_on_lines_identity": "C_45x45 @ T_45x27 = 3T + J",
+  "tritangent_types": {
+    "a_i_b_j_c_ij": 30,
+    "three_pair_partition": 15
+  },
+  "two_point_conditional_E6_multiplicities": {
+    "adjacent_W33_points": 9,
+    "nonadjacent_W33_points": 3,
+    "same_W33_point": 27
+  },
+  "two_point_conditioned_W33_to_E6_tensor_shape": [
+    40,
+    40,
+    27
+  ],
+  "walk_order_range_independently_integer_tested": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}
