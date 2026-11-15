@@ -30,7 +30,11 @@ for kap, lst in var_rows.items():
         rows.append(rr); cols_.append(col(v, 0)); vals.append(w)
         rows.append(NK + rr); cols_.append(col(v, 1)); vals.append(-w if cj else w)
 Aeq = sps.csr_matrix((vals, (rows, cols_)), shape=(2 * NK, NV)); beq = np.concatenate([[float(x) for x in rhs], np.zeros(NK)])
-def sidx(i, j_, n_):
+SOLVER = os.environ.get("SOLVER", "scs")
+def sidx(i, j_, n_):   # SCS: lower triangle column-major; Clarabel: upper triangle column-major (both scale off-diagonals by sqrt2)
+    if SOLVER == "clarabel":
+        if i > j_: i, j_ = j_, i
+        return j_ * (j_ + 1) // 2 + i, (1.0 if i == j_ else 1 / math.sqrt(2))
     if i < j_: i, j_ = j_, i
     return j_ * n_ - j_ * (j_ - 1) // 2 + (i - j_), (1.0 if i == j_ else 1 / math.sqrt(2))
 offs = []; o = 0
@@ -55,13 +59,21 @@ for ci, L in enumerate(cones):                       # + s on diagonal entries: 
         k_, _ = sidx(d_, d_, 2 * L); prow.append(offs[ci] + k_); pcol.append(0); pval.append(1.0)
 Apsd = sps.csr_matrix((pval, (prow, pcol)), shape=(o, NV))
 A = sps.vstack([Aeq, Apsd]).tocsc(); bb = np.concatenate([beq, np.zeros(o)]); qv = np.zeros(NV); qv[0] = -1.0
-import scs
 t0 = time.time()
-sol = scs.SCS(dict(A=A, b=bb, c=qv), dict(z=2 * NK, s=[2 * L for L in cones]), eps_abs=1e-10, eps_rel=1e-10, max_iters=400000, verbose=False).solve()
-s_val = float(sol["x"][0]); x = sol["x"]
+if SOLVER == "clarabel":
+    import clarabel
+    st = clarabel.DefaultSettings(); st.verbose = False; st.max_iter = 500
+    st.tol_gap_abs = st.tol_gap_rel = st.tol_feas = st.tol_ktratio = 1e-14
+    cl = [clarabel.ZeroConeT(2 * NK)] + [clarabel.PSDTriangleConeT(2 * L) for L in cones]
+    so = clarabel.DefaultSolver(sps.csc_matrix((NV, NV)), qv, A, bb, cl, st).solve()
+    x = np.array(so.x); s_val = float(x[0]); sol = {"info": {"status": str(so.status)}}
+else:
+    import scs
+    sol = scs.SCS(dict(A=A, b=bb, c=qv), dict(z=2 * NK, s=[2 * L for L in cones]), eps_abs=1e-10, eps_rel=1e-10, max_iters=400000, verbose=False).solve()
+    s_val = float(sol["x"][0]); x = sol["x"]
 log(f"SCS at C = {CC}: status {sol['info']['status']}, margin s = {s_val:.3e} ({time.time() - t0:.0f}s)")
 # ---- rounding and exact projection
-R = 1 << 40
+R = 1 << int(os.environ.get("RBITS", "40"))
 gam = [[Fr(int(round(x[col(v, 0)] * R)), R), Fr(int(round(x[col(v, 1)] * R)), R)] for v in range(nV)]
 # group rows: each class with its conjugate; collect variable incidences
 conjc = lambda mu: (mu[1], mu[0])
@@ -113,7 +125,7 @@ for ci, Y in enumerate(blocks):
     lam = np.linalg.eigvalsh(Yf)[0]
     if lam <= 0: all_ok = False; log(f"block {ci}: float lambda_min {lam:.3e} <= 0"); break
     delta = Fr(lam / 4).limit_denominator(1 << 50)
-    Cf = np.linalg.cholesky(Yf - float(delta) * np.eye(n2)); SC = 1 << 40
+    Cf = np.linalg.cholesky(Yf - float(delta) * np.eye(n2)); SC = 1 << int(os.environ.get("SCBITS", "40"))
     Li = [[int(round(Cf[a, b] * SC)) for b in range(n2)] for a in range(n2)]
     E2 = Fr(0)
     for a in range(n2):

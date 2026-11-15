@@ -1,0 +1,99 @@
+{
+ "phi9": true,
+ "fixed_points": 0,
+ "orbit_sizes": [
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9
+ ],
+ "cycle": [
+  0,
+  4,
+  3,
+  7,
+  2,
+  8,
+  1,
+  5,
+  6
+ ],
+ "invariant_forms": [
+  {
+   "a": 1,
+   "b": 7,
+   "type": "elliptic",
+   "singular": 27,
+   "singular_by_weight": {
+    "0": {
+     "1": 18,
+     "0": 9
+    },
+    "1": {
+     "1": 9,
+     "0": 9
+    },
+    "2": {
+     "0": 9
+    },
+    "3": {
+     "1": 9
+    }
+   },
+   "singular_points_per_Lagrangian": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+   ]
+  }
+ ],
+ "weight_classes": {
+  "0": 27,
+  "1": 18,
+  "2": 9,
+  "3": 9
+ },
+ "tritangent_per_basis": [
+  true,
+  true,
+  true,
+  true,
+  true,
+  true,
+  true,
+  true,
+  true
+ ],
+ "weight_equals_incidence": true,
+ "zero_sum_singular_triples": 45,
+ "tritangent_orbit_sizes": [
+  3,
+  3,
+  3,
+  9,
+  9,
+  9,
+  9
+ ],
+ "bases_form_one_orbit": true,
+ "line_orbit_weights": [
+  [
+   0
+  ],
+  [
+   2
+  ],
+  [
+   1
+  ]
+ ]
+}
