@@ -1,0 +1,47 @@
+{
+  "B_B_transpose_exact": "10 I27",
+  "M_M_transpose_adjacent": 24,
+  "M_M_transpose_diagonal": 1440,
+  "M_M_transpose_eigenvalues": {
+    "schlafli_20": 1344,
+    "schlafli_dark_6": 1560,
+    "uniform_1": 2640
+  },
+  "M_M_transpose_nonadjacent": 60,
+  "UUT_constant_row_sum": 264,
+  "UUT_diagonal": 144,
+  "UUT_lambda_max_exact": 264,
+  "UUT_offdiagonal_nonzero_entry_hist": {
+    "2": 8100
+  },
+  "UUT_offdiagonal_pairs_with_positive_overlap": 8100,
+  "composition": "K2 K1 = (BU)/sqrt(2640) exactly the normalized one-step K",
+  "final_cubic_line_modes": 27,
+  "first_stage_binary_U_shape": [
+    270,
+    22680
+  ],
+  "first_stage_column_decomposition_hist": {
+    "1": 6480,
+    "2": 16200
+  },
+  "first_stage_success": "K1 = U/sqrt(264) acts on Sym4(C40) to C270; contractive",
+  "four_distinct_point_inputs": 22680,
+  "graph_edge_triple_support_count": 240,
+  "mediator_overlap_graph": "270 vertices, 60-regular, 8100 edges, each collision pair realized by precisely 2 distinct quartet inputs; each 10-element cubic-line fiber independent",
+  "no_extra_postselection_penalty_due_to_two_stages": true,
+  "nonedge_pair_unique_support_count": 540,
+  "norm_one_singular_resource_fourphoton_amplitudes": "For every quartet S with decomposition m(S)=1 or 2: amplitude m(S)/sqrt(71280); all repeated-occupation basis amplitudes zero",
+  "octet_pair_mediator_modes": 270,
+  "perfect_entangled_fourphoton_input_output": "uniform |+27>=(1/sqrt(27))*sum_{ell=1}^{27}|ell>",
+  "perfect_entangled_fourphoton_input_yields_success_probability": 1,
+  "perfect_source_nonnormalization_trap": "The source is explicitly normalized because 6480*1^2+16200*2^2=71280; it is not any |psi>^tensor4 because all repeated-occupation Fock amplitudes vanish.",
+  "perfect_source_not_a_fourfold_tensor_power": true,
+  "physical_compilation_stage1": "Sparse four-photon occupation -> 270-ancilla-mode contraction; requires genuinely multiphoton entangling measurement or quantum simulation; no passive linear optics circuit supplied.",
+  "physical_compilation_stage2": "27 disjoint groups of 10 single-register modes, a ten-port coherent Fourier combiner per group; retain uniform port, discard orthogonal outputs.",
+  "scope": "Exact incidence and operator-norm theorem. Stage2 optical passive interferometer on a virtual 270-mode single-excitation register is plausible; creating that register from four photon copies in stage1 remains uncompiled.",
+  "second_stage_line_mediators_each": 10,
+  "second_stage_success": "K2 = B/sqrt(10) acts on C270 to C27; coisometry",
+  "status": "EXACT_OPTIMAL_TWO_STAGE_W33_E6_270_MEDIATOR_KRAUS_FACTORIZATION",
+  "upstream": "data/toe_20261115_apartment_octet_e6_27_45_dictionary.json"
+}

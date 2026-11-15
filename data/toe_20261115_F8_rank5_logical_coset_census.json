@@ -1,0 +1,25 @@
+{
+  "status": "FINITE_FIELD_UNCOVERED_RANK5_LOGICAL_COSET_CENSUS",
+  "trials_requested": 200,
+  "rank5_codes_found": 148,
+  "logical_count_types": {
+    "3-3-3": 148
+  },
+  "examples": {
+    "3-3-3": {
+      "basis": [
+        992,
+        169,
+        1662,
+        1976,
+        2640
+      ],
+      "counts": [
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  "scope": "Independent finite-field randomized census; not an exhaustive classification nor a global pure-state bound."
+}

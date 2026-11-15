@@ -1,0 +1,26 @@
+{
+  "status": "TWO_EPOCH_WITNESS_CONTRAST_DRIFT_THEOREM_AND_NO_GO",
+  "model_free_unbounded_drift_impossibility": true,
+  "indistinguishable_endpoint_channels_with_middle_rail_error": 1.0,
+  "adversarial_smooth_single_column_drift": "C00(t)=cos\u00b2(pi t), C10(t)=sin\u00b2(pi t), other columns identity; both endpoints C=I but at mid e0->e1",
+  "drift_bump_max_abs_second_derivative": 19.739208802178716,
+  "curvature_assumption": "For each contrast mu_j(t)=w^T C(t)[:,j], |mu_j''(t)|<=M in normalized interval [0,1]. Must be independently justified.",
+  "confidence_level": 0.99,
+  "confidence_failure_budget": {
+    "64_endpoint_tail_events": 0.0025,
+    "2_parity_flip_rates": 0.0025,
+    "5_witness_settings": 0.005
+  },
+  "two_epoch_16rail_calibrations": 32,
+  "accepted_calibration_per_rail_per_epoch": 56500,
+  "accepted_calibration_across_32_rail_epochs": 1808000,
+  "accepted_parity_reference_each": 147556,
+  "total_accepted_two_epoch_calibrations": 2103112,
+  "illustrative_curvature_bound_M": 0.2,
+  "signal_time_t": 0.5,
+  "linear_interpolation_max_curvature_error_midpoint": 0.025,
+  "midpoint_worst_contrast_bias_given_zero_endpoint_empirical_deviation": 0.035,
+  "synthetic_fidelity_99pct_lower_with_illustrative_drift_bound": 0.9083843901866361,
+  "confidence_scope": "Union of simultaneous Hoeffding endpoint estimates, parity calibration and witness sampling plus deterministic interpolation remainder under the stated M. Not valid for nonstationary detectors without bounded curvature.",
+  "hardware_scope": "No experimental drift or hardware curvature was measured. The example M=.2 is assumed, not inferred. The negative control proves endpoint-only checks cannot imply any interior guarantee without regularity."
+}
