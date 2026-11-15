@@ -1,0 +1,27 @@
+# Fermions and a Type IIB circle bundle over the flux cubic
+
+Let \(S\) be a smooth cubic surface and \(C=c_1(S)\). The [D9 solution](2026-11-14_cubic_surface_flux.md) uses aligned magnetic flux with \([eF/(2\pi)]=qC\). The same integral class controls two different questions: the existence of charged fermions in D9 and the topology of a known Type IIB construction over \(S\). The results below distinguish the fields and fluxes in the two theories.
+
+## A global Spin\(^c\) condition and the exact probe index
+
+Since \(w_2(TS)=C\bmod 2\) and \(C\) pairs to one with a line, \(S\) and the D9 product over spin AdS are non-spin. If the Maxwell bundle is chosen to be the Spin\(^c\) determinant, its Chern class must reduce to \(w_2\). Thus this choice requires odd \(q\). The spinor couples to half the determinant connection, so in this convention its Maxwell charge is \(e/2\). Other global gauge group and charge assignments need a separate check. With \(C^2=3\) and \(\sigma(S)=-5\), the probe index is
+
+\[
+\operatorname{ind}D_q=\frac{3q^2+5}{8},\qquad q\text{ odd}.
+\]
+
+For the aligned Kähler connection this also counts the actual internal zero modes. The Spin\(^c\) complex is the Dolbeault complex twisted by \((-K_S)^{k}\), with \(k=(q-1)/2\). For \(q>0\), Kodaira vanishing eliminates degrees one and two, and the cubic hypersurface section sequence gives \(h^0=\binom{k+3}{3}-\binom{k}{3}=(3k^2+3k+2)/2\). For \(q<0\), Serre duality replaces degree zero by degree two and yields the same count at \(|q|\). All modes have positive internal chirality. A massless, minimally coupled D9 probe therefore has \(1,4,10,19,31,\ldots\) five-dimensional zero modes for \(|q|=1,3,5,7,9,\ldots\). This is an internal index and a five-dimensional spectrum. Four-dimensional chirality requires an additional construction. [Spin\(^c\) index and Dolbeault realization](https://archive.intlpress.com/site/pub/files/_fulltext/journals/sdg/2001/0006/0001/SDG-2001-0006-0001-a010.pdf)
+
+## The primitive circle bundle and its RR gauge fields
+
+Give the cubic its Kähler–Einstein metric with \(\mathrm{Ric}_S=6g_S\). Up to fiber orientation let \(\pi:Y\to S\) be the circle bundle with primitive Chern class \(C\). Let \(\eta\) be the unit Reeb one-form, \(d\eta=2\omega\). Since \([\omega]=2\pi C/6\), its fiber length is \(2\pi/3\). The metric \(g_Y=\pi^*g_S+\eta^2\) is regular Sasaki–Einstein with \(\mathrm{Ric}_Y=4g_Y\). The circle bundle with Chern class \(qC\) has fundamental group \(\mathbb Z_{|q|}\) and is spin precisely for odd \(q\), by the homotopy sequence and the mod-2 Gysin sequence. The primitive bundle is the supersymmetric case used below. [Regular links and global Killing spinors](https://arxiv.org/abs/1004.2461)
+
+Type IIB on \(\mathrm{AdS}_5\times Y\) is supported by self-dual five-form flux with \(n_5\) units through \(Y\). This uses extra fields and a circle compared with the D9 Maxwell action, and gives no matching relation for the D9 higher-derivative coefficients. In the unit-radius link normalization \(\operatorname{Vol}S=\pi^2/6\) and \(\operatorname{Vol}Y=\pi^3/9\), so the leading holographic central charges are \(a=c=9n_5^2/4\). The first homogeneous holomorphic cone functions are the four linear sections of \(-K_S\), with Reeb degree three and scalar link eigenvalue \(3(3+4)=21\). This is an explicit eigenvalue, with completeness of the low link spectrum still open. [Del Pezzo cones and D3 gauge theories](https://arxiv.org/abs/hep-th/0310262) · [Volume and cone spectrum](https://arxiv.org/abs/hep-th/0108020)
+
+The integral Gysin sequence identifies \(H^3(Y,\mathbb Z)\) by fiber integration with \(\ker[C\smile:H^2(S,\mathbb Z)\to H^4(S,\mathbb Z)]=E_6(-1)\). In the five-form background, the RR four-form supplies six Abelian gauge fields by reduction on harmonic representatives of these three-classes. For a primitive harmonic two-form \(\gamma\) on \(S\), the lift \(\xi=\eta\wedge\pi^*\gamma/(2\pi/3)\) is closed because \(\omega\wedge\gamma=0\), and co-closed because its Hodge dual is proportional to \(-\pi^*\gamma\). Fiber integration gives back \(\gamma\). The integrated pairing is \(\langle\xi_i,\xi_j\rangle=-(3/2\pi)\int_S\gamma_i\wedge\gamma_j\). Thus the six-dimensional gauge kinetic block is proportional to the positive \(E_6\) pairing, with the common RR normalization suppressed. [RR reduction and wrapped brane charges](https://arxiv.org/abs/0804.3999)
+
+## Twenty-seven wrapped lines in the dual lattice
+
+For a line \(\ell\subset S\), the lifted cycle \(\Sigma_\ell=\pi^{-1}(\ell)\) has \(\int_{\Sigma_\ell}\xi_i=\int_\ell\gamma_i\). The 27 projections \(\ell-C/3\) into the dual primitive lattice are the minuscule weight orbit, up to the choice of charge sign. In the simple-root basis these give 27 distinct charge vectors with squared norm \(4/3\) in the inverse Gram metric. The exact check enumerates them. The lift has volume \(2\pi^2/9\), since \(\ell\) has area \(\pi/3\). For a calibrated wrapped D3 brane the leading conformal dimension is \(\pi n_5\operatorname{Vol}(\Sigma_\ell)/(2\operatorname{Vol}Y)=n_5\), in agreement with the established del Pezzo dibaryon correspondence. This realizes the lattice through Abelian gauge fields and charged wrapped states. Enhanced non-Abelian vectors would require further dynamics. [Dibaryon spectroscopy through the cubic del Pezzo](https://arxiv.org/abs/hep-th/0305048)
+
+Replay the index, weight, and volume checks with `py -3 analysis/toe_20261114_cubic_iib_spin.py`.
