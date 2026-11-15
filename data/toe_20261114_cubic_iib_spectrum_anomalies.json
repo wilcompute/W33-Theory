@@ -1,0 +1,97 @@
+{
+  "charged_sector_minima_for_abs_circle_charge": {
+    "1": {
+      "mass_squared_times_ads_radius_squared": 21,
+      "complex_multiplicity_per_sign": 4,
+      "spin_two_conformal_dimension": 7
+    },
+    "2": {
+      "mass_squared_times_ads_radius_squared": 60,
+      "complex_multiplicity_per_sign": 10,
+      "spin_two_conformal_dimension": 10
+    },
+    "3": {
+      "mass_squared_times_ads_radius_squared": 117,
+      "complex_multiplicity_per_sign": 19,
+      "spin_two_conformal_dimension": 13
+    },
+    "4": {
+      "mass_squared_times_ads_radius_squared": 192,
+      "complex_multiplicity_per_sign": 31,
+      "spin_two_conformal_dimension": 16
+    },
+    "5": {
+      "mass_squared_times_ads_radius_squared": 285,
+      "complex_multiplicity_per_sign": 46,
+      "spin_two_conformal_dimension": 19
+    },
+    "6": {
+      "mass_squared_times_ads_radius_squared": 396,
+      "complex_multiplicity_per_sign": 64,
+      "spin_two_conformal_dimension": 22
+    },
+    "7": {
+      "mass_squared_times_ads_radius_squared": 525,
+      "complex_multiplicity_per_sign": 85,
+      "spin_two_conformal_dimension": 25
+    },
+    "8": {
+      "mass_squared_times_ads_radius_squared": 672,
+      "complex_multiplicity_per_sign": 109,
+      "spin_two_conformal_dimension": 28
+    }
+  },
+  "full_first_spin_two_mass_squared_interval_in_ads_units": "(12, 21]",
+  "leading_RRR_per_n5_squared": 8,
+  "leading_R_baryon_baryon_per_n5_squared": [
+    [
+      -4,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      -4,
+      2,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      2,
+      -4,
+      2,
+      0,
+      2
+    ],
+    [
+      0,
+      0,
+      2,
+      -4,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      2,
+      -4,
+      0
+    ],
+    [
+      0,
+      0,
+      2,
+      0,
+      0,
+      -4
+    ]
+  ],
+  "leading_RR_baryon_and_baryon_cubic": 0
+}
