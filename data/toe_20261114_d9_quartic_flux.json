@@ -1,0 +1,8 @@
+{
+  "units": "unperturbed inverse squared radii sum to one",
+  "vacuum_shape_shift_first_order": "4*delta*(49*alpha + beta*(147 - 50*delta**2))/(315 - 75*delta**2)",
+  "equal_degree_source_shape_derivative_first_order": "4*delta*n*(49*alpha - 50*beta*delta**2 + 147*beta)/(15*(5*delta**2 - 21))",
+  "exact_source_rescaling": "u=U-log(k)/2; (alpha,beta) -> k^2*(alpha,beta); k=1-J*n/2>0",
+  "first_order_unequal_radius_cancellation": "49*alpha + (147-50*delta^2)*beta = 0",
+  "control_delta_3_over_5_degree_one_alpha_only": "-49*alpha/60"
+}
