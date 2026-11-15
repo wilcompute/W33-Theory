@@ -1,0 +1,117 @@
+{
+  "date": "2026-11-15",
+  "n_fronts": 5,
+  "results": {
+    "D9_product_cubic_KK_zero_mode_comparison": {
+      "anisotropic_charge_limit_gap_tends_zero": true,
+      "comparison": {
+        "S2_times_S2": {
+          "b1": 0,
+          "b2": 2,
+          "continuous_isometry_generators": 6,
+          "independent_Maxwell_uniform_vector": 1,
+          "primitive_h11": 1,
+          "protected_5D_vector_count": 7
+        },
+        "smooth_cubic_surface": {
+          "b1": 0,
+          "b2": 7,
+          "continuous_isometry_generators": 0,
+          "independent_Maxwell_uniform_vector": 1,
+          "primitive_h11": 6,
+          "protected_5D_vector_count": 1
+        }
+      },
+      "first_product_spin2_gap_AdS_units": "40*min(1,t)/(1+t) <=20, t=r1^2/r2^2",
+      "protected_primitive_metric_modes_m2L2": 36,
+      "scope": "Prior-art synthesis and falsifier: six E6(-1) primitive harmonic forms on cubic give metric scalar kinetic couplings but NOT six massless E6 gauge vectors in bare D9 Einstein-Maxwell. Only protected zero-mode sectors; the full mixed KK scalar/vector spectrum remains open.",
+      "source_cubic": "analysis/2026-11-14_cubic_surface_flux.md",
+      "source_product": "analysis/toe_20261114_fivefronts_late_independent.py",
+      "status": "D9_PRODUCT_VS_NONPRODUCT_ZERO_MODE_TOPOLOGY_AND_KK_GAP",
+      "upper_bound_all_t": 20
+    },
+    "E6_quadratic_6_dark_modes": {
+      "45_octets_from": "analysis/w33_pass1536_frame_dual_k44_code.py (prior art)",
+      "Q_1600x27_rank": 21,
+      "Schlaefli_adjacency_eigenvalues": {
+        "-5": 6,
+        "1": 20,
+        "10": 1
+      },
+      "T_rank": 21,
+      "cubic_lines": 27,
+      "dark_E6_dimension": 6,
+      "dark_projector": "(A27-10I)(A27-I)/90",
+      "exact_dark_annihilator": "T@E=0 and Q contracted with E on E6 line index =0",
+      "pair_witnesses_for_all_45_octets": 45,
+      "projector_rank": 6,
+      "projector_trace_times_90": 540,
+      "quadratic_channel_image_dimension": 21,
+      "scope": "All octet-mediated scalar 45->27 incidence channels using T, including any point-multilinear map that factors through T, miss the six-dimensional -5 eigenspace. They can convey nonuniform 20-dimensional information but NOT full E6 27-line permutation information; richer non-factorized or non-scalar carriers are required.",
+      "status": "EXACT_SIX_DARK_E6_CHANNELS_FOR_ANY_45_OCTET_FACTORIZATION",
+      "tritangents": 45
+    },
+    "F8_global_vs_code_certificates": {
+      "PPT_integer_diagonal_dominance_margin": 9726167,
+      "certified_PPT_16_dim_common_code_lower_decimal": 2.08179999999993,
+      "certified_PPT_16_dim_common_code_lower_rational": "143060206669/68719476736",
+      "code_PPT_to_upper_gap": 0.4167086466881482,
+      "exact_witness_global_upper": 2.4985086466880784,
+      "global_SOS_coefficient_classes": 1416,
+      "global_degree6_SOS_control_all_4095_Paulis": 62.99999999999999,
+      "global_degree6_SOS_numerical_not_rationally_certified": 0.7603388326420645,
+      "global_numeric_SOS_to_upper_gap": 1.7381698140460138,
+      "important_correction": "The 2.0818 PPT dual lower bound is only for the common 16-dimensional code. The 0.760 global degree-six SOS is solver-numerical and not a rigorously rational-rounded global certificate. Hence neither bounds the full64 optimum tightly.",
+      "scope": "No new proof of F8 optimum. Existing PPT replay with integer arithmetic separately executed and passed; global SOS not rerun (reported 979 seconds).",
+      "status": "F8_CERTIFICATE_SCOPE_SEPARATION_AND_GAP"
+    },
+    "genus6_planar_dual_plane_model": {
+      "accepted_random_plane_sets": 86,
+      "attempts": 160,
+      "degrees_of_freedom_before_Euclidean_gauge": 36,
+      "dual_edges": 66,
+      "dual_face_lengths": [
+        11
+      ],
+      "dual_faces": 12,
+      "dual_vertex_geometric_formula": "V_ijk = solve( [(-a_i,-b_i,1),(-a_j,-b_j,1),(-a_k,-b_k,1)], [c_i,c_j,c_k])",
+      "dual_vertices": 44,
+      "face_boundary_orderings_verified": 12,
+      "generic_plane_coefficients_per_face": 3,
+      "nonvertical_affine_chart_exhaustive_for_generic_finite_plane_sets": true,
+      "primal_facets": 44,
+      "scope": "Constructive dimensional reduction of the *open geometric dual* search from 44 unconstrained 3D vertex locations to 12 plane equations; tests only per-face polygon self-crossings as a necessary condition, not global surface self-intersections or a no-go theorem. Failed random searches are not a proof of nonrealizability.",
+      "self_crossing_face_edge_pair_median": 68.0,
+      "self_crossing_face_edge_pair_min": 41,
+      "source": "analysis/w33_genus_six_execution.py FACETS_ONE",
+      "status": "PLANAR_DUAL_12_PLANE_44_TRIPLE_INTERSECTION_PARAMETERIZATION",
+      "zero_self_crossing_candidates": 0
+    },
+    "photonic_4class_pooled_calibration": {
+      "accepted_parity_calibration_each_flip_rate": 922220,
+      "accepted_total_calibration_shots": 6573041,
+      "calibration_sufficient_sample_reduction_factor": 23.321031467778766,
+      "class_probabilities": [
+        0.954375,
+        0.023375,
+        0.017375,
+        0.004875
+      ],
+      "confidence_bound": "32 exp(-N_C eps\u00b2/2)<=0.0025; 4 exp(-2 N_P eps\u00b2)<=0.0025; all 5 witness Hoeffding settings at alpha=.005; union >=.99",
+      "joint_99pct_corrected_witness_lower": 0.9285384001360665,
+      "joint_failure_budget": {
+        "circulant_calibration": 0.0025,
+        "five_witness_settings": 0.005,
+        "two_parity_flip_rates": 0.0025
+      },
+      "limitations": "Requires independently falsifiable translation-invariant four-class detector model. If modes differ or crosstalk drifts, pooling fails; counts are sufficient not necessary and represent accepted calibrations, not launch attempts or hardware data.",
+      "pooled_accepted_readout_calibration_shots": 4728601,
+      "previous_unstructured_accepted_readout_calibration_sufficient": 153290096,
+      "readout_assumption": "All 16 rail confusion columns are translates of SAME circulant mixture: self, next, previous, 13 uniform-other; stable IID noise and valid known rail preparations.",
+      "status": "STRUCTURED_FOUR_CATEGORY_16_RAIL_POOLED_CALIBRATION_AND_JOINT_99_CONFIDENCE",
+      "synthetic_Fhat_previous": 0.9659113823223175,
+      "uniform_16_column_l1_tolerance": 0.002
+    }
+  },
+  "status": "FIVE_INDEPENDENT_SCOPED_CONTROLS"
+}

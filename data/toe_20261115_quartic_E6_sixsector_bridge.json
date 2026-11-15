@@ -1,0 +1,26 @@
+{
+  "W33_point_quartet_inputs": 270,
+  "all_40_symplectic_transvections_covariant": true,
+  "disjoint_octet_pairs": 270,
+  "exact_reconstruction_identity": "R^T (R y)/10 = y for any y in R^27",
+  "four_distinct_points_each_selector": true,
+  "nonedge_pairs_one_per_octet": 45,
+  "prior_art": "BT766/Pass1536 gave 45 induced K4,4 octets; TOE24 and 2026-11-15 direct dictionary gave 45 octets ->27 five-clique partitions. New result: degree-four point signals multiply two rank-21 quadratic octet certificates into a FULL rank-27 one-hot 270x27 frame, including the previously dark six.",
+  "quadratic_45x27_rank": 21,
+  "quadratic_dark_sector_dimension": 6,
+  "quartic_270x27_rank": 27,
+  "quartic_Gram_identity": "R^T R = 10 I_27",
+  "quartic_dark_sextet_rank": 6,
+  "sample_cubic_line_label": 0,
+  "sample_point_quartet": [
+    0,
+    1,
+    5,
+    16
+  ],
+  "scope": "This is a combinatorial / polynomial feature map, not a deterministic single-photon quartic interaction or gauge-theoretic E6 coupling. Physical use needs joint correlation measurement or explicitly engineered nonlinear interaction; no claim of a TOE proof.",
+  "singular_values_all": "sqrt(10) (27 copies)",
+  "status": "EXACT_QUARTIC_W33_TO_E6_FULL_27_LINE_SELECTORS",
+  "ten_orthogonal_replicates_per_cubic_line": 10,
+  "unique_cubic_line_per_pair": true
+}
