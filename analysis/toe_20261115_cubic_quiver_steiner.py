@@ -135,6 +135,39 @@ def verify():
     assert len(line_stars) == 27 and all(len(star) == 5 for star in line_stars)
     assert {frozenset(clique) for clique in nx.find_cliques(tritangent_graph)} == set(line_stars)
 
+    neighbors = {vertex: set(overlap_graph[vertex]) for vertex in overlap_graph}
+    empty_center_triads = {
+        frozenset((a, b, c)) for a, b, c in combinations(overlap_graph, 3)
+        if b not in neighbors[a] and c not in neighbors[a] and c not in neighbors[b]
+        and not neighbors[a] & neighbors[b] & neighbors[c]
+    }
+    section_flags = Counter()
+    for i, j in tritangent_graph.edges:
+        common_points = omitted[i] & omitted[j]
+        for marked_point in common_points:
+            section_flags[common_points - {marked_point}] += 1
+    assert set(section_flags) == empty_center_triads
+    assert len(section_flags) == 1080 and set(section_flags.values()) == {1}
+
+    # Check the holonomy obstruction directly on the Weyl permutation action.
+    orbit_index = {member: i for i, member in enumerate(orbit)}
+    triad = next(iter(section_flags))
+    triad_orbit = [triad]
+    seen_triads = {triad}
+    support_actions = [
+        [orbit_index[frozenset(action[j] for j in member)] for member in orbit]
+        for action in generators
+    ]
+    for member in triad_orbit:
+        for action in support_actions:
+            image = frozenset(action[i] for i in member)
+            if image not in seen_triads:
+                triad_orbit.append(image)
+                seen_triads.add(image)
+    assert seen_triads == empty_center_triads
+    triad_stabilizer_order = 51840 // len(seen_triads)
+    assert triad_stabilizer_order == 48 and triad_stabilizer_order % 9 != 0
+
     # Cyclic block permutations preserve the arrow orientation. The other
     # block permutations act on line labels after reversing every arrow.
     orientation_actions = Counter()
@@ -166,6 +199,8 @@ def verify():
         "quadric_hyperplane_section_sizes": section_sizes,
         "omission_hyperplane_covectors": [hyperbolic[section] for section in omitted],
         "line_stars_in_tritangent_indices": {label: sorted(star) for star, label in line_stars.items()},
+        "empty_center_triads_from_marked_shared_line_sections": len(section_flags),
+        "empty_center_triad_weyl_stabilizer_order": triad_stabilizer_order,
         "orbit_supports_hex_masks": [hex(sum(1 << i for i in member)) for member in orbit],
         "tritangents_in_line_labels": [[labels[i] for i in triple] for triple in tritangents],
         "overlap_isomorphism": dict(sorted(matcher.mapping.items())),

@@ -18,6 +18,16 @@ The Weyl stabilizer of a support has order (51{,}840/40=1{,}296). Arbitrary node
 
 This calculation uses formal single-trace candidate monomials. At special couplings some coefficients can vanish. The permutations of the support are candidates for symmetries of the couplings, and Weyl transport of a triangle support by itself supplies no equivalence of quantum theories. The superpotential construction and its dependence on the cubic surface are treated by [Wijnholt](https://arxiv.org/abs/hep-th/0212021).
 
+## Independent triads and the holonomy comparison
+
+Each pair of tritangents sharing a line determines four common omission points. Mark one and keep the other three. This gives all 1,080 independent triads with no common neighbor, bijectively. The count is \(27\binom{5}{2}\cdot4\), with the 27 lines and their five tritangents supplying the first two factors. The parallel paired-holonomy calculation also found 1,080 order-nine groups, each preserving a six-section hexagon. The marked pairs give a configuration for testing equivariance against those groups once their signed monomial generators are transported to these line labels.
+
+The natural conjugation-action bijection is obstructed. An independent triad consists of three isotropic directions whose off-diagonal pairings \(a,b,c\) are nonzero. Its Gram determinant is \(2abc\), so these directions span a nondegenerate 3-space. An orthogonal transformation fixing all three projective directions has the same sign on each, since it preserves the three nonzero pairings. Modulo the global sign, it therefore acts only on the 2-dimensional orthogonal complement. The latter has orthogonal group of order four or eight over \(\mathbf F_3\). Consequently the pointwise stabilizer has order prime to three. The setwise stabilizer then has at most one factor of three, by its action on the three directions.
+
+The order-nine signed monomial groups from the parallel calculation act faithfully on the 27 line labels because the kernel of the permutation map is a 2-group. Their action preserves the tritangent support, so it lands in the cubic-surface incidence group \(W(E_6)\) and then acts faithfully as projective orthogonal transformations on the quadric. Each order-nine group fixes itself under conjugation, whereas no order-nine subgroup stabilizes an independent triad. Thus the two 1,080-element configurations cannot be identified by a bijection equivariant for an action that contains those subgroups. The obstruction concerns this specific group action.
+
+The verifier also checks this directly with the six Weyl generators. The 1,080 triads form a single orbit and their stabilizer has order \(51{,}840/1{,}080=48\), indivisible by nine.
+
 ## Reproduce
 
 Run `python -B analysis/toe_20261115_cubic_quiver_steiner.py` with NetworkX installed. The [certificate](../data/toe_20261115_cubic_quiver_steiner.json) lists the input arrow dictionary, the 40 support masks, the quadric coordinates and the 45 hyperplane covectors. Bit (j) of a mask marks inclusion of tritangent (j), with zero-based indices. A covector vanishes at a quadric point when the corresponding tritangent is absent there. The script also recovers the 27 line stars by enumerating all maximal cliques of the section-intersection graph.

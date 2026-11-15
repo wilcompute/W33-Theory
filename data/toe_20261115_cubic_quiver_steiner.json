@@ -569,6 +569,8 @@
       24
     ]
   },
+  "empty_center_triads_from_marked_shared_line_sections": 1080,
+  "empty_center_triad_weyl_stabilizer_order": 48,
   "orbit_supports_hex_masks": [
     "0x49fce73f39c",
     "0x973d6be1f5a",
