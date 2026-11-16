@@ -1,0 +1,990 @@
+{
+  "also_resolved": "Primitive circle g=1 and product lens-space a*b=0 for arbitrary nonzero integral H twist.",
+  "cases": [
+    {
+      "E_infty_K0_order": 1,
+      "E_infty_K1_order": 4,
+      "H_twist": -2,
+      "K0_exact": "0",
+      "K1_exact": "Z_2 + Z_2",
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        1,
+        1
+      ],
+      "dual_c1": [
+        -2,
+        2
+      ],
+      "dual_gcd": 2,
+      "dual_twist": 1,
+      "original_H3_pushforward": [
+        1,
+        -1
+      ],
+      "original_c1": [
+        1,
+        1
+      ],
+      "original_gcd": 1,
+      "resolution": "primitive c1: Y diffeomorphic to S2xS3, twisted Kunneth"
+    },
+    {
+      "E_infty_K0_order": 1,
+      "E_infty_K1_order": 1,
+      "H_twist": -1,
+      "K0_exact": "0",
+      "K1_exact": "0",
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        1,
+        1
+      ],
+      "dual_c1": [
+        -1,
+        1
+      ],
+      "dual_gcd": 1,
+      "dual_twist": 1,
+      "original_H3_pushforward": [
+        1,
+        -1
+      ],
+      "original_c1": [
+        1,
+        1
+      ],
+      "original_gcd": 1,
+      "resolution": "primitive c1: Y diffeomorphic to S2xS3, twisted Kunneth"
+    },
+    {
+      "E_infty_K0_order": 1,
+      "E_infty_K1_order": 1,
+      "H_twist": 1,
+      "K0_exact": "0",
+      "K1_exact": "0",
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        1,
+        1
+      ],
+      "dual_c1": [
+        1,
+        -1
+      ],
+      "dual_gcd": 1,
+      "dual_twist": 1,
+      "original_H3_pushforward": [
+        1,
+        -1
+      ],
+      "original_c1": [
+        1,
+        1
+      ],
+      "original_gcd": 1,
+      "resolution": "primitive c1: Y diffeomorphic to S2xS3, twisted Kunneth"
+    },
+    {
+      "E_infty_K0_order": 1,
+      "E_infty_K1_order": 4,
+      "H_twist": 2,
+      "K0_exact": "0",
+      "K1_exact": "Z_2 + Z_2",
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        1,
+        1
+      ],
+      "dual_c1": [
+        2,
+        -2
+      ],
+      "dual_gcd": 2,
+      "dual_twist": 1,
+      "original_H3_pushforward": [
+        1,
+        -1
+      ],
+      "original_c1": [
+        1,
+        1
+      ],
+      "original_gcd": 1,
+      "resolution": "primitive c1: Y diffeomorphic to S2xS3, twisted Kunneth"
+    },
+    {
+      "E_infty_K0_order": 1,
+      "E_infty_K1_order": 9,
+      "H_twist": 3,
+      "K0_exact": "0",
+      "K1_exact": "Z_3 + Z_3",
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        1,
+        1
+      ],
+      "dual_c1": [
+        3,
+        -3
+      ],
+      "dual_gcd": 3,
+      "dual_twist": 1,
+      "original_H3_pushforward": [
+        1,
+        -1
+      ],
+      "original_c1": [
+        1,
+        1
+      ],
+      "original_gcd": 1,
+      "resolution": "primitive c1: Y diffeomorphic to S2xS3, twisted Kunneth"
+    },
+    {
+      "E_infty_K0_order": 9,
+      "E_infty_K1_order": 4,
+      "H_twist": -2,
+      "K0_exact": "Z_3 + Z_3",
+      "K1_exact": "Z_2 + Z_2",
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        1,
+        0
+      ],
+      "dual_c1": [
+        -2,
+        0
+      ],
+      "dual_gcd": 2,
+      "dual_twist": 3,
+      "original_H3_pushforward": [
+        1,
+        0
+      ],
+      "original_c1": [
+        3,
+        0
+      ],
+      "original_gcd": 3,
+      "resolution": "Y=L(g,1)xS2 (up to orientation) and twist from lens top H3; twisted Kunneth"
+    },
+    {
+      "E_infty_K0_order": 9,
+      "E_infty_K1_order": 1,
+      "H_twist": -1,
+      "K0_exact": "Z_3 + Z_3",
+      "K1_exact": "0",
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        1,
+        0
+      ],
+      "dual_c1": [
+        -1,
+        0
+      ],
+      "dual_gcd": 1,
+      "dual_twist": 3,
+      "original_H3_pushforward": [
+        1,
+        0
+      ],
+      "original_c1": [
+        3,
+        0
+      ],
+      "original_gcd": 3,
+      "resolution": "T-dual has primitive circle class, nonzero twist g, so K^1 dual is Z_g^2"
+    },
+    {
+      "E_infty_K0_order": 9,
+      "E_infty_K1_order": 1,
+      "H_twist": 1,
+      "K0_exact": "Z_3 + Z_3",
+      "K1_exact": "0",
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        1,
+        0
+      ],
+      "dual_c1": [
+        1,
+        0
+      ],
+      "dual_gcd": 1,
+      "dual_twist": 3,
+      "original_H3_pushforward": [
+        1,
+        0
+      ],
+      "original_c1": [
+        3,
+        0
+      ],
+      "original_gcd": 3,
+      "resolution": "T-dual has primitive circle class, nonzero twist g, so K^1 dual is Z_g^2"
+    },
+    {
+      "E_infty_K0_order": 9,
+      "E_infty_K1_order": 4,
+      "H_twist": 2,
+      "K0_exact": "Z_3 + Z_3",
+      "K1_exact": "Z_2 + Z_2",
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        1,
+        0
+      ],
+      "dual_c1": [
+        2,
+        0
+      ],
+      "dual_gcd": 2,
+      "dual_twist": 3,
+      "original_H3_pushforward": [
+        1,
+        0
+      ],
+      "original_c1": [
+        3,
+        0
+      ],
+      "original_gcd": 3,
+      "resolution": "Y=L(g,1)xS2 (up to orientation) and twist from lens top H3; twisted Kunneth"
+    },
+    {
+      "E_infty_K0_order": 9,
+      "E_infty_K1_order": 9,
+      "H_twist": 3,
+      "K0_exact": "Z_3 + Z_3",
+      "K1_exact": "Z_3 + Z_3",
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        1,
+        0
+      ],
+      "dual_c1": [
+        3,
+        0
+      ],
+      "dual_gcd": 3,
+      "dual_twist": 3,
+      "original_H3_pushforward": [
+        1,
+        0
+      ],
+      "original_c1": [
+        3,
+        0
+      ],
+      "original_gcd": 3,
+      "resolution": "Y=L(g,1)xS2 (up to orientation) and twist from lens top H3; twisted Kunneth"
+    },
+    {
+      "E_infty_K0_order": 25,
+      "E_infty_K1_order": 4,
+      "H_twist": -2,
+      "K0_exact": "Z_5 + Z_5",
+      "K1_exact": "Z_2 + Z_2",
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        0,
+        1
+      ],
+      "dual_c1": [
+        0,
+        2
+      ],
+      "dual_gcd": 2,
+      "dual_twist": 5,
+      "original_H3_pushforward": [
+        0,
+        -1
+      ],
+      "original_c1": [
+        0,
+        5
+      ],
+      "original_gcd": 5,
+      "resolution": "Y=L(g,1)xS2 (up to orientation) and twist from lens top H3; twisted Kunneth"
+    },
+    {
+      "E_infty_K0_order": 25,
+      "E_infty_K1_order": 1,
+      "H_twist": -1,
+      "K0_exact": "Z_5 + Z_5",
+      "K1_exact": "0",
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        0,
+        1
+      ],
+      "dual_c1": [
+        0,
+        1
+      ],
+      "dual_gcd": 1,
+      "dual_twist": 5,
+      "original_H3_pushforward": [
+        0,
+        -1
+      ],
+      "original_c1": [
+        0,
+        5
+      ],
+      "original_gcd": 5,
+      "resolution": "T-dual has primitive circle class, nonzero twist g, so K^1 dual is Z_g^2"
+    },
+    {
+      "E_infty_K0_order": 25,
+      "E_infty_K1_order": 1,
+      "H_twist": 1,
+      "K0_exact": "Z_5 + Z_5",
+      "K1_exact": "0",
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        0,
+        1
+      ],
+      "dual_c1": [
+        0,
+        -1
+      ],
+      "dual_gcd": 1,
+      "dual_twist": 5,
+      "original_H3_pushforward": [
+        0,
+        -1
+      ],
+      "original_c1": [
+        0,
+        5
+      ],
+      "original_gcd": 5,
+      "resolution": "T-dual has primitive circle class, nonzero twist g, so K^1 dual is Z_g^2"
+    },
+    {
+      "E_infty_K0_order": 25,
+      "E_infty_K1_order": 4,
+      "H_twist": 2,
+      "K0_exact": "Z_5 + Z_5",
+      "K1_exact": "Z_2 + Z_2",
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        0,
+        1
+      ],
+      "dual_c1": [
+        0,
+        -2
+      ],
+      "dual_gcd": 2,
+      "dual_twist": 5,
+      "original_H3_pushforward": [
+        0,
+        -1
+      ],
+      "original_c1": [
+        0,
+        5
+      ],
+      "original_gcd": 5,
+      "resolution": "Y=L(g,1)xS2 (up to orientation) and twist from lens top H3; twisted Kunneth"
+    },
+    {
+      "E_infty_K0_order": 25,
+      "E_infty_K1_order": 9,
+      "H_twist": 3,
+      "K0_exact": "Z_5 + Z_5",
+      "K1_exact": "Z_3 + Z_3",
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        0,
+        1
+      ],
+      "dual_c1": [
+        0,
+        -3
+      ],
+      "dual_gcd": 3,
+      "dual_twist": 5,
+      "original_H3_pushforward": [
+        0,
+        -1
+      ],
+      "original_c1": [
+        0,
+        5
+      ],
+      "original_gcd": 5,
+      "resolution": "Y=L(g,1)xS2 (up to orientation) and twist from lens top H3; twisted Kunneth"
+    },
+    {
+      "E_infty_K0_order": 9,
+      "E_infty_K1_order": 4,
+      "H_twist": -2,
+      "K0_exact": null,
+      "K1_exact": null,
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        1,
+        1
+      ],
+      "dual_c1": [
+        -2,
+        2
+      ],
+      "dual_gcd": 2,
+      "dual_twist": 3,
+      "original_H3_pushforward": [
+        1,
+        -1
+      ],
+      "original_c1": [
+        3,
+        3
+      ],
+      "original_gcd": 3,
+      "resolution": "unresolved in this method"
+    },
+    {
+      "E_infty_K0_order": 9,
+      "E_infty_K1_order": 1,
+      "H_twist": -1,
+      "K0_exact": "Z_3 + Z_3",
+      "K1_exact": "0",
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        1,
+        1
+      ],
+      "dual_c1": [
+        -1,
+        1
+      ],
+      "dual_gcd": 1,
+      "dual_twist": 3,
+      "original_H3_pushforward": [
+        1,
+        -1
+      ],
+      "original_c1": [
+        3,
+        3
+      ],
+      "original_gcd": 3,
+      "resolution": "T-dual has primitive circle class, nonzero twist g, so K^1 dual is Z_g^2"
+    },
+    {
+      "E_infty_K0_order": 9,
+      "E_infty_K1_order": 1,
+      "H_twist": 1,
+      "K0_exact": "Z_3 + Z_3",
+      "K1_exact": "0",
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        1,
+        1
+      ],
+      "dual_c1": [
+        1,
+        -1
+      ],
+      "dual_gcd": 1,
+      "dual_twist": 3,
+      "original_H3_pushforward": [
+        1,
+        -1
+      ],
+      "original_c1": [
+        3,
+        3
+      ],
+      "original_gcd": 3,
+      "resolution": "T-dual has primitive circle class, nonzero twist g, so K^1 dual is Z_g^2"
+    },
+    {
+      "E_infty_K0_order": 9,
+      "E_infty_K1_order": 4,
+      "H_twist": 2,
+      "K0_exact": null,
+      "K1_exact": null,
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        1,
+        1
+      ],
+      "dual_c1": [
+        2,
+        -2
+      ],
+      "dual_gcd": 2,
+      "dual_twist": 3,
+      "original_H3_pushforward": [
+        1,
+        -1
+      ],
+      "original_c1": [
+        3,
+        3
+      ],
+      "original_gcd": 3,
+      "resolution": "unresolved in this method"
+    },
+    {
+      "E_infty_K0_order": 9,
+      "E_infty_K1_order": 9,
+      "H_twist": 3,
+      "K0_exact": null,
+      "K1_exact": null,
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        1,
+        1
+      ],
+      "dual_c1": [
+        3,
+        -3
+      ],
+      "dual_gcd": 3,
+      "dual_twist": 3,
+      "original_H3_pushforward": [
+        1,
+        -1
+      ],
+      "original_c1": [
+        3,
+        3
+      ],
+      "original_gcd": 3,
+      "resolution": "unresolved in this method"
+    },
+    {
+      "E_infty_K0_order": 16,
+      "E_infty_K1_order": 4,
+      "H_twist": -2,
+      "K0_exact": null,
+      "K1_exact": null,
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        1,
+        1
+      ],
+      "dual_c1": [
+        -2,
+        2
+      ],
+      "dual_gcd": 2,
+      "dual_twist": 4,
+      "original_H3_pushforward": [
+        1,
+        -1
+      ],
+      "original_c1": [
+        4,
+        4
+      ],
+      "original_gcd": 4,
+      "resolution": "unresolved in this method"
+    },
+    {
+      "E_infty_K0_order": 16,
+      "E_infty_K1_order": 1,
+      "H_twist": -1,
+      "K0_exact": "Z_4 + Z_4",
+      "K1_exact": "0",
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        1,
+        1
+      ],
+      "dual_c1": [
+        -1,
+        1
+      ],
+      "dual_gcd": 1,
+      "dual_twist": 4,
+      "original_H3_pushforward": [
+        1,
+        -1
+      ],
+      "original_c1": [
+        4,
+        4
+      ],
+      "original_gcd": 4,
+      "resolution": "T-dual has primitive circle class, nonzero twist g, so K^1 dual is Z_g^2"
+    },
+    {
+      "E_infty_K0_order": 16,
+      "E_infty_K1_order": 1,
+      "H_twist": 1,
+      "K0_exact": "Z_4 + Z_4",
+      "K1_exact": "0",
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        1,
+        1
+      ],
+      "dual_c1": [
+        1,
+        -1
+      ],
+      "dual_gcd": 1,
+      "dual_twist": 4,
+      "original_H3_pushforward": [
+        1,
+        -1
+      ],
+      "original_c1": [
+        4,
+        4
+      ],
+      "original_gcd": 4,
+      "resolution": "T-dual has primitive circle class, nonzero twist g, so K^1 dual is Z_g^2"
+    },
+    {
+      "E_infty_K0_order": 16,
+      "E_infty_K1_order": 4,
+      "H_twist": 2,
+      "K0_exact": null,
+      "K1_exact": null,
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        1,
+        1
+      ],
+      "dual_c1": [
+        2,
+        -2
+      ],
+      "dual_gcd": 2,
+      "dual_twist": 4,
+      "original_H3_pushforward": [
+        1,
+        -1
+      ],
+      "original_c1": [
+        4,
+        4
+      ],
+      "original_gcd": 4,
+      "resolution": "unresolved in this method"
+    },
+    {
+      "E_infty_K0_order": 16,
+      "E_infty_K1_order": 9,
+      "H_twist": 3,
+      "K0_exact": null,
+      "K1_exact": null,
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        1,
+        1
+      ],
+      "dual_c1": [
+        3,
+        -3
+      ],
+      "dual_gcd": 3,
+      "dual_twist": 4,
+      "original_H3_pushforward": [
+        1,
+        -1
+      ],
+      "original_c1": [
+        4,
+        4
+      ],
+      "original_gcd": 4,
+      "resolution": "unresolved in this method"
+    },
+    {
+      "E_infty_K0_order": 4,
+      "E_infty_K1_order": 4,
+      "H_twist": -2,
+      "K0_exact": null,
+      "K1_exact": null,
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        3,
+        5
+      ],
+      "dual_c1": [
+        -6,
+        10
+      ],
+      "dual_gcd": 2,
+      "dual_twist": 2,
+      "original_H3_pushforward": [
+        3,
+        -5
+      ],
+      "original_c1": [
+        6,
+        10
+      ],
+      "original_gcd": 2,
+      "resolution": "unresolved in this method"
+    },
+    {
+      "E_infty_K0_order": 4,
+      "E_infty_K1_order": 1,
+      "H_twist": -1,
+      "K0_exact": "Z_2 + Z_2",
+      "K1_exact": "0",
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        3,
+        5
+      ],
+      "dual_c1": [
+        -3,
+        5
+      ],
+      "dual_gcd": 1,
+      "dual_twist": 2,
+      "original_H3_pushforward": [
+        3,
+        -5
+      ],
+      "original_c1": [
+        6,
+        10
+      ],
+      "original_gcd": 2,
+      "resolution": "T-dual has primitive circle class, nonzero twist g, so K^1 dual is Z_g^2"
+    },
+    {
+      "E_infty_K0_order": 4,
+      "E_infty_K1_order": 1,
+      "H_twist": 1,
+      "K0_exact": "Z_2 + Z_2",
+      "K1_exact": "0",
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        3,
+        5
+      ],
+      "dual_c1": [
+        3,
+        -5
+      ],
+      "dual_gcd": 1,
+      "dual_twist": 2,
+      "original_H3_pushforward": [
+        3,
+        -5
+      ],
+      "original_c1": [
+        6,
+        10
+      ],
+      "original_gcd": 2,
+      "resolution": "T-dual has primitive circle class, nonzero twist g, so K^1 dual is Z_g^2"
+    },
+    {
+      "E_infty_K0_order": 4,
+      "E_infty_K1_order": 4,
+      "H_twist": 2,
+      "K0_exact": null,
+      "K1_exact": null,
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        3,
+        5
+      ],
+      "dual_c1": [
+        6,
+        -10
+      ],
+      "dual_gcd": 2,
+      "dual_twist": 2,
+      "original_H3_pushforward": [
+        3,
+        -5
+      ],
+      "original_c1": [
+        6,
+        10
+      ],
+      "original_gcd": 2,
+      "resolution": "unresolved in this method"
+    },
+    {
+      "E_infty_K0_order": 4,
+      "E_infty_K1_order": 9,
+      "H_twist": 3,
+      "K0_exact": null,
+      "K1_exact": null,
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        3,
+        5
+      ],
+      "dual_c1": [
+        9,
+        -15
+      ],
+      "dual_gcd": 3,
+      "dual_twist": 2,
+      "original_H3_pushforward": [
+        3,
+        -5
+      ],
+      "original_c1": [
+        6,
+        10
+      ],
+      "original_gcd": 2,
+      "resolution": "unresolved in this method"
+    },
+    {
+      "E_infty_K0_order": 16,
+      "E_infty_K1_order": 4,
+      "H_twist": -2,
+      "K0_exact": null,
+      "K1_exact": null,
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        -1,
+        -1
+      ],
+      "dual_c1": [
+        2,
+        -2
+      ],
+      "dual_gcd": 2,
+      "dual_twist": 4,
+      "original_H3_pushforward": [
+        -1,
+        1
+      ],
+      "original_c1": [
+        -4,
+        -4
+      ],
+      "original_gcd": 4,
+      "resolution": "unresolved in this method"
+    },
+    {
+      "E_infty_K0_order": 16,
+      "E_infty_K1_order": 1,
+      "H_twist": -1,
+      "K0_exact": "Z_4 + Z_4",
+      "K1_exact": "0",
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        -1,
+        -1
+      ],
+      "dual_c1": [
+        1,
+        -1
+      ],
+      "dual_gcd": 1,
+      "dual_twist": 4,
+      "original_H3_pushforward": [
+        -1,
+        1
+      ],
+      "original_c1": [
+        -4,
+        -4
+      ],
+      "original_gcd": 4,
+      "resolution": "T-dual has primitive circle class, nonzero twist g, so K^1 dual is Z_g^2"
+    },
+    {
+      "E_infty_K0_order": 16,
+      "E_infty_K1_order": 1,
+      "H_twist": 1,
+      "K0_exact": "Z_4 + Z_4",
+      "K1_exact": "0",
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        -1,
+        -1
+      ],
+      "dual_c1": [
+        -1,
+        1
+      ],
+      "dual_gcd": 1,
+      "dual_twist": 4,
+      "original_H3_pushforward": [
+        -1,
+        1
+      ],
+      "original_c1": [
+        -4,
+        -4
+      ],
+      "original_gcd": 4,
+      "resolution": "T-dual has primitive circle class, nonzero twist g, so K^1 dual is Z_g^2"
+    },
+    {
+      "E_infty_K0_order": 16,
+      "E_infty_K1_order": 4,
+      "H_twist": 2,
+      "K0_exact": null,
+      "K1_exact": null,
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        -1,
+        -1
+      ],
+      "dual_c1": [
+        -2,
+        2
+      ],
+      "dual_gcd": 2,
+      "dual_twist": 4,
+      "original_H3_pushforward": [
+        -1,
+        1
+      ],
+      "original_c1": [
+        -4,
+        -4
+      ],
+      "original_gcd": 4,
+      "resolution": "unresolved in this method"
+    },
+    {
+      "E_infty_K0_order": 16,
+      "E_infty_K1_order": 9,
+      "H_twist": 3,
+      "K0_exact": null,
+      "K1_exact": null,
+      "degree_shift": "K_H^0(Y) = K_Hhat^1(Yhat); K_H^1(Y) = K_Hhat^0(Yhat)",
+      "dual_H3_pushforward": [
+        -1,
+        -1
+      ],
+      "dual_c1": [
+        -3,
+        3
+      ],
+      "dual_gcd": 3,
+      "dual_twist": 4,
+      "original_H3_pushforward": [
+        -1,
+        1
+      ],
+      "original_c1": [
+        -4,
+        -4
+      ],
+      "original_gcd": 4,
+      "resolution": "unresolved in this method"
+    }
+  ],
+  "not_resolved": "g>1, |k|>1 and a*b!=0: extension structure needs additional construction.",
+  "physical_boundary": "These nonzero H backgrounds are NOT the currently analyzed source-free IIB H3=0 vacuum. Topological K classifications do not alone fix Page charge or exact D-brane decay.",
+  "status": "PASS_T_DUAL_RESOLUTION_OF_TWISTED_K_EXTENSIONS_FOR_UNIT_H",
+  "theorem": "For every p,q not both zero, with g=gcd(p,q), H=+/-z primitive, K_H^0(Y)=Z_g+Z_g and K_H^1(Y)=0. This resolves the prior AHSS extension for unit H.",
+  "topological_T_duality_reference": "Bouwknegt-Evslin-Mathai 2004; Mathai-Rosenberg 2005"
+}

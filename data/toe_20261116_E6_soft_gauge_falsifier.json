@@ -1,0 +1,85 @@
+{
+  "cases": [
+    {
+      "SU3_diagonal_rank": 2,
+      "Standard_Model_gauge_rank": 4,
+      "VEV_abs_s": 1.0,
+      "VEV_fourth_power": 1.0,
+      "full_scalar_stability_proven": false,
+      "gauge_multiplicities": {
+        "massive": 16,
+        "massless_diagonal_SU3": 8
+      },
+      "gauge_vector_mass2_eigenvalues": [
+        0,
+        3.0,
+        3.0
+      ],
+      "input": {
+        "M": 1,
+        "gYM": 1,
+        "kappa": 1,
+        "m2": -1
+      },
+      "invariant_I": 9.0,
+      "nonzero_singlet_stationary_point": true,
+      "phase_canonical_mass2": 0,
+      "physical_limitation": "Global angular modulus remains; wrong unbroken gauge rank, and the full non-singlet Hessian has not been checked.",
+      "radial_canonical_mass2": 4,
+      "scale_origin": "Inserted m2, kappa and suppression scale M: no first-principles prediction",
+      "soft_potential_at_VEV": -2.0
+    },
+    {
+      "SU3_diagonal_rank": 2,
+      "Standard_Model_gauge_rank": 4,
+      "VEV_abs_s": 2.0597671439071177,
+      "VEV_fourth_power": 17.999999999999996,
+      "full_scalar_stability_proven": false,
+      "gauge_multiplicities": {
+        "massive": 16,
+        "massless_diagonal_SU3": 8
+      },
+      "gauge_vector_mass2_eigenvalues": [
+        0,
+        6.236681810065347,
+        6.236681810065347
+      ],
+      "input": {
+        "M": 3,
+        "gYM": 0.7,
+        "kappa": 2,
+        "m2": -4
+      },
+      "invariant_I": 38.18376618407356,
+      "nonzero_singlet_stationary_point": true,
+      "phase_canonical_mass2": 0,
+      "physical_limitation": "Global angular modulus remains; wrong unbroken gauge rank, and the full non-singlet Hessian has not been checked.",
+      "radial_canonical_mass2": 16,
+      "scale_origin": "Inserted m2, kappa and suppression scale M: no first-principles prediction",
+      "soft_potential_at_VEV": -33.94112549695428
+    },
+    {
+      "input": {
+        "M": 1,
+        "gYM": 1,
+        "kappa": 1,
+        "m2": 1
+      },
+      "nonzero_singlet_stationary_point": false,
+      "origin_stable_along_singlet": true
+    }
+  ],
+  "status": "PASS_E6_SOFT_RADIAL_LIFT_AND_RESIDUAL_GAUGE_OBSTRUCTION",
+  "strict_scope": "One gauge-invariant toy soft-EFT deformation evaluated only along the exact cubic F- and D-flat singlet locus",
+  "supersymmetric_one_loop_vector_multiplet_supertrace": {
+    "mass_squared": 3.0,
+    "massive_N1_vector_multiplets": 16,
+    "per_multiplet_real_bosonic_dof": 4,
+    "per_multiplet_real_fermionic_dof": 4,
+    "physics_caveat": "At exact unbroken SUSY, the F=D-flat vacuum energy remains zero perturbatively; explicit soft breaking, nonperturbative superpotentials and full spectrum may change this.",
+    "supertrace_mass2": 0.0,
+    "supertrace_mass4": 0.0
+  },
+  "triad_gauge_mass": "For each of 8 su(3) generators, triangle Laplacian has 0,3*gYM^2*|s|^2 twice",
+  "weakness": "Soft terms explicitly introduce physical scales; no unique SM vacuum or complete 27+27bar spectrum."
+}

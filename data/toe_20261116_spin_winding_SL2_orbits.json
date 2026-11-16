@@ -1,0 +1,589 @@
+{
+  "arithmetic_theorem": "SL2(Z) orbits on (Z_g)^2 indexed by d=gcd(g,m,n) with size J2(g/d)",
+  "cases": [
+    {
+      "N": 1,
+      "formal_F1_D1_winding_orbits": {
+        "g": 1,
+        "module": "Z_g x Z_g",
+        "number_of_orbits": 1,
+        "orbits": [
+          {
+            "Jordan_totient_J2": 1,
+            "gcd_divisor": 1,
+            "orbit_cardinality": 1,
+            "representative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "physical_nonidentification": "Deck residue k labels fermion Fourier transformation; the (m,n) module is string species tensored with a finite order fiber loop. Matching counts does not identify these spectra.",
+      "spin_lifts": [
+        {
+          "cover_Killing_spinor_modes_from_k_plusminus_1": [
+            -1,
+            1
+          ],
+          "invariant_mode_residues_mod_N": [
+            0
+          ],
+          "spin_lift": "ordinary"
+        }
+      ],
+      "spinor_cover_modes_survive": true
+    },
+    {
+      "N": 2,
+      "formal_F1_D1_winding_orbits": {
+        "g": 2,
+        "module": "Z_g x Z_g",
+        "number_of_orbits": 2,
+        "orbits": [
+          {
+            "Jordan_totient_J2": 3,
+            "gcd_divisor": 1,
+            "orbit_cardinality": 3,
+            "representative": [
+              0,
+              1
+            ]
+          },
+          {
+            "Jordan_totient_J2": 1,
+            "gcd_divisor": 2,
+            "orbit_cardinality": 1,
+            "representative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "physical_nonidentification": "Deck residue k labels fermion Fourier transformation; the (m,n) module is string species tensored with a finite order fiber loop. Matching counts does not identify these spectra.",
+      "spin_lifts": [
+        {
+          "cover_Killing_spinor_modes_from_k_plusminus_1": [],
+          "invariant_mode_residues_mod_N": [
+            0
+          ],
+          "spin_lift": "ordinary"
+        },
+        {
+          "cover_Killing_spinor_modes_from_k_plusminus_1": [
+            -1,
+            1
+          ],
+          "invariant_mode_residues_mod_N": [
+            1
+          ],
+          "spin_lift": "alternate"
+        }
+      ],
+      "spinor_cover_modes_survive": true
+    },
+    {
+      "N": 3,
+      "formal_F1_D1_winding_orbits": {
+        "g": 3,
+        "module": "Z_g x Z_g",
+        "number_of_orbits": 2,
+        "orbits": [
+          {
+            "Jordan_totient_J2": 8,
+            "gcd_divisor": 1,
+            "orbit_cardinality": 8,
+            "representative": [
+              0,
+              1
+            ]
+          },
+          {
+            "Jordan_totient_J2": 1,
+            "gcd_divisor": 3,
+            "orbit_cardinality": 1,
+            "representative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "physical_nonidentification": "Deck residue k labels fermion Fourier transformation; the (m,n) module is string species tensored with a finite order fiber loop. Matching counts does not identify these spectra.",
+      "spin_lifts": [
+        {
+          "cover_Killing_spinor_modes_from_k_plusminus_1": [],
+          "invariant_mode_residues_mod_N": [
+            0
+          ],
+          "spin_lift": "ordinary"
+        }
+      ],
+      "spinor_cover_modes_survive": false
+    },
+    {
+      "N": 4,
+      "formal_F1_D1_winding_orbits": {
+        "g": 4,
+        "module": "Z_g x Z_g",
+        "number_of_orbits": 3,
+        "orbits": [
+          {
+            "Jordan_totient_J2": 12,
+            "gcd_divisor": 1,
+            "orbit_cardinality": 12,
+            "representative": [
+              0,
+              1
+            ]
+          },
+          {
+            "Jordan_totient_J2": 3,
+            "gcd_divisor": 2,
+            "orbit_cardinality": 3,
+            "representative": [
+              0,
+              2
+            ]
+          },
+          {
+            "Jordan_totient_J2": 1,
+            "gcd_divisor": 4,
+            "orbit_cardinality": 1,
+            "representative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "physical_nonidentification": "Deck residue k labels fermion Fourier transformation; the (m,n) module is string species tensored with a finite order fiber loop. Matching counts does not identify these spectra.",
+      "spin_lifts": [
+        {
+          "cover_Killing_spinor_modes_from_k_plusminus_1": [],
+          "invariant_mode_residues_mod_N": [
+            0
+          ],
+          "spin_lift": "ordinary"
+        },
+        {
+          "cover_Killing_spinor_modes_from_k_plusminus_1": [],
+          "invariant_mode_residues_mod_N": [
+            2
+          ],
+          "spin_lift": "alternate"
+        }
+      ],
+      "spinor_cover_modes_survive": false
+    },
+    {
+      "N": 5,
+      "formal_F1_D1_winding_orbits": {
+        "g": 5,
+        "module": "Z_g x Z_g",
+        "number_of_orbits": 2,
+        "orbits": [
+          {
+            "Jordan_totient_J2": 24,
+            "gcd_divisor": 1,
+            "orbit_cardinality": 24,
+            "representative": [
+              0,
+              1
+            ]
+          },
+          {
+            "Jordan_totient_J2": 1,
+            "gcd_divisor": 5,
+            "orbit_cardinality": 1,
+            "representative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "physical_nonidentification": "Deck residue k labels fermion Fourier transformation; the (m,n) module is string species tensored with a finite order fiber loop. Matching counts does not identify these spectra.",
+      "spin_lifts": [
+        {
+          "cover_Killing_spinor_modes_from_k_plusminus_1": [],
+          "invariant_mode_residues_mod_N": [
+            0
+          ],
+          "spin_lift": "ordinary"
+        }
+      ],
+      "spinor_cover_modes_survive": false
+    },
+    {
+      "N": 6,
+      "formal_F1_D1_winding_orbits": {
+        "g": 6,
+        "module": "Z_g x Z_g",
+        "number_of_orbits": 4,
+        "orbits": [
+          {
+            "Jordan_totient_J2": 24,
+            "gcd_divisor": 1,
+            "orbit_cardinality": 24,
+            "representative": [
+              0,
+              1
+            ]
+          },
+          {
+            "Jordan_totient_J2": 8,
+            "gcd_divisor": 2,
+            "orbit_cardinality": 8,
+            "representative": [
+              0,
+              2
+            ]
+          },
+          {
+            "Jordan_totient_J2": 3,
+            "gcd_divisor": 3,
+            "orbit_cardinality": 3,
+            "representative": [
+              0,
+              3
+            ]
+          },
+          {
+            "Jordan_totient_J2": 1,
+            "gcd_divisor": 6,
+            "orbit_cardinality": 1,
+            "representative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "physical_nonidentification": "Deck residue k labels fermion Fourier transformation; the (m,n) module is string species tensored with a finite order fiber loop. Matching counts does not identify these spectra.",
+      "spin_lifts": [
+        {
+          "cover_Killing_spinor_modes_from_k_plusminus_1": [],
+          "invariant_mode_residues_mod_N": [
+            0
+          ],
+          "spin_lift": "ordinary"
+        },
+        {
+          "cover_Killing_spinor_modes_from_k_plusminus_1": [],
+          "invariant_mode_residues_mod_N": [
+            3
+          ],
+          "spin_lift": "alternate"
+        }
+      ],
+      "spinor_cover_modes_survive": false
+    },
+    {
+      "N": 8,
+      "formal_F1_D1_winding_orbits": {
+        "g": 8,
+        "module": "Z_g x Z_g",
+        "number_of_orbits": 4,
+        "orbits": [
+          {
+            "Jordan_totient_J2": 48,
+            "gcd_divisor": 1,
+            "orbit_cardinality": 48,
+            "representative": [
+              0,
+              1
+            ]
+          },
+          {
+            "Jordan_totient_J2": 12,
+            "gcd_divisor": 2,
+            "orbit_cardinality": 12,
+            "representative": [
+              0,
+              2
+            ]
+          },
+          {
+            "Jordan_totient_J2": 3,
+            "gcd_divisor": 4,
+            "orbit_cardinality": 3,
+            "representative": [
+              0,
+              4
+            ]
+          },
+          {
+            "Jordan_totient_J2": 1,
+            "gcd_divisor": 8,
+            "orbit_cardinality": 1,
+            "representative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "physical_nonidentification": "Deck residue k labels fermion Fourier transformation; the (m,n) module is string species tensored with a finite order fiber loop. Matching counts does not identify these spectra.",
+      "spin_lifts": [
+        {
+          "cover_Killing_spinor_modes_from_k_plusminus_1": [],
+          "invariant_mode_residues_mod_N": [
+            0
+          ],
+          "spin_lift": "ordinary"
+        },
+        {
+          "cover_Killing_spinor_modes_from_k_plusminus_1": [],
+          "invariant_mode_residues_mod_N": [
+            4
+          ],
+          "spin_lift": "alternate"
+        }
+      ],
+      "spinor_cover_modes_survive": false
+    },
+    {
+      "N": 9,
+      "formal_F1_D1_winding_orbits": {
+        "g": 9,
+        "module": "Z_g x Z_g",
+        "number_of_orbits": 3,
+        "orbits": [
+          {
+            "Jordan_totient_J2": 72,
+            "gcd_divisor": 1,
+            "orbit_cardinality": 72,
+            "representative": [
+              0,
+              1
+            ]
+          },
+          {
+            "Jordan_totient_J2": 8,
+            "gcd_divisor": 3,
+            "orbit_cardinality": 8,
+            "representative": [
+              0,
+              3
+            ]
+          },
+          {
+            "Jordan_totient_J2": 1,
+            "gcd_divisor": 9,
+            "orbit_cardinality": 1,
+            "representative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "physical_nonidentification": "Deck residue k labels fermion Fourier transformation; the (m,n) module is string species tensored with a finite order fiber loop. Matching counts does not identify these spectra.",
+      "spin_lifts": [
+        {
+          "cover_Killing_spinor_modes_from_k_plusminus_1": [],
+          "invariant_mode_residues_mod_N": [
+            0
+          ],
+          "spin_lift": "ordinary"
+        }
+      ],
+      "spinor_cover_modes_survive": false
+    },
+    {
+      "N": 12,
+      "formal_F1_D1_winding_orbits": {
+        "g": 12,
+        "module": "Z_g x Z_g",
+        "number_of_orbits": 6,
+        "orbits": [
+          {
+            "Jordan_totient_J2": 96,
+            "gcd_divisor": 1,
+            "orbit_cardinality": 96,
+            "representative": [
+              0,
+              1
+            ]
+          },
+          {
+            "Jordan_totient_J2": 24,
+            "gcd_divisor": 2,
+            "orbit_cardinality": 24,
+            "representative": [
+              0,
+              2
+            ]
+          },
+          {
+            "Jordan_totient_J2": 12,
+            "gcd_divisor": 3,
+            "orbit_cardinality": 12,
+            "representative": [
+              0,
+              3
+            ]
+          },
+          {
+            "Jordan_totient_J2": 8,
+            "gcd_divisor": 4,
+            "orbit_cardinality": 8,
+            "representative": [
+              0,
+              4
+            ]
+          },
+          {
+            "Jordan_totient_J2": 3,
+            "gcd_divisor": 6,
+            "orbit_cardinality": 3,
+            "representative": [
+              0,
+              6
+            ]
+          },
+          {
+            "Jordan_totient_J2": 1,
+            "gcd_divisor": 12,
+            "orbit_cardinality": 1,
+            "representative": [
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "physical_nonidentification": "Deck residue k labels fermion Fourier transformation; the (m,n) module is string species tensored with a finite order fiber loop. Matching counts does not identify these spectra.",
+      "spin_lifts": [
+        {
+          "cover_Killing_spinor_modes_from_k_plusminus_1": [],
+          "invariant_mode_residues_mod_N": [
+            0
+          ],
+          "spin_lift": "ordinary"
+        },
+        {
+          "cover_Killing_spinor_modes_from_k_plusminus_1": [],
+          "invariant_mode_residues_mod_N": [
+            6
+          ],
+          "spin_lift": "alternate"
+        }
+      ],
+      "spinor_cover_modes_survive": false
+    }
+  ],
+  "caveat": "Finite topological charges are not an integer oscillator spectrum or proof of RR Page charge conservation.",
+  "equal_vs_coprime_flux_topology_jump": [
+    {
+      "N": 2,
+      "critical_scope": "Global torsion homotopy and K-theory jump despite smooth local 11D geometric parameter convergence. Contractible string windings can remain dynamical, non-topologically protected excitations.",
+      "equal_complex_K0_torsion_order": 4,
+      "equal_mixed_periods": [
+        2,
+        2
+      ],
+      "equal_pi1": "Z_2",
+      "equal_spin_structure_count": 2,
+      "near_equal_Y_diffeomorphic": "S2 x S3",
+      "near_equal_complex_K0_torsion_order": 1,
+      "near_equal_mixed_periods": [
+        3,
+        2
+      ],
+      "near_equal_pi1": "trivial",
+      "near_equal_spin_structure_count": 1,
+      "relative_flux_ratio_difference": 0.5
+    },
+    {
+      "N": 3,
+      "critical_scope": "Global torsion homotopy and K-theory jump despite smooth local 11D geometric parameter convergence. Contractible string windings can remain dynamical, non-topologically protected excitations.",
+      "equal_complex_K0_torsion_order": 9,
+      "equal_mixed_periods": [
+        3,
+        3
+      ],
+      "equal_pi1": "Z_3",
+      "equal_spin_structure_count": 1,
+      "near_equal_Y_diffeomorphic": "S2 x S3",
+      "near_equal_complex_K0_torsion_order": 1,
+      "near_equal_mixed_periods": [
+        4,
+        3
+      ],
+      "near_equal_pi1": "trivial",
+      "near_equal_spin_structure_count": 1,
+      "relative_flux_ratio_difference": 0.3333333333333333
+    },
+    {
+      "N": 10,
+      "critical_scope": "Global torsion homotopy and K-theory jump despite smooth local 11D geometric parameter convergence. Contractible string windings can remain dynamical, non-topologically protected excitations.",
+      "equal_complex_K0_torsion_order": 100,
+      "equal_mixed_periods": [
+        10,
+        10
+      ],
+      "equal_pi1": "Z_10",
+      "equal_spin_structure_count": 2,
+      "near_equal_Y_diffeomorphic": "S2 x S3",
+      "near_equal_complex_K0_torsion_order": 1,
+      "near_equal_mixed_periods": [
+        11,
+        10
+      ],
+      "near_equal_pi1": "trivial",
+      "near_equal_spin_structure_count": 1,
+      "relative_flux_ratio_difference": 0.1
+    },
+    {
+      "N": 100,
+      "critical_scope": "Global torsion homotopy and K-theory jump despite smooth local 11D geometric parameter convergence. Contractible string windings can remain dynamical, non-topologically protected excitations.",
+      "equal_complex_K0_torsion_order": 10000,
+      "equal_mixed_periods": [
+        100,
+        100
+      ],
+      "equal_pi1": "Z_100",
+      "equal_spin_structure_count": 2,
+      "near_equal_Y_diffeomorphic": "S2 x S3",
+      "near_equal_complex_K0_torsion_order": 1,
+      "near_equal_mixed_periods": [
+        101,
+        100
+      ],
+      "near_equal_pi1": "trivial",
+      "near_equal_spin_structure_count": 1,
+      "relative_flux_ratio_difference": 0.01
+    },
+    {
+      "N": 1000,
+      "critical_scope": "Global torsion homotopy and K-theory jump despite smooth local 11D geometric parameter convergence. Contractible string windings can remain dynamical, non-topologically protected excitations.",
+      "equal_complex_K0_torsion_order": 1000000,
+      "equal_mixed_periods": [
+        1000,
+        1000
+      ],
+      "equal_pi1": "Z_1000",
+      "equal_spin_structure_count": 2,
+      "near_equal_Y_diffeomorphic": "S2 x S3",
+      "near_equal_complex_K0_torsion_order": 1,
+      "near_equal_mixed_periods": [
+        1001,
+        1000
+      ],
+      "near_equal_pi1": "trivial",
+      "near_equal_spin_structure_count": 1,
+      "relative_flux_ratio_difference": 0.001
+    }
+  ],
+  "no_physical_duality_spectrum_calculated": true,
+  "six_flux_orbit_sizes": [
+    24,
+    8,
+    3,
+    1
+  ],
+  "status": "PASS_SL2Z_TORSION_ORBIT_AND_SPINOR_DECK_SEPARATION"
+}

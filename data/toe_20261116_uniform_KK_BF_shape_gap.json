@@ -1,0 +1,140 @@
+{
+  "samples": [
+    {
+      "BF_violating_signed_Fourier_labels": 4,
+      "first_lambda": 9.42477796076938,
+      "max_actual_BF_gap": 1.0169440813078374,
+      "tau": [
+        0.0,
+        1.0
+      ],
+      "witness_BF_gap": 1.0169440813078374,
+      "witness_Fourier_label": [
+        1,
+        0
+      ],
+      "witness_lambda": 9.42477796076938
+    },
+    {
+      "BF_violating_signed_Fourier_labels": 6,
+      "first_lambda": 10.882796185405308,
+      "max_actual_BF_gap": 0.46354185041878715,
+      "tau": [
+        0.5,
+        0.8660254037844386
+      ],
+      "witness_BF_gap": 0.4635418504187854,
+      "witness_Fourier_label": [
+        1,
+        0
+      ],
+      "witness_lambda": 10.882796185405308
+    },
+    {
+      "BF_violating_signed_Fourier_labels": 2,
+      "first_lambda": 7.853981633974483,
+      "max_actual_BF_gap": 1.533015606017793,
+      "tau": [
+        0.3,
+        1.2
+      ],
+      "witness_BF_gap": 1.533015606017793,
+      "witness_Fourier_label": [
+        1,
+        0
+      ],
+      "witness_lambda": 7.853981633974483
+    },
+    {
+      "BF_violating_signed_Fourier_labels": 2,
+      "first_lambda": 4.71238898038469,
+      "max_actual_BF_gap": 2.1981791095944807,
+      "tau": [
+        0.0,
+        2.0
+      ],
+      "witness_BF_gap": 2.1981791095944807,
+      "witness_Fourier_label": [
+        1,
+        0
+      ],
+      "witness_lambda": 4.71238898038469
+    },
+    {
+      "BF_violating_signed_Fourier_labels": 6,
+      "first_lambda": 0.9424777960769379,
+      "max_actual_BF_gap": 2.249975283026062,
+      "tau": [
+        0.0,
+        10.0
+      ],
+      "witness_BF_gap": 2.249975283026062,
+      "witness_Fourier_label": [
+        2,
+        0
+      ],
+      "witness_lambda": 3.7699111843077517
+    },
+    {
+      "BF_violating_signed_Fourier_labels": 22,
+      "first_lambda": 0.09424777960769379,
+      "max_actual_BF_gap": 2.2416539925778647,
+      "tau": [
+        0.0,
+        100.0
+      ],
+      "witness_BF_gap": 1.7955656317415234,
+      "witness_Fourier_label": [
+        4,
+        0
+      ],
+      "witness_lambda": 1.5079644737231006
+    },
+    {
+      "BF_violating_signed_Fourier_labels": 224,
+      "first_lambda": 0.0009424777960769379,
+      "max_actual_BF_gap": 2.2499945815265807,
+      "tau": [
+        0.0,
+        10000.0
+      ],
+      "witness_BF_gap": 1.492682852582658,
+      "witness_Fourier_label": [
+        33,
+        0
+      ],
+      "witness_lambda": 1.0263583199277855
+    },
+    {
+      "BF_violating_signed_Fourier_labels": 2256,
+      "first_lambda": 9.424777960769379e-06,
+      "max_actual_BF_gap": 2.249999584425712,
+      "tau": [
+        0.0,
+        1000000.0
+      ],
+      "witness_BF_gap": 1.4734190280285224,
+      "witness_Fourier_label": [
+        326,
+        0
+      ],
+      "witness_lambda": 1.0016277025587266
+    }
+  ],
+  "scope": "Exact shape-uniform lower bound within the specific classical equal-flux 11D KK subsystem. No full quantum vacuum-stability conclusion.",
+  "status": "PASS_SHARP_UNIFORM_BF_GAP_FOR_ALL_EQUAL_FLUX_TORUS_SHAPES",
+  "theorem": {
+    "BF_depth_away_from_bound_in_m2L2": 0.46354185041878715,
+    "gap_at_lambda_1": 1.4721359549995796,
+    "guaranteed_witness_lambda_interval": [
+      1,
+      10.882796185405306
+    ],
+    "hex_optimality": "At hexagonal shape norm a^2+a*b+b^2 is never 2 mod 3; next shell >=3 and lambda >=3*lambdahex >12, so only shortest shell contributes.",
+    "hexagonal_shortest_lambda": 10.882796185405306,
+    "limitation": "Classical two-derivative physical sphere-odd KK subsystem at equal flux; not a theorem for unequal flux, higher-derivative corrections or varying Planck-scale torus cycles.",
+    "sharp_minimum_over_torus_shapes": "sqrt(4+32*pi*sqrt(3)) - 2*pi*sqrt(3) - 2",
+    "shortest_lambda_universal_upper_bound": 10.882796185405306,
+    "witness_selection": "If lambda1>=1, use primitive shortest vector; if lambda1<1, use ceil(1/sqrt(lambda1)) times shortest vector."
+  }
+}

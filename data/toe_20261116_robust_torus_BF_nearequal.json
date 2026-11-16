@@ -1,0 +1,150 @@
+{
+  "continuity_statement": "For a smooth family of physical gauge-fixed fluctuation operators, an isolated negative-BF mode with order-one margin at eta=1/2 remains below BF for all eta sufficiently near 1/2. This implies sufficiently large N in (N+1,N,N); no explicit N threshold is certified.",
+  "eight_derivative_scope": "A bounded flux-independent coefficient C multiplying (lp/L)^6 cannot remove the equal-flux gap as N grows. Full 8-derivative coefficient, eigenmode mixing and corrected backgrounds have NOT been calculated.",
+  "equal_flux_BF_gap": 1.0169440813078374,
+  "equal_flux_critical_C_at_N": "Ccrit(N) = (sqrt(4+48*pi)-3*pi-2)*(9*pi*N/2)^2",
+  "equal_flux_mass2_L2": -5.016944081307837,
+  "equal_flux_mode": "Physical sphere-exchange odd scalar-transverse-Maxwell mode, L=1",
+  "equal_flux_sample": [
+    {
+      "BF_violation": 1.0169440813078374,
+      "L3_over_lp3": 14.137166941154069,
+      "N0": 1,
+      "N1": 1,
+      "N2": 1,
+      "hypothetical_Ccrit_for_shift_C_lp_over_L_to_sixth": 203.24592455588652,
+      "lambda1": 9.42477796076938,
+      "physical_odd_scalar_mass2_L2": -5.016944081307837,
+      "sphere_radius_over_lp": 0.9871394392030887,
+      "torus_cycle_radius_over_lp": 0.7876233178997432
+    },
+    {
+      "BF_violation": 1.0169440813078374,
+      "L3_over_lp3": 141.3716694115407,
+      "N0": 10,
+      "N1": 10,
+      "N2": 10,
+      "hypothetical_Ccrit_for_shift_C_lp_over_L_to_sixth": 20324.592455588656,
+      "lambda1": 9.42477796076938,
+      "physical_odd_scalar_mass2_L2": -5.016944081307837,
+      "sphere_radius_over_lp": 2.126727451717754,
+      "torus_cycle_radius_over_lp": 1.696882998761217
+    },
+    {
+      "BF_violation": 1.0169440813078374,
+      "L3_over_lp3": 1413.7166941154069,
+      "N0": 100,
+      "N1": 100,
+      "N2": 100,
+      "hypothetical_Ccrit_for_shift_C_lp_over_L_to_sixth": 2032459.2455588651,
+      "lambda1": 9.42477796076938,
+      "physical_odd_scalar_mass2_L2": -5.016944081307837,
+      "sphere_radius_over_lp": 4.581895398223837,
+      "torus_cycle_radius_over_lp": 3.655823597456496
+    },
+    {
+      "BF_violation": 1.0169440813078374,
+      "L3_over_lp3": 14137.16694115407,
+      "N0": 1000,
+      "N1": 1000,
+      "N2": 1000,
+      "hypothetical_Ccrit_for_shift_C_lp_over_L_to_sixth": 203245924.55588654,
+      "lambda1": 9.42477796076938,
+      "physical_odd_scalar_mass2_L2": -5.016944081307837,
+      "sphere_radius_over_lp": 9.871394392030886,
+      "torus_cycle_radius_over_lp": 7.876233178997431
+    },
+    {
+      "BF_violation": 1.0169440813078374,
+      "L3_over_lp3": 141371.6694115407,
+      "N0": 10000,
+      "N1": 10000,
+      "N2": 10000,
+      "hypothetical_Ccrit_for_shift_C_lp_over_L_to_sixth": 20324592455.588654,
+      "lambda1": 9.42477796076938,
+      "physical_odd_scalar_mass2_L2": -5.016944081307837,
+      "sphere_radius_over_lp": 21.267274517177537,
+      "torus_cycle_radius_over_lp": 16.968829987612168
+    }
+  ],
+  "near_equal_geometry": [
+    {
+      "L_over_lp": 5.195567229339403,
+      "N": 10,
+      "NOT_A_PHYSICAL_UNEQUAL_FLUX_EIGENMASS": true,
+      "T2_area_over_L2": 4.493346901851755,
+      "equal_flux_formula_evaluated_at_lambda_PROXY_ONLY": -5.237985601759268,
+      "eta": 0.6336872976824344,
+      "homogeneous_BF_gap": 0.34979843707153135,
+      "sphere_curvatures": [
+        6.5347491907297375,
+        5.4652508092702625
+      ],
+      "sphere_radii_over_lp": [
+        2.032443619691293,
+        2.2224291268986813
+      ],
+      "square_torus_first_lambda": 8.785971452168086,
+      "torus_cycle_radius_over_lp": 1.7528230471774886
+    },
+    {
+      "L_over_lp": 11.22293597500458,
+      "N": 100,
+      "NOT_A_PHYSICAL_UNEQUAL_FLUX_EIGENMASS": true,
+      "T2_area_over_L2": 4.210826942825417,
+      "equal_flux_formula_evaluated_at_lambda_PROXY_ONLY": -5.034512038954453,
+      "eta": 0.5149132049864158,
+      "homogeneous_BF_gap": 0.004446837761457312,
+      "sphere_curvatures": [
+        6.059652819945663,
+        5.940347180054337
+      ],
+      "sphere_radii_over_lp": [
+        4.55913669902918,
+        4.60469184262789
+      ],
+      "square_torus_first_lambda": 9.375454783679109,
+      "torus_cycle_radius_over_lp": 3.665306639215567
+    },
+    {
+      "L_over_lp": 24.179871258471227,
+      "N": 1000,
+      "NOT_A_PHYSICAL_UNEQUAL_FLUX_EIGENMASS": true,
+      "T2_area_over_L2": 4.190895589835992,
+      "equal_flux_formula_evaluated_at_lambda_PROXY_ONLY": -5.01863402007378,
+      "eta": 0.5014992380185931,
+      "homogeneous_BF_gap": 4.4954166423078426e-05,
+      "sphere_curvatures": [
+        6.005996952074373,
+        5.994003047925627
+      ],
+      "sphere_radii_over_lp": [
+        9.866461611561173,
+        9.876327994281986
+      ],
+      "square_torus_first_lambda": 9.420043224198386,
+      "torus_cycle_radius_over_lp": 7.878209697493949
+    },
+    {
+      "L_over_lp": 52.09397061315126,
+      "N": 10000,
+      "NOT_A_PHYSICAL_UNEQUAL_FLUX_EIGENMASS": true,
+      "T2_area_over_L2": 4.188999754246863,
+      "equal_flux_formula_evaluated_at_lambda_PROXY_ONLY": -5.017112390832118,
+      "eta": 0.5001499924880018,
+      "homogeneous_BF_gap": 4.4995491648592625e-07,
+      "sphere_curvatures": [
+        6.000599969952008,
+        5.999400030047992
+      ],
+      "sphere_radii_over_lp": [
+        21.266211215562294,
+        21.26833783651373
+      ],
+      "square_torus_first_lambda": 9.424306498068827,
+      "torus_cycle_radius_over_lp": 16.96925436919988
+    }
+  ],
+  "status": "PASS_EQUAL_FLUX_KK_BF_ORDER_ONE_AND_NEAR_EQUAL_GEOMETRIC_LIMIT",
+  "warning": "The near-equal lower-mass proxy is evaluated with the equal-flux closed-form dispersion and is NOT a solution of the unequal-flux coupled spectrum."
+}
