@@ -1,0 +1,123 @@
+{
+  "metric_and_flux": {
+    "equal_fiber_radius_over_ads_radius": "2/(3*N)",
+    "equal_unit_ricci_volume": "16*pi**3/(27*N1)",
+    "equal_string_frame_ads_radius_to_fourth_over_alpha_prime_squared": "27*pi*N0*N1*gs/4",
+    "equal_leading_holographic_a_and_c": "27*N0**2*N1/64",
+    "equal_winding_mass_squared_ads_prefactor": "3*pi*N0/N1"
+  },
+  "homogeneous_radions": {
+    "log_radius_jacobian": [
+      [
+        "1",
+        "0",
+        "1/2"
+      ],
+      [
+        "0",
+        "1",
+        "1/2"
+      ],
+      [
+        "0",
+        "0",
+        "-3/2"
+      ]
+    ],
+    "matching_radion_kinetic_and_all_five_potential_terms": true,
+    "gubser_mitra_splitting_squared": "16*(20*eta**2 - 20*eta + 9)"
+  },
+  "topology_and_spin": {
+    "charge_samples": [
+      {
+        "chern_numbers": [
+          1,
+          1
+        ],
+        "fiber_fundamental_group_order": 1,
+        "torus_translation_smith_factors": [
+          1,
+          1
+        ]
+      },
+      {
+        "chern_numbers": [
+          2,
+          2
+        ],
+        "fiber_fundamental_group_order": 2,
+        "torus_translation_smith_factors": [
+          2,
+          2
+        ]
+      },
+      {
+        "chern_numbers": [
+          3,
+          3
+        ],
+        "fiber_fundamental_group_order": 3,
+        "torus_translation_smith_factors": [
+          3,
+          3
+        ]
+      },
+      {
+        "chern_numbers": [
+          6,
+          10
+        ],
+        "fiber_fundamental_group_order": 2,
+        "torus_translation_smith_factors": [
+          2,
+          2
+        ]
+      },
+      {
+        "chern_numbers": [
+          5,
+          0
+        ],
+        "fiber_fundamental_group_order": 5,
+        "torus_translation_smith_factors": [
+          5,
+          5
+        ]
+      },
+      {
+        "chern_numbers": [
+          0,
+          7
+        ],
+        "fiber_fundamental_group_order": 7,
+        "torus_translation_smith_factors": [
+          7,
+          7
+        ]
+      },
+      {
+        "chern_numbers": [
+          11,
+          -13
+        ],
+        "fiber_fundamental_group_order": 1,
+        "torus_translation_smith_factors": [
+          1,
+          1
+        ]
+      }
+    ],
+    "equal_flux_supersymmetric_iib_quotient_orders_for_some_lift": [
+      1,
+      2
+    ],
+    "k2_requires_alternative_spin_lift": true
+  },
+  "planar_D3_shell": {
+    "radial_flux_jump": "4*Qminus - 4*Qplus",
+    "shell_position_is_free_in_classical_planar_solution": true,
+    "breathing_gradient_flow_potential": "Q**2*exp(-40*b/3)/2 - 20*exp(-16*b/3)",
+    "breathing_superpotential": "-Q*exp(-20*b/3) + 10*exp(-8*b/3)",
+    "simultaneous_planar_metric_and_scalar_junctions": true
+  }
+}
