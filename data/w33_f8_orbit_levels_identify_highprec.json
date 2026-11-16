@@ -1,0 +1,56 @@
+[
+ {
+  "orbit": 0,
+  "type": "((0, 134), (1, 107), (2, 14))",
+  "value": "2.8634243625570458461476357731197",
+  "gradient": "4.98e-90",
+  "findpoly": "None",
+  "pslq_Q_cos2pi9": "None",
+  "identify": "None"
+ },
+ {
+  "orbit": 1,
+  "type": "((0, 136), (1, 103), (2, 16))",
+  "value": "2.7318227568180159808045120512714",
+  "gradient": "6.65e-90",
+  "findpoly": "None",
+  "pslq_Q_cos2pi9": "None",
+  "identify": "None"
+ },
+ {
+  "orbit": 3,
+  "type": "B",
+  "value": "2.8481957610783231615586100169605",
+  "gradient": "6.81e-90",
+  "findpoly": "None",
+  "pslq_Q_cos2pi9": "None",
+  "identify": "None"
+ },
+ {
+  "orbit": 5,
+  "type": "B",
+  "value": "2.8123447617702220125353560928643",
+  "gradient": "4.74e-90",
+  "findpoly": "None",
+  "pslq_Q_cos2pi9": "None",
+  "identify": "None"
+ },
+ {
+  "orbit": 6,
+  "type": "((0, 142), (1, 91), (2, 22))",
+  "value": "2.8094922052473459131340302841423",
+  "gradient": "1.47e-89",
+  "findpoly": "None",
+  "pslq_Q_cos2pi9": "None",
+  "identify": "None"
+ },
+ {
+  "orbit": 7,
+  "type": "((0, 134), (1, 107), (2, 14))",
+  "value": "2.9454579103540808816766963512436",
+  "gradient": "6.07e-90",
+  "findpoly": "None",
+  "pslq_Q_cos2pi9": "None",
+  "identify": "None"
+ }
+]

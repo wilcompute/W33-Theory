@@ -68,3 +68,9 @@ This is the other track's open item: the largest purity at which all 567 covered
 ## Addendum B: orbit B\* is out of reach of the symmetric pipeline
 
 The minimising type-B orbit has a stabiliser of order only 18. That leaves 72 representative blocks, many with trivial stabiliser, whose commutants are full Hermitian spaces. The resulting SDP would have on the order of 10⁵ parameters with dense sampled constraints, too large here. B\* needs more symmetry (none is available in H) or the face technique on its positive-dimensional minimiser family.
+
+## Addendum C: the six remaining orbit levels at 90 digits
+
+The six unidentified orbit minima (orbits 0, 1, 3, 5 = 10, 6, 7) were re-polished at 90 digits, with final gradients ≈ 10⁻⁹⁰. findpoly finds **no polynomial of degree ≤ 12 with coefficients ≤ 10⁸** for any of them, and pslq finds no relation over Q(cos 2π/9).
+- So they are not low-height, low-degree algebraic numbers. Compare c₈, 2.7410899854 and orbit 15's (87 − 16γ − 16γ²)/9, all cubic with small coefficients.
+- They are either of high degree (plausible for minimisers without a large residual symmetry: these orbits have stabilisers of order 7–14) or have large height.

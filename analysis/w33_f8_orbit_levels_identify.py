@@ -21,9 +21,10 @@ def model(rep):
     sys.argv = _argv
     return G["weights"], G["N"]
 results = []
-mp.mp.dps = 40; gam = 2 * mp.cos(2 * mp.pi / 9)
+mp.mp.dps = int(os.environ.get("DPS", "40")); gam = 2 * mp.cos(2 * mp.pi / 9)
+ONLY = {int(t) for t in os.environ.get("ONLY", "").split(",") if t}
 for r in per:
-    if r["attains_c8"]: continue
+    if r["attains_c8"] or (ONLY and r["orbit"] not in ONLY): continue
     weights, N = model(r["rep"])
     W = [(w, x, z) for (x, z), w in weights.items()]
     sgn = {(x, z): np.array([(-1) ** pc(z & (y ^ x)) for y in range(N)]) for (_, x, z) in W}
@@ -49,9 +50,9 @@ for r in per:
         f /= nn * nn; g = [gi / (nn * nn) - 2 * f * psi[i] / nn for i, gi in enumerate(g)]
         return f, [2 * mp.re(z) for z in g] + [2 * mp.im(z) for z in g]
     x = [mp.mpf(t) for t in v]; gn = None
-    for it in range(6):
+    for it in range(int(os.environ.get("NEWTON", "6"))):
         f, g = mp_fg(x); gn = mp.sqrt(mp.fsum(t * t for t in g))
-        if gn < mp.mpf(10) ** -35: break
+        if gn < mp.mpf(10) ** -(mp.mp.dps - 6): break
         h = mp.mpf(10) ** -18; n2 = 2 * N; H = mp.matrix(n2, n2)
         for i in range(n2):
             xp = list(x); xm = list(x); xp[i] += h; xm[i] -= h; gp = mp_fg(xp)[1]; gm = mp_fg(xm)[1]
@@ -64,11 +65,11 @@ for r in per:
         x = [a_ - b_ for a_, b_ in zip(x, step)]
     c = mp_fg(x)[0]
     fp = None
-    for deg in range(1, 9):
-        fp = mp.findpoly(c, deg, maxcoeff=10 ** 6)
+    for deg in range(1, int(os.environ.get("MAXDEG", "8")) + 1):
+        fp = mp.findpoly(c, deg, maxcoeff=int(float(os.environ.get("MAXCOEFF", "1e6"))))
         if fp: break
     pq = mp.pslq([c, 1, gam, gam * gam], maxcoeff=10 ** 5, maxsteps=10 ** 6)
     rec = dict(orbit=r["orbit"], type=r["type"], value=mp.nstr(c, 32), gradient=mp.nstr(gn, 3), findpoly=str(fp), pslq_Q_cos2pi9=str(pq),
                identify=str(mp.identify(c, ["sqrt(2)", "sqrt(3)", "sqrt(5)", "sqrt(6)", "sqrt(7)", "sqrt(13)", "sqrt(17)", "sqrt(37)"])))
     results.append(rec); print(rec, flush=True)
-json.dump(results, open(os.path.join(ROOT, "data", "w33_f8_orbit_levels_identify.json"), "w"), indent=1)
+json.dump(results, open(os.path.join(ROOT, "data", "w33_f8_orbit_levels_identify.json" if not ONLY else "w33_f8_orbit_levels_identify_highprec.json"), "w"), indent=1)
