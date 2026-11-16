@@ -10,11 +10,11 @@ import mpmath as mp
 from scipy.optimize import minimize
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.dirname(HERE)
 tsrc = open(os.path.join(HERE, "w33_regulus_torus_clifford_eigenspaces.py"), encoding="utf-8").read()
-_argv = sys.argv; sys.argv = ["x", "5", "1", "1", "1"]
+_argv = sys.argv; sys.argv = ["x", os.environ.get("REG_K", "5"), "1", "1", "1"]
 gt = {"__name__": "x", "__file__": os.path.join(HERE, "w33_regulus_torus_clifford_eigenspaces.py")}
 exec(tsrc[: tsrc.index("t0 = time.time(); tor")], gt); sys.argv = _argv
 q, d, fg, trace, mul, clifford, torus_elements, rng = (gt[k] for k in ("q", "d", "fg", "trace", "mul", "clifford", "torus_elements", "rng"))
-TARGET = 12.48962076778924
+TARGET = float(os.environ.get("TARGET", "12.48962076778924"))
 mp.mp.dps = 50
 t00 = time.time(); log = lambda *a: print(*a, f"[{time.time() - t00:.0f}s]", flush=True)
 tor = torus_elements(); W = clifford(tor[0], tor[0])
@@ -103,11 +103,23 @@ for it in range(6):
             for j in range(n): step[j] += co * V[j, kk]
     x = [a - b for a, b in zip(x, step)]
 c = val_grad(x)[0]
-g33 = 2 * mp.cos(2 * mp.pi / 33); g11 = 2 * mp.cos(2 * mp.pi / 11)
-res = dict(value=mp.nstr(c, 45), history=hist,
-           findpoly={str(n_): str(mp.findpoly(c, n_, maxcoeff=10 ** 9)) for n_ in (2, 3, 4, 5, 6, 8, 10)},
-           pslq_Q_cos2pi_33=str(mp.pslq([c] + [g33 ** kk for kk in range(10)], maxcoeff=10 ** 7, maxsteps=10 ** 7)),
-           pslq_Q_cos2pi_11=str(mp.pslq([c] + [g11 ** kk for kk in range(5)], maxcoeff=10 ** 7, maxsteps=10 ** 7)),
-           pslq_Q_cos2pi_11_sqrt33=str(mp.pslq([c] + [g11 ** kk for kk in range(5)] + [mp.sqrt(33) * g11 ** kk for kk in range(5)], maxcoeff=10 ** 7, maxsteps=10 ** 7)))
+from math import gcd
+Nf = q + 1; degf = sum(1 for j in range(1, Nf) if gcd(j, Nf) == 1) // 2
+gN = 2 * mp.cos(2 * mp.pi / Nf)
+rel = mp.pslq([c] + [gN ** kk for kk in range(degf)], maxcoeff=10 ** 7, maxsteps=10 ** 7)
+res = dict(q=q, value=mp.nstr(c, 45), history=hist, field=f"Q(cos 2pi/{Nf})", degree=degf, pslq=str(rel))
+if rel and rel[0]:
+    coeffs = [mp.mpf(-v) / rel[0] for v in rel[1:]]
+    def conj_val(k):
+        g = 2 * mp.cos(2 * mp.pi * k / Nf); return mp.fsum(cf * g ** i for i, cf in enumerate(coeffs))
+    ks = [k for k in range(1, Nf // 2 + 1) if gcd(k, Nf) == 1]
+    conj = sorted(conj_val(k) for k in ks)
+    poly = [mp.mpf(1)]
+    for r_ in conj:
+        y = Nf * r_; nw = [mp.mpf(0)] * (len(poly) + 1)
+        for i, a in enumerate(poly): nw[i] += a; nw[i + 1] -= a * y
+        poly = nw
+    res.update(conjugates=[mp.nstr(v, 20) for v in conj], smallest_conjugate=bool(abs(conj[0] - c) < mp.mpf(10) ** -30),
+               minimal_polynomial_of_Ntau=[str(int(mp.nint(a))) for a in poly], max_dist_to_int=mp.nstr(max(abs(a - mp.nint(a)) for a in poly), 3))
 log(res)
-json.dump(res, open(os.path.join(ROOT, "data", "w33_q32_torus_level_eigenspace_newton.json"), "w"), indent=1)
+json.dump(res, open(os.path.join(ROOT, "data", "w33_q32_torus_level_eigenspace_newton.json" if q == 32 else f"w33_q{q}_torus_level_eigenspace_newton.json"), "w"), indent=1)

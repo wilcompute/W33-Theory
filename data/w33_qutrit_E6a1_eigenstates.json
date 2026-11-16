@@ -1,0 +1,44 @@
+{
+ "order9_in_PSp43": 5760,
+ "E6a1_class_size": 5760,
+ "eigenstates": 513,
+ "stabiliser_fidelities": [
+  {
+   "fidelity": 0.3924543207,
+   "count": 324,
+   "in_Q_cos2pi9": "[9, -2, -1, 0]",
+   "matches_11253": []
+  },
+  {
+   "fidelity": 0.4444444444,
+   "count": 162,
+   "in_Q_cos2pi9": "[9, -4, 0, 0]",
+   "matches_11253": [
+    0.666666667
+   ]
+  },
+  {
+   "fidelity": 1.0,
+   "count": 27,
+   "in_Q_cos2pi9": "[1, -1, 0, 0]",
+   "matches_11253": []
+  }
+ ],
+ "pauli_levels": [
+  {
+   "value": 0.1111111111,
+   "in_Q": "[-9, 1, 0, 0]",
+   "matches_11253": []
+  },
+  {
+   "value": 0.3333333333,
+   "in_Q": "[3, -1, 0, 0]",
+   "matches_11253": []
+  },
+  {
+   "value": 1.0,
+   "in_Q": "[1, -1, 0, 0]",
+   "matches_11253": []
+  }
+ ]
+}
