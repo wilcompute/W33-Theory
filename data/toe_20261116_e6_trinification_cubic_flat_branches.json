@@ -1,0 +1,62 @@
+{
+  "status": "PASS_TRINIFICATION_CUBIC_F_D_FLAT_MODULUS",
+  "SL3_triplet_invariance_exact_integer_example": true,
+  "flat_equal_scalar_triads": [
+    {
+      "values": [
+        1,
+        1,
+        1
+      ],
+      "cubic": 0,
+      "F_norm_squared": 0,
+      "D_flat": true,
+      "unbroken_manifest_gauge": "SU(3)_diagonal when a=b=c != 0"
+    },
+    {
+      "values": [
+        2,
+        2,
+        2
+      ],
+      "cubic": 0,
+      "F_norm_squared": 0,
+      "D_flat": true,
+      "unbroken_manifest_gauge": "SU(3)_diagonal when a=b=c != 0"
+    },
+    {
+      "values": [
+        7,
+        7,
+        7
+      ],
+      "cubic": 0,
+      "F_norm_squared": 0,
+      "D_flat": true,
+      "unbroken_manifest_gauge": "SU(3)_diagonal when a=b=c != 0"
+    }
+  ],
+  "rank_one_F_flat_D_not_flat": [
+    {
+      "s": "1",
+      "F_gradient_square": "0",
+      "D_moment_norm_squared": "4/3",
+      "expected_D2": "4*s^4/3"
+    },
+    {
+      "s": "2",
+      "F_gradient_square": "0",
+      "D_moment_norm_squared": "64/3",
+      "expected_D2": "4*s^4/3"
+    },
+    {
+      "s": "7",
+      "F_gradient_square": "0",
+      "D_moment_norm_squared": "9604/3",
+      "expected_D2": "4*s^4/3"
+    }
+  ],
+  "A_only_F_and_D_common_nonzero": "none (rank <=1 from F; rank 0 or 3 from D)",
+  "general_scale_modulus": "For homogeneous cubic W, F(lambda fields)=lambda^2 F(fields); all D equations also scale quadratically. Nonzero F=D=0 vacua cannot fix the overall scale without extra terms.",
+  "physical_scope": "A precise obstruction for cubic-only SU3^3 superpotential; no claim about all E6 models, higher invariants, D-dependent FI terms, or physics of the actual SM vacuum."
+}

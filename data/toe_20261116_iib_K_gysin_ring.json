@@ -1,0 +1,815 @@
+{
+  "status": "PASS_K_THEORETIC_GYSIN_RING_AND_COVER_SPINOR_PHASE",
+  "examples": [
+    {
+      "charges": [
+        1,
+        1
+      ],
+      "gcd": 1,
+      "K0_additive": {
+        "free_rank": 2,
+        "torsion_invariant_factors": []
+      },
+      "K1_additive": {
+        "free_rank": 2,
+        "torsion_invariant_factors": []
+      },
+      "gysin_euler_matrix": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "gysin_nonzero_smith_factors": [
+        1,
+        1
+      ],
+      "u_torsion_class_coefficients_in_X_Y_XY": [
+        1,
+        1,
+        1
+      ],
+      "u_square_coefficient_mod_g": 0,
+      "u_square_nonzero": false,
+      "XY_order": 1,
+      "H1_pi1": "Z_1",
+      "spin_structure_count": 1,
+      "total_space_is_spin": true,
+      "qualifier": "Untwisted topological K groups/ring only; no automatic claim about physical conserved brane charges."
+    },
+    {
+      "charges": [
+        2,
+        2
+      ],
+      "gcd": 2,
+      "K0_additive": {
+        "free_rank": 2,
+        "torsion_invariant_factors": [
+          2,
+          2
+        ]
+      },
+      "K1_additive": {
+        "free_rank": 2,
+        "torsion_invariant_factors": []
+      },
+      "gysin_euler_matrix": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          2,
+          2,
+          0
+        ]
+      ],
+      "gysin_nonzero_smith_factors": [
+        2,
+        2
+      ],
+      "u_torsion_class_coefficients_in_X_Y_XY": [
+        1,
+        1,
+        1
+      ],
+      "u_square_coefficient_mod_g": 0,
+      "u_square_nonzero": false,
+      "XY_order": 2,
+      "H1_pi1": "Z_2",
+      "spin_structure_count": 2,
+      "total_space_is_spin": true,
+      "qualifier": "Untwisted topological K groups/ring only; no automatic claim about physical conserved brane charges."
+    },
+    {
+      "charges": [
+        3,
+        3
+      ],
+      "gcd": 3,
+      "K0_additive": {
+        "free_rank": 2,
+        "torsion_invariant_factors": [
+          3,
+          3
+        ]
+      },
+      "K1_additive": {
+        "free_rank": 2,
+        "torsion_invariant_factors": []
+      },
+      "gysin_euler_matrix": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          9,
+          3,
+          3,
+          0
+        ]
+      ],
+      "gysin_nonzero_smith_factors": [
+        3,
+        3
+      ],
+      "u_torsion_class_coefficients_in_X_Y_XY": [
+        1,
+        1,
+        1
+      ],
+      "u_square_coefficient_mod_g": 2,
+      "u_square_nonzero": true,
+      "XY_order": 3,
+      "H1_pi1": "Z_3",
+      "spin_structure_count": 1,
+      "total_space_is_spin": true,
+      "qualifier": "Untwisted topological K groups/ring only; no automatic claim about physical conserved brane charges."
+    },
+    {
+      "charges": [
+        4,
+        4
+      ],
+      "gcd": 4,
+      "K0_additive": {
+        "free_rank": 2,
+        "torsion_invariant_factors": [
+          4,
+          4
+        ]
+      },
+      "K1_additive": {
+        "free_rank": 2,
+        "torsion_invariant_factors": []
+      },
+      "gysin_euler_matrix": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          16,
+          4,
+          4,
+          0
+        ]
+      ],
+      "gysin_nonzero_smith_factors": [
+        4,
+        4
+      ],
+      "u_torsion_class_coefficients_in_X_Y_XY": [
+        1,
+        1,
+        1
+      ],
+      "u_square_coefficient_mod_g": 2,
+      "u_square_nonzero": true,
+      "XY_order": 4,
+      "H1_pi1": "Z_4",
+      "spin_structure_count": 2,
+      "total_space_is_spin": true,
+      "qualifier": "Untwisted topological K groups/ring only; no automatic claim about physical conserved brane charges."
+    },
+    {
+      "charges": [
+        3,
+        0
+      ],
+      "gcd": 3,
+      "K0_additive": {
+        "free_rank": 2,
+        "torsion_invariant_factors": [
+          3,
+          3
+        ]
+      },
+      "K1_additive": {
+        "free_rank": 2,
+        "torsion_invariant_factors": []
+      },
+      "gysin_euler_matrix": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          0
+        ]
+      ],
+      "gysin_nonzero_smith_factors": [
+        3,
+        3
+      ],
+      "u_torsion_class_coefficients_in_X_Y_XY": [
+        1,
+        0,
+        0
+      ],
+      "u_square_coefficient_mod_g": 0,
+      "u_square_nonzero": false,
+      "XY_order": 3,
+      "H1_pi1": "Z_3",
+      "spin_structure_count": 1,
+      "total_space_is_spin": true,
+      "qualifier": "Untwisted topological K groups/ring only; no automatic claim about physical conserved brane charges."
+    },
+    {
+      "charges": [
+        0,
+        3
+      ],
+      "gcd": 3,
+      "K0_additive": {
+        "free_rank": 2,
+        "torsion_invariant_factors": [
+          3,
+          3
+        ]
+      },
+      "K1_additive": {
+        "free_rank": 2,
+        "torsion_invariant_factors": []
+      },
+      "gysin_euler_matrix": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          0
+        ]
+      ],
+      "gysin_nonzero_smith_factors": [
+        3,
+        3
+      ],
+      "u_torsion_class_coefficients_in_X_Y_XY": [
+        0,
+        1,
+        0
+      ],
+      "u_square_coefficient_mod_g": 0,
+      "u_square_nonzero": false,
+      "XY_order": 3,
+      "H1_pi1": "Z_3",
+      "spin_structure_count": 1,
+      "total_space_is_spin": true,
+      "qualifier": "Untwisted topological K groups/ring only; no automatic claim about physical conserved brane charges."
+    },
+    {
+      "charges": [
+        6,
+        10
+      ],
+      "gcd": 2,
+      "K0_additive": {
+        "free_rank": 2,
+        "torsion_invariant_factors": [
+          2,
+          2
+        ]
+      },
+      "K1_additive": {
+        "free_rank": 2,
+        "torsion_invariant_factors": []
+      },
+      "gysin_euler_matrix": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          10,
+          0,
+          0,
+          0
+        ],
+        [
+          60,
+          10,
+          6,
+          0
+        ]
+      ],
+      "gysin_nonzero_smith_factors": [
+        2,
+        2
+      ],
+      "u_torsion_class_coefficients_in_X_Y_XY": [
+        3,
+        5,
+        15
+      ],
+      "u_square_coefficient_mod_g": 0,
+      "u_square_nonzero": false,
+      "XY_order": 2,
+      "H1_pi1": "Z_2",
+      "spin_structure_count": 2,
+      "total_space_is_spin": true,
+      "qualifier": "Untwisted topological K groups/ring only; no automatic claim about physical conserved brane charges."
+    },
+    {
+      "charges": [
+        8,
+        12
+      ],
+      "gcd": 4,
+      "K0_additive": {
+        "free_rank": 2,
+        "torsion_invariant_factors": [
+          4,
+          4
+        ]
+      },
+      "K1_additive": {
+        "free_rank": 2,
+        "torsion_invariant_factors": []
+      },
+      "gysin_euler_matrix": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          8,
+          0,
+          0,
+          0
+        ],
+        [
+          12,
+          0,
+          0,
+          0
+        ],
+        [
+          96,
+          12,
+          8,
+          0
+        ]
+      ],
+      "gysin_nonzero_smith_factors": [
+        4,
+        4
+      ],
+      "u_torsion_class_coefficients_in_X_Y_XY": [
+        2,
+        3,
+        6
+      ],
+      "u_square_coefficient_mod_g": 0,
+      "u_square_nonzero": false,
+      "XY_order": 4,
+      "H1_pi1": "Z_4",
+      "spin_structure_count": 2,
+      "total_space_is_spin": true,
+      "qualifier": "Untwisted topological K groups/ring only; no automatic claim about physical conserved brane charges."
+    },
+    {
+      "charges": [
+        -4,
+        -4
+      ],
+      "gcd": 4,
+      "K0_additive": {
+        "free_rank": 2,
+        "torsion_invariant_factors": [
+          4,
+          4
+        ]
+      },
+      "K1_additive": {
+        "free_rank": 2,
+        "torsion_invariant_factors": []
+      },
+      "gysin_euler_matrix": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          -4,
+          0,
+          0,
+          0
+        ],
+        [
+          -4,
+          0,
+          0,
+          0
+        ],
+        [
+          16,
+          -4,
+          -4,
+          0
+        ]
+      ],
+      "gysin_nonzero_smith_factors": [
+        4,
+        4
+      ],
+      "u_torsion_class_coefficients_in_X_Y_XY": [
+        -1,
+        -1,
+        1
+      ],
+      "u_square_coefficient_mod_g": 2,
+      "u_square_nonzero": true,
+      "XY_order": 4,
+      "H1_pi1": "Z_4",
+      "spin_structure_count": 2,
+      "total_space_is_spin": true,
+      "qualifier": "Untwisted topological K groups/ring only; no automatic claim about physical conserved brane charges."
+    },
+    {
+      "charges": [
+        11,
+        -13
+      ],
+      "gcd": 1,
+      "K0_additive": {
+        "free_rank": 2,
+        "torsion_invariant_factors": []
+      },
+      "K1_additive": {
+        "free_rank": 2,
+        "torsion_invariant_factors": []
+      },
+      "gysin_euler_matrix": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          11,
+          0,
+          0,
+          0
+        ],
+        [
+          -13,
+          0,
+          0,
+          0
+        ],
+        [
+          -143,
+          -13,
+          11,
+          0
+        ]
+      ],
+      "gysin_nonzero_smith_factors": [
+        1,
+        1
+      ],
+      "u_torsion_class_coefficients_in_X_Y_XY": [
+        11,
+        -13,
+        -143
+      ],
+      "u_square_coefficient_mod_g": 0,
+      "u_square_nonzero": false,
+      "XY_order": 1,
+      "H1_pi1": "Z_1",
+      "spin_structure_count": 1,
+      "total_space_is_spin": true,
+      "qualifier": "Untwisted topological K groups/ring only; no automatic claim about physical conserved brane charges."
+    }
+  ],
+  "cover_spinor_quotient": [
+    {
+      "N": 1,
+      "spin_structures": 1,
+      "lifts": [
+        {
+          "shift": "0",
+          "cover_spinor_invariant": true
+        }
+      ],
+      "some_cover_Killing_spinor_survives": true
+    },
+    {
+      "N": 2,
+      "spin_structures": 2,
+      "lifts": [
+        {
+          "shift": "0",
+          "cover_spinor_invariant": false
+        },
+        {
+          "shift": "1/2",
+          "cover_spinor_invariant": true
+        }
+      ],
+      "some_cover_Killing_spinor_survives": true
+    },
+    {
+      "N": 3,
+      "spin_structures": 1,
+      "lifts": [
+        {
+          "shift": "0",
+          "cover_spinor_invariant": false
+        }
+      ],
+      "some_cover_Killing_spinor_survives": false
+    },
+    {
+      "N": 4,
+      "spin_structures": 2,
+      "lifts": [
+        {
+          "shift": "0",
+          "cover_spinor_invariant": false
+        },
+        {
+          "shift": "1/2",
+          "cover_spinor_invariant": false
+        }
+      ],
+      "some_cover_Killing_spinor_survives": false
+    },
+    {
+      "N": 5,
+      "spin_structures": 1,
+      "lifts": [
+        {
+          "shift": "0",
+          "cover_spinor_invariant": false
+        }
+      ],
+      "some_cover_Killing_spinor_survives": false
+    },
+    {
+      "N": 6,
+      "spin_structures": 2,
+      "lifts": [
+        {
+          "shift": "0",
+          "cover_spinor_invariant": false
+        },
+        {
+          "shift": "1/2",
+          "cover_spinor_invariant": false
+        }
+      ],
+      "some_cover_Killing_spinor_survives": false
+    },
+    {
+      "N": 7,
+      "spin_structures": 1,
+      "lifts": [
+        {
+          "shift": "0",
+          "cover_spinor_invariant": false
+        }
+      ],
+      "some_cover_Killing_spinor_survives": false
+    },
+    {
+      "N": 8,
+      "spin_structures": 2,
+      "lifts": [
+        {
+          "shift": "0",
+          "cover_spinor_invariant": false
+        },
+        {
+          "shift": "1/2",
+          "cover_spinor_invariant": false
+        }
+      ],
+      "some_cover_Killing_spinor_survives": false
+    },
+    {
+      "N": 9,
+      "spin_structures": 1,
+      "lifts": [
+        {
+          "shift": "0",
+          "cover_spinor_invariant": false
+        }
+      ],
+      "some_cover_Killing_spinor_survives": false
+    },
+    {
+      "N": 10,
+      "spin_structures": 2,
+      "lifts": [
+        {
+          "shift": "0",
+          "cover_spinor_invariant": false
+        },
+        {
+          "shift": "1/2",
+          "cover_spinor_invariant": false
+        }
+      ],
+      "some_cover_Killing_spinor_survives": false
+    },
+    {
+      "N": 11,
+      "spin_structures": 1,
+      "lifts": [
+        {
+          "shift": "0",
+          "cover_spinor_invariant": false
+        }
+      ],
+      "some_cover_Killing_spinor_survives": false
+    },
+    {
+      "N": 12,
+      "spin_structures": 2,
+      "lifts": [
+        {
+          "shift": "0",
+          "cover_spinor_invariant": false
+        },
+        {
+          "shift": "1/2",
+          "cover_spinor_invariant": false
+        }
+      ],
+      "some_cover_Killing_spinor_survives": false
+    },
+    {
+      "N": 13,
+      "spin_structures": 1,
+      "lifts": [
+        {
+          "shift": "0",
+          "cover_spinor_invariant": false
+        }
+      ],
+      "some_cover_Killing_spinor_survives": false
+    },
+    {
+      "N": 14,
+      "spin_structures": 2,
+      "lifts": [
+        {
+          "shift": "0",
+          "cover_spinor_invariant": false
+        },
+        {
+          "shift": "1/2",
+          "cover_spinor_invariant": false
+        }
+      ],
+      "some_cover_Killing_spinor_survives": false
+    },
+    {
+      "N": 15,
+      "spin_structures": 1,
+      "lifts": [
+        {
+          "shift": "0",
+          "cover_spinor_invariant": false
+        }
+      ],
+      "some_cover_Killing_spinor_survives": false
+    },
+    {
+      "N": 16,
+      "spin_structures": 2,
+      "lifts": [
+        {
+          "shift": "0",
+          "cover_spinor_invariant": false
+        },
+        {
+          "shift": "1/2",
+          "cover_spinor_invariant": false
+        }
+      ],
+      "some_cover_Killing_spinor_survives": false
+    }
+  ],
+  "distinguishing_example": {
+    "Y30": "S(L) with c1=(3,0), same K0/K1 as Y33; torsion generator square zero",
+    "Y33": "S(L) with c1=(3,3), torsion generator square 2w in Z3"
+  },
+  "topology_reference": "https://inspirehep.net/files/4eadf33259d623493f52eaba5c45ec90",
+  "scope": "Exact for ordinary complex topological K theory and stated spinor phases; not twisted K theory or a complete Page charge classification."
+}

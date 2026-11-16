@@ -1,0 +1,135 @@
+{
+  "status": "PASS_QUTRIT_CAUSAL_BREAK_MARKOV_VS_PERSISTENT_MEMORY",
+  "hypotheses": {
+    "H0": "fresh uniformly random h each slot",
+    "H1": "same uniformly random classical h both slots"
+  },
+  "one_slot_channels_identical": true,
+  "one_slot_entanglement_breaking": true,
+  "control_independent_repreparation": "|0> at intermediate slot",
+  "exact_quantum_vs_classical_boundary": "Measured memory witness is classical process-tensor non-Markovianity; it does NOT certify multi-time quantum entanglement or indefinite causal order.",
+  "witnesses": [
+    {
+      "persistent_memory_fraction": "0",
+      "joint_rational": [
+        [
+          "1/9",
+          "1/9",
+          "1/9"
+        ],
+        [
+          "1/9",
+          "1/9",
+          "1/9"
+        ],
+        [
+          "1/9",
+          "1/9",
+          "1/9"
+        ]
+      ],
+      "probability_matching_outcomes": "1/3",
+      "witness_excess_over_markov": "0",
+      "mutual_information_bits": 0.0,
+      "identical_one_slot_channel": "E(rho)=sum_h X^h rho X^-h/3 (Fourier-basis dephasing; entanglement-breaking)",
+      "recorded_causal_break": "measure j at t1 in computational basis; reset independently to |0>; then measure k at t2"
+    },
+    {
+      "persistent_memory_fraction": "1/2",
+      "joint_rational": [
+        [
+          "2/9",
+          "1/18",
+          "1/18"
+        ],
+        [
+          "1/18",
+          "2/9",
+          "1/18"
+        ],
+        [
+          "1/18",
+          "1/18",
+          "2/9"
+        ]
+      ],
+      "probability_matching_outcomes": "2/3",
+      "witness_excess_over_markov": "1/3",
+      "mutual_information_bits": 0.3333333333333333,
+      "identical_one_slot_channel": "E(rho)=sum_h X^h rho X^-h/3 (Fourier-basis dephasing; entanglement-breaking)",
+      "recorded_causal_break": "measure j at t1 in computational basis; reset independently to |0>; then measure k at t2"
+    },
+    {
+      "persistent_memory_fraction": "1",
+      "joint_rational": [
+        [
+          "1/3",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1/3",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1/3"
+        ]
+      ],
+      "probability_matching_outcomes": "1",
+      "witness_excess_over_markov": "2/3",
+      "mutual_information_bits": 1.5849625007211559,
+      "identical_one_slot_channel": "E(rho)=sum_h X^h rho X^-h/3 (Fourier-basis dephasing; entanglement-breaking)",
+      "recorded_causal_break": "measure j at t1 in computational basis; reset independently to |0>; then measure k at t2"
+    }
+  ],
+  "coherent_quantum_memory_Bell_return": {
+    "coherent_Bell_return_fidelity": "1",
+    "classical_memory_Bell_return_fidelity": "1/3",
+    "coherent_partial_transpose_negative_eigenvalues": 3,
+    "coherent_negativity": "1",
+    "classical_partial_transpose_negative_eigenvalues": 0,
+    "computational_joint_probabilities_identical": true,
+    "coherent_swap_support_initial": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        2,
+        2,
+        0
+      ]
+    ],
+    "coherent_swap_support_final": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        2,
+        2,
+        0
+      ]
+    ],
+    "hardware_scope": "Requires reference qutrit, system qutrit, and coherent environment memory; no hardware data."
+  },
+  "hypothetical_24_shots_16_matches_p_null_exact": "80914507/94143178827",
+  "hypothetical_24_shots_16_matches_p_null_float": 0.0008594834804621442,
+  "hypothetical_9_shots_all_matches_p_null_exact": "1/19683",
+  "hardware_status": "NO REAL PHOTON DATA; exact probability/control calculations only."
+}
