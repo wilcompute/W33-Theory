@@ -35,3 +35,9 @@ def test_certainty_purity_rank2():
     near = [r for r in d["grid"] if 0.5 < r["purity"] < 0.56]
     assert all(abs(r["min_C"] - (6 * r["purity"] - 3)) < 1e-3 for r in near)
     assert any(r["min_C"] < 6 * r["purity"] - 3 - 0.01 for r in d["grid"] if r["purity"] > 0.6)
+
+
+def test_orbitA_degree8_estimate_recorded():
+    d = load("w33_f8_symmetric_sos8_A.json")
+    assert d["group_order"] == 504 and d["block_invariance_residual"] < 1e-10
+    assert 2.40 < d["bound"] < 2.4986 and d["identity_error"] < 1e-4

@@ -74,3 +74,17 @@ The minimising type-B orbit has a stabiliser of order only 18. That leaves 72 re
 The six unidentified orbit minima (orbits 0, 1, 3, 5 = 10, 6, 7) were re-polished at 90 digits, with final gradients ≈ 10⁻⁹⁰. findpoly finds **no polynomial of degree ≤ 12 with coefficients ≤ 10⁸** for any of them, and pslq finds no relation over Q(cos 2π/9).
 - So they are not low-height, low-degree algebraic numbers. Compare c₈, 2.7410899854 and orbit 15's (87 − 16γ − 16γ²)/9, all cubic with small coefficients.
 - They are either of high degree (plausible for minimisers without a large residual symmetry: these orbits have stabilisers of order 7–14) or have large height.
+
+## Addendum D: degree 8 on the orbit-A code space (unconverged)
+
+The symmetry-reduced SOS on the 16-dimensional orbit-A code space (diagonal SL(2,8), 4,573 variables, 151 invariant identities, 290 cones of size ≤ 32) was solved by SCS at ε = 10⁻⁶. It stopped at the iteration limit (200,000; status "solved (inaccurate)").
+
+  **c ≈ 2.4463** (fresh-point identity error 5.6×10⁻⁶)
+
+| orbit-A code space | bound |
+|---|---|
+| degree 6 (= other track's PPT dual) | 2.0818298 |
+| **degree 8 (symmetry-reduced, unconverged)** | **≈ 2.4463** |
+| true minimum (numerical) | c₈ = 2.4985086 |
+
+> **Status.** This is an unconverged SCS value, not a certified bound: cone feasibility at the final iterate is not guaranteed. It indicates that degree 8 closes most of the degree-6 gap on this space, which carries half of the generic global minimisers (from 0.42 below c₈ to about 0.05 below). A converged solve (more iterations, or Clarabel, which now fits since the cones are ≤ 32) and a rational certificate are the next steps. Orbit A's minimiser set is a positive-dimensional family, so degree 8 is not expected to be exactly tight.
