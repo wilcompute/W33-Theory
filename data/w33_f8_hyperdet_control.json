@@ -1,0 +1,13 @@
+{
+ "n": 300,
+ "tangle_values": {
+  "0.216726": 6,
+  "0.216727": 294
+ },
+ "canonical": false,
+ "n_distinct_under_clifford": 66,
+ "local_invariant": true,
+ "tangle": "0.216726754912",
+ "tangle_pslq": "[6, 11, -3, 2, 5, -11, 2]",
+ "tangle_sq_pslq": "[-5, -11, -4, 0, -26, -1, 16]"
+}

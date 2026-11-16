@@ -61,3 +61,33 @@ for r in rows: print(r, flush=True)
 res = dict(n_groups=len(subs), n_orbits=len(rows), orbits=rows,
            types_per_orbit_unique=len({r["type"] for r in rows}) == len(rows))
 json.dump(res, open(os.path.join(ROOT, "data", "w33_f8_order4_orbit_classification.json"), "w"), indent=1)
+# ---- (Pass 12681) per-orbit data: code-space minimum, stabiliser order in H, membership of the torus group's subgroups
+import numpy as np
+lsrc = open(os.path.join(HERE, "w33_f8_pauli_stabiliser_ladder.py"), encoding="utf-8").read()
+gl2 = {"__name__": "x", "__file__": os.path.join(HERE, "w33_f8_pauli_stabiliser_ladder.py")}
+exec(lsrc[: lsrc.index("res = {}")], gl2)
+space, minval, C8 = gl2["space"], gl2["minval"], gl2["C8"]
+H_ORDER = 504 * 504 * 3
+orbit_of = {}
+for root, mem in orbits.items():
+    for n in mem: orbit_of[n] = root
+roots_sorted = [root for root, mem in sorted(orbits.items(), key=lambda kv: -len(kv[1]))]
+Tg = [(12, 53), (53, 33), (1, 6)]
+Tel = [(0, 0)]
+for g in Tg: Tel = Tel + [(e[0] ^ g[0], e[1] ^ g[1]) for e in Tel]
+T_subs = set()
+for a in Tel[1:]:
+    for b in Tel[1:]:
+        if a < b:
+            c = (a[0] ^ b[0], a[1] ^ b[1]); T_subs.add(frozenset((idx[a], idx[b], idx[c])))
+T_orbits = collections.Counter(roots_sorted.index(orbit_of[sid[s]]) for s in T_subs)
+per = []
+for k, root in enumerate(roots_sorted):
+    s = subs[orbits[root][0]]; a, b, c = (labels[i] for i in s)
+    best = min(minval(space([(a, s1), (b, s2)]), 6)[0] for s1 in (1, -1) for s2 in (1, -1))
+    per.append(dict(orbit=k, size=len(orbits[root]), stabiliser_order_in_H=H_ORDER // len(orbits[root]), type=rows[k]["type"],
+                    code_space_min=best, attains_c8=bool(abs(best - C8) < 1e-7), minimiser_stabilisers=rows[k]["minimiser_stabilisers_in_orbit"],
+                    torus_subgroups_in_orbit=T_orbits.get(k, 0)))
+    print(per[-1], flush=True)
+res.update(per_orbit=per)
+json.dump(res, open(os.path.join(ROOT, "data", "w33_f8_order4_orbit_classification.json"), "w"), indent=1)

@@ -46,3 +46,21 @@ for r in sorted(table):
     rows[str(r)] = [dict(fidelity=k, count=v, pslq=str(mp.pslq([mp.mpf(k), 1, gam, gam * gam, s3, s3 * gam, s3 * gam * gam], maxcoeff=500, tol=mp.mpf(10) ** -8))) for k, v in sorted(table[r].items())]
     print("r =", r, rows[str(r)], flush=True)
 json.dump(rows, open(os.path.join(ROOT, "data", "w33_f8_torus_eigenstate_magic.json"), "w"), indent=1)
+# ---- (Pass 12681) full-precision values and identification in Q(cos 2pi/9, sqrt3)
+vals = collections.defaultdict(list)
+for V in sols:
+    M = np.linalg.matrix_power(V, 9); V9 = V / M[0, 0] ** (1 / 9)
+    ev, U_ = np.linalg.eig(V9)
+    js = [int(round(np.angle(e) / (2 * np.pi / 9))) % 9 for e in ev]; missing = [j for j in range(9) if j not in js][0]
+    for i in range(8):
+        r = (js[i] - missing) % 9; t = U_[:, i] / np.linalg.norm(U_[:, i])
+        vals[r].append(float(np.max(np.abs(S.conj() @ t) ** 2)))
+ident = {}
+for r in (3, 4):
+    v = mp.mpf(float(np.median(vals[r]))); spread = max(vals[r]) - min(vals[r])
+    rel = mp.pslq([v, 1, gam, gam * gam, s3, s3 * gam, s3 * gam * gam], maxcoeff=2000, maxsteps=10 ** 6, tol=mp.mpf(10) ** -13)
+    ident[str(r)] = dict(value=mp.nstr(v, 16), spread=spread, pslq=str(rel))
+    print("r =", r, ident[str(r)], flush=True)
+out = json.load(open(os.path.join(ROOT, "data", "w33_f8_torus_eigenstate_magic.json")))
+out["identification"] = ident
+json.dump(out, open(os.path.join(ROOT, "data", "w33_f8_torus_eigenstate_magic.json"), "w"), indent=1)

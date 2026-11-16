@@ -88,5 +88,177 @@
    "minimiser_stabilisers_in_orbit": 0
   }
  ],
- "types_per_orbit_unique": false
+ "types_per_orbit_unique": false,
+ "per_orbit": [
+  {
+   "orbit": 0,
+   "size": 108864,
+   "stabiliser_order_in_H": 7,
+   "type": "((0, 134), (1, 107), (2, 14))",
+   "code_space_min": 2.863424362557037,
+   "attains_c8": false,
+   "minimiser_stabilisers": 0,
+   "torus_subgroups_in_orbit": 0
+  },
+  {
+   "orbit": 1,
+   "size": 95256,
+   "stabiliser_order_in_H": 8,
+   "type": "((0, 136), (1, 103), (2, 16))",
+   "code_space_min": 2.731822756818014,
+   "attains_c8": false,
+   "minimiser_stabilisers": 0,
+   "torus_subgroups_in_orbit": 0
+  },
+  {
+   "orbit": 2,
+   "size": 95256,
+   "stabiliser_order_in_H": 8,
+   "type": "((0, 140), (1, 95), (2, 20))",
+   "code_space_min": 2.741089985355339,
+   "attains_c8": false,
+   "minimiser_stabilisers": 0,
+   "torus_subgroups_in_orbit": 0
+  },
+  {
+   "orbit": 3,
+   "size": 84672,
+   "stabiliser_order_in_H": 9,
+   "type": "B",
+   "code_space_min": 2.848195761078328,
+   "attains_c8": false,
+   "minimiser_stabilisers": 0,
+   "torus_subgroups_in_orbit": 0
+  },
+  {
+   "orbit": 4,
+   "size": 84672,
+   "stabiliser_order_in_H": 9,
+   "type": "B",
+   "code_space_min": 2.4985086466880695,
+   "attains_c8": true,
+   "minimiser_stabilisers": 0,
+   "torus_subgroups_in_orbit": 2
+  },
+  {
+   "orbit": 5,
+   "size": 84672,
+   "stabiliser_order_in_H": 9,
+   "type": "B",
+   "code_space_min": 2.8123447617702126,
+   "attains_c8": false,
+   "minimiser_stabilisers": 0,
+   "torus_subgroups_in_orbit": 0
+  },
+  {
+   "orbit": 6,
+   "size": 54432,
+   "stabiliser_order_in_H": 14,
+   "type": "((0, 142), (1, 91), (2, 22))",
+   "code_space_min": 2.809492205247338,
+   "attains_c8": false,
+   "minimiser_stabilisers": 0,
+   "torus_subgroups_in_orbit": 0
+  },
+  {
+   "orbit": 7,
+   "size": 54432,
+   "stabiliser_order_in_H": 14,
+   "type": "((0, 134), (1, 107), (2, 14))",
+   "code_space_min": 2.9454579103540723,
+   "attains_c8": false,
+   "minimiser_stabilisers": 0,
+   "torus_subgroups_in_orbit": 0
+  },
+  {
+   "orbit": 8,
+   "size": 54432,
+   "stabiliser_order_in_H": 14,
+   "type": "((0, 155), (1, 72), (2, 21), (3, 7))",
+   "code_space_min": 2.999999999999991,
+   "attains_c8": false,
+   "minimiser_stabilisers": 0,
+   "torus_subgroups_in_orbit": 0
+  },
+  {
+   "orbit": 9,
+   "size": 42336,
+   "stabiliser_order_in_H": 18,
+   "type": "C",
+   "code_space_min": 2.4985086466880713,
+   "attains_c8": true,
+   "minimiser_stabilisers": 0,
+   "torus_subgroups_in_orbit": 1
+  },
+  {
+   "orbit": 10,
+   "size": 42336,
+   "stabiliser_order_in_H": 18,
+   "type": "B",
+   "code_space_min": 2.8123447617702126,
+   "attains_c8": false,
+   "minimiser_stabilisers": 0,
+   "torus_subgroups_in_orbit": 0
+  },
+  {
+   "orbit": 11,
+   "size": 42336,
+   "stabiliser_order_in_H": 18,
+   "type": "B",
+   "code_space_min": 2.4985086466880695,
+   "attains_c8": true,
+   "minimiser_stabilisers": 7,
+   "torus_subgroups_in_orbit": 3
+  },
+  {
+   "orbit": 12,
+   "size": 31752,
+   "stabiliser_order_in_H": 24,
+   "type": "((0, 162), (1, 55), (2, 36), (4, 2))",
+   "code_space_min": 2.741089985355341,
+   "attains_c8": false,
+   "minimiser_stabilisers": 0,
+   "torus_subgroups_in_orbit": 0
+  },
+  {
+   "orbit": 13,
+   "size": 14112,
+   "stabiliser_order_in_H": 54,
+   "type": "C",
+   "code_space_min": 2.999999999999991,
+   "attains_c8": false,
+   "minimiser_stabilisers": 0,
+   "torus_subgroups_in_orbit": 0
+  },
+  {
+   "orbit": 14,
+   "size": 1512,
+   "stabiliser_order_in_H": 504,
+   "type": "A",
+   "code_space_min": 2.4985086466880695,
+   "attains_c8": true,
+   "minimiser_stabilisers": 9,
+   "torus_subgroups_in_orbit": 1
+  },
+  {
+   "orbit": 15,
+   "size": 1512,
+   "stabiliser_order_in_H": 504,
+   "type": "((0, 120), (1, 135))",
+   "code_space_min": 2.7699817927612056,
+   "attains_c8": false,
+   "minimiser_stabilisers": 0,
+   "torus_subgroups_in_orbit": 0
+  },
+  {
+   "orbit": 16,
+   "size": 504,
+   "stabiliser_order_in_H": 1512,
+   "type": "((0, 120), (1, 135))",
+   "code_space_min": 6.999999999999988,
+   "attains_c8": false,
+   "minimiser_stabilisers": 0,
+   "torus_subgroups_in_orbit": 0
+  }
+ ]
 }
