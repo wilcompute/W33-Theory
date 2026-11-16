@@ -1,0 +1,42 @@
+{
+  "action_prefactor_at_resonance_over_N0_p": "80*sqrt(6)/81",
+  "action_over_N0_p_cubed_along_pell_sequences": {
+    "-7": "1024*sqrt(6)/567",
+    "17": "2048*sqrt(6)/1377"
+  },
+  "near_resonant_probe_examples": [
+    {
+      "chern_pair": [
+        7,
+        8
+      ],
+      "minimum_warp": -0.001518456104052543,
+      "tension_to_charge_ratio": 0.9939445839666909,
+      "radius_over_local_ads_length": 9.045522042698995,
+      "probe_exponent_over_horizontal_flux": 644.6008094083955,
+      "extra_radial_negative_modes_require_bare_torus_eigenvalue_below": 0.04878521191351265
+    },
+    {
+      "chern_pair": [
+        8,
+        9
+      ],
+      "minimum_warp": -0.0017982407348726079,
+      "tension_to_charge_ratio": 0.9928328445040334,
+      "radius_over_local_ads_length": 8.307441396257518,
+      "probe_exponent_over_horizontal_flux": 607.9082576184942,
+      "extra_radial_negative_modes_require_bare_torus_eigenvalue_below": 0.05782110413042187
+    },
+    {
+      "chern_pair": [
+        38,
+        43
+      ],
+      "minimum_warp": -2.8716340553633475e-05,
+      "tension_to_charge_ratio": 0.9998851412345586,
+      "radius_over_local_ads_length": 65.97289100863318,
+      "probe_exponent_over_horizontal_flux": 199528.3786493464,
+      "extra_radial_negative_modes_require_bare_torus_eigenvalue_below": 0.0009189932524852125
+    }
+  ]
+}
