@@ -1,0 +1,55 @@
+{
+  "exact_internal_mass_trace_times_bubble_radius_squared": 16,
+  "exact_eigenvalues": [
+    {
+      "minimum_orbit": "pole",
+      "positive_internal_normal_mass_squared_times_bubble_radius_squared": 8,
+      "positive_polarizations": 2,
+      "internal_collective_coordinates": 2
+    },
+    {
+      "minimum_orbit": "equator",
+      "positive_internal_normal_mass_squared_times_bubble_radius_squared": 16,
+      "positive_polarizations": 1,
+      "internal_collective_coordinates": 3
+    }
+  ],
+  "numerical_examples": [
+    {
+      "chern_pair": [
+        7,
+        8
+      ],
+      "minimum_orbit": "equator",
+      "positive_internal_normal_mass_squared_times_bubble_radius_squared": 15.999999999999611,
+      "internal_zero_modes": 3,
+      "chiral_flat_holonomy_zero_modes": 1,
+      "external_center_zero_modes": 5
+    },
+    {
+      "chern_pair": [
+        8,
+        9
+      ],
+      "minimum_orbit": "pole",
+      "positive_internal_normal_mass_squared_times_bubble_radius_squared": 7.999999999999986,
+      "internal_zero_modes": 2,
+      "chiral_flat_holonomy_zero_modes": 1,
+      "external_center_zero_modes": 5
+    },
+    {
+      "chern_pair": [
+        38,
+        43
+      ],
+      "minimum_orbit": "equator",
+      "positive_internal_normal_mass_squared_times_bubble_radius_squared": 16.0,
+      "internal_zero_modes": 3,
+      "chiral_flat_holonomy_zero_modes": 1,
+      "external_center_zero_modes": 5
+    }
+  ],
+  "chiral_nonzero_momentum_eigenvalues_times_bubble_radius_squared": "(ell+1)*(ell+2)+a^2*|k_T|_physical^2, ell>=1",
+  "chiral_harmonic_three_form_dimension": 0,
+  "internal_and_chiral_negative_modes": 0
+}
