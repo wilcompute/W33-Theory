@@ -1,0 +1,100 @@
+{
+  "exact_comparison": {
+    "normalized_breathing_kinetic_metric": "80/3",
+    "leading_near_planar_one_minus_tension_ratio": "Lplus^2/(2*a_wall^2)",
+    "leading_wall_breathing_shift": "-(1-qminus/qplus)*Lplus^2/(40*a_wall^2)",
+    "wall_radial_constraint_mismatch_for_critical_or_higher_tension": true
+  },
+  "detuned_examples": [
+    {
+      "q_minus_over_q_plus": 0.5,
+      "wall_radius_in_exterior_ads_units": 6,
+      "tension_over_charge_normalized_value": 0.9863399735275609,
+      "radius_squared_times_detuning": 0.49176095300780887,
+      "wall_scalar_relative_to_outer_minimum": -0.0003392430971152216,
+      "radius_squared_times_wall_breathing_shift": -0.012212751496147978,
+      "maximum_junction_residual": 1.6153745008296028e-13
+    },
+    {
+      "q_minus_over_q_plus": 0.5,
+      "wall_radius_in_exterior_ads_units": 10,
+      "tension_over_charge_normalized_value": 0.9950300086413502,
+      "radius_squared_times_detuning": 0.4969991358649839,
+      "wall_scalar_relative_to_outer_minimum": -0.00012395362001374477,
+      "radius_squared_times_wall_breathing_shift": -0.012395362001374477,
+      "maximum_junction_residual": 1.0658141036401503e-14
+    },
+    {
+      "q_minus_over_q_plus": 0.5,
+      "wall_radius_in_exterior_ads_units": 16,
+      "tension_over_charge_normalized_value": 0.9980514724704832,
+      "radius_squared_times_detuning": 0.4988230475563,
+      "wall_scalar_relative_to_outer_minimum": -4.86678069731572e-05,
+      "radius_squared_times_wall_breathing_shift": -0.012458958585128244,
+      "maximum_junction_residual": 3.83026943495679e-15
+    },
+    {
+      "q_minus_over_q_plus": 0.75,
+      "wall_radius_in_exterior_ads_units": 6,
+      "tension_over_charge_normalized_value": 0.9863670698741879,
+      "radius_squared_times_detuning": 0.49078548452923654,
+      "wall_scalar_relative_to_outer_minimum": -0.00016913663865959772,
+      "radius_squared_times_wall_breathing_shift": -0.006088918991745518,
+      "maximum_junction_residual": 9.043517345576346e-14
+    },
+    {
+      "q_minus_over_q_plus": 0.75,
+      "wall_radius_in_exterior_ads_units": 10,
+      "tension_over_charge_normalized_value": 0.9950336053164002,
+      "radius_squared_times_detuning": 0.49663946835998285,
+      "wall_scalar_relative_to_outer_minimum": -6.191204037341025e-05,
+      "radius_squared_times_wall_breathing_shift": -0.006191204037341025,
+      "maximum_junction_residual": 5.909162048567396e-14
+    },
+    {
+      "q_minus_over_q_plus": 0.75,
+      "wall_radius_in_exterior_ads_units": 16,
+      "tension_over_charge_normalized_value": 0.998052025839723,
+      "radius_squared_times_detuning": 0.4986813850309204,
+      "wall_scalar_relative_to_outer_minimum": -2.432391736909012e-05,
+      "radius_squared_times_wall_breathing_shift": -0.006226922846487071,
+      "maximum_junction_residual": 1.3822276656583199e-14
+    },
+    {
+      "q_minus_over_q_plus": 0.9,
+      "wall_radius_in_exterior_ads_units": 6,
+      "tension_over_charge_normalized_value": 0.9863832110655354,
+      "radius_squared_times_detuning": 0.4902044016407259,
+      "wall_scalar_relative_to_outer_minimum": -6.75391455964118e-05,
+      "radius_squared_times_wall_breathing_shift": -0.002431409241470825,
+      "maximum_junction_residual": 1.3877787807814457e-15
+    },
+    {
+      "q_minus_over_q_plus": 0.9,
+      "wall_radius_in_exterior_ads_units": 10,
+      "tension_over_charge_normalized_value": 0.9950357576544342,
+      "radius_squared_times_detuning": 0.4964242345565806,
+      "wall_scalar_relative_to_outer_minimum": -2.4749313599376627e-05,
+      "radius_squared_times_wall_breathing_shift": -0.0024749313599376627,
+      "maximum_junction_residual": 2.6117996654306808e-14
+    },
+    {
+      "q_minus_over_q_plus": 0.9,
+      "wall_radius_in_exterior_ads_units": 16,
+      "tension_over_charge_normalized_value": 0.9980523575082059,
+      "radius_squared_times_detuning": 0.49859647789929795,
+      "wall_scalar_relative_to_outer_minimum": -9.727172686366248e-06,
+      "radius_squared_times_wall_breathing_shift": -0.0024901562077097594,
+      "maximum_junction_residual": 3.899658373995862e-15
+    }
+  ],
+  "wider_integration_boundary_control": {
+    "q_minus_over_q_plus": 0.75,
+    "wall_radius_in_exterior_ads_units": 10,
+    "tension_over_charge_normalized_value": 0.9950336053103983,
+    "radius_squared_times_detuning": 0.4966394689601694,
+    "wall_scalar_relative_to_outer_minimum": -6.19120401357115e-05,
+    "radius_squared_times_wall_breathing_shift": -0.00619120401357115,
+    "maximum_junction_residual": 2.7755575615628914e-17
+  }
+}
