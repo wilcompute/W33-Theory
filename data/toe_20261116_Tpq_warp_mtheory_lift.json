@@ -1,0 +1,87 @@
+{
+  "spin_two_shift_per_quadrupole_amplitude_squared": "-lambda_T**2/90 + 32*lambda_T/9",
+  "homogeneous_BF_deficit_at_resonance": "-8 + 4*sqrt(41)/3",
+  "examples": [
+    {
+      "chern_pair": [
+        7,
+        8
+      ],
+      "unwarped_bare_torus_eigenvalue": 1,
+      "fixed_Page_spin_two_shift": 3.500328089844906e-05,
+      "numerical_over_second_order": 1.056599305731005
+    },
+    {
+      "chern_pair": [
+        7,
+        8
+      ],
+      "unwarped_bare_torus_eigenvalue": 4,
+      "fixed_Page_spin_two_shift": 0.0001387446485736632,
+      "numerical_over_second_order": 1.0569669754514168
+    },
+    {
+      "chern_pair": [
+        7,
+        8
+      ],
+      "unwarped_bare_torus_eigenvalue": 12,
+      "fixed_Page_spin_two_shift": 0.00040608202349901035,
+      "numerical_over_second_order": 1.0579717049347015
+    },
+    {
+      "chern_pair": [
+        8,
+        9
+      ],
+      "unwarped_bare_torus_eigenvalue": 1,
+      "fixed_Page_spin_two_shift": 1.1055014164540466e-05,
+      "numerical_over_second_order": 0.9652294461439916
+    },
+    {
+      "chern_pair": [
+        8,
+        9
+      ],
+      "unwarped_bare_torus_eigenvalue": 4,
+      "fixed_Page_spin_two_shift": 4.379365410756009e-05,
+      "numerical_over_second_order": 0.9649971974024585
+    },
+    {
+      "chern_pair": [
+        8,
+        9
+      ],
+      "unwarped_bare_torus_eigenvalue": 12,
+      "fixed_Page_spin_two_shift": 0.0001279705333292469,
+      "numerical_over_second_order": 0.9643617124236119
+    },
+    {
+      "chern_pair": [
+        38,
+        43
+      ],
+      "unwarped_bare_torus_eigenvalue": 1,
+      "fixed_Page_spin_two_shift": 1.1707002034455627e-08,
+      "numerical_over_second_order": 1.0010829469649136
+    },
+    {
+      "chern_pair": [
+        38,
+        43
+      ],
+      "unwarped_bare_torus_eigenvalue": 4,
+      "fixed_Page_spin_two_shift": 4.638856410110748e-08,
+      "numerical_over_second_order": 1.0011033355444992
+    },
+    {
+      "chern_pair": [
+        38,
+        43
+      ],
+      "unwarped_bare_torus_eigenvalue": 12,
+      "fixed_Page_spin_two_shift": 1.356447842937314e-07,
+      "numerical_over_second_order": 1.0011201192438013
+    }
+  ]
+}

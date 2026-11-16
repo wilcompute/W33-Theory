@@ -66,7 +66,7 @@ def metric_response(x, y):
             "independent_traceless_equation_passed": True}
 
 
-def numerical_branch(p, q, metric, count):
+def numerical_branch(p, q, metric, count, *, include_profiles=False):
     eta = brentq(lambda z: q*q*z*(2-z)**2-p*p*(1-z)*(1+z)**2, 0, 1)
     k1, k2 = 4*(1+eta), 4*(2-eta)
     b1, b2 = 8*eta, 8*(1-eta)
@@ -125,12 +125,16 @@ def numerical_branch(p, q, metric, count):
     graviton_integral_shift = float(np.dot(weights, np.expm1(log_volume-16*a/3))/2)
     page_integral_shift = float(np.dot(weights, np.expm1(log_volume-40*a/3))/2)
     assert abs(graviton_integral_shift-page_integral_shift) < 1e-13
-    return {"chern_pair": [p, q], "lambda_minus_32": 6*k1-32,
+    result = {"chern_pair": [p, q], "lambda_minus_32": 6*k1-32,
             "quadrupole_amplitude": amplitude, "relative_to_leading": amplitude/expected,
             "maximum_retained_equation_residual": error,
             "maximum_traceless_equation_residual": tracefree_error, "even_harmonics": count,
             "graviton_integral_relative_shift": graviton_integral_shift,
             "page_integral_relative_shift": page_integral_shift}
+    if include_profiles:
+        coefficients = fit.x.reshape(4, count)*scaling
+        result["even_legendre_profiles"] = coefficients.tolist()
+    return result
 
 
 def main():
