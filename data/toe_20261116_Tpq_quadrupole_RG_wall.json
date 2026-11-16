@@ -1,0 +1,38 @@
+{
+  "axial_kinetic_coefficient": 16,
+  "canonical_superpotential": "-16*phi**3/27 + phi**2*t/24 + 6",
+  "linearized_physical_mass_divided_by_static_slope": "-1/3",
+  "axial_and_biaxial_warped_mass_squared_at_first_order": [
+    "t/3",
+    "-t"
+  ],
+  "leading_axial_rotational_biaxial_transfer": [
+    "u*(1 - u)",
+    "u",
+    "u/(1 - u)**3"
+  ],
+  "model_central_charge_ratio": "7599824371187712/(t**3 + 196608)**3",
+  "source_to_vev_wall_coordinate": "u=1/(1+exp(t*(r-r0)/12))",
+  "pell_sequences": [
+    {
+      "chern_pair": [
+        36926,
+        41777
+      ],
+      "t": -2.1390565577760904e-09,
+      "UV": "warped",
+      "wall_log_energy_width_10_to_90_leading": 24652639344.372692,
+      "fixed_charge_central_charge_shift_leading": 1.4934368819379798e-31
+    },
+    {
+      "chern_pair": [
+        1489813,
+        1685531
+      ],
+      "t": 3.1913479718496335e-12,
+      "UV": "unwarped",
+      "wall_log_energy_width_10_to_90_leading": 16523860864193.44,
+      "fixed_charge_central_charge_shift_leading": -4.959553173893045e-40
+    }
+  ]
+}
