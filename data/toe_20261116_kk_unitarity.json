@@ -1,0 +1,152 @@
+{
+  "first_threshold": [
+    {
+      "beta_squared": 0.01,
+      "angular_average": 1.005029355473249
+    },
+    {
+      "beta_squared": 0.001,
+      "angular_average": 1.0005002918542976
+    },
+    {
+      "beta_squared": 0.0001,
+      "angular_average": 1.0000500029168542
+    }
+  ],
+  "sphere_coefficient_identity_orders": 121,
+  "s9_angular_average_at_90_degrees": 1.3002956734427051,
+  "continuum_comparison": [
+    {
+      "weights": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "radius": 4,
+      "mode_count": 19700,
+      "ratio_to_11d_cut": 0.997242164659995
+    },
+    {
+      "weights": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "radius": 8,
+      "mode_count": 1329728,
+      "ratio_to_11d_cut": 0.9998701089242221
+    },
+    {
+      "weights": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "radius": 16,
+      "mode_count": 86331720,
+      "ratio_to_11d_cut": 0.9999882793400499
+    },
+    {
+      "weights": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "radius": 32,
+      "mode_count": 5542138684,
+      "ratio_to_11d_cut": 1.0000000355528786
+    },
+    {
+      "weights": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        4
+      ],
+      "radius": 4,
+      "mode_count": 10108,
+      "ratio_to_11d_cut": 1.0067253527720563
+    },
+    {
+      "weights": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        4
+      ],
+      "radius": 8,
+      "mode_count": 668844,
+      "ratio_to_11d_cut": 1.000400097672755
+    },
+    {
+      "weights": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        4
+      ],
+      "radius": 16,
+      "mode_count": 43234596,
+      "ratio_to_11d_cut": 1.0000193982986845
+    },
+    {
+      "weights": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        4
+      ],
+      "radius": 32,
+      "mode_count": 2772045984,
+      "ratio_to_11d_cut": 1.0000018382869251
+    }
+  ],
+  "isospectral_pair": {
+    "low_norm_shells": {
+      "18": 2,
+      "26": 2,
+      "34": 2,
+      "36": 2,
+      "40": 2,
+      "42": 2,
+      "44": 2,
+      "48": 2,
+      "50": 2,
+      "52": 2,
+      "58": 2,
+      "60": 4
+    },
+    "first_charge_balanced_plus_norms": [
+      18,
+      26,
+      40
+    ],
+    "first_charge_balanced_minus_norms": [
+      18,
+      26,
+      36
+    ],
+    "first_energy_plus": 15.666215521048828,
+    "first_energy_minus": 15.34166020071207
+  }
+}

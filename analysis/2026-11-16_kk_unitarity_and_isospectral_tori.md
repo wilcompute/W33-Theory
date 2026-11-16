@@ -1,0 +1,37 @@
+# KK unitarity cuts distinguish charge addition from the mass spectrum
+
+This extends the [fixed-shape toroidal axion calculation](2026-11-16_irrational_axion_towers.md). We compute the positive-\(s\) cut of the massive KK scalar box, with the common four-graviton tensor stripped off and the \(n=0\) contribution separated. The cut determines the KK mass spectrum with multiplicities. An explicit pair of isospectral six-tori then shows where a test of the interactions between charges can give information beyond that spectrum.
+
+## Finite-torus threshold from on-shell phase space
+
+Use loop normalization \(d^5\ell/(i\pi^{5/2})\), and define the discontinuity as the upper value minus the lower value in \(s\). A box with an \(s\)-channel cut and a KK mass \(m\) has velocity \(\beta=\sqrt{1-4m^2/s}\). The two on-shell momenta have spatial magnitude \(p=\sqrt{s}\,\beta/2\). Without \(2\pi\) factors the integrated cut measure is \(\Omega_3 p^2/(4\sqrt{s})\), with \(\Omega_3=2\pi^2\). The two uncut propagators give \(4/[s^2(1-\beta a\cdot n)(1-\beta b\cdot n)]\), where \(n\) is uniform on \(S^3\), and \(a,b\) are the unit external directions of the box. The two cut replacements give \(4i/\sqrt{\pi}\) after taking out the original loop measure. Therefore, for \(s>4m^2\),
+\[
+ \operatorname{Disc}I_5(s;c)=
+ 2i\pi^{3/2}s^{-3/2}\beta^2 A_4(\beta^2,c),\qquad c=a\cdot b .
+\]
+The cut vanishes below threshold. Combining the two uncut denominators with a parameter \(x\) gives
+\[
+ A_4(b,c)=\int_0^1 \frac{2\,dx}{w(1+w)},\qquad
+ w^2=1-b+b\,2(1-c)x(1-x).
+\]
+Here \(b\) denotes the squared speed in \(A_4\). This uses the normalized \(S^3\) average of \((1-z n_1)^{-2}\), obtained by differentiating \(z\) times the average of \((1-z n_1)^{-1}\). The box decomposition and the cutting rule follow the supergravity loop and on-shell prescriptions. [Green, Gutperle and Vanhove](https://arxiv.org/abs/hep-th/9706175) · [Cutkosky](https://doi.org/10.1063/1.1703676)
+
+At \(t=u=-s/2\) the two boxes with \(s\) have \(c=0\) and the third has no positive-\(s\) cut. With \(s_0=4m^2\), the jump in the first \(s\)-derivative of the crossed discontinuity is \(4i\pi^{3/2} s_0^{-5/2}\) per signed KK vector. It is multiplied by the shell multiplicity. Contributions from lighter shells are smooth locally around \(s_0\), and heavier shells vanish on a neighborhood on the low side. Thus the full positive-axis cut of this massive box sum and the ordinary theta series determine one another, given the loop normalization and KK mass units. Local subtractions drop out of the cut.
+
+As an independent near-threshold check, divide out \(\Gamma(3/2)\) to compare with the prior simplex convention. Near the maximizing edge point use \(u=x_2+x_4\), \(v=x_1-x_3\), \(z=x_2/u\). The simplex measure is \((u/2)\,du\,dv\,dz\), and its denominator coefficient has \(1/4-P=u/2+v^2/4+O(u^2)\). The density of \(1/4-P=\epsilon\) begins as \((16/3)\epsilon^{3/2}\). Hence the Taylor coefficient of \((s/4m^2)^k\) is asymptotic to \(m^{-3}/(4k^2)\) in each of the two boxes. The corresponding leading dilogarithm discontinuity is \(i\pi\beta^2/(2m^3)\) per box, in agreement with phase space in that convention.
+
+## Dense towers recover the eleven-dimensional angular cut
+
+Write \(m_n^2=m_*^2 n^T Qn\) with \(Q>0\), and \(R=\sqrt{s}/(2m_*)\). The exact sum uses \(b=1-n^TQn/R^2>0\), finite at fixed \(R\). At fixed physical angle away from \(c=1\) this tends, after division by \(R^6/\sqrt{\det Q}\), to the integral over the six-ball. The \(S^3\) kernel at \(b=1\) has an integrable endpoint singularity in \(x\), so \(bA_4(b,c)\) is bounded and continuous on the closed ball and vanishes on its boundary. The omitted origin has zero weight in the limit.
+
+The six-ball radial measure weighted by \(b\) has total radial weight \(1/24\) and gives \(b\) a \(\mathrm{Beta}(2,3)\) distribution. For order \(k\) in the uncut-denominator expansion, the normalized \(S^3\) coefficient is \((2k+1)!/[4^k k!(2)_k]\), and radial averaging multiplies it by \((2)_k/(5)_k\). This is exactly the \(S^9\) coefficient for the uncompactified eleven-dimensional cut. Equivalently the \(S^3\) components and the six internal components are projections of a single direction on \(S^9\). With the same \(i\pi^{D/2}\) normalization in each dimension, the discrete sum divided by the continuum state-density factor \(\pi^3/(m_*^6\sqrt{\det Q})\) converges to the uncompactified cut, proportional to \(s^{3/2}\). The verifier compares the limits for both a cubic lattice and one with anisotropic lengths. The protected Wilson coefficients considered previously concern the opposite regime \(s/m_*^2\ll1\). [Eleven-dimensional supergravity box](https://arxiv.org/abs/hep-th/9706175) · [ABJM extraction of four-graviton interactions](https://doi.org/10.1007/JHEP08%282018%29115)
+
+## An isospectral pair with different charge-conserving thresholds
+
+Take the two Conway–Sloane lattices in the Cerviño–Hein bases, with diagonal background metric \(\operatorname{diag}(1,2,3,4)\), and append two orthogonal directions of squared length \(100\) to each. Their ordinary theta series agree exactly, by the Conway–Sloane theorem and multiplication by the same two-dimensional theta series. With common mass units \(m_* = 1\), all neutral one-loop scalar-box cuts agree, including the first threshold and every shell multiplicity. This comparison uses the momentum lattices, so the physical tori use the respective dual lattices in the convention where momenta pair integrally with periods. The common covolume also allows determinant-one shape normalization by the same overall rescaling. [Conway and Sloane](https://academic.oup.com/imrn/article-abstract/1992/4/93/660616) · [Cerviño and Hein, Section 2.6](https://arxiv.org/abs/0910.2127)
+
+The shortest two shells have squared norms \(18\) and \(26\), each containing one sign pair. The absolute inner product between their generators is \(2\) on the plus side and \(4\) on the minus side. Consequently the first **all-massive charge-balanced three-particle** rest energies differ. Their minimal squared-norm triples are \((18,26,40)\) and \((18,26,36)\), respectively, for the relation \(v+w+(-v-w)=0\). Collinear triples cost at least \(4\sqrt{18}\). A triple with any squared norm at least \(60\) costs at least \(2\sqrt{18}+\sqrt{60}\). Below \(60\) each shell contains only one sign pair, so a noncollinear triple uses three distinct norms. A distinct triple missing one of the two lowest norms costs at least \(\sqrt{18}+\sqrt{34}+\sqrt{36}\). All three bounds exceed the two exhibited thresholds. The exact enumeration certifies these bounds and separates the energies at \(15.5\) in common mass units.
+
+This is a kinematic statement for an all-massive three-particle cut of neutral external scattering. A difference in the physical two-loop discontinuity at these thresholds additionally requires a nonzero polarization-summed product of the production amplitudes. Charge-annihilation channels involving a zero mode open independently and were excluded from the minimization. The separation exhibits the need for charge correlations in an interacting geometric reconstruction. The two-loop Schwinger-parameter lattice sums already involve \(v,w,v+w\); their three squared norms are encoded jointly by the degree-two theta series. [Green, Kwon and Vanhove](https://arxiv.org/abs/hep-th/9910055)
+
+Run the [verifier](toe_20261116_kk_unitarity.py) with the repo Python to regenerate the [data](../data/toe_20261116_kk_unitarity.json).
