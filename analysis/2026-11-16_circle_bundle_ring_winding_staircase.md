@@ -53,7 +53,26 @@ In particular, as `N/N0 -> infinity` at **fixed** `tau`,
 
 This establishes linear growth of the multiplicity of BF-violating Fourier modes in this sector when flux ratios increase, independently of the fixed torus shape at leading order. It is **not uniform** when `tau` is simultaneously taken to the modular cusp. The verifier checks both finite bounds and the counts at multiple integer ratios.
 
-## 4. Physics boundary
+## 4. Controlled large-radius counterfamily — the deeper physical consequence
+
+There is a quantized equal-flux family whose **entire compact geometry becomes parametrically large in eleven-dimensional Planck units, yet the number of BF-violating modes diverges**. Put `N0=t`, `N1=N2=N=t²`, `t` a positive integer, and fix a square torus. The existing uplift's exact equal-flux quantization laws give
+
+`(L/lp)^3=(9 pi/2)t`, `r_sphere=L/sqrt(6)`,
+`A_T2/lp²=6 pi² t²/(L/lp)`.
+
+Consequently `L/lp ~ t^(1/3)`, `r_sphere/lp ~ t^(1/3)`, and each torus circumference in Planck units grows as `t^(5/6)` (equivalently a physical circle radius grows as `t^(5/6)`). Thus the source-free classical geometry has controlled large radii as `t->infinity`; local curvature corrections become parametrically suppressed.
+
+At square shape `lambda(m,n)=3 pi (m²+n²)/t`. The previously derived BF inequality yields the instability count `U=4t+O(sqrt(t))`. Crucially, a *uniformly deep* sub-band obeys
+
+`m_minus² L² <= -6 iff 2<=lambda<=6`.
+
+Its Fourier labels occupy the planar annulus `(2t)/(3 pi) <= m²+n² <= (2t)/pi`, of area exactly `(4/3)t`. Ordinary lattice-point bounds prove that the number of modes at least **two units below** the AdS5 BF bound is
+
+`D(t)=(4/3)t+O(sqrt(t))`.
+
+This is a robust, quantitative negative result for the particular equal-flux eleven-dimensional solution family: there are arbitrarily many linearized instabilities with an order-one BF violation **in a simultaneously large-radius eleven-dimensional regime**. It does not rely on dubious small-flux examples, and it does not constitute a no-go theorem for every M-theory compactification. The Type IIB fiber is correspondingly small, so neglecting wrapped-string sectors in the IIB low-energy truncation is unjustified for this scaling.
+
+## 5. Physics boundary
 
 The winding interpretation survives only as an M-theory/Type IIB duality map; a label count is not an on-shell string spectrum calculation. Local IIB supergravity sees the Betti vector from b3(Y)=1 but omits nonzero fiber string windings. For unequal flux the independent homogeneous instability already excludes stability. For equal flux the lattice count proves instability only when the displayed Fourier modes are present and the two-derivative M-theory analysis is trustworthy. In particular N=1,N0=1 is not a controlled large-flux semiclassical assertion.
 

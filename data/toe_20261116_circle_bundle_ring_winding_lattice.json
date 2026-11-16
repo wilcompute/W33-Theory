@@ -1,4 +1,76 @@
 {
+  "controlled_large_radius_counterfamily": [
+    {
+      "L_over_lPlanck": 3.0464738926897774,
+      "N0": 2,
+      "N1": 4,
+      "N2": 4,
+      "one_torus_cycle_radius_over_lPlanck": 1.4033852085886445,
+      "sphere_radius_over_lPlanck": 1.2437177586333918,
+      "strong_BF_violating_labels_m2L2_at_most_minus_6": 4,
+      "strong_annulus_area_leading_term": 2.6666666666666665,
+      "t": 2,
+      "torus_area_over_lPlanck2": 77.75235041223613,
+      "total_BF_violating_Fourier_labels": 8,
+      "total_area_leading_term": 8
+    },
+    {
+      "L_over_lPlanck": 5.209397078678045,
+      "N0": 10,
+      "N1": 100,
+      "N2": 100,
+      "one_torus_cycle_radius_over_lPlanck": 5.366015198902125,
+      "sphere_radius_over_lPlanck": 2.126727451717754,
+      "strong_BF_violating_labels_m2L2_at_most_minus_6": 12,
+      "strong_annulus_area_leading_term": 13.333333333333334,
+      "t": 10,
+      "torus_area_over_lPlanck2": 1136.7462589656043,
+      "total_BF_violating_Fourier_labels": 36,
+      "total_area_leading_term": 40
+    },
+    {
+      "L_over_lPlanck": 7.070239601100863,
+      "N0": 25,
+      "N1": 625,
+      "N2": 625,
+      "one_torus_cycle_radius_over_lPlanck": 11.515122762844602,
+      "sphere_radius_over_lPlanck": 2.8864132303193326,
+      "strong_BF_violating_labels_m2L2_at_most_minus_6": 24,
+      "strong_annulus_area_leading_term": 33.333333333333336,
+      "t": 25,
+      "torus_area_over_lPlanck2": 5234.761279988635,
+      "total_BF_violating_Fourier_labels": 96,
+      "total_area_leading_term": 100
+    },
+    {
+      "L_over_lPlanck": 11.223305780454734,
+      "N0": 100,
+      "N1": 10000,
+      "N2": 10000,
+      "one_torus_cycle_radius_over_lPlanck": 36.55823597456496,
+      "sphere_radius_over_lPlanck": 4.581895398223837,
+      "strong_BF_violating_labels_m2L2_at_most_minus_6": 124,
+      "strong_annulus_area_leading_term": 133.33333333333334,
+      "t": 100,
+      "torus_area_over_lPlanck2": 52763.087422658486,
+      "total_BF_violating_Fourier_labels": 400,
+      "total_area_leading_term": 400
+    },
+    {
+      "L_over_lPlanck": 17.815887402454617,
+      "N0": 400,
+      "N1": 160000,
+      "N2": 160000,
+      "one_torus_cycle_radius_over_lPlanck": 116.06516448825221,
+      "sphere_radius_over_lPlanck": 7.273305575148771,
+      "strong_BF_violating_labels_m2L2_at_most_minus_6": 532,
+      "strong_annulus_area_leading_term": 533.3333333333334,
+      "t": 400,
+      "torus_area_over_lPlanck2": 531818.596010007,
+      "total_BF_violating_Fourier_labels": 1604,
+      "total_area_leading_term": 1600
+    }
+  ],
   "corrective_comment": "Square N=N0=1 has four unstable nonzero Fourier labels because lambda1=3*pi<12; prior untracked local audit comment incorrectly called this case BF-safe.",
   "every_shape_instability_if_N_over_N0_gt": 0.9068996821171089,
   "fixed_shape_weyl_cell_bounds": [
@@ -522,5 +594,6 @@
     }
   },
   "square_shape_instability_iff_N_over_N0_gt": 0.7853981633974483,
-  "status": "EXACT_GYSIN_CUP_PRODUCTS_AND_NUMERICAL_MODULAR_BF_LATTICE_CENSUS"
+  "status": "EXACT_GYSIN_CUP_PRODUCTS_AND_NUMERICAL_MODULAR_BF_LATTICE_CENSUS",
+  "uniformly_deep_band": "2<=lambda<=6 iff m_minus^2 L^2<=-6; deep annulus labels D(t)=4t/3+O(sqrt(t)) at square tau"
 }

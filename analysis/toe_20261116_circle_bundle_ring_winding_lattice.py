@@ -117,6 +117,39 @@ def winding_weyl_bound(N: int, N0: int, tau: complex) -> dict:
             "lower_proved_bound":lower,"upper_proved_bound":upper,
             "cell_cover_radius":delta}
 
+def controlled_equal_flux_family(t: int, tau: complex = 1j) -> dict:
+    """One quantized large-radius instability family: N0=t, N1=N2=t^2.
+
+    Radius/area normalizations are imported from the committed M uplift
+    paper; the stability band is its sphere-odd Maxwell/scalar subsystem.
+    """
+    if t < 1:
+        raise ValueError("positive integer t required")
+    N0, N = t, t*t
+    L_planck = (9*math.pi*t/2)**(1/3)
+    sphere_radius_planck = L_planck/math.sqrt(6)
+    area_planck2 = 6*math.pi**2*N/L_planck
+    if tau.imag <= 0:
+        raise ValueError("Im tau must be positive")
+    # Torus coordinates have unit periods.  A flat torus basis is
+    # sqrt(A/y)*(1,0), sqrt(A/y)*(x,y), so the shortest physical
+    # circle radius is length/(2*pi) after choosing a basis vector.
+    torus_first_cycle_radius_planck = math.sqrt(area_planck2/tau.imag)/(2*math.pi)
+    census = winding_census(N,N0,tau)
+    deep = [z for z in census["modes"] if 2 <= z["lambda"] <= 6]
+    assert all(z["m2L2"] <= -6+1e-9 for z in deep)
+    return {
+        "t":t,"N0":N0,"N1":N,"N2":N,
+        "L_over_lPlanck":L_planck,
+        "sphere_radius_over_lPlanck":sphere_radius_planck,
+        "torus_area_over_lPlanck2":area_planck2,
+        "one_torus_cycle_radius_over_lPlanck":torus_first_cycle_radius_planck,
+        "total_BF_violating_Fourier_labels":len(census["modes"]),
+        "strong_BF_violating_labels_m2L2_at_most_minus_6":len(deep),
+        "total_area_leading_term":4*t,
+        "strong_annulus_area_leading_term":4*t/3
+    }
+
 def verify() -> dict:
     # Ring-level distinction missed by homotopy/homology alone:
     # L(3,1) x S2 has torsion square zero, T11/Z3 has nonzero square.
@@ -152,6 +185,8 @@ def verify() -> dict:
         "square_shape_cases":square,
         "fixed_shape_weyl_cell_bounds":[winding_weyl_bound(r,1,1j) for r in (1,2,5,10,25,100,400)],
         "fixed_tau_weyl_asymptotic":"U=4*N/N0 + O_tau(sqrt(N/N0)) at fixed tau",
+        "controlled_large_radius_counterfamily":[controlled_equal_flux_family(t) for t in (2,10,25,100,400)],
+        "uniformly_deep_band":"2<=lambda<=6 iff m_minus^2 L^2<=-6; deep annulus labels D(t)=4t/3+O(sqrt(t)) at square tau",
         "hexagonal_Qmin":2/math.sqrt(3),
         "every_shape_instability_if_N_over_N0_gt":math.pi/(2*math.sqrt(3)),
         "square_shape_instability_iff_N_over_N0_gt":math.pi/4,

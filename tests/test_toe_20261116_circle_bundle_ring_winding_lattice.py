@@ -35,6 +35,15 @@ class TestRingWinding(unittest.TestCase):
             self.assertLessEqual(b["lower_proved_bound"],b["exact_count"])
             self.assertLessEqual(b["exact_count"],b["upper_proved_bound"])
         self.assertLess(abs(circle.winding_weyl_bound(400,1,1j)["exact_count"]/1600-1),.01)
+    def test_large_radius_deep_instability(self):
+        c1=circle.controlled_equal_flux_family(100)
+        c2=circle.controlled_equal_flux_family(400)
+        self.assertEqual(c1["total_BF_violating_Fourier_labels"],400)
+        self.assertEqual(c1["strong_BF_violating_labels_m2L2_at_most_minus_6"],124)
+        self.assertEqual(c2["total_BF_violating_Fourier_labels"],1604)
+        self.assertEqual(c2["strong_BF_violating_labels_m2L2_at_most_minus_6"],532)
+        self.assertGreater(c2["sphere_radius_over_lPlanck"],c1["sphere_radius_over_lPlanck"])
+        self.assertGreater(c2["one_torus_cycle_radius_over_lPlanck"],c1["one_torus_cycle_radius_over_lPlanck"])
     def test_modular_invariance(self):
         tau=.34+1.2j
         for t in (tau+1,-1/tau):
