@@ -1,0 +1,193 @@
+{
+  "status": "PASS_TRINIFICATION_CENTER_SELECTION_AND_EXACT_FLAT_DIRECTION_HESSIAN",
+  "chiral_center_charges": {
+    "A": [
+      1,
+      -1,
+      0
+    ],
+    "B": [
+      0,
+      1,
+      -1
+    ],
+    "C": [
+      -1,
+      0,
+      1
+    ]
+  },
+  "no_gauge_invariant_bilinear_in_one_27": true,
+  "all_center_allowed_cubic_words": [
+    "AAA",
+    "ABC",
+    "ACB",
+    "BAC",
+    "BBB",
+    "BCA",
+    "CAB",
+    "CBA",
+    "CCC"
+  ],
+  "singlet_branch": "A=B=C=s*I3 is exactly F- and D-flat for all complex s",
+  "singlet_hessian_samples": [
+    {
+      "s": 1,
+      "raw_W_Hessian_3x3": [
+        [
+          6,
+          -3,
+          -3
+        ],
+        [
+          -3,
+          6,
+          -3
+        ],
+        [
+          -3,
+          -3,
+          6
+        ]
+      ],
+      "H_trace": 18,
+      "H_squared_trace": 162,
+      "H_det": 0,
+      "raw_Hessian_eigenvalues": [
+        0,
+        9,
+        9
+      ],
+      "canonically_normalized_superpotential_eigenvalues": [
+        0,
+        3,
+        3
+      ],
+      "canonically_normalized_F_scalar_mass2": [
+        0,
+        9,
+        9
+      ],
+      "exact_flat_direction": "(delta a, delta b, delta c) proportional (1,1,1)"
+    },
+    {
+      "s": 2,
+      "raw_W_Hessian_3x3": [
+        [
+          12,
+          -6,
+          -6
+        ],
+        [
+          -6,
+          12,
+          -6
+        ],
+        [
+          -6,
+          -6,
+          12
+        ]
+      ],
+      "H_trace": 36,
+      "H_squared_trace": 648,
+      "H_det": 0,
+      "raw_Hessian_eigenvalues": [
+        0,
+        18,
+        18
+      ],
+      "canonically_normalized_superpotential_eigenvalues": [
+        0,
+        6,
+        6
+      ],
+      "canonically_normalized_F_scalar_mass2": [
+        0,
+        36,
+        36
+      ],
+      "exact_flat_direction": "(delta a, delta b, delta c) proportional (1,1,1)"
+    },
+    {
+      "s": 3,
+      "raw_W_Hessian_3x3": [
+        [
+          18,
+          -9,
+          -9
+        ],
+        [
+          -9,
+          18,
+          -9
+        ],
+        [
+          -9,
+          -9,
+          18
+        ]
+      ],
+      "H_trace": 54,
+      "H_squared_trace": 1458,
+      "H_det": 0,
+      "raw_Hessian_eigenvalues": [
+        0,
+        27,
+        27
+      ],
+      "canonically_normalized_superpotential_eigenvalues": [
+        0,
+        9,
+        9
+      ],
+      "canonically_normalized_F_scalar_mass2": [
+        0,
+        81,
+        81
+      ],
+      "exact_flat_direction": "(delta a, delta b, delta c) proportional (1,1,1)"
+    },
+    {
+      "s": 7,
+      "raw_W_Hessian_3x3": [
+        [
+          42,
+          -21,
+          -21
+        ],
+        [
+          -21,
+          42,
+          -21
+        ],
+        [
+          -21,
+          -21,
+          42
+        ]
+      ],
+      "H_trace": 126,
+      "H_squared_trace": 7938,
+      "H_det": 0,
+      "raw_Hessian_eigenvalues": [
+        0,
+        63,
+        63
+      ],
+      "canonically_normalized_superpotential_eigenvalues": [
+        0,
+        21,
+        21
+      ],
+      "canonically_normalized_F_scalar_mass2": [
+        0,
+        441,
+        441
+      ],
+      "exact_flat_direction": "(delta a, delta b, delta c) proportional (1,1,1)"
+    }
+  ],
+  "conclusion": "The manifest SU3^3-invariant cubic alone has a complex modulus and no intrinsic scale. Three-link branch leaves diagonal SU3, not the SM. No quadratic gauge invariant exists from a lone chiral 27.",
+  "limits": "Center selection alone is necessary, not sufficient, for a complete invariant; this certificate is for the restricted singlet Hessian, not all 27 complex directions or realistic soft/SUGRA corrections."
+}

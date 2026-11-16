@@ -1,0 +1,361 @@
+{
+  "status": "PASS_BF_R4_COEFFICIENT_THRESHOLD_AND_SPINOR_DECK_FILTER",
+  "computed_coefficient_is_not_a_physical_R4_mass_correction": true,
+  "critical_C_asymptotic_exact": "3645*pi^2/4",
+  "critical_C_asymptotic_numeric": 8993.677010492678,
+  "largeN_cases": [
+    {
+      "N": 10,
+      "homogeneous_BF_gap": "0.3497984370715313542688129174391844618119395749007708250",
+      "required_dimensionless_correction_coefficient_C": "6880.431537217181146310218880338975645021863205830559297",
+      "large_N_coefficient_Ccrit": "8993.677010492678041412929923637142722054608584848170338",
+      "ratio_to_asymptotic": "0.7650298681162297743294566801209929942632736331310482192",
+      "critical_condition": "C >= exact gap*(L/lp)^6; this is only for a hypothetical +C*(lp/L)^6 mass shift"
+    },
+    {
+      "N": 100,
+      "homogeneous_BF_gap": "0.004446837761457312016249075971477988496068310553050184964",
+      "required_dimensionless_correction_coefficient_C": "8885.670344260642104873348777768948653052471365292926653",
+      "large_N_coefficient_Ccrit": "8993.677010492678041412929923637142722054608584848170338",
+      "ratio_to_asymptotic": "0.9879908222069763567876300012919162472887251564373966891",
+      "critical_condition": "C >= exact gap*(L/lp)^6; this is only for a hypothetical +C*(lp/L)^6 mass shift"
+    },
+    {
+      "N": 1000,
+      "homogeneous_BF_gap": "0.00004495416642307842352931655410193843013006478010752922874",
+      "required_dimensionless_correction_coefficient_C": "8984.498784451446582708578804747547264454696482115230877",
+      "large_N_coefficient_Ccrit": "8993.677010492678041412929923637142722054608584848170338",
+      "ratio_to_asymptotic": "0.9989794801358194793592611270881774844557473795454536254",
+      "critical_condition": "C >= exact gap*(L/lp)^6; this is only for a hypothetical +C*(lp/L)^6 mass shift"
+    },
+    {
+      "N": 10000,
+      "homogeneous_BF_gap": "4.499549164859262618783354963794605461821756369088620547E-7",
+      "required_dimensionless_correction_coefficient_C": "8992.775793846112892073835260932617385510367012604220223",
+      "large_N_coefficient_Ccrit": "8993.677010492678041412929923637142722054608584848170338",
+      "ratio_to_asymptotic": "0.9998997944171762312099297407206829249115666603236781642",
+      "critical_condition": "C >= exact gap*(L/lp)^6; this is only for a hypothetical +C*(lp/L)^6 mass shift"
+    },
+    {
+      "N": 100000,
+      "homogeneous_BF_gap": "4.499954991647046582517676593997094454055234077993284831E-9",
+      "required_dimensionless_correction_coefficient_C": "8993.587055229703666540022357473344704866449164339160547",
+      "large_N_coefficient_Ccrit": "8993.677010492678041412929923637142722054608584848170338",
+      "ratio_to_asymptotic": "0.9999899979437921301246012868771570956164551710519909385",
+      "critical_condition": "C >= exact gap*(L/lp)^6; this is only for a hypothetical +C*(lp/L)^6 mass shift"
+    }
+  ],
+  "deck_modes": [
+    {
+      "N": 1,
+      "lifts": [
+        {
+          "spin_lift": "ordinary",
+          "invariant_mode_residues_mod_N": [
+            0
+          ],
+          "cover_Killing_spinor_modes_from_k_plusminus_1": [
+            -1,
+            1
+          ]
+        }
+      ],
+      "surviving_cover_Killing_spinor_mode": true,
+      "fiber_winding_homotopy_group": "Z_1",
+      "scope": "Deck invariance only. Does not identify an 11D fermionic KK mode with a physical (p,q)-string winding state."
+    },
+    {
+      "N": 2,
+      "lifts": [
+        {
+          "spin_lift": "ordinary",
+          "invariant_mode_residues_mod_N": [
+            0
+          ],
+          "cover_Killing_spinor_modes_from_k_plusminus_1": []
+        },
+        {
+          "spin_lift": "alternate",
+          "invariant_mode_residues_mod_N": [
+            1
+          ],
+          "cover_Killing_spinor_modes_from_k_plusminus_1": [
+            -1,
+            1
+          ]
+        }
+      ],
+      "surviving_cover_Killing_spinor_mode": true,
+      "fiber_winding_homotopy_group": "Z_2",
+      "scope": "Deck invariance only. Does not identify an 11D fermionic KK mode with a physical (p,q)-string winding state."
+    },
+    {
+      "N": 3,
+      "lifts": [
+        {
+          "spin_lift": "ordinary",
+          "invariant_mode_residues_mod_N": [
+            0
+          ],
+          "cover_Killing_spinor_modes_from_k_plusminus_1": []
+        }
+      ],
+      "surviving_cover_Killing_spinor_mode": false,
+      "fiber_winding_homotopy_group": "Z_3",
+      "scope": "Deck invariance only. Does not identify an 11D fermionic KK mode with a physical (p,q)-string winding state."
+    },
+    {
+      "N": 4,
+      "lifts": [
+        {
+          "spin_lift": "ordinary",
+          "invariant_mode_residues_mod_N": [
+            0
+          ],
+          "cover_Killing_spinor_modes_from_k_plusminus_1": []
+        },
+        {
+          "spin_lift": "alternate",
+          "invariant_mode_residues_mod_N": [
+            2
+          ],
+          "cover_Killing_spinor_modes_from_k_plusminus_1": []
+        }
+      ],
+      "surviving_cover_Killing_spinor_mode": false,
+      "fiber_winding_homotopy_group": "Z_4",
+      "scope": "Deck invariance only. Does not identify an 11D fermionic KK mode with a physical (p,q)-string winding state."
+    },
+    {
+      "N": 5,
+      "lifts": [
+        {
+          "spin_lift": "ordinary",
+          "invariant_mode_residues_mod_N": [
+            0
+          ],
+          "cover_Killing_spinor_modes_from_k_plusminus_1": []
+        }
+      ],
+      "surviving_cover_Killing_spinor_mode": false,
+      "fiber_winding_homotopy_group": "Z_5",
+      "scope": "Deck invariance only. Does not identify an 11D fermionic KK mode with a physical (p,q)-string winding state."
+    },
+    {
+      "N": 6,
+      "lifts": [
+        {
+          "spin_lift": "ordinary",
+          "invariant_mode_residues_mod_N": [
+            0
+          ],
+          "cover_Killing_spinor_modes_from_k_plusminus_1": []
+        },
+        {
+          "spin_lift": "alternate",
+          "invariant_mode_residues_mod_N": [
+            3
+          ],
+          "cover_Killing_spinor_modes_from_k_plusminus_1": []
+        }
+      ],
+      "surviving_cover_Killing_spinor_mode": false,
+      "fiber_winding_homotopy_group": "Z_6",
+      "scope": "Deck invariance only. Does not identify an 11D fermionic KK mode with a physical (p,q)-string winding state."
+    },
+    {
+      "N": 7,
+      "lifts": [
+        {
+          "spin_lift": "ordinary",
+          "invariant_mode_residues_mod_N": [
+            0
+          ],
+          "cover_Killing_spinor_modes_from_k_plusminus_1": []
+        }
+      ],
+      "surviving_cover_Killing_spinor_mode": false,
+      "fiber_winding_homotopy_group": "Z_7",
+      "scope": "Deck invariance only. Does not identify an 11D fermionic KK mode with a physical (p,q)-string winding state."
+    },
+    {
+      "N": 8,
+      "lifts": [
+        {
+          "spin_lift": "ordinary",
+          "invariant_mode_residues_mod_N": [
+            0
+          ],
+          "cover_Killing_spinor_modes_from_k_plusminus_1": []
+        },
+        {
+          "spin_lift": "alternate",
+          "invariant_mode_residues_mod_N": [
+            4
+          ],
+          "cover_Killing_spinor_modes_from_k_plusminus_1": []
+        }
+      ],
+      "surviving_cover_Killing_spinor_mode": false,
+      "fiber_winding_homotopy_group": "Z_8",
+      "scope": "Deck invariance only. Does not identify an 11D fermionic KK mode with a physical (p,q)-string winding state."
+    },
+    {
+      "N": 9,
+      "lifts": [
+        {
+          "spin_lift": "ordinary",
+          "invariant_mode_residues_mod_N": [
+            0
+          ],
+          "cover_Killing_spinor_modes_from_k_plusminus_1": []
+        }
+      ],
+      "surviving_cover_Killing_spinor_mode": false,
+      "fiber_winding_homotopy_group": "Z_9",
+      "scope": "Deck invariance only. Does not identify an 11D fermionic KK mode with a physical (p,q)-string winding state."
+    },
+    {
+      "N": 10,
+      "lifts": [
+        {
+          "spin_lift": "ordinary",
+          "invariant_mode_residues_mod_N": [
+            0
+          ],
+          "cover_Killing_spinor_modes_from_k_plusminus_1": []
+        },
+        {
+          "spin_lift": "alternate",
+          "invariant_mode_residues_mod_N": [
+            5
+          ],
+          "cover_Killing_spinor_modes_from_k_plusminus_1": []
+        }
+      ],
+      "surviving_cover_Killing_spinor_mode": false,
+      "fiber_winding_homotopy_group": "Z_10",
+      "scope": "Deck invariance only. Does not identify an 11D fermionic KK mode with a physical (p,q)-string winding state."
+    },
+    {
+      "N": 11,
+      "lifts": [
+        {
+          "spin_lift": "ordinary",
+          "invariant_mode_residues_mod_N": [
+            0
+          ],
+          "cover_Killing_spinor_modes_from_k_plusminus_1": []
+        }
+      ],
+      "surviving_cover_Killing_spinor_mode": false,
+      "fiber_winding_homotopy_group": "Z_11",
+      "scope": "Deck invariance only. Does not identify an 11D fermionic KK mode with a physical (p,q)-string winding state."
+    },
+    {
+      "N": 12,
+      "lifts": [
+        {
+          "spin_lift": "ordinary",
+          "invariant_mode_residues_mod_N": [
+            0
+          ],
+          "cover_Killing_spinor_modes_from_k_plusminus_1": []
+        },
+        {
+          "spin_lift": "alternate",
+          "invariant_mode_residues_mod_N": [
+            6
+          ],
+          "cover_Killing_spinor_modes_from_k_plusminus_1": []
+        }
+      ],
+      "surviving_cover_Killing_spinor_mode": false,
+      "fiber_winding_homotopy_group": "Z_12",
+      "scope": "Deck invariance only. Does not identify an 11D fermionic KK mode with a physical (p,q)-string winding state."
+    },
+    {
+      "N": 13,
+      "lifts": [
+        {
+          "spin_lift": "ordinary",
+          "invariant_mode_residues_mod_N": [
+            0
+          ],
+          "cover_Killing_spinor_modes_from_k_plusminus_1": []
+        }
+      ],
+      "surviving_cover_Killing_spinor_mode": false,
+      "fiber_winding_homotopy_group": "Z_13",
+      "scope": "Deck invariance only. Does not identify an 11D fermionic KK mode with a physical (p,q)-string winding state."
+    },
+    {
+      "N": 14,
+      "lifts": [
+        {
+          "spin_lift": "ordinary",
+          "invariant_mode_residues_mod_N": [
+            0
+          ],
+          "cover_Killing_spinor_modes_from_k_plusminus_1": []
+        },
+        {
+          "spin_lift": "alternate",
+          "invariant_mode_residues_mod_N": [
+            7
+          ],
+          "cover_Killing_spinor_modes_from_k_plusminus_1": []
+        }
+      ],
+      "surviving_cover_Killing_spinor_mode": false,
+      "fiber_winding_homotopy_group": "Z_14",
+      "scope": "Deck invariance only. Does not identify an 11D fermionic KK mode with a physical (p,q)-string winding state."
+    },
+    {
+      "N": 15,
+      "lifts": [
+        {
+          "spin_lift": "ordinary",
+          "invariant_mode_residues_mod_N": [
+            0
+          ],
+          "cover_Killing_spinor_modes_from_k_plusminus_1": []
+        }
+      ],
+      "surviving_cover_Killing_spinor_mode": false,
+      "fiber_winding_homotopy_group": "Z_15",
+      "scope": "Deck invariance only. Does not identify an 11D fermionic KK mode with a physical (p,q)-string winding state."
+    },
+    {
+      "N": 16,
+      "lifts": [
+        {
+          "spin_lift": "ordinary",
+          "invariant_mode_residues_mod_N": [
+            0
+          ],
+          "cover_Killing_spinor_modes_from_k_plusminus_1": []
+        },
+        {
+          "spin_lift": "alternate",
+          "invariant_mode_residues_mod_N": [
+            8
+          ],
+          "cover_Killing_spinor_modes_from_k_plusminus_1": []
+        }
+      ],
+      "surviving_cover_Killing_spinor_mode": false,
+      "fiber_winding_homotopy_group": "Z_16",
+      "scope": "Deck invariance only. Does not identify an 11D fermionic KK mode with a physical (p,q)-string winding state."
+    }
+  ],
+  "background_X8_control": {
+    "background": "AdS5 x S2 x S2 x flat T2 with product Levi-Civita connection",
+    "tr_R2_pointwise": "0",
+    "tr_R4_pointwise": "0",
+    "X8_of_background": "0",
+    "C3_X8_action_quadratic_warning": "X8(background)=0 does not imply its variation or the full C3 X8 quadratic coupling vanishes.",
+    "8_derivative_warning": "Need R4 plus G4-dependent and derivative-flux supersymmetric completion, corrected background and BF mass matrix."
+  },
+  "proven_vs_open": "Proven: classical threshold, deck selection, background curvature forms. Open: actual R4 coefficient and full M/IIB spin-winding dual spectrum."
+}

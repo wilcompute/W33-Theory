@@ -1,0 +1,137 @@
+{
+  "status": "PASS_FOUR_MUB_QUTRIT_BELL_WITNESS_AND_FINITE_SHOT_CONTROL",
+  "operator_identity": "Sum of four matched conjugate-MUB projectors = I9 + 3*Phi3",
+  "identity_max_matrix_entry_error": 4.440892098500626e-16,
+  "exact_fidelity_relation": "F_Bell=(sum_b C_b-1)/3",
+  "separable_bound": "sum_b C_b<=2 (equivalently F_Bell<=1/3)",
+  "isotropic_entanglement_threshold": "v>1/4 for four MUBs; v>1/2 for two MUBs",
+  "isotropic_cases": [
+    {
+      "visibility": "0",
+      "each_MUB_matching_probability": "1/3",
+      "sum_4MUB_matching": "4/3",
+      "Bell_fidelity": "1/9",
+      "separable_4MUB_bound": "2",
+      "entanglement_certified_by_4MUB_ideal_mean": false,
+      "entanglement_certified_by_2MUB_ideal_mean": false
+    },
+    {
+      "visibility": "1/4",
+      "each_MUB_matching_probability": "1/2",
+      "sum_4MUB_matching": "2",
+      "Bell_fidelity": "1/3",
+      "separable_4MUB_bound": "2",
+      "entanglement_certified_by_4MUB_ideal_mean": false,
+      "entanglement_certified_by_2MUB_ideal_mean": false
+    },
+    {
+      "visibility": "2/5",
+      "each_MUB_matching_probability": "3/5",
+      "sum_4MUB_matching": "12/5",
+      "Bell_fidelity": "7/15",
+      "separable_4MUB_bound": "2",
+      "entanglement_certified_by_4MUB_ideal_mean": true,
+      "entanglement_certified_by_2MUB_ideal_mean": false
+    },
+    {
+      "visibility": "3/5",
+      "each_MUB_matching_probability": "11/15",
+      "sum_4MUB_matching": "44/15",
+      "Bell_fidelity": "29/45",
+      "separable_4MUB_bound": "2",
+      "entanglement_certified_by_4MUB_ideal_mean": true,
+      "entanglement_certified_by_2MUB_ideal_mean": true
+    },
+    {
+      "visibility": "3/4",
+      "each_MUB_matching_probability": "5/6",
+      "sum_4MUB_matching": "10/3",
+      "Bell_fidelity": "7/9",
+      "separable_4MUB_bound": "2",
+      "entanglement_certified_by_4MUB_ideal_mean": true,
+      "entanglement_certified_by_2MUB_ideal_mean": true
+    },
+    {
+      "visibility": "9/10",
+      "each_MUB_matching_probability": "14/15",
+      "sum_4MUB_matching": "56/15",
+      "Bell_fidelity": "41/45",
+      "separable_4MUB_bound": "2",
+      "entanglement_certified_by_4MUB_ideal_mean": true,
+      "entanglement_certified_by_2MUB_ideal_mean": true
+    },
+    {
+      "visibility": "1",
+      "each_MUB_matching_probability": "1",
+      "sum_4MUB_matching": "4",
+      "Bell_fidelity": "1",
+      "separable_4MUB_bound": "2",
+      "entanglement_certified_by_4MUB_ideal_mean": true,
+      "entanglement_certified_by_2MUB_ideal_mean": true
+    }
+  ],
+  "conditional_power_plans": [
+    {
+      "visibility": 0.3,
+      "alpha": 0.01,
+      "miss_probability_bound": 0.1,
+      "shots_per_MUB": 1510,
+      "total_heralded_detected_pairs": 6040,
+      "required_gap": 0.1333333333333333,
+      "test": "reject if S_hat>2+sqrt(2*ln(1/alpha)/n)",
+      "assumptions": "IID fixed isotropic visibility, properly matched conjugate MUBs, loss-independent heralding; calibration and detection loopholes excluded by assumption"
+    },
+    {
+      "visibility": 0.4,
+      "alpha": 0.01,
+      "miss_probability_bound": 0.1,
+      "shots_per_MUB": 168,
+      "total_heralded_detected_pairs": 672,
+      "required_gap": 0.3999999999999999,
+      "test": "reject if S_hat>2+sqrt(2*ln(1/alpha)/n)",
+      "assumptions": "IID fixed isotropic visibility, properly matched conjugate MUBs, loss-independent heralding; calibration and detection loopholes excluded by assumption"
+    },
+    {
+      "visibility": 0.5,
+      "alpha": 0.01,
+      "miss_probability_bound": 0.1,
+      "shots_per_MUB": 61,
+      "total_heralded_detected_pairs": 244,
+      "required_gap": 0.6666666666666665,
+      "test": "reject if S_hat>2+sqrt(2*ln(1/alpha)/n)",
+      "assumptions": "IID fixed isotropic visibility, properly matched conjugate MUBs, loss-independent heralding; calibration and detection loopholes excluded by assumption"
+    },
+    {
+      "visibility": 0.6,
+      "alpha": 0.01,
+      "miss_probability_bound": 0.1,
+      "shots_per_MUB": 31,
+      "total_heralded_detected_pairs": 124,
+      "required_gap": 0.9333333333333336,
+      "test": "reject if S_hat>2+sqrt(2*ln(1/alpha)/n)",
+      "assumptions": "IID fixed isotropic visibility, properly matched conjugate MUBs, loss-independent heralding; calibration and detection loopholes excluded by assumption"
+    },
+    {
+      "visibility": 0.75,
+      "alpha": 0.01,
+      "miss_probability_bound": 0.1,
+      "shots_per_MUB": 16,
+      "total_heralded_detected_pairs": 64,
+      "required_gap": 1.3333333333333335,
+      "test": "reject if S_hat>2+sqrt(2*ln(1/alpha)/n)",
+      "assumptions": "IID fixed isotropic visibility, properly matched conjugate MUBs, loss-independent heralding; calibration and detection loopholes excluded by assumption"
+    },
+    {
+      "visibility": 0.9,
+      "alpha": 0.01,
+      "miss_probability_bound": 0.1,
+      "shots_per_MUB": 9,
+      "total_heralded_detected_pairs": 36,
+      "required_gap": 1.733333333333333,
+      "test": "reject if S_hat>2+sqrt(2*ln(1/alpha)/n)",
+      "assumptions": "IID fixed isotropic visibility, properly matched conjugate MUBs, loss-independent heralding; calibration and detection loopholes excluded by assumption"
+    }
+  ],
+  "hardware_data": "NONE; device-dependent witness and mathematical design only",
+  "physical_measurement_note": "4 settings: Z and eigenbases of X, XZ, XZ^2 on reference; complex-conjugate partner bases on system. Three time-bin rails, coherent memory and phase-stable Fourier multiports are proposed, not built."
+}

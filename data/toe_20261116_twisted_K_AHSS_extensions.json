@@ -1,0 +1,580 @@
+{
+  "status": "PASS_TWISTED_K_AHSS_ASSOCIATED_GRADED_WITH_EXPLICIT_EXTENSION_BOUNDARY",
+  "nonzero_twist_is_hypothetical_not_present_in_current_IIB_solution": true,
+  "groups_in_zero_background_H": "Prior untwisted K_Gysin: K0=Z^2+Z_g^2, K1=Z^2",
+  "d3_formula": "d3=SqZ^3+H cup, H=k*z, with integral SqZ^3 zero on relevant torsion-free targets",
+  "cup_pairings": "<t cup z,[Y]>=1, u cup z=0",
+  "cases": [
+    {
+      "charges": [
+        1,
+        1
+      ],
+      "H_twist_integer": 0,
+      "gcd": 1,
+      "d3_H0_to_H3": 0,
+      "d3_free_H2_to_H5": 0,
+      "E_infty_even": {
+        "H0": "Z",
+        "H2": "Z + Z_1",
+        "H4": "Z_1"
+      },
+      "E_infty_odd": {
+        "H3": "Z",
+        "H5": "Z"
+      },
+      "K0_exact": "Z^2",
+      "K1_exact": "Z^2",
+      "extension_caveat": "Untwisted calculation independently resolved by K-Gysin"
+    },
+    {
+      "charges": [
+        1,
+        1
+      ],
+      "H_twist_integer": 1,
+      "gcd": 1,
+      "d3_H0_to_H3": 1,
+      "d3_free_H2_to_H5": 1,
+      "d3_H2_torsion_to_H5": 0,
+      "Sq3_integral_on_relevant_degrees": 0,
+      "E_infty_even": {
+        "H0": 0,
+        "H2": "Z_1",
+        "H4": "Z_1"
+      },
+      "E_infty_odd": {
+        "H3": "Z_1",
+        "H5": "Z_1"
+      },
+      "K0_finite_order": 1,
+      "K1_finite_order": 1,
+      "extension_caveat": "For primitive c1, Y is diffeomorphic to S2 x S3; Kunneth with the H=k generator of H3 resolves K1=Z_k^2.",
+      "K0_exact": "0",
+      "K1_exact": "0",
+      "Freed_Witten_probe": {
+        "unit_3cycle_integral_H": 1,
+        "oriented_3cycle_W3": 0,
+        "isolated_D3_wrap_unit_3cycle_obstructed_if_no_endpoints": true,
+        "scope": "In this OPTIONAL H background, an oriented 3-cycle carrying integral H cannot support a stand-alone spin D-brane without canceling data; not an assertion for H=0 IIB vacuum."
+      }
+    },
+    {
+      "charges": [
+        1,
+        1
+      ],
+      "H_twist_integer": 2,
+      "gcd": 1,
+      "d3_H0_to_H3": 2,
+      "d3_free_H2_to_H5": 2,
+      "d3_H2_torsion_to_H5": 0,
+      "Sq3_integral_on_relevant_degrees": 0,
+      "E_infty_even": {
+        "H0": 0,
+        "H2": "Z_1",
+        "H4": "Z_1"
+      },
+      "E_infty_odd": {
+        "H3": "Z_2",
+        "H5": "Z_2"
+      },
+      "K0_finite_order": 1,
+      "K1_finite_order": 4,
+      "extension_caveat": "For primitive c1, Y is diffeomorphic to S2 x S3; Kunneth with the H=k generator of H3 resolves K1=Z_k^2.",
+      "K0_exact": "0",
+      "K1_exact": "Z_2 + Z_2",
+      "Freed_Witten_probe": {
+        "unit_3cycle_integral_H": 2,
+        "oriented_3cycle_W3": 0,
+        "isolated_D3_wrap_unit_3cycle_obstructed_if_no_endpoints": true,
+        "scope": "In this OPTIONAL H background, an oriented 3-cycle carrying integral H cannot support a stand-alone spin D-brane without canceling data; not an assertion for H=0 IIB vacuum."
+      }
+    },
+    {
+      "charges": [
+        1,
+        1
+      ],
+      "H_twist_integer": 3,
+      "gcd": 1,
+      "d3_H0_to_H3": 3,
+      "d3_free_H2_to_H5": 3,
+      "d3_H2_torsion_to_H5": 0,
+      "Sq3_integral_on_relevant_degrees": 0,
+      "E_infty_even": {
+        "H0": 0,
+        "H2": "Z_1",
+        "H4": "Z_1"
+      },
+      "E_infty_odd": {
+        "H3": "Z_3",
+        "H5": "Z_3"
+      },
+      "K0_finite_order": 1,
+      "K1_finite_order": 9,
+      "extension_caveat": "For primitive c1, Y is diffeomorphic to S2 x S3; Kunneth with the H=k generator of H3 resolves K1=Z_k^2.",
+      "K0_exact": "0",
+      "K1_exact": "Z_3 + Z_3",
+      "Freed_Witten_probe": {
+        "unit_3cycle_integral_H": 3,
+        "oriented_3cycle_W3": 0,
+        "isolated_D3_wrap_unit_3cycle_obstructed_if_no_endpoints": true,
+        "scope": "In this OPTIONAL H background, an oriented 3-cycle carrying integral H cannot support a stand-alone spin D-brane without canceling data; not an assertion for H=0 IIB vacuum."
+      }
+    },
+    {
+      "charges": [
+        3,
+        0
+      ],
+      "H_twist_integer": 0,
+      "gcd": 3,
+      "d3_H0_to_H3": 0,
+      "d3_free_H2_to_H5": 0,
+      "E_infty_even": {
+        "H0": "Z",
+        "H2": "Z + Z_3",
+        "H4": "Z_3"
+      },
+      "E_infty_odd": {
+        "H3": "Z",
+        "H5": "Z"
+      },
+      "K0_exact": "Z^2 + Z_3^2",
+      "K1_exact": "Z^2",
+      "extension_caveat": "Untwisted calculation independently resolved by K-Gysin"
+    },
+    {
+      "charges": [
+        3,
+        0
+      ],
+      "H_twist_integer": 1,
+      "gcd": 3,
+      "d3_H0_to_H3": 1,
+      "d3_free_H2_to_H5": 1,
+      "d3_H2_torsion_to_H5": 0,
+      "Sq3_integral_on_relevant_degrees": 0,
+      "E_infty_even": {
+        "H0": 0,
+        "H2": "Z_3",
+        "H4": "Z_3"
+      },
+      "E_infty_odd": {
+        "H3": "Z_1",
+        "H5": "Z_1"
+      },
+      "K0_finite_order": 9,
+      "K1_finite_order": 1,
+      "extension_caveat": "E_infty gives associated graded, not Z_g+Z_g vs Z_g^2 or Z_(g^2), similarly for k; extensions unresolved.",
+      "K1_exact": "0",
+      "Freed_Witten_probe": {
+        "unit_3cycle_integral_H": 1,
+        "oriented_3cycle_W3": 0,
+        "isolated_D3_wrap_unit_3cycle_obstructed_if_no_endpoints": true,
+        "scope": "In this OPTIONAL H background, an oriented 3-cycle carrying integral H cannot support a stand-alone spin D-brane without canceling data; not an assertion for H=0 IIB vacuum."
+      }
+    },
+    {
+      "charges": [
+        3,
+        0
+      ],
+      "H_twist_integer": 2,
+      "gcd": 3,
+      "d3_H0_to_H3": 2,
+      "d3_free_H2_to_H5": 2,
+      "d3_H2_torsion_to_H5": 0,
+      "Sq3_integral_on_relevant_degrees": 0,
+      "E_infty_even": {
+        "H0": 0,
+        "H2": "Z_3",
+        "H4": "Z_3"
+      },
+      "E_infty_odd": {
+        "H3": "Z_2",
+        "H5": "Z_2"
+      },
+      "K0_finite_order": 9,
+      "K1_finite_order": 4,
+      "extension_caveat": "E_infty gives associated graded, not Z_g+Z_g vs Z_g^2 or Z_(g^2), similarly for k; extensions unresolved.",
+      "Freed_Witten_probe": {
+        "unit_3cycle_integral_H": 2,
+        "oriented_3cycle_W3": 0,
+        "isolated_D3_wrap_unit_3cycle_obstructed_if_no_endpoints": true,
+        "scope": "In this OPTIONAL H background, an oriented 3-cycle carrying integral H cannot support a stand-alone spin D-brane without canceling data; not an assertion for H=0 IIB vacuum."
+      }
+    },
+    {
+      "charges": [
+        3,
+        0
+      ],
+      "H_twist_integer": 3,
+      "gcd": 3,
+      "d3_H0_to_H3": 3,
+      "d3_free_H2_to_H5": 3,
+      "d3_H2_torsion_to_H5": 0,
+      "Sq3_integral_on_relevant_degrees": 0,
+      "E_infty_even": {
+        "H0": 0,
+        "H2": "Z_3",
+        "H4": "Z_3"
+      },
+      "E_infty_odd": {
+        "H3": "Z_3",
+        "H5": "Z_3"
+      },
+      "K0_finite_order": 9,
+      "K1_finite_order": 9,
+      "extension_caveat": "E_infty gives associated graded, not Z_g+Z_g vs Z_g^2 or Z_(g^2), similarly for k; extensions unresolved.",
+      "Freed_Witten_probe": {
+        "unit_3cycle_integral_H": 3,
+        "oriented_3cycle_W3": 0,
+        "isolated_D3_wrap_unit_3cycle_obstructed_if_no_endpoints": true,
+        "scope": "In this OPTIONAL H background, an oriented 3-cycle carrying integral H cannot support a stand-alone spin D-brane without canceling data; not an assertion for H=0 IIB vacuum."
+      }
+    },
+    {
+      "charges": [
+        3,
+        3
+      ],
+      "H_twist_integer": 0,
+      "gcd": 3,
+      "d3_H0_to_H3": 0,
+      "d3_free_H2_to_H5": 0,
+      "E_infty_even": {
+        "H0": "Z",
+        "H2": "Z + Z_3",
+        "H4": "Z_3"
+      },
+      "E_infty_odd": {
+        "H3": "Z",
+        "H5": "Z"
+      },
+      "K0_exact": "Z^2 + Z_3^2",
+      "K1_exact": "Z^2",
+      "extension_caveat": "Untwisted calculation independently resolved by K-Gysin"
+    },
+    {
+      "charges": [
+        3,
+        3
+      ],
+      "H_twist_integer": 1,
+      "gcd": 3,
+      "d3_H0_to_H3": 1,
+      "d3_free_H2_to_H5": 1,
+      "d3_H2_torsion_to_H5": 0,
+      "Sq3_integral_on_relevant_degrees": 0,
+      "E_infty_even": {
+        "H0": 0,
+        "H2": "Z_3",
+        "H4": "Z_3"
+      },
+      "E_infty_odd": {
+        "H3": "Z_1",
+        "H5": "Z_1"
+      },
+      "K0_finite_order": 9,
+      "K1_finite_order": 1,
+      "extension_caveat": "E_infty gives associated graded, not Z_g+Z_g vs Z_g^2 or Z_(g^2), similarly for k; extensions unresolved.",
+      "K1_exact": "0",
+      "Freed_Witten_probe": {
+        "unit_3cycle_integral_H": 1,
+        "oriented_3cycle_W3": 0,
+        "isolated_D3_wrap_unit_3cycle_obstructed_if_no_endpoints": true,
+        "scope": "In this OPTIONAL H background, an oriented 3-cycle carrying integral H cannot support a stand-alone spin D-brane without canceling data; not an assertion for H=0 IIB vacuum."
+      }
+    },
+    {
+      "charges": [
+        3,
+        3
+      ],
+      "H_twist_integer": 2,
+      "gcd": 3,
+      "d3_H0_to_H3": 2,
+      "d3_free_H2_to_H5": 2,
+      "d3_H2_torsion_to_H5": 0,
+      "Sq3_integral_on_relevant_degrees": 0,
+      "E_infty_even": {
+        "H0": 0,
+        "H2": "Z_3",
+        "H4": "Z_3"
+      },
+      "E_infty_odd": {
+        "H3": "Z_2",
+        "H5": "Z_2"
+      },
+      "K0_finite_order": 9,
+      "K1_finite_order": 4,
+      "extension_caveat": "E_infty gives associated graded, not Z_g+Z_g vs Z_g^2 or Z_(g^2), similarly for k; extensions unresolved.",
+      "Freed_Witten_probe": {
+        "unit_3cycle_integral_H": 2,
+        "oriented_3cycle_W3": 0,
+        "isolated_D3_wrap_unit_3cycle_obstructed_if_no_endpoints": true,
+        "scope": "In this OPTIONAL H background, an oriented 3-cycle carrying integral H cannot support a stand-alone spin D-brane without canceling data; not an assertion for H=0 IIB vacuum."
+      }
+    },
+    {
+      "charges": [
+        3,
+        3
+      ],
+      "H_twist_integer": 3,
+      "gcd": 3,
+      "d3_H0_to_H3": 3,
+      "d3_free_H2_to_H5": 3,
+      "d3_H2_torsion_to_H5": 0,
+      "Sq3_integral_on_relevant_degrees": 0,
+      "E_infty_even": {
+        "H0": 0,
+        "H2": "Z_3",
+        "H4": "Z_3"
+      },
+      "E_infty_odd": {
+        "H3": "Z_3",
+        "H5": "Z_3"
+      },
+      "K0_finite_order": 9,
+      "K1_finite_order": 9,
+      "extension_caveat": "E_infty gives associated graded, not Z_g+Z_g vs Z_g^2 or Z_(g^2), similarly for k; extensions unresolved.",
+      "Freed_Witten_probe": {
+        "unit_3cycle_integral_H": 3,
+        "oriented_3cycle_W3": 0,
+        "isolated_D3_wrap_unit_3cycle_obstructed_if_no_endpoints": true,
+        "scope": "In this OPTIONAL H background, an oriented 3-cycle carrying integral H cannot support a stand-alone spin D-brane without canceling data; not an assertion for H=0 IIB vacuum."
+      }
+    },
+    {
+      "charges": [
+        4,
+        4
+      ],
+      "H_twist_integer": 0,
+      "gcd": 4,
+      "d3_H0_to_H3": 0,
+      "d3_free_H2_to_H5": 0,
+      "E_infty_even": {
+        "H0": "Z",
+        "H2": "Z + Z_4",
+        "H4": "Z_4"
+      },
+      "E_infty_odd": {
+        "H3": "Z",
+        "H5": "Z"
+      },
+      "K0_exact": "Z^2 + Z_4^2",
+      "K1_exact": "Z^2",
+      "extension_caveat": "Untwisted calculation independently resolved by K-Gysin"
+    },
+    {
+      "charges": [
+        4,
+        4
+      ],
+      "H_twist_integer": 1,
+      "gcd": 4,
+      "d3_H0_to_H3": 1,
+      "d3_free_H2_to_H5": 1,
+      "d3_H2_torsion_to_H5": 0,
+      "Sq3_integral_on_relevant_degrees": 0,
+      "E_infty_even": {
+        "H0": 0,
+        "H2": "Z_4",
+        "H4": "Z_4"
+      },
+      "E_infty_odd": {
+        "H3": "Z_1",
+        "H5": "Z_1"
+      },
+      "K0_finite_order": 16,
+      "K1_finite_order": 1,
+      "extension_caveat": "E_infty gives associated graded, not Z_g+Z_g vs Z_g^2 or Z_(g^2), similarly for k; extensions unresolved.",
+      "K1_exact": "0",
+      "Freed_Witten_probe": {
+        "unit_3cycle_integral_H": 1,
+        "oriented_3cycle_W3": 0,
+        "isolated_D3_wrap_unit_3cycle_obstructed_if_no_endpoints": true,
+        "scope": "In this OPTIONAL H background, an oriented 3-cycle carrying integral H cannot support a stand-alone spin D-brane without canceling data; not an assertion for H=0 IIB vacuum."
+      }
+    },
+    {
+      "charges": [
+        4,
+        4
+      ],
+      "H_twist_integer": 2,
+      "gcd": 4,
+      "d3_H0_to_H3": 2,
+      "d3_free_H2_to_H5": 2,
+      "d3_H2_torsion_to_H5": 0,
+      "Sq3_integral_on_relevant_degrees": 0,
+      "E_infty_even": {
+        "H0": 0,
+        "H2": "Z_4",
+        "H4": "Z_4"
+      },
+      "E_infty_odd": {
+        "H3": "Z_2",
+        "H5": "Z_2"
+      },
+      "K0_finite_order": 16,
+      "K1_finite_order": 4,
+      "extension_caveat": "E_infty gives associated graded, not Z_g+Z_g vs Z_g^2 or Z_(g^2), similarly for k; extensions unresolved.",
+      "Freed_Witten_probe": {
+        "unit_3cycle_integral_H": 2,
+        "oriented_3cycle_W3": 0,
+        "isolated_D3_wrap_unit_3cycle_obstructed_if_no_endpoints": true,
+        "scope": "In this OPTIONAL H background, an oriented 3-cycle carrying integral H cannot support a stand-alone spin D-brane without canceling data; not an assertion for H=0 IIB vacuum."
+      }
+    },
+    {
+      "charges": [
+        4,
+        4
+      ],
+      "H_twist_integer": 3,
+      "gcd": 4,
+      "d3_H0_to_H3": 3,
+      "d3_free_H2_to_H5": 3,
+      "d3_H2_torsion_to_H5": 0,
+      "Sq3_integral_on_relevant_degrees": 0,
+      "E_infty_even": {
+        "H0": 0,
+        "H2": "Z_4",
+        "H4": "Z_4"
+      },
+      "E_infty_odd": {
+        "H3": "Z_3",
+        "H5": "Z_3"
+      },
+      "K0_finite_order": 16,
+      "K1_finite_order": 9,
+      "extension_caveat": "E_infty gives associated graded, not Z_g+Z_g vs Z_g^2 or Z_(g^2), similarly for k; extensions unresolved.",
+      "Freed_Witten_probe": {
+        "unit_3cycle_integral_H": 3,
+        "oriented_3cycle_W3": 0,
+        "isolated_D3_wrap_unit_3cycle_obstructed_if_no_endpoints": true,
+        "scope": "In this OPTIONAL H background, an oriented 3-cycle carrying integral H cannot support a stand-alone spin D-brane without canceling data; not an assertion for H=0 IIB vacuum."
+      }
+    },
+    {
+      "charges": [
+        6,
+        10
+      ],
+      "H_twist_integer": 0,
+      "gcd": 2,
+      "d3_H0_to_H3": 0,
+      "d3_free_H2_to_H5": 0,
+      "E_infty_even": {
+        "H0": "Z",
+        "H2": "Z + Z_2",
+        "H4": "Z_2"
+      },
+      "E_infty_odd": {
+        "H3": "Z",
+        "H5": "Z"
+      },
+      "K0_exact": "Z^2 + Z_2^2",
+      "K1_exact": "Z^2",
+      "extension_caveat": "Untwisted calculation independently resolved by K-Gysin"
+    },
+    {
+      "charges": [
+        6,
+        10
+      ],
+      "H_twist_integer": 1,
+      "gcd": 2,
+      "d3_H0_to_H3": 1,
+      "d3_free_H2_to_H5": 1,
+      "d3_H2_torsion_to_H5": 0,
+      "Sq3_integral_on_relevant_degrees": 0,
+      "E_infty_even": {
+        "H0": 0,
+        "H2": "Z_2",
+        "H4": "Z_2"
+      },
+      "E_infty_odd": {
+        "H3": "Z_1",
+        "H5": "Z_1"
+      },
+      "K0_finite_order": 4,
+      "K1_finite_order": 1,
+      "extension_caveat": "E_infty gives associated graded, not Z_g+Z_g vs Z_g^2 or Z_(g^2), similarly for k; extensions unresolved.",
+      "K1_exact": "0",
+      "Freed_Witten_probe": {
+        "unit_3cycle_integral_H": 1,
+        "oriented_3cycle_W3": 0,
+        "isolated_D3_wrap_unit_3cycle_obstructed_if_no_endpoints": true,
+        "scope": "In this OPTIONAL H background, an oriented 3-cycle carrying integral H cannot support a stand-alone spin D-brane without canceling data; not an assertion for H=0 IIB vacuum."
+      }
+    },
+    {
+      "charges": [
+        6,
+        10
+      ],
+      "H_twist_integer": 2,
+      "gcd": 2,
+      "d3_H0_to_H3": 2,
+      "d3_free_H2_to_H5": 2,
+      "d3_H2_torsion_to_H5": 0,
+      "Sq3_integral_on_relevant_degrees": 0,
+      "E_infty_even": {
+        "H0": 0,
+        "H2": "Z_2",
+        "H4": "Z_2"
+      },
+      "E_infty_odd": {
+        "H3": "Z_2",
+        "H5": "Z_2"
+      },
+      "K0_finite_order": 4,
+      "K1_finite_order": 4,
+      "extension_caveat": "E_infty gives associated graded, not Z_g+Z_g vs Z_g^2 or Z_(g^2), similarly for k; extensions unresolved.",
+      "Freed_Witten_probe": {
+        "unit_3cycle_integral_H": 2,
+        "oriented_3cycle_W3": 0,
+        "isolated_D3_wrap_unit_3cycle_obstructed_if_no_endpoints": true,
+        "scope": "In this OPTIONAL H background, an oriented 3-cycle carrying integral H cannot support a stand-alone spin D-brane without canceling data; not an assertion for H=0 IIB vacuum."
+      }
+    },
+    {
+      "charges": [
+        6,
+        10
+      ],
+      "H_twist_integer": 3,
+      "gcd": 2,
+      "d3_H0_to_H3": 3,
+      "d3_free_H2_to_H5": 3,
+      "d3_H2_torsion_to_H5": 0,
+      "Sq3_integral_on_relevant_degrees": 0,
+      "E_infty_even": {
+        "H0": 0,
+        "H2": "Z_2",
+        "H4": "Z_2"
+      },
+      "E_infty_odd": {
+        "H3": "Z_3",
+        "H5": "Z_3"
+      },
+      "K0_finite_order": 4,
+      "K1_finite_order": 9,
+      "extension_caveat": "E_infty gives associated graded, not Z_g+Z_g vs Z_g^2 or Z_(g^2), similarly for k; extensions unresolved.",
+      "Freed_Witten_probe": {
+        "unit_3cycle_integral_H": 3,
+        "oriented_3cycle_W3": 0,
+        "isolated_D3_wrap_unit_3cycle_obstructed_if_no_endpoints": true,
+        "scope": "In this OPTIONAL H background, an oriented 3-cycle carrying integral H cannot support a stand-alone spin D-brane without canceling data; not an assertion for H=0 IIB vacuum."
+      }
+    }
+  ],
+  "claim_limits": "Associated graded only for gcd>1 and twist |k|>0. No full twisted K groups or physically conserved charges until extensions, higher operations, differential refinements, Page and dynamical data are resolved."
+}
