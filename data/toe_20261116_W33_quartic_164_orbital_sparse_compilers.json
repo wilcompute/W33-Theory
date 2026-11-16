@@ -1,0 +1,4620 @@
+{
+  "status": "EXACT_PSP43_QUARTIC_ORBITAL_SPARSE_COMPILER_CENSUS",
+  "PSp4_order": 25920,
+  "output_stabilizer_order": 960,
+  "independent_stabilizer_generators": 4,
+  "full_sym4_input_dimension": 123410,
+  "total_output_line_orbits": 164,
+  "orbital_rank_histogram": {
+    "1": 2,
+    "21": 80,
+    "27": 82
+  },
+  "full_rank_27_orbit_count": 82,
+  "sparsest_full_rank_orbital": {
+    "representative_four_rails": [
+      0,
+      1,
+      4,
+      13
+    ],
+    "occupation_multiplicities": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "support_per_output": 60,
+    "adjacent_overlap": 0,
+    "nonadjacent_overlap": 0,
+    "gram_eigenvalues_1_20_6": [
+      60,
+      60,
+      60
+    ],
+    "output_rank": 27,
+    "exact_optimal_K_scale": "1/sqrt(60)",
+    "uniform_identical_fourcopy_heralding_probability": 0.015187499999999998
+  },
+  "best_uniform_product_heralding_orbital": {
+    "representative_four_rails": [
+      0,
+      1,
+      4,
+      17
+    ],
+    "occupation_multiplicities": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "support_per_output": 960,
+    "adjacent_overlap": 0,
+    "nonadjacent_overlap": 0,
+    "gram_eigenvalues_1_20_6": [
+      960,
+      960,
+      960
+    ],
+    "output_rank": 27,
+    "exact_optimal_K_scale": "1/sqrt(960)",
+    "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+  },
+  "sparsest_and_best_uniform_exact_27x27_Gram_verified": true,
+  "sparsest_uniform_product_success_exact": "243/16000",
+  "best_uniform_product_success_exact": "243/1000",
+  "both_preferred_orbitals_are_coisometries": true,
+  "top_20_sparsest_full_rank_orbitals": [
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        4,
+        13
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 60,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        60,
+        60,
+        60
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(60)",
+      "uniform_identical_fourcopy_heralding_probability": 0.015187499999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        16,
+        19
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 120,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        120,
+        120,
+        120
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(120)",
+      "uniform_identical_fourcopy_heralding_probability": 0.030374999999999996
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        4,
+        22
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 120,
+      "adjacent_overlap": 12,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        240,
+        132,
+        60
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(240)",
+      "uniform_identical_fourcopy_heralding_probability": 0.015187499999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        8,
+        20
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 240,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        240,
+        240,
+        240
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(240)",
+      "uniform_identical_fourcopy_heralding_probability": 0.06074999999999999
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        16
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 240,
+      "adjacent_overlap": 24,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        264,
+        120
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.030374999999999996
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        7,
+        14
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 240,
+      "adjacent_overlap": 24,
+      "nonadjacent_overlap": 30,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        204,
+        240
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.015187499999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        5,
+        14,
+        37
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 240,
+      "adjacent_overlap": 24,
+      "nonadjacent_overlap": 30,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        204,
+        240
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.015187499999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        19
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        480,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        26
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        480,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        28
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        480,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        36
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        480,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        37
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        480,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        8,
+        18
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        480,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        8,
+        27
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        480,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        8,
+        36
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        480,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        7,
+        29
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        480,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        7,
+        35
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        480,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        5,
+        7,
+        23
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        480,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        5,
+        7,
+        34
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        480,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        5,
+        10,
+        25
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        480,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    }
+  ],
+  "all_164_orbital_summaries": [
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "occupation_multiplicities": [
+        4
+      ],
+      "support_per_output": 40,
+      "adjacent_overlap": 40,
+      "nonadjacent_overlap": 40,
+      "gram_eigenvalues_1_20_6": [
+        1080,
+        0,
+        0
+      ],
+      "output_rank": 1,
+      "exact_optimal_K_scale": "1/sqrt(1080)",
+      "uniform_identical_fourcopy_heralding_probability": 1.5625e-05
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "occupation_multiplicities": [
+        3,
+        1
+      ],
+      "support_per_output": 120,
+      "adjacent_overlap": 24,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        360,
+        144,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(360)",
+      "uniform_identical_fourcopy_heralding_probability": 0.0016875000000000002
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        0,
+        4
+      ],
+      "occupation_multiplicities": [
+        3,
+        1
+      ],
+      "support_per_output": 160,
+      "adjacent_overlap": 64,
+      "nonadjacent_overlap": 40,
+      "gram_eigenvalues_1_20_6": [
+        1440,
+        144,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(1440)",
+      "uniform_identical_fourcopy_heralding_probability": 0.00075
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        0,
+        5
+      ],
+      "occupation_multiplicities": [
+        3,
+        1
+      ],
+      "support_per_output": 320,
+      "adjacent_overlap": 224,
+      "nonadjacent_overlap": 200,
+      "gram_eigenvalues_1_20_6": [
+        5760,
+        144,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(5760)",
+      "uniform_identical_fourcopy_heralding_probability": 0.00075
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        0,
+        7
+      ],
+      "occupation_multiplicities": [
+        3,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 864,
+      "nonadjacent_overlap": 840,
+      "gram_eigenvalues_1_20_6": [
+        23040,
+        144,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(23040)",
+      "uniform_identical_fourcopy_heralding_probability": 0.0016875000000000002
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "occupation_multiplicities": [
+        2,
+        2
+      ],
+      "support_per_output": 60,
+      "adjacent_overlap": 12,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        180,
+        72,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(180)",
+      "uniform_identical_fourcopy_heralding_probability": 0.0012656249999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        1,
+        2
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 120,
+      "adjacent_overlap": 24,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        360,
+        144,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(360)",
+      "uniform_identical_fourcopy_heralding_probability": 0.005062499999999999
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        1,
+        4
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 96,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        1440,
+        576,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(1440)",
+      "uniform_identical_fourcopy_heralding_probability": 0.020249999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        1,
+        5
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        1152,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        1,
+        7
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 288,
+      "nonadjacent_overlap": 120,
+      "gram_eigenvalues_1_20_6": [
+        5760,
+        1008,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(5760)",
+      "uniform_identical_fourcopy_heralding_probability": 0.020249999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        1,
+        8
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        1152,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        1,
+        9
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        1152,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        4,
+        4
+      ],
+      "occupation_multiplicities": [
+        2,
+        2
+      ],
+      "support_per_output": 80,
+      "adjacent_overlap": 32,
+      "nonadjacent_overlap": 20,
+      "gram_eigenvalues_1_20_6": [
+        720,
+        72,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(720)",
+      "uniform_identical_fourcopy_heralding_probability": 0.0005625
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        4,
+        5
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 320,
+      "adjacent_overlap": 224,
+      "nonadjacent_overlap": 200,
+      "gram_eigenvalues_1_20_6": [
+        5760,
+        144,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(5760)",
+      "uniform_identical_fourcopy_heralding_probability": 0.00225
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        4,
+        7
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 288,
+      "nonadjacent_overlap": 120,
+      "gram_eigenvalues_1_20_6": [
+        5760,
+        1008,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(5760)",
+      "uniform_identical_fourcopy_heralding_probability": 0.020249999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        4,
+        13
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 240,
+      "adjacent_overlap": 48,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        720,
+        288,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(720)",
+      "uniform_identical_fourcopy_heralding_probability": 0.010124999999999999
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        4,
+        14
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 480,
+      "nonadjacent_overlap": 360,
+      "gram_eigenvalues_1_20_6": [
+        11520,
+        720,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(11520)",
+      "uniform_identical_fourcopy_heralding_probability": 0.010124999999999999
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        4,
+        16
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        1152,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        4,
+        17
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        1152,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        4,
+        18
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        1152,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        5,
+        5
+      ],
+      "occupation_multiplicities": [
+        2,
+        2
+      ],
+      "support_per_output": 160,
+      "adjacent_overlap": 112,
+      "nonadjacent_overlap": 100,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        72,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.0005625
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        5,
+        6
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 160,
+      "adjacent_overlap": 64,
+      "nonadjacent_overlap": 40,
+      "gram_eigenvalues_1_20_6": [
+        1440,
+        144,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(1440)",
+      "uniform_identical_fourcopy_heralding_probability": 0.00225
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        5,
+        7
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        1152,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        5,
+        10
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        1152,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        5,
+        14
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 480,
+      "nonadjacent_overlap": 360,
+      "gram_eigenvalues_1_20_6": [
+        11520,
+        720,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(11520)",
+      "uniform_identical_fourcopy_heralding_probability": 0.010124999999999999
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        5,
+        16
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        1152,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        5,
+        17
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        1152,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        5,
+        18
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        1152,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        5,
+        19
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 288,
+      "nonadjacent_overlap": 120,
+      "gram_eigenvalues_1_20_6": [
+        5760,
+        1008,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(5760)",
+      "uniform_identical_fourcopy_heralding_probability": 0.020249999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        5,
+        20
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 288,
+      "nonadjacent_overlap": 120,
+      "gram_eigenvalues_1_20_6": [
+        5760,
+        1008,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(5760)",
+      "uniform_identical_fourcopy_heralding_probability": 0.020249999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        5,
+        21
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 288,
+      "nonadjacent_overlap": 120,
+      "gram_eigenvalues_1_20_6": [
+        5760,
+        1008,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(5760)",
+      "uniform_identical_fourcopy_heralding_probability": 0.020249999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        7,
+        7
+      ],
+      "occupation_multiplicities": [
+        2,
+        2
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 432,
+      "nonadjacent_overlap": 420,
+      "gram_eigenvalues_1_20_6": [
+        11520,
+        72,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(11520)",
+      "uniform_identical_fourcopy_heralding_probability": 0.0012656249999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        7,
+        8
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 864,
+      "nonadjacent_overlap": 840,
+      "gram_eigenvalues_1_20_6": [
+        23040,
+        144,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(23040)",
+      "uniform_identical_fourcopy_heralding_probability": 0.005062499999999999
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        7,
+        10
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 96,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        1440,
+        576,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(1440)",
+      "uniform_identical_fourcopy_heralding_probability": 0.020249999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        7,
+        11
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        1152,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        7,
+        16
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        1152,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        7,
+        17
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 288,
+      "nonadjacent_overlap": 120,
+      "gram_eigenvalues_1_20_6": [
+        5760,
+        1008,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(5760)",
+      "uniform_identical_fourcopy_heralding_probability": 0.020249999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        7,
+        18
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        1152,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        7,
+        20
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 288,
+      "nonadjacent_overlap": 120,
+      "gram_eigenvalues_1_20_6": [
+        5760,
+        1008,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(5760)",
+      "uniform_identical_fourcopy_heralding_probability": 0.020249999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        7,
+        21
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        1152,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        7,
+        25
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        1152,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        7,
+        27
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        1152,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        7,
+        29
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 288,
+      "nonadjacent_overlap": 120,
+      "gram_eigenvalues_1_20_6": [
+        5760,
+        1008,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(5760)",
+      "uniform_identical_fourcopy_heralding_probability": 0.020249999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        0,
+        7,
+        34
+      ],
+      "occupation_multiplicities": [
+        2,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        1152,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 10,
+      "adjacent_overlap": 2,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        30,
+        12,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(30)",
+      "uniform_identical_fourcopy_heralding_probability": 0.00084375
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 160,
+      "adjacent_overlap": 32,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        192,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.0135
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        1152,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.08099999999999999
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        2,
+        9
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 320,
+      "adjacent_overlap": 64,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        384,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.027
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 288,
+      "nonadjacent_overlap": 120,
+      "gram_eigenvalues_1_20_6": [
+        5760,
+        1008,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(5760)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        4,
+        8
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 384,
+      "nonadjacent_overlap": 240,
+      "gram_eigenvalues_1_20_6": [
+        8640,
+        864,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(8640)",
+      "uniform_identical_fourcopy_heralding_probability": 0.026999999999999996
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        4,
+        13
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 60,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        60,
+        60,
+        60
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(60)",
+      "uniform_identical_fourcopy_heralding_probability": 0.015187499999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        4,
+        14
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 96,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        1920,
+        1056,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(1920)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        4,
+        17
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        960,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        4,
+        22
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 120,
+      "adjacent_overlap": 12,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        240,
+        132,
+        60
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(240)",
+      "uniform_identical_fourcopy_heralding_probability": 0.015187499999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        4,
+        23
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 60,
+      "gram_eigenvalues_1_20_6": [
+        1920,
+        840,
+        1200
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(1920)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        4,
+        26
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        960,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        4,
+        32
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 60,
+      "gram_eigenvalues_1_20_6": [
+        1920,
+        840,
+        1200
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(1920)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        4,
+        35
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        960,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 120,
+      "gram_eigenvalues_1_20_6": [
+        4320,
+        432,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(4320)",
+      "uniform_identical_fourcopy_heralding_probability": 0.013499999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        7
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 480,
+      "nonadjacent_overlap": 360,
+      "gram_eigenvalues_1_20_6": [
+        11520,
+        720,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(11520)",
+      "uniform_identical_fourcopy_heralding_probability": 0.020249999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        8
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        1152,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.08099999999999999
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        9
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 288,
+      "nonadjacent_overlap": 120,
+      "gram_eigenvalues_1_20_6": [
+        5760,
+        1008,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(5760)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        11
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        1152,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.08099999999999999
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        12
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 288,
+      "nonadjacent_overlap": 120,
+      "gram_eigenvalues_1_20_6": [
+        5760,
+        1008,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(5760)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        14
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        960,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        16
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 240,
+      "adjacent_overlap": 24,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        264,
+        120
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.030374999999999996
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        17
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 60,
+      "gram_eigenvalues_1_20_6": [
+        1920,
+        840,
+        1200
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(1920)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        18
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 60,
+      "gram_eigenvalues_1_20_6": [
+        1920,
+        840,
+        1200
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(1920)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        19
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        480,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        20
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        960,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        21
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        960,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        23
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        960,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        25
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 96,
+      "nonadjacent_overlap": 30,
+      "gram_eigenvalues_1_20_6": [
+        1920,
+        516,
+        120
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(1920)",
+      "uniform_identical_fourcopy_heralding_probability": 0.030374999999999996
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        26
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        480,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        27
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 60,
+      "gram_eigenvalues_1_20_6": [
+        1920,
+        840,
+        1200
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(1920)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        28
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        480,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        29
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        960,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        30
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        960,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        32
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        960,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        34
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 96,
+      "nonadjacent_overlap": 30,
+      "gram_eigenvalues_1_20_6": [
+        1920,
+        516,
+        120
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(1920)",
+      "uniform_identical_fourcopy_heralding_probability": 0.030374999999999996
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        35
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 60,
+      "gram_eigenvalues_1_20_6": [
+        1920,
+        840,
+        1200
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(1920)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        36
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        480,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        37
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        480,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        38
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        960,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        5,
+        39
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        960,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        8,
+        9
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 384,
+      "nonadjacent_overlap": 240,
+      "gram_eigenvalues_1_20_6": [
+        8640,
+        864,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(8640)",
+      "uniform_identical_fourcopy_heralding_probability": 0.026999999999999996
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        8,
+        12
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 96,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        1440,
+        576,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(1440)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        8,
+        17
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 96,
+      "nonadjacent_overlap": 120,
+      "gram_eigenvalues_1_20_6": [
+        3840,
+        816,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(3840)",
+      "uniform_identical_fourcopy_heralding_probability": 0.06074999999999999
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        8,
+        18
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        480,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        8,
+        20
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 240,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        240,
+        240,
+        240
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(240)",
+      "uniform_identical_fourcopy_heralding_probability": 0.06074999999999999
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        8,
+        26
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 180,
+      "gram_eigenvalues_1_20_6": [
+        3840,
+        600,
+        1680
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(3840)",
+      "uniform_identical_fourcopy_heralding_probability": 0.06074999999999999
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        8,
+        27
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        480,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        8,
+        29
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 30,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        420,
+        600
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.06074999999999999
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        8,
+        35
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 180,
+      "gram_eigenvalues_1_20_6": [
+        3840,
+        600,
+        1680
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(3840)",
+      "uniform_identical_fourcopy_heralding_probability": 0.06074999999999999
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        8,
+        36
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        480,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        1,
+        8,
+        38
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 30,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        420,
+        600
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.06074999999999999
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        5,
+        6
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 40,
+      "adjacent_overlap": 40,
+      "nonadjacent_overlap": 40,
+      "gram_eigenvalues_1_20_6": [
+        1080,
+        0,
+        0
+      ],
+      "output_rank": 1,
+      "exact_optimal_K_scale": "1/sqrt(1080)",
+      "uniform_identical_fourcopy_heralding_probability": 0.00037499999999999995
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        5,
+        7
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 288,
+      "nonadjacent_overlap": 120,
+      "gram_eigenvalues_1_20_6": [
+        5760,
+        1008,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(5760)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        5,
+        10
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 288,
+      "nonadjacent_overlap": 120,
+      "gram_eigenvalues_1_20_6": [
+        5760,
+        1008,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(5760)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        5,
+        17
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 672,
+      "nonadjacent_overlap": 600,
+      "gram_eigenvalues_1_20_6": [
+        17280,
+        432,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(17280)",
+      "uniform_identical_fourcopy_heralding_probability": 0.013499999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        5,
+        19
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 96,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        1440,
+        576,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(1440)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        5,
+        20
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 288,
+      "nonadjacent_overlap": 120,
+      "gram_eigenvalues_1_20_6": [
+        5760,
+        1008,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(5760)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        7,
+        8
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 672,
+      "nonadjacent_overlap": 600,
+      "gram_eigenvalues_1_20_6": [
+        17280,
+        432,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(17280)",
+      "uniform_identical_fourcopy_heralding_probability": 0.013499999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        7,
+        11
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 384,
+      "nonadjacent_overlap": 240,
+      "gram_eigenvalues_1_20_6": [
+        8640,
+        864,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(8640)",
+      "uniform_identical_fourcopy_heralding_probability": 0.026999999999999996
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        7,
+        14
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 240,
+      "adjacent_overlap": 24,
+      "nonadjacent_overlap": 30,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        204,
+        240
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.015187499999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        7,
+        16
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        960,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        7,
+        17
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 60,
+      "gram_eigenvalues_1_20_6": [
+        1920,
+        840,
+        1200
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(1920)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        7,
+        18
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        960,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        7,
+        19
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        960,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        7,
+        20
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 60,
+      "gram_eigenvalues_1_20_6": [
+        1920,
+        840,
+        1200
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(1920)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        7,
+        21
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        960,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        7,
+        23
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 480,
+      "nonadjacent_overlap": 600,
+      "gram_eigenvalues_1_20_6": [
+        15360,
+        240,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(15360)",
+      "uniform_identical_fourcopy_heralding_probability": 0.015187499999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        7,
+        24
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 96,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        1920,
+        1056,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(1920)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        7,
+        25
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        960,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        7,
+        26
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 60,
+      "gram_eigenvalues_1_20_6": [
+        1920,
+        840,
+        1200
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(1920)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        7,
+        28
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        960,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        7,
+        29
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        480,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        7,
+        30
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        960,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        7,
+        34
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        960,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        7,
+        35
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        480,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        7,
+        36
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        960,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        7,
+        37
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        960,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        7,
+        38
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 60,
+      "gram_eigenvalues_1_20_6": [
+        1920,
+        840,
+        1200
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(1920)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        16,
+        17
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        1152,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.08099999999999999
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        16,
+        18
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        1152,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.08099999999999999
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        16,
+        19
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 120,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        120,
+        120,
+        120
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(120)",
+      "uniform_identical_fourcopy_heralding_probability": 0.030374999999999996
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        16,
+        20
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 60,
+      "gram_eigenvalues_1_20_6": [
+        1920,
+        840,
+        1200
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(1920)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        16,
+        21
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 60,
+      "gram_eigenvalues_1_20_6": [
+        1920,
+        840,
+        1200
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(1920)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        16,
+        27
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 480,
+      "nonadjacent_overlap": 360,
+      "gram_eigenvalues_1_20_6": [
+        11520,
+        720,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(11520)",
+      "uniform_identical_fourcopy_heralding_probability": 0.020249999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        16,
+        29
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 96,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        1920,
+        1056,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(1920)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        16,
+        30
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 48,
+      "nonadjacent_overlap": 60,
+      "gram_eigenvalues_1_20_6": [
+        1920,
+        408,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(1920)",
+      "uniform_identical_fourcopy_heralding_probability": 0.030374999999999996
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        17,
+        18
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        1152,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.08099999999999999
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        17,
+        20
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 96,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        1920,
+        1056,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(1920)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        17,
+        25
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 240,
+      "adjacent_overlap": 48,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        720,
+        288,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(720)",
+      "uniform_identical_fourcopy_heralding_probability": 0.020249999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        17,
+        27
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 288,
+      "nonadjacent_overlap": 120,
+      "gram_eigenvalues_1_20_6": [
+        5760,
+        1008,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(5760)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        4,
+        17,
+        29
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 288,
+      "nonadjacent_overlap": 240,
+      "gram_eigenvalues_1_20_6": [
+        7680,
+        768,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(7680)",
+      "uniform_identical_fourcopy_heralding_probability": 0.030374999999999996
+    },
+    {
+      "representative_four_rails": [
+        0,
+        5,
+        7,
+        8
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        1152,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.08099999999999999
+    },
+    {
+      "representative_four_rails": [
+        0,
+        5,
+        7,
+        11
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 288,
+      "nonadjacent_overlap": 120,
+      "gram_eigenvalues_1_20_6": [
+        5760,
+        1008,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(5760)",
+      "uniform_identical_fourcopy_heralding_probability": 0.040499999999999994
+    },
+    {
+      "representative_four_rails": [
+        0,
+        5,
+        7,
+        12
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        1152,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.08099999999999999
+    },
+    {
+      "representative_four_rails": [
+        0,
+        5,
+        7,
+        17
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 48,
+      "nonadjacent_overlap": 60,
+      "gram_eigenvalues_1_20_6": [
+        1920,
+        408,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(1920)",
+      "uniform_identical_fourcopy_heralding_probability": 0.030374999999999996
+    },
+    {
+      "representative_four_rails": [
+        0,
+        5,
+        7,
+        18
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 60,
+      "gram_eigenvalues_1_20_6": [
+        1920,
+        840,
+        1200
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(1920)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        5,
+        7,
+        20
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 60,
+      "gram_eigenvalues_1_20_6": [
+        1920,
+        840,
+        1200
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(1920)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        5,
+        7,
+        21
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        960,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        5,
+        7,
+        23
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        480,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        5,
+        7,
+        24
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        960,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        5,
+        7,
+        25
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 60,
+      "gram_eigenvalues_1_20_6": [
+        1920,
+        840,
+        1200
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(1920)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        5,
+        7,
+        28
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        960,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        5,
+        7,
+        34
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        480,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        5,
+        7,
+        37
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        960,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        5,
+        10,
+        11
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        2880,
+        1152,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(2880)",
+      "uniform_identical_fourcopy_heralding_probability": 0.08099999999999999
+    },
+    {
+      "representative_four_rails": [
+        0,
+        5,
+        10,
+        20
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        960,
+        960
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.24299999999999997
+    },
+    {
+      "representative_four_rails": [
+        0,
+        5,
+        10,
+        21
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 60,
+      "gram_eigenvalues_1_20_6": [
+        1920,
+        840,
+        1200
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(1920)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        5,
+        10,
+        25
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        480,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        5,
+        10,
+        33
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 0,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        480,
+        480,
+        480
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(480)",
+      "uniform_identical_fourcopy_heralding_probability": 0.12149999999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        5,
+        14,
+        23
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 384,
+      "nonadjacent_overlap": 240,
+      "gram_eigenvalues_1_20_6": [
+        8640,
+        864,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(8640)",
+      "uniform_identical_fourcopy_heralding_probability": 0.026999999999999996
+    },
+    {
+      "representative_four_rails": [
+        0,
+        5,
+        14,
+        24
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 320,
+      "adjacent_overlap": 96,
+      "nonadjacent_overlap": 40,
+      "gram_eigenvalues_1_20_6": [
+        1920,
+        336,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(1920)",
+      "uniform_identical_fourcopy_heralding_probability": 0.0135
+    },
+    {
+      "representative_four_rails": [
+        0,
+        5,
+        14,
+        37
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 240,
+      "adjacent_overlap": 24,
+      "nonadjacent_overlap": 30,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        204,
+        240
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.015187499999999998
+    },
+    {
+      "representative_four_rails": [
+        0,
+        7,
+        8,
+        9
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 80,
+      "adjacent_overlap": 72,
+      "nonadjacent_overlap": 70,
+      "gram_eigenvalues_1_20_6": [
+        1920,
+        12,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(1920)",
+      "uniform_identical_fourcopy_heralding_probability": 0.00084375
+    },
+    {
+      "representative_four_rails": [
+        0,
+        7,
+        8,
+        11
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 384,
+      "nonadjacent_overlap": 240,
+      "gram_eigenvalues_1_20_6": [
+        8640,
+        864,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(8640)",
+      "uniform_identical_fourcopy_heralding_probability": 0.026999999999999996
+    },
+    {
+      "representative_four_rails": [
+        0,
+        7,
+        8,
+        16
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 320,
+      "adjacent_overlap": 64,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        384,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.027
+    },
+    {
+      "representative_four_rails": [
+        0,
+        7,
+        8,
+        30
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 320,
+      "adjacent_overlap": 64,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        384,
+        0
+      ],
+      "output_rank": 21,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.027
+    },
+    {
+      "representative_four_rails": [
+        0,
+        7,
+        11,
+        16
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 60,
+      "gram_eigenvalues_1_20_6": [
+        3840,
+        1032,
+        240
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(3840)",
+      "uniform_identical_fourcopy_heralding_probability": 0.06074999999999999
+    },
+    {
+      "representative_four_rails": [
+        0,
+        7,
+        11,
+        18
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 960,
+      "adjacent_overlap": 192,
+      "nonadjacent_overlap": 60,
+      "gram_eigenvalues_1_20_6": [
+        3840,
+        1032,
+        240
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(3840)",
+      "uniform_identical_fourcopy_heralding_probability": 0.06074999999999999
+    },
+    {
+      "representative_four_rails": [
+        0,
+        7,
+        11,
+        30
+      ],
+      "occupation_multiplicities": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "support_per_output": 480,
+      "adjacent_overlap": 48,
+      "nonadjacent_overlap": 0,
+      "gram_eigenvalues_1_20_6": [
+        960,
+        528,
+        240
+      ],
+      "output_rank": 27,
+      "exact_optimal_K_scale": "1/sqrt(960)",
+      "uniform_identical_fourcopy_heralding_probability": 0.06074999999999999
+    }
+  ],
+  "orbit_completeness_check": "For transitive output action, Hom_G(Sym4 V,C27) dimension equals number of stabilizer H-orbits on Sym4 input; exact Molien independently found 164.",
+  "scope": "Full-rank equivariant integer/binary orbital Kraus maps, canonically rescaled by exact top singular value. No compact quantum circuit or physical 4-photon success implementation inferred. Uniform-product probabilities are ideal normalized abstract Kraus success probabilities."
+}

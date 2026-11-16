@@ -1,0 +1,1486 @@
+{
+  "status": "EXACT_D9_S2S2_CHARGED_SCALAR_MONOPOLE_HARMONIC_KK",
+  "unit_electric_charge": true,
+  "compact_monopole_charges_checked": [
+    -4,
+    4
+  ],
+  "number_of_charge_pairs_checked": 81,
+  "angular_momenta": "j_i=abs(n_i)/2+k_i, k_i=0,1,2,...",
+  "covariant_spherical_harmonic_eigenvalue": "r_i^-2*(j_i*(j_i+1)-n_i^2/4)",
+  "combined_mass_formula": "m\u00b2L\u00b2 = 20/(1+t)*[(j1(j1+1)-n1\u00b2/4)+t*(j2(j2+1)-n2\u00b2/4)], t=r1\u00b2/r2\u00b2",
+  "spectral_degeneracy": "(2j1+1)(2j2+1)",
+  "lowest_m2L2_formula": "20/(1+t)*(abs(n1)/2+t*abs(n2)/2)",
+  "lowest_multiplicity_formula": "(abs(n1)+1)(abs(n2)+1)",
+  "nonzero_flux_charged_probe_has_positive_covariant_gap": true,
+  "unit_flux_example_n1_n2": [
+    1,
+    2
+  ],
+  "unit_flux_example_t_equal": 1,
+  "unit_flux_example_lowest_m2L2": 15,
+  "unit_flux_example_lowest_multiplicity": 6,
+  "parity_selection": "a 2\u03c0 rotation in SU2_i center multiplies charged line-bundle sections by (-1)^n_i",
+  "charge_grid_results": [
+    {
+      "charges": [
+        -4,
+        -4
+      ],
+      "lowest_j": [
+        "2",
+        "2"
+      ],
+      "lowest_m2L2_t3half": "40",
+      "lowest_degeneracy": 25,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 3600,
+      "central_2pi_rotation_parities": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "charges": [
+        -4,
+        -3
+      ],
+      "lowest_j": [
+        "2",
+        "3/2"
+      ],
+      "lowest_m2L2_t3half": "34",
+      "lowest_degeneracy": 20,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 3240,
+      "central_2pi_rotation_parities": [
+        1.0,
+        -1.0
+      ]
+    },
+    {
+      "charges": [
+        -4,
+        -2
+      ],
+      "lowest_j": [
+        "2",
+        "1"
+      ],
+      "lowest_m2L2_t3half": "28",
+      "lowest_degeneracy": 15,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2880,
+      "central_2pi_rotation_parities": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "charges": [
+        -4,
+        -1
+      ],
+      "lowest_j": [
+        "2",
+        "1/2"
+      ],
+      "lowest_m2L2_t3half": "22",
+      "lowest_degeneracy": 10,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2520,
+      "central_2pi_rotation_parities": [
+        1.0,
+        -1.0
+      ]
+    },
+    {
+      "charges": [
+        -4,
+        0
+      ],
+      "lowest_j": [
+        "2",
+        "0"
+      ],
+      "lowest_m2L2_t3half": "16",
+      "lowest_degeneracy": 5,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2160,
+      "central_2pi_rotation_parities": [
+        1.0,
+        1
+      ]
+    },
+    {
+      "charges": [
+        -4,
+        1
+      ],
+      "lowest_j": [
+        "2",
+        "1/2"
+      ],
+      "lowest_m2L2_t3half": "22",
+      "lowest_degeneracy": 10,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2520,
+      "central_2pi_rotation_parities": [
+        1.0,
+        -1
+      ]
+    },
+    {
+      "charges": [
+        -4,
+        2
+      ],
+      "lowest_j": [
+        "2",
+        "1"
+      ],
+      "lowest_m2L2_t3half": "28",
+      "lowest_degeneracy": 15,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2880,
+      "central_2pi_rotation_parities": [
+        1.0,
+        1
+      ]
+    },
+    {
+      "charges": [
+        -4,
+        3
+      ],
+      "lowest_j": [
+        "2",
+        "3/2"
+      ],
+      "lowest_m2L2_t3half": "34",
+      "lowest_degeneracy": 20,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 3240,
+      "central_2pi_rotation_parities": [
+        1.0,
+        -1
+      ]
+    },
+    {
+      "charges": [
+        -4,
+        4
+      ],
+      "lowest_j": [
+        "2",
+        "2"
+      ],
+      "lowest_m2L2_t3half": "40",
+      "lowest_degeneracy": 25,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 3600,
+      "central_2pi_rotation_parities": [
+        1.0,
+        1
+      ]
+    },
+    {
+      "charges": [
+        -3,
+        -4
+      ],
+      "lowest_j": [
+        "3/2",
+        "2"
+      ],
+      "lowest_m2L2_t3half": "36",
+      "lowest_degeneracy": 20,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 3240,
+      "central_2pi_rotation_parities": [
+        -1.0,
+        1.0
+      ]
+    },
+    {
+      "charges": [
+        -3,
+        -3
+      ],
+      "lowest_j": [
+        "3/2",
+        "3/2"
+      ],
+      "lowest_m2L2_t3half": "30",
+      "lowest_degeneracy": 16,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2916,
+      "central_2pi_rotation_parities": [
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "charges": [
+        -3,
+        -2
+      ],
+      "lowest_j": [
+        "3/2",
+        "1"
+      ],
+      "lowest_m2L2_t3half": "24",
+      "lowest_degeneracy": 12,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2592,
+      "central_2pi_rotation_parities": [
+        -1.0,
+        1.0
+      ]
+    },
+    {
+      "charges": [
+        -3,
+        -1
+      ],
+      "lowest_j": [
+        "3/2",
+        "1/2"
+      ],
+      "lowest_m2L2_t3half": "18",
+      "lowest_degeneracy": 8,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2268,
+      "central_2pi_rotation_parities": [
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "charges": [
+        -3,
+        0
+      ],
+      "lowest_j": [
+        "3/2",
+        "0"
+      ],
+      "lowest_m2L2_t3half": "12",
+      "lowest_degeneracy": 4,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 1944,
+      "central_2pi_rotation_parities": [
+        -1.0,
+        1
+      ]
+    },
+    {
+      "charges": [
+        -3,
+        1
+      ],
+      "lowest_j": [
+        "3/2",
+        "1/2"
+      ],
+      "lowest_m2L2_t3half": "18",
+      "lowest_degeneracy": 8,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2268,
+      "central_2pi_rotation_parities": [
+        -1.0,
+        -1
+      ]
+    },
+    {
+      "charges": [
+        -3,
+        2
+      ],
+      "lowest_j": [
+        "3/2",
+        "1"
+      ],
+      "lowest_m2L2_t3half": "24",
+      "lowest_degeneracy": 12,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2592,
+      "central_2pi_rotation_parities": [
+        -1.0,
+        1
+      ]
+    },
+    {
+      "charges": [
+        -3,
+        3
+      ],
+      "lowest_j": [
+        "3/2",
+        "3/2"
+      ],
+      "lowest_m2L2_t3half": "30",
+      "lowest_degeneracy": 16,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2916,
+      "central_2pi_rotation_parities": [
+        -1.0,
+        -1
+      ]
+    },
+    {
+      "charges": [
+        -3,
+        4
+      ],
+      "lowest_j": [
+        "3/2",
+        "2"
+      ],
+      "lowest_m2L2_t3half": "36",
+      "lowest_degeneracy": 20,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 3240,
+      "central_2pi_rotation_parities": [
+        -1.0,
+        1
+      ]
+    },
+    {
+      "charges": [
+        -2,
+        -4
+      ],
+      "lowest_j": [
+        "1",
+        "2"
+      ],
+      "lowest_m2L2_t3half": "32",
+      "lowest_degeneracy": 15,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2880,
+      "central_2pi_rotation_parities": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "charges": [
+        -2,
+        -3
+      ],
+      "lowest_j": [
+        "1",
+        "3/2"
+      ],
+      "lowest_m2L2_t3half": "26",
+      "lowest_degeneracy": 12,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2592,
+      "central_2pi_rotation_parities": [
+        1.0,
+        -1.0
+      ]
+    },
+    {
+      "charges": [
+        -2,
+        -2
+      ],
+      "lowest_j": [
+        "1",
+        "1"
+      ],
+      "lowest_m2L2_t3half": "20",
+      "lowest_degeneracy": 9,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2304,
+      "central_2pi_rotation_parities": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "charges": [
+        -2,
+        -1
+      ],
+      "lowest_j": [
+        "1",
+        "1/2"
+      ],
+      "lowest_m2L2_t3half": "14",
+      "lowest_degeneracy": 6,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2016,
+      "central_2pi_rotation_parities": [
+        1.0,
+        -1.0
+      ]
+    },
+    {
+      "charges": [
+        -2,
+        0
+      ],
+      "lowest_j": [
+        "1",
+        "0"
+      ],
+      "lowest_m2L2_t3half": "8",
+      "lowest_degeneracy": 3,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 1728,
+      "central_2pi_rotation_parities": [
+        1.0,
+        1
+      ]
+    },
+    {
+      "charges": [
+        -2,
+        1
+      ],
+      "lowest_j": [
+        "1",
+        "1/2"
+      ],
+      "lowest_m2L2_t3half": "14",
+      "lowest_degeneracy": 6,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2016,
+      "central_2pi_rotation_parities": [
+        1.0,
+        -1
+      ]
+    },
+    {
+      "charges": [
+        -2,
+        2
+      ],
+      "lowest_j": [
+        "1",
+        "1"
+      ],
+      "lowest_m2L2_t3half": "20",
+      "lowest_degeneracy": 9,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2304,
+      "central_2pi_rotation_parities": [
+        1.0,
+        1
+      ]
+    },
+    {
+      "charges": [
+        -2,
+        3
+      ],
+      "lowest_j": [
+        "1",
+        "3/2"
+      ],
+      "lowest_m2L2_t3half": "26",
+      "lowest_degeneracy": 12,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2592,
+      "central_2pi_rotation_parities": [
+        1.0,
+        -1
+      ]
+    },
+    {
+      "charges": [
+        -2,
+        4
+      ],
+      "lowest_j": [
+        "1",
+        "2"
+      ],
+      "lowest_m2L2_t3half": "32",
+      "lowest_degeneracy": 15,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2880,
+      "central_2pi_rotation_parities": [
+        1.0,
+        1
+      ]
+    },
+    {
+      "charges": [
+        -1,
+        -4
+      ],
+      "lowest_j": [
+        "1/2",
+        "2"
+      ],
+      "lowest_m2L2_t3half": "28",
+      "lowest_degeneracy": 10,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2520,
+      "central_2pi_rotation_parities": [
+        -1.0,
+        1.0
+      ]
+    },
+    {
+      "charges": [
+        -1,
+        -3
+      ],
+      "lowest_j": [
+        "1/2",
+        "3/2"
+      ],
+      "lowest_m2L2_t3half": "22",
+      "lowest_degeneracy": 8,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2268,
+      "central_2pi_rotation_parities": [
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "charges": [
+        -1,
+        -2
+      ],
+      "lowest_j": [
+        "1/2",
+        "1"
+      ],
+      "lowest_m2L2_t3half": "16",
+      "lowest_degeneracy": 6,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2016,
+      "central_2pi_rotation_parities": [
+        -1.0,
+        1.0
+      ]
+    },
+    {
+      "charges": [
+        -1,
+        -1
+      ],
+      "lowest_j": [
+        "1/2",
+        "1/2"
+      ],
+      "lowest_m2L2_t3half": "10",
+      "lowest_degeneracy": 4,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 1764,
+      "central_2pi_rotation_parities": [
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "charges": [
+        -1,
+        0
+      ],
+      "lowest_j": [
+        "1/2",
+        "0"
+      ],
+      "lowest_m2L2_t3half": "4",
+      "lowest_degeneracy": 2,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 1512,
+      "central_2pi_rotation_parities": [
+        -1.0,
+        1
+      ]
+    },
+    {
+      "charges": [
+        -1,
+        1
+      ],
+      "lowest_j": [
+        "1/2",
+        "1/2"
+      ],
+      "lowest_m2L2_t3half": "10",
+      "lowest_degeneracy": 4,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 1764,
+      "central_2pi_rotation_parities": [
+        -1.0,
+        -1
+      ]
+    },
+    {
+      "charges": [
+        -1,
+        2
+      ],
+      "lowest_j": [
+        "1/2",
+        "1"
+      ],
+      "lowest_m2L2_t3half": "16",
+      "lowest_degeneracy": 6,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2016,
+      "central_2pi_rotation_parities": [
+        -1.0,
+        1
+      ]
+    },
+    {
+      "charges": [
+        -1,
+        3
+      ],
+      "lowest_j": [
+        "1/2",
+        "3/2"
+      ],
+      "lowest_m2L2_t3half": "22",
+      "lowest_degeneracy": 8,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2268,
+      "central_2pi_rotation_parities": [
+        -1.0,
+        -1
+      ]
+    },
+    {
+      "charges": [
+        -1,
+        4
+      ],
+      "lowest_j": [
+        "1/2",
+        "2"
+      ],
+      "lowest_m2L2_t3half": "28",
+      "lowest_degeneracy": 10,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2520,
+      "central_2pi_rotation_parities": [
+        -1.0,
+        1
+      ]
+    },
+    {
+      "charges": [
+        0,
+        -4
+      ],
+      "lowest_j": [
+        "0",
+        "2"
+      ],
+      "lowest_m2L2_t3half": "24",
+      "lowest_degeneracy": 5,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2160,
+      "central_2pi_rotation_parities": [
+        1,
+        1.0
+      ]
+    },
+    {
+      "charges": [
+        0,
+        -3
+      ],
+      "lowest_j": [
+        "0",
+        "3/2"
+      ],
+      "lowest_m2L2_t3half": "18",
+      "lowest_degeneracy": 4,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 1944,
+      "central_2pi_rotation_parities": [
+        1,
+        -1.0
+      ]
+    },
+    {
+      "charges": [
+        0,
+        -2
+      ],
+      "lowest_j": [
+        "0",
+        "1"
+      ],
+      "lowest_m2L2_t3half": "12",
+      "lowest_degeneracy": 3,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 1728,
+      "central_2pi_rotation_parities": [
+        1,
+        1.0
+      ]
+    },
+    {
+      "charges": [
+        0,
+        -1
+      ],
+      "lowest_j": [
+        "0",
+        "1/2"
+      ],
+      "lowest_m2L2_t3half": "6",
+      "lowest_degeneracy": 2,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 1512,
+      "central_2pi_rotation_parities": [
+        1,
+        -1.0
+      ]
+    },
+    {
+      "charges": [
+        0,
+        0
+      ],
+      "lowest_j": [
+        "0",
+        "0"
+      ],
+      "lowest_m2L2_t3half": "0",
+      "lowest_degeneracy": 1,
+      "charged_spectrum_is_nonzero_if_any_flux": false,
+      "multiplicity_total_levels_k0_to5": 1296,
+      "central_2pi_rotation_parities": [
+        1,
+        1
+      ]
+    },
+    {
+      "charges": [
+        0,
+        1
+      ],
+      "lowest_j": [
+        "0",
+        "1/2"
+      ],
+      "lowest_m2L2_t3half": "6",
+      "lowest_degeneracy": 2,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 1512,
+      "central_2pi_rotation_parities": [
+        1,
+        -1
+      ]
+    },
+    {
+      "charges": [
+        0,
+        2
+      ],
+      "lowest_j": [
+        "0",
+        "1"
+      ],
+      "lowest_m2L2_t3half": "12",
+      "lowest_degeneracy": 3,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 1728,
+      "central_2pi_rotation_parities": [
+        1,
+        1
+      ]
+    },
+    {
+      "charges": [
+        0,
+        3
+      ],
+      "lowest_j": [
+        "0",
+        "3/2"
+      ],
+      "lowest_m2L2_t3half": "18",
+      "lowest_degeneracy": 4,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 1944,
+      "central_2pi_rotation_parities": [
+        1,
+        -1
+      ]
+    },
+    {
+      "charges": [
+        0,
+        4
+      ],
+      "lowest_j": [
+        "0",
+        "2"
+      ],
+      "lowest_m2L2_t3half": "24",
+      "lowest_degeneracy": 5,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2160,
+      "central_2pi_rotation_parities": [
+        1,
+        1
+      ]
+    },
+    {
+      "charges": [
+        1,
+        -4
+      ],
+      "lowest_j": [
+        "1/2",
+        "2"
+      ],
+      "lowest_m2L2_t3half": "28",
+      "lowest_degeneracy": 10,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2520,
+      "central_2pi_rotation_parities": [
+        -1,
+        1.0
+      ]
+    },
+    {
+      "charges": [
+        1,
+        -3
+      ],
+      "lowest_j": [
+        "1/2",
+        "3/2"
+      ],
+      "lowest_m2L2_t3half": "22",
+      "lowest_degeneracy": 8,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2268,
+      "central_2pi_rotation_parities": [
+        -1,
+        -1.0
+      ]
+    },
+    {
+      "charges": [
+        1,
+        -2
+      ],
+      "lowest_j": [
+        "1/2",
+        "1"
+      ],
+      "lowest_m2L2_t3half": "16",
+      "lowest_degeneracy": 6,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2016,
+      "central_2pi_rotation_parities": [
+        -1,
+        1.0
+      ]
+    },
+    {
+      "charges": [
+        1,
+        -1
+      ],
+      "lowest_j": [
+        "1/2",
+        "1/2"
+      ],
+      "lowest_m2L2_t3half": "10",
+      "lowest_degeneracy": 4,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 1764,
+      "central_2pi_rotation_parities": [
+        -1,
+        -1.0
+      ]
+    },
+    {
+      "charges": [
+        1,
+        0
+      ],
+      "lowest_j": [
+        "1/2",
+        "0"
+      ],
+      "lowest_m2L2_t3half": "4",
+      "lowest_degeneracy": 2,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 1512,
+      "central_2pi_rotation_parities": [
+        -1,
+        1
+      ]
+    },
+    {
+      "charges": [
+        1,
+        1
+      ],
+      "lowest_j": [
+        "1/2",
+        "1/2"
+      ],
+      "lowest_m2L2_t3half": "10",
+      "lowest_degeneracy": 4,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 1764,
+      "central_2pi_rotation_parities": [
+        -1,
+        -1
+      ]
+    },
+    {
+      "charges": [
+        1,
+        2
+      ],
+      "lowest_j": [
+        "1/2",
+        "1"
+      ],
+      "lowest_m2L2_t3half": "16",
+      "lowest_degeneracy": 6,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2016,
+      "central_2pi_rotation_parities": [
+        -1,
+        1
+      ]
+    },
+    {
+      "charges": [
+        1,
+        3
+      ],
+      "lowest_j": [
+        "1/2",
+        "3/2"
+      ],
+      "lowest_m2L2_t3half": "22",
+      "lowest_degeneracy": 8,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2268,
+      "central_2pi_rotation_parities": [
+        -1,
+        -1
+      ]
+    },
+    {
+      "charges": [
+        1,
+        4
+      ],
+      "lowest_j": [
+        "1/2",
+        "2"
+      ],
+      "lowest_m2L2_t3half": "28",
+      "lowest_degeneracy": 10,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2520,
+      "central_2pi_rotation_parities": [
+        -1,
+        1
+      ]
+    },
+    {
+      "charges": [
+        2,
+        -4
+      ],
+      "lowest_j": [
+        "1",
+        "2"
+      ],
+      "lowest_m2L2_t3half": "32",
+      "lowest_degeneracy": 15,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2880,
+      "central_2pi_rotation_parities": [
+        1,
+        1.0
+      ]
+    },
+    {
+      "charges": [
+        2,
+        -3
+      ],
+      "lowest_j": [
+        "1",
+        "3/2"
+      ],
+      "lowest_m2L2_t3half": "26",
+      "lowest_degeneracy": 12,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2592,
+      "central_2pi_rotation_parities": [
+        1,
+        -1.0
+      ]
+    },
+    {
+      "charges": [
+        2,
+        -2
+      ],
+      "lowest_j": [
+        "1",
+        "1"
+      ],
+      "lowest_m2L2_t3half": "20",
+      "lowest_degeneracy": 9,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2304,
+      "central_2pi_rotation_parities": [
+        1,
+        1.0
+      ]
+    },
+    {
+      "charges": [
+        2,
+        -1
+      ],
+      "lowest_j": [
+        "1",
+        "1/2"
+      ],
+      "lowest_m2L2_t3half": "14",
+      "lowest_degeneracy": 6,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2016,
+      "central_2pi_rotation_parities": [
+        1,
+        -1.0
+      ]
+    },
+    {
+      "charges": [
+        2,
+        0
+      ],
+      "lowest_j": [
+        "1",
+        "0"
+      ],
+      "lowest_m2L2_t3half": "8",
+      "lowest_degeneracy": 3,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 1728,
+      "central_2pi_rotation_parities": [
+        1,
+        1
+      ]
+    },
+    {
+      "charges": [
+        2,
+        1
+      ],
+      "lowest_j": [
+        "1",
+        "1/2"
+      ],
+      "lowest_m2L2_t3half": "14",
+      "lowest_degeneracy": 6,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2016,
+      "central_2pi_rotation_parities": [
+        1,
+        -1
+      ]
+    },
+    {
+      "charges": [
+        2,
+        2
+      ],
+      "lowest_j": [
+        "1",
+        "1"
+      ],
+      "lowest_m2L2_t3half": "20",
+      "lowest_degeneracy": 9,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2304,
+      "central_2pi_rotation_parities": [
+        1,
+        1
+      ]
+    },
+    {
+      "charges": [
+        2,
+        3
+      ],
+      "lowest_j": [
+        "1",
+        "3/2"
+      ],
+      "lowest_m2L2_t3half": "26",
+      "lowest_degeneracy": 12,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2592,
+      "central_2pi_rotation_parities": [
+        1,
+        -1
+      ]
+    },
+    {
+      "charges": [
+        2,
+        4
+      ],
+      "lowest_j": [
+        "1",
+        "2"
+      ],
+      "lowest_m2L2_t3half": "32",
+      "lowest_degeneracy": 15,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2880,
+      "central_2pi_rotation_parities": [
+        1,
+        1
+      ]
+    },
+    {
+      "charges": [
+        3,
+        -4
+      ],
+      "lowest_j": [
+        "3/2",
+        "2"
+      ],
+      "lowest_m2L2_t3half": "36",
+      "lowest_degeneracy": 20,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 3240,
+      "central_2pi_rotation_parities": [
+        -1,
+        1.0
+      ]
+    },
+    {
+      "charges": [
+        3,
+        -3
+      ],
+      "lowest_j": [
+        "3/2",
+        "3/2"
+      ],
+      "lowest_m2L2_t3half": "30",
+      "lowest_degeneracy": 16,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2916,
+      "central_2pi_rotation_parities": [
+        -1,
+        -1.0
+      ]
+    },
+    {
+      "charges": [
+        3,
+        -2
+      ],
+      "lowest_j": [
+        "3/2",
+        "1"
+      ],
+      "lowest_m2L2_t3half": "24",
+      "lowest_degeneracy": 12,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2592,
+      "central_2pi_rotation_parities": [
+        -1,
+        1.0
+      ]
+    },
+    {
+      "charges": [
+        3,
+        -1
+      ],
+      "lowest_j": [
+        "3/2",
+        "1/2"
+      ],
+      "lowest_m2L2_t3half": "18",
+      "lowest_degeneracy": 8,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2268,
+      "central_2pi_rotation_parities": [
+        -1,
+        -1.0
+      ]
+    },
+    {
+      "charges": [
+        3,
+        0
+      ],
+      "lowest_j": [
+        "3/2",
+        "0"
+      ],
+      "lowest_m2L2_t3half": "12",
+      "lowest_degeneracy": 4,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 1944,
+      "central_2pi_rotation_parities": [
+        -1,
+        1
+      ]
+    },
+    {
+      "charges": [
+        3,
+        1
+      ],
+      "lowest_j": [
+        "3/2",
+        "1/2"
+      ],
+      "lowest_m2L2_t3half": "18",
+      "lowest_degeneracy": 8,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2268,
+      "central_2pi_rotation_parities": [
+        -1,
+        -1
+      ]
+    },
+    {
+      "charges": [
+        3,
+        2
+      ],
+      "lowest_j": [
+        "3/2",
+        "1"
+      ],
+      "lowest_m2L2_t3half": "24",
+      "lowest_degeneracy": 12,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2592,
+      "central_2pi_rotation_parities": [
+        -1,
+        1
+      ]
+    },
+    {
+      "charges": [
+        3,
+        3
+      ],
+      "lowest_j": [
+        "3/2",
+        "3/2"
+      ],
+      "lowest_m2L2_t3half": "30",
+      "lowest_degeneracy": 16,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2916,
+      "central_2pi_rotation_parities": [
+        -1,
+        -1
+      ]
+    },
+    {
+      "charges": [
+        3,
+        4
+      ],
+      "lowest_j": [
+        "3/2",
+        "2"
+      ],
+      "lowest_m2L2_t3half": "36",
+      "lowest_degeneracy": 20,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 3240,
+      "central_2pi_rotation_parities": [
+        -1,
+        1
+      ]
+    },
+    {
+      "charges": [
+        4,
+        -4
+      ],
+      "lowest_j": [
+        "2",
+        "2"
+      ],
+      "lowest_m2L2_t3half": "40",
+      "lowest_degeneracy": 25,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 3600,
+      "central_2pi_rotation_parities": [
+        1,
+        1.0
+      ]
+    },
+    {
+      "charges": [
+        4,
+        -3
+      ],
+      "lowest_j": [
+        "2",
+        "3/2"
+      ],
+      "lowest_m2L2_t3half": "34",
+      "lowest_degeneracy": 20,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 3240,
+      "central_2pi_rotation_parities": [
+        1,
+        -1.0
+      ]
+    },
+    {
+      "charges": [
+        4,
+        -2
+      ],
+      "lowest_j": [
+        "2",
+        "1"
+      ],
+      "lowest_m2L2_t3half": "28",
+      "lowest_degeneracy": 15,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2880,
+      "central_2pi_rotation_parities": [
+        1,
+        1.0
+      ]
+    },
+    {
+      "charges": [
+        4,
+        -1
+      ],
+      "lowest_j": [
+        "2",
+        "1/2"
+      ],
+      "lowest_m2L2_t3half": "22",
+      "lowest_degeneracy": 10,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2520,
+      "central_2pi_rotation_parities": [
+        1,
+        -1.0
+      ]
+    },
+    {
+      "charges": [
+        4,
+        0
+      ],
+      "lowest_j": [
+        "2",
+        "0"
+      ],
+      "lowest_m2L2_t3half": "16",
+      "lowest_degeneracy": 5,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2160,
+      "central_2pi_rotation_parities": [
+        1,
+        1
+      ]
+    },
+    {
+      "charges": [
+        4,
+        1
+      ],
+      "lowest_j": [
+        "2",
+        "1/2"
+      ],
+      "lowest_m2L2_t3half": "22",
+      "lowest_degeneracy": 10,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2520,
+      "central_2pi_rotation_parities": [
+        1,
+        -1
+      ]
+    },
+    {
+      "charges": [
+        4,
+        2
+      ],
+      "lowest_j": [
+        "2",
+        "1"
+      ],
+      "lowest_m2L2_t3half": "28",
+      "lowest_degeneracy": 15,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 2880,
+      "central_2pi_rotation_parities": [
+        1,
+        1
+      ]
+    },
+    {
+      "charges": [
+        4,
+        3
+      ],
+      "lowest_j": [
+        "2",
+        "3/2"
+      ],
+      "lowest_m2L2_t3half": "34",
+      "lowest_degeneracy": 20,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 3240,
+      "central_2pi_rotation_parities": [
+        1,
+        -1
+      ]
+    },
+    {
+      "charges": [
+        4,
+        4
+      ],
+      "lowest_j": [
+        "2",
+        "2"
+      ],
+      "lowest_m2L2_t3half": "40",
+      "lowest_degeneracy": 25,
+      "charged_spectrum_is_nonzero_if_any_flux": true,
+      "multiplicity_total_levels_k0_to5": 3600,
+      "central_2pi_rotation_parities": [
+        1,
+        1
+      ]
+    }
+  ],
+  "scope": "Geometric charged scalar PROBE with a specified unit electric charge and standard Dirac monopole connections. The original minimal Einstein-Maxwell theory does not automatically contain this charged matter field. Not the mixed vector/scalar KK masses or a stability proof.",
+  "literature": "Wu and Yang 1976 monopole harmonics, L\u00b2 eigenvalue j(j+1) and covariant laplacian j(j+1)-q\u00b2."
+}

@@ -1,0 +1,34 @@
+{
+  "status": "EXACT_F8_NINE_MUB_ORTHOGONAL_MIXED_STATE_DATA_HIDING",
+  "nine_MUBs": 9,
+  "outcomes_per_MUB": 64,
+  "covered_Pauli_observables": 567,
+  "two_hidden_states": [
+    {
+      "name": "rho_code",
+      "operator": "Pi_rank2/2",
+      "support_rank": 2,
+      "Tr_rho_squared": "1/2"
+    },
+    {
+      "name": "rho_complement",
+      "operator": "(I64-Pi_rank2)/62",
+      "support_rank": 62,
+      "Tr_rho_squared": "1/62"
+    }
+  ],
+  "two_hidden_states_have_orthogonal_supports": true,
+  "measured_probability_per_outcome_each_MUB": "1/64",
+  "measured_distributions_identical": true,
+  "restricted_measurement_classical_total_variation_distance": 0,
+  "unrestricted_optimal_quantum_Helstrom_trace_distance": "1",
+  "unrestricted_optimal_binary_discrimination_success": "1",
+  "distinguishing_two_outcome_POVM": [
+    "Pi_rank2",
+    "I64-Pi_rank2"
+  ],
+  "hilbert_schmidt_difference_norm_squared": "16/31",
+  "adaptive_single_copy_nine_MUB_transcripts_information_bits": 0,
+  "scope": "Information hiding ONLY against instruments restricted to those nine basis measurements on independent freshly prepared states, including adaptive basis choices. General tomography or a joint/collective POVM distinguishes the orthogonal states perfectly. This is finite quantum measurement geometry, not evidence of fundamental superselection, photon cosmology or a physical cryptosystem.",
+  "algebraic_reason": "Pauli stabilizer projector expansion uses exactly 31 nonidentity labels outside the 567 measured Pauli directions. Every rank-one MUB basis projector is 1/64*(I plus its 63 stabilizer Paulis), so both code and complement have expectation 1/64."
+}

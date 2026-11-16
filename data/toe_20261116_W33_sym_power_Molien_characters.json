@@ -1,0 +1,445 @@
+{
+  "status": "EXACT_PSP43_SYM_POWER_CHARACTER_MOLIEN_BRANCHING",
+  "group_size": 25920,
+  "mode_permutation_degree": 40,
+  "Schlafli_target_degree": 27,
+  "Schlafli_irrep_dimensions": [
+    1,
+    20,
+    6
+  ],
+  "symmetric_power_degrees": [
+    {
+      "degree": 0,
+      "Sym_power_dimension": 1,
+      "Hom_to_27": 1,
+      "Hom_to_uniform1": 1,
+      "Hom_to_Schlafli20": 0,
+      "Hom_to_Schlafli6": 0
+    },
+    {
+      "degree": 1,
+      "Sym_power_dimension": 40,
+      "Hom_to_27": 1,
+      "Hom_to_uniform1": 1,
+      "Hom_to_Schlafli20": 0,
+      "Hom_to_Schlafli6": 0
+    },
+    {
+      "degree": 2,
+      "Sym_power_dimension": 820,
+      "Hom_to_27": 5,
+      "Hom_to_uniform1": 3,
+      "Hom_to_Schlafli20": 2,
+      "Hom_to_Schlafli6": 0
+    },
+    {
+      "degree": 3,
+      "Sym_power_dimension": 11480,
+      "Hom_to_27": 19,
+      "Hom_to_uniform1": 8,
+      "Hom_to_Schlafli20": 11,
+      "Hom_to_Schlafli6": 0
+    },
+    {
+      "degree": 4,
+      "Sym_power_dimension": 123410,
+      "Hom_to_27": 164,
+      "Hom_to_uniform1": 28,
+      "Hom_to_Schlafli20": 118,
+      "Hom_to_Schlafli6": 18
+    },
+    {
+      "degree": 5,
+      "Sym_power_dimension": 1086008,
+      "Hom_to_27": 1181,
+      "Hom_to_uniform1": 94,
+      "Hom_to_Schlafli20": 895,
+      "Hom_to_Schlafli6": 192
+    },
+    {
+      "degree": 6,
+      "Sym_power_dimension": 8145060,
+      "Hom_to_27": 8721,
+      "Hom_to_uniform1": 471,
+      "Hom_to_Schlafli20": 6550,
+      "Hom_to_Schlafli6": 1700
+    },
+    {
+      "degree": 7,
+      "Sym_power_dimension": 53524680,
+      "Hom_to_27": 56071,
+      "Hom_to_uniform1": 2429,
+      "Hom_to_Schlafli20": 41932,
+      "Hom_to_Schlafli6": 11710
+    },
+    {
+      "degree": 8,
+      "Sym_power_dimension": 314457495,
+      "Hom_to_27": 329007,
+      "Hom_to_uniform1": 13162,
+      "Hom_to_Schlafli20": 244828,
+      "Hom_to_Schlafli6": 71017
+    },
+    {
+      "degree": 9,
+      "Sym_power_dimension": 1677106640,
+      "Hom_to_27": 1748956,
+      "Hom_to_uniform1": 67012,
+      "Hom_to_Schlafli20": 1298950,
+      "Hom_to_Schlafli6": 382994
+    }
+  ],
+  "class_fingerprints": [
+    {
+      "cycle_partition": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "character6": 6,
+      "character20": 20,
+      "character27": 27,
+      "group_element_count": 1
+    },
+    {
+      "cycle_partition": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "character6": -3,
+      "character20": 2,
+      "character27": 0,
+      "group_element_count": 80
+    },
+    {
+      "cycle_partition": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "character6": -2,
+      "character20": 4,
+      "character27": 3,
+      "group_element_count": 45
+    },
+    {
+      "cycle_partition": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        3,
+        6,
+        6,
+        6,
+        6
+      ],
+      "character6": 1,
+      "character20": -2,
+      "character27": 0,
+      "group_element_count": 720
+    },
+    {
+      "cycle_partition": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "character6": 2,
+      "character20": 0,
+      "character27": 3,
+      "group_element_count": 540
+    },
+    {
+      "cycle_partition": [
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "character6": 0,
+      "character20": -1,
+      "character27": 0,
+      "group_element_count": 480
+    },
+    {
+      "cycle_partition": [
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "character6": 3,
+      "character20": 5,
+      "character27": 9,
+      "group_element_count": 240
+    },
+    {
+      "cycle_partition": [
+        1,
+        1,
+        2,
+        3,
+        3,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "character6": -2,
+      "character20": 1,
+      "character27": 0,
+      "group_element_count": 1440
+    },
+    {
+      "cycle_partition": [
+        1,
+        1,
+        2,
+        3,
+        3,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "character6": 1,
+      "character20": 1,
+      "character27": 3,
+      "group_element_count": 1440
+    },
+    {
+      "cycle_partition": [
+        1,
+        2,
+        2,
+        3,
+        4,
+        4,
+        12,
+        12
+      ],
+      "character6": -1,
+      "character20": 0,
+      "character27": 0,
+      "group_element_count": 4320
+    },
+    {
+      "cycle_partition": [
+        1,
+        3,
+        3,
+        3,
+        3,
+        9,
+        9,
+        9
+      ],
+      "character6": 0,
+      "character20": -1,
+      "character27": 0,
+      "group_element_count": 5760
+    },
+    {
+      "cycle_partition": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "character6": 2,
+      "character20": 4,
+      "character27": 7,
+      "group_element_count": 270
+    },
+    {
+      "cycle_partition": [
+        2,
+        2,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "character6": -1,
+      "character20": 1,
+      "character27": 1,
+      "group_element_count": 2160
+    },
+    {
+      "cycle_partition": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "character6": 0,
+      "character20": 0,
+      "character27": 1,
+      "group_element_count": 3240
+    },
+    {
+      "cycle_partition": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "character6": 1,
+      "character20": 0,
+      "character27": 2,
+      "group_element_count": 5184
+    }
+  ],
+  "character_proof": "Each input multiset forms a permutation basis of Sym^d; trace_g(Sym^d)= coefficient [t^d] \u220f_{cycles c of g}(1-t^|c|)^-1. Target Schl\u00e4fli projectors: P1=J/27, P6=(3I-3A+J)/18 and P20=I-P1-P6, hence chi6=(3 fix(g)-3 sum_i A(i,g(i))+27)/18. Average each exact character product over all 25920 G elements.",
+  "scope": "Full PSp4(3)-equivariant complex-linear hom dimensions for symmetric boson powers, NOT minimal degree for LOQC with ancillas, adaptivity, different target representations or symmetry-breaking states."
+}

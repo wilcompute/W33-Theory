@@ -1,0 +1,19 @@
+{
+  "status": "EXACT_GENUS6_13_VECTOR_UNIFORM_CHIROTOPE_SAT_NECESSARY_CONSTRAINTS",
+  "abstract_map": "FACETS_ONE (one of 59 12-vertex neighborly genus-six maps)",
+  "plane_vectors": 12,
+  "added_vertical_infinity_vector": 1,
+  "oriented_matroid_rank": 4,
+  "nonzero_chirotope_sign_variables": 715,
+  "face_simple_no_crossing_clauses": 528,
+  "Grassmann_Pluecker_uniform_rank4_axioms": 25740,
+  "saved_candidate_violated_face_simplicity_clauses": 8,
+  "saved_candidate_satisfies_all_GP_axioms": true,
+  "no_cross_only_SAT_status": "sat",
+  "no_cross_only_solve_seconds": 0.04469810001319274,
+  "no_cross_and_GP_SAT_status": "unknown",
+  "combined_solve_seconds": 35.00769300002139,
+  "candidate_chirotope_sign_sha256": "b60382d076ff3ac314d40277cb3e8693832699eec6e500b1b3f5354541d786b5",
+  "scope": "A SAT solution is ONLY an abstract uniform oriented matroid, not necessarily representable by 13 real rank4 vectors or a global nonselfintersecting polyhedron. UNSAT would exclude only uniform/generic plane arrangements of FACETS_ONE; nongeneric degeneracies and other 58 types remain. UNKNOWN means solver timed out; cannot infer SAT/UNSAT.",
+  "no_global_polyhedron_claim": true
+}
