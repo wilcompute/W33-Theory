@@ -51,3 +51,20 @@ All agree with c₈ to within the identity error.
 
 - `8f8467de2` / `a9ae33bd4`: a rank-five isotropic subgroup with all 31 non-identity elements uncovered gives **mixed** states with every covered Pauli expectation zero for every purity 1/64 ≤ p ≤ 1/2, so the global mixed-state minimum is 0 on that range. They use it for measurement-restricted data hiding.
 - This complements, and does not overlap, the pure-state results here. Like this pass, they state that the global pure-state c₈ bound is still open.
+
+## Addendum A: the certainty–purity boundary (`w33_f8_certainty_purity_boundary.py`)
+
+This is the other track's open item: the largest purity at which all 567 covered Pauli expectations can vanish (C = 0).
+- **Local maximality of 1/2, analytic.** Their state ρ = Π₂/2 (rank-5 uncovered code) is a strict local maximum of purity on {C = 0}.
+  - A feasible direction D is traceless and positive semidefinite on ρ's kernel, so d/dt Tr ρ² = −tr(D on the kernel) ≤ 0.
+  - At second order, purity could rise only through traceless D on the 2-dimensional code space, and those are excluded because every logical direction contains covered Paulis. Their certificate records logical-coset covered counts [3, 3, 3].
+- **Rank-2 numerics.** ρ = λ|a⟩⟨a| + (1 − λ)|b⟩⟨b|, with C minimised over orthonormal (a, b) from 12 starts, and a bisection.
+  - The largest λ with C = 0 is **λ* = 0.50005**, i.e. purity 1/2.
+  - Above it, min C equals their code-space family C = 6p − 3 up to purity ≈ 0.58 (0.03, 0.12, 0.27, 0.480 at purities 0.505–0.58).
+  - Beyond that, **non-stabiliser rank-2 states beat the code family**: 0.733 vs 0.750 at p = 0.625, 1.015 vs 1.08 at 0.68, 1.664 vs 1.92 at 0.82.
+  - The scan's pure endpoint (2.6848) is a known local minimum; the true value is c₈ = 2.4985. So scan values are upper estimates of the minimum.
+- A penalty-method search over general rank failed to locate feasible states reliably, even at rank 2 where they exist, and is not used. **Global maximality of purity 1/2 over all ranks is not established.**
+
+## Addendum B: orbit B\* is out of reach of the symmetric pipeline
+
+The minimising type-B orbit has a stabiliser of order only 18. That leaves 72 representative blocks, many with trivial stabiliser, whose commutants are full Hermitian spaces. The resulting SDP would have on the order of 10⁵ parameters with dense sampled constraints, too large here. B\* needs more symmetry (none is available in H) or the face technique on its positive-dimensional minimiser family.

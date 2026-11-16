@@ -10,7 +10,8 @@ src = open(os.path.join(HERE, "w33_f8_torus_global_origin.py"), encoding="utf-8"
 with contextlib.redirect_stdout(io.StringIO()):
     exec(src[: src.index("norm=[]")], G)
 mm, tp, tomat, tolabel, frob, SL, covered, comm = (G[k] for k in ("mm", "tp", "tomat", "tolabel", "frob", "SL", "covered", "comm"))
-SA = [(12, 53), (53, 33), (12 ^ 53, 53 ^ 33)]
+_g = [tuple(int(t) for t in g.split(",")) for g in os.environ.get("SYMGENS", "12,53;53,33").split(";")]
+SA = [_g[0], _g[1], (_g[0][0] ^ _g[1][0], _g[0][1] ^ _g[1][1])]
 SAset = set(SA)
 def act(el, lab):
     g, h, f = el; y = mm(mm(g, tomat(*lab)), tp(h))
@@ -62,4 +63,4 @@ print("orbits on the 255 effective points (size, weights):", sorted(orbit_weight
 SL28 = {1: 1, 2: 63, 3: 56, 7: 216, 9: 168}
 res = dict(order=len(stab), element_orders={str(k): v for k, v in sorted(orders.items())}, matches_SL28_profile=dict(orders) == SL28,
            distinct_left=left, distinct_right=right, frobenius=dict(frobs), effective_orbits=sorted(orbit_weights))
-json.dump(res, open(os.path.join(ROOT, "data", "w33_f8_orbitA_symmetry.json"), "w"), indent=1, default=str)
+json.dump(res, open(os.path.join(ROOT, "data", "w33_f8_orbitA_symmetry.json" if os.environ.get("SYMGENS", "12,53;53,33") == "12,53;53,33" else "w33_f8_stab_" + os.environ["SYMGENS"].replace(",", "_").replace(";", "__") + ".json"), "w"), indent=1, default=str)

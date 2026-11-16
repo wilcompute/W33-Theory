@@ -40,7 +40,9 @@ if WHICH == "T":
     for img in R["stab"]:
         maps.append({p: R["apply"](img, p) for p in [(x, z) for x in range(N) for z in range(N)]})
 else:
-    E = effective([(12, 53), (53, 33)])
+    GG = [tuple(int(t) for t in g.split(",")) for g in os.environ.get("SYMGENS", "12,53;53,33").split(";")]
+    os.environ["SYMGENS"] = ";".join(f"{a},{b}" for a, b in GG)
+    E = effective(GG)
     O = {"__name__": "x", "__file__": os.path.join(HERE, "w33_f8_orbitA_symmetry.py")}
     with contextlib.redirect_stdout(io.StringIO()):
         exec(open(os.path.join(HERE, "w33_f8_orbitA_symmetry.py"), encoding="utf-8").read().split("labels = [(u, v)")[0], O)
@@ -251,7 +253,7 @@ AE = sps.csr_matrix(Aeq)
 Afull = sps.vstack([AE, Apsd]).tocsc(); bfull = np.concatenate([beq, np.zeros(off)]); cvec = np.zeros(NV); cvec[-1] = -1.0
 log(f"SDP: {NV} variables, {AE.shape[0]} equalities, {len(cones)} PSD cones (max {max(cones)}), nnz {Afull.nnz}")
 import scs
-sol = scs.SCS(dict(A=Afull, b=bfull, c=cvec), dict(z=AE.shape[0], s=cones), eps_abs=1e-8, eps_rel=1e-8, max_iters=200000, verbose=False).solve()
+sol = scs.SCS(dict(A=Afull, b=bfull, c=cvec), dict(z=AE.shape[0], s=cones), eps_abs=float(os.environ.get("SCS_EPS", "1e-8")), eps_rel=float(os.environ.get("SCS_EPS", "1e-8")), max_iters=int(os.environ.get("SCS_ITERS", "200000")), verbose=False).solve()
 x = sol["x"]; cval = float(x[-1])
 # fresh-point identity check
 err = 0.0

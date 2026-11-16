@@ -27,3 +27,11 @@ def test_symmetric_sos8_validates_on_T():
     d = load("w33_f8_symmetric_sos8_T.json")
     assert d["block_invariance_residual"] < 1e-10 and d["identity_error"] < 1e-6
     assert abs(d["bound"] - C8) < 1e-6
+
+
+def test_certainty_purity_rank2():
+    d = load("w33_f8_certainty_purity_boundary.json")
+    assert abs(d["threshold_purity"] - 0.5) < 1e-4
+    near = [r for r in d["grid"] if 0.5 < r["purity"] < 0.56]
+    assert all(abs(r["min_C"] - (6 * r["purity"] - 3)) < 1e-3 for r in near)
+    assert any(r["min_C"] < 6 * r["purity"] - 3 - 0.01 for r in d["grid"] if r["purity"] > 0.6)
