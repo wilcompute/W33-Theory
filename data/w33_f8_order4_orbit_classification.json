@@ -1,0 +1,92 @@
+{
+ "n_groups": 893088,
+ "n_orbits": 17,
+ "orbits": [
+  {
+   "size": 108864,
+   "type": "((0, 134), (1, 107), (2, 14))",
+   "minimiser_stabilisers_in_orbit": 0
+  },
+  {
+   "size": 95256,
+   "type": "((0, 136), (1, 103), (2, 16))",
+   "minimiser_stabilisers_in_orbit": 0
+  },
+  {
+   "size": 95256,
+   "type": "((0, 140), (1, 95), (2, 20))",
+   "minimiser_stabilisers_in_orbit": 0
+  },
+  {
+   "size": 84672,
+   "type": "B",
+   "minimiser_stabilisers_in_orbit": 0
+  },
+  {
+   "size": 84672,
+   "type": "B",
+   "minimiser_stabilisers_in_orbit": 0
+  },
+  {
+   "size": 84672,
+   "type": "B",
+   "minimiser_stabilisers_in_orbit": 0
+  },
+  {
+   "size": 54432,
+   "type": "((0, 142), (1, 91), (2, 22))",
+   "minimiser_stabilisers_in_orbit": 0
+  },
+  {
+   "size": 54432,
+   "type": "((0, 134), (1, 107), (2, 14))",
+   "minimiser_stabilisers_in_orbit": 0
+  },
+  {
+   "size": 54432,
+   "type": "((0, 155), (1, 72), (2, 21), (3, 7))",
+   "minimiser_stabilisers_in_orbit": 0
+  },
+  {
+   "size": 42336,
+   "type": "C",
+   "minimiser_stabilisers_in_orbit": 0
+  },
+  {
+   "size": 42336,
+   "type": "B",
+   "minimiser_stabilisers_in_orbit": 0
+  },
+  {
+   "size": 42336,
+   "type": "B",
+   "minimiser_stabilisers_in_orbit": 7
+  },
+  {
+   "size": 31752,
+   "type": "((0, 162), (1, 55), (2, 36), (4, 2))",
+   "minimiser_stabilisers_in_orbit": 0
+  },
+  {
+   "size": 14112,
+   "type": "C",
+   "minimiser_stabilisers_in_orbit": 0
+  },
+  {
+   "size": 1512,
+   "type": "A",
+   "minimiser_stabilisers_in_orbit": 9
+  },
+  {
+   "size": 1512,
+   "type": "((0, 120), (1, 135))",
+   "minimiser_stabilisers_in_orbit": 0
+  },
+  {
+   "size": 504,
+   "type": "((0, 120), (1, 135))",
+   "minimiser_stabilisers_in_orbit": 0
+  }
+ ],
+ "types_per_orbit_unique": false
+}
