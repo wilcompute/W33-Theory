@@ -1,0 +1,72 @@
+{
+  "external_flux_threshold": "4 T exp(4 A_min) / (L q)",
+  "pure_five_form_integral": "(f L/4)^2 = integral exp(3 A) / integral exp(-5 A)",
+  "equal_flux_conifold_and_fiber_quotients": {
+    "warp_linearization_eigenvalue": 32,
+    "scalar_spectrum_distance": 4
+  },
+  "spherical_normal_harmonics": [
+    {
+      "ell": 0,
+      "multiplicity": 1,
+      "normal_eigenvalue_times_radius_squared_over_tension": -4
+    },
+    {
+      "ell": 1,
+      "multiplicity": 5,
+      "normal_eigenvalue_times_radius_squared_over_tension": 0
+    },
+    {
+      "ell": 2,
+      "multiplicity": 14,
+      "normal_eigenvalue_times_radius_squared_over_tension": 6
+    },
+    {
+      "ell": 3,
+      "multiplicity": 30,
+      "normal_eigenvalue_times_radius_squared_over_tension": 14
+    },
+    {
+      "ell": 4,
+      "multiplicity": 55,
+      "normal_eigenvalue_times_radius_squared_over_tension": 24
+    },
+    {
+      "ell": 5,
+      "multiplicity": 91,
+      "normal_eigenvalue_times_radius_squared_over_tension": 36
+    },
+    {
+      "ell": 6,
+      "multiplicity": 140,
+      "normal_eigenvalue_times_radius_squared_over_tension": 50
+    }
+  ],
+  "tilted_worldvolume_with_real_flux": [
+    {
+      "external_rank": 0,
+      "samples": 256,
+      "smallest_weighted_trace_minus_four_times_projection": 0.0
+    },
+    {
+      "external_rank": 1,
+      "samples": 256,
+      "smallest_weighted_trace_minus_four_times_projection": 0.006587935233217552
+    },
+    {
+      "external_rank": 2,
+      "samples": 256,
+      "smallest_weighted_trace_minus_four_times_projection": 0.0890437401409891
+    },
+    {
+      "external_rank": 3,
+      "samples": 256,
+      "smallest_weighted_trace_minus_four_times_projection": 0.39042938375317343
+    },
+    {
+      "external_rank": 4,
+      "samples": 256,
+      "smallest_weighted_trace_minus_four_times_projection": 0.6885648554779922
+    }
+  ]
+}
