@@ -1,0 +1,432 @@
+{
+  "corrective_comment": "Square N=N0=1 has four unstable nonzero Fourier labels because lambda1=3*pi<12; prior untracked local audit comment incorrectly called this case BF-safe.",
+  "every_shape_instability_if_N_over_N0_gt": 0.9068996821171089,
+  "hexagonal_Qmin": 1.1547005383792517,
+  "notes": "Gysin ring products are integral; BF census uses floating point for moduli away from exact thresholds.",
+  "ring_example_same_gcd_distinct_cup_square": {
+    "3_0": {
+      "H2": "Z + Z_3",
+      "H2_free_generator_in_pullback_basis": [
+        0,
+        1
+      ],
+      "H2_torsion_generator_in_pullback_basis": [
+        1,
+        0
+      ],
+      "H3": "Z",
+      "H4": "Z_3",
+      "c1": [
+        3,
+        0
+      ],
+      "cup_product_mod_g": {
+        "t_squared": 0,
+        "top_t_times_z": 1,
+        "top_u_times_z": 0,
+        "u_squared": 0,
+        "u_times_t": 1
+      },
+      "free_H3_pushforward": [
+        1,
+        0
+      ],
+      "gcd": 3,
+      "pi1": "Z_3",
+      "primitive_charges": [
+        1,
+        0
+      ],
+      "torsion_generator_square_nonzero": false,
+      "warning": "The gcd determines additive groups, NOT necessarily the integral cohomology ring."
+    },
+    "3_3": {
+      "H2": "Z + Z_3",
+      "H2_free_generator_in_pullback_basis": [
+        -1,
+        0
+      ],
+      "H2_torsion_generator_in_pullback_basis": [
+        1,
+        1
+      ],
+      "H3": "Z",
+      "H4": "Z_3",
+      "c1": [
+        3,
+        3
+      ],
+      "cup_product_mod_g": {
+        "t_squared": 0,
+        "top_t_times_z": 1,
+        "top_u_times_z": 0,
+        "u_squared": 2,
+        "u_times_t": 2
+      },
+      "free_H3_pushforward": [
+        1,
+        -1
+      ],
+      "gcd": 3,
+      "pi1": "Z_3",
+      "primitive_charges": [
+        1,
+        1
+      ],
+      "torsion_generator_square_nonzero": true,
+      "warning": "The gcd determines additive groups, NOT necessarily the integral cohomology ring."
+    }
+  },
+  "scope": "Circle-bundle integral cohomology plus the specified M-theory sphere-odd torus-momentum sector; does not certify full 10D/11D stability.",
+  "square_shape_cases": {
+    "1/1": {
+      "N": 1,
+      "N0": 1,
+      "is_BF_violation_present_in_this_sector": true,
+      "min_mass_m2L2": -5.016944081307837,
+      "modes": [
+        {
+          "Q": 1.0,
+          "label": [
+            -1,
+            0
+          ],
+          "lambda": 9.42477796076938,
+          "m2L2": -5.016944081307837
+        },
+        {
+          "Q": 1.0,
+          "label": [
+            0,
+            -1
+          ],
+          "lambda": 9.42477796076938,
+          "m2L2": -5.016944081307837
+        },
+        {
+          "Q": 1.0,
+          "label": [
+            0,
+            1
+          ],
+          "lambda": 9.42477796076938,
+          "m2L2": -5.016944081307837
+        },
+        {
+          "Q": 1.0,
+          "label": [
+            1,
+            0
+          ],
+          "lambda": 9.42477796076938,
+          "m2L2": -5.016944081307837
+        }
+      ],
+      "modular_invariant_threshold_Q": 1.2732395447351628,
+      "number_of_opposite_label_pairs": 2,
+      "number_of_unstable_nonzero_Fourier_labels": 4,
+      "tau": [
+        0.0,
+        1.0
+      ]
+    },
+    "1/2": {
+      "N": 1,
+      "N0": 2,
+      "is_BF_violation_present_in_this_sector": false,
+      "min_mass_m2L2": null,
+      "modes": [],
+      "modular_invariant_threshold_Q": 0.6366197723675814,
+      "number_of_opposite_label_pairs": 0,
+      "number_of_unstable_nonzero_Fourier_labels": 0,
+      "tau": [
+        0.0,
+        1.0
+      ]
+    },
+    "2/1": {
+      "N": 2,
+      "N0": 1,
+      "is_BF_violation_present_in_this_sector": true,
+      "min_mass_m2L2": -6.198179109594481,
+      "modes": [
+        {
+          "Q": 1.0,
+          "label": [
+            -1,
+            0
+          ],
+          "lambda": 4.71238898038469,
+          "m2L2": -6.198179109594481
+        },
+        {
+          "Q": 1.0,
+          "label": [
+            0,
+            -1
+          ],
+          "lambda": 4.71238898038469,
+          "m2L2": -6.198179109594481
+        },
+        {
+          "Q": 1.0,
+          "label": [
+            0,
+            1
+          ],
+          "lambda": 4.71238898038469,
+          "m2L2": -6.198179109594481
+        },
+        {
+          "Q": 1.0,
+          "label": [
+            1,
+            0
+          ],
+          "lambda": 4.71238898038469,
+          "m2L2": -6.198179109594481
+        },
+        {
+          "Q": 2.0,
+          "label": [
+            -1,
+            -1
+          ],
+          "lambda": 9.42477796076938,
+          "m2L2": -5.016944081307837
+        },
+        {
+          "Q": 2.0,
+          "label": [
+            -1,
+            1
+          ],
+          "lambda": 9.42477796076938,
+          "m2L2": -5.016944081307837
+        },
+        {
+          "Q": 2.0,
+          "label": [
+            1,
+            -1
+          ],
+          "lambda": 9.42477796076938,
+          "m2L2": -5.016944081307837
+        },
+        {
+          "Q": 2.0,
+          "label": [
+            1,
+            1
+          ],
+          "lambda": 9.42477796076938,
+          "m2L2": -5.016944081307837
+        }
+      ],
+      "modular_invariant_threshold_Q": 2.5464790894703255,
+      "number_of_opposite_label_pairs": 4,
+      "number_of_unstable_nonzero_Fourier_labels": 8,
+      "tau": [
+        0.0,
+        1.0
+      ]
+    },
+    "5/1": {
+      "N": 5,
+      "N0": 1,
+      "is_BF_violation_present_in_this_sector": true,
+      "min_mass_m2L2": -6.249975283026062,
+      "modes": [
+        {
+          "Q": 1.0,
+          "label": [
+            -1,
+            0
+          ],
+          "lambda": 1.8849555921538759,
+          "m2L2": -5.959639301802592
+        },
+        {
+          "Q": 1.0,
+          "label": [
+            0,
+            -1
+          ],
+          "lambda": 1.8849555921538759,
+          "m2L2": -5.959639301802592
+        },
+        {
+          "Q": 1.0,
+          "label": [
+            0,
+            1
+          ],
+          "lambda": 1.8849555921538759,
+          "m2L2": -5.959639301802592
+        },
+        {
+          "Q": 1.0,
+          "label": [
+            1,
+            0
+          ],
+          "lambda": 1.8849555921538759,
+          "m2L2": -5.959639301802592
+        },
+        {
+          "Q": 2.0,
+          "label": [
+            -1,
+            -1
+          ],
+          "lambda": 3.7699111843077517,
+          "m2L2": -6.249975283026062
+        },
+        {
+          "Q": 2.0,
+          "label": [
+            -1,
+            1
+          ],
+          "lambda": 3.7699111843077517,
+          "m2L2": -6.249975283026062
+        },
+        {
+          "Q": 2.0,
+          "label": [
+            1,
+            -1
+          ],
+          "lambda": 3.7699111843077517,
+          "m2L2": -6.249975283026062
+        },
+        {
+          "Q": 2.0,
+          "label": [
+            1,
+            1
+          ],
+          "lambda": 3.7699111843077517,
+          "m2L2": -6.249975283026062
+        },
+        {
+          "Q": 4.0,
+          "label": [
+            -2,
+            0
+          ],
+          "lambda": 7.5398223686155035,
+          "m2L2": -5.624278934124813
+        },
+        {
+          "Q": 4.0,
+          "label": [
+            0,
+            -2
+          ],
+          "lambda": 7.5398223686155035,
+          "m2L2": -5.624278934124813
+        },
+        {
+          "Q": 4.0,
+          "label": [
+            0,
+            2
+          ],
+          "lambda": 7.5398223686155035,
+          "m2L2": -5.624278934124813
+        },
+        {
+          "Q": 4.0,
+          "label": [
+            2,
+            0
+          ],
+          "lambda": 7.5398223686155035,
+          "m2L2": -5.624278934124813
+        },
+        {
+          "Q": 5.0,
+          "label": [
+            -2,
+            -1
+          ],
+          "lambda": 9.42477796076938,
+          "m2L2": -5.016944081307837
+        },
+        {
+          "Q": 5.0,
+          "label": [
+            -2,
+            1
+          ],
+          "lambda": 9.42477796076938,
+          "m2L2": -5.016944081307837
+        },
+        {
+          "Q": 5.0,
+          "label": [
+            -1,
+            -2
+          ],
+          "lambda": 9.42477796076938,
+          "m2L2": -5.016944081307837
+        },
+        {
+          "Q": 5.0,
+          "label": [
+            -1,
+            2
+          ],
+          "lambda": 9.42477796076938,
+          "m2L2": -5.016944081307837
+        },
+        {
+          "Q": 5.0,
+          "label": [
+            1,
+            -2
+          ],
+          "lambda": 9.42477796076938,
+          "m2L2": -5.016944081307837
+        },
+        {
+          "Q": 5.0,
+          "label": [
+            1,
+            2
+          ],
+          "lambda": 9.42477796076938,
+          "m2L2": -5.016944081307837
+        },
+        {
+          "Q": 5.0,
+          "label": [
+            2,
+            -1
+          ],
+          "lambda": 9.42477796076938,
+          "m2L2": -5.016944081307837
+        },
+        {
+          "Q": 5.0,
+          "label": [
+            2,
+            1
+          ],
+          "lambda": 9.42477796076938,
+          "m2L2": -5.016944081307837
+        }
+      ],
+      "modular_invariant_threshold_Q": 6.366197723675814,
+      "number_of_opposite_label_pairs": 10,
+      "number_of_unstable_nonzero_Fourier_labels": 20,
+      "tau": [
+        0.0,
+        1.0
+      ]
+    }
+  },
+  "square_shape_instability_iff_N_over_N0_gt": 0.7853981633974483,
+  "status": "EXACT_GYSIN_CUP_PRODUCTS_AND_NUMERICAL_MODULAR_BF_LATTICE_CENSUS"
+}
