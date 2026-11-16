@@ -1,0 +1,644 @@
+{
+  "status": "EXACT_GYSIN_TOPOLOGY_T11_ZN_TORSION_AND_BF_WINDING_CHECK",
+  "source_reused_not_modified": "analysis/2026-11-16_D9_iib_conifold_dual.md (untracked parallel author source)",
+  "topological_T_duality": "c1(Y)=N1*u+N2*v is integral circle curvature obtained from fiberwise IIA H3 integration",
+  "case_tables": [
+    {
+      "flux_chern_numbers": [
+        1,
+        1
+      ],
+      "gcd": 1,
+      "pi1": "Z_1",
+      "homology": {
+        "H0": "Z",
+        "H1": "Z_1",
+        "H2": "Z",
+        "H3": "Z",
+        "H4": "0",
+        "H5": "Z"
+      },
+      "cohomology": {
+        "H0": "Z",
+        "H1": "0",
+        "H2": "Z",
+        "H3": "Z",
+        "H4": "Z_1",
+        "H5": "Z"
+      },
+      "de_rham_betti": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "independent_spin_structures": 1,
+      "fiber_loop_order_in_pi1": 1,
+      "continuous_Betti_vector_from_RR_C4_count": 1,
+      "notes": "H2 and H3 are Z by rank; H3 carries Z_g torsion for g>1; de Rham cohomology cannot detect torsion."
+    },
+    {
+      "flux_chern_numbers": [
+        2,
+        2
+      ],
+      "gcd": 2,
+      "pi1": "Z_2",
+      "homology": {
+        "H0": "Z",
+        "H1": "Z_2",
+        "H2": "Z",
+        "H3": "Z + Z_2",
+        "H4": "0",
+        "H5": "Z"
+      },
+      "cohomology": {
+        "H0": "Z",
+        "H1": "0",
+        "H2": "Z + Z_2",
+        "H3": "Z",
+        "H4": "Z_2",
+        "H5": "Z"
+      },
+      "de_rham_betti": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "independent_spin_structures": 2,
+      "fiber_loop_order_in_pi1": 2,
+      "continuous_Betti_vector_from_RR_C4_count": 1,
+      "notes": "H2 and H3 are Z by rank; H3 carries Z_g torsion for g>1; de Rham cohomology cannot detect torsion."
+    },
+    {
+      "flux_chern_numbers": [
+        3,
+        3
+      ],
+      "gcd": 3,
+      "pi1": "Z_3",
+      "homology": {
+        "H0": "Z",
+        "H1": "Z_3",
+        "H2": "Z",
+        "H3": "Z + Z_3",
+        "H4": "0",
+        "H5": "Z"
+      },
+      "cohomology": {
+        "H0": "Z",
+        "H1": "0",
+        "H2": "Z + Z_3",
+        "H3": "Z",
+        "H4": "Z_3",
+        "H5": "Z"
+      },
+      "de_rham_betti": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "independent_spin_structures": 1,
+      "fiber_loop_order_in_pi1": 3,
+      "continuous_Betti_vector_from_RR_C4_count": 1,
+      "notes": "H2 and H3 are Z by rank; H3 carries Z_g torsion for g>1; de Rham cohomology cannot detect torsion."
+    },
+    {
+      "flux_chern_numbers": [
+        6,
+        10
+      ],
+      "gcd": 2,
+      "pi1": "Z_2",
+      "homology": {
+        "H0": "Z",
+        "H1": "Z_2",
+        "H2": "Z",
+        "H3": "Z + Z_2",
+        "H4": "0",
+        "H5": "Z"
+      },
+      "cohomology": {
+        "H0": "Z",
+        "H1": "0",
+        "H2": "Z + Z_2",
+        "H3": "Z",
+        "H4": "Z_2",
+        "H5": "Z"
+      },
+      "de_rham_betti": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "independent_spin_structures": 2,
+      "fiber_loop_order_in_pi1": 2,
+      "continuous_Betti_vector_from_RR_C4_count": 1,
+      "notes": "H2 and H3 are Z by rank; H3 carries Z_g torsion for g>1; de Rham cohomology cannot detect torsion."
+    },
+    {
+      "flux_chern_numbers": [
+        5,
+        0
+      ],
+      "gcd": 5,
+      "pi1": "Z_5",
+      "homology": {
+        "H0": "Z",
+        "H1": "Z_5",
+        "H2": "Z",
+        "H3": "Z + Z_5",
+        "H4": "0",
+        "H5": "Z"
+      },
+      "cohomology": {
+        "H0": "Z",
+        "H1": "0",
+        "H2": "Z + Z_5",
+        "H3": "Z",
+        "H4": "Z_5",
+        "H5": "Z"
+      },
+      "de_rham_betti": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "independent_spin_structures": 1,
+      "fiber_loop_order_in_pi1": 5,
+      "continuous_Betti_vector_from_RR_C4_count": 1,
+      "notes": "H2 and H3 are Z by rank; H3 carries Z_g torsion for g>1; de Rham cohomology cannot detect torsion."
+    },
+    {
+      "flux_chern_numbers": [
+        0,
+        7
+      ],
+      "gcd": 7,
+      "pi1": "Z_7",
+      "homology": {
+        "H0": "Z",
+        "H1": "Z_7",
+        "H2": "Z",
+        "H3": "Z + Z_7",
+        "H4": "0",
+        "H5": "Z"
+      },
+      "cohomology": {
+        "H0": "Z",
+        "H1": "0",
+        "H2": "Z + Z_7",
+        "H3": "Z",
+        "H4": "Z_7",
+        "H5": "Z"
+      },
+      "de_rham_betti": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "independent_spin_structures": 1,
+      "fiber_loop_order_in_pi1": 7,
+      "continuous_Betti_vector_from_RR_C4_count": 1,
+      "notes": "H2 and H3 are Z by rank; H3 carries Z_g torsion for g>1; de Rham cohomology cannot detect torsion."
+    },
+    {
+      "flux_chern_numbers": [
+        11,
+        -13
+      ],
+      "gcd": 1,
+      "pi1": "Z_1",
+      "homology": {
+        "H0": "Z",
+        "H1": "Z_1",
+        "H2": "Z",
+        "H3": "Z",
+        "H4": "0",
+        "H5": "Z"
+      },
+      "cohomology": {
+        "H0": "Z",
+        "H1": "0",
+        "H2": "Z",
+        "H3": "Z",
+        "H4": "Z_1",
+        "H5": "Z"
+      },
+      "de_rham_betti": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "independent_spin_structures": 1,
+      "fiber_loop_order_in_pi1": 1,
+      "continuous_Betti_vector_from_RR_C4_count": 1,
+      "notes": "H2 and H3 are Z by rank; H3 carries Z_g torsion for g>1; de Rham cohomology cannot detect torsion."
+    },
+    {
+      "flux_chern_numbers": [
+        6,
+        9
+      ],
+      "gcd": 3,
+      "pi1": "Z_3",
+      "homology": {
+        "H0": "Z",
+        "H1": "Z_3",
+        "H2": "Z",
+        "H3": "Z + Z_3",
+        "H4": "0",
+        "H5": "Z"
+      },
+      "cohomology": {
+        "H0": "Z",
+        "H1": "0",
+        "H2": "Z + Z_3",
+        "H3": "Z",
+        "H4": "Z_3",
+        "H5": "Z"
+      },
+      "de_rham_betti": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "independent_spin_structures": 1,
+      "fiber_loop_order_in_pi1": 3,
+      "continuous_Betti_vector_from_RR_C4_count": 1,
+      "notes": "H2 and H3 are Z by rank; H3 carries Z_g torsion for g>1; de Rham cohomology cannot detect torsion."
+    },
+    {
+      "flux_chern_numbers": [
+        -4,
+        -4
+      ],
+      "gcd": 4,
+      "pi1": "Z_4",
+      "homology": {
+        "H0": "Z",
+        "H1": "Z_4",
+        "H2": "Z",
+        "H3": "Z + Z_4",
+        "H4": "0",
+        "H5": "Z"
+      },
+      "cohomology": {
+        "H0": "Z",
+        "H1": "0",
+        "H2": "Z + Z_4",
+        "H3": "Z",
+        "H4": "Z_4",
+        "H5": "Z"
+      },
+      "de_rham_betti": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "independent_spin_structures": 2,
+      "fiber_loop_order_in_pi1": 4,
+      "continuous_Betti_vector_from_RR_C4_count": 1,
+      "notes": "H2 and H3 are Z by rank; H3 carries Z_g torsion for g>1; de Rham cohomology cannot detect torsion."
+    }
+  ],
+  "all_nontrivial_c1_deRham_betti": [
+    1,
+    0,
+    1,
+    1,
+    0,
+    1
+  ],
+  "equal_flux_Y": "T^{1,1}/Z_N as an S1 bundle over S2xS2 of Chern numbers (N,N)",
+  "N1_equal_1_homotopy_type": "S2 x S3 (classification of simply-connected spin 5-manifolds)",
+  "baryonic_Betti_U1": "Exactly one free H3(Y;Z) class gives one extra RR C4-derived 5D massless Betti vector in ordinary IIB reduction",
+  "massless_vector_sector_warning": "The 7 light vectors of standalone D9 Einstein-Maxwell do not exhaust the IIB T11 spectrum; the IIB Betti vector is additional.",
+  "torsion_winding": "pi1(Y)=Z_g; fiber string winding has only a Z_g conserved homotopy class, not a free integer charge, though nonprotected wrapped string excitations still exist.",
+  "fundamental_group_generator_fiber": true,
+  "two_spin_structures_iff_g_even": true,
+  "local_conifold_spinor_fiber_charges_in_std_4pi_coordinate": [
+    "1/2",
+    "-1/2"
+  ],
+  "equal_flux_quotient_Killing_spinor_lifts": [
+    {
+      "quotient_N": 1,
+      "number_of_spin_structures": 1,
+      "preserving_lifts": [
+        "0"
+      ]
+    },
+    {
+      "quotient_N": 2,
+      "number_of_spin_structures": 2,
+      "preserving_lifts": [
+        "1/2"
+      ]
+    },
+    {
+      "quotient_N": 3,
+      "number_of_spin_structures": 1,
+      "preserving_lifts": []
+    },
+    {
+      "quotient_N": 4,
+      "number_of_spin_structures": 2,
+      "preserving_lifts": []
+    },
+    {
+      "quotient_N": 5,
+      "number_of_spin_structures": 1,
+      "preserving_lifts": []
+    },
+    {
+      "quotient_N": 6,
+      "number_of_spin_structures": 2,
+      "preserving_lifts": []
+    },
+    {
+      "quotient_N": 7,
+      "number_of_spin_structures": 1,
+      "preserving_lifts": []
+    },
+    {
+      "quotient_N": 8,
+      "number_of_spin_structures": 2,
+      "preserving_lifts": []
+    },
+    {
+      "quotient_N": 9,
+      "number_of_spin_structures": 1,
+      "preserving_lifts": []
+    },
+    {
+      "quotient_N": 10,
+      "number_of_spin_structures": 2,
+      "preserving_lifts": []
+    },
+    {
+      "quotient_N": 11,
+      "number_of_spin_structures": 1,
+      "preserving_lifts": []
+    },
+    {
+      "quotient_N": 12,
+      "number_of_spin_structures": 2,
+      "preserving_lifts": []
+    }
+  ],
+  "IIB_supergravity_vs_M11_supersymmetry_warning": "Continuous fiber spinorial Lie derivative is nonzero, even when global quotient lift permits Killing spinors at N=1,2. Circle-invariant supergravity T-duality may lose those modes; recovering supersymmetry requires checking charged winding sectors. This is a duality-consistency mechanism, not a proof of complete quantum equivalence.",
+  "spinor_parallel_susy_warning": "Spin structures existing does NOT imply Killing spinors. The local IIB T11 Killing-spinor lift is available for N=1, and for N=2 with its alternative lift; for N>2 no such lift of covering spinors.",
+  "equal_flux_volume_in_Ric4_units": "16*pi^3/(27*N)",
+  "equal_flux_leading_a_c": "(27/64)*N*N0^2",
+  "BF_lower_branch": "m_-^2 L^2=lambda-2-sqrt(4+16 lambda)",
+  "BF_band_open": [
+    0,
+    12
+  ],
+  "minimum_m2L2": "-25/4",
+  "minimizer_lambda": "15/4",
+  "square_torus_first_lambda": "3*pi*N0/N (N0>0, N>0)",
+  "square_torus_BF_iff": "N/N0>pi/4",
+  "square_torus_samples": [
+    {
+      "N": 1,
+      "N0": 1,
+      "lambda_shortest": 9.42477796076938,
+      "BF_violation_from_shortest_lattice_mode": true
+    },
+    {
+      "N": 1,
+      "N0": 2,
+      "lambda_shortest": 18.84955592153876,
+      "BF_violation_from_shortest_lattice_mode": false
+    },
+    {
+      "N": 1,
+      "N0": 3,
+      "lambda_shortest": 28.274333882308138,
+      "BF_violation_from_shortest_lattice_mode": false
+    },
+    {
+      "N": 1,
+      "N0": 4,
+      "lambda_shortest": 37.69911184307752,
+      "BF_violation_from_shortest_lattice_mode": false
+    },
+    {
+      "N": 1,
+      "N0": 5,
+      "lambda_shortest": 47.12388980384689,
+      "BF_violation_from_shortest_lattice_mode": false
+    },
+    {
+      "N": 2,
+      "N0": 1,
+      "lambda_shortest": 4.71238898038469,
+      "BF_violation_from_shortest_lattice_mode": true
+    },
+    {
+      "N": 2,
+      "N0": 2,
+      "lambda_shortest": 9.42477796076938,
+      "BF_violation_from_shortest_lattice_mode": true
+    },
+    {
+      "N": 2,
+      "N0": 3,
+      "lambda_shortest": 14.137166941154069,
+      "BF_violation_from_shortest_lattice_mode": false
+    },
+    {
+      "N": 2,
+      "N0": 4,
+      "lambda_shortest": 18.84955592153876,
+      "BF_violation_from_shortest_lattice_mode": false
+    },
+    {
+      "N": 2,
+      "N0": 5,
+      "lambda_shortest": 23.561944901923447,
+      "BF_violation_from_shortest_lattice_mode": false
+    },
+    {
+      "N": 3,
+      "N0": 1,
+      "lambda_shortest": 3.141592653589793,
+      "BF_violation_from_shortest_lattice_mode": true
+    },
+    {
+      "N": 3,
+      "N0": 2,
+      "lambda_shortest": 6.283185307179586,
+      "BF_violation_from_shortest_lattice_mode": true
+    },
+    {
+      "N": 3,
+      "N0": 3,
+      "lambda_shortest": 9.42477796076938,
+      "BF_violation_from_shortest_lattice_mode": true
+    },
+    {
+      "N": 3,
+      "N0": 4,
+      "lambda_shortest": 12.566370614359172,
+      "BF_violation_from_shortest_lattice_mode": false
+    },
+    {
+      "N": 3,
+      "N0": 5,
+      "lambda_shortest": 15.707963267948964,
+      "BF_violation_from_shortest_lattice_mode": false
+    },
+    {
+      "N": 4,
+      "N0": 1,
+      "lambda_shortest": 2.356194490192345,
+      "BF_violation_from_shortest_lattice_mode": true
+    },
+    {
+      "N": 4,
+      "N0": 2,
+      "lambda_shortest": 4.71238898038469,
+      "BF_violation_from_shortest_lattice_mode": true
+    },
+    {
+      "N": 4,
+      "N0": 3,
+      "lambda_shortest": 7.0685834705770345,
+      "BF_violation_from_shortest_lattice_mode": true
+    },
+    {
+      "N": 4,
+      "N0": 4,
+      "lambda_shortest": 9.42477796076938,
+      "BF_violation_from_shortest_lattice_mode": true
+    },
+    {
+      "N": 4,
+      "N0": 5,
+      "lambda_shortest": 11.780972450961723,
+      "BF_violation_from_shortest_lattice_mode": true
+    },
+    {
+      "N": 5,
+      "N0": 1,
+      "lambda_shortest": 1.8849555921538759,
+      "BF_violation_from_shortest_lattice_mode": true
+    },
+    {
+      "N": 5,
+      "N0": 2,
+      "lambda_shortest": 3.7699111843077517,
+      "BF_violation_from_shortest_lattice_mode": true
+    },
+    {
+      "N": 5,
+      "N0": 3,
+      "lambda_shortest": 5.654866776461628,
+      "BF_violation_from_shortest_lattice_mode": true
+    },
+    {
+      "N": 5,
+      "N0": 4,
+      "lambda_shortest": 7.5398223686155035,
+      "BF_violation_from_shortest_lattice_mode": true
+    },
+    {
+      "N": 5,
+      "N0": 5,
+      "lambda_shortest": 9.42477796076938,
+      "BF_violation_from_shortest_lattice_mode": true
+    },
+    {
+      "N": 6,
+      "N0": 1,
+      "lambda_shortest": 1.5707963267948966,
+      "BF_violation_from_shortest_lattice_mode": true
+    },
+    {
+      "N": 6,
+      "N0": 2,
+      "lambda_shortest": 3.141592653589793,
+      "BF_violation_from_shortest_lattice_mode": true
+    },
+    {
+      "N": 6,
+      "N0": 3,
+      "lambda_shortest": 4.71238898038469,
+      "BF_violation_from_shortest_lattice_mode": true
+    },
+    {
+      "N": 6,
+      "N0": 4,
+      "lambda_shortest": 6.283185307179586,
+      "BF_violation_from_shortest_lattice_mode": true
+    },
+    {
+      "N": 6,
+      "N0": 5,
+      "lambda_shortest": 7.853981633974482,
+      "BF_violation_from_shortest_lattice_mode": true
+    },
+    {
+      "N": 7,
+      "N0": 1,
+      "lambda_shortest": 1.3463968515384828,
+      "BF_violation_from_shortest_lattice_mode": true
+    },
+    {
+      "N": 7,
+      "N0": 2,
+      "lambda_shortest": 2.6927937030769655,
+      "BF_violation_from_shortest_lattice_mode": true
+    },
+    {
+      "N": 7,
+      "N0": 3,
+      "lambda_shortest": 4.039190554615448,
+      "BF_violation_from_shortest_lattice_mode": true
+    },
+    {
+      "N": 7,
+      "N0": 4,
+      "lambda_shortest": 5.385587406153931,
+      "BF_violation_from_shortest_lattice_mode": true
+    },
+    {
+      "N": 7,
+      "N0": 5,
+      "lambda_shortest": 6.731984257692413,
+      "BF_violation_from_shortest_lattice_mode": true
+    }
+  ],
+  "IIB_supergravity_scope": "The zero-winding sector is a low-energy truncation; the winding tachyon band is omitted from the point-field supergravity KK spectrum, not disproven. Its presence and validity depends on full string backgrounds and lattice shape.",
+  "independent_method": "Integral Gysin sequence, 2x1 and 1x2 Smith forms, exact SymPy BF stationarity and sampled quantized winding comparison.",
+  "claim_limits": "Conditional on circle-bundle dual identification and compact integral flux. Not a full supersymmetry theorem for all quotients, string-worldsheet stability theorem, or proof of physical TOE."
+}

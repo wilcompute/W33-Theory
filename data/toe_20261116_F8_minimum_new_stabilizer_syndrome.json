@@ -1,0 +1,63 @@
+{
+  "status": "EXACT_F8_MINIMAL_ADDITIONAL_STABILIZER_SYNDROME_FOR_PRIVATE_BIT",
+  "code_stabilizer_5_generator_integer_labels": [
+    2778,
+    2315,
+    599,
+    2616,
+    1322
+  ],
+  "sixth_commuting_logical_generator_integer_label": 63,
+  "extension_maximal_commuting_group_size": 64,
+  "new_rank6_basis_is_not_one_of_original_nine": true,
+  "new_single_64_outcome_basis_achieves_perfect_discrimination": true,
+  "code_supported_basis_outcomes": 2,
+  "complement_supported_basis_outcomes": 62,
+  "minimal_commuting_code_stabilizer_generator_measurements": 5,
+  "syndrome_success_by_k": [
+    {
+      "number_of_independent_stabilizer_generators": 0,
+      "joint_plus_eigenspace_rank": 64,
+      "complement_state_plus_syndrome_probability": "1",
+      "equal_prior_optimal_success_given_full_k_syndrome": "1/2",
+      "perfect_discrimination": false
+    },
+    {
+      "number_of_independent_stabilizer_generators": 1,
+      "joint_plus_eigenspace_rank": 32,
+      "complement_state_plus_syndrome_probability": "15/31",
+      "equal_prior_optimal_success_given_full_k_syndrome": "47/62",
+      "perfect_discrimination": false
+    },
+    {
+      "number_of_independent_stabilizer_generators": 2,
+      "joint_plus_eigenspace_rank": 16,
+      "complement_state_plus_syndrome_probability": "7/31",
+      "equal_prior_optimal_success_given_full_k_syndrome": "55/62",
+      "perfect_discrimination": false
+    },
+    {
+      "number_of_independent_stabilizer_generators": 3,
+      "joint_plus_eigenspace_rank": 8,
+      "complement_state_plus_syndrome_probability": "3/31",
+      "equal_prior_optimal_success_given_full_k_syndrome": "59/62",
+      "perfect_discrimination": false
+    },
+    {
+      "number_of_independent_stabilizer_generators": 4,
+      "joint_plus_eigenspace_rank": 4,
+      "complement_state_plus_syndrome_probability": "1/31",
+      "equal_prior_optimal_success_given_full_k_syndrome": "61/62",
+      "perfect_discrimination": false
+    },
+    {
+      "number_of_independent_stabilizer_generators": 5,
+      "joint_plus_eigenspace_rank": 2,
+      "complement_state_plus_syndrome_probability": "0",
+      "equal_prior_optimal_success_given_full_k_syndrome": "1",
+      "perfect_discrimination": true
+    }
+  ],
+  "relative_rank2_vs_rank62_entanglement_not_required": "All five compatible Pauli observables can be measured as one joint rank6 basis setting, though circuit depth/gate cost uncalculated.",
+  "scope": "Five-generator minimality holds among measurements constructed from subsets of the selected rank5 code stabilizer; it is not a universal lower bound against arbitrary single POVMs (indeed one binary projector {Pi,I-Pi} suffices). No cryptographic secrecy against unrestricted POVMs or arbitrary entangling operations."
+}

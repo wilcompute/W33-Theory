@@ -1,0 +1,216 @@
+{
+  "status": "EXACT_BINOMIAL_PILOT_CERTIFIED_OCCUPANCY_WEIGHTED_CALIBRATION",
+  "synthetic_not_hardware": true,
+  "pilot_sample_size_prespecified": 50000,
+  "pilot_rng_seed": 20261116,
+  "pilot_multinomial_counts": [
+    23961,
+    143,
+    154,
+    157,
+    138,
+    144,
+    132,
+    170,
+    129,
+    150,
+    163,
+    136,
+    137,
+    139,
+    146,
+    24001
+  ],
+  "pilot_rail_checks": [
+    {
+      "rail": 0,
+      "synthetic_true_population": 0.48,
+      "pilot_count": 23961,
+      "one_sided_Clopper_Pearson_upper": 0.48780393234204783,
+      "synthetic_true_value_below_upper": true
+    },
+    {
+      "rail": 1,
+      "synthetic_true_population": 0.002857142857142857,
+      "pilot_count": 143,
+      "one_sided_Clopper_Pearson_upper": 0.003891341309853897,
+      "synthetic_true_value_below_upper": true
+    },
+    {
+      "rail": 2,
+      "synthetic_true_population": 0.002857142857142857,
+      "pilot_count": 154,
+      "one_sided_Clopper_Pearson_upper": 0.004145614252715298,
+      "synthetic_true_value_below_upper": true
+    },
+    {
+      "rail": 3,
+      "synthetic_true_population": 0.002857142857142857,
+      "pilot_count": 157,
+      "one_sided_Clopper_Pearson_upper": 0.004214746773476974,
+      "synthetic_true_value_below_upper": true
+    },
+    {
+      "rail": 4,
+      "synthetic_true_population": 0.002857142857142857,
+      "pilot_count": 138,
+      "one_sided_Clopper_Pearson_upper": 0.003775326997288874,
+      "synthetic_true_value_below_upper": true
+    },
+    {
+      "rail": 5,
+      "synthetic_true_population": 0.002857142857142857,
+      "pilot_count": 144,
+      "one_sided_Clopper_Pearson_upper": 0.003914510375894298,
+      "synthetic_true_value_below_upper": true
+    },
+    {
+      "rail": 6,
+      "synthetic_true_population": 0.002857142857142857,
+      "pilot_count": 132,
+      "one_sided_Clopper_Pearson_upper": 0.003635721811498211,
+      "synthetic_true_value_below_upper": true
+    },
+    {
+      "rail": 7,
+      "synthetic_true_population": 0.002857142857142857,
+      "pilot_count": 170,
+      "one_sided_Clopper_Pearson_upper": 0.004513345184531537,
+      "synthetic_true_value_below_upper": true
+    },
+    {
+      "rail": 8,
+      "synthetic_true_population": 0.002857142857142857,
+      "pilot_count": 129,
+      "one_sided_Clopper_Pearson_upper": 0.0035657521862951483,
+      "synthetic_true_value_below_upper": true
+    },
+    {
+      "rail": 9,
+      "synthetic_true_population": 0.002857142857142857,
+      "pilot_count": 150,
+      "one_sided_Clopper_Pearson_upper": 0.004053297751743427,
+      "synthetic_true_value_below_upper": true
+    },
+    {
+      "rail": 10,
+      "synthetic_true_population": 0.002857142857142857,
+      "pilot_count": 163,
+      "one_sided_Clopper_Pearson_upper": 0.004352753056125413,
+      "synthetic_true_value_below_upper": true
+    },
+    {
+      "rail": 11,
+      "synthetic_true_population": 0.002857142857142857,
+      "pilot_count": 136,
+      "one_sided_Clopper_Pearson_upper": 0.00372884015745871,
+      "synthetic_true_value_below_upper": true
+    },
+    {
+      "rail": 12,
+      "synthetic_true_population": 0.002857142857142857,
+      "pilot_count": 137,
+      "one_sided_Clopper_Pearson_upper": 0.003752089495961578,
+      "synthetic_true_value_below_upper": true
+    },
+    {
+      "rail": 13,
+      "synthetic_true_population": 0.002857142857142857,
+      "pilot_count": 139,
+      "one_sided_Clopper_Pearson_upper": 0.0037985527883372117,
+      "synthetic_true_value_below_upper": true
+    },
+    {
+      "rail": 14,
+      "synthetic_true_population": 0.002857142857142857,
+      "pilot_count": 146,
+      "one_sided_Clopper_Pearson_upper": 0.003960815637007151,
+      "synthetic_true_value_below_upper": true
+    },
+    {
+      "rail": 15,
+      "synthetic_true_population": 0.48,
+      "pilot_count": 24001,
+      "one_sided_Clopper_Pearson_upper": 0.4886043295713589,
+      "synthetic_true_value_below_upper": true
+    }
+  ],
+  "exact_confidence_method": "One-sided Clopper-Pearson Beta(k+1, n-k) quantile 1-alpha_pilot/16; 16-rail Bonferroni.",
+  "joint_failure_budget": {
+    "pilot_occupancy": 0.001,
+    "contrast_calibration": 0.0015,
+    "parity_rates": 0.0025,
+    "five_witness_settings": 0.005
+  },
+  "conservative_upper_envelope": [
+    0.48780393234204783,
+    0.003891341309853897,
+    0.004145614252715298,
+    0.004214746773476974,
+    0.003775326997288874,
+    0.003914510375894298,
+    0.003635721811498211,
+    0.004513345184531537,
+    0.0035657521862951483,
+    0.004053297751743427,
+    0.004352753056125413,
+    0.00372884015745871,
+    0.003752089495961578,
+    0.0037985527883372117,
+    0.003960815637007151,
+    0.4886043295713589
+  ],
+  "pilot_upper_envelope_weighted_optimizer": {
+    "certified_upper_envelope_u": [
+      0.48780393234204783,
+      0.003891341309853897,
+      0.004145614252715298,
+      0.004214746773476974,
+      0.003775326997288874,
+      0.003914510375894298,
+      0.003635721811498211,
+      0.004513345184531537,
+      0.0035657521862951483,
+      0.004053297751743427,
+      0.004352753056125413,
+      0.00372884015745871,
+      0.003752089495961578,
+      0.0037985527883372117,
+      0.003960815637007151,
+      0.4886043295713589
+    ],
+    "sum_upper_envelope": 1.0317109696915945,
+    "accepted_shots_by_prepared_rail": [
+      86890,
+      3469,
+      3619,
+      3659,
+      3400,
+      3483,
+      3316,
+      3830,
+      3273,
+      3565,
+      3739,
+      3372,
+      3386,
+      3414,
+      3511,
+      86985
+    ],
+    "accepted_total_rail_calibration": 222911,
+    "continuous_lower_bound_accepted_rail_shots": 222903.74520557563,
+    "aggregate_contrast_calibration_radius": 0.009999837282549575,
+    "optimizer": "n_j=ceil[(log(32/alpha)/(2 eps^2))*(sum_k (u_k R)^(2/3))^2*(u_j R)^(2/3)]",
+    "fixed_union_failure_budget": 0.0015
+  },
+  "accepted_pilot_preparations": 50000,
+  "accepted_rail_calibrations": 222911,
+  "accepted_parity_reference_preparations": 295112,
+  "total_synthetic_99pct_accepted_shots_including_pilot": 568023,
+  "equal16_no_pilot_reference_99pct_accepted_shots": 1137384,
+  "net_fraction_saved_including_pilot": 0.5005881918507733,
+  "assumed_nominal_contrast_mismatch_per_rail": 0.002,
+  "synthetic_witness_99pct_lower_bound": 0.9198526792169445,
+  "scope": "Independent pilot bound is demonstrated ONLY using a synthetic multinomial draw. The same pilot is NOT reused for signal/contrast fits. The actual apparatus must justify i.i.d. known-rail preparation, binomial sampling, detector stationarity and the separate <=0.002 mismatch assumption. No physical measurements, no drift guarantee, no real fidelity confidence statement."
+}

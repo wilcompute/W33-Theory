@@ -1,0 +1,37 @@
+{
+  "status": "W33_TWO_QUARTIC_ORBITAL_RESOURCE_ONEBODY_RANK_PASSIVE_NO_GO",
+  "stabilizer_order": 960,
+  "cases": {
+    "sparse60": {
+      "fourphoton_kets": 60,
+      "onebody_integer_diagonal_multiset": [
+        6
+      ],
+      "onebody_integer_offdiagonal_nonzero_pairs": 0,
+      "onebody_integer_matrix_sha256": "9b88f1aa2efd2ed728812704654502e6c21184f00ef9344c870c566e90e9b6e0",
+      "onebody_purity": "1/40",
+      "onebody_rank": 40,
+      "onebody_min_eigenvalue": 0.025,
+      "onebody_max_eigenvalue": 0.025,
+      "onebody_max_identical_product_overlap_upper": 0.025,
+      "onebody_is_maximally_mixed": true
+    },
+    "best_uniform960": {
+      "fourphoton_kets": 960,
+      "onebody_integer_diagonal_multiset": [
+        96
+      ],
+      "onebody_integer_offdiagonal_nonzero_pairs": 560,
+      "onebody_integer_matrix_sha256": "f73a3bd74fbe8f978abc508f75e92c9da8e6af3def0162056c8cc3b7b0955702",
+      "onebody_purity": "221/7680",
+      "onebody_rank": 40,
+      "onebody_min_eigenvalue": 0.0062499999999999865,
+      "onebody_max_eigenvalue": 0.05625,
+      "onebody_max_identical_product_overlap_upper": 0.05625,
+      "onebody_is_maximally_mixed": false
+    }
+  },
+  "passive_LO_no_heralding_no_go": "Passive single-particle U acts as gamma->U gamma U^dagger, preserving the rank and spectrum. Any four-photon Fock source occupying <=4 input modes has rank(gamma)<=4. Both row resource states have rank>4.",
+  "input_reference": "data/toe_20261116_W33_quartic_164_orbital_sparse_compilers.json",
+  "limits": "Exact one-body integer correlation enumeration; eigenvalue and rank numeric with margin. Does not exclude photon counting, nonlinear resources, entangled sources or heralded optical preparation."
+}

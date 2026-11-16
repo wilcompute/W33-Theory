@@ -1,0 +1,317 @@
+{
+  "status": "EXACT_PSP43_ANCILLA_IRREP_AND_DISTINGUISHABLE_TWO_PHOTON_BRANCHING",
+  "full_group_elements": 25920,
+  "modules": {
+    "trivial1": [
+      {
+        "d": 0,
+        "Hom_to_1_20_6": [
+          1,
+          0,
+          0
+        ],
+        "full_output_permutation_representation_possible": false
+      },
+      {
+        "d": 1,
+        "Hom_to_1_20_6": [
+          1,
+          0,
+          0
+        ],
+        "full_output_permutation_representation_possible": false
+      },
+      {
+        "d": 2,
+        "Hom_to_1_20_6": [
+          3,
+          2,
+          0
+        ],
+        "full_output_permutation_representation_possible": false
+      },
+      {
+        "d": 3,
+        "Hom_to_1_20_6": [
+          8,
+          11,
+          0
+        ],
+        "full_output_permutation_representation_possible": false
+      },
+      {
+        "d": 4,
+        "Hom_to_1_20_6": [
+          28,
+          118,
+          18
+        ],
+        "full_output_permutation_representation_possible": true
+      }
+    ],
+    "Schlafli6": [
+      {
+        "d": 0,
+        "Hom_to_1_20_6": [
+          0,
+          0,
+          1
+        ],
+        "full_output_permutation_representation_possible": false
+      },
+      {
+        "d": 1,
+        "Hom_to_1_20_6": [
+          0,
+          0,
+          2
+        ],
+        "full_output_permutation_representation_possible": false
+      },
+      {
+        "d": 2,
+        "Hom_to_1_20_6": [
+          0,
+          3,
+          9
+        ],
+        "full_output_permutation_representation_possible": false
+      },
+      {
+        "d": 3,
+        "Hom_to_1_20_6": [
+          0,
+          42,
+          40
+        ],
+        "full_output_permutation_representation_possible": false
+      },
+      {
+        "d": 4,
+        "Hom_to_1_20_6": [
+          18,
+          541,
+          263
+        ],
+        "full_output_permutation_representation_possible": true
+      }
+    ],
+    "Schlafli20": [
+      {
+        "d": 0,
+        "Hom_to_1_20_6": [
+          0,
+          1,
+          0
+        ],
+        "full_output_permutation_representation_possible": false
+      },
+      {
+        "d": 1,
+        "Hom_to_1_20_6": [
+          0,
+          3,
+          0
+        ],
+        "full_output_permutation_representation_possible": false
+      },
+      {
+        "d": 2,
+        "Hom_to_1_20_6": [
+          2,
+          24,
+          3
+        ],
+        "full_output_permutation_representation_possible": true
+      },
+      {
+        "d": 3,
+        "Hom_to_1_20_6": [
+          11,
+          206,
+          42
+        ],
+        "full_output_permutation_representation_possible": true
+      },
+      {
+        "d": 4,
+        "Hom_to_1_20_6": [
+          118,
+          2032,
+          541
+        ],
+        "full_output_permutation_representation_possible": true
+      }
+    ],
+    "output27": [
+      {
+        "d": 0,
+        "Hom_to_1_20_6": [
+          1,
+          1,
+          1
+        ],
+        "full_output_permutation_representation_possible": true
+      },
+      {
+        "d": 1,
+        "Hom_to_1_20_6": [
+          1,
+          3,
+          2
+        ],
+        "full_output_permutation_representation_possible": true
+      },
+      {
+        "d": 2,
+        "Hom_to_1_20_6": [
+          5,
+          29,
+          12
+        ],
+        "full_output_permutation_representation_possible": true
+      },
+      {
+        "d": 3,
+        "Hom_to_1_20_6": [
+          19,
+          259,
+          82
+        ],
+        "full_output_permutation_representation_possible": true
+      },
+      {
+        "d": 4,
+        "Hom_to_1_20_6": [
+          164,
+          2691,
+          822
+        ],
+        "full_output_permutation_representation_possible": true
+      }
+    ],
+    "W33point40": [
+      {
+        "d": 0,
+        "Hom_to_1_20_6": [
+          1,
+          0,
+          0
+        ],
+        "full_output_permutation_representation_possible": false
+      },
+      {
+        "d": 1,
+        "Hom_to_1_20_6": [
+          3,
+          2,
+          0
+        ],
+        "full_output_permutation_representation_possible": false
+      },
+      {
+        "d": 2,
+        "Hom_to_1_20_6": [
+          12,
+          32,
+          0
+        ],
+        "full_output_permutation_representation_possible": false
+      },
+      {
+        "d": 3,
+        "Hom_to_1_20_6": [
+          57,
+          394,
+          58
+        ],
+        "full_output_permutation_representation_possible": true
+      },
+      {
+        "d": 4,
+        "Hom_to_1_20_6": [
+          323,
+          3993,
+          918
+        ],
+        "full_output_permutation_representation_possible": true
+      }
+    ],
+    "V40_antisymmetric2": {
+      "Hom_to_1_20_6": [
+        0,
+        0,
+        0
+      ],
+      "dimension": 780,
+      "nonzero_six_sector": false
+    },
+    "V40_symmetric2": {
+      "Hom_to_1_20_6": [
+        3,
+        2,
+        0
+      ],
+      "dimension": 820
+    },
+    "V40_tensor_power_labeled": [
+      {
+        "labeled_copies": 0,
+        "Hom_to_1_20_6": [
+          1,
+          0,
+          0
+        ],
+        "all_27_target_sectors_present": false
+      },
+      {
+        "labeled_copies": 1,
+        "Hom_to_1_20_6": [
+          1,
+          0,
+          0
+        ],
+        "all_27_target_sectors_present": false
+      },
+      {
+        "labeled_copies": 2,
+        "Hom_to_1_20_6": [
+          3,
+          2,
+          0
+        ],
+        "all_27_target_sectors_present": false
+      },
+      {
+        "labeled_copies": 3,
+        "Hom_to_1_20_6": [
+          18,
+          62,
+          0
+        ],
+        "all_27_target_sectors_present": false
+      },
+      {
+        "labeled_copies": 4,
+        "Hom_to_1_20_6": [
+          226,
+          2154,
+          348
+        ],
+        "all_27_target_sectors_present": true
+      },
+      {
+        "labeled_copies": 5,
+        "Hom_to_1_20_6": [
+          5294,
+          81390,
+          20308
+        ],
+        "all_27_target_sectors_present": true
+      }
+    ]
+  },
+  "statement": "Four-copy minimality holds for identical boson Sym^d V with neutral ancillas. A nontrivial G-representation ancillary register can alter multiplicities, and two distinguishable 40-mode carriers have spatial V tensor V, with exterior-square sector absent from Sym\u00b2V.",
+  "trivial_ancilla_does_not_change_sector_presence": true,
+  "scope": "Representation-theoretic existence of equivariant linear operators only, not a physical LOQC implementation, photon-loss bound or energy-efficient device. Nontrivial ancillas need their own covariant physical encoding."
+}

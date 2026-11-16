@@ -1,0 +1,196 @@
+{
+  "status": "EXACT_IIB_T11_ZN_STRING_RADIUS_AND_WINDING_CONTROL_CONDITIONS",
+  "equal_flux_internal_volume": "16*pi^3/(27*N), with Ric(Y)=4g",
+  "IIB_AdS_radius_string4": "(27*pi/4)*gs*N*N0 = L^4/alpha'^2",
+  "IIB_fiber_radius_string4": "(4*pi/3)*gs*N0/N^3 = Rf^4/alpha'^2",
+  "fiber_radius_string_ge1_condition": "N0 >= (3/(4*pi*gs))*N^3",
+  "AdS_radius_string_ge_a_condition": "N*N0 >= 4*a^4/(27*pi*gs)",
+  "winding_lambda": "3*pi*N0/N * min_(u,v)neq0 |u+v*tau|\u00b2/Im(tau)",
+  "reduced_tau_lambda_min": "3*pi*N0/(N*Im(tau)), for |Re(tau)|<=1/2 and |tau|>=1",
+  "winding_BF_safe_necessary_and_sufficient_in_this_sector": "Im(tau)<=pi*N0/(4*N) for reduced tau, lambda_min >= 12",
+  "universal_no_stable_shape_if": "N/N0>pi/(2*sqrt(3)), all reduced tau have Im(tau)>=sqrt(3)/2",
+  "tau_axiodilaton": "tau=C0+i/gs, not tau=i unless gs=1,C0=0",
+  "examples": [
+    {
+      "N": 1,
+      "N0": 10000,
+      "gs": 1,
+      "tau": [
+        0,
+        1.0
+      ],
+      "reduced_shape": true,
+      "shortest_lattice_charge": [
+        -1,
+        0
+      ],
+      "L_over_sqrt_alpha": 21.459194266698827,
+      "fiber_radius_over_sqrt_alpha": 14.306129511132552,
+      "lambda_shortest": 94247.7796076938,
+      "winding_BF_violation_in_this_channel": false,
+      "large_AdS_radius_criterion_Ls_ge10": true,
+      "fiber_radius_ge_string_length": true
+    },
+    {
+      "N": 4,
+      "N0": 10000,
+      "gs": 1,
+      "tau": [
+        0,
+        1.0
+      ],
+      "reduced_shape": true,
+      "shortest_lattice_charge": [
+        -1,
+        0
+      ],
+      "L_over_sqrt_alpha": 30.347883569564445,
+      "fiber_radius_over_sqrt_alpha": 5.0579805949274075,
+      "lambda_shortest": 23561.94490192345,
+      "winding_BF_violation_in_this_channel": false,
+      "large_AdS_radius_criterion_Ls_ge10": true,
+      "fiber_radius_ge_string_length": true
+    },
+    {
+      "N": 40,
+      "N0": 10000,
+      "gs": 1,
+      "tau": [
+        0,
+        1.0
+      ],
+      "reduced_shape": true,
+      "shortest_lattice_charge": [
+        -1,
+        0
+      ],
+      "L_over_sqrt_alpha": 53.96701649001498,
+      "fiber_radius_over_sqrt_alpha": 0.899450274833583,
+      "lambda_shortest": 2356.194490192345,
+      "winding_BF_violation_in_this_channel": false,
+      "large_AdS_radius_criterion_Ls_ge10": true,
+      "fiber_radius_ge_string_length": false
+    },
+    {
+      "N": 100,
+      "N0": 100,
+      "gs": 1,
+      "tau": [
+        0,
+        1.0
+      ],
+      "reduced_shape": true,
+      "shortest_lattice_charge": [
+        -1,
+        0
+      ],
+      "L_over_sqrt_alpha": 21.459194266698827,
+      "fiber_radius_over_sqrt_alpha": 0.1430612951113255,
+      "lambda_shortest": 9.42477796076938,
+      "winding_BF_violation_in_this_channel": true,
+      "large_AdS_radius_criterion_Ls_ge10": true,
+      "fiber_radius_ge_string_length": false
+    },
+    {
+      "N": 100,
+      "N0": 10000,
+      "gs": 1,
+      "tau": [
+        0,
+        1.0
+      ],
+      "reduced_shape": true,
+      "shortest_lattice_charge": [
+        -1,
+        0
+      ],
+      "L_over_sqrt_alpha": 67.85993063479506,
+      "fiber_radius_over_sqrt_alpha": 0.45239953756530044,
+      "lambda_shortest": 942.4777960769379,
+      "winding_BF_violation_in_this_channel": false,
+      "large_AdS_radius_criterion_Ls_ge10": true,
+      "fiber_radius_ge_string_length": false
+    },
+    {
+      "N": 10,
+      "N0": 1000,
+      "gs": 0.1,
+      "tau": [
+        0,
+        10.0
+      ],
+      "reduced_shape": true,
+      "shortest_lattice_charge": [
+        -1,
+        0
+      ],
+      "L_over_sqrt_alpha": 12.06739174145256,
+      "fiber_radius_over_sqrt_alpha": 0.804492782763504,
+      "lambda_shortest": 94.2477796076938,
+      "winding_BF_violation_in_this_channel": false,
+      "large_AdS_radius_criterion_Ls_ge10": true,
+      "fiber_radius_ge_string_length": false
+    },
+    {
+      "N": 10,
+      "N0": 10000,
+      "gs": 0.1,
+      "tau": [
+        0,
+        10.0
+      ],
+      "reduced_shape": true,
+      "shortest_lattice_charge": [
+        -1,
+        0
+      ],
+      "L_over_sqrt_alpha": 21.459194266698827,
+      "fiber_radius_over_sqrt_alpha": 1.4306129511132553,
+      "lambda_shortest": 942.4777960769379,
+      "winding_BF_violation_in_this_channel": false,
+      "large_AdS_radius_criterion_Ls_ge10": true,
+      "fiber_radius_ge_string_length": true
+    },
+    {
+      "N": 100,
+      "N0": 10000,
+      "gs": 0.1,
+      "tau": [
+        0,
+        10.0
+      ],
+      "reduced_shape": true,
+      "shortest_lattice_charge": [
+        -1,
+        0
+      ],
+      "L_over_sqrt_alpha": 38.16044332049582,
+      "fiber_radius_over_sqrt_alpha": 0.25440295546997216,
+      "lambda_shortest": 94.2477796076938,
+      "winding_BF_violation_in_this_channel": false,
+      "large_AdS_radius_criterion_Ls_ge10": true,
+      "fiber_radius_ge_string_length": false
+    },
+    {
+      "N": 100,
+      "N0": 100000,
+      "gs": 0.1,
+      "tau": [
+        0,
+        10.0
+      ],
+      "reduced_shape": true,
+      "shortest_lattice_charge": [
+        -1,
+        0
+      ],
+      "L_over_sqrt_alpha": 67.85993063479506,
+      "fiber_radius_over_sqrt_alpha": 0.45239953756530044,
+      "lambda_shortest": 942.4777960769379,
+      "winding_BF_violation_in_this_channel": false,
+      "large_AdS_radius_criterion_Ls_ge10": true,
+      "fiber_radius_ge_string_length": false
+    }
+  ],
+  "scope": "Applies to the specified equal-charge classical dual and its linearized torus-momentum/wrapped-string BF test, subject to validity of duality. No claims about all higher string excitations, global decay or full quantum stability. The fiber radius and curvature control are independent inequalities, not automatic from large flux alone."
+}

@@ -1,0 +1,14 @@
+{
+  "status": "GENUS6_UNIFORM_RANK4_LOCAL_NO_CROSS_CADICAL_SAT_CONTROL",
+  "combinatorial_type": "FACETS_ONE, single member of 59 neighborly genus-six maps",
+  "solver": "PySAT CaDiCaL195, brute 3-term Grassmann-Pluecker sign CNF with Tseitin XOR",
+  "rank4_chirotope_variables": 715,
+  "face_local_no_cross_clauses": 528,
+  "grassmann_pluecker_axioms": 25740,
+  "cnf_variables": 81103,
+  "cnf_clauses": 373560,
+  "conflict_budget": 35000,
+  "scope": "A SAT model is an abstract oriented matroid (not necessarily representable over reals); it does not ensure no global face intersections. UNSAT excludes this generic local sign system for one map only; no proof-grade UNSAT absent independently verified proof log. UNKNOWN is inconclusive.",
+  "solver_result": "unknown",
+  "solve_seconds": 46.77978709997842
+}
