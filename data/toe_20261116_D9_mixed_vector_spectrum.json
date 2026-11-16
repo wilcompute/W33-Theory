@@ -1,0 +1,142 @@
+{
+  "vector_gap_crossover": {
+    "curvature_in_ads_units": 2.0833843396293004,
+    "first_positive_squared_mass_ads_units": 3.5354176085775855,
+    "loose_to_tight_flux_ratio": 4.530774671696872,
+    "exact_crossover_excluded_for_integer_fluxes": true
+  },
+  "full_vector_blocks_on_sampled_shapes": [
+    {
+      "loose_curvature_in_ads_units": "1/1000",
+      "first_level": [
+        2,
+        0
+      ],
+      "first_positive_vector_squared_mass_ads_units": 2.9955078598436518e-06,
+      "first_spin_two_squared_mass_ads_units": 0.002,
+      "massless_vectors": 7,
+      "vectors_in_window": 25921
+    },
+    {
+      "loose_curvature_in_ads_units": "1/10",
+      "first_level": [
+        2,
+        0
+      ],
+      "first_positive_vector_squared_mass_ads_units": 0.02616134958829139,
+      "first_spin_two_squared_mass_ads_units": 0.2,
+      "massless_vectors": 7,
+      "vectors_in_window": 25921
+    },
+    {
+      "loose_curvature_in_ads_units": "1",
+      "first_level": [
+        2,
+        0
+      ],
+      "first_positive_vector_squared_mass_ads_units": 1.282202112918653,
+      "first_spin_two_squared_mass_ads_units": 2.0,
+      "massless_vectors": 7,
+      "vectors_in_window": 25921
+    },
+    {
+      "loose_curvature_in_ads_units": "2",
+      "first_level": [
+        2,
+        0
+      ],
+      "first_positive_vector_squared_mass_ads_units": 3.3508893593264824,
+      "first_spin_two_squared_mass_ads_units": 4.0,
+      "massless_vectors": 7,
+      "vectors_in_window": 25921
+    },
+    {
+      "loose_curvature_in_ads_units": "21/10",
+      "first_level": [
+        1,
+        1
+      ],
+      "first_positive_vector_squared_mass_ads_units": 3.5614045743425953,
+      "first_spin_two_squared_mass_ads_units": 4.2,
+      "massless_vectors": 7,
+      "vectors_in_window": 25921
+    },
+    {
+      "loose_curvature_in_ads_units": "5",
+      "first_level": [
+        1,
+        1
+      ],
+      "first_positive_vector_squared_mass_ads_units": 7.44866623500587,
+      "first_spin_two_squared_mass_ads_units": 10.0,
+      "massless_vectors": 7,
+      "vectors_in_window": 25921
+    },
+    {
+      "loose_curvature_in_ads_units": "10",
+      "first_level": [
+        1,
+        1
+      ],
+      "first_positive_vector_squared_mass_ads_units": 10.295400907294566,
+      "first_spin_two_squared_mass_ads_units": 20.0,
+      "massless_vectors": 7,
+      "vectors_in_window": 25921
+    }
+  ],
+  "anisotropic_single_sphere_tower": [
+    {
+      "loose_curvature": "1/100",
+      "count_below_m2L2_one": 396,
+      "scaled_count": 3.96,
+      "loose_to_tight_flux_ratio": 817.2780902883428,
+      "gap_times_flux_ratio_squared": 197.42890393740072
+    },
+    {
+      "loose_curvature": "1/10000",
+      "count_below_m2L2_one": 38412,
+      "scaled_count": 3.8412,
+      "loose_to_tight_flux_ratio": 81650.44055898812,
+      "gap_times_flux_ratio_squared": 199.97383797839822
+    },
+    {
+      "loose_curvature": "1/1000000",
+      "count_below_m2L2_one": 3829845,
+      "scaled_count": 3.829845,
+      "loose_to_tight_flux_ratio": 8164966.591753053,
+      "gap_times_flux_ratio_squared": 199.9997383337979
+    }
+  ],
+  "first_mixed_scalar_blocks": {
+    "level": [
+      1,
+      1
+    ],
+    "scalar_polarizations_per_harmonic": 4,
+    "harmonic_degeneracy": 9,
+    "cubic_in_m2L2": "m**3 - 176*m**2 + m*(108*p + 45760)/7 - 544*p",
+    "equal_radii_m2L2": [
+      8.09408811551451,
+      65.86583186601128,
+      96.0,
+      102.04008001847421
+    ],
+    "universal_m2L2": 96,
+    "cubic_root_brackets": [
+      [
+        0,
+        16
+      ],
+      [
+        16,
+        80
+      ],
+      [
+        96,
+        128
+      ]
+    ],
+    "odd_scalar_polarizations_per_harmonic": 1,
+    "odd_scalar_m2L2": 96
+  }
+}
