@@ -1,0 +1,37 @@
+{
+ "sigma_orbits_bitangents": [
+  1,
+  9,
+  9,
+  9
+ ],
+ "sigma_orbits_even": [
+  9,
+  9,
+  9,
+  9
+ ],
+ "even_forms_vanishing_on_basis": [
+  8,
+  8,
+  8,
+  8,
+  8,
+  8,
+  8,
+  8,
+  8
+ ],
+ "odd_forms_vanishing_on_basis": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0
+ ],
+ "Sp62_stabiliser_order": 18
+}

@@ -1,0 +1,11 @@
+{
+ "n_minimisers": 128,
+ "kernel_total": 383,
+ "kernel_hist": {
+  "2": 191,
+  "1": 1
+ },
+ "status": "solved",
+ "margin_at_c8": 0.6490063876911919,
+ "strictly_feasible_on_face": true
+}

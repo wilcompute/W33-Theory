@@ -93,7 +93,7 @@ def canon(mu):
         if best is None or c_ < best: best = c_
     return best
 var_rows = collections.defaultdict(list)       # class -> list of (var, weight, conj_flag)
-cones = []; psd_entries = []                    # psd_entries: list of (cone_index, i, j, list of (var, coeff complex))
+cones = []; psd_entries = []; CONE_META = []   # CONE_META: per cone, (kind, xi, member monomial reps, stabiliser sizes)                    # psd_entries: list of (cone_index, i, j, list of (var, coeff complex))
 VARS = {}                                       # canonical pair-orbit key -> var index; conj handled by key ordering
 def pair_key(m1, m2):                            # canonical rep of the shift orbit of the pair
     best = None
@@ -116,7 +116,7 @@ for (a, b, mons) in blocks:
     for m in mons: chi[xorall(m[0]) ^ xorall(m[1])].append(m)
     if odd:                                      # one block (chi = 0); shifts relate blocks
         B0 = chi[0]; L = len(B0)
-        ci = len(cones); cones.append(L)
+        ci = len(cones); cones.append(L); CONE_META.append(("odd", None, list(B0), [1] * L))
         for i, m1 in enumerate(B0):
             for j, m2 in enumerate(B0):
                 if j < i: continue
@@ -137,7 +137,7 @@ for (a, b, mons) in blocks:
             for xi in range(N):
                 mem = [(m, st) for (m, st) in orbs if all(pcount(xi & s_) % 2 == 0 for s_ in st)]
                 if not mem: continue
-                ci = len(cones); cones.append(len(mem))
+                ci = len(cones); cones.append(len(mem)); CONE_META.append(("even", xi, [o for o, _ in mem], [len(st) for _, st in mem]))
                 for i, (o1, _) in enumerate(mem):
                     for j, (o2, _) in enumerate(mem):
                         if j < i: continue
