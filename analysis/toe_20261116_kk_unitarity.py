@@ -191,9 +191,19 @@ def triangle_reconstruction_fixture():
                 reconstructed[norm*i*i, norm*j*j, norm*i*j] += count
     reconstructed[0, 0, 0] = 1
     assert reconstructed == directly_counted
+    energy_collision = []
+    for (x, y), (u, v) in (((12, 9), (0, -4)), ((12, 0), (-6, 8))):
+        assert x*v != y*u
+        squares = (x*x + y*y, u*u + v*v, (x+u)**2 + (y+v)**2)
+        masses = tuple(sorted(map(isqrt, squares)))
+        assert sorted(squares) == [mass**2 for mass in masses]
+        assert sum(masses) == 32
+        energy_collision.append(masses)
+    assert energy_collision == [(4, 13, 15), (10, 10, 12)]
     return {"squared_norm_cap_on_v_w_and_sum": cap,
             "ordered_rank_two_pairs": sum(triangles.values()),
-            "distinct_gram_matrices": len(reconstructed)}
+            "distinct_gram_matrices": len(reconstructed),
+            "distinct_mass_triples_at_total_energy_32": energy_collision}
 
 
 def isospectral_fixture():

@@ -202,6 +202,18 @@
   "square_lattice_gram_reconstruction": {
     "squared_norm_cap_on_v_w_and_sum": 20,
     "ordered_rank_two_pairs": 2472,
-    "distinct_gram_matrices": 370
+    "distinct_gram_matrices": 370,
+    "distinct_mass_triples_at_total_energy_32": [
+      [
+        4,
+        13,
+        15
+      ],
+      [
+        10,
+        10,
+        12
+      ]
+    ]
   }
 }
