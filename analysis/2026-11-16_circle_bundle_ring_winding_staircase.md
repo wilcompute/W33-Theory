@@ -39,7 +39,21 @@ At square shape, `U(1,1;i)=4`, `U(1,2;i)=0`, `U(2,1;i)=8`, `U(5,1;i)=20`. In par
 
 A hexagonal lattice maximizes the shortest squared covolume-one momentum vector: `Q_min<=2/sqrt(3)`. Therefore `N/N0>pi/(2 sqrt(3))` forces a violating momentum for **every** torus shape. For smaller positive ratios, elongated shapes still contain BF-violating modes, so there is no uniform stability over the entire modular domain. This supplies an arithmetic multiplicity and modular-wall refinement to the repo's pre-existing lowest-mode criterion.
 
-## 3. Physics boundary
+## 3. Exact Weyl-law scaling at fixed torus shape
+
+For fixed `tau`, the momentum quadratic form `Q=|m+n tau|²/Im(tau)` has determinant 1. Thus the ellipse `Q<R` has Euclidean area `pi R`. At `R=4N/(pi N0)` this equals **`4N/N0`**. This is not an unexplained project constant: it is the ordinary lattice-point Weyl coefficient.
+
+An elementary finite bound avoids appealing to asymptotics alone. The covolume-one lattice has basis `v1=(1/sqrt(y),0)`, `v2=(x/sqrt(y),sqrt(y))`. Its centered fundamental parallelogram fits inside a disk of radius `delta=(1+|tau|)/(2 sqrt(y))`. If `rho=sqrt(4N/(pi N0))`, comparison of covered unit-area cells with the disks of radii `rho +/- delta` proves
+
+`pi max(rho-delta,0)^2 - 1 <= U <= pi(rho+delta)^2 - 1.`
+
+In particular, as `N/N0 -> infinity` at **fixed** `tau`,
+
+`U(N,N0;tau)=4N/N0+O_tau(sqrt(N/N0))`.
+
+This establishes linear growth of the multiplicity of BF-violating Fourier modes in this sector when flux ratios increase, independently of the fixed torus shape at leading order. It is **not uniform** when `tau` is simultaneously taken to the modular cusp. The verifier checks both finite bounds and the counts at multiple integer ratios.
+
+## 4. Physics boundary
 
 The winding interpretation survives only as an M-theory/Type IIB duality map; a label count is not an on-shell string spectrum calculation. Local IIB supergravity sees the Betti vector from b3(Y)=1 but omits nonzero fiber string windings. For unequal flux the independent homogeneous instability already excludes stability. For equal flux the lattice count proves instability only when the displayed Fourier modes are present and the two-derivative M-theory analysis is trustworthy. In particular N=1,N0=1 is not a controlled large-flux semiclassical assertion.
 

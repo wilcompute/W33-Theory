@@ -1,6 +1,100 @@
 {
   "corrective_comment": "Square N=N0=1 has four unstable nonzero Fourier labels because lambda1=3*pi<12; prior untracked local audit comment incorrectly called this case BF-safe.",
   "every_shape_instability_if_N_over_N0_gt": 0.9068996821171089,
+  "fixed_shape_weyl_cell_bounds": [
+    {
+      "N": 1,
+      "N0": 1,
+      "area_leading_term": 4.0,
+      "cell_cover_radius": 1.0,
+      "exact_count": 4,
+      "lower_proved_bound": -0.9482227500322709,
+      "tau": [
+        0.0,
+        1.0
+      ],
+      "upper_proved_bound": 13.231408057211853
+    },
+    {
+      "N": 2,
+      "N0": 1,
+      "area_leading_term": 8.0,
+      "cell_cover_radius": 1.0,
+      "exact_count": 8,
+      "lower_proved_bound": 0.11507955506579148,
+      "tau": [
+        0.0,
+        1.0
+      ],
+      "upper_proved_bound": 20.168105752113792
+    },
+    {
+      "N": 5,
+      "N0": 1,
+      "area_leading_term": 20.0,
+      "cell_cover_radius": 1.0,
+      "exact_count": 20,
+      "lower_proved_bound": 6.288283463165752,
+      "tau": [
+        0.0,
+        1.0
+      ],
+      "upper_proved_bound": 37.994901844013846
+    },
+    {
+      "N": 10,
+      "N0": 1,
+      "area_leading_term": 40.0,
+      "cell_cover_radius": 1.0,
+      "exact_count": 36,
+      "lower_proved_bound": 19.72162778799808,
+      "tau": [
+        0.0,
+        1.0
+      ],
+      "upper_proved_bound": 64.5615575191815
+    },
+    {
+      "N": 25,
+      "N0": 1,
+      "area_leading_term": 100.0,
+      "cell_cover_radius": 1.0,
+      "exact_count": 96,
+      "lower_proved_bound": 66.69251563547945,
+      "tau": [
+        0.0,
+        1.0
+      ],
+      "upper_proved_bound": 137.5906696717001
+    },
+    {
+      "N": 100,
+      "N0": 1,
+      "area_leading_term": 400.0,
+      "cell_cover_radius": 1.0,
+      "exact_count": 400,
+      "lower_proved_bound": 331.24343861736907,
+      "tau": [
+        0.0,
+        1.0
+      ],
+      "upper_proved_bound": 473.0397466898104
+    },
+    {
+      "N": 400,
+      "N0": 1,
+      "area_leading_term": 1600.0,
+      "cell_cover_radius": 1.0,
+      "exact_count": 1604,
+      "lower_proved_bound": 1460.3452845811482,
+      "tau": [
+        0.0,
+        1.0
+      ],
+      "upper_proved_bound": 1743.9379007260309
+    }
+  ],
+  "fixed_tau_weyl_asymptotic": "U=4*N/N0 + O_tau(sqrt(N/N0)) at fixed tau",
   "hexagonal_Qmin": 1.1547005383792517,
   "notes": "Gysin ring products are integral; BF census uses floating point for moduli away from exact thresholds.",
   "ring_example_same_gcd_distinct_cup_square": {

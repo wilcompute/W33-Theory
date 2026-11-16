@@ -98,6 +98,25 @@ def winding_census(N: int, N0: int, tau: complex = 1j) -> dict:
         "modes": modes
     }
 
+def winding_weyl_bound(N: int, N0: int, tau: complex) -> dict:
+    """Explicit unit-area lattice cell bound, a rigorous elementary Weyl law.
+
+    Fundamental parallelogram centered on each lattice site has area 1 and
+    all its points lie within delta=(|v1|+|v2|)/2 of that site.
+    """
+    if N < 1 or N0 < 1 or tau.imag <= 0:
+        raise ValueError("Need N,N0>=1 and Im(tau)>0")
+    radius = math.sqrt(4*N/(math.pi*N0))
+    delta = (1+abs(tau))/(2*math.sqrt(tau.imag))
+    lower = math.pi*max(radius-delta,0)**2-1
+    upper = math.pi*(radius+delta)**2-1
+    actual = winding_census(N,N0,tau)["number_of_unstable_nonzero_Fourier_labels"]
+    assert lower-1e-8 <= actual <= upper+1e-8
+    return {"N":N,"N0":N0,"tau":[tau.real,tau.imag],
+            "exact_count":actual,"area_leading_term":4*N/N0,
+            "lower_proved_bound":lower,"upper_proved_bound":upper,
+            "cell_cover_radius":delta}
+
 def verify() -> dict:
     # Ring-level distinction missed by homotopy/homology alone:
     # L(3,1) x S2 has torsion square zero, T11/Z3 has nonzero square.
@@ -131,6 +150,8 @@ def verify() -> dict:
         "scope": "Circle-bundle integral cohomology plus the specified M-theory sphere-odd torus-momentum sector; does not certify full 10D/11D stability.",
         "ring_example_same_gcd_distinct_cup_square": {"3_0":l30, "3_3":l33},
         "square_shape_cases":square,
+        "fixed_shape_weyl_cell_bounds":[winding_weyl_bound(r,1,1j) for r in (1,2,5,10,25,100,400)],
+        "fixed_tau_weyl_asymptotic":"U=4*N/N0 + O_tau(sqrt(N/N0)) at fixed tau",
         "hexagonal_Qmin":2/math.sqrt(3),
         "every_shape_instability_if_N_over_N0_gt":math.pi/(2*math.sqrt(3)),
         "square_shape_instability_iff_N_over_N0_gt":math.pi/4,

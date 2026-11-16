@@ -29,6 +29,12 @@ class TestRingWinding(unittest.TestCase):
     def test_square_arithmetic(self):
         for N,N0,n in [(1,1,4),(1,2,0),(2,1,8),(5,1,20)]:
             self.assertEqual(circle.winding_census(N,N0)["number_of_unstable_nonzero_Fourier_labels"],n)
+    def test_weyl_cell_bound(self):
+        for r in (1,2,5,10,25,100,400):
+            b=circle.winding_weyl_bound(r,1,1j)
+            self.assertLessEqual(b["lower_proved_bound"],b["exact_count"])
+            self.assertLessEqual(b["exact_count"],b["upper_proved_bound"])
+        self.assertLess(abs(circle.winding_weyl_bound(400,1,1j)["exact_count"]/1600-1),.01)
     def test_modular_invariance(self):
         tau=.34+1.2j
         for t in (tau+1,-1/tau):
