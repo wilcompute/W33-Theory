@@ -1,0 +1,147 @@
+{
+  "bulk_dirichlet_block_positive_if_potential_convex_along_profile": true,
+  "index_reduces_to_two_endpoint_variables_in_O5": true,
+  "tested_detuned_saddles": [
+    {
+      "q_minus_over_q_plus": 0.75,
+      "wall_radius_over_outer_ads": 6,
+      "alpha": 0.9863670698741879,
+      "endpoint_hessian_normalized_by_wall_radius_fourth": [
+        [
+          -0.10720187062503582,
+          0.07318481012348291
+        ],
+        [
+          0.07318481012348291,
+          319.9985392899673
+        ]
+      ],
+      "endpoint_hessian_eigenvalues": [
+        -0.10721860264656542,
+        319.99855602198886
+      ],
+      "radius_schur_complement": -0.10721860825279092,
+      "schur_relative_to_leading_near_planar_value": 0.9649674742751183,
+      "finite_difference_hessian_change": 2.205583882641804e-06
+    },
+    {
+      "q_minus_over_q_plus": 0.75,
+      "wall_radius_over_outer_ads": 10,
+      "alpha": 0.9950336053164002,
+      "endpoint_hessian_normalized_by_wall_radius_fourth": [
+        [
+          -0.03948383888106821,
+          0.026550652264306307
+        ],
+        [
+          0.026550652264306307,
+          319.99916023610626
+        ]
+      ],
+      "endpoint_hessian_eigenvalues": [
+        -0.03948604154360244,
+        319.9991624387688
+      ],
+      "radius_schur_complement": -0.03948604181539823,
+      "schur_relative_to_leading_near_planar_value": 0.9871510453849557,
+      "finite_difference_hessian_change": 2.2072714500609436e-06
+    },
+    {
+      "q_minus_over_q_plus": 0.75,
+      "wall_radius_over_outer_ads": 16,
+      "alpha": 0.998052025839723,
+      "endpoint_hessian_normalized_by_wall_radius_fourth": [
+        [
+          -0.015545729776383108,
+          0.010398874662958647
+        ],
+        [
+          0.010398874662958647,
+          319.99963025550744
+        ]
+      ],
+      "endpoint_hessian_eigenvalues": [
+        -0.015546067687214397,
+        319.99963059341826
+      ],
+      "radius_schur_complement": -0.015546067703630616,
+      "schur_relative_to_leading_near_planar_value": 0.9949483330323594,
+      "finite_difference_hessian_change": 2.2069161786930636e-06
+    },
+    {
+      "q_minus_over_q_plus": 0.9,
+      "wall_radius_over_outer_ads": 6,
+      "alpha": 0.9863832110655354,
+      "endpoint_hessian_normalized_by_wall_radius_fourth": [
+        [
+          -0.042744842350136314,
+          0.029180731720091266
+        ],
+        [
+          0.029180731720091266,
+          320.1521042022648
+        ]
+      ],
+      "endpoint_hessian_eigenvalues": [
+        -0.04274750171551708,
+        320.15210686163016
+      ],
+      "radius_schur_complement": -0.04274750207060213,
+      "schur_relative_to_leading_near_planar_value": 0.9618187965885481,
+      "finite_difference_hessian_change": 2.205524651799351e-06
+    },
+    {
+      "q_minus_over_q_plus": 0.9,
+      "wall_radius_over_outer_ads": 10,
+      "alpha": 0.9950357576544342,
+      "endpoint_hessian_normalized_by_wall_radius_fourth": [
+        [
+          -0.015775174772869615,
+          0.010607862944289954
+        ],
+        [
+          0.010607862944289954,
+          320.05456154815533
+        ]
+      ],
+      "endpoint_hessian_eigenvalues": [
+        -0.015775526341706873,
+        320.05456189972415
+      ],
+      "radius_schur_complement": -0.015775526359035737,
+      "schur_relative_to_leading_near_planar_value": 0.9859703974397337,
+      "finite_difference_hessian_change": 2.2059169850763283e-06
+    },
+    {
+      "q_minus_over_q_plus": 0.9,
+      "wall_radius_over_outer_ads": 16,
+      "alpha": 0.9980523575082059,
+      "endpoint_hessian_normalized_by_wall_radius_fourth": [
+        [
+          -0.0062154497573651026,
+          0.004157612543912181
+        ],
+        [
+          0.004157612543912181,
+          320.0212869793217
+        ]
+      ],
+      "endpoint_hessian_eigenvalues": [
+        -0.00621550377066687,
+        320.02128703333494
+      ],
+      "radius_schur_complement": -0.0062155037717159245,
+      "schur_relative_to_leading_near_planar_value": 0.9944806034745481,
+      "finite_difference_hessian_change": 2.2067385430091235e-06
+    }
+  ],
+  "wider_boundary_control": {
+    "charge_ratio": 0.75,
+    "wall_radius": 10,
+    "max_hessian_change": 1.5232217265293002e-08,
+    "eigenvalues": [
+      -0.039486042876988245,
+      319.99916242353765
+    ]
+  }
+}
