@@ -1,0 +1,62 @@
+{
+  "rescaled_internal_einstein_scalar_metric": "g_internal = exp(-10 A / 3) h",
+  "projected_quadratic_coefficient": "256/3",
+  "leading_A_coefficient_per_32_minus_eigenvalue": "3/256",
+  "metric": {
+    "constant_metric_determinant": "4096/9",
+    "nonconstant_metric_determinant": "(lambda-32/3)^2*(lambda+8)",
+    "second_order_metric_response": [
+      {
+        "harmonic": 0,
+        "D_B_C": [
+          "-34/9",
+          "56/9",
+          "20/9"
+        ]
+      },
+      {
+        "harmonic": 2,
+        "D_B_C": [
+          "302/63",
+          "-16/9",
+          "-136/63"
+        ]
+      },
+      {
+        "harmonic": 4,
+        "D_B_C": [
+          "-152/903",
+          "-32/43",
+          "-240/301"
+        ]
+      }
+    ],
+    "independent_traceless_equation_passed": true
+  },
+  "examples": [
+    {
+      "chern_pair": [
+        7,
+        8
+      ],
+      "lambda_minus_32": -0.26407224731465817,
+      "quadrupole_amplitude": 0.003057208999117644,
+      "relative_to_leading": 0.987918409618091,
+      "maximum_retained_equation_residual": 6.336112224356125e-15,
+      "maximum_traceless_equation_residual": 5.875437596510986e-15,
+      "even_harmonics": 8
+    },
+    {
+      "chern_pair": [
+        8,
+        9
+      ],
+      "lambda_minus_32": 0.15225656760655681,
+      "quadrupole_amplitude": -0.001797588510888228,
+      "relative_to_leading": 1.0074719403380905,
+      "maximum_retained_equation_residual": 2.006126384804241e-15,
+      "maximum_traceless_equation_residual": 1.111030271194532e-15,
+      "even_harmonics": 8
+    }
+  ]
+}
