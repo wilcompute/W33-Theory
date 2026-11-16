@@ -1,0 +1,216 @@
+{
+  "modular_speed_per_log_cosmic_time": 1.224744871391589,
+  "worst_gap_decay_exponent_in_cosmic_time": 0.6123724356957945,
+  "critical_irrationality_exponent": 3.3797958971132713,
+  "redshift_peaks": {
+    "y_at_probe_peak_over_rational_error": 1.5426587105102902,
+    "probe_peak_constant": 0.5448039253734848
+  },
+  "continued_fraction_examples": {
+    "bounded": [
+      {
+        "log_denominator": 2.302585092994046,
+        "lower_bound_on_peak_probe_to_gap_squared": 0.08312729471997382,
+        "upper_bound_on_peak_probe_to_gap_squared": 0.15925055892600867
+      },
+      {
+        "log_denominator": 2.3978952727983707,
+        "lower_bound_on_peak_probe_to_gap_squared": 0.07690359837355833,
+        "upper_bound_on_peak_probe_to_gap_squared": 0.14732755427282973
+      },
+      {
+        "log_denominator": 3.044522437723423,
+        "lower_bound_on_peak_probe_to_gap_squared": 0.04535787446183957,
+        "upper_bound_on_peak_probe_to_gap_squared": 0.08689404465857206
+      },
+      {
+        "log_denominator": 3.4657359027997265,
+        "lower_bound_on_peak_probe_to_gap_squared": 0.0321581026361812,
+        "upper_bound_on_peak_probe_to_gap_squared": 0.061606670060216556
+      },
+      {
+        "log_denominator": 3.970291913552122,
+        "lower_bound_on_peak_probe_to_gap_squared": 0.021299768141345474,
+        "upper_bound_on_peak_probe_to_gap_squared": 0.040804888369459114
+      },
+      {
+        "log_denominator": 4.442651256490317,
+        "lower_bound_on_peak_probe_to_gap_squared": 0.014483591656774103,
+        "upper_bound_on_peak_probe_to_gap_squared": 0.0277468438539615
+      },
+      {
+        "log_denominator": 4.927253685157205,
+        "lower_bound_on_peak_probe_to_gap_squared": 0.009750710680676716,
+        "upper_bound_on_peak_probe_to_gap_squared": 0.018679858776283035
+      }
+    ],
+    "mu_four": [
+      {
+        "log_denominator": 2.302585092994046,
+        "lower_bound_on_peak_probe_to_gap_squared": 1.2683732267024705,
+        "upper_bound_on_peak_probe_to_gap_squared": 1.283323752585337
+      },
+      {
+        "log_denominator": 6.90875477931522,
+        "lower_bound_on_peak_probe_to_gap_squared": 6.877332976764516,
+        "upper_bound_on_peak_probe_to_gap_squared": 6.87734109985399
+      },
+      {
+        "log_denominator": 20.726264347915723,
+        "lower_bound_on_peak_probe_to_gap_squared": 1095.9221411283347,
+        "upper_bound_on_peak_probe_to_gap_squared": 1095.9221411283347
+      },
+      {
+        "log_denominator": 62.17879304374716,
+        "lower_bound_on_peak_probe_to_gap_squared": 4434642832.403588,
+        "upper_bound_on_peak_probe_to_gap_squared": 4434642832.403588
+      },
+      {
+        "log_denominator": 186.5363791312415,
+        "lower_bound_on_peak_probe_to_gap_squared": 2.938295607937707e+29,
+        "upper_bound_on_peak_probe_to_gap_squared": 2.938295607937707e+29
+      },
+      {
+        "log_denominator": 559.6091373937245,
+        "lower_bound_on_peak_probe_to_gap_squared": 8.546848420301602e+88,
+        "upper_bound_on_peak_probe_to_gap_squared": 8.546848420301602e+88
+      },
+      {
+        "log_denominator": 1678.8274121811735,
+        "lower_bound_on_peak_probe_to_gap_squared": 2.1034759414383937e+267,
+        "upper_bound_on_peak_probe_to_gap_squared": 2.1034759414383937e+267
+      }
+    ],
+    "critical_log_growth": [
+      {
+        "log_denominator": 2.302585092994046,
+        "lower_bound_on_peak_probe_to_gap_squared": 1.461076970755076,
+        "upper_bound_on_peak_probe_to_gap_squared": 1.4746491890514197
+      },
+      {
+        "log_denominator": 7.147559271189454,
+        "lower_bound_on_peak_probe_to_gap_squared": 5.586484805553573,
+        "upper_bound_on_peak_probe_to_gap_squared": 5.586491549366917
+      },
+      {
+        "log_denominator": 20.943273169864916,
+        "lower_bound_on_peak_probe_to_gap_squared": 19.93889004875521,
+        "upper_bound_on_peak_probe_to_gap_squared": 19.938890048755223
+      },
+      {
+        "log_denominator": 55.92435057189474,
+        "lower_bound_on_peak_probe_to_gap_squared": 63.75759504253955,
+        "upper_bound_on_peak_probe_to_gap_squared": 63.75759504253955
+      },
+      {
+        "log_denominator": 141.1365398293711,
+        "lower_bound_on_peak_probe_to_gap_squared": 190.69788907966205,
+        "upper_bound_on_peak_probe_to_gap_squared": 190.69788907966205
+      },
+      {
+        "log_denominator": 345.77561399749504,
+        "lower_bound_on_peak_probe_to_gap_squared": 550.6961430983908,
+        "upper_bound_on_peak_probe_to_gap_squared": 550.6961430983908
+      },
+      {
+        "log_denominator": 834.5669676135071,
+        "lower_bound_on_peak_probe_to_gap_squared": 1562.4262849788697,
+        "upper_bound_on_peak_probe_to_gap_squared": 1562.4262849788697
+      }
+    ],
+    "critical_log_decay": [
+      {
+        "log_denominator": 2.302585092994046,
+        "lower_bound_on_peak_probe_to_gap_squared": 0.188805080421551,
+        "upper_bound_on_peak_probe_to_gap_squared": 0.24000261839030265
+      },
+      {
+        "log_denominator": 3.713572066704308,
+        "lower_bound_on_peak_probe_to_gap_squared": 0.11429179946690901,
+        "upper_bound_on_peak_probe_to_gap_squared": 0.1252076740159275
+      },
+      {
+        "log_denominator": 6.218600119691729,
+        "lower_bound_on_peak_probe_to_gap_squared": 0.0624500693982846,
+        "upper_bound_on_peak_probe_to_gap_squared": 0.06298796079766564
+      },
+      {
+        "log_denominator": 11.139177023413632,
+        "lower_bound_on_peak_probe_to_gap_squared": 0.03142542708337604,
+        "upper_bound_on_peak_probe_to_gap_squared": 0.03142640239877829
+      },
+      {
+        "log_denominator": 21.688012542678447,
+        "lower_bound_on_peak_probe_to_gap_squared": 0.014283004680404261,
+        "upper_bound_on_peak_probe_to_gap_squared": 0.014283004681206222
+      },
+      {
+        "log_denominator": 45.459523884553086,
+        "lower_bound_on_peak_probe_to_gap_squared": 0.0059488841524822115,
+        "upper_bound_on_peak_probe_to_gap_squared": 0.0059488841524822115
+      },
+      {
+        "log_denominator": 100.55074373500916,
+        "lower_bound_on_peak_probe_to_gap_squared": 0.002324932745177966,
+        "upper_bound_on_peak_probe_to_gap_squared": 0.002324932745177966
+      }
+    ]
+  },
+  "nonvertical_geodesic_checks": [
+    {
+      "hyperbolic_path_time": 2.0,
+      "volume": 0.10632089153363189,
+      "upper_bound_on_squared_mass_log_change": 0.13533528323661387,
+      "maximum_squared_mass_log_change_in_test": 0.13522985425686013
+    },
+    {
+      "hyperbolic_path_time": 5.0,
+      "volume": 0.005390112888521823,
+      "upper_bound_on_squared_mass_log_change": 0.0067379469991118894,
+      "maximum_squared_mass_log_change_in_test": 0.0007243924679661533
+    },
+    {
+      "hyperbolic_path_time": 8.0,
+      "volume": 0.00026837007212093654,
+      "upper_bound_on_squared_mass_log_change": 0.0003354626286323263,
+      "maximum_squared_mass_log_change_in_test": 1.8005504393658495e-06
+    }
+  ],
+  "remaining_distance_with_radiation": [
+    {
+      "initial_radiation_to_kinetic_density": 1e-06,
+      "remaining_field_distance": 17.553532901752895,
+      "independent_quadrature": 17.553532901752863
+    },
+    {
+      "initial_radiation_to_kinetic_density": 0.01,
+      "remaining_field_distance": 6.924099309780188,
+      "independent_quadrature": 6.924099309784157
+    },
+    {
+      "initial_radiation_to_kinetic_density": 1.0,
+      "remaining_field_distance": 2.0354451108894374,
+      "independent_quadrature": 2.0354451108428306
+    },
+    {
+      "initial_radiation_to_kinetic_density": 100.0,
+      "remaining_field_distance": 0.23055692930702334,
+      "independent_quadrature": 0.230556929316193
+    }
+  ],
+  "proper_time_occupation_controls": {
+    "golden_geodesic_maximum_height": 1.118033988749895,
+    "log_time_mean_above_one": 0.954929658551372,
+    "log_time_mean_above_golden_height": 0.8541150521006124
+  },
+  "e6_hubble_bound": {
+    "charge_weight_count": 27,
+    "dual_norm_squared": "4/3",
+    "marginal_mass_decay_exponents_with_multiplicities": {
+      "1": 1,
+      "1/4": 16,
+      "-1/2": 10
+    },
+    "single_radius_exponent_in_five_dimensional_proper_time": "3/4"
+  }
+}
