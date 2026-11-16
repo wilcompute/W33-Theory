@@ -1,0 +1,115 @@
+{
+  "warp_resonance_eigenvalue": 32,
+  "resonance_for_any_integer_chern_pair": false,
+  "nonzero_chern_numbers_charged_gap": {
+    "tested_labels": 100,
+    "certified_gap_rounded_down": 0.113,
+    "closest_tested_label": {
+      "absolute_effective_charges": [
+        1,
+        3
+      ],
+      "twice_spins": [
+        1,
+        3
+      ],
+      "scalar_eigenvalue_interval": [
+        "229648125983345853379/7202095079341590912",
+        "7668014833127491788827/240479958900179972930"
+      ]
+    }
+  },
+  "endpoint_gap_lower_bound": 2,
+  "neutral_gap_lower_bound": "14/[9(p^2+q^2)]",
+  "neutral_near_resonances": [
+    {
+      "norm": -7,
+      "asymptotic_detuning_times_p_squared": "35/12",
+      "examples": [
+        {
+          "chern_pair": [
+            1,
+            1
+          ],
+          "neutral_eigenvalue_minus_32": 4.0,
+          "detuning_times_p_squared": 4.0,
+          "operator_dimension_minus_4": 0.32455532033675866
+        },
+        {
+          "chern_pair": [
+            36926,
+            41777
+          ],
+          "neutral_eigenvalue_minus_32": 2.1390565577760904e-09,
+          "detuning_times_p_squared": 2.9166666673587964,
+          "operator_dimension_minus_4": 1.7825471314535963e-10
+        },
+        {
+          "chern_pair": [
+            1447573051,
+            1637741953
+          ],
+          "neutral_eigenvalue_minus_32": 1.3918928999958138e-18,
+          "detuning_times_p_squared": 2.9166666666666665,
+          "operator_dimension_minus_4": 1.1599107499965115e-19
+        },
+        {
+          "chern_pair": [
+            56747758708376,
+            64202759999729
+          ],
+          "neutral_eigenvalue_minus_32": 9.057104349673249e-28,
+          "detuning_times_p_squared": 2.9166666666666665,
+          "operator_dimension_minus_4": 7.54758695806104e-29
+        }
+      ]
+    },
+    {
+      "norm": 17,
+      "asymptotic_detuning_times_p_squared": "-85/12",
+      "examples": [
+        {
+          "chern_pair": [
+            38,
+            43
+          ],
+          "neutral_eigenvalue_minus_32": -0.004902687099344247,
+          "detuning_times_p_squared": -7.079480171453093,
+          "operator_dimension_minus_4": -0.0004085711691453753
+        },
+        {
+          "chern_pair": [
+            1489813,
+            1685531
+          ],
+          "neutral_eigenvalue_minus_32": -3.1913479718496335e-12,
+          "detuning_times_p_squared": -7.083333333330826,
+          "operator_dimension_minus_4": -2.6594566432080867e-13
+        },
+        {
+          "chern_pair": [
+            58403649188,
+            66076186219
+          ],
+          "neutral_eigenvalue_minus_32": -2.076623251491111e-21,
+          "detuning_times_p_squared": -7.083333333333333,
+          "operator_dimension_minus_4": -1.7305193762425926e-22
+        },
+        {
+          "chern_pair": [
+            2289539853978163,
+            2590318650471707
+          ],
+          "neutral_eigenvalue_minus_32": -1.3512672910228448e-30,
+          "detuning_times_p_squared": -7.083333333333333,
+          "operator_dimension_minus_4": -1.1260560758523707e-31
+        }
+      ]
+    }
+  ],
+  "external_equation_bifurcation": {
+    "quadratic_projected_source": "32/5",
+    "leading_amplitude_per_32_minus_eigenvalue": "5/32",
+    "solves_external_equation_at_fixed_internal_metric_only": true
+  }
+}
