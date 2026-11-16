@@ -1,0 +1,398 @@
+{
+  "law": {
+    "mean_for_any_flux_ratio": "4*N/N0",
+    "large_count_tail": "P(U>=2*j) = 3*R/(pi*j^2) for large j",
+    "small_flux_probability_at_least_one_mode": "3*R/pi",
+    "second_moment_log_coefficient_for_count_cap": "24*R/pi",
+    "R": "4*N/(pi*N0)"
+  },
+  "mode_count_controls": [
+    {
+      "flux_ratio": "1/4",
+      "tau": [
+        0.47,
+        0.91
+      ],
+      "signed_labels": 0,
+      "one_line_formula_checked": true
+    },
+    {
+      "flux_ratio": "1/4",
+      "tau": [
+        0.47,
+        1.2
+      ],
+      "signed_labels": 0,
+      "one_line_formula_checked": true
+    },
+    {
+      "flux_ratio": "1/4",
+      "tau": [
+        0.47,
+        2.3
+      ],
+      "signed_labels": 0,
+      "one_line_formula_checked": true
+    },
+    {
+      "flux_ratio": "1/4",
+      "tau": [
+        0.47,
+        7.3
+      ],
+      "signed_labels": 2,
+      "one_line_formula_checked": true
+    },
+    {
+      "flux_ratio": "1/4",
+      "tau": [
+        0.47,
+        51.8
+      ],
+      "signed_labels": 8,
+      "one_line_formula_checked": true
+    },
+    {
+      "flux_ratio": "1/4",
+      "tau": [
+        0.47,
+        109.7
+      ],
+      "signed_labels": 10,
+      "one_line_formula_checked": true
+    },
+    {
+      "flux_ratio": "1/2",
+      "tau": [
+        0.47,
+        0.91
+      ],
+      "signed_labels": 0,
+      "one_line_formula_checked": true
+    },
+    {
+      "flux_ratio": "1/2",
+      "tau": [
+        0.47,
+        1.2
+      ],
+      "signed_labels": 0,
+      "one_line_formula_checked": true
+    },
+    {
+      "flux_ratio": "1/2",
+      "tau": [
+        0.47,
+        2.3
+      ],
+      "signed_labels": 2,
+      "one_line_formula_checked": true
+    },
+    {
+      "flux_ratio": "1/2",
+      "tau": [
+        0.47,
+        7.3
+      ],
+      "signed_labels": 4,
+      "one_line_formula_checked": true
+    },
+    {
+      "flux_ratio": "1/2",
+      "tau": [
+        0.47,
+        51.8
+      ],
+      "signed_labels": 10,
+      "one_line_formula_checked": true
+    },
+    {
+      "flux_ratio": "1/2",
+      "tau": [
+        0.47,
+        109.7
+      ],
+      "signed_labels": 16,
+      "one_line_formula_checked": true
+    },
+    {
+      "flux_ratio": "3/4",
+      "tau": [
+        0.47,
+        0.91
+      ],
+      "signed_labels": 0,
+      "one_line_formula_checked": true
+    },
+    {
+      "flux_ratio": "3/4",
+      "tau": [
+        0.47,
+        1.2
+      ],
+      "signed_labels": 2,
+      "one_line_formula_checked": true
+    },
+    {
+      "flux_ratio": "3/4",
+      "tau": [
+        0.47,
+        2.3
+      ],
+      "signed_labels": 2,
+      "one_line_formula_checked": true
+    },
+    {
+      "flux_ratio": "3/4",
+      "tau": [
+        0.47,
+        7.3
+      ],
+      "signed_labels": 4,
+      "one_line_formula_checked": true
+    },
+    {
+      "flux_ratio": "3/4",
+      "tau": [
+        0.47,
+        51.8
+      ],
+      "signed_labels": 14,
+      "one_line_formula_checked": true
+    },
+    {
+      "flux_ratio": "3/4",
+      "tau": [
+        0.47,
+        109.7
+      ],
+      "signed_labels": 20,
+      "one_line_formula_checked": true
+    },
+    {
+      "flux_ratio": "2/1",
+      "tau": [
+        0.47,
+        0.91
+      ],
+      "signed_labels": 6,
+      "one_line_formula_checked": false
+    },
+    {
+      "flux_ratio": "2/1",
+      "tau": [
+        0.47,
+        1.2
+      ],
+      "signed_labels": 6,
+      "one_line_formula_checked": false
+    },
+    {
+      "flux_ratio": "2/1",
+      "tau": [
+        0.47,
+        2.3
+      ],
+      "signed_labels": 8,
+      "one_line_formula_checked": false
+    },
+    {
+      "flux_ratio": "2/1",
+      "tau": [
+        0.47,
+        7.3
+      ],
+      "signed_labels": 8,
+      "one_line_formula_checked": true
+    },
+    {
+      "flux_ratio": "2/1",
+      "tau": [
+        0.47,
+        51.8
+      ],
+      "signed_labels": 22,
+      "one_line_formula_checked": true
+    },
+    {
+      "flux_ratio": "2/1",
+      "tau": [
+        0.47,
+        109.7
+      ],
+      "signed_labels": 32,
+      "one_line_formula_checked": true
+    },
+    {
+      "flux_ratio": "6/1",
+      "tau": [
+        0.47,
+        0.91
+      ],
+      "signed_labels": 20,
+      "one_line_formula_checked": false
+    },
+    {
+      "flux_ratio": "6/1",
+      "tau": [
+        0.47,
+        1.2
+      ],
+      "signed_labels": 24,
+      "one_line_formula_checked": false
+    },
+    {
+      "flux_ratio": "6/1",
+      "tau": [
+        0.47,
+        2.3
+      ],
+      "signed_labels": 22,
+      "one_line_formula_checked": false
+    },
+    {
+      "flux_ratio": "6/1",
+      "tau": [
+        0.47,
+        7.3
+      ],
+      "signed_labels": 22,
+      "one_line_formula_checked": false
+    },
+    {
+      "flux_ratio": "6/1",
+      "tau": [
+        0.47,
+        51.8
+      ],
+      "signed_labels": 38,
+      "one_line_formula_checked": true
+    },
+    {
+      "flux_ratio": "6/1",
+      "tau": [
+        0.47,
+        109.7
+      ],
+      "signed_labels": 56,
+      "one_line_formula_checked": true
+    }
+  ],
+  "nonempty_shape_measure": [
+    {
+      "R": 0.25,
+      "measure_with_at_least_one_unstable_mode": 0.238732414637843
+    },
+    {
+      "R": 0.7,
+      "measure_with_at_least_one_unstable_mode": 0.6684507609859603
+    },
+    {
+      "R": 1.0,
+      "measure_with_at_least_one_unstable_mode": 0.954929658551372
+    },
+    {
+      "R": 1.03,
+      "measure_with_at_least_one_unstable_mode": 0.974344962128618
+    },
+    {
+      "R": 1.1,
+      "measure_with_at_least_one_unstable_mode": 0.9958810466277466
+    },
+    {
+      "R": 1.1547005383792517,
+      "measure_with_at_least_one_unstable_mode": 1.0
+    },
+    {
+      "R": 2.0,
+      "measure_with_at_least_one_unstable_mode": 1.0
+    }
+  ],
+  "conditional_moment_controls": {
+    "conditional_probability_of_exactly_one_opposite_pair": 0.75,
+    "conditional_mean_signed_count": 3.289868133696453,
+    "conditional_truncated_second_moment_slope": 7.998436933874481
+  },
+  "conditional_deepest_mode": [
+    {
+      "depth": 0.0,
+      "lambda_interval": [
+        0.0,
+        12.0
+      ],
+      "first_overlapping_multiplier": 1,
+      "conditional_probability": 1.0,
+      "grid_probability": 1.0
+    },
+    {
+      "depth": 0.3,
+      "lambda_interval": [
+        0.031224617320372516,
+        11.788775382679628
+      ],
+      "first_overlapping_multiplier": 1,
+      "conditional_probability": 0.9823979485566356,
+      "grid_probability": 0.9824166666666667
+    },
+    {
+      "depth": 0.7,
+      "lambda_interval": [
+        0.20340033543136027,
+        10.816599664568638
+      ],
+      "first_overlapping_multiplier": 1,
+      "conditional_probability": 0.9013833053807199,
+      "grid_probability": 0.901375
+    },
+    {
+      "depth": 1.1,
+      "lambda_interval": [
+        0.7107843891257728,
+        8.869215610874228
+      ],
+      "first_overlapping_multiplier": 1,
+      "conditional_probability": 0.7391013009061856,
+      "grid_probability": 0.7390833333333333
+    },
+    {
+      "depth": 1.35,
+      "lambda_interval": [
+        1.562160633875597,
+        6.7928393661244035
+      ],
+      "first_overlapping_multiplier": 1,
+      "conditional_probability": 0.5660699471770336,
+      "grid_probability": 0.5660833333333334
+    },
+    {
+      "depth": 1.45,
+      "lambda_interval": [
+        2.3612708504262785,
+        5.433729149573722
+      ],
+      "first_overlapping_multiplier": 2,
+      "conditional_probability": 0.3692408822117395,
+      "grid_probability": 0.36920833333333336
+    },
+    {
+      "depth": 1.49,
+      "lambda_interval": [
+        3.0882353413683763,
+        4.471564658631624
+      ],
+      "first_overlapping_multiplier": 5,
+      "conditional_probability": 0.17901546439391428,
+      "grid_probability": 0.17908333333333334
+    },
+    {
+      "depth": 1.5,
+      "lambda_interval": [
+        3.75,
+        3.75
+      ],
+      "first_overlapping_multiplier": null,
+      "conditional_probability": 0.0,
+      "grid_probability": 0.0
+    }
+  ]
+}
