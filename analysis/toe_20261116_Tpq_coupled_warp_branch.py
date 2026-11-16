@@ -120,10 +120,17 @@ def numerical_branch(p, q, metric, count):
     tracefree_error = float(np.max(np.abs(traceless)))
     assert error < 1e-9 and abs(amplitude/expected-1) < 0.1, (p, q, count, error, amplitude/expected)
     assert tracefree_error < 1e-9
+    a, d, b, c = (fit.x.reshape(4, count)*scaling) @ values
+    log_volume = 2*d+2*b+c
+    graviton_integral_shift = float(np.dot(weights, np.expm1(log_volume-16*a/3))/2)
+    page_integral_shift = float(np.dot(weights, np.expm1(log_volume-40*a/3))/2)
+    assert abs(graviton_integral_shift-page_integral_shift) < 1e-13
     return {"chern_pair": [p, q], "lambda_minus_32": 6*k1-32,
             "quadrupole_amplitude": amplitude, "relative_to_leading": amplitude/expected,
             "maximum_retained_equation_residual": error,
-            "maximum_traceless_equation_residual": tracefree_error, "even_harmonics": count}
+            "maximum_traceless_equation_residual": tracefree_error, "even_harmonics": count,
+            "graviton_integral_relative_shift": graviton_integral_shift,
+            "page_integral_relative_shift": page_integral_shift}
 
 
 def main():

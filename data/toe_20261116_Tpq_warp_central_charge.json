@@ -1,0 +1,40 @@
+{
+  "central_charge_leading_relative_shift": "-(32-lambda)^3/65536",
+  "warped_static_quadrupole_derivatives_to_first_order": [
+    "-t",
+    "0",
+    "0",
+    "3*t",
+    "3*t"
+  ],
+  "detuning_variable": "t=32-lambda",
+  "examples": [
+    {
+      "chern_pair": [
+        7,
+        8
+      ],
+      "central_charge_relative_shift": -2.7591762756895263e-07,
+      "leading_cubic_shift": -2.8098837556284393e-07,
+      "numerical_over_cubic": 0.981953886940219
+    },
+    {
+      "chern_pair": [
+        8,
+        9
+      ],
+      "central_charge_relative_shift": 5.446281466604709e-08,
+      "leading_cubic_shift": 5.3857746092496895e-08,
+      "numerical_over_cubic": 1.0112345691650562
+    },
+    {
+      "chern_pair": [
+        38,
+        43
+      ],
+      "central_charge_relative_shift": -1.7976113037347819e-12,
+      "leading_cubic_shift": -1.7981362598635622e-12,
+      "numerical_over_cubic": 0.9997080554235527
+    }
+  ]
+}

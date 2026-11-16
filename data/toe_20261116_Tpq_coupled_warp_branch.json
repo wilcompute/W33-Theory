@@ -44,7 +44,9 @@
       "relative_to_leading": 0.987918409618091,
       "maximum_retained_equation_residual": 6.336112224356125e-15,
       "maximum_traceless_equation_residual": 5.875437596510986e-15,
-      "even_harmonics": 8
+      "even_harmonics": 8,
+      "graviton_integral_relative_shift": 2.7591770389797407e-07,
+      "page_integral_relative_shift": 2.7591770379874246e-07
     },
     {
       "chern_pair": [
@@ -56,7 +58,9 @@
       "relative_to_leading": 1.0074719403380905,
       "maximum_retained_equation_residual": 2.006126384804241e-15,
       "maximum_traceless_equation_residual": 1.111030271194532e-15,
-      "even_harmonics": 8
+      "even_harmonics": 8,
+      "graviton_integral_relative_shift": -5.4462811821957336e-08,
+      "page_integral_relative_shift": -5.44628117609032e-08
     }
   ]
 }
