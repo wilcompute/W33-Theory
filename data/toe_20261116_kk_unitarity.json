@@ -147,6 +147,10 @@
       36
     ],
     "first_energy_plus": 15.666215521048828,
-    "first_energy_minus": 15.34166020071207
+    "first_energy_minus": 15.34166020071207,
+    "klt_sum_squared_over_first_term_squared": {
+      "plus": 1.81509993459159,
+      "minus": 1.6301998691831803
+    }
   }
 }

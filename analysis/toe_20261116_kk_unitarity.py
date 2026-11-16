@@ -3,7 +3,7 @@
 from collections import Counter
 from fractions import Fraction as F
 from itertools import product
-from math import comb, factorial, fsum, isqrt, pi, sqrt
+from math import comb, factorial, fsum, isqrt, pi, prod, sqrt
 from pathlib import Path
 import json
 
@@ -64,6 +64,42 @@ def first_threshold_fixture():
     return rows
 
 
+def threshold_tree(inner_product):
+    """Compare the full KLT sum to its spinor cross-ratio at rest threshold."""
+    p = sqrt(18)
+    transverse = sqrt(18 * 26 - inner_product**2) / p
+    internal = [complex(p), complex(inner_product / p, transverse)]
+    internal.append(-sum(internal))
+    beam_factor = 1j * sqrt(sum(map(abs, internal)))
+    spinors = {1: (beam_factor, 0), 2: (0, beam_factor)}
+    for leg, momentum in enumerate(internal, 3):
+        root_energy = sqrt(abs(momentum))
+        spinors[leg] = (root_energy, momentum / root_energy)
+
+    def bracket(i, j):
+        a, b = spinors[i]
+        c, d = spinors[j]
+        return a*d - b*c
+
+    def invariant(i, j):
+        return abs(bracket(i, j))**2 * (-1 if (i < 3) != (j < 3) else 1)
+
+    def parke_taylor(order):
+        cyclic_pairs = zip(order, order[1:] + order[:1])
+        return bracket(1, 2)**4 / prod(bracket(i, j) for i, j in cyclic_pairs)
+
+    first = (invariant(1, 2) * invariant(3, 4)
+             * parke_taylor((1, 2, 3, 4, 5)) * parke_taylor((2, 1, 4, 3, 5)))
+    second = (invariant(1, 3) * invariant(2, 4)
+              * parke_taylor((1, 3, 2, 4, 5)) * parke_taylor((3, 1, 4, 2, 5)))
+    q = bracket(1, 2) * bracket(3, 4) / (bracket(1, 3) * bracket(2, 4))
+    assert abs(second / first + q**2 / abs(q)**2) < 1e-12
+    # Since q = 1 - exp(i angle), |1 - q^2 / |q|^2|^2 = 2 + 2 cos(angle).
+    squared_ratio = abs((first + second) / first)**2
+    assert abs(squared_ratio - (2 + 2 * inner_product / sqrt(18 * 26))) < 1e-12
+    return squared_ratio
+
+
 def isospectral_fixture():
     # Cervino and Hein, Section 2.6. The generators are the columns.
     plus = ((3, 1, 1, 1), (1, -3, 1, -1), (-1, 1, 3, -1), (-1, -1, 1, 3))
@@ -109,7 +145,9 @@ def isospectral_fixture():
             "first_charge_balanced_plus_norms": minima[0],
             "first_charge_balanced_minus_norms": minima[1],
             "first_energy_plus": sum(sqrt(norm) for norm in minima[0]),
-            "first_energy_minus": sum(sqrt(norm) for norm in minima[1])}
+            "first_energy_minus": sum(sqrt(norm) for norm in minima[1]),
+            "klt_sum_squared_over_first_term_squared": {
+                "plus": threshold_tree(-2), "minus": threshold_tree(-4)}}
 
 
 def main():
@@ -146,7 +184,7 @@ def main():
             "isospectral_pair": isospectral_fixture()}
     output = Path(__file__).resolve().parents[1] / "data" / "toe_20261116_kk_unitarity.json"
     output.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
-    print("Verified opening slope, 121 angular moments, and two six-dimensional lattices.")
+    print("Verified angular moments, the dense KK cut, both thresholds, and the KLT tree sum.")
 
 
 if __name__ == "__main__":
