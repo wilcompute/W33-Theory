@@ -1,0 +1,350 @@
+{
+  "status": "GENUS6_528_EXACT_RANK4_DETERMINANT_SIGN_NO_CROSSING_NECESSARY_CLAUSES",
+  "raw_3x3_normal_minors": 220,
+  "raw_4x4_plane_minors": 495,
+  "zero_minor_count": 0,
+  "dual_faces": 12,
+  "boundary_edges_per_face": 11,
+  "nonadjacent_edge_pairs_per_face": 44,
+  "SAT_ready_necessary_no_crossing_constraints": 528,
+  "exact_3x3_4x4_sign_crossings_each_face": [
+    1,
+    0,
+    1,
+    1,
+    1,
+    0,
+    0,
+    2,
+    0,
+    2,
+    0,
+    0
+  ],
+  "exact_crossings_total": 8,
+  "crossing_constraints": [
+    {
+      "face": 0,
+      "nonadjacent_edge_indices": [
+        2,
+        9
+      ],
+      "edge_support_planes": [
+        10,
+        7
+      ],
+      "triple_endpoints": [
+        [
+          0,
+          3,
+          10
+        ],
+        [
+          0,
+          4,
+          10
+        ],
+        [
+          0,
+          2,
+          7
+        ],
+        [
+          0,
+          6,
+          7
+        ]
+      ],
+      "signs_at_opposite_support_planes": [
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "violates_no_crossing": true
+    },
+    {
+      "face": 2,
+      "nonadjacent_edge_indices": [
+        5,
+        8
+      ],
+      "edge_support_planes": [
+        10,
+        8
+      ],
+      "triple_endpoints": [
+        [
+          2,
+          5,
+          10
+        ],
+        [
+          2,
+          6,
+          10
+        ],
+        [
+          2,
+          3,
+          8
+        ],
+        [
+          2,
+          8,
+          9
+        ]
+      ],
+      "signs_at_opposite_support_planes": [
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "violates_no_crossing": true
+    },
+    {
+      "face": 3,
+      "nonadjacent_edge_indices": [
+        3,
+        5
+      ],
+      "edge_support_planes": [
+        11,
+        2
+      ],
+      "triple_endpoints": [
+        [
+          3,
+          7,
+          11
+        ],
+        [
+          3,
+          6,
+          11
+        ],
+        [
+          2,
+          3,
+          6
+        ],
+        [
+          2,
+          3,
+          8
+        ]
+      ],
+      "signs_at_opposite_support_planes": [
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "violates_no_crossing": true
+    },
+    {
+      "face": 4,
+      "nonadjacent_edge_indices": [
+        8,
+        10
+      ],
+      "edge_support_planes": [
+        9,
+        10
+      ],
+      "triple_endpoints": [
+        [
+          3,
+          4,
+          9
+        ],
+        [
+          4,
+          6,
+          9
+        ],
+        [
+          4,
+          6,
+          10
+        ],
+        [
+          0,
+          4,
+          10
+        ]
+      ],
+      "signs_at_opposite_support_planes": [
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "violates_no_crossing": true
+    },
+    {
+      "face": 7,
+      "nonadjacent_edge_indices": [
+        0,
+        7
+      ],
+      "edge_support_planes": [
+        0,
+        3
+      ],
+      "triple_endpoints": [
+        [
+          0,
+          6,
+          7
+        ],
+        [
+          0,
+          2,
+          7
+        ],
+        [
+          3,
+          7,
+          11
+        ],
+        [
+          1,
+          3,
+          7
+        ]
+      ],
+      "signs_at_opposite_support_planes": [
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "violates_no_crossing": true
+    },
+    {
+      "face": 7,
+      "nonadjacent_edge_indices": [
+        0,
+        8
+      ],
+      "edge_support_planes": [
+        0,
+        1
+      ],
+      "triple_endpoints": [
+        [
+          0,
+          6,
+          7
+        ],
+        [
+          0,
+          2,
+          7
+        ],
+        [
+          1,
+          3,
+          7
+        ],
+        [
+          1,
+          7,
+          9
+        ]
+      ],
+      "signs_at_opposite_support_planes": [
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "violates_no_crossing": true
+    },
+    {
+      "face": 9,
+      "nonadjacent_edge_indices": [
+        2,
+        5
+      ],
+      "edge_support_planes": [
+        1,
+        4
+      ],
+      "triple_endpoints": [
+        [
+          1,
+          5,
+          9
+        ],
+        [
+          1,
+          7,
+          9
+        ],
+        [
+          4,
+          6,
+          9
+        ],
+        [
+          3,
+          4,
+          9
+        ]
+      ],
+      "signs_at_opposite_support_planes": [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "violates_no_crossing": true
+    },
+    {
+      "face": 9,
+      "nonadjacent_edge_indices": [
+        2,
+        9
+      ],
+      "edge_support_planes": [
+        1,
+        2
+      ],
+      "triple_endpoints": [
+        [
+          1,
+          5,
+          9
+        ],
+        [
+          1,
+          7,
+          9
+        ],
+        [
+          2,
+          9,
+          11
+        ],
+        [
+          2,
+          8,
+          9
+        ]
+      ],
+      "signs_at_opposite_support_planes": [
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "violates_no_crossing": true
+    }
+  ],
+  "all_528_predicate_cases_sha256": "dd198dbf7e7da666b386225e01815e4dad6858eb612f013d4958dee5a4b76633",
+  "per_edge_no_crossing_predicate": "For edges (i,j,k)-(i,j,l) and (i,m,n)-(i,m,p) in face i, require NOT[(sign(h_m(v_ijk)) != sign(h_m(v_ijl))) AND (sign(h_j(v_imn)) != sign(h_j(v_imp)))]. Each sign is sign(det4(H_i,H_j,H_k,H_m)) * sign(det3(N_i,N_j,N_k)).",
+  "scope": "Necessary rank4 chirotope sign system for simple planar face polygons, but not sufficient: sign assignments must be realizable over real 24-dimensional canonical plane parameters and global face intersections absent. The eight crossings show THIS candidate fails. No 59-map no-go is claimed."
+}

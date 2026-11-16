@@ -1,0 +1,374 @@
+{
+  "status": "EXACT_PSP4_3_SYMMETRIC_POWER_MINIMAL_DEGREE_FOUR",
+  "group_order": 25920,
+  "group_generators": 5,
+  "W33_points": 40,
+  "W33_induced_K44_octets": 45,
+  "E6_cubic_lines": 27,
+  "E6_Schlafli_permutation_representation": "1+20+6",
+  "degrees_leq_three": [
+    {
+      "degree": 1,
+      "domain_dimension": 40,
+      "joint_pairs": 1080,
+      "orbit_count": 1,
+      "max_orbital_rank": 1,
+      "orbit_sizes": [
+        1080
+      ],
+      "orbit_Gram_certificates": [
+        {
+          "orbit_size": 1080,
+          "gram_diagonal": 40,
+          "gram_adjacent": 40,
+          "gram_nonadjacent": 40,
+          "eigenvalues_1_20_6": [
+            1080,
+            0,
+            0
+          ],
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "degree": 2,
+      "domain_dimension": 820,
+      "joint_pairs": 22140,
+      "orbit_count": 5,
+      "max_orbital_rank": 21,
+      "orbit_sizes": [
+        12960,
+        4320,
+        2160,
+        1620,
+        1080
+      ],
+      "orbit_Gram_certificates": [
+        {
+          "orbit_size": 12960,
+          "gram_diagonal": 480,
+          "gram_adjacent": 432,
+          "gram_nonadjacent": 420,
+          "eigenvalues_1_20_6": [
+            11520,
+            72,
+            0
+          ],
+          "rank": 21
+        },
+        {
+          "orbit_size": 4320,
+          "gram_diagonal": 160,
+          "gram_adjacent": 112,
+          "gram_nonadjacent": 100,
+          "eigenvalues_1_20_6": [
+            2880,
+            72,
+            0
+          ],
+          "rank": 21
+        },
+        {
+          "orbit_size": 2160,
+          "gram_diagonal": 80,
+          "gram_adjacent": 32,
+          "gram_nonadjacent": 20,
+          "eigenvalues_1_20_6": [
+            720,
+            72,
+            0
+          ],
+          "rank": 21
+        },
+        {
+          "orbit_size": 1620,
+          "gram_diagonal": 60,
+          "gram_adjacent": 12,
+          "gram_nonadjacent": 0,
+          "eigenvalues_1_20_6": [
+            180,
+            72,
+            0
+          ],
+          "rank": 21
+        },
+        {
+          "orbit_size": 1080,
+          "gram_diagonal": 40,
+          "gram_adjacent": 40,
+          "gram_nonadjacent": 40,
+          "eigenvalues_1_20_6": [
+            1080,
+            0,
+            0
+          ],
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "degree": 3,
+      "domain_dimension": 11480,
+      "joint_pairs": 309960,
+      "orbit_count": 19,
+      "max_orbital_rank": 21,
+      "orbit_sizes": [
+        25920,
+        25920,
+        25920,
+        25920,
+        25920,
+        25920,
+        25920,
+        25920,
+        25920,
+        25920,
+        12960,
+        8640,
+        8640,
+        6480,
+        4320,
+        4320,
+        3240,
+        1080,
+        1080
+      ],
+      "orbit_Gram_certificates": [
+        {
+          "orbit_size": 25920,
+          "gram_diagonal": 960,
+          "gram_adjacent": 864,
+          "gram_nonadjacent": 840,
+          "eigenvalues_1_20_6": [
+            23040,
+            144,
+            0
+          ],
+          "rank": 21
+        },
+        {
+          "orbit_size": 25920,
+          "gram_diagonal": 960,
+          "gram_adjacent": 480,
+          "gram_nonadjacent": 360,
+          "eigenvalues_1_20_6": [
+            11520,
+            720,
+            0
+          ],
+          "rank": 21
+        },
+        {
+          "orbit_size": 25920,
+          "gram_diagonal": 960,
+          "gram_adjacent": 480,
+          "gram_nonadjacent": 360,
+          "eigenvalues_1_20_6": [
+            11520,
+            720,
+            0
+          ],
+          "rank": 21
+        },
+        {
+          "orbit_size": 25920,
+          "gram_diagonal": 960,
+          "gram_adjacent": 288,
+          "gram_nonadjacent": 120,
+          "eigenvalues_1_20_6": [
+            5760,
+            1008,
+            0
+          ],
+          "rank": 21
+        },
+        {
+          "orbit_size": 25920,
+          "gram_diagonal": 960,
+          "gram_adjacent": 288,
+          "gram_nonadjacent": 120,
+          "eigenvalues_1_20_6": [
+            5760,
+            1008,
+            0
+          ],
+          "rank": 21
+        },
+        {
+          "orbit_size": 25920,
+          "gram_diagonal": 960,
+          "gram_adjacent": 288,
+          "gram_nonadjacent": 120,
+          "eigenvalues_1_20_6": [
+            5760,
+            1008,
+            0
+          ],
+          "rank": 21
+        },
+        {
+          "orbit_size": 25920,
+          "gram_diagonal": 960,
+          "gram_adjacent": 288,
+          "gram_nonadjacent": 120,
+          "eigenvalues_1_20_6": [
+            5760,
+            1008,
+            0
+          ],
+          "rank": 21
+        },
+        {
+          "orbit_size": 25920,
+          "gram_diagonal": 960,
+          "gram_adjacent": 384,
+          "gram_nonadjacent": 240,
+          "eigenvalues_1_20_6": [
+            8640,
+            864,
+            0
+          ],
+          "rank": 21
+        },
+        {
+          "orbit_size": 25920,
+          "gram_diagonal": 960,
+          "gram_adjacent": 384,
+          "gram_nonadjacent": 240,
+          "eigenvalues_1_20_6": [
+            8640,
+            864,
+            0
+          ],
+          "rank": 21
+        },
+        {
+          "orbit_size": 25920,
+          "gram_diagonal": 960,
+          "gram_adjacent": 384,
+          "gram_nonadjacent": 240,
+          "eigenvalues_1_20_6": [
+            8640,
+            864,
+            0
+          ],
+          "rank": 21
+        },
+        {
+          "orbit_size": 12960,
+          "gram_diagonal": 480,
+          "gram_adjacent": 96,
+          "gram_nonadjacent": 0,
+          "eigenvalues_1_20_6": [
+            1440,
+            576,
+            0
+          ],
+          "rank": 21
+        },
+        {
+          "orbit_size": 8640,
+          "gram_diagonal": 320,
+          "gram_adjacent": 224,
+          "gram_nonadjacent": 200,
+          "eigenvalues_1_20_6": [
+            5760,
+            144,
+            0
+          ],
+          "rank": 21
+        },
+        {
+          "orbit_size": 8640,
+          "gram_diagonal": 320,
+          "gram_adjacent": 288,
+          "gram_nonadjacent": 280,
+          "eigenvalues_1_20_6": [
+            7680,
+            48,
+            0
+          ],
+          "rank": 21
+        },
+        {
+          "orbit_size": 6480,
+          "gram_diagonal": 240,
+          "gram_adjacent": 48,
+          "gram_nonadjacent": 0,
+          "eigenvalues_1_20_6": [
+            720,
+            288,
+            0
+          ],
+          "rank": 21
+        },
+        {
+          "orbit_size": 4320,
+          "gram_diagonal": 160,
+          "gram_adjacent": 64,
+          "gram_nonadjacent": 40,
+          "eigenvalues_1_20_6": [
+            1440,
+            144,
+            0
+          ],
+          "rank": 21
+        },
+        {
+          "orbit_size": 4320,
+          "gram_diagonal": 160,
+          "gram_adjacent": 160,
+          "gram_nonadjacent": 160,
+          "eigenvalues_1_20_6": [
+            4320,
+            0,
+            0
+          ],
+          "rank": 1
+        },
+        {
+          "orbit_size": 3240,
+          "gram_diagonal": 120,
+          "gram_adjacent": 24,
+          "gram_nonadjacent": 0,
+          "eigenvalues_1_20_6": [
+            360,
+            144,
+            0
+          ],
+          "rank": 21
+        },
+        {
+          "orbit_size": 1080,
+          "gram_diagonal": 40,
+          "gram_adjacent": 40,
+          "gram_nonadjacent": 40,
+          "eigenvalues_1_20_6": [
+            1080,
+            0,
+            0
+          ],
+          "rank": 1
+        },
+        {
+          "orbit_size": 1080,
+          "gram_diagonal": 40,
+          "gram_adjacent": 8,
+          "gram_nonadjacent": 0,
+          "eigenvalues_1_20_6": [
+            120,
+            48,
+            0
+          ],
+          "rank": 21
+        }
+      ]
+    }
+  ],
+  "zero_six_dimensional_sector_for_all_orbit_matrices": true,
+  "quartic_witness_rank": 27,
+  "minimum_copy_number_with_full_27_output": 4,
+  "theorem": "All G-equivariant complex-linear maps Sym^d(C40)->C27 for d=0,1,2,3 kill the Schl\u00e4fli six-sector. Proof: 1/5/19 orbit indicator matrices span Hom_G for d=1/2/3 and each has six-sector eigenvalue zero in MM^T. Existing covariant d=4 map has rank27.",
+  "scope": "The theorem assumes the same finite PSp4(3) action on the 40 point modes and 27 cubic-line modes and symmetric boson tensor powers; non-equivariant, ancilla-extended or different target representations may evade it. It does not establish a physical four-photon circuit."
+}

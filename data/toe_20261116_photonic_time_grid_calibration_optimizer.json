@@ -1,0 +1,67 @@
+{
+  "status": "PHOTONIC_TARGET_AWARE_DRIFT_GRID_99PCT_CALIBRATION_SHOT_OPTIMIZER",
+  "source_synthetic_fidelity": 0.9632748417019122,
+  "source_synthetic_statistical_halfwidth": 0.03216538069374639,
+  "fidelity_threshold_requested": 0.9,
+  "confidence": 0.99,
+  "maximum_empirical_anchor_contrast_deviation_assumed": 0.002,
+  "curvature_bound_M_assumed": 0.2,
+  "Lipschitz_bound_L_assumed": 0.12,
+  "prior_two_epoch_fixed_radius_accepted_calibration": 2103112,
+  "prior_one_epoch_fixed_radius_accepted_calibration": 1137384,
+  "optimal_separate_regularities": {
+    "curvature": {
+      "calibration_grid_times": [
+        0.0,
+        0.5,
+        1.0
+      ],
+      "calibration_anchors": 3,
+      "time_intervals": 2,
+      "regularity_assumption": "curvature",
+      "max_interpolation_contrast_error": 0.00625,
+      "contrast_Hoeffding_halfwidth": 0.043418780373272035,
+      "max_observed_contrast_deviation_must_not_exceed": 0.002,
+      "accepted_calibration_shots_per_rail_per_anchor": 3117,
+      "accepted_total_rail_contrast_calibrations": 149616,
+      "accepted_total_parity_references": 295112,
+      "accepted_total_calibration_shots": 444728,
+      "conditional_99pct_lower_witness_fidelity": 0.90005,
+      "joint_alpha_budget": [
+        0.0025,
+        0.0025,
+        0.005
+      ],
+      "verified_rail_union_Hoeffding_failure_bound": 0.0024979116416695454
+    },
+    "Lipschitz": {
+      "calibration_grid_times": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "calibration_anchors": 5,
+      "time_intervals": 4,
+      "regularity_assumption": "Lipschitz",
+      "max_interpolation_contrast_error": 0.015,
+      "contrast_Hoeffding_halfwidth": 0.034668780373272035,
+      "max_observed_contrast_deviation_must_not_exceed": 0.002,
+      "accepted_calibration_shots_per_rail_per_anchor": 5126,
+      "accepted_total_rail_contrast_calibrations": 410080,
+      "accepted_total_parity_references": 295112,
+      "accepted_total_calibration_shots": 705192,
+      "conditional_99pct_lower_witness_fidelity": 0.90005,
+      "joint_alpha_budget": [
+        0.0025,
+        0.0025,
+        0.005
+      ],
+      "verified_rail_union_Hoeffding_failure_bound": 0.002495288166502562
+    }
+  },
+  "actual_hardware_calibration_shots_collected": 0,
+  "no_regularilty_no_guarantee": "With arbitrarily time-varying detector confusion, no finite anchor grid controls the worst between-anchor bias; smooth but unbounded-curvature counterexamples exist.",
+  "scope": "All numbers are accepted preparation counts for prospective planning. Require demonstrated stationarity within acquisition windows, independent known-rail preparation, true drift regularity, small observed anchor deviation, and trusted parity flips. No detector or photon was actually measured. Optimizing target >0.90 with relaxed contrast precision cannot be compared as equal-precision calibration to the earlier fixed-radius budget."
+}

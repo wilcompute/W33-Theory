@@ -1,0 +1,3036 @@
+{
+  "status": "EXACT_D9_MONOPOLE_QUANTIZATION_GLOBAL_SU2_CENTER_PARITY",
+  "monopole_flux_quantization": "For a unit electric charge, integral(F_i)/(2*pi)=n_i, or 2*f_i*r_i^2=n_i",
+  "monopole_line_bundles": "O(n1) external tensor O(n2) over CP1 x CP1",
+  "quantized_compensator": "mu_{i,a} = (n_i/2) n_{i,a}, on the ith S2",
+  "global_isometry_gauge_group": "(SU(2)_1 x SU(2)_2 x U(1)) / <(-I,I,(-1)^n1),(I,-I,(-1)^n2)>",
+  "central_minus_identity_action": "-I in SU(2)_i acts by (-1)^n_i on degree-|n_i| homogeneous sections",
+  "SO3xSO3_split_lift_condition": "both n_i even",
+  "nontrivial_example": [
+    1,
+    2
+  ],
+  "nontrivial_example_kernel": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ]
+  ],
+  "integer_charge_grid_checked": 81,
+  "detailed_cases": [
+    {
+      "charges": [
+        -4,
+        -4
+      ],
+      "center_action_SU2xSU2": [
+        1.0,
+        1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": true,
+      "quantized_moment_map_coefficients": [
+        "-2",
+        "-2"
+      ]
+    },
+    {
+      "charges": [
+        -4,
+        -3
+      ],
+      "center_action_SU2xSU2": [
+        1.0,
+        -1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "-2",
+        "-3/2"
+      ]
+    },
+    {
+      "charges": [
+        -4,
+        -2
+      ],
+      "center_action_SU2xSU2": [
+        1.0,
+        1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": true,
+      "quantized_moment_map_coefficients": [
+        "-2",
+        "-1"
+      ]
+    },
+    {
+      "charges": [
+        -4,
+        -1
+      ],
+      "center_action_SU2xSU2": [
+        1.0,
+        -1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "-2",
+        "-1/2"
+      ]
+    },
+    {
+      "charges": [
+        -4,
+        0
+      ],
+      "center_action_SU2xSU2": [
+        1.0,
+        1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": true,
+      "quantized_moment_map_coefficients": [
+        "-2",
+        "0"
+      ]
+    },
+    {
+      "charges": [
+        -4,
+        1
+      ],
+      "center_action_SU2xSU2": [
+        1.0,
+        -1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "-2",
+        "1/2"
+      ]
+    },
+    {
+      "charges": [
+        -4,
+        2
+      ],
+      "center_action_SU2xSU2": [
+        1.0,
+        1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": true,
+      "quantized_moment_map_coefficients": [
+        "-2",
+        "1"
+      ]
+    },
+    {
+      "charges": [
+        -4,
+        3
+      ],
+      "center_action_SU2xSU2": [
+        1.0,
+        -1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "-2",
+        "3/2"
+      ]
+    },
+    {
+      "charges": [
+        -4,
+        4
+      ],
+      "center_action_SU2xSU2": [
+        1.0,
+        1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": true,
+      "quantized_moment_map_coefficients": [
+        "-2",
+        "2"
+      ]
+    },
+    {
+      "charges": [
+        -3,
+        -4
+      ],
+      "center_action_SU2xSU2": [
+        -1.0,
+        1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "-3/2",
+        "-2"
+      ]
+    },
+    {
+      "charges": [
+        -3,
+        -3
+      ],
+      "center_action_SU2xSU2": [
+        -1.0,
+        -1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "-3/2",
+        "-3/2"
+      ]
+    },
+    {
+      "charges": [
+        -3,
+        -2
+      ],
+      "center_action_SU2xSU2": [
+        -1.0,
+        1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "-3/2",
+        "-1"
+      ]
+    },
+    {
+      "charges": [
+        -3,
+        -1
+      ],
+      "center_action_SU2xSU2": [
+        -1.0,
+        -1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "-3/2",
+        "-1/2"
+      ]
+    },
+    {
+      "charges": [
+        -3,
+        0
+      ],
+      "center_action_SU2xSU2": [
+        -1.0,
+        1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "-3/2",
+        "0"
+      ]
+    },
+    {
+      "charges": [
+        -3,
+        1
+      ],
+      "center_action_SU2xSU2": [
+        -1.0,
+        -1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "-3/2",
+        "1/2"
+      ]
+    },
+    {
+      "charges": [
+        -3,
+        2
+      ],
+      "center_action_SU2xSU2": [
+        -1.0,
+        1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "-3/2",
+        "1"
+      ]
+    },
+    {
+      "charges": [
+        -3,
+        3
+      ],
+      "center_action_SU2xSU2": [
+        -1.0,
+        -1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "-3/2",
+        "3/2"
+      ]
+    },
+    {
+      "charges": [
+        -3,
+        4
+      ],
+      "center_action_SU2xSU2": [
+        -1.0,
+        1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "-3/2",
+        "2"
+      ]
+    },
+    {
+      "charges": [
+        -2,
+        -4
+      ],
+      "center_action_SU2xSU2": [
+        1.0,
+        1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": true,
+      "quantized_moment_map_coefficients": [
+        "-1",
+        "-2"
+      ]
+    },
+    {
+      "charges": [
+        -2,
+        -3
+      ],
+      "center_action_SU2xSU2": [
+        1.0,
+        -1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "-1",
+        "-3/2"
+      ]
+    },
+    {
+      "charges": [
+        -2,
+        -2
+      ],
+      "center_action_SU2xSU2": [
+        1.0,
+        1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": true,
+      "quantized_moment_map_coefficients": [
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "charges": [
+        -2,
+        -1
+      ],
+      "center_action_SU2xSU2": [
+        1.0,
+        -1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "-1",
+        "-1/2"
+      ]
+    },
+    {
+      "charges": [
+        -2,
+        0
+      ],
+      "center_action_SU2xSU2": [
+        1.0,
+        1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": true,
+      "quantized_moment_map_coefficients": [
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "charges": [
+        -2,
+        1
+      ],
+      "center_action_SU2xSU2": [
+        1.0,
+        -1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "-1",
+        "1/2"
+      ]
+    },
+    {
+      "charges": [
+        -2,
+        2
+      ],
+      "center_action_SU2xSU2": [
+        1.0,
+        1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": true,
+      "quantized_moment_map_coefficients": [
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "charges": [
+        -2,
+        3
+      ],
+      "center_action_SU2xSU2": [
+        1.0,
+        -1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "-1",
+        "3/2"
+      ]
+    },
+    {
+      "charges": [
+        -2,
+        4
+      ],
+      "center_action_SU2xSU2": [
+        1.0,
+        1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": true,
+      "quantized_moment_map_coefficients": [
+        "-1",
+        "2"
+      ]
+    },
+    {
+      "charges": [
+        -1,
+        -4
+      ],
+      "center_action_SU2xSU2": [
+        -1.0,
+        1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "-1/2",
+        "-2"
+      ]
+    },
+    {
+      "charges": [
+        -1,
+        -3
+      ],
+      "center_action_SU2xSU2": [
+        -1.0,
+        -1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "-1/2",
+        "-3/2"
+      ]
+    },
+    {
+      "charges": [
+        -1,
+        -2
+      ],
+      "center_action_SU2xSU2": [
+        -1.0,
+        1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "-1/2",
+        "-1"
+      ]
+    },
+    {
+      "charges": [
+        -1,
+        -1
+      ],
+      "center_action_SU2xSU2": [
+        -1.0,
+        -1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "-1/2",
+        "-1/2"
+      ]
+    },
+    {
+      "charges": [
+        -1,
+        0
+      ],
+      "center_action_SU2xSU2": [
+        -1.0,
+        1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "-1/2",
+        "0"
+      ]
+    },
+    {
+      "charges": [
+        -1,
+        1
+      ],
+      "center_action_SU2xSU2": [
+        -1.0,
+        -1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "-1/2",
+        "1/2"
+      ]
+    },
+    {
+      "charges": [
+        -1,
+        2
+      ],
+      "center_action_SU2xSU2": [
+        -1.0,
+        1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "-1/2",
+        "1"
+      ]
+    },
+    {
+      "charges": [
+        -1,
+        3
+      ],
+      "center_action_SU2xSU2": [
+        -1.0,
+        -1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "-1/2",
+        "3/2"
+      ]
+    },
+    {
+      "charges": [
+        -1,
+        4
+      ],
+      "center_action_SU2xSU2": [
+        -1.0,
+        1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "-1/2",
+        "2"
+      ]
+    },
+    {
+      "charges": [
+        0,
+        -4
+      ],
+      "center_action_SU2xSU2": [
+        1,
+        1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": true,
+      "quantized_moment_map_coefficients": [
+        "0",
+        "-2"
+      ]
+    },
+    {
+      "charges": [
+        0,
+        -3
+      ],
+      "center_action_SU2xSU2": [
+        1,
+        -1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "0",
+        "-3/2"
+      ]
+    },
+    {
+      "charges": [
+        0,
+        -2
+      ],
+      "center_action_SU2xSU2": [
+        1,
+        1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": true,
+      "quantized_moment_map_coefficients": [
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "charges": [
+        0,
+        -1
+      ],
+      "center_action_SU2xSU2": [
+        1,
+        -1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "0",
+        "-1/2"
+      ]
+    },
+    {
+      "charges": [
+        0,
+        0
+      ],
+      "center_action_SU2xSU2": [
+        1,
+        1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": true,
+      "quantized_moment_map_coefficients": [
+        "0",
+        "0"
+      ]
+    },
+    {
+      "charges": [
+        0,
+        1
+      ],
+      "center_action_SU2xSU2": [
+        1,
+        -1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "0",
+        "1/2"
+      ]
+    },
+    {
+      "charges": [
+        0,
+        2
+      ],
+      "center_action_SU2xSU2": [
+        1,
+        1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": true,
+      "quantized_moment_map_coefficients": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "charges": [
+        0,
+        3
+      ],
+      "center_action_SU2xSU2": [
+        1,
+        -1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "0",
+        "3/2"
+      ]
+    },
+    {
+      "charges": [
+        0,
+        4
+      ],
+      "center_action_SU2xSU2": [
+        1,
+        1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": true,
+      "quantized_moment_map_coefficients": [
+        "0",
+        "2"
+      ]
+    },
+    {
+      "charges": [
+        1,
+        -4
+      ],
+      "center_action_SU2xSU2": [
+        -1,
+        1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "1/2",
+        "-2"
+      ]
+    },
+    {
+      "charges": [
+        1,
+        -3
+      ],
+      "center_action_SU2xSU2": [
+        -1,
+        -1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "1/2",
+        "-3/2"
+      ]
+    },
+    {
+      "charges": [
+        1,
+        -2
+      ],
+      "center_action_SU2xSU2": [
+        -1,
+        1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "1/2",
+        "-1"
+      ]
+    },
+    {
+      "charges": [
+        1,
+        -1
+      ],
+      "center_action_SU2xSU2": [
+        -1,
+        -1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "1/2",
+        "-1/2"
+      ]
+    },
+    {
+      "charges": [
+        1,
+        0
+      ],
+      "center_action_SU2xSU2": [
+        -1,
+        1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "1/2",
+        "0"
+      ]
+    },
+    {
+      "charges": [
+        1,
+        1
+      ],
+      "center_action_SU2xSU2": [
+        -1,
+        -1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "1/2",
+        "1/2"
+      ]
+    },
+    {
+      "charges": [
+        1,
+        2
+      ],
+      "center_action_SU2xSU2": [
+        -1,
+        1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "1/2",
+        "1"
+      ]
+    },
+    {
+      "charges": [
+        1,
+        3
+      ],
+      "center_action_SU2xSU2": [
+        -1,
+        -1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "1/2",
+        "3/2"
+      ]
+    },
+    {
+      "charges": [
+        1,
+        4
+      ],
+      "center_action_SU2xSU2": [
+        -1,
+        1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "1/2",
+        "2"
+      ]
+    },
+    {
+      "charges": [
+        2,
+        -4
+      ],
+      "center_action_SU2xSU2": [
+        1,
+        1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": true,
+      "quantized_moment_map_coefficients": [
+        "1",
+        "-2"
+      ]
+    },
+    {
+      "charges": [
+        2,
+        -3
+      ],
+      "center_action_SU2xSU2": [
+        1,
+        -1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "1",
+        "-3/2"
+      ]
+    },
+    {
+      "charges": [
+        2,
+        -2
+      ],
+      "center_action_SU2xSU2": [
+        1,
+        1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": true,
+      "quantized_moment_map_coefficients": [
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "charges": [
+        2,
+        -1
+      ],
+      "center_action_SU2xSU2": [
+        1,
+        -1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "1",
+        "-1/2"
+      ]
+    },
+    {
+      "charges": [
+        2,
+        0
+      ],
+      "center_action_SU2xSU2": [
+        1,
+        1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": true,
+      "quantized_moment_map_coefficients": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "charges": [
+        2,
+        1
+      ],
+      "center_action_SU2xSU2": [
+        1,
+        -1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "1",
+        "1/2"
+      ]
+    },
+    {
+      "charges": [
+        2,
+        2
+      ],
+      "center_action_SU2xSU2": [
+        1,
+        1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": true,
+      "quantized_moment_map_coefficients": [
+        "1",
+        "1"
+      ]
+    },
+    {
+      "charges": [
+        2,
+        3
+      ],
+      "center_action_SU2xSU2": [
+        1,
+        -1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "1",
+        "3/2"
+      ]
+    },
+    {
+      "charges": [
+        2,
+        4
+      ],
+      "center_action_SU2xSU2": [
+        1,
+        1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": true,
+      "quantized_moment_map_coefficients": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "charges": [
+        3,
+        -4
+      ],
+      "center_action_SU2xSU2": [
+        -1,
+        1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "3/2",
+        "-2"
+      ]
+    },
+    {
+      "charges": [
+        3,
+        -3
+      ],
+      "center_action_SU2xSU2": [
+        -1,
+        -1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "3/2",
+        "-3/2"
+      ]
+    },
+    {
+      "charges": [
+        3,
+        -2
+      ],
+      "center_action_SU2xSU2": [
+        -1,
+        1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "3/2",
+        "-1"
+      ]
+    },
+    {
+      "charges": [
+        3,
+        -1
+      ],
+      "center_action_SU2xSU2": [
+        -1,
+        -1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "3/2",
+        "-1/2"
+      ]
+    },
+    {
+      "charges": [
+        3,
+        0
+      ],
+      "center_action_SU2xSU2": [
+        -1,
+        1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "3/2",
+        "0"
+      ]
+    },
+    {
+      "charges": [
+        3,
+        1
+      ],
+      "center_action_SU2xSU2": [
+        -1,
+        -1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "3/2",
+        "1/2"
+      ]
+    },
+    {
+      "charges": [
+        3,
+        2
+      ],
+      "center_action_SU2xSU2": [
+        -1,
+        1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "3/2",
+        "1"
+      ]
+    },
+    {
+      "charges": [
+        3,
+        3
+      ],
+      "center_action_SU2xSU2": [
+        -1,
+        -1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "3/2",
+        "3/2"
+      ]
+    },
+    {
+      "charges": [
+        3,
+        4
+      ],
+      "center_action_SU2xSU2": [
+        -1,
+        1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "3/2",
+        "2"
+      ]
+    },
+    {
+      "charges": [
+        4,
+        -4
+      ],
+      "center_action_SU2xSU2": [
+        1,
+        1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": true,
+      "quantized_moment_map_coefficients": [
+        "2",
+        "-2"
+      ]
+    },
+    {
+      "charges": [
+        4,
+        -3
+      ],
+      "center_action_SU2xSU2": [
+        1,
+        -1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "2",
+        "-3/2"
+      ]
+    },
+    {
+      "charges": [
+        4,
+        -2
+      ],
+      "center_action_SU2xSU2": [
+        1,
+        1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": true,
+      "quantized_moment_map_coefficients": [
+        "2",
+        "-1"
+      ]
+    },
+    {
+      "charges": [
+        4,
+        -1
+      ],
+      "center_action_SU2xSU2": [
+        1,
+        -1.0
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "2",
+        "-1/2"
+      ]
+    },
+    {
+      "charges": [
+        4,
+        0
+      ],
+      "center_action_SU2xSU2": [
+        1,
+        1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": true,
+      "quantized_moment_map_coefficients": [
+        "2",
+        "0"
+      ]
+    },
+    {
+      "charges": [
+        4,
+        1
+      ],
+      "center_action_SU2xSU2": [
+        1,
+        -1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "2",
+        "1/2"
+      ]
+    },
+    {
+      "charges": [
+        4,
+        2
+      ],
+      "center_action_SU2xSU2": [
+        1,
+        1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": true,
+      "quantized_moment_map_coefficients": [
+        "2",
+        "1"
+      ]
+    },
+    {
+      "charges": [
+        4,
+        3
+      ],
+      "center_action_SU2xSU2": [
+        1,
+        -1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "both_SO3_factors_lift_separately": false,
+      "quantized_moment_map_coefficients": [
+        "2",
+        "3/2"
+      ]
+    },
+    {
+      "charges": [
+        4,
+        4
+      ],
+      "center_action_SU2xSU2": [
+        1,
+        1
+      ],
+      "kernel_Z2xZ2_lifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "both_SO3_factors_lift_separately": true,
+      "quantized_moment_map_coefficients": [
+        "2",
+        "2"
+      ]
+    }
+  ],
+  "physical_scope": "Conditional on compact U(1), unit electric charge, integral monopole flux and the standard SU2-equivariant line bundle. This is a global gauge-group refinement, not spontaneous E6 enhancement or a full coupled KK spectrum. The seven classical gauge generators remain at Lie-algebra level."
+}

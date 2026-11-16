@@ -1,0 +1,24 @@
+{
+  "status": "EXACT_W33_E6_FOURCOPY_UNIVERSAL_PURE_TARGET_STEERING",
+  "output_dimension": 27,
+  "Schlafli_srg_parameters": [
+    27,
+    10,
+    1,
+    5
+  ],
+  "projector_uniform": "P1=J/27",
+  "projector_dark6": "P6=(3I-3A+J)/18, rank6",
+  "projector_20": "P20=I-P1-P6, rank20",
+  "success_H": "H=KKdag=P1+(28/55)P20+(13/22)P6",
+  "exact_inverse": "H^-1=P1+(55/28)P20+(22/13)P6",
+  "inverse_verified_by_27x27_rational_matrix_multiplication": true,
+  "optimal_preimage": "psi_y=Kdag H^-1 y/sqrt(y^dag H^-1 y)",
+  "success_probability": "p(y)=1/(y^dag H^-1 y) for ||y||=1",
+  "worst_target_success_lower_rational": "28/55",
+  "dark6_target_success": "13/22",
+  "uniform_target_success": "1",
+  "single_cubic_line_basis_target_success": "91/170",
+  "all_27_basis_labels_same_success": true,
+  "limits": "Target-specific correlated four-photon antecedent. The K1 stage remains uncompiled physically. This does not supply deterministic unknown-quantum-state transfer or universal E6 gauge dynamics."
+}

@@ -1,0 +1,63 @@
+{
+  "status": "EXACT_F8_GLOBAL_MIXED_STATE_ZERO_CERTAINTY_FOR_PURITY_LE_HALF",
+  "source_stabilizer_basis_integer_labels": [
+    2778,
+    2315,
+    599,
+    2616,
+    1322
+  ],
+  "uncovered_subgroup_nonidentity_count": 31,
+  "symplectically_isotropic_rank": 5,
+  "stabilizer_code_projector_rank": 2,
+  "covered_Pauli_observables": 567,
+  "centralizer_size": 128,
+  "logical_coset_covered_counts": [
+    3,
+    3,
+    3
+  ],
+  "global_mixed_state_exact_min_zero_purity_interval": [
+    "1/64",
+    "1/2"
+  ],
+  "exact_zero_state_family": "rho_t=(1-t)I_64/64 + t Pi_rank2/2, 0<=t<=1; purity=(1+31t\u00b2)/64; C=0",
+  "global_lower_bound_C_nonnegative": true,
+  "exact_sample_families": [
+    {
+      "codeweight_t": "0",
+      "state": "rho_t=(1-t) I_64/64 + t Pi_rank2/2",
+      "Tr_rho_squared": "1/64",
+      "covered_certainty_exact": 0
+    },
+    {
+      "codeweight_t": "1/4",
+      "state": "rho_t=(1-t) I_64/64 + t Pi_rank2/2",
+      "Tr_rho_squared": "47/1024",
+      "covered_certainty_exact": 0
+    },
+    {
+      "codeweight_t": "1/2",
+      "state": "rho_t=(1-t) I_64/64 + t Pi_rank2/2",
+      "Tr_rho_squared": "35/256",
+      "covered_certainty_exact": 0
+    },
+    {
+      "codeweight_t": "3/4",
+      "state": "rho_t=(1-t) I_64/64 + t Pi_rank2/2",
+      "Tr_rho_squared": "295/1024",
+      "covered_certainty_exact": 0
+    },
+    {
+      "codeweight_t": "1",
+      "state": "rho_t=(1-t) I_64/64 + t Pi_rank2/2",
+      "Tr_rho_squared": "1/2",
+      "covered_certainty_exact": 0
+    }
+  ],
+  "rank2_code_purity_upper_preparation": "For 1/2<=p<=1, exists pure-encoded-qubit Bloch mixture with C=6p-3",
+  "depolarized_torus_witness_upper_preparation": "For 1/64<=p<=1, C<=c8*(64p-1)/63, c8=(47-32cos(2pi/9))/9",
+  "two_explicit_upper_family_numeric_cross_purity": 0.8551370248693764,
+  "two_explicit_upper_family_cross_certainty": 2.1308221492162582,
+  "scope": "C_min(p)=0 is proven for 1/64<=p<=1/2 because the functional is nonnegative and an explicit rank-two-code mixture attains zero. No claim of maximal attainable zero-certainty purity or global minimum for p>1/2; known c8 is an exact pure-state UPPER witness, not a proven global lower bound."
+}
