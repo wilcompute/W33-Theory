@@ -2,7 +2,7 @@
 
 from collections import Counter
 from fractions import Fraction as F
-from itertools import product
+from itertools import permutations, product
 from math import comb, factorial, fsum, isqrt, pi, prod, sqrt
 from pathlib import Path
 import json
@@ -64,13 +64,17 @@ def first_threshold_fixture():
     return rows
 
 
-def threshold_tree(inner_product):
-    """Compare the full KLT sum to its spinor cross-ratio at rest threshold."""
-    p = sqrt(18)
-    transverse = sqrt(18 * 26 - inner_product**2) / p
+def threshold_tree(norms):
+    """Evaluate the KLT sums for scalar and noncompact graviton beams."""
+    first_norm, second_norm, third_norm = norms
+    inner_product = F(third_norm - first_norm - second_norm, 2)
+    p = sqrt(first_norm)
+    transverse = sqrt(first_norm * second_norm - inner_product**2) / p
     internal = [complex(p), complex(inner_product / p, transverse)]
     internal.append(-sum(internal))
-    beam_factor = 1j * sqrt(sum(map(abs, internal)))
+    masses = tuple(map(sqrt, norms))
+    total_energy = sum(masses)
+    beam_factor = 1j * sqrt(total_energy)
     spinors = {1: (beam_factor, 0), 2: (0, beam_factor)}
     for leg, momentum in enumerate(internal, 3):
         root_energy = sqrt(abs(momentum))
@@ -84,20 +88,112 @@ def threshold_tree(inner_product):
     def invariant(i, j):
         return abs(bracket(i, j))**2 * (-1 if (i < 3) != (j < 3) else 1)
 
-    def parke_taylor(order):
+    def parke_taylor(order, numerator):
         cyclic_pairs = zip(order, order[1:] + order[:1])
-        return bracket(1, 2)**4 / prod(bracket(i, j) for i, j in cyclic_pairs)
+        return numerator / prod(bracket(i, j) for i, j in cyclic_pairs)
 
-    first = (invariant(1, 2) * invariant(3, 4)
-             * parke_taylor((1, 2, 3, 4, 5)) * parke_taylor((2, 1, 4, 3, 5)))
-    second = (invariant(1, 3) * invariant(2, 4)
-              * parke_taylor((1, 3, 2, 4, 5)) * parke_taylor((3, 1, 4, 2, 5)))
+    def klt_terms(numerator):
+        first = (invariant(1, 2) * invariant(3, 4)
+                 * parke_taylor((1, 2, 3, 4, 5), numerator)
+                 * parke_taylor((2, 1, 4, 3, 5), numerator))
+        second = (invariant(1, 3) * invariant(2, 4)
+                  * parke_taylor((1, 3, 2, 4, 5), numerator)
+                  * parke_taylor((3, 1, 4, 2, 5), numerator))
+        return first, second
+
+    first, second = klt_terms(bracket(1, 2)**4)
     q = bracket(1, 2) * bracket(3, 4) / (bracket(1, 3) * bracket(2, 4))
     assert abs(second / first + q**2 / abs(q)**2) < 1e-12
     # Since q = 1 - exp(i angle), |1 - q^2 / |q|^2|^2 = 2 + 2 cos(angle).
     squared_ratio = abs((first + second) / first)**2
-    assert abs(squared_ratio - (2 + 2 * inner_product / sqrt(18 * 26))) < 1e-12
-    return squared_ratio
+    assert abs(squared_ratio - (2 + 2 * inner_product / (masses[0] * masses[1]))) < 1e-12
+    stripped_scalar = abs(first + second)**2
+    stripped_graviton = abs(sum(klt_terms(bracket(1, 2)**2 * bracket(3, 4)**2)))**2
+    expected_scalar = total_energy**10 / prod(norms)
+    expected_graviton = total_energy**6 * (total_energy - 2*masses[2])**4 / prod(norms)
+    assert abs(stripped_scalar / expected_scalar - 1) < 1e-12
+    assert abs(stripped_graviton / expected_graviton - 1) < 1e-12
+    return squared_ratio, stripped_graviton
+
+
+def scaled_three_body_phase_space(masses, excess):
+    """Exact five-dimensional recursive phase space divided by excess cubed."""
+    a, b, c = masses
+    energy = a + b + c + excess
+
+    def kernel(x):
+        pair_energy = a + b + x * excess
+        outer_momentum_sq_scaled = (
+            (1-x) * (energy+pair_energy+c) * (energy+pair_energy-c)
+            * (energy-pair_energy+c) / (4 * energy**2)
+        )
+        inner_momentum_sq_scaled = (
+            x * (pair_energy+a+b) * (pair_energy+a-b)
+            * (pair_energy-a+b) / (4 * pair_energy**2)
+        )
+        return outer_momentum_sq_scaled * inner_momentum_sq_scaled
+
+    return integrate(kernel) / (256 * pi**3 * energy)
+
+
+def graviton_cut_fixture(norms):
+    masses = tuple(map(sqrt, norms))
+    threshold = sum(masses)
+    phase_space = prod(masses) / (48 * (2*pi)**3 * threshold**2)
+    finite_energy_checks = []
+    for excess in (1e-2, 1e-3, 1e-4):
+        ratio = scaled_three_body_phase_space(masses, excess) / phase_space
+        assert abs(ratio - 1) < excess
+        finite_energy_checks.append({"excess_energy": excess, "ratio_to_threshold": ratio})
+    cut_coefficients = {}
+    for ordered in permutations(norms):
+        _, stripped_tree = threshold_tree(ordered)
+        coefficient = stripped_tree * phase_space
+        singled_mass = sqrt(ordered[-1])
+        expected = threshold**4 * (threshold - 2*singled_mass)**4 / (48 * (2*pi)**3 * prod(masses))
+        assert abs(coefficient / expected - 1) < 1e-12
+        if ordered[-1] in cut_coefficients:
+            assert abs(coefficient / cut_coefficients[ordered[-1]] - 1) < 1e-12
+        cut_coefficients[ordered[-1]] = coefficient
+    return {"phase_space_coefficient": phase_space,
+            "finite_energy_checks": finite_energy_checks,
+            "stripped_cut_coefficient_by_plane_helicity_leg_norm": dict(sorted(cut_coefficients.items()))}
+
+
+def triangle_reconstruction_fixture():
+    """Recover the pair Gram histogram on a bounded square-lattice example."""
+    cap = 20
+    vectors = {(x, y): x*x + y*y for x, y in product(range(-4, 5), repeat=2)
+               if x*x + y*y <= cap}
+    shells = Counter(vectors.values())
+    primitive_directions = {}
+    for norm in sorted(shells.keys() - {0}):
+        imprimitive = sum(2 * primitive_directions.get(norm // k**2, 0)
+                          for k in range(2, isqrt(norm)+1) if norm % k**2 == 0)
+        assert (shells[norm] - imprimitive) % 2 == 0
+        primitive_directions[norm] = (shells[norm] - imprimitive) // 2
+
+    directly_counted = Counter()
+    triangles = Counter()
+    for (x, y), (u, v) in product(vectors, repeat=2):
+        if (x+u, y+v) not in vectors:
+            continue
+        a, b, c = vectors[x, y], vectors[u, v], vectors[x+u, y+v]
+        directly_counted[a, b, x*u + y*v] += 1
+        if x*v != y*u:
+            triangles[a, b, c] += 1
+    reconstructed = Counter({(a, b, (c-a-b)//2): count
+                             for (a, b, c), count in triangles.items()})
+    for norm, count in primitive_directions.items():
+        bound = isqrt(cap // norm)
+        for i, j in product(range(-bound, bound+1), repeat=2):
+            if (i or j) and (i+j)**2 * norm <= cap:
+                reconstructed[norm*i*i, norm*j*j, norm*i*j] += count
+    reconstructed[0, 0, 0] = 1
+    assert reconstructed == directly_counted
+    return {"squared_norm_cap_on_v_w_and_sum": cap,
+            "ordered_rank_two_pairs": sum(triangles.values()),
+            "distinct_gram_matrices": len(reconstructed)}
 
 
 def isospectral_fixture():
@@ -147,7 +243,9 @@ def isospectral_fixture():
             "first_energy_plus": sum(sqrt(norm) for norm in minima[0]),
             "first_energy_minus": sum(sqrt(norm) for norm in minima[1]),
             "klt_sum_squared_over_first_term_squared": {
-                "plus": threshold_tree(-2), "minus": threshold_tree(-4)}}
+                "plus": threshold_tree(minima[0])[0], "minus": threshold_tree(minima[1])[0]},
+            "pure_noncompact_graviton_cut": {
+                "plus": graviton_cut_fixture(minima[0]), "minus": graviton_cut_fixture(minima[1])}}
 
 
 def main():
@@ -181,10 +279,11 @@ def main():
             "sphere_coefficient_identity_orders": 121,
             "s9_angular_average_at_90_degrees": angular_11d,
             "continuum_comparison": rows,
-            "isospectral_pair": isospectral_fixture()}
+            "isospectral_pair": isospectral_fixture(),
+            "square_lattice_gram_reconstruction": triangle_reconstruction_fixture()}
     output = Path(__file__).resolve().parents[1] / "data" / "toe_20261116_kk_unitarity.json"
     output.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
-    print("Verified angular moments, the dense KK cut, both thresholds, and the KLT tree sum.")
+    print("Verified the KK cut, KLT polarization channels, and three-body onset coefficients.")
 
 
 if __name__ == "__main__":

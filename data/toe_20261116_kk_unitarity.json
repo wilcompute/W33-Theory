@@ -149,8 +149,59 @@
     "first_energy_plus": 15.666215521048828,
     "first_energy_minus": 15.34166020071207,
     "klt_sum_squared_over_first_term_squared": {
-      "plus": 1.81509993459159,
+      "plus": 1.8150999345915906,
       "minus": 1.6301998691831803
+    },
+    "pure_noncompact_graviton_cut": {
+      "plus": {
+        "phase_space_coefficient": 4.6821345091639446e-05,
+        "finite_energy_checks": [
+          {
+            "excess_energy": 0.01,
+            "ratio_to_threshold": 1.000038648465297
+          },
+          {
+            "excess_energy": 0.001,
+            "ratio_to_threshold": 1.0000038622059466
+          },
+          {
+            "excess_energy": 0.0001,
+            "ratio_to_threshold": 1.0000003861941906
+          }
+        ],
+        "stripped_cut_coefficient_by_plane_helicity_leg_norm": {
+          "18": 98.32102532801706,
+          "26": 33.05922873815642,
+          "40": 3.063968190301957
+        }
+      },
+      "minus": {
+        "phase_space_coefficient": 4.631787385777594e-05,
+        "finite_energy_checks": [
+          {
+            "excess_energy": 0.01,
+            "ratio_to_threshold": 1.000029656448673
+          },
+          {
+            "excess_energy": 0.001,
+            "ratio_to_threshold": 1.000002962166094
+          },
+          {
+            "excess_energy": 0.0001,
+            "ratio_to_threshold": 1.000000296181817
+          }
+        ],
+        "stripped_cut_coefficient_by_plane_helicity_leg_norm": {
+          "18": 79.2161330853177,
+          "26": 25.090558002555362,
+          "36": 4.46975339822355
+        }
+      }
     }
+  },
+  "square_lattice_gram_reconstruction": {
+    "squared_norm_cap_on_v_w_and_sum": 20,
+    "ordered_rank_two_pairs": 2472,
+    "distinct_gram_matrices": 370
   }
 }
