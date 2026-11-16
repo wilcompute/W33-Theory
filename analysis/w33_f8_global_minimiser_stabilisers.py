@@ -47,4 +47,4 @@ res = dict(starts=STARTS, n_at_c8=len(rec), value_histogram={str(k): v for k, v 
            stabiliser_orders=dict(collections.Counter(r["order"] for r in rec)),
            weight_hist_types=dict(collections.Counter(str(r["weight_hist"]) for r in rec)), any_covered=any(r["covered_in_stabiliser"] for r in rec), records=rec)
 print({k: v for k, v in res.items() if k != "records"}, flush=True)
-json.dump(res, open(os.path.join(ROOT, "data", "w33_f8_global_minimiser_stabilisers.json"), "w"), indent=1)
+json.dump(res, open(os.path.join(ROOT, "data", "w33_f8_global_minimiser_stabilisers.json" if STARTS == 150 else f"w33_f8_global_minimiser_stabilisers_{STARTS}.json"), "w"), indent=1)

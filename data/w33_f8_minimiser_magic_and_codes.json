@@ -1,0 +1,66 @@
+{
+ "n_minimisers": 124,
+ "logical_stabiliser_fidelity": [
+  {
+   "value": 0.5099291129236,
+   "count": 124,
+   "pslq_Qg": "None",
+   "pslq_Qg_sqrt3": "[36, 0, -3, -3, 0, -1, -1]",
+   "findpoly": "[4843, 2477, 2392, -2506]"
+  }
+ ],
+ "qutrit_E6a1_fidelity": 0.3924543206931062,
+ "codes": {
+  "T": {
+   "n": 6,
+   "k": 3,
+   "d": 1,
+   "stabiliser_weights": [
+    3,
+    4,
+    4,
+    5,
+    5,
+    5,
+    6
+   ],
+   "n_logical_min_weight": 2
+  },
+  "A": {
+   "n": 6,
+   "k": 4,
+   "d": 1,
+   "stabiliser_weights": [
+    4,
+    5,
+    5
+   ],
+   "n_logical_min_weight": 4
+  },
+  "B": {
+   "n": 6,
+   "k": 4,
+   "d": 1,
+   "stabiliser_weights": [
+    4,
+    5,
+    5
+   ],
+   "n_logical_min_weight": 4
+  },
+  "C": {
+   "n": 6,
+   "k": 4,
+   "d": 1,
+   "stabiliser_weights": [
+    3,
+    4,
+    5
+   ],
+   "n_logical_min_weight": 6
+  }
+ },
+ "fidelity_40_digits": "0.50992911292363054618773114488760296",
+ "closed_form": "(3 + sqrt3)(g + g^2)/36, g = 2cos(2pi/9)",
+ "closed_form_diff": "-1.47e-32"
+}
