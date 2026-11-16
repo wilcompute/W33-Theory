@@ -85,7 +85,7 @@ per = []
 for k, root in enumerate(roots_sorted):
     s = subs[orbits[root][0]]; a, b, c = (labels[i] for i in s)
     best = min(minval(space([(a, s1), (b, s2)]), 6)[0] for s1 in (1, -1) for s2 in (1, -1))
-    per.append(dict(orbit=k, size=len(orbits[root]), stabiliser_order_in_H=H_ORDER // len(orbits[root]), type=rows[k]["type"],
+    per.append(dict(orbit=k, rep=[list(a), list(b)], size=len(orbits[root]), stabiliser_order_in_H=H_ORDER // len(orbits[root]), type=rows[k]["type"],
                     code_space_min=best, attains_c8=bool(abs(best - C8) < 1e-7), minimiser_stabilisers=rows[k]["minimiser_stabilisers_in_orbit"],
                     torus_subgroups_in_orbit=T_orbits.get(k, 0)))
     print(per[-1], flush=True)

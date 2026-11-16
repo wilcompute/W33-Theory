@@ -1,0 +1,119 @@
+[
+ {
+  "orbit": 0,
+  "type": "((0, 134), (1, 107), (2, 14))",
+  "value": "2.8634243625570458461476357731197",
+  "gradient": "5.08e-40",
+  "findpoly": "None",
+  "pslq_Q_cos2pi9": "None",
+  "identify": "None"
+ },
+ {
+  "orbit": 1,
+  "type": "((0, 136), (1, 103), (2, 16))",
+  "value": "2.7318227568180159808045120512714",
+  "gradient": "6.53e-40",
+  "findpoly": "None",
+  "pslq_Q_cos2pi9": "None",
+  "identify": "None"
+ },
+ {
+  "orbit": 2,
+  "type": "((0, 140), (1, 95), (2, 20))",
+  "value": "2.7410899853553475002632635110619",
+  "gradient": "7.57e-40",
+  "findpoly": "[-13, 265, -1447, 2243]",
+  "pslq_Q_cos2pi9": "None",
+  "identify": "None"
+ },
+ {
+  "orbit": 3,
+  "type": "B",
+  "value": "2.8481957610783231615586100169605",
+  "gradient": "7.07e-40",
+  "findpoly": "None",
+  "pslq_Q_cos2pi9": "None",
+  "identify": "None"
+ },
+ {
+  "orbit": 5,
+  "type": "B",
+  "value": "2.8123447617702220125353560928643",
+  "gradient": "5.28e-40",
+  "findpoly": "None",
+  "pslq_Q_cos2pi9": "None",
+  "identify": "None"
+ },
+ {
+  "orbit": 6,
+  "type": "((0, 142), (1, 91), (2, 22))",
+  "value": "2.8094922052473459131340302841423",
+  "gradient": "4.72e-40",
+  "findpoly": "None",
+  "pslq_Q_cos2pi9": "None",
+  "identify": "None"
+ },
+ {
+  "orbit": 7,
+  "type": "((0, 134), (1, 107), (2, 14))",
+  "value": "2.9454579103540808816766963512436",
+  "gradient": "7.77e-40",
+  "findpoly": "None",
+  "pslq_Q_cos2pi9": "None",
+  "identify": "None"
+ },
+ {
+  "orbit": 8,
+  "type": "((0, 155), (1, 72), (2, 21), (3, 7))",
+  "value": "3.0",
+  "gradient": "4.0e-40",
+  "findpoly": "[1, -3]",
+  "pslq_Q_cos2pi9": "[-1, 3, 0, 0]",
+  "identify": "3"
+ },
+ {
+  "orbit": 10,
+  "type": "B",
+  "value": "2.8123447617702220125353560928643",
+  "gradient": "5.49e-40",
+  "findpoly": "None",
+  "pslq_Q_cos2pi9": "None",
+  "identify": "None"
+ },
+ {
+  "orbit": 12,
+  "type": "((0, 162), (1, 55), (2, 36), (4, 2))",
+  "value": "2.7410899853553475002632635110619",
+  "gradient": "6.48e-40",
+  "findpoly": "[-13, 265, -1447, 2243]",
+  "pslq_Q_cos2pi9": "None",
+  "identify": "None"
+ },
+ {
+  "orbit": 13,
+  "type": "C",
+  "value": "3.0",
+  "gradient": "7.39e-40",
+  "findpoly": "[1, -3]",
+  "pslq_Q_cos2pi9": "[-1, 3, 0, 0]",
+  "identify": "3"
+ },
+ {
+  "orbit": 15,
+  "type": "((0, 120), (1, 135))",
+  "value": "2.7699817927612146344742781250676",
+  "gradient": "6.78e-40",
+  "findpoly": "[-243, 4455, -24921, 40013]",
+  "pslq_Q_cos2pi9": "[-9, 87, -16, -16]",
+  "identify": "None"
+ },
+ {
+  "orbit": 16,
+  "type": "((0, 120), (1, 135))",
+  "value": "7.0",
+  "gradient": "1.11e-39",
+  "findpoly": "[1, -7]",
+  "pslq_Q_cos2pi9": "[-1, 7, 0, 0]",
+  "identify": "((7+sqrt(49))/2)"
+ }
+]
