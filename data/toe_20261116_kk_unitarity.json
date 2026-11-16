@@ -173,7 +173,10 @@
           "18": 98.32102532801706,
           "26": 33.05922873815642,
           "40": 3.063968190301957
-        }
+        },
+        "stripped_graviton_inclusive_coefficient": 437.75538734017164,
+        "stripped_supermultiplet_inclusive_coefficient": 4454.603007208035,
+        "graviton_fraction_of_supermultiplet_coefficient": 0.09827034791469308
       },
       "minus": {
         "phase_space_coefficient": 4.631787385777594e-05,
@@ -195,7 +198,10 @@
           "18": 79.2161330853177,
           "26": 25.090558002555362,
           "36": 4.46975339822355
-        }
+        },
+        "stripped_graviton_inclusive_coefficient": 365.5312815023033,
+        "stripped_supermultiplet_inclusive_coefficient": 3971.493459192783,
+        "graviton_fraction_of_supermultiplet_coefficient": 0.09203874694951618
       }
     }
   },
@@ -215,5 +221,26 @@
         12
       ]
     ]
-  }
+  },
+  "generic_supermultiplet_map": {
+    "outgoing_spatial_momenta_in_four_plane": [
+      [
+        2,
+        1,
+        -1
+      ],
+      [
+        -1,
+        4,
+        3
+      ],
+      [
+        -1,
+        -5,
+        -2
+      ]
+    ],
+    "single_r_index_isometry_and_cpt_orthogonality": true
+  },
+  "equal_mass_graviton_fraction": 0.07407407407407403
 }
