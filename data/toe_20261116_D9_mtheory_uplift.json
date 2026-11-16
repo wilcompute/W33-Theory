@@ -1,0 +1,58 @@
+{
+  "invariant_product": {
+    "curvature_sum_in_ads_units": 12,
+    "equal_flux_torus_area_over_ads_radius_squared": "4*pi*N/(3*N0)",
+    "equal_flux_square_torus_first_eigenvalue": "3*pi*N0/N",
+    "m5_probe_charge_to_tension_squared": [
+      "1",
+      "eta/2",
+      "1/2 - eta/2"
+    ]
+  },
+  "homogeneous_radius_sector": {
+    "characteristic_polynomial": "(m - 32)*(-320*(eta - 1/2)**2 + (m - 4)**2 - 64)",
+    "equal_flux_squared_masses_ads_units": [
+      -4,
+      12,
+      32
+    ],
+    "bf_bound_ads_units": -4,
+    "equal_flux_bf_eigenvector_in_log_radii": [
+      1,
+      -1,
+      0
+    ]
+  },
+  "equal_flux_torus_momentum_sector": {
+    "unstable_open_band_adimensional_torus_eigenvalue": [
+      0,
+      12
+    ],
+    "lowest_value_in_continuous_band_ads_units": "-25/4",
+    "minimum_torus_eigenvalue_location": "15/4",
+    "square_torus_flux_ratio_threshold": 0.7853981633974483,
+    "hexagonal_torus_flux_ratio_threshold": 0.9068996821171089,
+    "sample_square_tori": [
+      {
+        "mixed_to_horizontal_flux_ratio": "1/2",
+        "first_torus_eigenvalue_ads_units": 18.84955592153876,
+        "unstable_in_this_sector": false
+      },
+      {
+        "mixed_to_horizontal_flux_ratio": "4/5",
+        "first_torus_eigenvalue_ads_units": 11.780972450961723,
+        "unstable_in_this_sector": true
+      },
+      {
+        "mixed_to_horizontal_flux_ratio": "1",
+        "first_torus_eigenvalue_ads_units": 9.42477796076938,
+        "unstable_in_this_sector": true
+      },
+      {
+        "mixed_to_horizontal_flux_ratio": "2",
+        "first_torus_eigenvalue_ads_units": 4.71238898038469,
+        "unstable_in_this_sector": true
+      }
+    ]
+  }
+}
