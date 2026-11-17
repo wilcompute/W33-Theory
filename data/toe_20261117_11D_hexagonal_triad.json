@@ -1,0 +1,165 @@
+{
+  "shell_field": "cos(x)+cos(y)+cos(x+y)",
+  "moments_2_3": [
+    "3/2",
+    "3/2"
+  ],
+  "cubic_coefficient": "384*d*(Lambda**2 + 54*Lambda - 64)/(Lambda + 28)**2",
+  "detuning_quadratic_coefficient": "-12*(Lambda + 4)/(Lambda + 28)",
+  "lambda_shift_per_signed_amplitude": "48*d*(Lambda**2 + 54*Lambda - 64)/((Lambda + 4)*(Lambda + 28))",
+  "kernel_fields_A_B_c_v": [
+    "0",
+    "16*d*(Lambda + 32)/(Lambda*(Lambda + 28))",
+    "20*d/(3*Lambda + 84)",
+    "1"
+  ],
+  "equal_flux_limit": {
+    "fourth_shell_moment": "45/8",
+    "frozen_quartic": "-246",
+    "relaxed_quartic": "5923/9",
+    "lambda_shift_per_epsilon_squared": "5923/27",
+    "small_imbalance_linear_term_d_times_epsilon": 59,
+    "predicted_fold_detuning_per_d_squared": "-93987/23692"
+  },
+  "equal_flux_BF_mass_shift_per_epsilon_squared": "-8820/43",
+  "equal_flux_numeric_control": {
+    "coarse": {
+      "periods": [
+        68,
+        37,
+        37
+      ],
+      "asymmetry": 0,
+      "static_threshold": 20.0,
+      "lambda": 20.00081461101516,
+      "cutoff": 4,
+      "grid": 30,
+      "signed_amplitude": 0.0019271361679664568,
+      "equation_and_tracefree_residuals": [
+        2.2399637266551364e-11,
+        1.880190968195361e-11,
+        2.1072391878304564e-12,
+        6.268943142373473e-10,
+        1.5051294357994877e-13,
+        1.5051294357994877e-13,
+        1.5051291986302624e-13
+      ]
+    },
+    "fine": {
+      "periods": [
+        68,
+        37,
+        37
+      ],
+      "asymmetry": 0,
+      "static_threshold": 20.0,
+      "lambda": 20.00081461101516,
+      "cutoff": 6,
+      "grid": 42,
+      "signed_amplitude": 0.001927136168004641,
+      "equation_and_tracefree_residuals": [
+        4.8701277385876374e-14,
+        2.0651164697564617e-14,
+        2.851963321537018e-14,
+        9.769962616701378e-15,
+        5.820768061884189e-17,
+        5.820513952000013e-17,
+        5.821424512418311e-17
+      ]
+    }
+  },
+  "quantized_numeric_checks": [
+    {
+      "coarse": {
+        "periods": [
+          127,
+          68,
+          51
+        ],
+        "asymmetry": 0.6,
+        "static_threshold": 20.592681838303037,
+        "lambda": 20.56767884081719,
+        "cutoff": 4,
+        "grid": 30,
+        "signed_amplitude": -0.000705423505136162,
+        "equation_and_tracefree_residuals": [
+          1.7371382110553668e-12,
+          4.9547870147048645e-12,
+          2.6900703886667543e-12,
+          1.2136402993689899e-11,
+          4.057811283709502e-14,
+          4.057811283709502e-14,
+          4.057811283709502e-14
+        ]
+      },
+      "fine": {
+        "periods": [
+          127,
+          68,
+          51
+        ],
+        "asymmetry": 0.6,
+        "static_threshold": 20.592681838303037,
+        "lambda": 20.56767884081719,
+        "cutoff": 6,
+        "grid": 42,
+        "signed_amplitude": -0.0007054235051358109,
+        "equation_and_tracefree_residuals": [
+          3.745614929329122e-14,
+          1.6501557065229377e-14,
+          2.4293067557579207e-14,
+          7.632783294297951e-15,
+          6.61602612023757e-17,
+          6.615920241119164e-17,
+          6.615835537824438e-17
+        ]
+      }
+    },
+    {
+      "coarse": {
+        "periods": [
+          262,
+          140,
+          105
+        ],
+        "asymmetry": 0.6,
+        "static_threshold": 20.592681838303037,
+        "lambda": 20.609323184926833,
+        "cutoff": 4,
+        "grid": 30,
+        "signed_amplitude": 0.00046880708646797635,
+        "equation_and_tracefree_residuals": [
+          2.3409052474221426e-13,
+          6.7177318395506e-13,
+          3.4871411314085776e-13,
+          1.6310008899012018e-12,
+          5.451040721506529e-15,
+          5.451040297990055e-15,
+          5.451039662715345e-15
+        ]
+      },
+      "fine": {
+        "periods": [
+          262,
+          140,
+          105
+        ],
+        "asymmetry": 0.6,
+        "static_threshold": 20.592681838303037,
+        "lambda": 20.609323184926833,
+        "cutoff": 6,
+        "grid": 42,
+        "signed_amplitude": 0.000468807086464774,
+        "equation_and_tracefree_residuals": [
+          4.0169256809718945e-14,
+          1.3167621832309295e-14,
+          2.543484086542369e-14,
+          6.050715484207103e-15,
+          2.982942990786266e-17,
+          2.982953578698107e-17,
+          2.982974754521788e-17
+        ]
+      }
+    }
+  ]
+}
