@@ -1,0 +1,44 @@
+[
+ {
+  "prefix": "sdpA",
+  "solver": "clarabel",
+  "statreg": "3e-7",
+  "eps": "1e-8",
+  "status": "Solved",
+  "bound": 2.4462861606932425,
+  "max_equality_residual": 1.2364615997739747e-09,
+  "min_cone_eigenvalue": 2.945750458608197e-07,
+  "variables": 4573,
+  "equalities": 151,
+  "cones": 290,
+  "max_cone": 32
+ },
+ {
+  "prefix": "sdpA",
+  "solver": "clarabel",
+  "statreg": "1e-6",
+  "eps": "1e-8",
+  "status": "Solved",
+  "bound": 2.4456421386010523,
+  "max_equality_residual": 1.1015542256131994e-08,
+  "min_cone_eigenvalue": 3.663568580406077e-07,
+  "variables": 4573,
+  "equalities": 151,
+  "cones": 290,
+  "max_cone": 32
+ },
+ {
+  "prefix": "sdpA",
+  "solver": "clarabel",
+  "statreg": "3e-6",
+  "eps": "1e-8",
+  "status": "Solved",
+  "bound": 2.4442151908874927,
+  "max_equality_residual": 3.0169578835170796e-08,
+  "min_cone_eigenvalue": 2.7507808018688667e-07,
+  "variables": 4573,
+  "equalities": 151,
+  "cones": 290,
+  "max_cone": 32
+ }
+]

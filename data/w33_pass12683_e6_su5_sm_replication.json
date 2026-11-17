@@ -1,0 +1,18 @@
+{
+ "source_commit": "6a4a37517",
+ "derivations": 78,
+ "stabilizer_two_singlet_pairs": 24,
+ "stabilizer_with_adjoint_Y": 12,
+ "Y_spectrum": {
+  "-6.0": 1,
+  "-3.0": 2,
+  "-2.0": 6,
+  "-1.0": 6,
+  "0.0": 2,
+  "2.0": 3,
+  "3.0": 4,
+  "4.0": 3
+ },
+ "trace_X3_normalised": -3.7416744611476754e-17,
+ "Y_annihilates_vevs": true
+}

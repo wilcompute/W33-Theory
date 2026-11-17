@@ -1,0 +1,105 @@
+{
+ "partA_classes": {
+  "F1": {
+   "size": 1,
+   "content": {
+    "N (1,1)_0": 1
+   }
+  },
+  "F2": {
+   "size": 1,
+   "content": {
+    "N (1,1)_0": 1
+   }
+  },
+  "meets both (transversal)": {
+   "size": 5,
+   "content": {
+    "H_u (1,2)_1/2": 2,
+    "D (3,1)_-1/3": 3
+   }
+  },
+  "meets F1 only": {
+   "size": 5,
+   "content": {
+    "L (1,2)_-1/2": 2,
+    "d^c (3b,1)_1/3": 3
+   }
+  },
+  "meets F2 only": {
+   "size": 5,
+   "content": {
+    "L (1,2)_-1/2": 2,
+    "d^c (3b,1)_1/3": 3
+   }
+  },
+  "skew to both": {
+   "size": 10,
+   "content": {
+    "e^c (1,1)_1": 1,
+    "u^c (3b,1)_-2/3": 3,
+    "Q (3,2)_1/6": 6
+   }
+  }
+ },
+ "transversal_frames": [
+  1,
+  4,
+  13,
+  17,
+  21
+ ],
+ "transversal_hypercharges": [
+  "H_u (1,2)_1/2",
+  "H_u (1,2)_1/2",
+  "D (3,1)_-1/3",
+  "D (3,1)_-1/3",
+  "D (3,1)_-1/3"
+ ],
+ "psp43_order": 25920,
+ "frame_action_order": 25920,
+ "ordered_skew_pair_stabiliser": 60,
+ "action_on_transversals": 60,
+ "action_on_transversals_even": true,
+ "frame_hypercharge": [
+  "N (1,1)_0",
+  "H_u (1,2)_1/2",
+  "L (1,2)_-1/2",
+  "N (1,1)_0",
+  "H_u (1,2)_1/2",
+  "L (1,2)_-1/2",
+  "d^c (3b,1)_1/3",
+  "L (1,2)_-1/2",
+  "Q (3,2)_1/6",
+  "d^c (3b,1)_1/3",
+  "u^c (3b,1)_-2/3",
+  "d^c (3b,1)_1/3",
+  "Q (3,2)_1/6",
+  "D (3,1)_-1/3",
+  "L (1,2)_-1/2",
+  "Q (3,2)_1/6",
+  "Q (3,2)_1/6",
+  "D (3,1)_-1/3",
+  "Q (3,2)_1/6",
+  "d^c (3b,1)_1/3",
+  "Q (3,2)_1/6",
+  "D (3,1)_-1/3",
+  "d^c (3b,1)_1/3",
+  "e^c (1,1)_1",
+  "u^c (3b,1)_-2/3",
+  "d^c (3b,1)_1/3",
+  "u^c (3b,1)_-2/3"
+ ],
+ "transversal_factorisation_bijection": true,
+ "colour_transversals": [
+  13,
+  17,
+  21
+ ],
+ "weak_transversals": [
+  1,
+  4
+ ],
+ "doublet_choice_orbit": 10,
+ "doublet_choice_stabiliser": 6
+}

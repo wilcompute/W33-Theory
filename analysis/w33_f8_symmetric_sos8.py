@@ -10,7 +10,9 @@
     rank saturates, then checked at fresh points.
 Validation: T code space (8-dim, D9 symmetry) must give the known tight degree-8 value 2.4985086841 (Pass 12674, Pauli-only).
 Target: orbit-A code space (16-dim) with its diagonal SL(2,8) symmetry of order 504 (Pass 12682).
-usage: py -3 analysis/w33_f8_symmetric_sos8.py {T|A}"""
+Control (Pass 12683): Q4 = the whole F_4 regulus problem on C^16 (global, not a code space), symmetry = subgroup of order 360
+(Q4_SUB = 2 bases fixed) of its order-14400 Pauli-symmetry group; true minimum c4 = 1.
+usage: py -3 analysis/w33_f8_symmetric_sos8.py {T|A|Q4}"""
 import collections, contextlib, io, itertools, json, math, os, sys, time
 import numpy as np
 import scipy.sparse as sps
@@ -30,7 +32,12 @@ def effective(gens):
         except AssertionError: pass
     sys.argv = _argv
     return G
-if WHICH == "T":
+if WHICH == "Q4":
+    # global F_4 regulus (five MUBs of C^16) as a weighted four-qubit model; true minimum 16F = c4 = 1 (stabiliser value)
+    E = {"__name__": "x", "__file__": os.path.join(HERE, "w33_f4_global_model.py")}
+    exec(open(os.path.join(HERE, "w33_f4_global_model.py"), encoding="utf-8").read(), E)
+    nq = E["nq"]; N = 1 << nq; maps = E["maps"]; C8 = 1.0
+elif WHICH == "T":
     E = effective([(12, 53), (53, 33), (1, 6)])
     R = {"__name__": "x", "__file__": os.path.join(HERE, "w33_f8_E7_rung.py")}
     with contextlib.redirect_stdout(io.StringIO()):
@@ -111,8 +118,10 @@ def multisets(size): return list(itertools.combinations_with_replacement(range(N
 xorall = lambda t: __import__("functools").reduce(lambda a, b: a ^ b, t, 0)
 shiftm = lambda m, s: (tuple(sorted(i ^ s for i in m[0])), tuple(sorted(i ^ s for i in m[1])))
 MONO = {}
-for a in (4, 3, 2):
-    b = 4 - a; byc = collections.defaultdict(list)
+HALF = int(os.environ.get("HALF", "4"))          # SOS degree 2*HALF (default 8)
+AS = list(range(HALF, (HALF - 1) // 2, -1))       # a = number of psi factors; b = HALF - a conj factors, b <= a
+for a in AS:
+    b = HALF - a; byc = collections.defaultdict(list)
     for U_ in multisets(a):
         for B_ in multisets(b): byc[xorall(U_) ^ xorall(B_)].append((U_, B_))
     MONO[a] = byc
@@ -133,7 +142,7 @@ class Block:
         self.a = a; chi, xi = w; self.L, terms = block_terms(a, chi, xi); self.H = H
         self.col = np.array([t[0] for t in terms]); self.sg = np.array([t[1] for t in terms], float)
         self.IU = np.array([t[2] for t in terms]).reshape(len(terms), a) if a else None
-        self.IB = np.array([t[3] for t in terms]).reshape(len(terms), 4 - a) if 4 - a else None
+        self.IB = np.array([t[3] for t in terms]).reshape(len(terms), HALF - a) if HALF - a else None
         self.S = sps.csr_matrix((self.sg, (np.arange(len(terms)), self.col)), shape=(len(terms), self.L))
     def eval(self, P):   # P: (M, N) states -> (M, L)
         val = np.ones((P.shape[0], len(self.col)), complex)
@@ -141,9 +150,9 @@ class Block:
         if self.IB is not None: val *= np.prod(np.conj(P[:, self.IB]), axis=2)
         return np.asarray(self.S.T @ val.T).T
 blocks = []
-for a in (4, 3, 2):
-    for w, size, H in (orbit_reps_odd if a == 3 else orbit_reps):
-        bl = Block(a, w, H)
+for a in AS:
+    for w, size, H in (orbit_reps_odd if (HALF - a) % 2 else orbit_reps):
+        bl = Block(a, w, H); bl.odd = (HALF - a) % 2; bl.w = w
         if bl.L: blocks.append(bl)
 log("representative blocks:", len(blocks), "sizes", [b.L for b in blocks])
 # ---------------- commutants of H_w on each block
@@ -176,13 +185,29 @@ NP = sum(len(b.Q) for b in blocks)
 weights_list = [(w_, herm(x, z)) for (x, z), w_ in weights.items()]
 def ceff(psi): return sum(w_ * abs(np.vdot(psi, Pm @ psi)) ** 2 for w_, Pm in weights_list).real
 Uall = np.array(Us)                         # (|G|, N, N)
+# Right cosets H_w g: b_w(U_h U_g psi) = R_h b_w(U_g psi) and Y_w is H_w-invariant, so the group average over G equals the average over
+# one g per right coset, i.e. per distinct value of g^{-1}.w (Pass 12683; exact, cost |orbit| instead of |G| per block).
+lab_index = {w: k for k, w in enumerate(labels)}
+inv_lab = {}
+for odd in (0, 1):
+    for g in range(len(maps)):
+        img = [lab_index[act_label(g, w, odd)] for w in labels]
+        inv = [0] * len(labels)
+        for k, j in enumerate(img): inv[j] = k
+        inv_lab[(odd, g)] = inv
+for bl in blocks:
+    seenl = {}
+    for g in range(len(maps)):
+        seenl.setdefault(inv_lab[(bl.odd, g)][lab_index[bl.w]], g)
+    bl.tidx = np.array(sorted(seenl.values())); bl.Qs = np.array(bl.Q)
+log("coset representatives per block:", [len(b.tidx) for b in blocks])
 def row(psi):
     Pg = np.einsum("gij,j->gi", Uall, psi)  # (|G|, N)
     out = []
     for bl in blocks:
-        Bg = bl.eval(Pg)                    # (|G|, L)
-        Mk = Bg.T @ np.conj(Bg) / len(Us)   # sum_g b b^H (b as column)
-        out.extend(np.real(np.trace(Q @ Mk)) for Q in bl.Q)
+        Bg = bl.eval(Pg[bl.tidx])           # (|G/H_w|, L)
+        Mk = Bg.T @ np.conj(Bg) / len(bl.tidx)
+        out.extend(np.real(np.einsum("qij,ji->q", bl.Qs, Mk)))
     return np.array(out)
 rows, rhs = [], []; rank = 0; K = 0
 while True:
@@ -252,8 +277,30 @@ Apsd = sps.csr_matrix((pval, (prow, pcol)), shape=(off, NV))
 AE = sps.csr_matrix(Aeq)
 Afull = sps.vstack([AE, Apsd]).tocsc(); bfull = np.concatenate([beq, np.zeros(off)]); cvec = np.zeros(NV); cvec[-1] = -1.0
 log(f"SDP: {NV} variables, {AE.shape[0]} equalities, {len(cones)} PSD cones (max {max(cones)}), nnz {Afull.nnz}")
-import scs
-sol = scs.SCS(dict(A=Afull, b=bfull, c=cvec), dict(z=AE.shape[0], s=cones), eps_abs=float(os.environ.get("SCS_EPS", "1e-8")), eps_rel=float(os.environ.get("SCS_EPS", "1e-8")), max_iters=int(os.environ.get("SCS_ITERS", "200000")), verbose=False).solve()
+if os.environ.get("DUMP"):
+    sps.save_npz(os.environ["DUMP"] + "_A.npz", Afull); np.savez(os.environ["DUMP"] + "_bc.npz", b=bfull, c=cvec, cones=np.array(cones), nz=AE.shape[0])
+if os.environ.get("SOLVER", "scs") == "clarabel":
+    # equality rows come from random samples with very different scales: normalise them (same feasible set)
+    _rn = np.sqrt(np.asarray(Afull[: AE.shape[0]].multiply(Afull[: AE.shape[0]]).sum(axis=1)).ravel())
+    _D = sps.diags(np.concatenate([1 / _rn, np.ones(Afull.shape[0] - AE.shape[0])]))
+    Afull = (_D @ Afull).tocsc(); bfull = _D @ bfull
+    # Clarabel's PSD triangle is the upper triangle, column-major (SCS: lower, column-major); permute rows within each cone.
+    import clarabel
+    perm = np.arange(Afull.shape[0]); base = AE.shape[0]
+    for n_ in cones:
+        for i_ in range(n_):
+            for j_ in range(i_ + 1):
+                perm[base + i_ * (i_ + 1) // 2 + j_] = base + sidx(i_, j_, n_)
+        base += n_ * (n_ + 1) // 2
+    Acl = Afull.tocsr()[perm].tocsc(); bcl = bfull[perm]
+    st = clarabel.DefaultSettings(); st.verbose = True; st.max_iter = int(os.environ.get("CL_ITERS", "400"))
+    st.tol_gap_abs = st.tol_gap_rel = st.tol_feas = float(os.environ.get("SCS_EPS", "1e-8"))
+    st.static_regularization_constant = float(os.environ.get("STATREG", "1e-6"))   # default 1e-8 fails at iteration 1 on these SDPs (Pass 12683)
+    solc = clarabel.DefaultSolver(sps.csc_matrix((NV, NV)), cvec, Acl, bcl, [clarabel.ZeroConeT(AE.shape[0])] + [clarabel.PSDTriangleConeT(n_) for n_ in cones], st).solve()
+    sol = dict(x=np.array(solc.x), info=dict(status="clarabel:" + str(solc.status)))
+else:
+    import scs
+    sol = scs.SCS(dict(A=Afull, b=bfull, c=cvec), dict(z=AE.shape[0], s=cones), eps_abs=float(os.environ.get("SCS_EPS", "1e-8")), eps_rel=float(os.environ.get("SCS_EPS", "1e-8")), max_iters=int(os.environ.get("SCS_ITERS", "200000")), verbose=False).solve()
 x = sol["x"]; cval = float(x[-1])
 # fresh-point identity check
 err = 0.0
@@ -264,4 +311,4 @@ log(f"{WHICH}: symmetric degree-8 SOS bound c >= {cval:.10f} (status {sol['info'
 json.dump(dict(space=WHICH, nq=nq, group_order=len(maps), label_orbits=[(s, len(h)) for _, s, h in orbit_reps], blocks=[b.L for b in blocks],
                commutant_dims=[len(b.Q) for b in blocks], block_invariance_residual=resid_max, constraint_rank=int(rank), samples=K,
                bound=cval, status=sol["info"]["status"], identity_error=err, c8=C8),
-          open(os.path.join(ROOT, "data", f"w33_f8_symmetric_sos8_{WHICH}" + ("" if int(os.environ.get("BLOCKDIAG", "1")) else "_noblock") + ".json"), "w"), indent=1)
+          open(os.path.join(ROOT, "data", f"w33_f8_symmetric_sos8_{WHICH}" + ("" if int(os.environ.get("BLOCKDIAG", "1")) else "_noblock") + ("_clarabel" if os.environ.get("SOLVER", "scs") == "clarabel" else "") + ".json"), "w"), indent=1)
