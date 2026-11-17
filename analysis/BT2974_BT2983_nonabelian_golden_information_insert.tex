@@ -1,0 +1,73 @@
+\section{Nonabelian routing and golden control}
+\label{sec:bt2974-bt2983}
+
+\paragraph{Exact route quotient.}
+A $D_4$ connection on the $45$ edges of $K_{10}$ has nine spanning-tree edges and
+$36$ fundamental chords.  Tree gauge fixing leaves the $36$ chord holonomies,
+complete up to one simultaneous conjugation.  Burnside's lemma gives
+\[
+\left|D_4^{36}/\!\sim\right|=\frac{2\,8^{36}+6\,4^{36}}8
+=81{,}129{,}638{,}418{,}148{,}456{,}557{,}941{,}239{,}054{,}336.
+\]
+The binary sign-curvature code is the abelian projection of this nonabelian
+connection data.
+
+\paragraph{Constructive $S_6$ two-graph.}
+The ten spread modes identify with the ten unordered $3+3$ partitions of a
+six-set.  Choosing one symbol identifies them with the two-subsets of a five-set,
+with Petersen adjacency given by disjointness.  Triples spanning an odd number of
+Petersen edges form a $2$-$(10,3,4)$ two-graph with $60$ blocks, point replication
+$18$, pair replication $4$, and even parity on every four-set.  All $720$ elements
+of the degree-ten $S_6$ action preserve this system, and an explicit relabelling
+matches it to the W33 spread-router curvature.
+
+\paragraph{Adaptive pair receiver.}
+For a known conjugate pair with squared overlap $1/3$, the project-local Pauli
+receiver has one-copy success
+\[
+\tfrac12(1+1/\sqrt3)=0.788675\ldots,
+\]
+while the unrestricted Helstrom value is
+\[
+\tfrac12(1+\sqrt{2/3})=0.908248\ldots.
+\]
+Bayesian adaptive individual measurements attain
+\[
+P_{\rm opt}(n)=\tfrac12\left(1+\sqrt{1-3^{-n}}\right)
+\]
+for every finite copy number.  The repository also evaluates explicitly typed
+synthetic readout-flip and erasure models.
+
+\paragraph{General-isotropic M36 frontier.}
+There are exactly
+\[
+\prod_{i=0}^{3}\frac{2^{2(6-i)}-1}{2^{4-i}-1}=213{,}648{,}435
+\]
+rank-four isotropic subspaces of $\mathbf F_2^{12}$.  The executable search
+partitions them into $495$ duplicate-free RREF pivot shards.  A deterministic
+pilot over $649{,}940$ distinct general subspaces found six non-CSS
+quadratic-collinearity projectors, all with clean success $1/27$; every accepted
+clean state was stabilizer.  The full $495$-shard sweep remains open.
+
+\paragraph{Golden selector.}
+The symmetric controller-word census shows that $R_4^2U_6$ is the shortest
+expanding word preserving a rational line.  It negates that line and induces
+\[
+\begin{pmatrix}0&-1\\-1&1\end{pmatrix}
+\]
+on the quotient, with polynomial $t^2-t-1$.  Thus the golden ratio is selected
+by shortest rational-line reduction and Fibonacci quotient action, not by minimum
+spectral radius among all words.  The mechanical word of slope $1/\varphi^2$ is
+balanced, has no consecutive expensive slots, and has factor complexity $n+1$.
+
+\paragraph{Layer boundary.}
+Modulo two, the Fibonacci quotient has order three and cycles the three nonzero
+vectors of $\mathbf F_2^2$, so $V_4\rtimes C_3\cong A_4$.  In contrast,
+$\operatorname{Aut}(D_4)$ has order eight and no order-three element.  Golden
+control therefore acts on the abelian syndrome shell and cannot lift faithfully
+to the nonabelian $D_4$ core.
+
+\paragraph{Scope.}
+The finite algebra and design statements are exact.  Detector profiles are
+synthetic, optical performance is unmeasured, and the complete general-isotropic
+M36 census is not yet claimed.
