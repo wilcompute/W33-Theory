@@ -1,0 +1,89 @@
+{
+  "hardware_path": "Event-ready pair-source herald before setting draw; route each time-bin coherently into parallel spatial rails; three-mode Fourier multiport with D_b phase; detect all 3 outputs; record all no-click outcomes; calibration and phase feedforward; analyze with predeclared four-MUB e-process.",
+  "no_hardware_claim": true,
+  "postselection_control": {
+    "basis_dependent_acceptance": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "false_positive_if_acceptance_defined_after_basis": true,
+    "matched_probabilities_by_four_MUB": [
+      1.0,
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "postselected_coincidence_matching": 1.0,
+    "separable_source": "|0>_R tensor |0>_S",
+    "unconditioned_four_basis_average": 0.5,
+    "valid_eventready_all_trial_matching": 0.25
+  },
+  "references": [
+    "arXiv:2601.14565 temporal-mode arbitrary 11-dimensional projection",
+    "Nature Communications 2024 d4 time-bin implementation central-bin selection",
+    "Light Science Applications 2026 multi-level temporal-interferometer losses"
+  ],
+  "status": "PASS_QUTRIT_TEMPORAL_DEMULTIPLEXER_AND_POSTSELECTION_NO_GO",
+  "temporal_mode_no_go": "A spatial 3x3 Reck decomposition is not alone a physical deterministic 3-time-bin unitary. The coherent time-to-spatial routing and inverse, optical buffer, and routing efficiencies must be included.",
+  "trusted_device_noise_budget": {
+    "gross_efficiency_without_temporal_routing": 0.7310249999999999,
+    "ideal_match_q": 0.8249900472808345,
+    "minimum_equal_side_temporal_routing_efficiency": 0.9195908020391815,
+    "minimum_source_visibility_no_extra_router": 0.5557493910049184,
+    "phase_sigma": 0.15,
+    "separable_null_p0": 0.51,
+    "source_visibility": 0.75,
+    "sweep": [
+      {
+        "gross_heralded_pair_detection_efficiency": 0.7310249999999999,
+        "gross_random_MUB_match": 0.603088349313472,
+        "temporal_demultiplexer_efficiency_each_analyzer": 1,
+        "witness_asymptotically_detectable": true
+      },
+      {
+        "gross_heralded_pair_detection_efficiency": 0.6597500624999999,
+        "gross_random_MUB_match": 0.5442872352554085,
+        "temporal_demultiplexer_efficiency_each_analyzer": 0.95,
+        "witness_asymptotically_detectable": true
+      },
+      {
+        "gross_heralded_pair_detection_efficiency": 0.6187395600000001,
+        "gross_random_MUB_match": 0.5104539788589227,
+        "temporal_demultiplexer_efficiency_each_analyzer": 0.92,
+        "witness_asymptotically_detectable": true
+      },
+      {
+        "gross_heralded_pair_detection_efficiency": 0.59213025,
+        "gross_random_MUB_match": 0.48850156294391234,
+        "temporal_demultiplexer_efficiency_each_analyzer": 0.9,
+        "witness_asymptotically_detectable": false
+      },
+      {
+        "gross_heralded_pair_detection_efficiency": 0.41120156249999995,
+        "gross_random_MUB_match": 0.339237196488828,
+        "temporal_demultiplexer_efficiency_each_analyzer": 0.75,
+        "witness_asymptotically_detectable": false
+      },
+      {
+        "gross_heralded_pair_detection_efficiency": 0.35820224999999994,
+        "gross_random_MUB_match": 0.29551329116360125,
+        "temporal_demultiplexer_efficiency_each_analyzer": 0.7,
+        "witness_asymptotically_detectable": false
+      },
+      {
+        "gross_heralded_pair_detection_efficiency": 0.18275624999999998,
+        "gross_random_MUB_match": 0.150772087328368,
+        "temporal_demultiplexer_efficiency_each_analyzer": 0.5,
+        "witness_asymptotically_detectable": false
+      },
+      {
+        "gross_heralded_pair_detection_efficiency": 0.08122499999999999,
+        "gross_random_MUB_match": 0.06700981659038577,
+        "temporal_demultiplexer_efficiency_each_analyzer": 0.3333333333333333,
+        "witness_asymptotically_detectable": false
+      }
+    ]
+  }
+}

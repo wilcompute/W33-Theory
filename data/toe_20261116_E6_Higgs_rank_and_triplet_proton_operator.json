@@ -1,0 +1,315 @@
+{
+  "SU5_triplet_exchange": {
+    "dimension_five_operator": "After integrating out K_triplet and barK_antitriplet with W=m Kbar K+y_u K QQ/eu+y_d barK QL/ud, W_eff=-y_u*y_d/m*(QQQL + u^c u^c d^c e^c index contractions), m=5v in this toy model.",
+    "down_Hbar_inserted_quartic_monomials": 12,
+    "down_type_counts": {
+      "('L', 'Q')": 6,
+      "('d_c', 'u_c')": 6
+    },
+    "explicit_down_vertices": [
+      {
+        "barK_anti_color_component": 20,
+        "intermediate_27_component": 12,
+        "matter_fields": [
+          "d_c",
+          "u_c"
+        ],
+        "matter_indices": [
+          10,
+          17
+        ],
+        "quartic_coefficient": 1
+      },
+      {
+        "barK_anti_color_component": 20,
+        "intermediate_27_component": 12,
+        "matter_fields": [
+          "d_c",
+          "u_c"
+        ],
+        "matter_indices": [
+          11,
+          16
+        ],
+        "quartic_coefficient": -1
+      },
+      {
+        "barK_anti_color_component": 20,
+        "intermediate_27_component": 12,
+        "matter_fields": [
+          "L",
+          "Q"
+        ],
+        "matter_indices": [
+          1,
+          18
+        ],
+        "quartic_coefficient": 1
+      },
+      {
+        "barK_anti_color_component": 20,
+        "intermediate_27_component": 12,
+        "matter_fields": [
+          "L",
+          "Q"
+        ],
+        "matter_indices": [
+          4,
+          19
+        ],
+        "quartic_coefficient": 1
+      },
+      {
+        "barK_anti_color_component": 23,
+        "intermediate_27_component": 13,
+        "matter_fields": [
+          "d_c",
+          "u_c"
+        ],
+        "matter_indices": [
+          9,
+          17
+        ],
+        "quartic_coefficient": -1
+      },
+      {
+        "barK_anti_color_component": 23,
+        "intermediate_27_component": 13,
+        "matter_fields": [
+          "d_c",
+          "u_c"
+        ],
+        "matter_indices": [
+          11,
+          15
+        ],
+        "quartic_coefficient": 1
+      },
+      {
+        "barK_anti_color_component": 23,
+        "intermediate_27_component": 13,
+        "matter_fields": [
+          "L",
+          "Q"
+        ],
+        "matter_indices": [
+          1,
+          21
+        ],
+        "quartic_coefficient": 1
+      },
+      {
+        "barK_anti_color_component": 23,
+        "intermediate_27_component": 13,
+        "matter_fields": [
+          "L",
+          "Q"
+        ],
+        "matter_indices": [
+          4,
+          22
+        ],
+        "quartic_coefficient": 1
+      },
+      {
+        "barK_anti_color_component": 26,
+        "intermediate_27_component": 14,
+        "matter_fields": [
+          "d_c",
+          "u_c"
+        ],
+        "matter_indices": [
+          9,
+          16
+        ],
+        "quartic_coefficient": 1
+      },
+      {
+        "barK_anti_color_component": 26,
+        "intermediate_27_component": 14,
+        "matter_fields": [
+          "d_c",
+          "u_c"
+        ],
+        "matter_indices": [
+          10,
+          15
+        ],
+        "quartic_coefficient": -1
+      },
+      {
+        "barK_anti_color_component": 26,
+        "intermediate_27_component": 14,
+        "matter_fields": [
+          "L",
+          "Q"
+        ],
+        "matter_indices": [
+          1,
+          24
+        ],
+        "quartic_coefficient": 1
+      },
+      {
+        "barK_anti_color_component": 26,
+        "intermediate_27_component": 14,
+        "matter_fields": [
+          "L",
+          "Q"
+        ],
+        "matter_indices": [
+          4,
+          25
+        ],
+        "quartic_coefficient": 1
+      }
+    ],
+    "explicit_up_vertices": [
+      {
+        "K_color_component": 20,
+        "cubic_coefficient": 1,
+        "matter_fields": [
+          "Q",
+          "Q"
+        ],
+        "matter_indices": [
+          21,
+          25
+        ]
+      },
+      {
+        "K_color_component": 20,
+        "cubic_coefficient": -1,
+        "matter_fields": [
+          "Q",
+          "Q"
+        ],
+        "matter_indices": [
+          22,
+          24
+        ]
+      },
+      {
+        "K_color_component": 20,
+        "cubic_coefficient": -1,
+        "matter_fields": [
+          "e_c",
+          "u_c"
+        ],
+        "matter_indices": [
+          6,
+          9
+        ]
+      },
+      {
+        "K_color_component": 23,
+        "cubic_coefficient": -1,
+        "matter_fields": [
+          "Q",
+          "Q"
+        ],
+        "matter_indices": [
+          18,
+          25
+        ]
+      },
+      {
+        "K_color_component": 23,
+        "cubic_coefficient": 1,
+        "matter_fields": [
+          "Q",
+          "Q"
+        ],
+        "matter_indices": [
+          19,
+          24
+        ]
+      },
+      {
+        "K_color_component": 23,
+        "cubic_coefficient": -1,
+        "matter_fields": [
+          "e_c",
+          "u_c"
+        ],
+        "matter_indices": [
+          6,
+          10
+        ]
+      },
+      {
+        "K_color_component": 26,
+        "cubic_coefficient": 1,
+        "matter_fields": [
+          "Q",
+          "Q"
+        ],
+        "matter_indices": [
+          18,
+          22
+        ]
+      },
+      {
+        "K_color_component": 26,
+        "cubic_coefficient": -1,
+        "matter_fields": [
+          "Q",
+          "Q"
+        ],
+        "matter_indices": [
+          19,
+          21
+        ]
+      },
+      {
+        "K_color_component": 26,
+        "cubic_coefficient": -1,
+        "matter_fields": [
+          "e_c",
+          "u_c"
+        ],
+        "matter_indices": [
+          6,
+          11
+        ]
+      }
+    ],
+    "light_matter_per_family": {
+      "L": 2,
+      "Q": 6,
+      "d_c": 3,
+      "e_c": 1,
+      "u_c": 3
+    },
+    "phenomenological_warning": "Generically allowed baryon/lepton violating SUSY dimension-5 operators. No proton lifetime predicted absent v, Yukawa matrices, squark dressing, superpartner masses, flavor suppressions, discrete symmetries.",
+    "spectator_K_triplet_components": [
+      20,
+      23,
+      26
+    ],
+    "spectator_color_triplet_mass_in_units_of_v": 5,
+    "up_cubic_coupling_monomials": 9,
+    "up_type_counts": {
+      "('Q', 'Q')": 6,
+      "('e_c', 'u_c')": 3
+    }
+  },
+  "full_higgs_rank": {
+    "centralizer_exact_Hessian_rank": 16,
+    "centralizer_trace_metric_det": "-8463329722368",
+    "charged_Hbar_H_sector_rank": 100,
+    "full_186_chiral_zeromodes_after_gauge_restore": 66,
+    "full_Higgs_sector_physical_zero_modes_modulo_complex_gauge": 0,
+    "gauge_fixed_Higgs_Hessian_rank": 120,
+    "gauge_fixed_Higgs_Hessian_shape": [
+      124,
+      124
+    ],
+    "gauge_fixed_adj_Cartan_and_root_centralizer_dim": 16,
+    "neutral_2by2_frame_sector_rank": 4,
+    "remaining_neutral_kernel": 4,
+    "verification_scope": "Full holomorphic Hessian of this specified superpotential on the centralizer gauge slice, not physical mass eigenvalues after D-term/gaugino mixing. Its four frame zeros are residual gauge."
+  },
+  "limitation": "Explicit E6-Lie algebra symmetry breaking and one chosen EFT vacuum; does not predict three families, scales, low energy flavor, stability against quantum and higher-dimensional operators.",
+  "status": "PASS_E6_FULL_GAUGE_FIXED_HESSIAN_AND_DIM5_TRIPLET_FALSIFIER"
+}

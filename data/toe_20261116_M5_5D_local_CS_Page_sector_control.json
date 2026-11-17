@@ -1,0 +1,206 @@
+{
+  "B2_CS_sector": "Term epsilon_ab B_a wedge dB_b, epsilon_ab=Nxy*[[0,1],[-1,0]], independent of mixed periods.",
+  "C3_A_CS_sector": "Term C3_5d wedge F_Ai with period vector Q_i=integral omega_i Gbg; companion A_i wedge F_C3 modulo 5D total derivatives.",
+  "M2_M5_charge_candidates": "A_i couples to M2 wrapped on each H2 generator (particle in 5D); B_a couples to M2 wrapped on T2 one-cycle (string in 5D); C3_5d couples to unwrapped M2 (membrane in 5D); magnetic duals involve M5.",
+  "Page_current": "With dG4=0 and EOM d(*G4)+(1/2)G4 wedge G4=0, J_Page=*G4+(1/2)C3 wedge G4 is locally closed; large C3 gauge shifts can change its integral.",
+  "STU_pure_Chern_Simons": "C_xyz=1 and its five other symmetric permutations.",
+  "background_and_local_reduction": "C3=(C3_5d)+(A_x*x+A_y*y+A_t*t)+(B_a*a+B_b*b)+3form_internal_scalars; G=dC+Gbg",
+  "explicit_cases": [
+    {
+      "B2_pairing_Smith_invariants": [
+        5,
+        5
+      ],
+      "background_G4_periods": [
+        5,
+        6,
+        6
+      ],
+      "cohomology_Smith_grading": {
+        "H0_H4": [
+          1
+        ],
+        "H1_H5": [
+          5,
+          5
+        ],
+        "H2_H6": [
+          1
+        ]
+      },
+      "five_D_external_C3_vector_F2_pairing": [
+        6,
+        6,
+        5
+      ],
+      "five_D_twoform_B2_pairing_matrix": [
+        [
+          0,
+          5
+        ],
+        [
+          -5,
+          0
+        ]
+      ],
+      "five_D_zero_flux_A_F_F_Chern_Simons_tensor_nonzero_entries": 6,
+      "integer_Smith_Q_gcd": 1,
+      "rank_B2_twisted_pairing": 2,
+      "rank_C3_to_A_flux_matrix": 1
+    },
+    {
+      "B2_pairing_Smith_invariants": [
+        6,
+        6
+      ],
+      "background_G4_periods": [
+        6,
+        6,
+        6
+      ],
+      "cohomology_Smith_grading": {
+        "H0_H4": [
+          6
+        ],
+        "H1_H5": [
+          6,
+          6
+        ],
+        "H2_H6": [
+          6
+        ]
+      },
+      "five_D_external_C3_vector_F2_pairing": [
+        6,
+        6,
+        6
+      ],
+      "five_D_twoform_B2_pairing_matrix": [
+        [
+          0,
+          6
+        ],
+        [
+          -6,
+          0
+        ]
+      ],
+      "five_D_zero_flux_A_F_F_Chern_Simons_tensor_nonzero_entries": 6,
+      "integer_Smith_Q_gcd": 6,
+      "rank_B2_twisted_pairing": 2,
+      "rank_C3_to_A_flux_matrix": 1
+    },
+    {
+      "B2_pairing_Smith_invariants": [
+        100,
+        100
+      ],
+      "background_G4_periods": [
+        100,
+        101,
+        100
+      ],
+      "cohomology_Smith_grading": {
+        "H0_H4": [
+          1
+        ],
+        "H1_H5": [
+          100,
+          100
+        ],
+        "H2_H6": [
+          1
+        ]
+      },
+      "five_D_external_C3_vector_F2_pairing": [
+        100,
+        101,
+        100
+      ],
+      "five_D_twoform_B2_pairing_matrix": [
+        [
+          0,
+          100
+        ],
+        [
+          -100,
+          0
+        ]
+      ],
+      "five_D_zero_flux_A_F_F_Chern_Simons_tensor_nonzero_entries": 6,
+      "integer_Smith_Q_gcd": 1,
+      "rank_B2_twisted_pairing": 2,
+      "rank_C3_to_A_flux_matrix": 1
+    },
+    {
+      "B2_pairing_Smith_invariants": [],
+      "background_G4_periods": [
+        0,
+        7,
+        8
+      ],
+      "cohomology_Smith_grading": {
+        "H0_H4": [
+          1
+        ],
+        "H1_H5": [],
+        "H2_H6": [
+          1
+        ]
+      },
+      "five_D_external_C3_vector_F2_pairing": [
+        8,
+        7,
+        0
+      ],
+      "five_D_twoform_B2_pairing_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "five_D_zero_flux_A_F_F_Chern_Simons_tensor_nonzero_entries": 6,
+      "integer_Smith_Q_gcd": 1,
+      "rank_B2_twisted_pairing": 0,
+      "rank_C3_to_A_flux_matrix": 1
+    },
+    {
+      "B2_pairing_Smith_invariants": [],
+      "background_G4_periods": [
+        0,
+        0,
+        0
+      ],
+      "cohomology_Smith_grading": {
+        "H0_H4": [],
+        "H1_H5": [],
+        "H2_H6": []
+      },
+      "five_D_external_C3_vector_F2_pairing": [
+        0,
+        0,
+        0
+      ],
+      "five_D_twoform_B2_pairing_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "five_D_zero_flux_A_F_F_Chern_Simons_tensor_nonzero_entries": 6,
+      "integer_Smith_Q_gcd": 0,
+      "rank_B2_twisted_pairing": 0,
+      "rank_C3_to_A_flux_matrix": 0
+    }
+  ],
+  "physical_globally_nontrivial": "Local expansion is not sufficient to fix quantum CS/BF levels because Cbg is a non-global differential cocycle and the C-field action has shifted quantization and quadratic refinements.",
+  "status": "PASS_FORMAL_5D_CS_DECOMPOSITION_C3_A_AND_B2_PAIRINGS"
+}

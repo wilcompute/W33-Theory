@@ -1,0 +1,67 @@
+{
+  "controlled_eight_derivative_thresholds": {
+    "actual_C_required_for_KK_gap": "Not computable without complete 11D fluctuation operator and higher derivative action.",
+    "bounded_N_independent_C_cannot_remove_O1_KK_gap": "True IF physical unequal-flux mode converges smoothly to the equal-flux KK mode and the EFT correction remains uniformly O(C/N^2).",
+    "homogeneous_required_coefficient_as_N_to_inf": "(3645*pi^2)/4 = approx 8993.677, dimensionless coefficient in +C*(lp/L)^6 convention",
+    "square_KK_PROXY_required_coefficient": "C/N^2 > (9*pi/2)^2 * gap = approx 203.24592455588652"
+  },
+  "equal_flux_all_torus_shapes_minimum_BF_gap": 0.46354185041878715,
+  "equal_flux_first_square_mode": {
+    "BF_gap": 1.0169440813078374,
+    "lambda": 9.42477796076938,
+    "mass_m2L2": -5.016944081307837
+  },
+  "finite_N_geometry_and_proxy": [
+    {
+      "N": 10,
+      "eight_derivative_expansion_epsilon": 5.083960725129296e-05,
+      "equal_operator_at_deformed_geometry_proxy_m2L2": -5.237985601759268,
+      "equal_operator_proxy_gap": 1.2379856017592683,
+      "eta": 0.6336872976824344,
+      "exact_homogeneous_BF_gap": 0.34979843707153135,
+      "lambda_first": 8.785971452168086,
+      "minimum_C_to_lift_PROXY_KK_by_C_epsilon": 24350.809707086864,
+      "minimum_C_to_lift_homogeneous_by_C_epsilon": 6880.431537217181,
+      "physical_KK_gap_is_NOT_computed": true
+    },
+    {
+      "N": 100,
+      "eight_derivative_expansion_epsilon": 5.004504544026412e-07,
+      "equal_operator_at_deformed_geometry_proxy_m2L2": -5.034512038954453,
+      "equal_operator_proxy_gap": 1.0345120389544533,
+      "eta": 0.5149132049864158,
+      "exact_homogeneous_BF_gap": 0.004446837761457312,
+      "lambda_first": 9.375454783679109,
+      "minimum_C_to_lift_PROXY_KK_by_C_epsilon": 2067161.7536830704,
+      "minimum_C_to_lift_homogeneous_by_C_epsilon": 8885.670344260641,
+      "physical_KK_gap_is_NOT_computed": true
+    },
+    {
+      "N": 1000,
+      "eight_derivative_expansion_epsilon": 5.0035252384780785e-09,
+      "equal_operator_at_deformed_geometry_proxy_m2L2": -5.01863402007378,
+      "equal_operator_proxy_gap": 1.0186340200737796,
+      "eta": 0.5014992380185931,
+      "exact_homogeneous_BF_gap": 4.4954166423078426e-05,
+      "lambda_first": 9.420043224198386,
+      "minimum_C_to_lift_PROXY_KK_by_C_epsilon": 203583268.10071558,
+      "minimum_C_to_lift_homogeneous_by_C_epsilon": 8984.498784451445,
+      "physical_KK_gap_is_NOT_computed": true
+    },
+    {
+      "N": 10000,
+      "eight_derivative_expansion_epsilon": 5.003515341657211e-11,
+      "equal_operator_at_deformed_geometry_proxy_m2L2": -5.017112390832118,
+      "equal_operator_proxy_gap": 1.0171123908321178,
+      "eta": 0.5001499924880018,
+      "exact_homogeneous_BF_gap": 4.4995491648592625e-07,
+      "lambda_first": 9.424306498068827,
+      "minimum_C_to_lift_PROXY_KK_by_C_epsilon": 20327955874.623955,
+      "minimum_C_to_lift_homogeneous_by_C_epsilon": 8992.775793846113,
+      "physical_KK_gap_is_NOT_computed": true
+    }
+  ],
+  "limitations": "A physical operator-norm K/N bound, full E6-metric/C3 KK matrix, flux-dependent R4 coefficients and corrected compactification have not been computed.",
+  "spectral_continuity_theorem": "For canonical self-adjoint gauge-constrained physical matrices H_N with ||H_N-H_equal|| ->0, Weyl's inequality gives an eigenvalue <=m_equal+||H_N-H_equal||. As soon as operator difference <gap_equal, it lies below -4.",
+  "status": "PASS_NEAREQUAL_HOMOGENEOUS_VS_TORUS_BF_NONUNIFORM_LIMITS"
+}
