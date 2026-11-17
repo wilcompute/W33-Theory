@@ -1,0 +1,33 @@
+{
+  "VEV_Y_min_GeV_AR_1_W_0p1": 260110571220037.84,
+  "caution": "Exact current projector != physically normalized full decay amplitude. Need all gauge bosons, flavor rotations, chiral Fierz basis, matching factors, RG, wavefunction renormalization, interference, hadronic W0, and gauge-field normalization. Current bound is conditional, not a predicted proton lifetime.",
+  "charge_five_gauge_boson_mass_formula": "M_X=5*g_GUT*v_Y, for canonical reduced adjoint trace metric, from parallel E6 triplet-filter gauge-current certificate",
+  "coefficient_formula": "C6=AR*kappa/(25*v_Y\u00b2)",
+  "experimental_limit_years": 2.4e+34,
+  "experimental_source": "Super-Kamiokande 2025 talk: p->e+pi0 >2.4e34 years at 90% CL with 450 kt yr https://www-sk.icrr.u-tokyo.ac.jp/~nakahata_s/kakenhi-kibanS/talk/Nakahata_SuperK_KMI2025_250305.pdf",
+  "physics_key_point": "The Higgs-leg triplet polynomial only filters dimension-five holomorphic couplings, not this independent gauge-exchange dimension-six channel.",
+  "reference_high": {
+    "RG_factor": 1,
+    "VEV_Y_GeV": 1000000000000000.0,
+    "current_projector_abs": 0.16666666666666666,
+    "effective_C6_GeV_minus2": 6.666666666666665e-33,
+    "g_GUT": 0.7,
+    "gauge_boson_MX_GeV": 3500000000000000.0,
+    "passes_single_operator_bound": true,
+    "single_operator_partial_lifetime_years": 5.2429924268184007e+36
+  },
+  "reference_low": {
+    "RG_factor": 1,
+    "VEV_Y_GeV": 100000000000000.0,
+    "current_projector_abs": 0.16666666666666666,
+    "effective_C6_GeV_minus2": 6.666666666666665e-31,
+    "g_GUT": 0.7,
+    "gauge_boson_MX_GeV": 350000000000000.0,
+    "passes_single_operator_bound": false,
+    "single_operator_partial_lifetime_years": 5.2429924268184006e+32
+  },
+  "representative_Wpi_GeV2": 0.1,
+  "single_operator_C6_max_GeV_minus2": 9.853550240826343e-32,
+  "status": "PASS_E6_CHARGE5_GAUGE_D6_PROTON_EPI0_CONDITIONAL_BOUND",
+  "trace_metric_projector_kappa": 0.16666666666666666
+}
