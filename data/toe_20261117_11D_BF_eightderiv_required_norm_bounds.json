@@ -1,0 +1,149 @@
+{
+  "BF_deficit_vs_d_at_lambda3pi": [
+    {
+      "BF_deficit": 1.0169440813078463,
+      "flux_asymmetry": 0.0,
+      "lambda": 9.42477796076938,
+      "m0_squared_AdS5": -5.016944081307846,
+      "max_normalized_8derivative_C_if_1_over_N_squared_bound": {
+        "10": 101.69440813078464,
+        "100": 10169.440813078463,
+        "30": 915.2496731770617,
+        "50": 2542.360203269616,
+        "500": 254236.0203269616
+      }
+    },
+    {
+      "BF_deficit": 1.008757561626263,
+      "flux_asymmetry": 0.25,
+      "lambda": 9.42477796076938,
+      "m0_squared_AdS5": -5.008757561626263,
+      "max_normalized_8derivative_C_if_1_over_N_squared_bound": {
+        "10": 100.87575616262629,
+        "100": 10087.57561626263,
+        "30": 907.8818054636366,
+        "50": 2521.8939040656574,
+        "500": 252189.39040656574
+      }
+    },
+    {
+      "BF_deficit": 0.9841280837341735,
+      "flux_asymmetry": 0.5,
+      "lambda": 9.42477796076938,
+      "m0_squared_AdS5": -4.9841280837341735,
+      "max_normalized_8derivative_C_if_1_over_N_squared_bound": {
+        "10": 98.41280837341735,
+        "100": 9841.280837341736,
+        "30": 885.7152753607561,
+        "50": 2460.320209335434,
+        "500": 246032.0209335434
+      }
+    },
+    {
+      "BF_deficit": 0.9428624794156848,
+      "flux_asymmetry": 0.75,
+      "lambda": 9.42477796076938,
+      "m0_squared_AdS5": -4.942862479415685,
+      "max_normalized_8derivative_C_if_1_over_N_squared_bound": {
+        "10": 94.28624794156848,
+        "100": 9428.624794156847,
+        "30": 848.5762314741164,
+        "50": 2357.156198539212,
+        "500": 235715.6198539212
+      }
+    },
+    {
+      "BF_deficit": 0.884697715215431,
+      "flux_asymmetry": 1.0,
+      "lambda": 9.42477796076938,
+      "m0_squared_AdS5": -4.884697715215431,
+      "max_normalized_8derivative_C_if_1_over_N_squared_bound": {
+        "10": 88.4697715215431,
+        "100": 8846.97715215431,
+        "30": 796.2279436938878,
+        "50": 2211.7442880385775,
+        "500": 221174.42880385774
+      }
+    }
+  ],
+  "eight_derivative_scaling_example": "If physical normalized correction admits a separately proven bound C/N\u00b2, sufficient N>sqrt(C/delta_BF). C was NOT computed; values in table are maximum C permitted at the listed integer N, NOT a physical C estimate.",
+  "exact_minmax_sufficient_condition": "For K>0 and a negative BF Rayleigh subspace, if ||K^-1/2 dK K^-1/2||<1 and ||K^-1/2 (dM+4dK) K^-1/2||<delta_BF, then K+dK stays positive and corrected M+4K+dM+4dK remains negative on at least one admissible vector.",
+  "nonlinear_branch": "The parallel repo's nonlinear unequal-flux modulated branch and its 6th-order folds cannot be certified stable by this product-background bound; they require a separate corrected operator.",
+  "offblock_mixing_and_rankone_shift_checks": [
+    {
+      "d": 0.0,
+      "lowest_BF_deficit": 1.0169440813078516,
+      "negative_eigen_count": 1,
+      "offblock_strength": 0.0
+    },
+    {
+      "d": 0.0,
+      "lowest_BF_deficit": 1.0916266985907637,
+      "negative_eigen_count": 1,
+      "offblock_strength": 1.0
+    },
+    {
+      "d": 0.0,
+      "lowest_BF_deficit": 241.5928367395494,
+      "negative_eigen_count": 3,
+      "offblock_strength": 100.0
+    },
+    {
+      "d": 0.0,
+      "lowest_BF_deficit": 2935.00366328228,
+      "negative_eigen_count": 3,
+      "offblock_strength": 1000.0
+    },
+    {
+      "d": 0.5,
+      "lowest_BF_deficit": 0.9841280837341699,
+      "negative_eigen_count": 1,
+      "offblock_strength": 0.0
+    },
+    {
+      "d": 0.5,
+      "lowest_BF_deficit": 1.1156265334338054,
+      "negative_eigen_count": 1,
+      "offblock_strength": 1.0
+    },
+    {
+      "d": 0.5,
+      "lowest_BF_deficit": 299.21378475815044,
+      "negative_eigen_count": 3,
+      "offblock_strength": 100.0
+    },
+    {
+      "d": 0.5,
+      "lowest_BF_deficit": 1753.5920666472098,
+      "negative_eigen_count": 3,
+      "offblock_strength": 1000.0
+    },
+    {
+      "d": 1.0,
+      "lowest_BF_deficit": 0.884697715215431,
+      "negative_eigen_count": 1,
+      "offblock_strength": 0.0
+    },
+    {
+      "d": 1.0,
+      "lowest_BF_deficit": 1.0550378987026976,
+      "negative_eigen_count": 1,
+      "offblock_strength": 1.0
+    },
+    {
+      "d": 1.0,
+      "lowest_BF_deficit": 210.30927308160966,
+      "negative_eigen_count": 3,
+      "offblock_strength": 100.0
+    },
+    {
+      "d": 1.0,
+      "lowest_BF_deficit": 2658.0403693771987,
+      "negative_eigen_count": 3,
+      "offblock_strength": 1000.0
+    }
+  ],
+  "physical_limit": "The actual 11D supersymmetric R4, mixed G4 and C3X8 eight-derivative kinetic/mass Hessians, corrected metric and quantum flux quantization are NOT known here. An external field redefinition can shift operator entries; bound requires a fixed canonical gauge-compatible physical normalization and transported admissible subspace.",
+  "reference_operator": "current master toe_20261117_11D_unequal_flux_scalar_operator.py; positive-norm, gauge-constrained five-scalar two-derivative pencil",
+  "status": "PASS_11D_5SCALAR_BF_KNORMALIZED_EIGHTDERIV_REQUIRED_BOUNDS"
+}

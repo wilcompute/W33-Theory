@@ -1,0 +1,48 @@
+{
+  "series": {
+    "eighth_coefficient": -6.407195034557437e-05,
+    "exact_sixth_coefficient_unscaled": "-d*(-d + z**2)*(d**2 + 10*d*z**2 + z**4)/(15*z**2*(d + z**2)**4)",
+    "higher_order_warning": "The O(phi^8) coefficient is negative in the benchmark, so the positive quartic by itself is NOT a proof of global shape stability at arbitrary messenger-scale VEV.",
+    "quartic_coefficient": 0.00033343189441338946,
+    "sixth_coefficient": 1.4156035920155915e-06
+  },
+  "shape": {
+    "4plus1_minus_3plus2": 2.2226076536700778e-07,
+    "SU2_shape_scalar_curvature": 3.5565526562678045e-05,
+    "SU3_shape_scalar_curvature": 8.891918923874324e-06,
+    "both_shape_curvatures_positive": true,
+    "converged_other_stationary_energies": 57,
+    "converged_to_3plus2_energy": 7,
+    "first_five_optimizer_controls": [
+      {
+        "result_energy": 0.012435358053799493,
+        "succeeded": false
+      },
+      {
+        "result_energy": 0.012435352787559742,
+        "succeeded": false
+      },
+      {
+        "result_energy": 0.012435386008741679,
+        "succeeded": false
+      },
+      {
+        "result_energy": 0.012435355205357133,
+        "succeeded": false
+      },
+      {
+        "result_energy": 0.012435353847096365,
+        "succeeded": false
+      }
+    ],
+    "fixed_vev_norm": 0.2,
+    "important_limitation": "A constrained fixed-norm 4-real-variable search in a toy SU5 CW potential. Other vacua, E6 degrees of freedom, gauge loops and finite temperature are NOT included; local curvature and finite multistart searches do not establish the full global minimum.",
+    "lowest_multistart_energy": 0.012435352787559742,
+    "mirror_log_potential_3plus2": 0.012435352787548506,
+    "mirror_log_potential_4plus1": 0.012435575048313873,
+    "multistart_random_seed": 20261117,
+    "multistart_trials": 64,
+    "quartic_sextic_predicted_difference": 2.223288248238068e-07
+  },
+  "status": "PASS_SU5_FULL_LOG_QUARTIC_SIXTH_EIGHTH_AND_LOCAL_32_SHAPE"
+}

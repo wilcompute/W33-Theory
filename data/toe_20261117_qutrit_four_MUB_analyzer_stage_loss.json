@@ -1,0 +1,532 @@
+{
+  "MUBs": "Computational Z and eigenbases of XZ^b b=0,1,2; 3x3 Fourier/quadratic chirp equivalents",
+  "analyzer_compilation": "Each requested projective measurement U^dagger reconstructed from at most 3 adjacent two-rail Givens rotations and diagonal phase shifts; this is a unitary decomposition not a fabricated time-bin experiment.",
+  "basis_pairs_unbiased_verified": 6,
+  "event_ready_loss": {
+    "assumed_total_coupler_stages_two_analyzers": 6,
+    "detector_each": 0.9,
+    "memory_each_reference": 0.902,
+    "minimum_each_coupler_at_router_99p5_percent": 0.9995601518528704,
+    "minimum_each_coupler_with_perfect_router": 0.9978914339720126,
+    "no_go_specific_to_witness": "For this gross event-ready four-MUB binary match witness, symmetric 2-memory 90.2% scenario and path .95, two 3-stage qutrit analyzers at 99.5% throughput per stage make p<=.51 even with 100% temporal routers. Not a quantum-entanglement no-go, not a general optical-hardware law.",
+    "no_more_than_3_mixers_per_qutrit_analyzer": true,
+    "samples": [
+      {
+        "coupler_stage_throughput": 0.99,
+        "gross_match": 0.48654414322517675,
+        "memory_arms": 1,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9977992712882168,
+        "router_each": 0.95,
+        "total_six_stage_throughput": 0.941480149401,
+        "trusted_witness_crosses_p0": false
+      },
+      {
+        "coupler_stage_throughput": 0.995,
+        "gross_match": 0.5014753221025348,
+        "memory_arms": 1,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9977992712882168,
+        "router_each": 0.95,
+        "total_six_stage_throughput": 0.9703725093562656,
+        "trusted_witness_crosses_p0": false
+      },
+      {
+        "coupler_stage_throughput": 0.999,
+        "gross_match": 0.5136934295556723,
+        "memory_arms": 1,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9977992712882168,
+        "router_each": 0.95,
+        "total_six_stage_throughput": 0.994014980014994,
+        "trusted_witness_crosses_p0": true
+      },
+      {
+        "coupler_stage_throughput": 0.9995,
+        "gross_match": 0.515237983964677,
+        "memory_arms": 1,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9977992712882168,
+        "router_each": 0.95,
+        "total_six_stage_throughput": 0.9970037475009377,
+        "trusted_witness_crosses_p0": true
+      },
+      {
+        "coupler_stage_throughput": 0.9998,
+        "gross_match": 0.5161665728280527,
+        "memory_arms": 1,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9977992712882168,
+        "router_each": 0.95,
+        "total_six_stage_throughput": 0.9988005998400241,
+        "trusted_witness_crosses_p0": true
+      },
+      {
+        "coupler_stage_throughput": 1.0,
+        "gross_match": 0.5167864065267141,
+        "memory_arms": 1,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9977992712882168,
+        "router_each": 0.95,
+        "total_six_stage_throughput": 1.0,
+        "trusted_witness_crosses_p0": true
+      },
+      {
+        "coupler_stage_throughput": 0.99,
+        "gross_match": 0.5283788529362834,
+        "memory_arms": 1,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9841757336982442,
+        "router_each": 0.99,
+        "total_six_stage_throughput": 0.941480149401,
+        "trusted_witness_crosses_p0": true
+      },
+      {
+        "coupler_stage_throughput": 0.995,
+        "gross_match": 0.5445938650334564,
+        "memory_arms": 1,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9841757336982442,
+        "router_each": 0.99,
+        "total_six_stage_throughput": 0.9703725093562656,
+        "trusted_witness_crosses_p0": true
+      },
+      {
+        "coupler_stage_throughput": 0.999,
+        "gross_match": 0.5578625266565257,
+        "memory_arms": 1,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9841757336982442,
+        "router_each": 0.99,
+        "total_six_stage_throughput": 0.994014980014994,
+        "trusted_witness_crosses_p0": true
+      },
+      {
+        "coupler_stage_throughput": 0.9995,
+        "gross_match": 0.5595398870734404,
+        "memory_arms": 1,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9841757336982442,
+        "router_each": 0.99,
+        "total_six_stage_throughput": 0.9970037475009377,
+        "trusted_witness_crosses_p0": true
+      },
+      {
+        "coupler_stage_throughput": 0.9998,
+        "gross_match": 0.5605483191454564,
+        "memory_arms": 1,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9841757336982442,
+        "router_each": 0.99,
+        "total_six_stage_throughput": 0.9988005998400241,
+        "trusted_witness_crosses_p0": true
+      },
+      {
+        "coupler_stage_throughput": 1.0,
+        "gross_match": 0.5612214482402577,
+        "memory_arms": 1,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9841757336982442,
+        "router_each": 0.99,
+        "total_six_stage_throughput": 1.0,
+        "trusted_witness_crosses_p0": true
+      },
+      {
+        "coupler_stage_throughput": 0.99,
+        "gross_match": 0.5337294907440506,
+        "memory_arms": 1,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9825244290298731,
+        "router_each": 0.995,
+        "total_six_stage_throughput": 0.941480149401,
+        "trusted_witness_crosses_p0": true
+      },
+      {
+        "coupler_stage_throughput": 0.995,
+        "gross_match": 0.5501087044482682,
+        "memory_arms": 1,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9825244290298731,
+        "router_each": 0.995,
+        "total_six_stage_throughput": 0.9703725093562656,
+        "trusted_witness_crosses_p0": true
+      },
+      {
+        "coupler_stage_throughput": 0.999,
+        "gross_match": 0.5635117314081491,
+        "memory_arms": 1,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9825244290298731,
+        "router_each": 0.995,
+        "total_six_stage_throughput": 0.994014980014994,
+        "trusted_witness_crosses_p0": true
+      },
+      {
+        "coupler_stage_throughput": 0.9995,
+        "gross_match": 0.5652060776450187,
+        "memory_arms": 1,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9825244290298731,
+        "router_each": 0.995,
+        "total_six_stage_throughput": 0.9970037475009377,
+        "trusted_witness_crosses_p0": true
+      },
+      {
+        "coupler_stage_throughput": 0.9998,
+        "gross_match": 0.5662247216222636,
+        "memory_arms": 1,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9825244290298731,
+        "router_each": 0.995,
+        "total_six_stage_throughput": 0.9988005998400241,
+        "trusted_witness_crosses_p0": true
+      },
+      {
+        "coupler_stage_throughput": 1.0,
+        "gross_match": 0.5669046671707593,
+        "memory_arms": 1,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9825244290298731,
+        "router_each": 0.995,
+        "total_six_stage_throughput": 1.0,
+        "trusted_witness_crosses_p0": true
+      },
+      {
+        "coupler_stage_throughput": 0.99,
+        "gross_match": 0.539107083906013,
+        "memory_arms": 1,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9808841514737275,
+        "router_each": 1.0,
+        "total_six_stage_throughput": 0.941480149401,
+        "trusted_witness_crosses_p0": true
+      },
+      {
+        "coupler_stage_throughput": 0.995,
+        "gross_match": 0.5556513264294015,
+        "memory_arms": 1,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9808841514737275,
+        "router_each": 1.0,
+        "total_six_stage_throughput": 0.9703725093562656,
+        "trusted_witness_crosses_p0": true
+      },
+      {
+        "coupler_stage_throughput": 0.999,
+        "gross_match": 0.5691893956295538,
+        "memory_arms": 1,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9808841514737275,
+        "router_each": 1.0,
+        "total_six_stage_throughput": 0.994014980014994,
+        "trusted_witness_crosses_p0": true
+      },
+      {
+        "coupler_stage_throughput": 0.9995,
+        "gross_match": 0.5709008132572599,
+        "memory_arms": 1,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9808841514737275,
+        "router_each": 1.0,
+        "total_six_stage_throughput": 0.9970037475009377,
+        "trusted_witness_crosses_p0": true
+      },
+      {
+        "coupler_stage_throughput": 0.9998,
+        "gross_match": 0.5719297205850999,
+        "memory_arms": 1,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9808841514737275,
+        "router_each": 1.0,
+        "total_six_stage_throughput": 0.9988005998400241,
+        "trusted_witness_crosses_p0": true
+      },
+      {
+        "coupler_stage_throughput": 1.0,
+        "gross_match": 0.5726165169271071,
+        "memory_arms": 1,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9808841514737275,
+        "router_each": 1.0,
+        "total_six_stage_throughput": 1.0,
+        "trusted_witness_crosses_p0": true
+      },
+      {
+        "coupler_stage_throughput": 0.99,
+        "gross_match": 0.43886281718910947,
+        "memory_arms": 2,
+        "minimum_equal_coupler_stage_throughput_to_violate": 1.0150998404307454,
+        "router_each": 0.95,
+        "total_six_stage_throughput": 0.941480149401,
+        "trusted_witness_crosses_p0": false
+      },
+      {
+        "coupler_stage_throughput": 0.995,
+        "gross_match": 0.4523307405364864,
+        "memory_arms": 2,
+        "minimum_equal_coupler_stage_throughput_to_violate": 1.0150998404307454,
+        "router_each": 0.95,
+        "total_six_stage_throughput": 0.9703725093562656,
+        "trusted_witness_crosses_p0": false
+      },
+      {
+        "coupler_stage_throughput": 0.999,
+        "gross_match": 0.46335147345921646,
+        "memory_arms": 2,
+        "minimum_equal_coupler_stage_throughput_to_violate": 1.0150998404307454,
+        "router_each": 0.95,
+        "total_six_stage_throughput": 0.994014980014994,
+        "trusted_witness_crosses_p0": false
+      },
+      {
+        "coupler_stage_throughput": 0.9995,
+        "gross_match": 0.4647446615361387,
+        "memory_arms": 2,
+        "minimum_equal_coupler_stage_throughput_to_violate": 1.0150998404307454,
+        "router_each": 0.95,
+        "total_six_stage_throughput": 0.9970037475009377,
+        "trusted_witness_crosses_p0": false
+      },
+      {
+        "coupler_stage_throughput": 0.9998,
+        "gross_match": 0.4655822486909035,
+        "memory_arms": 2,
+        "minimum_equal_coupler_stage_throughput_to_violate": 1.0150998404307454,
+        "router_each": 0.95,
+        "total_six_stage_throughput": 0.9988005998400241,
+        "trusted_witness_crosses_p0": false
+      },
+      {
+        "coupler_stage_throughput": 1.0,
+        "gross_match": 0.4661413386870962,
+        "memory_arms": 2,
+        "minimum_equal_coupler_stage_throughput_to_violate": 1.0150998404307454,
+        "router_each": 0.95,
+        "total_six_stage_throughput": 1.0,
+        "trusted_witness_crosses_p0": false
+      },
+      {
+        "coupler_stage_throughput": 0.99,
+        "gross_match": 0.4765977253485276,
+        "memory_arms": 2,
+        "minimum_equal_coupler_stage_throughput_to_violate": 1.0012400880420418,
+        "router_each": 0.99,
+        "total_six_stage_throughput": 0.941480149401,
+        "trusted_witness_crosses_p0": false
+      },
+      {
+        "coupler_stage_throughput": 0.995,
+        "gross_match": 0.49122366626017766,
+        "memory_arms": 2,
+        "minimum_equal_coupler_stage_throughput_to_violate": 1.0012400880420418,
+        "router_each": 0.99,
+        "total_six_stage_throughput": 0.9703725093562656,
+        "trusted_witness_crosses_p0": false
+      },
+      {
+        "coupler_stage_throughput": 0.999,
+        "gross_match": 0.5031919990441862,
+        "memory_arms": 2,
+        "minimum_equal_coupler_stage_throughput_to_violate": 1.0012400880420418,
+        "router_each": 0.99,
+        "total_six_stage_throughput": 0.994014980014994,
+        "trusted_witness_crosses_p0": false
+      },
+      {
+        "coupler_stage_throughput": 0.9995,
+        "gross_match": 0.5047049781402433,
+        "memory_arms": 2,
+        "minimum_equal_coupler_stage_throughput_to_violate": 1.0012400880420418,
+        "router_each": 0.99,
+        "total_six_stage_throughput": 0.9970037475009377,
+        "trusted_witness_crosses_p0": false
+      },
+      {
+        "coupler_stage_throughput": 0.9998,
+        "gross_match": 0.5056145838692017,
+        "memory_arms": 2,
+        "minimum_equal_coupler_stage_throughput_to_violate": 1.0012400880420418,
+        "router_each": 0.99,
+        "total_six_stage_throughput": 0.9988005998400241,
+        "trusted_witness_crosses_p0": false
+      },
+      {
+        "coupler_stage_throughput": 1.0,
+        "gross_match": 0.5062217463127124,
+        "memory_arms": 2,
+        "minimum_equal_coupler_stage_throughput_to_violate": 1.0012400880420418,
+        "router_each": 0.99,
+        "total_six_stage_throughput": 1.0,
+        "trusted_witness_crosses_p0": false
+      },
+      {
+        "coupler_stage_throughput": 0.99,
+        "gross_match": 0.48142400065113367,
+        "memory_arms": 2,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9995601518528704,
+        "router_each": 0.995,
+        "total_six_stage_throughput": 0.941480149401,
+        "trusted_witness_crosses_p0": false
+      },
+      {
+        "coupler_stage_throughput": 0.995,
+        "gross_match": 0.49619805141233797,
+        "memory_arms": 2,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9995601518528704,
+        "router_each": 0.995,
+        "total_six_stage_throughput": 0.9703725093562656,
+        "trusted_witness_crosses_p0": false
+      },
+      {
+        "coupler_stage_throughput": 0.999,
+        "gross_match": 0.5082875817301505,
+        "memory_arms": 2,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9995601518528704,
+        "router_each": 0.995,
+        "total_six_stage_throughput": 0.994014980014994,
+        "trusted_witness_crosses_p0": false
+      },
+      {
+        "coupler_stage_throughput": 0.9995,
+        "gross_match": 0.509815882035807,
+        "memory_arms": 2,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9995601518528704,
+        "router_each": 0.995,
+        "total_six_stage_throughput": 0.9970037475009377,
+        "trusted_witness_crosses_p0": false
+      },
+      {
+        "coupler_stage_throughput": 0.9998,
+        "gross_match": 0.5107346989032817,
+        "memory_arms": 2,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9995601518528704,
+        "router_each": 0.995,
+        "total_six_stage_throughput": 0.9988005998400241,
+        "trusted_witness_crosses_p0": true
+      },
+      {
+        "coupler_stage_throughput": 1.0,
+        "gross_match": 0.5113480097880249,
+        "memory_arms": 2,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9995601518528704,
+        "router_each": 0.995,
+        "total_six_stage_throughput": 1.0,
+        "trusted_witness_crosses_p0": true
+      },
+      {
+        "coupler_stage_throughput": 0.99,
+        "gross_match": 0.4862745896832238,
+        "memory_arms": 2,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9978914339720126,
+        "router_each": 1.0,
+        "total_six_stage_throughput": 0.941480149401,
+        "trusted_witness_crosses_p0": false
+      },
+      {
+        "coupler_stage_throughput": 0.995,
+        "gross_match": 0.5011974964393201,
+        "memory_arms": 2,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9978914339720126,
+        "router_each": 1.0,
+        "total_six_stage_throughput": 0.9703725093562656,
+        "trusted_witness_crosses_p0": false
+      },
+      {
+        "coupler_stage_throughput": 0.999,
+        "gross_match": 0.5134088348578576,
+        "memory_arms": 2,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9978914339720126,
+        "router_each": 1.0,
+        "total_six_stage_throughput": 0.994014980014994,
+        "trusted_witness_crosses_p0": true
+      },
+      {
+        "coupler_stage_throughput": 0.9995,
+        "gross_match": 0.5149525335580484,
+        "memory_arms": 2,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9978914339720126,
+        "router_each": 1.0,
+        "total_six_stage_throughput": 0.9970037475009377,
+        "trusted_witness_crosses_p0": true
+      },
+      {
+        "coupler_stage_throughput": 0.9998,
+        "gross_match": 0.5158806079677601,
+        "memory_arms": 2,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9978914339720126,
+        "router_each": 1.0,
+        "total_six_stage_throughput": 0.9988005998400241,
+        "trusted_witness_crosses_p0": true
+      },
+      {
+        "coupler_stage_throughput": 1.0,
+        "gross_match": 0.5165000982682506,
+        "memory_arms": 2,
+        "minimum_equal_coupler_stage_throughput_to_violate": 0.9978914339720126,
+        "router_each": 1.0,
+        "total_six_stage_throughput": 1.0,
+        "trusted_witness_crosses_p0": true
+      }
+    ],
+    "two_memories_perfect_router_base": 0.5165000982682506
+  },
+  "hardware_caveats": "Must establish deterministic coherent conversion of 3 time bins to spatial rails, setting selection after trusted herald, loss and leakage calibrated by setting, and memory qutrit preservation. Qubit memory efficiency reported in 2026 is merely a hypothetical efficiency anchor.",
+  "per_basis_compilers": {
+    "X_Zpower_0": {
+      "maximum_reconstruction_error": 4.742874840267547e-16,
+      "output_diagonal_phase_modulo_2pi": [
+        0.0,
+        0.0,
+        -1.5707963267948968
+      ],
+      "rail_pairs": [
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "stages": 3
+    },
+    "X_Zpower_1": {
+      "maximum_reconstruction_error": 2.8305244335018383e-16,
+      "output_diagonal_phase_modulo_2pi": [
+        0.0,
+        0.0,
+        2.617993877991494
+      ],
+      "rail_pairs": [
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "stages": 3
+    },
+    "X_Zpower_2": {
+      "maximum_reconstruction_error": 4.0412728104402656e-16,
+      "output_diagonal_phase_modulo_2pi": [
+        0.0,
+        0.0,
+        -1.5707963267948977
+      ],
+      "rail_pairs": [
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "stages": 3
+    },
+    "Z_computational": {
+      "maximum_reconstruction_error": 0.0,
+      "output_diagonal_phase_modulo_2pi": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rail_pairs": [],
+      "stages": 0
+    }
+  },
+  "status": "PASS_EXPLICIT_FOUR_MUB_QUTRIT_ANALYZERS_AND_SIX_STAGE_LOSS_FIREWALL"
+}

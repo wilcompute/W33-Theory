@@ -1,0 +1,87 @@
+{
+  "group_theory": {
+    "Cartan_dimension": 6,
+    "Tr27_cubic_zero": true,
+    "Tr27_quintic_nonzero_generic": true,
+    "escape": "Split multiplet thresholds using E6-breaking VEV, nonuniform soft masses compatible with gauge invariance, additional representations, or degree 5+ adjoint invariants; then calculate full F/D and one-loop operator.",
+    "exact_45_monomial_constraints": 45,
+    "exact_complete_27_quartic_identity": "12 Tr27(H^4)=(Tr27(H^2))^2 for arbitrary six-variable E6 Cartan H",
+    "mirror_odd_powers_cancel": true,
+    "no_go": "Two COMPLETE E6 27+bar27 mirror messenger pairs, equal M/y/soft Delta across all 27 components, yield a quartic only in [Tr27 H\u00b2]^2. No directional 3+2 selection at this order."
+  },
+  "not_UV_completion": "The mirror-exchange invariant is concrete at the renormalizable E6 operator level; an exact full SUSY E6 vacuum, anomaly-free symmetry, split spectrum and proton lifetime are not established.",
+  "operator_symmetry": {
+    "Z4R_superpotential_charge": 2,
+    "allowed_by_Z4R": {
+      "LH_u": false,
+      "LLE": false,
+      "LQD": false,
+      "Majorana_N": true,
+      "QQQL": false,
+      "UDD": false,
+      "UUDE": false,
+      "Weinberg": true,
+      "down_Yukawa": true,
+      "lepton_Yukawa": true,
+      "mirror_Yukawa_m": true,
+      "mirror_Yukawa_p": true,
+      "mirror_mass_m": true,
+      "mirror_mass_p": true,
+      "mu_term": false,
+      "neutrino_Yukawa": true,
+      "spurion_S2_HuHd": true,
+      "up_Yukawa": true
+    },
+    "charges": {
+      "A78": 0,
+      "D": 1,
+      "E": 1,
+      "Fm": 1,
+      "Fp": 1,
+      "Hd": 0,
+      "Hu": 0,
+      "L": 1,
+      "N": 1,
+      "Q": 1,
+      "S2": 2,
+      "U": 1,
+      "barFm": 1,
+      "barFp": 1
+    },
+    "mirror_exchange": {
+      "A78_nonzero_VEV_spontaneously_breaks_mirror_Z2": true,
+      "A78_to_minus_A78": true,
+      "exchange_Fp_Fm": true,
+      "exchange_barFp_barFm": true,
+      "mass_term_even": true,
+      "opposite_sign_adjoint_Yukawa_even": true
+    },
+    "monomial_charge_mod4": {
+      "LH_u": 1,
+      "LLE": 3,
+      "LQD": 3,
+      "Majorana_N": 2,
+      "QQQL": 0,
+      "UDD": 3,
+      "UUDE": 0,
+      "Weinberg": 2,
+      "down_Yukawa": 2,
+      "lepton_Yukawa": 2,
+      "mirror_Yukawa_m": 2,
+      "mirror_Yukawa_p": 2,
+      "mirror_mass_m": 2,
+      "mirror_mass_p": 2,
+      "mu_term": 0,
+      "neutrino_Yukawa": 2,
+      "spurion_S2_HuHd": 2,
+      "up_Yukawa": 2
+    },
+    "potential_Z4R_spurion_issue": "S2 HuHd is allowed, so a charged spurion can reintroduce mu and other prohibited terms when its F/VEV breaks the symmetry.",
+    "proton_scope": "The Z4R forbids local holomorphic dimension-five QQQL and UUDE BEFORE R-breaking. Gauge-boson dimension-six exchange is not forbidden; anomalies, nonperturbative R-breaking, triplet mixing and UV consistency require separate analysis.",
+    "references": [
+      "https://arxiv.org/abs/1009.0905",
+      "https://link.springer.com/article/10.1007/JHEP02%282014%29058"
+    ]
+  },
+  "status": "PASS_E6_MIRROR_Z2_Z4R_OPERATOR_ARITHMETIC_AND_COMPLETE27_QUARTIC_NOGO"
+}

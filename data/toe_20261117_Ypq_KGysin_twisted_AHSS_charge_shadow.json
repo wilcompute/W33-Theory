@@ -1,0 +1,79 @@
+{
+  "citations": [
+    "https://arxiv.org/abs/hep-th/0306062",
+    "https://link.springer.com/article/10.1007/s00220-024-05044-0"
+  ],
+  "exact_untwisted_K_Gysin": "K0(Y)=Z^2 + Z_g + Z_g, K1(Y)=Z^2 for Euler class (p,q) nonzero, g=gcd(p,q), via SNF of [L]-1 on K0(S2xS2).",
+  "example_euler6_6_H5": {
+    "Tdual": {
+      "Einf_even_graded_torsion_H2_H4": [
+        5,
+        5
+      ],
+      "Einf_odd_graded_torsion_H3_H5": [
+        6,
+        6
+      ],
+      "Euler": [
+        5,
+        -5
+      ],
+      "H3_integer_generator_coefficient": 6,
+      "K_even_group_cardinality": 25,
+      "K_odd_group_cardinality": 36,
+      "d3_maps": {
+        "H0_to_H3": "multiply k",
+        "H2_free_to_H5": "multiply k (primitive Poincare pairing)",
+        "H2_torsion_to_H5": "zero (torsion into Z)"
+      },
+      "extension_open": "The AHSS gives associated graded cyclic factors, NOT a canonical group decomposition. The full finite abelian K group could involve nontrivial extension classes unless resolved by additional K-theoretic methods.",
+      "free_rank_in_both_twisted_groups": 0
+    },
+    "original": {
+      "Einf_even_graded_torsion_H2_H4": [
+        6,
+        6
+      ],
+      "Einf_odd_graded_torsion_H3_H5": [
+        5,
+        5
+      ],
+      "Euler": [
+        6,
+        6
+      ],
+      "H3_integer_generator_coefficient": 5,
+      "K_even_group_cardinality": 36,
+      "K_odd_group_cardinality": 25,
+      "d3_maps": {
+        "H0_to_H3": "multiply k",
+        "H2_free_to_H5": "multiply k (primitive Poincare pairing)",
+        "H2_torsion_to_H5": "zero (torsion into Z)"
+      },
+      "extension_open": "The AHSS gives associated graded cyclic factors, NOT a canonical group decomposition. The full finite abelian K group could involve nontrivial extension classes unless resolved by additional K-theoretic methods.",
+      "free_rank_in_both_twisted_groups": 0
+    },
+    "untwisted_K_Y": {
+      "Euler": [
+        6,
+        6
+      ],
+      "K0_Y_free_rank": 2,
+      "K0_Y_torsion_cyclic_orders": [
+        6,
+        6
+      ],
+      "K1_Y_free_rank": 2,
+      "K1_Y_torsion_cyclic_orders": [],
+      "gcd": 6,
+      "nonzero_Smith_invariants": [
+        6,
+        6
+      ]
+    }
+  },
+  "scope": "Complex twisted topological K-theory first nontrivial AHSS stage on oriented five-manifold with H=k z. No explicit differential K-class, brane charge, Freed-Witten anomaly, Page normalization, physical M/IIB dictionary or resolved extension.",
+  "signed_integer_triples_checked": 1200,
+  "status": "PASS_Ypq_UNTWISTED_K_GYSIN_SMITH_AND_TWISTED_AHSS_TDUAL_PARITY_SHADOW",
+  "twisted_AHSS_rule": "For nonzero H=k generator of H3(Y), E_inf twisted-even has Z_g factors in degrees 2,4; twisted-odd has Z_|k| factors in degrees 3,5. Each K-group has finite order g\u00b2 or k\u00b2, not an asserted direct-product splitting."
+}
