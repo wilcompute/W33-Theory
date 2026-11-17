@@ -1,0 +1,78 @@
+{
+  "vacuum": {
+    "R0_chiral_components": 38,
+    "R2_chiral_components": 32,
+    "superpotential_mass_rank": 32,
+    "eaten_modes": 2,
+    "physical_light_chiral_components": [
+      "K_0",
+      "K_3",
+      "Kbar_0",
+      "Kbar_3"
+    ],
+    "charges_R0_R2conjugate_mass_rank_by_w": {
+      "-3": [
+        4,
+        2,
+        2
+      ],
+      "-2": [
+        6,
+        6,
+        6
+      ],
+      "-1": [
+        6,
+        6,
+        6
+      ],
+      "0": [
+        6,
+        4,
+        4
+      ],
+      "1": [
+        6,
+        6,
+        6
+      ],
+      "2": [
+        6,
+        6,
+        6
+      ],
+      "3": [
+        4,
+        2,
+        2
+      ]
+    }
+  },
+  "charged_scalar_exchange": {
+    "triplet_coordinate": 12,
+    "QL_vertex": [
+      1,
+      18,
+      -1
+    ],
+    "UcDc_vertex": [
+      10,
+      17,
+      -1
+    ],
+    "absolute_scalar_exchange_numerator": 1,
+    "canonical_zero_mode_coefficient_at_unit_parameters": "1/4",
+    "cubic_filter_keeps_frame_and_removes_triplet_linear_source": true
+  },
+  "bulk_anomaly_lattice": {
+    "tensor_multiplets": 1,
+    "neutral_hypers": 106,
+    "a_dot_b": -4,
+    "b_squared": 2,
+    "positive_F2_section_f3_g4_degrees": [
+      10,
+      16
+    ],
+    "degree_of_split_g4_square_root": 8
+  }
+}
