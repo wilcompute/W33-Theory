@@ -1,0 +1,69 @@
+{
+  "Hessian": {
+    "Goldstones": "12 zero eigenvalues are tangent to SU5/S(U3xU2); eaten by massive gauge bosons in gauged theory",
+    "VEV_norm_r": 0.9759000729485333,
+    "eigenvalue_multiplicities": {
+      "SU2_weak_triplet_3": {
+        "m2": 1.9047619047619053,
+        "multiplicity": 3
+      },
+      "SU3_colour_octet_8": {
+        "m2": 0.47619047619047633,
+        "multiplicity": 8
+      },
+      "gauge_orbit_Goldstone_12": {
+        "m2": 0,
+        "multiplicity": 12
+      },
+      "radial_singlet_1": {
+        "m2": 4.0,
+        "multiplicity": 1
+      }
+    },
+    "full_24x24_eigenvalue_spectrum": [
+      5.551115123125783e-16,
+      5.551115123125783e-16,
+      5.551115123125783e-16,
+      5.551115123125783e-16,
+      5.551115123125783e-16,
+      5.551115123125783e-16,
+      5.551115123125783e-16,
+      5.551115123125783e-16,
+      5.551115123125783e-16,
+      5.551115123125783e-16,
+      5.551115123125783e-16,
+      5.551115123125783e-16,
+      0.47619047619047705,
+      0.47619047619047705,
+      0.47619047619047705,
+      0.47619047619047705,
+      0.47619047619047705,
+      0.47619047619047705,
+      0.47619047619047705,
+      0.47619047619047705,
+      1.904761904761906,
+      1.904761904761906,
+      1.9047619047619067,
+      4.000000000000003
+    ],
+    "no_E6_completion": "Spectrum applies to bosonic SU5 adjoint potential, NOT soft E6 full scalar spectrum or quantum-corrected masses.",
+    "normalization": "Hermitian adjoint Phi with 1/2 Tr(dPhi)^2 canonical kinetic; basis Tr(T_i T_j)=delta_ij",
+    "numeric_directional_Hessian_finite_difference_max_error": 1.4010408655451556e-06,
+    "squared_norm_r2": 0.9523809523809527,
+    "status": "PASS_SU5_FULL_24_REAL_SCALAR_HESSIAN"
+  },
+  "status": "PASS_SU5_24MODE_HESSIAN_THERMAL_RESTRICTED_KINK",
+  "thermal_wall": {
+    "Z2_sign_orbits": "If Phi->-Phi is an exact GLOBAL Z2 and only this adjoint VEV selects the vacuum, the 3+2 and opposite 2+3 sign multisets are not SU5-conjugate.",
+    "below_Tc_3plus2_shape_persists_if_kappa_positive": true,
+    "do_not_infer_transition_order": "Gauge and bosonic loop cubic terms, daisy resummation and nonperturbative thermal effects can make the actual transition first order; mean-field threshold only.",
+    "mean_field_addition": "delta V = +c T\u00b2 TrPhi\u00b2; c assumed positive and shape-independent",
+    "mean_field_symmetry_restoration_temperature": 1.5811388300841898,
+    "quantum_physics_not_computed": "This is a leading phenomenological thermal mass term, not the actual one-loop finite-T E6 action.",
+    "restricted_one_component_kink_profile": "f(z)=r tanh(sqrt(2g)*r*z) with g=lambda+7kappa/30; Phi=f(z) diag(2,2,2,-3,-3)/sqrt30",
+    "restricted_wall_tension": 1.26984126984127,
+    "status": "PASS_SU5_MEAN_FIELD_THERMAL_AND_RESTRICTED_SIGN_WALL",
+    "tension_is_upper_bound": "A nontrivial multidimensional wall path may have smaller tension; if Z2 is explicitly broken, stable walls need not exist.",
+    "thermal_coefficient_c": 0.4
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "exact": {
+    "BF_shifted_determinant": "lambda*(lambda-12+16*d\u00b2)",
+    "model_scope": "Two-derivative AdS5xS2xS2xT2 transverse-scalar sector only, for |d|<=1; outside the sufficient wedge the FULL established five-scalar pencil still violates BF whenever 0<lambda<12.",
+    "not_full_11D_all_harmonics": true,
+    "restricted_K": "I_2",
+    "restricted_M": "[[lambda-4, 4 sqrt(lambda(1-d\u00b2))],[4 sqrt(lambda(1-d\u00b2)),lambda]]",
+    "source": "Current master analysis/toe_20261117_11D_unequal_flux_scalar_operator.py; five metric-C3 constrained scalar modes",
+    "status": "PASS_11D_TWO_DIM_PHYSICAL_PROJECTED_RAYLEIGH_BF_SUFFICIENT_CONDITION",
+    "sufficient_condition": "0<lambda<12-16*d\u00b2 ensures at least one BF-violating eigenvalue of the full physical positive-norm five-scalar pencil by min-max",
+    "two_modes": "sphere-odd radius perturbation u=(1,-1,0)/sqrt8; axion a=(q,-p)/sqrt8 orthogonal to mixed flux f=(p,q)"
+  },
+  "higher_derivative_uncomputed": "M-theory R4+C3X8 higher derivatives, other Kaluza-Klein harmonics and quantum corrected AdS BF dimensions are outside this certificate.",
+  "numerical": {
+    "full_5x5_BF_claim_checked": "one eigenvalue below -4 for every tested |d|<=1 and lambda<12; none for lambda>=12.",
+    "new_vs_prior": "These are numerical crosschecks of parallel agent's exact determinant, NOT a new global 11D flux-spectrum derivation.",
+    "sample_count": 42,
+    "selected_lambda3pi": [
+      {
+        "actual_BF_deficit": 1.0169440813078516,
+        "d": 0,
+        "lambda": 9.42477796076938,
+        "physical_lowest_m2": -5.016944081307852,
+        "projected_criterion_certifies": true
+      },
+      {
+        "actual_BF_deficit": 1.0117060856451534,
+        "d": 0.2,
+        "lambda": 9.42477796076938,
+        "physical_lowest_m2": -5.011706085645153,
+        "projected_criterion_certifies": true
+      },
+      {
+        "actual_BF_deficit": 1.0008873675072145,
+        "d": 0.35,
+        "lambda": 9.42477796076938,
+        "physical_lowest_m2": -5.0008873675072145,
+        "projected_criterion_certifies": true
+      },
+      {
+        "actual_BF_deficit": 0.9841280837341726,
+        "d": 0.5,
+        "lambda": 9.42477796076938,
+        "physical_lowest_m2": -4.984128083734173,
+        "projected_criterion_certifies": false
+      },
+      {
+        "actual_BF_deficit": 0.9524587589995708,
+        "d": 0.7,
+        "lambda": 9.42477796076938,
+        "physical_lowest_m2": -4.952458758999571,
+        "projected_criterion_certifies": false
+      },
+      {
+        "actual_BF_deficit": 0.8976952976279211,
+        "d": 0.95,
+        "lambda": 9.42477796076938,
+        "physical_lowest_m2": -4.897695297627921,
+        "projected_criterion_certifies": false
+      },
+      {
+        "actual_BF_deficit": 0.884697715215431,
+        "d": 1.0,
+        "lambda": 9.42477796076938,
+        "physical_lowest_m2": -4.884697715215431,
+        "projected_criterion_certifies": false
+      }
+    ],
+    "status": "PASS_UNEQUAL_FLUX_FULL_FIVE_SCALAR_NUMERICAL_42_POINT_BF_INERTIA"
+  },
+  "status": "PASS_11D_PROJECTED_BF_RAYLEIGH_AND_5SCALAR_CROSSCHECK"
+}

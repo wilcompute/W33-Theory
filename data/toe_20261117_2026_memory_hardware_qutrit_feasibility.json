@@ -1,0 +1,346 @@
+{
+  "PRL_efficiency_1sigma_router_threshold_range": {
+    "1": {
+      "at_89p8pct": 0.9458412554124574,
+      "at_90p6pct": 0.9416560965836922
+    },
+    "2": {
+      "at_89p8pct": 0.9981138562198033,
+      "at_90p6pct": 0.989300488835964
+    }
+  },
+  "cited_2026_measurements": [
+    {
+      "reported_conditional_fidelity_percent": "99.3 +/- 0.1 time-bin QUBITS",
+      "reported_storage_and_retrieval_percent": "90.2 +/- 0.4",
+      "scope": "single-photon-level weak coherent pulses, NOT two-qutrit entanglement or an event-ready 4-MUB POVM",
+      "source": "Physical Review Letters accepted 30 September 2026: Efficient integrated quantum memory based on a waveguide cavity",
+      "url": "https://journals.aps.org/prl/accepted/10.1103/28st-q915"
+    },
+    {
+      "reported_first_AFC_echo_average_storage_efficiency_percent": "39.2 +/- 0.2",
+      "scope": "11-channel integrated RAQM; storage efficiency/echo measure not automatically same as the first PRL's complete storage/retrieval metric.",
+      "source": "Random access and high dimensional integrated quantum memory, 2026",
+      "url": "https://link.springer.com/article/10.1186/s43074-026-00284-w"
+    }
+  ],
+  "critical_caveat": "Weak-coherent-pulse QUBIT memory efficiency is not demonstrated qutrit retrieval efficiency, QND setting-independent herald, or full 4-MUB qutrit analyzer. The 39.2% result uses different protocol/efficiency definition.",
+  "ideal_QND_prebasis_herald_scenarios": [
+    {
+      "conditional_p_after_prebasis_herald": 0.5729339318477983,
+      "herald_rate_fraction_in_ideal_independent_model": 0.902,
+      "memory_arms": 1,
+      "memory_efficiency": 0.902,
+      "minimum_symmetric_router": 0.8963062428853833,
+      "not_postselection": "The success flag must be before fresh secret basis choice and local, with no setting leakage. Ordinary destructive photon detection after the basis is selected does not qualify.",
+      "physical_prebasis_nondestructive_herald_REQUIRED": true,
+      "source_attempts_per_accepted_herald": 1.1086474501108647,
+      "trusted_witness_conditional_pass": true
+    },
+    {
+      "conditional_p_after_prebasis_herald": 0.5729339318477983,
+      "herald_rate_fraction_in_ideal_independent_model": 0.813604,
+      "memory_arms": 2,
+      "memory_efficiency": 0.902,
+      "minimum_symmetric_router": 0.8963062428853833,
+      "not_postselection": "The success flag must be before fresh secret basis choice and local, with no setting leakage. Ordinary destructive photon detection after the basis is selected does not qualify.",
+      "physical_prebasis_nondestructive_herald_REQUIRED": true,
+      "source_attempts_per_accepted_herald": 1.2290991686373223,
+      "trusted_witness_conditional_pass": true
+    },
+    {
+      "conditional_p_after_prebasis_herald": 0.5729339318477983,
+      "herald_rate_fraction_in_ideal_independent_model": 0.392,
+      "memory_arms": 1,
+      "memory_efficiency": 0.392,
+      "minimum_symmetric_router": 0.8963062428853833,
+      "not_postselection": "The success flag must be before fresh secret basis choice and local, with no setting leakage. Ordinary destructive photon detection after the basis is selected does not qualify.",
+      "physical_prebasis_nondestructive_herald_REQUIRED": true,
+      "source_attempts_per_accepted_herald": 2.5510204081632653,
+      "trusted_witness_conditional_pass": true
+    },
+    {
+      "conditional_p_after_prebasis_herald": 0.5729339318477983,
+      "herald_rate_fraction_in_ideal_independent_model": 0.15366400000000002,
+      "memory_arms": 2,
+      "memory_efficiency": 0.392,
+      "minimum_symmetric_router": 0.8963062428853833,
+      "not_postselection": "The success flag must be before fresh secret basis choice and local, with no setting leakage. Ordinary destructive photon detection after the basis is selected does not qualify.",
+      "physical_prebasis_nondestructive_herald_REQUIRED": true,
+      "source_attempts_per_accepted_herald": 6.507705122865472,
+      "trusted_witness_conditional_pass": true
+    }
+  ],
+  "information_theoretic_note": "E[log e_n]=n*D_Bernoulli(p||p0) for an oracle fixed-alternative likelihood-ratio e-process. log(100)/D is an information scale, NOT an anytime expected hitting-time theorem or guaranteed sample size.",
+  "nominal_scenarios": [
+    {
+      "expected_log_evalue100_information_scale_herald_trials": 49965.49631840105,
+      "feasible_even_if_router_perfect": true,
+      "gross_matched_herald_probability": 0.5167864065267141,
+      "max_gross_success_per_prep_ideal_routers": 0.5726165169271071,
+      "memory_efficiency": 0.902,
+      "minimum_symmetric_router_efficiency": 0.9437417161853219,
+      "number_memory_arms": 1,
+      "path_efficiency": 0.95,
+      "per_router_efficiency": 0.95,
+      "source_label": "2026_PRL_weak_coherent_qubit_reference",
+      "violates_trusted_witness_under_model": true
+    },
+    {
+      "expected_log_evalue100_information_scale_herald_trials": 2776.1356051477633,
+      "feasible_even_if_router_perfect": true,
+      "gross_matched_herald_probability": 0.5387748807767151,
+      "max_gross_success_per_prep_ideal_routers": 0.5726165169271071,
+      "memory_efficiency": 0.902,
+      "minimum_symmetric_router_efficiency": 0.9437417161853219,
+      "number_memory_arms": 1,
+      "path_efficiency": 0.95,
+      "per_router_efficiency": 0.97,
+      "source_label": "2026_PRL_weak_coherent_qubit_reference",
+      "violates_trusted_witness_under_model": true
+    },
+    {
+      "expected_log_evalue100_information_scale_herald_trials": 874.5381933107506,
+      "feasible_even_if_router_perfect": true,
+      "gross_matched_herald_probability": 0.5612214482402578,
+      "max_gross_success_per_prep_ideal_routers": 0.5726165169271071,
+      "memory_efficiency": 0.902,
+      "minimum_symmetric_router_efficiency": 0.9437417161853219,
+      "number_memory_arms": 1,
+      "path_efficiency": 0.95,
+      "per_router_efficiency": 0.99,
+      "source_label": "2026_PRL_weak_coherent_qubit_reference",
+      "violates_trusted_witness_under_model": true
+    },
+    {
+      "expected_log_evalue100_information_scale_herald_trials": 708.1745823660945,
+      "feasible_even_if_router_perfect": true,
+      "gross_matched_herald_probability": 0.5669046671707593,
+      "max_gross_success_per_prep_ideal_routers": 0.5726165169271071,
+      "memory_efficiency": 0.902,
+      "minimum_symmetric_router_efficiency": 0.9437417161853219,
+      "number_memory_arms": 1,
+      "path_efficiency": 0.95,
+      "per_router_efficiency": 0.995,
+      "source_label": "2026_PRL_weak_coherent_qubit_reference",
+      "violates_trusted_witness_under_model": true
+    },
+    {
+      "expected_log_evalue100_information_scale_herald_trials": 584.5088645682191,
+      "feasible_even_if_router_perfect": true,
+      "gross_matched_herald_probability": 0.5726165169271071,
+      "max_gross_success_per_prep_ideal_routers": 0.5726165169271071,
+      "memory_efficiency": 0.902,
+      "minimum_symmetric_router_efficiency": 0.9437417161853219,
+      "number_memory_arms": 1,
+      "path_efficiency": 0.95,
+      "per_router_efficiency": 1.0,
+      "source_label": "2026_PRL_weak_coherent_qubit_reference",
+      "violates_trusted_witness_under_model": true
+    },
+    {
+      "expected_log_evalue100_information_scale_herald_trials": null,
+      "feasible_even_if_router_perfect": true,
+      "gross_matched_herald_probability": 0.4661413386870961,
+      "max_gross_success_per_prep_ideal_routers": 0.5165000982682506,
+      "memory_efficiency": 0.902,
+      "minimum_symmetric_router_efficiency": 0.9936876306933297,
+      "number_memory_arms": 2,
+      "path_efficiency": 0.95,
+      "per_router_efficiency": 0.95,
+      "source_label": "2026_PRL_weak_coherent_qubit_reference",
+      "violates_trusted_witness_under_model": false
+    },
+    {
+      "expected_log_evalue100_information_scale_herald_trials": null,
+      "feasible_even_if_router_perfect": true,
+      "gross_matched_herald_probability": 0.48597494246059697,
+      "max_gross_success_per_prep_ideal_routers": 0.5165000982682506,
+      "memory_efficiency": 0.902,
+      "minimum_symmetric_router_efficiency": 0.9936876306933297,
+      "number_memory_arms": 2,
+      "path_efficiency": 0.95,
+      "per_router_efficiency": 0.97,
+      "source_label": "2026_PRL_weak_coherent_qubit_reference",
+      "violates_trusted_witness_under_model": false
+    },
+    {
+      "expected_log_evalue100_information_scale_herald_trials": null,
+      "feasible_even_if_router_perfect": true,
+      "gross_matched_herald_probability": 0.5062217463127124,
+      "max_gross_success_per_prep_ideal_routers": 0.5165000982682506,
+      "memory_efficiency": 0.902,
+      "minimum_symmetric_router_efficiency": 0.9936876306933297,
+      "number_memory_arms": 2,
+      "path_efficiency": 0.95,
+      "per_router_efficiency": 0.99,
+      "source_label": "2026_PRL_weak_coherent_qubit_reference",
+      "violates_trusted_witness_under_model": false
+    },
+    {
+      "expected_log_evalue100_information_scale_herald_trials": 1266600.631143857,
+      "feasible_even_if_router_perfect": true,
+      "gross_matched_herald_probability": 0.5113480097880249,
+      "max_gross_success_per_prep_ideal_routers": 0.5165000982682506,
+      "memory_efficiency": 0.902,
+      "minimum_symmetric_router_efficiency": 0.9936876306933297,
+      "number_memory_arms": 2,
+      "path_efficiency": 0.95,
+      "per_router_efficiency": 0.995,
+      "source_label": "2026_PRL_weak_coherent_qubit_reference",
+      "violates_trusted_witness_under_model": true
+    },
+    {
+      "expected_log_evalue100_information_scale_herald_trials": 54464.62595263727,
+      "feasible_even_if_router_perfect": true,
+      "gross_matched_herald_probability": 0.5165000982682506,
+      "max_gross_success_per_prep_ideal_routers": 0.5165000982682506,
+      "memory_efficiency": 0.902,
+      "minimum_symmetric_router_efficiency": 0.9936876306933297,
+      "number_memory_arms": 2,
+      "path_efficiency": 0.95,
+      "per_router_efficiency": 1.0,
+      "source_label": "2026_PRL_weak_coherent_qubit_reference",
+      "violates_trusted_witness_under_model": true
+    },
+    {
+      "expected_log_evalue100_information_scale_herald_trials": null,
+      "feasible_even_if_router_perfect": false,
+      "gross_matched_herald_probability": 0.22459010128433696,
+      "max_gross_success_per_prep_ideal_routers": 0.24885329782198004,
+      "memory_efficiency": 0.392,
+      "minimum_symmetric_router_efficiency": 1.4315726341065387,
+      "number_memory_arms": 1,
+      "path_efficiency": 0.95,
+      "per_router_efficiency": 0.95,
+      "source_label": "2026_11channel_first_echo_reference",
+      "violates_trusted_witness_under_model": false
+    },
+    {
+      "expected_log_evalue100_information_scale_herald_trials": null,
+      "feasible_even_if_router_perfect": false,
+      "gross_matched_herald_probability": 0.23414606792070103,
+      "max_gross_success_per_prep_ideal_routers": 0.24885329782198004,
+      "memory_efficiency": 0.392,
+      "minimum_symmetric_router_efficiency": 1.4315726341065387,
+      "number_memory_arms": 1,
+      "path_efficiency": 0.95,
+      "per_router_efficiency": 0.97,
+      "source_label": "2026_11channel_first_echo_reference",
+      "violates_trusted_witness_under_model": false
+    },
+    {
+      "expected_log_evalue100_information_scale_herald_trials": null,
+      "feasible_even_if_router_perfect": false,
+      "gross_matched_herald_probability": 0.24390111719532265,
+      "max_gross_success_per_prep_ideal_routers": 0.24885329782198004,
+      "memory_efficiency": 0.392,
+      "minimum_symmetric_router_efficiency": 1.4315726341065387,
+      "number_memory_arms": 1,
+      "path_efficiency": 0.95,
+      "per_router_efficiency": 0.99,
+      "source_label": "2026_11channel_first_echo_reference",
+      "violates_trusted_witness_under_model": false
+    },
+    {
+      "expected_log_evalue100_information_scale_herald_trials": null,
+      "feasible_even_if_router_perfect": false,
+      "gross_matched_herald_probability": 0.2463709861762058,
+      "max_gross_success_per_prep_ideal_routers": 0.24885329782198004,
+      "memory_efficiency": 0.392,
+      "minimum_symmetric_router_efficiency": 1.4315726341065387,
+      "number_memory_arms": 1,
+      "path_efficiency": 0.95,
+      "per_router_efficiency": 0.995,
+      "source_label": "2026_11channel_first_echo_reference",
+      "violates_trusted_witness_under_model": false
+    },
+    {
+      "expected_log_evalue100_information_scale_herald_trials": null,
+      "feasible_even_if_router_perfect": false,
+      "gross_matched_herald_probability": 0.24885329782198004,
+      "max_gross_success_per_prep_ideal_routers": 0.24885329782198004,
+      "memory_efficiency": 0.392,
+      "minimum_symmetric_router_efficiency": 1.4315726341065387,
+      "number_memory_arms": 1,
+      "path_efficiency": 0.95,
+      "per_router_efficiency": 1.0,
+      "source_label": "2026_11channel_first_echo_reference",
+      "violates_trusted_witness_under_model": false
+    },
+    {
+      "expected_log_evalue100_information_scale_herald_trials": null,
+      "feasible_even_if_router_perfect": false,
+      "gross_matched_herald_probability": 0.0880393197034601,
+      "max_gross_success_per_prep_ideal_routers": 0.09755049274621619,
+      "memory_efficiency": 0.392,
+      "minimum_symmetric_router_efficiency": 2.286495517564753,
+      "number_memory_arms": 2,
+      "path_efficiency": 0.95,
+      "per_router_efficiency": 0.95,
+      "source_label": "2026_11channel_first_echo_reference",
+      "violates_trusted_witness_under_model": false
+    },
+    {
+      "expected_log_evalue100_information_scale_herald_trials": null,
+      "feasible_even_if_router_perfect": false,
+      "gross_matched_herald_probability": 0.0917852586249148,
+      "max_gross_success_per_prep_ideal_routers": 0.09755049274621619,
+      "memory_efficiency": 0.392,
+      "minimum_symmetric_router_efficiency": 2.286495517564753,
+      "number_memory_arms": 2,
+      "path_efficiency": 0.95,
+      "per_router_efficiency": 0.97,
+      "source_label": "2026_11channel_first_echo_reference",
+      "violates_trusted_witness_under_model": false
+    },
+    {
+      "expected_log_evalue100_information_scale_herald_trials": null,
+      "feasible_even_if_router_perfect": false,
+      "gross_matched_herald_probability": 0.09560923794056649,
+      "max_gross_success_per_prep_ideal_routers": 0.09755049274621619,
+      "memory_efficiency": 0.392,
+      "minimum_symmetric_router_efficiency": 2.286495517564753,
+      "number_memory_arms": 2,
+      "path_efficiency": 0.95,
+      "per_router_efficiency": 0.99,
+      "source_label": "2026_11channel_first_echo_reference",
+      "violates_trusted_witness_under_model": false
+    },
+    {
+      "expected_log_evalue100_information_scale_herald_trials": null,
+      "feasible_even_if_router_perfect": false,
+      "gross_matched_herald_probability": 0.09657742658107268,
+      "max_gross_success_per_prep_ideal_routers": 0.09755049274621619,
+      "memory_efficiency": 0.392,
+      "minimum_symmetric_router_efficiency": 2.286495517564753,
+      "number_memory_arms": 2,
+      "path_efficiency": 0.95,
+      "per_router_efficiency": 0.995,
+      "source_label": "2026_11channel_first_echo_reference",
+      "violates_trusted_witness_under_model": false
+    },
+    {
+      "expected_log_evalue100_information_scale_herald_trials": null,
+      "feasible_even_if_router_perfect": false,
+      "gross_matched_herald_probability": 0.09755049274621619,
+      "max_gross_success_per_prep_ideal_routers": 0.09755049274621619,
+      "memory_efficiency": 0.392,
+      "minimum_symmetric_router_efficiency": 2.286495517564753,
+      "number_memory_arms": 2,
+      "path_efficiency": 0.95,
+      "per_router_efficiency": 1.0,
+      "source_label": "2026_11channel_first_echo_reference",
+      "violates_trusted_witness_under_model": false
+    }
+  ],
+  "status": "PASS_2026_MEASURED_MEMORY_REFERENCE_QUTRIT_WITNESS_STRESS",
+  "trusted_model": {
+    "conditional_two_click_basis_match": 0.8249900472808345,
+    "default_path_efficiency": 0.95,
+    "detector_pair_efficiency": 0.81,
+    "phase_sigma_rad": 0.15,
+    "separable_null_with_calibration": 0.51,
+    "source_visibility": 0.75
+  }
+}

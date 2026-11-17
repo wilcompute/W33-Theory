@@ -1,0 +1,190 @@
+{
+  "M6_S2xS2xT2_cohomology": {
+    "H1": {
+      "free": 2,
+      "torsion": []
+    },
+    "H2": {
+      "free": 3,
+      "torsion": []
+    },
+    "H3": {
+      "free": 4,
+      "torsion": []
+    },
+    "H4": {
+      "free": 3,
+      "torsion": []
+    }
+  },
+  "Y5_times_S1_cohomology_if_g6": {
+    "H0": {
+      "free": 1,
+      "torsion": []
+    },
+    "H1": {
+      "free": 1,
+      "torsion": []
+    },
+    "H2": {
+      "free": 1,
+      "torsion": [
+        6
+      ]
+    },
+    "H3": {
+      "free": 2,
+      "torsion": [
+        6
+      ]
+    },
+    "H4": {
+      "free": 1,
+      "torsion": [
+        6
+      ]
+    },
+    "H5": {
+      "free": 1,
+      "torsion": [
+        6
+      ]
+    },
+    "H6": {
+      "free": 1,
+      "torsion": []
+    }
+  },
+  "enumerated_nonzero_integer_cases": 2016,
+  "examples": [
+    {
+      "dual": {
+        "Euler": [
+          5,
+          -5
+        ],
+        "H3_coeff": 6,
+        "pi1_torsion_order": 5
+      },
+      "involution_pass": true,
+      "original": {
+        "Euler": [
+          6,
+          6
+        ],
+        "H3_coeff": 5,
+        "pi1_torsion_order": 6
+      }
+    },
+    {
+      "dual": {
+        "Euler": [
+          15,
+          -18
+        ],
+        "H3_coeff": 1,
+        "pi1_torsion_order": 3
+      },
+      "involution_pass": true,
+      "original": {
+        "Euler": [
+          5,
+          6
+        ],
+        "H3_coeff": 3,
+        "pi1_torsion_order": 1
+      }
+    },
+    {
+      "dual": {
+        "Euler": [
+          -14,
+          21
+        ],
+        "H3_coeff": -6,
+        "pi1_torsion_order": 7
+      },
+      "involution_pass": true,
+      "original": {
+        "Euler": [
+          12,
+          18
+        ],
+        "H3_coeff": -7,
+        "pi1_torsion_order": 6
+      }
+    },
+    {
+      "dual": {
+        "Euler": [
+          8,
+          12
+        ],
+        "H3_coeff": -3,
+        "pi1_torsion_order": 4
+      },
+      "involution_pass": true,
+      "original": {
+        "Euler": [
+          -6,
+          9
+        ],
+        "H3_coeff": -4,
+        "pi1_torsion_order": 3
+      }
+    },
+    {
+      "dual": {
+        "Euler": [
+          1,
+          -1
+        ],
+        "H3_coeff": 1,
+        "pi1_torsion_order": 1
+      },
+      "involution_pass": true,
+      "original": {
+        "Euler": [
+          1,
+          1
+        ],
+        "H3_coeff": 1,
+        "pi1_torsion_order": 1
+      }
+    },
+    {
+      "dual": {
+        "Euler": [
+          0,
+          -4
+        ],
+        "H3_coeff": 6,
+        "pi1_torsion_order": 4
+      },
+      "involution_pass": true,
+      "original": {
+        "Euler": [
+          0,
+          6
+        ],
+        "H3_coeff": 4,
+        "pi1_torsion_order": 6
+      }
+    }
+  ],
+  "flat_degree4_character_comparison": "Y5xS1: H^3(R/Z)=U(1)^2 x Z_g; M6=S2xS2xT2: U(1)^4 (no torsion), for g>1.",
+  "formula": {
+    "dual_Euler": "e'=k*(p/g*x -q/g*y)",
+    "dual_H3": "H'=sign(k)*g*z' with pi'_!(H')=e",
+    "dual_pi1_order": "|k|",
+    "involution": "dual(dual(p,q,k))=(p,q,k) in the stated primitive generator convention",
+    "old_pi1_order": "g",
+    "original_Euler": "e=p*x+q*y",
+    "original_H3": "H=k*z, k nonzero integer",
+    "primitive_Gysin_pushforward": "pi_!(z)=(p/g)*x-(q/g)*y, g=gcd(|p|,|q|)"
+  },
+  "literature": "Bouwknegt-Evslin-Mathai, Topology and H-flux of T-dual manifolds, Phys Rev Lett 92 181601 (2004), doi:10.1103/PhysRevLett.92.181601",
+  "not_same_as_M_IIB_duality": "This is standard topological type-II T-duality for a circle bundle WITH NS H3 flux. It does NOT construct an M-theory differential C-field, Page charges, or the actual E6/11D compactification duality.",
+  "scientific_implication": "Topology can exchange with integer H flux, so comparing isolated pi1 or gcd values across candidate dual geometries without flux data is invalid.",
+  "status": "PASS_INTEGRAL_TOPOLOGICAL_CIRCLE_TDUALITY_FLUX_TORSION_INVOLUTION"
+}

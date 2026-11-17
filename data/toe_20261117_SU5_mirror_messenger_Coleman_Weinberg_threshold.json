@@ -1,0 +1,95 @@
+{
+  "analytic_one_loop": {
+    "F(t)": "log(1+t)-4*t*(2*t+1)/(3*(1+t)^2)",
+    "exact_one_loop_prefactor": "1/(16*pi^2) per vectorlike 5+5bar chiral pair (two complex scalars and one Dirac fermion).",
+    "first_small_soft_term": "F(t)=-t/3+O(t^2)",
+    "holomorphic_messenger_symmetry": "Opposite Yukawa signs (+y,-y) and equal soft splittings are ASSUMED; no UV symmetry enforcing their equality established.",
+    "quartic_mirror_coefficient": "kappa_eff=y^4/(8*pi^2) F(Delta/M^2)",
+    "scalar_stability": "Require M^2+Delta>0 for all 5 messenger scalar components at Phi=0; also require |y phi_i| small enough to keep all mass squares positive."
+  },
+  "numerical_controls": {
+    "SUSY_warning": "Delta=0 gives exact boson-fermion cancellation; negative scalar Delta is allowed only if physical scalar mass^2 remains positive. This entails high-scale soft SUSY breaking and may conflict with naturalness.",
+    "benchmark_Delta_over_M2": -0.1,
+    "benchmark_F": 0.02632672714052761,
+    "benchmark_kappa_eff_at_y1": 0.0003334318944133895,
+    "critical_negative_soft_t": -0.2642793949988339,
+    "fixed_norm_3plus2_vs_4plus1": [
+      {
+        "Phi_norm": ".01",
+        "V_SU4_minus_V_SM": "0.000000000001389300196659155439683189513325452543225774885462216511",
+        "leading_order_prediction": "0.000000000001389299560055789662672131289500599128506632529775181233",
+        "relative_discrepancy": 4.5821893569983364e-07
+      },
+      {
+        "Phi_norm": ".02",
+        "V_SU4_minus_V_SM": "0.00000000002222883321199970240898460206215141649378054748838199141",
+        "leading_order_prediction": "0.00000000002222879296089263275183526902136394488946322014186088796",
+        "relative_discrepancy": 1.810764405447987e-06
+      },
+      {
+        "Phi_norm": ".05",
+        "V_SU4_minus_V_SM": "0.0000000008683212235688155738671991576828763978892863320189117474",
+        "leading_order_prediction": "0.000000000868312225034868466868565196147029097244657036791440936",
+        "relative_discrepancy": 1.0363246868654473e-05
+      },
+      {
+        "Phi_norm": ".1",
+        "V_SU4_minus_V_SM": "0.00000001389337965469296932945397165572304948669137733037219843",
+        "leading_order_prediction": "0.00000001389299560055789546989704313835246555591451258866305498",
+        "relative_discrepancy": 2.7643723939453146e-05
+      },
+      {
+        "Phi_norm": ".2",
+        "V_SU4_minus_V_SM": "0.0000002222607653675153718390634395826144518128399182095947781",
+        "leading_order_prediction": "0.0000002222879296089263275183526902136394488946322014186088796",
+        "relative_discrepancy": -0.00012220295298420402
+      }
+    ],
+    "gauge_threshold": "The messenger-induced quartic is a legitimate SU5 effective invariant only after E6 is already broken. If all heavy fields form mass-degenerate complete E6 multiplets, the E6 single-adjoint quartic obstruction persists.",
+    "renormalization_warning": "Quadratic radial terms, gauge-loop potentials, counterterms, and higher powers of Phi need matching; the quartic coefficient alone is not a global vacuum proof.",
+    "sample_soft_sign_scan": [
+      {
+        "F": -0.6931471805599453,
+        "quartic_sign": "negative_4plus1",
+        "soft_mass2_over_M2": -0.5
+      },
+      {
+        "F": -0.030144331693834403,
+        "quartic_sign": "negative_4plus1",
+        "soft_mass2_over_M2": -0.3
+      },
+      {
+        "F": 0.008614223844515378,
+        "quartic_sign": "positive_3plus2",
+        "soft_mass2_over_M2": -0.25
+      },
+      {
+        "F": 0.02632672714052761,
+        "quartic_sign": "positive_3plus2",
+        "soft_mass2_over_M2": -0.1
+      },
+      {
+        "F": 0.0,
+        "quartic_sign": "zero_SUSY",
+        "soft_mass2_over_M2": 0
+      },
+      {
+        "F": -0.036921225154352796,
+        "quartic_sign": "negative_4plus1",
+        "soft_mass2_over_M2": 0.1
+      },
+      {
+        "F": -0.18712748448442817,
+        "quartic_sign": "negative_4plus1",
+        "soft_mass2_over_M2": 0.5
+      },
+      {
+        "F": -0.3068528194400547,
+        "quartic_sign": "negative_4plus1",
+        "soft_mass2_over_M2": 1
+      }
+    ]
+  },
+  "scope": "Original controlled one-loop effective-field-theory example, NOT an E6 UV completion, a prediction of measured scales, or a complete Coleman-Weinberg vacuum analysis.",
+  "status": "PASS_SOFT_SUSY_MIRROR_MESSENGER_INDUCED_3PLUS2_QUARTIC"
+}
