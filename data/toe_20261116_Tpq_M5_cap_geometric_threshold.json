@@ -1,0 +1,110 @@
+{
+  "small_alpha_scaled_eigenvalue_limit": "-16/5",
+  "formal_near_planar_limit_operator_ground_eigenvalue": -3,
+  "control_families": [
+    {
+      "alpha": 0.1,
+      "negative_eigenvalue_in_local_ads_units": -316.6677018149105,
+      "eigenvalue_times_round_sphere_radius_squared": -3.1986636546960665,
+      "spectator_index_one_circumference_threshold": 0.3530839555188868,
+      "spectator_threshold_over_round_radial_period": 1.1182675118105145,
+      "scaled_eigenvalue_change_under_resolution_check": 4.1110997883170253e-13,
+      "scaled_weighted_differential_residual": 1.5710652640164997e-12
+    },
+    {
+      "alpha": 0.3,
+      "negative_eigenvalue_in_local_ads_units": -32.23166844267156,
+      "eigenvalue_times_round_sphere_radius_squared": -3.1877474283960896,
+      "spectator_index_one_circumference_threshold": 1.1067218259960008,
+      "spectator_threshold_over_round_radial_period": 1.1201805912838125,
+      "scaled_eigenvalue_change_under_resolution_check": 6.760306600231813e-13,
+      "scaled_weighted_differential_residual": 5.342761896211918e-12
+    },
+    {
+      "alpha": 0.6,
+      "negative_eigenvalue_in_local_ads_units": -5.595344834905285,
+      "eigenvalue_times_round_sphere_radius_squared": -3.147381469634223,
+      "spectator_index_one_circumference_threshold": 2.656234664028168,
+      "spectator_threshold_over_round_radial_period": 1.1273410047789942,
+      "scaled_eigenvalue_change_under_resolution_check": 5.305256234322542e-12,
+      "scaled_weighted_differential_residual": 2.3360892810156478e-11
+    },
+    {
+      "alpha": 0.85,
+      "negative_eigenvalue_in_local_ads_units": -1.1829070579343341,
+      "eigenvalue_times_round_sphere_radius_squared": -3.0798210787659692,
+      "spectator_index_one_circumference_threshold": 5.777029122023309,
+      "spectator_threshold_over_round_radial_period": 1.1396388666343242,
+      "scaled_eigenvalue_change_under_resolution_check": 9.57707186828245e-12,
+      "scaled_weighted_differential_residual": 4.517396071383234e-11
+    },
+    {
+      "alpha": 0.95,
+      "negative_eigenvalue_in_local_ads_units": -0.32782386507358363,
+      "eigenvalue_times_round_sphere_radius_squared": -3.0344721869631686,
+      "spectator_index_one_circumference_threshold": 10.973864291440831,
+      "spectator_threshold_over_round_radial_period": 1.1481229945152136,
+      "scaled_eigenvalue_change_under_resolution_check": 3.267984173869707e-11,
+      "scaled_weighted_differential_residual": 1.4227810717279454e-10
+    },
+    {
+      "alpha": 0.99,
+      "negative_eigenvalue_in_local_ads_units": -0.06108470174605839,
+      "eigenvalue_times_round_sphere_radius_squared": -3.00849830056843,
+      "spectator_index_one_circumference_threshold": 25.42222976274841,
+      "spectator_threshold_over_round_radial_period": 1.1530685062298764,
+      "scaled_eigenvalue_change_under_resolution_check": 6.004124082337073e-11,
+      "scaled_weighted_differential_residual": 2.700650569502442e-10
+    },
+    {
+      "alpha": 0.999,
+      "negative_eigenvalue_in_local_ads_units": -0.006010924123798474,
+      "eigenvalue_times_round_sphere_radius_squared": -3.0009546205477706,
+      "spectator_index_one_circumference_threshold": 81.041831153291,
+      "spectator_threshold_over_round_radial_period": 1.1545168654025122,
+      "scaled_eigenvalue_change_under_resolution_check": 1.1231943972012036e-11,
+      "scaled_weighted_differential_residual": 3.639675201637969e-09
+    }
+  ],
+  "actual_warped_backgrounds": [
+    {
+      "chern_pair": [
+        7,
+        8
+      ],
+      "alpha": 0.9939445839666909,
+      "negative_eigenvalue_in_local_ads_units": -0.036730543898369786,
+      "eigenvalue_times_round_sphere_radius_squared": -3.005347059850157,
+      "spectator_index_one_circumference_threshold": 32.78432064665007,
+      "spectator_threshold_over_round_radial_period": 1.1536728697788152,
+      "scaled_eigenvalue_change_under_resolution_check": 3.2554813247173903e-11,
+      "scaled_weighted_differential_residual": 4.819294989793356e-11
+    },
+    {
+      "chern_pair": [
+        8,
+        9
+      ],
+      "alpha": 0.9928328445040334,
+      "negative_eigenvalue_in_local_ads_units": -0.04356033065709509,
+      "eigenvalue_times_round_sphere_radius_squared": -3.006254475806871,
+      "spectator_index_one_circumference_threshold": 30.10469866686009,
+      "spectator_threshold_over_round_radial_period": 1.1534987427732564,
+      "scaled_eigenvalue_change_under_resolution_check": 3.328824135752893e-11,
+      "scaled_weighted_differential_residual": 7.194975192442796e-11
+    },
+    {
+      "chern_pair": [
+        38,
+        43
+      ],
+      "alpha": 0.9998851412345586,
+      "negative_eigenvalue_in_local_ads_units": -0.0006892973606515411,
+      "eigenvalue_times_round_sphere_radius_squared": -3.0001132369433545,
+      "spectator_index_one_circumference_threshold": 239.31865896004638,
+      "spectator_threshold_over_round_radial_period": 1.1546787465362505,
+      "scaled_eigenvalue_change_under_resolution_check": 2.5389553390655143e-10,
+      "scaled_weighted_differential_residual": 2.000896363810666e-06
+    }
+  ]
+}
