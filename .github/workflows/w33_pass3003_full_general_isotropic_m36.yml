@@ -1,0 +1,94 @@
+name: Pass 3003 Full General-Isotropic M36 Census
+
+on:
+  push:
+    branches: [agent/pass3003-3011-seven-front-optimal-information-closure]
+    paths:
+      - '.github/workflows/w33_pass3003_full_general_isotropic_m36.yml'
+      - 'analysis/bt3003_aggregate_general_isotropic_shards.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pass3003-full-general-isotropic-m36
+  cancel-in-progress: false
+
+jobs:
+  shard-batches:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix:
+        batch: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/pass3003-3011-seven-front-optimal-information-closure
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact dependencies
+        run: python -m pip install --upgrade pip numpy sympy
+      - name: Recover the frozen duplicate-free shard engine
+        run: |
+          git fetch origin agent/pass2974-2983-nonabelian-golden-information-closure
+          git show origin/agent/pass2974-2983-nonabelian-golden-information-closure:analysis/bt2977_general_isotropic_m36_search.py > /tmp/bt2977.py
+      - name: Execute five disjoint RREF pivot shards
+        shell: bash
+        env:
+          BATCH: ${{ matrix.batch }}
+        run: |
+          set -euo pipefail
+          mkdir -p "shard_artifacts/batch_${BATCH}" data
+          index="$BATCH"
+          while [ "$index" -lt 495 ]; do
+            log="shard_artifacts/batch_${BATCH}/shard_${index}.log"
+            python /tmp/bt2977.py --pivot-index "$index" 2>&1 | tee "$log"
+            if test -f data/PART_BT2977_GENERAL_ISOTROPIC_M36_PILOT_results.json; then
+              mv data/PART_BT2977_GENERAL_ISOTROPIC_M36_PILOT_results.json "shard_artifacts/batch_${BATCH}/shard_${index}.json"
+            fi
+            index=$((index+99))
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3003-m36-batch-${{ matrix.batch }}
+          path: shard_artifacts/batch_${{ matrix.batch }}/
+          retention-days: 14
+  aggregate:
+    needs: shard-batches
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/pass3003-3011-seven-front-optimal-information-closure
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: pass3003-m36-batch-*
+          path: analysis/evidence/pass3003_full_m36
+          merge-multiple: true
+      - name: Aggregate all 495 shards fail-closed
+        run: python analysis/bt3003_aggregate_general_isotropic_shards.py analysis/evidence/pass3003_full_m36 --output data/PART_BT3003_GENERAL_ISOTROPIC_M36_FULL_results.json
+      - name: Publish exhaustive certificate
+        run: |
+          git config user.name 'W33 exhaustive M36 evidence bot'
+          git config user.email 'noreply@github.com'
+          git add data/PART_BT3003_GENERAL_ISOTROPIC_M36_FULL_results.json
+          git commit -m 'Pass 3003: freeze full general-isotropic M36 census'
+          git push origin HEAD:agent/pass3003-3011-seven-front-optimal-information-closure
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3003-full-m36-results
+          path: |
+            data/PART_BT3003_GENERAL_ISOTROPIC_M36_FULL_results.json
+            analysis/evidence/pass3003_full_m36/
+          retention-days: 14
