@@ -67,7 +67,7 @@ def even_backreaction():
 
 def numerical_branch(order, grid, normal, *, asymmetry=0, reference_lambda=None):
     import numpy as np
-    from scipy.optimize import root
+    from scipy.optimize import brentq, root
 
     # 17:8 is on the predicted side, and common integer rescaling leaves
     # the dimensionless equations unchanged.
@@ -141,39 +141,65 @@ def numerical_branch(order, grid, normal, *, asymmetry=0, reference_lambda=None)
         ])
 
     critical = normal.get("static_threshold", 20)
-    eps = np.sqrt((lam-critical)/float(sp.Rational(normal["lambda_shift_coefficient"])))
-    start = np.zeros(3*size+len(odd_modes))
+    eps = normal.get("starting_amplitude")
+    if eps is None:
+        eps = np.sqrt((lam-critical)/float(sp.Rational(normal["lambda_shift_coefficient"])))
+    linear_start = np.zeros(3*size+len(odd_modes))
+    quadratic_start = np.zeros_like(linear_start)
     odd_start = 3*size+odd_modes.index((1, 0))
-    start[odd_start] = eps
+    linear_start[odd_start] = 1
     for i, coefficient in enumerate(normal.get("first_order_even_fields", ())):
-        start[i*size+even_modes.index((1, 0))] = eps*float(coefficient)
+        linear_start[i*size+even_modes.index((1, 0))] = float(coefficient)
     for i, coefficients in enumerate(normal["even_backreaction_by_field"].values()):
         for mn, coefficient in zip(((0, 0), (2, 0), (1, 1)), coefficients, strict=True):
-            start[i*size+even_modes.index(mn)] = eps**2*float(sp.Rational(coefficient))
+            quadratic_start[i*size+even_modes.index(mn)] = float(sp.Rational(coefficient))
     if second_order_v := normal.get("second_order_v"):
         for mn, coefficient in zip(((0, 0), (2, 0), (1, 1)), second_order_v, strict=True):
-            start[3*size+odd_modes.index(mn)] = eps**2*float(coefficient)
-    result = root(equations, start, tol=1e-10)
-    assert np.max(np.abs(equations(result.x))) < 1e-8
-    assert abs(result.x[odd_start]-eps) < eps/10
+            quadratic_start[3*size+odd_modes.index(mn)] = float(coefficient)
+
+    def seed(amplitude):
+        return amplitude*linear_start+amplitude**2*quadratic_start
+
+    if bracket := normal.get("amplitude_bracket"):
+        def solve_complement(amplitude):
+            def unpack(values):
+                return np.insert(values, odd_start, amplitude)
+
+            def projected(values):
+                return np.delete(equations(unpack(values)), odd_start)
+
+            result = root(projected, np.delete(seed(amplitude), odd_start), tol=1e-11)
+            assert np.max(np.abs(projected(result.x))) < 1e-9
+            coefficients = unpack(result.x)
+            return equations(coefficients)[odd_start], coefficients
+
+        amplitude = brentq(lambda value: solve_complement(value)[0],
+                           *bracket, xtol=1e-11)
+        _, coefficients = solve_complement(amplitude)
+    else:
+        coefficients = root(equations, seed(eps), tol=1e-10).x
+        assert abs(coefficients[odd_start]-eps) < eps/10
+    assert np.max(np.abs(equations(coefficients))) < 1e-8
     c_newton = np.mean(np.exp(np.einsum(
-        "i,ijk->jk", 3*result.x[:size]+2*result.x[size:2*size], even[0], optimize=False
+        "i,ijk->jk", 3*coefficients[:size]+2*coefficients[size:2*size], even[0], optimize=False
     )))
-    newton_predicted = eps**4*float(sp.Rational(
-        normal["normalized_AdS_Newton_coefficient_shift_at_epsilon_fourth"]
-    ))
-    assert abs(c_newton-1-newton_predicted) < abs(newton_predicted)/30, (
-        d, float(c_newton-1), float(newton_predicted), float(result.x[odd_start]), float(eps)
-    )
+    newton_predicted = normal.get("predicted_newton_shift")
+    if newton_predicted is None:
+        newton_predicted = eps**4*float(sp.Rational(
+            normal["normalized_AdS_Newton_coefficient_shift_at_epsilon_fourth"]
+        ))
+        assert abs(c_newton-1-newton_predicted) < abs(newton_predicted)/30, (
+            d, float(c_newton-1), float(newton_predicted), float(coefficients[odd_start]), float(eps)
+        )
     return {
         "cutoff": order,
         "collocation_grid": grid,
         "lambda": float(lam),
-        "leading_mode_amplitude": round(float(result.x[odd_start]), 12),
+        "leading_mode_amplitude": round(float(coefficients[odd_start]), 12),
         "normalized_AdS_Newton_coefficient_minus_one": float("%.8g" % (c_newton-1)),
         "predicted_leading_shift_at_same_lambda": float("%.8g" % newton_predicted),
         "max_residual_components_A_B_c_v_and_tracefree": [float("%.4g" % x)
-                                                         for x in equations(result.x, False)],
+                                                         for x in equations(coefficients, False)],
     }
 
 
