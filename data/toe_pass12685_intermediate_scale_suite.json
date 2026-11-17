@@ -1,0 +1,129 @@
+{
+ "control_Mt_sqrt_vMPl": 172.56613523745497,
+ "smash_threshold": [
+  {
+   "Mt": 172.14,
+   "mu0": 312131086465.2927,
+   "lambda_SM_min": -0.0074752981012922845,
+   "lambda_sigma_max_for_fa_window": [
+    3.01492853645744,
+    6.290406452608733
+   ],
+   "portal_min_over_sqrt_lambda_sigma": 0.0864598062760511
+  },
+  {
+   "Mt": 172.57,
+   "mu0": 54070047716.179886,
+   "lambda_SM_min": -0.01027969416957705,
+   "lambda_sigma_max_for_fa_window": [
+    0.09047247682589443,
+    0.18876356276019948
+   ],
+   "portal_min_over_sqrt_lambda_sigma": 0.10138882665055873
+  },
+  {
+   "Mt": 173.0,
+   "mu0": 13410047611.027721,
+   "lambda_SM_min": -0.0130995610862054,
+   "lambda_sigma_max_for_fa_window": [
+    0.005564980076704719,
+    0.011610884357569105
+   ],
+   "portal_min_over_sqrt_lambda_sigma": 0.11445331400272078
+  },
+  {
+   "Mt": 173.43,
+   "mu0": 4225663142.5508294,
+   "lambda_SM_min": -0.01593522546653088,
+   "lambda_sigma_max_for_fa_window": [
+    0.0005525768942473183,
+    0.0011529073472567504
+   ],
+   "portal_min_over_sqrt_lambda_sigma": 0.12623480291318587
+  }
+ ],
+ "dark_dimension_rescue_vectorlike": [
+  {
+   "M_VL": 1500.0,
+   "R_um": 1.0,
+   "M5": 571042184.5186006,
+   "y_prime_at_MVL": 0.5085697145895696,
+   "y_prime_max_below_M5": 0.5085697145895696,
+   "perturbative": true
+  },
+  {
+   "M_VL": 1500.0,
+   "R_um": 30.0,
+   "M5": 183778389.10490608,
+   "y_prime_at_MVL": 0.5302262672646462,
+   "y_prime_max_below_M5": 0.5302262672646462,
+   "perturbative": true
+  },
+  {
+   "M_VL": 3000.0,
+   "R_um": 1.0,
+   "M5": 571042184.5186006,
+   "y_prime_at_MVL": 0.49761711182167917,
+   "y_prime_max_below_M5": 0.49761711182167917,
+   "perturbative": true
+  },
+  {
+   "M_VL": 3000.0,
+   "R_um": 30.0,
+   "M5": 183778389.10490608,
+   "y_prime_at_MVL": 0.5220677298624304,
+   "y_prime_max_below_M5": 0.5220677298624304,
+   "perturbative": true
+  },
+  {
+   "M_VL": 10000.0,
+   "R_um": 1.0,
+   "M5": 571042184.5186006,
+   "y_prime_at_MVL": 0.48429952875263715,
+   "y_prime_max_below_M5": 0.48429952875263715,
+   "perturbative": true
+  },
+  {
+   "M_VL": 10000.0,
+   "R_um": 30.0,
+   "M5": 183778389.10490608,
+   "y_prime_at_MVL": 0.5137048726796883,
+   "y_prime_max_below_M5": 0.5137048726796883,
+   "perturbative": true
+  }
+ ],
+ "seesaw": [
+  {
+   "MN": 10000000000.0,
+   "y_nu": 0.004061497881599928,
+   "dlambda_MPl": -4.852827141712396e-07
+  },
+  {
+   "MN": 100000000000.0,
+   "y_nu": 0.012843584017804652,
+   "dlambda_MPl": -3.977071333958332e-06
+  },
+  {
+   "MN": 1000000000000.0,
+   "y_nu": 0.040614978815999285,
+   "dlambda_MPl": -3.333812001370465e-05
+  }
+ ],
+ "forecast": {
+  "dlog10mu0_dMt": -1.5628840874700778,
+  "dlog10mu0_dalpha_s": 563.1669091449431,
+  "dlog10mu0_dMh": 0.8715372950093947,
+  "sigma_log10mu0_now_incl_pole_ambiguity": 1.0573674088942735,
+  "sigma_log10mu0_future": 0.26611537871734936,
+  "sigma_log10mu0_future_no_theory": 0.18696115815814,
+  "variant_spread_decades": 0.4272695780275413,
+  "planck_boundary_sigma_now": 3.654705457067474,
+  "planck_boundary_sigma_future": 9.358097400840377,
+  "mt_equivalent_sigma_future": 0.16990633158586468
+ },
+ "axion_ede": {
+  "ede_m2f2_eV4": 0.237169,
+  "qcd_axion_m2f2_eV4": 3.2490000000000004e+31,
+  "log10_ratio": 32.13669178891571
+ }
+}
