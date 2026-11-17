@@ -1,0 +1,42 @@
+{
+  "crossing": {
+    "alpha": 0.9175768989800611,
+    "quartic": 3.6853420807409203e-13,
+    "raw_sixth": 0.15734145845695838,
+    "third_order_response_correction": -0.1551845110368629,
+    "reduced_sixth": 0.0021569474200954786,
+    "projected_third_order_force": 1.473175748056832e-12,
+    "sixth_from_direct_third_order_graph": 0.0021569474200955935
+  },
+  "coarse_at_crossing": {
+    "alpha": 0.9175768989800611,
+    "quartic": 3.7586988947994285e-13,
+    "raw_sixth": 0.15734145845694086,
+    "third_order_response_correction": -0.15518451103706005,
+    "reduced_sixth": 0.002156947419880817,
+    "projected_third_order_force": 1.5021190364137973e-12
+  },
+  "neighboring": [
+    {
+      "alpha": 0.9155768989800611,
+      "quartic": -0.000244962880668713,
+      "raw_sixth": 0.16320209569032815,
+      "third_order_response_correction": -0.15986850702802172,
+      "reduced_sixth": 0.0033335886623064304,
+      "projected_third_order_force": -0.0009798515226760653
+    },
+    {
+      "alpha": 0.9195768989800611,
+      "quartic": 0.0002297437080280269,
+      "raw_sixth": 0.15163474951941874,
+      "third_order_response_correction": -0.15057426246788216,
+      "reduced_sixth": 0.0010604870515365794,
+      "projected_third_order_force": 0.0009189748321114696
+    }
+  ],
+  "leading_two_parameter_unfolding": {
+    "fold_detuning": "4*b^2/(3*d)",
+    "equal_action_detuning": "b^2/d",
+    "at_quartic_zero_amplitude_fourth_power": "-sigma/(12*d)"
+  }
+}

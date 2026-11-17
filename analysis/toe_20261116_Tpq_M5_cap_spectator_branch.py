@@ -13,7 +13,7 @@ from toe_20261116_Tpq_M5_finite_stripe import area, volume
 from toe_20261116_Tpq_M5_cap_geometric_threshold import meridian_quadrature
 
 
-def reduced_quartic(row, mode_count, quadrature_count):
+def reduced_quartic(row, mode_count, quadrature_count, *, include_response=False):
     alpha, bulge = row["alpha"], row["cap_bulge_radius"]
     c = 4/alpha
     r, weights, _, _, v, radial_speed, h, potential = meridian_quadrature(
@@ -65,6 +65,13 @@ def reduced_quartic(row, mode_count, quadrature_count):
     answer0 = solve(radial_hessian, b0, assume_a="sym")
     answer2 = solve((radial_hessian+4*critical*overlap)/2, b2, assume_a="pos")
     complement = -(b0 @ answer0+b2 @ answer2)/2
+    if include_response:
+        return {"critical": critical, "quartic": direct+complement, "pressure": c,
+                "weights": weights, "speed": v, "angular_curvature": h,
+                "meridian_curvature": meridian_curvature,
+                "values": values, "gradients": gradients, "overlap": overlap,
+                "radial_hessian": radial_hessian, "ground": eigenvector[:, 0],
+                "second_order": (-answer0, -answer2)}
     return float(critical), direct, float(complement)
 
 
