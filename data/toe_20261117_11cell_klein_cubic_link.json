@@ -1,0 +1,576 @@
+{
+  "status": "PASS",
+  "cubic": {
+    "polynomial": "x0**2*x1 + x0*x4**2 + x1**2*x2 + x2**2*x3 + x3**2*x4",
+    "C11_weights": [
+      1,
+      9,
+      4,
+      3,
+      5
+    ],
+    "C11_invariant_cubic_monomials": 5,
+    "C11_semidirect_C5_invariant_cubic_dimension": 1,
+    "smoothness_proof": "If one critical coordinate vanishes, all do. Otherwise multiplying the five derivative equations gives 32 product(x)^2=-product(x)^2, impossible in characteristic zero.",
+    "Jacobian_Hilbert_dimensions": [
+      1,
+      5,
+      10,
+      10,
+      5,
+      1,
+      0
+    ],
+    "cone_Milnor_number": 32,
+    "cubic_deformation_dimension": 10,
+    "C11_fixed_cubic_deformations": 0,
+    "H21_dimension": 5,
+    "C11_fixed_H21": 0,
+    "proof_scope": "The characteristic-zero polynomial checks are exact. Aut(X)=PSL2(11) and KE existence are published inputs, not reclassified here."
+  },
+  "characteristic_classes": {
+    "total_Chern_polynomial": "-2*h**3 + 4*h**2 + 2*h + 1",
+    "degree": 3,
+    "Euler_X": -6,
+    "c1": "2H",
+    "c2": "4H^2",
+    "p1": "-4H^2=-12L, with H^2=3L and integral(H L)=1",
+    "base_spin": true,
+    "link_spin": true,
+    "link_p1_torsion_coefficient_mod3": 0,
+    "link_lambda_p1_over2": "0 (multiplication by2 is invertible on Z3)",
+    "caveat": "Vanishing characteristic shift does not determine a Page-charge or brane spectrum."
+  },
+  "seven_link": {
+    "circle_Euler_class": "H (primitive)",
+    "integral_cohomology": [
+      {
+        "degree": 0,
+        "free_rank": 1,
+        "torsion": []
+      },
+      {
+        "degree": 1,
+        "free_rank": 0,
+        "torsion": []
+      },
+      {
+        "degree": 2,
+        "free_rank": 0,
+        "torsion": []
+      },
+      {
+        "degree": 3,
+        "free_rank": 10,
+        "torsion": []
+      },
+      {
+        "degree": 4,
+        "free_rank": 10,
+        "torsion": [
+          3
+        ]
+      },
+      {
+        "degree": 5,
+        "free_rank": 0,
+        "torsion": []
+      },
+      {
+        "degree": 6,
+        "free_rank": 0,
+        "torsion": []
+      },
+      {
+        "degree": 7,
+        "free_rank": 1,
+        "torsion": []
+      }
+    ],
+    "H3_homology": "Z^10 + Z3",
+    "flat_C_field_characters": "U(1)^10 x Z3",
+    "two_connected": true,
+    "unique_spin_structure": true,
+    "C11_fixed_continuous_C3_modes": 0,
+    "torsion_C_field_sectors": 3,
+    "torsion_action": "C11:C5, and PSL2(11), act trivially on Z3: Aut(Z3)=Z2.",
+    "torsion_linking_form": "plus or minus 1/3 on a generator, depending on orientation",
+    "caveat": "Three discrete flat C-field sectors are not three matter generations."
+  },
+  "free_quotient": {
+    "group": "C11 semidirect C5, with P D P^-1=D^9",
+    "order": 55,
+    "elements": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        6,
+        0
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        6,
+        2
+      ],
+      [
+        6,
+        3
+      ],
+      [
+        6,
+        4
+      ],
+      [
+        7,
+        0
+      ],
+      [
+        7,
+        1
+      ],
+      [
+        7,
+        2
+      ],
+      [
+        7,
+        3
+      ],
+      [
+        7,
+        4
+      ],
+      [
+        8,
+        0
+      ],
+      [
+        8,
+        1
+      ],
+      [
+        8,
+        2
+      ],
+      [
+        8,
+        3
+      ],
+      [
+        8,
+        4
+      ],
+      [
+        9,
+        0
+      ],
+      [
+        9,
+        1
+      ],
+      [
+        9,
+        2
+      ],
+      [
+        9,
+        3
+      ],
+      [
+        9,
+        4
+      ],
+      [
+        10,
+        0
+      ],
+      [
+        10,
+        1
+      ],
+      [
+        10,
+        2
+      ],
+      [
+        10,
+        3
+      ],
+      [
+        10,
+        4
+      ]
+    ],
+    "conjugating_powers": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        3,
+        0
+      ],
+      [
+        0,
+        4,
+        0
+      ],
+      [
+        1,
+        1,
+        4
+      ],
+      [
+        1,
+        2,
+        7
+      ],
+      [
+        1,
+        3,
+        5
+      ],
+      [
+        1,
+        4,
+        8
+      ],
+      [
+        2,
+        1,
+        8
+      ],
+      [
+        2,
+        2,
+        3
+      ],
+      [
+        2,
+        3,
+        10
+      ],
+      [
+        2,
+        4,
+        5
+      ],
+      [
+        3,
+        1,
+        1
+      ],
+      [
+        3,
+        2,
+        10
+      ],
+      [
+        3,
+        3,
+        4
+      ],
+      [
+        3,
+        4,
+        2
+      ],
+      [
+        4,
+        1,
+        5
+      ],
+      [
+        4,
+        2,
+        6
+      ],
+      [
+        4,
+        3,
+        9
+      ],
+      [
+        4,
+        4,
+        10
+      ],
+      [
+        5,
+        1,
+        9
+      ],
+      [
+        5,
+        2,
+        2
+      ],
+      [
+        5,
+        3,
+        3
+      ],
+      [
+        5,
+        4,
+        7
+      ],
+      [
+        6,
+        1,
+        2
+      ],
+      [
+        6,
+        2,
+        9
+      ],
+      [
+        6,
+        3,
+        8
+      ],
+      [
+        6,
+        4,
+        4
+      ],
+      [
+        7,
+        1,
+        6
+      ],
+      [
+        7,
+        2,
+        5
+      ],
+      [
+        7,
+        3,
+        2
+      ],
+      [
+        7,
+        4,
+        1
+      ],
+      [
+        8,
+        1,
+        10
+      ],
+      [
+        8,
+        2,
+        1
+      ],
+      [
+        8,
+        3,
+        7
+      ],
+      [
+        8,
+        4,
+        9
+      ],
+      [
+        9,
+        1,
+        3
+      ],
+      [
+        9,
+        2,
+        8
+      ],
+      [
+        9,
+        3,
+        1
+      ],
+      [
+        9,
+        4,
+        6
+      ],
+      [
+        10,
+        1,
+        7
+      ],
+      [
+        10,
+        2,
+        4
+      ],
+      [
+        10,
+        3,
+        6
+      ],
+      [
+        10,
+        4,
+        3
+      ]
+    ],
+    "free_on_link": true,
+    "freeness_proof": "Nonidentity D powers have no eigenvalue1. All other elements are conjugate to a nonidentity coordinate5-cycle. Its fixed line has f(t,t,t,t,t)=5t^3, so it misses the punctured cone.",
+    "holomorphic_residue_preserved": true,
+    "residue_reason": "det D=det P=1 and f is invariant; the cone residue4-form is invariant.",
+    "quotient_pi1": "C11:C5",
+    "quotient_H1_homology": "Z5",
+    "quotient_rational_Betti_numbers": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "quotient_unique_spin": true,
+    "quotient_H4_torsion_3_primary": "Z3 (coprime-order transfer)",
+    "full_integral_quotient_cohomology": "Not computed; additional5- or11-primary torsion is not excluded.",
+    "internal_Vol_Y_over_Vol_S7": "3/16",
+    "internal_Vol_quotient_over_Vol_S7": "3/880",
+    "quotient_volume": "pi^4/880 for Ric=6g",
+    "leading_AdS4_free_energy": "pi*sqrt(1760/27)*N^(3/2), standard large-N holographic formula",
+    "physics_scope": "A free holomorphic volume-preserving quotient of the Sasaki-Einstein link gives a smooth supersymmetric Freund-Rubin route. The induced Euclidean link metric is not asserted to be Einstein. No SM or flux-sector selection derived."
+  },
+  "geometry": "Y7={f=0} intersect S9 in C5; smooth link of the isolated cone singularity.",
+  "metric_input": "All smooth cubic threefolds admit KE metrics (Liu-Xu). The associated regular Sasaki-Einstein link has Ric(Y)=6g after normalization.",
+  "eleven_dimensional_route": "Standard supersymmetric Freund-Rubin AdS4 x Y7, with AdS radius half internal radius. This is an existing construction applied to the Klein cubic, not an observed Standard Model or a new classification theorem.",
+  "limitations": "No explicit KE metric, complete KK spectrum, physical couplings, four-dimensional Minkowski vacuum, SM gauge sector or flux-sector selection computed."
+}

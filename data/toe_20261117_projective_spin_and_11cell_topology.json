@@ -1,0 +1,189 @@
+{
+  "status": "PASS",
+  "spin": {
+    "mod7_SU4_closure_order": 51840,
+    "scalar_kernel": [
+      "+I",
+      "-I"
+    ],
+    "projective_order": 25920,
+    "Witting_CP3_spin_lift": true,
+    "global_reason": "CP3 has K^(1/2)=O(-2). The SU4 lifts have scalar kernel +/-I, which acts trivially on O(-2). Their equivariant spin bundle descends.",
+    "S5_mirror_spin_obstruction": true,
+    "S5_reason": "A projective transposition rotates one real normal plane by pi. Both Spin lifts square to-1, so no order2 lift exists at the generic mirror.",
+    "cone_controls": [
+      {
+        "order": 2,
+        "lift_nth_powers": [
+          -1,
+          -1
+        ],
+        "honest_cyclic_spin_lifts": 0
+      },
+      {
+        "order": 3,
+        "lift_nth_powers": [
+          -1,
+          1
+        ],
+        "honest_cyclic_spin_lifts": 1
+      },
+      {
+        "order": 4,
+        "lift_nth_powers": [
+          -1,
+          -1
+        ],
+        "honest_cyclic_spin_lifts": 0
+      },
+      {
+        "order": 5,
+        "lift_nth_powers": [
+          -1,
+          1
+        ],
+        "honest_cyclic_spin_lifts": 1
+      },
+      {
+        "order": 6,
+        "lift_nth_powers": [
+          -1,
+          -1
+        ],
+        "honest_cyclic_spin_lifts": 0
+      },
+      {
+        "order": 7,
+        "lift_nth_powers": [
+          -1,
+          1
+        ],
+        "honest_cyclic_spin_lifts": 1
+      },
+      {
+        "order": 8,
+        "lift_nth_powers": [
+          -1,
+          -1
+        ],
+        "honest_cyclic_spin_lifts": 0
+      },
+      {
+        "order": 9,
+        "lift_nth_powers": [
+          -1,
+          1
+        ],
+        "honest_cyclic_spin_lifts": 1
+      },
+      {
+        "order": 10,
+        "lift_nth_powers": [
+          -1,
+          -1
+        ],
+        "honest_cyclic_spin_lifts": 0
+      },
+      {
+        "order": 11,
+        "lift_nth_powers": [
+          -1,
+          1
+        ],
+        "honest_cyclic_spin_lifts": 1
+      },
+      {
+        "order": 12,
+        "lift_nth_powers": [
+          -1,
+          -1
+        ],
+        "honest_cyclic_spin_lifts": 0
+      }
+    ],
+    "caveat": "Spin compatibility does not resolve the branch singularities or provide their localized dynamics."
+  },
+  "locally_projective_topology": {
+    "objects": {
+      "11_cell": {
+        "face_numbers": [
+          11,
+          55,
+          55,
+          11
+        ],
+        "face_number_alternating_sum": 0,
+        "order_complex_f_vector": [
+          132,
+          781,
+          1320,
+          660
+        ],
+        "order_complex_Euler": 11,
+        "RP2_link_singular_vertices": 22,
+        "omnitruncated_table_counts": [
+          660,
+          1320,
+          781,
+          132
+        ],
+        "omnitruncated_face_number_alternating_sum": -11,
+        "flags": 660
+      },
+      "57_cell": {
+        "face_numbers": [
+          57,
+          171,
+          171,
+          57
+        ],
+        "face_number_alternating_sum": 0,
+        "order_complex_f_vector": [
+          456,
+          3819,
+          6840,
+          3420
+        ],
+        "order_complex_Euler": 57,
+        "RP2_link_singular_vertices": 114,
+        "omnitruncated_table_counts": [
+          3420,
+          6840,
+          3819,
+          456
+        ],
+        "omnitruncated_face_number_alternating_sum": -57,
+        "flags": 3420
+      },
+      "tomotope_partial_b": {
+        "face_numbers": [
+          4,
+          12,
+          16,
+          8
+        ],
+        "face_number_alternating_sum": 0,
+        "order_complex_f_vector": [
+          40,
+          228,
+          384,
+          192
+        ],
+        "order_complex_Euler": 4,
+        "RP2_link_singular_vertices": 8,
+        "omnitruncated_table_counts": [
+          96,
+          192,
+          116,
+          24
+        ],
+        "omnitruncated_face_number_alternating_sum": -4,
+        "flags": 192
+      }
+    },
+    "topology": "The order complexes are3-dimensional. RP2 links obstruct ordinary 3-manifold neighborhoods and orientability of the regular part adjacent to those links.",
+    "correction": "The BT839 sums0 and-11/-57/-4 are face-table arithmetic, not the topological Euler characteristic of a regular CW decomposition with ball cells.",
+    "tomotope_correction": "The tomotope itself is an abstract uniform4-polytope, Aut order96, 192 flags. Its monodromy group order18432 fails the intersection property; that failure does not make the tomotope a non-polytope.",
+    "dimensions": "11 cells do not determine11 spacetime dimensions; a smooth spin internal geometry and a dynamical action are additional requirements."
+  }
+}
