@@ -37,7 +37,7 @@ def volume_ratio(r):
     return result
 
 
-def eigenvalue(alpha, bulge, modes, sample_count):
+def meridian_quadrature(alpha, bulge, sample_count):
     grid, weights = leggauss(sample_count)
     angle = (1+grid)*pi/4
     r = bulge*np.sin(angle)
@@ -57,8 +57,16 @@ def eigenvalue(alpha, bulge, modes, sample_count):
     potential = (pressure-4*curvature)**2+4*curvature**2/np.cosh(r)**2
     measure = weights*(pi/4)*radius**4*dr_dangle/radial_speed
     kinetic_weight = weights*(pi/4)*radius**4*radial_speed/dr_dangle
-    coordinate = 2*np.sin(angle)**2-1
-    derivative = 4*np.sin(angle)*np.cos(angle)
+    return r, measure, kinetic_weight, radius, torus_speed, radial_speed, curvature, potential
+
+
+def eigenvalue(alpha, bulge, modes, sample_count):
+    r, measure, kinetic_weight, _, torus_speed, radial_speed, curvature, potential = (
+        meridian_quadrature(alpha, bulge, sample_count)
+    )
+    pressure = 4/alpha
+    coordinate = 2*(r/bulge)**2-1
+    derivative = 4*(r/bulge)*np.sqrt(1-(r/bulge)**2)
     basis = [Legendre.basis(i) for i in range(modes)]
     values = np.array([p(coordinate) for p in basis])
     gradients = np.array([p.deriv()(coordinate)*derivative for p in basis])

@@ -1,0 +1,101 @@
+{
+  "control_families": [
+    {
+      "alpha": 0.1,
+      "critical_wave_number_squared": 316.667701814848,
+      "direct_quartic": -3443.7775661797596,
+      "complementary_response_quartic": 527.7462657808501,
+      "reduced_quartic": -2916.0313003989095,
+      "quartic_change_under_resolution_check": 3.497007128316909e-10
+    },
+    {
+      "alpha": 0.3,
+      "critical_wave_number_squared": 32.23166844262806,
+      "direct_quartic": -35.38033597772217,
+      "complementary_response_quartic": 5.938245291136717,
+      "reduced_quartic": -29.442090686585452,
+      "quartic_change_under_resolution_check": 7.403144763884484e-11
+    },
+    {
+      "alpha": 0.6,
+      "critical_wave_number_squared": 5.595344834898708,
+      "direct_quartic": -1.020691125701548,
+      "complementary_response_quartic": 0.2371865632030703,
+      "reduced_quartic": -0.7835045624984778,
+      "quartic_change_under_resolution_check": 2.320144076861652e-12
+    },
+    {
+      "alpha": 0.85,
+      "critical_wave_number_squared": 1.1829070579172891,
+      "direct_quartic": -0.03581114345014091,
+      "complementary_response_quartic": 0.016715343616630185,
+      "reduced_quartic": -0.019095799833510722,
+      "quartic_change_under_resolution_check": 2.6444124667790447e-14
+    },
+    {
+      "alpha": 0.95,
+      "critical_wave_number_squared": 0.3278238650666687,
+      "direct_quartic": 0.0007935547645428336,
+      "complementary_response_quartic": 0.0012638111015482179,
+      "reduced_quartic": 0.0020573658660910515,
+      "quartic_change_under_resolution_check": 3.4487170064156913e-14
+    },
+    {
+      "alpha": 0.99,
+      "critical_wave_number_squared": 0.06108470174421128,
+      "direct_quartic": 0.001457569613290662,
+      "complementary_response_quartic": -0.0006749595326014813,
+      "reduced_quartic": 0.0007826100806891808,
+      "quartic_change_under_resolution_check": 5.709256852004518e-14
+    },
+    {
+      "alpha": 0.999,
+      "critical_wave_number_squared": 0.0060109241237722415,
+      "direct_quartic": 0.00045983331135151124,
+      "complementary_response_quartic": -0.0003757656672935777,
+      "reduced_quartic": 8.406764405793351e-05,
+      "quartic_change_under_resolution_check": 2.5417222580120802e-14
+    }
+  ],
+  "actual_warped_backgrounds": [
+    {
+      "chern_pair": [
+        7,
+        8
+      ],
+      "alpha": 0.9939445839666909,
+      "critical_wave_number_squared": 0.03673054389749173,
+      "direct_quartic": 0.0011490249777855017,
+      "complementary_response_quartic": -0.0006582686757907541,
+      "reduced_quartic": 0.0004907563019947475,
+      "quartic_change_under_resolution_check": 4.8716022535422177e-14
+    },
+    {
+      "chern_pair": [
+        8,
+        9
+      ],
+      "alpha": 0.9928328445040334,
+      "critical_wave_number_squared": 0.04356033065611045,
+      "direct_quartic": 0.0012476011733191,
+      "complementary_response_quartic": -0.000672189304211963,
+      "reduced_quartic": 0.000575411869107137,
+      "quartic_change_under_resolution_check": 2.1341001882335675e-14
+    },
+    {
+      "chern_pair": [
+        38,
+        43
+      ],
+      "alpha": 0.9998851412345586,
+      "critical_wave_number_squared": 0.0006892973606525288,
+      "direct_quartic": 0.00015409416852478713,
+      "complementary_response_quartic": -0.00014440200365420093,
+      "reduced_quartic": 9.692164870586206e-06,
+      "quartic_change_under_resolution_check": 2.3728251107675222e-11
+    }
+  ],
+  "critical_mode_normalization": "meridian weighted mean of psi squared equals one",
+  "euclidean_limit_quartic_times_cap_radius_fourth": "-35/48",
+  "sampled_sign_change_in_alpha": 0.9175768989800611
+}
