@@ -1,0 +1,27 @@
+{
+  "equal_flux_sphere_odd_characteristic_polynomial": "lambda**2 - 2*lambda*z - 20*lambda + z**2 + 4*z",
+  "BF_determinant_at_arbitrary_flux": "-72*lambda*(lambda - 12)*(80*d**2*lambda**2 + 896*d**2*lambda - 3840*d**2 - lambda**4 - 40*lambda**3 - 336*lambda**2 - 2304*lambda)/(lambda + 3)",
+  "strictly_positive_factor_for_lambda_positive": "3840*d**2 + lambda**4 + 40*lambda**3 + lambda**2*(336 - 80*d**2) + lambda*(2304 - 896*d**2)",
+  "exact_LDL_sample_pivots_as_successive_principal_determinants": [
+    "1",
+    "142",
+    "1120",
+    "25128",
+    "-114075",
+    "-530838"
+  ],
+  "BF_saturating_vector_at_lambda_12": [
+    "1",
+    "(d - 9)/(d + 9)",
+    "4*d/(d + 9)",
+    "-sqrt(3*d + 3)",
+    "sqrt(3 - 3*d)*(9 - d)/(d + 9)"
+  ],
+  "static_marginal_mode_determinant": "-72*lambda**4*(80*d**2 - lambda**2 - 8*lambda + 560)/(lambda + 3)",
+  "positive_static_threshold": "4*sqrt(5*d**2 + 36) - 4",
+  "nonzero_momentum_characteristic_polynomial_limit_at_lambda_zero": "-z**2*(z - 32)*(-80*d**2 + z**2 - 8*z - 48)",
+  "BF_violating_scalar_count_per_signed_momentum": {
+    "0<lambda<12": 1,
+    "lambda>=12": 0
+  }
+}
