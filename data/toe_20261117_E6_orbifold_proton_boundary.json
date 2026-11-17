@@ -1,0 +1,88 @@
+{
+  "E6": {
+    "adjoint_grade_dimensions": {
+      "-6": 2,
+      "-5": 6,
+      "-4": 6,
+      "-3": 2,
+      "-2": 3,
+      "-1": 12,
+      "0": 16,
+      "1": 12,
+      "2": 3,
+      "3": 2,
+      "4": 6,
+      "5": 6,
+      "6": 2
+    },
+    "adjoint_reflection_dimensions": [
+      38,
+      40
+    ],
+    "fundamental_reflection_dimensions": [
+      15,
+      12
+    ],
+    "even_grade_current_baryon_charges_times_three": {
+      "-6": [
+        0
+      ],
+      "-4": [
+        -1
+      ],
+      "-2": [
+        1
+      ],
+      "0": [
+        0
+      ],
+      "2": [
+        -1
+      ],
+      "4": [
+        1
+      ],
+      "6": [
+        0
+      ]
+    },
+    "baryon_violating_even_boundary_contact_slots": 36,
+    "boundary_contact_witnesses": [
+      {
+        "indices": [
+          21,
+          25,
+          1,
+          18
+        ],
+        "coefficient": 1
+      },
+      {
+        "indices": [
+          6,
+          9,
+          10,
+          17
+        ],
+        "coefficient": -1
+      }
+    ]
+  },
+  "propagators": {
+    "interval_ND_G_at_delta_from_boundary": "sinh(delta*m)*cosh(m*(L - delta))/(m*cosh(L*m))",
+    "massless_interval_ND_G_at_delta_from_boundary": "delta",
+    "derivative_exchange_massless_N_modes": "2*N/L",
+    "derivative_exchange_finite_mass_subtraction_as_N_grows": "-m*tanh(m*L)",
+    "massless_antiperiodic_circle_coincident_G": "L/4"
+  },
+  "charges": {
+    "allowed_constant_direct_mass_forces_abelian_allowed_contact": true,
+    "Z4R_charges_W_X_H_partner": [
+      2,
+      1,
+      0,
+      2
+    ],
+    "Z4R_forbids_contact_and_direct_H_Hbar_mass": true
+  }
+}
