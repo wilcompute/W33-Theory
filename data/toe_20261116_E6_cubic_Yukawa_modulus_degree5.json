@@ -1,0 +1,86 @@
+{
+  "Higgs_mass_examples": [
+    {
+      "A_A_block_rank": 4,
+      "B_C_block_rank": 3,
+      "C_B_block_rank": 3,
+      "a": "1",
+      "b": "0",
+      "nullity": 17,
+      "rank": 10,
+      "singular_mass_squared": "1"
+    },
+    {
+      "A_A_block_rank": 4,
+      "B_C_block_rank": 3,
+      "C_B_block_rank": 3,
+      "a": "0",
+      "b": "1",
+      "nullity": 17,
+      "rank": 10,
+      "singular_mass_squared": "1"
+    },
+    {
+      "A_A_block_rank": 4,
+      "B_C_block_rank": 3,
+      "C_B_block_rank": 3,
+      "a": "1",
+      "b": "1",
+      "nullity": 17,
+      "rank": 10,
+      "singular_mass_squared": "2"
+    },
+    {
+      "A_A_block_rank": 4,
+      "B_C_block_rank": 3,
+      "C_B_block_rank": 3,
+      "a": "1",
+      "b": "2",
+      "nullity": 17,
+      "rank": 10,
+      "singular_mass_squared": "5"
+    },
+    {
+      "A_A_block_rank": 4,
+      "B_C_block_rank": 3,
+      "C_B_block_rank": 3,
+      "a": "1",
+      "b": "I",
+      "nullity": 17,
+      "rank": 10,
+      "singular_mass_squared": "2"
+    },
+    {
+      "A_A_block_rank": 4,
+      "B_C_block_rank": 3,
+      "C_B_block_rank": 3,
+      "a": "1",
+      "b": "1 + I",
+      "nullity": 17,
+      "rank": 10,
+      "singular_mass_squared": "3"
+    }
+  ],
+  "adjoint_degree5_control": {
+    "E6_Cartan_dim": 6,
+    "SU5_stabilizer_Cartan_dim": 4,
+    "fifth_trace_tr27_Y5": -4320,
+    "obstruction": "For lambda!=0, W=T(Tr27 Phi\u00b2-w\u00b2)+lambda Tr27 Phi^5 has no F-flat solution with Phi proportional to Y; the fifth-order Cartan derivative is not proportional to Y.",
+    "quadratic_norm_tr27_Y2": 180,
+    "quadratic_vs_fifth_Cartan_gradient_rank": 2,
+    "scope": "No statement excluding cancellations from Hbar-Phi-H couplings or higher E6 invariants.",
+    "unlifted_complex_SU5_Cartan_moduli_at_least": 3
+  },
+  "cubic_mass_pairs": "Ten of 27 chiral fields acquire mass |lambda|sqrt(|a|\u00b2+|b|\u00b2) in a single 27 flavor, leaving 17 massless; rank only, not an SM physical mass claim.",
+  "explicit_superpotential": {
+    "D_flat": "Each aligned 27bar cancels its partner 27 moment map for every compact E6 generator; the Cartan adjoint Phi is normal and has zero adjoint moment map.",
+    "F_flat": "S1=S2=T=0, <barHa,Ha>=va\u00b2, Tr27 Phi\u00b2=w\u00b2; cubic polarizations vanish for common-row rank-one A-sector VEVs",
+    "Y_standard_model_hypercharge_factor": "-1/6",
+    "gauge_symmetry": "E6 -> SU5 by H1,H2 and SU5 -> SM Lie algebra by Phi proportional to Y",
+    "not_isolated": true,
+    "superpotential": "S1(<barH1,H1>-v1\u00b2)+S2(<barH2,H2>-v2\u00b2)+T(Tr27 Phi\u00b2-w\u00b2)+lambda I3(H1,H2)",
+    "unlifted_Cartan_moduli_dim_lower_bound": 3
+  },
+  "status": "PASS_E6_SUPERSONIC_CUBIC_27_MASS_AND_FD_FLAT_SM_BRANCHED_VACUUM",
+  "unresolved": "Adjoint direction not dynamically selected, at least three Cartan complex moduli, unknown full coupled scalar Hessian and realistic fermion masses."
+}

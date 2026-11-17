@@ -1,0 +1,53 @@
+{
+  "exact_invariants": {
+    "Ricci_squared_L4": "224+64*x^2",
+    "Riemann_squared_L4": "328+128*x^2",
+    "example_nonzero_quartic_scalar_at_equal": "(Rabcd Rabcd)^2 L^8=107584",
+    "not_computed": "Actual t8t8R4, epsilon11epsilon11R4 and complete supersymmetric flux-dependent eight-derivative operator; X8 variations can affect fluctuation equations even when X8 of background is zero.",
+    "pointwise_X8": "0",
+    "pointwise_tr_R_wedge_R": "0",
+    "pointwise_tr_R_wedge_R_wedge_R_wedge_R": "0",
+    "scalar_R_L2": "4",
+    "shape_offset": "x=eta-1/2"
+  },
+  "no_physical_eight_derivative_coefficient_computed": true,
+  "samples": [
+    {
+      "R_L2": "4",
+      "Ricci_squared_L4": "228",
+      "Riemann_squared_L4": "336",
+      "Riemann_squared_squared_L8": "112896",
+      "eta": "1/4",
+      "k1": "5",
+      "k2": "7",
+      "pointwise_X8": "0",
+      "pointwise_pontryagin_trR2": "0",
+      "pointwise_pontryagin_trR4": "0"
+    },
+    {
+      "R_L2": "4",
+      "Ricci_squared_L4": "224",
+      "Riemann_squared_L4": "328",
+      "Riemann_squared_squared_L8": "107584",
+      "eta": "1/2",
+      "k1": "6",
+      "k2": "6",
+      "pointwise_X8": "0",
+      "pointwise_pontryagin_trR2": "0",
+      "pointwise_pontryagin_trR4": "0"
+    },
+    {
+      "R_L2": "4",
+      "Ricci_squared_L4": "228",
+      "Riemann_squared_L4": "336",
+      "Riemann_squared_squared_L8": "112896",
+      "eta": "3/4",
+      "k1": "7",
+      "k2": "5",
+      "pointwise_X8": "0",
+      "pointwise_pontryagin_trR2": "0",
+      "pointwise_pontryagin_trR4": "0"
+    }
+  ],
+  "status": "PASS_NONZERO_SCALAR_R4_INVARIANT_DESPITE_X8_ZERO"
+}

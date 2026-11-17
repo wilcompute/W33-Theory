@@ -1,0 +1,194 @@
+{
+  "factor": "(q_t/p0)^Y * ((1-q_t)/(1-p0))^(1-Y), q_t>=p0 predictable from past only",
+  "hardware_data": false,
+  "leakage_note": "Setting leakage TV is a conservative total-variation upper bound conditional on any adversarial source information. Unbounded or unknown leakage invalidates the proof.",
+  "optional_stopping_valid": true,
+  "proof": "For p<=p0, E[factor]=p*q/p0+(1-p)*(1-q)/(1-p0)<=1, hence the product is a nonnegative supermartingale. Ville bounds P(ever cross 1/alpha)<=alpha.",
+  "separable_null": "For each conditionally prepared separable two-qutrit state, randomized four-MUB click-match probability <= p0=1/2+epsilon+setting_TV.",
+  "simulated_examples": {
+    "adaptive_separable": {
+      "adaptive_predictable_q": true,
+      "anytime_p_upper_bound": 1.0,
+      "click_matches": 898,
+      "first_crossing_trial": null,
+      "history": [
+        {
+          "anytime_adjusted_p_upper_bound": 1.0,
+          "click_matches": 3,
+          "log_evidence": 0.0,
+          "n": 10
+        },
+        {
+          "anytime_adjusted_p_upper_bound": 1.0,
+          "click_matches": 19,
+          "log_evidence": 0.0,
+          "n": 50
+        },
+        {
+          "anytime_adjusted_p_upper_bound": 1.0,
+          "click_matches": 33,
+          "log_evidence": 0.0,
+          "n": 100
+        },
+        {
+          "anytime_adjusted_p_upper_bound": 1.0,
+          "click_matches": 71,
+          "log_evidence": 0.0,
+          "n": 200
+        },
+        {
+          "anytime_adjusted_p_upper_bound": 1.0,
+          "click_matches": 189,
+          "log_evidence": 0.0,
+          "n": 500
+        },
+        {
+          "anytime_adjusted_p_upper_bound": 1.0,
+          "click_matches": 369,
+          "log_evidence": 0.0,
+          "n": 1000
+        },
+        {
+          "anytime_adjusted_p_upper_bound": 1.0,
+          "click_matches": 718,
+          "log_evidence": 0.0,
+          "n": 2000
+        },
+        {
+          "anytime_adjusted_p_upper_bound": 1.0,
+          "click_matches": 898,
+          "log_evidence": 0.0,
+          "n": 2500
+        }
+      ],
+      "log_evidence_final": 0.0,
+      "log_evidence_peak": 0.0,
+      "null_upper_bound_p0": 0.51,
+      "number_of_heralded_trials": 2500,
+      "reject_at_alpha": false
+    },
+    "coherent_drift": {
+      "adaptive_predictable_q": true,
+      "anytime_p_upper_bound": 3.734449698340915e-10,
+      "click_matches": 1448,
+      "first_crossing_trial": 1206,
+      "history": [
+        {
+          "anytime_adjusted_p_upper_bound": 0.9066666666666666,
+          "click_matches": 6,
+          "log_evidence": -0.0576237600950376,
+          "n": 10
+        },
+        {
+          "anytime_adjusted_p_upper_bound": 0.08222828967955081,
+          "click_matches": 31,
+          "log_evidence": 0.21886975700784483,
+          "n": 50
+        },
+        {
+          "anytime_adjusted_p_upper_bound": 0.08222828967955081,
+          "click_matches": 55,
+          "log_evidence": -1.028326026929923,
+          "n": 100
+        },
+        {
+          "anytime_adjusted_p_upper_bound": 0.08222828967955081,
+          "click_matches": 106,
+          "log_evidence": -1.5342575383128148,
+          "n": 200
+        },
+        {
+          "anytime_adjusted_p_upper_bound": 0.08222828967955081,
+          "click_matches": 285,
+          "log_evidence": 1.4641179183522552,
+          "n": 500
+        },
+        {
+          "anytime_adjusted_p_upper_bound": 0.021739329671312504,
+          "click_matches": 558,
+          "log_evidence": 2.1247329996890167,
+          "n": 1000
+        },
+        {
+          "anytime_adjusted_p_upper_bound": 9.633147470696364e-06,
+          "click_matches": 1132,
+          "log_evidence": 9.749715269981998,
+          "n": 2000
+        },
+        {
+          "anytime_adjusted_p_upper_bound": 3.734449698340915e-10,
+          "click_matches": 1448,
+          "log_evidence": 21.1185685299614,
+          "n": 2500
+        }
+      ],
+      "log_evidence_final": 21.1185685299614,
+      "log_evidence_peak": 21.708250458665667,
+      "null_upper_bound_p0": 0.51,
+      "number_of_heralded_trials": 2500,
+      "reject_at_alpha": true
+    },
+    "worst_case_separable": {
+      "adaptive_predictable_q": true,
+      "anytime_p_upper_bound": 0.42437795161047687,
+      "click_matches": 1270,
+      "first_crossing_trial": null,
+      "history": [
+        {
+          "anytime_adjusted_p_upper_bound": 1.0,
+          "click_matches": 3,
+          "log_evidence": 0.0,
+          "n": 10
+        },
+        {
+          "anytime_adjusted_p_upper_bound": 0.42437795161047687,
+          "click_matches": 27,
+          "log_evidence": -0.43255634163282064,
+          "n": 50
+        },
+        {
+          "anytime_adjusted_p_upper_bound": 0.42437795161047687,
+          "click_matches": 51,
+          "log_evidence": -0.8242735382708022,
+          "n": 100
+        },
+        {
+          "anytime_adjusted_p_upper_bound": 0.42437795161047687,
+          "click_matches": 98,
+          "log_evidence": -0.9760711752309519,
+          "n": 200
+        },
+        {
+          "anytime_adjusted_p_upper_bound": 0.42437795161047687,
+          "click_matches": 258,
+          "log_evidence": -1.144611733494536,
+          "n": 500
+        },
+        {
+          "anytime_adjusted_p_upper_bound": 0.42437795161047687,
+          "click_matches": 493,
+          "log_evidence": -1.2251312311624059,
+          "n": 1000
+        },
+        {
+          "anytime_adjusted_p_upper_bound": 0.42437795161047687,
+          "click_matches": 992,
+          "log_evidence": -1.2251312311624059,
+          "n": 2000
+        },
+        {
+          "anytime_adjusted_p_upper_bound": 0.42437795161047687,
+          "click_matches": 1270,
+          "log_evidence": -1.2251312311624059,
+          "n": 2500
+        }
+      ],
+      "log_evidence_final": -1.2251312311624059,
+      "log_evidence_peak": 0.8571308254993093,
+      "null_upper_bound_p0": 0.51,
+      "number_of_heralded_trials": 2500,
+      "reject_at_alpha": false
+    }
+  },
+  "status": "PASS_ANYTIME_NONIID_QUTRIT_SEQUENTIAL_ENTANGLEMENT_EPROCESS"
+}

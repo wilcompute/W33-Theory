@@ -1,0 +1,152 @@
+{
+  "distinct_discrete_group_falsifier": {
+    "IIB_mixed_Chern_periods": [
+      6,
+      6
+    ],
+    "IIB_pi1": "Z_6",
+    "M_formal_BF_gcd": 1,
+    "M_fourform_periods": [
+      5,
+      6,
+      6
+    ],
+    "conclusion": "The two discrete groups are not automatically identical. Identifying them requires a genuine T-duality/Page/winding operator dictionary."
+  },
+  "flux_pairings": [
+    {
+      "G4_integral_periods": {
+        "sphere1_sphere2": 6,
+        "sphere1_torus": 6,
+        "sphere2_torus": 6
+      },
+      "Smith_invariant": 6,
+      "formal_rank_one_BF_finite_group": "Z_6",
+      "pairing_Q_A_to_G4": [
+        6,
+        6,
+        6
+      ],
+      "physical_caveat": "The 5D topological BF level is not certified without a global differential C-field, precise 11D Chern-Simons normalization, flux-sourced St\u00fcckelberg constraints and dynamical spectrum."
+    },
+    {
+      "G4_integral_periods": {
+        "sphere1_sphere2": 6,
+        "sphere1_torus": 6,
+        "sphere2_torus": 5
+      },
+      "Smith_invariant": 1,
+      "formal_rank_one_BF_finite_group": "trivial",
+      "pairing_Q_A_to_G4": [
+        5,
+        6,
+        6
+      ],
+      "physical_caveat": "The 5D topological BF level is not certified without a global differential C-field, precise 11D Chern-Simons normalization, flux-sourced St\u00fcckelberg constraints and dynamical spectrum."
+    },
+    {
+      "G4_integral_periods": {
+        "sphere1_sphere2": 5,
+        "sphere1_torus": 6,
+        "sphere2_torus": 6
+      },
+      "Smith_invariant": 1,
+      "formal_rank_one_BF_finite_group": "trivial",
+      "pairing_Q_A_to_G4": [
+        6,
+        6,
+        5
+      ],
+      "physical_caveat": "The 5D topological BF level is not certified without a global differential C-field, precise 11D Chern-Simons normalization, flux-sourced St\u00fcckelberg constraints and dynamical spectrum."
+    },
+    {
+      "G4_integral_periods": {
+        "sphere1_sphere2": 1,
+        "sphere1_torus": 1,
+        "sphere2_torus": 1
+      },
+      "Smith_invariant": 1,
+      "formal_rank_one_BF_finite_group": "trivial",
+      "pairing_Q_A_to_G4": [
+        1,
+        1,
+        1
+      ],
+      "physical_caveat": "The 5D topological BF level is not certified without a global differential C-field, precise 11D Chern-Simons normalization, flux-sourced St\u00fcckelberg constraints and dynamical spectrum."
+    },
+    {
+      "G4_integral_periods": {
+        "sphere1_sphere2": 3,
+        "sphere1_torus": 5,
+        "sphere2_torus": 7
+      },
+      "Smith_invariant": 1,
+      "formal_rank_one_BF_finite_group": "trivial",
+      "pairing_Q_A_to_G4": [
+        7,
+        5,
+        3
+      ],
+      "physical_caveat": "The 5D topological BF level is not certified without a global differential C-field, precise 11D Chern-Simons normalization, flux-sourced St\u00fcckelberg constraints and dynamical spectrum."
+    },
+    {
+      "G4_integral_periods": {
+        "sphere1_sphere2": 0,
+        "sphere1_torus": 0,
+        "sphere2_torus": 0
+      },
+      "Smith_invariant": 0,
+      "formal_rank_one_BF_finite_group": "trivial",
+      "pairing_Q_A_to_G4": [
+        0,
+        0,
+        0
+      ],
+      "physical_caveat": "The 5D topological BF level is not certified without a global differential C-field, precise 11D Chern-Simons normalization, flux-sourced St\u00fcckelberg constraints and dynamical spectrum."
+    }
+  ],
+  "integral_topology": {
+    "11D_to_5D_CS_topological_tensor": "C_xyz=1, all permutations; repeat indices zero",
+    "E6_diagonal_cubic_bridge": "Restricting E6 det A to diagonal A=diag(a,b,c) gives abc, the same abstract cubic polynomial. This alone is NOT a 5D E6 gauge sector or a TOE derivation.",
+    "integral_H2_rank": 3,
+    "integral_H3_rank": 4,
+    "integral_H4_rank": 3,
+    "nonzero_triple_intersections": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        2,
+        1
+      ],
+      [
+        1,
+        0,
+        2
+      ],
+      [
+        1,
+        2,
+        0
+      ],
+      [
+        2,
+        0,
+        1
+      ],
+      [
+        2,
+        1,
+        0
+      ]
+    ],
+    "spin_and_G4_shift": "p1(S2xS2xT2)=0 by stable product tangent splitting and dim 2 of each factor, so the standard p1/4 shift has zero topological class on M6.",
+    "triple_intersection_value": 1,
+    "volume_cubic": "(1/6) integral J^3 = a*b*c"
+  },
+  "scope": "Intersection and Smith forms exact; actual dynamical 5D CS/BF action and physical discrete symmetry require explicit global differential-field normalization.",
+  "status": "PASS_M_TORUS_STU_INTERSECTION_AND_FLUX_SMITH_COMPARISON"
+}

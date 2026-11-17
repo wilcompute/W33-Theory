@@ -1,0 +1,65 @@
+{
+  "exact_asymptotic": {
+    "computed_fifth_eta_coefficient": "1749/8",
+    "computed_fourth_lambda_over_pi_coefficient": "13281/128",
+    "equal_formula_proxy_mass_coefficients": [
+      "-2*sqrt(1 + 12*pi) - 2 + 3*pi",
+      "-3*pi/2 + 6*pi/sqrt(1 + 12*pi)",
+      "3*pi*(-228*pi*sqrt(1 + 12*pi) - 19*sqrt(1 + 12*pi) + 76 + 936*pi)/(8*(1 + 12*pi)**(3/2))"
+    ],
+    "eta_coefficients": [
+      "3/2",
+      "-3/4",
+      "-12",
+      "147/8"
+    ],
+    "lambda_coefficients_over_pi": [
+      "3",
+      "-3/2",
+      "-57/8",
+      "183/16"
+    ],
+    "proxy_second_order_coefficient_numeric": -7.6221129337592535,
+    "true_physical_second_order_coefficient_NOT_DETERMINED": true
+  },
+  "geometric_samples": [
+    {
+      "N": 100,
+      "eta": 0.5149132049864158,
+      "lambda_asymptotic_through_N_minus3": 9.375451618165824,
+      "lambda_exact": 9.375454783679109,
+      "remainder": 3.165513284386634e-06
+    },
+    {
+      "N": 1000,
+      "eta": 0.5014992380185931,
+      "lambda_asymptotic_through_N_minus3": 9.420043223873302,
+      "lambda_exact": 9.420043224198386,
+      "remainder": 3.2508395975128224e-10
+    },
+    {
+      "N": 10000,
+      "eta": 0.5001499924880018,
+      "lambda_asymptotic_through_N_minus3": 9.424306498068797,
+      "lambda_exact": 9.424306498068827,
+      "remainder": 3.019806626980426e-14
+    }
+  ],
+  "physical_boundary": "Full unequal-flux constrained metric-C3 KK operator, its eigenvectors, and actual second-order mass still missing. Sphere exchange alone fixes only absence of O(delta) anisotropy term.",
+  "status": "PASS_EXACT_KK_GEOMETRY_TO_3RD_ORDER_AND_PHYSICAL_MIXING_FIREWALL",
+  "symmetry_mixing_obstruction": {
+    "counterexamples": [
+      {
+        "neighbor_mass": -2,
+        "second_order_shift_at_t_0p01": -0.0003
+      },
+      {
+        "neighbor_mass": -8,
+        "second_order_shift_at_t_0p01": 0.0003
+      }
+    ],
+    "exchange_even_odd_mixing": "Off-diagonal coupling linear in eta-1/2 is allowed by interchange symmetry.",
+    "no_certified_sign": true,
+    "second_order_shift": "(9/4)*c^2*t^2/(m0-nu)"
+  }
+}
