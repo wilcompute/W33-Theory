@@ -1,0 +1,16 @@
+{
+  "Weyl_or_Ricci_note": "No claim that this perturbation is Ricci-flat, transverse traceless, preserves product symmetries or obeys 11D constraints.",
+  "algebraic_curvature_tensor_first_Bianchi_passed": true,
+  "all_first_curvature_X8_variations_zero": true,
+  "independent_t_plusminus_finite_difference_passed": true,
+  "index_pair_antisymmetry_and_pair_exchange_passed": true,
+  "local_metric_normal_coordinate_2jet_realizability": true,
+  "mathematical_not_physical": "A local metric 2-jet can have this algebraic curvature variation; it is not a physical propagating metric-C3 eigenmode, not a global perturbation solving the EOM, and no physical eight-derivative action or BF shift is computed.",
+  "pointwise_X8_background_zero": true,
+  "quadratic_X8_nonzero": true,
+  "second_variation_coefficient_by_8form_mask": {
+    "495": "-216"
+  },
+  "spacetime_dimension": 11,
+  "status": "PASS_NONZERO_X8_SECOND_VARIATION_FOR_BIANCHI_VALID_METRIC_JET"
+}
