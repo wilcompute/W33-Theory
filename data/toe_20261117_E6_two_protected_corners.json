@@ -1,0 +1,635 @@
+{
+  "SM_irrep_label": [
+    "w",
+    "SU3_Dynkin_a",
+    "SU3_Dynkin_b",
+    "SU2_Dynkin_c"
+  ],
+  "cases": [
+    {
+      "translation_y_gauge_odd_SM_blocks": [
+        0,
+        1,
+        2,
+        9
+      ],
+      "corner_fixed_lie_dimensions": [
+        38,
+        38,
+        78,
+        46
+      ],
+      "vector_zero_mode_dimension_before_Higgsing": 22,
+      "sourced_27_parities_and_zero_modes": [
+        {
+          "translation_y_intrinsic_sign": -1,
+          "R0_indices": [
+            0,
+            2,
+            3,
+            5
+          ],
+          "R2_dual_indices": []
+        }
+      ],
+      "index_span_rank": 19,
+      "obstruction": [],
+      "index_deficit": 0,
+      "integrality_obstruction": null,
+      "integer_solution": [
+        {
+          "copies_signed": 1,
+          "type": "boundary singlet"
+        },
+        {
+          "copies_signed": -1,
+          "type": "bulk",
+          "representation": "27",
+          "dual": false,
+          "intrinsic_signs_inversion_x_y": [
+            -1,
+            -1,
+            1
+          ]
+        },
+        {
+          "copies_signed": -1,
+          "type": "bulk",
+          "representation": "27",
+          "dual": true,
+          "intrinsic_signs_inversion_x_y": [
+            -1,
+            -1,
+            1
+          ]
+        },
+        {
+          "copies_signed": -1,
+          "type": "bulk",
+          "representation": "27",
+          "dual": false,
+          "intrinsic_signs_inversion_x_y": [
+            -1,
+            1,
+            -1
+          ]
+        },
+        {
+          "copies_signed": 1,
+          "type": "bulk",
+          "representation": "27",
+          "dual": false,
+          "intrinsic_signs_inversion_x_y": [
+            -1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "translation_y_gauge_odd_SM_blocks": [
+        0,
+        1,
+        3,
+        4,
+        6,
+        7
+      ],
+      "corner_fixed_lie_dimensions": [
+        38,
+        38,
+        46,
+        38
+      ],
+      "vector_zero_mode_dimension_before_Higgsing": 14,
+      "sourced_27_parities_and_zero_modes": [
+        {
+          "translation_y_intrinsic_sign": -1,
+          "R0_indices": [
+            0,
+            3
+          ],
+          "R2_dual_indices": [
+            7,
+            12,
+            13,
+            14
+          ]
+        }
+      ],
+      "index_span_rank": 20,
+      "obstruction": [],
+      "index_deficit": 0,
+      "integrality_obstruction": null,
+      "integer_solution": [
+        {
+          "copies_signed": 2,
+          "type": "boundary singlet"
+        },
+        {
+          "copies_signed": -1,
+          "type": "bulk",
+          "representation": "27",
+          "dual": false,
+          "intrinsic_signs_inversion_x_y": [
+            -1,
+            -1,
+            1
+          ]
+        },
+        {
+          "copies_signed": -1,
+          "type": "bulk",
+          "representation": "27",
+          "dual": true,
+          "intrinsic_signs_inversion_x_y": [
+            -1,
+            -1,
+            1
+          ]
+        }
+      ],
+      "four_hypermultiplet_candidate_rank_checks": {
+        "auxiliary_27_parities_and_zero_modes": {
+          "R0_indices": [
+            8,
+            15,
+            16,
+            17
+          ],
+          "R2_dual_indices": [
+            18,
+            19,
+            21,
+            22,
+            24,
+            25
+          ]
+        },
+        "adjoint_chiral_zero_modes": 12,
+        "adjoint_chiral_bulk_mass_rank_with_H2_and_dual": 12,
+        "triplet_map_with_H1_and_H2_insertions": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "two_extra_U1_vev_charge_rank": 2
+      }
+    },
+    {
+      "translation_y_gauge_odd_SM_blocks": [
+        0,
+        2,
+        3,
+        5,
+        6,
+        8
+      ],
+      "corner_fixed_lie_dimensions": [
+        38,
+        38,
+        46,
+        78
+      ],
+      "vector_zero_mode_dimension_before_Higgsing": 22,
+      "sourced_27_parities_and_zero_modes": [
+        {
+          "translation_y_intrinsic_sign": -1,
+          "R0_indices": [
+            0,
+            2,
+            3,
+            5
+          ],
+          "R2_dual_indices": []
+        }
+      ],
+      "index_span_rank": 19,
+      "obstruction": [],
+      "index_deficit": 0,
+      "integrality_obstruction": null,
+      "integer_solution": [
+        {
+          "copies_signed": 1,
+          "type": "boundary singlet"
+        },
+        {
+          "copies_signed": -1,
+          "type": "bulk",
+          "representation": "27",
+          "dual": false,
+          "intrinsic_signs_inversion_x_y": [
+            -1,
+            -1,
+            -1
+          ]
+        },
+        {
+          "copies_signed": -1,
+          "type": "bulk",
+          "representation": "27",
+          "dual": true,
+          "intrinsic_signs_inversion_x_y": [
+            -1,
+            -1,
+            -1
+          ]
+        },
+        {
+          "copies_signed": -1,
+          "type": "bulk",
+          "representation": "27",
+          "dual": false,
+          "intrinsic_signs_inversion_x_y": [
+            -1,
+            1,
+            -1
+          ]
+        },
+        {
+          "copies_signed": 1,
+          "type": "bulk",
+          "representation": "27",
+          "dual": false,
+          "intrinsic_signs_inversion_x_y": [
+            -1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "translation_y_gauge_odd_SM_blocks": [
+        0,
+        4,
+        5,
+        7,
+        8,
+        9
+      ],
+      "corner_fixed_lie_dimensions": [
+        38,
+        38,
+        38,
+        46
+      ],
+      "vector_zero_mode_dimension_before_Higgsing": 14,
+      "sourced_27_parities_and_zero_modes": [
+        {
+          "translation_y_intrinsic_sign": -1,
+          "R0_indices": [
+            0,
+            3
+          ],
+          "R2_dual_indices": [
+            7,
+            12,
+            13,
+            14
+          ]
+        }
+      ],
+      "index_span_rank": 20,
+      "obstruction": [],
+      "index_deficit": 0,
+      "integrality_obstruction": null,
+      "integer_solution": [
+        {
+          "copies_signed": 2,
+          "type": "boundary singlet"
+        },
+        {
+          "copies_signed": -1,
+          "type": "bulk",
+          "representation": "27",
+          "dual": false,
+          "intrinsic_signs_inversion_x_y": [
+            -1,
+            -1,
+            -1
+          ]
+        },
+        {
+          "copies_signed": -1,
+          "type": "bulk",
+          "representation": "27",
+          "dual": true,
+          "intrinsic_signs_inversion_x_y": [
+            -1,
+            -1,
+            -1
+          ]
+        }
+      ]
+    },
+    {
+      "translation_y_gauge_odd_SM_blocks": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8
+      ],
+      "corner_fixed_lie_dimensions": [
+        38,
+        38,
+        46,
+        38
+      ],
+      "vector_zero_mode_dimension_before_Higgsing": 14,
+      "sourced_27_parities_and_zero_modes": [
+        {
+          "translation_y_intrinsic_sign": 1,
+          "R0_indices": [
+            0,
+            3
+          ],
+          "R2_dual_indices": [
+            20,
+            23,
+            26
+          ]
+        }
+      ],
+      "index_span_rank": 15,
+      "obstruction": [
+        {
+          "SM_irrep": [
+            -10,
+            1,
+            0,
+            0
+          ],
+          "coefficient": 1
+        },
+        {
+          "SM_irrep": [
+            -5,
+            0,
+            1,
+            1
+          ],
+          "coefficient": 1
+        },
+        {
+          "SM_irrep": [
+            0,
+            0,
+            0,
+            2
+          ],
+          "coefficient": 1
+        }
+      ],
+      "index_deficit": -1,
+      "integrality_obstruction": null,
+      "integer_solution": null
+    },
+    {
+      "translation_y_gauge_odd_SM_blocks": [
+        1,
+        3,
+        5,
+        6,
+        8,
+        9
+      ],
+      "corner_fixed_lie_dimensions": [
+        38,
+        38,
+        38,
+        38
+      ],
+      "vector_zero_mode_dimension_before_Higgsing": 22,
+      "sourced_27_parities_and_zero_modes": [
+        {
+          "translation_y_intrinsic_sign": 1,
+          "R0_indices": [
+            0,
+            2,
+            3,
+            5
+          ],
+          "R2_dual_indices": [
+            7,
+            12,
+            13,
+            14,
+            20,
+            23,
+            26
+          ]
+        }
+      ],
+      "index_span_rank": 13,
+      "obstruction": [
+        {
+          "SM_irrep": [
+            -10,
+            1,
+            0,
+            0
+          ],
+          "coefficient": 1
+        },
+        {
+          "SM_irrep": [
+            -5,
+            0,
+            1,
+            1
+          ],
+          "coefficient": 1
+        },
+        {
+          "SM_irrep": [
+            0,
+            0,
+            0,
+            2
+          ],
+          "coefficient": 1
+        }
+      ],
+      "index_deficit": -1,
+      "integrality_obstruction": null,
+      "integer_solution": null
+    },
+    {
+      "translation_y_gauge_odd_SM_blocks": [
+        2,
+        3,
+        4,
+        6,
+        7,
+        9
+      ],
+      "corner_fixed_lie_dimensions": [
+        38,
+        38,
+        38,
+        46
+      ],
+      "vector_zero_mode_dimension_before_Higgsing": 14,
+      "sourced_27_parities_and_zero_modes": [
+        {
+          "translation_y_intrinsic_sign": 1,
+          "R0_indices": [
+            0,
+            3
+          ],
+          "R2_dual_indices": [
+            20,
+            23,
+            26
+          ]
+        }
+      ],
+      "index_span_rank": 15,
+      "obstruction": [
+        {
+          "SM_irrep": [
+            -10,
+            1,
+            0,
+            0
+          ],
+          "coefficient": 1
+        },
+        {
+          "SM_irrep": [
+            -5,
+            0,
+            1,
+            1
+          ],
+          "coefficient": 1
+        },
+        {
+          "SM_irrep": [
+            0,
+            0,
+            0,
+            2
+          ],
+          "coefficient": 1
+        }
+      ],
+      "index_deficit": -1,
+      "integrality_obstruction": null,
+      "integer_solution": null
+    },
+    {
+      "translation_y_gauge_odd_SM_blocks": [],
+      "corner_fixed_lie_dimensions": [
+        38,
+        38,
+        38,
+        38
+      ],
+      "vector_zero_mode_dimension_before_Higgsing": 22,
+      "sourced_27_parities_and_zero_modes": [
+        {
+          "translation_y_intrinsic_sign": 1,
+          "R0_indices": [
+            0,
+            2,
+            3,
+            5
+          ],
+          "R2_dual_indices": [
+            7,
+            12,
+            13,
+            14,
+            20,
+            23,
+            26
+          ]
+        }
+      ],
+      "index_span_rank": 13,
+      "obstruction": [
+        {
+          "SM_irrep": [
+            -10,
+            1,
+            0,
+            0
+          ],
+          "coefficient": 1
+        },
+        {
+          "SM_irrep": [
+            -5,
+            0,
+            1,
+            1
+          ],
+          "coefficient": 1
+        },
+        {
+          "SM_irrep": [
+            0,
+            0,
+            0,
+            2
+          ],
+          "coefficient": 1
+        }
+      ],
+      "index_deficit": -1,
+      "integrality_obstruction": null,
+      "integer_solution": null
+    }
+  ],
+  "four_bulk_fundamentals_anomaly_check": {
+    "fundamental_and_adjoint_traces_Y2_Y4": {
+      "27": [
+        180,
+        2700
+      ],
+      "78": [
+        720,
+        16200
+      ]
+    },
+    "tensor_multiplets": 1,
+    "neutral_bulk_hypermultiplets_for_273": 214,
+    "a_in_even_unimodular_U": [
+      -2,
+      -2
+    ],
+    "b_in_even_unimodular_U": [
+      1,
+      -1
+    ],
+    "a_dot_b": 0,
+    "b_squared": -2,
+    "F2_E6_section_leading_degrees_f3_g4": [
+      6,
+      8
+    ],
+    "F2_split_square_root_degree": 4,
+    "simple_enhancement_orders_f_g_discriminant": [
+      3,
+      5,
+      9
+    ]
+  }
+}

@@ -108,8 +108,7 @@ def representation_traces(weights, cubic, parity, basis, include_650=False):
     return traces
 
 
-def neutral_nonabelian_traces(weights, cubic, parity, include_650=False):
-    """Extract the color octet and weak triplet via the Weyl denominator."""
+def sm_cartan(cubic):
     h1, h2, weak = (1, -1, 0), (0, 1, -1), (1, -1, 0)
     cartan = []
     for i, j in product(range(3), repeat=2):
@@ -120,6 +119,23 @@ def neutral_nonabelian_traces(weights, cubic, parity, include_650=False):
         cartan.append((h1[i], h2[i], -weak[j]))
     assert all(sum(cartan[i][a] for i in term) == 0
                for term in cubic for a in range(3))
+    return cartan
+
+
+def weyl_multiplicity(character, highest):
+    total = 0
+    for perm in permutations((1, 0, -1)):
+        sign = (-1)**sum(perm[i] < perm[j] for i in range(3) for j in range(i+1, 3))
+        a, b = perm[0]-perm[1], perm[1]-perm[2]
+        for shift, weak_sign in ((0, 1), (2, -1)):
+            key = (highest[0]+1-a, highest[1]+1-b, highest[2]+shift)
+            total += sign*weak_sign*character[key]
+    return total
+
+
+def neutral_nonabelian_traces(weights, cubic, parity, include_650=False):
+    """Extract the color octet and weak triplet via the Weyl denominator."""
+    cartan = sm_cartan(cubic)
     exterior, symmetric = Counter(), Counter()
     for i, weight in enumerate(weights):
         if not weight:
@@ -131,18 +147,9 @@ def neutral_nonabelian_traces(weights, cubic, parity, include_650=False):
                 exterior[key] += parity[i]*parity[j]
                 symmetric[key] += parity[i]*parity[j]
 
-    def extract(character, highest):
-        total = 0
-        for perm in permutations((1, 0, -1)):
-            sign = (-1)**sum(perm[i] < perm[j] for i in range(3) for j in range(i+1, 3))
-            a, b = perm[0]-perm[1], perm[1]-perm[2]
-            for shift, weak_sign in ((0, 1), (2, -1)):
-                key = (highest[0]+1-a, highest[1]+1-b, highest[2]+shift)
-                total += sign*weak_sign*character[key]
-        return total
-
     def pair(character):
-        return [extract(character, highest) for highest in ((1, 1, 0), (0, 0, 2))]
+        return [weyl_multiplicity(character, highest)
+                for highest in ((1, 1, 0), (0, 0, 2))]
 
     traces = {
         "adjoint_78": [1, 1],
