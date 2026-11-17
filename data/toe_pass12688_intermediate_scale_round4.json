@@ -1,0 +1,250 @@
+{
+ "running_quartic_inflation": {
+  "rows": [
+   {
+    "xi": 0.1,
+    "b": 0.0,
+    "ns": 0.9647859738576485,
+    "r": 0.009063400352784206,
+    "phi_star": 17.14611378206362
+   },
+   {
+    "xi": 0.1,
+    "b": 0.02,
+    "ns": 0.9669185796811015,
+    "r": 0.010422162603116188,
+    "phi_star": 17.79730209735491
+   },
+   {
+    "xi": 0.1,
+    "b": 0.04,
+    "ns": 0.9686559040313184,
+    "r": 0.011761327747436205,
+    "phi_star": 18.41959613194379
+   },
+   {
+    "xi": 0.1,
+    "b": 0.06,
+    "ns": 0.9700783231155982,
+    "r": 0.013066790831192488,
+    "phi_star": 19.013150671898597
+   },
+   {
+    "xi": 0.1,
+    "b": 0.1,
+    "ns": 0.9722176339591948,
+    "r": 0.015541145642516806,
+    "phi_star": 20.116673569622144
+   },
+   {
+    "xi": 1.0,
+    "b": 0.0,
+    "ns": 0.9652826456734593,
+    "r": 0.0039962529824577745,
+    "phi_star": 8.220257891335649
+   },
+   {
+    "xi": 1.0,
+    "b": 0.02,
+    "ns": 0.9702516990159054,
+    "r": 0.005487858920179724,
+    "phi_star": 8.948045872757714
+   },
+   {
+    "xi": 1.0,
+    "b": 0.04,
+    "ns": 0.9740806964650037,
+    "r": 0.007200584960946583,
+    "phi_star": 9.714930245472992
+   },
+   {
+    "xi": 1.0,
+    "b": 0.06,
+    "ns": 0.9769855572692797,
+    "r": 0.009088356960174555,
+    "phi_star": 10.514674490273741
+   },
+   {
+    "xi": 1.0,
+    "b": 0.1,
+    "ns": 0.9807429866674816,
+    "r": 0.013186227595101612,
+    "phi_star": 12.18732292886893
+   },
+   {
+    "xi": 10.0,
+    "b": 0.0,
+    "ns": 0.9653385391497057,
+    "r": 0.0034838105819981788,
+    "phi_star": 2.7856943676852506
+   },
+   {
+    "xi": 10.0,
+    "b": 0.02,
+    "ns": 0.9711211027044185,
+    "r": 0.0050418814360274795,
+    "phi_star": 3.077213344483578
+   },
+   {
+    "xi": 10.0,
+    "b": 0.04,
+    "ns": 0.9756139212625539,
+    "r": 0.006979934775172726,
+    "phi_star": 3.4050979008449604
+   },
+   {
+    "xi": 10.0,
+    "b": 0.06,
+    "ns": 0.9789785824883136,
+    "r": 0.00927606005260603,
+    "phi_star": 3.7702123097289513
+   },
+   {
+    "xi": 10.0,
+    "b": 0.1,
+    "ns": 0.9830135680244748,
+    "r": 0.0147226105255261,
+    "phi_star": 4.6116613990265485
+   }
+  ],
+  "needed": {
+   "xi=0.1 P-ACT-LB 0.9743": {
+    "b": null,
+    "r": null
+   },
+   "xi=0.1 P-ACT 0.9709": {
+    "b": 0.07362313417692684,
+    "r": 0.013931583790507681
+   },
+   "xi=1 P-ACT-LB 0.9743": {
+    "b": 0.041326120472386284,
+    "r": 0.007320887272843417
+   },
+   "xi=1 P-ACT 0.9709": {
+    "b": 0.023033172720637953,
+    "r": 0.0057344194063299
+   },
+   "xi=10 P-ACT-LB 0.9743": {
+    "b": 0.03356475869434484,
+    "r": 0.006315593095374034
+   },
+   "xi=10 P-ACT 0.9709": {
+    "b": 0.019141204648369364,
+    "r": 0.004967128606873588
+   }
+  },
+  "couplings": {
+   "xi=0.1 P-ACT 0.9709": {
+    "beta_needed": 7.656805954400391e-13,
+    "portal_needed": 7.775327426975011e-06,
+    "portal_over_sqrt_lambda_sigma": 2.4110266843725965
+   },
+   "xi=1 P-ACT-LB 0.9743": {
+    "beta_needed": 1.8266145248794738e-11,
+    "portal_needed": 3.797679581412229e-05,
+    "portal_over_sqrt_lambda_sigma": 1.8063719672187402
+   },
+   "xi=1 P-ACT 0.9709": {
+    "beta_needed": 1.0180662342521976e-11,
+    "portal_needed": 2.8351946650875256e-05,
+    "portal_over_sqrt_lambda_sigma": 1.3485645786677318
+   },
+   "xi=10 P-ACT-LB 0.9743": {
+    "beta_needed": 1.2888867338628418e-09,
+    "portal_needed": 0.00031900849118527726,
+    "portal_over_sqrt_lambda_sigma": 1.6279333896230719
+   },
+   "xi=10 P-ACT 0.9709": {
+    "beta_needed": 7.350222584973836e-10,
+    "portal_needed": 0.00024090461045591329,
+    "portal_over_sqrt_lambda_sigma": 1.2293611922936183
+   }
+  },
+  "note": "b>0 (quartic growing with field) raises n_s; a portal lambda_Hsigma ~ few x sqrt(lambda_sigma) supplies it, the same size the Higgs-stability threshold needs (>= 0.10 sqrt(lambda_sigma), Pass 12685)"
+ },
+ "dark_dimension_cosmology": {
+  "overproduction_T3": {
+   "T = f_a ~ 1e11 GeV (post-inflation PQ)": 1e+33,
+   "T = 1e9 GeV (thermal leptogenesis)": 1e+27,
+   "T = 1.65 TeV (VL quarks in plasma)": 4492125000.0,
+   "T = 1 GeV (graviton DM)": 1.0
+  },
+  "note": "Gonzalo-Montero-Obied-Vafa 2209.09249: T_i ~ 1 GeV gives all DM; scaling Omega ~ T_i^3 (m ~ T_i times Y ~ T_i^2 M_Pl/M_5^3). Brane T <~ few GeV: no post-inflationary axion, no thermal leptogenesis, VL quarks never in plasma, non-thermal gravitons -> Delta N_eff negligible (the +3.1 sigma of Pass 12687 is removed)"
+ },
+ "fcc_separation": {
+  "FCC-ee, current NNLO matching": {
+   "sigma_log10mu0": 0.26611537871734936,
+   "sqrtvMPl_vs_sqrtvMbar_sigma": 1.3155593103239225
+  },
+  "FCC-ee, matching errors halved": {
+   "sigma_log10mu0": 0.20957147871870432,
+   "sqrtvMPl_vs_sqrtvMbar_sigma": 1.670506722729632
+  },
+  "FCC-ee, matching N3LO (errors /4)": {
+   "sigma_log10mu0": 0.1452934465596771,
+   "sqrtvMPl_vs_sqrtvMbar_sigma": 2.4095413274417106
+  }
+ },
+ "vlq_patterns": {
+  "singlet-like T (mixing with t_R-less SM doublet)": "BR(Wb:Zt:ht) ~ 2:1:1",
+  "doublet (T,B) mixing via t_R": "T -> Zt, ht ~ 50:50; B -> Wt ~ 100%",
+  "this rescue": "near-degenerate T, T', B triplet at M_VL >= 1.65 TeV; pattern set by the (small) SM mixing, not by y'",
+  "limits": "pair production 1.49 TeV (singlet) - 1.6 TeV (doublet), 2412.01761 / ATLAS PRD 111 012012"
+ },
+ "act_without_desi": {
+  "SMASH_pull_PACT_LB": -2.6470588235294144,
+  "SMASH_pull_PACT": -1.4736842105262995
+ },
+ "ranking": {
+  "SM + LCDM (free M_t, free n_s)": {
+   "chi2": 2.003313609467459,
+   "k": 0,
+   "dAIC": 0.0
+  },
+  "boundary lambda(sqrt(v M_Pl)) = 0": {
+   "chi2": 2.0033475562752927,
+   "k": 0,
+   "dAIC": 3.3946807833640236e-05
+  },
+  "boundary at axion f_a (lattice)": {
+   "chi2": 2.042190226187328,
+   "k": 0,
+   "dAIC": 0.038876616719869084
+  },
+  "full SMASH (f_a boundary + its inflation)": {
+   "chi2": 9.01483848345065,
+   "k": 0,
+   "dAIC": 7.01152487398319
+  },
+  "lambda(M_Pl) = 0 (AS / MPP)": {
+   "chi2": 7.742415783291414,
+   "k": 0,
+   "dAIC": 5.739102173823955
+  },
+  "dark dimension, no new states": {
+   "chi2": 17.165463404623225,
+   "k": 0,
+   "dAIC": 15.162149795155766
+  },
+  "dark dimension + VL quark (y' fitted)": {
+   "chi2": 6.858811397967431,
+   "k": 1,
+   "dAIC": 6.855497788499972
+  },
+  "dark dimension + VL quark, T_i ~ 1 GeV (non-thermal gravitons)": {
+   "chi2": 2.003313609467459,
+   "k": 1,
+   "dAIC": 2.0
+  },
+  "full SMASH with running quartic (b fitted)": {
+   "chi2": 2.042190226187328,
+   "k": 1,
+   "dAIC": 2.038876616719869
+  },
+  "full SMASH, P-ACT (no DESI) n_s": {
+   "chi2": 4.213935378541851,
+   "k": 0,
+   "dAIC": 2.2106217690743923
+  }
+ }
+}
