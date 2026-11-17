@@ -1,0 +1,20 @@
+{
+  "first_order_axial_sideband_sigma": [
+    "-82/129",
+    "-82/129",
+    "-304/129"
+  ],
+  "first_order_axial_sideband_axions_sine": [
+    "-106*sqrt(5)/215",
+    "-106*sqrt(5)/215"
+  ],
+  "first_order_axial_sideband_external_metric_A_B": [
+    "-84/43",
+    "-63/215"
+  ],
+  "mean_second_order_laplacian_shift": "-39196/645",
+  "mean_second_order_potential_shift": "-26784/43",
+  "mean_second_order_flux_shift": "-617408/645",
+  "coefficient_of_epsilon_squared_in_m2_L2_plus_4": "-5880/43",
+  "independent_density_form_coefficient": "-5880/43"
+}
