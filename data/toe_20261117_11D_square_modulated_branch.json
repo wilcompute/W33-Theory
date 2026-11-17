@@ -1,0 +1,70 @@
+{
+  "normal_form": {
+    "fourier_even_basis": [
+      "1",
+      "cos(2x)+cos(2y)",
+      "cos(x)cos(y)"
+    ],
+    "even_backreaction_by_field": {
+      "warp_A": [
+        "-13/30",
+        "-1/10",
+        "-4/5"
+      ],
+      "torus_conformal_B": [
+        "13/20",
+        "37/270",
+        "58/17"
+      ],
+      "sphere_mean_c": [
+        "-11/18",
+        "-2/81",
+        "-2/17"
+      ]
+    },
+    "constant_even_hessian_determinant": "4423680",
+    "fixed_background_quartic": "-124",
+    "relaxed_quartic": "36736/459",
+    "lambda_shift_coefficient": "18368/459",
+    "normalized_AdS_Newton_coefficient_shift_at_epsilon_fourth": "4592/459"
+  },
+  "quantized_flux_ratios_N0_N1_N2": [
+    17,
+    8,
+    8
+  ],
+  "numerical_controls": [
+    {
+      "cutoff": 4,
+      "collocation_grid": 32,
+      "lambda": 20.02765316663493,
+      "leading_mode_amplitude": 0.026342406549,
+      "normalized_AdS_Newton_coefficient_minus_one": 4.7903064e-06,
+      "predicted_leading_shift_at_same_lambda": 4.7772786e-06,
+      "max_residual_components_A_B_c_v_and_tracefree": [
+        1.877e-06,
+        1.39e-06,
+        2.258e-07,
+        5.542e-06,
+        2.936e-08,
+        5.519e-09
+      ]
+    },
+    {
+      "cutoff": 7,
+      "collocation_grid": 48,
+      "lambda": 20.02765316663493,
+      "leading_mode_amplitude": 0.026342406548,
+      "normalized_AdS_Newton_coefficient_minus_one": 4.7903064e-06,
+      "predicted_leading_shift_at_same_lambda": 4.7772786e-06,
+      "max_residual_components_A_B_c_v_and_tracefree": [
+        4.866e-11,
+        3.957e-11,
+        1.494e-11,
+        6.546e-11,
+        9.512e-13,
+        3.093e-14
+      ]
+    }
+  ]
+}
