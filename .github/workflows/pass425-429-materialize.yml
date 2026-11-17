@@ -1,0 +1,148 @@
+name: Pass 425-429 Materializer
+
+on:
+  pull_request:
+    branches: [master]
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: read
+
+concurrency:
+  group: pass425-429-materialize
+  cancel-in-progress: false
+
+jobs:
+  materialize:
+    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.head.ref == 'agent/pass425-429-five-frontiers' && github.event.pull_request.head.repo.full_name == github.repository)
+    runs-on: ubuntu-24.04
+    env:
+      ISSUE_NUMBER: '123'
+      SEGMENT12_BLOB_SHA: e3a6ed6d6a7d38aa46e616dde710bd851b75f3c9
+      EXPECTED_SHA256: adafc32da8e152a9ecb7cbdf3685b0f7f1666fa1003c523f2ae404a450d05db0
+      EXPECTED_BYTES: '31305'
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/pass425-429-five-frontiers
+          fetch-depth: 0
+          token: ${{ github.token }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Reconstruct and extract hash-locked release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import base64, hashlib, json, os, re, tarfile, urllib.request
+          expected_segments = {
+              0:(2609,'b4026a81d165e71f0c34880c8fbe122b67c2228cc8b8cfc128036d36612d4c68'),
+              1:(2609,'f4a26c82a437f3c0926658aacafc2c2e4a7d5852f1e3e4360b7f9ef274ad323b'),
+              2:(2609,'505893e81444736f21f0d52a5efe3f9f2d57d04f3732202aee4a1df2d6745a75'),
+              3:(2609,'2ba9dee8c1497f78835b0dcca75bc7a456c9a8a69cf69c41276872dc4cbe663f'),
+              4:(2609,'7a259f045120d1107f573434f300724acfba19dd456418fa1580a7db2bc4668b'),
+              5:(2609,'0f2223d958d24298ec6addf948be800ed1126b56ed61a0854411fce1494dc478'),
+              6:(2609,'c6b5988e9fe4ac9dedc1c1f7d0283a13f73e67583b644f311733bebd98027340'),
+              7:(2609,'d09fbf6407a0502b3427728a9e7df9657da9b0e9bf5636a585eaca13fe848eeb'),
+              8:(2609,'440a00c1ef664ed78ce2c28cc153e28bdbb5cd7a1369ad617cb1513d1b8af2d6'),
+              9:(2609,'7c6f9d79a22ba282f5920a73755401f574d06e9d0e862512d04ee496243576fd'),
+              10:(2609,'db223a071f8d1a617ea39f614da4e2428a33376fec28ecc1741265366eeaa49f'),
+              11:(2609,'156d634c1efdc50f2614ea31c2567fc20aa85ad1e96c6db0d2f5cf89bcc9e7f6'),
+              12:(2608,'3a4d2ff68a303c024467eb07a8b3f650f813c6328b869b1b5af5f975d7cf067b'),
+              13:(2608,'cfc78d483c9563886d715a71da1037c28b7bee3c2e2e8ff385d74ac20c8208a2'),
+              14:(2608,'ba60183a04b1e4bac50a7e0a41239a6e35663cfab7804ae1aa8d8cb4d7601839'),
+              15:(2608,'80e836ce8b7ada80c1e59377d9751be500539bcd92d1e15ee9da3b1aa96db4b5'),
+          }
+          expected_files = {
+              'PASS425_429_FIVE_FRONTIERS_RELEASE.md',
+              'analysis/w33_pass425_exact_extension_smith.py',
+              'analysis/w33_pass426_mixed_qutrit_phase_portrait.py',
+              'analysis/w33_pass427_adaptive_telemetry_channel.py',
+              'analysis/w33_pass428_bayesian_hardware_diagnosis.py',
+              'analysis/w33_pass429_inductive_custody_verification.py',
+              'data/w33_pass425_exact_extension_smith.json',
+              'data/w33_pass426_mixed_qutrit_phase_portrait.json',
+              'data/w33_pass427_adaptive_telemetry_channel.json',
+              'data/w33_pass428_bayesian_hardware_diagnosis.json',
+              'data/w33_pass429_inductive_custody_verification.json',
+              'specs/W33Pass429CustodyInductive.tla',
+              'tests/test_pass425_429_five_frontiers.py',
+          }
+          def get(url):
+              request=urllib.request.Request(url,headers={
+                  'Authorization':f"Bearer {os.environ['GH_TOKEN']}",
+                  'Accept':'application/vnd.github+json',
+                  'X-GitHub-Api-Version':'2022-11-28'})
+              with urllib.request.urlopen(request) as response:
+                  return json.load(response)
+          repo=os.environ['GITHUB_REPOSITORY']
+          issue=get(f"https://api.github.com/repos/{repo}/issues/{os.environ['ISSUE_NUMBER']}")
+          comments=get(f"https://api.github.com/repos/{repo}/issues/{os.environ['ISSUE_NUMBER']}/comments?per_page=100")
+          text='\n'.join([issue.get('body','')]+[comment['body'] for comment in comments])
+          segments={}
+          for index in range(12):
+              pattern=rf'PASS425429_SEGMENT_{index:02d}_BEGIN -->\n(.*?)\n<!-- PASS425429_SEGMENT_{index:02d}_END'
+              matches=re.findall(pattern,text,re.S)
+              if not matches: raise SystemExit(f'missing issue segment {index:02d}')
+              wrapped=''.join(matches[-1].split())
+              segments[index]=base64.b64decode(wrapped,validate=True)
+          payload=get(f"https://api.github.com/repos/{repo}/git/blobs/{os.environ['SEGMENT12_BLOB_SHA']}")
+          wrapped12=base64.b64decode(''.join(payload['content'].split()),validate=True)
+          segments[12]=base64.b64decode(base64.b64decode(''.join(wrapped12.decode().split()),validate=True),validate=True)
+          for index in range(13,16):
+              pattern=rf'PASS425429_SEGMENT_{index:02d}_T3_BEGIN -->\n(.*?)\n<!-- PASS425429_SEGMENT_{index:02d}_T3_END'
+              matches=re.findall(pattern,text,re.S)
+              if not matches: raise SystemExit(f'missing issue segment {index:02d} T3')
+              wrapped=''.join(matches[-1].split())
+              segments[index]=base64.b64decode(base64.b64decode(wrapped,validate=True),validate=True)
+          for index,segment in segments.items():
+              length,digest=expected_segments[index]
+              observed=hashlib.sha256(segment).hexdigest()
+              if len(segment)!=length or observed!=digest:
+                  raise SystemExit(f'segment {index:02d} mismatch length={len(segment)} sha256={observed}')
+          archive_b64=b''.join(segments[index] for index in range(16))
+          blob=base64.b64decode(archive_b64,validate=True)
+          digest=hashlib.sha256(blob).hexdigest()
+          print({'decoded_bytes':len(blob),'sha256':digest})
+          if len(blob)!=int(os.environ['EXPECTED_BYTES']): raise SystemExit('archive byte count mismatch')
+          if digest!=os.environ['EXPECTED_SHA256']: raise SystemExit('archive SHA-256 mismatch')
+          open('/tmp/pass425429.tar.gz','wb').write(blob)
+          with tarfile.open('/tmp/pass425429.tar.gz','r:gz') as archive:
+              members=archive.getmembers()
+              names={m.name for m in members if m.isfile()}
+              if names!=expected_files: raise SystemExit(f'manifest mismatch missing={expected_files-names} extra={names-expected_files}')
+              if any(m.name.startswith('/') or '..' in m.name.split('/') for m in members): raise SystemExit('unsafe archive path')
+              archive.extractall('.',filter='data')
+          open('/tmp/pass425429-manifest.txt','w').write('\n'.join(sorted(expected_files))+'\n')
+          PY
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install \
+            numpy==2.3.5 scipy==1.17.0 sympy==1.14.0 networkx==3.6.1 \
+            cryptography==46.0.4 pytest==9.0.2 jsonschema==4.26.0
+      - name: Validate five witnesses
+        run: |
+          python analysis/w33_pass425_exact_extension_smith.py --check
+          python analysis/w33_pass426_mixed_qutrit_phase_portrait.py --check
+          python analysis/w33_pass427_adaptive_telemetry_channel.py --check
+          python analysis/w33_pass428_bayesian_hardware_diagnosis.py --check
+          python analysis/w33_pass429_inductive_custody_verification.py --check
+      - name: Validate regressions and claims
+        run: |
+          python -m pytest -q tests/test_pass425_429_five_frontiers.py
+          python scripts/check_claims_ledger.py
+      - name: Publish validated scientific tree
+        run: |
+          rm -rf .release/pass425_429
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          xargs -d '\n' git add -f -- < /tmp/pass425429-manifest.txt
+          git add -A .release/pass425_429
+          git commit -m 'Passes 425-429: materialize validated scientific release'
+          git push origin HEAD:agent/pass425-429-five-frontiers
