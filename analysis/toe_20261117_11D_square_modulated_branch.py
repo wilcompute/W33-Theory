@@ -65,13 +65,14 @@ def even_backreaction():
     }
 
 
-def numerical_branch(order, grid, normal):
+def numerical_branch(order, grid, normal, *, asymmetry=0, reference_lambda=None):
     import numpy as np
     from scipy.optimize import root
 
     # 17:8 is on the predicted side, and common integer rescaling leaves
     # the dimensionless equations unchanged.
-    lam = 3*np.pi*17/8
+    lam = 3*np.pi*17/8 if reference_lambda is None else reference_lambda
+    d = asymmetry
     axis = 2*np.pi*np.arange(grid)/grid
     mode_pairs = [(m, n) for m in range(order+1) for n in range(m+1)]
 
@@ -86,8 +87,8 @@ def numerical_branch(order, grid, normal):
         squared_norms = np.mean(spectral[0]**2, axis=(1, 2))
         return spectral, squared_norms
 
-    even_modes = [(m, n) for m, n in mode_pairs if (m+n) % 2 == 0]
-    odd_modes = [mn for mn in mode_pairs if mn not in even_modes]
+    even_modes = [(m, n) for m, n in mode_pairs if d or (m+n) % 2 == 0]
+    odd_modes = mode_pairs if d else [mn for mn in mode_pairs if mn not in even_modes]
     even, even_norms = basis(even_modes)
     odd, odd_norms = basis(odd_modes)
     size = len(even_modes)
@@ -102,13 +103,21 @@ def numerical_branch(order, grid, normal):
         reg = np.exp(3*a+2*b)
         vol = np.exp(5*a+2*b)
         war = np.exp(5*a)
-        ac = np.exp(-18*c/5)
-        hc = np.exp(-48*c/5)
-        vpot = -24*ac*np.cosh(2*v)+8*hc
-        pot_c = (432*ac*np.cosh(2*v)-384*hc)/5
-        pot_v = -48*ac*np.sinh(2*v)
+        if d:
+            sphere_plus = (12+4*d)*np.exp(-18*c/5-2*v)
+            sphere_minus = (12-4*d)*np.exp(-18*c/5+2*v)
+            horizontal = 8*np.exp(-48*c/5)
+            vpot = -sphere_plus-sphere_minus+horizontal
+            pot_c = (18*(sphere_plus+sphere_minus)-48*horizontal)/5
+            pot_v = 2*(sphere_plus-sphere_minus)
+        else:
+            ac = np.exp(-18*c/5)
+            hc = np.exp(-48*c/5)
+            vpot = -24*ac*np.cosh(2*v)+8*hc
+            pot_c = (432*ac*np.cosh(2*v)-384*hc)/5
+            pot_v = -48*ac*np.sinh(2*v)
         xp, xm = (np.exp(-5*a+2*b+12*c/5+4*sign*v) for sign in (1, -1))
-        ep, em = (2*s/np.mean(s)**2 for s in (xp, xm))
+        ep, em = (2*(1+d)*xp/np.mean(xp)**2, 2*(1-d)*xm/np.mean(xm)**2)
         aa, ab = ax*ax+ay*ay, ax*bx+ay*by
         cc, vv = cx*cx+cy*cy, vx*vx+vy*vy
         da, db = axx+ayy, bxx+byy
@@ -131,13 +140,19 @@ def numerical_branch(order, grid, normal):
                                          (even_norms, even_norms, even_norms, odd_norms), strict=True)
         ])
 
-    eps = np.sqrt((lam-20)/float(sp.Rational(normal["lambda_shift_coefficient"])))
+    critical = normal.get("static_threshold", 20)
+    eps = np.sqrt((lam-critical)/float(sp.Rational(normal["lambda_shift_coefficient"])))
     start = np.zeros(3*size+len(odd_modes))
     odd_start = 3*size+odd_modes.index((1, 0))
     start[odd_start] = eps
+    for i, coefficient in enumerate(normal.get("first_order_even_fields", ())):
+        start[i*size+even_modes.index((1, 0))] = eps*float(coefficient)
     for i, coefficients in enumerate(normal["even_backreaction_by_field"].values()):
         for mn, coefficient in zip(((0, 0), (2, 0), (1, 1)), coefficients, strict=True):
             start[i*size+even_modes.index(mn)] = eps**2*float(sp.Rational(coefficient))
+    if second_order_v := normal.get("second_order_v"):
+        for mn, coefficient in zip(((0, 0), (2, 0), (1, 1)), second_order_v, strict=True):
+            start[3*size+odd_modes.index(mn)] = eps**2*float(coefficient)
     result = root(equations, start, tol=1e-10)
     assert np.max(np.abs(equations(result.x))) < 1e-8
     assert abs(result.x[odd_start]-eps) < eps/10
@@ -147,7 +162,9 @@ def numerical_branch(order, grid, normal):
     newton_predicted = eps**4*float(sp.Rational(
         normal["normalized_AdS_Newton_coefficient_shift_at_epsilon_fourth"]
     ))
-    assert abs(c_newton-1-newton_predicted) < newton_predicted/30
+    assert abs(c_newton-1-newton_predicted) < abs(newton_predicted)/30, (
+        d, float(c_newton-1), float(newton_predicted), float(result.x[odd_start]), float(eps)
+    )
     return {
         "cutoff": order,
         "collocation_grid": grid,

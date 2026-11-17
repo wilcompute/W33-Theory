@@ -1,0 +1,89 @@
+{
+  "field_order_A_B_c_v": [
+    "0",
+    "16*d*(lambda + 32)/(lambda*(lambda + 28))",
+    "20*d/(3*(lambda + 28))",
+    "1"
+  ],
+  "static_lambda": "-4+4*sqrt(36+5*d^2)",
+  "quadratic_detuning_coefficient": "-8*(lambda + 4)/(lambda + 28)",
+  "frozen_quartic": "-8*(849*lambda**7 + 55680*lambda**6 + 512080*lambda**5 - 23667200*lambda**4 - 819200000*lambda**3 + 4311744512*lambda**2 + 112742891520*lambda + 214748364800)/(25*lambda**4*(lambda + 28)**2)",
+  "relaxed_quartic": "(45*lambda**9 + 9376*lambda**8 + 1224768*lambda**7 + 14943872*lambda**6 - 1468359936*lambda**5 - 11699169280*lambda**4 + 502715465728*lambda**3 - 566309552128*lambda**2 - 429018578944*lambda + 3323230945280)/(5*lambda*(lambda + 28)**2*(3*lambda + 8)*(5*lambda + 8)*(lambda**2 + 8*lambda - 512))",
+  "lambda_shift_per_amplitude_squared": "(45*lambda**9 + 9376*lambda**8 + 1224768*lambda**7 + 14943872*lambda**6 - 1468359936*lambda**5 - 11699169280*lambda**4 + 502715465728*lambda**3 - 566309552128*lambda**2 - 429018578944*lambda + 3323230945280)/(20*lambda*(lambda + 4)*(lambda + 28)*(3*lambda + 8)*(5*lambda + 8)*(lambda**2 + 8*lambda - 512))",
+  "sample_shifts_at_d_0_and_1": [
+    "18368/459",
+    "69.4131830400"
+  ],
+  "isolated_lambda_zeros_in_20_22": [
+    [
+      "28182443/1385607",
+      "25975921/1277122"
+    ],
+    [
+      "24985333/1205869",
+      "22115520/1067363"
+    ]
+  ],
+  "approximate_asymmetries_at_zeros": [
+    "0.452871056350",
+    "0.662072695342"
+  ],
+  "critical_period_ratio_resultant_for_T_r_squared_plus_inverse_squared": "-65390264837523727982810726159945218129920*T**9 - 48539558654833715782675998466891107154788352*T**8 + 400097845434072808311321949855080200937783296*T**7 - 885433891774760569181440416738328269926876672*T**6 - 1091620041718066845962589754390037413027329904*T**5 + 6814220154322585996091752345381429473537600335*T**4 - 5861470771557002056203017569596602534341691304*T**3 - 10120786562971280226334765497237630789572616568*T**2 + 20709258967592917747743738305297568159180258016*T - 10224479186695932379287628609406043428759042448",
+  "critical_resultant_rational_roots": [],
+  "quantized_unequal_samples": [
+    {
+      "periods_N0_N1_N2": [
+        2306,
+        1068,
+        801
+      ],
+      "flux_asymmetry": 0.600000000000072,
+      "static_threshold": 20.592681838303175,
+      "detuning": -0.00017798129136537,
+      "slope_coefficient": -3.288073182506244,
+      "numeric": {
+        "cutoff": 7,
+        "collocation_grid": 48,
+        "lambda": 20.59250385701181,
+        "leading_mode_amplitude": 0.007261426923,
+        "normalized_AdS_Newton_coefficient_minus_one": -2.3963769e-09,
+        "predicted_leading_shift_at_same_lambda": -2.4378796e-09,
+        "max_residual_components_A_B_c_v_and_tracefree": [
+          4.396e-14,
+          1.846e-14,
+          3.239e-14,
+          2.798e-14,
+          3.68e-16,
+          4.527e-17
+        ]
+      }
+    },
+    {
+      "periods_N0_N1_N2": [
+        134,
+        58,
+        29
+      ],
+      "flux_asymmetry": 0.8566355334451097,
+      "static_threshold": 21.193371250645733,
+      "detuning": 0.00419655044817091,
+      "slope_coefficient": 29.672282041133588,
+      "numeric": {
+        "cutoff": 7,
+        "collocation_grid": 48,
+        "lambda": 21.197567801093903,
+        "leading_mode_amplitude": 0.012017204254,
+        "normalized_AdS_Newton_coefficient_minus_one": 1.544466e-07,
+        "predicted_leading_shift_at_same_lambda": 1.5197902e-07,
+        "max_residual_components_A_B_c_v_and_tracefree": [
+          1.805e-13,
+          2.385e-12,
+          2.116e-12,
+          5.615e-12,
+          5.355e-14,
+          2.645e-15
+        ]
+      }
+    }
+  ]
+}
