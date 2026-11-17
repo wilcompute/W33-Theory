@@ -1,0 +1,114 @@
+{
+  "continuations": [
+    {
+      "alpha_distance_below_quartic_zero": 0.0001,
+      "coarse": {
+        "alpha": 0.9174768989800611,
+        "fold": {
+          "amplitude": 0.0428429197992425,
+          "detuning": 8.719424871017623e-08,
+          "action_excess": 1.3294885894483965e-11,
+          "max_projected_force": 7.345686559023789e-16
+        },
+        "equal_action": {
+          "amplitude": 0.05249669336612333,
+          "detuning": 6.531029939083055e-08,
+          "action_excess": 3.7562705058673965e-17,
+          "max_projected_force": 5.793976409762535e-17
+        },
+        "model_fold_detuning": 8.505874077390665e-08,
+        "model_crossing_detuning": 6.379405558042999e-08,
+        "model_fold_amplitude": 0.0423006686711055,
+        "model_crossing_amplitude": 0.05180752701137132
+      },
+      "fine": {
+        "alpha": 0.9174768989800611,
+        "fold": {
+          "amplitude": 0.04285948168238416,
+          "detuning": 8.722570599140056e-08,
+          "action_excess": 1.3306386774736843e-11,
+          "max_projected_force": 8.878314750049299e-16
+        },
+        "equal_action": {
+          "amplitude": 0.05252241112423308,
+          "detuning": 6.534216956399774e-08,
+          "action_excess": 7.798608191696457e-17,
+          "max_projected_force": 2.337820277840478e-16
+        },
+        "model_fold_detuning": 8.505874077390665e-08,
+        "model_crossing_detuning": 6.379405558042999e-08,
+        "model_fold_amplitude": 0.0423006686711055,
+        "model_crossing_amplitude": 0.05180752701137132,
+        "coexisting_at_shared_detuning": {
+          "small": {
+            "amplitude": 0.028070457320460932,
+            "detuning": 5.8807804625971016e-08,
+            "action_excess": 5.255406453566589e-12,
+            "max_projected_force": 7.502079228393916e-16
+          },
+          "large": {
+            "amplitude": 0.05373367285526924,
+            "detuning": 5.880793430002029e-08,
+            "action_excess": -4.572597082380245e-12,
+            "max_projected_force": 5.512815469624495e-16
+          }
+        }
+      }
+    },
+    {
+      "alpha_distance_below_quartic_zero": 0.0003,
+      "coarse": {
+        "alpha": 0.9172768989800612,
+        "fold": {
+          "amplitude": 0.07413043680266104,
+          "detuning": 7.861418358512395e-07,
+          "action_excess": 3.569967129084166e-10,
+          "max_projected_force": 7.523224664768291e-16
+        },
+        "equal_action": {
+          "amplitude": 0.09084167043347881,
+          "detuning": 5.868430659194956e-07,
+          "action_excess": 3.2398613185782963e-18,
+          "max_projected_force": 1.6008787177834716e-14
+        },
+        "model_fold_detuning": 7.325844894774834e-07,
+        "model_crossing_detuning": 5.494383671081126e-07,
+        "model_fold_amplitude": 0.07155845201142969,
+        "model_crossing_amplitude": 0.08764084710571964
+      },
+      "fine": {
+        "alpha": 0.9172768989800612,
+        "fold": {
+          "amplitude": 0.07437536896038265,
+          "detuning": 7.887234007020183e-07,
+          "action_excess": 3.598039538714608e-10,
+          "max_projected_force": 1.6292360256048299e-15
+        },
+        "equal_action": {
+          "amplitude": 0.0912500037461268,
+          "detuning": 5.894442240972353e-07,
+          "action_excess": 3.8141884350438284e-16,
+          "max_projected_force": 2.498640400486196e-14
+        },
+        "model_fold_detuning": 7.325844894774834e-07,
+        "model_crossing_detuning": 5.494383671081126e-07,
+        "model_fold_amplitude": 0.07155845201142969,
+        "model_crossing_amplitude": 0.08764084710571964,
+        "coexisting_at_shared_detuning": {
+          "small": {
+            "amplitude": 0.04859980707597436,
+            "detuning": 5.304999075583794e-07,
+            "action_excess": 1.4167138605850276e-10,
+            "max_projected_force": 9.71445146547012e-17
+          },
+          "large": {
+            "amplitude": 0.0933485356106984,
+            "detuning": 5.304998096367086e-07,
+            "action_excess": -1.222806698558522e-10,
+            "max_projected_force": 3.344921995634964e-14
+          }
+        }
+      }
+    }
+  ]
+}
