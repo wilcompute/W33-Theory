@@ -1,0 +1,42 @@
+{
+  "B_angle_CW_scan_grid_720_with_fermion_mass_threshold_0p15": 460,
+  "B_trace27_norm_squared": 7.68,
+  "benchmark_B": {
+    "CW_B_energy": -0.16748952339067588,
+    "chi": 0.2,
+    "kappa_A_SU5_shape": 0.002542364377803341,
+    "psi": -0.2,
+    "theta_rad": 2.2298543626213054
+  },
+  "benchmark_B_is_global_CW_grid_min": false,
+  "benchmark_proton_scale_proxy": "analysis/toe_20261117_E6_proton_scale_proxy.py",
+  "exact_Cartan_norms_and_FD": {
+    "FD_flat_constructive_proof": "Set messenger Fbar,F=0 and singlets S_A=S_B=0; impose Tr27 A\u00b2=vA\u00b2, Tr27 B\u00b2=vB\u00b2. Then all holomorphic F-terms vanish. Hermitian commuting A and B lie in a common compact Cartan so adjoint D^a proportional to [A\u2020,A]+[B\u2020,B] vanishes.",
+    "critical_missing": "These are moduli of F/D flat backgrounds, not a uniquely selected vacuum. Soft one-loop potential, full E6 gauge/Higgs quantum corrections and other adjoint invariants control their stability.",
+    "cross_coefficient": 0,
+    "example_B_trace27_squared": 7.68,
+    "trace27_A2": "6 Tr5(A\u00b2) for SU5 adjoint A",
+    "trace27_B2": "72 psi\u00b2+120 chi\u00b2"
+  },
+  "lowest_CW_B_energy_among_positive_kappa": {
+    "CW_B_vacuum_energy": -0.16755139419502393,
+    "chi": -0.1923691838140594,
+    "kappa_A_SU5_TrA4": 0.003362122338459132,
+    "psi": 0.21210884438071187,
+    "smallest_fermion_mass_abs": 0.15156462247715252,
+    "smallest_scalar_mass2": 0.2729718347866418,
+    "theta": 5.419247327442394
+  },
+  "lowest_CW_B_energy_grid": {
+    "CW_B_vacuum_energy": -0.16755139419502393,
+    "chi": -0.1923691838140594,
+    "kappa_A_SU5_TrA4": 0.003362122338459132,
+    "psi": 0.21210884438071187,
+    "smallest_fermion_mass_abs": 0.15156462247715252,
+    "smallest_scalar_mass2": 0.2729718347866418,
+    "theta": 5.419247327442394
+  },
+  "physical_caveat": "Even the B-only 1-loop grid minimum is not a global vacuum: full potential includes SUSY-breaking counterterms, E6 gauge/higgs modes and all Cartan directions. Scan is 720 angles under fixed B norm, excluding messenger fermion masses below 0.15M. The benchmark can be metastable or unselected.",
+  "positive_A_quartic_count_at_same_B_norm": 108,
+  "status": "PASS_E6_TWO_ADJOINT_FD_FLAT_MODULI_AND_B_CW_ANGLE_STRESS"
+}

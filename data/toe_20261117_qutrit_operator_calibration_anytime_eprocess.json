@@ -1,0 +1,223 @@
+{
+  "calibration_scenarios": [
+    {
+      "beta_setting_leak_TV": 0,
+      "epsilon_operator_norm_bound": 0,
+      "max_separable_success_p0": 0.3053206716012007,
+      "min_entangled_source_success_p1": 0.5000238446308998,
+      "oracle_log_evalue_100_information_n": 56.0095037845235,
+      "prior_probability_baseline_pent": 0.5000238446308998,
+      "prior_probability_baseline_psep": 0.3053206716012007,
+      "robust_certification_possible": true,
+      "robust_gap": 0.19470317302969908
+    },
+    {
+      "beta_setting_leak_TV": 0.002,
+      "epsilon_operator_norm_bound": 0.01,
+      "max_separable_success_p0": 0.3173206716012007,
+      "min_entangled_source_success_p1": 0.49002384463089976,
+      "oracle_log_evalue_100_information_n": 71.73692174960019,
+      "prior_probability_baseline_pent": 0.5000238446308998,
+      "prior_probability_baseline_psep": 0.3053206716012007,
+      "robust_certification_possible": true,
+      "robust_gap": 0.17270317302969906
+    },
+    {
+      "beta_setting_leak_TV": 0.01,
+      "epsilon_operator_norm_bound": 0.03,
+      "max_separable_success_p0": 0.3453206716012007,
+      "min_entangled_source_success_p1": 0.47002384463089975,
+      "oracle_log_evalue_100_information_n": 139.88165485195438,
+      "prior_probability_baseline_pent": 0.5000238446308998,
+      "prior_probability_baseline_psep": 0.3053206716012007,
+      "robust_certification_possible": true,
+      "robust_gap": 0.12470317302969902
+    },
+    {
+      "beta_setting_leak_TV": 0.015,
+      "epsilon_operator_norm_bound": 0.05,
+      "max_separable_success_p0": 0.3703206716012007,
+      "min_entangled_source_success_p1": 0.4500238446308998,
+      "oracle_log_evalue_100_information_n": 346.45471649266165,
+      "prior_probability_baseline_pent": 0.5000238446308998,
+      "prior_probability_baseline_psep": 0.3053206716012007,
+      "robust_certification_possible": true,
+      "robust_gap": 0.07970317302969909
+    },
+    {
+      "beta_setting_leak_TV": 0.02,
+      "epsilon_operator_norm_bound": 0.08,
+      "max_separable_success_p0": 0.4053206716012007,
+      "min_entangled_source_success_p1": 0.42002384463089976,
+      "oracle_log_evalue_100_information_n": 10307.102732643496,
+      "prior_probability_baseline_pent": 0.5000238446308998,
+      "prior_probability_baseline_psep": 0.3053206716012007,
+      "robust_certification_possible": true,
+      "robust_gap": 0.014703173029699035
+    },
+    {
+      "beta_setting_leak_TV": 0.03,
+      "epsilon_operator_norm_bound": 0.09,
+      "max_separable_success_p0": 0.4253206716012007,
+      "min_entangled_source_success_p1": 0.4100238446308998,
+      "oracle_log_evalue_100_information_n": null,
+      "prior_probability_baseline_pent": 0.5000238446308998,
+      "prior_probability_baseline_psep": 0.3053206716012007,
+      "robust_certification_possible": false,
+      "robust_gap": -0.01529682697030088
+    },
+    {
+      "beta_setting_leak_TV": 0,
+      "epsilon_operator_norm_bound": 0.1,
+      "max_separable_success_p0": 0.40532067160120067,
+      "min_entangled_source_success_p1": 0.4000238446308998,
+      "oracle_log_evalue_100_information_n": null,
+      "prior_probability_baseline_pent": 0.5000238446308998,
+      "prior_probability_baseline_psep": 0.3053206716012007,
+      "robust_certification_possible": false,
+      "robust_gap": -0.005296826970300872
+    }
+  ],
+  "exact_DP_eps03_beta01_alternative": {
+    "crossing_by_horizon": {
+      "25": {
+        "noncrossing_mass": 0.9983676902637038,
+        "probability_crossed_at_any_time": 0.0016323097362963717
+      },
+      "50": {
+        "noncrossing_mass": 0.9259166446930222,
+        "probability_crossed_at_any_time": 0.07408335530697799
+      },
+      "75": {
+        "noncrossing_mass": 0.7698652820294021,
+        "probability_crossed_at_any_time": 0.23013471797059779
+      },
+      "100": {
+        "noncrossing_mass": 0.6090390761190263,
+        "probability_crossed_at_any_time": 0.39096092388097337
+      },
+      "200": {
+        "noncrossing_mass": 0.20212208431149506,
+        "probability_crossed_at_any_time": 0.7978779156885044
+      },
+      "500": {
+        "noncrossing_mass": 0.008255234709592815,
+        "probability_crossed_at_any_time": 0.9917447652904067
+      }
+    },
+    "crossing_threshold": 100.0,
+    "ever_crossed_prob": 0.9917447652904067,
+    "horizon": 500,
+    "p0_predeclared": 0.3453206716012007,
+    "p1_predeclared": 0.47002384463089975,
+    "truth_success_probability": 0.47002384463089975
+  },
+  "exact_DP_eps03_beta01_null": {
+    "crossing_by_horizon": {
+      "25": {
+        "noncrossing_mass": 0.9999854854849649,
+        "probability_crossed_at_any_time": 1.4514515035374043e-05
+      },
+      "50": {
+        "noncrossing_mass": 0.9993362125326635,
+        "probability_crossed_at_any_time": 0.0006637874673367985
+      },
+      "75": {
+        "noncrossing_mass": 0.997973408594933,
+        "probability_crossed_at_any_time": 0.0020265914050671503
+      },
+      "100": {
+        "noncrossing_mass": 0.9965703282057256,
+        "probability_crossed_at_any_time": 0.00342967179427458
+      },
+      "200": {
+        "noncrossing_mass": 0.9929770167658749,
+        "probability_crossed_at_any_time": 0.0070229832341253805
+      },
+      "500": {
+        "noncrossing_mass": 0.99127757000747,
+        "probability_crossed_at_any_time": 0.008722429992530263
+      }
+    },
+    "crossing_threshold": 100.0,
+    "ever_crossed_prob": 0.008722429992530263,
+    "horizon": 500,
+    "p0_predeclared": 0.3453206716012007,
+    "p1_predeclared": 0.47002384463089975,
+    "truth_success_probability": 0.3453206716012007
+  },
+  "exact_DP_no_noise_alternative": {
+    "crossing_by_horizon": {
+      "25": {
+        "noncrossing_mass": 0.8624926526171716,
+        "probability_crossed_at_any_time": 0.13750734738282833
+      },
+      "50": {
+        "noncrossing_mass": 0.48136053024006986,
+        "probability_crossed_at_any_time": 0.5186394697599301
+      },
+      "75": {
+        "noncrossing_mass": 0.2444938265663099,
+        "probability_crossed_at_any_time": 0.7555061734336902
+      },
+      "100": {
+        "noncrossing_mass": 0.12355590756271068,
+        "probability_crossed_at_any_time": 0.8764440924372896
+      },
+      "200": {
+        "noncrossing_mass": 0.009108976145970765,
+        "probability_crossed_at_any_time": 0.9908910238540296
+      },
+      "500": {
+        "noncrossing_mass": 7.619415594696529e-06,
+        "probability_crossed_at_any_time": 0.9999923805844063
+      }
+    },
+    "crossing_threshold": 100.0,
+    "ever_crossed_prob": 0.9999923805844063,
+    "horizon": 500,
+    "p0_predeclared": 0.3053206716012007,
+    "p1_predeclared": 0.5000238446308998,
+    "truth_success_probability": 0.5000238446308998
+  },
+  "exact_DP_no_noise_null": {
+    "crossing_by_horizon": {
+      "25": {
+        "noncrossing_mass": 0.998962458618985,
+        "probability_crossed_at_any_time": 0.0010375413810147936
+      },
+      "50": {
+        "noncrossing_mass": 0.9960998873437277,
+        "probability_crossed_at_any_time": 0.0039001126562722022
+      },
+      "75": {
+        "noncrossing_mass": 0.9943219555919104,
+        "probability_crossed_at_any_time": 0.005678044408089535
+      },
+      "100": {
+        "noncrossing_mass": 0.9934139371445199,
+        "probability_crossed_at_any_time": 0.006586062855479956
+      },
+      "200": {
+        "noncrossing_mass": 0.9925540104502344,
+        "probability_crossed_at_any_time": 0.007445989549765361
+      },
+      "500": {
+        "noncrossing_mass": 0.992485491344434,
+        "probability_crossed_at_any_time": 0.007514508655566204
+      }
+    },
+    "crossing_threshold": 100.0,
+    "ever_crossed_prob": 0.007514508655566204,
+    "horizon": 500,
+    "p0_predeclared": 0.3053206716012007,
+    "p1_predeclared": 0.5000238446308998,
+    "truth_success_probability": 0.3053206716012007
+  },
+  "largest_symmetric_epsilon_at_zero_leakage": 0.09735158651484954,
+  "nonIID_proof": "For each trial, conditional null p<=p0 and predictable p1>p0: E[(p1/p0)^X((1-p1)/(1-p0))^(1-X)|past]<=1. Product is nonnegative supermartingale. Ville bound holds under arbitrary correlated/adaptive null with certified per-trial bounds.",
+  "operator_effect_theorem": "If averaged matched-click effect differs from ideal a-weighted MUB operator by operator norm <=epsilon for all states and conditional histories, |Tr rho DeltaW|<=epsilon. Setting leakage TV<=beta increases separable null by beta. Robust gap if 2epsilon+beta<p_ent_ideal-p_sep_ideal.",
+  "original_ideal_gap": 0.19470317302969908,
+  "scope": "Mathematically exact trusted POVM+sequential inference under operator-norm and setting-leakage premises. The premises are not experimentally calibrated and no photon data were taken.",
+  "status": "PASS_QUTRIT_OPERATOR_NORM_CALIBRATION_ROBUST_ANYTIME_EPROCESS"
+}

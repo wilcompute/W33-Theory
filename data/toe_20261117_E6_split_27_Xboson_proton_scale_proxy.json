@@ -1,0 +1,49 @@
+{
+  "benchmarks": [
+    {
+      "A_norm_over_messenger_scale": 0.015,
+      "X_vector_mass_over_M": 0.009708129562778495,
+      "basis_hypercharge_Xmass_ratio": "X/Y gap =5r/sqrt30; vector mass=g5*gap",
+      "g5": 0.7089815403622064,
+      "min_messenger_fermion_mass_over_M_at_A0": 0.19999999999999996,
+      "ratio_Xmass_to_lightest_messenger": 0.04854064781389249,
+      "required_messenger_scale_GeV_IF_MX_at_least_1e15": 1.0300645387285056e+17
+    },
+    {
+      "A_norm_over_messenger_scale": 0.03,
+      "X_vector_mass_over_M": 0.01941625912555699,
+      "basis_hypercharge_Xmass_ratio": "X/Y gap =5r/sqrt30; vector mass=g5*gap",
+      "g5": 0.7089815403622064,
+      "min_messenger_fermion_mass_over_M_at_A0": 0.19999999999999996,
+      "ratio_Xmass_to_lightest_messenger": 0.09708129562778497,
+      "required_messenger_scale_GeV_IF_MX_at_least_1e15": 5.150322693642528e+16
+    },
+    {
+      "A_norm_over_messenger_scale": 0.05,
+      "X_vector_mass_over_M": 0.03236043187592832,
+      "basis_hypercharge_Xmass_ratio": "X/Y gap =5r/sqrt30; vector mass=g5*gap",
+      "g5": 0.7089815403622064,
+      "min_messenger_fermion_mass_over_M_at_A0": 0.19999999999999996,
+      "ratio_Xmass_to_lightest_messenger": 0.16180215937964162,
+      "required_messenger_scale_GeV_IF_MX_at_least_1e15": 3.090193616185517e+16
+    },
+    {
+      "A_norm_over_messenger_scale": 0.1,
+      "X_vector_mass_over_M": 0.06472086375185664,
+      "basis_hypercharge_Xmass_ratio": "X/Y gap =5r/sqrt30; vector mass=g5*gap",
+      "g5": 0.7089815403622064,
+      "min_messenger_fermion_mass_over_M_at_A0": 0.19999999999999996,
+      "ratio_Xmass_to_lightest_messenger": 0.32360431875928325,
+      "required_messenger_scale_GeV_IF_MX_at_least_1e15": 1.5450968080927584e+16
+    }
+  ],
+  "conditional_input_MX_min_GeV": 1000000000000000.0,
+  "critical_obstacle": "Messenger M and SU5 gauge boson MX are NOT the same scale: MX/M can be much smaller than 1 for r/M<<1, so E6 messenger mass stability does not imply proton stability.",
+  "dimension6_gauge_exchange": "At tree level A6~g5\u00b2/MX\u00b2; if MX=g5*(5r/sqrt30), coefficient is 6/(5r\u00b2) in chosen normalization, before flavor, Wilson matching and hadronic matrix elements.",
+  "g5": 0.7089815403622064,
+  "illustrative_alpha5": 0.04,
+  "no_lifetime_prediction": "A model-specific p->e+pi0 lifetime needs 3-family embeddings, X/Y coupling matrices, renormalized Wilson coefficients, hadronic matrix elements, all additional E6 gauge bosons and colored triplet operators. The M_X>=1e15 GeV proxy is an illustrative external engineering requirement, not a derived experimental inequality.",
+  "reference_superK": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.102.112011",
+  "status": "PASS_SPLIT_E6_MESSENGER_X_BOSON_SCALE_PROXY",
+  "superK_e_plus_pi0_partial_lifetime_bound_years": "2.4e34 at 90% CL (published 2020; not itself converted into a single universal MX bound)"
+}

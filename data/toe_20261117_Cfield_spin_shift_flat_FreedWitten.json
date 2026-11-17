@@ -1,0 +1,239 @@
+{
+  "M6": {
+    "G4_cup_G4_in_internal_dimension6": "zero by form degree; does not imply all 11D CS terms vanish.",
+    "H4_Z": {
+      "free_rank": 3,
+      "torsion": []
+    },
+    "flat_degree4_differential_character_H3_RmodZ": {
+      "U1_free_factors": 4,
+      "finite_torsion": []
+    },
+    "flux_integrality": "[G4/(2pi)] is integral, no p1/4 shift. Three free integer flux components Nxy,Nxt,Nyt.",
+    "internal": "S2xS2xT2",
+    "lambda=p1_over_2": 0,
+    "p1": 0,
+    "spin": true,
+    "w2": 0
+  },
+  "Witten_shift_formula": "[G4/(2pi)]-lambda/2 integral, lambda=p1/2; both families have p1=0 so no half-integral gravity shift on the internal six-manifold.",
+  "circle6_example_euler_6_6": {
+    "H4_Z": {
+      "free_rank": 1,
+      "torsion": [
+        6
+      ]
+    },
+    "Witten_Cfield_quantization": "p1/4 zero. Flux characteristic class can include a Z_g torsion sector invisible to real G4 curvature.",
+    "circle_euler": [
+      6,
+      6
+    ],
+    "flat_degree4_differential_character_H3_RmodZ": {
+      "U1_free_factors": 2,
+      "finite_torsion": [
+        6
+      ]
+    },
+    "g": 6,
+    "lambda=p1_over_2": 0,
+    "p1": 0,
+    "spin": true,
+    "stable_tangent_proof": "Vertical tangent of oriented circle bundle trivial; TY stably pi*T(S2xS2)+R. Both base S2 factors have w2 and p1 zero, so pullbacks vanish.",
+    "w2": 0
+  },
+  "computed_examples": [
+    {
+      "Tdual_Cfield": {
+        "H4_Z": {
+          "free_rank": 1,
+          "torsion": []
+        },
+        "Witten_Cfield_quantization": "p1/4 zero. Flux characteristic class can include a Z_g torsion sector invisible to real G4 curvature.",
+        "circle_euler": [
+          1,
+          -2
+        ],
+        "flat_degree4_differential_character_H3_RmodZ": {
+          "U1_free_factors": 2,
+          "finite_torsion": []
+        },
+        "g": 1,
+        "lambda=p1_over_2": 0,
+        "p1": 0,
+        "spin": true,
+        "stable_tangent_proof": "Vertical tangent of oriented circle bundle trivial; TY stably pi*T(S2xS2)+R. Both base S2 factors have w2 and p1 zero, so pullbacks vanish.",
+        "w2": 0
+      },
+      "naive_wrapped_D5": {
+        "Euler": [
+          1,
+          2
+        ],
+        "Freed_Witten_sum_W3_plus_H": 1,
+        "H3_integer_class": 1,
+        "naive_D5_wrapping_entire_Y5_times_time_allowed": false,
+        "precise_obstruction": "The D5 worldvolume Y5xR is spin, so W3=0, while the nonzero integral NS H3=k*z restricts nontrivially; Freed-Witten anomaly absent additional brane endpoints or compensating mechanisms.",
+        "scope": "Only this proposed naive wrapped D5. Not a classification of all D-brane charges or proof that string compactification is impossible.",
+        "spin_Y5_W3": 0
+      },
+      "original_Cfield": {
+        "H4_Z": {
+          "free_rank": 1,
+          "torsion": []
+        },
+        "Witten_Cfield_quantization": "p1/4 zero. Flux characteristic class can include a Z_g torsion sector invisible to real G4 curvature.",
+        "circle_euler": [
+          1,
+          2
+        ],
+        "flat_degree4_differential_character_H3_RmodZ": {
+          "U1_free_factors": 2,
+          "finite_torsion": []
+        },
+        "g": 1,
+        "lambda=p1_over_2": 0,
+        "p1": 0,
+        "spin": true,
+        "stable_tangent_proof": "Vertical tangent of oriented circle bundle trivial; TY stably pi*T(S2xS2)+R. Both base S2 factors have w2 and p1 zero, so pullbacks vanish.",
+        "w2": 0
+      }
+    },
+    {
+      "Tdual_Cfield": {
+        "H4_Z": {
+          "free_rank": 1,
+          "torsion": [
+            5
+          ]
+        },
+        "Witten_Cfield_quantization": "p1/4 zero. Flux characteristic class can include a Z_g torsion sector invisible to real G4 curvature.",
+        "circle_euler": [
+          5,
+          -5
+        ],
+        "flat_degree4_differential_character_H3_RmodZ": {
+          "U1_free_factors": 2,
+          "finite_torsion": [
+            5
+          ]
+        },
+        "g": 5,
+        "lambda=p1_over_2": 0,
+        "p1": 0,
+        "spin": true,
+        "stable_tangent_proof": "Vertical tangent of oriented circle bundle trivial; TY stably pi*T(S2xS2)+R. Both base S2 factors have w2 and p1 zero, so pullbacks vanish.",
+        "w2": 0
+      },
+      "naive_wrapped_D5": {
+        "Euler": [
+          3,
+          3
+        ],
+        "Freed_Witten_sum_W3_plus_H": 5,
+        "H3_integer_class": 5,
+        "naive_D5_wrapping_entire_Y5_times_time_allowed": false,
+        "precise_obstruction": "The D5 worldvolume Y5xR is spin, so W3=0, while the nonzero integral NS H3=k*z restricts nontrivially; Freed-Witten anomaly absent additional brane endpoints or compensating mechanisms.",
+        "scope": "Only this proposed naive wrapped D5. Not a classification of all D-brane charges or proof that string compactification is impossible.",
+        "spin_Y5_W3": 0
+      },
+      "original_Cfield": {
+        "H4_Z": {
+          "free_rank": 1,
+          "torsion": [
+            3
+          ]
+        },
+        "Witten_Cfield_quantization": "p1/4 zero. Flux characteristic class can include a Z_g torsion sector invisible to real G4 curvature.",
+        "circle_euler": [
+          3,
+          3
+        ],
+        "flat_degree4_differential_character_H3_RmodZ": {
+          "U1_free_factors": 2,
+          "finite_torsion": [
+            3
+          ]
+        },
+        "g": 3,
+        "lambda=p1_over_2": 0,
+        "p1": 0,
+        "spin": true,
+        "stable_tangent_proof": "Vertical tangent of oriented circle bundle trivial; TY stably pi*T(S2xS2)+R. Both base S2 factors have w2 and p1 zero, so pullbacks vanish.",
+        "w2": 0
+      }
+    },
+    {
+      "Tdual_Cfield": {
+        "H4_Z": {
+          "free_rank": 1,
+          "torsion": [
+            3
+          ]
+        },
+        "Witten_Cfield_quantization": "p1/4 zero. Flux characteristic class can include a Z_g torsion sector invisible to real G4 curvature.",
+        "circle_euler": [
+          3,
+          -3
+        ],
+        "flat_degree4_differential_character_H3_RmodZ": {
+          "U1_free_factors": 2,
+          "finite_torsion": [
+            3
+          ]
+        },
+        "g": 3,
+        "lambda=p1_over_2": 0,
+        "p1": 0,
+        "spin": true,
+        "stable_tangent_proof": "Vertical tangent of oriented circle bundle trivial; TY stably pi*T(S2xS2)+R. Both base S2 factors have w2 and p1 zero, so pullbacks vanish.",
+        "w2": 0
+      },
+      "naive_wrapped_D5": {
+        "Euler": [
+          5,
+          5
+        ],
+        "Freed_Witten_sum_W3_plus_H": 3,
+        "H3_integer_class": 3,
+        "naive_D5_wrapping_entire_Y5_times_time_allowed": false,
+        "precise_obstruction": "The D5 worldvolume Y5xR is spin, so W3=0, while the nonzero integral NS H3=k*z restricts nontrivially; Freed-Witten anomaly absent additional brane endpoints or compensating mechanisms.",
+        "scope": "Only this proposed naive wrapped D5. Not a classification of all D-brane charges or proof that string compactification is impossible.",
+        "spin_Y5_W3": 0
+      },
+      "original_Cfield": {
+        "H4_Z": {
+          "free_rank": 1,
+          "torsion": [
+            5
+          ]
+        },
+        "Witten_Cfield_quantization": "p1/4 zero. Flux characteristic class can include a Z_g torsion sector invisible to real G4 curvature.",
+        "circle_euler": [
+          5,
+          5
+        ],
+        "flat_degree4_differential_character_H3_RmodZ": {
+          "U1_free_factors": 2,
+          "finite_torsion": [
+            5
+          ]
+        },
+        "g": 5,
+        "lambda=p1_over_2": 0,
+        "p1": 0,
+        "spin": true,
+        "stable_tangent_proof": "Vertical tangent of oriented circle bundle trivial; TY stably pi*T(S2xS2)+R. Both base S2 factors have w2 and p1 zero, so pullbacks vanish.",
+        "w2": 0
+      }
+    }
+  ],
+  "flat_Cfield_exact_sequence": "For degree-four differential cohomology, flat fields are H^3(M,R/Z). They contain U(1)^{b3} times Tor H^4(M,Z) (as abstract compact abelian groups).",
+  "nonzero_signed_integer_triples_verified": 1200,
+  "not_a_Page_charge_dictionary": "Topological C-field quantization, spin and a particular Freed-Witten consistency condition, NOT an M/IIB duality of all physical charges, brane endpoints, or full 11D equation.",
+  "references": [
+    "https://arxiv.org/abs/hep-th/9609122",
+    "https://www.mathematik.uni-muenchen.de/~schotten/Texte/978-3-540-74955-4_Book_LNP726.pdf"
+  ],
+  "status": "PASS_INTERNAL_SPIN_NO_G4_SHIFT_TORSION_FLAT_CFIELD_AND_FW"
+}

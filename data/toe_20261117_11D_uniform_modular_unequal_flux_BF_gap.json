@@ -1,0 +1,60 @@
+{
+  "Hermite_2D_shortest_dual_eigenvalue_upper": 10.882796185405306,
+  "critical_scope": "Two-derivative sphere-singlet, nonzero torus momentum physical sector and fixed-area torus normalization. Does not solve all KK modes, corrected 11D physics or stability of nonlinear modulated solutions.",
+  "harmonic_examples": [
+    {
+      "integer_harmonic": 1,
+      "physical_lambda_selected": 10.882796185405306,
+      "primitive_lambda0": 10.882796185405306
+    },
+    {
+      "integer_harmonic": 1,
+      "physical_lambda_selected": 5.441398092702653,
+      "primitive_lambda0": 5.441398092702653
+    },
+    {
+      "integer_harmonic": 2,
+      "physical_lambda_selected": 10.882796185405306,
+      "primitive_lambda0": 2.7206990463513265
+    },
+    {
+      "integer_harmonic": 3,
+      "physical_lambda_selected": 10.882796185405306,
+      "primitive_lambda0": 1.2091995761561452
+    },
+    {
+      "integer_harmonic": 4,
+      "physical_lambda_selected": 10.882796185405306,
+      "primitive_lambda0": 0.6801747615878316
+    },
+    {
+      "integer_harmonic": 10,
+      "physical_lambda_selected": 10.882796185405306,
+      "primitive_lambda0": 0.10882796185405307
+    },
+    {
+      "integer_harmonic": 10000,
+      "physical_lambda_selected": 10.882796185405306,
+      "primitive_lambda0": 1.0882796185405307e-07
+    },
+    {
+      "integer_harmonic": 1000000,
+      "physical_lambda_selected": 10.882796185405306,
+      "primitive_lambda0": 1.0882796185405307e-11
+    }
+  ],
+  "harmonic_selection_theorem": "Given nonzero shortest torus dual lambda0 in (0,L], choose integer n=floor(sqrt(L/lambda0)). Then L/4 < n\u00b2lambda0<=L<12. Exact 5-scalar BF theorem ensures at least one BF-negative physical mode for every reduced modular torus shape and every |d|<=1.",
+  "independent_5x5_numpy_operator_validation": 16,
+  "numerical_not_rigorous_minimum": {
+    "absolute_error_not_certified": true,
+    "global_heuristic_abs_d": 0.9999999999999785,
+    "global_heuristic_differential_evolution_deficit": 0.39418696348631954,
+    "global_heuristic_lambda": 10.882796185405093,
+    "grid_min_abs_d": 1.0,
+    "grid_min_deficit": 0.3941869634862343,
+    "grid_min_lambda": 10.882796185405306,
+    "grid_sample_count": 3621
+  },
+  "status": "PASS_11D_UNIFORM_CLASSICAL_BF_MODE_OVER_MODULAR_CUSPS_AND_UNEQUAL_FLUX",
+  "uniform_gap_existence_proof": "On compact [L/4,L]x[-1,1], the smallest eigenvalue of the positive-K five-scalar generalized pencil varies continuously; strict BF violation throughout implies positive minimum deficit. This is exact given parallel full-operator inertia and 2D Hermite theorem."
+}
