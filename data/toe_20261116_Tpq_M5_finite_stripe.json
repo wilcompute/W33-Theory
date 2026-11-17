@@ -1,0 +1,1152 @@
+{
+  "small_alpha_limits": {
+    "cap_period_over_round_threshold": "5/(2*pi)",
+    "crossing_period_over_round_threshold": "15625/16384"
+  },
+  "families": [
+    {
+      "alpha": 0.1,
+      "round_radius_in_local_ads_units": 0.1003353477310756,
+      "round_threshold_period": 0.31574194169982767,
+      "cap_bulge_radius": 0.12537419815975093,
+      "cap_action_crossing_period_over_round_threshold": 0.9539093086018334,
+      "samples": [
+        {
+          "first_integral_over_round_action_density": 0,
+          "neck_over_round_radius": 0.0,
+          "bulge_over_round_radius": 1.2495516385290844,
+          "period_over_round_threshold": 0.7965356354921314,
+          "action_excess_over_round_action_at_threshold": 0.15737367310970207,
+          "action_over_round_action_at_threshold": 0.9539093086018334
+        },
+        {
+          "first_integral_over_round_action_density": 0.001,
+          "neck_over_round_radius": 0.12205205737078033,
+          "bulge_over_round_radius": 1.2494494557675913,
+          "period_over_round_threshold": 0.8305362617118422,
+          "action_excess_over_round_action_at_threshold": 0.12337959738228275,
+          "action_over_round_action_at_threshold": 0.9539158590941251
+        },
+        {
+          "first_integral_over_round_action_density": 0.01,
+          "neck_over_round_radius": 0.22215050509157108,
+          "bulge_over_round_radius": 1.2485267779360112,
+          "period_over_round_threshold": 0.8554621819979455,
+          "action_excess_over_round_action_at_threshold": 0.09856106134009225,
+          "action_over_round_action_at_threshold": 0.9540232433380379
+        },
+        {
+          "first_integral_over_round_action_density": 0.05,
+          "neck_over_round_radius": 0.3427196800212274,
+          "bulge_over_round_radius": 1.2443581163527329,
+          "period_over_round_threshold": 0.884370099758027,
+          "action_excess_over_round_action_at_threshold": 0.07041438120510539,
+          "action_over_round_action_at_threshold": 0.9547844809631324
+        },
+        {
+          "first_integral_over_round_action_density": 0.1,
+          "neck_over_round_radius": 0.4162648220751122,
+          "bulge_over_round_radius": 1.2389826151635852,
+          "period_over_round_threshold": 0.9017896974901886,
+          "action_excess_over_round_action_at_threshold": 0.05426719118437432,
+          "action_over_round_action_at_threshold": 0.9560568886745631
+        },
+        {
+          "first_integral_over_round_action_density": 0.2,
+          "neck_over_round_radius": 0.5099897168549445,
+          "bulge_over_round_radius": 1.2276175357225634,
+          "period_over_round_threshold": 0.9236338725450872,
+          "action_excess_over_round_action_at_threshold": 0.03561654279706141,
+          "action_over_round_action_at_threshold": 0.9592504153421487
+        },
+        {
+          "first_integral_over_round_action_density": 0.35,
+          "neck_over_round_radius": 0.6076730168110994,
+          "bulge_over_round_radius": 1.2086996839587247,
+          "period_over_round_threshold": 0.9454611594457208,
+          "action_excess_over_round_action_at_threshold": 0.019692710104427545,
+          "action_over_round_action_at_threshold": 0.9651538695501485
+        },
+        {
+          "first_integral_over_round_action_density": 0.5,
+          "neck_over_round_radius": 0.6863830525039843,
+          "bulge_over_round_radius": 1.1867376877389357,
+          "period_over_round_threshold": 0.9617763116654766,
+          "action_excess_over_round_action_at_threshold": 0.010264485775924221,
+          "action_over_round_action_at_threshold": 0.9720407974414008
+        },
+        {
+          "first_integral_over_round_action_density": 0.65,
+          "neck_over_round_radius": 0.7583272395947905,
+          "bulge_over_round_radius": 1.1601146814622592,
+          "period_over_round_threshold": 0.9751578344196001,
+          "action_excess_over_round_action_at_threshold": 0.0045489850645829815,
+          "action_over_round_action_at_threshold": 0.979706819484183
+        },
+        {
+          "first_integral_over_round_action_density": 0.8,
+          "neck_over_round_radius": 0.8315363894838154,
+          "bulge_over_round_radius": 1.1250679214171004,
+          "period_over_round_threshold": 0.9866623883345439,
+          "action_excess_over_round_action_at_threshold": 0.0013659158059338345,
+          "action_over_round_action_at_threshold": 0.9880283041404778
+        },
+        {
+          "first_integral_over_round_action_density": 0.9,
+          "neck_over_round_radius": 0.8878736376231601,
+          "bulge_over_round_radius": 1.0913210609692545,
+          "period_over_round_threshold": 0.9935721380678159,
+          "action_excess_over_round_action_at_threshold": 0.00032505700011885096,
+          "action_over_round_action_at_threshold": 0.9938971950679347
+        },
+        {
+          "first_integral_over_round_action_density": 0.95,
+          "neck_over_round_radius": 0.9236389639679251,
+          "bulge_over_round_radius": 1.0661608695693772,
+          "period_over_round_threshold": 0.9968410181006825,
+          "action_excess_over_round_action_at_threshold": 7.941305777876649e-05,
+          "action_over_round_action_at_threshold": 0.9969204311584613
+        },
+        {
+          "first_integral_over_round_action_density": 0.98,
+          "neck_over_round_radius": 0.9531570809195723,
+          "bulge_over_round_radius": 1.0428091421713102,
+          "period_over_round_threshold": 0.9987489971584557,
+          "action_excess_over_round_action_at_threshold": 1.253743621628683e-05,
+          "action_over_round_action_at_threshold": 0.998761534594672
+        }
+      ]
+    },
+    {
+      "alpha": 0.3,
+      "round_radius_in_local_ads_units": 0.30951960420311175,
+      "round_threshold_period": 0.9879851825745465,
+      "cap_bulge_radius": 0.3856049433678323,
+      "cap_action_crossing_period_over_round_threshold": 0.9558519234786699,
+      "samples": [
+        {
+          "first_integral_over_round_action_density": 0,
+          "neck_over_round_radius": 0.0,
+          "bulge_over_round_radius": 1.245817512466244,
+          "period_over_round_threshold": 0.802853427903552,
+          "action_excess_over_round_action_at_threshold": 0.15299849557511785,
+          "action_over_round_action_at_threshold": 0.9558519234786699
+        },
+        {
+          "first_integral_over_round_action_density": 0.001,
+          "neck_over_round_radius": 0.12237907122885164,
+          "bulge_over_round_radius": 1.2457174010102543,
+          "period_over_round_threshold": 0.8363421909396608,
+          "action_excess_over_round_action_at_threshold": 0.1195161700791388,
+          "action_over_round_action_at_threshold": 0.9558583610187996
+        },
+        {
+          "first_integral_over_round_action_density": 0.01,
+          "neck_over_round_radius": 0.22281908987540008,
+          "bulge_over_round_radius": 1.244813404712566,
+          "period_over_round_threshold": 0.860742208297321,
+          "action_excess_over_round_action_at_threshold": 0.09522117237883343,
+          "action_over_round_action_at_threshold": 0.9559633806761545
+        },
+        {
+          "first_integral_over_round_action_density": 0.05,
+          "neck_over_round_radius": 0.3438125321827943,
+          "bulge_over_round_radius": 1.240728660124346,
+          "period_over_round_threshold": 0.8888755591889628,
+          "action_excess_over_round_action_at_threshold": 0.06782810930786003,
+          "action_over_round_action_at_threshold": 0.9567036684968229
+        },
+        {
+          "first_integral_over_round_action_density": 0.1,
+          "neck_over_round_radius": 0.4175887911023672,
+          "bulge_over_round_radius": 1.2354601982752953,
+          "period_over_round_threshold": 0.9057516053352859,
+          "action_excess_over_round_action_at_threshold": 0.052184543174307076,
+          "action_over_round_action_at_threshold": 0.957936148509593
+        },
+        {
+          "first_integral_over_round_action_density": 0.2,
+          "neck_over_round_radius": 0.5115408036268138,
+          "bulge_over_round_radius": 1.2243171056033573,
+          "period_over_round_threshold": 0.9268414386303001,
+          "action_excess_over_round_action_at_threshold": 0.034177309027173,
+          "action_over_round_action_at_threshold": 0.9610187476574732
+        },
+        {
+          "first_integral_over_round_action_density": 0.35,
+          "neck_over_round_radius": 0.6093400799592136,
+          "bulge_over_round_radius": 1.2057558914852338,
+          "period_over_round_threshold": 0.94784001076152,
+          "action_excess_over_round_action_at_threshold": 0.01885714781295856,
+          "action_over_round_action_at_threshold": 0.9666971585744787
+        },
+        {
+          "first_integral_over_round_action_density": 0.5,
+          "neck_over_round_radius": 0.6880236969124772,
+          "bulge_over_round_radius": 1.1841880584433524,
+          "period_over_round_threshold": 0.9634890460499506,
+          "action_excess_over_round_action_at_threshold": 0.009813368936949321,
+          "action_over_round_action_at_threshold": 0.9733024149869
+        },
+        {
+          "first_integral_over_round_action_density": 0.65,
+          "neck_over_round_radius": 0.759828765833833,
+          "bulge_over_round_radius": 1.158014836622879,
+          "period_over_round_threshold": 0.976295087667003,
+          "action_excess_over_round_action_at_threshold": 0.0043433409570662225,
+          "action_over_round_action_at_threshold": 0.9806384286240691
+        },
+        {
+          "first_integral_over_round_action_density": 0.8,
+          "neck_over_round_radius": 0.8327650231100808,
+          "bulge_over_round_radius": 1.1235145589203113,
+          "period_over_round_threshold": 0.9872840812435447,
+          "action_excess_over_round_action_at_threshold": 0.0013026767060383174,
+          "action_over_round_action_at_threshold": 0.988586757949583
+        },
+        {
+          "first_integral_over_round_action_density": 0.9,
+          "neck_over_round_radius": 0.8887907576985403,
+          "bulge_over_round_radius": 1.0902464283359057,
+          "period_over_round_threshold": 0.9938749673189404,
+          "action_excess_over_round_action_at_threshold": 0.0003097927513148164,
+          "action_over_round_action_at_threshold": 0.9941847600702552
+        },
+        {
+          "first_integral_over_round_action_density": 0.95,
+          "neck_over_round_radius": 0.9243083787287767,
+          "bulge_over_round_radius": 1.0654138087699567,
+          "period_over_round_threshold": 0.9969905913655065,
+          "action_excess_over_round_action_at_threshold": 7.565897716574288e-05,
+          "action_over_round_action_at_threshold": 0.9970662503426723
+        },
+        {
+          "first_integral_over_round_action_density": 0.98,
+          "neck_over_round_radius": 0.9535910900347546,
+          "bulge_over_round_radius": 1.042344329551327,
+          "period_over_round_threshold": 0.9988084030408131,
+          "action_excess_over_round_action_at_threshold": 1.194245326026473e-05,
+          "action_over_round_action_at_threshold": 0.9988203454940734
+        }
+      ]
+    },
+    {
+      "alpha": 0.6,
+      "round_radius_in_local_ads_units": 0.6931471805599453,
+      "round_threshold_period": 2.356194490192345,
+      "cap_bulge_radius": 0.8530639704933382,
+      "cap_action_crossing_period_over_round_threshold": 0.9634219824210184,
+      "samples": [
+        {
+          "first_integral_over_round_action_density": 0,
+          "neck_over_round_radius": 0.0,
+          "bulge_over_round_radius": 1.2307111597918032,
+          "period_over_round_threshold": 0.8280024448672333,
+          "action_excess_over_round_action_at_threshold": 0.13541953755378505,
+          "action_over_round_action_at_threshold": 0.9634219824210184
+        },
+        {
+          "first_integral_over_round_action_density": 0.001,
+          "neck_over_round_radius": 0.12387786241031465,
+          "bulge_over_round_radius": 1.230619122825054,
+          "period_over_round_threshold": 0.859336223143766,
+          "action_excess_over_round_action_at_threshold": 0.10409172425845033,
+          "action_over_round_action_at_threshold": 0.9634279474022165
+        },
+        {
+          "first_integral_over_round_action_density": 0.01,
+          "neck_over_round_radius": 0.22587144866088635,
+          "bulge_over_round_radius": 1.2297879647204395,
+          "period_over_round_threshold": 0.8815638528919356,
+          "action_excess_over_round_action_at_threshold": 0.08195937474582615,
+          "action_over_round_action_at_threshold": 0.9635232276377618
+        },
+        {
+          "first_integral_over_round_action_density": 0.05,
+          "neck_over_round_radius": 0.3487752967192786,
+          "bulge_over_round_radius": 1.2260306906723382,
+          "period_over_round_threshold": 0.9065544478679406,
+          "action_excess_over_round_action_at_threshold": 0.05762424875138575,
+          "action_over_round_action_at_threshold": 0.9641786966193263
+        },
+        {
+          "first_integral_over_round_action_density": 0.1,
+          "neck_over_round_radius": 0.42357614762464213,
+          "bulge_over_round_radius": 1.2211806076260674,
+          "period_over_round_threshold": 0.9212531234179788,
+          "action_excess_over_round_action_at_threshold": 0.043998189205050435,
+          "action_over_round_action_at_threshold": 0.9652513126230293
+        },
+        {
+          "first_integral_over_round_action_density": 0.2,
+          "neck_over_round_radius": 0.5185093675443924,
+          "bulge_over_round_radius": 1.2109076429081536,
+          "period_over_round_threshold": 0.9393484448048347,
+          "action_excess_over_round_action_at_threshold": 0.0285453487891636,
+          "action_over_round_action_at_threshold": 0.9678937935939984
+        },
+        {
+          "first_integral_over_round_action_density": 0.35,
+          "neck_over_round_radius": 0.6167664196301058,
+          "bulge_over_round_radius": 1.193751498333746,
+          "period_over_round_threshold": 0.9570852673622028,
+          "action_excess_over_round_action_at_threshold": 0.015601508710145975,
+          "action_over_round_action_at_threshold": 0.9726867760723489
+        },
+        {
+          "first_integral_over_round_action_density": 0.5,
+          "neck_over_round_radius": 0.6952734264967856,
+          "bulge_over_round_radius": 1.1737472603283279,
+          "period_over_round_threshold": 0.970129624922565,
+          "action_excess_over_round_action_at_threshold": 0.008061177605696175,
+          "action_over_round_action_at_threshold": 0.9781908025282612
+        },
+        {
+          "first_integral_over_round_action_density": 0.65,
+          "neck_over_round_radius": 0.7664083936699747,
+          "bulge_over_round_radius": 1.149372761954521,
+          "period_over_round_threshold": 0.9806959316221249,
+          "action_excess_over_round_action_at_threshold": 0.0035466285441991987,
+          "action_over_round_action_at_threshold": 0.984242560166324
+        },
+        {
+          "first_integral_over_round_action_density": 0.8,
+          "neck_over_round_radius": 0.8380981103804753,
+          "bulge_over_round_radius": 1.1170802351298716,
+          "period_over_round_threshold": 0.9896859006752031,
+          "action_excess_over_round_action_at_threshold": 0.0010582079719738016,
+          "action_over_round_action_at_threshold": 0.990744108647177
+        },
+        {
+          "first_integral_over_round_action_density": 0.9,
+          "neck_over_round_radius": 0.8927402835852378,
+          "bulge_over_round_radius": 1.0857680992892185,
+          "period_over_round_threshold": 0.9950437517914095,
+          "action_excess_over_round_action_at_threshold": 0.0002508617048966414,
+          "action_over_round_action_at_threshold": 0.9952946134963061
+        },
+        {
+          "first_integral_over_round_action_density": 0.95,
+          "neck_over_round_radius": 0.9271759361395804,
+          "bulge_over_round_radius": 1.0622868373136503,
+          "period_over_round_threshold": 0.9975676048499217,
+          "action_excess_over_round_action_at_threshold": 6.117465136922622e-05,
+          "action_over_round_action_at_threshold": 0.9976287795012909
+        },
+        {
+          "first_integral_over_round_action_density": 0.98,
+          "neck_over_round_radius": 0.955441839424353,
+          "bulge_over_round_radius": 1.0403909591608882,
+          "period_over_round_threshold": 0.9990375187470021,
+          "action_excess_over_round_action_at_threshold": 9.647547753056348e-06,
+          "action_over_round_action_at_threshold": 0.9990471662947551
+        }
+      ]
+    },
+    {
+      "alpha": 0.85,
+      "round_radius_in_local_ads_units": 1.2561528119880574,
+      "round_threshold_period": 5.069175237138507,
+      "cap_bulge_radius": 1.5050939613906937,
+      "cap_action_crossing_period_over_round_threshold": 0.9777945312863078,
+      "samples": [
+        {
+          "first_integral_over_round_action_density": 0,
+          "neck_over_round_radius": 0.0,
+          "bulge_over_round_radius": 1.1981774406958074,
+          "period_over_round_threshold": 0.8790695305462399,
+          "action_excess_over_round_action_at_threshold": 0.09872500074006785,
+          "action_over_round_action_at_threshold": 0.9777945312863078
+        },
+        {
+          "first_integral_over_round_action_density": 0.001,
+          "neck_over_round_radius": 0.12842805441300006,
+          "bulge_over_round_radius": 1.1981013308834783,
+          "period_over_round_threshold": 0.905304255200605,
+          "action_excess_over_round_action_at_threshold": 0.07249514201682115,
+          "action_over_round_action_at_threshold": 0.9777993972174261
+        },
+        {
+          "first_integral_over_round_action_density": 0.01,
+          "neck_over_round_radius": 0.23503570943801666,
+          "bulge_over_round_radius": 1.197413903136753,
+          "period_over_round_threshold": 0.9226498376368685,
+          "action_excess_over_round_action_at_threshold": 0.05522312188640821,
+          "action_over_round_action_at_threshold": 0.9778729595232768
+        },
+        {
+          "first_integral_over_round_action_density": 0.05,
+          "neck_over_round_radius": 0.36342358483128634,
+          "bulge_over_round_radius": 1.1943040507838043,
+          "period_over_round_threshold": 0.9409085424802677,
+          "action_excess_over_round_action_at_threshold": 0.037439255799412485,
+          "action_over_round_action_at_threshold": 0.9783477982796803
+        },
+        {
+          "first_integral_over_round_action_density": 0.1,
+          "neck_over_round_radius": 0.44100892862763524,
+          "bulge_over_round_radius": 1.190284076647578,
+          "period_over_round_threshold": 0.951102405863317,
+          "action_excess_over_round_action_at_threshold": 0.027987712964214272,
+          "action_over_round_action_at_threshold": 0.9790901188275314
+        },
+        {
+          "first_integral_over_round_action_density": 0.2,
+          "neck_over_round_radius": 0.5383691313638694,
+          "bulge_over_round_radius": 1.181748395570514,
+          "period_over_round_threshold": 0.9631583882959109,
+          "action_excess_over_round_action_at_threshold": 0.017687929524076235,
+          "action_over_round_action_at_threshold": 0.9808463178199873
+        },
+        {
+          "first_integral_over_round_action_density": 0.35,
+          "neck_over_round_radius": 0.6373670257222953,
+          "bulge_over_round_radius": 1.1674296924157852,
+          "period_over_round_threshold": 0.974484062756505,
+          "action_excess_over_round_action_at_threshold": 0.009416872964047175,
+          "action_over_round_action_at_threshold": 0.9839009357205524
+        },
+        {
+          "first_integral_over_round_action_density": 0.5,
+          "neck_over_round_radius": 0.7148889379097426,
+          "bulge_over_round_radius": 1.1506322505687039,
+          "period_over_round_threshold": 0.9825171890258892,
+          "action_excess_over_round_action_at_threshold": 0.004770217291597698,
+          "action_over_round_action_at_threshold": 0.987287406317487
+        },
+        {
+          "first_integral_over_round_action_density": 0.65,
+          "neck_over_round_radius": 0.7837719461890729,
+          "bulge_over_round_radius": 1.1300157301468814,
+          "period_over_round_threshold": 0.9888450800563767,
+          "action_excess_over_round_action_at_threshold": 0.0020645844750402736,
+          "action_over_round_action_at_threshold": 0.9909096645314172
+        },
+        {
+          "first_integral_over_round_action_density": 0.8,
+          "neck_over_round_radius": 0.8517940817127981,
+          "bulge_over_round_radius": 1.1024464386231374,
+          "period_over_round_threshold": 0.9941046839331635,
+          "action_excess_over_round_action_at_threshold": 0.0006073094400729861,
+          "action_over_round_action_at_threshold": 0.9947119933732366
+        },
+        {
+          "first_integral_over_round_action_density": 0.9,
+          "neck_over_round_radius": 0.9026623491923914,
+          "bulge_over_round_radius": 1.0754329152583895,
+          "period_over_round_threshold": 0.9971855463077258,
+          "action_excess_over_round_action_at_threshold": 0.00014273754380250356,
+          "action_over_round_action_at_threshold": 0.9973282838515284
+        },
+        {
+          "first_integral_over_round_action_density": 0.95,
+          "neck_over_round_radius": 0.9342770462803102,
+          "bulge_over_round_radius": 1.0549917910897821,
+          "period_over_round_threshold": 0.9986229894571781,
+          "action_excess_over_round_action_at_threshold": 3.466581852441223e-05,
+          "action_over_round_action_at_threshold": 0.9986576552757025
+        },
+        {
+          "first_integral_over_round_action_density": 0.98,
+          "neck_over_round_radius": 0.9599699752826812,
+          "bulge_over_round_radius": 1.0357881300196474,
+          "period_over_round_threshold": 0.9994561038757702,
+          "action_excess_over_round_action_at_threshold": 5.4539427654747455e-06,
+          "action_over_round_action_at_threshold": 0.9994615578185356
+        }
+      ]
+    },
+    {
+      "alpha": 0.95,
+      "round_radius_in_local_ads_units": 1.8317808230648227,
+      "round_threshold_period": 9.5580912009122,
+      "cap_bulge_radius": 2.132556841451315,
+      "cap_action_crossing_period_over_round_threshold": 0.9892231429083632,
+      "samples": [
+        {
+          "first_integral_over_round_action_density": 0,
+          "neck_over_round_radius": 0.0,
+          "bulge_over_round_radius": 1.1641986937515931,
+          "period_over_round_threshold": 0.9256877185529313,
+          "action_excess_over_round_action_at_threshold": 0.06353542435543201,
+          "action_over_round_action_at_threshold": 0.9892231429083632
+        },
+        {
+          "first_integral_over_round_action_density": 0.001,
+          "neck_over_round_radius": 0.1366010144920307,
+          "bulge_over_round_radius": 1.1641374974869052,
+          "period_over_round_threshold": 0.9459608311822788,
+          "action_excess_over_round_action_at_threshold": 0.04326592769918766,
+          "action_over_round_action_at_threshold": 0.9892267588814665
+        },
+        {
+          "first_integral_over_round_action_density": 0.01,
+          "neck_over_round_radius": 0.25118991160401544,
+          "bulge_over_round_radius": 1.1635847107652164,
+          "period_over_round_threshold": 0.9580483375905241,
+          "action_excess_over_round_action_at_threshold": 0.031228884685869242,
+          "action_over_round_action_at_threshold": 0.9892772222763933
+        },
+        {
+          "first_integral_over_round_action_density": 0.05,
+          "neck_over_round_radius": 0.3883575970146161,
+          "bulge_over_round_radius": 1.1610826326590098,
+          "period_over_round_threshold": 0.969597501583069,
+          "action_excess_over_round_action_at_threshold": 0.019976252851441056,
+          "action_over_round_action_at_threshold": 0.98957375443451
+        },
+        {
+          "first_integral_over_round_action_density": 0.1,
+          "neck_over_round_radius": 0.4698419062288793,
+          "bulge_over_round_radius": 1.1578450668388915,
+          "period_over_round_threshold": 0.9755570416788301,
+          "action_excess_over_round_action_at_threshold": 0.014449307427254325,
+          "action_over_round_action_at_threshold": 0.9900063491060843
+        },
+        {
+          "first_integral_over_round_action_density": 0.2,
+          "neck_over_round_radius": 0.5698089936995547,
+          "bulge_over_round_radius": 1.1509584927589909,
+          "period_over_round_threshold": 0.9821915595714478,
+          "action_excess_over_round_action_at_threshold": 0.008777649173747166,
+          "action_over_round_action_at_threshold": 0.9909692087451949
+        },
+        {
+          "first_integral_over_round_action_density": 0.35,
+          "neck_over_round_radius": 0.6683228119526324,
+          "bulge_over_round_radius": 1.139368448304796,
+          "period_over_round_threshold": 0.9880436087736096,
+          "action_excess_over_round_action_at_threshold": 0.004499506304895588,
+          "action_over_round_action_at_threshold": 0.9925431150785052
+        },
+        {
+          "first_integral_over_round_action_density": 0.5,
+          "neck_over_round_radius": 0.7430633418462078,
+          "bulge_over_round_radius": 1.1257105647832903,
+          "period_over_round_threshold": 0.9919844002262881,
+          "action_excess_over_round_action_at_threshold": 0.002217895984185825,
+          "action_over_round_action_at_threshold": 0.9942022962104738
+        },
+        {
+          "first_integral_over_round_action_density": 0.65,
+          "neck_over_round_radius": 0.8076723884189692,
+          "bulge_over_round_radius": 1.1088544015190298,
+          "period_over_round_threshold": 0.994971917804595,
+          "action_excess_over_round_action_at_threshold": 0.0009392579228022092,
+          "action_over_round_action_at_threshold": 0.9959111757273972
+        },
+        {
+          "first_integral_over_round_action_density": 0.8,
+          "neck_over_round_radius": 0.8698394263917479,
+          "bulge_over_round_radius": 1.0861484049229515,
+          "period_over_round_threshold": 0.9973797201860785,
+          "action_excess_over_round_action_at_threshold": 0.0002712899081993391,
+          "action_over_round_action_at_threshold": 0.9976510100942778
+        },
+        {
+          "first_integral_over_round_action_density": 0.9,
+          "neck_over_round_radius": 0.9153045028477095,
+          "bulge_over_round_radius": 1.0637102790180453,
+          "period_over_round_threshold": 0.9987592493945906,
+          "action_excess_over_round_action_at_threshold": 6.30794104965304e-05,
+          "action_over_round_action_at_threshold": 0.9988223288050871
+        },
+        {
+          "first_integral_over_round_action_density": 0.95,
+          "neck_over_round_radius": 0.9431361965648768,
+          "bulge_over_round_radius": 1.046602191413945,
+          "period_over_round_threshold": 0.9993952489763461,
+          "action_excess_over_round_action_at_threshold": 1.5242734446569272e-05,
+          "action_over_round_action_at_threshold": 0.9994104917107925
+        },
+        {
+          "first_integral_over_round_action_density": 0.98,
+          "neck_over_round_radius": 0.9655226401390119,
+          "bulge_over_round_radius": 1.030425452249213,
+          "period_over_round_threshold": 0.999761659164913,
+          "action_excess_over_round_action_at_threshold": 2.391105792874261e-06,
+          "action_over_round_action_at_threshold": 0.9997640502707059
+        }
+      ]
+    },
+    {
+      "alpha": 0.99,
+      "round_radius_in_local_ads_units": 2.6466524123622457,
+      "round_threshold_period": 22.047458260628463,
+      "cap_bulge_radius": 2.9792809022295557,
+      "cap_action_crossing_period_over_round_threshold": 0.9969807754199005,
+      "samples": [
+        {
+          "first_integral_over_round_action_density": 0,
+          "neck_over_round_radius": 0.0,
+          "bulge_over_round_radius": 1.1256789476068652,
+          "period_over_round_threshold": 0.9665622197407765,
+          "action_excess_over_round_action_at_threshold": 0.03041855567912395,
+          "action_over_round_action_at_threshold": 0.9969807754199005
+        },
+        {
+          "first_integral_over_round_action_density": 0.001,
+          "neck_over_round_radius": 0.1561760176995974,
+          "bulge_over_round_radius": 1.1256331147313703,
+          "period_over_round_threshold": 0.9794488173479147,
+          "action_excess_over_round_action_at_threshold": 0.017534084803086922,
+          "action_over_round_action_at_threshold": 0.9969829021510017
+        },
+        {
+          "first_integral_over_round_action_density": 0.01,
+          "neck_over_round_radius": 0.28850481748647283,
+          "bulge_over_round_radius": 1.1252190764653975,
+          "period_over_round_threshold": 0.985744406621829,
+          "action_excess_over_round_action_at_threshold": 0.011263987237058834,
+          "action_over_round_action_at_threshold": 0.997008393858888
+        },
+        {
+          "first_integral_over_round_action_density": 0.05,
+          "neck_over_round_radius": 0.4415875022637524,
+          "bulge_over_round_radius": 1.1233443546667221,
+          "period_over_round_threshold": 0.9907283209620802,
+          "action_excess_over_round_action_at_threshold": 0.006404822850288226,
+          "action_over_round_action_at_threshold": 0.9971331438123683
+        },
+        {
+          "first_integral_over_round_action_density": 0.1,
+          "neck_over_round_radius": 0.5277459795154381,
+          "bulge_over_round_radius": 1.120916941478778,
+          "period_over_round_threshold": 0.9929303970491298,
+          "action_excess_over_round_action_at_threshold": 0.004361624174059035,
+          "action_over_round_action_at_threshold": 0.9972920212231889
+        },
+        {
+          "first_integral_over_round_action_density": 0.2,
+          "neck_over_round_radius": 0.6278629154242772,
+          "bulge_over_round_radius": 1.1157474986618576,
+          "period_over_round_threshold": 0.9951256867461795,
+          "action_excess_over_round_action_at_threshold": 0.002482862896858022,
+          "action_over_round_action_at_threshold": 0.9976085496430377
+        },
+        {
+          "first_integral_over_round_action_density": 0.35,
+          "neck_over_round_radius": 0.7206922261264792,
+          "bulge_over_round_radius": 1.1070281643884956,
+          "period_over_round_threshold": 0.9968710095782506,
+          "action_excess_over_round_action_at_threshold": 0.0012049164422229881,
+          "action_over_round_action_at_threshold": 0.9980759260204737
+        },
+        {
+          "first_integral_over_round_action_density": 0.5,
+          "neck_over_round_radius": 0.7876394676837514,
+          "bulge_over_round_radius": 1.0967213302009937,
+          "period_over_round_threshold": 0.9979606058794976,
+          "action_excess_over_round_action_at_threshold": 0.0005732778834839553,
+          "action_over_round_action_at_threshold": 0.9985338837629817
+        },
+        {
+          "first_integral_over_round_action_density": 0.65,
+          "neck_over_round_radius": 0.8433886040323578,
+          "bulge_over_round_radius": 1.0839516157733338,
+          "period_over_round_threshold": 0.9987464327699731,
+          "action_excess_over_round_action_at_threshold": 0.0002365408124093434,
+          "action_over_round_action_at_threshold": 0.9989829735823824
+        },
+        {
+          "first_integral_over_round_action_density": 0.8,
+          "neck_over_round_radius": 0.8954009589254641,
+          "bulge_over_round_radius": 1.0666599307499491,
+          "period_over_round_threshold": 0.9993569247696222,
+          "action_excess_over_round_action_at_threshold": 6.693574052671883e-05,
+          "action_over_round_action_at_threshold": 0.999423860510149
+        },
+        {
+          "first_integral_over_round_action_density": 0.9,
+          "neck_over_round_radius": 0.9325451706132594,
+          "bulge_over_round_radius": 1.0494646796483493,
+          "period_over_round_threshold": 0.999698148931473,
+          "action_excess_over_round_action_at_threshold": 1.5385011310134638e-05,
+          "action_over_round_action_at_threshold": 0.9997135339427833
+        },
+        {
+          "first_integral_over_round_action_density": 0.95,
+          "neck_over_round_radius": 0.9549468894866194,
+          "bulge_over_round_radius": 1.036278214894769,
+          "period_over_round_threshold": 0.9998534600773814,
+          "action_excess_over_round_action_at_threshold": 3.6981200579310866e-06,
+          "action_over_round_action_at_threshold": 0.9998571581974394
+        },
+        {
+          "first_integral_over_round_action_density": 0.98,
+          "neck_over_round_radius": 0.972793858968768,
+          "bulge_over_round_radius": 1.0237462886919035,
+          "period_over_round_threshold": 0.9999423786890975,
+          "action_excess_over_round_action_at_threshold": 5.783492348537542e-07,
+          "action_over_round_action_at_threshold": 0.9999429570383325
+        }
+      ]
+    },
+    {
+      "alpha": 0.999,
+      "round_radius_in_local_ads_units": 3.8002011672501994,
+      "round_threshold_period": 70.19545021980817,
+      "cap_bulge_radius": 4.144583350766208,
+      "cap_action_crossing_period_over_round_threshold": 0.9996242043577761,
+      "samples": [
+        {
+          "first_integral_over_round_action_density": 0,
+          "neck_over_round_radius": 0.0,
+          "bulge_over_round_radius": 1.0906220929786152,
+          "period_over_round_threshold": 0.9898038016314505,
+          "action_excess_over_round_action_at_threshold": 0.009820402726325447,
+          "action_over_round_action_at_threshold": 0.9996242043577761
+        },
+        {
+          "first_integral_over_round_action_density": 0.001,
+          "neck_over_round_radius": 0.20594708230601144,
+          "bulge_over_round_radius": 1.0905893377742863,
+          "period_over_round_threshold": 0.9958332793416823,
+          "action_excess_over_round_action_at_threshold": 0.0037917574878390536,
+          "action_over_round_action_at_threshold": 0.9996250368295215
+        },
+        {
+          "first_integral_over_round_action_density": 0.01,
+          "neck_over_round_radius": 0.37312706522372324,
+          "bulge_over_round_radius": 1.0902934306061836,
+          "period_over_round_threshold": 0.9977393589084143,
+          "action_excess_over_round_action_at_threshold": 0.0018928968399715637,
+          "action_over_round_action_at_threshold": 0.9996322557483859
+        },
+        {
+          "first_integral_over_round_action_density": 0.05,
+          "neck_over_round_radius": 0.5403769359797361,
+          "bulge_over_round_radius": 1.0889534122772484,
+          "period_over_round_threshold": 0.9987722300822993,
+          "action_excess_over_round_action_at_threshold": 0.0008846829193232777,
+          "action_over_round_action_at_threshold": 0.9996569130016226
+        },
+        {
+          "first_integral_over_round_action_density": 0.1,
+          "neck_over_round_radius": 0.6230765849118697,
+          "bulge_over_round_radius": 1.0872178944671658,
+          "period_over_round_threshold": 0.9991229400349363,
+          "action_excess_over_round_action_at_threshold": 0.0005590595331062863,
+          "action_over_round_action_at_threshold": 0.9996819995680425
+        },
+        {
+          "first_integral_over_round_action_density": 0.2,
+          "neck_over_round_radius": 0.7114892782332829,
+          "bulge_over_round_radius": 1.0835202209579455,
+          "period_over_round_threshold": 0.9994270882964467,
+          "action_excess_over_round_action_at_threshold": 0.00029844657761504234,
+          "action_over_round_action_at_threshold": 0.9997255348740617
+        },
+        {
+          "first_integral_over_round_action_density": 0.35,
+          "neck_over_round_radius": 0.788029452754416,
+          "bulge_over_round_radius": 1.0772779694843664,
+          "period_over_round_threshold": 0.9996450154859815,
+          "action_excess_over_round_action_at_threshold": 0.00013865738467599764,
+          "action_over_round_action_at_threshold": 0.9997836728706574
+        },
+        {
+          "first_integral_over_round_action_density": 0.5,
+          "neck_over_round_radius": 0.8408501624342156,
+          "bulge_over_round_radius": 1.0698902241541077,
+          "period_over_round_threshold": 0.9997729936465354,
+          "action_excess_over_round_action_at_threshold": 6.440117102306354e-05,
+          "action_over_round_action_at_threshold": 0.9998373948175586
+        },
+        {
+          "first_integral_over_round_action_density": 0.65,
+          "neck_over_round_radius": 0.8836746260214645,
+          "bulge_over_round_radius": 1.0607229956205377,
+          "period_over_round_threshold": 0.9998621876472198,
+          "action_excess_over_round_action_at_threshold": 2.615071528533084e-05,
+          "action_over_round_action_at_threshold": 0.9998883383625051
+        },
+        {
+          "first_integral_over_round_action_density": 0.8,
+          "neck_over_round_radius": 0.9228683554190614,
+          "bulge_over_round_radius": 1.0482830789745217,
+          "period_over_round_threshold": 0.9999299336548038,
+          "action_excess_over_round_action_at_threshold": 7.3139066310192425e-06,
+          "action_over_round_action_at_threshold": 0.9999372475614349
+        },
+        {
+          "first_integral_over_round_action_density": 0.9,
+          "neck_over_round_radius": 0.9504868808125524,
+          "bulge_over_round_radius": 1.0358803080597354,
+          "period_over_round_threshold": 0.9999672682244016,
+          "action_excess_over_round_action_at_threshold": 1.670533288334301e-06,
+          "action_over_round_action_at_threshold": 0.99996893875769
+        },
+        {
+          "first_integral_over_round_action_density": 0.95,
+          "neck_over_round_radius": 0.9670148376854286,
+          "bulge_over_round_radius": 1.026345751201293,
+          "period_over_round_threshold": 0.9999841434477759,
+          "action_excess_over_round_action_at_threshold": 4.0041281509592555e-07,
+          "action_over_round_action_at_threshold": 0.9999845438605911
+        },
+        {
+          "first_integral_over_round_action_density": 0.98,
+          "neck_over_round_radius": 0.9801198412366947,
+          "bulge_over_round_radius": 1.0172645706433745,
+          "period_over_round_threshold": 0.9999937737525131,
+          "action_excess_over_round_action_at_threshold": 6.249504684867178e-08,
+          "action_over_round_action_at_threshold": 0.9999938362475599
+        }
+      ]
+    }
+  ],
+  "actual_warped_backgrounds": [
+    {
+      "chern_pair": [
+        7,
+        8
+      ],
+      "alpha": 0.9939445839666909,
+      "round_radius_in_local_ads_units": 2.8984585375241023,
+      "round_threshold_period": 28.417345597227712,
+      "cap_bulge_radius": 3.2355863037272736,
+      "cap_action_crossing_period_over_round_threshold": 0.9980434316540447,
+      "samples": [
+        {
+          "first_integral_over_round_action_density": 0,
+          "neck_over_round_radius": 0.0,
+          "bulge_over_round_radius": 1.1163127786161104,
+          "period_over_round_threshold": 0.9741596766666859,
+          "action_excess_over_round_action_at_threshold": 0.023883754987358737,
+          "action_over_round_action_at_threshold": 0.9980434316540447
+        },
+        {
+          "first_integral_over_round_action_density": 0.001,
+          "neck_over_round_radius": 0.1645738244269314,
+          "bulge_over_round_radius": 1.1162705024747028,
+          "period_over_round_threshold": 0.9851934409754053,
+          "action_excess_over_round_action_at_threshold": 0.012851756747931304,
+          "action_over_round_action_at_threshold": 0.9980451977233366
+        },
+        {
+          "first_integral_over_round_action_density": 0.01,
+          "neck_over_round_radius": 0.30388591686058897,
+          "bulge_over_round_radius": 1.1158885905744573,
+          "period_over_round_threshold": 0.9901857864940774,
+          "action_excess_over_round_action_at_threshold": 0.007879387470727745,
+          "action_over_round_action_at_threshold": 0.9980651739648052
+        },
+        {
+          "first_integral_over_round_action_density": 0.05,
+          "neck_over_round_radius": 0.46172800775591594,
+          "bulge_over_round_radius": 1.1141592446595985,
+          "period_over_round_threshold": 0.9938644599524282,
+          "action_excess_over_round_action_at_threshold": 0.004291909613078709,
+          "action_over_round_action_at_threshold": 0.998156369565507
+        },
+        {
+          "first_integral_over_round_action_density": 0.1,
+          "neck_over_round_radius": 0.5483754074853164,
+          "bulge_over_round_radius": 1.1119198481782435,
+          "period_over_round_threshold": 0.9953999236976906,
+          "action_excess_over_round_action_at_threshold": 0.00286699790555422,
+          "action_over_round_action_at_threshold": 0.9982669216032447
+        },
+        {
+          "first_integral_over_round_action_density": 0.2,
+          "neck_over_round_radius": 0.647059863023947,
+          "bulge_over_round_radius": 1.1071499780984633,
+          "period_over_round_threshold": 0.9968771011096128,
+          "action_excess_over_round_action_at_threshold": 0.0016023865231414916,
+          "action_over_round_action_at_threshold": 0.9984794876327545
+        },
+        {
+          "first_integral_over_round_action_density": 0.35,
+          "neck_over_round_radius": 0.7368520908225017,
+          "bulge_over_round_radius": 1.09910199183513,
+          "period_over_round_threshold": 0.9980173093322042,
+          "action_excess_over_round_action_at_threshold": 0.000767165287904177,
+          "action_over_round_action_at_threshold": 0.9987844746201084
+        },
+        {
+          "first_integral_over_round_action_density": 0.5,
+          "neck_over_round_radius": 0.8007508908910697,
+          "bulge_over_round_radius": 1.0895843649006611,
+          "period_over_round_threshold": 0.9987157998288885,
+          "action_excess_over_round_action_at_threshold": 0.0003621324837839536,
+          "action_over_round_action_at_threshold": 0.9990779323126726
+        },
+        {
+          "first_integral_over_round_action_density": 0.65,
+          "neck_over_round_radius": 0.8535038030130482,
+          "bulge_over_round_radius": 1.077785594882924,
+          "period_over_round_threshold": 0.9992139514635104,
+          "action_excess_over_round_action_at_threshold": 0.0001486126331121737,
+          "action_over_round_action_at_threshold": 0.9993625640966228
+        },
+        {
+          "first_integral_over_round_action_density": 0.8,
+          "neck_over_round_radius": 0.902403523110471,
+          "bulge_over_round_radius": 1.0617959476653227,
+          "period_over_round_threshold": 0.9995980090720791,
+          "action_excess_over_round_action_at_threshold": 4.188412447105237e-05,
+          "action_over_round_action_at_threshold": 0.9996398931965503
+        },
+        {
+          "first_integral_over_round_action_density": 0.9,
+          "neck_over_round_radius": 0.9371636674654222,
+          "bulge_over_round_radius": 1.0458800328186895,
+          "period_over_round_threshold": 0.9998116255785766,
+          "action_excess_over_round_action_at_threshold": 9.605781673301088e-06,
+          "action_over_round_action_at_threshold": 0.99982123136025
+        },
+        {
+          "first_integral_over_round_action_density": 0.95,
+          "neck_over_round_radius": 0.9580701371475404,
+          "bulge_over_round_radius": 1.033663565971521,
+          "period_over_round_threshold": 0.9999086177882877,
+          "action_excess_over_round_action_at_threshold": 2.306677906067714e-06,
+          "action_over_round_action_at_threshold": 0.9999109244661938
+        },
+        {
+          "first_integral_over_round_action_density": 0.98,
+          "neck_over_round_radius": 0.9746975719347389,
+          "bulge_over_round_radius": 1.0220440808475586,
+          "period_over_round_threshold": 0.999964083093624,
+          "action_excess_over_round_action_at_threshold": 3.605283255824222e-07,
+          "action_over_round_action_at_threshold": 0.9999644436219496
+        }
+      ]
+    },
+    {
+      "chern_pair": [
+        8,
+        9
+      ],
+      "alpha": 0.9928328445040334,
+      "round_radius_in_local_ads_units": 2.813901796259478,
+      "round_threshold_period": 26.098596860610346,
+      "cap_bulge_radius": 3.1496984810608093,
+      "cap_action_crossing_period_over_round_threshold": 0.9977328301489662,
+      "samples": [
+        {
+          "first_integral_over_round_action_density": 0,
+          "neck_over_round_radius": 0.0,
+          "bulge_over_round_radius": 1.1193348983420486,
+          "period_over_round_threshold": 0.9718161506735172,
+          "action_excess_over_round_action_at_threshold": 0.02591667947544903,
+          "action_over_round_action_at_threshold": 0.9977328301489662
+        },
+        {
+          "first_integral_over_round_action_density": 0.001,
+          "neck_over_round_radius": 0.16161494464305312,
+          "bulge_over_round_radius": 1.119291480614528,
+          "period_over_round_threshold": 0.9834483802951324,
+          "action_excess_over_round_action_at_threshold": 0.014286331726636556,
+          "action_over_round_action_at_threshold": 0.997734712021769
+        },
+        {
+          "first_integral_over_round_action_density": 0.01,
+          "neck_over_round_radius": 0.2985127710418428,
+          "bulge_over_round_radius": 1.1188992571151224,
+          "period_over_round_threshold": 0.988853933065568,
+          "action_excess_over_round_action_at_threshold": 0.00890249819868529,
+          "action_over_round_action_at_threshold": 0.9977564312642533
+        },
+        {
+          "first_integral_over_round_action_density": 0.05,
+          "neck_over_round_radius": 0.45481088589502405,
+          "bulge_over_round_radius": 1.1171232460730791,
+          "period_over_round_threshold": 0.9929372750374071,
+          "action_excess_over_round_action_at_threshold": 0.004920720494129144,
+          "action_over_round_action_at_threshold": 0.9978579955315364
+        },
+        {
+          "first_integral_over_round_action_density": 0.1,
+          "neck_over_round_radius": 0.5413666997970513,
+          "bulge_over_round_radius": 1.1148234875390877,
+          "period_over_round_threshold": 0.9946751036186555,
+          "action_excess_over_round_action_at_threshold": 0.003308101449146851,
+          "action_over_round_action_at_threshold": 0.9979832050678022
+        },
+        {
+          "first_integral_over_round_action_density": 0.2,
+          "neck_over_round_radius": 0.640617201536406,
+          "bulge_over_round_radius": 1.109925300494284,
+          "period_over_round_threshold": 0.9963668608583016,
+          "action_excess_over_round_action_at_threshold": 0.0018599464766356644,
+          "action_over_round_action_at_threshold": 0.9982268073349373
+        },
+        {
+          "first_integral_over_round_action_density": 0.35,
+          "neck_over_round_radius": 0.7314842728680399,
+          "bulge_over_round_radius": 1.1016616085945905,
+          "period_over_round_threshold": 0.9976852826108441,
+          "action_excess_over_round_action_at_threshold": 0.0008943092845773643,
+          "action_over_round_action_at_threshold": 0.9985795918954213
+        },
+        {
+          "first_integral_over_round_action_density": 0.5,
+          "neck_over_round_radius": 0.796424277504047,
+          "bulge_over_round_radius": 1.0918902210423846,
+          "period_over_round_threshold": 0.9984978125425114,
+          "action_excess_over_round_action_at_threshold": 0.0004231917431287537,
+          "action_over_round_action_at_threshold": 0.9989210042856401
+        },
+        {
+          "first_integral_over_round_action_density": 0.65,
+          "neck_over_round_radius": 0.8501822671496246,
+          "bulge_over_round_radius": 1.0797789640816555,
+          "period_over_round_threshold": 0.9990793252342817,
+          "action_excess_over_round_action_at_threshold": 0.00017396138880617276,
+          "action_over_round_action_at_threshold": 0.9992532866230879
+        },
+        {
+          "first_integral_over_round_action_density": 0.8,
+          "neck_over_round_radius": 0.9001135326892598,
+          "bulge_over_round_radius": 1.0633697345240707,
+          "period_over_round_threshold": 0.9995287116632133,
+          "action_excess_over_round_action_at_threshold": 4.908926221344976e-05,
+          "action_over_round_action_at_threshold": 0.9995778009254268
+        },
+        {
+          "first_integral_over_round_action_density": 0.9,
+          "neck_over_round_radius": 0.9356573515350908,
+          "bulge_over_round_radius": 1.047040906870754,
+          "period_over_round_threshold": 0.999779039843271,
+          "action_excess_over_round_action_at_threshold": 1.126580021795287e-05,
+          "action_over_round_action_at_threshold": 0.9997903056434888
+        },
+        {
+          "first_integral_over_round_action_density": 0.95,
+          "neck_over_round_radius": 0.9570530309352482,
+          "bulge_over_round_radius": 1.0345109071072025,
+          "period_over_round_threshold": 0.9998927858020624,
+          "action_excess_over_round_action_at_threshold": 2.706119709937075e-06,
+          "action_over_round_action_at_threshold": 0.9998954919217723
+        },
+        {
+          "first_integral_over_round_action_density": 0.98,
+          "neck_over_round_radius": 0.9740783270956074,
+          "bulge_over_round_radius": 1.0225961043810925,
+          "period_over_round_threshold": 0.9999578548320075,
+          "action_excess_over_round_action_at_threshold": 4.2303705570410103e-07,
+          "action_over_round_action_at_threshold": 0.9999582778690632
+        }
+      ]
+    },
+    {
+      "chern_pair": [
+        38,
+        43
+      ],
+      "alpha": 0.9998851412345586,
+      "round_radius_in_local_ads_units": 4.882448530245688,
+      "round_threshold_period": 207.25994972882535,
+      "cap_bulge_radius": 5.2286789206026585,
+      "cap_action_crossing_period_over_round_threshold": 0.9999535445845524,
+      "samples": [
+        {
+          "first_integral_over_round_action_density": 0,
+          "neck_over_round_radius": 0.0,
+          "bulge_over_round_radius": 1.0709132698915003,
+          "period_over_round_threshold": 0.9966243094695841,
+          "action_excess_over_round_action_at_threshold": 0.003329235114968373,
+          "action_over_round_action_at_threshold": 0.9999535445845524
+        },
+        {
+          "first_integral_over_round_action_density": 0.001,
+          "neck_over_round_radius": 0.2814854848104458,
+          "bulge_over_round_radius": 1.0708876764663782,
+          "period_over_round_threshold": 0.9992622218708341,
+          "action_excess_over_round_action_at_threshold": 0.0006915902959604783,
+          "action_over_round_action_at_threshold": 0.9999538121667946
+        },
+        {
+          "first_integral_over_round_action_density": 0.01,
+          "neck_over_round_radius": 0.47099420960627714,
+          "bulge_over_round_radius": 1.0706564670639696,
+          "period_over_round_threshold": 0.9996896553723962,
+          "action_excess_over_round_action_at_threshold": 0.0002656435596185708,
+          "action_over_round_action_at_threshold": 0.9999552989320147
+        },
+        {
+          "first_integral_over_round_action_density": 0.05,
+          "neck_over_round_radius": 0.6271802275486815,
+          "bulge_over_round_radius": 1.0696094102188496,
+          "period_over_round_threshold": 0.9998483118365413,
+          "action_excess_over_round_action_at_threshold": 0.00011065094153882075,
+          "action_over_round_action_at_threshold": 0.9999589627780802
+        },
+        {
+          "first_integral_over_round_action_density": 0.1,
+          "neck_over_round_radius": 0.6978288739310271,
+          "bulge_over_round_radius": 1.0682532636773454,
+          "period_over_round_threshold": 0.9998942865688356,
+          "action_excess_over_round_action_at_threshold": 6.795245957641813e-05,
+          "action_over_round_action_at_threshold": 0.9999622390284119
+        },
+        {
+          "first_integral_over_round_action_density": 0.2,
+          "neck_over_round_radius": 0.7707314646639267,
+          "bulge_over_round_radius": 1.0653636590354567,
+          "period_over_round_threshold": 0.9999320545664881,
+          "action_excess_over_round_action_at_threshold": 3.557733330650011e-05,
+          "action_over_round_action_at_threshold": 0.9999676318997945
+        },
+        {
+          "first_integral_over_round_action_density": 0.35,
+          "neck_over_round_radius": 0.8324547746849097,
+          "bulge_over_round_radius": 1.0604848728654805,
+          "period_over_round_threshold": 0.9999582688468288,
+          "action_excess_over_round_action_at_threshold": 1.6349335119570456e-05,
+          "action_over_round_action_at_threshold": 0.9999746181819485
+        },
+        {
+          "first_integral_over_round_action_density": 0.5,
+          "neck_over_round_radius": 0.874556473012398,
+          "bulge_over_round_radius": 1.0547096489059686,
+          "period_over_round_threshold": 0.9999734262516393,
+          "action_excess_over_round_action_at_threshold": 7.552815619183431e-06,
+          "action_over_round_action_at_threshold": 0.9999809790672584
+        },
+        {
+          "first_integral_over_round_action_density": 0.65,
+          "neck_over_round_radius": 0.9084802288460982,
+          "bulge_over_round_radius": 1.047541529180736,
+          "period_over_round_threshold": 0.9999839093747616,
+          "action_excess_over_round_action_at_threshold": 3.056525676185026e-06,
+          "action_over_round_action_at_threshold": 0.9999869659004377
+        },
+        {
+          "first_integral_over_round_action_density": 0.8,
+          "neck_over_round_radius": 0.9394020812017547,
+          "bulge_over_round_radius": 1.0378109663322377,
+          "period_over_round_threshold": 0.9999918326592155,
+          "action_excess_over_round_action_at_threshold": 8.530840839190088e-07,
+          "action_over_round_action_at_threshold": 0.9999926857432995
+        },
+        {
+          "first_integral_over_round_action_density": 0.9,
+          "neck_over_round_radius": 0.9611340165228544,
+          "bulge_over_round_radius": 1.0281052204128776,
+          "period_over_round_threshold": 0.9999961843512979,
+          "action_excess_over_round_action_at_threshold": 1.9498733962909628e-07,
+          "action_over_round_action_at_threshold": 0.9999963793386375
+        },
+        {
+          "first_integral_over_round_action_density": 0.95,
+          "neck_over_round_radius": 0.9741200525858726,
+          "bulge_over_round_radius": 1.0206408867610997,
+          "period_over_round_threshold": 0.9999981515569302,
+          "action_excess_over_round_action_at_threshold": 4.675080339706691e-08,
+          "action_over_round_action_at_threshold": 0.9999981983077335
+        },
+        {
+          "first_integral_over_round_action_density": 0.98,
+          "neck_over_round_radius": 0.9844076246147558,
+          "bulge_over_round_radius": 1.0135288114711405,
+          "period_over_round_threshold": 0.9999992896845408,
+          "action_excess_over_round_action_at_threshold": 6.987477147390084e-09,
+          "action_over_round_action_at_threshold": 0.9999992966720178
+        }
+      ]
+    }
+  ]
+}
