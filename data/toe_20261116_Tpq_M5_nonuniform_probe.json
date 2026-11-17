@@ -1,0 +1,30 @@
+{
+  "quartic_at_square_threshold": "-5*a**4*u**2/8 - a**2*b**2*u**2/2 - 5*b**4*u**2/8",
+  "pairwise_quartic_for_angle_with_cosine_dot": "-5*a**4*u**2/8 - 2*a**2*b**2*dot**2*u**2 - a**2*b**2*u**2/2 - 5*b**4*u**2/8",
+  "stripe_squared_amplitude_per_detuning": "1/(5 u^2)",
+  "equal_amplitude_square_squared_amplitude_per_detuning": "1/(7 u^2)",
+  "stripe_and_equal_amplitude_square_action_excess_per_detuning_squared": [
+    "1/(40 u^2)",
+    "1/(28 u^2)"
+  ],
+  "numerical_stripes_at_unit_sphere_radius": [
+    {
+      "radial_fourier_amplitude": 0.025,
+      "wave_number_squared_detuning_per_amplitude_squared": 5.004758168382019,
+      "round_action_excess_per_amplitude_fourth": 0.6242307522441591,
+      "maximum_radial_equation_residual": 1.7486012637846216e-15
+    },
+    {
+      "radial_fourier_amplitude": 0.05,
+      "wave_number_squared_detuning_per_amplitude_squared": 5.019179685813961,
+      "round_action_excess_per_amplitude_fourth": 0.6219499490793071,
+      "maximum_radial_equation_residual": 1.817990202823694e-15
+    },
+    {
+      "radial_fourier_amplitude": 0.1,
+      "wave_number_squared_detuning_per_amplitude_squared": 5.079206333340668,
+      "round_action_excess_per_amplitude_fourth": 0.6132391957320258,
+      "maximum_radial_equation_residual": 5.749900555684917e-12
+    }
+  ]
+}
