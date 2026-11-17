@@ -1,0 +1,22 @@
+{
+  "shape_variation": {
+    "gradient_norm_squared": "32*(d**2 + 1)",
+    "uniform_negative_shape_coefficient_per_derivative_norm": "-9/98",
+    "equal_flux_cosine_shape_source": -2
+  },
+  "independent_mean_constraint_control": {
+    "mean_warp_and_radii_from_external_and_scalar_equations": {
+      "A0": "-5/3",
+      "B0": "-1/6",
+      "gamma0": "-10/3"
+    },
+    "remaining_mean_Einstein_constraint_at_epsilon_squared": "-40"
+  },
+  "quantized_lattice": {
+    "gram_determinant_ratio_for_three_equal_norm_directions": "-(a - b - 1)*(a - b + 1)*(a + b - 1)*(a + b + 1)/(4*a**2*b**2)",
+    "integer_flux_polynomial": "M**2*(1 - eta)*(eta + 1)**2 - N**2*eta*(2 - eta)**2",
+    "normalized_static_shell_norm_at_quantized_flux": "nonzero_algebraic / pi",
+    "balanced_two_direction_shell_requires": "orthogonal momenta with equal weights",
+    "balanced_shell_exists_at_quantized_product": false
+  }
+}
