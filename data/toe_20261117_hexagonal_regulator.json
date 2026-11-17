@@ -1,0 +1,1802 @@
+{
+  "status": "PASS",
+  "dispersion": {
+    "continuum_first_shell": 7.519698591306178,
+    "continuum_exact": "16*pi**2/21",
+    "nearest_h_squared_error": "-(kx**2 + ky**2)**2/16",
+    "improved_h_fourth_error": "-(11*kx**6 + 15*kx**4*ky**2 + 45*kx**2*ky**4 + 9*ky**6)/1440",
+    "positivity": "4 sin(t/2)^2 * (1+sin(t/2)^2/3) in each direction",
+    "records": [
+      {
+        "N": 1,
+        "sites": 7,
+        "nearest": 4.666666666666666,
+        "improved": 5.833333333333333,
+        "nearest_relative_error": -0.3794077501906813,
+        "improved_relative_error": -0.22425968773835148
+      },
+      {
+        "N": 2,
+        "sites": 28,
+        "nearest": 6.682775446840175,
+        "improved": 7.35481170689801,
+        "nearest_relative_error": -0.1112974322446385,
+        "improved_relative_error": -0.021927326262624502
+      },
+      {
+        "N": 3,
+        "sites": 63,
+        "nearest": 7.13638341646957,
+        "improved": 7.48423675335217,
+        "nearest_relative_error": -0.0509748057295506,
+        "improved_relative_error": -0.004715858956768182
+      },
+      {
+        "N": 4,
+        "sites": 112,
+        "nearest": 7.301797065551519,
+        "improved": 7.508137605121967,
+        "nearest_relative_error": -0.028977428165350094,
+        "improved_relative_error": -0.0015374268055873275
+      },
+      {
+        "N": 8,
+        "sites": 448,
+        "nearest": 7.464665396613652,
+        "improved": 7.51895484030103,
+        "nearest_relative_error": -0.007318537308949047,
+        "improved_relative_error": -9.890702348214209e-05
+      },
+      {
+        "N": 16,
+        "sites": 1792,
+        "nearest": 7.505905176133966,
+        "improved": 7.519651769307403,
+        "nearest_relative_error": -0.0018343042616307814,
+        "improved_relative_error": -6.226579191470627e-06
+      },
+      {
+        "N": 32,
+        "sites": 7168,
+        "nearest": 7.516248038756906,
+        "improved": 7.5196956596312186,
+        "nearest_relative_error": -0.00045886846492249056,
+        "improved_relative_error": -3.8986601980095514e-07
+      }
+    ]
+  },
+  "free_doublers": [
+    {
+      "point": "Gamma",
+      "momentum": [
+        "0",
+        "0"
+      ],
+      "Wilson_value": "0",
+      "orientation": 1
+    },
+    {
+      "point": "M1",
+      "momentum": [
+        "pi",
+        "0"
+      ],
+      "Wilson_value": "8/3",
+      "orientation": -1
+    },
+    {
+      "point": "M2",
+      "momentum": [
+        "0",
+        "pi"
+      ],
+      "Wilson_value": "8/3",
+      "orientation": -1
+    },
+    {
+      "point": "M3",
+      "momentum": [
+        "pi",
+        "pi"
+      ],
+      "Wilson_value": "8/3",
+      "orientation": -1
+    },
+    {
+      "point": "K1",
+      "momentum": [
+        "2*pi/3",
+        "-2*pi/3"
+      ],
+      "Wilson_value": "3",
+      "orientation": 1
+    },
+    {
+      "point": "K2",
+      "momentum": [
+        "-2*pi/3",
+        "2*pi/3"
+      ],
+      "Wilson_value": "3",
+      "orientation": 1
+    }
+  ],
+  "scalar_matrix_checks": [
+    {
+      "N": 1,
+      "maximum_plane_wave_residual": 9.930136612989092e-16
+    },
+    {
+      "N": 2,
+      "maximum_plane_wave_residual": 6.0402662910232525e-15
+    },
+    {
+      "N": 3,
+      "maximum_plane_wave_residual": 5.113972150915528e-14
+    }
+  ],
+  "magnetic_scalar_levels": [
+    {
+      "N": 2,
+      "flux": 1,
+      "continuum_ground": 1.0364567795624102,
+      "lowest_band": [
+        1.003599832139652
+      ],
+      "next_band": [
+        2.946488957356795
+      ],
+      "lowest_band_relative_error": -0.03170122292666211,
+      "next_band_relative_error": -0.05238404036464939
+    },
+    {
+      "N": 3,
+      "flux": 1,
+      "continuum_ground": 1.0364567795624102,
+      "lowest_band": [
+        1.0216788974173803
+      ],
+      "next_band": [
+        3.035763199311811
+      ],
+      "lowest_band_relative_error": -0.01425807851946237,
+      "next_band_relative_error": -0.02367268332742134
+    },
+    {
+      "N": 4,
+      "flux": 1,
+      "continuum_ground": 1.0364567795624102,
+      "lowest_band": [
+        1.0281093800510943
+      ],
+      "next_band": [
+        3.067723219099589
+      ],
+      "lowest_band_relative_error": -0.00805378446638183,
+      "next_band_relative_error": -0.013394068589856256
+    },
+    {
+      "N": 8,
+      "flux": 1,
+      "continuum_ground": 1.0364567795624102,
+      "lowest_band": [
+        1.0343614780473989
+      ],
+      "next_band": [
+        3.0988994827344554
+      ],
+      "lowest_band_relative_error": -0.002021600472231988,
+      "next_band_relative_error": -0.003367516510495827
+    },
+    {
+      "N": 2,
+      "flux": 3,
+      "continuum_ground": 3.1093703386872305,
+      "lowest_band": [
+        2.8258404552442475,
+        2.825850380473195,
+        2.825860305773617
+      ],
+      "next_band": [
+        7.945687044613837,
+        7.945917948082446,
+        7.946148874112658
+      ],
+      "lowest_band_relative_error": -0.09118243480444088,
+      "next_band_relative_error": -0.14817502258268245
+    },
+    {
+      "N": 3,
+      "flux": 3,
+      "continuum_ground": 3.1093703386872305,
+      "lowest_band": [
+        2.97887247426803,
+        2.9788724742680417,
+        2.97887247426808
+      ],
+      "next_band": [
+        8.68302481350471,
+        8.68302481350472,
+        8.683024813504733
+      ],
+      "lowest_band_relative_error": -0.04196922534299219,
+      "next_band_relative_error": -0.06915507345980576
+    },
+    {
+      "N": 4,
+      "flux": 3,
+      "continuum_ground": 3.1093703386872305,
+      "lowest_band": [
+        3.0350460240201156,
+        3.035046024020148,
+        3.0350460240201653
+      ],
+      "next_band": [
+        8.958877019310561,
+        8.958877019310576,
+        8.958877019310593
+      ],
+      "lowest_band_relative_error": -0.02390333301322578,
+      "next_band_relative_error": -0.03958293336296537
+    },
+    {
+      "N": 8,
+      "flux": 3,
+      "continuum_ground": 3.1093703386872305,
+      "lowest_band": [
+        3.090563386437675,
+        3.0905633864379993,
+        3.090563386438264
+      ],
+      "next_band": [
+        9.234228231626005,
+        9.234228231626195,
+        9.234228231626428
+      ],
+      "lowest_band_relative_error": -0.006048476122400781,
+      "next_band_relative_error": -0.010064501191487496
+    }
+  ],
+  "coarse_failure_records": [
+    {
+      "N": 1,
+      "sites": 7,
+      "flux": 3,
+      "measured_triangle_flux": 3.0000000000000004,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 1.0,
+      "index": 0,
+      "Wilson_gap": 0.07142786562474261,
+      "background_uniform_triangle_phase": 1.3463968515384828,
+      "maximum_actual_triangle_phase": 1.3463968515384837,
+      "gauge_action_unit_coupling": 10.884706924611601,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null,
+      "GW_error": 2.6645405502428674e-15,
+      "zero_modes": 0,
+      "zero_mode_chiralities": []
+    },
+    {
+      "N": 1,
+      "sites": 7,
+      "flux": 3,
+      "measured_triangle_flux": 3.0000000000000004,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 2.0,
+      "index": -2,
+      "Wilson_gap": 0.09554821157854719,
+      "background_uniform_triangle_phase": 1.3463968515384828,
+      "maximum_actual_triangle_phase": 1.3463968515384837,
+      "gauge_action_unit_coupling": 10.884706924611601,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null,
+      "GW_error": 1.1102230404427837e-15,
+      "zero_modes": 2,
+      "zero_mode_chiralities": [
+        -1.0000000000000009,
+        -1.0000000000000002
+      ]
+    }
+  ],
+  "lowest_band_quartic": {
+    "records": [
+      {
+        "N": 3,
+        "flux": 1,
+        "candidate_beta": 1.1595849744706275,
+        "all_local_values": [
+          1.1595849744706275
+        ],
+        "continuum_triangular_beta": 1.1595952669639278,
+        "lowest_band_width": 0.0
+      },
+      {
+        "N": 4,
+        "flux": 1,
+        "candidate_beta": 1.159592113081736,
+        "all_local_values": [
+          1.159592113081736
+        ],
+        "continuum_triangular_beta": 1.1595952669639278,
+        "lowest_band_width": 0.0
+      },
+      {
+        "N": 6,
+        "flux": 1,
+        "candidate_beta": 1.159594657956759,
+        "all_local_values": [
+          1.159594657956759
+        ],
+        "continuum_triangular_beta": 1.1595952669639278,
+        "lowest_band_width": 0.0
+      },
+      {
+        "N": 8,
+        "flux": 1,
+        "candidate_beta": 1.1595950757878475,
+        "all_local_values": [
+          1.1595950757878475
+        ],
+        "continuum_triangular_beta": 1.1595952669639278,
+        "lowest_band_width": 0.0
+      },
+      {
+        "N": 3,
+        "flux": 3,
+        "candidate_beta": 1.1597028511410938,
+        "all_local_values": [
+          1.1597028511414538,
+          1.1597028511410967,
+          1.1597028511411298,
+          1.1597028511411127,
+          1.159702851141168,
+          1.159702851141127,
+          1.1597028511411804,
+          1.1597028511413812,
+          1.1597028511410947,
+          1.1597028511411767,
+          1.1597028511410938,
+          1.1597028511410967,
+          1.1597028511414185,
+          1.1597028511412568,
+          1.1597028511411118,
+          1.159702851141677
+        ],
+        "continuum_triangular_beta": 1.1595952669639278,
+        "lowest_band_width": 3.907985046680551e-14
+      },
+      {
+        "N": 4,
+        "flux": 3,
+        "candidate_beta": 1.1596260999026875,
+        "all_local_values": [
+          1.1596260999026886,
+          1.1596260999026913,
+          1.159626099902714,
+          1.1596260999027383,
+          1.1596260999027344,
+          1.1596260999026893,
+          1.1596260999027053,
+          1.1596260999026875,
+          1.1596260999029806,
+          1.15962609990269,
+          1.1596260999027115,
+          1.1596260999027084,
+          1.159626099902689,
+          1.1596260999026924,
+          1.1596260999027341,
+          1.1596260999026962
+        ],
+        "continuum_triangular_beta": 1.1595952669639278,
+        "lowest_band_width": 4.75175454539567e-14
+      },
+      {
+        "N": 6,
+        "flux": 3,
+        "candidate_beta": 1.1596009508238736,
+        "all_local_values": [
+          1.159600950823893,
+          1.1596009508238987,
+          1.159600950823874,
+          1.1596009508239358,
+          1.1596009508240113,
+          1.1596009508242937,
+          1.1596009508243208,
+          1.1596009508238863,
+          1.159600950823874,
+          1.159600950823883,
+          1.1596009508238898,
+          1.1596009508239036,
+          1.1596009508238747,
+          1.1596009508238736,
+          1.1596009508239715,
+          1.1596009508238743
+        ],
+        "continuum_triangular_beta": 1.1595952669639278,
+        "lowest_band_width": 2.55351295663786e-13
+      },
+      {
+        "N": 8,
+        "flux": 3,
+        "candidate_beta": 1.1595970229239774,
+        "all_local_values": [
+          1.1595970229239778,
+          1.1595970229239794,
+          1.1595970229239774,
+          1.1595970229240073,
+          1.1595970229239814,
+          1.1595970229243344,
+          1.1595970229241457,
+          1.1595970229239805,
+          1.1595970229239834,
+          1.1595970229239954,
+          1.1595970229239774,
+          1.1595970229239794,
+          1.1595970229240575,
+          1.159597022924307,
+          1.1595970229239834,
+          1.1595970229239845
+        ],
+        "continuum_triangular_beta": 1.1595952669639278,
+        "lowest_band_width": 1.9628743075372768e-13
+      }
+    ],
+    "scope": "Projected lowest-band local multistart search; finite band splitting neglected in quartic minimization; fixed external magnetic flux."
+  },
+  "landau_selection_rule": {
+    "fourth_power_action_on_LLL": "(9/4) B^2 |0>",
+    "sixth_power_action_on_LLL": "B^3 [(45/8)|0>+(9 sqrt(5)/2)|6>]",
+    "ground_energy_expansion": "B-h^2 B^2/8+h^4 B^3/96+O(h^6)",
+    "first_wavefunction_mixing": "-h^4 B^2 sqrt(5)/1440 |6>+O(h^6)",
+    "scope": "Formal smooth-field expansion at fixed B>0 for the nearest triangular stencil; the h^2 correction shifts energy without mixing higher Landau levels."
+  },
+  "flux_selection_boundary": {
+    "BPS_tuning": "lambda=g^2/2; mu^2=g^2 v^2",
+    "BPS_area_bound": "Area >= 2*pi*abs(Q)/(g^2 v^2)",
+    "flux_energy_bound": "E_relative >= 2*pi*abs(Q)*v^2 for lambda>=g^2/2",
+    "global_classical_minimum": "For any lambda>0 and g^2>0, Q=0 with B=0, D phi=0, |phi|^2=v^2 attains zero relative energy. Nonzero-flux sectors cannot attain zero. No external field or flux constraint included.",
+    "scope": "Standard Abelian-Higgs square completion and Bradlow boundary; not a theorem for the full E6 or gravity system."
+  },
+  "overlap_records": [
+    {
+      "N": 1,
+      "sites": 7,
+      "flux": -3,
+      "measured_triangle_flux": -3.0000000000000004,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 0.5,
+      "index": 0,
+      "Wilson_gap": 0.5074203435275314,
+      "background_uniform_triangle_phase": -1.3463968515384828,
+      "maximum_actual_triangle_phase": 1.3463968515384837,
+      "gauge_action_unit_coupling": 10.884706924611601,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 1,
+      "sites": 7,
+      "flux": -3,
+      "measured_triangle_flux": -3.0000000000000004,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 1.0,
+      "index": 0,
+      "Wilson_gap": 0.07142786562474322,
+      "background_uniform_triangle_phase": -1.3463968515384828,
+      "maximum_actual_triangle_phase": 1.3463968515384837,
+      "gauge_action_unit_coupling": 10.884706924611601,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 1,
+      "sites": 7,
+      "flux": -3,
+      "measured_triangle_flux": -3.0000000000000004,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 2.0,
+      "index": 2,
+      "Wilson_gap": 0.09554821157854738,
+      "background_uniform_triangle_phase": -1.3463968515384828,
+      "maximum_actual_triangle_phase": 1.3463968515384837,
+      "gauge_action_unit_coupling": 10.884706924611601,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 1,
+      "sites": 7,
+      "flux": -1,
+      "measured_triangle_flux": -1.0000000000000002,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 0.5,
+      "index": 1,
+      "Wilson_gap": 0.043284872414387845,
+      "background_uniform_triangle_phase": -0.4487989505128276,
+      "maximum_actual_triangle_phase": 0.44879895051282787,
+      "gauge_action_unit_coupling": 1.3864358493661322,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 1,
+      "sites": 7,
+      "flux": -1,
+      "measured_triangle_flux": -1.0000000000000002,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 1.0,
+      "index": 1,
+      "Wilson_gap": 0.5430726013753703,
+      "background_uniform_triangle_phase": -0.4487989505128276,
+      "maximum_actual_triangle_phase": 0.44879895051282787,
+      "gauge_action_unit_coupling": 1.3864358493661322,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 1,
+      "sites": 7,
+      "flux": -1,
+      "measured_triangle_flux": -1.0000000000000002,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 2.0,
+      "index": 1,
+      "Wilson_gap": 0.6081431177526577,
+      "background_uniform_triangle_phase": -0.4487989505128276,
+      "maximum_actual_triangle_phase": 0.44879895051282787,
+      "gauge_action_unit_coupling": 1.3864358493661322,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 1,
+      "sites": 7,
+      "flux": 0,
+      "measured_triangle_flux": 0.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 0.5,
+      "index": 0,
+      "Wilson_gap": 0.4999999999999991,
+      "background_uniform_triangle_phase": 0.0,
+      "maximum_actual_triangle_phase": 0.0,
+      "gauge_action_unit_coupling": 0.0,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 1,
+      "sites": 7,
+      "flux": 0,
+      "measured_triangle_flux": 0.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 1.0,
+      "index": 0,
+      "Wilson_gap": 0.9999999999999989,
+      "background_uniform_triangle_phase": 0.0,
+      "maximum_actual_triangle_phase": 0.0,
+      "gauge_action_unit_coupling": 0.0,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 1,
+      "sites": 7,
+      "flux": 0,
+      "measured_triangle_flux": 0.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 2.0,
+      "index": 0,
+      "Wilson_gap": 0.942809041582062,
+      "background_uniform_triangle_phase": 0.0,
+      "maximum_actual_triangle_phase": 0.0,
+      "gauge_action_unit_coupling": 0.0,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 1,
+      "sites": 7,
+      "flux": 1,
+      "measured_triangle_flux": 1.0000000000000002,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 0.5,
+      "index": -1,
+      "Wilson_gap": 0.04328487241438901,
+      "background_uniform_triangle_phase": 0.4487989505128276,
+      "maximum_actual_triangle_phase": 0.44879895051282787,
+      "gauge_action_unit_coupling": 1.3864358493661322,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 1,
+      "sites": 7,
+      "flux": 1,
+      "measured_triangle_flux": 1.0000000000000002,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 1.0,
+      "index": -1,
+      "Wilson_gap": 0.5430726013753715,
+      "background_uniform_triangle_phase": 0.4487989505128276,
+      "maximum_actual_triangle_phase": 0.44879895051282787,
+      "gauge_action_unit_coupling": 1.3864358493661322,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 1,
+      "sites": 7,
+      "flux": 1,
+      "measured_triangle_flux": 1.0000000000000002,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 2.0,
+      "index": -1,
+      "Wilson_gap": 0.608143117752658,
+      "background_uniform_triangle_phase": 0.4487989505128276,
+      "maximum_actual_triangle_phase": 0.44879895051282787,
+      "gauge_action_unit_coupling": 1.3864358493661322,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 1,
+      "sites": 7,
+      "flux": 3,
+      "measured_triangle_flux": 3.0000000000000004,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 0.5,
+      "index": 0,
+      "Wilson_gap": 0.5074203435275314,
+      "background_uniform_triangle_phase": 1.3463968515384828,
+      "maximum_actual_triangle_phase": 1.3463968515384837,
+      "gauge_action_unit_coupling": 10.884706924611601,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 1,
+      "sites": 7,
+      "flux": 3,
+      "measured_triangle_flux": 3.0000000000000004,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 1.0,
+      "index": 0,
+      "Wilson_gap": 0.07142786562474261,
+      "background_uniform_triangle_phase": 1.3463968515384828,
+      "maximum_actual_triangle_phase": 1.3463968515384837,
+      "gauge_action_unit_coupling": 10.884706924611601,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 1,
+      "sites": 7,
+      "flux": 3,
+      "measured_triangle_flux": 3.0000000000000004,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 2.0,
+      "index": -2,
+      "Wilson_gap": 0.09554821157854719,
+      "background_uniform_triangle_phase": 1.3463968515384828,
+      "maximum_actual_triangle_phase": 1.3463968515384837,
+      "gauge_action_unit_coupling": 10.884706924611601,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 2,
+      "sites": 28,
+      "flux": -3,
+      "measured_triangle_flux": -3.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 0.5,
+      "index": 3,
+      "Wilson_gap": 0.14667490463148986,
+      "background_uniform_triangle_phase": -0.3365992128846207,
+      "maximum_actual_triangle_phase": 0.3365992128846215,
+      "gauge_action_unit_coupling": 3.1425335027314167,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 2,
+      "sites": 28,
+      "flux": -3,
+      "measured_triangle_flux": -3.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 1.0,
+      "index": 3,
+      "Wilson_gap": 0.6465757373451909,
+      "background_uniform_triangle_phase": -0.3365992128846207,
+      "maximum_actual_triangle_phase": 0.3365992128846215,
+      "gauge_action_unit_coupling": 3.1425335027314167,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 2,
+      "sites": 28,
+      "flux": -3,
+      "measured_triangle_flux": -3.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 2.0,
+      "index": 3,
+      "Wilson_gap": 0.6280334305613039,
+      "background_uniform_triangle_phase": -0.3365992128846207,
+      "maximum_actual_triangle_phase": 0.3365992128846215,
+      "gauge_action_unit_coupling": 3.1425335027314167,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 2,
+      "sites": 28,
+      "flux": -1,
+      "measured_triangle_flux": -1.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 0.5,
+      "index": 1,
+      "Wilson_gap": 0.37454945753575986,
+      "background_uniform_triangle_phase": -0.1121997376282069,
+      "maximum_actual_triangle_phase": 0.11219973762820726,
+      "gauge_action_unit_coupling": 0.3521162459784144,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 2,
+      "sites": 28,
+      "flux": -1,
+      "measured_triangle_flux": -1.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 1.0,
+      "index": 1,
+      "Wilson_gap": 0.8745480765051327,
+      "background_uniform_triangle_phase": -0.1121997376282069,
+      "maximum_actual_triangle_phase": 0.11219973762820726,
+      "gauge_action_unit_coupling": 0.3521162459784144,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 2,
+      "sites": 28,
+      "flux": -1,
+      "measured_triangle_flux": -1.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 2.0,
+      "index": 1,
+      "Wilson_gap": 0.6663292137281988,
+      "background_uniform_triangle_phase": -0.1121997376282069,
+      "maximum_actual_triangle_phase": 0.11219973762820726,
+      "gauge_action_unit_coupling": 0.3521162459784144,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 2,
+      "sites": 28,
+      "flux": 0,
+      "measured_triangle_flux": 0.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 0.5,
+      "index": 0,
+      "Wilson_gap": 0.4999999999999981,
+      "background_uniform_triangle_phase": 0.0,
+      "maximum_actual_triangle_phase": 0.0,
+      "gauge_action_unit_coupling": 0.0,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 2,
+      "sites": 28,
+      "flux": 0,
+      "measured_triangle_flux": 0.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 1.0,
+      "index": 0,
+      "Wilson_gap": 0.9999999999999998,
+      "background_uniform_triangle_phase": 0.0,
+      "maximum_actual_triangle_phase": 0.0,
+      "gauge_action_unit_coupling": 0.0,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 2,
+      "sites": 28,
+      "flux": 0,
+      "measured_triangle_flux": 0.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 2.0,
+      "index": 0,
+      "Wilson_gap": 0.6666666666666664,
+      "background_uniform_triangle_phase": 0.0,
+      "maximum_actual_triangle_phase": 0.0,
+      "gauge_action_unit_coupling": 0.0,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 2,
+      "sites": 28,
+      "flux": 1,
+      "measured_triangle_flux": 1.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 0.5,
+      "index": -1,
+      "Wilson_gap": 0.37454945753575836,
+      "background_uniform_triangle_phase": 0.1121997376282069,
+      "maximum_actual_triangle_phase": 0.11219973762820726,
+      "gauge_action_unit_coupling": 0.3521162459784144,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 2,
+      "sites": 28,
+      "flux": 1,
+      "measured_triangle_flux": 1.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 1.0,
+      "index": -1,
+      "Wilson_gap": 0.874548076505133,
+      "background_uniform_triangle_phase": 0.1121997376282069,
+      "maximum_actual_triangle_phase": 0.11219973762820726,
+      "gauge_action_unit_coupling": 0.3521162459784144,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 2,
+      "sites": 28,
+      "flux": 1,
+      "measured_triangle_flux": 1.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 2.0,
+      "index": -1,
+      "Wilson_gap": 0.666329213728199,
+      "background_uniform_triangle_phase": 0.1121997376282069,
+      "maximum_actual_triangle_phase": 0.11219973762820726,
+      "gauge_action_unit_coupling": 0.3521162459784144,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 2,
+      "sites": 28,
+      "flux": 3,
+      "measured_triangle_flux": 3.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 0.5,
+      "index": -3,
+      "Wilson_gap": 0.14667490463149033,
+      "background_uniform_triangle_phase": 0.3365992128846207,
+      "maximum_actual_triangle_phase": 0.3365992128846215,
+      "gauge_action_unit_coupling": 3.1425335027314167,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 2,
+      "sites": 28,
+      "flux": 3,
+      "measured_triangle_flux": 3.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 1.0,
+      "index": -3,
+      "Wilson_gap": 0.6465757373451908,
+      "background_uniform_triangle_phase": 0.3365992128846207,
+      "maximum_actual_triangle_phase": 0.3365992128846215,
+      "gauge_action_unit_coupling": 3.1425335027314167,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 2,
+      "sites": 28,
+      "flux": 3,
+      "measured_triangle_flux": 3.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 2.0,
+      "index": -3,
+      "Wilson_gap": 0.6280334305613042,
+      "background_uniform_triangle_phase": 0.3365992128846207,
+      "maximum_actual_triangle_phase": 0.3365992128846215,
+      "gauge_action_unit_coupling": 3.1425335027314167,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 3,
+      "sites": 63,
+      "flux": -3,
+      "measured_triangle_flux": -2.9999999999999987,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 0.5,
+      "index": 3,
+      "Wilson_gap": 0.3345049362247518,
+      "background_uniform_triangle_phase": -0.14959965017094254,
+      "maximum_actual_triangle_phase": 0.14959965017094365,
+      "gauge_action_unit_coupling": 1.4073158956338054,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 3,
+      "sites": 63,
+      "flux": -3,
+      "measured_triangle_flux": -2.9999999999999987,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 1.0,
+      "index": 3,
+      "Wilson_gap": 0.8345008418983377,
+      "background_uniform_triangle_phase": -0.14959965017094254,
+      "maximum_actual_triangle_phase": 0.14959965017094365,
+      "gauge_action_unit_coupling": 1.4073158956338054,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null,
+      "GW_error": 4.885011395327702e-15,
+      "zero_modes": 3,
+      "zero_mode_chiralities": [
+        0.9999999999999996,
+        1.000000000000001,
+        1.0000000000000016
+      ]
+    },
+    {
+      "N": 3,
+      "sites": 63,
+      "flux": -3,
+      "measured_triangle_flux": -2.9999999999999987,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 2.0,
+      "index": 3,
+      "Wilson_gap": 0.6656562834920885,
+      "background_uniform_triangle_phase": -0.14959965017094254,
+      "maximum_actual_triangle_phase": 0.14959965017094365,
+      "gauge_action_unit_coupling": 1.4073158956338054,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 3,
+      "sites": 63,
+      "flux": -1,
+      "measured_triangle_flux": -1.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 0.5,
+      "index": 1,
+      "Wilson_gap": 0.44324004931040073,
+      "background_uniform_triangle_phase": -0.049866550056980846,
+      "maximum_actual_triangle_phase": 0.049866550056981714,
+      "gauge_action_unit_coupling": 0.1566279264157846,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 3,
+      "sites": 63,
+      "flux": -1,
+      "measured_triangle_flux": -1.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 1.0,
+      "index": 1,
+      "Wilson_gap": 0.9432399872170117,
+      "background_uniform_triangle_phase": -0.049866550056980846,
+      "maximum_actual_triangle_phase": 0.049866550056981714,
+      "gauge_action_unit_coupling": 0.1566279264157846,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null,
+      "GW_error": 6.2172738289230505e-15,
+      "zero_modes": 1,
+      "zero_mode_chiralities": [
+        0.9999999999999993
+      ]
+    },
+    {
+      "N": 3,
+      "sites": 63,
+      "flux": -1,
+      "measured_triangle_flux": -1.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 2.0,
+      "index": 1,
+      "Wilson_gap": 0.6666425088557266,
+      "background_uniform_triangle_phase": -0.049866550056980846,
+      "maximum_actual_triangle_phase": 0.049866550056981714,
+      "gauge_action_unit_coupling": 0.1566279264157846,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 3,
+      "sites": 63,
+      "flux": 0,
+      "measured_triangle_flux": 0.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 0.5,
+      "index": 0,
+      "Wilson_gap": 0.4999999999999998,
+      "background_uniform_triangle_phase": 0.0,
+      "maximum_actual_triangle_phase": 0.0,
+      "gauge_action_unit_coupling": 0.0,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 3,
+      "sites": 63,
+      "flux": 0,
+      "measured_triangle_flux": 0.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 1.0,
+      "index": 0,
+      "Wilson_gap": 1.0,
+      "background_uniform_triangle_phase": 0.0,
+      "maximum_actual_triangle_phase": 0.0,
+      "gauge_action_unit_coupling": 0.0,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null,
+      "GW_error": 2.2204603959977897e-15,
+      "zero_modes": 2,
+      "zero_mode_chiralities": [
+        -1.000000000000001,
+        1.0000000000000007
+      ]
+    },
+    {
+      "N": 3,
+      "sites": 63,
+      "flux": 0,
+      "measured_triangle_flux": 0.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 2.0,
+      "index": 0,
+      "Wilson_gap": 0.7151806937545863,
+      "background_uniform_triangle_phase": 0.0,
+      "maximum_actual_triangle_phase": 0.0,
+      "gauge_action_unit_coupling": 0.0,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 3,
+      "sites": 63,
+      "flux": 1,
+      "measured_triangle_flux": 1.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 0.5,
+      "index": -1,
+      "Wilson_gap": 0.44324004931040195,
+      "background_uniform_triangle_phase": 0.049866550056980846,
+      "maximum_actual_triangle_phase": 0.049866550056981714,
+      "gauge_action_unit_coupling": 0.1566279264157846,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 3,
+      "sites": 63,
+      "flux": 1,
+      "measured_triangle_flux": 1.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 1.0,
+      "index": -1,
+      "Wilson_gap": 0.9432399872170121,
+      "background_uniform_triangle_phase": 0.049866550056980846,
+      "maximum_actual_triangle_phase": 0.049866550056981714,
+      "gauge_action_unit_coupling": 0.1566279264157846,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null,
+      "GW_error": 4.88502482339653e-15,
+      "zero_modes": 1,
+      "zero_mode_chiralities": [
+        -0.9999999999999998
+      ]
+    },
+    {
+      "N": 3,
+      "sites": 63,
+      "flux": 1,
+      "measured_triangle_flux": 1.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 2.0,
+      "index": -1,
+      "Wilson_gap": 0.6666425088557266,
+      "background_uniform_triangle_phase": 0.049866550056980846,
+      "maximum_actual_triangle_phase": 0.049866550056981714,
+      "gauge_action_unit_coupling": 0.1566279264157846,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 3,
+      "sites": 63,
+      "flux": 3,
+      "measured_triangle_flux": 2.9999999999999987,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 0.5,
+      "index": -3,
+      "Wilson_gap": 0.33450493622475075,
+      "background_uniform_triangle_phase": 0.14959965017094254,
+      "maximum_actual_triangle_phase": 0.14959965017094365,
+      "gauge_action_unit_coupling": 1.4073158956338054,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 3,
+      "sites": 63,
+      "flux": 3,
+      "measured_triangle_flux": 2.9999999999999987,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 1.0,
+      "index": -3,
+      "Wilson_gap": 0.8345008418983384,
+      "background_uniform_triangle_phase": 0.14959965017094254,
+      "maximum_actual_triangle_phase": 0.14959965017094365,
+      "gauge_action_unit_coupling": 1.4073158956338054,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null,
+      "GW_error": 7.10543745644464e-15,
+      "zero_modes": 3,
+      "zero_mode_chiralities": [
+        -1.0000000000000009,
+        -0.9999999999999994,
+        -0.999999999999999
+      ]
+    },
+    {
+      "N": 3,
+      "sites": 63,
+      "flux": 3,
+      "measured_triangle_flux": 2.9999999999999987,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 2.0,
+      "index": -3,
+      "Wilson_gap": 0.6656562834920889,
+      "background_uniform_triangle_phase": 0.14959965017094254,
+      "maximum_actual_triangle_phase": 0.14959965017094365,
+      "gauge_action_unit_coupling": 1.4073158956338054,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 4,
+      "sites": 112,
+      "flux": -3,
+      "measured_triangle_flux": -3.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 0.5,
+      "index": 3,
+      "Wilson_gap": 0.4051546662774924,
+      "background_uniform_triangle_phase": -0.08414980322115517,
+      "maximum_actual_triangle_phase": 0.08414980322115773,
+      "gauge_action_unit_coupling": 0.7926253176533029,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 4,
+      "sites": 112,
+      "flux": -3,
+      "measured_triangle_flux": -3.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 1.0,
+      "index": 3,
+      "Wilson_gap": 0.905154203393876,
+      "background_uniform_triangle_phase": -0.08414980322115517,
+      "maximum_actual_triangle_phase": 0.08414980322115773,
+      "gauge_action_unit_coupling": 0.7926253176533029,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 4,
+      "sites": 112,
+      "flux": -3,
+      "measured_triangle_flux": -3.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 2.0,
+      "index": 3,
+      "Wilson_gap": 0.6665462653074526,
+      "background_uniform_triangle_phase": -0.08414980322115517,
+      "maximum_actual_triangle_phase": 0.08414980322115773,
+      "gauge_action_unit_coupling": 0.7926253176533029,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 4,
+      "sites": 112,
+      "flux": -1,
+      "measured_triangle_flux": -1.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 0.5,
+      "index": 1,
+      "Wilson_gap": 0.46787158114218685,
+      "background_uniform_triangle_phase": -0.028049934407051724,
+      "maximum_actual_triangle_phase": 0.028049934407052304,
+      "gauge_action_unit_coupling": 0.08811569019615817,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 4,
+      "sites": 112,
+      "flux": -1,
+      "measured_triangle_flux": -1.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 1.0,
+      "index": 1,
+      "Wilson_gap": 0.967871574521015,
+      "background_uniform_triangle_phase": -0.028049934407051724,
+      "maximum_actual_triangle_phase": 0.028049934407052304,
+      "gauge_action_unit_coupling": 0.08811569019615817,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 4,
+      "sites": 112,
+      "flux": -1,
+      "measured_triangle_flux": -1.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 2.0,
+      "index": 1,
+      "Wilson_gap": 0.6666624022423422,
+      "background_uniform_triangle_phase": -0.028049934407051724,
+      "maximum_actual_triangle_phase": 0.028049934407052304,
+      "gauge_action_unit_coupling": 0.08811569019615817,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 4,
+      "sites": 112,
+      "flux": 0,
+      "measured_triangle_flux": 0.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 0.5,
+      "index": 0,
+      "Wilson_gap": 0.49999999999999906,
+      "background_uniform_triangle_phase": 0.0,
+      "maximum_actual_triangle_phase": 0.0,
+      "gauge_action_unit_coupling": 0.0,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 4,
+      "sites": 112,
+      "flux": 0,
+      "measured_triangle_flux": 0.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 1.0,
+      "index": 0,
+      "Wilson_gap": 0.9999999999999996,
+      "background_uniform_triangle_phase": 0.0,
+      "maximum_actual_triangle_phase": 0.0,
+      "gauge_action_unit_coupling": 0.0,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 4,
+      "sites": 112,
+      "flux": 0,
+      "measured_triangle_flux": 0.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 2.0,
+      "index": 0,
+      "Wilson_gap": 0.6666666666666664,
+      "background_uniform_triangle_phase": 0.0,
+      "maximum_actual_triangle_phase": 0.0,
+      "gauge_action_unit_coupling": 0.0,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 4,
+      "sites": 112,
+      "flux": 1,
+      "measured_triangle_flux": 1.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 0.5,
+      "index": -1,
+      "Wilson_gap": 0.46787158114218547,
+      "background_uniform_triangle_phase": 0.028049934407051724,
+      "maximum_actual_triangle_phase": 0.028049934407052304,
+      "gauge_action_unit_coupling": 0.08811569019615817,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 4,
+      "sites": 112,
+      "flux": 1,
+      "measured_triangle_flux": 1.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 1.0,
+      "index": -1,
+      "Wilson_gap": 0.967871574521015,
+      "background_uniform_triangle_phase": 0.028049934407051724,
+      "maximum_actual_triangle_phase": 0.028049934407052304,
+      "gauge_action_unit_coupling": 0.08811569019615817,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 4,
+      "sites": 112,
+      "flux": 1,
+      "measured_triangle_flux": 1.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 2.0,
+      "index": -1,
+      "Wilson_gap": 0.666662402242342,
+      "background_uniform_triangle_phase": 0.028049934407051724,
+      "maximum_actual_triangle_phase": 0.028049934407052304,
+      "gauge_action_unit_coupling": 0.08811569019615817,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 4,
+      "sites": 112,
+      "flux": 3,
+      "measured_triangle_flux": 3.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 0.5,
+      "index": -3,
+      "Wilson_gap": 0.40515466627749347,
+      "background_uniform_triangle_phase": 0.08414980322115517,
+      "maximum_actual_triangle_phase": 0.08414980322115773,
+      "gauge_action_unit_coupling": 0.7926253176533029,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 4,
+      "sites": 112,
+      "flux": 3,
+      "measured_triangle_flux": 3.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 1.0,
+      "index": -3,
+      "Wilson_gap": 0.9051542033938745,
+      "background_uniform_triangle_phase": 0.08414980322115517,
+      "maximum_actual_triangle_phase": 0.08414980322115773,
+      "gauge_action_unit_coupling": 0.7926253176533029,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 4,
+      "sites": 112,
+      "flux": 3,
+      "measured_triangle_flux": 3.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 2.0,
+      "index": -3,
+      "Wilson_gap": 0.6665462653074532,
+      "background_uniform_triangle_phase": 0.08414980322115517,
+      "maximum_actual_triangle_phase": 0.08414980322115773,
+      "gauge_action_unit_coupling": 0.7926253176533029,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    }
+  ],
+  "flat_holonomy_records": [
+    {
+      "N": 3,
+      "sites": 63,
+      "flux": 0,
+      "measured_triangle_flux": 0.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 1.0,
+      "index": 0,
+      "Wilson_gap": 1.0,
+      "background_uniform_triangle_phase": 0.0,
+      "maximum_actual_triangle_phase": 0.0,
+      "gauge_action_unit_coupling": 0.0,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null,
+      "GW_error": 2.2204603959977897e-15,
+      "zero_modes": 2,
+      "zero_mode_chiralities": [
+        -1.000000000000001,
+        1.0000000000000007
+      ]
+    },
+    {
+      "N": 3,
+      "sites": 63,
+      "flux": 0,
+      "measured_triangle_flux": -3.0138757115830406e-18,
+      "holonomy": [
+        0.37,
+        0.81
+      ],
+      "mass": 1.0,
+      "index": 0,
+      "Wilson_gap": 1.0000739893864752,
+      "background_uniform_triangle_phase": 0.0,
+      "maximum_actual_triangle_phase": 5.551115123125783e-17,
+      "gauge_action_unit_coupling": 0.0,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null,
+      "GW_error": 3.996809747192376e-15,
+      "zero_modes": 0,
+      "zero_mode_chiralities": []
+    },
+    {
+      "N": 3,
+      "sites": 63,
+      "flux": 0,
+      "measured_triangle_flux": 0.0,
+      "holonomy": [
+        3.141592653589793,
+        0.0
+      ],
+      "mass": 1.0,
+      "index": 0,
+      "Wilson_gap": 1.0013328864435174,
+      "background_uniform_triangle_phase": 0.0,
+      "maximum_actual_triangle_phase": 0.0,
+      "gauge_action_unit_coupling": 0.0,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null,
+      "GW_error": 3.1086268397859946e-15,
+      "zero_modes": 0,
+      "zero_mode_chiralities": []
+    },
+    {
+      "N": 3,
+      "sites": 63,
+      "flux": 0,
+      "measured_triangle_flux": 0.0,
+      "holonomy": [
+        3.141592653589793,
+        3.141592653589793
+      ],
+      "mass": 1.0,
+      "index": 0,
+      "Wilson_gap": 1.0013328864435185,
+      "background_uniform_triangle_phase": 0.0,
+      "maximum_actual_triangle_phase": 0.0,
+      "gauge_action_unit_coupling": 0.0,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null,
+      "GW_error": 2.664536106207726e-15,
+      "zero_modes": 0,
+      "zero_mode_chiralities": []
+    }
+  ],
+  "robustness_records": [
+    {
+      "N": 2,
+      "sites": 28,
+      "flux": 3,
+      "measured_triangle_flux": 3.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 1.0,
+      "index": -3,
+      "Wilson_gap": 0.6465757373451904,
+      "background_uniform_triangle_phase": 0.3365992128846207,
+      "maximum_actual_triangle_phase": 0.3365992128846215,
+      "gauge_action_unit_coupling": 3.1425335027314163,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": 42,
+      "GW_error": 4.440931344408355e-15,
+      "zero_modes": 3,
+      "zero_mode_chiralities": [
+        -1.0000000000000009,
+        -1.0000000000000007,
+        -0.9999999999999991
+      ]
+    },
+    {
+      "N": 2,
+      "sites": 28,
+      "flux": 3,
+      "measured_triangle_flux": 3.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 1.0,
+      "index": -3,
+      "Wilson_gap": 0.6445860083551516,
+      "background_uniform_triangle_phase": 0.3365992128846207,
+      "maximum_actual_triangle_phase": 0.37440250671171055,
+      "gauge_action_unit_coupling": 3.149956340163983,
+      "link_noise_bound": 0.02,
+      "site_gauge_seed": null,
+      "GW_error": 3.997201581133074e-15,
+      "zero_modes": 3,
+      "zero_mode_chiralities": [
+        -1.0000000000000004,
+        -0.9999999999999998,
+        -0.9999999999999997
+      ]
+    },
+    {
+      "N": 2,
+      "sites": 28,
+      "flux": 3,
+      "measured_triangle_flux": 3.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 1.0,
+      "index": -3,
+      "Wilson_gap": 0.6445860083551519,
+      "background_uniform_triangle_phase": 0.3365992128846207,
+      "maximum_actual_triangle_phase": 0.3744025067117104,
+      "gauge_action_unit_coupling": 3.1499563401639827,
+      "link_noise_bound": 0.02,
+      "site_gauge_seed": 42,
+      "GW_error": 3.1087638613371095e-15,
+      "zero_modes": 3,
+      "zero_mode_chiralities": [
+        -1.0000000000000007,
+        -1.0,
+        -0.9999999999999971
+      ]
+    }
+  ],
+  "mass_branch_records": [
+    {
+      "N": 4,
+      "sites": 112,
+      "flux": 1,
+      "measured_triangle_flux": 1.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 1.0,
+      "index": -1,
+      "Wilson_gap": 0.967871574521015,
+      "background_uniform_triangle_phase": 0.028049934407051724,
+      "maximum_actual_triangle_phase": 0.028049934407052304,
+      "gauge_action_unit_coupling": 0.08811569019615817,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 4,
+      "sites": 112,
+      "flux": 1,
+      "measured_triangle_flux": 1.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 2.8,
+      "index": 2,
+      "Wilson_gap": 0.11828785457377991,
+      "background_uniform_triangle_phase": 0.028049934407051724,
+      "maximum_actual_triangle_phase": 0.028049934407052304,
+      "gauge_action_unit_coupling": 0.08811569019615817,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    },
+    {
+      "N": 4,
+      "sites": 112,
+      "flux": 1,
+      "measured_triangle_flux": 1.0,
+      "holonomy": [
+        0.0,
+        0.0
+      ],
+      "mass": 3.5,
+      "index": 0,
+      "Wilson_gap": 0.5162386205804862,
+      "background_uniform_triangle_phase": 0.028049934407051724,
+      "maximum_actual_triangle_phase": 0.028049934407052304,
+      "gauge_action_unit_coupling": 0.08811569019615817,
+      "link_noise_bound": 0.0,
+      "site_gauge_seed": null
+    }
+  ],
+  "kernel_noise_norm_bound": 0.07999866667333332,
+  "limitations": "Flux and regulator are supplied. This is a 2D internal Euclidean spinor operator, not a derivation of SM representations, generations, anomalies or gravity."
+}
