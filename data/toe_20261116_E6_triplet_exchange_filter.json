@@ -1,0 +1,72 @@
+{
+  "tree_exchange": {
+    "massive_exchange_support_by_integer_weight": {
+      "3": 2,
+      "-2": 3,
+      "2": 3
+    },
+    "baryon_violating_exchange_weights": [
+      -2,
+      2
+    ],
+    "witnesses_with_family_blocks_preserved": [
+      {
+        "kind": "QQQL",
+        "component_indices": [
+          21,
+          25,
+          1,
+          18
+        ],
+        "coefficient": "-1/5"
+      },
+      {
+        "kind": "U^c U^c D^c E^c",
+        "component_indices": [
+          6,
+          9,
+          10,
+          17
+        ],
+        "coefficient": "1/5"
+      },
+      {
+        "kind": "QQQL, opposite triplet B-L block",
+        "component_indices": [
+          1,
+          18,
+          21,
+          25
+        ],
+        "coefficient": "-1"
+      }
+    ],
+    "nonzero_baryon_violating_terms_before_filter": 36,
+    "nonzero_baryon_violating_terms_after_filter": 0,
+    "minimal_higgs_leg_polynomial_degree_in_this_construction": 2,
+    "unchanged_light_yukawa_index_vertices": [
+      6,
+      8
+    ]
+  },
+  "heavy_field_checks": {
+    "H_pair_exchange_requires_sources_on_both_chiral_legs": true,
+    "renormalizable_filter_messengers": "two vectorlike 27 pairs",
+    "effective_up_Higgs_leg_filter": "(Phi^2-4 I)/5"
+  },
+  "gauge_exchange": {
+    "complex_dimension_of_positive_charge_five_gauge_block": 6,
+    "adjoint_mass_squared_over_gauge_coupling_squared_and_vev_squared": 25,
+    "nonzero_baryon_violating_gauge_current_product": {
+      "current_1": [
+        18,
+        6
+      ],
+      "current_2_before_conjugation": [
+        10,
+        25
+      ],
+      "trace_metric_projector_coefficient": "-1/6"
+    }
+  }
+}
