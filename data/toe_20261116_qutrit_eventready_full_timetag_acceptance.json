@@ -1,0 +1,241 @@
+{
+  "asymmetric_99_90_percent_routers": {
+    "KL_expected_trial_scale_log_100_over_D": 3070.216039980506,
+    "POVM_error_epsilon": 0.01,
+    "accidental_dark_match_probability_when_no_pair": 3.3333333333333335e-05,
+    "bell_fidelity": 0.766653396374446,
+    "calibrated_pair_detection": 0.651343275,
+    "causal_protocol": "herald timestamp < secret basis draw < routing and analyzer settings < detector time-tag capture; all heralded trials included",
+    "expected_gross_click_match": 0.537363341129137,
+    "fixed_alternative_KL_per_heralded_trial": 0.0014999498817084324,
+    "has_positive_witness_gap": true,
+    "ideal_matched_probability_given_pair": 0.8249900472808345,
+    "measurement_bases": "one uniform secret basis from Z,F3,D1*F3,D2*F3 chosen after herald",
+    "no_click_label": 0,
+    "required_signal_router_efficiency_at_fixed_reference": 0.8541891345404699,
+    "router_reference": 0.99,
+    "router_signal": 0.9,
+    "separable_null_upper": 0.51,
+    "setting_TV": 0.0
+  },
+  "calibration_acceptance": "Each physical setting b must have herald-independent time tags and a trusted POVM calibration whose worst-case source-adversarial overcount is <=epsilon; source-hidden random basis TV<=tv; all independent triggers included. Premature coincidence-triggered selection invalidates the null.",
+  "hardware_not_built": true,
+  "nominal_symmetric_95_percent_router": {
+    "KL_expected_trial_scale_log_100_over_D": 1953.214463820286,
+    "POVM_error_epsilon": 0.01,
+    "accidental_dark_match_probability_when_no_pair": 3.3333333333333335e-05,
+    "bell_fidelity": 0.766653396374446,
+    "calibrated_pair_detection": 0.6597500624999999,
+    "causal_protocol": "herald timestamp < secret basis draw < routing and analyzer settings < detector time-tag capture; all heralded trials included",
+    "expected_gross_click_match": 0.5442985769199918,
+    "fixed_alternative_KL_per_heralded_trial": 0.0023577391378624413,
+    "has_positive_witness_gap": true,
+    "ideal_matched_probability_given_pair": 0.8249900472808345,
+    "measurement_bases": "one uniform secret basis from Z,F3,D1*F3,D2*F3 chosen after herald",
+    "no_click_label": 0,
+    "required_signal_router_efficiency_at_fixed_reference": 0.8901549928369108,
+    "router_reference": 0.95,
+    "router_signal": 0.95,
+    "separable_null_upper": 0.51,
+    "setting_TV": 0.0
+  },
+  "sixteen_seed_synthetic_trials": [
+    {
+      "anytime_p_upper": 1.8264954491795408e-14,
+      "counts_by_basis": [
+        3012,
+        3028,
+        3054,
+        2906
+      ],
+      "first_evidence_crossing": 1968,
+      "seed": 20261116
+    },
+    {
+      "anytime_p_upper": 1.7302648797066452e-13,
+      "counts_by_basis": [
+        2971,
+        3010,
+        3071,
+        2948
+      ],
+      "first_evidence_crossing": 697,
+      "seed": 20261117
+    },
+    {
+      "anytime_p_upper": 3.652761344195812e-17,
+      "counts_by_basis": [
+        2969,
+        3016,
+        3017,
+        2998
+      ],
+      "first_evidence_crossing": 1492,
+      "seed": 20261118
+    },
+    {
+      "anytime_p_upper": 3.859784325488159e-08,
+      "counts_by_basis": [
+        3015,
+        2974,
+        3041,
+        2970
+      ],
+      "first_evidence_crossing": 4011,
+      "seed": 20261119
+    },
+    {
+      "anytime_p_upper": 1.1102402271725288e-11,
+      "counts_by_basis": [
+        3048,
+        2953,
+        2947,
+        3052
+      ],
+      "first_evidence_crossing": 1226,
+      "seed": 20261120
+    },
+    {
+      "anytime_p_upper": 2.407614207022602e-11,
+      "counts_by_basis": [
+        2879,
+        3077,
+        3008,
+        3036
+      ],
+      "first_evidence_crossing": 1012,
+      "seed": 20261121
+    },
+    {
+      "anytime_p_upper": 2.5227833128053805e-12,
+      "counts_by_basis": [
+        2958,
+        3026,
+        2998,
+        3018
+      ],
+      "first_evidence_crossing": 1262,
+      "seed": 20261122
+    },
+    {
+      "anytime_p_upper": 3.9094055263555703e-13,
+      "counts_by_basis": [
+        3028,
+        3049,
+        3057,
+        2866
+      ],
+      "first_evidence_crossing": 4616,
+      "seed": 20261123
+    },
+    {
+      "anytime_p_upper": 3.1433770405171007e-21,
+      "counts_by_basis": [
+        3002,
+        2950,
+        2985,
+        3063
+      ],
+      "first_evidence_crossing": 566,
+      "seed": 20261124
+    },
+    {
+      "anytime_p_upper": 4.090294034908447e-09,
+      "counts_by_basis": [
+        3026,
+        2899,
+        3062,
+        3013
+      ],
+      "first_evidence_crossing": 1095,
+      "seed": 20261125
+    },
+    {
+      "anytime_p_upper": 1.1379783661142785e-11,
+      "counts_by_basis": [
+        2949,
+        2981,
+        2979,
+        3091
+      ],
+      "first_evidence_crossing": 3311,
+      "seed": 20261126
+    },
+    {
+      "anytime_p_upper": 1.7529816110040452e-15,
+      "counts_by_basis": [
+        2995,
+        2978,
+        3057,
+        2970
+      ],
+      "first_evidence_crossing": 985,
+      "seed": 20261127
+    },
+    {
+      "anytime_p_upper": 9.271933915835326e-17,
+      "counts_by_basis": [
+        3055,
+        3001,
+        3013,
+        2931
+      ],
+      "first_evidence_crossing": 1283,
+      "seed": 20261128
+    },
+    {
+      "anytime_p_upper": 3.0911254547935454e-18,
+      "counts_by_basis": [
+        2995,
+        2989,
+        3032,
+        2984
+      ],
+      "first_evidence_crossing": 2144,
+      "seed": 20261129
+    },
+    {
+      "anytime_p_upper": 1.9884448497258584e-11,
+      "counts_by_basis": [
+        2969,
+        2994,
+        3025,
+        3012
+      ],
+      "first_evidence_crossing": 1911,
+      "seed": 20261130
+    },
+    {
+      "anytime_p_upper": 8.302874854951185e-14,
+      "counts_by_basis": [
+        3025,
+        3029,
+        2989,
+        2957
+      ],
+      "first_evidence_crossing": 991,
+      "seed": 20261131
+    }
+  ],
+  "status": "PASS_QUTRIT_TIMETAG_DETECTOR_MONTECARLO_WITH_ANYTIME_VALID_EPROCESS",
+  "success_count_16": 16,
+  "symmetric_90_percent_router": {
+    "KL_expected_trial_scale_log_100_over_D": null,
+    "POVM_error_epsilon": 0.01,
+    "accidental_dark_match_probability_when_no_pair": 3.3333333333333335e-05,
+    "bell_fidelity": 0.766653396374446,
+    "calibrated_pair_detection": 0.59213025,
+    "causal_protocol": "herald timestamp < secret basis draw < routing and analyzer settings < detector time-tag capture; all heralded trials included",
+    "expected_gross_click_match": 0.48851515860224565,
+    "fixed_alternative_KL_per_heralded_trial": 0.0,
+    "has_positive_witness_gap": false,
+    "ideal_matched_probability_given_pair": 0.8249900472808345,
+    "measurement_bases": "one uniform secret basis from Z,F3,D1*F3,D2*F3 chosen after herald",
+    "no_click_label": 0,
+    "required_signal_router_efficiency_at_fixed_reference": 0.9396080479945168,
+    "router_reference": 0.9,
+    "router_signal": 0.9,
+    "separable_null_upper": 0.51,
+    "setting_TV": 0.0
+  }
+}

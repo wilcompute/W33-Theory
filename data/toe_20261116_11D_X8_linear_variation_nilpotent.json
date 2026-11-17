@@ -1,0 +1,36 @@
+{
+  "example_delta_tr_R2": {
+    "15": 4,
+    "480": -24
+  },
+  "example_wedge_square": {
+    "495": -192
+  },
+  "factors": [
+    {
+      "dimension": 5,
+      "sectional_curvature_Lminus2": -1
+    },
+    {
+      "dimension": 2,
+      "sectional_curvature_Lminus2": 6
+    },
+    {
+      "dimension": 2,
+      "sectional_curvature_Lminus2": 6
+    },
+    {
+      "dimension": 2,
+      "sectional_curvature_Lminus2": 0
+    }
+  ],
+  "first_variation_of_X8_zero_for_arbitrary_deltaR": true,
+  "first_variation_tr_R4_zero": true,
+  "global_and_physical_caveat": "This is an exact exterior-algebra identity for the unwarped constant-curvature product. The sample deltaR is algebraic and not asserted to be a realizable linearized Levi-Civita curvature; no 11D corrected KK eigenmass is derived.",
+  "local_C3_X8_consequence": "No background X8 and no deltaC3 wedge deltaX8 quadratic mixed term in local fluctuation expansion. But background C3 wedge delta\u00b2X8 may contribute, and full supersymmetric R4/flux terms certainly need calculation.",
+  "matrix_curvature_wedge_square_zero": true,
+  "pointwise_tr_R2_and_tr_R4_zero": true,
+  "sample_delta_tr_R2_nonzero": true,
+  "sample_delta_tr_R2_squared_nonzero": true,
+  "status": "PASS_11D_X8_FIRST_VARIATION_EXACT_ZERO"
+}

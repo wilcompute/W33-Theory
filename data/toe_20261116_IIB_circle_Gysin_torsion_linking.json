@@ -1,0 +1,336 @@
+{
+  "M_theory_caveat": "Topological torsion linking on IIB Y is not a proof of quantum Page charges, K-theory extensions or a differential C-field duality. Flux assignments across M/IIB not identified.",
+  "differential_cochain_proof": "Choose theta with dtheta=pi*e=g*pi*(e/g), normalized integral over S1 fiber. Then (1/g) integral_Y theta wedge pi*(x*y) =1/g mod1, up to orientation.",
+  "examples": [
+    {
+      "Betti_H0_through_H5": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "H3_generator_fiber_pushforward_to_H2_base": [
+        1,
+        -1
+      ],
+      "cohomology_groups": {
+        "H0": "Z",
+        "H1": "0",
+        "H2": "Z",
+        "H3": "Z",
+        "H4": "0",
+        "H5": "Z"
+      },
+      "euler_periods": [
+        1,
+        1
+      ],
+      "gcd": 1,
+      "gysin_H0_to_H2_Smith": [
+        1
+      ],
+      "gysin_H2_to_H4_Smith": [
+        1
+      ],
+      "pi1": "trivial",
+      "torsion_H2_generator_pi_pullback_of_e_over_g": [
+        1,
+        1
+      ],
+      "torsion_H4_generator": "pi*(x*y)",
+      "torsion_linking_H2_H4_unit": "trivial",
+      "torsion_linking_perfect": true
+    },
+    {
+      "Betti_H0_through_H5": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "H3_generator_fiber_pushforward_to_H2_base": [
+        1,
+        -1
+      ],
+      "cohomology_groups": {
+        "H0": "Z",
+        "H1": "0",
+        "H2": "Z + Z_6",
+        "H3": "Z",
+        "H4": "Z_6",
+        "H5": "Z"
+      },
+      "euler_periods": [
+        6,
+        6
+      ],
+      "gcd": 6,
+      "gysin_H0_to_H2_Smith": [
+        6
+      ],
+      "gysin_H2_to_H4_Smith": [
+        6
+      ],
+      "pi1": "Z_6",
+      "torsion_H2_generator_pi_pullback_of_e_over_g": [
+        1,
+        1
+      ],
+      "torsion_H4_generator": "pi*(x*y)",
+      "torsion_linking_H2_H4_unit": "1/6 (mod 1)",
+      "torsion_linking_perfect": true
+    },
+    {
+      "Betti_H0_through_H5": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "H3_generator_fiber_pushforward_to_H2_base": [
+        7,
+        -6
+      ],
+      "cohomology_groups": {
+        "H0": "Z",
+        "H1": "0",
+        "H2": "Z",
+        "H3": "Z",
+        "H4": "0",
+        "H5": "Z"
+      },
+      "euler_periods": [
+        7,
+        6
+      ],
+      "gcd": 1,
+      "gysin_H0_to_H2_Smith": [
+        1
+      ],
+      "gysin_H2_to_H4_Smith": [
+        1
+      ],
+      "pi1": "trivial",
+      "torsion_H2_generator_pi_pullback_of_e_over_g": [
+        7,
+        6
+      ],
+      "torsion_H4_generator": "pi*(x*y)",
+      "torsion_linking_H2_H4_unit": "trivial",
+      "torsion_linking_perfect": true
+    },
+    {
+      "Betti_H0_through_H5": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "H3_generator_fiber_pushforward_to_H2_base": [
+        2,
+        -3
+      ],
+      "cohomology_groups": {
+        "H0": "Z",
+        "H1": "0",
+        "H2": "Z + Z_3",
+        "H3": "Z",
+        "H4": "Z_3",
+        "H5": "Z"
+      },
+      "euler_periods": [
+        6,
+        9
+      ],
+      "gcd": 3,
+      "gysin_H0_to_H2_Smith": [
+        3
+      ],
+      "gysin_H2_to_H4_Smith": [
+        3
+      ],
+      "pi1": "Z_3",
+      "torsion_H2_generator_pi_pullback_of_e_over_g": [
+        2,
+        3
+      ],
+      "torsion_H4_generator": "pi*(x*y)",
+      "torsion_linking_H2_H4_unit": "1/3 (mod 1)",
+      "torsion_linking_perfect": true
+    },
+    {
+      "Betti_H0_through_H5": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "H3_generator_fiber_pushforward_to_H2_base": [
+        100,
+        -101
+      ],
+      "cohomology_groups": {
+        "H0": "Z",
+        "H1": "0",
+        "H2": "Z",
+        "H3": "Z",
+        "H4": "0",
+        "H5": "Z"
+      },
+      "euler_periods": [
+        100,
+        101
+      ],
+      "gcd": 1,
+      "gysin_H0_to_H2_Smith": [
+        1
+      ],
+      "gysin_H2_to_H4_Smith": [
+        1
+      ],
+      "pi1": "trivial",
+      "torsion_H2_generator_pi_pullback_of_e_over_g": [
+        100,
+        101
+      ],
+      "torsion_H4_generator": "pi*(x*y)",
+      "torsion_linking_H2_H4_unit": "trivial",
+      "torsion_linking_perfect": true
+    },
+    {
+      "Betti_H0_through_H5": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "H3_generator_fiber_pushforward_to_H2_base": [
+        0,
+        -1
+      ],
+      "cohomology_groups": {
+        "H0": "Z",
+        "H1": "0",
+        "H2": "Z + Z_7",
+        "H3": "Z",
+        "H4": "Z_7",
+        "H5": "Z"
+      },
+      "euler_periods": [
+        0,
+        7
+      ],
+      "gcd": 7,
+      "gysin_H0_to_H2_Smith": [
+        7
+      ],
+      "gysin_H2_to_H4_Smith": [
+        7
+      ],
+      "pi1": "Z_7",
+      "torsion_H2_generator_pi_pullback_of_e_over_g": [
+        0,
+        1
+      ],
+      "torsion_H4_generator": "pi*(x*y)",
+      "torsion_linking_H2_H4_unit": "1/7 (mod 1)",
+      "torsion_linking_perfect": true
+    },
+    {
+      "Betti_H0_through_H5": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "H3_generator_fiber_pushforward_to_H2_base": [
+        2,
+        -3
+      ],
+      "cohomology_groups": {
+        "H0": "Z",
+        "H1": "0",
+        "H2": "Z + Z_6",
+        "H3": "Z",
+        "H4": "Z_6",
+        "H5": "Z"
+      },
+      "euler_periods": [
+        12,
+        18
+      ],
+      "gcd": 6,
+      "gysin_H0_to_H2_Smith": [
+        6
+      ],
+      "gysin_H2_to_H4_Smith": [
+        6
+      ],
+      "pi1": "Z_6",
+      "torsion_H2_generator_pi_pullback_of_e_over_g": [
+        2,
+        3
+      ],
+      "torsion_H4_generator": "pi*(x*y)",
+      "torsion_linking_H2_H4_unit": "1/6 (mod 1)",
+      "torsion_linking_perfect": true
+    },
+    {
+      "Betti_H0_through_H5": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "H3_generator_fiber_pushforward_to_H2_base": [
+        -2,
+        -3
+      ],
+      "cohomology_groups": {
+        "H0": "Z",
+        "H1": "0",
+        "H2": "Z + Z_3",
+        "H3": "Z",
+        "H4": "Z_3",
+        "H5": "Z"
+      },
+      "euler_periods": [
+        -6,
+        9
+      ],
+      "gcd": 3,
+      "gysin_H0_to_H2_Smith": [
+        3
+      ],
+      "gysin_H2_to_H4_Smith": [
+        3
+      ],
+      "pi1": "Z_3",
+      "torsion_H2_generator_pi_pullback_of_e_over_g": [
+        -2,
+        3
+      ],
+      "torsion_H4_generator": "pi*(x*y)",
+      "torsion_linking_H2_H4_unit": "1/3 (mod 1)",
+      "torsion_linking_perfect": true
+    }
+  ],
+  "status": "PASS_IIB_GYSIN_PERFECT_ZG_TORSION_LINKING",
+  "theorem": "For nonzero Euler e=p*x+q*y over S2xS2, H\u00b2(Y)=Z\u2295Z_g, H\u00b3(Y)=Z, H\u2074(Y)=Z_g, pi1(Y)=Z_g, g=gcd(p,q). In compatible torsion generators, the cohomological linking pairing H\u00b2_tor x H\u2074_tor -> Q/Z has value \u00b11/g."
+}

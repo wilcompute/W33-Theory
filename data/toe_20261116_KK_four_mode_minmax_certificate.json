@@ -1,0 +1,131 @@
+{
+  "classical_BF_gap": 1.0169440813078374,
+  "equal_flux_lower_m2L2": -5.016944081307837,
+  "hypothetical_physical_norm_bound": "||H_N-H_equal|| <= K*|eta(N)-1/2| + C*(lp/L)^6, where K and C MUST be computed from the actual gauge-constrained 11D operator.",
+  "illustrative_sufficient_N": [
+    {
+      "assumed_R4_C": 100.0,
+      "assumed_norm_derivative_K": 1.0,
+      "first_N_with_sufficient_bound": 2
+    },
+    {
+      "assumed_R4_C": 100.0,
+      "assumed_norm_derivative_K": 5.0,
+      "first_N_with_sufficient_bound": 6
+    },
+    {
+      "assumed_R4_C": 100.0,
+      "assumed_norm_derivative_K": 10.0,
+      "first_N_with_sufficient_bound": 14
+    },
+    {
+      "assumed_R4_C": 100.0,
+      "assumed_norm_derivative_K": 20.0,
+      "first_N_with_sufficient_bound": 29
+    },
+    {
+      "assumed_R4_C": 100.0,
+      "assumed_norm_derivative_K": 50.0,
+      "first_N_with_sufficient_bound": 74
+    }
+  ],
+  "minmax_theorem": "For a self-adjoint canonical H_N with >=4D subspace of H0 quadratic form <=-4-gap0, and ||H_N-H0||<gap0, H_N has >=4 eigenvalues below -4.",
+  "next_shell_at_6pi_stable_in_this_branch": true,
+  "no_physical_unequal_flux_spectrum_claimed": true,
+  "primitive_wavevectors": [
+    [
+      -1,
+      0
+    ],
+    [
+      0,
+      -1
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "random_matrix_sanity": {
+    "max_eigen_after_bounded_perturb": -4.5190454766026775,
+    "oversized_shift_can_heal_all": true
+  },
+  "real_physical_cos_sin_mode_count": 4,
+  "samples_for_K_5_C_100": [
+    {
+      "BF_gap_equal": 1.0169440813078374,
+      "N": 2,
+      "at_least_four_unstable_if_bound_proven": false,
+      "eta": 0.8552901407888577,
+      "eta_displacement": 0.3552901407888577,
+      "hypothetical_C": 100.0,
+      "hypothetical_K": 5.0,
+      "operator_norm_upper": 1.9168502655981952
+    },
+    {
+      "BF_gap_equal": 1.0169440813078374,
+      "N": 5,
+      "at_least_four_unstable_if_bound_proven": false,
+      "eta": 0.7249144356547434,
+      "eta_displacement": 0.22491443565474345,
+      "hypothetical_C": 100.0,
+      "hypothetical_K": 5.0,
+      "operator_norm_upper": 1.1455174733514282
+    },
+    {
+      "BF_gap_equal": 1.0169440813078374,
+      "N": 10,
+      "at_least_four_unstable_if_bound_proven": true,
+      "eta": 0.6336872976824344,
+      "eta_displacement": 0.13368729768243437,
+      "hypothetical_C": 100.0,
+      "hypothetical_K": 5.0,
+      "operator_norm_upper": 0.6735204491373011
+    },
+    {
+      "BF_gap_equal": 1.0169440813078374,
+      "N": 20,
+      "at_least_four_unstable_if_bound_proven": true,
+      "eta": 0.5717961196966005,
+      "eta_displacement": 0.07179611969660049,
+      "hypothetical_C": 100.0,
+      "hypothetical_K": 5.0,
+      "operator_norm_upper": 0.36023722850161
+    },
+    {
+      "BF_gap_equal": 1.0169440813078374,
+      "N": 50,
+      "at_least_four_unstable_if_bound_proven": true,
+      "eta": 0.5296075967065482,
+      "eta_displacement": 0.029607596706548223,
+      "hypothetical_C": 100.0,
+      "hypothetical_K": 5.0,
+      "operator_norm_upper": 0.14823828018489474
+    },
+    {
+      "BF_gap_equal": 1.0169440813078374,
+      "N": 100,
+      "at_least_four_unstable_if_bound_proven": true,
+      "eta": 0.5149132049864158,
+      "eta_displacement": 0.014913204986415796,
+      "hypothetical_C": 100.0,
+      "hypothetical_K": 5.0,
+      "operator_norm_upper": 0.07461606997751924
+    },
+    {
+      "BF_gap_equal": 1.0169440813078374,
+      "N": 500,
+      "at_least_four_unstable_if_bound_proven": true,
+      "eta": 0.5029969043009584,
+      "eta_displacement": 0.0029969043009584473,
+      "hypothetical_C": 100.0,
+      "hypothetical_K": 5.0,
+      "operator_norm_upper": 0.014986522926867193
+    }
+  ],
+  "status": "PASS_FOUR_MODE_SQUARE_TORUS_KK_MINMAX_BOUND"
+}

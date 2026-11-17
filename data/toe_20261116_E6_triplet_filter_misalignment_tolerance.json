@@ -1,0 +1,142 @@
+{
+  "coefficient_tuning": "The exact cancellation requires the three interpolation conditions to persist after threshold corrections and RG running. Without an exact symmetry, no all-orders protection has been demonstrated.",
+  "linear_sensitivity": "For t=+/-2+delta, F(t)=(+/-4delta+delta\u00b2)/5. A generic detuning reintroduces triplet exchange at first order; rate scales delta\u00b2 to leading order.",
+  "proton_bound_high_yukawa": {
+    "cases": [
+      {
+        "eigenvalue_detuning_magnitude": 0.0,
+        "passes_experimental_limit": true,
+        "single_operator_lifetime_years": "inf",
+        "worst_case_up_triplet_coupling_fraction": 0.0
+      },
+      {
+        "eigenvalue_detuning_magnitude": 0.01,
+        "passes_experimental_limit": true,
+        "single_operator_lifetime_years": "5.80070641567266e+36",
+        "worst_case_up_triplet_coupling_fraction": 0.008020000000000001
+      },
+      {
+        "eigenvalue_detuning_magnitude": 0.05,
+        "passes_experimental_limit": true,
+        "single_operator_lifetime_years": "2.2746761587479464e+35",
+        "worst_case_up_triplet_coupling_fraction": 0.0405
+      },
+      {
+        "eigenvalue_detuning_magnitude": 0.1,
+        "passes_experimental_limit": true,
+        "single_operator_lifetime_years": "5.548836361371681e+34",
+        "worst_case_up_triplet_coupling_fraction": 0.082
+      },
+      {
+        "eigenvalue_detuning_magnitude": 0.2,
+        "passes_experimental_limit": true,
+        "single_operator_lifetime_years": "1.3219379143233837e+34",
+        "worst_case_up_triplet_coupling_fraction": 0.168
+      },
+      {
+        "eigenvalue_detuning_magnitude": 0.25,
+        "passes_experimental_limit": true,
+        "single_operator_lifetime_years": "8.262505343969703e+33",
+        "worst_case_up_triplet_coupling_fraction": 0.2125
+      },
+      {
+        "eigenvalue_detuning_magnitude": 0.5,
+        "passes_experimental_limit": false,
+        "single_operator_lifetime_years": "1.8424876885858364e+33",
+        "worst_case_up_triplet_coupling_fraction": 0.45
+      }
+    ],
+    "max_commuting_eigenvalue_detuning_for_both_triplets": 0.25089800304848264,
+    "required_amplitude_fraction_below": 0.21330836402552947,
+    "unsuppressed_reference": {
+      "M_triplet_GeV": 5e+16,
+      "RG_factor": 2.0,
+      "coefficient_C6_GeV_minus2": 1.0702050022221929e-30,
+      "dressing_factor_inverse_GeV": 5.351025011110965e-08,
+      "lifetime_years": 3.731037569386319e+32,
+      "loop_shape_factor": 1.0,
+      "passes_single_operator_bound": false,
+      "required_triplet_GeV_for_this_yukawa_product": 2.3440243531198726e+17,
+      "sfermion_GeV": 10000.0,
+      "wino_GeV": 1000.0,
+      "yukawa_product": 1e-06
+    }
+  },
+  "proton_bound_low_yukawa": {
+    "cases": [
+      {
+        "eigenvalue_detuning_magnitude": 0.0,
+        "passes_experimental_limit": true,
+        "single_operator_lifetime_years": "inf",
+        "worst_case_up_triplet_coupling_fraction": 0.0
+      },
+      {
+        "eigenvalue_detuning_magnitude": 0.01,
+        "passes_experimental_limit": true,
+        "single_operator_lifetime_years": "5.800706415672658e+40",
+        "worst_case_up_triplet_coupling_fraction": 0.008020000000000001
+      },
+      {
+        "eigenvalue_detuning_magnitude": 0.05,
+        "passes_experimental_limit": true,
+        "single_operator_lifetime_years": "2.2746761587479457e+39",
+        "worst_case_up_triplet_coupling_fraction": 0.0405
+      },
+      {
+        "eigenvalue_detuning_magnitude": 0.1,
+        "passes_experimental_limit": true,
+        "single_operator_lifetime_years": "5.54883636137168e+38",
+        "worst_case_up_triplet_coupling_fraction": 0.082
+      },
+      {
+        "eigenvalue_detuning_magnitude": 0.2,
+        "passes_experimental_limit": true,
+        "single_operator_lifetime_years": "1.3219379143233834e+38",
+        "worst_case_up_triplet_coupling_fraction": 0.168
+      },
+      {
+        "eigenvalue_detuning_magnitude": 0.25,
+        "passes_experimental_limit": true,
+        "single_operator_lifetime_years": "8.262505343969702e+37",
+        "worst_case_up_triplet_coupling_fraction": 0.2125
+      },
+      {
+        "eigenvalue_detuning_magnitude": 0.5,
+        "passes_experimental_limit": true,
+        "single_operator_lifetime_years": "1.8424876885858358e+37",
+        "worst_case_up_triplet_coupling_fraction": 0.45
+      }
+    ],
+    "max_commuting_eigenvalue_detuning_for_both_triplets": 1.0,
+    "required_amplitude_fraction_below": 1.0,
+    "unsuppressed_reference": {
+      "M_triplet_GeV": 5e+16,
+      "RG_factor": 2.0,
+      "coefficient_C6_GeV_minus2": 1.070205002222193e-32,
+      "dressing_factor_inverse_GeV": 5.351025011110965e-08,
+      "lifetime_years": 3.731037569386318e+36,
+      "loop_shape_factor": 1.0,
+      "passes_single_operator_bound": true,
+      "required_triplet_GeV_for_this_yukawa_product": 2344024353119873.0,
+      "sfermion_GeV": 10000.0,
+      "wino_GeV": 1000.0,
+      "yukawa_product": 1e-08
+    }
+  },
+  "scope": "Only commuting diagonal VEV detuning and one effective decay operator. Full E6 adjoint mixing, flavor, messenger renormalization, alternative gauge exchange and proton dressing may dominate.",
+  "status": "PASS_E6_TRIPLET_FILTER_VEV_DETUNING_STRESS_TEST",
+  "unique_quadratic_filter": {
+    "Vandermonde_determinant": 20,
+    "coefficients": [
+      "-4/5",
+      "0",
+      "1/5"
+    ],
+    "polynomial": "x**2/5 - 4/5",
+    "values_at_minus3_minus2_plus2": [
+      1,
+      0,
+      0
+    ]
+  }
+}
