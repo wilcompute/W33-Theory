@@ -1,0 +1,143 @@
+{
+  "classical_theorem": "For equal flux every torus shape has a physical scalar-Maxwell BF gap at least delta; after any true operator correction with norm less than delta the instability remains.",
+  "critical_C_per_N_squared": 92.64323741139292,
+  "examples": [
+    {
+      "AdS_radius_lp": 52.09397078678044,
+      "N": 10000,
+      "all_internal_cycles_above_cutoff": true,
+      "required_min_cycle_radius_lp": 5.0,
+      "shortest_torus_cycle_radius_lp": 16.968829987612168,
+      "sphere_radius_lp": 21.267274517177537,
+      "tau": [
+        0.0,
+        1.0
+      ],
+      "torus_height_limit": 11.51764764593944
+    },
+    {
+      "AdS_radius_lp": 52.09397078678044,
+      "N": 10000,
+      "all_internal_cycles_above_cutoff": true,
+      "required_min_cycle_radius_lp": 5.0,
+      "shortest_torus_cycle_radius_lp": 5.366015198902124,
+      "sphere_radius_lp": 21.267274517177537,
+      "tau": [
+        0.0,
+        10.0
+      ],
+      "torus_height_limit": 11.51764764593944
+    },
+    {
+      "AdS_radius_lp": 52.09397078678044,
+      "N": 10000,
+      "all_internal_cycles_above_cutoff": false,
+      "required_min_cycle_radius_lp": 5.0,
+      "shortest_torus_cycle_radius_lp": 1.6968829987612168,
+      "sphere_radius_lp": 21.267274517177537,
+      "tau": [
+        0.0,
+        100.0
+      ],
+      "torus_height_limit": 11.51764764593944
+    },
+    {
+      "AdS_radius_lp": 241.79879310247037,
+      "N": 1000000,
+      "all_internal_cycles_above_cutoff": true,
+      "required_min_cycle_radius_lp": 5.0,
+      "shortest_torus_cycle_radius_lp": 7.87623317899743,
+      "sphere_radius_lp": 98.71394392030885,
+      "tau": [
+        0.0,
+        100.0
+      ],
+      "torus_height_limit": 248.14019635975987
+    },
+    {
+      "AdS_radius_lp": 241.79879310247037,
+      "N": 1000000,
+      "all_internal_cycles_above_cutoff": false,
+      "required_min_cycle_radius_lp": 5.0,
+      "shortest_torus_cycle_radius_lp": 2.490683622822055,
+      "sphere_radius_lp": 98.71394392030885,
+      "tau": [
+        0.0,
+        1000.0
+      ],
+      "torus_height_limit": 248.14019635975987
+    }
+  ],
+  "nonuniform_cusp_warning": "Uniform BF gap across all shapes does not imply a uniform 11D higher-derivative expansion along singular torus cusps.",
+  "postulated_correction_examples": [
+    {
+      "BF_instability_certified_under_assumed_operator_norm": true,
+      "N": 10,
+      "assumed_upper_bound_dimensionless_C": 1000,
+      "classical_BF_gap_sharp_all_shapes": 0.46354185041878715,
+      "geometry": {
+        "AdS_radius_lp": 5.209397078678045,
+        "N": 10,
+        "all_internal_cycles_above_cutoff": true,
+        "required_min_cycle_radius_lp": 1.0,
+        "shortest_torus_cycle_radius_lp": 1.696882998761217,
+        "sphere_radius_lp": 2.126727451717754,
+        "tau": [
+          0.0,
+          1.0
+        ],
+        "torus_height_limit": 2.8794119114848606
+      },
+      "physics_condition": "Bound is conditional on a true operator-norm control of all corrected physical fluctuation terms and on a controlled (large-cycle) derivative expansion; it is NOT an M-theory R4 coefficient determination.",
+      "postulated_mass_shift_upper_bound": 0.05003515241596927,
+      "required_C_to_cancel_worst_case": 9264.323741139291
+    },
+    {
+      "BF_instability_certified_under_assumed_operator_norm": true,
+      "N": 100,
+      "assumed_upper_bound_dimensionless_C": 1000,
+      "classical_BF_gap_sharp_all_shapes": 0.46354185041878715,
+      "geometry": {
+        "AdS_radius_lp": 11.223305780454734,
+        "N": 100,
+        "all_internal_cycles_above_cutoff": true,
+        "required_min_cycle_radius_lp": 1.0,
+        "shortest_torus_cycle_radius_lp": 3.655823597456496,
+        "sphere_radius_lp": 4.581895398223837,
+        "tau": [
+          0.0,
+          1.0
+        ],
+        "torus_height_limit": 13.365046175719757
+      },
+      "physics_condition": "Bound is conditional on a true operator-norm control of all corrected physical fluctuation terms and on a controlled (large-cycle) derivative expansion; it is NOT an M-theory R4 coefficient determination.",
+      "postulated_mass_shift_upper_bound": 0.0005003515241596928,
+      "required_C_to_cancel_worst_case": 926432.3741139292
+    },
+    {
+      "BF_instability_certified_under_assumed_operator_norm": true,
+      "N": 1000,
+      "assumed_upper_bound_dimensionless_C": 1000,
+      "classical_BF_gap_sharp_all_shapes": 0.46354185041878715,
+      "geometry": {
+        "AdS_radius_lp": 24.179879310247042,
+        "N": 1000,
+        "all_internal_cycles_above_cutoff": true,
+        "required_min_cycle_radius_lp": 1.0,
+        "shortest_torus_cycle_radius_lp": 7.876233178997431,
+        "sphere_radius_lp": 9.871394392030886,
+        "tau": [
+          0.0,
+          1.0
+        ],
+        "torus_height_limit": 62.03504908993999
+      },
+      "physics_condition": "Bound is conditional on a true operator-norm control of all corrected physical fluctuation terms and on a controlled (large-cycle) derivative expansion; it is NOT an M-theory R4 coefficient determination.",
+      "postulated_mass_shift_upper_bound": 5.003515241596926e-06,
+      "required_C_to_cancel_worst_case": 92643237.41139293
+    }
+  ],
+  "shape_control_height_formula": "Im(tau) <= ((9*pi*N/2)^(2/3))/(3*pi*radius_cutoff^2)",
+  "sharp_delta": 0.46354185041878715,
+  "status": "PASS_CONTROLLED_SHAPE_R4_SPECTRAL_FIREWALL"
+}

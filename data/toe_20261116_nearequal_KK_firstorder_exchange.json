@@ -1,0 +1,66 @@
+{
+  "assumptions": "Requires exact 11D spherical exchange covariance, no eigenvalue crossing at the selected mode, smooth gauge fixing and kinetic inner product. Unequal-flux KK operator and O(N^-2) term remain uncomputed.",
+  "coefficient_of_1_over_N": -1.6823331958573386,
+  "conditional_true_physical_eigenmass_expansion": "m^2 L^2=m_equal^2 L^2-(3*pi/(2N))*(1-8/sqrt(4+48*pi))+O(1/N^2)",
+  "geometry_expansion": "lambda(N)=3*pi*(1-1/(2N))+O(1/N^2)",
+  "proof_outline": "At fixed mean mixed flux, interchange of the two spheres sends eta-1/2 to its negative. An isolated scalar-Maxwell eigenbranch in a smooth constrained physical operator has no linear anisotropy term. Mean flux changes by 1/(2N), shifting the torus Laplacian linearly.",
+  "rows": [
+    {
+      "N": 10,
+      "N_times_lambda_minus_lambda0": -6.388065086012933,
+      "N_times_proxy_mass_minus_mass0": -2.210415204514309,
+      "equal_flux_formula_at_unequal_geometry_PROXY_NOT_EIGENMASS": -5.237985601759268,
+      "eta": 0.6336872976824344,
+      "lambda_from_exact_period_geometry": 8.785971452168086,
+      "relative_mixed_flux_detuning": 0.1,
+      "torus_area_over_AdS_L2": 4.493346901851755,
+      "warning": "At nonzero unequal flux the complete metric-C3 KK matrix is needed for an exact mass. The proxy differs from true mass at order delta^2 only IF the full isolated physical eigenbranch is analytic and exchange-even."
+    },
+    {
+      "N": 100,
+      "N_times_lambda_minus_lambda0": -4.932317709027068,
+      "N_times_proxy_mass_minus_mass0": -1.7567957646615895,
+      "equal_flux_formula_at_unequal_geometry_PROXY_NOT_EIGENMASS": -5.034512038954453,
+      "eta": 0.5149132049864158,
+      "lambda_from_exact_period_geometry": 9.375454783679109,
+      "relative_mixed_flux_detuning": 0.01,
+      "torus_area_over_AdS_L2": 4.210826942825417,
+      "warning": "At nonzero unequal flux the complete metric-C3 KK matrix is needed for an exact mass. The proxy differs from true mass at order delta^2 only IF the full isolated physical eigenbranch is analytic and exchange-even."
+    },
+    {
+      "N": 1000,
+      "N_times_lambda_minus_lambda0": -4.734736570993547,
+      "N_times_proxy_mass_minus_mass0": -1.689938765942145,
+      "equal_flux_formula_at_unequal_geometry_PROXY_NOT_EIGENMASS": -5.01863402007378,
+      "eta": 0.5014992380185931,
+      "lambda_from_exact_period_geometry": 9.420043224198386,
+      "relative_mixed_flux_detuning": 0.001,
+      "torus_area_over_AdS_L2": 4.190895589835992,
+      "warning": "At nonzero unequal flux the complete metric-C3 KK matrix is needed for an exact mass. The proxy differs from true mass at order delta^2 only IF the full isolated physical eigenbranch is analytic and exchange-even."
+    },
+    {
+      "N": 10000,
+      "N_times_lambda_minus_lambda0": -4.714627005526495,
+      "N_times_proxy_mass_minus_mass0": -1.683095242803745,
+      "equal_flux_formula_at_unequal_geometry_PROXY_NOT_EIGENMASS": -5.017112390832118,
+      "eta": 0.5001499924880018,
+      "lambda_from_exact_period_geometry": 9.424306498068827,
+      "relative_mixed_flux_detuning": 0.0001,
+      "torus_area_over_AdS_L2": 4.188999754246863,
+      "warning": "At nonzero unequal flux the complete metric-C3 KK matrix is needed for an exact mass. The proxy differs from true mass at order delta^2 only IF the full isolated physical eigenbranch is analytic and exchange-even."
+    },
+    {
+      "N": 100000,
+      "N_times_lambda_minus_lambda0": -4.712612815183093,
+      "N_times_proxy_mass_minus_mass0": -1.6824094153378155,
+      "equal_flux_formula_at_unequal_geometry_PROXY_NOT_EIGENMASS": -5.016960905401991,
+      "eta": 0.500014999924988,
+      "lambda_from_exact_period_geometry": 9.424730834641228,
+      "relative_mixed_flux_detuning": 1e-05,
+      "torus_area_over_AdS_L2": 4.188811149836966,
+      "warning": "At nonzero unequal flux the complete metric-C3 KK matrix is needed for an exact mass. The proxy differs from true mass at order delta^2 only IF the full isolated physical eigenbranch is analytic and exchange-even."
+    }
+  ],
+  "status": "PASS_EXCHANGE_SYMMETRY_NEAREQUAL_KK_FIRSTORDER_GEOMETRY",
+  "zero_flux_ratio_mass": -5.016944081307837
+}

@@ -1,0 +1,72 @@
+{
+  "status": "PASS_TWO_RANKONE_27_PLUS_27BAR_MANIFEST_SM_GAUGE_STABILIZER",
+  "source_sector": "Two Higgs 27s in (1,3,bar3), plus their aligned conjugate 27bar partners",
+  "Higgs_VEV_matrices": [
+    [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ]
+  ],
+  "manifest_generator_count": 16,
+  "manifest_broken_generator_count": 12,
+  "manifest_stabilizer_dimension": 4,
+  "manifest_stabilizer": "su(2)_L + u(1)",
+  "exact_stabilizer_generator": {
+    "left": "Matrix([[1, 0, 0], [0, 1, 0], [0, 0, -2]])",
+    "right": "Matrix([[4, 0, 0], [0, -2, 0], [0, 0, -2]])"
+  },
+  "mass_gram_charpoly": "lambda**4*(2*lambda - 1)**7*(4*lambda - 1)**4*(6*lambda - 5)/196608",
+  "mass2_spectrum_equal_couplings_with_two_conjugate_pairs": [
+    [
+      "0",
+      4
+    ],
+    [
+      "g^2*v^2",
+      4
+    ],
+    [
+      "2*g^2*v^2",
+      7
+    ],
+    [
+      "10*g^2*v^2/3",
+      1
+    ]
+  ],
+  "all_Higgs_polarized_cubic_det_F_terms_zero": true,
+  "D_flatness": "Pairwise compact-group moment maps cancel for 27 VEV and aligned 27bar conjugate partner.",
+  "unproven": "Extra 54 E6 generators' stabilizer; identification and normalization of U1_Y; full SUSY superpotential F-terms with mass/singlet terms; scalar Hessian and all 3 family chirality.",
+  "scale_note": "VEV v is arbitrary here, not dynamically determined.",
+  "phenomenological_boundary": "Matching SM Lie-algebra subgroup is NOT derivation of the Standard Model or TOE."
+}

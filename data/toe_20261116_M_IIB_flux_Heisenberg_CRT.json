@@ -1,0 +1,168 @@
+{
+  "CRT_example": {
+    "CRT_group_isomorphism": "H_6 is H_2 x H_3",
+    "H_gh_order": 216,
+    "g": 2,
+    "h": 3,
+    "qutrit_factor_appears": true
+  },
+  "H9_not_H3_times_H3": "H9 center has exponent 9 whereas center of H3 x H3 has exponent 3.",
+  "checks": [
+    {
+      "center_order": 1,
+      "commutator_of_charge_vectors": "(0,0,b*a_prime-b_prime*a) modulo g",
+      "g": 1,
+      "group_order": 1,
+      "nonabelian": false,
+      "quotient_order": 1
+    },
+    {
+      "center_order": 2,
+      "commutator_of_charge_vectors": "(0,0,b*a_prime-b_prime*a) modulo g",
+      "g": 2,
+      "group_order": 8,
+      "nonabelian": true,
+      "quotient_order": 4
+    },
+    {
+      "center_order": 3,
+      "commutator_of_charge_vectors": "(0,0,b*a_prime-b_prime*a) modulo g",
+      "g": 3,
+      "group_order": 27,
+      "nonabelian": true,
+      "quotient_order": 9
+    },
+    {
+      "center_order": 4,
+      "commutator_of_charge_vectors": "(0,0,b*a_prime-b_prime*a) modulo g",
+      "g": 4,
+      "group_order": 64,
+      "nonabelian": true,
+      "quotient_order": 16
+    },
+    {
+      "center_order": 6,
+      "commutator_of_charge_vectors": "(0,0,b*a_prime-b_prime*a) modulo g",
+      "g": 6,
+      "group_order": 216,
+      "nonabelian": true,
+      "quotient_order": 36
+    },
+    {
+      "center_order": 9,
+      "commutator_of_charge_vectors": "(0,0,b*a_prime-b_prime*a) modulo g",
+      "g": 9,
+      "group_order": 729,
+      "nonabelian": true,
+      "quotient_order": 81
+    }
+  ],
+  "mathematical_model_only": true,
+  "not_proven_physically": "Actual flux C-field translation operators' projective commutator and their overlap with IIB winding Hilbert space have not been computed.",
+  "quantized_flux_topology_contrast": [
+    {
+      "equal_candidate_H_group_order": 8,
+      "equal_candidate_quantized_space_dimension": 2,
+      "equal_charge_pair": [
+        2,
+        2
+      ],
+      "equal_g": 2,
+      "near_equal_candidate_H_group_order": 1,
+      "near_equal_charge_pair": [
+        3,
+        2
+      ],
+      "near_equal_g": 1,
+      "warning": "Topological torsion and a chosen projective quantization may disappear although actual eleven-dimensional propagating KK modes vary smoothly."
+    },
+    {
+      "equal_candidate_H_group_order": 27,
+      "equal_candidate_quantized_space_dimension": 3,
+      "equal_charge_pair": [
+        3,
+        3
+      ],
+      "equal_g": 3,
+      "near_equal_candidate_H_group_order": 1,
+      "near_equal_charge_pair": [
+        4,
+        3
+      ],
+      "near_equal_g": 1,
+      "warning": "Topological torsion and a chosen projective quantization may disappear although actual eleven-dimensional propagating KK modes vary smoothly."
+    },
+    {
+      "equal_candidate_H_group_order": 216,
+      "equal_candidate_quantized_space_dimension": 6,
+      "equal_charge_pair": [
+        6,
+        6
+      ],
+      "equal_g": 6,
+      "near_equal_candidate_H_group_order": 1,
+      "near_equal_charge_pair": [
+        7,
+        6
+      ],
+      "near_equal_g": 1,
+      "warning": "Topological torsion and a chosen projective quantization may disappear although actual eleven-dimensional propagating KK modes vary smoothly."
+    },
+    {
+      "equal_candidate_H_group_order": 729,
+      "equal_candidate_quantized_space_dimension": 9,
+      "equal_charge_pair": [
+        9,
+        9
+      ],
+      "equal_g": 9,
+      "near_equal_candidate_H_group_order": 1,
+      "near_equal_charge_pair": [
+        10,
+        9
+      ],
+      "near_equal_g": 1,
+      "warning": "Topological torsion and a chosen projective quantization may disappear although actual eleven-dimensional propagating KK modes vary smoothly."
+    },
+    {
+      "equal_candidate_H_group_order": 1000,
+      "equal_candidate_quantized_space_dimension": 10,
+      "equal_charge_pair": [
+        10,
+        10
+      ],
+      "equal_g": 10,
+      "near_equal_candidate_H_group_order": 1,
+      "near_equal_charge_pair": [
+        11,
+        10
+      ],
+      "near_equal_g": 1,
+      "warning": "Topological torsion and a chosen projective quantization may disappear although actual eleven-dimensional propagating KK modes vary smoothly."
+    },
+    {
+      "equal_candidate_H_group_order": 1000000,
+      "equal_candidate_quantized_space_dimension": 100,
+      "equal_charge_pair": [
+        100,
+        100
+      ],
+      "equal_g": 100,
+      "near_equal_candidate_H_group_order": 1,
+      "near_equal_charge_pair": [
+        101,
+        100
+      ],
+      "near_equal_g": 1,
+      "warning": "Topological torsion and a chosen projective quantization may disappear although actual eleven-dimensional propagating KK modes vary smoothly."
+    }
+  ],
+  "qutrit": {
+    "Fourier_and_phase_Clifford_checks": true,
+    "Schrodinger_dimension": 3,
+    "existing_repo_comparison": "The H27 finite Clifford algebra itself already appears in w33_pass5727_5730_torsion_family_heisenberg.py.",
+    "g": 3,
+    "matrix_group_order": 27
+  },
+  "status": "PASS_FLUX_INDEXED_HEISENBERG_CANDIDATE_AND_CRT_FALSIFIER"
+}

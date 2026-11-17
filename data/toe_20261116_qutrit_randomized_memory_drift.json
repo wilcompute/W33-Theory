@@ -1,0 +1,204 @@
+{
+  "iid_power_example": {
+    "alpha": 0.01,
+    "beta": 0.1,
+    "eps": 0.01,
+    "eta": 0.7,
+    "expected_clickmatch_probability": 0.5833333333333334,
+    "required_heralded_trials": 1248,
+    "scope": "Prespecified secret randomized bases; IID alt used only for power, not false-positive guarantee",
+    "separability_threshold": 0.51,
+    "v": 0.75
+  },
+  "measurement_requirement": "Current setting independent of prior hidden process; fair-sampling not assumed, all event-ready no-clicks count zero; click POVM dominated by ideal match + epsilon.",
+  "null_theorem": "Conditionally on any prior history, E[Y_t | history] <=1/2+epsilon for every separable prepared state, because the fresh basis is uniform and hidden until after state preparation.",
+  "pvalue_bound": "exp(-2*M*max(0,S/M-1/2-epsilon)^2) valid even for non-IID adaptive separable sources",
+  "scope": "Not device-independent; POVM calibration and independent setting choice must be checked; no experiment carried out.",
+  "status": "PASS_NONIID_RANDOM_SETTING_QUTRIT_SUPERMARTINGALE_WITNESS",
+  "synthetic_samples": [
+    {
+      "click_matches": 1449,
+      "illustrative_first_20_trials": [
+        {
+          "click_match": 0,
+          "setting": 1
+        },
+        {
+          "click_match": 0,
+          "setting": 3
+        },
+        {
+          "click_match": 1,
+          "setting": 2
+        },
+        {
+          "click_match": 1,
+          "setting": 2
+        },
+        {
+          "click_match": 0,
+          "setting": 1
+        },
+        {
+          "click_match": 1,
+          "setting": 2
+        },
+        {
+          "click_match": 1,
+          "setting": 1
+        },
+        {
+          "click_match": 1,
+          "setting": 3
+        },
+        {
+          "click_match": 0,
+          "setting": 2
+        },
+        {
+          "click_match": 1,
+          "setting": 0
+        },
+        {
+          "click_match": 1,
+          "setting": 3
+        },
+        {
+          "click_match": 0,
+          "setting": 0
+        },
+        {
+          "click_match": 1,
+          "setting": 1
+        },
+        {
+          "click_match": 1,
+          "setting": 0
+        },
+        {
+          "click_match": 1,
+          "setting": 1
+        },
+        {
+          "click_match": 1,
+          "setting": 1
+        },
+        {
+          "click_match": 1,
+          "setting": 1
+        },
+        {
+          "click_match": 0,
+          "setting": 1
+        },
+        {
+          "click_match": 1,
+          "setting": 0
+        },
+        {
+          "click_match": 1,
+          "setting": 0
+        }
+      ],
+      "model": "coherent",
+      "no_physical_photon_data": true,
+      "observed_rate": 0.5796,
+      "reject_separability_at_one_percent": true,
+      "seed": 20261116,
+      "separable_null_supermartingale_p_bound": 3.0271937126909865e-11,
+      "trials": 2500
+    },
+    {
+      "click_matches": 889,
+      "illustrative_first_20_trials": [
+        {
+          "click_match": 0,
+          "setting": 1
+        },
+        {
+          "click_match": 0,
+          "setting": 3
+        },
+        {
+          "click_match": 0,
+          "setting": 2
+        },
+        {
+          "click_match": 0,
+          "setting": 2
+        },
+        {
+          "click_match": 1,
+          "setting": 1
+        },
+        {
+          "click_match": 0,
+          "setting": 2
+        },
+        {
+          "click_match": 1,
+          "setting": 1
+        },
+        {
+          "click_match": 0,
+          "setting": 3
+        },
+        {
+          "click_match": 0,
+          "setting": 2
+        },
+        {
+          "click_match": 1,
+          "setting": 0
+        },
+        {
+          "click_match": 0,
+          "setting": 3
+        },
+        {
+          "click_match": 0,
+          "setting": 0
+        },
+        {
+          "click_match": 1,
+          "setting": 1
+        },
+        {
+          "click_match": 1,
+          "setting": 0
+        },
+        {
+          "click_match": 1,
+          "setting": 1
+        },
+        {
+          "click_match": 1,
+          "setting": 1
+        },
+        {
+          "click_match": 1,
+          "setting": 1
+        },
+        {
+          "click_match": 0,
+          "setting": 1
+        },
+        {
+          "click_match": 1,
+          "setting": 0
+        },
+        {
+          "click_match": 1,
+          "setting": 0
+        }
+      ],
+      "model": "adaptive_separable",
+      "no_physical_photon_data": true,
+      "observed_rate": 0.3556,
+      "reject_separability_at_one_percent": false,
+      "seed": 20261116,
+      "separable_null_supermartingale_p_bound": 1.0,
+      "trials": 2500
+    }
+  ]
+}
