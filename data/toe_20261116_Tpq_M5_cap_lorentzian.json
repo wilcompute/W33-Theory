@@ -1,0 +1,68 @@
+{
+  "open_AdS_chart_refocus_time": 3.141592653589793,
+  "rows": [
+    {
+      "chern_pair": [
+        7,
+        8
+      ],
+      "initial_cap_width": 27.683032198720817,
+      "width_at_first_refocus_without_collision": 32.48275782754232,
+      "round_radial_threshold": 28.417345597227712,
+      "at_equal_probe_action": {
+        "longitudinal_length_over_round_threshold": 0.9980434316540447,
+        "open_AdS_time": 0.9456155079555784,
+        "proper_speed_of_each_front": 0.676394555818311,
+        "relative_Lorentz_factor": 2.686701150997381
+      },
+      "at_round_radial_threshold": {
+        "longitudinal_length_over_round_threshold": 1.0,
+        "open_AdS_time": 0.9860605415367042,
+        "proper_speed_of_each_front": 0.6981910666976474,
+        "relative_Lorentz_factor": 2.9022164314301437
+      }
+    },
+    {
+      "chern_pair": [
+        8,
+        9
+      ],
+      "initial_cap_width": 25.363037939058287,
+      "width_at_first_refocus_without_collision": 30.16378732393945,
+      "round_radial_threshold": 26.098596860610346,
+      "at_equal_probe_action": {
+        "longitudinal_length_over_round_threshold": 0.9977328301489662,
+        "open_AdS_time": 0.9434720663986552,
+        "proper_speed_of_each_front": 0.6756285449331704,
+        "relative_Lorentz_factor": 2.679676308223251
+      },
+      "at_round_radial_threshold": {
+        "longitudinal_length_over_round_threshold": 1.0,
+        "open_AdS_time": 0.986516951944459,
+        "proper_speed_of_each_front": 0.6988327658128486,
+        "relative_Lorentz_factor": 2.9090537884791616
+      }
+    },
+    {
+      "chern_pair": [
+        38,
+        43
+      ],
+      "initial_cap_width": 206.56030427919129,
+      "width_at_first_refocus_without_collision": 211.3545734197549,
+      "round_radial_threshold": 207.25994972882535,
+      "at_equal_probe_action": {
+        "longitudinal_length_over_round_threshold": 0.9999535445845524,
+        "open_AdS_time": 0.9562205989141744,
+        "proper_speed_of_each_front": 0.6800101514139318,
+        "relative_Lorentz_factor": 2.7203336365753534
+      },
+      "at_round_radial_threshold": {
+        "longitudinal_length_over_round_threshold": 1.0,
+        "open_AdS_time": 0.9632802355945784,
+        "proper_speed_of_each_front": 0.6838446281884845,
+        "relative_Lorentz_factor": 2.756880789404958
+      }
+    }
+  ]
+}
