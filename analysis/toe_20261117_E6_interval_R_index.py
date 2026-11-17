@@ -82,7 +82,7 @@ def obstruction(matrix, target):
     return None
 
 
-def representation_traces(weights, cubic, parity, basis):
+def representation_traces(weights, cubic, parity, basis, include_650=False):
     exterior, symmetric = Counter(), Counter()
     for i in range(len(weights)):
         symmetric[2*weights[i]] += 1
@@ -93,14 +93,22 @@ def representation_traces(weights, cubic, parity, basis):
         # The cubic identifies the dual 27 summand of the symmetric square.
         symmetric[-weights[i]] -= parity[i]
     adjoint = adjoint_index(weights, cubic, parity, parity, basis)
-    return {
+    traces = {
         "adjoint_78": {w: -adjoint[w] for w in basis},
         "exterior_square_351": exterior,
         "symmetric_square_minus_dual_351prime": symmetric,
     }
+    if include_650:
+        product_trace = Counter()
+        for i, j in product(range(len(weights)), repeat=2):
+            product_trace[weights[i]-weights[j]] += parity[i]*parity[j]
+        product_trace[0] -= 1
+        product_trace.subtract(traces["adjoint_78"])
+        traces["tensor_product_minus_1_and_78_650"] = product_trace
+    return traces
 
 
-def neutral_nonabelian_traces(weights, cubic, parity):
+def neutral_nonabelian_traces(weights, cubic, parity, include_650=False):
     """Extract the color octet and weak triplet via the Weyl denominator."""
     h1, h2, weak = (1, -1, 0), (0, 1, -1), (1, -1, 0)
     cartan = []
@@ -136,25 +144,35 @@ def neutral_nonabelian_traces(weights, cubic, parity):
     def pair(character):
         return [extract(character, highest) for highest in ((1, 1, 0), (0, 0, 2))]
 
-    return {
+    traces = {
         "adjoint_78": [1, 1],
         "exterior_square_351": pair(exterior),
         "symmetric_square_minus_dual_351prime": pair(symmetric),
     }
+    if include_650:
+        product_trace = Counter()
+        for i, j in product(range(len(weights)), repeat=2):
+            if weights[i] == weights[j]:
+                key = tuple(a-b for a, b in zip(cartan[i], cartan[j], strict=True))
+                product_trace[key] += parity[i]*parity[j]
+        traces["tensor_product_minus_1_and_78_650"] = [v-1 for v in pair(product_trace)]
+    return traces
 
 
-def certificate():
+def certificate(right_reflection=None, include_650=False):
     weights = hypercharge_integer_weights()
     cubic = cubic_monomials()
     components, gauge_signs = left_reflections(weights, cubic)
-    right = tuple((-1 if w % 2 else 1) for w in weights)
+    default_right = tuple((-1 if w % 2 else 1) for w in weights)
+    right = default_right if right_reflection is None else tuple(right_reflection)
     assert right in gauge_signs
     trace_counts = Counter(map(sum, gauge_signs))
     assert trace_counts == {27: 1, 3: 4, -5: 3}
     traces = sorted({eta*sum(signs) for signs in gauge_signs for eta in (-1, 1)})
     assert traces == [-27, -5, -3, 3, 5, 27]
     basis = list(range(-12, 13))
-    assert sum(adjoint_index(weights, cubic, (1,)*len(weights), right, basis).values()) == -38
+    if right_reflection is None:
+        assert sum(adjoint_index(weights, cubic, (1,)*len(weights), right, basis).values()) == -38
     kinds_by_left = defaultdict(set)
     for conjugate, right_eta, left_eta, left in product(
         (False, True), (-1, 1), (-1, 1), gauge_signs,
@@ -164,12 +182,15 @@ def certificate():
             index[-w if conjugate else w] += (right_eta*r+left_eta*l)//2
         kinds_by_left[left].add(tuple(index[w] for w in basis))
     target = sp.Matrix([2 if abs(w) == 3 else 0 for w in basis])
-    right_traces = representation_traces(weights, cubic, right, basis)
-    identity_traces = representation_traces(weights, cubic, (1,)*len(weights), basis)
-    assert [sum(trace.values()) for trace in identity_traces.values()] == [78, 351, 351]
-    right_neutral = neutral_nonabelian_traces(weights, cubic, right)
-    identity_neutral = neutral_nonabelian_traces(weights, cubic, (1,)*len(weights))
+    right_traces = representation_traces(weights, cubic, right, basis, include_650)
+    identity_traces = representation_traces(weights, cubic, (1,)*len(weights), basis, include_650)
+    expected_dimensions = [78, 351, 351] + ([650] if include_650 else [])
+    assert [sum(trace.values()) for trace in identity_traces.values()] == expected_dimensions
+    right_neutral = neutral_nonabelian_traces(weights, cubic, right, include_650)
+    identity_neutral = neutral_nonabelian_traces(weights, cubic, (1,)*len(weights), include_650)
     cases = []
+    all_label = "all_four" if include_650 else "all_three"
+    combined_label = f"{all_label}_together"
     for left, kinds in kinds_by_left.items():
         neutral_singlet = sp.Matrix([int(w == 0) for w in basis])
         matrix = sp.Matrix.hstack(*(sp.Matrix(v) for v in sorted(kinds)), neutral_singlet)
@@ -179,7 +200,8 @@ def certificate():
         gauge_residual = target - sp.Matrix([gauge[w]+12*(w == 0) for w in basis])
         matter_witness = obstruction(matrix, target)
         gauge_witness = obstruction(matrix, gauge_residual)
-        assert matter_witness is not None and gauge_witness is not None
+        if right_reflection is None:
+            assert matter_witness is not None and gauge_witness is not None
 
         # Overestimate allowed brane content by admitting every parity block
         # of the endpoint 27 and its conjugate separately, with either sign.
@@ -190,11 +212,10 @@ def certificate():
             boundary_columns.append(sp.Matrix([contents[w] for w in basis]))
         extended = matrix.row_join(sp.Matrix.hstack(*boundary_columns))
         boundary_witness = obstruction(extended, gauge_residual)
-        assert boundary_witness is not None
-        boundary_deficit = int(sp.Matrix(boundary_witness).dot(gauge_residual))
-        assert boundary_deficit
-        left_traces = representation_traces(weights, cubic, left, basis)
-        left_neutral = neutral_nonabelian_traces(weights, cubic, left)
+        boundary_deficit = (int(sp.Matrix(boundary_witness).dot(gauge_residual))
+                            if boundary_witness is not None else 0)
+        left_traces = representation_traces(weights, cubic, left, basis, include_650)
+        left_neutral = neutral_nonabelian_traces(weights, cubic, left, include_650)
         larger_columns = {}
         refined_columns = {}
         for name, left_trace in left_traces.items():
@@ -218,7 +239,7 @@ def certificate():
                               gauge_residual) is not None
             for name, columns in larger_columns.items()
         }
-        larger_results["all_three_together"] = obstruction(
+        larger_results[combined_label] = obstruction(
             extended.row_join(sp.Matrix.hstack(*(column for cols in larger_columns.values()
                                                  for column in cols))), gauge_residual
         ) is not None
@@ -228,7 +249,7 @@ def certificate():
         refined_target = gauge_residual.col_join(sp.zeros(2, 1))
         for name, columns in {
             "adjoint_78": refined_columns["adjoint_78"],
-            "all_three_together": [col for cols in refined_columns.values() for col in cols],
+            combined_label: [col for cols in refined_columns.values() for col in cols],
         }.items():
             larger_results[name+"_resolving_SM_octet_and_triplet"] = (
                 obstruction(refined_base.row_join(sp.Matrix.hstack(*columns)),
@@ -238,29 +259,33 @@ def certificate():
             *(col for cols in refined_columns.values() for col in cols)
         ))
         strong_witness = obstruction(all_refined, refined_target)
-        assert strong_witness is not None
-        assert all_refined.T*sp.Matrix(strong_witness) == sp.zeros(all_refined.cols, 1)
-        strong_deficit = int(sp.Matrix(strong_witness).dot(refined_target))
-        assert strong_deficit
+        if not include_650 and right_reflection is None:
+            assert strong_witness is not None
+        strong_deficit = 0
+        if strong_witness is not None:
+            assert all_refined.T*sp.Matrix(strong_witness) == sp.zeros(all_refined.cols, 1)
+            strong_deficit = int(sp.Matrix(strong_witness).dot(refined_target))
+            assert strong_deficit
         cases.append({
             "left_odd_SM_blocks": odd,
             "hypermultiplet_span_rank_with_neutral_column": matrix.rank(),
             "adjoint_index": dict(sorted(gauge.items())),
-            "matter_only_obstruction": {w: v for w, v in zip(basis, matter_witness, strict=True)
-                                        if v},
+            "matter_only_obstruction": {w: v for w, v in zip(
+                basis, matter_witness or [0]*len(basis), strict=True) if v},
             "obstruction_with_gauge_and_boundary_27_blocks": {
-                w: value for w, value in zip(basis, boundary_witness, strict=True) if value
+                w: value for w, value in zip(
+                    basis, boundary_witness or [0]*len(basis), strict=True) if value
             },
             "target_deficit_in_that_functional": boundary_deficit,
             "index_obstruction_with_additional_bulk_representations": larger_results,
             "left_neutral_octet_and_triplet_traces": left_neutral,
-            "obstruction_with_all_three_larger_bulk_representations": {
+            f"obstruction_with_{all_label}_larger_bulk_representations": {
                 label: value for label, value in zip(
                     [f"w={w}" for w in basis]+["color_octet", "weak_triplet"],
-                    strong_witness, strict=True,
+                    strong_witness or [0]*(len(basis)+2), strict=True,
                 ) if value
             },
-            "target_deficit_with_all_three_larger_bulk_representations": strong_deficit,
+            f"target_deficit_with_{all_label}_larger_bulk_representations": strong_deficit,
         })
     return {
         "SM_blocks": [{"w": weights[c[0]], "indices": c} for c in components],

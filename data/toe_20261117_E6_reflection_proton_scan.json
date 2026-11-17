@@ -1,0 +1,1747 @@
+{
+  "right_reflections": [
+    {
+      "odd_SM_blocks": [
+        0,
+        1,
+        2,
+        9
+      ],
+      "Higgs_intrinsic_sign": -1,
+      "frame_parities": [
+        1,
+        1
+      ],
+      "boundary_lie_dimension": 38,
+      "chiral_candidate_pairs_by_weight": {},
+      "gauge_mixed_baryon_grades": {}
+    },
+    {
+      "odd_SM_blocks": [
+        0,
+        1,
+        3,
+        4,
+        6,
+        7
+      ],
+      "Higgs_intrinsic_sign": -1,
+      "frame_parities": [
+        -1,
+        1
+      ],
+      "boundary_lie_dimension": 38,
+      "chiral_candidate_pairs_by_weight": {
+        "-2": 54
+      },
+      "gauge_mixed_baryon_grades": {
+        "-1": {
+          "baryon_charges_times_three": [
+            -1,
+            2
+          ],
+          "trace_metric_witness": {
+            "current_indices": [
+              [
+                1,
+                9
+              ],
+              [
+                16,
+                24
+              ]
+            ],
+            "baryon_difference_times_three": -3,
+            "trace_projector_entry": "-1/6"
+          }
+        },
+        "1": {
+          "baryon_charges_times_three": [
+            -2,
+            1
+          ],
+          "trace_metric_witness": {
+            "current_indices": [
+              [
+                8,
+                18
+              ],
+              [
+                22,
+                17
+              ]
+            ],
+            "baryon_difference_times_three": 3,
+            "trace_projector_entry": "1/6"
+          }
+        }
+      }
+    },
+    {
+      "odd_SM_blocks": [
+        0,
+        2,
+        3,
+        5,
+        6,
+        8
+      ],
+      "Higgs_intrinsic_sign": -1,
+      "frame_parities": [
+        1,
+        -1
+      ],
+      "boundary_lie_dimension": 38,
+      "chiral_candidate_pairs_by_weight": {},
+      "gauge_mixed_baryon_grades": {}
+    },
+    {
+      "odd_SM_blocks": [
+        0,
+        4,
+        5,
+        7,
+        8,
+        9
+      ],
+      "Higgs_intrinsic_sign": -1,
+      "frame_parities": [
+        -1,
+        -1
+      ],
+      "boundary_lie_dimension": 46,
+      "chiral_candidate_pairs_by_weight": {
+        "-2": 54
+      },
+      "gauge_mixed_baryon_grades": {
+        "-1": {
+          "baryon_charges_times_three": [
+            -1,
+            2
+          ],
+          "trace_metric_witness": {
+            "current_indices": [
+              [
+                1,
+                9
+              ],
+              [
+                16,
+                24
+              ]
+            ],
+            "baryon_difference_times_three": -3,
+            "trace_projector_entry": "-1/6"
+          }
+        },
+        "1": {
+          "baryon_charges_times_three": [
+            -2,
+            1
+          ],
+          "trace_metric_witness": {
+            "current_indices": [
+              [
+                8,
+                18
+              ],
+              [
+                22,
+                17
+              ]
+            ],
+            "baryon_difference_times_three": 3,
+            "trace_projector_entry": "1/6"
+          }
+        }
+      }
+    },
+    {
+      "odd_SM_blocks": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8
+      ],
+      "Higgs_intrinsic_sign": 1,
+      "frame_parities": [
+        -1,
+        -1
+      ],
+      "boundary_lie_dimension": 38,
+      "chiral_candidate_pairs_by_weight": {
+        "2": 54
+      },
+      "gauge_mixed_baryon_grades": {
+        "-5": {
+          "baryon_charges_times_three": [
+            -2,
+            1
+          ],
+          "trace_metric_witness": {
+            "current_indices": [
+              [
+                6,
+                18
+              ],
+              [
+                22,
+                11
+              ]
+            ],
+            "baryon_difference_times_three": 3,
+            "trace_projector_entry": "1/6"
+          }
+        },
+        "5": {
+          "baryon_charges_times_three": [
+            -1,
+            2
+          ],
+          "trace_metric_witness": {
+            "current_indices": [
+              [
+                1,
+                15
+              ],
+              [
+                10,
+                24
+              ]
+            ],
+            "baryon_difference_times_three": -3,
+            "trace_projector_entry": "1/6"
+          }
+        }
+      }
+    },
+    {
+      "odd_SM_blocks": [
+        1,
+        3,
+        5,
+        6,
+        8,
+        9
+      ],
+      "Higgs_intrinsic_sign": 1,
+      "frame_parities": [
+        1,
+        -1
+      ],
+      "boundary_lie_dimension": 46,
+      "chiral_candidate_pairs_by_weight": {
+        "-2": 54,
+        "2": 54
+      },
+      "gauge_mixed_baryon_grades": {
+        "-5": {
+          "baryon_charges_times_three": [
+            -2,
+            1
+          ],
+          "trace_metric_witness": {
+            "current_indices": [
+              [
+                6,
+                18
+              ],
+              [
+                22,
+                11
+              ]
+            ],
+            "baryon_difference_times_three": 3,
+            "trace_projector_entry": "1/6"
+          }
+        },
+        "-1": {
+          "baryon_charges_times_three": [
+            -1,
+            2
+          ],
+          "trace_metric_witness": {
+            "current_indices": [
+              [
+                1,
+                9
+              ],
+              [
+                16,
+                24
+              ]
+            ],
+            "baryon_difference_times_three": -3,
+            "trace_projector_entry": "-1/6"
+          }
+        },
+        "1": {
+          "baryon_charges_times_three": [
+            -2,
+            1
+          ],
+          "trace_metric_witness": {
+            "current_indices": [
+              [
+                8,
+                18
+              ],
+              [
+                22,
+                17
+              ]
+            ],
+            "baryon_difference_times_three": 3,
+            "trace_projector_entry": "1/6"
+          }
+        },
+        "5": {
+          "baryon_charges_times_three": [
+            -1,
+            2
+          ],
+          "trace_metric_witness": {
+            "current_indices": [
+              [
+                1,
+                15
+              ],
+              [
+                10,
+                24
+              ]
+            ],
+            "baryon_difference_times_three": -3,
+            "trace_projector_entry": "1/6"
+          }
+        }
+      }
+    },
+    {
+      "odd_SM_blocks": [
+        2,
+        3,
+        4,
+        6,
+        7,
+        9
+      ],
+      "Higgs_intrinsic_sign": 1,
+      "frame_parities": [
+        -1,
+        1
+      ],
+      "boundary_lie_dimension": 46,
+      "chiral_candidate_pairs_by_weight": {
+        "2": 54
+      },
+      "gauge_mixed_baryon_grades": {
+        "-5": {
+          "baryon_charges_times_three": [
+            -2,
+            1
+          ],
+          "trace_metric_witness": {
+            "current_indices": [
+              [
+                6,
+                18
+              ],
+              [
+                22,
+                11
+              ]
+            ],
+            "baryon_difference_times_three": 3,
+            "trace_projector_entry": "1/6"
+          }
+        },
+        "5": {
+          "baryon_charges_times_three": [
+            -1,
+            2
+          ],
+          "trace_metric_witness": {
+            "current_indices": [
+              [
+                1,
+                15
+              ],
+              [
+                10,
+                24
+              ]
+            ],
+            "baryon_difference_times_three": -3,
+            "trace_projector_entry": "1/6"
+          }
+        }
+      }
+    },
+    {
+      "odd_SM_blocks": [],
+      "Higgs_intrinsic_sign": 1,
+      "frame_parities": [
+        1,
+        1
+      ],
+      "boundary_lie_dimension": 78,
+      "chiral_candidate_pairs_by_weight": {
+        "-2": 54,
+        "2": 54
+      },
+      "gauge_mixed_baryon_grades": {
+        "-5": {
+          "baryon_charges_times_three": [
+            -2,
+            1
+          ],
+          "trace_metric_witness": {
+            "current_indices": [
+              [
+                6,
+                18
+              ],
+              [
+                22,
+                11
+              ]
+            ],
+            "baryon_difference_times_three": 3,
+            "trace_projector_entry": "1/6"
+          }
+        },
+        "-1": {
+          "baryon_charges_times_three": [
+            -1,
+            2
+          ],
+          "trace_metric_witness": {
+            "current_indices": [
+              [
+                1,
+                9
+              ],
+              [
+                16,
+                24
+              ]
+            ],
+            "baryon_difference_times_three": -3,
+            "trace_projector_entry": "-1/6"
+          }
+        },
+        "1": {
+          "baryon_charges_times_three": [
+            -2,
+            1
+          ],
+          "trace_metric_witness": {
+            "current_indices": [
+              [
+                8,
+                18
+              ],
+              [
+                22,
+                17
+              ]
+            ],
+            "baryon_difference_times_three": 3,
+            "trace_projector_entry": "1/6"
+          }
+        },
+        "5": {
+          "baryon_charges_times_three": [
+            -1,
+            2
+          ],
+          "trace_metric_witness": {
+            "current_indices": [
+              [
+                1,
+                15
+              ],
+              [
+                10,
+                24
+              ]
+            ],
+            "baryon_difference_times_three": -3,
+            "trace_projector_entry": "1/6"
+          }
+        }
+      }
+    }
+  ],
+  "protected_right_interval_spectra": [
+    {
+      "right_odd_SM_blocks": [
+        0,
+        1,
+        2,
+        9
+      ],
+      "neutral_octet_and_triplet_multiplicities": {
+        "adjoint_78": [
+          1,
+          1
+        ],
+        "exterior_square_351": [
+          2,
+          2
+        ],
+        "symmetric_square_minus_dual_351prime": [
+          2,
+          2
+        ],
+        "tensor_product_minus_1_and_78_650": [
+          6,
+          5
+        ]
+      },
+      "candidate_left_endpoints": [
+        {
+          "left_odd_SM_blocks": [
+            0,
+            1,
+            2,
+            9
+          ],
+          "hypermultiplet_span_rank_with_neutral_column": 3,
+          "adjoint_index": {
+            "-6": -2,
+            "-5": 6,
+            "-4": -6,
+            "-3": 2,
+            "-2": -3,
+            "-1": 12,
+            "0": -16,
+            "1": 12,
+            "2": -3,
+            "3": 2,
+            "4": -6,
+            "5": 6,
+            "6": -2
+          },
+          "matter_only_obstruction": {
+            "-6": 6,
+            "-4": 4,
+            "-3": 3
+          },
+          "obstruction_with_gauge_and_boundary_27_blocks": {
+            "-5": 1
+          },
+          "target_deficit_in_that_functional": -6,
+          "index_obstruction_with_additional_bulk_representations": {
+            "adjoint_78": true,
+            "exterior_square_351": true,
+            "symmetric_square_minus_dual_351prime": true,
+            "tensor_product_minus_1_and_78_650": true,
+            "all_four_together": true,
+            "adjoint_78_resolving_SM_octet_and_triplet": true,
+            "all_four_together_resolving_SM_octet_and_triplet": true
+          },
+          "left_neutral_octet_and_triplet_traces": {
+            "adjoint_78": [
+              1,
+              1
+            ],
+            "exterior_square_351": [
+              2,
+              2
+            ],
+            "symmetric_square_minus_dual_351prime": [
+              2,
+              2
+            ],
+            "tensor_product_minus_1_and_78_650": [
+              6,
+              5
+            ]
+          },
+          "obstruction_with_all_four_larger_bulk_representations": {
+            "w=-10": 10,
+            "w=-9": 51,
+            "w=-7": 9,
+            "w=-5": -10,
+            "w=-3": -6,
+            "w=-1": 2,
+            "w=1": 4
+          },
+          "target_deficit_with_all_four_larger_bulk_representations": -12
+        },
+        {
+          "left_odd_SM_blocks": [
+            0,
+            1,
+            3,
+            4,
+            6,
+            7
+          ],
+          "hypermultiplet_span_rank_with_neutral_column": 4,
+          "adjoint_index": {
+            "-6": -1,
+            "-5": 6,
+            "-4": -3,
+            "-1": 6,
+            "0": -14,
+            "1": 6,
+            "4": -3,
+            "5": 6,
+            "6": -1
+          },
+          "matter_only_obstruction": {
+            "-6": -6,
+            "-4": 2,
+            "-3": 3,
+            "-2": 2
+          },
+          "obstruction_with_gauge_and_boundary_27_blocks": {
+            "-5": 1
+          },
+          "target_deficit_in_that_functional": -6,
+          "index_obstruction_with_additional_bulk_representations": {
+            "adjoint_78": true,
+            "exterior_square_351": true,
+            "symmetric_square_minus_dual_351prime": true,
+            "tensor_product_minus_1_and_78_650": true,
+            "all_four_together": true,
+            "adjoint_78_resolving_SM_octet_and_triplet": true,
+            "all_four_together_resolving_SM_octet_and_triplet": true
+          },
+          "left_neutral_octet_and_triplet_traces": {
+            "adjoint_78": [
+              1,
+              1
+            ],
+            "exterior_square_351": [
+              0,
+              0
+            ],
+            "symmetric_square_minus_dual_351prime": [
+              0,
+              0
+            ],
+            "tensor_product_minus_1_and_78_650": [
+              2,
+              1
+            ]
+          },
+          "obstruction_with_all_four_larger_bulk_representations": {
+            "w=-12": 492,
+            "w=-9": -243,
+            "w=-8": 8,
+            "w=-7": -29,
+            "w=-6": -18,
+            "w=-4": -60,
+            "w=-3": 33,
+            "w=-2": -16,
+            "w=-1": -11,
+            "w=1": -22,
+            "w=2": 38
+          },
+          "target_deficit_with_all_four_larger_bulk_representations": 66
+        },
+        {
+          "left_odd_SM_blocks": [
+            0,
+            2,
+            3,
+            5,
+            6,
+            8
+          ],
+          "hypermultiplet_span_rank_with_neutral_column": 4,
+          "adjoint_index": {
+            "-6": -1,
+            "-5": 6,
+            "-4": -3,
+            "-1": 6,
+            "0": -14,
+            "1": 6,
+            "4": -3,
+            "5": 6,
+            "6": -1
+          },
+          "matter_only_obstruction": {
+            "-6": -6,
+            "-4": 2,
+            "-3": 3,
+            "-2": 2
+          },
+          "obstruction_with_gauge_and_boundary_27_blocks": {
+            "-5": 1
+          },
+          "target_deficit_in_that_functional": -6,
+          "index_obstruction_with_additional_bulk_representations": {
+            "adjoint_78": true,
+            "exterior_square_351": true,
+            "symmetric_square_minus_dual_351prime": true,
+            "tensor_product_minus_1_and_78_650": true,
+            "all_four_together": true,
+            "adjoint_78_resolving_SM_octet_and_triplet": true,
+            "all_four_together_resolving_SM_octet_and_triplet": true
+          },
+          "left_neutral_octet_and_triplet_traces": {
+            "adjoint_78": [
+              1,
+              1
+            ],
+            "exterior_square_351": [
+              0,
+              0
+            ],
+            "symmetric_square_minus_dual_351prime": [
+              0,
+              0
+            ],
+            "tensor_product_minus_1_and_78_650": [
+              2,
+              1
+            ]
+          },
+          "obstruction_with_all_four_larger_bulk_representations": {
+            "w=-12": 492,
+            "w=-9": -243,
+            "w=-8": 8,
+            "w=-7": -29,
+            "w=-6": -18,
+            "w=-4": -60,
+            "w=-3": 33,
+            "w=-2": -16,
+            "w=-1": -11,
+            "w=1": -22,
+            "w=2": 38
+          },
+          "target_deficit_with_all_four_larger_bulk_representations": 66
+        },
+        {
+          "left_odd_SM_blocks": [
+            0,
+            4,
+            5,
+            7,
+            8,
+            9
+          ],
+          "hypermultiplet_span_rank_with_neutral_column": 5,
+          "adjoint_index": {
+            "-5": 6,
+            "-3": 2,
+            "-2": -3,
+            "0": -16,
+            "2": -3,
+            "3": 2,
+            "5": 6
+          },
+          "matter_only_obstruction": {
+            "-3": 3,
+            "2": 2
+          },
+          "obstruction_with_gauge_and_boundary_27_blocks": {
+            "-5": 1
+          },
+          "target_deficit_in_that_functional": -6,
+          "index_obstruction_with_additional_bulk_representations": {
+            "adjoint_78": true,
+            "exterior_square_351": true,
+            "symmetric_square_minus_dual_351prime": true,
+            "tensor_product_minus_1_and_78_650": true,
+            "all_four_together": true,
+            "adjoint_78_resolving_SM_octet_and_triplet": true,
+            "all_four_together_resolving_SM_octet_and_triplet": true
+          },
+          "left_neutral_octet_and_triplet_traces": {
+            "adjoint_78": [
+              1,
+              1
+            ],
+            "exterior_square_351": [
+              -2,
+              -2
+            ],
+            "symmetric_square_minus_dual_351prime": [
+              -2,
+              -2
+            ],
+            "tensor_product_minus_1_and_78_650": [
+              6,
+              5
+            ]
+          },
+          "obstruction_with_all_four_larger_bulk_representations": {
+            "w=-12": -534,
+            "w=-9": 258,
+            "w=-8": -102,
+            "w=-7": 27,
+            "w=-6": -84,
+            "w=-4": 86,
+            "w=-3": -51,
+            "w=-2": -18,
+            "w=-1": 35,
+            "w=1": 43,
+            "w=2": -34,
+            "w=3": -27,
+            "w=4": 98
+          },
+          "target_deficit_with_all_four_larger_bulk_representations": -156
+        },
+        {
+          "left_odd_SM_blocks": [
+            1,
+            2,
+            4,
+            5,
+            7,
+            8
+          ],
+          "hypermultiplet_span_rank_with_neutral_column": 5,
+          "adjoint_index": {
+            "-2": -3,
+            "-1": 12,
+            "0": -16,
+            "1": 12,
+            "2": -3
+          },
+          "matter_only_obstruction": {
+            "-4": 3,
+            "-3": 3,
+            "-2": 1
+          },
+          "obstruction_with_gauge_and_boundary_27_blocks": {
+            "-6": -6,
+            "-4": -4,
+            "-3": -3,
+            "-1": 1,
+            "1": 2,
+            "2": 2
+          },
+          "target_deficit_in_that_functional": -36,
+          "index_obstruction_with_additional_bulk_representations": {
+            "adjoint_78": false,
+            "exterior_square_351": true,
+            "symmetric_square_minus_dual_351prime": true,
+            "tensor_product_minus_1_and_78_650": true,
+            "all_four_together": false,
+            "adjoint_78_resolving_SM_octet_and_triplet": true,
+            "all_four_together_resolving_SM_octet_and_triplet": true
+          },
+          "left_neutral_octet_and_triplet_traces": {
+            "adjoint_78": [
+              1,
+              1
+            ],
+            "exterior_square_351": [
+              -2,
+              -2
+            ],
+            "symmetric_square_minus_dual_351prime": [
+              -2,
+              -2
+            ],
+            "tensor_product_minus_1_and_78_650": [
+              6,
+              5
+            ]
+          },
+          "obstruction_with_all_four_larger_bulk_representations": {
+            "w=-12": -12456,
+            "w=-10": 13700,
+            "w=-9": 15930,
+            "w=-8": 5500,
+            "w=-7": 2910,
+            "w=-6": -1722,
+            "w=-5": -850,
+            "w=-4": -68,
+            "w=-3": 1785,
+            "w=-2": 1530,
+            "w=-1": 935,
+            "w=1": -425,
+            "w=2": -1190,
+            "w=3": -2295,
+            "w=4": -1296,
+            "w=6": 2754,
+            "color_octet": 5100
+          },
+          "target_deficit_with_all_four_larger_bulk_representations": -6120
+        },
+        {
+          "left_odd_SM_blocks": [
+            1,
+            3,
+            5,
+            6,
+            8,
+            9
+          ],
+          "hypermultiplet_span_rank_with_neutral_column": 5,
+          "adjoint_index": {
+            "-6": -1,
+            "-4": -3,
+            "-3": 2,
+            "-1": 6,
+            "0": -14,
+            "1": 6,
+            "3": 2,
+            "4": -3,
+            "6": -1
+          },
+          "matter_only_obstruction": {
+            "-4": 2,
+            "-3": 3,
+            "-2": 2,
+            "-1": 1
+          },
+          "obstruction_with_gauge_and_boundary_27_blocks": {
+            "-6": -12,
+            "-4": -2,
+            "-3": -3,
+            "-2": 2,
+            "-1": 1,
+            "1": 2
+          },
+          "target_deficit_in_that_functional": -36,
+          "index_obstruction_with_additional_bulk_representations": {
+            "adjoint_78": false,
+            "exterior_square_351": true,
+            "symmetric_square_minus_dual_351prime": true,
+            "tensor_product_minus_1_and_78_650": true,
+            "all_four_together": false,
+            "adjoint_78_resolving_SM_octet_and_triplet": true,
+            "all_four_together_resolving_SM_octet_and_triplet": true
+          },
+          "left_neutral_octet_and_triplet_traces": {
+            "adjoint_78": [
+              1,
+              1
+            ],
+            "exterior_square_351": [
+              0,
+              0
+            ],
+            "symmetric_square_minus_dual_351prime": [
+              0,
+              0
+            ],
+            "tensor_product_minus_1_and_78_650": [
+              2,
+              1
+            ]
+          },
+          "obstruction_with_all_four_larger_bulk_representations": {
+            "w=-12": 4176,
+            "w=-10": 4040,
+            "w=-9": 4464,
+            "w=-8": 376,
+            "w=-7": 936,
+            "w=-6": 24,
+            "w=-5": -640,
+            "w=-4": -552,
+            "w=-3": -399,
+            "w=-2": -40,
+            "w=-1": 123,
+            "w=1": 261,
+            "w=2": 296,
+            "w=3": 15,
+            "w=4": -224,
+            "color_octet": 3840
+          },
+          "target_deficit_with_all_four_larger_bulk_representations": -4608
+        },
+        {
+          "left_odd_SM_blocks": [
+            2,
+            3,
+            4,
+            6,
+            7,
+            9
+          ],
+          "hypermultiplet_span_rank_with_neutral_column": 5,
+          "adjoint_index": {
+            "-6": -1,
+            "-4": -3,
+            "-3": 2,
+            "-1": 6,
+            "0": -14,
+            "1": 6,
+            "3": 2,
+            "4": -3,
+            "6": -1
+          },
+          "matter_only_obstruction": {
+            "-4": 2,
+            "-3": 3,
+            "-2": 2,
+            "-1": 1
+          },
+          "obstruction_with_gauge_and_boundary_27_blocks": {
+            "-6": -12,
+            "-4": -2,
+            "-3": -3,
+            "-2": 2,
+            "-1": 1,
+            "1": 2
+          },
+          "target_deficit_in_that_functional": -36,
+          "index_obstruction_with_additional_bulk_representations": {
+            "adjoint_78": false,
+            "exterior_square_351": true,
+            "symmetric_square_minus_dual_351prime": true,
+            "tensor_product_minus_1_and_78_650": true,
+            "all_four_together": false,
+            "adjoint_78_resolving_SM_octet_and_triplet": true,
+            "all_four_together_resolving_SM_octet_and_triplet": true
+          },
+          "left_neutral_octet_and_triplet_traces": {
+            "adjoint_78": [
+              1,
+              1
+            ],
+            "exterior_square_351": [
+              0,
+              0
+            ],
+            "symmetric_square_minus_dual_351prime": [
+              0,
+              0
+            ],
+            "tensor_product_minus_1_and_78_650": [
+              2,
+              1
+            ]
+          },
+          "obstruction_with_all_four_larger_bulk_representations": {
+            "w=-12": 4176,
+            "w=-10": 4040,
+            "w=-9": 4464,
+            "w=-8": 376,
+            "w=-7": 936,
+            "w=-6": 24,
+            "w=-5": -640,
+            "w=-4": -552,
+            "w=-3": -399,
+            "w=-2": -40,
+            "w=-1": 123,
+            "w=1": 261,
+            "w=2": 296,
+            "w=3": 15,
+            "w=4": -224,
+            "color_octet": 3840
+          },
+          "target_deficit_with_all_four_larger_bulk_representations": -4608
+        },
+        {
+          "left_odd_SM_blocks": [],
+          "hypermultiplet_span_rank_with_neutral_column": 5,
+          "adjoint_index": {
+            "-6": -2,
+            "-4": -6,
+            "-2": -3,
+            "0": -16,
+            "2": -3,
+            "4": -6,
+            "6": -2
+          },
+          "matter_only_obstruction": {
+            "-3": -3,
+            "-1": 1,
+            "1": 2
+          },
+          "obstruction_with_gauge_and_boundary_27_blocks": {
+            "-6": -6,
+            "-4": -1,
+            "-2": 1
+          },
+          "target_deficit_in_that_functional": -15,
+          "index_obstruction_with_additional_bulk_representations": {
+            "adjoint_78": true,
+            "exterior_square_351": true,
+            "symmetric_square_minus_dual_351prime": true,
+            "tensor_product_minus_1_and_78_650": true,
+            "all_four_together": true,
+            "adjoint_78_resolving_SM_octet_and_triplet": true,
+            "all_four_together_resolving_SM_octet_and_triplet": true
+          },
+          "left_neutral_octet_and_triplet_traces": {
+            "adjoint_78": [
+              1,
+              1
+            ],
+            "exterior_square_351": [
+              2,
+              2
+            ],
+            "symmetric_square_minus_dual_351prime": [
+              2,
+              2
+            ],
+            "tensor_product_minus_1_and_78_650": [
+              6,
+              5
+            ]
+          },
+          "obstruction_with_all_four_larger_bulk_representations": {
+            "w=-9": -84,
+            "w=-7": -20,
+            "w=-5": 20,
+            "w=-3": 9,
+            "w=-1": -5,
+            "w=1": -7,
+            "w=3": 3
+          },
+          "target_deficit_with_all_four_larger_bulk_representations": 24
+        }
+      ]
+    },
+    {
+      "right_odd_SM_blocks": [
+        0,
+        2,
+        3,
+        5,
+        6,
+        8
+      ],
+      "neutral_octet_and_triplet_multiplicities": {
+        "adjoint_78": [
+          1,
+          1
+        ],
+        "exterior_square_351": [
+          2,
+          2
+        ],
+        "symmetric_square_minus_dual_351prime": [
+          2,
+          2
+        ],
+        "tensor_product_minus_1_and_78_650": [
+          6,
+          5
+        ]
+      },
+      "candidate_left_endpoints": [
+        {
+          "left_odd_SM_blocks": [
+            0,
+            1,
+            2,
+            9
+          ],
+          "hypermultiplet_span_rank_with_neutral_column": 4,
+          "adjoint_index": {
+            "-6": -1,
+            "-5": 6,
+            "-4": -3,
+            "-1": 6,
+            "0": -14,
+            "1": 6,
+            "4": -3,
+            "5": 6,
+            "6": -1
+          },
+          "matter_only_obstruction": {
+            "-6": -6,
+            "-4": 2,
+            "-3": 3,
+            "-2": 2
+          },
+          "obstruction_with_gauge_and_boundary_27_blocks": {
+            "-5": 1
+          },
+          "target_deficit_in_that_functional": -6,
+          "index_obstruction_with_additional_bulk_representations": {
+            "adjoint_78": true,
+            "exterior_square_351": true,
+            "symmetric_square_minus_dual_351prime": true,
+            "tensor_product_minus_1_and_78_650": true,
+            "all_four_together": true,
+            "adjoint_78_resolving_SM_octet_and_triplet": true,
+            "all_four_together_resolving_SM_octet_and_triplet": true
+          },
+          "left_neutral_octet_and_triplet_traces": {
+            "adjoint_78": [
+              1,
+              1
+            ],
+            "exterior_square_351": [
+              2,
+              2
+            ],
+            "symmetric_square_minus_dual_351prime": [
+              2,
+              2
+            ],
+            "tensor_product_minus_1_and_78_650": [
+              6,
+              5
+            ]
+          },
+          "obstruction_with_all_four_larger_bulk_representations": {
+            "w=-12": 492,
+            "w=-9": -243,
+            "w=-8": 8,
+            "w=-7": -29,
+            "w=-6": -18,
+            "w=-4": -60,
+            "w=-3": 33,
+            "w=-2": -16,
+            "w=-1": -11,
+            "w=1": -22,
+            "w=2": 38
+          },
+          "target_deficit_with_all_four_larger_bulk_representations": 66
+        },
+        {
+          "left_odd_SM_blocks": [
+            0,
+            1,
+            3,
+            4,
+            6,
+            7
+          ],
+          "hypermultiplet_span_rank_with_neutral_column": 3,
+          "adjoint_index": {
+            "-5": 6,
+            "-3": -2,
+            "-2": 3,
+            "0": -12,
+            "2": 3,
+            "3": -2,
+            "5": 6
+          },
+          "matter_only_obstruction": {
+            "-6": -2,
+            "-3": 1
+          },
+          "obstruction_with_gauge_and_boundary_27_blocks": {
+            "-5": 1
+          },
+          "target_deficit_in_that_functional": -6,
+          "index_obstruction_with_additional_bulk_representations": {
+            "adjoint_78": true,
+            "exterior_square_351": true,
+            "symmetric_square_minus_dual_351prime": true,
+            "tensor_product_minus_1_and_78_650": true,
+            "all_four_together": true,
+            "adjoint_78_resolving_SM_octet_and_triplet": true,
+            "all_four_together_resolving_SM_octet_and_triplet": true
+          },
+          "left_neutral_octet_and_triplet_traces": {
+            "adjoint_78": [
+              1,
+              1
+            ],
+            "exterior_square_351": [
+              0,
+              0
+            ],
+            "symmetric_square_minus_dual_351prime": [
+              0,
+              0
+            ],
+            "tensor_product_minus_1_and_78_650": [
+              2,
+              1
+            ]
+          },
+          "obstruction_with_all_four_larger_bulk_representations": {
+            "w=-12": -288,
+            "w=-10": 84,
+            "w=-9": -6,
+            "w=-8": -64,
+            "w=-6": 30,
+            "w=-5": -19,
+            "w=-4": 24,
+            "w=-3": -36,
+            "w=-2": 14,
+            "w=-1": -7,
+            "w=1": 5
+          },
+          "target_deficit_with_all_four_larger_bulk_representations": -72
+        },
+        {
+          "left_odd_SM_blocks": [
+            0,
+            2,
+            3,
+            5,
+            6,
+            8
+          ],
+          "hypermultiplet_span_rank_with_neutral_column": 3,
+          "adjoint_index": {
+            "-6": 0,
+            "-5": 6,
+            "-4": 0,
+            "-3": -2,
+            "-2": 3,
+            "-1": 0,
+            "0": -12,
+            "1": 0,
+            "2": 3,
+            "3": -2,
+            "4": 0,
+            "5": 6,
+            "6": 0
+          },
+          "matter_only_obstruction": {
+            "-6": -2,
+            "-3": 1
+          },
+          "obstruction_with_gauge_and_boundary_27_blocks": {
+            "-5": 1
+          },
+          "target_deficit_in_that_functional": -6,
+          "index_obstruction_with_additional_bulk_representations": {
+            "adjoint_78": true,
+            "exterior_square_351": true,
+            "symmetric_square_minus_dual_351prime": true,
+            "tensor_product_minus_1_and_78_650": true,
+            "all_four_together": true,
+            "adjoint_78_resolving_SM_octet_and_triplet": true,
+            "all_four_together_resolving_SM_octet_and_triplet": true
+          },
+          "left_neutral_octet_and_triplet_traces": {
+            "adjoint_78": [
+              1,
+              1
+            ],
+            "exterior_square_351": [
+              0,
+              0
+            ],
+            "symmetric_square_minus_dual_351prime": [
+              0,
+              0
+            ],
+            "tensor_product_minus_1_and_78_650": [
+              2,
+              1
+            ]
+          },
+          "obstruction_with_all_four_larger_bulk_representations": {
+            "w=-12": -288,
+            "w=-10": 84,
+            "w=-9": -6,
+            "w=-8": -64,
+            "w=-6": 30,
+            "w=-5": -19,
+            "w=-4": 24,
+            "w=-3": -36,
+            "w=-2": 14,
+            "w=-1": -7,
+            "w=1": 5
+          },
+          "target_deficit_with_all_four_larger_bulk_representations": -72
+        },
+        {
+          "left_odd_SM_blocks": [
+            0,
+            4,
+            5,
+            7,
+            8,
+            9
+          ],
+          "hypermultiplet_span_rank_with_neutral_column": 4,
+          "adjoint_index": {
+            "-6": 1,
+            "-5": 6,
+            "-4": 3,
+            "-1": -6,
+            "0": -14,
+            "1": -6,
+            "4": 3,
+            "5": 6,
+            "6": 1
+          },
+          "matter_only_obstruction": {
+            "-6": 6,
+            "-4": 2,
+            "-3": -3,
+            "-2": 2
+          },
+          "obstruction_with_gauge_and_boundary_27_blocks": {
+            "-5": 1
+          },
+          "target_deficit_in_that_functional": -6,
+          "index_obstruction_with_additional_bulk_representations": {
+            "adjoint_78": true,
+            "exterior_square_351": true,
+            "symmetric_square_minus_dual_351prime": true,
+            "tensor_product_minus_1_and_78_650": true,
+            "all_four_together": true,
+            "adjoint_78_resolving_SM_octet_and_triplet": true,
+            "all_four_together_resolving_SM_octet_and_triplet": true
+          },
+          "left_neutral_octet_and_triplet_traces": {
+            "adjoint_78": [
+              1,
+              1
+            ],
+            "exterior_square_351": [
+              -2,
+              -2
+            ],
+            "symmetric_square_minus_dual_351prime": [
+              -2,
+              -2
+            ],
+            "tensor_product_minus_1_and_78_650": [
+              6,
+              5
+            ]
+          },
+          "obstruction_with_all_four_larger_bulk_representations": {
+            "w=-12": 372,
+            "w=-10": -108,
+            "w=-9": -3,
+            "w=-8": 56,
+            "w=-7": 11,
+            "w=-6": -30,
+            "w=-5": 16,
+            "w=-4": -36,
+            "w=-3": 39,
+            "w=-2": -16,
+            "w=-1": 3,
+            "w=1": -10,
+            "w=2": 10
+          },
+          "target_deficit_with_all_four_larger_bulk_representations": 78
+        },
+        {
+          "left_odd_SM_blocks": [
+            1,
+            2,
+            4,
+            5,
+            7,
+            8
+          ],
+          "hypermultiplet_span_rank_with_neutral_column": 5,
+          "adjoint_index": {
+            "-6": 1,
+            "-4": 3,
+            "-3": -2,
+            "-1": 6,
+            "0": -14,
+            "1": 6,
+            "3": -2,
+            "4": 3,
+            "6": 1
+          },
+          "matter_only_obstruction": {
+            "-4": 2,
+            "-3": 3,
+            "-2": 2,
+            "-1": 1
+          },
+          "obstruction_with_gauge_and_boundary_27_blocks": {
+            "-6": 6,
+            "-3": -3,
+            "-1": -1,
+            "2": 2
+          },
+          "target_deficit_in_that_functional": -12,
+          "index_obstruction_with_additional_bulk_representations": {
+            "adjoint_78": false,
+            "exterior_square_351": true,
+            "symmetric_square_minus_dual_351prime": true,
+            "tensor_product_minus_1_and_78_650": true,
+            "all_four_together": false,
+            "adjoint_78_resolving_SM_octet_and_triplet": true,
+            "all_four_together_resolving_SM_octet_and_triplet": true
+          },
+          "left_neutral_octet_and_triplet_traces": {
+            "adjoint_78": [
+              1,
+              1
+            ],
+            "exterior_square_351": [
+              -2,
+              -2
+            ],
+            "symmetric_square_minus_dual_351prime": [
+              -2,
+              -2
+            ],
+            "tensor_product_minus_1_and_78_650": [
+              6,
+              5
+            ]
+          },
+          "obstruction_with_all_four_larger_bulk_representations": {
+            "w=-12": -5472,
+            "w=-10": 1300,
+            "w=-9": -480,
+            "w=-8": 20,
+            "w=-7": 800,
+            "w=-6": 126,
+            "w=-5": -160,
+            "w=-4": 444,
+            "w=-3": 225,
+            "w=-2": 470,
+            "w=-1": 75,
+            "w=1": -235,
+            "w=2": -150,
+            "w=3": -705,
+            "w=4": -192,
+            "w=6": 78,
+            "color_octet": 960
+          },
+          "target_deficit_with_all_four_larger_bulk_representations": -1920
+        },
+        {
+          "left_odd_SM_blocks": [
+            1,
+            3,
+            5,
+            6,
+            8,
+            9
+          ],
+          "hypermultiplet_span_rank_with_neutral_column": 5,
+          "adjoint_index": {
+            "-6": 0,
+            "-4": 0,
+            "-2": 3,
+            "0": -12,
+            "2": 3,
+            "4": 0,
+            "6": 0
+          },
+          "matter_only_obstruction": {
+            "-3": 3,
+            "-1": 1
+          },
+          "obstruction_with_gauge_and_boundary_27_blocks": {
+            "-4": -2,
+            "-3": 3,
+            "-2": -2,
+            "-1": 1
+          },
+          "target_deficit_in_that_functional": 12,
+          "index_obstruction_with_additional_bulk_representations": {
+            "adjoint_78": false,
+            "exterior_square_351": true,
+            "symmetric_square_minus_dual_351prime": true,
+            "tensor_product_minus_1_and_78_650": true,
+            "all_four_together": false,
+            "adjoint_78_resolving_SM_octet_and_triplet": true,
+            "all_four_together_resolving_SM_octet_and_triplet": true
+          },
+          "left_neutral_octet_and_triplet_traces": {
+            "adjoint_78": [
+              1,
+              1
+            ],
+            "exterior_square_351": [
+              0,
+              0
+            ],
+            "symmetric_square_minus_dual_351prime": [
+              0,
+              0
+            ],
+            "tensor_product_minus_1_and_78_650": [
+              2,
+              1
+            ]
+          },
+          "obstruction_with_all_four_larger_bulk_representations": {
+            "w=-12": -96,
+            "w=-10": 24,
+            "w=-9": -12,
+            "w=-8": -8,
+            "w=-7": 20,
+            "w=-5": -4,
+            "w=-4": 8,
+            "w=-3": 3,
+            "w=-2": 8,
+            "w=-1": 1,
+            "w=1": -5,
+            "w=3": -15,
+            "color_octet": 24
+          },
+          "target_deficit_with_all_four_larger_bulk_representations": -48
+        },
+        {
+          "left_odd_SM_blocks": [
+            2,
+            3,
+            4,
+            6,
+            7,
+            9
+          ],
+          "hypermultiplet_span_rank_with_neutral_column": 5,
+          "adjoint_index": {
+            "-2": 3,
+            "-1": 0,
+            "0": -12,
+            "1": 0,
+            "2": 3
+          },
+          "matter_only_obstruction": {
+            "-3": 3,
+            "-1": 1
+          },
+          "obstruction_with_gauge_and_boundary_27_blocks": {
+            "-4": -2,
+            "-3": 3,
+            "-2": -2,
+            "-1": 1
+          },
+          "target_deficit_in_that_functional": 12,
+          "index_obstruction_with_additional_bulk_representations": {
+            "adjoint_78": false,
+            "exterior_square_351": true,
+            "symmetric_square_minus_dual_351prime": true,
+            "tensor_product_minus_1_and_78_650": true,
+            "all_four_together": false,
+            "adjoint_78_resolving_SM_octet_and_triplet": true,
+            "all_four_together_resolving_SM_octet_and_triplet": true
+          },
+          "left_neutral_octet_and_triplet_traces": {
+            "adjoint_78": [
+              1,
+              1
+            ],
+            "exterior_square_351": [
+              0,
+              0
+            ],
+            "symmetric_square_minus_dual_351prime": [
+              0,
+              0
+            ],
+            "tensor_product_minus_1_and_78_650": [
+              2,
+              1
+            ]
+          },
+          "obstruction_with_all_four_larger_bulk_representations": {
+            "w=-12": -96,
+            "w=-10": 24,
+            "w=-9": -12,
+            "w=-8": -8,
+            "w=-7": 20,
+            "w=-5": -4,
+            "w=-4": 8,
+            "w=-3": 3,
+            "w=-2": 8,
+            "w=-1": 1,
+            "w=1": -5,
+            "w=3": -15,
+            "color_octet": 24
+          },
+          "target_deficit_with_all_four_larger_bulk_representations": -48
+        },
+        {
+          "left_odd_SM_blocks": [],
+          "hypermultiplet_span_rank_with_neutral_column": 5,
+          "adjoint_index": {
+            "-6": -1,
+            "-4": -3,
+            "-3": -2,
+            "-1": -6,
+            "0": -14,
+            "1": -6,
+            "3": -2,
+            "4": -3,
+            "6": -1
+          },
+          "matter_only_obstruction": {
+            "-4": -2,
+            "-3": 3,
+            "-2": -2,
+            "-1": 1
+          },
+          "obstruction_with_gauge_and_boundary_27_blocks": {
+            "-4": -2,
+            "-3": 3,
+            "-2": -2,
+            "-1": 1
+          },
+          "target_deficit_in_that_functional": 12,
+          "index_obstruction_with_additional_bulk_representations": {
+            "adjoint_78": true,
+            "exterior_square_351": true,
+            "symmetric_square_minus_dual_351prime": true,
+            "tensor_product_minus_1_and_78_650": true,
+            "all_four_together": true,
+            "adjoint_78_resolving_SM_octet_and_triplet": true,
+            "all_four_together_resolving_SM_octet_and_triplet": true
+          },
+          "left_neutral_octet_and_triplet_traces": {
+            "adjoint_78": [
+              1,
+              1
+            ],
+            "exterior_square_351": [
+              2,
+              2
+            ],
+            "symmetric_square_minus_dual_351prime": [
+              2,
+              2
+            ],
+            "tensor_product_minus_1_and_78_650": [
+              6,
+              5
+            ]
+          },
+          "obstruction_with_all_four_larger_bulk_representations": {
+            "w=-12": -8208,
+            "w=-10": -40,
+            "w=-9": 432,
+            "w=-8": -1048,
+            "w=-7": 1928,
+            "w=-6": -312,
+            "w=-5": -640,
+            "w=-4": 776,
+            "w=-3": 93,
+            "w=-2": 520,
+            "w=-1": 159,
+            "w=1": -287,
+            "w=2": -8,
+            "w=3": -1245,
+            "w=4": 352
+          },
+          "target_deficit_with_all_four_larger_bulk_representations": -2304
+        }
+      ]
+    }
+  ],
+  "product_of_protected_reflections": {
+    "adjoint_fixed_dimension": 46,
+    "common_adjoint_fixed_dimension_of_the_two_reflections": 22,
+    "odd_27_coordinates": [
+      1,
+      4,
+      6,
+      8,
+      9,
+      10,
+      11,
+      15,
+      16,
+      17,
+      18,
+      19,
+      21,
+      22,
+      24,
+      25
+    ],
+    "even_light_coordinate": 7,
+    "odd_frame_coordinate": 8
+  }
+}
