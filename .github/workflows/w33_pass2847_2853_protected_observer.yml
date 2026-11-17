@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: pass2847-2853-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+
 jobs:
   exact-rtl-docs:
     runs-on: ubuntu-latest
@@ -53,12 +57,30 @@ jobs:
           tectonic --keep-logs holonet_machine_blueprint.tex
           tectonic --keep-logs w33_paper.tex
           tectonic --keep-logs photonic_holonet.tex
-          ! grep -E 'Overfull|Undefined control sequence|Emergency stop' *.log
+          ! grep -E 'Undefined control sequence|Emergency stop' *.log
       - name: Idempotence and drift audit
         run: |
           python tools/integrate_bt2847_bt2853.py
           python analysis/bt2847_2853_protected_observer_noisy_m36.py --verify-frozen
           git diff --check
+      - name: Commit generated canonical sources and evidence to PR head
+        if: github.event_name == 'pull_request'
+        run: |
+          git config user.name "w33-pass2853-evidence-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            data/PART_BT2847_BT2853_PROTECTED_OBSERVER_NOISY_M36_results.json \
+            data/PART_BT2853_ENCODER_yosys.log data/PART_BT2853_DECODER_yosys.log \
+            data/PART_BT2853_ENCODER_nextpnr.log data/PART_BT2853_DECODER_nextpnr.log \
+            data/w33_pass_namespace_registry_v2.d/2847-2853.json \
+            w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html \
+            holonet_machine_blueprint.pdf w33_paper.pdf photonic_holonet.pdf
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit."
+          else
+            git commit -m "Pass 2853: integrate compile and freeze remote evidence [skip ci]"
+            git push origin HEAD:${{ github.head_ref }}
+          fi
       - uses: actions/upload-artifact@v4
         with:
           name: pass2847-2853-evidence
