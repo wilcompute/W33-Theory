@@ -1,0 +1,43 @@
+{
+  "backgrounds": [
+    {
+      "chern_pair": [
+        7,
+        8
+      ],
+      "minimum_orbit": "equator",
+      "lower_mass_bound_relative_to_positive_hessian_of_A": 3.332847918072825,
+      "largest_sphere_pressure_over_torus_pressure": 0.5761769387145225,
+      "sufficient_spectator_circumference_in_local_ads_units": 3.122569003065119,
+      "internal_collective_coordinates": 3
+    },
+    {
+      "chern_pair": [
+        8,
+        9
+      ],
+      "minimum_orbit": "pole",
+      "lower_mass_bound_relative_to_positive_hessian_of_A": 3.3419564531475925,
+      "largest_sphere_pressure_over_torus_pressure": 0.567734010772568,
+      "sufficient_spectator_circumference_in_local_ads_units": 3.119076370536529,
+      "internal_collective_coordinates": 2
+    },
+    {
+      "chern_pair": [
+        38,
+        43
+      ],
+      "minimum_orbit": "equator",
+      "lower_mass_bound_relative_to_positive_hessian_of_A": 3.3333238413603308,
+      "largest_sphere_pressure_over_torus_pressure": 0.5773281617627775,
+      "sufficient_spectator_circumference_in_local_ads_units": 3.1412318141360824,
+      "internal_collective_coordinates": 3
+    }
+  ],
+  "internal_and_chiral_negative_modes": 0,
+  "geometric_normal_negative_modes_for_short_spectator": 1,
+  "harmonic_two_and_three_form_dimensions": [
+    0,
+    0
+  ]
+}
