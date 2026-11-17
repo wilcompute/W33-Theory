@@ -1,0 +1,24 @@
+{
+  "Cauchy_Schwarz_theorem": "For any rank2 Q, TrPhi=0, TrPhi\u00b2=r\u00b2, min_Phi Tr(Phi Q)=-r sqrt(6/5), uniquely attained at Phi=-r(Q-2I/5)/sqrt(6/5)",
+  "continuous_relative_rotation_cost": "DeltaV=(5 epsilon r/sqrt30) sin(theta)^2",
+  "fields": "Phi Hermitian traceless SU5 adjoint; Q Hermitian SU5 adjoint-plus-singlet, Q^2=Q and TrQ=2",
+  "fixed_norm_quartic_ratio": "7/30 arises without a TrPhi4 term",
+  "gauge_invariant_portal": "epsilon Tr(Phi Q), epsilon>0",
+  "limits": "The projector manifold is assumed from a second dynamical sector; its UV origin, superpotential/K\u00e4hler, E6 representation, radiative and finite-temperature effects, proton decay, electroweak doublet-triplet splitting and observables have NOT been derived.",
+  "normalized_eigenvalues": "(2,2,2,-3,-3)/sqrt(30)",
+  "opposite_sign_relaxed_Q_energy_penalty": 0.09104146811060913,
+  "physically_distinct_vs_gauge": "Simultaneous SU5 conjugations of Phi,Q are pure gauge. The portal fixes their RELATIVE orientation and lifts Phi sign, not an absolute labeling of the two weak indices.",
+  "radial_potential": "V_eff(r)=-m2 r\u00b2+lambda r\u2074-epsilon r sqrt(6/5), lambda,m2,epsilon>0",
+  "random_traceless_matrix_controls": 120,
+  "rank2_pinning_effective_potential": "nu Tr[(Q\u00b2-Q)\u00b2]+chi(TrQ-2)\u00b2, nu,chi>0; exact Q projector manifold only in strong-pinning limit or with constraint",
+  "reference_parameters": {
+    "epsilon": 0.2,
+    "lambda": 0.35,
+    "m2": 1.0,
+    "minimum_energy": -0.9818947640990323,
+    "selected_radial_norm": 1.2466366438141965,
+    "unbiased_quartic_energy": -0.7142857142857143
+  },
+  "relative_orientation_gap": 0.22760367027652284,
+  "status": "PASS_INDEPENDENT_RANK2_PROJECTOR_SELECTS_3PLUS2_WITHOUT_TRPHI4_COEFFICIENT"
+}

@@ -1,0 +1,172 @@
+{
+  "claim_level": "Exact bosonic SU5 adjoint and projector toy-model mechanism; not derived from E6 dynamics, does not prove Standard Model masses/couplings or any TOE.",
+  "exact_global_quartic_bounds": {
+    "all_local_shape_eigenvalues_positive": true,
+    "angular_constrained_hessian_eigenvalues": {
+      "SU2_traceless_1_mode": "8/3",
+      "SU3_traceless_2_modes": "2/3"
+    },
+    "exact_critical_point_classification": {
+      "global_maximum_Q": "13/20",
+      "global_minimum_Q": "7/30",
+      "proof": "Lagrange stationarity gives cubic in each xi with vanishing quadratic coefficient. Thus at most three roots. If three distinct, their sum is zero; trace and multiplicity constraints force a zero root and opposite remaining roots, with patterns (3,1,1) or (2,2,1). Two-root partitions give Q=((5-k)^3+k^3)/(25*k*(5-k)). Compactness proves the bound.",
+      "three_distinct_eigenvalues_Q_by_partition": {
+        "2_2_1": "1/4",
+        "3_1_1": "1/2"
+      },
+      "two_distinct_eigenvalues_Q_by_multiplicity": {
+        "1": "13/20",
+        "2": "7/30",
+        "3": "7/30",
+        "4": "13/20"
+      }
+    },
+    "normalized_3plus2_eigenvalues": [
+      "2/sqrt(30)",
+      "2/sqrt(30)",
+      "2/sqrt(30)",
+      "-3/sqrt(30)",
+      "-3/sqrt(30)"
+    ]
+  },
+  "gauge_vs_global_orbit": {
+    "A5_order": 60,
+    "A5_stabilizer_each": 6,
+    "SU5_gauge_orbit_statement": "All 10 placements of fixed-sign (2,2,2,-3,-3) are conjugate by SU5, hence gauge-equivalent if SU5 is gauged; 10 physical domain types do not follow from a gauge-Weyl orbit.",
+    "Z2_even_potential_3plus2_diagonal_minima": 20,
+    "Z2_warning": "Because V is Phi->-Phi even, opposite-sign eigenvalue multisets are NOT conjugate by SU5. Imposing this exact global Z2 introduces two gauge-inequivalent vacuum orbits; TrPhi\u00b3 term explicitly biases sign and can lift the degeneracy.",
+    "distinct_unordered_two_subsets": 10,
+    "global_discrete_case": "If labels instead transform under a genuinely global A5, 10 placements of each sign are physically distinct degenerate minima. A macroscopic system may spontaneously choose one and form interfaces/domain walls; this does not prove such a global A5 exists.",
+    "theory_sources": [
+      "https://www.scholarpedia.org/article/Grand_unification",
+      "https://doi.org/10.1103/PhysRevD.12.3978",
+      "https://doi.org/10.1103/PhysRevD.62.123506"
+    ]
+  },
+  "landau_vacuum": {
+    "SM_subalgebra_dimension": 12,
+    "SU5_adjoint_dimension": 24,
+    "broken_generator_count": 12,
+    "example": {
+      "SU4_minus_SM_energy_gap": 0.17768301350390914,
+      "VEV_norm_squared": 0.9523809523809526,
+      "energy_2_2_1": -0.46511627906976744,
+      "energy_SU3_SU2_U1": -0.4761904761904763,
+      "energy_SU4_U1": -0.29850746268656714,
+      "kappa": 0.75,
+      "lambda": 0.35,
+      "m2": 1
+    },
+    "gauge_mass_squared_ratio": "m_X\u00b2 proportional to g5\u00b2*v\u00b2*(5/sqrt30)\u00b2 (convention-dependent)",
+    "nonsupersymmetric_caveat": "A legitimate renormalizable bosonic SU5 adjoint potential; not derived as the scalar potential of the repo's F/D-flat supersymmetric E6 superpotential.",
+    "parameter_region_sufficient": "m\u00b2>0, kappa>0, lambda+(7/30)kappa>0",
+    "potential": "V=-m\u00b2Tr(Phi\u00b2)+lambda(TrPhi\u00b2)\u00b2+kappa TrPhi\u2074; Phi traceless Hermitian; no cubic"
+  },
+  "numerical_multistart_stress": {
+    "all_restarts_reached_7_over_30": true,
+    "independent_restarts": 60,
+    "max_Q_observed": 0.2333333333333368,
+    "min_Q_observed": 0.23333333333333325,
+    "not_a_substitute_for_exact_global_proof": true,
+    "optimizer": "SciPy BFGS with 4 free diagonal coordinates and an exactly imposed traceless fifth coordinate",
+    "random_seed": 20261117
+  },
+  "second_projector_alignment": {
+    "Ky_Fan_ground_state": "Unique rank-two projector onto the doubly degenerate smallest eigenvalue (-3v/sqrt30) subspace of Phi",
+    "continuous_misalignment_cost": "Delta V = (5 epsilon v/sqrt30) sin(theta)^2 when one weak eigenvector rotates into a colour eigenvector",
+    "counts_for_a_fixed_diagonal_Phi": {
+      "0": 3,
+      "1": 6,
+      "2": 1
+    },
+    "dynamical_field": "Q=S S\u2020, S complex 5x2 with S\u2020S=I2; Q\u00b2=Q=Q\u2020 and TrQ=2",
+    "fixed_gauge_relative_orientations": [
+      {
+        "low_eigen_occupancy": 0,
+        "portal_energy": 0.1460593486680443,
+        "two_plane_indices": [
+          0,
+          1
+        ]
+      },
+      {
+        "low_eigen_occupancy": 0,
+        "portal_energy": 0.1460593486680443,
+        "two_plane_indices": [
+          0,
+          2
+        ]
+      },
+      {
+        "low_eigen_occupancy": 1,
+        "portal_energy": -0.03651483716701107,
+        "two_plane_indices": [
+          0,
+          3
+        ]
+      },
+      {
+        "low_eigen_occupancy": 1,
+        "portal_energy": -0.03651483716701107,
+        "two_plane_indices": [
+          0,
+          4
+        ]
+      },
+      {
+        "low_eigen_occupancy": 0,
+        "portal_energy": 0.1460593486680443,
+        "two_plane_indices": [
+          1,
+          2
+        ]
+      },
+      {
+        "low_eigen_occupancy": 1,
+        "portal_energy": -0.03651483716701107,
+        "two_plane_indices": [
+          1,
+          3
+        ]
+      },
+      {
+        "low_eigen_occupancy": 1,
+        "portal_energy": -0.03651483716701107,
+        "two_plane_indices": [
+          1,
+          4
+        ]
+      },
+      {
+        "low_eigen_occupancy": 1,
+        "portal_energy": -0.03651483716701107,
+        "two_plane_indices": [
+          2,
+          3
+        ]
+      },
+      {
+        "low_eigen_occupancy": 1,
+        "portal_energy": -0.03651483716701107,
+        "two_plane_indices": [
+          2,
+          4
+        ]
+      },
+      {
+        "low_eigen_occupancy": 2,
+        "portal_energy": -0.21908902300206645,
+        "two_plane_indices": [
+          3,
+          4
+        ]
+      }
+    ],
+    "gauge_invariant_portal": "V_align = +epsilon Tr(Phi Q); Phi and Q transform by common SU5 conjugation",
+    "open_E6_tasks": "Find a gauge-invariant E6 or supersymmetric completion giving a positive kappa adjoint shape potential and a dynamical rank2 field, with all F/D equations, proton and triplet masses, and radiative/thermal consistency.",
+    "physical_interpretation": "Relative orientation of TWO dynamical Higgs/order-parameter fields is gauge invariant. This mechanism aligns them; it does not turn SU5 gauge-related placements of both fields into physically distinct vacua.",
+    "smallest_discrete_excitation_energy": 0.18257418583505536,
+    "unique_relative_orbit_minimum": true
+  },
+  "status": "PASS_SU5_ADJOINT_3PLUS2_GLOBAL_VACUUM_AND_RELATIVE_CONTEXT_ALIGNMENT"
+}

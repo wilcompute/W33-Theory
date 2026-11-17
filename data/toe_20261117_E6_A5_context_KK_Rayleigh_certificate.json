@@ -1,0 +1,102 @@
+{
+  "A5_E6_context": {
+    "A5_order": 60,
+    "disjointness_graph_Petersen": {
+      "degree": 3,
+      "eigenvalue_multiplicities": {
+        "-2": 4,
+        "1": 5,
+        "3": 1
+      }
+    },
+    "entire_context_orbit_transitive": true,
+    "intersection_graph_J_5_2": {
+      "degree": 6,
+      "eigenvalue_multiplicities": {
+        "-2": 5,
+        "1": 4,
+        "6": 1
+      },
+      "permutation_module_irreps_dimensions": [
+        1,
+        4,
+        5
+      ]
+    },
+    "invariant_selection_no_go": "Every A5-invariant one-context energy function is constant on the 10 weak pairs. A unique chosen 2+3 split cannot follow from A5 alone; it requires explicit symmetry breaking, additional fields/data or spontaneous selection (with 10 equivalent choices before further effects).",
+    "not_a_physical_proton_decay_calculation": true,
+    "number_of_weak_pairs": 10,
+    "source_parallel_context_certificate": "data/w33_pass12683_doublet_triplet_contexts.json: ten special contexts biject ten weak two-subsets of five common transversals",
+    "stabilizer_order_each": 6,
+    "status": "PASS_A5_WEAK_PAIR_CONTEXT_PETERSEN_ORBIT"
+  },
+  "KK_projected_minmax": {
+    "equal_flux_square_gap": 1.0169440813078374,
+    "exact_inertia_example": {
+      "negative_restricted_eigenvalues": [
+        "-3/2",
+        "-9/4"
+      ],
+      "schur_complement_positive": true
+    },
+    "matrix_controls": [
+      {
+        "max_of_k_smallest_eigenvalues": -5.662843143417741,
+        "negative_eigenvalues_below_BF": 2,
+        "subspace_dim": 2,
+        "unbounded_offdiagonal_scale": 0.0
+      },
+      {
+        "max_of_k_smallest_eigenvalues": -5.665786154354624,
+        "negative_eigenvalues_below_BF": 2,
+        "subspace_dim": 2,
+        "unbounded_offdiagonal_scale": 0.1
+      },
+      {
+        "max_of_k_smallest_eigenvalues": -8.94262937640741,
+        "negative_eigenvalues_below_BF": 2,
+        "subspace_dim": 2,
+        "unbounded_offdiagonal_scale": 5.0
+      },
+      {
+        "max_of_k_smallest_eigenvalues": -165.75289445898855,
+        "negative_eigenvalues_below_BF": 2,
+        "subspace_dim": 2,
+        "unbounded_offdiagonal_scale": 100.0
+      },
+      {
+        "max_of_k_smallest_eigenvalues": -5.0,
+        "negative_eigenvalues_below_BF": 4,
+        "subspace_dim": 4,
+        "unbounded_offdiagonal_scale": 0.0
+      },
+      {
+        "max_of_k_smallest_eigenvalues": -5.001777192995767,
+        "negative_eigenvalues_below_BF": 4,
+        "subspace_dim": 4,
+        "unbounded_offdiagonal_scale": 0.1
+      },
+      {
+        "max_of_k_smallest_eigenvalues": -5.923194640420458,
+        "negative_eigenvalues_below_BF": 4,
+        "subspace_dim": 4,
+        "unbounded_offdiagonal_scale": 5.0
+      },
+      {
+        "max_of_k_smallest_eigenvalues": -107.47575305689493,
+        "negative_eigenvalues_below_BF": 4,
+        "subspace_dim": 4,
+        "unbounded_offdiagonal_scale": 100.0
+      }
+    ],
+    "not_a_full_11d_spectrum": true,
+    "open_two_mode_chamber_uniform_gap_infimum": 1.6628431434177413,
+    "physical_obstruction": "An actual constraint-compatible transport of P from the equal-flux background and the projected unequal-flux 11D metric-C3 quadratic form are not yet calculated. A scalar Laplacian proxy does not provide these.",
+    "square_torus_k": 4,
+    "status": "PASS_BF_PROJECTED_RAYLEIGH_MINMAX_NO_OFFDIAGONAL_BOUND",
+    "sufficient_flux_perturbation": "If H_equal|P<=(-4-Delta)I and lambda_max(P(H_unequal-H_equal)P)<Delta, at least k modes persist; no bound on off-diagonal P H Q is necessary.",
+    "theorem": "For a canonically normalized self-adjoint physical KK operator H on a positive-definite Hilbert space and a k-dimensional gauge-admissible subspace P satisfying lambda_max(P H P)<-4, Courant-Fischer ensures at least k eigenvalues below -4, regardless of H mixing P with the complement.",
+    "two_mode_modular_chamber_k": 2
+  },
+  "status": "PASS_E6_A5_KK_PROJECTED_RAYLEIGH_TWOFRONT"
+}

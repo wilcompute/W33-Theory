@@ -1,0 +1,440 @@
+{
+  "M5_flux_wedge": {
+    "IIB_counterexample": "M flux (5,6,6) gives g=1 but H5 torsion Z5 x Z5; IIB circle p=q=6 has pi1=Z6. Different complexes cannot be identified by gcd alone.",
+    "coefficient_ring": "H^*(S2xS2xT2;Z); differential d_G(alpha)=G4 cup alpha of cohomological degree +4",
+    "critical_caveat": "This is algebraic cohomology of flux-cup multiplication; no proof that it is the AHSS differential for quantum M-theory or that its groups classify Page charge, endpoint charge, or dual wrapped branes.",
+    "full_grading": "degree 0..6; for flux nonzero, H^0=0,H^2=Z2,H^3=Z4,H^4=Z2+Z_g,H^6=Z_g. H^1=0 and H^5=Z_|Nxy|^2 (two cyclic factors) if Nxy nonzero; if Nxy=0, H^1=Z2,H^5=Z2.",
+    "independent_topological_flux_channels": {
+      "Nxy": "|Nxy| controls H5 two-fold torsion, independent of g",
+      "g": "gcd(Nxy,Nxt,Nyt) controls H4 and H6"
+    },
+    "status": "PASS_G4_WEDGE_INTEGER_COMPLEX_FULL_KERNEL_QUOTIENT",
+    "test_vectors": [
+      {
+        "d0_H0_to_H4": [
+          5,
+          6,
+          6
+        ],
+        "d1_H1_to_H5": [
+          [
+            5,
+            0
+          ],
+          [
+            0,
+            5
+          ]
+        ],
+        "d2_H2_to_H6": [
+          6,
+          6,
+          5
+        ],
+        "dimensional_differential_square_zero": true,
+        "fluxes": [
+          5,
+          6,
+          6
+        ],
+        "free_ranks_H0_to_H6": [
+          0,
+          0,
+          2,
+          4,
+          2,
+          0,
+          0
+        ],
+        "gcd": 1,
+        "torsion_cyclic_orders_H0_to_H6": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [
+            5,
+            5
+          ],
+          []
+        ]
+      },
+      {
+        "d0_H0_to_H4": [
+          6,
+          6,
+          6
+        ],
+        "d1_H1_to_H5": [
+          [
+            6,
+            0
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        "d2_H2_to_H6": [
+          6,
+          6,
+          6
+        ],
+        "dimensional_differential_square_zero": true,
+        "fluxes": [
+          6,
+          6,
+          6
+        ],
+        "free_ranks_H0_to_H6": [
+          0,
+          0,
+          2,
+          4,
+          2,
+          0,
+          0
+        ],
+        "gcd": 6,
+        "torsion_cyclic_orders_H0_to_H6": [
+          [],
+          [],
+          [],
+          [],
+          [
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6
+          ]
+        ]
+      },
+      {
+        "d0_H0_to_H4": [
+          0,
+          6,
+          6
+        ],
+        "d1_H1_to_H5": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "d2_H2_to_H6": [
+          6,
+          6,
+          0
+        ],
+        "dimensional_differential_square_zero": true,
+        "fluxes": [
+          0,
+          6,
+          6
+        ],
+        "free_ranks_H0_to_H6": [
+          0,
+          2,
+          2,
+          4,
+          2,
+          2,
+          0
+        ],
+        "gcd": 6,
+        "torsion_cyclic_orders_H0_to_H6": [
+          [],
+          [],
+          [],
+          [],
+          [
+            6
+          ],
+          [],
+          [
+            6
+          ]
+        ]
+      },
+      {
+        "d0_H0_to_H4": [
+          0,
+          1,
+          1
+        ],
+        "d1_H1_to_H5": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "d2_H2_to_H6": [
+          1,
+          1,
+          0
+        ],
+        "dimensional_differential_square_zero": true,
+        "fluxes": [
+          0,
+          1,
+          1
+        ],
+        "free_ranks_H0_to_H6": [
+          0,
+          2,
+          2,
+          4,
+          2,
+          2,
+          0
+        ],
+        "gcd": 1,
+        "torsion_cyclic_orders_H0_to_H6": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "d0_H0_to_H4": [
+          1,
+          6,
+          6
+        ],
+        "d1_H1_to_H5": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "d2_H2_to_H6": [
+          6,
+          6,
+          1
+        ],
+        "dimensional_differential_square_zero": true,
+        "fluxes": [
+          1,
+          6,
+          6
+        ],
+        "free_ranks_H0_to_H6": [
+          0,
+          0,
+          2,
+          4,
+          2,
+          0,
+          0
+        ],
+        "gcd": 1,
+        "torsion_cyclic_orders_H0_to_H6": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "d0_H0_to_H4": [
+          0,
+          0,
+          6
+        ],
+        "d1_H1_to_H5": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "d2_H2_to_H6": [
+          6,
+          0,
+          0
+        ],
+        "dimensional_differential_square_zero": true,
+        "fluxes": [
+          0,
+          0,
+          6
+        ],
+        "free_ranks_H0_to_H6": [
+          0,
+          2,
+          2,
+          4,
+          2,
+          2,
+          0
+        ],
+        "gcd": 6,
+        "torsion_cyclic_orders_H0_to_H6": [
+          [],
+          [],
+          [],
+          [],
+          [
+            6
+          ],
+          [],
+          [
+            6
+          ]
+        ]
+      }
+    ]
+  },
+  "X8_selection": {
+    "argument": "If both background and perturbation are invariant under simultaneous reflection of all five external orthonormal directions, the O(1,10)-invariant Pontryagin polynomial X8 is reflection-even. Every component with odd external form degree must vanish; however a local purely internal C3_bg can wedge nontrivially only with X8 of bidegree (external5,internal3).",
+    "caveat": "Assumes full background and perturbations respect the stated external reflection. In AdS, full normalizable modes depend on external coordinates and need not have this property; no on-shell 11D mass shift is calculated.",
+    "consequence": "For external-reflection-even, externally homogeneous metric-scalar perturbations in this local gauge, C3_bg wedge quadratic X8 vanishes by degree/parity. This does NOT rule out 5D derivative terms, reflection-odd fluctuations, global differential C-fields, or any R4/G4 action terms.",
+    "external_reflection_even_X8_possible_bidegrees": [
+      [
+        2,
+        6
+      ],
+      [
+        4,
+        4
+      ]
+    ],
+    "only_C3bg_wedge_X8_8form_bidegree": [
+      5,
+      3
+    ],
+    "product_dimensions": [
+      5,
+      6
+    ],
+    "status": "PASS_X8_REFLECTION_EVEN_SCALAR_LOCAL_WEDGE_SELECTION"
+  },
+  "qutrit_basis_optimality": {
+    "calibrated_null": 0.51,
+    "exact_source_probability": "q(v,sigma)=1/3+v*(1+3 exp(-sigma^2))/6",
+    "examples": [
+      {
+        "guaranteed_separable_matching_at_least": 0.5,
+        "settings": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "guaranteed_separable_matching_at_least": 0.6,
+        "settings": [
+          0.4,
+          0.2,
+          0.2,
+          0.2
+        ]
+      },
+      {
+        "guaranteed_separable_matching_at_least": 0.7999999999999999,
+        "settings": [
+          0.7,
+          0.1,
+          0.1,
+          0.1
+        ]
+      },
+      {
+        "guaranteed_separable_matching_at_least": 1.0,
+        "settings": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "hardware_visibility_controls": [
+      {
+        "best_gross_matched_with_perfect_visibility": 0.608751830808109,
+        "eff_each_memory": 0.8,
+        "gross_detection": 0.6156000000000001,
+        "memory_count": 1,
+        "minimum_visibility": 0.7552933148379989,
+        "path_throughput": 0.95,
+        "physically_feasible_at_fixed_sigma": true,
+        "router_eff_each": 1
+      },
+      {
+        "best_gross_matched_with_perfect_visibility": 0.6524107511738778,
+        "eff_each_memory": 0.95,
+        "gross_detection": 0.6597500624999999,
+        "memory_count": 1,
+        "minimum_visibility": 0.6707220673408765,
+        "path_throughput": 0.95,
+        "physically_feasible_at_fixed_sigma": true,
+        "router_eff_each": 0.95
+      },
+      {
+        "best_gross_matched_with_perfect_visibility": 0.5126331206805128,
+        "eff_each_memory": 0.8,
+        "gross_detection": 0.5184000000000001,
+        "memory_count": 2,
+        "minimum_visibility": 0.9922517243897827,
+        "path_throughput": 1.0,
+        "physically_feasible_at_fixed_sigma": true,
+        "router_eff_each": 1.0
+      },
+      {
+        "best_gross_matched_with_perfect_visibility": 0.43253419557418266,
+        "eff_each_memory": 1.0,
+        "gross_detection": 0.43740000000000007,
+        "memory_count": 0,
+        "minimum_visibility": 1.2701659084319983,
+        "path_throughput": 0.54,
+        "physically_feasible_at_fixed_sigma": false,
+        "router_eff_each": 1.0
+      },
+      {
+        "best_gross_matched_with_perfect_visibility": 0.619790213615184,
+        "eff_each_memory": 0.95,
+        "gross_detection": 0.626762559375,
+        "memory_count": 2,
+        "minimum_visibility": 0.7327855903292476,
+        "path_throughput": 0.95,
+        "physically_feasible_at_fixed_sigma": true,
+        "router_eff_each": 0.95
+      }
+    ],
+    "minimum_visibility_formula": "v_min=6*(p0/eta_total-1/3)/(1+3 exp(-sigma^2)), at fixed sigma and eta_total=etaR etaS eta_mem^n eta_path fR fS",
+    "physics_caveat": "No certified nondestructive qutrit-memory herald or hardware claimed; hidden setting leakage, herald dependence on future settings, calibration, and nonIID memory adversaries require independent bounds.",
+    "pre_setting_herald_loophole_safe_theorem": "A fixed local trace-decreasing CP map, with success herald announced BEFORE fresh secret basis choice, maps separable states to (subnormalized) separable states. Conditional normalized successes therefore still obey p_sep<=1/2 under trusted measurements. A nondestructive prebasis success herald could avoid counting pre-memory failures but reduces the accepted rate; postbasis coincidences are NOT valid.",
+    "status": "PASS_FOUR_MUB_UNIFORM_SETTING_MINIMAX_AND_VISIBILITY_FLOOR",
+    "uniform_optimality": "max_b w_b>=1/4, so p_sep>=1/2. Uniform w=(1/4,1/4,1/4,1/4) achieves exactly 1/2 by the 4-MUB 2-design identity; biased bases cannot reduce the separable threshold for this particular test.",
+    "weighted_separable_witness_lower_bound": "p_sep>=1/3+(2/3)*max_b w_b, by a product state equal to an eigenvector of the most likely basis"
+  },
+  "status": "PASS_M5_G4_X8_QUTRIT_THREEFRONT_EXACT_CONSTRAINTS"
+}

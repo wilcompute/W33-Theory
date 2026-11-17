@@ -1,0 +1,73 @@
+{
+  "Cartan_dimension": 6,
+  "Y_integer_weight_traces": {
+    "2": 180,
+    "3": 0,
+    "4": 2700,
+    "5": -4320
+  },
+  "consequence": "At any E6-invariant single-adjoint quartic order, quartic terms are functions of quadratic norm only; the independent SU5 adjoint TrPhi4 shape-selector cannot be promoted to an E6-invariant pure-adjoint quartic.",
+  "degree_list_external_group_theory": [
+    2,
+    5,
+    6,
+    8,
+    9,
+    12
+  ],
+  "diagonal_cubic_weight_equations": 45,
+  "first_nontrivial_odd_trace": "Tr27(H^5) is not identically zero",
+  "important_caveat": "This proves absence in the invariant polynomial ring (Cartan/Weyl restriction) for one E6 adjoint. It does not forbid quartic interactions involving additional Higgs representations or nonpolynomial quantum effective actions, and does not derive an E6 vacuum.",
+  "literature": "https://people.math.harvard.edu/~elkies/M222.23/index.html",
+  "polynomial_identity_3": "Tr27(H^3)=0 for arbitrary complex diagonal E6 Cartan H",
+  "polynomial_identity_4": "Tr27(H^4)=[Tr27(H^2)]^2/12, exact polynomial in six independent symbolic Cartan parameters",
+  "samples": [
+    {
+      "Cartan_coefficients": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Tr_H2": "12",
+      "Tr_H3": "0",
+      "Tr_H4": "12",
+      "Tr_H5": "0"
+    },
+    {
+      "Cartan_coefficients": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "Tr_H2": "2004",
+      "Tr_H3": "0",
+      "Tr_H4": "334668",
+      "Tr_H5": "-715680"
+    },
+    {
+      "Cartan_coefficients": [
+        3,
+        -2,
+        7,
+        0,
+        1,
+        -1
+      ],
+      "Tr_H2": "864",
+      "Tr_H3": "0",
+      "Tr_H4": "62208",
+      "Tr_H5": "22680"
+    }
+  ],
+  "status": "PASS_E6_ADJOINT_CARTAN_NO_INDEPENDENT_CUBIC_OR_QUARTIC",
+  "symbolic_monomial_counts": {
+    "TrH2": 17,
+    "TrH5": 34
+  }
+}

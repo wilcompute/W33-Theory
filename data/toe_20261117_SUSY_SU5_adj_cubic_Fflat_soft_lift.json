@@ -1,0 +1,93 @@
+{
+  "Fflat_branches": {
+    "F_eigenvalue_condition": "m*x_i + y*(x_i\u00b2 - TrSigma\u00b2/5)=0",
+    "SUGRA_warning": "Supergravity vacuum energy depends on e^K(|D W|\u00b2 -3|W|\u00b2/MPl\u00b2), as well as K\u00e4hler potential; do NOT select a branch simply by inserting -3|W|\u00b2 while ignoring covariant F terms and uplift.",
+    "branches": [
+      {
+        "D_flat_if_Hermitian": true,
+        "TrPhi2": "20*m**2/(9*y**2)",
+        "TrPhi3": "-20*m**3/(9*y**3)",
+        "VF": 0,
+        "W_value": "10*m**3/(27*y**2)",
+        "branch": "4+1",
+        "eigenvalues": [
+          "-4*m/(3*y)",
+          "m/(3*y)",
+          "m/(3*y)",
+          "m/(3*y)",
+          "m/(3*y)"
+        ],
+        "k": 1
+      },
+      {
+        "D_flat_if_Hermitian": true,
+        "TrPhi2": "30*m**2/y**2",
+        "TrPhi3": "-30*m**3/y**3",
+        "VF": 0,
+        "W_value": "5*m**3/y**2",
+        "branch": "3+2",
+        "eigenvalues": [
+          "-3*m/y",
+          "-3*m/y",
+          "2*m/y",
+          "2*m/y",
+          "2*m/y"
+        ],
+        "k": 2
+      },
+      {
+        "D_flat_if_Hermitian": true,
+        "TrPhi2": "30*m**2/y**2",
+        "TrPhi3": "-30*m**3/y**3",
+        "VF": 0,
+        "W_value": "5*m**3/y**2",
+        "branch": "3+2",
+        "eigenvalues": [
+          "2*m/y",
+          "2*m/y",
+          "2*m/y",
+          "-3*m/y",
+          "-3*m/y"
+        ],
+        "k": 3
+      },
+      {
+        "D_flat_if_Hermitian": true,
+        "TrPhi2": "20*m**2/(9*y**2)",
+        "TrPhi3": "-20*m**3/(9*y**3)",
+        "VF": 0,
+        "W_value": "10*m**3/(27*y**2)",
+        "branch": "4+1",
+        "eigenvalues": [
+          "m/(3*y)",
+          "m/(3*y)",
+          "m/(3*y)",
+          "m/(3*y)",
+          "-4*m/(3*y)"
+        ],
+        "k": 4
+      }
+    ],
+    "model": "Rigid global N=1 SUSY, one traceless adjoint chiral Sigma, W=(m/2)TrSigma\u00b2+(y/3)TrSigma\u00b3",
+    "no_unique_SUSY_vacuum": "The three branches are exactly degenerate in the rigid-SUSY F+D potential at V=0; different W values do not change rigid-SUSY energy.",
+    "physically_distinct_Hermitian_orbits": {
+      "SU3_SU2_U1": "TrSigma\u00b2=30m\u00b2/y\u00b2, VF=VD=0",
+      "SU4_U1": "TrSigma\u00b2=20m\u00b2/(9y\u00b2), VF=VD=0",
+      "symmetric_origin": "Sigma=0, VF=VD=0"
+    },
+    "two_roots_relation": "a+b=-m/y and k*a+(5-k)*b=0"
+  },
+  "literature": [
+    "https://indico.desy.de/event/11392/attachments/3791/4359/Shirai.pdf",
+    "https://arxiv.org/abs/1202.2845"
+  ],
+  "soft_first_order": {
+    "energy_SM_minus_SU4": "-250*eps*m**2/(9*y**2)",
+    "energy_shift_on_Fflat_SM": "-30 epsilon m\u00b2/y\u00b2 + O(epsilon\u00b2)",
+    "energy_shift_on_Fflat_SU4": "-(20/9)epsilon m\u00b2/y\u00b2 + O(epsilon\u00b2)",
+    "prefers_SM_over_SU4_and_origin_at_first_order": true,
+    "soft_term": "deltaV=-epsilon TrSigma\u00b2 with epsilon>0; NOT supersymmetric, treated perturbatively",
+    "stability_warning": "The full soft-deformed potential must be minimized and tested for other branches and tachyons; leading-order splitting is not a complete global theorem. Soft tachyonic mass is phenomenological, not derived from the parent E6 sector."
+  },
+  "status": "PASS_RIGID_SUSY_SU5_THREE_FFLAT_BRANCHES_NO_SELECTION_AND_SOFT_LIFT"
+}
