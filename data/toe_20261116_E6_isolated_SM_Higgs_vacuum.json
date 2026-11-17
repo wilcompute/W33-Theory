@@ -1,0 +1,126 @@
+{
+  "parallel_stabilizer_ranks_reproduced": [
+    651,
+    705,
+    717
+  ],
+  "zero_hypercharge_coordinates": [
+    7,
+    8
+  ],
+  "centralizer_dimension": 16,
+  "centralizer_action_rank_on_neutral_frame": 4,
+  "Higgs_sector_chiral_dimension": 186,
+  "gauge_orbit_dimension": 66,
+  "physical_Higgs_sector_holomorphic_Hessian_rank": 120,
+  "compact_connected_unbroken_group": "S(U(3) x U(2))",
+  "potential": {
+    "adjoint_trace_degrees": [
+      2,
+      5,
+      6
+    ],
+    "coefficients_in_sum_c_d_Tr_Phi_to_d_divided_by_d": [
+      "-283",
+      "3",
+      "1"
+    ],
+    "centralizer_gradient_constraint_rank": 2,
+    "centralizer_adjoint_hessian_rank_before_and_after_Higgs_lock": [
+      16,
+      16
+    ]
+  },
+  "matter": {
+    "families": 3,
+    "cubic_mass_rank": 30,
+    "rank_with_optional_neutral_mass": 36,
+    "remaining_one_family_integer_hypercharge_weights": {
+      "-6": 1,
+      "-3": 0,
+      "-2": 3,
+      "-1": 6,
+      "0": 0,
+      "2": 0,
+      "3": 2,
+      "4": 3
+    },
+    "remaining_three_family_chiral_dimension": 45
+  },
+  "optional_light_Higgs": {
+    "mass_operator": "Phi+3 I",
+    "vectorlike_pair_rank": 25,
+    "light_27_components": [
+      0,
+      3
+    ],
+    "massless_weak_doublet_pairs": 1,
+    "up_type_cubic_monomials": 6,
+    "down_and_charged_lepton_vertices_from_dual_cubic_insertion": [
+      {
+        "bar_Higgs_component": 0,
+        "matter_components": [
+          1,
+          6
+        ],
+        "sign": -1
+      },
+      {
+        "bar_Higgs_component": 0,
+        "matter_components": [
+          15,
+          19
+        ],
+        "sign": 1
+      },
+      {
+        "bar_Higgs_component": 0,
+        "matter_components": [
+          16,
+          22
+        ],
+        "sign": 1
+      },
+      {
+        "bar_Higgs_component": 0,
+        "matter_components": [
+          17,
+          25
+        ],
+        "sign": 1
+      },
+      {
+        "bar_Higgs_component": 3,
+        "matter_components": [
+          4,
+          6
+        ],
+        "sign": -1
+      },
+      {
+        "bar_Higgs_component": 3,
+        "matter_components": [
+          15,
+          18
+        ],
+        "sign": -1
+      },
+      {
+        "bar_Higgs_component": 3,
+        "matter_components": [
+          16,
+          21
+        ],
+        "sign": -1
+      },
+      {
+        "bar_Higgs_component": 3,
+        "matter_components": [
+          17,
+          24
+        ],
+        "sign": -1
+      }
+    ]
+  }
+}
