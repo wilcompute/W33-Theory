@@ -58,3 +58,21 @@ The measured top mass sits **between** the two classic predictions: the Planck-s
 ## Falsifiers ahead
 
 An FCC-ee threshold scan (δm_t ≈ 50 MeV, with the pole-mass ambiguity resolved) together with a lattice α_s at ±0.0003 would fix μ₀ to about ±0.15 decades. That separates the variants √(v M_Pl), √(v M̄_Pl) and √(m_t M̄_Pl), which span 0.43 decades. It would test the AS/MPP Planck boundary at more than 10σ.
+
+## Addendum: the post-inflationary axion window coincides with the quartic zero
+
+The 2025 adaptive-mesh axion-string simulations ([Benabou, Buschmann, Foster, Safdi, PRL 2025](https://journals.aps.org/prl/abstract/10.1103/6v21-d6sj)) give m_a ∈ (45, 65) μeV for post-inflationary QCD-axion dark matter. With m_a = 57.2 μeV (10¹¹ GeV/f_a), that is **f_a ∈ (0.88, 1.27)×10¹¹ GeV**.
+
+λ_H vanishes inside that window for **M_t ∈ (172.35, 172.44) GeV** at α_s = 0.1180. The range is (172.02, 172.11) at α_s = 0.1171 and (172.67, 172.77) at α_s = 0.1189. The measurements are 172.57 ± 0.29 (direct) and 172.4 ± 0.7 (pole).
+
+This matters physically because of the SMASH construction (Ballesteros–Redondo–Ringwald–Tamarit 2016, [arXiv:1610.01639](https://arxiv.org/abs/1610.01639)). There the Peccei–Quinn scalar's tree-level threshold, δλ = λ_{Hσ}²/λ_σ, stabilises the Higgs potential provided the radial mode lies below the would-be instability scale. Taking f_a ≈ μ₀ makes the PQ threshold appear exactly where the SM quartic would turn negative. The dark-matter axion and the vacuum-stability threshold then sit at one scale, consistent with current m_t, α_s and lattice m_a.
+
+Prior art: SMASH already combines these ingredients, so the model is not new. The new content is the quantitative coincidence with the 2025 lattice window. The converse prediction is weak. Setting f_a = μ₀(M_t) gives m_a ≈ 106 μeV at the central top mass, but 18–430 μeV over M_t ± 1σ, because μ₀ moves about a decade per 0.5 GeV of top mass. It sharpens only with FCC-ee m_t. The look-elsewhere caveat of Result 2 applies.
+
+**Synthesis (hypothesis, not a result).** Several independent determinations point at one intermediate scale, 2–13×10¹⁰ GeV:
+- the SM quartic zero, from the measured m_t;
+- the post-inflationary axion dark-matter f_a, from the 2025 lattice;
+- √(M_EW M_Pl), the intermediate string scale;
+- the leptogenesis-compatible seesaw: M_N ~ 10¹¹ GeV gives m_ν ≈ 0.05 eV for y_ν ≈ 0.01.
+
+It is a SMASH-like intermediate-scale picture. It is falsifiable by: MADMAX / ALPHA haloscopes at 45–65 μeV; FCC-ee m_t; and the absence of TeV-scale SUSY, which the picture does not need.

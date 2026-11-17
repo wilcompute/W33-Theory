@@ -132,3 +132,16 @@ res = json.load(open(os.path.join(ROOT, "data", "toe_pass12684_higgs_criticality
 res.update(natural_scales=nat, look_elsewhere=dict(prior="log-uniform 1e8..1e19 GeV", sigma_GeV=SIG, probability_within_1sigma=frac,
                                                   log10_scale_grid=grid.tolist(), Mt_required=req.tolist()))
 json.dump(res, open(os.path.join(ROOT, "data", "toe_pass12684_higgs_criticality_dark_dimension.json"), "w"), indent=1)
+# ---------------- Part 3: the post-inflationary QCD-axion window (Benabou-Buschmann-Foster-Safdi, PRL 2025: m_a in (45, 65) ueV)
+# m_a = 57.2 ueV (1e11 GeV / f_a)  ->  f_a in (0.88, 1.27) x 1e11 GeV.  M_t for which lambda_H = 0 inside that window:
+fa_lo, fa_hi = 57.2e11 / 65, 57.2e11 / 45
+ax = {str(a3): (mt_for_scale(fa_hi, a3), mt_for_scale(fa_lo, a3)) for a3 in (0.1171, 0.1180, 0.1189)}
+print(f"axion window f_a = {fa_lo:.2e}-{fa_hi:.2e} GeV: lambda_H = 0 there needs M_t in", {k: (round(a, 2), round(b, 2)) for k, b, a in [(k, *v) for k, v in ax.items()]})
+# and the axion mass implied by f_a = mu_0 at the measured top mass
+ma = {}
+for Mt in (172.14, 172.57, 173.00):
+    mu0 = run(Mt - OFF3, 125.20, 0.1180)[1]; ma[str(Mt)] = 57.2 * 1e11 / mu0
+print("m_a (ueV) if f_a = mu_0(M_t):", {k: round(v, 1) for k, v in ma.items()})
+res = json.load(open(os.path.join(ROOT, "data", "toe_pass12684_higgs_criticality_dark_dimension.json")))
+res.update(axion_window=dict(source="Benabou et al. PRL 2025, m_a 45-65 ueV", fa_GeV=(fa_lo, fa_hi), Mt_required=ax, ma_ueV_if_fa_eq_mu0=ma))
+json.dump(res, open(os.path.join(ROOT, "data", "toe_pass12684_higgs_criticality_dark_dimension.json"), "w"), indent=1)

@@ -24,3 +24,8 @@ def test_natural_scales():
 
 def test_look_elsewhere_is_not_significant():
     assert 0.05 < D["look_elsewhere"]["probability_within_1sigma"] < 0.25
+
+
+def test_axion_window_overlaps_quartic_zero():
+    lo, hi = sorted(D["axion_window"]["Mt_required"]["0.118"])
+    assert 172.2 < lo < hi < 172.6 and abs(172.57 - (lo + hi) / 2) < 0.29 + 0.32
