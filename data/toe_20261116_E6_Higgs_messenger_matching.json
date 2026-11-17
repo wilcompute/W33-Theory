@@ -1,0 +1,13 @@
+{
+  "heavy_endomorphism_multiplets": 4,
+  "endomorphism_dimension": 729,
+  "singlet_multiplets": 4,
+  "heavy_block_holomorphic_rank": 2920,
+  "expanded_physical_Higgs_hessian_rank": 3040,
+  "tree_eliminated_adjoint_polynomial_degrees": [
+    2,
+    5,
+    6
+  ],
+  "diagonal_heavy_vevs_and_zero_heavy_moment_maps": true
+}
