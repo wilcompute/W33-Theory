@@ -1,0 +1,17 @@
+{
+ "scan": {
+  "factorisation 3 (1, 1, 3)": 20,
+  "factorisation 4 (1, 4)": 15,
+  "factorisation 12 (1, 4)": 10,
+  "isotropic line 2 (1, 2, 2)": 30,
+  "isotropic line 6 (2, 3)": 10,
+  "point 3 (1, 1, 3)": 40
+ },
+ "special_contexts": 10,
+ "distinct_weak_pairs": 10,
+ "weak_factorisations_product_basis": true,
+ "colour_factorisations_maximally_entangled": true,
+ "octet_hit_pattern": {
+  "((0, False), (0, False), (0, False), (2, True), (2, True))": 10
+ }
+}

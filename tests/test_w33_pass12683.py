@@ -44,3 +44,10 @@ def test_su5_vacuum_is_a_skew_frame_pair():
     assert d["psp43_order"] == d["frame_action_order"] == 25920
     assert d["ordered_skew_pair_stabiliser"] == 60 and d["action_on_transversals"] == 60 and d["action_on_transversals_even"]
     assert d["transversal_factorisation_bijection"] and d["doublet_choice_orbit"] == 10 and d["doublet_choice_stabiliser"] == 6
+
+
+def test_doublet_triplet_split_is_a_measurement_context():
+    d = load("w33_pass12683_doublet_triplet_contexts.json")
+    assert d["special_contexts"] == 10 and d["distinct_weak_pairs"] == 10
+    assert d["scan"]["isotropic line 6 (2, 3)"] == 10 and d["scan"]["isotropic line 2 (1, 2, 2)"] == 30
+    assert d["weak_factorisations_product_basis"] and d["colour_factorisations_maximally_entangled"]

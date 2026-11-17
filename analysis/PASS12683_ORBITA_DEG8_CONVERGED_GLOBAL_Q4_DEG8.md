@@ -95,3 +95,28 @@ So **27 → 1 + 1 + 5 + 5̄ + 5̄ + 10 is exactly the incidence partition of the
 > - **(iv)** the doublet–triplet split as a non-canonical choice of 2 of those 5 factorisations. The frame geometry does **not** select it (orbit of 10). This matches the other track's finding that their triplet filter is a tuned coefficient relation that hypercharge alone cannot protect (0e967f8ef).
 >
 > The classes themselves are classical cubic-surface geometry (Schläfli; the 5 transversals of a skew pair). The new content is the identification with the explicit vacuum and with two-qutrit factorisations.
+
+## Addendum A: the doublet–triplet split is a choice of measurement context (`w33_pass12683_doublet_triplet_contexts.py`)
+
+Section 5 left the doublet–triplet choice (which 2 of the VEV frame's 5 factorisations are "weak") unselected: one orbit of 10. We scanned natural W(3,3) objects for those whose stabiliser inside the unitary pair-stabiliser (A₅) splits the five transversals:
+
+| object | number | stabiliser | orbits on the 5 transversals |
+|---|---|---|---|
+| point (Pauli class) | 40 | 3 | 1 + 1 + 3 |
+| factorisation | 20 / 15 / 10 | 3 / 4 / 12 | 1+1+3 / 1+4 / 1+4 |
+| isotropic line (measurement context) | 30 | 2 | 1 + 2 + 2 |
+| **isotropic line (measurement context)** | **10** | **6** | **2 + 3** |
+
+**Exactly 10 of the 40 measurement contexts induce a 2 + 3 split, and they correspond one-to-one to the 10 doublet choices.** A context here is 4 mutually commuting two-qutrit Pauli classes, i.e. a joint eigenbasis of 9 states. Each of these 10 contexts:
+- meets the octets of the two **weak** factorisations in 2 points each (one local Pauli per qutrit), and the three **colour** octets in none;
+- does this in **both** VEV frames F₁ and F₂.
+
+Checked with matrices, for all 10 contexts and all 9 eigenvectors:
+
+> **In the two weak factorisations the context's eigenbasis is a product basis (Tr ρ_A² = 1). In the three colour factorisations it is maximally entangled (Tr ρ_A² = 1/3).**
+
+So in this dictionary, the SU(5) → SM step (the adjoint VEV along Y) corresponds to choosing a measurement context compatible with the two VEV frames:
+- **weak** = the 2 tensor factorisations in which that measurement is separable;
+- **colour** = the 3 in which it is maximally entangled.
+
+> **Scope.** This is still a choice: an orbit of 10, so W(3,3) does not *select* the split. It also remains a Weyl/incidence-level correspondence, not a derivation of SU(3)×SU(2) dynamics. What it adds is a physical name for the other track's free adjoint direction: a maximal commuting set of two-qutrit observables. It also turns "why 3 + 2?" into a statement about entanglement: a context compatible with two skew frames is separable in exactly 2 of a frame's 5 tensor factorisations. It does not explain the other track's triplet filter. An open question this raises: does an independently motivated context, for example the clock context of P12052 or the computational-basis context, land in this special orbit of 10?
