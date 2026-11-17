@@ -1,0 +1,78 @@
+{
+  "SU5_Cartan_generalized_mass_certificate": {
+    "all_four_Cartan_modes_massive": true,
+    "canonical_trace_metric_generalized_F_Hessian_eigenvalues": {
+      "-180": 1,
+      "480": 2,
+      "7224": 1
+    },
+    "full_physical_mass_note": "Values are in polynomial normalization Tr_27 Phi^k. Physical masses need 78 K\u00e4hler metric and an overall mass scale.",
+    "kinetic_metric_det": "6480"
+  },
+  "basis_candidates": [
+    {
+      "Hessian_SU5_Cartan_rank": 4,
+      "Hessian_det": "-1941367357440000",
+      "c": [
+        "-849",
+        "18/5",
+        "1",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "Hessian_SU5_Cartan_rank": 4,
+      "Hessian_det": "-36280880883302400000000",
+      "c": [
+        "-27500",
+        "252",
+        "0",
+        "1",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "Hessian_SU5_Cartan_rank": 4,
+      "Hessian_det": "-432419275237270487040000",
+      "c": [
+        "93744",
+        "-11466/5",
+        "0",
+        "0",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "Hessian_SU5_Cartan_rank": 4,
+      "Hessian_det": "-568389275327869638336000000000000000",
+      "c": [
+        "-39358050",
+        "583110",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    }
+  ],
+  "constraint": "Full six-dimensional E6 Cartan gradient must vanish at the hypercharge diagonal weight vector.",
+  "gradient_nullspace_dim": 4,
+  "gradient_rank": 2,
+  "scope": "Exact diagonal Cartan polynomial diagnostics. Non-Cartan Hessian, couplings to two Higgs pairs, complete F/D stability and UV naturalness not computed.",
+  "selected_Casimir_coefficients": [
+    "-849",
+    "18/5",
+    "1",
+    "0",
+    "0",
+    "0"
+  ],
+  "selected_SU5_Cartan_Hessian_det": "-1941367357440000",
+  "selected_SU5_Cartan_Hessian_rank": 4,
+  "selected_nonzero": true,
+  "status": "PASS_E6_CASIMIR_GRADIENT_AND_SU5_CARTAN_HESSIAN_SEARCH"
+}

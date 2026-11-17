@@ -1,0 +1,44 @@
+{
+  "causal_break": "SWAP S-E, discard and reprepare S in arbitrary |t>, SWAP S-E again",
+  "coherent_memory": {
+    "Bell_fidelity": 1.0000000000000007,
+    "four_MUB_matched_probabilities": [
+      1.0000000000000002,
+      1.0000000000000007,
+      1.0,
+      0.9999999999999998
+    ],
+    "four_MUB_witness_sum": 4.000000000000001,
+    "mean_random_setting_matched_probability": 1.0000000000000002,
+    "minimum_rho_eigenvalue": -1.8884998935763774e-16
+  },
+  "controls": "Classical E dephasing is entanglement-breaking, reaches the separable bound. Skipping return SWAP gives a product R:S output.",
+  "dephased_classical_memory": {
+    "Bell_fidelity": 0.33333333333333354,
+    "four_MUB_matched_probabilities": [
+      1.0000000000000002,
+      0.33333333333333354,
+      0.33333333333333337,
+      0.33333333333333326
+    ],
+    "four_MUB_witness_sum": 2.0000000000000004,
+    "mean_random_setting_matched_probability": 0.5000000000000001,
+    "minimum_rho_eigenvalue": 0.0
+  },
+  "eventready_interface": "Combine with four-MUB qutrit optical POVM, calibrated no-click handling and precommitted sequential e-process from prior scripts.",
+  "hardware_unperformed": true,
+  "registers": "R(reference),S(system),E(environment) in d3",
+  "status": "PASS_FULL_27x27_CAUSAL_BREAK_QUTRIT_SWAP_BELL_RETENTION",
+  "without_return_SWAP": {
+    "Bell_fidelity": 0.11111111111111117,
+    "four_MUB_matched_probabilities": [
+      0.3333333333333334,
+      0.3333333333333335,
+      0.33333333333333315,
+      0.3333333333333329
+    ],
+    "four_MUB_witness_sum": 1.333333333333333,
+    "mean_random_setting_matched_probability": 0.33333333333333326,
+    "minimum_rho_eigenvalue": 0.0
+  }
+}

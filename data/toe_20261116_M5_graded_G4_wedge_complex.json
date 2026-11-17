@@ -1,0 +1,362 @@
+{
+  "cohomology_betti_numbers": {
+    "0": 1,
+    "1": 2,
+    "2": 3,
+    "3": 4,
+    "4": 3,
+    "5": 2,
+    "6": 1
+  },
+  "examples": [
+    {
+      "H0_to_H4": [
+        [
+          6,
+          6,
+          6
+        ]
+      ],
+      "H1_to_H5": [
+        [
+          6,
+          0
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "H2_to_H6": [
+        [
+          6
+        ],
+        [
+          6
+        ],
+        [
+          6
+        ]
+      ],
+      "flux_periods": [
+        6,
+        6,
+        6
+      ],
+      "smith_invariants": {
+        "H0_H4": [
+          6
+        ],
+        "H1_H5": [
+          6,
+          6
+        ],
+        "H2_H6": [
+          6
+        ]
+      },
+      "torsion_coker_H0_H4": "Z_6",
+      "torsion_coker_H1_H5": "Z_6 x Z_6",
+      "torsion_coker_H2_H6": "Z_6"
+    },
+    {
+      "H0_to_H4": [
+        [
+          5,
+          6,
+          6
+        ]
+      ],
+      "H1_to_H5": [
+        [
+          5,
+          0
+        ],
+        [
+          0,
+          5
+        ]
+      ],
+      "H2_to_H6": [
+        [
+          6
+        ],
+        [
+          6
+        ],
+        [
+          5
+        ]
+      ],
+      "flux_periods": [
+        5,
+        6,
+        6
+      ],
+      "smith_invariants": {
+        "H0_H4": [
+          1
+        ],
+        "H1_H5": [
+          5,
+          5
+        ],
+        "H2_H6": [
+          1
+        ]
+      },
+      "torsion_coker_H0_H4": "none",
+      "torsion_coker_H1_H5": "Z_5 x Z_5",
+      "torsion_coker_H2_H6": "none"
+    },
+    {
+      "H0_to_H4": [
+        [
+          6,
+          6,
+          5
+        ]
+      ],
+      "H1_to_H5": [
+        [
+          6,
+          0
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "H2_to_H6": [
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          6
+        ]
+      ],
+      "flux_periods": [
+        6,
+        6,
+        5
+      ],
+      "smith_invariants": {
+        "H0_H4": [
+          1
+        ],
+        "H1_H5": [
+          6,
+          6
+        ],
+        "H2_H6": [
+          1
+        ]
+      },
+      "torsion_coker_H0_H4": "none",
+      "torsion_coker_H1_H5": "Z_6 x Z_6",
+      "torsion_coker_H2_H6": "none"
+    },
+    {
+      "H0_to_H4": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "H1_to_H5": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "H2_to_H6": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "flux_periods": [
+        1,
+        1,
+        1
+      ],
+      "smith_invariants": {
+        "H0_H4": [
+          1
+        ],
+        "H1_H5": [
+          1,
+          1
+        ],
+        "H2_H6": [
+          1
+        ]
+      },
+      "torsion_coker_H0_H4": "none",
+      "torsion_coker_H1_H5": "none",
+      "torsion_coker_H2_H6": "none"
+    },
+    {
+      "H0_to_H4": [
+        [
+          0,
+          6,
+          6
+        ]
+      ],
+      "H1_to_H5": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "H2_to_H6": [
+        [
+          6
+        ],
+        [
+          6
+        ],
+        [
+          0
+        ]
+      ],
+      "flux_periods": [
+        0,
+        6,
+        6
+      ],
+      "smith_invariants": {
+        "H0_H4": [
+          6
+        ],
+        "H1_H5": [],
+        "H2_H6": [
+          6
+        ]
+      },
+      "torsion_coker_H0_H4": "Z_6",
+      "torsion_coker_H1_H5": "none",
+      "torsion_coker_H2_H6": "Z_6"
+    },
+    {
+      "H0_to_H4": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "H1_to_H5": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "H2_to_H6": [
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "flux_periods": [
+        0,
+        0,
+        0
+      ],
+      "smith_invariants": {
+        "H0_H4": [],
+        "H1_H5": [],
+        "H2_H6": []
+      },
+      "torsion_coker_H0_H4": "none",
+      "torsion_coker_H1_H5": "none",
+      "torsion_coker_H2_H6": "none"
+    },
+    {
+      "H0_to_H4": [
+        [
+          100,
+          101,
+          100
+        ]
+      ],
+      "H1_to_H5": [
+        [
+          100,
+          0
+        ],
+        [
+          0,
+          100
+        ]
+      ],
+      "H2_to_H6": [
+        [
+          100
+        ],
+        [
+          101
+        ],
+        [
+          100
+        ]
+      ],
+      "flux_periods": [
+        100,
+        101,
+        100
+      ],
+      "smith_invariants": {
+        "H0_H4": [
+          1
+        ],
+        "H1_H5": [
+          100,
+          100
+        ],
+        "H2_H6": [
+          1
+        ]
+      },
+      "torsion_coker_H0_H4": "none",
+      "torsion_coker_H1_H5": "Z_100 x Z_100",
+      "torsion_coker_H2_H6": "none"
+    }
+  ],
+  "maps": [
+    "H0->H4",
+    "H1->H5",
+    "H2->H6"
+  ],
+  "new_crosssector_falsifier": "When (Nxy,Nxt,Nyt)=(N,N+1,N), the H0/H2 flux index is 1 but the H1 flux index is (N,N). The IIB Y(N+1,N) circle is simply connected; these graded wedge data cannot all be the same conserved charge group.",
+  "physically_nonproven": "The graded integer wedge maps are not by themselves an M-theory differential cocycle action, quantum Page charge spectrum or source-free IIB winding classification.",
+  "status": "PASS_M5_FULL_GRADED_G4_WEDGE_SMITH_CERTIFICATE",
+  "theorem": "For G4=Nxy xy+Nxt xt+Nyt yt, Smith H0->H4 and H2->H6 are gcd(Nxy,Nxt,Nyt), while H1->H5 has two invariants |Nxy| each, independent of Nxt,Nyt."
+}

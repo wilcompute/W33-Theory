@@ -1,0 +1,83 @@
+{
+  "exact_norm": {
+    "diagonal_restriction": "abc",
+    "octonionic_J3_norm_formula": "abc - a|x|^2 - b|y|^2 - c|z|^2 +2 Re((xy)z)",
+    "real_dim_diagonal": 3,
+    "real_dim_missing_offdiagonal": 24,
+    "real_dim_total": 27,
+    "real_symmetric_3x3_slice_det": "a*b*c - a*x**2 - b*y**2 - c*z**2 + 2*x*y*z",
+    "small_exact_tests": [
+      {
+        "exceptional_Jordan_real_slice": 1,
+        "matrix_determinant": 1,
+        "parameters": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "exceptional_Jordan_real_slice": 30,
+        "matrix_determinant": 30,
+        "parameters": [
+          2,
+          3,
+          5,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "exceptional_Jordan_real_slice": -18,
+        "matrix_determinant": -18,
+        "parameters": [
+          1,
+          2,
+          3,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "exceptional_Jordan_real_slice": -6,
+        "matrix_determinant": -6,
+        "parameters": [
+          -2,
+          3,
+          1,
+          2,
+          -1,
+          1
+        ]
+      }
+    ],
+    "three_octonions_real_dimensions": [
+      8,
+      8,
+      8
+    ]
+  },
+  "literature": "Gunaydin et al., magical supergravity from degree-3 Euclidean Jordan algebras, and subsequent octonionic magical supergravity reviews.",
+  "physics_contrast": "E6(-26) as U-duality of octonionic magical 5D supergravity is NOT automatically the same gauged complex/compact E6 GUT used in the 27-Higgs F-term sector.",
+  "status": "PASS_STU_TO_J3O_CUBIC_BRIDGE_WITH_24_MODE_DEFICIT",
+  "topological_vector_obstruction": {
+    "Betti_numbers": {
+      "b1": 2,
+      "b2": 3,
+      "b3": 4,
+      "b4": 3,
+      "b5": 2
+    },
+    "M6": "S2 x S2 x T2",
+    "condition": "Need 24 extra independent vector/charge degrees to upgrade this particular 3-variable STU cubic to the 27-variable E6(-26) Jordan norm. A matching polynomial abc alone is not such an upgrade.",
+    "harmonic_C3_5D_1form_fields": 3,
+    "missing_variables_for_full_J3O_harmonic_C3_sector": 24,
+    "nonclaim": "Other metric KK vectors, dual p-form fields, massive states or nongeometric sectors might contribute, but no complete 27-vector E6(-26) supergravity reduction is derived.",
+    "octonionic_magic_supergravity_cubic_variables": 27
+  }
+}

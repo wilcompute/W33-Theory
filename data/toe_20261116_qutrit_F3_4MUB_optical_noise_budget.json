@@ -1,0 +1,64 @@
+{
+  "eventready_witness_threshold": "eta_R*eta_S*eta_memory*eta_path > (1/2+eps+setting_TV) / ((1+3F)/4)",
+  "example_feasible": {
+    "Bell_fidelity": 0.766653396374446,
+    "calibrated_separable_null_p0": 0.51,
+    "coherence_multiplier": 0.9777512371933363,
+    "detectable_with_positive_asymptotic_gap": true,
+    "matched_probability_given_perfect_detection": 0.8249900472808345,
+    "memory_throughput": 0.95,
+    "minimum_pair_efficiency_to_be_detectable": 0.6181892759566724,
+    "observed_clickmatch_probability": 0.603088349313472,
+    "optical_path_throughput": 0.95,
+    "phase_sigma_radians": 0.15,
+    "reference_detector_efficiency": 0.9,
+    "signal_detector_efficiency": 0.9,
+    "total_eventready_pair_detection": 0.7310249999999999,
+    "v": 0.75
+  },
+  "example_not_feasible": {
+    "Bell_fidelity": 0.766653396374446,
+    "calibrated_separable_null_p0": 0.51,
+    "coherence_multiplier": 0.9777512371933363,
+    "detectable_with_positive_asymptotic_gap": false,
+    "matched_probability_given_perfect_detection": 0.8249900472808345,
+    "memory_throughput": 0.8,
+    "minimum_pair_efficiency_to_be_detectable": 0.6181892759566724,
+    "observed_clickmatch_probability": 0.4768442473283223,
+    "optical_path_throughput": 1.0,
+    "phase_sigma_radians": 0.15,
+    "reference_detector_efficiency": 0.85,
+    "signal_detector_efficiency": 0.85,
+    "total_eventready_pair_detection": 0.578,
+    "v": 0.75
+  },
+  "four_MUB_matrices": "U_Z=I; U_b = diag(omega^(2 b n^2)) F3 for b in {0,1,2}; F3[n,k]=omega^(nk)/sqrt(3).",
+  "hardware_measurement_sequence": "Herald pair before basis choice; sample one of four bases after preparation; phase-compensate R basis as U_b* and S as U_b; for b=0,1,2 apply phase D_b dagger then 3-mode Fourier inverse on signal, and conjugate on reference; time-tag computational outputs; record all no-clicks as 0.",
+  "identity_and_analyzer": {
+    "F3_analzyer_Reck_couplers": {
+      "couplers": 3,
+      "mode_pairs_in_application_order": [
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "reconstruction_max_error": 2.220446049250313e-16,
+      "unitarity_error": 2.5344527829436707e-16
+    },
+    "mutually_unbiased_pairwise_overlap_squared": 0.3333333333333333,
+    "operator_max_norm_residual": 1.6757249198974154e-15
+  },
+  "limits": "Source herald may not depend on the later measurement outcome, phase and setting leakage must be calibrated; single-photon memory SWAP and causal reset are not built. Hardware loss might be basis-dependent and require a per-setting POVM bound.",
+  "not_experimental_data": true,
+  "phase_noise_law": "Gaussian independent relative phases variance sigma^2 give E Bell fidelity v*(1+2*exp(-sigma^2))/3+(1-v)/9",
+  "status": "PASS_QUTRIT_4MUB_FOURIER_3COUPLER_AND_LOSS_PHASE_BUDGET"
+}

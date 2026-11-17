@@ -1,0 +1,113 @@
+{
+  "competing_susy_vacua": {
+    "nonuniqueness": "Global N=1 SUSY F/D potential vanishes on all F=D=0 vacua. The cubic SU5 superpotential does not energetically prefer the SM branch over the origin or SU4xU1.",
+    "origin": "Phi=0 (unbroken SU5)",
+    "two_eigenvalue_branches": [
+      {
+        "centralizer": "S(U(1) x U(4))",
+        "first_eigenvalue": "-4/3",
+        "globally_SUSY_zero_F_energy": true,
+        "multiplicity_first": 1,
+        "second_eigenvalue": "1/3",
+        "superpotential_value": "10/27"
+      },
+      {
+        "centralizer": "S(U(2) x U(3))",
+        "first_eigenvalue": "-3",
+        "globally_SUSY_zero_F_energy": true,
+        "multiplicity_first": 2,
+        "second_eigenvalue": "2",
+        "superpotential_value": "5"
+      },
+      {
+        "centralizer": "S(U(3) x U(2))",
+        "first_eigenvalue": "2",
+        "globally_SUSY_zero_F_energy": true,
+        "multiplicity_first": 3,
+        "second_eigenvalue": "-3",
+        "superpotential_value": "5"
+      },
+      {
+        "centralizer": "S(U(4) x U(1))",
+        "first_eigenvalue": "1/3",
+        "globally_SUSY_zero_F_energy": true,
+        "multiplicity_first": 4,
+        "second_eigenvalue": "-4/3",
+        "superpotential_value": "10/27"
+      }
+    ]
+  },
+  "effective_SU5": {
+    "Casimir_constraint_Cartan_gradient_rank_at_hypercharge": 1,
+    "F_flat": true,
+    "F_term_linearization_rank": 12,
+    "Hessian_eigenvalues_lambda_v_1": {
+      "+5": 8,
+      "-1": 1,
+      "-5": 3,
+      "0": 12
+    },
+    "IMPORTANT_UV_CAVEAT": "SU5 permits cubic tr Phi^3 but E6 has no degree-3 adjoint invariant. No E6 invariant UV operator inducing this effective superpotential has been derived; consistency of heavy E6 fields and scalar vacuum remains open.",
+    "adjoint_vacuum": "Phi0=v diag(2,2,2,-3,-3)",
+    "broken_complex_goldstone_count": 12,
+    "characteristic_polynomial": "t**5 - 15*t**3 + 10*t**2 + 60*t - 72",
+    "effective_superpotential": "W_eff=lambda*v/2 Tr(Phi^2)+lambda/3 Tr(Phi^3)",
+    "previous_3_complex_Cartan_moduli_lifted": true,
+    "status": "PASS_EXACT_SU5_EFFECTIVE_SUPERPOTENTIAL_CARTAN_LIFT",
+    "traces_1_to_5": {
+      "1": 0,
+      "2": 30,
+      "3": -30,
+      "4": 210,
+      "5": -390
+    },
+    "unbroken_sm_adjoint_complex_dim": 12
+  },
+  "invariant_scope": "The proposed cubic SU5 adjoint interaction is not itself an E6-invariant polynomial. Its existence after symmetry breaking does not prove UV completion.",
+  "status": "PASS_SU5_SPECTRALLY_STABLE_ADJOINT_AND_E6_3FAMILY_RANK",
+  "three_family_E6_yukawa": {
+    "CRITICAL_SCOPE": "No full gaugino-Higgsino spectrum, no SM Yukawa textures, and no proof that 51 kernel states are all protected physical particles.",
+    "independent_symmetric_yukawa_matrices": [
+      [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          3
+        ]
+      ],
+      [
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          0,
+          1,
+          3
+        ]
+      ]
+    ],
+    "interpretation": "Three generic SU5 vectorlike 5+5bar pairs lifted; 3*(16+1) representation components remain massless before other couplings.",
+    "mass_matrix_rank": 30,
+    "matter_families": 3,
+    "remaining_kernel": 51,
+    "status": "PASS_THREE_FAMILY_GENERIC_CUBIC_RANK30_NULLITY51",
+    "vector_components": 81
+  }
+}

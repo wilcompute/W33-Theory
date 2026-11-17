@@ -1,0 +1,158 @@
+{
+  "exact_equal_flux_constants": {
+    "BF_gap_lower_bound": 0.46354185041878715,
+    "M5_probe_to_bulk_action": "(2*kappa11^2*T_M5/L^3)*n_M5 = 16*pi^2*n_M5/(9*N)",
+    "long_cycle_unstable_harmonics": "At least 2*(ceil(sqrt(4 Im tau/pi))-1) signed Fourier modes, counting only vectors (m,0).",
+    "sphere_epsilon": "(lp/r_S2)^6 = 32/(3*pi^2*N^2)",
+    "torus_epsilon": "(lp/Rmin)^6 = 4*pi*(Im tau)^3 / (3*N^2)"
+  },
+  "examples": [
+    {
+      "AdS_radius_lp": 24.179879310247042,
+      "Im_tau": 1,
+      "M5_to_bulk_characteristic_action_ratio": 0.017545963379714414,
+      "N": 1000,
+      "at_least_this_many_signed_classical_unstable_long_cycle_modes": 2,
+      "n_probe_M5": 1,
+      "sharp_classical_BF_deficit": 0.46354185041878715,
+      "shortest_torus_cycle_radius_lp": 7.876233178997431,
+      "sphere_8derivative_parameter": 1.0807592921849361e-06,
+      "torus_8derivative_parameter": 4.188790204786398e-06
+    },
+    {
+      "AdS_radius_lp": 24.179879310247042,
+      "Im_tau": 31.622776601683793,
+      "M5_to_bulk_characteristic_action_ratio": 0.017545963379714414,
+      "N": 1000,
+      "at_least_this_many_signed_classical_unstable_long_cycle_modes": 12,
+      "n_probe_M5": 1,
+      "sharp_classical_BF_deficit": 0.46354185041878715,
+      "shortest_torus_cycle_radius_lp": 1.4006143290876543,
+      "sphere_8derivative_parameter": 1.0807592921849361e-06,
+      "torus_8derivative_parameter": 0.13246117687728146
+    },
+    {
+      "AdS_radius_lp": 24.179879310247042,
+      "Im_tau": 99.99999999999997,
+      "M5_to_bulk_characteristic_action_ratio": 0.017545963379714414,
+      "N": 1000,
+      "at_least_this_many_signed_classical_unstable_long_cycle_modes": 22,
+      "n_probe_M5": 1,
+      "sharp_classical_BF_deficit": 0.46354185041878715,
+      "shortest_torus_cycle_radius_lp": 0.7876233178997433,
+      "sphere_8derivative_parameter": 1.0807592921849361e-06,
+      "torus_8derivative_parameter": 4.188790204786389
+    },
+    {
+      "AdS_radius_lp": 24.179879310247042,
+      "Im_tau": 177.82794100389228,
+      "M5_to_bulk_characteristic_action_ratio": 0.017545963379714414,
+      "N": 1000,
+      "at_least_this_many_signed_classical_unstable_long_cycle_modes": 30,
+      "n_probe_M5": 1,
+      "sharp_classical_BF_deficit": 0.46354185041878715,
+      "shortest_torus_cycle_radius_lp": 0.5906341652282334,
+      "sphere_8derivative_parameter": 1.0807592921849361e-06,
+      "torus_8derivative_parameter": 23.555298347039333
+    },
+    {
+      "AdS_radius_lp": 241.79879310247037,
+      "Im_tau": 1,
+      "M5_to_bulk_characteristic_action_ratio": 1.7545963379714414e-05,
+      "N": 1000000,
+      "at_least_this_many_signed_classical_unstable_long_cycle_modes": 2,
+      "n_probe_M5": 1,
+      "sharp_classical_BF_deficit": 0.46354185041878715,
+      "shortest_torus_cycle_radius_lp": 78.7623317899743,
+      "sphere_8derivative_parameter": 1.0807592921849379e-12,
+      "torus_8derivative_parameter": 4.1887902047864e-12
+    },
+    {
+      "AdS_radius_lp": 241.79879310247037,
+      "Im_tau": 1000.0,
+      "M5_to_bulk_characteristic_action_ratio": 1.7545963379714414e-05,
+      "N": 1000000,
+      "at_least_this_many_signed_classical_unstable_long_cycle_modes": 70,
+      "n_probe_M5": 1,
+      "sharp_classical_BF_deficit": 0.46354185041878715,
+      "shortest_torus_cycle_radius_lp": 2.490683622822055,
+      "sphere_8derivative_parameter": 1.0807592921849379e-12,
+      "torus_8derivative_parameter": 0.0041887902047863974
+    },
+    {
+      "AdS_radius_lp": 241.79879310247037,
+      "Im_tau": 9999.999999999995,
+      "M5_to_bulk_characteristic_action_ratio": 1.7545963379714414e-05,
+      "N": 1000000,
+      "at_least_this_many_signed_classical_unstable_long_cycle_modes": 224,
+      "n_probe_M5": 1,
+      "sharp_classical_BF_deficit": 0.46354185041878715,
+      "shortest_torus_cycle_radius_lp": 0.7876233178997433,
+      "sphere_8derivative_parameter": 1.0807592921849379e-12,
+      "torus_8derivative_parameter": 4.188790204786389
+    },
+    {
+      "AdS_radius_lp": 241.79879310247037,
+      "Im_tau": 31622.776601683792,
+      "M5_to_bulk_characteristic_action_ratio": 1.7545963379714414e-05,
+      "N": 1000000,
+      "at_least_this_many_signed_classical_unstable_long_cycle_modes": 400,
+      "n_probe_M5": 1,
+      "sharp_classical_BF_deficit": 0.46354185041878715,
+      "shortest_torus_cycle_radius_lp": 0.44291314033856105,
+      "sphere_8derivative_parameter": 1.0807592921849379e-12,
+      "torus_8derivative_parameter": 132.46117687728164
+    },
+    {
+      "AdS_radius_lp": 2417.9879310247034,
+      "Im_tau": 1,
+      "M5_to_bulk_characteristic_action_ratio": 1.7545963379714413e-08,
+      "N": 1000000000,
+      "at_least_this_many_signed_classical_unstable_long_cycle_modes": 2,
+      "n_probe_M5": 1,
+      "sharp_classical_BF_deficit": 0.46354185041878715,
+      "shortest_torus_cycle_radius_lp": 787.6233178997429,
+      "sphere_8derivative_parameter": 1.0807592921849393e-18,
+      "torus_8derivative_parameter": 4.1887902047864035e-18
+    },
+    {
+      "AdS_radius_lp": 2417.9879310247034,
+      "Im_tau": 31622.776601683792,
+      "M5_to_bulk_characteristic_action_ratio": 1.7545963379714413e-08,
+      "N": 1000000000,
+      "at_least_this_many_signed_classical_unstable_long_cycle_modes": 400,
+      "n_probe_M5": 1,
+      "sharp_classical_BF_deficit": 0.46354185041878715,
+      "shortest_torus_cycle_radius_lp": 4.42913140338561,
+      "sphere_8derivative_parameter": 1.0807592921849393e-18,
+      "torus_8derivative_parameter": 0.00013246117687728165
+    },
+    {
+      "AdS_radius_lp": 2417.9879310247034,
+      "Im_tau": 999999.9999999992,
+      "M5_to_bulk_characteristic_action_ratio": 1.7545963379714413e-08,
+      "N": 1000000000,
+      "at_least_this_many_signed_classical_unstable_long_cycle_modes": 2256,
+      "n_probe_M5": 1,
+      "sharp_classical_BF_deficit": 0.46354185041878715,
+      "shortest_torus_cycle_radius_lp": 0.7876233178997432,
+      "sphere_8derivative_parameter": 1.0807592921849393e-18,
+      "torus_8derivative_parameter": 4.188790204786393
+    },
+    {
+      "AdS_radius_lp": 2417.9879310247034,
+      "Im_tau": 5623413.251903491,
+      "M5_to_bulk_characteristic_action_ratio": 1.7545963379714413e-08,
+      "N": 1000000000,
+      "at_least_this_many_signed_classical_unstable_long_cycle_modes": 5350,
+      "n_probe_M5": 1,
+      "sharp_classical_BF_deficit": 0.46354185041878715,
+      "shortest_torus_cycle_radius_lp": 0.33213799917714026,
+      "sphere_8derivative_parameter": 1.0807592921849393e-18,
+      "torus_8derivative_parameter": 744.8839374144382
+    }
+  ],
+  "large_N_consequences": "At y=o(N^(2/3)), torus short-cycle 8-derivative expansion parameter tends to zero. At y~N^(2/3), it is O(1), with O(N^(1/3)) unstable long-cycle harmonics. A fixed number of M5 probes contributes O(1/N) relative bulk action and cannot compensate an O(1) bulk instability under bounded backreaction response.",
+  "not_yet_physics": "Actual corrected gravity-plus-M5 fluctuation matrix, tension wrapping, possible large localized mode enhancements and flux-dependent R4 coefficients remain uncomputed.",
+  "status": "PASS_M5_PROBE_NO_CURE_AND_TORUS_CUSP_EFT_FIREWALL"
+}
