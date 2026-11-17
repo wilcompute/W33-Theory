@@ -1,0 +1,190 @@
+{
+  "geometry_and_harmonics": {
+    "period_basis": [
+      [
+        -3,
+        -1
+      ],
+      [
+        1,
+        -2
+      ]
+    ],
+    "metric_Gram": [
+      [
+        "1",
+        "1/2"
+      ],
+      [
+        "1/2",
+        "1"
+      ]
+    ],
+    "primal_f_vector": [
+      7,
+      21,
+      14
+    ],
+    "dual_f_vector": [
+      14,
+      21,
+      7
+    ],
+    "edge_harmonic_lifts_dx_dy": [
+      [
+        1,
+        0
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "two_cycle_lift_periods": [
+      [
+        3,
+        1
+      ],
+      [
+        -1,
+        2
+      ]
+    ],
+    "edge_Hodge_characteristic_polynomial": "z**2*(z - 7)**6*(z - 6)*(z**2 - 6*z + 7)**6",
+    "edge_Hodge_eigenvalues": {
+      "0": 2,
+      "7": 6,
+      "6": 1,
+      "3-sqrt(2)": 6,
+      "3+sqrt(2)": 6
+    },
+    "honeycomb_shifts_in_native_labels": [
+      0,
+      1,
+      5
+    ]
+  },
+  "triad_powers": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "continuum_moments": [
+    "3/2",
+    "3/2",
+    "45/8",
+    "45/4",
+    "255/8"
+  ],
+  "finite_moments_by_refinement": {
+    "1": [
+      "3/2",
+      "15/4",
+      "93/8",
+      "555/16",
+      "3333/32"
+    ],
+    "2": [
+      "3/2",
+      "3/2",
+      "45/8",
+      "45/4",
+      "1065/32"
+    ],
+    "3": [
+      "3/2",
+      "3/2",
+      "45/8",
+      "45/4",
+      "255/8"
+    ]
+  },
+  "site_count_by_refinement": {
+    "1": 7,
+    "2": 28,
+    "3": 63
+  },
+  "vertex_heat_trace": "1+6 exp(-7 beta)",
+  "edge_heat_trace": "2+6 exp(-7 beta)+exp(-6 beta)+6 exp(-(3-sqrt(2))beta)+6 exp(-(3+sqrt(2))beta)",
+  "Szilassi_vertex_heat_trace": "1+exp(-6 beta)+6 exp(-(3-sqrt(2))beta)+6 exp(-(3+sqrt(2))beta)",
+  "W33_graph_heat_trace_from_existing_oscillator": "1+24 exp(-10 beta)+15 exp(-16 beta)",
+  "status": "PASS"
+}
