@@ -1,0 +1,205 @@
+{
+  "allowed_diagonal_Z4R_charges": [
+    {
+      "A": 0,
+      "Abar": 0,
+      "B": 0,
+      "Bbar": 0,
+      "K": 0,
+      "Kbar": 0,
+      "L": 0,
+      "Lbar": 0,
+      "X": 1,
+      "s": 0,
+      "t": 0
+    },
+    {
+      "A": 0,
+      "Abar": 0,
+      "B": 0,
+      "Bbar": 0,
+      "K": 0,
+      "Kbar": 0,
+      "L": 0,
+      "Lbar": 0,
+      "X": 3,
+      "s": 0,
+      "t": 0
+    },
+    {
+      "A": 0,
+      "Abar": 0,
+      "B": 2,
+      "Bbar": 2,
+      "K": 0,
+      "Kbar": 0,
+      "L": 0,
+      "Lbar": 0,
+      "X": 1,
+      "s": 0,
+      "t": 0
+    },
+    {
+      "A": 0,
+      "Abar": 0,
+      "B": 2,
+      "Bbar": 2,
+      "K": 0,
+      "Kbar": 0,
+      "L": 0,
+      "Lbar": 0,
+      "X": 3,
+      "s": 0,
+      "t": 0
+    }
+  ],
+  "all_cyclic_charge_identity": {
+    "contact_charge_minus_superpotential_charge_for_allowed_yukawas": "2*theta"
+  },
+  "orthogonal_flux_for_cyclic_R": {
+    "first_cocharacter": [
+      1,
+      0,
+      -1,
+      1,
+      0,
+      -1,
+      1,
+      0,
+      -1,
+      -1,
+      -1,
+      -1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "second_cocharacter": [
+      1,
+      0,
+      1,
+      0,
+      -1,
+      0,
+      0,
+      -1,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      -1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      -1,
+      0,
+      0,
+      -1,
+      0,
+      0
+    ],
+    "both_cocharacters_are_E6_coroots": true,
+    "inherited_E6_instanton_number": 0,
+    "integer_exponent_for_unit_superspace_charge": 2,
+    "local_integer_exponents": [
+      0,
+      0,
+      0,
+      2
+    ]
+  },
+  "geometric_rotation_controls": {
+    "nontrivial_translation_fixed_algebra_dimensions_x_y_xy": [
+      46,
+      38,
+      46
+    ],
+    "corner_fixed_algebra_dimensions": [
+      38,
+      38,
+      46,
+      38
+    ],
+    "translation_actions_compatible_with_gauge_dims": [
+      [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    ],
+    "translation_actions_also_compatible_with_charged_hypers": [
+      [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    ],
+    "nontrivial_half_translation_allowed": false
+  },
+  "integral_spin_inflow": {
+    "coefficients_for_axion_shift_pi": [
+      {
+        "J_coefficient": 0,
+        "local_spin_class_coefficient": -1,
+        "local_characteristic_class_divisor": 2
+      },
+      {
+        "J_coefficient": 1,
+        "local_spin_class_coefficient": -3,
+        "local_characteristic_class_divisor": 2
+      },
+      {
+        "J_coefficient": 2,
+        "local_spin_class_coefficient": -5,
+        "local_characteristic_class_divisor": 1
+      },
+      {
+        "J_coefficient": 0,
+        "local_spin_class_coefficient": -1,
+        "local_characteristic_class_divisor": 2
+      }
+    ],
+    "first_holomorphic_harmonic_by_shift_in_pi_over_2_units": {
+      "1": 2,
+      "2": 1,
+      "3": 2
+    }
+  }
+}
