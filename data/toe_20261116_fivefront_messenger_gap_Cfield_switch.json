@@ -1,0 +1,179 @@
+{
+  "E6_messenger_and_parity": {
+    "BminusL_and_Rparity_no_go": "QQQL and uc uc dc ec have B-L=0, and four odd matter superfields have even Z2 matter parity; neither a subgroup of U(1)_(B-L) nor ordinary matter parity can forbid these operators",
+    "exact_endpoint_formula": "-(yu*yd)*(-mu)^(n-1)/det(M)",
+    "interpretation": "Longer heavy-messenger mixing paths suppress a particular D5 exchange amplitude algebraically; this is a CONDITIONAL texture, not an E6-consistent full symmetry or a complete proton-decay prediction.",
+    "leading_order": "(-1)^n*yu*yd*mu^(n-1)/m^n for |mu/m| sufficiently small",
+    "paths": [
+      {
+        "determinant": "(m - mu)*(m + mu)",
+        "endpoint_operator_coefficient": "mu*yd*yu/((m - mu)*(m + mu))",
+        "first_mixing_power": 1,
+        "leading_coefficient": "yd*yu/m**2",
+        "messenger_pairs": 2
+      },
+      {
+        "determinant": "m*(m**2 - 2*mu**2)",
+        "endpoint_operator_coefficient": "-mu**2*yd*yu/(m*(m**2 - 2*mu**2))",
+        "first_mixing_power": 2,
+        "leading_coefficient": "-yd*yu/m**3",
+        "messenger_pairs": 3
+      },
+      {
+        "determinant": "(m**2 - m*mu - mu**2)*(m**2 + m*mu - mu**2)",
+        "endpoint_operator_coefficient": "mu**3*yd*yu/((m**2 - m*mu - mu**2)*(m**2 + m*mu - mu**2))",
+        "first_mixing_power": 3,
+        "leading_coefficient": "yd*yu/m**4",
+        "messenger_pairs": 4
+      },
+      {
+        "determinant": "m*(m - mu)*(m + mu)*(m**2 - 3*mu**2)",
+        "endpoint_operator_coefficient": "-mu**4*yd*yu/(m*(m - mu)*(m + mu)*(m**2 - 3*mu**2))",
+        "first_mixing_power": 4,
+        "leading_coefficient": "-yd*yu/m**5",
+        "messenger_pairs": 5
+      },
+      {
+        "determinant": "(m**3 - m**2*mu - 2*m*mu**2 + mu**3)*(m**3 + m**2*mu - 2*m*mu**2 - mu**3)",
+        "endpoint_operator_coefficient": "mu**5*yd*yu/((m**3 - m**2*mu - 2*m*mu**2 + mu**3)*(m**3 + m**2*mu - 2*m*mu**2 - mu**3))",
+        "first_mixing_power": 5,
+        "leading_coefficient": "yd*yu/m**6",
+        "messenger_pairs": 6
+      }
+    ],
+    "schur_formula": "W_eff=-Ju*M^(-1)*Jd, with M=m*I+mu*adjacency(path_n), Ju on first and Jd on last messenger",
+    "status": "PASS_E6_MESSENGER_CHAIN_SCHUR_AND_MATTER_PARITY_NO_GO"
+  },
+  "KK_uniform_gap": {
+    "BF_deficit_infimum": 1.6628431434177413,
+    "BF_deficit_supremum": 2.25,
+    "analytic_infimum": "sqrt(4+12*pi^2)-3*pi^2/4-2",
+    "analytic_supremum": "9/4 attained when lambda=15/4 (y=4*pi/5)",
+    "lambda_lower_open": 3.0,
+    "lambda_upper_open": 7.4022033008170185,
+    "limitation": "Equal-flux classical KK branch only; mode count changes across shape walls, and unequal-flux gauge constraints still unconstructed.",
+    "physical_operator_requirement": "If entire 11D physical fluctuation Hessian converges to equal-flux operator within norm strictly below this strip's gap, at least 2 real unstable modes persist; the norm is not calculated.",
+    "status": "PASS_EXACT_TWO_MODE_BF_STRIP_UNIFORM_GAP",
+    "strip": "|Re tau| <=1/2, 4/pi < Im tau < pi",
+    "translation_conservation": "Flux field-strength and square/flat torus geometry are torus-translation invariant; a translation-covariant physical linearized operator is block diagonal in torus momenta. Anti-linear reality pairs k and -k.",
+    "two_real_unstable_modes": [
+      [
+        -1,
+        0
+      ],
+      [
+        1,
+        0
+      ]
+    ]
+  },
+  "X8_local_bidegree": {
+    "X8_t_squared_form": [
+      {
+        "bitmask": 495,
+        "coeff": "-216",
+        "external_degree": 4,
+        "internal_degree": 4
+      }
+    ],
+    "background_C3_local_gauge": "Locally pure-internal C3_bg (background G4 has no external legs)",
+    "critical_caveat": "This is a selection rule for the SPECIFIC Bianchi-valid example, not a theorem that the entire quadratic X8 variation vanishes after contraction with a physical background C3. X8 terms with >=5 external and <=3 internal legs could contribute; global C-field is a differential cocycle.",
+    "sample_quadratic_C3bg_wedge_X8": "ZERO for every internal 3form in six internal dimensions because (4 internal)+(3 internal)>6",
+    "status": "PASS_BIANCHI_X8_SAMPLE_WEDGES_TO_ZERO_WITH_INTERNAL_C3"
+  },
+  "differential_Cfield_topology": {
+    "IIB_Y5": {
+      "H3_homology": "Z + Z_g by Poincare duality to H^2(Y,Z)",
+      "examples": [
+        {
+          "Euler_flux": [
+            7,
+            6
+          ],
+          "flat_degree4_differential_character": "U(1)",
+          "spin_structures": 1,
+          "torsion_order": 1
+        },
+        {
+          "Euler_flux": [
+            6,
+            6
+          ],
+          "flat_degree4_differential_character": "U(1) x Z_6",
+          "spin_structures": 2,
+          "torsion_order": 6
+        },
+        {
+          "Euler_flux": [
+            12,
+            18
+          ],
+          "flat_degree4_differential_character": "U(1) x Z_6",
+          "spin_structures": 2,
+          "torsion_order": 6
+        },
+        {
+          "Euler_flux": [
+            0,
+            8
+          ],
+          "flat_degree4_differential_character": "U(1) x Z_8",
+          "spin_structures": 2,
+          "torsion_order": 8
+        }
+      ],
+      "flat_differential_4_characters": "H^3(Y;R/Z) = Hom(H_3(Y),R/Z) = U(1) x Z_g",
+      "integral_half_shift": "lambda=p1(TY)/2=0, because TY stable pullback of T(S2xS2) and p1(base)=0",
+      "winding_character_difference": "Abstract flat differential degree-4 characters (3-gerbes) on Y are NOT identical to flat U(1) line-bundle characters Hom(pi1,U1), even though both have Z_g components; IIB physical RR potentials are C0, C2 and C4, not an independent C3 field."
+    },
+    "M6_product": {
+      "H3_homology": "Z^4",
+      "flat_differential_4_characters": "H^3(M6;R/Z)=(U1)^4, no torsion",
+      "integral_half_shift": "lambda=p1(TM6)/2=0",
+      "manifold": "S2 x S2 x T2"
+    },
+    "large_scope_warning": "Differential character flat moduli of isolated spaces are topological, not the physical quantized Page-charge group. Actual M/IIB duality relates higher-dimensional backgrounds with nontrivial flux and couplings; this is NOT a charge-duality derivation.",
+    "status": "PASS_TOPOLOGICAL_FLAT_CFIELD_SECTORS_IN_6D_VS_IIB_Y5"
+  },
+  "optical_active_switch": {
+    "chosen_common_output_slot": 4,
+    "fiber_delays_m": [
+      0.8157617904761906,
+      0.611821342857143,
+      0.4078808952380953
+    ],
+    "gate_guard_ps": 100.0,
+    "group_index": 1.47,
+    "illustrative_two_switch_loss_cases": [
+      {
+        "above_previous_91p96pct_benchmark": true,
+        "coupling": 0.99,
+        "delay_transmission": 0.995,
+        "end_to_end_temporal_router": 0.965447505,
+        "per_switch": 0.99
+      },
+      {
+        "above_previous_91p96pct_benchmark": true,
+        "coupling": 0.99,
+        "delay_transmission": 0.99,
+        "end_to_end_temporal_router": 0.92217609,
+        "per_switch": 0.97
+      },
+      {
+        "above_previous_91p96pct_benchmark": false,
+        "coupling": 0.98,
+        "delay_transmission": 0.98,
+        "end_to_end_temporal_router": 0.8667609999999999,
+        "per_switch": 0.95
+      }
+    ],
+    "limitations": "Ideal coherent switches and independent, unbiased detector loss; realistic insertion losses, mode matching, pulse shape, PMD, feedforward delay and randomized-basis implementation must be calibrated.",
+    "measured_hardware": false,
+    "minimum_switch_timing_slots": "Distinct routing operation must switch on 1 ns-separated time bins; insertion losses and spectral overlap are additional",
+    "misroute_probability_gaussian_jitter_sigma300ps": 0.18242243945173575,
+    "misroute_probability_gaussian_jitter_sigma30ps": 1.481282554381419e-40,
+    "status": "PASS_THREE_TIMEBIN_ACTIVE_ROUTING_AND_SWITCH_BUDGET",
+    "time_bin_spacing_ns": 1.0
+  },
+  "status": "PASS_FIVEFRONT_WILSONIAN_KK_X8_CFIELD_ROUTER_STRESS"
+}
