@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "spinor_dimension": 16,
+  "full_symmetric_pairs": 136,
+  "symmetric_square_image_rank": 10,
+  "native_E6_branch_dimensions": {
+    "10": 10,
+    "5bar": 5,
+    "1": 1
+  },
+  "SU5_branch_pair_ranks": {
+    "10x10": {
+      "total_ordered_products": 100,
+      "nonzero_in_basis": 54,
+      "image_rank": 5,
+      "output_Chi_charge": -2
+    },
+    "10x5bar": {
+      "total_ordered_products": 50,
+      "nonzero_in_basis": 32,
+      "image_rank": 5,
+      "output_Chi_charge": 2
+    },
+    "10x1": {
+      "total_ordered_products": 10,
+      "nonzero_in_basis": 0,
+      "image_rank": 0,
+      "output_Chi_charge": -6
+    },
+    "5barx5bar": {
+      "total_ordered_products": 25,
+      "nonzero_in_basis": 0,
+      "image_rank": 0,
+      "output_Chi_charge": 6
+    },
+    "5barx1": {
+      "total_ordered_products": 5,
+      "nonzero_in_basis": 5,
+      "image_rank": 5,
+      "output_Chi_charge": -2
+    },
+    "1x1": {
+      "total_ordered_products": 1,
+      "nonzero_in_basis": 0,
+      "image_rank": 0,
+      "output_Chi_charge": -10
+    }
+  },
+  "symmetric_Clifford_map": "Sym\u00b2(16_-3) -> 10_-2 has exact rank10 in native E6 27 module; two SU5 five-dimensional channels are independently generated",
+  "scope": "Exact equivariant representation action only. No wavefunction overlap, 4D physical zero modes, superpotential coefficient, flavor hierarchy, anomaly cancellation or G2 compactification."
+}

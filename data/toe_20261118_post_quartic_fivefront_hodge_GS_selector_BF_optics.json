@@ -1,0 +1,392 @@
+{
+  "status": "PASS",
+  "boundary_hodge": {
+    "status": "PASS",
+    "cases": [
+      {
+        "defects": 3,
+        "relative_spheres": 3,
+        "monodromy": "1",
+        "betti": [
+          0,
+          3,
+          0,
+          0
+        ],
+        "Hodge_D_kernel": 3,
+        "nonzero_singular_values": {
+          "d0": 1.7320508075688772,
+          "d2": 3
+        },
+        "spectral_gap": 1.0,
+        "formal_chiral_excess": 3
+      },
+      {
+        "defects": 3,
+        "relative_spheres": 3,
+        "monodromy": "-1",
+        "betti": [
+          0,
+          3,
+          0,
+          0
+        ],
+        "Hodge_D_kernel": 3,
+        "nonzero_singular_values": {
+          "d0": 2.6457513110645907,
+          "d2": 3
+        },
+        "spectral_gap": 1.0,
+        "formal_chiral_excess": 3
+      },
+      {
+        "defects": 3,
+        "relative_spheres": 3,
+        "monodromy": "1j",
+        "betti": [
+          0,
+          3,
+          0,
+          0
+        ],
+        "Hodge_D_kernel": 3,
+        "nonzero_singular_values": {
+          "d0": 2.23606797749979,
+          "d2": 3
+        },
+        "spectral_gap": 1.0,
+        "formal_chiral_excess": 3
+      },
+      {
+        "defects": 3,
+        "relative_spheres": 3,
+        "monodromy": "2",
+        "betti": [
+          0,
+          3,
+          0,
+          0
+        ],
+        "Hodge_D_kernel": 3,
+        "nonzero_singular_values": {
+          "d0": 2.0,
+          "d2": 3
+        },
+        "spectral_gap": 1.0,
+        "formal_chiral_excess": 3
+      },
+      {
+        "defects": 3,
+        "relative_spheres": 3,
+        "monodromy": "0.25j",
+        "betti": [
+          0,
+          3,
+          0,
+          0
+        ],
+        "Hodge_D_kernel": 3,
+        "nonzero_singular_values": {
+          "d0": 2.0155644370746373,
+          "d2": 3
+        },
+        "spectral_gap": 1.0,
+        "formal_chiral_excess": 3
+      },
+      {
+        "defects": 3,
+        "relative_spheres": 2,
+        "monodromy": "1",
+        "betti": [
+          0,
+          2,
+          1,
+          0
+        ],
+        "Hodge_D_kernel": 3,
+        "nonzero_singular_values": {
+          "d0": 1.4142135623730951,
+          "d2": 2
+        },
+        "spectral_gap": 1.0,
+        "formal_chiral_excess": 1
+      },
+      {
+        "defects": 3,
+        "relative_spheres": 2,
+        "monodromy": "2",
+        "betti": [
+          0,
+          2,
+          1,
+          0
+        ],
+        "Hodge_D_kernel": 3,
+        "nonzero_singular_values": {
+          "d0": 1.7320508075688772,
+          "d2": 2
+        },
+        "spectral_gap": 1.0,
+        "formal_chiral_excess": 1
+      },
+      {
+        "defects": 3,
+        "relative_spheres": 1,
+        "monodromy": "2",
+        "betti": [
+          0,
+          1,
+          2,
+          0
+        ],
+        "Hodge_D_kernel": 3,
+        "nonzero_singular_values": {
+          "d0": 1.4142135623730951,
+          "d2": 1
+        },
+        "spectral_gap": 1.0,
+        "formal_chiral_excess": -1
+      },
+      {
+        "defects": 5,
+        "relative_spheres": 5,
+        "monodromy": "2",
+        "betti": [
+          0,
+          5,
+          0,
+          0
+        ],
+        "Hodge_D_kernel": 5,
+        "nonzero_singular_values": {
+          "d0": 2.449489742783178,
+          "d2": 5
+        },
+        "spectral_gap": 1.0,
+        "formal_chiral_excess": 5
+      },
+      {
+        "defects": 5,
+        "relative_spheres": 4,
+        "monodromy": "2",
+        "betti": [
+          0,
+          4,
+          1,
+          0
+        ],
+        "Hodge_D_kernel": 5,
+        "nonzero_singular_values": {
+          "d0": 2.23606797749979,
+          "d2": 4
+        },
+        "spectral_gap": 1.0,
+        "formal_chiral_excess": 3
+      }
+    ],
+    "exact_hodge_gap_for_all_r_ge_1": "min{1,sqrt(|t-1|^2+r)}=1",
+    "warning": "This Hermitian finite-dimensional de Rham Hodge-Dirac is NOT the physical spinor Dirac operator with APS/flux boundary conditions. It quantifies the mapping-cone surrogate only; its m exact zeros do not prove m 4D fermions."
+  },
+  "anomaly_GS": {
+    "status": "PASS",
+    "U1_gravity_polynomial": "-144*b",
+    "U1_cubic_factorization": "-432*b*(5*a**2 + 3*b**2)",
+    "GUT_normalized_mixed_anomalies": {
+      "SU3sq_Psi": -18.0,
+      "SU2sq_Psi": -18.0,
+      "three_fifths_Y2_Psi": -18.0
+    },
+    "can_SM_singlets_alone_cancel_mixed_SU3_SU2_anomaly": false,
+    "formal_single_axion_necessity": "I6 has overall F_Psi factor after choice of local consistent-anomaly counterterms; an axion shifting under Psi could in principle cancel all reducible local Abelian/mixed anomalies with independently fixed couplings.",
+    "mass_matrix_symbolic": "[[25*v^2,15*v^2],[15*v^2,9*v^2+k^2]]",
+    "mass_determinant": "25*k^2*v^2 >0 when both nonzero",
+    "residual_issue": "Charge-only 4D effective-field model. GS coefficient quantization, cubic mixed counterterms, UV anomaly inflow, axion sourcing, D-flatness, flux and proper charged matter are NOT constructed."
+  },
+  "W33_selector": {
+    "status": "PASS",
+    "points": 40,
+    "lines": 40,
+    "flags": 160,
+    "invariant_selector_energy_min": -2.6,
+    "nonincident_discrete_vertex_energy": -0.6,
+    "uniform_energy": -0.21500000000000008,
+    "exact_global_minimizers": "160 incidence flags; proof H >= -J-2kappa, equality only both pure and incident for J,kappa>0",
+    "site_selector": "H=-J p.T Inc ell -kappa(||p||\u00b2+||ell||\u00b2), over products of 40-simplices",
+    "S3_spontaneously_broken_potential": "V=(s1+s2+s3)^2+(s1s2+s1s3+s2s3+A\u00b2)^2+(s1s2s3)^2, A>0",
+    "six_scalar_minima_at_A1": [
+      [
+        -1,
+        0,
+        1
+      ],
+      [
+        -1,
+        1,
+        0
+      ],
+      [
+        0,
+        -1,
+        1
+      ],
+      [
+        0,
+        1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        0
+      ],
+      [
+        1,
+        0,
+        -1
+      ]
+    ],
+    "flavor_vacuum_Hessian_at_minus1_0_1": [
+      [
+        "4",
+        "2",
+        "0"
+      ],
+      [
+        "2",
+        "4",
+        "2"
+      ],
+      [
+        "0",
+        "2",
+        "4"
+      ]
+    ],
+    "Hessian_eigenvalues_at_A1": [
+      1.17157287525381,
+      4.0,
+      6.82842712474619
+    ],
+    "combined_degenerate_vacua": 960,
+    "caveat": "This is an explicitly designed invariant finite-dimensional toy. Neither a local dynamical W33 field theory nor a map to smooth G2 defects is derived; no observed mass hierarchy is fitted."
+  },
+  "coupled_BF": {
+    "status": "PASS",
+    "robust_model_rows": [
+      {
+        "r": 1.0,
+        "mass_shift_bound": 0.0,
+        "kinetic_norm_bound": 0.0,
+        "effective_budget": 0.0,
+        "robustly_unstable_modular_fraction": 1.0
+      },
+      {
+        "r": 1.0,
+        "mass_shift_bound": 0.5,
+        "kinetic_norm_bound": 0.125,
+        "effective_budget": 1.0,
+        "robustly_unstable_modular_fraction": 0.9056042924147292
+      },
+      {
+        "r": 1.0,
+        "mass_shift_bound": 0.5,
+        "kinetic_norm_bound": 0.25,
+        "effective_budget": 1.5,
+        "robustly_unstable_modular_fraction": 0.7019737518061826
+      },
+      {
+        "r": 1.0,
+        "mass_shift_bound": 1.0,
+        "kinetic_norm_bound": 0.125,
+        "effective_budget": 1.5,
+        "robustly_unstable_modular_fraction": 0.7019737518061826
+      },
+      {
+        "r": 2.0,
+        "mass_shift_bound": 0.0,
+        "kinetic_norm_bound": 0.0,
+        "effective_budget": 0.0,
+        "robustly_unstable_modular_fraction": 0.6079271018540267
+      },
+      {
+        "r": 2.0,
+        "mass_shift_bound": 0.5,
+        "kinetic_norm_bound": 0.125,
+        "effective_budget": 1.0,
+        "robustly_unstable_modular_fraction": 0.4531221083700141
+      },
+      {
+        "r": 2.0,
+        "mass_shift_bound": 0.5,
+        "kinetic_norm_bound": 0.25,
+        "effective_budget": 1.5,
+        "robustly_unstable_modular_fraction": 0.3509868759030914
+      },
+      {
+        "r": 2.0,
+        "mass_shift_bound": 1.0,
+        "kinetic_norm_bound": 0.125,
+        "effective_budget": 1.5,
+        "robustly_unstable_modular_fraction": 0.3509868759030914
+      },
+      {
+        "r": 5.0,
+        "mass_shift_bound": 0.0,
+        "kinetic_norm_bound": 0.0,
+        "effective_budget": 0.0,
+        "robustly_unstable_modular_fraction": 0.24317084074161066
+      },
+      {
+        "r": 5.0,
+        "mass_shift_bound": 0.5,
+        "kinetic_norm_bound": 0.125,
+        "effective_budget": 1.0,
+        "robustly_unstable_modular_fraction": 0.18124884334800562
+      },
+      {
+        "r": 5.0,
+        "mass_shift_bound": 0.5,
+        "kinetic_norm_bound": 0.25,
+        "effective_budget": 1.5,
+        "robustly_unstable_modular_fraction": 0.1403947503612366
+      },
+      {
+        "r": 5.0,
+        "mass_shift_bound": 1.0,
+        "kinetic_norm_bound": 0.125,
+        "effective_budget": 1.5,
+        "robustly_unstable_modular_fraction": 0.1403947503612366
+      }
+    ],
+    "worst_random_min_generalized_mass_sq": -5.457108408086422,
+    "guaranteed_unstable_triple_count": 200,
+    "theorem": "If a light eigenmode has BF deficit B>0, any Hermitian mass perturbation ||Delta||<=delta and positive kinetic correction ||E||<=eps with K=I+E>0 preserve a BF-violating generalized eigenmode whenever B>delta+4eps. Offdiagonal mixing cannot cure a negative Rayleigh trial vector.",
+    "limitations": "Assumes a correct effective Hermitian quadratic mass and positive kinetic metric, comparable AdS radius, and operator-norm bounds; actual string/11D corrections and flux warping not bounded by this calculation."
+  },
+  "adaptive_photon": {
+    "status": "PASS",
+    "predictable_four_cycle_kappa": [
+      1.0,
+      1.1,
+      1.05,
+      1.0
+    ],
+    "analytic_anytime_null_false_positive_max": 0.01,
+    "all_600_per_step_null_multiplier_equal_one": true,
+    "MonteCarlo_alternative_seed": 200118,
+    "MonteCarlo_paths": 50000,
+    "simulated_detection_by_n": {
+      "200": 0.74614,
+      "292": 0.89916,
+      "600": 0.99462
+    },
+    "simulated_power_standard_error": 0.00032714081371788665,
+    "approximate_95pct_power_interval": [
+      0.9939788040051128,
+      0.995261195994887
+    ],
+    "simulated_mean_truncated_accepted": 159.58622,
+    "robust_guarantee": "Ville<=.01 is analytical and DOES NOT rely on Monte Carlo, even if p0_i is chosen using past outcomes but not current outcome. The numerical power uses IID conditional Bernoulli alternative and a predetermined schedule, and has sampling error.",
+    "no_hardware": "No physical photon trials, no detector calibration, no higher-order process-tensor instrument."
+  }
+}

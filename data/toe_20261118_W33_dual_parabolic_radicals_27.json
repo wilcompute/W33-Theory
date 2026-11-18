@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "group": "PSp(4,3)",
+  "group_order": 25920,
+  "point_parabolic": {
+    "parabolic_order": 648,
+    "Sylow3_order": 81,
+    "O3_order": 27,
+    "O3_center_order": 3,
+    "O3_derived_order": 3,
+    "O3_element_order_counts": {
+      "1": 1,
+      "3": 26
+    },
+    "identification": "nonabelian extraspecial Heisenberg H27 of exponent3"
+  },
+  "qutrit_Schrodinger": {
+    "point_radical_generators": "x^3=y^3=z^3=1; z=[x,y] central; all x^a y^b z^c distinct",
+    "native_order27_elements": 27,
+    "center_commutator_order": 3,
+    "explicit_qutrit_shift_X": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "explicit_qutrit_clock_Z_diagonal": [
+      "1",
+      "omega",
+      "omega^2"
+    ],
+    "omega": "exp(2*pi*i/3)",
+    "qutrit_clock_shift_commutator": "X Z X^-1 Z^-1 = omega^2 I3",
+    "qutrit_Pauli_group_order": 27,
+    "commutant_dimension": 1,
+    "is_irreducible": true,
+    "conclusion": "Point-parabolic H27 has a verified faithful irreducible 3-dimensional Schroedinger/clock-shift model. The line-parabolic C3^3 is distinct and commuting; this is not an identification of physical photons or a unique E6 operator representation."
+  },
+  "isotropic_line_parabolic": {
+    "parabolic_order": 648,
+    "Sylow3_order": 81,
+    "O3_order": 27,
+    "O3_center_order": 27,
+    "O3_derived_order": 1,
+    "O3_element_order_counts": {
+      "1": 1,
+      "3": 26
+    },
+    "identification": "elementary Abelian C3^3"
+  },
+  "core_proof": "Core of any Sylow-3 subgroup is O_3(H); enumerated all 648 parabolic elements and tested the 81 Sylow elements under conjugation.",
+  "fundamental_distinction": "The point-parabolic radical is noncommutative H27 (center C3, commutator C3); the line-parabolic radical is the commuting additive Sym^2(F3^2)=F3^3 (center all27). These are distinct but dual-parabolic 27-address/operator geometries inside the SAME W33 group.",
+  "caution": "This is exact finite-group geometry, not an identification of physical spacetime, particle charges, or a unique quantization. Extra identifications with the cubic-surface regular H27 or E6 trinification H27 require an explicit equivariant intertwiner."
+}

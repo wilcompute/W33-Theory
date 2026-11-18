@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "W33_full_group_order": 25920,
+  "initial_point_line_flags": 160,
+  "flag_stabilizer_order": 162,
+  "ordered_triples_per_flag": 6,
+  "ordered_flag_configurations": 960,
+  "pointwise_triplet_stabilizer_order": 27,
+  "pointwise_stabilizer_element_orders": {
+    "1": 1,
+    "3": 26
+  },
+  "pointwise_stabilizer_center_order": 27,
+  "pointwise_stabilizer_commutator_size": 1,
+  "abelian_exponent": 3,
+  "group_classification": "elementary Abelian C3^3, NOT nonabelian Heisenberg H27",
+  "group_distinction": "The 27-element pointwise flag stabilizer is C3^3 with center order27; do not identify it with extraspecial H27, whose center has order3 and derived subgroup order3.",
+  "exact_orbit_stabilizer_identity": "25920=160*6*27",
+  "connection": "The kernel of the action of a flag stabilizer on its three remaining line points is a 27-element group. Its exact internal structure is checked by center, commutator and element-order counts, not inferred from cardinality.",
+  "caveat": "Even an exact native H27 correspondence between W33 ordered flags and a triplet does not select a physical ordered defect or prove 3 chiral families, a compactification, or realistic masses."
+}
