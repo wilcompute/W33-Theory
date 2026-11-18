@@ -1,0 +1,49 @@
+{
+  "D_and_P_in_SL5": true,
+  "Dirac_absolute_eigenvalue_lower_bound": "7/2",
+  "Dirac_eigenvalue_squared_lower_bound": "49/4",
+  "Klein_cubic_invariant_under_D_and_P": true,
+  "abelianization": "C5",
+  "date": "2026-11-17",
+  "derived_group": "C11",
+  "finite_group": "C11:C5 (Frobenius group)",
+  "flat_complex_line_characters": 5,
+  "free_action_on_smooth_cubic_link": true,
+  "irreducible_complex_representation_dimensions": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    5,
+    5
+  ],
+  "local_7d_Ricci_normalization": "Ric=6g",
+  "nontrivial_C11_character_orbits": [
+    [
+      1,
+      3,
+      4,
+      5,
+      9
+    ],
+    [
+      2,
+      6,
+      7,
+      8,
+      10
+    ]
+  ],
+  "order": 55,
+  "scalar_curvature": 42,
+  "scope": [
+    "Assumes the invariant Sasaki-Einstein metric and spin quotient",
+    "No spectral measurement or new proof of K\u00e4hler-Einstein existence",
+    "No exclusion of flux-shifted gravitino operators, brane modes, or singular sectors",
+    "Five flat line twists are not fifteen degree-four flat C-field sectors"
+  ],
+  "spin_structure_count_if_spin": 1,
+  "status": "EXACT_CONDITIONAL_GEOMETRIC_THEOREM",
+  "zero_modes_of_ordinary_Dirac_for_any_unitary_flat_twist": 0
+}
