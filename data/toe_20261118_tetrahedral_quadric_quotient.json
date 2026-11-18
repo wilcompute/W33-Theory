@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "group": "A4(tetrahedral rotations) x D10, order120; adjoin commuting K for order240",
+  "generator_h": "(-I3 on z, real reflection on normal2-plane)",
+  "holomorphic_fixed_ambient_dimension_census": {
+    "3": 30,
+    "1": 89,
+    "5": 1
+  },
+  "fixed_three_plane_element_order_census": {
+    "2": 18,
+    "3": 8,
+    "5": 4
+  },
+  "generic_cyclic_ADE_types": [
+    "A1",
+    "A2",
+    "A4"
+  ],
+  "geometric_so5_centralizer_dimensions": {
+    "original_C5": 4,
+    "add_h": 3,
+    "add_h_and_tetrahedral": 0
+  },
+  "Reeb_direction": "odd under K, already projected out",
+  "holomorphic_group_generated_by_point_stabilizers": 120,
+  "underlying_full_quotient_pi1": "trivial: holomorphic stabilizers generate all120 elements, and hK has fixed points and kills K",
+  "normal_cycle_monodromy_h": "E_i -> E_(5-i), outer A4 diagram involution",
+  "normal_cycle_monodromy_K": "E_i -> -E_(5-i), inner longest Weyl element",
+  "canonical_outer_fixed_algebra": "so5, dimension10, rank2",
+  "new_antiholomorphic_fixed_stratum": "hK-fixed slice has signature(1,4); unit-link intersection is S0 x S3 before other identifications",
+  "conclusion": "The finite extension removes the continuous geometric algebra, but introduces extra A1/A2 loci and outer SU5 monodromy. It does not inherit the previous flat SU5-to-SM calculation.",
+  "scope": "No full singular-stratum gluing, quantum spectrum, chiral matter or new completed vacuum. Fixed-plane census is exact characteristic-zero linear algebra, not a count of all connected strata in the final quotient."
+}
