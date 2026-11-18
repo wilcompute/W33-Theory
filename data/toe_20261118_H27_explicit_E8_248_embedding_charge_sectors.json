@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "source": "E8 branching (78,1)+(1,8)+(27,3)+(27bar,3bar) and native H27 qutrit Schr\u00f6dinger subgroup of SU3",
+  "E8_decomposition_dimensions": [
+    78,
+    8,
+    81,
+    81
+  ],
+  "H27_character_multiplicities": {
+    "trivial_1D": 78,
+    "each_of_eight_nontrivial_1D": 1,
+    "rho_omega": 27,
+    "rho_omega2": 27
+  },
+  "regular27_required_multiplicities": {
+    "each_of_nine_1D": 1,
+    "rho_omega": 3,
+    "rho_omega2": 3
+  },
+  "concrete_Fourier_embedding_shape": [
+    248,
+    27
+  ],
+  "isometry_error": 3.608224830031759e-16,
+  "all27_intertwining_max_error": 6.550551057807855e-16,
+  "amplitude_weight_each_address_basis_by_E8_grading": [
+    0.33333333333333337,
+    0.3333333333333333,
+    0.3333333333333333
+  ],
+  "source_irrep_characters_fully_present": true,
+  "physical_E6_gauge_equivariance": false,
+  "impossible_E6_singlet_regular27_embedding_under_fixed_branching": true,
+  "native_E6_adjoint16_minus3_is_SU3_family_singlet": true,
+  "natural_E8_27_three_family_branch": "(27,3): three 16_(+1) plus three 10_(-2) and three 1_(+4), NOT the native (78,1) spinor 16_(-3). Full 248 also includes (27bar,3bar); chirality/zero-mode projection required.",
+  "representation_sector_obstruction": "The 27D regular H27 source is distributed among E6 adjoint78, E6 singlet SU3-adjoint8, and E6 fundamental/conjugate sectors. It is H27-equivariant but cannot be interpreted as a single E6 matter multiplet or physical charge-preserving quantum encoder.",
+  "matrix_sha256": "28e21fcbb04e7badfe97a8fb24a6dc0510e0c46779a5a568a7a78b0b02a7dd1f",
+  "warning": "Existing repo already knows the E8 E6xSU3 decomposition and H27 address/operator difference. This packet adds the explicit isometric native H27 representation embedding and shows the E6-superselection obstruction."
+}

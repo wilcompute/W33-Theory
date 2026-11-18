@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "true_scalar_BF_bounds": {
+    "AdS4": "-9/4",
+    "AdS5": "-4",
+    "AdS7": "-9"
+  },
+  "original_correct_IIB_mode_dimension": 5,
+  "report_misattributions": [
+    "analysis/2026-11-18_W33_dual_parabolics_H27_E6_gamma_GS_Hodge_BF_memory.md:115",
+    "analysis/2026-11-18_sixfront_H27_min7ancilla_two_wire_E6_EFT_BF_multitime_commoncone.md:59"
+  ],
+  "source": "analysis/2026-11-16_D9_iib_conifold_dual.md, section The finite-momentum instability lies in a winding sector; this is an 11D-on-T2 dual of TYPE IIB AdS5 x Tpq, not an independent 11D AdS4 spectrum.",
+  "BF_general": "for scalar m^2 L^2 >= -(D-1)^2/4 in AdS_D",
+  "assumed_dispersion": "m_minus^2 L^2=lambda-2-sqrt(4+16lambda)",
+  "dispersion_min_lambda": "15/4",
+  "dispersion_min_mass": "-25/4",
+  "exact_correction_window": "V=25/4-(D-1)^2/4-c; lambda_\u00b1=10-(D-1)^2/4-c\u00b14 sqrt(V); intersect with lambda>=0; c<25/4-(D-1)^2/4; robust modes if lambda in open window.",
+  "corrected_AdS4_formal_interval_at_c0": "[0,63/4), compared to actual AdS5 (0,12); in AdS4 the assumed lambda=0 mass -4 is already below -9/4",
+  "cases": [
+    {
+      "AdS_dimension": 5,
+      "scalar_BF_bound": "-4",
+      "correction_budget": 0,
+      "maximum_deficit": "9/4",
+      "formal_lambda_lower": "0",
+      "formal_lambda_upper": "12",
+      "physically_allowed_lambda_min": 0,
+      "oriented_unstable_horizontal_winding_count_at_y": 70,
+      "exact_mass_formula_transferred_only_formally_to_different_D": false
+    },
+    {
+      "AdS_dimension": 5,
+      "scalar_BF_bound": "-4",
+      "correction_budget": 1,
+      "maximum_deficit": "9/4",
+      "formal_lambda_lower": "5 - 2*sqrt(5)",
+      "formal_lambda_upper": "2*sqrt(5) + 5",
+      "physically_allowed_lambda_min": 0,
+      "oriented_unstable_horizontal_winding_count_at_y": 48,
+      "exact_mass_formula_transferred_only_formally_to_different_D": false
+    },
+    {
+      "AdS_dimension": 5,
+      "scalar_BF_bound": "-4",
+      "correction_budget": 2,
+      "maximum_deficit": "9/4",
+      "formal_lambda_lower": "2",
+      "formal_lambda_upper": "6",
+      "physically_allowed_lambda_min": 0,
+      "oriented_unstable_horizontal_winding_count_at_y": 22,
+      "exact_mass_formula_transferred_only_formally_to_different_D": false
+    },
+    {
+      "AdS_dimension": 4,
+      "scalar_BF_bound": "-9/4",
+      "correction_budget": 0,
+      "maximum_deficit": "4",
+      "formal_lambda_lower": "-1/4",
+      "formal_lambda_upper": "63/4",
+      "physically_allowed_lambda_min": 0,
+      "oriented_unstable_horizontal_winding_count_at_y": 80,
+      "exact_mass_formula_transferred_only_formally_to_different_D": true
+    },
+    {
+      "AdS_dimension": 4,
+      "scalar_BF_bound": "-9/4",
+      "correction_budget": 1,
+      "maximum_deficit": "4",
+      "formal_lambda_lower": "27/4 - 4*sqrt(3)",
+      "formal_lambda_upper": "27/4 + 4*sqrt(3)",
+      "physically_allowed_lambda_min": 0,
+      "oriented_unstable_horizontal_winding_count_at_y": 76,
+      "exact_mass_formula_transferred_only_formally_to_different_D": true
+    },
+    {
+      "AdS_dimension": 4,
+      "scalar_BF_bound": "-9/4",
+      "correction_budget": 2,
+      "maximum_deficit": "4",
+      "formal_lambda_lower": "23/4 - 4*sqrt(2)",
+      "formal_lambda_upper": "4*sqrt(2) + 23/4",
+      "physically_allowed_lambda_min": 0,
+      "oriented_unstable_horizontal_winding_count_at_y": 62,
+      "exact_mass_formula_transferred_only_formally_to_different_D": true
+    },
+    {
+      "AdS_dimension": 4,
+      "scalar_BF_bound": "-9/4",
+      "correction_budget": 3,
+      "maximum_deficit": "4",
+      "formal_lambda_lower": "3/4",
+      "formal_lambda_upper": "35/4",
+      "physically_allowed_lambda_min": 0,
+      "oriented_unstable_horizontal_winding_count_at_y": 44,
+      "exact_mass_formula_transferred_only_formally_to_different_D": true
+    }
+  ],
+  "warning": "DO NOT use formal AdS4 recomputed roots as M-theory instability. The spectrum, field content, AdS radius normalization, fermion/boson mixing, flux and dimension must be rederived. Correct the two cited wording errors in future reports, but leave others' historical commit files intact.",
+  "primary_physics_reference": "Gubser and Mitra, Some interesting violations of the Breitenlohner-Freedman bound (2002) arXiv:hep-th/0108239, studies AdS5 x Tpq; BF scalar formula in dimension D."
+}

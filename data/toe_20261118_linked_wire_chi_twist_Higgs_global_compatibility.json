@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "source_commit_wire": "36eb8d951d1a",
+  "source_commit_native_E6": "4a5bc06a2994",
+  "charges_Chi_Psi": [
+    [
+      -5,
+      -3
+    ],
+    [
+      5,
+      -1
+    ],
+    [
+      0,
+      4
+    ]
+  ],
+  "global_Chi_pi_holonomy_singlet_eigenvalues": [
+    -1,
+    -1,
+    1
+  ],
+  "W7_SU5_singlet_eigenvalues": [
+    1,
+    1,
+    1
+  ],
+  "full_D_term_charge_Gram": [
+    [
+      50,
+      10
+    ],
+    [
+      10,
+      26
+    ]
+  ],
+  "full_D_term_charge_rank": 2,
+  "full_D_term_charge_determinant": 1200,
+  "Chi_parity_invariant_singlet_index": [
+    2
+  ],
+  "Chi_parity_invariant_D_term_charge_rank": 1,
+  "Chi_parity_invariant_Dflat_nonzero_solution_with_zero_FI": false,
+  "independent_unitary_C2_flavor_possible_without_acting_on_Higgs": true,
+  "odd_singlet_loop_covariant_laplacian_gap": "pi^2 / ell^2 for flat constant-radius loop of length ell and holonomy -1",
+  "invariant_singlet_loop_covariant_laplacian_gap": "0",
+  "logical_conclusion": "If the SAME finite C2 is identified with the native E6 Chi-parity gauge twist for ALL Higgs multiplets and the three Higgs VEVs are required to be covariantly parallel, x and y cannot condense; only z remains invariant, yielding rank1 U1 Higgsing and no nonzero zero-FI D-flat solution in the specified three-field set. Thus the linked-wire mirror-free C2 twist does NOT automatically coexist with the earlier global parallel 2-U1 Higgs vacuum.",
+  "loopholes": "Distinct flavor-only C2 (separate gauge bundle), nonparallel/delocalized Higgs section with holonomy gradient energy, nonzero FI/flux or extra fields, spatially varying monodromy/defects, Wilson + Higgs changing global solutions. A complex line over S1 with -1 flat holonomy can possess nonvanishing but NONPARALLEL sections, so no general topological impossibility theorem.",
+  "anomalous_extra_U1_caution": "Higgsing an anomalous Abelian gauge factor does not cure a 4D gauge anomaly by itself: quantized inflow/Green-Schwarz/counterterms or additional chiral matter still required.",
+  "scope": "This is an exact necessary compatibility check under explicitly identified Chi C2 and parallel-Higgs hypotheses, NOT a claim the parallel linked-wire topology is wrong or a solved full G2 compactification."
+}

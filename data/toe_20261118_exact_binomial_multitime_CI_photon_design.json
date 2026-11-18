@@ -1,0 +1,133 @@
+{
+  "status": "PASS",
+  "confidence": 0.99,
+  "calibrated_design_parameters": {
+    "gamma": 0.96,
+    "p": 0.45,
+    "eta2": 0.95,
+    "eta3": 0.95,
+    "pairwise_classical_p_threshold": 0.39999999999999997
+  },
+  "proposed_fixed_stopping_n_per_setting": 450,
+  "total_proposed_accepted_trials": 1350,
+  "proposed_design_point_observations": {
+    "n_per_setting": 450,
+    "success_counts": [
+      441,
+      439,
+      439
+    ],
+    "one_sided_lower_Z_expectation": [
+      0.9092451068506702,
+      0.8969636289885459,
+      0.8969636289885459
+    ],
+    "corrected_upper_bound_W3": -0.025036424984905437,
+    "certificate_at_99pct_confidence": true
+  },
+  "comparison_to_previous_uniform_Hoeffding_design": {
+    "n_per_setting": 3859,
+    "total": 11577
+  },
+  "rows": [
+    {
+      "n_per_setting": 400,
+      "success_counts": [
+        392,
+        390,
+        390
+      ],
+      "one_sided_lower_Z_expectation": [
+        0.9051187874054427,
+        0.8911282090346149,
+        0.8911282090346149
+      ],
+      "corrected_upper_bound_W3": 0.002384413829152998,
+      "certificate_at_99pct_confidence": false
+    },
+    {
+      "n_per_setting": 420,
+      "success_counts": [
+        412,
+        410,
+        410
+      ],
+      "one_sided_lower_Z_expectation": [
+        0.9095761493988883,
+        0.8962373224940319,
+        0.8962373224940319
+      ],
+      "corrected_upper_bound_W3": -0.022426417349717953,
+      "certificate_at_99pct_confidence": true
+    },
+    {
+      "n_per_setting": 450,
+      "success_counts": [
+        441,
+        439,
+        439
+      ],
+      "one_sided_lower_Z_expectation": [
+        0.9092451068506702,
+        0.8969636289885459,
+        0.8969636289885459
+      ],
+      "corrected_upper_bound_W3": -0.025036424984905437,
+      "certificate_at_99pct_confidence": true
+    },
+    {
+      "n_per_setting": 500,
+      "success_counts": [
+        490,
+        488,
+        488
+      ],
+      "one_sided_lower_Z_expectation": [
+        0.9126368918871555,
+        0.9017061196628775,
+        0.9017061196628775
+      ],
+      "corrected_upper_bound_W3": -0.047937929791059375,
+      "certificate_at_99pct_confidence": true
+    },
+    {
+      "n_per_setting": 750,
+      "success_counts": [
+        735,
+        731,
+        731
+      ],
+      "one_sided_lower_Z_expectation": [
+        0.923475992516442,
+        0.9095982968552985,
+        0.9095982968552985
+      ],
+      "corrected_upper_bound_W3": -0.09249840350951744,
+      "certificate_at_99pct_confidence": true
+    },
+    {
+      "n_per_setting": 3859,
+      "success_counts": [
+        3782,
+        3763,
+        3763
+      ],
+      "one_sided_lower_Z_expectation": [
+        0.9462476133713711,
+        0.9350335480288432,
+        0.9350335480288432
+      ],
+      "corrected_upper_bound_W3": -0.23712910688435807,
+      "certificate_at_99pct_confidence": true
+    }
+  ],
+  "certificate_definition": "Three independent fixed-n Bernoulli settings. Each \u00b11 observable expectation theta=2p-1 has exact one-sided Clopper-Pearson lower limit L_i=2 BetaQuantile(alpha/3;k_i,n_i-k_i+1)-1. Bonferroni yields joint >=99% coverage. Since sqrt(1-e\u00b2) decreases with e in [0,1], W3<=sqrt(1-L_eta2\u00b2)+sqrt(1-L_eta3\u00b2)-L_gamma. Negative bound certifies the specified triple witness.",
+  "is_design_point_only": true,
+  "statistical_power_not_computed": true,
+  "detector_and_heralding_bias_not_calibrated": true,
+  "optional_stopping_not_allowed": true,
+  "proof_of_true_joint_three_time_process_missing": true,
+  "caution": "The confidence statement is conditional on actual fixed-n accepted IID or otherwise rigorously binomial-dominated measurements, independent preparations/instruments and fair calibrated heralding; simulated rounded means cannot be treated as observed results. Pairwise-classical decompositions are model-verified by previous code, not empirically inferred merely from these three means.",
+  "literature": "Beyer et al, Observation of Genuine Multi-Time Quantum Memory (2026), arXiv:2611.17268, gives the witness and pairwise-classical theorem. Clopper-Pearson exact inversion of binomial tails is classical statistics.",
+  "unused_exact_model_tail_diagnostic": 0.4125872742985882
+}

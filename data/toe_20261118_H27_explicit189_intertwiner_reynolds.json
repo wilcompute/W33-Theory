@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "seed": 20261118,
+  "source_dim": 27,
+  "target_dim": 189,
+  "trial_intertwiner_min_Gram_eigenvalue": 0.006193168434756053,
+  "trial_intertwiner_max_Gram_eigenvalue": 0.07922766568465094,
+  "explicit_189x27_isometry_unitarity_max_error": 2.331469193046347e-15,
+  "explicit_intertwiner_all27_max_error": 1.1202392386283937e-15,
+  "encoded_basis_states_ancilla_sector_probabilities": [
+    0.3333333333333338,
+    0.3333333333333332,
+    0.33333333333333315
+  ],
+  "all27_basis_states_have_equal_sector_weights": true,
+  "invariant_ancilla_restricted_encoder_rank": 9,
+  "matrix_sha256": "e0704dafd1909db50e756ce3a9df0a312b03722e03ffbd3ebac2617652f13990",
+  "construction": "seeded complex Gaussian 189x27 T0; H Reynolds projection T=sum(U(h)T0 L(h)^dagger)/27; isometry E=T(T^dagger T)^-1/2; all 27 group actions verified",
+  "note": "This concretely provides a group-equivariant isometric 189x27 matrix, improving prior existence proof. Fixed trivially transforming ancilla cannot implement it as E6 27->27; nontrivial ancilla charge sectors are populated in EVERY encoded address basis vector. No physical unitary circuit, charge/hypercharge/Yukawa extension to full E6, or Lorentzian spacetime."
+}
