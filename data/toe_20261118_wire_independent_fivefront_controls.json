@@ -1,0 +1,737 @@
+{
+  "status": "PASS",
+  "wire": {
+    "status": "PASS",
+    "m": [
+      {
+        "point_defects": 1,
+        "flat_character": "trivial",
+        "absolute_betti": [
+          1,
+          1,
+          1,
+          0
+        ],
+        "relative_betti": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "relative_Euler": -1
+      },
+      {
+        "point_defects": 1,
+        "flat_character": "nontrivial",
+        "absolute_betti": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "relative_betti": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "relative_Euler": -1
+      },
+      {
+        "point_defects": 2,
+        "flat_character": "trivial",
+        "absolute_betti": [
+          1,
+          1,
+          2,
+          0
+        ],
+        "relative_betti": [
+          0,
+          2,
+          0,
+          0
+        ],
+        "relative_Euler": -2
+      },
+      {
+        "point_defects": 2,
+        "flat_character": "nontrivial",
+        "absolute_betti": [
+          0,
+          0,
+          2,
+          0
+        ],
+        "relative_betti": [
+          0,
+          2,
+          0,
+          0
+        ],
+        "relative_Euler": -2
+      },
+      {
+        "point_defects": 3,
+        "flat_character": "trivial",
+        "absolute_betti": [
+          1,
+          1,
+          3,
+          0
+        ],
+        "relative_betti": [
+          0,
+          3,
+          0,
+          0
+        ],
+        "relative_Euler": -3
+      },
+      {
+        "point_defects": 3,
+        "flat_character": "nontrivial",
+        "absolute_betti": [
+          0,
+          0,
+          3,
+          0
+        ],
+        "relative_betti": [
+          0,
+          3,
+          0,
+          0
+        ],
+        "relative_Euler": -3
+      },
+      {
+        "point_defects": 4,
+        "flat_character": "trivial",
+        "absolute_betti": [
+          1,
+          1,
+          4,
+          0
+        ],
+        "relative_betti": [
+          0,
+          4,
+          0,
+          0
+        ],
+        "relative_Euler": -4
+      },
+      {
+        "point_defects": 4,
+        "flat_character": "nontrivial",
+        "absolute_betti": [
+          0,
+          0,
+          4,
+          0
+        ],
+        "relative_betti": [
+          0,
+          4,
+          0,
+          0
+        ],
+        "relative_Euler": -4
+      },
+      {
+        "point_defects": 5,
+        "flat_character": "trivial",
+        "absolute_betti": [
+          1,
+          1,
+          5,
+          0
+        ],
+        "relative_betti": [
+          0,
+          5,
+          0,
+          0
+        ],
+        "relative_Euler": -5
+      },
+      {
+        "point_defects": 5,
+        "flat_character": "nontrivial",
+        "absolute_betti": [
+          0,
+          0,
+          5,
+          0
+        ],
+        "relative_betti": [
+          0,
+          5,
+          0,
+          0
+        ],
+        "relative_Euler": -5
+      },
+      {
+        "point_defects": 6,
+        "flat_character": "trivial",
+        "absolute_betti": [
+          1,
+          1,
+          6,
+          0
+        ],
+        "relative_betti": [
+          0,
+          6,
+          0,
+          0
+        ],
+        "relative_Euler": -6
+      },
+      {
+        "point_defects": 6,
+        "flat_character": "nontrivial",
+        "absolute_betti": [
+          0,
+          0,
+          6,
+          0
+        ],
+        "relative_betti": [
+          0,
+          6,
+          0,
+          0
+        ],
+        "relative_Euler": -6
+      },
+      {
+        "point_defects": 7,
+        "flat_character": "trivial",
+        "absolute_betti": [
+          1,
+          1,
+          7,
+          0
+        ],
+        "relative_betti": [
+          0,
+          7,
+          0,
+          0
+        ],
+        "relative_Euler": -7
+      },
+      {
+        "point_defects": 7,
+        "flat_character": "nontrivial",
+        "absolute_betti": [
+          0,
+          0,
+          7,
+          0
+        ],
+        "relative_betti": [
+          0,
+          7,
+          0,
+          0
+        ],
+        "relative_Euler": -7
+      },
+      {
+        "point_defects": 8,
+        "flat_character": "trivial",
+        "absolute_betti": [
+          1,
+          1,
+          8,
+          0
+        ],
+        "relative_betti": [
+          0,
+          8,
+          0,
+          0
+        ],
+        "relative_Euler": -8
+      },
+      {
+        "point_defects": 8,
+        "flat_character": "nontrivial",
+        "absolute_betti": [
+          0,
+          0,
+          8,
+          0
+        ],
+        "relative_betti": [
+          0,
+          8,
+          0,
+          0
+        ],
+        "relative_Euler": -8
+      },
+      {
+        "point_defects": 9,
+        "flat_character": "trivial",
+        "absolute_betti": [
+          1,
+          1,
+          9,
+          0
+        ],
+        "relative_betti": [
+          0,
+          9,
+          0,
+          0
+        ],
+        "relative_Euler": -9
+      },
+      {
+        "point_defects": 9,
+        "flat_character": "nontrivial",
+        "absolute_betti": [
+          0,
+          0,
+          9,
+          0
+        ],
+        "relative_betti": [
+          0,
+          9,
+          0,
+          0
+        ],
+        "relative_Euler": -9
+      }
+    ],
+    "charged_spinor_chi": {
+      "-5": {
+        "modulus": 32,
+        "log_modulus": 3.4657359027997265,
+        "extendable_through_C4_core": false
+      },
+      "-1": {
+        "modulus": 2,
+        "log_modulus": 0.6931471805599453,
+        "extendable_through_C4_core": false
+      },
+      "3": {
+        "modulus": 0.125,
+        "log_modulus": -2.0794415416798357,
+        "extendable_through_C4_core": false
+      }
+    },
+    "result": "For M=S1xD2 minus m balls, Sigma_-=m inner S2, relative H^1 has dimension m and H^2 dimension0 for EVERY flat complex rank-one character. The Euler relative index m is imposed by the m selected spherical boundaries.",
+    "topological_filling": "Dehn filling the core produces L(4,1), imposing meridian slope g^4=1 on pi1(M)=Z. A flat character extends only if t^4=1. Nonzero real Higgs period cannot extend to H1(L4,R)=0.",
+    "assumption": "The charged and neutral sectors use different physical domains. Smooth fields must have their own operator and specified gauge-invariant elliptic boundary conditions; topology alone does not prove a UV-consistent self-adjoint extension."
+  },
+  "anomaly": {
+    "status": "PASS",
+    "chi_charge_multiplet": {
+      "Q": -1,
+      "uc": -1,
+      "ec": -1,
+      "dc": 3,
+      "L": 3,
+      "nc": -5
+    },
+    "single_family_Tr_chi": 0,
+    "single_family_Tr_chi_squared": 80,
+    "single_family_Tr_chi_cubed": 0,
+    "three_family_gravity_polynomial": "Tr(a Chi+b Psi)=-144*b",
+    "three_family_cubic_polynomial": "Tr(a Chi+b Psi)^3=-2160*a^2*b-1296*b^3",
+    "three_family_SU3_squared": "=-18*b",
+    "three_family_SU2_squared": "=-18*b",
+    "three_family_hypercharge_squared": "=-30*b",
+    "only_counted_SM_singlet_charge_pair": [
+      -5,
+      -3
+    ],
+    "singlet_VEV_Abelian_mass_matrix_unscaled": [
+      [
+        25,
+        15
+      ],
+      [
+        15,
+        9
+      ]
+    ],
+    "singlet_VEV_mass_matrix_rank": 1,
+    "residual_unbroken_U1_generator": "3 Chi -5 Psi",
+    "residual_U1_gravitational_anomaly": 720,
+    "residual_U1_cubic_anomaly": 259200,
+    "D_Psi_zero_FI": "For only these N^c scalar VEVs, D_Psi=-3*sum|v_i|^2, nonzero unless all v_i vanish. The same-charge VEVs cannot both preserve supersymmetric D-flatness and Higgs either U1 without extra contributions.",
+    "full_E6_Wilson_and_Chi_centralizer_dimension": 14,
+    "SM_gauge_dimension": 12,
+    "extra_Abelian_rank": 2,
+    "observation": "Pure U1_Chi is anomaly-free for three complete SO10 spinor16s; any U1 generator involving Psi is gravitationally anomalous without new fields/inflow. The mixed Chi^2 Psi coefficient is -720 before the cubic multinomial factor3.",
+    "limitation": "The anomaly calculation assumes exactly 3 net adjoint16_-3 and no extra chiral fields. Actual Higgs/Stueckelberg gauge anomaly cancellation and mass terms are not constructed."
+  },
+  "selector": {
+    "status": "PASS",
+    "transvection_count": 40,
+    "original_nondeck_chord_support": 3,
+    "gauge_fixed_support_distribution": {
+      "3": 4,
+      "5": 9,
+      "7": 12,
+      "11": 12,
+      "29": 3
+    },
+    "example_next": {
+      "transvection": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "active_chords": 29,
+      "active_chord_vector_magnitudes": [
+        1
+      ],
+      "first_five_active": [
+        [
+          1,
+          45
+        ],
+        [
+          1,
+          46
+        ],
+        [
+          2,
+          50
+        ],
+        [
+          2,
+          51
+        ],
+        [
+          3,
+          54
+        ]
+      ]
+    },
+    "exact_diffusion_numerator320": [
+      [
+        162,
+        2,
+        2
+      ],
+      [
+        2,
+        162,
+        2
+      ],
+      [
+        2,
+        2,
+        162
+      ]
+    ],
+    "result": "The Bloch conductivity tensor is graph-automorphism invariant, but the previous three-sparse BFS chord parametrization is NOT. A full W33 symmetry can carry a 3-sparse selector to a cohomologous representative needing >3 nonzero BFS chord voltages.",
+    "scope": "This quantifies the tree-coordinate artefact; does not supply a spontaneous symmetry-breaking potential, invariant physical metric choice, or gravitational dynamics."
+  },
+  "BF": {
+    "status": "PASS",
+    "model": "m_minus_sq_Lsq=lambda-2-sqrt(4+16lambda), BF=-4, lambda=3*pi*r/y",
+    "max_BF_violation": 2.25,
+    "maximal_at_lambda": 3.75,
+    "root_formula": "For a uniformly bounded UPWARD shift delta<9/4 in m^2L^2, robust BF violation requires 6-delta-sqrt(36-16delta) < lambda < 6-delta+sqrt(36-16delta).",
+    "sample_ratios": [
+      {
+        "flux_ratio": 1,
+        "upward_mass_shift_bound": 0,
+        "lambda_margin_band": [
+          0.0,
+          12.0
+        ],
+        "robust_BF_violating_modular_fraction": 1.0000000000000002
+      },
+      {
+        "flux_ratio": 1,
+        "upward_mass_shift_bound": 0.5,
+        "lambda_margin_band": [
+          0.20849737787081857,
+          10.791502622129181
+        ],
+        "robust_BF_violating_modular_fraction": 0.9787564054282251
+      },
+      {
+        "flux_ratio": 1,
+        "upward_mass_shift_bound": 1,
+        "lambda_margin_band": [
+          0.5278640450004204,
+          9.47213595499958
+        ],
+        "robust_BF_violating_modular_fraction": 0.905604292414729
+      },
+      {
+        "flux_ratio": 1,
+        "upward_mass_shift_bound": 2,
+        "lambda_margin_band": [
+          2.0,
+          6.0
+        ],
+        "robust_BF_violating_modular_fraction": 0.40528473456935116
+      },
+      {
+        "flux_ratio": 1,
+        "upward_mass_shift_bound": 2.2,
+        "lambda_margin_band": [
+          2.9055728090000854,
+          4.694427190999914
+        ],
+        "robust_BF_violating_modular_fraction": 0.18124884334800537
+      },
+      {
+        "flux_ratio": 1.2,
+        "upward_mass_shift_bound": 0,
+        "lambda_margin_band": [
+          0.0,
+          12.0
+        ],
+        "robust_BF_violating_modular_fraction": 0.9867776334162365
+      },
+      {
+        "flux_ratio": 1.2,
+        "upward_mass_shift_bound": 0.5,
+        "lambda_margin_band": [
+          0.20849737787081857,
+          10.791502622129181
+        ],
+        "robust_BF_violating_modular_fraction": 0.8935688482011045
+      },
+      {
+        "flux_ratio": 1.2,
+        "upward_mass_shift_bound": 1,
+        "lambda_margin_band": [
+          0.5278640450004204,
+          9.47213595499958
+        ],
+        "robust_BF_violating_modular_fraction": 0.7552035139500234
+      },
+      {
+        "flux_ratio": 1.2,
+        "upward_mass_shift_bound": 2,
+        "lambda_margin_band": [
+          2.0,
+          6.0
+        ],
+        "robust_BF_violating_modular_fraction": 0.3377372788077926
+      },
+      {
+        "flux_ratio": 1.2,
+        "upward_mass_shift_bound": 2.2,
+        "lambda_margin_band": [
+          2.9055728090000854,
+          4.694427190999914
+        ],
+        "robust_BF_violating_modular_fraction": 0.1510407027900044
+      },
+      {
+        "flux_ratio": 2,
+        "upward_mass_shift_bound": 0,
+        "lambda_margin_band": [
+          0.0,
+          12.0
+        ],
+        "robust_BF_violating_modular_fraction": 0.6079271018540268
+      },
+      {
+        "flux_ratio": 2,
+        "upward_mass_shift_bound": 0.5,
+        "lambda_margin_band": [
+          0.20849737787081857,
+          10.791502622129181
+        ],
+        "robust_BF_violating_modular_fraction": 0.5361413089206627
+      },
+      {
+        "flux_ratio": 2,
+        "upward_mass_shift_bound": 1,
+        "lambda_margin_band": [
+          0.5278640450004204,
+          9.47213595499958
+        ],
+        "robust_BF_violating_modular_fraction": 0.453122108370014
+      },
+      {
+        "flux_ratio": 2,
+        "upward_mass_shift_bound": 2,
+        "lambda_margin_band": [
+          2.0,
+          6.0
+        ],
+        "robust_BF_violating_modular_fraction": 0.20264236728467558
+      },
+      {
+        "flux_ratio": 2,
+        "upward_mass_shift_bound": 2.2,
+        "lambda_margin_band": [
+          2.9055728090000854,
+          4.694427190999914
+        ],
+        "robust_BF_violating_modular_fraction": 0.09062442167400268
+      },
+      {
+        "flux_ratio": 5,
+        "upward_mass_shift_bound": 0,
+        "lambda_margin_band": [
+          0.0,
+          12.0
+        ],
+        "robust_BF_violating_modular_fraction": 0.24317084074161074
+      },
+      {
+        "flux_ratio": 5,
+        "upward_mass_shift_bound": 0.5,
+        "lambda_margin_band": [
+          0.20849737787081857,
+          10.791502622129181
+        ],
+        "robust_BF_violating_modular_fraction": 0.21445652356826508
+      },
+      {
+        "flux_ratio": 5,
+        "upward_mass_shift_bound": 1,
+        "lambda_margin_band": [
+          0.5278640450004204,
+          9.47213595499958
+        ],
+        "robust_BF_violating_modular_fraction": 0.1812488433480056
+      },
+      {
+        "flux_ratio": 5,
+        "upward_mass_shift_bound": 2,
+        "lambda_margin_band": [
+          2.0,
+          6.0
+        ],
+        "robust_BF_violating_modular_fraction": 0.08105694691387023
+      },
+      {
+        "flux_ratio": 5,
+        "upward_mass_shift_bound": 2.2,
+        "lambda_margin_band": [
+          2.9055728090000854,
+          4.694427190999914
+        ],
+        "robust_BF_violating_modular_fraction": 0.03624976866960106
+      },
+      {
+        "flux_ratio": 10,
+        "upward_mass_shift_bound": 0,
+        "lambda_margin_band": [
+          0.0,
+          12.0
+        ],
+        "robust_BF_violating_modular_fraction": 0.12158542037080537
+      },
+      {
+        "flux_ratio": 10,
+        "upward_mass_shift_bound": 0.5,
+        "lambda_margin_band": [
+          0.20849737787081857,
+          10.791502622129181
+        ],
+        "robust_BF_violating_modular_fraction": 0.10722826178413254
+      },
+      {
+        "flux_ratio": 10,
+        "upward_mass_shift_bound": 1,
+        "lambda_margin_band": [
+          0.5278640450004204,
+          9.47213595499958
+        ],
+        "robust_BF_violating_modular_fraction": 0.0906244216740028
+      },
+      {
+        "flux_ratio": 10,
+        "upward_mass_shift_bound": 2,
+        "lambda_margin_band": [
+          2.0,
+          6.0
+        ],
+        "robust_BF_violating_modular_fraction": 0.04052847345693512
+      },
+      {
+        "flux_ratio": 10,
+        "upward_mass_shift_bound": 2.2,
+        "lambda_margin_band": [
+          2.9055728090000854,
+          4.694427190999914
+        ],
+        "robust_BF_violating_modular_fraction": 0.01812488433480053
+      }
+    ],
+    "caveat": "Delta is an assumed numerical bound on physical corrected mass-squared; no such bound is derived for M/string theory. This is a conditional correction-budget falsifier, not a full stability calculation."
+  },
+  "memory": {
+    "status": "PASS",
+    "null_probability": 0.3333333333333333,
+    "simulated_alternative_probability": 0.4666666666666667,
+    "e_factor_for_success": 1.4000000000000001,
+    "e_factor_for_failure": 0.7999999999999999,
+    "decision_rule": "At any adaptively chosen accepted-event time n, reject EB-null if E_n=(7/5)^S_n*(4/5)^(n-S_n)>=100; under conditional null successes <=1/3 it is a nonnegative test supermartingale.",
+    "null_crossing_by_n": {
+      "horizons": {
+        "100": {
+          "crossing_probability": 0.004287693475787972,
+          "survival_probability": 0.9957123065242182
+        },
+        "200": {
+          "crossing_probability": 0.007525049286235922,
+          "survival_probability": 0.992474950713776
+        },
+        "292": {
+          "crossing_probability": 0.00837525439579913,
+          "survival_probability": 0.9916247456042186
+        },
+        "400": {
+          "crossing_probability": 0.008661049845546918,
+          "survival_probability": 0.9913389501544775
+        },
+        "600": {
+          "crossing_probability": 0.008755904950957225,
+          "survival_probability": 0.9912440950490794
+        }
+      },
+      "expected_accepted_events_until_cross_or_600": 595.8255250129889
+    },
+    "alternative_crossing_by_n": {
+      "horizons": {
+        "100": {
+          "crossing_probability": 0.4807149870022195,
+          "survival_probability": 0.5192850129977803
+        },
+        "200": {
+          "crossing_probability": 0.858443315367838,
+          "survival_probability": 0.14155668463216167
+        },
+        "292": {
+          "crossing_probability": 0.9547026069601606,
+          "survival_probability": 0.045297393039839165
+        },
+        "400": {
+          "crossing_probability": 0.9877869799107407,
+          "survival_probability": 0.012213020089259294
+        },
+        "600": {
+          "crossing_probability": 0.9987565333830355,
+          "survival_probability": 0.001243466616964974
+        }
+      },
+      "expected_accepted_events_until_cross_or_600": 124.62359731383002
+    },
+    "guarantee": "Ville's inequality: P_null(there exists n:E_n>=100)<=0.01, INCLUDING optional stopping under per-history null bound.",
+    "limitations": "The alternative power model assumes independent accepted events with Bernoulli p1=7/15. Detector efficiency ratios, entangled reference integrity, sequential instrument invasiveness and full multi-time quantum memory are unmeasured; apply calibration-adjusted p0/p1 in a real experiment."
+  }
+}
