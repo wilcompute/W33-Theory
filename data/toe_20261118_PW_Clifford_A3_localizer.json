@@ -1,0 +1,428 @@
+{
+  "scope": "noncompact PW BPS background and specified L2 charged operator; no compact G2 or SM completion",
+  "clifford": {
+    "dimension": 8,
+    "exact_anticommutators": true,
+    "single_component_unused_b1_pairing": true,
+    "pairing_scope": "full exterior-form module; domain invariant under constant b1"
+  },
+  "geometry": {
+    "f": "x**4/4 - 3*x**2*y**2/2 - x**2/2 + y**4/4 - y**2/2 + z**2",
+    "laplacian_f": 0,
+    "critical_points": [
+      {
+        "point": [
+          -1,
+          0,
+          0
+        ],
+        "hessian_eigenvalues": [
+          -4,
+          2,
+          2
+        ],
+        "morse_index": 1
+      },
+      {
+        "point": [
+          0,
+          -1,
+          0
+        ],
+        "hessian_eigenvalues": [
+          -4,
+          2,
+          2
+        ],
+        "morse_index": 1
+      },
+      {
+        "point": [
+          0,
+          0,
+          0
+        ],
+        "hessian_eigenvalues": [
+          -1,
+          -1,
+          2
+        ],
+        "morse_index": 2
+      },
+      {
+        "point": [
+          0,
+          1,
+          0
+        ],
+        "hessian_eigenvalues": [
+          -4,
+          2,
+          2
+        ],
+        "morse_index": 1
+      },
+      {
+        "point": [
+          1,
+          0,
+          0
+        ],
+        "hessian_eigenvalues": [
+          -4,
+          2,
+          2
+        ],
+        "morse_index": 1
+      }
+    ],
+    "even_minus_odd_index": -3,
+    "planar_winding_controls": [
+      {
+        "t": 0.0,
+        "winding": -3.0,
+        "sample_minimum_gradient": 7.9999999999999964
+      },
+      {
+        "t": 0.25,
+        "winding": -3.0,
+        "sample_minimum_gradient": 7.5
+      },
+      {
+        "t": 0.5,
+        "winding": -3.0,
+        "sample_minimum_gradient": 7.0
+      },
+      {
+        "t": 0.75,
+        "winding": -3.0,
+        "sample_minimum_gradient": 6.5
+      },
+      {
+        "t": 1.0,
+        "winding": -3.0,
+        "sample_minimum_gradient": 6.0
+      }
+    ],
+    "exact_boundary_gradient_lower_bound_R2": 6,
+    "planar_even_kernel": [
+      0,
+      0
+    ],
+    "L2_betti_positive_charge": [
+      0,
+      3,
+      0,
+      0
+    ],
+    "L2_betti_negative_charge": [
+      0,
+      0,
+      3,
+      0
+    ],
+    "count_proof": "proper-gradient Witten index -3; exp(+/-f2) not L2; z oscillator degree0; Hodge dual for negative charge",
+    "z_oscillator_gap": 4,
+    "native_E6_charge_choice": "H=-Psi/3; adjoint16_-3 effective charge +1",
+    "E8_common_T_net_spinor_index_for_nu3": 6
+  },
+  "index_and_symmetry": {
+    "independent_gaussian_index_integral": -3.0,
+    "quadrature_error_estimate": 1.4456177678574554e-10,
+    "C4_exact_reduced_regular_matrix": [
+      [
+        -1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "C4_characteristic_polynomial": "(u+1)*(u^2+1)",
+    "C4_invariants_after_gauge_character_k": [
+      0,
+      1,
+      1,
+      1
+    ],
+    "general_harmonic_family": "Re(w^m)/m-|w|^2/2+z^2; m>=3",
+    "general_L2_degree1_count": "m-1; degree m is input, not selected",
+    "general_critical_hessians": {
+      "3": {
+        "outer_count": 3,
+        "outer_eigenvalues": [
+          -3,
+          1,
+          2
+        ],
+        "origin_eigenvalues": [
+          -1,
+          -1,
+          2
+        ],
+        "even_minus_odd_index": -2
+      },
+      "4": {
+        "outer_count": 4,
+        "outer_eigenvalues": [
+          -4,
+          2,
+          2
+        ],
+        "origin_eigenvalues": [
+          -1,
+          -1,
+          2
+        ],
+        "even_minus_odd_index": -3
+      },
+      "5": {
+        "outer_count": 5,
+        "outer_eigenvalues": [
+          -5,
+          3,
+          2
+        ],
+        "origin_eigenvalues": [
+          -1,
+          -1,
+          2
+        ],
+        "even_minus_odd_index": -4
+      },
+      "6": {
+        "outer_count": 6,
+        "outer_eigenvalues": [
+          -6,
+          4,
+          2
+        ],
+        "origin_eigenvalues": [
+          -1,
+          -1,
+          2
+        ],
+        "even_minus_odd_index": -5
+      },
+      "7": {
+        "outer_count": 7,
+        "outer_eigenvalues": [
+          -7,
+          5,
+          2
+        ],
+        "origin_eigenvalues": [
+          -1,
+          -1,
+          2
+        ],
+        "even_minus_odd_index": -6
+      },
+      "8": {
+        "outer_count": 8,
+        "outer_eigenvalues": [
+          -8,
+          6,
+          2
+        ],
+        "origin_eigenvalues": [
+          -1,
+          -1,
+          2
+        ],
+        "even_minus_odd_index": -7
+      }
+    }
+  },
+  "spectral": [
+    {
+      "basis_per_axis": 16,
+      "omega": 3.0,
+      "dimension_odd": 512,
+      "odd_lowest_ritz": [
+        0.00034779736740761426,
+        0.0010815730816293068,
+        0.0010815730816303459,
+        1.0367001385298336,
+        4.825393212023219,
+        4.8253932120237195,
+        5.036148626197217,
+        8.01063836365461
+      ],
+      "max_residual": 6.526928779396396e-12,
+      "even0_lowest_ritz": 5.036115315997252,
+      "even2_lowest_ritz": 1.0361153159972516,
+      "C4_commutator_frobenius": 2.031683261062586e-12,
+      "C4_low3_leakage": 2.61458210160827e-15,
+      "C4_low3_eigenvalues": [
+        [
+          -0.9999999999999994,
+          0.0
+        ],
+        [
+          -8.326672684688674e-17,
+          -0.9999999999999994
+        ],
+        [
+          -8.326672684688674e-17,
+          0.9999999999999994
+        ]
+      ]
+    },
+    {
+      "basis_per_axis": 24,
+      "omega": 3.0,
+      "dimension_odd": 1152,
+      "odd_lowest_ritz": [
+        1.4896060153461342e-05,
+        1.6670442816498626e-05,
+        1.6670442817515608e-05,
+        1.0361370309153102,
+        4.821841551304166,
+        4.821841551307682,
+        5.036111892169393,
+        8.007686469025108
+      ],
+      "max_residual": 6.626881061988612e-11,
+      "even0_lowest_ritz": 5.036111128832422,
+      "even2_lowest_ritz": 1.0361111288324225,
+      "C4_commutator_frobenius": 7.490206569549685e-12,
+      "C4_low3_leakage": 4.019741687704204e-15,
+      "C4_low3_eigenvalues": [
+        [
+          -0.9999999999999999,
+          0.0
+        ],
+        [
+          5.551115123125783e-17,
+          -0.9999999999999999
+        ],
+        [
+          5.551115123125783e-17,
+          0.9999999999999999
+        ]
+      ]
+    },
+    {
+      "basis_per_axis": 32,
+      "omega": 3.0,
+      "dimension_odd": 2048,
+      "odd_lowest_ritz": [
+        1.9199989606771654e-07,
+        1.9199989724689483e-07,
+        3.4006447138562775e-07,
+        1.0361116340762373,
+        4.821798061140076,
+        4.82179806114032,
+        5.036111070939272,
+        8.007555018592615
+      ],
+      "max_residual": 9.020211008026152e-12,
+      "even0_lowest_ritz": 5.036111059270574,
+      "even2_lowest_ritz": 1.0361110592705747,
+      "C4_commutator_frobenius": 2.791026902827306e-11,
+      "C4_low3_leakage": 1.8442091125176324e-15,
+      "C4_low3_eigenvalues": [
+        [
+          -0.9999999999999988,
+          0.0
+        ],
+        [
+          7.882303861827096e-46,
+          -0.9999999999999997
+        ],
+        [
+          7.882303861827096e-46,
+          0.9999999999999997
+        ]
+      ]
+    },
+    {
+      "basis_per_axis": 40,
+      "omega": 3.0,
+      "dimension_odd": 3200,
+      "odd_lowest_ritz": [
+        6.930688829917195e-09,
+        6.930689689255837e-09,
+        7.185846920103323e-09,
+        1.0361110697056777,
+        4.821797454816866,
+        4.821797454817373,
+        5.036111057869521,
+        8.007552575662782
+      ],
+      "max_residual": 1.1074588283398059e-10,
+      "even0_lowest_ritz": 5.036111057663065,
+      "even2_lowest_ritz": 1.036111057663065,
+      "C4_commutator_frobenius": 6.027020604409032e-11,
+      "C4_low3_leakage": 6.110233638027185e-15,
+      "C4_low3_eigenvalues": [
+        [
+          -1.0000000000000038,
+          0.0
+        ],
+        [
+          8.131516293641283e-20,
+          -1.000000000000002
+        ],
+        [
+          8.131516293641283e-20,
+          1.000000000000002
+        ]
+      ]
+    }
+  ],
+  "native_E6_charge_certificate_checked": true,
+  "independent_oscillator_width": {
+    "basis_per_axis": 40,
+    "omega": 2.0,
+    "dimension_odd": 3200,
+    "odd_lowest_ritz": [
+      7.30727661404874e-07,
+      7.307276614441222e-07,
+      1.0094058497068722e-06,
+      1.036112751669022,
+      4.821800230632495,
+      4.821800230632659,
+      5.036111096807175,
+      8.00755945983926
+    ],
+    "max_residual": 1.6313644803195897e-11,
+    "even0_lowest_ritz": 5.036111062746029,
+    "even2_lowest_ritz": 1.0361110627460288,
+    "C4_commutator_frobenius": 1.4187391129344818e-10,
+    "C4_low3_leakage": 1.7117947701596685e-15,
+    "C4_low3_eigenvalues": [
+      [
+        -1.0,
+        0.0
+      ],
+      [
+        2.117582368135751e-22,
+        -0.9999999999999999
+      ],
+      [
+        2.117582368135751e-22,
+        0.9999999999999999
+      ]
+    ]
+  },
+  "limitations": [
+    "quartic degree and coefficients supplied",
+    "infinite background energy on R3",
+    "gauge constants not L2 on R3",
+    "no global G2 gluing",
+    "E6 Psi anomaly and rank-breaking remain",
+    "bare adjoint two-family cubic still zero",
+    "fixed H27 flavor compatibility unbuilt",
+    "Ritz values support convergence, do not prove exact kernel counts or positive gap bounds"
+  ]
+}
