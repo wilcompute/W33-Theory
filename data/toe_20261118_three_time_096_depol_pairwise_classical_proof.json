@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "gamma": 0.96,
+  "p": 0.45,
+  "eta": 0.95,
+  "pairwise_classical_threshold": 0.39999999999999997,
+  "pairwise_full_Choi_errors": [
+    2.220446049250313e-16,
+    2.220446049250313e-16,
+    2.220446049250313e-16
+  ],
+  "classical_record_branch_counts": {
+    "E1_to_E2_noisy": 2,
+    "E1_to_E3_noisy": 2,
+    "E2_noisy_to_E3_noisy": 8
+  },
+  "all_conditional_branch_maps_CPTP": true,
+  "measured_design_expectations": {
+    "first_z_displacement": 0.96,
+    "second_protected_z": 0.9499999999999998,
+    "third_protected_x": 0.95
+  },
+  "genuine_three_time_fixed_axes_W3": -0.3355002001601597,
+  "provenance": "Full 3-time incompatibility theorem and original two-time Kraus decompositions are from Beyer et al arXiv:2611.17268v1; the depolarizing random-unitary branch extension and numeric .96/.45/.95 design are independently checked.",
+  "caveats": "Proves existence of classical decompositions separately for each PAIR and violation of the theorem's triple compatibility witness for these ideal channels. Does not generate a joint CPTP process tensor or physical optical circuit; experimentally one must establish dynamical maps from a common valid process, calibrate noise and acceptance, and exclude drift."
+}

@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "old_tensor_numerator": [
+    [
+      81,
+      -27,
+      9
+    ],
+    [
+      -27,
+      81,
+      -3
+    ],
+    [
+      9,
+      -3,
+      81
+    ]
+  ],
+  "optimized_tensor_numerator": [
+    [
+      81,
+      1,
+      1
+    ],
+    [
+      1,
+      81,
+      1
+    ],
+    [
+      1,
+      1,
+      81
+    ]
+  ],
+  "common_denominator": 12800,
+  "old_eigenvalues": [
+    53.317302847861065,
+    79.21281029550018,
+    110.46988685663877
+  ],
+  "optimized_eigenvalues": [
+    79.99999999999999,
+    80.0,
+    82.99999999999996
+  ],
+  "old_within_species_spatial_speed_anisotropy": 1.4394211137909596,
+  "optimized_within_species_spatial_speed_anisotropy": 1.018577439373168,
+  "generalized_old_vs_optimized_speed_squared_eigenvalues": [
+    0.6535205710755837,
+    0.9743353098490458,
+    1.3793730347380209
+  ],
+  "old_to_optimized_relative_velocity_range_fixed_deck_basis": [
+    0.8084061918835009,
+    1.1744671279938068
+  ],
+  "least_trace_matched_proportionality_constant": 1.0,
+  "nonproportional_Frobenius_residual": 0.003247595264191645,
+  "samples": [
+    {
+      "direction": "x",
+      "old_to_optimized_speed_ratio": 1.0
+    },
+    {
+      "direction": "y",
+      "old_to_optimized_speed_ratio": 1.0
+    },
+    {
+      "direction": "z",
+      "old_to_optimized_speed_ratio": 1.0
+    },
+    {
+      "direction": "x+y",
+      "old_to_optimized_speed_ratio": 0.8115026712006891
+    },
+    {
+      "direction": "x-y",
+      "old_to_optimized_speed_ratio": 1.161895003862225
+    },
+    {
+      "direction": "x+z",
+      "old_to_optimized_speed_ratio": 1.0476454436543674
+    },
+    {
+      "direction": "x+y+z",
+      "old_to_optimized_speed_ratio": 0.8984591897591402
+    }
+  ],
+  "common_cone_condition": "If two field species propagate on these respective voltage covers with same low-energy time normalization and physically IDENTIFIED deck spatial coordinates, a common effective Lorentzian spatial metric requires D_old proportional D_opt. They are not proportional; the relative propagation cone varies by direction.",
+  "cautions": "This is a conditional 2-species toy comparison, NOT measured Lorentz violation or gravity. A single SPD D admits linear spatial rescaling to isotropy. Distinct voltage labels need not define a physical shared coordinate frame; a deck GL3Z identification and actual microscopic coupling must be specified. The optimized tensor and 3D no-go already appear in earlier 2026-11-18 repo work."
+}

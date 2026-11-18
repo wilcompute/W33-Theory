@@ -1,0 +1,284 @@
+{
+  "status": "PASS",
+  "analytic": {
+    "baseline_BF_window": "0<lambda<12",
+    "BF_deficit": "sqrt(4+16lambda)-lambda-2",
+    "max_deficit": "9/4 at lambda=15/4",
+    "correction_budget_c": "delta+4*epsilon with norm(Delta)<=delta, norm(E)<=epsilon<1, K=I+E>0",
+    "robust_open_window": "lambda_-(c)<lambda<lambda_+(c), lambda_pm=6-c +/- sqrt(36-16c), c<9/4",
+    "asymptotic_robust_modes": "N_c(y,r)=[2*(sqrt(lambda_+)-sqrt(lambda_-))/sqrt(3*pi*r)] sqrt(y)+O(1), y->infinity; oriented v=0 windings",
+    "negative_index_theorem": "The BF matrix M0+Delta+4K is negative definite on the span of all horizontal modes with unperturbed deficit>c. Courant-Fischer/Sylvester inertia yields at least that many generalized BF-unsafe eigenvalues in the full Hermitian mass/positive-kinetic system, irrespective of off-diagonal coupling. Real-field conjugation may pair +/- vectors.",
+    "physical_limit": "Requires a UNIFORM Hilbert-space operator-norm correction bound over the growing tower, true positive K and unchanged flux/winding spectrum. These hypotheses are not established for M-theory/string corrections; the result is conditional."
+  },
+  "rows": [
+    {
+      "correction_budget": 0.0,
+      "height": 1000.0,
+      "robust_oriented_winding_count": 70,
+      "BF_lambda_open_interval": [
+        0.0,
+        12.0
+      ],
+      "predicted_count_div_sqrt_height": 2.256758334191025,
+      "actual_count_div_sqrt_height": 2.2135943621178655
+    },
+    {
+      "correction_budget": 0.0,
+      "height": 10000.0,
+      "robust_oriented_winding_count": 224,
+      "BF_lambda_open_interval": [
+        0.0,
+        12.0
+      ],
+      "predicted_count_div_sqrt_height": 2.256758334191025,
+      "actual_count_div_sqrt_height": 2.24
+    },
+    {
+      "correction_budget": 0.0,
+      "height": 100000.0,
+      "robust_oriented_winding_count": 712,
+      "BF_lambda_open_interval": [
+        0.0,
+        12.0
+      ],
+      "predicted_count_div_sqrt_height": 2.256758334191025,
+      "actual_count_div_sqrt_height": 2.251541694039886
+    },
+    {
+      "correction_budget": 0.5,
+      "height": 1000.0,
+      "robust_oriented_winding_count": 58,
+      "BF_lambda_open_interval": [
+        0.20849737787081857,
+        10.791502622129181
+      ],
+      "predicted_count_div_sqrt_height": 1.8426354638471227,
+      "actual_count_div_sqrt_height": 1.83412104289766
+    },
+    {
+      "correction_budget": 0.5,
+      "height": 10000.0,
+      "robust_oriented_winding_count": 186,
+      "BF_lambda_open_interval": [
+        0.20849737787081857,
+        10.791502622129181
+      ],
+      "predicted_count_div_sqrt_height": 1.8426354638471227,
+      "actual_count_div_sqrt_height": 1.86
+    },
+    {
+      "correction_budget": 0.5,
+      "height": 100000.0,
+      "robust_oriented_winding_count": 582,
+      "BF_lambda_open_interval": [
+        0.20849737787081857,
+        10.791502622129181
+      ],
+      "predicted_count_div_sqrt_height": 1.8426354638471227,
+      "actual_count_div_sqrt_height": 1.8404455982179966
+    },
+    {
+      "correction_budget": 1.0,
+      "height": 1000.0,
+      "robust_oriented_winding_count": 48,
+      "BF_lambda_open_interval": [
+        0.5278640450004204,
+        9.47213595499958
+      ],
+      "predicted_count_div_sqrt_height": 1.5316978705578341,
+      "actual_count_div_sqrt_height": 1.5178932768808222
+    },
+    {
+      "correction_budget": 1.0,
+      "height": 10000.0,
+      "robust_oriented_winding_count": 154,
+      "BF_lambda_open_interval": [
+        0.5278640450004204,
+        9.47213595499958
+      ],
+      "predicted_count_div_sqrt_height": 1.5316978705578341,
+      "actual_count_div_sqrt_height": 1.54
+    },
+    {
+      "correction_budget": 1.0,
+      "height": 100000.0,
+      "robust_oriented_winding_count": 486,
+      "BF_lambda_open_interval": [
+        0.5278640450004204,
+        9.47213595499958
+      ],
+      "predicted_count_div_sqrt_height": 1.5316978705578341,
+      "actual_count_div_sqrt_height": 1.5368669428418322
+    },
+    {
+      "correction_budget": 2.0,
+      "height": 1000.0,
+      "robust_oriented_winding_count": 22,
+      "BF_lambda_open_interval": [
+        2.0,
+        6.0
+      ],
+      "predicted_count_div_sqrt_height": 0.6744513896821692,
+      "actual_count_div_sqrt_height": 0.6957010852370434
+    },
+    {
+      "correction_budget": 2.0,
+      "height": 10000.0,
+      "robust_oriented_winding_count": 66,
+      "BF_lambda_open_interval": [
+        2.0,
+        6.0
+      ],
+      "predicted_count_div_sqrt_height": 0.6744513896821692,
+      "actual_count_div_sqrt_height": 0.66
+    },
+    {
+      "correction_budget": 2.0,
+      "height": 100000.0,
+      "robust_oriented_winding_count": 214,
+      "BF_lambda_open_interval": [
+        2.0,
+        6.0
+      ],
+      "predicted_count_div_sqrt_height": 0.6744513896821692,
+      "actual_count_div_sqrt_height": 0.6767274192760331
+    },
+    {
+      "correction_budget": 2.2,
+      "height": 1000.0,
+      "robust_oriented_winding_count": 10,
+      "BF_lambda_open_interval": [
+        2.9055728090000854,
+        4.694427190999914
+      ],
+      "predicted_count_div_sqrt_height": 0.3010368680706581,
+      "actual_count_div_sqrt_height": 0.31622776601683794
+    },
+    {
+      "correction_budget": 2.2,
+      "height": 10000.0,
+      "robust_oriented_winding_count": 30,
+      "BF_lambda_open_interval": [
+        2.9055728090000854,
+        4.694427190999914
+      ],
+      "predicted_count_div_sqrt_height": 0.3010368680706581,
+      "actual_count_div_sqrt_height": 0.3
+    },
+    {
+      "correction_budget": 2.2,
+      "height": 100000.0,
+      "robust_oriented_winding_count": 96,
+      "BF_lambda_open_interval": [
+        2.9055728090000854,
+        4.694427190999914
+      ],
+      "predicted_count_div_sqrt_height": 0.3010368680706581,
+      "actual_count_div_sqrt_height": 0.3035786553761644
+    },
+    {
+      "correction_budget": 2.24,
+      "height": 1000.0,
+      "robust_oriented_winding_count": 6,
+      "BF_lambda_open_interval": [
+        3.360000000000004,
+        4.159999999999996
+      ],
+      "predicted_count_div_sqrt_height": 0.1345790650894637,
+      "actual_count_div_sqrt_height": 0.18973665961010278
+    },
+    {
+      "correction_budget": 2.24,
+      "height": 10000.0,
+      "robust_oriented_winding_count": 14,
+      "BF_lambda_open_interval": [
+        3.360000000000004,
+        4.159999999999996
+      ],
+      "predicted_count_div_sqrt_height": 0.1345790650894637,
+      "actual_count_div_sqrt_height": 0.14
+    },
+    {
+      "correction_budget": 2.24,
+      "height": 100000.0,
+      "robust_oriented_winding_count": 44,
+      "BF_lambda_open_interval": [
+        3.360000000000004,
+        4.159999999999996
+      ],
+      "predicted_count_div_sqrt_height": 0.1345790650894637,
+      "actual_count_div_sqrt_height": 0.13914021704740867
+    }
+  ],
+  "finite_mixing_stress": {
+    "r": 1.0,
+    "height": 1000.0,
+    "matrix_dimension": 100,
+    "delta": 1.2,
+    "epsilon": 0.2,
+    "guaranteed_robust_oriented_mode_count": 22,
+    "guaranteed_quadratic_form_margin": 0.021515570710147536,
+    "trials": [
+      {
+        "n_below_BF": 64,
+        "negative_trial_subspace_dim": 22,
+        "max_negative_subspace_eigenvalue": -1.4856301236778295
+      },
+      {
+        "n_below_BF": 65,
+        "negative_trial_subspace_dim": 22,
+        "max_negative_subspace_eigenvalue": -1.524964852517595
+      },
+      {
+        "n_below_BF": 65,
+        "negative_trial_subspace_dim": 22,
+        "max_negative_subspace_eigenvalue": -1.5648710873375387
+      },
+      {
+        "n_below_BF": 65,
+        "negative_trial_subspace_dim": 22,
+        "max_negative_subspace_eigenvalue": -1.5033922545671392
+      },
+      {
+        "n_below_BF": 64,
+        "negative_trial_subspace_dim": 22,
+        "max_negative_subspace_eigenvalue": -1.4917301857560215
+      },
+      {
+        "n_below_BF": 65,
+        "negative_trial_subspace_dim": 22,
+        "max_negative_subspace_eigenvalue": -1.556446801800447
+      },
+      {
+        "n_below_BF": 64,
+        "negative_trial_subspace_dim": 22,
+        "max_negative_subspace_eigenvalue": -1.5566104909840923
+      },
+      {
+        "n_below_BF": 65,
+        "negative_trial_subspace_dim": 22,
+        "max_negative_subspace_eigenvalue": -1.4987626456833456
+      },
+      {
+        "n_below_BF": 65,
+        "negative_trial_subspace_dim": 22,
+        "max_negative_subspace_eigenvalue": -1.5137083934168136
+      },
+      {
+        "n_below_BF": 64,
+        "negative_trial_subspace_dim": 22,
+        "max_negative_subspace_eigenvalue": -1.5435654325572679
+      },
+      {
+        "n_below_BF": 64,
+        "negative_trial_subspace_dim": 22,
+        "max_negative_subspace_eigenvalue": -1.4754053598914323
+      },
+      {
+        "n_below_BF": 65,
+        "negative_trial_subspace_dim": 22,
+        "max_negative_subspace_eigenvalue": -1.525124174791107
+      }
+    ]
+  }
+}

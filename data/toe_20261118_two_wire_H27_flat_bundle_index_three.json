@@ -1,0 +1,94 @@
+{
+  "status": "PASS",
+  "lens_L41_pi1": "C4; every homomorphism C4->H27 is trivial (gcd(3,4)=1).",
+  "single_core_wire_pi1": "Z; the image of a single generator is cyclic, cannot surject onto nonabelian H27",
+  "two_component_unlink_exterior_pi1": "F2; send free generators to native Heisenberg x,y to obtain an onto flat H27 holonomy",
+  "two_wire_boundary": [
+    "T2",
+    "T2"
+  ],
+  "full_H27_flat_holonomy_generated_elements": 27,
+  "commutator_scalar": "omega I3",
+  "holonomy_representation_dimension": 3,
+  "common_invariant_vectors_dimension": 0,
+  "untwisted_exterior_chi": 0,
+  "base_H27_rank3_local_system_betti": [
+    0,
+    3,
+    3,
+    0
+  ],
+  "single_sphere_puncture_absolute_betti": [
+    0,
+    3,
+    6,
+    0
+  ],
+  "single_sphere_puncture_relative_betti": [
+    0,
+    6,
+    3,
+    0
+  ],
+  "one_spherical_defect_rank3_net_index": 3,
+  "unavoidable_rank3_vectorlike_pair_count_in_this_CW_model": 3,
+  "Euler_relative_formula": "index=b1-b2=rank(V)*(2*r-k) for k punctured S2 components and r relative spheres, assuming mixed nonempty absolute boundary and b0rel=b3rel=0; the two wire torus boundaries have chi=0.",
+  "index_table": [
+    {
+      "point_spheres": 1,
+      "relative_spheres": 1,
+      "rank1_index": 1,
+      "rank3_H27_twisted_index": 3
+    },
+    {
+      "point_spheres": 3,
+      "relative_spheres": 1,
+      "rank1_index": -1,
+      "rank3_H27_twisted_index": -3
+    },
+    {
+      "point_spheres": 3,
+      "relative_spheres": 2,
+      "rank1_index": 1,
+      "rank3_H27_twisted_index": 3
+    },
+    {
+      "point_spheres": 3,
+      "relative_spheres": 3,
+      "rank1_index": 3,
+      "rank3_H27_twisted_index": 9
+    },
+    {
+      "point_spheres": 5,
+      "relative_spheres": 1,
+      "rank1_index": -3,
+      "rank3_H27_twisted_index": -9
+    },
+    {
+      "point_spheres": 5,
+      "relative_spheres": 2,
+      "rank1_index": -1,
+      "rank3_H27_twisted_index": -3
+    },
+    {
+      "point_spheres": 5,
+      "relative_spheres": 3,
+      "rank1_index": 1,
+      "rank3_H27_twisted_index": 3
+    },
+    {
+      "point_spheres": 5,
+      "relative_spheres": 4,
+      "rank1_index": 3,
+      "rank3_H27_twisted_index": 9
+    },
+    {
+      "point_spheres": 5,
+      "relative_spheres": 5,
+      "rank1_index": 5,
+      "rank3_H27_twisted_index": 15
+    }
+  ],
+  "scope": "Two-wire unlink exterior and single relative puncture are a topological/flat-bundle alternative. Surjectivity onto H27 and net index3 coexist, but H2_relative=3 leaves vectorlike modes in this finite twisted CW model. Neither a metric, G2 ALE fibration, physical Dirac spectrum, full E6 gauge centralizer, anomaly inflow nor isolated three families is supplied.",
+  "source": "Hatcher Algebraic Topology Example 1.23 pi1(unlink)=Z*Z; ordinary Euler characteristic with local coefficients and long exact sequence of boundary pair."
+}

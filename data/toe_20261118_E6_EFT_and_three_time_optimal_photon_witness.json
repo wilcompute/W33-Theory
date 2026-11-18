@@ -1,0 +1,231 @@
+{
+  "status": "PASS",
+  "E6": {
+    "status": "PASS",
+    "full_invariant_cubic_singlet_ring": "C[x*y*z] in the selected three singlet charge directions",
+    "exponents_tested_to_12": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        2,
+        2,
+        2
+      ],
+      [
+        3,
+        3,
+        3
+      ],
+      [
+        4,
+        4,
+        4
+      ],
+      [
+        5,
+        5,
+        5
+      ],
+      [
+        6,
+        6,
+        6
+      ],
+      [
+        7,
+        7,
+        7
+      ],
+      [
+        8,
+        8,
+        8
+      ],
+      [
+        9,
+        9,
+        9
+      ],
+      [
+        10,
+        10,
+        10
+      ],
+      [
+        11,
+        11,
+        11
+      ],
+      [
+        12,
+        12,
+        12
+      ]
+    ],
+    "superpotential": "W=lambda*I+kappa*I^2/Lambda^3, I=barH*A*H has canonical mass dimension3",
+    "stationary_equation": "I/Lambda^3=-lambda/(2*kappa)",
+    "natural_O1_example": "lambda=1, kappa=-1/2 => |I|/Lambda^3=1; for equal-magnitude singlet VEVs with normalized cubic contraction, |v|/Lambda=1",
+    "suppressed_field_requires_hierarchy": [
+      {
+        "vev_over_cutoff": 1.0,
+        "required_abs_lambda_over_kappa": 2.0,
+        "u_abs": 1.0
+      },
+      {
+        "vev_over_cutoff": 0.3,
+        "required_abs_lambda_over_kappa": 0.05399999999999999,
+        "u_abs": 0.026999999999999996
+      },
+      {
+        "vev_over_cutoff": 0.1,
+        "required_abs_lambda_over_kappa": 0.0020000000000000005,
+        "u_abs": 0.0010000000000000002
+      },
+      {
+        "vev_over_cutoff": 0.03,
+        "required_abs_lambda_over_kappa": 5.399999999999999e-05,
+        "u_abs": 2.6999999999999996e-05
+      }
+    ],
+    "extra_dimension9_operator": "eta*I^3/Lambda^6, derivative delta f'=3 eta I^2/Lambda^6",
+    "higher_order_sensitivity": [
+      {
+        "eta": 0.0,
+        "real_nonnegative_stationary_u": [
+          1.0
+        ],
+        "cubic_sextic_original_u": 1.0,
+        "higher_I3_derivative_at_old_vacuum": 0.0
+      },
+      {
+        "eta": 0.01,
+        "real_nonnegative_stationary_u": [
+          1.0319474672552342,
+          32.3013858660781
+        ],
+        "cubic_sextic_original_u": 1.0,
+        "higher_I3_derivative_at_old_vacuum": 0.03
+      },
+      {
+        "eta": 0.05,
+        "real_nonnegative_stationary_u": [
+          1.225148226554414,
+          5.441518440112252
+        ],
+        "cubic_sextic_original_u": 1.0,
+        "higher_I3_derivative_at_old_vacuum": 0.15000000000000002
+      },
+      {
+        "eta": 0.1,
+        "real_nonnegative_stationary_u": [],
+        "cubic_sextic_original_u": 1.0,
+        "higher_I3_derivative_at_old_vacuum": 0.30000000000000004
+      }
+    ],
+    "renormalizable_truncation": "The chosen cubic I is renormalizable; I^2 is a dimension-six superpotential monomial with dimensionful coefficient Lambda^-3, and I^3 is dimension-nine. Other independent E6 invariants may supply a different vacuum.",
+    "scope": "A Wilsonian control warning for the particular stationary f(I)=lambda I+kappa I\u00b2/Lambda\u00b3 toy. At u~1 truncating higher powers without symmetry or an explicit UV completion is not parametrically justified. It does not prove all E6 gauge vacua are unstable; canonical normalization and cubic contraction coefficients matter."
+  },
+  "three_time_Beyer_protocol": {
+    "prior_art": "Beyer et al, Observation of Genuine Multi-Time Quantum Memory, arXiv:2611.17268v1 2026-11-12; pairwise-classical dynamics and witness theorem are theirs.",
+    "witness": "W3<=sqrt(1-eta2\u00b2)+sqrt(1-eta3\u00b2)-gamma, when a z-displacing first channel and x,z-preserving later channels are followed by isotropic depolarization",
+    "three_setting_design": "(1) input maximally mixed -> measure z after amplitude damping: mean gamma; (2) input |0> -> measure z after z-dephasing+depolarization: mean eta2; (3) input |+> -> measure x after x-dephasing+depolarization: mean eta3",
+    "pairwise_classical_condition": "p >=(1-sqrt(1-gamma))/2; later random-unitary depolarization on the later channels preserves explicit pairwise decompositions, using tracked Pauli corrections for pair (E2,E3)",
+    "noise_optimization": "For gamma near1, eta_equal_threshold approaches sqrt(3)/2 (~0.866), much less stringent than gamma=.36 threshold0.9837, at the cost of stronger damping and p closer to0.5.",
+    "examples": [
+      {
+        "gamma": 0.36,
+        "p": 0.2,
+        "pcritical": 0.09999999999999998,
+        "visibility_2": 0.99,
+        "visibility_3": 0.99,
+        "W3_axis": -0.07786528040668211,
+        "max_equal_visibility_threshold": 0.983666610188635,
+        "sample_design": {
+          "alpha": 0.01,
+          "accepted_trials_per_setting": 379460,
+          "total_accepted_trials_three_settings": 1138380,
+          "Hoeffding_margin": 0.005806544839647645,
+          "design_point_upper_witness": -4.573817008468595e-08,
+          "confidence_proof": "For three independent \u00b11 tomographic settings each measured n times, union of 3 two-sided Hoeffding bounds: |mean-true expectation|<=sqrt(2 ln(6/alpha)/n) simultaneously with probability>=1-alpha. Use lower bounds eta2,eta3,gamma to form an upper bound on W3. The fixed-axis witness is a sufficient test. This count assumes observed sample means equal the design expectation; it is not a guaranteed 1-alpha statistical power or an actual experiment."
+        }
+      },
+      {
+        "gamma": 0.64,
+        "p": 0.3,
+        "pcritical": 0.2,
+        "visibility_2": 0.95,
+        "visibility_3": 0.95,
+        "W3_axis": -0.015500200160160071,
+        "max_equal_visibility_threshold": 0.9474175425861608,
+        "sample_design": {
+          "alpha": 0.01,
+          "accepted_trials_per_setting": 2619594,
+          "total_accepted_trials_three_settings": 7858782,
+          "Hoeffding_margin": 0.0022099568385114555,
+          "design_point_upper_witness": -2.2108831432277043e-09,
+          "confidence_proof": "For three independent \u00b11 tomographic settings each measured n times, union of 3 two-sided Hoeffding bounds: |mean-true expectation|<=sqrt(2 ln(6/alpha)/n) simultaneously with probability>=1-alpha. Use lower bounds eta2,eta3,gamma to form an upper bound on W3. The fixed-axis witness is a sufficient test. This count assumes observed sample means equal the design expectation; it is not a guaranteed 1-alpha statistical power or an actual experiment."
+        }
+      },
+      {
+        "gamma": 0.96,
+        "p": 0.45,
+        "pcritical": 0.39999999999999997,
+        "visibility_2": 0.95,
+        "visibility_3": 0.95,
+        "W3_axis": -0.33550020016016,
+        "max_equal_visibility_threshold": 0.8772684879784524,
+        "sample_design": {
+          "alpha": 0.01,
+          "accepted_trials_per_setting": 3859,
+          "total_accepted_trials_three_settings": 11577,
+          "Hoeffding_margin": 0.05757890427739133,
+          "design_point_upper_witness": -1.4119000334877896e-05,
+          "confidence_proof": "For three independent \u00b11 tomographic settings each measured n times, union of 3 two-sided Hoeffding bounds: |mean-true expectation|<=sqrt(2 ln(6/alpha)/n) simultaneously with probability>=1-alpha. Use lower bounds eta2,eta3,gamma to form an upper bound on W3. The fixed-axis witness is a sufficient test. This count assumes observed sample means equal the design expectation; it is not a guaranteed 1-alpha statistical power or an actual experiment."
+        }
+      },
+      {
+        "gamma": 0.96,
+        "p": 0.45,
+        "pcritical": 0.39999999999999997,
+        "visibility_2": 0.9,
+        "visibility_3": 0.9,
+        "W3_axis": -0.08822021129186541,
+        "max_equal_visibility_threshold": 0.8772684879784524,
+        "sample_design": {
+          "alpha": 0.01,
+          "accepted_trials_per_setting": 39953,
+          "total_accepted_trials_three_settings": 119859,
+          "Hoeffding_margin": 0.017894768634592006,
+          "design_point_upper_witness": -4.371991111362661e-07,
+          "confidence_proof": "For three independent \u00b11 tomographic settings each measured n times, union of 3 two-sided Hoeffding bounds: |mean-true expectation|<=sqrt(2 ln(6/alpha)/n) simultaneously with probability>=1-alpha. Use lower bounds eta2,eta3,gamma to form an upper bound on W3. The fixed-axis witness is a sufficient test. This count assumes observed sample means equal the design expectation; it is not a guaranteed 1-alpha statistical power or an actual experiment."
+        }
+      },
+      {
+        "gamma": 0.99,
+        "p": 0.48,
+        "pcritical": 0.44999999999999996,
+        "visibility_2": 0.9,
+        "visibility_3": 0.9,
+        "W3_axis": -0.11822021129186544,
+        "max_equal_visibility_threshold": 0.8688929738466067,
+        "sample_design": {
+          "alpha": 0.01,
+          "accepted_trials_per_setting": 21671,
+          "total_accepted_trials_three_settings": 65013,
+          "Hoeffding_margin": 0.024297484247952264,
+          "design_point_upper_witness": -4.832274502764022e-07,
+          "confidence_proof": "For three independent \u00b11 tomographic settings each measured n times, union of 3 two-sided Hoeffding bounds: |mean-true expectation|<=sqrt(2 ln(6/alpha)/n) simultaneously with probability>=1-alpha. Use lower bounds eta2,eta3,gamma to form an upper bound on W3. The fixed-axis witness is a sufficient test. This count assumes observed sample means equal the design expectation; it is not a guaranteed 1-alpha statistical power or an actual experiment."
+        }
+      }
+    ],
+    "caveats": "Accepted-event IID or conditional concentration bounds must be physically calibrated; source and detector loss/fair sampling not validated. This is a qubit-mode calculation that could use a qutrit block embedding, not intrinsically 3-level quantum memory. Even a W3 violation alone does not prove pairwise classicality without separately verified decompositions or tomography."
+  }
+}

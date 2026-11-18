@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "native_H27_order": 27,
+  "native_group_law_all_729_pairs_verified": true,
+  "Fourier_unitary_shape": [
+    27,
+    27
+  ],
+  "Fourier_unitarity_max_residual": 4.260303617998308e-16,
+  "Fourier_all27_equivariance_max_residual": 1.046881728999097e-15,
+  "regular_irrep_multiplicities": {
+    "00": 1,
+    "01": 1,
+    "02": 1,
+    "10": 1,
+    "11": 1,
+    "12": 1,
+    "20": 1,
+    "21": 1,
+    "22": 1,
+    "omega": 3,
+    "omega2": 3
+  },
+  "E6_operator27_assumed_H27_decomposition": "9 copies of irreducible rho_omega (center acts as omega*I27)",
+  "tensor_ancilla_minimum_complex_dimension": 7,
+  "explicit_ancilla_irreps": [
+    "chi_00 (1D)",
+    "rho_omega (3D)",
+    "rho_omega2 (3D)"
+  ],
+  "target_tensor_dimension": 189,
+  "target_irrep_multiplicity_census": {
+    "00": 9,
+    "01": 9,
+    "02": 9,
+    "10": 9,
+    "11": 9,
+    "12": 9,
+    "20": 9,
+    "21": 9,
+    "22": 9,
+    "omega": 9,
+    "omega2": 27
+  },
+  "target_contains_equivariant_regular27_isometry": true,
+  "proof": "All irreps of H27 have dimensions 1 (nine center-trivial chars) or 3 (the two opposite central-character Schroedinger irreps). Since center of E6 operator27 is omega, tensoring to obtain center characters 1,omega,omega\u00b2 needs ancilla irreps with center omega\u00b2,1,omega respectively: minimum 3+1+3=7. E6_27 tensor A_7 contains regular27 by exact character multiplicity.",
+  "Fourier_formula": "F(|g>) = \u2295_rho sqrt(dim rho /27) vec(rho(g)), with all 11 inequivalent complex irreps.",
+  "caveats": "This proves group-equivariant *existence* of an isometric 27->189 embedding, not an explicit native E6 189x27 matrix, a lossless 27->27 map, a physical ancilla initialization, a gauge-local photonic compiler, or extension to full E6 action. Prior repository already proved original rank9 27->27 no-go and had alternative commutant dressing."
+}
