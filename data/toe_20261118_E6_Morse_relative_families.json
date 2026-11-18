@@ -1,0 +1,646 @@
+{
+  "status": "PASS",
+  "native_E6": {
+    "Psi27_eigenvalues": {
+      "-2": 10,
+      "1": 16,
+      "4": 1
+    },
+    "adjoint_charge_dimensions": {
+      "-3": 16,
+      "0": 46,
+      "3": 16
+    },
+    "minus3_family_Q6Y": {
+      "2": 3,
+      "0": 1,
+      "6": 1,
+      "-4": 3,
+      "1": 6,
+      "-3": 2
+    },
+    "plus3_dual_Q6Y": {
+      "-2": 3,
+      "0": 1,
+      "4": 3,
+      "-6": 1,
+      "-1": 6,
+      "3": 2
+    },
+    "native_minus3_map_to_Peirce16": [
+      [
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2"
+      ]
+    ],
+    "full_Wilson_gauge_dimension": 20,
+    "Spin10_Wilson_gauge_dimension": 19,
+    "full_Wilson_gauge_algebra": "su4 + su2 + u1 + u1_Psi",
+    "all_SU5_SM_C4_choices_in_Spin10": [
+      {
+        "color": 0,
+        "weak": 2,
+        "Spin10_centralizer_dimension": 21
+      },
+      {
+        "color": 2,
+        "weak": 1,
+        "Spin10_centralizer_dimension": 19
+      },
+      {
+        "color": 2,
+        "weak": 3,
+        "Spin10_centralizer_dimension": 19
+      }
+    ],
+    "gauge_scope": "The12-dimensional SM is a subgroup used to label modes. This Wilson element preserves6 extra Spin10 roots and extra Abelian generators; additional Higgs/bundle data are required.",
+    "single_sheet_cubic_Yukawa_control": "All120 brackets between native q=-3 generators vanish: a bracket would need q=-6, absent from E6. The bare adjoint PW cubic therefore supplies no two-family Yukawa from this single charged16 sector. Higher operators, new sectors or changed Higgs data have not been constructed.",
+    "interpretation": "Complexified E6 root sectors; q=-3 maps c to the native Peirce16 and q=+3 maps its dual back to c. No arbitrary16 is substituted."
+  },
+  "local_operator": {
+    "harmonic_gauge_function": "f=x^2-y^2/2-z^2/2",
+    "operator": "Dq=d+d_dagger+q(df wedge+i_gradf)",
+    "square": "-Delta+sum kappa_i^2*x_i^2+sum kappa_i*(2N_i-1), kappa=q*(2,-1,-1)",
+    "controls": [
+      {
+        "q": -3,
+        "kappa": [
+          -6,
+          3,
+          3
+        ],
+        "zero_form_mask": 1,
+        "degree": 1,
+        "Gaussian_normalization": "54**(1/4)/pi**(3/4)",
+        "L2_zero_multiplicity_per_gauge_component": 1,
+        "exact_Witten_Laplacian_gap": 6
+      },
+      {
+        "q": 3,
+        "kappa": [
+          6,
+          -3,
+          -3
+        ],
+        "zero_form_mask": 6,
+        "degree": 2,
+        "Gaussian_normalization": "54**(1/4)/pi**(3/4)",
+        "L2_zero_multiplicity_per_gauge_component": 1,
+        "exact_Witten_Laplacian_gap": 6
+      }
+    ],
+    "scope": "Exact noncompact quadratic PW operator with a supplied background/sign. Degree1 in q=-3 and degree2 in q=+3 describe a chiral family/CPT pair under the standard twisted7D dictionary, not two chiral families. No physical compactification or gap in measured units is implied."
+  },
+  "three_saddle_control": {
+    "effective_function": "f16=-sum_(a=-3,-1,1,3) 1/sqrt((x-a)^2+y^2+z^2)",
+    "critical_x": [
+      "-r",
+      "0",
+      "r"
+    ],
+    "r_bracket": [
+      "13308634/6533893",
+      "13105121/6433978"
+    ],
+    "r_polynomial": "2*x**6 - 12*x**5 - 34*x**4 + 24*x**3 + 126*x**2 - 12*x + 162",
+    "complete_count_proof": "The transverse gradient is(y,z)*sum r_a^-3, so every zero lies on the axis. On each of the3 intervals between poles the axial derivative strictly decreases from+infinity to-infinity; outside all poles it has one sign. Hence exactly3 zeros.",
+    "Hessian": "diag(-2S,S,S), S=sum |x-a|^-3>0: all3 have Morse index1",
+    "Hessian_at_origin": [
+      "-112/27",
+      "56/27",
+      "56/27"
+    ],
+    "boundary_data": "Four small inner spheres have negative outward normal derivative, one sufficiently large outer sphere has positive derivative.",
+    "limitation": "Four poles and boundary data are chosen inputs, not a derivation of generation number. No complete7D ALE metric is constructed."
+  },
+  "relative_global_model": {
+    "gauge_locus": "L(4,1) minus5 disjoint balls; pi1 remainsC4",
+    "effective_Green_function": "sum_a r_a sum_(k=0)^3 G_S3(dist(x,J^k p_a)); G_S3(chi)=(pi-chi)cot(chi)/(4pi^2)",
+    "G_S3_Laplacian_away": "1/(2pi^2); the constant cancels because sum residues=0",
+    "residues": [
+      -1,
+      -1,
+      -1,
+      -1,
+      4
+    ],
+    "cover_pole_count": 20,
+    "relative_chain_model": "Mapping cone of boundaryS2 inclusions in the punctured lens CW complex: d1=t-1, d2=(1+t+t^2+t^3,0,...), boundary columns e_j and(t-1)e0-sum e_j.",
+    "relative_Betti_by_character": {
+      "0": [
+        0,
+        3,
+        0,
+        0
+      ],
+      "1": [
+        0,
+        4,
+        1,
+        0
+      ],
+      "2": [
+        0,
+        4,
+        1,
+        0
+      ],
+      "3": [
+        0,
+        4,
+        1,
+        0
+      ]
+    },
+    "conjugate_relative_Betti_by_character": {
+      "0": [
+        0,
+        0,
+        3,
+        0
+      ],
+      "1": [
+        0,
+        1,
+        4,
+        0
+      ],
+      "2": [
+        0,
+        1,
+        4,
+        0
+      ],
+      "3": [
+        0,
+        1,
+        4,
+        0
+      ]
+    },
+    "chosen_SU5_W": "diag(-1,-1,-1,i,i)",
+    "family_spectrum": {
+      "Q": {
+        "Q6Y": 1,
+        "dimension": 6,
+        "C4_character": 3,
+        "chiral_copies": 4,
+        "conjugate_chiral_copies": 1,
+        "net_copies": 3
+      },
+      "dc": {
+        "Q6Y": 2,
+        "dimension": 3,
+        "C4_character": 2,
+        "chiral_copies": 4,
+        "conjugate_chiral_copies": 1,
+        "net_copies": 3
+      },
+      "uc": {
+        "Q6Y": -4,
+        "dimension": 3,
+        "C4_character": 0,
+        "chiral_copies": 3,
+        "conjugate_chiral_copies": 0,
+        "net_copies": 3
+      },
+      "L": {
+        "Q6Y": -3,
+        "dimension": 2,
+        "C4_character": 3,
+        "chiral_copies": 4,
+        "conjugate_chiral_copies": 1,
+        "net_copies": 3
+      },
+      "ec": {
+        "Q6Y": 6,
+        "dimension": 1,
+        "C4_character": 2,
+        "chiral_copies": 4,
+        "conjugate_chiral_copies": 1,
+        "net_copies": 3
+      },
+      "nc": {
+        "Q6Y": 0,
+        "dimension": 1,
+        "C4_character": 0,
+        "chiral_copies": 3,
+        "conjugate_chiral_copies": 0,
+        "net_copies": 3
+      }
+    },
+    "total_complex_gauge_components": {
+      "chiral": 60,
+      "conjugate_chiral": 12,
+      "net": 48
+    },
+    "SU5_and_Psi_C4_scan": [
+      {
+        "color": 0,
+        "weak": 2,
+        "Psi_C4_phase": 0,
+        "invariant_family_dimension": 8,
+        "chiral_components": 56,
+        "conjugate_chiral_components": 8,
+        "neutral_singlet_conjugate_copies": 0
+      },
+      {
+        "color": 0,
+        "weak": 2,
+        "Psi_C4_phase": 1,
+        "invariant_family_dimension": 0,
+        "chiral_components": 64,
+        "conjugate_chiral_components": 16,
+        "neutral_singlet_conjugate_copies": 1
+      },
+      {
+        "color": 0,
+        "weak": 2,
+        "Psi_C4_phase": 2,
+        "invariant_family_dimension": 8,
+        "chiral_components": 56,
+        "conjugate_chiral_components": 8,
+        "neutral_singlet_conjugate_copies": 1
+      },
+      {
+        "color": 0,
+        "weak": 2,
+        "Psi_C4_phase": 3,
+        "invariant_family_dimension": 0,
+        "chiral_components": 64,
+        "conjugate_chiral_components": 16,
+        "neutral_singlet_conjugate_copies": 1
+      },
+      {
+        "color": 2,
+        "weak": 1,
+        "Psi_C4_phase": 0,
+        "invariant_family_dimension": 4,
+        "chiral_components": 60,
+        "conjugate_chiral_components": 12,
+        "neutral_singlet_conjugate_copies": 0
+      },
+      {
+        "color": 2,
+        "weak": 1,
+        "Psi_C4_phase": 1,
+        "invariant_family_dimension": 8,
+        "chiral_components": 56,
+        "conjugate_chiral_components": 8,
+        "neutral_singlet_conjugate_copies": 1
+      },
+      {
+        "color": 2,
+        "weak": 1,
+        "Psi_C4_phase": 2,
+        "invariant_family_dimension": 4,
+        "chiral_components": 60,
+        "conjugate_chiral_components": 12,
+        "neutral_singlet_conjugate_copies": 1
+      },
+      {
+        "color": 2,
+        "weak": 1,
+        "Psi_C4_phase": 3,
+        "invariant_family_dimension": 0,
+        "chiral_components": 64,
+        "conjugate_chiral_components": 16,
+        "neutral_singlet_conjugate_copies": 1
+      },
+      {
+        "color": 2,
+        "weak": 3,
+        "Psi_C4_phase": 0,
+        "invariant_family_dimension": 4,
+        "chiral_components": 60,
+        "conjugate_chiral_components": 12,
+        "neutral_singlet_conjugate_copies": 0
+      },
+      {
+        "color": 2,
+        "weak": 3,
+        "Psi_C4_phase": 1,
+        "invariant_family_dimension": 0,
+        "chiral_components": 64,
+        "conjugate_chiral_components": 16,
+        "neutral_singlet_conjugate_copies": 1
+      },
+      {
+        "color": 2,
+        "weak": 3,
+        "Psi_C4_phase": 2,
+        "invariant_family_dimension": 4,
+        "chiral_components": 60,
+        "conjugate_chiral_components": 12,
+        "neutral_singlet_conjugate_copies": 1
+      },
+      {
+        "color": 2,
+        "weak": 3,
+        "Psi_C4_phase": 3,
+        "invariant_family_dimension": 8,
+        "chiral_components": 56,
+        "conjugate_chiral_components": 8,
+        "neutral_singlet_conjugate_copies": 1
+      }
+    ],
+    "mirror_floor": "For this5-boundary model b2(V)=dimV-dimV^holonomy. No conjugate modes requires holonomy trivial on the family16. All12 tested SU5/Psi C4 choices retain at least8 conjugate gauge components.",
+    "elementary_SM_singlet_Higgs_control": "With Psi phase0 only3 chiral nc singlets of(chi,Psi)=(-5,-3) are present: zero-FI D_Psi is -3 sum|N_i|^2 and has no nonzero D-flat solution. OtherPsi phases add one conjugate singlet pair, but the charges span onlyrank1. Even an algebraic paired VEV leaves3chi-5Psi unbroken. Additional independent singlets/coupled dynamics are needed; no classical zero-mode rank-breaking repair is provided.",
+    "conditional_index": "3 complete SM family representations in the net index; extra vectorlike Q,dc,L,ec pairs remain. Source topology and flat holonomy are supplied, not dynamically selected.",
+    "no_complete_geometry": "This is a source-free-away-from-poles PW Higgs background on an explicit punctured3-metric plus a local-system cohomology calculation, not a constructed G2 metric or the previous weak-G2 Freund-Rubin orbifold with new matter attached."
+  },
+  "extra_U1_Psi_anomalies_for_net_three16": {
+    "gravity": -144,
+    "cubic": -1296,
+    "SU3_squared": -18,
+    "SU2_squared": -18,
+    "Y_squared": -30,
+    "Psi_squared_Y": 0
+  },
+  "extra_U1_scope": "If U1_Psi remains a4D gauge field, the three charged16s alone are anomalous. Additional states, inflow or a derived Green-Schwarz/Stueckelberg completion is required; none is supplied.",
+  "scope": "Specified PW gauge-theory operator and boundary/local-system controls tied to native E6. No selected defect pattern, complete compactification, three-generation prediction, observed physics or solvedTOE. Smooth closed S3/C4 has H1real0, so sources are essential for this Abelian mechanism. Torsion-free PW equations are not assumed valid unchanged on weak-G2/AdS backgrounds."
+}
