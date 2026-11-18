@@ -1,0 +1,348 @@
+{
+  "Bell_fidelity_from_ideal_uniform_fourMUB": "F=(4*mean_match-1)/3",
+  "exact_sequential_alternative_first_crossing_500": {
+    "crossing_by_horizon": {
+      "25": {
+        "noncrossing_mass": 0.9710251482683079,
+        "probability_crossed_at_any_time": 0.028974851731690777
+      },
+      "50": {
+        "noncrossing_mass": 0.7349118038284755,
+        "probability_crossed_at_any_time": 0.2650881961715219
+      },
+      "75": {
+        "noncrossing_mass": 0.4782685727413994,
+        "probability_crossed_at_any_time": 0.5217314272585973
+      },
+      "100": {
+        "noncrossing_mass": 0.30701857761524554,
+        "probability_crossed_at_any_time": 0.6929814223847507
+      },
+      "200": {
+        "noncrossing_mass": 0.050420151037899985,
+        "probability_crossed_at_any_time": 0.9495798489620952
+      },
+      "500": {
+        "noncrossing_mass": 0.00036362992440938907,
+        "probability_crossed_at_any_time": 0.9996363700755857
+      }
+    },
+    "crossing_threshold": 100.0,
+    "ever_crossed_prob": 0.9996363700755857,
+    "horizon": 500,
+    "p0_predeclared": 0.3260416666666667,
+    "p1_predeclared": 0.4849682730790225,
+    "truth_success_probability": 0.4849682730790225
+  },
+  "exact_sequential_null_first_crossing_500": {
+    "crossing_by_horizon": {
+      "25": {
+        "noncrossing_mass": 0.9997470547024576,
+        "probability_crossed_at_any_time": 0.00025294529754236675
+      },
+      "50": {
+        "noncrossing_mass": 0.9977957834298273,
+        "probability_crossed_at_any_time": 0.002204216570172678
+      },
+      "75": {
+        "noncrossing_mass": 0.9955495781014841,
+        "probability_crossed_at_any_time": 0.004450421898515703
+      },
+      "100": {
+        "noncrossing_mass": 0.9941505246869815,
+        "probability_crossed_at_any_time": 0.0058494753130183185
+      },
+      "200": {
+        "noncrossing_mass": 0.9919696425711069,
+        "probability_crossed_at_any_time": 0.008030357428893034
+      },
+      "500": {
+        "noncrossing_mass": 0.9915449861968895,
+        "probability_crossed_at_any_time": 0.008455013803110522
+      }
+    },
+    "crossing_threshold": 100.0,
+    "ever_crossed_prob": 0.008455013803110522,
+    "horizon": 500,
+    "p0_predeclared": 0.3260416666666667,
+    "p1_predeclared": 0.4849682730790225,
+    "truth_success_probability": 0.3260416666666667
+  },
+  "independent_equality_checks": [
+    {
+      "bound": 0.4925931273390664,
+      "max_basis_index": 0,
+      "saturation": 0.4925931273390665,
+      "weights": [
+        1.0,
+        0.9703725093562656,
+        0.9703725093562656,
+        0.9703725093562656
+      ]
+    },
+    {
+      "bound": 0.4925931273390664,
+      "max_basis_index": 0,
+      "saturation": 0.49259312733906657,
+      "weights": [
+        1.0,
+        0.9703725093562656,
+        0.9703725093562656,
+        0.9703725093562656
+      ]
+    },
+    {
+      "bound": 0.4925931273390664,
+      "max_basis_index": 0,
+      "saturation": 0.49259312733906624,
+      "weights": [
+        1.0,
+        0.9703725093562656,
+        0.9703725093562656,
+        0.9703725093562656
+      ]
+    },
+    {
+      "bound": 0.49416666666666664,
+      "max_basis_index": 0,
+      "saturation": 0.49416666666666675,
+      "weights": [
+        1.0,
+        0.98,
+        0.96,
+        0.99
+      ]
+    },
+    {
+      "bound": 0.49416666666666664,
+      "max_basis_index": 0,
+      "saturation": 0.4941666666666668,
+      "weights": [
+        1.0,
+        0.98,
+        0.96,
+        0.99
+      ]
+    },
+    {
+      "bound": 0.49416666666666664,
+      "max_basis_index": 0,
+      "saturation": 0.4941666666666665,
+      "weights": [
+        1.0,
+        0.98,
+        0.96,
+        0.99
+      ]
+    },
+    {
+      "bound": 0.47750000000000004,
+      "max_basis_index": 1,
+      "saturation": 0.4775000000000002,
+      "weights": [
+        0.92,
+        1.0,
+        0.93,
+        0.88
+      ]
+    },
+    {
+      "bound": 0.47750000000000004,
+      "max_basis_index": 1,
+      "saturation": 0.47749999999999987,
+      "weights": [
+        0.92,
+        1.0,
+        0.93,
+        0.88
+      ]
+    },
+    {
+      "bound": 0.47750000000000004,
+      "max_basis_index": 1,
+      "saturation": 0.47749999999999976,
+      "weights": [
+        0.92,
+        1.0,
+        0.93,
+        0.88
+      ]
+    },
+    {
+      "bound": 0.4283333333333333,
+      "max_basis_index": 3,
+      "saturation": 0.42833333333333345,
+      "weights": [
+        0.6,
+        0.83,
+        0.71,
+        1.0
+      ]
+    },
+    {
+      "bound": 0.4283333333333333,
+      "max_basis_index": 3,
+      "saturation": 0.42833333333333345,
+      "weights": [
+        0.6,
+        0.83,
+        0.71,
+        1.0
+      ]
+    },
+    {
+      "bound": 0.4283333333333333,
+      "max_basis_index": 3,
+      "saturation": 0.4283333333333334,
+      "weights": [
+        0.6,
+        0.83,
+        0.71,
+        1.0
+      ]
+    },
+    {
+      "bound": 0.075,
+      "max_basis_index": 3,
+      "saturation": 0.07500000000000002,
+      "weights": [
+        0.05,
+        0.1,
+        0.15,
+        0.2
+      ]
+    },
+    {
+      "bound": 0.075,
+      "max_basis_index": 3,
+      "saturation": 0.07500000000000002,
+      "weights": [
+        0.05,
+        0.1,
+        0.15,
+        0.2
+      ]
+    },
+    {
+      "bound": 0.075,
+      "max_basis_index": 3,
+      "saturation": 0.07500000000000001,
+      "weights": [
+        0.05,
+        0.1,
+        0.15,
+        0.2
+      ]
+    },
+    {
+      "bound": 0.5,
+      "max_basis_index": 0,
+      "saturation": 0.5000000000000001,
+      "weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bound": 0.5,
+      "max_basis_index": 0,
+      "saturation": 0.5000000000000001,
+      "weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bound": 0.5,
+      "max_basis_index": 0,
+      "saturation": 0.49999999999999983,
+      "weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "loss_unbiasing": "Under known state-independent throughput a*w_b>0, E[X_b/w_b] averaged over uniform choices = a*(1+3F)/4. Dividing by small w_b inflates variance and is INVALID if efficiencies depend on input state.",
+  "model_Bell_fidelity": 0.766653396374446,
+  "nonuniform_calibrated_examples": [
+    {
+      "common_a_calibration_halfwidth": 0.005,
+      "conservative_separable_bound": 0.3250582045869165,
+      "conservative_source_match_lower": 0.48258125244510064,
+      "each_basis_weight_calibration_halfwidth": 0.007,
+      "measurement_operator_error": 0.01,
+      "nominal_common_a": 0.62,
+      "nominal_weights": [
+        1.0,
+        0.9703725093562656,
+        0.9703725093562656,
+        0.9703725093562656
+      ],
+      "robust_positive_gap": 0.15752304785818416,
+      "setting_leak_TV": 0.005,
+      "violates_if_source_matches_model": true
+    },
+    {
+      "common_a_calibration_halfwidth": 0.005,
+      "conservative_separable_bound": 0.3260416666666667,
+      "conservative_source_match_lower": 0.4849682730790225,
+      "each_basis_weight_calibration_halfwidth": 0.007,
+      "measurement_operator_error": 0.01,
+      "nominal_common_a": 0.62,
+      "nominal_weights": [
+        1.0,
+        0.98,
+        0.96,
+        0.99
+      ],
+      "robust_positive_gap": 0.15892660641235584,
+      "setting_leak_TV": 0.005,
+      "violates_if_source_matches_model": true
+    },
+    {
+      "common_a_calibration_halfwidth": 0.005,
+      "conservative_separable_bound": 0.315625,
+      "conservative_source_match_lower": 0.45954851791591395,
+      "each_basis_weight_calibration_halfwidth": 0.007,
+      "measurement_operator_error": 0.01,
+      "nominal_common_a": 0.62,
+      "nominal_weights": [
+        0.92,
+        1.0,
+        0.93,
+        0.88
+      ],
+      "robust_positive_gap": 0.14392351791591396,
+      "setting_leak_TV": 0.005,
+      "violates_if_source_matches_model": true
+    },
+    {
+      "common_a_calibration_halfwidth": 0.005,
+      "conservative_separable_bound": 0.2848958333333334,
+      "conservative_source_match_lower": 0.3844165687989197,
+      "each_basis_weight_calibration_halfwidth": 0.007,
+      "measurement_operator_error": 0.01,
+      "nominal_common_a": 0.62,
+      "nominal_weights": [
+        0.6,
+        0.83,
+        0.71,
+        1.0
+      ],
+      "robust_positive_gap": 0.09952073546558632,
+      "setting_leak_TV": 0.005,
+      "violates_if_source_matches_model": true
+    }
+  ],
+  "proof": "Traceless qutrit Bloch operator has HS norm squared 2/3 for pure states; four MUB traceless subspaces are pairwise Hilbert-Schmidt orthogonal and span 8 dimensions. Weighted Cauchy bounds weighted matched correlations by wmax*2/3; identity contributes sum(w)/3.",
+  "random_products_checked": 1500,
+  "scope": "Ideal projective four-MUB and the stated operator-level erasure model only. Experimental qutrit process tomography, leakage bounds, per-setting drift and realistic time-bin routing remain absent.",
+  "status": "PASS_QUTRIT_FOUR_ARBITRARY_MUB_EFFICIENCIES_TIGHT_SEPARABLE_AND_EPROCESS",
+  "tight_bound": "For w_b>=0, uniformly chosen four MUBs and trusted state-independent erasure a*w_b, p_sep<=a*(sum_b w_b+2*max_b w_b)/12, with equality for basis eigenstate product in a max-weight basis."
+}

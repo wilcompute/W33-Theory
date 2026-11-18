@@ -1,0 +1,55 @@
+{
+  "B_eigenvalue_constraints": {
+    "Nc": "-6/5",
+    "S": "-4/5",
+    "unique_chi": "1/5",
+    "unique_psi": "-1/5"
+  },
+  "EFT_dimension": "Zi barHi B Hi is superpotential quartic and requires 1/Lambda; coefficients are gauge invariant but do NOT arise automatically from renormalizable E6 theory.",
+  "FD_flat_exists": "Hi along two distinct SU5 singlets in 27; barHi dual aligned; |Hi|=|barHi|; all Lagrange singlets zero; adjoints Hermitian commuting. All F=0 and D=0, provided prescribed v_A,v_B,b_N,b_S are compatible as in benchmark.",
+  "Lie_algebra_dims": {
+    "E6": 78,
+    "plus_SU5_hypercharge_adjoint": 12,
+    "two_27bar27_SM_singlet_pairs": 24
+  },
+  "cubic_derivation_27x27_ranks": [
+    651,
+    705,
+    717
+  ],
+  "gauge_mass2_determinant_per_g4v4": 0.046296296296296294,
+  "gauge_mass2_eigenvalues_per_g2v2_canonical_27_trace": [
+    0.16666666666666666,
+    0.2777777777777778
+  ],
+  "gauge_mass2_trace_per_g2v2": 0.4444444444444444,
+  "global_discrete_WARNING": "Z20 is the stabilizer in the product U1_psi x U1_chi integer-charge covering torus ONLY; cannot call it the physical leftover discrete gauge symmetry without the full E6/SU5 common-center quotient and Higgs embedding.",
+  "holomorphic_E6_invariant_EFT_potential": "W=SA(Tr27 A^2-vA^2)+SB(Tr27 B^2-vB^2)+sum_i[Si(barHi Hi-vi^2)+(Zi/Lambda)barHi(B-bi)Hi]+W_messenger, i=Nc,S",
+  "integer_charge_pin_potential_Hessian_per_lambda": "Matrix([[34, -10], [-10, 50]])",
+  "integer_pin_Hessian_eigenvalues_per_lambda": [
+    "42-2*sqrt(41)",
+    "42+2*sqrt(41)"
+  ],
+  "naive_covering_torus_Smith_orders": [
+    1,
+    20
+  ],
+  "remaining_gap": "Need derive origin of dimension-5 superpotential operators, stabilize non-Cartan orientations and full 78+Higgs messenger scalar mass matrix, check extra gauge boson masses, discrete anomalies, proton decay and full global vacuum.",
+  "root_level_unbroken_before_singlets": "At least rank-six Cartan remains after only A/B commuting adjoint VEVs. At generic SU5-preserving B plus SU5 3+2 A, unbroken Lie algebra SM+u1_psi+u1_chi is 14-dimensional, not the 12-dimensional SM.",
+  "single_singlet_leftover_u1_direction": [
+    5,
+    1
+  ],
+  "singlet_charge_det": 20,
+  "singlet_charge_matrix_integer_Nc_S": [
+    [
+      1,
+      -5
+    ],
+    [
+      4,
+      0
+    ]
+  ],
+  "status": "PASS_EXACT_E6_RANK_REDUCTION_VIA_TWO_27_SINGLET_PAIRS_AND_GAUGE_INVARIANT_B_PINNING"
+}

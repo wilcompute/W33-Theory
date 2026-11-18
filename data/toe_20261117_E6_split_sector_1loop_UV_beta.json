@@ -1,0 +1,97 @@
+{
+  "N1_SUSY_one_loop_beta_b": 33,
+  "UV_example_alpha_at_messenger_scale": 0.04,
+  "benchmarks": [
+    {
+      "alpha_at_planck_one_loop": null,
+      "inverse_alpha_at_planck": -3.8609758009265462,
+      "ln_scale_span": 5.495116942522644,
+      "messenger_common_threshold_GeV": 1e+16,
+      "note": "All multiplets assumed simultaneously active above M, matching alpha=1/25 at M. Strong-coupling values not reliable at one loop.",
+      "one_loop_landau_pole_below_planck": true,
+      "pole_over_messenger_scale": 116.7446264161287,
+      "reduced_planck_GeV": 2.435e+18
+    },
+    {
+      "alpha_at_planck_one_loop": null,
+      "inverse_alpha_at_planck": -0.22048839840779522,
+      "ln_scale_span": 4.801969761962699,
+      "messenger_common_threshold_GeV": 2e+16,
+      "note": "All multiplets assumed simultaneously active above M, matching alpha=1/25 at M. Strong-coupling values not reliable at one loop.",
+      "one_loop_landau_pole_below_planck": true,
+      "pole_over_messenger_scale": 116.7446264161287,
+      "reduced_planck_GeV": 2.435e+18
+    },
+    {
+      "alpha_at_planck_one_loop": 0.4844242138997068,
+      "inverse_alpha_at_planck": 2.064306389537819,
+      "ln_scale_span": 4.36694585161299,
+      "messenger_common_threshold_GeV": 3.09e+16,
+      "note": "All multiplets assumed simultaneously active above M, matching alpha=1/25 at M. Strong-coupling values not reliable at one loop.",
+      "one_loop_landau_pole_below_planck": false,
+      "pole_over_messenger_scale": 116.7446264161287,
+      "reduced_planck_GeV": 2.435e+18
+    },
+    {
+      "alpha_at_planck_one_loop": 0.2923977459636584,
+      "inverse_alpha_at_planck": 3.419999004110956,
+      "ln_scale_span": 4.1088225814027535,
+      "messenger_common_threshold_GeV": 4e+16,
+      "note": "All multiplets assumed simultaneously active above M, matching alpha=1/25 at M. Strong-coupling values not reliable at one loop.",
+      "one_loop_landau_pole_below_planck": false,
+      "pole_over_messenger_scale": 116.7446264161287,
+      "reduced_planck_GeV": 2.435e+18
+    },
+    {
+      "alpha_at_planck_one_loop": 0.1214703512687465,
+      "inverse_alpha_at_planck": 8.232461580584012,
+      "ln_scale_span": 3.192531849528599,
+      "messenger_common_threshold_GeV": 1e+17,
+      "note": "All multiplets assumed simultaneously active above M, matching alpha=1/25 at M. Strong-coupling values not reliable at one loop.",
+      "one_loop_landau_pole_below_planck": false,
+      "pole_over_messenger_scale": 116.7446264161287,
+      "reduced_planck_GeV": 2.435e+18
+    }
+  ],
+  "interpretation": "This field inventory has POSITIVE E6 beta b=33 (IR free / UV strong). A full renormalizable E6 GUT with all sectors simultaneously light at a single threshold cannot assume perturbativity to arbitrarily high UV. The numbers are CONDITIONAL and sensitive to masses, matching and extra fields.",
+  "inventory": [
+    {
+      "Dynkin": "-3*C2(E6)",
+      "contribution": -36,
+      "field": "E6_N1_vector_multiplet",
+      "n": 1
+    },
+    {
+      "Dynkin": "T(78)=12",
+      "contribution": 24,
+      "field": "two_chiral_E6_adjoints_A_B",
+      "n": 2
+    },
+    {
+      "Dynkin": "2*T(27)=6",
+      "contribution": 24,
+      "field": "four_27_bar27_messenger_pairs",
+      "n": 4
+    },
+    {
+      "Dynkin": "2*T(27)=6",
+      "contribution": 12,
+      "field": "two_27_bar27_Higgs_singlet_breaking_pairs",
+      "n": 2
+    },
+    {
+      "Dynkin": "T(27)=3",
+      "contribution": 9,
+      "field": "three_27_family_multiplets",
+      "n": 3
+    }
+  ],
+  "landau_pole_ratio": 116.7446264161288,
+  "minimum_common_M_GeV_for_alpha_at_Planck_below": {
+    "0.1": 1.400092811123226e+17,
+    "0.3": 3.934537169387988e+16,
+    "1.0": 2.5231992202898924e+16
+  },
+  "other_obstacles": "Decoupling exotics, E6 gauge boson masses and proton decay, higher loops, spinor/Higgs Yukawas, soft-breaking spectrum, threshold matching, complete scalar Hessian, global symmetry and anomaly constraints.",
+  "status": "PASS_E6_TWO_ADJOINT_FOUR_MESSENGER_UV_BETA_PROXY"
+}

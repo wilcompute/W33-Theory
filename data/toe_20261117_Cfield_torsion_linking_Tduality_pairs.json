@@ -1,0 +1,375 @@
+{
+  "Tdual_5_minus5": {
+    "Euler": [
+      5,
+      -5
+    ],
+    "Gysin_chain_relations": {
+      "d(theta*t)": "5eta*t",
+      "d(theta*x)": "-5xy",
+      "d(theta*y)": "5xy",
+      "dtheta": "5x+-5y"
+    },
+    "Tor_H3": "Z_5",
+    "Tor_H4": "Z_5",
+    "flat_degree4_Ctorsion": "mu_g roots of unity",
+    "g": 5,
+    "linking_matrix_mod1_small_g": [
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1/5",
+        "2/5",
+        "3/5",
+        "4/5"
+      ],
+      [
+        "0",
+        "2/5",
+        "4/5",
+        "1/5",
+        "3/5"
+      ],
+      [
+        "0",
+        "3/5",
+        "1/5",
+        "4/5",
+        "2/5"
+      ],
+      [
+        "0",
+        "4/5",
+        "3/5",
+        "2/5",
+        "1/5"
+      ]
+    ],
+    "linking_orientation_chosen": "<eta*t, x*y> = 1/g mod Z",
+    "primitive_eta": [
+      1,
+      -1
+    ],
+    "unit_linking_fraction": "1/5"
+  },
+  "cochain_argument": "e=g eta with primitive eta, dtheta=e; eta*t has order g in H\u00b3(YxS1), xy has order g in H\u2074(YxS1) since d(theta*x)=qxy, d(theta*y)=pxy. Their perfect torsion linking is 1/g mod Z, up to orientation, by rational Bockstein lift theta*t/g.",
+  "integer_signed_triples_checked": 1200,
+  "original_e6_example_6_6": {
+    "Euler": [
+      6,
+      6
+    ],
+    "Gysin_chain_relations": {
+      "d(theta*t)": "6eta*t",
+      "d(theta*x)": "6xy",
+      "d(theta*y)": "6xy",
+      "dtheta": "6x+6y"
+    },
+    "Tor_H3": "Z_6",
+    "Tor_H4": "Z_6",
+    "flat_degree4_Ctorsion": "mu_g roots of unity",
+    "g": 6,
+    "linking_matrix_mod1_small_g": [
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1/6",
+        "1/3",
+        "1/2",
+        "2/3",
+        "5/6"
+      ],
+      [
+        "0",
+        "1/3",
+        "2/3",
+        "0",
+        "1/3",
+        "2/3"
+      ],
+      [
+        "0",
+        "1/2",
+        "0",
+        "1/2",
+        "0",
+        "1/2"
+      ],
+      [
+        "0",
+        "2/3",
+        "1/3",
+        "0",
+        "2/3",
+        "1/3"
+      ],
+      [
+        "0",
+        "5/6",
+        "2/3",
+        "1/2",
+        "1/3",
+        "1/6"
+      ]
+    ],
+    "linking_orientation_chosen": "<eta*t, x*y> = 1/g mod Z",
+    "primitive_eta": [
+      1,
+      1
+    ],
+    "unit_linking_fraction": "1/6"
+  },
+  "physical_warning": "A linking form on torsion cohomology of different backgrounds is NOT a canonical map of quantum Page charges. A type-II T-duality exchanges NS flux and circle topology; an M-theory/IIB C-field differential-cohomology duality, kinetic couplings and brane endpoint data remain unconstructed.",
+  "samples": [
+    {
+      "original": {
+        "Euler": [
+          -3,
+          3
+        ],
+        "Gysin_chain_relations": {
+          "d(theta*t)": "3eta*t",
+          "d(theta*x)": "3xy",
+          "d(theta*y)": "-3xy",
+          "dtheta": "-3x+3y"
+        },
+        "Tor_H3": "Z_3",
+        "Tor_H4": "Z_3",
+        "flat_degree4_Ctorsion": "mu_g roots of unity",
+        "g": 3,
+        "linking_matrix_mod1_small_g": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1/3",
+            "2/3"
+          ],
+          [
+            "0",
+            "2/3",
+            "1/3"
+          ]
+        ],
+        "linking_orientation_chosen": "<eta*t, x*y> = 1/g mod Z",
+        "primitive_eta": [
+          -1,
+          1
+        ],
+        "unit_linking_fraction": "1/3"
+      },
+      "original_NS_k": -2,
+      "typeII_Tdual": {
+        "Euler": [
+          2,
+          2
+        ],
+        "Gysin_chain_relations": {
+          "d(theta*t)": "2eta*t",
+          "d(theta*x)": "2xy",
+          "d(theta*y)": "2xy",
+          "dtheta": "2x+2y"
+        },
+        "Tor_H3": "Z_2",
+        "Tor_H4": "Z_2",
+        "flat_degree4_Ctorsion": "mu_g roots of unity",
+        "g": 2,
+        "linking_matrix_mod1_small_g": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1/2"
+          ]
+        ],
+        "linking_orientation_chosen": "<eta*t, x*y> = 1/g mod Z",
+        "primitive_eta": [
+          1,
+          1
+        ],
+        "unit_linking_fraction": "1/2"
+      }
+    },
+    {
+      "original": {
+        "Euler": [
+          1,
+          2
+        ],
+        "Gysin_chain_relations": {
+          "d(theta*t)": "1eta*t",
+          "d(theta*x)": "2xy",
+          "d(theta*y)": "1xy",
+          "dtheta": "1x+2y"
+        },
+        "Tor_H3": "0",
+        "Tor_H4": "0",
+        "flat_degree4_Ctorsion": "none",
+        "g": 1,
+        "linking_matrix_mod1_small_g": [
+          [
+            "0"
+          ]
+        ],
+        "linking_orientation_chosen": "<eta*t, x*y> = 1/g mod Z",
+        "primitive_eta": [
+          1,
+          2
+        ],
+        "unit_linking_fraction": "zero"
+      },
+      "original_NS_k": 1,
+      "typeII_Tdual": {
+        "Euler": [
+          1,
+          -2
+        ],
+        "Gysin_chain_relations": {
+          "d(theta*t)": "1eta*t",
+          "d(theta*x)": "-2xy",
+          "d(theta*y)": "1xy",
+          "dtheta": "1x+-2y"
+        },
+        "Tor_H3": "0",
+        "Tor_H4": "0",
+        "flat_degree4_Ctorsion": "none",
+        "g": 1,
+        "linking_matrix_mod1_small_g": [
+          [
+            "0"
+          ]
+        ],
+        "linking_orientation_chosen": "<eta*t, x*y> = 1/g mod Z",
+        "primitive_eta": [
+          1,
+          -2
+        ],
+        "unit_linking_fraction": "zero"
+      }
+    },
+    {
+      "original": {
+        "Euler": [
+          3,
+          3
+        ],
+        "Gysin_chain_relations": {
+          "d(theta*t)": "3eta*t",
+          "d(theta*x)": "3xy",
+          "d(theta*y)": "3xy",
+          "dtheta": "3x+3y"
+        },
+        "Tor_H3": "Z_3",
+        "Tor_H4": "Z_3",
+        "flat_degree4_Ctorsion": "mu_g roots of unity",
+        "g": 3,
+        "linking_matrix_mod1_small_g": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1/3",
+            "2/3"
+          ],
+          [
+            "0",
+            "2/3",
+            "1/3"
+          ]
+        ],
+        "linking_orientation_chosen": "<eta*t, x*y> = 1/g mod Z",
+        "primitive_eta": [
+          1,
+          1
+        ],
+        "unit_linking_fraction": "1/3"
+      },
+      "original_NS_k": 5,
+      "typeII_Tdual": {
+        "Euler": [
+          5,
+          -5
+        ],
+        "Gysin_chain_relations": {
+          "d(theta*t)": "5eta*t",
+          "d(theta*x)": "-5xy",
+          "d(theta*y)": "5xy",
+          "dtheta": "5x+-5y"
+        },
+        "Tor_H3": "Z_5",
+        "Tor_H4": "Z_5",
+        "flat_degree4_Ctorsion": "mu_g roots of unity",
+        "g": 5,
+        "linking_matrix_mod1_small_g": [
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1/5",
+            "2/5",
+            "3/5",
+            "4/5"
+          ],
+          [
+            "0",
+            "2/5",
+            "4/5",
+            "1/5",
+            "3/5"
+          ],
+          [
+            "0",
+            "3/5",
+            "1/5",
+            "4/5",
+            "2/5"
+          ],
+          [
+            "0",
+            "4/5",
+            "3/5",
+            "2/5",
+            "1/5"
+          ]
+        ],
+        "linking_orientation_chosen": "<eta*t, x*y> = 1/g mod Z",
+        "primitive_eta": [
+          1,
+          -1
+        ],
+        "unit_linking_fraction": "1/5"
+      }
+    }
+  ],
+  "sources": [
+    "https://arxiv.org/abs/hep-th/0306062",
+    "https://arxiv.org/abs/hep-th/9609122"
+  ],
+  "status": "PASS_INTEGRAL_TORSION_CFIELD_LINKING_AND_CIRCLE_TDUALITY_SHADOW"
+}

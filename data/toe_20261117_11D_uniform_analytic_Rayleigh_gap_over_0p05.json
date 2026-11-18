@@ -1,0 +1,32 @@
+{
+  "analytic_certificate": {
+    "K_normalized_threshold_eigenvector": [
+      "1",
+      "(d - 9)/(d + 9)",
+      "4*d/(d + 9)",
+      "-sqrt(3*d + 3)",
+      "sqrt(3 - 3*d)*(9 - d)/(d + 9)"
+    ],
+    "certified_decimal_BF_gap_lower": 0.05254373018549747,
+    "certified_rational_BF_gap_lower": "973701/18531250",
+    "claimed_strict_simple_BF_gap_lower": "1/20 = 0.05",
+    "exact_Rayleigh_negative_gap_factorization": "(-x + 2*sqrt(3))*(d**2*(220*x**3 - 200*sqrt(3)*x**2 + 840*x - 240*sqrt(3)) + (1 - d**2)*(189*x - 54*sqrt(3))*(x**2 + 3))/(-207*d**2 + x**2*(31*d**2 + 189) + 567)",
+    "proof": "On compact harmonic band x in [sqrt(L/4),sqrt(L)], t=d\u00b2 in [0,1], A,C positive and bounded below. Numerator is (2sqrt3-x)[(1-t)A+tC], denominator bounded above. Min-max on positive-norm physical K proves lowest eigen below -4.05.",
+    "rational_interval_brackets": {
+      "2sqrt3_minus_x": ">0.162",
+      "A": ">6166773/5000",
+      "C": ">24042/25",
+      "D": "<2965",
+      "L": "10.8 < L=2*pi*sqrt3 <10.9",
+      "x": "1.64<sqrt(lambda)<3.302"
+    }
+  },
+  "numerical_crosschecks": {
+    "independent_samples": 513,
+    "largest_exact_lowest_eigen_gap_minus_Rayleigh": 1.0208682303500136,
+    "scope": "Numerical regression only; analytic rational inequalities are the real mathematical certificate.",
+    "smallest_sample_Rayleigh_gap": 0.38888618853353424
+  },
+  "physical_scope": "Gauge-constrained physical five scalar sphere-singlet model, positive 5x5 kinetic pencil and fixed-area flat torus, classical two-derivative geometry only. No full 11D corrected action or stable nonlinear branch.",
+  "status": "PASS_EXACT_GLOBAL_11D_TWO_DERIVATIVE_BF_DEFICIT_GT_0P05"
+}

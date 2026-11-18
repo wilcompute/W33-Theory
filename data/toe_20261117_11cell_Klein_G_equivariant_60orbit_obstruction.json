@@ -1,0 +1,51 @@
+{
+  "A5_character_inner_product_self": 1,
+  "A5_stabilizer_char_class_sizes": [
+    1,
+    15,
+    20,
+    12,
+    12
+  ],
+  "A5_trivial_multiplicity": 0,
+  "C11_sylow_subgroups": 12,
+  "G_flag_regular_action": true,
+  "G_orbit_11cell_vertices": 11,
+  "G_orbit_Klein_projective_points": 60,
+  "G_order": 660,
+  "Klein_C11_fixed_projective_lines_per_sylow": 5,
+  "distinct_fixed_lines_on_Klein_cubic": 60,
+  "distinct_sylow_pairs_generate_full_G": 66,
+  "explicit_PSL2_F11_generators_mod11": {
+    "S_inversion": [
+      0,
+      1,
+      10,
+      0
+    ],
+    "T_upper": [
+      1,
+      1,
+      0,
+      1
+    ]
+  },
+  "literature": [
+    "https://arxiv.org/abs/math/0606660",
+    "https://webdoc.sub.gwdg.de/ebook/serien/e/mpi_mathematik/2009/2009_76.pdf",
+    "https://arxiv.org/abs/1001.4853"
+  ],
+  "noncanonical_flag_coset_dictionary": "Identify 11-cell 660 flags with G by a base flag; fix one 11-subgroup C11 and one of its cubic eigenlines x0. Map flag g to rho(g)x0 in X. Fibers exactly right cosets g*C11, each size11; image is one G-orbit of 60 distinct cubic points. Requires base choices, so not a canonical incidence embedding.",
+  "normalizer_order": 55,
+  "physical_limitation": "The 60-point orbit and impossibility of a direct 11-vertex embedding are representation-theoretic. They do not establish a metric, chiral spectrum, gauge fields, cubic incidence maps, or the TOE.",
+  "restricted_five_dimensional_char_values": [
+    5,
+    1,
+    -1,
+    0,
+    0
+  ],
+  "stabilizer_of_any_fixed_line": "C11 (order11), as two distinct Sylow C11 generate G while rho is irreducible",
+  "status": "PASS_11CELL_KLEIN_NO_VERTEX_EMBEDDING_BUT_CANONICAL_60_POINT_ORBIT_TYPE",
+  "vertex_equivariant_map_to_projective_Klein": "IMPOSSIBLE: G-equivariant map G/A5 -> X needs an A5-fixed line in C5, and 5D representation restricts irreducibly to A5."
+}

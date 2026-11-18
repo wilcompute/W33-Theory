@@ -1,0 +1,189 @@
+{
+  "B_background_no_longer_stationary_after_CW": true,
+  "E6_operator": "W contains S_i(barH_i H_i-v_i\u00b2)+Z_i/Lambda[barH_i B H_i -b_i barH_i H_i], i=N^c, S; with aligned 27+bar27 VEVs it produces V_F=sum_i(v_i^4/Lambda\u00b2)(q_i dot B-b_i)\u00b2.",
+  "Q_integer": [
+    [
+      1,
+      -5
+    ],
+    [
+      4,
+      0
+    ]
+  ],
+  "R_parity": "With Higgs R=0, Lagrange singlets R=2 and B R=0, operators have superpotential R=2. Constant b_i can explicitly break the separate t/B mirror parity; the s/A mirror remains intact.",
+  "benchmark_B_psi_chi": [
+    -0.2,
+    0.2
+  ],
+  "one_loop_local_minima": [
+    {
+      "B_pinned_plus_CW_energy": -0.30470816969395853,
+      "displacement_norm": 0.22966429840644836,
+      "gradient_norm_at_displaced_minimum": 6.392292859468457e-08,
+      "local_Hessian_eigenvalues": [
+        4.104429799541512,
+        6.7359280826387815
+      ],
+      "minimizer_psi_chi": [
+        -0.04094039775630902,
+        0.034332462755659446
+      ],
+      "minimum_heavy_messenger_fermion_mass": 0.7873972884653937,
+      "pin_stiffness": 0.02,
+      "remaining_SU5_shape_kappa": -6.963786335781015e-05
+    },
+    {
+      "B_pinned_plus_CW_energy": -0.27242489716445895,
+      "displacement_norm": 0.17834651017043576,
+      "gradient_norm_at_displaced_minimum": 6.492959101200248e-08,
+      "local_Hessian_eigenvalues": [
+        4.990965938262583,
+        8.11050917486828
+      ],
+      "minimizer_psi_chi": [
+        -0.07947674920545277,
+        0.06854041036163236
+      ],
+      "minimum_heavy_messenger_fermion_mass": 0.5778211989863854,
+      "pin_stiffness": 0.05,
+      "remaining_SU5_shape_kappa": -0.0002999235095413398
+    },
+    {
+      "B_pinned_plus_CW_energy": -0.24204217006276266,
+      "displacement_norm": 0.12870746832051438,
+      "gradient_norm_at_displaced_minimum": 8.965376381066283e-08,
+      "local_Hessian_eigenvalues": [
+        6.426125410096737,
+        10.410157860219426
+      ],
+      "minimizer_psi_chi": [
+        -0.11552697213017146,
+        0.10289222500757529
+      ],
+      "minimum_heavy_messenger_fermion_mass": 0.37001190283195207,
+      "pin_stiffness": 0.1,
+      "remaining_SU5_shape_kappa": -0.0007239430734164573
+    },
+    {
+      "B_pinned_plus_CW_energy": -0.21408977613207392,
+      "displacement_norm": 0.08139736605086705,
+      "gradient_norm_at_displaced_minimum": 1.2943850133919645e-07,
+      "local_Hessian_eigenvalues": [
+        9.287940076978625,
+        15.253178140474011
+      ],
+      "minimizer_psi_chi": [
+        -0.14837021768806605,
+        0.13707228926425852
+      ],
+      "minimum_heavy_messenger_fermion_mass": 0.1662683359906414,
+      "pin_stiffness": 0.2,
+      "remaining_SU5_shape_kappa": -0.001188982883663457
+    },
+    {
+      "B_pinned_plus_CW_energy": -0.18918929622366906,
+      "displacement_norm": 0.0379733681873815,
+      "gradient_norm_at_displaced_minimum": 2.5084355271299634e-07,
+      "local_Hessian_eigenvalues": [
+        17.96229006933829,
+        31.12778377684251
+      ],
+      "minimizer_psi_chi": [
+        -0.17685387764951477,
+        0.16989628408932206
+      ],
+      "minimum_heavy_messenger_fermion_mass": 0.026335298096125115,
+      "pin_stiffness": 0.5,
+      "remaining_SU5_shape_kappa": -0.0008208896254769068
+    },
+    {
+      "B_pinned_plus_CW_energy": -0.1789569047337699,
+      "displacement_norm": 0.020032055280770462,
+      "gradient_norm_at_displaced_minimum": 4.88298817806562e-07,
+      "local_Hessian_eigenvalues": [
+        32.52765326548426,
+        58.5081307845244
+      ],
+      "minimizer_psi_chi": [
+        -0.18806831537594274,
+        0.18390906650303102
+      ],
+      "minimum_heavy_messenger_fermion_mass": 0.10761364789109784,
+      "pin_stiffness": 1.0,
+      "remaining_SU5_shape_kappa": 0.00015566524703233744
+    },
+    {
+      "B_pinned_plus_CW_energy": -0.17339197376571913,
+      "displacement_norm": 0.010299700777546186,
+      "gradient_norm_at_displaced_minimum": 9.617342565758892e-07,
+      "local_Hessian_eigenvalues": [
+        61.7068069905415,
+        113.31272302404471
+      ],
+      "minimizer_psi_chi": [
+        -0.19395999090944596,
+        0.1916572111201943
+      ],
+      "minimum_heavy_messenger_fermion_mass": 0.1522460465104174,
+      "pin_stiffness": 2.0,
+      "remaining_SU5_shape_kappa": 0.0010943918400798357
+    },
+    {
+      "B_pinned_plus_CW_energy": -0.16989313218553248,
+      "displacement_norm": 0.0041914004274821,
+      "gradient_norm_at_displaced_minimum": 2.2757475193699456e-06,
+      "local_Hessian_eigenvalues": [
+        149.27993494380598,
+        277.72893989531826
+      ],
+      "minimizer_psi_chi": [
+        -0.197569148150797,
+        0.19658550196504326
+      ],
+      "minimum_heavy_messenger_fermion_mass": 0.18049665797601344,
+      "pin_stiffness": 5.0,
+      "remaining_SU5_shape_kappa": 0.0018876125764690811
+    },
+    {
+      "B_pinned_plus_CW_energy": -0.1686986235352922,
+      "displacement_norm": 0.0021079360235553256,
+      "gradient_norm_at_displaced_minimum": 4.552281921202286e-06,
+      "local_Hessian_eigenvalues": [
+        295.2461146714983,
+        551.758805280101
+      ],
+      "minimizer_psi_chi": [
+        -0.19878240019891166,
+        0.19827928938987643
+      ],
+      "minimum_heavy_messenger_fermion_mass": 0.1901788471482937,
+      "pin_stiffness": 10.0,
+      "remaining_SU5_shape_kappa": 0.0022009259502079746
+    }
+  ],
+  "pin_mass_floor_threshold": {
+    "kappa_at_mass_floor": 0.001038491394188787,
+    "mass_floor": 0.15000000102528976,
+    "not_universal": "Threshold depends on chosen F-term coefficient, messenger mass M, soft Delta, renormalization scheme, and the stipulated 0.15M cutoff; it is not an observable or UV theorem.",
+    "one_loop_psi_chi": [
+      -0.19366883550253938,
+      0.19126623310455007
+    ],
+    "pin_stiffness_at_benchmark_mass_floor_0p15": 1.90698666498065
+  },
+  "pinned_tree_Hessian_eigenvalues_at_stiff_0p1": [
+    2.9193751525134304,
+    5.4806248474865695
+  ],
+  "scope": "Existence of an E6-covariant EFT F-term angular pin and numerically stable 2D B(psi,chi) local minima with messenger loop; not a global E6 scalar, D-term, temperature or proton-stability analysis. Vacuum shift is scheme-dependent unless full counterterm matching is specified.",
+  "status": "PASS_E6_B_GAUGE_INVARIANT_FTERM_ALIGNMENT_CW_LOCAL_MINIMA",
+  "target_B_eigenvalues": [
+    -1.2,
+    -0.8
+  ],
+  "unpinned_CW_gradient_at_benchmark": [
+    -0.5881180509294,
+    0.9891906014093367
+  ]
+}

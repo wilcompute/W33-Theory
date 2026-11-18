@@ -1,0 +1,7319 @@
+{
+  "PSL2_mod11_order": 660,
+  "eleven_face_cosets": 11,
+  "explicit_A5_generator_order2": [
+    0,
+    1,
+    10,
+    0
+  ],
+  "explicit_A5_generator_order3": [
+    0,
+    2,
+    5,
+    1
+  ],
+  "explicit_flag_table": [
+    {
+      "Klein_60point_orbit_id": 0,
+      "PSL2_11_matrix": [
+        0,
+        1,
+        10,
+        0
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 0,
+      "PSL2_11_matrix": [
+        0,
+        1,
+        10,
+        1
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 0,
+      "PSL2_11_matrix": [
+        0,
+        1,
+        10,
+        2
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 0,
+      "PSL2_11_matrix": [
+        0,
+        1,
+        10,
+        3
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 0,
+      "PSL2_11_matrix": [
+        0,
+        1,
+        10,
+        4
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 0,
+      "PSL2_11_matrix": [
+        0,
+        1,
+        10,
+        5
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 0,
+      "PSL2_11_matrix": [
+        0,
+        1,
+        10,
+        6
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 0,
+      "PSL2_11_matrix": [
+        0,
+        1,
+        10,
+        7
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 0,
+      "PSL2_11_matrix": [
+        0,
+        1,
+        10,
+        8
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 0,
+      "PSL2_11_matrix": [
+        0,
+        1,
+        10,
+        9
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 0,
+      "PSL2_11_matrix": [
+        0,
+        1,
+        10,
+        10
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 1,
+      "PSL2_11_matrix": [
+        0,
+        2,
+        5,
+        0
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 1,
+      "PSL2_11_matrix": [
+        0,
+        2,
+        5,
+        1
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 1,
+      "PSL2_11_matrix": [
+        0,
+        2,
+        5,
+        2
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 1,
+      "PSL2_11_matrix": [
+        0,
+        2,
+        5,
+        3
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 1,
+      "PSL2_11_matrix": [
+        0,
+        2,
+        5,
+        4
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 1,
+      "PSL2_11_matrix": [
+        0,
+        2,
+        5,
+        5
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 1,
+      "PSL2_11_matrix": [
+        0,
+        2,
+        5,
+        6
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 1,
+      "PSL2_11_matrix": [
+        0,
+        2,
+        5,
+        7
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 1,
+      "PSL2_11_matrix": [
+        0,
+        2,
+        5,
+        8
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 1,
+      "PSL2_11_matrix": [
+        0,
+        2,
+        5,
+        9
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 1,
+      "PSL2_11_matrix": [
+        0,
+        2,
+        5,
+        10
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 2,
+      "PSL2_11_matrix": [
+        0,
+        3,
+        7,
+        0
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 2,
+      "PSL2_11_matrix": [
+        0,
+        3,
+        7,
+        1
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 2,
+      "PSL2_11_matrix": [
+        0,
+        3,
+        7,
+        2
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 2,
+      "PSL2_11_matrix": [
+        0,
+        3,
+        7,
+        3
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 2,
+      "PSL2_11_matrix": [
+        0,
+        3,
+        7,
+        4
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 2,
+      "PSL2_11_matrix": [
+        0,
+        3,
+        7,
+        5
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 2,
+      "PSL2_11_matrix": [
+        0,
+        3,
+        7,
+        6
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 2,
+      "PSL2_11_matrix": [
+        0,
+        3,
+        7,
+        7
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 2,
+      "PSL2_11_matrix": [
+        0,
+        3,
+        7,
+        8
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 2,
+      "PSL2_11_matrix": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 2,
+      "PSL2_11_matrix": [
+        0,
+        3,
+        7,
+        10
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 3,
+      "PSL2_11_matrix": [
+        0,
+        4,
+        8,
+        0
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 3,
+      "PSL2_11_matrix": [
+        0,
+        4,
+        8,
+        1
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 3,
+      "PSL2_11_matrix": [
+        0,
+        4,
+        8,
+        2
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 3,
+      "PSL2_11_matrix": [
+        0,
+        4,
+        8,
+        3
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 3,
+      "PSL2_11_matrix": [
+        0,
+        4,
+        8,
+        4
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 3,
+      "PSL2_11_matrix": [
+        0,
+        4,
+        8,
+        5
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 3,
+      "PSL2_11_matrix": [
+        0,
+        4,
+        8,
+        6
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 3,
+      "PSL2_11_matrix": [
+        0,
+        4,
+        8,
+        7
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 3,
+      "PSL2_11_matrix": [
+        0,
+        4,
+        8,
+        8
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 3,
+      "PSL2_11_matrix": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 3,
+      "PSL2_11_matrix": [
+        0,
+        4,
+        8,
+        10
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 4,
+      "PSL2_11_matrix": [
+        0,
+        5,
+        2,
+        0
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 4,
+      "PSL2_11_matrix": [
+        0,
+        5,
+        2,
+        1
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 4,
+      "PSL2_11_matrix": [
+        0,
+        5,
+        2,
+        2
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 4,
+      "PSL2_11_matrix": [
+        0,
+        5,
+        2,
+        3
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 4,
+      "PSL2_11_matrix": [
+        0,
+        5,
+        2,
+        4
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 4,
+      "PSL2_11_matrix": [
+        0,
+        5,
+        2,
+        5
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 4,
+      "PSL2_11_matrix": [
+        0,
+        5,
+        2,
+        6
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 4,
+      "PSL2_11_matrix": [
+        0,
+        5,
+        2,
+        7
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 4,
+      "PSL2_11_matrix": [
+        0,
+        5,
+        2,
+        8
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 4,
+      "PSL2_11_matrix": [
+        0,
+        5,
+        2,
+        9
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 4,
+      "PSL2_11_matrix": [
+        0,
+        5,
+        2,
+        10
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 5,
+      "PSL2_11_matrix": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 6,
+      "PSL2_11_matrix": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 7,
+      "PSL2_11_matrix": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 8,
+      "PSL2_11_matrix": [
+        1,
+        0,
+        3,
+        1
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 9,
+      "PSL2_11_matrix": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 10,
+      "PSL2_11_matrix": [
+        1,
+        0,
+        5,
+        1
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 11,
+      "PSL2_11_matrix": [
+        1,
+        0,
+        6,
+        1
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 12,
+      "PSL2_11_matrix": [
+        1,
+        0,
+        7,
+        1
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 13,
+      "PSL2_11_matrix": [
+        1,
+        0,
+        8,
+        1
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 14,
+      "PSL2_11_matrix": [
+        1,
+        0,
+        9,
+        1
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 15,
+      "PSL2_11_matrix": [
+        1,
+        0,
+        10,
+        1
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 5,
+      "PSL2_11_matrix": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 6,
+      "PSL2_11_matrix": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 7,
+      "PSL2_11_matrix": [
+        1,
+        1,
+        2,
+        3
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 8,
+      "PSL2_11_matrix": [
+        1,
+        1,
+        3,
+        4
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 9,
+      "PSL2_11_matrix": [
+        1,
+        1,
+        4,
+        5
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 10,
+      "PSL2_11_matrix": [
+        1,
+        1,
+        5,
+        6
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 11,
+      "PSL2_11_matrix": [
+        1,
+        1,
+        6,
+        7
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 12,
+      "PSL2_11_matrix": [
+        1,
+        1,
+        7,
+        8
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 13,
+      "PSL2_11_matrix": [
+        1,
+        1,
+        8,
+        9
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 14,
+      "PSL2_11_matrix": [
+        1,
+        1,
+        9,
+        10
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 15,
+      "PSL2_11_matrix": [
+        1,
+        1,
+        10,
+        0
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 5,
+      "PSL2_11_matrix": [
+        1,
+        2,
+        0,
+        1
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 6,
+      "PSL2_11_matrix": [
+        1,
+        2,
+        1,
+        3
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 7,
+      "PSL2_11_matrix": [
+        1,
+        2,
+        2,
+        5
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 8,
+      "PSL2_11_matrix": [
+        1,
+        2,
+        3,
+        7
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 9,
+      "PSL2_11_matrix": [
+        1,
+        2,
+        4,
+        9
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 10,
+      "PSL2_11_matrix": [
+        1,
+        2,
+        5,
+        0
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 11,
+      "PSL2_11_matrix": [
+        1,
+        2,
+        6,
+        2
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 12,
+      "PSL2_11_matrix": [
+        1,
+        2,
+        7,
+        4
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 13,
+      "PSL2_11_matrix": [
+        1,
+        2,
+        8,
+        6
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 14,
+      "PSL2_11_matrix": [
+        1,
+        2,
+        9,
+        8
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 15,
+      "PSL2_11_matrix": [
+        1,
+        2,
+        10,
+        10
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 5,
+      "PSL2_11_matrix": [
+        1,
+        3,
+        0,
+        1
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 6,
+      "PSL2_11_matrix": [
+        1,
+        3,
+        1,
+        4
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 7,
+      "PSL2_11_matrix": [
+        1,
+        3,
+        2,
+        7
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 8,
+      "PSL2_11_matrix": [
+        1,
+        3,
+        3,
+        10
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 9,
+      "PSL2_11_matrix": [
+        1,
+        3,
+        4,
+        2
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 10,
+      "PSL2_11_matrix": [
+        1,
+        3,
+        5,
+        5
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 11,
+      "PSL2_11_matrix": [
+        1,
+        3,
+        6,
+        8
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 12,
+      "PSL2_11_matrix": [
+        1,
+        3,
+        7,
+        0
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 13,
+      "PSL2_11_matrix": [
+        1,
+        3,
+        8,
+        3
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 14,
+      "PSL2_11_matrix": [
+        1,
+        3,
+        9,
+        6
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 15,
+      "PSL2_11_matrix": [
+        1,
+        3,
+        10,
+        9
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 5,
+      "PSL2_11_matrix": [
+        1,
+        4,
+        0,
+        1
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 6,
+      "PSL2_11_matrix": [
+        1,
+        4,
+        1,
+        5
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 7,
+      "PSL2_11_matrix": [
+        1,
+        4,
+        2,
+        9
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 8,
+      "PSL2_11_matrix": [
+        1,
+        4,
+        3,
+        2
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 9,
+      "PSL2_11_matrix": [
+        1,
+        4,
+        4,
+        6
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 10,
+      "PSL2_11_matrix": [
+        1,
+        4,
+        5,
+        10
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 11,
+      "PSL2_11_matrix": [
+        1,
+        4,
+        6,
+        3
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 12,
+      "PSL2_11_matrix": [
+        1,
+        4,
+        7,
+        7
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 13,
+      "PSL2_11_matrix": [
+        1,
+        4,
+        8,
+        0
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 14,
+      "PSL2_11_matrix": [
+        1,
+        4,
+        9,
+        4
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 15,
+      "PSL2_11_matrix": [
+        1,
+        4,
+        10,
+        8
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 5,
+      "PSL2_11_matrix": [
+        1,
+        5,
+        0,
+        1
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 6,
+      "PSL2_11_matrix": [
+        1,
+        5,
+        1,
+        6
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 7,
+      "PSL2_11_matrix": [
+        1,
+        5,
+        2,
+        0
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 8,
+      "PSL2_11_matrix": [
+        1,
+        5,
+        3,
+        5
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 9,
+      "PSL2_11_matrix": [
+        1,
+        5,
+        4,
+        10
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 10,
+      "PSL2_11_matrix": [
+        1,
+        5,
+        5,
+        4
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 11,
+      "PSL2_11_matrix": [
+        1,
+        5,
+        6,
+        9
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 12,
+      "PSL2_11_matrix": [
+        1,
+        5,
+        7,
+        3
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 13,
+      "PSL2_11_matrix": [
+        1,
+        5,
+        8,
+        8
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 14,
+      "PSL2_11_matrix": [
+        1,
+        5,
+        9,
+        2
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 15,
+      "PSL2_11_matrix": [
+        1,
+        5,
+        10,
+        7
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 5,
+      "PSL2_11_matrix": [
+        1,
+        6,
+        0,
+        1
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 6,
+      "PSL2_11_matrix": [
+        1,
+        6,
+        1,
+        7
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 7,
+      "PSL2_11_matrix": [
+        1,
+        6,
+        2,
+        2
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 8,
+      "PSL2_11_matrix": [
+        1,
+        6,
+        3,
+        8
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 9,
+      "PSL2_11_matrix": [
+        1,
+        6,
+        4,
+        3
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 10,
+      "PSL2_11_matrix": [
+        1,
+        6,
+        5,
+        9
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 11,
+      "PSL2_11_matrix": [
+        1,
+        6,
+        6,
+        4
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 12,
+      "PSL2_11_matrix": [
+        1,
+        6,
+        7,
+        10
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 13,
+      "PSL2_11_matrix": [
+        1,
+        6,
+        8,
+        5
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 14,
+      "PSL2_11_matrix": [
+        1,
+        6,
+        9,
+        0
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 15,
+      "PSL2_11_matrix": [
+        1,
+        6,
+        10,
+        6
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 5,
+      "PSL2_11_matrix": [
+        1,
+        7,
+        0,
+        1
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 6,
+      "PSL2_11_matrix": [
+        1,
+        7,
+        1,
+        8
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 7,
+      "PSL2_11_matrix": [
+        1,
+        7,
+        2,
+        4
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 8,
+      "PSL2_11_matrix": [
+        1,
+        7,
+        3,
+        0
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 9,
+      "PSL2_11_matrix": [
+        1,
+        7,
+        4,
+        7
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 10,
+      "PSL2_11_matrix": [
+        1,
+        7,
+        5,
+        3
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 11,
+      "PSL2_11_matrix": [
+        1,
+        7,
+        6,
+        10
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 12,
+      "PSL2_11_matrix": [
+        1,
+        7,
+        7,
+        6
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 13,
+      "PSL2_11_matrix": [
+        1,
+        7,
+        8,
+        2
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 14,
+      "PSL2_11_matrix": [
+        1,
+        7,
+        9,
+        9
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 15,
+      "PSL2_11_matrix": [
+        1,
+        7,
+        10,
+        5
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 5,
+      "PSL2_11_matrix": [
+        1,
+        8,
+        0,
+        1
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 6,
+      "PSL2_11_matrix": [
+        1,
+        8,
+        1,
+        9
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 7,
+      "PSL2_11_matrix": [
+        1,
+        8,
+        2,
+        6
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 8,
+      "PSL2_11_matrix": [
+        1,
+        8,
+        3,
+        3
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 9,
+      "PSL2_11_matrix": [
+        1,
+        8,
+        4,
+        0
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 10,
+      "PSL2_11_matrix": [
+        1,
+        8,
+        5,
+        8
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 11,
+      "PSL2_11_matrix": [
+        1,
+        8,
+        6,
+        5
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 12,
+      "PSL2_11_matrix": [
+        1,
+        8,
+        7,
+        2
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 13,
+      "PSL2_11_matrix": [
+        1,
+        8,
+        8,
+        10
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 14,
+      "PSL2_11_matrix": [
+        1,
+        8,
+        9,
+        7
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 15,
+      "PSL2_11_matrix": [
+        1,
+        8,
+        10,
+        4
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 5,
+      "PSL2_11_matrix": [
+        1,
+        9,
+        0,
+        1
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 6,
+      "PSL2_11_matrix": [
+        1,
+        9,
+        1,
+        10
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 7,
+      "PSL2_11_matrix": [
+        1,
+        9,
+        2,
+        8
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 8,
+      "PSL2_11_matrix": [
+        1,
+        9,
+        3,
+        6
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 9,
+      "PSL2_11_matrix": [
+        1,
+        9,
+        4,
+        4
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 10,
+      "PSL2_11_matrix": [
+        1,
+        9,
+        5,
+        2
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 11,
+      "PSL2_11_matrix": [
+        1,
+        9,
+        6,
+        0
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 12,
+      "PSL2_11_matrix": [
+        1,
+        9,
+        7,
+        9
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 13,
+      "PSL2_11_matrix": [
+        1,
+        9,
+        8,
+        7
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 14,
+      "PSL2_11_matrix": [
+        1,
+        9,
+        9,
+        5
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 15,
+      "PSL2_11_matrix": [
+        1,
+        9,
+        10,
+        3
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 5,
+      "PSL2_11_matrix": [
+        1,
+        10,
+        0,
+        1
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 6,
+      "PSL2_11_matrix": [
+        1,
+        10,
+        1,
+        0
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 7,
+      "PSL2_11_matrix": [
+        1,
+        10,
+        2,
+        10
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 8,
+      "PSL2_11_matrix": [
+        1,
+        10,
+        3,
+        9
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 9,
+      "PSL2_11_matrix": [
+        1,
+        10,
+        4,
+        8
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 10,
+      "PSL2_11_matrix": [
+        1,
+        10,
+        5,
+        7
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 11,
+      "PSL2_11_matrix": [
+        1,
+        10,
+        6,
+        6
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 12,
+      "PSL2_11_matrix": [
+        1,
+        10,
+        7,
+        5
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 13,
+      "PSL2_11_matrix": [
+        1,
+        10,
+        8,
+        4
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 14,
+      "PSL2_11_matrix": [
+        1,
+        10,
+        9,
+        3
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 15,
+      "PSL2_11_matrix": [
+        1,
+        10,
+        10,
+        2
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 16,
+      "PSL2_11_matrix": [
+        2,
+        0,
+        0,
+        6
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 17,
+      "PSL2_11_matrix": [
+        2,
+        0,
+        1,
+        6
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 18,
+      "PSL2_11_matrix": [
+        2,
+        0,
+        2,
+        6
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 19,
+      "PSL2_11_matrix": [
+        2,
+        0,
+        3,
+        6
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 20,
+      "PSL2_11_matrix": [
+        2,
+        0,
+        4,
+        6
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 21,
+      "PSL2_11_matrix": [
+        2,
+        0,
+        5,
+        6
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 22,
+      "PSL2_11_matrix": [
+        2,
+        0,
+        6,
+        6
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 23,
+      "PSL2_11_matrix": [
+        2,
+        0,
+        7,
+        6
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 24,
+      "PSL2_11_matrix": [
+        2,
+        0,
+        8,
+        6
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 25,
+      "PSL2_11_matrix": [
+        2,
+        0,
+        9,
+        6
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 26,
+      "PSL2_11_matrix": [
+        2,
+        0,
+        10,
+        6
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 16,
+      "PSL2_11_matrix": [
+        2,
+        1,
+        0,
+        6
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 17,
+      "PSL2_11_matrix": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 18,
+      "PSL2_11_matrix": [
+        2,
+        1,
+        2,
+        7
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 19,
+      "PSL2_11_matrix": [
+        2,
+        1,
+        3,
+        2
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 20,
+      "PSL2_11_matrix": [
+        2,
+        1,
+        4,
+        8
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 21,
+      "PSL2_11_matrix": [
+        2,
+        1,
+        5,
+        3
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 22,
+      "PSL2_11_matrix": [
+        2,
+        1,
+        6,
+        9
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 23,
+      "PSL2_11_matrix": [
+        2,
+        1,
+        7,
+        4
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 24,
+      "PSL2_11_matrix": [
+        2,
+        1,
+        8,
+        10
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 25,
+      "PSL2_11_matrix": [
+        2,
+        1,
+        9,
+        5
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 26,
+      "PSL2_11_matrix": [
+        2,
+        1,
+        10,
+        0
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 16,
+      "PSL2_11_matrix": [
+        2,
+        2,
+        0,
+        6
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 17,
+      "PSL2_11_matrix": [
+        2,
+        2,
+        1,
+        7
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 18,
+      "PSL2_11_matrix": [
+        2,
+        2,
+        2,
+        8
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 19,
+      "PSL2_11_matrix": [
+        2,
+        2,
+        3,
+        9
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 20,
+      "PSL2_11_matrix": [
+        2,
+        2,
+        4,
+        10
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 21,
+      "PSL2_11_matrix": [
+        2,
+        2,
+        5,
+        0
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 22,
+      "PSL2_11_matrix": [
+        2,
+        2,
+        6,
+        1
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 23,
+      "PSL2_11_matrix": [
+        2,
+        2,
+        7,
+        2
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 24,
+      "PSL2_11_matrix": [
+        2,
+        2,
+        8,
+        3
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 25,
+      "PSL2_11_matrix": [
+        2,
+        2,
+        9,
+        4
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 26,
+      "PSL2_11_matrix": [
+        2,
+        2,
+        10,
+        5
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 16,
+      "PSL2_11_matrix": [
+        2,
+        3,
+        0,
+        6
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 17,
+      "PSL2_11_matrix": [
+        2,
+        3,
+        1,
+        2
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 18,
+      "PSL2_11_matrix": [
+        2,
+        3,
+        2,
+        9
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 19,
+      "PSL2_11_matrix": [
+        2,
+        3,
+        3,
+        5
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 20,
+      "PSL2_11_matrix": [
+        2,
+        3,
+        4,
+        1
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 21,
+      "PSL2_11_matrix": [
+        2,
+        3,
+        5,
+        8
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 22,
+      "PSL2_11_matrix": [
+        2,
+        3,
+        6,
+        4
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 23,
+      "PSL2_11_matrix": [
+        2,
+        3,
+        7,
+        0
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 24,
+      "PSL2_11_matrix": [
+        2,
+        3,
+        8,
+        7
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 25,
+      "PSL2_11_matrix": [
+        2,
+        3,
+        9,
+        3
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 26,
+      "PSL2_11_matrix": [
+        2,
+        3,
+        10,
+        10
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 16,
+      "PSL2_11_matrix": [
+        2,
+        4,
+        0,
+        6
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 17,
+      "PSL2_11_matrix": [
+        2,
+        4,
+        1,
+        8
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 18,
+      "PSL2_11_matrix": [
+        2,
+        4,
+        2,
+        10
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 19,
+      "PSL2_11_matrix": [
+        2,
+        4,
+        3,
+        1
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 20,
+      "PSL2_11_matrix": [
+        2,
+        4,
+        4,
+        3
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 21,
+      "PSL2_11_matrix": [
+        2,
+        4,
+        5,
+        5
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 22,
+      "PSL2_11_matrix": [
+        2,
+        4,
+        6,
+        7
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 23,
+      "PSL2_11_matrix": [
+        2,
+        4,
+        7,
+        9
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 24,
+      "PSL2_11_matrix": [
+        2,
+        4,
+        8,
+        0
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 25,
+      "PSL2_11_matrix": [
+        2,
+        4,
+        9,
+        2
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 26,
+      "PSL2_11_matrix": [
+        2,
+        4,
+        10,
+        4
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 16,
+      "PSL2_11_matrix": [
+        2,
+        5,
+        0,
+        6
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 17,
+      "PSL2_11_matrix": [
+        2,
+        5,
+        1,
+        3
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 18,
+      "PSL2_11_matrix": [
+        2,
+        5,
+        2,
+        0
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 19,
+      "PSL2_11_matrix": [
+        2,
+        5,
+        3,
+        8
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 20,
+      "PSL2_11_matrix": [
+        2,
+        5,
+        4,
+        5
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 21,
+      "PSL2_11_matrix": [
+        2,
+        5,
+        5,
+        2
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 22,
+      "PSL2_11_matrix": [
+        2,
+        5,
+        6,
+        10
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 23,
+      "PSL2_11_matrix": [
+        2,
+        5,
+        7,
+        7
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 24,
+      "PSL2_11_matrix": [
+        2,
+        5,
+        8,
+        4
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 25,
+      "PSL2_11_matrix": [
+        2,
+        5,
+        9,
+        1
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 26,
+      "PSL2_11_matrix": [
+        2,
+        5,
+        10,
+        9
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 16,
+      "PSL2_11_matrix": [
+        2,
+        6,
+        0,
+        6
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 17,
+      "PSL2_11_matrix": [
+        2,
+        6,
+        1,
+        9
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 18,
+      "PSL2_11_matrix": [
+        2,
+        6,
+        2,
+        1
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 19,
+      "PSL2_11_matrix": [
+        2,
+        6,
+        3,
+        4
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 20,
+      "PSL2_11_matrix": [
+        2,
+        6,
+        4,
+        7
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 21,
+      "PSL2_11_matrix": [
+        2,
+        6,
+        5,
+        10
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 22,
+      "PSL2_11_matrix": [
+        2,
+        6,
+        6,
+        2
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 23,
+      "PSL2_11_matrix": [
+        2,
+        6,
+        7,
+        5
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 24,
+      "PSL2_11_matrix": [
+        2,
+        6,
+        8,
+        8
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 25,
+      "PSL2_11_matrix": [
+        2,
+        6,
+        9,
+        0
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 26,
+      "PSL2_11_matrix": [
+        2,
+        6,
+        10,
+        3
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 16,
+      "PSL2_11_matrix": [
+        2,
+        7,
+        0,
+        6
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 17,
+      "PSL2_11_matrix": [
+        2,
+        7,
+        1,
+        4
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 18,
+      "PSL2_11_matrix": [
+        2,
+        7,
+        2,
+        2
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 19,
+      "PSL2_11_matrix": [
+        2,
+        7,
+        3,
+        0
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 20,
+      "PSL2_11_matrix": [
+        2,
+        7,
+        4,
+        9
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 21,
+      "PSL2_11_matrix": [
+        2,
+        7,
+        5,
+        7
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 22,
+      "PSL2_11_matrix": [
+        2,
+        7,
+        6,
+        5
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 23,
+      "PSL2_11_matrix": [
+        2,
+        7,
+        7,
+        3
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 24,
+      "PSL2_11_matrix": [
+        2,
+        7,
+        8,
+        1
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 25,
+      "PSL2_11_matrix": [
+        2,
+        7,
+        9,
+        10
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 26,
+      "PSL2_11_matrix": [
+        2,
+        7,
+        10,
+        8
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 16,
+      "PSL2_11_matrix": [
+        2,
+        8,
+        0,
+        6
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 17,
+      "PSL2_11_matrix": [
+        2,
+        8,
+        1,
+        10
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 18,
+      "PSL2_11_matrix": [
+        2,
+        8,
+        2,
+        3
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 19,
+      "PSL2_11_matrix": [
+        2,
+        8,
+        3,
+        7
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 20,
+      "PSL2_11_matrix": [
+        2,
+        8,
+        4,
+        0
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 21,
+      "PSL2_11_matrix": [
+        2,
+        8,
+        5,
+        4
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 22,
+      "PSL2_11_matrix": [
+        2,
+        8,
+        6,
+        8
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 23,
+      "PSL2_11_matrix": [
+        2,
+        8,
+        7,
+        1
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 24,
+      "PSL2_11_matrix": [
+        2,
+        8,
+        8,
+        5
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 25,
+      "PSL2_11_matrix": [
+        2,
+        8,
+        9,
+        9
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 26,
+      "PSL2_11_matrix": [
+        2,
+        8,
+        10,
+        2
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 16,
+      "PSL2_11_matrix": [
+        2,
+        9,
+        0,
+        6
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 17,
+      "PSL2_11_matrix": [
+        2,
+        9,
+        1,
+        5
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 18,
+      "PSL2_11_matrix": [
+        2,
+        9,
+        2,
+        4
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 19,
+      "PSL2_11_matrix": [
+        2,
+        9,
+        3,
+        3
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 20,
+      "PSL2_11_matrix": [
+        2,
+        9,
+        4,
+        2
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 21,
+      "PSL2_11_matrix": [
+        2,
+        9,
+        5,
+        1
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 22,
+      "PSL2_11_matrix": [
+        2,
+        9,
+        6,
+        0
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 23,
+      "PSL2_11_matrix": [
+        2,
+        9,
+        7,
+        10
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 24,
+      "PSL2_11_matrix": [
+        2,
+        9,
+        8,
+        9
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 25,
+      "PSL2_11_matrix": [
+        2,
+        9,
+        9,
+        8
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 26,
+      "PSL2_11_matrix": [
+        2,
+        9,
+        10,
+        7
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 16,
+      "PSL2_11_matrix": [
+        2,
+        10,
+        0,
+        6
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 17,
+      "PSL2_11_matrix": [
+        2,
+        10,
+        1,
+        0
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 18,
+      "PSL2_11_matrix": [
+        2,
+        10,
+        2,
+        5
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 19,
+      "PSL2_11_matrix": [
+        2,
+        10,
+        3,
+        10
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 20,
+      "PSL2_11_matrix": [
+        2,
+        10,
+        4,
+        4
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 21,
+      "PSL2_11_matrix": [
+        2,
+        10,
+        5,
+        9
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 22,
+      "PSL2_11_matrix": [
+        2,
+        10,
+        6,
+        3
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 23,
+      "PSL2_11_matrix": [
+        2,
+        10,
+        7,
+        8
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 24,
+      "PSL2_11_matrix": [
+        2,
+        10,
+        8,
+        2
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 25,
+      "PSL2_11_matrix": [
+        2,
+        10,
+        9,
+        7
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 26,
+      "PSL2_11_matrix": [
+        2,
+        10,
+        10,
+        1
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 27,
+      "PSL2_11_matrix": [
+        3,
+        0,
+        0,
+        4
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 28,
+      "PSL2_11_matrix": [
+        3,
+        0,
+        1,
+        4
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 29,
+      "PSL2_11_matrix": [
+        3,
+        0,
+        2,
+        4
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 30,
+      "PSL2_11_matrix": [
+        3,
+        0,
+        3,
+        4
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 31,
+      "PSL2_11_matrix": [
+        3,
+        0,
+        4,
+        4
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 32,
+      "PSL2_11_matrix": [
+        3,
+        0,
+        5,
+        4
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 33,
+      "PSL2_11_matrix": [
+        3,
+        0,
+        6,
+        4
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 34,
+      "PSL2_11_matrix": [
+        3,
+        0,
+        7,
+        4
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 35,
+      "PSL2_11_matrix": [
+        3,
+        0,
+        8,
+        4
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 36,
+      "PSL2_11_matrix": [
+        3,
+        0,
+        9,
+        4
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 37,
+      "PSL2_11_matrix": [
+        3,
+        0,
+        10,
+        4
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 27,
+      "PSL2_11_matrix": [
+        3,
+        1,
+        0,
+        4
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 28,
+      "PSL2_11_matrix": [
+        3,
+        1,
+        1,
+        8
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 29,
+      "PSL2_11_matrix": [
+        3,
+        1,
+        2,
+        1
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 30,
+      "PSL2_11_matrix": [
+        3,
+        1,
+        3,
+        5
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 31,
+      "PSL2_11_matrix": [
+        3,
+        1,
+        4,
+        9
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 32,
+      "PSL2_11_matrix": [
+        3,
+        1,
+        5,
+        2
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 33,
+      "PSL2_11_matrix": [
+        3,
+        1,
+        6,
+        6
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 34,
+      "PSL2_11_matrix": [
+        3,
+        1,
+        7,
+        10
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 35,
+      "PSL2_11_matrix": [
+        3,
+        1,
+        8,
+        3
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 36,
+      "PSL2_11_matrix": [
+        3,
+        1,
+        9,
+        7
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 37,
+      "PSL2_11_matrix": [
+        3,
+        1,
+        10,
+        0
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 27,
+      "PSL2_11_matrix": [
+        3,
+        2,
+        0,
+        4
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 28,
+      "PSL2_11_matrix": [
+        3,
+        2,
+        1,
+        1
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 29,
+      "PSL2_11_matrix": [
+        3,
+        2,
+        2,
+        9
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 30,
+      "PSL2_11_matrix": [
+        3,
+        2,
+        3,
+        6
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 31,
+      "PSL2_11_matrix": [
+        3,
+        2,
+        4,
+        3
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 32,
+      "PSL2_11_matrix": [
+        3,
+        2,
+        5,
+        0
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 33,
+      "PSL2_11_matrix": [
+        3,
+        2,
+        6,
+        8
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 34,
+      "PSL2_11_matrix": [
+        3,
+        2,
+        7,
+        5
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 35,
+      "PSL2_11_matrix": [
+        3,
+        2,
+        8,
+        2
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 36,
+      "PSL2_11_matrix": [
+        3,
+        2,
+        9,
+        10
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 37,
+      "PSL2_11_matrix": [
+        3,
+        2,
+        10,
+        7
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 27,
+      "PSL2_11_matrix": [
+        3,
+        3,
+        0,
+        4
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 28,
+      "PSL2_11_matrix": [
+        3,
+        3,
+        1,
+        5
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 29,
+      "PSL2_11_matrix": [
+        3,
+        3,
+        2,
+        6
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 30,
+      "PSL2_11_matrix": [
+        3,
+        3,
+        3,
+        7
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 31,
+      "PSL2_11_matrix": [
+        3,
+        3,
+        4,
+        8
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 32,
+      "PSL2_11_matrix": [
+        3,
+        3,
+        5,
+        9
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 33,
+      "PSL2_11_matrix": [
+        3,
+        3,
+        6,
+        10
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 34,
+      "PSL2_11_matrix": [
+        3,
+        3,
+        7,
+        0
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 35,
+      "PSL2_11_matrix": [
+        3,
+        3,
+        8,
+        1
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 36,
+      "PSL2_11_matrix": [
+        3,
+        3,
+        9,
+        2
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 37,
+      "PSL2_11_matrix": [
+        3,
+        3,
+        10,
+        3
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 27,
+      "PSL2_11_matrix": [
+        3,
+        4,
+        0,
+        4
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 28,
+      "PSL2_11_matrix": [
+        3,
+        4,
+        1,
+        9
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 29,
+      "PSL2_11_matrix": [
+        3,
+        4,
+        2,
+        3
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 30,
+      "PSL2_11_matrix": [
+        3,
+        4,
+        3,
+        8
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 31,
+      "PSL2_11_matrix": [
+        3,
+        4,
+        4,
+        2
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 32,
+      "PSL2_11_matrix": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 33,
+      "PSL2_11_matrix": [
+        3,
+        4,
+        6,
+        1
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 34,
+      "PSL2_11_matrix": [
+        3,
+        4,
+        7,
+        6
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 35,
+      "PSL2_11_matrix": [
+        3,
+        4,
+        8,
+        0
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 36,
+      "PSL2_11_matrix": [
+        3,
+        4,
+        9,
+        5
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 37,
+      "PSL2_11_matrix": [
+        3,
+        4,
+        10,
+        10
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 27,
+      "PSL2_11_matrix": [
+        3,
+        5,
+        0,
+        4
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 28,
+      "PSL2_11_matrix": [
+        3,
+        5,
+        1,
+        2
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 29,
+      "PSL2_11_matrix": [
+        3,
+        5,
+        2,
+        0
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 30,
+      "PSL2_11_matrix": [
+        3,
+        5,
+        3,
+        9
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 31,
+      "PSL2_11_matrix": [
+        3,
+        5,
+        4,
+        7
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 32,
+      "PSL2_11_matrix": [
+        3,
+        5,
+        5,
+        5
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 33,
+      "PSL2_11_matrix": [
+        3,
+        5,
+        6,
+        3
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 34,
+      "PSL2_11_matrix": [
+        3,
+        5,
+        7,
+        1
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 35,
+      "PSL2_11_matrix": [
+        3,
+        5,
+        8,
+        10
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 36,
+      "PSL2_11_matrix": [
+        3,
+        5,
+        9,
+        8
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 37,
+      "PSL2_11_matrix": [
+        3,
+        5,
+        10,
+        6
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 27,
+      "PSL2_11_matrix": [
+        3,
+        6,
+        0,
+        4
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 28,
+      "PSL2_11_matrix": [
+        3,
+        6,
+        1,
+        6
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 29,
+      "PSL2_11_matrix": [
+        3,
+        6,
+        2,
+        8
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 30,
+      "PSL2_11_matrix": [
+        3,
+        6,
+        3,
+        10
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 31,
+      "PSL2_11_matrix": [
+        3,
+        6,
+        4,
+        1
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 32,
+      "PSL2_11_matrix": [
+        3,
+        6,
+        5,
+        3
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 33,
+      "PSL2_11_matrix": [
+        3,
+        6,
+        6,
+        5
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 34,
+      "PSL2_11_matrix": [
+        3,
+        6,
+        7,
+        7
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 35,
+      "PSL2_11_matrix": [
+        3,
+        6,
+        8,
+        9
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 36,
+      "PSL2_11_matrix": [
+        3,
+        6,
+        9,
+        0
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 37,
+      "PSL2_11_matrix": [
+        3,
+        6,
+        10,
+        2
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 27,
+      "PSL2_11_matrix": [
+        3,
+        7,
+        0,
+        4
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 28,
+      "PSL2_11_matrix": [
+        3,
+        7,
+        1,
+        10
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 29,
+      "PSL2_11_matrix": [
+        3,
+        7,
+        2,
+        5
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 30,
+      "PSL2_11_matrix": [
+        3,
+        7,
+        3,
+        0
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 31,
+      "PSL2_11_matrix": [
+        3,
+        7,
+        4,
+        6
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 32,
+      "PSL2_11_matrix": [
+        3,
+        7,
+        5,
+        1
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 33,
+      "PSL2_11_matrix": [
+        3,
+        7,
+        6,
+        7
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 34,
+      "PSL2_11_matrix": [
+        3,
+        7,
+        7,
+        2
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 35,
+      "PSL2_11_matrix": [
+        3,
+        7,
+        8,
+        8
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 36,
+      "PSL2_11_matrix": [
+        3,
+        7,
+        9,
+        3
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 37,
+      "PSL2_11_matrix": [
+        3,
+        7,
+        10,
+        9
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 27,
+      "PSL2_11_matrix": [
+        3,
+        8,
+        0,
+        4
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 28,
+      "PSL2_11_matrix": [
+        3,
+        8,
+        1,
+        3
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 29,
+      "PSL2_11_matrix": [
+        3,
+        8,
+        2,
+        2
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 30,
+      "PSL2_11_matrix": [
+        3,
+        8,
+        3,
+        1
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 31,
+      "PSL2_11_matrix": [
+        3,
+        8,
+        4,
+        0
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 32,
+      "PSL2_11_matrix": [
+        3,
+        8,
+        5,
+        10
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 33,
+      "PSL2_11_matrix": [
+        3,
+        8,
+        6,
+        9
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 34,
+      "PSL2_11_matrix": [
+        3,
+        8,
+        7,
+        8
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 35,
+      "PSL2_11_matrix": [
+        3,
+        8,
+        8,
+        7
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 36,
+      "PSL2_11_matrix": [
+        3,
+        8,
+        9,
+        6
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 37,
+      "PSL2_11_matrix": [
+        3,
+        8,
+        10,
+        5
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 27,
+      "PSL2_11_matrix": [
+        3,
+        9,
+        0,
+        4
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 28,
+      "PSL2_11_matrix": [
+        3,
+        9,
+        1,
+        7
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 29,
+      "PSL2_11_matrix": [
+        3,
+        9,
+        2,
+        10
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 30,
+      "PSL2_11_matrix": [
+        3,
+        9,
+        3,
+        2
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 31,
+      "PSL2_11_matrix": [
+        3,
+        9,
+        4,
+        5
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 32,
+      "PSL2_11_matrix": [
+        3,
+        9,
+        5,
+        8
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 33,
+      "PSL2_11_matrix": [
+        3,
+        9,
+        6,
+        0
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 34,
+      "PSL2_11_matrix": [
+        3,
+        9,
+        7,
+        3
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 35,
+      "PSL2_11_matrix": [
+        3,
+        9,
+        8,
+        6
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 36,
+      "PSL2_11_matrix": [
+        3,
+        9,
+        9,
+        9
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 37,
+      "PSL2_11_matrix": [
+        3,
+        9,
+        10,
+        1
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 27,
+      "PSL2_11_matrix": [
+        3,
+        10,
+        0,
+        4
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 28,
+      "PSL2_11_matrix": [
+        3,
+        10,
+        1,
+        0
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 29,
+      "PSL2_11_matrix": [
+        3,
+        10,
+        2,
+        7
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 30,
+      "PSL2_11_matrix": [
+        3,
+        10,
+        3,
+        3
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 31,
+      "PSL2_11_matrix": [
+        3,
+        10,
+        4,
+        10
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 32,
+      "PSL2_11_matrix": [
+        3,
+        10,
+        5,
+        6
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 33,
+      "PSL2_11_matrix": [
+        3,
+        10,
+        6,
+        2
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 34,
+      "PSL2_11_matrix": [
+        3,
+        10,
+        7,
+        9
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 35,
+      "PSL2_11_matrix": [
+        3,
+        10,
+        8,
+        5
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 36,
+      "PSL2_11_matrix": [
+        3,
+        10,
+        9,
+        1
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 37,
+      "PSL2_11_matrix": [
+        3,
+        10,
+        10,
+        8
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 38,
+      "PSL2_11_matrix": [
+        4,
+        0,
+        0,
+        3
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 39,
+      "PSL2_11_matrix": [
+        4,
+        0,
+        1,
+        3
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 40,
+      "PSL2_11_matrix": [
+        4,
+        0,
+        2,
+        3
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 41,
+      "PSL2_11_matrix": [
+        4,
+        0,
+        3,
+        3
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 42,
+      "PSL2_11_matrix": [
+        4,
+        0,
+        4,
+        3
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 43,
+      "PSL2_11_matrix": [
+        4,
+        0,
+        5,
+        3
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 44,
+      "PSL2_11_matrix": [
+        4,
+        0,
+        6,
+        3
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 45,
+      "PSL2_11_matrix": [
+        4,
+        0,
+        7,
+        3
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 46,
+      "PSL2_11_matrix": [
+        4,
+        0,
+        8,
+        3
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 47,
+      "PSL2_11_matrix": [
+        4,
+        0,
+        9,
+        3
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 48,
+      "PSL2_11_matrix": [
+        4,
+        0,
+        10,
+        3
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 38,
+      "PSL2_11_matrix": [
+        4,
+        1,
+        0,
+        3
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 39,
+      "PSL2_11_matrix": [
+        4,
+        1,
+        1,
+        6
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 40,
+      "PSL2_11_matrix": [
+        4,
+        1,
+        2,
+        9
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 41,
+      "PSL2_11_matrix": [
+        4,
+        1,
+        3,
+        1
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 42,
+      "PSL2_11_matrix": [
+        4,
+        1,
+        4,
+        4
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 43,
+      "PSL2_11_matrix": [
+        4,
+        1,
+        5,
+        7
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 44,
+      "PSL2_11_matrix": [
+        4,
+        1,
+        6,
+        10
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 45,
+      "PSL2_11_matrix": [
+        4,
+        1,
+        7,
+        2
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 46,
+      "PSL2_11_matrix": [
+        4,
+        1,
+        8,
+        5
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 47,
+      "PSL2_11_matrix": [
+        4,
+        1,
+        9,
+        8
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 48,
+      "PSL2_11_matrix": [
+        4,
+        1,
+        10,
+        0
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 38,
+      "PSL2_11_matrix": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 39,
+      "PSL2_11_matrix": [
+        4,
+        2,
+        1,
+        9
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 40,
+      "PSL2_11_matrix": [
+        4,
+        2,
+        2,
+        4
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 41,
+      "PSL2_11_matrix": [
+        4,
+        2,
+        3,
+        10
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 42,
+      "PSL2_11_matrix": [
+        4,
+        2,
+        4,
+        5
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 43,
+      "PSL2_11_matrix": [
+        4,
+        2,
+        5,
+        0
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 44,
+      "PSL2_11_matrix": [
+        4,
+        2,
+        6,
+        6
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 45,
+      "PSL2_11_matrix": [
+        4,
+        2,
+        7,
+        1
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 46,
+      "PSL2_11_matrix": [
+        4,
+        2,
+        8,
+        7
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 47,
+      "PSL2_11_matrix": [
+        4,
+        2,
+        9,
+        2
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 48,
+      "PSL2_11_matrix": [
+        4,
+        2,
+        10,
+        8
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 38,
+      "PSL2_11_matrix": [
+        4,
+        3,
+        0,
+        3
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 39,
+      "PSL2_11_matrix": [
+        4,
+        3,
+        1,
+        1
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 40,
+      "PSL2_11_matrix": [
+        4,
+        3,
+        2,
+        10
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 41,
+      "PSL2_11_matrix": [
+        4,
+        3,
+        3,
+        8
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 42,
+      "PSL2_11_matrix": [
+        4,
+        3,
+        4,
+        6
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 43,
+      "PSL2_11_matrix": [
+        4,
+        3,
+        5,
+        4
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 44,
+      "PSL2_11_matrix": [
+        4,
+        3,
+        6,
+        2
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 45,
+      "PSL2_11_matrix": [
+        4,
+        3,
+        7,
+        0
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 46,
+      "PSL2_11_matrix": [
+        4,
+        3,
+        8,
+        9
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 47,
+      "PSL2_11_matrix": [
+        4,
+        3,
+        9,
+        7
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 48,
+      "PSL2_11_matrix": [
+        4,
+        3,
+        10,
+        5
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 38,
+      "PSL2_11_matrix": [
+        4,
+        4,
+        0,
+        3
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 39,
+      "PSL2_11_matrix": [
+        4,
+        4,
+        1,
+        4
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 40,
+      "PSL2_11_matrix": [
+        4,
+        4,
+        2,
+        5
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 41,
+      "PSL2_11_matrix": [
+        4,
+        4,
+        3,
+        6
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 42,
+      "PSL2_11_matrix": [
+        4,
+        4,
+        4,
+        7
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 43,
+      "PSL2_11_matrix": [
+        4,
+        4,
+        5,
+        8
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 44,
+      "PSL2_11_matrix": [
+        4,
+        4,
+        6,
+        9
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 45,
+      "PSL2_11_matrix": [
+        4,
+        4,
+        7,
+        10
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 46,
+      "PSL2_11_matrix": [
+        4,
+        4,
+        8,
+        0
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 47,
+      "PSL2_11_matrix": [
+        4,
+        4,
+        9,
+        1
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 48,
+      "PSL2_11_matrix": [
+        4,
+        4,
+        10,
+        2
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 38,
+      "PSL2_11_matrix": [
+        4,
+        5,
+        0,
+        3
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 39,
+      "PSL2_11_matrix": [
+        4,
+        5,
+        1,
+        7
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 40,
+      "PSL2_11_matrix": [
+        4,
+        5,
+        2,
+        0
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 41,
+      "PSL2_11_matrix": [
+        4,
+        5,
+        3,
+        4
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 42,
+      "PSL2_11_matrix": [
+        4,
+        5,
+        4,
+        8
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 43,
+      "PSL2_11_matrix": [
+        4,
+        5,
+        5,
+        1
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 44,
+      "PSL2_11_matrix": [
+        4,
+        5,
+        6,
+        5
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 45,
+      "PSL2_11_matrix": [
+        4,
+        5,
+        7,
+        9
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 46,
+      "PSL2_11_matrix": [
+        4,
+        5,
+        8,
+        2
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 47,
+      "PSL2_11_matrix": [
+        4,
+        5,
+        9,
+        6
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 48,
+      "PSL2_11_matrix": [
+        4,
+        5,
+        10,
+        10
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 38,
+      "PSL2_11_matrix": [
+        4,
+        6,
+        0,
+        3
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 39,
+      "PSL2_11_matrix": [
+        4,
+        6,
+        1,
+        10
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 40,
+      "PSL2_11_matrix": [
+        4,
+        6,
+        2,
+        6
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 41,
+      "PSL2_11_matrix": [
+        4,
+        6,
+        3,
+        2
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 42,
+      "PSL2_11_matrix": [
+        4,
+        6,
+        4,
+        9
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 43,
+      "PSL2_11_matrix": [
+        4,
+        6,
+        5,
+        5
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 44,
+      "PSL2_11_matrix": [
+        4,
+        6,
+        6,
+        1
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 45,
+      "PSL2_11_matrix": [
+        4,
+        6,
+        7,
+        8
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 46,
+      "PSL2_11_matrix": [
+        4,
+        6,
+        8,
+        4
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 47,
+      "PSL2_11_matrix": [
+        4,
+        6,
+        9,
+        0
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 48,
+      "PSL2_11_matrix": [
+        4,
+        6,
+        10,
+        7
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 38,
+      "PSL2_11_matrix": [
+        4,
+        7,
+        0,
+        3
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 39,
+      "PSL2_11_matrix": [
+        4,
+        7,
+        1,
+        2
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 40,
+      "PSL2_11_matrix": [
+        4,
+        7,
+        2,
+        1
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 41,
+      "PSL2_11_matrix": [
+        4,
+        7,
+        3,
+        0
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 42,
+      "PSL2_11_matrix": [
+        4,
+        7,
+        4,
+        10
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 43,
+      "PSL2_11_matrix": [
+        4,
+        7,
+        5,
+        9
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 44,
+      "PSL2_11_matrix": [
+        4,
+        7,
+        6,
+        8
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 45,
+      "PSL2_11_matrix": [
+        4,
+        7,
+        7,
+        7
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 46,
+      "PSL2_11_matrix": [
+        4,
+        7,
+        8,
+        6
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 47,
+      "PSL2_11_matrix": [
+        4,
+        7,
+        9,
+        5
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 48,
+      "PSL2_11_matrix": [
+        4,
+        7,
+        10,
+        4
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 38,
+      "PSL2_11_matrix": [
+        4,
+        8,
+        0,
+        3
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 39,
+      "PSL2_11_matrix": [
+        4,
+        8,
+        1,
+        5
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 40,
+      "PSL2_11_matrix": [
+        4,
+        8,
+        2,
+        7
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 41,
+      "PSL2_11_matrix": [
+        4,
+        8,
+        3,
+        9
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 42,
+      "PSL2_11_matrix": [
+        4,
+        8,
+        4,
+        0
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 43,
+      "PSL2_11_matrix": [
+        4,
+        8,
+        5,
+        2
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 44,
+      "PSL2_11_matrix": [
+        4,
+        8,
+        6,
+        4
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 45,
+      "PSL2_11_matrix": [
+        4,
+        8,
+        7,
+        6
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 46,
+      "PSL2_11_matrix": [
+        4,
+        8,
+        8,
+        8
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 47,
+      "PSL2_11_matrix": [
+        4,
+        8,
+        9,
+        10
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 48,
+      "PSL2_11_matrix": [
+        4,
+        8,
+        10,
+        1
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 38,
+      "PSL2_11_matrix": [
+        4,
+        9,
+        0,
+        3
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 39,
+      "PSL2_11_matrix": [
+        4,
+        9,
+        1,
+        8
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 40,
+      "PSL2_11_matrix": [
+        4,
+        9,
+        2,
+        2
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 41,
+      "PSL2_11_matrix": [
+        4,
+        9,
+        3,
+        7
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 42,
+      "PSL2_11_matrix": [
+        4,
+        9,
+        4,
+        1
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 43,
+      "PSL2_11_matrix": [
+        4,
+        9,
+        5,
+        6
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 44,
+      "PSL2_11_matrix": [
+        4,
+        9,
+        6,
+        0
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 45,
+      "PSL2_11_matrix": [
+        4,
+        9,
+        7,
+        5
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 46,
+      "PSL2_11_matrix": [
+        4,
+        9,
+        8,
+        10
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 47,
+      "PSL2_11_matrix": [
+        4,
+        9,
+        9,
+        4
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 48,
+      "PSL2_11_matrix": [
+        4,
+        9,
+        10,
+        9
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 38,
+      "PSL2_11_matrix": [
+        4,
+        10,
+        0,
+        3
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 39,
+      "PSL2_11_matrix": [
+        4,
+        10,
+        1,
+        0
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 40,
+      "PSL2_11_matrix": [
+        4,
+        10,
+        2,
+        8
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 41,
+      "PSL2_11_matrix": [
+        4,
+        10,
+        3,
+        5
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 42,
+      "PSL2_11_matrix": [
+        4,
+        10,
+        4,
+        2
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 43,
+      "PSL2_11_matrix": [
+        4,
+        10,
+        5,
+        10
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 44,
+      "PSL2_11_matrix": [
+        4,
+        10,
+        6,
+        7
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 45,
+      "PSL2_11_matrix": [
+        4,
+        10,
+        7,
+        4
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 46,
+      "PSL2_11_matrix": [
+        4,
+        10,
+        8,
+        1
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 47,
+      "PSL2_11_matrix": [
+        4,
+        10,
+        9,
+        9
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 48,
+      "PSL2_11_matrix": [
+        4,
+        10,
+        10,
+        6
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 49,
+      "PSL2_11_matrix": [
+        5,
+        0,
+        0,
+        9
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 50,
+      "PSL2_11_matrix": [
+        5,
+        0,
+        1,
+        9
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 51,
+      "PSL2_11_matrix": [
+        5,
+        0,
+        2,
+        9
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 52,
+      "PSL2_11_matrix": [
+        5,
+        0,
+        3,
+        9
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 53,
+      "PSL2_11_matrix": [
+        5,
+        0,
+        4,
+        9
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 54,
+      "PSL2_11_matrix": [
+        5,
+        0,
+        5,
+        9
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 55,
+      "PSL2_11_matrix": [
+        5,
+        0,
+        6,
+        9
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 56,
+      "PSL2_11_matrix": [
+        5,
+        0,
+        7,
+        9
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 57,
+      "PSL2_11_matrix": [
+        5,
+        0,
+        8,
+        9
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 58,
+      "PSL2_11_matrix": [
+        5,
+        0,
+        9,
+        9
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 59,
+      "PSL2_11_matrix": [
+        5,
+        0,
+        10,
+        9
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 49,
+      "PSL2_11_matrix": [
+        5,
+        1,
+        0,
+        9
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 50,
+      "PSL2_11_matrix": [
+        5,
+        1,
+        1,
+        7
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 51,
+      "PSL2_11_matrix": [
+        5,
+        1,
+        2,
+        5
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 52,
+      "PSL2_11_matrix": [
+        5,
+        1,
+        3,
+        3
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 53,
+      "PSL2_11_matrix": [
+        5,
+        1,
+        4,
+        1
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 54,
+      "PSL2_11_matrix": [
+        5,
+        1,
+        5,
+        10
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 55,
+      "PSL2_11_matrix": [
+        5,
+        1,
+        6,
+        8
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 56,
+      "PSL2_11_matrix": [
+        5,
+        1,
+        7,
+        6
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 57,
+      "PSL2_11_matrix": [
+        5,
+        1,
+        8,
+        4
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 58,
+      "PSL2_11_matrix": [
+        5,
+        1,
+        9,
+        2
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 59,
+      "PSL2_11_matrix": [
+        5,
+        1,
+        10,
+        0
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 49,
+      "PSL2_11_matrix": [
+        5,
+        2,
+        0,
+        9
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 50,
+      "PSL2_11_matrix": [
+        5,
+        2,
+        1,
+        5
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 51,
+      "PSL2_11_matrix": [
+        5,
+        2,
+        2,
+        1
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 52,
+      "PSL2_11_matrix": [
+        5,
+        2,
+        3,
+        8
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 53,
+      "PSL2_11_matrix": [
+        5,
+        2,
+        4,
+        4
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 54,
+      "PSL2_11_matrix": [
+        5,
+        2,
+        5,
+        0
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 55,
+      "PSL2_11_matrix": [
+        5,
+        2,
+        6,
+        7
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 56,
+      "PSL2_11_matrix": [
+        5,
+        2,
+        7,
+        3
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 57,
+      "PSL2_11_matrix": [
+        5,
+        2,
+        8,
+        10
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 58,
+      "PSL2_11_matrix": [
+        5,
+        2,
+        9,
+        6
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 59,
+      "PSL2_11_matrix": [
+        5,
+        2,
+        10,
+        2
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 49,
+      "PSL2_11_matrix": [
+        5,
+        3,
+        0,
+        9
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 50,
+      "PSL2_11_matrix": [
+        5,
+        3,
+        1,
+        3
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 51,
+      "PSL2_11_matrix": [
+        5,
+        3,
+        2,
+        8
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 52,
+      "PSL2_11_matrix": [
+        5,
+        3,
+        3,
+        2
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 53,
+      "PSL2_11_matrix": [
+        5,
+        3,
+        4,
+        7
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 54,
+      "PSL2_11_matrix": [
+        5,
+        3,
+        5,
+        1
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 55,
+      "PSL2_11_matrix": [
+        5,
+        3,
+        6,
+        6
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 56,
+      "PSL2_11_matrix": [
+        5,
+        3,
+        7,
+        0
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 57,
+      "PSL2_11_matrix": [
+        5,
+        3,
+        8,
+        5
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 58,
+      "PSL2_11_matrix": [
+        5,
+        3,
+        9,
+        10
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 59,
+      "PSL2_11_matrix": [
+        5,
+        3,
+        10,
+        4
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 49,
+      "PSL2_11_matrix": [
+        5,
+        4,
+        0,
+        9
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 50,
+      "PSL2_11_matrix": [
+        5,
+        4,
+        1,
+        1
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 51,
+      "PSL2_11_matrix": [
+        5,
+        4,
+        2,
+        4
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 52,
+      "PSL2_11_matrix": [
+        5,
+        4,
+        3,
+        7
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 53,
+      "PSL2_11_matrix": [
+        5,
+        4,
+        4,
+        10
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 54,
+      "PSL2_11_matrix": [
+        5,
+        4,
+        5,
+        2
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 55,
+      "PSL2_11_matrix": [
+        5,
+        4,
+        6,
+        5
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 56,
+      "PSL2_11_matrix": [
+        5,
+        4,
+        7,
+        8
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 57,
+      "PSL2_11_matrix": [
+        5,
+        4,
+        8,
+        0
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 58,
+      "PSL2_11_matrix": [
+        5,
+        4,
+        9,
+        3
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 59,
+      "PSL2_11_matrix": [
+        5,
+        4,
+        10,
+        6
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 49,
+      "PSL2_11_matrix": [
+        5,
+        5,
+        0,
+        9
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 50,
+      "PSL2_11_matrix": [
+        5,
+        5,
+        1,
+        10
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 51,
+      "PSL2_11_matrix": [
+        5,
+        5,
+        2,
+        0
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 52,
+      "PSL2_11_matrix": [
+        5,
+        5,
+        3,
+        1
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 53,
+      "PSL2_11_matrix": [
+        5,
+        5,
+        4,
+        2
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 54,
+      "PSL2_11_matrix": [
+        5,
+        5,
+        5,
+        3
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 55,
+      "PSL2_11_matrix": [
+        5,
+        5,
+        6,
+        4
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 56,
+      "PSL2_11_matrix": [
+        5,
+        5,
+        7,
+        5
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 57,
+      "PSL2_11_matrix": [
+        5,
+        5,
+        8,
+        6
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 58,
+      "PSL2_11_matrix": [
+        5,
+        5,
+        9,
+        7
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 59,
+      "PSL2_11_matrix": [
+        5,
+        5,
+        10,
+        8
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 49,
+      "PSL2_11_matrix": [
+        5,
+        6,
+        0,
+        9
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 50,
+      "PSL2_11_matrix": [
+        5,
+        6,
+        1,
+        8
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 51,
+      "PSL2_11_matrix": [
+        5,
+        6,
+        2,
+        7
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 52,
+      "PSL2_11_matrix": [
+        5,
+        6,
+        3,
+        6
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 53,
+      "PSL2_11_matrix": [
+        5,
+        6,
+        4,
+        5
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 54,
+      "PSL2_11_matrix": [
+        5,
+        6,
+        5,
+        4
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 55,
+      "PSL2_11_matrix": [
+        5,
+        6,
+        6,
+        3
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 56,
+      "PSL2_11_matrix": [
+        5,
+        6,
+        7,
+        2
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 57,
+      "PSL2_11_matrix": [
+        5,
+        6,
+        8,
+        1
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 58,
+      "PSL2_11_matrix": [
+        5,
+        6,
+        9,
+        0
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 59,
+      "PSL2_11_matrix": [
+        5,
+        6,
+        10,
+        10
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 49,
+      "PSL2_11_matrix": [
+        5,
+        7,
+        0,
+        9
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 50,
+      "PSL2_11_matrix": [
+        5,
+        7,
+        1,
+        6
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 51,
+      "PSL2_11_matrix": [
+        5,
+        7,
+        2,
+        3
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 52,
+      "PSL2_11_matrix": [
+        5,
+        7,
+        3,
+        0
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 53,
+      "PSL2_11_matrix": [
+        5,
+        7,
+        4,
+        8
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 54,
+      "PSL2_11_matrix": [
+        5,
+        7,
+        5,
+        5
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 55,
+      "PSL2_11_matrix": [
+        5,
+        7,
+        6,
+        2
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 56,
+      "PSL2_11_matrix": [
+        5,
+        7,
+        7,
+        10
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 57,
+      "PSL2_11_matrix": [
+        5,
+        7,
+        8,
+        7
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 58,
+      "PSL2_11_matrix": [
+        5,
+        7,
+        9,
+        4
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 59,
+      "PSL2_11_matrix": [
+        5,
+        7,
+        10,
+        1
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 49,
+      "PSL2_11_matrix": [
+        5,
+        8,
+        0,
+        9
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 50,
+      "PSL2_11_matrix": [
+        5,
+        8,
+        1,
+        4
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 51,
+      "PSL2_11_matrix": [
+        5,
+        8,
+        2,
+        10
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 52,
+      "PSL2_11_matrix": [
+        5,
+        8,
+        3,
+        5
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 53,
+      "PSL2_11_matrix": [
+        5,
+        8,
+        4,
+        0
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 54,
+      "PSL2_11_matrix": [
+        5,
+        8,
+        5,
+        6
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 55,
+      "PSL2_11_matrix": [
+        5,
+        8,
+        6,
+        1
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 56,
+      "PSL2_11_matrix": [
+        5,
+        8,
+        7,
+        7
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 57,
+      "PSL2_11_matrix": [
+        5,
+        8,
+        8,
+        2
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 58,
+      "PSL2_11_matrix": [
+        5,
+        8,
+        9,
+        8
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 59,
+      "PSL2_11_matrix": [
+        5,
+        8,
+        10,
+        3
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 49,
+      "PSL2_11_matrix": [
+        5,
+        9,
+        0,
+        9
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 50,
+      "PSL2_11_matrix": [
+        5,
+        9,
+        1,
+        2
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 51,
+      "PSL2_11_matrix": [
+        5,
+        9,
+        2,
+        6
+      ],
+      "abstract_11face_id": 0
+    },
+    {
+      "Klein_60point_orbit_id": 52,
+      "PSL2_11_matrix": [
+        5,
+        9,
+        3,
+        10
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 53,
+      "PSL2_11_matrix": [
+        5,
+        9,
+        4,
+        3
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 54,
+      "PSL2_11_matrix": [
+        5,
+        9,
+        5,
+        7
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 55,
+      "PSL2_11_matrix": [
+        5,
+        9,
+        6,
+        0
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 56,
+      "PSL2_11_matrix": [
+        5,
+        9,
+        7,
+        4
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 57,
+      "PSL2_11_matrix": [
+        5,
+        9,
+        8,
+        8
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 58,
+      "PSL2_11_matrix": [
+        5,
+        9,
+        9,
+        1
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 59,
+      "PSL2_11_matrix": [
+        5,
+        9,
+        10,
+        5
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 49,
+      "PSL2_11_matrix": [
+        5,
+        10,
+        0,
+        9
+      ],
+      "abstract_11face_id": 9
+    },
+    {
+      "Klein_60point_orbit_id": 50,
+      "PSL2_11_matrix": [
+        5,
+        10,
+        1,
+        0
+      ],
+      "abstract_11face_id": 7
+    },
+    {
+      "Klein_60point_orbit_id": 51,
+      "PSL2_11_matrix": [
+        5,
+        10,
+        2,
+        2
+      ],
+      "abstract_11face_id": 5
+    },
+    {
+      "Klein_60point_orbit_id": 52,
+      "PSL2_11_matrix": [
+        5,
+        10,
+        3,
+        4
+      ],
+      "abstract_11face_id": 3
+    },
+    {
+      "Klein_60point_orbit_id": 53,
+      "PSL2_11_matrix": [
+        5,
+        10,
+        4,
+        6
+      ],
+      "abstract_11face_id": 1
+    },
+    {
+      "Klein_60point_orbit_id": 54,
+      "PSL2_11_matrix": [
+        5,
+        10,
+        5,
+        8
+      ],
+      "abstract_11face_id": 10
+    },
+    {
+      "Klein_60point_orbit_id": 55,
+      "PSL2_11_matrix": [
+        5,
+        10,
+        6,
+        10
+      ],
+      "abstract_11face_id": 8
+    },
+    {
+      "Klein_60point_orbit_id": 56,
+      "PSL2_11_matrix": [
+        5,
+        10,
+        7,
+        1
+      ],
+      "abstract_11face_id": 6
+    },
+    {
+      "Klein_60point_orbit_id": 57,
+      "PSL2_11_matrix": [
+        5,
+        10,
+        8,
+        3
+      ],
+      "abstract_11face_id": 4
+    },
+    {
+      "Klein_60point_orbit_id": 58,
+      "PSL2_11_matrix": [
+        5,
+        10,
+        9,
+        5
+      ],
+      "abstract_11face_id": 2
+    },
+    {
+      "Klein_60point_orbit_id": 59,
+      "PSL2_11_matrix": [
+        5,
+        10,
+        10,
+        7
+      ],
+      "abstract_11face_id": 0
+    }
+  ],
+  "face_rank_caution": "The selected explicit A5 subgroup may represent either the vertex or facet conjugacy class of the 11-cell. Both classes have index11 and the complementary factorization holds for either; identifying this matrix subgroup with a named rank requires matching the user's 11-cell flag-generator convention.",
+  "full_11x60_pairs": 660,
+  "generated_A5_order": 60,
+  "generated_C11_order": 11,
+  "generator_product_order5": 5,
+  "geometry_limit": "Pair dictionary is exact group combinatorics; it does not prove incidence at ranks1/2, continuous geometric embedding, special holonomy, gauge groups, chiral spectra or physical TOE.",
+  "intersection_size": 1,
+  "involution_element_count": 55,
+  "matrix_entry_flag_index": [
+    [
+      0,
+      12,
+      25,
+      41,
+      45,
+      55,
+      78,
+      68,
+      168,
+      114,
+      104,
+      160,
+      139,
+      151,
+      130,
+      98,
+      187,
+      177,
+      200,
+      289,
+      257,
+      236,
+      248,
+      227,
+      283,
+      273,
+      219,
+      330,
+      309,
+      321,
+      300,
+      389,
+      357,
+      380,
+      370,
+      349,
+      416,
+      406,
+      506,
+      474,
+      442,
+      465,
+      455,
+      434,
+      501,
+      491,
+      426,
+      526,
+      538,
+      550,
+      540,
+      640,
+      586,
+      576,
+      632,
+      611,
+      623,
+      602,
+      570,
+      659
+    ],
+    [
+      1,
+      14,
+      28,
+      34,
+      50,
+      88,
+      56,
+      79,
+      69,
+      169,
+      115,
+      105,
+      161,
+      140,
+      152,
+      131,
+      264,
+      210,
+      189,
+      179,
+      202,
+      291,
+      259,
+      238,
+      250,
+      229,
+      285,
+      341,
+      408,
+      398,
+      333,
+      312,
+      324,
+      303,
+      392,
+      360,
+      383,
+      373,
+      484,
+      419,
+      519,
+      531,
+      510,
+      478,
+      446,
+      469,
+      459,
+      438,
+      505,
+      605,
+      617,
+      596,
+      564,
+      653,
+      555,
+      545,
+      645,
+      591,
+      581,
+      637
+    ],
+    [
+      2,
+      16,
+      31,
+      38,
+      44,
+      121,
+      89,
+      57,
+      80,
+      70,
+      170,
+      116,
+      106,
+      162,
+      141,
+      153,
+      220,
+      276,
+      266,
+      212,
+      191,
+      181,
+      204,
+      293,
+      261,
+      240,
+      252,
+      352,
+      375,
+      365,
+      344,
+      411,
+      401,
+      336,
+      315,
+      327,
+      306,
+      395,
+      462,
+      452,
+      431,
+      498,
+      488,
+      423,
+      523,
+      535,
+      514,
+      482,
+      450,
+      539,
+      639,
+      585,
+      575,
+      631,
+      610,
+      622,
+      601,
+      569,
+      658,
+      560
+    ],
+    [
+      3,
+      18,
+      23,
+      42,
+      49,
+      143,
+      122,
+      90,
+      58,
+      81,
+      71,
+      171,
+      117,
+      107,
+      163,
+      142,
+      231,
+      243,
+      222,
+      278,
+      268,
+      214,
+      193,
+      183,
+      206,
+      295,
+      263,
+      319,
+      298,
+      387,
+      355,
+      378,
+      368,
+      347,
+      414,
+      404,
+      339,
+      318,
+      528,
+      507,
+      475,
+      443,
+      466,
+      456,
+      435,
+      502,
+      492,
+      427,
+      527,
+      616,
+      595,
+      563,
+      652,
+      554,
+      544,
+      644,
+      590,
+      580,
+      636,
+      615
+    ],
+    [
+      4,
+      20,
+      26,
+      35,
+      54,
+      132,
+      144,
+      123,
+      91,
+      59,
+      82,
+      72,
+      172,
+      118,
+      108,
+      164,
+      286,
+      254,
+      233,
+      245,
+      224,
+      280,
+      270,
+      216,
+      195,
+      185,
+      208,
+      396,
+      331,
+      310,
+      322,
+      301,
+      390,
+      358,
+      381,
+      371,
+      350,
+      417,
+      495,
+      485,
+      420,
+      520,
+      532,
+      511,
+      479,
+      447,
+      470,
+      460,
+      439,
+      638,
+      584,
+      574,
+      630,
+      609,
+      621,
+      600,
+      568,
+      657,
+      559,
+      549
+    ],
+    [
+      5,
+      11,
+      29,
+      39,
+      48,
+      154,
+      133,
+      145,
+      124,
+      92,
+      60,
+      83,
+      73,
+      173,
+      119,
+      109,
+      176,
+      199,
+      288,
+      256,
+      235,
+      247,
+      226,
+      282,
+      272,
+      218,
+      197,
+      363,
+      342,
+      409,
+      399,
+      334,
+      313,
+      325,
+      304,
+      393,
+      361,
+      384,
+      440,
+      463,
+      453,
+      432,
+      499,
+      489,
+      424,
+      524,
+      536,
+      515,
+      483,
+      594,
+      562,
+      651,
+      553,
+      543,
+      643,
+      589,
+      579,
+      635,
+      614,
+      626
+    ],
+    [
+      6,
+      13,
+      32,
+      43,
+      53,
+      99,
+      155,
+      134,
+      146,
+      125,
+      93,
+      61,
+      84,
+      74,
+      174,
+      120,
+      209,
+      188,
+      178,
+      201,
+      290,
+      258,
+      237,
+      249,
+      228,
+      284,
+      274,
+      385,
+      353,
+      376,
+      366,
+      345,
+      412,
+      402,
+      337,
+      316,
+      328,
+      307,
+      517,
+      529,
+      508,
+      476,
+      444,
+      467,
+      457,
+      436,
+      503,
+      493,
+      428,
+      583,
+      573,
+      629,
+      608,
+      620,
+      599,
+      567,
+      656,
+      558,
+      548,
+      648
+    ],
+    [
+      7,
+      15,
+      24,
+      36,
+      47,
+      110,
+      100,
+      156,
+      135,
+      147,
+      126,
+      94,
+      62,
+      85,
+      75,
+      175,
+      275,
+      265,
+      211,
+      190,
+      180,
+      203,
+      292,
+      260,
+      239,
+      251,
+      230,
+      308,
+      320,
+      299,
+      388,
+      356,
+      379,
+      369,
+      348,
+      415,
+      405,
+      340,
+      429,
+      496,
+      486,
+      421,
+      521,
+      533,
+      512,
+      480,
+      448,
+      471,
+      461,
+      561,
+      650,
+      552,
+      542,
+      642,
+      588,
+      578,
+      634,
+      613,
+      625,
+      604
+    ],
+    [
+      8,
+      17,
+      27,
+      40,
+      52,
+      165,
+      111,
+      101,
+      157,
+      136,
+      148,
+      127,
+      95,
+      63,
+      86,
+      76,
+      242,
+      221,
+      277,
+      267,
+      213,
+      192,
+      182,
+      205,
+      294,
+      262,
+      241,
+      407,
+      397,
+      332,
+      311,
+      323,
+      302,
+      391,
+      359,
+      382,
+      372,
+      351,
+      473,
+      441,
+      464,
+      454,
+      433,
+      500,
+      490,
+      425,
+      525,
+      537,
+      516,
+      572,
+      628,
+      607,
+      619,
+      598,
+      566,
+      655,
+      557,
+      547,
+      647,
+      593
+    ],
+    [
+      9,
+      19,
+      30,
+      33,
+      46,
+      66,
+      166,
+      112,
+      102,
+      158,
+      137,
+      149,
+      128,
+      96,
+      64,
+      87,
+      253,
+      232,
+      244,
+      223,
+      279,
+      269,
+      215,
+      194,
+      184,
+      207,
+      296,
+      374,
+      364,
+      343,
+      410,
+      400,
+      335,
+      314,
+      326,
+      305,
+      394,
+      362,
+      418,
+      518,
+      530,
+      509,
+      477,
+      445,
+      468,
+      458,
+      437,
+      504,
+      494,
+      649,
+      551,
+      541,
+      641,
+      587,
+      577,
+      633,
+      612,
+      624,
+      603,
+      571
+    ],
+    [
+      10,
+      21,
+      22,
+      37,
+      51,
+      77,
+      67,
+      167,
+      113,
+      103,
+      159,
+      138,
+      150,
+      129,
+      97,
+      65,
+      198,
+      287,
+      255,
+      234,
+      246,
+      225,
+      281,
+      271,
+      217,
+      196,
+      186,
+      297,
+      386,
+      354,
+      377,
+      367,
+      346,
+      413,
+      403,
+      338,
+      317,
+      329,
+      451,
+      430,
+      497,
+      487,
+      422,
+      522,
+      534,
+      513,
+      481,
+      449,
+      472,
+      627,
+      606,
+      618,
+      597,
+      565,
+      654,
+      556,
+      546,
+      646,
+      592,
+      582
+    ]
+  ],
+  "noncanonical_G_equivariant_map": "Select a regular 11-cell base flag and A5 face stabilizer H, plus a Klein cubic eigenline fixed by U=C11. Then g->(gH,gU) is a bijection between 660 flags and 11x60 pairs. It is equivariant under left G multiplication.",
+  "order3_element_count": 110,
+  "product_set_cardinality": 660,
+  "references": [
+    "https://arxiv.org/abs/math/0606660",
+    "https://arxiv.org/abs/1001.4853"
+  ],
+  "sixty_Klein_orbit_cosets": 60,
+  "status": "PASS_EXPLICIT_PSL2_11_A5_C11_COMPLEMENTARY_FLAG_KLEIN_11x60_BIJECTION"
+}
