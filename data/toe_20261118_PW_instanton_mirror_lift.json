@@ -1,0 +1,560 @@
+{
+  "scope": "local internal PW mirror-pair lift; no global G2/SM or observed mass prediction",
+  "exact": {
+    "trajectory_radius": "(1+exp(-2*t))^(-1/2)",
+    "verified_flows": 4,
+    "f_origin_minus_f_outer": "1/4",
+    "negative_gradient_polar_angular_velocity": "r^2*sin(4*theta)",
+    "Morse_incidence_row_orientation_choice": [
+      [
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "kernel_projector": [
+      [
+        "3/4",
+        "-1/4",
+        "-1/4",
+        "-1/4"
+      ],
+      [
+        "-1/4",
+        "3/4",
+        "-1/4",
+        "-1/4"
+      ],
+      [
+        "-1/4",
+        "-1/4",
+        "3/4",
+        "-1/4"
+      ],
+      [
+        "-1/4",
+        "-1/4",
+        "-1/4",
+        "3/4"
+      ]
+    ],
+    "Morse_differential_rank": 1,
+    "Morse_kernel_dimension": 3,
+    "arbitrary_unit_phase_row_norm_squared": 4,
+    "exact_low_subspace_mass_row": "sqrt(lambda_q)/2 * (1,1,1,1)",
+    "basis_scope": "C4 Fourier choice within exact three zero modes plus lowest positive odd partner; not exactly point-supported Gaussian states"
+  },
+  "native_bilinear": {
+    "actual_native_charge_dimensions": [
+      16,
+      16
+    ],
+    "trace_pairing_rank": 16,
+    "trace_pairing_eigenvalues": {
+      "12": 16
+    },
+    "same_charge_pair_brackets_vanish": true,
+    "meaning": "Rbar-R bilinear is nondegenerate; R-R adjoint cubic still forbidden; neither fact predicts a light-family Yukawa"
+  },
+  "spectral": [
+    {
+      "q": 1.0,
+      "n": 32,
+      "omega": 3.0,
+      "lowest_lambda": 1.0361110592705758,
+      "next_two_lambda": [
+        4.821797432155987,
+        4.8217974321559876
+      ],
+      "projected_eigen_residual": 4.312227066335331e-14,
+      "full_space_polynomial_operator_residual": 0.0015522075461357316,
+      "exterior_partner_norm_squared": 1.0361110592705742,
+      "partner_relative_norm_error": 1.5001405694573495e-15,
+      "exact_Galerkin_factor_relative_error": 2.077734164594482e-16,
+      "C4_ground_rotation_error": 1.2380076954400225e-16,
+      "Eyring_Kramers_candidate": 0.5460694491888175,
+      "lambda_over_candidate": 1.8973979606618019,
+      "dimensionless_singular_mass": 1.0178954068422628,
+      "mirror_to_next_internal_mass_ratio": 0.5089477034211314,
+      "C4_point_basis_equal_entry": 0.5089477034211314
+    },
+    {
+      "q": 1.0,
+      "n": 48,
+      "omega": 3.0,
+      "lowest_lambda": 1.0361110576327128,
+      "next_two_lambda": [
+        4.8217974275232445,
+        4.821797427523246
+      ],
+      "projected_eigen_residual": 1.5267588534061274e-13,
+      "full_space_polynomial_operator_residual": 6.701534356522859e-05,
+      "exterior_partner_norm_squared": 1.0361110576327137,
+      "partner_relative_norm_error": 8.572231839021375e-16,
+      "exact_Galerkin_factor_relative_error": 2.123225830967483e-16,
+      "C4_ground_rotation_error": 1.1099042836273103e-16,
+      "Eyring_Kramers_candidate": 0.5460694491888175,
+      "lambda_over_candidate": 1.8973979576624345,
+      "dimensionless_singular_mass": 1.0178954060377288,
+      "mirror_to_next_internal_mass_ratio": 0.5089477030188644,
+      "C4_point_basis_equal_entry": 0.5089477030188644
+    },
+    {
+      "q": 2.0,
+      "n": 32,
+      "omega": 3.0,
+      "lowest_lambda": 0.884813635670925,
+      "next_two_lambda": [
+        6.418798909662092,
+        10.387769875648805
+      ],
+      "projected_eigen_residual": 2.1235863615268892e-13,
+      "full_space_polynomial_operator_residual": 0.011524236844285045,
+      "exterior_partner_norm_squared": 0.8848136356709244,
+      "partner_relative_norm_error": 6.273767604085978e-16,
+      "exact_Galerkin_factor_relative_error": 2.0320200742657942e-16,
+      "C4_ground_rotation_error": 3.386213571442875e-16,
+      "Eyring_Kramers_candidate": 0.6624157265308156,
+      "lambda_over_candidate": 1.33573766478167,
+      "dimensionless_singular_mass": 0.9406453293728327,
+      "mirror_to_next_internal_mass_ratio": 0.371277831046006,
+      "C4_point_basis_equal_entry": 0.47032266468641637
+    },
+    {
+      "q": 2.0,
+      "n": 48,
+      "omega": 3.0,
+      "lowest_lambda": 0.8848135675621178,
+      "next_two_lambda": [
+        6.418798569107769,
+        6.418798569107781
+      ],
+      "projected_eigen_residual": 5.867879193013534e-13,
+      "full_space_polynomial_operator_residual": 0.0009574017206769932,
+      "exterior_partner_norm_squared": 0.8848135675621179,
+      "partner_relative_norm_error": 1.254753617402249e-16,
+      "exact_Galerkin_factor_relative_error": 2.1895935097198006e-16,
+      "C4_ground_rotation_error": 1.3695867575351188e-16,
+      "Eyring_Kramers_candidate": 0.6624157265308156,
+      "lambda_over_candidate": 1.3357375619628442,
+      "dimensionless_singular_mass": 0.9406452931695974,
+      "mirror_to_next_internal_mass_ratio": 0.37127782660560765,
+      "C4_point_basis_equal_entry": 0.4703226465847987
+    },
+    {
+      "q": 4.0,
+      "n": 32,
+      "omega": 4.0,
+      "lowest_lambda": 0.5136349786568741,
+      "next_two_lambda": [
+        9.024827922774188,
+        13.932506952312893
+      ],
+      "projected_eigen_residual": 2.0315675709355033e-13,
+      "full_space_polynomial_operator_residual": 0.07876940471819192,
+      "exterior_partner_norm_squared": 0.5136349786568748,
+      "partner_relative_norm_error": 1.2969011894731068e-15,
+      "exact_Galerkin_factor_relative_error": 1.7890090036392677e-16,
+      "C4_ground_rotation_error": 2.290475304648249e-16,
+      "Eyring_Kramers_candidate": 0.48737825459866285,
+      "lambda_over_candidate": 1.0538734008143893,
+      "dimensionless_singular_mass": 0.7166833182493326,
+      "mirror_to_next_internal_mass_ratio": 0.23856560557685108,
+      "C4_point_basis_equal_entry": 0.3583416591246663
+    },
+    {
+      "q": 4.0,
+      "n": 48,
+      "omega": 4.0,
+      "lowest_lambda": 0.5136341066499567,
+      "next_two_lambda": [
+        9.02481912701398,
+        9.024819127014
+      ],
+      "projected_eigen_residual": 7.339229468258144e-13,
+      "full_space_polynomial_operator_residual": 0.006006906870811189,
+      "exterior_partner_norm_squared": 0.5136341066499562,
+      "partner_relative_norm_error": 8.646022608321664e-16,
+      "exact_Galerkin_factor_relative_error": 1.7532716188586823e-16,
+      "C4_ground_rotation_error": 2.5244194796609014e-16,
+      "Eyring_Kramers_candidate": 0.48737825459866285,
+      "lambda_over_candidate": 1.0538716116354319,
+      "dimensionless_singular_mass": 0.7166827098862903,
+      "mirror_to_next_internal_mass_ratio": 0.23856551932346304,
+      "C4_point_basis_equal_entry": 0.3583413549431452
+    },
+    {
+      "q": 6.0,
+      "n": 32,
+      "omega": 6.0,
+      "lowest_lambda": 0.2655734010385693,
+      "next_two_lambda": [
+        11.785668436565874,
+        17.519613743791624
+      ],
+      "projected_eigen_residual": 6.01839765274458e-14,
+      "full_space_polynomial_operator_residual": 0.04093180793874351,
+      "exterior_partner_norm_squared": 0.26557340103856614,
+      "partner_relative_norm_error": 1.1914354403746057e-14,
+      "exact_Galerkin_factor_relative_error": 2.1213932137159157e-16,
+      "C4_ground_rotation_error": 6.712980797454553e-17,
+      "Eyring_Kramers_candidate": 0.26894465991130356,
+      "lambda_over_candidate": 0.9874648603402422,
+      "dimensionless_singular_mass": 0.5153381424255042,
+      "mirror_to_next_internal_mass_ratio": 0.15011191943027213,
+      "C4_point_basis_equal_entry": 0.2576690712127521
+    },
+    {
+      "q": 6.0,
+      "n": 48,
+      "omega": 6.0,
+      "lowest_lambda": 0.26557314502190754,
+      "next_two_lambda": [
+        11.785664112174487,
+        17.519592584340412
+      ],
+      "projected_eigen_residual": 2.7885228915792726e-13,
+      "full_space_polynomial_operator_residual": 0.0027719991660378382,
+      "exterior_partner_norm_squared": 0.26557314502190443,
+      "partner_relative_norm_error": 1.1705341926398481e-14,
+      "exact_Galerkin_factor_relative_error": 2.0700456738034782e-16,
+      "C4_ground_rotation_error": 5.690923611673429e-17,
+      "Eyring_Kramers_candidate": 0.26894465991130356,
+      "lambda_over_candidate": 0.987463908409604,
+      "dimensionless_singular_mass": 0.5153378940286727,
+      "mirror_to_next_internal_mass_ratio": 0.15011187461469477,
+      "C4_point_basis_equal_entry": 0.25766894701433635
+    },
+    {
+      "q": 8.0,
+      "n": 32,
+      "omega": 8.0,
+      "lowest_lambda": 0.12825091877690897,
+      "next_two_lambda": [
+        14.933996883408383,
+        21.64428226817775
+      ],
+      "projected_eigen_residual": 1.9442083434639397e-14,
+      "full_space_polynomial_operator_residual": 0.023643117400174708,
+      "exterior_partner_norm_squared": 0.12825091877690942,
+      "partner_relative_norm_error": 3.4626590911411e-15,
+      "exact_Galerkin_factor_relative_error": 1.4020343040143368e-16,
+      "C4_ground_rotation_error": 3.0975955533965816e-17,
+      "Eyring_Kramers_candidate": 0.13191894825895192,
+      "lambda_over_candidate": 0.9721948246976413,
+      "dimensionless_singular_mass": 0.35812137436476615,
+      "mirror_to_next_internal_mass_ratio": 0.09267065109430239,
+      "C4_point_basis_equal_entry": 0.17906068718238308
+    },
+    {
+      "q": 8.0,
+      "n": 48,
+      "omega": 8.0,
+      "lowest_lambda": 0.12825082529330822,
+      "next_two_lambda": [
+        14.933994344337217,
+        14.933994344337238
+      ],
+      "projected_eigen_residual": 5.977042408069221e-14,
+      "full_space_polynomial_operator_residual": 0.0013012743483517327,
+      "exterior_partner_norm_squared": 0.12825082529330895,
+      "partner_relative_norm_error": 5.626825124563196e-15,
+      "exact_Galerkin_factor_relative_error": 1.4445375258614487e-16,
+      "C4_ground_rotation_error": 6.04286266235065e-17,
+      "Eyring_Kramers_candidate": 0.13191894825895192,
+      "lambda_over_candidate": 0.972194116053417,
+      "dimensionless_singular_mass": 0.35812124384530475,
+      "mirror_to_next_internal_mass_ratio": 0.09267062519784185,
+      "C4_point_basis_equal_entry": 0.17906062192265237
+    },
+    {
+      "q": 12.0,
+      "n": 32,
+      "omega": 12.0,
+      "lowest_lambda": 0.02612389134624246,
+      "next_two_lambda": [
+        22.318763537118453,
+        22.318763537118464
+      ],
+      "projected_eigen_residual": 3.0360459329028516e-15,
+      "full_space_polynomial_operator_residual": 0.009291029170149985,
+      "exterior_partner_norm_squared": 0.026123891346242913,
+      "partner_relative_norm_error": 1.7264966301386933e-14,
+      "exact_Galerkin_factor_relative_error": 2.0116674678285404e-16,
+      "C4_ground_rotation_error": 2.4108433665910845e-17,
+      "Eyring_Kramers_candidate": 0.026779932340351975,
+      "lambda_over_candidate": 0.9755025148767463,
+      "dimensionless_singular_mass": 0.16162886916093444,
+      "mirror_to_next_internal_mass_ratio": 0.03421242583130575,
+      "C4_point_basis_equal_entry": 0.08081443458046722
+    },
+    {
+      "q": 12.0,
+      "n": 48,
+      "omega": 12.0,
+      "lowest_lambda": 0.026123877347993665,
+      "next_two_lambda": [
+        22.318762424540818,
+        22.31876242454082
+      ],
+      "projected_eigen_residual": 7.44644572518925e-15,
+      "full_space_polynomial_operator_residual": 0.00040838696291456384,
+      "exterior_partner_norm_squared": 0.026123877347994245,
+      "partner_relative_norm_error": 2.217885320996394e-14,
+      "exact_Galerkin_factor_relative_error": 2.0558398756098282e-16,
+      "C4_ground_rotation_error": 3.0636092247353205e-17,
+      "Eyring_Kramers_candidate": 0.026779932340351975,
+      "lambda_over_candidate": 0.9755019921626252,
+      "dimensionless_singular_mass": 0.1616288258572513,
+      "mirror_to_next_internal_mass_ratio": 0.03421241751783119,
+      "C4_point_basis_equal_entry": 0.08081441292862565
+    },
+    {
+      "q": 16.0,
+      "n": 32,
+      "omega": 16.0,
+      "lowest_lambda": 0.004749235009878148,
+      "next_two_lambda": [
+        30.522134889441553,
+        30.522134889441563
+      ],
+      "projected_eigen_residual": 3.4229088263256997e-15,
+      "full_space_polynomial_operator_residual": 0.003942295617641639,
+      "exterior_partner_norm_squared": 0.004749235009877978,
+      "partner_relative_norm_error": 3.579584928775485e-14,
+      "exact_Galerkin_factor_relative_error": 1.8477224059685478e-16,
+      "C4_ground_rotation_error": 1.6058824969582298e-17,
+      "Eyring_Kramers_candidate": 0.004832359637785145,
+      "lambda_over_candidate": 0.9827983357743018,
+      "dimensionless_singular_mass": 0.06891469371533293,
+      "mirror_to_next_internal_mass_ratio": 0.012473960849308748,
+      "C4_point_basis_equal_entry": 0.034457346857666465
+    },
+    {
+      "q": 16.0,
+      "n": 48,
+      "omega": 16.0,
+      "lowest_lambda": 0.004749232369533544,
+      "next_two_lambda": [
+        30.522134488370895,
+        30.52213448837094
+      ],
+      "projected_eigen_residual": 1.906921000764554e-15,
+      "full_space_polynomial_operator_residual": 0.0001431185732911346,
+      "exterior_partner_norm_squared": 0.004749232369533371,
+      "partner_relative_norm_error": 3.652639713114704e-14,
+      "exact_Galerkin_factor_relative_error": 1.9198521001610155e-16,
+      "C4_ground_rotation_error": 9.48174615174652e-18,
+      "Eyring_Kramers_candidate": 0.004832359637785145,
+      "lambda_over_candidate": 0.9827977893860357,
+      "dimensionless_singular_mass": 0.0689146745587146,
+      "mirror_to_next_internal_mass_ratio": 0.012473957463805184,
+      "C4_point_basis_equal_entry": 0.0344573372793573
+    },
+    {
+      "q": 20.0,
+      "n": 32,
+      "omega": 20.0,
+      "lowest_lambda": 0.0008072543781709098,
+      "next_two_lambda": [
+        38.86950804344391,
+        38.86950804344392
+      ],
+      "projected_eigen_residual": 1.8143908873657746e-15,
+      "full_space_polynomial_operator_residual": 0.0017257758991229496,
+      "exterior_partner_norm_squared": 0.0008072543781739598,
+      "partner_relative_norm_error": 3.778200792579958e-12,
+      "exact_Galerkin_factor_relative_error": 1.8303780917254692e-16,
+      "C4_ground_rotation_error": 4.4227760897519294e-18,
+      "Eyring_Kramers_candidate": 0.0008174859503510345,
+      "lambda_over_candidate": 0.9874841002763031,
+      "dimensionless_singular_mass": 0.028412222337770587,
+      "mirror_to_next_internal_mass_ratio": 0.004557227218362638,
+      "C4_point_basis_equal_entry": 0.014206111168885293
+    },
+    {
+      "q": 20.0,
+      "n": 48,
+      "omega": 20.0,
+      "lowest_lambda": 0.0008072538429274852,
+      "next_two_lambda": [
+        38.8695079113504,
+        38.869507911350404
+      ],
+      "projected_eigen_residual": 2.3192810398580996e-15,
+      "full_space_polynomial_operator_residual": 5.743987527342251e-05,
+      "exterior_partner_norm_squared": 0.0008072538429305347,
+      "partner_relative_norm_error": 3.77766606782684e-12,
+      "exact_Galerkin_factor_relative_error": 1.9054270579212262e-16,
+      "C4_ground_rotation_error": 1.5451051235571274e-17,
+      "Eyring_Kramers_candidate": 0.0008174859503510345,
+      "lambda_over_candidate": 0.9874834455330326,
+      "dimensionless_singular_mass": 0.028412212918523,
+      "mirror_to_next_internal_mass_ratio": 0.004557225715289839,
+      "C4_point_basis_equal_entry": 0.0142061064592615
+    },
+    {
+      "q": 24.0,
+      "n": 32,
+      "omega": 24.0,
+      "lowest_lambda": 0.00013147857195873182,
+      "next_two_lambda": [
+        47.123336772946104,
+        47.12333677294613
+      ],
+      "projected_eigen_residual": 7.237588175167734e-15,
+      "full_space_polynomial_operator_residual": 0.0007672998744292025,
+      "exterior_partner_norm_squared": 0.00013147857195900303,
+      "partner_relative_norm_error": 2.062793726816387e-12,
+      "exact_Galerkin_factor_relative_error": 2.243193852675736e-16,
+      "C4_ground_rotation_error": 2.1156552015497686e-17,
+      "Eyring_Kramers_candidate": 0.00013276163115925053,
+      "lambda_over_candidate": 0.9903356173819554,
+      "dimensionless_singular_mass": 0.01146641059611646,
+      "mirror_to_next_internal_mass_ratio": 0.0016703576549285803,
+      "C4_point_basis_equal_entry": 0.00573320529805823
+    },
+    {
+      "q": 24.0,
+      "n": 48,
+      "omega": 24.0,
+      "lowest_lambda": 0.00013147846464992507,
+      "next_two_lambda": [
+        47.12333672302516,
+        47.123336723025275
+      ],
+      "projected_eigen_residual": 4.496039493122662e-15,
+      "full_space_polynomial_operator_residual": 2.296248386391489e-05,
+      "exterior_partner_norm_squared": 0.0001314784646501954,
+      "partner_relative_norm_error": 2.056198423286156e-12,
+      "exact_Galerkin_factor_relative_error": 2.0468151772380393e-16,
+      "C4_ground_rotation_error": 7.642830446734167e-17,
+      "Eyring_Kramers_candidate": 0.00013276163115925053,
+      "lambda_over_candidate": 0.9903348091001815,
+      "dimensionless_singular_mass": 0.011466405916847923,
+      "mirror_to_next_internal_mass_ratio": 0.0016703569741656757,
+      "C4_point_basis_equal_entry": 0.0057332029584239615
+    }
+  ],
+  "semiclassical_normalization": "H_q=q^2 Delta_(h), h=1/q; candidate lambda=(2sqrt(2)/pi)q exp(-q/2)",
+  "asymptotic_status": "tested leading Eyring-Kramers prediction; whole-space escape-domain theorem not proved here",
+  "independent_width_controls": [
+    {
+      "q": 8.0,
+      "n": 56,
+      "omega": 6.0,
+      "lowest_lambda": 0.1282508266815195,
+      "next_two_lambda": [
+        14.933994388821752,
+        14.933994388821766
+      ],
+      "projected_eigen_residual": 1.995671194195344e-13,
+      "full_space_polynomial_operator_residual": 0.0072334282095771595,
+      "exterior_partner_norm_squared": 0.12825082668151466,
+      "partner_relative_norm_error": 3.7656444656783966e-14,
+      "exact_Galerkin_factor_relative_error": 1.9409972864929282e-16,
+      "C4_ground_rotation_error": 1.0279950867029315e-16,
+      "Eyring_Kramers_candidate": 0.13191894825895192,
+      "lambda_over_candidate": 0.9721941265766306,
+      "dimensionless_singular_mass": 0.3581212457834909,
+      "mirror_to_next_internal_mass_ratio": 0.09267062556136306,
+      "C4_point_basis_equal_entry": 0.17906062289174546
+    },
+    {
+      "q": 16.0,
+      "n": 56,
+      "omega": 12.0,
+      "lowest_lambda": 0.004749232395873738,
+      "next_two_lambda": [
+        30.522134493082813,
+        30.522134493082852
+      ],
+      "projected_eigen_residual": 5.950689120568091e-15,
+      "full_space_polynomial_operator_residual": 0.0008433759368347493,
+      "exterior_partner_norm_squared": 0.004749232395869739,
+      "partner_relative_norm_error": 8.421160811880505e-13,
+      "exact_Galerkin_factor_relative_error": 1.8587323634571428e-16,
+      "C4_ground_rotation_error": 4.006200082475163e-17,
+      "Eyring_Kramers_candidate": 0.004832359637785145,
+      "lambda_over_candidate": 0.982797794836829,
+      "dimensionless_singular_mass": 0.06891467474982188,
+      "mirror_to_next_internal_mass_ratio": 0.012473957497433871,
+      "C4_point_basis_equal_entry": 0.03445733737491094
+    },
+    {
+      "q": 24.0,
+      "n": 56,
+      "omega": 18.0,
+      "lowest_lambda": 0.0001314784652475988,
+      "next_two_lambda": [
+        47.12333672327992,
+        47.123336723279934
+      ],
+      "projected_eigen_residual": 8.609942766341444e-15,
+      "full_space_polynomial_operator_residual": 0.00012434734594444146,
+      "exterior_partner_norm_squared": 0.00013147846524798508,
+      "partner_relative_norm_error": 2.937926969826168e-12,
+      "exact_Galerkin_factor_relative_error": 1.9498326482056448e-16,
+      "C4_ground_rotation_error": 5.356693833885798e-17,
+      "Eyring_Kramers_candidate": 0.00013276163115925053,
+      "lambda_over_candidate": 0.9903348136020373,
+      "dimensionless_singular_mass": 0.01146640594290987,
+      "mirror_to_next_internal_mass_ratio": 0.001670356977957708,
+      "C4_point_basis_equal_entry": 0.005733202971454935
+    }
+  ],
+  "high_resolution_controls": [
+    {
+      "q": 8.0,
+      "n": 80,
+      "omega": 8.0,
+      "lowest_lambda": 0.12825082518751563,
+      "next_two_lambda": [
+        14.933994340493879,
+        14.933994340493882
+      ],
+      "projected_eigen_residual": 1.300149196615133e-13,
+      "full_space_polynomial_operator_residual": 5.716139143670224e-06,
+      "exterior_partner_norm_squared": 0.12825082518751638,
+      "partner_relative_norm_error": 5.843241480327956e-15,
+      "exact_Galerkin_factor_relative_error": 1.5554555565058177e-16,
+      "C4_ground_rotation_error": 9.028541471202502e-17,
+      "Eyring_Kramers_candidate": 0.13191894825895192,
+      "lambda_over_candidate": 0.9721941152514656,
+      "dimensionless_singular_mass": 0.35812124369759973,
+      "mirror_to_next_internal_mass_ratio": 0.092670625171545,
+      "C4_point_basis_equal_entry": 0.17906062184879987
+    },
+    {
+      "q": 24.0,
+      "n": 96,
+      "omega": 24.0,
+      "lowest_lambda": 0.0001314784646087707,
+      "next_two_lambda": [
+        47.12333672299946,
+        47.12333672299958
+      ],
+      "projected_eigen_residual": 4.244159273941366e-15,
+      "full_space_polynomial_operator_residual": 1.0827042839124537e-09,
+      "exterior_partner_norm_squared": 0.00013147846460904178,
+      "partner_relative_norm_error": 2.061764631814883e-12,
+      "exact_Galerkin_factor_relative_error": 2.030806805920382e-16,
+      "C4_ground_rotation_error": 3.8402039433336235e-17,
+      "Eyring_Kramers_candidate": 0.00013276163115925053,
+      "lambda_over_candidate": 0.9903348087901945,
+      "dimensionless_singular_mass": 0.01146640591505336,
+      "mirror_to_next_internal_mass_ratio": 0.0016703569739047101,
+      "C4_point_basis_equal_entry": 0.00573320295752668
+    }
+  ],
+  "limitations": [
+    "quartic and q supplied",
+    "C4 Fourier mass row basis choice",
+    "Morse incidence is not a normalized finite-q mass matrix",
+    "whole-space Eyring-Kramers asymptotic not certified",
+    "no chiral-generation Yukawa from this vectorlike mass",
+    "native adjoint16_-3 pair brackets still vanish",
+    "no compactification scale or global inflow/gauge normalization"
+  ]
+}
