@@ -1,0 +1,100 @@
+{
+  "status": "PASS",
+  "real_locus": {
+    "nonempty_point": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "real_link_dimension": 3,
+    "smoothness_proof": "The complex cone has no nonzero critical point. On f=0 intersectS4, a vanishing tangential gradient would give grad f=c*x; Euler givesc=0, contradicting cone smoothness.",
+    "no_fixed_locus_intersections": "Two distinct reflections multiply to a nonidentity D power, free on Y. Thus their fixed loci are disjoint.",
+    "associative_reason": "K sends eta and transverse omega to their negatives and the complex3-form to its conjugate. The fixed real3-locus is special Legendrian, hence associative for the invariant weakG2 form.",
+    "not_computed": "Topology/connected components of R, calibrated volumes, charged localized spectra, resolutions and their backreaction."
+  },
+  "spin": {
+    "real_orientation_preserved": true,
+    "normal_real_codimension": 4,
+    "spin_lift_square": 1,
+    "SU4_singlet_spin_action": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "SU4_pair_invariant_spinors": 1,
+    "Cayley_invariant": true,
+    "Cayley_term_count": 14,
+    "transformation": "K:J->-J, Omega4->barOmega4; Phi=J^2/2+ReOmega4 invariant.",
+    "supersymmetry_scope": "Projects the known SU4-invariant spinor pair to one. Published Spin7 quotient construction supplies the standardN1 AdS route; no full interacting localized spectrum or accidental spinors computed."
+  },
+  "dihedral22": {
+    "group_order": 22,
+    "normal_forms": "D^a P^b K^e; K D K=D^-1, K P K=P",
+    "antiholomorphic_involution_count": 11,
+    "other_antiholomorphic_elements_free": true,
+    "pairwise_disjoint_reflection_fixed_loci": true,
+    "isotropy_normal_closure_order": 22,
+    "underlying_quotient_pi1": "trivial",
+    "orbifold_pi1": "dihedral22",
+    "singular_set": "R",
+    "R": "Y intersect R5, a smooth compact real3-manifold; connectedness not computed",
+    "local_stabilizer": "C2, acting as minus identity on four real normal directions",
+    "gauge_scope": "Each connected component has local A1 transverse type; no connected-component count or full gauge spectrum inferred."
+  },
+  "extended110": {
+    "group_order": 110,
+    "normal_forms": "D^a P^b K^e; K D K=D^-1, K P K=P",
+    "antiholomorphic_involution_count": 11,
+    "other_antiholomorphic_elements_free": true,
+    "pairwise_disjoint_reflection_fixed_loci": true,
+    "isotropy_normal_closure_order": 22,
+    "underlying_quotient_pi1": "C5",
+    "orbifold_pi1": "(C11:C5):C2",
+    "singular_set": "R/C5",
+    "R": "Y intersect R5, a smooth compact real3-manifold; connectedness not computed",
+    "local_stabilizer": "C2, acting as minus identity on four real normal directions",
+    "gauge_scope": "Each connected component has local A1 transverse type; no connected-component count or full gauge spectrum inferred."
+  },
+  "Wilson_tradeoff": {
+    "C11_SM_Wilson_line_extends_to_dihedral22_inside_SU5": false,
+    "reason": "K D K=D^-1 would require W and W^-1 to be conjugate. Their eigenvalue multisets differ, so the previous3+2 Wilson line does not extend.",
+    "underlying_dihedral_quotient_has_no_nontrivial_flat_holonomy": true,
+    "larger_110_underlying_pi1": "C5, which still cannot split standardSU5 by an ordinary Wilson line",
+    "possible_orbifold_gauge_parity": [
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "parity_scope": "diag(1,1,1,-1,-1) is a valid conditionalSU5 isotropy projection. It is not a flat Wilson line on the underlying space and does not supply anSU5 gauge sector.",
+    "C_field_scope": "Neither363 nor15 smooth flat-C counts is inherited without a new orbifold/differential calculation. Isotropy and2-primary data matter."
+  },
+  "holomorphic_gauge_control": {
+    "projective_involution_fixed_locus": "smooth plane cubic E plus a projective line",
+    "exported_generator_mod23_closure": 660,
+    "exported_generator_square_error": 5.043857873640395e-16,
+    "link_fixed_locus": "Q, the circle bundle over E with Euler degree3",
+    "Q_H1": "Z^2 plus Z3",
+    "Q_H2": "Z^2",
+    "Q_H3": "Z",
+    "Q_genus_base": 1,
+    "Q_volume_Ric6": "3*pi**2/2",
+    "full_PSL_quotient_generic_A1_stratum_volume": "pi**2/4",
+    "volume_reason": "Base Kahler class(pi/2)H gives area(E)=3pi/2; Reeb periodpi gives volume3pi^2/2. Full quotient divides by the effective involution centralizer of order6.",
+    "higher_ADE_codimension4_excluded_for_holomorphic_PSL": true,
+    "exclusion_proof": "Every noninvolution has ambient fixed dimension<=1, hence no fixed link vector by invariant-cubic smoothness and Euler. A higher finiteSU2 subgroup has an element of order>2. Thus only genericA1 codimension4 singularities occur in this holomorphic quotient.",
+    "V4_intersections": "Three circle directions perV4 fixed binary cubic; local cone C x (C^3/V4), codimension6 on the link, not anA2 codimension4 locus.",
+    "tree_gauge_kinetic_coefficient": "g4^-2=R^3 Vol(Q_unit)/g7^2, with Vol(Q_unit)=3pi^2/2 for the singleC2 quotient, pi^2/4 for the fullPSL generic-stratum orbifold volume.",
+    "physics_scope": "Standard localADE gauge-action reduction, conditional on the unfrozen local theory. The normalized7D gauge coupling, thresholds, flux interactions and singular-intersection matter are not calculated. These formulas are not observed coupling predictions."
+  },
+  "geometric_input": "Published KE existence and uniqueness make complex conjugation an isometry of the real cubic SE construction.",
+  "physics": "Standard unfrozen A1 local model supports an su2 gauge algebra along each singular real3-component. Full orbifold quantum consistency, gauge multiplicities, colorSU3 and chiralSM are not supplied."
+}
