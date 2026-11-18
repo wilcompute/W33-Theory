@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "base": {
+    "vertices": 80,
+    "edges": 160,
+    "degree": 4,
+    "cycle_rank": 81,
+    "point_count": 40,
+    "line_count": 40,
+    "base_laplacian_first_gap": 1.5505102572168157
+  },
+  "selected_tree_chords": [
+    [
+      1,
+      45
+    ],
+    [
+      16,
+      45
+    ],
+    [
+      28,
+      46
+    ]
+  ],
+  "voltage_axes": 3,
+  "deck_group": "(Z/nZ)^3",
+  "conductance_matrix_K_over_160_numerators": [
+    [
+      81,
+      -27,
+      9
+    ],
+    [
+      -27,
+      81,
+      -3
+    ],
+    [
+      9,
+      -3,
+      81
+    ]
+  ],
+  "conductance_matrix_denominator": 160,
+  "diffusion_D_over_12800_numerators": [
+    [
+      81,
+      -27,
+      9
+    ],
+    [
+      -27,
+      81,
+      -3
+    ],
+    [
+      9,
+      -3,
+      81
+    ]
+  ],
+  "diffusion_matrix_denominator": 12800,
+  "eigenvalues_K": [
+    0.33323314279913246,
+    0.4950800643468765,
+    0.6904367928539924
+  ],
+  "effective_edge_resistance": "79/160",
+  "one_edge_cycle_conductance": "81/160",
+  "n_covers": [
+    {
+      "n": 2,
+      "vertices": 640,
+      "edges": 1280,
+      "degree": 4,
+      "cycle_rank": 641,
+      "connected": true
+    },
+    {
+      "n": 3,
+      "vertices": 2160,
+      "edges": 4320,
+      "degree": 4,
+      "cycle_rank": 2161,
+      "connected": true
+    }
+  ],
+  "bloch_diagnostics": [
+    {
+      "epsilon": 0.25,
+      "lowest_eigenvalue": 0.0008245115987654614,
+      "homogenized_quadratic": 0.0008301269531250002,
+      "relative_error": 0.006764452519460895
+    },
+    {
+      "epsilon": 0.125,
+      "lowest_eigenvalue": 0.00020718009300661752,
+      "homogenized_quadratic": 0.00020753173828125005,
+      "relative_error": 0.0016944168518261415
+    },
+    {
+      "epsilon": 0.0625,
+      "lowest_eigenvalue": 5.186094603630693e-05,
+      "homogenized_quadratic": 5.188293457031251e-05,
+      "relative_error": 0.00042381053014228787
+    }
+  ],
+  "theorem": "For each fixed m in Z^3, n^2 times the lowest Bloch eigenvalue at theta=2*pi*m/n converges to (2*pi)^2*m^T D m. Positive D yields the spectral law of an elliptic operator on T^3.",
+  "noncanonical": "BFS tree and three selected chords fix an arbitrary voltage basis; different choices produce different tensors.",
+  "limits": "Low-energy scalar graph continuum only; no local 3D manifold cell structure, Einstein dynamics, Lorentzian metric, quantum field theory, or continuum Planck scale."
+}

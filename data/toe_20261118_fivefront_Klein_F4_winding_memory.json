@@ -1,0 +1,124 @@
+{
+  "status": "PASS",
+  "Klein_gauge": {
+    "parent_PSL_order": 660,
+    "centralizer_order": 12,
+    "effective_residual_action_order": 6,
+    "V4_joint_plus_dimension": 2,
+    "S_plus_T_minus_dimension": 1,
+    "mod23_binary_cubic_coefficients": [
+      14,
+      6,
+      8,
+      6
+    ],
+    "mod23_binary_cubic_discriminant": 12,
+    "binary_cubic_is_squarefree_in_characteristic_zero": true,
+    "extra_T_minus_fixed_point_on_elliptic_E": true,
+    "T_projective_fixed_points_on_E": 4,
+    "induced_T_action_H1_E": "-identity",
+    "Q_circle_bundle_Euler_degree": 3,
+    "b1_Q": 2,
+    "b2_Q": 2,
+    "quotient_b1_rational": 0,
+    "quotient_b2_rational": 0,
+    "quotient_b0_rational": 1,
+    "quotient_b3_rational": 1,
+    "quotient_rational_homology": "Q/C6 has the rational Betti numbers of S3",
+    "physics": "Unfluxed trivial-adjoint-coefficient gauge zero-mode count has no b1-type moduli on full holomorphic PSL quotient. Localized intersection states, nontrivial adjoint monodromy, flux and orbifold singular spectra not computed."
+  },
+  "F4_RG": {
+    "inputs": {
+      "alpha_em_inv": 127.952,
+      "sin2_MSbar": 0.23129,
+      "alpha_s": 0.1179,
+      "MZ_GeV": 91.1876,
+      "beta_coeffs_hypercharge_weak_strong": [
+        6.833333333333333,
+        -3.1666666666666665,
+        -7
+      ]
+    },
+    "F4_boundary": "g3^2=2*g2^2 and gY^2=3*g2^2, sin^2(thetaW)=3/4",
+    "color_match_lnmu_overMZ": 7.325511423919358,
+    "color_match_GeV": 138472.95943940224,
+    "hypercharge_match_lnmu_overMZ": 70.48139074436936,
+    "hypercharge_match_log10_GeV": 32.56961486264917,
+    "separation_lnmu": 63.155879320450005,
+    "color_match_residual_hypercharge": -18.930459154881895,
+    "hypercharge_match_residual_color": -8.665351021600864,
+    "reduced_Planck_scale_residuals": {
+      "invg2_3": 4.026960627561561,
+      "invg2_2": 3.871399566851937,
+      "invg2_Y": 4.55488583168303,
+      "g3sq_over_g2sq": 0.961370106366344,
+      "gYsq_over_g2sq": 0.84994436960925,
+      "sin2_thetaW": 0.4594432046563527,
+      "F4_color_residual": -4.182521688271184,
+      "F4_weak_hypercharge_residual": -9.79325792819715
+    },
+    "no_common_one_loop_SM_scale": true,
+    "limitation": "Only SM field content and one-loop beta functions in an illustrative MSbar benchmark, neglecting threshold corrections/new F4 states and two-loop effects; no UV no-go theorem."
+  },
+  "winding": {
+    "square_ratio1": {
+      "tau_real": 0.0,
+      "tau_imag": 1.0,
+      "shortest_norm": 1.0,
+      "shortest_vector": [
+        -1,
+        0
+      ],
+      "lambda_min": 9.42477796076938,
+      "m2L2": -5.016944081307837,
+      "BF_violation": true
+    },
+    "hexagonal_ratio1": {
+      "tau_real": 0.5,
+      "tau_imag": 0.8660254037844386,
+      "shortest_norm": 1.1547005383792512,
+      "shortest_vector": [
+        -1,
+        1
+      ],
+      "lambda_min": 10.882796185405304,
+      "m2L2": -4.463541850418787,
+      "BF_violation": true
+    },
+    "universal_unstable_threshold_ratio": 1.1026577908435842,
+    "safe_modulus_exists_only_if_ratio_at_least": 1.1026577908435842,
+    "cusp_still_unstable_at_any_fixed_finite_positive_ratio": true,
+    "maximum_BF_deficit_in_model": 2.25,
+    "minimum_m2L2": -6.25,
+    "conditional_status": "Consequences of the repository's mixed-mode dispersion. Not a full string-theory winding or KK spectrum."
+  },
+  "photon": {
+    "classical_entanglement_breaking_fidelity_bound": "F<=1/3",
+    "conditional_quantum_memory_channel": "Depolarizing qutrit memory eta=0.4 after coherent SWAP and causal break",
+    "eta": 0.4,
+    "choi_fidelity": 0.466666666666667,
+    "Choi_PT_eigenvalues": [
+      -0.06666666666666674,
+      -0.06666666666666674,
+      -0.06666666666666672,
+      0.20000000000000004,
+      0.20000000000000007,
+      0.20000000000000007,
+      0.20000000000000007,
+      0.20000000000000007,
+      0.20000000000000007
+    ],
+    "negativity": 0.20000000000000018,
+    "depolarizing_EB_threshold_eta": 0.25,
+    "exact_one_sided_99percent_both_errors": {
+      "accepted_shots": 292,
+      "plus_click_threshold": 117,
+      "false_positive": 0.009349016956448943,
+      "false_negative": 0.0099720384457056,
+      "p0": 0.3333333333333333,
+      "p1": 0.466666666666667
+    },
+    "necessary_resource": "independent entangled qutrit reference and joint maximally entangled projector",
+    "caveats": "The witness separates EB from non-EB channels in this scenario, not quantum memory from every dimension-bounded classical multi-time strategy. IID accepted shots, detection loopholes and calibration unverified; no hardware measured."
+  }
+}
