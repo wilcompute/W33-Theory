@@ -1,0 +1,274 @@
+{
+  "status": "PASS",
+  "geometry": {
+    "cone": "sum_(i=0)^4 w_i^2=0 inC5",
+    "link": "V5,2",
+    "local_gauge_group_input": "unfrozenA4 -> su5 along Q=V3,2=RP3",
+    "action": "C5 rotates the real(w3,w4) plane; K conjugates allw_i",
+    "orbifold_group": "C5 x C2, order10",
+    "fixed_holomorphic_locus": "u=v=0, sum_(i=0)^2 z_i^2=0",
+    "transverse_weights": [
+      1,
+      -1
+    ],
+    "all_antiholomorphic_elements_free_on_link": true,
+    "freeness_argument": "K-fixed real positive quadric has no nonzero point. If g^a K fixed a point for a!=0, its squareg^(2a) would fix it, forcing it intoQ, whereg acts trivially andK is free.",
+    "underlying_space_pi1": "C2, by quotienting the acting group by itsC5 isotropy",
+    "gauge_locus": "Qprime=RP3/K, a spherical3-manifold with pi1=C4",
+    "spin_input": "K preserves J^2/2+ReOmega4 and projects the standardSU4 singlet pair to one, as verified in the companionKleinSpin7 producer."
+  },
+  "gauge_locus": {
+    "covering": "S3 -> RP3 -> Qprime; full deck groupC4",
+    "parametrization": [
+      "a**2 - b**2",
+      "I*(a**2 + b**2)",
+      "2*a*b"
+    ],
+    "real_involution_lift": "(a,b)->(-i*barb,i*bara)",
+    "lift_square": "minus identity",
+    "pi1_Qprime": "C4",
+    "H1_Qprime": "Z4",
+    "H2_Qprime": 0,
+    "H3_Qprime": "Z",
+    "reason": "The free lift has order4, with its square the original antipodalC2. This distinguishesC4 fromC2xC2.",
+    "ambient_inclusion": "The gauge-locusC4 maps to ambientC2 by reduction mod2; a brane-localized order4 holonomy need not extend to bulk."
+  },
+  "gauge": {
+    "A4_cycle_action": "[E_i]->-[E_(5-i)]",
+    "cycle_action_equals_longest_Weyl": true,
+    "no_forced_outer_Dynkin_folding": true,
+    "monodromy_scope": "The cycle action is inner, so the gauge algebra can be described as anSU5 bundle after inner untwisting. This does not automatically choose a flat connection or breakSU5.",
+    "chosen_Wilson_matrix": "diag(-1,-1,-1,i,i)",
+    "chosen_character_charges": [
+      2,
+      2,
+      2,
+      1,
+      1
+    ],
+    "chosen_holonomy_order": 4,
+    "centralizer": "S(U3 x U2)",
+    "centralizer_Lie_algebra": "su3+su2+u1",
+    "centralizer_dimension": 12,
+    "all_3plus2_C4_choices": [
+      {
+        "color_charge": 0,
+        "weak_charge": 2,
+        "order": 2,
+        "adjoint_character_multiplicities": {
+          "0": 12,
+          "2": 12
+        },
+        "unbroken_dimension": 12
+      },
+      {
+        "color_charge": 2,
+        "weak_charge": 1,
+        "order": 4,
+        "adjoint_character_multiplicities": {
+          "0": 12,
+          "1": 6,
+          "3": 6
+        },
+        "unbroken_dimension": 12
+      },
+      {
+        "color_charge": 2,
+        "weak_charge": 3,
+        "order": 4,
+        "adjoint_character_multiplicities": {
+          "0": 12,
+          "3": 6,
+          "1": 6
+        },
+        "unbroken_dimension": 12
+      }
+    ],
+    "all_SU5_C4_conjugacy_multiplicity_patterns": [
+      [
+        0,
+        0,
+        3,
+        2
+      ],
+      [
+        0,
+        1,
+        1,
+        3
+      ],
+      [
+        0,
+        2,
+        3,
+        0
+      ],
+      [
+        0,
+        3,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        4
+      ],
+      [
+        1,
+        0,
+        4,
+        0
+      ],
+      [
+        1,
+        1,
+        2,
+        1
+      ],
+      [
+        1,
+        2,
+        0,
+        2
+      ],
+      [
+        1,
+        4,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        1,
+        2
+      ],
+      [
+        2,
+        2,
+        1,
+        0
+      ],
+      [
+        3,
+        0,
+        2,
+        0
+      ],
+      [
+        3,
+        1,
+        0,
+        1
+      ],
+      [
+        5,
+        0,
+        0,
+        0
+      ]
+    ],
+    "flat_local_system_cohomology_dimensions": [
+      12,
+      0,
+      0,
+      12
+    ],
+    "cohomology_reason": "Over characteristic zero, averaging over the finiteC4 deck group is exact and S3 has onlyH0,H3. The adjoint invariant space has dimension12. This is local-system cohomology, not the full flux-coupled physical multiplet spectrum.",
+    "vacuum_selection": "All flat choices, including trivial holonomy with unbrokenSU5, haveF=0 and zero classical Yang-Mills energy. No dynamical selection of the SM sectors is proved.",
+    "global_group_scope": "Uses the simply connectedSU5 lift. Global electric charge form and full orbifold C-field gluing remain uncomputed."
+  },
+  "spectrum": {
+    "Vol_V52": "27*pi**4/128",
+    "Vol_total_quotient": "27*pi**4/1280",
+    "gauge_Qprime_volume": "9*pi**2/8",
+    "Berger_lift_horizontal_radius_squared": "3/2",
+    "Berger_lift_fiber_radius_squared": "9/4",
+    "scalar_eigenvalue_formula": "(2/3)ell(ell+2)-(2/9)m^2; m=-ell,-ell+2,...,ell",
+    "deck_generator": "right multiplication byi*sigma_x, square=-I",
+    "deck_character_rule": "On each nonzero|m| pair: characters i^ell and-i^ell; the m0 line has i^ell. Left degeneracyell+1.",
+    "first_scalar_eigenvalues_by_C4_character": {
+      "0": "0",
+      "1": "16/9",
+      "2": "40/9",
+      "3": "16/9"
+    },
+    "analytic_tail_bound": "lambda >=(4/9)ell^2+(4/3)ell, increasing; ell>=3 is above both displayed nontrivial minima.",
+    "broken_vector_mass2_AdS_units_order4": "4/9",
+    "broken_vector_mass2_AdS_units_order2": "10/9",
+    "vector_scope": "The two-derivative localized gauge action, using internal scalar harmonics for external vector components. Not the full fermion/scalar/brane coupled spectrum.",
+    "R6_over_lp6_per_flux_N": "40960*pi**2/81",
+    "tree_g4_inverse_squared": "8*pi^3*sqrt(10*N)/c, ifg7^2=c*lp^3",
+    "tree_unification": "g3=g2=g5, gY^2=(3/5)g5^2; sin^2thetaW=3/8 at the unmatchedcompactification scale, standardSU5 normalization.",
+    "limitation": "Order5, fluxN and flat holonomy are choices. Broken gauge masses remain at the AdS scale; no parametric scale separation or observed coupling/cosmology follows."
+  },
+  "extra_gauge_and_obstruction": {
+    "surviving_geometric_continuous_algebra": "so3 + so2",
+    "geometric_KK_vector_dimension": 4,
+    "Reeb_U1_projected_by_K": true,
+    "actual_claim": "The12-dimensional result is a localized SM subsector, not the full gauge algebra. Four additional geometric vector candidates survive the simple quotient.",
+    "Brieskorn_controls": [
+      {
+        "p": 2,
+        "minimal_u_v_charge": "4/3",
+        "Lichnerowicz_obstructed": false
+      },
+      {
+        "p": 3,
+        "minimal_u_v_charge": "8/7",
+        "Lichnerowicz_obstructed": false
+      },
+      {
+        "p": 4,
+        "minimal_u_v_charge": "1",
+        "Lichnerowicz_obstructed": false
+      },
+      {
+        "p": 5,
+        "minimal_u_v_charge": "8/9",
+        "Lichnerowicz_obstructed": true
+      },
+      {
+        "p": 6,
+        "minimal_u_v_charge": "4/5",
+        "Lichnerowicz_obstructed": true
+      },
+      {
+        "p": 7,
+        "minimal_u_v_charge": "8/11",
+        "Lichnerowicz_obstructed": true
+      },
+      {
+        "p": 8,
+        "minimal_u_v_charge": "2/3",
+        "Lichnerowicz_obstructed": true
+      },
+      {
+        "p": 9,
+        "minimal_u_v_charge": "8/13",
+        "Lichnerowicz_obstructed": true
+      },
+      {
+        "p": 10,
+        "minimal_u_v_charge": "4/7",
+        "Lichnerowicz_obstructed": true
+      },
+      {
+        "p": 11,
+        "minimal_u_v_charge": "8/15",
+        "Lichnerowicz_obstructed": true
+      },
+      {
+        "p": 12,
+        "minimal_u_v_charge": "1/2",
+        "Lichnerowicz_obstructed": true
+      }
+    ],
+    "deformation_family": "z0^2+z1^2+z2^2+u^p+v^p, p>=5",
+    "obstruction": "Addingu^5+v^5 is a tempting way to remove the normal uv phase isometry while preservingC5. In the stated family the u,v Reeb charge is4/(p/2+2)<1. A holomorphic harmonic would have lambda=q(q+6)<7, violating Lichnerowicz for Ric=6g.",
+    "scope": "This rules out that specific SE deformation family. It is not a no-go for all nonhomogeneous cones, flux deformations or gauge completions."
+  },
+  "limits": "No chiral families, anomaly completion, full localized supersymmetric action, flux/Page/gluing completion, vacuum selection or observedTOE derived. The proposed gauge geometry is a candidate."
+}
