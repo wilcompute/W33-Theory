@@ -1,0 +1,332 @@
+{
+  "status": "PASS",
+  "parent": "c0ca57dab",
+  "group": "pi1 exterior T(2,6) = <a,c | [a,c^3]=1>, c=ab",
+  "topology_source": "Kitano-Morifuji-Tran arXiv:1904.08026 section3.1, mu=2,p=1,q=3; eliminate x=y^3; set a=m1,c=y",
+  "unitary_H27": "a->X, c->XY; recover b=X^-1*c=Y, onto H27",
+  "full_flat_connection": "a->tX,c->uXY; compact H27 part remains onto; nonunitary scalar part is a closed Higgs period, not compact gauge holonomy",
+  "fox_d0": "vertical(A-I,C-I)",
+  "fox_d1": "horizontal((1-u^3)I,(A-I)(I+C+C^2))",
+  "exact_generic_proof": "C^3=u^3 I. If u^3!=1, C-I invertible and first Fox block invertible: ranks(d0,d1)=(3,3); all base cohomology vanishes.",
+  "explicit_contraction": "h1=(0,(I+C+C^2)/(u^3-1)); h2=((1-u^3)^-1 I,0)^T; h1*d0=I3, d1*h2=I3, d0*h1+h2*d1=I6; checked exactly at all nonresonant controls.",
+  "puncture_proof": "A ball adds a rank3 sphere to absolute H2. Relative S2 kills that sphere and adds rank3 H1 via H0(S2); (0,3,0,0) when base acyclic.",
+  "exact_controls": [
+    {
+      "t": "1",
+      "u": "1",
+      "central_fiber": "1",
+      "d0_rank": 3,
+      "d1_rank": 1,
+      "base_betti": [
+        0,
+        2,
+        2,
+        0
+      ],
+      "relative_sphere_betti": [
+        0,
+        5,
+        2,
+        0
+      ]
+    },
+    {
+      "t": "1",
+      "u": "2",
+      "central_fiber": "8",
+      "d0_rank": 3,
+      "d1_rank": 3,
+      "base_betti": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_sphere_betti": [
+        0,
+        3,
+        0,
+        0
+      ]
+    },
+    {
+      "t": "2",
+      "u": "1",
+      "central_fiber": "1",
+      "d0_rank": 3,
+      "d1_rank": 1,
+      "base_betti": [
+        0,
+        2,
+        2,
+        0
+      ],
+      "relative_sphere_betti": [
+        0,
+        5,
+        2,
+        0
+      ]
+    },
+    {
+      "t": "2",
+      "u": "2",
+      "central_fiber": "8",
+      "d0_rank": 3,
+      "d1_rank": 3,
+      "base_betti": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_sphere_betti": [
+        0,
+        3,
+        0,
+        0
+      ]
+    },
+    {
+      "t": "1",
+      "u": "1/2",
+      "central_fiber": "1/8",
+      "d0_rank": 3,
+      "d1_rank": 3,
+      "base_betti": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_sphere_betti": [
+        0,
+        3,
+        0,
+        0
+      ]
+    },
+    {
+      "t": "1",
+      "u": "-1/2 + sqrt(3)*I/2",
+      "central_fiber": "1",
+      "d0_rank": 3,
+      "d1_rank": 1,
+      "base_betti": [
+        0,
+        2,
+        2,
+        0
+      ],
+      "relative_sphere_betti": [
+        0,
+        5,
+        2,
+        0
+      ]
+    },
+    {
+      "t": "1",
+      "u": "-1 + sqrt(3)*I",
+      "central_fiber": "8",
+      "d0_rank": 3,
+      "d1_rank": 3,
+      "base_betti": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_sphere_betti": [
+        0,
+        3,
+        0,
+        0
+      ]
+    },
+    {
+      "t": "1",
+      "u": "-1",
+      "central_fiber": "-1",
+      "d0_rank": 3,
+      "d1_rank": 3,
+      "base_betti": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "relative_sphere_betti": [
+        0,
+        3,
+        0,
+        0
+      ]
+    }
+  ],
+  "unlink_control": {
+    "base_betti": [
+      0,
+      3,
+      3,
+      0
+    ],
+    "one_relative_sphere_betti": [
+      0,
+      6,
+      3,
+      0
+    ]
+  },
+  "native_family_charge_test": {
+    "ten": {
+      "qchi": -1,
+      "dimension": 10,
+      "u": "2",
+      "relative_betti": [
+        0,
+        3,
+        0,
+        0
+      ]
+    },
+    "barfive": {
+      "qchi": 3,
+      "dimension": 5,
+      "u": "1/8",
+      "relative_betti": [
+        0,
+        3,
+        0,
+        0
+      ]
+    },
+    "singlet": {
+      "qchi": -5,
+      "dimension": 1,
+      "u": "32",
+      "relative_betti": [
+        0,
+        3,
+        0,
+        0
+      ]
+    }
+  },
+  "torus_link_family": [
+    {
+      "n": 1,
+      "link": "T(2,2)",
+      "valid_H27_generator_pairs": 297,
+      "onto_pairs": 0
+    },
+    {
+      "n": 2,
+      "link": "T(2,4)",
+      "valid_H27_generator_pairs": 297,
+      "onto_pairs": 0
+    },
+    {
+      "n": 3,
+      "link": "T(2,6)",
+      "valid_H27_generator_pairs": 729,
+      "onto_pairs": 432
+    },
+    {
+      "n": 4,
+      "link": "T(2,8)",
+      "valid_H27_generator_pairs": 297,
+      "onto_pairs": 0
+    },
+    {
+      "n": 5,
+      "link": "T(2,10)",
+      "valid_H27_generator_pairs": 297,
+      "onto_pairs": 0
+    },
+    {
+      "n": 6,
+      "link": "T(2,12)",
+      "valid_H27_generator_pairs": 729,
+      "onto_pairs": 432
+    },
+    {
+      "n": 7,
+      "link": "T(2,14)",
+      "valid_H27_generator_pairs": 297,
+      "onto_pairs": 0
+    },
+    {
+      "n": 8,
+      "link": "T(2,16)",
+      "valid_H27_generator_pairs": 297,
+      "onto_pairs": 0
+    },
+    {
+      "n": 9,
+      "link": "T(2,18)",
+      "valid_H27_generator_pairs": 729,
+      "onto_pairs": 432
+    }
+  ],
+  "compact_gauge_extension": {
+    "SU5_fundamental_W7_weights": [
+      2,
+      2,
+      2,
+      4,
+      4
+    ],
+    "Spin10_invariant_D5_roots": 8,
+    "Spin10_invariant_Cartan": 5,
+    "Spin10_candidate_gauge_dimension": 13,
+    "including_Psi_candidate_gauge_dimension": 14,
+    "algebra": "su3+su2+u1Y+u1chi+u1Psi",
+    "native16_W7_phase_by_Q6Y": {
+      "0": 0,
+      "6": 1,
+      "1": 6,
+      "-4": 4,
+      "2": 5,
+      "-3": 3
+    },
+    "combined_image": "H27 x C2 x C7",
+    "combined_image_order": 378,
+    "family_central_fiber": "-zeta7^(3k), never1 for any k",
+    "family_relative_betti": [
+      0,
+      3,
+      0,
+      0
+    ],
+    "conditions": "Requires the stated E6/flavor coefficient realization and prior Psi localizing background. Gauge H0 candidate count only; neutral higher cohomology/physical domains not erased.",
+    "prior": "Order7 Wilson gauge centralizer was already in f495122c1; new is compatibility with the linked finite54 acyclic flavor model."
+  },
+  "minimal_positive_two_strand_onto_H27": "T(2,6): for T(2,2n), onto H27 requires and suffices 3 divides n; this is a link-topology restriction, not a physical generation prediction.",
+  "finite_unitary_alternative": {
+    "a": "X",
+    "c": "-XY",
+    "image": "H27 x C2",
+    "image_order": 54,
+    "central_fiber": "-I3",
+    "base_betti": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "relative_sphere_betti": [
+      0,
+      3,
+      0,
+      0
+    ],
+    "native_chi_parity": "all16 chi values -1,+3,-5 are odd: exp(i*pi*chi)=-1 on the entire16",
+    "limitation": "This removes the flavor cohomology pairs with a finite compact twist, without a real Higgs period. It does not remove the extra E6 gauge generators, derive a physical bundle or predict the defect."
+  },
+  "conditional_family_components": 48,
+  "conditional_conjugate_family_components": 0,
+  "important_obstruction": "A pure H27 local system has u^3=1 and retains two vectorlike pairs in flavor cohomology. An added scalar twist is substantive and unselected; it may be a real Higgs period or the finite unitary sign in the alternative below.",
+  "physical_scope": "A rank3 flavor local system with native family chi scalar weights. No embedding into an actual ADE gauge/Higgs bundle or derived 4D flavor triplication. No G2 metric, physical spinor boundary projector, eta/inflow, anomaly cancellation, Higgs vacuum or masses. Relative Betti numbers are conditional operator data.",
+  "novelty": "Links the prior native E6 chi Novikov period with linked H27 wire holonomy to evade the specific unlink mirror obstruction. Torus-link group and Fox calculus are standard literature."
+}
