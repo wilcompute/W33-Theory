@@ -1,0 +1,283 @@
+{
+  "status": "PASS",
+  "general_defect_index": {
+    "ranges_checked": 65,
+    "target_three_family_examples": [
+      {
+        "total_boundary_spheres": 5,
+        "negative_boundaries": 4,
+        "positive_boundaries": 1,
+        "index": 3,
+        "trivial_b1_b2": [
+          3,
+          0
+        ],
+        "nontrivial_flat_char_b1_b2": [
+          4,
+          1
+        ]
+      },
+      {
+        "total_boundary_spheres": 7,
+        "negative_boundaries": 5,
+        "positive_boundaries": 2,
+        "index": 3,
+        "trivial_b1_b2": [
+          4,
+          1
+        ],
+        "nontrivial_flat_char_b1_b2": [
+          5,
+          2
+        ]
+      },
+      {
+        "total_boundary_spheres": 9,
+        "negative_boundaries": 6,
+        "positive_boundaries": 3,
+        "index": 3,
+        "trivial_b1_b2": [
+          5,
+          2
+        ],
+        "nontrivial_flat_char_b1_b2": [
+          6,
+          3
+        ]
+      },
+      {
+        "total_boundary_spheres": 11,
+        "negative_boundaries": 7,
+        "positive_boundaries": 4,
+        "index": 3,
+        "trivial_b1_b2": [
+          6,
+          3
+        ],
+        "nontrivial_flat_char_b1_b2": [
+          7,
+          4
+        ]
+      }
+    ],
+    "general_index_formula": "nu=b1-b2=2r-k, where r negative and k-r positive boundary spheres",
+    "trivial_char": "b1=r-1,b2=k-r-1",
+    "nontrivial_finite_holonomy_char": "b1=r,b2=k-r",
+    "vectorlike_obstruction": "For any k>=3 with at least one positive boundary, every nontrivial flat character necessarily has b2>=1. A net index three alone never yields a clean fully chiral spectrum in those charged sectors.",
+    "fixed_input": "The k punctures, boundary signs and smooth lens-space topology are assumed. This generalizes the parallel k5 model but does not derive a defect geometry or physical family count."
+  },
+  "order_seven_Wilson": {
+    "C4_cases": [
+      {
+        "n": 4,
+        "a": 0,
+        "b": 2,
+        "SO10_centralizer": 21,
+        "SU5_centralizer": 12,
+        "E6_min_centralizer": 22
+      },
+      {
+        "n": 4,
+        "a": 2,
+        "b": 1,
+        "SO10_centralizer": 19,
+        "SU5_centralizer": 12,
+        "E6_min_centralizer": 20
+      },
+      {
+        "n": 4,
+        "a": 2,
+        "b": 3,
+        "SO10_centralizer": 19,
+        "SU5_centralizer": 12,
+        "E6_min_centralizer": 20
+      }
+    ],
+    "smallest_cyclic_order_to_kill_SO10_ten_generators": 7,
+    "minimal_order7_candidate": {
+      "n": 7,
+      "a": 1,
+      "b": 2,
+      "SO10_centralizer": 13,
+      "SU5_centralizer": 12,
+      "E6_min_centralizer": 14
+    },
+    "rank7_phase_options": [
+      {
+        "psi_phase_mod7": 0,
+        "spinor_invariants": 1,
+        "E6_centralizer": 16
+      },
+      {
+        "psi_phase_mod7": 1,
+        "spinor_invariants": 6,
+        "E6_centralizer": 26
+      },
+      {
+        "psi_phase_mod7": 2,
+        "spinor_invariants": 3,
+        "E6_centralizer": 20
+      },
+      {
+        "psi_phase_mod7": 3,
+        "spinor_invariants": 3,
+        "E6_centralizer": 20
+      },
+      {
+        "psi_phase_mod7": 4,
+        "spinor_invariants": 2,
+        "E6_centralizer": 18
+      },
+      {
+        "psi_phase_mod7": 5,
+        "spinor_invariants": 0,
+        "E6_centralizer": 14
+      },
+      {
+        "psi_phase_mod7": 6,
+        "spinor_invariants": 1,
+        "E6_centralizer": 16
+      }
+    ],
+    "order7_spinor_charge_multiset": {
+      "0": 1,
+      "1": 0,
+      "2": 3,
+      "3": 6,
+      "4": 1,
+      "5": 2,
+      "6": 3
+    },
+    "Wilson_test": "diag(zeta7 I3,zeta7^2 I2) has det=1 and kills all SO10 10+10bar off-diagonal generators. With an appropriate Psi phase, the full E6 centralizer has dimension14=SM12 plus 2 abelian gauge generators.",
+    "topological_tradeoff": "The parallel punctured lens L(4,1) has pi1=C4; removing spherical defects does not change pi1. It therefore cannot carry a nontrivial C7 character. On the different full Klein A1 stratum quotient Q/H6, the involution acts -I on H1(Q,F7)=F7^2; since 7 does not divide 6, finite-cover transfer gives H1(Q/H6,F7)=0. It also cannot carry a flat C7 line character.",
+    "rank_obstruction": "A single commuting torus Wilson line cannot lower the gauge-group rank6 of E6. Even order7 leaves at least SM12 plus 2 extra U1 gauge generators; further dynamical Higgs, inflow or singular boundary data required.",
+    "assumptions": "Holonomy is chosen in SU5 x U1Psi inside compact E6; additional nonabelian orbifold projections or noncommuting Wilson collections are not covered."
+  },
+  "E6_anomalies": {
+    "number_of_chiral_families": 3,
+    "local_adj_charge_Psi": -3,
+    "family_dim": 16,
+    "SM_TrY": 0.0,
+    "SM_TrY3": 2.2898349882893854e-16,
+    "Psi_gravitational": -144,
+    "Psi_cubic": -1296,
+    "Psi_SU3_squared": -18.0,
+    "Psi_SU2_squared": -18.0,
+    "Psi_Y_squared": -29.999999999999996,
+    "exact_vectorlike_pairs_contribute_zero_anomaly": true,
+    "caveat": "These are necessary 4D local anomaly sums for three charged16_-3 chiral modules. The ordinary E6 fundamental27 branching 16_(+1)+10_(-2)+1_(+4) is NOT a charge-matched immediate cancellation for an adjoint16_(-3). Anomaly inflow, Stueckelberg/GS sectors, or new chirals need explicit construction."
+  },
+  "modular_winding": {
+    "critical_ratio": 1.1026577908435842,
+    "all_fundamental_domain_shortest_vector": "For tau=x+i*y with |x|<=1/2, |tau|>=1, min_(u,v)!=0 |u+v*tau|^2/Im(tau)=1/y.",
+    "stable_iff": "y<=pi*(N0/N)/4 in this parent mixed-mode branch",
+    "SL2Z_hyperbolic_area": 1.0471975511965976,
+    "exact_fraction_piecewise": "Y=pi*r/4. Y<=sqrt3/2:0; sqrt3/2<Y<1: (6/pi)*(pi/6-asin(sqrt(1-Y^2))-(1/2-sqrt(1-Y^2))/Y); Y>=1:1-3/(pi*Y).",
+    "numerical_cross_checks": [
+      {
+        "flux_ratio": 1,
+        "Y_cutoff": 0.7853981633974483,
+        "analytic_modular_stable_fraction": 0.0,
+        "quadrature_fraction": 0.0
+      },
+      {
+        "flux_ratio": 1.15,
+        "Y_cutoff": 0.9032078879070654,
+        "analytic_modular_stable_fraction": 0.0030646484864004404,
+        "quadrature_fraction": 0.003064648647730327
+      },
+      {
+        "flux_ratio": 1.2,
+        "Y_cutoff": 0.9424777960769379,
+        "analytic_modular_stable_fraction": 0.013222366583763403,
+        "quadrature_fraction": 0.013222366954646438
+      },
+      {
+        "flux_ratio": 1.2732395447351628,
+        "Y_cutoff": 1.0,
+        "analytic_modular_stable_fraction": 0.04507034144862788,
+        "quadrature_fraction": 0.04507034175491691
+      },
+      {
+        "flux_ratio": 1.5,
+        "Y_cutoff": 1.1780972450961724,
+        "analytic_modular_stable_fraction": 0.18943053086129769,
+        "quadrature_fraction": 0.1894305311675703
+      },
+      {
+        "flux_ratio": 2,
+        "Y_cutoff": 1.5707963267948966,
+        "analytic_modular_stable_fraction": 0.3920728981459733,
+        "quadrature_fraction": 0.3920728984522244
+      },
+      {
+        "flux_ratio": 5,
+        "Y_cutoff": 3.9269908169872414,
+        "analytic_modular_stable_fraction": 0.7568291592583892,
+        "quadrature_fraction": 0.7568291595646005
+      },
+      {
+        "flux_ratio": 10,
+        "Y_cutoff": 7.853981633974483,
+        "analytic_modular_stable_fraction": 0.8784145796291947,
+        "quadrature_fraction": 0.8784145799353924
+      }
+    ],
+    "warning": "The invariant modular hyperbolic measure is not a cosmological probability distribution. String corrections and full KK spectrum unknown."
+  },
+  "quantum_memory": {
+    "IID_not_necessary_for_type1": "If conditional success probabilities on each accepted trial satisfy P(X_i=1|history)<=p0, a uniform-variable coupling dominates the full count by Binomial(n,p0), even with adaptive temporal correlations.",
+    "alternative_requirement": "Similarly beta bound holds if every conditional success probability >=p1, not merely the unconditional mean.",
+    "acceptance_bias_model": "Per-trial success-versus-failure acceptance efficiency ratio <=kappa; null p0'=kappa/(kappa+2), alternative p1'=7/(7+8*kappa).",
+    "distinguishability_requires_kappa_less_than": 1.3228756555322954,
+    "ratio_table": [
+      {
+        "acceptance_success_failure_odds_ratio": 1,
+        "null_worst_success": 0.3333333333333333,
+        "alternative_worst_success": 0.4666666666666667,
+        "accepted_events": 292,
+        "threshold": 117,
+        "alpha": 0.009349016956448783,
+        "beta": 0.009972038445705792
+      },
+      {
+        "acceptance_success_failure_odds_ratio": 1.05,
+        "null_worst_success": 0.34426229508196726,
+        "alternative_worst_success": 0.45454545454545453,
+        "accepted_events": 428,
+        "threshold": 171,
+        "alpha": 0.009785927723601668,
+        "beta": 0.009566926215781984
+      },
+      {
+        "acceptance_success_failure_odds_ratio": 1.1,
+        "null_worst_success": 0.3548387096774194,
+        "alternative_worst_success": 0.4430379746835443,
+        "accepted_events": 664,
+        "threshold": 265,
+        "alpha": 0.009981005676205997,
+        "beta": 0.009999833330019062
+      },
+      {
+        "acceptance_success_failure_odds_ratio": 1.2,
+        "null_worst_success": 0.37499999999999994,
+        "alternative_worst_success": 0.4216867469879518,
+        "accepted_events": 2382,
+        "threshold": 949,
+        "alpha": 0.009879371425434125,
+        "beta": 0.00998551288420497
+      },
+      {
+        "acceptance_success_failure_odds_ratio": 1.25,
+        "null_worst_success": 0.38461538461538464,
+        "alternative_worst_success": 0.4117647058823529,
+        "accepted_events": 7044,
+        "threshold": 2805,
+        "alpha": 0.009924650723556652,
+        "beta": 0.00999082075696419
+      }
+    ],
+    "device_scope": "Entanglement breaking of an effective one-time input-output channel is not equivalent to classical multi-time process-tensor memory. Event-ready trials, reference independence, loss and per-history bounds require physical certification.",
+    "literature_warning": "Recent work shows even entanglement-breaking channels can be a quantum resource in genuine multitime processes; do not infer a universal quantum-memory classification from this one Choi test."
+  }
+}

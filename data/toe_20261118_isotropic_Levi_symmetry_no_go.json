@@ -1,0 +1,451 @@
+{
+  "status": "PASS",
+  "optimization": {
+    "chords": [
+      [
+        1,
+        45
+      ],
+      [
+        1,
+        46
+      ],
+      [
+        1,
+        47
+      ],
+      [
+        2,
+        49
+      ],
+      [
+        2,
+        50
+      ],
+      [
+        2,
+        51
+      ],
+      [
+        3,
+        53
+      ],
+      [
+        3,
+        54
+      ],
+      [
+        3,
+        55
+      ],
+      [
+        7,
+        62
+      ],
+      [
+        7,
+        63
+      ],
+      [
+        7,
+        64
+      ],
+      [
+        8,
+        65
+      ],
+      [
+        8,
+        66
+      ],
+      [
+        8,
+        67
+      ],
+      [
+        9,
+        68
+      ],
+      [
+        9,
+        69
+      ],
+      [
+        9,
+        70
+      ],
+      [
+        10,
+        71
+      ],
+      [
+        10,
+        72
+      ],
+      [
+        10,
+        73
+      ],
+      [
+        11,
+        74
+      ],
+      [
+        11,
+        75
+      ],
+      [
+        11,
+        76
+      ],
+      [
+        12,
+        77
+      ],
+      [
+        12,
+        78
+      ],
+      [
+        12,
+        79
+      ],
+      [
+        16,
+        45
+      ],
+      [
+        16,
+        69
+      ],
+      [
+        16,
+        78
+      ],
+      [
+        17,
+        49
+      ],
+      [
+        17,
+        63
+      ],
+      [
+        17,
+        75
+      ],
+      [
+        18,
+        53
+      ],
+      [
+        18,
+        66
+      ],
+      [
+        18,
+        72
+      ],
+      [
+        19,
+        45
+      ],
+      [
+        19,
+        67
+      ],
+      [
+        19,
+        76
+      ],
+      [
+        20,
+        53
+      ],
+      [
+        20,
+        64
+      ],
+      [
+        20,
+        79
+      ],
+      [
+        21,
+        49
+      ],
+      [
+        21,
+        70
+      ],
+      [
+        21,
+        73
+      ],
+      [
+        25,
+        46
+      ],
+      [
+        25,
+        68
+      ],
+      [
+        25,
+        79
+      ],
+      [
+        26,
+        50
+      ],
+      [
+        26,
+        62
+      ],
+      [
+        26,
+        76
+      ],
+      [
+        27,
+        54
+      ],
+      [
+        27,
+        65
+      ],
+      [
+        27,
+        73
+      ],
+      [
+        28,
+        46
+      ],
+      [
+        28,
+        66
+      ],
+      [
+        28,
+        74
+      ],
+      [
+        29,
+        54
+      ],
+      [
+        29,
+        63
+      ],
+      [
+        29,
+        77
+      ],
+      [
+        30,
+        50
+      ],
+      [
+        30,
+        69
+      ],
+      [
+        30,
+        71
+      ],
+      [
+        34,
+        47
+      ],
+      [
+        34,
+        70
+      ],
+      [
+        34,
+        77
+      ],
+      [
+        35,
+        51
+      ],
+      [
+        35,
+        64
+      ],
+      [
+        35,
+        74
+      ],
+      [
+        36,
+        55
+      ],
+      [
+        36,
+        67
+      ],
+      [
+        36,
+        71
+      ],
+      [
+        37,
+        47
+      ],
+      [
+        37,
+        65
+      ],
+      [
+        37,
+        75
+      ],
+      [
+        38,
+        55
+      ],
+      [
+        38,
+        62
+      ],
+      [
+        38,
+        78
+      ],
+      [
+        39,
+        51
+      ],
+      [
+        39,
+        68
+      ],
+      [
+        39,
+        72
+      ]
+    ],
+    "selected": [
+      [
+        1,
+        45
+      ],
+      [
+        2,
+        50
+      ],
+      [
+        3,
+        55
+      ]
+    ],
+    "indices": [
+      0,
+      4,
+      8
+    ],
+    "total_triplets": 85320,
+    "min_score": 12,
+    "min_triplet_count": 10152,
+    "off_diagonal_Gram320_counts": {
+      "-54": 162,
+      "-6": 1134,
+      "2": 1620,
+      "18": 324
+    },
+    "score_histogram": {
+      "12": 10152,
+      "44": 23004,
+      "76": 13932,
+      "108": 4482,
+      "332": 5508,
+      "364": 12312,
+      "396": 1620,
+      "652": 1296,
+      "684": 648,
+      "2924": 4212,
+      "2956": 4536,
+      "2988": 1620,
+      "3276": 1296,
+      "3564": 324,
+      "6156": 324,
+      "8748": 54
+    },
+    "K_numerator_160": [
+      [
+        81,
+        1,
+        1
+      ],
+      [
+        1,
+        81,
+        1
+      ],
+      [
+        1,
+        1,
+        81
+      ]
+    ],
+    "D_numerator_12800": [
+      [
+        81,
+        1,
+        1
+      ],
+      [
+        1,
+        81,
+        1
+      ],
+      [
+        1,
+        1,
+        81
+      ]
+    ],
+    "D_eigen_numerators_12800": [
+      80,
+      80,
+      83
+    ],
+    "anisotropy_condition_ratio": 1.0375,
+    "bloch_checks": [
+      {
+        "epsilon": 0.25,
+        "lowest_band": 0.0006329267828310219,
+        "quadratic": 0.0006348144531249999,
+        "relative_error": 0.002973578003282018
+      },
+      {
+        "epsilon": 0.125,
+        "lowest_band": 0.00015858559912009,
+        "quadratic": 0.00015870361328124998,
+        "relative_error": 0.0007436135745115813
+      },
+      {
+        "epsilon": 0.0625,
+        "lowest_band": 3.9668526895883525e-05,
+        "quadratic": 3.9675903320312494e-05,
+        "relative_error": 0.0001859169876843314
+      }
+    ]
+  },
+  "symmetry": {
+    "projective_symplectic_order": 25920,
+    "GL3_F3_order": 11232,
+    "checked_symplectic_transvections": 40,
+    "flag_orbit_size": 160,
+    "flag_transitive": true,
+    "invariant_point_to_line_edge_cochain": "constant=vertex_coboundary",
+    "rational_H1_full_group_invariants": 0,
+    "rank3_deck_representation": "necessarily trivial, by PSp(4,3) simplicity and torsion-free level-3 principal congruence kernel",
+    "obstruction": "A connected Z^3-periodic Levi cover with nonzero deck winding cannot preserve full PSp(4,3) symmetry with an integral linear deck action. A physical three-dimensional selector must break that symmetry or abandon this class of covers.",
+    "caveat": "Does not exclude other W33-derived spacetime models with different fibers, graph refinements, nonlinear actions, or different symmetry realizations."
+  },
+  "scope": "Exact optimization among 3 SINGLE fundamental BFS chord voltages; no global optimum among all integer 1-cochains or physical uniqueness claim.",
+  "prior": "analysis/toe_20261118_W33_triperiodic_Levi_homogenization.py"
+}
