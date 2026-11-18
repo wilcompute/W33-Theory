@@ -1,0 +1,441 @@
+{
+  "status": "PASS",
+  "parent": "3095ad3e9",
+  "coinvariants": {
+    "cyclotomic_D_minus_I_Smith": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      11
+    ],
+    "pairing_model_determinant": "1/11",
+    "inverse_power_pairing_multipliers": {
+      "1": 1,
+      "2": 6,
+      "3": 4,
+      "4": 3,
+      "5": 9,
+      "6": 2,
+      "7": 8,
+      "8": 7,
+      "9": 5,
+      "10": 10
+    },
+    "actual_lattice_inputs": "H3 of a smooth cubic threefold is a rank10 unimodular symplectic lattice; D has characteristic polynomial Phi11; P is symplectic and P D P^-1=D^9. Parent establishes the rational character.",
+    "pairing_proof": "b(x,y)=B(x,(D-1)^(-1)y) mod Z is a perfect symmetric pairing on L/(D-1)L=Z11. P^-1 D P=D^5 implies b(Px,Py)=9 b(x,y). The scalar alpha obeys alpha^2=9 and alpha^5=1, hence alpha=3.",
+    "C5_action_on_C11_coinvariant": 3,
+    "full_group_coinvariant_free_lattice": 0,
+    "negative_control": "The natural semilinear action on Z[zeta11] has the same rational character but acts as1 on its Z11 coinvariant. It does not preserve the unimodular symplectic form; rational character data alone would leave an erroneous order11 sector.",
+    "positive_control": {
+      "ideal": "(zeta11-1)^3 Z[zeta11]",
+      "P_matrix": [
+        [
+          0,
+          0,
+          0,
+          -2,
+          2,
+          0,
+          0,
+          0,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1,
+          -2,
+          3,
+          0,
+          0,
+          0,
+          -3,
+          2
+        ],
+        [
+          0,
+          0,
+          -3,
+          0,
+          3,
+          0,
+          0,
+          -1,
+          -3,
+          3
+        ],
+        [
+          0,
+          -1,
+          -3,
+          1,
+          3,
+          0,
+          0,
+          -3,
+          -1,
+          3
+        ],
+        [
+          0,
+          -3,
+          -1,
+          1,
+          3,
+          0,
+          -1,
+          -3,
+          0,
+          3
+        ],
+        [
+          -1,
+          -3,
+          0,
+          1,
+          3,
+          0,
+          -3,
+          -1,
+          0,
+          3
+        ],
+        [
+          -3,
+          -1,
+          0,
+          1,
+          3,
+          -1,
+          -3,
+          0,
+          0,
+          3
+        ],
+        [
+          -3,
+          0,
+          0,
+          1,
+          3,
+          -3,
+          -1,
+          0,
+          0,
+          3
+        ],
+        [
+          -1,
+          0,
+          0,
+          1,
+          2,
+          -3,
+          0,
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          2
+        ]
+      ],
+      "B_circulant_coefficients": [
+        0,
+        3,
+        -4,
+        3,
+        -2,
+        2,
+        -2,
+        2,
+        -3,
+        4,
+        -3
+      ],
+      "B_determinant": 1,
+      "full_coinvariant_Smith": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "P_action_on_C11_coinvariant": 3,
+      "scope": "An explicit admissible integral symplectic F55 model, not a proved identification with the cubic period lattice. The basis-independent argument supplies the actual cubic conclusion."
+    },
+    "scope": "The companion matrix is a universal arithmetic control, not an assertion that its symplectic basis is the cubic period lattice."
+  },
+  "quotient": {
+    "group_homology_through_degree4": [
+      {
+        "degree": 1,
+        "torsion_order": 5
+      },
+      {
+        "degree": 2,
+        "torsion_order": 1
+      },
+      {
+        "degree": 3,
+        "torsion_order": 5
+      },
+      {
+        "degree": 4,
+        "torsion_order": 1
+      }
+    ],
+    "Cartan_Leray_total_degree3": [
+      {
+        "p": 0,
+        "q": 3,
+        "group": "Z3"
+      },
+      {
+        "p": 3,
+        "q": 0,
+        "group": "Z5"
+      }
+    ],
+    "extension": "0 -> Z3 -> H3(M) -> Z5 -> 0; coprime primary parts give Z15.",
+    "integral_homology": [
+      {
+        "degree": 0,
+        "free_rank": 1,
+        "torsion": []
+      },
+      {
+        "degree": 1,
+        "free_rank": 0,
+        "torsion": [
+          5
+        ]
+      },
+      {
+        "degree": 2,
+        "free_rank": 0,
+        "torsion": []
+      },
+      {
+        "degree": 3,
+        "free_rank": 0,
+        "torsion": [
+          15
+        ]
+      },
+      {
+        "degree": 4,
+        "free_rank": 0,
+        "torsion": []
+      },
+      {
+        "degree": 5,
+        "free_rank": 0,
+        "torsion": [
+          5
+        ]
+      },
+      {
+        "degree": 6,
+        "free_rank": 0,
+        "torsion": []
+      },
+      {
+        "degree": 7,
+        "free_rank": 1,
+        "torsion": []
+      }
+    ],
+    "integral_cohomology": [
+      {
+        "degree": 0,
+        "free_rank": 1,
+        "torsion": []
+      },
+      {
+        "degree": 1,
+        "free_rank": 0,
+        "torsion": []
+      },
+      {
+        "degree": 2,
+        "free_rank": 0,
+        "torsion": [
+          5
+        ]
+      },
+      {
+        "degree": 3,
+        "free_rank": 0,
+        "torsion": []
+      },
+      {
+        "degree": 4,
+        "free_rank": 0,
+        "torsion": [
+          15
+        ]
+      },
+      {
+        "degree": 5,
+        "free_rank": 0,
+        "torsion": []
+      },
+      {
+        "degree": 6,
+        "free_rank": 0,
+        "torsion": [
+          5
+        ]
+      },
+      {
+        "degree": 7,
+        "free_rank": 1,
+        "torsion": []
+      }
+    ],
+    "positive_degree_ring_generators": {
+      "u": {
+        "degree": 2,
+        "order": 5
+      },
+      "v": {
+        "degree": 4,
+        "order": 3
+      },
+      "orientation": {
+        "degree": 7,
+        "order": "infinite"
+      }
+    },
+    "ring_products": "u^2 generates the5-primary part of H4; u^3 generates H6. All other positive-degree products vanish by coprime torsion or dimension.",
+    "ring_proof": "At prime5, D-1 has determinant11 and is invertible on the cover middle lattices. Normal C11 invariants therefore kill rows3 and4 of the cohomological Cartan-Leray sequence. Below degree7 the edge map H*(BF55,Z_(5))->H*(M,Z_(5)) is an isomorphism of rings. Its generator u has degree2 and5u=0; u^2,u^3 survive. At prime3 only H4 torsion remains.",
+    "flat_degree4_C_field_group": "Z15",
+    "flat_C_field_sector_count": 15,
+    "supersedes": "Parent3095ad3e9 left5/11-primary quotient torsion uncomputed. The new argument gives Z5 plus Z3 in H4, and no11-primary part.",
+    "not_computed": "5-primary linking unit/quadratic refinement, Page-charge shifts and a wrapped-brane dictionary."
+  },
+  "tangent": {
+    "restrictions": [
+      {
+        "subgroup_order": 11,
+        "weights": [
+          1,
+          9,
+          4,
+          3,
+          5
+        ],
+        "integral_elementary_coefficients": [
+          22,
+          176,
+          638,
+          1023,
+          540
+        ],
+        "Chern_residues": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "subgroup_order": 5,
+        "weights": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "integral_elementary_coefficients": [
+          10,
+          35,
+          50,
+          24,
+          0
+        ],
+        "Chern_residues": [
+          0,
+          0,
+          0,
+          4,
+          0
+        ]
+      }
+    ],
+    "stable_real_tangent": "TM plus R^3 is the real bundle associated to rho:C11:C5 -> SU5.",
+    "exact_sequence": "On the punctured invariant hypersurface, T(cone) plus C = C^5_rho equivariantly, because df has trivial target; radial restriction gives the stated stable real tangent bundle downstairs.",
+    "transfer_argument": "Both Sylow restrictions of c2(rho) vanish. Transfer then annihilates c2 by both5 and11, hence c2=0 integrally on BG.",
+    "p1": 0,
+    "spin_lambda_p1_over2": 0,
+    "lambda_reason": "For an SU bundle lambda(real rho)=-c2(rho). Stable pullback therefore gives lambda(TM)=0, including all torsion.",
+    "string_structure_exists": true,
+    "string_structure_unique": "H3(M,Z)=0, so the set of lifts has one homotopy class.",
+    "quantization_scope": "No internal gravitational half-shift in the usual [G4/(2pi)]-lambda/2 integral law. A flat torsion class is not de Rham G4 flux. This does not compute the electric M2 Page charge or one-loop terms."
+  },
+  "protected": {
+    "ambient_Hilbert_series": "-(t**14 - 3*t**13 + 3*t**12 - 2*t**10 + 2*t**9 - t**7 + 2*t**5 - 2*t**4 + 3*t**2 - 3*t + 1)/((t - 1)**5*(t**4 + t**3 + t**2 + t + 1)*(t**10 + t**9 + t**8 + t**7 + t**6 + t**5 + t**4 + t**3 + t**2 + t + 1))",
+    "cone_Hilbert_series": "(t**2 + t + 1)*(t**14 - 3*t**13 + 3*t**12 - 2*t**10 + 2*t**9 - t**7 + 2*t**5 - 2*t**4 + 3*t**2 - 3*t + 1)/((t - 1)**4*(t**4 + t**3 + t**2 + t + 1)*(t**10 + t**9 + t**8 + t**7 + t**6 + t**5 + t**4 + t**3 + t**2 + t + 1))",
+    "cone_dimensions_degrees0_through18": [
+      1,
+      0,
+      0,
+      0,
+      1,
+      3,
+      3,
+      5,
+      6,
+      9,
+      13,
+      16,
+      20,
+      24,
+      31,
+      38,
+      45,
+      53,
+      62
+    ],
+    "verified_degree_count": 19,
+    "first_nonconstant_degree": 4,
+    "first_invariant": "x0**2*x2*x4 + x0*x1**2*x3 + x0*x2*x3**2 + x1*x2**2*x4 + x1*x3*x4**2",
+    "first_Reeb_charge": 8,
+    "first_holomorphic_scalar_Laplacian": 112,
+    "associated_spin2_mass_squared_AdS_units": 28,
+    "associated_spin2_CFT_dimension": 7,
+    "algebraic_pole_coefficient": "3/55",
+    "Gorenstein_reciprocity": "H(1/t)=t^2 H(t)",
+    "coordinate_Reeb_charge": 2,
+    "independent_volume_over_S7": "3/880",
+    "charge4_holomorphic_marginal_functions": 0,
+    "continuous_flat_C3_modes": 0,
+    "marginal_scope": "No charge4 holomorphic functions, hence no deformations in the standard holomorphic superpotential/flux class of Ashmore1809.03503. This does not classify every modulus or every quantum deformation.",
+    "spectrum_scope": "Only the holomorphic harmonic subsector and its spin2 lift. Not the lowest eigenvalue of the full scalar Laplacian or full KK spectrum."
+  },
+  "scope": "Exact arithmetic plus the written topological derivation. No observed SM, physical family count or complete TOE derived."
+}
