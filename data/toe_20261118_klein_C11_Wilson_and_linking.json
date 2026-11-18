@@ -1,0 +1,572 @@
+{
+  "status": "PASS",
+  "topology": {
+    "pi1": "C11",
+    "normalizer_quotient_symmetry": "C5",
+    "H3_extension_end_actions": [
+      3,
+      4
+    ],
+    "nonsplit_Z121_extension_excluded": true,
+    "splitting_proof": "The surviving normalizer acts differently on the two Z11 end terms. Any automorphism of Z121 acts identically modulo11 on its subgroup and quotient. Therefore the11-primary extension splits.",
+    "integral_homology": [
+      {
+        "degree": 0,
+        "free_rank": 1,
+        "torsion": []
+      },
+      {
+        "degree": 1,
+        "free_rank": 0,
+        "torsion": [
+          11
+        ]
+      },
+      {
+        "degree": 2,
+        "free_rank": 0,
+        "torsion": []
+      },
+      {
+        "degree": 3,
+        "free_rank": 0,
+        "torsion": [
+          11,
+          33
+        ]
+      },
+      {
+        "degree": 4,
+        "free_rank": 0,
+        "torsion": []
+      },
+      {
+        "degree": 5,
+        "free_rank": 0,
+        "torsion": [
+          11
+        ]
+      },
+      {
+        "degree": 6,
+        "free_rank": 0,
+        "torsion": []
+      },
+      {
+        "degree": 7,
+        "free_rank": 1,
+        "torsion": []
+      }
+    ],
+    "integral_cohomology": [
+      {
+        "degree": 0,
+        "free_rank": 1,
+        "torsion": []
+      },
+      {
+        "degree": 1,
+        "free_rank": 0,
+        "torsion": []
+      },
+      {
+        "degree": 2,
+        "free_rank": 0,
+        "torsion": [
+          11
+        ]
+      },
+      {
+        "degree": 3,
+        "free_rank": 0,
+        "torsion": []
+      },
+      {
+        "degree": 4,
+        "free_rank": 0,
+        "torsion": [
+          11,
+          33
+        ]
+      },
+      {
+        "degree": 5,
+        "free_rank": 0,
+        "torsion": []
+      },
+      {
+        "degree": 6,
+        "free_rank": 0,
+        "torsion": [
+          11
+        ]
+      },
+      {
+        "degree": 7,
+        "free_rank": 1,
+        "torsion": []
+      }
+    ],
+    "flat_degree4_C_field": "Z11 x Z33 = Z3 x Z11 x Z11",
+    "flat_sector_count": 363,
+    "eleven_primary_linking_matrix_mod1": [
+      [
+        "0",
+        "1/11"
+      ],
+      [
+        "1/11",
+        "0"
+      ]
+    ],
+    "linking_basis_scope": "A C5 eigenbasis, rescaled to dual generators; not an identified pair of geometric brane cycles.",
+    "linking_proof": "Eigenvalues3 and4 have product1, while neither square is1 mod11. Invariance forces both self-pairings to vanish. Perfectness forces a nonzero cross-pairing, normalized to1/11.",
+    "spin_lambda": 0,
+    "lambda_reason": "Stable tangent is the real SU5 representation minusR3; lambda=-c2 and c2|BC11=176u^2=0.",
+    "limitations": "No full cohomology ring or differential Chern-Simons/Page quadratic refinement for this C11 quotient computed here."
+  },
+  "Wilson": {
+    "F55_SU5_to_standard_SM_Wilson_line": false,
+    "obstruction": "An image commuting with standard SU3 x SU2 is block-scalar on3+2, hence abelian and factors through F55_ab=C5. The determinant condition3a+2b=0 mod5 forces a=b, making the image central.",
+    "cyclic_controls": [
+      {
+        "order": 2,
+        "determinant_one_split_pairs": 1
+      },
+      {
+        "order": 3,
+        "determinant_one_split_pairs": 2
+      },
+      {
+        "order": 4,
+        "determinant_one_split_pairs": 3
+      },
+      {
+        "order": 5,
+        "determinant_one_split_pairs": 0
+      },
+      {
+        "order": 6,
+        "determinant_one_split_pairs": 5
+      },
+      {
+        "order": 7,
+        "determinant_one_split_pairs": 6
+      },
+      {
+        "order": 11,
+        "determinant_one_split_pairs": 10
+      },
+      {
+        "order": 25,
+        "determinant_one_split_pairs": 20
+      }
+    ],
+    "C11_SU5_holonomy_exponents": [
+      2,
+      2,
+      2,
+      -3,
+      -3
+    ],
+    "exact_order": 11,
+    "surviving_offdiagonal_root_pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "centralizer_Lie_algebra": "su3 + su2 + u1",
+    "centralizer_dimension": 12,
+    "nonextension_to_F55": "The holonomy eigenvalue multiset differs from that of its ninth power; no conjugating P can extend this C11 map to F55.",
+    "E6_parallel_connection": "If both rank-breaking singlet Higgs VEVs are parallel and fixed, holonomy lies in their SU5 stabilizer. F55 flat holonomy cannot replace the hypercharge adjoint in that chart. C11 flat holonomy can break that supplied SU5 algebra to the SM algebra.",
+    "scope": "A conditional gauge-centralizer statement. Neither quotient comes with a derived E6/SU5 gauge sector or a chiral fermion spectrum."
+  },
+  "E6_faithful_control": {
+    "embedding": "F55 -> SU6 x SU2 -> E6, with6=faithful5+1",
+    "branching": "78=(35,1)+(1,3)+(20,2);27=(15,1)+(6bar,2), up to simultaneous conjugation convention",
+    "wedge2_C11_fixed": 0,
+    "wedge3_C11_fixed": 0,
+    "cases": [
+      {
+        "SU2_C5_character": 0,
+        "E6_adjoint_invariants": 4,
+        "supplied_27_invariants": 2,
+        "centralizer": "su2+u1"
+      },
+      {
+        "SU2_C5_character": 1,
+        "E6_adjoint_invariants": 2,
+        "supplied_27_invariants": 0,
+        "centralizer": "u1+u1"
+      },
+      {
+        "SU2_C5_character": 2,
+        "E6_adjoint_invariants": 2,
+        "supplied_27_invariants": 0,
+        "centralizer": "u1+u1"
+      },
+      {
+        "SU2_C5_character": 3,
+        "E6_adjoint_invariants": 2,
+        "supplied_27_invariants": 0,
+        "centralizer": "u1+u1"
+      },
+      {
+        "SU2_C5_character": 4,
+        "E6_adjoint_invariants": 2,
+        "supplied_27_invariants": 0,
+        "centralizer": "u1+u1"
+      }
+    ],
+    "conclusion": "This natural faithful F55 embedding also fails to leave the SM gauge algebra. This is not a classification of all E6 embeddings."
+  },
+  "tradeoff": {
+    "C11_cone_dimensions_degrees0_through12": [
+      1,
+      0,
+      0,
+      4,
+      5,
+      11,
+      15,
+      25,
+      34,
+      45,
+      61,
+      80,
+      100
+    ],
+    "C11_charge4_holomorphic_marginal_functions": 0,
+    "continuous_flat_C3_modes": 0,
+    "invariant_cubic_complex_structure_deformations": 0,
+    "deformation_source": "Parent cubic Jacobian weight-zero relation rank5; the entire C11 invariant cubic parameter space is relations.",
+    "volume_over_S7": "3/176",
+    "first_holomorphic_charge": 6,
+    "first_holomorphic_Laplacian": 72,
+    "untwisted_particle_string_BF_level": 11,
+    "BF_action": "11/(2pi) integral B2 wedge dA1",
+    "BF_objects": "M2 on torsion1-cycle gives an external string; M5 on the dual torsion5-cycle gives a particle. Dual generators braid by exp(2pi i/11). Their existence as homology classes does not compute tensions, stability, screening or flux-induced twists.",
+    "BF_scope": "Uncoupled torsion-linking shadow; the C3 G4 G4 and one-loop terms, boundary conditions and full charge identifications remain open.",
+    "flat_unitary_Dirac_gap_squared": "49/4, by the same Friedrich theorem as peer c2f8f23a7; still no ordinary flat-twisted Dirac zero modes.",
+    "tradeoff": "C11 permits the conditional SU5 Wilson line while retaining no charge4 holomorphic or continuous C3 deformations. Its torsion sectors and protected low harmonics differ from the F55 quotient."
+  },
+  "linking_quantum_model": {
+    "finite_quadratic_group": "Z11 x Z11",
+    "q": "q(x,y)=x*y/11 mod1",
+    "K_matrix": [
+      [
+        0,
+        11
+      ],
+      [
+        11,
+        0
+      ]
+    ],
+    "topological_label_count": 121,
+    "q_value_multiplicities": {
+      "0": 21,
+      "1": 10,
+      "2": 10,
+      "3": 10,
+      "4": 10,
+      "5": 10,
+      "6": 10,
+      "7": 10,
+      "8": 10,
+      "9": 10,
+      "10": 10
+    },
+    "normalized_Gauss_sum": 1,
+    "auxiliary_model": "Untwisted quantum double D(Z11), equivalently the Abelian Chern-Simons K-matrix11*sigma_x.",
+    "partial_Fourier_transform": "|x,k>=11^(-1/2) sum_y zeta11^(k*y)|x,y>",
+    "modular_S_on_Fourier_labels": "(x,k)->(k,-x)",
+    "modular_T_on_Fourier_labels": "(x,k)->(x,k+x)",
+    "Fourier_S_error": 1.6758762101304e-15,
+    "Fourier_T_error": 1.5924851089417171e-15,
+    "inherited_C5_Fourier_error": 1.335157934288859e-15,
+    "inherited_C5_on_linking_coordinates": "(x,y)->(3x,4y)",
+    "inherited_C5_on_Fourier_coordinates": "(x,k)->(3x,3k)",
+    "commuting_right_C5_orbit_count": 12,
+    "right_normalizer_bridge": "The inherited linking symmetry becomes scalar3 on Fourier labels, commuting with the left PSL2(11) action. On g*C11 this is right multiplication by diag(3,4). Its12 orbits of5 are P1(F11), matching the12 SylowC11 subgroups and their5 Klein points.",
+    "charge_conjugation_even_dimension": 61,
+    "nonzero_even_orbit_dimension": 60,
+    "permutation_group_order": 660,
+    "point_stabilizer_order": 11,
+    "parallel_Klein_point_to_sign_vector": {
+      "0": [
+        0,
+        1
+      ],
+      "1": [
+        0,
+        5
+      ],
+      "2": [
+        0,
+        4
+      ],
+      "3": [
+        0,
+        3
+      ],
+      "4": [
+        0,
+        2
+      ],
+      "5": [
+        1,
+        0
+      ],
+      "6": [
+        1,
+        1
+      ],
+      "7": [
+        1,
+        2
+      ],
+      "8": [
+        1,
+        3
+      ],
+      "9": [
+        1,
+        4
+      ],
+      "10": [
+        1,
+        5
+      ],
+      "11": [
+        1,
+        6
+      ],
+      "12": [
+        1,
+        7
+      ],
+      "13": [
+        1,
+        8
+      ],
+      "14": [
+        1,
+        9
+      ],
+      "15": [
+        1,
+        10
+      ],
+      "16": [
+        2,
+        0
+      ],
+      "17": [
+        2,
+        1
+      ],
+      "18": [
+        2,
+        2
+      ],
+      "19": [
+        2,
+        3
+      ],
+      "20": [
+        2,
+        4
+      ],
+      "21": [
+        2,
+        5
+      ],
+      "22": [
+        2,
+        6
+      ],
+      "23": [
+        2,
+        7
+      ],
+      "24": [
+        2,
+        8
+      ],
+      "25": [
+        2,
+        9
+      ],
+      "26": [
+        2,
+        10
+      ],
+      "27": [
+        3,
+        0
+      ],
+      "28": [
+        3,
+        1
+      ],
+      "29": [
+        3,
+        2
+      ],
+      "30": [
+        3,
+        3
+      ],
+      "31": [
+        3,
+        4
+      ],
+      "32": [
+        3,
+        5
+      ],
+      "33": [
+        3,
+        6
+      ],
+      "34": [
+        3,
+        7
+      ],
+      "35": [
+        3,
+        8
+      ],
+      "36": [
+        3,
+        9
+      ],
+      "37": [
+        3,
+        10
+      ],
+      "38": [
+        4,
+        0
+      ],
+      "39": [
+        4,
+        1
+      ],
+      "40": [
+        4,
+        2
+      ],
+      "41": [
+        4,
+        3
+      ],
+      "42": [
+        4,
+        4
+      ],
+      "43": [
+        4,
+        5
+      ],
+      "44": [
+        4,
+        6
+      ],
+      "45": [
+        4,
+        7
+      ],
+      "46": [
+        4,
+        8
+      ],
+      "47": [
+        4,
+        9
+      ],
+      "48": [
+        4,
+        10
+      ],
+      "49": [
+        5,
+        0
+      ],
+      "50": [
+        5,
+        1
+      ],
+      "51": [
+        5,
+        2
+      ],
+      "52": [
+        5,
+        3
+      ],
+      "53": [
+        5,
+        4
+      ],
+      "54": [
+        5,
+        5
+      ],
+      "55": [
+        5,
+        6
+      ],
+      "56": [
+        5,
+        7
+      ],
+      "57": [
+        5,
+        8
+      ],
+      "58": [
+        5,
+        9
+      ],
+      "59": [
+        5,
+        10
+      ]
+    },
+    "validated_parallel_dictionary": "data\\toe_20261117_11cell_660flags_11faces_60Klein_bifactor.json",
+    "bridge": "The60 nonzero vectors modulo sign carry PSL2(11)/C11. This is equivariantly the parallel60-point Klein-cubic orbit. Removing the origin from the charge-conjugation-even modular module realizes exactly that permutation action.",
+    "limits": "This auxiliary modular action is not an isometry group of Y/C11; its inherited geometric normalizer quotient is onlyC5. These60 Fourier-even states are not60 particle species. The121 labels are only the11-primary quadratic model, not all363 flat C-field sectors. No physical anyon realization or universal quantum computer derived."
+  },
+  "scope": "A distinct smooth SUSY geometry with a conditional SM gauge centralizer. No chiral SM, dynamical gauge completion or TOE solved."
+}
