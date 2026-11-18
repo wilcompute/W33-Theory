@@ -1,0 +1,378 @@
+{
+  "status": "PASS",
+  "parents": [
+    "36eb8d951",
+    "c0ca57dab",
+    "27665720c"
+  ],
+  "roots": {
+    "E8_roots": 240,
+    "reflection_pairs_checked": 57600,
+    "D5_D3_root_blocks": {
+      "D5": 40,
+      "D3": 12,
+      "mixed_10x6": 60,
+      "half_16x4_plus_dual": 128
+    },
+    "adjoint_branch": "248=(45,1)+(1,15)+(16,4)+(16bar,4bar)+(10,6)",
+    "T_generator": "T=-2*(e6+e7+e8), first5 coordinates form D5",
+    "T_root_census": {
+      "-4": 3,
+      "-3": 16,
+      "-2": 30,
+      "-1": 48,
+      "0": 46,
+      "1": 48,
+      "2": 30,
+      "3": 16,
+      "4": 3
+    },
+    "grade_zero_dimension": 54,
+    "E6_commuting_SU3_roots": 72,
+    "E6_T_grades": "45_0+1_0+16_-3+16bar_3",
+    "complete_positive_T_blocks": {
+      "16_1": 48,
+      "10_2": 30,
+      "16bar_3": 16,
+      "1_4": 3
+    },
+    "native_spinor_charge_dictionary_matches": 16,
+    "native_W7_phase_dictionary_matches": true,
+    "D5_W7_invariant_roots": 8,
+    "scope": "Standard integral E8 root coordinates, anchored to native16 Fock Y/chi charges; no full native Albert/E8 Lie-bracket identification."
+  },
+  "holonomy": {
+    "SU4_traceless_H27_commutant_dimension": 1,
+    "commutant_generator": [
+      1,
+      1,
+      1,
+      -3
+    ],
+    "compact_twist_order": 5,
+    "full_SU4_flat_image": "H27 x C5",
+    "image_order": 135,
+    "with_Spin10_W7_image": "H27 x C5 x C7",
+    "with_Spin10_W7_order": 945,
+    "candidate_gauge_algebra": "su3+su2+u1Y+u1chi+u1T, dimension14",
+    "combined_period_nonresonance": "zeta35^(21q+15k) !=1 for all q=1..4,k=0..6",
+    "link_relation": "[a,c^3]=1, a=diag(X,1), c=diag(v XY,v^-3), v^5=1",
+    "nonzero_grade_central_fiber": "v^(3q) I on each T=q irreducible; never1 for q=+/-1,+/-2,+/-3,+/-4",
+    "charge_decomposition": "4=3_1+1_-3; 6=3bar_2+3_-2; 15=8_0+1_0+3_4+3bar_-4"
+  },
+  "wire": {
+    "charged_base_betti": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "charged_relative_sphere_betti": "(0,rank(V),0,0) for positive T; opposite boundaries give CPT dual for negative T",
+    "one_relative_sphere_left_chiral_multiplets": {
+      "16_1": 3,
+      "16bar_3": 1,
+      "10_2": 3,
+      "singlet_4": 3
+    },
+    "net_complete_Spin10_families": 2,
+    "general_restricted_index": "I16=3*nu-nu=2*nu, nu integer; cannot equal3 under a common commuting T Higgs and complementary relative domains",
+    "parity_controls": [
+      {
+        "rank1_relative_index": -6,
+        "triplet_spinor_index": -18,
+        "singlet_spinor_index": 6,
+        "total_net_spinor_index": -12
+      },
+      {
+        "rank1_relative_index": -5,
+        "triplet_spinor_index": -15,
+        "singlet_spinor_index": 5,
+        "total_net_spinor_index": -10
+      },
+      {
+        "rank1_relative_index": -4,
+        "triplet_spinor_index": -12,
+        "singlet_spinor_index": 4,
+        "total_net_spinor_index": -8
+      },
+      {
+        "rank1_relative_index": -3,
+        "triplet_spinor_index": -9,
+        "singlet_spinor_index": 3,
+        "total_net_spinor_index": -6
+      },
+      {
+        "rank1_relative_index": -2,
+        "triplet_spinor_index": -6,
+        "singlet_spinor_index": 2,
+        "total_net_spinor_index": -4
+      },
+      {
+        "rank1_relative_index": -1,
+        "triplet_spinor_index": -3,
+        "singlet_spinor_index": 1,
+        "total_net_spinor_index": -2
+      },
+      {
+        "rank1_relative_index": 0,
+        "triplet_spinor_index": 0,
+        "singlet_spinor_index": 0,
+        "total_net_spinor_index": 0
+      },
+      {
+        "rank1_relative_index": 1,
+        "triplet_spinor_index": 3,
+        "singlet_spinor_index": -1,
+        "total_net_spinor_index": 2
+      },
+      {
+        "rank1_relative_index": 2,
+        "triplet_spinor_index": 6,
+        "singlet_spinor_index": -2,
+        "total_net_spinor_index": 4
+      },
+      {
+        "rank1_relative_index": 3,
+        "triplet_spinor_index": 9,
+        "singlet_spinor_index": -3,
+        "total_net_spinor_index": 6
+      },
+      {
+        "rank1_relative_index": 4,
+        "triplet_spinor_index": 12,
+        "singlet_spinor_index": -4,
+        "total_net_spinor_index": 8
+      },
+      {
+        "rank1_relative_index": 5,
+        "triplet_spinor_index": 15,
+        "singlet_spinor_index": -5,
+        "total_net_spinor_index": 10
+      },
+      {
+        "rank1_relative_index": 6,
+        "triplet_spinor_index": 18,
+        "singlet_spinor_index": -6,
+        "total_net_spinor_index": 12
+      }
+    ],
+    "adjSU3_character_controls": [
+      {
+        "p": 0,
+        "q": 1,
+        "base_betti": [
+          0,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "p": 0,
+        "q": 2,
+        "base_betti": [
+          0,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "p": 1,
+        "q": 0,
+        "base_betti": [
+          0,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "p": 1,
+        "q": 1,
+        "base_betti": [
+          0,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "p": 1,
+        "q": 2,
+        "base_betti": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "p": 2,
+        "q": 0,
+        "base_betti": [
+          0,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "p": 2,
+        "q": 1,
+        "base_betti": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "p": 2,
+        "q": 2,
+        "base_betti": [
+          0,
+          1,
+          1,
+          0
+        ]
+      }
+    ],
+    "neutral_SU3_flat_bundle_betti": [
+      0,
+      6,
+      6,
+      0
+    ],
+    "full_grade_zero_bundle_betti_with_W7": [
+      14,
+      34,
+      20,
+      0
+    ],
+    "grade_zero_domain": "Point caps filled in T-neutral sector, both wire tori retained with absolute cohomology; no additional boundary holonomy fixing. Other UV domains can change this.",
+    "neutral_scope": "Six complex infinitesimal SL3 flat-connection deformations H1 on the cut linked base; no claim all integrate unobstructedly or acquire a physical massless chiral interpretation.",
+    "no_H0_flavor_gauge_generators": true
+  },
+  "anomalies": {
+    "gravitational_T": 168,
+    "cubic_T": 912,
+    "SO10_squared_T": 18,
+    "all_left_chiral_T_charges_positive": true,
+    "zero_FI_D_flatness": "D_T=sum_i q_i |phi_i|^2 with q_i>0; charged scalars alone cannot have nonzero zero-FI D-flat VEVs",
+    "holomorphic_selection": "All counted charged chiral q>0: no holomorphic gauge-invariant monomial containing them exists without additional oppositely charged fields, transforming spurions or axionic/nonperturbative completion.",
+    "anomaly_scope": "Open local effective spectrum needs boundary inflow/additional states; E8 adjoint branching alone does not cancel these localized4D anomalies."
+  },
+  "Callias_nonAbelian_escape": {
+    "operator": "L=(sigma_i partial_i) tensor I4+I2 tensor Phi(x), on L2(R3,C2 tensor C4)",
+    "mass": "Phi=diag(3*g.sigma-I2,I2); P=(Re(x+iy)^3,Im(x+iy)^3,z*(3r^2+z^2)); g=P/sqrt(1+|P|^2)",
+    "exact_polynomial_identity": "|P|^2=r^2*(r^2+3z^2)^2",
+    "mass_in_su4_Hermitian_convention": true,
+    "asymptotic_eigenvalues": [
+      2,
+      -4,
+      1,
+      1
+    ],
+    "mass_norm_bound": 4,
+    "mass_squared_lower_bound_outside_r1": 1,
+    "Dirac_mass_commutator_bound": "(36+18sqrt3)/r for r>=1",
+    "exterior_coercivity_outside_r200": "41/50 - 9*sqrt(3)/100",
+    "exact_asymptotic_map_degree": 3,
+    "negative_eigenbundle_rank": 1,
+    "smooth_finite_energy_gauge_ansatz": {
+      "connection": "A_i=diag((i/2)*(P cross partial_i P).sigma/(1+|P|^2),0_2)",
+      "exact_covariant_mass_derivative": "D_i Phi=diag(3*(partial_i P).sigma/(1+|P|^2)^(3/2),0_2)",
+      "exterior_covariant_commutator_bound": "(36+18sqrt3)/r^7 for r>=1",
+      "exterior_gauged_coercivity_outside_r3": "239/243 - 2*sqrt(3)/243",
+      "asymptotics_origin": "A=O(r^5), F=O(r^4), D_A Phi=O(r^2)",
+      "asymptotics_infinity": "A=O(r^-1), F=O(r^-2), D_A Phi=O(r^-7)",
+      "finite_energy": "Integral[-sum_i<j Tr(F_ij^2)+sum_i Tr((D_i Phi)^2)] d3x is finite; no scalar potential added",
+      "gauge_index_modulus": 3,
+      "scalar_Euler_Lagrange_residual_at_1_0_0": [
+        "-27*sqrt(2)/8",
+        "0",
+        "0"
+      ],
+      "qualification": "Explicit finite-energy variational configuration; nonzero scalar Euler-Lagrange residual proves it is not a stationary solution of the stated zero-potential energy. Not an E8/G2 vacuum. A_t=tA preserves the Fredholm index."
+    },
+    "chern_mesh_controls": [
+      {
+        "degree": 1,
+        "mesh": [
+          16,
+          64
+        ],
+        "triangles": 1920,
+        "negative_line_oriented_Bargmann_chern": -1.0000000000000246
+      },
+      {
+        "degree": 1,
+        "mesh": [
+          32,
+          128
+        ],
+        "triangles": 7936,
+        "negative_line_oriented_Bargmann_chern": -0.9999999999999383
+      },
+      {
+        "degree": 3,
+        "mesh": [
+          16,
+          64
+        ],
+        "triangles": 1920,
+        "negative_line_oriented_Bargmann_chern": -2.999999999999974
+      },
+      {
+        "degree": 3,
+        "mesh": [
+          32,
+          128
+        ],
+        "triangles": 7936,
+        "negative_line_oriented_Bargmann_chern": -2.9999999999999525
+      }
+    ],
+    "Callias_index_modulus": 3,
+    "E6_preserving_SU3_alternative": {
+      "mass": "Phi3=diag(3*g.sigma-I2/2,1), Hermitian su3",
+      "connection": "same upperSU2 A_i, third row/column0",
+      "asymptotic_eigenvalues": [
+        "5/2",
+        "-7/2",
+        "1"
+      ],
+      "operator_complex_components": 6,
+      "Callias_index_modulus": 3,
+      "E8_sector": "(27,3); E6 commutes with this Higgs and connection",
+      "E6_27_component_index_modulus": 81,
+      "auxiliary_27_sector_index_multiplicity": 3,
+      "physical_net_chiral_E6_families_unproved": true,
+      "conjugate_sector_gate": "For Abar=A*, Phibar=-Phi*, C=i sigma2 on spatial spinors gives Lbar=-C L* C^-1 (star denotes complex conjugation, not adjoint). The conjugate27bar block has the SAME3D Callias index. Actual4D chirality/Majorana/CPT projection must be derived.",
+      "charge_inventory_per_27": {
+        "16_1": 1,
+        "10_-2": 1,
+        "singlet_4": 1
+      },
+      "per27_abelian_checks": {
+        "gravitational_Psi": 0,
+        "cubic_Psi": 0,
+        "Spin10_squared_Psi": 0
+      },
+      "charge_allowed_known_cubic_channels": [
+        "16_1*16_1*10_-2",
+        "1_4*10_-2*10_-2"
+      ],
+      "remaining_Dflat_obstacle": "The SM singlets Nc:(chi,Psi)=(-5,1) and S:(0,4) both have Psi>0: three27s alone still cannot give a nonzero zero-FI SM-preserving D-flat condensate.",
+      "scope": "A different auxiliary family-sector Dirac operator, not an index of the full E8 adjoint. Neutral sectors remain ungapped. Three4D chiral27s are NOT established: conjugate block has sameCalliasindex and actual7D Clifford/Majorana/4D chirality assignment is missing. The oldT-negative-localizer antifamily argument no longer applies, but cannot be replaced by an assumed chiral projection."
+    },
+    "index_scope": "Callias theorem gives net index magnitude3 for this explicit auxiliary gapped8-component Dirac operator, not a proof exactly3 modes with no additional pairs. Tensoring a spectator Spin10 spinor gives index modulus48.",
+    "exclusions": "This is a scalar mass endomorphism, not the PW Higgs1-form or the earlier physical massless monopole vacuum. It does not commute with fixed H27 holonomies, select degree3, or settle all E8 sectors. The supplied nonzeroA gives finite energy but explicitly fails the stated zero-potential scalar equation; it is not a Yang-Mills-Higgs/BPS or G2 solution.",
+    "theorem_reference": "Gesztesy-Waurick arXiv:1506.05144, bounded C2 Hermitian mass with exterior gap and derivatives O(1/r),O(1/r^2)."
+  },
+  "central_connection": "E6xSU3 and Spin10xSU4 branchings describe the same E8 inventory here: three16_1 from (27,3), but unavoidable16bar_3 from the E6 adjoint.",
+  "limitation": "Restricted common-Cartan PW/flat-H27 linked-wire model with standard mixed relative domains. Not a no-go for general E8 compactifications, noncommuting Higgs fields, different source/domain assignments, flux/APS index contributions or extra matter.",
+  "standard_branching_source": "Donagi-He-Ovrut-Reinbacher hep-th/0405014 section7; E6 subgroup comparison also EPJC2016 doi:10.1140/epjc/s10052-016-4432-y.",
+  "physical_scope": "No complete G2 geometry, physical spinor boundary action, quantified anomaly inflow, chiral vacuum, dynamical family-number selection or physical TOE."
+}
