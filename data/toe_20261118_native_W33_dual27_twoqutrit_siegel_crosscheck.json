@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "native_W33_point_orbits": [
+    {
+      "size": 3,
+      "anchor": 0,
+      "near": 3,
+      "far": 0
+    },
+    {
+      "size": 3,
+      "anchor": 0,
+      "near": 3,
+      "far": 0
+    },
+    {
+      "size": 3,
+      "anchor": 0,
+      "near": 3,
+      "far": 0
+    },
+    {
+      "size": 3,
+      "anchor": 0,
+      "near": 3,
+      "far": 0
+    },
+    {
+      "size": 27,
+      "anchor": 0,
+      "near": 0,
+      "far": 27
+    },
+    {
+      "size": 1,
+      "anchor": 1,
+      "near": 0,
+      "far": 0
+    }
+  ],
+  "point_H27_regular_noncollinear_shell": 27,
+  "point_H27_central_cycles": 9,
+  "regular_center_character_multiplicities": {
+    "1": 9,
+    "omega": 9,
+    "omega2": 9
+  },
+  "operator_E6_center_character_multiplicities": {
+    "1": 0,
+    "omega": 27,
+    "omega2": 0
+  },
+  "maximal_linear_equivariant_rank_address_to_E6_operator": 9,
+  "no_invertible_intertwiner": true,
+  "canonical_lagrangian_line_index": 5,
+  "native_line_radical_matches_all_27_F3_symmetric_shears": true,
+  "shear_parameters": "B=[[a,b],[b,c]], a,b,c in F3",
+  "qutrit_basis": "two qutrits |x,y>, x,y in F3",
+  "Clifford_phase_formula": "U_B|x,y>=omega^[2*(a*x^2+2*b*x*y+c*y^2)]|x,y>",
+  "local_quadratic_generators": 2,
+  "two_qutrit_CZ_entangling_generators": 1,
+  "exact_CZ_01_phase_exponents": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    2,
+    0,
+    2,
+    1
+  ],
+  "all_27_diagonal_Clifford_operators_distinct": true,
+  "group_law_exact_all_729_pairs": true,
+  "native_point_line_radical_intersection_samples": {
+    "1": {
+      "incidence": 1,
+      "intersect_radical_size": 9
+    },
+    "0": {
+      "incidence": 0,
+      "intersect_radical_size": 1
+    }
+  },
+  "prior_art": "Regular 27 W33 shell, central-character 9-rank obstruction and two-qutrit Siegel/Clifford link already appear in earlier project passes, including TOE79, Pass11043, Pass11869.",
+  "new_check": "Explicit conjugacy-free equality of all27 native W33 line-parabolic permutations with canonical symmetric 2x2 F3 shears and corresponding two-qutrit phase-gate exponents; compared intersecting W33 radical subgroups.",
+  "physical_limit": "This is a finite Weil/Clifford representation, not a quantum-optical experimental circuit, nor an actual E6 27-intertwiner."
+}

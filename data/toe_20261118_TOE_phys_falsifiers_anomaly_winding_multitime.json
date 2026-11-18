@@ -1,0 +1,588 @@
+{
+  "status": "PASS",
+  "Dirac_domain": {
+    "status": "PASS",
+    "interval_boundary_sensitivity": {
+      "free_both": {
+        "matrix_shape": [
+          9,
+          10
+        ],
+        "kernel_Q": 1,
+        "kernel_Q_adjoint": 0,
+        "chiral_index": 1,
+        "actual_SUSY_D_kernel": 1
+      },
+      "left_Dirichlet": {
+        "matrix_shape": [
+          9,
+          9
+        ],
+        "kernel_Q": 0,
+        "kernel_Q_adjoint": 0,
+        "chiral_index": 0,
+        "actual_SUSY_D_kernel": 0
+      },
+      "both_Dirichlet": {
+        "matrix_shape": [
+          9,
+          8
+        ],
+        "kernel_Q": 0,
+        "kernel_Q_adjoint": 1,
+        "chiral_index": -1,
+        "actual_SUSY_D_kernel": 1
+      }
+    },
+    "ring_off_resonance": {
+      "boundary_multiplier": 1,
+      "rank": 9,
+      "kernel_Q": 0,
+      "kernel_Q_adj": 0,
+      "index": 0
+    },
+    "ring_resonance": {
+      "boundary_multiplier": 512,
+      "rank": 8,
+      "kernel_Q": 1,
+      "kernel_Q_adj": 1,
+      "index": 0
+    },
+    "finite_weight": "Q_i=v_(i+1)-2*v_i, with specified Dirichlet boundary choices",
+    "statement": "The exact self-adjoint graded operator D=[[0,Q*,],[Q,0]] exhibits index +1,0,-1 on the SAME 1D geometry under allowed adjoint domains. On a closed circle its index is0 even at nonunitary resonance where two opposite chirality kernels appear.",
+    "caveat": "A rigorous finite 1D analog of boundary sensitivity, not the physical flux-coupled seven-dimensional G2 spinor Dirac or APS boundary index; complex t=2 is a complexified twist, not a unitary gauge holonomy."
+  },
+  "E6_anomaly": {
+    "status": "PASS",
+    "U1_Psi_gravity": -144,
+    "U1_Psi_SU3_SU2_GUT_normalized_Y2": -18,
+    "U1_Psi_plain_Y2": -30,
+    "A_grav_over_24": -6.0,
+    "required_k_if_universal_GS24": 3,
+    "level_one_fails_in_this_convention": true,
+    "ratio_independent_of_number_of_complete_spinor_families": true,
+    "Abelian_cubic": "-432*b*(5*a**2 + 3*b**2)",
+    "source_conventions": "This is a CONDITIONAL test of the 4D heterotic-style universality formula A_i/k_i=A_grav/24 with the given trace normalizations. Actual M-theory G2 anomaly inflow is not required to obey this convention; quantized GS coefficients, Kac-Moody levels, and corrections are not derived.",
+    "missing": "GS anomaly cancellation at nonlinear/broken phase, actual axion couplings, nonabelian gauge anomalies from additional localized modes and global compactification."
+  },
+  "winding": {
+    "status": "PASS",
+    "counts": [
+      {
+        "flux_ratio": 0.35,
+        "shape": "square",
+        "oriented_winding_modes": 8,
+        "unoriented_pm_identified_modes": 4,
+        "squared_norm_shells": [
+          1.0,
+          2.0
+        ],
+        "first_8_vectors": [
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            0
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "flux_ratio": 0.35,
+        "shape": "hex",
+        "oriented_winding_modes": 12,
+        "unoriented_pm_identified_modes": 6,
+        "squared_norm_shells": [
+          1.0,
+          3.0
+        ],
+        "first_8_vectors": [
+          [
+            -2,
+            1
+          ],
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            0
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            -2
+          ]
+        ]
+      },
+      {
+        "flux_ratio": 0.5,
+        "shape": "square",
+        "oriented_winding_modes": 8,
+        "unoriented_pm_identified_modes": 4,
+        "squared_norm_shells": [
+          1.0,
+          2.0
+        ],
+        "first_8_vectors": [
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            0
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "flux_ratio": 0.5,
+        "shape": "hex",
+        "oriented_winding_modes": 6,
+        "unoriented_pm_identified_modes": 3,
+        "squared_norm_shells": [
+          1.0
+        ],
+        "first_8_vectors": [
+          [
+            -1,
+            0
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "flux_ratio": 0.75,
+        "shape": "square",
+        "oriented_winding_modes": 4,
+        "unoriented_pm_identified_modes": 2,
+        "squared_norm_shells": [
+          1.0
+        ],
+        "first_8_vectors": [
+          [
+            -1,
+            0
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "flux_ratio": 0.75,
+        "shape": "hex",
+        "oriented_winding_modes": 6,
+        "unoriented_pm_identified_modes": 3,
+        "squared_norm_shells": [
+          1.0
+        ],
+        "first_8_vectors": [
+          [
+            -1,
+            0
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "flux_ratio": 1.0,
+        "shape": "square",
+        "oriented_winding_modes": 4,
+        "unoriented_pm_identified_modes": 2,
+        "squared_norm_shells": [
+          1.0
+        ],
+        "first_8_vectors": [
+          [
+            -1,
+            0
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "flux_ratio": 1.0,
+        "shape": "hex",
+        "oriented_winding_modes": 6,
+        "unoriented_pm_identified_modes": 3,
+        "squared_norm_shells": [
+          1.0
+        ],
+        "first_8_vectors": [
+          [
+            -1,
+            0
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "flux_ratio": 1.05,
+        "shape": "square",
+        "oriented_winding_modes": 4,
+        "unoriented_pm_identified_modes": 2,
+        "squared_norm_shells": [
+          1.0
+        ],
+        "first_8_vectors": [
+          [
+            -1,
+            0
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "flux_ratio": 1.05,
+        "shape": "hex",
+        "oriented_winding_modes": 6,
+        "unoriented_pm_identified_modes": 3,
+        "squared_norm_shells": [
+          1.0
+        ],
+        "first_8_vectors": [
+          [
+            -1,
+            0
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "flux_ratio": 1.2,
+        "shape": "square",
+        "oriented_winding_modes": 4,
+        "unoriented_pm_identified_modes": 2,
+        "squared_norm_shells": [
+          1.0
+        ],
+        "first_8_vectors": [
+          [
+            -1,
+            0
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "flux_ratio": 1.2,
+        "shape": "hex",
+        "oriented_winding_modes": 0,
+        "unoriented_pm_identified_modes": 0,
+        "squared_norm_shells": [],
+        "first_8_vectors": []
+      },
+      {
+        "flux_ratio": 1.3,
+        "shape": "square",
+        "oriented_winding_modes": 0,
+        "unoriented_pm_identified_modes": 0,
+        "squared_norm_shells": [],
+        "first_8_vectors": []
+      },
+      {
+        "flux_ratio": 1.3,
+        "shape": "hex",
+        "oriented_winding_modes": 0,
+        "unoriented_pm_identified_modes": 0,
+        "squared_norm_shells": [],
+        "first_8_vectors": []
+      },
+      {
+        "flux_ratio": 2.0,
+        "shape": "square",
+        "oriented_winding_modes": 0,
+        "unoriented_pm_identified_modes": 0,
+        "squared_norm_shells": [],
+        "first_8_vectors": []
+      },
+      {
+        "flux_ratio": 2.0,
+        "shape": "hex",
+        "oriented_winding_modes": 0,
+        "unoriented_pm_identified_modes": 0,
+        "squared_norm_shells": [],
+        "first_8_vectors": []
+      }
+    ],
+    "exact_square_critical_ratios": "r_crit(|u|\u00b2+|v|\u00b2)=4/(pi*(u\u00b2+v\u00b2)); BF for r below threshold",
+    "exact_hex_critical_ratios": "r_crit(u\u00b2+u*v+v\u00b2)=2*sqrt(3)/(pi*(u\u00b2+u*v+v\u00b2)); BF for r below threshold",
+    "cusp_no_uniform_stability": "For any finite r>0, choose y>pi*r/4; then shortest (1,0) branch violates BF in this conditional mass formula.",
+    "caveat": "Counts oriented lattice vectors in ONE conditional light winding branch and norm truncation. Opposite winding vectors may be related by reality/level-matching; not a complete M-theory spectrum, flux quantization or backreaction."
+  },
+  "quantum_three_time": {
+    "status": "PASS",
+    "paper": "Beyer et al, Observation of Genuine Multi-Time Quantum Memory, arXiv:2611.17268v1 (2026-11-12)",
+    "independently_reproduced_four_analytic_pairwise_models": [
+      {
+        "gamma": 0.36,
+        "p": 0.2,
+        "pairwise_classical_p_threshold": 0.09999999999999998,
+        "pairwise_CPTP_choi_max_errors": [
+          1.1102230246251565e-16,
+          2.220446049250313e-16,
+          1.1102230246251565e-16
+        ],
+        "proven_three_time_witness_upper_bound": -0.36
+      },
+      {
+        "gamma": 0.64,
+        "p": 0.3,
+        "pairwise_classical_p_threshold": 0.2,
+        "pairwise_CPTP_choi_max_errors": [
+          1.1102230246251565e-16,
+          1.1102230246251565e-16,
+          0.0
+        ],
+        "proven_three_time_witness_upper_bound": -0.64
+      },
+      {
+        "gamma": 0.25,
+        "p": 0.14,
+        "pairwise_classical_p_threshold": 0.0669872981077807,
+        "pairwise_CPTP_choi_max_errors": [
+          0.0,
+          2.220446049250313e-16,
+          1.1102230246251565e-16
+        ],
+        "proven_three_time_witness_upper_bound": -0.25
+      },
+      {
+        "gamma": 0.81,
+        "p": 0.4,
+        "pairwise_classical_p_threshold": 0.2820550528229664,
+        "pairwise_CPTP_choi_max_errors": [
+          5.551115123125783e-17,
+          2.220446049250313e-16,
+          5.551115123125783e-17
+        ],
+        "proven_three_time_witness_upper_bound": -0.81
+      }
+    ],
+    "nonclassical_triple_witness_W3": -0.36,
+    "gamma_036_later_depolarizing_visibility_threshold": 0.983666610188635,
+    "late_channel_visibility_sweep": [
+      {
+        "later_channel_bloch_visibility": 1.0,
+        "orthogonal_axes_W3_upper": -0.36,
+        "this_analytic_axes_witness_negative": true
+      },
+      {
+        "later_channel_bloch_visibility": 0.999,
+        "orthogonal_axes_W3_upper": -0.270579644375568,
+        "this_analytic_axes_witness_negative": true
+      },
+      {
+        "later_channel_bloch_visibility": 0.995,
+        "orthogonal_axes_W3_upper": -0.16025015644561863,
+        "this_analytic_axes_witness_negative": true
+      },
+      {
+        "later_channel_bloch_visibility": 0.99,
+        "orthogonal_axes_W3_upper": -0.07786528040668211,
+        "this_analytic_axes_witness_negative": true
+      },
+      {
+        "later_channel_bloch_visibility": 0.985,
+        "orthogonal_axes_W3_upper": -0.014891321465252072,
+        "this_analytic_axes_witness_negative": true
+      },
+      {
+        "later_channel_bloch_visibility": 0.98,
+        "orthogonal_axes_W3_upper": 0.03799497484264841,
+        "this_analytic_axes_witness_negative": false
+      },
+      {
+        "later_channel_bloch_visibility": 0.95,
+        "orthogonal_axes_W3_upper": 0.26449979983983996,
+        "this_analytic_axes_witness_negative": false
+      }
+    ],
+    "proof": "For gamma>0,p>=pcrit, each of three channel PAIRS has an explicit classical-memory Kraus decomposition. Yet W3=F2(z)+F3(x)-|s1|=-gamma<0 rules out any common 3-time classical memory model. Verified channel equality on full qubit Choi matrices.",
+    "scope": "Independent numerical reconstruction of a RECENT PUBLISHED theorem, NOT an original theorem, and not a W33 hardware demonstration. The damping/dephasing example is a qubit, not the proposed qutrit photon device. Classical pairwise decompositions do not jointly extend."
+  }
+}
