@@ -1,0 +1,664 @@
+{
+  "status": "PASS",
+  "boundary": {
+    "status": "PASS",
+    "cases": 112,
+    "m3_sensitivity": [
+      {
+        "m": 3,
+        "r": 1,
+        "char": "2",
+        "b1": 1,
+        "b2": 2,
+        "index": -1
+      },
+      {
+        "m": 3,
+        "r": 2,
+        "char": "2",
+        "b1": 2,
+        "b2": 1,
+        "index": 1
+      },
+      {
+        "m": 3,
+        "r": 3,
+        "char": "2",
+        "b1": 3,
+        "b2": 0,
+        "index": 3
+      }
+    ],
+    "theorem": "For M=solid torus with m excised point balls, r>=1 selected relative S2 boundaries and outer torus absolute, all complex flat characters t!=0 satisfy (b1,b2)=(r,m-r), net chiral index 2r-m.",
+    "consequence": "If one of three assumed defect spheres is not given the charged relative domain, index3 falls to index1 and a conjugate mode appears. Thus a claimed three-family construction depends on all three physical boundary projectors, not merely the ambient topology.",
+    "caveat": "Topological de Rham mapping-cone index only. Does not prove the physical flux-coupled 7D Dirac/APS boundary projector, eta invariant, anomaly inflow, or self-adjointness."
+  },
+  "gauge": {
+    "status": "PASS",
+    "old_singlet_charge": [
+      -5,
+      -3
+    ],
+    "independent_E6_fundamental_singlet_charge": [
+      0,
+      4
+    ],
+    "rank2_mass_matrix": [
+      [
+        25,
+        15
+      ],
+      [
+        15,
+        25
+      ]
+    ],
+    "eigenvalues": [
+      10,
+      40
+    ],
+    "determinant": 400,
+    "Dflat_minimal_algebraic_oppositely_charged_pair_set": [
+      [
+        -5,
+        -3
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        -4
+      ]
+    ],
+    "pair_mass_matrix": [
+      [
+        50,
+        30
+      ],
+      [
+        30,
+        50
+      ]
+    ],
+    "residual_anomaly_unaffected_by_vectorlike_pairs": {
+      "gravity_Psi": -144,
+      "cubic_Psi": -1296,
+      "Y2_Psi": -30,
+      "SU3sq_Psi": -18,
+      "SU2sq_Psi": -18
+    },
+    "adjoint_two_16_Psi_charge_sum": -6,
+    "required_cubic_partner_Psi_charge": 6,
+    "E6_27_Psi_sector_charges": [
+      1,
+      -2,
+      4
+    ],
+    "E6_27bar_Psi_sector_charges": [
+      -1,
+      2,
+      -4
+    ],
+    "E6_78_Psi_sector_charges": [
+      -3,
+      0,
+      3
+    ],
+    "existing_same_sheet_cubic_Yukawa_possible_with_27_or_27bar": false,
+    "alternative_E6_27_family_cubic_Psi_conservation": "16_(+1)*16_(+1)*10_(-2) has net U1Psi charge0, but requires an entirely different localized family sector.",
+    "caveat": "This is a NECESSARY algebraic extension, not an E6 dynamical vacuum: source of the opposite-charge q scalar, E6 and SM gauge invariance of F-terms, 4D anomaly inflow and full scalar potential are unknown."
+  },
+  "W33": {
+    "status": "PASS",
+    "W33_flags": 160,
+    "group": "PSp(4,3)",
+    "group_order": 25920,
+    "flag_stabilizer_order": 162,
+    "other_three_points": [
+      4,
+      5,
+      6
+    ],
+    "induced_permutation_group": "S3",
+    "distinct_triple_permutations": 6,
+    "conjugacy_class_fixed_point_counts": {
+      "1": 3,
+      "0": 2,
+      "3": 1
+    },
+    "mass_matrix_general_S3_invariant": "a I3+b J3",
+    "mass_eigenvalues": {
+      "a": 2,
+      "a+3b": 1
+    },
+    "rank_constraint": "An exact S3 symmetry leaves a twofold family mass degeneracy. Physical fermion mass hierarchies require additional symmetry breaking or representation-dependent couplings.",
+    "novelty_scope": "The 3=4-1 leftover points of a W33 isotropic line after choosing a flag supply a concrete, native and symmetry-covariant abstract defect triple; there are160 possible flags, and no derived map from flags to geometric wire defects or 7D field configuration."
+  },
+  "winding": {
+    "status": "PASS",
+    "samples": [
+      {
+        "r": 0.9,
+        "delta": 0.0,
+        "lambda_lo": 0.0,
+        "lambda_hi": 12.0,
+        "y_lo": 0.7068583470577035,
+        "y_hi": Infinity,
+        "unsafe_fraction": 1.0
+      },
+      {
+        "r": 0.9,
+        "delta": 0.25,
+        "lambda_lo": 0.09314575050761942,
+        "lambda_hi": 11.40685424949238,
+        "y_lo": 0.7436143198787619,
+        "y_hi": 91.06481099208686,
+        "unsafe_fraction": 0.9895137358970156
+      },
+      {
+        "r": 0.9,
+        "delta": 0.5,
+        "lambda_lo": 0.20849737787081857,
+        "lambda_hi": 10.791502622129181,
+        "y_lo": 0.7860165967340393,
+        "y_hi": 40.683006430651275,
+        "unsafe_fraction": 0.9765275543197832
+      },
+      {
+        "r": 0.9,
+        "delta": 1.0,
+        "lambda_lo": 0.5278640450004204,
+        "lambda_hi": 9.47213595499958,
+        "y_lo": 0.8955002551684572,
+        "y_hi": 16.069100074216433,
+        "unsafe_fraction": 0.9386515934194014
+      },
+      {
+        "r": 0.9,
+        "delta": 1.5,
+        "lambda_lo": 1.0358983848622456,
+        "lambda_hi": 7.964101615137754,
+        "y_lo": 1.065066792790504,
+        "y_hi": 8.188351568692157,
+        "unsafe_fraction": 0.779970835340203
+      },
+      {
+        "r": 0.9,
+        "delta": 2.0,
+        "lambda_lo": 2.0,
+        "lambda_hi": 6.0,
+        "y_lo": 1.413716694115407,
+        "y_hi": 4.241150082346221,
+        "unsafe_fraction": 0.4503163717437234
+      },
+      {
+        "r": 0.9,
+        "delta": 2.2,
+        "lambda_lo": 2.9055728090000854,
+        "lambda_hi": 4.694427190999914,
+        "y_lo": 1.8068871492893919,
+        "y_hi": 2.91932115361842,
+        "unsafe_fraction": 0.20138760372000597
+      },
+      {
+        "r": 1.0,
+        "delta": 0.0,
+        "lambda_lo": 0.0,
+        "lambda_hi": 12.0,
+        "y_lo": 0.7853981633974483,
+        "y_hi": Infinity,
+        "unsafe_fraction": 1.0
+      },
+      {
+        "r": 1.0,
+        "delta": 0.25,
+        "lambda_lo": 0.09314575050761942,
+        "lambda_hi": 11.40685424949238,
+        "y_lo": 0.8262381331986244,
+        "y_hi": 101.18312332454096,
+        "unsafe_fraction": 0.9905623623073141
+      },
+      {
+        "r": 1.0,
+        "delta": 0.5,
+        "lambda_lo": 0.20849737787081857,
+        "lambda_hi": 10.791502622129181,
+        "y_lo": 0.8733517741489326,
+        "y_hi": 45.203340478501424,
+        "unsafe_fraction": 0.9787564054282253
+      },
+      {
+        "r": 1.0,
+        "delta": 1.0,
+        "lambda_lo": 0.5278640450004204,
+        "lambda_hi": 9.47213595499958,
+        "y_lo": 0.995000283520508,
+        "y_hi": 17.854555638018258,
+        "unsafe_fraction": 0.9056042924147292
+      },
+      {
+        "r": 1.0,
+        "delta": 1.5,
+        "lambda_lo": 1.0358983848622456,
+        "lambda_hi": 7.964101615137754,
+        "y_lo": 1.1834075475450045,
+        "y_hi": 9.098168409657953,
+        "unsafe_fraction": 0.7019737518061826
+      },
+      {
+        "r": 1.0,
+        "delta": 2.0,
+        "lambda_lo": 2.0,
+        "lambda_hi": 6.0,
+        "y_lo": 1.5707963267948966,
+        "y_hi": 4.71238898038469,
+        "unsafe_fraction": 0.4052847345693511
+      },
+      {
+        "r": 1.0,
+        "delta": 2.2,
+        "lambda_lo": 2.9055728090000854,
+        "lambda_hi": 4.694427190999914,
+        "y_lo": 2.007652388099324,
+        "y_hi": 3.243690170687133,
+        "unsafe_fraction": 0.18124884334800528
+      },
+      {
+        "r": 1.2,
+        "delta": 0.0,
+        "lambda_lo": 0.0,
+        "lambda_hi": 12.0,
+        "y_lo": 0.9424777960769379,
+        "y_hi": Infinity,
+        "unsafe_fraction": 0.9867776334162366
+      },
+      {
+        "r": 1.2,
+        "delta": 0.25,
+        "lambda_lo": 0.09314575050761942,
+        "lambda_hi": 11.40685424949238,
+        "y_lo": 0.9914857598383493,
+        "y_hi": 121.41974798944915,
+        "unsafe_fraction": 0.9538378906537635
+      },
+      {
+        "r": 1.2,
+        "delta": 0.5,
+        "lambda_lo": 0.20849737787081857,
+        "lambda_hi": 10.791502622129181,
+        "y_lo": 1.0480221289787193,
+        "y_hi": 54.24400857420171,
+        "unsafe_fraction": 0.8935688482011044
+      },
+      {
+        "r": 1.2,
+        "delta": 1.0,
+        "lambda_lo": 0.5278640450004204,
+        "lambda_hi": 9.47213595499958,
+        "y_lo": 1.1940003402246095,
+        "y_hi": 21.42546676562191,
+        "unsafe_fraction": 0.7552035139500234
+      },
+      {
+        "r": 1.2,
+        "delta": 1.5,
+        "lambda_lo": 1.0358983848622456,
+        "lambda_hi": 7.964101615137754,
+        "y_lo": 1.4200890570540055,
+        "y_hi": 10.917802091589543,
+        "unsafe_fraction": 0.5849781265051522
+      },
+      {
+        "r": 1.2,
+        "delta": 2.0,
+        "lambda_lo": 2.0,
+        "lambda_hi": 6.0,
+        "y_lo": 1.8849555921538759,
+        "y_hi": 5.654866776461628,
+        "unsafe_fraction": 0.3377372788077926
+      },
+      {
+        "r": 1.2,
+        "delta": 2.2,
+        "lambda_lo": 2.9055728090000854,
+        "lambda_hi": 4.694427190999914,
+        "y_lo": 2.409182865719189,
+        "y_hi": 3.8924282048245593,
+        "unsafe_fraction": 0.15104070279000437
+      },
+      {
+        "r": 2.0,
+        "delta": 0.0,
+        "lambda_lo": 0.0,
+        "lambda_hi": 12.0,
+        "y_lo": 1.5707963267948966,
+        "y_hi": Infinity,
+        "unsafe_fraction": 0.6079271018540267
+      },
+      {
+        "r": 2.0,
+        "delta": 0.25,
+        "lambda_lo": 0.09314575050761942,
+        "lambda_hi": 11.40685424949238,
+        "y_lo": 1.6524762663972488,
+        "y_hi": 202.36624664908192,
+        "unsafe_fraction": 0.5731591682507563
+      },
+      {
+        "r": 2.0,
+        "delta": 0.5,
+        "lambda_lo": 0.20849737787081857,
+        "lambda_hi": 10.791502622129181,
+        "y_lo": 1.7467035482978652,
+        "y_hi": 90.40668095700285,
+        "unsafe_fraction": 0.5361413089206627
+      },
+      {
+        "r": 2.0,
+        "delta": 1.0,
+        "lambda_lo": 0.5278640450004204,
+        "lambda_hi": 9.47213595499958,
+        "y_lo": 1.990000567041016,
+        "y_hi": 35.709111276036516,
+        "unsafe_fraction": 0.4531221083700141
+      },
+      {
+        "r": 2.0,
+        "delta": 1.5,
+        "lambda_lo": 1.0358983848622456,
+        "lambda_hi": 7.964101615137754,
+        "y_lo": 2.366815095090009,
+        "y_hi": 18.196336819315906,
+        "unsafe_fraction": 0.3509868759030914
+      },
+      {
+        "r": 2.0,
+        "delta": 2.0,
+        "lambda_lo": 2.0,
+        "lambda_hi": 6.0,
+        "y_lo": 3.141592653589793,
+        "y_hi": 9.42477796076938,
+        "unsafe_fraction": 0.20264236728467555
+      },
+      {
+        "r": 2.0,
+        "delta": 2.2,
+        "lambda_lo": 2.9055728090000854,
+        "lambda_hi": 4.694427190999914,
+        "y_lo": 4.015304776198648,
+        "y_hi": 6.487380341374266,
+        "unsafe_fraction": 0.09062442167400264
+      },
+      {
+        "r": 5.0,
+        "delta": 0.0,
+        "lambda_lo": 0.0,
+        "lambda_hi": 12.0,
+        "y_lo": 3.926990816987241,
+        "y_hi": Infinity,
+        "unsafe_fraction": 0.24317084074161066
+      },
+      {
+        "r": 5.0,
+        "delta": 0.25,
+        "lambda_lo": 0.09314575050761942,
+        "lambda_hi": 11.40685424949238,
+        "y_lo": 4.131190665993121,
+        "y_hi": 505.91561662270476,
+        "unsafe_fraction": 0.22926366730030256
+      },
+      {
+        "r": 5.0,
+        "delta": 0.5,
+        "lambda_lo": 0.20849737787081857,
+        "lambda_hi": 10.791502622129181,
+        "y_lo": 4.366758870744663,
+        "y_hi": 226.01670239250709,
+        "unsafe_fraction": 0.21445652356826517
+      },
+      {
+        "r": 5.0,
+        "delta": 1.0,
+        "lambda_lo": 0.5278640450004204,
+        "lambda_hi": 9.47213595499958,
+        "y_lo": 4.97500141760254,
+        "y_hi": 89.27277819009129,
+        "unsafe_fraction": 0.18124884334800562
+      },
+      {
+        "r": 5.0,
+        "delta": 1.5,
+        "lambda_lo": 1.0358983848622456,
+        "lambda_hi": 7.964101615137754,
+        "y_lo": 5.917037737725022,
+        "y_hi": 45.490842048289764,
+        "unsafe_fraction": 0.1403947503612366
+      },
+      {
+        "r": 5.0,
+        "delta": 2.0,
+        "lambda_lo": 2.0,
+        "lambda_hi": 6.0,
+        "y_lo": 7.853981633974482,
+        "y_hi": 23.561944901923447,
+        "unsafe_fraction": 0.08105694691387022
+      },
+      {
+        "r": 5.0,
+        "delta": 2.2,
+        "lambda_lo": 2.9055728090000854,
+        "lambda_hi": 4.694427190999914,
+        "y_lo": 10.03826194049662,
+        "y_hi": 16.218450853435662,
+        "unsafe_fraction": 0.03624976866960106
+      },
+      {
+        "r": 10.0,
+        "delta": 0.0,
+        "lambda_lo": 0.0,
+        "lambda_hi": 12.0,
+        "y_lo": 7.853981633974482,
+        "y_hi": Infinity,
+        "unsafe_fraction": 0.12158542037080533
+      },
+      {
+        "r": 10.0,
+        "delta": 0.25,
+        "lambda_lo": 0.09314575050761942,
+        "lambda_hi": 11.40685424949238,
+        "y_lo": 8.262381331986242,
+        "y_hi": 1011.8312332454095,
+        "unsafe_fraction": 0.11463183365015128
+      },
+      {
+        "r": 10.0,
+        "delta": 0.5,
+        "lambda_lo": 0.20849737787081857,
+        "lambda_hi": 10.791502622129181,
+        "y_lo": 8.733517741489326,
+        "y_hi": 452.03340478501417,
+        "unsafe_fraction": 0.10722826178413247
+      },
+      {
+        "r": 10.0,
+        "delta": 1.0,
+        "lambda_lo": 0.5278640450004204,
+        "lambda_hi": 9.47213595499958,
+        "y_lo": 9.95000283520508,
+        "y_hi": 178.54555638018257,
+        "unsafe_fraction": 0.09062442167400286
+      },
+      {
+        "r": 10.0,
+        "delta": 1.5,
+        "lambda_lo": 1.0358983848622456,
+        "lambda_hi": 7.964101615137754,
+        "y_lo": 11.834075475450044,
+        "y_hi": 90.98168409657953,
+        "unsafe_fraction": 0.0701973751806182
+      },
+      {
+        "r": 10.0,
+        "delta": 2.0,
+        "lambda_lo": 2.0,
+        "lambda_hi": 6.0,
+        "y_lo": 15.707963267948964,
+        "y_hi": 47.12388980384689,
+        "unsafe_fraction": 0.04052847345693511
+      },
+      {
+        "r": 10.0,
+        "delta": 2.2,
+        "lambda_lo": 2.9055728090000854,
+        "lambda_hi": 4.694427190999914,
+        "y_lo": 20.07652388099324,
+        "y_hi": 32.436901706871325,
+        "unsafe_fraction": 0.01812488433480053
+      }
+    ],
+    "exact_formula": "F_robust=F_below(3*pi*r/lambda_lo)-F_below(3*pi*r/lambda_hi), with F_below(y)=0 if y<=sqrt3/2; 6/pi*(pi/6-asin(sqrt(1-y\u00b2))-(1/2-sqrt(1-y\u00b2))/y) if sqrt3/2<y<1; 1-3/(pi*y) if y>=1.",
+    "y_max_infinite_when_delta_zero": true,
+    "note": "This is an analytic closed form replacing parent numerical quadrature. No bound on actual physical string/M-theory correction delta has been established."
+  },
+  "memory": {
+    "status": "PASS",
+    "confidence_level": 0.99,
+    "threshold_e": 100,
+    "exact_bounded_loss_sequential_results": [
+      {
+        "herald_odds_bound": 1.0,
+        "null_p": 0.3333333333333333,
+        "alternative_p": 0.4666666666666667,
+        "E_success": 1.4000000000000001,
+        "E_failure": 0.7999999999999999,
+        "alternative_detection_by_n": {
+          "200": 0.858443315367838,
+          "292": 0.9547026069601606,
+          "600": 0.9987565333830355,
+          "1000": 0.9999842615818105
+        },
+        "null_false_positive_by_n": {
+          "200": 0.007525049286235922,
+          "292": 0.00837525439579913,
+          "600": 0.008755904950957225,
+          "1000": 0.008766509272490071
+        },
+        "alternative_expected_truncated_accepted": 124.73487022129018,
+        "max_n": 1000
+      },
+      {
+        "herald_odds_bound": 1.025,
+        "null_p": 0.33884297520661155,
+        "alternative_p": 0.46052631578947373,
+        "E_success": 1.3591142490372274,
+        "E_failure": 0.8159539473684211,
+        "alternative_detection_by_n": {
+          "200": 0.7807722796843662,
+          "292": 0.9155941955479442,
+          "600": 0.9960788322607086,
+          "1000": 0.9999038103550942
+        },
+        "null_false_positive_by_n": {
+          "200": 0.0068918197740995835,
+          "292": 0.008077345351079167,
+          "600": 0.008787288952749774,
+          "1000": 0.008821304285289624
+        },
+        "alternative_expected_truncated_accepted": 149.91478861852167,
+        "max_n": 1000
+      },
+      {
+        "herald_odds_bound": 1.05,
+        "null_p": 0.34426229508196726,
+        "alternative_p": 0.45454545454545453,
+        "E_success": 1.3203463203463202,
+        "E_failure": 0.8318181818181818,
+        "alternative_detection_by_n": {
+          "200": 0.6758818492862176,
+          "292": 0.8557511160864282,
+          "600": 0.9889960273406453,
+          "1000": 0.9995092323283213
+        },
+        "null_false_positive_by_n": {
+          "200": 0.006014921052482251,
+          "292": 0.007605948398953979,
+          "600": 0.008791087297042725,
+          "1000": 0.008884473258895208
+        },
+        "alternative_expected_truncated_accepted": 182.58736794788422,
+        "max_n": 1000
+      },
+      {
+        "herald_odds_bound": 1.1,
+        "null_p": 0.3548387096774194,
+        "alternative_p": 0.4430379746835443,
+        "E_success": 1.248561565017261,
+        "E_failure": 0.8632911392405065,
+        "alternative_detection_by_n": {
+          "200": 0.39776091324731755,
+          "292": 0.6344913021779119,
+          "600": 0.9343419866935072,
+          "1000": 0.9920230274494747
+        },
+        "null_false_positive_by_n": {
+          "200": 0.0036277491305115226,
+          "292": 0.0057775103006965835,
+          "600": 0.008524429761459678,
+          "1000": 0.009049672309670688
+        },
+        "alternative_expected_truncated_accepted": 283.59921141488434,
+        "max_n": 1000
+      },
+      {
+        "herald_odds_bound": 1.15,
+        "null_p": 0.36507936507936506,
+        "alternative_p": 0.4320987654320988,
+        "E_success": 1.1835748792270533,
+        "E_failure": 0.8944444444444445,
+        "alternative_detection_by_n": {
+          "200": 0.11994251498205852,
+          "292": 0.29779040032350257,
+          "600": 0.7298969938569805,
+          "1000": 0.9259936382802152
+        },
+        "null_false_positive_by_n": {
+          "200": 0.001123551673965298,
+          "292": 0.002778942565597006,
+          "600": 0.006800758240156849,
+          "1000": 0.008634709694298075
+        },
+        "alternative_expected_truncated_accepted": 469.22664655177095,
+        "max_n": 1000
+      },
+      {
+        "herald_odds_bound": 1.2,
+        "null_p": 0.37499999999999994,
+        "alternative_p": 0.4216867469879518,
+        "E_success": 1.1244979919678715,
+        "E_failure": 0.9253012048192772,
+        "alternative_detection_by_n": {
+          "200": 0.005485990185725856,
+          "292": 0.037021897371951884,
+          "600": 0.294715573185316,
+          "1000": 0.6105019356373729
+        },
+        "null_false_positive_by_n": {
+          "200": 5.2287308210103465e-05,
+          "292": 0.0003538179133547637,
+          "600": 0.002808896874688076,
+          "1000": 0.005815813217688844
+        },
+        "alternative_expected_truncated_accepted": 764.989160313258,
+        "max_n": 1000
+      }
+    ],
+    "no_IID_null": "Conditional p(success|past)<=kappa/(kappa+2) is sufficient for nonnegative likelihood-ratio test supermartingale with calibrated p1>p0.",
+    "caveat": "Null conditional bounds need independent event-ready heralding and detector calibration. The alternative expected stopping times assume IID accepted data. This is not an operational device-independent proof of multitime quantum memory."
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "status": "PASS",
+  "native_E6_adj_dim": 78,
+  "native_nu_adjoint_singlet_action_nonzero": true,
+  "native_nu_image_charge_PsiChiY": [
+    1,
+    -5,
+    0
+  ],
+  "charge_balanced_78_27bar_27_singlet_VEVs": [
+    [
+      -5,
+      -3
+    ],
+    [
+      5,
+      -1
+    ],
+    [
+      0,
+      4
+    ]
+  ],
+  "full_Abelian_Higgs_mass_matrix": [
+    [
+      50,
+      10
+    ],
+    [
+      10,
+      26
+    ]
+  ],
+  "mass_matrix_determinant": 1200,
+  "mass_matrix_eigenvalues": [
+    "38-2*sqrt(61)",
+    "38+2*sqrt(61)"
+  ],
+  "compact_E6_weight_vector_D_flat": true,
+  "E6_invariant_cubic_I": "I=barF_27bar * A_78 * F_27; on singlet fields I~x*y*z, verified nonzero from native adjoint singlet action on 27 singlet.",
+  "nonrenormalizable_superpotential": "W=I-I^2/2 in dimensionless units, namely lambda*I+kappa*I^2/Lambda^3 with nonzero coupling; I_vac=1 makes fprime(I)=0.",
+  "toy_F_flat_all_components": true,
+  "scalar_Hessian_rank_in_three_singlet_subspace": 1,
+  "cubic_U1_anomaly_factorization": "-432*Psi*(5*Chi^2+3*Psi^2) for three net 16_-3",
+  "GS_candidate_one_anomalous_abelian_direction": "Psi, provided suitable local counterterms and UV inflow; not actually derived",
+  "unrepaired_anomalous_Psi": "Three localized chiral 16_-3 still have Psi-gravitational=-144 and Psi-cubic=-1296. The added full 27+27bar are vectorlike for gauge anomalies; anomaly inflow or new chiral matter remains compulsory.",
+  "localized_ten_dim": 10,
+  "e6_27_singlet_charge_PsiChi": [
+    4,
+    0
+  ],
+  "first_action_rank": 10,
+  "second_action_rank": 5,
+  "weak_doublet_hypercharge_Q6Y": -3,
+  "weak_doublet_rank": 2,
+  "color_triplet_hypercharge_Q6Y": 2,
+  "color_triplet_rank": 3,
+  "nonzero_symmetric_pairs": 30,
+  "first_nonzero_pairs": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      0,
+      7
+    ],
+    [
+      0,
+      8
+    ],
+    [
+      0,
+      9
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      1,
+      7
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      1,
+      9
+    ]
+  ],
+  "second_action_charge_PsiChi": [
+    -2,
+    -2
+  ],
+  "adjoint_brackets_all_zero": true,
+  "two_step_action_commutes": true,
+  "gauge_invariant_quartic": "(bar_27)_H * T_A * T_B * (27)_S * (78)^A*(78)^B",
+  "operator": "E6-invariant operator W_eff=(1/Lambda)*Hbar T_A T_B S A^A B^B; <S> can generate a Yukawa for native two adjoint16_-3 matter components, since 27 has charge chain4->1->-2.",
+  "physical_scope": "Rep-level EXACT nonvanishing quartic tensor. Whether two adjoint families, the 27 S, and 27bar H are massless 4D chiral superfields on the SAME flux/defect compactification, have normalizable profile overlaps, and satisfy all quantum selection rules is UNPROVED."
+}
