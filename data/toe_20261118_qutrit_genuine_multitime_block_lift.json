@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "three_time_qutrit_block_embeddings": [
+    {
+      "gamma": 0.36,
+      "p": 0.2,
+      "pairwise_classical_threshold": 0.09999999999999998,
+      "qutrit_Choi_errors": [
+        1.1102230246251565e-16,
+        2.220446049250313e-16,
+        1.1102230246251565e-16
+      ],
+      "qutrit_CPTP": true,
+      "qutrit_embedded_three_time_W": -0.36
+    },
+    {
+      "gamma": 0.64,
+      "p": 0.3,
+      "pairwise_classical_threshold": 0.2,
+      "qutrit_Choi_errors": [
+        1.1102230246251565e-16,
+        1.1102230246251565e-16,
+        0.0
+      ],
+      "qutrit_CPTP": true,
+      "qutrit_embedded_three_time_W": -0.64
+    },
+    {
+      "gamma": 0.25,
+      "p": 0.14,
+      "pairwise_classical_threshold": 0.0669872981077807,
+      "qutrit_Choi_errors": [
+        0.0,
+        2.220446049250313e-16,
+        1.1102230246251565e-16
+      ],
+      "qutrit_CPTP": true,
+      "qutrit_embedded_three_time_W": -0.25
+    },
+    {
+      "gamma": 0.81,
+      "p": 0.4,
+      "pairwise_classical_threshold": 0.2820550528229664,
+      "qutrit_Choi_errors": [
+        5.551115123125783e-17,
+        2.220446049250313e-16,
+        5.551115123125783e-17
+      ],
+      "qutrit_CPTP": true,
+      "qutrit_embedded_three_time_W": -0.81
+    }
+  ],
+  "qutrit_dimension": 3,
+  "all_pairwise_full_Choi_residual_lt_1e_minus12": true,
+  "qubit_channel_support": "span(|0>,|1>)",
+  "spectator": "|2> dephases all coherence from qubit subspace at each observation",
+  "no_three_time_classical_model": "Restriction of a purported qutrit classical-memory 3-time process to the invariant two-level output/input sector would yield a classical 3-time process for the original qubit model, ruled out by Beyer et al's W3<0.",
+  "witness_requires_complete_3time_process_control": "Yes. The three time marginals and classical pairwise decompositions alone are NOT enough to exclude quantum-memory-free alternative multi-time processes unless the preparation and interventions match the published operational scenario.",
+  "embedded_not_intrinsically_qutrit": true,
+  "cubic_resource_compare": {
+    "cubic_phase_exponents": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      0,
+      1,
+      2
+    ],
+    "cubic_mixed_finite_difference": 2,
+    "qutrit_two_body_cubic_gate_is_Clifford": false,
+    "diagonal_two_qutrit_cubic_resource": "U|a,b>=omega^(a^2 b)|a,b>",
+    "cubic_is_outside_native_27_quadratic_phase_subgroup": true,
+    "provenance": "The exact x^2y phase family was previously studied in repo Pass11701; this is a comparison and regression, not an invented new gate."
+  },
+  "source": "Beyer et al arXiv:2611.17268 (2026-11-12) exact published three-time memory theorem; repo 2026-11-18 previous qubit reproduction",
+  "physical_limit": "Three-level embedding is a mathematical prototype, with all nontrivial dynamics confined to an invariant qubit subspace. Requires a real three-time instrument/test, not merely three isolated one-time channel characterizations."
+}

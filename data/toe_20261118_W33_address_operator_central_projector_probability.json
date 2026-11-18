@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "W33_far_shell_order": 27,
+  "native_center_orbits": 9,
+  "source_regular_character_sector_ranks": {
+    "0": {
+      "center_eigenvalue": "1",
+      "exact_projector_rank": 9,
+      "computational_address_state_success_probability": 0.3333333333333333,
+      "maximally_mixed_success_probability": 0.3333333333333333
+    },
+    "1": {
+      "center_eigenvalue": "omega",
+      "exact_projector_rank": 9,
+      "computational_address_state_success_probability": 0.3333333333333333,
+      "maximally_mixed_success_probability": 0.3333333333333333
+    },
+    "2": {
+      "center_eigenvalue": "omega^2",
+      "exact_projector_rank": 9,
+      "computational_address_state_success_probability": 0.3333333333333333,
+      "maximally_mixed_success_probability": 0.3333333333333333
+    }
+  },
+  "fourier_projectors_pairwise_orthogonal": true,
+  "target_trinification_center_character": "omega",
+  "E6_operator_representation_dimension": 27,
+  "equivariant_linear_map_rank_upper_bound": 9,
+  "canonical_postselect_center_sector": "P_omega=(I+omega^-1 Rz+omega^-2 Rz^2)/3",
+  "probability_for_each_of_27_address_basis_states": 0.3333333333333333,
+  "probability_for_maximally_mixed_address": 0.3333333333333333,
+  "worst_case_input_success_probability": 0,
+  "best_case_input_success_probability": 1,
+  "quantum_information_loss": "Heralded central-sector projection removes18 of27 complex amplitudes. Cannot be a universal reversible encoder; record cannot make it an E6 linear equivariance isomorphism.",
+  "Clifford_implementation": "In a chosen group-coordinate basis H27~(a,b,c), the center acts by cyclic shifting c. Fourier transform the c qutrit and measure eigenvalue omega, obtaining 1/3 on each computational address basis input. This fixes a coordinate gauge and is not a native photonic experiment.",
+  "prior_art": "Intertwiner rank<=9 and center-character mismatch were established by repo 2026-09-22; nine-dimensional commutant dressing already in Pass11043. New computation is the exact source-W33 projector and operational success bound for this natural projection."
+}

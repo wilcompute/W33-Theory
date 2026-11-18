@@ -1,0 +1,228 @@
+{
+  "status": "PASS",
+  "E6_flat_vacuum": {
+    "status": "PASS",
+    "full_chiral_complex_coordinates": 132,
+    "invariant": "I=bar27 * A78 * 27",
+    "superpotential": "W=f(I)=I-I^2/2 at I=1",
+    "exact_full_Fflat_hessian_rank": 1,
+    "Fflat_smooth_complex_hypersurface_dimension": 131,
+    "maximal_broken_complex_E6_generators_with_SM_preserved": 66,
+    "local_F_and_D_flat_complex_moduli_lower_bound": 65,
+    "tree_level_uneaten_real_flat_directions_lower_bound": 130,
+    "verified_three_singlet_subspace_Hessian": [
+      [
+        -1,
+        -1,
+        -1
+      ],
+      [
+        -1,
+        -1,
+        -1
+      ],
+      [
+        -1,
+        -1,
+        -1
+      ]
+    ],
+    "Abelian_charge_Smith_diagonal": [
+      1,
+      20
+    ],
+    "qualified_moduli_claim": "Under a 4D global N=1 E6 gauge theory with these full chiral multiplets, ONLY the specified W=f(I), zero FI and a closed polystable Dflat SM-neutral vacuum, the K\u00e4hler quotient has at least65 complex moduli locally. If additional terms, flux, supergravity or a nonpolystable orbit are included, the count can change.",
+    "conclusion": "Original algebraic F/D-flat E6 vacuum is extremely non-isolated; not a derived stable vacuum. Z20 is in the Abelian covering torus only, already known in 2026-11-17 source."
+  },
+  "BF_cusp_tower": {
+    "status": "PASS",
+    "cases": [
+      {
+        "flux_ratio": 0.5,
+        "height": 100.0,
+        "oriented_BF_unsafe_horizontal_vectors": 30,
+        "robust_subband_lambda": [
+          3.0,
+          5.0
+        ],
+        "oriented_robust_subband_vectors": 6,
+        "conservative_BF_deficit_lower_bound": 2.1651513899116797,
+        "U_positive_min": 8,
+        "U_positive_max": 10,
+        "normalized_unsafe_count_over_sqrt_y": 3.0
+      },
+      {
+        "flux_ratio": 0.5,
+        "height": 1000.0,
+        "oriented_BF_unsafe_horizontal_vectors": 100,
+        "robust_subband_lambda": [
+          3.0,
+          5.0
+        ],
+        "oriented_robust_subband_vectors": 14,
+        "conservative_BF_deficit_lower_bound": 2.1651513899116797,
+        "U_positive_min": 26,
+        "U_positive_max": 32,
+        "normalized_unsafe_count_over_sqrt_y": 3.1622776601683795
+      },
+      {
+        "flux_ratio": 0.5,
+        "height": 10000.0,
+        "oriented_BF_unsafe_horizontal_vectors": 318,
+        "robust_subband_lambda": [
+          3.0,
+          5.0
+        ],
+        "oriented_robust_subband_vectors": 48,
+        "conservative_BF_deficit_lower_bound": 2.1651513899116797,
+        "U_positive_min": 80,
+        "U_positive_max": 103,
+        "normalized_unsafe_count_over_sqrt_y": 3.18
+      },
+      {
+        "flux_ratio": 0.5,
+        "height": 100000.0,
+        "oriented_BF_unsafe_horizontal_vectors": 1008,
+        "robust_subband_lambda": [
+          3.0,
+          5.0
+        ],
+        "oriented_robust_subband_vectors": 146,
+        "conservative_BF_deficit_lower_bound": 2.1651513899116797,
+        "U_positive_min": 253,
+        "U_positive_max": 325,
+        "normalized_unsafe_count_over_sqrt_y": 3.187575881449726
+      },
+      {
+        "flux_ratio": 1.0,
+        "height": 100.0,
+        "oriented_BF_unsafe_horizontal_vectors": 22,
+        "robust_subband_lambda": [
+          3.0,
+          5.0
+        ],
+        "oriented_robust_subband_vectors": 4,
+        "conservative_BF_deficit_lower_bound": 2.1651513899116797,
+        "U_positive_min": 6,
+        "U_positive_max": 7,
+        "normalized_unsafe_count_over_sqrt_y": 2.2
+      },
+      {
+        "flux_ratio": 1.0,
+        "height": 1000.0,
+        "oriented_BF_unsafe_horizontal_vectors": 70,
+        "robust_subband_lambda": [
+          3.0,
+          5.0
+        ],
+        "oriented_robust_subband_vectors": 12,
+        "conservative_BF_deficit_lower_bound": 2.1651513899116797,
+        "U_positive_min": 18,
+        "U_positive_max": 23,
+        "normalized_unsafe_count_over_sqrt_y": 2.2135943621178655
+      },
+      {
+        "flux_ratio": 1.0,
+        "height": 10000.0,
+        "oriented_BF_unsafe_horizontal_vectors": 224,
+        "robust_subband_lambda": [
+          3.0,
+          5.0
+        ],
+        "oriented_robust_subband_vectors": 32,
+        "conservative_BF_deficit_lower_bound": 2.1651513899116797,
+        "U_positive_min": 57,
+        "U_positive_max": 72,
+        "normalized_unsafe_count_over_sqrt_y": 2.24
+      },
+      {
+        "flux_ratio": 1.0,
+        "height": 100000.0,
+        "oriented_BF_unsafe_horizontal_vectors": 712,
+        "robust_subband_lambda": [
+          3.0,
+          5.0
+        ],
+        "oriented_robust_subband_vectors": 104,
+        "conservative_BF_deficit_lower_bound": 2.1651513899116797,
+        "U_positive_min": 179,
+        "U_positive_max": 230,
+        "normalized_unsafe_count_over_sqrt_y": 2.251541694039886
+      },
+      {
+        "flux_ratio": 2.0,
+        "height": 100.0,
+        "oriented_BF_unsafe_horizontal_vectors": 14,
+        "robust_subband_lambda": [
+          3.0,
+          5.0
+        ],
+        "oriented_robust_subband_vectors": 4,
+        "conservative_BF_deficit_lower_bound": 2.1651513899116797,
+        "U_positive_min": 4,
+        "U_positive_max": 5,
+        "normalized_unsafe_count_over_sqrt_y": 1.4
+      },
+      {
+        "flux_ratio": 2.0,
+        "height": 1000.0,
+        "oriented_BF_unsafe_horizontal_vectors": 50,
+        "robust_subband_lambda": [
+          3.0,
+          5.0
+        ],
+        "oriented_robust_subband_vectors": 8,
+        "conservative_BF_deficit_lower_bound": 2.1651513899116797,
+        "U_positive_min": 13,
+        "U_positive_max": 16,
+        "normalized_unsafe_count_over_sqrt_y": 1.5811388300841898
+      },
+      {
+        "flux_ratio": 2.0,
+        "height": 10000.0,
+        "oriented_BF_unsafe_horizontal_vectors": 158,
+        "robust_subband_lambda": [
+          3.0,
+          5.0
+        ],
+        "oriented_robust_subband_vectors": 24,
+        "conservative_BF_deficit_lower_bound": 2.1651513899116797,
+        "U_positive_min": 40,
+        "U_positive_max": 51,
+        "normalized_unsafe_count_over_sqrt_y": 1.58
+      },
+      {
+        "flux_ratio": 2.0,
+        "height": 100000.0,
+        "oriented_BF_unsafe_horizontal_vectors": 504,
+        "robust_subband_lambda": [
+          3.0,
+          5.0
+        ],
+        "oriented_robust_subband_vectors": 72,
+        "conservative_BF_deficit_lower_bound": 2.1651513899116797,
+        "U_positive_min": 127,
+        "U_positive_max": 162,
+        "normalized_unsafe_count_over_sqrt_y": 1.593787940724863
+      }
+    ],
+    "BF_oriented_horizontal_asymptotic": "4/sqrt(pi*r) * sqrt(y) + O(1)",
+    "strong_BF_deficit_band_asymptotic": "2*(sqrt(5)-sqrt(3))/sqrt(3*pi*r) * sqrt(y) + O(1)",
+    "v_nonzero_at_deep_cusp": "For fixed r and y large, any v!=0 has lambda>=3*pi*r*v^2*y, so the growing horizontal tower is isolated within this conditional winding branch.",
+    "physical_scope": "This is the original conditional mixed-branch mass formula; identical +/- winding vectors need not be independent physical tachyon fields. At y->infty growing tower invalidates any fixed finite-species low-energy truncation. Does not prove universal M-theory tachyons; may be beyond EFT validity."
+  },
+  "wire_harmonic": {
+    "status": "PASS",
+    "relative_betti_three": [
+      0,
+      3,
+      0,
+      0
+    ],
+    "relative_Euler_characteristic": -3,
+    "smooth_nowhere_vanishing_closed_1form": "phi=dtheta on solid torus, away from specified punctures; locally harmonic in product metric, no interior zero",
+    "period": "integral_{S1}phi=2*pi",
+    "obstruction": "Nonzero relative Betti/index does not force any interior Morse zero. Source/boundary conditions can carry the modes; a physical localized spinor background must derive its critical points, charge quantization and boundary projectors.",
+    "caveat": "A nowhere-zero harmonic 1-form may fail the prescribed electric/magnetic boundary condition on puncture spheres; the claim is a logical counterexample to an automatic index-to-interior-defect implication, not a globally solved PW background with all boundary conditions."
+  }
+}
