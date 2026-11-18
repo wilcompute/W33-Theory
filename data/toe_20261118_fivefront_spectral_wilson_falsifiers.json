@@ -1,0 +1,675 @@
+{
+  "E6_Wilson": {
+    "C11_wilson_weights": [
+      2,
+      2,
+      2,
+      -3,
+      -3
+    ],
+    "C5_compatible_3plus2_holonomies": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        4
+      ]
+    ],
+    "Cartan": 4,
+    "E6_27_SU5_branches": "10 + 5bar + 1 + 5 + 5bar + 1",
+    "broken_SU5_dimension": 12,
+    "caveat": "The 2/27 count concerns invariant constant SU5 fibers, not full 4D chiral matter; flux-coupled/localized operators are untested.",
+    "exact_order": 11,
+    "flat_Dirac_Friedrich_eigenvalue_squared_bound": ">=49/4",
+    "matter_27_phase_multiplicities": {
+      "0": 2,
+      "1": 0,
+      "10": 6,
+      "2": 3,
+      "3": 4,
+      "4": 3,
+      "5": 1,
+      "6": 0,
+      "7": 0,
+      "8": 2,
+      "9": 6
+    },
+    "phase_zero_matter_components": 2,
+    "unbroken_SU5_dimension": 12,
+    "unbroken_adjoint_roots": 8
+  },
+  "T11_winding": {
+    "caveat": "Only the mixed mode of the 11D two-derivative truncation and its IIB winding dictionary; not full string stability, source-induced shifts or a full physical mode analysis.",
+    "critical_ratio_all_axiodilatons": 1.1026577908435842,
+    "critical_ratio_square": 1.2732395447351628,
+    "derivation": "m_minus^2+4=lambda+2-sqrt(4+16lambda), negative iff 0<lambda<12. Planar lattice Hermite bound shortest^2/Im(tau)<=2/sqrt(3) yields lambda_min<=2sqrt(3)*pi*N0/N.",
+    "hexagonal_modulus_ratio1": {
+      "BF_deficit": 0.4635418504187854,
+      "BF_violated": true,
+      "lambda_winding": 10.882796185405308,
+      "m2_L2": -4.463541850418785
+    },
+    "square_modulus_ratio1": {
+      "BF_deficit": 1.0169440813078374,
+      "BF_violated": true,
+      "lambda_winding": 9.42477796076938,
+      "m2_L2": -5.016944081307837
+    },
+    "theorem": "If 0<N0/N<2sqrt(3)/pi, at least one winding lattice mode lies in the 0<lambda<12 AdS5 BF-violating interval for every axiodilaton tau, within the stated quadratic mixed-mode model."
+  },
+  "continuum": {
+    "caveat": "Does not exclude geometric limits of derived incidence complexes, sparse subgraphs, weighted/nonlocal operators, or renormalized multiscale systems.",
+    "rows": [
+      {
+        "adjacency_eigenvalues": [
+          6,
+          1,
+          -3
+        ],
+        "degree": 6,
+        "diameter": 2,
+        "multiplicities": [
+          1,
+          9,
+          5
+        ],
+        "normalized_laplacian_nonzero": [
+          0.8333333333333334,
+          1.5
+        ],
+        "q": 2,
+        "spectral_ratio": 1.7999999999999998,
+        "v": 15
+      },
+      {
+        "adjacency_eigenvalues": [
+          12,
+          2,
+          -4
+        ],
+        "degree": 12,
+        "diameter": 2,
+        "multiplicities": [
+          1,
+          24,
+          15
+        ],
+        "normalized_laplacian_nonzero": [
+          0.8333333333333334,
+          1.3333333333333333
+        ],
+        "q": 3,
+        "spectral_ratio": 1.5999999999999999,
+        "v": 40
+      },
+      {
+        "adjacency_eigenvalues": [
+          20,
+          3,
+          -5
+        ],
+        "degree": 20,
+        "diameter": 2,
+        "multiplicities": [
+          1,
+          50,
+          34
+        ],
+        "normalized_laplacian_nonzero": [
+          0.85,
+          1.25
+        ],
+        "q": 4,
+        "spectral_ratio": 1.4705882352941178,
+        "v": 85
+      },
+      {
+        "adjacency_eigenvalues": [
+          30,
+          4,
+          -6
+        ],
+        "degree": 30,
+        "diameter": 2,
+        "multiplicities": [
+          1,
+          90,
+          65
+        ],
+        "normalized_laplacian_nonzero": [
+          0.8666666666666667,
+          1.2
+        ],
+        "q": 5,
+        "spectral_ratio": 1.3846153846153846,
+        "v": 156
+      },
+      {
+        "adjacency_eigenvalues": [
+          56,
+          6,
+          -8
+        ],
+        "degree": 56,
+        "diameter": 2,
+        "multiplicities": [
+          1,
+          224,
+          175
+        ],
+        "normalized_laplacian_nonzero": [
+          0.8928571428571429,
+          1.1428571428571428
+        ],
+        "q": 7,
+        "spectral_ratio": 1.2799999999999998,
+        "v": 400
+      },
+      {
+        "adjacency_eigenvalues": [
+          90,
+          8,
+          -10
+        ],
+        "degree": 90,
+        "diameter": 2,
+        "multiplicities": [
+          1,
+          450,
+          369
+        ],
+        "normalized_laplacian_nonzero": [
+          0.9111111111111111,
+          1.1111111111111112
+        ],
+        "q": 9,
+        "spectral_ratio": 1.2195121951219512,
+        "v": 820
+      },
+      {
+        "adjacency_eigenvalues": [
+          132,
+          10,
+          -12
+        ],
+        "degree": 132,
+        "diameter": 2,
+        "multiplicities": [
+          1,
+          792,
+          671
+        ],
+        "normalized_laplacian_nonzero": [
+          0.9242424242424242,
+          1.0909090909090908
+        ],
+        "q": 11,
+        "spectral_ratio": 1.180327868852459,
+        "v": 1464
+      }
+    ],
+    "theorem": "All W(3,q) collinearity graphs have diameter 2 and only two distinct positive normalized Laplacian eigenvalues; they cannot spectrally converge, under any common scalar rescaling, to the full Laplace spectrum of a fixed positive-dimensional compact smooth manifold."
+  },
+  "holo": {
+    "C11_character_coefficients": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      [
+        4,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      [
+        5,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      [
+        11,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      [
+        15,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16
+      ],
+      [
+        25,
+        23,
+        24,
+        23,
+        23,
+        23,
+        24,
+        24,
+        24,
+        23,
+        24
+      ],
+      [
+        34,
+        34,
+        33,
+        34,
+        34,
+        34,
+        33,
+        33,
+        33,
+        34,
+        33
+      ],
+      [
+        45,
+        46,
+        46,
+        46,
+        46,
+        46,
+        46,
+        46,
+        46,
+        46,
+        46
+      ],
+      [
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61
+      ]
+    ],
+    "C11_first_modes": [
+      {
+        "Reeb_charge": 6,
+        "character": 0,
+        "first_degree": 3,
+        "first_multiplicity": 4,
+        "scalar_laplacian": 72
+      },
+      {
+        "Reeb_charge": 2,
+        "character": 1,
+        "first_degree": 1,
+        "first_multiplicity": 1,
+        "scalar_laplacian": 16
+      },
+      {
+        "Reeb_charge": 4,
+        "character": 2,
+        "first_degree": 2,
+        "first_multiplicity": 2,
+        "scalar_laplacian": 40
+      },
+      {
+        "Reeb_charge": 2,
+        "character": 3,
+        "first_degree": 1,
+        "first_multiplicity": 1,
+        "scalar_laplacian": 16
+      },
+      {
+        "Reeb_charge": 2,
+        "character": 4,
+        "first_degree": 1,
+        "first_multiplicity": 1,
+        "scalar_laplacian": 16
+      },
+      {
+        "Reeb_charge": 2,
+        "character": 5,
+        "first_degree": 1,
+        "first_multiplicity": 1,
+        "scalar_laplacian": 16
+      },
+      {
+        "Reeb_charge": 4,
+        "character": 6,
+        "first_degree": 2,
+        "first_multiplicity": 2,
+        "scalar_laplacian": 40
+      },
+      {
+        "Reeb_charge": 4,
+        "character": 7,
+        "first_degree": 2,
+        "first_multiplicity": 2,
+        "scalar_laplacian": 40
+      },
+      {
+        "Reeb_charge": 4,
+        "character": 8,
+        "first_degree": 2,
+        "first_multiplicity": 2,
+        "scalar_laplacian": 40
+      },
+      {
+        "Reeb_charge": 2,
+        "character": 9,
+        "first_degree": 1,
+        "first_multiplicity": 1,
+        "scalar_laplacian": 16
+      },
+      {
+        "Reeb_charge": 4,
+        "character": 10,
+        "first_degree": 2,
+        "first_multiplicity": 2,
+        "scalar_laplacian": 40
+      }
+    ],
+    "F55_first_modes": [
+      {
+        "Reeb_charge": 8,
+        "character": 0,
+        "first_degree": 4,
+        "first_multiplicity": 1,
+        "scalar_laplacian": 112
+      },
+      {
+        "Reeb_charge": 6,
+        "character": 1,
+        "first_degree": 3,
+        "first_multiplicity": 1,
+        "scalar_laplacian": 72
+      },
+      {
+        "Reeb_charge": 6,
+        "character": 2,
+        "first_degree": 3,
+        "first_multiplicity": 1,
+        "scalar_laplacian": 72
+      },
+      {
+        "Reeb_charge": 6,
+        "character": 3,
+        "first_degree": 3,
+        "first_multiplicity": 1,
+        "scalar_laplacian": 72
+      },
+      {
+        "Reeb_charge": 6,
+        "character": 4,
+        "first_degree": 3,
+        "first_multiplicity": 1,
+        "scalar_laplacian": 72
+      }
+    ],
+    "caveat": "Holomorphic flat-line sectors only; not the complete twisted or untwisted KK spectrum.",
+    "full_F55_C5_character_coefficients": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        3,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      [
+        6,
+        7,
+        7,
+        7,
+        7
+      ],
+      [
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      [
+        13,
+        12,
+        12,
+        12,
+        12
+      ]
+    ]
+  },
+  "photon": {
+    "alternative": "Conditional P(+)=0.65",
+    "caveat": "Accepted-event IID binomial trials with independently certified arm-efficiency ratio; no claim of observed W33 hardware or loophole-free inference.",
+    "efficiency_envelope_robust": {
+      "accepted_events": 490,
+      "decision_threshold_plus_clicks": 283,
+      "p0_worst": 0.5238095238095238,
+      "p1_worst": 0.6280193236714976,
+      "type_I": 0.009597316434960127,
+      "type_II": 0.009587481166715262
+    },
+    "max_relative_arm_efficiency_ratio": 1.1,
+    "null": "Conditional P(+)=0.5",
+    "one_sided_exact_Neyman_Pearson": {
+      "accepted_events": 235,
+      "decision_threshold_plus_clicks": 136,
+      "p0_worst": 0.5,
+      "p1_worst": 0.65,
+      "type_I": 0.009332116594926412,
+      "type_II": 0.009829377837122566
+    }
+  },
+  "torsion": {
+    "bulk_linearization": "A flat torsion choice alone does not change the local two-derivative metric/G4 curvature equations. It can affect global/wrapped-brane observables and quantum refinements.",
+    "caveat": "No calculation of complete 11D KK masses, T11 IIB winding modes, Page charges, nonperturbative sectors, or BF stability. No claim that all sectors are dynamically equivalent.",
+    "flat_curvature_G4": "0 in real de Rham cohomology",
+    "flat_degree4_Cfield_holonomy_classes": "Z15",
+    "sector_CRT": [
+      {
+        "crt_mod3": 0,
+        "crt_mod5": 0,
+        "index": 0
+      },
+      {
+        "crt_mod3": 1,
+        "crt_mod5": 1,
+        "index": 1
+      },
+      {
+        "crt_mod3": 2,
+        "crt_mod5": 2,
+        "index": 2
+      },
+      {
+        "crt_mod3": 0,
+        "crt_mod5": 3,
+        "index": 3
+      },
+      {
+        "crt_mod3": 1,
+        "crt_mod5": 4,
+        "index": 4
+      },
+      {
+        "crt_mod3": 2,
+        "crt_mod5": 0,
+        "index": 5
+      },
+      {
+        "crt_mod3": 0,
+        "crt_mod5": 1,
+        "index": 6
+      },
+      {
+        "crt_mod3": 1,
+        "crt_mod5": 2,
+        "index": 7
+      },
+      {
+        "crt_mod3": 2,
+        "crt_mod5": 3,
+        "index": 8
+      },
+      {
+        "crt_mod3": 0,
+        "crt_mod5": 4,
+        "index": 9
+      },
+      {
+        "crt_mod3": 1,
+        "crt_mod5": 0,
+        "index": 10
+      },
+      {
+        "crt_mod3": 2,
+        "crt_mod5": 1,
+        "index": 11
+      },
+      {
+        "crt_mod3": 0,
+        "crt_mod5": 2,
+        "index": 12
+      },
+      {
+        "crt_mod3": 1,
+        "crt_mod5": 3,
+        "index": 13
+      },
+      {
+        "crt_mod3": 2,
+        "crt_mod5": 4,
+        "index": 14
+      }
+    ]
+  }
+}
