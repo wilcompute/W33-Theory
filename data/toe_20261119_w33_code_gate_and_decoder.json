@@ -1,0 +1,772 @@
+{
+  "transversal_gate_no_go": {
+    "family": "local T9^lambda times local diagonal qutrit Clifford",
+    "T9_phase_exponents_mod9": [
+      0,
+      1,
+      8
+    ],
+    "linear_code_rank": 11,
+    "code_kernel_dimension": 29,
+    "certificate_codewords": 70,
+    "certifier_row_generator_weight_distribution": {
+      "1": 22,
+      "2": 48
+    },
+    "ranks_F3_cubic_linear_quadratic": [
+      11,
+      41,
+      70
+    ],
+    "constraint_matrix_shape": [
+      70,
+      109
+    ],
+    "F3_certificate_sha256": "da6c76e2611dd61c4f85efacb7a6a288541a98049f7ae2fcfb31e2b98214173c",
+    "witnesses": [
+      {
+        "support_rows": [
+          0
+        ],
+        "coefficients": [
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          0
+        ],
+        "coefficients": [
+          2
+        ]
+      },
+      {
+        "support_rows": [
+          1
+        ],
+        "coefficients": [
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          1
+        ],
+        "coefficients": [
+          2
+        ]
+      },
+      {
+        "support_rows": [
+          2
+        ],
+        "coefficients": [
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          2
+        ],
+        "coefficients": [
+          2
+        ]
+      },
+      {
+        "support_rows": [
+          3
+        ],
+        "coefficients": [
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          3
+        ],
+        "coefficients": [
+          2
+        ]
+      },
+      {
+        "support_rows": [
+          4
+        ],
+        "coefficients": [
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          4
+        ],
+        "coefficients": [
+          2
+        ]
+      },
+      {
+        "support_rows": [
+          5
+        ],
+        "coefficients": [
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          5
+        ],
+        "coefficients": [
+          2
+        ]
+      },
+      {
+        "support_rows": [
+          6
+        ],
+        "coefficients": [
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          6
+        ],
+        "coefficients": [
+          2
+        ]
+      },
+      {
+        "support_rows": [
+          7
+        ],
+        "coefficients": [
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          7
+        ],
+        "coefficients": [
+          2
+        ]
+      },
+      {
+        "support_rows": [
+          8
+        ],
+        "coefficients": [
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          8
+        ],
+        "coefficients": [
+          2
+        ]
+      },
+      {
+        "support_rows": [
+          9
+        ],
+        "coefficients": [
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          9
+        ],
+        "coefficients": [
+          2
+        ]
+      },
+      {
+        "support_rows": [
+          10
+        ],
+        "coefficients": [
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          10
+        ],
+        "coefficients": [
+          2
+        ]
+      },
+      {
+        "support_rows": [
+          0,
+          1
+        ],
+        "coefficients": [
+          1,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          0,
+          1
+        ],
+        "coefficients": [
+          1,
+          2
+        ]
+      },
+      {
+        "support_rows": [
+          0,
+          2
+        ],
+        "coefficients": [
+          1,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          0,
+          2
+        ],
+        "coefficients": [
+          1,
+          2
+        ]
+      },
+      {
+        "support_rows": [
+          0,
+          2
+        ],
+        "coefficients": [
+          2,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          0,
+          3
+        ],
+        "coefficients": [
+          1,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          0,
+          3
+        ],
+        "coefficients": [
+          1,
+          2
+        ]
+      },
+      {
+        "support_rows": [
+          0,
+          4
+        ],
+        "coefficients": [
+          1,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          0,
+          4
+        ],
+        "coefficients": [
+          1,
+          2
+        ]
+      },
+      {
+        "support_rows": [
+          0,
+          4
+        ],
+        "coefficients": [
+          2,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          0,
+          5
+        ],
+        "coefficients": [
+          1,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          0,
+          5
+        ],
+        "coefficients": [
+          1,
+          2
+        ]
+      },
+      {
+        "support_rows": [
+          0,
+          6
+        ],
+        "coefficients": [
+          1,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          0,
+          6
+        ],
+        "coefficients": [
+          1,
+          2
+        ]
+      },
+      {
+        "support_rows": [
+          0,
+          6
+        ],
+        "coefficients": [
+          2,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          0,
+          7
+        ],
+        "coefficients": [
+          1,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          1,
+          2
+        ],
+        "coefficients": [
+          1,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          1,
+          2
+        ],
+        "coefficients": [
+          1,
+          2
+        ]
+      },
+      {
+        "support_rows": [
+          1,
+          2
+        ],
+        "coefficients": [
+          2,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          1,
+          3
+        ],
+        "coefficients": [
+          1,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          1,
+          4
+        ],
+        "coefficients": [
+          1,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          1,
+          4
+        ],
+        "coefficients": [
+          1,
+          2
+        ]
+      },
+      {
+        "support_rows": [
+          1,
+          4
+        ],
+        "coefficients": [
+          2,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          1,
+          5
+        ],
+        "coefficients": [
+          1,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          1,
+          5
+        ],
+        "coefficients": [
+          1,
+          2
+        ]
+      },
+      {
+        "support_rows": [
+          1,
+          5
+        ],
+        "coefficients": [
+          2,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          1,
+          6
+        ],
+        "coefficients": [
+          1,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          1,
+          6
+        ],
+        "coefficients": [
+          1,
+          2
+        ]
+      },
+      {
+        "support_rows": [
+          1,
+          7
+        ],
+        "coefficients": [
+          1,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          2,
+          3
+        ],
+        "coefficients": [
+          1,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          2,
+          3
+        ],
+        "coefficients": [
+          1,
+          2
+        ]
+      },
+      {
+        "support_rows": [
+          2,
+          4
+        ],
+        "coefficients": [
+          1,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          2,
+          4
+        ],
+        "coefficients": [
+          1,
+          2
+        ]
+      },
+      {
+        "support_rows": [
+          2,
+          4
+        ],
+        "coefficients": [
+          2,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          2,
+          5
+        ],
+        "coefficients": [
+          1,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          2,
+          5
+        ],
+        "coefficients": [
+          1,
+          2
+        ]
+      },
+      {
+        "support_rows": [
+          2,
+          5
+        ],
+        "coefficients": [
+          2,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          2,
+          7
+        ],
+        "coefficients": [
+          1,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          2,
+          7
+        ],
+        "coefficients": [
+          1,
+          2
+        ]
+      },
+      {
+        "support_rows": [
+          2,
+          7
+        ],
+        "coefficients": [
+          2,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          3,
+          4
+        ],
+        "coefficients": [
+          1,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          3,
+          4
+        ],
+        "coefficients": [
+          1,
+          2
+        ]
+      },
+      {
+        "support_rows": [
+          3,
+          5
+        ],
+        "coefficients": [
+          1,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          3,
+          5
+        ],
+        "coefficients": [
+          2,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          4,
+          5
+        ],
+        "coefficients": [
+          1,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          4,
+          5
+        ],
+        "coefficients": [
+          1,
+          2
+        ]
+      },
+      {
+        "support_rows": [
+          4,
+          6
+        ],
+        "coefficients": [
+          1,
+          1
+        ]
+      },
+      {
+        "support_rows": [
+          4,
+          6
+        ],
+        "coefficients": [
+          1,
+          2
+        ]
+      }
+    ],
+    "conclusion": "If the diagonal layer preserves this CSS code, every physical T9 exponent lambda_i must be 0 mod3; all surviving such layers are diagonal Clifford, not logical non-Clifford.",
+    "limits": "Only this diagonal tensor-product family; not a no-go for general finite-depth circuits or ancilla injection."
+  },
+  "biased_decoder": {
+    "code": "W33 asymmetric [[40,19,4]]_3 with (dX,dZ)=(4,6)",
+    "X_decoder_radius": 1,
+    "Z_decoder_radius": 2,
+    "pure_X_syndromes": 81,
+    "pure_Z_syndromes": 3201,
+    "decoded_both_sector_patterns": 259281,
+    "joint_test_samples": 2500,
+    "per_site_noise_model": "independent ternary X and Z components, each nonidentity probability pX,pZ, exponent 1/2 conditional on an error",
+    "orientation_benchmark": [
+      {
+        "pX": 0.005,
+        "pZ": 0.01,
+        "guaranteed_success_original": 0.9754381194506684,
+        "guaranteed_success_after_Fourier_swap": 0.938253291647251,
+        "better_orientation": "original"
+      },
+      {
+        "pX": 0.01,
+        "pZ": 0.01,
+        "guaranteed_success_original": 0.9322213793234871,
+        "guaranteed_success_after_Fourier_swap": 0.9322213793234871,
+        "better_orientation": "tie"
+      },
+      {
+        "pX": 0.002,
+        "pZ": 0.02,
+        "guaranteed_success_original": 0.9514990139705388,
+        "guaranteed_success_after_Fourier_swap": 0.8094769334584718,
+        "better_orientation": "original"
+      }
+    ],
+    "probability_statement": "P(weightX<=1 and weightZ<=2) is an EXACT noise-event probability and a LOWER BOUND on total decoder success, not a full circuit-level logical error probability.",
+    "status": "PASS"
+  },
+  "T9_injection": {
+    "gate": "T9=diag(1,zeta9,zeta9^8)",
+    "one_ancilla_magic_resource": "T9|+> (all computational amplitudes 1/sqrt3)",
+    "injection_gates": "inverse-SUM from data to resource; computational measurement on resource; feed-forward diagonal Clifford",
+    "outcome_probabilities": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "outcome_correction_relative_omega_exponents": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        2
+      ]
+    ],
+    "tested_random_state_outcome_pairs": 60,
+    "maximum_statevector_norm_error": 3.512204620149607e-16,
+    "Hesse_SIC_fiducial_in_same_injection": "(0,1,-1)/sqrt2",
+    "Hesse_SIC_injection_branch_singular_values": [
+      [
+        0.7071067811865475,
+        0.7071067811865475,
+        0.0
+      ],
+      [
+        0.7071067811865475,
+        0.7071067811865475,
+        0.0
+      ],
+      [
+        0.7071067811865475,
+        0.7071067811865475,
+        0.0
+      ]
+    ],
+    "SIC_is_direct_deterministic_T9_resource": false,
+    "coded_SUM_compatibility": "Two identical CSS blocks admit transversal ternary SUM: conjugated X control check -> X checks on both blocks; Z target check -> inverse Z control and Z target checks.",
+    "limitations": "Unencoded deterministic state-injection identity. Fault-tolerant logical T9 needs an encoded T9|+> ancilla prepared/distilled and fault-tolerant logical measurement and feed-forward; Hesse SIC strange-state resource produces a rank-two filter in this injection gadget."
+  }
+}

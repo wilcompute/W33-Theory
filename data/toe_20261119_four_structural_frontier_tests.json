@@ -1,0 +1,168 @@
+{
+  "SIC_UV": {
+    "gauged_group": "SU(N) rigid N=1, N^2 SIC states represented by independent fundamental chiral fields paired vectorlike",
+    "flavor_beta_table": [
+      {
+        "dimension_N": 2,
+        "SIC_fundamental_fields_N_squared": 4,
+        "minimum_antifundamentals_if_vectorlike": 4,
+        "minimum_one_loop_SQCD_flavors": 4,
+        "maximum_one_loop_b0_3N_minus_N2": 2
+      },
+      {
+        "dimension_N": 3,
+        "SIC_fundamental_fields_N_squared": 9,
+        "minimum_antifundamentals_if_vectorlike": 9,
+        "minimum_one_loop_SQCD_flavors": 9,
+        "maximum_one_loop_b0_3N_minus_N2": 0
+      },
+      {
+        "dimension_N": 4,
+        "SIC_fundamental_fields_N_squared": 16,
+        "minimum_antifundamentals_if_vectorlike": 16,
+        "minimum_one_loop_SQCD_flavors": 16,
+        "maximum_one_loop_b0_3N_minus_N2": -4
+      },
+      {
+        "dimension_N": 5,
+        "SIC_fundamental_fields_N_squared": 25,
+        "minimum_antifundamentals_if_vectorlike": 25,
+        "minimum_one_loop_SQCD_flavors": 25,
+        "maximum_one_loop_b0_3N_minus_N2": -10
+      },
+      {
+        "dimension_N": 6,
+        "SIC_fundamental_fields_N_squared": 36,
+        "minimum_antifundamentals_if_vectorlike": 36,
+        "minimum_one_loop_SQCD_flavors": 36,
+        "maximum_one_loop_b0_3N_minus_N2": -18
+      }
+    ],
+    "SU3_nine_flavor_one_loop_b0": 0,
+    "SU3_ten_flavor_one_loop_b0": -1,
+    "frame_operator_both": "6*I_3",
+    "individual_vector_norm_squared_both": 2,
+    "all_36_pair_overlap_sq_sum_SIC": 35.999999999999986,
+    "all_36_pair_overlap_sq_sum_nonSIC": 36.000000000000014,
+    "SIC_equiangular_variance": 8.519697776386927e-29,
+    "nonSIC_repeated_basis_equiangular_variance": 1728.0000000000016,
+    "no_go_scope": "For vectorlike fundamental-only elementary N^2 SIC, b0<=0 when N>=3; tight-frame / one moment-map constraints cannot isolate the SIC. Does not preclude different gauge representations, composites, parent gauge group, Yukawa effects, or asymptotic safety."
+  },
+  "sphere_chirality_gap": {
+    "internal_cover": "round S5(R) x T2, descended by free H27 isometries",
+    "sphere_Dirac_spectrum": "+/-(l+5/2)/R, l=0,1,2,...",
+    "product_operator_square": "D7^2 = D_S5^2 tensor I + I tensor D_T2,A^2 for any torus-pulled-back unitary connection",
+    "torus_only_mag_flux_zero_mode_impossible": true,
+    "absolute_D7_eigenvalue_lower_bound": "5/(2R) independent of the torus-only magnetic flux amplitude",
+    "sample_R_equals_1_mass_gaps": [
+      {
+        "magnetic_torus_D2_eigenvalue": 0.0,
+        "total_D7_eigenvalue_lower_bound": 2.5
+      },
+      {
+        "magnetic_torus_D2_eigenvalue": 0.5,
+        "total_D7_eigenvalue_lower_bound": 2.598076211353316
+      },
+      {
+        "magnetic_torus_D2_eigenvalue": 5.0,
+        "total_D7_eigenvalue_lower_bound": 3.3541019662496847
+      },
+      {
+        "magnetic_torus_D2_eigenvalue": 20.0,
+        "total_D7_eigenvalue_lower_bound": 5.123475382979799
+      }
+    ],
+    "scalar_curvature_of_product": "20/R^2",
+    "curvature_endomorphism_necessary_operator_norm_to_defeat_weaker_Lichnerowicz_bound": "at least 5/R^2 for sphere-direction/non-product gauge curvature in standard untorsioned Dirac formula",
+    "orbifold_order3_fixed_points": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "chirality_status": "NOT PROVEN. Smooth closed odd-dimensional Dirac has no ordinary chirality index; singular ADE backgrounds/localized spectrum or sphere-coupled flux and inflow are still required.",
+    "limits": "Product gap relies on round sphere metric, pulled-back torus-only gauge connection, and a compatible lift to the free quotient. Other gauge/supercovariant operators and singular metrics not excluded."
+  },
+  "event_ready_qutrit_memory": {
+    "arbitrary_Kraus_branch_count": 6,
+    "Kraus_trace_preserving_sum_error": 7.771561172376096e-16,
+    "branch_probabilities": [
+      0.23703454718212452,
+      0.11652601837077865,
+      0.15666006793801768,
+      0.15491209856646818,
+      0.1173713543267294,
+      0.21749591361588122
+    ],
+    "branch_max_RS_residual": 6.938893903907228e-18,
+    "classical_entanglement_breaking_unconditional_F_upper": 0.3333333333333333,
+    "memory_depolarization_p": 0.2,
+    "conditional_entangled_fidelity": 0.8222222222222222,
+    "event_ready_no_click_treated_as_failure": true,
+    "retrieval_and_detection_efficiency_eta": 0.5,
+    "required_minimum_efficiency_for_conservative_violation": 0.4054054054054054,
+    "unconditional_Bell_projection_probability": 0.4111111111111111,
+    "event_ready_trials": 6000,
+    "simulated_Bell_successes": 2440,
+    "unconditional_fidelity_observed": 0.4066666666666667,
+    "Hoeffding_99p9pct_one_sided_lower": 0.3826740371057263,
+    "limitation": "The unconditional bound assumes a trustworthy isolated reference, a valid Bell witness, no hidden coherent bypass, correct event-ready trial accounting and a classical-memory (entanglement-breaking) comparator. Full experimental process-tensor tomography and loss characterization not performed."
+  },
+  "W33_noncommutative_differential_calculus": {
+    "graph": "W33, 40 points, degree12",
+    "pointwise_algebra_no_go": "Every linear derivation D:C^40->C^40 satisfying D(fg)=D(f)g+fD(g) is zero, by indicator idempotents.",
+    "graph_Laplacian_as_derivation_counterexample_leibniz_defect_norm": 12.489995996796797,
+    "matrix_bimodule_escape": "d f=[A,diag(f)], with d(fg)=d(f)diag(g)+diag(f)d(g) exactly",
+    "matrix_bimodule_Leibniz_max_error": 8.881784197001252e-16,
+    "kinetic_action_identity": "0.5*Tr(df^dag df)=f^T (12I-A) f = sum_undirected_edges (f_i-f_j)^2",
+    "kinetic_action_direct": 368.0937495622119,
+    "kinetic_action_laplacian": 368.09374956221194,
+    "Laplacian_eigenvalues_multiplicities": {
+      "0": 1,
+      "10": 24,
+      "16": 15
+    },
+    "nonzero_spectral_gap": 10,
+    "spectral_dimension_from_heat_trace": [
+      {
+        "diffusion_time": 0.01,
+        "heat_trace": 35.4982548673562,
+        "effective_spectral_dimension": 0.2375753350445906
+      },
+      {
+        "diffusion_time": 0.05,
+        "heat_trace": 22.296670294861528,
+        "effective_spectral_dimension": 1.1365208632858739
+      },
+      {
+        "diffusion_time": 0.1,
+        "heat_trace": 12.857554358034447,
+        "effective_spectral_dimension": 2.1270955018660027
+      },
+      {
+        "diffusion_time": 0.2,
+        "heat_trace": 4.859479857354198,
+        "effective_spectral_dimension": 3.4788412070592067
+      },
+      {
+        "diffusion_time": 0.5,
+        "heat_trace": 1.1667426673965888,
+        "effective_spectral_dimension": 1.455006624781363
+      },
+      {
+        "diffusion_time": 1,
+        "heat_trace": 1.0010912863419204,
+        "effective_spectral_dimension": 0.021822168934948188
+      }
+    ],
+    "physics_boundary": "Exact finite graph differential calculus is algebraic, not a derivation of hypersurface-deformation constraints, causal Lorentzian evolution, a refinement limit, or Einstein equations."
+  }
+}
