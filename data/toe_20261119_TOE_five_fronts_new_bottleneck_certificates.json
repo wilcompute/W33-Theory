@@ -1,0 +1,305 @@
+{
+  "E8_singlet_FD_flatness": {
+    "fields_and_charges": [
+      {
+        "field": "S_12",
+        "q": [
+          1,
+          -1,
+          0
+        ]
+      },
+      {
+        "field": "S_12_conj",
+        "q": [
+          -1,
+          1,
+          0
+        ]
+      },
+      {
+        "field": "S_13",
+        "q": [
+          1,
+          0,
+          -1
+        ]
+      },
+      {
+        "field": "S_14",
+        "q": [
+          2,
+          1,
+          1
+        ]
+      },
+      {
+        "field": "S_14_conj",
+        "q": [
+          -2,
+          -1,
+          -1
+        ]
+      },
+      {
+        "field": "S_24",
+        "q": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "field": "S_34_1",
+        "q": [
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "field": "S_34_2",
+        "q": [
+          1,
+          1,
+          2
+        ]
+      }
+    ],
+    "gauge_invariants_degrees_1_2_3": {
+      "1": [],
+      "2": [
+        [
+          "S_12",
+          "S_12_conj"
+        ],
+        [
+          "S_14",
+          "S_14_conj"
+        ]
+      ],
+      "3": [
+        [
+          "S_12",
+          "S_14_conj",
+          "S_24"
+        ],
+        [
+          "S_13",
+          "S_14_conj",
+          "S_34_1"
+        ],
+        [
+          "S_13",
+          "S_14_conj",
+          "S_34_2"
+        ]
+      ]
+    },
+    "W_general_renormalizable_without_neutral_fields": "S_12*S_12_conj*m + S_12*S_14_conj*S_24*lam + S_13*S_14_conj*S_34_1*k1 + S_13*S_14_conj*S_34_2*k2 + S_14*S_14_conj*n",
+    "F_derivatives": {
+      "S_12": "S_12_conj*m + S_14_conj*S_24*lam",
+      "S_12_conj": "S_12*m",
+      "S_13": "S_14_conj*S_34_1*k1 + S_14_conj*S_34_2*k2",
+      "S_14": "S_14_conj*n",
+      "S_14_conj": "S_12*S_24*lam + S_13*S_34_1*k1 + S_13*S_34_2*k2 + S_14*n",
+      "S_24": "S_12*S_14_conj*lam",
+      "S_34_1": "S_13*S_14_conj*k1",
+      "S_34_2": "S_13*S_14_conj*k2"
+    },
+    "ell_functional_on_fields": {
+      "S_12": 0,
+      "S_12_conj": 0,
+      "S_13": 1,
+      "S_14": 3,
+      "S_14_conj": -3,
+      "S_24": 3,
+      "S_34_1": 2,
+      "S_34_2": 2
+    },
+    "generic_nonzero_CEG_obstruction": "If k1 or k2 !=0, F_{G_i}=k_i C E=0. If E=0, ell=(1,1,0) on D=0 forces C=0 because other remaining ell charges are >=0. Hence C=S13=0 in ALL simultaneous F/D-flat vacua (canonical positive Kahler, zero FI).",
+    "third_family_one_spurion_diagonal_needs_S13": true,
+    "both_bilinears_nonzero_unique_SUSY_vacuum_origin": true,
+    "two_bilinears_proof": "m !=0 => A=0 from F_B; n !=0 => E=0 from F_D; then B=0 from F_A. Remaining D_ell>=0 forces C,D,F,G,H=0. No other singlet field remains.",
+    "exception": "A missing \u03ba, noncanonical K\u00e4hler, FI shifts, additional charged fields/neutral mediators, or nonperturbative/source terms can evade these conditional statements.",
+    "scope": "All monomials enumerate only the eight *specified* charged Spin10 singlets, gauge U1^3 charges, and polynomial degrees <=3. Gauge allowance does NOT prove a physical term is generated."
+  },
+  "compact_Yukawa_adjoint_tradeoff": {
+    "source_M": "T3 minus 1 open ball",
+    "b1_absolute": 3,
+    "b1_relative_to_one_sphere": 3,
+    "relative_cup_xyz": 1,
+    "triple_cup_requires_b1_at_least_three": true,
+    "unbroken_Spin10_Lie_algebra_dimension": 45,
+    "adjoint_chiral_zero_modes_if_trivial_flat_ad_bundle_and_no_boundary_projection": 135,
+    "adjoint_chiral_multiplets_if_no_projection": 3,
+    "cohomological_argument": "With unbroken Lie algebra g globally fixed by flat holonomy and no defect projection, H1(M;adP_invariants)=g tensor H1(M), dimension 45*3. Nonzero wedge of three degree-one classes requires dimension H1>=3.",
+    "limitation": "Flux, singular boundary conditions, superpotentials and nontrivial adjoint holonomy could lift/projection these modes; any such choice must also preserve desired Spin10 gauge group and Yukawa classes."
+  },
+  "adjoint_SU5_mass_consistency": {
+    "SU5_adj_H_eigenvalues": [
+      2,
+      2,
+      2,
+      -3,
+      -3
+    ],
+    "renormalizable_mass_Clebsch_coefficients": {
+      "octet": 2.0,
+      "triplet": -3.0,
+      "X_leptoquark": -0.5,
+      "singlet": -1.0
+    },
+    "exact_signed_mass_relation": "M_X=(M_octet+M_triplet)/2",
+    "illustrative_triplet_M_GeV": 21716354.84,
+    "illustrative_octet_M_GeV": 454271.0799,
+    "inevitable_X_upper_mass_GeV_if_same_24": 11085312.95995,
+    "parallel_chosen_MU_GeV": 2e+16,
+    "extra_X_one_loop_b_shifts": [
+      3.3333333333333335,
+      2,
+      1.3333333333333333
+    ],
+    "abs_inverse_coupling_shifts_if_X_at_upper_mass": [
+      11.307097697051915,
+      6.784258618231149,
+      4.522839078820766
+    ],
+    "new_inverse_alpha1_minus_alpha3_mismatch_magnitude_at_original_MU": 6.784258618231149,
+    "full_24_majorana_beta_shifts": [
+      3.3333333333333335,
+      3.333333333333333,
+      3.333333333333333
+    ],
+    "conditional_no_go": "Embedding a light triplet and octet into the SAME renormalizable 24F with only 24H mass splitting forces a light (3,2)+conj fermion. This violates the effective calculation placing all other 24F components at MU.",
+    "escape": "Different fermion representations, higher dimensional 24F\u00b224H\u00b2 terms, more Higgs irreps or nontrivial multiplet mixing can break the exact relation.",
+    "limitation": "The two triplets and one octet are imported benchmark choices, not independently observed masses, and complex mixing matrices can change eigenvalue mass relations."
+  },
+  "anisotropic_Einstein_relational_clock": {
+    "Kasner_exponents": [
+      0.5,
+      0.3333333333333333,
+      0.16666666666666666
+    ],
+    "scalar_log_t_coefficient": 0.7817359599705717,
+    "Kasner_sum_p": 0.9999999999999999,
+    "Kasner_sum_p_squared": 0.3888888888888889,
+    "Hamiltonian_00": "sum_{i<j} H_i H_j=(1/2) phi_dot^2",
+    "directional_Einstein": "Hdot_i+theta H_i=0",
+    "scalar_equation": "phi_ddot+theta phi_dot=0",
+    "exact_relational_observables": "a_i(phi)=exp(p_i phi/sigma), independent of t or n labeling",
+    "coordinate_exchange_clock": "n=ln(t), lapse N(n)=dt/dn=exp(n); counting n as unit proper-time steps would be incorrect",
+    "samples": [
+      {
+        "t": 0.25,
+        "constraint_error": 0.0,
+        "directional_error_max": 8.881784197001252e-16,
+        "KG_error": 1.7763568394002505e-15,
+        "exchange_clock_n_log_t": -1.3862943611198906,
+        "required_lapse_dt_dn": 0.25
+      },
+      {
+        "t": 0.5,
+        "constraint_error": 0.0,
+        "directional_error_max": 2.220446049250313e-16,
+        "KG_error": 4.440892098500626e-16,
+        "exchange_clock_n_log_t": -0.6931471805599453,
+        "required_lapse_dt_dn": 0.5
+      },
+      {
+        "t": 1.0,
+        "constraint_error": 0.0,
+        "directional_error_max": 5.551115123125783e-17,
+        "KG_error": 1.1102230246251565e-16,
+        "exchange_clock_n_log_t": 0.0,
+        "required_lapse_dt_dn": 1.0
+      },
+      {
+        "t": 2.0,
+        "constraint_error": 0.0,
+        "directional_error_max": 1.3877787807814457e-17,
+        "KG_error": 2.7755575615628914e-17,
+        "exchange_clock_n_log_t": 0.6931471805599453,
+        "required_lapse_dt_dn": 2.0
+      },
+      {
+        "t": 4.0,
+        "constraint_error": 0.0,
+        "directional_error_max": 3.469446951953614e-18,
+        "KG_error": 6.938893903907228e-18,
+        "exchange_clock_n_log_t": 1.3862943611198906,
+        "required_lapse_dt_dn": 4.0
+      },
+      {
+        "t": 10.0,
+        "constraint_error": 8.673617379884035e-19,
+        "directional_error_max": 8.673617379884035e-19,
+        "KG_error": 0.0,
+        "exchange_clock_n_log_t": 2.302585092994046,
+        "required_lapse_dt_dn": 10.000000000000002
+      }
+    ],
+    "limitation": "Classical Bianchi-I minisuperspace solution, not quantum gravity, not 3+1 local Dirac algebra or emergent metric derivation."
+  },
+  "single_photon_local_SSR": {
+    "single_photon_state": "(|10>+|01>)/sqrt2",
+    "untwirled_CHSH_unrestricted": 2.8284271247461894,
+    "locally_number_twirl_is_mixed_separable": true,
+    "number_conserving_CHSH_upper": 2,
+    "sampled_number_conserving_measurement_quartets": 1500,
+    "sampled_max_abs_CHSH": 1.9999999999999996,
+    "coherence_01_10_before": 0.4999999999999999,
+    "coherence_01_10_after": 0.0,
+    "resource_diagnosis": "Local operations commuting with local particle number cannot access relative |01><10| coherence without a reference/ancilla that lifts local SSR. A shared coherent phase reference is an additional physical resource.",
+    "limitation": "Conditional on a strict local number superselection rule and no nonlocal/shared phase resources. Bell violation of single-photon states IS possible with suitable references or other allowed protocols; this is not a universal no-go."
+  },
+  "charged_family_hierarchy_control": {
+    "tested_random_complex_hollow_symmetric_matrices": 1000,
+    "max_s1_over_s2_seen": 1.9759357834443172,
+    "exact_bound": "s1<=s2+s3 hence s1/s2<=2 for canonical kinetic terms",
+    "new_test_goal": "F-flat spurion availability and physical Yukawa overlap must both be established before claiming masses."
+  },
+  "selective_topological_cubic_alignment": {
+    "source_cohomology": "H1(T3 minus open ball, boundary; Z)=Z3",
+    "physical_family_three_rows": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "physical_Yukawa_triple_cup": 1,
+    "singlet_loop_three_rows": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0
+      ]
+    ],
+    "singlet_loop_triple_cup": 0,
+    "single_entry_perturbation_triple_cup": 1,
+    "constructive_alignment": "Nonzero family Yukawa and zero dangerous S13*S34*S14conj loop cup can coexist at cohomology level if the singlet three classes are linearly dependent but the family triple is independent.",
+    "non_generic_warning": "det(singlet)=0 is a codimension-one relation among wavefunction cohomology classes over R; quantized integral data may protect it, but no physical dynamics selecting these classes is supplied.",
+    "separation_limit": "All wavefunction triples shown are abstract integral cohomology assignments, not solutions of a single E8 Higgs-bundle/Dirac localization problem with all charges and M2 corrections."
+  }
+}
