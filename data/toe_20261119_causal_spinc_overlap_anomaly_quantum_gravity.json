@@ -1,0 +1,372 @@
+{
+  "status": "PASS 6 conditional physics gates; NO TOE",
+  "date": "2026-11-19",
+  "TOE_solved": false,
+  "quantum_gravity_derived": false,
+  "SM_generation_or_constants_derived": false,
+  "lattice_metric_spin_gauge_as_inputs": true,
+  "source_urls": [
+    "https://doi.org/10.1143/PTP.107.163",
+    "https://doi.org/10.1103/PhysRevD.109.014502",
+    "https://doi.org/10.1016/S0550-3213(99)00115-7",
+    "https://andrea-cappelli.github.io/theses/villa.pdf",
+    "https://doi.org/10.1007/s10714-024-03281-1",
+    "https://doi.org/10.1007/s41114-019-0023-1"
+  ],
+  "fronts": {
+    "I_intrinsic_torus_cohomology_and_spin_torsor": {
+      "status": "PASS",
+      "cubical_torus_L": 3,
+      "cell_counts": {
+        "V": 9,
+        "E": 18,
+        "F": 9,
+        "Euler_characteristic": 0
+      },
+      "GF2_boundary_ranks": [
+        8,
+        8
+      ],
+      "GF2_betti_numbers": [
+        1,
+        2,
+        1
+      ],
+      "number_of_H1_Z2_spin_torsor_classes": 4,
+      "boundary_of_boundary_nonzero_entries": 0,
+      "caution": "Four spin structures are classified by a Z2 H1 torsor after the oriented smooth torus and base spin structure are given. Bare directed events do not supply a spin lift or orientability."
+    },
+    "II_overlap_Dirac_GW_flux_index_and_gauge_covariance": {
+      "status": "PASS",
+      "sectors": [
+        {
+          "L": 6,
+          "inserted_U1_flux_Q": 0,
+          "measured_plaquette_winding": 0,
+          "overlap_index_in_our_gamma_convention": 0,
+          "Ginsparg_Wilson_Frobenius_residual": 5.64809287663153e-14,
+          "H_W_spectral_gap": 0.9999999999999953,
+          "overlap_zero_modes": 2
+        },
+        {
+          "L": 6,
+          "inserted_U1_flux_Q": 1,
+          "measured_plaquette_winding": 1,
+          "overlap_index_in_our_gamma_convention": -1,
+          "Ginsparg_Wilson_Frobenius_residual": 5.800515255397123e-13,
+          "H_W_spectral_gap": 0.9115743795172986,
+          "overlap_zero_modes": 1
+        },
+        {
+          "L": 6,
+          "inserted_U1_flux_Q": -1,
+          "measured_plaquette_winding": -1,
+          "overlap_index_in_our_gamma_convention": 1,
+          "Ginsparg_Wilson_Frobenius_residual": 3.3130793140544094e-13,
+          "H_W_spectral_gap": 0.9115743795172974,
+          "overlap_zero_modes": 1
+        },
+        {
+          "L": 6,
+          "inserted_U1_flux_Q": 2,
+          "measured_plaquette_winding": 2,
+          "overlap_index_in_our_gamma_convention": -2,
+          "Ginsparg_Wilson_Frobenius_residual": 5.4237290963825546e-14,
+          "H_W_spectral_gap": 0.8214229046304419,
+          "overlap_zero_modes": 2
+        },
+        {
+          "L": 6,
+          "inserted_U1_flux_Q": -2,
+          "measured_plaquette_winding": -2,
+          "overlap_index_in_our_gamma_convention": 2,
+          "Ginsparg_Wilson_Frobenius_residual": 5.5268257642855656e-14,
+          "H_W_spectral_gap": 0.8214229046304429,
+          "overlap_zero_modes": 2
+        },
+        {
+          "L": 8,
+          "inserted_U1_flux_Q": 3,
+          "measured_plaquette_winding": 3,
+          "overlap_index_in_our_gamma_convention": -3,
+          "Ginsparg_Wilson_Frobenius_residual": 6.320470133848315e-14,
+          "H_W_spectral_gap": 0.8487367305932643,
+          "overlap_zero_modes": 3
+        },
+        {
+          "L": 8,
+          "inserted_U1_flux_Q": 5,
+          "measured_plaquette_winding": 5,
+          "overlap_index_in_our_gamma_convention": -5,
+          "Ginsparg_Wilson_Frobenius_residual": 1.379347817885858e-13,
+          "H_W_spectral_gap": 0.7442387743095956,
+          "overlap_zero_modes": 5
+        }
+      ],
+      "local_U1_gauge_covariance_error": 5.065329114409311e-13,
+      "flat_periodic_zero_modes": 2,
+      "flat_antiperiodic_zero_modes": 0,
+      "index_direction": "index=-Q for chosen gamma conventions",
+      "meaning": "Exact finite lattice modified chiral symmetry and topological flux-index relation for externally given 2D U1 links.",
+      "limits": "Established Neuberger-overlap/GW mechanism on an inserted Euclidean torus and U1 bundle. Does not produce an intrinsic Lorentzian causal-set Dirac operator or SM chiral family."
+    },
+    "III_pure_quantum_state_selection_nonuniqueness": {
+      "status": "PASS",
+      "fixed_commutator": "[q,p]=i, J=[[0,1],[-1,0]]",
+      "pure_Gaussian_two_point_options": [
+        {
+          "squeezing_r": 0.0,
+          "min_W_eigenvalue": 0.0,
+          "symplectic_purity_det_V": 0.25,
+          "fixed_commutator_error": 0.0,
+          "H_oscillator_frequency_1_energy": 0.5,
+          "q_variance": 0.5,
+          "p_variance": 0.5
+        },
+        {
+          "squeezing_r": 0.5,
+          "min_W_eigenvalue": 0.0,
+          "symplectic_purity_det_V": 0.25,
+          "fixed_commutator_error": 0.0,
+          "H_oscillator_frequency_1_energy": 0.7715403174076219,
+          "q_variance": 1.3591409142295225,
+          "p_variance": 0.18393972058572117
+        },
+        {
+          "squeezing_r": 1.0,
+          "min_W_eigenvalue": 0.0,
+          "symplectic_purity_det_V": 0.25,
+          "fixed_commutator_error": 0.0,
+          "H_oscillator_frequency_1_energy": 1.8810978455418157,
+          "q_variance": 3.694528049465325,
+          "p_variance": 0.06766764161830635
+        }
+      ],
+      "same_commutator_and_purity": true,
+      "frequency_4_ground_covariance": [
+        [
+          0.125,
+          0.0
+        ],
+        [
+          0.0,
+          2.0
+        ]
+      ],
+      "frequency_4_ground_energy": 2.0,
+      "frequency_4_energy_in_frequency_1_vacuum": 4.25,
+      "conclusion": "Even positivity, purity and the canonical commutator do not single out the vacuum. Supplying the Hamiltonian/time generator can select a ground state; it is an independent input.",
+      "limits": "Only one-mode canonical Gaussian quantum mechanics; no causal-set Born-rule derivation, interacting scattering or Hadamard uniqueness theorem."
+    },
+    "IV_dimension_gravity_topological_action_and_growth": {
+      "status": "PASS",
+      "torus_cell_complex": {
+        "V": 9,
+        "E": 27,
+        "F": 18,
+        "chi": 0
+      },
+      "torus_regge_total_deficit_radians": -6.661338147750939e-16,
+      "local_regge_deficit_L2_norm": 0.4801012548938106,
+      "local_deficit_min_max": [
+        -0.3372804131908853,
+        0.2625360780818011
+      ],
+      "sphere_tetrahedron_total_deficit_radians": 12.566370614359172,
+      "Gauss_Bonnet": "Sum_v deficit(v)=2pi*Euler, independent of the edge lengths on a 2D closed triangulation.",
+      "unembedded_sequential_growth_controls": [
+        {
+          "n": 220,
+          "p": 0.025,
+          "seed": 20261144,
+          "direct_bonds": 571,
+          "transitively_related_pairs": 3689,
+          "whole_poset_related_fraction": 0.1531340805313408,
+          "eligible_intervals": 6,
+          "local_dim_median": 2.0237674828644954,
+          "local_dim_q10": 1.9029740930103314,
+          "local_dim_q90": 2.2659107070302866,
+          "local_dim_mean": 2.0642174276350382,
+          "local_dim_std": 0.18620883039807234,
+          "interval_size_median": 19.5,
+          "is_exact_d4_prediction": false
+        },
+        {
+          "n": 220,
+          "p": 0.065,
+          "seed": 20261184,
+          "direct_bonds": 1540,
+          "transitively_related_pairs": 14826,
+          "whole_poset_related_fraction": 0.6154420921544209,
+          "eligible_intervals": 253,
+          "local_dim_median": 2.1646919746489055,
+          "local_dim_q10": 1.9048236977941866,
+          "local_dim_q90": 2.3349827427588026,
+          "local_dim_mean": 2.148480193513497,
+          "local_dim_std": 0.1680857690845203,
+          "interval_size_median": 40.0,
+          "is_exact_d4_prediction": false
+        },
+        {
+          "n": 220,
+          "p": 0.15,
+          "seed": 20261269,
+          "direct_bonds": 3610,
+          "transitively_related_pairs": 21048,
+          "whole_poset_related_fraction": 0.8737235367372354,
+          "eligible_intervals": 560,
+          "local_dim_median": 1.6126902273155461,
+          "local_dim_q10": 1.3519750897623415,
+          "local_dim_q90": 1.8589517581443231,
+          "local_dim_mean": 1.6098927716570597,
+          "local_dim_std": 0.1889642060927491,
+          "interval_size_median": 56.5,
+          "is_exact_d4_prediction": false
+        }
+      ],
+      "median_intrinsic_dimension_estimates": [
+        2.0237674828644954,
+        2.1646919746489055,
+        1.6126902273155461
+      ],
+      "conclusion": "2D Einstein-Hilbert Regge curvature is topological and supplies no local graviton dynamics; the sampled 3-parameter causal growth has no demonstrated universal emergent 4D attractor.",
+      "limits": "Spatial Euclidean 2D Regge models and finite stochastic posets, not a dynamical Lorentzian 3+1 quantum gravity path integral."
+    },
+    "V_global_SpinC_charge_and_chiral_anomaly_constraints": {
+      "status": "PASS",
+      "SpinC_quotient": "[Spin(n) x U(1)] / <(-1,-1)>",
+      "representation_center_constraints": [
+        {
+          "spinor": true,
+          "integer_U1_character_weight": -4,
+          "SpinC_quotient_representation_well_defined": false
+        },
+        {
+          "spinor": true,
+          "integer_U1_character_weight": -3,
+          "SpinC_quotient_representation_well_defined": true
+        },
+        {
+          "spinor": true,
+          "integer_U1_character_weight": -2,
+          "SpinC_quotient_representation_well_defined": false
+        },
+        {
+          "spinor": true,
+          "integer_U1_character_weight": -1,
+          "SpinC_quotient_representation_well_defined": true
+        },
+        {
+          "spinor": true,
+          "integer_U1_character_weight": 0,
+          "SpinC_quotient_representation_well_defined": false
+        },
+        {
+          "spinor": true,
+          "integer_U1_character_weight": 1,
+          "SpinC_quotient_representation_well_defined": true
+        },
+        {
+          "spinor": true,
+          "integer_U1_character_weight": 2,
+          "SpinC_quotient_representation_well_defined": false
+        },
+        {
+          "spinor": true,
+          "integer_U1_character_weight": 3,
+          "SpinC_quotient_representation_well_defined": true
+        },
+        {
+          "spinor": true,
+          "integer_U1_character_weight": 4,
+          "SpinC_quotient_representation_well_defined": false
+        },
+        {
+          "spinor": false,
+          "integer_U1_character_weight": -4,
+          "SpinC_quotient_representation_well_defined": true
+        },
+        {
+          "spinor": false,
+          "integer_U1_character_weight": -3,
+          "SpinC_quotient_representation_well_defined": false
+        },
+        {
+          "spinor": false,
+          "integer_U1_character_weight": -2,
+          "SpinC_quotient_representation_well_defined": true
+        },
+        {
+          "spinor": false,
+          "integer_U1_character_weight": -1,
+          "SpinC_quotient_representation_well_defined": false
+        },
+        {
+          "spinor": false,
+          "integer_U1_character_weight": 0,
+          "SpinC_quotient_representation_well_defined": true
+        },
+        {
+          "spinor": false,
+          "integer_U1_character_weight": 1,
+          "SpinC_quotient_representation_well_defined": false
+        },
+        {
+          "spinor": false,
+          "integer_U1_character_weight": 2,
+          "SpinC_quotient_representation_well_defined": true
+        },
+        {
+          "spinor": false,
+          "integer_U1_character_weight": 3,
+          "SpinC_quotient_representation_well_defined": false
+        },
+        {
+          "spinor": false,
+          "integer_U1_character_weight": 4,
+          "SpinC_quotient_representation_well_defined": true
+        }
+      ],
+      "necessary_2D_anomaly_congruence": "For only odd-charged Weyl spinors, sum_L q\u00b2 - sum_R q\u00b2=0 implies N_L-N_R divisible by 8.",
+      "odd_square_mod_8": 1,
+      "sample_nonvectorlike_2D_chiral_anomaly_free_charges": {
+        "left": [
+          1,
+          7
+        ],
+        "right": [
+          5,
+          5
+        ],
+        "anomaly": 0,
+        "left_number_minus_right": 0
+      },
+      "caveats": [
+        "These are two-dimensional U1 chiral gauge anomalies, NOT four-dimensional Standard Model anomaly conditions.",
+        "The parity restriction applies only when this U1 is the actual Spin^c quotient factor with integral characters and no independent spin/gauge structure.",
+        "The sample charges are freely selected to cancel the anomaly; neither their magnitudes nor any family is derived.",
+        "Neutral fundamental fermions or fractional SM hypercharges require a different global structure or normalization."
+      ]
+    },
+    "VI_extra_dynamic_SU2_Yang_Mills_variational_force": {
+      "status": "PASS",
+      "group": "SU(2) imposed",
+      "lattice": [
+        3,
+        3
+      ],
+      "initial_wilson_action": 1.844380512762571,
+      "after_one_negative_gradient_step": 1.8289368847068124,
+      "energy_decrease": 0.015443628055758607,
+      "local_frame_gauge_action_error": 4.440892098500626e-16,
+      "one_link_gauge_force_vector": [
+        -0.31381012093323335,
+        -0.10211188675723902,
+        0.07083800003249152
+      ],
+      "force_norm": 0.33752281651150196,
+      "conclusion": "Chosen local gauge-invariant action has nonzero Euler-Lagrange force and a downhill step, unlike Wilson transport alone.",
+      "limits": "No derivation of SU2, Wilson/Yang-Mills action, quantum measure, charged-current matter, or Standard Model beta function."
+    }
+  }
+}

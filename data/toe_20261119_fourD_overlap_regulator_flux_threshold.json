@@ -1,0 +1,150 @@
+{
+  "status": "PASS \u2014 conditional known topology and regulator-resolution sensitivity",
+  "TOE_solved": false,
+  "dynamical_4D_spacetime_derived": false,
+  "physical_SM_chiral_gauge_theory_constructed": false,
+  "known_continuum_relation": "For U1 field strengths on flat T4 with flux only in 12 and 34 planes, (1/8pi\u00b2) integral F wedge F = Q12*Q34; with our gamma orientation overlap index agrees at sufficiently resolved tests.",
+  "field_and_fourD_torus_inserted_as_inputs": true,
+  "gamma_Clifford_residual": 0.0,
+  "cases": [
+    {
+      "L": 2,
+      "Q12": 1,
+      "Q34": 1,
+      "continuum_Chern_character_Q12_times_Q34": 1,
+      "finite_overlap_index": 0,
+      "finite_index_matches_continuum": false,
+      "kernel_gap": 0.17157287525381362,
+      "Ginsparg_Wilson_residual_when_full_operator": null,
+      "overlap_zero_mode_count_when_full_operator": null,
+      "mean_plaquette_flux_angles": {
+        "12": 1.5707963267948966,
+        "34": 1.5707963267948966,
+        "13": 0.0,
+        "14": 0.0,
+        "23": 0.0,
+        "24": 0.0
+      }
+    },
+    {
+      "L": 3,
+      "Q12": 0,
+      "Q34": 0,
+      "continuum_Chern_character_Q12_times_Q34": 0,
+      "finite_overlap_index": 0,
+      "finite_index_matches_continuum": true,
+      "kernel_gap": 0.9999999999999851,
+      "Ginsparg_Wilson_residual_when_full_operator": null,
+      "overlap_zero_mode_count_when_full_operator": null,
+      "mean_plaquette_flux_angles": {
+        "12": 0.0,
+        "34": 0.0,
+        "13": 0.0,
+        "14": 0.0,
+        "23": 0.0,
+        "24": 0.0
+      }
+    },
+    {
+      "L": 3,
+      "Q12": 1,
+      "Q34": 0,
+      "continuum_Chern_character_Q12_times_Q34": 0,
+      "finite_overlap_index": 0,
+      "finite_index_matches_continuum": true,
+      "kernel_gap": 0.6384828637092317,
+      "Ginsparg_Wilson_residual_when_full_operator": null,
+      "overlap_zero_mode_count_when_full_operator": null,
+      "mean_plaquette_flux_angles": {
+        "12": 0.6981317007977319,
+        "34": 0.0,
+        "13": 0.0,
+        "14": 0.0,
+        "23": 0.0,
+        "24": 0.0
+      }
+    },
+    {
+      "L": 3,
+      "Q12": 1,
+      "Q34": 1,
+      "continuum_Chern_character_Q12_times_Q34": 1,
+      "finite_overlap_index": 1,
+      "finite_index_matches_continuum": true,
+      "kernel_gap": 0.3455097810878973,
+      "Ginsparg_Wilson_residual_when_full_operator": 8.456005625696919e-13,
+      "overlap_zero_mode_count_when_full_operator": 1,
+      "mean_plaquette_flux_angles": {
+        "12": 0.6981317007977319,
+        "34": 0.6981317007977319,
+        "13": -9.251858538542974e-18,
+        "14": 4.11193712824132e-18,
+        "23": -1.027984282060331e-18,
+        "24": -6.853228547068861e-19
+      }
+    },
+    {
+      "L": 3,
+      "Q12": 1,
+      "Q34": -1,
+      "continuum_Chern_character_Q12_times_Q34": -1,
+      "finite_overlap_index": -1,
+      "finite_index_matches_continuum": true,
+      "kernel_gap": 0.34550978108789554,
+      "Ginsparg_Wilson_residual_when_full_operator": null,
+      "overlap_zero_mode_count_when_full_operator": null,
+      "mean_plaquette_flux_angles": {
+        "12": 0.6981317007977319,
+        "34": -0.6981317007977319,
+        "13": 3.0839528461809918e-18,
+        "14": 4.565167275584559e-34,
+        "23": 2.0559685641206613e-18,
+        "24": 6.853228547068867e-19
+      }
+    },
+    {
+      "L": 3,
+      "Q12": -1,
+      "Q34": -1,
+      "continuum_Chern_character_Q12_times_Q34": 1,
+      "finite_overlap_index": 1,
+      "finite_index_matches_continuum": true,
+      "kernel_gap": 0.3455097810879013,
+      "Ginsparg_Wilson_residual_when_full_operator": null,
+      "overlap_zero_mode_count_when_full_operator": null,
+      "mean_plaquette_flux_angles": {
+        "12": -0.6981317007977319,
+        "34": -0.6981317007977319,
+        "13": 9.251858538542974e-18,
+        "14": -4.11193712824132e-18,
+        "23": 1.027984282060331e-18,
+        "24": 6.853228547068861e-19
+      }
+    },
+    {
+      "L": 3,
+      "Q12": 1,
+      "Q34": 2,
+      "continuum_Chern_character_Q12_times_Q34": 2,
+      "finite_overlap_index": 1,
+      "finite_index_matches_continuum": false,
+      "kernel_gap": 0.030795040441815677,
+      "Ginsparg_Wilson_residual_when_full_operator": null,
+      "overlap_zero_mode_count_when_full_operator": null,
+      "mean_plaquette_flux_angles": {
+        "12": 0.6981317007977319,
+        "34": 1.3962634015954638,
+        "13": -9.251858538542975e-18,
+        "14": 6.1679056923619804e-18,
+        "23": -3.0839528461809918e-18,
+        "24": 1.3706457094137742e-18
+      }
+    }
+  ],
+  "observed_coarse_regulator_breakdown": "With Wilson mass m0=1 the L=2 background (Q12,Q34)=(1,1) has continuum charge 1 but overlap index 0 despite nonzero kernel gap; the finer L=3 background gives index 1. L=3 Q34=2 also fails to give 2. Finite resolution and kernel mass/admissibility matter; no universal finite-L index theorem is claimed.",
+  "sources": [
+    "https://doi.org/10.1007/s11005-026-02080-w",
+    "https://arxiv.org/abs/hep-lat/0111060",
+    "https://doi.org/10.1016/S0550-3213(99)00115-7"
+  ]
+}
