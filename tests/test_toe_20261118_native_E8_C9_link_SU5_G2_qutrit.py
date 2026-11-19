@@ -116,5 +116,10 @@ class NativeE8C9LinkTests(unittest.TestCase):
     def test_Z3_geometric_rotation_excludes_quartic_not_physics(self):
         self.assertTrue(self.z["n3_quartic_not_invariant"])
         self.assertIn("Conditional",self.z["scope"])
+    def test_relative_sphere_correct_when_local_system_has_invariants(self):
+        M=np.eye(1,dtype=complex)
+        h=C.coh(M,M)
+        self.assertEqual(h["absolute_betti"],[1,2,1])
+        self.assertEqual(h["relative_one_sphere_betti"],[0,2,1])
 
 if __name__=="__main__":unittest.main()

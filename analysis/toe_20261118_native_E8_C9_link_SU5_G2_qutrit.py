@@ -39,9 +39,13 @@ def coh(A,C):
     assert np.max(abs(d1@d0))<1e-8
     r0=int(np.linalg.matrix_rank(d0,tol=1e-8))
     r1=int(np.linalg.matrix_rank(d1,tol=1e-8))
+    # One relative S2 removes the 0-cochains. The correct relative
+    # complex is 0 -> V^2 -> V, so b1_rel=2dim-r1. A prior expression
+    # 3dim-r0-r1 overcounted by b0_abs=dim-r0 whenever there were
+    # parallel invariant vectors; the charged sector results had b0=0.
     return dict(rank_d0=r0,rank_d1=r1,absolute_betti=[dim-r0,
         2*dim-r0-r1,dim-r1],relative_one_sphere_betti=[0,
-        3*dim-r0-r1,dim-r1],chain_complex_error=float(np.max(abs(d1@d0))))
+        2*dim-r1,dim-r1],chain_complex_error=float(np.max(abs(d1@d0))))
 
 def group_order():
     # D(v)X^k with D9 exponent vector v and sum components=0 mod9.

@@ -1,0 +1,737 @@
+{
+  "status": "PASS",
+  "date": "2026-11-18",
+  "full_E8_census": {
+    "status": "PASS",
+    "fixed_E6_center_dimensions_by_Psi_phase": [
+      16,
+      18,
+      26,
+      14,
+      20,
+      16,
+      20
+    ],
+    "unique_minimal_Psi_phase_c": 3,
+    "with_only_SU5_W7_c0": {
+      "E6_unbroken_dim": 16,
+      "possible_Lie_algebra": "su3_color + su2_weak + su2_extra + u1^2"
+    },
+    "with_compensating_Psi_W7_c3": {
+      "E6_unbroken_dim": 14,
+      "possible_Lie_algebra": "su3_color + su2_weak + u1^3",
+      "two_U1_extra_beyond_SM": true
+    },
+    "entire_E8_relative_cohomology_cases": [
+      {
+        "Psi_W7_charge_c": 0,
+        "E6_fixed_weight_decomposition": {
+          "SU5_adjoint_24_fixed": 12,
+          "SO10_45_fixed": 13,
+          "E6_16minus3_fixed": 1,
+          "E6_16barplus3_fixed": 1,
+          "E6_1_fixed": 1,
+          "total_E6_78_fixed": 16
+        },
+        "E8_unbroken_gauge_generators": 16,
+        "E8_absolute_betti": [
+          16,
+          36,
+          20
+        ],
+        "E8_relative_S2_betti": [
+          0,
+          268,
+          20
+        ],
+        "E8_relative_net_Euler_index": 248,
+        "E8_sector_betti": {
+          "E6_adjoint_78": {
+            "dim": 78,
+            "invariant_vectors": 16,
+            "absolute_betti": [
+              16,
+              32,
+              16
+            ],
+            "relative_S2_betti": [
+              0,
+              94,
+              16
+            ]
+          },
+          "SU3_adjoint_8": {
+            "dim": 8,
+            "rank_d0": 8,
+            "rank_d1": 4,
+            "absolute_betti": [
+              0,
+              4,
+              4
+            ],
+            "relative_S2_betti": [
+              0,
+              12,
+              4
+            ]
+          },
+          "E6_27_family_3": {
+            "dim": 81,
+            "absolute_betti": [
+              0,
+              0,
+              0
+            ],
+            "relative_S2_betti": [
+              0,
+              81,
+              0
+            ]
+          },
+          "E6_27bar_family_3bar": {
+            "dim": 81,
+            "absolute_betti": [
+              0,
+              0,
+              0
+            ],
+            "relative_S2_betti": [
+              0,
+              81,
+              0
+            ]
+          }
+        },
+        "historical_overcount_if_ignore_fixed_vectors": 284,
+        "missing_subtraction": 16,
+        "correct_general_relative_formula": "(b0,b1,b2)=(0,2*d-rank(d1),d-rank(d1))",
+        "conjugate_sector_betti_identical": true
+      },
+      {
+        "Psi_W7_charge_c": 1,
+        "E6_fixed_weight_decomposition": {
+          "SU5_adjoint_24_fixed": 12,
+          "SO10_45_fixed": 13,
+          "E6_16minus3_fixed": 2,
+          "E6_16barplus3_fixed": 2,
+          "E6_1_fixed": 1,
+          "total_E6_78_fixed": 18
+        },
+        "E8_unbroken_gauge_generators": 18,
+        "E8_absolute_betti": [
+          18,
+          40,
+          22
+        ],
+        "E8_relative_S2_betti": [
+          0,
+          270,
+          22
+        ],
+        "E8_relative_net_Euler_index": 248,
+        "E8_sector_betti": {
+          "E6_adjoint_78": {
+            "dim": 78,
+            "invariant_vectors": 18,
+            "absolute_betti": [
+              18,
+              36,
+              18
+            ],
+            "relative_S2_betti": [
+              0,
+              96,
+              18
+            ]
+          },
+          "SU3_adjoint_8": {
+            "dim": 8,
+            "rank_d0": 8,
+            "rank_d1": 4,
+            "absolute_betti": [
+              0,
+              4,
+              4
+            ],
+            "relative_S2_betti": [
+              0,
+              12,
+              4
+            ]
+          },
+          "E6_27_family_3": {
+            "dim": 81,
+            "absolute_betti": [
+              0,
+              0,
+              0
+            ],
+            "relative_S2_betti": [
+              0,
+              81,
+              0
+            ]
+          },
+          "E6_27bar_family_3bar": {
+            "dim": 81,
+            "absolute_betti": [
+              0,
+              0,
+              0
+            ],
+            "relative_S2_betti": [
+              0,
+              81,
+              0
+            ]
+          }
+        },
+        "historical_overcount_if_ignore_fixed_vectors": 288,
+        "missing_subtraction": 18,
+        "correct_general_relative_formula": "(b0,b1,b2)=(0,2*d-rank(d1),d-rank(d1))",
+        "conjugate_sector_betti_identical": true
+      },
+      {
+        "Psi_W7_charge_c": 2,
+        "E6_fixed_weight_decomposition": {
+          "SU5_adjoint_24_fixed": 12,
+          "SO10_45_fixed": 13,
+          "E6_16minus3_fixed": 6,
+          "E6_16barplus3_fixed": 6,
+          "E6_1_fixed": 1,
+          "total_E6_78_fixed": 26
+        },
+        "E8_unbroken_gauge_generators": 26,
+        "E8_absolute_betti": [
+          26,
+          56,
+          30
+        ],
+        "E8_relative_S2_betti": [
+          0,
+          278,
+          30
+        ],
+        "E8_relative_net_Euler_index": 248,
+        "E8_sector_betti": {
+          "E6_adjoint_78": {
+            "dim": 78,
+            "invariant_vectors": 26,
+            "absolute_betti": [
+              26,
+              52,
+              26
+            ],
+            "relative_S2_betti": [
+              0,
+              104,
+              26
+            ]
+          },
+          "SU3_adjoint_8": {
+            "dim": 8,
+            "rank_d0": 8,
+            "rank_d1": 4,
+            "absolute_betti": [
+              0,
+              4,
+              4
+            ],
+            "relative_S2_betti": [
+              0,
+              12,
+              4
+            ]
+          },
+          "E6_27_family_3": {
+            "dim": 81,
+            "absolute_betti": [
+              0,
+              0,
+              0
+            ],
+            "relative_S2_betti": [
+              0,
+              81,
+              0
+            ]
+          },
+          "E6_27bar_family_3bar": {
+            "dim": 81,
+            "absolute_betti": [
+              0,
+              0,
+              0
+            ],
+            "relative_S2_betti": [
+              0,
+              81,
+              0
+            ]
+          }
+        },
+        "historical_overcount_if_ignore_fixed_vectors": 304,
+        "missing_subtraction": 26,
+        "correct_general_relative_formula": "(b0,b1,b2)=(0,2*d-rank(d1),d-rank(d1))",
+        "conjugate_sector_betti_identical": true
+      },
+      {
+        "Psi_W7_charge_c": 3,
+        "E6_fixed_weight_decomposition": {
+          "SU5_adjoint_24_fixed": 12,
+          "SO10_45_fixed": 13,
+          "E6_16minus3_fixed": 0,
+          "E6_16barplus3_fixed": 0,
+          "E6_1_fixed": 1,
+          "total_E6_78_fixed": 14
+        },
+        "E8_unbroken_gauge_generators": 14,
+        "E8_absolute_betti": [
+          14,
+          32,
+          18
+        ],
+        "E8_relative_S2_betti": [
+          0,
+          266,
+          18
+        ],
+        "E8_relative_net_Euler_index": 248,
+        "E8_sector_betti": {
+          "E6_adjoint_78": {
+            "dim": 78,
+            "invariant_vectors": 14,
+            "absolute_betti": [
+              14,
+              28,
+              14
+            ],
+            "relative_S2_betti": [
+              0,
+              92,
+              14
+            ]
+          },
+          "SU3_adjoint_8": {
+            "dim": 8,
+            "rank_d0": 8,
+            "rank_d1": 4,
+            "absolute_betti": [
+              0,
+              4,
+              4
+            ],
+            "relative_S2_betti": [
+              0,
+              12,
+              4
+            ]
+          },
+          "E6_27_family_3": {
+            "dim": 81,
+            "absolute_betti": [
+              0,
+              0,
+              0
+            ],
+            "relative_S2_betti": [
+              0,
+              81,
+              0
+            ]
+          },
+          "E6_27bar_family_3bar": {
+            "dim": 81,
+            "absolute_betti": [
+              0,
+              0,
+              0
+            ],
+            "relative_S2_betti": [
+              0,
+              81,
+              0
+            ]
+          }
+        },
+        "historical_overcount_if_ignore_fixed_vectors": 280,
+        "missing_subtraction": 14,
+        "correct_general_relative_formula": "(b0,b1,b2)=(0,2*d-rank(d1),d-rank(d1))",
+        "conjugate_sector_betti_identical": true
+      },
+      {
+        "Psi_W7_charge_c": 4,
+        "E6_fixed_weight_decomposition": {
+          "SU5_adjoint_24_fixed": 12,
+          "SO10_45_fixed": 13,
+          "E6_16minus3_fixed": 3,
+          "E6_16barplus3_fixed": 3,
+          "E6_1_fixed": 1,
+          "total_E6_78_fixed": 20
+        },
+        "E8_unbroken_gauge_generators": 20,
+        "E8_absolute_betti": [
+          20,
+          44,
+          24
+        ],
+        "E8_relative_S2_betti": [
+          0,
+          272,
+          24
+        ],
+        "E8_relative_net_Euler_index": 248,
+        "E8_sector_betti": {
+          "E6_adjoint_78": {
+            "dim": 78,
+            "invariant_vectors": 20,
+            "absolute_betti": [
+              20,
+              40,
+              20
+            ],
+            "relative_S2_betti": [
+              0,
+              98,
+              20
+            ]
+          },
+          "SU3_adjoint_8": {
+            "dim": 8,
+            "rank_d0": 8,
+            "rank_d1": 4,
+            "absolute_betti": [
+              0,
+              4,
+              4
+            ],
+            "relative_S2_betti": [
+              0,
+              12,
+              4
+            ]
+          },
+          "E6_27_family_3": {
+            "dim": 81,
+            "absolute_betti": [
+              0,
+              0,
+              0
+            ],
+            "relative_S2_betti": [
+              0,
+              81,
+              0
+            ]
+          },
+          "E6_27bar_family_3bar": {
+            "dim": 81,
+            "absolute_betti": [
+              0,
+              0,
+              0
+            ],
+            "relative_S2_betti": [
+              0,
+              81,
+              0
+            ]
+          }
+        },
+        "historical_overcount_if_ignore_fixed_vectors": 292,
+        "missing_subtraction": 20,
+        "correct_general_relative_formula": "(b0,b1,b2)=(0,2*d-rank(d1),d-rank(d1))",
+        "conjugate_sector_betti_identical": true
+      },
+      {
+        "Psi_W7_charge_c": 5,
+        "E6_fixed_weight_decomposition": {
+          "SU5_adjoint_24_fixed": 12,
+          "SO10_45_fixed": 13,
+          "E6_16minus3_fixed": 1,
+          "E6_16barplus3_fixed": 1,
+          "E6_1_fixed": 1,
+          "total_E6_78_fixed": 16
+        },
+        "E8_unbroken_gauge_generators": 16,
+        "E8_absolute_betti": [
+          16,
+          36,
+          20
+        ],
+        "E8_relative_S2_betti": [
+          0,
+          268,
+          20
+        ],
+        "E8_relative_net_Euler_index": 248,
+        "E8_sector_betti": {
+          "E6_adjoint_78": {
+            "dim": 78,
+            "invariant_vectors": 16,
+            "absolute_betti": [
+              16,
+              32,
+              16
+            ],
+            "relative_S2_betti": [
+              0,
+              94,
+              16
+            ]
+          },
+          "SU3_adjoint_8": {
+            "dim": 8,
+            "rank_d0": 8,
+            "rank_d1": 4,
+            "absolute_betti": [
+              0,
+              4,
+              4
+            ],
+            "relative_S2_betti": [
+              0,
+              12,
+              4
+            ]
+          },
+          "E6_27_family_3": {
+            "dim": 81,
+            "absolute_betti": [
+              0,
+              0,
+              0
+            ],
+            "relative_S2_betti": [
+              0,
+              81,
+              0
+            ]
+          },
+          "E6_27bar_family_3bar": {
+            "dim": 81,
+            "absolute_betti": [
+              0,
+              0,
+              0
+            ],
+            "relative_S2_betti": [
+              0,
+              81,
+              0
+            ]
+          }
+        },
+        "historical_overcount_if_ignore_fixed_vectors": 284,
+        "missing_subtraction": 16,
+        "correct_general_relative_formula": "(b0,b1,b2)=(0,2*d-rank(d1),d-rank(d1))",
+        "conjugate_sector_betti_identical": true
+      },
+      {
+        "Psi_W7_charge_c": 6,
+        "E6_fixed_weight_decomposition": {
+          "SU5_adjoint_24_fixed": 12,
+          "SO10_45_fixed": 13,
+          "E6_16minus3_fixed": 3,
+          "E6_16barplus3_fixed": 3,
+          "E6_1_fixed": 1,
+          "total_E6_78_fixed": 20
+        },
+        "E8_unbroken_gauge_generators": 20,
+        "E8_absolute_betti": [
+          20,
+          44,
+          24
+        ],
+        "E8_relative_S2_betti": [
+          0,
+          272,
+          24
+        ],
+        "E8_relative_net_Euler_index": 248,
+        "E8_sector_betti": {
+          "E6_adjoint_78": {
+            "dim": 78,
+            "invariant_vectors": 20,
+            "absolute_betti": [
+              20,
+              40,
+              20
+            ],
+            "relative_S2_betti": [
+              0,
+              98,
+              20
+            ]
+          },
+          "SU3_adjoint_8": {
+            "dim": 8,
+            "rank_d0": 8,
+            "rank_d1": 4,
+            "absolute_betti": [
+              0,
+              4,
+              4
+            ],
+            "relative_S2_betti": [
+              0,
+              12,
+              4
+            ]
+          },
+          "E6_27_family_3": {
+            "dim": 81,
+            "absolute_betti": [
+              0,
+              0,
+              0
+            ],
+            "relative_S2_betti": [
+              0,
+              81,
+              0
+            ]
+          },
+          "E6_27bar_family_3bar": {
+            "dim": 81,
+            "absolute_betti": [
+              0,
+              0,
+              0
+            ],
+            "relative_S2_betti": [
+              0,
+              81,
+              0
+            ]
+          }
+        },
+        "historical_overcount_if_ignore_fixed_vectors": 292,
+        "missing_subtraction": 20,
+        "correct_general_relative_formula": "(b0,b1,b2)=(0,2*d-rank(d1),d-rank(d1))",
+        "conjugate_sector_betti_identical": true
+      }
+    ],
+    "scope": "E6 adjoint weight census under specified diagonal SU5 Wilson and Psi U1; c=3 unique among 7 phases for dimension14. Does not cancel Psi anomalies, break rank6 to rank4, or derive Higgs EOM."
+  },
+  "conjugation_obstruction": {
+    "status": "PASS",
+    "theorem": "For any finite CW pair (M,S), a complex local system V and conjugate Vbar with the same real cellular/relative boundary prescription, C*(M,S;Vbar) is the complex conjugate of C*(M,S;V). Their Betti dimensions coincide at every degree.",
+    "test_qutrit_3": {
+      "dim": 3,
+      "rank_d0": 3,
+      "rank_d1": 3,
+      "absolute_betti": [
+        0,
+        0,
+        0
+      ],
+      "relative_S2_betti": [
+        0,
+        3,
+        0
+      ]
+    },
+    "consequence": "Native flat holonomy with identical relative domains never separates (27,3) from (27bar,3bar) via Betti ranks alone. It does NOT preclude spectral chirality from a charged higher-dimensional Dirac operator or differing physically justified boundary projectors.",
+    "all_rank3_families_from_chosen_relative_sphere": "When X local system is acyclic, H^1(M,S;V)=V as vector spaces, so net index=rank(V); rank3 is input, not dynamical derivation of observed three generations."
+  },
+  "nearly_parallel_G2": {
+    "status": "PASS",
+    "near_parallel_defining_equations": [
+      "d(phi)=tau0*star(phi)",
+      "d(star(phi))=0"
+    ],
+    "Einstein_Ricci_near_parallel": "3 tau0^2/8 g",
+    "Freund_Rubin_internal_Ricci": "f^2/6 g",
+    "curvature_consistency_condition": "abs(tau0)=2 abs(f)/3",
+    "at_f3_overL_tau0": "2/L",
+    "scalar_curvature_L2": "21/2",
+    "untwisted_real_Killing_spinor_Dirac_abs_eigenvalue_L": "7/4",
+    "Lichnerowicz_lower_bound_Dirac_squared_L2": "21/8",
+    "no_untwisted_geometric_Dirac_zero_modes": true,
+    "physical_scope": "Necessary positive-Einstein/weak-G2 matching for pure electric FR product; not complete 11D gravitino/gauge-coupled Dirac, not a global solution, and no observed chiral fermions."
+  },
+  "local_qutrit_MUB": {
+    "status": "PASS",
+    "native_qutrit_Clifford_MUBs": [
+      "Z",
+      "X",
+      "XZ",
+      "XZ^2"
+    ],
+    "C9_clifford_cycle_of_three_nonZ_MUBs": "X -> XZ^2 -> XZ -> X",
+    "C9_clifford_MUB_cycle_max_residual": 1.4946834900704542e-15,
+    "fourth_Z_basis_is_fixed_by_C9": true,
+    "number_of_local_settings": 4,
+    "projective_two_design_operator_identity": "sum_(b=1..4,j=0..2) |b,j><b,j| tensor |conj(b,j)><conj(b,j)| = I9 + 3 |Phi3><Phi3|",
+    "identity_max_residual": 6.91576923247034e-16,
+    "p_match_for_any_state": "(1+3*F(Phi3))/4",
+    "Schmidt_number_at_most2_match_bound": 0.75,
+    "isotropic_model_t": 0.75,
+    "model_entanglement_fidelity": 0.7777777777777781,
+    "model_match_probability": 0.8333333333333337,
+    "alpha": 0.01,
+    "model_power_target": 0.9,
+    "fixed_sample_noiseless_90pct_power": {
+      "n": 317,
+      "match_count_at_least": 256,
+      "exact_alpha": 0.00924794862640615,
+      "power": 0.9024527463586474
+    },
+    "readout_assignment_budgets": [
+      {
+        "independent_symmetric_qutrit_label_error": 0,
+        "p_match_at_model": 0.8333333333333337,
+        "p_match_at_SN2_max_under_calibrated_readout": 0.75,
+        "conservative_uncalibrated_null_p0_075": {
+          "n": 317,
+          "match_count_at_least": 256,
+          "exact_alpha": 0.00924794862640615,
+          "power": 0.9024527463586504
+        },
+        "known_calibrated_confusion_null": {
+          "n": 317,
+          "match_count_at_least": 256,
+          "exact_alpha": 0.00924794862640615,
+          "power": 0.9024527463586504
+        }
+      },
+      {
+        "independent_symmetric_qutrit_label_error": 0.01,
+        "p_match_at_model": 0.8184458333333336,
+        "p_match_at_SN2_max_under_calibrated_readout": 0.7375937499999999,
+        "conservative_uncalibrated_null_p0_075": {
+          "n": 472,
+          "match_count_at_least": 376,
+          "exact_alpha": 0.009979328739790445,
+          "power": 0.9002018725209812
+        },
+        "known_calibrated_confusion_null": {
+          "n": 348,
+          "match_count_at_least": 276,
+          "exact_alpha": 0.009655656335226227,
+          "power": 0.9009470925214926
+        }
+      },
+      {
+        "independent_symmetric_qutrit_label_error": 0.02,
+        "p_match_at_model": 0.8037833333333336,
+        "p_match_at_SN2_max_under_calibrated_readout": 0.7253749999999999,
+        "conservative_uncalibrated_null_p0_075": {
+          "n": 790,
+          "match_count_at_least": 621,
+          "exact_alpha": 0.009835505672775639,
+          "power": 0.9018612349528434
+        },
+        "known_calibrated_confusion_null": {
+          "n": 389,
+          "match_count_at_least": 303,
+          "exact_alpha": 0.009360584897966758,
+          "power": 0.9015762770346479
+        }
+      }
+    ],
+    "limitations": "Local projective MUB measurements replace a nontrivial global qutrit Bell projector. Controlled settings require qutrit Fourier/Clifford calibration, reference entanglement, fair heralding and fixed-n IID outcome assumptions. This proves dimension-three reference-memory entanglement, NOT genuine three-time process-tensor incompatibility or actual hardware operation."
+  },
+  "clearly_not_a_TOE": true
+}
