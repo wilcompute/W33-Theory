@@ -1,0 +1,295 @@
+{
+  "SIC_H27_baryon_coordinate_orbits": {
+    "SIC_fiducial": "(1,-1,0); X^b Z^a orbit labelled (a,b) in F3^2",
+    "baryon_coordinate_count": 84,
+    "caveat": "A 19-dimensional invariant SPACE of linear COMBINATIONS might exist; obstruction only applies to subsets of coordinate baryons. Chosen b_ijk constants may still explicitly break translation symmetry. Additional multiplier mass terms may lift eight zero modes but must be gauge/symmetry legal.",
+    "field": "Q(omega), omega^2+omega+1=0, exact rational algebraic rank",
+    "full_jacobian_rank": 19,
+    "full_rank_minimum_closed_baryon_count": 27,
+    "minimum_27_subset_full_rank_count": 72,
+    "minimum_closed_subset_winning_baryon_index_list": [
+      15,
+      41,
+      60,
+      21,
+      43,
+      52,
+      23,
+      38,
+      55,
+      1,
+      9,
+      25,
+      29,
+      48,
+      62,
+      65,
+      70,
+      75,
+      2,
+      7,
+      26,
+      30,
+      46,
+      63,
+      66,
+      68,
+      76
+    ],
+    "minimum_closed_subset_winning_orbit_indices": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "rank_census_through_27": {
+      "0": {
+        "0": 1
+      },
+      "12": {
+        "10": 9,
+        "11": 24
+      },
+      "15": {
+        "13": 24,
+        "14": 24
+      },
+      "18": {
+        "15": 48,
+        "16": 12
+      },
+      "21": {
+        "15": 24,
+        "17": 96
+      },
+      "24": {
+        "17": 96,
+        "18": 72
+      },
+      "27": {
+        "15": 8,
+        "17": 16,
+        "18": 72,
+        "19": 72
+      },
+      "3": {
+        "3": 4
+      },
+      "6": {
+        "6": 6
+      },
+      "9": {
+        "8": 12
+      }
+    },
+    "raw_19_constraints_not_translation_closed": true,
+    "translation_closed_subsets_examined": 4096,
+    "translation_group": "F3^2 acts on nine species indices by (a,b)->(a+u,b+v)",
+    "translation_triple_orbit_sizes": [
+      3,
+      3,
+      3,
+      3,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9
+    ],
+    "unpaired_linear_multiplier_count_if_27_massless_singlets": 8
+  },
+  "SU3_detector_Weyl_twirl": {
+    "accepted_detections_per_phase_sufficient_Hoeffding": 8426,
+    "assumptions": "9 or 3 exact coherent conjugation settings; same visibility/phase at each setting; independent balanced Bernoulli detections; uniform setting allocation; no nonlinear detector effects. Twirling transforms actual controlled circuit, not a passive change of gauge.",
+    "exact_nine_Weyl_identity": "(1/9) sum_(a,b) (X^a Z^b)\u2020 eta (X^a Z^b)=(Tr eta/3) I",
+    "exact_three_shift_identity_for_diagonal_eta": "(1/3) sum_a (X^a)\u2020 eta X^a=(Tr eta/3) I",
+    "example_errors": [
+      {
+        "eta_type": "diagonal",
+        "nine_Weyl_error": 3.8163916471489756e-17,
+        "three_shift_error": 3.8163916471489756e-17,
+        "uncompensated_error": 0.30006646252534264
+      },
+      {
+        "eta_type": "rotated",
+        "nine_Weyl_error": 4.3885418357208765e-17,
+        "three_shift_error": 0.44293958966045477,
+        "uncompensated_error": 0.6471628295562675
+      }
+    ],
+    "max_complex_trace_error_3_setting_48_trials": 0.7455716324182454,
+    "max_complex_trace_error_9_setting_48_trials": 4.965068306494546e-16,
+    "prior_theorem": "Qutrit Weyl operators are a unitary 1-design; application to nonuniform Holonet readout is this certificate.",
+    "readout_model": "m(V)=3 Tr[eta V K V\u2020]/Tr eta, eta positive fixed lab detector"
+  },
+  "all_dimension_MUB_noise_scaling": {
+    "critical_noise_table": [
+      {
+        "critical_depolarizing_fraction": 0.016333389811364687,
+        "dimension": 2,
+        "small_gamma_approx_gamma_sq_over_4d": 0.0162,
+        "witness_at_eps_0": -0.36,
+        "witness_at_eps_0p01": -0.07786528040668228
+      },
+      {
+        "critical_depolarizing_fraction": 0.010263207615968257,
+        "dimension": 3,
+        "small_gamma_approx_gamma_sq_over_4d": 0.010799999999999999,
+        "witness_at_eps_0": -0.72,
+        "witness_at_eps_0p01": -0.009492939934717337
+      },
+      {
+        "critical_depolarizing_fraction": 0.007482558422519724,
+        "dimension": 4,
+        "small_gamma_approx_gamma_sq_over_4d": 0.0081,
+        "witness_at_eps_0": -1.08,
+        "witness_at_eps_0p01": 0.17549153071027662
+      },
+      {
+        "critical_depolarizing_fraction": 0.005887480170073624,
+        "dimension": 5,
+        "small_gamma_approx_gamma_sq_over_4d": 0.00648,
+        "witness_at_eps_0": -1.44,
+        "witness_at_eps_0p01": 0.4616845961056073
+      },
+      {
+        "critical_depolarizing_fraction": 0.004852970521721124,
+        "dimension": 6,
+        "small_gamma_approx_gamma_sq_over_4d": 0.005399999999999999,
+        "witness_at_eps_0": -1.7999999999999998,
+        "witness_at_eps_0p01": 0.839262183530094
+      },
+      {
+        "critical_depolarizing_fraction": 0.003177826142751665,
+        "dimension": 9,
+        "small_gamma_approx_gamma_sq_over_4d": 0.0036,
+        "witness_at_eps_0": -2.88,
+        "witness_at_eps_0p01": 2.4586190473817853
+      },
+      {
+        "critical_depolarizing_fraction": 0.0023623848579592756,
+        "dimension": 12,
+        "small_gamma_approx_gamma_sq_over_4d": 0.0026999999999999997,
+        "witness_at_eps_0": -3.96,
+        "witness_at_eps_0p01": 4.726013445809334
+      }
+    ],
+    "dimension_independent_construction": "E1=(1-g)Id+g|0><0|Tr; E2/E3 two MUB complete dephasings, optionally both followed by depolarizing noise",
+    "noise_fragility_asymptotic_small_gamma": "epsilon_critical~gamma^2/(4d), fixed dimension d, gamma->0",
+    "noise_strength_gamma": 0.36,
+    "pairwise_classical_constructions_exist_for_any_d": true,
+    "proof": "First E1 Kraus instrument resolved in either MUB and basis-conditional reprepare; E2 mixed Weyl-Z random phases and a uniform d^2-Weyl depolarizing mixture, with branchwise inverse and E3 feedback",
+    "published_witness_plus_our_explicit_channels": "W_d=(d-1)[d*(2 sqrt((1-e+e/d)*(e/d))+(d-2)*e/d)-gamma]",
+    "scope": "New family/robustness deduction from Beyer et al dimension-d witness, not a novel quantum-memory theorem or an experimental implementation."
+  },
+  "baseline_commit": "366aefd1189eed06ed9f5c34b6420d7d457fa475",
+  "causal_oriented_invariant": {
+    "blind_poset_keys": [
+      {
+        "dual_key": "0000000000010001100011010",
+        "poset_key": "0000000000010000110011100"
+      }
+    ],
+    "boundary_sensitive_response": "G-G.T reverses sign under duality. Its signed matrix elements require oriented preparation/readout labels.",
+    "caution": "A signed cubic count is not a physical time arrow or gravity action and fails to distinguish one nonselfdual pair; a true T-symmetric theory need not prefer P to P^op.",
+    "distinct_nonselfdual_pairs": 24,
+    "duality_rule": "A3(P^op)=-A3(P)",
+    "five_event_isomorphism_classes": 63,
+    "nonself_dual_pairs_blind": 1,
+    "nonself_dual_pairs_detected": 23,
+    "odd_arrow_statistic": "A3(P)=sum_i [number_of_predecessors(i)^3-number_of_successors(i)^3]",
+    "self_dual_order_classes": 15,
+    "unoriented_inverse_response_invariant": "|| (mI-alpha H)^-1 ||_F^2 unchanged by H->H.T"
+  },
+  "date": "2026-11-19",
+  "falsifier_status": "Five independent math/quantum toy controls; NOT a validated TOE.",
+  "native_qutrit_noise": {
+    "all_three_pairs_remain_classically_decomposable": true,
+    "exact_pairwise_decomposition": "E1 instrument in Z or Fourier basis then output depol; E2 random Weyl branch followed by inverse and E3",
+    "formula": "W=6*(2 sqrt[(1-2e/3)*(e/3)] + e/3)-2 gamma",
+    "interpretation": "For gamma=.36 witness ceases to certify after just over 1% output depolarization. W>=0 does not mean memory becomes classical. Common quantum realization persists after postprocessing.",
+    "kraus_tp_error_max": 1.4187152610955911e-15,
+    "noise_critical_table": [
+      {
+        "critical_output_depolarizing_fraction": 0.00020664333166996724,
+        "gamma": 0.05,
+        "negative_at_one_pct": false,
+        "witness_at_one_pct": 0.6105070600652827,
+        "witness_at_zero_noise": -0.1
+      },
+      {
+        "critical_output_depolarizing_fraction": 0.010263207615968259,
+        "gamma": 0.36,
+        "negative_at_one_pct": true,
+        "witness_at_one_pct": -0.009492939934717337,
+        "witness_at_zero_noise": -0.72
+      },
+      {
+        "critical_output_depolarizing_fraction": 0.04289321881345247,
+        "gamma": 0.75,
+        "negative_at_one_pct": true,
+        "witness_at_one_pct": -0.7894929399347174,
+        "witness_at_zero_noise": -1.5
+      },
+      {
+        "critical_output_depolarizing_fraction": 0.0750494088514584,
+        "gamma": 1.0,
+        "negative_at_one_pct": true,
+        "witness_at_one_pct": -1.2894929399347173,
+        "witness_at_zero_noise": -2.0
+      }
+    ],
+    "noise_model": "E2,E3 each postprocessed by Lambda_e(rho)=(1-e)rho+e Tr(rho) I/3; E1 unchanged",
+    "pairwise_kraus_choi_error_max": 1.9327914322826888e-14,
+    "reproduced_tests": [
+      {
+        "analytical_witness": -0.72,
+        "epsilon": 0.0,
+        "gamma": 0.36,
+        "pairwise_fidelity_sum": 3.241384410566773e-08
+      },
+      {
+        "analytical_witness": -0.2209192295745006,
+        "epsilon": 0.005,
+        "gamma": 0.36,
+        "pairwise_fidelity_sum": 0.49908077042549037
+      },
+      {
+        "analytical_witness": -0.009492939934717337,
+        "epsilon": 0.01,
+        "gamma": 0.36,
+        "pairwise_fidelity_sum": 0.7105070600652756
+      },
+      {
+        "analytical_witness": 0.2932420048477151,
+        "epsilon": 0.02,
+        "gamma": 0.36,
+        "pairwise_fidelity_sum": 1.0132420048477182
+      },
+      {
+        "analytical_witness": -0.2520606076066001,
+        "epsilon": 0.03,
+        "gamma": 0.75,
+        "pairwise_fidelity_sum": 1.2479393923933997
+      }
+    ],
+    "theorem_source": "Beyer et al 2026 arXiv:2611.17268 supplement VI Eq S38"
+  },
+  "real_G2_Albert_multiplets": {
+    "G2_generator_count": 14,
+    "exact_real_7d_G2_commutant_rank": 48,
+    "exact_skew_stabilizer_constraint_rank": 7,
+    "example_27d_mass_commutator_residual": 0.0,
+    "example_7fold_mass_multiplicity_exact": true,
+    "fano_form_3_index_equations": 35,
+    "meaning": "Real G2-invariant quadratic masses on 6*1+3*7 contain arbitrary symmetric 6x6 singlet block and symmetric 3x3 multiplicity block times I7. Any G2 charged seven has sevenfold degeneracy; neither family chirality nor observed mass spectrum is thereby derived.",
+    "real_7d_commutant_dimension": 1,
+    "real_Albert_G2_branching": "H3(O) 27 = R^3 diagonal + 3 O = 6 trivial singlets + 3 real irreducible sevens",
+    "real_symmetric_G2_equivariant_mass_parameter_count": 27,
+    "skew_generator_variables": 21
+  }
+}
