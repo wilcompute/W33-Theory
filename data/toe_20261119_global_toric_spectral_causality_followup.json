@@ -1,0 +1,521 @@
+{
+  "E8_full_singlet_driver_completion": {
+    "charged_field_order": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G1",
+      "G2"
+    ],
+    "charge_matrix_rows": [
+      [
+        1,
+        -1,
+        0
+      ],
+      [
+        -1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        -1
+      ],
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        -2,
+        -1,
+        -1
+      ],
+      [
+        1,
+        2,
+        1
+      ],
+      [
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        2
+      ]
+    ],
+    "five_monomials": [
+      "A*B",
+      "D*E",
+      "A*F*E",
+      "C*E*G1",
+      "C*E*G2"
+    ],
+    "exponent_matrix": [
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    ],
+    "gauge_rank": 3,
+    "invariant_exponent_rank": 5,
+    "singlet_vev_magnitudes": [
+      1.4142135623730951,
+      1.0,
+      1.4142135623730951,
+      1.0,
+      2.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "invariant_target_values": [
+      1.4142135623730951,
+      2.0,
+      2.8284271247461903,
+      2.8284271247461903,
+      2.8284271247461903
+    ],
+    "three_D_term_residual": [
+      0,
+      0,
+      0
+    ],
+    "F_driving_residual": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "F_charged_residual": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "W_effective": "sum_{i=1}^5 X_i*(monomial_i(phi)-target_i)/Mcut^(degree_i-2)",
+    "suppression_scales_from_chosen_cutoff": [
+      1.0,
+      1.0,
+      10.0,
+      10.0,
+      10.0
+    ],
+    "F_term_jacobian_rank": 5,
+    "W_hessian_rank": 10,
+    "Hessian_kernel_gauge_dimension": 3,
+    "generic_complex_moduli_before_drivers": 5,
+    "local_complex_moduli_after_five_drivers": 0,
+    "linearized_gauge_orbit_coupling_norm": 9.614813431917819e-17,
+    "Z4R_gravitational_coefficient_after_five_R2_neutral_drivers": -16,
+    "Z4R_gravitational_mod2": 0,
+    "conditional_result": "At this all-nonzero point five algebraically independent gauge invariants can be fixed by five R2-neutral drivers; all F,D vanish and the 13x13 superpotential Hessian has rank10, exactly 3 gauge-null directions. All local singlet-plus-driver moduli of this truncated toric model are lifted modulo complexified gauge.",
+    "not_derived": "Five neutral driver fields, five nonzero target values, cutoff, global anomaly cancellation, compact E8/G2 origin, matter/Yukawa coupling coefficients, K\u00e4hler quantum corrections, gravitational superpotential and naturalness were inserted, not explained."
+  },
+  "three_adjoint_GUT_stability": {
+    "original_three_adjoint_one_loop_spread": 0.0,
+    "original_low_octet_GeV": 56783.88502830961,
+    "original_light_triplet_GeV": 7677890.88851368,
+    "ten_percent_octet_absolute_shift_tolerance_GeV": 5678.388502830961,
+    "ten_percent_octet_shift_relative_to_MU": 2.839194251415481e-13,
+    "SU5_invariant_mass_shifts": [
+      {
+        "heavy_matrix_additive_fraction": 1e-12,
+        "delta_mass_GeV": 20000.0,
+        "two_light_triplet_masses_GeV": [
+          7697890.88851368,
+          7697890.88851368
+        ],
+        "light_octet_mass_GeV": 76783.88502830961,
+        "inverse_coupling_spread": 0.0960475306193942,
+        "coupling_differences_12_13": [
+          -0.0011041088555714396,
+          -0.0960475306193942
+        ]
+      },
+      {
+        "heavy_matrix_additive_fraction": 1e-10,
+        "delta_mass_GeV": 2000000.0,
+        "two_light_triplet_masses_GeV": [
+          9677890.88851368,
+          9677890.88851368
+        ],
+        "light_octet_mass_GeV": 2056783.8850283097,
+        "inverse_coupling_spread": 1.142619889075796,
+        "coupling_differences_12_13": [
+          -0.09825127309819948,
+          -1.142619889075796
+        ]
+      },
+      {
+        "heavy_matrix_additive_fraction": 1e-08,
+        "delta_mass_GeV": 200000000.0,
+        "two_light_triplet_masses_GeV": [
+          207677890.88851368,
+          207677890.88851368
+        ],
+        "light_octet_mass_GeV": 200056783.8850283,
+        "inverse_coupling_spread": 2.5996699171495976,
+        "coupling_differences_12_13": [
+          -1.3995633132389855,
+          -2.5996699171495976
+        ]
+      },
+      {
+        "heavy_matrix_additive_fraction": 1e-06,
+        "delta_mass_GeV": 20000000000.0,
+        "two_light_triplet_masses_GeV": [
+          20007677890.888515,
+          20007677890.888515
+        ],
+        "light_octet_mass_GeV": 20000056783.88503,
+        "inverse_coupling_spread": 4.065450396612398,
+        "coupling_differences_12_13": [
+          -3.3382320604698705,
+          -4.065450396612398
+        ]
+      }
+    ],
+    "conclusion": "The one-loop three-adjoint counterexample exists, but a common perturbation of the SU5-invariant heavy mass matrix at merely 1e-6*MU destroys its light-octet and light-triplet thresholds. No protecting symmetry or full radiative stability is demonstrated."
+  },
+  "global_Spin_c_chirality": {
+    "internal_base": "CP2 compact Euclidean four-manifold, NOT four-dimensional physical Lorentzian spacetime",
+    "signature": 1,
+    "w2_generator_parity": 1,
+    "Spin_c_index_formula": "index D_L=(k^2-1)/8, only k odd because c1(L)=w2(TM) mod 2",
+    "flux_index_table": [
+      {
+        "c1_coefficient": -9,
+        "Spin_c_admissible": true,
+        "formal_index": 10.0
+      },
+      {
+        "c1_coefficient": -8,
+        "Spin_c_admissible": false,
+        "formal_index": null
+      },
+      {
+        "c1_coefficient": -7,
+        "Spin_c_admissible": true,
+        "formal_index": 6.0
+      },
+      {
+        "c1_coefficient": -6,
+        "Spin_c_admissible": false,
+        "formal_index": null
+      },
+      {
+        "c1_coefficient": -5,
+        "Spin_c_admissible": true,
+        "formal_index": 3.0
+      },
+      {
+        "c1_coefficient": -4,
+        "Spin_c_admissible": false,
+        "formal_index": null
+      },
+      {
+        "c1_coefficient": -3,
+        "Spin_c_admissible": true,
+        "formal_index": 1.0
+      },
+      {
+        "c1_coefficient": -2,
+        "Spin_c_admissible": false,
+        "formal_index": null
+      },
+      {
+        "c1_coefficient": -1,
+        "Spin_c_admissible": true,
+        "formal_index": 0.0
+      },
+      {
+        "c1_coefficient": 0,
+        "Spin_c_admissible": false,
+        "formal_index": null
+      },
+      {
+        "c1_coefficient": 1,
+        "Spin_c_admissible": true,
+        "formal_index": 0.0
+      },
+      {
+        "c1_coefficient": 2,
+        "Spin_c_admissible": false,
+        "formal_index": null
+      },
+      {
+        "c1_coefficient": 3,
+        "Spin_c_admissible": true,
+        "formal_index": 1.0
+      },
+      {
+        "c1_coefficient": 4,
+        "Spin_c_admissible": false,
+        "formal_index": null
+      },
+      {
+        "c1_coefficient": 5,
+        "Spin_c_admissible": true,
+        "formal_index": 3.0
+      },
+      {
+        "c1_coefficient": 6,
+        "Spin_c_admissible": false,
+        "formal_index": null
+      },
+      {
+        "c1_coefficient": 7,
+        "Spin_c_admissible": true,
+        "formal_index": 6.0
+      },
+      {
+        "c1_coefficient": 8,
+        "Spin_c_admissible": false,
+        "formal_index": null
+      },
+      {
+        "c1_coefficient": 9,
+        "Spin_c_admissible": true,
+        "formal_index": 10.0
+      }
+    ],
+    "k_plus5_index": 3,
+    "CP2_not_spin": true,
+    "CP2_observed_families_NOT_derived": true,
+    "charge_specific_torus_holonomy_cancellation": [
+      {
+        "fermion_U1_charge": 0,
+        "antiperiodic_spin_and_pi_Wilson_residue_cycles": -0.5,
+        "zero_momentum_possible": false
+      },
+      {
+        "fermion_U1_charge": 1,
+        "antiperiodic_spin_and_pi_Wilson_residue_cycles": 0.0,
+        "zero_momentum_possible": true
+      },
+      {
+        "fermion_U1_charge": 2,
+        "antiperiodic_spin_and_pi_Wilson_residue_cycles": -0.5,
+        "zero_momentum_possible": false
+      },
+      {
+        "fermion_U1_charge": 3,
+        "antiperiodic_spin_and_pi_Wilson_residue_cycles": 0.0,
+        "zero_momentum_possible": true
+      }
+    ],
+    "takeaway": "Global spin-gauge structure constrains which charged fermions exist and permits index 3 for the *chosen* flux k=5, but topology does not determine k, the SM representation, dynamics or whether a suitable 7D compactification contains this sector."
+  },
+  "causal_link_locality": {
+    "reference_intensity": "Poisson sprinkling intensity rho in fixed Minkowski coordinate regions",
+    "E2_exact": "gamma_E+log(rho/2)+E1(rho/2), 1+1 null square with u,v in (0,1)",
+    "E4_integral": "pi*rho*int_0^1 ds exp[-rho*pi*s^2/24]*(sqrt(1-s)-s*log((1+sqrt(1-s))/sqrt(s))), 3+1 future cone 0<t<1",
+    "E4_large_rho_asymptotic": "pi*sqrt(6)*sqrt(rho) for T=1",
+    "E4_asymptotic_coefficient": 7.695298980971184,
+    "sampled": [
+      {
+        "rho": 40,
+        "E_links_1plus1_diamond": 3.5729479385538787,
+        "E_links_3plus1_truncated_cone": 28.33570215943812,
+        "E4_over_sqrt_rho": 4.480267896198804,
+        "E2_over_log_rho": 0.9685727015474123
+      },
+      {
+        "rho": 160,
+        "E_links_1plus1_diamond": 4.959242299575414,
+        "E_links_3plus1_truncated_cone": 72.47475722017143,
+        "E4_over_sqrt_rho": 5.729632642086876,
+        "E2_over_log_rho": 0.9771571339467373
+      },
+      {
+        "rho": 640,
+        "E_links_1plus1_diamond": 6.345536660695305,
+        "E_links_3plus1_truncated_cone": 165.49354088839902,
+        "E4_over_sqrt_rho": 6.541706590669331,
+        "E2_over_log_rho": 0.9820580226514658
+      },
+      {
+        "rho": 2560,
+        "E_links_1plus1_diamond": 7.7318310218151955,
+        "E_links_3plus1_truncated_cone": 355.9357968552901,
+        "E4_over_sqrt_rho": 7.034798867810714,
+        "E2_over_log_rho": 0.9852274434777006
+      },
+      {
+        "rho": 10240,
+        "E_links_1plus1_diamond": 9.118125382935087,
+        "E_links_3plus1_truncated_cone": 741.0944870730399,
+        "E4_over_sqrt_rho": 7.32358293920318,
+        "E2_over_log_rho": 0.9874452240297469
+      },
+      {
+        "rho": 40960,
+        "E_links_1plus1_diamond": 10.504419744054978,
+        "E_links_3plus1_truncated_cone": 1515.6267415522536,
+        "E4_over_sqrt_rho": 7.4888009155695086,
+        "E2_over_log_rho": 0.9890840224750211
+      }
+    ],
+    "locality_implication": "Lorentz-invariant nearest-link causal graph has unbounded expected link valence as density grows even on fixed finite regions; naive fixed-degree local exchange/energy cost is not Lorentz invariant.",
+    "limitation": "Known causal-set light-cone nonlocality, not a new gravity law or energy-consumption theorem. 1+1 and 3+1 cases use different stated regions and count links from a fixed origin."
+  },
+  "quantum_pure_vacuum_nonuniqueness": {
+    "two_event_causal_commutator": "iDelta where Delta=[[0,1],[-1,0]]",
+    "pure_state_family": "W_r=diag(exp(2r),exp(-2r))/2 + iDelta/2",
+    "state_samples": [
+      {
+        "squeezing_r": 0.0,
+        "positive_W_eigenvalues": [
+          0.0,
+          1.0
+        ],
+        "position_variance": 0.5,
+        "momentum_variance": 0.5,
+        "symmetrized_variance_det": 0.25,
+        "commutator_error": 0.0
+      },
+      {
+        "squeezing_r": 0.2,
+        "positive_W_eigenvalues": [
+          0.0,
+          1.081072371838455
+        ],
+        "position_variance": 0.7459123488206352,
+        "momentum_variance": 0.33516002301781966,
+        "symmetrized_variance_det": 0.25,
+        "commutator_error": 0.0
+      },
+      {
+        "squeezing_r": 0.7,
+        "positive_W_eigenvalues": [
+          0.0,
+          2.1508984653931407
+        ],
+        "position_variance": 2.0275999834223373,
+        "momentum_variance": 0.12329848197080324,
+        "symmetrized_variance_det": 0.24999999999999994,
+        "commutator_error": 0.0
+      },
+      {
+        "squeezing_r": 1.2,
+        "positive_W_eigenvalues": [
+          0.0,
+          5.556947166965507
+        ],
+        "position_variance": 5.511588190320801,
+        "momentum_variance": 0.045358976644706256,
+        "symmetrized_variance_det": 0.25,
+        "commutator_error": 0.0
+      }
+    ],
+    "Sorkin_Johnston_positive_part": "r=0 for the chosen counting Euclidean inner product",
+    "counterexample": "Positivity + exact commutator + Gaussian purity DO NOT uniquely select a quantum vacuum. r varies continuously; a further metric, inner-product, stationarity, entropy or state-selection rule is needed.",
+    "limitations": "Finite one-oscillator/quasifree CCR toy example, not a Hadamard relativistic continuum or interacting quantum dynamics. The established SJ prescription supplies an ADDITIONAL positive spectral-part selection once a counting inner product is chosen."
+  },
+  "photonic_phase_visibility": {
+    "protocol": "two independent distributed one-photon copies with pre-setting one-photon-per-lab herald",
+    "phase_assumption": "Gaussian relative phase difference phi1-phi2, mean 0 and standard deviation sigma; visibility E cos(delta phi)=exp(-sigma\u00b2/2)",
+    "CHSH_formula": "Smax=2*w*sqrt(1+visibility\u00b2), w=white-noise Bell fraction",
+    "samples": [
+      {
+        "phase_difference_sigma_radians": 0.0,
+        "visibility": 1.0,
+        "ideal_conditional_CHSH_max": 2.8284271247461903,
+        "CHSH_max_with_white_weight_0p82": 2.3193102422918757,
+        "minimum_white_weight_to_violate": 0.7071067811865475
+      },
+      {
+        "phase_difference_sigma_radians": 0.2,
+        "visibility": 0.9801986733067553,
+        "ideal_conditional_CHSH_max": 2.800563828340517,
+        "CHSH_max_with_white_weight_0p82": 2.296462339239224,
+        "minimum_white_weight_to_violate": 0.7141419094829581
+      },
+      {
+        "phase_difference_sigma_radians": 0.6,
+        "visibility": 0.835270211411272,
+        "ideal_conditional_CHSH_max": 2.6058981761158906,
+        "CHSH_max_with_white_weight_0p82": 2.13683650441503,
+        "minimum_white_weight_to_violate": 0.7674896963859938
+      },
+      {
+        "phase_difference_sigma_radians": 1.0,
+        "visibility": 0.6065306597126334,
+        "ideal_conditional_CHSH_max": 2.33912756485955,
+        "CHSH_max_with_white_weight_0p82": 1.918084603184831,
+        "minimum_white_weight_to_violate": 0.8550196364002437
+      },
+      {
+        "phase_difference_sigma_radians": 2.0,
+        "visibility": 0.1353352832366127,
+        "ideal_conditional_CHSH_max": 2.0182325325776853,
+        "CHSH_max_with_white_weight_0p82": 1.6549506767137014,
+        "minimum_white_weight_to_violate": 0.9909660892472094
+      }
+    ],
+    "transmission_eta_0p8_ideal_QND_herald_probability": 0.32000000000000006,
+    "two_photons_consumed_per_emission_pair": 2,
+    "physical_cost": "Without coherence between the two sources, visibility vanishes and number-conserving Bell violation disappears. Shared timing/phase or indistinguishability is a measured resource, not an invisible free axiom.",
+    "limitations": "No full loophole-free detector, QND herald, source independence, memory effects or asymmetric loss model; all correlation formulas are ordinary quantum mechanics."
+  }
+}
