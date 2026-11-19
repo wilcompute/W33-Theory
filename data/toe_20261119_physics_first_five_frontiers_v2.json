@@ -1,0 +1,589 @@
+{
+  "date": "2026-11-19",
+  "claim_level": "phenomenological and analytic consistency tests, NOT solved TOE",
+  "assumptions": "W33 and repo finite geometry excluded by design",
+  "source_urls": [
+    "https://global-nu.org/results.html",
+    "https://www.darkenergysurvey.org/des-y6-cosmology-results-papers/",
+    "https://link.springer.com/article/10.1140/epjc/s10052-017-4683-2",
+    "https://arxiv.org/abs/2512.10613",
+    "https://csnsdoc.ihep.ac.cn/article/doi/10.1088/1674-1137/ae8cf2"
+  ],
+  "sections": {
+    "two_loop_GUT_and_complete_multiplet": {
+      "status": "PASS",
+      "MSbar_MZ_inputs": {
+        "alpha_em_inverse": 127.93,
+        "sin2thetaW": 0.23122,
+        "alpha_s": 0.118,
+        "yt_at_MZ_assumed": 0.94
+      },
+      "SM_one_loop": {
+        "U1_SU2_crossing_GeV": 10265958696560.79,
+        "inverse_couplings_at_crossing": [
+          42.40499231009375,
+          42.40499231009374,
+          36.82461541862115
+        ],
+        "inverse_U1_minus_SU3_mismatch": 5.5803768914726035,
+        "minimal_inverse_coupling_spread_on_grid": 3.6573657407453766,
+        "best_spread_scale_GeV": 240044729884610.8,
+        "top_Yukawa_at_crossing": 0.46564655882892503
+      },
+      "SM_two_loop_topYukawa_at_one_loop": {
+        "U1_SU2_crossing_GeV": 10848079441821.715,
+        "inverse_couplings_at_crossing": [
+          42.191230690410954,
+          42.19123069041105,
+          37.289882464433845
+        ],
+        "inverse_U1_minus_SU3_mismatch": 4.9013482259771095,
+        "minimal_inverse_coupling_spread_on_grid": 3.186960046455958,
+        "best_spread_scale_GeV": 170053239489032.78,
+        "top_Yukawa_at_crossing": 0.46991006460026596
+      },
+      "beta_2loop_coefficients": [
+        [
+          3.98,
+          2.7,
+          8.8
+        ],
+        [
+          0.9,
+          5.833333333333333,
+          12.0
+        ],
+        [
+          1.1,
+          4.5,
+          -26.0
+        ]
+      ],
+      "vectorlike_Dirac_SU5_5_5bar_beta_shift": [
+        0.6666666666666667,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "complete_degenerate_SU5_multiplet_changes_one_loop_pairwise_differences": false,
+      "split_5_fermion_D_shift": [
+        0.26666666666666666,
+        0.0,
+        0.6666666666666666
+      ],
+      "split_5_fermion_L_shift": [
+        0.4,
+        0.6666666666666666,
+        0.0
+      ],
+      "one_split_Dirac_5_pair_formal_one_loop_full_unification": {
+        "scale_GeV": 50530916343109.64,
+        "ln_MU_over_MZ": 27.040687546779058,
+        "required_ln_mL_over_mD": -43.42973962868137,
+        "required_mL_over_mD": 1.376270271143004e-19,
+        "feasible_with_MZ_le_mD_mL_le_MU": false,
+        "reason": "Required absolute log mass splitting exceeds total MZ-to-MU window"
+      },
+      "limitations": [
+        "no 2-loop y_t or Higgs quartic RGEs",
+        "no heavy thresholds, matching, Planck-scale gravitational terms",
+        "not a realistic spectrum or precision MSSM fit"
+      ]
+    },
+    "Majorana_phase_envelopes": {
+      "status": "PASS",
+      "input_source": "Bari 2026.a preliminary global fit",
+      "input": {
+        "NO": {
+          "dm21": 7.465e-05,
+          "dm_atm": 0.0025093,
+          "s12sq": 0.3047,
+          "s13sq": 0.0222
+        },
+        "IO": {
+          "dm21": 7.439e-05,
+          "dm_atm": 0.0025182,
+          "s12sq": 0.3036,
+          "s13sq": 0.0223
+        }
+      },
+      "envelopes": {
+        "NO": [
+          {
+            "lightest_eV": 0.0,
+            "sum_eV": 0.05873293681861549,
+            "mbeta_eV": 0.008828780041376046,
+            "mbb_min_eV": 0.0014621083155644944,
+            "mbb_max_eV": 0.003686233682534621,
+            "amplitudes_eV": [
+              0.0,
+              0.0025741709990495577,
+              0.0011120626834850633
+            ]
+          },
+          {
+            "lightest_eV": 0.001,
+            "sum_eV": 0.05980059497361008,
+            "mbeta_eV": 0.008885232524757019,
+            "mbb_min_eV": 0.0007992066522828347,
+            "mbb_max_eV": 0.004383503831565336,
+            "amplitudes_eV": [
+              0.0006798643400000001,
+              0.0025913552419240854,
+              0.0011122842496412507
+            ]
+          },
+          {
+            "lightest_eV": 0.002,
+            "sum_eV": 0.061001307102097106,
+            "mbeta_eV": 0.009052477949103218,
+            "mbb_min_eV": 0.00016956012820928176,
+            "mbb_max_eV": 0.005114914855115492,
+            "amplitudes_eV": [
+              0.0013597286800000003,
+              0.002642237491662387,
+              0.0011129486834531052
+            ]
+          },
+          {
+            "lightest_eV": 0.004,
+            "sum_eV": 0.06377339248462847,
+            "mbeta_eV": 0.009692644480171549,
+            "mbb_min_eV": 0.0,
+            "mbb_max_eV": 0.006671713986546445,
+            "amplitudes_eV": [
+              0.0027194573600000005,
+              0.002836654165093441,
+              0.0011156024614530035
+            ]
+          },
+          {
+            "lightest_eV": 0.008,
+            "sum_eV": 0.0705026779228495,
+            "mbeta_eV": 0.011914166232640872,
+            "mbb_min_eV": 0.0008045751914463588,
+            "mbb_max_eV": 0.010073254248553643,
+            "amplitudes_eV": [
+              0.005438914720000001,
+              0.0035081844894937434,
+              0.0011261550390598977
+            ]
+          },
+          {
+            "lightest_eV": 0.01,
+            "sum_eV": 0.07429682891357157,
+            "mbeta_eV": 0.013339691039113314,
+            "mbb_min_eV": 0.001727263343923235,
+            "mbb_max_eV": 0.011870023456076767,
+            "amplitudes_eV": [
+              0.006798643400000001,
+              0.003937375024341898,
+              0.0011340050317348684
+            ]
+          },
+          {
+            "lightest_eV": 0.03,
+            "sum_eV": 0.11960859633578345,
+            "mbeta_eV": 0.031272149862441506,
+            "mbb_min_eV": 0.009798321632597126,
+            "mbb_max_eV": 0.03099353876740288,
+            "amplitudes_eV": [
+              0.020395930200000002,
+              0.009301368075827333,
+              0.001296240491575541
+            ]
+          },
+          {
+            "lightest_eV": 0.05,
+            "sum_eV": 0.17151741755466998,
+            "mbeta_eV": 0.05077349069168871,
+            "mbb_min_eV": 0.01730442470922145,
+            "mbb_max_eV": 0.05068200929077856,
+            "amplitudes_eV": [
+              0.033993217000000006,
+              0.015117556022103469,
+              0.0015712362686750839
+            ]
+          }
+        ],
+        "IO": [
+          {
+            "lightest_eV": 0.0,
+            "sum_eV": 0.09961657665582832,
+            "mbeta_eV": 0.04910594872182798,
+            "mbb_min_eV": 0.018763347720153582,
+            "mbb_max_eV": 0.04855416980702363,
+            "amplitudes_eV": [
+              0.033658758763588606,
+              0.014895411043435022,
+              0.0
+            ]
+          },
+          {
+            "lightest_eV": 0.001,
+            "sum_eV": 0.10063665274050082,
+            "mbeta_eV": 0.04911612973220508,
+            "mbb_min_eV": 0.01874497629161309,
+            "mbb_max_eV": 0.048586312893835915,
+            "amplitudes_eV": [
+              0.0336656445927245,
+              0.01489836830111141,
+              2.23e-05
+            ]
+          },
+          {
+            "lightest_eV": 0.002,
+            "sum_eV": 0.10169685673259597,
+            "mbeta_eV": 0.049146660109012495,
+            "mbb_min_eV": 0.018734457080698402,
+            "mbb_max_eV": 0.04863813018914606,
+            "amplitudes_eV": [
+              0.03368629363492223,
+              0.014907236554223829,
+              4.46e-05
+            ]
+          },
+          {
+            "lightest_eV": 0.004,
+            "sum_eV": 0.10393730994128003,
+            "mbeta_eV": 0.04926859242834932,
+            "mbb_min_eV": 0.018736906603507644,
+            "mbb_max_eV": 0.04880062047341306,
+            "amplitudes_eV": [
+              0.03376876353846035,
+              0.014942656934952715,
+              8.92e-05
+            ]
+          },
+          {
+            "lightest_eV": 0.008,
+            "sum_eV": 0.10889339110997218,
+            "mbeta_eV": 0.04975333355535888,
+            "mbb_min_eV": 0.018834741794059272,
+            "mbb_max_eV": 0.049358555212301654,
+            "amplitudes_eV": [
+              0.03409664850318046,
+              0.015083506709121185,
+              0.0001784
+            ]
+          },
+          {
+            "lightest_eV": 0.01,
+            "sum_eV": 0.11160454691129075,
+            "mbeta_eV": 0.05011381246593398,
+            "mbb_min_eV": 0.01892922090837032,
+            "mbb_max_eV": 0.04975179467306036,
+            "amplitudes_eV": [
+              0.03434050779071534,
+              0.01518828688234502,
+              0.000223
+            ]
+          },
+          {
+            "lightest_eV": 0.03,
+            "sum_eV": 0.14629106070209813,
+            "mbeta_eV": 0.057544714786597034,
+            "mbb_min_eV": 0.02134853054206061,
+            "mbb_max_eV": 0.05739505194880663,
+            "amplitudes_eV": [
+              0.03937179124543362,
+              0.017354260703373005,
+              0.000669
+            ]
+          },
+          {
+            "lightest_eV": 0.05,
+            "sum_eV": 0.19115148687617634,
+            "mbeta_eV": 0.07008133988352962,
+            "mbb_min_eV": 0.025731313116129043,
+            "mbb_max_eV": 0.07001570536431553,
+            "amplitudes_eV": [
+              0.04787350924022229,
+              0.021027196124093244,
+              0.001115
+            ]
+          }
+        ]
+      },
+      "NO_has_exact_phase_cancellation_for_some_nonzero_lightest_mass": true,
+      "IO_zero_lightest_mass_mbb_floor_eV": 0.018763347720153582,
+      "NO_zero_lightest_mass_mbb_floor_eV": 0.0014621083155644944,
+      "PMNS_unitarity_error": 2.3833496118950454e-16,
+      "Majorana_Takagi_reconstruction_error": 8.307897809225763e-18,
+      "limitations": [
+        "mass and Majorana phases are not derived",
+        "IO minimum at fixed central angles is not a full confidence interval",
+        "nuclear matrix elements needed to compare experiments",
+        "Dirac neutrinos make m_beta_beta inapplicable as usual"
+      ]
+    },
+    "healthy_R2_inflationary_EFT": {
+      "status": "PASS",
+      "model": "Mpl\u00b2/2 * integral sqrt(-g) [R + R\u00b2/(6M\u00b2)]",
+      "Einstein_potential": "3/4 Mpl\u00b2 M\u00b2 [1-exp(-sqrt(2/3) phi/Mpl)]\u00b2",
+      "slowroll_scalar_amplitude_assumed": 2.1e-09,
+      "results": [
+        {
+          "efolds_N": 50,
+          "exp_sqrt_2over3_phi": 72.3350238887888,
+          "epsilon": 0.00026201919895200634,
+          "eta": -0.018429126617610668,
+          "scalar_tilt_ns": 0.9615696315710667,
+          "tensor_ratio_r": 0.0041923071832321015,
+          "M_over_reduced_Mplanck": 1.3367398179162914e-05,
+          "M_GeV": 32549614566261.695
+        },
+        {
+          "efolds_N": 55,
+          "exp_sqrt_2over3_phi": 79.09098096674661,
+          "epsilon": 0.0002186437058920841,
+          "eta": -0.0168554577694256,
+          "scalar_tilt_ns": 0.9649772222257963,
+          "tensor_ratio_r": 0.0034982992942733456,
+          "M_over_reduced_Mplanck": 1.2196327645478182e-05,
+          "M_GeV": 29698057816739.375
+        },
+        {
+          "efolds_N": 60,
+          "exp_sqrt_2over3_phi": 85.83952839003754,
+          "epsilon": 0.00018524318746576448,
+          "eta": -0.015530701474597007,
+          "scalar_tilt_ns": 0.9678271379260114,
+          "tensor_ratio_r": 0.0029638909994522318,
+          "M_over_reduced_Mplanck": 1.1214882017453013e-05,
+          "M_GeV": 27308237712498.086
+        }
+      ],
+      "negative_R2_coefficient": "tachyonic scalaron mass squared, excludes this healthy benchmark",
+      "observational_reference": "arXiv:2512.10613: ns_CMB=.9682\u00b1.0032; with_DESI=.9728\u00b1.0029; r<.034 (95%)",
+      "limitations": [
+        "R\u00b2 inflation is a low-energy effective model, not a UV complete quantum gravity",
+        "N uncertain due reheating and unknown thermal history",
+        "slow roll only and first-order spectrum; no precision Boltzmann CMB likelihood",
+        "not a derivation of dark energy or standard model masses"
+      ]
+    },
+    "CPL_distances_and_linear_growth": {
+      "status": "PASS",
+      "background": "flat GR with smooth homogeneous CPL dark energy, zero radiation/neutrinos",
+      "Om0": 0.302,
+      "H0_km_s_Mpc": 68.3,
+      "DES_Y6_DESI_DR2_lowz_best_fit": {
+        "w0": -0.84,
+        "wa": -0.53,
+        "rough_preference_sigma": 2.3
+      },
+      "phantom_crossing_redshift": 0.43243243243243246,
+      "LCDM": [
+        {
+          "z": 0.1,
+          "E": 1.0487907322244987,
+          "H_km_s_Mpc": 71.63240701093326,
+          "comoving_distance_Mpc": 428.80587437412976,
+          "growth_D_over_D_today": 0.9494871254365856,
+          "growth_f": 0.5730161594790437,
+          "f_sigma8_if_sigma8_today_0p8": 0.43525717287397553
+        },
+        {
+          "z": 0.3,
+          "E": 1.166830750366136,
+          "H_km_s_Mpc": 79.69454025000708,
+          "comoving_distance_Mpc": 1223.592731393075,
+          "growth_D_over_D_today": 0.8555635029425501,
+          "growth_f": 0.6730164901557701,
+          "f_sigma8_if_sigma8_today_0p8": 0.46064667668461684
+        },
+        {
+          "z": 0.5,
+          "E": 1.3104388577877262,
+          "H_km_s_Mpc": 89.5029739869017,
+          "comoving_distance_Mpc": 1934.2936168281465,
+          "growth_D_over_D_today": 0.772602540085633,
+          "growth_f": 0.7508288995362168,
+          "f_sigma8_if_sigma8_today_0p8": 0.4640738519611053
+        },
+        {
+          "z": 0.7,
+          "E": 1.4770666877294334,
+          "H_km_s_Mpc": 100.88365477192029,
+          "comoving_distance_Mpc": 2565.726558050398,
+          "growth_D_over_D_today": 0.7006566752523767,
+          "growth_f": 0.8094412710130426,
+          "f_sigma8_if_sigma8_today_0p8": 0.45371234380804515
+        },
+        {
+          "z": 1,
+          "E": 1.764652940382329,
+          "H_km_s_Mpc": 120.52579582811306,
+          "comoving_distance_Mpc": 3382.0529698827436,
+          "growth_D_over_D_today": 0.611115942277515,
+          "growth_f": 0.8703067888486927,
+          "f_sigma8_if_sigma8_today_0p8": 0.4254866826702297
+        },
+        {
+          "z": 2,
+          "E": 2.975231083462258,
+          "H_km_s_Mpc": 203.20828300047222,
+          "comoving_distance_Mpc": 5299.707623458181,
+          "growth_D_over_D_today": 0.4208556212312623,
+          "growth_f": 0.956140681761979,
+          "f_sigma8_if_sigma8_today_0p8": 0.32191774448593624
+        }
+      ],
+      "CPL": [
+        {
+          "z": 0.1,
+          "E": 1.0618574378573296,
+          "H_km_s_Mpc": 72.5248630056556,
+          "comoving_distance_Mpc": 425.89404313591837,
+          "growth_D_over_D_today": 0.9499299313175059,
+          "growth_f": 0.5647471100111167,
+          "f_sigma8_if_sigma8_today_0p8": 0.42917614673969595
+        },
+        {
+          "z": 0.3,
+          "E": 1.1901189141332265,
+          "H_km_s_Mpc": 81.28512183529936,
+          "comoving_distance_Mpc": 1206.9714680629538,
+          "growth_D_over_D_today": 0.8576720341505973,
+          "growth_f": 0.6588491600317361,
+          "f_sigma8_if_sigma8_today_0p8": 0.45206119942626527
+        },
+        {
+          "z": 0.5,
+          "E": 1.332416701288484,
+          "H_km_s_Mpc": 91.00406069800346,
+          "comoving_distance_Mpc": 1904.5172390440323,
+          "growth_D_over_D_today": 0.7760531428969841,
+          "growth_f": 0.7379472170970796,
+          "f_sigma8_if_sigma8_today_0p8": 0.45814900569621736
+        },
+        {
+          "z": 0.7,
+          "E": 1.4930274441612215,
+          "H_km_s_Mpc": 101.97377443621143,
+          "comoving_distance_Mpc": 2527.295854668975,
+          "growth_D_over_D_today": 0.7047486500484363,
+          "growth_f": 0.8007942100484915,
+          "f_sigma8_if_sigma8_today_0p8": 0.45148691079862274
+        },
+        {
+          "z": 1,
+          "E": 1.769775192615815,
+          "H_km_s_Mpc": 120.87564565566015,
+          "comoving_distance_Mpc": 3338.1582776477453,
+          "growth_D_over_D_today": 0.615213767937327,
+          "growth_f": 0.8683306816770443,
+          "f_sigma8_if_sigma8_today_0p8": 0.42736719239209764
+        },
+        {
+          "z": 2,
+          "E": 2.9578907781498227,
+          "H_km_s_Mpc": 202.02394014763289,
+          "comoving_distance_Mpc": 5261.131352064938,
+          "growth_D_over_D_today": 0.4230768746757966,
+          "growth_f": 0.9626021633127476,
+          "f_sigma8_if_sigma8_today_0p8": 0.3258037718484144
+        }
+      ],
+      "CPL_fractional_shifts": [
+        {
+          "redshift": 0.1,
+          "H_CPL_over_LCDM_minus1": 0.012458830185423375,
+          "chi_CPL_over_LCDM_minus1": -0.0067905581808117566,
+          "fSigma8_CPL_over_LCDM_minus1": -0.013971110674930287
+        },
+        {
+          "redshift": 0.3,
+          "H_CPL_over_LCDM_minus1": 0.019958476205553355,
+          "chi_CPL_over_LCDM_minus1": -0.0135839833824426,
+          "fSigma8_CPL_over_LCDM_minus1": -0.018637879513520583
+        },
+        {
+          "redshift": 0.5,
+          "H_CPL_over_LCDM_minus1": 0.016771361265843998,
+          "chi_CPL_over_LCDM_minus1": -0.015393928576852511,
+          "fSigma8_CPL_over_LCDM_minus1": -0.012767033177694564
+        },
+        {
+          "redshift": 0.7,
+          "H_CPL_over_LCDM_minus1": 0.010805711457972933,
+          "chi_CPL_over_LCDM_minus1": -0.01497848757921616,
+          "fSigma8_CPL_over_LCDM_minus1": -0.004904942613516261
+        },
+        {
+          "redshift": 1,
+          "H_CPL_over_LCDM_minus1": 0.0029026966811820376,
+          "chi_CPL_over_LCDM_minus1": -0.012978712227715405,
+          "fSigma8_CPL_over_LCDM_minus1": 0.00441966763816537
+        },
+        {
+          "redshift": 2,
+          "H_CPL_over_LCDM_minus1": -0.005828221346846241,
+          "chi_CPL_over_LCDM_minus1": -0.007278943318022257,
+          "fSigma8_CPL_over_LCDM_minus1": 0.0120714916435678
+        }
+      ],
+      "growth_ODE": "D''+[2+dlnH/dlna]D'-(3/2)Omega_m(a)D=0, derivatives ln(a)",
+      "limitations": [
+        "CPL best fit not itself statistically established",
+        "no full data covariance, parameter variation or radiation",
+        "linear scale-independent growth, no clustering dark energy",
+        "same normalized sigma8(today) imposed, not CMB-normalized growth",
+        "H0 and Om fixed across models for controlled differential test"
+      ]
+    },
+    "Bell_local_polytope_and_nosignaling": {
+      "status": "PASS",
+      "quantum_distribution": [
+        0.42677669529663675,
+        0.07322330470336312,
+        0.07322330470336312,
+        0.42677669529663675,
+        0.42677669529663675,
+        0.07322330470336312,
+        0.07322330470336312,
+        0.42677669529663675,
+        0.42677669529663675,
+        0.0732233047033631,
+        0.07322330470336312,
+        0.42677669529663675,
+        0.07322330470336312,
+        0.42677669529663675,
+        0.42677669529663675,
+        0.0732233047033631
+      ],
+      "PR_distribution": [
+        0.5,
+        0.0,
+        0.0,
+        0.5,
+        0.5,
+        0.0,
+        0.0,
+        0.5,
+        0.5,
+        0.0,
+        0.0,
+        0.5,
+        0.0,
+        0.5,
+        0.5,
+        0.0
+      ],
+      "quantum_CHSH": 2.828427124746189,
+      "PR_nosignaling_CHSH": 4.0,
+      "critical_isotropic_visibility": 0.7071067811865475,
+      "critical_isotropic_white_noise_fraction": 0.29289321881345254,
+      "LP_local_at_visibility_0p70": true,
+      "LP_nonlocal_at_visibility_0p72": true,
+      "PR_nosignaling": true,
+      "conclusion": "No-signaling does not imply Tsirelson or Born probabilities",
+      "limitations": [
+        "ideal quantum state and measurements",
+        "CHSH scenario not all quantum phenomena",
+        "independent source/detection loopholes not modeled",
+        "not a derivation of quantum mechanics"
+      ]
+    }
+  }
+}
