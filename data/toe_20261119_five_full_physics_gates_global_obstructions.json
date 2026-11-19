@@ -1,0 +1,594 @@
+{
+  "status": "PASS: seven integrated conditional scientific gates, NOT A TOE",
+  "date": "2026-11-19",
+  "TOE_solved": false,
+  "4D_Einstein_Lorentzian_dynamics_derived": false,
+  "Born_rule_or_unique_vacuum_derived": false,
+  "SM_spectrum_or_couplings_derived": false,
+  "sources": [
+    "https://doi.org/10.1016/j.topol.2016.12.001",
+    "https://www.scholarpedia.org/article/Lattice_gauge_theories",
+    "https://cds.cern.ch/record/1497911/files/Lattice%202012_252.pdf",
+    "https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.6.023113",
+    "https://doi.org/10.1007/s10714-024-03281-1",
+    "https://arxiv.org/abs/2209.00327",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC5253799/",
+    "https://doi.org/10.1103/PhysRevD.83.015009",
+    "https://scoap3-prod-backend.s3.cern.ch/media/files/87510/10.1007/JHEP08%282024%29004_a.pdf"
+  ],
+  "gates": {
+    "I_bounded_poset_contractible_spin_holonomy_obstruction": {
+      "status": "PASS",
+      "unbounded_crown": {
+        "vertices": 4,
+        "simplex_counts": {
+          "0": 4,
+          "1": 4
+        },
+        "boundary_ranks": {
+          "1": 3
+        },
+        "betti": {
+          "0": 1,
+          "1": 1
+        },
+        "H1_mod2": 1
+      },
+      "bounded_causal_interval": {
+        "vertices": 6,
+        "simplex_counts": {
+          "0": 6,
+          "1": 13,
+          "2": 12,
+          "3": 4
+        },
+        "boundary_ranks": {
+          "1": 5,
+          "2": 8,
+          "3": 4
+        },
+        "betti": {
+          "0": 1,
+          "1": 0,
+          "2": 0,
+          "3": 0
+        },
+        "H1_mod2": 0
+      },
+      "with_unique_initial_event": {
+        "vertices": 5,
+        "simplex_counts": {
+          "0": 5,
+          "1": 8,
+          "2": 4
+        },
+        "boundary_ranks": {
+          "1": 4,
+          "2": 4
+        },
+        "betti": {
+          "0": 1,
+          "1": 0,
+          "2": 0
+        },
+        "H1_mod2": 0
+      },
+      "exact_proof": "If a finite poset has a least element, every chain simplex is a face of a simplex containing it; its order complex is a cone and all reduced homology vanishes. A greatest element works equally.",
+      "spin_implication": "The full bounded interval order complex cannot carry nontrivial H1 spin holonomies. Noncontractible spin topology requires another construction (spatial covers, complements or globally nontrivial posets).",
+      "scope": "Mod-2 homology of a selected finite poset, NOT a Lorentzian spin bundle, induced physical spin structure or global topology no-go for every causal set."
+    },
+    "II_gauge_invariance_action_nonuniqueness_and_center": {
+      "status": "PASS",
+      "one_plaquette_SU2_angle_checks": [
+        {
+          "theta": 0.001,
+          "fundamental_S": 1.24999997352937e-07,
+          "adjoint_rescaled_S": 1.2499998958137581e-07,
+          "S_adjoint_minus_S_f": -7.771561172376096e-15,
+          "exact_quartic_identity_residual": 4.0938496741031505e-17
+        },
+        {
+          "theta": 0.05,
+          "fundamental_S": 0.00031248372429737437,
+          "adjoint_rescaled_S": 0.0003124349012584293,
+          "S_adjoint_minus_S_f": -4.882303894504503e-08,
+          "exact_quartic_identity_residual": 3.033371229649949e-17
+        },
+        {
+          "theta": 0.25,
+          "fundamental_S": 0.007802332770670994,
+          "adjoint_rescaled_S": 0.007771894572338817,
+          "S_adjoint_minus_S_f": -3.0438198332177757e-05,
+          "exact_quartic_identity_residual": -3.4497957875773144e-17
+        },
+        {
+          "theta": 0.7,
+          "fundamental_S": 0.06062728715262111,
+          "adjoint_rescaled_S": 0.058789453178877876,
+          "S_adjoint_minus_S_f": -0.0018378339737432359,
+          "exact_quartic_identity_residual": -4.7488055154865094e-17
+        },
+        {
+          "theta": 1.4,
+          "fundamental_S": 0.2351578127155115,
+          "adjoint_rescaled_S": 0.20750821427493973,
+          "S_adjoint_minus_S_f": -0.02764959844057177,
+          "exact_quartic_identity_residual": 2.0816681711721685e-17
+        },
+        {
+          "theta": 3.141592653589793,
+          "fundamental_S": 0.9999999999999999,
+          "adjoint_rescaled_S": 0.5,
+          "S_adjoint_minus_S_f": -0.4999999999999999,
+          "exact_quartic_identity_residual": 0.0
+        },
+        {
+          "theta": 6.283185307179586,
+          "fundamental_S": 2.0,
+          "adjoint_rescaled_S": 0.0,
+          "S_adjoint_minus_S_f": -2.0,
+          "exact_quartic_identity_residual": 0.0
+        }
+      ],
+      "exact_identity": "S_adj_rescaled = S_fund - 1/2 (S_fund)^2",
+      "weak_field_common_quadratic": "theta^2/8",
+      "finite_theta_07_force_fund": 0.17144890374076738,
+      "finite_theta_07_force_adj": 0.16105442181280072,
+      "center_minus_identity_fundamental_action": 2.0,
+      "center_minus_identity_adjoint_action": 0.0,
+      "lesson": "Gauge invariance, smooth-field locality and the same F\u00b2 term do not uniquely determine a finite lattice action. Center-blind adjoint-only dynamics differs globally from center-sensitive fundamental matter.",
+      "scope": "Exact single SU2 plaquette algebra and weak-field expansion; not a fundamental derivation of Yang-Mills couplings or quantum continuum."
+    },
+    "III_response_noise_KMS_vacuum_ambiguity": {
+      "status": "PASS",
+      "harmonic_frequency_w": 1.7,
+      "comparison_time_t": 0.41,
+      "thermal_states": [
+        {
+          "inverse_temperature_beta": 0.4,
+          "occupancy_n": 1.026822943892274,
+          "retarded_response_same_for_all_beta": 0.37760015596482793,
+          "symmetric_noise_covariance_at_t": 0.6886612703611356,
+          "mean_energy": 2.5955990046168655,
+          "KMS_identity_error": 1.1102230246251565e-16,
+          "positive_Wightman_kernel_min_eigenvalue": -5.731052432059721e-16,
+          "commutator_state_independent_error": 1.1102230246251565e-16
+        },
+        {
+          "inverse_temperature_beta": 2.0,
+          "occupancy_n": 0.034525498750646304,
+          "retarded_response_same_for_all_beta": 0.37760015596482793,
+          "symmetric_noise_covariance_at_t": 0.24109344864286483,
+          "mean_energy": 0.9086933478760986,
+          "KMS_identity_error": 0.0,
+          "positive_Wightman_kernel_min_eigenvalue": -2.3617686969662076e-16,
+          "commutator_state_independent_error": 0.0
+        },
+        {
+          "inverse_temperature_beta": 10.0,
+          "occupancy_n": 4.139937890176017e-08,
+          "retarded_response_same_for_all_beta": 0.37760015596482793,
+          "symmetric_noise_covariance_at_t": 0.22552101739637673,
+          "mean_energy": 0.8500000703789441,
+          "KMS_identity_error": 7.850462293418876e-17,
+          "positive_Wightman_kernel_min_eigenvalue": -1.4162542610460789e-16,
+          "commutator_state_independent_error": 0.0
+        }
+      ],
+      "G_ret_definition": "i theta(t)<[q(t),q(0)]>=theta(t) sin(wt)/w",
+      "noise_definition": "(1/2)<{q(t),q(0)}>=(n_beta+1/2) cos(wt)/w",
+      "KMS_definition": "Wgreater(t-i beta)=Wless(t) in this convention",
+      "conclusion": "The SAME causal/retarded propagator is compatible with distinct positive, stationary quantum states; even imposing KMS leaves beta to be selected by physics. Dynamical fluctuation information is missing from response alone.",
+      "scope": "Known canonical harmonic-oscillator KMS/FDT; does not derive the Born rule or a unique interacting relativistic Hadamard state."
+    },
+    "IV_exact_poset_entropy_and_existing_4D_Regge_control": {
+      "status": "PASS",
+      "three_layer_labeled_entropy": [
+        {
+          "N": 8,
+          "layer_sizes": [
+            2,
+            4,
+            2
+          ],
+          "independent_cover_bits": 16,
+          "log10_number_of_labeled_layered_posets": 4.816479930623699,
+          "mean_links_beta_zero": 8.0,
+          "per_vertex_mean_cover_degree_beta_zero": 2.0,
+          "mean_links_beta_2": 1.9072467523538807,
+          "per_vertex_mean_cover_degree_beta_2": 0.4768116880884702,
+          "beta_needed_for_one_expected_link_per_event": 0.0
+        },
+        {
+          "N": 16,
+          "layer_sizes": [
+            4,
+            8,
+            4
+          ],
+          "independent_cover_bits": 64,
+          "log10_number_of_labeled_layered_posets": 19.265919722494797,
+          "mean_links_beta_zero": 32.0,
+          "per_vertex_mean_cover_degree_beta_zero": 4.0,
+          "mean_links_beta_2": 7.628987009415523,
+          "per_vertex_mean_cover_degree_beta_2": 0.9536233761769404,
+          "beta_needed_for_one_expected_link_per_event": 1.0986122886681098
+        },
+        {
+          "N": 32,
+          "layer_sizes": [
+            8,
+            16,
+            8
+          ],
+          "independent_cover_bits": 256,
+          "log10_number_of_labeled_layered_posets": 77.06367888997919,
+          "mean_links_beta_zero": 128.0,
+          "per_vertex_mean_cover_degree_beta_zero": 8.0,
+          "mean_links_beta_2": 30.515948037662092,
+          "per_vertex_mean_cover_degree_beta_2": 1.9072467523538807,
+          "beta_needed_for_one_expected_link_per_event": 1.9459101490553132
+        },
+        {
+          "N": 64,
+          "layer_sizes": [
+            16,
+            32,
+            16
+          ],
+          "independent_cover_bits": 1024,
+          "log10_number_of_labeled_layered_posets": 308.25471555991675,
+          "mean_links_beta_zero": 512.0,
+          "per_vertex_mean_cover_degree_beta_zero": 16.0,
+          "mean_links_beta_2": 122.06379215064837,
+          "per_vertex_mean_cover_degree_beta_2": 3.8144935047077615,
+          "beta_needed_for_one_expected_link_per_event": 2.70805020110221
+        }
+      ],
+      "exact_enumeration_N8_link_count_histogram": {
+        "0": 1,
+        "1": 16,
+        "2": 120,
+        "3": 560,
+        "4": 1820,
+        "5": 4368,
+        "6": 8008,
+        "7": 11440,
+        "8": 12870,
+        "9": 11440,
+        "10": 8008,
+        "11": 4368,
+        "12": 1820,
+        "13": 560,
+        "14": 120,
+        "15": 16,
+        "16": 1
+      },
+      "positive_weight_partition_function": "Z_N(beta)=[1+exp(-beta)]^{N^2/4} for independent adjacent layer links",
+      "edge_probability": "p=1/(1+exp(beta)) and E[cover links]=N\u00b2p/4",
+      "finite_weight_conclusion": "A finite N-independent positive Boltzmann edge penalty leaves O(N\u00b2) cover links and O(N) per-event mean incidence in this family. To hold mean edge count O(N), one must tune beta approximately log N; this is not an intrinsic 4D selector.",
+      "existing_4D_Regge_S4_action": 20.16832083138985,
+      "existing_4D_Regge_S4_volume": 0.13975424859373686,
+      "existing_4D_Regge_one_edge_gradient_numeric": 2.689109443565485,
+      "existing_4D_Regge_one_edge_gradient_Schlaefli": 2.689109444185312,
+      "prior_repo_script": "analysis/toe_20261105_regge_s4_nonlinear_hessian.py",
+      "critical_separation": "The 4D Regge action requires an inserted manifold/metric simplex complex. A sum over unrestricted causal posets must additionally defeat nonmanifoldlike history entropy. The toy positive weight does NOT exhaust oscillatory quantum BDG actions; known research can suppress KR orders.",
+      "scope": "Exact count of a fixed-layer labeled family and rechecked 4D Euclidean Regge control; not general causal-set path-integral dynamics, Lorentzian Einstein constraints or 4D emergence."
+    },
+    "V_SM_global_Z6_anomaly_Yukawa_charge_lattice": {
+      "status": "PASS",
+      "normalization": "y=6Y integral; SU3 triality t=\u00b11, SU2 center parity s=0,1",
+      "global_Z6_quotient_congruence": "2*t+3*s+y == 0 (mod 6)",
+      "input_nonabelian_representations": "Q=(3,2); u_c=(bar3,1); d_c=(bar3,1); L=(1,2); e_c=(1,1); nu_c=(1,1)",
+      "two_parameter_anomaly_free_Yukawa_family": {
+        "Q_L": "a",
+        "u_c": "-a - x",
+        "d_c": "-a + x",
+        "L_L": "-3*a",
+        "e_c": "3*a + x",
+        "nu_c": "3*a - x"
+      },
+      "Higgs_y_charge": "x",
+      "integer_global_quotient_lattice": "a=1+6m and x=3+6n for integers m,n",
+      "symbolic_anomalies": {
+        "SU3_squared_U1": "0",
+        "SU2_squared_U1": "0",
+        "gravity_squared_U1": "0",
+        "U1_cubed": "-48*a**3 + 3*(-a - x)**3 + 3*(-a + x)**3 + (3*a - x)**3 + (3*a + x)**3",
+        "SU3_cubed": "0",
+        "SU2_Witten_left_doublets": "4"
+      },
+      "generic_cubic_anomaly_factor_with_linear_conditions": "18*a*(2*a - b - e)*(4*a + b - e)",
+      "sample_charge_families": [
+        {
+          "a_Q_integer_y": 1,
+          "x_Higgs_integer_y": 3,
+          "charges_by_field": {
+            "Q_L": 1,
+            "u_c": -4,
+            "d_c": 2,
+            "L_L": -3,
+            "e_c": 6,
+            "nu_c": 0
+          },
+          "anomaly_sums": {
+            "SU3_squared_U1": 0,
+            "SU2_squared_U1": 0,
+            "gravity_squared_U1": 0,
+            "U1_cubed": 0,
+            "SU3_cubed": 0,
+            "SU2_Witten_left_doublets": 4
+          },
+          "Z6_center_residues": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "all_renormalizable_Yukawa_charge_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "left_neutrino_em_charge_given_Higgs": 0.0,
+          "nu_c_hypercharge": 0
+        },
+        {
+          "a_Q_integer_y": 1,
+          "x_Higgs_integer_y": 9,
+          "charges_by_field": {
+            "Q_L": 1,
+            "u_c": -10,
+            "d_c": 8,
+            "L_L": -3,
+            "e_c": 12,
+            "nu_c": -6
+          },
+          "anomaly_sums": {
+            "SU3_squared_U1": 0,
+            "SU2_squared_U1": 0,
+            "gravity_squared_U1": 0,
+            "U1_cubed": 0,
+            "SU3_cubed": 0,
+            "SU2_Witten_left_doublets": 4
+          },
+          "Z6_center_residues": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "all_renormalizable_Yukawa_charge_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "left_neutrino_em_charge_given_Higgs": 0.3333333333333333,
+          "nu_c_hypercharge": -6
+        },
+        {
+          "a_Q_integer_y": 7,
+          "x_Higgs_integer_y": 3,
+          "charges_by_field": {
+            "Q_L": 7,
+            "u_c": -10,
+            "d_c": -4,
+            "L_L": -21,
+            "e_c": 24,
+            "nu_c": 18
+          },
+          "anomaly_sums": {
+            "SU3_squared_U1": 0,
+            "SU2_squared_U1": 0,
+            "gravity_squared_U1": 0,
+            "U1_cubed": 0,
+            "SU3_cubed": 0,
+            "SU2_Witten_left_doublets": 4
+          },
+          "Z6_center_residues": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "all_renormalizable_Yukawa_charge_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "left_neutrino_em_charge_given_Higgs": -3.0,
+          "nu_c_hypercharge": 18
+        },
+        {
+          "a_Q_integer_y": -5,
+          "x_Higgs_integer_y": -3,
+          "charges_by_field": {
+            "Q_L": -5,
+            "u_c": 8,
+            "d_c": 2,
+            "L_L": 15,
+            "e_c": -18,
+            "nu_c": -12
+          },
+          "anomaly_sums": {
+            "SU3_squared_U1": 0,
+            "SU2_squared_U1": 0,
+            "gravity_squared_U1": 0,
+            "U1_cubed": 0,
+            "SU3_cubed": 0,
+            "SU2_Witten_left_doublets": 4
+          },
+          "Z6_center_residues": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "all_renormalizable_Yukawa_charge_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "left_neutrino_em_charge_given_Higgs": -2.0,
+          "nu_c_hypercharge": -12
+        },
+        {
+          "a_Q_integer_y": 13,
+          "x_Higgs_integer_y": 15,
+          "charges_by_field": {
+            "Q_L": 13,
+            "u_c": -28,
+            "d_c": 2,
+            "L_L": -39,
+            "e_c": 54,
+            "nu_c": 24
+          },
+          "anomaly_sums": {
+            "SU3_squared_U1": 0,
+            "SU2_squared_U1": 0,
+            "gravity_squared_U1": 0,
+            "U1_cubed": 0,
+            "SU3_cubed": 0,
+            "SU2_Witten_left_doublets": 4
+          },
+          "Z6_center_residues": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "all_renormalizable_Yukawa_charge_sums": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "left_neutrino_em_charge_given_Higgs": -0.8,
+          "nu_c_hypercharge": 24
+        }
+      ],
+      "no_nu_c_remaining_grav_anomaly": "-3*a + x",
+      "extra_condition_for_neutral_nu_or_gauge_neutral_nu_c": "x=3a, reducing to the SM relative charges in the chosen field representation branch",
+      "main_result": "Anomaly freedom + SM Z6 quotient + conventional rep content + one Higgs Yukawa structure still leaves infinitely many integer charge assignments IF nu_c exists. Observed neutrino neutrality or removing nu_c closes the remaining charge ratio freedom (up to common normalization).",
+      "scope": "Established global SM quotient/anomaly logic, explicitly solved in one fixed generation branch. It does not derive the representations, 3 generations, gauge group, Higgs or neutrino neutrality from the causal substrate."
+    },
+    "VI_center_sensitive_matter_global_transport_bridge": {
+      "status": "PASS",
+      "SU2_center_flux_adjoint_cost": 0.0,
+      "SU2_center_flux_fundamental_cost": 2.0,
+      "center_action_on_fundamental_doublet": -1,
+      "center_action_on_adjoint": 1,
+      "fundamental_rep_phase_checks": [
+        {
+          "number_of_fundamental_SU2_doublet_factors": 0,
+          "center_element_minus_1_present": false,
+          "matter_center_phase": 1
+        },
+        {
+          "number_of_fundamental_SU2_doublet_factors": 0,
+          "center_element_minus_1_present": true,
+          "matter_center_phase": 1
+        },
+        {
+          "number_of_fundamental_SU2_doublet_factors": 1,
+          "center_element_minus_1_present": false,
+          "matter_center_phase": 1
+        },
+        {
+          "number_of_fundamental_SU2_doublet_factors": 1,
+          "center_element_minus_1_present": true,
+          "matter_center_phase": -1
+        }
+      ],
+      "SM_Z6_combined_center_residues": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "bridge": "A center-blind pure-adjoint action may share the same weak-field F\u00b2 term, but SU2 doublet matter and global quotients distinguish its center sectors. A causal TOE must determine its global gauge form AND allowed matter representations jointly; local curvature algebra alone cannot.",
+      "scope": "Known SU2/SO3 global-form and center representation effects. No empirical new physics or derived SM model."
+    },
+    "VII_nonperturbative_center_sensitive_Haar_observable": {
+      "status": "PASS",
+      "single_plaquette_SU2_Haar_radial_measure": "(2/pi)sin(phi)^2 d phi",
+      "fundamental_Wilson_loop_observable": "W=Tr(U)/2=cos(phi)",
+      "Haar_partition_records": [
+        {
+          "beta": 0.0,
+          "fundamental": {
+            "Z": 1.0,
+            "fundamental_Wilson_trace_normalized_mean": 5.385020597221779e-17
+          },
+          "adjoint": {
+            "Z": 1.0,
+            "fundamental_Wilson_trace_normalized_mean": 5.385020597221779e-17
+          }
+        },
+        {
+          "beta": 1.0,
+          "fundamental": {
+            "Z": 0.41582083069941694,
+            "fundamental_Wilson_trace_normalized_mean": 0.24019372387008972
+          },
+          "adjoint": {
+            "Z": 0.6929045334423511,
+            "fundamental_Wilson_trace_normalized_mean": 6.216991687421869e-17
+          }
+        },
+        {
+          "beta": 2.0,
+          "fundamental": {
+            "Z": 0.21526928924893765,
+            "fundamental_Wilson_trace_normalized_mean": 0.4331274267223118
+          },
+          "adjoint": {
+            "Z": 0.4886144672642784,
+            "fundamental_Wilson_trace_normalized_mean": 5.598412235306627e-17
+          }
+        },
+        {
+          "beta": 4.0,
+          "fundamental": {
+            "Z": 0.08937541975121767,
+            "fundamental_Wilson_trace_normalized_mean": 0.6580472673593595
+          },
+          "adjoint": {
+            "Z": 0.257849192243932,
+            "fundamental_Wilson_trace_normalized_mean": 4.925111098153703e-17
+          }
+        }
+      ],
+      "exact_fundamental_mean": "[I1(beta)-I3(beta)]/[2(I0(beta)-I2(beta))]",
+      "exact_adjoint_mean": 0,
+      "beta2_unequal_Wilson_mean": [
+        0.4331274267223118,
+        5.598412235306627e-17
+      ],
+      "interpretation": "Even one-plaquette quantum/Haar averages distinguish center-sensitive and center-blind actions with identical weak-field quadratic terms. Adj action is invariant under U->-U and yields zero fundamental Wilson expectation.",
+      "scope": "0D single SU2 plaquette class-function integral, NOT a four-dimensional continuum lattice gauge theory or a confinement theorem."
+    }
+  }
+}
