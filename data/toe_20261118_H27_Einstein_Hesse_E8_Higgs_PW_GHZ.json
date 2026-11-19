@@ -1,0 +1,157 @@
+{
+  "status": "PASS",
+  "date": "2026-11-18",
+  "positive_Einstein_H27_cover": {
+    "status": "PASS",
+    "free_group": 27,
+    "group_law_max_error": 2.0471501066083613e-15,
+    "representation_dimension": 3,
+    "minimal_moving_eigenvalue_gap": 1.7320508075688772,
+    "nonidentity_elements_covered_by_factor": {
+      "center": 2,
+      "second_character": 6,
+      "first_character": 18
+    },
+    "simply_connected_cover": "S5(radius 2) x S3(radius sqrt(2)) x S3(radius sqrt(2))",
+    "free_isometric_H27_action": true,
+    "quotient_dimension": 11,
+    "quotient_positive_Einstein_Ricci_coefficient": 1,
+    "quotient_scalar_curvature": 11,
+    "exact_quotient_volume": "1024*pi^7/27",
+    "volume_float": 114547.41723123832,
+    "quotient_pi1_order": 27,
+    "quotient_rational_Betti": {
+      "0": 1,
+      "3": 2,
+      "5": 1,
+      "6": 1,
+      "8": 2,
+      "11": 1
+    },
+    "quotient_Betti4": 0,
+    "quotient_Betti7": 0,
+    "quotient_real_degree4_and_degree7_flux_classes_absent": true,
+    "normalized_Ricci_flow_relative_scale_linear_eigenvalues": [
+      2,
+      2
+    ],
+    "volume_preserving_scalar_curvature_Hessian_positive": true,
+    "normalized_Ricci_flow_scope": "Homogeneous product factor-scale modes only; their positive linearized flow exponent means instability in normalized Ricci flow, not an 11D supergravity BF mass computation.",
+    "restricted_factor_dimension_argument": "One center-faithful 3D complex irrep requires S5; two independent quotient characters with positive-Ricci round factors require at least S3 each => dimension11 in THIS explicit three-factor linear ansatz. Not a theorem on all possible 7D actions.",
+    "physical_limit": "Positive Einstein *Riemannian eleven-manifold*, NOT Lorentzian 11D supergravity; NOT an internal seven-manifold, G2 solution or quantified 4D compactification. Nonzero 4-form and 7-form de Rham flux classes on this model are absent; torsion classes could remain."
+  },
+  "E6_H27_Hesse_cubic": {
+    "status": "PASS",
+    "group_order": 27,
+    "symmetric_cubic_monomial_count": 10,
+    "invariant_symmetric_cubic_space_dimension": 2,
+    "invariant_polynomial_1": "x^3+y^3+z^3",
+    "invariant_polynomial_2": "x*y*z",
+    "pencil": "x^3+y^3+z^3 - 3*lambda*x*y*z",
+    "Hesse_fiber_smooth_if": "lambda^3 != 1 (finite lambda)",
+    "projector_idempotence_error": 6.955527313080391e-16,
+    "full_tensor_cube_invariant_dimension": 3,
+    "alternating_tensor_cube_invariant_dimension": 1,
+    "full_SU3_family_symmetric_cubic_invariant_dimension": 0,
+    "unique_SU3_family_trilinear_antisymmetric_epsilon": true,
+    "E6_symmetric_d_times_SU3_epsilon_identical_commuting_superfield_zero": true,
+    "cubic_contraction_numerical_residual": 9.575673587391975e-16,
+    "low_energy_E6_times_H27_symmetric_cubic_family_channels": 2,
+    "effective_texture_moduli": "One complex ratio between two Hesse-pencil cubic tensors remains (unless further dynamical symmetry or equations select it).",
+    "UV_E8_cubic_invariant": false,
+    "scope": "Classical Hesse pencil is prior mathematics; this explicitly tests E6 d-symbol couplings with broken family SU3 -> H27. Effective cubic E6xH27 invariants need not lift to a renormalizable unbroken E8 adjoint cubic."
+  },
+  "H27_elementary_Higgs_obstruction": {
+    "status": "PASS",
+    "H27_invariants_in_family3": 0,
+    "H27_invariants_in_family3bar": 0,
+    "H27_invariants_in_family3_tensor_3bar": 1,
+    "H27_invariants_in_family_adjoint8": 0,
+    "family3_projector_max_abs": 3.9009260761963345e-17,
+    "triplet_tensor_antitriplet_projector_rank": 1,
+    "relative_to_E8_248_branching": "(78,1)+(1,8)+(27,3)+(27bar,3bar)",
+    "full_E8_adj_H27_parallel_invariant_subspace_dim": 78,
+    "after_order7_c3_Wilson_parallel_invariant_dim": 14,
+    "no_H27_invariant_elementary_27x3_Higgs_VEV": true,
+    "neutral_family_bilinear_allowed": true,
+    "caveat": "H27 is assumed embedded in SU3 family, separate from E6 Wilson. Nonparallel Higgs configurations can break H27; composite fields with other E6 charges may have H27-invariant order parameters. H27 singlet bilinear does not by itself resolve extra U1 Higgsing."
+  },
+  "PW_site_hopping_covariance": {
+    "status": "PASS",
+    "critical_points": [
+      [
+        1.3247179572447454,
+        0.0
+      ],
+      [
+        -0.22669882575820183,
+        1.0743263344070286
+      ],
+      [
+        -0.22669882575820183,
+        -1.0743263344070286
+      ]
+    ],
+    "pairwise_distances_sorted": [
+      1.8870800479533603,
+      1.8870800479533603,
+      2.1486526688140573
+    ],
+    "ratio_max_min_distance": 1.1386123610094794,
+    "gaussian_hopping_beta": 1.0,
+    "relative_long_edge_to_short_edge_hopping": 0.3479706353945405,
+    "hopping_matrix": [
+      [
+        0.0,
+        0.028408379986747508,
+        0.028408379986747508
+      ],
+      [
+        0.028408379986747508,
+        0.0,
+        0.009885282034518078
+      ],
+      [
+        0.028408379986747508,
+        0.009885282034518078,
+        0.0
+      ]
+    ],
+    "commutator_X_frobenius": 0.03704619590445886,
+    "commutator_Z_frobenius": 0.10134468632873177,
+    "H27_twirl_hopping_max_abs": 3.303674240598933e-18,
+    "H27_commutant_only_scalar": true,
+    "bound": "Fixed local 3-well hopping with nonzero off-diagonal matrix elements cannot commute with both H27 shift and clock generators. Non-equilateral geometry makes even the cyclic shift fail in this chosen Gaussian overlap model.",
+    "physical_scope": "Gaussian overlap effective model, NOT the continuum PW Dirac matrix element computed from its 3 exact L2 wavefunctions. A truly zero 3x3 effective Hamiltonian admits abstract H27; locality/geometric covariance and measured tunneling remain open."
+  },
+  "triple_GHZ_pairwise_classical_target": {
+    "status": "PASS",
+    "triple_static_resource": "( |000>+|111>+|222> )/sqrt3",
+    "dephased_classical_control": "1/3 sum_j |jjj><jjj|",
+    "pairwise_reduced_density_max_error": 1.1102230246251565e-16,
+    "each_pairwise_reduction_separable": true,
+    "GHZ_vs_classical_XXX_expectation": [
+      1,
+      0
+    ],
+    "joint_three_stabilizer_projector_rank": 1,
+    "P_GHZ_equals_projector_Xsum0_Z12equal_Z23equal": true,
+    "biseparable_fidelity_upper_bound": 0.3333333333333333,
+    "dephased_visibility_t": 0.75,
+    "GHZ_fidelity": 0.8333333333333334,
+    "detector_symmetric_ternary_error": 0.01,
+    "measured_equal_Z12_probability": 0.98015,
+    "measured_equal_Z23_probability": 0.98015,
+    "measured_X_basis_three_labels_sum_mod3_zero_probability": 0.8111691458333333,
+    "fidelity_from_three_setting_union_lower_bound": 0.7714691458333331,
+    "statistical_confidence_alpha": 0.01,
+    "per_setting_accepted_n": 200,
+    "total_accepted_trials": 600,
+    "Hoeffding_one_sided_each_setting_delta": 0.1194129649018083,
+    "reject_biseparable_when_sum_counts_at_least": 539,
+    "exact_IID_GHZ_model_power_under_readout": 0.9930633699216721,
+    "statistical_null_typeI_at_most": 0.01,
+    "scope": "Valid static tripartite-qutrit entanglement witness; the triple GHZ vs dephased control has identical pairwise reductions. Identifying its three parties with three TIMES does not automatically produce an operationally valid causal process tensor or the stronger Beyer genuine-three-time-only memory criterion."
+  },
+  "valid_TOE": false
+}
