@@ -1,0 +1,490 @@
+{
+  "date": "2026-11-19",
+  "title": "TOE physical completion gates v3: no W33 assumptions",
+  "status": "conditional physical no-go and observational likelihood diagnostics; not a TOE",
+  "domains": {
+    "physical_SU5_adjoint_mass_embedding": {
+      "status": "PASS",
+      "toy_triplet_two_mass_GeV": 21716354.84154603,
+      "toy_light_octet_mass_GeV": 454271.0798763982,
+      "adjoined_heavy_octet_chosen_GeV": 2e+16,
+      "renormalizable_SU5_matrix_mass_relation": "2 MX = M8 + M3",
+      "Takagi_light_X_analytic_upper_bound_GeV": 11085312.960711213,
+      "explicit_commuting_example_X_Takagi_masses_GeV": [
+        11085312.960711213,
+        1.0000000010858178e+16
+      ],
+      "random_complex_symmetric_mass_mixing_checks": 200,
+      "maximum_numerical_violation_of_upper_bound_GeV": 0,
+      "full_24F_one_loop_shifts": {
+        "triplet": [
+          0.0,
+          1.3333333333333333,
+          0.0
+        ],
+        "octet": [
+          0,
+          0,
+          2
+        ],
+        "X_and_Xbar": [
+          3.3333333333333335,
+          2.0,
+          1.3333333333333333
+        ]
+      },
+      "forced_light_X_inverse_coupling_shift_if_unretuned": [
+        -11.307097697015486,
+        -6.784258618209291,
+        -4.522839078806194
+      ],
+      "forced_light_X_inverse_coupling_shift_spread_if_unretuned": 6.784258618209292,
+      "source_hypothesis": "Two fermionic 24_F multiplets and only renormalizable mass operators from M and one 24_H spurion",
+      "caveats": [
+        "The min-singular-value bound holds only if all two triplets are <= the benchmark MT and at least one octet <= MO; it is not generic for arbitrary BSM models.",
+        "Additional scalar representations, multiple 24_H VEVs, dimension-five operators, or exotic mixing can evade the matrix relation.",
+        "An extra light X does not alone prove inconsistency: refit ALL thresholds and include every multiplet; no proton lifetime calculated.",
+        "The benchmark low-energy field inventory is not a complete SU5 embedding."
+      ]
+    },
+    "neutrino_Yukawa_continuum_and_naturalness": {
+      "status": "PASS",
+      "triplet_mass_GeV": 21716354.84154603,
+      "Casas_Ibarra_angle_samples": [
+        {
+          "complex_z": "0",
+          "Im_z": 0.0,
+          "Y_frobenius_squared": 4.20776995656796e-08,
+          "Y_max": 0.0001336726310105847,
+          "Higgs_threshold_estimate_GeV2": 376987.86762420466,
+          "threshold_over_125GeV_mass_squared": 24.031003390374043,
+          "mass_reconstruction_error_GeV": 6.643323252144558e-27
+        },
+        {
+          "complex_z": "0.35",
+          "Im_z": 0.0,
+          "Y_frobenius_squared": 4.20776995656796e-08,
+          "Y_max": 0.0001400213486224419,
+          "Higgs_threshold_estimate_GeV2": 376987.86762420466,
+          "threshold_over_125GeV_mass_squared": 24.031003390374043,
+          "mass_reconstruction_error_GeV": 7.963369503627396e-27
+        },
+        {
+          "complex_z": "0.6",
+          "Im_z": 0.0,
+          "Y_frobenius_squared": 4.207769956567961e-08,
+          "Y_max": 0.00013412745651713686,
+          "Higgs_threshold_estimate_GeV2": 376987.8676242048,
+          "threshold_over_125GeV_mass_squared": 24.03100339037405,
+          "mass_reconstruction_error_GeV": 1.3586518003271133e-26
+        },
+        {
+          "complex_z": "0.5j",
+          "Im_z": 0.5,
+          "Y_frobenius_squared": 6.492928335737399e-08,
+          "Y_max": 0.000150985737439471,
+          "Higgs_threshold_estimate_GeV2": 581722.6780912029,
+          "threshold_over_125GeV_mass_squared": 37.081775966865656,
+          "mass_reconstruction_error_GeV": 7.219743268200396e-27
+        },
+        {
+          "complex_z": "1j",
+          "Im_z": 1.0,
+          "Y_frobenius_squared": 1.5830453999671138e-07,
+          "Y_max": 0.00020916508443265792,
+          "Higgs_threshold_estimate_GeV2": 1418302.1311665892,
+          "threshold_over_125GeV_mass_squared": 90.40933740768135,
+          "mass_reconstruction_error_GeV": 2.133965468651872e-26
+        },
+        {
+          "complex_z": "2j",
+          "Im_z": 2.0,
+          "Y_frobenius_squared": 1.1490676169435286e-06,
+          "Y_max": 0.0005180366309013864,
+          "Higgs_threshold_estimate_GeV2": 10294872.465435145,
+          "threshold_over_125GeV_mass_squared": 656.2442358674361,
+          "mass_reconstruction_error_GeV": 2.406957369617326e-25
+        },
+        {
+          "complex_z": "3j",
+          "Im_z": 3.0,
+          "Y_frobenius_squared": 8.48772993446065e-06,
+          "Y_max": 0.0013911979294002048,
+          "Higgs_threshold_estimate_GeV2": 76044347.52826467,
+          "threshold_over_125GeV_mass_squared": 4847.429135550196,
+          "mass_reconstruction_error_GeV": 1.1151480939209085e-24
+        }
+      ],
+      "exact_trace_scaling": "Tr(Ydagger Y)=2M(m2+m3)/v^2 * cosh(2 Im z)",
+      "light_mass_matrix_fixed": true,
+      "tree_level_lightest_mass_eV": 0,
+      "warnings": [
+        "Im z is free: low-energy mixing does not determine heavy Yukawas or naturalness.",
+        "Higgs threshold formula 3 Tr(Ydagger M^2 Y)/(16 pi^2) is an explicitly conventional sensitivity scale; finite matching/logarithms depend on scheme.",
+        "No loop leptogenesis, LFV prediction, or electroweak vacuum lifetime here.",
+        "The 2-triplet truncation permits both light orderings, not a predicted neutrino ordering."
+      ]
+    },
+    "higher_derivative_spin2_spectral_test": {
+      "status": "PASS",
+      "toy_Weyl_squared_mass_GeV": 1000000000000000.0,
+      "spin2_massless_pole_residue": 1,
+      "spin2_extra_pole_residue": -1,
+      "partial_fraction_identity_max_relative_error": 3.5931919233439955e-13,
+      "R2_scalaron_fifth_force_length_m": 6.644440578470378e-30,
+      "R2_no_new_spin2_ghost_at_quadratic_tree_level": true,
+      "explanation": "Positive quadratic Weyl-type fourth-derivative spin2 pole has negative residue in local polynomial truncation",
+      "limits": [
+        "In EFT, a heavy higher-derivative pole beyond cutoff is not automatically a propagating physical ghost.",
+        "A nonlocal or UV-completed gravity model may escape this specific polynomial structure.",
+        "R\u00b2 scalaron and a pole-identity test do not establish quantum gravity, graviton unitarity, cosmological constant, or black-hole entropy."
+      ]
+    },
+    "full_DESI_DR2_Gaussian_covariance": {
+      "status": "PASS",
+      "source_repo": "https://github.com/CobayaSampler/bao_data/tree/master/desi_bao_dr2",
+      "source_mean_sha": "8aff444fdb42c0946342aa0011ab287eda097c4c",
+      "source_cov_sha": "fd8e5697ab61379b07b52efb781ea6713417a4d9",
+      "data_redshifts": [
+        0.295,
+        0.51,
+        0.51,
+        0.706,
+        0.706,
+        0.934,
+        0.934,
+        1.321,
+        1.321,
+        1.484,
+        1.484,
+        2.33,
+        2.33
+      ],
+      "data_types": [
+        "DV_over_rs",
+        "DM_over_rs",
+        "DH_over_rs",
+        "DM_over_rs",
+        "DH_over_rs",
+        "DM_over_rs",
+        "DH_over_rs",
+        "DM_over_rs",
+        "DH_over_rs",
+        "DM_over_rs",
+        "DH_over_rs",
+        "DH_over_rs",
+        "DM_over_rs"
+      ],
+      "measurement_vector": [
+        7.94167639,
+        13.58758434,
+        21.86294686,
+        17.35069094,
+        19.45534918,
+        21.57563956,
+        17.64149464,
+        27.60085612,
+        14.17602155,
+        30.51190063,
+        12.81699964,
+        8.631545674846294,
+        38.988973961958784
+      ],
+      "covariance_eigenvalues": [
+        0.00578998687,
+        0.00826248235578957,
+        0.019943655302804952,
+        0.021790210297892687,
+        0.025794488335721344,
+        0.03792174890493616,
+        0.046648014097195045,
+        0.11783807629506385,
+        0.11804995386427866,
+        0.17494803373237128,
+        0.1904852039021073,
+        0.2846369160442105,
+        0.6764084362676288
+      ],
+      "n_desi_measurements": 13,
+      "LCDM_only_DESI13": {
+        "chi_squared": 10.283725232038934,
+        "Omega_m": 0.29714363434532975,
+        "w0": -1.0,
+        "wa": 0.0,
+        "q_c_over_H0_rd": 29.521984019284723,
+        "H0_rd_km_s": 10154.88856725096,
+        "AIC": 14.283725232038934,
+        "BIC": 15.413623946962009,
+        "n_data": 13,
+        "n_parameters": 2,
+        "optimization_success": true,
+        "all_solution_chi2": [
+          10.283725232039153,
+          10.283725232039126,
+          10.283725232038934
+        ],
+        "predicted_desi_vector": [
+          7.9021642982974765,
+          13.256363373213631,
+          22.46928550989854,
+          17.414089336693365,
+          19.99982294207135,
+          21.67902281426631,
+          17.476532494636995,
+          27.745365018148387,
+          14.041126301321613,
+          29.936764986485244,
+          12.871599238670901,
+          8.635936536425405,
+          38.852470141551784
+        ],
+        "residual_desi_vector": [
+          -0.03951209170252312,
+          -0.33122096678636836,
+          0.6063386498985395,
+          0.06339839669336556,
+          0.5444737620713518,
+          0.10338325426631201,
+          -0.16496214536300613,
+          0.14450889814838774,
+          -0.13489524867838654,
+          -0.5751356435147557,
+          0.05459959867090092,
+          0.0043908615791110606,
+          -0.13650382040700038
+        ]
+      },
+      "CPL_only_DESI13": {
+        "chi_squared": 5.64583934266113,
+        "Omega_m": 0.3788951009322734,
+        "w0": -0.25,
+        "wa": -2.4721864097423984,
+        "q_c_over_H0_rd": 32.588767402583755,
+        "H0_rd_km_s": 9199.25734829208,
+        "AIC": 13.64583934266113,
+        "BIC": 15.905636772507277,
+        "n_data": 13,
+        "n_parameters": 4,
+        "optimization_success": true,
+        "all_solution_chi2": [
+          5.645839342661371,
+          5.6458393426611915,
+          5.64583934266125,
+          5.645839342661198,
+          5.645839342661685,
+          5.64583934266113
+        ],
+        "predicted_desi_vector": [
+          7.981817270239174,
+          13.334472531587814,
+          21.9254124199511,
+          17.41159497473029,
+          19.729639382979784,
+          21.647246605220253,
+          17.46662740564192,
+          27.747296403337142,
+          14.174568302449751,
+          29.960278801814816,
+          12.999412361400458,
+          8.640622864855736,
+          38.93160214117167
+        ],
+        "residual_desi_vector": [
+          0.04014088023917406,
+          -0.2531118084121857,
+          0.06246555995110015,
+          0.060904034730288714,
+          0.2742902029797847,
+          0.0716070452202544,
+          -0.17486723435808216,
+          0.14644028333714232,
+          -0.0014532475502484488,
+          -0.5516218281851835,
+          0.18241272140045695,
+          0.009077190009442404,
+          -0.057371820787111005
+        ]
+      },
+      "CPL_only_DESI13_wide_bounds": {
+        "chi_squared": 5.618408651196906,
+        "Omega_m": 0.38621728106265113,
+        "w0": -0.17975957898023004,
+        "wa": -2.7116245110718604,
+        "q_c_over_H0_rd": 32.851269756909964,
+        "H0_rd_km_s": 9125.749482999554,
+        "AIC": 13.618408651196905,
+        "BIC": 15.878206081043054,
+        "n_data": 13,
+        "n_parameters": 4,
+        "optimization_success": true,
+        "all_solution_chi2": [
+          5.61840865120941,
+          5.61840865119786,
+          5.618408651198229,
+          5.618408651200977,
+          5.618408651207818,
+          5.618408651197417,
+          5.618408651212852,
+          5.618408651198505,
+          5.618408651196906
+        ],
+        "predicted_desi_vector": [
+          7.9865839568818755,
+          13.338724355538012,
+          21.880684982856497,
+          17.40992350170586,
+          19.714041657924252,
+          21.64502962042269,
+          17.474444920854808,
+          27.750205126541946,
+          14.188180969273168,
+          29.965151433268076,
+          13.009694611399034,
+          8.636099871379656,
+          38.93784070319001
+        ],
+        "residual_desi_vector": [
+          0.044907566881875915,
+          -0.24885998446198698,
+          0.01773812285649612,
+          0.059232561705858444,
+          0.258692477924253,
+          0.06939006042269114,
+          -0.16704971914519362,
+          0.1493490065419465,
+          0.01215941927316777,
+          -0.5467491967319233,
+          0.19269497139903358,
+          0.004554196533362642,
+          -0.05113325876877184
+        ]
+      },
+      "DESI13_wide_vs_baseline_CPL_delta_chi2": 0.027430691464224388,
+      "DESI13_delta_chi2_LCDM_minus_CPL": 4.637885889377804,
+      "DESI13_delta_AIC_CPL_minus_LCDM": -0.6378858893778041,
+      "DESI13_delta_BIC_CPL_minus_LCDM": 0.4920128255452685,
+      "LCDM_plus_overlap_removed_DES14": {
+        "chi_squared": 10.844968337753933,
+        "Omega_m": 0.29668957257363904,
+        "w0": -1.0,
+        "wa": 0.0,
+        "q_c_over_H0_rd": 29.50589154457102,
+        "H0_rd_km_s": 10160.42703021325,
+        "AIC": 14.844968337753933,
+        "BIC": 16.12308299698445,
+        "n_data": 14,
+        "n_parameters": 2,
+        "optimization_success": true,
+        "all_solution_chi2": [
+          10.844968337754262,
+          10.844968337754297,
+          10.844968337753933
+        ],
+        "predicted_desi_vector": [
+          7.898890029077904,
+          13.251265445384515,
+          22.46425600431619,
+          17.4082551811765,
+          19.99718462952776,
+          21.672807321231556,
+          17.47567567823232,
+          27.73915391413968,
+          14.041770422039614,
+          29.93068525963445,
+          12.872544694816895,
+          8.63725952458045,
+          38.84743669460753
+        ],
+        "residual_desi_vector": [
+          -0.04278636092209531,
+          -0.33631889461548425,
+          0.6013091443161898,
+          0.057564241176500275,
+          0.5418354495277597,
+          0.09716776123155668,
+          -0.1658189617676804,
+          0.13829779413968168,
+          -0.13425112796038619,
+          -0.5812153703655483,
+          0.055545054816894535,
+          0.005713849734156895,
+          -0.1415372673512536
+        ]
+      },
+      "CPL_plus_overlap_removed_DES14": {
+        "chi_squared": 6.140048754146913,
+        "Omega_m": 0.37844787858058665,
+        "w0": -0.25,
+        "wa": -2.4733664643597972,
+        "q_c_over_H0_rd": 32.573357080916445,
+        "H0_rd_km_s": 9203.609479221826,
+        "AIC": 14.140048754146914,
+        "BIC": 16.696278072607946,
+        "n_data": 14,
+        "n_parameters": 4,
+        "optimization_success": true,
+        "all_solution_chi2": [
+          6.140048754147466,
+          6.1400487541474655,
+          6.140048754147432,
+          6.140048754147253,
+          6.140048754146913,
+          6.140048754147727
+        ],
+        "predicted_desi_vector": [
+          7.978645042154562,
+          13.329533120766301,
+          21.920635246319517,
+          17.4059871720531,
+          19.727439540583678,
+          21.641372702363835,
+          17.46631059628091,
+          27.741606758548816,
+          14.175545616091814,
+          29.954763102437028,
+          13.000546261089598,
+          8.641626428509408,
+          38.92703885677804
+        ],
+        "residual_desi_vector": [
+          0.03696865215456224,
+          -0.2580512192336979,
+          0.05768838631951567,
+          0.05529623205309875,
+          0.27209036058367886,
+          0.0657331423638361,
+          -0.17518404371909213,
+          0.1407506385488162,
+          -0.00047593390818612136,
+          -0.557137527562972,
+          0.1835466210895973,
+          0.01008075366311445,
+          -0.06193510518074419
+        ]
+      },
+      "warnings": [
+        "This is a BAO-only Gaussian distance likelihood with the published 13x13 DESI DR2 covariance, not a full CMB/SNe/lensing likelihood.",
+        "H0 and r_d enter only through their product; the early-Universe sound horizon is not derived.",
+        "Omega_r fixed at 9e-5 and physical neutrino/radiation transfer effects approximated; use a Boltzmann code for precision.",
+        "Adding DES Y6 independent-footprint point ignores potential residual cross-survey systematics.",
+        "Delta chi\u00b2 is not a discovery significance; AIC/BIC are approximate complexity diagnostics, not Bayesian evidence.",
+        "Bounds in w0,wa and Omega_m restrict the fit; check likelihood contours and stability."
+      ]
+    },
+    "single_photon_local_SSR_and_CHSH": {
+      "status": "PASS",
+      "state": "single-photon two-mode occupation state (|10>+|01>)/sqrt2",
+      "unrestricted_entanglement_negativity": 0.4999999999999998,
+      "locally_U1_twirl_entanglement_negativity": -1.1102230246251565e-16,
+      "unrestricted_max_CHSH": 2.8284271247461894,
+      "locally_twirled_max_CHSH": 1.9999999999999996,
+      "locally_number_conserving_observables_checked": 120,
+      "operational_claim": "Without shared phase reference and under local particle-number superselection, single-photon coherence is not accessible to local CHSH",
+      "caveats": [
+        "With coherent ancillary reference frames the twirl assumption fails and operational Bell violations may be possible.",
+        "A single photon with internal (path/polarization) degrees of freedom can exhibit contextuality, not necessarily spacelike Bell nonlocality.",
+        "This does not refute single-photon qudit computation, though scalable arbitrary n-qubit encoding still needs >=2^n optical modes."
+      ]
+    }
+  }
+}
