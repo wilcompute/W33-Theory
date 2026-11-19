@@ -1,0 +1,524 @@
+{
+  "status": "PASS",
+  "date": "2026-11-18",
+  "E8_global_center": {
+    "global_subgroup": "(E6 x SU3) / Z3",
+    "quotient_kernel_pairs": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "central_table": [
+      {
+        "E6_center_exp": 0,
+        "SU3_center_exp": 0,
+        "sector_27x3_character_exponent": 0,
+        "sector_27barx3bar_exponent": 0,
+        "acts_trivially_on_full_248": true
+      },
+      {
+        "E6_center_exp": 0,
+        "SU3_center_exp": 1,
+        "sector_27x3_character_exponent": 1,
+        "sector_27barx3bar_exponent": 2,
+        "acts_trivially_on_full_248": false
+      },
+      {
+        "E6_center_exp": 0,
+        "SU3_center_exp": 2,
+        "sector_27x3_character_exponent": 2,
+        "sector_27barx3bar_exponent": 1,
+        "acts_trivially_on_full_248": false
+      },
+      {
+        "E6_center_exp": 1,
+        "SU3_center_exp": 0,
+        "sector_27x3_character_exponent": 1,
+        "sector_27barx3bar_exponent": 2,
+        "acts_trivially_on_full_248": false
+      },
+      {
+        "E6_center_exp": 1,
+        "SU3_center_exp": 1,
+        "sector_27x3_character_exponent": 2,
+        "sector_27barx3bar_exponent": 1,
+        "acts_trivially_on_full_248": false
+      },
+      {
+        "E6_center_exp": 1,
+        "SU3_center_exp": 2,
+        "sector_27x3_character_exponent": 0,
+        "sector_27barx3bar_exponent": 0,
+        "acts_trivially_on_full_248": true
+      },
+      {
+        "E6_center_exp": 2,
+        "SU3_center_exp": 0,
+        "sector_27x3_character_exponent": 2,
+        "sector_27barx3bar_exponent": 1,
+        "acts_trivially_on_full_248": false
+      },
+      {
+        "E6_center_exp": 2,
+        "SU3_center_exp": 1,
+        "sector_27x3_character_exponent": 0,
+        "sector_27barx3bar_exponent": 0,
+        "acts_trivially_on_full_248": true
+      },
+      {
+        "E6_center_exp": 2,
+        "SU3_center_exp": 2,
+        "sector_27x3_character_exponent": 1,
+        "sector_27barx3bar_exponent": 2,
+        "acts_trivially_on_full_248": false
+      }
+    ],
+    "E6_center_equals_SU3_center_in_global_E8_subgroup": true,
+    "H27_intersection_E6_center_order": 3,
+    "product_H27_and_E6_center_in_E8_order": 27,
+    "false_independent_product_order": 81,
+    "adjoint_E6_gauge_bosons_invariant_under_H27_center": true,
+    "fundamental_27_matter_center_character": "omega",
+    "source": "E8 248 branching (78,1)+(1,8)+(27,3)+(27bar,3bar)",
+    "caveat": "Only a group-global center constraint. Does not prohibit an E8-compatible H27 flat bundle, and does not supply anomaly cancellation or a physical Higgs solution."
+  },
+  "H27_adjoint_gap": {
+    "normalization": "Q(M)=1/2(||XMX\u2020-M||F\u00b2+||ZMZ\u2020-M||F\u00b2)/||M||F\u00b2",
+    "unitary_two_generator_eigenvalues": [
+      6.162975822039155e-33,
+      1.4999999999999998,
+      1.4999999999999998,
+      1.4999999999999998,
+      1.5000000000000002,
+      2.9999999999999996,
+      2.9999999999999996,
+      3.0,
+      3.0000000000000004
+    ],
+    "traceless_adjoint_eigenvalues": [
+      1.5,
+      1.5,
+      1.5,
+      1.5,
+      3.0,
+      3.0,
+      3.0,
+      3.0
+    ],
+    "sharp_min_positive_eigenvalue": "3/2",
+    "sharp_max": 3,
+    "energy_by_Weyl_label": {
+      "00": "0",
+      "01": "3/2",
+      "02": "3/2",
+      "10": "3/2",
+      "11": "3",
+      "12": "3",
+      "20": "3/2",
+      "21": "3",
+      "22": "3"
+    },
+    "no_nonzero_cocovariantly_constant_SU3_adjoint_Higgs": true,
+    "caveat": "A graph-holonomy spectral gap with unit generator-edge weights; no physical mass follows without specifying loop lengths, Higgs kinetic normalization, curvature and actual boundary domain."
+  },
+  "harmonic_family_selection": {
+    "status": "PASS",
+    "family": "f_(n,a)=Re((x+iy)^(n+1))/(n+1)-(x\u00b2+y\u00b2)/2+z\u00b2-a*x",
+    "gradient_equation": "conjugate(w)^n-w=a",
+    "planar_Jacobian_determinant": "1-n\u00b2|w|^(2n-2)",
+    "proper_gradient_topological_degree": "-n",
+    "exact_critical_point_count_at_large_tilt": "n Morse-index-one points for |a|>r_c+r_c^n; r_c=n^(-1/(n-1))",
+    "general_energy_coefficient": "C_n=2*pi^(3/2)*gamma(n+1)/((2n+3)*gamma(n+3/2))",
+    "table": [
+      {
+        "n": 2,
+        "real_tilt_a": 1,
+        "critical_disk_radius": 0.5,
+        "sufficient_any_direction_tilt_magnitude": 0.75,
+        "numerical_critical_count": 2,
+        "guaranteed_Morse_index1_count": 2,
+        "leading_energy_coefficient_times_pi": "32/105",
+        "exact_energy_ball": "C_n*R^(2n+3)+(8pi/5)*R^5+(4pi/3)*a^2*R^3",
+        "leading_power": 7,
+        "complex_root_coordinates": [
+          [
+            -0.6180339887498949,
+            1.5012294639268701e-16
+          ],
+          [
+            1.618033988749895,
+            7.784497798110417e-23
+          ]
+        ]
+      },
+      {
+        "n": 3,
+        "real_tilt_a": 1,
+        "critical_disk_radius": 0.5773502691896257,
+        "sufficient_any_direction_tilt_magnitude": 0.7698003589195009,
+        "numerical_critical_count": 3,
+        "guaranteed_Morse_index1_count": 3,
+        "leading_energy_coefficient_times_pi": "64/315",
+        "exact_energy_ball": "C_n*R^(2n+3)+(8pi/5)*R^5+(4pi/3)*a^2*R^3",
+        "leading_power": 9,
+        "complex_root_coordinates": [
+          [
+            -0.22669882575820183,
+            -1.0743263344070284
+          ],
+          [
+            -0.22669882575820174,
+            1.0743263344070288
+          ],
+          [
+            1.324717957244746,
+            0.0
+          ]
+        ]
+      },
+      {
+        "n": 4,
+        "real_tilt_a": 1,
+        "critical_disk_radius": 0.6299605249474366,
+        "sufficient_any_direction_tilt_magnitude": 0.7874506561842958,
+        "numerical_critical_count": 4,
+        "guaranteed_Morse_index1_count": 4,
+        "leading_energy_coefficient_times_pi": "512/3465",
+        "exact_energy_ball": "C_n*R^(2n+3)+(8pi/5)*R^5+(4pi/3)*a^2*R^3",
+        "leading_power": 11,
+        "complex_root_coordinates": [
+          [
+            -0.7244919590005157,
+            1.6598431966875849e-16
+          ],
+          [
+            0.20932872497300717,
+            1.1127049576396406
+          ],
+          [
+            0.2093287249730072,
+            -1.1127049576396406
+          ],
+          [
+            1.2207440846057596,
+            -3.9666086325606624e-18
+          ]
+        ]
+      },
+      {
+        "n": 5,
+        "real_tilt_a": 1,
+        "critical_disk_radius": 0.668740304976422,
+        "sufficient_any_direction_tilt_magnitude": 0.8024883659717064,
+        "numerical_critical_count": 5,
+        "guaranteed_Morse_index1_count": 5,
+        "leading_energy_coefficient_times_pi": "1024/9009",
+        "exact_energy_ball": "C_n*R^(2n+3)+(8pi/5)*R^5+(4pi/3)*a^2*R^3",
+        "leading_power": 13,
+        "complex_root_coordinates": [
+          [
+            -0.6335384996624485,
+            -0.7184889688771372
+          ],
+          [
+            -0.6335384996624485,
+            0.7184889688771372
+          ],
+          [
+            0.47369510247122876,
+            -1.018981481269459
+          ],
+          [
+            0.47369510247122887,
+            1.018981481269459
+          ],
+          [
+            1.1673039782614187,
+            3.98480080330028e-18
+          ]
+        ]
+      },
+      {
+        "n": 6,
+        "real_tilt_a": 1,
+        "critical_disk_radius": 0.6988271187715792,
+        "sufficient_any_direction_tilt_magnitude": 0.8152983052335091,
+        "numerical_critical_count": 6,
+        "guaranteed_Morse_index1_count": 6,
+        "leading_energy_coefficient_times_pi": "4096/45045",
+        "exact_energy_ball": "C_n*R^(2n+3)+(8pi/5)*R^5+(4pi/3)*a^2*R^3",
+        "leading_power": 15,
+        "complex_root_coordinates": [
+          [
+            -0.7780895986786011,
+            -7.888365737049293e-15
+          ],
+          [
+            -0.3605585320529099,
+            -0.9582826034301162
+          ],
+          [
+            -0.3605585320529099,
+            0.9582826034301162
+          ],
+          [
+            0.6344132192230497,
+            -0.9109194275942588
+          ],
+          [
+            0.6344132192230497,
+            0.9109194275942588
+          ],
+          [
+            1.1347241384015194,
+            4.4039952642953755e-18
+          ]
+        ]
+      },
+      {
+        "n": 7,
+        "real_tilt_a": 1,
+        "critical_disk_radius": 0.7230200263994838,
+        "sufficient_any_direction_tilt_magnitude": 0.8263086015994101,
+        "numerical_critical_count": 7,
+        "guaranteed_Morse_index1_count": 7,
+        "leading_energy_coefficient_times_pi": "8192/109395",
+        "exact_energy_ball": "C_n*R^(2n+3)+(8pi/5)*R^5+(4pi/3)*a^2*R^3",
+        "leading_power": 17,
+        "complex_root_coordinates": [
+          [
+            -0.7579754338481185,
+            0.5322888152066227
+          ],
+          [
+            -0.7579754338481177,
+            -0.53228881520662
+          ],
+          [
+            -0.10589165960681876,
+            1.040862518600152
+          ],
+          [
+            -0.10589165960681826,
+            -1.0408625186001517
+          ],
+          [
+            0.7365986729027919,
+            -0.8135678313090593
+          ],
+          [
+            0.7365986729027919,
+            0.8135678313090593
+          ],
+          [
+            1.1127756842787055,
+            0.0
+          ]
+        ]
+      },
+      {
+        "n": 8,
+        "real_tilt_a": 1,
+        "critical_disk_radius": 0.7429971445684742,
+        "sufficient_any_direction_tilt_magnitude": 0.8358717876395335,
+        "numerical_critical_count": 8,
+        "guaranteed_Morse_index1_count": 8,
+        "leading_energy_coefficient_times_pi": "131072/2078505",
+        "exact_energy_ball": "C_n*R^(2n+3)+(8pi/5)*R^5+(4pi/3)*a^2*R^3",
+        "leading_power": 19,
+        "complex_root_coordinates": [
+          [
+            -0.8116523200278026,
+            -1.278141721978017e-15
+          ],
+          [
+            -0.5947851058423463,
+            -0.7846162435386108
+          ],
+          [
+            -0.5947851058423439,
+            0.7846162435386123
+          ],
+          [
+            0.10016240650092471,
+            1.0489698640718228
+          ],
+          [
+            0.10016240650092473,
+            -1.0489698640718228
+          ],
+          [
+            0.8045715077437264,
+            -0.7306824782643453
+          ],
+          [
+            0.8045715077437267,
+            0.7306824782643451
+          ],
+          [
+            1.0969815577985598,
+            3.287293228528794e-16
+          ]
+        ]
+      }
+    ],
+    "caveat": "Critical-point/Morse degree theorem, not a physical n-family Dirac spectrum or proof of L2 kernels for every n. This shows the quartic n=3 background is an input; a mechanism dynamically selecting n=3 remains absent."
+  },
+  "AdS4_S7_Dirac": {
+    "AdS4_x_round_S7_on_shell_R7_over_L": 2,
+    "round_S7_untwisted_Dirac_spectrum_times_L": "\u00b1(k+7/2)/2",
+    "first8_levels": [
+      {
+        "k": 0,
+        "positive_Dirac_eigenvalue_times_AdS4_L": "7/4",
+        "negative_eigenvalue_times_L": "-7/4",
+        "multiplicity_each_sign": 8
+      },
+      {
+        "k": 1,
+        "positive_Dirac_eigenvalue_times_AdS4_L": "9/4",
+        "negative_eigenvalue_times_L": "-9/4",
+        "multiplicity_each_sign": 56
+      },
+      {
+        "k": 2,
+        "positive_Dirac_eigenvalue_times_AdS4_L": "11/4",
+        "negative_eigenvalue_times_L": "-11/4",
+        "multiplicity_each_sign": 224
+      },
+      {
+        "k": 3,
+        "positive_Dirac_eigenvalue_times_AdS4_L": "13/4",
+        "negative_eigenvalue_times_L": "-13/4",
+        "multiplicity_each_sign": 672
+      },
+      {
+        "k": 4,
+        "positive_Dirac_eigenvalue_times_AdS4_L": "15/4",
+        "negative_eigenvalue_times_L": "-15/4",
+        "multiplicity_each_sign": 1680
+      },
+      {
+        "k": 5,
+        "positive_Dirac_eigenvalue_times_AdS4_L": "17/4",
+        "negative_eigenvalue_times_L": "-17/4",
+        "multiplicity_each_sign": 3696
+      },
+      {
+        "k": 6,
+        "positive_Dirac_eigenvalue_times_AdS4_L": "19/4",
+        "negative_eigenvalue_times_L": "-19/4",
+        "multiplicity_each_sign": 7392
+      },
+      {
+        "k": 7,
+        "positive_Dirac_eigenvalue_times_AdS4_L": "21/4",
+        "negative_eigenvalue_times_L": "-21/4",
+        "multiplicity_each_sign": 13728
+      }
+    ],
+    "scalar_curvature_times_L2": "21/2",
+    "Lichnerowicz_bound_Dirac_squared_L2": "21/8",
+    "exact_ground_Dirac_squared_L2": "49/16",
+    "zero_internal_untwisted_spinor_modes": 0,
+    "caveat": "Untwisted geometric Dirac, not full flux-coupled 11D gravitino or charged 7D ADE Dirac operator. No physical fermion-mass conclusion in actual singular G2 compactifications."
+  },
+  "E6_vectorlike_Higgs": {
+    "status": "PASS",
+    "Higgs_multiplets": "two distinct vectorlike (27+27bar) pairs plus two E6-singlet driving chiral multiplets",
+    "charge_table": {
+      "Nc_in_27": [
+        -5,
+        1
+      ],
+      "S_in_27": [
+        0,
+        4
+      ],
+      "Ncbar_in_27bar": [
+        5,
+        -1
+      ],
+      "Sbar_in_27bar": [
+        0,
+        -4
+      ]
+    },
+    "Abelian_charge_determinant": -20,
+    "normalized_equal_vev_Abelian_mass_Gram": [
+      [
+        50,
+        -10
+      ],
+      [
+        -10,
+        34
+      ]
+    ],
+    "Abelian_mass_Gram_determinant": 1600,
+    "Abelian_mass_Gram_eigenvalues": [
+      "42 - 2*sqrt(41)",
+      "2*sqrt(41) + 42"
+    ],
+    "exact_full_E6_D_cancellation_pair_by_pair": true,
+    "exact_full_E6_F_solution_at_driving_fields_zero": true,
+    "invariant_superpotential": "W=Z1*(barH1.H1-v1\u00b2)+Z2*(barH2.H2-v2\u00b2)",
+    "breaks_both_extra_Abelian_generators_at_rank2": true,
+    "caveat": "Constructive auxiliary SUSY Higgs model, not derived field content from compactification. New 27bar multiplets introduce conjugate representations/exotics; unbroken non-Abelian gauge sector, entire Hessian, D/Holonomy global consistency, localized matter, anomalies and stable UV completion untested."
+  },
+  "photonic_assignment": {
+    "status": "PASS",
+    "pairwise_classical_source_parameters": [
+      0.96,
+      0.45,
+      0.95
+    ],
+    "raw_readout_visibility_factor": "t=1-2*epsilon",
+    "raw_fixed_axis_witness": "2 sqrt(1-(t*eta)\u00b2)-t*gamma",
+    "exact_ideal_witness_surviving_symmetric_assignment_error_limit": 0.030241966417143162,
+    "rows": [
+      {
+        "symmetric_binary_assignment_flip_probability": 0.0,
+        "expected_undebiasable_raw_witness": -0.33550020016016,
+        "asymptotic_raw_witness_negative": true,
+        "n450_exact_model_power": 0.66128121221282,
+        "n900_exact_model_power": 0.9979393709157904
+      },
+      {
+        "symmetric_binary_assignment_flip_probability": 0.01,
+        "expected_undebiasable_raw_witness": -0.21076164484323123,
+        "asymptotic_raw_witness_negative": true,
+        "n450_exact_model_power": 0.05926468375747045,
+        "n900_exact_model_power": 0.4832950879747219
+      },
+      {
+        "symmetric_binary_assignment_flip_probability": 0.02,
+        "expected_undebiasable_raw_witness": -0.10121960042916633,
+        "asymptotic_raw_witness_negative": true,
+        "n450_exact_model_power": 0.0006513964734492597,
+        "n900_exact_model_power": 0.006774914649645675
+      },
+      {
+        "symmetric_binary_assignment_flip_probability": 0.03,
+        "expected_undebiasable_raw_witness": -0.002286673801570216,
+        "asymptotic_raw_witness_negative": true
+      },
+      {
+        "symmetric_binary_assignment_flip_probability": 0.04,
+        "expected_undebiasable_raw_witness": 0.08865184056007225,
+        "asymptotic_raw_witness_negative": false
+      }
+    ],
+    "caveat": "Applies if symmetric readout misclassification is UNCORRECTED and independent with known channel parameters; calibrated debiasing can recover a witness at increased variance. No power guarantee under drift, selection, herald loss, non-IID statistics, imperfect instrumental tomography or an intrinsically qutrit channel."
+  },
+  "physical_TOE_claim": false
+}
