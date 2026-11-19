@@ -1,0 +1,58 @@
+{
+  "setup": "Nine SU(3) fundamental species norm-square r and SIC overlap-square r^2/4",
+  "nonnegative_gauge_invariant_alignment": "mu*sum_j (Q_j^dag Q_j-r)^2 + kappa*sum_{i<j}(4*abs(Q_i^dag Q_j)^2-r^2)^2",
+  "zero_potential_enforces": "S=sum_j Q_j Q_j^dag=3*r*I_3, so D^a=0",
+  "frame_trace": "9r",
+  "frame_squared_trace": "27r^2",
+  "plus": {
+    "sign": 1,
+    "frame_det": "216",
+    "pair_count": 36,
+    "pair_overlap_sq_unscaled": "1",
+    "potential_value": "0",
+    "baryonic_minor_squared_distribution": {
+      "0": 3,
+      "1": 18,
+      "3": 54,
+      "4": 9
+    },
+    "baryonic_det_squared_moments": [
+      216,
+      648,
+      2052
+    ],
+    "hesse_line_minor_squared_distribution": {
+      "0": 3,
+      "4": 9
+    },
+    "hesse_line_baryon_sextic_sum": 36
+  },
+  "minus": {
+    "sign": -1,
+    "frame_det": "216",
+    "pair_count": 36,
+    "pair_overlap_sq_unscaled": "1",
+    "potential_value": "0",
+    "baryonic_minor_squared_distribution": {
+      "0": 12,
+      "3": 72
+    },
+    "baryonic_det_squared_moments": [
+      216,
+      648,
+      1944
+    ],
+    "hesse_line_minor_squared_distribution": {
+      "0": 12
+    },
+    "hesse_line_baryon_sextic_sum": 0
+  },
+  "all_84_baryon_minor_first_moment": 216,
+  "all_84_baryon_minor_second_moment": 648,
+  "all_84_baryon_minor_third_moment_difference": 108,
+  "hesse_line_count": 12,
+  "hesse_line_sextic_baryon_sum_plus": 36,
+  "hesse_line_sextic_baryon_sum_minus": 0,
+  "hesse_line_sum_is_su3_gauge_and_h27_translation_invariant": true,
+  "limits": "The Hesse-line sextic is gauge-invariant but distinguishes only these test vacua; it does not prove global plus-SIC uniqueness. This is bosonic, not a holomorphic SUSY UV superpotential. Flavor phases and continuous degeneracies remain."
+}
