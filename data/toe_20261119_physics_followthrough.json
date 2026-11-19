@@ -1,0 +1,250 @@
+{
+  "status": "PASS",
+  "program": "five TOE physics bridges following 2026-11-19 [[40,19,4]]_3",
+  "UV_SIC_E8_center": {
+    "status": "PASS",
+    "SU3_gauge_theory_one_loop": [
+      {
+        "vectorlike_flavor_pairs": 9,
+        "cubic_SU3_anomaly": 0,
+        "one_loop_b0": 0,
+        "one_loop_asymptotically_free": false
+      },
+      {
+        "vectorlike_flavor_pairs": 10,
+        "cubic_SU3_anomaly": 0,
+        "one_loop_b0": -1,
+        "one_loop_asymptotically_free": false
+      },
+      {
+        "vectorlike_flavor_pairs": 27,
+        "cubic_SU3_anomaly": 0,
+        "one_loop_b0": -18,
+        "one_loop_asymptotically_free": false
+      }
+    ],
+    "E8_global_subgroup": "(E6 x SU3)/Z3",
+    "descent_condition": "E6 center charge == SU3 center charge (mod3)",
+    "charge_tests": [
+      {
+        "sector": "(78,1)",
+        "E6_charge": 0,
+        "SU3_charge": 0,
+        "allowed": true
+      },
+      {
+        "sector": "(1,8)",
+        "E6_charge": 0,
+        "SU3_charge": 0,
+        "allowed": true
+      },
+      {
+        "sector": "(27,3)",
+        "E6_charge": 1,
+        "SU3_charge": 1,
+        "allowed": true
+      },
+      {
+        "sector": "(27bar,3bar)",
+        "E6_charge": 2,
+        "SU3_charge": 2,
+        "allowed": true
+      },
+      {
+        "sector": "(1,3)",
+        "E6_charge": 0,
+        "SU3_charge": 1,
+        "allowed": false
+      },
+      {
+        "sector": "(1,3bar)",
+        "E6_charge": 0,
+        "SU3_charge": 2,
+        "allowed": false
+      },
+      {
+        "sector": "(27,1)",
+        "E6_charge": 1,
+        "SU3_charge": 0,
+        "allowed": false
+      }
+    ],
+    "E6_neutral_SU3_triplets_forbidden_even_as_nonadjoint_H_representations": true,
+    "implication": "Bare E6-singlet nine-triplet SIC fields do NOT directly descend to the unbroken E8 subgroup; an E6-charged multiplet, Higgs phase, or different global gauge group is needed.",
+    "one_loop_caveat": "Nf=9 b0=0 does not imply an exact conformal or UV fixed point; baryon singlet interactions are higher dimension",
+    "prior_art": [
+      "E8 branching, common Z3 center, and invalid (27,1) previously audited in repo",
+      "this extends the same center-selection test to (1,3) and compares two parallel SIC EFTs"
+    ]
+  },
+  "nonflat_magnetic_flux_Dirac_gap": {
+    "status": "PASS, conditional on base-pulled factorized unitary connection",
+    "quotient": "(S5(R) x T2)/H27",
+    "integral_cup_relation": "a cup b = 3 eta",
+    "base_pullback_line_Chern_class": "c1(L_m)=3m eta",
+    "original_cover_torus_degree": "9m",
+    "S5_ordinary_Dirac_min_abs_eigenvalue": 2.5,
+    "S5_and_T2_magnetic_separation": "D7\u00b2 = D_S5\u00b2 + D_T2,m\u00b2",
+    "all_base_pulled_torus_flux_charged_Dirac_kernel": "zero",
+    "sample_flux_sectors": [
+      {
+        "base_torus_line_bundle_degree_m": -3,
+        "H2_Y_c1_in_eta_units": -9,
+        "cover_torus_Chern_number": -27,
+        "torus_chiral_zero_mode_index": -27,
+        "torus_Landau_zero_modes_for_nonzero_flux": 27,
+        "total_7D_Dirac_zero_modes": 0,
+        "total_7D_abs_eigenvalue_lower_bound": 2.5,
+        "first_excited_torus_D2_magnitude": 339.29200658769764
+      },
+      {
+        "base_torus_line_bundle_degree_m": -1,
+        "H2_Y_c1_in_eta_units": -3,
+        "cover_torus_Chern_number": -9,
+        "torus_chiral_zero_mode_index": -9,
+        "torus_Landau_zero_modes_for_nonzero_flux": 9,
+        "total_7D_Dirac_zero_modes": 0,
+        "total_7D_abs_eigenvalue_lower_bound": 2.5,
+        "first_excited_torus_D2_magnitude": 113.09733552923255
+      },
+      {
+        "base_torus_line_bundle_degree_m": 0,
+        "H2_Y_c1_in_eta_units": 0,
+        "cover_torus_Chern_number": 0,
+        "torus_chiral_zero_mode_index": 0,
+        "torus_Landau_zero_modes_for_nonzero_flux": "spin_structure_dependent",
+        "total_7D_Dirac_zero_modes": 0,
+        "total_7D_abs_eigenvalue_lower_bound": 2.5,
+        "first_excited_torus_D2_magnitude": 39.47841760435743
+      },
+      {
+        "base_torus_line_bundle_degree_m": 1,
+        "H2_Y_c1_in_eta_units": 3,
+        "cover_torus_Chern_number": 9,
+        "torus_chiral_zero_mode_index": 9,
+        "torus_Landau_zero_modes_for_nonzero_flux": 9,
+        "total_7D_Dirac_zero_modes": 0,
+        "total_7D_abs_eigenvalue_lower_bound": 2.5,
+        "first_excited_torus_D2_magnitude": 113.09733552923255
+      },
+      {
+        "base_torus_line_bundle_degree_m": 3,
+        "H2_Y_c1_in_eta_units": 9,
+        "cover_torus_Chern_number": 27,
+        "torus_chiral_zero_mode_index": 27,
+        "torus_Landau_zero_modes_for_nonzero_flux": 27,
+        "total_7D_Dirac_zero_modes": 0,
+        "total_7D_abs_eigenvalue_lower_bound": 2.5,
+        "first_excited_torus_D2_magnitude": 339.29200658769764
+      }
+    ],
+    "exceptions_not_analyzed": [
+      "primitive eta not pulled back from base",
+      "sphere-dependent non-Abelian gauge curvature",
+      "torsionful/supercovariant spin connection",
+      "singular/localized Dirac operators"
+    ],
+    "physical_message": "Even nonflat magnetic flux on a torus-only factor cannot cancel the S5 Dirac gap; three torus zero modes are not three 7D massless chiral families."
+  },
+  "temporal_memory_loss_loophole": {
+    "status": "PASS",
+    "measurement": "four matched conjugate qutrit MUBs, one setting chosen per attempt",
+    "witness_operator": "(I9+3*Phi3)/4",
+    "separable_ideal_match_upper_bound": 0.5,
+    "adversarial_thinning_unconditional_match_upper_bound": 0.5,
+    "calibrated_IID_loss_older_conditional_bound": "eta\u00b2/2; invalid without fair-sampling assumption",
+    "model_unconditional_match": "eta\u00b2*(1+2s)/3",
+    "loophole_free_efficiency_condition": "eta>sqrt(3/(2*(1+2s))) under honest local measurement and loss-only postprocessing",
+    "finite_trials_conservative_bound": "ceil((sqrt(ln(1/alpha))+sqrt(ln(1/beta)))\u00b2/(2*(q-.5)\u00b2))",
+    "numerical_scenarios": [
+      {
+        "isotropic_Bell_survival_s": 0.35,
+        "single_detector_efficiency_eta": 0.85,
+        "ideal_matched_outcome_probability": 0.5666666666666667,
+        "unconditional_two_detector_matched_probability": 0.4094166666666666,
+        "detection_loophole_robust_eta_critical": 0.9393364366277243,
+        "unconditional_witness_violation": false,
+        "Hoeffding_sufficient_trials_for_alpha_0p01_power_0p95": null
+      },
+      {
+        "isotropic_Bell_survival_s": 0.35,
+        "single_detector_efficiency_eta": 0.95,
+        "ideal_matched_outcome_probability": 0.5666666666666667,
+        "unconditional_two_detector_matched_probability": 0.5114166666666666,
+        "detection_loophole_robust_eta_critical": 0.9393364366277243,
+        "unconditional_witness_violation": true,
+        "Hoeffding_sufficient_trials_for_alpha_0p01_power_0p95": 57655
+      },
+      {
+        "isotropic_Bell_survival_s": 0.8,
+        "single_detector_efficiency_eta": 0.9,
+        "ideal_matched_outcome_probability": 0.8666666666666667,
+        "unconditional_two_detector_matched_probability": 0.7020000000000001,
+        "detection_loophole_robust_eta_critical": 0.7595545253127499,
+        "unconditional_witness_violation": true,
+        "Hoeffding_sufficient_trials_for_alpha_0p01_power_0p95": 185
+      },
+      {
+        "isotropic_Bell_survival_s": 1.0,
+        "single_detector_efficiency_eta": 0.75,
+        "ideal_matched_outcome_probability": 1.0,
+        "unconditional_two_detector_matched_probability": 0.5625,
+        "detection_loophole_robust_eta_critical": 0.7071067811865476,
+        "unconditional_witness_violation": true,
+        "Hoeffding_sufficient_trials_for_alpha_0p01_power_0p95": 1924
+      }
+    ],
+    "limitation": "Untrusted measurement devices can change POVMs: not device-independent Bell nonlocality; the loss-only postprocessing model and state IID still matter."
+  },
+  "W33_refinement_versus_gravity": {
+    "status": "PASS",
+    "internal_fixed_graph": "W33, spectrum L_W33: 0^1,10^24,16^15",
+    "external_refinement": "Cartesian product with (C_n)^3 and lattice step a=2pi/n",
+    "product_Laplacian_eigenvalues": "mu_W33 + (4/a\u00b2)*sum_j sin\u00b2(pi*k_j/n)",
+    "continuum_limit": "one massless 3D spatial branch from mu_W33=0, plus 39 internal massive branches",
+    "refinement_samples": [
+      {
+        "grid_size_per_axis": 8,
+        "a": 0.7853981633974483,
+        "first_nonzero_external_grid_eigenvalue": 0.9496412035517837,
+        "relative_error_against_continuum_k1": 0.05035879644821628,
+        "first_internal_W33_mass_squared": 10,
+        "second_internal_W33_mass_squared": 16
+      },
+      {
+        "grid_size_per_axis": 16,
+        "a": 0.39269908169872414,
+        "first_nonzero_external_grid_eigenvalue": 0.9872148307666581,
+        "relative_error_against_continuum_k1": 0.012785169233341942,
+        "first_internal_W33_mass_squared": 10,
+        "second_internal_W33_mass_squared": 16
+      },
+      {
+        "grid_size_per_axis": 32,
+        "a": 0.19634954084936207,
+        "first_nonzero_external_grid_eigenvalue": 0.9967913640449609,
+        "relative_error_against_continuum_k1": 0.003208635955039063,
+        "first_internal_W33_mass_squared": 10,
+        "second_internal_W33_mass_squared": 16
+      },
+      {
+        "grid_size_per_axis": 64,
+        "a": 0.09817477042468103,
+        "first_nonzero_external_grid_eigenvalue": 0.9991970675392312,
+        "relative_error_against_continuum_k1": 0.0008029324607687904,
+        "first_internal_W33_mass_squared": 10,
+        "second_internal_W33_mass_squared": 16
+      },
+      {
+        "grid_size_per_axis": 128,
+        "a": 0.04908738521234052,
+        "first_nonzero_external_grid_eigenvalue": 0.999799218511597,
+        "relative_error_against_continuum_k1": 0.00020078148840296794,
+        "first_internal_W33_mass_squared": 10,
+        "second_internal_W33_mass_squared": 16
+      }
+    ],
+    "gravitational_obstruction": "3D grid was imposed externally; no metric dynamics, Lorentzian signature, diffeomorphism constraints, Einstein equations or 4D gravity emerges from W33 alone",
+    "interpretation": "This is a falsifiable regulator with W33 as an internal finite fiber, NOT an intrinsic W33-only continuum."
+  }
+}
