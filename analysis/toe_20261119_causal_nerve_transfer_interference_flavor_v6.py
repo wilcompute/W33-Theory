@@ -378,14 +378,43 @@ def fermion_backreaction_selects_spin_center_gate():
     phases=np.exp(1j*np.random.default_rng(20261119).uniform(0,2*np.pi,n))
     G=np.diag(phases)
     DG=G@D@G.conj().T
-    assert np.linalg.norm(np.sort_complex(np.linalg.eigvals(D))-
-           np.sort_complex(np.linalg.eigvals(DG)))<1e-9
+    from scipy.optimize import linear_sum_assignment
+    aev=np.linalg.eigvals(D);bev=np.linalg.eigvals(DG)
+    inds,matched=linear_sum_assignment(abs(aev[:,None]-bev[None,:]))
+    assert np.linalg.norm(aev[inds]-bev[matched])<1e-9
     assert abs(np.linalg.det(D)-np.linalg.det(DG))<1e-9
+    # A sharper continuum gate: hold the dimensionless physical mass-times-
+    # circumference μ fixed while refining n, so m_lattice=μ/n.
+    # The relative P/AP determinant is tanh(μ/2) in the continuum.
+    physical_scaling=[]
+    for mu in (0.,.1,1.,5.,20.):
+        refinement=[]
+        for N in (12,24,96,256):
+            a=(1+mu/N)**N
+            r=(a-1)/(a+1)
+            refinement.append({"N":N,"lattice_mass_mu_over_N":mu/N,
+               "periodic_to_antiperiodic_determinant_ratio":r,
+               "deviation_from_continuum_tanh_mu_over_2":r-np.tanh(mu/2)})
+        continuum_r=float(np.tanh(mu/2))
+        norm=(1+continuum_r)*(1+continuum_r**2)
+        probabilities=[continuum_r**3/norm,continuum_r/norm,
+                       1/norm,continuum_r**2/norm]
+        assert abs(sum(probabilities)-1)<1e-12
+        physical_scaling.append({"dimensionless_mass_times_circle_length_mu":mu,
+          "continuum_ratio_detP_to_detAP":continuum_r,
+          "continuum_spin_center_sectors_00_01_10_11":probabilities,
+          "finite_n_refinements":refinement})
+    assert physical_scaling[0]["continuum_spin_center_sectors_00_01_10_11"]==[0,0,1,0]
+    assert physical_scaling[-1]["continuum_spin_center_sectors_00_01_10_11"][2]<.251
+
     return {"status":"PASS",
       "exact_lattice_Dirac_determinant":"det D_n(m,theta)=(1+m)^n-exp(-i theta) for one 1D Wilson r=1 fermion",
       "spin_and_SU2_center_rule":"charged doublet spin boundary = (-1)^(s+z); neutral gauge singlet=(-1)^s",
       "mass_zero_selection":"Only (s,z)=(1,0) has nonzero zero-source determinant when a massless SU2 doublet and neutral singlet are included; with doublet alone both (0,1) and (1,0) survive.",
       "sectors_by_mass":sectors,
+      "mass_length_continuum_limit":"det D_P/det D_AP -> tanh(mu/2) for lattice mass m=mu/n as n->infinity",
+      "normalized_continuum_sector_probability_formula":"(r^3,r,1,r^2)/[(1+r)(1+r^2)] for (s,z)=00,01,10,11 with r=tanh(mu/2)",
+      "continuum_mass_length_gate":physical_scaling,
       "determinant_local_gauge_frame_covariance_error":float(abs(np.linalg.det(D)-np.linalg.det(DG))),
       "scope":"Exact determinant and *toy* nonnegative weights with equal a priori topological sector factors. This does NOT derive dynamical spin selection for the original 3+1 topology-changing spacetime, a physical 4D chiral gauge theory, the Born rule, or a unique microscopic action.",
       "caveat":"A fermion zero mode zeros the vacuum partition determinant at zero Grassmann sources, but correlators with insertions may saturate zero modes. Dynamical mass, gauge integration over continuous SU2 holonomy, cobordism spin extension and spin-statistics may change this selection."}
@@ -434,7 +463,7 @@ def combined():
     seventh=fermion_backreaction_selects_spin_center_gate()
     eighth=normalized_decoherence_relative_to_manifold_gate()
     assert all(x["status"]=="PASS" for x in (first,second,third,fourth,fifth,sixth,seventh,eighth))
-    return {"date":"2026-11-19","status":"PASS five research fronts plus one cross-sector gate, not a fundamental completion",
+    return {"date":"2026-11-19","status":"PASS five research fronts plus three cross-sector gates, not a fundamental completion",
       "TOE_solved":False,"Lorentzian_4D_GR_derived":False,"SM_spectrum_derived":False,
       "Born_rule_derived":False,
       "sources":[

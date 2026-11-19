@@ -1,6 +1,6 @@
 {
   "date": "2026-11-19",
-  "status": "PASS five research fronts plus one cross-sector gate, not a fundamental completion",
+  "status": "PASS five research fronts plus three cross-sector gates, not a fundamental completion",
   "TOE_solved": false,
   "Lorentzian_4D_GR_derived": false,
   "SM_spectrum_derived": false,
@@ -620,6 +620,473 @@
       "physical_distinction": "A charged doublet alone cannot distinguish a spin twist from an SU2 center twist, but adding an appropriate gauge singlet can.",
       "cobordism_warning": "Homology does not fix which spin structure extends through the specific spacetime cobordism, nor whether the SU2 center holonomy sector is physically populated.",
       "scope": "Conditional bundle/flat-holonomy effect on S1xS2 in a finite 1D spectral model; not an emergent SM particle family or an actual spin quantum field on the causal set."
+    },
+    "VII_fermion_determinant_dynamic_spin_center_selection": {
+      "status": "PASS",
+      "exact_lattice_Dirac_determinant": "det D_n(m,theta)=(1+m)^n-exp(-i theta) for one 1D Wilson r=1 fermion",
+      "spin_and_SU2_center_rule": "charged doublet spin boundary = (-1)^(s+z); neutral gauge singlet=(-1)^s",
+      "mass_zero_selection": "Only (s,z)=(1,0) has nonzero zero-source determinant when a massless SU2 doublet and neutral singlet are included; with doublet alone both (0,1) and (1,0) survive.",
+      "sectors_by_mass": [
+        {
+          "mass": 0.0,
+          "n": 12,
+          "spin_center_sectors": [
+            {
+              "spin_twist_s": 0,
+              "SU2_center_twist_z": 0,
+              "charged_fund_twist_s_plus_z_mod2": 0,
+              "fundamental_doublet_determinant_magnitude_squared_color": 0.0,
+              "neutral_singlet_determinant_magnitude": 0.0,
+              "total_unnormalized_absolute_fermion_weight": 0.0,
+              "normalized_toy_probability_with_singlet": 0.0,
+              "normalized_toy_probability_without_singlet": 0.0
+            },
+            {
+              "spin_twist_s": 0,
+              "SU2_center_twist_z": 1,
+              "charged_fund_twist_s_plus_z_mod2": 1,
+              "fundamental_doublet_determinant_magnitude_squared_color": 4.0,
+              "neutral_singlet_determinant_magnitude": 0.0,
+              "total_unnormalized_absolute_fermion_weight": 0.0,
+              "normalized_toy_probability_with_singlet": 0.0,
+              "normalized_toy_probability_without_singlet": 0.5
+            },
+            {
+              "spin_twist_s": 1,
+              "SU2_center_twist_z": 0,
+              "charged_fund_twist_s_plus_z_mod2": 1,
+              "fundamental_doublet_determinant_magnitude_squared_color": 4.0,
+              "neutral_singlet_determinant_magnitude": 2.0,
+              "total_unnormalized_absolute_fermion_weight": 8.0,
+              "normalized_toy_probability_with_singlet": 1.0,
+              "normalized_toy_probability_without_singlet": 0.5
+            },
+            {
+              "spin_twist_s": 1,
+              "SU2_center_twist_z": 1,
+              "charged_fund_twist_s_plus_z_mod2": 0,
+              "fundamental_doublet_determinant_magnitude_squared_color": 0.0,
+              "neutral_singlet_determinant_magnitude": 2.0,
+              "total_unnormalized_absolute_fermion_weight": 0.0,
+              "normalized_toy_probability_with_singlet": 0.0,
+              "normalized_toy_probability_without_singlet": 0.0
+            }
+          ]
+        },
+        {
+          "mass": 0.005,
+          "n": 12,
+          "spin_center_sectors": [
+            {
+              "spin_twist_s": 0,
+              "SU2_center_twist_z": 0,
+              "charged_fund_twist_s_plus_z_mod2": 0,
+              "fundamental_doublet_determinant_magnitude_squared_color": 0.003804152476392412,
+              "neutral_singlet_determinant_magnitude": 0.061677811864498014,
+              "total_unnormalized_absolute_fermion_weight": 0.0002346318007427954,
+              "normalized_toy_probability_with_singlet": 2.5973712511773513e-05,
+              "normalized_toy_probability_without_singlet": 0.00044709294042530594
+            },
+            {
+              "spin_twist_s": 0,
+              "SU2_center_twist_z": 1,
+              "charged_fund_twist_s_plus_z_mod2": 1,
+              "fundamental_doublet_determinant_magnitude_squared_color": 4.250515399934385,
+              "neutral_singlet_determinant_magnitude": 0.061677811864498014,
+              "total_unnormalized_absolute_fermion_weight": 0.26216248916430457,
+              "normalized_toy_probability_with_singlet": 0.029021356454528566,
+              "normalized_toy_probability_without_singlet": 0.4995529070595747
+            },
+            {
+              "spin_twist_s": 1,
+              "SU2_center_twist_z": 0,
+              "charged_fund_twist_s_plus_z_mod2": 1,
+              "fundamental_doublet_determinant_magnitude_squared_color": 4.250515399934385,
+              "neutral_singlet_determinant_magnitude": 2.0616778118644983,
+              "total_unnormalized_absolute_fermion_weight": 8.763193289033076,
+              "normalized_toy_probability_with_singlet": 0.9700844576646209,
+              "normalized_toy_probability_without_singlet": 0.4995529070595747
+            },
+            {
+              "spin_twist_s": 1,
+              "SU2_center_twist_z": 1,
+              "charged_fund_twist_s_plus_z_mod2": 0,
+              "fundamental_doublet_determinant_magnitude_squared_color": 0.003804152476392412,
+              "neutral_singlet_determinant_magnitude": 2.0616778118644983,
+              "total_unnormalized_absolute_fermion_weight": 0.00784293675352762,
+              "normalized_toy_probability_with_singlet": 0.0008682121683388385,
+              "normalized_toy_probability_without_singlet": 0.00044709294042530594
+            }
+          ]
+        },
+        {
+          "mass": 0.02,
+          "n": 12,
+          "spin_center_sectors": [
+            {
+              "spin_twist_s": 0,
+              "SU2_center_twist_z": 0,
+              "charged_fund_twist_s_plus_z_mod2": 0,
+              "fundamental_doublet_determinant_magnitude_squared_color": 0.07195366035013498,
+              "neutral_singlet_determinant_magnitude": 0.2682417945625457,
+              "total_unnormalized_absolute_fermion_weight": 0.0193009789776641,
+              "normalized_toy_probability_with_singlet": 0.001458602292329909,
+              "normalized_toy_probability_without_singlet": 0.006896242219801419
+            },
+            {
+              "spin_twist_s": 0,
+              "SU2_center_twist_z": 1,
+              "charged_fund_twist_s_plus_z_mod2": 1,
+              "fundamental_doublet_determinant_magnitude_squared_color": 5.144920838600318,
+              "neutral_singlet_determinant_magnitude": 0.2682417945625457,
+              "total_unnormalized_absolute_fermion_weight": 1.380082798628387,
+              "normalized_toy_probability_with_singlet": 0.10429480991684204,
+              "normalized_toy_probability_without_singlet": 0.49310375778019855
+            },
+            {
+              "spin_twist_s": 1,
+              "SU2_center_twist_z": 0,
+              "charged_fund_twist_s_plus_z_mod2": 1,
+              "fundamental_doublet_determinant_magnitude_squared_color": 5.144920838600318,
+              "neutral_singlet_determinant_magnitude": 2.2682417945625457,
+              "total_unnormalized_absolute_fermion_weight": 11.669924475829022,
+              "normalized_toy_probability_with_singlet": 0.8819127056435551,
+              "normalized_toy_probability_without_singlet": 0.49310375778019855
+            },
+            {
+              "spin_twist_s": 1,
+              "SU2_center_twist_z": 1,
+              "charged_fund_twist_s_plus_z_mod2": 0,
+              "fundamental_doublet_determinant_magnitude_squared_color": 0.07195366035013498,
+              "neutral_singlet_determinant_magnitude": 2.2682417945625457,
+              "total_unnormalized_absolute_fermion_weight": 0.16320829967793404,
+              "normalized_toy_probability_with_singlet": 0.012333882147272929,
+              "normalized_toy_probability_without_singlet": 0.006896242219801419
+            }
+          ]
+        },
+        {
+          "mass": 0.1,
+          "n": 12,
+          "spin_center_sectors": [
+            {
+              "spin_twist_s": 0,
+              "SU2_center_twist_z": 0,
+              "charged_fund_twist_s_plus_z_mod2": 0,
+              "fundamental_doublet_determinant_magnitude_squared_color": 4.572875922365622,
+              "neutral_singlet_determinant_magnitude": 2.1384283767210026,
+              "total_unnormalized_absolute_fermion_weight": 9.778767635610874,
+              "normalized_toy_probability_with_singlet": 0.07179478105672145,
+              "normalized_toy_probability_without_singlet": 0.10536840074783745
+            },
+            {
+              "spin_twist_s": 0,
+              "SU2_center_twist_z": 1,
+              "charged_fund_twist_s_plus_z_mod2": 1,
+              "fundamental_doublet_determinant_magnitude_squared_color": 17.126589429249645,
+              "neutral_singlet_determinant_magnitude": 2.1384283767210026,
+              "total_unnormalized_absolute_fermion_weight": 36.6239848319574,
+              "normalized_toy_probability_with_singlet": 0.26888981008810026,
+              "normalized_toy_probability_without_singlet": 0.39463159925216257
+            },
+            {
+              "spin_twist_s": 1,
+              "SU2_center_twist_z": 0,
+              "charged_fund_twist_s_plus_z_mod2": 1,
+              "fundamental_doublet_determinant_magnitude_squared_color": 17.126589429249645,
+              "neutral_singlet_determinant_magnitude": 4.138428376721004,
+              "total_unnormalized_absolute_fermion_weight": 70.87716369045671,
+              "normalized_toy_probability_with_singlet": 0.5203733884162249,
+              "normalized_toy_probability_without_singlet": 0.39463159925216257
+            },
+            {
+              "spin_twist_s": 1,
+              "SU2_center_twist_z": 1,
+              "charged_fund_twist_s_plus_z_mod2": 0,
+              "fundamental_doublet_determinant_magnitude_squared_color": 4.572875922365622,
+              "neutral_singlet_determinant_magnitude": 4.138428376721004,
+              "total_unnormalized_absolute_fermion_weight": 18.924519480342124,
+              "normalized_toy_probability_with_singlet": 0.13894202043895346,
+              "normalized_toy_probability_without_singlet": 0.10536840074783745
+            }
+          ]
+        },
+        {
+          "mass": 1.0,
+          "n": 12,
+          "spin_center_sectors": [
+            {
+              "spin_twist_s": 0,
+              "SU2_center_twist_z": 0,
+              "charged_fund_twist_s_plus_z_mod2": 0,
+              "fundamental_doublet_determinant_magnitude_squared_color": 16769024.999999985,
+              "neutral_singlet_determinant_magnitude": 4094.999999999998,
+              "total_unnormalized_absolute_fermion_weight": 68669157374.99991,
+              "normalized_toy_probability_with_singlet": 0.24981692434084612,
+              "normalized_toy_probability_without_singlet": 0.24987792969477568
+            },
+            {
+              "spin_twist_s": 0,
+              "SU2_center_twist_z": 1,
+              "charged_fund_twist_s_plus_z_mod2": 1,
+              "fundamental_doublet_determinant_magnitude_squared_color": 16785409.000000022,
+              "neutral_singlet_determinant_magnitude": 4094.999999999998,
+              "total_unnormalized_absolute_fermion_weight": 68736249855.00006,
+              "normalized_toy_probability_with_singlet": 0.25006100534665354,
+              "normalized_toy_probability_without_singlet": 0.2501220703052243
+            },
+            {
+              "spin_twist_s": 1,
+              "SU2_center_twist_z": 0,
+              "charged_fund_twist_s_plus_z_mod2": 1,
+              "fundamental_doublet_determinant_magnitude_squared_color": 16785409.000000022,
+              "neutral_singlet_determinant_magnitude": 4097.000000000003,
+              "total_unnormalized_absolute_fermion_weight": 68769820673.00014,
+              "normalized_toy_probability_with_singlet": 0.25018313526379504,
+              "normalized_toy_probability_without_singlet": 0.2501220703052243
+            },
+            {
+              "spin_twist_s": 1,
+              "SU2_center_twist_z": 1,
+              "charged_fund_twist_s_plus_z_mod2": 0,
+              "fundamental_doublet_determinant_magnitude_squared_color": 16769024.999999985,
+              "neutral_singlet_determinant_magnitude": 4097.000000000003,
+              "total_unnormalized_absolute_fermion_weight": 68702695424.999985,
+              "normalized_toy_probability_with_singlet": 0.24993893504870518,
+              "normalized_toy_probability_without_singlet": 0.24987792969477568
+            }
+          ]
+        }
+      ],
+      "mass_length_continuum_limit": "det D_P/det D_AP -> tanh(mu/2) for lattice mass m=mu/n as n->infinity",
+      "normalized_continuum_sector_probability_formula": "(r^3,r,1,r^2)/[(1+r)(1+r^2)] for (s,z)=00,01,10,11 with r=tanh(mu/2)",
+      "continuum_mass_length_gate": [
+        {
+          "dimensionless_mass_times_circle_length_mu": 0.0,
+          "continuum_ratio_detP_to_detAP": 0.0,
+          "continuum_spin_center_sectors_00_01_10_11": [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "finite_n_refinements": [
+            {
+              "N": 12,
+              "lattice_mass_mu_over_N": 0.0,
+              "periodic_to_antiperiodic_determinant_ratio": 0.0,
+              "deviation_from_continuum_tanh_mu_over_2": 0.0
+            },
+            {
+              "N": 24,
+              "lattice_mass_mu_over_N": 0.0,
+              "periodic_to_antiperiodic_determinant_ratio": 0.0,
+              "deviation_from_continuum_tanh_mu_over_2": 0.0
+            },
+            {
+              "N": 96,
+              "lattice_mass_mu_over_N": 0.0,
+              "periodic_to_antiperiodic_determinant_ratio": 0.0,
+              "deviation_from_continuum_tanh_mu_over_2": 0.0
+            },
+            {
+              "N": 256,
+              "lattice_mass_mu_over_N": 0.0,
+              "periodic_to_antiperiodic_determinant_ratio": 0.0,
+              "deviation_from_continuum_tanh_mu_over_2": 0.0
+            }
+          ]
+        },
+        {
+          "dimensionless_mass_times_circle_length_mu": 0.1,
+          "continuum_ratio_detP_to_detAP": 0.04995837495787997,
+          "continuum_spin_center_sectors_00_01_10_11": [
+            0.0001184595964645295,
+            0.04746283138555568,
+            0.9500475430910575,
+            0.0023711659269222245
+          ],
+          "finite_n_refinements": [
+            {
+              "N": 12,
+              "lattice_mass_mu_over_N": 0.008333333333333333,
+              "periodic_to_antiperiodic_determinant_ratio": 0.04975170680562015,
+              "deviation_from_continuum_tanh_mu_over_2": -0.00020666815225982293
+            },
+            {
+              "N": 24,
+              "lattice_mass_mu_over_N": 0.004166666666666667,
+              "periodic_to_antiperiodic_determinant_ratio": 0.04985475546780101,
+              "deviation_from_continuum_tanh_mu_over_2": -0.00010361949007896276
+            },
+            {
+              "N": 96,
+              "lattice_mass_mu_over_N": 0.0010416666666666667,
+              "periodic_to_antiperiodic_determinant_ratio": 0.049932416278554034,
+              "deviation_from_continuum_tanh_mu_over_2": -2.595867932593532e-05
+            },
+            {
+              "N": 256,
+              "lattice_mass_mu_over_N": 0.000390625,
+              "periodic_to_antiperiodic_determinant_ratio": 0.049948636237612816,
+              "deviation_from_continuum_tanh_mu_over_2": -9.738720267153667e-06
+            }
+          ]
+        },
+        {
+          "dimensionless_mass_times_circle_length_mu": 1.0,
+          "continuum_ratio_detP_to_detAP": 0.46211715726000974,
+          "continuum_spin_center_sectors_00_01_10_11": [
+            0.05561803230222684,
+            0.260442247112052,
+            0.5635848897198907,
+            0.12035483086583043
+          ],
+          "finite_n_refinements": [
+            {
+              "N": 12,
+              "lattice_mass_mu_over_N": 0.08333333333333333,
+              "periodic_to_antiperiodic_determinant_ratio": 0.44644880568669165,
+              "deviation_from_continuum_tanh_mu_over_2": -0.015668351573318084
+            },
+            {
+              "N": 24,
+              "lattice_mass_mu_over_N": 0.041666666666666664,
+              "periodic_to_antiperiodic_determinant_ratio": 0.45410843232690173,
+              "deviation_from_continuum_tanh_mu_over_2": -0.008008724933108002
+            },
+            {
+              "N": 96,
+              "lattice_mass_mu_over_N": 0.010416666666666666,
+              "periodic_to_antiperiodic_determinant_ratio": 0.4600807994122015,
+              "deviation_from_continuum_tanh_mu_over_2": -0.0020363578478082567
+            },
+            {
+              "N": 256,
+              "lattice_mass_mu_over_N": 0.00390625,
+              "periodic_to_antiperiodic_determinant_ratio": 0.4613507913845249,
+              "deviation_from_continuum_tanh_mu_over_2": -0.0007663658754848424
+            }
+          ]
+        },
+        {
+          "dimensionless_mass_times_circle_length_mu": 5.0,
+          "continuum_ratio_detP_to_detAP": 0.9866142981514303,
+          "continuum_spin_center_sectors_00_01_10_11": [
+            0.2449693916292537,
+            0.2516616348712036,
+            0.2550760062394487,
+            0.24829296726009403
+          ],
+          "finite_n_refinements": [
+            {
+              "N": 12,
+              "lattice_mass_mu_over_N": 0.4166666666666667,
+              "periodic_to_antiperiodic_determinant_ratio": 0.96985453053388,
+              "deviation_from_continuum_tanh_mu_over_2": -0.01675976761755027
+            },
+            {
+              "N": 24,
+              "lattice_mass_mu_over_N": 0.20833333333333334,
+              "periodic_to_antiperiodic_determinant_ratio": 0.9789163744918349,
+              "deviation_from_continuum_tanh_mu_over_2": -0.007697923659595429
+            },
+            {
+              "N": 96,
+              "lattice_mass_mu_over_N": 0.052083333333333336,
+              "periodic_to_antiperiodic_determinant_ratio": 0.9848326265906816,
+              "deviation_from_continuum_tanh_mu_over_2": -0.00178167156074871
+            },
+            {
+              "N": 256,
+              "lattice_mass_mu_over_N": 0.01953125,
+              "periodic_to_antiperiodic_determinant_ratio": 0.9859579251249576,
+              "deviation_from_continuum_tanh_mu_over_2": -0.0006563730264727008
+            }
+          ]
+        },
+        {
+          "dimensionless_mass_times_circle_length_mu": 20.0,
+          "continuum_ratio_detP_to_detAP": 0.9999999958776927,
+          "continuum_spin_center_sectors_00_01_10_11": [
+            0.2499999984541348,
+            0.2500000005152884,
+            0.25000000154586527,
+            0.2499999994847116
+          ],
+          "finite_n_refinements": [
+            {
+              "N": 12,
+              "lattice_mass_mu_over_N": 1.6666666666666667,
+              "periodic_to_antiperiodic_determinant_ratio": 0.9999845331508509,
+              "deviation_from_continuum_tanh_mu_over_2": -1.5462726841830587e-05
+            },
+            {
+              "N": 24,
+              "lattice_mass_mu_over_N": 0.8333333333333334,
+              "periodic_to_antiperiodic_determinant_ratio": 0.999999037866465,
+              "deviation_from_continuum_tanh_mu_over_2": -9.580112276807995e-07
+            },
+            {
+              "N": 96,
+              "lattice_mass_mu_over_N": 0.20833333333333334,
+              "periodic_to_antiperiodic_determinant_ratio": 0.9999999742307727,
+              "deviation_from_continuum_tanh_mu_over_2": -2.1646920034257278e-08
+            },
+            {
+              "N": 256,
+              "lattice_mass_mu_over_N": 0.078125,
+              "periodic_to_antiperiodic_determinant_ratio": 0.9999999913356477,
+              "deviation_from_continuum_tanh_mu_over_2": -4.5420450733857365e-09
+            }
+          ]
+        }
+      ],
+      "determinant_local_gauge_frame_covariance_error": 1.3355035904641792e-15,
+      "scope": "Exact determinant and *toy* nonnegative weights with equal a priori topological sector factors. This does NOT derive dynamical spin selection for the original 3+1 topology-changing spacetime, a physical 4D chiral gauge theory, the Born rule, or a unique microscopic action.",
+      "caveat": "A fermion zero mode zeros the vacuum partition determinant at zero Grassmann sources, but correlators with insertions may saturate zero modes. Dynamical mass, gauge integration over continuous SU2 holonomy, cobordism spin extension and spin-statistics may change this selection."
+    },
+    "VIII_normalized_two_class_decoherence_control": {
+      "status": "PASS",
+      "conditional_competing_good_spacetime_weight": 1,
+      "normalized_two_sector_measure_records": [
+        {
+          "N": 8,
+          "history_bits_M": 16,
+          "gamma": 0.999,
+          "log10_bad_incoherent_branch_weight": 1.8164799306236996,
+          "log10_bad_coherent_branch_weight": -6.4068874463535,
+          "normalized_bad_sector_probability_against_unit_good_reference": 0.9849705423513466
+        },
+        {
+          "N": 16,
+          "history_bits_M": 64,
+          "gamma": 0.999,
+          "log10_bad_incoherent_branch_weight": 16.265919722494797,
+          "log10_bad_coherent_branch_weight": -25.627549785414,
+          "normalized_bad_sector_probability_against_unit_good_reference": 1.0
+        },
+        {
+          "N": 32,
+          "history_bits_M": 256,
+          "gamma": 0.999,
+          "log10_bad_incoherent_branch_weight": 74.06367888997919,
+          "log10_bad_coherent_branch_weight": -102.510199141656,
+          "normalized_bad_sector_probability_against_unit_good_reference": 1.0
+        },
+        {
+          "N": 64,
+          "history_bits_M": 1024,
+          "gamma": 0.999,
+          "log10_bad_incoherent_branch_weight": 305.25471555991675,
+          "log10_bad_coherent_branch_weight": -410.040796566624,
+          "normalized_bad_sector_probability_against_unit_good_reference": 1.0
+        }
+      ],
+      "log10_incoherent_fraction_threshold_for_bad_weight_below_one_at_N64": -308.25471555991675,
+      "physical_honesty": "The good manifoldlike class has been assigned unit weight and no cross terms by hand. Normalization alone does not turn the raw complex sum into a physical causal-set probability.",
+      "relationship_to_v6_gate_IV": "D_bad=(1-gamma) I+gamma vv\u2020 in a labeled KR subfamily gives D_bad(B,B)=(1-gamma)2^M+gamma|Z|\u00b2. With a separate orthogonal good class of weight 1, p_bad=D_bad(B,B)/(1+D_bad(B,B)).",
+      "no_observed_4D_quantum_gravity_phase_selected": true
     }
   }
 }

@@ -22,8 +22,8 @@ class CausalTopologyGaugeQuantumGravityFlavor(unittest.TestCase):
         cls.V=cls.g["V_3generation_global_quotient_flavor_charge_freedom"]
         cls.VI=cls.g["VI_spin_center_compensation_on_topology_change"]
 
-    def test_five_linked_fronts_plus_extra_topology_change_gate_executed(self):
-        self.assertEqual(len(self.g),6)
+    def test_five_linked_fronts_plus_three_cross_sector_gates_executed(self):
+        self.assertEqual(len(self.g),8)
         self.assertTrue(all(v["status"]=="PASS" for v in self.g.values()))
 
     def test_not_claiming_quantum_gravity_or_Born_or_SM_derivation(self):
@@ -263,5 +263,105 @@ class CausalTopologyGaugeQuantumGravityFlavor(unittest.TestCase):
     def test_no_unjustified_claim_that_spin_cobordism_selects_physical_sector(self):
         self.assertIn("does not fix",self.VI["cobordism_warning"])
         self.assertIn("not an emergent SM",self.VI["scope"])
+
+    def test_full_eight_gates_have_status_and_independent_scope(self):
+        self.assertEqual(len(self.g),8)
+        self.assertTrue(all(v["status"]=="PASS" for v in self.g.values()))
+        self.assertIn("toy",self.g["VII_fermion_determinant_dynamic_spin_center_selection"]["scope"])
+
+    def test_wilson_circle_det_matches_closed_form_varied_lattices(self):
+        for n in (5,8,12,17):
+            for mass in (0.,.01,.2,1.):
+                for theta in (0.,np.pi,np.pi/3):
+                    det=np.linalg.det(m.wilson_circle_operator(n,mass,theta))
+                    expected=(1+mass)**n-np.exp(-1j*theta)
+                    self.assertLess(abs(det-expected),1e-7)
+
+    def test_wilson_circle_operator_massless_periodic_has_one_not_two_zero_modes(self):
+        D=m.wilson_circle_operator(12,0.,0.)
+        self.assertEqual(int(np.sum(np.linalg.svd(D,compute_uv=False)<1e-10)),1)
+        self.assertAlmostEqual(np.linalg.det(D),0)
+
+    def test_wilson_circle_antiperiodic_massless_has_nonzero_determinant(self):
+        self.assertAlmostEqual(np.linalg.det(m.wilson_circle_operator(12,0.,np.pi)).real,2.,places=10)
+
+    def test_wilson_circle_dirac_gauge_frame_conjugation_preserves_determinant(self):
+        rng=np.random.default_rng(40)
+        D=m.wilson_circle_operator(12,.1,np.pi)
+        phases=np.exp(1j*rng.uniform(-np.pi,np.pi,12))
+        G=np.diag(phases)
+        self.assertLess(abs(np.linalg.det(D)-np.linalg.det(G@D@G.conj().T)),1e-9)
+
+    def test_massless_spin_center_selection_doublet_and_singlet(self):
+        r=self.g["VII_fermion_determinant_dynamic_spin_center_selection"]
+        sector=r["sectors_by_mass"][0]["spin_center_sectors"]
+        self.assertEqual([x["normalized_toy_probability_with_singlet"] for x in sector],[0,0,1,0])
+
+    def test_massless_doublet_alone_does_not_select_unique_spin_center(self):
+        r=self.g["VII_fermion_determinant_dynamic_spin_center_selection"]
+        sector=r["sectors_by_mass"][0]["spin_center_sectors"]
+        self.assertEqual([x["normalized_toy_probability_without_singlet"] for x in sector],
+                         [0,.5,.5,0])
+
+    def test_neutral_singlet_distinguishes_compensated_spin_center_twists(self):
+        r=self.g["VII_fermion_determinant_dynamic_spin_center_selection"]
+        sector=r["sectors_by_mass"][0]["spin_center_sectors"]
+        self.assertEqual(sector[1]["fundamental_doublet_determinant_magnitude_squared_color"],
+                         sector[2]["fundamental_doublet_determinant_magnitude_squared_color"])
+        self.assertEqual(sector[1]["neutral_singlet_determinant_magnitude"],0)
+        self.assertGreater(sector[2]["neutral_singlet_determinant_magnitude"],1)
+
+    def test_finite_N_mass_mu_over_N_det_ratio_approaches_tanh(self):
+        r=self.g["VII_fermion_determinant_dynamic_spin_center_selection"]
+        for row in r["continuum_mass_length_gate"]:
+            mu=row["dimensionless_mass_times_circle_length_mu"]
+            self.assertAlmostEqual(row["continuum_ratio_detP_to_detAP"],np.tanh(mu/2),places=13)
+            if mu<=5.:
+                vals=row["finite_n_refinements"]
+                self.assertLess(abs(vals[-1]["deviation_from_continuum_tanh_mu_over_2"]),
+                                abs(vals[0]["deviation_from_continuum_tanh_mu_over_2"])+1e-15)
+
+    def test_four_spin_center_probabilities_from_exact_continuum_formula(self):
+        r=self.g["VII_fermion_determinant_dynamic_spin_center_selection"]
+        for row in r["continuum_mass_length_gate"]:
+            z=row["continuum_ratio_detP_to_detAP"]
+            expected=np.array([z**3,z,1,z**2])/((1+z)*(1+z*z))
+            np.testing.assert_allclose(row["continuum_spin_center_sectors_00_01_10_11"],
+                                       expected,rtol=1e-13,atol=1e-14)
+
+    def test_massive_sector_choice_becomes_indistinguishable_large_mass_length(self):
+        r=self.g["VII_fermion_determinant_dynamic_spin_center_selection"]
+        huge=r["continuum_mass_length_gate"][-1]["continuum_spin_center_sectors_00_01_10_11"]
+        self.assertLess(max(abs(x-.25) for x in huge),1e-8)
+
+    def test_mass_light_continuum_highly_prefers_one_sector(self):
+        r=self.g["VII_fermion_determinant_dynamic_spin_center_selection"]
+        small=r["continuum_mass_length_gate"][1]["continuum_spin_center_sectors_00_01_10_11"]
+        self.assertGreater(small[2],.94)
+
+    def test_normalized_two_sector_decoherence_is_explicitly_conditional(self):
+        r=self.g["VIII_normalized_two_class_decoherence_control"]
+        self.assertTrue(r["no_observed_4D_quantum_gravity_phase_selected"])
+        self.assertEqual(r["conditional_competing_good_spacetime_weight"],1)
+        self.assertIn("assigned unit weight",r["physical_honesty"])
+
+    def test_incoherent_weight_contaminates_bad_history_sector_for_64_events(self):
+        r=self.g["VIII_normalized_two_class_decoherence_control"]
+        z=r["normalized_two_sector_measure_records"][-1]
+        self.assertEqual(z["N"],64)
+        self.assertGreater(z["log10_bad_incoherent_branch_weight"],305)
+        self.assertLess(z["log10_bad_coherent_branch_weight"],-400)
+        self.assertEqual(z["normalized_bad_sector_probability_against_unit_good_reference"],1.)
+
+    def test_critical_coherence_error_must_be_exponential_in_history_bits(self):
+        r=self.g["VIII_normalized_two_class_decoherence_control"]
+        self.assertAlmostEqual(
+           r["log10_incoherent_fraction_threshold_for_bad_weight_below_one_at_N64"],
+           -1024*np.log10(2),places=12)
+
+    def test_normalized_relative_measure_does_not_become_real_TOE(self):
+        self.assertFalse(self.data["TOE_solved"])
+        self.assertFalse(self.data["Lorentzian_4D_GR_derived"])
+        self.assertFalse(self.data["Born_rule_derived"])
 
 if __name__=="__main__":unittest.main()

@@ -1,0 +1,381 @@
+{
+  "E8_GS_Higgs_center_lattice": {
+    "eight_Higgs_charge_matrix": [
+      [
+        1,
+        -1,
+        0
+      ],
+      [
+        -1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        -1
+      ],
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        -2,
+        -1,
+        -1
+      ],
+      [
+        1,
+        2,
+        1
+      ],
+      [
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        2
+      ]
+    ],
+    "Higgs_Smith_invariants": [
+      1,
+      1,
+      4
+    ],
+    "two_GS_shift_charge_vectors": [
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        -5
+      ]
+    ],
+    "GS_shift1_exact_Higgs_phase": "theta_D, D=S14 with q=(2,1,1)",
+    "GS_shift2_exact_Higgs_phase": "-2 theta_A +4 theta_C -theta_D",
+    "combined_Higgs_plus_GS_Smith_invariants": [
+      1,
+      1,
+      4
+    ],
+    "lattice_character_constraint": "q1+q2+q3 == 0 mod 4 for every Higgs and GS shift row",
+    "representation_residues": {
+      "16": {
+        "sum_charge_mod4": 1,
+        "Z4_phase_power_i": 1,
+        "multiplet_count": 3
+      },
+      "10": {
+        "sum_charge_mod4": 2,
+        "Z4_phase_power_i": 2,
+        "multiplet_count": 5
+      },
+      "1": {
+        "sum_charge_mod4": 0,
+        "Z4_phase_power_i": 0,
+        "multiplet_count": 8
+      }
+    },
+    "center_interpretation": "Generator exp(2pi i (q1+q2+q3)/4) acts as i on Spin10 16, -1 on 10, 1 on singlets. This is the standard Spin10 center action under the global (Spin10 x SU4)/Z4 identification, NOT automatically a new physical Z4 nor the protective Z4^R.",
+    "mathematical_unlocked": "Two necessary GS shift vectors can be expressed as integral combinations of phases of existing nonzero singlet VEVs; no independent arbitrary charge sectors required at charge-lattice level.",
+    "physical_remaining": "Effective anomalous Wess-Zumino couplings, axion kinetic/Stueckelberg terms, covariant quantization, global quotient, anomaly inflow, R symmetry and 11D geometric origin are not derived. Higgs phases alone never prove quantum anomaly cancellation."
+  },
+  "causal_signed_wave_operator_falsifier": {
+    "region": "3+1 Minkowski future cone 0<t<1; finite Poisson sprinkling density rho",
+    "probe_field": "s=t^2-x^2-y^2-z^2, f(origin)=0",
+    "continuum_metric_signature": "(-,+,+,+)",
+    "continuum_Box_on_probe": -8,
+    "signed_layer_weights": [
+      1,
+      -5,
+      4
+    ],
+    "numerical": [
+      {
+        "density": 40,
+        "weighted_constant": 4.090321444316592,
+        "weighted_s_t2_minus_r2": -2.513681418662022,
+        "putative_Box_s_value_after_only_subtracting_center_3f0": -2.513681418662022
+      },
+      {
+        "density": 160,
+        "weighted_constant": 3.3629090442341982,
+        "weighted_s_t2_minus_r2": -2.519400262026823,
+        "putative_Box_s_value_after_only_subtracting_center_3f0": -2.519400262026823
+      },
+      {
+        "density": 640,
+        "weighted_constant": 3.1605714510905263,
+        "weighted_s_t2_minus_r2": -1.7324133827403314,
+        "putative_Box_s_value_after_only_subtracting_center_3f0": -1.7324133827403314
+      },
+      {
+        "density": 2560,
+        "weighted_constant": 3.076194696393881,
+        "weighted_s_t2_minus_r2": -1.0826701680263324,
+        "putative_Box_s_value_after_only_subtracting_center_3f0": -1.0826701680263324
+      },
+      {
+        "density": 10240,
+        "weighted_constant": 3.037174859798385,
+        "weighted_s_t2_minus_r2": -0.6455588296491998,
+        "putative_Box_s_value_after_only_subtracting_center_3f0": -0.6455588296491998
+      },
+      {
+        "density": 40960,
+        "weighted_constant": 3.0183676654947837,
+        "weighted_s_t2_minus_r2": -0.3739776208093588,
+        "putative_Box_s_value_after_only_subtracting_center_3f0": -0.3739776208093588
+      },
+      {
+        "density": 163840,
+        "weighted_constant": 3.009130160972456,
+        "weighted_s_t2_minus_r2": -0.21236917194049054,
+        "putative_Box_s_value_after_only_subtracting_center_3f0": -0.21236917194049054
+      },
+      {
+        "density": 1000000,
+        "weighted_constant": 3.003682855392165,
+        "weighted_s_t2_minus_r2": -0.09930426319447783,
+        "putative_Box_s_value_after_only_subtracting_center_3f0": -0.09930426319447783
+      }
+    ],
+    "constant_limit": 3,
+    "s_probe_limit": 0,
+    "asymptotic_s_probe": "O(log(rho)/sqrt(rho)) ->0 from leading moment cancellation; zero-center term cannot rescue it.",
+    "negative_result": "Finite signed count on f=constant DOES NOT yield a correctly normalized d'Alembertian. In the given unrescaled operator limit the nonharmonic s=t\u00b2-r\u00b2 has limit0 while Box(s)=-8. Requires extra operator normalization, renormalization/mesoscale and more test fields.",
+    "not_a_no_go": "One can rescale, change weights, add higher layers, or use the proven independent causal-set operators. This test only invalidates interpreting this particular finite signed expectation as an Einstein/Box derivation."
+  },
+  "localized_M2_Yukawa_target": {
+    "source_spurion_factors": [
+      0.1,
+      0.142828568570857,
+      0.1442220510185596
+    ],
+    "spurion_max_min_ratio": 1.4422205101855958,
+    "illustrative_family_hierarchy_target": 100000.0,
+    "minimum_unknown_overlap_times_Higgs_projection_ratio": 69337.52452815363,
+    "dimensionless_Euclidean_M2_action_difference_if_equal_prefactors": 11.146741518113615,
+    "Gaussian_triple_overlap_required_displacement_in_widths": 5.782752333823475,
+    "Gaussian_exact_ratio": "exp(-d^2/(3 sigma^2)) for three equal-width nonnormalized profiles at x1=x2=0,x3=d",
+    "minimal_geometric_task": "Derive distinct instanton actions or localized Dirac-mode overlap integrals in the REAL compact singular G2 geometry; identify the two Spin10 10_H light-doublet projections.",
+    "critical_caveat": "This is an inverse engineering target. Neither Gaussian positions/widths nor M2 volumes, prefactors, K\u00e4hler metrics or SM masses follow from E8 source data. Original ordinary S3 bulk cup=0."
+  },
+  "orbifold_boundary_flavor_no_go_and_escape": {
+    "inner_SU5_boundary_involution": [
+      1,
+      1,
+      1,
+      -1,
+      -1
+    ],
+    "shared_flavor_parity_example": {
+      "F0": [
+        1,
+        1,
+        -1
+      ],
+      "Fpi": [
+        1,
+        -1,
+        1
+      ],
+      "common_plusplus_dim": 1
+    },
+    "exact_same_count_theorem": "For any common flavor involutions F0,Fpi, both su3 and su2 adjoint components of SU5 have gauge parity + at both boundaries, so their zero-mode flavor spaces are identical. Parities alone cannot produce 2 triplets and 1 octet.",
+    "low_energy_octet_boundary_mass_example_GeV": [
+      100000.0,
+      10000000000000.0
+    ],
+    "low_energy_triplet_mass_example_GeV": [
+      10000000.0,
+      10000000.0
+    ],
+    "one_octet_two_triplets_example": true,
+    "needed_new_physics": "An SU5-breaking brane-localized color-octet Majorana mass operator or representation-specific boundary dynamics (not mere shared flavor parities). Its coefficient and full KK eigenvalue problem are still inputs.",
+    "important_limit": "Boundary operator is gauge invariant under SM on an SU5-broken boundary, but no 5D Dirac boundary-value problem, proton rate, 5D anomaly or two-loop full spectrum is solved."
+  },
+  "single_photon_mode_capacity": {
+    "mode_table": [
+      {
+        "orthogonal_one_photon_modes": 40,
+        "dimension": 40,
+        "qubits_max_by_subspace_dimension": 5,
+        "complex_amplitude_storage": 40,
+        "dense_gate_classical_complex_multiply_bound": 1600
+      },
+      {
+        "orthogonal_one_photon_modes": 240,
+        "dimension": 240,
+        "qubits_max_by_subspace_dimension": 7,
+        "complex_amplitude_storage": 240,
+        "dense_gate_classical_complex_multiply_bound": 57600
+      },
+      {
+        "orthogonal_one_photon_modes": 1024,
+        "dimension": 1024,
+        "qubits_max_by_subspace_dimension": 10,
+        "complex_amplitude_storage": 1024,
+        "dense_gate_classical_complex_multiply_bound": 1048576
+      },
+      {
+        "orthogonal_one_photon_modes": 4096,
+        "dimension": 4096,
+        "qubits_max_by_subspace_dimension": 12,
+        "complex_amplitude_storage": 4096,
+        "dense_gate_classical_complex_multiply_bound": 16777216
+      },
+      {
+        "orthogonal_one_photon_modes": 65536,
+        "dimension": 65536,
+        "qubits_max_by_subspace_dimension": 16,
+        "complex_amplitude_storage": 65536,
+        "dense_gate_classical_complex_multiply_bound": 4294967296
+      }
+    ],
+    "40_mode_qubit_upper_bound": 5,
+    "240_mode_qubit_upper_bound": 7,
+    "n_logical_qubits_require_at_least_2_power_n_modes": "exact Hilbert dimension bound for one photon in d orthogonal modes",
+    "240_mode_600_passive_gate_simulator_final_norm": 1.0,
+    "classical_simulation": "One complex amplitude per optical mode; passive beam splitters and phase shifters update a length-d vector in O(d) or O(d\u00b2) for a dense interferometer. Polynomial in d, not guaranteed polynomial in encoded n.",
+    "limits": "Temporal/OAM/polarization modes ALL count if orthogonal; adaptive multi-photon resources, nonlinear media, squeezed states, postselection, active feedforward and exotic Hilbert structures require separate accounting. Known multi-rail no-scaling limitation, not an impossibility theorem for ALL photonic QC."
+  },
+  "photonic_experimental_resource_budget": {
+    "null_event_probability_assumed": 0.5,
+    "hypothetical_nonstandard_probability_assumed_NOT_DERIVED": 0.51,
+    "detected_event_probability_difference": 0.010000000000000009,
+    "detected_successful_events_in_preregistered_fixed_setting": 55000,
+    "two_sided_typeI_budget": 0.001,
+    "upper_binomial_rejection_condition": "count > 27886",
+    "exact_upper_null_tail": 0.0004901291334477098,
+    "upper_alternative_power": 0.9184297563407506,
+    "two_sided_null_tail_for_symmetric_p0": 0.0009802582668954195,
+    "ideal_event_ready_heralded_acceptance_with_two_photons": 0.15680000000000002,
+    "expected_emitted_photon_pairs_at_assumed_acceptance": 350765.30612244894,
+    "important": "This is a power/resource budget for a posited p=.51, NOT a prediction of a TOE. If the physical model predicts ordinary QM p=.50, this experiment cannot distinguish it at any sample size. No independent full detection closure, source drift, calibration or multiple-setting correction is included."
+  },
+  "physics_dependency_DAG": {
+    "nodes": {
+      "compact_G2_geometry": "unbuilt",
+      "source_chiral_index": "conditional_verified",
+      "axion_inflow": "unbuilt",
+      "full_anomaly_freedom": "unbuilt",
+      "defect_Yukawa_integrals": "unbuilt",
+      "charged_SM_masses": "unbuilt",
+      "GUT_boundary_action": "toy_parity_only",
+      "GUT_full_spectrum": "unbuilt",
+      "UV_causal_action": "unbuilt",
+      "metric_and_dimensional_limit": "unbuilt",
+      "Einstein_constraints": "unbuilt",
+      "quantum_time_generator": "unbuilt",
+      "selected_quantum_state": "unbuilt",
+      "process_tensor_prediction": "unbuilt",
+      "falsifiable_test": "unbuilt",
+      "physical_TOE_completion": "unbuilt"
+    },
+    "edges": [
+      [
+        "compact_G2_geometry",
+        "source_chiral_index"
+      ],
+      [
+        "compact_G2_geometry",
+        "axion_inflow"
+      ],
+      [
+        "compact_G2_geometry",
+        "defect_Yukawa_integrals"
+      ],
+      [
+        "source_chiral_index",
+        "full_anomaly_freedom"
+      ],
+      [
+        "axion_inflow",
+        "full_anomaly_freedom"
+      ],
+      [
+        "defect_Yukawa_integrals",
+        "charged_SM_masses"
+      ],
+      [
+        "full_anomaly_freedom",
+        "charged_SM_masses"
+      ],
+      [
+        "GUT_boundary_action",
+        "GUT_full_spectrum"
+      ],
+      [
+        "charged_SM_masses",
+        "physical_TOE_completion"
+      ],
+      [
+        "GUT_full_spectrum",
+        "physical_TOE_completion"
+      ],
+      [
+        "UV_causal_action",
+        "metric_and_dimensional_limit"
+      ],
+      [
+        "metric_and_dimensional_limit",
+        "Einstein_constraints"
+      ],
+      [
+        "Einstein_constraints",
+        "physical_TOE_completion"
+      ],
+      [
+        "UV_causal_action",
+        "quantum_time_generator"
+      ],
+      [
+        "quantum_time_generator",
+        "selected_quantum_state"
+      ],
+      [
+        "selected_quantum_state",
+        "process_tensor_prediction"
+      ],
+      [
+        "process_tensor_prediction",
+        "falsifiable_test"
+      ],
+      [
+        "falsifiable_test",
+        "physical_TOE_completion"
+      ]
+    ],
+    "descendant_counts": {
+      "compact_G2_geometry": 6,
+      "source_chiral_index": 3,
+      "axion_inflow": 3,
+      "full_anomaly_freedom": 2,
+      "defect_Yukawa_integrals": 2,
+      "charged_SM_masses": 1,
+      "GUT_boundary_action": 2,
+      "GUT_full_spectrum": 1,
+      "UV_causal_action": 7,
+      "metric_and_dimensional_limit": 2,
+      "Einstein_constraints": 1,
+      "quantum_time_generator": 4,
+      "selected_quantum_state": 3,
+      "process_tensor_prediction": 2,
+      "falsifiable_test": 1,
+      "physical_TOE_completion": 0
+    },
+    "first_particle_gate": "Construct exact compact source/defect geometry WITH two quantized GS axionic couplings and nonzero physical Yukawa integrals. Reject model before a mass fit if the global gauge/anomaly structure fails.",
+    "first_gravity_gate": "Specify microscopic exchange action AND its continuum time/metric generator, then test the wave operator on constant, linear and quadratic fields. Reject candidate before claiming Einstein equations if Box(s) fails.",
+    "computing_gate": "Account for exponential single-photon mode growth before claiming scalable BQP at polynomial hardware resources.",
+    "logical_qualification": "A project-planning DAG with explicit assumptions and no unique objectively derived ranking. Several branches are independent, so pursuing one gate does not automatically derive every other part of the TOE."
+  }
+}

@@ -1,0 +1,443 @@
+{
+  "geometry": {
+    "free_affine_witnesses": [
+      {
+        "fixed_axis": 0,
+        "translation_mod_one": "1/2"
+      },
+      {
+        "fixed_axis": 1,
+        "translation_mod_one": "1/2"
+      },
+      {
+        "fixed_axis": 2,
+        "translation_mod_one": "1/2"
+      }
+    ],
+    "a2_b2_ab2_translations": [
+      [
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-1"
+      ]
+    ],
+    "twisted_betti_by_character": {
+      "0": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "1": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "2": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "3": [
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    "triple_twisted_cup_integral_unit_cover": "1/4",
+    "unit_L2_normalized_triple": "2",
+    "ordinary_parallel_spinors": 0,
+    "cover_spin_translation_signs": [
+      -1,
+      -1,
+      -1
+    ],
+    "ordinary_Dirac_squared_cover_lower_bound_unit_lengths": "3*pi**2",
+    "scope": "Closed flat Hantzsche-Wendt manifold; coefficients factor through V4. Twisted de Rham modes require the gauge-theory twist; ordinary spinors are different."
+  },
+  "full_E8_centralizer": {
+    "E8_roots": 240,
+    "fixed_roots": 72,
+    "fixed_root_rank": 6,
+    "root_dot_one_neighbor_counts": [
+      20
+    ],
+    "fixed_Lie_algebra": "e6 + u1 + u1",
+    "gauge_dimension": 80,
+    "warning": "Counting only Spin10 plus SU4 Cartan misses 32 extra invariant spinor gauge generators. Lie algebra does not specify the global gauge group."
+  },
+  "Higgs_branches": {
+    "parallel_BPS_Higgs": "phi=sum_i a_i dx_i P_i; d_A phi=d_A* phi=[phi wedge phi]=0",
+    "SU4_embedding": "rho(g)=diag(chi_0,chi_1,chi_2,chi_3)",
+    "rows": [
+      {
+        "active_axes": [],
+        "fundamental_4_betti": [
+          1,
+          3,
+          3,
+          1
+        ],
+        "wedge_6_betti": [
+          0,
+          6,
+          6,
+          0
+        ],
+        "adjoint_15_betti": [
+          3,
+          12,
+          12,
+          3
+        ],
+        "full_E8_betti": [
+          80,
+          168,
+          168,
+          80
+        ]
+      },
+      {
+        "active_axes": [
+          0
+        ],
+        "fundamental_4_betti": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "wedge_6_betti": [
+          0,
+          4,
+          4,
+          0
+        ],
+        "adjoint_15_betti": [
+          1,
+          6,
+          6,
+          1
+        ],
+        "full_E8_betti": [
+          46,
+          46,
+          46,
+          46
+        ]
+      },
+      {
+        "active_axes": [
+          1
+        ],
+        "fundamental_4_betti": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "wedge_6_betti": [
+          0,
+          4,
+          4,
+          0
+        ],
+        "adjoint_15_betti": [
+          1,
+          6,
+          6,
+          1
+        ],
+        "full_E8_betti": [
+          46,
+          46,
+          46,
+          46
+        ]
+      },
+      {
+        "active_axes": [
+          0,
+          1
+        ],
+        "fundamental_4_betti": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "wedge_6_betti": [
+          0,
+          2,
+          2,
+          0
+        ],
+        "adjoint_15_betti": [
+          0,
+          3,
+          3,
+          0
+        ],
+        "full_E8_betti": [
+          45,
+          23,
+          23,
+          45
+        ]
+      },
+      {
+        "active_axes": [
+          2
+        ],
+        "fundamental_4_betti": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "wedge_6_betti": [
+          0,
+          4,
+          4,
+          0
+        ],
+        "adjoint_15_betti": [
+          1,
+          6,
+          6,
+          1
+        ],
+        "full_E8_betti": [
+          46,
+          46,
+          46,
+          46
+        ]
+      },
+      {
+        "active_axes": [
+          0,
+          2
+        ],
+        "fundamental_4_betti": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "wedge_6_betti": [
+          0,
+          2,
+          2,
+          0
+        ],
+        "adjoint_15_betti": [
+          0,
+          3,
+          3,
+          0
+        ],
+        "full_E8_betti": [
+          45,
+          23,
+          23,
+          45
+        ]
+      },
+      {
+        "active_axes": [
+          1,
+          2
+        ],
+        "fundamental_4_betti": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "wedge_6_betti": [
+          0,
+          2,
+          2,
+          0
+        ],
+        "adjoint_15_betti": [
+          0,
+          3,
+          3,
+          0
+        ],
+        "full_E8_betti": [
+          45,
+          23,
+          23,
+          45
+        ]
+      },
+      {
+        "active_axes": [
+          0,
+          1,
+          2
+        ],
+        "fundamental_4_betti": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "wedge_6_betti": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "adjoint_15_betti": [
+          0,
+          3,
+          3,
+          0
+        ],
+        "full_E8_betti": [
+          45,
+          3,
+          3,
+          45
+        ]
+      }
+    ],
+    "zero_Higgs_Spin10_content_H1": {
+      "16": 3,
+      "16bar": 3,
+      "10": 6,
+      "1": 12
+    },
+    "net_chirality": 0,
+    "derivation": "On the torus cover, Hermitian commuting constant Higgs generators give a positive sum of squared momenta and squared Higgs generators. Only constant forms in their joint kernel survive; average these over V4. Nonzero real a_i has no translation monodromy of unit modulus in the fundamental.",
+    "scope": "Twisted gauge-theory cohomology on one smooth closed base. Three spinor family labels have mirrors at a=0; ANY nonzero real axis Higgs gaps all these spinors. Generic three-axis branch has only three singlet H1 modes. No Standard Model vacuum or compact ADE realization is supplied."
+  },
+  "hollow_Yukawa": {
+    "random_complex_cases": 256,
+    "max_relative_sum_rule_error": 6.419112366972565e-16,
+    "exact_sum_rule": "s1=s2+s3 for complex symmetric hollow 3x3 matrices",
+    "proof": "Three diagonal rephasings remove all three off-diagonal phases. The resulting real nonnegative symmetric zero-diagonal matrix has trace zero and one positive/two negative eigenvalues (or a limiting zero-edge case). Perron-Frobenius makes its positive eigenvalue largest in modulus, hence the singular-value equality.",
+    "canonical_normalization_necessary_bound": "s1(Yphys)/s2(Yphys) <= 2*sqrt(kappa(KL)*kappa(KR))",
+    "same_K_metric_required_condition_number_for_ratio_1e5": 50000,
+    "scope": "Bound applies to invertible positive kinetic metrics with Yphys=KL^(-1/2) Y KR^(-1/2); new diagonal operators change the premise. Strengthens the repo inequality, not a newly discovered general matrix theorem."
+  },
+  "causal_estimator_noise": {
+    "exact_cubic_variance_crosscheck": "32144/84375",
+    "independent_moment_residual": "0",
+    "finite_polynomial_identity": "Var[fhat]=sum_{r>=1} (2*s/rho)^r/r! * (f^(r)(s))^2",
+    "linear_kernel_at_s_1_variances": {
+      "rho_1": "2",
+      "rho_10": "1/5",
+      "rho_100": "1/50"
+    },
+    "Bessel_full_estimator_score_bound": {
+      "s": 4.0,
+      "qE": 1.0,
+      "mean_J0": 0.7651976865579665,
+      "variance_bound_formula": "Var >= (2*s/rho)*[f_prime(s)]**2",
+      "rows": [
+        {
+          "rho": 0.001,
+          "variance_lower_bound": 96.82225900722956,
+          "coefficient_of_variation_lower_bound": 12.85920018512407
+        },
+        {
+          "rho": 0.01,
+          "variance_lower_bound": 9.682225900722955,
+          "coefficient_of_variation_lower_bound": 4.066436147305094
+        },
+        {
+          "rho": 0.1,
+          "variance_lower_bound": 0.9682225900722955,
+          "coefficient_of_variation_lower_bound": 1.2859200185124071
+        },
+        {
+          "rho": 1.0,
+          "variance_lower_bound": 0.09682225900722956,
+          "coefficient_of_variation_lower_bound": 0.40664361473050936
+        },
+        {
+          "rho": 10.0,
+          "variance_lower_bound": 0.009682225900722955,
+          "coefficient_of_variation_lower_bound": 0.1285920018512407
+        },
+        {
+          "rho": 100.0,
+          "variance_lower_bound": 0.0009682225900722956,
+          "coefficient_of_variation_lower_bound": 0.04066436147305094
+        }
+      ],
+      "assumptions": "Count-only estimator is unbiased for all positive volumes at fixed rho; square integrability and regular Poisson score identity. Infinite variance also cannot evade the lower bound. Does not assume convergence of the higher chaos terms."
+    },
+    "proof": "(N)_i (N)_j=sum_r binom(i,r)binom(j,r)r!(N)_(i+j-r); Poisson factorial means are lambda^k. The r=0 term is the squared mean.",
+    "scope": "Real polynomial factorial estimator, exact finite identity. Infinite analytic/Bessel extensions require L2 convergence, not assumed here. Sprinkling estimator noise is NOT a quantum Wightman state or a fluctuation-dissipation derivation."
+  },
+  "axion_shift_lattice": {
+    "original_shift_matrix": [
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        -5
+      ]
+    ],
+    "saturated_shift_matrix": [
+      [
+        1,
+        0,
+        3
+      ],
+      [
+        0,
+        1,
+        -5
+      ]
+    ],
+    "original_Smith_nonzero_factors": [
+      1,
+      2
+    ],
+    "saturated_Smith_nonzero_factors": [
+      1,
+      1
+    ],
+    "lattice_index": 2,
+    "primitive_continuous_kernel_generator": [
+      -3,
+      5,
+      1
+    ],
+    "integer_quadratic_coefficients": [
+      "20*a**2 + 2*a*b + 2*a*c + 17*b**2 + 34*b*c + 29*c**2",
+      "10*a**2 + a*b + a*c + 16*b**2 + 23*b*c + 13*c**2"
+    ],
+    "exact_polynomial_residual": "0",
+    "linear_mixed_anomaly_rebasis": "2a+b+c=2*(a+3c)+(b-5c)",
+    "conditional_torus_kernel_components": {
+      "original": "Z2",
+      "saturated": "trivial"
+    },
+    "scope": "Assumes independent 2pi gauge angles and 2pi axions with integer shifts. Replacing the lattice changes the periodic axion model; it is NOT a unimodular redefinition of the original axions. Formal integer polynomial coefficients do not establish quantized normalized WZ couplings, global E8 quotient, inflow or a physical discrete symmetry."
+  }
+}
