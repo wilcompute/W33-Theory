@@ -1,0 +1,260 @@
+{
+  "date": "2026-11-19",
+  "status": "verified conditional missing-information gates, NOT a TOE",
+  "TOE_solved": false,
+  "selected_4D": false,
+  "derived_fermion_generations": false,
+  "derived_4D_GR_or_Born_rule": false,
+  "gates": {
+    "spin_structure_and_2D_doubling": {
+      "status": "PASS",
+      "N": 8,
+      "four_spin_structures": [
+        {
+          "spin_twist_x": 0.0,
+          "spin_twist_y": 0.0,
+          "naive_zero_components": 8,
+          "wilson_zero_components": 2,
+          "max_wilson_chiral_anticommutator": 11.313708498984761
+        },
+        {
+          "spin_twist_x": 0.0,
+          "spin_twist_y": 0.5,
+          "naive_zero_components": 0,
+          "wilson_zero_components": 0,
+          "max_wilson_chiral_anticommutator": 11.098407303991324
+        },
+        {
+          "spin_twist_x": 0.5,
+          "spin_twist_y": 0.0,
+          "naive_zero_components": 0,
+          "wilson_zero_components": 0,
+          "max_wilson_chiral_anticommutator": 11.098407303991324
+        },
+        {
+          "spin_twist_x": 0.5,
+          "spin_twist_y": 0.5,
+          "naive_zero_components": 0,
+          "wilson_zero_components": 0,
+          "max_wilson_chiral_anticommutator": 10.883106108997888
+        }
+      ],
+      "four_corner_chirality_signs": [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "net_chirality": 0,
+      "interpretation": "Naive doubling and Wilson chiral-breaking; global spin twist changes spectrum while local lattice remains flat."
+    },
+    "nonabelian_SU2_plaquette_curvature": {
+      "status": "PASS",
+      "noncommuting_SU2_loop_action": 0.0006276144710668508,
+      "local_gauge_transformation_error": 5.434335486049009e-16,
+      "small_loop_ratios": [
+        0.12026412848731013,
+        0.12380072697652382,
+        0.12469921597440031,
+        0.12492474348423564
+      ],
+      "commuting_loop_error": 1.7554167342883506e-16,
+      "interpretation": "Noncommuting constant gauge potentials have genuine commutator curvature even without ordinary gradients."
+    },
+    "single_Dirac_squared_Pauli_term": {
+      "status": "PASS",
+      "square_minus_laplacian_minus_Pauli_error": 7.850462293418876e-17,
+      "Pauli_curvature_omission_norm": 0.6674,
+      "color_gauge_covariance_error": 1.442222014787673e-16,
+      "Fcurv_eigenvalues": [
+        -0.33369999999999994,
+        0.33369999999999994
+      ],
+      "identity": "Dslash\u00b2=Laplacian+gamma5 tensor (-i[Ax,Ay]), in the specified constant-field conventions",
+      "scope": "2D flat Clifford/gauge matrices assumed; the R/4 curved-space term is known but NOT derived here."
+    },
+    "causal_SJ_quantum_state_nonuniqueness": {
+      "status": "PASS",
+      "causal_events": 6,
+      "positive_SJ_min_eigenvalue": -8.02900293484177e-17,
+      "SJ_commutator_residual": 1.7172725672101718e-15,
+      "relabel_invariance_error": 3.73874415651927e-15,
+      "naive_half_iDelta_negative_eigenvalue": -0.7506273680634492,
+      "second_state_positive_min_eigenvalue": 0.14999999999999994,
+      "second_state_added_noise": 0.15,
+      "conclusion": "SJ positive-part selection works but the same commutator admits a continuum of other positive states."
+    },
+    "conformal_order_metric_ambiguity": {
+      "status": "PASS",
+      "conformal_epsilon": 0.12,
+      "volume_ratio": 1.3517725107054193,
+      "flat_volume": 2.0,
+      "curved_volume": 2.7035450214108385,
+      "MC_volume_estimate": 2.706242070566335,
+      "MC_standard_error": 0.0015911221521634565,
+      "flat_proper_time": 2,
+      "curved_proper_time": 2.37187918969157,
+      "scalar_curvature_at_midpoint": 0.37758137331194563,
+      "causal_order_changed": false,
+      "limitation": "Positive conformal rescaling leaves Lorentzian causal precedence unchanged; no Einstein dynamics derived."
+    },
+    "global_flat_holonomy_spectral_shift": {
+      "status": "PASS",
+      "N": 8,
+      "flat_winding_sectors": [
+        {
+          "theta": 0.0,
+          "winding_real_imag": [
+            1.0,
+            0.0
+          ],
+          "lowest_laplacian_eigenvalue": 0.0,
+          "heat_traces": {
+            "0.25": 26.628512046065353,
+            "1.0": 6.091648714507858,
+            "3.0": 1.8225930097700642,
+            "8.0": 1.037223825293601
+          },
+          "plaquette_curvature": 0.0
+        },
+        {
+          "theta": 1.5707963267948966,
+          "winding_real_imag": [
+            6.123233995736766e-17,
+            1.0
+          ],
+          "lowest_laplacian_eigenvalue": 0.03842943919353914,
+          "heat_traces": {
+            "0.25": 26.62851202698174,
+            "1.0": 6.0915006781710614,
+            "3.0": 1.799946014487411,
+            "8.0": 0.8184108118639548
+          },
+          "plaquette_curvature": 0.0
+        },
+        {
+          "theta": 3.141592653589793,
+          "winding_real_imag": [
+            -1.0,
+            1.2246467991473532e-16
+          ],
+          "lowest_laplacian_eigenvalue": 0.15224093497742652,
+          "heat_traces": {
+            "0.25": 26.628512007898124,
+            "1.0": 6.091352641835348,
+            "3.0": 1.7772997617749178,
+            "8.0": 0.6027016944990948
+          },
+          "plaquette_curvature": 0.0
+        }
+      ],
+      "heat_trace_delta_theta0_minus_pi_at_t8": 0.4345221307945062,
+      "conclusion": "All plaquettes flat, but global Wilson holonomy affects physical spectra."
+    },
+    "four_dimensional_chiral_anomaly_gate": {
+      "status": "PASS",
+      "Brillouin_cones": 16,
+      "naive_zero_spinor_components": 64,
+      "Wilson_zero_spinor_components": 4,
+      "net_cone_orientation": 0,
+      "signed_chiralities": [
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        1,
+        -1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "exact_SM_one_family_anomaly_sums": {
+        "U1_cubic": "0",
+        "gravitational_U1": "0",
+        "SU2_squared_U1": "0",
+        "SU3_squared_U1": "0",
+        "SU3_cubic": "0"
+      },
+      "SU2_left_doublet_count": 4,
+      "conditional": "One SM generation charges supplied by hand; no chiral family dynamically generated."
+    },
+    "spin_gauge_twist_compensation": {
+      "status": "PASS",
+      "four_spin_gauge_sectors": [
+        {
+          "spin_antiperiodic": false,
+          "gauge_winding_angle": 0.0,
+          "effective_twist": 0.0,
+          "naive_zero_spinor_components": 8,
+          "kx_sine_squared_sorted": [
+            0.0,
+            1.4997597826618576e-32,
+            0.4999999999999999,
+            0.5000000000000001,
+            0.5000000000000001,
+            0.5000000000000002,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "spin_antiperiodic": false,
+          "gauge_winding_angle": 3.141592653589793,
+          "effective_twist": 0.5,
+          "naive_zero_spinor_components": 0,
+          "kx_sine_squared_sorted": [
+            0.14644660940672616,
+            0.14644660940672624,
+            0.14644660940672632,
+            0.1464466094067267,
+            0.8535533905932733,
+            0.8535533905932735,
+            0.8535533905932737,
+            0.8535533905932737
+          ]
+        },
+        {
+          "spin_antiperiodic": true,
+          "gauge_winding_angle": 0.0,
+          "effective_twist": 0.5,
+          "naive_zero_spinor_components": 0,
+          "kx_sine_squared_sorted": [
+            0.14644660940672616,
+            0.14644660940672624,
+            0.14644660940672632,
+            0.1464466094067267,
+            0.8535533905932733,
+            0.8535533905932735,
+            0.8535533905932737,
+            0.8535533905932737
+          ]
+        },
+        {
+          "spin_antiperiodic": true,
+          "gauge_winding_angle": 3.141592653589793,
+          "effective_twist": 1.0,
+          "naive_zero_spinor_components": 8,
+          "kx_sine_squared_sorted": [
+            1.4997597826618576e-32,
+            5.99903913064743e-32,
+            0.4999999999999999,
+            0.5000000000000001,
+            0.5000000000000001,
+            0.5000000000000002,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "interpretation": "For a charge-one probe, one antiperiodic spin twist is spectrally equivalent to a pi U1 Wilson holonomy; two minus signs compensate.",
+      "scope": "This equivalence is representation dependent, not an identification of all spin structures and all gauge fields."
+    }
+  }
+}
