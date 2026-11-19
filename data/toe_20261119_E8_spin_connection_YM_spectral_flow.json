@@ -1,0 +1,168 @@
+{
+  "status": "PASS",
+  "scope": "source-free probe YM with exact charged Dirac kernel and an explicit unstable direction, not a TOE",
+  "branching": {
+    "roots_restriction_matches": 240,
+    "Cartan_zero_weights": 8,
+    "Spin5_times_Spin11_branch": "(10,1)+(1,55)+(5,11)+(4,32)",
+    "block_dimensions": [
+      10,
+      55,
+      55,
+      128
+    ],
+    "adjoint_E8_trace_H_squared": 60,
+    "Spin5_vector_trace_H_squared": 2,
+    "basic_embedding_index": 1,
+    "prior_art": "Round35 already gave this branching and vectorlike Spin11->Spin10 barrier; new use is the curved connection and spectral flow"
+  },
+  "Clifford": {
+    "parallel_spinor_line_dimension": 1,
+    "Clifford_anticommutator_checks": 25,
+    "Spin5_spinor_self_duality_symplectic_matrix": [
+      [
+        "0",
+        "0",
+        "0",
+        "-1"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "-1",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "quaternionic_structure_square": -1,
+    "spin_and_dual_spin_connection_cancel": true,
+    "scalar_curvature_over4_at_R1": 5,
+    "gauge_curvature_term_on_parallel_line_at_R1": -5,
+    "Spin10_16_and_16bar_homogeneous_D5_eigenvalues_R_units": [
+      "5*s/2",
+      "-5*s/2"
+    ],
+    "verified_slopes": [
+      "5/2",
+      "-5/2"
+    ],
+    "scope": "Exact eigenbranches through the former zero modes, not the entire spectrum for intermediate s"
+  },
+  "Dirac_kernel": {
+    "formula": "R\u00c2\u00b2 D_tau\u00c2\u00b2=C_Spin6(pi)+5/2-C_Spin5(tau)",
+    "minimum_nontrivial_Spin6_Casimir": "15/4",
+    "minimum_nontrivial_nonspinorial_Casimir": 5,
+    "blocks": [
+      {
+        "Spin5_rep_dimension": 1,
+        "Spin11_multiplicity": 55,
+        "Spin5_Casimir": "0",
+        "D5_kernel_per_copy": 0,
+        "positive_D5_squared_lower_bound_times_R2": "25/4"
+      },
+      {
+        "Spin5_rep_dimension": 5,
+        "Spin11_multiplicity": 11,
+        "Spin5_Casimir": "4",
+        "D5_kernel_per_copy": 0,
+        "positive_D5_squared_lower_bound_times_R2": "9/4"
+      },
+      {
+        "Spin5_rep_dimension": 10,
+        "Spin11_multiplicity": 1,
+        "Spin5_Casimir": "6",
+        "D5_kernel_per_copy": 0,
+        "positive_D5_squared_lower_bound_times_R2": "1/4"
+      },
+      {
+        "Spin5_rep_dimension": 4,
+        "Spin11_multiplicity": 32,
+        "Spin5_Casimir": "5/2",
+        "D5_kernel_per_copy": 1,
+        "positive_D5_squared_lower_bound_times_R2": "5"
+      }
+    ],
+    "cover_D5_complex_kernel_dimension": 32,
+    "Y7_D7_complex_kernel_by_base_spin_structure": {
+      "periodic_periodic": 64,
+      "antiperiodic_periodic": 0,
+      "periodic_antiperiodic": 0,
+      "antiperiodic_antiperiodic": 0
+    },
+    "periodic_kernel_Spin11_rep": "two copies of spinor32",
+    "Spin10_restriction": "two16 plus two16bar; zero representation-theoretic net chirality",
+    "hypotheses": "natural vertical-spin gauge lift, no additional Spin11 Wilson twist, specified round-product quotient metric",
+    "not_claimed": "64 physical four-dimensional Weyl particles or three generations"
+  },
+  "YM": {
+    "global_connection": "A_v=omega_Spin5+sum_I v_I e^a T_aI/R, I=1..11",
+    "curvature": "F_v=(1-|v|\u00c2\u00b2) e^a wedge e^b T_ab/R\u00c2\u00b2",
+    "normalized_energy": "YM(A_v)/YM(A_0)=(1-|v|\u00c2\u00b2)^2",
+    "YM0_with_basic_inner_product": "5*pi^3*R*Area(T2)/(27*gYM^2)",
+    "radial_stationary_s": [
+      -1,
+      0,
+      1
+    ],
+    "radial_second_derivative_at0": -4,
+    "negative_Hessian_directions_descending_to_Y": 11,
+    "Jacobi_eigenvalue_times_R2": -4,
+    "exact_Jacobi_matrix_checks": 55,
+    "source_free_YM_at0": "D_A^*F=0 because the product curvature is covariantly constant",
+    "quotient_descent": "vielbein tensor gauge vector contraction is equivariant; these modes are not removed by H27",
+    "scope": "Standalone internal YM Hessian; not a complete spacetime/AdS BF stability calculation"
+  },
+  "endpoint_and_topology": {
+    "curved_point_unbroken_Lie_algebra": "so11 (dimension55)",
+    "generic_0_abs_s_lt1_holonomy_Lie_algebra": "so6",
+    "generic_unbroken_Lie_algebra": "so10 (dimension45)",
+    "flat_endpoint_global_holonomy": "genuine SU3 H27; projective phase compensation is not used",
+    "flat_endpoint_invariant_SU3_3": 0,
+    "flat_endpoint_invariant_SU3_8": 0,
+    "flat_endpoint_unbroken_Lie_algebra": "e6 (dimension78)",
+    "flat_endpoint_D7_kernel": 0,
+    "E8_characteristic_class_a_mod9": 3,
+    "normalization": "Choose basic a_E8 so its index-one Spin embedding pulls back to lambda=p1/2",
+    "torsion_invariant_along_path": "a_E8=lambda(TY)=3 eta\u00c2\u00b2; connections change on one fixed bundle",
+    "scope": "No C-field phase/quadratic refinement, heterotic vacuum, or physical bulk E8 gauge bosons derived"
+  },
+  "Cfield_equivalence": {
+    "Tr_F_wedge_F_coefficients": {
+      "(0, 1, 2, 3)": 0,
+      "(0, 1, 2, 4)": 0,
+      "(0, 1, 3, 4)": 0,
+      "(0, 2, 3, 4)": 0,
+      "(1, 2, 3, 4)": 0
+    },
+    "Tr_F_wedge_F_identically_zero_for_all_v": true,
+    "Tr_R_wedge_R_identically_zero": true,
+    "real_betti3": 0,
+    "flat_character_differences": "H3(Y;R/Z)=Z9",
+    "flat_same_characteristic_difference_group": "0",
+    "fixed_metric_little_c_zero_curvature_G": 0,
+    "same_shifted_Cfield_for_all_v": true,
+    "reason": "same curvature and integral characteristic; b3(real)=0 removes same-characteristic flat ambiguity",
+    "counterexample": "auxiliary charged D7 kernel64 at v=0, kernel0 at |v|=1, on the same Cfield",
+    "physical_conclusion": "Neither auxiliary E8 Dirac kernel nor added probe YM energy is an invariant physical Cfield observable",
+    "boundary_scope": "closed internal manifold; fixed gravitational differential background; no physical boundary E8 sector",
+    "source": "Diaconescu-Freed-Moore hep-th/0312069 sections2 and3.1-3.3"
+  },
+  "limitations": [
+    "round product metric remains incompatible with proposed G2 geometry",
+    "E8 here is a probe bundle/auxiliary gauge construction; no physical 11D E8 YM action supplied",
+    "kernel is not a physical chiral-family index",
+    "negative probe YM Hessian is not a derived full supergravity tachyon",
+    "no stabilized Higgs vacuum, observed masses, or gravitational equations"
+  ]
+}
