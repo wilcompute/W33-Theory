@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "graph": "W(3,3), strongly regular (40,12,2,4)",
+  "SRG_adjacency_spectrum": "12^1, 2^24, (-4)^15",
+  "integral_identity": "(A+I)^2=9I+4J",
+  "characteristic_three_identity": "(A+I)^2=J mod3",
+  "check_definitions": "H_X=(A+I) mod3; H_Z=(A+I-J) mod3",
+  "rank_HX": 11,
+  "rank_HZ": 10,
+  "commutation": "H_X*H_Z.T=0 mod3",
+  "physical_qutrits": 40,
+  "logical_qutrits": 19,
+  "code_parameters": "[[40,19,4]]_3",
+  "X_distance": 4,
+  "Z_distance": 6,
+  "zero_syndrome_counts_X_through_weight3": {
+    "1": 0,
+    "2": 0,
+    "3": 0
+  },
+  "zero_syndrome_counts_Z_through_weight3": {
+    "1": 0,
+    "2": 0,
+    "3": 0
+  },
+  "Z_distance_lower_bound_exhaustion": {
+    "weight_two_projective_patterns": 1560,
+    "weight_three_projective_patterns": 39520,
+    "weight_four_five_Z_kernel_vectors_exist": false
+  },
+  "X_logical_weight4_positions": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "Z_logical_weight6_positions_and_coeffs": {
+    "positions": [
+      0,
+      1,
+      2,
+      4,
+      9,
+      11
+    ],
+    "coefficients": [
+      1,
+      1,
+      1,
+      2,
+      2,
+      2
+    ]
+  },
+  "projective_points_first_four": [
+    [
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      2
+    ]
+  ],
+  "prior_art": [
+    "Pass4948: F3 modular radical N^2=J",
+    "Pass7733-7740: common [40,11,13], [40,10,18] row spaces across 234 polarities",
+    "repo's 240-edge [[240,81,...]] CSS remains a separate construction"
+  ],
+  "novel_claim_scope": "derived asymmetric qutrit CSS pairing and exact distance witnesses, not uniqueness/literature priority",
+  "not_claimed": [
+    "decoder threshold",
+    "fault-tolerant gate implementation",
+    "spacetime dynamics",
+    "experimental physical memory"
+  ]
+}
