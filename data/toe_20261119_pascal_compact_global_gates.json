@@ -1,0 +1,388 @@
+{
+  "compact_index": {
+    "noncompact_three_chiral_index": 3,
+    "periodic_S1_Fredholm_index": 0,
+    "circle_at_m0_2_exact_zero_modes": 0,
+    "left_wall_candidates": 3,
+    "right_antiwall_candidates": 3,
+    "periodic_criterion": "real scalar channel: exp(integral m dz)=1 iff integral m=0; then one D+ and one D+adjoint zero",
+    "mass_profiles": "m_lambda(theta)=2\u2212(9lambda/2)[1+tanh(8sin(theta))]",
+    "channels": [
+      {
+        "lambda": 0.1458980337503156,
+        "integral_mass": 8.441200895330487,
+        "mass_sign_changes": 0,
+        "left_wall_candidates": 0,
+        "right_antiwall_candidates": 0,
+        "exact_periodic_zero_mode": false
+      },
+      {
+        "lambda": 1.0,
+        "integral_mass": -15.707963267948966,
+        "mass_sign_changes": 2,
+        "left_wall_candidates": 1,
+        "right_antiwall_candidates": 1,
+        "exact_periodic_zero_mode": false
+      },
+      {
+        "lambda": 1.000000000000001,
+        "integral_mass": -15.707963267949,
+        "mass_sign_changes": 2,
+        "left_wall_candidates": 1,
+        "right_antiwall_candidates": 1,
+        "exact_periodic_zero_mode": false
+      },
+      {
+        "lambda": 6.854101966249685,
+        "integral_mass": -181.22879684276913,
+        "mass_sign_changes": 2,
+        "left_wall_candidates": 1,
+        "right_antiwall_candidates": 1,
+        "exact_periodic_zero_mode": false
+      }
+    ],
+    "qualification": "Noncompact or physical boundary/orbifold/flux defects could evade this specific smooth periodic-circle compactness objection. Sign flips represent candidate localized bound states, not necessarily exact zero modes."
+  },
+  "localized_masses": {
+    "mass_offset": 2.0,
+    "unperturbed_selected_lambdas": [
+      1.0,
+      1.000000000000001,
+      6.854101966249685
+    ],
+    "rank_one_split_selected_lambdas": [
+      1.0000000000000002,
+      1.03029048908502,
+      6.864168448248151
+    ],
+    "unperturbed_profile_Gram_eigenvalues": [
+      3.7890467766336466e-16,
+      0.2895408396440727,
+      2.7104591603559265
+    ],
+    "perturbed_profile_Gram_eigenvalues": [
+      5.4171456740663825e-05,
+      0.28585542183385493,
+      2.7140904067094027
+    ],
+    "unperturbed_profile_rank": 2,
+    "perturbed_profile_rank": 3,
+    "defect_sites": [
+      -2.0,
+      0.0,
+      1.0
+    ],
+    "defect_rank_census": [
+      {
+        "contact_count": 1,
+        "Y_rank_at_tol_1e_minus10": 1,
+        "Y_singular_values": [
+          1.0215226929434933e-06,
+          1.167592398140086e-22,
+          6.269303204385526e-38
+        ]
+      },
+      {
+        "contact_count": 2,
+        "Y_rank_at_tol_1e_minus10": 2,
+        "Y_singular_values": [
+          0.6157018969637711,
+          1.551572046490864e-08,
+          2.29568364924854e-17
+        ]
+      },
+      {
+        "contact_count": 3,
+        "Y_rank_at_tol_1e_minus10": 3,
+        "Y_singular_values": [
+          0.6230289014347985,
+          0.00012900053152227164,
+          4.2359076664444946e-10
+        ]
+      }
+    ],
+    "exact_contact_rank_bound": "rank(sum of r point-contact outer products) <= r",
+    "qualification": "Coupling positions, 5D scalar profile, gauge representations and Higgs amplitudes inserted; no observed quark/lepton masses, physical G2 source or compact chiral fermion spectrum."
+  },
+  "H27_GUT_anomalies": {
+    "4_channel_PascalK2_H27_shift_commutator_norm": 2.449489742783178,
+    "4_channel_PascalK2_H27_clock_commutator_norm": 6.928203230275509,
+    "unbroken_1_plus_irrep3_H27_equivariant_mass_eigenvalue_pattern": "a,b,b,b (Schur lemma); actual phi^-4,1,1,phi^4",
+    "local_SM_anomalies_for_complete_Spin10_16": [
+      "U1^3=0",
+      "SU2^2U1=0",
+      "SU3^2U1=0",
+      "gravity^2U1=0",
+      "SU3^3=0"
+    ],
+    "Witten_doublets_three_complete_16": 12,
+    "qualification": "Only if physical 4-channel representation is H27 1\u22953. A broken-symmetry background may generate noninvariant K2 but requires sourced covariant couplings. Complete 16 anomaly ledger is not proof of 5D inflow or actual chiral matter."
+  },
+  "pascal_graph": {
+    "graph": "Boolean lattice B_L comparability graph of Pascal parity support",
+    "degree_formula": "2^popcount(v)+2^(L-popcount(v))-2",
+    "edge_formula": "3^L-2^L",
+    "diameter_L_at_least_2": 2,
+    "levels": [
+      {
+        "L": 1,
+        "N": 2,
+        "edges": 1,
+        "diameter": 1,
+        "max_degree": 1,
+        "laplacian_lambda2": 2.0
+      },
+      {
+        "L": 2,
+        "N": 4,
+        "edges": 5,
+        "diameter": 2,
+        "max_degree": 3,
+        "laplacian_lambda2": 1.9999999999999996
+      },
+      {
+        "L": 3,
+        "N": 8,
+        "edges": 19,
+        "diameter": 2,
+        "max_degree": 7,
+        "laplacian_lambda2": 2.999999999999999
+      },
+      {
+        "L": 4,
+        "N": 16,
+        "edges": 65,
+        "diameter": 2,
+        "max_degree": 15,
+        "laplacian_lambda2": 4.4384471871911675
+      },
+      {
+        "L": 5,
+        "N": 32,
+        "edges": 211,
+        "diameter": 2,
+        "max_degree": 31,
+        "laplacian_lambda2": 6.575571099101941
+      },
+      {
+        "L": 6,
+        "N": 64,
+        "edges": 665,
+        "diameter": 2,
+        "max_degree": 63,
+        "laplacian_lambda2": 9.707629616474815
+      },
+      {
+        "L": 7,
+        "N": 128,
+        "edges": 2059,
+        "diameter": 2,
+        "max_degree": 127,
+        "laplacian_lambda2": 14.338311412961179
+      }
+    ],
+    "qualification": "Raw parity graph has universal vertices and cannot by itself give local 3+1 continuum adjacency. A Sierpinski gasket nearest-neighbor Laplacian or an ordered causal Hasse cover is a different graph."
+  },
+  "photon": {
+    "theoretical_model": "Two copies under strict local number SSR; independent energy-phase jitter and independent whole-photon loss",
+    "bound": "Sall <=2+eta\u00b2(1+sqrt(1+exp(-2x\u00b2))-2)",
+    "statistical_concentration": "For Z=4(-1)^(ij) AB in [-4,4], one-sided P(S_hat-E[S_hat]>=gap)<=exp(-N gap\u00b2/32)",
+    "cases": [
+      {
+        "relative_energy_phase_jitter_x": 0.0,
+        "survival_eta": 0.9,
+        "ideal_SSR_CHSH": 2.414213562373095,
+        "optimistic_unconditional_CHSH_upper_bound": 2.335512985522207,
+        "Hoeffding_alpha_0p05_trials_targeting_upper_bound_gap": 852
+      },
+      {
+        "relative_energy_phase_jitter_x": 0.0,
+        "survival_eta": 0.99,
+        "ideal_SSR_CHSH": 2.414213562373095,
+        "optimistic_unconditional_CHSH_upper_bound": 2.4059707124818703,
+        "Hoeffding_alpha_0p05_trials_targeting_upper_bound_gap": 582
+      },
+      {
+        "relative_energy_phase_jitter_x": 0.5,
+        "survival_eta": 0.9,
+        "ideal_SSR_CHSH": 2.267489905171885,
+        "optimistic_unconditional_CHSH_upper_bound": 2.2166668231892266,
+        "Hoeffding_alpha_0p05_trials_targeting_upper_bound_gap": 2043
+      },
+      {
+        "relative_energy_phase_jitter_x": 0.5,
+        "survival_eta": 0.99,
+        "ideal_SSR_CHSH": 2.267489905171885,
+        "optimistic_unconditional_CHSH_upper_bound": 2.2621668560589643,
+        "Hoeffding_alpha_0p05_trials_targeting_upper_bound_gap": 1395
+      },
+      {
+        "relative_energy_phase_jitter_x": 1.0,
+        "survival_eta": 0.9,
+        "ideal_SSR_CHSH": 2.0655211322337124,
+        "optimistic_unconditional_CHSH_upper_bound": 2.053072117109307,
+        "Hoeffding_alpha_0p05_trials_targeting_upper_bound_gap": 34035
+      },
+      {
+        "relative_energy_phase_jitter_x": 1.0,
+        "survival_eta": 0.99,
+        "ideal_SSR_CHSH": 2.0655211322337124,
+        "optimistic_unconditional_CHSH_upper_bound": 2.0642172617022614,
+        "Hoeffding_alpha_0p05_trials_targeting_upper_bound_gap": 23247
+      },
+      {
+        "relative_energy_phase_jitter_x": 2.0,
+        "survival_eta": 0.9,
+        "ideal_SSR_CHSH": 2.000167717249413,
+        "optimistic_unconditional_CHSH_upper_bound": 2.0001358509720246,
+        "Hoeffding_alpha_0p05_trials_targeting_upper_bound_gap": 5194305349
+      },
+      {
+        "relative_energy_phase_jitter_x": 2.0,
+        "survival_eta": 0.99,
+        "ideal_SSR_CHSH": 2.000167717249413,
+        "optimistic_unconditional_CHSH_upper_bound": 2.0001643796761495,
+        "Hoeffding_alpha_0p05_trials_targeting_upper_bound_gap": 3547780445
+      }
+    ],
+    "qualification": "Upper-bound-target counts have neither guaranteed attainable optical measurements nor specified statistical power. No detector loophole closure or departure from ordinary QM."
+  },
+  "new_H27_deformed_wall": {
+    "parallel_baseline": "37ba627 H27 sextic mass-lift Wg",
+    "transverse_gradient_along_old_x_only_wall": "g*x*(x^3+3)",
+    "transverse_force_x_half_g_quarter": "25/64",
+    "gradient_at_old_111_endpoint_g_quarter": [
+      1,
+      1,
+      1
+    ],
+    "new_equal_coordinate_MUB_r_cubed": "5/3",
+    "new_MUB_critical_W": "25/12",
+    "conditional_BPS_tension_if_wall_exists": "13/6",
+    "old_undeformed_wall_tension": "1",
+    "failure": "Old straight-line y=z=1 path is NOT a gradient BPS solution for g!=0; full coupled three-scalar heteroclinic unknown."
+  },
+  "Pascal_hypercube_log_mass_equivalence": {
+    "exact_single_digit_identity": "A=[[1,0],[1,1]], B=A^T A=[[2,1],[1,1]]=exp(2log(phi)*(2sigma_x+sigma_z)/sqrt5)",
+    "exact_tensor_identity": "K_L=P_L^T P_L=exp(2log(phi)*sum_i(2X_i+Z_i)/sqrt5)",
+    "unitary_equivalence": "sum_i(2X_i+Z_i)/sqrt5 is related by independent local SU2 rotations to hypercube adjacency A(Q_L)=sum_i X_i",
+    "mass_squared_spectrum": "lambda_j(K_L)=exp[2log(phi)*(L-2j)]=phi^(2L-4j), multiplicity C(L,j), j=0..L",
+    "hypercube_cover_graph": "The Hasse-cover graph of Boolean subset inclusion is L-dimensional hypercube Q_L with 2^L vertices, degree L, diameter L",
+    "tests": [
+      {
+        "L": 1,
+        "vertices": 2,
+        "cover_graph_edges": 1,
+        "cover_graph_degree": 1,
+        "cover_graph_diameter": 1,
+        "max_operator_K_minus_expm_error": 2.220446049250313e-16,
+        "hypercube_adjacency_eigenvalues_with_multiplicity": [
+          -1,
+          1
+        ]
+      },
+      {
+        "L": 2,
+        "vertices": 4,
+        "cover_graph_edges": 4,
+        "cover_graph_degree": 2,
+        "cover_graph_diameter": 2,
+        "max_operator_K_minus_expm_error": 1.0658141036401503e-14,
+        "hypercube_adjacency_eigenvalues_with_multiplicity": [
+          -2,
+          0,
+          0,
+          2
+        ]
+      },
+      {
+        "L": 3,
+        "vertices": 8,
+        "cover_graph_edges": 12,
+        "cover_graph_degree": 3,
+        "cover_graph_diameter": 3,
+        "max_operator_K_minus_expm_error": 2.8066438062523957e-13,
+        "hypercube_adjacency_eigenvalues_with_multiplicity": [
+          -3,
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "L": 4,
+        "vertices": 16,
+        "cover_graph_edges": 32,
+        "cover_graph_degree": 4,
+        "cover_graph_diameter": 4,
+        "max_operator_K_minus_expm_error": 4.89563944938709e-12,
+        "hypercube_adjacency_eigenvalues_with_multiplicity": [
+          -4,
+          -2,
+          -2,
+          -2,
+          -2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          2,
+          2,
+          4
+        ]
+      },
+      {
+        "L": 5,
+        "vertices": 32,
+        "cover_graph_edges": 80,
+        "cover_graph_degree": 5,
+        "cover_graph_diameter": 5,
+        "max_operator_K_minus_expm_error": 5.755396159656812e-13,
+        "hypercube_adjacency_eigenvalues_with_multiplicity": [
+          -5,
+          -3,
+          -3,
+          -3,
+          -3,
+          -3,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          3,
+          3,
+          3,
+          3,
+          5
+        ]
+      }
+    ],
+    "obstruction": "The adjacency becomes local on a hypercube only at the price of increasing its graph dimension L with resolution; for fixed L=4 only 16 vertices. The exponent spectrum is a free tensor-product spin field, not a sourced 3+1 Einstein/Yukawa Hamiltonian."
+  },
+  "limitations": "Finite toy mechanisms tested; true G2/E8 chiral index, observed masses, GUT anomaly inflow, causal quantum Einstein gravity and optical fault-tolerant hardware all remain unsolved."
+}
