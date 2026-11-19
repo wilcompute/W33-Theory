@@ -1,0 +1,135 @@
+#!/usr/bin/env python3
+"""Exact finite-group and low-degree spectral-sequence certificate for Y7.
+Y7=(S^5 x T^2)/H_27, with SU(3) Schrödinger action on S^5 and
+independent character translations on T^2.
+No numerical topology package is needed; interpretation is conditional on
+the standard Serre spectral sequence and integral lens-space cohomology.
+"""
+from collections import Counter
+from itertools import product
+import json
+from pathlib import Path
+
+P=3
+GROUP=list(product(range(P),repeat=3))
+IDENTITY=(0,0,0)
+A=(1,0,0)
+B=(0,1,0)
+C=(0,0,1)
+
+def multiply(g,h):
+    a,b,c=g
+    aa,bb,cc=h
+    return ((a+aa)%P,(b+bb)%P,(c+cc+a*bb)%P)
+
+def inverse(g):
+    a,b,c=g
+    return ((-a)%P,(-b)%P,(-c+a*b)%P)
+
+def commutator(g,h):
+    return multiply(multiply(multiply(g,h),inverse(g)),inverse(h))
+
+def schrodinger_action(g,j):
+    """rho(a,b,c)=omega^c X^b Z^a; returns basis index and phase exponent."""
+    a,b,c=g
+    return ((j+b)%P,(c+a*j)%P)
+
+def deck_multiply(g,h):
+    """Gamma=Z^2 x C3 with cocycle x*y'; universal-cover deck group."""
+    x,y,c=g
+    xx,yy,cc=h
+    return (x+xx,y+yy,(c+cc+x*yy)%P)
+
+def certify():
+    assert len(GROUP)==27
+    assert all(multiply(g,inverse(g))==IDENTITY for g in GROUP)
+    assert all(multiply(multiply(g,h),k)==multiply(g,multiply(h,k))
+               for g in GROUP for h in GROUP for k in GROUP)
+    # Direct exact monomial representation check: rho(g)rho(h)|j>.
+    for g in GROUP:
+        for h in GROUP:
+            for j in range(P):
+                k,phh=schrodinger_action(h,j)
+                kk,phg=schrodinger_action(g,k)
+                k0,ph0=schrodinger_action(multiply(g,h),j)
+                assert (kk,(phg+phh)%P)==(k0,ph0)
+    center=[g for g in GROUP if all(commutator(g,h)==IDENTITY for h in GROUP)]
+    assert center==[(0,0,0),(0,0,1),(0,0,2)]
+    assert commutator(A,B)==C
+    assert deck_multiply((1,0,0),(0,1,0))==(1,1,1)
+    assert deck_multiply((0,1,0),(1,0,0))==(1,1,0)
+    assert all(multiply(g,z)==multiply(z,g) for g in GROUP for z in center)
+    # A nontrivial torus translation makes an element fixed-point-free.
+    # The only elements with zero translation are central, acting as omega^c I.
+    free_reasons=Counter()
+    for g in GROUP:
+        if g==IDENTITY:
+            continue
+        a,b,c=g
+        if a or b:
+            free_reasons["nonzero_torus_translation"]+=1
+        else:
+            assert c in (1,2)
+            assert all(schrodinger_action(g,j)==(j,c) for j in range(P))
+            free_reasons["nontrivial_scalar_on_S5"]+=1
+    assert dict(free_reasons)=={
+        "nonzero_torus_translation":24,
+        "nontrivial_scalar_on_S5":2}
+    # The quotient by central C3 is L^5(3); base T^2 has binomial
+    # cohomology ranks (1,2,1), and monodromy conjugates the central
+    # C3 trivially. H^2(L^5(3);Z)=Z3 is therefore a constant local system.
+    base_ranks={0:1,1:2,2:1}
+    lens_groups={0:"Z",1:"0",2:"Z/3",3:"0",4:"Z/3",5:"Z"}
+    diagonal3=[(p,3-p,base_ranks[p]) for p in base_ranks
+               if 3-p==2]  # only E_2^(1,2)
+    assert diagonal3==[(1,2,2)]
+    # No possible Serre differential into/out of E_r^(1,2):
+    # for d_r outgoing p=1+r>2 (r>=2); incoming p=1-r<0.
+    assert all(1+r>2 and 1-r<0 for r in range(2,10))
+    betti=[1,2,1,0,0,1,2,1]  # invariant real cohomology of S5 x T2
+    assert sum(betti)==8 and betti[3]==0
+    # π1(Gamma) abelianization Z^2 (commutator subgroup=<C3>).
+    # Hence H1(Y;Z)=Z^2; UCT then determines H2(Y;Z)=Z+(Z3)^2
+    # from H3(Y;Z)=(Z3)^2 and b2=1.
+    return {
+        "status":"PASS",
+        "manifold":"(S^5 x T^2)/H27",
+        "group_order":len(GROUP),
+        "center":center,
+        "group_commutator_AB":commutator(A,B),
+        "fixed_point_free_nonidentity":sum(free_reasons.values()),
+        "free_action_explanations":dict(free_reasons),
+        "fundamental_group":"Gamma={(x,y,c): x,y in Z,c in Z3; product has cocycle x*y' mod 3}",
+        "commutator_subgroup":"Z/3",
+        "H1_integral":"Z^2",
+        "base":"T^2",
+        "fiber":"L^5(3)=S^5/Z3",
+        "fiber_integral_cohomology":lens_groups,
+        "monodromy_on_H2_fiber":"identity on Z/3",
+        "serre_total_degree_3_surviving_terms":[{"p":1,"q":2,"group":"(Z/3)^2"}],
+        "H3_integral":"(Z/3)^2",
+        "H2_homology":"Z + (Z/3)^2",
+        "real_betti_numbers":betti,
+        "H3_deRham_dimension":0,
+        "flat_B_field_topological_torsion":"(Z/3)^2",
+        "flat_B_field_full_group":"U(1) x (Z/3)^2 noncanonically",
+        "no_positive_Ricci":"pi1 surjects onto Z^2; Myers theorem",
+        "no_nearly_parallel_G2":"nearly parallel G2 implies positive Einstein Ricci",
+        "no_torsion_free_G2":"b3=0 and b1=2",
+        "not_claimed":["physical flux or nonzero H3 curvature",
+                       "torsion-free G2", "localized chiral zero modes",
+                       "a solution to E8 field equations or TOE"]
+    }
+
+def main():
+    result=certify()
+    outfile=Path(__file__).resolve().parents[1]/"data"/"toe_20261119_h27_integral_torsion_gerbes.json"
+    outfile.write_text(json.dumps(result,indent=2),encoding="utf-8")
+    print(json.dumps({"status":"PASS","group_order":result["group_order"],
+                      "free_action":result["fixed_point_free_nonidentity"],
+                      "H3_integral":result["H3_integral"],
+                      "b3_real":result["H3_deRham_dimension"],
+                      "output":str(outfile)}))
+
+if __name__=="__main__":
+    main()

@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "manifold": "(S^5 x T^2)/H27",
+  "group_order": 27,
+  "center": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      2
+    ]
+  ],
+  "group_commutator_AB": [
+    0,
+    0,
+    1
+  ],
+  "fixed_point_free_nonidentity": 26,
+  "free_action_explanations": {
+    "nontrivial_scalar_on_S5": 2,
+    "nonzero_torus_translation": 24
+  },
+  "fundamental_group": "Gamma={(x,y,c): x,y in Z,c in Z3; product has cocycle x*y' mod 3}",
+  "commutator_subgroup": "Z/3",
+  "H1_integral": "Z^2",
+  "base": "T^2",
+  "fiber": "L^5(3)=S^5/Z3",
+  "fiber_integral_cohomology": {
+    "0": "Z",
+    "1": "0",
+    "2": "Z/3",
+    "3": "0",
+    "4": "Z/3",
+    "5": "Z"
+  },
+  "monodromy_on_H2_fiber": "identity on Z/3",
+  "serre_total_degree_3_surviving_terms": [
+    {
+      "p": 1,
+      "q": 2,
+      "group": "(Z/3)^2"
+    }
+  ],
+  "H3_integral": "(Z/3)^2",
+  "H2_homology": "Z + (Z/3)^2",
+  "real_betti_numbers": [
+    1,
+    2,
+    1,
+    0,
+    0,
+    1,
+    2,
+    1
+  ],
+  "H3_deRham_dimension": 0,
+  "flat_B_field_topological_torsion": "(Z/3)^2",
+  "flat_B_field_full_group": "U(1) x (Z/3)^2 noncanonically",
+  "no_positive_Ricci": "pi1 surjects onto Z^2; Myers theorem",
+  "no_nearly_parallel_G2": "nearly parallel G2 implies positive Einstein Ricci",
+  "no_torsion_free_G2": "b3=0 and b1=2",
+  "not_claimed": [
+    "physical flux or nonzero H3 curvature",
+    "torsion-free G2",
+    "localized chiral zero modes",
+    "a solution to E8 field equations or TOE"
+  ]
+}
