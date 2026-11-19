@@ -1,0 +1,33 @@
+{
+  "numeric": {
+    "number_of_Q_fundamentals": 9,
+    "number_of_P_antifundamentals": 9,
+    "total_fundamental_count": 10,
+    "total_antifundamental_count": 10,
+    "one_loop_SU3_beta_coefficient_3Nc_minus_Nf": -1,
+    "perturbatively_asymptotically_free": false,
+    "gauge_singlet_count": 46,
+    "complex_chiral_components": 106,
+    "meson_coordinate_count": 45,
+    "baryon_coordinate_count": 1,
+    "holomorphic_constraint_rank": 46,
+    "superpotential_hessian_rank": 98,
+    "complex_gauge_orbit_nullity": 8,
+    "max_D_matrix_residual": 1.3322676295501878e-15,
+    "min_45x45_meson_coordinate_pivot_determinant_abs": 2.1213203435596424,
+    "baryon_value_imaginary": -1.7320508075688772,
+    "beta_imaginary": 1.7320508075688772,
+    "smallest_nonzero_hessian_singular_value": 0.16747024626309018,
+    "max_SIC_pair_overlap_squared_error": 8.881784197001252e-16
+  },
+  "exact_finite_field": {
+    "field": "F_7",
+    "omega_image": 2,
+    "omega_conjugate_image": 4,
+    "meson_jacobian_rank": 45,
+    "meson_plus_baryon_rank": 46,
+    "meson_pivot_det_mod7": 6
+  },
+  "global_uniqueness_argument": "For rank-3 M=PQ, 45 cross entries (three rows union three columns) determine all 81 meson entries by M_AB=M_AI M_JI^(-1) M_JB, on the chart det M_JI != 0. All full-rank (P,Q) factorizations of fixed M differ by G in GL(3,C). Fixing nonzero det(Q_0,Q_1,Q_3) sets det G=1, so exactly one SL(3,C) orbit. The displayed D-flat representative is its unique SU(3) orbit by Kempf-Ness. F_Q,F_P enforce singlet multipliers zero by rank 46; massive X,Y can be eliminated. Thus local physical Hessian has full rank 98.",
+  "limitations": "Highly tuned flavor-dependent constants, 46 singlets; SU3 fully Higgsed, not SM color. Nf=10 vectorlike flavors gives 3Nc-Nf=-1: one-loop gauge beta is IR-free, NOT asymptotically free, so renormalizability is not proof of UV completion to arbitrarily high energies. No naturally selected E8 vacuum, SM phenomenology, physical compactification, or quantum stability claim."
+}

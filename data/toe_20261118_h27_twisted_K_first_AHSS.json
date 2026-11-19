@@ -1,0 +1,134 @@
+{
+  "space": "Y7=(S5 x T2)/H27",
+  "H3_integral": "(Z3)^2",
+  "nine_twists": {
+    "(0, 0)": {
+      "d3_of_unit": [
+        0,
+        0
+      ],
+      "first_d3_kernel_subgroup_of_Z": "1Z",
+      "necessary_rank_multiple": 1,
+      "projective_ray": null
+    },
+    "(0, 1)": {
+      "d3_of_unit": [
+        0,
+        1
+      ],
+      "first_d3_kernel_subgroup_of_Z": "3Z",
+      "necessary_rank_multiple": 3,
+      "projective_ray": [
+        0,
+        1
+      ]
+    },
+    "(0, 2)": {
+      "d3_of_unit": [
+        0,
+        2
+      ],
+      "first_d3_kernel_subgroup_of_Z": "3Z",
+      "necessary_rank_multiple": 3,
+      "projective_ray": [
+        0,
+        1
+      ]
+    },
+    "(1, 0)": {
+      "d3_of_unit": [
+        1,
+        0
+      ],
+      "first_d3_kernel_subgroup_of_Z": "3Z",
+      "necessary_rank_multiple": 3,
+      "projective_ray": [
+        1,
+        0
+      ]
+    },
+    "(1, 1)": {
+      "d3_of_unit": [
+        1,
+        1
+      ],
+      "first_d3_kernel_subgroup_of_Z": "3Z",
+      "necessary_rank_multiple": 3,
+      "projective_ray": [
+        1,
+        1
+      ]
+    },
+    "(1, 2)": {
+      "d3_of_unit": [
+        1,
+        2
+      ],
+      "first_d3_kernel_subgroup_of_Z": "3Z",
+      "necessary_rank_multiple": 3,
+      "projective_ray": [
+        1,
+        2
+      ]
+    },
+    "(2, 0)": {
+      "d3_of_unit": [
+        2,
+        0
+      ],
+      "first_d3_kernel_subgroup_of_Z": "3Z",
+      "necessary_rank_multiple": 3,
+      "projective_ray": [
+        1,
+        0
+      ]
+    },
+    "(2, 1)": {
+      "d3_of_unit": [
+        2,
+        1
+      ],
+      "first_d3_kernel_subgroup_of_Z": "3Z",
+      "necessary_rank_multiple": 3,
+      "projective_ray": [
+        1,
+        2
+      ]
+    },
+    "(2, 2)": {
+      "d3_of_unit": [
+        2,
+        2
+      ],
+      "first_d3_kernel_subgroup_of_Z": "3Z",
+      "necessary_rank_multiple": 3,
+      "projective_ray": [
+        1,
+        1
+      ]
+    }
+  },
+  "nontrivial_twists": 8,
+  "projective_rays": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "twisted_AHSS_first_differential": "d3(1)= +/-H in H^3(Y;Z); d3(n)= +/-nH",
+  "nonzero_twist_necessary_rank_condition": "rank divisible by 3",
+  "untwisted_rank_condition": "no rank divisibility forced by d3(1)",
+  "caveat": "Does NOT compute full twisted K^*(Y), prove existence of rank-3 twisted bundles, determine the actual topological index, or claim a brane compactification."
+}
