@@ -1,0 +1,120 @@
+{
+  "status": "PASS_NATIVE_QUTRIT_GENUINE_THREE_TIME_ONLY_MEMORY",
+  "samples": [
+    {
+      "gamma": 0.05,
+      "native_qutrit_dimension": 3,
+      "unitality_witness_S1": 0.10000000000000009,
+      "pairwise_Fidelity_sums": [
+        0.0,
+        4.007740138520499e-17
+      ],
+      "published_dimension_d_three_time_witness": -0.1,
+      "pairwise_classical_certificates": {
+        "pairwise_full_choi_residuals": [
+          1.9229626863835638e-16,
+          6.66072366368634e-16,
+          2.79526453734095e-16
+        ],
+        "first_instrument_equal_E1_residual": 1.1375512346553406e-16,
+        "E2_random_phase_instrument_residual": 5.268525311788375e-16,
+        "first_instrument_branch_count": 4,
+        "E2_instrument_branch_count": 3,
+        "pairwise_decompositions": [
+          "(E1,E2): replacement instrument in computational basis",
+          "(E1,E3): replacement instrument in Fourier basis",
+          "(E2,E3): random Z^k with inverse feedforward and Fourier dephasing"
+        ]
+      },
+      "joint_quantum_dilation": {
+        "same_environment_dimension": 4,
+        "global_hilbert_dimension": 12,
+        "random_density_matrices_verified": 24,
+        "three_output_channel_max_residual": 2.9295516604735225e-16,
+        "intertime_unitarity_max_error": 1.15613648487196e-15,
+        "construction": "U1, U2 U1\u2020, U3 U2\u2020 on shared S3\u2297E4; no interventions between observations in marginal checks"
+      }
+    },
+    {
+      "gamma": 0.36,
+      "native_qutrit_dimension": 3,
+      "unitality_witness_S1": 0.7199999999999998,
+      "pairwise_Fidelity_sums": [
+        0.0,
+        4.007740138520499e-17
+      ],
+      "published_dimension_d_three_time_witness": -0.72,
+      "pairwise_classical_certificates": {
+        "pairwise_full_choi_residuals": [
+          0.0,
+          3.0537758746583955e-16,
+          2.79526453734095e-16
+        ],
+        "first_instrument_equal_E1_residual": 2.8017842037690895e-16,
+        "E2_random_phase_instrument_residual": 5.268525311788375e-16,
+        "first_instrument_branch_count": 4,
+        "E2_instrument_branch_count": 3,
+        "pairwise_decompositions": [
+          "(E1,E2): replacement instrument in computational basis",
+          "(E1,E3): replacement instrument in Fourier basis",
+          "(E2,E3): random Z^k with inverse feedforward and Fourier dephasing"
+        ]
+      },
+      "joint_quantum_dilation": {
+        "same_environment_dimension": 4,
+        "global_hilbert_dimension": 12,
+        "random_density_matrices_verified": 24,
+        "three_output_channel_max_residual": 1.5307151122205834e-16,
+        "intertime_unitarity_max_error": 1.15613648487196e-15,
+        "construction": "U1, U2 U1\u2020, U3 U2\u2020 on shared S3\u2297E4; no interventions between observations in marginal checks"
+      }
+    },
+    {
+      "gamma": 0.75,
+      "native_qutrit_dimension": 3,
+      "unitality_witness_S1": 1.4999999999999998,
+      "pairwise_Fidelity_sums": [
+        0.0,
+        4.007740138520499e-17
+      ],
+      "published_dimension_d_three_time_witness": -1.5,
+      "pairwise_classical_certificates": {
+        "pairwise_full_choi_residuals": [
+          1.9229626863835638e-16,
+          3.4255568840278507e-16,
+          2.79526453734095e-16
+        ],
+        "first_instrument_equal_E1_residual": 3.7399257968127487e-16,
+        "E2_random_phase_instrument_residual": 5.268525311788375e-16,
+        "first_instrument_branch_count": 4,
+        "E2_instrument_branch_count": 3,
+        "pairwise_decompositions": [
+          "(E1,E2): replacement instrument in computational basis",
+          "(E1,E3): replacement instrument in Fourier basis",
+          "(E2,E3): random Z^k with inverse feedforward and Fourier dephasing"
+        ]
+      },
+      "joint_quantum_dilation": {
+        "same_environment_dimension": 4,
+        "global_hilbert_dimension": 12,
+        "random_density_matrices_verified": 24,
+        "three_output_channel_max_residual": 2.709957234301652e-16,
+        "intertime_unitarity_max_error": 1.15613648487196e-15,
+        "construction": "U1, U2 U1\u2020, U3 U2\u2020 on shared S3\u2297E4; no interventions between observations in marginal checks"
+      }
+    }
+  ],
+  "H27_symmetry_selection_rule": {
+    "H27_covariance_residuals_for_E1_E2_E3": [
+      0.5091168824543142,
+      0.0,
+      2.0121497787827311e-16
+    ],
+    "nonunital_H27_covariant_qutrit_CPTP_possible": false,
+    "reason": "Schur lemma on irreducible X,Z plus TP forces E(I)=I",
+    "interpretation": "Nonzero W3 from this particular witness requires breaking exact H27 covariance of first channel; does NOT exclude other quantum-memory witnesses for covariant channels."
+  },
+  "published_witness": "Beyer et al arXiv:2611.17268 supplement VI eq S38; theorem not original to repo",
+  "novel_combination": "Native full qutrit Z and Fourier MUB channels, 3 explicit pairwise Kraus-feedback models, and one full S3\u2297E4 unitary sequence",
+  "limitations": "No measured device; interventions in a fabricated device still require experimental tomography. Individual pairwise classical realizations are incompatible with one common classical record, as witnessed by W<0."
+}

@@ -1,0 +1,46 @@
+{
+  "forward_graph_presentations": 1024,
+  "naturally_labeled_relations": 357,
+  "unlabeled_poset_classes": 63,
+  "self_dual_isomorphism_classes": 15,
+  "nonselfdual_isomorphism_classes": 48,
+  "distinct_dual_pairs": 24,
+  "undirected_Hasse_laplacian_spectral_classes": 14,
+  "undirected_Hasse_graph_isomorphism_types": 14,
+  "inverse_propagator_Frobenius_response_dual_max_difference": 8.881784197001252e-16,
+  "largest_cospectral_class": 12,
+  "nonselfdual_example": {
+    "P_covers": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "P_dual_covers": [
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "minimal_points_P": 3,
+    "minimal_points_dual": 4,
+    "identical_undirected_Hasse_laplacian_charpoly": [
+      1,
+      -4,
+      3,
+      0,
+      0,
+      0
+    ]
+  },
+  "theorem": "The undirected Hasse graph and every graph spectrum computed from it are identical for P and P^op. For non-self-dual P this loses causal time orientation, even though directed Hasse transitive closure recovers the poset.",
+  "physical_caveat": "A time-reversal-invariant gravity action may deliberately assign equal weights; extra oriented data/operators are needed if chirality or directed propagators must distinguish past and future. No Einstein action inferred."
+}

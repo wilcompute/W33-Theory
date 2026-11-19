@@ -1,0 +1,58 @@
+{
+  "status": "PASS_SU3_PHASE_IDENTIFIABILITY_AND_COLOR_LOSS_NO_GO",
+  "reference_compensated": {
+    "common_reference_phase": 0.4,
+    "target_extra_drift": 0,
+    "trace_true": [
+      0.8383904146899034,
+      -0.2837042264924624
+    ],
+    "calibration_and_target_trials_per_phase": [
+      3000,
+      10000
+    ],
+    "simulation_repetitions": 5000,
+    "complex_RMSE": 0.057296136496188116,
+    "firstorder_RMSE_prediction": 0.06023726158192419,
+    "differential_drift_asymptotic_bias": 0.0,
+    "conservative_99pct_complex_error_bound_no_differential_drift": 0.33827911726531557,
+    "coverage_if_valid_common_phase": 1.0
+  },
+  "differential_phase_drift": {
+    "common_reference_phase": 0.4,
+    "target_extra_drift": 0.2,
+    "trace_true": [
+      0.8383904146899034,
+      -0.2837042264924624
+    ],
+    "calibration_and_target_trials_per_phase": [
+      3000,
+      10000
+    ],
+    "simulation_repetitions": 5000,
+    "complex_RMSE": 0.1860343660584191,
+    "firstorder_RMSE_prediction": 0.06023726158192419,
+    "differential_drift_asymptotic_bias": 0.17672337323858736,
+    "conservative_99pct_complex_error_bound_no_differential_drift": 0.33827911726531557,
+    "coverage_if_valid_common_phase": 0.9996
+  },
+  "color_mode_gauge_bias": {
+    "gauge_rotations": 64,
+    "trace_true": [
+      0.8383904146899034,
+      -0.2837042264924624
+    ],
+    "mode_efficiencies": [
+      0.4,
+      1,
+      1.6
+    ],
+    "max_color_biased_frame_trace_error": 0.8039324326648101,
+    "mean_color_biased_frame_trace_error": 0.3980115027084069,
+    "identity_reference_trace_all_frames": 3.0,
+    "theorem": "A fixed lab loss matrix eta!=cI yields Tr(eta U K U\u2020), not invariant under simultaneous local gauge-frame conjugation of K. Identity-loop calibration sees Tr eta and cannot remove orientation-dependent bias.",
+    "required_hardware": "color/mode independent detection OR matched transport and tomography of eta with local gauge frames."
+  },
+  "analytical_identifiability": "z_target=v e^{-i delta_target} Tr K and z_identity=v e^{-i delta_ref}; ratio=exp[-i(delta_target-delta_ref)] Tr K",
+  "loss_caution": "Bernoulli iid accepted detection model only, not photonic implementation or quantum error correction."
+}

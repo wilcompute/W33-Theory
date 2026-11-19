@@ -1,0 +1,62 @@
+{
+  "status": "PASS_WELCH_SIC_ALIGNMENT_WITH_RESIDUAL_MODULI",
+  "global_bound_for_9_unit_qutrits": "FP2>=9^2/[3(3+1)/2]=13.5",
+  "frame_potential_equals_tr_A_squared": true,
+  "SIC_saturates_2_design_global_minimum": true,
+  "SIC_samples": [
+    {
+      "t": 0.0,
+      "Welch_frame_potential": 13.499999999999982,
+      "bargmann_triangle_036": [
+        -0.12499999999999992,
+        0.0
+      ],
+      "gauge_D_moment_map_residual": 2.333880578898569e-15
+    },
+    {
+      "t": 0.23,
+      "Welch_frame_potential": 13.49999999999999,
+      "bargmann_triangle_036": [
+        -0.09640575187463832,
+        0.07956714777774597
+      ],
+      "gauge_D_moment_map_residual": 1.5800774035506015e-15
+    },
+    {
+      "t": 0.59,
+      "Welch_frame_potential": 13.499999999999991,
+      "bargmann_triangle_036": [
+        0.024736101826138585,
+        0.12252805909850564
+      ],
+      "gauge_D_moment_map_residual": 1.2380348950007311e-15
+    },
+    {
+      "t": 1.11,
+      "Welch_frame_potential": 13.49999999999998,
+      "bargmann_triangle_036": [
+        0.12278797204227886,
+        -0.023411832942862892
+      ],
+      "gauge_D_moment_map_residual": 2.108575464980602e-15
+    }
+  ],
+  "three_MUB_frames_potential": 15.00000000000001,
+  "SIC_vs_three_MUB_gap": 1.5000000000000107,
+  "Hesse_bargmann_invariant": "Tr(P0 P3 P6)=-exp(-3i t)/8 (labeled), varies while FP2 stays minimum",
+  "quadratic_moduli": {
+    "projective_real_tangent_dimension": 36,
+    "design_constraint_jacobian_rank": 26,
+    "frame_potential_quadratic_zero_directions": 10,
+    "global_SU3_zero_directions": 8,
+    "one_explicit_additional_Hesse_modulus": true,
+    "extra_unexplained_infinitesimal_zero_direction": 1,
+    "smallest_nonzero_jacobian_singular_value": 0.8284092919618168,
+    "largest_null_singular_value": 1.3266320616406702e-15,
+    "max_SU3_gauge_tangent_design_variation": 1.9949940499216627e-15,
+    "Hesse_family_tangent_design_variation": 1.2307459699935088e-10
+  },
+  "physical_caveat": "A nonholomorphic higher-order gauge-invariant bosonic potential can select SIC over MUB at fixed norm, but individual species phases and a continuous Hesse family survive, so no isolated supersymmetric mass spectrum follows. Earlier repo already built explicit SU3-invariant alignment and Hesse baryon separator.",
+  "related_prior_repo": "analysis/2026-11-19_SIC_SU3_Plucker_Hesse_baryon_selector.md",
+  "literature": "Welch frame potential and qutrit SIC 2-design are established mathematics."
+}

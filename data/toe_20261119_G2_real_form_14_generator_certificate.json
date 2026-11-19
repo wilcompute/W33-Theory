@@ -1,0 +1,18 @@
+{
+  "real_positive_G2_form_oriented_triples": 7,
+  "independent_phi_stabilization_equations": 35,
+  "unknown_7x7_real_Lie_generator_entries": 49,
+  "exact_matrix_rank": 35,
+  "exact_Lie_algebra_dimension": 14,
+  "every_generator_skew_symmetric": true,
+  "pairwise_commutator_span_checks": 91,
+  "max_commutator_span_residual": 0,
+  "numerical_real_cubic_variation_max_C0": 1.4210854715202004e-08,
+  "numerical_real_cubic_variation_max_Cphi": 2.1316282072803006e-08,
+  "complex_exceptional_parameters": [
+    "(1-i*sqrt(7))/8",
+    "(1+i*sqrt(7))/8"
+  ],
+  "interpretation": "Real positive 3-form G2 Lie algebra 14 embeds in SO7 and acts on 27 real traceless symmetric tensors preserving both C0 and Cphi. The author Grigorian separately proves the complex E6 stabilizer dimension 78 of one critical complex cubic.",
+  "qualification": "No charged Dirac index, compact 7D G2 manifold, real E6 gauge boson, kinetic terms or 4D chiral family spectrum derived."
+}
