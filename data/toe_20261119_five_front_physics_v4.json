@@ -1,0 +1,381 @@
+{
+  "date": "2026-11-19",
+  "theory_of_everything_solved": false,
+  "W33_used_as_physical_input": false,
+  "description": "Five prior-art-aware physical consistency gates, one numerical benchmark scan and BAO model evidence under stated priors",
+  "supplemental_event_ready_Bell_sample_resources": {
+    "status": "PASS",
+    "ideal_CHSH_game_quantum_win_fraction": 0.8535533905932737,
+    "local_game_win_fraction_bound": 0.75,
+    "one_sided_Hoeffding_pvalue_target": 1e-06,
+    "minimum_ideal_valid_heralded_trials": 645,
+    "Hoeffding_upper_bound_at_target_N": 9.82600638565858e-07,
+    "independent_photon_transmission_eta": 0.8,
+    "ideal_herald_success_probability": 0.32000000000000006,
+    "expected_source_pair_emissions_for_N": 2015.6249999999995,
+    "caveats": [
+      "Independent fair settings, independent Bernoulli wins and ideal detectors; expected win fraction is used as observed frequency.",
+      "Hoeffding is a conservative null tail estimate, not an exact confidence interval nor actual experiment power calculation.",
+      "QND herald occurs before settings and cannot reveal future settings; detection, memory, drift and postselection loopholes are unmodeled.",
+      "Source emissions are expected counts under ideal Bernoulli survival, not worst-case high-probability counts."
+    ]
+  },
+  "source_uris": [
+    "https://github.com/CobayaSampler/bao_data/tree/master/desi_bao_dr2",
+    "https://arxiv.org/abs/2504.18416",
+    "https://doi.org/10.1103/PhysRevLett.91.097902",
+    "https://doi.org/10.1038/s41550-025-02669-6",
+    "https://www.sciencedirect.com/science/article/pii/S0370269307008775"
+  ],
+  "frontiers": {
+    "complete_2x24F_fixed_benchmark_threshold_scan": {
+      "status": "PASS",
+      "assumed_MU_GeV": 2e+16,
+      "fixed_old_masses": {
+        "triplet_1_GeV": 21716354.84154603,
+        "octet_1_GeV": 454271.0798763982
+      },
+      "all_components_included": [
+        "(1,3,0) x2",
+        "(8,1,0) x2",
+        "(3,2,-5/6)+(bar3,2,+5/6) x2"
+      ],
+      "complete_24F_one_loop_beta": [
+        3.3333333333333335,
+        3.333333333333333,
+        3.333333333333333
+      ],
+      "diagonal_two_24F_results": [
+        {
+          "signed_octet_triplet_relative_signs": [
+            1,
+            1
+          ],
+          "best_second_triplet_GeV": 91.39780913976098,
+          "best_second_octet_GeV": 1.999999999885147e+16,
+          "X_fermion_masses_GeV": [
+            11085312.960711213,
+            9999999999425782.0
+          ],
+          "inverse_alpha_differences": [
+            -2.0431610272181473,
+            -7.00489421836194
+          ],
+          "Euclidean_inverse_alpha_mismatch_norm": 7.296783537531017,
+          "search_bounds_GeV": [
+            91.1876,
+            2e+16
+          ],
+          "optimizer_success": true
+        },
+        {
+          "signed_octet_triplet_relative_signs": [
+            1,
+            -1
+          ],
+          "best_second_triplet_GeV": 91.39780913976098,
+          "best_second_octet_GeV": 1.999999999885147e+16,
+          "X_fermion_masses_GeV": [
+            11085312.960711213,
+            9999999999425690.0
+          ],
+          "inverse_alpha_differences": [
+            -2.0431610272181473,
+            -7.004894218361944
+          ],
+          "Euclidean_inverse_alpha_mismatch_norm": 7.296783537531019,
+          "search_bounds_GeV": [
+            91.1876,
+            2e+16
+          ],
+          "optimizer_success": true
+        },
+        {
+          "signed_octet_triplet_relative_signs": [
+            -1,
+            1
+          ],
+          "best_second_triplet_GeV": 91.39780913976098,
+          "best_second_octet_GeV": 1.999999999885147e+16,
+          "X_fermion_masses_GeV": [
+            10631041.880834816,
+            9999999999425782.0
+          ],
+          "inverse_alpha_differences": [
+            -2.0520403610030584,
+            -7.018213219039307
+          ],
+          "Euclidean_inverse_alpha_mismatch_norm": 7.312057605837336,
+          "search_bounds_GeV": [
+            91.1876,
+            2e+16
+          ],
+          "optimizer_success": true
+        },
+        {
+          "signed_octet_triplet_relative_signs": [
+            -1,
+            -1
+          ],
+          "best_second_triplet_GeV": 91.39780913976098,
+          "best_second_octet_GeV": 1.999999999885147e+16,
+          "X_fermion_masses_GeV": [
+            10631041.880834816,
+            9999999999425690.0
+          ],
+          "inverse_alpha_differences": [
+            -2.0520403610030584,
+            -7.0182132190393105
+          ],
+          "Euclidean_inverse_alpha_mismatch_norm": 7.31205760583734,
+          "search_bounds_GeV": [
+            91.1876,
+            2e+16
+          ],
+          "optimizer_success": true
+        }
+      ],
+      "best_mismatch_norm": 7.296783537531017,
+      "conclusion": "The prior fixed benchmark matching is not restored by varying just second adjoint triplet/oct masses inside this diagonal two-24F renormalizable scan",
+      "scope": [
+        "Numerical global optimization with multiple relative signs, not a formal all-real-algebraic proof.",
+        "Fixed earlier M3_1,M8_1 and MU; other Higgs/scalar/SM thresholds, SU5 breaking dynamics not included.",
+        "Complex off-diagonal generation mixing or higher-dimensional mass operators evade scanned subspace.",
+        "No successful UV-complete GUT or physical proton decay calculation."
+      ]
+    },
+    "typeIII_hidden_flavor_and_nonunitarity": {
+      "status": "PASS",
+      "M_triplet_GeV": 21716354.84154603,
+      "exact_trace_nonunitarity_lower_bound": 2.7045485877884178e-18,
+      "trace_formula": "Tr[theta theta\u2020]=(m2+m3)/M*cosh(2 Im z)",
+      "rows": [
+        {
+          "Im_Casas_Ibarra_angle": 0,
+          "Tr_theta_theta_dagger": 2.7045485877884174e-18,
+          "nonunitarity_e_mu_abs": 1.3916251489776676e-19,
+          "max_yukawa_abs": 0.0001336726310105847,
+          "reference_higgs_sensitivity_over_mh2": 24.031003390374043,
+          "light_mass_reconstruction_error_GeV": 6.643323252144558e-27
+        },
+        {
+          "Im_Casas_Ibarra_angle": 0.5,
+          "Tr_theta_theta_dagger": 4.173336551733223e-18,
+          "nonunitarity_e_mu_abs": 7.07855700984808e-19,
+          "max_yukawa_abs": 0.000150985737439471,
+          "reference_higgs_sensitivity_over_mh2": 37.081775966865656,
+          "light_mass_reconstruction_error_GeV": 7.219743268200396e-27
+        },
+        {
+          "Im_Casas_Ibarra_angle": 1,
+          "Tr_theta_theta_dagger": 1.0175041043303905e-17,
+          "nonunitarity_e_mu_abs": 2.056621641679456e-18,
+          "max_yukawa_abs": 0.00020916508443265792,
+          "reference_higgs_sensitivity_over_mh2": 90.40933740768135,
+          "light_mass_reconstruction_error_GeV": 2.133965468651872e-26
+        },
+        {
+          "Im_Casas_Ibarra_angle": 2,
+          "Tr_theta_theta_dagger": 7.385644255164572e-17,
+          "nonunitarity_e_mu_abs": 1.5347723761903214e-17,
+          "max_yukawa_abs": 0.0005180366309013864,
+          "reference_higgs_sensitivity_over_mh2": 656.2442358674361,
+          "light_mass_reconstruction_error_GeV": 2.406957369617326e-25
+        },
+        {
+          "Im_Casas_Ibarra_angle": 3,
+          "Tr_theta_theta_dagger": 5.455497388098307e-16,
+          "nonunitarity_e_mu_abs": 1.1342567292373655e-16,
+          "max_yukawa_abs": 0.0013911979294002048,
+          "reference_higgs_sensitivity_over_mh2": 4847.429135550196,
+          "light_mass_reconstruction_error_GeV": 1.1151480939209085e-24
+        }
+      ],
+      "interpretation": "One low-energy neutrino matrix permits exponentially different heavy-sector mixing and naturalness",
+      "caveats": [
+        "Type-III leptonic FCNC epsilon is not a branching-fraction or conversion-rate prediction without full Wilson matching.",
+        "Experimental angles and splittings are inputs; heavy mass is chosen for illustrative unification.",
+        "No thermal leptogenesis calculation; no inference of nonperturbative physics from this scan."
+      ]
+    },
+    "nonlocal_form_factor_KL_positivity_gate": {
+      "status": "PASS",
+      "dimensionless_Euclidean_q_over_M2": [
+        0.001,
+        0.01,
+        0.1,
+        1.0,
+        2.0,
+        10.0
+      ],
+      "exponential_form_factor_q_times_propagator_over_residue": [
+        0.999000499833375,
+        0.9900498337491681,
+        0.9048374180359595,
+        0.36787944117144233,
+        0.1353352832366127,
+        4.5399929762484854e-05
+      ],
+      "minimal_KL_positivity_requirement": ">=1",
+      "strict_positivity_violations": [
+        0.000999500166624978,
+        0.009950166250831893,
+        0.09516258196404048,
+        0.6321205588285577,
+        0.8646647167633873,
+        0.9999546000702375
+      ],
+      "positive_extra_massive_state_comparator": [
+        1.0000874781304674,
+        1.0008728179551123,
+        1.0085365853658537,
+        1.07,
+        1.1166666666666667,
+        1.25
+      ],
+      "analytic_proof": "If rho(s)>=0 and Z=1 then qG(q)=1+int q rho(s)/(q+s) ds >=1; exp(-q/M\u00b2)<1 contradicts for any q>0",
+      "caveats": [
+        "Only ordinary *scalar physical* KL positivity under Lorentz-invariant locality/tempered spectral assumptions; gauge-fixed gravitons are not positive-norm physical scalar propagators.",
+        "A nonlocal action can evade standard KL assumptions, but no extra free poles is insufficient to establish interacting unitarity or reflection positivity.",
+        "This does not disprove nonlocal quantum gravity or a fundamental TOE."
+      ]
+    },
+    "DESI_DR2_bayesian_prior_sensitivity": {
+      "status": "PASS",
+      "data_source": "Cobaya public DESI DR2 13x13 compressed BAO Gaussian covariance",
+      "only_BAO": true,
+      "LCDM_evidence_rel_common_normalization": 3.7008868310918863e-06,
+      "uniform_Omega_m_prior": [
+        0.15,
+        0.5
+      ],
+      "uniform_q_c_over_H0rd_prior": [
+        20,
+        40
+      ],
+      "results": [
+        {
+          "name": "narrow_CPL",
+          "prior_w0": [
+            -1.5,
+            -0.5
+          ],
+          "prior_wa": [
+            -2,
+            2
+          ],
+          "evidence_rel_common_Gaussian_normalization": 1.5778308000259106e-06,
+          "evidence_seed_samples": [
+            1.5664998760872983e-06,
+            1.5344000012151879e-06,
+            1.6161131422739145e-06,
+            1.5943101805272414e-06
+          ],
+          "log_Bayes_factor_vs_LCDM": -0.8525214826528635,
+          "estimated_log_evidence_standard_error": 0.011206367011070256,
+          "Sobol_points_per_scramble": 8192
+        },
+        {
+          "name": "broad_CPL",
+          "prior_w0": [
+            -2,
+            0
+          ],
+          "prior_wa": [
+            -4,
+            4
+          ],
+          "evidence_rel_common_Gaussian_normalization": 1.2415905587497797e-06,
+          "evidence_seed_samples": [
+            1.3313648135957894e-06,
+            1.1423066784421257e-06,
+            1.2278608873696255e-06,
+            1.2648298555915783e-06
+          ],
+          "log_Bayes_factor_vs_LCDM": -1.0921792086912476,
+          "estimated_log_evidence_standard_error": 0.03174792651818406,
+          "Sobol_points_per_scramble": 8192
+        },
+        {
+          "name": "phantom_free_canonical_CPL",
+          "prior_w0": [
+            -1,
+            0
+          ],
+          "prior_wa": [
+            0,
+            2
+          ],
+          "evidence_rel_common_Gaussian_normalization": 2.888260018460901e-07,
+          "evidence_seed_samples": [
+            2.915731989803847e-07,
+            3.006715171318505e-07,
+            2.860570277673929e-07,
+            2.7700226350473244e-07
+          ],
+          "log_Bayes_factor_vs_LCDM": -2.550503316932609,
+          "estimated_log_evidence_standard_error": 0.01717623009567377,
+          "Sobol_points_per_scramble": 8192
+        }
+      ],
+      "method": "Exact analytic integration of linear BAO distance scale q (truncated normal) and 4 scrambled Sobol sequences of 8192 points over Om,w0,wa",
+      "limits": [
+        "Not a full CMB/SNe/growth cosmological posterior or the DESI joint likelihood.",
+        "Evidences depend strongly on chosen flat priors; these Bayes factors cannot be interpreted without explicit prior names.",
+        "The q uniform prior is a modeling assumption, not a derived cosmological measure.",
+        "48-point quadrature and radiation approximation; no massive neutrino Boltzmann transfer or DE perturbations.",
+        "Nonphantom interval constrains only homogeneous CPL w(z>=0)>=-1, not full dynamical canonical scalar stability."
+      ]
+    },
+    "two_copy_photon_SSR_activation": {
+      "status": "PASS",
+      "input": "two independent copies of (|10>+|01>)/sqrt2",
+      "unconditional_local_number_herald_probability": 0.5,
+      "postselected_local_photon_numbers": [
+        1,
+        1
+      ],
+      "conditional_2qubit_dualrail_wavefunction_real": [
+        [
+          0.0,
+          0.7071067811865475
+        ],
+        [
+          0.7071067811865475,
+          0.0
+        ]
+      ],
+      "event_ready_ideal_CHSH": 2.8284271247461894,
+      "correlation_matrix_E": [
+        [
+          0.7071067811865474,
+          0.7071067811865474
+        ],
+        [
+          0.7071067811865474,
+          -0.7071067811865474
+        ]
+      ],
+      "ideal_two_photon_transmission_efficiency_cases": [
+        0.5,
+        0.8,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "herald_probability_with_independent_transmission_loss": [
+        0.125,
+        0.32000000000000006,
+        0.405,
+        0.45125,
+        0.5
+      ],
+      "resource_caveats": [
+        "Accepted runs require local nondemolition number heralding before CHSH setting choices to avoid detection/postselection loophole.",
+        "Source preparation, path coherence, interferometric stability, detector efficiency, finite statistics, cross-talk and extra modes ignored.",
+        "This is known two-copy particle-entanglement activation (Wiseman/Vaccaro), not a new proof of Bell violations nor a TOE.",
+        "Postselected CHSH says nothing about loophole-free Bell at finite loss unless all selection and measurement resources are accounted."
+      ]
+    }
+  }
+}
