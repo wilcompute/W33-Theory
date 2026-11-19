@@ -1,0 +1,231 @@
+{
+  "date": "2026-11-19",
+  "status": "FIVE_FINITE_GATE_CERTIFICATES_NOT_A_TOE",
+  "tracks": {
+    "SU3_SIC_gauge_completion": {
+      "gauge_group": "SU(3), not E8",
+      "SIC_triplets": 9,
+      "antitriplets_for_anomaly_cancellation": 9,
+      "baryonic_invariants_total": 84,
+      "independent_baryonic_constraints": 19,
+      "selected_baryon_index_triplets": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          6,
+          7
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          1,
+          6,
+          8
+        ],
+        [
+          2,
+          3,
+          5
+        ],
+        [
+          2,
+          7,
+          8
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          1,
+          3,
+          7
+        ],
+        [
+          0,
+          5,
+          8
+        ],
+        [
+          0,
+          5,
+          7
+        ],
+        [
+          0,
+          4,
+          8
+        ],
+        [
+          2,
+          3,
+          6
+        ],
+        [
+          2,
+          4,
+          7
+        ],
+        [
+          1,
+          5,
+          8
+        ],
+        [
+          3,
+          6,
+          8
+        ],
+        [
+          1,
+          2,
+          8
+        ],
+        [
+          0,
+          2,
+          6
+        ],
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "Jacobian_rank_Galois_mod7": 19,
+      "gauge_orbit_tangent_dimension": 8,
+      "frame_moment_map_Frobenius_error": 1.5223390011246007e-15,
+      "antitriplet_pairing_basis_det": [
+        2.0,
+        0.0
+      ],
+      "singlet_Lagrange_fields": 19,
+      "singlet_antitriplet_mass_partners": 27,
+      "complex_chiral_coordinates_total": 100,
+      "complex_holomorphic_Hessian_rank": 92,
+      "quadratic_zero_modes_exactly_gauge_directions": 8,
+      "smallest_nonzero_Hessian_singular_value": 0.7519112263493036,
+      "SU3_cubic_anomaly_fund_plus_antifund": 0,
+      "eight_gauge_vector_mass_matrix_deviation_from_6I": 2.396642123083981e-15,
+      "status": "Local F/D-flat, anomaly-free, fully-Higgsed engineered SU3 toy with massive gauge-invariant chiral directions; not full E8 gauge invariant nor a selected physical vacuum",
+      "limitations": "19 complex baryon constants and field content are engineered; other global F/D branches, K\u00e4hler renormalization, E6 charges, E8 embedding, SM chirality and naturalness unresolved."
+    },
+    "causal_poset_invariant": {
+      "five_event_unlabeled_posets": 63,
+      "five_event_joint_past_future_histogram_classes": 63,
+      "five_event_complete_isomorphism_invariant": true,
+      "six_event_naturally_labeled_relations": 4824,
+      "six_event_joint_past_future_histogram_classes": 311,
+      "first_explicit_six_event_failure": {
+        "shared_signature": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "relation_rowbit_masks_A": [
+          50,
+          16,
+          24,
+          16,
+          0,
+          0
+        ],
+        "relation_rowbit_masks_B": [
+          48,
+          28,
+          16,
+          16,
+          0,
+          0
+        ],
+        "Hasse_covers_A": 5,
+        "Hasse_covers_B": 6
+      },
+      "limitation": "Complete for n<=5 only; fails already at n=6; distinguishes posets but is not a physical causal dynamics or continuum 4D selector."
+    },
+    "G2_E6_real_structure": {
+      "critical_parameters": [
+        [
+          0.125,
+          0.33071891388307384
+        ],
+        [
+          0.125,
+          -0.33071891388307384
+        ]
+      ],
+      "real_pencil_critical_points": 0,
+      "Re_N_equals": "C0+(1/8)Cphi",
+      "Im_N_equals": "(sqrt7/8)Cphi",
+      "real_linear_preserves_complex_N_implies": "preserves C0 and Cphi separately",
+      "real_complex_cubic_inverse_reconstruction_max_error": 2.220446049250313e-16,
+      "scope": "The external theorem identifies complex E6 symmetry; on the original real 27-dimensional tensor space this direct complex-cubic preservation cannot be equated with a physical real E6 gauge action."
+    },
+    "genuine_three_time_quantum_memory": {
+      "source": "Beyer et al., arXiv:2611.17268 Appendix B,C; independent numerical reproduction NOT new discovery",
+      "gamma": 0.36,
+      "p": 0.2,
+      "pairwise_classical_threshold_pcrit": 0.09999999999999998,
+      "pairwise_classical_decompositions_verified": 3,
+      "largest_pairwise_channel_superoperator_error": 3.433175098891678e-16,
+      "three_time_W3_witness": -0.3599999999999999,
+      "F2_z": 0.0,
+      "F3_x": 0.0,
+      "genuine_three_time_only_quantum_memory_certified_for_these_three_channels": true,
+      "scope": "Three marginal channels are CPTP; an explicit shared quantum stochastic dilation is established by the cited paper, not independently synthesized here. No qutrit or photonic experiment has been constructed."
+    },
+    "SU3_finite_shots_and_loss": {
+      "two_loop_SU3_commutator_trace": [
+        0.8383904146899032,
+        -0.2837042264924626
+      ],
+      "SU3_noncommutativity_Frobenius_norm_squared": 4.323219170620197,
+      "known_visibility": 0.8,
+      "uniform_detection_efficiency": 0.7,
+      "complex_trace_absolute_error_target": 0.2,
+      "total_failure_probability_upper_bound": 0.01,
+      "accepted_detections_per_phase_required": 9401,
+      "raw_attempts_per_phase_sufficient": 13919,
+      "total_raw_attempts_sufficient": 27838,
+      "Hoeffding_Chernoff_upper_bound": "failure<=delta_est+delta_loss=0.01 for both settings and both detection quotas",
+      "Monte_Carlo_trials": 256,
+      "Monte_Carlo_max_absolute_trace_error": 0.12061230486605899,
+      "calibration": "Unknown visibility v is degenerate with trace amplitude; calibrate against identity K=I, for which P0=(1+v)/2.",
+      "scope": "Conservative ideal-model resource bound, no physical photon source, detector crosstalk, unequal arm loss, correlated phase drift or shot-noise-limited prototype."
+    }
+  }
+}
