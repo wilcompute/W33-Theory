@@ -1,0 +1,510 @@
+{
+  "E8_renormalizable_messenger_vacuum": {
+    "sector_source": "cb1a66717 balanced E8; zero modes and charge matrix IMPORTED",
+    "charged_field_order": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G1",
+      "G2"
+    ],
+    "field_charges": [
+      [
+        1,
+        -1,
+        0
+      ],
+      [
+        -1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        -1
+      ],
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        -2,
+        -1,
+        -1
+      ],
+      [
+        1,
+        2,
+        1
+      ],
+      [
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        2
+      ]
+    ],
+    "messenger_Y_charges": [
+      [
+        -1,
+        1,
+        0
+      ],
+      [
+        -1,
+        0,
+        1
+      ],
+      [
+        -1,
+        0,
+        1
+      ]
+    ],
+    "messenger_Z_charges": [
+      [
+        1,
+        -1,
+        0
+      ],
+      [
+        1,
+        0,
+        -1
+      ],
+      [
+        1,
+        0,
+        -1
+      ]
+    ],
+    "superpotential_exact": "W=X1(AB-t1)+X2(DE-t2)+sum_i[M Yi Zi + Xi Pi Yi + Zi Ri + Xi ti], with (Pi,Ri)=(A,FE),(C,EG1),(C,EG2) and ti=Pi*Ri/M",
+    "all_superpotential_terms_renormalizable_in_fourD": true,
+    "mass_M_input": 10.0,
+    "singlet_squared_vevs": [
+      2.04,
+      1.0,
+      2.08,
+      1.0,
+      4.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "Y_messenger_vevs": [
+      -0.2,
+      -0.2,
+      -0.2
+    ],
+    "Z_messenger_vevs": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "X_driver_vevs": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "two_quadratic_targets": [
+      1.42828568570857,
+      2.0
+    ],
+    "three_messenger_driver_targets": [
+      0.285657137141714,
+      0.2884441020371192,
+      0.2884441020371192
+    ],
+    "F_X_residual": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "F_Z_residual": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "D_Abelian_residual": [
+      9.71445146547012e-16,
+      -2.7755575615628914e-17,
+      -5.551115123125783e-17
+    ],
+    "Jacobian_rank": 8,
+    "full_superpotential_Hessian_rank": 16,
+    "symbolic_full_Fterm_max_error": 0.0,
+    "symbolic_vs_hand_Jacobian_max_error": 0.0,
+    "exact_integrated_out_one_pair_coefficient": "-X*P*R/M",
+    "three_formal_diagonal_yukawa_spurion_selections": [
+      {
+        "family": 1,
+        "Higgs_10": "10_34",
+        "singlet": "B"
+      },
+      {
+        "family": 2,
+        "Higgs_10": "10_34",
+        "singlet": "A"
+      },
+      {
+        "family": 3,
+        "Higgs_10": "10_24",
+        "singlet": "C"
+      }
+    ],
+    "formal_rank3_diagonal_dimensionless_masses_with_lambda_equals_one": [
+      0.1,
+      0.142828568570857,
+      0.1442220510185596
+    ],
+    "formal_diagonal_mass_rank": 3,
+    "Yukawa_warning": "Full-rank DIAGONAL is only gauge/R-allowed if external overlap couplings and Higgs VEVs are nonzero; no source-space physical Yukawa or observed hierarchy follows.",
+    "gauge_tangent_dimension": 3,
+    "gauge_tangent_Hessian_block_residual": 2.7478308710204047e-16,
+    "local_physical_complex_moduli_count": 0,
+    "added_messenger_mixed_U1squared_R_anomaly": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "added_messenger_grav_R_anomaly": 0,
+    "added_messenger_U1cubed_anomaly": [
+      [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    ],
+    "added_messenger_grav_U1_anomaly": [
+      0,
+      0,
+      0
+    ],
+    "five_R2_drivers_gravitational_Z4R_mod2_from_prior_minimal_spectrum": 0,
+    "result": "Explicit 19-field renormalizable W with 3 heavy vectorlike gauge pairs, five neutral R2 drivers and nonzero D-flat light/messenger condensates. F=0, D=0; Hessian rank16 leaves exactly three gauge orbits; messenger pairs add zero perturbative gauge and listed R anomaly coefficients.",
+    "critical_limits": "Heavy messenger Y must condense and alters the D terms; exact compensation is included. All source field content, five drivers, target t_i, heavy M, R symmetry and UV geometry are INSERTED. Full E8 higher-dimensional overlap, original anomalous U1s, gravitational/global anomalies, realistic masses, proton safety and dynamical R origin remain unsolved."
+  },
+  "SU5_two_boundary_orbifold_alternative": {
+    "P0": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "Ppi": [
+      1,
+      1,
+      1,
+      -1,
+      -1
+    ],
+    "Ppi_is_in_SU5": true,
+    "SU5_generator_even_count": 12,
+    "SU5_generator_odd_count": 12,
+    "even_subalgebra": "su3(8) + su2(3) + u1(1), total 12",
+    "odd_subspace": "(3,2,-5/6) + (3bar,2,5/6), total 12",
+    "boundary_pair_even": "(+,+): zero mode allowed",
+    "boundary_pair_odd": "(+,-): zero mode forbidden",
+    "light_Weyl_adjoint_zero_mode_betas": [
+      [
+        0.0,
+        1.3333333333333333,
+        2.0
+      ]
+    ],
+    "missing_X_dirac_pair_beta": [
+      3.3333333333333335,
+      2.0,
+      1.3333333333333333
+    ],
+    "fiveD_KK_masses": "for interval length L, (+,+) n*pi/L (n>=0), (+,-) (n+1/2)*pi/L",
+    "interpretation": "Boundary parity breaks SU5 to SM subgroup and protects off-block fermion/gauge X zero-mode absence without cancellation of huge signed fourD adjoint mass matrices.",
+    "provenance": "Known extra-dimensional orbifold GUT mechanism (see EPJC 2025 SU5 x U1PQ article), NOT novel physics or a complete 5D theory here.",
+    "limitations": "A single Z2 parity is insufficient for a 5D Dirac fermion: both boundaries' conditions and 4D chirality must be specified. Even 8+3+1 zero modes are not selectively split by P alone; mass hierarchy, KK threshold unification, brane Yukawas/anomalies, proton decay and UV/gravity completion remain open."
+  },
+  "twisted_spinC_family_indices": {
+    "M": "CP2 Euclidean compact 4-manifold, not physical Lorentzian spacetime",
+    "fixed_spinC_determinant_k": 5,
+    "twist": "tensor spinor with complex line bundle c1=qH, gives effective determinant k+2q",
+    "index_formula": "index_q=((k+2q)^2-1)/8, for k odd and integer q",
+    "table": [
+      {
+        "line_twist_q": -2,
+        "effective_spinC_determinant_class": 1,
+        "index": 0
+      },
+      {
+        "line_twist_q": -1,
+        "effective_spinC_determinant_class": 3,
+        "index": 1
+      },
+      {
+        "line_twist_q": 0,
+        "effective_spinC_determinant_class": 5,
+        "index": 3
+      },
+      {
+        "line_twist_q": 1,
+        "effective_spinC_determinant_class": 7,
+        "index": 6
+      },
+      {
+        "line_twist_q": 2,
+        "effective_spinC_determinant_class": 9,
+        "index": 10
+      },
+      {
+        "line_twist_q": 3,
+        "effective_spinC_determinant_class": 11,
+        "index": 15
+      }
+    ],
+    "difference_formula": "index_(q+1)-index_q=(k+2q+1)/2",
+    "nonuniversality": "The same spin-c background gives index3 at q0 but index6 for q1 and index1 for q-1. Three for one charge DOES NOT imply three for all components of a gauge multiplet after arbitrary extra twisting.",
+    "physical_limit": "No dynamical flux fixing, actual G2 compactification, four-dimensional chirality, boundary/domain zero mode calculation, or SM gauge representation from this CP2 toy."
+  },
+  "causal_link_thinning_no_go": {
+    "geometry": "unit coordinate-time truncated future cone in 3+1 Minkowski",
+    "acceptance_rule": "given actual causal link, retain with probability exp(-alpha*rho*V_interval), alpha>=0 fixed as rho changes",
+    "note": "actual links have empty intervals; rho*V_interval here is the *embedding/continuum* Alexandrov volume, not the observed number of intermediate elements. This thinning is NOT intrinsic order-only.",
+    "asymptotic_exact": "E_retained ~ pi sqrt(6/(1+alpha))*sqrt(rho) for any fixed alpha>=0",
+    "integral": "pi rho int_0^1 ds exp[-(1+alpha)*rho*pi*s\u00b2/24] [sqrt(1-s)-s log((1+sqrt(1-s))/sqrt(s))]",
+    "data": [
+      {
+        "alpha": 0,
+        "rho": 160.0,
+        "expected_retained_links": 72.47475722017143,
+        "expected_div_sqrt_rho": 5.729632642086876,
+        "asymptotic_div_sqrt_rho": 7.695298980971184
+      },
+      {
+        "alpha": 0,
+        "rho": 2560.0,
+        "expected_retained_links": 355.9357968552901,
+        "expected_div_sqrt_rho": 7.034798867810714,
+        "asymptotic_div_sqrt_rho": 7.695298980971184
+      },
+      {
+        "alpha": 0,
+        "rho": 40960.0,
+        "expected_retained_links": 1515.6267415522536,
+        "expected_div_sqrt_rho": 7.4888009155695086,
+        "asymptotic_div_sqrt_rho": 7.695298980971184
+      },
+      {
+        "alpha": 1,
+        "rho": 160.0,
+        "expected_retained_links": 55.309257283111826,
+        "expected_div_sqrt_rho": 4.3725807176722435,
+        "asymptotic_div_sqrt_rho": 5.441398092702653
+      },
+      {
+        "alpha": 1,
+        "rho": 2560.0,
+        "expected_retained_links": 257.55526125227567,
+        "expected_div_sqrt_rho": 5.090382805730637,
+        "asymptotic_div_sqrt_rho": 5.441398092702653
+      },
+      {
+        "alpha": 1,
+        "rho": 40960.0,
+        "expected_retained_links": 1079.323012111351,
+        "expected_div_sqrt_rho": 5.332998514539641,
+        "asymptotic_div_sqrt_rho": 5.441398092702653
+      },
+      {
+        "alpha": 3,
+        "rho": 160.0,
+        "expected_retained_links": 41.373385222099756,
+        "expected_div_sqrt_rho": 3.2708532953346654,
+        "asymptotic_div_sqrt_rho": 3.847649490485592
+      },
+      {
+        "alpha": 3,
+        "rho": 2560.0,
+        "expected_retained_links": 185.27362176825997,
+        "expected_div_sqrt_rho": 3.66179146960159,
+        "asymptotic_div_sqrt_rho": 3.847649490485592
+      },
+      {
+        "alpha": 3,
+        "rho": 40960.0,
+        "expected_retained_links": 767.2194349529399,
+        "expected_div_sqrt_rho": 3.790876374372951,
+        "asymptotic_div_sqrt_rho": 3.847649490485592
+      },
+      {
+        "alpha": 15,
+        "rho": 160.0,
+        "expected_retained_links": 22.24598730345563,
+        "expected_div_sqrt_rho": 1.7586997169526786,
+        "asymptotic_div_sqrt_rho": 1.923824745242796
+      },
+      {
+        "alpha": 15,
+        "rho": 2560.0,
+        "expected_retained_links": 94.72667134701585,
+        "expected_div_sqrt_rho": 1.8722002288923771,
+        "asymptotic_div_sqrt_rho": 1.923824745242796
+      },
+      {
+        "alpha": 15,
+        "rho": 40960.0,
+        "expected_retained_links": 386.2220190792521,
+        "expected_div_sqrt_rho": 1.9083457231241319,
+        "asymptotic_div_sqrt_rho": 1.923824745242796
+      }
+    ],
+    "no_fixed_positive_alpha_makes_degree_bounded": true,
+    "limits": "Positive nonvanishing density-independent link-thinning profiles still give growing null-cone link degree in this region. This does not exclude cancellation-based nonlocal kernels, density-dependent suppression or other intrinsic locality prescriptions."
+  },
+  "CCR_energy_vacuum_selection": {
+    "fixed_commutator": "[q,p]=i shared by all choices",
+    "supplied_Hamiltonian": "H_omega=(p\u00b2+omega\u00b2 q\u00b2)/2, omega>0",
+    "minimizer_r": "-1/2 log(omega)",
+    "table": [
+      {
+        "frequency_omega": 0.5,
+        "energy_ground": 0.25,
+        "vacuum_squeezing_r": 0.34657359027997264,
+        "q_variance": 1.0,
+        "p_variance": 0.25
+      },
+      {
+        "frequency_omega": 1.0,
+        "energy_ground": 0.5,
+        "vacuum_squeezing_r": -0.0,
+        "q_variance": 0.5,
+        "p_variance": 0.5
+      },
+      {
+        "frequency_omega": 2.0,
+        "energy_ground": 1.0,
+        "vacuum_squeezing_r": -0.34657359027997264,
+        "q_variance": 0.25,
+        "p_variance": 1.0
+      },
+      {
+        "frequency_omega": 4.0,
+        "energy_ground": 2.0,
+        "vacuum_squeezing_r": -0.6931471805599453,
+        "q_variance": 0.125,
+        "p_variance": 2.0
+      }
+    ],
+    "result": "Each positive omega selects a unique pure Gaussian oscillator ground state, but different supplied Hamiltonians select different physical vacua with identical CCR. A causal exchange TOE must derive the time generator/energy functional, not simply impose minimization.",
+    "scope": "Elementary harmonic oscillator, not a curved-spacetime Hadamard state, a Born rule or an interacting causal quantum gravity solution."
+  },
+  "photon_phase_failure_threshold": {
+    "Bell_fraction_w": 0.82,
+    "required_visibility_sq": 0.4872099940511603,
+    "maximum_Gaussian_phase_sigma_for_CHSH_violation": 0.8479740854268754,
+    "samples": [
+      {
+        "sigma_relative_phase": 0,
+        "visibility": 1.0,
+        "max_CHSH": 2.319310242291876
+      },
+      {
+        "sigma_relative_phase": 0.4,
+        "visibility": 0.9231163463866358,
+        "max_CHSH": 2.2319332281238884
+      },
+      {
+        "sigma_relative_phase": 0.8,
+        "visibility": 0.7261490370736908,
+        "max_CHSH": 2.026772237748036
+      },
+      {
+        "sigma_relative_phase": 0.8479740854268754,
+        "visibility": 0.6980042937197165,
+        "max_CHSH": 2.0
+      },
+      {
+        "sigma_relative_phase": 1,
+        "visibility": 0.6065306597126334,
+        "max_CHSH": 1.918084603184831
+      },
+      {
+        "sigma_relative_phase": 2,
+        "visibility": 0.1353352832366127,
+        "max_CHSH": 1.6549506767137019
+      }
+    ],
+    "ideal_two_photon_eta0p8_herald_probability": 0.32000000000000006,
+    "if_two_independent_QND_herald_efficiencies_each_0p7": 0.15680000000000002,
+    "not_solved": "The model is standard QM, not an experimental TOE signature. QND herald rates and phase noise were assumed; detector loopholes, clock drift, source distinguishability and full process tomography remain."
+  }
+}
