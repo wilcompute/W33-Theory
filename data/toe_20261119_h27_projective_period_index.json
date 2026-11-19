@@ -1,0 +1,563 @@
+{
+  "status": "PASS",
+  "space": "Y7=(S5 x T2)/H27",
+  "fundamental_group": "<x,y,c | c^3=1, [x,y]=c, [x,c]=[y,c]=1>",
+  "torsion_H3": "(Z/3)^2",
+  "nonzero_twists": [
+    {
+      "U": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "V": [
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "C": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          0,
+          2
+        ]
+      ],
+      "torsion_cycle_pairing_exponents_mod3": [
+        0,
+        1
+      ],
+      "projective_image_order": 27,
+      "unitary_lift_group_order": 81,
+      "projective_product_checks": 729,
+      "scalar_cocycle_checks": 19683,
+      "E8_compensated_descent": {
+        "faithful_27_times3_block_dimension": 81,
+        "exact_unprojectivized_product_checks": 729,
+        "finite_E8_holonomy_image_order": 27,
+        "exact_E8_adjoint_character_sum": 810,
+        "E8_parallel_adjoint_invariant_dimension": 30,
+        "embedding": "PSU3 -> (E6 x SU3)/Z3 -> E8; [g] -> [(r(conj(g)),g)], r(g)=(1,conj(g),g) in E6 trinification",
+        "E6_27_restriction_on_compensating_factor": "7*3bar + Sym^2(3)",
+        "scope": "Global flat E8 holonomy on this Y, in a standard abstract branching basis. Not a native Albert intertwiner, SM centralizer, nonproportional PW-compatible background or G2 metric."
+      },
+      "integral_SL2_generator_matrix": [
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          -2
+        ]
+      ],
+      "period": 3,
+      "topological_index": 3,
+      "minimal_twisted_bundle_rank": 3
+    },
+    {
+      "U": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "V": [
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "C": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          1
+        ]
+      ],
+      "torsion_cycle_pairing_exponents_mod3": [
+        0,
+        2
+      ],
+      "projective_image_order": 27,
+      "unitary_lift_group_order": 81,
+      "projective_product_checks": 729,
+      "scalar_cocycle_checks": 19683,
+      "E8_compensated_descent": {
+        "faithful_27_times3_block_dimension": 81,
+        "exact_unprojectivized_product_checks": 729,
+        "finite_E8_holonomy_image_order": 27,
+        "exact_E8_adjoint_character_sum": 810,
+        "E8_parallel_adjoint_invariant_dimension": 30,
+        "embedding": "PSU3 -> (E6 x SU3)/Z3 -> E8; [g] -> [(r(conj(g)),g)], r(g)=(1,conj(g),g) in E6 trinification",
+        "E6_27_restriction_on_compensating_factor": "7*3bar + Sym^2(3)",
+        "scope": "Global flat E8 holonomy on this Y, in a standard abstract branching basis. Not a native Albert intertwiner, SM centralizer, nonproportional PW-compatible background or G2 metric."
+      },
+      "integral_SL2_generator_matrix": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -2
+        ]
+      ],
+      "period": 3,
+      "topological_index": 3,
+      "minimal_twisted_bundle_rank": 3
+    },
+    {
+      "U": [
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "V": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "C": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          0,
+          2
+        ]
+      ],
+      "torsion_cycle_pairing_exponents_mod3": [
+        1,
+        0
+      ],
+      "projective_image_order": 27,
+      "unitary_lift_group_order": 81,
+      "projective_product_checks": 729,
+      "scalar_cocycle_checks": 19683,
+      "E8_compensated_descent": {
+        "faithful_27_times3_block_dimension": 81,
+        "exact_unprojectivized_product_checks": 729,
+        "finite_E8_holonomy_image_order": 27,
+        "exact_E8_adjoint_character_sum": 810,
+        "E8_parallel_adjoint_invariant_dimension": 30,
+        "embedding": "PSU3 -> (E6 x SU3)/Z3 -> E8; [g] -> [(r(conj(g)),g)], r(g)=(1,conj(g),g) in E6 trinification",
+        "E6_27_restriction_on_compensating_factor": "7*3bar + Sym^2(3)",
+        "scope": "Global flat E8 holonomy on this Y, in a standard abstract branching basis. Not a native Albert intertwiner, SM centralizer, nonproportional PW-compatible background or G2 metric."
+      },
+      "integral_SL2_generator_matrix": [
+        [
+          1,
+          0
+        ],
+        [
+          -2,
+          1
+        ]
+      ],
+      "period": 3,
+      "topological_index": 3,
+      "minimal_twisted_bundle_rank": 3
+    },
+    {
+      "U": [
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "V": [
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "C": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "torsion_cycle_pairing_exponents_mod3": [
+        1,
+        1
+      ],
+      "projective_image_order": 27,
+      "unitary_lift_group_order": 81,
+      "projective_product_checks": 729,
+      "scalar_cocycle_checks": 19683,
+      "E8_compensated_descent": {
+        "faithful_27_times3_block_dimension": 81,
+        "exact_unprojectivized_product_checks": 729,
+        "finite_E8_holonomy_image_order": 27,
+        "exact_E8_adjoint_character_sum": 810,
+        "E8_parallel_adjoint_invariant_dimension": 30,
+        "embedding": "PSU3 -> (E6 x SU3)/Z3 -> E8; [g] -> [(r(conj(g)),g)], r(g)=(1,conj(g),g) in E6 trinification",
+        "E6_27_restriction_on_compensating_factor": "7*3bar + Sym^2(3)",
+        "scope": "Global flat E8 holonomy on this Y, in a standard abstract branching basis. Not a native Albert intertwiner, SM centralizer, nonproportional PW-compatible background or G2 metric."
+      },
+      "integral_SL2_generator_matrix": [
+        [
+          -2,
+          1
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      "period": 3,
+      "topological_index": 3,
+      "minimal_twisted_bundle_rank": 3
+    },
+    {
+      "U": [
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "V": [
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "C": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "torsion_cycle_pairing_exponents_mod3": [
+        1,
+        2
+      ],
+      "projective_image_order": 27,
+      "unitary_lift_group_order": 81,
+      "projective_product_checks": 729,
+      "scalar_cocycle_checks": 19683,
+      "E8_compensated_descent": {
+        "faithful_27_times3_block_dimension": 81,
+        "exact_unprojectivized_product_checks": 729,
+        "finite_E8_holonomy_image_order": 27,
+        "exact_E8_adjoint_character_sum": 810,
+        "E8_parallel_adjoint_invariant_dimension": 30,
+        "embedding": "PSU3 -> (E6 x SU3)/Z3 -> E8; [g] -> [(r(conj(g)),g)], r(g)=(1,conj(g),g) in E6 trinification",
+        "E6_27_restriction_on_compensating_factor": "7*3bar + Sym^2(3)",
+        "scope": "Global flat E8 holonomy on this Y, in a standard abstract branching basis. Not a native Albert intertwiner, SM centralizer, nonproportional PW-compatible background or G2 metric."
+      },
+      "integral_SL2_generator_matrix": [
+        [
+          -2,
+          -1
+        ],
+        [
+          -1,
+          -1
+        ]
+      ],
+      "period": 3,
+      "topological_index": 3,
+      "minimal_twisted_bundle_rank": 3
+    },
+    {
+      "U": [
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "V": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "C": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          1
+        ]
+      ],
+      "torsion_cycle_pairing_exponents_mod3": [
+        2,
+        0
+      ],
+      "projective_image_order": 27,
+      "unitary_lift_group_order": 81,
+      "projective_product_checks": 729,
+      "scalar_cocycle_checks": 19683,
+      "E8_compensated_descent": {
+        "faithful_27_times3_block_dimension": 81,
+        "exact_unprojectivized_product_checks": 729,
+        "finite_E8_holonomy_image_order": 27,
+        "exact_E8_adjoint_character_sum": 810,
+        "E8_parallel_adjoint_invariant_dimension": 30,
+        "embedding": "PSU3 -> (E6 x SU3)/Z3 -> E8; [g] -> [(r(conj(g)),g)], r(g)=(1,conj(g),g) in E6 trinification",
+        "E6_27_restriction_on_compensating_factor": "7*3bar + Sym^2(3)",
+        "scope": "Global flat E8 holonomy on this Y, in a standard abstract branching basis. Not a native Albert intertwiner, SM centralizer, nonproportional PW-compatible background or G2 metric."
+      },
+      "integral_SL2_generator_matrix": [
+        [
+          -1,
+          0
+        ],
+        [
+          -2,
+          -1
+        ]
+      ],
+      "period": 3,
+      "topological_index": 3,
+      "minimal_twisted_bundle_rank": 3
+    },
+    {
+      "U": [
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "V": [
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "C": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          0,
+          2
+        ]
+      ],
+      "torsion_cycle_pairing_exponents_mod3": [
+        2,
+        1
+      ],
+      "projective_image_order": 27,
+      "unitary_lift_group_order": 81,
+      "projective_product_checks": 729,
+      "scalar_cocycle_checks": 19683,
+      "E8_compensated_descent": {
+        "faithful_27_times3_block_dimension": 81,
+        "exact_unprojectivized_product_checks": 729,
+        "finite_E8_holonomy_image_order": 27,
+        "exact_E8_adjoint_character_sum": 810,
+        "E8_parallel_adjoint_invariant_dimension": 30,
+        "embedding": "PSU3 -> (E6 x SU3)/Z3 -> E8; [g] -> [(r(conj(g)),g)], r(g)=(1,conj(g),g) in E6 trinification",
+        "E6_27_restriction_on_compensating_factor": "7*3bar + Sym^2(3)",
+        "scope": "Global flat E8 holonomy on this Y, in a standard abstract branching basis. Not a native Albert intertwiner, SM centralizer, nonproportional PW-compatible background or G2 metric."
+      },
+      "integral_SL2_generator_matrix": [
+        [
+          -1,
+          -2
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "period": 3,
+      "topological_index": 3,
+      "minimal_twisted_bundle_rank": 3
+    },
+    {
+      "U": [
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "V": [
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "C": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "torsion_cycle_pairing_exponents_mod3": [
+        2,
+        2
+      ],
+      "projective_image_order": 27,
+      "unitary_lift_group_order": 81,
+      "projective_product_checks": 729,
+      "scalar_cocycle_checks": 19683,
+      "E8_compensated_descent": {
+        "faithful_27_times3_block_dimension": 81,
+        "exact_unprojectivized_product_checks": 729,
+        "finite_E8_holonomy_image_order": 27,
+        "exact_E8_adjoint_character_sum": 810,
+        "E8_parallel_adjoint_invariant_dimension": 30,
+        "embedding": "PSU3 -> (E6 x SU3)/Z3 -> E8; [g] -> [(r(conj(g)),g)], r(g)=(1,conj(g),g) in E6 trinification",
+        "E6_27_restriction_on_compensating_factor": "7*3bar + Sym^2(3)",
+        "scope": "Global flat E8 holonomy on this Y, in a standard abstract branching basis. Not a native Albert intertwiner, SM centralizer, nonproportional PW-compatible background or G2 metric."
+      },
+      "integral_SL2_generator_matrix": [
+        [
+          -1,
+          -1
+        ],
+        [
+          -1,
+          -2
+        ]
+      ],
+      "period": 3,
+      "topological_index": 3,
+      "minimal_twisted_bundle_rank": 3
+    }
+  ],
+  "zero_twist_index": 1,
+  "topological_argument": "The commuting tori (x,c),(y,c) generate Tor H2(Y;Z)=(Z3)^2. Scalar lift commutators give their flat-gerbe holonomies. Exponential-sequence Bockstein identifies these torsion pairings with all eight nonzero H3 twists. Each representation constructs a flat PU3 bundle and associated degree3 Azumaya algebra. Period3 divides index, and degree3 existence gives index divides3, hence index3 and a rank3 twisted bundle.",
+  "scope": "Exact finite matrix/cocycle verification, analytic topology proof and compensated abstract flat E8 holonomy; no full twisted K groups, native Albert intertwiner, physical compactification, or fermion-family inference."
+}
