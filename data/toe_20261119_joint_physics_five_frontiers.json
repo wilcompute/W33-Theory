@@ -1,0 +1,302 @@
+{
+  "title": "Five physically anchored TOE consistency gates and a conditional coupled BSM toy model",
+  "date": "2026-11-19",
+  "W33_used_as_foundation": false,
+  "status": "Five model-limited consistency certificates PASS; no unified theory achieved",
+  "source_uris": [
+    "https://global-nu.org/results.html",
+    "https://academic.oup.com/mnras/article/551/4/stag1607/8771483",
+    "https://www.darkenergysurvey.org/des-y6-cosmology-results-papers/",
+    "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.102.112011",
+    "https://link.springer.com/article/10.1140/epjc/s10052-026-15312-z"
+  ],
+  "frontiers": {
+    "gauge_and_chiral_content": {
+      "status": "PASS",
+      "field_content": [
+        {
+          "name": "Sigma_A",
+          "SM_rep": "(1,3,0)",
+          "spin": "Weyl/Majorana",
+          "count": 2,
+          "Mass_GeV": 21716354.84154603,
+          "delta_b2_total": 2.6666666666666665
+        },
+        {
+          "name": "Omega",
+          "SM_rep": "(8,1,0)",
+          "spin": "Weyl/Majorana",
+          "count": 1,
+          "Mass_GeV": 454271.0798763982,
+          "delta_b3_total": 2
+        }
+      ],
+      "one_loop_beta_SM": [
+        4.1,
+        -3.1666666666666665,
+        -7.0
+      ],
+      "one_loop_beta_above_thresholds": [
+        4.1,
+        -0.5,
+        -5.0
+      ],
+      "GUT_normalized_U1": true,
+      "chosen_unification_scale_GeV": 2e+16,
+      "admissible_MU_interval_GeV": [
+        241681565847582.78,
+        1.2990947619638602e+17
+      ],
+      "required_logs_lnMU_over_Mtriplet_lnMU_over_Moctet": [
+        20.640932454493715,
+        24.508059277391073
+      ],
+      "unified_inverse_alpha": 37.462263369302654,
+      "unified_alpha": 0.026693528635523406,
+      "one_loop_closure_error": 0.0,
+      "gauge_anomalies": "zero new perturbative local gauge anomalies; integer-isospin SU2 triplet has no Witten mod2 anomaly",
+      "notes": [
+        "This proves an anomaly-free effective field content can achieve a chosen one-loop crossing.",
+        "MU is input, not predicted; no UV grand-unified Lagrangian, heavy X/Y bosons or proton lifetime computed.",
+        "2-loop BSM running and threshold matching may shift or destroy this exact one-loop crossing."
+      ]
+    },
+    "neutrino_typeIII": {
+      "status": "PASS",
+      "mechanism": "tree-level minimal two-triplet type-III seesaw",
+      "input_source": "Bari 2026.a preliminary normal ordering, \u03b823 and \u03b4 illustrative",
+      "light_masses_eV": [
+        0.0,
+        0.008640023148117138,
+        0.05009291367049835
+      ],
+      "light_mass_sum_eV": 0.05873293681861549,
+      "one_exactly_massless_neutrino": true,
+      "heavy_triplet_masses_GeV": [
+        21716354.84154603,
+        21716354.84154603
+      ],
+      "yukawa_abs_matrix": [
+        [
+          4.294413230117867e-05,
+          5.062719976990652e-05,
+          4.222096817176098e-05
+        ],
+        [
+          2.82260280903672e-05,
+          0.00013123527198747085,
+          0.0001336726310105847
+        ]
+      ],
+      "maximum_yukawa_abs": 0.0001336726310105847,
+      "light_mass_matrix_complex_real_GeV": [
+        [
+          2.9835485769648194e-12,
+          -1.2455299215983552e-12,
+          -6.881855608812931e-12
+        ],
+        [
+          -1.2455299215983542e-12,
+          2.759932418967756e-11,
+          2.150285674982437e-11
+        ],
+        [
+          -6.881855608812931e-12,
+          2.1502856749824372e-11,
+          2.7410449583524294e-11
+        ]
+      ],
+      "light_mass_matrix_complex_imag_GeV": [
+        [
+          1.033969733938201e-12,
+          -3.0589717521880588e-12,
+          -3.1157843170475865e-12
+        ],
+        [
+          -3.0589717521880588e-12,
+          -3.5966750701705734e-13,
+          -3.3293545049276646e-14
+        ],
+        [
+          -3.1157843170475865e-12,
+          -3.3293545049276646e-14,
+          3.053275996989015e-13
+        ]
+      ],
+      "Takagi_reconstruction_error_GeV": 5.621334361414514e-27,
+      "mbb_phase_range_eV": [
+        0.001462108315564494,
+        0.0036862336825346214
+      ],
+      "warnings": [
+        "Mixing angles, splittings, Yukawa phases and chosen heavy masses are inserted, not derived.",
+        "Rank 2 gives one massless light neutrino at tree level, but loop/higher-dimension terms may lift it.",
+        "No calculated leptogenesis, LFV bounds, collider rates, or Majorana detection prediction."
+      ]
+    },
+    "gravity_R2_and_dark_energy_naturalness": {
+      "status": "PASS",
+      "model": "effective R+R\u00b2/(6M\u00b2), M\u00b2 positive; not UV complete",
+      "input_inflation_N55": {
+        "efolds_N": 55,
+        "exp_sqrt_2over3_phi": 79.09098096674661,
+        "epsilon": 0.0002186437058920841,
+        "eta": -0.0168554577694256,
+        "scalar_tilt_ns": 0.9649772222257963,
+        "tensor_ratio_r": 0.0034982992942733456,
+        "M_over_reduced_Mplanck": 1.2196327645478182e-05,
+        "M_GeV": 29698057816739.375
+      },
+      "scalaron_Compton_length_m": 6.644440578470378e-30,
+      "scalaron_Newtonian_fifth_force_amplitude": 0.3333333333333333,
+      "Yukawa_factor_at_1nanometer": 0.0,
+      "inferred_present_dark_energy_rho_eV4": 2.6360997130167607e-11,
+      "inferred_present_dark_energy_scale_meV": 2.2658985341295543,
+      "naive_M4_over_64pi2_to_rhoLambda_ratio": 4.671653683479143e+97,
+      "limitations": [
+        "Loop estimate is a naturalness diagnostic, not an unavoidable observable vacuum energy.",
+        "Bare cosmological constant renormalization and UV cancellations unspecified.",
+        "The R\u00b2 scalaron does not explain observed cosmic acceleration merely by existing."
+      ]
+    },
+    "real_data_BAO_two_point_audit": {
+      "status": "PASS",
+      "fixed_inputs": {
+        "H0_km_s_Mpc": 68.3,
+        "Omega_m": 0.302,
+        "rd_Mpc": 147.09
+      },
+      "LambdaCDM": {
+        "samples": [
+          {
+            "survey": "DES Y6 no DESI footprint",
+            "observable": "DM_over_rd",
+            "z": 0.851,
+            "value": 19.74,
+            "sigma": 0.6,
+            "predicted": 20.360078262803423,
+            "pull": 1.0334637713390413
+          },
+          {
+            "survey": "DESI DR2 LRG2",
+            "observable": "DH_over_rd",
+            "z": 0.706,
+            "value": 19.455,
+            "sigma": 0.33,
+            "predicted": 20.13043891536806,
+            "pull": 2.04678459202443
+          }
+        ],
+        "diagonal_only_chi2": 5.257374532818927
+      },
+      "DES_Y6_DESI_DR2_best_fit_CPL": {
+        "samples": [
+          {
+            "survey": "DES Y6 no DESI footprint",
+            "observable": "DM_over_rd",
+            "z": 0.851,
+            "value": 19.74,
+            "sigma": 0.6,
+            "predicted": 20.073854677950056,
+            "pull": 0.5564244632500959
+          },
+          {
+            "survey": "DESI DR2 LRG2",
+            "observable": "DH_over_rd",
+            "z": 0.706,
+            "value": 19.455,
+            "sigma": 0.33,
+            "predicted": 19.918814138710914,
+            "pull": 1.405497390033078
+          }
+        ],
+        "diagonal_only_chi2": 2.2850310966929515
+      },
+      "CPL_w0_wa": [
+        -0.84,
+        -0.53
+      ],
+      "delta_chi2_LCDM_minus_CPL_fixed_inputs": 2.9723434361259757,
+      "source_uris": [
+        "https://academic.oup.com/mnras/article/551/4/stag1607/8771483",
+        "https://www.darkenergysurvey.org/des-y6-cosmology-results-papers/"
+      ],
+      "warnings": [
+        "ONLY two selected observed values; simplified diagonal pseudo-chi\u00b2 is NOT a statistical model preference.",
+        "DESI DR2 anisotropic BAO covariance, cosmological correlations, rd/H0/Om uncertainties and full likelihood omitted.",
+        "Absolute scale rd=147.09 Mpc imposed; no derivation of sound horizon or recombination physics."
+      ]
+    },
+    "quantum_Tsirelson_PSD_certificate": {
+      "status": "PASS",
+      "matrix_W": [
+        [
+          0.0,
+          0.0,
+          0.5,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.5,
+          -0.5
+        ],
+        [
+          0.5,
+          0.5,
+          0.0,
+          0.0
+        ],
+        [
+          0.5,
+          -0.5,
+          0.0,
+          0.0
+        ]
+      ],
+      "PSD_dual_certificate_eigenvalues": [
+        -1.1102230246251565e-16,
+        0.0,
+        1.414213562373095,
+        1.414213562373095
+      ],
+      "dual_objective": 2.82842712474619,
+      "explicit_quantum_Gram": [
+        [
+          1.0,
+          0.0,
+          0.7071067811865475,
+          0.7071067811865475
+        ],
+        [
+          0.0,
+          1.0,
+          0.7071067811865475,
+          -0.7071067811865475
+        ],
+        [
+          0.7071067811865475,
+          0.7071067811865475,
+          0.9999999999999998,
+          -2.2371143170757382e-17
+        ],
+        [
+          0.7071067811865475,
+          -0.7071067811865475,
+          -2.2371143170757382e-17,
+          0.9999999999999998
+        ]
+      ],
+      "primal_objective": 2.82842712474619,
+      "PR_no_signaling_algebraic_CHSH": 4,
+      "no_signaling_does_not_imply_quantum": true,
+      "certificate": "For PSD Gram G and diag G=1, tr(WG) <= tr(lambda I G)=4 lambda=2sqrt2",
+      "limitations": [
+        "Proof assumes quantum Hilbert structure and Born inner product; does NOT derive them.",
+        "Maximal CHSH alone cannot characterize all quantum correlation sets.",
+        "A classical no-signaling PR box is a mathematical countermodel, not a physical device."
+      ]
+    }
+  }
+}
