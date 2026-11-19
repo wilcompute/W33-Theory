@@ -1,0 +1,158 @@
+{
+  "date": "2026-11-19",
+  "status": "FINITE_LINEAR_ALGEBRA_PASS_NOT_A_TOE",
+  "head_at_start": "f73c83e853157a305507ed52f9631e7b80a03413",
+  "theorem": "A block-forward causal DAG operator has graph-independent characteristic polynomial, determinant and bare Hermitianized determinant. Its inverse singular-value response and endpoint-conditioned positive determinant detect gauge-covariant path interference.",
+  "block_dag_cases": 32,
+  "block_dag_sample_summary": [
+    [
+      4,
+      2,
+      1
+    ],
+    [
+      4,
+      2,
+      2
+    ],
+    [
+      4,
+      2,
+      2
+    ],
+    [
+      4,
+      2,
+      4
+    ],
+    [
+      4,
+      2,
+      2
+    ],
+    [
+      4,
+      2,
+      2
+    ],
+    [
+      4,
+      2,
+      1
+    ],
+    [
+      4,
+      2,
+      1
+    ]
+  ],
+  "su2_diamond": [
+    {
+      "angle": 0.0,
+      "q": 2,
+      "bare_det_real": 8.15730721,
+      "spectral_gap_inverse_trace": 5.956896160589738,
+      "closed_form_slope": 5.956896160589738,
+      "second_logdet_derivative_at_zero": -6.698367330172296,
+      "spectrally_regularized_det_ratio_mu_0p1": 1.7595283572262372,
+      "endpoint_probe_det_lambda_2": 1.475739758187461,
+      "positive_regulator_min_eig": 0.7088969188629068,
+      "wilson_trace_real": 2.0,
+      "wilson_trace_imag": 0.0,
+      "propagator_source_endpoint_normsq": 0.21480029559901773,
+      "non_normal_commutator_norm": 1.44
+    },
+    {
+      "angle": 1.0471975511965976,
+      "q": 2,
+      "bare_det_real": 8.15730721,
+      "spectral_gap_inverse_trace": 5.9031960866899835,
+      "closed_form_slope": 5.903196086689984,
+      "second_logdet_derivative_at_zero": -6.379923415103882,
+      "spectrally_regularized_det_ratio_mu_0p1": 1.7524124012381639,
+      "endpoint_probe_det_lambda_2": 1.3481537248300786,
+      "positive_regulator_min_eig": 0.7379634455427091,
+      "wilson_trace_real": 1.0000000000000002,
+      "wilson_trace_imag": 0.0,
+      "propagator_source_endpoint_normsq": 0.16110022169926336,
+      "non_normal_commutator_norm": 1.6099689437998486
+    },
+    {
+      "angle": 1.5707963267948966,
+      "q": 2,
+      "bare_det_real": 8.15730721,
+      "spectral_gap_inverse_trace": 5.84949601279023,
+      "closed_form_slope": 5.84949601279023,
+      "second_logdet_derivative_at_zero": -6.064363197972309,
+      "spectrally_regularized_det_ratio_mu_0p1": 1.7453108637397727,
+      "endpoint_probe_det_lambda_2": 1.2263350873463739,
+      "positive_regulator_min_eig": 0.77514531967603,
+      "wilson_trace_real": 1.2246467991473532e-16,
+      "wilson_trace_imag": 0.0,
+      "propagator_source_endpoint_normsq": 0.10740014779950886,
+      "non_normal_commutator_norm": 1.763632614803888
+    },
+    {
+      "angle": 3.141592653589793,
+      "q": 2,
+      "bare_det_real": 8.15730721,
+      "spectral_gap_inverse_trace": 5.742095864990721,
+      "closed_form_slope": 5.742095864990721,
+      "second_logdet_derivative_at_zero": -5.441893857519679,
+      "spectrally_regularized_det_ratio_mu_0p1": 1.7311510442120457,
+      "endpoint_probe_det_lambda_2": 1.0,
+      "positive_regulator_min_eig": 0.9896552236511769,
+      "wilson_trace_real": -2.0,
+      "wilson_trace_imag": 0.0,
+      "propagator_source_endpoint_normsq": 8.05372111608214e-34,
+      "non_normal_commutator_norm": 2.0364675298172568
+    }
+  ],
+  "gauge_frame_checks": 24,
+  "gauge_max_residuals": [
+    6.504010182095675e-16,
+    2.7755575615628914e-16,
+    8.438303319005108e-15
+  ],
+  "su3_same_first_wilson_moment": {
+    "theta_real_family": 1.739364624724706,
+    "phi_complex_family": 1.0,
+    "case_A": {
+      "q": 3,
+      "bare_det_real": 23.298085122481023,
+      "spectral_gap_inverse_trace": 8.809925450816268,
+      "closed_form_slope": 8.809925450816268,
+      "second_logdet_derivative_at_zero": -9.30830922268564,
+      "spectrally_regularized_det_ratio_mu_0p1": 2.3119497293522735,
+      "endpoint_probe_det_lambda_2": 1.4416667588694532,
+      "positive_regulator_min_eig": 0.7088969188629091,
+      "wilson_trace_real": 0.6644577751891371,
+      "wilson_trace_imag": 0.0,
+      "propagator_source_endpoint_normsq": 0.19678165333018638,
+      "non_normal_commutator_norm": 2.0787364165141167
+    },
+    "case_B": {
+      "q": 3,
+      "bare_det_real": 23.298085122481023,
+      "spectral_gap_inverse_trace": 8.809925450816268,
+      "closed_form_slope": 8.809925450816268,
+      "second_logdet_derivative_at_zero": -9.307446238765024,
+      "spectrally_regularized_det_ratio_mu_0p1": 2.3119554066306427,
+      "endpoint_probe_det_lambda_2": 1.4433927267106847,
+      "positive_regulator_min_eig": 0.7353776260669717,
+      "wilson_trace_real": 0.6644577751891372,
+      "wilson_trace_imag": 0.7736445427901113,
+      "propagator_source_endpoint_normsq": 0.1967816533301864,
+      "non_normal_commutator_norm": 2.0787364165141167
+    },
+    "positive_det_ratio_difference": 5.677278369198291e-06
+  },
+  "empty_graph_trace_response": 4.733727810650887,
+  "caveats": [
+    "Site masses and links supplied, not derived",
+    "D is not a physical Lorentzian spin Dirac operator",
+    "Positive regulator mu introduces a new operator not equal to D^dagger D",
+    "Detector/probe factor is an observable, not a derived quantum gravity measure",
+    "No reflection positivity, anomaly cancellation, or continuum limit proved"
+  ]
+}
