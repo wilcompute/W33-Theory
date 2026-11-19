@@ -1,0 +1,412 @@
+{
+  "date": "2026-11-19",
+  "status": "PASS constructive one-dimensional order-to-Wilson bridge",
+  "TOE_solved": false,
+  "emergent_3plus1_spin_Dirac_derived": false,
+  "metric_and_antichain_supplied": true,
+  "Wilson_mass_and_spin_lift_supplied": true,
+  "cases_N12_all_shadow_radii": [
+    {
+      "n": 12,
+      "shadow_radius": 0,
+      "H1": 0,
+      "topology_filter_rejected": true,
+      "unfiltered_max_overlap_graph_spurious_cycle": false
+    },
+    {
+      "n": 12,
+      "shadow_radius": 1,
+      "H0_H1": [
+        1,
+        1
+      ],
+      "max_affinity": 2,
+      "edges_recovered": 12,
+      "all_degrees_two": true,
+      "circle_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "fermion_determinant_checks": [
+        {
+          "mass": 0.0,
+          "twist": 0.0,
+          "numeric_det_real": 0.0,
+          "numeric_det_imag": 0.0,
+          "closed_form_det_real": 0.0,
+          "closed_form_det_imag": 0.0,
+          "zero_modes": 1
+        },
+        {
+          "mass": 0.0,
+          "twist": 3.141592653589793,
+          "numeric_det_real": 2.0,
+          "numeric_det_imag": 1.2246467991473532e-16,
+          "closed_form_det_real": 2.0,
+          "closed_form_det_imag": 1.2246467991473532e-16,
+          "zero_modes": 0
+        },
+        {
+          "mass": 0.01,
+          "twist": 0.0,
+          "numeric_det_real": 0.12682503013196997,
+          "numeric_det_imag": 0.0,
+          "closed_form_det_real": 0.12682503013196977,
+          "closed_form_det_imag": 0.0,
+          "zero_modes": 0
+        },
+        {
+          "mass": 0.01,
+          "twist": 3.141592653589793,
+          "numeric_det_real": 2.12682503013197,
+          "numeric_det_imag": 1.2246467991473532e-16,
+          "closed_form_det_real": 2.12682503013197,
+          "closed_form_det_imag": 1.2246467991473532e-16,
+          "zero_modes": 0
+        },
+        {
+          "mass": 0.1,
+          "twist": 0.0,
+          "numeric_det_real": 2.1384283767210026,
+          "numeric_det_imag": 0.0,
+          "closed_form_det_real": 2.138428376721003,
+          "closed_form_det_imag": 0.0,
+          "zero_modes": 0
+        },
+        {
+          "mass": 0.1,
+          "twist": 3.141592653589793,
+          "numeric_det_real": 4.138428376721004,
+          "numeric_det_imag": 1.2246467991473537e-16,
+          "closed_form_det_real": 4.138428376721003,
+          "closed_form_det_imag": 1.2246467991473532e-16,
+          "zero_modes": 0
+        }
+      ]
+    },
+    {
+      "n": 12,
+      "shadow_radius": 2,
+      "H0_H1": [
+        1,
+        1
+      ],
+      "max_affinity": 4,
+      "edges_recovered": 12,
+      "all_degrees_two": true,
+      "circle_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "fermion_determinant_checks": [
+        {
+          "mass": 0.0,
+          "twist": 0.0,
+          "numeric_det_real": 0.0,
+          "numeric_det_imag": 0.0,
+          "closed_form_det_real": 0.0,
+          "closed_form_det_imag": 0.0,
+          "zero_modes": 1
+        },
+        {
+          "mass": 0.0,
+          "twist": 3.141592653589793,
+          "numeric_det_real": 2.0,
+          "numeric_det_imag": 1.2246467991473532e-16,
+          "closed_form_det_real": 2.0,
+          "closed_form_det_imag": 1.2246467991473532e-16,
+          "zero_modes": 0
+        },
+        {
+          "mass": 0.01,
+          "twist": 0.0,
+          "numeric_det_real": 0.12682503013196997,
+          "numeric_det_imag": 0.0,
+          "closed_form_det_real": 0.12682503013196977,
+          "closed_form_det_imag": 0.0,
+          "zero_modes": 0
+        },
+        {
+          "mass": 0.01,
+          "twist": 3.141592653589793,
+          "numeric_det_real": 2.12682503013197,
+          "numeric_det_imag": 1.2246467991473532e-16,
+          "closed_form_det_real": 2.12682503013197,
+          "closed_form_det_imag": 1.2246467991473532e-16,
+          "zero_modes": 0
+        },
+        {
+          "mass": 0.1,
+          "twist": 0.0,
+          "numeric_det_real": 2.1384283767210026,
+          "numeric_det_imag": 0.0,
+          "closed_form_det_real": 2.138428376721003,
+          "closed_form_det_imag": 0.0,
+          "zero_modes": 0
+        },
+        {
+          "mass": 0.1,
+          "twist": 3.141592653589793,
+          "numeric_det_real": 4.138428376721004,
+          "numeric_det_imag": 1.2246467991473537e-16,
+          "closed_form_det_real": 4.138428376721003,
+          "closed_form_det_imag": 1.2246467991473532e-16,
+          "zero_modes": 0
+        }
+      ]
+    },
+    {
+      "n": 12,
+      "shadow_radius": 3,
+      "H1": 0,
+      "topology_filter_rejected": true,
+      "unfiltered_max_overlap_graph_spurious_cycle": true
+    },
+    {
+      "n": 12,
+      "shadow_radius": 4,
+      "H1": 0,
+      "topology_filter_rejected": true,
+      "unfiltered_max_overlap_graph_spurious_cycle": true
+    },
+    {
+      "n": 12,
+      "shadow_radius": 5,
+      "H1": 0,
+      "topology_filter_rejected": true,
+      "unfiltered_max_overlap_graph_spurious_cycle": false
+    }
+  ],
+  "N20_stable_shadow_case": {
+    "n": 20,
+    "shadow_radius": 1,
+    "H0_H1": [
+      1,
+      1
+    ],
+    "max_affinity": 2,
+    "edges_recovered": 20,
+    "all_degrees_two": true,
+    "circle_order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "fermion_determinant_checks": [
+      {
+        "mass": 0.0,
+        "twist": 0.0,
+        "numeric_det_real": 0.0,
+        "numeric_det_imag": 0.0,
+        "closed_form_det_real": 0.0,
+        "closed_form_det_imag": 0.0,
+        "zero_modes": 1
+      },
+      {
+        "mass": 0.0,
+        "twist": 3.141592653589793,
+        "numeric_det_real": 2.0,
+        "numeric_det_imag": 1.2246467991473532e-16,
+        "closed_form_det_real": 2.0,
+        "closed_form_det_imag": 1.2246467991473532e-16,
+        "zero_modes": 0
+      },
+      {
+        "mass": 0.01,
+        "twist": 0.0,
+        "numeric_det_real": 0.22019003994796713,
+        "numeric_det_imag": 0.0,
+        "closed_form_det_real": 0.22019003994796704,
+        "closed_form_det_imag": 0.0,
+        "zero_modes": 0
+      },
+      {
+        "mass": 0.01,
+        "twist": 3.141592653589793,
+        "numeric_det_real": 2.2201900399479673,
+        "numeric_det_imag": 1.2246467991473535e-16,
+        "closed_form_det_real": 2.2201900399479673,
+        "closed_form_det_imag": 1.2246467991473532e-16,
+        "zero_modes": 0
+      },
+      {
+        "mass": 0.1,
+        "twist": 0.0,
+        "numeric_det_real": 5.727499949325613,
+        "numeric_det_imag": 0.0,
+        "closed_form_det_real": 5.727499949325611,
+        "closed_form_det_imag": 0.0,
+        "zero_modes": 0
+      },
+      {
+        "mass": 0.1,
+        "twist": 3.141592653589793,
+        "numeric_det_real": 7.727499949325616,
+        "numeric_det_imag": 1.2246467991473552e-16,
+        "closed_form_det_real": 7.727499949325611,
+        "closed_form_det_imag": 1.2246467991473532e-16,
+        "zero_modes": 0
+      }
+    ]
+  },
+  "event_relabeling": {
+    "status": "PASS",
+    "permuted_antichain_and_future_witness_labels": true,
+    "H1": 1,
+    "fermion_det_invariant_under_event_relabeling": [
+      {
+        "twist": 0.0,
+        "abs_determinant_difference": 2.220446049250313e-16
+      },
+      {
+        "twist": 3.141592653589793,
+        "abs_determinant_difference": 0.0
+      }
+    ]
+  },
+  "critical_path": {
+    "status": "PASS",
+    "dependencies": [
+      {
+        "id": "A",
+        "name": "causal order and selected antichain",
+        "status": "synthetic input",
+        "prerequisites": []
+      },
+      {
+        "id": "B",
+        "name": "persistent nerve topology",
+        "status": "constructed from A, independently benchmarked in 3+1 external code",
+        "prerequisites": [
+          "A"
+        ]
+      },
+      {
+        "id": "C",
+        "name": "maximal-shadow-overlap 1D ring graph",
+        "status": "constructed from B + selected resolution",
+        "prerequisites": [
+          "A",
+          "B"
+        ]
+      },
+      {
+        "id": "D",
+        "name": "Wilson 1D matter kinetic determinant on inferred cycle",
+        "status": "constructed from C but Wilson rule/mass/spin twist still inserted",
+        "prerequisites": [
+          "C"
+        ]
+      },
+      {
+        "id": "E",
+        "name": "relative spin and SU2 center weights",
+        "status": "toy calculated conditional on a specified matter representation",
+        "prerequisites": [
+          "D"
+        ]
+      },
+      {
+        "id": "F",
+        "name": "intrinsic 3+1 Lorentzian spin/Clifford/Dirac field",
+        "status": "OPEN fundamental bottleneck",
+        "prerequisites": [
+          "B"
+        ]
+      },
+      {
+        "id": "G",
+        "name": "physically derived 3-generation chiral matter and masses",
+        "status": "OPEN fundamental bottleneck",
+        "prerequisites": [
+          "F"
+        ]
+      },
+      {
+        "id": "H",
+        "name": "physical sector selection from actual fermionic path integral",
+        "status": "OPEN requires both F and G plus quantum measure",
+        "prerequisites": [
+          "E",
+          "F",
+          "G"
+        ]
+      },
+      {
+        "id": "I",
+        "name": "unique coupled gauge/gravity/quantum history action",
+        "status": "OPEN not implied by positive gauge transfer",
+        "prerequisites": [
+          "A",
+          "G"
+        ]
+      },
+      {
+        "id": "J",
+        "name": "positive normalized decoherence functional over unlabeled histories",
+        "status": "OPEN relative bad-vs-good measure",
+        "prerequisites": [
+          "I",
+          "H"
+        ]
+      },
+      {
+        "id": "K",
+        "name": "4D Lorentzian Einstein continuum, causal scattering and observed couplings",
+        "status": "OPEN ultimate test",
+        "prerequisites": [
+          "J"
+        ]
+      }
+    ],
+    "first_open_minimum_depth_front": [
+      "F"
+    ],
+    "priority_argument": "Attempt an intrinsic 3+1 causal Dirac operator on the robust antichain nerve; it unlocks mass, anomaly and determinant tests. Do not waste effort asserting a selected spin sector before this.",
+    "limit": "This is a scientific dependency graph and an ordinal heuristic, not a proof of fundamental uniqueness or that a Dirac operator is mathematically sufficient to derive matter."
+  },
+  "most_important_falsifier": "For shadow radius r>=3 the Dowker H1 is ZERO but a maximal-overlap cycle graph may still exist; require robust topology BEFORE using that graph as physical geometry.",
+  "sources": [
+    "https://arxiv.org/abs/2611.06102",
+    "https://github.com/stelios-tsilioukas/topology-change-in-causal-set-theory",
+    "https://doi.org/10.1007/s41468-026-00239-x",
+    "https://doi.org/10.1007/s11005-026-02080-w"
+  ]
+}

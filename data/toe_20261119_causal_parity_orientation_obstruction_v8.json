@@ -1,0 +1,98 @@
+{
+  "date": "2026-11-19",
+  "status": "PASS: order automorphism reverses H1(Z) and preserves H1(Z2)",
+  "TOE_solved": false,
+  "SM_weak_chirality_derived": false,
+  "reflected_synthetic_causal_order_cases": [
+    {
+      "n": 12,
+      "shadow_radius": 1,
+      "causal_order_preserved_under_reflection": true,
+      "reconstructed_nerve_H0_H1": [
+        1,
+        1
+      ],
+      "mapped_oriented_cycle_edges_all_reversed": true,
+      "integer_H1_generator_reflection_eigenvalue": -1,
+      "nonzero_automorphism_invariant_integer_H1_orientation_possible": false,
+      "theta": 0.71,
+      "mass": 0.07,
+      "det_theta_real_imag": [
+        1.4938297129703162,
+        0.6518337710215368
+      ],
+      "det_reverse_theta_real_imag": [
+        1.4938297129703162,
+        -0.6518337710215368
+      ],
+      "det_abs_is_reflection_invariant": true,
+      "spin_Z2_holonomies_survive_reflection": [
+        0,
+        1
+      ]
+    },
+    {
+      "n": 12,
+      "shadow_radius": 2,
+      "causal_order_preserved_under_reflection": true,
+      "reconstructed_nerve_H0_H1": [
+        1,
+        1
+      ],
+      "mapped_oriented_cycle_edges_all_reversed": true,
+      "integer_H1_generator_reflection_eigenvalue": -1,
+      "nonzero_automorphism_invariant_integer_H1_orientation_possible": false,
+      "theta": 0.71,
+      "mass": 0.07,
+      "det_theta_real_imag": [
+        1.4938297129703162,
+        0.6518337710215368
+      ],
+      "det_reverse_theta_real_imag": [
+        1.4938297129703162,
+        -0.6518337710215368
+      ],
+      "det_abs_is_reflection_invariant": true,
+      "spin_Z2_holonomies_survive_reflection": [
+        0,
+        1
+      ]
+    },
+    {
+      "n": 20,
+      "shadow_radius": 1,
+      "causal_order_preserved_under_reflection": true,
+      "reconstructed_nerve_H0_H1": [
+        1,
+        1
+      ],
+      "mapped_oriented_cycle_edges_all_reversed": true,
+      "integer_H1_generator_reflection_eigenvalue": -1,
+      "nonzero_automorphism_invariant_integer_H1_orientation_possible": false,
+      "theta": 0.71,
+      "mass": 0.07,
+      "det_theta_real_imag": [
+        3.1113225864956746,
+        0.6518337710215372
+      ],
+      "det_reverse_theta_real_imag": [
+        3.1113225864956746,
+        -0.6518337710215372
+      ],
+      "det_abs_is_reflection_invariant": true,
+      "spin_Z2_holonomies_survive_reflection": [
+        0,
+        1
+      ]
+    }
+  ],
+  "exact_proof": "For a reflection-symmetric cyclic causal incidence, the induced automorphism acts by -1 on H1(S1;Z). A deterministic automorphism-equivariant nonzero integer orientation [S1] must satisfy c=-c, implying c=0, a contradiction. Spin Z2 holonomy classes need not be distinguished by this sign, since -1=+1 modulo2.",
+  "falsifies": "Any claim that unoriented order-incidence and Z2 topology ALONE canonically yield a nonzero parity-odd orientation on this symmetric family.",
+  "does_not_falsify": "A theory with intrinsic orientation/chiral matter data, orientation-breaking boundary conditions, spontaneous parity breaking, or generic non-reflection-symmetric causal histories.",
+  "key_dependency": "To derive observed weak parity violation, one needs a physical orientation/chirality-selecting datum or dynamics on top of the order-reconstructed circle; counting spin structures is not sufficient.",
+  "sources": [
+    "https://doi.org/10.1007/s41468-026-00239-x",
+    "https://arxiv.org/abs/2611.06102",
+    "https://link.springer.com/article/10.1007/JHEP07%282026%29117"
+  ]
+}
