@@ -1,0 +1,231 @@
+{
+  "source_parallel": "37ba627b H27 mass lift; 184cd0b0 Pascal channel; 3700bb0f compactness/H27 coupling no-go",
+  "coupled_BPS": {
+    "source": [
+      0,
+      1,
+      1
+    ],
+    "target": [
+      1.1856311014966876,
+      1.1856311014966876,
+      1.1856311014966876
+    ],
+    "new_wall_proved_in_symmetric_y_equals_z_plane": true,
+    "positive_invariant_rectangle": "0<=x<=r, 1<=q<=r, r^3=5/3",
+    "unique_stationary_points_in_rectangle": 2,
+    "proof_ingredients": [
+      "inward flow on four faces",
+      "strict Fq/q decrease in q",
+      "positive Fx on Fq nullcline for 0<x<r",
+      "one unstable eigenvector entering rectangle",
+      "W strictly increasing unless F=0; compact invariant region and only sink b"
+    ],
+    "source_Hessian_eigenvalues": [
+      -9.123310502226722,
+      -9.0,
+      0.12331050222673237
+    ],
+    "target_Hessian_eigenvalues": [
+      -20.452136500817865,
+      -20.452136500817858,
+      -8.892233261225154
+    ],
+    "source_positive_Hessian_count": 1,
+    "target_positive_Hessian_count": 0,
+    "natural_Hessian_Dirac_Fredholm_index": 1,
+    "source_W": 1.0,
+    "target_W": 2.083333333333334,
+    "exact_delta_W": "13/12",
+    "exact_BPS_tension": "13/6",
+    "numerical_energy_integral": 2.166666665378494,
+    "ending_gradient_norm": 3.076740298213702e-15,
+    "max_chain_rule_DF_minus_HF_error": 1.014025561933267e-08,
+    "starting_saddle_displacement": 0.0001,
+    "limitations": "Real 3-field global-SUSY gradient sector with canonical K\u00e4hler. Actual E8/SU3 gauge-invariant multifield UV, F/D flatness, gauge fields, chiral spectrum and anomaly inflow NOT constructed."
+  },
+  "coupling_interval_theorem": {
+    "proved_interval": "0<g<=3/8",
+    "critical_endpoint_formula": "r(g)^3=(3-2g)/(3-6g)",
+    "exact_BPS_tension_all_g": "(4g^2+3)/(3(1-2g))",
+    "rigorous_uniform_monotonicity_bound": "g*r(g) <= (3/8)*cuberoot(3) < 3/5 on 0<g<=3/8; d(Fq/q)/dq <0",
+    "certifying_integer_comparison": "81*125<27*512",
+    "source_single_positive_and_target_no_positive_Hessian_modes_all_g": true,
+    "sample_checks": [
+      {
+        "g": 0.0625,
+        "r": 1.0307883791072012,
+        "g_times_r": 0.06442427369420008,
+        "exact_tension_formula_evaluated": 1.1488095238095237,
+        "source_Hessian_plus_count": 1,
+        "target_Hessian_plus_count": 0
+      },
+      {
+        "g": 0.125,
+        "r": 1.0691781099986088,
+        "g_times_r": 0.1336472637498261,
+        "exact_tension_formula_evaluated": 1.3611111111111112,
+        "source_Hessian_plus_count": 1,
+        "target_Hessian_plus_count": 0
+      },
+      {
+        "g": 0.25,
+        "r": 1.1856311014966876,
+        "g_times_r": 0.2964077753741719,
+        "exact_tension_formula_evaluated": 2.1666666666666665,
+        "source_Hessian_plus_count": 1,
+        "target_Hessian_plus_count": 0
+      },
+      {
+        "g": 0.35,
+        "r": 1.3671886432341156,
+        "g_times_r": 0.4785160251319404,
+        "exact_tension_formula_evaluated": 3.877777777777777,
+        "source_Hessian_plus_count": 1,
+        "target_Hessian_plus_count": 0
+      },
+      {
+        "g": 0.375,
+        "r": 1.4422495703074083,
+        "g_times_r": 0.5408435888652781,
+        "exact_tension_formula_evaluated": 4.75,
+        "source_Hessian_plus_count": 1,
+        "target_Hessian_plus_count": 0
+      }
+    ],
+    "physics_scope": "Global-SUSY real canonical scalar gradient theorem, not a gauge-invariant E8 compactification or a physical three-family BPS monopole."
+  },
+  "chirality_and_compact": {
+    "natural_mass_choice_M_Hessian_of_W_has_index": 1,
+    "natural_mass_translational_zero_mode": "psi(z)=F(v(z)), Dpsi=(partial_z-H(v))psi=0",
+    "H27_irrep_choice": "one singlet plus one irreducible qutrit (1+3)",
+    "H27_invariant_alternative_4ch_mass_operator": "M(z)=2 I -9 xyz/r^3 diag(phi^-4,1,1,1)",
+    "H27_covariant_exact_commutators": true,
+    "H27_invariant_portal": "xyz transforms with determinant1 under shift and clock",
+    "alternative_noncompact_chiral_count": 3,
+    "alternative_singlet_mass_ends": [
+      2,
+      0.686917696247161
+    ],
+    "alternative_triplet_mass_ends": [
+      2,
+      -7.0
+    ],
+    "alternative_triplet_profiles_identical": true,
+    "orbifold_or_interval_with_imposed_boundary_parities_can_have_three_left_zero_modes": true,
+    "smooth_circle_index": 0,
+    "serious_caution": "Three on an interval are set by boundary/domain parity and/or specified H27 triplet, not derived from Pascal K2; a constant bulk Dirac mass may violate an orbifold reflection parity unless its odd profile and action are constructed. H27 triplet degeneracy gives no observed flavor hierarchy. No complete inflow."
+  },
+  "flavor_and_GUT": {
+    "H27_unbroken_singlet_Higgs_Yukawa": "Y=c I3; rank3 but all three physical mass singular values equal",
+    "H27_scalar_portal_overlap_factor": 0.22220668646660502,
+    "three_identical_chiral_wavefunctions": true,
+    "SU3_three_distinct_triplets_epsilon_Yukawa": "Y_ij=epsilon_ijk h_k",
+    "gauged_SU3_family_cubic_anomaly_for_one_Spin10_16_triplet": 16,
+    "gauged_SU3_family_cubic_anomaly_for_one_E6_27_triplet": 27,
+    "complete_E8_E6xSU3_pair_anomaly": 0,
+    "gauged_family_anomaly_caution": "With SU3 family gauged, a single chiral (16,3) contributes +16 units of SU3_f^3 anomaly, while (27,3) contributes +27. The conjugate (27bar,3bar) cancels but would add unwanted opposite chirality unless projected/lifted consistently. For an un-gauged discrete H27 the continuous SU3_f^3 obstruction does not directly apply; discrete anomalies must be checked separately.",
+    "epsilon_Yukawa_singular_values": [
+      3.741657386773941,
+      3.74165738677394,
+      4.423283087540181e-17
+    ],
+    "epsilon_Yukawa_rank": 2,
+    "symmetric_anti_sextet_Higgs_example_Yukawa_rank": 3,
+    "E8_UV_warning": "Single H27-invariant sextic of one SU3 triplet is not SU3 invariant; single E8 adjoint degree6 invariant space generated by quadratic Casimir cubed (parallel commit 6093b466). Distinct species and gauge-legal messenger operators required.",
+    "scope": "Trivial H27 singlet Higgs gives degenerate mass3; epsilon triplet Higgs gives rank2. An independent 6bar Higgs or dynamically broken-H27 full-rank tensor is required for realistic masses, not derived from E8."
+  },
+  "causal_action_discriminator": {
+    "n": 5,
+    "same_global_causal_interval_histogram": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "poset_A_cover_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "poset_B_cover_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "Hasse_graph_laplacian_spectrum_A": [
+      -4.440892098500626e-16,
+      0.0,
+      0.0,
+      1.0,
+      3.0
+    ],
+    "Hasse_graph_laplacian_spectrum_B": [
+      0.0,
+      0.0,
+      0.0,
+      2.0,
+      2.0
+    ],
+    "Laplacian_trace_square_A": 10,
+    "Laplacian_trace_square_B": 8,
+    "lesson": "An interval-count-only action cannot distinguish these nonisomorphic posets; a Hasse spectral statistic can, but no physical Lorentzian gravitational action or continuum first-class Einstein constraints follows."
+  },
+  "photonic_power": {
+    "cases": [
+      {
+        "x": 0,
+        "eta": 0.9,
+        "ideal_CHSH": 2.414213562373095,
+        "optimistic_loss_CHSH_upper": 2.335512985522207,
+        "upper_violation_gap": 0.33551298552220693,
+        "iid_trials_for_alpha_0p001_power_90pct_IF_upper_bound_attained": 4886
+      },
+      {
+        "x": 0.5,
+        "eta": 0.9,
+        "ideal_CHSH": 2.267489905171885,
+        "optimistic_loss_CHSH_upper": 2.2166668231892266,
+        "upper_violation_gap": 0.21666682318922675,
+        "iid_trials_for_alpha_0p001_power_90pct_IF_upper_bound_attained": 11716
+      },
+      {
+        "x": 1.0,
+        "eta": 0.9,
+        "ideal_CHSH": 2.0655211322337124,
+        "optimistic_loss_CHSH_upper": 2.053072117109307,
+        "upper_violation_gap": 0.05307211710930702,
+        "iid_trials_for_alpha_0p001_power_90pct_IF_upper_bound_attained": 195259
+      },
+      {
+        "x": 2.0,
+        "eta": 0.9,
+        "ideal_CHSH": 2.000167717249413,
+        "optimistic_loss_CHSH_upper": 2.0001358509720246,
+        "upper_violation_gap": 0.00013585097202453158,
+        "iid_trials_for_alpha_0p001_power_90pct_IF_upper_bound_attained": 29800099206
+      },
+      {
+        "x": 1.0,
+        "eta": 0.99,
+        "ideal_CHSH": 2.0655211322337124,
+        "optimistic_loss_CHSH_upper": 2.0642172617022614,
+        "upper_violation_gap": 0.06421726170226148,
+        "iid_trials_for_alpha_0p001_power_90pct_IF_upper_bound_attained": 133365
+      }
+    ],
+    "concentration": "Hoeffding for independent uniformly assigned CHSH scores Z in [-4,4], with alpha=.001 and beta=.1; assumes true mean reaches the optimistic loss upper bound.",
+    "scope": "Strict local number SSR and iid differential phase noise; no certified optical collective gate/measurement, detector loophole closure, or beyond-QM signal. Eberhard efficiency 2/3 applies to a different optimized Bell protocol and cannot simply be transplanted."
+  },
+  "status": "A real coupled BPS gradient wall EXISTS in the canonical 3-field H27 toy; the naturally induced Hessian fermion index is ONE, not three. No gauge-invariant E8 UV completion or compact anomaly-free three-family 4D TOE."
+}
