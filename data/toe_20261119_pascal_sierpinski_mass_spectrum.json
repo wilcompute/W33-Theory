@@ -1,0 +1,529 @@
+{
+  "model": "Lucas parity matrix P_L[n,k]=C(n,k) mod2, 0<=n,k<2^L",
+  "Kronecker_digit_matrix": "[[1,0],[1,1]]",
+  "selfsimilar_singular_values": "s_j=phi^(2j-L) with multiplicity C(L,j); all have product1",
+  "selfsimilar_Gram_eigenvalues": "lambda_j=phi^(4j-2L)",
+  "massive_logdet": "sum_j C(L,j)log(m\u00b2+phi^(4j-2L)), with real dimensionless m inserted",
+  "levels": [
+    {
+      "level": 1,
+      "square_matrix_dimension": 2,
+      "ones_in_parity_mask": 3,
+      "Kronecker_Lucas_exact": true,
+      "det_unimodular": 1,
+      "spectrum": [
+        {
+          "j": 0,
+          "multiplicity": 1,
+          "mass_singular_value": 0.6180339887498948,
+          "Gram_eigenvalue": 0.38196601125010515
+        },
+        {
+          "j": 1,
+          "multiplicity": 1,
+          "mass_singular_value": 1.618033988749895,
+          "Gram_eigenvalue": 2.618033988749895
+        }
+      ],
+      "extreme_mass_ratio": 2.618033988749895,
+      "massless_min_singular": 0.6180339887498948,
+      "spectral_binomial_degeneracy": true
+    },
+    {
+      "level": 2,
+      "square_matrix_dimension": 4,
+      "ones_in_parity_mask": 9,
+      "Kronecker_Lucas_exact": true,
+      "det_unimodular": 1,
+      "spectrum": [
+        {
+          "j": 0,
+          "multiplicity": 1,
+          "mass_singular_value": 0.38196601125010515,
+          "Gram_eigenvalue": 0.14589803375031543
+        },
+        {
+          "j": 1,
+          "multiplicity": 2,
+          "mass_singular_value": 1.0,
+          "Gram_eigenvalue": 1.0
+        },
+        {
+          "j": 2,
+          "multiplicity": 1,
+          "mass_singular_value": 2.618033988749895,
+          "Gram_eigenvalue": 6.854101966249686
+        }
+      ],
+      "extreme_mass_ratio": 6.854101966249686,
+      "massless_min_singular": 0.38196601125010515,
+      "spectral_binomial_degeneracy": true
+    },
+    {
+      "level": 3,
+      "square_matrix_dimension": 8,
+      "ones_in_parity_mask": 27,
+      "Kronecker_Lucas_exact": true,
+      "det_unimodular": 1,
+      "spectrum": [
+        {
+          "j": 0,
+          "multiplicity": 1,
+          "mass_singular_value": 0.23606797749978967,
+          "Gram_eigenvalue": 0.0557280900008412
+        },
+        {
+          "j": 1,
+          "multiplicity": 3,
+          "mass_singular_value": 0.6180339887498948,
+          "Gram_eigenvalue": 0.38196601125010515
+        },
+        {
+          "j": 2,
+          "multiplicity": 3,
+          "mass_singular_value": 1.618033988749895,
+          "Gram_eigenvalue": 2.618033988749895
+        },
+        {
+          "j": 3,
+          "multiplicity": 1,
+          "mass_singular_value": 4.23606797749979,
+          "Gram_eigenvalue": 17.944271909999163
+        }
+      ],
+      "extreme_mass_ratio": 17.944271909999163,
+      "massless_min_singular": 0.23606797749978967,
+      "spectral_binomial_degeneracy": true
+    },
+    {
+      "level": 4,
+      "square_matrix_dimension": 16,
+      "ones_in_parity_mask": 81,
+      "Kronecker_Lucas_exact": true,
+      "det_unimodular": 1,
+      "spectrum": [
+        {
+          "j": 0,
+          "multiplicity": 1,
+          "mass_singular_value": 0.14589803375031543,
+          "Gram_eigenvalue": 0.02128623625220818
+        },
+        {
+          "j": 1,
+          "multiplicity": 4,
+          "mass_singular_value": 0.38196601125010515,
+          "Gram_eigenvalue": 0.14589803375031543
+        },
+        {
+          "j": 2,
+          "multiplicity": 6,
+          "mass_singular_value": 1.0,
+          "Gram_eigenvalue": 1.0
+        },
+        {
+          "j": 3,
+          "multiplicity": 4,
+          "mass_singular_value": 2.618033988749895,
+          "Gram_eigenvalue": 6.854101966249686
+        },
+        {
+          "j": 4,
+          "multiplicity": 1,
+          "mass_singular_value": 6.854101966249686,
+          "Gram_eigenvalue": 46.978713763747805
+        }
+      ],
+      "extreme_mass_ratio": 46.978713763747805,
+      "massless_min_singular": 0.14589803375031543,
+      "spectral_binomial_degeneracy": true
+    },
+    {
+      "level": 5,
+      "square_matrix_dimension": 32,
+      "ones_in_parity_mask": 243,
+      "Kronecker_Lucas_exact": true,
+      "det_unimodular": 1,
+      "spectrum": [
+        {
+          "j": 0,
+          "multiplicity": 1,
+          "mass_singular_value": 0.09016994374947422,
+          "Gram_eigenvalue": 0.008130618755783347
+        },
+        {
+          "j": 1,
+          "multiplicity": 5,
+          "mass_singular_value": 0.23606797749978967,
+          "Gram_eigenvalue": 0.0557280900008412
+        },
+        {
+          "j": 2,
+          "multiplicity": 10,
+          "mass_singular_value": 0.6180339887498948,
+          "Gram_eigenvalue": 0.38196601125010515
+        },
+        {
+          "j": 3,
+          "multiplicity": 10,
+          "mass_singular_value": 1.618033988749895,
+          "Gram_eigenvalue": 2.618033988749895
+        },
+        {
+          "j": 4,
+          "multiplicity": 5,
+          "mass_singular_value": 4.23606797749979,
+          "Gram_eigenvalue": 17.944271909999163
+        },
+        {
+          "j": 5,
+          "multiplicity": 1,
+          "mass_singular_value": 11.090169943749476,
+          "Gram_eigenvalue": 122.99186938124426
+        }
+      ],
+      "extreme_mass_ratio": 122.99186938124426,
+      "massless_min_singular": 0.09016994374947422,
+      "spectral_binomial_degeneracy": true
+    },
+    {
+      "level": 6,
+      "square_matrix_dimension": 64,
+      "ones_in_parity_mask": 729,
+      "Kronecker_Lucas_exact": true,
+      "det_unimodular": 1,
+      "spectrum": [
+        {
+          "j": 0,
+          "multiplicity": 1,
+          "mass_singular_value": 0.0557280900008412,
+          "Gram_eigenvalue": 0.0031056200151418573
+        },
+        {
+          "j": 1,
+          "multiplicity": 6,
+          "mass_singular_value": 0.14589803375031543,
+          "Gram_eigenvalue": 0.02128623625220818
+        },
+        {
+          "j": 2,
+          "multiplicity": 15,
+          "mass_singular_value": 0.38196601125010515,
+          "Gram_eigenvalue": 0.14589803375031543
+        },
+        {
+          "j": 3,
+          "multiplicity": 20,
+          "mass_singular_value": 1.0,
+          "Gram_eigenvalue": 1.0
+        },
+        {
+          "j": 4,
+          "multiplicity": 15,
+          "mass_singular_value": 2.618033988749895,
+          "Gram_eigenvalue": 6.854101966249686
+        },
+        {
+          "j": 5,
+          "multiplicity": 6,
+          "mass_singular_value": 6.854101966249686,
+          "Gram_eigenvalue": 46.978713763747805
+        },
+        {
+          "j": 6,
+          "multiplicity": 1,
+          "mass_singular_value": 17.944271909999163,
+          "Gram_eigenvalue": 321.996894379985
+        }
+      ],
+      "extreme_mass_ratio": 321.996894379985,
+      "massless_min_singular": 0.0557280900008412,
+      "spectral_binomial_degeneracy": true
+    }
+  ],
+  "three_family_raw_pascal": {
+    "3x3_principal_corner_M": "Matrix([[1, 0, 0], [1, 1, 0], [1, 0, 1]])",
+    "3x3_Gram_exact_eigenvalues": [
+      "2-sqrt(3)",
+      "1",
+      "2+sqrt(3)"
+    ],
+    "dimensionless_singular_values": [
+      0.5176380902050416,
+      1.0,
+      1.9318516525781366
+    ],
+    "max_to_min_ratio": 3.7320508075688767,
+    "charged_leptons_input_MeV": {
+      "electron_MeV": 0.51099895,
+      "muon_MeV": 105.6583755,
+      "tau_MeV": 1776.93
+    },
+    "charged_lepton_tau_e_ratio": 3477.36526660182,
+    "charged_lepton_mu_e_ratio": 206.76828298766566,
+    "naive_fixed_coefficients_3x3_pascal_spectrum_fails_mass_hierarchy": true,
+    "dyadic_family_number_is_power_of_two_not_three": true
+  },
+  "flavor_kinetic_metric_nonidentifiability": {
+    "one_hot_indices": [
+      1,
+      2,
+      4
+    ],
+    "one_hot_three_family_pascal_submatrix": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "one_hot_mass_eigenvalues_identical": true,
+    "kinetic_metric_construction": "K_R=P3^T D^-2 P3, D=diag(m_e/m_tau,m_mu/m_tau,1); Ycanon=P3 K_R^-1/2 has singular values EXACTLY D",
+    "any_positive_target_spectrum_admits_a_fitted_positive_KR": true,
+    "kinetic_metric_eigenvalues": [
+      0.9999999173011612,
+      282.82814345870526,
+      12092353.038743354
+    ],
+    "kinetic_metric_condition_number": 12092354.038766991,
+    "physics_caution": "Off-diagonal kinetic mixing can be forbidden by family charges or localized gauge geometry; the algebraic fit does not prove such a kinetic metric is physically allowed. If one allows arbitrary positive wavefunction metrics, parity alone predicts no mass ratios."
+  },
+  "smallest_dyadic_level_with_large_enough_extreme_ratio": 9,
+  "corresponding_2power_family_dimension": 512,
+  "fractal_weighted_odd_count_partition": "Z_L(alpha,beta)=prod_{j=0}^{L-1}(1+exp(-2^j alpha)+exp(-2^j(alpha+beta)))",
+  "Hausdorff_dimension_of_ideal_binary_pascal_support": 1.5849625007211563,
+  "weighted_partition_examples": [
+    {
+      "L": 1,
+      "alpha": 0.0,
+      "beta": 0.0,
+      "Z": 3.0
+    },
+    {
+      "L": 1,
+      "alpha": 0.1,
+      "beta": 0.3,
+      "Z": 2.575157464071599
+    },
+    {
+      "L": 1,
+      "alpha": 0.5,
+      "beta": 0.0,
+      "Z": 2.213061319425267
+    },
+    {
+      "L": 2,
+      "alpha": 0.0,
+      "beta": 0.0,
+      "Z": 9.0
+    },
+    {
+      "L": 2,
+      "alpha": 0.1,
+      "beta": 0.3,
+      "Z": 5.840610909695347
+    },
+    {
+      "L": 2,
+      "alpha": 0.5,
+      "beta": 0.0,
+      "Z": 3.8413408423618707
+    },
+    {
+      "L": 3,
+      "alpha": 0.0,
+      "beta": 0.0,
+      "Z": 27.0
+    },
+    {
+      "L": 3,
+      "alpha": 0.1,
+      "beta": 0.3,
+      "Z": 10.934888489187678
+    },
+    {
+      "L": 3,
+      "alpha": 0.5,
+      "beta": 0.0,
+      "Z": 4.881078744180696
+    },
+    {
+      "L": 5,
+      "alpha": 0.0,
+      "beta": 0.0,
+      "Z": 243.0
+    },
+    {
+      "L": 5,
+      "alpha": 0.1,
+      "beta": 0.3,
+      "Z": 19.610752124181616
+    },
+    {
+      "L": 5,
+      "alpha": 0.5,
+      "beta": 0.0,
+      "Z": 5.0632736960547895
+    },
+    {
+      "L": 8,
+      "alpha": 0.0,
+      "beta": 0.0,
+      "Z": 6561.0
+    },
+    {
+      "L": 8,
+      "alpha": 0.1,
+      "beta": 0.3,
+      "Z": 20.44415287416496
+    },
+    {
+      "L": 8,
+      "alpha": 0.5,
+      "beta": 0.0,
+      "Z": 5.0632748356476975
+    }
+  ],
+  "massive_logdet_checks": [
+    {
+      "level": 2,
+      "mass_squared": 0.0,
+      "logdet_Gram_plus_m2": 2.220446049250313e-15
+    },
+    {
+      "level": 2,
+      "mass_squared": 0.01,
+      "logdet_Gram_plus_m2": 0.0876527637571567
+    },
+    {
+      "level": 2,
+      "mass_squared": 0.1,
+      "logdet_Gram_plus_m2": 0.7271137301232198
+    },
+    {
+      "level": 2,
+      "mass_squared": 1.0,
+      "logdet_Gram_plus_m2": 3.583518938456111
+    },
+    {
+      "level": 3,
+      "mass_squared": 0.0,
+      "logdet_Gram_plus_m2": -4.440892098500626e-15
+    },
+    {
+      "level": 3,
+      "mass_squared": 0.01,
+      "logdet_Gram_plus_m2": 0.2545668353720938
+    },
+    {
+      "level": 3,
+      "mass_squared": 0.1,
+      "logdet_Gram_plus_m2": 1.8432658949848308
+    },
+    {
+      "level": 3,
+      "mass_squared": 1.0,
+      "logdet_Gram_plus_m2": 7.824046010856289
+    },
+    {
+      "level": 4,
+      "mass_squared": 0.0,
+      "logdet_Gram_plus_m2": -7.549516567451064e-14
+    },
+    {
+      "level": 4,
+      "mass_squared": 0.01,
+      "logdet_Gram_plus_m2": 0.7160408190100132
+    },
+    {
+      "level": 4,
+      "mass_squared": 0.1,
+      "logdet_Gram_plus_m2": 4.460053584552128
+    },
+    {
+      "level": 4,
+      "mass_squared": 1.0,
+      "logdet_Gram_plus_m2": 16.839601690815172
+    },
+    {
+      "level": 5,
+      "mass_squared": 0.0,
+      "logdet_Gram_plus_m2": 5.826450433232822e-13
+    },
+    {
+      "level": 5,
+      "mass_squared": 0.01,
+      "logdet_Gram_plus_m2": 1.9266011798391975
+    },
+    {
+      "level": 5,
+      "mass_squared": 0.1,
+      "logdet_Gram_plus_m2": 10.454709421265985
+    },
+    {
+      "level": 5,
+      "mass_squared": 1.0,
+      "logdet_Gram_plus_m2": 35.90135422941327
+    }
+  ],
+  "mass_dependent_two_copy_SSR": {
+    "table": [
+      {
+        "dimensionless_phase_jitter_DeltaE_sigma_t": 0.0,
+        "sector_coherence": 1.0,
+        "optimal_CHSH_under_strict_SSR": 2.414213562373095,
+        "maximally_correlated_sector_CHSH": 2.8284271247461903
+      },
+      {
+        "dimensionless_phase_jitter_DeltaE_sigma_t": 0.25,
+        "sector_coherence": 0.9394130628134758,
+        "optimal_CHSH_under_strict_SSR": 2.3720411446398373,
+        "maximally_correlated_sector_CHSH": 2.744082289279675
+      },
+      {
+        "dimensionless_phase_jitter_DeltaE_sigma_t": 0.5,
+        "sector_coherence": 0.7788007830714049,
+        "optimal_CHSH_under_strict_SSR": 2.267489905171885,
+        "maximally_correlated_sector_CHSH": 2.5349798103437697
+      },
+      {
+        "dimensionless_phase_jitter_DeltaE_sigma_t": 1.0,
+        "sector_coherence": 0.36787944117144233,
+        "optimal_CHSH_under_strict_SSR": 2.0655211322337124,
+        "maximally_correlated_sector_CHSH": 2.131042264467425
+      },
+      {
+        "dimensionless_phase_jitter_DeltaE_sigma_t": 2.0,
+        "sector_coherence": 0.01831563888873418,
+        "optimal_CHSH_under_strict_SSR": 2.000167717249413,
+        "maximally_correlated_sector_CHSH": 2.0003354344988264
+      },
+      {
+        "dimensionless_phase_jitter_DeltaE_sigma_t": 3.0,
+        "sector_coherence": 0.00012340980408667956,
+        "optimal_CHSH_under_strict_SSR": 2.0000000076149895,
+        "maximally_correlated_sector_CHSH": 2.0000000152299795
+      }
+    ],
+    "proof": "Two copies, independent phases, local U1 charge SSR, number sectors 0/2 classical with total weight1/2, number-one 2x2 Bell-diagonal sector of weight1/2. T^T T eigenvalues (1,c\u00b2,c\u00b2). S=1+sqrt(1+c\u00b2), c=exp[-(DeltaE*sigma_t)^2]. This is a known Horodecki-type two-qubit optimization, not a new quantum law.",
+    "important_common_mode": "If phase noise is common to both copies, phi_1-phi_2=0 and CHSH remains exactly 1+sqrt2 no matter how broad the COMMON unknown phase is.",
+    "mass_caution": "Photons have no established nonzero rest mass; DeltaE is an inserted modal energy splitting and sigma_t is independent timing jitter. If applied to massive interference modes, group velocity, propagation and detector models need independent calculations. The Pascal parity resource controls the ideal SSR sectors, not a mass derived from geometry."
+  },
+  "NO_GO": "Exact parity-only P_L has 2^L states, binomial degeneracies and at L<=3 far too little mass hierarchy for e/mu/tau; L>=9 reaches range at cost of >=512 states and nontrivial multiplicities. A mass scale, canonical kinetic metric, family projection, radiative corrections and interaction geometry must be supplied independently.",
+  "not_the_same_as": "Spectral decimation of a Sierpinski gasket graph Laplacian requires a separately specified adjacency/hopping and boundary normalization; parity support alone does not define a physical Laplacian or particle rest masses. Do not mix these two spectral questions.",
+  "sources": [
+    "Lucas theorem combinatorics; https://math.mit.edu/~rstan/ec/ec1.pdf",
+    "Repo previous conditional SSR CHSH law analysis/toe_20261119_multicopy_particle_ssr_pascal_chsh.py",
+    "Mass observations PDG https://pdg.lbl.gov/2026/listings/particle_properties.html",
+    "Sierpinski graph Laplacian spectral-decimation prior art https://arxiv.org/abs/1709.02031"
+  ]
+}

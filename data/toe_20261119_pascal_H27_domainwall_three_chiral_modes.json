@@ -1,0 +1,356 @@
+{
+  "source_parallel_commit": "c98ed7e23 H27 sextic SIC/MUB BPS wall with x'=3x\u00b2(1-x\u00b3), W=x\u00b3-x^6/2",
+  "fermion_operator": "D=partial_z - [m0*I + W''(x(z))*K_L], K_L=P_L^T P_L, P_L=Lucas mod2 parity matrix",
+  "supersymmetric_BPS_profile": "x'(z)=3 x\u00b2(1\u2212x\u00b3); x(-infty)=0 SIC, x(+infty)=1 MUB",
+  "mass_profile_eigenvalue_formula": "m_lambda(z)=m0+lambda (6x(z)\u221215x(z)^4)",
+  "pascal_Gram_mass_eigenvalues_L2": [
+    0.14589803375031543,
+    1.0,
+    1.0,
+    6.854101966249686
+  ],
+  "mass_at_left_infinity": "m0>0",
+  "mass_at_right_infinity": "m0\u22129lambda",
+  "chiral_zero_mode_solution": "f_lambda(z)=C exp(m0*z) [x'(z)]^lambda",
+  "zero_offset_nonFredholm_norm_formula": "norm\u00b2 = 3^(2lambda\u22122)*Beta((4lambda\u22121)/3,2lambda) for lambda>1/4",
+  "zero_offset_normalizability_threshold": 0.25,
+  "zero_offset_L2_formal_normalizable_count": 3,
+  "zero_offset_NOT_topologically_protected": "m0=0 makes the left asymptotic mass vanish and the 1D Dirac operator non-Fredholm; arbitrary tiny positive mass makes four modes normalizable, while tiny negative mass can remove all modes.",
+  "gapped_Fredholm_L2_three_family_open_interval_m0": [
+    1.313082303752839,
+    9.0
+  ],
+  "example_bulk_mass_m0": 2.0,
+  "normalizable_chiral_left_count_m0_2": 3,
+  "normalizable_right_count_m0_2": 0,
+  "noncritical_m0_gapped_asymptotic_index_is_stable_under_compact_wall_perturbations": true,
+  "mode_count_table": [
+    {
+      "L": 1,
+      "pascal_Gram_dimension": 2,
+      "uniform_bulk_mass_m0": 0.25,
+      "count_normalizable_left_chiral_zero_modes": 2,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 2
+    },
+    {
+      "L": 1,
+      "pascal_Gram_dimension": 2,
+      "uniform_bulk_mass_m0": 1.0,
+      "count_normalizable_left_chiral_zero_modes": 2,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 2
+    },
+    {
+      "L": 1,
+      "pascal_Gram_dimension": 2,
+      "uniform_bulk_mass_m0": 2.0,
+      "count_normalizable_left_chiral_zero_modes": 2,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 2
+    },
+    {
+      "L": 1,
+      "pascal_Gram_dimension": 2,
+      "uniform_bulk_mass_m0": 4.0,
+      "count_normalizable_left_chiral_zero_modes": 1,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 2
+    },
+    {
+      "L": 1,
+      "pascal_Gram_dimension": 2,
+      "uniform_bulk_mass_m0": 8.0,
+      "count_normalizable_left_chiral_zero_modes": 1,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 2
+    },
+    {
+      "L": 1,
+      "pascal_Gram_dimension": 2,
+      "uniform_bulk_mass_m0": 12.0,
+      "count_normalizable_left_chiral_zero_modes": 1,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 2
+    },
+    {
+      "L": 2,
+      "pascal_Gram_dimension": 4,
+      "uniform_bulk_mass_m0": 0.25,
+      "count_normalizable_left_chiral_zero_modes": 4,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 3
+    },
+    {
+      "L": 2,
+      "pascal_Gram_dimension": 4,
+      "uniform_bulk_mass_m0": 1.0,
+      "count_normalizable_left_chiral_zero_modes": 4,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 3
+    },
+    {
+      "L": 2,
+      "pascal_Gram_dimension": 4,
+      "uniform_bulk_mass_m0": 2.0,
+      "count_normalizable_left_chiral_zero_modes": 3,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 3
+    },
+    {
+      "L": 2,
+      "pascal_Gram_dimension": 4,
+      "uniform_bulk_mass_m0": 4.0,
+      "count_normalizable_left_chiral_zero_modes": 3,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 3
+    },
+    {
+      "L": 2,
+      "pascal_Gram_dimension": 4,
+      "uniform_bulk_mass_m0": 8.0,
+      "count_normalizable_left_chiral_zero_modes": 3,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 3
+    },
+    {
+      "L": 2,
+      "pascal_Gram_dimension": 4,
+      "uniform_bulk_mass_m0": 12.0,
+      "count_normalizable_left_chiral_zero_modes": 1,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 3
+    },
+    {
+      "L": 3,
+      "pascal_Gram_dimension": 8,
+      "uniform_bulk_mass_m0": 0.25,
+      "count_normalizable_left_chiral_zero_modes": 8,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 7
+    },
+    {
+      "L": 3,
+      "pascal_Gram_dimension": 8,
+      "uniform_bulk_mass_m0": 1.0,
+      "count_normalizable_left_chiral_zero_modes": 7,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 7
+    },
+    {
+      "L": 3,
+      "pascal_Gram_dimension": 8,
+      "uniform_bulk_mass_m0": 2.0,
+      "count_normalizable_left_chiral_zero_modes": 7,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 7
+    },
+    {
+      "L": 3,
+      "pascal_Gram_dimension": 8,
+      "uniform_bulk_mass_m0": 4.0,
+      "count_normalizable_left_chiral_zero_modes": 4,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 7
+    },
+    {
+      "L": 3,
+      "pascal_Gram_dimension": 8,
+      "uniform_bulk_mass_m0": 8.0,
+      "count_normalizable_left_chiral_zero_modes": 4,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 7
+    },
+    {
+      "L": 3,
+      "pascal_Gram_dimension": 8,
+      "uniform_bulk_mass_m0": 12.0,
+      "count_normalizable_left_chiral_zero_modes": 4,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 7
+    },
+    {
+      "L": 4,
+      "pascal_Gram_dimension": 16,
+      "uniform_bulk_mass_m0": 0.25,
+      "count_normalizable_left_chiral_zero_modes": 15,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 11
+    },
+    {
+      "L": 4,
+      "pascal_Gram_dimension": 16,
+      "uniform_bulk_mass_m0": 1.0,
+      "count_normalizable_left_chiral_zero_modes": 15,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 11
+    },
+    {
+      "L": 4,
+      "pascal_Gram_dimension": 16,
+      "uniform_bulk_mass_m0": 2.0,
+      "count_normalizable_left_chiral_zero_modes": 11,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 11
+    },
+    {
+      "L": 4,
+      "pascal_Gram_dimension": 16,
+      "uniform_bulk_mass_m0": 4.0,
+      "count_normalizable_left_chiral_zero_modes": 11,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 11
+    },
+    {
+      "L": 4,
+      "pascal_Gram_dimension": 16,
+      "uniform_bulk_mass_m0": 8.0,
+      "count_normalizable_left_chiral_zero_modes": 11,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 11
+    },
+    {
+      "L": 4,
+      "pascal_Gram_dimension": 16,
+      "uniform_bulk_mass_m0": 12.0,
+      "count_normalizable_left_chiral_zero_modes": 5,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 11
+    },
+    {
+      "L": 5,
+      "pascal_Gram_dimension": 32,
+      "uniform_bulk_mass_m0": 0.25,
+      "count_normalizable_left_chiral_zero_modes": 31,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 26
+    },
+    {
+      "L": 5,
+      "pascal_Gram_dimension": 32,
+      "uniform_bulk_mass_m0": 1.0,
+      "count_normalizable_left_chiral_zero_modes": 26,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 26
+    },
+    {
+      "L": 5,
+      "pascal_Gram_dimension": 32,
+      "uniform_bulk_mass_m0": 2.0,
+      "count_normalizable_left_chiral_zero_modes": 26,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 26
+    },
+    {
+      "L": 5,
+      "pascal_Gram_dimension": 32,
+      "uniform_bulk_mass_m0": 4.0,
+      "count_normalizable_left_chiral_zero_modes": 16,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 26
+    },
+    {
+      "L": 5,
+      "pascal_Gram_dimension": 32,
+      "uniform_bulk_mass_m0": 8.0,
+      "count_normalizable_left_chiral_zero_modes": 16,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 26
+    },
+    {
+      "L": 5,
+      "pascal_Gram_dimension": 32,
+      "uniform_bulk_mass_m0": 12.0,
+      "count_normalizable_left_chiral_zero_modes": 16,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 26
+    },
+    {
+      "L": 6,
+      "pascal_Gram_dimension": 64,
+      "uniform_bulk_mass_m0": 0.25,
+      "count_normalizable_left_chiral_zero_modes": 57,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 42
+    },
+    {
+      "L": 6,
+      "pascal_Gram_dimension": 64,
+      "uniform_bulk_mass_m0": 1.0,
+      "count_normalizable_left_chiral_zero_modes": 57,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 42
+    },
+    {
+      "L": 6,
+      "pascal_Gram_dimension": 64,
+      "uniform_bulk_mass_m0": 2.0,
+      "count_normalizable_left_chiral_zero_modes": 42,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 42
+    },
+    {
+      "L": 6,
+      "pascal_Gram_dimension": 64,
+      "uniform_bulk_mass_m0": 4.0,
+      "count_normalizable_left_chiral_zero_modes": 42,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 42
+    },
+    {
+      "L": 6,
+      "pascal_Gram_dimension": 64,
+      "uniform_bulk_mass_m0": 8.0,
+      "count_normalizable_left_chiral_zero_modes": 42,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 42
+    },
+    {
+      "L": 6,
+      "pascal_Gram_dimension": 64,
+      "uniform_bulk_mass_m0": 12.0,
+      "count_normalizable_left_chiral_zero_modes": 22,
+      "right_chiral_count_if_m0_positive": 0,
+      "zero_offset_nonFredholm_normalizable_modes": 42
+    }
+  ],
+  "m0_2_singular_selection": "lambda_phi^-4 is excluded, the two lambda=1 channels and one lambda=phi^4 channel localize (3 total)",
+  "persistent_family_pair_degeneracy": "Unperturbed two lambda1 modes have equal wall profiles/mass couplings; need sourced family symmetry breaking and localized 4D Yukawas",
+  "rank_one_defect_perturbation_matrix_original_digit_basis": [
+    [
+      0.0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0.05,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "strict_spectral_gap_margin_at_m0_2": 0.07632418847190678,
+  "rank_one_perturbation_operator_norm": 0.05,
+  "perturbed_four_distinct_eigenvalues": [
+    0.15554106266682924,
+    1.0000000000000002,
+    1.03029048908502,
+    6.864168448248151
+  ],
+  "perturbed_three_chiral_normalizable_count": 3,
+  "robustness_note": "Weyl eigenvalue perturbation bound: any Hermitian deltaK with norm < min_j abs(lambda_j-m0/9) preserves the left-chiral zero-mode count. The explicit rank-one positive deformation splits the lambda1 pair but does NOT source physical SM masses or specify the defect flux.",
+  "crucial_scope": "This is an inserted 5D first-order Dirac domain-wall operator on a previous H27 global-SUSY scalar kink; it is NOT a derived 5D GUT/chiral SU2 or 11D G2 compactification. Four-dimensional zero modes are massless before Higgs interactions. The m0*I, K_L coupling, wall source, gauge representations, anomalies, normalizations and Planck/proton predictions remain external. A 3-family index here is an index of a toy 1D first-order operator, not the physical SM family index."
+}

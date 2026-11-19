@@ -1,0 +1,62 @@
+{
+  "relative_flux": {
+    "CW_d0": "(u-1,0,0,0), u!=1",
+    "H1_abs_twisted_dimension": 3,
+    "H2_abs_twisted_dimension": 0,
+    "H2_rel_twisted_dual_dimension": 3,
+    "Poincare_Lefschetz_H1_abs_H2_rel_pairing_matrix": "Matrix([[1, 0, 0], [0, 1, 0], [0, 0, 1]])",
+    "pairing_rank": 3,
+    "background_relative_flux_toy_masses": [
+      1,
+      2,
+      3
+    ],
+    "example_S3_breaking_eigenvalue_split_first_order": "2*epsilon/sqrt(3)",
+    "required_relative_character": "If matter has intrinsic line chi, relative flux must transform in chi^-1, and additional gauge representations must contract to a true singlet.",
+    "important": "This is a NONZERO absolute H1 \u00d7 relative H2 -> relative H3 topological pairing (flux-induced bilinear), not an ordinary 1+1+1 bulk Yukawa. Flux values, quantization, gauge representations, Higgs vevs, and spinor index/physical mass generation are not derived. Relative flux cannot automatically mass up unpaired chiral fermions without a gauge-appropriate conjugate field."
+  },
+  "SU5_covariant_octet_spurion": {
+    "fixed_H_SU5_broken_projector_rank": 8,
+    "full_SU5_Higgs_spurion_covariance_verified": true,
+    "random_SU5_transformations": 40,
+    "max_covariance_residual_with_H_transformed": 2e-12,
+    "max_SU5_non_covariance_residual_with_H_frozen": 1.3805196155168034,
+    "gauge_invariant_candidate": "Tr[ P8(24F;24H) P8(24F;24H) ] is SU5 invariant if 24H -> U 24H U\u2020 jointly with 24F, evaluated around vev diag(2,2,2,-3,-3)*v",
+    "operator_hierarchy": "P8 polynomial in H/v through H\u00b2. Its quadratic mass term has operators up to (24H/v)^4 (24F)^2. The v factors are inserted/unknown; heavy UV origin, supersymmetric holomorphic contractions, nonrenormalizable coefficients and lower-order counterterms need derivation.",
+    "correction_to_prior": "Frozen H projector not SU5 invariant under transforming F alone, but covariant as an adjoint-Higgs spurion. An explicit SU5-breaking boundary is not the ONLY mathematical way to select an octet; the physical higher-dimensional origin and tunings remain open."
+  },
+  "causal_mass_counterterm": {
+    "test_cases": [
+      {
+        "rho": 100.0,
+        "eps": 0.2,
+        "finite_volume_mean_B_one": 1.2615797938495945,
+        "counterterm_mass_squared_to_force_zero_mean": -1.2615797938495945,
+        "positive_mass_squared_possible_to_force_zero": false,
+        "stochastic_variance_B": 640.8513654156577,
+        "variance_with_m_squared_plus2": 640.8513654156577
+      },
+      {
+        "rho": 200.0,
+        "eps": 0.2,
+        "finite_volume_mean_B_one": -3.472005631330316,
+        "counterterm_mass_squared_to_force_zero_mean": 3.472005631330316,
+        "positive_mass_squared_possible_to_force_zero": true,
+        "stochastic_variance_B": 3024.3933379838054,
+        "variance_with_m_squared_plus2": 3024.3933379838054
+      },
+      {
+        "rho": 100.0,
+        "eps": 1.0,
+        "finite_volume_mean_B_one": -1.1398024026263875,
+        "counterterm_mass_squared_to_force_zero_mean": 1.1398024026263875,
+        "positive_mass_squared_possible_to_force_zero": true,
+        "stochastic_variance_B": 1585345.266106443,
+        "variance_with_m_squared_plus2": 1585345.266106443
+      }
+    ],
+    "exact_theorem": "For local KG mass term B_mu[f]=B[f]+mu\u00b2 f(origin) with fixed f(origin), shift is deterministic: Var(B_mu)=Var(B) exactly.",
+    "mass_from_bias_is_regulator_dependent": "The mass-squared counterterm needed to erase the finite-volume constant bias changes sign between rho100 eps.2 and rho200 eps.2, so it cannot be a universal positive physical particle rest mass.",
+    "scope": "Future cone constant probe in flat Minkowski, numeric Poisson variance, analytic finite-density mean; no quantum state, Einstein operator, canonical propagating scalar or renormalization condition from a microscopic action."
+  }
+}
