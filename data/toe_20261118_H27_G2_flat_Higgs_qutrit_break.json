@@ -1,0 +1,213 @@
+{
+  "status": "PASS",
+  "date": "2026-11-18",
+  "finite_H27_families": {
+    "status": "PASS",
+    "order": 27,
+    "conjugacy_class_count": 11,
+    "class_sizes": [
+      1,
+      1,
+      1,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "irreducible_dimensions": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      3,
+      3
+    ],
+    "sum_of_squares": 27,
+    "all_one_dimensional_center_characters_trivial": true,
+    "two_nontrivial_center_characters": [
+      "omega",
+      "omega^2"
+    ],
+    "faithful_center_irreducible_dimension": 3,
+    "irreducible_family_triplet_conditional": true,
+    "multiplication": "(a,b,c)(A,B,C)=(a+A,b+B,c+C+aB) mod3",
+    "character_orthogonality_error": 3.635287314844587e-16,
+    "prior_art": "Irrep inventory is already proved in the repo (2026-09-22 address/operator H27 intertwiner). This PASS checks it independently and connects it to geometric obstructions.",
+    "caveat": "A nontrivial H27 central character plus irreducibility implies rank3, but neither H27 dynamics nor physical irreducibility nor a choice between the two conjugate center characters is derived."
+  },
+  "spherical_space_form_no_go": {
+    "status": "PASS",
+    "abelian_subgroup": "C3 x C3",
+    "subgroup_order": 9,
+    "all_nine_character_kernel_sizes": [
+      9,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "nontrivial_fixed_eigenline_for_every_linear_H27_rep": true,
+    "free_orthogonal_action_on_any_round_sphere_possible": false,
+    "free_topological_action_on_any_standard_sphere_possible": false,
+    "theorem": "Finite groups acting freely on spheres have periodic group cohomology and all abelian subgroups cyclic. H27 contains C3xC3.",
+    "physical_scope": "No smooth spherical space form S7/H27 with free deck action; NOT a no-go for H27 as gauge holonomy on a defect complement, finite quotient of pi1 on a DIFFERENT positive-Einstein manifold, or an orbifold with fixed points."
+  },
+  "smooth_nearlyG2_flat_Dirac_no_go": {
+    "status": "PASS",
+    "dimension": 7,
+    "assumption": "smooth closed spin nearly parallel G2, tau0 nonzero; ordinary geometric Dirac with a unitary FLAT Hermitian gauge bundle",
+    "Ricci_coefficient": "3*tau0^2/8",
+    "scalar_curvature": "21*tau0^2/8",
+    "twisted_Lichnerowicz": "D_A^2=nabla_A^*nabla_A+Scal/4 for flat A",
+    "Dirac_squared_spectral_lower_bound": "21*tau0^2/32",
+    "at_tau0_2_overL_Dirac_squared_L2_lower_bound": "21/8",
+    "no_ordinary_flat_twisted_Dirac_zero_modes": true,
+    "Myers_diameter_upper_bound": "4*pi/abs(tau0)",
+    "Myers_at_tau0_2_overL_diameter_upper_bound": "2*pi*L",
+    "fundamental_group_finite": true,
+    "real_first_cohomology_zero": true,
+    "source_free_closed_harmonic_real_one_forms_zero": true,
+    "nonflat_gauge_curvature_Clifford_endomorphism_norm_necessary": "operator norm K >= 21*tau0^2/32 somewhere for zero modes; otherwise Weitzenbock form remains strictly positive",
+    "caveat": "No-go is for smooth closed positive-scalar geometry, ordinary gauge-Dirac with FLAT unitary twist and no boundary/singular contribution. Does not apply to charged 7D ADE defects, torsion/flux-modified supercovariant operators, nonflat curvature or spinors with physical boundary projectors."
+  },
+  "E8_parallel_Higgs_and_family_multiplicity": {
+    "status": "PASS",
+    "Wilson_E6_c3_unbroken_algebra": "su3 + su2 + u1^3",
+    "Wilson_E6_c3_unbroken_dimension": 14,
+    "residual_center_dimension": 3,
+    "residual_extra_U1_beyond_SM": 2,
+    "all_globally_covariantly_parallel_adjoint_VEVs_preserve_at_least_U1_cubed": true,
+    "reason": "Any global parallel adjoint VEV lives in the holonomy centralizer h. The center z(h)=u1^3 commutes with EVERY VEV in h, even several noncommuting ones.",
+    "spatial_PW_scalar_L2_zero_modes": 3,
+    "independent_H27_Schrodinger_family_fiber_dim": 3,
+    "naive_commuting_tensored_L2_zero_modes": 9,
+    "multiplicity_matrix_example": "Q=diag(0,0,0,2,5); dim ker(Q tensor I3)=9",
+    "tilted_quartic_critical_points_xy": [
+      [
+        1.3247179572447454,
+        0.0
+      ],
+      [
+        -0.22669882575820183,
+        1.0743263344070286
+      ],
+      [
+        -0.22669882575820183,
+        -1.0743263344070286
+      ]
+    ],
+    "tilted_quartic_triangle_distances": [
+      1.8870800479533603,
+      1.8870800479533603,
+      2.1486526688140573
+    ],
+    "tilted_quartic_triangle_longest_over_shortest": 1.1386123610094794,
+    "tilted_quartic_has_euclidean_C3_rotation_permuting_sites": false,
+    "non_double_count_option": "Use the 3D spatial zero-mode space itself as the H27 triplet, or add non-Abelian mixing that removes unwanted degeneracy; cannot multiply two independently supplied triplets and still call result 3.",
+    "physics_limit": "This does NOT prohibit nonparallel/charged Higgs sections, a nonflat gauge profile, source-localized Higgs, nonlinear index coupling or nontrivial global family-bundle gluing. The PW scalar kernel and H27 fiber were only tensored in a conditional product ansatz."
+  },
+  "qutrit_controlled_memory": {
+    "status": "PASS",
+    "system": "3 qutrit registers R reference, S input, E environment",
+    "circuit": "prepare Bell R-S and E0; SWAP(S,E); channel noise on E; trace-reset S to arbitrary computational k; SWAP(S,E); measure R-S in four local MUBs",
+    "coherent_output_fidelity": 1.0,
+    "dephased_environment_classical_memory_fidelity": 0.33333333333333354,
+    "no_memory_depolarized_environment_fidelity": 0.1111111111111111,
+    "visibility_t": 0.75,
+    "expected_return_fidelity": 0.7777777777777781,
+    "expected_local_MUB_match": 0.8333333333333336,
+    "four_MUB_2design_residual": 6.91576923247034e-16,
+    "independently_prepared_middle_reset_values": [
+      0,
+      1,
+      2
+    ],
+    "exact_CPTP_output_residual_max": 2.7755575615628914e-17,
+    "entanglement_breaking_classical_memory_fidelity_bound": 0.3333333333333333,
+    "intrinsic_qutrit_SN2_fidelity_bound": 0.6666666666666666,
+    "classical_memory_fixed_n_99pct_typeI_90pct_power": {
+      "accepted_trials": 27,
+      "min_matches": 20,
+      "exact_typeI": 0.0095786452293396,
+      "design_power": 0.9322596594817233
+    },
+    "intrinsic_qutrit_fixed_n_99pct_typeI_90pct_power": {
+      "accepted_trials": 317,
+      "min_matches": 256,
+      "exact_typeI": 0.00924794862640615,
+      "design_power": 0.9024527463586495
+    },
+    "detector_symmetric_ternary_error_designs": [
+      {
+        "each_detector_symmetric_ternary_error": 0.0,
+        "expected_match": 0.8333333333333336,
+        "known_calibrated_classical_memory_null": 0.5,
+        "known_calibrated_SN2_null": 0.75,
+        "classical_memory_99pct_90pct_power": {
+          "accepted_trials": 27,
+          "min_matches": 20,
+          "exact_typeI": 0.0095786452293396,
+          "design_power": 0.9322596594817233
+        },
+        "intrinsic_SN3_99pct_90pct_power": {
+          "accepted_trials": 317,
+          "min_matches": 256,
+          "exact_typeI": 0.00924794862640615,
+          "design_power": 0.9024527463586495
+        }
+      },
+      {
+        "each_detector_symmetric_ternary_error": 0.01,
+        "expected_match": 0.8184458333333335,
+        "known_calibrated_classical_memory_null": 0.4950375,
+        "known_calibrated_SN2_null": 0.7375937499999999,
+        "classical_memory_99pct_90pct_power": {
+          "accepted_trials": 30,
+          "min_matches": 22,
+          "exact_typeI": 0.006946284366088799,
+          "design_power": 0.9202546209894016
+        },
+        "intrinsic_SN3_99pct_90pct_power": {
+          "accepted_trials": 348,
+          "min_matches": 276,
+          "exact_typeI": 0.009655656335226227,
+          "design_power": 0.9009470925214919
+        }
+      },
+      {
+        "each_detector_symmetric_ternary_error": 0.02,
+        "expected_match": 0.8037833333333335,
+        "known_calibrated_classical_memory_null": 0.4901499999999999,
+        "known_calibrated_SN2_null": 0.7253749999999999,
+        "classical_memory_99pct_90pct_power": {
+          "accepted_trials": 29,
+          "min_matches": 21,
+          "exact_typeI": 0.009119252367235528,
+          "design_power": 0.9013975687359358
+        },
+        "intrinsic_SN3_99pct_90pct_power": {
+          "accepted_trials": 389,
+          "min_matches": 303,
+          "exact_typeI": 0.009360584897966758,
+          "design_power": 0.9015762770346476
+        }
+      }
+    ],
+    "status_of_2026_Beyer_genuine_three_time_only_target": "NOT_PROVEN: restores two-time R-S entanglement across a causal break, but early-late effective channel is non-EB; stronger pairwise-classical triple incompatibility remains open",
+    "physical_limit": "Ideal full density matrix control. No real photon circuit, calibrated detector, loss guarantee, event-ready reference, photonic causal-break exclusion, timing loophole, noise provenance or measured process tensor."
+  },
+  "no_TOE_claim": true
+}
