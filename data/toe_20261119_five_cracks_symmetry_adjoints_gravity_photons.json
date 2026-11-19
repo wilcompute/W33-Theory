@@ -1,0 +1,306 @@
+{
+  "three_24F_GUT": {
+    "field_content": "three Weyl fermionic SU5 24_F with diagonal generation matrices M0 and K times a single 24_H vev",
+    "SU5_mass_relations": "M8=M0+2K; M3=M0-3K; MX=M0-K/2; M1=M0-K",
+    "SU5_GUT_scale_chosen_GeV": 2e+16,
+    "SU2_triplet_masses_GeV": [
+      7677890.88851368,
+      7677890.88851368,
+      2e+16
+    ],
+    "SU3_octet_masses_GeV": [
+      2e+16,
+      2e+16,
+      56783.88502830961
+    ],
+    "X_leptoquark_masses_GeV": [
+      1.0000000003838946e+16,
+      1.0000000003838946e+16,
+      1.0000000000028392e+16
+    ],
+    "singlet_masses_GeV": [
+      8000000004606734.0,
+      8000000004606734.0,
+      1.2000000000022714e+16
+    ],
+    "SU5_invariant_M0_eigenvalues_GeV": [
+      1.2000000003071156e+16,
+      1.2000000003071156e+16,
+      8000000000034070.0
+    ],
+    "SU5_adj_H_K_eigenvalues_GeV": [
+      3999999998464421.5,
+      3999999998464421.5,
+      -3999999999988643.0
+    ],
+    "one_loop_inverse_couplings_at_MU": [
+      36.35908536894823,
+      36.35908536894823,
+      36.35908536894823
+    ],
+    "one_loop_inverse_coupling_spread": 0.0,
+    "beta_triplet": [
+      0.0,
+      1.3333333333333333,
+      0.0
+    ],
+    "beta_octet": [
+      0.0,
+      0.0,
+      2.0
+    ],
+    "beta_X": [
+      3.3333333333333335,
+      2.0,
+      1.3333333333333333
+    ],
+    "smallest_light_to_heavy_cancellation_fraction": 2.8391942514154807e-12,
+    "seesaw_typeIII_two_heavy_triplets": true,
+    "seesaw_normal_ordering_input_eV": [
+      0.0,
+      0.008640023148117138,
+      0.05009291367049835
+    ],
+    "seesaw_Y_example_flavor_diagonal": [
+      [
+        0.0,
+        4.678106363299741e-05,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.00011264211220013964
+      ]
+    ],
+    "seesaw_reconstruction_eV": [
+      0.0,
+      0.008640023148117138,
+      0.05009291367049833
+    ],
+    "seesaw_light_mass_rank": 2,
+    "neutrino_limit": "Example diagonal Yukawas reconstruct imported splittings; PMNS, type-I singlet mixings, CP phases, radiative masses and leptogenesis remain free.",
+    "result": "Three complementary flavor projectors evade the TWO-24_F light-X singular-value obstruction while refitting all 24_F thresholds at ONE LOOP.",
+    "not_solved": "Chosen MU and mass matrix alignments, 10^-12-ish cancellations, Higgs/scalar thresholds, 2-loop RGE, proton lifetime, PMNS, scalar vacuum and actual unified UV dynamics are NOT predicted."
+  },
+  "E8_discrete_R_candidate": {
+    "symmetry": "candidate Z4^R, W charge2, all eight charged singlets charge0, three 16s charge1",
+    "ten_R_charges": {
+      "10_12": 1,
+      "10_13": 0,
+      "10_14": 0,
+      "10_24": 0,
+      "10_34": 0
+    },
+    "one_singlet_Yukawas_R_allowed": true,
+    "singlet_bilinears_and_dangerous_cubics_R_forbidden": true,
+    "all_pure_singlet_polynomials_forbidden_at_exact_R_level": true,
+    "Spin10_mixed_R_anomaly_integer": 4,
+    "Spin10_mod_eta_2": 0,
+    "U1a_U1b_R_mixed_anomaly_matrix": [
+      [
+        -44,
+        -16,
+        -28
+      ],
+      [
+        -16,
+        -30,
+        -18
+      ],
+      [
+        -28,
+        -18,
+        -42
+      ]
+    ],
+    "U1a_U1b_R_mixed_anomaly_mod2": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "minimal_supergravity_gravitational_Z4R_coefficient": -21,
+    "gravitational_Z4R_mod_eta_2": 1,
+    "one_neutral_R0_chiral_makes_gravitational_mod2_zero": true,
+    "Dflat_pair_plus_triangle_charge_sum": [
+      0,
+      0,
+      0
+    ],
+    "Fflat_Dflat_nonzero_tree_vacuum_with_only_these_chiral_superfields": true,
+    "nonprediction": "This establishes a tree-level *moduli branch*, not a stabilized finite VEV, mass hierarchy, physical E8 wavefunction overlap or a fully anomaly-free discrete gauge symmetry.",
+    "risk": "Mixed Abelian/gravitational discrete anomalies, Green-Schwarz inflow, supergravity constant W, anomalous U1 FI terms, additional neutral fields and nonperturbative R breaking require a separate UV audit."
+  },
+  "E8_driving_field_singlet_vacuum": {
+    "driving_fields": "two gauge-neutral chiral multiplets X_A,X_B of Z4R charge2",
+    "EFT_superpotential": "W=X_A*(S12*S12conj-vA^2)+X_B*(S13*S14conj*S34-vB^3)/M",
+    "explicit_condensates": {
+      "S12": 1.7,
+      "S12conj": 1.7,
+      "S13": 0.6,
+      "S14conj": 0.6,
+      "S34": 0.6,
+      "X_A": 0.0,
+      "X_B": 0.0
+    },
+    "Fterm_driving_residual": [
+      0.0,
+      2.7755575615628915e-18
+    ],
+    "Fterm_charged_residual": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "three_Dterms_residual": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "Higgs_charge_3x3_matrix": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        -1,
+        0,
+        1
+      ],
+      [
+        0,
+        -1,
+        2
+      ]
+    ],
+    "Higgs_charge_index_abs_det": 4,
+    "Higgs_charge_Smith_invariants": [
+      1,
+      1,
+      4
+    ],
+    "naive_abelian_residual_gauge_stabilizer": "Z4 if the gauge group is U1^3 with primitive weight-character lattice",
+    "global_group_caution": "For actual E8 -> (Spin10 x SU4)/Z4, this index may simply encode the SU4 center/diagonal quotient, not a new independent discrete gauge symmetry and NOT the proposed discrete R symmetry.",
+    "local_moduli_count_on_five_field_branch": 0,
+    "R_gravitational_anomaly_with_two_R2_drivers": -19,
+    "R_gravitational_mod2_with_drivers": 1,
+    "R_gravitational_mod2_with_drivers_plus_one_R0_modulus": 0,
+    "constructive_fact": "With exact Z4R, bare CEG is forbidden, but X_B*CEG/M and X_A*AB are allowed. Their F equations plus D=0 admit all three required singlet VEVs nonzero.",
+    "not_solved": "The scales vA,vB and cutoff M are inputs; X_B CEG/M is nonrenormalizable; the remaining three singlet zero modes and all additional neutral moduli need stabilization. Z4R anomalies, physical Yukawa overlaps and the full compact G2 vacuum remain open."
+  },
+  "centralizer_Wilson_line_test": {
+    "T3_flat_line_bundle_samples": [
+      {
+        "lambda": [
+          "1",
+          "1",
+          "1"
+        ],
+        "twisted_Betti_dimensions": [
+          1,
+          3,
+          3,
+          1
+        ],
+        "coboundary_ranks": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "lambda": [
+          "-1",
+          "1",
+          "1"
+        ],
+        "twisted_Betti_dimensions": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "coboundary_ranks": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "lambda": [
+          "(-0.4999999999999998+0.8660254037844387j)",
+          "1",
+          "-1"
+        ],
+        "twisted_Betti_dimensions": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "coboundary_ranks": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "lambda": [
+          "(0.9009688679024191+0.4338837391175581j)",
+          "(0.30901699437494745+0.9510565162951535j)",
+          "1"
+        ],
+        "twisted_Betti_dimensions": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "coboundary_ranks": [
+          1,
+          2,
+          1
+        ]
+      }
+    ],
+    "general_theorem": "If any rank-one character lambda_i !=1, the T3 local-system Koszul cochain complex is acyclic (contract with a_i^-1); trivial character has H1 dimension3.",
+    "puncture_H1_extension": "Removing a 3-ball from T3 does not change absolute H1 local-system cohomology; the pair excision affects degree3, not degree1.",
+    "centralizer_obstruction": "Wilson-line holonomy commuting with the entire unbroken Spin10 acts trivially on its 45 adjoint generators, so its adjoint local system remains untwisted and still has 3 copies from b1=3.",
+    "escape": "Break/lift adjoints by non-flat Higgs background, boundary/defect projections, a different three-cycle, or dynamics. Noncentral holonomy can eliminate some modes but breaks part of Spin10.",
+    "scope": "This is flat local-system cohomology, not a sourced ALE/G2 index calculation with flux and physical boundary domains."
+  },
+  "linearized_GR_lattice": {
+    "grid": "periodic 8^4 Minkowski lattice, central symmetric derivatives",
+    "discrete_linearized_Bianchi_max_residual": 8.881784197001252e-16,
+    "pure_gauge_Einstein_max_residual": 1.7763568394002505e-15,
+    "staggered_Nyquist_false_zero_Einstein_residual": 0.0,
+    "forward_derivative_on_same_Nyquist_amplitude": 2.0,
+    "physical_question": "An exactly gauge invariant finite difference Einstein tensor can still have spurious zero-energy Nyquist modes. A positive-norm, causal, no-doubler propagator and local constraint algebra are additional demands.",
+    "scope": "Linearized free GR identity, no full nonlinear gravity, no constraint/Hamiltonian dynamics, no proof of quantum unitarity."
+  },
+  "two_copy_photon_SSR_activation": {
+    "single_copy": "(|A>+|B>)/sqrt2 under strict local U1 SSR",
+    "two_copy_event_ready_one_local_photon_each_probability": 0.5,
+    "conditional_dual_rail_entangled_state": "(|A1 B2>+|A2 B1>)/sqrt2",
+    "conditional_CHSH_number_conserving_dual_rail": 2.8284271247461894,
+    "probability_two_photons_at_same_lab": 0.5,
+    "required_consumed_nonvacuum_photons": 2,
+    "mechanism": "Second copy activates locally accessible entanglement, rather than pretending that one shared photon offers unrestricted local X/Y Pauli operations.",
+    "limits": "Requires two identically phased copies and local phase-stable interferometers; event-ready heralding without setting bias and all optical loss rates must be included. Established SSR activation phenomenon, not a new Born-rule prediction."
+  }
+}
