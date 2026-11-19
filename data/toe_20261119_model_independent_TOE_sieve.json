@@ -1,0 +1,227 @@
+{
+  "title": "Theory-of-everything model-independent constraint sieve",
+  "date": "2026-11-19",
+  "scope": "Known physics and transparent conditional model checks; not a TOE solution",
+  "all_certificates": "PASS",
+  "source_uris": [
+    "https://pdg.lbl.gov/2025/reviews/rpp2025-rev-guts.pdf",
+    "https://pdg.lbl.gov/2025/reviews/rpp2025-rev-standard-model.pdf",
+    "https://global-nu.org/results.html",
+    "https://www.darkenergysurvey.org/des-y6-cosmology-results-papers/"
+  ],
+  "frontiers": {
+    "anomalies_and_charge_ambiguity": {
+      "status": "PASS",
+      "claim": "Anomaly and Yukawa consistency allow continuous Y+t(B-L) with nu_R",
+      "gauge_group": "SU(3)c x SU(2)L x U(1)Y",
+      "left_Weyl_generation": [
+        {
+          "field": "Q",
+          "multiplicity": 6,
+          "Y": "1/6",
+          "B_minus_L": "1/3"
+        },
+        {
+          "field": "u^c",
+          "multiplicity": 3,
+          "Y": "-2/3",
+          "B_minus_L": "-1/3"
+        },
+        {
+          "field": "d^c",
+          "multiplicity": 3,
+          "Y": "1/3",
+          "B_minus_L": "-1/3"
+        },
+        {
+          "field": "L",
+          "multiplicity": 2,
+          "Y": "-1/2",
+          "B_minus_L": "-1"
+        },
+        {
+          "field": "e^c",
+          "multiplicity": 1,
+          "Y": "1",
+          "B_minus_L": "1"
+        },
+        {
+          "field": "nu^c",
+          "multiplicity": 1,
+          "Y": "0",
+          "B_minus_L": "1"
+        }
+      ],
+      "anomaly_polynomials": {
+        "SU3_squared_U1": "0",
+        "SU2_squared_U1": "0",
+        "gravity_squared_U1": "0",
+        "U1_cubed": "0"
+      },
+      "Yukawa_charge_residuals": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "SU2_Witten_number_doublets_per_generation": 4,
+      "without_nuR_gravity_B_minus_L_mixing_anomaly": "-t",
+      "without_nuR_U1_cubed_mixed_anomaly": "-t**3",
+      "bare_nuR_Majorana_mass_U1_charge": "2*t",
+      "Weinberg_LH_squared_U1_charge": "-2*t",
+      "Majorana_mass_or_unspurioned_Weinberg_operator_forces_mixing_t": 0,
+      "Majorana_charge_quantization_prior_art": "Phys Rev Lett 63, 938 (1989)",
+      "limitation": "charges are known from observation; anomaly equations alone do not derive them; new B-L breaking scalars can evade the simple t=0 criterion"
+    },
+    "gauge_RGE_unification": {
+      "status": "PASS",
+      "scheme": "one-loop SM MS-bar, SU5-normalized U1, no thresholds or two-loop corrections",
+      "input": {
+        "alpha_em_inv_MZ": 127.93,
+        "sin2_thetaW_MZ": 0.23122,
+        "alpha_s_MZ": 0.118,
+        "MZ_GeV": 91.1876
+      },
+      "beta_coefficients_SM": [
+        4.1,
+        -3.1666666666666665,
+        -7.0
+      ],
+      "initial_inverse_couplings": [
+        59.01001524,
+        29.579974600000003,
+        8.474576271186441
+      ],
+      "U1_SU2_crossing_GeV": 10265958696445.973,
+      "inverse_couplings_at_U1_SU2_crossing": [
+        42.40499231009174,
+        42.40499231009175,
+        36.8246154198103
+      ],
+      "U1_SU3_inverse_mismatch_at_crossing": 5.580376890281443,
+      "simple_sharp_SM_MSSM_extrapolation": {
+        "best_equal_meeting_threshold_GeV": 61.82434571742239,
+        "unification_GeV": 2.24262495557161e+16,
+        "invalid_with_threshold_below_MZ": true
+      },
+      "MSSM_sharp_threshold_1TeV": {
+        "predicted_alpha_s_MZ": 0.11018322075098728,
+        "unification_GeV": 9794509704719476.0
+      },
+      "warning": "No claim of SM or MSSM exclusion: thresholds, particles and two-loop effects matter."
+    },
+    "neutrino_mass_and_Weinberg": {
+      "status": "PASS",
+      "input_source": "Bari global neutrino fit 2026.a, preliminary, normal/inverted ordering central splittings",
+      "input_delta_m_squared_eV2": {
+        "NO_21": 7.465e-05,
+        "NO_31": 0.0025093,
+        "IO_21": 7.439e-05,
+        "IO_abs32": 0.0025182
+      },
+      "minimum_masses_NO_eV": [
+        0.0,
+        0.008640023148117138,
+        0.05009291367049835
+      ],
+      "minimum_masses_IO_eV": [
+        0.04943490669557291,
+        0.05018166996025541,
+        0.0
+      ],
+      "minimum_sum_NO_eV": 0.05873293681861549,
+      "minimum_sum_IO_eV": 0.09961657665582832,
+      "illustrative_Weinberg_operator": "mnu=kappa*v\u00b2/(2Lambda)",
+      "v_EW_GeV": 246.22,
+      "reference_neutrino_mass_eV": 0.05,
+      "Lambda_over_kappa_GeV": 606242883999999.9,
+      "required_kappa_if_Lambda_equals_SM_alpha1_alpha2_crossing": 0.016933738881537083,
+      "required_kappa_if_Lambda_equals_simple_MSSM_one_loop_crossing": 36.99218604884458,
+      "limitations": [
+        "neutrino absolute masses and Majorana vs Dirac remain unknown",
+        "operator coefficient \u03ba not fixed and seesaw mass need not equal GUT scale",
+        "no claim that a cosmological upper bound below inverted minimum is model independent",
+        "gauge coupling scales have one-loop threshold ambiguities"
+      ]
+    },
+    "cosmological_dark_energy": {
+      "status": "PASS conditional on CPL best-fit being exact",
+      "input_source": "DES Y6 + DESI DR2 BAO joint fit, published May 2026",
+      "w0": -0.84,
+      "wa": -0.53,
+      "equation_of_state": "w(z)=w0+wa*z/(1+z)",
+      "crosses_phantom_divide_at_z": 0.4324324324324325,
+      "samples": [
+        {
+          "redshift": 0,
+          "w": -0.84,
+          "dark_energy_density_relative_today": 1.0
+        },
+        {
+          "redshift": 0.1,
+          "w": -0.8881818181818182,
+          "dark_energy_density_relative_today": 1.0395117741159494
+        },
+        {
+          "redshift": 0.4,
+          "w": -0.9914285714285714,
+          "dark_energy_density_relative_today": 1.0841557046042365
+        },
+        {
+          "redshift": 0.5,
+          "w": -1.0166666666666666,
+          "dark_energy_density_relative_today": 1.0832152806196063
+        },
+        {
+          "redshift": 1,
+          "w": -1.105,
+          "dark_energy_density_relative_today": 1.0259372956996342
+        },
+        {
+          "redshift": 2,
+          "w": -1.1933333333333334,
+          "dark_energy_density_relative_today": 0.8526043774552458
+        }
+      ],
+      "canonical_minimally_coupled_positive_kinetic_single_scalar_can_exactly_realize_global_best_fit": false,
+      "caveats": [
+        "data currently give a model-dependent ~2.3 sigma preference, not discovery",
+        "best-fit statistical uncertainty and parameter correlations not propagated",
+        "CPL extrapolation outside fitted redshift range may be unphysical",
+        "effective crossing can arise from multi-fields, interactions, or modified gravity",
+        "this does not prove ghost degrees of freedom are required by observations"
+      ]
+    },
+    "quantum_gravity_ghost_and_horizon": {
+      "status": "PASS",
+      "fourth_order_scalar_toy": {
+        "propagator": "1/[p\u00b2(1+p\u00b2/M\u00b2)]",
+        "partial_fractions": "-1/(Msq + p2) + 1/p2",
+        "massless_pole_residue": "1",
+        "massive_pole_residue": "-1",
+        "physical_note": "opposite-sign residue obstructs positive norm if both poles fundamental; EFT above cutoff not assumed"
+      },
+      "black_hole_one_solar_mass": {
+        "Schwarzschild_radius_m": 2953.3393820668784,
+        "Hawking_temperature_K": 6.170073828591918e-08,
+        "Bekenstein_Hawking_entropy_over_k": 1.0489548855362513e+77,
+        "Planck_length_m": 1.6162550244237053e-35
+      },
+      "Planck_cell_volume_entropy_over_area_entropy_ratio_at_R_1m": 5.718133752290278e+34,
+      "cautions": [
+        "toy propagator is not a full quantum-gravity no-go theorem",
+        "covariant entropy bounds depend on gravitational state access and assumptions",
+        "cannot infer complete microphysics from black-hole thermodynamics"
+      ]
+    },
+    "quantum_Bell_Tsirelson": {
+      "status": "PASS",
+      "Bell_state": "(|00>+|11>)/sqrt2",
+      "local_hidden_variable_CHSH_abs_max": 2,
+      "quantum_Tsirelson_abs_max": 2.8284271247461903,
+      "observed_toy_state_CHSH": 2.8284271247461894,
+      "no_signaling_PR_box_algebraic_max": 4,
+      "limitation": "does not explain why the Born rule and tensor-product causal structure emerge"
+    }
+  }
+}
