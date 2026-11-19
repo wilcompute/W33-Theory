@@ -1,0 +1,632 @@
+{
+  "status": "PASS conditional toroidal causal incidence-to-overlap flux index",
+  "date": "2026-11-19",
+  "TOE_solved": false,
+  "causal_3plus1_Dirac_derived": false,
+  "spacetime_model": "synthetic 2+1 causal two-layer witness relation",
+  "supplied_inputs": [
+    "periodic 2D spatial torus generation",
+    "chosen antichain",
+    "square-neighborhood incidence radius",
+    "2D Euclidean Pauli matrices",
+    "topological U1 gauge flux Q",
+    "Wilson regulator mass branch and sign",
+    "one arbitrary global spatial orientation and local frame"
+  ],
+  "origin_orientation_caveat": "An orientation-reflection of the square causal incidence is an automorphism; no intrinsic Chern sign or physical chirality can be selected without extra data/boundary breaking.",
+  "cases": [
+    {
+      "n": 5,
+      "V_E_F": [
+        25,
+        50,
+        25
+      ],
+      "Euler": 0,
+      "nerve_homology": {
+        "bettis_0_1_2": [
+          1,
+          2,
+          1
+        ],
+        "simplex_counts_0_to_3": [
+          25,
+          100,
+          100,
+          25
+        ],
+        "boundary_ranks_1_to_3": [
+          24,
+          74,
+          25
+        ]
+      },
+      "cellular_betti": [
+        1,
+        2,
+        1
+      ],
+      "cellular_boundary_ranks": [
+        24,
+        24
+      ],
+      "flux_cases": [
+        {
+          "input_flux_Q": -1,
+          "recovered_flux_Q": -1,
+          "min_plaquette_angle": -0.2513274122871836,
+          "max_plaquette_angle": -0.2513274122871832,
+          "flux_mean_plaquette_angle": -0.25132741228718347,
+          "index": 1,
+          "Hermitian_kernel_gap": 0.8720795795229852,
+          "Hermitian_residual": 0.0
+        },
+        {
+          "input_flux_Q": 0,
+          "recovered_flux_Q": 0,
+          "min_plaquette_angle": 0.0,
+          "max_plaquette_angle": 0.0,
+          "flux_mean_plaquette_angle": 0.0,
+          "index": 0,
+          "Hermitian_kernel_gap": 0.9999999999999982,
+          "Hermitian_residual": 0.0
+        },
+        {
+          "input_flux_Q": 1,
+          "recovered_flux_Q": 1,
+          "min_plaquette_angle": 0.2513274122871832,
+          "max_plaquette_angle": 0.2513274122871836,
+          "flux_mean_plaquette_angle": 0.25132741228718347,
+          "index": -1,
+          "Hermitian_kernel_gap": 0.8720795795229852,
+          "Hermitian_residual": 0.0,
+          "GW_Frobenius_residual": 2.1470483550994427e-14,
+          "zero_mode_count": 1
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "V_E_F": [
+        36,
+        72,
+        36
+      ],
+      "Euler": 0,
+      "nerve_homology": {
+        "bettis_0_1_2": [
+          1,
+          2,
+          1
+        ],
+        "simplex_counts_0_to_3": [
+          36,
+          144,
+          144,
+          36
+        ],
+        "boundary_ranks_1_to_3": [
+          35,
+          107,
+          36
+        ]
+      },
+      "cellular_betti": [
+        1,
+        2,
+        1
+      ],
+      "cellular_boundary_ranks": [
+        35,
+        35
+      ],
+      "flux_cases": [
+        {
+          "input_flux_Q": -1,
+          "recovered_flux_Q": -1,
+          "min_plaquette_angle": -0.17453292519943353,
+          "max_plaquette_angle": -0.17453292519943261,
+          "flux_mean_plaquette_angle": -0.17453292519943295,
+          "index": 1,
+          "Hermitian_kernel_gap": 0.9115743795172984,
+          "Hermitian_residual": 0.0
+        },
+        {
+          "input_flux_Q": 0,
+          "recovered_flux_Q": 0,
+          "min_plaquette_angle": 0.0,
+          "max_plaquette_angle": 0.0,
+          "flux_mean_plaquette_angle": 0.0,
+          "index": 0,
+          "Hermitian_kernel_gap": 0.9999999999999991,
+          "Hermitian_residual": 0.0
+        },
+        {
+          "input_flux_Q": 1,
+          "recovered_flux_Q": 1,
+          "min_plaquette_angle": 0.17453292519943261,
+          "max_plaquette_angle": 0.17453292519943353,
+          "flux_mean_plaquette_angle": 0.17453292519943295,
+          "index": -1,
+          "Hermitian_kernel_gap": 0.9115743795172982,
+          "Hermitian_residual": 0.0
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "V_E_F": [
+        49,
+        98,
+        49
+      ],
+      "Euler": 0,
+      "nerve_homology": {
+        "bettis_0_1_2": [
+          1,
+          2,
+          1
+        ],
+        "simplex_counts_0_to_3": [
+          49,
+          196,
+          196,
+          49
+        ],
+        "boundary_ranks_1_to_3": [
+          48,
+          146,
+          49
+        ]
+      },
+      "cellular_betti": [
+        1,
+        2,
+        1
+      ],
+      "cellular_boundary_ranks": [
+        48,
+        48
+      ],
+      "flux_cases": [
+        {
+          "input_flux_Q": -1,
+          "recovered_flux_Q": -1,
+          "min_plaquette_angle": -0.12822827157509384,
+          "max_plaquette_angle": -0.12822827157509348,
+          "flux_mean_plaquette_angle": -0.12822827157509362,
+          "index": 1,
+          "Hermitian_kernel_gap": 0.9352326739818224,
+          "Hermitian_residual": 0.0
+        },
+        {
+          "input_flux_Q": 0,
+          "recovered_flux_Q": 0,
+          "min_plaquette_angle": 0.0,
+          "max_plaquette_angle": 0.0,
+          "flux_mean_plaquette_angle": 0.0,
+          "index": 0,
+          "Hermitian_kernel_gap": 0.9999999999999981,
+          "Hermitian_residual": 0.0
+        },
+        {
+          "input_flux_Q": 1,
+          "recovered_flux_Q": 1,
+          "min_plaquette_angle": 0.12822827157509348,
+          "max_plaquette_angle": 0.12822827157509384,
+          "flux_mean_plaquette_angle": 0.12822827157509362,
+          "index": -1,
+          "Hermitian_kernel_gap": 0.935232673981821,
+          "Hermitian_residual": 0.0
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "V_E_F": [
+        64,
+        128,
+        64
+      ],
+      "Euler": 0,
+      "nerve_homology": {
+        "bettis_0_1_2": [
+          1,
+          2,
+          1
+        ],
+        "simplex_counts_0_to_3": [
+          64,
+          256,
+          256,
+          64
+        ],
+        "boundary_ranks_1_to_3": [
+          63,
+          191,
+          64
+        ]
+      },
+      "cellular_betti": [
+        1,
+        2,
+        1
+      ],
+      "cellular_boundary_ranks": [
+        63,
+        63
+      ],
+      "flux_cases": [
+        {
+          "input_flux_Q": -1,
+          "recovered_flux_Q": -1,
+          "min_plaquette_angle": -0.09817477042468131,
+          "max_plaquette_angle": -0.09817477042468092,
+          "flux_mean_plaquette_angle": -0.09817477042468103,
+          "index": 1,
+          "Hermitian_kernel_gap": 0.95051737088717,
+          "Hermitian_residual": 0.0
+        },
+        {
+          "input_flux_Q": 0,
+          "recovered_flux_Q": 0,
+          "min_plaquette_angle": 0.0,
+          "max_plaquette_angle": 0.0,
+          "flux_mean_plaquette_angle": 0.0,
+          "index": 0,
+          "Hermitian_kernel_gap": 0.9999999999999979,
+          "Hermitian_residual": 0.0
+        },
+        {
+          "input_flux_Q": 1,
+          "recovered_flux_Q": 1,
+          "min_plaquette_angle": 0.09817477042468092,
+          "max_plaquette_angle": 0.09817477042468131,
+          "flux_mean_plaquette_angle": 0.09817477042468103,
+          "index": -1,
+          "Hermitian_kernel_gap": 0.950517370887169,
+          "Hermitian_residual": 0.0
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "V_E_F": [
+        81,
+        162,
+        81
+      ],
+      "Euler": 0,
+      "nerve_homology": {
+        "bettis_0_1_2": [
+          1,
+          2,
+          1
+        ],
+        "simplex_counts_0_to_3": [
+          81,
+          324,
+          324,
+          81
+        ],
+        "boundary_ranks_1_to_3": [
+          80,
+          242,
+          81
+        ]
+      },
+      "cellular_betti": [
+        1,
+        2,
+        1
+      ],
+      "cellular_boundary_ranks": [
+        80,
+        80
+      ],
+      "flux_cases": [
+        {
+          "input_flux_Q": -1,
+          "recovered_flux_Q": -1,
+          "min_plaquette_angle": -0.07757018897752622,
+          "max_plaquette_angle": -0.07757018897752538,
+          "flux_mean_plaquette_angle": -0.07757018897752578,
+          "index": 1,
+          "Hermitian_kernel_gap": 0.9609619858482996,
+          "Hermitian_residual": 0.0
+        },
+        {
+          "input_flux_Q": 0,
+          "recovered_flux_Q": 0,
+          "min_plaquette_angle": 0.0,
+          "max_plaquette_angle": 0.0,
+          "flux_mean_plaquette_angle": 0.0,
+          "index": 0,
+          "Hermitian_kernel_gap": 0.9999999999999981,
+          "Hermitian_residual": 0.0
+        },
+        {
+          "input_flux_Q": 1,
+          "recovered_flux_Q": 1,
+          "min_plaquette_angle": 0.07757018897752538,
+          "max_plaquette_angle": 0.07757018897752622,
+          "flux_mean_plaquette_angle": 0.07757018897752578,
+          "index": -1,
+          "Hermitian_kernel_gap": 0.9609619858483,
+          "Hermitian_residual": 0.0
+        }
+      ]
+    }
+  ],
+  "independent_site_relabeling": {
+    "independent_random_antichain_and_witness_relabeling": true,
+    "new_inferred_cellular_betti": [
+      1,
+      2,
+      1
+    ],
+    "after_relabel_flux_and_index": {
+      "input_flux_Q": 1,
+      "recovered_flux_Q": 1,
+      "min_plaquette_angle": 0.2513274122871832,
+      "max_plaquette_angle": 0.2513274122871836,
+      "flux_mean_plaquette_angle": 0.25132741228718347,
+      "index": -1,
+      "Hermitian_kernel_gap": 0.8720795795229859,
+      "Hermitian_residual": 0.0,
+      "GW_Frobenius_residual": 2.258287141870465e-14,
+      "zero_mode_count": 1
+    }
+  },
+  "local_U1_frame_covariance": {
+    "random_sitewise_U1_frame": true,
+    "before": {
+      "index": -1,
+      "Hermitian_kernel_gap": 0.8720795795229852,
+      "Hermitian_residual": 0.0,
+      "GW_Frobenius_residual": 2.1470483550994427e-14,
+      "zero_mode_count": 1
+    },
+    "after": {
+      "index": -1,
+      "Hermitian_kernel_gap": 0.8720795795229859,
+      "Hermitian_residual": 0.0,
+      "GW_Frobenius_residual": 2.3013319394611064e-14,
+      "zero_mode_count": 1
+    }
+  },
+  "orientation_regulator_noise_obstructions": {
+    "status": "PASS",
+    "reflection_swap_xy_is_causal_relation_automorphism": true,
+    "spatial_orientation_reversal_determinant": -1,
+    "can_recover_preferred_oriented_Chern_sign_from_order_alone": false,
+    "independent_single_incidence_deletions_tested": 100,
+    "single_deletions_destroying_B2": 100,
+    "single_deletion_result_Betti_histogram": {
+      "(1, 2, 0)": 100
+    },
+    "regulator_mass_branch_and_external_flux_scan": [
+      {
+        "external_flux": -2,
+        "two_mass_branches": [
+          {
+            "wilson_mass": 1.0,
+            "index": 2,
+            "kernel_gap": 0.7377927864065831
+          },
+          {
+            "wilson_mass": 2.5,
+            "index": -2,
+            "kernel_gap": 0.426569548770961
+          }
+        ]
+      },
+      {
+        "external_flux": -1,
+        "two_mass_branches": [
+          {
+            "wilson_mass": 1.0,
+            "index": 1,
+            "kernel_gap": 0.8720795795229852
+          },
+          {
+            "wilson_mass": 2.5,
+            "index": -1,
+            "kernel_gap": 0.4651388277579568
+          }
+        ]
+      },
+      {
+        "external_flux": 0,
+        "two_mass_branches": [
+          {
+            "wilson_mass": 1.0,
+            "index": 0,
+            "kernel_gap": 0.9999999999999982
+          },
+          {
+            "wilson_mass": 2.5,
+            "index": 0,
+            "kernel_gap": 0.907165374601102
+          }
+        ]
+      },
+      {
+        "external_flux": 1,
+        "two_mass_branches": [
+          {
+            "wilson_mass": 1.0,
+            "index": -1,
+            "kernel_gap": 0.8720795795229852
+          },
+          {
+            "wilson_mass": 2.5,
+            "index": 1,
+            "kernel_gap": 0.46513882775795656
+          }
+        ]
+      },
+      {
+        "external_flux": 2,
+        "two_mass_branches": [
+          {
+            "wilson_mass": 1.0,
+            "index": -2,
+            "kernel_gap": 0.7377927864065833
+          },
+          {
+            "wilson_mass": 2.5,
+            "index": 2,
+            "kernel_gap": 0.4265695487709625
+          }
+        ]
+      }
+    ],
+    "scope": "Reflection is an exact automorphism of this synthetic relation; deterministic automorphism-equivariant orientation selection is impossible in this symmetric case. Flux and regulator branch are extra inputs, while noise fragility is specific to the minimal 2x2 cover."
+  },
+  "flat_Z2_spin_structure_spectral_controls": {
+    "status": "PASS",
+    "spin_structure_torsor_size": "2^b1=4 for b1(T2;Z2)=2",
+    "spin_choices_are_supplied_as_flat_Z2_boundary_links": true,
+    "flux_and_spin_twists": [
+      {
+        "flux_Q": 0,
+        "four_spin_twists": [
+          {
+            "spin_x_antiperiodic": 0,
+            "spin_y_antiperiodic": 0,
+            "index": 0,
+            "overlap_zero_modes": 2,
+            "GW_residual": 1.7723235803951443e-14,
+            "kernel_gap": 0.9999999999999982
+          },
+          {
+            "spin_x_antiperiodic": 0,
+            "spin_y_antiperiodic": 1,
+            "index": 0,
+            "overlap_zero_modes": 0,
+            "GW_residual": 1.7710545376400974e-14,
+            "kernel_gap": 0.9999999999999981
+          },
+          {
+            "spin_x_antiperiodic": 1,
+            "spin_y_antiperiodic": 0,
+            "index": 0,
+            "overlap_zero_modes": 0,
+            "GW_residual": 1.6728111188839834e-14,
+            "kernel_gap": 0.9999999999999962
+          },
+          {
+            "spin_x_antiperiodic": 1,
+            "spin_y_antiperiodic": 1,
+            "index": 0,
+            "overlap_zero_modes": 0,
+            "GW_residual": 2.3521474939563542e-14,
+            "kernel_gap": 1.035832523565058
+          }
+        ]
+      },
+      {
+        "flux_Q": 1,
+        "four_spin_twists": [
+          {
+            "spin_x_antiperiodic": 0,
+            "spin_y_antiperiodic": 0,
+            "index": -1,
+            "overlap_zero_modes": 1,
+            "GW_residual": 2.1470483550994427e-14,
+            "kernel_gap": 0.8720795795229852
+          },
+          {
+            "spin_x_antiperiodic": 0,
+            "spin_y_antiperiodic": 1,
+            "index": -1,
+            "overlap_zero_modes": 1,
+            "GW_residual": 1.823416390057983e-14,
+            "kernel_gap": 0.8720795795229854
+          },
+          {
+            "spin_x_antiperiodic": 1,
+            "spin_y_antiperiodic": 0,
+            "index": -1,
+            "overlap_zero_modes": 1,
+            "GW_residual": 1.9217478779118604e-14,
+            "kernel_gap": 0.8720795795229855
+          },
+          {
+            "spin_x_antiperiodic": 1,
+            "spin_y_antiperiodic": 1,
+            "index": -1,
+            "overlap_zero_modes": 1,
+            "GW_residual": 2.2468848430602414e-14,
+            "kernel_gap": 0.8712703462686122
+          }
+        ]
+      }
+    ],
+    "result": "For Q=0 every spin sector has index 0 but only periodic-periodic has two unsaturated massless overlap zero modes. For Q=1 all four have index -1 and at least one zero mode; the global spin choice does not uniquely select the index.",
+    "scope": "Finite Euclidean 2D overlap with a supplied flat spin-structure twist and U1 flux, not a dynamical selection of chiral Standard Model families."
+  },
+  "engineered_redundancy_noise_control": {
+    "status": "PASS",
+    "method": "Independent deletion of original 4-link shadows across k identical antichain-event replicas.",
+    "analytical_lower_bound": "P(all original 2x2 nerve tetrahedra survive as full shadows) = [1-(1-(1-p)^4)^k]^(n^2); sufficient, not necessary, for intact full nerve",
+    "results": [
+      {
+        "replicas_per_antichain_cell_k": 1,
+        "independent_relation_deletion_probability": 0.05,
+        "trials": 200,
+        "empirical_full_torus_nerve_fraction": 0.015,
+        "empirical_all_original_shadows_certified_intact_fraction": 0.015,
+        "analytical_sufficient_event_probability": 0.005920529220334003,
+        "empirical_top4_weighted_graph_exact_fraction": 0.015,
+        "observed_betti_histogram": {
+          "(1, 8, 0)": 15,
+          "(1, 9, 0)": 4,
+          "(1, 4, 0)": 42,
+          "(1, 6, 0)": 46,
+          "(1, 3, 0)": 15,
+          "(1, 7, 0)": 22,
+          "(1, 5, 0)": 49,
+          "(1, 2, 1)": 3,
+          "(1, 2, 0)": 3,
+          "(1, 10, 0)": 1
+        }
+      },
+      {
+        "replicas_per_antichain_cell_k": 2,
+        "independent_relation_deletion_probability": 0.05,
+        "trials": 200,
+        "empirical_full_torus_nerve_fraction": 0.45,
+        "empirical_all_original_shadows_certified_intact_fraction": 0.385,
+        "analytical_sufficient_event_probability": 0.41671798666298726,
+        "empirical_top4_weighted_graph_exact_fraction": 0.145,
+        "observed_betti_histogram": {
+          "(1, 2, 0)": 72,
+          "(1, 2, 1)": 90,
+          "(1, 3, 0)": 34,
+          "(1, 4, 0)": 4
+        }
+      },
+      {
+        "replicas_per_antichain_cell_k": 4,
+        "independent_relation_deletion_probability": 0.05,
+        "trials": 200,
+        "empirical_full_torus_nerve_fraction": 0.995,
+        "empirical_all_original_shadows_certified_intact_fraction": 0.985,
+        "analytical_sufficient_event_probability": 0.9708190545536604,
+        "empirical_top4_weighted_graph_exact_fraction": 0.89,
+        "observed_betti_histogram": {
+          "(1, 2, 1)": 199,
+          "(1, 2, 0)": 1
+        }
+      }
+    ],
+    "crucial_limitation": "Identical row duplication is engineered redundancy. It is not independent 2+1 Lorentzian sprinkling, not a physical coarse-graining theorem, and no intrinsic choice of event density/cover has been derived."
+  },
+  "external_literature": [
+    "https://doi.org/10.1103/PhysRevLett.81.4060",
+    "https://doi.org/10.1007/s41468-026-00239-x",
+    "https://doi.org/10.1016/j.nuclphysb.2026.117605"
+  ]
+}
