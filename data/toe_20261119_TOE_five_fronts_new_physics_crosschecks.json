@@ -1,0 +1,243 @@
+{
+  "compact_relative_cup": {
+    "source_base": "T3 minus open ball (one spherical source boundary)",
+    "relative_H1_rank": 3,
+    "relative_classes": "alpha_i=dtheta_i-d(chi*xi_i), i=x,y,z",
+    "vanish_near_boundary": true,
+    "cup_product_integral": 1.0,
+    "relative_triple_cup_is_nonzero": true,
+    "annulus_integral": 0.03351032163829115,
+    "outer_integral": 0.9664896783617088,
+    "analytical_radial_identity": "r^2 det(alpha)= (1/3) d_r[r^3(1-chi)^3]",
+    "S3_puncture_comparison": "S3 minus balls: H1 bulk zero and strict boundary collar relative H1 triple cup vanishes (parallel cb1a667). Punctured T3 has three bulk H1 classes and triple relative cup =1.",
+    "limitation": "Nonzero bulk cohomology ALLOWS, but does not produce, E8 gauge-invariant physical Yukawa amplitudes; a T3 gauge 3-cycle generally carries additional adjoint H1 modes, and no G2 metric or sourced 7D geometry is constructed."
+  },
+  "hollow_Yukawa_hierarchy": {
+    "E8_parallel_source_texture": "Y=[[0,a,b],[a,0,c],[b,c,0]] with complex a,b,c",
+    "exact_takagi_inequality": "s1<=s2+s3, so s1/s2<=2 for s2>0",
+    "proof": "Takagi Y=U diag(s1,s2,s3) U^T. Diagonal zeros imply s1 |U_i1|^2 <= sum_{j>1} s_j |U_ij|^2 by triangle inequality, for each row i. Sum over rows; column normalization gives s1<=s2+s3.",
+    "random_complex_matrices_checked": 6000,
+    "max_numeric_inequality_violation": 2.4424906541753444e-15,
+    "illustrative_normalized_target_singular_values": [
+      1.0,
+      0.01,
+      1e-05
+    ],
+    "spectral_norm_minimum_nonhollow_correction": 0.32999666666666666,
+    "correction_proof": "If Y_phys=Y_hollow+Delta and delta=||Delta||_2, singular-value Lipschitz inequality yields s1_phys <= s2_phys+s3_phys+3delta.",
+    "claim_limit": "Assumes single complex-symmetric hollow Yukawa, canonical kinetic metrics, and no Higgs-dependent vectorlike mixing. In a realistic model the masses must be compared at a common renormalization scale; this illustrative 1:0.01:0.00001 example is NOT used as measured input."
+  },
+  "E8_singlet_D_cone": {
+    "charged_singlet_multiplets": 8,
+    "singlet_charge_spectrum": [
+      {
+        "name": "S_12",
+        "charge": [
+          1,
+          -1,
+          0
+        ],
+        "height": 2
+      },
+      {
+        "name": "S_12_conj",
+        "charge": [
+          -1,
+          1,
+          0
+        ],
+        "height": -2
+      },
+      {
+        "name": "S_13",
+        "charge": [
+          1,
+          0,
+          -1
+        ],
+        "height": 4
+      },
+      {
+        "name": "S_14",
+        "charge": [
+          2,
+          1,
+          1
+        ],
+        "height": 6
+      },
+      {
+        "name": "S_14_conj",
+        "charge": [
+          -2,
+          -1,
+          -1
+        ],
+        "height": -6
+      },
+      {
+        "name": "S_24",
+        "charge": [
+          1,
+          2,
+          1
+        ],
+        "height": 4
+      },
+      {
+        "name": "S_34",
+        "charge": [
+          1,
+          1,
+          2
+        ],
+        "height": 2
+      },
+      {
+        "name": "S_34",
+        "charge": [
+          1,
+          1,
+          2
+        ],
+        "height": 2
+      }
+    ],
+    "charged_singlet_pairs": [
+      "S_12/S_12_conj",
+      "S_14/S_14_conj"
+    ],
+    "Dflat_triangle_fields": [
+      "S_13",
+      "S_34",
+      "S_14_conj"
+    ],
+    "Dflat_triangle_charge_sum": [
+      0,
+      0,
+      0
+    ],
+    "combined_Dflat_pair_and_triangle": [
+      0,
+      0,
+      0
+    ],
+    "Dflat_nonzero_Spin10_singlet_condensate_exists_at_zero_FI": true,
+    "one_singlet_spurion_diagonal_selection": {
+      "16_1^2": [
+        {
+          "Higgs": "10_34",
+          "spurion": "S_12_conj"
+        }
+      ],
+      "16_2^2": [
+        {
+          "Higgs": "10_34",
+          "spurion": "S_12"
+        }
+      ],
+      "16_3^2": [
+        {
+          "Higgs": "10_24",
+          "spurion": "S_13"
+        }
+      ]
+    },
+    "all_three_diagonal_operators_formally_gauge_allowed": true,
+    "Fflat_warning": "A nonzero cubic W=kappa*S13*S34*S14_conj has nonzero F-terms on the triangle ray if all three VEVs are nonzero. Kappa, other operators, and their actual relative-cup overlap are NOT determined here.",
+    "physical_limit": "One-spurion gauge invariance and D-flatness are necessary but NOT sufficient to realize fermion masses: the strict bulk relative-cup on the punctured S3 remains zero, full F-flatness/source action, gauge anomalies and realistic unbroken SM are open. Imported chiral singlet spectrum is from cb1a667."
+  },
+  "homogeneous_Einstein_constraint": {
+    "model": "3+1 Einstein gravity with spatially flat FRW ansatz and homogeneous canonical scalar",
+    "V_phi": "m^2 phi^2 /2",
+    "m_in_reduced_planck_units": 0.2,
+    "Hamiltonian_constraint": "C=3Mpl^2 H^2-pi^2/2-V=0",
+    "constraint_preserving_equations": "Hdot=-pi^2/(2Mpl^2), phidot=pi, pidot=-3Hpi-Vprime",
+    "symbolic_identity": "Cdot=0; with Hdot=-gamma pi^2/(2Mpl^2), Cdot=3H(1-gamma) pi^2",
+    "initial_data": [
+      4.0,
+      -0.15,
+      0.3322900339562814
+    ],
+    "max_constraint_drift_consistent": 7.990309802696771e-14,
+    "max_constraint_drift_gamma_1p05": 0.01577380416122162,
+    "gamma": 1.05,
+    "midpoint_Cdot_prediction": -0.0006449335431697434,
+    "midpoint_Cdot_finite_difference": -0.000644933475607431,
+    "limitation": "Fully consistent reduced homogeneous Einstein-scalar equations, not a derivation of 3+1 local Dirac constraint brackets, graviton spectrum, quantum dynamics, or Einstein equations from a new microscopic substrate."
+  },
+  "photon_memory_capacity": {
+    "memory_dimension": 3,
+    "depolarization_p": 0.2,
+    "conditional_Bell_fraction": 0.8222222222222222,
+    "detection_eta": 0.45,
+    "unconditional_Bell_witness_probability": 0.37,
+    "entanglement_breaking_Bell_fidelity_bound": 0.3333333333333333,
+    "erasure_p": 0.55,
+    "unassisted_Q_of_pure_qutrit_erasure": 0.0,
+    "unassisted_Q_of_erasures_plus_depolarization": "zero for eta <=1/2 by data processing",
+    "key_distinction": "An event-ready entanglement-fidelity witness may reject entanglement-breaking behavior even when the unassisted asymptotic quantum capacity is provably zero.",
+    "sample_size_power_rows": [
+      {
+        "eta": 0.45,
+        "true_all_trial_success": 0.37,
+        "n_approx_90pct_power_at_0p1pct_typeI": 3237,
+        "critical_Bell_success_count": 1163,
+        "exact_binomial_power_at_n": 0.9001004878391552,
+        "unassisted_erasure_capacity_qubits_per_use": 0.0
+      },
+      {
+        "eta": 0.5,
+        "true_all_trial_success": 0.4111111111111111,
+        "n_approx_90pct_power_at_0p1pct_typeI": 739,
+        "critical_Bell_success_count": 287,
+        "exact_binomial_power_at_n": 0.902483085175945,
+        "unassisted_erasure_capacity_qubits_per_use": 0.0
+      },
+      {
+        "eta": 0.6,
+        "true_all_trial_success": 0.4933333333333333,
+        "n_approx_90pct_power_at_0p1pct_typeI": 181,
+        "critical_Bell_success_count": 81,
+        "exact_binomial_power_at_n": 0.9045604408291361,
+        "unassisted_erasure_capacity_qubits_per_use": 0.3169925001442312
+      }
+    ],
+    "sample_size_assumptions": "Independent all-trial Bernoulli Bell success with known calibrated null bound 1/3, alpha=.001, power>=.90, true success eta*F. No experiments performed.",
+    "limits": "Heralded two-way-assisted transmission is different; hidden coherent bypass and untrusted references invalidate the witness premise."
+  },
+  "two_split_SU5_threshold": {
+    "SM_one_loop_inputs": {
+      "alphaEM_inverse": 127.93,
+      "sin2thetaW": 0.23122,
+      "alphaS": 0.118,
+      "MZ_GeV": 91.1876
+    },
+    "SU5_vectorlike_D_beta": [
+      0.26666666666666666,
+      0.0,
+      0.6666666666666666
+    ],
+    "SU5_vectorlike_L_beta": [
+      0.4,
+      0.6666666666666666,
+      0.0
+    ],
+    "formal_unification_MU_GeV": 50530916343109.64,
+    "aggregate_split_log_mL_over_mD": -43.42973962868137,
+    "single_pair_no_go": true,
+    "two_pairs_satisfy_mass_ordering_with_example": true,
+    "two_pairs_mL_GeV": 1000.0,
+    "two_pairs_mD_GeV": 2695554615385.2646,
+    "two_pair_unified_inverse_alpha": [
+      37.97821631935159,
+      37.978216319351596,
+      37.97821631935159
+    ],
+    "one_loop_unification_spread": 7.105427357601002e-15,
+    "relative_dimension_six_proton_lifetime_to_MX_1e16_same_couplings": 6.519716263565092e-10,
+    "proton_bound_reference": "Super-K 2020 p->e+ pi0 90% CL tau/B>2.4e34yr; reference only, not fitted proton lifetime",
+    "takeaway": "A second split Dirac 5+5bar repairs the ONE-PAIR threshold ordering obstruction at one loop, but does not increase MU. A generic SU5 broken-gauge-boson mass MX~MU would face severe proton-decay tension, without an actual proton lifetime calculation.",
+    "limits": "No two-loop thresholds, Yukawa, proton matrix elements, scalar sector, exact SU5 breaking model, or demonstration of experimental acceptability."
+  }
+}
