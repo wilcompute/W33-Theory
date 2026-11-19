@@ -1,0 +1,715 @@
+{
+  "Spin10_nonabelian_holonomy_rank_no_go": {
+    "D5_root_count": 40,
+    "SM_maximal_torus_rank": 4,
+    "Spin10_rank": 5,
+    "D5_roots_vanishing_on_SM_torus": [],
+    "centralizer_of_SM_torus_Lie_rank": 5,
+    "exact_inner_holonomy_theorem": "For the standard SU5-embedded SM in Spin10, any subgroup of inner flat holonomies preserving all of SM lies in the Spin10 maximal torus. Its centralizer therefore has rank5, not rank4. Arbitrarily many noncommuting pi1 generators cannot evade this while preserving that SM.",
+    "caveat": "Outer gauge automorphisms, nonflat fluxes, Higgs VEVs, symmetry breaking that changes the SM embedding, or additional gauge sectors are outside the theorem."
+  },
+  "Z7_Wilson_component_projection": {
+    "cyclic_orders_2_through_13": {
+      "2": [
+        {
+          "a": 0,
+          "b": 1,
+          "Spin10_unbroken_dimension": 21
+        }
+      ],
+      "3": [
+        {
+          "a": 1,
+          "b": 0,
+          "Spin10_unbroken_dimension": 15
+        },
+        {
+          "a": 2,
+          "b": 0,
+          "Spin10_unbroken_dimension": 15
+        }
+      ],
+      "4": [
+        {
+          "a": 0,
+          "b": 2,
+          "Spin10_unbroken_dimension": 21
+        },
+        {
+          "a": 2,
+          "b": 1,
+          "Spin10_unbroken_dimension": 19
+        },
+        {
+          "a": 2,
+          "b": 3,
+          "Spin10_unbroken_dimension": 19
+        }
+      ],
+      "5": [],
+      "6": [
+        {
+          "a": 0,
+          "b": 3,
+          "Spin10_unbroken_dimension": 21
+        },
+        {
+          "a": 2,
+          "b": 0,
+          "Spin10_unbroken_dimension": 15
+        },
+        {
+          "a": 2,
+          "b": 3,
+          "Spin10_unbroken_dimension": 15
+        },
+        {
+          "a": 4,
+          "b": 0,
+          "Spin10_unbroken_dimension": 15
+        },
+        {
+          "a": 4,
+          "b": 3,
+          "Spin10_unbroken_dimension": 15
+        }
+      ],
+      "7": [
+        {
+          "a": 1,
+          "b": 2,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 2,
+          "b": 4,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 3,
+          "b": 6,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 4,
+          "b": 1,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 5,
+          "b": 3,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 6,
+          "b": 5,
+          "Spin10_unbroken_dimension": 13
+        }
+      ],
+      "8": [
+        {
+          "a": 0,
+          "b": 4,
+          "Spin10_unbroken_dimension": 21
+        },
+        {
+          "a": 2,
+          "b": 1,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 2,
+          "b": 5,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 4,
+          "b": 2,
+          "Spin10_unbroken_dimension": 19
+        },
+        {
+          "a": 4,
+          "b": 6,
+          "Spin10_unbroken_dimension": 19
+        },
+        {
+          "a": 6,
+          "b": 3,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 6,
+          "b": 7,
+          "Spin10_unbroken_dimension": 13
+        }
+      ],
+      "9": [
+        {
+          "a": 1,
+          "b": 3,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 2,
+          "b": 6,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 3,
+          "b": 0,
+          "Spin10_unbroken_dimension": 15
+        },
+        {
+          "a": 4,
+          "b": 3,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 5,
+          "b": 6,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 6,
+          "b": 0,
+          "Spin10_unbroken_dimension": 15
+        },
+        {
+          "a": 7,
+          "b": 3,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 8,
+          "b": 6,
+          "Spin10_unbroken_dimension": 13
+        }
+      ],
+      "10": [
+        {
+          "a": 0,
+          "b": 5,
+          "Spin10_unbroken_dimension": 21
+        },
+        {
+          "a": 2,
+          "b": 7,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 4,
+          "b": 9,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 6,
+          "b": 1,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 8,
+          "b": 3,
+          "Spin10_unbroken_dimension": 13
+        }
+      ],
+      "11": [
+        {
+          "a": 1,
+          "b": 4,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 2,
+          "b": 8,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 3,
+          "b": 1,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 4,
+          "b": 5,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 5,
+          "b": 9,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 6,
+          "b": 2,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 7,
+          "b": 6,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 8,
+          "b": 10,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 9,
+          "b": 3,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 10,
+          "b": 7,
+          "Spin10_unbroken_dimension": 13
+        }
+      ],
+      "12": [
+        {
+          "a": 0,
+          "b": 6,
+          "Spin10_unbroken_dimension": 21
+        },
+        {
+          "a": 2,
+          "b": 3,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 2,
+          "b": 9,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 4,
+          "b": 0,
+          "Spin10_unbroken_dimension": 15
+        },
+        {
+          "a": 4,
+          "b": 6,
+          "Spin10_unbroken_dimension": 15
+        },
+        {
+          "a": 6,
+          "b": 3,
+          "Spin10_unbroken_dimension": 19
+        },
+        {
+          "a": 6,
+          "b": 9,
+          "Spin10_unbroken_dimension": 19
+        },
+        {
+          "a": 8,
+          "b": 0,
+          "Spin10_unbroken_dimension": 15
+        },
+        {
+          "a": 8,
+          "b": 6,
+          "Spin10_unbroken_dimension": 15
+        },
+        {
+          "a": 10,
+          "b": 3,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 10,
+          "b": 9,
+          "Spin10_unbroken_dimension": 13
+        }
+      ],
+      "13": [
+        {
+          "a": 1,
+          "b": 5,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 2,
+          "b": 10,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 3,
+          "b": 2,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 4,
+          "b": 7,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 5,
+          "b": 12,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 6,
+          "b": 4,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 7,
+          "b": 9,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 8,
+          "b": 1,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 9,
+          "b": 6,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 10,
+          "b": 11,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 11,
+          "b": 3,
+          "Spin10_unbroken_dimension": 13
+        },
+        {
+          "a": 12,
+          "b": 8,
+          "Spin10_unbroken_dimension": 13
+        }
+      ]
+    },
+    "minimal_cyclic_order_for_SM_plus_chi": 7,
+    "example_mod7_color_weak_exponents": [
+      2,
+      4
+    ],
+    "Spin10_centralizer_dimension": 13,
+    "one_16_SU5_decomposition": "1 + wedge2(5) + bar5",
+    "one_16_all_component_Wilson_Z7_exponents": [
+      0,
+      4,
+      4,
+      6,
+      6,
+      4,
+      6,
+      6,
+      6,
+      6,
+      1,
+      5,
+      5,
+      5,
+      3,
+      3
+    ],
+    "one_16_trivial_holonomy_component_count": 1,
+    "not_a_chirality_derivation": "Only constant bulk-section invariants are counted: the original relative-cohomology/defect zero modes carry nontrivial local coefficients and must be rebuilt; the existing lens-space twisted-sector result finds vectorlike mirrors. One Spin10 chi remains."
+  },
+  "supersymmetric_vectorlike_Higgs_exotics": {
+    "superpotential": "W=X*(16*16bar-v\u00b2) using Spin10 invariant contraction",
+    "VEV_magnitude": "3/2",
+    "symbolic_F_terms": {
+      "N": "Nbar*X",
+      "Nbar": "N*X",
+      "X": "N*Nbar - 9/4"
+    },
+    "D_chi_residual": "0",
+    "total_chiral_multiplet_components": 33,
+    "Hessian_rank": 2,
+    "Hessian_kernel_complex_dimension": 31,
+    "Spin10_breaking": "Spin10 -> SU5 by aligned D-flat SM singlet in 16+bar16",
+    "broken_complex_gauge_dimension": 21,
+    "physical_massless_complex_chiral_remainder": 10,
+    "remainder_SU5_representation": "5 + bar5",
+    "subsequent_Z7_Wilson_broken_algebra_dimension": 12,
+    "new_pair_net_chiral_index": 0,
+    "original_three_spinor_net_index_after_added_pair": 3,
+    "matter_fermion_Z4R_gravitational_parity_delta": 1,
+    "obstruction": "The minimal vectorlike-pair/driver repair solves the rank & D-flat gates but leaves 5+bar5 massless chiral multiplets and changes the matter gravitational R parity. New couplings/geometric projections are needed. No full 5D or G2 vacuum is supplied."
+  },
+  "renormalizable_Higgs_with_real_ten_escape": {
+    "full_4D_chiral_component_count": 43,
+    "spinor_pair_plus_real_ten_and_driver_reps": "16_H + bar16_H + 10_H + X",
+    "renormalizable_superpotential": "W=X(16_H.bar16_H-v\u00b2) + (lambda/2)16_H.16_H.10_H + (lambdabar/2)bar16_H.bar16_H.10_H",
+    "R_charges": {
+      "16_H": 0,
+      "bar16_H": 0,
+      "10_H": 2,
+      "X": 2
+    },
+    "aligned_pure_spinor_singlet_VEV": "3/2",
+    "F_terms_all_zero_at_H10_X0": true,
+    "D_terms_all_zero": true,
+    "independent_43_field_symbolic_F_gradient_and_Hessian_match": true,
+    "superpotential_Hessian_exact_rank": 22,
+    "massive_Higgs_chiral_pairs_from_5_and_bar5": 10,
+    "Hessian_kernel_dimension": 21,
+    "complex_broken_Spin10_to_SU5_gauge_dimension": 21,
+    "physical_4D_local_complex_moduli_after_gauge": 0,
+    "residual_SU5_5_plus_bar5": "fully massive at lambda*v and lambdabar*v",
+    "three_original_16_net_chiral_index_unchanged": 3,
+    "original_E8_source_U1_charge_weight_vectors_16": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        -1,
+        -1,
+        -1
+      ]
+    ],
+    "original_E8_source_U1_charge_weight_vectors_10": [
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        -1,
+        -1
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        -1,
+        0,
+        -1
+      ],
+      [
+        -1,
+        -1,
+        0
+      ]
+    ],
+    "no_source_uncharged_spinor_or_10": true,
+    "no_source_10_has_plus_or_minus_twice_spinor_charge": true,
+    "simple_neutral_X_vectorlike_charge_selection_forces_zero_charge": true,
+    "conditional_matter_gravitational_Z4R_parity_shift": 1,
+    "physical_obstruction": "The extended 4D supersymmetric Higgs sector is locally isolated (massless kernel exactly 21 gauge directions), but its required q=0 spinor/10 Higgs fields DO NOT occur in the original E8 SU4 source spectrum. Other charged spurions/defect zero modes or an enlarged compactification are required; original U1 anomalies, global R anomaly, proton decay and full G2 geometry remain unsolved.",
+    "source": "Established SO10 cubic invariant 16*16*10 and SU5 decomposition; finite rank/charge census verified here; no claimed original Higgs construction novelty."
+  },
+  "four_layer_BDG4_causal_wave_operator": {
+    "source": "Known Benincasa-Dowker four-dimensional retarded d'Alembertian (2010); independently reconstructed from moment cancellation, not invented here.",
+    "exact_moment_matrix": "Matrix([[1, 1/2, 3/8, 5/16], [1, 1, 1, 1], [1/2, 3/4, 15/16, 35/32]])",
+    "unique_primitive_four_layer_weights": [
+      1,
+      -9,
+      16,
+      -8
+    ],
+    "local_counterterm": "-phi(origin)",
+    "density_normalization": "4*sqrt(rho)/sqrt(6) for 4D rho=l^-4",
+    "digamma_s_sum": "-sqrt(pi)/3",
+    "constant_renormalization_sum": "1/3",
+    "asymptotic_Wave_box_s_exact": -8,
+    "numerical_density_benchmarks": [
+      {
+        "rho": 1000,
+        "unscaled_K": {
+          "1": 0.9964642864706568,
+          "t": -0.004617456261107507,
+          "t\u00b2": -0.045444526410791976,
+          "r\u00b2": 0.12248120613899784,
+          "s": -0.16792573398646302
+        },
+        "BDG4_normalized_wave_operator": {
+          "1": -0.18258346154808783,
+          "t": -0.23844441601480723,
+          "t\u00b2": -2.3467452528704063,
+          "r\u00b2": 6.324902287996484,
+          "s": -8.671647615056376,
+          "x\u00b2": 2.1083007626654946,
+          "t'\u00b2": -2.4808702786106687,
+          "x'\u00b2": 1.9741757369252317
+        }
+      },
+      {
+        "rho": 10000,
+        "unscaled_K": {
+          "1": 0.999694973409609,
+          "t": -0.0004041724156816553,
+          "t\u00b2": -0.01284806006829679,
+          "r\u00b2": 0.037331674451338545,
+          "s": -0.05017973835075029
+        },
+        "BDG4_normalized_wave_operator": {
+          "1": -0.04981063362925868,
+          "t": -0.06600107910187424,
+          "t\u00b2": -2.098079423463675,
+          "r\u00b2": 6.096236909964974,
+          "s": -8.194316959047102,
+          "x\u00b2": 2.0320789699883246,
+          "t'\u00b2": -2.13520467854356,
+          "x'\u00b2": 1.9949537149084402
+        }
+      },
+      {
+        "rho": 100000,
+        "unscaled_K": {
+          "1": 0.9999708242799681,
+          "t": -3.884338511291407e-05,
+          "t\u00b2": -0.003931093601281864,
+          "r\u00b2": 0.011676773634633429,
+          "s": -0.01560789022262361
+        },
+        "BDG4_normalized_wave_operator": {
+          "1": -0.015066277039629119,
+          "t": -0.020058637820351645,
+          "t\u00b2": -2.0300080066862933,
+          "r\u00b2": 6.02985997658255,
+          "s": -8.059879853553976,
+          "x\u00b2": 2.009953325527517,
+          "t'\u00b2": -2.041288764838105,
+          "x'\u00b2": 1.998672567375705
+        }
+      },
+      {
+        "rho": 1000000,
+        "unscaled_K": {
+          "1": 0.9999971940116134,
+          "t": -3.7182832747307223e-06,
+          "t\u00b2": -0.0012303782954874707,
+          "r\u00b2": 0.003680071984401646,
+          "s": -0.0049105422265398315
+        },
+        "BDG4_normalized_wave_operator": {
+          "1": -0.004582159847636967,
+          "t": -0.006071931161476768,
+          "t\u00b2": -2.009199343026407,
+          "r\u00b2": 6.0095323856637135,
+          "s": -8.018881876941993,
+          "x\u00b2": 2.0031774618879044,
+          "t'\u00b2": -2.012586651166815,
+          "x'\u00b2": 1.9997901537474965
+        }
+      }
+    ],
+    "continuum_targets": {
+      "1": 0,
+      "t": 0,
+      "t\u00b2": -2,
+      "r\u00b2": 6,
+      "s": -8,
+      "x\u00b2": 2,
+      "t'\u00b2": -2,
+      "x'\u00b2": 2
+    },
+    "limitations": "Only expectation in fixed truncated Minkowski future cone on displayed polynomial and boosted quadratic probes. No finite sprinkling variance/concentration, arbitrary-field convergence, curvature, spin-2, constraint algebra, or emergent Einstein action."
+  },
+  "orbifold_boundary_Robin_proxy": {
+    "scalar_proxy_equation": "f''+k\u00b2 f=0, Neumann f'(0)=0, Robin f'(L)+h f(L)=0 -> x tan x=mu=hL",
+    "roots": [
+      {
+        "dimensionless_brane_mu": 0,
+        "first_three_kL": [
+          0.0,
+          3.141592653589793,
+          6.283185307179586
+        ]
+      },
+      {
+        "dimensionless_brane_mu": 0.0001,
+        "first_three_kL": [
+          0.009999833336388635,
+          3.141624484255889,
+          6.28320122263358
+        ]
+      },
+      {
+        "dimensionless_brane_mu": 1,
+        "first_three_kL": [
+          0.8603335890193797,
+          3.4256184594817283,
+          6.437298179171947
+        ]
+      },
+      {
+        "dimensionless_brane_mu": 10,
+        "first_three_kL": [
+          1.4288700112140755,
+          4.305801413119223,
+          7.228109771627249
+        ]
+      },
+      {
+        "dimensionless_brane_mu": 100,
+        "first_three_kL": [
+          1.5552451292561666,
+          4.665765141727236,
+          7.776374077846953
+        ]
+      }
+    ],
+    "one_heavy_octet_proxy_mass_GeV": 15552451292561.666,
+    "example_triplet_and_one_octet_zero_modes_maintained_with_mu0": true,
+    "limits": "This is a scalar Sturm-Liouville proxy, not the actual 5D adjoint fermion/brane Majorana boundary action. A supersymmetric gauge-invariant UV origin and complete KK spectrum are unbuilt. Mass saturation at ~pi/(2L) is explicit."
+  },
+  "single_photon_gate_and_acceptance_cost": {
+    "mode_swap_resource_table": [
+      {
+        "logical_qubits": 4,
+        "required_orthogonal_modes": 16,
+        "mode_swaps_for_one_logical_X": 8,
+        "generic_Ud_real_parameters": 256
+      },
+      {
+        "logical_qubits": 7,
+        "required_orthogonal_modes": 128,
+        "mode_swaps_for_one_logical_X": 64,
+        "generic_Ud_real_parameters": 16384
+      },
+      {
+        "logical_qubits": 10,
+        "required_orthogonal_modes": 1024,
+        "mode_swaps_for_one_logical_X": 512,
+        "generic_Ud_real_parameters": 1048576
+      },
+      {
+        "logical_qubits": 12,
+        "required_orthogonal_modes": 4096,
+        "mode_swaps_for_one_logical_X": 2048,
+        "generic_Ud_real_parameters": 16777216
+      }
+    ],
+    "one_photon_passive_linear_optics_physical_cost": "logical X flip requires 2^(n-1) independent disjoint physical mode swaps for standard binary occupation encoding, unless specialized shared controls alter hardware cost. A generic U(2^n) has 4^n real parameters.",
+    "success_detection_acceptance_bias_that_mimics_p0_0p5_as_pobs_0p51": 1.0408163265306123,
+    "conditional_experimental_warning": "Even 55,000 independent accepted events can falsely favor a hypothetical 1% probability deviation if success-dependent acceptance has relative odds 51/49. An actual TOE must derive a non-QM prediction, calibrate efficiencies, and close setting/deletion loopholes.",
+    "limits": "Swap count for a particular binary mode encoding and independent mode switches, not a universal lower bound for every programmable multiplexed optical device or multi-photon architecture."
+  },
+  "physics_dependency_priority": {
+    "particle_first": "Derive an anomaly-free compact source with globally supported Higgs/vectorlike Spin10-breaking sector, a nontrivial defect Yukawa overlap, and the true global gauge quotient together.",
+    "specific_first_falsifier": "Derive actual E8/G2 charged Higgs zero modes allowing 16_H + bar16_H + 10_H + X (or genuine charged spurion replacements), without postulating missing q=0 representations; preserve F/D-flatness, global chirality, anomaly cancellation and the independent R symmetry.",
+    "gravity_first": "The known 4-layer BDG operator passes polynomial Box tests, but not necessarily arbitrary field/variance, much less spin-2 Einstein constraints. Derive an intrinsic localized convergent causal kinetic action and nonlinear first-class gravity.",
+    "photonic_first": "Identify an active nonlinear resource with physical cost polynomial in n before labeling a one-photon d=2^n rail encoding scalable BQP.",
+    "unification_bridge": "The same metric/flux data must fix matter wavefunction localization, GS inflow and Einstein kinetic terms. Currently each is an independently supplied degree of freedom, so all three cannot be 'derived' merely by matching E8 representation counts.",
+    "methodology": "Reject proposed keystones on the first failed necessary gate; record assumptions separately from established group/cohomology/quantum facts."
+  }
+}

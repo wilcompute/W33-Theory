@@ -1,0 +1,483 @@
+{
+  "source_spinor_H1": [
+    "16_1",
+    "16_2",
+    "16_3"
+  ],
+  "source_ten_H1": [
+    "10_12",
+    "10_13",
+    "10_14",
+    "10_24",
+    "10_34"
+  ],
+  "candidate_all_15_charge_combinations": [
+    {
+      "pair_vectorlike_16_charge": "16_1",
+      "source_10_H": "10_12",
+      "16H_squared_S": [
+        "E",
+        "E",
+        "G1"
+      ],
+      "bar16H_squared_S": [
+        "A"
+      ],
+      "degrees": [
+        3,
+        1
+      ],
+      "total_spurion_insertions": 4,
+      "source_16_charge": [
+        1,
+        0,
+        0
+      ],
+      "source_10_charge": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "pair_vectorlike_16_charge": "16_1",
+      "source_10_H": "10_13",
+      "16H_squared_S": [
+        "B",
+        "E"
+      ],
+      "bar16H_squared_S": [
+        "C"
+      ],
+      "degrees": [
+        2,
+        1
+      ],
+      "total_spurion_insertions": 3,
+      "source_16_charge": [
+        1,
+        0,
+        0
+      ],
+      "source_10_charge": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "pair_vectorlike_16_charge": "16_1",
+      "source_10_H": "10_14",
+      "16H_squared_S": [
+        "B",
+        "E",
+        "G1"
+      ],
+      "bar16H_squared_S": [
+        "D"
+      ],
+      "degrees": [
+        3,
+        1
+      ],
+      "total_spurion_insertions": 4,
+      "source_16_charge": [
+        1,
+        0,
+        0
+      ],
+      "source_10_charge": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "pair_vectorlike_16_charge": "16_1",
+      "source_10_H": "10_24",
+      "16H_squared_S": [
+        "E",
+        "G1"
+      ],
+      "bar16H_squared_S": [
+        "A",
+        "D"
+      ],
+      "degrees": [
+        2,
+        2
+      ],
+      "total_spurion_insertions": 4,
+      "source_16_charge": [
+        1,
+        0,
+        0
+      ],
+      "source_10_charge": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "pair_vectorlike_16_charge": "16_1",
+      "source_10_H": "10_34",
+      "16H_squared_S": [
+        "B"
+      ],
+      "bar16H_squared_S": [
+        "C",
+        "D"
+      ],
+      "degrees": [
+        1,
+        2
+      ],
+      "total_spurion_insertions": 3,
+      "source_16_charge": [
+        1,
+        0,
+        0
+      ],
+      "source_10_charge": [
+        -1,
+        -1,
+        0
+      ]
+    },
+    {
+      "pair_vectorlike_16_charge": "16_2",
+      "source_10_H": "10_12",
+      "16H_squared_S": [
+        "A",
+        "A",
+        "E",
+        "E",
+        "G1"
+      ],
+      "bar16H_squared_S": [
+        "B"
+      ],
+      "degrees": [
+        5,
+        1
+      ],
+      "total_spurion_insertions": 6,
+      "source_16_charge": [
+        0,
+        1,
+        0
+      ],
+      "source_10_charge": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "pair_vectorlike_16_charge": "16_2",
+      "source_10_H": "10_13",
+      "16H_squared_S": [
+        "A",
+        "E"
+      ],
+      "bar16H_squared_S": [
+        "B",
+        "B",
+        "C"
+      ],
+      "degrees": [
+        2,
+        3
+      ],
+      "total_spurion_insertions": 5,
+      "source_16_charge": [
+        0,
+        1,
+        0
+      ],
+      "source_10_charge": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "pair_vectorlike_16_charge": "16_2",
+      "source_10_H": "10_14",
+      "16H_squared_S": [
+        "A",
+        "E",
+        "G1"
+      ],
+      "bar16H_squared_S": [
+        "B",
+        "F"
+      ],
+      "degrees": [
+        3,
+        2
+      ],
+      "total_spurion_insertions": 5,
+      "source_16_charge": [
+        0,
+        1,
+        0
+      ],
+      "source_10_charge": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "pair_vectorlike_16_charge": "16_2",
+      "source_10_H": "10_24",
+      "16H_squared_S": [
+        "A",
+        "A",
+        "E",
+        "G1"
+      ],
+      "bar16H_squared_S": [
+        "F"
+      ],
+      "degrees": [
+        4,
+        1
+      ],
+      "total_spurion_insertions": 5,
+      "source_16_charge": [
+        0,
+        1,
+        0
+      ],
+      "source_10_charge": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "pair_vectorlike_16_charge": "16_2",
+      "source_10_H": "10_34",
+      "16H_squared_S": [
+        "A"
+      ],
+      "bar16H_squared_S": [
+        "B",
+        "C",
+        "F"
+      ],
+      "degrees": [
+        1,
+        3
+      ],
+      "total_spurion_insertions": 4,
+      "source_16_charge": [
+        0,
+        1,
+        0
+      ],
+      "source_10_charge": [
+        -1,
+        -1,
+        0
+      ]
+    },
+    {
+      "pair_vectorlike_16_charge": "16_3",
+      "source_10_H": "10_12",
+      "16H_squared_S": [
+        "C",
+        "E"
+      ],
+      "bar16H_squared_S": [
+        "A",
+        "E",
+        "E",
+        "G1",
+        "G1"
+      ],
+      "degrees": [
+        2,
+        5
+      ],
+      "total_spurion_insertions": 7,
+      "source_16_charge": [
+        0,
+        0,
+        1
+      ],
+      "source_10_charge": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "pair_vectorlike_16_charge": "16_3",
+      "source_10_H": "10_13",
+      "16H_squared_S": [
+        "B",
+        "C",
+        "C",
+        "E"
+      ],
+      "bar16H_squared_S": [
+        "E",
+        "G1"
+      ],
+      "degrees": [
+        4,
+        2
+      ],
+      "total_spurion_insertions": 6,
+      "source_16_charge": [
+        0,
+        0,
+        1
+      ],
+      "source_10_charge": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "pair_vectorlike_16_charge": "16_3",
+      "source_10_H": "10_14",
+      "16H_squared_S": [
+        "B",
+        "C"
+      ],
+      "bar16H_squared_S": [
+        "E",
+        "G1",
+        "G1"
+      ],
+      "degrees": [
+        2,
+        3
+      ],
+      "total_spurion_insertions": 5,
+      "source_16_charge": [
+        0,
+        0,
+        1
+      ],
+      "source_10_charge": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "pair_vectorlike_16_charge": "16_3",
+      "source_10_H": "10_24",
+      "16H_squared_S": [
+        "C"
+      ],
+      "bar16H_squared_S": [
+        "A",
+        "E",
+        "G1",
+        "G1"
+      ],
+      "degrees": [
+        1,
+        4
+      ],
+      "total_spurion_insertions": 5,
+      "source_16_charge": [
+        0,
+        0,
+        1
+      ],
+      "source_10_charge": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "pair_vectorlike_16_charge": "16_3",
+      "source_10_H": "10_34",
+      "16H_squared_S": [
+        "B",
+        "C",
+        "C"
+      ],
+      "bar16H_squared_S": [
+        "G1"
+      ],
+      "degrees": [
+        3,
+        1
+      ],
+      "total_spurion_insertions": 4,
+      "source_16_charge": [
+        0,
+        0,
+        1
+      ],
+      "source_10_charge": [
+        -1,
+        -1,
+        0
+      ]
+    }
+  ],
+  "minimal_total_nonnegative_singlet_spurion_degree": 3,
+  "selected_higgs_pair_source_charge_and_10": {
+    "pair_vectorlike_16_charge": "16_1",
+    "source_10_H": "10_34",
+    "16H_squared_S": [
+      "B"
+    ],
+    "bar16H_squared_S": [
+      "C",
+      "D"
+    ],
+    "degrees": [
+      1,
+      2
+    ],
+    "total_spurion_insertions": 3,
+    "source_16_charge": [
+      1,
+      0,
+      0
+    ],
+    "source_10_charge": [
+      -1,
+      -1,
+      0
+    ]
+  },
+  "effective_operator_16_squared": "(B/M) 16H 16H 10_34",
+  "effective_operator_bar16_squared": "(C*D/M\u00b2) bar16H bar16H 10_34",
+  "all_Spin10_and_U1cubed_operator_charges_zero": true,
+  "source_spurion_VEVs_B_C_D": [
+    1.0,
+    1.4422205101855958,
+    1.0
+  ],
+  "dimensionless_effective_couplings_for_unit_UV_coefficients": [
+    0.1,
+    0.014422205101855958
+  ],
+  "SU5_component_reduced_superpotential": "Abar5*B*H5*N/10 + B5*C*D*Hbar5*Nbar/100 + X*(N*Nbar - 9/4)",
+  "SU5_component_exact_F_terms_zero": true,
+  "SU5_component_exact_hessian_rank": 6,
+  "new_cross_Hessian_to_preexisting_singlet_spurions_zero": true,
+  "combined_active_chiral_components": 62,
+  "combined_hessian_rank": 38,
+  "combined_hessian_nullity": 24,
+  "broken_Abelian_plus_Spin10_gauge_complex_dimension": 24,
+  "combined_local_physical_complex_moduli_count": 0,
+  "Z4R_assignment": "R(Singlets,16H,bar16H)=0, R(10_34,Xnew)=2 makes both dressed operators and driver W have charge2",
+  "new_fields_beyond_original_spectrum": "one extra vectorlike 16H + bar16H, one neutral R2 driver Xnew; reuse existing source 10_34 and source B,C,D",
+  "remaining_anomaly_and_origin_gates": "Requires the NEW mirror 16bar Higgs zero mode (and extra 16 Higgs); original E8 chiral source has none. Higher-dimensional 4D superpotential terms degree4 and5 are gauge/R allowed but no UV messenger/defect/M2 integral is derived. Original Abelian anomalies and discrete R gravitational parity not canceled, Wilson/local-system zero-mode spectrum not rebuilt, realistic mass hierarchy/proton safety and compact G2 remain unsolved.",
+  "scientific_interpretation": "A consistent formal source-charge dressing repair to the local 4D Higgs-exotics problem, NOT physical source-derived higher-order Yukawa couplings or a 7D supersymmetric compactification."
+}
