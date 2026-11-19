@@ -1,0 +1,636 @@
+{
+  "status": "PASS",
+  "scope": "sourced Abelian E8 gauge-sector data and conditional bulk-cup gate, not a complete physical vacuum",
+  "source_matrix": [
+    [
+      2,
+      -1,
+      -1,
+      0
+    ],
+    [
+      -1,
+      2,
+      -1,
+      0
+    ],
+    [
+      0,
+      -1,
+      2,
+      -1
+    ],
+    [
+      -1,
+      0,
+      0,
+      1
+    ]
+  ],
+  "row_trace_zero": true,
+  "column_total_charge_zero": true,
+  "source_rank": 3,
+  "harmonic_background": "f_i(x)=sum_j Q_ji G_S3(dist(x,p_j)); four distinct supplied poles; sum_i f_i=0 and each f_i harmonic away from poles because sum_j Q_ji=0",
+  "Green_function": "G(chi)=(pi-chi)cot(chi)/(4*pi^2), Delta G=1/(2*pi^2) away from pole",
+  "sectors": [
+    {
+      "label": "16_1",
+      "rep_dimension": 16,
+      "SU4_charge": [
+        1,
+        0,
+        0
+      ],
+      "residues": [
+        2,
+        -1,
+        0,
+        -1
+      ],
+      "b1": 1,
+      "b2": 0
+    },
+    {
+      "label": "16_2",
+      "rep_dimension": 16,
+      "SU4_charge": [
+        0,
+        1,
+        0
+      ],
+      "residues": [
+        -1,
+        2,
+        -1,
+        0
+      ],
+      "b1": 1,
+      "b2": 0
+    },
+    {
+      "label": "16_3",
+      "rep_dimension": 16,
+      "SU4_charge": [
+        0,
+        0,
+        1
+      ],
+      "residues": [
+        -1,
+        -1,
+        2,
+        0
+      ],
+      "b1": 1,
+      "b2": 0
+    },
+    {
+      "label": "16_4",
+      "rep_dimension": 16,
+      "SU4_charge": [
+        -1,
+        -1,
+        -1
+      ],
+      "residues": [
+        0,
+        0,
+        -1,
+        1
+      ],
+      "b1": 0,
+      "b2": 0
+    },
+    {
+      "label": "10_12",
+      "rep_dimension": 10,
+      "SU4_charge": [
+        1,
+        1,
+        0
+      ],
+      "residues": [
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "b1": 1,
+      "b2": 1
+    },
+    {
+      "label": "10_13",
+      "rep_dimension": 10,
+      "SU4_charge": [
+        1,
+        0,
+        1
+      ],
+      "residues": [
+        1,
+        -2,
+        2,
+        -1
+      ],
+      "b1": 1,
+      "b2": 1
+    },
+    {
+      "label": "10_14",
+      "rep_dimension": 10,
+      "SU4_charge": [
+        0,
+        -1,
+        -1
+      ],
+      "residues": [
+        2,
+        -1,
+        -1,
+        0
+      ],
+      "b1": 1,
+      "b2": 0
+    },
+    {
+      "label": "10_23",
+      "rep_dimension": 10,
+      "SU4_charge": [
+        0,
+        1,
+        1
+      ],
+      "residues": [
+        -2,
+        1,
+        1,
+        0
+      ],
+      "b1": 0,
+      "b2": 1
+    },
+    {
+      "label": "10_24",
+      "rep_dimension": 10,
+      "SU4_charge": [
+        -1,
+        0,
+        -1
+      ],
+      "residues": [
+        -1,
+        2,
+        -2,
+        1
+      ],
+      "b1": 1,
+      "b2": 1
+    },
+    {
+      "label": "10_34",
+      "rep_dimension": 10,
+      "SU4_charge": [
+        -1,
+        -1,
+        0
+      ],
+      "residues": [
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "b1": 1,
+      "b2": 1
+    },
+    {
+      "label": "S_12",
+      "rep_dimension": 1,
+      "SU4_charge": [
+        1,
+        -1,
+        0
+      ],
+      "residues": [
+        3,
+        -3,
+        1,
+        -1
+      ],
+      "b1": 1,
+      "b2": 1
+    },
+    {
+      "label": "S_13",
+      "rep_dimension": 1,
+      "SU4_charge": [
+        1,
+        0,
+        -1
+      ],
+      "residues": [
+        3,
+        0,
+        -2,
+        -1
+      ],
+      "b1": 1,
+      "b2": 0
+    },
+    {
+      "label": "S_14",
+      "rep_dimension": 1,
+      "SU4_charge": [
+        2,
+        1,
+        1
+      ],
+      "residues": [
+        2,
+        -1,
+        1,
+        -2
+      ],
+      "b1": 1,
+      "b2": 1
+    },
+    {
+      "label": "S_23",
+      "rep_dimension": 1,
+      "SU4_charge": [
+        0,
+        1,
+        -1
+      ],
+      "residues": [
+        0,
+        3,
+        -3,
+        0
+      ],
+      "b1": 0,
+      "b2": 0
+    },
+    {
+      "label": "S_24",
+      "rep_dimension": 1,
+      "SU4_charge": [
+        1,
+        2,
+        1
+      ],
+      "residues": [
+        -1,
+        2,
+        0,
+        -1
+      ],
+      "b1": 1,
+      "b2": 0
+    },
+    {
+      "label": "S_34",
+      "rep_dimension": 1,
+      "SU4_charge": [
+        1,
+        1,
+        2
+      ],
+      "residues": [
+        -1,
+        -1,
+        3,
+        -1
+      ],
+      "b1": 2,
+      "b2": 0
+    }
+  ],
+  "census_and_obstructions": {
+    "chiral_Spin10_16": 3,
+    "conjugate_16": 0,
+    "chiral_Spin10_10": 5,
+    "charged_singlet_fields": 8,
+    "complex_gauge_components": 106,
+    "gravitational_U1_trace": [
+      20,
+      10,
+      10
+    ],
+    "Spin10_squared_U1_trace_T10_1": [
+      2,
+      1,
+      1
+    ],
+    "U1_cubic_tensor": [
+      [
+        [
+          20,
+          4,
+          4
+        ],
+        [
+          4,
+          6,
+          6
+        ],
+        [
+          4,
+          6,
+          10
+        ]
+      ],
+      [
+        [
+          4,
+          6,
+          6
+        ],
+        [
+          6,
+          16,
+          -2
+        ],
+        [
+          6,
+          -2,
+          0
+        ]
+      ],
+      [
+        [
+          4,
+          6,
+          10
+        ],
+        [
+          6,
+          -2,
+          0
+        ],
+        [
+          10,
+          0,
+          22
+        ]
+      ]
+    ],
+    "unbroken_gauge_Lie_algebra": "so10+u1^3 (dimension48)",
+    "SM_singlet_D_chi_obstruction": "All N in chiral16 have chi=-5; tens have no SM singlet; SU4 root singlets have chi=0. At zero FI, no nonzero N-only SM-preserving D-flat GUT breaking."
+  },
+  "root_and_anomaly_control": {
+    "E8_root_space_H1_complex_components": 106,
+    "root_trace_matches_sector_anomaly_sums": true,
+    "cubic_U1_polynomial": "20*a**3 + 12*a**2*b + 12*a**2*c + 18*a*b**2 + 36*a*b*c + 30*a*c**2 + 16*b**3 - 6*b**2*c + 22*c**3",
+    "cubic_restricted_to_mixed_anomaly_kernel": "3*(b - 5*c)*(b + c)*(5*b - c)/2",
+    "anomaly_free_individual_U1_directions": [
+      [
+        -3,
+        5,
+        1
+      ],
+      [
+        0,
+        -1,
+        1
+      ],
+      [
+        -3,
+        1,
+        5
+      ]
+    ],
+    "no_two_dimensional_anomaly_free_subspace_without_inflow": true,
+    "scope": "Massless charged-sector perturbative anomalies only, no boundary inflow or quantum global anomaly computed"
+  },
+  "graph_classification": {
+    "simple_7_arc_balanced_rank3_labeled_graphs": 24,
+    "isomorphism_classes": 1,
+    "class_orbit_sizes": [
+      24
+    ],
+    "distinct_three_family_weight_models": 24,
+    "minimum_source_points_for_rank3": 4,
+    "minimal_source_mirrorfree_three_implies": "one positive residue in each row/column, seven negative residues and five zero residues; Q is a balanced weighted directed Laplacian",
+    "dense_source_parity": "if all four profiles have nonzero residues at every source, total16 index is even; odd3 requires a zero-residue stratum"
+  },
+  "exact_relative_complex_controls": [
+    {
+      "label": "16_1",
+      "Betti": [
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "label": "16_2",
+      "Betti": [
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "label": "16_3",
+      "Betti": [
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "label": "16_4",
+      "Betti": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "label": "10_12",
+      "Betti": [
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "label": "10_13",
+      "Betti": [
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "label": "10_14",
+      "Betti": [
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "label": "10_23",
+      "Betti": [
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "label": "10_24",
+      "Betti": [
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "label": "10_34",
+      "Betti": [
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "label": "S_12",
+      "Betti": [
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "label": "S_13",
+      "Betti": [
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "label": "S_14",
+      "Betti": [
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "label": "S_23",
+      "Betti": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "label": "S_24",
+      "Betti": [
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "label": "S_34",
+      "Betti": [
+        0,
+        2,
+        0,
+        0
+      ]
+    }
+  ],
+  "cup_gate": {
+    "oriented_3_simplices_full_sphere": 120,
+    "exterior_3_simplices": 116,
+    "disjoint_source_ball_vertices": [
+      [
+        0,
+        5,
+        15,
+        25
+      ],
+      [
+        1,
+        9,
+        21,
+        29
+      ],
+      [
+        2,
+        6,
+        18,
+        28
+      ],
+      [
+        3,
+        7,
+        16,
+        27
+      ]
+    ],
+    "exact_Alexander_Whitney_triple_integrals_checked": 64,
+    "nonzero_integrals": 0,
+    "analytic_reason": "Each H1(M,A) with H1(M)=0 has representatives that are linear combinations of radial d(collar cutoff) forms; collars disjoint, all such pair wedges vanish",
+    "conditional_cubic_result": "If the full bulk cubic descends to this relative de Rham cup product with no defect/boundary correction, it is zero even when gauge charges allow a full-rank texture",
+    "not_claimed": "No blanket no-go for singular M-theory Yukawas, defect interactions, nontrivial flat systems, nonfactorized covers or all M2 corrections"
+  },
+  "gauge_allowed_texture": {
+    "families": [
+      "16_1",
+      "16_2",
+      "16_3"
+    ],
+    "Higgs_weights": [
+      "10_34",
+      "10_24",
+      "10_14"
+    ],
+    "matrix": [
+      [
+        "0",
+        "a",
+        "b"
+      ],
+      [
+        "a",
+        "0",
+        "c"
+      ],
+      [
+        "b",
+        "c",
+        "0"
+      ]
+    ],
+    "formal_determinant": "2*a*b*c",
+    "warning": "Gauge selection rules permit this texture; coefficients are not computed or proven nonzero; strict relative-cup model instead gives zero"
+  },
+  "limitations": [
+    "four pole positions and quantized residue matrix supplied, not predicted",
+    "zero-residue holes filled separately in each charged-sector complex",
+    "extra U1 anomalies, physical source completion, Einstein equations and moduli not solved",
+    "strict bulk cup product may omit necessary singular-domain, defect or boundary terms; comparison to full theory remains open",
+    "no physical Standard Model vacuum or measured parameter prediction"
+  ]
+}
