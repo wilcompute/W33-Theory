@@ -1,0 +1,252 @@
+{
+  "date": "2026-11-19",
+  "theme": "Causal event exchange bridge: time, volume, relativistic propagation and gauge curvature",
+  "status": "Mathematically verified controls and one sharp false-step falsifier; NO TOE",
+  "TOE_solved": false,
+  "four_dimensional_spacetime_derived": false,
+  "metric_dynamics_or_Einstein_equations_derived": false,
+  "mass_charge_or_gauge_dynamics_derived": false,
+  "prior_art": [
+    "Johnston (2008), Particle propagators on discrete spacetime, arXiv:0806.3083",
+    "Surya (2019), The causal set approach to quantum gravity, Living Reviews in Relativity",
+    "Path sums for propagators in causal sets, Phys Rev D 109 046008 (2024)",
+    "Gauge Fields in Causal Set Theory (Sverdlov/Bombelli et al.)",
+    "Link-based causal set propagators in 1+1 dimensions, Phys Rev D (2026)"
+  ],
+  "new_to_repository_calculations": [
+    "Constructive analytic 1+1 constant-E charged KG Green radial ODE with Wilson transport",
+    "Poisson falling-factorial unbiased event-count estimator for charged radial amplitude",
+    "Exact flat U1 finite-chain gauge covariance and nonzero Wilson-loop holonomy",
+    "PDE witness that gauge covariance alone fails to supply field-curvature tail"
+  ],
+  "results": {
+    "Myrheim_Meyer_dimension_control": {
+      "status": "PASS",
+      "data": [
+        {
+          "input_dimension": 2,
+          "theoretical_unordered_pair_fraction": 0.5,
+          "measured_fraction": 0.49217083333333334,
+          "estimated_dimension": 2.0210188152447706,
+          "pair_samples": 240000,
+          "events": 6500
+        },
+        {
+          "input_dimension": 3,
+          "theoretical_unordered_pair_fraction": 0.22857142857142856,
+          "measured_fraction": 0.23009166666666667,
+          "estimated_dimension": 2.991803586028783,
+          "pair_samples": 240000,
+          "events": 6500
+        },
+        {
+          "input_dimension": 4,
+          "theoretical_unordered_pair_fraction": 0.10000000000000002,
+          "measured_fraction": 0.10457916666666667,
+          "estimated_dimension": 3.946759814281346,
+          "pair_samples": 240000,
+          "events": 6500
+        }
+      ],
+      "meaning": "Dimension estimation assumes the sample was sprinkled in a preselected Minkowski dimension; does not dynamically select 3+1 dimensions."
+    },
+    "mass_and_proper_time_from_causal_chains": {
+      "status": "PASS",
+      "dimension": "1+1 Minkowski",
+      "tau": 2.0,
+      "mass": 0.8,
+      "continuum": 0.22770108381969031,
+      "density_trials": [
+        {
+          "density": 12.0,
+          "trials": 1200,
+          "expected_internal_events": 24.0,
+          "sample_mean_retarded_amplitude": 0.22672780909640192,
+          "standard_error": 0.0013682739143579337,
+          "continuum_half_J0_m_tau": 0.22770108381969031,
+          "z_deviation": -0.7113157044619312,
+          "mean_longest_chain": 7.335833333333333,
+          "asymptotic_chain_proper_time_estimator": 1.4974207087305778
+        },
+        {
+          "density": 45.0,
+          "trials": 1200,
+          "expected_internal_events": 90.0,
+          "sample_mean_retarded_amplitude": 0.22889994822927212,
+          "standard_error": 0.000708846591608618,
+          "continuum_half_J0_m_tau": 0.22770108381969031,
+          "z_deviation": 1.691288952749521,
+          "mean_longest_chain": 15.794166666666667,
+          "asymptotic_chain_proper_time_estimator": 1.664851347032536
+        },
+        {
+          "density": 120.0,
+          "trials": 1000,
+          "expected_internal_events": 240.0,
+          "sample_mean_retarded_amplitude": 0.226612993672917,
+          "standard_error": 0.0004584946782605389,
+          "continuum_half_J0_m_tau": 0.22770108381969031,
+          "z_deviation": -2.373179446490753,
+          "mean_longest_chain": 27.115,
+          "asymptotic_chain_proper_time_estimator": 1.7502657238735684
+        }
+      ],
+      "fast_Fenwick_vs_dense_nilpotent_matrix_error": 0.0,
+      "ensemble_identity": "E[(C^(k+1))_ab]=(rho V)^k/(k!)\u00b2, V=tau\u00b2/2. Hence E[K_ab]=J0(m tau)/2 at every positive density rho.",
+      "limitations": [
+        "Johnston's causal-set retarded free scalar propagator is known prior art.",
+        "The ensemble expectation is exact on the Poisson Minkowski background; a finite realization has stochastic noise.",
+        "Sprinkling assumes the continuum Lorentzian volume and dimension, not a dynamical derivation.",
+        "The retarded Green function is not a physical full quantum-state Feynman propagator.",
+        "Asymptotic chain height does not yield a coordinate-free metric at finite density without calibration."
+      ]
+    },
+    "exact_constant_E_charged_KG_and_Poisson_count": {
+      "status": "PASS",
+      "field": "constant background electric field E in 1+1 Minkowski; A_x=E t, A_t=0, qE dimension mass\u00b2",
+      "charged_exact_retarded_kernel_inside_cone": "G_R(t,x;0,0) = [1/2] exp(i qE t x/2) f(t\u00b2-x\u00b2); f solves 4(s f''+f')+[m\u00b2+(qE)\u00b2s/4]f=0, f(0)=1",
+      "m0_closed_form": "f(s)=J0(qE s/4)",
+      "m_nonzero_E_zero": "f(s)=J0(m sqrt(s))",
+      "derivation": "D_t=partial_t, D_x=partial_x-i q E t; using straight-line U=exp(i qE t x/2), covariant wave operator reduces to stated ODE",
+      "radial_checks": [
+        {
+          "m": 0,
+          "qE": 0,
+          "sigma": 4.0,
+          "radial_factor_series": 1.0,
+          "independent_ODE_solution": 1.0,
+          "series_ODE_absolute_difference": 0.0
+        },
+        {
+          "m": 0.8,
+          "qE": 0,
+          "sigma": 4.0,
+          "radial_factor_series": 0.4554021676393807,
+          "independent_ODE_solution": 0.45540216763149327,
+          "series_ODE_absolute_difference": 7.887412944995731e-12
+        },
+        {
+          "m": 0,
+          "qE": 0.9,
+          "sigma": 4.0,
+          "radial_factor_series": 0.8075237981225447,
+          "independent_ODE_solution": 0.8075237981338346,
+          "series_ODE_absolute_difference": 1.1289857937413217e-11
+        },
+        {
+          "m": 0.8,
+          "qE": 0.9,
+          "sigma": 4.0,
+          "radial_factor_series": 0.324954805687397,
+          "independent_ODE_solution": 0.32495480568419305,
+          "series_ODE_absolute_difference": 3.203937115614508e-12
+        }
+      ],
+      "Poisson_unbiased_volume_estimator": [
+        {
+          "rho": 12.0,
+          "m": 0,
+          "qE": 0.9,
+          "samples": 10000,
+          "analytic_continuum_radial_factor": 0.8075237981225447,
+          "Poisson_falling_factorial_estimator_mean": 0.8078704117549179,
+          "standard_error": 0.000749415862251314,
+          "absolute_discrepancy": 0.00034661363237320497
+        },
+        {
+          "rho": 12.0,
+          "m": 0.8,
+          "qE": 0.9,
+          "samples": 10000,
+          "analytic_continuum_radial_factor": 0.324954805687397,
+          "Poisson_falling_factorial_estimator_mean": 0.32553020363578616,
+          "standard_error": 0.0013191636777087447,
+          "absolute_discrepancy": 0.000575397948389178
+        },
+        {
+          "rho": 80.0,
+          "m": 0,
+          "qE": 0.9,
+          "samples": 10000,
+          "analytic_continuum_radial_factor": 0.8075237981225447,
+          "Poisson_falling_factorial_estimator_mean": 0.8076657518593109,
+          "standard_error": 0.000287624501245724,
+          "absolute_discrepancy": 0.00014195373676617606
+        },
+        {
+          "rho": 80.0,
+          "m": 0.8,
+          "qE": 0.9,
+          "samples": 10000,
+          "analytic_continuum_radial_factor": 0.324954805687397,
+          "Poisson_falling_factorial_estimator_mean": 0.3251831608842585,
+          "standard_error": 0.0005085463866381925,
+          "absolute_discrepancy": 0.0002283551968615405
+        }
+      ],
+      "mathematical_unbiasedness": "For N~Poisson(rho V), E[(N)_n]=(rho V)^n; replacing s^n=(2V)^n by (2/rho)^n(N)_n in exact radial power series gives unbiased ensemble kernel at ANY rho, assuming known m,E and continuum background.",
+      "important_limits": [
+        "This uses continuum minimally coupled charged Klein-Gordon dynamics as input, not its derivation from order alone.",
+        "The Poisson count estimator assumes the background diamond volume and density are given, and the constant electric field is external.",
+        "A bare event count determines volume only statistically; it does not produce a general curved spacetime metric.",
+        "No claim to derive charge, coupling, gauge group, matter spin, interactions, or quantum gravity."
+      ]
+    },
+    "gauge_covariance_vs_dynamical_failure": {
+      "status": "PASS",
+      "flat_gauge_covariance_error": 3.761867271714282e-16,
+      "constant_field_gauge_covariance_error": 2.633125101432526e-16,
+      "electric_field_two_path_holonomy_phase": -0.351,
+      "oriented_spacetime_loop_area": -0.39,
+      "loop_flux_analytic_qE_times_area": -0.35100000000000003,
+      "naive_massless_Wilson_kernel_at_tau_2": 0.5,
+      "exact_massless_charged_kernel_at_tau_2": 0.40376189906127236,
+      "naive_minus_exact_amplitude": 0.09623810093872764,
+      "naive_covariant_KG_PDE_residual_abs_at_event": 0.2008395,
+      "corrected_covariant_KG_numeric_PDE_residual_abs": 1.6525096355161972e-08,
+      "conclusion": "Gauge covariance of edge phases is NOT sufficient for correct dynamics in nonzero curvature. The bare m=0 Wilson-edge causal sum misses a known exact J0(qE*s/4) tail.",
+      "scope": "External constant electric field in fixed 1+1 flat spacetime; no derivation of full nonabelian gauge dynamics, Born rule or quantum gravity."
+    },
+    "four_dimensional_null_cone_link_distribution": {
+      "status": "PASS",
+      "spacetime_dim": 4,
+      "interval_volume": "V4(sigma)=pi*sigma\u00b2/24 for sigma=t\u00b2-r\u00b2",
+      "Poisson_link_probability": "exp(-rho*pi*sigma\u00b2/24)",
+      "scaled_retarded_kernel": "K4_rho(sigma)=sqrt(rho)/(2pi sqrt(6))* exp(-rho*pi*sigma\u00b2/24) inside cone",
+      "distributional_limit": "delta(sigma)/(2pi) for sigma>=0",
+      "integration_test_function": "exp(-sigma)",
+      "rows": [
+        {
+          "rho": 1.0,
+          "test_exp_minus_sigma_integral": 0.05443327521971545,
+          "integral_divided_by_distributional_limit": 0.34201435508217876,
+          "characteristic_null_shell_sigma_mean": 1.5593936024673523
+        },
+        {
+          "rho": 16.0,
+          "test_exp_minus_sigma_integral": 0.11210520784803202,
+          "integral_divided_by_distributional_limit": 0.7043777948090684,
+          "characteristic_null_shell_sigma_mean": 0.38984840061683806
+        },
+        {
+          "rho": 256.0,
+          "test_exp_minus_sigma_integral": 0.14475778685928628,
+          "integral_divided_by_distributional_limit": 0.9095399994941018,
+          "characteristic_null_shell_sigma_mean": 0.09746210015420952
+        },
+        {
+          "rho": 4096.0,
+          "test_exp_minus_sigma_integral": 0.1553500708298584,
+          "integral_divided_by_distributional_limit": 0.9760932825074744,
+          "characteristic_null_shell_sigma_mean": 0.02436552503855238
+        }
+      ],
+      "physical_distinction": "2D massless scalar propagates throughout the light cone, while 4D massless retarded scalar is supported on the null cone. Full 2D causal relation matrix C cannot replace dimension-sensitive 4D near-null link L.",
+      "limitations": [
+        "Known causal-set link propagator scaling from Johnston and review papers, not new physics.",
+        "External 3+1 flat Minkowski geometry and Poisson density are assumed.",
+        "This weak distribution test does not recover arbitrary matter, 4D spinor chirality or quantum gravity dynamics."
+      ]
+    }
+  }
+}
