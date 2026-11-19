@@ -1,0 +1,137 @@
+{
+  "manifold": "genus-4 3D handlebody, H4 homotopy equivalent to wedge of four circles",
+  "CW_cells": {
+    "degree0": 1,
+    "degree1": 4,
+    "degree2": 0,
+    "degree3": 0
+  },
+  "pi1": "free group F4, epimorphism F4 -> C7 from one generator",
+  "C7_polynomial": "z**6 + z**5 + z**4 + z**3 + z**2 + z + 1",
+  "exact_inverse_certificates_zk_minus_one": {
+    "1": "-z**5/7 - 2*z**4/7 - 3*z**3/7 - 4*z**2/7 - 5*z/7 - 6/7",
+    "2": "3*z**5/7 - z**4/7 + 2*z**3/7 - 2*z**2/7 + z/7 - 3/7",
+    "3": "2*z**5/7 + 4*z**4/7 - z**3/7 + z**2/7 + 3*z/7 - 2/7",
+    "4": "-2*z**5/7 - 4*z**4/7 + z**3/7 - z**2/7 - 3*z/7 - 5/7",
+    "5": "-3*z**5/7 + z**4/7 - 2*z**3/7 + 2*z**2/7 - z/7 - 4/7",
+    "6": "z**5/7 + 2*z**4/7 + 3*z**3/7 + 4*z**2/7 + 5*z/7 - 1/7"
+  },
+  "source_W7_su5_exponents": [
+    2,
+    2,
+    2,
+    4,
+    4
+  ],
+  "Spin10_16_exponent_multiplicities": {
+    "0": 1,
+    "1": 1,
+    "2": 0,
+    "3": 2,
+    "4": 3,
+    "5": 3,
+    "6": 6
+  },
+  "forbidden_intrinsic_line_characters": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    6
+  ],
+  "unique_intrinsic_16_line_character_all_weights_nontrivial": 5,
+  "all_16_weight_total_characters": [
+    5,
+    2,
+    2,
+    4,
+    4,
+    2,
+    4,
+    4,
+    4,
+    4,
+    6,
+    3,
+    3,
+    3,
+    1,
+    1
+  ],
+  "16_local_system_betti": [
+    0,
+    48,
+    0,
+    0
+  ],
+  "three_equal_components_per_SM_weight": 3,
+  "Spin10_adjoint_W7_invariant_dimension": 13,
+  "Spin10_adjoint_W7_broken_dimension": 32,
+  "adjoint_local_system_betti": [
+    13,
+    148,
+    0,
+    0
+  ],
+  "at_least_unbroken_gauge_adjoint_chiral_candidates": 52,
+  "total_adjoint_H1_chiral_candidates": 148,
+  "absolute_H2_of_handlebody_for_any_flat_local_system": 0,
+  "bulk_H1_cup_H1_and_all_absolute_triple_cups": "zero: graph retract forces H2=H3=0 regardless of flat characters",
+  "lens_spherical_defect_index3_mirror_comparison": [
+    {
+      "spherical_defects": 5,
+      "negative": 4,
+      "positive": 1,
+      "twisted_H1": 4,
+      "twisted_H2_mirror": 1,
+      "index": 3
+    },
+    {
+      "spherical_defects": 7,
+      "negative": 5,
+      "positive": 2,
+      "twisted_H1": 5,
+      "twisted_H2_mirror": 2,
+      "index": 3
+    },
+    {
+      "spherical_defects": 9,
+      "negative": 6,
+      "positive": 3,
+      "twisted_H1": 6,
+      "twisted_H2_mirror": 3,
+      "index": 3
+    },
+    {
+      "spherical_defects": 11,
+      "negative": 7,
+      "positive": 4,
+      "twisted_H1": 7,
+      "twisted_H2_mirror": 4,
+      "index": 3
+    }
+  ],
+  "chi_handlebody": -3,
+  "chi_closed_orientable_three_manifold": 0,
+  "permutation_symmetry_of_three_residual_free_handles": "S3 permutations preserve the one-generator C7 holonomy and the topological local-system isomorphism class",
+  "S3_invariant_symmetric_family_Yukawa": "a I + b(J-I)",
+  "S3_invariant_Yukawa_eigenvalues": [
+    "a+2b",
+    "a-b",
+    "a-b"
+  ],
+  "S3_invariant_two_Yukawa_commutator": 0,
+  "S3_generically_forces_twofold_family_degeneracy": true,
+  "uniform_flat_character_up_Higgs_5_weak": 3,
+  "uniform_flat_character_down_Higgs_bar5_weak": 4,
+  "two_spinor_family_characters_sum_mod7": 3,
+  "uniform_up_Yukawa_total_flat_character_mod7": 6,
+  "uniform_down_Yukawa_total_flat_character_mod7": 0,
+  "additional_singlet_flat_character_needed_for_up": 1,
+  "trivial_character_spurion_cannot_complete_up_flat_invariant": true,
+  "new_global_Yukawa_compatibility_gate": "Three complete nonmirror Spin10 spinors on H4 force intrinsic character5. A uniform weak 5 Higgs needs character3, so 16*16*5 has total extra C7 character6 and requires a charge1 defect/line insertion. The weak bar5 Higgs needs character4, allowing a flat-character-neutral 16*16*bar5. A charged global constant spurion cannot exist in a nontrivial flat character; localized defect operators might evade this. This is NOT the full physical G2 Yukawa calculation.",
+  "flavor_escape": "A metric/flux/defect action must distinguish three handle cycles, or nontrivial family-localized wavefunctions must break S3; topological H1 multiplicity alone cannot predict distinct charged masses and CKM mixing.",
+  "scope": "Conditional 3D cohomological toy for ALE/7D gauge-sector chirality. Spin10 16 extra line character is hypothetically provided by an extra Abelian holonomy, not proven by the E8 source or an anomaly-free compact G2. Physical boundary conditions/flux can lift adjoint H1; full 4D fields, couplings, Yukawas, Green-Schwarz inflow and graviton not derived.",
+  "key_failure": "Avoiding twisted mirrors via b1(H4)=4 generates at least 52 trivial-local-system unbroken adjoint H1 modes (148 including broken generators), and H2=0 forbids bulk cup Yukawas. This trades one topological obstruction for two others."
+}

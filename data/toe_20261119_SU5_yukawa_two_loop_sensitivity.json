@@ -1,0 +1,233 @@
+{
+  "two_loop_MSSM_Yukawa_coefficients": [
+    [
+      5.2,
+      2.8,
+      3.6
+    ],
+    [
+      6.0,
+      6.0,
+      2.0
+    ],
+    [
+      4.0,
+      4.0,
+      0.0
+    ]
+  ],
+  "one_loop_yt_yb_ytau_run": true,
+  "completely_zero_Yukawa_reproduces_other_two_loop_gauge_only_integrator": true,
+  "grid": [
+    {
+      "extra_triplet_threshold_GeV": null,
+      "yt_yb_ytau_at_1TeV": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alpha_inverse_at_2e16": [
+        24.734502835879447,
+        25.0100059514894,
+        25.295954352364582
+      ],
+      "Yukawa_at_2e16": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mismatch_12_13_23": [
+        -0.2755031156099541,
+        -0.5614515164851355,
+        -0.28594840087518136
+      ]
+    },
+    {
+      "extra_triplet_threshold_GeV": null,
+      "yt_yb_ytau_at_1TeV": [
+        0.8,
+        0.1,
+        0.08
+      ],
+      "alpha_inverse_at_2e16": [
+        24.793420650088212,
+        25.078461851518853,
+        25.341186529219744
+      ],
+      "Yukawa_at_2e16": [
+        0.4160349663026582,
+        0.037900599108012654,
+        0.05527024765931238
+      ],
+      "mismatch_12_13_23": [
+        -0.2850412014306407,
+        -0.5477658791315321,
+        -0.26272467770089136
+      ]
+    },
+    {
+      "extra_triplet_threshold_GeV": null,
+      "yt_yb_ytau_at_1TeV": [
+        0.8,
+        0.5,
+        0.4
+      ],
+      "alpha_inverse_at_2e16": [
+        24.820472083885253,
+        25.110802805823234,
+        25.35713376685775
+      ],
+      "Yukawa_at_2e16": [
+        0.43159798454779424,
+        0.22306230858501777,
+        0.32801946956351213
+      ],
+      "mismatch_12_13_23": [
+        -0.2903307219379805,
+        -0.5366616829724968,
+        -0.24633096103451635
+      ]
+    },
+    {
+      "extra_triplet_threshold_GeV": 100000000000000.0,
+      "yt_yb_ytau_at_1TeV": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alpha_inverse_at_2e16": [
+        24.389858786417236,
+        25.008765864843536,
+        24.41910171615997
+      ],
+      "Yukawa_at_2e16": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mismatch_12_13_23": [
+        -0.6189070784263002,
+        -0.029242929742736123,
+        0.5896641486835641
+      ]
+    },
+    {
+      "extra_triplet_threshold_GeV": 100000000000000.0,
+      "yt_yb_ytau_at_1TeV": [
+        0.8,
+        0.1,
+        0.08
+      ],
+      "alpha_inverse_at_2e16": [
+        24.448785717315374,
+        25.077219036665294,
+        24.464391843591667
+      ],
+      "Yukawa_at_2e16": [
+        0.4152791208290826,
+        0.03783473745441744,
+        0.05525987067794418
+      ],
+      "mismatch_12_13_23": [
+        -0.6284333193499201,
+        -0.015606126276292542,
+        0.6128271930736275
+      ]
+    },
+    {
+      "extra_triplet_threshold_GeV": 100000000000000.0,
+      "yt_yb_ytau_at_1TeV": [
+        0.8,
+        0.5,
+        0.4
+      ],
+      "alpha_inverse_at_2e16": [
+        24.475841054855977,
+        25.109558967567455,
+        24.48035965228023
+      ],
+      "Yukawa_at_2e16": [
+        0.43081252756712135,
+        0.2226722112842917,
+        0.3279554069008103
+      ],
+      "mismatch_12_13_23": [
+        -0.6337179127114787,
+        -0.004518597424254978,
+        0.6291993152872237
+      ]
+    },
+    {
+      "extra_triplet_threshold_GeV": 1e+16,
+      "yt_yb_ytau_at_1TeV": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "alpha_inverse_at_2e16": [
+        24.689575079152547,
+        25.009986328182695,
+        25.181563975721637
+      ],
+      "Yukawa_at_2e16": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mismatch_12_13_23": [
+        -0.3204112490301476,
+        -0.4919888965690902,
+        -0.17157764753894256
+      ]
+    },
+    {
+      "extra_triplet_threshold_GeV": 1e+16,
+      "yt_yb_ytau_at_1TeV": [
+        0.8,
+        0.1,
+        0.08
+      ],
+      "alpha_inverse_at_2e16": [
+        24.74849436814258,
+        25.07844228628203,
+        25.22680350786426
+      ],
+      "Yukawa_at_2e16": [
+        0.41602318949452616,
+        0.037899558962670714,
+        0.05527005068611888
+      ],
+      "mismatch_12_13_23": [
+        -0.32994791813944957,
+        -0.47830913972168076,
+        -0.1483612215822312
+      ]
+    },
+    {
+      "extra_triplet_threshold_GeV": 1e+16,
+      "yt_yb_ytau_at_1TeV": [
+        0.8,
+        0.5,
+        0.4
+      ],
+      "alpha_inverse_at_2e16": [
+        24.775546331940717,
+        25.110783261043895,
+        25.24275335559487
+      ],
+      "Yukawa_at_2e16": [
+        0.4315857789716906,
+        0.22305618915274233,
+        0.3280182978037527
+      ],
+      "mismatch_12_13_23": [
+        -0.3352369291031785,
+        -0.46720702365415434,
+        -0.13197009455097586
+      ]
+    }
+  ],
+  "third_family_Yukawa_input_status": "Illustrative y_t,y_b,y_tau values supplied by hand at 1TeV, NOT derived from observed running fermion masses, tan(beta), supersymmetric thresholds, G2 geometry or source overlap.",
+  "limits": "2-loop gauge beta with 1-loop third-family Yukawas, not all 2-loop Yukawa beta, third-generation SUSY thresholds, full KK, proton matrix elements, complete G2 or unification prediction.",
+  "reference": "https://www.sciencedirect.com/science/article/pii/S0370269301014344; standard MSSM 2-loop gauge Yukawa coefficients also listed at https://inspirehep.net/files/73fc41f9fd2eb27542b4b5807e72e758"
+}

@@ -1,0 +1,154 @@
+{
+  "gauge_boundary": {
+    "SU5_adjoint_dimension": 24,
+    "SM_brane_color_projector_formula": "Pcolor=(H+3I)/5 with H=diag(2,2,2,-3,-3)",
+    "octet_operator": "P8(X)=Pcolor*X*Pcolor-tr(Pcolor*X)/3*Pcolor",
+    "triplet_operator": "P3(X)=Pweak*X*Pweak-tr(Pweak*X)/2*Pweak",
+    "SM_octet_rank": 8,
+    "SM_weak_triplet_rank": 3,
+    "SU5_non_covariance_witness_norm": 0.5114014482482545,
+    "SM_covariance_witness_norm": 0.0,
+    "effective_boundary_operator": "m8 tr((P8 Psi2)(P8 Psi2)) at the SU5-broken boundary; SM invariant, not SU5 invariant",
+    "unbuilt": "Actual 5D supersymmetric adjoint Majorana boundary action, spinor parity/orbifold consistency, KK tower, UV-brane mass mechanism and anomaly inflow."
+  },
+  "N1_two_loop_extra_doublet_B": [
+    [
+      "9/25",
+      "9/5",
+      "0"
+    ],
+    [
+      "3/5",
+      "7",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0"
+    ]
+  ],
+  "N1_two_loop_extra_triplet_B": [
+    [
+      "8/75",
+      "0",
+      "32/15"
+    ],
+    [
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "4/15",
+      "0",
+      "34/3"
+    ]
+  ],
+  "extra_complete_SU5_5_b": [
+    "1",
+    "1",
+    "1"
+  ],
+  "input_SM_at_MZ": {
+    "alphaEM_inverse": 127.95,
+    "sin2theta": 0.23122,
+    "alphaS": 0.1181,
+    "mZ_GeV": 91.1876
+  },
+  "simplified_matching_scale_GeV": 1000.0,
+  "fixed_evaluation_scale_GeV": 2e+16,
+  "MSSM_b2loop_gauge_matrix": [
+    [
+      7.96,
+      5.4,
+      17.6
+    ],
+    [
+      1.8,
+      25.0,
+      24.0
+    ],
+    [
+      2.2,
+      9.0,
+      14.0
+    ]
+  ],
+  "scenarios": [
+    {
+      "description": "MSSM only",
+      "triplet_threshold_GeV": 2e+16,
+      "alpha_inverse_at_MU": [
+        24.734502835916352,
+        25.01000595150307,
+        25.295954352377198
+      ],
+      "unification_mismatch_at_MU_12_13_23": [
+        -0.27550311558671936,
+        -0.5614515164608456,
+        -0.2859484008741262
+      ]
+    },
+    {
+      "description": "MSSM plus heavy triplet at MT",
+      "triplet_threshold_GeV": 100000000000000.0,
+      "alpha_inverse_at_MU": [
+        24.38985878641626,
+        25.00876586484581,
+        24.41910171616084
+      ],
+      "unification_mismatch_at_MU_12_13_23": [
+        -0.618907078429551,
+        -0.029242929744579982,
+        0.589664148684971
+      ]
+    },
+    {
+      "description": "MSSM plus heavy triplet at MT",
+      "triplet_threshold_GeV": 1e+16,
+      "alpha_inverse_at_MU": [
+        24.68957507918968,
+        25.009986328196423,
+        25.181563975734328
+      ],
+      "unification_mismatch_at_MU_12_13_23": [
+        -0.32041124900674234,
+        -0.4919888965446475,
+        -0.17157764753790516
+      ]
+    },
+    {
+      "description": "extra light doublet at 1TeV / heavy triplet",
+      "triplet_threshold_GeV": 100000000000000.0,
+      "alpha_inverse_at_MU": [
+        21.420466710268936,
+        19.979235844977136,
+        24.40368337432251
+      ],
+      "unification_mismatch_at_MU_12_13_23": [
+        1.4412308652918,
+        -2.9832166640535753,
+        -4.424447529345375
+      ]
+    },
+    {
+      "description": "extra light doublet at 1TeV / heavy triplet",
+      "triplet_threshold_GeV": 1e+16,
+      "alpha_inverse_at_MU": [
+        21.72025162530974,
+        19.98047849064067,
+        25.166231084682902
+      ],
+      "unification_mismatch_at_MU_12_13_23": [
+        1.7397731346690684,
+        -3.445979459373163,
+        -5.185752594042231
+      ]
+    }
+  ],
+  "colored_triplet_d5_proton_amplitude_relative_if_mass_1e14_vs_1e16": 100.0,
+  "colored_triplet_d5_proton_rate_relative_if_mass_1e14_vs_1e16": 10000.0,
+  "illustrative_proton_decay_experimental_reference": "Super-K p->e+pi0 partial lifetime >2.4e34 years (90% CL), Phys Rev D102 112011 (2020), a dimension-six channel, NOT a direct numerical limit on this dimension-five triplet amplitude.",
+  "limitations": "Simplified 1-loop SM MZ->1TeV, two-loop N=1 gauge-gauge terms, sharp thresholds; no MSSM Yukawas, threshold matching at SUSY and GUT, 5D KK spectrum, Planck operators, physical proton matrix elements, dimension-five wino/higgsino dressing or experimentally fit unification scale. No actual 5D/G2 compact vacuum."
+}

@@ -1,0 +1,286 @@
+{
+  "source_16_fields": [
+    "16_1",
+    "16_2",
+    "16_3"
+  ],
+  "source_10_fields": [
+    "10_34",
+    "10_24"
+  ],
+  "available_UV_spurions": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G1",
+    "G2"
+  ],
+  "complete_12_charge_neutral_entries": [
+    {
+      "ten": "10_34",
+      "family_i": 1,
+      "family_j": 1,
+      "spurions": [
+        "B"
+      ],
+      "degree": 1,
+      "gaussian_overlap": 0.35942121530779825,
+      "positive_effective_coupling": 0.03594212153077982
+    },
+    {
+      "ten": "10_34",
+      "family_i": 1,
+      "family_j": 2,
+      "spurions": [],
+      "degree": 0,
+      "gaussian_overlap": 0.08529265256821304,
+      "positive_effective_coupling": 0.08529265256821304
+    },
+    {
+      "ten": "10_34",
+      "family_i": 1,
+      "family_j": 3,
+      "spurions": [
+        "B",
+        "C"
+      ],
+      "degree": 2,
+      "gaussian_overlap": 0.0001530234841764679,
+      "positive_effective_coupling": 2.20693607419363e-06
+    },
+    {
+      "ten": "10_34",
+      "family_i": 2,
+      "family_j": 2,
+      "spurions": [
+        "A"
+      ],
+      "degree": 1,
+      "gaussian_overlap": 0.5370554930074803,
+      "positive_effective_coupling": 0.07670686730937432
+    },
+    {
+      "ten": "10_34",
+      "family_i": 2,
+      "family_j": 3,
+      "spurions": [
+        "C"
+      ],
+      "degree": 1,
+      "gaussian_overlap": 0.02556614556222882,
+      "positive_effective_coupling": 0.003687201949623686
+    },
+    {
+      "ten": "10_34",
+      "family_i": 3,
+      "family_j": 3,
+      "spurions": [
+        "B",
+        "C",
+        "C"
+      ],
+      "degree": 3,
+      "gaussian_overlap": 0.03229319245743626,
+      "positive_effective_coupling": 6.716984031146744e-05
+    },
+    {
+      "ten": "10_24",
+      "family_i": 1,
+      "family_j": 1,
+      "spurions": [
+        "E",
+        "G1"
+      ],
+      "degree": 2,
+      "gaussian_overlap": 0.03229319245743626,
+      "positive_effective_coupling": 0.0006458638491487252
+    },
+    {
+      "ten": "10_24",
+      "family_i": 1,
+      "family_j": 2,
+      "spurions": [
+        "A",
+        "E",
+        "G1"
+      ],
+      "degree": 3,
+      "gaussian_overlap": 0.02556614556222882,
+      "positive_effective_coupling": 7.30315194905462e-05
+    },
+    {
+      "ten": "10_24",
+      "family_i": 1,
+      "family_j": 3,
+      "spurions": [],
+      "degree": 0,
+      "gaussian_overlap": 0.0001530234841764679,
+      "positive_effective_coupling": 0.0001530234841764679
+    },
+    {
+      "ten": "10_24",
+      "family_i": 2,
+      "family_j": 2,
+      "spurions": [
+        "A",
+        "A",
+        "E",
+        "G1"
+      ],
+      "degree": 4,
+      "gaussian_overlap": 0.5370554930074803,
+      "positive_effective_coupling": 0.00021911864114705198
+    },
+    {
+      "ten": "10_24",
+      "family_i": 2,
+      "family_j": 3,
+      "spurions": [
+        "A"
+      ],
+      "degree": 1,
+      "gaussian_overlap": 0.08529265256821304,
+      "positive_effective_coupling": 0.012182227475929298
+    },
+    {
+      "ten": "10_24",
+      "family_i": 3,
+      "family_j": 3,
+      "spurions": [
+        "C"
+      ],
+      "degree": 1,
+      "gaussian_overlap": 0.35942121530779825,
+      "positive_effective_coupling": 0.05183646485127397
+    }
+  ],
+  "not_gauge_allowed_or_degree_limit": [],
+  "light_Higgs_up_projection_10_34_10_24": [
+    0.19611613513818402,
+    -0.9805806756909201
+  ],
+  "light_Higgs_down_projection_10_34_10_24": [
+    0.7036658518558089,
+    -0.7105310471274559
+  ],
+  "Gaussian_centers_family": [
+    -2.0,
+    0.0,
+    2.0
+  ],
+  "Gaussian_centers_Higgs": [
+    -0.75,
+    0.75
+  ],
+  "Gaussian_widths_family": [
+    0.7,
+    0.7,
+    0.7
+  ],
+  "Gaussian_widths_Higgs": [
+    1.0,
+    1.0
+  ],
+  "overlap_formula": "Product of three individually L2-normalized 1D real Gaussians integrated over R; no fitted interaction prefactors",
+  "Y10_34": [
+    [
+      0.03594212153077982,
+      0.08529265256821304,
+      2.20693607419363e-06
+    ],
+    [
+      0.08529265256821304,
+      0.07670686730937432,
+      0.003687201949623686
+    ],
+    [
+      2.20693607419363e-06,
+      0.003687201949623686,
+      6.716984031146744e-05
+    ]
+  ],
+  "Y10_24": [
+    [
+      0.0006458638491487252,
+      7.30315194905462e-05,
+      0.0001530234841764679
+    ],
+    [
+      7.30315194905462e-05,
+      0.00021911864114705198,
+      0.012182227475929298
+    ],
+    [
+      0.0001530234841764679,
+      0.012182227475929298,
+      0.05183646485127397
+    ]
+  ],
+  "light_Yu": [
+    [
+      0.006415508353680854,
+      0.016655652080633073,
+      -0.00014961905573697182
+    ],
+    [
+      0.016655652080633073,
+      0.01482859085007955,
+      -0.01122253705393307
+    ],
+    [
+      -0.00014961905573697182,
+      -0.01122253705393307,
+      -0.05081666263981112
+    ]
+  ],
+  "light_Yd": [
+    [
+      0.024832337247423782,
+      0.05996563586443625,
+      -0.00010717499089435863
+    ],
+    [
+      0.05996563586443625,
+      0.05382031253090202,
+      -0.006061292743970556
+    ],
+    [
+      -0.00010717499089435863,
+      -0.006061292743970556,
+      -0.03678415252725946
+    ]
+  ],
+  "yu_singular_values_ascending": [
+    0.005591930889514565,
+    0.02882224880284641,
+    0.05280288134938257
+  ],
+  "yd_singular_values_ascending": [
+    0.021498327248682284,
+    0.03782106988914293,
+    0.10118789438889154
+  ],
+  "abs_CKM_in_toy_model_with_low_to_high_eigenvalue_order": [
+    [
+      0.9952887265460658,
+      0.08970040985195156,
+      0.03679928372540781
+    ],
+    [
+      0.04320319738916093,
+      0.0705287323140149,
+      0.9965737211333294
+    ],
+    [
+      0.08679766440212727,
+      0.993468436534634,
+      0.0740717966824467
+    ]
+  ],
+  "noncommuting_quark_mass_matrices_frobenius_norm": 1.870894455247079e-06,
+  "one_source_ten_alone_commutes_and_has_trivial_CKM": true,
+  "strong_scope": "No 7D G2 overlap, no worldvolume M2, no charged/local Wilson wavefunctions, no SM chiral gauge mass spectrum, no canonical metric/Higgs vev or observed CKM/PMNS fit. These are physically inserted toy Gaussian profiles and formally gauge-invariant 4D EFT coefficients; the strict punctured-S3 bulk cup remains zero."
+}

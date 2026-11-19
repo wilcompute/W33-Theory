@@ -1,0 +1,170 @@
+{
+  "source_5qubit_code": "analysis/2026_11_03_five_qubit_algebraic_locality.py; 4 generators exact full 32x32 KL test in existing repo",
+  "independent_all_ten_three_erasure_logical_support_failures_verified": true,
+  "exact_level_map": "p_next=10p^3-15p^4+6p^5 = Pr[at least three of five photons erased]",
+  "exact_fixed_points_factorization": "p*(p - 1)*(2*p - 1)*(3*p**2 - 3*p - 1)",
+  "nontrivial_erasure_threshold": 0.5,
+  "same_threshold_as_positive_unassisted_qubit_erasure_capacity": true,
+  "per_level_cases": [
+    {
+      "physical_photon_survival_eta": 0.9,
+      "physical_erasure_probability": 0.09999999999999998,
+      "logical_erasure_probabilities_level_0_to_7": [
+        0.09999999999999998,
+        0.008559999999999995,
+        6.191960606036258e-06,
+        2.3739989374980564e-15,
+        1.337955165962038e-43,
+        2.395105688466044e-128,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "physical_photon_survival_eta": 0.75,
+      "physical_erasure_probability": 0.25,
+      "logical_erasure_probabilities_level_0_to_7": [
+        0.25,
+        0.103515625,
+        0.009441191700659601,
+        8.296781552939963e-06,
+        5.71114993747576e-15,
+        1.8628191168284103e-42,
+        6.464159418745291e-125,
+        0.0
+      ]
+    },
+    {
+      "physical_photon_survival_eta": 0.55,
+      "physical_erasure_probability": 0.44999999999999996,
+      "logical_erasure_probabilities_level_0_to_7": [
+        0.44999999999999996,
+        0.4068731249999999,
+        0.32938335016163023,
+        0.20405959242298005,
+        0.061085254541414856,
+        0.002075592240240824,
+        8.914007694438634e-08,
+        7.083027954246646e-21
+      ]
+    },
+    {
+      "physical_photon_survival_eta": 0.49,
+      "physical_erasure_probability": 0.51,
+      "logical_erasure_probabilities_level_0_to_7": [
+        0.51,
+        0.5187450006000001,
+        0.5351139573836639,
+        0.5656225145972309,
+        0.6216365605235675,
+        0.7192299724157428,
+        0.8614117254993763,
+        0.9786084684201244
+      ]
+    }
+  ],
+  "resource_scenarios": [
+    {
+      "logical_qubits": 50,
+      "target_total_erasure_failure_upper_bound": 0.001,
+      "single_photon_eta": 0.9,
+      "levels_search_max": 7,
+      "minimal_levels_certified_by_union_bound": 2,
+      "physical_photonic_qubits_per_logical": 25,
+      "total_physical_photonic_qubits": 1250,
+      "total_error_union_upper_bound": 0.0003095980303018129,
+      "logical_error_after_levels_0_to_7": [
+        0.09999999999999998,
+        0.008559999999999995,
+        6.191960606036258e-06,
+        2.3739989374980564e-15,
+        1.337955165962038e-43,
+        2.395105688466044e-128,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "logical_qubits": 1000,
+      "target_total_erasure_failure_upper_bound": 1e-06,
+      "single_photon_eta": 0.9,
+      "levels_search_max": 7,
+      "minimal_levels_certified_by_union_bound": 3,
+      "physical_photonic_qubits_per_logical": 125,
+      "total_physical_photonic_qubits": 125000,
+      "total_error_union_upper_bound": 2.3739989374980564e-12,
+      "logical_error_after_levels_0_to_7": [
+        0.09999999999999998,
+        0.008559999999999995,
+        6.191960606036258e-06,
+        2.3739989374980564e-15,
+        1.337955165962038e-43,
+        2.395105688466044e-128,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "logical_qubits": 100000,
+      "target_total_erasure_failure_upper_bound": 1e-06,
+      "single_photon_eta": 0.9,
+      "levels_search_max": 7,
+      "minimal_levels_certified_by_union_bound": 3,
+      "physical_photonic_qubits_per_logical": 125,
+      "total_physical_photonic_qubits": 12500000,
+      "total_error_union_upper_bound": 2.3739989374980566e-10,
+      "logical_error_after_levels_0_to_7": [
+        0.09999999999999998,
+        0.008559999999999995,
+        6.191960606036258e-06,
+        2.3739989374980564e-15,
+        1.337955165962038e-43,
+        2.395105688466044e-128,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "logical_qubits": 1000,
+      "target_total_erasure_failure_upper_bound": 1e-06,
+      "single_photon_eta": 0.75,
+      "levels_search_max": 7,
+      "minimal_levels_certified_by_union_bound": 4,
+      "physical_photonic_qubits_per_logical": 625,
+      "total_physical_photonic_qubits": 625000,
+      "total_error_union_upper_bound": 5.71114993747576e-12,
+      "logical_error_after_levels_0_to_7": [
+        0.25,
+        0.103515625,
+        0.009441191700659601,
+        8.296781552939963e-06,
+        5.71114993747576e-15,
+        1.8628191168284103e-42,
+        6.464159418745291e-125,
+        0.0
+      ]
+    },
+    {
+      "logical_qubits": 1000,
+      "target_total_erasure_failure_upper_bound": 1e-06,
+      "single_photon_eta": 0.49,
+      "levels_search_max": 7,
+      "minimal_levels_certified_by_union_bound": null,
+      "physical_photonic_qubits_per_logical": null,
+      "total_physical_photonic_qubits": null,
+      "total_error_union_upper_bound": null,
+      "logical_error_after_levels_0_to_7": [
+        0.51,
+        0.5187450006000001,
+        0.5351139573836639,
+        0.5656225145972309,
+        0.6216365605235675,
+        0.7192299724157428,
+        0.8614117254993763,
+        0.9786084684201244
+      ]
+    }
+  ],
+  "no_ft_gate_escape": "Even if storage erasure is suppressed by 5-qubit concatenation, an independently successful 75% heralded entangling gate required on N physical operations would give 0.75^N without active fault-tolerant feedforward. A protected universal logical gate set and nondemolition erasure flags are not derived.",
+  "scope": "Independent erasure events, known locations, ideal encoding/decoding/ancillas and no gate or source errors. A 5-qubit QECC is not an optical implementation by itself. No better-than-QM prediction or TOE test; only standard quantum loss-resource engineering."
+}

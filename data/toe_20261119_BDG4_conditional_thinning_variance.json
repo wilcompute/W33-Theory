@@ -1,0 +1,76 @@
+{
+  "known_identity": "W_eps(n)=sum_{j=0}^3 w_j*Binomial(n,j)*eps^j*(1-eps)^(n-j), w=(1,-9,16,-8), exact Sorkin smearing from binomial decimation; existing external code independently verifies identity.",
+  "functional": "B_(rho,eps)(1)=4sqrt(rho eps)/sqrt6*(eps*sum_event W_eps(N_between(origin,event))-1)",
+  "Rao_Blackwell_theorem": "Given PPP(rho) and fixed origin, retain each sprinkled event with probability eps. Thinned PPP is PPP(rho eps). Conditional expectation of raw sharp B at density rho eps given the original causet equals B_(rho,eps). Law of total variance proves Var(B_smoothed PPP(rho)) <= Var(B_sharp PPP(rho eps)), before any Monte Carlo.",
+  "sampling": "Independent 4D Minkowski forward lightcone 0<t<1, N~Poisson(rho*pi/3), all causal interval occupancies calculated from full Minkowski metric.",
+  "sample_results": [
+    {
+      "parent_sprinkling_density": 100.0,
+      "retention_eps": 1.0,
+      "effective_density": 100.0,
+      "trials": 300,
+      "smoothed_mean": -117.79324007517326,
+      "smoothed_sd": 1180.9043061589366,
+      "sharp_at_effective_density_mean": -92.53627917180897,
+      "sharp_at_effective_density_sd": 1126.127792604751,
+      "variance_ratio_smooth_over_independent_sharp": 1.0996489369133848
+    },
+    {
+      "parent_sprinkling_density": 100.0,
+      "retention_eps": 0.5,
+      "effective_density": 50.0,
+      "trials": 300,
+      "smoothed_mean": 6.224866038130522,
+      "smoothed_sd": 144.71192391798073,
+      "sharp_at_effective_density_mean": 34.8719562590534,
+      "sharp_at_effective_density_sd": 614.6418159163187,
+      "variance_ratio_smooth_over_independent_sharp": 0.05543249523014751
+    },
+    {
+      "parent_sprinkling_density": 100.0,
+      "retention_eps": 0.2,
+      "effective_density": 20.0,
+      "trials": 300,
+      "smoothed_mean": 4.515645897455174,
+      "smoothed_sd": 25.646027639312546,
+      "sharp_at_effective_density_mean": 2.799470849470849,
+      "sharp_at_effective_density_sd": 158.18757005750683,
+      "variance_ratio_smooth_over_independent_sharp": 0.026284244734201666
+    },
+    {
+      "parent_sprinkling_density": 200.0,
+      "retention_eps": 1.0,
+      "effective_density": 200.0,
+      "trials": 300,
+      "smoothed_mean": -304.84094213212245,
+      "smoothed_sd": 2280.7888482596536,
+      "sharp_at_effective_density_mean": 4.695782189408953,
+      "sharp_at_effective_density_sd": 2505.3612424229973,
+      "variance_ratio_smooth_over_independent_sharp": 0.8287612797868027
+    },
+    {
+      "parent_sprinkling_density": 200.0,
+      "retention_eps": 0.5,
+      "effective_density": 100.0,
+      "trials": 300,
+      "smoothed_mean": -23.08317005655916,
+      "smoothed_sd": 271.2068045902949,
+      "sharp_at_effective_density_mean": -43.49205121075021,
+      "sharp_at_effective_density_sd": 1277.321960416061,
+      "variance_ratio_smooth_over_independent_sharp": 0.04508171258447564
+    },
+    {
+      "parent_sprinkling_density": 200.0,
+      "retention_eps": 0.2,
+      "effective_density": 40.0,
+      "trials": 300,
+      "smoothed_mean": -0.4889987712107585,
+      "smoothed_sd": 46.21803109503276,
+      "sharp_at_effective_density_mean": -17.660804058705825,
+      "sharp_at_effective_density_sd": 454.18809966507166,
+      "variance_ratio_smooth_over_independent_sharp": 0.010355030418428855
+    }
+  ],
+  "scope": "Correctly reduced variance relative to sharp at SAME EFFECTIVE density, not a proof of a physically selected nonlocality length or good continuum-bias scaling. No full scalar correlator, spin2 constraints, causal quantum gravity, quantized state, or Lorentzian wavefunction derived.",
+  "external_prior_art": "https://github.com/stelios-tsilioukas/topology-change-in-causal-set-theory/blob/main/verification/bd_decimate.py; https://doi.org/10.1007/s41114-019-0023-1"
+}

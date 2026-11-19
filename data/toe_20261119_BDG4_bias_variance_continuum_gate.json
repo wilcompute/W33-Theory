@@ -1,0 +1,92 @@
+{
+  "rows": [
+    {
+      "parent_rho": 100.0,
+      "eps": 1.0,
+      "effective_rho": 100.0,
+      "analytic_continuum_Box_on_1": 0,
+      "exact_finite_volume_mean_bias_from_quadrature": -1.1398024026263875,
+      "MonteCarlo_mean": -117.79324007517326,
+      "MonteCarlo_mean_SE": 68.17954190480502,
+      "absolute_mean_disagreement_in_SE": 1.7109742074158114,
+      "observed_sample_variance": 1394534.9803047194,
+      "estimated_MSE_using_exact_bias_plus_sample_variance": 1394536.2794542364
+    },
+    {
+      "parent_rho": 100.0,
+      "eps": 0.5,
+      "effective_rho": 50.0,
+      "analytic_continuum_Box_on_1": 0,
+      "exact_finite_volume_mean_bias_from_quadrature": -3.036350442887511,
+      "MonteCarlo_mean": 6.224866038130522,
+      "MonteCarlo_mean_SE": 8.35494682289948,
+      "absolute_mean_disagreement_in_SE": 1.1084710264863233,
+      "observed_sample_variance": 20941.540924043442,
+      "estimated_MSE_using_exact_bias_plus_sample_variance": 20950.760348055464
+    },
+    {
+      "parent_rho": 100.0,
+      "eps": 0.2,
+      "effective_rho": 20.0,
+      "analytic_continuum_Box_on_1": 0,
+      "exact_finite_volume_mean_bias_from_quadrature": 1.2615797938495945,
+      "MonteCarlo_mean": 4.515645897455174,
+      "MonteCarlo_mean_SE": 1.4806740961201679,
+      "absolute_mean_disagreement_in_SE": 2.197692329549262,
+      "observed_sample_variance": 657.7187336763831,
+      "estimated_MSE_using_exact_bias_plus_sample_variance": 659.3103172526327
+    },
+    {
+      "parent_rho": 200.0,
+      "eps": 1.0,
+      "effective_rho": 200.0,
+      "analytic_continuum_Box_on_1": 0,
+      "exact_finite_volume_mean_bias_from_quadrature": -0.5663574599560952,
+      "MonteCarlo_mean": -304.84094213212245,
+      "MonteCarlo_mean_SE": 131.68140555074075,
+      "absolute_mean_disagreement_in_SE": 2.3106875522749513,
+      "observed_sample_variance": 5201997.7703455975,
+      "estimated_MSE_using_exact_bias_plus_sample_variance": 5201998.09110637
+    },
+    {
+      "parent_rho": 200.0,
+      "eps": 0.5,
+      "effective_rho": 100.0,
+      "analytic_continuum_Box_on_1": 0,
+      "exact_finite_volume_mean_bias_from_quadrature": -1.1398024026263875,
+      "MonteCarlo_mean": -23.08317005655916,
+      "MonteCarlo_mean_SE": 15.658132163626497,
+      "absolute_mean_disagreement_in_SE": 1.4014039110556713,
+      "observed_sample_variance": 73553.1308560784,
+      "estimated_MSE_using_exact_bias_plus_sample_variance": 73554.43000559542
+    },
+    {
+      "parent_rho": 200.0,
+      "eps": 0.2,
+      "effective_rho": 40.0,
+      "analytic_continuum_Box_on_1": 0,
+      "exact_finite_volume_mean_bias_from_quadrature": -3.472005631330316,
+      "MonteCarlo_mean": -0.4889987712107585,
+      "MonteCarlo_mean_SE": 2.6683992694131655,
+      "absolute_mean_disagreement_in_SE": 1.1179012430083526,
+      "observed_sample_variance": 2136.1063983014146,
+      "estimated_MSE_using_exact_bias_plus_sample_variance": 2148.161221405404
+    }
+  ],
+  "best_per_parent_density": {
+    "100.0": {
+      "epsilon_best_of_tested_three": 0.2,
+      "MSE_estimate": 659.3103172526327,
+      "sharp_eps1_MSE_estimate": 1394536.2794542364,
+      "MSE_ratio_best_over_sharp": 0.0004727810433950556
+    },
+    "200.0": {
+      "epsilon_best_of_tested_three": 0.2,
+      "MSE_estimate": 2148.161221405404,
+      "sharp_eps1_MSE_estimate": 5201998.09110637,
+      "MSE_ratio_best_over_sharp": 0.0004129492521494811
+    }
+  },
+  "known_BDG4_mean_integral": "Exact 4D Minkowski future-cone integral 0<t<1, Poisson interval volume kappa*tau^4 (kappa=pi/24) with Poisson polynomial 1-9z+8z\u00b2-4z\u00b3/3, integrated with t/r radial Jacobian.",
+  "limits": "MSE for constant field at origin in fixed finite domain, not generic smooth fields, curved spacetime, stable Lorentzian tensor operator, or physical quantum state. Estimated variance only 300 independent sprinklings, epsilon optimized among 3 fixed choices. Lower epsilon sacrifices locality and changes effective density."
+}
