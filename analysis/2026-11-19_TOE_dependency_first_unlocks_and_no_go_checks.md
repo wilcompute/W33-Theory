@@ -1,6 +1,6 @@
 # TOE dependency-first research: the missing keystones, not more unexplained coincidences
 
-**2026-11-19 | 7 executable gates + dependency graph | CONDITIONAL research, NOT a Theory of Everything.** Main repo: wilcompute/W33-Theory; tested against master `eaedca990e1d9d822a6c894455e3841864bbcd69`, including parallel `d5edaa9a`, `4ea5ae0`, `cb1a667`, `ff5090ff`, and this author's `eaedca990` anomaly/causal pass.
+**2026-11-19 | 7 executable gates + dependency graph | CONDITIONAL research, NOT a Theory of Everything.** Main repo: wilcompute/W33-Theory; initially tested against master `eaedca990e1d9d822a6c894455e3841864bbcd69`, including parallel `d5edaa9a`, `4ea5ae0`, `cb1a667`, `ff5090ff`, and the `eaedca990` anomaly/causal pass. Concurrent master `b9e08278` landed during our tests; its entire commit diff was reviewed. It independently reconstructs causal antichain topology, studies positive-transfer gauge actions, causal-history decoherence and charge-family ambiguity. This pass's E8 Higgs/Green–Schwarz center lattice, quadratic-field causal-operator falsifier, M2 geometric target, same-parity SU5 mass split gate, one-photon mode resource test and explicit dependency DAG are distinct.
 
 ## What we ACTUALLY have versus what is still assumed
 
