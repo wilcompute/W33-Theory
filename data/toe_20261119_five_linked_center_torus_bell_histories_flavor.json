@@ -1,0 +1,526 @@
+{
+  "status": "PASS",
+  "TOE_solved": false,
+  "4d_gravity_derived": false,
+  "SM_chirality_derived": false,
+  "Born_rule_derived": false,
+  "five_gates": {
+    "causal_torus_overlap_chirality_flux": {
+      "status": "PASS",
+      "torus_orders": [
+        {
+          "L": 5,
+          "nerve": {
+            "betti": [
+              1,
+              2,
+              1
+            ],
+            "simplex_counts_0_to_3": [
+              25,
+              300,
+              1200,
+              2425
+            ],
+            "boundary_ranks_1_to_3": [
+              24,
+              274,
+              925
+            ]
+          },
+          "max_overlap": 6,
+          "edges": 50,
+          "degrees_unique": [
+            4
+          ]
+        },
+        {
+          "L": 6,
+          "nerve": {
+            "betti": [
+              1,
+              2,
+              1
+            ],
+            "simplex_counts_0_to_3": [
+              36,
+              432,
+              1728,
+              3492
+            ],
+            "boundary_ranks_1_to_3": [
+              35,
+              395,
+              1332
+            ]
+          },
+          "max_overlap": 6,
+          "edges": 72,
+          "degrees_unique": [
+            4
+          ]
+        },
+        {
+          "L": 7,
+          "nerve": {
+            "betti": [
+              1,
+              2,
+              1
+            ],
+            "simplex_counts_0_to_3": [
+              49,
+              588,
+              2352,
+              4753
+            ],
+            "boundary_ranks_1_to_3": [
+              48,
+              538,
+              1813
+            ]
+          },
+          "max_overlap": 6,
+          "edges": 98,
+          "degrees_unique": [
+            4
+          ]
+        },
+        {
+          "L": 8,
+          "nerve": {
+            "betti": [
+              1,
+              2,
+              1
+            ],
+            "simplex_counts_0_to_3": [
+              64,
+              768,
+              3072,
+              6208
+            ],
+            "boundary_ranks_1_to_3": [
+              63,
+              703,
+              2368
+            ]
+          },
+          "max_overlap": 6,
+          "edges": 128,
+          "degrees_unique": [
+            4
+          ]
+        }
+      ],
+      "L6_flux_index": [
+        {
+          "flux_Q": -1,
+          "m": 1.0,
+          "index": 1,
+          "gap": 0.9115743795172978,
+          "Ginsparg_Wilson_error": 3.1086268017371865e-15
+        },
+        {
+          "flux_Q": -1,
+          "m": 2.5,
+          "index": -1,
+          "gap": 0.4760525711071946,
+          "Ginsparg_Wilson_error": 2.6647304008094002e-15
+        },
+        {
+          "flux_Q": 0,
+          "m": 1.0,
+          "index": 0,
+          "gap": 0.9999999999999983,
+          "Ginsparg_Wilson_error": 3.1086366062001874e-15
+        },
+        {
+          "flux_Q": 0,
+          "m": 2.5,
+          "index": 0,
+          "gap": 0.49999999999999994,
+          "Ginsparg_Wilson_error": 1.998401444979764e-15
+        },
+        {
+          "flux_Q": 1,
+          "m": 1.0,
+          "index": -1,
+          "gap": 0.9115743795172982,
+          "Ginsparg_Wilson_error": 4.4410567679191224e-15
+        },
+        {
+          "flux_Q": 1,
+          "m": 2.5,
+          "index": 1,
+          "gap": 0.476052571107195,
+          "Ginsparg_Wilson_error": 1.5546906429964007e-15
+        }
+      ],
+      "relabeling_invariant_index_sequence": [
+        1,
+        0,
+        -1
+      ],
+      "central_result": "Causal witness overlap recovers an unlabeled 2D torus graph; with a separately CHOSEN coordinate framing, U1 flux and Wilson regulator it supports the standard 2D overlap index.",
+      "not_derived": "Spatial torus and 2+1 causal relation are synthetic; spin orientation, gauge field strength, gamma matrices, Wilson parameter, time metric and Standard Model chirality are all inputs."
+    },
+    "dynamical_fundamental_center": {
+      "status": "PASS",
+      "Haar_quadrature": [
+        {
+          "lambda": 0.0,
+          "beta": 2.0,
+          "b": 1.01,
+          "pure_W": 0.4331274267223118,
+          "pure_W2": 0.35030885991653243,
+          "with_fundamental_W": 0.14612238954690115,
+          "positive_normalized_fermion_determinant_weight": true
+        },
+        {
+          "lambda": 0.0,
+          "beta": 2.0,
+          "b": 2.0,
+          "pure_W": 0.4331274267223118,
+          "pure_W2": 0.35030885991653243,
+          "with_fundamental_W": 0.23394153474827767,
+          "positive_normalized_fermion_determinant_weight": true
+        },
+        {
+          "lambda": 0.0,
+          "beta": 2.0,
+          "b": 10.0,
+          "pure_W": 0.4331274267223118,
+          "pure_W2": 0.35030885991653243,
+          "with_fundamental_W": 0.39788506524168565,
+          "positive_normalized_fermion_determinant_weight": true
+        },
+        {
+          "lambda": 0.0,
+          "beta": 2.0,
+          "b": 1000.0,
+          "pure_W": 0.4331274267223118,
+          "pure_W2": 0.35030885991653243,
+          "with_fundamental_W": 0.4328017259238403,
+          "positive_normalized_fermion_determinant_weight": true
+        },
+        {
+          "lambda": 0.5,
+          "beta": 2.0,
+          "b": 1.01,
+          "pure_W": 0.26924110713255206,
+          "pure_W2": 0.31582130236215145,
+          "with_fundamental_W": -0.0637196652377825,
+          "positive_normalized_fermion_determinant_weight": true
+        },
+        {
+          "lambda": 0.5,
+          "beta": 2.0,
+          "b": 2.0,
+          "pure_W": 0.26924110713255206,
+          "pure_W2": 0.31582130236215145,
+          "with_fundamental_W": 0.02113677653529096,
+          "positive_normalized_fermion_determinant_weight": true
+        },
+        {
+          "lambda": 0.5,
+          "beta": 2.0,
+          "b": 10.0,
+          "pure_W": 0.26924110713255206,
+          "pure_W2": 0.31582130236215145,
+          "with_fundamental_W": 0.21834321957013578,
+          "positive_normalized_fermion_determinant_weight": true
+        },
+        {
+          "lambda": 0.5,
+          "beta": 2.0,
+          "b": 1000.0,
+          "pure_W": 0.26924110713255206,
+          "pure_W2": 0.31582130236215145,
+          "with_fundamental_W": 0.26875418436303933,
+          "positive_normalized_fermion_determinant_weight": true
+        },
+        {
+          "lambda": 1.0,
+          "beta": 2.0,
+          "b": 1.01,
+          "pure_W": 3.376948758033538e-17,
+          "pure_W2": 0.3201313380274266,
+          "with_fundamental_W": -0.32011549072590545,
+          "positive_normalized_fermion_determinant_weight": true
+        },
+        {
+          "lambda": 1.0,
+          "beta": 2.0,
+          "b": 2.0,
+          "pure_W": 3.376948758033538e-17,
+          "pure_W2": 0.3201313380274266,
+          "with_fundamental_W": -0.25610507042194125,
+          "positive_normalized_fermion_determinant_weight": true
+        },
+        {
+          "lambda": 1.0,
+          "beta": 2.0,
+          "b": 10.0,
+          "pure_W": 3.376948758033538e-17,
+          "pure_W2": 0.3201313380274266,
+          "with_fundamental_W": -0.06339234416384681,
+          "positive_normalized_fermion_determinant_weight": true
+        },
+        {
+          "lambda": 1.0,
+          "beta": 2.0,
+          "b": 1000.0,
+          "pure_W": 3.376948758033538e-17,
+          "pure_W2": 0.3201313380274266,
+          "with_fundamental_W": -0.0006402620357927836,
+          "positive_normalized_fermion_determinant_weight": true
+        }
+      ],
+      "adjoint_exact_formula": "<cos(phi)>_with_fund = -[2 b/(b\u00b2+1)] <cos\u00b2(phi)>_pure_adj at all b>1; pure adjoint Wilson = 0",
+      "physical_mechanism": "Dynamical fundamental matter explicitly breaks the pure-adjoint center selection rule without changing its bare pure-glue action. Large b decouples this loop effect.",
+      "limitations": "One-site SU2 Haar toy with an inserted finite Wilson loop determinant, not 4D nonabelian gauge/fermion coupled action, RG running or vacuum unification."
+    },
+    "two_copy_particle_SSR_Bell": {
+      "status": "PASS",
+      "two_copy_local_charge_sector_probabilities": {
+        "0": 0.25,
+        "1": 0.5,
+        "2": 0.25
+      },
+      "CHSH_exact": 2.414213562373095,
+      "formula": "S=1+sqrt(2): p=1/2 sector has Bell 2sqrt2 and p=1/2 product sectors yield 2",
+      "loss_with_all_runs_included": [
+        {
+          "survival_probability_per_photon_eta": 0.0,
+          "SSR_valid_unconditional_CHSH": 2.0
+        },
+        {
+          "survival_probability_per_photon_eta": 0.2,
+          "SSR_valid_unconditional_CHSH": 1.3765685424949243
+        },
+        {
+          "survival_probability_per_photon_eta": 0.4,
+          "SSR_valid_unconditional_CHSH": 1.1062741699796952
+        },
+        {
+          "survival_probability_per_photon_eta": 0.6,
+          "SSR_valid_unconditional_CHSH": 1.1891168824543144
+        },
+        {
+          "survival_probability_per_photon_eta": 0.8,
+          "SSR_valid_unconditional_CHSH": 1.6250966799187812
+        },
+        {
+          "survival_probability_per_photon_eta": 0.9,
+          "SSR_valid_unconditional_CHSH": 1.9755129855222073
+        },
+        {
+          "survival_probability_per_photon_eta": 1.0,
+          "SSR_valid_unconditional_CHSH": 2.414213562373095
+        }
+      ],
+      "fixed_measurements_exact_survival_law": "S(eta)=2-4 eta+(3+sqrt(2)) eta\u00b2; violation only for eta>4/(3+sqrt(2))",
+      "fixed_measurements_symmetric_photon_survival_threshold": 0.9061636786439458,
+      "limitations": "Known two-copy activation of mode entanglement under U1 SSR; two ideal identical single-photon copies, no independent phase ref, supplied ideal measurements; realistic loss, SSR alignment and detector efficiency require lab modeling."
+    },
+    "unlabeled_history_group_action_entropy": {
+      "status": "PASS",
+      "layer_counts": [
+        2,
+        4,
+        2
+      ],
+      "G_order": 96,
+      "M": 16,
+      "unlabeled_history_edge_count_polynomial": [
+        1,
+        2,
+        8,
+        18,
+        50,
+        86,
+        152,
+        190,
+        226,
+        190,
+        152,
+        86,
+        50,
+        18,
+        8,
+        2,
+        1
+      ],
+      "number_unlabeled_layered_histories": 1240,
+      "Burnside_sum_relation": "sum_fixed_z / |G| counts orbits; quotient weights not equal to a groupoid 1/|Aut| weighting",
+      "theta": 2.5,
+      "unlabeled_complex_sum_real_imag": [
+        3.66151942313197,
+        8.19140824995118
+      ],
+      "groupoid_weighted_sum_real_imag": [
+        2.6609244775331267e-06,
+        5.9529163166687246e-06
+      ],
+      "magnitude_ratio_orbit_unweighted_over_groupoid": 1376032.823947896,
+      "large_N_entropy_bounds": [
+        {
+          "N": 8,
+          "bits": 16,
+          "log10_labeled_histories": 4.816479930623699,
+          "log10_orbit_count_lower_bound": 2.834208697584131,
+          "log10_group_size": 1.9822712330395673
+        },
+        {
+          "N": 16,
+          "bits": 64,
+          "log10_labeled_histories": 19.265919722494797,
+          "log10_orbit_count_lower_bound": 11.899976715634114,
+          "log10_group_size": 7.36594300686068
+        },
+        {
+          "N": 32,
+          "bits": 256,
+          "log10_labeled_histories": 77.06367888997919,
+          "log10_orbit_count_lower_bound": 54.53201824932492,
+          "log10_group_size": 22.53166064065426
+        },
+        {
+          "N": 64,
+          "bits": 1024,
+          "log10_labeled_histories": 308.25471555991675,
+          "log10_orbit_count_lower_bound": 246.19330462527816,
+          "log10_group_size": 62.06141093463853
+        }
+      ],
+      "physical_message": "Removing layer-preserving label permutations costs exp(O(N log N)) but this family retains exp(O(N\u00b2)) distinct orbits; automorphism weighting changes quantum amplitudes and does not itself create a 4D phase.",
+      "limit": "Layered incidence matrices with marked layer membership, not all unlabelled posets or a fundamental causal path measure. Orbit sum and groupoid weighting represent distinct model choices."
+    },
+    "anomaly_free_flavor_graph": {
+      "status": "PASS",
+      "rank_table": [
+        {
+          "allowed_offdiagonal_Yukawa_edges": [],
+          "rank_with_zero_sum": 1,
+          "remaining_family_difference_dimension": 2
+        },
+        {
+          "allowed_offdiagonal_Yukawa_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "rank_with_zero_sum": 2,
+          "remaining_family_difference_dimension": 1
+        },
+        {
+          "allowed_offdiagonal_Yukawa_edges": [
+            [
+              1,
+              2
+            ]
+          ],
+          "rank_with_zero_sum": 2,
+          "remaining_family_difference_dimension": 1
+        },
+        {
+          "allowed_offdiagonal_Yukawa_edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "rank_with_zero_sum": 3,
+          "remaining_family_difference_dimension": 0
+        },
+        {
+          "allowed_offdiagonal_Yukawa_edges": [
+            [
+              0,
+              2
+            ]
+          ],
+          "rank_with_zero_sum": 2,
+          "remaining_family_difference_dimension": 1
+        },
+        {
+          "allowed_offdiagonal_Yukawa_edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "rank_with_zero_sum": 3,
+          "remaining_family_difference_dimension": 0
+        },
+        {
+          "allowed_offdiagonal_Yukawa_edges": [
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "rank_with_zero_sum": 3,
+          "remaining_family_difference_dimension": 0
+        },
+        {
+          "allowed_offdiagonal_Yukawa_edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "rank_with_zero_sum": 3,
+          "remaining_family_difference_dimension": 0
+        }
+      ],
+      "one_Higgs_three_generation_Yukawa_tree_minimum_edges": 2,
+      "unbroken_Lmu_minus_Ltau_allowed_Weinberg_operator_indices": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "with_three_nu_c_two_parameter_cubic_anomaly": "0",
+      "without_nu_c_generic_two_parameter_cubic_anomaly": "-648*p*q*(p + q)",
+      "linear_anomalies_zero": "0;0",
+      "Majorana_texture_for_X_0_plus1_minus1": "[[*,0,0],[0,0,*],[0,*,0]]",
+      "core_implication": "Given one neutral Higgs and a connected graph of renormalizable offdiagonal charged-lepton Yukawa couplings, family-difference U1 charge shifts are forced to zero by linear constraints. But observed PMNS mixing can instead arise in the neutrino sector or broken symmetries.",
+      "limitation": "The full charged-lepton Yukawa graph and global gauge group are assumed; flavor connectivity does not emerge from the causal torus and no Yukawa masses or oscillation probabilities are predicted."
+    }
+  },
+  "provenance": "Prior repo overlap index is standard; our new bridge reconstructs spatial 2D torus adjacency from order before using that known lattice regulator. All conclusions conditional.",
+  "references": [
+    "https://arxiv.org/abs/2611.06102",
+    "https://www.nature.com/articles/s41598-018-20034-8",
+    "https://doi.org/10.1103/PhysRevA.82.042116",
+    "https://doi.org/10.1088/1361-6382/acc50c",
+    "https://doi.org/10.1103/PhysRevX.14.031033"
+  ]
+}

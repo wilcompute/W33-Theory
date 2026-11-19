@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-19",
+  "status": "PASS exact Z2 symmetry-versus-quantum-coherence gate",
+  "TOE_solved": false,
+  "histories_acted_on_by_Z2": 2,
+  "rows": [
+    {
+      "state": "symmetric",
+      "same_labeled_diagonal_distribution": [
+        0.4999999999999999,
+        0.4999999999999999
+      ],
+      "Z2_twirl_trace": 0.9999999999999998,
+      "Z2_twirl_purity": 0.9999999999999996,
+      "invariant_projection_trace": 0.9999999999999998,
+      "unnormalized_coherent_sum_weight": 1.9999999999999996,
+      "unitary_action_on_density_preserves_state": true
+    },
+    {
+      "state": "antisymmetric",
+      "same_labeled_diagonal_distribution": [
+        0.4999999999999999,
+        0.4999999999999999
+      ],
+      "Z2_twirl_trace": 0.9999999999999998,
+      "Z2_twirl_purity": 0.9999999999999996,
+      "invariant_projection_trace": 0.0,
+      "unnormalized_coherent_sum_weight": 0.0,
+      "unitary_action_on_density_preserves_state": true
+    },
+    {
+      "state": "classical_incoherent",
+      "same_labeled_diagonal_distribution": [
+        0.5,
+        0.5
+      ],
+      "Z2_twirl_trace": 1.0,
+      "Z2_twirl_purity": 0.5,
+      "invariant_projection_trace": 0.5,
+      "unnormalized_coherent_sum_weight": 1.0,
+      "unitary_action_on_density_preserves_state": true
+    }
+  ],
+  "trivial_rep_projection_P": "(I+U_swap)/2",
+  "twirl_of_density_T": "(rho+U_swap rho U_swap_dagger)/2",
+  "critical_difference": "The antisymmetric density is invariant under conjugation, and is a physical RAY under the exchange, but its vector is not invariant; physical gauge Hilbert selection needs an explicit representation/boundary-sector rule beyond density twirling.",
+  "unlabeled_amplitude_obstruction": "Relative orbit labels carrying amplitudes (1,-1) are not a single-valued complex amplitude on the quotient orbit. Naively choosing a representative gives a sign ambiguity; projecting to trivial representation cancels the orbit amplitude.",
+  "SSR_connection": "A U1 particle-number SSR constrains local accessible observables and charge-sector coherence; this is not the same as quotienting classical histories by permutations or projecting vectors onto gauge-invariant states.",
+  "quantum_measure_limitation": "The unnormalized coherent-sum weights 2,0,1 cannot all be interpreted as normalized probabilities for one exhaustive event; no dynamics, physical decoherence functional or Lorentzian gravity derived."
+}
