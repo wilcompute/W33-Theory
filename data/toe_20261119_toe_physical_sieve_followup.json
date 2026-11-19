@@ -1,0 +1,223 @@
+{
+  "compact_chirality": {
+    "theorem": "On compact connected boundaryless M, harmonic exact 1-form df=0, via integral |df|\u00b2=integral f delta df=0",
+    "3_torus_discrete_vertices": 27,
+    "discrete_exact_gradient_rank": 26,
+    "discrete_harmonic_zero_modes_scalar": 1,
+    "discrete_smallest_positive_laplacian_eigenvalue": 2.9999999999999964,
+    "discrete_integration_by_parts_error": 0.0,
+    "nonexact_harmonic_1_cycle": "constant x-edge flow on T3, divergence zero and not a gradient",
+    "nonexact_cycle_divergence_norm": 0.0,
+    "f1_local_critical_point_count": 3,
+    "f1_local_indices": [
+      -1,
+      -1,
+      -1
+    ],
+    "local_index_sum": -3,
+    "closed_oriented_3manifold_euler": 0,
+    "necessary_global_resolution": "compact smooth globally exact harmonic Cartan background impossible except phi=0; preserving local -3 index requires compensating index, singularities/boundaries, or a different global twisted system",
+    "limitations": "The T3 graph is only a discrete illustration. Gauge-connection-valued harmonic Higgs fields, closed nonexact harmonic 1-forms, singular compactification, and source terms are not excluded."
+  },
+  "SIC_flavor_and_AF_parent": {
+    "SU3_SIC_frame_operator": "6I3",
+    "SU3_repeated_basis_frame_operator": "6I3",
+    "U9_unitary_residual": 6.661379578929775e-16,
+    "U9_orbit_map_residual": 3.0582789749445146e-16,
+    "SIC_pair_overlap_sq": [
+      0.9999999999999991,
+      1.0
+    ],
+    "repeated_basis_pair_overlap_sq_values_and_counts": {
+      "0": 27,
+      "4": 9
+    },
+    "SU9_flavor_no_go": "For full global U(9) flavor invariance and fixed 3x9 frame QQdag=6I, right U9 acts transitively. Any U9-invariant potential cannot distinguish a SIC frame from a repeated-basis frame, so a preferred flavor basis or explicit symmetry breaking/couplings are necessary.",
+    "UV_parent": "SU4 SQCD with Nf=10 vectorlike",
+    "b0_one_loop": 2,
+    "ordinary_massless_SQCD_conformal_window": "3Nc/2<Nf<3Nc, here 6<10<12",
+    "IR_SCFT_superconformal_RQ": "3/5",
+    "IR_SCFT_scaling_dimensions": {
+      "Q": "9/10",
+      "meson_QQtilde": "9/5",
+      "baryon_Q4": "18/5",
+      "singlet_times_baryon_if_free_singlet": "23/5"
+    },
+    "IR_baryon_as_deformation": "B=Q^4 has dimension 18/5>3 in the undeformed SCFT, so its superpotential coupling is irrelevant. S*B is even more irrelevant for a decoupled free S. Relevant/marginal interactions can change the fixed point and must be analyzed.",
+    "limitations": "The Seiberg SCFT analysis assumes ordinary massless SQCD with no vacuum-selecting superpotential, no weakly coupled Higgs VEV, and no accidental R mixing. U9 flavor is not a symmetry if explicit flavor-dependent Yukawas/targets are inserted."
+  },
+  "curved_slice_gravity": {
+    "continuum_matter_H": "int N [pi_phi^2 + (partial_x phi)^2]/(2 sqrt(q))",
+    "continuum_matter_D": "int xi pi_phi partial_x(phi)",
+    "exact_matter_Poisson_bracket": "{H_m[N],H_m[M]} = D_m[(N Mprime-M Nprime)/q]",
+    "variable_spatial_metric_q": true,
+    "discrete_bracket_relative_residuals": [
+      {
+        "N": 32,
+        "centered": 0.21617370051834062,
+        "spectral": 1.98926125978353e-08
+      },
+      {
+        "N": 64,
+        "centered": 0.055531022571875616,
+        "spectral": 1.979374415218733e-14
+      },
+      {
+        "N": 128,
+        "centered": 0.013976752020406774,
+        "spectral": 6.860676651466029e-14
+      },
+      {
+        "N": 256,
+        "centered": 0.003500078685407456,
+        "spectral": 8.211018299497097e-14
+      }
+    ],
+    "spectral_high_mode_alias_relative_error": 1.4170895931334293,
+    "gravitational_momentum_diffeomorphism_density": "D_g=p_q qprime -2 (q p_q)prime",
+    "sample_nonzero_Dg_norm": 25.561991509270175,
+    "no_go": "Promoting q from external function to canonical variable without adding H_grav cannot make the matter HH bracket equal the FULL diffeomorphism constraint D_m+D_g. A complete gravitational Hamiltonian is necessary.",
+    "scope": "This is a classical 1+1 matter-on-curved-spatial-slice benchmark, NOT Einstein gravity, not a 3+1 field-dependent canonical gravitational constraint calculation."
+  },
+  "operational_memory": {
+    "entanglement_breaking_input_output_fidelity_upper": 0.3333333333333333,
+    "depolarizing_storage_probability": 0.2,
+    "conditional_Bell_fidelity": 0.8222222222222222,
+    "event_ready_detection_efficiency_threshold": 0.4054054054054054,
+    "efficiency_shot_sufficient_bounds": [
+      {
+        "eta": 0.3,
+        "unconditional_Bell_success": 0.24666666666666665,
+        "beats_EB_bound": false,
+        "sufficient_Hoeffding_trials_if_rate_exact": null
+      },
+      {
+        "eta": 0.4,
+        "unconditional_Bell_success": 0.3288888888888889,
+        "beats_EB_bound": false,
+        "sufficient_Hoeffding_trials_if_rate_exact": null
+      },
+      {
+        "eta": 0.41,
+        "unconditional_Bell_success": 0.3371111111111111,
+        "beats_EB_bound": true,
+        "sufficient_Hoeffding_trials_if_rate_exact": 242011
+      },
+      {
+        "eta": 0.45,
+        "unconditional_Bell_success": 0.37,
+        "beats_EB_bound": true,
+        "sufficient_Hoeffding_trials_if_rate_exact": 2569
+      },
+      {
+        "eta": 0.5,
+        "unconditional_Bell_success": 0.4111111111111111,
+        "beats_EB_bound": true,
+        "sufficient_Hoeffding_trials_if_rate_exact": 571
+      },
+      {
+        "eta": 0.6,
+        "unconditional_Bell_success": 0.4933333333333333,
+        "beats_EB_bound": true,
+        "sufficient_Hoeffding_trials_if_rate_exact": 135
+      },
+      {
+        "eta": 0.8,
+        "unconditional_Bell_success": 0.6577777777777778,
+        "beats_EB_bound": true,
+        "sufficient_Hoeffding_trials_if_rate_exact": 33
+      },
+      {
+        "eta": 1.0,
+        "unconditional_Bell_success": 0.8222222222222222,
+        "beats_EB_bound": true,
+        "sufficient_Hoeffding_trials_if_rate_exact": 15
+      }
+    ],
+    "Hoeffding_assumptions": "Independent Bernoulli trial success indicators; no hidden reference bypass, and Bell success evaluated on all heralded input trials with lost outputs scored zero",
+    "minimum_quantum_branch_fraction_in_mixture_at_eta_0p5": 0.1166666666666667,
+    "mixture_bound_assumption": "Channel is c times ideal unitary quantum memory plus 1-c arbitrary entanglement-breaking; not a universal lower bound on quantum channel capacity.",
+    "single_photon_mode_examples": [
+      {
+        "n_qubits": 5,
+        "single_photon_modes": 32
+      },
+      {
+        "n_qubits": 10,
+        "single_photon_modes": 1024
+      },
+      {
+        "n_qubits": 20,
+        "single_photon_modes": 1048576
+      },
+      {
+        "n_qubits": 40,
+        "single_photon_modes": 1099511627776
+      }
+    ],
+    "single_photon_capacity": "Faithful arbitrary n-qubit Hilbert-space encoding into a single one-excitation state with M orthogonal modes requires M>=2^n.",
+    "limits": "No actual photonic data, no experimental loophole closure, no full hardware process tensor or fault-tolerant encoded T9 operation."
+  },
+  "unification": {
+    "fivebar_chiral_beta_shift": [
+      "1/2",
+      "1/2",
+      "1/2"
+    ],
+    "ten_chiral_beta_shift": [
+      "3/2",
+      "3/2",
+      "3/2"
+    ],
+    "vectorlike_5plus5bar_shift": [
+      "1",
+      "1",
+      "1"
+    ],
+    "vectorlike_10plus10bar_shift": [
+      "3",
+      "3",
+      "3"
+    ],
+    "SU5_complete_multiplet_no_go": "Equal-threshold complete SU5 multiplets shift beta1,beta2,beta3 equally, so alpha_i^-1-alpha_j^-1 and one-loop crossing scales are unchanged.",
+    "representative_MSbar_inputs": {
+      "inverse_alpha_em": 127.93,
+      "sin2_weak": 0.23122,
+      "alpha_s": 0.1177,
+      "MZ_GeV": 91.1876
+    },
+    "one_step_SM_below_and_MSSM_above_fitted_threshold_GeV": 68.32673775756315,
+    "formal_exact_unification_GeV": 2.1768610615536324e+16,
+    "formal_fit_log_Mthreshold_over_MZ": -0.288617757733082,
+    "formal_fit_log_Mgut_over_Mthreshold": 33.39494428187021,
+    "central_one_loop_threshold_below_MZ": true,
+    "one_loop_strong_coupling_sensitivity": [
+      {
+        "alpha_s_MZ": 0.1168,
+        "formal_exact_threshold_GeV": 92.51726559767472,
+        "formal_unification_GeV": 1.9890902565789092e+16
+      },
+      {
+        "alpha_s_MZ": 0.1177,
+        "formal_exact_threshold_GeV": 68.32673775756315,
+        "formal_unification_GeV": 2.1768610615536244e+16
+      },
+      {
+        "alpha_s_MZ": 0.1186,
+        "formal_exact_threshold_GeV": 50.69397805559485,
+        "formal_unification_GeV": 2.379098109716717e+16
+      }
+    ],
+    "TeV_threshold_inverse_alpha3_minus_alpha1_at_alpha1alpha2_crossing": -0.5796153391880878,
+    "limitation": "One-loop sharp spectrum benchmark only. Below-MZ fitted threshold is not physically an above-MZ MSSM threshold; realistic mass splittings, two-loop running, matching, proton-decay limits and GUT gravitational thresholds not included."
+  },
+  "two_RH_neutrino_rank": {
+    "minimal_two_RH_neutrino_seesaw_rank_bound": 2,
+    "one_massless_active_neutrino_is_oscillation_compatible": true,
+    "random_two_RH_seesaw_samples": 30,
+    "normal_ordering_massless_min_sum_eV": 0.05873293681861549,
+    "inverted_ordering_massless_min_sum_eV": 0.09961657665582832,
+    "source_mass_splittings": "Bari preliminary 2026.a values reproduced from 8efe83ec model-independent report, not experimental inference from this script.",
+    "cross_sector_caveat": "Rank-two light neutrino mass matrix may be phenomenologically acceptable, unlike rank-two charged-fermion Yukawas leaving a massless charged family."
+  }
+}
