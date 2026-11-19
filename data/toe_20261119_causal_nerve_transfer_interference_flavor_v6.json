@@ -1,0 +1,625 @@
+{
+  "date": "2026-11-19",
+  "status": "PASS five research fronts plus one cross-sector gate, not a fundamental completion",
+  "TOE_solved": false,
+  "Lorentzian_4D_GR_derived": false,
+  "SM_spectrum_derived": false,
+  "Born_rule_derived": false,
+  "sources": [
+    "https://arxiv.org/abs/2611.06102",
+    "https://github.com/stelios-tsilioukas/topology-change-in-causal-set-theory",
+    "https://arxiv.org/abs/gr-qc/0604124",
+    "https://doi.org/10.1088/0264-9381/26/17/175008",
+    "https://www.scholarpedia.org/article/Lattice_gauge_theories",
+    "https://doi.org/10.1088/1361-6382/acc50c",
+    "https://doi.org/10.1007/s10714-024-03281-1",
+    "https://doi.org/10.1016/S0550-3213(99)00115-7"
+  ],
+  "gates": {
+    "I_intrinsic_order_based_spatial_nerve_H1_and_spin_torsor": {
+      "status": "PASS",
+      "synthetic_space": "1+1 Lorentzian cylinder A spatial circle, periodic n=12; coordinates only generate the bipartite relation",
+      "order_based_Dowker_nerve_at_shadow_scales": [
+        {
+          "future_lightcone_shadow_radius_in_antichain_spacings": 0,
+          "inferred_from_order_only": {
+            "betti_H0_H1_mod2": [
+              12,
+              0
+            ],
+            "nerve_face_counts_0_1_2": [
+              12,
+              0,
+              0
+            ],
+            "GF2_boundary_ranks_1_2": [
+              0,
+              0
+            ],
+            "maximal_shadow_sizes": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "candidate_Z2_spin_holonomy_sectors": 1
+        },
+        {
+          "future_lightcone_shadow_radius_in_antichain_spacings": 1,
+          "inferred_from_order_only": {
+            "betti_H0_H1_mod2": [
+              1,
+              1
+            ],
+            "nerve_face_counts_0_1_2": [
+              12,
+              24,
+              12
+            ],
+            "GF2_boundary_ranks_1_2": [
+              11,
+              12
+            ],
+            "maximal_shadow_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "candidate_Z2_spin_holonomy_sectors": 2
+        },
+        {
+          "future_lightcone_shadow_radius_in_antichain_spacings": 2,
+          "inferred_from_order_only": {
+            "betti_H0_H1_mod2": [
+              1,
+              1
+            ],
+            "nerve_face_counts_0_1_2": [
+              12,
+              48,
+              72
+            ],
+            "GF2_boundary_ranks_1_2": [
+              11,
+              36
+            ],
+            "maximal_shadow_sizes": [
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5
+            ]
+          },
+          "candidate_Z2_spin_holonomy_sectors": 2
+        },
+        {
+          "future_lightcone_shadow_radius_in_antichain_spacings": 3,
+          "inferred_from_order_only": {
+            "betti_H0_H1_mod2": [
+              1,
+              0
+            ],
+            "nerve_face_counts_0_1_2": [
+              12,
+              66,
+              180
+            ],
+            "GF2_boundary_ranks_1_2": [
+              11,
+              55
+            ],
+            "maximal_shadow_sizes": [
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7
+            ]
+          },
+          "candidate_Z2_spin_holonomy_sectors": 1
+        },
+        {
+          "future_lightcone_shadow_radius_in_antichain_spacings": 4,
+          "inferred_from_order_only": {
+            "betti_H0_H1_mod2": [
+              1,
+              0
+            ],
+            "nerve_face_counts_0_1_2": [
+              12,
+              66,
+              220
+            ],
+            "GF2_boundary_ranks_1_2": [
+              11,
+              55
+            ],
+            "maximal_shadow_sizes": [
+              9,
+              9,
+              9,
+              9,
+              9,
+              9,
+              9,
+              9,
+              9,
+              9,
+              9,
+              9
+            ]
+          },
+          "candidate_Z2_spin_holonomy_sectors": 1
+        },
+        {
+          "future_lightcone_shadow_radius_in_antichain_spacings": 5,
+          "inferred_from_order_only": {
+            "betti_H0_H1_mod2": [
+              1,
+              0
+            ],
+            "nerve_face_counts_0_1_2": [
+              12,
+              66,
+              220
+            ],
+            "GF2_boundary_ranks_1_2": [
+              11,
+              55
+            ],
+            "maximal_shadow_sizes": [
+              11,
+              11,
+              11,
+              11,
+              11,
+              11,
+              11,
+              11,
+              11,
+              11,
+              11,
+              11
+            ]
+          },
+          "candidate_Z2_spin_holonomy_sectors": 1
+        }
+      ],
+      "stable_H1_plateau_radii": [
+        1,
+        2
+      ],
+      "two_supplementary_spin_transport_spectra": [
+        {
+          "spin_winding_pi": 0.0,
+          "naive_derivative_zero_modes": 2,
+          "minimum_squared_massless_Dirac_eigenvalue": 0.0
+        },
+        {
+          "spin_winding_pi": 3.141592653589793,
+          "naive_derivative_zero_modes": 0,
+          "minimum_squared_massless_Dirac_eigenvalue": 0.06698729810778058
+        }
+      ],
+      "analysis": "An order-only thickened-antichain nerve CAN recover H1 when the whole bounded-order complex is contractible. The spin lift and charged parallel transport are still independent choices.",
+      "known_prior_art": "Major et al 2007, stable homology of causal sets 2009; Tsilioukas arXiv:2611.06102 with full causal-neighborhood topology-changing numerical implementation.",
+      "limit": "This is a synthetically embedded 1+1 cylinder with a chosen distinguished antichain/landmarks and resolution, not a Lorentzian fermion theory or intrinsic 3+1 manifold-selection algorithm."
+    },
+    "II_SU2_positive_type_transfer_action_nonuniqueness": {
+      "status": "PASS",
+      "SU2_Haar_spins_n": "j=n/2, n=0..8",
+      "fixed_bare_beta": 2,
+      "reflection_positive_mixed_action_family": [
+        {
+          "lambda_adj_mixture": 0.0,
+          "character_coefficients_n_0_to_8": [
+            0.21526928924893765,
+            0.18647806660946678,
+            0.08637366791841268,
+            0.027461461545282752,
+            0.006648805470940787,
+            0.0012993594922793379,
+            0.0002128112133614492,
+            2.99896161474085e-05,
+            3.707871852333096e-06
+          ],
+          "normalized_transfer_eigenvalues_n_0_to_8": [
+            1.0,
+            0.4331274267223118,
+            0.13374514655537645,
+            0.031891987056182326,
+            0.006177198330647248,
+            0.001005995402946026,
+            0.00014122591297090228,
+            1.7414012149643226e-05,
+            1.9138157737582496e-06
+          ],
+          "fundamental_Wilson_mean": 0.4331274267223118,
+          "admissible_nonnegative_character_coefficients_tested": true
+        },
+        {
+          "lambda_adj_mixture": 0.25,
+          "character_coefficients_n_0_to_8": [
+            0.24646840530205483,
+            0.1787123751022552,
+            0.07968207382736664,
+            0.02666660022317182,
+            0.007341421843774294,
+            0.001739890270021657,
+            0.00036563355018733035,
+            6.948348581331835e-05,
+            1.2114341731106872e-05
+          ],
+          "normalized_transfer_eigenvalues_n_0_to_8": [
+            1.0,
+            0.3625462153723873,
+            0.10776509566505253,
+            0.027048700411003043,
+            0.005957292444666204,
+            0.0011765471980674132,
+            0.00021192722145648696,
+            3.523955014039433e-05,
+            5.461300276899077e-06
+          ],
+          "fundamental_Wilson_mean": 0.3625462153723873,
+          "admissible_nonnegative_character_coefficients_tested": true
+        },
+        {
+          "lambda_adj_mixture": 0.5,
+          "character_coefficients_n_0_to_8": [
+            0.29263155291605053,
+            0.15757688657807084,
+            0.07704555970077309,
+            0.02592933231404811,
+            0.008028592004691366,
+            0.002089067885049132,
+            0.0005062886129583635,
+            0.0001102719995286737,
+            2.2620290313938793e-05
+          ],
+          "normalized_transfer_eigenvalues_n_0_to_8": [
+            1.0,
+            0.269241107132552,
+            0.08776173648286856,
+            0.022151859612936763,
+            0.005487167685567107,
+            0.001189816946846489,
+            0.0002471604445508534,
+            4.7103601111116455e-05,
+            8.58884001192678e-06
+          ],
+          "fundamental_Wilson_mean": 0.269241107132552,
+          "admissible_nonnegative_character_coefficients_tested": true
+        },
+        {
+          "lambda_adj_mixture": 0.75,
+          "character_coefficients_n_0_to_8": [
+            0.36551207070786385,
+            0.10849365327743128,
+            0.0881068524992978,
+            0.021324320084941197,
+            0.009766558235796086,
+            0.002100165006263941,
+            0.000702836174872325,
+            0.00013793090799024688,
+            3.7377375650257325e-05
+          ],
+          "normalized_transfer_eigenvalues_n_0_to_8": [
+            1.0,
+            0.14841322896302517,
+            0.08035015307763242,
+            0.014585236572108105,
+            0.005344041424887456,
+            0.0009576359554039195,
+            0.00027469726962629527,
+            4.7170435344010973e-05,
+            1.1362256055934213e-05
+          ],
+          "fundamental_Wilson_mean": 0.14841322896302517,
+          "admissible_nonnegative_character_coefficients_tested": true
+        },
+        {
+          "lambda_adj_mixture": 1.0,
+          "character_coefficients_n_0_to_8": [
+            0.4886144672642784,
+            3.45327548312123e-17,
+            0.13706874547520836,
+            3.895251553022839e-17,
+            0.017747716202097884,
+            1.479940923144486e-17,
+            0.0015043818886877024,
+            -1.2453216363972146e-16,
+            9.497201335633212e-05
+          ],
+          "normalized_transfer_eigenvalues_n_0_to_8": [
+            1.0,
+            3.5337425664613476e-17,
+            0.09350845070323552,
+            1.9930087082931188e-17,
+            0.007264507046410733,
+            5.048086723774207e-18,
+            0.0004398389994206159,
+            -3.185849273379307e-17,
+            2.1596671067813092e-05
+          ],
+          "fundamental_Wilson_mean": 3.5337425664613476e-17,
+          "admissible_nonnegative_character_coefficients_tested": true
+        }
+      ],
+      "exact_all_angle_action": "S_lambda=S_fund-lambda S_fund\u00b2/2; identical \u03b8\u00b2/8 to leading order for all lambda",
+      "positive_type_factorization": "w_lambda(U) proportional to exp[beta(1-lambda) \u03c7_f(U)/2] exp[beta lambda \u03c7_adj(U)/8]; because representations and their tensor products have nonnegative fusion multiplicities, coefficients are nonnegative for 0<=lambda<=1.",
+      "main_new_test": "Nonnegative character/transfer spectra for all five sampled lambda show positivity does not uniquely select fundamental vs adjoint or the center sector.",
+      "limit": "A one-plaquette SU2 transfer/character test, not a proof of Osterwalder-Schrader positivity for arbitrary coupled dynamical fermion/gravity lattice systems."
+    },
+    "III_transfer_Hilbert_sectors_and_quantum_state_choice": {
+      "status": "PASS",
+      "transfer_derived_effective_sector_energies": [
+        {
+          "lambda_adj_mixture": 0.0,
+          "fundamental_transfer_eigenvalue": 0.4331274267223118,
+          "effective_one_step_spin_half_energy_if_allowed": 0.8367233062315889,
+          "fundamental_sector_is_absent_in_strict_adjoint": false
+        },
+        {
+          "lambda_adj_mixture": 0.25,
+          "fundamental_transfer_eigenvalue": 0.3625462153723873,
+          "effective_one_step_spin_half_energy_if_allowed": 1.0146033221312063,
+          "fundamental_sector_is_absent_in_strict_adjoint": false
+        },
+        {
+          "lambda_adj_mixture": 0.5,
+          "fundamental_transfer_eigenvalue": 0.269241107132552,
+          "effective_one_step_spin_half_energy_if_allowed": 1.3121479917824426,
+          "fundamental_sector_is_absent_in_strict_adjoint": false
+        },
+        {
+          "lambda_adj_mixture": 0.75,
+          "fundamental_transfer_eigenvalue": 0.14841322896302517,
+          "effective_one_step_spin_half_energy_if_allowed": 1.907754808266248,
+          "fundamental_sector_is_absent_in_strict_adjoint": false
+        },
+        {
+          "lambda_adj_mixture": 1.0,
+          "fundamental_transfer_eigenvalue": 3.5337425664613476e-17,
+          "effective_one_step_spin_half_energy_if_allowed": null,
+          "fundamental_sector_is_absent_in_strict_adjoint": true
+        }
+      ],
+      "same_causal_response_distinct_KMS_states": [
+        {
+          "inverse_temperature": 0.4,
+          "retarded_G": 0.37760015596482793,
+          "KMS_noise": 0.6886612703611356,
+          "oscillator_energy": 2.5955990046168655
+        },
+        {
+          "inverse_temperature": 2.0,
+          "retarded_G": 0.37760015596482793,
+          "KMS_noise": 0.24109344864286483,
+          "oscillator_energy": 0.9086933478760986
+        },
+        {
+          "inverse_temperature": 10.0,
+          "retarded_G": 0.37760015596482793,
+          "KMS_noise": 0.22552101739637673,
+          "oscillator_energy": 0.8500000703789441
+        }
+      ],
+      "cross_sector_conclusion": "Reflection-positive transfer matrices CAN produce candidate Hamiltonians, but a continuum of admissible microscopic actions gives inequivalent spectra, center-sensitive Hilbert sectors, and state-selection rules; positivity alone does not fix the Born/physical vacuum.",
+      "limitation": "Transfer energies are per arbitrary lattice time step, not measured particle masses or unique relativistic clocks."
+    },
+    "IV_oscillatory_KR_entropy_and_coherence_quantum_measure": {
+      "status": "PASS",
+      "theta_radians_per_link": 2.5,
+      "critical_phase_for_absolute_suppression_radians": 2.0943951023931953,
+      "closed_form_Z": "Z_N(theta)=(1+exp(i theta))^{N\u00b2/4}",
+      "coherent_interference_condition": "2*abs(cos(theta/2))<1 for absolute amplitude suppression in this toy family",
+      "size_scaling_records": [
+        {
+          "N": 8,
+          "independent_links_M": 16,
+          "log10_number_of_labeled_histories": 4.816479930623699,
+          "log10_absolute_coherent_partition_magnitude": -3.20344372317675,
+          "log10_coherent_vs_unsigned_amplitude_ratio": -8.019923653800449,
+          "coherence_shortfall_max_log10_for_total_weight_below_1": -4.816479930623699,
+          "coherent_absolute_amplitude_falls_with_size": true
+        },
+        {
+          "N": 16,
+          "independent_links_M": 64,
+          "log10_number_of_labeled_histories": 19.265919722494797,
+          "log10_absolute_coherent_partition_magnitude": -12.813774892707,
+          "log10_coherent_vs_unsigned_amplitude_ratio": -32.079694615201795,
+          "coherence_shortfall_max_log10_for_total_weight_below_1": -19.265919722494797,
+          "coherent_absolute_amplitude_falls_with_size": true
+        },
+        {
+          "N": 32,
+          "independent_links_M": 256,
+          "log10_number_of_labeled_histories": 77.06367888997919,
+          "log10_absolute_coherent_partition_magnitude": -51.255099570828,
+          "log10_coherent_vs_unsigned_amplitude_ratio": -128.31877846080718,
+          "coherence_shortfall_max_log10_for_total_weight_below_1": -77.06367888997919,
+          "coherent_absolute_amplitude_falls_with_size": true
+        },
+        {
+          "N": 64,
+          "independent_links_M": 1024,
+          "log10_number_of_labeled_histories": 308.25471555991675,
+          "log10_absolute_coherent_partition_magnitude": -205.020398283312,
+          "log10_coherent_vs_unsigned_amplitude_ratio": -513.2751138432287,
+          "coherence_shortfall_max_log10_for_total_weight_below_1": -308.25471555991675,
+          "coherent_absolute_amplitude_falls_with_size": true
+        }
+      ],
+      "N8_direct_complex_sum_real_imag": [
+        0.000255448748424425,
+        0.0005714799670681892
+      ],
+      "N8_closed_sum_real_imag": [
+        0.0002554487498431802,
+        0.0005714799664001976
+      ],
+      "partial_decoherence_PSD_certificates": [
+        {
+          "coherent_fraction_gamma": 0.0,
+          "minimum_eigenvalue": 1.0,
+          "all_histories_weight_small_sample": 6.0
+        },
+        {
+          "coherent_fraction_gamma": 0.5,
+          "minimum_eigenvalue": 0.49999999999999967,
+          "all_histories_weight_small_sample": 11.262564888345235
+        },
+        {
+          "coherent_fraction_gamma": 1.0,
+          "minimum_eigenvalue": -4.818766493756711e-16,
+          "all_histories_weight_small_sample": 16.52512977669047
+        }
+      ],
+      "decoherence_full_family_identity": "For D=(1-gamma)I+gamma vv\u2020, A(all histories)=(1-gamma)2^M+gamma*abs(Z_N(theta))\u00b2. Unless 1-gamma is exponentially small in M, incoherent history entropy survives.",
+      "qualifier": "Exact KR-like 3-layer labeled subclass, linear link-phase ansatz, coherent/decohered family model only. DOES NOT show 3+1 Einstein phase dominance or a physical consistent-histories quantum measure."
+    },
+    "V_3generation_global_quotient_flavor_charge_freedom": {
+      "status": "PASS",
+      "symbolic_integer_parameter": "k",
+      "charge_deformation": "y_new = y_SM + 6 k (L_mu-L_tau), y=6Y",
+      "symbolic_three_generation_all_perturbative_anomalies": {
+        "U1_cube": "0",
+        "grav_U1": "0",
+        "SU2_squared_U1": "0",
+        "SU3_squared_U1": "0"
+      },
+      "global_Z6_and_anomaly_cases": [
+        {
+          "k": -2,
+          "mu_neutrino_electric_charge": "-2",
+          "tau_neutrino_electric_charge": "2",
+          "all_Z6_center_residues_zero": true,
+          "all_local_anomalies_zero": true,
+          "diagonal_charged_lepton_Yukawas_allowed": true,
+          "offdiagonal_charged_lepton_Yukawas_all_allowed": false
+        },
+        {
+          "k": -1,
+          "mu_neutrino_electric_charge": "-1",
+          "tau_neutrino_electric_charge": "1",
+          "all_Z6_center_residues_zero": true,
+          "all_local_anomalies_zero": true,
+          "diagonal_charged_lepton_Yukawas_allowed": true,
+          "offdiagonal_charged_lepton_Yukawas_all_allowed": false
+        },
+        {
+          "k": 0,
+          "mu_neutrino_electric_charge": "0",
+          "tau_neutrino_electric_charge": "0",
+          "all_Z6_center_residues_zero": true,
+          "all_local_anomalies_zero": true,
+          "diagonal_charged_lepton_Yukawas_allowed": true,
+          "offdiagonal_charged_lepton_Yukawas_all_allowed": true
+        },
+        {
+          "k": 1,
+          "mu_neutrino_electric_charge": "1",
+          "tau_neutrino_electric_charge": "-1",
+          "all_Z6_center_residues_zero": true,
+          "all_local_anomalies_zero": true,
+          "diagonal_charged_lepton_Yukawas_allowed": true,
+          "offdiagonal_charged_lepton_Yukawas_all_allowed": false
+        },
+        {
+          "k": 2,
+          "mu_neutrino_electric_charge": "2",
+          "tau_neutrino_electric_charge": "-2",
+          "all_Z6_center_residues_zero": true,
+          "all_local_anomalies_zero": true,
+          "diagonal_charged_lepton_Yukawas_allowed": true,
+          "offdiagonal_charged_lepton_Yukawas_all_allowed": false
+        }
+      ],
+      "same_anomaly_free_without_nu_c": true,
+      "main_new_insight": "Even without right-handed neutrinos, 3-generation anomalies + global Z6 + DIAGONAL Yukawas allow charge dequantization by Lmu-Ltau. Earlier one-generation uniqueness with no nu_c implicitly assumed generation-universal charges/full flavor connectivity.",
+      "physical_falsifier": "Observed neutral neutrinos require k=0 in this simple one-Higgs branch. Generic offdiagonal lepton Yukawas also force k=0 unless extra flavor-breaking fields are supplied.",
+      "missing_ingredients": "The nonabelian SM multiplets, Higgs and flavor pattern are inputs; local/global anomalies alone do not select observed Y or 3 families."
+    },
+    "VI_spin_center_compensation_on_topology_change": {
+      "status": "PASS",
+      "prior_S3_b1": 0,
+      "after_S1xS2_b1": 1,
+      "prior_number_of_spin_structures": 1,
+      "after_number_of_spin_structures": 2,
+      "spin_and_center_twist_combination": "(s,z) -> s+z modulo 2 on SU2 fundamental; a gauge singlet sees s alone.",
+      "four_conditional_after_transition_sectors": [
+        {
+          "spin_Z2_twist": 0,
+          "SU2_central_minus_identity_twist": 0,
+          "effective_fundamental_twist": 0,
+          "gauge_singlet_twist": 0,
+          "fundamental_massless_naive_zero_modes": 2,
+          "neutral_massless_naive_zero_modes": 2
+        },
+        {
+          "spin_Z2_twist": 0,
+          "SU2_central_minus_identity_twist": 1,
+          "effective_fundamental_twist": 1,
+          "gauge_singlet_twist": 0,
+          "fundamental_massless_naive_zero_modes": 0,
+          "neutral_massless_naive_zero_modes": 2
+        },
+        {
+          "spin_Z2_twist": 1,
+          "SU2_central_minus_identity_twist": 0,
+          "effective_fundamental_twist": 1,
+          "gauge_singlet_twist": 1,
+          "fundamental_massless_naive_zero_modes": 0,
+          "neutral_massless_naive_zero_modes": 0
+        },
+        {
+          "spin_Z2_twist": 1,
+          "SU2_central_minus_identity_twist": 1,
+          "effective_fundamental_twist": 0,
+          "gauge_singlet_twist": 1,
+          "fundamental_massless_naive_zero_modes": 2,
+          "neutral_massless_naive_zero_modes": 0
+        }
+      ],
+      "physical_distinction": "A charged doublet alone cannot distinguish a spin twist from an SU2 center twist, but adding an appropriate gauge singlet can.",
+      "cobordism_warning": "Homology does not fix which spin structure extends through the specific spacetime cobordism, nor whether the SU2 center holonomy sector is physically populated.",
+      "scope": "Conditional bundle/flat-holonomy effect on S1xS2 in a finite 1D spectral model; not an emergent SM particle family or an actual spin quantum field on the causal set."
+    }
+  }
+}
