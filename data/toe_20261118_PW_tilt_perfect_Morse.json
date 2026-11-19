@@ -1,0 +1,301 @@
+{
+  "scope": "harmonic tilt removes extra local mirror critical pair; no global G2 or SM completion",
+  "geometry": {
+    "harmonic": true,
+    "real_axis_fold_threshold": "2/(3*sqrt(3))",
+    "arbitrary_complex_tilt_sufficient_bound": "abs(A+iB)>4/(3*sqrt(3))",
+    "critical_circle_radius": "1/sqrt(3)",
+    "caustic_parameter": "exp(-3i*theta)/(3sqrt(3))-exp(i*theta)/sqrt(3)",
+    "caustic_rotated_astroid": "a(phi+pi/4)=-exp(i*pi/4)*4/(3sqrt(3))*(cos(phi)^3+i*sin(phi)^3)",
+    "tilt1_critical_points": [
+      {
+        "point": [
+          1.324717957244746,
+          0.0,
+          0.0
+        ],
+        "Hessian_eigenvalues": [
+          -6.264632998740079,
+          2.0,
+          4.264632998740079
+        ]
+      },
+      {
+        "point": [
+          -0.22669882575820188,
+          1.0743263344070286,
+          0.0
+        ],
+        "Hessian_eigenvalues": [
+          -4.616708291201771,
+          2.0,
+          2.616708291201771
+        ]
+      },
+      {
+        "point": [
+          -0.22669882575820188,
+          -1.0743263344070286,
+          0.0
+        ],
+        "Hessian_eigenvalues": [
+          -4.616708291201771,
+          2.0,
+          2.616708291201771
+        ]
+      }
+    ],
+    "critical_count": 3,
+    "all_Morse_index": 1,
+    "L2_betti_positive_charge": [
+      0,
+      3,
+      0,
+      0
+    ],
+    "planar_H2_large_q_coefficient": 5.233416582403542,
+    "general_source": "degree minus3 + strict concavity inside critical disk; linear term does not change infinity winding"
+  },
+  "spectral": [
+    {
+      "tilt": 0.0,
+      "q": 4.0,
+      "n": 56,
+      "width_ratio": 1.0,
+      "H2_lowest": 0.5136341045857299,
+      "H2_second": 9.024819101891147,
+      "H2_lowest_over_q": 0.12840852614643247,
+      "estimated_full3D_first_positive": 0.5136341045857299,
+      "full_operator_L2_residual": 0.001944882872698324
+    },
+    {
+      "tilt": 0.2,
+      "q": 4.0,
+      "n": 56,
+      "width_ratio": 1.0,
+      "H2_lowest": 0.7555297128580494,
+      "H2_second": 9.227143730108804,
+      "H2_lowest_over_q": 0.18888242821451234,
+      "estimated_full3D_first_positive": 0.7555297128580494,
+      "full_operator_L2_residual": 0.0018321443064472345
+    },
+    {
+      "tilt": 0.38,
+      "q": 4.0,
+      "n": 56,
+      "width_ratio": 1.0,
+      "H2_lowest": 1.4576938104331203,
+      "H2_second": 9.76889724537699,
+      "H2_lowest_over_q": 0.3644234526082801,
+      "estimated_full3D_first_positive": 1.4576938104331203,
+      "full_operator_L2_residual": 0.0017507764368947696
+    },
+    {
+      "tilt": 0.4,
+      "q": 4.0,
+      "n": 56,
+      "width_ratio": 1.0,
+      "H2_lowest": 1.5698199236514057,
+      "H2_second": 9.851355407397907,
+      "H2_lowest_over_q": 0.3924549809128514,
+      "estimated_full3D_first_positive": 1.5698199236514057,
+      "full_operator_L2_residual": 0.0017594554866708738
+    },
+    {
+      "tilt": 0.6,
+      "q": 4.0,
+      "n": 56,
+      "width_ratio": 1.0,
+      "H2_lowest": 3.126604229812496,
+      "H2_second": 10.935349756787051,
+      "H2_lowest_over_q": 0.781651057453124,
+      "estimated_full3D_first_positive": 3.126604229812496,
+      "full_operator_L2_residual": 0.0021247318985061904
+    },
+    {
+      "tilt": 1.0,
+      "q": 4.0,
+      "n": 56,
+      "width_ratio": 1.0,
+      "H2_lowest": 8.877983176388062,
+      "H2_second": 14.538914332286359,
+      "H2_lowest_over_q": 2.2194957940970155,
+      "estimated_full3D_first_positive": 8.877983176388062,
+      "full_operator_L2_residual": 0.0047259787095374406
+    },
+    {
+      "tilt": 0.0,
+      "q": 12.0,
+      "n": 56,
+      "width_ratio": 1.0,
+      "H2_lowest": 0.02612387733655853,
+      "H2_second": 22.31876242346934,
+      "H2_lowest_over_q": 0.002176989778046544,
+      "estimated_full3D_first_positive": 0.02612387733655853,
+      "full_operator_L2_residual": 8.502160832995794e-05
+    },
+    {
+      "tilt": 0.2,
+      "q": 12.0,
+      "n": 56,
+      "width_ratio": 1.0,
+      "H2_lowest": 0.3339480142369028,
+      "H2_second": 20.336423132937753,
+      "H2_lowest_over_q": 0.027829001186408565,
+      "estimated_full3D_first_positive": 0.3339480142369028,
+      "full_operator_L2_residual": 8.480783455102146e-05
+    },
+    {
+      "tilt": 0.38,
+      "q": 12.0,
+      "n": 56,
+      "width_ratio": 1.0,
+      "H2_lowest": 2.8915181323415196,
+      "H2_second": 24.358827376275105,
+      "H2_lowest_over_q": 0.2409598443617933,
+      "estimated_full3D_first_positive": 2.8915181323415196,
+      "full_operator_L2_residual": 6.94012690954834e-05
+    },
+    {
+      "tilt": 0.4,
+      "q": 12.0,
+      "n": 56,
+      "width_ratio": 1.0,
+      "H2_lowest": 3.463788618433861,
+      "H2_second": 25.290704412681936,
+      "H2_lowest_over_q": 0.2886490515361551,
+      "estimated_full3D_first_positive": 3.463788618433861,
+      "full_operator_L2_residual": 6.75256223137532e-05
+    },
+    {
+      "tilt": 0.6,
+      "q": 12.0,
+      "n": 56,
+      "width_ratio": 1.0,
+      "H2_lowest": 13.702586534148038,
+      "H2_second": 38.19870636867043,
+      "H2_lowest_over_q": 1.1418822111790032,
+      "estimated_full3D_first_positive": 13.702586534148038,
+      "full_operator_L2_residual": 8.317047959941332e-05
+    },
+    {
+      "tilt": 1.0,
+      "q": 12.0,
+      "n": 56,
+      "width_ratio": 1.0,
+      "H2_lowest": 56.09091743557754,
+      "H2_second": 56.20197342024137,
+      "H2_lowest_over_q": 4.674243119631462,
+      "estimated_full3D_first_positive": 48.0,
+      "full_operator_L2_residual": 0.01697974128714833
+    },
+    {
+      "tilt": 0.0,
+      "q": 24.0,
+      "n": 56,
+      "width_ratio": 1.0,
+      "H2_lowest": 0.00013147846461006616,
+      "H2_second": 47.123336723000044,
+      "H2_lowest_over_q": 5.478269358752757e-06,
+      "estimated_full3D_first_positive": 0.00013147846461006616,
+      "full_operator_L2_residual": 4.038413819135429e-06
+    },
+    {
+      "tilt": 0.2,
+      "q": 24.0,
+      "n": 56,
+      "width_ratio": 1.0,
+      "H2_lowest": 0.09053379749630461,
+      "H2_second": 35.81027691206143,
+      "H2_lowest_over_q": 0.003772241562346025,
+      "estimated_full3D_first_positive": 0.09053379749630461,
+      "full_operator_L2_residual": 1.5358324288308007e-05
+    },
+    {
+      "tilt": 0.38,
+      "q": 24.0,
+      "n": 56,
+      "width_ratio": 1.0,
+      "H2_lowest": 4.82975619937604,
+      "H2_second": 40.00868159599183,
+      "H2_lowest_over_q": 0.20123984164066833,
+      "estimated_full3D_first_positive": 4.82975619937604,
+      "full_operator_L2_residual": 1.1549435367233024e-05
+    },
+    {
+      "tilt": 0.4,
+      "q": 24.0,
+      "n": 56,
+      "width_ratio": 1.0,
+      "H2_lowest": 6.384390553364994,
+      "H2_second": 42.55247263445526,
+      "H2_lowest_over_q": 0.26601627305687475,
+      "estimated_full3D_first_positive": 6.384390553364994,
+      "full_operator_L2_residual": 1.0477560717541074e-05
+    },
+    {
+      "tilt": 0.6,
+      "q": 24.0,
+      "n": 56,
+      "width_ratio": 1.0,
+      "H2_lowest": 41.428449624487186,
+      "H2_second": 89.91085392445895,
+      "H2_lowest_over_q": 1.7261854010202995,
+      "estimated_full3D_first_positive": 41.428449624487186,
+      "full_operator_L2_residual": 3.7352376422233857e-06
+    },
+    {
+      "tilt": 1.0,
+      "q": 24.0,
+      "n": 56,
+      "width_ratio": 1.0,
+      "H2_lowest": 119.76798169621576,
+      "H2_second": 119.76798174286725,
+      "H2_lowest_over_q": 4.9903325706756565,
+      "estimated_full3D_first_positive": 96.0,
+      "full_operator_L2_residual": 0.027944333108440814
+    }
+  ],
+  "controls": [
+    {
+      "tilt": 1.0,
+      "q": 12.0,
+      "n": 88,
+      "width_ratio": 0.75,
+      "H2_lowest": 56.09091741653766,
+      "H2_second": 56.20197340521263,
+      "H2_lowest_over_q": 4.674243118044805,
+      "estimated_full3D_first_positive": 48.0,
+      "full_operator_L2_residual": 0.005857842544291923
+    },
+    {
+      "tilt": 1.0,
+      "q": 24.0,
+      "n": 88,
+      "width_ratio": 0.75,
+      "H2_lowest": 119.76798163299854,
+      "H2_second": 119.76798167534008,
+      "H2_lowest_over_q": 4.990332568041606,
+      "estimated_full3D_first_positive": 96.0,
+      "full_operator_L2_residual": 0.006025352845659996
+    }
+  ],
+  "high_resolution_control": {
+    "tilt": 1.0,
+    "q": 24.0,
+    "n": 144,
+    "width_ratio": 1.0,
+    "H2_lowest": 119.76798163239594,
+    "H2_second": 119.76798167474362,
+    "H2_lowest_over_q": 4.990332568016497,
+    "estimated_full3D_first_positive": 96.0,
+    "full_operator_L2_residual": 2.4643525952012627e-09
+  },
+  "limitations": [
+    "tilt and quartic supplied, not dynamically selected",
+    "C4 broken; no previous C4 quotient interpretation",
+    "noncompact infinite-energy background and gauge constants not L2",
+    "native E6 anomalies/rank/Yukawas unchanged",
+    "no physical compactification scale"
+  ]
+}
