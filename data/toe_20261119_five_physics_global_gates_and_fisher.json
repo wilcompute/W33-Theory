@@ -1,0 +1,450 @@
+{
+  "date": "2026-11-19",
+  "TOE_solved": false,
+  "emergent_Lorentzian_4D_Einstein_gravity": false,
+  "Born_rule_derived": false,
+  "SM_spectrum_derived": false,
+  "status": "PASS conditional five-front physics gates and an information-theoretic bridge",
+  "literature": [
+    "https://arxiv.org/abs/2611.20084",
+    "https://arxiv.org/abs/2611.19570",
+    "https://arxiv.org/abs/2209.00327",
+    "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.103.014503",
+    "https://davidtong.org/pdfs/teaching/standardmodel5.pdf",
+    "https://www.scholarpedia.org/article/Lattice_gauge_theories"
+  ],
+  "gates": {
+    "I_dag_fermion_determinant_blindness": {
+      "status": "PASS",
+      "exact_theorem": "Every finite directed acyclic A is nilpotent; det(m I-alpha A)=m^N, independent of causal links.",
+      "nontrivial_propagation": "(m I-alpha A)^-1 = m^-1 sum_(k=0)^(N-1)(alpha A/m)^k, which depends on causal paths.",
+      "random_labelled_DAG_checks": [
+        {
+          "events": 4,
+          "mass": 0.7,
+          "link_coupling": 0.3,
+          "directed_edges": 3,
+          "observed_det": 0.24009999999999992,
+          "exact_graph_blind_det": 0.24009999999999995,
+          "inverse_path_sum_error": 1.5665539650118735e-16
+        },
+        {
+          "events": 4,
+          "mass": 1.2,
+          "link_coupling": 0.65,
+          "directed_edges": 3,
+          "observed_det": 2.0736,
+          "exact_graph_blind_det": 2.0736,
+          "inverse_path_sum_error": 4.8793747979315156e-17
+        },
+        {
+          "events": 8,
+          "mass": 0.7,
+          "link_coupling": 0.3,
+          "directed_edges": 14,
+          "observed_det": 0.05764800999999997,
+          "exact_graph_blind_det": 0.05764800999999997,
+          "inverse_path_sum_error": 3.0988612947640023e-16
+        },
+        {
+          "events": 8,
+          "mass": 1.2,
+          "link_coupling": 0.65,
+          "directed_edges": 14,
+          "observed_det": 4.299816959999999,
+          "exact_graph_blind_det": 4.2998169599999985,
+          "inverse_path_sum_error": 3.9504600597623673e-16
+        },
+        {
+          "events": 12,
+          "mass": 0.7,
+          "link_coupling": 0.3,
+          "directed_edges": 25,
+          "observed_det": 0.013841287200999988,
+          "exact_graph_blind_det": 0.01384128720099999,
+          "inverse_path_sum_error": 4.385621536441745e-16
+        },
+        {
+          "events": 12,
+          "mass": 1.2,
+          "link_coupling": 0.65,
+          "directed_edges": 25,
+          "observed_det": 8.916100448256001,
+          "exact_graph_blind_det": 8.916100448255996,
+          "inverse_path_sum_error": 6.274592893266748e-16
+        },
+        {
+          "events": 20,
+          "mass": 0.7,
+          "link_coupling": 0.3,
+          "directed_edges": 88,
+          "observed_det": 0.0007979226629761189,
+          "exact_graph_blind_det": 0.0007979226629761189,
+          "inverse_path_sum_error": 2.674115099801203e-15
+        },
+        {
+          "events": 20,
+          "mass": 1.2,
+          "link_coupling": 0.65,
+          "directed_edges": 88,
+          "observed_det": 38.33759992447469,
+          "exact_graph_blind_det": 38.33759992447472,
+          "inverse_path_sum_error": 5.516485330668113e-15
+        }
+      ],
+      "distinct_DAG_propagator_distance": 0.28284271247461906,
+      "periodically_closed_directed_cycle_checks": [
+        {
+          "n": 4,
+          "mass": 1.2,
+          "theta": 0.67,
+          "det_real": 2.05353416535345,
+          "det_imag": -0.015897241268135937
+        },
+        {
+          "n": 4,
+          "mass": 1.7,
+          "theta": 0.67,
+          "det_real": 8.33203416535345,
+          "det_imag": -0.015897241268135937
+        },
+        {
+          "n": 5,
+          "mass": 1.2,
+          "theta": 0.67,
+          "det_real": 2.4802936661413795,
+          "det_imag": -0.006358896507254375
+        },
+        {
+          "n": 5,
+          "mass": 1.7,
+          "theta": 0.67,
+          "det_real": 14.19054366614138,
+          "det_imag": -0.006358896507254374
+        },
+        {
+          "n": 8,
+          "mass": 1.2,
+          "theta": 0.67,
+          "det_real": 4.299303274633048,
+          "det_imag": -0.0004069693764642801
+        },
+        {
+          "n": 8,
+          "mass": 1.7,
+          "theta": 0.67,
+          "det_real": 69.75706072463302,
+          "det_imag": -0.0004069693764642798
+        }
+      ],
+      "qualifier": "No general no-go for causal fermions: bidirectional/loop, holonomy, interactions, boundary, anomalies and non-vacuum insertions can add graph dependence."
+    },
+    "II_global_SU2_Witten_anomaly_and_SM_quotient": {
+      "status": "PASS",
+      "SM_one_generation_local_anomaly_integer_y6Y": {
+        "gravity_Y": 0,
+        "Y_cubed": 0,
+        "SU2_squared_Y": 0,
+        "SU3_squared_Y": 0
+      },
+      "Witten_global_sign_cases": [
+        {
+          "content": "single left-handed SU2 Weyl doublet plus gauge singlet",
+          "left_Weyl_doublet_count": 1,
+          "nontrivial_pi4_SU2_gauge_transformation_sign": -1,
+          "passes_ordinary_Witten_SU2_parity_gate": false,
+          "vectorlike": false
+        },
+        {
+          "content": "one SU2 Dirac doublet, equivalent to two Weyl doublets",
+          "left_Weyl_doublet_count": 2,
+          "nontrivial_pi4_SU2_gauge_transformation_sign": 1,
+          "passes_ordinary_Witten_SU2_parity_gate": true,
+          "vectorlike": true
+        },
+        {
+          "content": "one complete SM generation, three quark colors plus one lepton",
+          "left_Weyl_doublet_count": 4,
+          "nontrivial_pi4_SU2_gauge_transformation_sign": 1,
+          "passes_ordinary_Witten_SU2_parity_gate": true,
+          "vectorlike": false
+        },
+        {
+          "content": "three complete SM generations",
+          "left_Weyl_doublet_count": 12,
+          "nontrivial_pi4_SU2_gauge_transformation_sign": 1,
+          "passes_ordinary_Witten_SU2_parity_gate": true,
+          "vectorlike": false
+        },
+        {
+          "content": "SM plus a standalone additional left Weyl doublet",
+          "left_Weyl_doublet_count": 13,
+          "nontrivial_pi4_SU2_gauge_transformation_sign": -1,
+          "passes_ordinary_Witten_SU2_parity_gate": false,
+          "vectorlike": false
+        },
+        {
+          "content": "SM plus a vectorlike pair of extra doublets",
+          "left_Weyl_doublet_count": 14,
+          "nontrivial_pi4_SU2_gauge_transformation_sign": 1,
+          "passes_ordinary_Witten_SU2_parity_gate": true,
+          "vectorlike": true
+        }
+      ],
+      "standard_global_Z6_descent_residues": {
+        "Q": 0,
+        "u^c": 0,
+        "d^c": 0,
+        "L": 0,
+        "e^c": 0,
+        "nu^c": 0
+      },
+      "important_distinction": "A single chiral SU2 Weyl doublet is globally anomalous; a vectorlike SU2 Dirac doublet need not be. Previous positive determinant examples used vectorlike toy operators and are not refuted by the chiral sign test.",
+      "qualifier": "This evaluates standard global-anomaly parity and ordinary local anomaly sums. It does not compute a five-dimensional mod-two index, classify arbitrary exotic SU2 reps, or derive the SM spectrum."
+    },
+    "III_photonic_quadratic_gate_complexity_witness": {
+      "status": "PASS",
+      "n_modes_in_witness": 4,
+      "two_photon_sector_basis_n4": [
+        3,
+        5,
+        6,
+        9,
+        10,
+        12
+      ],
+      "target_local_A1_nonzero_0110_to_1001_matrix_element": 1.0,
+      "any_single_body_number_preserving_hamiltonian_same_matrix_element": 0.0,
+      "best_real_quadratic_generator_projection_residual_Frobenius": 1.4142135623730951,
+      "ideal_vs_published_passive_ladder": [
+        {
+          "copies": 2,
+          "ideal_arbitrary_SSR_CHSH": 2.414213562373095,
+          "published_passive_ladder_CHSH": 2.414213562373095,
+          "collective_minus_passive": 0.0
+        },
+        {
+          "copies": 4,
+          "ideal_arbitrary_SSR_CHSH": 2.724873734152917,
+          "published_passive_ladder_CHSH": 2.621320343559643,
+          "collective_minus_passive": 0.10355339059327395
+        },
+        {
+          "copies": 6,
+          "ideal_arbitrary_SSR_CHSH": 2.7766504294495533,
+          "published_passive_ladder_CHSH": 2.7248737341529163,
+          "collective_minus_passive": 0.051776695296636976
+        },
+        {
+          "copies": 8,
+          "ideal_arbitrary_SSR_CHSH": 2.821955037834111,
+          "published_passive_ladder_CHSH": 2.7766504294495533,
+          "collective_minus_passive": 0.04530460838455763
+        },
+        {
+          "copies": 10,
+          "ideal_arbitrary_SSR_CHSH": 2.8251910812901504,
+          "published_passive_ladder_CHSH": 2.802538777097872,
+          "collective_minus_passive": 0.022652304192278372
+        }
+      ],
+      "qualifier": "The specific ideal CHSH observable is NOT a single quadratic bosonic Hamiltonian/generator. This does NOT rule out passive interferometers plus number-resolved detection and nonlinear classical outcome binning, or ancilla/feedforward-based compilations."
+    },
+    "IV_causal_history_entropy_vs_gapped_fermion_weight": {
+      "status": "PASS",
+      "marked_layer_3layer_family": "N/4,N/2,N/4, independent N^2/4 adjacent relations, quotient only by S_(N/4)xS_(N/2)xS_(N/4).",
+      "bound": "#orbits >=2^(N\u00b2/4)/[(N/4)!\u00b2(N/2)!]",
+      "spectral_assumption": "For every bad-history qN-dimensional kinetic matrix all singular values >=a=.5, and a single good-history matrix all singular values <=b=2; bare positive weights assumed equal.",
+      "conditional_weight_bound": "sum_bad |det D_bad| / |det D_good| >= #orbits*(a/b)^(qN).",
+      "results": [
+        {
+          "events": 8,
+          "layer_adjacent_link_bits": 16,
+          "log10_unlabeled_orbit_lower_bound": 2.8342086975841303,
+          "log10_bad_to_one_good_weight_lower_bound_under_uniform_gap": -16.431711024910662,
+          "q_fermion_components_per_event": 4
+        },
+        {
+          "events": 16,
+          "layer_adjacent_link_bits": 64,
+          "log10_unlabeled_orbit_lower_bound": 11.899976715634113,
+          "log10_bad_to_one_good_weight_lower_bound_under_uniform_gap": -26.631862729355475,
+          "q_fermion_components_per_event": 4
+        },
+        {
+          "events": 32,
+          "layer_adjacent_link_bits": 256,
+          "log10_unlabeled_orbit_lower_bound": 54.53201824932492,
+          "log10_bad_to_one_good_weight_lower_bound_under_uniform_gap": -22.53166064065426,
+          "q_fermion_components_per_event": 4
+        },
+        {
+          "events": 64,
+          "layer_adjacent_link_bits": 1024,
+          "log10_unlabeled_orbit_lower_bound": 246.19330462527816,
+          "log10_bad_to_one_good_weight_lower_bound_under_uniform_gap": 92.0659468453198,
+          "q_fermion_components_per_event": 4
+        },
+        {
+          "events": 128,
+          "layer_adjacent_link_bits": 4096,
+          "log10_unlabeled_orbit_lower_bound": 1073.0751018481703,
+          "log10_bad_to_one_good_weight_lower_bound_under_uniform_gap": 764.8203862882536,
+          "q_fermion_components_per_event": 4
+        }
+      ],
+      "possible_escape": "Geometry-specific exact fermion zero modes violate the lower singular-value assumption, while oscillatory interference or other nonlocal/strongly N-dependent measures can also evade the positive-weight bound.",
+      "limitation": "One stipulated good history (not the whole manifoldlike class), marked-layer incidence orbits (not all unlabeled causets), positive weights and uniform spectral gap; not a general no-go on causal quantum gravity."
+    },
+    "V_flavor_connectivity_vs_spectral_gap": {
+      "status": "PASS",
+      "model": "Three-family quadratic charge-mismatch penalty sum_edges w_ij (X_i-X_j)^2, with sum_i X_i=0.",
+      "exact_path_graph_lambda2": "a+b-sqrt(a*a-a*b+b*b) for links a,b",
+      "small_a_limit": "lambda2 ~ 3a/2 for a<<b, despite a connected interaction graph.",
+      "records": [
+        {
+          "weak_Yukawa_edge_weight": 0.0,
+          "other_edge_weight": 1.0,
+          "graph_connected": false,
+          "Laplacian_rank": 1,
+          "exact_lambda2": 0.0,
+          "numeric_lambda2": 0.0,
+          "approx_ratio_lambda2_over_weak_edge": null
+        },
+        {
+          "weak_Yukawa_edge_weight": 1e-06,
+          "other_edge_weight": 1.0,
+          "graph_connected": true,
+          "Laplacian_rank": 2,
+          "exact_lambda2": 1.4999996249542846e-06,
+          "numeric_lambda2": 1.4999996249507218e-06,
+          "approx_ratio_lambda2_over_weak_edge": 1.4999996249542846
+        },
+        {
+          "weak_Yukawa_edge_weight": 0.0001,
+          "other_edge_weight": 1.0,
+          "graph_connected": true,
+          "Laplacian_rank": 2,
+          "exact_lambda2": 0.0001499962498124896,
+          "numeric_lambda2": 0.0001499962498125135,
+          "approx_ratio_lambda2_over_weak_edge": 1.499962498124896
+        },
+        {
+          "weak_Yukawa_edge_weight": 0.01,
+          "other_edge_weight": 1.0,
+          "graph_connected": true,
+          "Laplacian_rank": 2,
+          "exact_lambda2": 0.014962312271540212,
+          "numeric_lambda2": 0.014962312271540162,
+          "approx_ratio_lambda2_over_weak_edge": 1.4962312271540212
+        },
+        {
+          "weak_Yukawa_edge_weight": 0.1,
+          "other_edge_weight": 1.0,
+          "graph_connected": true,
+          "Laplacian_rank": 2,
+          "exact_lambda2": 0.14606079858305443,
+          "numeric_lambda2": 0.14606079858305437,
+          "approx_ratio_lambda2_over_weak_edge": 1.4606079858305443
+        },
+        {
+          "weak_Yukawa_edge_weight": 1.0,
+          "other_edge_weight": 1.0,
+          "graph_connected": true,
+          "Laplacian_rank": 2,
+          "exact_lambda2": 1.0,
+          "numeric_lambda2": 0.9999999999999998,
+          "approx_ratio_lambda2_over_weak_edge": 1.0
+        }
+      ],
+      "limitation": "The penalty model is imposed. Actual Yukawa couplings, physical PMNS mixing angles and charged lepton rates are not predicted by Laplacian connectivity."
+    },
+    "VI_fermionic_spin_sector_information_distinguishability": {
+      "status": "PASS",
+      "prior_toy": "Wilson circle determinant with equal bare spin-center sector priors, an SU2 doublet plus neutral singlet.",
+      "P_sectors": "(r\u00b3,r,1,r\u00b2)/[(1+r)(1+r\u00b2)], r=tanh(mu/2)",
+      "exact_classical_Fisher": "[(1-r\u00b2)/2]\u00b2 [1/(r(1+r)\u00b2)+4/(1+r\u00b2)\u00b2]",
+      "large_mu_asymptotic": "I(mu)~5 exp(-2mu), so very heavy fermions make spin-sector distributions locally hard to distinguish.",
+      "results": [
+        {
+          "dimensionless_fermion_mass_times_circle_length": 0.05,
+          "normalized_four_sector_weights": [
+            1.5224945129240304e-05,
+            0.024370062804513763,
+            0.9750055875759309,
+            0.0006091246744262312
+          ],
+          "classical_Fisher_information_on_mu": 10.505836105546619,
+          "finite_difference_Fisher_crosscheck": 10.505836105712559
+        },
+        {
+          "dimensionless_fermion_mass_times_circle_length": 0.1,
+          "normalized_four_sector_weights": [
+            0.00011845959646452955,
+            0.04746283138555569,
+            0.9500475430910575,
+            0.002371165926922225
+          ],
+          "classical_Fisher_information_on_mu": 5.5067218569744325,
+          "finite_difference_Fisher_crosscheck": 5.506721856952543
+        },
+        {
+          "dimensionless_fermion_mass_times_circle_length": 0.3,
+          "normalized_four_sector_weights": [
+            0.0028103137416107347,
+            0.12678057591753034,
+            0.8515333800325938,
+            0.018875730308265122
+          ],
+          "classical_Fisher_information_on_mu": 2.1315061769874997,
+          "finite_difference_Fisher_crosscheck": 2.1315061768791055
+        },
+        {
+          "dimensionless_fermion_mass_times_circle_length": 1.0,
+          "normalized_four_sector_weights": [
+            0.05561803230222684,
+            0.260442247112052,
+            0.5635848897198907,
+            0.12035483086583043
+          ],
+          "classical_Fisher_information_on_mu": 0.5764919843636916,
+          "finite_difference_Fisher_crosscheck": 0.576491984354167
+        },
+        {
+          "dimensionless_fermion_mass_times_circle_length": 2.0,
+          "normalized_four_sector_weights": [
+            0.15870872696337268,
+            0.273623631418321,
+            0.3592774829987189,
+            0.20839015861958748
+          ],
+          "classical_Fisher_information_on_mu": 0.08930818521693858,
+          "finite_difference_Fisher_crosscheck": 0.0893081852177266
+        },
+        {
+          "dimensionless_fermion_mass_times_circle_length": 5.0,
+          "normalized_four_sector_weights": [
+            0.2449693916292537,
+            0.2516616348712036,
+            0.2550760062394487,
+            0.24829296726009403
+          ],
+          "classical_Fisher_information_on_mu": 0.00022698522195349288,
+          "finite_difference_Fisher_crosscheck": 0.00022698522207631933
+        },
+        {
+          "dimensionless_fermion_mass_times_circle_length": 10.0,
+          "normalized_four_sector_weights": [
+            0.24996595108330175,
+            0.25001134895181704,
+            0.2500340509778519,
+            0.24998864898702938
+          ],
+          "classical_Fisher_information_on_mu": 1.03057680824604e-08,
+          "finite_difference_Fisher_crosscheck": 1.0305767880912927e-08
+        }
+      ],
+      "limitation": "Information geometry of assumed classical TOY distributions, not operational access to physical spin structures, measurement error bounds or fundamental spacetime information metric."
+    }
+  }
+}

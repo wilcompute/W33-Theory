@@ -1,0 +1,213 @@
+{
+  "date": "2026-11-19",
+  "status": "PASS conditional topological kernel orientation-of-selection falsifier",
+  "topological_torus_complexes": {
+    "3": {
+      "V_E_F": [
+        9,
+        18,
+        9
+      ],
+      "cellular_Betti_H0_H1_H2": [
+        1,
+        2,
+        1
+      ],
+      "boundary_ranks": [
+        8,
+        8
+      ],
+      "Hodge_L1_eigenvalues": [
+        8.921876971625432e-17,
+        8.881784197001209e-16,
+        2.9999999999999933,
+        2.9999999999999987,
+        2.999999999999999,
+        3.0,
+        3.0000000000000004,
+        3.0000000000000004,
+        3.000000000000002,
+        3.0000000000000036,
+        5.999999999999993,
+        5.999999999999997,
+        6.0,
+        6.0,
+        6.000000000000001,
+        6.000000000000002,
+        6.000000000000003,
+        6.0000000000000036
+      ],
+      "Hodge_zero_modes": 2,
+      "positive_nonzero_eigenvalue_min": 2.9999999999999933
+    },
+    "4": {
+      "V_E_F": [
+        16,
+        32,
+        16
+      ],
+      "cellular_Betti_H0_H1_H2": [
+        1,
+        2,
+        1
+      ],
+      "boundary_ranks": [
+        15,
+        15
+      ],
+      "Hodge_L1_eigenvalues": [
+        -1.0547118733938987e-15,
+        2.220446049250313e-15,
+        1.9999999999999964,
+        1.999999999999999,
+        1.9999999999999993,
+        1.9999999999999993,
+        2.0000000000000004,
+        2.0000000000000013,
+        2.0000000000000013,
+        2.000000000000002,
+        3.9999999999999964,
+        3.9999999999999973,
+        3.999999999999998,
+        3.9999999999999982,
+        3.9999999999999987,
+        3.9999999999999996,
+        3.9999999999999996,
+        4.0,
+        4.000000000000001,
+        4.000000000000002,
+        4.000000000000002,
+        4.000000000000003,
+        5.9999999999999964,
+        5.999999999999998,
+        5.999999999999998,
+        6.0,
+        6.0,
+        6.0,
+        6.000000000000002,
+        6.0000000000000036,
+        7.999999999999999,
+        8.000000000000002
+      ],
+      "Hodge_zero_modes": 2,
+      "positive_nonzero_eigenvalue_min": 1.9999999999999964
+    },
+    "5": {
+      "V_E_F": [
+        25,
+        50,
+        25
+      ],
+      "cellular_Betti_H0_H1_H2": [
+        1,
+        2,
+        1
+      ],
+      "boundary_ranks": [
+        24,
+        24
+      ],
+      "Hodge_L1_eigenvalues": [
+        2.3390561668046397e-15,
+        2.797026364693692e-15,
+        1.3819660112501027,
+        1.3819660112501049,
+        1.381966011250105,
+        1.3819660112501055,
+        1.3819660112501055,
+        1.3819660112501064,
+        1.3819660112501064,
+        1.3819660112501064,
+        2.7639320225002075,
+        2.7639320225002084,
+        2.7639320225002093,
+        2.763932022500211,
+        2.763932022500211,
+        2.7639320225002115,
+        2.763932022500212,
+        2.763932022500214,
+        3.6180339887498905,
+        3.6180339887498927,
+        3.6180339887498936,
+        3.618033988749895,
+        3.618033988749895,
+        3.6180339887498953,
+        3.6180339887498953,
+        3.6180339887498967,
+        4.9999999999999964,
+        4.9999999999999964,
+        4.9999999999999964,
+        4.999999999999997,
+        4.999999999999997,
+        4.999999999999998,
+        4.999999999999998,
+        5.000000000000001,
+        5.000000000000001,
+        5.000000000000002,
+        5.000000000000002,
+        5.0000000000000036,
+        5.0000000000000036,
+        5.000000000000005,
+        5.000000000000006,
+        5.00000000000001,
+        7.236067977499778,
+        7.236067977499784,
+        7.236067977499787,
+        7.236067977499787,
+        7.236067977499788,
+        7.23606797749979,
+        7.236067977499793,
+        7.236067977499795
+      ],
+      "Hodge_zero_modes": 2,
+      "positive_nonzero_eigenvalue_min": 1.3819660112501027
+    }
+  },
+  "contractible_filled_square_disk_complex": {
+    "V_E_F": [
+      4,
+      4,
+      1
+    ],
+    "cellular_Betti_H0_H1_H2": [
+      1,
+      0,
+      0
+    ],
+    "boundary_ranks": [
+      3,
+      1
+    ],
+    "Hodge_L1_eigenvalues": [
+      2.0,
+      2.0,
+      4.0,
+      4.0
+    ],
+    "Hodge_zero_modes": 0,
+    "positive_nonzero_eigenvalue_min": 2.0
+  },
+  "finite_mass_regulator_zero_mode_factors": [
+    {
+      "regulator_mu": 0.1,
+      "torus_normalized_determinant_zero_mode_factor": 0.009999999999999893,
+      "expected_mu_squared": 0.010000000000000002,
+      "disk_normalized_zero_mode_factor": 1.0
+    },
+    {
+      "regulator_mu": 0.01,
+      "torus_normalized_determinant_zero_mode_factor": 9.99999999999971e-05,
+      "expected_mu_squared": 0.0001,
+      "disk_normalized_zero_mode_factor": 1.0
+    },
+    {
+      "regulator_mu": 0.001,
+      "torus_normalized_determinant_zero_mode_factor": 1.000000000001033e-06,
+      "expected_mu_squared": 1e-06,
+      "disk_normalized_zero_mode_factor": 1.0
+    }
+  ],
+  "exact_mechanism": "By combinatorial Hodge theorem, nullity(L1)=b1. Hence det(L1+mu I) contains mu^b1; torus has b1=2, filled disk b1=0.",
+  "physical_caution": "Naively weighting histories by a positive unsaturated 1-form determinant can suppress the smooth torus MORE than a contractible disk as mu->0. These complexes have unequal numbers of cells; the normalized factor isolates only zero modes. This is not a valid comparison of full physical gravitational path-integral weights or a chiral spinor Dirac selection law.",
+  "TOE_solved": false
+}
