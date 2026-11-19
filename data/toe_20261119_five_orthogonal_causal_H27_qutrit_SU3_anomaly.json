@@ -1,0 +1,157 @@
+{
+  "date": "2026-11-19",
+  "repo_base": "c98ed7e233cac609cd2e99ed0860e633e5a8ae02",
+  "scientific_status": "FIVE_SMALL_MODEL_GATES_PASSED_NOT_A_THEORY_OF_EVERYTHING",
+  "tracks": {
+    "causal_order": {
+      "censuses": [
+        {
+          "events": 4,
+          "graph_presentations": 64,
+          "distinct_causal_orders_with_fixed_label_order": 40,
+          "orders_with_multiple_edge_presentations": 14,
+          "maximum_response_spread_within_one_order": 1.0542081815256283,
+          "Hasse_canonical_response_spread_within_one_order": 0.0
+        },
+        {
+          "events": 5,
+          "graph_presentations": 1024,
+          "distinct_causal_orders_with_fixed_label_order": 357,
+          "orders_with_multiple_edge_presentations": 199,
+          "maximum_response_spread_within_one_order": 3.093345460844697,
+          "Hasse_canonical_response_spread_within_one_order": 0.0
+        }
+      ],
+      "same_total_order": {
+        "Hasse_links": 4,
+        "all_causal_relations": 10,
+        "Hasse_response": 3.5559714510510645,
+        "closure_response": 6.649316911895761
+      },
+      "physical_gate": "A propagator assigned to arbitrary edges is NOT an invariant of the causal order; choosing the canonical cover adjacency removes this presentation ambiguity but supplies an extra microscopic rule, not 4D continuum dynamics."
+    },
+    "H27_SIC_MUB_mass_repair": {
+      "new_H27_superpotential": "l*x*y*z*(x**3 + y**3 + z**3 - 2) - x**6/2 + x**3 - y**6/2 + y**3 - z**6/2 + z**3",
+      "H27_generator_invariance": "exact polynomial checks cyclic shift and diagonal phase mod (w\u00b2+w+1)",
+      "SIC_Hessian_at_(1,1,0)": "Matrix([[-9, 0, 3*l], [0, -9, 3*l], [3*l, 3*l, 0]])",
+      "SIC_Hessian_determinant": "162*l**2",
+      "tested_lambda": 0.25,
+      "exact_SIC_F_residual": 3.66205343881779e-15,
+      "all_27_SIC_stationary_vectors_min_singular_Hessian": 0.12331050222673205,
+      "SIC_projective_Gram_residual": 6.661338147750939e-16,
+      "support3_preserving_amplitude_formula": "r^3=(3-2*lambda*xi)/(3-6*lambda*xi), xi=omega^(a+b)",
+      "support3_F_residual": 8.992121150493565e-15,
+      "support3_min_singular_Hessian": 6.553317959557314,
+      "support3_MUB_within_basis_residual": 6.342164211728314e-16,
+      "support3_MUB_between_basis_residual": 3.885780586188048e-16,
+      "nine_triplet_frame_moment_map_traceless_residual": 3.334636897547948e-15,
+      "previous_MUB_point_requires_rescaling": "F_x(1,1,1)=4*lambda",
+      "limitations": "Single-triplet W is invariant under finite H27, not full continuous SU3 gauge; the moment map uses nine independent proposed triplets, NOT an SU3 gauge-invariant superpotential; no E8 UV completion, K\u00e4hler dynamics, radiative lifting or vacuum selection."
+    },
+    "SM_SO10_anomalies": {
+      "anomaly_channels": [
+        "grav\u00b2 U1",
+        "U1\u00b3",
+        "SU3\u00b2 U1",
+        "SU2\u00b2 U1",
+        "SU3\u00b3",
+        "Witten SU2 parity"
+      ],
+      "one_16_with_nuR": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        0
+      ],
+      "one_15_without_nuR": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        0
+      ],
+      "without_charged_eR": [
+        "-1",
+        "-1",
+        "0",
+        "0",
+        "0",
+        0
+      ],
+      "theorem": "One Standard Model generation already cancels anomalies, with or without sterile nu_R; anomaly cancellation alone fixes neither 3 families nor the extra nu_R of an SO10 16.",
+      "limitations": "This is a familiar Standard Model anomaly census; no derived physical chiral index, 4D fermion dynamics, GUT threshold, E8 spectrum or UV proof."
+    },
+    "SU3_phased_Wilson": {
+      "SU3_fundamental_trace": [
+        0.3912267119775237,
+        0.6989280933502161
+      ],
+      "intensity_phase0": 6.782453423955047,
+      "intensity_phase_pi_over2": 7.397856186700433,
+      "reconstructed_trace_error": 3.3306690738754696e-16,
+      "W_vs_Wdag_zero_phase_spectrum_error": 0.0,
+      "W_vs_Wdag_pi_over2_intensity_difference": 2.7957123734008644,
+      "SU3_characteristic_polynomial_residual": 3.554447978966673e-16,
+      "chi_6_symmetric_rep_trace": [
+        -0.7266688514869478,
+        1.2458067730904656
+      ],
+      "chi_8_adjoint_rep_trace": -0.3584411801610873,
+      "24_random_frame_max_trace_error": 9.104505742017336e-16,
+      "theorem": "Two coherent phase settings reconstruct the complex fundamental trace of a fixed classical SU3 holonomy, which determines its conjugacy class. Unshifted singular-value spectra cannot distinguish W from W\u2020.",
+      "limitations": "Known Wilson/interferometry group-theory prior art; phase calibration, source/measurement hardware, backreaction, fluctuating gauge fields and matter representations not derived."
+    },
+    "temporal_qutrit_heralding": {
+      "dephasing_scan": [
+        {
+          "GHZ_coherence": 0.0,
+          "conditional_BC_negativity": 0.0
+        },
+        {
+          "GHZ_coherence": 0.1,
+          "conditional_BC_negativity": 0.10000000000000006
+        },
+        {
+          "GHZ_coherence": 0.5,
+          "conditional_BC_negativity": 0.5000000000000001
+        },
+        {
+          "GHZ_coherence": 1.0,
+          "conditional_BC_negativity": 1.0
+        }
+      ],
+      "white_noise_scan": [
+        {
+          "GHZ_visibility": 0.0,
+          "conditional_negativity": 0.0
+        },
+        {
+          "GHZ_visibility": 0.2,
+          "conditional_negativity": 0.0
+        },
+        {
+          "GHZ_visibility": 0.25,
+          "conditional_negativity": 4.163336342344337e-17
+        },
+        {
+          "GHZ_visibility": 0.3,
+          "conditional_negativity": 0.06666666666666665
+        },
+        {
+          "GHZ_visibility": 0.5,
+          "conditional_negativity": 0.33333333333333337
+        },
+        {
+          "GHZ_visibility": 1.0,
+          "conditional_negativity": 1.0
+        }
+      ],
+      "heralded_BC_entanglement_visibility_threshold": "v>1/4",
+      "theorem": "Fourier-basis measurement of emitted GHZ qutrit A heralds entangled BC. Pairwise unconditioned marginals do not reveal the coherence, but conditional negativity=v for GHZ/dephased mixture.",
+      "limitations": "This is LOCALIZABLE ENTANGLEMENT, not the stronger genuine-three-time quantum memory process-tensor witness. All input slots and arbitrary instruments are absent."
+    }
+  }
+}

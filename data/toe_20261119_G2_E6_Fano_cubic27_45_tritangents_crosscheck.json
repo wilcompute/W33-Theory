@@ -1,0 +1,51 @@
+{
+  "research_date": "2026-11-19",
+  "G2_27_cubic_pencil": {
+    "phi_nonzero_signed_entries": 42,
+    "Fano_oriented_support_triples": 7,
+    "random_unit_line_basepoints": 32,
+    "max_trace_cubic_error_from_210": 1.9895196601282805e-13,
+    "max_phi_cubic_error_from_84": 4.263256414560601e-14,
+    "critical_lambda_quadratic": "8*lambda^2-2*lambda+1",
+    "critical_lambda": [
+      "1/8 - sqrt(7)*I/8",
+      "1/8 + sqrt(7)*I/8"
+    ],
+    "E_line_cubic_at_critical_lambdas": [
+      "441/2 - 21*sqrt(7)*I/2",
+      "441/2 + 21*sqrt(7)*I/2"
+    ],
+    "external_theorem": "Sergey Grigorian arXiv:2611.21589 proves stabilizer jump G2(dim14) -> E6(dim78) and Albert norm equivalence at these roots.",
+    "scope": "We checked only cubic contractions and critical quadratic arithmetic, NOT 78-dimensional Lie stabilizers, full Jordan identity, global bundle existence or 11D physics."
+  },
+  "E6_cubic_surface_lines": {
+    "lines": 27,
+    "exceptional_lines": 6,
+    "conic_lines": 6,
+    "pair_lines": 15,
+    "tritangent_planes": 45,
+    "mixed_E_L_Q_tritangents": 30,
+    "three_pair_L_tritangents": 15,
+    "tritangents_incident_to_each_line": 5,
+    "intersecting_lines_per_line": 10,
+    "unique_pair_incidence": 135,
+    "intersection_graph_strongly_regular_parameters": [
+      27,
+      10,
+      1,
+      5
+    ],
+    "intersection_graph_eigenvalues": {
+      "-5": 6,
+      "1": 20,
+      "10": 1
+    },
+    "Schlafli_skew_graph_degree": 16,
+    "external_new_work": "D. Corey arXiv:2611.19606 classifies E6 minuscule Coxeter matroids as 1,335,373 matroids in 230 Weyl orbits; NOT reproduced here.",
+    "scope": "Classical cubic surface incidence reconstructed independently, but does not imply that physical E6 matter or a G2 compactification follows."
+  },
+  "literature": [
+    "https://arxiv.org/html/2611.21589",
+    "https://arxiv.org/abs/2611.19606"
+  ]
+}
