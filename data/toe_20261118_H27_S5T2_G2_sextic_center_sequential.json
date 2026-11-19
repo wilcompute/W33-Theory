@@ -1,0 +1,257 @@
+{
+  "status": "PASS",
+  "date": "2026-11-18",
+  "H27_seven_dimensional_quotient": {
+    "status": "PASS",
+    "h27_group_law_max_residual": 2.0471501066083613e-15,
+    "free_action_test_nonidentity": 26,
+    "fixed_point_exclusion_cases": {
+      "central_S5": 2,
+      "first_torus_translation": 18,
+      "second_torus_translation": 6
+    },
+    "quotient": "Y7=(S5(R) x T2(L1,L2))/H27",
+    "real_dimension": 7,
+    "free_smooth_action": true,
+    "natural_spin_structure_exists": true,
+    "quotient_orientable": true,
+    "exact_rational_Poincare": "(1+t^5)*(1+t)^2",
+    "rational_Betti": {
+      "0": 1,
+      "1": 2,
+      "2": 1,
+      "5": 1,
+      "6": 2,
+      "7": 1
+    },
+    "first_Betti": 2,
+    "third_Betti": 0,
+    "fourth_Betti": 0,
+    "fundamental_group": "1 -> Z^2 -> pi1(Y7) -> H27 -> 1",
+    "full_fundamental_group_infinite": true,
+    "h27_finite_flat_holonomy_possible": true,
+    "torsion_free_G2_possible": false,
+    "G2_obstruction1": "A compact torsion-free G2 structure has a nonzero harmonic defining 3-form, so b3>=1. Here b3=0.",
+    "G2_obstruction2": "On compact Ricci-flat torsion-free G2, harmonic 1-forms are parallel. Two independent such forms produce a third parallel form via the G2 cross product, so b1=2 is impossible.",
+    "nearly_parallel_G2_nonzero_tau_possible": false,
+    "weak_G2_obstruction": "Positive Ricci for nearly-parallel G2 would imply b1=0 (Bochner), contrary to b1=2.",
+    "actual_product_quotient_Ricci": "eigenvalues 4/R^2 (five sphere tangent directions), 0 (two torus directions)",
+    "actual_product_quotient_scalar_curvature": "20/R^2",
+    "no_nonzero_deRham_4form_flux_class": true,
+    "scope": "Explicit free 7D Riemannian model with H27 quotient holonomy, NOT a torsion-free/weak-G2 metric, singular ADE 7D compactification or a Lorentzian M-theory solution. Other torsionful or sourced geometries are not excluded."
+  },
+  "ordinary_spin_Dirac_flat_gap": {
+    "status": "PASS",
+    "sphere_spin_Dirac_spectrum": "lambda_k=+/- (k+5/2)/R",
+    "product_Dirac_square": "D_S5^2 + D_T2^2",
+    "numeric_R": 2.0,
+    "smallest_spin_Dirac_square": 1.5625,
+    "exact_lower_bound_Dirac_abs_times_R": "5/2",
+    "exact_lower_bound_Dirac_squared_times_R2": "25/4",
+    "Lichnerowicz_curvature_term_times_R2": "5",
+    "flat_unitary_gauge_twist_cannot_generate_ordinary_zero_modes": true,
+    "finite_quotient_spectrum_obeys_cover_lower_bound": true,
+    "independently_enumerated_torus_momenta_count": 49,
+    "reason": "Lift a twisted flat-connection spinor on the free finite quotient to an equivariant spinor on S5 x T2. Its spectrum is contained in the cover spectrum, whose S5 factor already has gap.",
+    "scope": "Ordinary Riemannian spin Dirac with unitary FLAT internal gauge connection and no singularities. Nonflat curvature, flux supercovariant operators, ADE charged defect Dirac and boundary indices are not tested."
+  },
+  "H27_first_nontrivial_sextic_F_flat": {
+    "status": "PASS",
+    "H27_Molien_dimensions_degrees_0_to_12": {
+      "0": 1,
+      "1": 0,
+      "2": 0,
+      "3": 2,
+      "4": 0,
+      "5": 0,
+      "6": 4,
+      "7": 0,
+      "8": 0,
+      "9": 7,
+      "10": 0,
+      "11": 0,
+      "12": 11
+    },
+    "degree6_invariant_basis_exponent_orbits": [
+      [
+        [
+          0,
+          0,
+          6
+        ],
+        [
+          0,
+          6,
+          0
+        ],
+        [
+          6,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          3,
+          3
+        ],
+        [
+          3,
+          0,
+          3
+        ],
+        [
+          3,
+          3,
+          0
+        ]
+      ],
+      [
+        [
+          1,
+          1,
+          4
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          4,
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          2,
+          2,
+          2
+        ]
+      ]
+    ],
+    "exact_independent_sextic_invariants": [
+      "x^6+y^6+z^6",
+      "x^3*y^3+y^3*z^3+z^3*x^3",
+      "(xyz)*(x^3+y^3+z^3)",
+      "(xyz)^2"
+    ],
+    "lowest_new_holomorphic_degree_beyond_cubic": 6,
+    "invariant_quartic_and_quintic_absent": true,
+    "chosen_W": "(x^3+y^3+z^3) - (x^6+y^6+z^6)/2",
+    "actual_F_terms": [
+      "-3*x**5 + 3*x**2",
+      "-3*y**5 + 3*y**2",
+      "-3*z**5 + 3*z**2"
+    ],
+    "number_of_complex_stationary_points": 64,
+    "stationary_support_class_counts": {
+      "0": 1,
+      "1": 9,
+      "2": 27,
+      "3": 27
+    },
+    "nonstabilizer_F_flat_solution": "[1,1,0]",
+    "independent_nonstabilizer_VEVs_at_support_two": 27,
+    "normalized_F_flat_qutrit": "[1,1,0]/sqrt(2)",
+    "maximum_overlap_squared_with_12_stabilizer_states": 0.6666666666666669,
+    "qutrit_nonstabilizer_magic_state": true,
+    "number_of_projective_support_two_SIC_rays": 9,
+    "SIC_all_distinct_pair_overlap_squared": "1/4",
+    "SIC_POVM_sum_normalized": "sum_j |psi_j><psi_j| / 3 = I3",
+    "SIC_Gram_max_abs_residual": 6.661338147750939e-16,
+    "SIC_POVM_max_abs_residual": 3.331003839090023e-16,
+    "SIC_transitive_H27_orbit_verified": true,
+    "Hesse_doublet_norm_squared_on_this_SIC": "1/6",
+    "not_prior_specific_Hesse_pencil_basepoint_SIC": true,
+    "H27_covariance_and_exact_F_flatness_verified": true,
+    "limitation": "This is an H27-invariant isolated effective flavon superpotential, requiring a dimensionful sextic coefficient. Its elementary family triplet may NOT be an E8-adjoint scalar; E6 gauge charge, D-flatness, anomaly inflow, kinetic potential, electroweak masses and a UV operator generating W are NOT demonstrated. The cubic-only F-flat stabilizer theorem remains correct for degree3."
+  },
+  "flat_Weyl_torus_compensation": {
+    "status": "PASS",
+    "single_family_Weyl_commutator": "Z*X=omega*X*Z",
+    "single_triplet_X_Z_commute": false,
+    "cannot_be_simultaneous_flat_wilson_holonomies_of_pi1_T2": true,
+    "compensated_9D_tensor_control": "U=Z tensor Z, V=X tensor X_inverse",
+    "compensated_U_V_commute": true,
+    "compensated_commutator_max_abs": 6.740105962128839e-16,
+    "compensated_character_traces": {
+      "0,0": [
+        9.0,
+        0.0
+      ],
+      "0,1": [
+        0.0,
+        0.0
+      ],
+      "0,2": [
+        0.0,
+        0.0
+      ],
+      "1,0": [
+        -0.0,
+        -0.0
+      ],
+      "1,1": [
+        0.0,
+        0.0
+      ],
+      "1,2": [
+        0.0,
+        0.0
+      ],
+      "2,0": [
+        -0.0,
+        0.0
+      ],
+      "2,1": [
+        0.0,
+        0.0
+      ],
+      "2,2": [
+        0.0,
+        0.0
+      ]
+    },
+    "compensated_9D_rep_is_regular_of_Z3_squared": true,
+    "H27_nonabelian_pi1_quotient_allows_noncommuting_holonomy": true,
+    "shared_E8_center_needed_if_E6_compensates_family_SU3": true,
+    "limitation": "A concrete two-qutrit A2 x A2 center-cancellation example, NOT an actual E6 27-dimensional compensator, E8 global bundle or Yang-Mills solution. In a nonabelian pi1(Y7), genuine H27 flat holonomies are allowed and do not need torus generators to fail commuting."
+  },
+  "sequential_qutrit_four_gate_emitter": {
+    "status": "PASS",
+    "four_register_order": "E,A,B,C",
+    "gates_in_chronological_order": [
+      "SUM(E->A) at t1",
+      "SUM(E->B) at t2",
+      "SUM(E->C) at t3",
+      "inverse_SUM(C->E) at t3"
+    ],
+    "two_qutrit_clifford_gate_count": 4,
+    "earlier_emitted_outputs_not_touched_again": true,
+    "final_environment_state": "|0>",
+    "final_three_output_coherent_state": "(|000>+|111>+|222>)/sqrt3",
+    "coherent_density_max_error": 0.0,
+    "environment_dephased_gives_exact_classical_GHZ_diagonal": true,
+    "classical_density_max_error": 1.1102230246251565e-16,
+    "pairwise_marginal_max_error": 1.1102230246251565e-16,
+    "triple_X_expectation_coherent": 1,
+    "triple_X_expectation_classical": 0,
+    "modeled_visibility": 0.75,
+    "GHZ_fidelity": 0.8333333333333337,
+    "readout_error": 0.01,
+    "modeled_pair_Z_match": 0.98015,
+    "modeled_triple_X_sum_zero": 0.8111691458333333,
+    "three_setting_GHZ_fidelity_lower": 0.7714691458333331,
+    "typeI_upper_bound": 0.01,
+    "accepted_trials_per_setting": 200,
+    "total_accepted_trials": 600,
+    "biseparable_rejection_threshold_total_matches": 539,
+    "exact_IID_model_power": 0.9930633699216721,
+    "causal_scope": "Valid time-ordered sequential emitter using a persistent quantum memory E and one-time emitted output qutrits. ALL output pairwise state reductions are separable and identical to the dephased control; three-output coherence is quantum.",
+    "limitation": "This is not yet a three-slot process tensor with freely chosen interventions at each input. Hence pairwise-classical OUTPUT MARGINALS do not imply the stronger pairwise-classical operational PROCESS condition. No photonic layout, herald efficiency, calibration uncertainty or experimental result is provided."
+  },
+  "valid_full_TOE": false
+}
