@@ -1,0 +1,268 @@
+{
+  "date": "2026-11-19",
+  "status": "PASS: analytical SSR-CHSH multi-copy Lucas law and explicit local observables",
+  "TOE_solved": false,
+  "physical_photonic_universality_derived": false,
+  "closed_form_results_n_0_to_14": [
+    {
+      "n_copies": 0,
+      "n_odd_binomial_entries": 1,
+      "number_odd_from_Lucas": 1,
+      "fraction_unpaired_classical_dimension": 1.0,
+      "fraction_paired_entangled_dimension": 0.0,
+      "SSR_CHSH_supremum": 2.0,
+      "independent_sector_weighted_sum": 2.0
+    },
+    {
+      "n_copies": 1,
+      "n_odd_binomial_entries": 2,
+      "number_odd_from_Lucas": 2,
+      "fraction_unpaired_classical_dimension": 1.0,
+      "fraction_paired_entangled_dimension": 0.0,
+      "SSR_CHSH_supremum": 2.0,
+      "independent_sector_weighted_sum": 2.0
+    },
+    {
+      "n_copies": 2,
+      "n_odd_binomial_entries": 2,
+      "number_odd_from_Lucas": 2,
+      "fraction_unpaired_classical_dimension": 0.5,
+      "fraction_paired_entangled_dimension": 0.5,
+      "SSR_CHSH_supremum": 2.414213562373095,
+      "independent_sector_weighted_sum": 2.414213562373095
+    },
+    {
+      "n_copies": 3,
+      "n_odd_binomial_entries": 4,
+      "number_odd_from_Lucas": 4,
+      "fraction_unpaired_classical_dimension": 0.5,
+      "fraction_paired_entangled_dimension": 0.5,
+      "SSR_CHSH_supremum": 2.414213562373095,
+      "independent_sector_weighted_sum": 2.4142135623730954
+    },
+    {
+      "n_copies": 4,
+      "n_odd_binomial_entries": 2,
+      "number_odd_from_Lucas": 2,
+      "fraction_unpaired_classical_dimension": 0.125,
+      "fraction_paired_entangled_dimension": 0.875,
+      "SSR_CHSH_supremum": 2.724873734152917,
+      "independent_sector_weighted_sum": 2.724873734152917
+    },
+    {
+      "n_copies": 5,
+      "n_odd_binomial_entries": 4,
+      "number_odd_from_Lucas": 4,
+      "fraction_unpaired_classical_dimension": 0.125,
+      "fraction_paired_entangled_dimension": 0.875,
+      "SSR_CHSH_supremum": 2.724873734152917,
+      "independent_sector_weighted_sum": 2.724873734152917
+    },
+    {
+      "n_copies": 6,
+      "n_odd_binomial_entries": 4,
+      "number_odd_from_Lucas": 4,
+      "fraction_unpaired_classical_dimension": 0.0625,
+      "fraction_paired_entangled_dimension": 0.9375,
+      "SSR_CHSH_supremum": 2.7766504294495533,
+      "independent_sector_weighted_sum": 2.7766504294495533
+    },
+    {
+      "n_copies": 7,
+      "n_odd_binomial_entries": 8,
+      "number_odd_from_Lucas": 8,
+      "fraction_unpaired_classical_dimension": 0.0625,
+      "fraction_paired_entangled_dimension": 0.9375,
+      "SSR_CHSH_supremum": 2.7766504294495533,
+      "independent_sector_weighted_sum": 2.7766504294495533
+    },
+    {
+      "n_copies": 8,
+      "n_odd_binomial_entries": 2,
+      "number_odd_from_Lucas": 2,
+      "fraction_unpaired_classical_dimension": 0.0078125,
+      "fraction_paired_entangled_dimension": 0.9921875,
+      "SSR_CHSH_supremum": 2.821955037834111,
+      "independent_sector_weighted_sum": 2.8219550378341105
+    },
+    {
+      "n_copies": 9,
+      "n_odd_binomial_entries": 4,
+      "number_odd_from_Lucas": 4,
+      "fraction_unpaired_classical_dimension": 0.0078125,
+      "fraction_paired_entangled_dimension": 0.9921875,
+      "SSR_CHSH_supremum": 2.821955037834111,
+      "independent_sector_weighted_sum": 2.821955037834111
+    },
+    {
+      "n_copies": 10,
+      "n_odd_binomial_entries": 4,
+      "number_odd_from_Lucas": 4,
+      "fraction_unpaired_classical_dimension": 0.00390625,
+      "fraction_paired_entangled_dimension": 0.99609375,
+      "SSR_CHSH_supremum": 2.8251910812901504,
+      "independent_sector_weighted_sum": 2.8251910812901504
+    },
+    {
+      "n_copies": 11,
+      "n_odd_binomial_entries": 8,
+      "number_odd_from_Lucas": 8,
+      "fraction_unpaired_classical_dimension": 0.00390625,
+      "fraction_paired_entangled_dimension": 0.99609375,
+      "SSR_CHSH_supremum": 2.8251910812901504,
+      "independent_sector_weighted_sum": 2.8251910812901504
+    },
+    {
+      "n_copies": 12,
+      "n_odd_binomial_entries": 4,
+      "number_odd_from_Lucas": 4,
+      "fraction_unpaired_classical_dimension": 0.0009765625,
+      "fraction_paired_entangled_dimension": 0.9990234375,
+      "SSR_CHSH_supremum": 2.8276181138821803,
+      "independent_sector_weighted_sum": 2.8276181138821803
+    },
+    {
+      "n_copies": 13,
+      "n_odd_binomial_entries": 8,
+      "number_odd_from_Lucas": 8,
+      "fraction_unpaired_classical_dimension": 0.0009765625,
+      "fraction_paired_entangled_dimension": 0.9990234375,
+      "SSR_CHSH_supremum": 2.8276181138821803,
+      "independent_sector_weighted_sum": 2.8276181138821803
+    },
+    {
+      "n_copies": 14,
+      "n_odd_binomial_entries": 8,
+      "number_odd_from_Lucas": 8,
+      "fraction_unpaired_classical_dimension": 0.00048828125,
+      "fraction_paired_entangled_dimension": 0.99951171875,
+      "SSR_CHSH_supremum": 2.8280226193141855,
+      "independent_sector_weighted_sum": 2.828022619314185
+    }
+  ],
+  "explicit_local_number_preserving_matrix_checks": [
+    {
+      "n_copies": 0,
+      "explicit_number_conserving_CHSH": 2.0,
+      "theoretical_maximum": 2.0,
+      "error": 0.0
+    },
+    {
+      "n_copies": 1,
+      "explicit_number_conserving_CHSH": 2.0,
+      "theoretical_maximum": 2.0,
+      "error": 0.0
+    },
+    {
+      "n_copies": 2,
+      "explicit_number_conserving_CHSH": 2.414213562373095,
+      "theoretical_maximum": 2.414213562373095,
+      "error": 0.0
+    },
+    {
+      "n_copies": 3,
+      "explicit_number_conserving_CHSH": 2.414213562373095,
+      "theoretical_maximum": 2.414213562373095,
+      "error": 0.0
+    },
+    {
+      "n_copies": 4,
+      "explicit_number_conserving_CHSH": 2.7248737341529163,
+      "theoretical_maximum": 2.724873734152917,
+      "error": 4.440892098500626e-16
+    },
+    {
+      "n_copies": 5,
+      "explicit_number_conserving_CHSH": 2.7248737341529163,
+      "theoretical_maximum": 2.724873734152917,
+      "error": 4.440892098500626e-16
+    },
+    {
+      "n_copies": 6,
+      "explicit_number_conserving_CHSH": 2.7766504294495533,
+      "theoretical_maximum": 2.7766504294495533,
+      "error": 0.0
+    },
+    {
+      "n_copies": 7,
+      "explicit_number_conserving_CHSH": 2.7766504294495533,
+      "theoretical_maximum": 2.7766504294495533,
+      "error": 0.0
+    },
+    {
+      "n_copies": 8,
+      "explicit_number_conserving_CHSH": 2.82195503783411,
+      "theoretical_maximum": 2.821955037834111,
+      "error": 8.881784197001252e-16
+    }
+  ],
+  "fixed_setting_independent_photon_loss": {
+    "status": "PASS",
+    "loss_model": "Independent erasure of each distinguishable photon into vacuum; all runs included; no phase reference; same local block observables optimized for eta=1.",
+    "survival_efficiency_records": [
+      {
+        "n": 2,
+        "unconditional_zero_loss_CHSH": 2.414213562373095,
+        "fixed_settings_positive_thresholds": [
+          0.9061636786439458
+        ],
+        "at_eta_90pct": 1.975512985522207,
+        "at_eta_95pct": 2.183827740041718
+      },
+      {
+        "n": 3,
+        "unconditional_zero_loss_CHSH": 2.414213562373095,
+        "fixed_settings_positive_thresholds": [
+          0.935260939402081
+        ],
+        "at_eta_90pct": 1.803686037693876,
+        "at_eta_95pct": 2.0881031595385893
+      },
+      {
+        "n": 4,
+        "unconditional_zero_loss_CHSH": 2.7248737341529163,
+        "fixed_settings_positive_thresholds": [
+          0.9331149392369652
+        ],
+        "at_eta_90pct": 1.707803747991174,
+        "at_eta_95pct": 2.1651952579766154
+      },
+      {
+        "n": 5,
+        "unconditional_zero_loss_CHSH": 2.7248737341529163,
+        "fixed_settings_positive_thresholds": [
+          0.9332313076806636
+        ],
+        "at_eta_90pct": 1.7043672090346076,
+        "at_eta_95pct": 2.1647166350740994
+      },
+      {
+        "n": 6,
+        "unconditional_zero_loss_CHSH": 2.7766504294495533,
+        "fixed_settings_positive_thresholds": [
+          0.9391670204506082
+        ],
+        "at_eta_90pct": 1.6116178459930806,
+        "at_eta_95pct": 2.121794692752858
+      }
+    ],
+    "not_optimized": "Arbitrary Bell settings or POVMs might lower a threshold; detector loopholes and scalable device resources remain unmodeled."
+  },
+  "proof_and_scope": {
+    "state": "[ (|1_A0_B> + |0_A1_B>)/sqrt2 ] tensor to n copies",
+    "local_U1_SSR": "Each local dichotomic observable commutes with total local photon number.",
+    "charge_sector": "At local Alice number k, Schmidt rank d_k=C(n,k) and weight d_k/2^n; state is |Phi_(d_k)> on paired mode-subsets.",
+    "odd_dim_CHSH_bound": "For a maximally entangled |Phi_d> and binary projective observables: max CHSH=2sqrt2 if d even; [2sqrt2(d-1)+2]/d if d odd. Jordan block lemma gives an unavoidable 1D classical block in odd d, all remaining 2D blocks achieve Tsirelson.",
+    "Lucas_parity": "C(n,k) odd iff k's 1-bits are a subset of n's 1-bits. Number of odd coefficients in row n is 2^popcount(n).",
+    "exact_many_copy_law": "S_n=2+(2sqrt2-2)(1-2^(popcount(n)-n))",
+    "pair_plateau": "S_(2m)=S_(2m+1) exactly for any m>=0; odd extra copy alone does not improve this ideal optimal CHSH figure.",
+    "power_of_two_advantage": "At n=2^r, only two binomial coefficients are odd, giving S_n=2sqrt2-(2sqrt2-2)*2/2^n.",
+    "limitations": "Ideal distinguishable copies and joint local number-preserving observables, no shared phase reference, no loss, no detector imperfections or circuit compilation. Collective observables can demand severe resources. This does not derive the Born rule or show universal single-photon BQP.",
+    "prior_art": [
+      "https://doi.org/10.1103/PhysRevA.82.042116",
+      "https://arxiv.org/abs/1905.02652",
+      "https://mathworld.wolfram.com/LucasCorrespondenceTheorem.html",
+      "https://arxiv.org/abs/2511.21819"
+    ]
+  }
+}
