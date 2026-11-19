@@ -1,0 +1,37 @@
+{
+  "source_superpotential": "-x**6/2 + x**3 - y**6/2 + y**3 - z**6/2 + z**3",
+  "stationary_support_census": [
+    1,
+    9,
+    27,
+    27
+  ],
+  "support_two": {
+    "projective_rays": 9,
+    "SIC_gram_max_error": 6.661338147750939e-16,
+    "SIC_POVM_error": 5.375716909217241e-16,
+    "W_hessian_rank": 2,
+    "mass_squared_eigenvalues": [
+      0,
+      81,
+      81
+    ],
+    "zero_coordinate_local_F_root_multiplicity": 2,
+    "leading_transverse_scalar_potential": "9 |delta|^4 + O(|delta|^7)"
+  },
+  "support_three": {
+    "projective_rays": 9,
+    "MUB_bases": 3,
+    "basis_orthogonality_max_error": 5.253087011050368e-16,
+    "mutual_unbiasedness_max_error": 2.220446049250313e-16,
+    "W_hessian_rank": 3,
+    "mass_squared_eigenvalues": [
+      81,
+      81,
+      81
+    ]
+  },
+  "result": "In this separable H27 sextic, F-flat projective SIC rays have one massless chiral multiplet at quadratic order; all three-massive support-three rays form 3 MUBs, not a SIC.",
+  "scope": "Canonical K\u00e4hler global-SUSY toy; F-flat only, not D-flat gauge completion, loop spectrum, vacuum selection, observed particles or a TOE",
+  "mathematical_warning": "Hessian zero is not an exactly flat moduli direction: quartic scalar potential stabilizes the isolated nonreduced stationary solution."
+}

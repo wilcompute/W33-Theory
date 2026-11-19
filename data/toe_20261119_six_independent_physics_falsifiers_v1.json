@@ -1,0 +1,105 @@
+{
+  "research_date": "2026-11-19",
+  "status": "SIX_FINITE_FALSIFICATION_TRACKS_PASSED_NOT_A_TOE",
+  "novelty": "Mostly known theorems independently cross-tested; strongest synthesis is dense-DAG monotonicity plus triangular-unitary obstruction",
+  "all_results": {
+    "spinors": {
+      "checks": 6,
+      "cases": [
+        {
+          "L": 4,
+          "flux": -1,
+          "overlap_index": 1,
+          "H_hermiticity_residual": 0.0,
+          "kernel_spectral_gap": 0.7986929152911129
+        },
+        {
+          "L": 4,
+          "flux": 0,
+          "overlap_index": 0,
+          "H_hermiticity_residual": 0.0,
+          "kernel_spectral_gap": 0.999999999999999
+        },
+        {
+          "L": 4,
+          "flux": 1,
+          "overlap_index": -1,
+          "H_hermiticity_residual": 0.0,
+          "kernel_spectral_gap": 0.798692915291112
+        },
+        {
+          "L": 6,
+          "flux": -1,
+          "overlap_index": 1,
+          "H_hermiticity_residual": 0.0,
+          "kernel_spectral_gap": 0.9115743795172982
+        },
+        {
+          "L": 6,
+          "flux": 0,
+          "overlap_index": 0,
+          "H_hermiticity_residual": 0.0,
+          "kernel_spectral_gap": 0.9999999999999981
+        },
+        {
+          "L": 6,
+          "flux": 1,
+          "overlap_index": -1,
+          "H_hermiticity_residual": 0.0,
+          "kernel_spectral_gap": 0.9115743795172984
+        }
+      ],
+      "limitations": "Flux, 2D topology, gamma matrices and mass chosen externally; reflection positivity, 3+1 chirality and anomalies untested"
+    },
+    "gravity": {
+      "event_count": 5,
+      "labeled_forward_graphs": 1024,
+      "single_edge_monotonicity_checks": 5120,
+      "determinant_spread": 0.0,
+      "response_min": 2.9585798816568043,
+      "response_max": 6.649316911895761,
+      "exact_claim": "For nonnegative edge weights, adding any forward edge strictly raises Tr(G dagger(G)); this biases positive action/weights toward dense DAGs",
+      "limitations": "Labeled topological order fixed; graphs need not be transitively closed; this is not a continuum causal-set gravity measure"
+    },
+    "gauge": {
+      "gauge_cases": 48,
+      "max_frame_error": 1.2668375675902115e-15,
+      "sample_Wilson_traces": [
+        {
+          "trace_W_real": 0.2307216455414341,
+          "frame_error": 6.497413668604471e-16
+        },
+        {
+          "trace_W_real": 0.06770597859085906,
+          "frame_error": 4.783309287441108e-16
+        }
+      ],
+      "limitations": "The link unitaries and causal paths are inputs, no Yang-Mills kinetic action derived"
+    },
+    "temporal_qutrit": {
+      "two_output_marginal_residuals": [
+        1.9229626863835638e-16,
+        1.9229626863835638e-16,
+        1.9229626863835638e-16
+      ],
+      "XXX_coherent": 1.0000000000000002,
+      "XXX_dephased": 0.0,
+      "limitations": "Three-party GHZ coherence is not itself a causal process-tensor quantum-memory witness; arbitrary intermediate interventions not tested"
+    },
+    "matter_flavor": {
+      "one_heavy_mixing_row_CP_cycle": 0.0,
+      "two_independent_heavy_rows_CP_cycle": 0.00012110726643598489,
+      "limitations": "Heavy couplings arbitrary; no physical Yukawa or CKM fit; rank-one no-go previously identified in repo"
+    },
+    "unitary_causal_dilation": {
+      "dilation_unitarity_error": 1.3714748198504035e-17,
+      "nontrivial_triangular_unitary_rejections": 128,
+      "theorem": "Finite triangular unitary matrix must be diagonal; nontrivial forward causal propagation as an operation needs layered time evolution, monitoring/postselection, or dilation",
+      "limitations": "Dilation adds coherent ancilla and reverse amplitudes in larger Hilbert space; does not derive a unique microscopic dynamics"
+    }
+  },
+  "source_comparison": [
+    "2026-11-19_causal_spectral_response_block_DAG_wilson.md",
+    "2026-11-19_TOE_five_keystone_falsifications_full_research.md"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "source": "H27 sextic W=sum_i(x_i^3-x_i^6/2), canonical global SUSY",
+  "support_two_SIC_W": "1",
+  "support_three_MUB_W": "3/2",
+  "F_term_vacuum_energies_all_supports": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "delta_W": "1/2",
+  "BPS_tension_dimensionless": "1",
+  "interpolating_real_channel": "x_prime=3*x^2*(1-x^3); other two coordinates fixed at 1",
+  "SIC_side_algebraic_tail": "x(z) asymptotic -1/(3z) as z->-infinity",
+  "MUB_side_exponential_tail": "1-x(z) proportional to exp(-9z) as z->infinity",
+  "cutoff_numerical_checks": [
+    {
+      "cutoff": 0.01,
+      "integrated_tension": 0.9991158506,
+      "missing_tail": 0.0008841494000000338
+    },
+    {
+      "cutoff": 0.001,
+      "integrated_tension": 0.999991015985006,
+      "missing_tail": 8.984014994051215e-06
+    },
+    {
+      "cutoff": 0.0001,
+      "integrated_tension": 0.9999999100159983,
+      "missing_tail": 8.998400169435428e-08
+    }
+  ],
+  "limits": "BPS solution in ungauged canonical-K\u00e4hler global-SUSY toy; no E8 fields, gauge D-term, gravity backreaction, vacuum preference, or spacetime derivation"
+}
