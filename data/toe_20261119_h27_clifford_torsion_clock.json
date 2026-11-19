@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "source_torsion_H3": "(Z/3)^2",
+  "nonzero_torsion_classes": 8,
+  "projective_torsion_rays": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "projective_correspondence": "P1(F3): four Hesse/MUB clock labels",
+  "exact_H27_automorphisms": 48,
+  "center_preserving_automorphisms": 24,
+  "center_inverting_automorphisms": 24,
+  "center_preserving_projective_image": "A4, order 12",
+  "full_projective_image": "S4, order 24",
+  "central_projective_kernel": [
+    "+I",
+    "-I"
+  ],
+  "SL2_orbit_on_four_rays": 4,
+  "determinant_to_permutation_parity": "det=1 even; det=2 odd",
+  "H3_torsion_linear_action": "det(M) * M^T on (F3)^2",
+  "scope": [
+    "abstract group automorphisms and cohomology module only",
+    "not a canonical choice of a clock or an isometry of Y7",
+    "opposite torsion classes need not be physically equivalent",
+    "no time evolution, field equations, or chiral spectrum derived"
+  ]
+}
