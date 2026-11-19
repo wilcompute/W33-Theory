@@ -1,0 +1,104 @@
+{
+  "status": "PASS",
+  "new_tests": 22,
+  "parts": {
+    "AdS4": {
+      "BF_AdS4": "-9/4",
+      "S7_over_AdS4_radius": 2,
+      "breathing_canonical_m2L2": 18,
+      "test_scalar_m2L2_first10": [
+        "0",
+        "7/4",
+        "4",
+        "27/4",
+        "10",
+        "55/4",
+        "18",
+        "91/4",
+        "28",
+        "135/4"
+      ],
+      "caveat": "Homogeneous breathing and uncoupled massless 11D spectator scalar only; full mixed 11D KK gravity/form/spinor spectrum not computed. Prior Tpq formula is AdS5."
+    },
+    "E8_family": {
+      "E8_branching": "(78,1)+(1,8)+(27,3)+(27bar,3bar)",
+      "isolated_chiral_27_triplet_SU3_cubed_anomaly": 27,
+      "complete_adj_conjugate_pair_SU3_cubed_anomaly": 0,
+      "H27_traceless_SU3_commutant_dim": 0,
+      "caveat": "Only if SU3 family is GAUGED; the finite H27 group needs separate global/discrete anomaly analysis. A parallel E6-singlet adjoint Higgs preserving full H27 holonomy must vanish."
+    },
+    "PW_global": {
+      "laplacian": 0,
+      "energy_ball_R": "64*pi*R^9/315+8*pi*R^5/5+4*pi*a^2*R^3/3",
+      "global_source_free_finite_energy_R3": false,
+      "smooth_closed_compact_nonconstant_exact_harmonic_f_possible": false,
+      "caveat": "The published parallel local 3 L2 PW solutions remain valid. A physical G2/global gauge gluing needs boundary/source/nonexact data; this is the flat auxiliary Higgs Dirichlet integral, not 11D energy."
+    },
+    "E6": {
+      "singlet_invariant_ring": "C[xyz]",
+      "no_nonzero_all_threeVEV_Fflat_with_only_renormalizable_cubic": true,
+      "general_analytic_fI_at_stationary_dI_nonzero_Hessian_rank_at_most": 1,
+      "full_chiral_field_dim": 132,
+      "SM_unbroken_minimum_generators": 12,
+      "smooth_one_invariant_moduli_complex_lower_bound": 65,
+      "separable_k_constraints_reduced_moduli_lower_bound": "max(0,66-k)",
+      "caveat": "Requires the stated 78+27+27bar full chiral inventory, smooth polystable N1 quotient and W=f(I) or separable stationary invariants. Not a no-go for arbitrary E6 UV superpotentials."
+    },
+    "photon_power": {
+      "alpha": 0.01,
+      "gamma": 0.96,
+      "eta": 0.95,
+      "pairwise_classical_p": 0.45,
+      "rows": [
+        {
+          "n": 300,
+          "accepted_total": 900,
+          "model_exact_rejection_power": 0.23397625324129634,
+          "rounded_expected_successes": [
+            294,
+            292,
+            292
+          ],
+          "designpoint_W3_upper": 0.0782252234281261
+        },
+        {
+          "n": 450,
+          "accepted_total": 1350,
+          "model_exact_rejection_power": 0.6612812122128201,
+          "rounded_expected_successes": [
+            441,
+            439,
+            439
+          ],
+          "designpoint_W3_upper": -0.025036424984905437
+        },
+        {
+          "n": 600,
+          "accepted_total": 1800,
+          "model_exact_rejection_power": 0.9085533490887839,
+          "rounded_expected_successes": [
+            588,
+            585,
+            585
+          ],
+          "designpoint_W3_upper": -0.06525662097787921
+        },
+        {
+          "n": 900,
+          "accepted_total": 2700,
+          "model_exact_rejection_power": 0.9979393709157902,
+          "rounded_expected_successes": [
+            882,
+            878,
+            878
+          ],
+          "designpoint_W3_upper": -0.12518947580086037
+        }
+      ],
+      "not_experimental_data": true,
+      "caveat": "Exact independent fixed-n Bernoulli/Clopper-Pearson/Bonferroni power for the chosen Beyer et al three-time qubit witness only, not validated physical instruments or an intrinsically qutrit process."
+    }
+  },
+  "reviewed_parallel_head": "9321eb27ecaeacea9d640b31c8d010fa3a9f84f7",
+  "complete_TOE_proven": false
+}
