@@ -1,0 +1,338 @@
+{
+  "two_ten_light_Higgs": {
+    "operators": [
+      {
+        "name": "16H\u00b2 10_34",
+        "singlets": [
+          "B"
+        ]
+      },
+      {
+        "name": "bar16H\u00b2 10_34",
+        "singlets": [
+          "C",
+          "D"
+        ]
+      },
+      {
+        "name": "16H\u00b2 10_24",
+        "singlets": [
+          "E",
+          "G1"
+        ]
+      },
+      {
+        "name": "bar16H\u00b2 10_24",
+        "singlets": [
+          "A",
+          "D"
+        ]
+      }
+    ],
+    "mass_row_order": [
+      "H16_bar5",
+      "10_34_bar5",
+      "10_24_bar5"
+    ],
+    "mass_column_order": [
+      "bar16H_5",
+      "10_34_5",
+      "10_24_5"
+    ],
+    "mass_matrix": [
+      [
+        0.0,
+        0.15,
+        0.03
+      ],
+      [
+        0.02163330765278394,
+        0.0,
+        0.0
+      ],
+      [
+        0.02142428528562855,
+        0.0,
+        0.0
+      ]
+    ],
+    "mass_rank": 2,
+    "light_5_components": [
+      0.0,
+      0.19611613513818402,
+      -0.9805806756909201
+    ],
+    "light_bar5_components": [
+      0.0,
+      0.7036658518558089,
+      -0.7105310471274559
+    ],
+    "projection_10_34_5_abs": 0.19611613513818402,
+    "projection_10_34_bar5_abs": 0.7036658518558089,
+    "active_chiral_components": 72,
+    "hessian_rank": 38,
+    "broken_complex_gauge_dimension": 24,
+    "physical_massless_chiral_components": 10,
+    "massless_representation": "one complete SU5 5+bar5; colored triplets remain",
+    "family_16_1_and_Higgs_16H_same_charges": true,
+    "old_discrete_Z4R_gravitational_parity": 0,
+    "new_two_R0_spinors_one_R2_driver_parity_shift": 1,
+    "combined_discrete_Z4R_gravitational_parity_without_additional_inflow": 1,
+    "gauge_allowed_unsuppressed_16_1_16_2_10_34": true,
+    "limits": "Four operators gauge allowed but actual strict punctured S3 bulk cup vanishes. Missing mirror 16H and overlap coefficients, global anomaly inflow, SM doublet splitting, physical Higgs VEV and family mixing control."
+  },
+  "Z7_Wilson_zero_mode_test": {
+    "order": 7,
+    "W_diagonal_exponents": [
+      2,
+      2,
+      2,
+      4,
+      4
+    ],
+    "ten_vector_character_table": [
+      {
+        "character": 0,
+        "five_color": 0,
+        "five_weak": 0,
+        "barfive_color": 0,
+        "barfive_weak": 0
+      },
+      {
+        "character": 1,
+        "five_color": 0,
+        "five_weak": 0,
+        "barfive_color": 0,
+        "barfive_weak": 0
+      },
+      {
+        "character": 2,
+        "five_color": 0,
+        "five_weak": 0,
+        "barfive_color": 3,
+        "barfive_weak": 0
+      },
+      {
+        "character": 3,
+        "five_color": 0,
+        "five_weak": 2,
+        "barfive_color": 0,
+        "barfive_weak": 0
+      },
+      {
+        "character": 4,
+        "five_color": 0,
+        "five_weak": 0,
+        "barfive_color": 0,
+        "barfive_weak": 2
+      },
+      {
+        "character": 5,
+        "five_color": 3,
+        "five_weak": 0,
+        "barfive_color": 0,
+        "barfive_weak": 0
+      },
+      {
+        "character": 6,
+        "five_color": 0,
+        "five_weak": 0,
+        "barfive_color": 0,
+        "barfive_weak": 0
+      }
+    ],
+    "untwisted_16_invariant_components": 1,
+    "trivial_character_10_has_no_weak_doublets": true,
+    "characters_to_get_one_weak_five_and_bar_five": [
+      3,
+      4
+    ],
+    "global_constant_zero_mode_clash": "If Spin10 singlet Higgs and B,C,D,E,G1,A spurion VEVs have trivial constant C7 character, each A\u00b210 dressed mass term requires 10 character zero, while a surviving weak 5 needs character3 and weak bar5 needs character4. Thus cannot combine pre-Wilson 72-field mass matrix with a naive constant-flat-section Wilson projection.",
+    "required_escape": "Real C7-supporting compact singular gauge locus, nonconstant defect/brane profiles or genuinely twisted local coefficients and exact chiral cohomology. Earlier L4 base does not support C7.",
+    "limitation": "Flat constant global sections only; nontrivial localized modes and boundary defects could evade it."
+  },
+  "GUT_threshold_budget": {
+    "extra_N1_doublet_chiral_pair_beta": [
+      "3/5",
+      "1",
+      "0"
+    ],
+    "extra_N1_triplet_chiral_pair_beta": [
+      "2/5",
+      "0",
+      "1"
+    ],
+    "full_SUSY_5_plus_bar5_beta": [
+      "1",
+      "1",
+      "1"
+    ],
+    "illustrative_threshold_mass_doublet_triplet_GeV": [
+      1000,
+      2e+16
+    ],
+    "one_loop_delta_inverse_alpha_differences_12_13_23": [
+      1.9497596771170427,
+      -2.9246395156755636,
+      -4.874399192792606
+    ],
+    "limits": "Not a full 5D Dirac boundary eigenproblem, complete two-loop RGE, proton-lifetime prediction, or derivation of a physical Higgs. Do not double-count MSSM Higgs doublets."
+  },
+  "GUT_5D_Dirac_interval_toy": {
+    "Dirac_first_order_equations": "fL'=-m fR, fR'=m fL on 0<y<L",
+    "boundary_conditions": "fR(0)=0, fR(L)=h fL(L), real h",
+    "mass_quantization": "m_n L=atan(h)+n*pi (n=0,1,...); h dimensionless",
+    "test_cases": [
+      {
+        "brane_ratio_h": 0,
+        "first_3_positive_masses_times_L": [
+          0.0,
+          3.141592653589793,
+          6.283185307179586
+        ],
+        "first_mode_left_boundary_amplitude": 1,
+        "first_mode_right_boundary_amplitude": 0
+      },
+      {
+        "brane_ratio_h": 0.01,
+        "first_3_positive_masses_times_L": [
+          0.009999666686665238,
+          3.151592320276458,
+          6.293184973866252
+        ],
+        "first_mode_left_boundary_amplitude": 1,
+        "first_mode_right_boundary_amplitude": 0
+      },
+      {
+        "brane_ratio_h": 1,
+        "first_3_positive_masses_times_L": [
+          0.7853981633974483,
+          3.9269908169872414,
+          7.0685834705770345
+        ],
+        "first_mode_left_boundary_amplitude": 1,
+        "first_mode_right_boundary_amplitude": 0
+      },
+      {
+        "brane_ratio_h": 10,
+        "first_3_positive_masses_times_L": [
+          1.4711276743037347,
+          4.612720327893528,
+          7.754312981483321
+        ],
+        "first_mode_left_boundary_amplitude": 1,
+        "first_mode_right_boundary_amplitude": 0
+      },
+      {
+        "brane_ratio_h": 100,
+        "first_3_positive_masses_times_L": [
+          1.5607966601082315,
+          4.702389313698024,
+          7.843981967287817
+        ],
+        "first_mode_left_boundary_amplitude": 1,
+        "first_mode_right_boundary_amplitude": 0
+      }
+    ],
+    "two_triplets_one_octet_toy_parameters": {
+      "triplet_1_h": 0,
+      "triplet_2_h": 0,
+      "octet_1_h": 0,
+      "octet_2_h": 100
+    },
+    "one_octet_lifted_near_half_KK_scale": true,
+    "physical_warning": "A first-order two-profile Dirac boundary-value calculation only. It does NOT derive a supersymmetric 5D adjoint Majorana brane action, exact chirality, global gauge anomalies, KK threshold matching or proton decay; h=100 is inserted."
+  },
+  "causal_BDG4_Poisson_variance": {
+    "method": "Independent full 4D Minkowski future-cone Poisson sprinkling per trial. Count all causal interior events for each origin-to-event interval, then apply exactly 1,-9,16,-8 and B=4sqrt(rho)/sqrt6*(K-1).",
+    "data": [
+      {
+        "rho": 20,
+        "trials": 350,
+        "mean_events": 21.39142857142857,
+        "expected_events": 20.943951023931955,
+        "mean_BDG4_constant": 0.29211869733608703,
+        "sd_BDG4_constant": 196.71706346006565,
+        "five_to_95_percent": [
+          -335.93650193650194,
+          300.15196151283124
+        ],
+        "std_error_of_mean": 10.514969337140467
+      },
+      {
+        "rho": 50,
+        "trials": 300,
+        "mean_events": 52.37,
+        "expected_events": 52.35987755982989,
+        "mean_BDG4_constant": -7.043673284113431,
+        "sd_BDG4_constant": 580.3974995854855,
+        "five_to_95_percent": [
+          -901.243770205006,
+          970.5258025077611
+        ],
+        "std_error_of_mean": 33.509265262266574
+      },
+      {
+        "rho": 100,
+        "trials": 200,
+        "mean_events": 104.89,
+        "expected_events": 104.71975511965978,
+        "mean_BDG4_constant": 45.397209899581576,
+        "sd_BDG4_constant": 1311.1884567747038,
+        "five_to_95_percent": [
+          -1831.4018310208894,
+          2033.8929830909626
+        ],
+        "std_error_of_mean": 92.71502491989173
+      }
+    ],
+    "warning": "The correct BDG4 continuum expectation need not imply small shot-to-shot fluctuations. The trial mean has substantial standard error; no quantum graviton or selected physical state is derived."
+  },
+  "photon_modes_heralding": {
+    "dual_rail_n_photon_vs_single_photon_mode_tradeoff": [
+      {
+        "logical_qubits": 4,
+        "photons": 4,
+        "modes": 8,
+        "dual_rail_code_dimension": 16,
+        "full_fixed_photon_Fock_dimension": 330,
+        "all_survive_eta_0p9": 0.6561,
+        "n_heralded_0p75_gates_all_succeed": 0.31640625,
+        "combined_naive_success": 0.20759414062500006
+      },
+      {
+        "logical_qubits": 8,
+        "photons": 8,
+        "modes": 16,
+        "dual_rail_code_dimension": 256,
+        "full_fixed_photon_Fock_dimension": 490314,
+        "all_survive_eta_0p9": 0.4304672100000001,
+        "n_heralded_0p75_gates_all_succeed": 0.1001129150390625,
+        "combined_naive_success": 0.0430953272218323
+      },
+      {
+        "logical_qubits": 20,
+        "photons": 20,
+        "modes": 40,
+        "dual_rail_code_dimension": 1048576,
+        "full_fixed_photon_Fock_dimension": 2794563003870330,
+        "all_survive_eta_0p9": 0.12157665459056935,
+        "n_heralded_0p75_gates_all_succeed": 0.0031712119389339932,
+        "combined_naive_success": 0.0003855453385332681
+      },
+      {
+        "logical_qubits": 50,
+        "photons": 50,
+        "modes": 100,
+        "dual_rail_code_dimension": 1125899906842624,
+        "full_fixed_photon_Fock_dimension": 13419107273154621529493489587286210498760,
+        "all_survive_eta_0p9": 0.00515377520732012,
+        "n_heralded_0p75_gates_all_succeed": 5.663216564269376e-07,
+        "combined_naive_success": 2.91869451226162e-09
+      }
+    ],
+    "relative_success_acceptance_odds_bias_to_fake_p0p5_as_p0p51": 1.0408163265306123,
+    "known_2026_nonGaussian_resource": "Heralded four-dimensional OAM photon-photon controlled-phase gate, Nature Photonics (2026), https://www.nature.com/articles/s41566-026-01846-x",
+    "scope": "Mode economy requires n photons and active entangling resources; naive loss and gate postselection remain exponentially bad. No new quantum-vs-classical probability prediction; 4.08% relative acceptance bias mimics 1% absolute signal."
+  }
+}
