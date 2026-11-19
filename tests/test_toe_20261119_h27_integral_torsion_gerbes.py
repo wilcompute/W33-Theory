@@ -26,6 +26,13 @@ class H27TorsionTests(unittest.TestCase):
         self.assertEqual(r["H3_integral"],"(Z/3)^2")
         self.assertEqual(r["H3_deRham_dimension"],0)
         self.assertEqual(r["H2_homology"],"Z + (Z/3)^2")
+    def test_integral_cup_ring_certificate(self):
+        r=m.certify()
+        self.assertEqual(r['torus_fundamental_class_pullback'],
+                         'pi*(a cup b) = 3 eta')
+        self.assertEqual(r['integral_H3_torsion_generators'],
+                         ['a cup eta','b cup eta'])
+        self.assertEqual(r['torsion_generator_orders'],[3,3])
     def test_freeness_and_monodromy(self):
         r=m.certify()
         self.assertEqual(r["fixed_point_free_nonidentity"],26)

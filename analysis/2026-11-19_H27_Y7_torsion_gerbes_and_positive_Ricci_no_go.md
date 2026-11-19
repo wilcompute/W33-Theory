@@ -51,6 +51,30 @@ Its commutator subgroup is `Z/3`, so `H_1(Y7;Z)=Z^2`.
 Universal coefficients, together with `b_2=1`, give
 `H_2(Y7;Z)=Z direct-sum (Z/3)^2`.
 
+### An explicit low-degree integral cup-product law
+
+The same Serre filtration gives an exact sequence
+`0 -> H^2(T^2;Z) -> H^2(Y7;Z) -> H^2(L^5(3);Z) -> 0`.
+Since `H_1(Y7;Z)=Z^2`, the universal coefficient theorem makes
+`H^2(Y7;Z)` torsion-free; its real rank is one, so it is `Z`.
+Choose classes `a,b in H^1(Y7;Z)` pulled back from the two torus
+circles and a generator `eta in H^2(Y7;Z)` with the sign chosen so
+```
+a cup b = 3 eta.
+```
+Multiplicativity of the Serre spectral sequence sends `a cup eta`
+and `b cup eta` onto the two independent basis vectors of
+`E_infinity^(1,2)=(Z/3)^2`. Thus these are concrete generators of
+`H^3(Y7;Z)`, and their order is exactly three:
+```
+3(a cup eta) = a cup (a cup b) = 0,
+3(b cup eta) = b cup (a cup b) = 0.
+```
+This is stronger than counting torsion groups: it identifies the
+nontrivial B-field topology as products of clock-circle classes with
+the primitive integral two-class. The `3` in the relation is the
+central H27 commutator, not a fitted parameter.
+
 ## Geometry / physics boundary
 
 There are two independent order-three **flat bundle-gerbe (NS B-field)
