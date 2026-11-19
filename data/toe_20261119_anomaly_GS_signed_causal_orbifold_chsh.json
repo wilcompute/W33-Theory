@@ -1,0 +1,399 @@
+{
+  "E8_two_axion_GS_anomaly_design": {
+    "chiral_source_fields": [
+      {
+        "rep": 16,
+        "charge": [
+          1,
+          0,
+          0
+        ],
+        "name": "16_1"
+      },
+      {
+        "rep": 16,
+        "charge": [
+          0,
+          1,
+          0
+        ],
+        "name": "16_2"
+      },
+      {
+        "rep": 16,
+        "charge": [
+          0,
+          0,
+          1
+        ],
+        "name": "16_3"
+      },
+      {
+        "rep": 10,
+        "charge": [
+          1,
+          1,
+          0
+        ],
+        "name": "10_12"
+      },
+      {
+        "rep": 10,
+        "charge": [
+          1,
+          0,
+          1
+        ],
+        "name": "10_13"
+      },
+      {
+        "rep": 10,
+        "charge": [
+          0,
+          -1,
+          -1
+        ],
+        "name": "10_14"
+      },
+      {
+        "rep": 10,
+        "charge": [
+          -1,
+          0,
+          -1
+        ],
+        "name": "10_24"
+      },
+      {
+        "rep": 10,
+        "charge": [
+          -1,
+          -1,
+          0
+        ],
+        "name": "10_34"
+      },
+      {
+        "rep": 1,
+        "charge": [
+          1,
+          -1,
+          0
+        ],
+        "name": "S_12"
+      },
+      {
+        "rep": 1,
+        "charge": [
+          -1,
+          1,
+          0
+        ],
+        "name": "conj_S_12"
+      },
+      {
+        "rep": 1,
+        "charge": [
+          1,
+          0,
+          -1
+        ],
+        "name": "S_13"
+      },
+      {
+        "rep": 1,
+        "charge": [
+          2,
+          1,
+          1
+        ],
+        "name": "S_14"
+      },
+      {
+        "rep": 1,
+        "charge": [
+          -2,
+          -1,
+          -1
+        ],
+        "name": "conj_S_14"
+      },
+      {
+        "rep": 1,
+        "charge": [
+          1,
+          2,
+          1
+        ],
+        "name": "S_24"
+      },
+      {
+        "rep": 1,
+        "charge": [
+          1,
+          1,
+          2
+        ],
+        "name": "S_34"
+      },
+      {
+        "rep": 1,
+        "charge": [
+          1,
+          1,
+          2
+        ],
+        "name": "S_34"
+      }
+    ],
+    "gravitational_U1_anomaly_vector": [
+      20,
+      10,
+      10
+    ],
+    "Spin10sq_U1_anomaly_vector": [
+      2,
+      1,
+      1
+    ],
+    "Abelian_cubic_polynomial": "20*a**3 + 12*a**2*b + 12*a**2*c + 18*a*b**2 + 36*a*b*c + 30*a*c**2 + 16*b**3 - 6*b**2*c + 22*c**3",
+    "one_axion_shift_linear_form": "2*a + b + c",
+    "cubic_on_one_axion_kernel": "3*(b - 5*c)*(b + c)*(5*b - c)/2",
+    "one_axion_no_go": true,
+    "two_axion_shift_vectors": [
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        -5
+      ]
+    ],
+    "two_axion_P_decomposition_Q1": "10*a**2 + a*b + a*c + 17*b**2/2 + 17*b*c + 29*c**2/2",
+    "two_axion_P_decomposition_Q2": "15*b**2/2 + 6*b*c - 3*c**2/2",
+    "two_axion_exact_factorization_residual": "0",
+    "common_shift_kernel_line": [
+      -6,
+      10,
+      2
+    ],
+    "assumptions": "Formal 4D anomaly-polynomial Green-Schwarz factorization, original 3 U1 and so10 charge spectrum, and no further chiral charged fields or independent defect inflow. One axion with one gauge shift direction must also carry the gravitational and Spin10 anomalies, fixing its shift parallel to (2,1,1).",
+    "scientific_status": "At least two axionic shift DIRECTIONS in this GS framework; two-direction algebraic factorization is NECESSARY but NOT sufficient for quantized axion couplings, inflow, locality, supersymmetry or global anomaly cancellation. Higgsing U1 cannot by itself remove gauge anomalies."
+  },
+  "E8_spurion_Yukawa_hierarchy_gap": {
+    "imported_E8_condensate_spurion_coeffs": [
+      0.1,
+      0.142828568570857,
+      0.1442220510185596
+    ],
+    "max_min_spurion_ratio": 1.4422205101855958,
+    "illustrative_charged_Yukawa_target_hierarchy": 100000.0,
+    "minimum_overlap_or_Higgs_projection_coupling_spread": 69337.52452815363,
+    "independent_10_H_representation_issue": "families 1,2 use 10_34 while family3 uses 10_24; a common observed electroweak Higgs additionally requires explicit light doublet mixing and projection.",
+    "source_bulk_cup_gate": "In source punctured S3 strict ordinary relative bulk cup is zero, so actual Yukawa values still need defect/M2/changed-topology terms.",
+    "result": "Local messenger F/D vacuum yields nonzero formal diagonal spurions but NOT the enormous observed charged hierarchy with equal overlaps/Higgs projections.",
+    "assumptions": "Target spread 1e5 is illustrative order of magnitude, not a global-fit SM pole/running-mass ratio. The inequality is a conditional EFT necessity, not a universal no-go for strong wavefunction localization or mixing."
+  },
+  "orbifold_KK_and_zero_mode_gap": {
+    "adjoint_parity_even_total": 12,
+    "odd_total": 12,
+    "zero_mode_multiplicity": [
+      {
+        "number_of_identically_projected_24F": 1,
+        "weak_triplet_zero_modes": 1,
+        "color_octet_zero_modes": 1,
+        "singlet_zero_modes": 1,
+        "X_leptoquark_zero_modes": 0
+      },
+      {
+        "number_of_identically_projected_24F": 2,
+        "weak_triplet_zero_modes": 2,
+        "color_octet_zero_modes": 2,
+        "singlet_zero_modes": 2,
+        "X_leptoquark_zero_modes": 0
+      },
+      {
+        "number_of_identically_projected_24F": 3,
+        "weak_triplet_zero_modes": 3,
+        "color_octet_zero_modes": 3,
+        "singlet_zero_modes": 3,
+        "X_leptoquark_zero_modes": 0
+      }
+    ],
+    "required_split_for_typeIII_rank2_one_octet": "Two identical 24F parity choices give 2 triplets AND 2 octets. Removing exactly one octet still needs different boundary/mass/flavor choices.",
+    "KK_towers": "(+,+) masses n*pi/L for n>=0; (+,-) masses (n+1/2)*pi/L for n>=0",
+    "log_KK_ratio": "sum_{n=1}^N log((n+1/2)/n)=log Gamma(N+3/2)-log Gamma(3/2)-log Gamma(N+1)",
+    "KK_log_asymptotic": "(1/2) log N + log(2/sqrt(pi))",
+    "asymptotic_constant": 0.1207822376352452,
+    "KK_samples": [
+      {
+        "KK_levels_N": 8,
+        "parity_split_log_mass_sum": 1.2055127556872636,
+        "asymptotic_minus_half_log_N": 0.1657919848473457
+      },
+      {
+        "KK_levels_N": 32,
+        "parity_split_log_mass_sum": 1.8652482844702614,
+        "asymptotic_minus_half_log_N": 0.1323803330703981
+      },
+      {
+        "KK_levels_N": 128,
+        "parity_split_log_mass_sum": 2.5497194499941918,
+        "asymptotic_minus_half_log_N": 0.12370431803438331
+      },
+      {
+        "KK_levels_N": 512,
+        "parity_split_log_mass_sum": 3.2406764955418588,
+        "asymptotic_minus_half_log_N": 0.12151418302210493
+      },
+      {
+        "KK_levels_N": 2048,
+        "parity_split_log_mass_sum": 3.933274806386825,
+        "asymptotic_minus_half_log_N": 0.12096531330712557
+      }
+    ],
+    "limitations": "Threshold is a schematic spectral sum; physical gauge beta weights, all bulk and brane sectors, regulator and matching counterterms are not included. 5D orbifold GUT is nonrenormalizable without UV completion. Proton safety not established."
+  },
+  "causal_signed_layer_locality_analogue": {
+    "weights": [
+      1,
+      -5,
+      4
+    ],
+    "exact_moment_constraint_matrix": "Matrix([[1, 1/2, 3/8], [1, 1, 1]])",
+    "unique_primitive_integer_weight_solution_up_to_scale": true,
+    "leading_sqrt_density_coefficients": [
+      7.695298980971184,
+      3.8476494904855922,
+      2.8857371178641946
+    ],
+    "leading_sqrt_density_cancel_residual": 0.0,
+    "subleading_log_density_cancel_residual": 0.0,
+    "finite_asymptotic_signed_sum": 3.0,
+    "asymptotic_derivation": "E_k = pi*rho * integral_0^1 ds e^{-rho*pi*s^2/24}(rho*pi*s\u00b2/24)^k/k! g(s). Expansion g(s)=1+s*(log(s)/2-log(2)-1/2)+O(s\u00b2). Coeff sqrt(rho) cancels under weights (1,-5,4), common log(rho) cancels since weights sum0, and constant = pi/(8*(pi/24))*[psi(1)-5psi(2)+4psi(3)]=3.",
+    "sampled": [
+      {
+        "density_rho": 40,
+        "E_interval_layers_0_1_2": [
+          28.33570215943812,
+          7.421101859104566,
+          3.215032144832439
+        ],
+        "signed_1_minus5_plus4": 4.090321443245047,
+        "each_layer_over_sqrt_rho": [
+          4.480267896198804,
+          1.1733792311440199,
+          0.5083412164163426
+        ]
+      },
+      {
+        "density_rho": 160,
+        "E_interval_layers_0_1_2": [
+          72.47475722017143,
+          26.972856340874827,
+          16.43810838195152
+        ],
+        "signed_1_minus5_plus4": 3.362909043603352,
+        "each_layer_over_sqrt_rho": [
+          5.729632642086876,
+          2.132391525941987,
+          1.2995465727917968
+        ]
+      },
+      {
+        "density_rho": 640,
+        "E_interval_layers_0_1_2": [
+          165.49354088839902,
+          71.23240797338964,
+          48.4572676048468
+        ],
+        "signed_1_minus5_plus4": 3.1605714408380265,
+        "each_layer_over_sqrt_rho": [
+          6.541706590669331,
+          2.815708155178125,
+          1.915441685245099
+        ]
+      },
+      {
+        "density_rho": 2560,
+        "E_interval_layers_0_1_2": [
+          355.9357968552901,
+          164.2959026156584,
+          117.15497772728583
+        ],
+        "signed_1_minus5_plus4": 3.0761946861413776,
+        "each_layer_over_sqrt_rho": [
+          7.034798867810714,
+          3.247182890616851,
+          2.3154785552782498
+        ]
+      },
+      {
+        "density_rho": 10240,
+        "E_interval_layers_0_1_2": [
+          741.0944870730399,
+          354.7581750934743,
+          258.9333908109694
+        ],
+        "signed_1_minus5_plus4": 3.037174849546318,
+        "each_layer_over_sqrt_rho": [
+          7.32358293920318,
+          3.5057620370631124,
+          2.5588102413536773
+        ]
+      },
+      {
+        "density_rho": 40960,
+        "E_interval_layers_0_1_2": [
+          1515.6267415522536,
+          739.9263838184038,
+          546.7558862987602
+        ],
+        "signed_1_minus5_plus4": 3.018367655275597,
+        "each_layer_over_sqrt_rho": [
+          7.4888009155695086,
+          3.65601980268455,
+          2.7015530075127057
+        ]
+      },
+      {
+        "density_rho": 163840,
+        "E_interval_layers_0_1_2": [
+          3068.8777398117595,
+          1514.463284479548,
+          1126.611953183665
+        ],
+        "signed_1_minus5_plus4": 3.009130148680015,
+        "each_layer_over_sqrt_rho": [
+          7.581752748745902,
+          3.7415261028553934,
+          2.783327977524506
+        ]
+      }
+    ],
+    "important_boundary": "The weighted sum is SIGNED, not a number of retained physical edges or bounded computational cost. This is an exact expectation-level cancellation, not a constructed local d'Alembertian or Einstein dynamics. Order-only interval layer counts are intrinsic; the analytic expectation used Minkowski embedding.",
+    "literature": "2026 PhysRevD 113 024046 constructs a distinct local causal-set d'Alembertian; negative claims that causal-set operators MUST be nonlocal are too strong."
+  },
+  "photonic_Bell_postselection_loophole": {
+    "model": "Explicit local deterministic hidden-variable model with shared lambda=(a_target,b_target) uniform on four values and local setting-dependent clicks",
+    "postselected_correlations": {
+      "00": 1.0,
+      "01": 1.0,
+      "10": 1.0,
+      "11": -1.0
+    },
+    "per_setting_joint_detection_efficiency": {
+      "00": 0.25,
+      "01": 0.25,
+      "10": 0.25,
+      "11": 0.25
+    },
+    "postselected_CHSH": 4.0,
+    "unconditioned_fair_event_ready_CHSH": 2.0,
+    "physical_conclusion": "CHSH=4 after setting-dependent postselection does not demonstrate nonlocality. A setting-independent pre-choice event-ready herald plus detection-loophole closure is essential.",
+    "scope": "Standard detection-loophole construction; not evidence against quantum theory or a TOE prediction."
+  }
+}
