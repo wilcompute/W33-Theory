@@ -1,0 +1,47 @@
+{
+  "status": "PASS_EXACT_ASYMMETRIC_TERNARY_CSS",
+  "provenance": "Standard hypergraph product, mixed Levi and repetition factors",
+  "base": {
+    "vertices": 80,
+    "edges": 160,
+    "girth": 8,
+    "incidence_shape": [
+      79,
+      160
+    ],
+    "repetition_shape": [
+      2,
+      3
+    ]
+  },
+  "CSS": {
+    "physical_qutrits": 638,
+    "encoded_qutrits": 81,
+    "dX": 3,
+    "dZ": 8,
+    "HX_shape": [
+      237,
+      638
+    ],
+    "HZ_shape": [
+      320,
+      638
+    ],
+    "HX_rank": 237,
+    "HZ_rank": 320,
+    "max_X_check_weight": 6,
+    "max_Z_check_weight": 4,
+    "max_X_qudit_degree": 2,
+    "max_Z_qudit_degree": 4
+  },
+  "proof": {
+    "CSS_orthogonality": true,
+    "no_weight1_2_X_kernel": true,
+    "X_logical_weight3": true,
+    "Z_logical_weight8": true,
+    "XZ_pairing_mod3": 2,
+    "dZ_lower": "For z in ker HX, sum the first-block triples: s in ker A. If s=0, z is an HZ-row stabilizer by rank(B)=2. Nontrivial s has weight >= girth(G)=8.",
+    "dX_lower": "All HZ columns are nonzero and pairwise nonproportional over F3, excluding weight one and two X logicals."
+  },
+  "limitations": "638 distinct qutrit sites. No threshold, fault-tolerant syndrome extraction, photon realization, or derivation of spacetime/SM dynamics."
+}
