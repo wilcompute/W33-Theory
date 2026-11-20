@@ -82,6 +82,22 @@
       },
       "X_measurement_layers": 6,
       "Z_measurement_layers": 7,
+      "without_perfect_final_boundary": {
+        "X": {
+          "last_round_weight_one_data_columns": 320,
+          "distinct_data_vs_measurement_fault_labels_that_cannot_be_distinguished": 640,
+          "first_example_data_column": 0,
+          "first_example_detector_row": 0,
+          "interpretation": "Without a perfect endpoint syndrome, last-round data and readout faults are observationally identical whenever the data-check column has one nonzero entry. This is a finite-window no-go, not a proof decoding cannot use temporal priors."
+        },
+        "Z": {
+          "last_round_weight_one_data_columns": 32,
+          "distinct_data_vs_measurement_fault_labels_that_cannot_be_distinguished": 64,
+          "first_example_data_column": 408,
+          "first_example_detector_row": 96,
+          "interpretation": "Without a perfect endpoint syndrome, last-round data and readout faults are observationally identical whenever the data-check column has one nonzero entry. This is a finite-window no-go, not a proof decoding cannot use temporal priors."
+        }
+      },
       "X_check_hook_guard_support_only": {
         "max_check_weight": 6,
         "max_reduced_hook_weight": 3
@@ -91,7 +107,7 @@
         "max_reduced_hook_weight": 2
       },
       "weight_four_logical_splitting_ambiguity": true,
-      "scope": "Unique single-data or single-measurement phenomenological fault with perfect final boundary; gate schedule conflict-free but no qutrit SUM fault propagation, ancilla leakage, measurement SPAM, decoder threshold or fault-tolerant circuit."
+      "scope": "Unique single-data or single-measurement phenomenological fault ONLY with perfect final boundary; removing it gives explicit indistinguishable final-round faults; gate schedule conflict-free but no qutrit SUM fault propagation, ancilla leakage, measurement SPAM, decoder threshold or fault-tolerant circuit."
     },
     "causal_volume_density_inverse": {
       "metric": "exp(2 a x^2)*(-dt^2+dx^2)",

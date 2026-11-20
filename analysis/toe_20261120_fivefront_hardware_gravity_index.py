@@ -107,6 +107,30 @@ def detector_dictionary(H,rounds=3):
             'collision_count':len(collision)},seen
 
 
+def missing_terminal_boundary(H,rounds=3):
+    """Exactly count single-fault ambiguity when the perfect final readout is absent.
+
+    A final-round measurement error has only the +a detector in the observed
+    time window; a final-round data error on a degree-one H column produces
+    that same detector. No physical perfect terminal readout is assumed.
+    """
+    C=H.tocsc()
+    one=np.flatnonzero(np.diff(C.indptr)==1)
+    for j in one:
+        start,end=C.indptr[j:j+2]
+        assert end-start==1
+        row=int(C.indices[start]);coeff=int(C.data[start])%3
+        for amp in (1,2):
+            observed_data=((rounds,row,coeff*amp%3),)
+            observed_measurement=((rounds,row,coeff*amp%3),)
+            assert observed_data==observed_measurement
+    return {'last_round_weight_one_data_columns':len(one),
+            'distinct_data_vs_measurement_fault_labels_that_cannot_be_distinguished':2*len(one),
+            'first_example_data_column':int(one[0]) if len(one) else None,
+            'first_example_detector_row':int(C.indices[C.indptr[one[0]]]) if len(one) else None,
+            'interpretation':'Without a perfect endpoint syndrome, last-round data and readout faults are observationally identical whenever the data-check column has one nonzero entry. This is a finite-window no-go, not a proof decoding cannot use temporal priors.'}
+
+
 def qutrit_syndrome_gate():
     HX,HZ=css_matrices(8)
     DX,dictX=detector_dictionary(HZ)
@@ -123,6 +147,9 @@ def qutrit_syndrome_gate():
         return {'max_check_weight':int(max(support_lens)),
                 'max_reduced_hook_weight':max(checks)}
     guardX=hook_guard(HX);guardZ=hook_guard(HZ)
+    missing={'X':missing_terminal_boundary(HZ),'Z':missing_terminal_boundary(HX)}
+    assert missing['X']['last_round_weight_one_data_columns']==320
+    assert missing['Z']['last_round_weight_one_data_columns']==32
     assert guardX['max_reduced_hook_weight']<=3 and guardZ['max_reduced_hook_weight']<=2
     # Logical splitting: an X logical of weight 8 can be split into 4 vs 4
     # errors with the same ideal H_Z syndrome. It is NOT a proof of a bad
@@ -141,10 +168,11 @@ def qutrit_syndrome_gate():
             'Z_check_rows':HZ.shape[0],
             'X_syndrome_rounds':DX,'Z_syndrome_rounds':DZ,
             'X_measurement_layers':len(schedX),'Z_measurement_layers':len(schedZ),
+            'without_perfect_final_boundary':missing,
             'X_check_hook_guard_support_only':guardX,
             'Z_check_hook_guard_support_only':guardZ,
             'weight_four_logical_splitting_ambiguity':True,
-            'scope':'Unique single-data or single-measurement phenomenological fault with perfect final boundary; gate schedule conflict-free but no qutrit SUM fault propagation, ancilla leakage, measurement SPAM, decoder threshold or fault-tolerant circuit.'}
+            'scope':'Unique single-data or single-measurement phenomenological fault ONLY with perfect final boundary; removing it gives explicit indistinguishable final-round faults; gate schedule conflict-free but no qutrit SUM fault propagation, ancilla leakage, measurement SPAM, decoder threshold or fault-tolerant circuit.'}
 
 
 def domain_wall_index():

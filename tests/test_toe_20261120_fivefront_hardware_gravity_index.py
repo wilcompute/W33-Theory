@@ -6,7 +6,7 @@ import numpy as np
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'analysis'))
 from toe_20261120_fivefront_hardware_gravity_index import (
     w33_graph,css_matrices,tanner_schedule,detector_dictionary,
-    qutrit_syndrome_gate,domain_wall_index,spacetime_volume_gate,
+    qutrit_syndrome_gate,missing_terminal_boundary,domain_wall_index,spacetime_volume_gate,
     su3_reference_gate,memory_loss_guard,three_context_classical_gluing,run
 )
 
@@ -35,6 +35,14 @@ class FiveFrontTests(unittest.TestCase):
         self.assertIn(((2,5,1),(3,5,2)),DX)
         # Data fault produces a single round's column syndrome.
         self.assertTrue(any(k and all(x[0]==2 for x in k) for k,v in DX.items() if v[0]=='data' and v[1]==2))
+    def test_no_perfect_final_boundary_is_not_identifiable(self):
+        hx,hz=css_matrices(8)
+        x=missing_terminal_boundary(hz,rounds=3)
+        z=missing_terminal_boundary(hx,rounds=3)
+        self.assertEqual(x['last_round_weight_one_data_columns'],320)
+        self.assertEqual(z['last_round_weight_one_data_columns'],32)
+        self.assertEqual(x['distinct_data_vs_measurement_fault_labels_that_cannot_be_distinguished'],640)
+        self.assertEqual(z['distinct_data_vs_measurement_fault_labels_that_cannot_be_distinguished'],64)
     def test_schedule_conflict_free(self):
         hx,hz=css_matrices(8)
         for H in (hx,hz):
