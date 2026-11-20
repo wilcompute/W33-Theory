@@ -1,0 +1,293 @@
+{
+  "status": "MODEL_SCOPED_FIVE_TRACK_CERTIFICATES_NOT_PHYSICAL_TOE",
+  "date": "2026-11-20",
+  "main_w33_baseline": "f9685d73c897f1fde12b15667aff5defb388ea37",
+  "tracks": {
+    "exceptional_chiral_index_toy": {
+      "open_line_D": "d/dx+tanh(x)",
+      "normalized_zero_mode": "sech(x)/sqrt(2)",
+      "norm_numeric": 0.9999999999244971,
+      "ODE_max_residual": 1.796553726896022e-07,
+      "open_line_ker_D": 1,
+      "open_line_ker_Ddagger": 0,
+      "open_line_Fredholm_index": 1,
+      "opposite_wall_index": -1,
+      "periodic_circle_cases": [
+        {
+          "mass": "sin(x)",
+          "mass_integral": 0.0,
+          "ker_D": 1,
+          "ker_Ddagger": 1,
+          "index": 0
+        },
+        {
+          "mass": "1",
+          "mass_integral": 6.283185307179586,
+          "ker_D": 0,
+          "ker_Ddagger": 0,
+          "index": 0
+        }
+      ],
+      "direct_sum_N_copies_index_N": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4
+      },
+      "E6_complete_27_U1psi_anomaly_per_family": {
+        "mixed_gravitational": 0,
+        "cubic": 0,
+        "Spin10_squared": 0
+      },
+      "blocking_requirements": "Real compact charged singular G2/ADE Dirac operator, global boundary/inflow conditions, anomaly matching and actual vacuum/Yukawa generation; this 1D SUSY-QM toy is not compact G2 evidence."
+    },
+    "phenomenological_qutrit_css": {
+      "code": "[[1833,81,8]]_3",
+      "physical_sites": 1833,
+      "one_fault_only_guaranteed_event_probability": {
+        "X": {
+          "1e-06": 0.999960994399673,
+          "1e-05": 0.9963005117563681,
+          "0.0001": 0.7776395551327719
+        },
+        "Z": {
+          "1e-06": 0.999972795058376,
+          "1e-05": 0.9973971521999708,
+          "0.0001": 0.8303593282359603
+        }
+      },
+      "X_check_rows": 632,
+      "Z_check_rows": 1120,
+      "X_syndrome_rounds": {
+        "rounds": 3,
+        "check_rows": 1120,
+        "physical": 1833,
+        "counts": {
+          "data": 10998,
+          "measurement": 6720
+        },
+        "unique_single_fault_signatures": 17718,
+        "collision_count": 0
+      },
+      "Z_syndrome_rounds": {
+        "rounds": 3,
+        "check_rows": 632,
+        "physical": 1833,
+        "counts": {
+          "data": 10998,
+          "measurement": 3792
+        },
+        "unique_single_fault_signatures": 14790,
+        "collision_count": 0
+      },
+      "X_measurement_layers": 6,
+      "Z_measurement_layers": 7,
+      "X_check_hook_guard_support_only": {
+        "max_check_weight": 6,
+        "max_reduced_hook_weight": 3
+      },
+      "Z_check_hook_guard_support_only": {
+        "max_check_weight": 4,
+        "max_reduced_hook_weight": 2
+      },
+      "weight_four_logical_splitting_ambiguity": true,
+      "scope": "Unique single-data or single-measurement phenomenological fault with perfect final boundary; gate schedule conflict-free but no qutrit SUM fault propagation, ancilla leakage, measurement SPAM, decoder threshold or fault-tolerant circuit."
+    },
+    "causal_volume_density_inverse": {
+      "metric": "exp(2 a x^2)*(-dt^2+dx^2)",
+      "true_a": 0.25,
+      "scalar_R_at_origin_true": -1.0,
+      "inference_with_known_coordinate_chart_and_uniform_sprinkling": [
+        {
+          "n": 500,
+          "mean_x_squared": 0.3762396691636826,
+          "estimated_a": 0.231831729140666,
+          "R_at_origin_estimate": -0.927326916562664,
+          "true_a": 0.25
+        },
+        {
+          "n": 2000,
+          "mean_x_squared": 0.3919540880548964,
+          "estimated_a": 0.312935450366319,
+          "R_at_origin_estimate": -1.251741801465276,
+          "true_a": 0.25
+        },
+        {
+          "n": 10000,
+          "mean_x_squared": 0.37843792077775296,
+          "estimated_a": 0.24327810051215554,
+          "R_at_origin_estimate": -0.9731124020486221,
+          "true_a": 0.25
+        }
+      ],
+      "order_only_unidentifiable": true,
+      "scope": "This estimates volume-weighted coordinate density with a prescribed chart and Poisson measure; it is NOT a manifold reconstruction, Ricci/Einstein equation, or derivation of a causal-set action."
+    },
+    "SU3_reference_phase_robustness": {
+      "Weyl_commutator": "omega*I3",
+      "adjoint_character_K_and_identity": 8,
+      "observed_two_quadrature_reference_simulation": [
+        {
+          "shots_per_each_of_four_quadrature_settings": 250,
+          "estimated_phase_difference_radians": 2.2645855911118904,
+          "phase_error_vs_center_radians": 0.17019048871869513,
+          "normalized_ref_visibility_observed": 0.8914168497397837,
+          "normalized_center_visibility_observed": 0.8524036602455435
+        },
+        {
+          "shots_per_each_of_four_quadrature_settings": 1000,
+          "estimated_phase_difference_radians": 2.1264663715108947,
+          "phase_error_vs_center_radians": 0.03207126911769942,
+          "normalized_ref_visibility_observed": 0.8694319984909689,
+          "normalized_center_visibility_observed": 0.8172661745110952
+        },
+        {
+          "shots_per_each_of_four_quadrature_settings": 4000,
+          "estimated_phase_difference_radians": 2.224683271638103,
+          "phase_error_vs_center_radians": 0.1302881692449076,
+          "normalized_ref_visibility_observed": 0.8668276933739486,
+          "normalized_center_visibility_observed": 0.8363613154612066
+        }
+      ],
+      "visibility_minimum_assumed": 0.8,
+      "relative_drift_max_radians_assumed": 0.12,
+      "confidence_delta": 0.01,
+      "per_setting_shots_sufficient_Hoeffding": 209,
+      "total_accepted_shots_four_quadratures": 836,
+      "certified_max_total_phase_error_radians": 1.047041884098689,
+      "model_boundary": "Controlled fundamental Wilson-loop reference must be physically implementable and gauge invariant; a central GAUGE transformation alone is unobservable on physical color-singlet states. This is a non-gauge dynamical toy unless physical reference charges/loop are provided. Shots exclude loss, calibration errors, time-correlated noise."
+    },
+    "three_time_memory_two_layer_confidence": {
+      "source": "Beyer et al. 2026, arXiv:2611.17268, Supplement VI S38",
+      "confidence_event": "Seven calibration lower bounds plus 21 conditional output-coordinate intervals, union bound delta=.01. Requires IID attempts at each setting, stationary state-independent acceptance within a setting, accepted measurement samples IID, perfect characterization of preparation and measurement and no hidden trial selection.",
+      "nominal_efficiency": 0.995,
+      "calibration_fraction": 0.005,
+      "measurement_fraction": 0.005,
+      "expected_frequency_planning": [
+        {
+          "attempted_per_setting": 500000,
+          "minimum_accepted": 497500,
+          "estimated_efficiency_lower_99pct_joint": 0.9923084897333275,
+          "output_coord_confidence_radius": 0.0030135351258288707,
+          "fidelities_upper_sum": 1.5006922077570466,
+          "nonunitality_lower": 1.4718001548649098,
+          "W3_upper_99pct_joint": 0.02889205289213681
+        },
+        {
+          "attempted_per_setting": 1000000,
+          "minimum_accepted": 995000,
+          "estimated_efficiency_lower_99pct_joint": 0.9930968148388026,
+          "output_coord_confidence_radius": 0.00213089112281745,
+          "fidelities_upper_sum": 1.4034433127815653,
+          "nonunitality_lower": 1.4763934935364915,
+          "W3_upper_99pct_joint": -0.07295018075492621
+        },
+        {
+          "attempted_per_setting": 2000000,
+          "minimum_accepted": 1990000,
+          "estimated_efficiency_lower_99pct_joint": 0.9936542448666638,
+          "output_coord_confidence_radius": 0.0015067675629144353,
+          "fidelities_upper_sum": 1.331092423999037,
+          "nonunitality_lower": 1.4796439942119077,
+          "W3_upper_99pct_joint": -0.1485515702128708
+        },
+        {
+          "attempted_per_setting": 5000000,
+          "minimum_accepted": 4975000,
+          "estimated_efficiency_lower_99pct_joint": 0.9941488697211588,
+          "output_coord_confidence_radius": 0.0009529634806541344,
+          "fidelities_upper_sum": 1.263963966690078,
+          "nonunitality_lower": 1.4825300116013636,
+          "W3_upper_99pct_joint": -0.21856604491128562
+        }
+      ],
+      "seeded_binomial_multinomial_forecasts": [
+        {
+          "attempted_per_setting": 2000000,
+          "minimum_accepted": 1989908,
+          "estimated_efficiency_lower_99pct_joint": 0.9936082448666638,
+          "output_coord_confidence_radius": 0.0015068023939251102,
+          "fidelities_upper_sum": 1.334185399689642,
+          "nonunitality_lower": 1.479281704681882,
+          "W3_upper_99pct_joint": -0.14509630499224002
+        },
+        {
+          "attempted_per_setting": 5000000,
+          "minimum_accepted": 4974772,
+          "estimated_efficiency_lower_99pct_joint": 0.9941032697211588,
+          "output_coord_confidence_radius": 0.0009529853181558473,
+          "fidelities_upper_sum": 1.2659540297908054,
+          "nonunitality_lower": 1.4830066138509692,
+          "W3_upper_99pct_joint": -0.2170525840601638
+        }
+      ],
+      "hierarchy_caution": "Negative W3 excludes one common 3-time classical model. It does NOT prove every pair of channels admits a 2-time classical model, nor the existence of a single physical 3-time process reproducing independently specified ideal snapshot data.",
+      "physical_boundary": "No laboratory detector calibrations, process tensor, CPTP dynamics between all times, experimental quantum memory, or certified classical pairwise decompositions."
+    },
+    "outside_box_three_context_marginal_gluing": {
+      "status": "EXACT_BINARY_MARGINAL_COMPATIBILITY_ANALOGY",
+      "combinatorial_proof": "Each assignment of three bits has either zero or two disagreeing pairs, so sum of three pairwise disagreement probabilities <= 2. Three equal pair probabilities require q<=2/3. Symmetric bit-flip pair marginals are individually valid for every q in [0,1].",
+      "max_symmetric_q_gluable": 0.6666666666666666,
+      "cases": [
+        {
+          "q_pairwise_anticorrelation": 0.5,
+          "global_joint_exists": true,
+          "max_pair_marginal_residual": 0.0,
+          "one_joint_distribution": [
+            0.25,
+            -0.0,
+            -0.0,
+            0.25,
+            -0.0,
+            0.25,
+            0.25,
+            0.0
+          ]
+        },
+        {
+          "q_pairwise_anticorrelation": 0.6,
+          "global_joint_exists": true,
+          "max_pair_marginal_residual": 0.0,
+          "one_joint_distribution": [
+            0.1,
+            0.1,
+            0.1,
+            0.2,
+            0.1,
+            0.2,
+            0.2,
+            0.0
+          ]
+        },
+        {
+          "q_pairwise_anticorrelation": 0.6666666666666666,
+          "global_joint_exists": true,
+          "max_pair_marginal_residual": 5.551115123125783e-17,
+          "one_joint_distribution": [
+            -0.0,
+            0.166666666667,
+            0.166666666667,
+            0.166666666667,
+            0.166666666667,
+            0.166666666667,
+            0.166666666667,
+            0.0
+          ]
+        },
+        {
+          "q_pairwise_anticorrelation": 0.75,
+          "global_joint_exists": false,
+          "max_pair_marginal_residual": null,
+          "one_joint_distribution": null
+        },
+        {
+          "q_pairwise_anticorrelation": 1.0,
+          "global_joint_exists": false,
+          "max_pair_marginal_residual": null,
+          "one_joint_distribution": null
+        }
+      ],
+      "boundary": "This is a classical probability marginal gluing example, NOT a certified pairwise classical decomposition for the three qutrit channels, not contextuality of a measured experiment, and not a quantum memory proof."
+    }
+  }
+}
