@@ -1,0 +1,125 @@
+{
+  "4D_causal_link_nonlocality": {
+    "dimension": "3+1 flat Minkowski Alexandrov diamond",
+    "finite_sample_link_count_increases": true,
+    "implication": "In finite-diamond Poisson-like sprinklings link-degree does not remain bounded under finer sampling; naive fixed-neighbor local dynamics is not automatically Lorentz-invariant.",
+    "limitation": "40 samples per n in a fixed finite diamond; no derivation of large-density asymptotic, Einstein equations or quantum causal-set action.",
+    "link_relation_counts": {
+      "160": {
+        "mean_links_per_event": 4.864531250000001,
+        "pair_comparability": 0.10015723270440251,
+        "samples": 40,
+        "standard_error": 0.08089647803986776
+      },
+      "320": {
+        "mean_links_per_event": 8.303671875000001,
+        "pair_comparability": 0.10301185344827588,
+        "samples": 40,
+        "standard_error": 0.08923916123758346
+      },
+      "40": {
+        "mean_links_per_event": 1.571875,
+        "pair_comparability": 0.09804487179487179,
+        "samples": 40,
+        "standard_error": 0.06609644456379146
+      },
+      "80": {
+        "mean_links_per_event": 2.8606249999999998,
+        "pair_comparability": 0.10362341772151899,
+        "samples": 40,
+        "standard_error": 0.07974010016119835
+      }
+    }
+  },
+  "E6_trinification_anomalies": {
+    "E6_27_trinification_nonets": [
+      "(3,3bar,1)",
+      "(1,3,3bar)",
+      "(3bar,1,3)"
+    ],
+    "SU3_cubic_anomaly_per_factor": [
+      0,
+      0,
+      0
+    ],
+    "center_exponent_on_each_nonet": [
+      1,
+      1,
+      1
+    ],
+    "central_element_in_SU3_cubed": "(omega^2,omega,1)",
+    "dimension": 27,
+    "limitation": "Anomaly-free chiral representation is compatible group bookkeeping, not charged G2 Dirac zero modes, a singular compactification, or realistic Yukawa masses.",
+    "three_identical_27_family_anomalies": [
+      0,
+      0,
+      0
+    ]
+  },
+  "SU3_polynomial_drift": {
+    "Richardson_36_trace_error_through_cubic": 1.1102230246251565e-16,
+    "Weyl_settings": 9,
+    "chronological_exposures": 9,
+    "chronological_trace_error": 0.013205649650140759,
+    "identity": "(4/3)*(m(+h)+m(-h))/2 -(1/3)*(m(+2h)+m(-2h))/2; cancels orders 1,2,3 in fixed-trace detector model",
+    "limitations": "Signed estimator increases variance; requires exact timing, fixed detector trace, coherent Weyl rotations, no correlated setting-dependent loss.",
+    "linear_symmetric_exposures": 18,
+    "palindrome_trace_error_quadratic_survives": 0.006491033532044185,
+    "quadratic_and_cubic_cancelled_exposures": 36,
+    "quartic_drift_not_cancelled_trace_error": 0.003388990845454977
+  },
+  "baseline": "9c9d65d0941d373360ed197a1629fd77131d26e5",
+  "e8_cubic_multiplet": {
+    "adjoint_248_E6xSU3_branching": {
+      "1x8": 8,
+      "27barx3bar": 81,
+      "27x3": 81,
+      "78x1": 78
+    },
+    "conclusion": "The E6-symmetric-cubic times SU3 epsilon invariant is alternating in distinct field copies; one-copy and two-copy commuting contractions vanish, three distinct chiral multiplets can give a nonzero trilinear coupling.",
+    "interchanging_two_distinct_copies": -0.16666666666666666,
+    "scope": "This restricted component test is not a construction of a full E8-invariant superpotential or 19 singlet multipliers.",
+    "single_identical_commuting_27x3_E6cubic_epsilon": 6.938893903907228e-17,
+    "three_distinct_27x3_cubic_example": 0.16666666666666666,
+    "two_identical_commuting_27x3_E6cubic_epsilon": -1.3877787807814457e-17
+  },
+  "native_qutrit_model_free_memory": {
+    "assumptions": "Each stationary CPTP channel, exact MUB inputs and measurement bases, independent accepted multinomial trials, fair loss sampling. Pairwise classicality of a noisy real device requires independent testing.",
+    "confidence": 0.99,
+    "ideal_native_qutrit_gamma": 0.75,
+    "measurement_only_protocol_has_no_depolarization_assumption": true,
+    "outcome_settings": 7,
+    "outcomes_each": 3,
+    "output_depolarizing_reference_epsilon": 0.01,
+    "prospective_seeded_N_per_setting": 200000,
+    "prospective_seeded_certificate": {
+      "N_per_setting": 200000,
+      "accepted_shots_total": 1400000,
+      "confidence_at_least": 0.99,
+      "nonunitality_lower": 1.4836836918885625,
+      "quantum_fidelities_upper": 1.1179268916058749,
+      "settings": 7,
+      "simultaneous_probability_radius": 0.004566957358097254,
+      "witness_upper": -0.36575680028268764
+    },
+    "true_model_witness": -0.7894929399347174,
+    "union_bound_coordinates": 21,
+    "worst_case_sufficient_shots_per_setting": 173884,
+    "worst_case_total_accepted_shots": 1217188
+  },
+  "status": "PASS_SIX_BOUNDED_TOE_FRONTS",
+  "w33_known_error_subcodes": {
+    "Hodge_dimension": 81,
+    "Levi_edge_connectivity": 4,
+    "Levi_flags": 160,
+    "Levi_vertices": 80,
+    "corrupt_edge_coordinate_nonzero_count": 0,
+    "exact_incidence_cycle_residual": 0,
+    "explicit_one_bad_edge_cycle_basis_vectors": 80,
+    "known_four_edge_star_noiseless_subcode_dim": 78,
+    "known_one_bad_edge_noiseless_subcode_dim": 80,
+    "known_two_bad_edges_noiseless_subcode_dim": 79,
+    "parallel_multiparticle_CSS_prior_art": "Repo 9c9d65d adds [[638,81,dX=3,dZ=8]]_3 mixed Levi/repetition hypergraph-product with 638 distinct qutrits; that is a different Hilbert-space resource.",
+    "unrestricted_unknown_each_edge_phase_code_dimension_max": 1
+  }
+}
