@@ -1,0 +1,49 @@
+{
+  "status": "PASS_SIX_SWITCH_BILINEAR_FRAME_WITH_HOLDOUT_FALSIFIER",
+  "prior_art": "Alternating forms over F3 and quantum-switch phase readout are standard. This is a bounded design/testing reduction, not a new quantum-information primitive.",
+  "alternating_form_count": {
+    "all_alternating_forms": 729,
+    "singular": 261,
+    "nondegenerate": 468,
+    "pfaffian_one": 234,
+    "pfaffian_two": 234,
+    "proof": "Pfaffian=a f-b e+c d. For (a,b,c)=0, all 27 (f,-e,d) vanish in dot; for each of 26 other vectors there are 9 zero-dot choices: 27+26*9=261."
+  },
+  "exact_frame_checks": {
+    "random_GL4_frames_tested": 24,
+    "all_780_pair_predictions_per_frame": true,
+    "predicted_pairs_checked": 18720,
+    "max_Weyl_commutator_residual": 2.0014830212433605e-15,
+    "standard_basis_six_pair_phase_labels": {
+      "01": 0,
+      "02": 1,
+      "03": 0,
+      "12": 0,
+      "13": 1,
+      "23": 0
+    },
+    "standard_basis_pfaffian": 2
+  },
+  "finite_shot_conservative_planning": {
+    "settings_basis_pairs": 6,
+    "two_quadratures_per_pair": true,
+    "accepted_shots_per_quadrature": 76,
+    "accepted_shots_total": 912,
+    "confidence_union_lower_bound": 0.99,
+    "minimum_visibility": 0.8,
+    "maximum_phase_drift_radians": 0.1,
+    "radial_angle_margin": 0.6494257405429492,
+    "independent_seeded_trials": 2000,
+    "simulation_any_six_phase_misclassifications": 0,
+    "scope": "99% worst-case bound assumes independent +-1 quadrature samples, known basis labels, v>=0.8 and drift<=0.1 for each setting; it does not certify that physical black-box gates obey the Weyl product law."
+  },
+  "adversarial_holdout": {
+    "passes_all_six_basis_calibrations": true,
+    "composite_holdout_u": "e0+e1",
+    "composite_holdout_v": "e2",
+    "bilinear_prediction": 1,
+    "adversarial_actual_phase": 2,
+    "invalid_assumption": "Six settings identify an alternating bilinear form only under an independently tested Weyl/address linearity promise. Nonlinear word-dependent devices can fake all six."
+  },
+  "physical_boundary": "A six-parameter alternating form is not a dynamical TOE; its standard nondegenerate realizations are all isomorphic under GL4(F3). Physical gate address linearity and nonclassical order certification need additional measurements."
+}
