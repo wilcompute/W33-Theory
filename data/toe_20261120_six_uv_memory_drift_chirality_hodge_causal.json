@@ -1,0 +1,75 @@
+{
+  "causal": {
+    "Myrheim_Meyer_controls": {
+      "2": {
+        "continuum_expected": 0.5,
+        "pair_comparability": 0.5024231678486998,
+        "sprinklings": 120,
+        "three_chain_fraction": 0.16996897163120567
+      },
+      "4": {
+        "continuum_expected": 0.1,
+        "pair_comparability": 0.09892878250591017,
+        "sprinklings": 120,
+        "three_chain_fraction": 0.0028248342584027133
+      }
+    },
+    "implication": "Pair/chain observables compare discrete dimensions, not an Einstein dynamics or preferred arrow.",
+    "time_reversal_arrow": [
+      -14130,
+      14130
+    ]
+  },
+  "chirality": {
+    "periodic_spectral_flow": 0,
+    "qualification": "Odd-dimensional Dirac data are not a charged 4D chiral index. Singular ADE/defect modes uncomputed.",
+    "smooth_full_G2_neutral_parallel_real_spinors": 1,
+    "untwisted_round_S7_zero_modes": 0,
+    "wall_crossing_slopes": [
+      1.0,
+      -1.0
+    ]
+  },
+  "e8": {
+    "E6_singlet_triplet_multiplicity_in_adjoint": 0,
+    "adjoint_dimension": 248,
+    "branching": [
+      78,
+      8,
+      81,
+      81
+    ],
+    "limitation": "No E8-neutral single-adjoint triplet nor 19 independent E8-neutral multiplier singlets; other matter reps may alter this.",
+    "single_adjoint_degree3_invariants": 0,
+    "single_adjoint_degree6_invariants": 1
+  },
+  "hodge": {
+    "compressed_pi_phase_eigenvalue": -0.012499999999999956,
+    "corrects_unknown_single_edge_phase": false,
+    "cycle_rank": 81,
+    "exact_projector_square": true,
+    "flags": 160,
+    "lines": 40,
+    "one_edge_KL_deviation_Frobenius_squared": 0.253125,
+    "pi_phase_total_Frobenius_leakage": 0.99984375,
+    "points": 40,
+    "projector_entries_nonzero": 25600
+  },
+  "qutrit": {
+    "analytical_fidelity": 0.40776045305957015,
+    "common_output_unitary_trace_overlap_error": 2.6020852139652106e-18,
+    "preparation_tilt_rad": 0.21,
+    "rotated_input_fidelity": 0.4077604530595702,
+    "warning": "Root Uhlmann fidelity is unitary invariant; trace overlap is a separate control, not a full fidelity calculation.",
+    "witness_gamma036": -0.31223954694042977,
+    "witness_gamma075": -1.0922395469404298
+  },
+  "status": "PASS_BOUNDED_SIX_GATES",
+  "twirling": {
+    "Weyl_settings": 9,
+    "chronological_complex_trace_error": 0.035641651409162825,
+    "condition": "Exact coherent Weyl conjugations, equal-weight time pairs, linear traceless detector drift.",
+    "palindromic_complex_trace_error": 3.3306690738754696e-16,
+    "symmetric_exposures": 18
+  }
+}
