@@ -1,0 +1,252 @@
+{
+  "status": "FOUR_FINITE_OR_MODEL_SCOPED_GATES_PASS_NOT_A_TOE",
+  "source_date": "2026-11-20",
+  "scope": "Four independent stress tests of previous five-step directions; repetition-dial CSS is the fifth.",
+  "tracks": {
+    "E6_matter_selection": {
+      "E6_to_Spin10_U1_psi_27": [
+        {
+          "spin10": "16",
+          "dim": 16,
+          "qpsi": 1,
+          "index": 2
+        },
+        {
+          "spin10": "10",
+          "dim": 10,
+          "qpsi": -2,
+          "index": 1
+        },
+        {
+          "spin10": "1",
+          "dim": 1,
+          "qpsi": 4,
+          "index": 0
+        }
+      ],
+      "gravity_U1psi_anomaly": 0,
+      "U1psi_cubic_anomaly": 0,
+      "Spin10_squared_U1psi_anomaly_index_normalization": 0,
+      "triple_charge_sums": {
+        "16_16_10": 0,
+        "10_10_1": 0,
+        "16_16_1": 6,
+        "16_10_1": 3,
+        "1_1_1": 12
+      },
+      "family_multiplicity_not_fixed_by_anomalies": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "qualified_conclusion": "One 1_4 singlet VEV permits 10_-2 x10_-2 exotic-vector mass via 10*10*1, but not a bare 16_1 x16_1 mass via 16*16*1. Requires permitted nonzero coupling, actual vacuum, and compact charged Dirac index. Standard E6 branching."
+    },
+    "causal_conformal_nonidentifiability": {
+      "metric": "exp(2*a*x^2)*(-dt^2+dx^2)",
+      "continuum_causal_order_invariant_under_all_positive_conformal_scales": true,
+      "sample_event_count": 8,
+      "comparability_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "Hasse_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "metrics": [
+        {
+          "conformal_a": 0.0,
+          "same_causal_edges": 26,
+          "same_Hasse_links": 8,
+          "coordinate_rectangle_volume": 4.0,
+          "R_scalar_at_origin": -0.0
+        },
+        {
+          "conformal_a": 0.15,
+          "same_causal_edges": 26,
+          "same_Hasse_links": 8,
+          "coordinate_rectangle_volume": 4.438729115712298,
+          "R_scalar_at_origin": -0.6
+        },
+        {
+          "conformal_a": 0.25,
+          "same_causal_edges": 26,
+          "same_Hasse_links": 8,
+          "coordinate_rectangle_volume": 4.77983064764091,
+          "R_scalar_at_origin": -1.0
+        }
+      ],
+      "interpretation": "Order alone fixes at most conformal causal structure under appropriate regularity. Volume density or independent scale input is necessary to resolve curvature/metric; a finite poset cannot by itself select Einstein dynamics."
+    },
+    "SU3_center_interferometer": {
+      "ZX_equals_omega_XZ": true,
+      "fundamental_tr_center": [
+        -1.4999999999999998,
+        2.598076211353316
+      ],
+      "fundamental_normalized_tr_center": [
+        -0.4999999999999998,
+        0.8660254037844387
+      ],
+      "adjoint_tr_center": 8.0,
+      "adjoint_tr_identity": 8,
+      "all_qutrit_density_operators_blind_to_central_conjugation": true,
+      "interferometric_controlled_center_p_plus": 0.24999999999999994,
+      "interferometric_identity_p_plus": 1.0,
+      "ideal_bernoulli_Hoeffding_shots_99pct": 19,
+      "boundary": "Adjoint only and direct qutrit state tomography cannot see central holonomy. A reference-controlled interferometer can, assuming coherent controlled-Wilson operation, stable relative phase and iid shots. Existing repo pass5709 already recognized adjoint Z3 blindness."
+    },
+    "multitime_memory_adversarial_loss": {
+      "witness_origin": "Beyer et al. arXiv:2611.17268 generalized dimensional MUB witness",
+      "assumed_reference_model": {
+        "gamma": 0.75,
+        "late_depolarizing_epsilon": 0.01
+      },
+      "adversarial_missing_data_handling": "If accepted outcomes p_j have independently calibrated common lower-bound acceptance eta, any CPTP completion of lost trials has true outcome coordinate in [eta*p_j,eta*p_j+1-eta]; fidelity is upper-bounded by classical Bhattacharyya coefficient. Nonunitality S1 is lower bounded by max(0,3*eta*r0-1).",
+      "zero_loss_accepted_reference_W": -0.7894929399347174,
+      "minimum_eta_for_negative_worst_case_upper": 0.9897351649185687,
+      "eta_0_995_worst_case_Wupper": -0.3468865087475992,
+      "eta_0_99_worst_case_Wupper": -0.015866943773186648,
+      "eta_0_985_worst_case_Wupper": 0.26445424098995685,
+      "accepted_samples_per_setting_99pct": 155975,
+      "seven_setting_accepted_total_99pct": 1091825,
+      "IID_Hoeffding_confidence_delta": 0.01,
+      "observational_boundary": "Not device independent. Requires reliable lower bound on acceptance for each prepared input and stationarity; no fair-sampling shortcut. The sample forecast uses an illustrative gamma/epsilon model, but the conservative data bound itself does not require depolarizing outputs."
+    }
+  }
+}

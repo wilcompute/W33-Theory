@@ -1,0 +1,154 @@
+{
+  "status": "PASS_STANDARD_HGP_VARIABLE_REPETITION_DIAL",
+  "source_prior_art": "analysis/toe_20261120_mixed_levi_repetition_hgp.py",
+  "theorem": "For every L>=2: CSS [[239L-79,81,dX=L,dZ=8]]_3 using reduced 79x160 oriented Levi incidence A and (L-1)xL signed repetition check B.",
+  "dX_proof": "HZ x=0 forces successive edge-column slices of x_first to differ by A^T rowspace vectors. All L slices have a common class in F3^E/im A^T. If class=0, x is HX stabilizer (A^T injective); otherwise each of L slices is nonzero, so X logical weight>=L. One nonbridge edge times all-ones length L is a paired weight-L X logical.",
+  "dZ_proof": "For z in ker HX sum z_first over its L repetition columns; B^T sums to zero, giving a graph cycle s in ker A. If s=0, z is an HZ stabilizer because im B^T=zero-sum vectors and B^T injective. Otherwise graph girth 8 forces weight(z)>=8. A native Levi octagon in one repetition column is a paired weight-eight Z logical.",
+  "symmetric_distance_caution": "L=8 balances dX and dZ at 8, but requires 1833 independently addressable physical qutrits. This is not a single-photon code or a threshold result.",
+  "samples": [
+    {
+      "L": 2,
+      "physical_qutrits": 399,
+      "logical_qutrits": 81,
+      "dX": 2,
+      "dZ": 8,
+      "distance": 2,
+      "HX_shape": [
+        158,
+        399
+      ],
+      "HZ_shape": [
+        160,
+        399
+      ],
+      "rank_HX_by_full_row_rank": 158,
+      "rank_HZ_by_full_row_rank": 160,
+      "nonzero_logical_XZ_pair": 2,
+      "HX_HZT_zero_mod3": true,
+      "maximum_X_check_weight": 9,
+      "maximum_Z_check_weight": 4,
+      "maximum_X_qudit_check_degree": 4,
+      "maximum_Z_qudit_check_degree": 4
+    },
+    {
+      "L": 3,
+      "physical_qutrits": 638,
+      "logical_qutrits": 81,
+      "dX": 3,
+      "dZ": 8,
+      "distance": 3,
+      "HX_shape": [
+        237,
+        638
+      ],
+      "HZ_shape": [
+        320,
+        638
+      ],
+      "rank_HX_by_full_row_rank": 237,
+      "rank_HZ_by_full_row_rank": 320,
+      "nonzero_logical_XZ_pair": 2,
+      "HX_HZT_zero_mod3": true,
+      "maximum_X_check_weight": 6,
+      "maximum_Z_check_weight": 7,
+      "maximum_X_qudit_check_degree": 3,
+      "maximum_Z_qudit_check_degree": 8
+    },
+    {
+      "L": 4,
+      "physical_qutrits": 877,
+      "logical_qutrits": 81,
+      "dX": 4,
+      "dZ": 8,
+      "distance": 4,
+      "HX_shape": [
+        316,
+        877
+      ],
+      "HZ_shape": [
+        480,
+        877
+      ],
+      "rank_HX_by_full_row_rank": 316,
+      "rank_HZ_by_full_row_rank": 480,
+      "nonzero_logical_XZ_pair": 2,
+      "HX_HZT_zero_mod3": true,
+      "maximum_X_check_weight": 7,
+      "maximum_Z_check_weight": 6,
+      "maximum_X_qudit_check_degree": 4,
+      "maximum_Z_qudit_check_degree": 4
+    },
+    {
+      "L": 5,
+      "physical_qutrits": 1116,
+      "logical_qutrits": 81,
+      "dX": 5,
+      "dZ": 8,
+      "distance": 5,
+      "HX_shape": [
+        395,
+        1116
+      ],
+      "HZ_shape": [
+        640,
+        1116
+      ],
+      "rank_HX_by_full_row_rank": 395,
+      "rank_HZ_by_full_row_rank": 640,
+      "nonzero_logical_XZ_pair": 2,
+      "HX_HZT_zero_mod3": true,
+      "maximum_X_check_weight": 6,
+      "maximum_Z_check_weight": 4,
+      "maximum_X_qudit_check_degree": 2,
+      "maximum_Z_qudit_check_degree": 4
+    },
+    {
+      "L": 8,
+      "physical_qutrits": 1833,
+      "logical_qutrits": 81,
+      "dX": 8,
+      "dZ": 8,
+      "distance": 8,
+      "HX_shape": [
+        632,
+        1833
+      ],
+      "HZ_shape": [
+        1120,
+        1833
+      ],
+      "rank_HX_by_full_row_rank": 632,
+      "rank_HZ_by_full_row_rank": 1120,
+      "nonzero_logical_XZ_pair": 2,
+      "HX_HZT_zero_mod3": true,
+      "maximum_X_check_weight": 6,
+      "maximum_Z_check_weight": 4,
+      "maximum_X_qudit_check_degree": 2,
+      "maximum_Z_qudit_check_degree": 4
+    },
+    {
+      "L": 11,
+      "physical_qutrits": 2550,
+      "logical_qutrits": 81,
+      "dX": 11,
+      "dZ": 8,
+      "distance": 8,
+      "HX_shape": [
+        869,
+        2550
+      ],
+      "HZ_shape": [
+        1600,
+        2550
+      ],
+      "rank_HX_by_full_row_rank": 869,
+      "rank_HZ_by_full_row_rank": 1600,
+      "nonzero_logical_XZ_pair": 2,
+      "HX_HZT_zero_mod3": true,
+      "maximum_X_check_weight": 6,
+      "maximum_Z_check_weight": 4,
+      "maximum_X_qudit_check_degree": 2,
+      "maximum_Z_qudit_check_degree": 4
+    }
+  ]
+}
