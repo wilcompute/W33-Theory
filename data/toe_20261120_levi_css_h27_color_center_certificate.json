@@ -1,0 +1,31 @@
+{
+  "status": "PASS_TWO_REPRODUCIBLE_PRIMARY_GATES_PLUS_FOUR_LOCAL_CONTROLS",
+  "baseline": "31d247e0c3d04ec828ced9c22f7a454005d0ce2c",
+  "CSS_decoder": {
+    "physical_qutrits": 638,
+    "logical_qutrits": 81,
+    "dX": 3,
+    "dZ": 8,
+    "all_nonzero_single_X_syndromes": 1276,
+    "all_nonzero_single_Z_syndromes": 1276,
+    "within_type_single_syndrome_collisions": 0,
+    "weight2_vs_weight1_X_ambiguity": true,
+    "prior_art_parameters_from_commit": "9c9d65d0941d373360ed197a1629fd77131d26e5"
+  },
+  "H27_center": {
+    "commutator_omega_I9_residual": 1.1416958379363925e-15,
+    "flavor_color_center_identified": true,
+    "physical_flavor_quotient": "Z3^2"
+  },
+  "local_full_six_front_controls": {
+    "qutrit_memory_adversarial_TV_critical": 0.009830097946808511,
+    "model_conditional_99pct_shots_per_setting_with_TV_0p001": 214000,
+    "SU3_54_exposure_degree5_residual": 2.7755575615628914e-17,
+    "SU3_degree6_residual": 0.00005062473339456255,
+    "SU3_variance_inflation": 7.86,
+    "periodic_naive_Dirac_index": 0,
+    "causal_2D_chain_height_slope": 0.569517494461295,
+    "causal_4D_chain_height_slope": 0.3287837253784596
+  },
+  "limits": "Two primary algebraic gates independently runnable from tracked producer/tests. Six-front extended producer, 24 tests, and full report delivered in separate archive. No photonic measurement, E8 UV completion, G2 matter derivation, or continuum quantum gravity claimed."
+}
