@@ -1,0 +1,107 @@
+{
+  "status": "PASS_FINITE_SYMPLECTIC_SWITCH_SIC_RECONSTRUCTION",
+  "prior_art": "Two-qutrit W(3,3) commutation, quantum switches and Hesse SIC states are established. The increment is their explicitly certified combined switch/probe/chirality protocol.",
+  "geometry": {
+    "points": 40,
+    "commuting_unordered_pairs": 240,
+    "noncommuting_unordered_pairs": 540,
+    "partners_per_noncommuting_pair": [
+      20,
+      9,
+      9
+    ],
+    "fully_noncommuting_triples": 3240,
+    "projectively_dependent_triples": 360,
+    "projectively_independent_triples": 2880,
+    "signed_dependent_counts": {
+      "plus": 180,
+      "minus": 180
+    },
+    "signed_independent_counts": {
+      "plus": 1440,
+      "minus": 1440
+    },
+    "triple_sign_invariant_under_independent_representative_flips": true,
+    "triple_sign_reverses_under_anti_symplectic_map": true
+  },
+  "quantum_switch": {
+    "tested_projective_pair_switches": 780,
+    "control_phase_residual_max": 1.4043333874306805e-15,
+    "symplectic_form_counts_by_selected_projective_lifts": {
+      "0": 240,
+      "2": 282,
+      "1": 258
+    },
+    "target_independent_control_x_for_commuting": 1.0,
+    "target_independent_control_x_for_noncommuting": -0.5,
+    "noncommuting_control_minus_y_magnitude": 0.8660254037844386,
+    "quantum_switch_requires_two_order_coherent_paths": true
+  },
+  "SIC_controlled_order_operator_tomography": {
+    "input_Hesse_SIC_states_each_factor": 9,
+    "tensor_product_informationally_complete_probes": 81,
+    "frame_Gram_eigenvalues": {
+      "9": 1,
+      "2.25": 16,
+      "0.5625": 64
+    },
+    "frame_Gram_condition_number": 16.0,
+    "max_operator_reconstruction_error": 1.9454658893719507e-15,
+    "operator_noncentral_Frobenius_norm": 2.414968893639831,
+    "SIC_Gram_inverse_quadratic_certificate": 5.832074757247981,
+    "noncentrality_visibility_phase_invariant_ratio": 0.6480083063608881,
+    "uniform_phase_visibility_cancellation": true,
+    "simultaneous_gauge_covariance": true,
+    "ideal_center_81_probe_deviation_max": 4.47545209131181e-16,
+    "limitation": "The qutrit SIC is established prior art. Any actual interferometer needs coherent reference, calibrated input-independent visibility and a physical gate implementation."
+  },
+  "shot_planning": {
+    "delta": 0.01,
+    "noncentral_Frobenius_tolerance": 0.25,
+    "conservative_individual_accepted_shots_per_each_of_162_quadrature_settings": 95717,
+    "total_accepted_81_input_2_quadrature_shots": 15506154,
+    "central_Frobenius_sampling_bound_if_empirical_probe_spread_zero": 0.2499994523897911,
+    "minimum_quadrature_imag_signal_visibility_0p8_drift_0p1": 0.6494257405429492,
+    "accepted_shots_to_resolve_chirality_sign_with_calibrated_frame": 26,
+    "shot_bound_scope": "IID +/-1 readout, 99% union guarantee, ideal preparation and visibility=1. Known visibility v<1 inflates the corrected amplitude error by 1/v and shot requirement by 1/v^2; phase/visibility calibration uncertainty excluded."
+  },
+  "projective_quadratic_character_extension": {
+    "finite_field_projective_sign_formula": "Legendre(<u,v><v,w><w,u>), with value 0 for any commuting pair",
+    "exact_projective_scaling_invariance": "Each point rescaling contributes its square to the triple pairing product.",
+    "GSp_multiplier_rule": "M(g u,g v,g w)=Legendre(mu(g)) M(u,v,w) for symplectic multiplier mu(g).",
+    "odd_prime_samples": [
+      {
+        "prime_field": 3,
+        "random_nonorthogonal_triples_checked": 143,
+        "chi_of_minus_one": -1,
+        "negative_symplectic_multiplier_reverses_Maslov_sign": true
+      },
+      {
+        "prime_field": 5,
+        "random_nonorthogonal_triples_checked": 249,
+        "chi_of_minus_one": 1,
+        "negative_symplectic_multiplier_reverses_Maslov_sign": false
+      },
+      {
+        "prime_field": 7,
+        "random_nonorthogonal_triples_checked": 324,
+        "chi_of_minus_one": -1,
+        "negative_symplectic_multiplier_reverses_Maslov_sign": true
+      },
+      {
+        "prime_field": 11,
+        "random_nonorthogonal_triples_checked": 385,
+        "chi_of_minus_one": -1,
+        "negative_symplectic_multiplier_reverses_Maslov_sign": true
+      }
+    ],
+    "physical_boundary": "A finite-field multiplier character is not a physical parity or chiral fermion index."
+  },
+  "failure_controls": {
+    "definite_order_target_output_difference_for_central_commutator": 1.3381863072330883e-16,
+    "classical_mixture_cannot_reveal_center_phase": true,
+    "input_dependent_visibility_falsely_inferred_noncentral_norm": 0.5029383695844016,
+    "experimental_requirement": "A physical order-superposition control and per-input visibility/SPAM calibration, not merely a classical choice of order."
+  },
+  "physics_boundary": "An optical nine-mode qutrit algebra is not physical QCD colour. Chirality phase sign at a projective point requires a lift; a triple product cancels that lift. Physical SU3 gauge holonomy requires a genuinely charged gauge-invariant reference and observable. No emergence of spacetime, gravitational law or particle mass claimed."
+}
