@@ -1,0 +1,110 @@
+{
+  "status": "PASS_CONTINUUM_INDEX_PLUS_2D_OVERLAP_FLUX_E6_SIEVE",
+  "prior_art": "Atiyah-Singer index on a torus and lattice Wilson overlap index known; E6 branching known. The new scoped output is an explicit flux-only anomaly filter for the claimed family mechanism.",
+  "flux_model": {
+    "background": "Flat T4, c1(L)=n12 e12 + n34 e34, charged rep L^q, zero internal gravitational curvature.",
+    "index_theorem": "index(D_q)=integral_T4 (1/2)c1(L^q)^2=q^2*n12*n34.",
+    "internal_fluxes": {
+      "n12": 3,
+      "n34": 1,
+      "product": 3
+    },
+    "E6_27_branching": [
+      {
+        "Spin10_rep": "16",
+        "dimension": 16,
+        "U1psi_charge": 1,
+        "T2_index": 2,
+        "four_dimensional_continuum_flux_index": 3,
+        "two_independent_2D_overlap_index_inputs": [
+          {
+            "L": 11,
+            "charge": 1,
+            "flux": 3,
+            "index_from_Hermitian_Wilson_spectral_asymmetry": -3,
+            "spectral_gap": 0.9209524791364551,
+            "plaquette_angle_magnitude": 0.15578145389701453,
+            "gauged": false
+          },
+          {
+            "L": 11,
+            "charge": 1,
+            "flux": 1,
+            "index_from_Hermitian_Wilson_spectral_asymmetry": -1,
+            "spectral_gap": 0.9739188756770804,
+            "plaquette_angle_magnitude": 0.051927151299004846,
+            "gauged": false
+          }
+        ]
+      },
+      {
+        "Spin10_rep": "10",
+        "dimension": 10,
+        "U1psi_charge": -2,
+        "T2_index": 1,
+        "four_dimensional_continuum_flux_index": 12,
+        "two_independent_2D_overlap_index_inputs": [
+          {
+            "L": 11,
+            "charge": -2,
+            "flux": 3,
+            "index_from_Hermitian_Wilson_spectral_asymmetry": 6,
+            "spectral_gap": 0.8396370899213663,
+            "plaquette_angle_magnitude": 0.31156290779402906,
+            "gauged": false
+          },
+          {
+            "L": 11,
+            "charge": -2,
+            "flux": 1,
+            "index_from_Hermitian_Wilson_spectral_asymmetry": 2,
+            "spectral_gap": 0.947557968369699,
+            "plaquette_angle_magnitude": 0.10385430259800969,
+            "gauged": false
+          }
+        ]
+      },
+      {
+        "Spin10_rep": "1",
+        "dimension": 1,
+        "U1psi_charge": 4,
+        "T2_index": 0,
+        "four_dimensional_continuum_flux_index": 48,
+        "two_independent_2D_overlap_index_inputs": [
+          {
+            "L": 11,
+            "charge": 4,
+            "flux": 3,
+            "index_from_Hermitian_Wilson_spectral_asymmetry": -12,
+            "spectral_gap": 0.6704527226700004,
+            "plaquette_angle_magnitude": 0.6231258155880581,
+            "gauged": false
+          },
+          {
+            "L": 11,
+            "charge": 4,
+            "flux": 1,
+            "index_from_Hermitian_Wilson_spectral_asymmetry": -4,
+            "spectral_gap": 0.894094147390964,
+            "plaquette_angle_magnitude": 0.20770860519601939,
+            "gauged": false
+          }
+        ]
+      }
+    ],
+    "unfluxed_complete_27_anomalies": {
+      "U1psi_gravitational": 0,
+      "U1psi_cubic": 0,
+      "Spin10_squared_U1psi": 0
+    },
+    "flux_zero_mode_4D_anomaly_tests": {
+      "U1psi_gravitational": 0,
+      "U1psi_cubic": 2160,
+      "Spin10_squared_U1psi": -18
+    },
+    "gauge_rephase_invariance_overlap_index": true,
+    "sign_reversal_under_2D_flux_reversal": true,
+    "scope": "The 4D index q^2 Q is a CONTINUUM Atiyah-Singer result independently checked by PRODUCT of two 2D overlap indices; we did NOT build an actual 4D overlap kernel. Anomaly sums assume the chirally selected modes alone, without extra bulk/inflow/Green-Schwarz/mass partners.",
+    "physical_no_go": "A lone U1psi flux selecting 3 Spin10 spinor copies also yields 12 chiral vector-10 and 48 chiral singlet copies; surviving 4D U1psi^3 and Spin10^2 U1psi anomalies are respectively 2160 and -18 for Q=3. Additional physics is mandatory. Selecting n12=3 by hand does not explain the number three."
+  }
+}

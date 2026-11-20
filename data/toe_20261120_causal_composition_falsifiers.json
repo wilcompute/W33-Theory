@@ -1,0 +1,45 @@
+{
+  "status": "PASS_CAUSAL_SWITCH_EQUIVALENCE_AND_PHYSICAL_ADDRESS_HOLDOUT",
+  "physical_address": {
+    "physical_gate_address_map_is_bijective": true,
+    "basis_generator_gates_unchanged": true,
+    "six_basis_phases_pass": {
+      "01": 0,
+      "02": 1,
+      "03": 0,
+      "12": 0,
+      "13": 1,
+      "23": 0
+    },
+    "all_81_address_pairs_that_fail_bilinear_prediction": 1512,
+    "holdout_pair": "u=e1+e3, v=e2",
+    "linear_prediction": 0,
+    "measured_distorted_phase": 1,
+    "composition_residual_normalized_trace_abs": 1.214936521979238e-16,
+    "honest_composition_residual_normalized_trace_abs": 0.9999999999999998,
+    "point": "A legitimate set of 81 Weyl unitary gates with nonlinear command address can fake all six basis-pair calibrations. A two-displacement composition holdout detects it."
+  },
+  "cocycle_consistency": {
+    "exact_sesquilinear_commutator_address_pairs_checked": 6561,
+    "random_cocycle_associativity_triplets_checked": 30000,
+    "projective_representation_law": "W(u)W(v)=omega^phi(u,v) W(u+v), phi=z(u) dot x(v).",
+    "prediction_no_go": "If an associative projective representation of additive F3^4 is exact, its central commutator is necessarily an alternating bicharacter with values in cube roots of unity. An independent nonbilinear pair phase would violate a premise, not demonstrate a new law with the same representation."
+  },
+  "causal_order_ambiguity": {
+    "central_W33_switch_equals_definite_target_order_plus_control_phase_error_max": 6.740105962128839e-16,
+    "central_switch_control_target_purification_entanglement_bits": 0.0,
+    "noncentral_seeded_control_vs_purified_target_entropy_bits": 0.8426263734953833,
+    "formula": "For pure control |+> and purification of I_d/d, control entropy is h2((1+|Tr(K)/d|)/2).",
+    "formal_boundary": "A central-pair switch output can be reproduced exactly by a known definite-target-order unitary with an extra control phase. It does not certify causal nonseparability. Independent trusted-operation/process-matrix or suitably extended causal witness is mandatory.",
+    "literature": "Ara\u00fajo et al. New J. Phys. 17 102001 (2015); quantum switch does not violate standard bipartite causal inequalities without extra trust or spacetime conditions."
+  },
+  "noisy_holdout_planning": {
+    "model": "IID Bernoulli two-quadrature switch phase; v=0.9, drift uniform [-.05,.05], N=160 per quadrature per setting.",
+    "six_basis_and_one_holdout_accepted_control_shots_per_run": 2240,
+    "seeded_replications": 1500,
+    "six_basis_pass_reps": 1500,
+    "distorted_address_detected_given_six_basis_pass_reps": 1500,
+    "no_hardware_measured": true
+  },
+  "boundary": "Ordinary quantum circuit simulation and W33 algebra tests cannot by themselves constitute a parameter-free prediction beyond standard quantum mechanics or prove emergent Lorentzian spacetime."
+}

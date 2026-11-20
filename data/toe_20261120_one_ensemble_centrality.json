@@ -1,0 +1,53 @@
+{
+  "status": "PASS_ONE_ENSEMBLE_UNITARY_CENTRALITY_WITH_SPAM_FALSIFIERS",
+  "prior_art": "DQC1 one-clean-qubit normalized trace estimate; standard Cauchy-Schwarz equality condition. Increment is a concrete coherent-order centrality audit with calibrated failure bounds against the prior 81-SIC protocol.",
+  "centrality": {
+    "d": 9,
+    "ideal_center": {
+      "trace_real": -0.4999999999999999,
+      "trace_imag": 0.8660254037844384,
+      "trace_abs": 0.9999999999999997,
+      "noncentrality_Frobenius_squared": 3.173932548350165e-30,
+      "one_ensemble_formula_residual": 5.995204332975842e-15
+    },
+    "seeded_noncentral": {
+      "trace_real": -0.1758953247343988,
+      "trace_imag": 0.4232856020603717,
+      "trace_abs": 0.4583774276456367,
+      "noncentrality_Frobenius_squared": 7.109011204424715,
+      "one_ensemble_formula_residual": 6.217248937900877e-15
+    },
+    "uniform_basis_ensemble_equals_maximally_mixed": true,
+    "random_basis_prep_samples": 400000,
+    "sampled_complex_amplitude": [
+      -0.17560539189862082,
+      0.4228162233201796
+    ],
+    "biased_preparation_counterexample": {
+      "true_unitary_noncentral_Frobenius_squared": 3.5555555555555554,
+      "biased_target_amplitude_abs": 1.0,
+      "target_trace_norm_distance_to_uniform": 0.22222222222222227
+    },
+    "physical_scope": "Requires independently warranted unitary K, coherent order control and a randomized 9-basis ensemble. Not a measurement of physical SU3 colour."
+  },
+  "finite_shot": {
+    "dimension": 9,
+    "confidence": 0.99,
+    "centrality_Frobenius_tolerance": 0.25,
+    "phase_matched_zero_failure_Clopper_Pearson_accepted_shots": 2646,
+    "phase_matched_zero_failure_exact_CP_p_upper": 0.0017389134649742344,
+    "phase_matched_zero_failure_squared_Frobenius_upper": 0.062492027217680435,
+    "unknown_center_phase_two_quadrature_accepted_shots_each": 1980916,
+    "unknown_phase_two_quadrature_total_shots": 3961832,
+    "target_trace_norm_calibration_guard": "||K - (Tr K/d)I||_F^2 <= d[1-max(0,|a_obs|-complex_stat_error-||rho-I/d||_1)^2], provided visibility <=1 and no additive readout artifact",
+    "seeded_driftless_failures_at_1pct_reference": 28,
+    "seeded_trials": 3000,
+    "seeded_observed_failure_rate": 0.009333333333333334,
+    "loss_warning": "For phase-matched zero-failure certificate, 1% physical detector flips generally prevent a noncentrality <=0.25 certificate without independent noise calibration. No device results."
+  },
+  "nonunitary_failure": {
+    "rank_eight_contraction_true_noncentrality_square": 0.8888888888888888,
+    "false_unitary_formula_result": 1.8888888888888893,
+    "formula_requires_unitarity": true
+  }
+}
