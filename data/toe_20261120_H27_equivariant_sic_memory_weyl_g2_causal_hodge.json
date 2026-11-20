@@ -1,0 +1,401 @@
+{
+  "date": "2026-11-20",
+  "status": "SIX_FINITE_GATES_PASS_NOT_A_THEORY_OF_EVERYTHING",
+  "tracks": {
+    "H27_equivariant_SIC_SU3": {
+      "baryon_character_ranks": {
+        "00": 3,
+        "01": 2,
+        "02": 2,
+        "10": 2,
+        "11": 2,
+        "12": 2,
+        "20": 2,
+        "21": 2,
+        "22": 2
+      },
+      "dimension": 19,
+      "selected_19_characters_and_seed_triples": [
+        {
+          "char": [
+            0,
+            0
+          ],
+          "seed": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "char": [
+            0,
+            0
+          ],
+          "seed": [
+            0,
+            1,
+            3
+          ]
+        },
+        {
+          "char": [
+            0,
+            0
+          ],
+          "seed": [
+            0,
+            1,
+            6
+          ]
+        },
+        {
+          "char": [
+            0,
+            1
+          ],
+          "seed": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "char": [
+            0,
+            1
+          ],
+          "seed": [
+            0,
+            1,
+            3
+          ]
+        },
+        {
+          "char": [
+            0,
+            2
+          ],
+          "seed": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "char": [
+            0,
+            2
+          ],
+          "seed": [
+            0,
+            1,
+            3
+          ]
+        },
+        {
+          "char": [
+            1,
+            0
+          ],
+          "seed": [
+            0,
+            1,
+            3
+          ]
+        },
+        {
+          "char": [
+            1,
+            0
+          ],
+          "seed": [
+            0,
+            1,
+            6
+          ]
+        },
+        {
+          "char": [
+            1,
+            1
+          ],
+          "seed": [
+            0,
+            1,
+            3
+          ]
+        },
+        {
+          "char": [
+            1,
+            1
+          ],
+          "seed": [
+            0,
+            1,
+            6
+          ]
+        },
+        {
+          "char": [
+            1,
+            2
+          ],
+          "seed": [
+            0,
+            1,
+            4
+          ]
+        },
+        {
+          "char": [
+            1,
+            2
+          ],
+          "seed": [
+            0,
+            1,
+            6
+          ]
+        },
+        {
+          "char": [
+            2,
+            0
+          ],
+          "seed": [
+            0,
+            1,
+            3
+          ]
+        },
+        {
+          "char": [
+            2,
+            0
+          ],
+          "seed": [
+            0,
+            1,
+            4
+          ]
+        },
+        {
+          "char": [
+            2,
+            1
+          ],
+          "seed": [
+            0,
+            1,
+            3
+          ]
+        },
+        {
+          "char": [
+            2,
+            1
+          ],
+          "seed": [
+            0,
+            1,
+            4
+          ]
+        },
+        {
+          "char": [
+            2,
+            2
+          ],
+          "seed": [
+            0,
+            1,
+            3
+          ]
+        },
+        {
+          "char": [
+            2,
+            2
+          ],
+          "seed": [
+            0,
+            1,
+            4
+          ]
+        }
+      ],
+      "mod7_minor_pivot_columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        18,
+        19,
+        20
+      ],
+      "mod7_nonzero_19x19_minor_determinant": 2,
+      "exact_rank_certificate": "Nonzero 19x19 minor over F7, omega=2, implies a nonzero minor in Z[omega] and characteristic-zero rank >=19; eight SL3 gauge directions force <=19.",
+      "nine_SIC_triplets_Dflat_residual": 1.2364358825888212e-15,
+      "19_constraint_min_singular_value": 5.03884003585204,
+      "trivial_character_source_values": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -13.499999999999993,
+          7.794228634059955
+        ],
+        [
+          13.499999999999996,
+          -7.794228634059953
+        ]
+      ],
+      "max_nontrivial_character_source_value": 4.6204489227285734e-15,
+      "H27_covariance_source_residual": 9.559374836295626e-14,
+      "H27_vacuum_color_gauge_residual": 1.9885162378244787e-15,
+      "H27_antifundamental_coupling_residual": 1.464821375527116e-14,
+      "anti_triplet_frame_min_abs_det": 1.732050807568877,
+      "antifundamental_block_min_singular": 0.6840402866513372,
+      "full_100x100_holomorphic_Hessian_rank": 92,
+      "full_holomorphic_Hessian_gauge_kernel": 8,
+      "max_gauge_tangent_Flinear_residual": 3.3201284056034313e-15,
+      "SU3_cubic_chiral_gauge_anomaly": "9 fundamental + 9 antifundamental = 0; singlets carry no color",
+      "no_surplus_L_modes": true,
+      "limitation": "Engineered H27-equivariant gauge toy, NOT E8-invariant, globally vacuum-selected, chirally compactified or phenomenologically predictive. Relative species/clock phases are active, not bare baryon-coordinate permutations."
+    },
+    "qutrit_three_time_finite_shots": {
+      "dimension": 3,
+      "gamma_thresholds_epsilon": {
+        "0.36": 0.010263207615968255,
+        "0.75": 0.04289321881298726,
+        "1.0": 0.07504940885145842
+      },
+      "illustrative_gamma": 0.75,
+      "illustrative_late_depolarization_epsilon": 0.01,
+      "illustrative_true_witness": -0.7894929399347174,
+      "error_probability_upper_bound": 0.01,
+      "sufficient_shots_each_of_first_and_pooled_late_populations": 30650,
+      "total_independent_shots": 61300,
+      "hoeffding_radius": 0.009886356333428247,
+      "simulated_first_channel_reference0_counts": 25425,
+      "simulated_late_wrong_outcome_counts": 215,
+      "simulated_confidence_upper_witness": -0.31445976994233593,
+      "statistical_contract": "Model-conditional: exact isotropic depolarization, IID fixed preparations/readout and known MUBs. One Bernoulli population estimates E1(I/3), another the pooled late wrong-outcome rate. Two-sided Hoeffding and union bound certify a 99% confidence bound. Not SPAM-/loss-robust device-independent certification.",
+      "interpretation": "Increasing gamma to 0.75 raises qutrit witness noise threshold from about 1.03% to 4.29%; 1.0 reaches about 7.50%. This is witness detectability, not a noise tolerance for an implemented device."
+    },
+    "SU3_Weyl_detector_twirl_minimality": {
+      "nine_weyl_character_Fourier_transform_rank": 9,
+      "unique_weight_distribution_for_detector_independent_all_matrix_twirling": "p_ab=1/9 for all 9 settings",
+      "minimum_nonzero_Weyl_settings_for_full_unknown_detector": 9,
+      "minimum_X_shift_settings_for_unknown_diagonal_detector": 3,
+      "error_full_uniform_nine_twirls": 0.0,
+      "nonuniform_example_max_nontrivial_Weyl_Fourier_weight": 0.12499999999999997,
+      "nonuniform_example_complex_trace_error": 0.005148204698132974,
+      "nonuniform_example_L1_bound": 0.5,
+      "arbitrary_detector_three_shift_frobenius_residual": 0.21028578031007175,
+      "gate_operator_error_bound": "For each intended Weyl U_j and implemented V_j with ||U_j-V_j||_op<=tau, total character error <=6tau plus 3||p-uniform||_1 (eta>=0, Tr eta=1, K unitary).",
+      "limitations": "Assumes linear positive detector matrix, coherently implemented conjugations, no time-correlated source drift. General physical optical error budget still pending."
+    },
+    "G2_smooth_compactification_chirality": {
+      "round_unit_S7_scalar_curvature": 42,
+      "untwisted_Lichnerowicz_dirac_spectral_gap_lower_bound": 3.24037034920393,
+      "exact_unit_S7_Dirac_spectrum_first_four_levels": [
+        {
+          "k": 0,
+          "Dirac_eigenvalues": [
+            -3.5,
+            3.5
+          ],
+          "multiplicity_each_sign": 8
+        },
+        {
+          "k": 1,
+          "Dirac_eigenvalues": [
+            -4.5,
+            4.5
+          ],
+          "multiplicity_each_sign": 56
+        },
+        {
+          "k": 2,
+          "Dirac_eigenvalues": [
+            -5.5,
+            5.5
+          ],
+          "multiplicity_each_sign": 224
+        },
+        {
+          "k": 3,
+          "Dirac_eigenvalues": [
+            -6.5,
+            6.5
+          ],
+          "multiplicity_each_sign": 672
+        }
+      ],
+      "untwisted_S7_zero_modes": 0,
+      "periodic_domain_wall_lattice_sites": 78,
+      "periodic_Q_rank": 76,
+      "periodic_index_dimkerQ_minus_dimkerQ_adj": 0,
+      "classification": "Independent reproduction of established spin geometry. Acharya-Witten require singular G2 holonomy spaces for 4D chirality in the M-theory setup. Smooth positive-scalar-curvature *untwisted* S7 cannot yield even a 7D Dirac zero mode; twisted bundles/singular geometries are different cases."
+    },
+    "causal_4D_time_reversal": {
+      "model": "IID uniform-volume 3+1D Minkowski Alexandrov diamond of half-height1; no preferred boundary source",
+      "events_per_sprinkling": 48,
+      "sprinkling_count": 320,
+      "exact_time_reversal_arrow_sign_matches": 320,
+      "arrow_nonzero_samples": 320,
+      "sample_arrow_mean": -123.16875,
+      "sample_arrow_std": 17691.312407292946,
+      "paired_time_reverse_ensemble_arrow_mean": 0,
+      "theorem": "A3 is order-isomorphism invariant but T odd. A time-reversal-symmetric sprinkling probability measure makes E[A3]=0, irrespective of typical sample fluctuations. Boundary conditions or T-breaking dynamics are needed to orient an ensemble. This does not create a Lorentzian gravitational action or show 4D emergence."
+    },
+    "W33_Hodge_edge_phase_leakage": {
+      "W33_points": 40,
+      "W33_lines": 40,
+      "Levi_vertices": 80,
+      "Levi_flags": 160,
+      "Levi_cycle_space_rank": 81,
+      "flag_line_graph_shells": [
+        1,
+        6,
+        18,
+        54,
+        81
+      ],
+      "signed_cycle_K_coefficient_by_distance": [
+        81,
+        -27,
+        9,
+        -3,
+        1
+      ],
+      "K_squared_exactly_160_K": true,
+      "all_160x160_cycle_projector_entries_nonzero": true,
+      "diagonal_edge_phase_preserves_cycle_space_iff_all_phases_identical": true,
+      "one_edge_phi_radians": 0.41,
+      "one_edge_hodge_leakage_numeric": 0.04143311365598017,
+      "one_edge_hodge_leakage_exact_formula": "4 sin\u00b2(phi/2) * (81/160)*(79/160)",
+      "gaussian_IID_phase_sigma": 0.11,
+      "expected_total_Hodge_leakage_exact_formula": "(6399/160)*(1-exp(-sigma\u00b2))",
+      "expected_total_Hodge_leakage_at_sigma": 0.4810084054579126,
+      "empirical_mean_total_Hodge_leakage_400_trials": 0.4802968184298252,
+      "limitation": "Leakage relative to a fixed Levi Hodge projector under independent edge-diagonal phase faults, NOT a universal physical error rate or a proof that gauge-covariantly transformed connections fail. Protection requires active correction or constrained noise, not merely 81-dimensional homology."
+    }
+  }
+}
