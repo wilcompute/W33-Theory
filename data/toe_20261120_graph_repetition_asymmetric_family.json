@@ -1,0 +1,121 @@
+{
+  "status": "PASS_GRAPH_MIXED_HGP_GENERALIZATION",
+  "theorem": "For a connected bridgeless simple graph with minimum degree >=3, V vertices, E edges, and girth g, its reduced signed incidence matrix hypergraph-product with the length-three ternary repetition check yields [[3E+2(V-1),E-V+1,dX=3,dZ=g]]_3.",
+  "proof": "As in the Levi case: rank(A)=V-1, rank(B)=2, CSS checks commute; projection of Z first block along repetition all-ones gives a graph cycle of weight>=g; zero projection implies Z stabilizer. All HZ columns are nonzero, pairwise nonproportional for a simple graph min degree>=3; a single cycle edge times (1,1,1) gives weight3 X logical paired with cycle Z logical.",
+  "cubic_graph_family": "For V even, E=3V/2: n=13V/2-2, k=V/2+1, asymptotic rate 1/13, dX=3, dZ=g. Large-girth cubic graph families imply unbounded phase-error (Z) distance only; symmetric distance remains 3.",
+  "examples": [
+    {
+      "graph": "cube_Q3",
+      "vertices": 8,
+      "edges": 12,
+      "girth": 4,
+      "parameters": {
+        "n": 50,
+        "k": 5,
+        "dX": 3,
+        "dZ": 4,
+        "d": 3
+      },
+      "check_weights": {
+        "HX": 5,
+        "HZ": 4
+      },
+      "check_degrees": {
+        "HX": 2,
+        "HZ": 3
+      },
+      "proof_checks": {
+        "commuting_stabilizers": true,
+        "HX_rank": 21,
+        "HZ_rank": 24,
+        "no_zero_or_projectively_equal_HZ_columns": true,
+        "anticommuting_logical_pair": 2
+      }
+    },
+    {
+      "graph": "Petersen",
+      "vertices": 10,
+      "edges": 15,
+      "girth": 5,
+      "parameters": {
+        "n": 63,
+        "k": 6,
+        "dX": 3,
+        "dZ": 5,
+        "d": 3
+      },
+      "check_weights": {
+        "HX": 5,
+        "HZ": 4
+      },
+      "check_degrees": {
+        "HX": 2,
+        "HZ": 3
+      },
+      "proof_checks": {
+        "commuting_stabilizers": true,
+        "HX_rank": 27,
+        "HZ_rank": 30,
+        "no_zero_or_projectively_equal_HZ_columns": true,
+        "anticommuting_logical_pair": 2
+      }
+    },
+    {
+      "graph": "Heawood",
+      "vertices": 14,
+      "edges": 21,
+      "girth": 6,
+      "parameters": {
+        "n": 89,
+        "k": 8,
+        "dX": 3,
+        "dZ": 6,
+        "d": 3
+      },
+      "check_weights": {
+        "HX": 5,
+        "HZ": 4
+      },
+      "check_degrees": {
+        "HX": 2,
+        "HZ": 3
+      },
+      "proof_checks": {
+        "commuting_stabilizers": true,
+        "HX_rank": 39,
+        "HZ_rank": 42,
+        "no_zero_or_projectively_equal_HZ_columns": true,
+        "anticommuting_logical_pair": 2
+      }
+    },
+    {
+      "graph": "W33_Levi",
+      "vertices": 80,
+      "edges": 160,
+      "girth": 8,
+      "parameters": {
+        "n": 638,
+        "k": 81,
+        "dX": 3,
+        "dZ": 8,
+        "d": 3
+      },
+      "check_weights": {
+        "HX": 6,
+        "HZ": 4
+      },
+      "check_degrees": {
+        "HX": 2,
+        "HZ": 4
+      },
+      "proof_checks": {
+        "commuting_stabilizers": true,
+        "HX_rank": 237,
+        "HZ_rank": 320,
+        "no_zero_or_projectively_equal_HZ_columns": true,
+        "anticommuting_logical_pair": 2
+      }
+    }
+  ],
+  "caveat": "Standard hypergraph-product mechanism, no new coding-theory general framework, no noisy threshold or local physical photonic implementation."
+}
