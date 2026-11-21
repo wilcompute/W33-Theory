@@ -1,0 +1,168 @@
+{
+  "continuum": {
+    "GH_distance_lower_bound_to_any_unit_diameter_compact_space_limit": 0.5,
+    "caveat": "Ordinary graph-shortest-path/Gromov-Hausdorff metric only, not a no-go for causal/Lorentzian or nonlocal multiscale limits",
+    "computed_heat_spectral_dimension_peaks": {
+      "H3": {
+        "peak": 5.8256774612948785,
+        "time": 0.4902982090534413
+      },
+      "W33": {
+        "peak": 3.718439650994865,
+        "time": 0.2595829622587137
+      }
+    },
+    "metric_diameter_as_q_grows": 0,
+    "metric_edge_length": "1/q",
+    "point_graph_diameters": {
+      "H(q)": 3,
+      "W(3,q)": 2
+    },
+    "prior_repo": "w33_20261009_toe21_qfamily_heat_nogo.py and 2026-11-18_sixfront_character_winding_continuum_falsifiers.md",
+    "samples": {
+      "101": {
+        "H_GromovHausdorff_lower_bound_to_unit_diameter": 0.48514851485148514,
+        "H_diam_edge1overq": 0.0297029702970297,
+        "W_GromovHausdorff_lower_bound_to_unit_diameter": 0.4900990099009901,
+        "W_diam_edge1overq": 0.019801980198019802
+      },
+      "11": {
+        "H_GromovHausdorff_lower_bound_to_unit_diameter": 0.36363636363636365,
+        "H_diam_edge1overq": 0.2727272727272727,
+        "W_GromovHausdorff_lower_bound_to_unit_diameter": 0.40909090909090906,
+        "W_diam_edge1overq": 0.18181818181818182
+      },
+      "3": {
+        "H_GromovHausdorff_lower_bound_to_unit_diameter": 0.0,
+        "H_diam_edge1overq": 1.0,
+        "W_GromovHausdorff_lower_bound_to_unit_diameter": 0.16666666666666669,
+        "W_diam_edge1overq": 0.6666666666666666
+      },
+      "31": {
+        "H_GromovHausdorff_lower_bound_to_unit_diameter": 0.45161290322580644,
+        "H_diam_edge1overq": 0.0967741935483871,
+        "W_GromovHausdorff_lower_bound_to_unit_diameter": 0.467741935483871,
+        "W_diam_edge1overq": 0.06451612903225806
+      },
+      "5": {
+        "H_GromovHausdorff_lower_bound_to_unit_diameter": 0.2,
+        "H_diam_edge1overq": 0.6,
+        "W_GromovHausdorff_lower_bound_to_unit_diameter": 0.3,
+        "W_diam_edge1overq": 0.4
+      },
+      "7": {
+        "H_GromovHausdorff_lower_bound_to_unit_diameter": 0.2857142857142857,
+        "H_diam_edge1overq": 0.42857142857142855,
+        "W_GromovHausdorff_lower_bound_to_unit_diameter": 0.35714285714285715,
+        "W_diam_edge1overq": 0.2857142857142857
+      }
+    }
+  },
+  "exceptional": {
+    "caveat": "Does not rule out arbitrary non-linear bijections, different realizations or weaker operator correspondences",
+    "centers_tested": 1093,
+    "isotropic_centers_undefined": 364,
+    "norm1_centers": 351,
+    "norm1_distinct_images": 238,
+    "norm1_fibers": {
+      "double": 126,
+      "single": 112
+    },
+    "norm2_centers": 378,
+    "norm2_distinct_images": 247,
+    "norm2_fibers": {
+      "double": 117,
+      "single": 130
+    },
+    "result": "no surjective LINEAR 7-to-6 quotient of natural Q(6,3) injective on all 364 points"
+  },
+  "reference": {
+    "assumption": "An external *physical* phase reference encodes six DIFFERENT equatorial qubit states",
+    "first_hypothetical_copy_count_above_99pct": 14,
+    "global_phase_projector_error": 4.444894984054626e-16,
+    "hypothetical_PGM_success_by_copy_count": {
+      "1": 0.33333333333333326,
+      "12": 0.9837335233035689,
+      "14": 0.990958265385628,
+      "16": 0.9949472009773478,
+      "2": 0.4857022603955159,
+      "20": 0.9984102855942355,
+      "3": 0.622008467928146,
+      "4": 0.743686217847897,
+      "5": 0.8528922270639018,
+      "8": 0.9452351829326039
+    },
+    "hypothetical_coherently_referenced_fourteen_copy_PGM_success": 0.990958265385628,
+    "hypothetical_coherently_referenced_one_copy_PGM_success": 0.33333333333333326,
+    "hypothetical_coherently_referenced_two_copy_PGM_success": 0.4857022603955159,
+    "no_go": "Six global scalar root phases of the SAME Witting ray remain one identical quantum density matrix, with no observable label to recover",
+    "no_reference_best_guess": 0.16666666666666666
+  },
+  "scientific_status": "Reproducible finite geometry and conditional operational falsifiers, not a Theory of Everything or hardware experiment",
+  "selection": {
+    "K_offdiagonal_counts": {
+      "disjoint": 270,
+      "intersection_two": 720
+    },
+    "K_spectrum": {
+      "0": 20,
+      "12": 24,
+      "72": 1
+    },
+    "M_rank": 25,
+    "all_noncmt_pairs": 540,
+    "charts": 45,
+    "conditional_source_gap": 0.5,
+    "disjoint_graph_srg": [
+      45,
+      12,
+      3,
+      3
+    ],
+    "identical_vacuum_energy_minus_J_units": -4,
+    "invariant_action": "V(psi)=-J/2 sum_FG K_FG abs(psi_F)^2 abs(psi_G)^2",
+    "invariant_action_global_vacua": 45,
+    "points": 40,
+    "requirement": "J>0 and sum_F abs(psi_F)^2=1; physically motivated J and an actual chart field are not derived",
+    "source_ground_probability_beta10": 0.9016495543196961,
+    "source_spectra": {
+      "commuting": [
+        3,
+        12,
+        30
+      ],
+      "noncommuting": [
+        1,
+        16,
+        28
+      ]
+    },
+    "sufficient_adversarial_operator_perturbation_norm_bound": 0.25,
+    "unique_pairs_per_chart": 12,
+    "vacuum_amplitude_quadratic_fluctuation_coefficients": {
+      "6J": 32,
+      "8J": 12
+    }
+  },
+  "status": "PASS_FIVE_FOLLOWTHROUGH_GATES",
+  "tomography": {
+    "classical_parity_garbling_rates": {
+      "even": 0.4,
+      "odd": 0.25
+    },
+    "direct_parity_shots_size_1pct_power_100pct_for_pure_odd": 7,
+    "limitation": "Requires comparable detector costs and discarding direction and nonbinary information; not a security or universal tomography theorem",
+    "maxmixed_variance_ratio_randomized_to_direct": 40.00000000000001,
+    "physical_parity_is_local_tensor_product": true,
+    "projector_sum_error": 2.0518966525691288e-14,
+    "randomized_Hoeffding_shots_both_errors_below_1pct": 1638,
+    "randomized_binary_effect": "0.4 P_even + 0.25 P_odd",
+    "randomized_binomial_deterministic_actual_false_positive": 0.009584708988334734,
+    "randomized_binomial_deterministic_actual_power": 0.9901453594229901,
+    "randomized_binomial_deterministic_reject_if_yes_count_at_most": 226,
+    "randomized_binomial_deterministic_shots_size_1pct_power_99pct": 791,
+    "randomized_binomial_randomized_boundary_fraction": 0.3500664465745968,
+    "randomized_binomial_randomized_boundary_power": 0.9900121240376573,
+    "randomized_binomial_randomized_boundary_shots_size_1pct_power_99pct": 785
+  }
+}
