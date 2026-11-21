@@ -47,11 +47,10 @@ def optical_noise(rays,supports,schedules):
         return float(np.mean([sum(eta4[k]*overlap[v,i]
                       for k,i in enumerate(C)) for C in tetrads]))
     def eight_survival(v,L):
-        return float(np.mean([sum(eta8[k]*overlap[v,i]/2
-                   for z in L for k,i in enumerate(sorted(supports[z]))
-                   if False)])) if False else float(np.mean([
-                   sum(eta8[k]*overlap[v,i]/2 for k,i in enumerate(
-                        sorted(supports[z]))) for z in L]))
+        return float(np.mean([
+            sum(eta8[k]*overlap[v,i]/2 for k,i in enumerate(sorted(supports[z])))
+            for z in L
+        ]))
     # "Clements" rectangular universal optical mesh: 4x4 uses 6 2x2 cells;
     # 8x8 uses 28. Use illustrative paths of 4 or 8 equal-loss stages.
     bench=[]
