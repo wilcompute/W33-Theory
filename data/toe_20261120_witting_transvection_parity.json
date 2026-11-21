@@ -1,0 +1,96 @@
+{
+  "boundary": "Finite qudit quantum mechanics, not physical qutrit selection, new TOE dynamics, or experiment.",
+  "general_rank_formula": "dim Pi_0|even=(p^(n-1)+1)/2; dim Pi_0|odd=(p^(n-1)-1)/2",
+  "new_scope": "All 40 gates/3200 Weyl conjugations, sector trace fingerprints, randomized 40-zero-eigen projector parity identity, p5 rank control, rank-one uniqueness argument",
+  "q3_n2": {
+    "Weyl_conjugation_cases": 3200,
+    "Wigner_negativity_criterion": "uniform projector acceptance p0 < 13/40 iff centered Wigner at origin is negative",
+    "Wigner_recovery": "W_rho(0)=(40 p0 -13)/27",
+    "Witting_odd_action_cases": 1600,
+    "even_Gram": "(4I40+A_W33+2J40)/3",
+    "even_Gram_error": 1.7763568394002505e-15,
+    "even_tight_error": 1.2507282732884352e-14,
+    "even_tight_fusion_frame": "sum 40 rank2 projectors =16 I5",
+    "max_Witting_projector_action_error": 2.1172071968397262e-15,
+    "max_exact_Weyl_covariance_error": 6.4823533497235045e-15,
+    "max_odd_unitarity_error": 3.0395292503928204e-15,
+    "max_unitarity_error": 1.2123852859306042e-14,
+    "nonzero_Weyl_operators": 80,
+    "odd_Gram": "(2I40+J40-A_W33)/3",
+    "odd_Gram_error": 8.881784197001252e-16,
+    "odd_tight_error": 6.54005355723191e-15,
+    "odd_tight_frame": "sum 40 rank1 projectors =10 I4",
+    "parity_sum_residual": 2.0518966525691288e-14,
+    "prior_Witting_ray_projector_match_error": 1.3811449444283615e-15,
+    "projective_Witting_rays_have_self_plus_12_orthogonal": true,
+    "projective_compatibility_rate_self_plus_commuting": 0.325,
+    "projective_directions": 40,
+    "trace_contrast_numerical_error": 3.885780586188048e-16,
+    "trace_contrasts_squared": {
+      "even5": 0.28,
+      "full9": 0.3333333333333333,
+      "odd4": 0.4375
+    },
+    "zero_outcome_probability": {
+      "even": 0.4,
+      "max_mixed": 0.3333333333333333,
+      "odd": 0.25
+    },
+    "zero_outcome_sum_identity": "sum_{40 v} Pi_0(v)=13 I9+3 parity"
+  },
+  "q5_n2": {
+    "Hilbert_dimension": 25,
+    "even_sector_dimension": 13,
+    "general_identity": "sum_{rays ell} Pi_0(ell)=((N-1)/p)I+p^(n-1)P",
+    "identity_residual": 3.747398455760565e-13,
+    "n": 2,
+    "odd_sector_dimension": 12,
+    "p": 5,
+    "projective_directions": 156,
+    "projective_neighbors_plus_self": 31,
+    "same_as_centered_Wigner_negativity_threshold": 0.1987179487179487,
+    "sum_projectors_even_eigenvalue": 36.0,
+    "sum_projectors_odd_eigenvalue": 26.0,
+    "uniform_projective_compatibility_rate": 0.1987179487179487,
+    "zero_eigen_ranks_even_odd": [
+      3,
+      2
+    ]
+  },
+  "source_prior_work": [
+    "analysis/w33_pass11663_odd_weil_normal_map.py",
+    "analysis/w33_pass4963_witting_pancharatnam_w33_reaudit.py",
+    "analysis/2026-10-15_toe90_vlasov_witting_research.md"
+  ],
+  "status": "PASS_WITTING_TRANSVECTIONS_PARITY_ESTIMATOR",
+  "unique_ray_condition": "For odd prime p and n>=2, rank_odd=1 iff p^(n-1)=3 iff p=3,n=2",
+  "wigner_magic": {
+    "Wigner_40_by_81_matrix_rank": 16,
+    "Wigner_L1_norm": 1.6666666666666667,
+    "Wigner_reconstructed_Gram_max_error": 1.4432899320127035e-15,
+    "Wigner_reconstructed_rank_one_Gram": "9 sum_a W_v(a) W_w(a)=(2I+J-A_W33)/3",
+    "explicit_reference_density_residual": 3.925231146709438e-16,
+    "explicit_reference_direction": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "explicit_reference_state": "|0> tensor (|1>-|2>)/sqrt(2)",
+    "limitation": "Uses a fixed canonical Gross parity origin and centered Weyl phases; standard pure-state Wigner negativity. Clifford-displaced odd rays preserve the histogram but translate the negative line. Not a 4-level stabilizer-magic claim, nor new physical dynamics.",
+    "mana_natural_log": 0.5108256237659907,
+    "max_density_trace_error": 6.17881761411333e-16,
+    "max_formula_residual": 1.3877787807814457e-16,
+    "negative_cells_per_ray": 3,
+    "negative_support": "exact three-element vector line span_F3(v) through phase-space origin",
+    "negative_value": -0.1111111111111111,
+    "phase_space_points": 81,
+    "positive_cells_per_ray": 24,
+    "positive_support": "symplectic orthogonal hyperplane v-perp excluding span(v)",
+    "positive_value": 0.05555555555555555,
+    "ray_count": 40,
+    "tested_ray_phase_points": 3240,
+    "zero_cells_per_ray": 54,
+    "zero_support": "54 points with nonzero symplectic pairing with v"
+  }
+}
