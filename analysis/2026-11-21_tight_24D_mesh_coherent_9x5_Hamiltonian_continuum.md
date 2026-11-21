@@ -1,4 +1,4 @@
-# Witting–Hermitian five-front continuation: optical meshes, exact 24D tight-frame tomography, coherent 9x5 channel, two-copy Hamiltonian, and continuum/memory falsifiers
+# Witting–Hermitian six-front continuation: optical meshes, exact 24D tight-frame tomography, coherent 9x5 channel, two-copy Hamiltonian, and continuum/memory falsifiers
 
 **Date:** 21 November 2026. **Baseline:** W33-Theory `master` at commit `79704c11e3e669a43948ededf2f45ce9bc98426f`. **Files:** producer `analysis/toe_20261121_fivefront_tightframe_coherent_memory.py`, frozen machine-readable results `data/toe_20261121_optical_tightframe_coherent_Hamiltonian_causal.json`, tests `tests/test_toe_20261121_fivefront_tightframe_coherent_memory.py`.
 
@@ -113,6 +113,57 @@ For externally prepared nonorthogonal product inputs \(|r_a\rangle|r_b\rangle\),
 
 The conditional two-copy unitary \(e^{-itQ_z}\) is explicitly unitary. For ray inputs0 and5 and generic \(t=3\pi/8\), the selected chart produces an output with Schmidt rank2. This is a **real, mathematically local two-copy Hermitian interaction**, not merely a scalar postprocessing score. Crucially, the 45-valued chart register and projectors are *engineered controls* and independently supplied copies; this is **not a derived microscopic optical nonlinearity** or a self-organizing fundamental Hamiltonian.
 
+## Result 6 — Stronger independent operator-level complementarity and an exact full-45 decoder
+
+A **post-commit research extension** goes beyond the 24D coincidence profiles: the two-copy operator-valued chart measurements themselves carry precisely the 24-dimensional sector that the 27 schedules cannot see. Denote by G_Q the 45x45 Hilbert–Schmidt Gram matrix of the exact two-ququart operators \(Q_z=\sum_{i\in S_z}P_i\otimes P_i\).
+
+**Exact integer arithmetic:** Because \(W_{ij}=3|\langle r_i|r_j\rangle|^2\in\{0,1,3\}\), and \(H\) is the binary 45x40 chart-versus-ray incidence, \(9G_Q=H(W\circ W)H^\top\) is an integer matrix. All 2025 entries obey
+\[
+\boxed{9G_Q=36I-12A+60J},\quad
+G_{Q,zz}=32/3,\quad
+G_{Q,zw}=\begin{cases}16/3 & z\sim w\\20/3 & z\not\sim w,\ z\ne w.\end{cases}
+\]
+Therefore
+\[
+{\rm spec}(G_Q)=288^{(1)},\quad8^{(24)},\quad0^{(20)}.
+\]
+Thus the 45 Hermitian chart observables span exactly a **25-dimensional subspace** of the complex Hermitian operators on two ququarts, the uniform component plus the 24D hidden chart sector. The remaining 20D chart-label sector is annihilated exactly.
+
+Let the three mutually orthogonal chart-label projectors be
+\[
+P_1=J/45,\qquad
+P_{20}=(9I+3A-J)/18,\qquad
+P_{24}=(15I-5A+J)/30.
+\]
+The original complete-deck matrix \(K\) obeys \(KK^\top=15P_1+6P_{20}\), while the two-copy operator Gram is \(G_Q=288P_1+8P_{24}\). These are therefore **complementary** on the two nonuniform sectors. Every five-chart Hermitian line sums to the same operator:
+\[
+\sum_{z\in\text{any complete deck}}Q_z=
+\sum_{i=1}^{40}P_i\otimes P_i
+=4\Pi_{\rm sym}(\mathbb C^4\otimes\mathbb C^4).
+\]
+Defining \(\bar Q=\frac1{45}\sum_zQ_z=\frac45\Pi_{\rm sym}\), the centered operator Gram is
+\[
+\operatorname{Tr}\bigl[(Q_z-\bar Q)(Q_w-\bar Q)\bigr]=8(P_{24})_{zw}.
+\]
+An independent *integer-only certificate* is \(5(9G_Q)-288J=12(15I-5A+J)\). Consequently the map \(x\in{\rm im}P_{24}\mapsto O_x=\sum_zx_zQ_z\) is a scaled Hilbert–Schmidt isometry:
+\[
+\|O_x\|_{\rm HS}^2=8\|x\|_2^2,\qquad
+x_z=\frac18\operatorname{Tr}[(Q_z-\bar Q)O_x].
+\]
+By contrast, an \(x\in{\rm im}P_{20}\) always gives \(O_x=0\). Both statements are verified with seeded 45-component probes and exact spectral projectors.
+
+**Combined completeness:** The pair of *mathematical data types* (all27 deck totals plus chart-resolved two-copy operator overlaps) spans every one of the 45 chart-label dimensions:
+\[
+\boxed{KK^\top+G_Q=303P_1+6P_{20}+8P_{24}\succ0.}
+\]
+Given an arbitrary real coefficient vector x, deck totals \(y=K^\top x\), and operator-overlap data \(q_z=\operatorname{Tr}(Q_z\sum_wx_wQ_w)\), an **exact joint decoder** is
+\[
+\boxed{x=\frac{P_1Ky}{15}+\frac{P_{20}Ky}{6}+\frac{P_{24}q}{8}.}
+\]
+The 45-dimensional inverse passes an independent seeded numerical test. This resolves the apparent information loss in each individual family at the *abstract operator* level.
+
+**Physical boundary:** obtaining the 45 operator overlaps q requires a real calibrated **two-ququart measurement/tomography** program. It is not the same thing as 27 cheap scalar deck counts, and no hardware-cost, experimental advantage, security or gravitational theory follows solely from a full-rank information matrix. This theorem is a concrete new synthesis of existing generalized-quadrangle and Witting SIC structures, not a new exception to quantum measurement theory.
+
 ## Result 5 — Generalized-quadrangle graph continuum obstruction and multitime memory witness
 
 The Hermitian 45-chart SRG has adjacency \(A\) satisfying \(A^2=9I+3J\). Its point-collinearity graph has diameter2, and the normalized nearest-neighbor random walk has
@@ -135,7 +186,7 @@ python tests/test_toe_20261121_fivefront_physical_falsifiers.py
 python tests/test_toe_20261121_27decks_fivefronts.py
 python tests/test_toe_20261121_hermitian45_pauli_sic_bridge.py
 ```
-No network calls or destructive worktree edits are required to regenerate the certificate. This is **five completed finite-mathematical and ideal quantum-computation fronts**, not five working optical devices, an observed time-dependent quantum channel, an Einstein field theory or a proven theory of everything. All external cited studies establish only their own documented statements; no claim was made to have read all the papers on finitegeometry.org during this follow-up. The user-visible site mirror previously recovered at https://m759.github.io/map.html remains a separate bibliographic resource.
+No network calls or destructive worktree edits are required to regenerate the certificate. This is **six completed finite-mathematical and ideal quantum-computation fronts**, not five working optical devices, an observed time-dependent quantum channel, an Einstein field theory or a proven theory of everything. All external cited studies establish only their own documented statements; no claim was made to have read all the papers on finitegeometry.org during this follow-up. The user-visible site mirror previously recovered at https://m759.github.io/map.html remains a separate bibliographic resource.
 
 ## Top five independent follow-ups
 

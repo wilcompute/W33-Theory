@@ -377,6 +377,113 @@ def hamiltonian_front(rays,supports,overlaps):
       "caveat":"Genuine finite-dimensional 2-copy Hamiltonian mathematically, but chart-controlled high-rank interaction and independent source copies are engineered; no local optical material implementation or emergent universal field theory."
     }
 
+def operator_duality_front(supports,schedules,graph,P,overlaps):
+    """Exact integer duality: full deck = 1+20, two-copy operator = 1+24."""
+    n=45
+    I=np.eye(n,dtype=np.int64)
+    J=np.ones((n,n),dtype=np.int64)
+    A=graph.astype(np.int64)
+    P1=J/45
+    M20=9*I+3*A-J
+    M24=15*I-5*A+J
+    assert np.array_equal(M20@M20,18*M20)
+    assert np.array_equal(M24@M24,30*M24)
+    assert np.array_equal(5*M20+3*M24+2*J,90*I)
+    P20=M20/18
+    P24=M24/30
+    assert int(np.trace(M20))==360
+    assert int(np.trace(M24))==720
+    assert np.max(abs(P20@P24))<1e-12
+    K=np.zeros((n,27),np.int64)
+    for j,L in enumerate(schedules):K[L,j]=1
+    assert np.array_equal(K@K.T,3*I+A)
+    assert np.array_equal(K.T@M24,np.zeros((27,n),np.int64))
+    # Exact integer Gram, derived from W=3*|<r_i|r_j>|^2.
+    W=np.rint(3*overlaps).astype(np.int64)
+    assert set(W.ravel())=={0,1,3}
+    H=np.array([[int(i in s) for i in range(40)] for s in supports],np.int64)
+    G9=H@(W*W)@H.T  # equals 9 Tr(Q_z Q_w), by exact overlaps
+    expected=36*I-12*A+60*J
+    assert np.array_equal(G9,expected)
+    # Irreducible-sector decomposition:
+    #   G_Q = 288 P1 + 8 P24; no 20D signal.
+    assert np.max(abs(G9/9 - (288*P1+8*P24)))<1e-12
+    # Centered Gram: 45 G_center = 5 G9 - 288 J = 12 M24.
+    assert np.array_equal(5*G9-288*J,12*M24)
+    Q=np.array([sum(np.kron(P[i],P[i]) for i in s) for s in supports])
+    gfloat=np.real(np.einsum("zab,wba->zw",Q,Q))
+    assert np.max(abs(9*gfloat-G9))<1e-10
+    swap=swap_d(4)
+    sym=(np.eye(16)+swap)/2
+    mean=np.mean(Q,axis=0)
+    assert np.max(abs(mean-(4/5)*sym))<1e-11
+    center=Q-mean
+    gcent=np.real(np.einsum("zab,wba->zw",center,center))
+    assert np.max(abs(gcent-8*P24))<1e-10
+    deck_sums=np.einsum("zj,zab->jab",K,Q)
+    assert np.max(abs(deck_sums-4*sym))<1e-10
+    centered_deck=np.einsum("zj,zab->jab",K,center)
+    assert np.max(abs(centered_deck))<1e-10
+    # The map x -> sum_z x_z Q_z is a scaled Hilbert-Schmidt
+    # isometry on 24D and annihilates the 20D schedule-visible sector.
+    rng=np.random.default_rng(20261121)
+    x=P24@rng.standard_normal(45)
+    x=x*(.004/max(abs(x)))
+    O=np.einsum("z,zab->ab",x,Q)
+    xhat=np.einsum("zab,ba->z",center,O).real/8
+    residual=float(max(abs(xhat-x)))
+    assert residual<1e-11
+    lhs=float(np.vdot(O,O).real)
+    rhs=float(8*np.vdot(x,x).real)
+    assert abs(lhs-rhs)<1e-11
+    invisible=P20@rng.standard_normal(45)
+    O20=np.einsum("z,zab->ab",invisible,Q)
+    assert np.max(abs(O20))<1e-10
+    # FULL 45D COMPLETENESS when we combine the 27 deck responses
+    # with two-copy operator signatures. The shared uniform 1D
+    # component is counted twice but is reconstructible.
+    G=G9/9
+    combined=K@K.T+G
+    spectrum=collections.Counter(np.rint(np.linalg.eigvalsh(combined)).astype(int))
+    assert spectrum=={303:1,6:20,8:24}
+    general=rng.standard_normal(45)
+    decks=K.T@general
+    weighted_operator=np.einsum("z,zab->ab",general,Q)
+    observable=np.einsum("zab,ba->z",Q,weighted_operator).real
+    decoded=P1@(K@decks)/15 +P20@(K@decks)/6 +P24@observable/8
+    full_inverse_residual=float(max(abs(decoded-general)))
+    assert full_inverse_residual<1e-11
+    return {
+      "status":"PASS",
+      "Hermitian_chart_operator_Gram_integer_identity":"9 G_Q = 36 I - 12 A + 60 J",
+      "Gram_Q_diagonal":32/3,
+      "Gram_Q_adjacent":16/3,
+      "Gram_Q_nonadjacent":20/3,
+      "Gram_Q_spectrum":{"288":1,"8":24,"0":20},
+      "Gram_Q_rank":25,
+      "schedule_K_rank":21,
+      "decomposition_45":"1 uniform + 20 schedule-only + 24 two-copy-only",
+      "operator_sector_equality":"Gram_Q = 288 P1 + 8 P24",
+      "centered_operator_tight_frame":"Gram(Q_z - 4/5 Pi_sym) = 8 P24",
+      "exact_centered_operator_Gram_integer_certificate":
+          "5 G9 - 288 J = 12 (15 I - 5 A + J)",
+      "all_27_complete_schedule_operator_sums_equal_4Pi_sym":True,
+      "operator_detectable_hidden_chart_weights_dimension":24,
+      "operator_blind_schedule_only_weights_dimension":20,
+      "exact_24D_operator_inverse_formula":
+          "x_z = Tr((Q_z - 4/5 Pi_sym) sum_w x_w Q_w)/8",
+      "max_hidden_operator_inverse_error":residual,
+      "HS_norm_squared_of_weighted_Q":lhs,
+      "HS_isometry_norm_squared_expected":rhs,
+      "max_20D_schedule_visible_weighted_Q_residual":float(np.max(abs(O20))),
+      "combined_27deck_and_45operator_Gram_spectrum":{"303":1,"6":20,"8":24},
+      "combined_complete_chart_label_dimension":45,
+      "full45_reconstruction_formula":
+        "x=P1 K(K^T x)/15 + P20 K(K^T x)/6 + P24 [Tr(Q_z sum_w x_w Q_w)]_z/8",
+      "full45_joint_inverse_residual":full_inverse_residual,
+      "scope":"Exact double-ququart operator tomography and GF4/Pauli spectral symmetry. No passive microscopic interaction or physical spacetime emergence."
+    }
+
 def causal_front(graph):
     """Metric-collapse obstruction and qutrit MUB memory shot benchmark."""
     A=graph.astype(np.int64)
@@ -449,14 +556,17 @@ def main():
     print("FRONT4 2-copy Hamiltonian:",d["output_schmidt_rank"],flush=True)
     e=causal_front(A)
     print("FRONT5 continuum and memory:",e["binomial_independent_trials_for_each_one_percent_error_bound"],flush=True)
+    g=operator_duality_front(supports,decks,A,P,O)
+    print("FRONT6 operator duality:",g["decomposition_45"],flush=True)
     obj={"status":"PASS","front1_45_Reck_mesh_and_loss":a,
          "front2_exact_24D_tight_frame_and_hidden_chart_tomography":b,
          "front3_coherent_4_to_9_with_5level_Naimark_flag":c,
          "front4_chart_controlled_two_copy_Hamiltonian":d,
          "front5_causal_metric_collapse_and_qutrit_memory":e,
+         "front6_45chart_two_copy_operator_schedule_complementarity":g,
          "scientific_boundary":"Reproducible mathematical and simulated-quantum models; no experimental photonic device, genuine gravitational dynamics, TOE or physically realized Pauli intertwiner."}
     OUT.parent.mkdir(parents=True,exist_ok=True)
     OUT.write_text(json.dumps(obj,indent=2,sort_keys=True)+"\n",encoding="utf8")
-    print("PASS FIVE FRONTS",OUT,flush=True)
+    print("PASS SIX FRONTS",OUT,flush=True)
 
 if __name__=="__main__":main()

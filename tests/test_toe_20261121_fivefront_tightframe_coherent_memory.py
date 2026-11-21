@@ -21,6 +21,7 @@ class TestFiveFrontTightFrames(unittest.TestCase):
         cls.chan=f.channel_front(cls.rays)
         cls.hamiltonian=f.hamiltonian_front(cls.rays,cls.supports,cls.O)
         cls.causal=f.causal_front(cls.graph)
+        cls.opdual=f.operator_duality_front(cls.supports,cls.decks,cls.graph,cls.P,cls.O)
 
     def test_all_45_eight_mode_Reck_interferometers(self):
         d=self.opt
@@ -103,6 +104,36 @@ class TestFiveFrontTightFrames(unittest.TestCase):
         self.assertAlmostEqual(d["guaranteed_preferred_chart_energy_gap_lower_bound"],
                                1/3-0.2)
 
+    def test_exact_two_copy_Hilbert_Schmidt_Gram_and_spectrum(self):
+        d=self.opdual
+        self.assertEqual(d["Hermitian_chart_operator_Gram_integer_identity"],
+                         "9 G_Q = 36 I - 12 A + 60 J")
+        self.assertEqual(d["Gram_Q_spectrum"],{"288":1,"8":24,"0":20})
+        self.assertEqual(d["Gram_Q_rank"],25)
+        self.assertEqual(d["decomposition_45"],
+                         "1 uniform + 20 schedule-only + 24 two-copy-only")
+
+    def test_27_complete_decks_collapse_two_copy_operator_information(self):
+        d=self.opdual
+        self.assertTrue(d["all_27_complete_schedule_operator_sums_equal_4Pi_sym"])
+        self.assertEqual(d["schedule_K_rank"],21)
+        self.assertEqual(d["operator_detectable_hidden_chart_weights_dimension"],24)
+        self.assertEqual(d["operator_blind_schedule_only_weights_dimension"],20)
+
+    def test_exact_hidden_24dim_operator_inversion(self):
+        d=self.opdual
+        self.assertLess(d["max_hidden_operator_inverse_error"],1e-11)
+        self.assertLess(d["max_20D_schedule_visible_weighted_Q_residual"],1e-11)
+        self.assertAlmostEqual(d["HS_norm_squared_of_weighted_Q"],
+                               d["HS_isometry_norm_squared_expected"],places=11)
+
+    def test_joint_schedule_and_two_copy_full45_decoder(self):
+        d=self.opdual
+        self.assertEqual(d["combined_27deck_and_45operator_Gram_spectrum"],
+                         {"303":1,"6":20,"8":24})
+        self.assertEqual(d["combined_complete_chart_label_dimension"],45)
+        self.assertLess(d["full45_joint_inverse_residual"],1e-11)
+
     def test_graph_metric_collapse_not_gravity(self):
         d=self.causal
         self.assertEqual(d["point_graph_diameter"],2)
@@ -128,7 +159,7 @@ class TestFiveFrontTightFrames(unittest.TestCase):
         d=json.loads((ROOT/"data/toe_20261121_optical_tightframe_coherent_Hamiltonian_causal.json")
                      .read_text(encoding="utf8"))
         self.assertEqual(d["status"],"PASS")
-        self.assertEqual(len([x for x in d if x.startswith("front")]),5)
+        self.assertEqual(len([x for x in d if x.startswith("front")]),6)
 
 if __name__=="__main__":
     unittest.main()

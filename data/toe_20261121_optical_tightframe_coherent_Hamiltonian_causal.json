@@ -195,6 +195,41 @@
     "two_step_random_walk_P2": "P^2=I/16+J/48",
     "warning": "No physical time derived; two-step complete graph connectivity rules out metric graph continuum unless other geometry and limiting dynamics added. The shot model assumes ideal calibrated state probes and i.i.d. Bernoulli trials."
   },
+  "front6_45chart_two_copy_operator_schedule_complementarity": {
+    "Gram_Q_adjacent": 5.333333333333333,
+    "Gram_Q_diagonal": 10.666666666666666,
+    "Gram_Q_nonadjacent": 6.666666666666667,
+    "Gram_Q_rank": 25,
+    "Gram_Q_spectrum": {
+      "0": 20,
+      "288": 1,
+      "8": 24
+    },
+    "HS_isometry_norm_squared_expected": 0.0009480698914088542,
+    "HS_norm_squared_of_weighted_Q": 0.0009480698914088549,
+    "Hermitian_chart_operator_Gram_integer_identity": "9 G_Q = 36 I - 12 A + 60 J",
+    "all_27_complete_schedule_operator_sums_equal_4Pi_sym": true,
+    "centered_operator_tight_frame": "Gram(Q_z - 4/5 Pi_sym) = 8 P24",
+    "combined_27deck_and_45operator_Gram_spectrum": {
+      "303": 1,
+      "6": 20,
+      "8": 24
+    },
+    "combined_complete_chart_label_dimension": 45,
+    "decomposition_45": "1 uniform + 20 schedule-only + 24 two-copy-only",
+    "exact_24D_operator_inverse_formula": "x_z = Tr((Q_z - 4/5 Pi_sym) sum_w x_w Q_w)/8",
+    "exact_centered_operator_Gram_integer_certificate": "5 G9 - 288 J = 12 (15 I - 5 A + J)",
+    "full45_joint_inverse_residual": 1.5543122344752192e-15,
+    "full45_reconstruction_formula": "x=P1 K(K^T x)/15 + P20 K(K^T x)/6 + P24 [Tr(Q_z sum_w x_w Q_w)]_z/8",
+    "max_20D_schedule_visible_weighted_Q_residual": 7.754213937616328e-16,
+    "max_hidden_operator_inverse_error": 3.469446951953614e-18,
+    "operator_blind_schedule_only_weights_dimension": 20,
+    "operator_detectable_hidden_chart_weights_dimension": 24,
+    "operator_sector_equality": "Gram_Q = 288 P1 + 8 P24",
+    "schedule_K_rank": 21,
+    "scope": "Exact double-ququart operator tomography and GF4/Pauli spectral symmetry. No passive microscopic interaction or physical spacetime emergence.",
+    "status": "PASS"
+  },
   "scientific_boundary": "Reproducible mathematical and simulated-quantum models; no experimental photonic device, genuine gravitational dynamics, TOE or physically realized Pauli intertwiner.",
   "status": "PASS"
 }
