@@ -1,0 +1,220 @@
+{
+  "date": "2026-11-21",
+  "front_1_optical_mesh_loss_and_postselection": {
+    "assumed_not_measured_detector_efficiencies_4": [
+      0.94,
+      0.96,
+      0.92,
+      0.95
+    ],
+    "assumed_not_measured_detector_efficiencies_8": [
+      0.94,
+      0.96,
+      0.92,
+      0.95,
+      0.9,
+      0.93,
+      0.97,
+      0.91
+    ],
+    "assumption": "Uniform depth factor t^N and scalar photon detection response; no actual Clements decomposition, chip design, QKD security proof, or measured losses.",
+    "biased_postselected_denominator": 0.31250000000000017,
+    "biased_postselected_numerator": 0.08750000000000002,
+    "biased_postselected_separable_match": 0.2799999999999999,
+    "distinct_five_setting_decks": 27,
+    "eight_mode_doubleSIC_settings_per_deck": 5,
+    "four_mode_PVM_settings": 40,
+    "illustrative_balanced_path_depth_4mode": 4,
+    "illustrative_balanced_path_depth_8mode": 8,
+    "loss_postselection_trap_separable_input": "|r0> x |r0*>",
+    "loss_sensitivity_benchmark": [
+      {
+        "assumed_per_stage_loss": 0.005,
+        "doubleSIC_5setting_survival_max": 0.9017705369028103,
+        "doubleSIC_5setting_survival_mean": 0.89892403899592,
+        "doubleSIC_5setting_survival_min": 0.8960063786413575,
+        "input_ray": 0,
+        "pvm_40setting_survival": 0.9239542625891669
+      },
+      {
+        "assumed_per_stage_loss": 0.005,
+        "doubleSIC_5setting_survival_max": 0.8992086887866093,
+        "doubleSIC_5setting_survival_mean": 0.8968959092372609,
+        "doubleSIC_5setting_survival_min": 0.8947254545832573,
+        "input_ray": 7,
+        "pvm_40setting_survival": 0.9240359417142191
+      },
+      {
+        "assumed_per_stage_loss": 0.005,
+        "doubleSIC_5setting_survival_max": 0.9040121540044864,
+        "doubleSIC_5setting_survival_mean": 0.898603807981395,
+        "doubleSIC_5setting_survival_min": 0.8944052235687321,
+        "input_ray": 17,
+        "pvm_40setting_survival": 0.9239542625891672
+      },
+      {
+        "assumed_per_stage_loss": 0.005,
+        "doubleSIC_5setting_survival_max": 0.9001693818301846,
+        "doubleSIC_5setting_survival_mean": 0.8960063786413576,
+        "doubleSIC_5setting_survival_min": 0.8918433754525307,
+        "input_ray": 39,
+        "pvm_40setting_survival": 0.9224840383382293
+      },
+      {
+        "assumed_per_stage_loss": 0.02,
+        "doubleSIC_5setting_survival_max": 0.7985828905301028,
+        "doubleSIC_5setting_survival_mean": 0.7960621112039347,
+        "doubleSIC_5setting_survival_min": 0.793478312394612,
+        "input_ray": 0,
+        "pvm_40setting_survival": 0.8694857188266668
+      },
+      {
+        "assumed_per_stage_loss": 0.02,
+        "doubleSIC_5setting_survival_max": 0.7963141891365516,
+        "doubleSIC_5setting_survival_mean": 0.7942660559340399,
+        "doubleSIC_5setting_survival_min": 0.7923439616978366,
+        "input_ray": 7,
+        "pvm_40setting_survival": 0.8695625828400003
+      },
+      {
+        "assumed_per_stage_loss": 0.02,
+        "doubleSIC_5setting_survival_max": 0.8005680042494605,
+        "doubleSIC_5setting_survival_mean": 0.7957785235297409,
+        "doubleSIC_5setting_survival_min": 0.7920603740236426,
+        "input_ray": 17,
+        "pvm_40setting_survival": 0.8694857188266671
+      },
+      {
+        "assumed_per_stage_loss": 0.02,
+        "doubleSIC_5setting_survival_max": 0.7971649521591332,
+        "doubleSIC_5setting_survival_mean": 0.7934783123946123,
+        "doubleSIC_5setting_survival_min": 0.789791672630091,
+        "input_ray": 39,
+        "pvm_40setting_survival": 0.8681021665866668
+      }
+    ],
+    "status": "PASS",
+    "unfiltered_separable_match_bound": 0.2,
+    "universal_4mode_MZI_count": 6,
+    "universal_8mode_MZI_count": 28,
+    "warning": "A separable state yields 0.28 > ideal unfiltered separable bound 0.20 after outcome/setting-dependent losses: herald/detection postselection without model invalidates that witness."
+  },
+  "front_2_27_deck_scheduler_nullspace": {
+    "KKT_spectrum": {
+      "0": 24,
+      "6": 20,
+      "15": 1
+    },
+    "all_minimal_exact_disjoint_covers": 27,
+    "cost_invisible_nullity": 24,
+    "cost_visible_rank": 21,
+    "exact_mean_identity": "mean_27 deck cost = (1/9) sum_45 chart costs = 5 mean chart cost",
+    "incidence_KKt_identity": "KK^T=3I_45 + A_H(3,4)",
+    "max_27_schedule_cost_deviation_for_nonuniform_invisible_cost": 8.881784197001252e-16,
+    "max_sample_positive_chart_cost": 1.1806950776365348,
+    "min_sample_positive_chart_cost": 0.75,
+    "minimal_number_of_8ray_POVMs_to_cover_all_40_rays": 5,
+    "random_cost_max_total": 5.349654167419287,
+    "random_cost_mean_total": 4.961268708612433,
+    "random_cost_min_schedule": 17,
+    "random_cost_min_total": 4.661562203342173,
+    "status": "PASS",
+    "warning": "24D invisibility holds for additive per-chart costs, not arbitrary nonlinear switching, outcome-conditioned loss or real-device calibration."
+  },
+  "front_3_CPTP_channel_coherence_bounds": {
+    "Choi_PPT_min_eigen": 0.011987059893259752,
+    "Choi_normalized_min_eigen": 0.007718077540118403,
+    "Choi_normalized_rank": 36,
+    "HS_traceless_inverse_amplification": 15,
+    "diamond_norm_distance_lower_bound_from_any_ideal_isometry": 1.5,
+    "explicit_separable_Choi_terms": 40,
+    "isometry_reference_entanglement_fidelity_10samples": [
+      0.028009129393669112,
+      0.03206445724102653,
+      0.02429090961856642,
+      0.023892778663884007,
+      0.026067711579130338,
+      0.030577176172513165,
+      0.02577496024946209,
+      0.03051283356328352,
+      0.02993546375839564,
+      0.02628041728918662
+    ],
+    "quantum_capacity": 0,
+    "status": "PASS",
+    "universal_entanglement_fidelity_upper_bound_for_every_isometry": 0.25,
+    "warning": "Diamond lower bound and capacity zero apply to THIS entanglement-breaking channel, not all possible C4->C9 coherent channels."
+  },
+  "front_4_chart_selector_obstructions_and_two_copy_candidate": {
+    "Witting_complex_projective_2design_sum_residual": 3.1086244689504383e-15,
+    "all_16_perturbed_ground_gaps_above_0p2": true,
+    "all_780_centered_pair_collision_vectors_span_rank": 24,
+    "all_780_pair_collision_vectors_span_rank": 25,
+    "assumed_independent_trials_for_1percent_union_bound_per_chart": 2623,
+    "assumed_total_45chart_trials": 118035,
+    "centered_collision_deck_null_residual": 1.3877787807814457e-15,
+    "centered_collision_minus3_eigenspace_residual": 4.052314039881821e-15,
+    "centered_collision_vectors_equal_deck_cost_nullspace": true,
+    "exact_centered_collision_rank_over_GF7": 24,
+    "exact_integer_kernel_residual_zero": true,
+    "exact_nonorthogonal_chart_score_histogram_times9": {
+      "4": 12,
+      "5": 32,
+      "8": 1
+    },
+    "exact_orthogonal_chart_score_histogram_times9": {
+      "0": 3,
+      "3": 12,
+      "4": 27,
+      "6": 3
+    },
+    "exact_rank_24_Q_certificate": "rank over F7 is 24, while incidence kernel has dimension 24 over Q",
+    "externally_programmed_label_selector_selected_chart": 0,
+    "gap_bound": "Delta_gap >= g-2epsilon for Hermitian perturbation operator norm epsilon",
+    "matched_doubleSIC_nonorthogonal_probability_margin": 0.08333333333333333,
+    "min_random_ground_gap_with_norm0p4_perturbation": 0.6965163901577558,
+    "minimum_nonorthogonal_score_maximum_margin": 0.33333333333333304,
+    "nonorthogonal_ray_projector_commutator_norm": 0.47140452079103184,
+    "nonorthogonal_two_source_example": [
+      0,
+      5
+    ],
+    "quartic_collision_unique_max_matches_incidence_chart": {
+      "nonorthogonal": 540,
+      "orthogonal": 0
+    },
+    "source_selector_unperturbed_ground_gap": 1,
+    "status": "PASS",
+    "total_chart_intensity_selector_is_impossible": true,
+    "total_doubleSIC_chart_intensity_is_2I_all_45": true,
+    "two_copy_joint_collision_max_degeneracy_histograms": {
+      "nonorthogonal": {
+        "1": 540
+      },
+      "orthogonal": {
+        "3": 240
+      }
+    },
+    "warning": "Nonorthogonal Witting ray creation/number modes do not commute; naive cross-Kerr on two 'independent ray modes' is invalid. Label-programming/copy resources are external."
+  },
+  "front_5_causality_and_memory_dimension_witness": {
+    "A_squared": "A^2=9I+3J",
+    "all_ordered_incident_pairs_single_orbit": 540,
+    "causal_time_lift": "externally add t and direct edges (z,t)->(w,t+1); does not derive time from projective symmetry",
+    "no_nontrivial_group_invariant_orientation_of_Hermitian_collinearity_graph": true,
+    "one_element_reverses_any_given_edge": true,
+    "one_tick_accessible_spatial_neighbors": 12,
+    "qutrit_EB_memory_fidelity_upper_bound": 0.5,
+    "qutrit_intermediate_quantum_memory_dim_ge_3_witness": "> 0.75",
+    "qutrit_intermediate_quantum_memory_dim_le_2_fidelity_upper_bound": 0.75,
+    "qutrit_two_design_probes": 12,
+    "scope_warning": "Finite clique graph and a two-SWAP causal-break memory toy are NOT a Lorentzian metric, microcausal QFT, Einstein gravity, or an experimentally instrument-verified memory.",
+    "status": "PASS",
+    "two_tick_markov_probability_any_other_vertex": 0.020833333333333332,
+    "two_tick_markov_probability_return": 0.08333333333333333,
+    "two_ticks_accessible_spatial_vertices": 45,
+    "witness_logic": "For a d-dimensional input and Schmidt-number-k temporal Choi state, Fe<=k/d and 2-design Favg=(d Fe+1)/(d+1)<=(k+1)/(d+1)."
+  },
+  "provenance": "Extends committed 2026-11-21 Witting-Hermitian scripts. External photonic literature cited in adjacent narrative; no actual experiments or hardware calibration.",
+  "status": "PASS"
+}
