@@ -1,0 +1,167 @@
+{
+  "status": "PASS",
+  "date": "2026-11-21",
+  "calculation_origin": "independent sandbox reconstruction from exact committed Witting GF(4) coordinate formula; numbers crosschecked before GitHub source was committed",
+  "run_caveat": "The committed producer creates a complete certificate when run in a repo checkout; GitHub CI has not yet verified the committed copy.",
+  "geometry": {
+    "Witting_rays": 40,
+    "Hermitian_charts": 45,
+    "H_shape": [
+      45,
+      40
+    ],
+    "HHT": "6I - 2A + 2J",
+    "chart_spectral_sectors": [
+      1,
+      20,
+      24
+    ]
+  },
+  "front1_calibrated_reference": {
+    "eta": 0.75,
+    "unknown_eta_parameters": 40,
+    "hidden_chart_parameters": 24,
+    "Fisher_eigenvalue_per_total_launch": 1.40625,
+    "local_Cramer_Rao_MSE_coefficient": 17.06666666666668,
+    "necessary_total_launches_for_RMS_0_001": 17066667,
+    "optimal_reference_launch_share_if_equal_cost": 0.5,
+    "optimal_reference_spend_share_when_reference_costs_4_times_target": 0.6666666666666666,
+    "corresponding_reference_launch_share": 0.3333333333333333,
+    "caveat": "Local CR necessary condition, not a finite-sample sufficient bound"
+  },
+  "front2_privacy_Pareto": {
+    "new_resolved_labels_zero_indexed": [
+      0,
+      1,
+      2,
+      9,
+      6,
+      8,
+      14,
+      11,
+      12,
+      13,
+      15,
+      16,
+      19,
+      21,
+      23,
+      18,
+      27,
+      28,
+      30,
+      32,
+      34,
+      35,
+      37,
+      39
+    ],
+    "previous_MI_bits": 1.4359177277412076,
+    "new_MI_bits": 1.412155394967,
+    "previous_local_Fisher_Acriterion": 11.81333333333333,
+    "new_local_Fisher_Acriterion": 11.322222222222,
+    "minimum_leakage_MI_bits": 1.4048889449256339,
+    "minimum_leakage_Fisher_Acriterion": 30.4,
+    "noise_symmetric_raw_ray_label_wrong_probability": [
+      {
+        "epsilon": 0,
+        "previous_MI": 1.435917728,
+        "new_MI": 1.412155395,
+        "previous_A": 11.813333333,
+        "new_A": 11.322222222
+      },
+      {
+        "epsilon": 0.05,
+        "previous_MI": 1.234326459,
+        "new_MI": 1.2128364,
+        "previous_A": 13.124967129,
+        "new_A": 12.579327977
+      },
+      {
+        "epsilon": 0.15,
+        "previous_MI": 0.953451112,
+        "new_MI": 0.936178794,
+        "previous_A": 16.499614325,
+        "new_A": 15.813682277
+      }
+    ],
+    "caveat": "Locally verified Pareto improvement, NOT global optimality of the new set"
+  },
+  "front3_covariant_quantum_reference": {
+    "reference_state": "I45/45",
+    "joint_unitary": "exp(-i*pi*sum_r |r,r><r,r|)",
+    "effective_Kraus": "exp(-i*pi|r><r|)/sqrt(45), r=0..44",
+    "open_system_offdiagonal_factor": 0.9111111111111111,
+    "p24_formula": "(24/45)*(1-(41/45)^n)",
+    "examples": [
+      {
+        "n": 1,
+        "p20": 0.039506172839506186,
+        "p24": 0.04740740740740751
+      },
+      {
+        "n": 5,
+        "p20": 0.16539947561441426,
+        "p24": 0.19847937073729707
+      },
+      {
+        "n": 20,
+        "p20": 0.37538161917770885,
+        "p24": 0.45045794301325
+      },
+      {
+        "n": 100,
+        "p20": 0.44440417721249703,
+        "p24": 0.5332850126549972
+      }
+    ],
+    "scope": "Open-system population mixing under abstract joint-permutation covariance; no closed-system unitary transition among chart eigenspaces and no fundamental force."
+  },
+  "front4_non_circular_chart_gate": {
+    "charts_verified": 45,
+    "maximum_full_16x16_matrix_error": 1.3322676295501878e-15,
+    "canonical_four_qubit_gate_CNOT_upper_bound_excluding_ququart_basis_rotations": 14,
+    "caveat": "Native entangling gates and chart-dependent local SU4 basis rotations assumed; not passive optics"
+  },
+  "front5_minimal_Petz_dilation": {
+    "fixed_seed_2dim_code_search_best_index": 261,
+    "Petz_entanglement_fidelity": 0.903497206720065,
+    "Petz_mean_pure_qubit_fidelity": 0.9356648044800432,
+    "recovery_Kraus_count": 5,
+    "recovery_isometry_shape": [
+      10,
+      9
+    ],
+    "recovery_isometry_error": 3.059163085840056e-15,
+    "unitary_extension_shape": [
+      10,
+      10
+    ],
+    "rank_5_environment_dimensionally_minimal": true,
+    "caveat": "Petz recovery not improved SDP-optimal recovery; passive-unitary mode compilation and ancilla trace are hardware tasks"
+  },
+  "front6_triangle_phase_witness": {
+    "triangle_counts": {
+      "zero": 6640,
+      "pi_over_6": 2880,
+      "pi_over_2": 360
+    },
+    "ray_triple": [
+      5,
+      14,
+      35
+    ],
+    "Im_Bargmann": 0.19245008972987543,
+    "Hermitian_commutator_observable": "i[P14,P35]",
+    "expectation_on_P5": -0.38490017945975086,
+    "conjugation_changes_sign": true,
+    "provenance": "Reproduces parallel Witting triangle-phase work; adds explicit Hermitian witness"
+  },
+  "overall_limits": [
+    "No physical experiment",
+    "No device calibration",
+    "No compiled photonic hardware",
+    "No experiment establishes TOE",
+    "Remote Windows source sync blocked by Desktop Commander monthly quota"
+  ]
+}
