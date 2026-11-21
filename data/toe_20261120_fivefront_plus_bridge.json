@@ -1,0 +1,635 @@
+{
+  "schema": "toe.fivefront_plus_20261120.v1",
+  "status": "PASS_FIVE_FORMAL_FRONTS_WITH_OPEN_PHYSICAL_GATES",
+  "front_1_optical_compilation": {
+    "hardware_scope": "Simulated single-photon 18-spatial-mode controlled-routing circuit; no photonic hardware accessed.",
+    "logical_carrier": "one photon in 9 target modes (not two physically separate qutrit photons)",
+    "modes": 18,
+    "phase_settings": 7,
+    "quadratures_per_setting": 2,
+    "50_50_couplers_per_setting": 18,
+    "branch_type": "monomial mode permutation plus phases",
+    "interferometer_max_probability_residual": 6.661338147750939e-16,
+    "layout": [
+      {
+        "setting": 0,
+        "u": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "expected_symplectic_phase": 0,
+        "phase0_branch": {
+          "output_mode_for_each_input_mode": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "phase_radians_per_input_mode": [
+            0.0,
+            2.0943951023931953,
+            -2.0943951023931957,
+            2.0943951023931953,
+            -2.0943951023931957,
+            -6.106226635438362e-16,
+            -2.0943951023931957,
+            -6.106226635438362e-16,
+            2.094395102393195
+          ]
+        },
+        "phase1_branch": {
+          "output_mode_for_each_input_mode": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "phase_radians_per_input_mode": [
+            0.0,
+            2.0943951023931953,
+            -2.0943951023931957,
+            2.0943951023931953,
+            -2.0943951023931957,
+            -6.106226635438362e-16,
+            -2.0943951023931957,
+            -6.106226635438362e-16,
+            2.094395102393195
+          ]
+        },
+        "path_couplers_input": 9,
+        "path_couplers_output": 9,
+        "coherently_controlled_modes": 18
+      },
+      {
+        "setting": 1,
+        "u": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "expected_symplectic_phase": 1,
+        "phase0_branch": {
+          "output_mode_for_each_input_mode": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            0,
+            1,
+            2
+          ],
+          "phase_radians_per_input_mode": [
+            2.0943951023931953,
+            2.0943951023931953,
+            2.0943951023931953,
+            -2.0943951023931957,
+            -2.0943951023931957,
+            -2.0943951023931957,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "phase1_branch": {
+          "output_mode_for_each_input_mode": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            0,
+            1,
+            2
+          ],
+          "phase_radians_per_input_mode": [
+            0.0,
+            0.0,
+            0.0,
+            2.0943951023931953,
+            2.0943951023931953,
+            2.0943951023931953,
+            -2.0943951023931957,
+            -2.0943951023931957,
+            -2.0943951023931957
+          ]
+        },
+        "path_couplers_input": 9,
+        "path_couplers_output": 9,
+        "coherently_controlled_modes": 18
+      },
+      {
+        "setting": 2,
+        "u": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "expected_symplectic_phase": 0,
+        "phase0_branch": {
+          "output_mode_for_each_input_mode": [
+            1,
+            2,
+            0,
+            4,
+            5,
+            3,
+            7,
+            8,
+            6
+          ],
+          "phase_radians_per_input_mode": [
+            0.0,
+            0.0,
+            0.0,
+            2.0943951023931953,
+            2.0943951023931953,
+            2.0943951023931953,
+            -2.0943951023931957,
+            -2.0943951023931957,
+            -2.0943951023931957
+          ]
+        },
+        "phase1_branch": {
+          "output_mode_for_each_input_mode": [
+            1,
+            2,
+            0,
+            4,
+            5,
+            3,
+            7,
+            8,
+            6
+          ],
+          "phase_radians_per_input_mode": [
+            0.0,
+            0.0,
+            0.0,
+            2.0943951023931953,
+            2.0943951023931953,
+            2.0943951023931953,
+            -2.0943951023931957,
+            -2.0943951023931957,
+            -2.0943951023931957
+          ]
+        },
+        "path_couplers_input": 9,
+        "path_couplers_output": 9,
+        "coherently_controlled_modes": 18
+      },
+      {
+        "setting": 3,
+        "u": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "expected_symplectic_phase": 0,
+        "phase0_branch": {
+          "output_mode_for_each_input_mode": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            0,
+            1,
+            2
+          ],
+          "phase_radians_per_input_mode": [
+            0.0,
+            2.0943951023931953,
+            -2.0943951023931957,
+            0.0,
+            2.0943951023931953,
+            -2.0943951023931957,
+            0.0,
+            2.0943951023931953,
+            -2.0943951023931957
+          ]
+        },
+        "phase1_branch": {
+          "output_mode_for_each_input_mode": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            0,
+            1,
+            2
+          ],
+          "phase_radians_per_input_mode": [
+            0.0,
+            2.0943951023931953,
+            -2.0943951023931957,
+            0.0,
+            2.0943951023931953,
+            -2.0943951023931957,
+            0.0,
+            2.0943951023931953,
+            -2.0943951023931957
+          ]
+        },
+        "path_couplers_input": 9,
+        "path_couplers_output": 9,
+        "coherently_controlled_modes": 18
+      },
+      {
+        "setting": 4,
+        "u": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "v": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "expected_symplectic_phase": 1,
+        "phase0_branch": {
+          "output_mode_for_each_input_mode": [
+            1,
+            2,
+            0,
+            4,
+            5,
+            3,
+            7,
+            8,
+            6
+          ],
+          "phase_radians_per_input_mode": [
+            2.0943951023931953,
+            -2.0943951023931957,
+            0.0,
+            2.0943951023931953,
+            -2.0943951023931957,
+            0.0,
+            2.0943951023931953,
+            -2.0943951023931957,
+            0.0
+          ]
+        },
+        "phase1_branch": {
+          "output_mode_for_each_input_mode": [
+            1,
+            2,
+            0,
+            4,
+            5,
+            3,
+            7,
+            8,
+            6
+          ],
+          "phase_radians_per_input_mode": [
+            0.0,
+            2.0943951023931953,
+            -2.0943951023931957,
+            0.0,
+            2.0943951023931953,
+            -2.0943951023931957,
+            0.0,
+            2.0943951023931953,
+            -2.0943951023931957
+          ]
+        },
+        "path_couplers_input": 9,
+        "path_couplers_output": 9,
+        "coherently_controlled_modes": 18
+      },
+      {
+        "setting": 5,
+        "u": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "v": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "expected_symplectic_phase": 0,
+        "phase0_branch": {
+          "output_mode_for_each_input_mode": [
+            4,
+            5,
+            3,
+            7,
+            8,
+            6,
+            1,
+            2,
+            0
+          ],
+          "phase_radians_per_input_mode": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "phase1_branch": {
+          "output_mode_for_each_input_mode": [
+            4,
+            5,
+            3,
+            7,
+            8,
+            6,
+            1,
+            2,
+            0
+          ],
+          "phase_radians_per_input_mode": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "path_couplers_input": 9,
+        "path_couplers_output": 9,
+        "coherently_controlled_modes": 18
+      },
+      {
+        "setting": 6,
+        "u": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "v": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "expected_symplectic_phase": 0,
+        "phase0_branch": {
+          "output_mode_for_each_input_mode": [
+            4,
+            5,
+            3,
+            7,
+            8,
+            6,
+            1,
+            2,
+            0
+          ],
+          "phase_radians_per_input_mode": [
+            0.0,
+            2.0943951023931953,
+            -2.0943951023931957,
+            0.0,
+            2.0943951023931953,
+            -2.0943951023931957,
+            0.0,
+            2.0943951023931953,
+            -2.0943951023931957
+          ]
+        },
+        "phase1_branch": {
+          "output_mode_for_each_input_mode": [
+            4,
+            5,
+            3,
+            7,
+            8,
+            6,
+            1,
+            2,
+            0
+          ],
+          "phase_radians_per_input_mode": [
+            0.0,
+            2.0943951023931953,
+            -2.0943951023931957,
+            0.0,
+            2.0943951023931953,
+            -2.0943951023931957,
+            0.0,
+            2.0943951023931953,
+            -2.0943951023931957
+          ]
+        },
+        "path_couplers_input": 9,
+        "path_couplers_output": 9,
+        "coherently_controlled_modes": 18
+      }
+    ],
+    "noise_model": {
+      "accepted_per_quadrature": 160,
+      "visibility": 0.9,
+      "accepted_detection_flip_probability": 0.015,
+      "mean_heralded_acceptance": 0.4,
+      "drift_abs_max_radians": 0.05
+    },
+    "runs": 350,
+    "honest_correct": 350,
+    "nonlinear_basis_pass_and_holdout_reject": 350,
+    "average_attempted_photon_trials_per_7setting_run": 5608.288571428571,
+    "accepted_photon_trials_per_7setting_run": 2240,
+    "distinct_causal_instruments_not_implemented": true
+  },
+  "front_2_anomaly_kernel": {
+    "E6_27_branching": [
+      "16_+1",
+      "10_-2",
+      "1_+4"
+    ],
+    "anomaly_matrix_rows": [
+      "grav2_U1",
+      "U1_cubed",
+      "Spin10_squared_U1"
+    ],
+    "anomaly_matrix": [
+      [
+        16,
+        -20,
+        4
+      ],
+      [
+        16,
+        -80,
+        64
+      ],
+      [
+        2,
+        -2,
+        0
+      ]
+    ],
+    "integer_kernel_generator": [
+      1,
+      1,
+      1
+    ],
+    "isolated_flux_only_indices": [
+      3,
+      12,
+      48
+    ],
+    "isolated_flux_anomalies": [
+      0,
+      2160,
+      -18
+    ],
+    "anomaly_free_indices_with_three_spinors": [
+      3,
+      3,
+      3
+    ],
+    "required_net_additional_chirality_indices": [
+      0,
+      -9,
+      -45
+    ],
+    "compensating_sector_anomalies": [
+      0,
+      -2160,
+      18
+    ],
+    "no_positive_nonzero_flux_product_1_4_16_is_anomaly_free": true,
+    "scope": "Complete *isolated* Spin10 x U1psi chiral fermion census; possible Green-Schwarz, inflow, broken U1 or other sectors not modeled. Flux number three remains input."
+  },
+  "front_3_noise_calibrated_center": {
+    "confidence": 0.99,
+    "attempts_in_each_of_calibration_and_test_arms": 250000,
+    "false_readout_prob_in_simulated_phase_matched_model": 0.02,
+    "true_gain": 0.96,
+    "replicate_datasets": 250,
+    "central_unitary_median_upper_Frobenius_squared": 0.059260194887284845,
+    "noncentral_Re_c_0p96_median_upper_Frobenius_squared": 0.7712178061969557,
+    "central_datasets_certified_at_norm_0p25": 148,
+    "noncentral_datasets_certified_at_norm_0p25": 0,
+    "branch_environment_indistinguishability": [
+      {
+        "environment_overlap": 0.0,
+        "measured_control_coherence": 0.0,
+        "target_channel_both_arms": "identity CPTP"
+      },
+      {
+        "environment_overlap": 0.4,
+        "measured_control_coherence": 0.4,
+        "target_channel_both_arms": "identity CPTP"
+      },
+      {
+        "environment_overlap": 1.0,
+        "measured_control_coherence": 1.0,
+        "target_channel_both_arms": "identity CPTP"
+      }
+    ],
+    "CPTP_nogo": "Marginal CPTP channels alone do not fix coherent control interference; independent environment/path coherence must be characterized. The scalar-unitary Frobenius formula does not apply to general channels.",
+    "confidence_scope": "Clopper-Pearson intervals combined by union bound, IID matched-basis accepted trials, independent reference run, same stable positive gain and no additive bias, independent unitary promise. NOT hardware measurements."
+  },
+  "front_4_ideal_process_certificate": {
+    "process_space_axes": [
+      "A_in",
+      "A_out",
+      "B_in",
+      "B_out",
+      "future_target",
+      "future_control"
+    ],
+    "dimension": 64,
+    "raw_process_trace": 4,
+    "raw_process_rank": 1,
+    "independent_random_local_CPTP_unitary_normalization_checks": 32,
+    "independent_random_local_general_CPTP_normalization_checks": 32,
+    "A_to_B_signaling_measurement_probability_preparer_0_then_1": [
+      0.0,
+      0.4999999999999999
+    ],
+    "B_to_A_signaling_measurement_probability_preparer_0_then_1": [
+      0.0,
+      0.4999999999999999
+    ],
+    "process_state_purities_coherent_and_dephased": [
+      0.9999999999999998,
+      0.4999999999999998
+    ],
+    "normalized_process_trace_distance_coherent_vs_dephased": 0.5000000000000002,
+    "nonseparability_argument": "In the standard tripartite process-matrix model with final-only C, every PSD sum decomposition of a rank-one W has both summands supported in span(W). W demonstrably permits A-to-B and B-to-A signaling, so it is neither fixed order. Therefore the ideal rank-one process is not a convex sum of fixed-order processes.",
+    "not_a_linear_noisy_witness": "This is an exact ideal-process structural proof and process-state coherence control, not a robust linear causal witness with finite-shot error bars. Dephased W is causally separable and reproduces the same A/B signal marginals."
+  },
+  "front_5_new_physics_gate": {
+    "standard_qutrit_associator_phase": 0,
+    "random_exact_cocycle_associativity_tests": 30000,
+    "mismatches": 0,
+    "example_unpredicted_alternative_phase_radians": 0.6981317007977318,
+    "example_phase_is_phenomenological_input_not_derived": true,
+    "illustrative_control_visibility": 0.9,
+    "model_probabilities_null_and_toy": [
+      0.95,
+      0.8447199994035401
+    ],
+    "absolute_gap": 0.10528000059645981,
+    "conditional_99pct_conservative_shots_per_hypothesis": 957,
+    "no_new_physics_claim": "The standard Heisenberg/W33 algebra forces an associative operator law. The toy phase has no derivation from the TOE and is not a parameter-free physical prediction. A new action, coupling scale, and experimental selection rule remain absent."
+  },
+  "source_boundary": "Standard mathematics and QM; no real optics, full quantum-gravity action, singular-G2 index, physical chiral vacuum, robust linear causal witness or new physics prediction."
+}
