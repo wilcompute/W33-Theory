@@ -1,0 +1,126 @@
+{
+  "status": "PASS_INDEPENDENT_SANDBOX; GITHUB_SCRIPT_NOT_YET_CI_EXECUTED",
+  "date": "2026-11-21",
+  "source_path": "analysis/toe_20261121_fivefront_rank5_optical_noise.py",
+  "test_path": "tests/test_toe_20261121_fivefront_rank5_optical_noise.py",
+  "independent_sandbox_scripts": [
+    "w33_sdp_dual_20261121.py",
+    "w33_fivefront_followup_20261121.py",
+    "w33_decoder_noise_20261121.py"
+  ],
+  "front1_decoder": {
+    "model": "fixed seed-261 two-dimensional code from Witting 4-to-9 channel; optimal over CPTP recovery",
+    "Petz_entanglement_fidelity": 0.903497206720065,
+    "rank5_feasible_CPTP_fidelity": 0.9165859735071501,
+    "dual_feasible_upper_bound": 0.9165860055071757,
+    "primal_dual_gap": 3.200002562930848e-8,
+    "fiveKraus_count": 5,
+    "Stinespring": [
+      10,
+      9
+    ],
+    "unitary_extension": [
+      10,
+      10
+    ],
+    "TP_residual": 2.3314683517128287e-15,
+    "numerical_duality_caveat": "Numerical feasible primal/dual with tiny gap, not interval-arithmetic rigorous SDP proof"
+  },
+  "front2_phase_noise": {
+    "channel": "unobserved iid Gaussian phase perturbations to each of 9 kept output rails; fixed decoder",
+    "sigma_radians": [
+      0,
+      0.1,
+      0.2,
+      0.5,
+      1
+    ],
+    "Petz_fidelity": [
+      0.9034972067,
+      0.89731852,
+      0.87914887,
+      0.76614054,
+      0.51097333
+    ],
+    "SDP_rank5_fidelity": [
+      0.9165859735,
+      0.91030339,
+      0.89182824,
+      0.77691975,
+      0.51746208
+    ],
+    "analytic_identity": "E Fe = exp(-sigma^2)*Fe_noiseless+(1-exp(-sigma^2))*Fe_full_output_dephasing",
+    "full_dephasing_Petz": 0.2825335830983382,
+    "full_dephasing_optimized": 0.28518126776069175,
+    "output_replacement_control": "Fe(p)=(1-p)Fe(0)+p/4 for all CPTP recoveries; this noise cannot change the optimal decoder",
+    "caveat": "ideal uncorrelated phase model with no calibration drift correlations or physical loss"
+  },
+  "front3_optical_encoding": {
+    "number_chart_unitaries": 45,
+    "passive_single_photon_16mode_Reck_Givens_distribution": {
+      "45": 3,
+      "48": 3,
+      "51": 3,
+      "69": 3,
+      "75": 3,
+      "99": 3,
+      "113": 27
+    },
+    "min": 45,
+    "mean": 93.6,
+    "max": 113,
+    "local_4mode_chart_basis_Givens_distribution": {
+      "4": 3,
+      "5": 8,
+      "6": 34
+    },
+    "single_photon_logical_n_ququarts_modes": "4^n",
+    "fundamental_caveat": "One photon spanning 16 modes encodes two logical ququarts but does not enact a physical two-photon interaction; exponentially many modes needed at fixed photon count"
+  },
+  "front4_genuine_covariance": {
+    "exact_chart_generator": "swap GF4 coordinate 0 and 1; preserves GQ(4,2) 45-chart adjacency",
+    "joint_invariant_unitary": "exp(-i theta SWAP_chart,reference)",
+    "chart_initial": "P1",
+    "reference_initial": "P24/24",
+    "p24_after_swap": "sin^2(theta)",
+    "theta_values": [
+      0,
+      0.39269908169872414,
+      0.7853981633974483,
+      1.5707963267948966
+    ],
+    "p24_values": [
+      0,
+      0.14644660940672632,
+      0.5,
+      1
+    ],
+    "caution": "Reference contains prepared 24D resource; transfer is covariant resource bookkeeping, not spontaneous generated gauge interaction"
+  },
+  "front5_reference_calibrated_detector": {
+    "true_eta_per_raw_ray": 0.75,
+    "nuisance_parameters_raw_efficiencies": 40,
+    "chart_hidden_coordinates": 24,
+    "calibration_fraction": 0.5,
+    "count_bins_old_and_new": "24 global labels + pool 16 + no click = 26",
+    "Cramer_Rao_inverse_trace_per_total_launch": {
+      "older25": 63.00444444444446,
+      "Pareto_improved25": 60.38518518518519,
+      "full40": 17.066666666666656
+    },
+    "necessary_total_launches_for_RMS_l2_0_001": {
+      "older25": 63004445,
+      "Pareto_improved25": 60385186,
+      "full40": 17066667
+    },
+    "identifiable_efficiency_combinations": {
+      "older25": 25,
+      "new25": 25,
+      "full40": 40
+    },
+    "profile_Fisher_identity": "f(1-f)*F_known_eta at matched reference/target operating point; nuisance tangent rank deficient when raw ray labels are pooled",
+    "caution": "Local unbiased Cramer-Rao necessary condition, not sufficient finite-shot guarantee"
+  },
+  "scope": "No physical photonic hardware, experiment, emergent spacetime, or theory-of-everything demonstrated.",
+  "repo_sync": "GitHub committed results/source; Remote Desktop Commander monthly quota 0, Windows checkout not accessed or synchronized."
+}
