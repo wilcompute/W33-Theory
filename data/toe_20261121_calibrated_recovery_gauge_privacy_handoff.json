@@ -1,0 +1,110 @@
+{
+  "date": "2026-11-21",
+  "status": "remote_producer_passed; source_and_full_certificate_still_uncommitted_on_windows_machine",
+  "base_commit": "ba6ab74b73bcb0be0926991fdb93c5bab88e3492",
+  "workstation_source": "C:\\Repos\\Theory of Everything\\analysis\\toe_20261121_calibrated_sdp_fourqubit_symmetry_pareto.py",
+  "workstation_full_certificate": "C:\\Repos\\Theory of Everything\\data\\toe_20261121_calibrated_sdp_fourqubit_symmetry_privacy.json",
+  "workstation_new_regressions_unexecuted": "C:\\Repos\\Theory of Everything\\tests\\test_toe_20261121_calibrated_sdp_fourqubit_symmetry_pareto.py",
+  "front1": {
+    "model": "24 hidden chart variables, 40 independently unknown stable ray efficiencies, trusted uniform-chart reference with no-clicks",
+    "uniform_true_eta": 0.75,
+    "optimal_calibration_fraction": 0.5,
+    "profile_Fisher_per_total_launch": "7.5*eta*f*(1-f)*I_24",
+    "local_CR_MSE_coefficient": 17.066666666666666,
+    "RMS_0p001_necessary_total_launches": 17066667,
+    "claim": "Necessary local Cramer Rao resource, not finite-sample guarantee"
+  },
+  "front2": {
+    "channel": "fixed two-dimensional subcode of Witting 4-to-9 CPTP channel",
+    "Petz_entanglement_fidelity": 0.9034972067200646,
+    "optimized_CPTP_recovery_entanglement_fidelity": 0.916585971680398,
+    "optimized_average_pure_qubit_fidelity": 0.9443906477869319,
+    "improvement_entanglement_fidelity": 0.0130887649603334,
+    "solver": "cvxpy SCS",
+    "additional_depolarizing_output_replacement_tests": [
+      0.05,
+      0.15
+    ],
+    "claim": "Numerical global CPTP decoder optimum for a fixed encoder, not encoding or device optimum"
+  },
+  "front3": {
+    "charts_verified": 45,
+    "noncircular_compiler": "two local SU4 basis changes per ququart + four-qubit parity/Bell conditional phase circuit",
+    "CNOT_upper_bound_after_block_encoding": 14,
+    "Hadamard_upper_bound_after_block_encoding": 2,
+    "extra_ancilla_qubits": 0,
+    "max_full_unitary_error_below": 1e-10,
+    "hardware_limitation": "Native entangling qubit gates and basis rotations assumed; not passive-optical implementation"
+  },
+  "front4": {
+    "symmetry_algebra": "span{I_45, A_chart, J_45}",
+    "spectral_sector_dims": [
+      1,
+      20,
+      24
+    ],
+    "off_sector_block_residual": 2.728013288517601e-15,
+    "defect_orbit_average": "I_45/45",
+    "symmetric_tuned_energy_ordering": {
+      "sector_1": 2.4,
+      "sector_20": 0.69,
+      "sector_24": -0.45
+    },
+    "claim": "Adjacency-algebra couplings cannot mix three sectors; not a general no-go for additional covariant dynamical fields"
+  },
+  "front5": {
+    "experiment": "24 globally individually resolved Witting ray labels + one coarse bin pooling the remaining16",
+    "globally_minimum_information_bits_per_chart_choice": 1.4048889448699617,
+    "MILP_solver": "HiGHS",
+    "MILP_status": 0,
+    "MILP_reported_gap": 0,
+    "optimal_zero_based_resolved_rays": [
+      0,
+      1,
+      2,
+      5,
+      6,
+      8,
+      10,
+      11,
+      12,
+      13,
+      15,
+      16,
+      19,
+      21,
+      23,
+      24,
+      27,
+      28,
+      30,
+      32,
+      34,
+      35,
+      37,
+      39
+    ],
+    "pooled_per_chart_distribution": {
+      "2": 4,
+      "3": 30,
+      "4": 9,
+      "5": 2
+    },
+    "optimum_Fisher_Acriterion": 30.4,
+    "previous_compressed_information_bits": 1.4359177277412059,
+    "previous_compressed_Fisher_Acriterion": 11.8133333333333,
+    "full_40_outcome_information_bits": 2.3219280948873626,
+    "full_40_outcome_Fisher_Acriterion": 3.2,
+    "limitation": "Global optimum only within fixed one-shot uniform-prior 24-plus-16 coarse-graining class; not cryptographic secrecy"
+  },
+  "integration": {
+    "github_research_report": "analysis/2026-11-21_calibration_recovery_compiler_symmetry_privacy_fivefronts.md",
+    "parallel_commits_read": [
+      "83b736e8371abc7f7ab885105a928c50eda82881",
+      "850e85d2b189f108e4956db5129463f6eebe2cc4"
+    ],
+    "remote_desktop_commander": "monthly limit reached before source / full certificate could be committed",
+    "sync_status": "Windows worktree not synchronized with newly committed GitHub report; do not claim otherwise",
+    "CI_status": "none_verified_for_new_report"
+  }
+}
