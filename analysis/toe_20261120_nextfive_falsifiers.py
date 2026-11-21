@@ -122,16 +122,48 @@ def tomography():
     direct_var_mu=1-mu*mu
     ratio=randomized_var_mu/direct_var_mu
     assert abs(ratio-40)<1e-10
-    n_hoeff=ceil(log(100)/(2*(13/40-1/4)**2))
+    n_hoeff=ceil(2*log(100)/((13/40-1/4)**2))
     n_parity=ceil(log(.01)/log(.5))
-    assert n_hoeff==410 and n_parity==7
+    # Two simple hypotheses: null p>=13/40 vs ideal Witting p=1/4.
+    # Neyman-Pearson lower-tail count tests, WITHOUT arbitrary randomized
+    # decisions, attain <1% false positives and >99% power at n=791.
+    # The earlier n=410 bound controlled only an alternative-side tail
+    # at the null mean, NOT both statistical errors; do not call it 1%-level.
+    def binom_lower(n,k,p):
+        mass=(1-p)**n;total=mass
+        for i in range(k):
+            mass*=((n-i)/(i+1))*(p/(1-p))
+            total+=mass
+        return total
+    def binom_mass(n,k,p):
+        return binom_lower(n,k,p)-binom_lower(n,k-1,p)
+    false_pos=binom_lower(791,226,13/40)
+    power=binom_lower(791,226,1/4)
+    assert false_pos<.01 and power>.99
+    # For 790 trials, count<=225 lacks power, count<=226 exceeds size .01.
+    assert binom_lower(790,225,1/4)<.99
+    assert binom_lower(790,226,13/40)>.01
+    # Allowing a randomized decision at the boundary slightly improves n.
+    r784=(.01-binom_lower(784,224,13/40))/binom_mass(784,225,13/40)
+    r785=(.01-binom_lower(785,224,13/40))/binom_mass(785,225,13/40)
+    power784=binom_lower(784,224,1/4)+r784*binom_mass(784,225,1/4)
+    power785=binom_lower(785,224,1/4)+r785*binom_mass(785,225,1/4)
+    assert power784<.99<power785
+    assert n_hoeff==1638 and n_parity==7
     return dict(projector_sum_error=err,
         randomized_binary_effect="0.4 P_even + 0.25 P_odd",
         classical_parity_garbling_rates={"even":.4,"odd":.25},
         physical_parity_is_local_tensor_product=True,
         maxmixed_variance_ratio_randomized_to_direct=ratio,
-        target_ideal_odd_cell_1pct_Hoeffding_randomized=410,
-        target_ideal_odd_cell_1pct_all_odd_direct=7,
+        randomized_Hoeffding_shots_both_errors_below_1pct=1638,
+        randomized_binomial_deterministic_shots_size_1pct_power_99pct=791,
+        randomized_binomial_deterministic_reject_if_yes_count_at_most=226,
+        randomized_binomial_deterministic_actual_false_positive=false_pos,
+        randomized_binomial_deterministic_actual_power=power,
+        randomized_binomial_randomized_boundary_shots_size_1pct_power_99pct=785,
+        randomized_binomial_randomized_boundary_fraction=r785,
+        randomized_binomial_randomized_boundary_power=power785,
+        direct_parity_shots_size_1pct_power_100pct_for_pure_odd=7,
         limitation="Requires comparable detector costs and discarding direction and nonbinary information; not a security or universal tomography theorem")
 
 def phase_reference():
