@@ -80,7 +80,7 @@ class FivefrontRank5Tests(unittest.TestCase):
         self.assertAlmostEqual(f[2]["profile_Fisher_inverse_trace"],17.0666666667,places=5)
 
     def test_no_fabricated_experiment_claim(self):
-        self.assertIn("not",self.result["scope"].lower())
+        self.assertIn("no hardware",self.result["scope"].lower())
         self.assertIn("no",self.c["warning"].lower())
 
 if __name__=="__main__":unittest.main()
