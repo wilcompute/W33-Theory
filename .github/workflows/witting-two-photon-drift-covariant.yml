@@ -7,10 +7,12 @@ on:
       - 'analysis/toe_20261121_two_photon_pair_pump.py'
       - 'analysis/toe_20261121_detector_drift_calibration.py'
       - 'analysis/toe_20261121_kraus_gauge_lie_refinement.py'
+      - 'analysis/toe_20261121_chart_operator_schmidt_lower_bound.py'
       - 'analysis/toe_20261121_kraus_gauge_loss_optimizer.py'
       - 'analysis/toe_20261121_fivefront_rank5_optical_noise.py'
       - 'analysis/toe_20261121_relational_reference_pareto.py'
       - 'tests/test_toe_20261121_two_photon_drift_pump_lie.py'
+      - 'tests/test_toe_20261121_chart_operator_schmidt_lower_bound.py'
       - '.github/workflows/witting-two-photon-drift-covariant.yml'
   pull_request:
     paths:
@@ -45,6 +47,10 @@ jobs:
         run: python analysis/toe_20261121_kraus_gauge_lie_refinement.py
       - name: Execute 15 dedicated independent regression tests
         run: python tests/test_toe_20261121_two_photon_drift_pump_lie.py
+      - name: Verify operator-Schmidt rank and necessary entangling gate count
+        run: |
+          python analysis/toe_20261121_chart_operator_schmidt_lower_bound.py
+          python tests/test_toe_20261121_chart_operator_schmidt_lower_bound.py
       - name: Save numerical certificates
         if: always()
         uses: actions/upload-artifact@v4
@@ -54,5 +60,6 @@ jobs:
             data/toe_20261121_two_photon_pair_pump.json
             data/toe_20261121_detector_drift_calibration.json
             data/toe_20261121_kraus_gauge_lie_refinement.json
+            data/toe_20261121_chart_operator_schmidt_lower_bound.json
           if-no-files-found: warn
           retention-days: 30
