@@ -38,6 +38,12 @@ def gauge_mix(Kraus,G):
     oldTP=sum(K.conj().T@K for K in Kraus)
     newTP=sum(K.conj().T@K for K in mixed)
     assert np.max(abs(oldTP-newTP))<1e-10
+    assert np.max(abs(G.conj().T@G-np.eye(5)))<1e-10
+    # Stronger check: the full CP map is invariant, not just TP.
+    rho=np.array([[.7,.12+.03j],[.12-.03j,.3]],complex)
+    oldOut=sum(K@rho@K.conj().T for K in Kraus)
+    newOut=sum(K@rho@K.conj().T for K in mixed)
+    assert np.max(abs(oldOut-newOut))<1e-10
     return mixed
 
 def evaluate(Kraus,T,loss,N,rng):
