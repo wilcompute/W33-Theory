@@ -1,0 +1,72 @@
+{
+  "E8_and_symmetric_action": {
+    "E8_prior_projective_ray_count": 40,
+    "E8_prior_root_count": 240,
+    "Witting_ray_selection_requires_symmetry_breaking": true,
+    "full_matrix_commutant_dimension": 2,
+    "invariant_Hamiltonian": "a I + b parity",
+    "note": "E8 6:1 count from previous Pass11681, not independently rederived here",
+    "reflections": 40,
+    "root_phase_lifts_per_ray": 6
+  },
+  "G2_hexagon": {
+    "betti_1": 729,
+    "caveat": "Q(6,3) octonionic model, NOT proven as symplectic W(5,3) Pauli realization",
+    "collinearity_edges": 2184,
+    "incidence_girth": 12,
+    "incidences": 1456,
+    "known_Steinberg_dimension": 729,
+    "lines": 364,
+    "point_distance_shells": {
+      "0": 1,
+      "1": 12,
+      "2": 108,
+      "3": 243
+    },
+    "point_graph_eigenvalues": {
+      "-4": 91,
+      "-1": 168,
+      "5": 104,
+      "12": 1
+    },
+    "points": 364
+  },
+  "Radon_tomography": {
+    "displacements": 81,
+    "identity": "Wigner_rho(a)=(40*p0(a)-13)/27",
+    "max_Radon_Wigner_error": 2.0816681711721685e-16,
+    "max_operator_identity_error": 2.0518966525691288e-14,
+    "mixed_state_samples": 20,
+    "phase_space_operator_span_rank": 81,
+    "probabilities_tested": 1620
+  },
+  "physical_boundary": "Exact finite geometry only; no physical TOE or emergent Lorentzian dynamics.",
+  "quantum_mereology": {
+    "charts": 45,
+    "commuting_pair_count": 240,
+    "commuting_pair_frame_multiplicity": 3,
+    "entangled_charts_per_state": 36,
+    "entangled_reduced_purity": 0.5,
+    "entangled_states_per_chart": 32,
+    "invariant_uniform_40ray_source_cost_all_charts": 16,
+    "local_states_per_chart": 8,
+    "maximal_quantum_purity_error": 1.2212453270876722e-15,
+    "noncommuting_pair_count": 540,
+    "noncommuting_pair_frame_multiplicity": 1,
+    "product_charts_per_state": 9,
+    "pure_reduced_purity": 1,
+    "state_chart_checks": 1800,
+    "states": 40,
+    "toy_cost_degeneracies_commuting": [
+      3,
+      12,
+      30
+    ],
+    "toy_cost_degeneracies_noncommuting": [
+      1,
+      16,
+      28
+    ]
+  },
+  "status": "PASS"
+}
