@@ -1,0 +1,152 @@
+{
+  "schema": "toe.deep_five_20261120.v1",
+  "front_optical": {
+    "status": "PASS_EXACT_CENTRAL_COMPRESSION_AND_NONCENTRAL_CONTROL",
+    "central_W33_pair_symplectic_exponent": 1,
+    "central_pair_control_tensor_target_factorization_max_residual": 2.482534153247273e-16,
+    "known_gate_central_pair_target_independent_two_mode_phase_gadget": true,
+    "noncentral_control_phase_parameter_radians": 0.4,
+    "noncentral_relative_order_trace_abs": 0.8465243330431069,
+    "noncentral_operator_Frobenius_squared": 2.550568982093307,
+    "nine_input_control_port_probabilities": [
+      0.9605304970014421,
+      0.9605304970014421,
+      0.9605304970014421,
+      0.8483533546735823,
+      0.8483533546735823,
+      0.8483533546735823,
+      0.9605304970014421,
+      0.9605304970014421,
+      0.9605304970014421
+    ],
+    "nine_input_fringe_spread": 0.1121771423278598,
+    "noncentral_control_purified_target_entropy_bits": 0.3905791239632504,
+    "ideal_18_mode_network_unitarity_error": 4.441630766608805e-16,
+    "boundary": "Central W33 known-gate fringes need only path-phase gadget; this does not simulate a black-box quantum switch in a fixed order. Noncentral gates make 18-mode controlled target actions nontrivial. No photonic device was accessed."
+  },
+  "front_chirality": {
+    "status": "PASS_COMMON_BUNDLE_CHARGE_POLYNOMIAL_NO_GO",
+    "index_polynomial": "I(q)=A+Bq+Cq\u00b2; A=int ch2(E), B=int c1(E)c1(L), C=r/2 int c1(L)\u00b2",
+    "E6_psi_charges": [
+      1,
+      -2,
+      4
+    ],
+    "difference_matrix_on_A_B_C": [
+      [
+        0,
+        3,
+        -3
+      ],
+      [
+        0,
+        -3,
+        -15
+      ]
+    ],
+    "equal_index_condition": "I(1)=I(-2)=I(4) iff B=C=0 (the q-linear and q\u00b2 terms both vanish).",
+    "complete_three_family_index_vector": [
+      3,
+      3,
+      3
+    ],
+    "common_SU2_twist_topological_example": {
+      "c1_E": 0,
+      "c2_E": -3,
+      "L_trivial": true,
+      "index_in_each_27_component": 3
+    },
+    "flux_only_Q3_indices": [
+      3,
+      12,
+      48
+    ],
+    "flux_only_Q3_anomalies": [
+      0,
+      2160,
+      -18
+    ],
+    "no_go_scope": "Applies to one shared rank-r internal bundle E tensored with U1psi power L^q and the isolated 16+10+1 chiral census; distinct E bundles, inflow, broken gauge groups, or extra sectors evade it.",
+    "physical_boundary": "An SU2 topological c2=-3 choice does not dynamically select 3, construct a stable gauge/HYM bundle, reproduce singular G2 compactification, fix Yukawas, or identify a physical vacuum."
+  },
+  "front_noise": {
+    "status": "PASS_GUARDED_NONZERO_DRIFT_CP_FALSE_CERTIFICATE_FALSIFIER",
+    "true_test_unitary_trace_abs": 0.97,
+    "true_test_noncentrality_Frobenius_squared": 0.5319000000000004,
+    "calibration_gain": 0.94,
+    "test_gain": 0.98,
+    "gain_drift_unmodeled": 0.040000000000000036,
+    "accepted_measurements_per_calibration_and_test_arm": 150000,
+    "confidence_per_joint_calibration": 0.99,
+    "iid_replications": 400,
+    "false_certifications_if_zero_drift_assumed": 400,
+    "false_certifications_with_drift_bound_0p04": 0,
+    "Frobenius_tolerance": 0.25,
+    "required_trace_magnitude_for_tolerance": 0.9965217285917832,
+    "any_real_noise_data": false,
+    "calibration_contract": "IID independent accepted events, identical gain except bounded drift, bounded additive contrast bias, independently warranted unitary target, verified preparation trace-distance bound. Exact CP intervals for each arm combined by union bound.",
+    "interpretation": "An apparently excellent normalized-trace interference fringe can falsely certify centrality if the test-arm gain exceeds reference-arm gain. Independent drift bounds are essential."
+  },
+  "front_physics_prediction": {
+    "status": "PASS_EXACT_W33_WILSON_COUPLING_NONIDENTIFIABILITY",
+    "W33_Levi_vertices": 80,
+    "W33_Levi_edges": 160,
+    "selected_minimal_8cycle_vertices": [
+      0,
+      40,
+      1,
+      44,
+      4,
+      53,
+      13,
+      41
+    ],
+    "cycle_edge_variables_Z3": 8,
+    "exhaustive_gauge_link_assignments": 6561,
+    "degeneracy_each_Wilson_holonomy": 2187,
+    "bare_partition_factor": "Z8(beta)=3^7*(exp(beta)+2exp(-beta/2))",
+    "Wilson_loop_analytic_expectation": "<Re W>=(exp(beta)-exp(-beta/2))/(exp(beta)+2exp(-beta/2))",
+    "calculated_couplings": [
+      {
+        "coupling_beta": 0.0,
+        "Wilson_Re_expected": 0.0,
+        "beta_derivative_as_variance": 0.5
+      },
+      {
+        "coupling_beta": 0.25,
+        "Wilson_Re_expected": 0.13169104058930944,
+        "beta_derivative_as_variance": 0.5485029901231596
+      },
+      {
+        "coupling_beta": 1.0,
+        "Wilson_Re_expected": 0.5371576810543414,
+        "beta_derivative_as_variance": 0.4800404662114931
+      },
+      {
+        "coupling_beta": 2.0,
+        "Wilson_Re_expected": 0.8641644977691129,
+        "beta_derivative_as_variance": 0.18530196968001367
+      },
+      {
+        "coupling_beta": 5.0,
+        "Wilson_Re_expected": 0.9983425802754453,
+        "beta_derivative_as_variance": 0.0024833825466886728
+      }
+    ],
+    "exact_gauge_transform_invariance_trials": 150,
+    "proof_obstruction": "Same W33 incidence and same Z3 gauge group admit a continuous family of gauge-invariant actions with different Wilson expectations. No parameter-free coupling or Wilson expectation is selected by graph incidence alone.",
+    "boundary": "This is a finite graph single-plaquette Z3 lattice gauge counterexample, not the full dynamical W33 theory, nor experimental measurement. Choosing an additional action could select beta by a dynamical principle."
+  },
+  "outside_box_dimensional_scale": {
+    "status": "PASS_DIMENSIONAL_RESCALE_NO_GO",
+    "combinatorial_speed": "one edge per tick",
+    "physical_speed_law": "v=(physical_length_per_edge)/(physical_time_per_tick)",
+    "different_physical_speeds_with_same_graph": [
+      1.0,
+      1000.0000000000001,
+      1000000.0
+    ],
+    "scope": "A dimensionful speed cannot be numerically determined by dimensionless finite combinatorial incidence without a calibrated length/time ratio or additional dynamics."
+  },
+  "overall_scope": "Executable standard quantum/math examples; no real lab, charged G2 index, unique action, or beyond-standard-model parameter-free observable."
+}
