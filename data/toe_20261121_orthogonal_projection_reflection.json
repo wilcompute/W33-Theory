@@ -1,0 +1,103 @@
+{
+  "boundary": "Ambient orthogonal projection only; no incidence-preserving hexagon to Pauli intertwiner and no physical TOE.",
+  "even_q2": {
+    "bijective_nucleus_projection": true,
+    "field": 2,
+    "induced_alternating_form": true,
+    "nucleus_in_polar_radical": true,
+    "null_points": 63,
+    "projected_points": 63
+  },
+  "even_q4": {
+    "bijective_nucleus_projection": true,
+    "field": 4,
+    "null_points": 1365,
+    "projected_points": 1365,
+    "symplectic_form_alternating_nondegenerate": true,
+    "unique_frobenius_square_root": true
+  },
+  "general_even_q": "Polar-form nucleus and bijective projection using unique Frobenius square root.",
+  "general_odd_q": "Every anisotropic-center fiber is an orthogonal-reflection orbit; branch Q+ or Q-; double fibers (q^5 -/+ q^2)/2.",
+  "odd_q3": {
+    "anisotropic_centers": {
+      "nonsquare": 378,
+      "square": 351
+    },
+    "exhaustive_all_center_tangent_check": true,
+    "field": 3,
+    "isotropic_centers": 364,
+    "representative_reflection_checks": {
+      "nonsquare": {
+        "distinct_images": 247,
+        "doubleton_fibers": 117,
+        "form_type": "plus",
+        "paired_points_nonorthogonal": 117,
+        "section_points": 130,
+        "singleton_fibers": 130
+      },
+      "square": {
+        "distinct_images": 238,
+        "doubleton_fibers": 126,
+        "form_type": "minus",
+        "paired_points_nonorthogonal": 126,
+        "section_points": 112,
+        "singleton_fibers": 112
+      }
+    },
+    "theory": {
+      "minus": {
+        "double": 126,
+        "image": 238,
+        "tangent": 112
+      },
+      "null_points": 364,
+      "plus": {
+        "double": 117,
+        "image": 247,
+        "tangent": 130
+      }
+    }
+  },
+  "odd_q5": {
+    "anisotropic_centers": {
+      "nonsquare": 7750,
+      "square": 7875
+    },
+    "exhaustive_all_center_tangent_check": false,
+    "field": 5,
+    "isotropic_centers": 3906,
+    "representative_reflection_checks": {
+      "nonsquare": {
+        "distinct_images": 2331,
+        "doubleton_fibers": 1575,
+        "form_type": "minus",
+        "paired_points_nonorthogonal": 1575,
+        "section_points": 756,
+        "singleton_fibers": 756
+      },
+      "square": {
+        "distinct_images": 2356,
+        "doubleton_fibers": 1550,
+        "form_type": "plus",
+        "paired_points_nonorthogonal": 1550,
+        "section_points": 806,
+        "singleton_fibers": 806
+      }
+    },
+    "theory": {
+      "minus": {
+        "double": 1575,
+        "image": 2331,
+        "tangent": 756
+      },
+      "null_points": 3906,
+      "plus": {
+        "double": 1550,
+        "image": 2356,
+        "tangent": 806
+      }
+    }
+  },
+  "schema": "toe.20261121.odd_even_orthogonal_projection.v1",
+  "status": "PASS"
+}
