@@ -38,7 +38,7 @@ def geometry():
     assert np.array_equal(H@H.T,6*np.eye(45,dtype=int)-2*A+2*J)
     assert np.array_equal(A@A,9*np.eye(45,dtype=int)+3*J)
     P1=J/45;P20=(9*np.eye(45)+3*A-J)/18;P24=(15*np.eye(45)-5*A+J)/30
-    assert max(abs((P1+P20+P24-np.eye(45)).flat))<1e-12
+    assert np.max(abs(P1+P20+P24-np.eye(45)))<1e-12
     return rays,H,A,(P1,P20,P24)
 
 def calibration(H,P24):
