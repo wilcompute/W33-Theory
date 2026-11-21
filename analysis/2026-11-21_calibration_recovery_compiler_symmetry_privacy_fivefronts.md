@@ -1,8 +1,8 @@
 # Five Witting research fronts: calibrated single photons, optimal recovery, a noncircular gate compiler, gauge symmetry, and privacy-optimal POVM pooling
 
-**Date:** 2026-11-21. **Starting point:** \`ba6ab74b73bcb0be0926991fdb93c5bab88e3492\`, subsequently cross-checked against parallel commits \`83b736e8371abc7f7ab885105a928c50eda82881\` (Witting chart defect and a critical Gauss ring) and \`850e85d2b189f108e4956db5129463f6eebe2cc4\` (Witting triangle Bargmann phases). **Scope:** mathematical finite-model identities, ideal quantum-channel semidefinite programming and mixed-integer detector design. No chip, physical entangler, emergent gauge symmetry or theory of everything is claimed.
+**Date:** 2026-11-21. **Starting point:** `ba6ab74b73bcb0be0926991fdb93c5bab88e3492`, subsequently cross-checked against parallel commits `83b736e8371abc7f7ab885105a928c50eda82881` (Witting chart defect and a critical Gauss ring) and `850e85d2b189f108e4956db5129463f6eebe2cc4` (Witting triangle Bargmann phases). **Scope:** mathematical finite-model identities, ideal quantum-channel semidefinite programming and mixed-integer detector design. No chip, physical entangler, emergent gauge symmetry or theory of everything is claimed.
 
-**Execution and environment:** The exact five-front producer \`analysis/toe_20261121_calibrated_sdp_fourqubit_symmetry_pareto.py\` was created and successfully executed on the authorized Windows workstation against the current project source. It emitted \`data/toe_20261121_calibrated_sdp_fourqubit_symmetry_privacy.json\` with status **FIVE FRONTS PASS** before Desktop Commander exhausted its monthly tool-call budget. Those two files and \`tests/test_toe_20261121_calibrated_sdp_fourqubit_symmetry_pareto.py\` are at present **workstation-local, not committed**; remote access stopped before they could be retrieved and the new regression suite could be executed. Accordingly the results here are **producer-validated, not independently CI-certified**, and local/GitHub sync cannot be claimed. This report was written through the GitHub connection separately. Preserve and manually reconcile the workstation's other dirty files rather than resetting or blindly staging them.
+**Execution and environment:** The exact five-front producer `analysis/toe_20261121_calibrated_sdp_fourqubit_symmetry_pareto.py` was created and successfully executed on the authorized Windows workstation against the current project source. It emitted `data/toe_20261121_calibrated_sdp_fourqubit_symmetry_privacy.json` with status **FIVE FRONTS PASS** before Desktop Commander exhausted its monthly tool-call budget. Those two files and `tests/test_toe_20261121_calibrated_sdp_fourqubit_symmetry_pareto.py` are at present **workstation-local, not committed**; remote access stopped before they could be retrieved and the new regression suite could be executed. Accordingly the results here are **producer-validated, not independently CI-certified**, and local/GitHub sync cannot be claimed. This report was written through the GitHub connection separately. Preserve and manually reconcile the workstation's other dirty files rather than resetting or blindly staging them.
 
 ## 1 — A rigorous launch-budget correction for the 24-dimensional one-photon model
 
@@ -18,7 +18,7 @@ The optimum in this *specific two-run model* is the balanced \(f=1/2\). For \(\e
 \]
 for locally unbiased estimators. RMS \(\le 0.001\) therefore has a **Cramér–Rao necessary condition** \(N\gtrsim17.07\) million total launches. This is neither a finite-shot sufficiency bound nor a universal hardware count. If all efficiencies are already known, the coefficient becomes \(3.2/\eta=4.266667\), showing the cost of independent reference calibration. Exact numerical Schur-complement eigenvalues were checked for reference fractions 0.10, 0.25, 0.50, 0.75, 0.90, treating all40 nuisance efficiencies independently rather than constraining them equal in the fit.
 
-**Identifiability restriction:** Without a trusted reference there is an exact gauge ambiguity \(\eta'_i=\eta_i t_i/t'_i\) between chart selection and detector response, as previously proved in \`analysis/toe_20261121_five_physical_gates_decoder_blinding_z2.py\`. This front measures the penalty of breaking that ambiguity, not self-calibration from more unknown-source states.
+**Identifiability restriction:** Without a trusted reference there is an exact gauge ambiguity \(\eta'_i=\eta_i t_i/t'_i\) between chart selection and detector response, as previously proved in `analysis/toe_20261121_five_physical_gates_decoder_blinding_z2.py`. This front measures the penalty of breaking that ambiguity, not self-calibration from more unknown-source states.
 
 ## 2 — SDP-optimal CPTP recovery surpasses Petz on the fixed encoded qubit
 
@@ -61,7 +61,7 @@ For **every** real or complex linear combination \(F=aI+bA+cJ\), the algebraic i
 
 Therefore a gauge-invariant operator of the form \(W\otimes F\), where W is any Wilson operator and \(F\in\mathrm{span}\{I,A,J\}\), **cannot drive transitions** among the internal 1+20+24 chart sectors. This is a *Bose–Mesner adjacency-algebra obstruction*, **not a no-go for every possible covariant tensor interaction with further dynamical fields**.
 
-Symmetry-preserving energy ordering *can* be tuned without inserting \(P_{24}\) explicitly: the simple chart term \(\Delta(12I-A)+\lambda A\), with \(\Delta=0.01,\lambda=0.2\), assigns energies 2.4, 0.69 and -0.45 to the 1-, 20- and 24-dimensional sectors. This favors the 24D ground eigenspace but does not mix it with the others, and the coefficient choice is engineered. The parallel commit \`83b736e8\` already analyzed the rank-one defect's *three-component cyclic block* and a genuine gauge-ring benchmark; this pass examines the **opposite symmetric limit** rather than claiming their work.
+Symmetry-preserving energy ordering *can* be tuned without inserting \(P_{24}\) explicitly: the simple chart term \(\Delta(12I-A)+\lambda A\), with \(\Delta=0.01,\lambda=0.2\), assigns energies 2.4, 0.69 and -0.45 to the 1-, 20- and 24-dimensional sectors. This favors the 24D ground eigenspace but does not mix it with the others, and the coefficient choice is engineered. The parallel commit `83b736e8` already analyzed the rank-one defect's *three-component cyclic block* and a genuine gauge-ring benchmark; this pass examines the **opposite symmetric limit** rather than claiming their work.
 
 ## 5 — Optimal one-shot privacy of the 25-bin Witting detector, with Fisher cost
 
@@ -72,9 +72,9 @@ For a uniformly random chart, retain exactly 24 of the 40 ray identities as sepa
 The s_z are integers 0..8 and \(s_z=8-\sum_{i}H_{zi}x_i\), where \(x_i\in\{0,1\}\) selects an individually labeled ray and \(\sum_i x_i=24\). Since \(s\log_2s\) is convex, its successive-integer secants yield an **exact mixed-integer linear epigraph at every feasible integer s**. The executed HiGHS MILP returned status0 and **reported zero optimality gap**. It also established that the perfectly balanced but unrealizable chart pooling pattern (36 charts containing3 pooled rays, 9 containing4) is infeasible.
 
 One globally minimum-leakage witness is the **zero-indexed set of 24 resolved Witting rays**
-\`\`\`
+```
 [0,1,2,5,6,8,10,11,12,13,15,16,19,21,23,24,27,28,30,32,34,35,37,39]
-\`\`\`
+```
 with row-wise pooled count distribution \(\{2:4,\ 3:30,\ 4:9,\ 5:2\}\). It has
 \[
 \boxed{I(Z;Y)=1.40488894487\ \text{bits per chart choice},}
@@ -91,4 +91,4 @@ This is a **provable optimum in the stated one-shot, uniform-prior, exactly-24-p
 4. Replace the imposed \(W\otimes F(A)\) chart coupling with an equivariant *dynamical* chart-indexed field and test whether 24D transitions survive without symmetry breaking.
 5. Optimize the **privacy-Fisher Pareto frontier** under calibration errors and realistic hardware grouping; use the global 1.40489-bit bound only as a restricted one-shot mathematical baseline.
 
-**Operational status:** GitHub had advanced in parallel to \`850e85d2...\` while Desktop Commander reached its monthly quota. No existing code was overwritten, no local reset/rebase was attempted, and **this GitHub report does not synchronize the authorized Windows worktree**. The computational producer passed on Windows but its uncommitted files need reconciliation when remote tools are available. No claim is made that current CI validated this report.
+**Operational status:** GitHub had advanced in parallel to `850e85d2...` while Desktop Commander reached its monthly quota. No existing code was overwritten, no local reset/rebase was attempted, and **this GitHub report does not synchronize the authorized Windows worktree**. The computational producer passed on Windows but its uncommitted files need reconciliation when remote tools are available. No claim is made that current CI validated this report.
