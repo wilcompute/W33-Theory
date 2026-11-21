@@ -31,7 +31,14 @@ class NextFive(unittest.TestCase):
     def test_19_parity_operator_identity(self):self.assertLess(self.c["projector_sum_error"],1e-10)
     def test_20_local_displaced_parity(self):self.assertTrue(self.c["physical_parity_is_local_tensor_product"])
     def test_21_exact_variance_penalty(self):self.assertAlmostEqual(self.c["maxmixed_variance_ratio_randomized_to_direct"],40,places=8)
-    def test_22_ideal_1pct_shots(self):self.assertEqual((self.c["target_ideal_odd_cell_1pct_Hoeffding_randomized"],self.c["target_ideal_odd_cell_1pct_all_odd_direct"]),(410,7))
+    def test_22_ideal_1pct_shots(self):
+        self.assertEqual((self.c["randomized_Hoeffding_shots_both_errors_below_1pct"],
+                          self.c["randomized_binomial_deterministic_shots_size_1pct_power_99pct"],
+                          self.c["randomized_binomial_randomized_boundary_shots_size_1pct_power_99pct"],
+                          self.c["direct_parity_shots_size_1pct_power_100pct_for_pure_odd"]),
+                         (1638,791,785,7))
+        self.assertLess(self.c["randomized_binomial_deterministic_actual_false_positive"],.01)
+        self.assertGreater(self.c["randomized_binomial_deterministic_actual_power"],.99)
     def test_23_E8_scalar_phases_same_density(self):self.assertLess(self.d["global_phase_projector_error"],1e-10)
     def test_24_coherent_phase_copy_budget(self):self.assertEqual(self.d["first_hypothetical_copy_count_above_99pct"],14)
     def test_25_one_copy_phase_information(self):self.assertAlmostEqual(self.d["hypothetical_coherently_referenced_one_copy_PGM_success"],1/3)
