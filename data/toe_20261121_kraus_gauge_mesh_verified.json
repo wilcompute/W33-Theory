@@ -1,0 +1,34 @@
+{
+  "status": "PASS_INDEPENDENT_SANDBOX; GITHUB_CI_PENDING",
+  "date": "2026-11-21",
+  "mathematical_Kraus_gauge": "R_prime_j=sum_k G[j,k]R_k with G in U(5); CPTP recovery exactly unchanged",
+  "photon_loss_model": "2% power loss on both touched rails after each active gate in a 45-two-mode-element Reck 10-mode mesh; idle modes lossless",
+  "trials_per_decoder": 200,
+  "sample_method": "seeded complex Ginibre QR with R diagonal phase correction (Haar U5), plus unrotated baseline",
+  "seeded_Petz": {
+    "original_unconditional_fidelity": 0.758233646,
+    "mean_random_gauge_fidelity": 0.76170374129137,
+    "best_sample_unconditional_fidelity": 0.7813243545498757,
+    "best_sample_survival_probability": 0.8641975992205478,
+    "mesh_givens": 45
+  },
+  "seeded_rank5_SDP": {
+    "original_unconditional_fidelity": 0.756207795,
+    "mean_random_gauge_fidelity": 0.7714750898620133,
+    "best_sample_unconditional_fidelity": 0.7905483212943932,
+    "best_sample_survival_probability": 0.8626321122566587,
+    "mesh_givens": 45
+  },
+  "interpretation": "The previous original-mesh 2% loss crossover is contingent on the Kraus environment basis; a sampled equivalent five-Kraus implementation restores the optimized decoder advantage.",
+  "caveats": [
+    "No global physical U5 or mesh optimization certified",
+    "Loss model is idealized and does not represent measured fabrication",
+    "The 5x5 gauge matrix may be reconstructed by the committed deterministic producer",
+    "No real quantum experiment or physical TOE.",
+    "Remote Desktop Commander at monthly quota zero; Windows checkout not synchronized"
+  ],
+  "source": "analysis/toe_20261121_kraus_gauge_loss_optimizer.py",
+  "tests": "tests/test_toe_20261121_kraus_gauge_loss_optimizer.py",
+  "report": "analysis/2026-11-21_Kraus_gauge_optimization_reverses_mesh_loss_crossover.md",
+  "workflow": ".github/workflows/witting-rank5-optical-falsifiers.yml"
+}
