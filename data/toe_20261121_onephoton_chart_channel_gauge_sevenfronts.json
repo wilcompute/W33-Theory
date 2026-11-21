@@ -1,0 +1,393 @@
+{
+  "date": "2026-11-21",
+  "front1_single_photon_global_ray_label_hidden24": {
+    "H_Htrans_exact": "H H^T = 6 I - 2 A + 2 J",
+    "H_Htrans_spectrum": {
+      "0": 20,
+      "12": 24,
+      "72": 1
+    },
+    "H_rank": 25,
+    "K_rank": 21,
+    "K_visible_subspace_orthogonal_to_hidden24": true,
+    "chart_to_ray_incidence_shape": [
+      45,
+      40
+    ],
+    "compressed_coarse_unresolved_ray_count": 16,
+    "compressed_distinguishable_output_bins": 25,
+    "compressed_exact_inverse_residual": 1.2502206301473473e-17,
+    "compressed_globally_resolved_ray_labels": [
+      31,
+      7,
+      21,
+      28,
+      22,
+      30,
+      3,
+      15,
+      4,
+      23,
+      26,
+      25,
+      8,
+      1,
+      32,
+      20,
+      19,
+      29,
+      14,
+      38,
+      16,
+      39,
+      11,
+      37
+    ],
+    "compressed_hidden_chart_rank": 24,
+    "compressed_local_Cramer_Rao_trace_inverse_coefficient": 11.813333333333336,
+    "compressed_local_Fisher_condition_number": 12.822948255619584,
+    "compressed_vs_full_label_Cramer_Rao_penalty": 3.6916666666666673,
+    "exact_charts_per_ray": 9,
+    "exact_decoder_max_residual": 1.089623183347932e-17,
+    "exact_incidences_per_chart": 8,
+    "global_label_decoder": "x=(2/3) H (p - 1_40/40), w=1_45/45+x",
+    "global_multinomial_MSE_identity": "E||xhat-x||^2=(3.2-||x||^2)/N",
+    "hidden_bias_has_identical_27_deck_totals_as_uniform": true,
+    "local_Fisher_trace_inverse_advantage_per_ideal_event": 1404.0,
+    "mixed_state_can_be_prepared_by_classical_randomization": true,
+    "old_540_pair_binary_Probe_Cramer_Rao_coefficient": 4492.8,
+    "ranks_of_single_pure_Witting_input_Fisher": {
+      "21": 40
+    },
+    "scope": "Needs globally consistent Witting RAY LABELS and calibrated per-outcome efficiencies; an anonymous local port ID destroys this inverse. Label postprocessing can disclose the setting unless mapping to global rays is retained.",
+    "seeded_multinomial_simulations": {
+      "1000": {
+        "exact_mse": 0.0031998814912635744,
+        "ideal_rms_upper_bound": 0.0565685424949238,
+        "l2_error": 0.05398744718616637,
+        "shot_count": 1000
+      },
+      "100000": {
+        "exact_mse": 3.1998814912635745e-05,
+        "ideal_rms_upper_bound": 0.00565685424949238,
+        "l2_error": 0.005468429691608808,
+        "shot_count": 100000
+      },
+      "1000000": {
+        "exact_mse": 3.199881491263574e-06,
+        "ideal_rms_upper_bound": 0.0017888543819998318,
+        "l2_error": 0.0019683107038010986,
+        "shot_count": 1000000
+      }
+    },
+    "single_photon_local_Cramer_Rao_trace_inverse_coefficient": 3.2,
+    "single_photon_local_Fisher_24_eigenvalue": 7.5,
+    "single_photon_output_model": "p_i=sum_z w_z H[z,i]/8 for input I4/4",
+    "status": "PASS",
+    "sufficient_detected_single_photons_for_RMS_le_0p001": 3200000,
+    "unbiased_per_detection_estimator_squared_norm": 3.2
+  },
+  "front2_constrained_9x5_channel_routing": {
+    "claim_scope": "A constructive physically more parsimonious eight-output-rail channel with 5-level environment; not globally optimal and no claim of exact A5 covariance.",
+    "constrained_best_IC_qubits": 1.035976348982869,
+    "constrained_effective_output_support_dimension": 8,
+    "constrained_input_and_environment_dimensions": [
+      4,
+      5
+    ],
+    "constrained_permutation": [
+      39,
+      14,
+      27,
+      38,
+      6,
+      18,
+      8,
+      26,
+      15,
+      12,
+      7,
+      0,
+      20,
+      34,
+      17,
+      4,
+      3,
+      1,
+      16,
+      28,
+      13,
+      5,
+      37,
+      10,
+      35,
+      36,
+      29,
+      22,
+      11,
+      32,
+      19,
+      2,
+      21,
+      31,
+      24,
+      23,
+      25,
+      33,
+      9,
+      30,
+      40,
+      41,
+      42,
+      43,
+      44
+    ],
+    "constrained_ray_orthogonality_pairs_per_8_groups": 8,
+    "constrained_stored_iteration_best": [
+      0.8270505071310787,
+      0.9785983854756437,
+      1.0232511565834348,
+      1.035976348982869
+    ],
+    "constrained_zero_rows_in_one_output_rail": true,
+    "perfect_full_45_Naimark_isometry_preserved": true,
+    "prior_unrestricted_routed_IC_qubits": 1.086708489822519,
+    "random_100_constrained_baseline_IC_min_avg_max": [
+      0.337663111801942,
+      0.49894256676719356,
+      0.6157662824757169
+    ],
+    "random_100_constrained_orthogonality_pairs_min_avg_max": [
+      15,
+      25.13,
+      34
+    ],
+    "status": "PASS"
+  },
+  "front3_two_use_coherent_information": {
+    "best_tested_structured_per_use": 1.0828172885231537,
+    "independent_two_use_product_coherent_information_bits": 2.1734169796450393,
+    "single_use_maxmixed_routed_coherent_information_bits": 1.086708489822519,
+    "status": "PASS",
+    "structured_test_has_superadditivity_over_PRODUCT_MAXMIXED": false,
+    "structured_two_use_inputs": [
+      {
+        "family": "Bell",
+        "mix_weight": 0.1,
+        "per_use_bits": 1.0717187968597441,
+        "two_use_coherent_information_bits": 2.1434375937194883
+      },
+      {
+        "family": "Bell",
+        "mix_weight": 0.25,
+        "per_use_bits": 1.0064093875826312,
+        "two_use_coherent_information_bits": 2.0128187751652624
+      },
+      {
+        "family": "Bell",
+        "mix_weight": 0.5,
+        "per_use_bits": 0.8097914324618345,
+        "two_use_coherent_information_bits": 1.619582864923669
+      },
+      {
+        "family": "Bell",
+        "mix_weight": 0.75,
+        "per_use_bits": 0.5050593722961387,
+        "two_use_coherent_information_bits": 1.0101187445922775
+      },
+      {
+        "family": "Bell",
+        "mix_weight": 1,
+        "per_use_bits": 2.220446049250313e-16,
+        "two_use_coherent_information_bits": 4.440892098500626e-16
+      },
+      {
+        "family": "diagonal_correlated",
+        "mix_weight": 0.1,
+        "per_use_bits": 1.0828172885231537,
+        "two_use_coherent_information_bits": 2.1656345770463075
+      },
+      {
+        "family": "diagonal_correlated",
+        "mix_weight": 0.25,
+        "per_use_bits": 1.0632310050349187,
+        "two_use_coherent_information_bits": 2.1264620100698375
+      },
+      {
+        "family": "diagonal_correlated",
+        "mix_weight": 0.5,
+        "per_use_bits": 0.9954024495436744,
+        "two_use_coherent_information_bits": 1.9908048990873488
+      },
+      {
+        "family": "diagonal_correlated",
+        "mix_weight": 0.75,
+        "per_use_bits": 0.8792092110692167,
+        "two_use_coherent_information_bits": 1.7584184221384334
+      },
+      {
+        "family": "diagonal_correlated",
+        "mix_weight": 1,
+        "per_use_bits": 0.683851173949507,
+        "two_use_coherent_information_bits": 1.367702347899014
+      }
+    ],
+    "two_use_Kraus_count": 25,
+    "two_use_output_dims": [
+      81,
+      25
+    ],
+    "warning": "Even failure to improve does NOT rule out superadditivity; compare with optimized one-letter input before claiming a genuine superadditive rate. The tested state families are narrow."
+  },
+  "front4_chart_projection_swap_compilation": {
+    "all_45_charts_verified": 45,
+    "coherent_projector_phase_gate_requires_nonlinear_or_ancilla_resource": true,
+    "exact_unitary_factorization": "exp(-it Q_z)= exp(-i(2t/3)D_z) exp(-i(2t/3) D_z SWAP)",
+    "max_projector_compilation_error": 4.440892098500626e-16,
+    "max_two_factor_unitary_error": 1.4217791915866692e-15,
+    "projector_formula": "Q_z=(4/3) D_z (I+SWAP)/2, D_z=L tensor L + R tensor R",
+    "status": "PASS",
+    "warning": "The two commuting exponentials are NONLOCAL two-ququart operators, not physical single-mode gates or a two-gate KLM circuit. Herald success probability not derived."
+  },
+  "front5_45_fiber_noncommuting_lattice_gauge": {
+    "bloch_dispersion_evaluated_nontrivially": true,
+    "continuous_time_hopping_has_no_strict_finite_speed_in_continuum_limit": true,
+    "gauge_lattice": "GQ45 Cartesian C_L^3, link Ux=exp(i alpha A/(12L)), Uy=exp(i beta |0><0|/L), Uz=I",
+    "internal_mass_operator": "12 I45 - A_GQ; ideal spectrum (0^1,9^20,15^24)",
+    "lattice_rows": [
+      {
+        "L": 8,
+        "L_squared_Wilson_deviation": 0.22211053191644556,
+        "finite_internal_excitation_gap_at_k0": 7.857124779342492,
+        "first_Bloch_energy_kx_one": 49.433144553359824,
+        "internal_Wilson_loop_norm_minus_identity": 0.003470477061194462,
+        "max_hermiticity_error": 0.0,
+        "minimum_Bloch_energy_k0": 1.218492774153118,
+        "second_Bloch_energy_k0": 9.07561755349561,
+        "sites": 23040
+      },
+      {
+        "L": 16,
+        "L_squared_Wilson_deviation": 0.22223750756101499,
+        "finite_internal_excitation_gap_at_k0": 7.855697018613119,
+        "first_Bloch_energy_kx_one": 50.67609762120956,
+        "internal_Wilson_loop_norm_minus_identity": 0.0008681152639102148,
+        "max_hermiticity_error": 0.0,
+        "minimum_Bloch_energy_k0": 1.2199261197057183,
+        "second_Bloch_energy_k0": 9.075623138318837,
+        "sites": 184320
+      },
+      {
+        "L": 32,
+        "L_squared_Wilson_deviation": 0.2222692661409906,
+        "finite_internal_excitation_gap_at_k0": 7.855339867169901,
+        "first_Bloch_energy_kx_one": 50.99236976011267,
+        "internal_Wilson_loop_norm_minus_identity": 0.00021705983021581113,
+        "max_hermiticity_error": 0.0,
+        "minimum_Bloch_energy_k0": 1.220284667406336,
+        "second_Bloch_energy_k0": 9.075624534576237,
+        "sites": 1474560
+      },
+      {
+        "L": 64,
+        "L_squared_Wilson_deviation": 0.2222772067059299,
+        "finite_internal_excitation_gap_at_k0": 7.855250566100915,
+        "first_Bloch_energy_kx_one": 51.0717871078392,
+        "internal_Wilson_loop_norm_minus_identity": 5.426689616843992e-05,
+        "max_hermiticity_error": 0.0,
+        "minimum_Bloch_energy_k0": 1.220374317544211,
+        "second_Bloch_energy_k0": 9.075624883645126,
+        "sites": 11796480
+      }
+    ],
+    "noncommuting_links_with_nonzero_Wilson_plaquette": true,
+    "physical_scope": "Externally imposed 3D spatial graph, choice of non-Abelian synthetic link matrices and time clock. No emergent Lorentz metric, gravitational field equation, fundamental gauge coupling or physical implementation.",
+    "separate_discrete_time_local_coin_shift_has_maximum_one_cell_per_step": true,
+    "status": "PASS"
+  },
+  "front6_detector_label_confusion_and_no_click": {
+    "Fisher_per_launched_photon_with_no_click_global_eta": 5.25,
+    "calibrated_global_label_misidentification_model": "M_{j|i}=(1-eps) if j=i else eps/39",
+    "cases": [
+      {
+        "global_inverse_unbiased_with_known_epsilon": true,
+        "label_signal_attenuation": 1.0,
+        "local_Cramer_Rao_trace_inverse_coeff": 3.2,
+        "per_detected_photon_Fisher_eigenvalue": 7.5,
+        "sufficient_detected_photons_for_RMS_0p001_from_linear_inverse": 3200001,
+        "wrong_label_probability": 0
+      },
+      {
+        "global_inverse_unbiased_with_known_epsilon": true,
+        "label_signal_attenuation": 0.9897435897435898,
+        "local_Cramer_Rao_trace_inverse_coeff": 3.266664876909447,
+        "per_detected_photon_Fisher_eigenvalue": 7.3469428007889555,
+        "sufficient_detected_photons_for_RMS_0p001_from_linear_inverse": 3266665,
+        "wrong_label_probability": 0.01
+      },
+      {
+        "global_inverse_unbiased_with_known_epsilon": true,
+        "label_signal_attenuation": 0.9487179487179487,
+        "local_Cramer_Rao_trace_inverse_coeff": 3.5552958363769176,
+        "per_detected_photon_Fisher_eigenvalue": 6.7504930966469425,
+        "sufficient_detected_photons_for_RMS_0p001_from_linear_inverse": 3555296,
+        "wrong_label_probability": 0.05
+      },
+      {
+        "global_inverse_unbiased_with_known_epsilon": true,
+        "label_signal_attenuation": 0.8461538461538461,
+        "local_Cramer_Rao_trace_inverse_coeff": 4.469421487603306,
+        "per_detected_photon_Fisher_eigenvalue": 5.3698224852071,
+        "sufficient_detected_photons_for_RMS_0p001_from_linear_inverse": 4469422,
+        "wrong_label_probability": 0.15
+      },
+      {
+        "global_inverse_unbiased_with_known_epsilon": true,
+        "label_signal_attenuation": 0.5897435897435898,
+        "local_Cramer_Rao_trace_inverse_coeff": 9.200756143667295,
+        "per_detected_photon_Fisher_eigenvalue": 2.6084812623274165,
+        "sufficient_detected_photons_for_RMS_0p001_from_linear_inverse": 9200757,
+        "wrong_label_probability": 0.4
+      }
+    ],
+    "missing_identifiability": "Unknown arbitrary ray-dependent confusion can mimic chart bias; joint self-calibration needs additional known probes or reference measurements.",
+    "shot_cost_multiplier_to_detected_count": 1.4285714285714286,
+    "status": "PASS",
+    "uniform_detection_efficiency": 0.7
+  },
+  "front7_routed_channel_explicit_optimized_input_capacity": {
+    "basis_construction": "12 normalized complex off-diagonal Gell-Mann pairs followed by 3 diagonal traceless Hermitian generators",
+    "density_preparation_formula": "rho=exp(sum_j theta_j G_j)/Tr exp(sum_j theta_j G_j)",
+    "explicit_full_rank_input_coherent_information_bits": 1.0971278113957244,
+    "input_log_density_15_parameters_in_SU4_Hermitian_basis": [
+      0.1251,
+      -0.0489,
+      0.05712,
+      0.09473,
+      -0.11319,
+      -0.05176,
+      0.05036,
+      -0.12411,
+      0.19162,
+      -0.00705,
+      -0.02493,
+      0.0691,
+      -0.07468,
+      -0.04334,
+      -0.02777
+    ],
+    "optimized_4x4_input_eigenvalues": [
+      0.19449312366322183,
+      0.23130612828577454,
+      0.2681654568571455,
+      0.3060352911938579
+    ],
+    "routed_maximally_mixed_coherent_information_bits": 1.086708489822519,
+    "scope": "Finite-dimensional theoretical witness from numeric search, NOT proven global optimum or practical optical encoder.",
+    "status": "PASS",
+    "strict_unassisted_quantum_capacity_lower_bound_qubits_per_use": 1.0971278113957244,
+    "two_use_product_state_lower_bound_total_qubits": 2.1942556227914487
+  },
+  "scientific_scope": "Ideal finite-dimensional physics/math and seeded toy sensor simulations; no experimental realization or TOE.",
+  "status": "PASS"
+}
