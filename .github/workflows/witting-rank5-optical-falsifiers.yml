@@ -5,8 +5,10 @@ on:
     branches: [master]
     paths:
       - 'analysis/toe_20261121_fivefront_rank5_optical_noise.py'
+      - 'analysis/toe_20261121_rank5_loss_mesh_break_even.py'
       - 'analysis/toe_20261121_relational_reference_pareto.py'
       - 'tests/test_toe_20261121_fivefront_rank5_optical_noise.py'
+      - 'tests/test_toe_20261121_rank5_loss_mesh_break_even.py'
       - '.github/workflows/witting-rank5-optical-falsifiers.yml'
   pull_request:
     paths:
@@ -37,11 +39,17 @@ jobs:
         run: python analysis/toe_20261121_fivefront_rank5_optical_noise.py
       - name: Run 13 targeted tests
         run: python tests/test_toe_20261121_fivefront_rank5_optical_noise.py
+      - name: Check 10-mode insertion-loss crossover
+        run: |
+          python analysis/toe_20261121_rank5_loss_mesh_break_even.py
+          python tests/test_toe_20261121_rank5_loss_mesh_break_even.py
       - name: Upload deterministic certificate
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: witting-rank5-decoder-certificate
-          path: data/toe_20261121_fivefront_rank5_optical_noise.json
+          path: |
+            data/toe_20261121_fivefront_rank5_optical_noise.json
+            data/toe_20261121_rank5_loss_mesh_break_even.json
           if-no-files-found: warn
           retention-days: 30
