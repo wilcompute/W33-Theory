@@ -1,0 +1,263 @@
+{
+  "date": "2026-11-21",
+  "front1_blind_ray_detector_efficiency_no_go_and_reference": {
+    "alternate_hidden_bias_distance": 0.00646181423420912,
+    "exact_confounding_transform": "eta'_i=eta_i t_i/t'_i for any alternative positive chart law w'",
+    "jacobian_cancellation_max_error": 1.3877787807814457e-17,
+    "local_24D_joint_Jacobian_nullspace": true,
+    "max_exact_reference_calibration_decoder_error": 1.452830911130576e-17,
+    "maximum_probing_state_probability_difference": 0.0,
+    "model_caveats": "Ray efficiency constant across chart and input, mixture resampled each trial. Reference requires known chart-mixture distribution and stable efficiencies; arbitrary chart-dependent detector drift needs more controls.",
+    "observed_for_any_known_input_state": "p_i(rho)=4 eta_i t_i Tr(rho P_i), t_i=(H^T w)_i/8",
+    "shot_simulations_with_reference_and_no_click": {
+      "20000": {
+        "calibration_launches": 20000,
+        "hidden_bias_l2_error": 0.01805099243028563,
+        "max_efficiency_estimation_error": 0.0790242781842867,
+        "target_launches": 20000
+      },
+      "200000": {
+        "calibration_launches": 200000,
+        "hidden_bias_l2_error": 0.008406185268274722,
+        "max_efficiency_estimation_error": 0.049250821618738394,
+        "target_launches": 200000
+      },
+      "2000000": {
+        "calibration_launches": 2000000,
+        "hidden_bias_l2_error": 0.001753772143631197,
+        "max_efficiency_estimation_error": 0.009077892183735226,
+        "target_launches": 2000000
+      }
+    },
+    "status": "PASS",
+    "trusted_uniform_chart_reference_exactly_breaks_gauge": true,
+    "trusted_uniform_reference_eta_formula": "eta_i=40 p_reference,i with no-click retained",
+    "two_distinct_positive_chart_laws_and_detector_models_indistinguishable": true,
+    "unknowns": "24D chart distribution x and 40 ray-specific detector efficiencies eta"
+  },
+  "front2_explicit_Petz_decoder_and_subcode": {
+    "TP_completion_on_unused_output_subspace": true,
+    "best_subcode_4x2_isometry_imag": [
+      [
+        0.28096803354201455,
+        0.2798896338484771
+      ],
+      [
+        0.2045104009275764,
+        0.8664251750344636
+      ],
+      [
+        -0.008736179204944156,
+        0.2557814173736192
+      ],
+      [
+        0.3115434995713281,
+        0.005987842608964344
+      ]
+    ],
+    "best_subcode_4x2_isometry_real": [
+      [
+        -0.6132001904548943,
+        0.25068379492736187
+      ],
+      [
+        0.3030806337808941,
+        -0.1909668463206748
+      ],
+      [
+        -0.3180472629316245,
+        0.051518305962910946
+      ],
+      [
+        0.4615954738539792,
+        -0.0595347286527903
+      ]
+    ],
+    "best_two_dim_subcode_recovery": {
+      "Fav": 0.9356648044800431,
+      "Fe": 0.9034972067200646,
+      "output_support_rank": 9,
+      "recovery_kraus": 5,
+      "recovery_tp_error": 5.107026847976512e-15
+    },
+    "decoder_formula": "R_j=sqrt(tau) K_j^dagger N(tau)^(-1/2), tau=I_code/code_dim",
+    "entanglement_fidelity_definition": "Fe=maximally_entangled_overlap of Petz\u2218N restricted to code",
+    "environment_dim": 5,
+    "full_ququart_recovery": {
+      "Fav": 0.6888716841271232,
+      "Fe": 0.611089605158904,
+      "output_support_rank": 9,
+      "recovery_kraus": 5,
+      "recovery_tp_error": 1.554330447542933e-15
+    },
+    "not_claimed": "Globally optimal decoder, fault tolerance, asymptotic code threshold, physical implementation.",
+    "output_dim": 9,
+    "sampled_subcode_entanglement_fidelity_avg": 0.8551348065861045,
+    "seeded_300_random_two_dim_subcode_search_best_index": 261,
+    "status": "PASS"
+  },
+  "front3_exact_conditional_gate_teleportation": {
+    "accepted_Bell_outcomes": 1,
+    "additional_input_ququarts": 2,
+    "ancilla_resource": "(I_16 tensor U_z)|Phi_16>, two entangled registers each with dimension16",
+    "caveat": "Requires the U-rotated resource state and a generalized d=16 Bell measurement. Preparing that resource may be as hard as U; this is a generic conditional construction, NOT an optical hardware compilation or a heralding efficiency measured on a chip.",
+    "chart_unitaries_tested": 45,
+    "ideal_single_postselected_outcome_probability": 0.00390625,
+    "input_dimension_two_ququarts": 16,
+    "max_teleportation_unitary_residual": 1.0842021724855044e-17,
+    "outputs_tested": 135,
+    "resource_ancilla_ququarts": 4,
+    "state_independent_ideal_herald_probability": true,
+    "status": "PASS"
+  },
+  "front4_true_Z2_lattice_gauge_matter_Gauss_law": {
+    "Hilbert_total_dim": 256,
+    "chart_local_Wilson_coupling_scan": [
+      {
+        "chart_local_Wilson_coupling": 0,
+        "ground_energy": -4.606821609057356,
+        "internal_sector_weights": {
+          "sector20": 2.174333575601789e-18,
+          "sector24": -2.0990323465908817e-17,
+          "uniform": 0.9999999999998653
+        }
+      },
+      {
+        "chart_local_Wilson_coupling": 0.3,
+        "ground_energy": -4.6097679266264135,
+        "internal_sector_weights": {
+          "sector20": 0.01975573556669978,
+          "sector24": 0.008924874473229538,
+          "uniform": 0.9713193899601578
+        }
+      },
+      {
+        "chart_local_Wilson_coupling": 1.0,
+        "ground_energy": -4.853024745745744,
+        "internal_sector_weights": {
+          "sector20": 0.5079493559627035,
+          "sector24": 0.44560103804875123,
+          "uniform": 0.04644960598853618
+        }
+      },
+      {
+        "chart_local_Wilson_coupling": 2.0,
+        "ground_energy": -5.523023444151109,
+        "internal_sector_weights": {
+          "sector20": 0.46712122428458136,
+          "sector24": 0.5051999466515396,
+          "uniform": 0.027678829063973995
+        }
+      }
+    ],
+    "chart_local_defect_Wilson_mixes_spectral_sectors": true,
+    "couplings": {
+      "electric": 0.5,
+      "hopping": 0.4,
+      "mass": 0.6,
+      "plaquette": 0.25
+    },
+    "engineered_24D_is_lowest_of_three_internal_sectors": true,
+    "engineered_24D_sector_ground_energy": -4.81952876499293,
+    "gauge_generators": "G_v = Z_matter(v) X_link(v-1) X_link(v)",
+    "gauge_invariant_Wilson_operator": "W_square=product_4 Z_link",
+    "gauge_invariant_hamiltonian": "H=-t sum X_m(v) Z_link(v) X_m(v+1) -g sum X_link -m sum Z_matter -k W_square",
+    "global_45chart_internal_fiber_coupling": "Delta*(12 I45-A_GQ)-lambda*W_square tensor P24",
+    "global_fiber_Wilson_coupling_lambda": 1.0,
+    "global_fiber_internal_delta": 0.01,
+    "independent_Z2_Gauss_constraints": 4,
+    "lattice_geometry": "one square cycle of four matter vertices and four link qubits",
+    "max_exact_Gauss_commutation_error": 0.0,
+    "physical_Gauss_plus1_subspace_dim": 16,
+    "plaquette_coupling_scan": [
+      {
+        "first_excitation_gap": 3.1036891701352354,
+        "ground_Wilson_loop_mean": 0.008780022641517437,
+        "ground_energy": -4.588422957480805,
+        "plaquette_coupling": 0
+      },
+      {
+        "first_excitation_gap": 3.0421454146290507,
+        "ground_Wilson_loop_mean": 0.06079361313137824,
+        "ground_energy": -4.591903745545297,
+        "plaquette_coupling": 0.1
+      },
+      {
+        "first_excitation_gap": 2.9525494550976896,
+        "ground_Wilson_loop_mean": 0.13782469703944714,
+        "ground_energy": -4.606821609057359,
+        "plaquette_coupling": 0.25
+      },
+      {
+        "first_excitation_gap": 2.8136710970156042,
+        "ground_Wilson_loop_mean": 0.2604152934731021,
+        "ground_energy": -4.656793241145304,
+        "plaquette_coupling": 0.5
+      },
+      {
+        "first_excitation_gap": 2.6674766693267635,
+        "ground_Wilson_loop_mean": 0.39244053051295746,
+        "ground_energy": -4.755195809451966,
+        "plaquette_coupling": 0.8
+      }
+    ],
+    "status": "PASS",
+    "theory_boundary": "Gauss law exact on finite four-vertex Z2 gauge model, but chart projector coupling chosen by hand; no emergent spatial dimensions, continuous SU3 standard-model gauge group or Lorentzian gravity.",
+    "uncoupled_20D_sector_ground_energy": -4.516821609057361,
+    "uncoupled_uniform_sector_ground_energy": -4.606821609057361
+  },
+  "front5_globally_labeled_ray_chart_leakage": {
+    "25bin_compression_leak_reduction_bits": 0.8860103671461546,
+    "case_distribution": [
+      {
+        "conditional_chart_entropy_bits": 3.169925001442312,
+        "distinct_possible_reported_sequences": 40,
+        "maximum_a_posteriori_guess_accuracy": 0.1111111111111111,
+        "mutual_info_chart_to_rays_bits": 2.3219280948873626,
+        "photons_on_fixed_chart": 1
+      },
+      {
+        "conditional_chart_entropy_bits": 1.188721875540867,
+        "distinct_possible_reported_sequences": 1600,
+        "maximum_a_posteriori_guess_accuracy": 0.5555555555555556,
+        "mutual_info_chart_to_rays_bits": 4.303131220788808,
+        "photons_on_fixed_chart": 2
+      },
+      {
+        "conditional_chart_entropy_bits": 0.3467105470327529,
+        "distinct_possible_reported_sequences": 19840,
+        "maximum_a_posteriori_guess_accuracy": 0.8611111111111112,
+        "mutual_info_chart_to_rays_bits": 5.145142549296922,
+        "photons_on_fixed_chart": 3
+      },
+      {
+        "conditional_chart_entropy_bits": 0.09286889652663023,
+        "distinct_possible_reported_sequences": 177280,
+        "maximum_a_posteriori_guess_accuracy": 0.9618055555555556,
+        "mutual_info_chart_to_rays_bits": 5.398984199803045,
+        "photons_on_fixed_chart": 4
+      }
+    ],
+    "critical_caveat": "No chart ID is explicitly logged, but a globally labeled Witting outcome still leaks chart identity. With repeated photons on the same fixed chart, chart inference rapidly improves. Resampling each chart per photon changes the leakage calculation.",
+    "one_shot_25bin_compressed_chart_information_leak_bits": 1.4359177277412076,
+    "prior_chart_entropy_bits": 5.491853096329675,
+    "single_ray_compatible_chart_count": 9,
+    "single_ray_information_leak_bits": 2.321928094887362,
+    "status": "PASS"
+  },
+  "front6_one_photon_15D_model_residual_falsifier": {
+    "40_global_outcomes_normalized_simplex_dim": 39,
+    "caveat": "The chi-square reference is asymptotic and assumes i.i.d. uniform counts. A 24D sensor corruption can pass undetected, and nuisance-fitted alternatives need a different calibrated test distribution.",
+    "hidden_chart_model_parameter_dim": 24,
+    "null_goodness_of_fit_constraints_dim": 15,
+    "pearson_like_chi_square": "chi=40*N*||R(p_observed-1_40/40)||^2",
+    "residual_orthogonal_projector_exact": true,
+    "seeded_null_mean_chisquare": 14.708671666666664,
+    "seeded_null_simulation_runs": 400,
+    "status": "PASS",
+    "undetectable_24D_calibration_modes_remain": true,
+    "uniform_model_asymptotic_reference_chi_square_degrees_of_freedom": 15
+  },
+  "scope": "Mathematical finite models, random seeded simulations and exact matrix algebra; not hardware demonstrations or a TOE.",
+  "status": "PASS"
+}
