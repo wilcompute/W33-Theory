@@ -1,0 +1,78 @@
+{
+  "schema": "w33.six_label_dual_geometry.v1",
+  "status": "PASS",
+  "source": "analysis/w33_20261120_six_label_dual_quantum_geometry.py",
+  "test_suite": "tests/test_w33_20261120_six_label_dual_quantum_geometry.py",
+  "q3": {
+    "graph_order": 40,
+    "adjacency_spectrum": {
+      "2": 24,
+      "12": 1,
+      "-4": 15
+    },
+    "graph_isomorphism_type": "W(3,3) symplectic point graph versus nonisomorphic Q(4,3) dual point graph",
+    "induced_small_motif_histogram_agreement": {
+      "2": {
+        "types": 2,
+        "subsets_per_graph": 780
+      },
+      "3": {
+        "types": 4,
+        "subsets_per_graph": 9880
+      },
+      "4": {
+        "types": 10,
+        "subsets_per_graph": 91390
+      },
+      "5": {
+        "types": 23,
+        "subsets_per_graph": 658008
+      }
+    },
+    "independent_triads_each": 3240,
+    "point_common_neighbor_hist": {
+      "1": 2880,
+      "4": 360
+    },
+    "dual_common_neighbor_hist": {
+      "0": 1080,
+      "2": 2160
+    },
+    "first_two_binomial_moments_both": [
+      4320,
+      2160
+    ],
+    "third_binomial_moments": [
+      1440,
+      0
+    ],
+    "induced_K33_counts": [
+      720,
+      0
+    ],
+    "nondegenerate_2planes": 90,
+    "unordered_symplectic_tensor_splits": 45,
+    "induced_K33_per_split": 16,
+    "tensor_factors": "For each of 45 mutually orthogonal symplectic plane pairs, Weyl algebras have dimensions 9 and 9, commute and generate full M9(C)"
+  },
+  "prime_field_controls": [
+    {
+      "q": 2,
+      "point_K33": 10,
+      "dual_K33": 10
+    },
+    {
+      "q": 3,
+      "point_K33": 720,
+      "dual_K33": 0
+    },
+    {
+      "q": 5,
+      "point_K33": 130000,
+      "dual_K33": 0
+    }
+  ],
+  "general_odd_prime_power_theorem": "W(3,q) point induced K33 = q^2(q^2+1)*binom(q+1,3)^2/2; Q(4,q) dual point induced K33 = 0, for odd q",
+  "scope": "Pure finite polar geometry and stabilizer algebra; no dynamical or physical TOE claims",
+  "verification": "12/12 tests passed on Windows Nov 20 2026; local original 78 dirty entries preserved"
+}
