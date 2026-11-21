@@ -1,0 +1,47 @@
+{
+  "ambient_projective_centers_examined": 1093,
+  "anisotropic_centers_checked": 729,
+  "boundary": "Exact for the natural H(3) octonionic embedding, not a claim for arbitrary G2(q) embeddings or quantum dynamics.",
+  "classes": [
+    {
+      "centers": 351,
+      "fixed_pointwise_lines": 28,
+      "quadratic_norm": 1,
+      "surviving_edges": 168,
+      "surviving_lines": 28
+    },
+    {
+      "centers": 378,
+      "fixed_pointwise_lines": 52,
+      "quadratic_norm": 2,
+      "surviving_edges": 312,
+      "surviving_lines": 52
+    }
+  ],
+  "example_centers": {
+    "1": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      2
+    ],
+    "2": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ]
+  },
+  "hexagon_edges": 2184,
+  "hexagon_lines": 364,
+  "hexagon_points": 364,
+  "interpretation": "Ambient reflection does not preserve H(3) octonionic incidence; only H-lines contained in its polar fixed hyperplane survive.",
+  "schema": "toe.20261121.G2_reflection_line_obstruction.v1",
+  "status": "PASS"
+}

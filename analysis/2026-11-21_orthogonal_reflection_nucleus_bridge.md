@@ -131,3 +131,34 @@ does not forbid every other embedding or nonlinear correspondence.
 - FinInG generalized hexagon documentation: https://gap-packages.github.io/FinInG/doc/chap12_mj.html
 - Characterization of natural H(q) embedding: https://arxiv.org/abs/1307.8262
 - Odd/even orthogonal/symplectic distinction: https://fossies.org/linux/gap/pkg/fining/doc/chap12_mj.html
+
+
+## Additional exact H(3) incidence obstruction: all 729 reflections
+
+A further independent test goes beyond the point projection. The ambient
+orthogonal reflection R_c fixes the polar hyperplane and preserves Q(6,3),
+but **does not preserve the selected octonionic hexagon lines**. The new
+[exhaustive verifier](toe_20261121_octonionic_reflection_line_test.py)
+uses the existing, directly constructed split-octonion zero-product line
+relation and enumerates all 729 nonsingular centers.
+
+| Q(c) | Centers | Surviving H(3) lines / 364 | Surviving edges / 2184 |
+|---|---:|---:|---:|
+| 1 | 351 | 28 | 168 |
+| 2 | 378 | 52 | 312 |
+
+For every one of those centers, **the only H(3) lines whose images
+remain H(3) lines are the lines pointwise fixed in c-perp**. This is
+verified by enumerating all 364 maximal K4 hexagon lines, transporting
+their vertices through R_c, and checking equality of the transported
+line set with the fixed-line set. Every hexagon line contains six
+unordered point pairs, explaining the edge multiplicities 6*28 and
+6*52. Tests and frozen JSON are respectively
+[test](../tests/test_toe_20261121_octonionic_reflection_lines.py) and
+[data](../data/toe_20261121_octonionic_reflection_lines.json).
+
+This rules out the reflection as an H(3) incidence automorphism and
+strengthens the geometric warning about treating its two-point
+projection orbits as exceptional-geometry gauge equivalence. It is
+still **not** a no-go theorem for arbitrary nonlinear or
+higher-dimensional Pauli/Clifford encodings.
