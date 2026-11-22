@@ -125,7 +125,7 @@ class PhysicalFivefrontContinuation(unittest.TestCase):
         self.assertEqual(len(set(self.r["best_seeded_candidate_labels_zero_based"])),24)
 
     def test_all_models_disclaim_TOE_physical_measurements(self):
-        self.assertIn("no physical",self.g["limits"].lower())
+        self.assertIn("physical QCD experiment",self.g["limits"])
         self.assertIn("no physical",self.d["limits"].lower())
         self.assertIn("not a global",self.r["limits"].lower())
 
