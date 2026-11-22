@@ -8,6 +8,8 @@ on:
       - 'analysis/toe_20261122_witting_phase_schmidt_law.py'
       - 'tests/test_toe_20261122_witting_approximate_gate_no_go.py'
       - 'tests/test_toe_20261122_witting_phase_schmidt_law.py'
+      - 'analysis/toe_20261122_witting_operator_entropy_stationary_phase.py'
+      - 'tests/test_toe_20261122_witting_operator_entropy_stationary_phase.py'
       - '.github/workflows/witting-approximate-gate-no-go.yml'
   pull_request:
     paths:
@@ -15,6 +17,8 @@ on:
       - 'analysis/toe_20261122_witting_phase_schmidt_law.py'
       - 'tests/test_toe_20261122_witting_approximate_gate_no_go.py'
       - 'tests/test_toe_20261122_witting_phase_schmidt_law.py'
+      - 'analysis/toe_20261122_witting_operator_entropy_stationary_phase.py'
+      - 'tests/test_toe_20261122_witting_operator_entropy_stationary_phase.py'
   workflow_dispatch:
 
 permissions:
@@ -35,8 +39,10 @@ jobs:
         run: python analysis/toe_20261122_witting_approximate_gate_no_go.py
       - name: Replay full-phase symbolic factorization
         run: python analysis/toe_20261122_witting_phase_schmidt_law.py
+      - name: Prove independent operator entropy stationary phases
+        run: python analysis/toe_20261122_witting_operator_entropy_stationary_phase.py
       - name: Regression tests
-        run: python -m pytest -q tests/test_toe_20261122_witting_approximate_gate_no_go.py tests/test_toe_20261122_witting_phase_schmidt_law.py
+        run: python -m pytest -q tests/test_toe_20261122_witting_approximate_gate_no_go.py tests/test_toe_20261122_witting_phase_schmidt_law.py tests/test_toe_20261122_witting_operator_entropy_stationary_phase.py
       - name: Upload certificates
         if: always()
         uses: actions/upload-artifact@v4
@@ -45,5 +51,6 @@ jobs:
           path: |
             data/toe_20261122_witting_approximate_gate_no_go.json
             data/toe_20261122_witting_phase_schmidt_law.json
+            data/toe_20261122_witting_operator_entropy_stationary_phase.json
           if-no-files-found: warn
           retention-days: 30
