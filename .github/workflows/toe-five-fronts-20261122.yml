@@ -1,0 +1,56 @@
+name: TOE five-front independent exact certificates
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/toe_20261122_discrete_witting_dense_su4.py'
+      - 'analysis/toe_20261122_h27_central_fourier_bridge.py'
+      - 'analysis/toe_20261122_causal_orientation_no_go.py'
+      - 'analysis/toe_20261122_optical_control_resources.py'
+      - 'analysis/toe_20261122_e6_h27_chirality_gate.py'
+      - 'tests/test_toe_20261122_five_fronts.py'
+      - '.github/workflows/toe-five-fronts-20261122.yml'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  exact-math-and-negative-controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact math test dependencies
+        run: python -m pip install --disable-pip-version-check numpy sympy pytest
+      - name: Verify all ten targeted tests
+        run: python -m pytest -q tests/test_toe_20261122_five_fronts.py
+      - name: Regenerate five machine-readable research certificates
+        run: |
+          python analysis/toe_20261122_discrete_witting_dense_su4.py
+          python analysis/toe_20261122_h27_central_fourier_bridge.py
+          python analysis/toe_20261122_causal_orientation_no_go.py
+          python analysis/toe_20261122_optical_control_resources.py
+          python analysis/toe_20261122_e6_h27_chirality_gate.py
+      - name: Verify complete output manifest
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("data")
+          d=lambda s:json.loads((p/("toe_20261122_"+s+".json")).read_text())
+          a=d("discrete_witting_dense_su4")
+          h=d("h27_central_fourier_bridge")
+          c=d("causal_orientation_no_go")
+          o=d("optical_control_resources")
+          e=d("e6_h27_chirality_gate")
+          assert len(a["finite_field_certificates"])==6
+          assert all(z["commutant_equation_ranks"][-1]==224 for z in a["finite_field_certificates"])
+          assert h["invertible_direct_equivariant_intertwiner"] is False
+          assert c["induced_C4s"]==1620
+          assert o["SU4_real_dimension"]==15
+          assert e["generation_three_selected_by_group_or_anomaly_alone"] is False
+          print("PASS all five generated source-specific proof/falsifier receipts")
+          PY
