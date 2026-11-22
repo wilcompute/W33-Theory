@@ -43,7 +43,7 @@ The ring of integers of `Q(omega)` is `Z[omega]`. The element `(5+omega)/3` is *
 ```
 closure(<A,B,C,D>) = { U in U(4) : det(U) in mu6 }.
 ```
-Every special-unitary four-mode target can therefore be approximated arbitrarily closely by **finite words in four fixed-angle optical gates**. No tunable angle is needed **in the abstract gate alphabet**. An exact finite word for arbitrary U4 is not guaranteed; overall phase sectors are discrete.
+Every special-unitary four-mode target can therefore be approximated arbitrarily closely by **finite words in four fixed-angle optical gates**. No tunable angle is needed **in the abstract gate alphabet**. This is also **minimal within a gate alphabet consisting only of rank-one phase/reflection operations**: any three such projectors have a nonzero common orthogonal fixed vector in C4, so their generated group cannot be dense in SU4. An exact finite word for arbitrary U4 is not guaranteed; overall phase sectors are discrete.
 
 **Prior-art boundary:** the density argument uses standard compact Lie group, algebraic integer and Schur/Burnside principles. The concrete Witting four-ray modular 224-rank witness and trace word are what this pass adds. Related: [quantum Hamiltonian controllability](https://doi.org/10.1140/epjqt/s40507-022-00138-x), [unitary-design density arguments](https://pmc.ncbi.nlm.nih.gov/articles/PMC9886645/) and [universality of single quantum gates](https://arxiv.org/abs/1404.7822). This is not a claim of literature-wide priority without a complete prior-art review.
 
