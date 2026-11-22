@@ -1,0 +1,102 @@
+{
+  "exact_third_stage_distinct_complex_matrices": 7793496,
+  "exact_third_stage_inequivalent_left_H_cosets": 12027,
+  "finite_H_order": 648,
+  "normal_H27_order": 27,
+  "physical_boundary": "Finite third-stage census; no theorem of short-word approximation, hardware fault tolerance or computational energy advantage.",
+  "proof": "H fixes ray25 pointwise. Partition 27^3 normalized words by exact fixed-bra signatures. In each bucket, classify x~y iff xy^dagger belongs to the 648 exact Hessian matrices, using pair-integer multiplication and full byte equality. H acts freely on invertible matrices. Thus 12027*648 exact matrices.",
+  "redundant_raw_expressions": 4961088,
+  "stage2_recovery": {
+    "coset_count": 595,
+    "exact_matrix_membership_comparisons": 458,
+    "signature_bucket_count": 514,
+    "signature_class_profile": [
+      {
+        "bucket_size": 1,
+        "buckets": 486,
+        "cosets": 1
+      },
+      {
+        "bucket_size": 8,
+        "buckets": 27,
+        "cosets": 4
+      },
+      {
+        "bucket_size": 27,
+        "buckets": 1,
+        "cosets": 1
+      }
+    ]
+  },
+  "stage3_canonical_representative_sha256": "a7355a26cf0c65499a29cfda20d5a8fbea14662ffc15a8337554473c0014c6c7",
+  "stage3_common_Eisenstein_denominator": 2187,
+  "stage3_coset_classification": {
+    "coset_count": 12027,
+    "exact_matrix_membership_comparisons": 35952,
+    "signature_bucket_count": 9478,
+    "signature_class_profile": [
+      {
+        "bucket_size": 1,
+        "buckets": 8748,
+        "cosets": 1
+      },
+      {
+        "bucket_size": 6,
+        "buckets": 216,
+        "cosets": 3
+      },
+      {
+        "bucket_size": 13,
+        "buckets": 432,
+        "cosets": 4
+      },
+      {
+        "bucket_size": 16,
+        "buckets": 54,
+        "cosets": 4
+      },
+      {
+        "bucket_size": 109,
+        "buckets": 27,
+        "cosets": 25
+      },
+      {
+        "bucket_size": 216,
+        "buckets": 1,
+        "cosets": 12
+      }
+    ]
+  },
+  "stage3_rep_denominator": 729,
+  "status": "PASS_THIRD_STAGE_EXACT_FULL_HESSIAN_COSET_CENSUS",
+  "third_stage_raw_expressions": 12754584,
+  "three_seeded_Haar_target_benchmarks": [
+    {
+      "coset_rep_index": 13015,
+      "primitive_length": 22,
+      "primitive_word": "ACBadAcBAcbdBaBCBaBdaC",
+      "process_infidelity": 0.1049012254983418,
+      "projective_distance": 0.3283394617549869,
+      "projective_trace_overlap": 0.9460965989272228,
+      "target_index": 0
+    },
+    {
+      "coset_rep_index": 11486,
+      "primitive_length": 28,
+      "primitive_word": "aBaBCBadABaCbadcBAcbAdaBAcbA",
+      "process_infidelity": 0.1953428695587065,
+      "projective_distance": 0.45381311536491464,
+      "projective_trace_overlap": 0.8970268281613953,
+      "target_index": 1
+    },
+    {
+      "coset_rep_index": 4849,
+      "primitive_length": 24,
+      "primitive_word": "cbAbCdBAcbdAcBAcbdABAcba",
+      "process_infidelity": 0.20482325316263017,
+      "projective_distance": 0.4653453895703442,
+      "projective_trace_overlap": 0.8917268342028123,
+      "target_index": 2
+    }
+  ]
+}

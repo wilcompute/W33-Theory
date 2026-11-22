@@ -1,0 +1,96 @@
+{
+  "algebraic_linear_inversion_risk_formula": "E(||rhohat-rho||_HS^2) = (sum_k p_k ||F^-1(E_k)||_HS^2 - Tr(rho^2))/N, for N detected iid multinomial outcomes",
+  "calibration_model": "Unknown uniform source/measurement depolarization delta=0.01: rho_observed=(1-delta)rho+delta I4/4",
+  "design_comparison": [
+    {
+      "Naimark_isometry_deviation": 5.551115123125783e-16,
+      "complex_rectangular_Stiefel_real_dimension": 296,
+      "direct_dilation_unitary_dimension": 39,
+      "expected_linear_inversion_HS_MSE_times_detected_shot_count": {
+        "blocked_ray1": 18.700799999999973,
+        "fixed_ray25": 18.830399999999976,
+        "maximally_mixed": 19.48319999999997,
+        "seeded_generic_pure": 18.710366701830477,
+        "universal_ray36": 18.74399999999998
+      },
+      "generic_full_mesh_two_mode_cells": 741,
+      "name": "39-effect",
+      "outcome_count": 39,
+      "reconstruction_frame_condition_number": 10.581420657458494,
+      "reconstruction_frame_min_eigenvalue": 0.009860407824030967
+    },
+    {
+      "Naimark_isometry_deviation": 4.440892098500626e-16,
+      "complex_rectangular_Stiefel_real_dimension": 224,
+      "direct_dilation_unitary_dimension": 30,
+      "expected_linear_inversion_HS_MSE_times_detected_shot_count": {
+        "blocked_ray1": 21.65999999999999,
+        "fixed_ray25": 27.059999999999988,
+        "maximally_mixed": 23.759999999999987,
+        "seeded_generic_pure": 22.058612576270825,
+        "universal_ray36": 23.459999999999994
+      },
+      "generic_full_mesh_two_mode_cells": 435,
+      "name": "30-effect-0",
+      "outcome_count": 30,
+      "reconstruction_frame_condition_number": 14.082762530298238,
+      "reconstruction_frame_min_eigenvalue": 0.012345679012345666
+    },
+    {
+      "Naimark_isometry_deviation": 4.440892098500626e-16,
+      "complex_rectangular_Stiefel_real_dimension": 224,
+      "direct_dilation_unitary_dimension": 30,
+      "expected_linear_inversion_HS_MSE_times_detected_shot_count": {
+        "blocked_ray1": 21.659999999999993,
+        "fixed_ray25": 27.059999999999988,
+        "maximally_mixed": 23.75999999999999,
+        "seeded_generic_pure": 22.05861257627083,
+        "universal_ray36": 23.459999999999994
+      },
+      "generic_full_mesh_two_mode_cells": 435,
+      "name": "30-effect-1",
+      "outcome_count": 30,
+      "reconstruction_frame_condition_number": 14.082762530298238,
+      "reconstruction_frame_min_eigenvalue": 0.012345679012345666
+    },
+    {
+      "Naimark_isometry_deviation": 4.440892098500626e-16,
+      "complex_rectangular_Stiefel_real_dimension": 224,
+      "direct_dilation_unitary_dimension": 30,
+      "expected_linear_inversion_HS_MSE_times_detected_shot_count": {
+        "blocked_ray1": 21.659999999999993,
+        "fixed_ray25": 27.059999999999988,
+        "maximally_mixed": 23.75999999999999,
+        "seeded_generic_pure": 22.05861257627083,
+        "universal_ray36": 23.459999999999994
+      },
+      "generic_full_mesh_two_mode_cells": 435,
+      "name": "30-effect-2",
+      "outcome_count": 30,
+      "reconstruction_frame_condition_number": 14.082762530298227,
+      "reconstruction_frame_min_eigenvalue": 0.012345679012345671
+    },
+    {
+      "Naimark_isometry_deviation": 4.440892098500626e-16,
+      "complex_rectangular_Stiefel_real_dimension": 224,
+      "direct_dilation_unitary_dimension": 30,
+      "expected_linear_inversion_HS_MSE_times_detected_shot_count": {
+        "blocked_ray1": 21.65999999999999,
+        "fixed_ray25": 27.059999999999988,
+        "maximally_mixed": 23.75999999999999,
+        "seeded_generic_pure": 22.05861257627083,
+        "universal_ray36": 23.459999999999994
+      },
+      "generic_full_mesh_two_mode_cells": 435,
+      "name": "30-effect-3",
+      "outcome_count": 30,
+      "reconstruction_frame_condition_number": 14.082762530298242,
+      "reconstruction_frame_min_eigenvalue": 0.01234567901234566
+    }
+  ],
+  "four_mode_input_dimension": 4,
+  "full_mesh_cell_reduction_if_generic_30_vs39": 0.41295546558704455,
+  "hypothetical_infinite_shot_pure_state_trace_distance_bias": 0.007499999999999986,
+  "physical_boundary": "Specific isometries and unitary completions exist numerically. Full generic 30x30/39x39 meshes are not optimized, built or calibrated. Naimark 30 outputs does not imply 30 independent detectors with time multiplexing. Analytic variances ignore systematic SPAM and detector drift.",
+  "status": "PASS_WITTING_30_EFFECT_NAIMARK_COMPLETION_AND_ANALYTIC_SHOT_RISK"
+}

@@ -1,0 +1,36 @@
+{
+  "GF2_augmented_with_context_parity_rank": 25,
+  "GF2_context_point_incidence_rank": 25,
+  "exact_cover_ovoid_exists": false,
+  "exhaustive_dynamic_programming_branch_tests": 64,
+  "exhaustive_dynamic_programming_distinct_states": 65,
+  "explanation": "Exactly one selected ray in each basis implies an ovoid of W(3,3); exhaustive bitset exact-cover search proves none. The parity augmented matrix rank does not increase, so no odd number of context rows has even ray multiplicities. An explicit 12-ray GF2 valuation meets every context oddly but sometimes in three rays.",
+  "explicit_12_ray_parity_odd_transversal": [
+    3,
+    7,
+    17,
+    20,
+    22,
+    24,
+    26,
+    27,
+    29,
+    33,
+    36,
+    38
+  ],
+  "incidence_per_basis": 4,
+  "incidence_per_ray": 4,
+  "literature_prior": "Witting/Penrose 40-40 KS is known (V. Waegell and P. K. Aravind, 2017, arXiv:1701.06512); W(3,q) odd-q ovoid obstruction is known. New here only the code-level tie-in to the explicit 30-effect SIC/MUB Witting partition.",
+  "orthogonal_complete_bases": 40,
+  "orthogonality_edges": 240,
+  "ovoid_would_require_true_rays": 10,
+  "parity_only_context_proof_exists": false,
+  "parity_transversal_context_intersection_histogram": {
+    "1": 36,
+    "3": 4
+  },
+  "physical_boundary": "Contextuality is a theorem about potential quantum measurements, not a physical demonstration or a unique explanation of observed physics.",
+  "ray_count": 40,
+  "status": "PASS_EXACT_WITTING_40_40_KS_UNCOLORABILITY_OVOID_AND_PARITY_FIREWALL"
+}

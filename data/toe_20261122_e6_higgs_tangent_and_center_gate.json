@@ -1,0 +1,35 @@
+{
+  "E6_81D_extension_with_identified_center_exists": false,
+  "E6_decomposition": "27=16_1+10_-2+1_4 and conjugate bar27",
+  "E6_group_dimension": 78,
+  "Higgs_nonsinglet_field_count": 156,
+  "Higgs_singlet_field_count": 6,
+  "broken_complex_gauge_directions": 33,
+  "broken_gauge_charged_spinor_directions": 32,
+  "center_eigenspace_dimensions": {
+    "1": 27,
+    "omega": 27,
+    "omega_squared": 27
+  },
+  "central_assumptions": "H27 is the center-correct operator subgroup of simply-connected E6, with H27 center generator identified with global Z(E6). Honest linear E6 action and exact 3xregular H27 source action are required. Relaxing any premise evades this scoped no-go.",
+  "central_module": "three copies of the 27D H27 regular address permutation representation",
+  "central_no_go_proof": "An 81D E6 module with center eigenspaces (27,27,27) has its center-trivial 27D piece equal to 27 E6 trivial modules, since the smallest nontrivial center-trivial E6 irrep is adjoint78. All 27 must be H27-fixed, but the three regular H27 modules have exactly 3 fixed vectors. Contradiction.",
+  "components_left_unlifted_at_quadratic_order": {
+    "10_and_bar10": 60,
+    "spinors_after_goldstone_quotient": 64
+  },
+  "driver_Fterm_Jacobian_rank": 5,
+  "forced_E6_trivial_rep_dimension": 27,
+  "full_Higgs_complex_chiral_fields": 162,
+  "higgs_family_pairs": 3,
+  "minimum_nontrivial_complex_E6_irrep_with_trivial_center_dimension": 78,
+  "necessary_dimension_for_any_center_compatible_nontrivial_E6_supermodule": 132,
+  "physical_boundary": "Neither first-order charged tangent nor center-character obstruction proves general E6 model nonviability. No full gauge vacuum or phenomenological spectrum derived.",
+  "source_center_trivial_sector_dimension": 27,
+  "status": "PASS_E6_FULL_HIGGS_CHARGED_TANGENT_AND_81D_CENTRAL_EXTENSION_NO_GO",
+  "tangent_caution": "These are first-order complex tangent/mass-Hessian null directions, NOT proof of 124 exact nonlinear D-flat moduli. Higher-order F constraints and added superpotential terms can obstruct them.",
+  "total_Fflat_Zariski_tangent_dimension": 157,
+  "unbroken_connected_SO10_dimension": 45,
+  "unlifted_nonsinglet_Higgs_tangent_after_gauge_quotient": 124,
+  "whole_source_H27_invariant_dimension": 3
+}
