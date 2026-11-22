@@ -1,0 +1,79 @@
+{
+ "light_flavon": {
+  "v_F_min_GeV": 1828.9641504596702,
+  "note": "flavon scale >~ 2 TeV keeps epsilon_K safe for O(1) phases; PQ-neutral so NA62 unaffected"
+ },
+ "hl_lhc_reach": {
+  "lightest_T_exclusion": 2052.0,
+  "lightest_T_discovery": 1642.0,
+  "M_VL_exclusion": 2096.4,
+  "M_VL_discovery": 1686.4,
+  "current_M_VL_limit": 1737.0,
+  "soft_lepton_E_gt_5GeV_fraction_rest_frame": 0.9797234372020991
+ },
+ "third_family_axion": {
+  "rows": {
+   "KSVZ (one neutral heavy quark)": {
+    "E_over_N": 0.0,
+    "g_agg_relative_to_KSVZ": 1.0,
+    "integration_time_factor_vs_KSVZ": 1.0
+   },
+   "quarks only (t, b)": {
+    "E_over_N": 1.6666666666666667,
+    "N_DW": 2,
+    "g_agg_relative_to_KSVZ": 0.13194444444444436,
+    "integration_time_factor_vs_KSVZ": 3299.404516539936
+   },
+   "t, b, tau": {
+    "E_over_N": 2.666666666666667,
+    "N_DW": 2,
+    "g_agg_relative_to_KSVZ": 0.3888888888888891,
+    "integration_time_factor_vs_KSVZ": 43.72178259058715
+   }
+  },
+  "note": "E/N = 5/3 (quarks only) nearly cancels the 1.92 QCD term: g_agg ~ 7.7x weaker than KSVZ; N_DW = 2 needs a domain-wall solution (Lazarides-Shafi or tiny explicit breaking) in the post-inflationary scenario"
+ },
+ "kev_window": {
+  "T_no_photodisintegration_keV": 5.336841890124264,
+  "T_no_distortion_keV": 0.47,
+  "T_BBN_end_keV": 30,
+  "DH_pull_PRIMAT": 5.788709135130384,
+  "DH_pull_PArthENoPE": 1.8615685560065547
+ },
+ "neff_forecast": {
+  "Simons Observatory": 3.879999999999999,
+  "CMB-S4": 6.466666666666665
+ },
+ "Vud_neutron": {
+  "bottle 877.8": {
+   "V_ud": 0.9745618279356774,
+   "sigma": 0.00043508380008146826,
+   "pull_vs_superallowed": 1.5570698837933674,
+   "unitarity_K_l3": {
+    "sum": 0.9995593664693289,
+    "deficit_sigma": -0.4954904536673618
+   },
+   "unitarity_K_mu2": {
+    "sum": 1.0005007964693289,
+    "deficit_sigma": 0.5707574183562127
+   }
+  },
+  "beam 888.1": {
+   "V_ud": 0.9688939631348187,
+   "sigma": 0.0011618581805759064,
+   "pull_vs_superallowed": -4.021640901158642,
+   "unitarity_K_l3": {
+    "sum": 0.9885441217990953,
+    "deficit_sigma": -5.0526604168484806
+   },
+   "unitarity_K_mu2": {
+    "sum": 0.9894855517990954,
+    "deficit_sigma": -4.646921686048054
+   }
+  },
+  "superallowed_Kl3": {
+   "sum": 0.9979387229,
+   "deficit_sigma": -3.121202700975276
+  }
+ }
+}
