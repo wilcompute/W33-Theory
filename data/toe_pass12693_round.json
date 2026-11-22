@@ -1,0 +1,150 @@
+{
+ "low_neff": {
+  "post_BBN_entropy": {
+   "2.86": {
+    "F": 1.0478737503048883,
+    "DH_pred": 2.263171483921548e-05,
+    "pull": 5.786588098285496
+   },
+   "2.83": {
+    "F": 1.0561939109902507,
+    "DH_pred": 2.2347139766450785e-05,
+    "pull": 6.456661073615309
+   },
+   "2.95": {
+    "F": 1.0238043585249426,
+    "DH_pred": 2.34890061586493e-05,
+    "pull": 3.8234923803692307
+   }
+  },
+  "low_reheating": "2501.01369: low T_RH raises Y_p; T_RH > 5.96 MeV, N_eff > 2.98 (BBN+Planck+lensing+DESI): cannot produce low Y_p and N_eff ~ 2.85 together",
+  "lepton_asymmetry": {
+   "xi_e_for_helium": 0.013999999999999985,
+   "dNeff": 8.511063935522275e-05,
+   "note": "explains helium only; CMB N_eff = 2.86 stays -1.4 sigma"
+  }
+ },
+ "vlq_effective_limit": {
+  "sigma_slope_per_GeV": 0.00542982735400522,
+  "mass_shift_for_3x_rate": 202.329138118496,
+  "lightest_T_limit": 1692.329138118496,
+  "M_VL_limit": 1736.7291381184962,
+  "theta_long_lived_1mm": 1.1063132891645314e-08,
+  "note": "prompt regime theta > ~1e-7: standard searches with 3x rate; theta < theta_ll: displaced / R-hadron searches"
+ },
+ "aligned_FN": {
+  "rows": [
+   {
+    "dX_Q": 0,
+    "dX_d": 0,
+    "C_sd": 0.0,
+    "V_us": 1.0,
+    "md_over_ms": 1.0,
+    "flavour_ok_within_3": false,
+    "NA62_ok": true
+   },
+   {
+    "dX_Q": 0,
+    "dX_d": 1,
+    "C_sd": 0.11,
+    "V_us": 1.0,
+    "md_over_ms": 0.22,
+    "flavour_ok_within_3": false,
+    "NA62_ok": false
+   },
+   {
+    "dX_Q": 0,
+    "dX_d": 2,
+    "C_sd": 0.0484,
+    "V_us": 1.0,
+    "md_over_ms": 0.0484,
+    "flavour_ok_within_3": false,
+    "NA62_ok": true
+   },
+   {
+    "dX_Q": 1,
+    "dX_d": 0,
+    "C_sd": 0.11,
+    "V_us": 0.22,
+    "md_over_ms": 0.22,
+    "flavour_ok_within_3": false,
+    "NA62_ok": false
+   },
+   {
+    "dX_Q": 1,
+    "dX_d": 1,
+    "C_sd": 0.22,
+    "V_us": 0.22,
+    "md_over_ms": 0.0484,
+    "flavour_ok_within_3": true,
+    "NA62_ok": false
+   },
+   {
+    "dX_Q": 1,
+    "dX_d": 2,
+    "C_sd": 0.15839999999999999,
+    "V_us": 0.22,
+    "md_over_ms": 0.010648,
+    "flavour_ok_within_3": false,
+    "NA62_ok": false
+   },
+   {
+    "dX_Q": 2,
+    "dX_d": 0,
+    "C_sd": 0.0484,
+    "V_us": 0.0484,
+    "md_over_ms": 0.0484,
+    "flavour_ok_within_3": false,
+    "NA62_ok": true
+   },
+   {
+    "dX_Q": 2,
+    "dX_d": 1,
+    "C_sd": 0.15839999999999999,
+    "V_us": 0.0484,
+    "md_over_ms": 0.010648,
+    "flavour_ok_within_3": false,
+    "NA62_ok": false
+   },
+   {
+    "dX_Q": 2,
+    "dX_d": 2,
+    "C_sd": 0.0968,
+    "V_us": 0.0484,
+    "md_over_ms": 0.00234256,
+    "flavour_ok_within_3": false,
+    "NA62_ok": false
+   }
+  ],
+  "both_ok": []
+ },
+ "proton_fraction": {
+  "rows": {
+   "joint fit 7.5e-10": {
+    "f_p_strong_evolution": 0.075,
+    "f_p_no_evolution": 0.75
+   },
+   "KM3NeT-only 5.8e-8": {
+    "f_p_strong_evolution": 5.8,
+    "f_p_no_evolution": 58.0
+   }
+  },
+  "note": "f_p > 1 impossible: the KM3NeT-only flux cannot be cosmogenic; the joint flux needs f_p ~ 0.08 with strong evolution (Auger allows ~0.1)"
+ },
+ "empress": {
+  "chi2": 5.385818069082218,
+  "dof": 3,
+  "p": 0.14562971913226647,
+  "birge": 1.3398778637226874,
+  "EMPRESS_vs_others_pull": -2.2484883946218766,
+  "Yp_mean": 0.24385629727249578,
+  "Yp_sigma_inflated": 0.002015088726313755,
+  "Neff": 2.8252536363458285,
+  "Neff_sigma_inflated": 0.1550068251010581,
+  "combined_with_ACT": {
+   "Neff": 2.8456522128697115,
+   "sigma": 0.09960671169318029,
+   "pull_vs_SM": -1.9913094585559812
+  }
+ }
+}
