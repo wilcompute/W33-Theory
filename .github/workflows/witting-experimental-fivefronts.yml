@@ -5,7 +5,9 @@ on:
     branches: [master]
     paths:
       - 'analysis/toe_20261122_experiment_driven_five_fronts.py'
+      - 'analysis/toe_20261122_witting_fourmode_switch_compiler.py'
       - 'tests/test_toe_20261122_experiment_driven_five_fronts.py'
+      - 'tests/test_toe_20261122_witting_fourmode_switch_compiler.py'
       - '.github/workflows/witting-experimental-fivefronts.yml'
   pull_request:
     paths:
@@ -35,11 +37,17 @@ jobs:
         run: python analysis/toe_20261122_experiment_driven_five_fronts.py
       - name: Run 20 targeted tests
         run: python tests/test_toe_20261122_experiment_driven_five_fronts.py
+      - name: Compile 40 experimental four-mode Witting reflectors
+        run: |
+          python analysis/toe_20261122_witting_fourmode_switch_compiler.py
+          python tests/test_toe_20261122_witting_fourmode_switch_compiler.py
       - name: Upload certificate
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: witting-20261122-experimental-fivefronts
-          path: data/toe_20261122_experiment_driven_five_fronts.json
+          path: |
+            data/toe_20261122_experiment_driven_five_fronts.json
+            data/toe_20261122_witting_fourmode_switch_compiler.json
           if-no-files-found: warn
           retention-days: 30
