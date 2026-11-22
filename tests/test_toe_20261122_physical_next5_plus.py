@@ -100,7 +100,7 @@ class ResearchRegressions(unittest.TestCase):
             self.assertLess(a[2]["single_shot_fidelity_estimator_sd"],
                             a[1]["single_shot_fidelity_estimator_sd"])
     def test_no_real_experiment_or_TOE_claimed(self):
-        self.assertIn("NOT",self.o["limits"])
-        self.assertIn("not global W33",self.g["limits"])
+        self.assertIn("not device-independent",self.o["limits"].lower())
+        self.assertIn("not global w33",self.g["limits"].lower())
         self.assertIn("no device-independent",self.n["boundaries"].lower())
 if __name__=="__main__":unittest.main()
