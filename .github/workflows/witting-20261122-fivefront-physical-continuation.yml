@@ -1,0 +1,66 @@
+name: Witting fivefront physical continuation 2026-11-22
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/toe_20261122_witting_3design_collision_moments.py'
+      - 'analysis/toe_20261122_witting_coherence_cloning_capacity.py'
+      - 'analysis/toe_20261122_witting_40mode_naimark_finite_shots.py'
+      - 'analysis/toe_20261122_w33_two_plaquette_pair_creation.py'
+      - 'analysis/toe_20261122_witting_multicriteria_dualframe_search.py'
+      - 'tests/test_toe_20261122_fivefront_physical_continuation.py'
+      - '.github/workflows/witting-20261122-fivefront-physical-continuation.yml'
+  pull_request:
+    paths:
+      - 'analysis/toe_20261122_witting_3design_collision_moments.py'
+      - 'analysis/toe_20261122_witting_coherence_cloning_capacity.py'
+      - 'analysis/toe_20261122_witting_40mode_naimark_finite_shots.py'
+      - 'analysis/toe_20261122_w33_two_plaquette_pair_creation.py'
+      - 'analysis/toe_20261122_witting_multicriteria_dualframe_search.py'
+      - 'tests/test_toe_20261122_fivefront_physical_continuation.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  mathematical-reproduction:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install finite mathematical dependencies
+        run: python -m pip install numpy scipy networkx sympy
+      - name: Generate exact projective 3-design and purity moments
+        run: python analysis/toe_20261122_witting_3design_collision_moments.py
+      - name: Generate cloner antidegradability capacity certificate
+        run: python analysis/toe_20261122_witting_coherence_cloning_capacity.py
+      - name: Compile 40-mode photonic POVM and binomial bounds
+        run: python analysis/toe_20261122_witting_40mode_naimark_finite_shots.py
+      - name: Simulate Gauss-exact two-plaquette W33 dynamics
+        run: python analysis/toe_20261122_w33_two_plaquette_pair_creation.py
+      - name: Search 50k multiobjective compressed POVM configurations
+        run: python analysis/toe_20261122_witting_multicriteria_dualframe_search.py
+      - name: Run 19 targeted statistical and mathematical regressions
+        run: python tests/test_toe_20261122_fivefront_physical_continuation.py
+      - name: Archive numeric certificates
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Witting-20261122-optics-gauge-design-coherence
+          path: |
+            data/toe_20261122_witting_3design_collision_moments.json
+            data/toe_20261122_witting_coherence_cloning_capacity.json
+            data/toe_20261122_witting_40mode_naimark_finite_shots.json
+            data/toe_20261122_w33_two_plaquette_pair_creation.json
+            data/toe_20261122_witting_multicriteria_dualframe_search.json
+          if-no-files-found: warn
+          retention-days: 30
