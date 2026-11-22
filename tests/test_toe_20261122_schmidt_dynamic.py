@@ -7,12 +7,14 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"analysis"))
 import toe_20261122_2design_entanglement_capacity as ent
 import toe_20261122_dynamic_W33_gauss_ring as gauge
+import toe_20261122_witting_dual_frame_tomography as dual
 
 class WittingEntanglementAndGauge(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.ent=ent.run()
         cls.gauge=gauge.run()
+        cls.dual=dual.run()
 
     def test_40_ray_design_exact(self):
         self.assertEqual(self.ent["rays"],40)
@@ -78,5 +80,29 @@ class WittingEntanglementAndGauge(unittest.TestCase):
     def test_distinguish_model_from_physical_experiment(self):
         self.assertIn("Not a real 2+1D",self.gauge["boundary"])
         self.assertIn("NOT Bell nonlocality",self.ent["limits"])
+
+
+    def test_both_25bin_local_measurements_remain_informationally_complete(self):
+        ranks=[x["single_ququart_Hermitian_POVM_span_rank"]for x in self.dual["layouts"]]
+        self.assertEqual(ranks,[16,16,16])
+
+    def test_full_joint_40ray_fidelity_exact_three_classes(self):
+        c=self.dual["full_40_exact_minimum_norm_three_class_scores"]
+        self.assertAlmostEqual(c["same_ray"],19/4)
+        self.assertAlmostEqual(c["orthogonal_rays"],-3/2)
+        self.assertAlmostEqual(c["distinct_nonorthogonal_rays"],7/12)
+
+    def test_compressed_tomography_precision_penalty(self):
+        x=self.dual["layouts"]
+        std=[e["ideal_Phi_single_shot_estimator_SD"]for e in x]
+        self.assertAlmostEqual(std[0],1.25,places=9)
+        self.assertGreater(std[1],7)
+        self.assertGreater(std[2],5)
+        self.assertLess(std[2],std[1])
+
+    def test_tomographic_dual_is_unbiased_for_maximally_entangled_target(self):
+        for row in self.dual["layouts"]:
+            self.assertLess(row["fidelity_reconstruction_residual"],1e-10)
+            self.assertAlmostEqual(row["ideal_maximally_entangled_fidelity"],1.,places=9)
 
 if __name__=="__main__":unittest.main()
