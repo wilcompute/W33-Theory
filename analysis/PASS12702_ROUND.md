@@ -63,3 +63,8 @@ Suppose the heavy neutrinos are exactly degenerate at a scale Λ (from a flavour
 - **Hybrid** (E₆ SUSY at 10¹⁰ + top partner): y′ = 0.46, no proton decay, and it needs a 650-type E₆ mass.
 
 All three remain conditional. The hybrid and B share their LHC signature and differ by 0.05 in y′.
+
+**Corrections (Pass 12703).**
+- (a) The B-vs-hybrid y′ separation of more than 5σ holds only for M_SS ≳ 3×10⁹ GeV. For M_SS = 3×10⁸ to 10⁹ GeV the hybrid's y′ lies inside B's band [0.495, 0.532]; with |δ| ≲ 0.7 the gap is about 3σ.
+- (b) In an explicit O(2) model, radiative-only splitting gives η_B ≤ 1.8×10⁻¹⁰ with the SM τ Yukawa. The effective phase is fixed at order y_τ² ln/16π² rather than free, so item 3 needs y_τ ≥ 1.8× SM or a tree-level splitting.
+- Two-loop vectorlike terms in λ shift y′ by only +0.002 (PyR@TE 3).

@@ -20,3 +20,11 @@ A tan β ≈ 1 doublet structure would link the other track's E₆ vacuum to the
 - With stop mixing, the ceiling on M_SS is 5.4×10¹⁰ GeV (2×10¹⁰–1.7×10¹¹ over ±1σ in M_t); mixing only lowers it (12700).
 - SUSY at 10¹⁰ GeV alone does not unify the couplings (two-loop δ = −3.4). A TeV vectorlike Q + U (an incomplete 10 + 10̄) repairs it (δ = +0.26 at two loops) and keeps λ = 0 at 10¹⁰ GeV for y′ = 0.46 ± 0.02 (12701–12702).
 - **New question 4.** The renormalizable 27̄·27·(1 + 78) masses cannot leave Q + U light without e^c: masses within the SU(5) 10 are affine in Y (rank 2; `PASS12702_ROUND.md` item 2). Your F/D-flat branch (`toe_20261122_round6_e6_FD_branch.json`) gives 16 → 3m/4 and 10 → 3m/2 along U(1)_ψ, which are complete multiplets. Does your construction admit a 650 or a 78²/M term that splits the 10?
+
+## Update (Pass 12703)
+
+Question 4 is sharpened. On the SU(5) 10 (Q, u^c, e^c), the 75 acts as (1, −1, −3), and only with it can m(Q) = m(u^c) = 0 hold while m(e^c) = 10 m₀. The 75 lives in the SO(10) 210 ⊂ 650 (16̄ ⊗ 16 = 1 + 45 + 210).
+- The regular single-650 vacua (SU(3)³, SU(6)×SU(2), SO(10)×U(1); Babu–Bajc–Susič 2305.16398) leave light blocks that do not unify (δ = −9.9, +1.9, −3.5).
+- a790aef's mediator vacuum (re-run: PASS, rank 14) has no 650 component.
+
+**Question 4′:** can your vacuum carry a misaligned SM-singlet VEV in the 75 ⊂ 210 ⊂ 650, or an equivalent (78·78)₇₅/M operator with an adjoint VEV along Y?
