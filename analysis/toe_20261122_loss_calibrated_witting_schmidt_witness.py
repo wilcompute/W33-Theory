@@ -47,17 +47,26 @@ def main():
         PPT_bound=float(np.linalg.eigvalsh(Spt)[-1].real)
         assert target>PPT_bound+1e-4
         n,k=count_budget(PPT_bound,target)
+        # If each local effect has unknown Hermitian operator-norm error
+        # <=epsilon, then ||S_actual-S_nom|| <= 2*epsilon*sum_i ||Mi|| + N*epsilon**2.
+        # Two such worst-case shifts must fit within the nominal gap.
+        L=float(np.trace(W.conj().T@W).real)
+        gap=target-PPT_bound
+        epsilon=(-4*L+math.sqrt((4*L)**2+8*len(P)*gap))/(4*len(P))
+        assert epsilon>0
         trials.append({"power_loss_per_active_two_mode_operation":loss,
           "mean_single_photon_survival":float(np.trace(W.conj().T@W).real/4),
           "ideal_phi_same_label_probability":target,
           "rigorous_PPT_separable_bound":PPT_bound,
           "entanglement_witness_gap":target-PPT_bound,
+          "sufficient_per_effect_operator_norm_calibration_tolerance":epsilon,
           "illustrative_sufficient_iid_launch_pairs_5sigma_90percent_power":n,
           "same_label_event_critical_count":k})
     r=trials[4]
     assert abs(r["ideal_phi_same_label_probability"]-.0458217956271)<1e-9
     assert abs(r["rigorous_PPT_separable_bound"]-.0256710192242)<1e-9
     assert r["illustrative_sufficient_iid_launch_pairs_5sigma_90percent_power"]==3130
+    assert abs(r["sufficient_per_effect_operator_norm_calibration_tolerance"]-.00188236556836)<1e-10
     return_value={"status":"PASS","date":"2026-11-22",
       "proof":"For a separable state rho, partial transpose rho^Gamma is positive trace-one; Tr(rho S)=Tr(rho^Gamma S^Gamma)<=lambda_max(S^Gamma).",
       "measurement":"S=sum_i Mi tensor conjugate(Mi), Mi=|40mode optical row_i><row_i|",
