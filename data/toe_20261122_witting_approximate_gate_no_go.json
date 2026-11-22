@@ -1,0 +1,55 @@
+{
+  "status": "PASS_EXACT_INDEPENDENT_SYMPY_AND_3_PYTEST",
+  "date": "2026-11-22",
+  "source": "analysis/toe_20261122_witting_approximate_gate_no_go.py",
+  "code_relation": "Canonical 16x16 chart circuit reconstructed from analysis/toe_20261121_relational_reference_pareto.py",
+  "dimension": 16,
+  "realignment_gram_characteristic_polynomial": "lambda^8*(2*lambda-17)*(2*lambda-9)*(2*lambda-1)^6/256",
+  "squared_operator_schmidt_coefficients": [
+    "17/2",
+    "9/2",
+    "1/2",
+    "1/2",
+    "1/2",
+    "1/2",
+    "1/2",
+    "1/2"
+  ],
+  "bounds": [
+    {
+      "k": 0,
+      "rank_budget": 1,
+      "process_fidelity_ceiling": "17/32",
+      "average_gate_fidelity_ceiling": "19/34",
+      "diamond_distance_floor": "sqrt(30)/4",
+      "phase_aligned_Frobenius_squared_floor": "32 - 4*sqrt(34)"
+    },
+    {
+      "k": 1,
+      "rank_budget": 2,
+      "process_fidelity_ceiling": "13/16",
+      "average_gate_fidelity_ceiling": "14/17",
+      "diamond_distance_floor": "sqrt(3)/2",
+      "phase_aligned_Frobenius_squared_floor": "32 - 8*sqrt(13)"
+    },
+    {
+      "k": 2,
+      "rank_budget": 4,
+      "process_fidelity_ceiling": "7/8",
+      "average_gate_fidelity_ceiling": "15/17",
+      "diamond_distance_floor": "sqrt(2)/2",
+      "phase_aligned_Frobenius_squared_floor": "32 - 8*sqrt(14)"
+    },
+    {
+      "k": 3,
+      "rank_budget": 8,
+      "process_fidelity_ceiling": "1",
+      "average_gate_fidelity_ceiling": "1",
+      "diamond_distance_floor": "0",
+      "phase_aligned_Frobenius_squared_floor": "0"
+    }
+  ],
+  "scope": "Necessary upper bounds for fidelity of unitary circuits formed from arbitrary local unitaries and k rank-<=2 operator-Schmidt entangling primitives; no ancilla/measurement/postselection/higher-rank couplings",
+  "theorem": "F_pro(U,V)<=sum_{j=1}^{2^k} s_j^2/16 and F_avg<=(sum s_j^2 +1)/17",
+  "honesty": "No experiment, no universal computational advantage and no unified physical theory implied."
+}
