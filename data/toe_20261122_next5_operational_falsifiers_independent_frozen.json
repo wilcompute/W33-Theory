@@ -1,0 +1,152 @@
+{
+  "status": "SIX_INDEPENDENT_FINITE_MODEL_CHECKS_PASS; NATIVE_GITHUB_CI_QUEUED",
+  "date": "2026-11-22",
+  "native_sources": [
+    "analysis/toe_20261122_native_capacity_input_witness.py",
+    "analysis/toe_20261122_loss_calibrated_witting_schmidt_witness.py",
+    "analysis/toe_20261122_three_plaquette_W33_gauge_null_control.py",
+    "analysis/toe_20261122_witting_triple_collision_finite_shots.py",
+    "analysis/toe_20261122_confusion_aware_Witting_detector_pareto.py",
+    "analysis/toe_20261122_witting_loss_fakes_purity.py"
+  ],
+  "tests": "tests/test_toe_20261122_physical_next5_plus.py",
+  "workflow": ".github/workflows/witting-20261122_next5_operational_falsifiers.yml",
+  "technical_report": "analysis/2026-11-22_native_capacity_PPT_photonic_threeGauge_collision_crosstalk_sixfronts.md",
+  "independent_capacity": {
+    "channel": "native Witting 5 Kraus, each 9x4, complete",
+    "fixed_rank2_rho_factor_real": [
+      [
+        0.328407966,
+        -0.396479532
+      ],
+      [
+        0.16008453,
+        0.463275533
+      ],
+      [
+        0.094680683,
+        -0.191247123
+      ],
+      [
+        0.09334999,
+        0.372494445
+      ]
+    ],
+    "fixed_rank2_rho_factor_imag": [
+      [
+        0,
+        0
+      ],
+      [
+        0.063465203,
+        0.29095616
+      ],
+      [
+        0.334154329,
+        0.16676157
+      ],
+      [
+        0.22049494,
+        -0.15787594
+      ]
+    ],
+    "lambda_dephasing_0p30": {
+      "rank2_Ic_bits": 0.007890909074868002,
+      "maximally_mixed_Ic_bits": -0.23014864
+    },
+    "lambda_dephasing_0p305": {
+      "fixed_rank2_Ic_bits": 0.0006757525239637907
+    },
+    "inference": "Q>0 for this explicit channel under at least 30% output-rail dephasing; no exact capacity threshold claimed"
+  },
+  "optical_PPT": {
+    "Naimark_two_mode_givens": 150,
+    "loss_0p02": {
+      "target_Psame": 0.04582179562710345,
+      "PPT_upper_bound_all_separable": 0.025671019224247655,
+      "gap": 0.020150776402855796,
+      "mean_single_photon_survival": 0.6596524316971658,
+      "sufficient_iid_pair_launches_5sigma_and_90percent_power": 3130,
+      "per_local_POVM_effect_absolute_operator_norm_error_tolerance": 0.0018823655683630352
+    },
+    "loss_0p03": {
+      "target_Psame": 0.03324382169326414,
+      "PPT_upper": 0.02130431051698734
+    },
+    "loss_0p05": {
+      "target_Psame": 0.01965050854440403,
+      "PPT_upper": 0.015601957530628898
+    },
+    "proof": "Tr(rho_sep S)=Tr(rho_sep^Gamma S^Gamma)<=lambda_max(S^Gamma)",
+    "calibration_bound": "||Delta S|| <=2epsilon sum_i||Mi|| +40epsilon^2, require 2||Delta S||<target-separable-bound"
+  },
+  "three_plaquette": {
+    "W33_faces_original_labels": [
+      [
+        0,
+        36,
+        9,
+        37
+      ],
+      [
+        0,
+        36,
+        3,
+        6
+      ],
+      [
+        0,
+        36,
+        12,
+        1
+      ]
+    ],
+    "V": 8,
+    "E": 10,
+    "cycle_rank": 3,
+    "unrestricted_matter_gauge_dimension": 262144,
+    "Gauss_positive_dimension": 1024,
+    "Wilson_electric_commute_anticommute_pairs": 30,
+    "mean_matter_t_0p5": 0.5006202125016395,
+    "mean_matter_t_1": 1.1452397391844862,
+    "null": "Graph-isomorphic unembedded patch has unitarily equivalent local gauge dynamics, so this cannot uniquely verify W33."
+  },
+  "triple_collision": {
+    "ideal_Witting40_pure_C2": 0.04,
+    "ideal_Witting40_pure_C3": 0.002,
+    "MUB20_C3_on_Witting_input": 0.0077777777777777776,
+    "MUB20_C3_on_MUB_input": 0.01,
+    "ideal_independent_triplets_for_5sigma_90percent_power": 68886,
+    "individually_prepared_ququarts_required": 206658,
+    "pure_Tr_rho3_one_sigma_at_450000_triplets_given_exact_purity": 0.09995,
+    "prior_art": "Witting projective 3-design is known; this operational collision protocol is a computational application."
+  },
+  "noisy_detector": {
+    "model": "Known iid uniform wrong-label redraw followed by 24-singleton plus 16-pool compression.",
+    "eps_0p15_sd": {
+      "full40": 1.8107782388165192,
+      "old25": 9.933533623592297,
+      "privacyFisher25": 6.616545771084948,
+      "newVariance25": 6.0563233427254035
+    },
+    "eps_0p30_sd": {
+      "full40": 2.6860848826058956,
+      "old25": 13.656355562495007,
+      "privacyFisher25": 9.094620762250731,
+      "newVariance25": 8.289502187653877
+    },
+    "caveat": "Known symmetric crosstalk only; unknown asymmetric gain drift can still dominate."
+  },
+  "false_purity": {
+    "truth": "Witting rays 0, 5 and 39 are all pure ququart density states.",
+    "active_gate_loss_0p01": {
+      "ray0_C3": 0.00273823,
+      "ray5_C3": 0.00246593,
+      "ray39_C3": 0.00166987,
+      "ray0_naive_purity_gt": 1.17,
+      "ray39_naive_purity_lt": 0.93
+    },
+    "uniform_global_attenuation_negative_control_preserves_ideal_conditional_C3": true
+  },
+  "experimental_scope": "Idealized finite-dimensional models; no hardware, quantum gravity, TOE, causality or Bell nonlocality confirmation. Native GitHub Actions queued; independent reproducer executed in sandbox; concurrency preserved."
+}
