@@ -1,0 +1,107 @@
+{
+ "completion_B_yprime_of_R": {
+  "M_VL": 1650.0,
+  "rows": [
+   {
+    "R_um": 0.1,
+    "M5": 1230273091.798461,
+    "y_prime": 0.4936361512583023,
+    "T_i_GeV": 2.1544346900318834,
+    "m_KK_eV": 1.97327
+   },
+   {
+    "R_um": 0.3,
+    "M5": 853023718.7286763,
+    "y_prime": 0.49980836450913624,
+    "T_i_GeV": 1.4938015821857216,
+    "m_KK_eV": 0.6577566666666668
+   },
+   {
+    "R_um": 1.0,
+    "M5": 571042184.5186006,
+    "y_prime": 0.5069084109106702,
+    "T_i_GeV": 1.0,
+    "m_KK_eV": 0.197327
+   },
+   {
+    "R_um": 3.0,
+    "M5": 395938536.76578724,
+    "y_prime": 0.5137014031816945,
+    "T_i_GeV": 0.6933612743506348,
+    "m_KK_eV": 0.06577566666666666
+   },
+   {
+    "R_um": 10.0,
+    "M5": 265054302.7183385,
+    "y_prime": 0.5214993025130102,
+    "T_i_GeV": 0.4641588833612779,
+    "m_KK_eV": 0.0197327
+   },
+   {
+    "R_um": 30.0,
+    "M5": 183778389.10490608,
+    "y_prime": 0.5289461818456248,
+    "T_i_GeV": 0.3218297948685433,
+    "m_KK_eV": 0.006577566666666666
+   }
+  ]
+ },
+ "completion_A": {
+  "kappa": 3e-05,
+  "f_a": 100000000000.0,
+  "m_s_natural_GeV": 547722557.5051662,
+  "N_DW": "1 (single KSVZ quark)",
+  "isocurvature": "none: PQ broken after inflation (post-inflationary scenario)",
+  "note": "m_s ~ sqrt(kappa) f_a ~ 5e8 GeV unless tuned; s can decay to Higgs pairs via a small portal"
+ },
+ "matrix": [
+  {
+   "observable": "dark matter",
+   "A": "QCD axion, m_a 45-65 ueV (post-inflation lattice)",
+   "B": "KK gravitons (dark dimension), keV-ish masses drifting",
+   "test": "ADMX/MADMAX/ALPHA haloscopes; X-ray/galactic decays"
+  },
+  {
+   "observable": "new coloured states",
+   "A": "KSVZ quark at ~1e11 GeV (unobservable)",
+   "B": "T, T', B triplet >= 1.65 TeV, y' ~ 0.5",
+   "test": "LHC Run 3/HL-LHC, FCC-hh VLQ searches"
+  },
+  {
+   "observable": "gravity at short range",
+   "A": "Newtonian",
+   "B": "deviation at R = 1-30 um",
+   "test": "Eot-Wash type torsion balances"
+  },
+  {
+   "observable": "reheating temperature",
+   "A": ">~ 1e11 GeV (PQ restoration)",
+   "B": "~ 1 GeV",
+   "test": "indirect: DM identity, leptogenesis route"
+  },
+  {
+   "observable": "baryogenesis",
+   "A": "thermal leptogenesis (M_N 1e10-1e12)",
+   "B": "non-thermal / low-scale",
+   "test": "0nubb (Majorana), CP phase in nu oscillations"
+  },
+  {
+   "observable": "tensor ratio r",
+   "A": "0.005-0.007 (running-quartic inflation)",
+   "B": "model-dependent",
+   "test": "Simons Observatory / CMB-S4"
+  },
+  {
+   "observable": "N_eff",
+   "A": "3.044 (heavy states decouple)",
+   "B": "~3.044 (non-thermal gravitons)",
+   "test": "does not split A from B"
+  },
+  {
+   "observable": "top mass",
+   "A": "172.4-172.6 (lambda zero at f_a / sqrt(v M_Pl))",
+   "B": "free (y' absorbs it)",
+   "test": "FCC-ee threshold scan"
+  }
+ ]
+}
