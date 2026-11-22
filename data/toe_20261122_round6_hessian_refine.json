@@ -1,0 +1,57 @@
+{
+  "date": "2026-11-22",
+  "status": "PASS_HEURISTIC_HESSIAN_LOCAL_REFINE",
+  "targets": [
+    {
+      "beam8": 0.4815930621186094,
+      "hessian_index": 411,
+      "path": [
+        12,
+        6,
+        24,
+        19,
+        8,
+        15,
+        15,
+        7
+      ],
+      "refined8": 0.4325423634985939,
+      "target_index": 0,
+      "tested_initial_paths": 81
+    },
+    {
+      "beam8": 0.42193232368817124,
+      "hessian_index": 307,
+      "path": [
+        10,
+        26,
+        2,
+        3,
+        5,
+        3,
+        8,
+        17
+      ],
+      "refined8": 0.41336592693346325,
+      "target_index": 1,
+      "tested_initial_paths": 81
+    },
+    {
+      "beam8": 0.4657883339418126,
+      "hessian_index": 606,
+      "path": [
+        16,
+        9,
+        7,
+        12,
+        13,
+        11,
+        6,
+        16
+      ],
+      "refined8": 0.3704558473766762,
+      "target_index": 2,
+      "tested_initial_paths": 81
+    }
+  ]
+}

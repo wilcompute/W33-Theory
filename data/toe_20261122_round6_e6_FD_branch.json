@@ -1,0 +1,26 @@
+{
+  "D_terms_zero_on_conjugate_singlet_ansatz": true,
+  "E6_branching": "27=16_1+10_-2+1_4",
+  "F_gradient_all_zero": true,
+  "F_jacobian_rank": 2,
+  "adjoint_a": "-m/(4*lam)",
+  "broken_complex_U1_gauge_directions": 1,
+  "complex_singlet_plus_adjoint_variables": 7,
+  "complex_ungauged_flat_tangent": 5,
+  "date": "2026-11-22",
+  "holomorphic_pairing_s": "9*M*m/(2*lam**2)",
+  "illustrative_D_flat_point": {
+    "M": 1,
+    "a": "-1/4",
+    "lambda": 1,
+    "m": 1,
+    "others": 0,
+    "u0": "sqrt(9/2)",
+    "v0": "sqrt(9/2)"
+  },
+  "limitations": "Truncated SO10-singlet and E6-adjoint Cartan ansatz. This is a renormalizable supersymmetric E6 invariant W in a vectorlike model, assuming standard E6 contraction and invariant projection. It is not a fully isolated E6 vacuum or three chiral Standard Model families. Family uniformity produces an accidental GL3 and four complex moduli. A full nonsinglet Hessian and gauge Goldstone spectrum is NOT evaluated here.",
+  "remaining_complex_flat_moduli": 4,
+  "status": "PASS_E6_FD_FLAT_ADJOINT_SINGLET_BRANCH_AND_FAMILY_MODULI_OBSTRUCTION",
+  "toy_superpotential": "W=(m+4 lambda a) (sum_i v_i u_i)+(M/2)*72*a^2",
+  "trace_Q_squared": 72
+}

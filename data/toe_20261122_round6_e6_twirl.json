@@ -1,0 +1,33 @@
+{
+  "address_basis_state_count": 81,
+  "caveat": "Full E6 Haar twirling is a deliberately strong noise null model, NOT generic gauge-invariant dynamics, an experimentally present channel, or proof that all E6 encodings fail. Symmetry covariance alone is distinct from physical twirling. Other error models and active recovery can preserve quantum information.",
+  "date": "2026-11-22",
+  "e6_irreps_pairwise_inequivalent": true,
+  "each_address_basis_block_populations": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333
+  ],
+  "each_multiplicity": 1,
+  "full_representation": "78+27+27bar",
+  "output_block_eigenvalues": [
+    [
+      0.004273504273504274,
+      78
+    ],
+    [
+      0.012345679012345678,
+      27
+    ],
+    [
+      0.012345679012345678,
+      27
+    ]
+  ],
+  "output_rank": 132,
+  "status": "PASS_E6_FULL_TWIRL_ERASES_81_ADDRESS_BASIS_LABELS",
+  "theorem": "By Schur orthogonality, full compact E6 Haar conjugation averages a density matrix to direct sum of p_lambda I_{d_lambda}/d_lambda. For the previously certified 81->132 H27 Fourier isometry each canonical address ket has identical block weights 1/3, hence all 81 address basis states become identical after twirling. The twirl is a measure-and-prepare channel, so its quantum capacity vanishes.",
+  "total_dimension": 132,
+  "twirl_fixed_operator_complex_dimension": 3,
+  "twirled_basis_outputs_identical": true
+}

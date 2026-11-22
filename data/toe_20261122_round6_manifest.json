@@ -1,0 +1,22 @@
+{
+  "certificate_status": {
+    "toe_20261122_round6_e6_FD_branch": "PASS_E6_FD_FLAT_ADJOINT_SINGLET_BRANCH_AND_FAMILY_MODULI_OBSTRUCTION",
+    "toe_20261122_round6_e6_twirl": "PASS_E6_FULL_TWIRL_ERASES_81_ADDRESS_BASIS_LABELS",
+    "toe_20261122_round6_exact_Hasse_cut": "PASS_EXACT_W33_80_EDGE_COVER_REPAIR_AND_MAXCUT",
+    "toe_20261122_round6_exact_minimal16": "PASS_EXACT_RANK_ONE_WITTING_16_EFFECT_MIC",
+    "toe_20261122_round6_hessian_beam": "PASS_BOUNDED_BEAM_HESSIAN_GATE_COMPILATION",
+    "toe_20261122_round6_hessian_refine": "PASS_HEURISTIC_HESSIAN_LOCAL_REFINE",
+    "toe_20261122_round6_optical16": "PASS_16_EFFECT_WITTING_PHOTONIC_MODEL"
+  },
+  "date": "2026-11-22",
+  "scope": "Exact finite geometry + conditional toy physics and numerical hardware/compiler falsifiers; not a complete TOE",
+  "sources": [
+    "toe_20261122_round6_exact_minimal16",
+    "toe_20261122_round6_optical16",
+    "toe_20261122_round6_exact_Hasse_cut",
+    "toe_20261122_round6_e6_twirl",
+    "toe_20261122_round6_e6_FD_branch",
+    "toe_20261122_round6_hessian_beam",
+    "toe_20261122_round6_hessian_refine"
+  ]
+}

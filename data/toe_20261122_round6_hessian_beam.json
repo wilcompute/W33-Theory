@@ -1,0 +1,268 @@
+{
+  "caveat": "Heuristic beam keeps only 81 candidates per stage; unlike exact <=4 search, no global approximation optimality or asymptotic convergence claim. Finite generators are dense; Solovay-Kitaev yields a separate theoretical polylog compilation existence result.",
+  "date": "2026-11-22",
+  "group": 648,
+  "normal": 27,
+  "status": "PASS_BOUNDED_BEAM_HESSIAN_GATE_COMPILATION",
+  "targets": [
+    {
+      "best_through8": {
+        "beam_width": 81,
+        "depth": 8,
+        "distance": 0.4815930621186094,
+        "overlap": 0.8840340612596106,
+        "primitive_length": 62,
+        "tested": 2187,
+        "word": "aCbaCdAcBAcbdbaCbaCbdABaCbadABaCbadABaCbadABaCbadABaCbadABaCba"
+      },
+      "index": 0,
+      "rows": [
+        {
+          "beam_width": 27,
+          "depth": 1,
+          "distance": 0.6572693468903162,
+          "overlap": 0.7839985028191886,
+          "primitive_length": 14,
+          "tested": 27,
+          "word": "bCbAbCbdabaCBA"
+        },
+        {
+          "beam_width": 81,
+          "depth": 2,
+          "distance": 0.4819626758729542,
+          "overlap": 0.8838559895326908,
+          "primitive_length": 22,
+          "tested": 729,
+          "word": "AbACbaCdaBaCbAdBaBCBaB"
+        },
+        {
+          "beam_width": 81,
+          "depth": 3,
+          "distance": 0.5154931570895439,
+          "overlap": 0.8671334024969274,
+          "primitive_length": 23,
+          "tested": 2187,
+          "word": "ABacBAdBaCbdbAcBdABaCba"
+        },
+        {
+          "beam_width": 81,
+          "depth": 4,
+          "distance": 0.48196267587295283,
+          "overlap": 0.8838559895326915,
+          "primitive_length": 34,
+          "tested": 2187,
+          "word": "AbACbaCdBaBCBaBdabAcBAdabaCBAdbAcB"
+        },
+        {
+          "beam_width": 81,
+          "depth": 5,
+          "distance": 0.5324642641970707,
+          "overlap": 0.858240903676536,
+          "primitive_length": 41,
+          "tested": 2187,
+          "word": "aBCBaBdBaCbdBAcBAcBdBaCbaCdabAcBAdBAcBAcB"
+        },
+        {
+          "beam_width": 81,
+          "depth": 6,
+          "distance": 0.5064275261757255,
+          "overlap": 0.8717655803657675,
+          "primitive_length": 36,
+          "tested": 2187,
+          "word": "cBaBCbdBaBCBaBdBaBCBaBdbaCBdABaCbadd"
+        },
+        {
+          "beam_width": 81,
+          "depth": 7,
+          "distance": 0.4981010315376167,
+          "overlap": 0.8759476811905811,
+          "primitive_length": 55,
+          "tested": 2187,
+          "word": "BaCBdAbaCBadaBaCbAdABaCbadaBcBaBcBdaBaCbCdABaCbadABaCba"
+        },
+        {
+          "beam_width": 81,
+          "depth": 8,
+          "distance": 0.4815930621186094,
+          "overlap": 0.8840340612596106,
+          "primitive_length": 62,
+          "tested": 2187,
+          "word": "aCbaCdAcBAcbdbaCbaCbdABaCbadABaCbadABaCbadABaCbadABaCbadABaCba"
+        }
+      ]
+    },
+    {
+      "best_through8": {
+        "beam_width": 81,
+        "depth": 8,
+        "distance": 0.42193232368817124,
+        "overlap": 0.9109865571135501,
+        "primitive_length": 55,
+        "tested": 2187,
+        "word": "bAcBAdaBaCbCdABaCbadBaCbdAcBAcbdBaCbdbAcBdaBaCbAdAcBAcb"
+      },
+      "index": 1,
+      "rows": [
+        {
+          "beam_width": 27,
+          "depth": 1,
+          "distance": 0.6438833345676858,
+          "overlap": 0.7927071257329988,
+          "primitive_length": 13,
+          "tested": 27,
+          "word": "baCBaBdAbAcBa"
+        },
+        {
+          "beam_width": 81,
+          "depth": 2,
+          "distance": 0.5525601350564819,
+          "overlap": 0.8473386485731812,
+          "primitive_length": 16,
+          "tested": 729,
+          "word": "aCBaBCdABaCbadaC"
+        },
+        {
+          "beam_width": 81,
+          "depth": 3,
+          "distance": 0.5238932115421231,
+          "overlap": 0.8627679514500401,
+          "primitive_length": 23,
+          "tested": 2187,
+          "word": "bCbACBdbAcBdcBAcbAdBAcb"
+        },
+        {
+          "beam_width": 81,
+          "depth": 4,
+          "distance": 0.5302411482414626,
+          "overlap": 0.8594221623557876,
+          "primitive_length": 32,
+          "tested": 2187,
+          "word": "aBcdBaBCBaBdBaCbaCdAcBAcbdAbaCBa"
+        },
+        {
+          "beam_width": 81,
+          "depth": 5,
+          "distance": 0.5160340667915344,
+          "overlap": 0.8668544209552951,
+          "primitive_length": 35,
+          "tested": 2187,
+          "word": "aBACbCdbaCBdAbaCBadbAcBdABaCbadBaCb"
+        },
+        {
+          "beam_width": 81,
+          "depth": 6,
+          "distance": 0.48166219923686515,
+          "overlap": 0.8840007629131532,
+          "primitive_length": 46,
+          "tested": 2187,
+          "word": "aBAcdaBaCbCdABAcbadAbCbAbCbdabAcBAdabaCBAdbaCB"
+        },
+        {
+          "beam_width": 81,
+          "depth": 7,
+          "distance": 0.4600931519336398,
+          "overlap": 0.8941571457718843,
+          "primitive_length": 51,
+          "tested": 2187,
+          "word": "AbCbaCbdBaBCBaBdBaCbaCdAcBAcbdAbaCBadBAcbdBAcbdBAcb"
+        },
+        {
+          "beam_width": 81,
+          "depth": 8,
+          "distance": 0.42193232368817124,
+          "overlap": 0.9109865571135501,
+          "primitive_length": 55,
+          "tested": 2187,
+          "word": "bAcBAdaBaCbCdABaCbadBaCbdAcBAcbdBaCbdbAcBdaBaCbAdAcBAcb"
+        }
+      ]
+    },
+    {
+      "best_through8": {
+        "beam_width": 81,
+        "depth": 4,
+        "distance": 0.42522241404917777,
+        "overlap": 0.9095929492950948,
+        "primitive_length": 33,
+        "tested": 2187,
+        "word": "AcBAcbAdABAcbadaCdBaCbaCdAbCbAbCb"
+      },
+      "index": 2,
+      "rows": [
+        {
+          "beam_width": 27,
+          "depth": 1,
+          "distance": 0.7161289264377243,
+          "overlap": 0.7435796803595762,
+          "primitive_length": 12,
+          "tested": 27,
+          "word": "abcBadaBaCbC"
+        },
+        {
+          "beam_width": 81,
+          "depth": 2,
+          "distance": 0.5092598855014921,
+          "overlap": 0.8703271845095035,
+          "primitive_length": 19,
+          "tested": 729,
+          "word": "bcBaBdABAcbadabaCBA"
+        },
+        {
+          "beam_width": 81,
+          "depth": 3,
+          "distance": 0.46980762737383774,
+          "overlap": 0.8896403966306826,
+          "primitive_length": 27,
+          "tested": 2187,
+          "word": "bACBadaBAcbAdBAcBAcBdAbaCBa"
+        },
+        {
+          "beam_width": 81,
+          "depth": 4,
+          "distance": 0.42522241404917777,
+          "overlap": 0.9095929492950948,
+          "primitive_length": 33,
+          "tested": 2187,
+          "word": "AcBAcbAdABAcbadaCdBaCbaCdAbCbAbCb"
+        },
+        {
+          "beam_width": 81,
+          "depth": 5,
+          "distance": 0.48213965278760745,
+          "overlap": 0.8837706776049227,
+          "primitive_length": 32,
+          "tested": 2187,
+          "word": "BACBAdaBaCbAdaBAcbAdbAcBddBaCbaC"
+        },
+        {
+          "beam_width": 81,
+          "depth": 6,
+          "distance": 0.4579984074920864,
+          "overlap": 0.8951187293673564,
+          "primitive_length": 48,
+          "tested": 2187,
+          "word": "abcBdABaCbadABAcbadbAcBdAbCbAbCbdAbaCBadAbCbAbCb"
+        },
+        {
+          "beam_width": 81,
+          "depth": 7,
+          "distance": 0.4866898298034341,
+          "overlap": 0.8815665047829522,
+          "primitive_length": 55,
+          "tested": 2187,
+          "word": "ABAcBAdaCbaCBdAcBAcbdABAcbadBaCbaCdaBAcbAdAbaCBadAbaCBa"
+        },
+        {
+          "beam_width": 81,
+          "depth": 8,
+          "distance": 0.4657883339418126,
+          "overlap": 0.8915206139818552,
+          "primitive_length": 44,
+          "tested": 2187,
+          "word": "bAbcbAdAcdBaCbdABAcbadaCdddAbCbAbCbdAbCbAbCb"
+        }
+      ]
+    }
+  ],
+  "width": 81
+}
