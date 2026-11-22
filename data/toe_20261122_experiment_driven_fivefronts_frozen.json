@@ -1,0 +1,99 @@
+{
+  "date": "2026-11-22",
+  "status": "PASS independent sandbox, 20 tests passing; GitHub CI queued",
+  "producer": "analysis/toe_20261122_experiment_driven_five_fronts.py",
+  "tests": "tests/test_toe_20261122_experiment_driven_five_fronts.py",
+  "workflow": ".github/workflows/witting-experimental-fivefronts.yml",
+  "experimental_sources": {
+    "causal_order": "https://doi.org/10.1126/sciadv.aee2912",
+    "contextuality_QRNG": "https://doi.org/10.1103/62lv-gmsz",
+    "multioutcome_Bell": "https://doi.org/10.1103/ydch-vgmy",
+    "dynamic_Z2_AB": "https://doi.org/10.1038/s41567-026-03400-6",
+    "photonic_Klein": "https://doi.org/10.1038/s41377-026-02516-x"
+  },
+  "front1_Witting_quantum_switch": {
+    "input": "Householder reflections of Witting rays, coherent order switch, target maximally mixed ququart",
+    "pairs": 780,
+    "orthogonal_pairs": 240,
+    "nonorthogonal_pairs": 540,
+    "formula": "pminus=2r(1-r) for r=|<vi|vj>|^2",
+    "pminus_orthogonal": 0,
+    "pminus_nonorthogonal": 0.4444444444444444,
+    "numerical_max_residual": 4.440892098500626e-16,
+    "limitations": "Not device-independent causal inequality or a chirality witness"
+  },
+  "front2_classical_min_entropy": {
+    "full40_raw_bits": 5.321928094887363,
+    "full40_chart_known_bits": 3,
+    "compressed25_raw_bits": 1.3219280948873622,
+    "compressed25_chart_known_bits": 1.3219280948873622,
+    "exact_raw_penalty_bits": 4,
+    "security_certified": false,
+    "limitation": "Raw empirical min entropy cannot certify quantum randomness against adversarial side information; 2026 chip qutrit 0.077 certified bits is a different protocol"
+  },
+  "front3_bipartite_ququart_multioutcome": {
+    "ideal_state": "maximally entangled ququarts; Alice 40-ray POVM E_i=P_i/10, Bob conjugated 40-ray POVM",
+    "joint_formula": "p(i,j)=Tr(PiPj)/400",
+    "exact_full_MI": "0.2+0.9*log2(4/3)",
+    "full_MI_bits": 0.5735337493509587,
+    "older25_MI_bits": 0.23449967635092486,
+    "improved25_MI_bits": 0.22342229274284528,
+    "min_chart_leakage25_MI_bits": 0.2239609275135221,
+    "improved25_fraction_retained": 0.38955387193113195,
+    "fixed_setting_LHV_exists": true,
+    "Bell_nonlocality_certified": false
+  },
+  "front4_W33_AB": {
+    "graph": {
+      "vertices": 40,
+      "edges": 240,
+      "cycle_rank": 201,
+      "nonadjacent_pairs": 540
+    },
+    "loop": [
+      0,
+      36,
+      9,
+      37,
+      0
+    ],
+    "Wilson_formula": "u_0,36 u_36,9 u_9,37 u_37,0",
+    "Pplus_formula": "(1+W)/2",
+    "positive_flux_Pplus": 1,
+    "vison_flux_Pplus": 0,
+    "local_Z2_gauge_transform_checks": 400,
+    "max_invariance_residual": 0,
+    "dynamical_gauge_field_implemented": false
+  },
+  "front5_Klein_torus": {
+    "L6": {
+      "vertices": 36,
+      "edges": 72,
+      "torus_eigenvalue_min": -4,
+      "Klein_eigenvalue_min": -3.7320508075688785,
+      "torus_walk_length7": 0,
+      "Klein_walk_length7": 336,
+      "orientation_holonomy_torus": 1,
+      "orientation_holonomy_Klein": -1,
+      "connected_Klein_cover_vertices": 72
+    },
+    "L8": {
+      "vertices": 64,
+      "edges": 128,
+      "torus_eigenvalue_min": -4,
+      "Klein_eigenvalue_min": -3.8477590650225753,
+      "torus_walk_length9": 0,
+      "Klein_walk_length9": 576,
+      "connected_Klein_cover_vertices": 128
+    },
+    "limitation": "These Hermitian grid walk counts depend on chosen discretization; not universal for Klein bottle or the experimental non-Hermitian system"
+  },
+  "integrity": {
+    "independently_evaluated_sandbox": true,
+    "sandbox_tests_passed": 20,
+    "Github_CI_completed": false,
+    "remote_desktop_calls_remaining_pct": 0,
+    "Windows_worktree_synced": false,
+    "no_fundamental_TOE_or_physical_experiment": true
+  }
+}
