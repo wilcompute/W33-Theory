@@ -12,6 +12,7 @@ import toe_20261122_loss_calibrated_witting_schmidt_witness as optics
 import toe_20261122_three_plaquette_W33_gauge_null_control as gauge
 import toe_20261122_witting_triple_collision_finite_shots as collision
 import toe_20261122_confusion_aware_Witting_detector_pareto as noise
+import toe_20261122_witting_loss_fakes_purity as loss_purity
 def read(name):
     p=ROOT/"data"/("toe_20261122_"+name+".json")
     if not p.exists():raise RuntimeError("Generate producer JSON first: "+str(p))
@@ -24,6 +25,7 @@ class ResearchRegressions(unittest.TestCase):
         cls.g=read("three_plaquette_W33_gauge_null_control")
         cls.t=read("witting_triple_collision_finite_shots")
         cls.n=read("confusion_aware_Witting_detector_pareto")
+        cls.l=read("witting_loss_fakes_purity")
     def test_all_producer_certificates(self):
         self.assertEqual([d["status"]for d in (self.c,self.o,self.g,self.t,self.n)],["PASS"]*5)
     def test_native_five_kraus_four_to_nine_channel(self):
@@ -103,4 +105,18 @@ class ResearchRegressions(unittest.TestCase):
         self.assertIn("not device-independent",self.o["limits"].lower())
         self.assertIn("not global w33",self.g["limits"].lower())
         self.assertIn("no device-independent",self.n["boundaries"].lower())
+
+    def test_pure_ququart_inputs_have_input_dependent_lossy_triples(self):
+        ideal=self.l["loss_scan"][0]["examples"]
+        noisy=self.l["loss_scan"][2]["examples"]
+        for r in ideal:self.assertAlmostEqual(r["conditioned_three_copy_collision"],.002)
+        self.assertGreater(noisy[0]["conditioned_three_copy_collision"],.0027)
+        self.assertLess(noisy[-1]["conditioned_three_copy_collision"],.0017)
+
+    def test_naive_ideal_purity_formula_can_become_unphysical(self):
+        noisy=self.l["loss_scan"][2]["examples"]
+        self.assertGreater(noisy[0]["incorrect_ideal_formula_inferred_purity"],1.17)
+        self.assertLess(noisy[-1]["incorrect_ideal_formula_inferred_purity"],.93)
+        self.assertTrue(self.l["uniform_loss_control_preserves_conditioned_C3"])
+
 if __name__=="__main__":unittest.main()
