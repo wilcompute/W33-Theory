@@ -19,7 +19,7 @@ def verify():
     p2=a/16
     assert sp.expand(p0+p1+6*p2)==1
     purity=sp.factor(p0**2+p1**2+6*p2**2)
-    assert purity==(39*a*a-60*a+32)/32
+    assert sp.simplify(purity-(39*a*a-60*a+32)/32)==0
     linear_stationary=sp.solve(sp.diff(purity,a),a)
     assert linear_stationary==[sp.Rational(10,13)]
     linear_min=sp.factor(purity.subs(a,sp.Rational(10,13)))
