@@ -1,0 +1,171 @@
+{
+  "analytic_root": {
+    "a": "-1/18",
+    "all_other_s": "0",
+    "s_01": "-1",
+    "s_02": "-1",
+    "u": "(1,0,0)",
+    "v": "(1,0,0)"
+  },
+  "bilinear_characters": {
+    "01": {
+      "under_X": 1,
+      "under_Z": 0
+    },
+    "02": {
+      "under_X": 2,
+      "under_Z": 0
+    },
+    "10": {
+      "under_X": 0,
+      "under_Z": 2
+    },
+    "11": {
+      "under_X": 1,
+      "under_Z": 2
+    },
+    "12": {
+      "under_X": 2,
+      "under_Z": 2
+    },
+    "20": {
+      "under_X": 0,
+      "under_Z": 1
+    },
+    "21": {
+      "under_X": 1,
+      "under_Z": 1
+    },
+    "22": {
+      "under_X": 2,
+      "under_Z": 1
+    }
+  },
+  "caveat": "An isolated *local singlet-sector orbit* of the reduced model. It does not lift the charged SO10 spinor/ten-plet sector, establish a stable full E6 Higgs vacuum, supply three chiral SM families, check radiative corrections or predict mass scales. H27 is an external family group distinct from the subgroup in E6.",
+  "degree_of_superpotential": 3,
+  "effective_7x7_Hessian_rank": 6,
+  "exact_reduced_Hessian": [
+    [
+      "-2",
+      "0",
+      "0",
+      "-2",
+      "0",
+      "0",
+      "4"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "3",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "3",
+      "0"
+    ],
+    [
+      "-2",
+      "0",
+      "0",
+      "-2",
+      "0",
+      "0",
+      "4"
+    ],
+    [
+      "0",
+      "3",
+      "0",
+      "0",
+      "0",
+      "-3",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "3",
+      "0",
+      "-3",
+      "0",
+      "0"
+    ],
+    [
+      "4",
+      "0",
+      "0",
+      "4",
+      "0",
+      "0",
+      "72"
+    ]
+  ],
+  "full_15x15_Hessian_nullity": 1,
+  "full_15x15_Hessian_rank": 14,
+  "gauge_complex_zero_mode": [
+    1,
+    0,
+    0,
+    -1,
+    0,
+    0,
+    0
+  ],
+  "mediator_Hessian_rank": 8,
+  "mediator_modes": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "residual_singlet_moduli_after_gauge_quotient": 0,
+  "root_D_terms_zero": "Because v=u* along one E6 U1 weight and adjoint Cartan a is real; all s_ab are E6 singlets. Other E6 D generators vanish on this SO10-singlet ansatz.",
+  "root_F_terms_zero": true,
+  "status": "PASS_H27_MEDIATOR_LIFTS_FOUR_TRUNCATED_E6_SINGLET_MODULI",
+  "superpotential": "W=(20/9+4a)sum_i(v_i u_i)+36a^2+sum_(ab!=00)s_ab(v^T X^a Z^b u)+(1/2)sum_(ab!=00)s_ab s_(-a,-b)",
+  "symmetry": "External family H27: u transforms as 3D Schrodinger, v as contragredient. B_ab=v^T X^aZ^b u transforms by characters; s_ab carries inverse characters.",
+  "variables": {
+    "E6_neutral_H27_character_mediators": 8,
+    "adjoint_cartan_a": 1,
+    "charged_singlet_u": 3,
+    "conjugate_charged_singlet_v": 3,
+    "total": 15
+  }
+}

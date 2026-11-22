@@ -1,0 +1,26 @@
+{
+  "baseline_commit": "7af60ca6b817331b2a73a5a952b72e45e2af6edc",
+  "date": "2026-11-22",
+  "files_sha256": {
+    ".github/workflows/toe-round7-fivefronts-20261122.yml": "7c2ccd0c56a23667a9744e8f4ce9cc48cef9e189b351cab853bbaba4801ecb43",
+    "analysis/2026-11-22_round7_H27_code_mediators_Witting_optics_causality_compiler.md": "0477a21847def3ece7c81096624413a69c503c3c4ef410a2508a9d782ce4301d",
+    "analysis/toe_20261122_round7_coordinate_compiler.py": "4785734d3be188c7f4b57e88c27f09bcefb16a68c8178d9cc08e9321fa7fa7a6",
+    "analysis/toe_20261122_round7_h27_mediator_vacuum.py": "bad46601f0d2365910458182cdf4a74dda9c961ce12354b94747d43271d67808",
+    "analysis/toe_20261122_round7_h27_subsystem_code.py": "ccd53102122cb11b979aea2b1ab24479d9320833accd13042aa668631ffdabea",
+    "analysis/toe_20261122_round7_mic_optics_symmetry.py": "075320c4abfd4053303a38cf80dcc76d8bfc0fe67e769359980e9def59ecb589",
+    "analysis/toe_20261122_round7_mic_orbits.py": "c593ba20b07a699f70166e8eaa0ec3d74cc7a1de858f1fab82cf5a1044392633",
+    "analysis/toe_20261122_round7_w33_three_layer_hasse.py": "2670cc7013c2963d7f64d6e3675e7a0e543cc1e6a8c355b238ccdb1993b60261",
+    "data/toe_20261122_round7_coordinate_compiler.json": "ad0db3acf78a8a0a757c4591a712d9b6e7a7c7e819ef5cabdaa3a7552d13acff",
+    "data/toe_20261122_round7_h27_mediator_vacuum.json": "4b234421d3ed372b28ab7eb7a0d60e2ecab63c818af221b74ab5cef45b4b3a91",
+    "data/toe_20261122_round7_h27_subsystem_code.json": "84179af66926cd28f75a8bffe29938db43b10d65f920f848a73affd478d9e2ca",
+    "data/toe_20261122_round7_mic_optics_symmetry.json": "5f049479ad1c8a8fff2ba9747fe5b411a74beda5c8e135c04785a7b98e9111a5",
+    "data/toe_20261122_round7_mic_orbits.json": "3076403226bef27c790ed511921e4d8fd58aa758c034ee49502ceb19995f0923",
+    "data/toe_20261122_round7_w33_three_layer_hasse.json": "ff1d51c1d9a3fe52ad4a23580bd9f440b10e9b0ee55c4bc05ca285fd176f7b35",
+    "tests/test_toe_20261122_round7_fivefronts.py": "bd22c6e18723ea531d0587be8440bb41285e34a5b10d3fc4b35eac6a00a7452e"
+  },
+  "input_sources_are_mathematical_models_not_experiments": true,
+  "local_round6_round7_combined_pytest_pass": 29,
+  "new_focused_regression_tests": 16,
+  "new_frozen_result_certificates": 6,
+  "new_producers": 6
+}
