@@ -104,6 +104,8 @@ def verify():
         finite_field_certificates=certificates,
         proof="Infinite subgroup has nonzero Lie algebra in closure. Determinants belong to mu6 so identity component is inside SU4. Its Lie algebra complexification is a nonzero invariant subspace of sl4(C). A finite-dimensional unitary adjoint representation is completely reducible; scalar commutant forces irreducibility. Therefore identity component is SU4.",
         determinant_group="mu6",
+        minimum_rank_one_projector_gate_count=4,
+        minimality="At most three rank-one projector gates have a nonzero common orthogonal fixed vector in C4, preventing dense SU4. Four attain density in this restricted class.",
         full_closure="{U in U(4):det(U) in mu6}",
         limitation="Dense single-photon four-mode gate alphabet; not exact finite-depth synthesis, photonic entanglement, hardware efficiency or TOE.")
 
