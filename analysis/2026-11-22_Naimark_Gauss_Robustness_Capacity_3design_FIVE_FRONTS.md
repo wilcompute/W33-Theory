@@ -75,3 +75,18 @@ These calculations do not derive Einstein gravity, fundamental constants, Lorent
 3. Test **two- and three-copy collision moments** with experimentally known ququart mixed states, including MUB, Haar-random and Witting negative controls.
 4. Replace the identity-to-EB capacity proxy with an **environment-resolved noise interpolation on the actual Witting 4-to-9 coherent channel**, deriving upper/lower capacity bounds.
 5. Search **hardware-aware detector Pareto fronts** using empirical asymmetric cross-talk and drift and optimize launch resources, not a single ideal weighting.
+
+
+## Additional executed control: dephase the *actual* routed Witting four-to-nine channel
+
+The cloning argument in Front D above applies only to an explicitly declared identity-to-measure/reprepare **proxy**. We therefore separately reconstructed the **native** Witting 4→9 channel already used for positive-capacity witnesses: prepare the 40-ray 45×4 isometry (five zero-padded output modes), apply the previously committed 45-mode permutation ROUTING, reshape into 9 retained modes × 5 environment modes × 4 input modes, and trace the five-dimensional environment. Its five Kraus operators each have shape 9×4, and their completeness sums to I4.
+
+Now apply **actual rail-basis dephasing on the nine retained output modes**:
+N_lambda = (1−lambda)N + lambda Delta_rail∘N,
+where Delta_rail removes the offdiagonal output-rail coherence. We computed the 36×36 normalized Choi state and output for the **specific maximally mixed ququart input** I4/4, and evaluated the entropic coherent-information lower bound S(N_lambda(I4/4))−S((id⊗N_lambda)(Phi4)).
+
+The independent execution gives **I_c(0)=1.08670848982 qubits per channel use**, and that particular input's coherent information crosses zero at **lambda≈0.22982142483**. Hence quantum capacity is *provably positive* by this one-use witness for the tested interpolation below this crossing. **Beyond the crossing, negative coherent information for one input does not certify zero capacity.** The fully dephased lambda=1 channel is a measurement/output-repreparation channel and is entanglement-breaking, so its capacity is zero. This does not establish an exact capacity threshold between these endpoints.
+
+As a separate entanglement check, the normalized Choi partial transpose has least eigenvalue approximately −0.15424 at lambda=0, and its negative eigenvalues vanish at full output dephasing (within numerical precision). This is a useful control, **not** evidence of device-independent nonlocality or a photonic hardware experiment.
+
+The reproducible sixth source is analysis/toe_20261122_actual_witting_4to9_dephasing.py, with JSON certificate in data/toe_20261122_actual_witting_4to9_dephasing.json. The targeted suite now has **22 authored tests** and the dedicated GitHub CI workflow also executes the actual-channel analysis. Importantly, the actual-channel positivity witness and the proxy-channel antidegradability zero-capacity theorem describe **different channels**. They should never be combined into a single false universal decoherence threshold.
