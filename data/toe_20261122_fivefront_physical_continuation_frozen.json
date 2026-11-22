@@ -1,0 +1,196 @@
+{
+  "status": "PASS_INDEPENDENT_SANDBOX; GITHUB_CI_NOT_YET_VERIFIED",
+  "date": "2026-11-22",
+  "sources": [
+    "analysis/toe_20261122_witting_40mode_naimark_finite_shots.py",
+    "analysis/toe_20261122_w33_two_plaquette_pair_creation.py",
+    "analysis/toe_20261122_witting_multicriteria_dualframe_search.py",
+    "analysis/toe_20261122_witting_coherence_cloning_capacity.py",
+    "analysis/toe_20261122_witting_3design_collision_moments.py"
+  ],
+  "experimental_and_theoretical_context": {
+    "two_dimensional_Z2_experiment": "https://arxiv.org/abs/2611.14484",
+    "nontrivial_topology_Z2_simulation": "https://doi.org/10.1007/JHEP07(2026)067",
+    "Witting_40ray_prior": "https://arxiv.org/abs/1701.06512",
+    "Witting_40point_projective_3design_prior": "https://doi.org/10.1007/s00454-025-00805-7",
+    "quantum_channel_capacity": "https://www.nature.com/articles/s41534-022-00550-2"
+  },
+  "front1_Naimark": {
+    "isometry": [
+      40,
+      4
+    ],
+    "two_mode_Givens_operations": 150,
+    "max_matrix_residual": "<1e-11",
+    "uniform_active_element_intensity_loss_scenarios": [
+      {
+        "loss": 0,
+        "mean_survival": 1
+      },
+      {
+        "loss": 0.001,
+        "mean_survival": 0.978379172
+      },
+      {
+        "loss": 0.005,
+        "mean_survival": 0.8974543221
+      },
+      {
+        "loss": 0.01,
+        "mean_survival": 0.8076565962,
+        "worst_input_survival": 0.7875608222
+      },
+      {
+        "loss": 0.02,
+        "mean_survival": 0.6596524317
+      }
+    ],
+    "exact_binomial_constructive_counts_at_80pct_independent_detector_efficiencies": {
+      "visibility_0_25": {
+        "N": 177517,
+        "critical_count": 4882,
+        "power": 0.9000009831,
+        "null_alpha": 2.742902117e-7
+      },
+      "visibility_0_5": {
+        "N": 5788,
+        "critical_count": 213,
+        "power": 0.9001999016,
+        "null_alpha": 2.275397667e-7
+      },
+      "visibility_1": {
+        "N": 1006,
+        "critical_count": 55,
+        "power": 0.9008456602,
+        "null_alpha": 2.400788036e-7
+      }
+    },
+    "disclaimer": "Sufficient N for stated iid binomial decision rule, not proven minimum due discrete thresholds; no photonic mode-dependent loss factored into these sample budgets."
+  },
+  "front2_two_plaquette": {
+    "physical_W33_vertices": [
+      0,
+      3,
+      6,
+      9,
+      36,
+      37
+    ],
+    "four_cycles_as_original_W33_labels": [
+      [
+        0,
+        36,
+        9,
+        37
+      ],
+      [
+        0,
+        36,
+        3,
+        6
+      ]
+    ],
+    "shared_edges": 1,
+    "sites": 6,
+    "links": 7,
+    "plaquettes": 2,
+    "unconstrained_dim": 8192,
+    "Gauss_constrained_dim": 128,
+    "pair_creation_Hamiltonian": "-J sum_edge sigmaX_u Z_e sigmaX_v -h sum X_e -B sum_plaquette product Z_e +m sum n_v",
+    "static_B0_electric_potential": "Delta E =2h*shortest_path_distance on chosen two-square patch",
+    "illustration": {
+      "J": 0.7,
+      "h": 0.6,
+      "B": 0.2,
+      "m": 0.7,
+      "t": 1.5,
+      "mean_matter_count": 1.955816971839097,
+      "Wilson_expectation_plaquette1": 0.8755136200760496,
+      "Wilson_expectation_plaquette2": 0.8755136200760495
+    },
+    "disclaimer": "Finite graph patch; no continuum or proven thermodynamic confinement."
+  },
+  "front3_compressed_outcome_tomography": {
+    "full40": {
+      "fidelity_estimator_SD": 1.25,
+      "chart_privacy_MI_bits": 2.321928095,
+      "drift_gain": 0.365148372
+    },
+    "previous25": {
+      "fidelity_estimator_SD": 7.7082218926,
+      "chart_privacy_MI_bits": 1.4359177277,
+      "drift_gain": 1.0128355545
+    },
+    "privacyFisher25": {
+      "fidelity_estimator_SD": 5.1284451905,
+      "chart_privacy_MI_bits": 1.412155395,
+      "drift_gain": 1.1973483833
+    },
+    "constructive_50000_proposal_layout": {
+      "selected_global_ray_labels": [
+        0,
+        1,
+        24,
+        14,
+        6,
+        8,
+        32,
+        13,
+        12,
+        5,
+        22,
+        16,
+        38,
+        21,
+        23,
+        18,
+        11,
+        28,
+        26,
+        30,
+        27,
+        35,
+        37,
+        39
+      ],
+      "fidelity_estimator_SD": 4.7098003266,
+      "chart_privacy_MI_bits": 1.4147353586,
+      "drift_gain": 1.4956844061
+    },
+    "caveat": "Variance improved but drift worse, no global Pareto optimality. Local linear drift and ideal target-state estimator."
+  },
+  "front4_capacity_obstruction": {
+    "channel": "Lambda_lambda(rho)=(1-lambda)rho+lambda*(rho+I4)/5",
+    "coherent_info_positive_singleuse_for_lambda_below": 0.3862257487,
+    "universal_symmetric_cloner_depolarizing_shrinkage": 0.6,
+    "exact_cloning_marginal_residual": "<3e-17",
+    "antidegradable_zero_quantum_capacity_for_lambda_ge": 0.5,
+    "entanglement_breaking_for_lambda_ge": 1,
+    "caveat": "Not the native coherent 4-to-9 optical channel. Unresolved capacity region between .3862 and .5 for these witnesses."
+  },
+  "front5_projective_three_design": {
+    "Witting40_frame_potentials": {
+      "t2": 0.1,
+      "t3": 0.05,
+      "t4": 0.03333333333333333
+    },
+    "Haar_Welch_lower": {
+      "t2": 0.1,
+      "t3": 0.05,
+      "t4": 0.02857142857142857
+    },
+    "exact_third_order_matrix_residual": 1.3322676295501878e-15,
+    "Witting_is_complex_projective_3design": true,
+    "Witting_is_4design": false,
+    "fiveMUB20_frame_potential_t3": 0.0625,
+    "fiveMUB20_is_3design": false,
+    "pair_collision_formula": "C2=(1+Tr(rho^2))/50",
+    "triple_collision_formula": "C3=(1+3Tr(rho^2)+2Tr(rho^3))/3000",
+    "pure_state_pair_and_triple_collisions": {
+      "C2": 0.04,
+      "C3": 0.002
+    },
+    "prior_art": "Witting/Penrose 40-point projective 3-design pre-existing, 2025 literature cites earlier Hoggar work. New finite test is direct purity-moment extraction and MUB negative control."
+  },
+  "scientific_scope": "Finite-dimensional mathematical and toy-engineering results. None validates a theory of everything, physical photons, fundamental field dynamics, self-testing, or device-independent quantum nonlocality."
+}
