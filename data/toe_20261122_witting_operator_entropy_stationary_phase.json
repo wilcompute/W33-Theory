@@ -1,0 +1,30 @@
+{
+  "status": "PASS_EXACT_ANALYTIC_CROSSCHECK",
+  "date": "2026-11-22",
+  "operator_schmidt_probabilities": [
+    "(16-15a)/16",
+    "9a/16",
+    "a/16",
+    "a/16",
+    "a/16",
+    "a/16",
+    "a/16",
+    "a/16"
+  ],
+  "purity": "(39a^2-60a+32)/32",
+  "spectral_crossing_a": "2/3",
+  "max_linear_entropy_a": "10/13",
+  "min_purity": "29/104",
+  "max_linear_entropy": "75/104",
+  "max_Shannon_entropy_a": "16/(15+3^(6/5))",
+  "max_Shannon_entropy_a_decimal": 0.853916600778459,
+  "max_Shannon_entropy_theta_degrees": 135.0588910057548,
+  "max_Shannon_entropy_bits": 2.3258779205681903,
+  "comparison": {
+    "entropy_at_crossing_bits": 2.207518749639422,
+    "entropy_at_linear_optimum_bits": 2.299740861985748,
+    "entropy_at_pi_bits": 2.216917186688699
+  },
+  "proof": "Shannon critical equation p0^15=p1^9*p2^6, i.e. (16-15a)^15=9^9*a^15, gives a=16/(15+3^(6/5)); strict concavity proves uniqueness",
+  "caveat": "Operator Schmidt/Choi entropy is not generally entangling power on physical product inputs. Special phase values are mathematical, not evidence for spacetime geometry."
+}
