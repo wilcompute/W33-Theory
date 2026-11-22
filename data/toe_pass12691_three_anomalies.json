@@ -1,0 +1,81 @@
+{
+ "electron_g2_alpha": {
+  "Cs 2018 | C5 AKN 2019": {
+   "a_e_SM": 0.0011596521816615937,
+   "delta_1e14": -107.15937685812361,
+   "sigma_1e14": 26.307036664670928,
+   "pull": -4.0734111646270454
+  },
+  "Rb 2020 | C5 AKN 2019": {
+   "a_e_SM": 0.001159652180309646,
+   "delta_1e14": 28.035386512303972,
+   "sigma_1e14": 16.061850401996686,
+   "pull": 1.7454643027193697
+  },
+  "alpha from a_e | C5 AKN 2019": {
+   "alpha_inv": 137.03599917282077,
+   "err": 1.5502821147213912e-08,
+   "pull_vs_Cs": 4.0733607202432065,
+   "pull_vs_Rb": -1.7454605602250715
+  },
+  "Cs 2018 | C5 Volkov 2024": {
+   "a_e_SM": 0.0011596521816043869,
+   "delta_1e14": -101.43869251522108,
+   "sigma_1e14": 26.288292929246953,
+   "pull": -3.8587021526363854
+  },
+  "Rb 2020 | C5 Volkov 2024": {
+   "a_e_SM": 0.0011596521802524392,
+   "delta_1e14": 33.75607085520649,
+   "sigma_1e14": 16.031132380626964,
+   "pull": 2.1056572956754733
+  },
+  "alpha from a_e | C5 Volkov 2024": {
+   "alpha_inv": 137.03599916605046,
+   "err": 1.5458422863853097e-08,
+   "pull_vs_Cs": 3.858641945047745,
+   "pull_vs_Rb": -2.1056350944625906
+  },
+  "Cs_vs_Rb_sigma": 5.487955178635693
+ },
+ "km3net": {
+  "rows": {
+   "r=15": {
+    "p": 0.0625,
+    "sigma_one_sided": 1.5341205443525463
+   },
+   "r=30": {
+    "p": 0.03225806451612903,
+    "sigma_one_sided": 1.8485962885014091
+   },
+   "r=70": {
+    "p": 0.014084507042253521,
+    "sigma_one_sided": 2.1949244993050554
+   },
+   "implied r for 2.5 sigma": 160.0392746689633,
+   "implied r for 3.1 sigma": 1032.4814791218896
+  },
+  "note": "counting alone with IceCube's 15x exposure gives ~1.5 sigma; the quoted 2.5-3.1 sigma needs IceCube's spectral/EHE non-detections over a wider energy range (effective r ~ 160-1000) or Auger, i.e. depends on the flux shape"
+ },
+ "neutron_lifetime": {
+  "beam_vs_bottle_sigma": 5.093022217271766,
+  "tau_SM from g_A (PERKEO III)": {
+   "tau": 878.4463510143081,
+   "err": 0.6666016793899375,
+   "pull_vs_bottle": 0.8842037623343757,
+   "pull_vs_beam": -4.579172415217706
+  },
+  "tau_SM from g_A (PDG average)": {
+   "tau": 879.601488416332,
+   "err": 1.4998889056359173,
+   "pull_vs_bottle": 1.1777536918517841,
+   "pull_vs_beam": -3.3994952708626522
+  },
+  "J-PARC electron counting": {
+   "tau": 877.2,
+   "pull_vs_bottle": -0.14420202435024446,
+   "pull_vs_beam": -2.3660734745828353
+  },
+  "dark_branching_needed": 0.011597793041324245
+ }
+}
