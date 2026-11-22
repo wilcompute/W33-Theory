@@ -1,0 +1,199 @@
+{
+  "status": "PASS_EXACT_QOMEGA_ORBIT_AND_MODULAR_LIE_CERTIFICATE",
+  "date": "2026-11-22",
+  "fixed_order3_reflection_rays": [
+    5,
+    26,
+    33
+  ],
+  "one_continuous_phase_ray": 36,
+  "fixed_mirror_actions_are_permutations_of_all_40_rays": true,
+  "fixed_mirror_orders": [
+    3,
+    3,
+    3
+  ],
+  "fixed_subgroup_permutation_order": 648,
+  "fixed_subgroup_orbit_sizes": [
+    27,
+    12,
+    1
+  ],
+  "fixed_subgroup_G25_note": "Rank-three order-648 complex reflection subgroup matches Hessian Shephard-Todd G25; physical E6 interpretation is not established.",
+  "orbit_size": 27,
+  "orbit_indices": [
+    0,
+    2,
+    3,
+    4,
+    6,
+    7,
+    9,
+    10,
+    12,
+    13,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    27,
+    29,
+    30,
+    31,
+    32,
+    34,
+    36,
+    37,
+    39
+  ],
+  "target_four_ray_subset": [
+    0,
+    2,
+    7,
+    20
+  ],
+  "paths_to_targets": {
+    "0": [
+      33,
+      26,
+      5,
+      5
+    ],
+    "2": [
+      26,
+      26,
+      33
+    ],
+    "7": [
+      26,
+      26,
+      5,
+      33,
+      26
+    ],
+    "20": [
+      26,
+      5,
+      5,
+      26,
+      33
+    ]
+  },
+  "target_lie_rank_layers": [
+    4,
+    8,
+    14,
+    16
+  ],
+  "target_modular_certificates": [
+    {
+      "prime": 7,
+      "Lie_rank": 16
+    },
+    {
+      "prime": 13,
+      "Lie_rank": 16
+    },
+    {
+      "prime": 19,
+      "Lie_rank": 16
+    },
+    {
+      "prime": 31,
+      "Lie_rank": 16
+    },
+    {
+      "prime": 37,
+      "Lie_rank": 16
+    },
+    {
+      "prime": 43,
+      "Lie_rank": 16
+    }
+  ],
+  "orbit_lie_words": [
+    [
+      "P",
+      0
+    ],
+    [
+      "P",
+      1
+    ],
+    [
+      "P",
+      2
+    ],
+    [
+      "P",
+      3
+    ],
+    [
+      "B",
+      2,
+      0
+    ],
+    [
+      "B",
+      2,
+      1
+    ],
+    [
+      "B",
+      3,
+      1
+    ],
+    [
+      "B",
+      3,
+      2
+    ],
+    [
+      "B",
+      0,
+      4
+    ],
+    [
+      "B",
+      1,
+      4
+    ],
+    [
+      "B",
+      3,
+      4
+    ],
+    [
+      "B",
+      1,
+      5
+    ],
+    [
+      "B",
+      3,
+      5
+    ],
+    [
+      "B",
+      1,
+      6
+    ],
+    [
+      "B",
+      1,
+      8
+    ],
+    [
+      "B",
+      3,
+      8
+    ]
+  ],
+  "minimality": "One tunable rank-one projector and at most two fixed rank-one mirrors leave a nonzero common orthogonal subspace in C4. Three fixed mirrors are necessary.",
+  "theorem": "Fixed order-three Witting reflections on rays 5,26,33 with continuous exp(i theta P36) generate U(4) under the Lie rank condition.",
+  "scope": "Single-photon four-mode coherent control, not a multiphoton entangling gate, experimental hardware, or a TOE."
+}
