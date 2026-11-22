@@ -42,3 +42,19 @@ Each was checked with a self-contained computation:
 - A 2HDM-consistent b-only PQ model (anomaly bookkeeping only so far).
 - B's decay regime, which electroweak precision does not fix.
 - Simons Observatory will decide the N_eff hint at ~4σ.
+
+## Addendum: Passes 12699–12701
+
+| result | where |
+|---|---|
+| Neither completion explains the Belle II B→Kνν̄ or 95 GeV hints | 12699 |
+| A's DFSZ-type potential: boundedness is set by the 2HDM quartics alone (240/240 scan) | 12699, 12700 |
+| E₆-SUSY at the quartic zero: tan β ≈ 1.1–1.5; ceiling 5.4×10¹⁰ GeV (2×10¹⁰–1.7×10¹¹ over ±1σ in m_t); stop mixing only lowers it | 12699, 12700 |
+| Split SUSY (fermions at 1 TeV): ceiling 5×10⁷ GeV | 12701 |
+| High-scale SUSY at 10¹⁰ GeV does not unify (two-loop δ = −3.4) | 12700, 12701 |
+| Incomplete E₆ pieces at 1 TeV (best: vectorlike Q + U) restore MSSM-level unification; the other track's 16/10 states are complete SU(5) multiplets and cannot | 12701 |
+| With Q + U at 1 TeV, the quartic zero survives at 10¹⁰ GeV only for y′ ≈ 0.48, close to B's top partner (y′ = 0.51): a conditional E₆-SUSY + top-partner combination with τ_p ~ 4×10³⁵ yr | 12701 |
+| Naturalness: A with hierarchical thermal leptogenesis Δ ≳ 7×10⁵; A with quasi-degenerate N at 1.2×10⁷ GeV (ΔM/M ~ 10⁻⁴) Δ ≈ 10; B Δ ≈ 4 | 12700, 12701 |
+| Correction: two-loop shifts the MSSM unification mismatch by +0.8, not −0.8 | 12701 |
+
+Questions for the other track remain in `REQUEST_E6_INTERMEDIATE_SCALE_SUSY.md`. New question: can the E₆ messenger filter leave a vectorlike Q + U (an incomplete 10 + 10̄) at the TeV scale?

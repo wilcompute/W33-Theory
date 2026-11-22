@@ -49,7 +49,7 @@ Pass 12699's explicit point is consistent but heavily tuned. A tuned only to the
 | **high-scale SUSY at 10¹⁰** | 8.0×10¹³ GeV | **−4.10** |
 | split: gauginos + higgsinos at 1 TeV, scalars at 10¹⁰ | 8.0×10¹⁵ GeV | −1.17 |
 
-Two-loop running shifts the MSSM entry by about −0.8; the ordering is robust.
+Two-loop running shifts the MSSM entry by about +0.8 (sign corrected in Pass 12701, which computes it: −0.62 → +0.16); the ordering is robust.
 
 **High-scale SUSY at the quartic-zero scale does not unify the couplings.** Complete E₆ 27-plets leave one-loop unification unchanged. If the other track's vacuum puts SUSY at μ₀, unification must come from incomplete multiplets or thresholds in its E₆ → SU(5) chain. The split variant (fermions light) unifies roughly as well as the MSSM. It changes the matching, though: the gaugino and higgsino contributions to the running between 1 TeV and M_SS are not included in item (1).
 

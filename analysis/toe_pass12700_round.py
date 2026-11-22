@@ -127,7 +127,7 @@ for lab, seg in (("SM", [(B["SM"], MZ)]), ("MSSM at 1 TeV", [(B["SM"], MZ), (B["
     M, a12, d3 = unify(seg)
     uni[lab] = dict(M12=M, a12_inv=a12, delta_a3_inv=d3)
     print(f"(3) {lab:36s}: alpha1 = alpha2 at {M:.2e} GeV (alpha^-1 = {a12:.1f}); alpha3^-1 - alpha12^-1 = {d3:+.2f}")
-res["unification"] = dict(rows=uni, note="one loop; two-loop shifts delta(alpha3^-1) by ~ -0.8 for MSSM; complete E6 27s leave one-loop "
+res["unification"] = dict(rows=uni, note="one loop; two-loop shifts delta(alpha3^-1) by ~ +0.8 for MSSM (sign corrected in Pass 12701); complete E6 27s leave one-loop "
                                          "unification unchanged")
 
 

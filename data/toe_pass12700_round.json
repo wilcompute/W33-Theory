@@ -448,7 +448,7 @@
     "delta_a3_inv": -1.1726910445377143
    }
   },
-  "note": "one loop; two-loop shifts delta(alpha3^-1) by ~ -0.8 for MSSM; complete E6 27s leave one-loop unification unchanged"
+  "note": "one loop; two-loop shifts delta(alpha3^-1) by ~ +0.8 for MSSM (sign corrected in Pass 12701); complete E6 27s leave one-loop unification unchanged"
  },
  "naturalness_ledger": {
   "rows": {
