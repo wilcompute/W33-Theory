@@ -1,0 +1,20 @@
+{
+  "SO10_U1_decomposition": "27 = 16_1 + 10_-2 + 1_4",
+  "U1_forbidden_cubic_sector": "16*16*1",
+  "U1_neutral_fundamental_cubic_sectors": [
+    "16*16*10",
+    "10*10*1"
+  ],
+  "adjoint_Cartan_escape": {
+    "m_choice": "m=-4 lambda a",
+    "singlet_coefficient": "0",
+    "spinor_coefficient": "-3*a*lam",
+    "ten_coefficient": "-6*a*lam"
+  },
+  "eaten_spinor_goldstone_modes": 32,
+  "elementary_spinor_component_count": 96,
+  "residual_quadratic_spinor_modes": 64,
+  "singlet_VEV_only_cubic_lifts_spinors": false,
+  "status": "PASS_E6_H27_SINGLET_CUBIC_64_SPINOR_SELECTION_GATE",
+  "warning": "Adjoint escape computes an allowed Hessian operator, not a full F- and D-flat solution; 78 adjoint fluctuations restore Goldstone constraints. It is not an isolated vacuum or a realistic chiral Standard Model, and a family-uniform vectorlike mass does not predict three chiral families."
+}

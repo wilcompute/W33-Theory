@@ -1,0 +1,15 @@
+{
+  "adjoint_grading": {
+    "g0_sl3_cubed": 24,
+    "g1_tensor333": 27,
+    "g2_dual_tensor333": 27
+  },
+  "necessary_adjoint_extra_directions": 51,
+  "physical_boundary": "This is an E6 Lie-algebra irreducibility/leakage witness, NOT a dynamical leakage rate. No gauge Hamiltonian, energetic gap or error-correcting mechanism follows from representation containment.",
+  "proof": "Nonzero epsilon-epsilon-epsilon antisymmetric contraction spans g2, and traceless partial contractions of g1 x g2 span each of sl3 factors. The computed integer matrices have ranks 27 and 24 over Q.",
+  "rank_bracket_g1_tensor_g2_to_g0": 24,
+  "rank_bracket_g1_wedge_g1_to_g2": 27,
+  "status": "PASS_E6_Z3_GRADED_51_DIRECTION_LEAKAGE_CERTIFICATE",
+  "target": "132 = adjoint78 + fundamental27 + antifundamental27bar",
+  "total_generated_e6_adjoint_dimension": 78
+}

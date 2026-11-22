@@ -1,0 +1,37 @@
+name: TOE Witting 18-19 POVM E6 exact leakage causal and stage4 compiler
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/toe_20261122_round5_*.py'
+      - 'data/toe_20261122_round5_*.json'
+      - 'tests/test_toe_20261122_round5_sixfronts.py'
+      - '.github/workflows/toe-round5-sixfront-20261122.yml'
+  workflow_dispatch:
+jobs:
+  exact-six-fronts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install research verifier dependencies
+        run: python -m pip install --upgrade numpy scipy sympy networkx pytest
+      - name: Recompute and test every frontier in fresh checkout
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+        run: |
+          python -m pytest -q tests/test_toe_20261122_round5_sixfronts.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=Path('data')
+          f=sorted(d.glob('toe_20261122_round5_*.json'))
+          assert len(f)==6,(len(f),f)
+          for p in f:
+              x=json.loads(p.read_text())
+              assert x['status'].startswith('PASS_'),p
+          print('PASS six full numerical and exact algebra certificates')
+          PY
