@@ -1,0 +1,66 @@
+name: Witting next5 operational falsifiers
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/toe_20261122_native_capacity_input_witness.py'
+      - 'analysis/toe_20261122_loss_calibrated_witting_schmidt_witness.py'
+      - 'analysis/toe_20261122_three_plaquette_W33_gauge_null_control.py'
+      - 'analysis/toe_20261122_witting_triple_collision_finite_shots.py'
+      - 'analysis/toe_20261122_confusion_aware_Witting_detector_pareto.py'
+      - 'tests/test_toe_20261122_physical_next5_plus.py'
+      - '.github/workflows/witting-20261122_next5_operational_falsifiers.yml'
+  pull_request:
+    paths:
+      - 'analysis/toe_20261122_native_capacity_input_witness.py'
+      - 'analysis/toe_20261122_loss_calibrated_witting_schmidt_witness.py'
+      - 'analysis/toe_20261122_three_plaquette_W33_gauge_null_control.py'
+      - 'analysis/toe_20261122_witting_triple_collision_finite_shots.py'
+      - 'analysis/toe_20261122_confusion_aware_Witting_detector_pareto.py'
+      - 'tests/test_toe_20261122_physical_next5_plus.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  independent-research-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numerical dependencies
+        run: python -m pip install numpy scipy networkx sympy
+      - name: Test actual 4-to-9 channel input-dependent capacity witness
+        run: python analysis/toe_20261122_native_capacity_input_witness.py
+      - name: Test loss-calibrated 40-mode Schmidt witness
+        run: python analysis/toe_20261122_loss_calibrated_witting_schmidt_witness.py
+      - name: Test 1024D three-plaquette Gauss sector and graph control
+        run: python analysis/toe_20261122_three_plaquette_W33_gauge_null_control.py
+      - name: Test third-moment collisions and MUB null controls
+        run: python analysis/toe_20261122_witting_triple_collision_finite_shots.py
+      - name: Test known-crosstalk 25-outcome joint-tomography variance
+        run: python analysis/toe_20261122_confusion_aware_Witting_detector_pareto.py
+      - name: Run 20 targeted regressions
+        run: python tests/test_toe_20261122_physical_next5_plus.py
+      - name: Save reproducible numeric certificates
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: witting-20261122-next5-falsifiers
+          path: |
+            data/toe_20261122_native_capacity_input_witness.json
+            data/toe_20261122_loss_calibrated_witting_schmidt_witness.json
+            data/toe_20261122_three_plaquette_W33_gauge_null_control.json
+            data/toe_20261122_witting_triple_collision_finite_shots.json
+            data/toe_20261122_confusion_aware_Witting_detector_pareto.json
+          if-no-files-found: warn
+          retention-days: 30
