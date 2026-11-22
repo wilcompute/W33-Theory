@@ -1,0 +1,118 @@
+{
+  "beam_width": 128,
+  "depth": 12,
+  "fixed_generators": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "A",
+    "B",
+    "C"
+  ],
+  "hessian_group": 648,
+  "known_two_stage_witness_error": 0.0,
+  "limitations": "No certificate of optimal distance at depth 8; exact finite-depth <=4 results are separate. Each coordinate update searches 27 Heisenberg choices and all 648 Hessian prefixes, but local optima remain possible. Primitive word lengths depend on the selected Hessian word table; no physical loss or time per gate is assumed.",
+  "normal_Heisenberg": 27,
+  "nstarts": 15,
+  "status": "PASS_COORDINATE_OPTIMIZED_WITTING_DEPTH8_WITH_EXPLICIT_GATE_WORDS",
+  "targets": [
+    {
+      "beam_best_through8": 0.32833946175498246,
+      "beam_initial_distance": 0.43618610116157197,
+      "prior_exact_four_distance_rounded": 0.3364,
+      "refined": {
+        "depth": 12,
+        "distance": 0.43618610116157247,
+        "hessian_index": 113,
+        "history": [
+          0.43618610116157247,
+          0.43618610116157247
+        ],
+        "normal_indices": [
+          3,
+          14,
+          25,
+          25,
+          0,
+          0,
+          0,
+          10,
+          15,
+          15,
+          15,
+          15
+        ],
+        "overlap": 0.9048708425767332,
+        "primitive_word": "AbCBdbaCBdAbAcBadaBcBaBcBdaBcBaBcBddddaBaCbCdABaCbadABaCbadABaCbadABaCba",
+        "primitive_word_length": 72
+      },
+      "target_index": 0
+    },
+    {
+      "beam_best_through8": 0.42193232368817124,
+      "beam_initial_distance": 0.4451104986208488,
+      "prior_exact_four_distance_rounded": 0.3638,
+      "refined": {
+        "depth": 12,
+        "distance": 0.427747851848094,
+        "hessian_index": 36,
+        "history": [
+          0.44511049862084856,
+          0.427747851848094,
+          0.427747851848094
+        ],
+        "normal_indices": [
+          13,
+          25,
+          6,
+          26,
+          3,
+          25,
+          24,
+          11,
+          13,
+          6,
+          12,
+          6
+        ],
+        "overlap": 0.9085158876196705,
+        "primitive_word": "acBdAbaCBadaBcBaBcBdBAcbdAbCbAbCbdbaCBdaBcBaBcBdBAcBAcBdaBAcbAdAbaCBadBAcbdaCbaCBdBAcb",
+        "primitive_word_length": 86
+      },
+      "target_index": 1
+    },
+    {
+      "beam_best_through8": 0.3191726019327657,
+      "beam_initial_distance": 0.4657883339418121,
+      "prior_exact_four_distance_rounded": 0.3876,
+      "refined": {
+        "depth": 12,
+        "distance": 0.4657883339418124,
+        "hessian_index": 451,
+        "history": [
+          0.4657883339418124,
+          0.4657883339418124
+        ],
+        "normal_indices": [
+          2,
+          5,
+          16,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          26,
+          26
+        ],
+        "overlap": 0.8915206139818553,
+        "primitive_word": "bAbcbAdAcdBaCbdABAcbadaCdddddddAbCbAbCbdAbCbAbCb",
+        "primitive_word_length": 48
+      },
+      "target_index": 2
+    }
+  ]
+}
