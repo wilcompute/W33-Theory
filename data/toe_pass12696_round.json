@@ -1,0 +1,131 @@
+{
+ "pq_scan": {
+  "n_NDW1": 460,
+  "n_third_family_visible": 352,
+  "simplest": [
+   {
+    "x_u": 0,
+    "x_d": -1,
+    "x_e": 0,
+    "x_Q": 0,
+    "Y_Q": 0.0,
+    "E_over_N": 0.6666666666666666,
+    "g_rel": 0.6527777777777778,
+    "third_family_charged": true
+   },
+   {
+    "x_u": 0,
+    "x_d": 1,
+    "x_e": 0,
+    "x_Q": 0,
+    "Y_Q": 0.0,
+    "E_over_N": 0.6666666666666666,
+    "g_rel": 0.6527777777777778,
+    "third_family_charged": true
+   },
+   {
+    "x_u": 0,
+    "x_d": -1,
+    "x_e": 1,
+    "x_Q": 0,
+    "Y_Q": 0.0,
+    "E_over_N": -1.3333333333333335,
+    "g_rel": 1.6944444444444446,
+    "third_family_charged": true
+   },
+   {
+    "x_u": 0,
+    "x_d": 1,
+    "x_e": -1,
+    "x_Q": 0,
+    "Y_Q": 0.0,
+    "E_over_N": -1.3333333333333335,
+    "g_rel": 1.6944444444444446,
+    "third_family_charged": true
+   },
+   {
+    "x_u": -1,
+    "x_d": 0,
+    "x_e": -1,
+    "x_Q": 0,
+    "Y_Q": 0.0,
+    "E_over_N": 4.666666666666666,
+    "g_rel": 1.4305555555555554,
+    "third_family_charged": true
+   },
+   {
+    "x_u": 1,
+    "x_d": 0,
+    "x_e": 1,
+    "x_Q": 0,
+    "Y_Q": 0.0,
+    "E_over_N": 4.666666666666666,
+    "g_rel": 1.4305555555555554,
+    "third_family_charged": true
+   },
+   {
+    "x_u": -1,
+    "x_d": 0,
+    "x_e": 1,
+    "x_Q": 0,
+    "Y_Q": 0.0,
+    "E_over_N": 0.6666666666666665,
+    "g_rel": 0.6527777777777778,
+    "third_family_charged": true
+   },
+   {
+    "x_u": 1,
+    "x_d": 0,
+    "x_e": -1,
+    "x_Q": 0,
+    "Y_Q": 0.0,
+    "E_over_N": 0.6666666666666665,
+    "g_rel": 0.6527777777777778,
+    "third_family_charged": true
+   }
+  ]
+ },
+ "fcc_yprime": [
+  {
+   "eps": 0.001,
+   "N_rec": 72000.0,
+   "delta_DeltaM": 0.44535410380704676,
+   "delta_yprime": 0.002557979910902611
+  },
+  {
+   "eps": 0.01,
+   "N_rec": 720000.0,
+   "delta_DeltaM": 0.14083333333333334,
+   "delta_yprime": 0.0008089042727406827
+  }
+ ],
+ "kev_particle": {
+  "rows": [
+   {
+    "T_keV": 5.3,
+    "lifetime_s": 46991.81203275187,
+    "rho_frac": 0.06437121391508227,
+    "zeta_X_GeV": 9.215539800149922e-07
+   },
+   {
+    "T_keV": 10.0,
+    "lifetime_s": 13200.0,
+    "rho_frac": 0.06437121391508227,
+    "zeta_X_GeV": 1.73878109436791e-06
+   },
+   {
+    "T_keV": 30.0,
+    "lifetime_s": 1466.6666666666667,
+    "rho_frac": 0.06437121391508227,
+    "zeta_X_GeV": 5.21634328310373e-06
+   }
+  ],
+  "note": "tau ~ 1.5e3-5e4 s with zeta_X ~ 1e-6 GeV; EM cascades below the 2.22 MeV D threshold for T > 5.3 keV; neutrino or hadronic branchings must be tiny (hadronic BBN bounds at these lifetimes are ~1e-9 GeV or stronger)"
+ },
+ "ft_shift": {
+  "Ft": 3072.24,
+  "sigma": 1.85,
+  "shift_needed_s": -5.230818713517741,
+  "in_sigma": -2.8274695748744545
+ }
+}
