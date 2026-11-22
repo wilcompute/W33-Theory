@@ -12,6 +12,7 @@ import toe_20261122_witting_coherence_cloning_capacity as coherence
 import toe_20261122_witting_40mode_naimark_finite_shots as optical
 import toe_20261122_w33_two_plaquette_pair_creation as gauge
 import toe_20261122_witting_multicriteria_dualframe_search as readout
+import toe_20261122_actual_witting_4to9_dephasing as realchannel
 def load(name):
     f=ROOT/"data"/("toe_20261122_"+name+".json")
     if not f.exists():raise RuntimeError("Run producer before tests: "+str(f))
@@ -25,6 +26,7 @@ class PhysicalFivefrontContinuation(unittest.TestCase):
         cls.o=load("witting_40mode_naimark_finite_shots")
         cls.g=load("w33_two_plaquette_pair_creation")
         cls.r=load("witting_multicriteria_dualframe_search")
+        cls.a=load("actual_witting_4to9_dephasing")
 
     def test_all_five_independent_producers_pass(self):
         self.assertEqual([d["status"]for d in (self.d,self.c,self.o,self.g,self.r)],["PASS"]*5)
@@ -128,5 +130,21 @@ class PhysicalFivefrontContinuation(unittest.TestCase):
         self.assertIn("physical QCD experiment",self.g["limits"])
         self.assertIn("no physical",self.d["limits"].lower())
         self.assertIn("not a global",self.r["limits"].lower())
+
+
+    def test_native_Witting_routed_channel_has_five_kraus(self):
+        self.assertEqual(self.a["Kraus_shape"],[5,9,4])
+        self.assertGreater(self.a["positive_maximally_mixed_input_coherent_information_at_zero"],1)
+
+    def test_native_output_dephasing_lowers_coherent_information(self):
+        self.assertGreater(self.a["positive_coherent_information_ends_for_maxmixed_at_lambda"],.22)
+        self.assertLess(self.a["positive_coherent_information_ends_for_maxmixed_at_lambda"],.24)
+        vals=[x["maximally_mixed_input_coherent_information_bits"]for x in self.a["scans"]]
+        self.assertGreater(vals[0],vals[1])
+        self.assertGreater(vals[1],vals[2])
+
+    def test_full_rail_dephasing_is_EB_but_partial_noise_capacity_unknown(self):
+        self.assertTrue(self.a["fully_dephased_lambda1_is_entanglement_breaking"])
+        self.assertIn("does NOT prove capacity zero",self.a["essential_scope"])
 
 if __name__=="__main__":unittest.main()
