@@ -1,0 +1,110 @@
+{
+ "hybrid": {
+  "rows": {
+   "1000": {
+    "M_VL": 1000.0,
+    "yprime_mu0_1e10": 0.47774030352901026,
+    "M12": 4.597025053471194e+16,
+    "a_inv": 22.881035223033265,
+    "delta_two_loop": 0.32709494457851207,
+    "tau_p": 1.7582339531809909e+37
+   },
+   "1740": {
+    "M_VL": 1740.0,
+    "yprime_mu0_1e10": 0.462339949559723,
+    "M12": 4.05880176021671e+16,
+    "a_inv": 23.162540267388145,
+    "delta_two_loop": 0.25858061904735763,
+    "tau_p": 1.0949179495807506e+37
+   },
+   "2500": {
+    "M_VL": 2500.0,
+    "yprime_mu0_1e10": 0.4529990941456477,
+    "M12": 3.742556492837032e+16,
+    "a_inv": 23.34606413665627,
+    "delta_two_loop": 0.21356825373845467,
+    "tau_p": 8.041158963300177e+36
+   },
+   "4000": {
+    "M_VL": 4000.0,
+    "yprime_mu0_1e10": 0.4418520582725729,
+    "M12": 3.37015562909963e+16,
+    "a_inv": 23.583355013108186,
+    "delta_two_loop": 0.15500146929664282,
+    "tau_p": 5.395464554949956e+36
+   },
+   "10000": {
+    "M_VL": 10000.0,
+    "yprime_mu0_1e10": 0.42263935408122516,
+    "M12": 2.7506192567162296e+16,
+    "a_inv": 24.04372773729312,
+    "delta_two_loop": 0.04032330866073863,
+    "tau_p": 2.4885327469253484e+36
+   }
+  },
+  "no_VL_delta": -3.4082827378667204,
+  "yprime_band_174": {
+   "mu0=1e9": 0.49608709258741984,
+   "mu0=1e11": 0.43915024359464855,
+   "Mt-0.3": 0.47601514913441423,
+   "Mt+0.3": 0.4472526959609036,
+   "as-0.0009": 0.44552141440850535,
+   "as+0.0009": 0.47749179562003946
+  },
+  "note": "two-loop gauge with VL Weyl formula; lambda running two-loop SM + one-loop VL; above M_SS VL superfields scaled 1.5x"
+ },
+ "e6_obstruction": {
+  "rank_QUE_rows": 2,
+  "m_ec_when_Q_U_massless": "0",
+  "n_SM_mass_parameters": 17,
+  "max_from_1_plus_78": 6,
+  "other_track_branch": {
+   "adjoint direction": "U(1)_psi (a = -m/(4 lambda))",
+   "16": "3m/4",
+   "10": "3m/2",
+   "1": "0"
+  },
+  "conclusion": "renormalizable 27bar.27.(1+78) masses cannot leave Q+U light without e^c; the F/D-flat branch of 7af60ca6b keeps complete SO(10) multiplets (16: 3m/4, 10: 3m/2, singlet massless)"
+ },
+ "leptogenesis_radiative": {
+  "rows": {
+   "Lambda = f_a = 1e11": {
+    "log": 8.995228992359237,
+    "dM_over_Gamma": 2.863270316755003,
+    "eps_over_sinphi": 0.1694580321937784,
+    "sinphi_needed": [
+     8.851749194660317e-06,
+     7.081399355728254e-05
+    ]
+   },
+   "Lambda = M_GUT = 2e16": {
+    "log": 21.20130163788941,
+    "dM_over_Gamma": 6.748583911304793,
+    "eps_over_sinphi": 0.07368513967259023,
+    "sinphi_needed": [
+     2.0356886160018744e-05,
+     0.00016285508928014995
+    ]
+   },
+   "Lambda = M_Pl": {
+    "log": 25.988793380671456,
+    "dM_over_Gamma": 8.272489863055585,
+    "eps_over_sinphi": 0.06022129753470842,
+    "sinphi_needed": [
+     2.490813153163095e-05,
+     0.0001992650522530476
+    ]
+   }
+  },
+  "y2": 2.0478266613819527e-08,
+  "pseudo_dirac_penalty": "Delta x M/DeltaM",
+  "note": "Delta M/Gamma = ln(Lambda/M)/pi x O(1) Yukawa-structure factor; order of magnitude"
+ },
+ "proton": {
+  "e_pi0_years": 1.0949179495807506e+37,
+  "hyperK_10yr_90CL": 7.8e+34,
+  "superK": 2.4e+34,
+  "d5_suppression": 100000000000000.0,
+  "note": "high-scale SUSY: d=5 K+ nubar amplitude ~ 1/M_SS -> rate x (1 TeV/M_SS)^2 ~ 1e-14 vs TeV SUSY; e+ pi0 is the channel"
+ }
+}

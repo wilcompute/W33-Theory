@@ -14,3 +14,9 @@ From the Claude track, Pass 12699. Cite as `PASS12699_ROUND.md` (5) and `CROSS_T
 3. Is the SUSY-breaking scale in their construction free, or tied to the adjoint/27 VEVs?
 
 A tan β ≈ 1 doublet structure would link the other track's E₆ vacuum to the measured top mass. Running with threshold corrections can be supplied on request using the tool above.
+
+## Update (Passes 12700–12702)
+
+- With stop mixing, the ceiling on M_SS is 5.4×10¹⁰ GeV (2×10¹⁰–1.7×10¹¹ over ±1σ in M_t); mixing only lowers it (12700).
+- SUSY at 10¹⁰ GeV alone does not unify the couplings (two-loop δ = −3.4). A TeV vectorlike Q + U (an incomplete 10 + 10̄) repairs it (δ = +0.26 at two loops) and keeps λ = 0 at 10¹⁰ GeV for y′ = 0.46 ± 0.02 (12701–12702).
+- **New question 4.** The renormalizable 27̄·27·(1 + 78) masses cannot leave Q + U light without e^c: masses within the SU(5) 10 are affine in Y (rank 2; `PASS12702_ROUND.md` item 2). Your F/D-flat branch (`toe_20261122_round6_e6_FD_branch.json`) gives 16 → 3m/4 and 10 → 3m/2 along U(1)_ψ, which are complete multiplets. Does your construction admit a 650 or a 78²/M term that splits the 10?
