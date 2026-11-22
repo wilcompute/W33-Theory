@@ -1,0 +1,99 @@
+{
+  "Witting_ray_orbit": [
+    0,
+    2,
+    3,
+    4,
+    6,
+    7,
+    9,
+    10,
+    12,
+    13,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    27,
+    29,
+    30,
+    31,
+    32,
+    34,
+    36,
+    37,
+    39
+  ],
+  "center_fibers": [
+    [
+      0,
+      29,
+      9
+    ],
+    [
+      2,
+      13,
+      37
+    ],
+    [
+      3,
+      21,
+      17
+    ],
+    [
+      4,
+      18,
+      31
+    ],
+    [
+      6,
+      19,
+      20
+    ],
+    [
+      7,
+      36,
+      30
+    ],
+    [
+      10,
+      16,
+      39
+    ],
+    [
+      12,
+      15,
+      22
+    ],
+    [
+      27,
+      34,
+      32
+    ]
+  ],
+  "central_target": "omega*I27",
+  "date": "2026-11-22",
+  "explicit_matrix_shape": [
+    27,
+    81
+  ],
+  "kernel_dimension": 54,
+  "matrix_entry_gauge": "Deterministic Gram-Schmidt of x-invariant Fourier fiber basis; explicit code produces all entries",
+  "maximal_intertwining_frobenius_error": 3.472571256349756e-15,
+  "minimal_source_dimension_in_uniform_regular_copy_class": 81,
+  "normalized_output_coisometry_error": 6.8269586352977866e-15,
+  "novelty": "An explicit Witting-ray-indexed 27x81 partial Fourier+Schrodinger intertwining matrix with generator residual checks; earlier repo proves general Fourier/isometry representation existence.",
+  "one_regular_copy_max_equivariant_rank": 9,
+  "physics_limit": "This is an abstract H27-module map only, not an E6-cubic-preserving root-gauge map, an 81-mode photonic device, or gauge anomaly cancellation.",
+  "reason": "Each regular C[H27] contains three copies of the omega-center 3D irrep, target contains nine; min three regular copies.",
+  "regular_copies_required_for_surjection": 3,
+  "source_dimension": 81,
+  "status": "PASS_CONSTRUCTED_NUMERICAL_H27_PARTIAL_INTERTWINER",
+  "target_H27_generators": "I9 tensor Z3 for x, and I9 tensor X3 for inverse y, using sympy permutation composition convention",
+  "target_dimension": 27,
+  "three_regular_modules": true
+}

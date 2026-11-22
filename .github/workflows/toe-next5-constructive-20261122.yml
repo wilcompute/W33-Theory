@@ -1,0 +1,45 @@
+name: Witting next-five constructive TOE proofs and falsifiers
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/toe_20261122_next5_*.py'
+      - 'tests/test_toe_20261122_next5_constructive_fronts.py'
+      - '.github/workflows/toe-next5-constructive-20261122.yml'
+  pull_request:
+  workflow_dispatch:
+jobs:
+  next-five-exact-and-calibrated:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install test dependencies
+        run: python -m pip install --disable-pip-version-check numpy sympy scipy pytest
+      - name: Verify next-five and extra theorem regressions
+        run: python -m pytest -q tests/test_toe_20261122_next5_constructive_fronts.py
+      - name: Reproduce all eight frozen mathematical and toy-physics producers
+        run: |
+          for f in analysis/toe_20261122_next5_*.py; do python "$f"; done
+      - name: Check exact certificate invariants
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=lambda name:json.loads(Path('data/toe_20261122_next5_'+name+'.json').read_text())
+          assert d('hessian_coset_compiler')['double_coset_H_D_H_cardinality']==17496
+          assert len(d('hessian_coset_compiler')['exact_finite_field_certificates'])==6
+          assert d('phase_site_classification')['dense_site_count']==27
+          assert d('h27_exact_matrix')['exact_Eisenstein_integer_pair_checks']
+          assert all(p['T27x81_nonzeros']==243 for p in d('h27_exact_matrix')['six_finite_field_certificates'])
+          assert d('h27_explicit_intertwiner')['maximal_intertwining_frobenius_error']<1e-10
+          assert d('e6_susy_flat_branch')['exotic_mass_determinant']==-66
+          assert d('e6_susy_flat_branch')['singlet_branch_unlifted_complex_moduli_dimension']==4
+          assert d('causal_dynamics')['symplectic_transvection_generated_projective_group_order']==25920
+          assert abs(d('photonic_calibration_entangler')['channel_average_gate_fidelity']-.85)<1e-10
+          assert d('compiler_photonics')['search_statistics'][-1]['cumulative_projective_words']==1675
+          print('PASS eight next-five proof and falsifier certificates')
+          PY

@@ -1,0 +1,70 @@
+{
+  "H27_broken_in_vacuum": true,
+  "H27_invariance_checked": "cyclic X_i->X_i+1 and clock Z_i->omega^i on three Schr family copies; cubic invariant because i+j+k=0 mod3 on support",
+  "U1_D": 0,
+  "all_E6_D_terms_zero": "vectorlike 27/27bar pairs at conjugate singlet VEVs cancel each generator pairwise",
+  "date": "2026-11-22",
+  "driving_fields": "1 E6/H27 singlet chiral Xdrive",
+  "exotic_mass_determinant": -66,
+  "exotic_mass_singular_values": [
+    1.2287632378456306,
+    5.548888211993144,
+    9.679875025852485
+  ],
+  "explicit_F_terms": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+  ],
+  "full_E6_invariants": "C is the E6-symmetric cubic 27x27x27->1; <Phi,Phibar> is E6 invariant",
+  "h_family_parameters": {
+    "a": 2,
+    "b": 1
+  },
+  "h_family_tensor": "h_iii=a; h_ijk=b if all three family indices distinct; zero otherwise",
+  "important_scope": "Purely algebraic renormalizable SUSY toy branch; family count 3, coupling a,b, mu2 and VEV [1,2,4] are inputs, not predictions. The vectorlike Higgs sector contains additional modes whose masses and vacuum stability are not computed. No global compactification, anomaly inflow, observed Yukawa data or dynamical hierarchy.",
+  "matter": "3 x 27_M",
+  "matter_10_exotic_mass_matrix": [
+    [
+      2,
+      4,
+      2
+    ],
+    [
+      4,
+      4,
+      1
+    ],
+    [
+      2,
+      1,
+      8
+    ]
+  ],
+  "matter_16_survivors": 3,
+  "singlet_branch_moduli_reason": "6 complex singlet Higgs variables minus one holomorphic product constraint minus one complexified U1 gauge orbit; a non-isolated flat branch, not vacuum selection",
+  "singlet_branch_unlifted_complex_moduli_dimension": 4,
+  "status": "PASS_RENORMALIZABLE_E6_H27_TOY_SUPERSYMMETRIC_FLAT_BRANCH",
+  "superpotential": "W=Xdrive*(sum_i <Phi_i,Phibar_i>-mu^2) + y*sum_ijk h_ijk*C(Psi_M_i,Psi_M_j,Phi_H_k)",
+  "vacuum": {
+    "Phi_H_singlets": [
+      1,
+      2,
+      4
+    ],
+    "Phibar_H_singlets": [
+      1,
+      2,
+      4
+    ],
+    "driving_X": 0,
+    "matter_fields": "all zero",
+    "mu2": 21
+  },
+  "vectorlike_Higgs": "3 x (27_H + 27bar_H)",
+  "vectorlike_matter_10_pairs_lifted": 3
+}

@@ -1,0 +1,108 @@
+{
+  "D": "rank-one Witting pi reflection on ray 36",
+  "H27_intersection_trivial": true,
+  "H27_normal_order": 27,
+  "Hessian_mirror_subgroup_order": 648,
+  "Hessian_shortest_word_diameter": 9,
+  "date": "2026-11-22",
+  "double_coset_H_D_H_cardinality": 17496,
+  "exact_double_coset_normal_form": "H D H = H D N, with N the normal regular H27 subgroup of order 27",
+  "exact_finite_field_certificates": [
+    {
+      "H_D_H_double_coset_count_from_orbit_stabilizer": 17496,
+      "H_distinct_4x4_matrices": 648,
+      "intersection_count": 24,
+      "prime": 7
+    },
+    {
+      "H_D_H_double_coset_count_from_orbit_stabilizer": 17496,
+      "H_distinct_4x4_matrices": 648,
+      "intersection_count": 24,
+      "prime": 13
+    },
+    {
+      "H_D_H_double_coset_count_from_orbit_stabilizer": 17496,
+      "H_distinct_4x4_matrices": 648,
+      "intersection_count": 24,
+      "prime": 19
+    },
+    {
+      "H_D_H_double_coset_count_from_orbit_stabilizer": 17496,
+      "H_distinct_4x4_matrices": 648,
+      "intersection_count": 24,
+      "prime": 31
+    },
+    {
+      "H_D_H_double_coset_count_from_orbit_stabilizer": 17496,
+      "H_distinct_4x4_matrices": 648,
+      "intersection_count": 24,
+      "prime": 37
+    },
+    {
+      "H_D_H_double_coset_count_from_orbit_stabilizer": 17496,
+      "H_distinct_4x4_matrices": 648,
+      "intersection_count": 24,
+      "prime": 43
+    }
+  ],
+  "exact_search_work_reduction": 24,
+  "exact_semidirect": "H = H27 semidirect SL(2,3) (intersection is Q8 semidirect C3; H27 and intersection complementary)",
+  "fixed_ray_stabilizer_commutes_with_pi_gate": true,
+  "generated_H27_and_intersection_order": 648,
+  "global_phase_insensitive_haar_benchmarks": [
+    {
+      "Haar_target_index": 0,
+      "best_single_D_HDH_process_infidelity": 0.38534634757727093,
+      "best_single_D_HDH_projective_distance": 0.6572693468903164,
+      "compiled_word_length": 14,
+      "naive_expressions_avoided": 402408,
+      "one_D_compiler_word": "bCbAbCbdabaCBA",
+      "searched_distinct_product_representatives": 17496
+    },
+    {
+      "Haar_target_index": 1,
+      "best_single_D_HDH_process_infidelity": 0.37161541281212773,
+      "best_single_D_HDH_projective_distance": 0.6438833345676859,
+      "compiled_word_length": 13,
+      "naive_expressions_avoided": 402408,
+      "one_D_compiler_word": "baCBaBdAbAcBa",
+      "searched_distinct_product_representatives": 17496
+    },
+    {
+      "Haar_target_index": 2,
+      "best_single_D_HDH_process_infidelity": 0.4470892589563503,
+      "best_single_D_HDH_projective_distance": 0.7161289264377242,
+      "compiled_word_length": 12,
+      "naive_expressions_avoided": 402408,
+      "one_D_compiler_word": "abcBadaBaCbC",
+      "searched_distinct_product_representatives": 17496
+    }
+  ],
+  "intersection_center_order": 2,
+  "intersection_derived_Q8_order_profile": {
+    "1": 1,
+    "2": 1,
+    "4": 6
+  },
+  "intersection_derived_subgroup_order": 8,
+  "intersection_element_order_profile": {
+    "1": 1,
+    "2": 1,
+    "3": 8,
+    "4": 6,
+    "6": 8
+  },
+  "intersection_order": 24,
+  "limitations": "Modular certificates prove finite H and overlap counts in characteristic zero. Benchmark Haar distances are numerical and target-specific; this is NOT generic efficient quantum compilation, hardware scaling or experimental optical advantage.",
+  "naive_candidate_product_count": 419904,
+  "novelty": "Concrete binary-tetrahedral overlap selected by discrete Witting pi gate, and complete finite Hessian H D H compiler search. Hessian H27/SL2(3) abstract group structure already appears in the repo and mathematical literature.",
+  "pi_gate_centralizer_in_H_order": 24,
+  "ray36_stabilizer_in_H_order": 24,
+  "reduced_candidate_product_count": 17496,
+  "shallow_depth5_baseline": [
+    0.74681032,
+    0.88009576,
+    0.79757731
+  ],
+  "status": "PASS_EXACT_HESSIAN_BINARY_TETRAHEDRAL_DOUBLE_COSET_COMPILER"
+}

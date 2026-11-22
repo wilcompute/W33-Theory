@@ -1,0 +1,123 @@
+{
+  "date": "2026-11-22",
+  "gate_alphabet": [
+    "a",
+    "A",
+    "b",
+    "B",
+    "c",
+    "C",
+    "d"
+  ],
+  "haar_seed": 20261122,
+  "haar_target_projective_distances_by_depth": [
+    [
+      1.28937214,
+      1.1849291,
+      0.94711106,
+      0.83637066,
+      0.83637066,
+      0.74681032
+    ],
+    [
+      1.10085558,
+      1.07400687,
+      1.03632694,
+      0.97451142,
+      0.96762702,
+      0.88009576
+    ],
+    [
+      1.25426966,
+      1.15964118,
+      0.98075328,
+      0.97459732,
+      0.87077702,
+      0.79757731
+    ]
+  ],
+  "loss_sweep": [
+    {
+      "conditional_photon_survival_with_detector": 0.7689189082334249,
+      "per_coupler_intensity_transmission": 0.995,
+      "six_coupler_mesh_survival_with_detector": 0.8248166329528258
+    },
+    {
+      "conditional_photon_survival_with_detector": 0.6952208969576461,
+      "per_coupler_intensity_transmission": 0.99,
+      "six_coupler_mesh_survival_with_detector": 0.80025812699085
+    },
+    {
+      "conditional_photon_survival_with_detector": 0.56746677599183,
+      "per_coupler_intensity_transmission": 0.98,
+      "six_coupler_mesh_survival_with_detector": 0.7529660237343999
+    }
+  ],
+  "noise": [
+    {
+      "mean_conditional_average_gate_fidelity": 1.0000000000000004,
+      "phase_jitter_sigma_rad": 0.0,
+      "standard_error": 1.1116134109240479e-17
+    },
+    {
+      "mean_conditional_average_gate_fidelity": 0.9999272382595318,
+      "phase_jitter_sigma_rad": 0.01,
+      "standard_error": 2.6242093761666706e-06
+    },
+    {
+      "mean_conditional_average_gate_fidelity": 0.9993598499574745,
+      "phase_jitter_sigma_rad": 0.03,
+      "standard_error": 2.0634145503413655e-05
+    },
+    {
+      "mean_conditional_average_gate_fidelity": 0.99311173535765,
+      "phase_jitter_sigma_rad": 0.1,
+      "standard_error": 0.00022273717085372142
+    }
+  ],
+  "noise_model": "Gaussian independent rank-one phase jitter; uniform per-coupler intensity loss separated from normalized conditional single-photon gate fidelity",
+  "noise_samples_per_level": 400,
+  "scope": "Finite-depth projective search, not an asymptotically fast compiler, not an experimental calibration or measured efficiency gain.",
+  "search_depth": 5,
+  "search_statistics": [
+    {
+      "cumulative_projective_words": 1,
+      "depth": 0,
+      "new_words": 1
+    },
+    {
+      "cumulative_projective_words": 8,
+      "depth": 1,
+      "new_words": 7
+    },
+    {
+      "cumulative_projective_words": 38,
+      "depth": 2,
+      "new_words": 30
+    },
+    {
+      "cumulative_projective_words": 150,
+      "depth": 3,
+      "new_words": 112
+    },
+    {
+      "cumulative_projective_words": 522,
+      "depth": 4,
+      "new_words": 372
+    },
+    {
+      "cumulative_projective_words": 1675,
+      "depth": 5,
+      "new_words": 1153
+    }
+  ],
+  "status": "PASS_BOUNDED_DISCRETE_WORD_SEARCH_AND_CONDITIONAL_PHOTONIC_NEGATIVE_CONTROL",
+  "synthetic_exact_target_word": "abdcB",
+  "synthetic_target_shortest_up_to_depth": {
+    "length": 5,
+    "process_infidelity": 0.0,
+    "projective_distance": 0.0,
+    "word": "abdcB"
+  },
+  "target_metric": "min_global_phase ||U-V||_F /sqrt(4) = sqrt(2-2|Tr(Udag V)|/4)"
+}

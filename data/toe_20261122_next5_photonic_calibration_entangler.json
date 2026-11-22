@@ -1,0 +1,84 @@
+{
+  "actual_witting_gate_dual_rail_leakage": [
+    {
+      "AA_leakage": 0.22222222222222227,
+      "BB_leakage": 0.5555555555555559,
+      "computational_subspace_survival": 0.22222222222222177,
+      "input_modes": [
+        0,
+        2
+      ],
+      "total_leakage": 0.7777777777777781
+    },
+    {
+      "AA_leakage": 0.22222222222222227,
+      "BB_leakage": 0.5555555555555559,
+      "computational_subspace_survival": 0.22222222222222177,
+      "input_modes": [
+        0,
+        3
+      ],
+      "total_leakage": 0.7777777777777781
+    },
+    {
+      "AA_leakage": 0.3333333333333335,
+      "BB_leakage": 0.0,
+      "computational_subspace_survival": 0.6666666666666665,
+      "input_modes": [
+        1,
+        2
+      ],
+      "total_leakage": 0.3333333333333335
+    },
+    {
+      "AA_leakage": 0.3333333333333335,
+      "BB_leakage": 0.0,
+      "computational_subspace_survival": 0.6666666666666665,
+      "input_modes": [
+        1,
+        3
+      ],
+      "total_leakage": 0.3333333333333335
+    }
+  ],
+  "caveats": "Strictly four passive modes, exactly two noninteracting photons and deterministic leakage-free dual-rail logic. Ancillary photons, measurement/feedforward, nonlinear interactions, mode-dependent encodings and postselection change the assumptions. Detector shot budgets assume ideal preparation/readout and known reference phase; they are not laboratory calibration.",
+  "channel_average_gate_fidelity": 0.8500000000000003,
+  "controls": "Random 2x2 block diagonal and block antidiagonal unitaries have zero leakage; Witting R5 generally leaks into 2+0 or 0+2 sectors.",
+  "date": "2026-11-22",
+  "idealized_shot_budgets": [
+    {
+      "drifted_plus_probability": 0.7500000000000001,
+      "ideal_plus_probability": 1.0,
+      "shots_for_at_least_95pct_detection_ideal_SPAM": 11,
+      "theta_rad": 1.0471975511965976
+    },
+    {
+      "drifted_plus_probability": 0.9776682445628029,
+      "ideal_plus_probability": 1.0,
+      "shots_for_at_least_95pct_detection_ideal_SPAM": 133,
+      "theta_rad": 0.3
+    },
+    {
+      "drifted_plus_probability": 0.997502082639013,
+      "ideal_plus_probability": 1.0,
+      "shots_for_at_least_95pct_detection_ideal_SPAM": 1198,
+      "theta_rad": 0.1
+    },
+    {
+      "drifted_plus_probability": 0.9997750168744938,
+      "ideal_plus_probability": 1.0,
+      "shots_for_at_least_95pct_detection_ideal_SPAM": 13314,
+      "theta_rad": 0.03
+    }
+  ],
+  "intensity_measurement_identical_max_abs_error": 0.0,
+  "no_go": "A passive U(4) that exactly preserves the 2-photon dual-rail 1+1 computational sector for all four computational basis inputs is 2x2 block diagonal or block antidiagonal. Thus its induced deterministic gate is local U_A tensor U_B or local-SWAP, never entangling.",
+  "phase_drift_output": "Dout=diag(exp(i*pi/3),1,1,1)",
+  "phase_referenced_superposition_test": {
+    "ideal_plus_probability": 1.0,
+    "shifted_plus_probability": 0.7500000000000001
+  },
+  "single_photon_witting_gate": "R5(omega)",
+  "status": "PASS_PHASE_BLINDNESS_AND_PASSIVE_TWO_PHOTON_ENTANGLER_NO_GO",
+  "symmetrized_boson_norm_identity": "||u symmetric-product v||^2=||u||^2||v||^2+|inner(u,v)|^2, which vanishes iff u or v is zero"
+}
