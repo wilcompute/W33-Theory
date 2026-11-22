@@ -1,0 +1,45 @@
+name: Witting experiment-driven fivefronts
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/toe_20261122_experiment_driven_five_fronts.py'
+      - 'tests/test_toe_20261122_experiment_driven_five_fronts.py'
+      - '.github/workflows/witting-experimental-fivefronts.yml'
+  pull_request:
+    paths:
+      - 'analysis/toe_20261122_experiment_driven_five_fronts.py'
+      - 'tests/test_toe_20261122_experiment_driven_five_fronts.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  five-independent-falsifiers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install finite geometry dependencies
+        run: python -m pip install numpy scipy networkx sympy
+      - name: Generate exact five-front certificate
+        run: python analysis/toe_20261122_experiment_driven_five_fronts.py
+      - name: Run 20 targeted tests
+        run: python tests/test_toe_20261122_experiment_driven_five_fronts.py
+      - name: Upload certificate
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: witting-20261122-experimental-fivefronts
+          path: data/toe_20261122_experiment_driven_five_fronts.json
+          if-no-files-found: warn
+          retention-days: 30
