@@ -1,0 +1,108 @@
+{
+ "anomaly_scout": {
+  "belle2_excess": 1.8e-05,
+  "fa_over_Cbs_needed_GeV": 207169610.28453144,
+  "A_prediction": 1.298650588599104e-13,
+  "reading_K": "needs f_a/C_bs ~ 2.1e+08 GeV: excluded for a QCD axion (SN1987A f_a >~ 1e8); A predicts 1e-13: A does not explain it",
+  "reading_95": "A's second doublet decouples at >= 1e5 GeV and B adds no light scalar: neither completion supplies a 95 GeV state"
+ },
+ "dfsz_potential": {
+  "couplings": {
+   "lam1": 0.13,
+   "lam2": 0.5,
+   "lams": 4e-10,
+   "l12": 0.1,
+   "l1s": 1e-12,
+   "l2s": 1e-06,
+   "kappa": 2e-13
+  },
+  "quartic_min_on_sphere": 9.999999969384415e-11,
+  "bounded_below": 1.0,
+  "m_H2_GeV": 100498756.21120891,
+  "v2_induced_GeV": 4.871287128712871e-05,
+  "tan_beta_eff": 5050000.0,
+  "tuning": 1.5470297029702967e-12,
+  "note": "tiny portals (l1s ~ 1e-12) keep the Higgs light; m_H2 ~ 1e8 GeV"
+ },
+ "toy_mc_soft_lepton": {
+  "n": 200000,
+  "median_pT": 13.499191249926877,
+  "acceptance": {
+   "pT>5.0": 0.892025,
+   "pT>7.0": 0.81584,
+   "pT>10.0": 0.672255,
+   "pT>15.0": 0.427355
+  },
+  "mean_beta": 0.5187266402115422
+ },
+ "haloscope": {
+  "rows": {
+   "KSVZ": {
+    "E_over_N": 0.0,
+    "g_rel_KSVZ": 1.0,
+    "time_rel_KSVZ": 1.0,
+    "time_rel_DFSZ": 0.022871894528273123
+   },
+   "b only (A)": {
+    "E_over_N": 0.6666666666666666,
+    "g_rel_KSVZ": 0.6527777777777778,
+    "time_rel_KSVZ": 5.507297710649528,
+    "time_rel_DFSZ": 0.125962332373776
+   },
+   "b + tau opposite (A)": {
+    "E_over_N": -1.3333333333333333,
+    "g_rel_KSVZ": 1.6944444444444444,
+    "time_rel_KSVZ": 0.121308340894569,
+    "time_rel_DFSZ": 0.0027745515783403826
+   },
+   "DFSZ benchmark": {
+    "E_over_N": 2.6666666666666665,
+    "g_rel_KSVZ": 0.38888888888888884,
+    "time_rel_KSVZ": 43.721782590587274,
+    "time_rel_DFSZ": 1.0
+   }
+  },
+  "note": "experiments designed to reach DFSZ (MADMAX/ALPHA goals) cover A's b-only axion ~7.7x faster than DFSZ"
+ },
+ "high_scale_susy_tanbeta": {
+  "rows": [
+   {
+    "log10_MSS": 9.0,
+    "lambda_SM": 0.00834302178254167,
+    "cos2_2beta": 0.13632403736975898,
+    "tan_beta": 1.4733234048324482
+   },
+   {
+    "log10_MSS": 10.0,
+    "lambda_SM": 0.00308080170563337,
+    "cos2_2beta": 0.05084011091550821,
+    "tan_beta": 1.257869711228436
+   },
+   {
+    "log10_MSS": 10.5,
+    "lambda_SM": 0.0009156406298779037,
+    "cos2_2beta": 0.015175034597781986,
+    "tan_beta": 1.1318074276917474
+   },
+   {
+    "log10_MSS": 11.0,
+    "lambda_SM": -0.0009818658643323047,
+    "cos2_2beta": -0.016335307057509307,
+    "tan_beta": null
+   },
+   {
+    "log10_MSS": 11.5,
+    "lambda_SM": -0.0026388795399874044,
+    "cos2_2beta": -0.044052690782808435,
+    "tan_beta": null
+   },
+   {
+    "log10_MSS": 12.0,
+    "lambda_SM": -0.004079272163080708,
+    "cos2_2beta": -0.06829970947193902,
+    "tan_beta": null
+   }
+  ],
+  "note": "tree-level matching, no threshold corrections; SUSY broken above mu_0 ~ 5e10 GeV is impossible"
+ }
+}
