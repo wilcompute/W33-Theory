@@ -1,0 +1,178 @@
+{
+  "interpretation": "Component count and survival are architecture/ordering dependent. No fabricated or measured device. The 30-effect vs 39-effect comparison must use both survival and detected-shot risk; count alone is not a performance guarantee.",
+  "photon_survival_model": "Every two-mode mixing multiplies amplitude on only its two affected modes by sqrt(0.995). No coupling, propagation, source/detector, phase drift, reflections or rail-dependent detector inefficiency included.",
+  "rank_one_measurement_architecture": "Four input modes embedded into 30 or 39 output modes via row-local, QR-adjacent Givens couplers; each unitary reconstructed to <2e-10 max norm.",
+  "rows": [
+    {
+      "base": {
+        "gate_count": 138,
+        "input_dependent_detection_eigenvalues": [
+          0.8906346901130272,
+          0.8957800869441579,
+          0.9040845555356629,
+          0.927386088352454
+        ],
+        "loss_no_click_effect_max_eigenvalue": 0.1093653098869728,
+        "loss_no_click_effect_min_eigenvalue": 0.07261391164754605,
+        "maximally_mixed_input_detection_probability": 0.9044713552363253,
+        "naive_rectangular_Givens_limit": 146,
+        "output_modes": 39,
+        "per_hit_two_rail_intensity_transmission": 0.995,
+        "reconstruction_error": 2.423651445728339e-16,
+        "theoretical_all_gates_loss_floor": 0.5007087062458531,
+        "total_adjacent_gate_depth": 138
+      },
+      "best_of_21_row_orders": {
+        "detection_probability": 0.9044713552363253,
+        "gates": 138,
+        "seed_attempt": 0
+      },
+      "gate_count_range": [
+        138,
+        146
+      ],
+      "name": "39-effect",
+      "survival_range": [
+        0.8979024393517234,
+        0.9044713552363253
+      ]
+    },
+    {
+      "base": {
+        "gate_count": 110,
+        "input_dependent_detection_eigenvalues": [
+          0.8970054632439902,
+          0.9042926087261536,
+          0.9114256655583436,
+          0.9279788530403064
+        ],
+        "loss_no_click_effect_max_eigenvalue": 0.10299453675600978,
+        "loss_no_click_effect_min_eigenvalue": 0.07202114695969364,
+        "maximally_mixed_input_detection_probability": 0.9101756476421987,
+        "naive_rectangular_Givens_limit": 110,
+        "output_modes": 30,
+        "per_hit_two_rail_intensity_transmission": 0.995,
+        "reconstruction_error": 3.2368285245694683e-16,
+        "theoretical_all_gates_loss_floor": 0.5761543988830038,
+        "total_adjacent_gate_depth": 110
+      },
+      "best_of_21_row_orders": {
+        "detection_probability": 0.9201802766543031,
+        "gates": 109,
+        "seed_attempt": 3
+      },
+      "gate_count_range": [
+        109,
+        110
+      ],
+      "name": "30-effect-0",
+      "survival_range": [
+        0.9101756476421987,
+        0.9269089676848707
+      ]
+    },
+    {
+      "base": {
+        "gate_count": 110,
+        "input_dependent_detection_eigenvalues": [
+          0.8970054632439909,
+          0.9042926087261544,
+          0.9114256655583437,
+          0.9279788530403066
+        ],
+        "loss_no_click_effect_max_eigenvalue": 0.10299453675600911,
+        "loss_no_click_effect_min_eigenvalue": 0.07202114695969342,
+        "maximally_mixed_input_detection_probability": 0.9101756476421988,
+        "naive_rectangular_Givens_limit": 110,
+        "output_modes": 30,
+        "per_hit_two_rail_intensity_transmission": 0.995,
+        "reconstruction_error": 4.440892098500626e-16,
+        "theoretical_all_gates_loss_floor": 0.5761543988830038,
+        "total_adjacent_gate_depth": 110
+      },
+      "best_of_21_row_orders": {
+        "detection_probability": 0.9201753667298376,
+        "gates": 109,
+        "seed_attempt": 3
+      },
+      "gate_count_range": [
+        109,
+        110
+      ],
+      "name": "30-effect-1",
+      "survival_range": [
+        0.9101756476421988,
+        0.9269015649045385
+      ]
+    },
+    {
+      "base": {
+        "gate_count": 110,
+        "input_dependent_detection_eigenvalues": [
+          0.8965502643308079,
+          0.9043550925515288,
+          0.9117361911290667,
+          0.9280630965671687
+        ],
+        "loss_no_click_effect_max_eigenvalue": 0.10344973566919213,
+        "loss_no_click_effect_min_eigenvalue": 0.07193690343283132,
+        "maximally_mixed_input_detection_probability": 0.9101761611446428,
+        "naive_rectangular_Givens_limit": 110,
+        "output_modes": 30,
+        "per_hit_two_rail_intensity_transmission": 0.995,
+        "reconstruction_error": 3.554447978966673e-16,
+        "theoretical_all_gates_loss_floor": 0.5761543988830038,
+        "total_adjacent_gate_depth": 110
+      },
+      "best_of_21_row_orders": {
+        "detection_probability": 0.920191165697123,
+        "gates": 109,
+        "seed_attempt": 3
+      },
+      "gate_count_range": [
+        109,
+        110
+      ],
+      "name": "30-effect-2",
+      "survival_range": [
+        0.9101761611446428,
+        0.9269123270950463
+      ]
+    },
+    {
+      "base": {
+        "gate_count": 110,
+        "input_dependent_detection_eigenvalues": [
+          0.8970054632439909,
+          0.9042926087261545,
+          0.9114256655583437,
+          0.9279788530403064
+        ],
+        "loss_no_click_effect_max_eigenvalue": 0.10299453675600911,
+        "loss_no_click_effect_min_eigenvalue": 0.07202114695969364,
+        "maximally_mixed_input_detection_probability": 0.9101756476421985,
+        "naive_rectangular_Givens_limit": 110,
+        "output_modes": 30,
+        "per_hit_two_rail_intensity_transmission": 0.995,
+        "reconstruction_error": 3.885780586188048e-16,
+        "theoretical_all_gates_loss_floor": 0.5761543988830038,
+        "total_adjacent_gate_depth": 110
+      },
+      "best_of_21_row_orders": {
+        "detection_probability": 0.9201753667298375,
+        "gates": 109,
+        "seed_attempt": 3
+      },
+      "gate_count_range": [
+        109,
+        110
+      ],
+      "name": "30-effect-3",
+      "survival_range": [
+        0.9101756476421985,
+        0.9269015649045386
+      ]
+    }
+  ],
+  "status": "PASS_WITTING_30_39_ADJACENT_GIVENS_EXPLICIT_LOSS_MODEL"
+}

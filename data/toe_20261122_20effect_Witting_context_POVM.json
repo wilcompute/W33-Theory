@@ -1,0 +1,85 @@
+{
+  "effects": "E_j=P_j/5, j in five disjoint Witting orthonormal tetrads",
+  "five_disjoint_orthonormal_contexts": [
+    [
+      1,
+      13,
+      21,
+      29
+    ],
+    [
+      3,
+      7,
+      27,
+      35
+    ],
+    [
+      4,
+      37,
+      38,
+      39
+    ],
+    [
+      8,
+      23,
+      25,
+      26
+    ],
+    [
+      9,
+      24,
+      31,
+      34
+    ]
+  ],
+  "frame_condition_number": 87.42640687119334,
+  "number_of_outcomes": 20,
+  "optical_constructive_Givens": {
+    "gate_count": 70,
+    "input_dependent_detection_eigenvalues": [
+      0.937409849520421,
+      0.9406545989737463,
+      0.9455693599522044,
+      0.9480895106200304
+    ],
+    "loss_no_click_effect_max_eigenvalue": 0.06259015047957905,
+    "loss_no_click_effect_min_eigenvalue": 0.05191048937996956,
+    "maximally_mixed_input_detection_probability": 0.9429308297666009,
+    "naive_rectangular_Givens_limit": 70,
+    "output_modes": 20,
+    "per_hit_two_rail_intensity_transmission": 0.995,
+    "reconstruction_error": 2.2653008998102093e-16,
+    "theoretical_all_gates_loss_floor": 0.7040696960536298,
+    "total_adjacent_gate_depth": 70
+  },
+  "optimality_scope": "For a construction using exactly five orthonormal bases, 20 effects are required if the projector span is 16: each basis adds at most 3 traceless directions and overlap of bases reduces rank. This is NOT the globally minimal Witting-supported IC POVM; general d4 needs >=16 effects.",
+  "seeded_pure_state_HS_risk_coefficient": 50.35918087274005,
+  "six_finite_field_IC_ranks": [
+    [
+      7,
+      16
+    ],
+    [
+      13,
+      16
+    ],
+    [
+      19,
+      16
+    ],
+    [
+      31,
+      16
+    ],
+    [
+      37,
+      16
+    ],
+    [
+      43,
+      16
+    ]
+  ],
+  "status": "PASS_EXPLICIT_20_EFFECT_WITTING_CONTEXT_IC_POVM",
+  "tradeoffs": "Cuts output ports from 30 to 20, at cost of larger frame condition and losing universal control on all 27 positive effects. Not a d4 SIC, and no optical experiment performed."
+}

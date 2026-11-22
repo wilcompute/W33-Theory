@@ -1,0 +1,41 @@
+{
+  "inference": "The entire n=4..7 decreasing-gap trend exists even with zero W33 interval action. It is thus not evidence for emergent Lorentzian dynamics or graviton.",
+  "literature": "Caputo, Liggett, Richthammer (2010), Proof of Aldous spectral gap conjecture, JAMS 23 831-851, arXiv:0906.1238",
+  "physical_limit": "Finite n=4-7 controls do not rule out another causal dynamics, and fitted gap ratios are not physical predictions.",
+  "samples": [
+    {
+      "W33_interval_action_gap": 0.1782243733428798,
+      "absolute_gap_difference": -0.017037772532755152,
+      "n": 4,
+      "ratio_W33_over_free": 0.9127441089190593,
+      "states": 24,
+      "zero_action_adjacent_swap_gap": 0.19526214587563495
+    },
+    {
+      "W33_interval_action_gap": 0.09157177435753464,
+      "absolute_gap_difference": -0.003919728454991639,
+      "n": 5,
+      "ratio_W33_over_free": 0.9589520707126471,
+      "states": 120,
+      "zero_action_adjacent_swap_gap": 0.09549150281252627
+    },
+    {
+      "W33_interval_action_gap": 0.05070241528283713,
+      "absolute_gap_difference": -0.0028874232033873903,
+      "n": 6,
+      "ratio_W33_over_free": 0.9461199495100249,
+      "states": 720,
+      "zero_action_adjacent_swap_gap": 0.05358983848622452
+    },
+    {
+      "W33_interval_action_gap": 0.03147447018494639,
+      "absolute_gap_difference": -0.001535907180913898,
+      "n": 7,
+      "ratio_W33_over_free": 0.953471989614322,
+      "states": 5040,
+      "zero_action_adjacent_swap_gap": 0.03301037736586029
+    }
+  ],
+  "status": "PASS_W33_CAUSAL_ALDOUS_INTERCHANGE_NULL_CONTROL",
+  "zero_action_formula": "lambda_1(n)=2(1-cos(pi/n))/(n-1) for normalized adjacent-transposition interchange walk on S_n, by the proved Aldous spectral-gap theorem"
+}

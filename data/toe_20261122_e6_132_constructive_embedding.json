@@ -1,0 +1,37 @@
+{
+  "E6_target": "78 adjoint + 27 fundamental + 27bar antifundamental",
+  "adjoint_78_Z3_squared_char_multiplicity": {
+    "each_nontrivial": 8,
+    "trivial": 14
+  },
+  "adjoint_78_quotient_character": {
+    "center_nontrivial": 78,
+    "identity": 78,
+    "noncentral": 6
+  },
+  "caveats": "The image is H27-invariant but NOT E6-invariant because its 27D piece lies properly inside irreducible E6 adjoint78. Thus 132D is a valid E6 carrier with 51 leaked directions, not a complete 81D E6 theory. This resolves necessary dimension 132 as attainable for H27-equivariant submodule, not E6-equivariance of T.",
+  "charged_sector_fiducials": "Bell states on first two 9D E6 fundamental blocks and 3-state shift-Fourier orbit on third",
+  "explicit_isometric_intertwiner_shape": [
+    132,
+    81
+  ],
+  "intertwiner_max_abs_residual": {
+    "isometry": 6.661338147750939e-16,
+    "x": 0.0,
+    "y": 6.329245045284193e-16,
+    "z": 4.710277376051326e-16
+  },
+  "neutral_sector_fiducials": "|0,r> tensor (|0>+|1>+|2>)/sqrt(3) for r=0,1,2",
+  "proof": "Three central sectors each have 3 mutually orthogonal 9-state Heisenberg Weyl orbits. The finite-group central Fourier transform on c yields 3 regular 27D permutation modules in 132D. T^dagger T=I and rho(g)T=TL_g hold for x,y,z.",
+  "source": "three 27D regular H27 address modules",
+  "source_center_spectral_dimensions": [
+    27,
+    27,
+    27
+  ],
+  "source_dimension": 81,
+  "status": "PASS_CONSTRUCTIVE_132D_E6_H27_MODULE_EMBEDDING",
+  "subgroup_generators": "first SU3 x=X,y=Z; middle SU3 x=y=I; third SU3 x=X,y=Z^-1; center (w^-1,I,w)",
+  "target_H27_module_subspace": "(3,3,3) 27 of adjoint + fundamental 27 + anti-fundamental 27bar",
+  "target_dimension": 132
+}

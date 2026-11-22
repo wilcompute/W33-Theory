@@ -1,0 +1,25 @@
+{
+  "E6_cubic_SO10_allowed_terms": "1_4 * 10_-2 * 10_-2 and 16_1 * 16_1 * 10_-2",
+  "Hessian_family_spectrum_MdagM": {
+    "1": 1,
+    "7/4": 2
+  },
+  "exact_cubic_det": "-11/8 + 5*sqrt(3)*I/8",
+  "external_family_H27_invariant_cubic_tensors": "sum_a d_E6(H_a,H_a,H_a) + k d_E6(H_0,H_1,H_2); same for barH, k=1/2",
+  "note": "E6 cubic has no linear F derivative on a singlet-only configuration (no 1*1*1 invariant) and no quadratic mass for 16 spinors there. Model assumes external family H27 and permitted E6 invariant cubic with arbitrary overall scale.",
+  "original_singlet_F_constraints_remain_satisfied": true,
+  "physical_limit": "Full Higgs vacuum still has 64 SO10 spinor massless tangent directions modulo gauge at quadratic order; extra fields/symmetry-breaking interactions needed. Not a successful realistic GUT or prediction of physical masses.",
+  "selected_singlet_vevs": [
+    "1",
+    "1",
+    "omega"
+  ],
+  "spinor_chiral_Higgs_components_not_lifted_after_gauge": 64,
+  "status": "PASS_E6_H27_CUBIC_TEN_PLET_MASS_LIFT_WITH_SPINOR_OBSTRUCTION",
+  "ten_chiral_Higgs_components_massive": 60,
+  "vbar": [
+    "1",
+    "1",
+    "omega_squared"
+  ]
+}

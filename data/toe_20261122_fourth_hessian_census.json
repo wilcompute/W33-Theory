@@ -1,0 +1,97 @@
+{
+  "H27_normal_order": 27,
+  "H_order": 648,
+  "algebraic_proof": "Right multiplication by DN respects left-H cosets. Stage3 exhaustive reps give exactly 12027*27 candidates; exact bra invariance narrows comparisons, and xy^dagger in H over Z[omega] completely decides left-H equivalence. Multiplying by |H|=648 counts matrices.",
+  "complete_exact_bra_and_matrix_membership": {
+    "coset_count": 236359,
+    "exact_matrix_membership_comparisons": 1010231,
+    "signature_bucket_count": 176230,
+    "signature_class_profile": [
+      {
+        "bucket_size": 1,
+        "buckets": 157464,
+        "cosets": 1
+      },
+      {
+        "bucket_size": 3,
+        "buckets": 648,
+        "cosets": 3
+      },
+      {
+        "bucket_size": 4,
+        "buckets": 4536,
+        "cosets": 2
+      },
+      {
+        "bucket_size": 5,
+        "buckets": 1944,
+        "cosets": 3
+      },
+      {
+        "bucket_size": 6,
+        "buckets": 2160,
+        "cosets": 3
+      },
+      {
+        "bucket_size": 6,
+        "buckets": 864,
+        "cosets": 4
+      },
+      {
+        "bucket_size": 8,
+        "buckets": 5184,
+        "cosets": 4
+      },
+      {
+        "bucket_size": 9,
+        "buckets": 1728,
+        "cosets": 4
+      },
+      {
+        "bucket_size": 12,
+        "buckets": 972,
+        "cosets": 4
+      },
+      {
+        "bucket_size": 33,
+        "buckets": 216,
+        "cosets": 10
+      },
+      {
+        "bucket_size": 72,
+        "buckets": 432,
+        "cosets": 28
+      },
+      {
+        "bucket_size": 75,
+        "buckets": 54,
+        "cosets": 37
+      },
+      {
+        "bucket_size": 284,
+        "buckets": 27,
+        "cosets": 156
+      },
+      {
+        "bucket_size": 675,
+        "buckets": 1,
+        "cosets": 109
+      }
+    ]
+  },
+  "conditional_note": "The H(DN)^4 family includes all 4-stage words of the fixed Witting alphabet with free H factors. These are finite-depth unitary matrices, not a universal compiler guarantee.",
+  "exact_unitarity_spot_checks": [
+    0,
+    1,
+    27,
+    12027,
+    90000,
+    324728
+  ],
+  "fourth_stage_candidate_representatives": 324729,
+  "fourth_stage_common_denominator": 6561,
+  "fourth_stage_exact_matrices": 153160632,
+  "fourth_stage_inequivalent_left_H_cosets": 236359,
+  "previous_stage3_exact_left_cosets": 12027,
+  "status": "PASS_EXACT_FOURTH_HESSIAN_LEFT_COSET_CENSUS"
+}
