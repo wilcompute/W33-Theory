@@ -128,6 +128,49 @@ postselected coincidence fidelity alone.
 Replay: python -m pytest -q tests/test_toe_20261122_witting_* and
 python analysis/toe_20261122_witting_phase_schmidt_law.py.
 
+
+## Additional independent theorem: the entanglement optima are not the spectral crossing
+
+For U(theta), the normalized *operator-Choi* squared Schmidt weights are
+
+    p=( (16-15a)/16, 9a/16, (a/16) repeated 6 times ).
+
+The operator-state purity is
+
+    Tr(rho_AA'^2)=(39a^2-60a+32)/32,
+
+so the maximum *linear* operator entanglement is exact:
+
+    a_linear=10/13, linear entropy=75/104.
+
+In contrast, differentiating Shannon operator entanglement yields
+the unique critical equation p0^15=p1^9*p2^6, or
+
+    16-15a=3^(6/5)*a.
+
+Strict concavity proves a **unique Shannon maximum** at
+
+    a_Shannon=16/(15+3^(6/5)) approximately 0.853916600778459,
+    theta_Shannon approximately 135.058891 degrees,
+    H_op(theta_Shannon) approximately 2.32587792056819 bits.
+
+Neither matches the two-dominant-eigenvalue crossing a_cross=2/3.
+And the **strongest two-entangler fidelity separation** is at a=1
+(theta=pi), where the upper bound is 13/17.
+
+Thus there are four distinct operational objectives and no reason to
+declare any one preferred without a physical task: crossing, linear
+operator entropy, Shannon operator entropy, and resource-fidelity gap.
+Operator entanglement here is the entanglement of the *vectorized unitary*
+across AA'|BB', not in general the entangling power on product inputs.
+
+Executable source:
+[toe_20261122_witting_operator_entropy_stationary_phase.py](toe_20261122_witting_operator_entropy_stationary_phase.py),
+regressions:
+../tests/test_toe_20261122_witting_operator_entropy_stationary_phase.py,
+certificate:
+../data/toe_20261122_witting_operator_entropy_stationary_phase.json.
+
 ## TOE boundary
 
 This is progress in a well-defined quantum-information engineering
