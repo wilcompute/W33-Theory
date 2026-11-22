@@ -119,4 +119,11 @@ class ResearchRegressions(unittest.TestCase):
         self.assertLess(noisy[-1]["incorrect_ideal_formula_inferred_purity"],.93)
         self.assertTrue(self.l["uniform_loss_control_preserves_conditioned_C3"])
 
+    def test_lossy_POVM_bounded_calibration_error_tolerance(self):
+        q=next(x for x in self.o["optical_loss_sweep"]
+               if x["power_loss_per_active_two_mode_operation"]==.02)
+        eps=q["sufficient_per_effect_operator_norm_calibration_tolerance"]
+        self.assertAlmostEqual(eps,.00188236556836,places=9)
+        self.assertLess(eps,.002)
+
 if __name__=="__main__":unittest.main()
