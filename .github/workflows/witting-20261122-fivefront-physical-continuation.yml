@@ -6,6 +6,7 @@ on:
     paths:
       - 'analysis/toe_20261122_witting_3design_collision_moments.py'
       - 'analysis/toe_20261122_witting_coherence_cloning_capacity.py'
+      - 'analysis/toe_20261122_actual_witting_4to9_dephasing.py'
       - 'analysis/toe_20261122_witting_40mode_naimark_finite_shots.py'
       - 'analysis/toe_20261122_w33_two_plaquette_pair_creation.py'
       - 'analysis/toe_20261122_witting_multicriteria_dualframe_search.py'
@@ -43,13 +44,15 @@ jobs:
         run: python analysis/toe_20261122_witting_3design_collision_moments.py
       - name: Generate cloner antidegradability capacity certificate
         run: python analysis/toe_20261122_witting_coherence_cloning_capacity.py
+      - name: Evaluate actual Witting 4-to-9 routed coherent channel dephasing
+        run: python analysis/toe_20261122_actual_witting_4to9_dephasing.py
       - name: Compile 40-mode photonic POVM and binomial bounds
         run: python analysis/toe_20261122_witting_40mode_naimark_finite_shots.py
       - name: Simulate Gauss-exact two-plaquette W33 dynamics
         run: python analysis/toe_20261122_w33_two_plaquette_pair_creation.py
       - name: Search 50k multiobjective compressed POVM configurations
         run: python analysis/toe_20261122_witting_multicriteria_dualframe_search.py
-      - name: Run 19 targeted statistical and mathematical regressions
+      - name: Run 22 targeted statistical and mathematical regressions
         run: python tests/test_toe_20261122_fivefront_physical_continuation.py
       - name: Archive numeric certificates
         uses: actions/upload-artifact@v4
@@ -59,6 +62,7 @@ jobs:
           path: |
             data/toe_20261122_witting_3design_collision_moments.json
             data/toe_20261122_witting_coherence_cloning_capacity.json
+            data/toe_20261122_actual_witting_4to9_dephasing.json
             data/toe_20261122_witting_40mode_naimark_finite_shots.json
             data/toe_20261122_w33_two_plaquette_pair_creation.json
             data/toe_20261122_witting_multicriteria_dualframe_search.json
