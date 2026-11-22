@@ -1,0 +1,149 @@
+{
+ "pq_doublet": {
+  "rows": [
+   {
+    "lambda_12": 1e-12,
+    "m_H2_GeV": 100000.0,
+    "tuning": 1.5625e-06
+   },
+   {
+    "lambda_12": 1e-08,
+    "m_H2_GeV": 10000000.0,
+    "tuning": 1.5625e-10
+   },
+   {
+    "lambda_12": 0.0001,
+    "m_H2_GeV": 1000000000.0,
+    "tuning": 1.5625e-14
+   }
+  ],
+  "note": "H2 decouples for any lambda >~ 1e-14; flavour constraints on a 2HDM vanish; E/N and N_DW fixed by charges; cost = DFSZ-type hierarchy tuning (generic in axion models with charged doublets)"
+ },
+ "b_mixing": {
+  "rows": [
+   {
+    "M": 1740.0,
+    "theta": 0.0001,
+    "Delta_T": 8.710128090965109e-08,
+    "T_ok": true
+   },
+   {
+    "M": 1740.0,
+    "theta": 0.01,
+    "Delta_T": 0.0008710128090965109,
+    "T_ok": true
+   },
+   {
+    "M": 1740.0,
+    "theta": 0.1,
+    "Delta_T": 0.08710128090965111,
+    "T_ok": true
+   },
+   {
+    "M": 1740.0,
+    "theta": 0.2,
+    "Delta_T": 0.34840512363860443,
+    "T_ok": false
+   },
+   {
+    "M": 2100.0,
+    "theta": 0.0001,
+    "Delta_T": 9.614659324494249e-08,
+    "T_ok": true
+   },
+   {
+    "M": 2100.0,
+    "theta": 0.01,
+    "Delta_T": 0.000961465932449425,
+    "T_ok": true
+   },
+   {
+    "M": 2100.0,
+    "theta": 0.1,
+    "Delta_T": 0.09614659324494251,
+    "T_ok": true
+   },
+   {
+    "M": 2100.0,
+    "theta": 0.2,
+    "Delta_T": 0.38458637297977005,
+    "T_ok": false
+   }
+  ],
+  "theta_t_max": 0.17606361357729183,
+  "theta_b_max": 0.06324555320336758,
+  "cascade_boundary": 0.00011,
+  "reading": "EW precision allows theta up to ~0.17 (top) and ~0.06 (bottom); the 1e-4 prompt/cascade boundary lies deep inside: EW data do not fix the regime"
+ },
+ "kev_candidates": {
+  "ALP m=1 MeV": {
+   "g_agg_GeV_inv": 3.190598716589572e-09,
+   "lifetime_s": 13000.0
+  },
+  "ALP m=2 MeV": {
+   "g_agg_GeV_inv": 1.128046994272791e-09,
+   "lifetime_s": 13000.0
+  },
+  "ALP m=4 MeV": {
+   "g_agg_GeV_inv": 3.988248395736965e-10,
+   "lifetime_s": 13000.0
+  },
+  "modulus": {
+   "mass_GeV": 1556.709014317962,
+   "note": "couples to gluons generically -> hadronic BBN bounds"
+  },
+  "gravitino": {
+   "mass_GeV": 3133.566240381938,
+   "note": "hadronic branching ~1e-3 -> excluded at zeta ~ 1e-6 GeV"
+  },
+  "reading": "MeV ALP with g ~ 1e-9 GeV^-1 has the right lifetime and sub-threshold photons, but sits in the SN1987A / BBN 'cosmological triangle' region; modulus (~1.7 TeV) and gravitino (~3 TeV) decays carry hadronic branchings that BBN excludes at zeta ~ 1e-6 GeV"
+ },
+ "superallowed": {
+  "V_ud_0plus": 0.97361,
+  "V_ud_neutron": 0.97456,
+  "pull": 1.7838999446981265,
+  "Ft_rel_shift": -0.0019486475343339915,
+  "Ft_shift_s": -5.986712900882262,
+  "delta_NS_10C_percent": -0.422,
+  "delta_NS_unc_percent": 0.014,
+  "shift_over_dNS_unc": 13.91891095952851
+ },
+ "ranking_bic": {
+  "SM + LCDM": {
+   "chi2": 2.0,
+   "k": 0,
+   "dBIC": 0.0,
+   "bayes_factor_vs_SM": 1.0
+  },
+  "lambda(sqrt(v M_Pl)) = 0": {
+   "chi2": 2.0,
+   "k": 0,
+   "dBIC": 0.0,
+   "bayes_factor_vs_SM": 1.0
+  },
+  "Completion A (b-only PQ, extra scalar, xi>=10)": {
+   "chi2": 2.04,
+   "k": 2,
+   "dBIC": 3.931820298110626,
+   "bayes_factor_vs_SM": 0.1400283819009651
+  },
+  "Completion B (dark dim + VL, GeV reheating)": {
+   "chi2": 2.0,
+   "k": 1,
+   "dBIC": 1.9459101490553135,
+   "bayes_factor_vs_SM": 0.3779644730092272
+  },
+  "lambda(M_Pl) = 0": {
+   "chi2": 7.74,
+   "k": 0,
+   "dBIC": 5.74,
+   "bayes_factor_vs_SM": 0.0566989265798469
+  },
+  "original SMASH": {
+   "chi2": 9.01,
+   "k": 0,
+   "dBIC": 7.01,
+   "bayes_factor_vs_SM": 0.03004677334417314
+  }
+ }
+}
