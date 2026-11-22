@@ -1,0 +1,160 @@
+{
+ "alpha_vs_EW": {
+  "Cs_Rb_relative_difference": 1.1675765084068119e-09,
+  "hadronic_Delta_alpha_uncertainty": 0.0001,
+  "ratio": 85647.49228849472,
+  "MW_shift_GeV": 2.0177989457149872e-08
+ },
+ "km3net_flux": {
+  "expected_events_at_joint_flux": 0.01293103448275862,
+  "p_at_least_one": 0.012847787864320281,
+  "sigma": 2.2307819562738285,
+  "cosmogenic_E2Phi_200PeV_ranges": "proton-rich UHECR ~1e-9-1e-8; Auger-like mixed composition ~1e-11-1e-10 (GeV cm^-2 s^-1 sr^-1, literature ranges)",
+  "reading": "the joint-fit flux sits between mixed-composition and proton-rich cosmogenic expectations; a real KM3NeT event at that flux is a ~2.2 sigma upward fluctuation"
+ },
+ "axiflavon": {
+  "C_sd=1.0": {
+   "BR_at_fa_1e11": 3.5066077437781247e-09,
+   "fa_min_from_1p1e12": 1100000000000.0,
+   "ma_max_ueV": 5.2
+  },
+  "C_sd=0.22": {
+   "BR_at_fa_1e11": 1.6971981479886125e-10,
+   "fa_min_from_1p1e12": 242000000000.0,
+   "ma_max_ueV": 23.636363636363637
+  },
+  "C_sd=0.05": {
+   "BR_at_fa_1e11": 8.766519359445313e-12,
+   "fa_min_from_1p1e12": 55000000000.0,
+   "ma_max_ueV": 104.0
+  },
+  "C_sd_max_at_fa_1e11": 0.09090909090909091,
+  "reading": "the lattice window f_a = 0.88-1.27e11 needs |C_sd| < 0.08-0.12: a Cabibbo-size (0.22) flavour-violating axion coupling is excluded"
+ },
+ "vlq_production_decay": {
+  "K_from_ttbar": 1.69539862404101,
+  "sigma_ttbar_LO_pb": 490.7400467371588,
+  "rows": [
+   {
+    "sqrt_s": 13600.0,
+    "M": 1600.0,
+    "sigma_LO_fb": 0.9872132755183276,
+    "sigma_Kscaled_fb": 1.5795412408293243
+   },
+   {
+    "sqrt_s": 13600.0,
+    "M": 1650.0,
+    "sigma_LO_fb": 0.7515823819864909,
+    "sigma_Kscaled_fb": 1.2025318111783854
+   },
+   {
+    "sqrt_s": 13600.0,
+    "M": 1700.0,
+    "sigma_LO_fb": 0.573662839950678,
+    "sigma_Kscaled_fb": 0.9178605439210848
+   },
+   {
+    "sqrt_s": 13600.0,
+    "M": 2000.0,
+    "sigma_LO_fb": 0.11809471879737984,
+    "sigma_Kscaled_fb": 0.18895155007580777
+   },
+   {
+    "sqrt_s": 14000.0,
+    "M": 1600.0,
+    "sigma_LO_fb": 1.1837685943665672,
+    "sigma_Kscaled_fb": 1.8940297509865076
+   },
+   {
+    "sqrt_s": 14000.0,
+    "M": 1650.0,
+    "sigma_LO_fb": 0.9059038613185514,
+    "sigma_Kscaled_fb": 1.4494461781096823
+   },
+   {
+    "sqrt_s": 14000.0,
+    "M": 1700.0,
+    "sigma_LO_fb": 0.6951213208941959,
+    "sigma_Kscaled_fb": 1.1121941134307134
+   },
+   {
+    "sqrt_s": 14000.0,
+    "M": 2000.0,
+    "sigma_LO_fb": 0.14807884205327057,
+    "sigma_Kscaled_fb": 0.23692614728523292
+   },
+   {
+    "sqrt_s": 100000.0,
+    "M": 1600.0,
+    "sigma_LO_fb": 1760.8781371989521,
+    "sigma_Kscaled_fb": 2817.4050195183236
+   },
+   {
+    "sqrt_s": 100000.0,
+    "M": 1650.0,
+    "sigma_LO_fb": 1516.3159960650357,
+    "sigma_Kscaled_fb": 2426.1055937040574
+   },
+   {
+    "sqrt_s": 100000.0,
+    "M": 1700.0,
+    "sigma_LO_fb": 1310.6800795746478,
+    "sigma_Kscaled_fb": 2097.088127319437
+   },
+   {
+    "sqrt_s": 100000.0,
+    "M": 2000.0,
+    "sigma_LO_fb": 585.7702470626282,
+    "sigma_Kscaled_fb": 937.2323953002051
+   }
+  ],
+  "HL_LHC_events_3ab_triplet": 13045.01560298714,
+  "Gamma_internal_GeV": 1.7744817597616954e-05,
+  "theta_crossover": 0.00010971553068134819,
+  "reading": "mixing angle below theta_crossover: cascades B->T W*, T'->B W* (soft) dominate; above: direct T -> Wb/Zt/ht"
+ },
+ "neutron_bbn": {
+  "bottle 877.8": {
+   "Yp": 0.24667185931816699,
+   "pulls": {
+    "Aver+2021": -0.4034880347549988,
+    "Hsyu+2020": -0.7679648295417437,
+    "Kurichin+2021": -0.21448150825771994,
+    "EMPRESS 2022": -2.8446645053432347
+   }
+  },
+  "beam 888.1": {
+   "Yp": 0.2487814539701289,
+   "pulls": {
+    "Aver+2021": -1.023957050037917,
+    "Hsyu+2020": -1.2953634925322242,
+    "Kurichin+2021": -1.1733881682404115,
+    "EMPRESS 2022": -3.4651335206261527
+   }
+  },
+  "combined_Yp": {
+   "mean": 0.24385629727249578,
+   "sigma": 0.0015039346352921131,
+   "tau_inferred": 864.1038563929708,
+   "tau_sigma": 7.300255652214367
+  },
+  "helium_Neff": {
+   "rows": {
+    "all four": {
+     "Yp": 0.24385629727249578,
+     "sigma": 0.0015039346352921131,
+     "Neff_at_bottle_tau": 2.8274183041791376,
+     "Neff_sigma": 0.11568727963785486
+    },
+    "without EMPRESS": {
+     "Yp": 0.24552411883258196,
+     "sigma": 0.0016769066587565176,
+     "Neff_at_bottle_tau": 2.9557122703396135,
+     "Neff_sigma": 0.12899281990434752
+    }
+   },
+   "ACT_Yp_shift": -0.002392000000000002,
+   "Yp_bottle_with_ACT_Neff": 0.24427985931816698
+  }
+ }
+}
