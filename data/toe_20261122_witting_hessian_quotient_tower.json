@@ -1,0 +1,76 @@
+{
+  "G25_order": 648,
+  "H27_order": 27,
+  "boundary": "The 9x3 labels are a finite symmetry address/phase bundle, not 27 mutually orthogonal photon states, observed physical time bins, spacetime or Standard Model fields.",
+  "central_Z3_exterior_orbit_sizes": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "central_Z3_fixes_13_polar_neighborhood_points": true,
+  "central_Z3_order": 3,
+  "date": "2026-11-22",
+  "icosahedral_rhetoric_disallowed": true,
+  "induced_9_cell_group_order": 216,
+  "induced_9_cell_point_stabilizer_order": 24,
+  "induced_H27_translation_is_regular_and_abelian": true,
+  "induced_H27_translation_order": 9,
+  "induced_pencil_4_line_group_is_A4": true,
+  "induced_pencil_4_line_group_order": 12,
+  "nine_center_fibers": [
+    [
+      0,
+      9,
+      29
+    ],
+    [
+      2,
+      13,
+      37
+    ],
+    [
+      3,
+      17,
+      21
+    ],
+    [
+      4,
+      18,
+      31
+    ],
+    [
+      6,
+      19,
+      20
+    ],
+    [
+      7,
+      30,
+      36
+    ],
+    [
+      10,
+      16,
+      39
+    ],
+    [
+      12,
+      15,
+      22
+    ],
+    [
+      27,
+      32,
+      34
+    ]
+  ],
+  "normal_H27_regular_orbit": 27,
+  "status": "PASS_EXACT_HESSIAN_27_TO_9_AND_A4_QUOTIENTS",
+  "theorem": "G25/Hessian 648 acts projectively on the 9 center-orbits of a normal H27 27-ray torsor through group of order 216, with regular F3^2 translation quotient. The action on the four isotropic lines of its fixed Witting ray is A4, order 12."
+}
