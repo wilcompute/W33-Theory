@@ -1,0 +1,105 @@
+{
+  "schema": "w33.20261122.sixfront.quantum_geometry.v1",
+  "date": "2026-11-22",
+  "provenance": "Executed against canonical Witting rays and W33 projective graph; repo prior-art overlap documented in analysis/2026-11-22_six_front_discrete_su4_H27_causality_E6_falsifiers.md",
+  "server_side_test_summary": {
+    "passing": 24,
+    "scope": "12 preceding Witting regression tests plus 12 new tests across six independent physics/mathematical fronts",
+    "github_actions_state": "see live workflow; not asserted complete"
+  },
+  "fronts": [
+    {
+      "id": 1,
+      "name": "four fixed Witting gate density",
+      "generator_rays": [
+        5,
+        26,
+        33,
+        36
+      ],
+      "orders": [
+        3,
+        3,
+        3,
+        2
+      ],
+      "trace": "(5+omega)/3",
+      "modular_primes": [
+        7,
+        13,
+        19,
+        31,
+        37,
+        43
+      ],
+      "adjoint_commutant_equation_ranks": [
+        126,
+        200,
+        221,
+        224
+      ],
+      "closure": "{U in U(4):det(U) in mu6}",
+      "status": "exact theorem",
+      "physics": "single-photon U4 only"
+    },
+    {
+      "id": 2,
+      "name": "H27 ray-label versus operator central character",
+      "formal_regular_dimension": 27,
+      "central_cycles": 9,
+      "direct_intertwiner_max_rank": 9,
+      "nontrivial_central_sector_dimension": 9,
+      "three_copies_projected_dimension": 27,
+      "status": "exact representation obstruction; Fourier module construction",
+      "physics": "does not build E6 physical field map"
+    },
+    {
+      "id": 3,
+      "name": "causal order nonuniqueness",
+      "w33_vertices": 40,
+      "w33_edges": 240,
+      "induced_chordless_C4": 1620,
+      "diamond_comparable_pairs": 5,
+      "two_plus_two_comparable_pairs": 4,
+      "status": "exact graph-only causal no-go",
+      "physics": "does not rule out dynamical causal models"
+    },
+    {
+      "id": 4,
+      "name": "optics resource bounds",
+      "SU4_dim": 15,
+      "Clements_generic_two_mode_cells": 6,
+      "epsilon_0p01_diagonal_grid_K": 157,
+      "epsilon_0p01_discrete_word_min_length": 8,
+      "hypothetical_survival_L40": 0.033542160793079506,
+      "status": "exact parameter and packing lower bounds plus conditional loss model",
+      "physics": "not an efficiency or energy advantage claim"
+    },
+    {
+      "id": 5,
+      "name": "E6 chirality and H27 symmetry",
+      "branch": "27 -> 10 + 5 + 2*5bar + 2*1",
+      "SU5_cubic_anomaly_per_27": 0,
+      "single_triplet_commutant_dim": 1,
+      "three_generations_selected": false,
+      "status": "standard branching and exact Schur negative gate",
+      "physics": "no dynamically derived vacuum or spectrum"
+    },
+    {
+      "id": 6,
+      "name": "one photon generic register scaling",
+      "qubits": 10,
+      "minimum_orthogonal_modes": 1024,
+      "generic_SU_dimension": 1048575,
+      "Clements_two_mode_cells": 523776,
+      "status": "exact Hilbert-space dimension plus standard mesh census",
+      "physics": "not a no-go for specialized quantum algorithms"
+    }
+  ],
+  "scope": "Finite exact algebra and falsifiers, not a completed TOE",
+  "prior_repo_overlap": [
+    "analysis/w33_address_operator_h27_intertwiner_obstruction.py",
+    "analysis/toe_20261118_H27_Fourier_minimal7_E6_tensor_embedding.py",
+    "analysis/w33_20261011_witting_displacement_firewall.py"
+  ]
+}
