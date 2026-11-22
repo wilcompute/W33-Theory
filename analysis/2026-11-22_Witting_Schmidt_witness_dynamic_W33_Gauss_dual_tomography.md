@@ -94,3 +94,23 @@ The three independent standalone Python calculations in the conversation contain
 **High-value orthogonal follow-ups** are: (1) design a 40-mode per-party physical Naimark interferometer and rigorously account for losses; (2) optimize dual-frame fidelity variance under measured confusion and privacy constraints; (3) extend the W33 gauge model to two neighboring plaquettes with explicit string tension and gauge-invariant charge production; (4) experimentally distinguish coherent Witting isometries from entanglement-breaking measure/reprepare implementations; and (5) compare W33 against random strongly-regular/finite-design controls to separate generic design identities from special geometry.
 
 The point is to turn **specific geometry into explicit observables, engineering costs, no-go tests and independently checkable physical hypotheses**, not to claim a derived Theory of Everything.
+
+
+## Critical independent negative control: five mutually unbiased ququart bases
+
+A further literature and repository check established that the same-label fidelity identity does **not** characterize W33. We constructed a **completely separate ququart projective 2-design** from all 15 nonidentity two-qubit Pauli matrices: enumerate their maximal commuting triples, choose an exact disjoint cover by five triples, and diagonalize two independent operators in each triple. The resulting 5 orthonormal, pairwise mutually unbiased ququart bases give 20 rays. The full calculation and test reside in analysis/toe_20261122_generic_ququart_2design_control.py.
+
+For the 20 rank-one projectors Q_i from these five MUBs, the exact identities are
+
+sum_i Q_i = 5 I4,
+sum_i Q_i tensor Q_i = I16+SWAP,
+sum_i (Q_i/5) tensor (conjugate(Q_i)/5) = .04I16 + .16|Phi4><Phi4|.
+
+Thus the **same Schmidt-number fidelity-witness mechanism** exists in a non-Witting 20-ray set, with bounds .08, .12, .16 for Schmidt numbers at most1,2,3 respectively. This is a falsifier of claims that the coincidence law or tight-frame moment identity uniquely identifies W33. What is specifically Witting-related must instead reside in higher-order phase, incidence, automorphism, compatibility or dynamically realizable resource constraints. The projective two-design identity by itself is not novel geometry-specific evidence for a Theory of Everything. The dedicated workflow now runs **20** Witting/gauge/MUB regression tests when triggered.
+
+For general uniform complex projective 2-designs of N rank-one rays in dimension d, the same-label POVM effect is determined entirely by (d,N), not by the design's detailed incidence structure:
+
+sum_i (d P_i/N) tensor (d conjugate(P_i)/N)
+= d/[N(d+1)] * [I_(d²)+d |Phi_d><Phi_d|].
+
+Consequently the two designs differ in absolute coincidence probability because N=40 versus N=20, not in the normalized singlet-fidelity witness law. This general identity, independently checked for both finite ray sets, is the correct null model for any future claim of uniqueness.
