@@ -90,7 +90,7 @@ These are unusually high photon resources for a seemingly simple 3-design identi
 
 ## V. The improved compressed POVM maintains its advantage under *known symmetric wrong-label noise*
 
-For each of the same full40, older25, privacy/Fisher25 and newly optimized variance25 detectors, simulate a calibrated random-label confusion before pooling: with probability epsilon retain the true ray label, and with probability epsilon replace it with a fresh uniform draw from 40 rays. The effective local POVM is transformed by a known stochastic 40-by-40 confusion matrix, and both parties have independent instances. The full two-party outcome distribution is transformed by the same matrices, and the original maximally-entangled fidelity is reconstructed with an explicit Moore–Penrose dual.
+For each of the same full40, older25, privacy/Fisher25 and newly optimized variance25 detectors, simulate a calibrated random-label confusion before pooling: with probability 1-epsilon retain the true ray label, and with probability epsilon replace it with a fresh uniform draw from 40 rays. The effective local POVM is transformed by a known stochastic 40-by-40 confusion matrix, and both parties have independent instances. The full two-party outcome distribution is transformed by the same matrices, and the original maximally-entangled fidelity is reconstructed with an explicit Moore–Penrose dual.
 
 All four layouts remain locally informationally complete at epsilon<1. On the ideal maximally entangled state, the unbiased per-event fidelity-score standard deviations are:
 
@@ -132,3 +132,18 @@ Five requested independent research threads and this sixth negative control were
 5. **Coupled experiment design optimization:** choose full40 versus 25-bin readout based on task (Schmidt number, purity, channel calibration or private chart estimation) with explicit unknown confusion, drift and hardware costs.
 
 **Bottom line:** A reproducible finite geometric architecture is only physically persuasive when its predictions survive independent noise models, graph-isomorphic controls, a valid sampling model and the operational distinction between quantum capacity and finite-dimensional entanglement.
+
+
+## VII. Calibration operator-norm tolerance from the entanglement-witness margin
+
+The lossy measurement effects M_i must actually be known, not only assumed from an ideal Givens compiler. Suppose each of Alice and Bob's nominal positive Hermitian effects has a calibrated unknown perturbation of operator norm at most epsilon. If each party is bounded the same way, the corresponding same-label operator's deviation is bounded in norm by
+
+||S_actual-S_nominal|| <= 2 epsilon sum_i ||M_i|| + 40 epsilon²,
+
+where ||M_i|| is the ququart effect's largest eigenvalue. For any state, the associated probability changes by at most that norm bound. In particular the true separable upper bound could move up, and the true target probability could move down, by at most one such bound each. A sufficient robustness criterion is thus
+
+2[2 epsilon sum_i ||M_i|| + 40 epsilon²] < nominal entanglement witness gap.
+
+The strict positive root gives a sufficient **absolute per-effect operator-norm calibration tolerance**. At 2% optical power loss per active element, the nominal same-label gap is ≈0.02015078, the trace of all known lossy effects is ≈2.63860973, and epsilon must be less than approximately **0.00188236556836**. Since an ideal Witting effect has norm0.1, this is about1.88% of its effect norm, but it is **not** 0.188% relative error; this is an absolute operator-norm tolerance.
+
+The bound is conservative, treats individual errors as potentially worst-aligned, does not use constraints enforcing complete POVM plus no-click and does not model the experimental procedure for *establishing* those effect-norm bounds. Its value is providing an explicit calibration target rather than an unquantified warning. The source producer and dedicated test suite now calculate and regress this tolerance.
