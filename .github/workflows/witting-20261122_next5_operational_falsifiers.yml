@@ -53,7 +53,7 @@ jobs:
         run: python analysis/toe_20261122_witting_loss_fakes_purity.py
       - name: Test known-crosstalk 25-outcome joint-tomography variance
         run: python analysis/toe_20261122_confusion_aware_Witting_detector_pareto.py
-      - name: Run 22 targeted regressions
+      - name: Run 23 targeted regressions
         run: python tests/test_toe_20261122_physical_next5_plus.py
       - name: Save reproducible numeric certificates
         if: always()
