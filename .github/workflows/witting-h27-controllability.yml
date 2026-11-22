@@ -4,15 +4,9 @@ on:
   push:
     branches: [master]
     paths:
-      - 'analysis/toe_20261122_witting_minimal_lie_control.py'
-      - 'analysis/toe_20261122_witting_one_phase_three_fixed.py'
-      - 'analysis/toe_20261122_witting_h27_phase_control.py'
-      - 'tests/test_toe_20261122_witting_minimal_lie_control.py'
-      - 'tests/test_toe_20261122_witting_one_phase_three_fixed.py'
-      - 'tests/test_toe_20261122_witting_h27_phase_control.py'
-      - 'data/toe_20261122_witting_four_ray_lie_controllability.json'
-      - 'data/toe_20261122_witting_one_phase_three_fixed.json'
-      - 'data/toe_20261122_witting_h27_phase_control.json'
+      - 'analysis/toe_20261122_witting_*.py'
+      - 'tests/test_toe_20261122_witting_*.py'
+      - 'data/toe_20261122_witting_*.json'
       - '.github/workflows/witting-h27-controllability.yml'
   pull_request:
   workflow_dispatch:
@@ -28,12 +22,12 @@ jobs:
           python-version: '3.12'
       - name: Install exact group and test dependencies
         run: python -m pip install sympy pytest
-      - name: Run targeted exact mathematical tests
+      - name: Replay five exact control and group certificates
         run: |
-          python -m pytest -q tests/test_toe_20261122_witting_minimal_lie_control.py tests/test_toe_20261122_witting_one_phase_three_fixed.py tests/test_toe_20261122_witting_h27_phase_control.py
-      - name: Check frozen mathematical certificate invariants
-        run: |
+          python -m pytest -q tests/test_toe_20261122_witting_minimal_lie_control.py tests/test_toe_20261122_witting_one_phase_three_fixed.py tests/test_toe_20261122_witting_h27_phase_control.py tests/test_toe_20261122_witting_h27_polar_pencil.py tests/test_toe_20261122_witting_hessian_quotient_tower.py
           python analysis/toe_20261122_witting_minimal_lie_control.py
           python analysis/toe_20261122_witting_one_phase_three_fixed.py
           python analysis/toe_20261122_witting_h27_phase_control.py
-          python -c "import json;from pathlib import Path;p=Path('data');a=json.loads((p/'toe_20261122_witting_four_ray_lie_controllability.json').read_text());b=json.loads((p/'toe_20261122_witting_one_phase_three_fixed.json').read_text());c=json.loads((p/'toe_20261122_witting_h27_phase_control.json').read_text());assert a['rank_layers']==[4,8,14,16];assert a['selected_zero_based']==[5,26,33,36];assert all(x['Lie_rank']==16 for x in a['prime_certificates']);assert b['fixed_subgroup_permutation_order']==648 and b['fixed_subgroup_orbit_sizes']==[27,12,1];assert b['target_lie_rank_layers']==[4,8,14,16];assert c['normal_subgroup_order']==27 and c['normal_subgroup_center_order']==3 and c['regular_orbit_size']==27;print('PASS all three mathematical certificates')"
+          python analysis/toe_20261122_witting_h27_polar_pencil.py
+          python analysis/toe_20261122_witting_hessian_quotient_tower.py
+          python -c "import json;from pathlib import Path;p=Path('data');d=lambda f:json.loads((p/f).read_text());a=d('toe_20261122_witting_four_ray_lie_controllability.json');b=d('toe_20261122_witting_one_phase_three_fixed.json');c=d('toe_20261122_witting_h27_phase_control.json');e=d('toe_20261122_witting_h27_polar_pencil.json');f=d('toe_20261122_witting_hessian_quotient_tower.json');assert a['rank_layers']==[4,8,14,16];assert a['selected_zero_based']==[5,26,33,36];assert all(x['Lie_rank']==16 for x in a['prime_certificates']);assert b['fixed_subgroup_permutation_order']==648 and b['target_lie_rank_layers']==[4,8,14,16];assert c['normal_subgroup_order']==27 and c['normal_subgroup_center_order']==3;assert e['H27_orbit_sizes']==[1,3,3,3,3,27] and e['srg_parameters']==[40,12,2,4];assert f['induced_9_cell_group_order']==216 and f['induced_pencil_4_line_group_order']==12;print('PASS exact Witting five-certificate invariant audit')"
