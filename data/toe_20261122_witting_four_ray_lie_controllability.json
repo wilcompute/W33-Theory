@@ -1,0 +1,245 @@
+{
+  "status": "PASS_EXACT_MODULAR_LIE_CERTIFICATE",
+  "date": "2026-11-22",
+  "selected_zero_based": [
+    5,
+    26,
+    33,
+    36
+  ],
+  "rank_layers": [
+    4,
+    8,
+    14,
+    16
+  ],
+  "Lie_basis_word_count": 16,
+  "witness_words": [
+    [
+      "P",
+      0
+    ],
+    [
+      "P",
+      1
+    ],
+    [
+      "P",
+      2
+    ],
+    [
+      "P",
+      3
+    ],
+    [
+      "B",
+      1,
+      0
+    ],
+    [
+      "B",
+      2,
+      1
+    ],
+    [
+      "B",
+      3,
+      1
+    ],
+    [
+      "B",
+      3,
+      2
+    ],
+    [
+      "B",
+      0,
+      4
+    ],
+    [
+      "B",
+      2,
+      4
+    ],
+    [
+      "B",
+      3,
+      4
+    ],
+    [
+      "B",
+      1,
+      5
+    ],
+    [
+      "B",
+      3,
+      5
+    ],
+    [
+      "B",
+      1,
+      6
+    ],
+    [
+      "B",
+      2,
+      8
+    ],
+    [
+      "B",
+      3,
+      8
+    ]
+  ],
+  "witness_word_sha256": "08567fb24ff129987e0c9945b31dd2b15000e937463fb1475c8dd34dd42c7554",
+  "prime_certificates": [
+    {
+      "prime": 7,
+      "omega": 2,
+      "generator_span_rank": 4,
+      "nonorthogonality_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "Lie_rank": 16
+    },
+    {
+      "prime": 13,
+      "omega": 3,
+      "generator_span_rank": 4,
+      "nonorthogonality_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "Lie_rank": 16
+    },
+    {
+      "prime": 19,
+      "omega": 7,
+      "generator_span_rank": 4,
+      "nonorthogonality_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "Lie_rank": 16
+    },
+    {
+      "prime": 31,
+      "omega": 5,
+      "generator_span_rank": 4,
+      "nonorthogonality_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "Lie_rank": 16
+    },
+    {
+      "prime": 37,
+      "omega": 10,
+      "generator_span_rank": 4,
+      "nonorthogonality_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "Lie_rank": 16
+    },
+    {
+      "prime": 43,
+      "omega": 6,
+      "generator_span_rank": 4,
+      "nonorthogonality_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "Lie_rank": 16
+    }
+  ],
+  "theorem": "Lie_R(iP5,iP26,iP33,iP36)=u(4)",
+  "minimality": "Three rank-one projectors fix a common nonzero orthogonal subspace",
+  "scope": "Only continuously tunable single-photon four-mode unitaries; no multiphoton deterministic entangling gate, fault tolerance or TOE."
+}
