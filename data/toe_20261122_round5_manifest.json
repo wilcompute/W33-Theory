@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-22",
+  "file_count": 16,
+  "new_test_count": 17,
+  "scope": "Finite-dimensional mathematical proofs and illustrative calibrated photonic/causal/E6 toy models, not experimentally verified physics.",
+  "sha256": {
+    ".github/workflows/toe-round5-sixfront-20261122.yml": "8176c42ffff9e549cc754dfcd0ee191ee8b782eda7b3e1b1a4654057694a36ab",
+    "analysis/2026-11-22_TOE_round5_18_19_optical_E6_causality_compiler.md": "fc4cdaf9b01f1f72b1726963b27530f6610329bcfd41860ed6a6330b8bb04c2d",
+    "analysis/toe_20261122_round5_18effect_optical.py": "5b3642cf72e97dec390b8ccdb3daf02daa682733229795b4c67af0b09870e23f",
+    "analysis/toe_20261122_round5_e6_grade_leakage.py": "a440936fa4d2d19a98dea15e5c840d6c4397ecc592e918c2da86c15c9a470245",
+    "analysis/toe_20261122_round5_hessian_stage4_compiler.py": "f2f3183c94aa8344de221116dbaf7fa7b9f864f7645f1f6c5b4b8564221f42cb",
+    "analysis/toe_20261122_round5_higgs_spinor_selection.py": "82c70705efa796661b8c1921be9bd4a90b954b6d82bf2168b9c5f4e996adc9b9",
+    "analysis/toe_20261122_round5_lorentzian_nulls.py": "a015defc9f1ba5462f7d1c9111ae906d2ccb477a020d5ab117949f373e7bd4b3",
+    "analysis/toe_20261122_round5_optical_19_pareto.py": "8df49b20a0d006b3dfd445f71c38b149d7c65816b1447336462b37b58b489cb9",
+    "data/toe_20261122_round5_18effect_optical.json": "2d6558b63ca97718f99f9afd13569f0704c8b9058bf34e86c835e775f7860f6e",
+    "data/toe_20261122_round5_e6_grade_leakage.json": "9d9b8028f7ee7f26f6e3e12a2efa516ad0f9315b77b35b3ab63d18cb64d423e5",
+    "data/toe_20261122_round5_hessian_stage4_compiler.json": "b841edd9a46f908c2408ab13ff1789b8370d300174dbb90533a00fbf1d616630",
+    "data/toe_20261122_round5_higgs_spinor_selection.json": "771965c694e2b878958f4a3eb3efe9ec98a6ba4d6fe9a3d8f2795a2ad88a1717",
+    "data/toe_20261122_round5_lorentzian_nulls.json": "51df4c28680cf81fc9b0a69a1db40ad8156849c9e241df9cd0a0d61b370422b5",
+    "data/toe_20261122_round5_optical_19_pareto.json": "66b95575dfb064175d80695c98271c9c2e5f699a698810095a73fe9843b67728",
+    "tests/test_toe_20261122_round5_sixfronts.py": "724a74671c03cec6ac4fd602a76b5eae18b2d7bf8033cbec5baeb468e7f714c8"
+  },
+  "source_outputs": [
+    "analysis/toe_20261122_round5_18effect_optical.py",
+    "analysis/toe_20261122_round5_e6_grade_leakage.py",
+    "analysis/toe_20261122_round5_hessian_stage4_compiler.py",
+    "analysis/toe_20261122_round5_higgs_spinor_selection.py",
+    "analysis/toe_20261122_round5_lorentzian_nulls.py",
+    "analysis/toe_20261122_round5_optical_19_pareto.py",
+    "data/toe_20261122_round5_18effect_optical.json",
+    "data/toe_20261122_round5_e6_grade_leakage.json",
+    "data/toe_20261122_round5_hessian_stage4_compiler.json",
+    "data/toe_20261122_round5_higgs_spinor_selection.json",
+    "data/toe_20261122_round5_lorentzian_nulls.json",
+    "data/toe_20261122_round5_optical_19_pareto.json",
+    "tests/test_toe_20261122_round5_sixfronts.py",
+    "analysis/2026-11-22_TOE_round5_18_19_optical_E6_causality_compiler.md",
+    ".github/workflows/toe-round5-sixfront-20261122.yml"
+  ],
+  "status": "PASS_FIVE_FRONTS_PLUS_SIXTH_OPTICAL_RESEARCH",
+  "tests_local": "17/17 isolated passed; archival full suite exceeded execution limit"
+}

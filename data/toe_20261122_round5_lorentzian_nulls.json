@@ -1,0 +1,77 @@
+{
+  "Minkowski_dimension": "1+1; lightcone coordinates u,v with coordinatewise order",
+  "W33_degree_matched_orientation_null": {
+    "intervals_with_one_interior": {
+      "W33": 67.075,
+      "random_12_regular": 65.5875
+    },
+    "maximum_chain_length": {
+      "W33": 16.825,
+      "random_12_regular": 16.575
+    },
+    "ordering_fraction": {
+      "W33": 0.8281730769230767,
+      "random_12_regular": 0.8103205128205125
+    }
+  },
+  "key_nonidentifiability": "Ordering fraction alone does not identify Lorentzian geometry: an all-comparable two-layer poset and a 1+1 Minkowski diamond have limiting relation fraction 1/2 but distinct chains and intervals.",
+  "limitations": "No 3+1 Lorentzian GR, Einstein-Hilbert continuum, spin-two pole, quantum dynamics, finite-density control or physical units. Random W33 orientations use an imposed external total order.",
+  "literature": "Myrheim-Meyer dimension estimators in causal-set theory are established prior art; a single ordering-fraction statistic is a weak geometric diagnostic.",
+  "status": "PASS_MINKOWSKI_POSSET_ORDER_INVARIANTS_WITH_MATCHED_NULLS",
+  "test_sizes": [
+    {
+      "layered_counterexample": {
+        "comparable_pairs": 400,
+        "intervals_with_one_interior": 0,
+        "intervals_with_positive_interior": 0,
+        "maximum_chain_length": 2,
+        "ordering_fraction": 0.5128205128205128
+      },
+      "n": 40,
+      "number_of_random_sprinklings": 40,
+      "sprinkled_Minkowski_diamond_mean": {
+        "comparable_pairs": 401.15,
+        "intervals_with_one_interior": 62.525,
+        "intervals_with_positive_interior": 306.6,
+        "maximum_chain_length": 10.2,
+        "ordering_fraction": 0.5142948717948718
+      }
+    },
+    {
+      "layered_counterexample": {
+        "comparable_pairs": 1600,
+        "intervals_with_one_interior": 0,
+        "intervals_with_positive_interior": 0,
+        "maximum_chain_length": 2,
+        "ordering_fraction": 0.5063291139240507
+      },
+      "n": 80,
+      "number_of_random_sprinklings": 40,
+      "sprinkled_Minkowski_diamond_mean": {
+        "comparable_pairs": 1577.875,
+        "intervals_with_one_interior": 168.7,
+        "intervals_with_positive_interior": 1336.175,
+        "maximum_chain_length": 14.625,
+        "ordering_fraction": 0.4993275316455696
+      }
+    },
+    {
+      "layered_counterexample": {
+        "comparable_pairs": 6400,
+        "intervals_with_one_interior": 0,
+        "intervals_with_positive_interior": 0,
+        "maximum_chain_length": 2,
+        "ordering_fraction": 0.5031446540880503
+      },
+      "n": 160,
+      "number_of_random_sprinklings": 40,
+      "sprinkled_Minkowski_diamond_mean": {
+        "comparable_pairs": 6383.675,
+        "intervals_with_one_interior": 437.5,
+        "intervals_with_positive_interior": 5789.45,
+        "maximum_chain_length": 21.8,
+        "ordering_fraction": 0.5018612421383647
+      }
+    }
+  ]
+}

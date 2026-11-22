@@ -1,0 +1,406 @@
+{
+  "best_tested_mixture": {
+    "ideal_risk": 49.42057708663796,
+    "loss_calibrated": {
+      "detected_probability": 0.951348649316417,
+      "gate_count": 62,
+      "lossy_frame_condition": 56.07487824034449,
+      "no_click_probability": 0.04865135068358291,
+      "source_photon_HS_risk_coefficient": 51.549054717096226
+    },
+    "t": 0.45
+  },
+  "exact_cyclotomic_identities": true,
+  "final_ray_indices": [
+    1,
+    3,
+    5,
+    6,
+    7,
+    8,
+    10,
+    12,
+    13,
+    15,
+    16,
+    18,
+    19,
+    27,
+    29,
+    33,
+    36,
+    39
+  ],
+  "final_weight_by_ray": {
+    "1": 0.166666666667,
+    "10": 0.166666666667,
+    "12": 0.166666666667,
+    "13": 0.166666666667,
+    "15": 0.166666666667,
+    "16": 0.166666666667,
+    "18": 0.333333333333,
+    "19": 0.166666666667,
+    "27": 0.333333333333,
+    "29": 0.333333333333,
+    "3": 0.166666666667,
+    "33": 0.333333333333,
+    "36": 0.166666666667,
+    "39": 0.166666666667,
+    "5": 0.333333333333,
+    "6": 0.166666666667,
+    "7": 0.333333333333,
+    "8": 0.166666666667
+  },
+  "limitations": "18 and 19 are explicit support upper bounds, not proven minima. Statistical risk is for one seeded pure state and calibrated finite-dimensional source/detector model; QR coupler losses are illustrative and exclude multiphoton imperfections, drift, source/detector efficiencies. Count is not evidence of hardware energy advantage.",
+  "mixture_weight_scan": [
+    {
+      "ideal_risk": 69.24345489095369,
+      "loss_calibrated": {
+        "detected_probability": 0.95148165671931,
+        "gate_count": 62,
+        "lossy_frame_condition": 243.9816147736066,
+        "no_click_probability": 0.04851834328069006,
+        "source_photon_HS_risk_coefficient": 72.15597792998066
+      },
+      "t": 0.2
+    },
+    {
+      "ideal_risk": 60.85443952272844,
+      "loss_calibrated": {
+        "detected_probability": 0.9514617880476788,
+        "gate_count": 62,
+        "lossy_frame_condition": 154.4440589605953,
+        "no_click_probability": 0.04853821195232117,
+        "source_photon_HS_risk_coefficient": 63.36306260949162
+      },
+      "t": 0.25
+    },
+    {
+      "ideal_risk": 55.628399033191045,
+      "loss_calibrated": {
+        "detected_probability": 0.9514382369354677,
+        "gate_count": 62,
+        "lossy_frame_condition": 107.4770760712653,
+        "no_click_probability": 0.048561763064532325,
+        "source_photon_HS_risk_coefficient": 57.93094062507235
+      },
+      "t": 0.3
+    },
+    {
+      "ideal_risk": 52.318583418554866,
+      "loss_calibrated": {
+        "detected_probability": 0.9514113695669945,
+        "gate_count": 62,
+        "lossy_frame_condition": 80.59406200871095,
+        "no_click_probability": 0.04858863043300557,
+        "source_photon_HS_risk_coefficient": 54.511958943467484
+      },
+      "t": 0.35
+    },
+    {
+      "ideal_risk": 50.34274577638869,
+      "loss_calibrated": {
+        "detected_probability": 0.9513814482704569,
+        "gate_count": 62,
+        "lossy_frame_condition": 64.74844202717581,
+        "no_click_probability": 0.04861855172954306,
+        "source_photon_HS_risk_coefficient": 52.48435322816752
+      },
+      "t": 0.4
+    },
+    {
+      "ideal_risk": 49.42057708663796,
+      "loss_calibrated": {
+        "detected_probability": 0.951348649316417,
+        "gate_count": 62,
+        "lossy_frame_condition": 56.07487824034449,
+        "no_click_probability": 0.04865135068358291,
+        "source_photon_HS_risk_coefficient": 51.549054717096226
+      },
+      "t": 0.45
+    },
+    {
+      "ideal_risk": 49.429754992800184,
+      "loss_calibrated": {
+        "detected_probability": 0.9513130742713609,
+        "gate_count": 62,
+        "lossy_frame_condition": 53.10367891295956,
+        "no_click_probability": 0.04868692572863911,
+        "source_photon_HS_risk_coefficient": 51.5741736864053
+      },
+      "t": 0.5
+    },
+    {
+      "ideal_risk": 50.34632714684453,
+      "loss_calibrated": {
+        "detected_probability": 0.951274756314011,
+        "gate_count": 62,
+        "lossy_frame_condition": 55.49490800962407,
+        "no_click_probability": 0.048725243685989,
+        "source_photon_HS_risk_coefficient": 52.53178931346997
+      },
+      "t": 0.55
+    },
+    {
+      "ideal_risk": 52.230529632826375,
+      "loss_calibrated": {
+        "detected_probability": 0.951233662262473,
+        "gate_count": 62,
+        "lossy_frame_condition": 63.54347853537809,
+        "no_click_probability": 0.048766337737527025,
+        "source_photon_HS_risk_coefficient": 54.48294235909829
+      },
+      "t": 0.6
+    },
+    {
+      "ideal_risk": 55.25096799260835,
+      "loss_calibrated": {
+        "detected_probability": 0.9511896905467857,
+        "gate_count": 62,
+        "lossy_frame_condition": 78.83812005680626,
+        "no_click_probability": 0.04881030945321434,
+        "source_photon_HS_risk_coefficient": 57.60267271086288
+      },
+      "t": 0.65
+    },
+    {
+      "ideal_risk": 59.75952716222881,
+      "loss_calibrated": {
+        "detected_probability": 0.951142664892272,
+        "gate_count": 62,
+        "lossy_frame_condition": 105.54933217575721,
+        "no_click_probability": 0.04885733510772808,
+        "source_photon_HS_risk_coefficient": 62.25917926519044
+      },
+      "t": 0.7
+    },
+    {
+      "ideal_risk": 66.46571614978717,
+      "loss_calibrated": {
+        "detected_probability": 0.951092322965527,
+        "gate_count": 62,
+        "lossy_frame_condition": 151.9949679058608,
+        "no_click_probability": 0.048907677034472984,
+        "source_photon_HS_risk_coefficient": 69.20432057637382
+      },
+      "t": 0.75
+    },
+    {
+      "ideal_risk": 76.87187596758612,
+      "loss_calibrated": {
+        "detected_probability": 0.951038298575359,
+        "gate_count": 62,
+        "lossy_frame_condition": 240.0256387468146,
+        "no_click_probability": 0.04896170142464098,
+        "source_photon_HS_risk_coefficient": 80.0794958512309
+      },
+      "t": 0.8
+    }
+  ],
+  "nineteen_ray_indices": [
+    1,
+    3,
+    5,
+    6,
+    7,
+    12,
+    13,
+    15,
+    16,
+    17,
+    18,
+    19,
+    27,
+    29,
+    30,
+    31,
+    32,
+    33,
+    39
+  ],
+  "nineteen_source_frames": [
+    [
+      1,
+      5,
+      6,
+      13,
+      15,
+      16,
+      17,
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    [
+      1,
+      3,
+      5,
+      7,
+      12,
+      13,
+      18,
+      19,
+      27,
+      29,
+      33,
+      39
+    ]
+  ],
+  "optical_designs": [
+    {
+      "design": "18-effect",
+      "detected_probability": 0.9513130742713609,
+      "exact_Haar_pure_average_source_photon_HS_risk_coefficient": 43.345729200343726,
+      "gate_count": 62,
+      "ideal_detected_photon_HS_risk_coefficient": 49.429754992800184,
+      "ideal_frame_condition": 52.38534203651142,
+      "lossy_frame_condition": 53.10367891295956,
+      "no_click_probability": 0.04868692572863911,
+      "outcomes": 18,
+      "source_photon_HS_risk_coefficient": 51.5741736864053
+    },
+    {
+      "design": "19-effect",
+      "detected_probability": 0.9526617469318467,
+      "exact_Haar_pure_average_source_photon_HS_risk_coefficient": 36.48355623352771,
+      "gate_count": 66,
+      "ideal_detected_photon_HS_risk_coefficient": 34.385322294843185,
+      "ideal_frame_condition": 31.029092504567405,
+      "lossy_frame_condition": 33.51532758045816,
+      "no_click_probability": 0.047338253068153355,
+      "outcomes": 19,
+      "source_photon_HS_risk_coefficient": 36.18483878372668
+    },
+    {
+      "design": "20-effect",
+      "detected_probability": 0.9404575149692131,
+      "exact_Haar_pure_average_source_photon_HS_risk_coefficient": 52.25694512816183,
+      "gate_count": 70,
+      "ideal_detected_photon_HS_risk_coefficient": 50.35918087274005,
+      "ideal_frame_condition": 87.42640687119297,
+      "lossy_frame_condition": 93.8178065183432,
+      "no_click_probability": 0.059542485030786886,
+      "outcomes": 20,
+      "source_photon_HS_risk_coefficient": 53.1478089926185
+    },
+    {
+      "design": "30-effect-0",
+      "detected_probability": 0.9074955730701478,
+      "exact_Haar_pure_average_source_photon_HS_risk_coefficient": 25.293017239969714,
+      "gate_count": 110,
+      "ideal_detected_photon_HS_risk_coefficient": 22.058612576270825,
+      "ideal_frame_condition": 14.082762530298217,
+      "lossy_frame_condition": 16.97471719475633,
+      "no_click_probability": 0.09250442692985217,
+      "outcomes": 30,
+      "source_photon_HS_risk_coefficient": 24.421867882116082
+    },
+    {
+      "design": "39-effect",
+      "detected_probability": 0.900119890488076,
+      "exact_Haar_pure_average_source_photon_HS_risk_coefficient": 21.832061255650853,
+      "gate_count": 138,
+      "ideal_detected_photon_HS_risk_coefficient": 18.710366701830477,
+      "ideal_frame_condition": 10.581420657458484,
+      "lossy_frame_condition": 15.231837179065852,
+      "no_click_probability": 0.09988010951192403,
+      "outcomes": 39,
+      "source_photon_HS_risk_coefficient": 21.589975613473875
+    }
+  ],
+  "overlap_six_rays": [
+    5,
+    7,
+    18,
+    27,
+    29,
+    33
+  ],
+  "six_finite_field_projector_ranks": [
+    {
+      "A": 12,
+      "B": 12,
+      "C": 12,
+      "D": 12,
+      "prime": 7,
+      "union18": 16,
+      "union19": 16
+    },
+    {
+      "A": 12,
+      "B": 12,
+      "C": 12,
+      "D": 12,
+      "prime": 13,
+      "union18": 16,
+      "union19": 16
+    },
+    {
+      "A": 12,
+      "B": 12,
+      "C": 12,
+      "D": 12,
+      "prime": 19,
+      "union18": 16,
+      "union19": 16
+    },
+    {
+      "A": 12,
+      "B": 12,
+      "C": 12,
+      "D": 12,
+      "prime": 31,
+      "union18": 16,
+      "union19": 16
+    },
+    {
+      "A": 12,
+      "B": 12,
+      "C": 12,
+      "D": 12,
+      "prime": 37,
+      "union18": 16,
+      "union19": 16
+    },
+    {
+      "A": 12,
+      "B": 12,
+      "C": 12,
+      "D": 12,
+      "prime": 43,
+      "union18": 16,
+      "union19": 16
+    }
+  ],
+  "source_tight_frame_A": [
+    1,
+    3,
+    5,
+    7,
+    12,
+    13,
+    18,
+    19,
+    27,
+    29,
+    33,
+    39
+  ],
+  "source_tight_frame_B": [
+    5,
+    6,
+    7,
+    8,
+    10,
+    15,
+    16,
+    18,
+    27,
+    29,
+    33,
+    36
+  ],
+  "status": "PASS_EXACT_18_EFFECT_WITTING_IC_AND_LOSS_AWARE_OPTICAL_BENCHMARK"
+}

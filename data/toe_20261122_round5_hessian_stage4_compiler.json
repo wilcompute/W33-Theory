@@ -1,0 +1,145 @@
+{
+  "compact_diagonal_SU4_torus_packing": [
+    {
+      "epsilon": 1e-05,
+      "grid_points": 9024895368,
+      "grid_side": 2082,
+      "lower_bound_distinct_target_separation": 2.002e-05,
+      "stage4_count": 153160632,
+      "strict_packing_obstruction": true
+    },
+    {
+      "epsilon": 3e-05,
+      "grid_points": 334255384,
+      "grid_side": 694,
+      "lower_bound_distinct_target_separation": 6.005999999999999e-05,
+      "stage4_count": 153160632,
+      "strict_packing_obstruction": true
+    },
+    {
+      "epsilon": 4e-05,
+      "grid_points": 141420761,
+      "grid_side": 521,
+      "lower_bound_distinct_target_separation": 8.008e-05,
+      "stage4_count": 153160632,
+      "strict_packing_obstruction": false
+    }
+  ],
+  "exact_classification": {
+    "coset_count": 236359,
+    "exact_matrix_membership_comparisons": 1010231,
+    "signature_bucket_count": 176230,
+    "signature_class_profile": [
+      {
+        "bucket_size": 1,
+        "buckets": 157464,
+        "cosets": 1
+      },
+      {
+        "bucket_size": 3,
+        "buckets": 648,
+        "cosets": 3
+      },
+      {
+        "bucket_size": 4,
+        "buckets": 4536,
+        "cosets": 2
+      },
+      {
+        "bucket_size": 5,
+        "buckets": 1944,
+        "cosets": 3
+      },
+      {
+        "bucket_size": 6,
+        "buckets": 2160,
+        "cosets": 3
+      },
+      {
+        "bucket_size": 6,
+        "buckets": 864,
+        "cosets": 4
+      },
+      {
+        "bucket_size": 8,
+        "buckets": 5184,
+        "cosets": 4
+      },
+      {
+        "bucket_size": 9,
+        "buckets": 1728,
+        "cosets": 4
+      },
+      {
+        "bucket_size": 12,
+        "buckets": 972,
+        "cosets": 4
+      },
+      {
+        "bucket_size": 33,
+        "buckets": 216,
+        "cosets": 10
+      },
+      {
+        "bucket_size": 72,
+        "buckets": 432,
+        "cosets": 28
+      },
+      {
+        "bucket_size": 75,
+        "buckets": 54,
+        "cosets": 37
+      },
+      {
+        "bucket_size": 284,
+        "buckets": 27,
+        "cosets": 156
+      },
+      {
+        "bucket_size": 675,
+        "buckets": 1,
+        "cosets": 109
+      }
+    ]
+  },
+  "packing_proof": "For diagonal SU4 targets with 3 independent phases in [-pi/24,pi/24], projective Frobenius distance between grid neighbors with phase step s is at least s/(2pi). An epsilon-net of N gates needs at least as many gates as any grid with >2epsilon separation. If grid count>N, worst-case error>epsilon. This is deliberately a very weak 3D subtorus bound, not the 15D volume bound.",
+  "stage4_exact_left_H_cosets": 236359,
+  "stage4_matrices": 153160632,
+  "status": "PASS_EXACT_HESSIAN_STAGE4_ALL_MATRICES_HAAR_BENCHMARK_AND_TORUS_PACKING",
+  "three_Haar_target_exhaustive_benchmarks": [
+    {
+      "H_word": "aBACbACB",
+      "best_through_stage4_inclusive": 0.3283394617549869,
+      "checked_distinct_matrices": 153160632,
+      "coset_rep_position": 189515,
+      "previous_exact_stage3_distance": 0.3283394617549869,
+      "process_infidelity": 0.10996708032917213,
+      "projective_Frobenius_distance": 0.3364058250537001,
+      "projective_trace_overlap": 0.9434155604349697,
+      "target_index": 0
+    },
+    {
+      "H_word": "abaCbaCb",
+      "best_through_stage4_inclusive": 0.363844942165426,
+      "checked_distinct_matrices": 153160632,
+      "coset_rep_position": 235523,
+      "previous_exact_stage3_distance": 0.45381311536491464,
+      "process_infidelity": 0.12800181787192788,
+      "projective_Frobenius_distance": 0.363844942165426,
+      "projective_trace_overlap": 0.9338084290303189,
+      "target_index": 1
+    },
+    {
+      "H_word": "bcBaB",
+      "best_through_stage4_inclusive": 0.38757521177599175,
+      "checked_distinct_matrices": 153160632,
+      "coset_rep_position": 91309,
+      "previous_exact_stage3_distance": 0.4653453895703442,
+      "process_infidelity": 0.14457344241709846,
+      "projective_Frobenius_distance": 0.38757521177599175,
+      "projective_trace_overlap": 0.9248927276083976,
+      "target_index": 2
+    }
+  ],
+  "warning": "Target-specific exhaustive finite-depth compiler; counts finite unique complex matrices (up to left H accounting), not synthesized fault-tolerant operations. No scaling guarantee, global shortest gate words or physical throughput certificate."
+}

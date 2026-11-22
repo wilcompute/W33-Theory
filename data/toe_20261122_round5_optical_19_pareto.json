@@ -1,0 +1,81 @@
+{
+  "best_tested_order": {
+    "detected_probability": 0.9447100537693074,
+    "gate_count": 65,
+    "lossy_frame_condition": 32.86921586660699,
+    "no_click_probability": 0.055289946230692645,
+    "permutation": [
+      2,
+      18,
+      3,
+      9,
+      15,
+      4,
+      10,
+      11,
+      16,
+      17,
+      13,
+      0,
+      5,
+      8,
+      12,
+      6,
+      14,
+      1,
+      7
+    ],
+    "source_photon_HS_risk_coefficient": 35.85533286656953,
+    "trial": 5
+  },
+  "bounded_weight_optimum_t": 0.5019238536826249,
+  "fixed_order_weight_optimized": {
+    "detected_probability": 0.9526551948323411,
+    "gate_count": 66,
+    "lossy_frame_condition": 33.58740612715293,
+    "no_click_probability": 0.047344805167658925,
+    "source_photon_HS_risk_coefficient": 36.1844345464201
+  },
+  "limitations": "One seeded pure input, eta=0.995 on affected rails. SciPy scalar weight optimization is numeric and local to one parameter. Random 80-permutation selection does NOT certify globally optimal optical routing. No measured hardware, detector saturation, dark counts, multi-photon indistinguishability, drift or design robustness over all input states.",
+  "outcomes": 19,
+  "reference_half_half": {
+    "detected_probability": 0.9526617469318467,
+    "gate_count": 66,
+    "lossy_frame_condition": 33.51532758045816,
+    "no_click_probability": 0.047338253068153355,
+    "source_photon_HS_risk_coefficient": 36.18483878372668
+  },
+  "source_frames": [
+    [
+      1,
+      5,
+      6,
+      13,
+      15,
+      16,
+      17,
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    [
+      1,
+      3,
+      5,
+      7,
+      12,
+      13,
+      18,
+      19,
+      27,
+      29,
+      33,
+      39
+    ]
+  ],
+  "source_state_seed": 4281,
+  "status": "PASS_19_EFFECT_WITTING_WEIGHT_AND_ROUTING_OPTIMIZATION",
+  "tested_output_row_orders": 81
+}
