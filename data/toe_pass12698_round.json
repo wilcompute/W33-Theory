@@ -1,0 +1,119 @@
+{
+ "evidence": {
+  "dy_dmt": -0.03767760865425607,
+  "yprime": {
+   "172.07": 0.5245996887457899,
+   "172.57": 0.5069084109106702,
+   "173.07": 0.4869220800915338
+  },
+  "rows": {
+   "P-ACT-LB n_s": {
+    "SM + LCDM + generic DM": {
+     "Z": 3.703703703703704,
+     "bayes_factor_vs_SM": 1.0
+    },
+    "boundary sqrt(v M_Pl) + generic DM": {
+     "Z": 50.203227834149544,
+     "bayes_factor_vs_SM": 13.554871515220375
+    },
+    "completion A": {
+     "Z": 9.680493574570498,
+     "bayes_factor_vs_SM": 2.613733265134034
+    },
+    "completion B": {
+     "Z": 0.37881514673023403,
+     "bayes_factor_vs_SM": 0.10228008961716317
+    }
+   },
+   "P-ACT n_s (no DESI)": {
+    "SM + LCDM + generic DM": {
+     "Z": 3.703703703703704,
+     "bayes_factor_vs_SM": 1.0
+    },
+    "boundary sqrt(v M_Pl) + generic DM": {
+     "Z": 50.203227834149544,
+     "bayes_factor_vs_SM": 13.554871515220375
+    },
+    "completion A": {
+     "Z": 17.721009290763213,
+     "bayes_factor_vs_SM": 4.784672508506067
+    },
+    "completion B": {
+     "Z": 0.37881514673023403,
+     "bayes_factor_vs_SM": 0.10228008961716317
+    }
+   }
+  },
+  "note": "priors and likelihoods in the docstring; N_eff likelihood common to all (3.044) and omitted",
+  "prior_sensitivity": {
+   "SM m_t prior width 15 GeV": {
+    "SM + LCDM + generic DM": 1.0,
+    "boundary sqrt(v M_Pl) + generic DM": 13.554871515220375,
+    "completion A": 2.613733265134034,
+    "completion B": 0.10228008961716317,
+    "boundary, trials-corrected (8 candidate scales)": 1.694358939402547,
+    "completion A, trials-corrected (8)": 0.32671665814175427
+   },
+   "SM m_t prior width 5 GeV": {
+    "SM + LCDM + generic DM": 0.3333333333333333,
+    "boundary sqrt(v M_Pl) + generic DM": 4.518290505073458,
+    "completion A": 0.8712444217113448,
+    "completion B": 0.03409336320572106,
+    "boundary, trials-corrected (8 candidate scales)": 0.5647863131341823,
+    "completion A, trials-corrected (8)": 0.1089055527139181
+   },
+   "SM m_t prior width 2 GeV": {
+    "SM + LCDM + generic DM": 0.13333333333333333,
+    "boundary sqrt(v M_Pl) + generic DM": 1.8073162020293834,
+    "completion A": 0.3484977686845379,
+    "completion B": 0.013637345282288422,
+    "boundary, trials-corrected (8 candidate scales)": 0.22591452525367292,
+    "completion A, trials-corrected (8)": 0.04356222108556724
+   }
+  }
+ },
+ "mev_alp": {
+  "rows": {
+   "m=1 MeV": {
+    "g": 3.2e-09,
+    "Gamma_over_H": 2.094290453182618e-05,
+    "Y": 5.822127459847678e-07,
+    "zeta_GeV": 4.098777731732765e-09,
+    "needed_zeta": 1.7e-06,
+    "shortfall": 414.7577915334585
+   },
+   "m=2 MeV": {
+    "g": 1.1e-09,
+    "Gamma_over_H": 4.949397360060483e-06,
+    "Y": 1.3759324660968142e-07,
+    "zeta_GeV": 1.9373129122643144e-09,
+    "needed_zeta": 1.7e-06,
+    "shortfall": 877.5040878724412
+   },
+   "m=4 MeV": {
+    "g": 4e-10,
+    "Gamma_over_H": 1.3089315332391363e-06,
+    "Y": 3.6388296624047987e-08,
+    "zeta_GeV": 1.0246944329331913e-09,
+    "needed_zeta": 1.7e-06,
+    "shortfall": 1659.031166133834
+   }
+  },
+  "note": "freeze-in falls far short; needs non-thermal production; SN1987A bounds near g ~ 1e-9 are uncertain by factors of a few"
+ },
+ "long_lived_triplet": {
+  "stop_like_limit": 1340.0,
+  "fermion_over_scalar": 7.0,
+  "triplet_factor": 3.0,
+  "mass_shift": 560.7033592841,
+  "lightest_T_limit": 1900.7033592840999,
+  "note": "estimate: fermion/scalar cross-section ratio ~7 assumed; R-hadron searches would exclude the long-lived regime to ~1.9 TeV"
+ },
+ "delta_RV": {
+  "V_ud_lattice": 0.97386,
+  "gap_sigma": 1.3144525908302533,
+  "Delta_RV_shift_needed": -0.0014710545742944274,
+  "lattice_unc": 0.00018,
+  "shift_over_unc": 8.172525412746818
+ }
+}
