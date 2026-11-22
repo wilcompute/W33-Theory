@@ -1,0 +1,48 @@
+{
+  "status": "PASS_EXACT_TWO_D_HESSIAN_COMPILER_385560",
+  "date": "2026-11-22",
+  "exact_cyclotomic_enumeration": {
+    "H_group_order": 648,
+    "normal_H27_order": 27,
+    "first_D_stage_unique_matrices": 17496,
+    "second_D_stage_raw_words": 472392,
+    "second_D_stage_exact_unique_matrices": 385560,
+    "same_word_collision_excess": 86832,
+    "H_inside_two_D": true,
+    "common_cyclotomic_denominator_second_stage": 243,
+    "largest_exact_integer_coefficient": 270,
+    "exact_second_stage_matrix_set_sha256": "e50c2d9c40d10e05a63b807f938a05443178b79c6963061c25ed4834f93bde42"
+  },
+  "benchmark_results": [
+    {
+      "haar_target_seed": 20261122,
+      "target_index": 0,
+      "one_D_best_projective_Frobenius": 0.6572693468903162,
+      "two_D_best_projective_Frobenius": 0.4819626758729542,
+      "two_D_compiled_word": "AbACbaCdaBaCbAdBaBCBaB",
+      "primitive_length": 22,
+      "process_infidelity": 0.2187985897671879
+    },
+    {
+      "haar_target_seed": 20261122,
+      "target_index": 1,
+      "one_D_best_projective_Frobenius": 0.6438833345676858,
+      "two_D_best_projective_Frobenius": 0.5525601350564819,
+      "two_D_compiled_word": "aCBaBCdABaCbadaC",
+      "primitive_length": 16,
+      "process_infidelity": 0.28201721463417495
+    },
+    {
+      "haar_target_seed": 20261122,
+      "target_index": 2,
+      "one_D_best_projective_Frobenius": 0.716128926437724,
+      "two_D_best_projective_Frobenius": 0.5092598855014918,
+      "two_D_compiled_word": "bcBaBdABAcbadabaCBA",
+      "primitive_length": 19,
+      "process_infidelity": 0.24253059190376025
+    }
+  ],
+  "theorem": "The set H D H D H = H D N D N has exactly 385560 distinct complex 4x4 matrices; raw 648*27^2=472392 candidate words contain 86832 duplicates. Each entry lies in (1/243)Z[omega].",
+  "scope": "Exact cardinality of the specified two-D word family and exhaustive three-target numerical optimization within it, NOT global finite-depth optimality nor experimentally efficient photonic compilation.",
+  "prior_work": "Previous report certified H=D subgroup double coset |HDH|=17496 and H=H27 semidirect SL(2,3), which this computation builds upon."
+}

@@ -1,0 +1,55 @@
+name: TOE further six exact fronts and operational negative controls
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'analysis/toe_20261122_further_*.py'
+      - 'tests/test_toe_20261122_further_sixfront.py'
+      - '.github/workflows/toe-further-sixfront-20261122.yml'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  exact-sixfront:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install isolated numerical and exact math requirements
+        run: python -m pip install --disable-pip-version-check numpy scipy sympy pytest
+      - name: Run new 16 regression tests
+        run: python -m pytest -q tests/test_toe_20261122_further_sixfront.py
+      - name: Regenerate six certificate outputs
+        run: |
+          python analysis/toe_20261122_further_two_D_exact.py
+          python analysis/toe_20261122_further_e6_cubic_pullback.py
+          python analysis/toe_20261122_further_quantum_causal_arrow.py
+          python analysis/toe_20261122_further_e6_isolated_singlet.py
+          python analysis/toe_20261122_further_photonic_quadrature_fisher.py
+          python analysis/toe_20261122_further_control_observation_duality.py
+      - name: Verify all six outputs and corrections
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          root=Path('data')
+          def f(name):return json.loads((root/('toe_20261122_further_'+name+'.json')).read_text())
+          a=f('two_D_exact')['exact_cyclotomic_enumeration']
+          b=f('e6_cubic_pullback')
+          c=f('quantum_causal_arrow')
+          d=f('e6_isolated_singlet')
+          e=f('photonic_quadrature_fisher')
+          q=f('control_observation_duality')
+          assert a['second_D_stage_exact_unique_matrices']==385560
+          assert b['cubic_radical_dimension']==54
+          assert c['spectral_gap']>0 and c['reversal_odd_order_parameter_expectation']==0
+          assert d['residual_local_complex_singlet_moduli']==0
+          assert e['measured_shot_budget_rows'][0]['Y']['detected_photons']==1151
+          assert q['affine_state_tomography_with_known_trace_is_complete']
+          assert q['dimensions']['all39_span']==16
+          print('PASS six further exact and qualified TOE certificates')
+          PY

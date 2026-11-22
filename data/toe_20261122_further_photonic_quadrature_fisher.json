@@ -1,0 +1,97 @@
+{
+  "status": "PASS_OPTIMAL_QUADRATURE_FISHER_AND_LOSSY_SHOT_TESTS",
+  "date": "2026-11-22",
+  "measurement_design": "After calibrated U^-1 prep, probe (|0>+|1>)/sqrt2; apply D_theta; output X-minus and Y-minus interferometers, with independent phase reference.",
+  "ideal_X_minus_probability": "sin^2(theta/2); quadratic phase response near zero",
+  "ideal_Y_quadrature_probability": "(1+sin(theta))/2; linear phase response near zero",
+  "output_visibility": "(1-2e)*exp(-sigma^2/2)",
+  "e_symmetric_confusion": 0.01,
+  "gaussian_phase_jitter_sigma": 0.03,
+  "Fisher_information_per_detected_photon_at_zero": 0.9595360288453377,
+  "ideal_quantum_Fisher_information_per_photon": 1,
+  "experiment": "Exact one-sided binomial false-positive <=0.05, power>=0.95, calibrated e and sigma",
+  "measured_shot_budget_rows": [
+    {
+      "test_phase_rad": 0.1,
+      "detected_photon_transmission_assumed": 0.5561174404719934,
+      "X_readout_probabilities": [
+        0.010220450394941016,
+        0.012667308074970851
+      ],
+      "Y_readout_probabilities": [
+        0.5,
+        0.5488963658408177
+      ],
+      "X": {
+        "detected_photons": 20823,
+        "rejection_threshold_counts": 238,
+        "actual_typeI_error": 0.04643598283044554,
+        "actual_statistical_power": 0.9500703451493331,
+        "input_pulses_lower_ceil": 37444
+      },
+      "Y": {
+        "detected_photons": 1151,
+        "rejection_threshold_counts": 604,
+        "actual_typeI_error": 0.049385771940496016,
+        "actual_statistical_power": 0.9528986954589049,
+        "input_pulses_lower_ceil": 2070
+      },
+      "detected_shot_reduction_ratio": 18.091225021720245
+    },
+    {
+      "test_phase_rad": 0.3,
+      "detected_photon_transmission_assumed": 0.5561174404719934,
+      "X_readout_probabilities": [
+        0.010220450394941016,
+        0.032095724634782385
+      ],
+      "Y_readout_probabilities": [
+        0.5,
+        0.6447397537177848
+      ],
+      "X": {
+        "detected_photons": 447,
+        "rejection_threshold_counts": 9,
+        "actual_typeI_error": 0.04265962237427399,
+        "actual_statistical_power": 0.9504095939658358,
+        "input_pulses_lower_ceil": 804
+      },
+      "Y": {
+        "detected_photons": 128,
+        "rejection_threshold_counts": 74,
+        "actual_typeI_error": 0.04634501544918899,
+        "actual_statistical_power": 0.9509097347925399,
+        "input_pulses_lower_ceil": 231
+      },
+      "detected_shot_reduction_ratio": 3.4921875
+    },
+    {
+      "test_phase_rad": 1.0471975511965976,
+      "detected_photon_transmission_assumed": 0.5561174404719934,
+      "X_readout_probabilities": [
+        0.010220450394941016,
+        0.25511022519747045
+      ],
+      "Y_readout_probabilities": [
+        0.5,
+        0.9241615322120817
+      ],
+      "X": {
+        "detected_photons": 17,
+        "rejection_threshold_counts": 2,
+        "actual_typeI_error": 0.012829509507107647,
+        "actual_statistical_power": 0.9543451771917647,
+        "input_pulses_lower_ceil": 31
+      },
+      "Y": {
+        "detected_photons": 13,
+        "rejection_threshold_counts": 10,
+        "actual_typeI_error": 0.046142578125,
+        "actual_statistical_power": 0.9864472491552155,
+        "input_pulses_lower_ceil": 24
+      },
+      "detected_shot_reduction_ratio": 1.3076923076923077
+    }
+  ],
+  "caveat": "Only a single coherent diagonal phase-error alternative. Requires an independent phase reference, trusted SPAM/jitter and iid samples. Input attempt estimates assume independent loss and ignore switching, dark counts, dead time, source imperfections, and multiphoton effects. No physical device measured."
+}

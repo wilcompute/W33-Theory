@@ -1,0 +1,18 @@
+{
+  "status": "PASS_QUANTUM_CAUSAL_C4_HAMILTONIAN_AND_ARROW_NO_GO",
+  "date": "2026-11-22",
+  "state_count": 24,
+  "undirected_C4_edge_count": 4,
+  "graph_automorphism_group_order": 8,
+  "exact_detailed_balance": true,
+  "real_symmetric_quantum_H": true,
+  "construction": "S=diag(sqrt(pi)) P diag(1/sqrt(pi)), H=I-S, pi~exp(-S_causal)",
+  "quantum_ground_state": "sqrt(pi), unique, reversal-even",
+  "spectral_gap": 0.17822437334288002,
+  "flat_action_spectral_gap": 0.1952621458756348,
+  "gap_positive": true,
+  "reversal_commutator_norm": 0.0,
+  "reversal_odd_order_parameter_expectation": 0.0,
+  "theorem": "A finite irreducible reversible causal-order Metropolis chain induces a stoquastic Hermitian H with unique strictly positive sqrt(pi) ground state. If its interval action is time-reversal symmetric, the ground state is time-reversal-even. There is no preferred history arrow in this finite stationary ground state.",
+  "boundary": "Quantization-by-similarity is an illustrative quantum walk, not Lorentzian gravitational Hamiltonian dynamics or a measured spin-2 propagator. Thermodynamic limits, boundary conditions or explicit time-odd terms can evade the no-arrow conclusion."
+}

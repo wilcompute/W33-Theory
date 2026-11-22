@@ -1,0 +1,100 @@
+{
+  "status": "PASS_EXACT_WITTING_E6_TRINIFICATION_CUBIC_PULLBACK_WITH_RADICAL54",
+  "date": "2026-11-22",
+  "H27_input_dimension": 81,
+  "output_E6_trinification_dimension": 27,
+  "sparse_matrix_nonzeros": 243,
+  "output_chart_canonical_to_raw": [
+    0,
+    4,
+    8,
+    5,
+    6,
+    1,
+    7,
+    2,
+    3,
+    9,
+    12,
+    15,
+    10,
+    13,
+    16,
+    11,
+    14,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26
+  ],
+  "cubic": "det(A)+det(B)+det(C)-tr(A*B*C) for A,B,C in Mat3",
+  "X_internal_SU3_triple": "(X,X,I); X standard cyclic shift",
+  "Z_internal_SU3_triple": "(Z^2,Z,I); Z standard qutrit clock",
+  "center": "commutator acts by omega on all 27 target coordinates",
+  "exact_modular_cubic_checks": [
+    {
+      "prime": 7,
+      "omega": 2,
+      "samples_checked": 40,
+      "source_rank": 27,
+      "source_kernel_dimension": 54,
+      "H27_cubic_covariant": true,
+      "nonzero_determinant_witness": 1
+    },
+    {
+      "prime": 13,
+      "omega": 3,
+      "samples_checked": 40,
+      "source_rank": 27,
+      "source_kernel_dimension": 54,
+      "H27_cubic_covariant": true,
+      "nonzero_determinant_witness": 1
+    },
+    {
+      "prime": 19,
+      "omega": 7,
+      "samples_checked": 40,
+      "source_rank": 27,
+      "source_kernel_dimension": 54,
+      "H27_cubic_covariant": true,
+      "nonzero_determinant_witness": 1
+    },
+    {
+      "prime": 31,
+      "omega": 5,
+      "samples_checked": 40,
+      "source_rank": 27,
+      "source_kernel_dimension": 54,
+      "H27_cubic_covariant": true,
+      "nonzero_determinant_witness": 1
+    },
+    {
+      "prime": 37,
+      "omega": 10,
+      "samples_checked": 40,
+      "source_rank": 27,
+      "source_kernel_dimension": 54,
+      "H27_cubic_covariant": true,
+      "nonzero_determinant_witness": 1
+    },
+    {
+      "prime": 43,
+      "omega": 6,
+      "samples_checked": 40,
+      "source_rank": 27,
+      "source_kernel_dimension": 54,
+      "H27_cubic_covariant": true,
+      "nonzero_determinant_witness": 1
+    }
+  ],
+  "cubic_radical_dimension": 54,
+  "cubic_radical_proof": "The target cubic has zero linear polar radical: choose two matrix-unit partners completing a determinant to isolate each target coordinate. For C(Tu), its polar radical is exactly ker T, dim 81-rank27=54.",
+  "theorem": "The 27x81 Witting coisometry transports a nonzero, H27-invariant E6-trinification cubic to the formal 81D address module. The transported cubic is necessarily degenerate along a 54-dimensional kernel.",
+  "limitation": "Does not construct a faithful E6 action on the 81 formal address modes, a nondegenerate E6 cubic on 81D, a physical photon interface, or a gauge-invariant vacuum. E6 cubic formula is standard; construction is a Witting-basis transport and radical certificate."
+}

@@ -1,0 +1,147 @@
+{
+  "status": "PASS_RENORMALIZABLE_H27_E6_LOCAL_SINGLET_VACUUM_ISOLATED",
+  "date": "2026-11-22",
+  "original_singlet_moduli": 4,
+  "added_E6_singlet_H27_character_drivers": 4,
+  "total_drivers": 5,
+  "field_content": "Three 27_H plus three conjugate 27bar_H with five E6-singlet driver chiral fields: X00,X10,X20,X01,X02",
+  "W_terms": "W= X00*(B00-mu^2)+X10*B10+X20*B20+X01*B01+X02*B02 + y*hijk*C_E6(Mi,Mj,Hk)",
+  "B_family": "B_ab=sum_j barH_(j+b)*omega^(a*(j+b))*H_j with indices mod3; gauge contraction 27bar x 27 -> 1",
+  "H27_transformation": "B_ab under family X transforms omega^a, under Z transforms omega^-b; assign inverse one-dimensional characters to drivers",
+  "singlet_vevs_H": [
+    1,
+    1,
+    "omega"
+  ],
+  "singlet_vevs_Hbar": [
+    1,
+    1,
+    "omega^2"
+  ],
+  "mu_squared": 3,
+  "all_F_terms_zero_at_driver_and_matter_zero": true,
+  "all_E6_D_terms_zero_at_vectorlike_conjugate_pair": true,
+  "algebraic_certificates": {
+    "constraints": [
+      3,
+      0,
+      0,
+      0,
+      0
+    ],
+    "Jacobian_5x5_minors": [
+      "-27",
+      "27",
+      "-27*w",
+      "-27",
+      "27",
+      "27*(w + 1)"
+    ],
+    "exact_matter_10_mass_det": "10*w - 6",
+    "matter_10_mass_determinant_norm_sq": 196,
+    "mass_squared_characteristic_polynomial": "-(t - 7)**2*(t - 4)",
+    "mass_squared_eigenvalues": [
+      4,
+      7,
+      7
+    ]
+  },
+  "finite_field_certificates": [
+    {
+      "prime": 7,
+      "omega": 2,
+      "Jacobian_rank": 5,
+      "holomorphic_constraint_values": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "H27_characters_verified": true,
+      "D_flat_pair_v_and_dual": true
+    },
+    {
+      "prime": 13,
+      "omega": 3,
+      "Jacobian_rank": 5,
+      "holomorphic_constraint_values": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "H27_characters_verified": true,
+      "D_flat_pair_v_and_dual": true
+    },
+    {
+      "prime": 19,
+      "omega": 7,
+      "Jacobian_rank": 5,
+      "holomorphic_constraint_values": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "H27_characters_verified": true,
+      "D_flat_pair_v_and_dual": true
+    },
+    {
+      "prime": 31,
+      "omega": 5,
+      "Jacobian_rank": 5,
+      "holomorphic_constraint_values": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "H27_characters_verified": true,
+      "D_flat_pair_v_and_dual": true
+    },
+    {
+      "prime": 37,
+      "omega": 10,
+      "Jacobian_rank": 5,
+      "holomorphic_constraint_values": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "H27_characters_verified": true,
+      "D_flat_pair_v_and_dual": true
+    },
+    {
+      "prime": 43,
+      "omega": 6,
+      "Jacobian_rank": 5,
+      "holomorphic_constraint_values": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "H27_characters_verified": true,
+      "D_flat_pair_v_and_dual": true
+    }
+  ],
+  "local_complex_singlet_dimension_before_gauge": 6,
+  "holomorphic_F_constraint_jacobian_rank": 5,
+  "complexified_U1_gauge_orbit_dimension": 1,
+  "residual_local_complex_singlet_moduli": 0,
+  "minimal_additional_constraints_within_this_singlet_field_content": 4,
+  "physical_matter_10_exotic_masses_abs_units": [
+    2,
+    "sqrt(7)",
+    "sqrt(7)"
+  ],
+  "physical_unresolved": "Two exotic masses remain degenerate in the toy point. Extra gauge/Higgs directions not proven massive; global minima, charged Higgs spectra, anomaly freedom of discrete flavor, E6 gauge coupling, proton decay, observed Yukawas and vacuum energy not solved.",
+  "boundary": "A LOCAL isolated branch of the E6-singlet-only Higgs subset after complex gauge quotient. Not an isolated vacuum of the entire theory; coupling coefficients and family number are chosen, not derived."
+}
