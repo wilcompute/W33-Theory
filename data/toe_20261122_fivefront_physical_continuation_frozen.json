@@ -6,7 +6,8 @@
     "analysis/toe_20261122_w33_two_plaquette_pair_creation.py",
     "analysis/toe_20261122_witting_multicriteria_dualframe_search.py",
     "analysis/toe_20261122_witting_coherence_cloning_capacity.py",
-    "analysis/toe_20261122_witting_3design_collision_moments.py"
+    "analysis/toe_20261122_witting_3design_collision_moments.py",
+    "analysis/toe_20261122_actual_witting_4to9_dephasing.py"
   ],
   "experimental_and_theoretical_context": {
     "two_dimensional_Z2_experiment": "https://arxiv.org/abs/2611.14484",
@@ -192,5 +193,20 @@
     },
     "prior_art": "Witting/Penrose 40-point projective 3-design pre-existing, 2025 literature cites earlier Hoggar work. New finite test is direct purity-moment extraction and MUB negative control."
   },
-  "scientific_scope": "Finite-dimensional mathematical and toy-engineering results. None validates a theory of everything, physical photons, fundamental field dynamics, self-testing, or device-independent quantum nonlocality."
+  "scientific_scope": "Finite-dimensional mathematical and toy-engineering results. None validates a theory of everything, physical photons, fundamental field dynamics, self-testing, or device-independent quantum nonlocality.",
+  "front4b_actual_routed_witting_dephasing": {
+    "status": "PASS_INDEPENDENT_SANDBOX",
+    "source": "analysis/toe_20261122_actual_witting_4to9_dephasing.py",
+    "routed_Witting_Kraus_shape": [
+      5,
+      9,
+      4
+    ],
+    "input": "maximally mixed ququart I4/4",
+    "coherent_information_bits_at_no_rail_dephasing": 1.0867084898225192,
+    "coherent_information_witness_crosses_zero_at_output_rail_dephasing": 0.22982142483380646,
+    "min_normalized_Choi_partial_transpose_eig_at_no_noise": -0.1542421671057252,
+    "fully_dephased_output_is_entanglement_breaking": true,
+    "caution": "Positive coherent information for this input implies positive channel capacity. A negative coherent-information value above this crossing does not establish zero capacity. Distinct from front4 identity-to-reprepare proxy."
+  }
 }
