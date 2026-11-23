@@ -1,0 +1,184 @@
+{
+ "B_prime": {
+  "rows": [
+   {
+    "R_um": 0.00877,
+    "window_MeV": [
+     5.96,
+     16.901414801079454
+    ],
+    "overlap": true,
+    "ACP_Br_needed": {
+     "m_Phi=11": [
+      4.807289860421078e-08,
+      1.3632550335570465e-07
+     ],
+     "m_Phi=100": [
+      4.3702635094737076e-07,
+      1.2393227577791333e-06
+     ]
+    }
+   },
+   {
+    "R_um": 0.02631,
+    "window_MeV": [
+     5.96,
+     11.718786504805129
+    ],
+    "overlap": true,
+    "ACP_Br_needed": {
+     "m_Phi=11": [
+      6.933311735535461e-08,
+      1.3632550335570465e-07
+     ],
+     "m_Phi=100": [
+      6.303010668668601e-07,
+      1.2393227577791333e-06
+     ]
+    }
+   },
+   {
+    "R_um": 0.0877,
+    "window_MeV": [
+     5.96,
+     7.844941821294815
+    ],
+    "overlap": true,
+    "ACP_Br_needed": {
+     "m_Phi=11": [
+      1.0356992040329701e-07,
+      1.3632550335570465e-07
+     ],
+     "m_Phi=100": [
+      9.415447309390638e-07,
+      1.2393227577791333e-06
+     ]
+    }
+   },
+   {
+    "R_um": 0.2,
+    "window_MeV": [
+     5.96,
+     5.96
+    ],
+    "overlap": false,
+    "ACP_Br_needed": {
+     "m_Phi=11": [
+      1.3632550335570465e-07,
+      1.3632550335570465e-07
+     ],
+     "m_Phi=100": [
+      1.2393227577791333e-06,
+      1.2393227577791333e-06
+     ]
+    }
+   }
+  ],
+  "literature": {
+   "2211.10553": "Br(B0 -> psi + baryon) >~ 1e-5 (neutral), >~ 1e-6 (charged), >~ 1e-7 (CPV all dark); max exclusive Br(B_d -> psi Lambda) 1.2e-5 / 3.2e-5",
+   "2509.18246 (Dark_CP)": "Y_B/Y_B^obs = (Br/1.3e-8)|A_CP|(T_R/60 MeV)(2 m_M/m_Phi); T_R 5-60 MeV; Belle II reach ~1e-7",
+   "Belle PRD 105 L051101 / BaBar": "B_d -> Lambda psi 1e-5 - 1e-4 over m_psi; disfavours some channels of the original neutral mechanism"
+  },
+  "correction": "Pass 12708 quoted BR >~ 1e-4 (from the 2101.02706 summary); the requirement is 1e-8 (Dark_CP) - 1e-5 (minimal neutral)."
+ },
+ "w33_curvature": {
+  "triangle_in_tet": 1,
+  "edge_in_tet": 1,
+  "link": "4 disjoint triangles",
+  "banchoff": -2.0,
+  "chi": -80,
+  "edge_deficit": 5.0522258898388115,
+  "vertex_solid_deficit": 10.36122822062905,
+  "note": "uniformly negative combinatorial curvature (-2 per point), like a tree of 40 tetrahedra with 81 independent loops; Regge calculus needs shared faces, which this complex lacks: a 4D Regge model would need a different gluing (e.g. along the 160 triangles)"
+ },
+ "warped": {
+  "status": "Lee-Randall-Riojas 2609.36234: universal q^5 near-threshold rate (RS-like and flat), rules out existing Dark Dimension DM models; Langhoff 2610.01825: d-wave for any static warping, cascade estimate for weak warping; reproduced kinematically in 12708",
+  "open": "strongly warped spectra change the freeze-in relic (eq. 28 assumes m_n = n m_KK): the R <~ 0.2 um bound is flat-spectrum only"
+ },
+ "stability": {
+  "Mt_crit": {
+   "0.1171": 170.6305118069552,
+   "0.118": 170.98231252172886,
+   "0.1183": 171.09953776835815,
+   "0.1189": 171.33389768343537
+  },
+  "dMc_dalpha_s": 390.76993137786394,
+  "forecast": {
+   "today exp (PDG)": {
+    "Mt": 172.57,
+    "sigma_eff": 0.455837605741276,
+    "z_to_stability": -3.4830111826541006,
+    "P_stable": 0.0002479038268282344
+   },
+   "today exp + scheme": {
+    "Mt": 172.57,
+    "sigma_eff": 0.6766002681110458,
+    "z_to_stability": -2.346566433832035,
+    "P_stable": 0.009473644067700933
+   },
+   "today ATLAS+CMS + scheme": {
+    "Mt": 172.52,
+    "sigma_eff": 0.6946854848116081,
+    "z_to_stability": -2.213501666424135,
+    "P_stable": 0.01343153923797838
+   },
+   "FCC-ee (central PDG)": {
+    "Mt": 172.57,
+    "sigma_eff": 0.08779547579894093,
+    "z_to_stability": -18.083932729142834,
+    "P_stable": 2.132730586558311e-73
+   }
+  },
+  "note": "2-loop running + Buttazzo matching with the repo's 3-loop offset; Buttazzo et al. find M_t^c ~ 171.0-171.4 at 2-3 loops"
+ },
+ "evidence": {
+  "rows": {
+   "exp only (12698: 0.43) | width 15": {
+    "boundary": 13.554871515220375,
+    "boundary_trials": 1.694358939402547,
+    "A": 2.613733265134034,
+    "A_trials": 0.32671665814175427,
+    "B_prime": 0.0436236317167723
+   },
+   "exp only (12698: 0.43) | width 5": {
+    "boundary": 4.518290505073458,
+    "boundary_trials": 0.5647863131341823,
+    "A": 0.8712444217113446,
+    "A_trials": 0.10890555271391808,
+    "B_prime": 0.014541210572257433
+   },
+   "exp only (12698: 0.43) | width 2": {
+    "boundary": 1.8073162020293834,
+    "boundary_trials": 0.22591452525367292,
+    "A": 0.34849776868453786,
+    "A_trials": 0.04356222108556723,
+    "B_prime": 0.005816484228902974
+   },
+   "exp + scheme | width 15": {
+    "boundary": 8.971604539326382,
+    "boundary_trials": 1.1214505674157977,
+    "A": 1.8244783167819782,
+    "A_trials": 0.22805978959774728,
+    "B_prime": 0.0436236317167723
+   },
+   "exp + scheme | width 5": {
+    "boundary": 2.9905348464421273,
+    "boundary_trials": 0.3738168558052659,
+    "A": 0.608159438927326,
+    "A_trials": 0.07601992986591576,
+    "B_prime": 0.014541210572257433
+   },
+   "exp + scheme | width 2": {
+    "boundary": 1.1962139385768509,
+    "boundary_trials": 0.14952674232210636,
+    "A": 0.24326377557093043,
+    "A_trials": 0.030407971946366304,
+    "B_prime": 0.005816484228902974
+   }
+  },
+  "dy_dmt": 0.04271592042610295,
+  "lambda_prior_fraction": 0.33950760057448515,
+  "T_RH_overlap_fraction": 0.20053551104021822,
+  "note": "B' (dark dimension + top partner + mesogenesis) replaces B: DM generic-like (no T_i^3 tuning), penalised by the surviving lambda range and the reheating overlap with Dark_CP's 5-60 MeV; reproduces Pass 12698 at sigma = 0.43"
+ }
+}

@@ -97,3 +97,13 @@ Corrections in this block:
 | singlet T: ATLAS kappa = sqrt2 sin(theta_L) by width consistency; B (kappa <= 0.25) below single-T reach above 1.5 TeV | numerical |
 | B' (B-mesogenesis) needs BR >~ 1e-4; no dedicated search exists | literature |
 | W33 clique complex (40 tetrahedra over GF(3)): Betti (1, 81, 0, 0) over Q, GF(3), GF(2), homotopy-equivalent to the Levi graph (81 owned by BT545-551) | exact, cited |
+
+## Addendum: Pass 12709 (Claude track)
+
+| result | label |
+|---|---|
+| Correction: B-mesogenesis needs BR >~ 1e-5 (neutral) down to ~1e-8 (Dark_CP), not 1e-4 (12708) | literature |
+| B' reheating window (6-17 MeV) lies inside Dark_CP's 5-60 MeV; needs A_CP Br >~ 5e-8 - 1.4e-7 (m_Phi = 11 GeV): Belle II testable | numerical |
+| W33 tetrahedral complex: tetrahedra share only vertices (not a pseudomanifold); Banchoff curvature -2 at every point, sum chi = -80 | exact |
+| Absolute stability needs M_t <= 170.98 GeV (alpha_s 0.1180); P(stable) 0.9-1.3% today with scheme error; FCC-ee decides at 18 sigma | numerical |
+| Evidence update of 12698 (scheme error, B -> B'): boundary 1.2-9.0 (0.15-1.1 after trials), A 0.24-1.8 (0.03-0.23), B' 0.006-0.044: no preference over the SM | numerical |
