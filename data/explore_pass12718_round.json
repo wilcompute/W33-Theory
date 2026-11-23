@@ -1,0 +1,215 @@
+{
+ "transformer": {
+  "task": "associative recall, 4 key-value pairs, 8 keys / 8 values, chance 0.125",
+  "rows": {
+   "fp32": {
+    "acc": 1.0,
+    "accs": [
+     1.0,
+     1.0
+    ],
+    "zero_frac": 0.0
+   },
+   "binary": {
+    "acc": 1.0,
+    "accs": [
+     1.0,
+     1.0
+    ],
+    "zero_frac": 0.0
+   },
+   "ternary": {
+    "acc": 1.0,
+    "accs": [
+     1.0,
+     1.0
+    ],
+    "zero_frac": 0.43080647786458337
+   },
+   "2bit": {
+    "acc": 1.0,
+    "accs": [
+     1.0,
+     1.0
+    ],
+    "zero_frac": 0.0
+   }
+  }
+ },
+ "squark_threshold": [
+  {
+   "X": 0.0,
+   "y": 0.47200671755511314,
+   "dlam": 0.0
+  },
+  {
+   "X": 2.0,
+   "y": 0.4497279876257064,
+   "dlam": 0.0025904781545481653
+  },
+  {
+   "X": 6.0,
+   "y": 0.43493641764286983,
+   "dlam": 0.004079020325480052
+  }
+ ],
+ "z10": {
+  "n_quality": 640,
+  "n_decay": 120,
+  "n_good": 24,
+  "examples": [
+   {
+    "q16": 1,
+    "q10": 8,
+    "s": 0,
+    "qh": 1,
+    "qhb": 7,
+    "harm": 11,
+    "decay_dim": 11,
+    "m_mix": 264.8884280533256,
+    "decay_ok": true,
+    "anomaly_free": true,
+    "forbids_16_4": true
+   },
+   {
+    "q16": 1,
+    "q10": 8,
+    "s": 5,
+    "qh": 1,
+    "qhb": 7,
+    "harm": 12,
+    "decay_dim": 12,
+    "m_mix": 4.460133696175093,
+    "decay_ok": true,
+    "anomaly_free": true,
+    "forbids_16_4": true
+   },
+   {
+    "q16": 1,
+    "q10": 8,
+    "s": 5,
+    "qh": 6,
+    "qhb": 2,
+    "harm": 12,
+    "decay_dim": 11,
+    "m_mix": 264.8884280533256,
+    "decay_ok": true,
+    "anomaly_free": true,
+    "forbids_16_4": true
+   },
+   {
+    "q16": 2,
+    "q10": 6,
+    "s": 0,
+    "qh": 2,
+    "qhb": 4,
+    "harm": 11,
+    "decay_dim": 11,
+    "m_mix": 264.8884280533256,
+    "decay_ok": true,
+    "anomaly_free": true,
+    "forbids_16_4": true
+   },
+   {
+    "q16": 2,
+    "q10": 6,
+    "s": 5,
+    "qh": 2,
+    "qhb": 4,
+    "harm": 12,
+    "decay_dim": 12,
+    "m_mix": 4.460133696175093,
+    "decay_ok": true,
+    "anomaly_free": true,
+    "forbids_16_4": true
+   },
+   {
+    "q16": 2,
+    "q10": 6,
+    "s": 5,
+    "qh": 7,
+    "qhb": 9,
+    "harm": 12,
+    "decay_dim": 11,
+    "m_mix": 264.8884280533256,
+    "decay_ok": true,
+    "anomaly_free": true,
+    "forbids_16_4": true
+   },
+   {
+    "q16": 3,
+    "q10": 4,
+    "s": 0,
+    "qh": 3,
+    "qhb": 1,
+    "harm": 11,
+    "decay_dim": 11,
+    "m_mix": 264.8884280533256,
+    "decay_ok": true,
+    "anomaly_free": true,
+    "forbids_16_4": true
+   },
+   {
+    "q16": 3,
+    "q10": 4,
+    "s": 5,
+    "qh": 3,
+    "qhb": 1,
+    "harm": 12,
+    "decay_dim": 12,
+    "m_mix": 4.460133696175093,
+    "decay_ok": true,
+    "anomaly_free": true,
+    "forbids_16_4": true
+   },
+   {
+    "q16": 3,
+    "q10": 4,
+    "s": 5,
+    "qh": 8,
+    "qhb": 6,
+    "harm": 12,
+    "decay_dim": 11,
+    "m_mix": 264.8884280533256,
+    "decay_ok": true,
+    "anomaly_free": true,
+    "forbids_16_4": true
+   },
+   {
+    "q16": 4,
+    "q10": 2,
+    "s": 0,
+    "qh": 4,
+    "qhb": 8,
+    "harm": 11,
+    "decay_dim": 11,
+    "m_mix": 264.8884280533256,
+    "decay_ok": true,
+    "anomaly_free": true,
+    "forbids_16_4": true
+   }
+  ]
+ },
+ "flash_endurance": {
+  "2": {
+   "total_bits": 145762.7118644068,
+   "density": 0.14576271186440679,
+   "cycles": 1000000.0
+  },
+  "3": {
+   "total_bits": 100000.0,
+   "density": 0.1,
+   "cycles": 1000000.0
+  },
+  "4": {
+   "total_bits": 41391.79383742747,
+   "density": 0.19661016949152543,
+   "cycles": 210527.22727657072
+  },
+  "8": {
+   "total_bits": 33142.97537960692,
+   "density": 0.1983050847457627,
+   "cycles": 167131.2433672486
+  }
+ }
+}
