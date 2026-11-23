@@ -1,0 +1,78 @@
+{
+ "seesaw_triplets": {
+  "rows": [
+   {
+    "vHbar": 1e+16,
+    "MR1_max": 2915.4759474226503,
+    "m_u_GUT": 0.0004,
+    "m1_min_eV": 0.05487954724560283,
+    "sum_NO_eV": 0.18473778466985724,
+    "excluded_064": true,
+    "excluded_070": true
+   },
+   {
+    "vHbar": 1e+16,
+    "MR1_max": 2915.4759474226503,
+    "m_u_GUT": 0.0007,
+    "m1_min_eV": 0.16806861343965865,
+    "sum_NO_eV": 0.5117341361148509,
+    "excluded_064": true,
+    "excluded_070": true
+   },
+   {
+    "vHbar": 4e+16,
+    "MR1_max": 11661.903789690601,
+    "m_u_GUT": 0.0004,
+    "m1_min_eV": 0.013719886811400708,
+    "sum_NO_eV": 0.08185810805732266,
+    "excluded_064": true,
+    "excluded_070": true
+   },
+   {
+    "vHbar": 4e+16,
+    "MR1_max": 11661.903789690601,
+    "m_u_GUT": 0.0007,
+    "m1_min_eV": 0.04201715335991466,
+    "sum_NO_eV": 0.15029271805083122,
+    "excluded_064": true,
+    "excluded_070": true
+   }
+  ],
+  "g_max": 4.123105625617661e-13,
+  "note": "minimal SO(10) relation m_D = m_u and a flavour-diagonal M_R; 126-type Dirac contributions or a small (M_R)_11 with large mixing can evade the floor"
+ },
+ "vlb": {
+  "limit_range": [
+   1450,
+   1520
+  ],
+  "two_B_shift": 127.53908122302994,
+  "effective": [
+   1577.5390812230298,
+   1647.5390812230298
+  ],
+  "verdict": "the light d-type triplet at 1.74 TeV is allowed (effective B limit ~1.58-1.65 TeV); HL-LHC reaches it"
+ },
+ "y_with_5": {
+  "Mt=172.57|5+5bar=False": 0.47200671755511314,
+  "Mt=172.57|5+5bar=True": 0.5069758056992153,
+  "Mt=172.8|5+5bar=False": 0.4601648797770339,
+  "Mt=172.8|5+5bar=True": 0.4974182950693225
+ },
+ "thawing": {
+  "desi": {
+   "w0": -0.857,
+   "s0": 0.057,
+   "wa": -0.55,
+   "sa": 0.235,
+   "rho_assumed": -0.9
+  },
+  "best": {
+   "w0": -0.9458720918614059,
+   "wa": -0.08552209485897874,
+   "chi2": 4.16058324789763,
+   "chi2_LCDM": 6.32978571237748
+  },
+  "note": "an uncoupled thawing field evades lunar ranging (no G variation); it captures part of the DESI preference"
+ }
+}

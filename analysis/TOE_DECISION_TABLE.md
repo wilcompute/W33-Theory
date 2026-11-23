@@ -1,6 +1,6 @@
-# Decision table: which measurement decides which completion (Claude track, as of Pass 12721)
+# Decision table: which measurement decides which completion (Claude track, as of Pass 12722)
 
-## Snapshot 2026-11-23 (through Pass 12721)
+## Snapshot 2026-11-23 (through Pass 12722)
 
 | item | status |
 |---|---|
@@ -8,6 +8,8 @@
 | A | unchanged; evidence 0.03–0.23 after trials |
 | B′ | y′ ≈ 0.496 (flat R = 0.009–0.2 μm); dimension must be static today (a DESI-rate radion violates lunar ranging by 38×); Casimir quintessence needs 2×10⁻⁸ tuning at R ≤ 0.2 μm; decisive test is a Belle II inclusive B → baryon + missing-energy search |
 | Hybrid | Q + U pseudo-Goldstones (gauged SO(10), 45 + 54 vacuum, anomaly-free Z₁₀); the uncoupled accidental symmetry also leaves a light vectorlike 5 + 5̄ (Higgs doublets + d^c triplets), which **unifies (δ = +0.25)**; open problem: TeV triplets need \|y_qq·y_ql\| ≲ 2×10⁻²⁵ (a symmetry forbidding one coupling); y′ ≈ 0.46 (gauge mediation), falling with M_VL; no proton decay at Hyper-K from dimension 6 |
+| Hybrid update (12722) | the light-5 + 5̄ variant is disfavoured: seesaw-induced triplet couplings + proton stability force Σm_ν ≥ 0.08 eV > DESI's 0.064 (minimal flavour), and its y′ (≈0.50) coincides with B′'s; the Q + U-only variant (y′ ≈ 0.46) remains, with doublet–triplet splitting open |
+| B′ dark energy (12722) | static radius + uncoupled thawing quintessence: Δχ² = 2.2 better than ΛCDM (DESI full CPL: 6.3) |
 | Hybrid vs B′ | FCC-hh with a 3 TeV partner: Bayes factor ≈ 45 either way |
 | Ternary | wins: PAM3 links, memory-bound and weight-stationary NN inference, attention (full precision with 45% zeros, with curriculum training), carry-free arithmetic, flash at ~3×10⁴ cycles; loses: on-chip logic energy, analog crossbars, ECC per SNR, qutrit hardware (needs gate error within 1.26× of qubits; transmons 4.5–9×, ions 20–70×) |
 
