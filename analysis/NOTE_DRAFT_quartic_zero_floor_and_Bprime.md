@@ -53,7 +53,7 @@
 ## 3. Caveats
 - **Inputs:** the KK-graviton exclusion rests on 2026 preprints. Belle II reach uses an assumed tag efficiency and background.
 - **Approximations:** the dark-energy fits use a Gaussian CPL likelihood with an assumed w₀–w_a correlation of −0.9.
-- **Scope:** the y′ floor assumes exactly one vectorlike family with a single Higgs Yukawa and λ = 0 as the boundary condition.
+- **Scope:** the y′ floor assumes λ = 0 as the boundary condition. With N degenerate vectorlike families the floor scales as about 0.40·N^(−1/4) (0.34 for N = 2, 0.30 for N = 3). With Yukawas to both chiralities it applies to (y′⁴ + y″⁴)^{1/4}. The general falsifier is (Σ y⁴)^{1/4} < 0.35, summed over families and chiralities.
 
 ## Related work
 - Redi–Strumia (1208.6013), axion–Higgs unification.

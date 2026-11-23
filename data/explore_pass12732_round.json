@@ -1,0 +1,197 @@
+{
+ "freeze_in": {
+  "rows": [
+   {
+    "M": 1000000000.0,
+    "x": 24.26755729266966,
+    "T_RH": 41207278.83486087
+   },
+   {
+    "M": 8450000000.0,
+    "x": 24.26755729266966,
+    "T_RH": 348201506.15457433
+   },
+   {
+    "M": 30000000000.0,
+    "x": 24.26755729266966,
+    "T_RH": 1236218365.045826
+   }
+  ],
+  "note": "T_RH ~ M/20-30, below M_SS; the light Q + U and SM are thermal; consistent with the orbifold scale (M_c ~ 1e16)"
+ },
+ "proton_orbifold": {
+  "rows": [
+   {
+    "Lambda_R": 3,
+    "M_c": 2.0099583920263868e+16,
+    "tau_yr": 1.822864745041997e+35,
+    "range": [
+     1.8228647450419972e+34,
+     1.822864745041997e+36
+    ],
+    "vs_SK": 7.595269771008321
+   },
+   {
+    "Lambda_R": 5,
+    "M_c": 1.449577382803494e+16,
+    "tau_yr": 4.931417746618365e+34,
+    "range": [
+     4.931417746618365e+33,
+     4.9314177466183645e+35
+    ],
+    "vs_SK": 2.054757394424319
+   },
+   {
+    "Lambda_R": 7,
+    "M_c": 1.16878359564952e+16,
+    "tau_yr": 2.08421542908187e+34,
+    "range": [
+     2.0842154290818703e+33,
+     2.0842154290818703e+35
+    ],
+    "vs_SK": 0.8684230954507793
+   },
+   {
+    "Lambda_R": 10,
+    "M_c": 9302571884285820.0,
+    "tau_yr": 8.364082643292831e+33,
+    "range": [
+     8.36408264329283e+32,
+     8.364082643292831e+34
+    ],
+    "vs_SK": 0.34850344347053464
+   },
+   {
+    "Lambda_R": 14,
+    "M_c": 7500264600016274.0,
+    "tau_yr": 3.534374106576746e+33,
+    "range": [
+     3.534374106576746e+32,
+     3.534374106576746e+34
+    ],
+    "vs_SK": 0.1472655877740311
+   },
+   {
+    "Lambda_R": 20,
+    "M_c": 5969288964470050.0,
+    "tau_yr": 1.4180664706951666e+33,
+    "range": [
+     1.4180664706951666e+32,
+     1.4180664706951666e+34
+    ],
+    "vs_SK": 0.05908610294563195
+   },
+   {
+    "Lambda_R": 40,
+    "M_c": 3829947980422373.0,
+    "tau_yr": 2.4031322838723364e+32,
+    "range": [
+     2.4031322838723363e+31,
+     2.4031322838723364e+33
+    ],
+    "vs_SK": 0.010013051182801403
+   }
+  ],
+  "note": "matter on the GUT-symmetric brane: tau ~ 1e33-1e34 yr at Lambda R ~ 10-40, at or below Super-K -> matter must sit on the SM brane (no tree-level X,Y coupling) or the window narrows to Lambda R ~ 10; corrects the earlier 'no proton decay' prediction, which assumed M_X = M_12"
+ },
+ "floor_referee": {
+  "families": [
+   {
+    "N": 1,
+    "floor": 0.4
+   },
+   {
+    "N": 2,
+    "floor": 0.33635856610148585
+   },
+   {
+    "N": 3,
+    "floor": 0.303934274260637
+   }
+  ],
+  "two_chiralities": "y'^4 + y''^4 enters: the floor applies to (y'^4 + y''^4)^(1/4)",
+  "restatement": "the falsifier is: (sum over families and chiralities of y^4)^(1/4) < 0.35; with one family and one Yukawa this is y' < 0.35"
+ },
+ "saxion": {
+  "rows": [
+   {
+    "m_s": 10000.0,
+    "T_RH": 100000000.0,
+    "rho_over_s": 68305.7229233163,
+    "T_D": 6275.493389614875,
+    "dilution": 14.51269112669364,
+    "dominates": true
+   },
+   {
+    "m_s": 10000.0,
+    "T_RH": 10000000000.0,
+    "rho_over_s": 6830572.2923316285,
+    "T_D": 6275.493389614875,
+    "dilution": 1451.2691126693637,
+    "dominates": true
+   },
+   {
+    "m_s": 1000000.0,
+    "T_RH": 100000000.0,
+    "rho_over_s": 68305.7229233163,
+    "T_D": 6275493.3896148745,
+    "dilution": 0.014512691126693641,
+    "dominates": false
+   },
+   {
+    "m_s": 1000000.0,
+    "T_RH": 10000000000.0,
+    "rho_over_s": 6830572.2923316285,
+    "T_D": 6275493.3896148745,
+    "dilution": 1.4512691126693638,
+    "dominates": true
+   },
+   {
+    "m_s": 100000000.0,
+    "T_RH": 100000000.0,
+    "rho_over_s": 68305.7229233163,
+    "T_D": 6275493389.614875,
+    "dilution": 1.4512691126693641e-05,
+    "dominates": false
+   },
+   {
+    "m_s": 100000000.0,
+    "T_RH": 10000000000.0,
+    "rho_over_s": 6830572.2923316285,
+    "T_D": 6275493389.614875,
+    "dilution": 0.0014512691126693637,
+    "dominates": false
+   }
+  ],
+  "note": "light saxions (<~1e4-1e6 GeV) with high T_RH dominate and dilute the axion (shifting theta_i away from pi); heavier saxions are harmless"
+ },
+ "evidence": {
+  "rows": {
+   "A tuned (theta_i and hilltop)": [
+    0.026,
+    0.009,
+    0.003
+   ],
+   "A SUSY-PQ escape (no inflaton tuning)": [
+    0.44,
+    0.15,
+    0.06
+   ],
+   "B'": [
+    0.044,
+    0.015,
+    0.006
+   ],
+   "hybrid (PGB Q+U, orbifold)": [
+    0.375,
+    0.125,
+    0.05
+   ]
+  },
+  "notes": {
+   "A": "trials factor 8 applies to A's coincidence (divide by 8)",
+   "hybrid": "x0.5 for proton-decay tension at Lambda R ~ 10-40",
+   "ranking": "hybrid > A(escape) > B' > A(tuned); none above the SM"
+  }
+ }
+}

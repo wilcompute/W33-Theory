@@ -1,6 +1,6 @@
-# Decision table: which measurement decides which completion (Claude track, as of Pass 12731)
+# Decision table: which measurement decides which completion (Claude track, as of Pass 12732)
 
-## Snapshot 2026-11-23 (through Pass 12731)
+## Snapshot 2026-11-23 (through Pass 12732)
 
 | item | status |
 |---|---|
@@ -20,6 +20,9 @@
 | A evidence (12729) | tuned-inflation route 0.003–0.026 (below B′); untuned escape with a PQ field of 0.01–0.7 M_Pl during inflation |
 | Hybrid orbifold window (12730) | literature threshold cancels the +0.26 mismatch at ΛR ≈ 6.7 (|δ| < 0.1 for 3–14), overlapping protection at ΛR ≥ 9.8: consistent at ΛR ≈ 10–14 (one loop); at two loops |δ| ≤ 0.1 for ΛR ≳ 10 with M₁₂ ≈ 10¹⁷ (Pass 12731); DM: gaugino by freeze-in or axion (a higgsino needs μ ≳ 8e10, Pass 12731) |
 | B′ and N_eff (12730) | at most ΔN_eff ≈ −0.06 (T_RH > 5.96 MeV ↔ N_eff > 2.98): does not explain the hint |
+| Hybrid proton decay (12732) | orbifold KK X,Y at M_c ~ 1e16 give τ ~ 1e33–1e34 yr with matter on the GUT brane (below Super-K): matter must sit on the SM brane; corrects the earlier 'no signal' |
+| Evidence (12732, heuristic) | hybrid 0.05–0.38 > A-escape 0.008–0.055 (after trials) ≈ B′ 0.006–0.044 > A-tuned; none above the SM |
+| Universal falsifier (12732) | (Σ y⁴)^{1/4} < 0.35 over families and chiralities (floor ≈ 0.40·N^(−1/4)) |
 | Hybrid vs B′ | FCC-hh with a 3 TeV partner: Bayes factor ≈ 45 either way |
 | Ternary | wins: PAM3 links, memory-bound and weight-stationary NN inference, attention (full precision with 45% zeros, with curriculum training), carry-free arithmetic, flash at ~3×10⁴ cycles; loses: on-chip logic energy, analog crossbars, ECC per SNR, qutrit hardware (needs gate error within 1.26× of qubits; transmons 4.5–9×, ions 20–70×) |
 
