@@ -1,0 +1,149 @@
+{
+ "geometric": {
+  "rows": [
+   {
+    "M_star": 1e+17,
+    "ML_min": 30.790708069406417,
+    "KK_max": 3247733042533042.5
+   },
+   {
+    "M_star": 2.4e+18,
+    "ML_min": 30.790708069406417,
+    "KK_max": 7.794559302079301e+16
+   }
+  ],
+  "incompatible_with_dark_dimension": true
+ },
+ "v45_54": {
+  "params": {
+   "m": 1.0,
+   "mu": -1.3,
+   "l": 1.0,
+   "k": 0.5
+  },
+  "s": -1.0,
+  "a2": 4.625,
+  "zero_modes": 30,
+  "spectrum": {
+   "1.9": 9,
+   "2.225": 1,
+   "2.332": 8,
+   "3.325": 1,
+   "4.35": 24,
+   "5.0": 6,
+   "5.6": 12,
+   "7.932": 8
+  },
+  "note": "all massive states have masses O(m, mu); with renormalisable couplings they sit at the 45/54 mass scale, e.g. ~1e17, so the octet + triplet no longer spoil unification (Pass 12716)"
+ },
+ "proton": {
+  "rows": [
+   {
+    "case": "reference",
+    "M12": 4.058704154281649e+16,
+    "alpha_inv": 23.162738037036423,
+    "tau_years": 3.727085368570401e+36,
+    "range": [
+     3.727085368570401e+35,
+     3.727085368570401e+37
+    ]
+   },
+   {
+    "case": "cutoff 1e17, lambda 4",
+    "M12": 4.058704154281649e+16,
+    "alpha_inv": 23.162738037036423,
+    "tau_years": 3.727085368570401e+36,
+    "range": [
+     3.727085368570401e+35,
+     3.727085368570401e+37
+    ]
+   }
+  ],
+  "dim5": "higgsino-mediated dimension-5 decay suppressed by sfermion masses ~M_SS = 1e10 GeV: negligible"
+ },
+ "flash": {
+  "rows": [
+   {
+    "snr": 4.0,
+    "q2_bits": 0.8858759277305722,
+    "q2_per_read": 0.8858759277305722,
+    "q3_bits": 0.8402339005044518,
+    "q3_per_read": 0.4201169502522259,
+    "q4_bits": 0.766539807884954,
+    "q4_per_read": 0.2555132692949847,
+    "q8_bits": 0.6584447230812699,
+    "q8_per_read": 0.09406353186875284
+   },
+   {
+    "snr": 8.0,
+    "q2_bits": 0.9995356205078494,
+    "q2_per_read": 0.9995356205078494,
+    "q3_bits": 1.43282208118071,
+    "q3_per_read": 0.716411040590355,
+    "q4_bits": 1.4599985132372173,
+    "q4_per_read": 0.48666617107907245,
+    "q8_bits": 1.3480788616664736,
+    "q8_per_read": 0.19258269452378193
+   },
+   {
+    "snr": 16.0,
+    "q2_bits": 0.9999997156735296,
+    "q2_per_read": 0.9999997156735296,
+    "q3_bits": 1.5843424168446716,
+    "q3_per_read": 0.7921712084223358,
+    "q4_bits": 1.962040613741098,
+    "q4_per_read": 0.6540135379136993,
+    "q8_bits": 2.178721486931663,
+    "q8_per_read": 0.3112459267045233
+   },
+   {
+    "snr": 32.0,
+    "q2_bits": 0.9999997170690527,
+    "q2_per_read": 0.9999997170690527,
+    "q3_bits": 1.5849622017622857,
+    "q3_per_read": 0.7924811008811429,
+    "q4_bits": 1.999995943155752,
+    "q4_per_read": 0.6666653143852507,
+    "q8_bits": 2.890815926864759,
+    "q8_per_read": 0.4129737038378227
+   },
+   {
+    "snr": 100.0,
+    "q2_bits": 0.99999972294405,
+    "q2_per_read": 0.99999972294405,
+    "q3_bits": 1.5849622079722958,
+    "q3_per_read": 0.7924811039861479,
+    "q4_bits": 1.99999972294405,
+    "q4_per_read": 0.6666665743146833,
+    "q8_bits": 2.9999997918214776,
+    "q8_per_read": 0.42857139883163964
+   }
+  ],
+  "note": "with near-capacity codes more levels never lose density; per sensing read, binary wins; ternary is the density step that costs the fewest extra reads (TLC-like trade-offs)"
+ },
+ "attention": {
+  "task": "pointer: class of the token after a marker (T=8, 10 classes, positional one-hots), single head H=16, Adam 60 epochs, 2 seeds",
+  "rows": {
+   "fp32": {
+    "acc": 1.0,
+    "acc_sd": 0.0,
+    "zero_frac": 0.0
+   },
+   "binary": {
+    "acc": 0.89375,
+    "acc_sd": 0.07275000000000004,
+    "zero_frac": 0.0
+   },
+   "ternary": {
+    "acc": 1.0,
+    "acc_sd": 0.0,
+    "zero_frac": 0.5017680921052632
+   },
+   "2bit": {
+    "acc": 1.0,
+    "acc_sd": 0.0,
+    "zero_frac": 0.0
+   }
+  }
+ }
+}
