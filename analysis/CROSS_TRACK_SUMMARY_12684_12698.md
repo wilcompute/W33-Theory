@@ -86,3 +86,14 @@ Corrections in this block:
 | B vs hybrid gap 0.018-0.035 (was 0.058): FCC separation 3-15 sigma | numerical |
 | MeV reheating (6-17 MeV) in the surviving dark dimension fits B-mesogenesis (DM + baryons): Completion B' | literature + estimate |
 | Shared input card `analysis/toe_inputs_card.json`; scripts 12684-12706 hard-code M_VL = 1650 and 1740 | audit |
+
+## Addendum: Pass 12708 (Claude track)
+
+| result | label |
+|---|---|
+| d-wave suppression of near-threshold KK-graviton decays reproduced: spin-2 double-copy amplitude ~ p^2.003, Gamma ~ p^5 (s-wave control p^1) | numerical |
+| MS-bar top mass 162.5 +2.1/-1.5 -> pole 172.3 (four-loop); mu_0 = 1.8e11, from 4.8e8 to stable (no zero) at 1 sigma | numerical |
+| M_VL threshold confirmed by numeric CW fit (ratio 1.00000) and the Passarino-Veltman route (constant 1/3); hybrid unification unaffected | exact / numerical |
+| singlet T: ATLAS kappa = sqrt2 sin(theta_L) by width consistency; B (kappa <= 0.25) below single-T reach above 1.5 TeV | numerical |
+| B' (B-mesogenesis) needs BR >~ 1e-4; no dedicated search exists | literature |
+| W33 clique complex (40 tetrahedra over GF(3)): Betti (1, 81, 0, 0) over Q, GF(3), GF(2), homotopy-equivalent to the Levi graph (81 owned by BT545-551) | exact, cited |

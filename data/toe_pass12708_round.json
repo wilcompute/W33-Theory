@@ -1,0 +1,135 @@
+{
+ "dwave": {
+  "rows": [
+   {
+    "Q": 1e-07,
+    "p": 0.00021908902945174438,
+    "YM": 0.0012016657043532513,
+    "grav": 1.4440004650187954e-06,
+    "s_wave": 0.9539392014169459
+   },
+   {
+    "Q": 1e-06,
+    "p": 0.0006928205250869868,
+    "YM": 0.00380000610826512,
+    "grav": 1.4440046422852222e-05,
+    "s_wave": 0.9539392014169454
+   },
+   {
+    "Q": 1e-05,
+    "p": 0.0021908966201063507,
+    "YM": 0.012016848272292649,
+    "grav": 0.0001444046423993028,
+    "s_wave": 0.9539392014169454
+   },
+   {
+    "Q": 0.0001,
+    "p": 0.006928405297035179,
+    "YM": 0.038006108697168264,
+    "grav": 0.0014444642983009691,
+    "s_wave": 0.9539392014169459
+   },
+   {
+    "Q": 0.001,
+    "p": 0.02191529055362642,
+    "YM": 0.12035982862104763,
+    "grav": 0.014486488345687956,
+    "s_wave": 0.9539392014169455
+   },
+   {
+    "Q": 0.01,
+    "p": 0.06948352678203093,
+    "YM": 0.38614477679211484,
+    "grav": 0.1491077886438322,
+    "s_wave": 0.9539392014169458
+   }
+  ],
+  "slopes": {
+   "YM": 1.0017308628889037,
+   "grav": 2.0034617257778073,
+   "s_wave": 1.691148643247531e-18
+  },
+  "width_power": 5.006923451555615,
+  "note": "At threshold all momenta are parallel to the rest-frame time axis and every polarisation is spatial, so each p.e vanishes: the YM-like vertex is O(p), its square O(p^2). Independent of 2610.01825's derivation; assumes its vertex form."
+ },
+ "msbar_route": {
+  "rows": {
+   "central": {
+    "mbar": 162.5,
+    "alpha_s6": 0.10855919520504966,
+    "pole": 172.27029312912578,
+    "terms": [
+     7.48678489731625,
+     1.5981330627677286,
+     0.49376104604078314,
+     0.19161412300101247
+    ],
+    "mu0": 174763622045.97086
+   },
+   "-1.5": {
+    "mbar": 161.0,
+    "alpha_s6": 0.10869854302176492,
+    "pole": 170.69655761088262,
+    "terms": [
+     7.427197527008362,
+     1.587448565996217,
+     0.49108951148439145,
+     0.1908220063936357
+    ],
+    "mu0": Infinity
+   },
+   "+2.1": {
+    "mbar": 164.6,
+    "alpha_s6": 0.108366855112322,
+    "pole": 174.473362580322,
+    "terms": [
+     7.570101038771592,
+     1.613054763025517,
+     0.4974882810167039,
+     0.19271849750818512
+    ],
+    "mu0": 484196062.8057759
+   }
+  },
+  "four_loop_term": 0.19161412300101247,
+  "fcc": {
+   "sigma_mbar": 0.04,
+   "sigma_conv": 0.005642347555977987,
+   "note": "FCC-ee threshold scan gives a short-distance (PS/MS-bar) mass; the MS-bar input has no renormalon"
+  },
+  "verdict": "sigma_tt-based MS-bar input reproduces the pole central value (172.5) but with +2.2/-1.6 GeV: mu_0 unconstrained over 1e9-1e19 today by this route; the direct-reconstruction mass is precise but scheme-ambiguous (Pass 12707)."
+ },
+ "threshold_checks": {
+  "cw_ratio": 1.0000000008816032,
+  "Z_const": 0.33333333333333337,
+  "gauge_shift_alpha_inv": {
+   "alpha_1 (C~17/10)": 0.00029730326786077594,
+   "alpha_2 (C~3/2)": 0.0002623264128183317,
+   "alpha_3 (C~2)": 0.00034976855042444233
+  }
+ },
+ "kappa_map": {
+  "rows": {
+   "kappa = sin": {
+    "GoverM_k053_2p3TeV": 0.9727804075416926,
+    "GoverM_k025_1p5TeV": 0.09205978138763435,
+    "consistent": false
+   },
+   "kappa = sqrt2 sin": {
+    "GoverM_k053_2p3TeV": 0.48639020377084624,
+    "GoverM_k025_1p5TeV": 0.04602989069381716,
+    "consistent": true
+   }
+  },
+  "conclusion": "kappa ~ sqrt2 sin(theta_L) for the singlet (width-consistent); B's theta_t <= 0.18 -> kappa <= 0.25, Gamma/M <= 5% at 1.5 TeV: below current single-T reach above 1.5 TeV"
+ },
+ "B_prime": {
+  "required": "BR(B -> psi + baryon + X) >~ 1e-4 (Alonso-Alvarez, Elor, Escudero 2101.02706)",
+  "limits": {
+   "dedicated search": "none found (2026-11)",
+   "ALEPH recast": "BR <~ 1e-4 - 1e-2 (mode-dependent)",
+   "BaBar B- -> Lambdabar pbar nu nubar": "< 3e-5 (related mode, not the psi channel)"
+  },
+  "verdict": "B' is untested by direct searches; Belle II / LHCb dedicated searches can cover BR ~ 1e-5 - 1e-4"
+ }
+}
