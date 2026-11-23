@@ -1,0 +1,527 @@
+{
+ "gift_count": {
+  "sigma": {
+   "(3,1)+0.667": 3,
+   "(3,1)-0.667": 3,
+   "(3,2)+0.833": 6,
+   "(3,2)-0.833": 6,
+   "(3,2)+0.167": 6,
+   "(3,2)-0.167": 6
+  },
+  "H": {
+   "(1,1)+1.000": 1,
+   "(1,1)-1.000": 1,
+   "(1,1)+0.000": 1,
+   "(3,1)+0.667": 3,
+   "(3,1)-0.667": 3,
+   "(3,2)+0.167": 6,
+   "(3,2)-0.167": 6
+  },
+  "eaten": {
+   "(1,1)+0.000": 1,
+   "(1,1)+1.000": 1,
+   "(1,1)-1.000": 1,
+   "(3,1)+0.667": 3,
+   "(3,1)-0.667": 3,
+   "(3,2)+0.833": 6,
+   "(3,2)-0.833": 6,
+   "(3,2)+0.167": 6,
+   "(3,2)-0.167": 6
+  },
+  "uneaten": {
+   "(3,2)-0.167": 6,
+   "(3,1)+0.667": 3,
+   "(3,1)-0.667": 3,
+   "(3,2)+0.167": 6
+  }
+ },
+ "protection": {
+  "rows": {
+   "S1|H1|nonR": {
+    "best": 4,
+    "N": 2,
+    "charges": {
+     "s": 1,
+     "x": 0,
+     "p": 0,
+     "y": 0
+    }
+   },
+   "S1|H1|R": {
+    "best": 4,
+    "N": 2,
+    "charges": {
+     "s": 1,
+     "x": 0,
+     "p": 0,
+     "y": 0
+    }
+   },
+   "S1|H2|nonR": {
+    "best": 5,
+    "N": 2,
+    "charges": {
+     "s": 0,
+     "x": 0,
+     "p": 1,
+     "y": 0
+    }
+   },
+   "S1|H2|R": {
+    "best": 5,
+    "N": 2,
+    "charges": {
+     "s": 0,
+     "x": 0,
+     "p": 1,
+     "y": 0
+    }
+   },
+   "S1|H3|nonR": {
+    "best": 8,
+    "N": 6,
+    "charges": {
+     "s": 3,
+     "x": 0,
+     "p": 2,
+     "y": 0
+    }
+   },
+   "S1|H3|R": {
+    "best": 4,
+    "N": 2,
+    "charges": {
+     "s": 1,
+     "x": 0,
+     "p": 0,
+     "y": 0
+    }
+   },
+   "S1|H4|nonR": {
+    "best": 9,
+    "N": 4,
+    "charges": {
+     "s": 0,
+     "x": 0,
+     "p": 1,
+     "y": 0
+    }
+   },
+   "S1|H4|R": {
+    "best": 5,
+    "N": 2,
+    "charges": {
+     "s": 0,
+     "x": 0,
+     "p": 1,
+     "y": 0
+    }
+   },
+   "S1|H5|nonR": {
+    "best": 12,
+    "N": 10,
+    "charges": {
+     "s": 5,
+     "x": 0,
+     "p": 2,
+     "y": 0
+    }
+   },
+   "S1|H5|R": {
+    "best": 4,
+    "N": 2,
+    "charges": {
+     "s": 1,
+     "x": 0,
+     "p": 0,
+     "y": 0
+    }
+   },
+   "S2|H1|nonR": {
+    "best": 4,
+    "N": 2,
+    "charges": {
+     "s": 1,
+     "x": 0,
+     "p": 0,
+     "y": 0
+    }
+   },
+   "S2|H1|R": {
+    "best": 4,
+    "N": 2,
+    "charges": {
+     "s": 1,
+     "x": 0,
+     "p": 0,
+     "y": 0
+    }
+   },
+   "S2|H2|nonR": {
+    "best": 5,
+    "N": 2,
+    "charges": {
+     "s": 0,
+     "x": 0,
+     "p": 1,
+     "y": 0
+    }
+   },
+   "S2|H2|R": {
+    "best": 5,
+    "N": 2,
+    "charges": {
+     "s": 0,
+     "x": 0,
+     "p": 1,
+     "y": 0
+    }
+   },
+   "S2|H3|nonR": {
+    "best": 8,
+    "N": 6,
+    "charges": {
+     "s": 3,
+     "x": 0,
+     "p": 2,
+     "y": 0
+    }
+   },
+   "S2|H3|R": {
+    "best": 4,
+    "N": 2,
+    "charges": {
+     "s": 1,
+     "x": 0,
+     "p": 0,
+     "y": 0
+    }
+   },
+   "S2|H4|nonR": {
+    "best": 9,
+    "N": 4,
+    "charges": {
+     "s": 0,
+     "x": 0,
+     "p": 1,
+     "y": 0
+    }
+   },
+   "S2|H4|R": {
+    "best": 5,
+    "N": 2,
+    "charges": {
+     "s": 0,
+     "x": 0,
+     "p": 1,
+     "y": 0
+    }
+   },
+   "S2|H5|nonR": {
+    "best": 12,
+    "N": 10,
+    "charges": {
+     "s": 5,
+     "x": 0,
+     "p": 2,
+     "y": 0
+    }
+   },
+   "S2|H5|R": {
+    "best": 4,
+    "N": 2,
+    "charges": {
+     "s": 1,
+     "x": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  "reaching_11": [
+   "S1|H5|nonR",
+   "S2|H5|nonR"
+  ],
+  "theorem": "if Hbar H appears linearly with a VEV-less driving field (n = 1), Hbar S^2 H carries the charge of the allowed S^2 term: violation at dimension 4-5 is unavoidable; higher powers (Hbar H)^n push it to 2n + dim(S-monomial)"
+ },
+ "unification": {
+  "reference": [
+   4.058704154281649e+16,
+   23.162738037036423,
+   0.2585296240379087
+  ],
+  "rows": [
+   {
+    "lambda_": 1.0,
+    "M_cut": 2.435e+18,
+    "m": 690349075975359.2,
+    "M_adj": 1380698151950718.5,
+    "M12": 1.3454074448179653e+18,
+    "delta": 1.2532550820091615
+   },
+   {
+    "lambda_": 1.0,
+    "M_cut": 1e+17,
+    "m": 1.6809999999999998e+16,
+    "M_adj": 3.3619999999999996e+16,
+    "M12": 4.910522193505219e+16,
+    "delta": 0.31243595445152295
+   },
+   {
+    "lambda_": 4.0,
+    "M_cut": 2.435e+18,
+    "m": 2761396303901437.0,
+    "M_adj": 5522792607802874.0,
+    "M12": 3.129380666971168e+17,
+    "delta": 0.8375097214432721
+   },
+   {
+    "lambda_": 4.0,
+    "M_cut": 1e+17,
+    "m": 6.723999999999999e+16,
+    "M_adj": 1.3447999999999998e+17,
+    "M12": 4.058704154281649e+16,
+    "delta": 0.2585296240379087
+   },
+   {
+    "lambda_": 12.566370614359172,
+    "M_cut": 2.435e+18,
+    "m": 8675182341986763.0,
+    "M_adj": 1.7350364683973526e+16,
+    "M12": 9.623540423083275e+16,
+    "delta": 0.5029414042575944
+   },
+   {
+    "lambda_": 12.566370614359172,
+    "M_cut": 1e+17,
+    "m": 2.1124069002737766e+17,
+    "M_adj": 4.224813800547553e+17,
+    "M12": 4.058704154281649e+16,
+    "delta": 0.2585296240379087
+   }
+  ],
+  "note": "the quartic tr S^4 / M with M = M_Pl puts the LR-adjoint (8,1)+(1,3) at ~1e15: unification spoiled (cf. Pass 12705); a cutoff ~1e17 or a renormalisable completion (e.g. a heavy 54) is needed"
+ },
+ "crossbar": [
+  {
+   "rows": 64,
+   "fom_fJ": 10.0,
+   "type": "binary",
+   "E_pJ": 0.01115625,
+   "below_threshold": true
+  },
+  {
+   "rows": 64,
+   "fom_fJ": 10.0,
+   "type": "ternary",
+   "E_pJ": 0.02127625,
+   "below_threshold": true
+  },
+  {
+   "rows": 64,
+   "fom_fJ": 50.0,
+   "type": "binary",
+   "E_pJ": 0.05178125,
+   "below_threshold": true
+  },
+  {
+   "rows": 64,
+   "fom_fJ": 50.0,
+   "type": "ternary",
+   "E_pJ": 0.10190125,
+   "below_threshold": false
+  },
+  {
+   "rows": 128,
+   "fom_fJ": 10.0,
+   "type": "binary",
+   "E_pJ": 0.011078125,
+   "below_threshold": true
+  },
+  {
+   "rows": 128,
+   "fom_fJ": 10.0,
+   "type": "ternary",
+   "E_pJ": 0.02112,
+   "below_threshold": true
+  },
+  {
+   "rows": 128,
+   "fom_fJ": 50.0,
+   "type": "binary",
+   "E_pJ": 0.051390625,
+   "below_threshold": true
+  },
+  {
+   "rows": 128,
+   "fom_fJ": 50.0,
+   "type": "ternary",
+   "E_pJ": 0.10112,
+   "below_threshold": false
+  },
+  {
+   "rows": 256,
+   "fom_fJ": 10.0,
+   "type": "binary",
+   "E_pJ": 0.011000000000000001,
+   "below_threshold": true
+  },
+  {
+   "rows": 256,
+   "fom_fJ": 10.0,
+   "type": "ternary",
+   "E_pJ": 0.011120000000000001,
+   "below_threshold": true
+  },
+  {
+   "rows": 256,
+   "fom_fJ": 50.0,
+   "type": "binary",
+   "E_pJ": 0.051000000000000004,
+   "below_threshold": true
+  },
+  {
+   "rows": 256,
+   "fom_fJ": 50.0,
+   "type": "ternary",
+   "E_pJ": 0.05112,
+   "below_threshold": true
+  }
+ ],
+ "odds": [
+  {
+   "M_VL": 3000.0,
+   "truth": "hybrid",
+   "y_obs": 0.45304746737794704,
+   "sigma": 0.005,
+   "BF_hybrid": 46.14189629957483,
+   "BF_Bprime": 0.00042234781123948574,
+   "posterior": {
+    "hybrid": 34.606422224681125,
+    "B'": 1.858330369453737e-05,
+    "generic VLQ": 1.0
+   }
+  },
+  {
+   "M_VL": 3000.0,
+   "truth": "hybrid",
+   "y_obs": 0.45304746737794704,
+   "sigma": 0.002,
+   "BF_hybrid": 51.38708998919299,
+   "BF_Bprime": 2.097925369738278e-09,
+   "posterior": {
+    "hybrid": 38.54031749189474,
+    "B'": 9.230871626848423e-11,
+    "generic VLQ": 1.0
+   }
+  },
+  {
+   "M_VL": 3000.0,
+   "truth": "B'",
+   "y_obs": 0.48966878410573084,
+   "sigma": 0.005,
+   "BF_hybrid": 0.0003231852733734171,
+   "BF_Bprime": 42.80691892255347,
+   "posterior": {
+    "hybrid": 0.0002423889550300628,
+    "B'": 1.8835044325923527,
+    "generic VLQ": 1.0
+   }
+  },
+  {
+   "M_VL": 3000.0,
+   "truth": "B'",
+   "y_obs": 0.48966878410573084,
+   "sigma": 0.002,
+   "BF_hybrid": 1.1641287510265986e-09,
+   "BF_Bprime": 46.059113678429256,
+   "posterior": {
+    "hybrid": 8.73096563269949e-10,
+    "B'": 2.0266010018508873,
+    "generic VLQ": 1.0
+   }
+  }
+ ],
+ "hamming": [
+  {
+   "snr": 6.0,
+   "code": "binary Hamming(127,120)",
+   "p_symbol": 0.001349898031630093,
+   "p_block": 0.013038078808872672,
+   "info_bits_per_cell": 0.9448818897637795,
+   "ber_approx": 0.0003079861135954174
+  },
+  {
+   "snr": 6.0,
+   "code": "ternary Hamming(121,116)",
+   "p_symbol": 0.08907626835847741,
+   "p_block": 0.9998394445678978,
+   "info_bits_per_cell": 1.519468182509538,
+   "ber_approx": 0.02478940771655945
+  },
+  {
+   "snr": 8.0,
+   "code": "binary Hamming(127,120)",
+   "p_symbol": 3.167124183311986e-05,
+   "p_block": 8.004393126057573e-06,
+   "info_bits_per_cell": 0.9448818897637795,
+   "ber_approx": 1.8908015258403715e-07
+  },
+  {
+   "snr": 8.0,
+   "code": "ternary Hamming(121,116)",
+   "p_symbol": 0.030333509264238938,
+   "p_block": 0.8848652335510825,
+   "info_bits_per_cell": 1.519468182509538,
+   "ber_approx": 0.021938807443415267
+  },
+  {
+   "snr": 10.0,
+   "code": "binary Hamming(127,120)",
+   "p_symbol": 2.8665157187919333e-07,
+   "p_block": 6.574250570678757e-10,
+   "info_bits_per_cell": 0.9448818897637795,
+   "ber_approx": 1.5529725757508876e-11
+  },
+  {
+   "snr": 10.0,
+   "code": "ternary Hamming(121,116)",
+   "p_symbol": 0.00827955376770151,
+   "p_block": 0.26491355040383757,
+   "info_bits_per_cell": 1.519468182509538,
+   "ber_approx": 0.006568104555467047
+  },
+  {
+   "snr": 12.0,
+   "code": "binary Hamming(127,120)",
+   "p_symbol": 9.865876450376948e-10,
+   "p_block": 1.4838190000539657e-14,
+   "info_bits_per_cell": 0.9448818897637795,
+   "ber_approx": 3.505084252095982e-16
+  },
+  {
+   "snr": 12.0,
+   "code": "ternary Hamming(121,116)",
+   "p_symbol": 0.0017998640421734576,
+   "p_block": 0.02041368371166688,
+   "info_bits_per_cell": 1.519468182509538,
+   "ber_approx": 0.0005061243895454598
+  },
+  {
+   "snr": 14.0,
+   "code": "binary Hamming(127,120)",
+   "p_symbol": 1.279812543885835e-12,
+   "p_block": 6.6750067708692026e-15,
+   "info_bits_per_cell": 0.9448818897637795,
+   "ber_approx": 1.576773252961229e-16
+  },
+  {
+   "snr": 14.0,
+   "code": "ternary Hamming(121,116)",
+   "p_symbol": 0.00031017210538070004,
+   "p_block": 0.0006815075055635542,
+   "info_bits_per_cell": 1.519468182509538,
+   "ber_approx": 1.6896880303228616e-05
+  }
+ ]
+}
