@@ -1,0 +1,224 @@
+{
+ "short_range": {
+  "rows": [
+   {
+    "lambda_nm": 8.8,
+    "P_yukawa_alpha1_Pa": 4.449913316535959e-18,
+    "P_casimir_Pa": 216808.9522053589,
+    "alpha_floor_direct": 4.872206193313764e+20,
+    "alpha_floor_isoelectronic": [
+     4.872206193313764e+16,
+     4.872206193313764e+17
+    ],
+    "gap_vs_8_3": 1.8270773224926616e+16
+   },
+   {
+    "lambda_nm": 26.3,
+    "P_yukawa_alpha1_Pa": 3.9746391295386855e-17,
+    "P_casimir_Pa": 2717.5960663058004,
+    "alpha_floor_direct": 6.837340391758324e+17,
+    "alpha_floor_isoelectronic": [
+     68373403917583.24,
+     683734039175832.5
+    ],
+    "gap_vs_8_3": 25640026469093.72
+   },
+   {
+    "lambda_nm": 87.7,
+    "P_yukawa_alpha1_Pa": 4.4196247149199194e-16,
+    "P_casimir_Pa": 21.9790808069139,
+    "alpha_floor_direct": 497306496018002.9,
+    "alpha_floor_isoelectronic": [
+     49730649601.800285,
+     497306496018.00287
+    ],
+    "gap_vs_8_3": 18648993600.67511
+   },
+   {
+    "lambda_nm": 200.0,
+    "P_yukawa_alpha1_Pa": 2.2985089444917146e-15,
+    "P_casimir_Pa": 0.8126207665250971,
+    "alpha_floor_direct": 3535425730983.1685,
+    "alpha_floor_isoelectronic": [
+     353542573.09831685,
+     3535425730.9831686
+    ],
+    "gap_vs_8_3": 132578464.91186883
+   },
+   {
+    "lambda_nm": 1000.0,
+    "P_yukawa_alpha1_Pa": 5.746272361229288e-14,
+    "P_casimir_Pa": 0.0013001932264401549,
+    "alpha_floor_direct": 226267246.78292263,
+    "alpha_floor_isoelectronic": [
+     22626.724678292263,
+     226267.24678292262
+    ],
+    "gap_vs_8_3": 8485.021754359599
+   }
+  ],
+  "alpha_B": 2.6666666666666665,
+  "note": "order-of-magnitude floors (1% Casimir precision, 1e3-1e4 isoelectronic suppression); published limits in 1704.02920 are figures only"
+ },
+ "mediator": {
+  "rows": [
+   {
+    "M_Y": 2000.0,
+    "lambda_HY": 0.0,
+    "yB": 0.5053489900076289,
+    "shift_vs_noY": 0.005052272453729856,
+    "shift_vs_Y0": 0.0
+   },
+   {
+    "M_Y": 2000.0,
+    "lambda_HY": 0.03,
+    "yB": 0.5071589595305974,
+    "shift_vs_noY": 0.00686224197669838,
+    "shift_vs_Y0": 0.0018099695229685242
+   },
+   {
+    "M_Y": 2000.0,
+    "lambda_HY": 0.1,
+    "yB": 0.5243391057952361,
+    "shift_vs_noY": 0.024042388241337087,
+    "shift_vs_Y0": 0.01899011578760723
+   },
+   {
+    "M_Y": 2000.0,
+    "lambda_HY": 0.3,
+    "yB": 0.6266221830360954,
+    "shift_vs_noY": 0.12632546548219636,
+    "shift_vs_Y0": 0.12127319302846651
+   },
+   {
+    "M_Y": 5000.0,
+    "lambda_HY": 0.0,
+    "yB": 0.5039444751092443,
+    "shift_vs_noY": 0.003647757555345299,
+    "shift_vs_Y0": 0.0
+   },
+   {
+    "M_Y": 5000.0,
+    "lambda_HY": 0.03,
+    "yB": 0.5056072808352263,
+    "shift_vs_noY": 0.005310563281327285,
+    "shift_vs_Y0": 0.0016628057259819862
+   },
+   {
+    "M_Y": 5000.0,
+    "lambda_HY": 0.1,
+    "yB": 0.5214604433450443,
+    "shift_vs_noY": 0.021163725791145227,
+    "shift_vs_Y0": 0.017515968235799928
+   },
+   {
+    "M_Y": 5000.0,
+    "lambda_HY": 0.3,
+    "yB": 0.6176259099361745,
+    "shift_vs_noY": 0.11732919238227546,
+    "shift_vs_Y0": 0.11368143482693016
+   }
+  ],
+  "lambda_HY_max_for_FCC_sigma": 0.04244174726503522,
+  "y_noY": 0.500296717553899,
+  "note": "psi b u d needs a scalar Y(3,1,-1/3) (Elor-Escudero-Nelson); a vectorlike fermion cannot mediate it at tree level"
+ },
+ "hybrid_evidence": {
+  "dy_dmt": 0.05012330311937041,
+  "tuning_penalty": 1.89225e-27,
+  "rows": {
+   "width 15": {
+    "hybrid_symmetric": 0.7518495467905562,
+    "hybrid_tuned": 1.4226873049144298e-27,
+    "B_prime": 0.0436236317167723
+   },
+   "width 5": {
+    "hybrid_symmetric": 0.25061651559685205,
+    "hybrid_tuned": 4.7422910163814325e-28,
+    "B_prime": 0.014541210572257433
+   },
+   "width 2": {
+    "hybrid_symmetric": 0.10024660623874082,
+    "hybrid_tuned": 1.896916406552573e-28,
+    "B_prime": 0.005816484228902974
+   }
+  },
+  "note": "hybrid DM generic-like; the M_SS <= mu_0 condition is automatic for M_SS = 1e10 at the central m_t"
+ },
+ "warped": {
+  "rows": [
+   {
+    "kL": 0.0,
+    "L_um": 0.619921053554913,
+    "M5": 980857734.2223688,
+    "cut_IR": 980857734.2223688,
+    "y_UV": 0.5050118693200438,
+    "y_IR": 0.5050118693200438
+   },
+   {
+    "kL": 1.0,
+    "L_um": 0.4108762628928706,
+    "M5": 1487790855.0533395,
+    "cut_IR": 547327668.3370049,
+    "y_UV": 0.4978148266907507,
+    "y_IR": 0.5157715992886072
+   },
+   {
+    "kL": 3.0,
+    "L_um": 0.11778311891083641,
+    "M5": 3102893225.3616757,
+    "cut_IR": 154483957.14926362,
+    "y_UV": 0.4860792026638918,
+    "y_IR": 0.5419624407080162
+   },
+   {
+    "kL": 10.0,
+    "L_um": 0.00034328067815962357,
+    "M5": 32422390231.856102,
+    "cut_IR": 1471974.239258142,
+    "y_UV": 0.4564794029610812,
+    "y_IR": 0.6825757886974071
+   },
+   {
+    "kL": 20.0,
+    "L_um": 3.1168677157029836e-08,
+    "M5": 908863557191.8108,
+    "cut_IR": 1873.3074132082943,
+    "y_UV": 0.4332823915549364,
+    "y_IR": NaN
+   },
+   {
+    "kL": 30.0,
+    "L_um": 2.122583626991226e-12,
+    "M5": 25476922329856.29,
+    "cut_IR": 2.3840343356922036,
+    "y_UV": 0.4280300187628178,
+    "y_IR": NaN
+   }
+  ],
+  "m_KK_eV": 1.0,
+  "note": "flat limit reproduces Pass 12707 (R = 0.2 um, y' = 0.505); warping moves y' down (UV brane, toward the hybrid's 0.470) or up (IR brane): B' predicts y' only once the throat and SM location are fixed"
+ },
+ "face_pairing": {
+  "trials": 400,
+  "chi_range": [
+   33,
+   40
+  ],
+  "best": {
+   "trial": 20,
+   "V": 1,
+   "E": 8,
+   "F": 80,
+   "T": 40,
+   "chi": 33,
+   "sphere_links": 0,
+   "sphere_frac": 0.0,
+   "manifold": false,
+   "link_chis": [
+    -64
+   ]
+  },
+  "note": "each glued tetrahedron pair identifies vertices across lines, collapsing the 40 points; a 3-manifold needs chi = 0 and every link a connected sphere"
+ }
+}

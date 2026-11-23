@@ -107,3 +107,13 @@ Corrections in this block:
 | W33 tetrahedral complex: tetrahedra share only vertices (not a pseudomanifold); Banchoff curvature -2 at every point, sum chi = -80 | exact |
 | Absolute stability needs M_t <= 170.98 GeV (alpha_s 0.1180); P(stable) 0.9-1.3% today with scheme error; FCC-ee decides at 18 sigma | numerical |
 | Evidence update of 12698 (scheme error, B -> B'): boundary 1.2-9.0 (0.15-1.1 after trials), A 0.24-1.8 (0.03-0.23), B' 0.006-0.044: no preference over the SM | numerical |
+
+## Addendum: Pass 12710 (Claude track)
+
+| result | label |
+|---|---|
+| B' dark dimension (R = 9-200 nm, alpha = 8/3) is >= 1e8-1e16 below Casimir-range sensitivity (first-principles floor) | estimate |
+| B-mesogenesis needs a coloured scalar Y(3,1,-1/3); its portal must be |lambda_HY| <~ 0.04 for B' to keep a y' prediction (gauge part +0.004-0.005) | numerical |
+| Hybrid evidence: 0.10-0.75 if a symmetry keeps exactly Q+U light, ~1e-27 with the two tunings of 12705 | numerical |
+| Warped throat at 1 eV spacing: SM on the UV brane lowers y' to the hybrid's 0.47 at kL ~ 7; IR brane raises it | numerical (interpolated spectrum) |
+| Flag-respecting face pairings of the 40 W33 tetrahedra collapse to one vertex and <= 8 edges: never a 3-manifold | exact search (400 trials) |
