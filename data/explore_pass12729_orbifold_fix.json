@@ -1,0 +1,32 @@
+{
+ "rows": {
+  "10": {
+   "su5_gauge_only": -0.1912645962940358,
+   "so10_gauge_only": -1.5282081266323653
+  },
+  "30": {
+   "su5_gauge_only": -0.2639318945584477,
+   "so10_gauge_only": -2.1060168259146037
+  },
+  "64": {
+   "su5_gauge_only": -0.31500932898569545,
+   "so10_gauge_only": -2.508753888122805
+  },
+  "100": {
+   "su5_gauge_only": -0.34525842004080465,
+   "so10_gauge_only": -2.7445575277393477
+  }
+ },
+ "hall_nomura_dalpha_s_MsR64": -0.010074167804057333,
+ "cprt": {
+  "formula": "delta alpha_i^-1 = + beta_i^H ln(Lambda R) / 2pi, beta^H = C(A) - sum C(r) over even zero modes = (3, 1, -3/5) (Contino-Pilo-Rattazzi-Trincherini hep-ph/0108102 eq. 20)",
+  "combination": 0.8571428571428572,
+  "rows": {
+   "10": 0.314115256662612,
+   "30": 0.4639863220480661,
+   "64": 0.5673486861068184,
+   "100": 0.628230513325224
+  },
+  "retraction": "the tower-sum numbers of Passes 12724-12727 and the Higgs-universal recomputation of Pass 12729 mishandled the Higgs zero modes; use these values"
+ }
+}

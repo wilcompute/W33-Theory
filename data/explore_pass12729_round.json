@@ -1,0 +1,74 @@
+{
+ "large_fI": {
+  "rows": [
+   {
+    "H_I": 10000000000.0,
+    "f_I_needed": 1771428571428571.5,
+    "f_I_over_MPl": 0.0007274860662951012
+   },
+   {
+    "H_I": 100000000000.0,
+    "f_I_needed": 1.7714285714285714e+16,
+    "f_I_over_MPl": 0.007274860662951012
+   },
+   {
+    "H_I": 1000000000000.0,
+    "f_I_needed": 1.7714285714285715e+17,
+    "f_I_over_MPl": 0.07274860662951012
+   },
+   {
+    "H_I": 10000000000000.0,
+    "f_I_needed": 1.7714285714285716e+18,
+    "f_I_over_MPl": 0.7274860662951013
+   }
+  ],
+  "note": "f_I ~ M_Pl needed for H_I ~ 1e13; f_I <= 0.1 M_Pl allows H_I <~ 1e12; the PQ field must then relax to f_a without non-thermal symmetry restoration (parametric resonance), else the post-inflation regime returns"
+ },
+ "evidence_A": {
+  "rows": {
+   "15": {
+    "A": 0.02608496553351594,
+    "A_trials": 0.0032606206916894927,
+    "factors": {
+     "mt": 5.5125,
+     "Omega": 0.08203863045973987,
+     "inflation": 0.057679735877775626
+    }
+   },
+   "5": {
+    "A": 0.008694988511171979,
+    "A_trials": 0.0010868735638964973,
+    "factors": {
+     "mt": 1.8375,
+     "Omega": 0.08203863045973987,
+     "inflation": 0.057679735877775626
+    }
+   },
+   "2": {
+    "A": 0.0034779954044687924,
+    "A_trials": 0.00043474942555859906,
+    "factors": {
+     "mt": 0.735,
+     "Omega": 0.08203863045973987,
+     "inflation": 0.057679735877775626
+    }
+   }
+  },
+  "Bprime": [
+   0.0436236317167723,
+   0.014541210572257433,
+   0.005816484228902974
+  ]
+ },
+ "neff_low_reheating": {
+  "window_Bprime_MeV": [
+   5.96,
+   17
+  ],
+  "literature": {
+   "de Salas 2015": "N_eff < 3 for T_RH <~ 7 MeV",
+   "Hasegawa 2019": "N_eff ~ 3.046 for T_RH >~ 10 MeV"
+  },
+  "estimate": "at the lower edge (6-7 MeV) N_eff ~ 2.9-3.0; the hint (ACT + helium ~ 2.85 +- 0.1) needs T_RH ~ 5-6 MeV, at the edge of the 5.96 MeV bound itself (which uses the same N_eff physics): B' can at most account for part of the hint, near T_RH ~ 6 MeV"
+ }
+}

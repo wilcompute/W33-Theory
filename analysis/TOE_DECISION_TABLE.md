@@ -1,6 +1,6 @@
-# Decision table: which measurement decides which completion (Claude track, as of Pass 12728)
+# Decision table: which measurement decides which completion (Claude track, as of Pass 12729)
 
-## Snapshot 2026-11-23 (through Pass 12728)
+## Snapshot 2026-11-23 (through Pass 12729)
 
 | item | status |
 |---|---|
@@ -16,6 +16,8 @@
 | B′ dark sector (12725) | coupling only the ≥ 20% second component (β ≈ 0.3) fits DESI (χ² 3.0) with σ8 unchanged (0.995) |
 | Hybrid orbifold (12725) | SO(10) parity-class KK thresholds shift α₃⁻¹ by −1.5 already at M_sR = 10: tension with geometric protection; O(1.2–1.5) brane kinetic terms on SU(4) or SU(2)_L would repair it (Pass 12726), but radiative brane terms add a further −1.9, so the repair needs ~4.5× natural size (Pass 12727) |
 | Timeline (12728) | parameter space probed — 2032: B′ 44%; 2035: A 60%; 2042: B′ 78%, hybrid 11%; 2045: A 96%; FCC-hh (2070s): B′ and hybrid 100% |
+| Orbifold correction (12729) | **orbifold numbers of 12724–12727 withdrawn**; literature formula (Contino–Pilo–Rattazzi–Trincherini) gives +(6/7) ln(ΛR)/2π = +0.31 to +0.63 for ΛR 10–100, the size of the hybrid's mismatch: route reopened |
+| A evidence (12729) | tuned-inflation route 0.003–0.026 (below B′); untuned escape with a PQ field of 0.01–0.7 M_Pl during inflation |
 | Hybrid vs B′ | FCC-hh with a 3 TeV partner: Bayes factor ≈ 45 either way |
 | Ternary | wins: PAM3 links, memory-bound and weight-stationary NN inference, attention (full precision with 45% zeros, with curriculum training), carry-free arithmetic, flash at ~3×10⁴ cycles; loses: on-chip logic energy, analog crossbars, ECC per SNR, qutrit hardware (needs gate error within 1.26× of qubits; transmons 4.5–9×, ions 20–70×) |
 
