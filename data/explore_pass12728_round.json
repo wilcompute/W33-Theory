@@ -1,0 +1,102 @@
+{
+ "inflation": {
+  "V14": 768411426450.8501,
+  "rows": [
+   {
+    "T_RH": 10000.0,
+    "N": 41.87381272820495,
+    "hilltop_p3": 0.904474903540233,
+    "hilltop_p4": 0.9283561776551748,
+    "hilltop_p6": 0.9402968147126456,
+    "plateau": 0.9522374517701164,
+    "sigma_from_ACT_plateau": 6.488984773495185
+   },
+   {
+    "T_RH": 10000000.0,
+    "N": 44.176397821199004,
+    "hilltop_p3": 0.9094539121050628,
+    "hilltop_p4": 0.932090434078797,
+    "hilltop_p6": 0.9434086950656642,
+    "plateau": 0.9547269560525313,
+    "sigma_from_ACT_plateau": 5.75677763160845
+   },
+   {
+    "T_RH": 768411426450.8501,
+    "N": 47.92622965027171,
+    "hilltop_p3": 0.9165383960059266,
+    "hilltop_p4": 0.9374037970044449,
+    "hilltop_p6": 0.947836497503704,
+    "plateau": 0.9582691980029633,
+    "sigma_from_ACT_plateau": 4.714941763834345
+   }
+  ],
+  "quadratic_hilltop_eta": 0.012849999999999973
+ },
+ "sign_check": {
+  "triplet_at_MG_over_10_shift_alpha3_inv": 0.8028262434868589,
+  "consistent": true
+ },
+ "coupled_component": {
+  "requirements": [
+   "cold (non-relativistic by z ~ 1e5)",
+   "14-20% of DM or more",
+   "outside the mesogenesis sector",
+   "beta ~ 0.3 to quintessence (fifth force 2 beta^2 f ~ 0.04 within halos)"
+  ],
+  "candidates": [
+   "a pre-inflation axion-like field with a field-dependent decay constant",
+   "a heavy dark-dimension KK mode with a brane coupling to the radion-independent quintessence"
+  ],
+  "neff": "cold matter cannot lower N_eff: the -2 sigma low-N_eff hint is not addressed"
+ },
+ "timeline": {
+  "coverage": {
+   "2027": {
+    "A": 0.0,
+    "Bprime": 0.0,
+    "hybrid": 0.0
+   },
+   "2030": {
+    "A": 0.18146878317874465,
+    "Bprime": 0.0,
+    "hybrid": 0.0
+   },
+   "2032": {
+    "A": 0.18146878317874465,
+    "Bprime": 0.43999999999999995,
+    "hybrid": 0.0
+   },
+   "2035": {
+    "A": 0.6028262491864952,
+    "Bprime": 0.43999999999999995,
+    "hybrid": 0.0
+   },
+   "2041": {
+    "A": 0.6028262491864952,
+    "Bprime": 0.5015999999999999,
+    "hybrid": 0.11
+   },
+   "2042": {
+    "A": 0.6028262491864952,
+    "Bprime": 0.7775,
+    "hybrid": 0.11
+   },
+   "2045": {
+    "A": 0.96,
+    "Bprime": 0.7775,
+    "hybrid": 0.11
+   },
+   "2058": {
+    "A": 0.96,
+    "Bprime": 0.7775,
+    "hybrid": 0.11
+   },
+   "2075": {
+    "A": 0.96,
+    "Bprime": 1.0,
+    "hybrid": 1.0
+   }
+  },
+  "assumptions": "A: m_a log-uniform 34-1550 ueV; ALPHA I 40-80 ueV (2028-30), MADMAX/ALPHA II to ~400 ueV by 2035, broadband to ~1.5 meV by 2045. B': Belle II 10 ab^-1 (2032) 26-61%, 50 ab^-1 (2042) 62-89%; HL-LHC VLQ to 2 TeV (2041) on M_VL log-uniform 1.74-6 TeV. Hybrid: HL-LHC only until FCC-hh (~2075), which probes y' and M_VL fully."
+ }
+}

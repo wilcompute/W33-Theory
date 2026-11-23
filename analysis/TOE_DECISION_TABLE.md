@@ -1,11 +1,11 @@
-# Decision table: which measurement decides which completion (Claude track, as of Pass 12727)
+# Decision table: which measurement decides which completion (Claude track, as of Pass 12728)
 
-## Snapshot 2026-11-23 (through Pass 12727)
+## Snapshot 2026-11-23 (through Pass 12728)
 
 | item | status |
 |---|---|
 | Inputs | M_t = 172.80 ± 0.26 (toponium-corrected); μ₀ = 2.5×10¹⁰ GeV; SM vacuum 2.7–4.5σ from absolute stability (P = 3×10⁻⁶ to 3×10⁻³) |
-| A | strained (12725): with M_t = 172.80, f_a = μ₀ = 2.5×10¹⁰ GeV gives m_a ≈ 230 μeV and an axion that is only 19% of the DM; full DM needs M_t ≈ 172.38 (0.8–1.6σ low); **rescued** by pre-inflation misalignment at θᵢ ≈ 0.992π (1% tuning; Pass 12726), which needs inflation below H_I ≈ 1.4×10⁵ GeV (isocurvature, Pass 12727) |
+| A | strained (12725): with M_t = 172.80, f_a = μ₀ = 2.5×10¹⁰ GeV gives m_a ≈ 230 μeV and an axion that is only 19% of the DM; full DM needs M_t ≈ 172.38 (0.8–1.6σ low); **rescued** by pre-inflation misalignment at θᵢ ≈ 0.992π (1% tuning; Pass 12726), which needs inflation below H_I ≈ 1.4×10⁵ GeV (isocurvature, Pass 12727); generic low-scale inflation then gives n_s 4.7–6.5σ below ACT, so A needs a second tuning (quadratic hilltop) (Pass 12728) |
 | B′ | y′ ≈ 0.496 (flat R = 0.009–0.2 μm); dimension must be static today (a DESI-rate radion violates lunar ranging by 38×); Casimir quintessence needs 2×10⁻⁸ tuning at R ≤ 0.2 μm; decisive test is a Belle II inclusive B → baryon + missing-energy search |
 | Hybrid | Q + U pseudo-Goldstones (gauged SO(10), 45 + 54 vacuum, anomaly-free Z₁₀); the uncoupled accidental symmetry also leaves a light vectorlike 5 + 5̄ (Higgs doublets + d^c triplets), which **unifies (δ = +0.25)**; open problem: TeV triplets need \|y_qq·y_ql\| ≲ 2×10⁻²⁵ (a symmetry forbidding one coupling); y′ ≈ 0.46 (gauge mediation), falling with M_VL; no proton decay at Hyper-K from dimension 6 |
 | Hybrid update (12722) | the light-5 + 5̄ variant is disfavoured: seesaw-induced triplet couplings + proton stability force Σm_ν ≥ 0.08 eV > DESI's 0.064 (minimal flavour), and its y′ (≈0.50) coincides with B′'s; the Q + U-only variant (y′ ≈ 0.46) remains, with doublet–triplet splitting open |
@@ -15,6 +15,7 @@
 | Hybrid DT splitting (12723) | orbifold S¹/(Z₂×Z₂′) in the window 10 ≲ M_*R ≲ 100 (KK thresholds narrow it to M_sR ≈ 10–15, Pass 12724) also gives the brane separation that protects the accidental SO(10) |
 | B′ dark sector (12725) | coupling only the ≥ 20% second component (β ≈ 0.3) fits DESI (χ² 3.0) with σ8 unchanged (0.995) |
 | Hybrid orbifold (12725) | SO(10) parity-class KK thresholds shift α₃⁻¹ by −1.5 already at M_sR = 10: tension with geometric protection; O(1.2–1.5) brane kinetic terms on SU(4) or SU(2)_L would repair it (Pass 12726), but radiative brane terms add a further −1.9, so the repair needs ~4.5× natural size (Pass 12727) |
+| Timeline (12728) | parameter space probed — 2032: B′ 44%; 2035: A 60%; 2042: B′ 78%, hybrid 11%; 2045: A 96%; FCC-hh (2070s): B′ and hybrid 100% |
 | Hybrid vs B′ | FCC-hh with a 3 TeV partner: Bayes factor ≈ 45 either way |
 | Ternary | wins: PAM3 links, memory-bound and weight-stationary NN inference, attention (full precision with 45% zeros, with curriculum training), carry-free arithmetic, flash at ~3×10⁴ cycles; loses: on-chip logic energy, analog crossbars, ECC per SNR, qutrit hardware (needs gate error within 1.26× of qubits; transmons 4.5–9×, ions 20–70×) |
 
