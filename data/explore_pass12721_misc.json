@@ -1,0 +1,60 @@
+{
+ "counting": {
+  "(a) Sigma(LR) + H(SU5)": {
+   "(3,1)+0.667": 3,
+   "(3,1)-0.667": 3,
+   "(3,2)+0.167": 6,
+   "(3,2)-0.167": 6
+  },
+  "(b) Sigma(LR) + coupled (Sigma', H) -> SM": {
+   "(3,1)+0.667": 3,
+   "(3,1)-0.667": 3,
+   "(3,2)+0.833": 6,
+   "(3,2)-0.833": 6,
+   "(3,2)+0.167": 6,
+   "(3,2)-0.167": 6
+  }
+ },
+ "unification": {
+  "Q + U (hybrid)": {
+   "M12": 4.058938752962884e+16,
+   "alpha_inv": 23.162262700893805,
+   "delta": 0.25865218987290817
+  },
+  "Q + U + X(3,2)_5/6  [case b]": {
+   "M12": 12679086337159.457,
+   "alpha_inv": 19.688968464430282,
+   "delta": -2.153700804090068
+  },
+  "Q + U + D + L  [Pass 12720, eps = 0]": {
+   "M12": 5.276592405941175e+16,
+   "alpha_inv": 18.58662722754082,
+   "delta": 0.2541561473564862
+  }
+ },
+ "ions": {
+  "single": {
+   "p_qutrit": 0.002,
+   "p_qubit": 0.0001,
+   "f": 20.0,
+   "passes": false
+  },
+  "two": {
+   "p_qutrit": 0.07299999999999995,
+   "p_qubit": 0.001,
+   "f": 72.99999999999996,
+   "passes": false
+  }
+ },
+ "casimir": {
+  "R0_um": 16.4,
+  "R_max_um": 0.2,
+  "required_suppression": 2.211793566405653e-08
+ },
+ "light_triplet_proton": {
+  "M_T": 1740.0,
+  "tau_bound_yr": 2.4e+34,
+  "max_product_yqq_yql": 1.660160815798251e-25,
+  "note": "Gamma ~ |y_qq y_ql|^2 c_had m_p^5 / (8 pi M_T^4), c_had ~ 0.01; Super-K e+ pi0 bound 2.4e34 yr; a symmetry (Z10) must forbid one of the two couplings"
+ }
+}

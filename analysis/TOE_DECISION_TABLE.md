@@ -1,9 +1,15 @@
-# Decision table: which measurement decides which completion (Claude track, as of Pass 12719)
+# Decision table: which measurement decides which completion (Claude track, as of Pass 12721)
 
-**Update (Pass 12719):**
-- **Top mass:** with M_t = 172.80 ± 0.26 (toponium-corrected, arXiv:2603.28865), μ₀ = 2.5×10¹⁰ GeV and P(absolutely stable) ≈ 10⁻³. y′ drops by about 0.01 for both B′ (≈0.496) and the hybrid (≈0.460).
-- **B′:** its dark-dimension radius cannot drive DESI's evolving dark energy; lunar laser ranging excludes that by 38×.
-- **Hybrid:** Dimopoulos–Wilczek doublet–triplet splitting conflicts with discrete Goldstone protection; a pseudo-Goldstone-Higgs route (Tavartkiladze 2018) is the candidate fix.
+## Snapshot 2026-11-23 (through Pass 12721)
+
+| item | status |
+|---|---|
+| Inputs | M_t = 172.80 ± 0.26 (toponium-corrected); μ₀ = 2.5×10¹⁰ GeV; SM vacuum 2.7–4.5σ from absolute stability (P = 3×10⁻⁶ to 3×10⁻³) |
+| A | unchanged; evidence 0.03–0.23 after trials |
+| B′ | y′ ≈ 0.496 (flat R = 0.009–0.2 μm); dimension must be static today (a DESI-rate radion violates lunar ranging by 38×); Casimir quintessence needs 2×10⁻⁸ tuning at R ≤ 0.2 μm; decisive test is a Belle II inclusive B → baryon + missing-energy search |
+| Hybrid | Q + U pseudo-Goldstones (gauged SO(10), 45 + 54 vacuum, anomaly-free Z₁₀); the uncoupled accidental symmetry also leaves a light vectorlike 5 + 5̄ (Higgs doublets + d^c triplets), which **unifies (δ = +0.25)**; open problem: TeV triplets need \|y_qq·y_ql\| ≲ 2×10⁻²⁵ (a symmetry forbidding one coupling); y′ ≈ 0.46 (gauge mediation), falling with M_VL; no proton decay at Hyper-K from dimension 6 |
+| Hybrid vs B′ | FCC-hh with a 3 TeV partner: Bayes factor ≈ 45 either way |
+| Ternary | wins: PAM3 links, memory-bound and weight-stationary NN inference, attention (full precision with 45% zeros, with curriculum training), carry-free arithmetic, flash at ~3×10⁴ cycles; loses: on-chip logic energy, analog crossbars, ECC per SNR, qutrit hardware (needs gate error within 1.26× of qubits; transmons 4.5–9×, ions 20–70×) |
 
 **Not a theory of everything.** This is a map of three candidate completions of the Standard Model built around the zero of the Higgs quartic coupling near 10¹⁰–10¹¹ GeV, and of the experiments that decide between them. It summarises Passes 12684–12718.
 
