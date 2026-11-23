@@ -1,6 +1,6 @@
-# Decision table: which measurement decides which completion (Claude track, as of Pass 12723)
+# Decision table: which measurement decides which completion (Claude track, as of Pass 12724)
 
-## Snapshot 2026-11-23 (through Pass 12723)
+## Snapshot 2026-11-23 (through Pass 12724)
 
 | item | status |
 |---|---|
@@ -10,9 +10,9 @@
 | Hybrid | Q + U pseudo-Goldstones (gauged SO(10), 45 + 54 vacuum, anomaly-free Z₁₀); the uncoupled accidental symmetry also leaves a light vectorlike 5 + 5̄ (Higgs doublets + d^c triplets), which **unifies (δ = +0.25)**; open problem: TeV triplets need \|y_qq·y_ql\| ≲ 2×10⁻²⁵ (a symmetry forbidding one coupling); y′ ≈ 0.46 (gauge mediation), falling with M_VL; no proton decay at Hyper-K from dimension 6 |
 | Hybrid update (12722) | the light-5 + 5̄ variant is disfavoured: seesaw-induced triplet couplings + proton stability force Σm_ν ≥ 0.08 eV > DESI's 0.064 (minimal flavour), and its y′ (≈0.50) coincides with B′'s; the Q + U-only variant (y′ ≈ 0.46) remains, with doublet–triplet splitting open |
 | B′ dark energy (12722) | static radius + uncoupled thawing quintessence: Δχ² = 2.2 better than ΛCDM (DESI full CPL: 6.3) |
-| Universal falsifier (12723) | for any quartic-zero completion with one TeV vectorlike family the needed y′ never drops below 0.41 (μ_match 10⁷–10¹³): a measured y′ < 0.41 kills the whole class |
-| B′ dark sector (12723) | static radius + DM-coupled quintessence (β ≈ 0.1): χ² 2.0 vs ΛCDM 6.3 with phantom crossing; energy flows DM → DE, so the dark baryon cannot be all of the DM; S8 lowered by a few percent; Belle II covers 62–89% by ~2042 |
-| Hybrid DT splitting (12723) | orbifold S¹/(Z₂×Z₂′) in the window 10 ≲ M_*R ≲ 100 also gives the brane separation that protects the accidental SO(10) |
+| Universal falsifier (12723) | for any quartic-zero completion with one TeV vectorlike family the needed y′ never drops below 0.41 (μ_match 10⁷–10¹³): a measured y′ < 0.41 kills the whole class; with M_t, scheme, α_s and threshold uncertainties the floor is 0.40 (95%: 0.35–0.47), so **y′ < 0.35** is the robust falsifier (Pass 12724) |
+| B′ dark sector (12723) | static radius + DM-coupled quintessence (β ≈ 0.1): χ² 2.0 vs ΛCDM 6.3 with phantom crossing; energy flows DM → DE, so the dark baryon cannot be all of the DM; S8: **raised** by 1.3% (linear growth, Pass 12724 corrects 12723's proxy); ψ carries ≤ 80% of the DM; Belle II covers 62–89% by ~2042 |
+| Hybrid DT splitting (12723) | orbifold S¹/(Z₂×Z₂′) in the window 10 ≲ M_*R ≲ 100 (KK thresholds narrow it to M_sR ≈ 10–15, Pass 12724) also gives the brane separation that protects the accidental SO(10) |
 | Hybrid vs B′ | FCC-hh with a 3 TeV partner: Bayes factor ≈ 45 either way |
 | Ternary | wins: PAM3 links, memory-bound and weight-stationary NN inference, attention (full precision with 45% zeros, with curriculum training), carry-free arithmetic, flash at ~3×10⁴ cycles; loses: on-chip logic energy, analog crossbars, ECC per SNR, qutrit hardware (needs gate error within 1.26× of qubits; transmons 4.5–9×, ions 20–70×) |
 

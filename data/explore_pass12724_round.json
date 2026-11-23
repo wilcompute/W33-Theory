@@ -1,0 +1,74 @@
+{
+ "two_component": {
+  "m_psi_today_max": 4.04054,
+  "f_psi_max": 0.8036589440855425,
+  "f_other_min": 0.1963410559144575
+ },
+ "y_floor_mc": {
+  "n": 40,
+  "median": 0.40047213301402174,
+  "p2_5": 0.35070116167107895,
+  "p97_5": 0.4691589845546844
+ },
+ "orbifold_thresholds": {
+  "rows": [
+   {
+    "MsR": 10,
+    "delta": [
+     -6.910014560610608,
+     -5.489228341590601,
+     -4.596660225551774
+    ],
+    "shift_alpha3_inv": -0.1222791832611776
+   },
+   {
+    "MsR": 30,
+    "delta": [
+     -21.488454148166127,
+     -18.045016744274943,
+     -16.813334569668864
+    ],
+    "shift_alpha3_inv": -1.2279159710304821
+   },
+   {
+    "MsR": 100,
+    "delta": [
+     -72.41723069637995,
+     -62.41616406455728,
+     -60.80495810436689
+    ],
+    "shift_alpha3_inv": -5.532413062540087
+   }
+  ],
+  "note": "SU(5)-orbifold estimate; brane-localised kinetic terms add O(1/(2pi)) uncertainties"
+ },
+ "growth": {
+  "rows": [
+   {
+    "lam": 1.0,
+    "beta": 0.0,
+    "sigma8_ratio": 0.9769268426994657,
+    "fsigma8_z05_ratio": 0.9513796304543546
+   },
+   {
+    "lam": 1.0,
+    "beta": 0.1,
+    "sigma8_ratio": 1.012696447235237,
+    "fsigma8_z05_ratio": 0.9992908146729571
+   },
+   {
+    "lam": 0.7,
+    "beta": 0.1,
+    "sigma8_ratio": 1.0213838921023244,
+    "fsigma8_z05_ratio": 1.01917585968934
+   },
+   {
+    "lam": 1.4,
+    "beta": 0.2,
+    "sigma8_ratio": 1.0816688868239617,
+    "fsigma8_z05_ratio": 1.0655573459590368
+   }
+  ],
+  "note": "same early amplitude and Omega_m(today); S8 tension: weak lensing ~0.77-0.79 vs Planck ~0.83 (about -5 to -7%)"
+ }
+}
