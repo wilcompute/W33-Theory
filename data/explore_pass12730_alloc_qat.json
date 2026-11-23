@@ -1,0 +1,5 @@
+{
+ "uniform_ternary_1p6": 2.9414764848896082,
+ "layer0_2bit_layer1_binary_1p5": 2.8464233220380444,
+ "fp32_ref": 2.187
+}

@@ -1,0 +1,78 @@
+{
+ "orbifold_mapping": {
+  "rows": [
+   {
+    "Lambda_R": 3,
+    "Delta": 0.1498710653854542,
+    "delta_new": 0.11012893461454581
+   },
+   {
+    "Lambda_R": 5,
+    "Delta": 0.21955714231147547,
+    "delta_new": 0.04044285768852454
+   },
+   {
+    "Lambda_R": 6.7,
+    "Delta": 0.2594826986728866,
+    "delta_new": 0.0005173013271134175
+   },
+   {
+    "Lambda_R": 10,
+    "Delta": 0.3141152566626119,
+    "delta_new": -0.05411525666261191
+   },
+   {
+    "Lambda_R": 15,
+    "Delta": 0.3694282076969297,
+    "delta_new": -0.10942820769692968
+   },
+   {
+    "Lambda_R": 30,
+    "Delta": 0.46398632204806606,
+    "delta_new": -0.20398632204806605
+   },
+   {
+    "Lambda_R": 64,
+    "Delta": 0.5673486861068183,
+    "delta_new": -0.3073486861068183
+   },
+   {
+    "Lambda_R": 100,
+    "Delta": 0.6282305133252238,
+    "delta_new": -0.36823051332522383
+   }
+  ],
+  "cancel_at": 6.725454744338821,
+  "window_0p1": [
+   3.231224790097772,
+   13.998327091561121
+  ]
+ },
+ "pq_relaxation": {
+  "status": "model-dependent: generic large-amplitude PQ oscillations restore the symmetry by parametric resonance (returning to the post-inflation regime where the axion is 19% of DM); models with ineffective resonance (e.g. Harigaya-Ibe-Kawasaki-Yanagida) or enhanced explicit breaking (Kearney-Orlofsky-Pierce) are needed"
+ },
+ "neff": {
+  "bound": "T_RH > 5.96 MeV <-> N_eff > 2.98 (2501.01369)",
+  "delta_neff_edge": -0.06,
+  "hint": 2.85,
+  "verdict": "B' at its window edge lowers N_eff by only ~0.06; it does not explain the hint (corrects Pass 12729's 2.9-3.0)"
+ },
+ "prior_art": {
+  "A": [
+   "Redi-Strumia, Axion-Higgs unification (1208.6013): f_a ~ 1e11 from the quartic zero"
+  ],
+  "hybrid": [
+   "Ibanez-Valenzuela (1301.5167, 1403.6081): high-scale SUSY with tan beta ~ 1 at 1e10-1e13 GeV fits m_h",
+   "Heavy higgsino DM at the vanishing-quartic scale (2609.28740)",
+   "Hall-Harigaya Higgs parity: quartic zero = new-physics scale (1803.08119)",
+   "Tavartkiladze (1803.11164): pseudo-Goldstone Higgs in SO(10) (template for the Q+U mechanism)"
+  ],
+  "B_prime": [
+   "no paper combining dark dimension + vectorlike top partner + species-scale quartic zero found",
+   "no paper combining B-mesogenesis with the dark dimension found"
+  ],
+  "universal": [
+   "y' floor: only upper bounds on VLQ Yukawas found in the stability literature (PRD 107 036018, 1812.11303)"
+  ]
+ }
+}
