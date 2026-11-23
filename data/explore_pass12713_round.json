@@ -1,0 +1,291 @@
+{
+ "energy": {
+  "rows": {
+   "fp32": {
+    "bits": 32,
+    "DRAM_pJ": 964.6,
+    "SRAM_pJ": 9.72,
+    "acc": 0.5624444444444444
+   },
+   "int8": {
+    "bits": 8,
+    "DRAM_pJ": 240.23,
+    "SRAM_pJ": 1.51,
+    "acc": 0.5624444444444444
+   },
+   "2bit": {
+    "bits": 2,
+    "DRAM_pJ": 60.08,
+    "SRAM_pJ": 0.4,
+    "acc": 0.5521111111111111
+   },
+   "ternary": {
+    "bits": 1.6,
+    "DRAM_pJ": 48.01675037202381,
+    "SRAM_pJ": 0.27275037202380953,
+    "acc": 0.5384444444444445
+   },
+   "binary": {
+    "bits": 1,
+    "DRAM_pJ": 30.03,
+    "SRAM_pJ": 0.19,
+    "acc": 0.5226666666666667
+   }
+  },
+  "pareto": [
+   "binary",
+   "ternary",
+   "2bit",
+   "int8"
+  ],
+  "note": "int8 accuracy taken equal to fp32 (not trained)"
+ },
+ "missing_partner": {
+  "splittings": {
+   "24 x 10 -> 175 (1, 1, 0, 1)": {
+    "dim": 175,
+    "contains": {
+     "Q": true,
+     "U": true,
+     "E": true
+    },
+    "light_components": []
+   },
+   "24 x 10 -> 40 (0, 0, 1, 1)": {
+    "dim": 40,
+    "contains": {
+     "Q": true,
+     "U": true,
+     "E": false
+    },
+    "light_components": [
+     "E"
+    ]
+   },
+   "24 x 10 -> 15 (2, 0, 0, 0)": {
+    "dim": 15,
+    "contains": {
+     "Q": true,
+     "U": false,
+     "E": false
+    },
+    "light_components": [
+     "U",
+     "E"
+    ]
+   },
+   "24 x 10 -> 10 (0, 1, 0, 0)": {
+    "dim": 10,
+    "contains": {
+     "Q": true,
+     "U": true,
+     "E": true
+    },
+    "light_components": []
+   },
+   "75 x 10 -> 315 (0, 2, 1, 0)": {
+    "dim": 315,
+    "contains": {
+     "Q": true,
+     "U": true,
+     "E": true
+    },
+    "light_components": []
+   },
+   "75 x 10 -> 210 (1, 0, 2, 0)": {
+    "dim": 210,
+    "contains": {
+     "Q": true,
+     "U": true,
+     "E": false
+    },
+    "light_components": [
+     "E"
+    ]
+   },
+   "75 x 10 -> 175 (1, 1, 0, 1)": {
+    "dim": 175,
+    "contains": {
+     "Q": true,
+     "U": true,
+     "E": true
+    },
+    "light_components": []
+   },
+   "75 x 10 -> 40 (0, 0, 1, 1)": {
+    "dim": 40,
+    "contains": {
+     "Q": true,
+     "U": true,
+     "E": false
+    },
+    "light_components": [
+     "E"
+    ]
+   },
+   "75 x 10 -> 10 (0, 1, 0, 0)": {
+    "dim": 10,
+    "contains": {
+     "Q": true,
+     "U": true,
+     "E": true
+    },
+    "light_components": []
+   },
+   "200 (Phi^2/M) x 10 -> 1215 (2, 1, 0, 2)": {
+    "dim": 1215,
+    "contains": {
+     "Q": true,
+     "U": true,
+     "E": true
+    },
+    "light_components": []
+   },
+   "200 (Phi^2/M) x 10 -> 450 (1, 0, 1, 2)": {
+    "dim": 450,
+    "contains": {
+     "Q": true,
+     "U": true,
+     "E": false
+    },
+    "light_components": [
+     "E"
+    ]
+   },
+   "200 (Phi^2/M) x 10 -> 160 (3, 0, 0, 1)": {
+    "dim": 160,
+    "contains": {
+     "Q": true,
+     "U": false,
+     "E": false
+    },
+    "light_components": [
+     "U",
+     "E"
+    ]
+   },
+   "200 (Phi^2/M) x 10 -> 175 (1, 1, 0, 1)": {
+    "dim": 175,
+    "contains": {
+     "Q": true,
+     "U": true,
+     "E": true
+    },
+    "light_components": []
+   }
+  },
+  "QU_only": [],
+  "correction": "Pass 12712 said the GMPM keeps Q + U light; 2308.11705 keeps e^c light (partner 40 has Q and U partners, no e^c)"
+ },
+ "exclusive": {
+  "rows": {
+   "exclusive reach 1e-07": 0.168545,
+   "exclusive reach 1e-08": 0.832345,
+   "exclusive reach 1e-09": 0.99981
+  },
+  "median_exclusive": 3.160539245037812e-08,
+  "correction": "Pass 12712's 100% at 1e-7 assumed the inclusive rate is searched"
+ },
+ "carries": {
+  "16": {
+   "trits": 11,
+   "bin_mean": 5.1655,
+   "bin_max": 16,
+   "bt_mean": 1.66715,
+   "bt_max": 11,
+   "p_carry_bin": 0.47176250000000003,
+   "p_carry_bt": 0.24767727272727272
+  },
+  "32": {
+   "trits": 21,
+   "bin_mean": 7.4829,
+   "bin_max": 31,
+   "bt_mean": 2.2166,
+   "bt_max": 11,
+   "p_carry_bin": 0.4853093749999999,
+   "p_carry_bt": 0.2486309523809524
+  },
+  "64": {
+   "trits": 41,
+   "bin_mean": 9.80515,
+   "bin_max": 46,
+   "bt_mean": 2.79825,
+   "bt_max": 14,
+   "p_carry_bin": 0.49239296875000005,
+   "p_carry_bt": 0.2486378048780488
+  }
+ },
+ "inversion": {
+  "flat": [
+   {
+    "sigma_meas": 0.005,
+    "R_um": 0.01,
+    "dy_dlnR": 0.0052851657773475575,
+    "sigma_lnR": 1.165747486428292,
+    "factor": 3.2083201629035596
+   },
+   {
+    "sigma_meas": 0.005,
+    "R_um": 0.05,
+    "dy_dlnR": 0.005569037356547578,
+    "sigma_lnR": 1.1063256225164286,
+    "factor": 3.023229474721089
+   },
+   {
+    "sigma_meas": 0.005,
+    "R_um": 0.2,
+    "dy_dlnR": 0.005923487823029108,
+    "sigma_lnR": 1.040125160103578,
+    "factor": 2.82957114160696
+   },
+   {
+    "sigma_meas": 0.002,
+    "R_um": 0.01,
+    "dy_dlnR": 0.0052851657773475575,
+    "sigma_lnR": 0.779209627453088,
+    "factor": 2.17974877089883
+   },
+   {
+    "sigma_meas": 0.002,
+    "R_um": 0.05,
+    "dy_dlnR": 0.005569037356547578,
+    "sigma_lnR": 0.7394908298743815,
+    "factor": 2.094868598389115
+   },
+   {
+    "sigma_meas": 0.002,
+    "R_um": 0.2,
+    "dy_dlnR": 0.005923487823029108,
+    "sigma_lnR": 0.6952410774584559,
+    "factor": 2.004192181263009
+   }
+  ],
+  "warped": [
+   {
+    "kL": 0.5,
+    "dy_dkL": -0.007732268225909555,
+    "sigma_kL": 0.796812596290269
+   },
+   {
+    "kL": 2.0,
+    "dy_dkL": -0.0056876574366732935,
+    "sigma_kL": 1.083252426662216
+   },
+   {
+    "kL": 4.0,
+    "dy_dkL": -0.0048061268126438905,
+    "sigma_kL": 1.2819405231029337
+   },
+   {
+    "kL": 6.0,
+    "dy_dkL": -0.004313416654981722,
+    "sigma_kL": 1.4283731930195027
+   },
+   {
+    "kL": 8.5,
+    "dy_dkL": -0.0037286390094990094,
+    "sigma_kL": 1.6523907797466233
+   }
+  ]
+ }
+}
