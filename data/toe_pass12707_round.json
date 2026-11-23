@@ -1,0 +1,395 @@
+{
+ "card": {
+  "_doc": "Shared input card for the Claude-track intermediate-scale passes (from Pass 12707). Scripts should load values from here instead of hard-coding them. Sources checked 2026-11-23.",
+  "Mt": {
+   "value": 172.57,
+   "sigma_exp": 0.29,
+   "source": "PDG 2024 average (the repo's historical central value)",
+   "alternatives": {
+    "ATLAS+CMS Run1 combination (PRL 132 261902)": [
+     172.52,
+     0.33
+    ],
+    "CMS combination (PDG 2026 review)": [
+     172.44,
+     0.49
+    ],
+    "ATLAS combination (PDG 2026 review)": [
+     172.69,
+     0.48
+    ],
+    "ATLAS J/psi 13 TeV (JHEP04(2026)099)": [
+     172.17,
+     1.56
+    ]
+   },
+   "sigma_scheme": 0.5,
+   "sigma_scheme_note": "MC-mass vs pole/MSR interpretation; pole renormalon floor ~0.25 GeV (Hoang-Lepenik-Preisser 2017), O(0.5-1) GeV MC calibration (Hoang 2014 review). Not included in passes 12684-12706."
+  },
+  "alpha_s": {
+   "value": 0.118,
+   "sigma": 0.0009,
+   "source": "PDG",
+   "alternatives": {
+    "FLAG lattice": [
+     0.1183,
+     0.0007
+    ],
+    "CT25 global fit": [
+     0.1183,
+     0.0022
+    ]
+   }
+  },
+  "Mh": {
+   "value": 125.2,
+   "sigma": 0.11,
+   "source": "PDG 2024"
+  },
+  "M_VL_floor_GeV": {
+   "value": 1740.0,
+   "source": "Pass 12693 (prompt); 1900 long-lived (Pass 12697). Pass 12704's B band used 1650 (drift)."
+  },
+  "hybrid_M_SS_GeV": {
+   "value": 10000000000.0,
+   "source": "Pass 12702"
+  },
+  "FCC_era": {
+   "sigma_Mt": 0.04,
+   "sigma_alpha_s": 0.0002,
+   "sigma_yprime_meas": [
+    0.002,
+    0.005
+   ],
+   "note": "FCC-ee threshold scan incl. theory; FCC-hh y' from Pass 12698 (0.002) and Pass 12705 (0.005)"
+  },
+  "dark_dimension": {
+   "R_max_um": 0.2,
+   "source": "Langhoff arXiv:2610.01825 (v1 preprint, Oct 2026): KK-graviton DM excluded in a flat dark dimension; MeV gamma rays + T_RH >= 5.96 MeV need R <~ 0.2 um. Same threshold suppression: Lee-Randall-Riojas (arXiv 2609.36234 as cited).",
+   "lambda_range_MVV": [
+    0.001,
+    0.1
+   ],
+   "lambda_range_later": [
+    0.0001,
+    1.0
+   ],
+   "Lambda_inv_quarter_um": 87.7
+  }
+ },
+ "drift": {
+  "files": {
+   "toe_pass12693_round.py": {
+    "Mt": [],
+    "alpha_s": [],
+    "M_VL": []
+   },
+   "toe_pass12694_round.py": {
+    "Mt": [],
+    "alpha_s": [],
+    "M_VL": []
+   },
+   "toe_pass12695_round.py": {
+    "Mt": [],
+    "alpha_s": [],
+    "M_VL": []
+   },
+   "toe_pass12696_round.py": {
+    "Mt": [],
+    "alpha_s": [],
+    "M_VL": []
+   },
+   "toe_pass12697_round.py": {
+    "Mt": [
+     "172.57"
+    ],
+    "alpha_s": [],
+    "M_VL": [
+     "1740",
+     "1740.0"
+    ]
+   },
+   "toe_pass12698_round.py": {
+    "Mt": [
+     "172.07",
+     "172.57",
+     "173.07"
+    ],
+    "alpha_s": [],
+    "M_VL": [
+     "1650.0"
+    ]
+   },
+   "toe_pass12699_round.py": {
+    "Mt": [
+     "172.5",
+     "172.57"
+    ],
+    "alpha_s": [],
+    "M_VL": [
+     "1650.0"
+    ]
+   },
+   "toe_pass12700_round.py": {
+    "Mt": [
+     "172.27",
+     "172.57",
+     "172.87"
+    ],
+    "alpha_s": [],
+    "M_VL": [
+     "1740"
+    ]
+   },
+   "toe_pass12701_round.py": {
+    "Mt": [
+     "172.57"
+    ],
+    "alpha_s": [],
+    "M_VL": []
+   },
+   "toe_pass12702_round.py": {
+    "Mt": [
+     "172.27",
+     "172.57",
+     "172.87"
+    ],
+    "alpha_s": [
+     "0.1171",
+     "0.1180",
+     "0.1189"
+    ],
+    "M_VL": [
+     "1740"
+    ]
+   },
+   "toe_pass12703_round.py": {
+    "Mt": [
+     "172.57"
+    ],
+    "alpha_s": [],
+    "M_VL": [
+     "1650.0",
+     "1740.0"
+    ]
+   },
+   "toe_pass12704_round.py": {
+    "Mt": [
+     "172.57"
+    ],
+    "alpha_s": [
+     "0.1180"
+    ],
+    "M_VL": [
+     "1650.0",
+     "1740.0"
+    ]
+   },
+   "toe_pass12705_round.py": {
+    "Mt": [],
+    "alpha_s": [],
+    "M_VL": [
+     "1740.0"
+    ]
+   }
+  },
+  "M_VL_values_seen": [
+   "1650.0",
+   "1740",
+   "1740.0"
+  ]
+ },
+ "threshold": {
+  "formula": "lambda_SM(M_VL) = lambda_VL(M_VL)(1 + 2 Nc y'^2/(48 pi^2)) - (5/6) N_c y'^4/(16 pi^2)",
+  "rows": {
+   "B@R=0.088um": {
+    "no_threshold": 0.49292053965870686,
+    "with_V": 0.5034334712840708,
+    "with_V_and_Z": 0.5003163643260246,
+    "crude_Z_band": [
+     0.49414815146931107,
+     0.5129129292335323
+    ],
+    "shift": 0.007395824667317696
+   },
+   "B@R=10um(old)": {
+    "no_threshold": 0.5216670886484991,
+    "with_V": 0.5333982036682234,
+    "with_V_and_Z": 0.5302909033988858,
+    "crude_Z_band": [
+     0.5241362096305399,
+     0.5428363692671453
+    ],
+    "shift": 0.00862381475038676
+   },
+   "hybrid@1e10": {
+    "no_threshold": 0.4636677443818302,
+    "with_V": 0.47296870570040156,
+    "with_V_and_Z": 0.46985384936899693,
+    "crude_Z_band": [
+     0.46369761388672537,
+     0.48245605556650656
+    ],
+    "shift": 0.006186104987166707
+   }
+  }
+ },
+ "sensitivity": {
+  "mu0": {
+   "PDG": 54070047692.73041,
+   "ATLAS+CMS": 64882531686.08791,
+   "CMS": 87770989783.6987,
+   "ATLAS": 35574066164.36981,
+   "PDG+FLAG": 80788862262.2017,
+   "Mt-0.5 (scheme)": 435516379742.38367,
+   "Mt+0.5 (scheme)": 10956115181.059874
+  },
+  "dy_dMt": -0.04271592042610295,
+  "dy_das": 15.609196491728094,
+  "dlog10mu0_dMt": -1.5639410549684385,
+  "dlog10mu0_das": 564.8596838158397,
+  "errors": {
+   "today exp": {
+    "sigma_yprime": 0.018729846109623787,
+    "sigma_log10_mu0": 0.6812818815099208
+   },
+   "today exp+scheme": {
+    "sigma_yprime": 0.02840721034794651,
+    "sigma_log10_mu0": 1.0371224170403637
+   },
+   "FCC era": {
+    "sigma_yprime": 0.00355883694165014,
+    "sigma_log10_mu0": 0.12913604103226367
+   }
+  }
+ },
+ "B_revised": {
+  "rows": [
+   {
+    "lambda_": 0.0001,
+    "R_um": 0.00877,
+    "M5": 2769076756.6504874,
+    "yB": 0.48781724588228237,
+    "gap": 0.017963396513285435,
+    "FCC_sigma_sep": {
+     "0.002": 7.701742715955822,
+     "0.005": 3.4934757339919718
+    }
+   },
+   {
+    "lambda_": 0.0003,
+    "R_um": 0.02631,
+    "M5": 1919970588.7659044,
+    "yB": 0.4936054931951476,
+    "gap": 0.023751643826150692,
+    "FCC_sigma_sep": {
+     "0.002": 10.183433277484124,
+     "0.005": 4.619159371542577
+    }
+   },
+   {
+    "lambda_": 0.001,
+    "R_um": 0.0877,
+    "M5": 1285291575.3085594,
+    "yB": 0.5002968618198604,
+    "gap": 0.030443012450863505,
+    "FCC_sigma_sep": {
+     "0.002": 13.052333906997179,
+     "0.005": 5.920479748250893
+    }
+   },
+   {
+    "lambda_": 0.002280501710376283,
+    "R_um": 0.2,
+    "M5": 976468400.0645231,
+    "yB": 0.5050917605629531,
+    "gap": 0.035237911193956195,
+    "FCC_sigma_sep": {
+     "0.002": 15.108129782852155,
+     "0.005": 6.852979478664028
+    }
+   },
+   {
+    "lambda_": 0.011402508551881414,
+    "R_um": 1.0,
+    "M5": 571042184.5186006,
+    "yB": 0.514962160056239,
+    "excluded_by_2610_01825": true,
+    "gap": 0.045108310687242026,
+    "FCC_sigma_sep": {
+     "0.002": 19.340028652576795,
+     "0.005": 8.772549705213242
+    }
+   },
+   {
+    "lambda_": 0.11402508551881413,
+    "R_um": 10.0,
+    "M5": 265054302.7183385,
+    "yB": 0.5302909033988858,
+    "excluded_by_2610_01825": true,
+    "gap": 0.060437054029888915,
+    "FCC_sigma_sep": {
+     "0.002": 25.912173140768278,
+     "0.005": 11.753644781554888
+    }
+   },
+   {
+    "lambda_": 0.3420752565564424,
+    "R_um": 30.0,
+    "M5": 183778389.10490608,
+    "yB": 0.5381256250811719,
+    "excluded_by_2610_01825": true,
+    "gap": 0.06827177571217496,
+    "FCC_sigma_sep": {
+     "0.002": 29.271282349511765,
+     "0.005": 13.277321557236167
+    }
+   }
+  ],
+  "y_hybrid": 0.46985384936899693,
+  "surviving_yB": [
+   0.48781724588228237,
+   0.5050917605629531
+  ],
+  "note": "separation = gap / (sigma_meas (+) sigma_param,gap,FCC): a measured y' compared with the two predictions"
+ },
+ "single_T": {
+  "theta_max": 0.18,
+  "kappa_max_assumed": 0.2545584412271571,
+  "hl_lhc_kappa_reach_at_2p1TeV": 0.23239228146978586,
+  "atlas_2408_08789": {
+   "excluded_all_masses_kappa_gt": 0.57,
+   "kappa05_excluded_below_TeV": 2.1,
+   "low_coupling": "singlet excluded for m_T < 1.5 TeV at kappa ~ 0.25 (Gamma/m < 5%)"
+  }
+ },
+ "reheating": {
+  "rows": [
+   {
+    "R_um": 0.00877,
+    "T_RH_min": 5.96,
+    "T_RH_max_est": 16.901414801079454,
+    "overlaps_B_mesogenesis": true
+   },
+   {
+    "R_um": 0.02631,
+    "T_RH_min": 5.96,
+    "T_RH_max_est": 11.718786504805129,
+    "overlaps_B_mesogenesis": true
+   },
+   {
+    "R_um": 0.0877,
+    "T_RH_min": 5.96,
+    "T_RH_max_est": 7.844941821294815,
+    "overlaps_B_mesogenesis": true
+   },
+   {
+    "R_um": 0.2,
+    "T_RH_min": 5.96,
+    "T_RH_max_est": 5.96,
+    "overlaps_B_mesogenesis": true
+   }
+  ],
+  "B_mesogenesis": "T_R ~ 5 MeV (B_d), ~10 MeV (B_s), allowed up to ~140 MeV (arXiv:2101.02706, 2610.03455)"
+ }
+}

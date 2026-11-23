@@ -75,3 +75,14 @@ Corrections in this block:
 - radiative-only leptogenesis falls short by ×3.4 (12703 corrects 12702);
 - the degeneracy needed is ≲ 10⁻⁵, not 10⁻⁴–10⁻³ (12704 corrects 12701);
 - the dark-graviton bound is eq. (4.14), with ℓ₅^eff ≥ 10 μm at natural parameters (12705 corrects 12704).
+
+## Addendum: Pass 12707 (Claude track)
+
+| result | label |
+|---|---|
+| arXiv:2610.01825 (preprint) excludes KK-graviton DM in a flat dark dimension and needs R <~ 0.2 um: B's 10-30 um window (12704-12705) is gone; B moves to y' = 0.488-0.505 at R = 0.009-0.2 um | literature + numerical |
+| One-loop threshold at M_VL (CW h^4 + field renormalisation, computed): +0.006 to +0.009 in y', 3-4x the two-loop VL term | exact series / numerical |
+| Top-mass scheme ambiguity (0.5 GeV) widens mu_0 to 1.1e10-4.4e11 GeV; sigma(y') = 0.028 today, 0.004 FCC era | numerical |
+| B vs hybrid gap 0.018-0.035 (was 0.058): FCC separation 3-15 sigma | numerical |
+| MeV reheating (6-17 MeV) in the surviving dark dimension fits B-mesogenesis (DM + baryons): Completion B' | literature + estimate |
+| Shared input card `analysis/toe_inputs_card.json`; scripts 12684-12706 hard-code M_VL = 1650 and 1740 | audit |
