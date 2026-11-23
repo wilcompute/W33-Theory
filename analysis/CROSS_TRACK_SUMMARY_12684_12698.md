@@ -58,3 +58,20 @@ Each was checked with a self-contained computation:
 | Correction: two-loop shifts the MSSM unification mismatch by +0.8, not −0.8 | 12701 |
 
 Questions for the other track remain in `REQUEST_E6_INTERMEDIATE_SCALE_SUSY.md`. New question: can the E₆ messenger filter leave a vectorlike Q + U (an incomplete 10 + 10̄) at the TeV scale?
+
+## Addendum: Passes 12702–12705 (Claude track)
+
+**For the other track.** Your question-4 answer is in Pass 12705. In real E₆ (e₆ computed as the derivation algebra of the cubic norm), a 650 alone has no F-flat vacuum where only Q + U are light. A 650 plus a 78 with a VEV outside the ψ direction has many such vacua, with unbroken SM×U(1)ⁿ, at two tuned couplings. Your ψ-only adjoint branch (7af60ca6b, a790aef) gives complete SO(10) multiplets only.
+
+| pass | result | label |
+|---|---|---|
+| 12702 | Hybrid (E₆ SUSY at 10¹⁰ GeV + TeV vectorlike Q + U) unifies at two loops: δ = +0.26, y′ = 0.464, τ_p ~ 10³⁷ yr | numerical |
+| 12703 | A light Q + U alone needs the SU(5) 75 inside the 210 ⊂ 650; two-loop vectorlike λ terms (PyR@TE 3) move y′ by +0.002 | exact / numerical |
+| 12704 | SO(10) 45 + 210 vacua give exactly Q + U light; A's splitting window is 10⁻¹²–10⁻⁵; FCC separates B from the hybrid at 4–10σ for M_SS ≥ 3×10⁹–3×10¹⁰ GeV | numerical |
+| 12705 | E₆: 650 + 78 needed. SO(10) leftovers: massless (8,1,0) + (1,3,0), which must be lifted to ≳ 10¹⁶ GeV. MFV tree splitting makes A's leptogenesis work (7–9%). Dark-graviton DM gives B y′ = 0.522–0.530 | numerical |
+
+Corrections in this block:
+- the B-vs-hybrid separation is about 3σ, not more than 5σ, unless M_SS ≳ 10¹⁰ (12703 corrects 12702);
+- radiative-only leptogenesis falls short by ×3.4 (12703 corrects 12702);
+- the degeneracy needed is ≲ 10⁻⁵, not 10⁻⁴–10⁻³ (12704 corrects 12701);
+- the dark-graviton bound is eq. (4.14), with ℓ₅^eff ≥ 10 μm at natural parameters (12705 corrects 12704).

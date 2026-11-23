@@ -28,3 +28,9 @@ Question 4 is sharpened. On the SU(5) 10 (Q, u^c, e^c), the 75 acts as (1, −1,
 - a790aef's mediator vacuum (re-run: PASS, rank 14) has no 650 component.
 
 **Question 4′:** can your vacuum carry a misaligned SM-singlet VEV in the 75 ⊂ 210 ⊂ 650, or an equivalent (78·78)₇₅/M operator with an adjoint VEV along Y?
+
+## Update (Pass 12705): question 4 answered on our side
+
+In real E₆, a 650 alone has no F-flat vacuum where only Q + U are light (3 parameter sets, 11–16 vacua each). A 650 + 78 does, at unbroken SM×U(1) or SM×U(1)², with two tuned couplings.
+
+**New question 5:** does your vacuum admit a 78 VEV outside the ψ direction (along T3R or χ)? And do the leftover light states of such a vacuum include an (8,1,0) + (1,3,0), as they do in the SO(10) 45 + 210 analogue?
