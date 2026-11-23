@@ -1,0 +1,205 @@
+{
+ "mediation": {
+  "rows": [
+   {
+    "case": "gauge mediation (M_mess = 10 M_SS)",
+    "X": 0.0008595113473675927,
+    "y": 0.4719938962777388
+   },
+   {
+    "case": "gravity/anomaly, X = 0.5",
+    "X": 0.5,
+    "y": 0.46509045985241937
+   },
+   {
+    "case": "X = 1",
+    "X": 1.0,
+    "y": 0.4591552301046996
+   },
+   {
+    "case": "X = 3",
+    "X": 3.0,
+    "y": 0.4429737228918266
+   },
+   {
+    "case": "X = 6 (maximal)",
+    "X": 6.0,
+    "y": 0.43493641764286983
+   }
+  ],
+  "gauge_A_over_M": 0.02931742395517711,
+  "note": "gauge mediation keeps the hybrid sharp (y' = 0.472 at M_VL = 1.74 TeV); gravity/anomaly mediation spreads it to 0.435-0.47"
+ },
+ "pgb_decay": {
+  "rows": [
+   {
+    "n": 11,
+    "m_mix": 264.8884280533256,
+    "theta": 0.15223472876627908,
+    "ctau_m": 2.46890221351793e-18,
+    "tau_s": 8.235164154496097e-27,
+    "regime": "prompt"
+   },
+   {
+    "n": 12,
+    "m_mix": 4.460133696175093,
+    "theta": 0.002563295227686835,
+    "ctau_m": 8.708314531199192e-15,
+    "tau_s": 2.904707982387989e-23,
+    "regime": "prompt"
+   },
+   {
+    "n": 13,
+    "m_mix": 0.07509876038734241,
+    "theta": 4.31602071191623e-05,
+    "ctau_m": 3.0715976339232335e-11,
+    "tau_s": 1.0245489105814655e-19,
+    "regime": "prompt"
+   },
+   {
+    "n": 14,
+    "m_mix": 0.0012644965814706526,
+    "theta": 7.267221732589957e-07,
+    "ctau_m": 1.083414246341373e-07,
+    "tau_s": 3.6137900144808973e-16,
+    "regime": "prompt"
+   },
+   {
+    "n": 15,
+    "m_mix": 2.1291318209567457e-05,
+    "theta": 1.2236389775613481e-08,
+    "ctau_m": 0.0003821419889805727,
+    "tau_s": 1.274656400869155e-12,
+    "regime": "displaced"
+   },
+   {
+    "n": 16,
+    "m_mix": 3.5849858176273753e-07,
+    "theta": 2.060336676797342e-10,
+    "ctau_m": 1.3478916327265527,
+    "tau_s": 4.495969422036534e-09,
+    "regime": "R-hadron (detector-stable)"
+   },
+   {
+    "n": 17,
+    "m_mix": 6.036321089228845e-09,
+    "theta": 3.4691500512809458e-12,
+    "ctau_m": 4754.28481026359,
+    "tau_s": 1.5858188159651735e-05,
+    "regime": "R-hadron (detector-stable)"
+   },
+   {
+    "n": 18,
+    "m_mix": 1.016382606399929e-10,
+    "theta": 5.841279347126029e-14,
+    "ctau_m": 16769318.473608041,
+    "tau_s": 0.055935018257531825,
+    "regime": "R-hadron (detector-stable)"
+   },
+   {
+    "n": 19,
+    "m_mix": 1.7113629101600447e-12,
+    "theta": 9.835419023908304e-16,
+    "ctau_m": 59148758076.54887,
+    "tau_s": 197.29405629269135,
+    "regime": "BBN-excluded"
+   },
+   {
+    "n": 20,
+    "m_mix": 2.881555618749973e-14,
+    "theta": 1.656066447557456e-17,
+    "ctau_m": 208629562823572.47,
+    "tau_s": 695895.8066163191,
+    "regime": "BBN-excluded"
+   }
+  ],
+  "collider": "Q + U has the same quantum numbers as B''s Q + T: prompt pair limit 1.74 TeV (3x rate), long-lived R-hadron ~1.9 TeV; HL-LHC to ~2.1 TeV. Collider searches cannot tell hybrid from B'; y' and its M_VL dependence can."
+ },
+ "dw": {
+  "n": 0,
+  "solutions": [],
+  "note": "the B-L VEV of the 45 is exactly the Dimopoulos-Wilczek direction: triplets get mass a, doublets stay light; 10 Sigma 10' involves no VEV field, so it does not lift the Goldstones at tree level (SUSY non-renormalisation)",
+  "theorem": "Sigma^2, 10'10' and 10 Sigma 10' allowed imply 2 q10 = 0 for every Z_N: 10 10 (a GUT-scale mu) is then allowed",
+  "with_singlet": {
+   "n": 0,
+   "solutions": []
+  }
+ },
+ "qudit": {
+  "rows": [
+   {
+    "model": "f = 1",
+    "d": 2,
+    "p_phys": 0.001,
+    "p_fail": 9.98001499598767e-06,
+    "info_bits": 1.0,
+    "info_per_cost": 0.1,
+    "fail_per_bit": 9.98001499598767e-06
+   },
+   {
+    "model": "f = 1",
+    "d": 3,
+    "p_phys": 0.001,
+    "p_fail": 9.98001499598767e-06,
+    "info_bits": 1.584962500721156,
+    "info_per_cost": 0.10566416671474374,
+    "fail_per_bit": 6.296688402057951e-06
+   },
+   {
+    "model": "f = 1",
+    "d": 5,
+    "p_phys": 0.001,
+    "p_fail": 9.98001499598767e-06,
+    "info_bits": 2.321928094887362,
+    "info_per_cost": 0.09287712379549448,
+    "fail_per_bit": 4.298158507992818e-06
+   },
+   {
+    "model": "f = 1",
+    "d": 7,
+    "p_phys": 0.001,
+    "p_fail": 9.98001499598767e-06,
+    "info_bits": 2.807354922057604,
+    "info_per_cost": 0.08021014063021727,
+    "fail_per_bit": 3.554953069016647e-06
+   },
+   {
+    "model": "f = d - 1",
+    "d": 2,
+    "p_phys": 0.001,
+    "p_fail": 9.98001499598767e-06,
+    "info_bits": 1.0,
+    "info_per_cost": 0.1,
+    "fail_per_bit": 9.98001499598767e-06
+   },
+   {
+    "model": "f = d - 1",
+    "d": 3,
+    "p_phys": 0.002,
+    "p_fail": 3.984023987200526e-05,
+    "info_bits": 1.584962500721156,
+    "info_per_cost": 0.10566416671474374,
+    "fail_per_bit": 2.513639272467203e-05
+   },
+   {
+    "model": "f = d - 1",
+    "d": 5,
+    "p_phys": 0.004,
+    "p_fail": 0.00015872383590403993,
+    "info_bits": 2.321928094887362,
+    "info_per_cost": 0.09287712379549448,
+    "fail_per_bit": 6.835863533135797e-05
+   },
+   {
+    "model": "f = d - 1",
+    "d": 7,
+    "p_phys": 0.006,
+    "p_fail": 0.0003556994088959979,
+    "info_bits": 2.807354922057604,
+    "info_per_cost": 0.08021014063021727,
+    "fail_per_bit": 0.00012670268589882962
+   }
+  ],
+  "note": "with level-independent errors, qutrits win (same failure, 1.58x information; radix economy favours d = 3); if errors grow with excited levels (f = d - 1), the logical failure per encoded bit is 2.5x worse for qutrits; literature: qutrit magic state distillation has higher thresholds (Campbell-Anwar-Browne 2012)"
+ }
+}

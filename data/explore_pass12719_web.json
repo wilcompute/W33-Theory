@@ -1,0 +1,63 @@
+{
+ "top_mass": {
+  "rows": [
+   {
+    "Mt": 172.57,
+    "sigma": 0.578013840664737,
+    "mu0": 54070047692.73041,
+    "P_stable": 0.004666889216332795,
+    "y_Bprime": 0.5053675637011803,
+    "y_hybrid": 0.47200671755511314
+   },
+   {
+    "Mt": 172.8,
+    "sigma": 0.5635601121442149,
+    "mu0": 24758661222.551033,
+    "P_stable": 0.0011692355377209865,
+    "y_Bprime": 0.49551769916002214,
+    "y_hybrid": 0.4601648797770339
+   },
+   {
+    "Mt": 172.8,
+    "sigma": 0.26,
+    "mu0": 24758661222.551033,
+    "P_stable": 1.4417429315424477e-08,
+    "y_Bprime": 0.49551769916002214,
+    "y_hybrid": 0.4601648797770339
+   }
+  ],
+  "source": "Ball et al. arXiv:2603.28865 (toponium-corrected global fit), M_t = 172.80 +- 0.26",
+  "note": "the hybrid's ceiling M_SS <= mu_0 still holds (8.45e9 < mu_0)"
+ },
+ "desi_radion": {
+  "rows": [
+   {
+    "w0": -0.84,
+    "dlnG_dt": 8.591373108208836e-12,
+    "ratio_to_LLR_2sigma": 38.52633680811137
+   },
+   {
+    "w0": -0.95,
+    "dlnG_dt": 2.6848040963152634e-12,
+    "ratio_to_LLR_2sigma": 12.039480252534812
+   },
+   {
+    "w0": -0.99,
+    "dlnG_dt": 5.369608192630526e-13,
+    "ratio_to_LLR_2sigma": 2.4078960505069626
+   },
+   {
+    "w0": -0.999,
+    "dlnG_dt": 5.3696081926305264e-14,
+    "ratio_to_LLR_2sigma": 0.24078960505069624
+   }
+  ],
+  "H0_per_year": 7.159477590174029e-11,
+  "LLR": [
+   7.1e-14,
+   7.6e-14
+  ],
+  "max_one_plus_w0": 0.004153003198744644,
+  "note": "DESI-level evolution (1 + w0 ~ 0.16) cannot be carried by the dark-dimension radius if SM masses are fixed in 5D units; it must come from another field (e.g. the string-coupling modulus of Anchordoqui et al. 2025) or R must be stabilised"
+ }
+}

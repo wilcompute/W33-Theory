@@ -1,4 +1,9 @@
-# Decision table: which measurement decides which completion (Claude track, as of Pass 12718)
+# Decision table: which measurement decides which completion (Claude track, as of Pass 12719)
+
+**Update (Pass 12719):**
+- **Top mass:** with M_t = 172.80 ± 0.26 (toponium-corrected, arXiv:2603.28865), μ₀ = 2.5×10¹⁰ GeV and P(absolutely stable) ≈ 10⁻³. y′ drops by about 0.01 for both B′ (≈0.496) and the hybrid (≈0.460).
+- **B′:** its dark-dimension radius cannot drive DESI's evolving dark energy; lunar laser ranging excludes that by 38×.
+- **Hybrid:** Dimopoulos–Wilczek doublet–triplet splitting conflicts with discrete Goldstone protection; a pseudo-Goldstone-Higgs route (Tavartkiladze 2018) is the candidate fix.
 
 **Not a theory of everything.** This is a map of three candidate completions of the Standard Model built around the zero of the Higgs quartic coupling near 10¹⁰–10¹¹ GeV, and of the experiments that decide between them. It summarises Passes 12684–12718.
 
