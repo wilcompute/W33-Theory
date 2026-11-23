@@ -1,0 +1,134 @@
+{
+ "energy": {
+  "V_gap": 0.3868918602503246,
+  "thermal_sigma_1fF": 0.0020351773878460816,
+  "onchip": {
+   "2": {
+    "swing_V": 0.3868918602503246,
+    "thermal_floor_V": 0.03232409287380076,
+    "energy_per_bit_rel": 1.0
+   },
+   "3": {
+    "swing_V": 0.7737837205006493,
+    "thermal_floor_V": 0.06493798983593806,
+    "energy_per_bit_rel": 2.52371901428583
+   },
+   "4": {
+    "swing_V": 1.1606755807509739,
+    "thermal_floor_V": 0.097584420093569,
+    "energy_per_bit_rel": 4.5
+   }
+  },
+  "link_windows_alpha1": {
+   "NRZ_to_PAM3": 36.12359947967774,
+   "PAM3_to_PAM4": 42.2619021733635
+  },
+  "note": "illustrative linear-in-f loss; PAM3 is the margin optimum only in a narrow band of loss x data rate"
+ },
+ "light_QU": {
+  "candidate": "generalised missing partner mechanism (arXiv:2308.11705): splits colour from electroweak components of vectorlike SU(5) 10-plets without fine-tuning; Q + U are the coloured part of a 10",
+  "open": "embedding in E6 (650 + 78 or 27 + 27bar sector); would remove the (M_VL/M_GUT)^2 penalty of Pass 12710"
+ },
+ "rs_exact": {
+  "rows": [
+   {
+    "kL": 0.0,
+    "x1": null,
+    "x1_flat_equiv": null,
+    "M5": 980857734.2223688,
+    "y_UV": 0.5050118693200438
+   },
+   {
+    "kL": 1.0,
+    "x1": 5.142938971855146,
+    "x1_flat_equiv": 5.398141569083773,
+    "M5": 1536070333.1523654,
+    "y_UV": 0.49727960109413427
+   },
+   {
+    "kL": 3.0,
+    "x1": 3.860087319564038,
+    "x1_flat_equiv": 19.986327529234373,
+    "M5": 3138971439.403781,
+    "y_UV": 0.48590428622078763
+   },
+   {
+    "kL": 5.0,
+    "x1": 3.8322415099490987,
+    "x1_flat_equiv": 92.6224195358236,
+    "M5": 6123678698.486843,
+    "y_UV": 0.47629203259549985
+   },
+   {
+    "kL": 7.0,
+    "x1": 3.8317157906935324,
+    "x1_flat_equiv": 491.7190116497468,
+    "M5": 11927665711.384699,
+    "y_UV": 0.4676651992855364
+   },
+   {
+    "kL": 10.0,
+    "x1": 3.831705994550906,
+    "x1_flat_equiv": 6919.504153285806,
+    "M5": 32422775625.297783,
+    "y_UV": 0.4564792822570394
+   }
+  ],
+  "kL_cross_hybrid": 6.46026030141122
+ },
+ "forecast": {
+  "Br_median": 1.0069000402720733e-06,
+  "Br_90": [
+   2.0644819350206404e-07,
+   4.854009115511637e-06
+  ],
+  "testable": {
+   "reach 1e-06": 0.50289,
+   "reach 1e-07": 0.99729,
+   "reach 1e-08": 1.0
+  },
+  "y_range": [
+   0.4931410726285973,
+   0.5086896080160169
+  ],
+  "fcc_3sigma": 1.0,
+  "fcc_5sigma": 0.49867
+ },
+ "qat": {
+  "task": "teacher MLP 32-64-10 (tanh), student 32-128-10 ReLU, 6000 train / 3000 test, 60 epochs, 3 seeds",
+  "rows": {
+   "fp32": {
+    "acc": 0.5624444444444444,
+    "acc_sd": 0.002078698548207744,
+    "zero_frac": 0.0,
+    "bits_per_weight": 32,
+    "mults_per_weight": 1.0,
+    "adds_skipped": 0.0
+   },
+   "binary": {
+    "acc": 0.5226666666666667,
+    "acc_sd": 0.011375737664319046,
+    "zero_frac": 0.0,
+    "bits_per_weight": 1,
+    "mults_per_weight": 0.0,
+    "adds_skipped": 0.0
+   },
+   "ternary": {
+    "acc": 0.5384444444444445,
+    "acc_sd": 0.005209203630991567,
+    "zero_frac": 0.44165426587301587,
+    "bits_per_weight": 1.584962500721156,
+    "mults_per_weight": 0.0,
+    "adds_skipped": 0.44165426587301587
+   },
+   "2bit": {
+    "acc": 0.5521111111111111,
+    "acc_sd": 0.003034777840832823,
+    "zero_frac": 0.0,
+    "bits_per_weight": 2,
+    "mults_per_weight": 1.0,
+    "adds_skipped": 0.0
+   }
+  }
+ }
+}
