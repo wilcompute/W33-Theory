@@ -1,0 +1,214 @@
+{
+ "superpotential": {
+  "zero_modes": 30,
+  "Y_content": {
+   "0.167": 12,
+   "0.667": 6,
+   "0.833": 12
+  },
+  "lifting": [
+   {
+    "eps": 0.0001,
+    "lightest_nonzero": 0.0004242259752632338,
+    "median_lifted": 0.0004242259752648223
+   },
+   {
+    "eps": 0.001,
+    "lightest_nonzero": 0.00424259662923602,
+    "median_lifted": 0.00424259662923636
+   },
+   {
+    "eps": 0.01,
+    "lightest_nonzero": 0.042426365972647345,
+    "median_lifted": 0.042426365972647914
+   }
+  ],
+  "quality_min_dim": 11,
+  "note": "W = (m/2) tr S^2 + (l/4M) tr S^4 is the generic SO(10)-invariant W to quartic order; the B-L vacuum exists; explicit SU(5)-only terms lift the would-be Goldstones linearly; a 'Goldstone quality problem' like the axion's"
+ },
+ "e6_partial": {
+  "statement": "global E6 -> SO(10) x U(1): Goldstones 16 + 16bar (contain e^c, L, d^c, nu^c); to isolate Q + U the accidental symmetry must be SO(10) acting on a 45 (or E6 broken along B-L inside SO(10) with the 16s eaten/lifted)"
+ },
+ "plane": [
+  {
+   "M_VL": 1740.0,
+   "hybrid": [
+    0.46459351914079894,
+    0.4794566137558519
+   ],
+   "Bprime": [
+    0.4935291017043072,
+    0.5099259815895526
+   ],
+   "gap": 0.014072487948455281,
+   "sep": {
+    "0.005": 2.2840614479667494,
+    "0.002": 3.4171021481318986
+   }
+  },
+  {
+   "M_VL": 3000.0,
+   "hybrid": [
+    0.445216162645572,
+    0.4616133631507473
+   ],
+   "Bprime": [
+    0.48074503078131614,
+    0.49923525935232416
+   ],
+   "gap": 0.019131667630568838,
+   "sep": {
+    "0.005": 3.105201058288511,
+    "0.002": 4.645579573222403
+   }
+  },
+  {
+   "M_VL": 6000.0,
+   "hybrid": [
+    0.42119481183607793,
+    0.4397483261361164
+   ],
+   "Bprime": [
+    0.4665476162819348,
+    0.4878529036895037
+   ],
+   "gap": 0.02679929014581839,
+   "sep": {
+    "0.005": 4.349708855970849,
+    "0.002": 6.507442909960936
+   }
+  }
+ ],
+ "multiplier": {
+  "trits": 41,
+  "levels_max": 6,
+  "binary_wallace_levels": 8,
+  "verified": true
+ },
+ "energy": {
+  "E_op": {
+   "fp32": 4.6,
+   "int8": 0.33,
+   "2bit": 0.15,
+   "ternary": 0.1,
+   "binary": 0.1
+  },
+  "crossover_pJ_per_bit": 0.07333333333333332,
+  "fronts": {
+   "30.0": {
+    "front": [
+     {
+      "modes": [
+       "binary",
+       "binary",
+       "binary"
+      ],
+      "energy_uJ": 0.654976,
+      "acc": 0.5431666666666666
+     },
+     {
+      "modes": [
+       "ternary",
+       "binary",
+       "binary"
+      ],
+      "energy_uJ": 0.7285237760000001,
+      "acc": 0.5435
+     },
+     {
+      "modes": [
+       "2bit",
+       "binary",
+       "binary"
+      ],
+      "energy_uJ": 0.7780608,
+      "acc": 0.5575
+     }
+    ],
+    "ternary_share": 0.1111111111111111
+   },
+   "0.16": {
+    "front": [
+     {
+      "modes": [
+       "binary",
+       "binary",
+       "binary"
+      ],
+      "energy_uJ": 0.0056576000000000005,
+      "acc": 0.5431666666666666
+     },
+     {
+      "modes": [
+       "ternary",
+       "binary",
+       "binary"
+      ],
+      "energy_uJ": 0.005870592,
+      "acc": 0.5435
+     },
+     {
+      "modes": [
+       "2bit",
+       "binary",
+       "binary"
+      ],
+      "energy_uJ": 0.00651776,
+      "acc": 0.5575
+     }
+    ],
+    "ternary_share": 0.1111111111111111
+   },
+   "0.02": {
+    "front": [
+     {
+      "modes": [
+       "ternary",
+       "ternary",
+       "ternary"
+      ],
+      "energy_uJ": 0.00191488,
+      "acc": 0.5413333333333333
+     },
+     {
+      "modes": [
+       "ternary",
+       "ternary",
+       "2bit"
+      ],
+      "energy_uJ": 0.00204544,
+      "acc": 0.542
+     },
+     {
+      "modes": [
+       "2bit",
+       "ternary",
+       "2bit"
+      ],
+      "energy_uJ": 0.0024632319999999997,
+      "acc": 0.548
+     },
+     {
+      "modes": [
+       "2bit",
+       "binary",
+       "ternary"
+      ],
+      "energy_uJ": 0.00285696,
+      "acc": 0.5505
+     },
+     {
+      "modes": [
+       "2bit",
+       "binary",
+       "binary"
+      ],
+      "energy_uJ": 0.00289792,
+      "acc": 0.5575
+     }
+    ],
+    "ternary_share": 0.4666666666666666
+   }
+  }
+ }
+}
