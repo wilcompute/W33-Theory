@@ -77,3 +77,5 @@ The Super-K limit is 2.4×10³⁴ yr. All the spectra that unify predict τ_p of
 ## (5) Cross-track summary
 
 `CROSS_TRACK_SUMMARY_12684_12698.md` now has an addendum for Passes 12699–12701.
+
+**Correction (Pass 12704).** An explicit scan with flavoured Pilaftsis–Underwood asymmetries gives a degeneracy window of 10⁻¹² ≲ ΔM/M ≲ 10⁻⁵ for A at 1.24×10⁷ GeV (more than 5% of points reach η_B). At 10⁻⁴ only 0.2% of points work, so the 10⁻⁴–10⁻³ estimated in item 1 was optimistic.
