@@ -1,6 +1,6 @@
 {
  "updated": "2026-11-23",
- "through_pass": 12726,
+ "through_pass": 12727,
  "Mt": "172.80 ± 0.26 GeV",
  "mu0": "2.5 × 10¹⁰ GeV",
  "P_stable": "3e-06 to 3e-03",
@@ -10,6 +10,7 @@
  "A_ma": "229 μeV",
  "A_dm": "19%",
  "A_theta": "0.992π",
+ "A_HI": "1e+05 GeV",
  "Bp_chi2": "3.0",
  "Bp_sigma8": "0.995",
  "belle_10": "26%–61%",

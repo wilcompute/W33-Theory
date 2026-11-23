@@ -1,0 +1,76 @@
+{
+ "isocurvature": {
+  "rows": [
+   {
+    "f_a": 24800000000.0,
+    "theta_over_pi": 0.99203,
+    "dlnOmega_dtheta": 9.66550494529983,
+    "H_I_max": 144015.23834019728,
+    "r": 3.3754363222764055e-19
+   },
+   {
+    "f_a": 170000000000.0,
+    "theta_over_pi": 0.65065,
+    "dlnOmega_dtheta": 1.5189214352950842,
+    "H_I_max": 6281956.4950762745,
+    "r": 6.422481667510778e-16
+   }
+  ],
+  "note": "low-scale inflation: H_I <~ 1e5 GeV at the central f_a; r unobservable"
+ },
+ "fifth_force": [
+  {
+   "beta": 0.3,
+   "f": 0.2,
+   "extra_force": 0.036,
+   "below_0p1": true
+  },
+  {
+   "beta": 0.2,
+   "f": 0.5,
+   "extra_force": 0.04000000000000001,
+   "below_0p1": true
+  },
+  {
+   "beta": 0.1,
+   "f": 1.0,
+   "extra_force": 0.020000000000000004,
+   "below_0p1": true
+  }
+ ],
+ "radiative_brane": {
+  "ps_loc": [
+   2.3955,
+   4.0,
+   0.0
+  ],
+  "su5_loc": [
+   -1.9935000000000005,
+   -2.0,
+   -2.0
+  ],
+  "rows": [
+   {
+    "MsR": 10,
+    "delta": [
+     0.1473200553747649,
+     0.7329355988794278,
+     -0.7329355988794278
+    ],
+    "shift": -1.8841680145479005,
+    "magnitude": 0.7329355988794278
+   },
+   {
+    "MsR": 15,
+    "delta": [
+     0.17326182940985987,
+     0.861999151292836,
+     -0.861999151292836
+    ],
+    "shift": -2.215953532502083,
+    "magnitude": 0.861999151292836
+   }
+  ],
+  "note": "magnitudes O(1), as the tree-level repair needs, but the sign in this crude estimate adds to the deficit: the repair needs a tree-level brane term of opposite sign to the radiative one"
+ }
+}
