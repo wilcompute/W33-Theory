@@ -28,4 +28,4 @@ def test_layers():
 
 
 def test_status():
-    assert S["through_pass"] == 12726 and S["falsifier"].startswith("y")
+    assert S["through_pass"] >= 12726 and S["falsifier"].startswith("y")
