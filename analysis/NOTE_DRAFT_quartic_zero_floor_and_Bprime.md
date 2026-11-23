@@ -24,6 +24,7 @@
 |---|---|---|---|---|---|---|---|
 | y′ | 0.608 | 0.544 | 0.495 | 0.458 | 0.433 | 0.418 | 0.413 |
 
+- **Figure:** `analysis/figures/y_floor.png` plots this curve for one, two and three vectorlike families.
 - **The curve flattens above 10¹⁰ GeV,** so every completion with a quartic zero at an intermediate scale and one vectorlike family predicts y′ ≈ 0.41–0.50.
 - **Uncertainty budget:** Monte Carlo over M_t (172.80 ± 0.26 ⊕ a 0.5 GeV scheme term), α_s (0.1180 ± 0.0009) and the threshold field-renormalisation term (±50%). The floor's 95% range is **0.351–0.469** (median 0.400). At FCC-ee precision (σ_Mt = 0.04, σ_αs = 0.0002) it tightens to **0.402–0.423**.
 - **Scripts:** `explore_pass12723_attractor.py`, `explore_pass12724_round.py`, `explore_pass12725_round.py`.
@@ -45,6 +46,7 @@
 - **Newton's constant:** a radion-driven DESI evolution would vary G 38× faster than lunar laser ranging allows. The radius must be static.
 
 **Tests:**
+- **New data (Belle, Jan 2026, 2601.07104):** B⁺ → p + invisible excludes minimal B-mesogenesis for m_ψ > 2.5 GeV and 2.15–2.3 GeV. With minimal mesogenesis the coupled second component must then be at least 50% of the dark matter (the f = 0.5, β = 0.1 fit still gives χ² 3.3 with σ8 unchanged). The Dark_CP variant lies below these limits.
 - **Belle II inclusive B → baryon + missing energy** (26–61% of B′ at 10 ab⁻¹, 62–89% at 50 ab⁻¹).
 - **HL-LHC vectorlike quarks** at ≥ 1.74 TeV.
 - **FCC-hh y′.**

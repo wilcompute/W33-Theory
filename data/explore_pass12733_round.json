@@ -1,0 +1,125 @@
+{
+ "sm_brane_matter": {
+  "window_unchanged": true,
+  "reason": "brane matter = complete SM families, universal at one loop; the localised log depends on even zero modes only",
+  "cost": "no GUT Yukawa relations for brane matter (b-tau unification not predicted)"
+ },
+ "brane_proton": {
+  "rows": [
+   {
+    "Lambda_R": 3,
+    "Lambda": 6.02987517607916e+16,
+    "coupling": "weak",
+    "tau_yr": 2.115208925634399e+37
+   },
+   {
+    "Lambda_R": 3,
+    "Lambda": 6.02987517607916e+16,
+    "coupling": "NDA strong",
+    "tau_yr": 8.482303631059632e+32
+   },
+   {
+    "Lambda_R": 5,
+    "Lambda": 7.24788691401747e+16,
+    "coupling": "weak",
+    "tau_yr": 4.415354897265239e+37
+   },
+   {
+    "Lambda_R": 5,
+    "Lambda": 7.24788691401747e+16,
+    "coupling": "NDA strong",
+    "tau_yr": 1.7706232431038487e+33
+   },
+   {
+    "Lambda_R": 7,
+    "Lambda": 8.18148516954664e+16,
+    "coupling": "weak",
+    "tau_yr": 7.168834800956464e+37
+   },
+   {
+    "Lambda_R": 7,
+    "Lambda": 8.18148516954664e+16,
+    "coupling": "NDA strong",
+    "tau_yr": 2.874809798960257e+33
+   },
+   {
+    "Lambda_R": 10,
+    "Lambda": 9.30257188428582e+16,
+    "coupling": "weak",
+    "tau_yr": 1.1982077417154476e+38
+   },
+   {
+    "Lambda_R": 10,
+    "Lambda": 9.30257188428582e+16,
+    "coupling": "NDA strong",
+    "tau_yr": 4.804991958545382e+33
+   },
+   {
+    "Lambda_R": 14,
+    "Lambda": 1.0500370440022784e+17,
+    "coupling": "weak",
+    "tau_yr": 1.945084466128402e+38
+   },
+   {
+    "Lambda_R": 14,
+    "Lambda": 1.0500370440022784e+17,
+    "coupling": "NDA strong",
+    "tau_yr": 7.800079145756379e+33
+   },
+   {
+    "Lambda_R": 20,
+    "Lambda": 1.19385779289401e+17,
+    "coupling": "weak",
+    "tau_yr": 3.250351859813993e+38
+   },
+   {
+    "Lambda_R": 20,
+    "Lambda": 1.19385779289401e+17,
+    "coupling": "NDA strong",
+    "tau_yr": 1.3034396294660423e+34
+   },
+   {
+    "Lambda_R": 40,
+    "Lambda": 1.531979192168949e+17,
+    "coupling": "weak",
+    "tau_yr": 8.813155828368882e+38
+   },
+   {
+    "Lambda_R": 40,
+    "Lambda": 1.531979192168949e+17,
+    "coupling": "NDA strong",
+    "tau_yr": 3.5342070836641704e+34
+   }
+  ],
+  "note": "weakly coupled brane operators are harmless (tau >~ 1e38); at NDA strong coupling tau ~ 1e33-1e35, so a brane baryon-number (or R-) symmetry is needed"
+ },
+ "evidence": {
+  "rows": {
+   "15": {
+    "hybrid": 0.00565487606644859,
+    "A_escape": 0.056503125,
+    "Bprime": 0.05446279854328127
+   },
+   "5": {
+    "hybrid": 0.0018849586888161967,
+    "A_escape": 0.018834375,
+    "Bprime": 0.018154266181093753
+   },
+   "2": {
+    "hybrid": 0.0007539834755264787,
+    "A_escape": 0.0075337500000000005,
+    "Bprime": 0.007261706472437502
+   }
+  },
+  "dm_factor_hybrid": 0.007539834755264787,
+  "note": "explicit factors: the exponentially sensitive bino freeze-in costs the hybrid x0.018; with it A-escape and B' lead, all far below the SM"
+ },
+ "figure": "analysis/figures/y_floor.png",
+ "belle_2026": {
+  "paper": "2601.07104",
+  "excludes": "minimal B-mesogenesis for m_psi > 2.5 GeV and 2.15-2.3 GeV (B+ -> p X_inv, 711 fb^-1)",
+  "mesogenesis_share_max": 0.49724723928332754,
+  "other_min": 0.5027527607166724,
+  "Bprime": "if B' uses minimal mesogenesis the coupled second component must be >= 50% (the f = 0.5, beta = 0.1 fit of Pass 12725: chi2 3.3, sigma8 0.993); the Dark_CP variant (A_CP Br ~ 1e-7) is below these exclusive limits"
+ }
+}
