@@ -13,7 +13,7 @@ good = f25["partial_coupling"]["good"]; best = min(good, key=lambda p: p["chi2"]
 b2 = {r["lumi_ab"]: r for r in f23["belle2"]["curve"]}
 mis = next(r for r in f26["misalignment"]["rows"] if abs(r["f_a"] - 2.48e10) < 1e9)
 status = {
-    "updated": datetime.date.today().isoformat(), "through_pass": 12730,
+    "updated": datetime.date.today().isoformat(), "through_pass": 12731,
     "Mt": "172.80 ± 0.26 GeV", "mu0": f"{web['top_mass']['rows'][1]['mu0']:.1e} GeV".replace("e+10", " × 10¹⁰"),
     "P_stable": f"{min(ps):.0e} to {max(ps):.0e}",
     "floor_today": f"{f24['y_floor_mc']['median']:.2f} (95%: {f24['y_floor_mc']['p2_5']:.2f}–{f24['y_floor_mc']['p97_5']:.2f})",

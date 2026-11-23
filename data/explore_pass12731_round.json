@@ -1,0 +1,92 @@
+{
+ "two_loop_orbifold": {
+  "reference": [
+   4.058938752962884e+16,
+   0.25865218987290817
+  ],
+  "rows": [
+   {
+    "Lambda_R": 3,
+    "M_c": 2.0099583920263868e+16,
+    "M12": 6.029875176079161e+16,
+    "delta": 0.18254192237113642
+   },
+   {
+    "Lambda_R": 5,
+    "M_c": 1.449577382803494e+16,
+    "M12": 7.24788691401747e+16,
+    "delta": 0.14733713242378954
+   },
+   {
+    "Lambda_R": 7,
+    "M_c": 1.16878359564952e+16,
+    "M12": 8.18148516954664e+16,
+    "delta": 0.12421379683214084
+   },
+   {
+    "Lambda_R": 10,
+    "M_c": 9302571884285820.0,
+    "M12": 9.30257188428582e+16,
+    "delta": 0.09975939710163217
+   },
+   {
+    "Lambda_R": 14,
+    "M_c": 7500264600016274.0,
+    "M12": 1.0500370440022784e+17,
+    "delta": 0.07674481931656985
+   },
+   {
+    "Lambda_R": 20,
+    "M_c": 5969288964470050.0,
+    "M12": 1.19385779289401e+17,
+    "delta": 0.05240721478684662
+   },
+   {
+    "Lambda_R": 40,
+    "M_c": 3829947980422373.0,
+    "M12": 1.531979192168949e+17,
+    "delta": 0.005286650534745974
+   }
+  ],
+  "window_0p1": [
+   10,
+   14,
+   20,
+   40
+  ]
+ },
+ "higgsino": {
+  "rows": [
+   {
+    "M_gaugino": 1000000000.0,
+    "delta_m0_keV": 8.3156161,
+    "inelastic": false
+   },
+   {
+    "M_gaugino": 8450000000.0,
+    "delta_m0_keV": 0.9840965798816567,
+    "inelastic": false
+   },
+   {
+    "M_gaugino": 100000000000.0,
+    "delta_m0_keV": 0.08315616099999999,
+    "inelastic": false
+   }
+  ],
+  "need_mchi": 80000000000.0,
+  "M_SS": 8450000000.0,
+  "verdict": "with M_SS = 8.45e9 the splitting is ~1 keV, so the higgsino stays Dirac-like and must be heavier than ~8e10 GeV, i.e. mu ~ 10 M_SS; then it is not the LSP. The hybrid's DM must be a bino/gaugino-type LSP at ~M_SS produced by freeze-in (T_RH < M_SS), or an axion"
+ },
+ "z3": {
+  "statement": "E6's centre Z3 and trinification's cyclic Z3 are both elements of E6 (the cyclic permutation is a Weyl-group element), so every E6-invariant operator is invariant under them: neither can forbid Hbar Sigma^2 H. 'Ternary' structures inside E6 cannot protect the accidental symmetry; a symmetry outside E6 (Pass 12718's Z10) is needed"
+ },
+ "pq_relaxation": {
+  "amplitude_ratio": 7258064.516129033,
+  "requirements": [
+   "radial potential quadratic-dominated along a flat direction (W = lambda X (P Q - f_a^2) with soft masses)",
+   "resonance parameter q = g^2 Phi_0^2 / 4 m^2 <~ 1 for couplings to the axion and other fields",
+   "saxion decays before BBN without restoring PQ"
+  ],
+  "note": "a pure lambda |Phi|^4 radial potential restores PQ for Phi_0/f_a ~ 7e6 (conformal preheating); a SUSY flat direction is required"
+ }
+}
