@@ -1,0 +1,400 @@
+{
+ "pgb": {
+  "unbroken": 15,
+  "broken": 30,
+  "decomposition": {
+   "(3,2) Y=-0.833": 6,
+   "(3,1) Y=-0.667": 3,
+   "(3,2) Y=-0.167": 6,
+   "(3,2) Y=+0.167": 6,
+   "(3,1) Y=+0.667": 3,
+   "(3,2) Y=+0.833": 6
+  },
+  "uneaten": "Q + Qbar + U + Ubar",
+  "TeV_estimate_GeV": {
+   "M_SS=3e+09": 219.5121951219512,
+   "M_SS=1e+10": 2439.0243902439024,
+   "M_SS=3e+10": 21951.219512195123
+  },
+  "note": "GIFT-type (Goldstones instead of fine tuning) applied to Q + U: needs an accidental SO(10) of the Higgs-sector superpotential (only SU(5) gauged); the 45 with a Dimopoulos-Wilczek VEV.  Scale estimate is dimensional, mechanism-dependent."
+ },
+ "signed_digit": {
+  "correct": true,
+  "locality": 2,
+  "redundancy": 0.4649735207179271,
+  "note": "carry-free like binary carry-save, but needs one carry-propagating conversion at the end"
+ },
+ "inclusive": {
+  "rows": [
+   {
+    "eps_tag": 0.002,
+    "eps_sig": 0.1,
+    "bkg": 0,
+    "reach": 1.1090909090909091e-07,
+    "frac_B_prime": 0.995565
+   },
+   {
+    "eps_tag": 0.002,
+    "eps_sig": 0.1,
+    "bkg": 10,
+    "reach": 3.4664251648527916e-07,
+    "frac_B_prime": 0.854645
+   },
+   {
+    "eps_tag": 0.002,
+    "eps_sig": 0.1,
+    "bkg": 100,
+    "reach": 8.563636363636363e-07,
+    "frac_B_prime": 0.56475
+   },
+   {
+    "eps_tag": 0.002,
+    "eps_sig": 0.3,
+    "bkg": 0,
+    "reach": 3.696969696969697e-08,
+    "frac_B_prime": 1.0
+   },
+   {
+    "eps_tag": 0.002,
+    "eps_sig": 0.3,
+    "bkg": 10,
+    "reach": 1.1554750549509305e-07,
+    "frac_B_prime": 0.9945
+   },
+   {
+    "eps_tag": 0.002,
+    "eps_sig": 0.3,
+    "bkg": 100,
+    "reach": 2.8545454545454544e-07,
+    "frac_B_prime": 0.896885
+   },
+   {
+    "eps_tag": 0.005,
+    "eps_sig": 0.1,
+    "bkg": 0,
+    "reach": 4.436363636363636e-08,
+    "frac_B_prime": 1.0
+   },
+   {
+    "eps_tag": 0.005,
+    "eps_sig": 0.1,
+    "bkg": 10,
+    "reach": 1.3865700659411165e-07,
+    "frac_B_prime": 0.98739
+   },
+   {
+    "eps_tag": 0.005,
+    "eps_sig": 0.1,
+    "bkg": 100,
+    "reach": 3.425454545454545e-07,
+    "frac_B_prime": 0.857345
+   },
+   {
+    "eps_tag": 0.005,
+    "eps_sig": 0.3,
+    "bkg": 0,
+    "reach": 1.4787878787878787e-08,
+    "frac_B_prime": 1.0
+   },
+   {
+    "eps_tag": 0.005,
+    "eps_sig": 0.3,
+    "bkg": 10,
+    "reach": 4.621900219803722e-08,
+    "frac_B_prime": 1.0
+   },
+   {
+    "eps_tag": 0.005,
+    "eps_sig": 0.3,
+    "bkg": 100,
+    "reach": 1.1418181818181817e-07,
+    "frac_B_prime": 0.994805
+   }
+  ],
+  "belle_scaling": {
+   "limit": 3e-05,
+   "lumi": 0.71,
+   "scaled": [
+    4.26e-07,
+    3.5749125863438954e-06
+   ]
+  }
+ },
+ "mixed": {
+  "configs": [
+   {
+    "modes": [
+     "binary",
+     "binary",
+     "binary"
+    ],
+    "acc": 0.5431666666666666,
+    "energy_uJ": 0.6528
+   },
+   {
+    "modes": [
+     "binary",
+     "binary",
+     "ternary"
+    ],
+    "acc": 0.5345,
+    "energy_uJ": 0.67584
+   },
+   {
+    "modes": [
+     "binary",
+     "binary",
+     "2bit"
+    ],
+    "acc": 0.5393333333333333,
+    "energy_uJ": 0.6912
+   },
+   {
+    "modes": [
+     "ternary",
+     "binary",
+     "binary"
+    ],
+    "acc": 0.5435,
+    "energy_uJ": 0.726528
+   },
+   {
+    "modes": [
+     "ternary",
+     "binary",
+     "ternary"
+    ],
+    "acc": 0.5411666666666667,
+    "energy_uJ": 0.749568
+   },
+   {
+    "modes": [
+     "ternary",
+     "binary",
+     "2bit"
+    ],
+    "acc": 0.5423333333333333,
+    "energy_uJ": 0.7649279999999999
+   },
+   {
+    "modes": [
+     "2bit",
+     "binary",
+     "binary"
+    ],
+    "acc": 0.5575,
+    "energy_uJ": 0.77568
+   },
+   {
+    "modes": [
+     "2bit",
+     "binary",
+     "ternary"
+    ],
+    "acc": 0.5505,
+    "energy_uJ": 0.79872
+   },
+   {
+    "modes": [
+     "2bit",
+     "binary",
+     "2bit"
+    ],
+    "acc": 0.5503333333333333,
+    "energy_uJ": 0.81408
+   },
+   {
+    "modes": [
+     "binary",
+     "ternary",
+     "binary"
+    ],
+    "acc": 0.5343333333333333,
+    "energy_uJ": 0.9477120000000001
+   },
+   {
+    "modes": [
+     "binary",
+     "ternary",
+     "ternary"
+    ],
+    "acc": 0.5329999999999999,
+    "energy_uJ": 0.9707520000000001
+   },
+   {
+    "modes": [
+     "binary",
+     "ternary",
+     "2bit"
+    ],
+    "acc": 0.5366666666666666,
+    "energy_uJ": 0.9861120000000001
+   },
+   {
+    "modes": [
+     "ternary",
+     "ternary",
+     "binary"
+    ],
+    "acc": 0.5356666666666667,
+    "energy_uJ": 1.0214400000000001
+   },
+   {
+    "modes": [
+     "ternary",
+     "ternary",
+     "ternary"
+    ],
+    "acc": 0.5413333333333333,
+    "energy_uJ": 1.04448
+   },
+   {
+    "modes": [
+     "ternary",
+     "ternary",
+     "2bit"
+    ],
+    "acc": 0.542,
+    "energy_uJ": 1.0598400000000001
+   },
+   {
+    "modes": [
+     "2bit",
+     "ternary",
+     "binary"
+    ],
+    "acc": 0.5411666666666666,
+    "energy_uJ": 1.070592
+   },
+   {
+    "modes": [
+     "2bit",
+     "ternary",
+     "ternary"
+    ],
+    "acc": 0.5388333333333333,
+    "energy_uJ": 1.0936320000000002
+   },
+   {
+    "modes": [
+     "2bit",
+     "ternary",
+     "2bit"
+    ],
+    "acc": 0.548,
+    "energy_uJ": 1.108992
+   },
+   {
+    "modes": [
+     "binary",
+     "2bit",
+     "binary"
+    ],
+    "acc": 0.5385,
+    "energy_uJ": 1.14432
+   },
+   {
+    "modes": [
+     "binary",
+     "2bit",
+     "ternary"
+    ],
+    "acc": 0.5369999999999999,
+    "energy_uJ": 1.16736
+   },
+   {
+    "modes": [
+     "binary",
+     "2bit",
+     "2bit"
+    ],
+    "acc": 0.5336666666666667,
+    "energy_uJ": 1.18272
+   },
+   {
+    "modes": [
+     "ternary",
+     "2bit",
+     "binary"
+    ],
+    "acc": 0.5446666666666666,
+    "energy_uJ": 1.218048
+   },
+   {
+    "modes": [
+     "ternary",
+     "2bit",
+     "ternary"
+    ],
+    "acc": 0.5393333333333333,
+    "energy_uJ": 1.241088
+   },
+   {
+    "modes": [
+     "ternary",
+     "2bit",
+     "2bit"
+    ],
+    "acc": 0.5411666666666667,
+    "energy_uJ": 1.256448
+   },
+   {
+    "modes": [
+     "2bit",
+     "2bit",
+     "binary"
+    ],
+    "acc": 0.5476666666666667,
+    "energy_uJ": 1.2672
+   },
+   {
+    "modes": [
+     "2bit",
+     "2bit",
+     "ternary"
+    ],
+    "acc": 0.5426666666666666,
+    "energy_uJ": 1.29024
+   },
+   {
+    "modes": [
+     "2bit",
+     "2bit",
+     "2bit"
+    ],
+    "acc": 0.5443333333333333,
+    "energy_uJ": 1.3056
+   }
+  ],
+  "front": [
+   {
+    "modes": [
+     "binary",
+     "binary",
+     "binary"
+    ],
+    "acc": 0.5431666666666666,
+    "energy_uJ": 0.6528
+   },
+   {
+    "modes": [
+     "ternary",
+     "binary",
+     "binary"
+    ],
+    "acc": 0.5435,
+    "energy_uJ": 0.726528
+   },
+   {
+    "modes": [
+     "2bit",
+     "binary",
+     "binary"
+    ],
+    "acc": 0.5575,
+    "energy_uJ": 0.77568
+   }
+  ],
+  "ternary_share_front": 0.1111111111111111
+ }
+}
