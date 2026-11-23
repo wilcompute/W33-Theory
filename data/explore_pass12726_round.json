@@ -1,0 +1,36 @@
+{
+ "misalignment": {
+  "rows": [
+   {
+    "f_a": 3700000000.0,
+    "theta_i": 3.14159265358979,
+    "one_minus_theta_over_pi": 9.992007221626409e-16
+   },
+   {
+    "f_a": 24800000000.0,
+    "theta_i": 3.116569061756801,
+    "one_minus_theta_over_pi": 0.007965256668269305
+   },
+   {
+    "f_a": 170000000000.0,
+    "theta_i": 2.044083293940918,
+    "one_minus_theta_over_pi": 0.3493480793554785
+   }
+  ],
+  "note": "pre-inflation PQ breaking (H_I / 2pi < f_a, T_RH < f_a) and low-scale inflation (isocurvature, enhanced near pi)"
+ },
+ "mesogenesis_share": {
+  "max_share": 0.8632212073958565,
+  "min_other": 0.1367787926041435
+ },
+ "brane_terms": {
+  "needed_shift": 1.46,
+  "a4_only": 1.1355681729796996,
+  "aL_only": -0.8516595695035875,
+  "aR_only": 3.4064395706952872,
+  "natural": {
+   "10": 0.7384789359463944,
+   "15": 0.4923192906309296
+  }
+ }
+}
