@@ -1,0 +1,16 @@
+{
+  "check_count": 7,
+  "checks": {"3003": true, "3004": true, "3005": true, "3006": true, "3007": true, "3008": true, "3009": true},
+  "claim_boundary": "Exact finite algebra, combinatorics, and source RTL are separated from synthetic optical inference, ideal SIC modeling, queued exhaustive M36 work, and unobserved hardware/PDF evidence.",
+  "headlines": {
+    "3003": "The six general-isotropic M36 pilot hits are one 729-element orbit under a 34,992-element three-copy deep-ray symmetry; 495 pivot patterns reduce to 98 copy-permutation types. Full 213,648,435 census remains pending.",
+    "3004": "A new 28-triangle schedule separates all 48,826 no/one/two-edge D4 fault hypotheses, improving the prior 29 construction.",
+    "3005": "A synthesizable A4 shell uses the Fibonacci mod-2 action and an 89/233 Christoffel scheduler, with shell opcodes structurally unable to write the D4 core.",
+    "3006": "Every skew line pair has a natural 3x4 flag fiber, giving 540x12=6480 transitively; no PGSp order-12 element acts as 12^540, so the clock dynamics is controller-added.",
+    "3007": "Component counts now feed a Bayesian sequential chirality policy with explicit stopping cost; synthetic cost 1e-3 yields 99.659% success at 7.71 expected copies.",
+    "3008": "The four V4 shell labels form a tetrahedral A4 information geometry with an exact covariant SIC readout model.",
+    "3009": "The 89/233 scheduler crossed with D12 gives a 2796-tick reversible calendar, 89 events per phase and gap alphabet {2,3}."
+  },
+  "schema": "w33.pass3003_3009.seven_front_summary.v1",
+  "status": "COMPLETE_EXACT_MODELED_AND_SOURCE_WITH_FULL_M36_SWEEP_PENDING"
+}
