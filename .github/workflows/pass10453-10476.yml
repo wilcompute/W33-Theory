@@ -25,3 +25,5 @@ jobs:
       - run: pip install numpy
       - name: Evaluate Wilson A4xG2(4) words on stored Co1 module
         run: python analysis/w33_pass10453_10476_explicit_a4g24_v2_coordinates.py
+
+# PR validation marker.
