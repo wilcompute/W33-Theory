@@ -1,0 +1,127 @@
+name: Passes 3133-3142 Certifying Adaptive Inference
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'analysis/bt3133_3140_certifying_adaptive_inference.py'
+      - 'analysis/bt3134_rank3_code_certifier.py'
+      - 'analysis/BT3133_BT3142_*'
+      - 'data/PART_BT3134_rank3_candidate_fixture.json'
+      - 'rtl/*3135*'
+      - 'tests/test_bt3133_bt3142_certifying_adaptive_inference.py'
+      - 'tools/integrate_bt3133_bt3142.py'
+      - '.github/workflows/w33_pass3133_3142_certifying_adaptive_inference.yml'
+permissions: {contents: write}
+concurrency:
+  group: pass3133-3142-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+jobs:
+  exact-rtl-place-papers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: "${{ github.event.pull_request.head.sha || github.sha }}", fetch-depth: 0}
+      - name: Reconcile current master before evidence
+        run: |
+          git fetch origin master
+          git merge --no-edit origin/master
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install numerical and hardware toolchains
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys fpga-icestorm nextpnr-ice40
+          python -m pip install --upgrade pip
+          python -m pip install numpy pytest
+      - uses: wtfjoke/setup-tectonic@v3
+      - name: Regenerate exact and model certificates
+        run: |
+          python analysis/bt3133_3140_certifying_adaptive_inference.py
+          python analysis/bt3134_rank3_code_certifier.py
+      - name: Certify any parallel rank-three candidates independently
+        shell: bash
+        run: |
+          shopt -s nullglob
+          found=0
+          for f in data/PART_BT3125*RANK3*CANDIDATE*.json data/PART_BT3125*rank3*candidate*.json; do
+            found=1
+            stem=$(basename "$f" .json | tr -c 'A-Za-z0-9_' '_')
+            python analysis/bt3134_rank3_code_certifier.py --candidates "$f" \
+              --output "data/${stem}_CERTIFIED_BY_BT3134.json"
+          done
+          if [ "$found" = 0 ]; then echo 'No parallel rank-three candidate file present; certifier remains ready.'; fi
+      - name: Focused regression
+        run: pytest -q tests/test_bt3133_bt3142_certifying_adaptive_inference.py
+      - name: Simulate Fourier-causal controller and context isolation
+        run: |
+          iverilog -g2012 -s tb_w33_pass3135_fourier_causal_controller \
+            -o /tmp/p3135.vvp rtl/w33_pass3135_fourier_causal_controller.sv \
+            rtl/tb_w33_pass3135_fourier_causal_controller.sv
+          vvp /tmp/p3135.vvp | tee evidence_pass3135_iverilog.log
+          grep -q 'PASS Fourier-causal controller and belief-hypervisor isolation' evidence_pass3135_iverilog.log
+      - name: Synthesize and place both hardware tops on HX8K
+        run: |
+          yosys -p 'read_verilog -sv rtl/w33_pass3135_fourier_causal_controller.sv; synth_ice40 -top w33_pass3135_fourier_causal_controller -json /tmp/p3135.json' | tee evidence_pass3135_yosys.log
+          nextpnr-ice40 --hx8k --package ct256 --pcf-allow-unconstrained --json /tmp/p3135.json --asc /tmp/p3135.asc |& tee evidence_pass3135_nextpnr.log
+          yosys -p 'read_verilog -sv rtl/w33_pass3135_fourier_causal_controller.sv; synth_ice40 -top w33_pass3139_belief_hypervisor -json /tmp/p3139.json' | tee evidence_pass3139_yosys.log
+          nextpnr-ice40 --hx8k --package ct256 --pcf-allow-unconstrained --json /tmp/p3139.json --asc /tmp/p3139.asc |& tee evidence_pass3139_nextpnr.log
+          grep -q 'Number of cells' evidence_pass3135_yosys.log
+          grep -q 'Number of cells' evidence_pass3139_yosys.log
+      - name: Integrate all front doors idempotently
+        run: |
+          python tools/integrate_bt3133_bt3142.py
+          sha256sum w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html >/tmp/a
+          python tools/integrate_bt3133_bt3142.py
+          sha256sum w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html >/tmp/b
+          diff -u /tmp/a /tmp/b
+      - name: Compile all three papers
+        run: |
+          tectonic w33_paper.tex
+          tectonic photonic_holonet.tex
+          tectonic holonet_machine_blueprint.tex
+          test -s w33_paper.pdf
+          test -s photonic_holonet.pdf
+          test -s holonet_machine_blueprint.pdf
+      - name: Freeze stable observed evidence
+        env: {HEAD_BRANCH: "${{ github.event.pull_request.head.ref || github.ref_name }}"}
+        run: |
+          mkdir -p evidence/pass3133_3142
+          sha256sum data/PART_BT3133*.json data/PART_BT3134*.json \
+            w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf \
+            > evidence/pass3133_3142/SHA256SUMS
+          python - <<'PY'
+          import json,os,pathlib
+          p=pathlib.Path('evidence/pass3133_3142/COMPLETE.json')
+          p.write_text(json.dumps({
+            'schema':'w33.pass3133_3142.observed_evidence.v1',
+            'status':'COMPLETE_EXACT_RTL_HX8K_AND_THREE_PDFS',
+            'commit':os.environ['GITHUB_SHA'],
+            'rank3_search':'parallel candidate input only; certifier independent',
+            'laboratory_claims':'none'
+          },indent=2,sort_keys=True)+'\n')
+          PY
+          git config user.name w33-evidence-bot
+          git config user.email actions@users.noreply.github.com
+          git add w33_paper.tex photonic_holonet.tex holonet_machine_blueprint.tex docs/index.html \
+            data/PART_BT3133*.json data/PART_BT3134*.json evidence/pass3133_3142
+          git add -f w33_paper.pdf photonic_holonet.pdf holonet_machine_blueprint.pdf
+          if ! git diff --cached --quiet; then
+            git commit -m 'Passes 3133-3142: record observed certifying-adaptive evidence'
+            git push origin HEAD:"$HEAD_BRANCH"
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pass3133-3142-certifying-adaptive-evidence
+          path: |
+            evidence_pass3135_iverilog.log
+            evidence_pass3135_yosys.log
+            evidence_pass3135_nextpnr.log
+            evidence_pass3139_yosys.log
+            evidence_pass3139_nextpnr.log
+            evidence/pass3133_3142/
+            data/PART_BT3133*.json
+            data/PART_BT3134*.json
+            w33_paper.pdf
+            photonic_holonet.pdf
+            holonet_machine_blueprint.pdf
