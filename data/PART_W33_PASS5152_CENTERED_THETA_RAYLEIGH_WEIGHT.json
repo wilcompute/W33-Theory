@@ -1,0 +1,13 @@
+{
+  "pass":5152,
+  "status":"THEOREM_CENTERED_THETA_RAYLEIGH_WEIGHT_INVERSION",
+  "rayleigh_formula":"rho=D(1/2-alpha)/(1-alpha)",
+  "weight_inversion":"alpha=(D/2-rho)/(D-rho)",
+  "chamber_star_anchors":[
+    {"q":2,"N":90,"weight":16,"alpha":"8/45","D":8,"rho":"116/37"},
+    {"q":3,"N":1620,"weight":81,"alpha":"1/20","D":16,"rho":"144/19"},
+    {"q":4,"N":13600,"weight":256,"alpha":"8/425","D":24,"rho":"1636/139"},
+    {"q":5,"N":73125,"weight":625,"alpha":"1/117","D":32,"rho":"460/29"}
+  ],
+  "boundary":"No spectral upper bound is proved here."
+}
