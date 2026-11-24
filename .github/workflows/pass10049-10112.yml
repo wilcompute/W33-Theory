@@ -1,3 +1,4 @@
+# Verification-PR marker: exercises the complete Pass10049-10112 packet.
 name: Pass10049-10112 eight-front verification
 
 on:
