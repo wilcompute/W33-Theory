@@ -1,0 +1,71 @@
+{
+  "matter": {
+    "multiplicities": [
+      16,
+      10,
+      1
+    ],
+    "normalized_charges": [
+      1,
+      -2,
+      4
+    ],
+    "physical_charges": [
+      3,
+      -6,
+      12
+    ],
+    "weyl_count": 729,
+    "linear": 0,
+    "cubic": 0,
+    "combined_center_kernel": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        6,
+        0
+      ],
+      [
+        7,
+        2
+      ],
+      [
+        8,
+        1
+      ]
+    ],
+    "min_equal_flavor_multiplets": 27
+  },
+  "golay": {
+    "directions": 77,
+    "single_copy_quotients": 729,
+    "single_copy_incompatible": 0,
+    "pair_incompatible": 1008,
+    "old_hamiltonian_counterexample": "|0>^12 ⊗ |+>^12, and reverse",
+    "four_independent_fourier_terms_product_expectation": 1.5022100289590001,
+    "scope": "Each individual Fourier transform preserves selfdual code state. Four independent Fourier orientations exclude the four uniform computational/Fourier product types, not arbitrary product states or full ground space."
+  },
+  "scope": "U1 dynamical gauge, E6_sc flavor, 27 charged matter; exact electric one-form C3 and combined kernel C9. Perturbative U1 cubic, mixed gravitational and U1-E6^2 vanish. E6 has no cubic adjoint invariant. Not full global anomaly audit, not an E6 gauge theory or physical SM matter. 27 multiplets lower bound assumes all same flavor representation and normalized charges 1 mod3; follows sum n=0 and sum n^3 ≡ -2N mod27."
+}
