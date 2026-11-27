@@ -1,0 +1,58 @@
+{
+  "line_span": {
+    "projective": 30,
+    "isotropic": 25,
+    "nonisotropic": 30,
+    "all_difference_rank": 29,
+    "isotropic_difference_rank": 24,
+    "additional_nonisotropic_checks": 5,
+    "selected_nonisotropic_indices": [
+      0,
+      1,
+      3,
+      11,
+      36
+    ],
+    "intermediate_logical_count": 6,
+    "full_logical_count": 1
+  },
+  "trinification": {
+    "VEV_positions": [
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "complex_stabilizer_without_duals": 8,
+    "broken_generator_rank": 12,
+    "unbroken_LR": 4,
+    "total_unbroken": 12,
+    "hypercharge_in_units_of_one_sixth": {
+      "L": [
+        -1,
+        -1,
+        2
+      ],
+      "R": [
+        -4,
+        2,
+        2
+      ]
+    },
+    "multiplets_per27": {
+      "3,2,1": 1,
+      "3bar,1,-4": 1,
+      "1,2,3": 1,
+      "1,2,-3": 2,
+      "3bar,1,2": 2,
+      "3,1,-2": 1,
+      "1,1,6": 1,
+      "1,1,0": 2
+    },
+    "scope": "chosen pair of rank-one neutral VEVs, D-flat with conjugates and F-flat for pure cubic; mixed singlet terms may lift"
+  }
+}
