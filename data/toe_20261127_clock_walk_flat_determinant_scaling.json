@@ -1,0 +1,276 @@
+{
+  "clock": {
+    "rows": [
+      {
+        "q": 3,
+        "tau": 0.6666666666666667,
+        "charge2_action": 1,
+        "relative_error": 0.7499999999999999,
+        "unitary_matching": null
+      },
+      {
+        "q": 9,
+        "tau": 4.2743160852065145,
+        "charge2_action": 3.5320888862379616,
+        "relative_error": 0.11697777844051105,
+        "unitary_matching": {
+          "time": 0.5695434633952852,
+          "mu": 0.15796197116476024,
+          "K1": 0.853882253498583,
+          "K2": 0.531608541543118,
+          "p": [
+            0.49139632363042635,
+            0.2323534024771407,
+            0.021126259615372987,
+            0.0008050816268244249,
+            0.000017094465448748868,
+            0.000017094465448749858,
+            0.0008050816268243792,
+            0.021126259615372903,
+            0.23235340247714042
+          ]
+        }
+      },
+      {
+        "q": 27,
+        "tau": 37.09869036100749,
+        "charge2_action": 3.9460897411596587,
+        "relative_error": 0.013477564710088097,
+        "unitary_matching": {
+          "time": 0.5762257158323447,
+          "mu": 0.017980897845384706,
+          "K1": 0.9821797939293906,
+          "K2": 0.9306019991078079
+        }
+      },
+      {
+        "q": 81,
+        "tau": 332.55085976011173,
+        "charge2_action": 3.993985882335585,
+        "relative_error": 0.001503529416103988,
+        "unitary_matching": {
+          "time": 0.577222017414964,
+          "mu": 0.002004820055875471,
+          "K1": 0.9979971882535289,
+          "K2": 0.9920127884244029
+        }
+      },
+      {
+        "q": 243,
+        "tau": 2991.6239586866523,
+        "charge2_action": 3.999331466779591,
+        "relative_error": 0.00016713330515627511,
+        "unitary_matching": {
+          "time": 0.5773359803576503,
+          "mu": 0.00022284579157504008,
+          "K1": 0.999777179036704,
+          "K2": 0.9991090139976573
+        }
+      }
+    ],
+    "scope": "Markov nearest-neighbor jumps produce exact cosine action, no positive symmetric generator reaches quadratic ratio4 at finite q. Closed clock quantum walk H=S+S†, initial |0>, produces probability by unitary evolution; its character expectation crosses exact Gaussian ratio at selected time. Conditional coherent amplitude, not unconditional gauge action; interaction and matching stopping time supplied."
+  },
+  "geometry": {
+    "rows": [
+      {
+        "d": 2,
+        "n": 8,
+        "mean_trace_pseudoinverse": 2.3572128851540617,
+        "mean_per_site": 0.2946516106442577
+      },
+      {
+        "d": 2,
+        "n": 13,
+        "mean_trace_pseudoinverse": 5.51448630076611,
+        "mean_per_site": 0.42419125390508533
+      },
+      {
+        "d": 2,
+        "n": 16,
+        "mean_trace_pseudoinverse": 6.327001844233417,
+        "mean_per_site": 0.39543761526458854
+      },
+      {
+        "d": 2,
+        "n": 23,
+        "mean_trace_pseudoinverse": 12.073106841073109,
+        "mean_per_site": 0.524917688742309
+      },
+      {
+        "d": 2,
+        "n": 24,
+        "mean_trace_pseudoinverse": 10.28917133169108,
+        "mean_per_site": 0.42871547215379496
+      },
+      {
+        "d": 2,
+        "n": 31,
+        "mean_trace_pseudoinverse": 17.87674348424611,
+        "mean_per_site": 0.5766691446531003
+      },
+      {
+        "d": 2,
+        "n": 32,
+        "mean_trace_pseudoinverse": 15.98425613761447,
+        "mean_per_site": 0.49950800430045217
+      },
+      {
+        "d": 2,
+        "n": 48,
+        "mean_trace_pseudoinverse": 25.34541670307073,
+        "mean_per_site": 0.5280295146473069
+      },
+      {
+        "d": 2,
+        "n": 61,
+        "mean_trace_pseudoinverse": 42.192759856138984,
+        "mean_per_site": 0.6916845878055571
+      },
+      {
+        "d": 2,
+        "n": 64,
+        "mean_trace_pseudoinverse": 38.77875078635097,
+        "mean_per_site": 0.6059179810367339
+      },
+      {
+        "d": 2,
+        "n": 79,
+        "mean_trace_pseudoinverse": 58.0553559212182,
+        "mean_per_site": 0.7348779230533949
+      },
+      {
+        "d": 2,
+        "n": 97,
+        "mean_trace_pseudoinverse": 74.58556469539833,
+        "mean_per_site": 0.7689233473752406
+      },
+      {
+        "d": 2,
+        "n": 127,
+        "mean_trace_pseudoinverse": 103.29366195429667,
+        "mean_per_site": 0.8133359208999738
+      },
+      {
+        "d": 2,
+        "n": 128,
+        "mean_trace_pseudoinverse": 91.3759900193732,
+        "mean_per_site": 0.7138749220263532
+      },
+      {
+        "d": 2,
+        "n": 157,
+        "mean_trace_pseudoinverse": 133.14999167557508,
+        "mean_per_site": 0.8480891189527076
+      },
+      {
+        "d": 3,
+        "n": 8,
+        "mean_trace_pseudoinverse": 1.449557506665518,
+        "mean_per_site": 0.18119468833318975
+      },
+      {
+        "d": 3,
+        "n": 13,
+        "mean_trace_pseudoinverse": 2.825889380574171,
+        "mean_per_site": 0.21737610619801315
+      },
+      {
+        "d": 3,
+        "n": 16,
+        "mean_trace_pseudoinverse": 3.3277802348260326,
+        "mean_per_site": 0.20798626467662704
+      },
+      {
+        "d": 3,
+        "n": 23,
+        "mean_trace_pseudoinverse": 5.344632235130768,
+        "mean_per_site": 0.23237531457090296
+      },
+      {
+        "d": 3,
+        "n": 24,
+        "mean_trace_pseudoinverse": 5.148699160745712,
+        "mean_per_site": 0.21452913169773802
+      },
+      {
+        "d": 3,
+        "n": 31,
+        "mean_trace_pseudoinverse": 7.36371952826619,
+        "mean_per_site": 0.23753933962149
+      },
+      {
+        "d": 3,
+        "n": 32,
+        "mean_trace_pseudoinverse": 7.218293032712663,
+        "mean_per_site": 0.22557165727227071
+      },
+      {
+        "d": 3,
+        "n": 48,
+        "mean_trace_pseudoinverse": 10.981349400918692,
+        "mean_per_site": 0.2287781125191394
+      },
+      {
+        "d": 3,
+        "n": 61,
+        "mean_trace_pseudoinverse": 14.941854222353006,
+        "mean_per_site": 0.24494842987463944
+      },
+      {
+        "d": 3,
+        "n": 64,
+        "mean_trace_pseudoinverse": 15.146196507600113,
+        "mean_per_site": 0.23665932043125176
+      },
+      {
+        "d": 3,
+        "n": 79,
+        "mean_trace_pseudoinverse": 19.49013817471692,
+        "mean_per_site": 0.24671060980654327
+      },
+      {
+        "d": 4,
+        "n": 8,
+        "mean_trace_pseudoinverse": 1.0417938976345447,
+        "mean_per_site": 0.13022423720431808
+      },
+      {
+        "d": 4,
+        "n": 13,
+        "mean_trace_pseudoinverse": 1.8493540483613198,
+        "mean_per_site": 0.14225800372010153
+      },
+      {
+        "d": 4,
+        "n": 16,
+        "mean_trace_pseudoinverse": 2.269977476765808,
+        "mean_per_site": 0.141873592297863
+      },
+      {
+        "d": 4,
+        "n": 23,
+        "mean_trace_pseudoinverse": 3.40271656938183,
+        "mean_per_site": 0.14794419866877523
+      },
+      {
+        "d": 4,
+        "n": 24,
+        "mean_trace_pseudoinverse": 3.4848573829866725,
+        "mean_per_site": 0.145202390957778
+      },
+      {
+        "d": 4,
+        "n": 31,
+        "mean_trace_pseudoinverse": 4.643626539358639,
+        "mean_per_site": 0.14979440449543996
+      },
+      {
+        "d": 4,
+        "n": 32,
+        "mean_trace_pseudoinverse": 4.7410114411899915,
+        "mean_per_site": 0.14815660753718723
+      }
+    ],
+    "scope": "Uniform connected flat Z^d covers of arbitrary finite index. Character order k inclusion probability g_d(n/k)/g_d(n). For d>=3 primitive character sum O(k^d), yielding expected Tr L+ O(n sum_{l|n}1/l) <= O(n log n), d2 O(n log² n). Conditional on orbit sizes independent uniform covers, same bound O(N log N) across assembly. Thus determinant realization of parallel component fugacity converges in TV for delta=o(1/(N log N)) in d>=3, versus graph-uniform o(N^-2). Supplied flatness and neutral auxiliaries; does not select dimension."
+  }
+}
