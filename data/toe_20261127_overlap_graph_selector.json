@@ -1,0 +1,203 @@
+{
+  "graph": {
+    "graphs": [
+      {
+        "kind": "rook",
+        "cliques": [
+          16,
+          48,
+          32,
+          8,
+          0
+        ],
+        "boundary_ranks": [
+          0,
+          15,
+          24,
+          8,
+          0
+        ],
+        "betti": [
+          1,
+          9,
+          0,
+          0
+        ],
+        "euler": -8,
+        "adj_spectrum": [
+          [
+            6,
+            1
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            -2,
+            9
+          ]
+        ],
+        "laplacian_spectrum": [
+          [
+            0,
+            1
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            8,
+            9
+          ]
+        ]
+      },
+      {
+        "kind": "shrikhande",
+        "cliques": [
+          16,
+          48,
+          32,
+          0,
+          0
+        ],
+        "boundary_ranks": [
+          0,
+          15,
+          31,
+          0,
+          0
+        ],
+        "betti": [
+          1,
+          2,
+          1,
+          0
+        ],
+        "euler": 0,
+        "adj_spectrum": [
+          [
+            6,
+            1
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            -2,
+            9
+          ]
+        ],
+        "laplacian_spectrum": [
+          [
+            0,
+            1
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            8,
+            9
+          ]
+        ]
+      }
+    ],
+    "heat": [
+      {
+        "t": 0.01,
+        "K": 15.072783752393661,
+        "spectral_dimension": 0.11878804201019155
+      },
+      {
+        "t": 0.1,
+        "K": 9.06588095326883,
+        "spectral_dimension": 1.0686080430789202
+      },
+      {
+        "t": 0.25,
+        "K": 4.425294196158168,
+        "spectral_dimension": 2.0985324543253134
+      },
+      {
+        "t": 0.5,
+        "K": 1.9768524494182838,
+        "spectral_dimension": 2.3101232461792494
+      },
+      {
+        "t": 1,
+        "K": 1.1129129969835276,
+        "spectral_dimension": 0.8333600987597503
+      },
+      {
+        "t": 2,
+        "K": 1.0020137885839875,
+        "spectral_dimension": 0.032172034732691944
+      }
+    ],
+    "scope": "Scalar adjacency or Laplacian spectral selectors fail to distinguish these two clique topologies. Not a smooth Calabi-Yau counterexample; higher-form spectra distinguish."
+  },
+  "chain": {
+    "rows": [
+      {
+        "n": 3,
+        "cells": 1,
+        "overlap_rank": 0,
+        "radical": 1,
+        "orbit_dimension": 9,
+        "max_eigenvalue_zero_orbit": 1.0000000000000002,
+        "per_cell": 1.0000000000000002,
+        "residual": 0,
+        "iterations": 0
+      },
+      {
+        "n": 4,
+        "cells": 2,
+        "overlap_rank": 2,
+        "radical": 0,
+        "orbit_dimension": 81,
+        "max_eigenvalue_zero_orbit": 1.1111111111111114,
+        "per_cell": 0.5555555555555557,
+        "residual": 0,
+        "iterations": 1
+      },
+      {
+        "n": 5,
+        "cells": 3,
+        "overlap_rank": 3,
+        "radical": 0,
+        "orbit_dimension": 729,
+        "max_eigenvalue_zero_orbit": 1.2222222222222203,
+        "per_cell": 0.4074074074074068,
+        "residual": 0,
+        "iterations": 1
+      },
+      {
+        "n": 6,
+        "cells": 4,
+        "overlap_rank": 3,
+        "radical": 1,
+        "orbit_dimension": 6561,
+        "max_eigenvalue_zero_orbit": 2.052459550555373,
+        "per_cell": 0.5131148876388433,
+        "residual": 0,
+        "iterations": 22
+      },
+      {
+        "n": 7,
+        "cells": 5,
+        "overlap_rank": 5,
+        "radical": 0,
+        "orbit_dimension": 59049,
+        "max_eigenvalue_zero_orbit": 2.1994709314098295,
+        "per_cell": 0.4398941862819659,
+        "residual": 0,
+        "iterations": 81
+      }
+    ],
+    "scope": "Nonnegative projector sum in zero affine translation orbit only. Perron eigenvalue of that block, not proven global across all affine sectors. No thermodynamic gap or symmetry breaking inferred."
+  }
+}
