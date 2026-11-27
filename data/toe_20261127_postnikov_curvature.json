@@ -1,0 +1,8 @@
+{
+  "flat_edge_fields": 81,
+  "vertex_gauge_transformations_per_field": 243,
+  "curvature_checks": 98415,
+  "nonzero_curvature_checks": 65993,
+  "action": "sum_t (1-cos(2pi H_t/3)) exactly invariant",
+  "scope": "flat A, non-flat B; 2-group Postnikov descent on 4-simplex; no propagating spin-two result"
+}
