@@ -1,0 +1,88 @@
+{
+  "registers": 40,
+  "triangle_cells": 160,
+  "incident_cells": 12,
+  "pair_overlap_counts": {
+    "0": 10320,
+    "1": 2160,
+    "2": 240
+  },
+  "packing_size": 13,
+  "packing": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      6,
+      10
+    ],
+    [
+      5,
+      13,
+      19
+    ],
+    [
+      7,
+      31,
+      38
+    ],
+    [
+      8,
+      23,
+      29
+    ],
+    [
+      9,
+      26,
+      28
+    ],
+    [
+      11,
+      30,
+      33
+    ],
+    [
+      12,
+      16,
+      32
+    ],
+    [
+      14,
+      20,
+      34
+    ],
+    [
+      15,
+      21,
+      35
+    ],
+    [
+      17,
+      24,
+      36
+    ],
+    [
+      18,
+      22,
+      39
+    ],
+    [
+      25,
+      27,
+      37
+    ]
+  ],
+  "uncovered": [
+    0
+  ],
+  "search_nodes": 13,
+  "packing_is_maximum": true,
+  "projector_sum_lower": 14.814814814814815,
+  "projector_sum_upper": 29.62962962962963,
+  "normalized_lower": 0.09259259259259259,
+  "normalized_upper": 0.18518518518518517,
+  "scope": "Supplied one two-qutrit register per W33 point and triple projector per commuting triangle. Lower uses product of maximally mixed triple-code states on disjoint triples, plus maximally mixed unused registers; every other triple has maximally mixed proper marginals. Upper uses pair overlap norm 1/9 on the 12 cells incident to each vertex. Not full spectral diagonalization."
+}

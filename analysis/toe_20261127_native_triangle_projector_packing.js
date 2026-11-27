@@ -1,0 +1,11 @@
+function nativeHypergraph(){
+ const A=(v,s)=>{if(!v)throw Error(s)},m=x=>(x%3+3)%3,P=Array.from({length:81},(_,i)=>Array.from({length:4},(_,j)=>Math.floor(i/3**j)%3)).filter(v=>v.find(Boolean)===1),sp=(a,b)=>m(a[0]*b[2]+a[1]*b[3]-a[2]*b[0]-a[3]*b[1]),adj=P.map((v,i)=>P.map((w,j)=>i!==j&&!sp(v,w))),T=[];
+ for(let a=0;a<40;a++)for(let b=a+1;b<40;b++)if(adj[a][b])for(let c=b+1;c<40;c++)if(adj[a][c]&&adj[b][c])T.push([a,b,c]);
+ A(T.length===160,'triangle count');let mask=T.map(t=>t.reduce((s,x)=>s|(1n<<BigInt(x)),0n)),inc=P.map((_,i)=>T.map((t,j)=>t.includes(i)?j:-1).filter(j=>j>=0));A(inc.every(a=>a.length===12),'valence');
+ let visited=0,limit=300000,failed=new Set();function solve(rem){if(!rem)return [];if(++visited>limit)return null;if(failed.has(rem))return null;let cand=null;for(let i=0;i<40;i++)if(rem>>BigInt(i)&1n){let C=inc[i].filter(j=>(mask[j]&rem)===mask[j]);if(!C.length){failed.add(rem);return null}if(!cand||C.length<cand.length)cand=C;if(cand.length===1)break}for(let j of cand){let r=solve(rem^mask[j]);if(r)return [j,...r]}failed.add(rem);return null}
+ let all=(1n<<40n)-1n,best=solve(all^1n);if(!best){let covered=0n;best=[];for(let i=0;i<T.length;i++)if(!(covered&mask[i])){covered|=mask[i];best.push(i)}}
+ let U=best.reduce((s,j)=>s|mask[j],0n);A(best.length*3===U.toString(2).replace(/0/g,'').length,'packing disjoint');let overlaps={};for(let i=0;i<160;i++)for(let j=i+1;j<160;j++){let k=T[i].filter(x=>T[j].includes(x)).length;overlaps[k]=(overlaps[k]||0)+1}
+ let lower=best.length+(160-best.length)/81,upper=40*(1+11/9)/3;
+ return {registers:40,triangle_cells:160,incident_cells:12,pair_overlap_counts:overlaps,packing_size:best.length,packing:T.filter((_,i)=>best.includes(i)),uncovered:P.map((_,i)=>i).filter(i=>!(U>>BigInt(i)&1n)),search_nodes:visited,packing_is_maximum:best.length===13,projector_sum_lower:lower,projector_sum_upper:upper,normalized_lower:lower/160,normalized_upper:upper/160,scope:"Supplied one two-qutrit register per W33 point and triple projector per commuting triangle. Lower uses product of maximally mixed triple-code states on disjoint triples, plus maximally mixed unused registers; every other triple has maximally mixed proper marginals. Upper uses pair overlap norm 1/9 on the 12 cells incident to each vertex. Not full spectral diagonalization."}
+}
+console.log(JSON.stringify(nativeHypergraph(),null,2));
