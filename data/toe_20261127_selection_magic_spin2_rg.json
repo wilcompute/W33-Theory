@@ -1,0 +1,350 @@
+{
+  "geometry": {
+    "deformation_traces": [
+      {
+        "eigen_exponents": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "polynomial_deformation_trace": 23,
+        "h11_trace": 14
+      },
+      {
+        "eigen_exponents": [
+          1,
+          1,
+          1,
+          0
+        ],
+        "polynomial_deformation_trace": 5,
+        "h11_trace": -4
+      },
+      {
+        "eigen_exponents": [
+          2,
+          2,
+          2,
+          0
+        ],
+        "polynomial_deformation_trace": 5,
+        "h11_trace": -4
+      },
+      {
+        "eigen_exponents": [
+          0,
+          1,
+          2,
+          0
+        ],
+        "polynomial_deformation_trace": 2,
+        "h11_trace": 2
+      }
+    ],
+    "representations": {
+      "h11_trace": {
+        "trivial": 2,
+        "each_nontrivial_linear": 0,
+        "W": 2,
+        "Wdual": 2,
+        "restriction_to_free_C3": [
+          6,
+          4,
+          4
+        ]
+      },
+      "polynomial_deformation_trace": {
+        "trivial": 3,
+        "each_nontrivial_linear": 1,
+        "W": 2,
+        "Wdual": 2,
+        "restriction_to_free_C3": [
+          9,
+          7,
+          7
+        ]
+      }
+    },
+    "diagonal_group": {
+      "order": 27,
+      "free_elements": 12,
+      "free_cyclic": 6,
+      "free_order9": 0,
+      "planes": 13
+    },
+    "spectra": {
+      "cover": [
+        0,
+        3,
+        3,
+        3,
+        3,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        1.2679491924311228,
+        1.2679491924311228,
+        1.2679491924311228,
+        1.2679491924311228,
+        1.2679491924311228,
+        1.2679491924311228,
+        4.732050807568877,
+        4.732050807568877,
+        4.732050807568877,
+        4.732050807568877,
+        4.732050807568877,
+        4.732050807568877
+      ],
+      "axis": [
+        0,
+        3,
+        3,
+        6,
+        6,
+        1.2679491924311228,
+        1.2679491924311228,
+        4.732050807568877,
+        4.732050807568877
+      ],
+      "diagonal": [
+        0,
+        6,
+        6,
+        6,
+        6,
+        1.2679491924311228,
+        1.2679491924311228,
+        4.732050807568877,
+        4.732050807568877
+      ]
+    },
+    "scalar_logdet": {
+      "cover": {
+        "dimension": 27,
+        "logdet": 40.393975079801905,
+        "heat_trace_t1": 2.9652349905677933,
+        "heat_per_vertex": 0.10982351816917753
+      },
+      "axis": {
+        "dimension": 9,
+        "logdet": 11.794307735273481,
+        "heat_trace_t1": 1.6849647061989512,
+        "heat_per_vertex": 0.18721830068877235
+      },
+      "diagonal": {
+        "dimension": 9,
+        "logdet": 12.913539311144326,
+        "heat_trace_t1": 1.590348073816556,
+        "heat_per_vertex": 0.1767053415351729
+      }
+    },
+    "quotient_vs_cover_logdet": 28.599667344528424,
+    "scope": "finite Cayley graph proxy, not CY Laplace spectrum"
+  },
+  "magic": {
+    "RM_transversal_CCZ_tests": 19683,
+    "logical_phase": "CCZ^-1",
+    "injection_branch_tests": 729,
+    "branch_probability": 0.037037037037037035,
+    "Golay_weighted_CCZ_constraint_rank": 11,
+    "Golay_weights_nullity": 0,
+    "postselected_state": {
+      "unnormalized_ratio": [
+        3,
+        1,
+        1
+      ],
+      "success": 0.4074074074074074
+    },
+    "exact_ninth_root_obstruction": "relative amplitudes remain in Q(omega), zeta9 has degree 3 over it"
+  },
+  "gravity": {
+    "simplicity_rank": 20,
+    "tetrad_tangent_rank": 16,
+    "linearized_Einstein": [
+      {
+        "p": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "k2": -1,
+        "operator_rank": 6,
+        "gauge_rank": 4,
+        "physical_kernel": 0
+      },
+      {
+        "p": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "k2": 1,
+        "operator_rank": 6,
+        "gauge_rank": 4,
+        "physical_kernel": 0
+      },
+      {
+        "p": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "k2": 0,
+        "operator_rank": 4,
+        "gauge_rank": 4,
+        "physical_kernel": 2
+      },
+      {
+        "p": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "k2": 0,
+        "operator_rank": 4,
+        "gauge_rank": 4,
+        "physical_kernel": 2
+      }
+    ],
+    "scope": "continuum linearization with externally supplied tetrad/BF simplicity; no native finite Z3 graviton"
+  },
+  "rg": {
+    "linearized_difference_beta": "(N+2)e²/(6pi²) * delta",
+    "rows": [
+      {
+        "N": 1,
+        "decades": 10,
+        "ratio": 0.9002038914355914,
+        "remaining_from_1_percent": 0.009002038914355914
+      },
+      {
+        "N": 1,
+        "decades": 20,
+        "ratio": 0.8132570772831551,
+        "remaining_from_1_percent": 0.008132570772831551
+      },
+      {
+        "N": 1,
+        "decades": 40,
+        "ratio": 0.6702618803778219,
+        "remaining_from_1_percent": 0.006702618803778219
+      },
+      {
+        "N": 1,
+        "decades": 100,
+        "ratio": 0.4004859333320396,
+        "remaining_from_1_percent": 0.004004859333320396
+      },
+      {
+        "N": 3,
+        "decades": 10,
+        "ratio": 0.8441546294094222,
+        "remaining_from_1_percent": 0.008441546294094222
+      },
+      {
+        "N": 3,
+        "decades": 20,
+        "ratio": 0.7238324168264295,
+        "remaining_from_1_percent": 0.007238324168264296
+      },
+      {
+        "N": 3,
+        "decades": 40,
+        "ratio": 0.5522349854968234,
+        "remaining_from_1_percent": 0.0055223498549682335
+      },
+      {
+        "N": 3,
+        "decades": 100,
+        "ratio": 0.29743365571021896,
+        "remaining_from_1_percent": 0.0029743365571021896
+      },
+      {
+        "N": 9,
+        "decades": 10,
+        "ratio": 0.7115942397750563,
+        "remaining_from_1_percent": 0.0071159423977505635
+      },
+      {
+        "N": 9,
+        "decades": 20,
+        "ratio": 0.5454691889829353,
+        "remaining_from_1_percent": 0.005454691889829353
+      },
+      {
+        "N": 9,
+        "decades": 40,
+        "ratio": 0.364417747333266,
+        "remaining_from_1_percent": 0.0036441774733326597
+      },
+      {
+        "N": 9,
+        "decades": 100,
+        "ratio": 0.17258239899869926,
+        "remaining_from_1_percent": 0.0017258239899869926
+      },
+      {
+        "N": 27,
+        "decades": 10,
+        "ratio": 0.48460333284605395,
+        "remaining_from_1_percent": 0.00484603332846054
+      },
+      {
+        "N": 27,
+        "decades": 20,
+        "ratio": 0.3156406088580711,
+        "remaining_from_1_percent": 0.003156406088580711
+      },
+      {
+        "N": 27,
+        "decades": 40,
+        "ratio": 0.1833485739770346,
+        "remaining_from_1_percent": 0.001833485739770346
+      },
+      {
+        "N": 27,
+        "decades": 100,
+        "ratio": 0.07896516323007191,
+        "remaining_from_1_percent": 0.0007896516323007191
+      },
+      {
+        "N": 81,
+        "decades": 10,
+        "ratio": 0.24865926895605056,
+        "remaining_from_1_percent": 0.0024865926895605056
+      },
+      {
+        "N": 81,
+        "decades": 20,
+        "ratio": 0.14072940874250042,
+        "remaining_from_1_percent": 0.0014072940874250042
+      },
+      {
+        "N": 81,
+        "decades": 40,
+        "ratio": 0.0748211896925666,
+        "remaining_from_1_percent": 0.000748211896925666
+      },
+      {
+        "N": 81,
+        "decades": 100,
+        "ratio": 0.030764495504428262,
+        "remaining_from_1_percent": 0.00030764495504428263
+      }
+    ],
+    "scope": "published weak-coupling continuum QED, near c=1, identical fermion speeds, not microscopic QCA renormalization"
+  }
+}
