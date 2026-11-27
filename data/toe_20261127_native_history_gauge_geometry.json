@@ -1,0 +1,302 @@
+{
+  "history": {
+    "rows": [
+      {
+        "exclude_identity": false,
+        "n": 1,
+        "central_counts": [
+          "1",
+          "0",
+          "0"
+        ],
+        "signed_closed_sum": "1",
+        "sign": 1
+      },
+      {
+        "exclude_identity": false,
+        "n": 2,
+        "central_counts": [
+          "81",
+          "0",
+          "0"
+        ],
+        "signed_closed_sum": "81",
+        "sign": 1
+      },
+      {
+        "exclude_identity": false,
+        "n": 3,
+        "central_counts": [
+          "2241",
+          "2160",
+          "2160"
+        ],
+        "signed_closed_sum": "81",
+        "sign": 1
+      },
+      {
+        "exclude_identity": false,
+        "n": 4,
+        "central_counts": [
+          "181521",
+          "174960",
+          "174960"
+        ],
+        "signed_closed_sum": "6561",
+        "sign": 1
+      },
+      {
+        "exclude_identity": false,
+        "n": 5,
+        "central_counts": [
+          "14353281",
+          "14346720",
+          "14346720"
+        ],
+        "signed_closed_sum": "6561",
+        "sign": 1
+      },
+      {
+        "exclude_identity": false,
+        "n": 6,
+        "central_counts": [
+          "1162615761",
+          "1162084320",
+          "1162084320"
+        ],
+        "signed_closed_sum": "531441",
+        "sign": 1
+      },
+      {
+        "exclude_identity": false,
+        "n": 7,
+        "central_counts": [
+          "94143533121",
+          "94143001680",
+          "94143001680"
+        ],
+        "signed_closed_sum": "531441",
+        "sign": 1
+      },
+      {
+        "exclude_identity": false,
+        "n": 8,
+        "central_counts": [
+          "7625626182801",
+          "7625583136080",
+          "7625583136080"
+        ],
+        "signed_closed_sum": "43046721",
+        "sign": 1
+      },
+      {
+        "exclude_identity": false,
+        "n": 9,
+        "central_counts": [
+          "617673424981761",
+          "617673381935040",
+          "617673381935040"
+        ],
+        "signed_closed_sum": "43046721",
+        "sign": 1
+      },
+      {
+        "exclude_identity": false,
+        "n": 10,
+        "central_counts": [
+          "50031547423522641",
+          "50031543936738240",
+          "50031543936738240"
+        ],
+        "signed_closed_sum": "3486784401",
+        "sign": 1
+      },
+      {
+        "exclude_identity": true,
+        "n": 1,
+        "central_counts": [
+          "0",
+          "0",
+          "0"
+        ],
+        "signed_closed_sum": "0",
+        "sign": 0
+      },
+      {
+        "exclude_identity": true,
+        "n": 2,
+        "central_counts": [
+          "80",
+          "0",
+          "0"
+        ],
+        "signed_closed_sum": "80",
+        "sign": 1
+      },
+      {
+        "exclude_identity": true,
+        "n": 3,
+        "central_counts": [
+          "2000",
+          "2160",
+          "2160"
+        ],
+        "signed_closed_sum": "-160",
+        "sign": -1
+      },
+      {
+        "exclude_identity": true,
+        "n": 4,
+        "central_counts": [
+          "173040",
+          "166320",
+          "166320"
+        ],
+        "signed_closed_sum": "6720",
+        "sign": 1
+      },
+      {
+        "exclude_identity": true,
+        "n": 5,
+        "central_counts": [
+          "13467280",
+          "13493520",
+          "13493520"
+        ],
+        "signed_closed_sum": "-26240",
+        "sign": -1
+      },
+      {
+        "exclude_identity": true,
+        "n": 6,
+        "central_counts": [
+          "1079175280",
+          "1078585200",
+          "1078585200"
+        ],
+        "signed_closed_sum": "590080",
+        "sign": 1
+      },
+      {
+        "exclude_identity": true,
+        "n": 7,
+        "central_counts": [
+          "86300365200",
+          "86303644560",
+          "86303644560"
+        ],
+        "signed_closed_sum": "-3279360",
+        "sign": -1
+      },
+      {
+        "exclude_identity": true,
+        "n": 8,
+        "central_counts": [
+          "6904239958640",
+          "6904186193520",
+          "6904186193520"
+        ],
+        "signed_closed_sum": "53765120",
+        "sign": 1
+      },
+      {
+        "exclude_identity": true,
+        "n": 9,
+        "central_counts": [
+          "552336082632080",
+          "552336452511120",
+          "552336452511120"
+        ],
+        "signed_closed_sum": "-369879040",
+        "sign": -1
+      },
+      {
+        "exclude_identity": true,
+        "n": 10,
+        "central_counts": [
+          "44186909698093680",
+          "44186904657126000",
+          "44186904657126000"
+        ],
+        "signed_closed_sum": "5040967680",
+        "sign": 1
+      }
+    ],
+    "scope": "Uniform Weyl increments, not the full 120 Clifford tick family; trace sum over histories returning to zero displacement. All even lengths positive, odd length >=3 negative for nonidentity-only increments. On a bipartite graph independent Weyl increment sums do not give needed positive action Fourier coefficients by themselves."
+  },
+  "geometry": {
+    "tetra_flux_census": {
+      "0,0": 1,
+      "2,0": 12,
+      "3,1": 8,
+      "4,0": 6
+    },
+    "rows": [
+      {
+        "beta": 0,
+        "mu_crossover": 0,
+        "log_rook": -1.6590965182828838,
+        "log_torus": 0,
+        "log_ratio": 1.6590965182828838,
+        "max_suppression_log_ratio": 2.8111830947031087
+      },
+      {
+        "beta": 0.1,
+        "mu_crossover": 0.0000492002087197475,
+        "log_rook": -4.6707551565732475,
+        "log_torus": -3.118719133102457,
+        "log_ratio": 1.5520360234707904,
+        "max_suppression_log_ratio": 2.6167398836819395
+      },
+      {
+        "beta": 0.265,
+        "mu_crossover": 0.0031835546641921907,
+        "log_rook": -9.212704459076692,
+        "log_torus": -7.896165516000964,
+        "log_ratio": 1.3165389430757282,
+        "max_suppression_log_ratio": 2.2007013916725446
+      },
+      {
+        "beta": 0.37,
+        "mu_crossover": 0.014602587526692617,
+        "log_rook": -11.817981739611486,
+        "log_torus": -10.688250623329209,
+        "log_ratio": 1.1297311162822776,
+        "max_suppression_log_ratio": 1.8872278448728466
+      },
+      {
+        "beta": 0.512,
+        "mu_crossover": 0.07140010812818953,
+        "log_rook": -14.972692296308619,
+        "log_torus": -14.150122022400755,
+        "log_ratio": 0.8225702739078642,
+        "max_suppression_log_ratio": 1.409464545723731
+      },
+      {
+        "beta": 0.75,
+        "mu_crossover": 0.7064509506811978,
+        "log_rook": -19.256490428041232,
+        "log_torus": -19.144266918203584,
+        "log_ratio": 0.11222350983764784,
+        "max_suppression_log_ratio": 0.450523152351785
+      },
+      {
+        "beta": 1,
+        "mu_crossover": null,
+        "log_rook": -22.38471590321099,
+        "log_torus": -23.34819689992119,
+        "log_ratio": -0.9634809967102029,
+        "max_suppression_log_ratio": -0.8028818255238725
+      },
+      {
+        "beta": 2,
+        "mu_crossover": null,
+        "log_rook": -26.129097670381313,
+        "log_torus": -32.099519749059176,
+        "log_ratio": -5.9704220786778635,
+        "max_suppression_log_ratio": -5.967601012144943
+      }
+    ],
+    "scope": "Exact normalized link-gauge partition for rook clique complex (eight edge-disjoint tetrahedra) and oriented Shrikhande torus (one face relation), with principal-lift monopole penalty on each 3-simplex. Extends cubic penalty to tetrahedra, supplied rule; different cell dimensions, not a four-dimensional spacetime selector."
+  }
+}
