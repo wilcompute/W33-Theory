@@ -1,0 +1,65 @@
+{
+  "adjoint": {
+    "finite_restriction_triples": 729,
+    "postnikov_census": [
+      585,
+      72,
+      72
+    ],
+    "degree4_checks": 6561,
+    "scope": "Crossed module Z9 -> E6_sc, central image Z3, pi1 E6_ad and pi2 Z3, nontrivial Bockstein of universal lifting obstruction. Restriction along H27/Z3 gives xy' extension and nonzero Bockstein. E8_sc has H^3(BE8;Z3)=0, so no analogous ordinary finite one-form Postnikov extension over E8 alone. 27 does not descend to E6_ad as ordinary local representation; higher charged defects or other symmetry structure needed. No complete spin-bordism calculation."
+  },
+  "matter": {
+    "rows": [
+      {
+        "d": 1,
+        "logdet_mass_point2": -0.07078467429477023,
+        "logdet_mass1": 0.6238107230748974,
+        "log_ratio": -0.6945953973696676
+      },
+      {
+        "d": 2,
+        "logdet_mass_point2": 0.06893942111426485,
+        "logdet_mass1": 0.6594019104237836,
+        "log_ratio": -0.5904624893095187
+      },
+      {
+        "d": 3,
+        "logdet_mass_point2": 0.11248843369687012,
+        "logdet_mass1": 0.6711096970292123,
+        "log_ratio": -0.5586212633323422
+      },
+      {
+        "d": 4,
+        "logdet_mass_point2": 0.1323441729458811,
+        "logdet_mass1": 0.6768240689594108,
+        "log_ratio": -0.5444798960135298
+      },
+      {
+        "d": 5,
+        "logdet_mass_point2": 0.143489261050313,
+        "logdet_mass1": 0.6801938621096097,
+        "log_ratio": -0.5367046010592967
+      },
+      {
+        "d": 6,
+        "logdet_mass_point2": 0.15058545558485156,
+        "logdet_mass1": 0.6824131185682767,
+        "log_ratio": -0.5318276629834251
+      },
+      {
+        "d": 7,
+        "logdet_mass_point2": 0.1554920026865035,
+        "logdet_mass1": 0.6839842144896445,
+        "log_ratio": -0.528492211803141
+      },
+      {
+        "d": 8,
+        "logdet_mass_point2": 0.1590851124558248,
+        "logdet_mass1": 0.6851545924696173,
+        "log_ratio": -0.5260694800137925
+      }
+    ],
+    "scope": "Infinite Euclidean grid normalized Laplacian 1-average cos(k_i). Convex order of iid sample means decreases with rank (leave-one-out Jensen), so expectation of concave log(m+lambda) increases with rank. For eps<delta log((eps+lambda)/(delta+lambda)) is concave too, so fixed-mass determinant ratio favors maximum rank in bulk. Supplied normalized total hopping rate and flat grid; not arbitrary matter or finite-volume dimension measure."
+  }
+}
