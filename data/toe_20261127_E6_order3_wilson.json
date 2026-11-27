@@ -1,0 +1,419 @@
+{
+  "simple_roots_scaled2": [
+    [
+      0,
+      0,
+      0,
+      2,
+      -2,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      2,
+      -2,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      -2,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      -2
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      2
+    ],
+    [
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1
+    ]
+  ],
+  "cartan": [
+    [
+      2,
+      -1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      -1,
+      2,
+      -1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      -1,
+      2,
+      -1,
+      -1,
+      0
+    ],
+    [
+      0,
+      0,
+      -1,
+      2,
+      0,
+      -1
+    ],
+    [
+      0,
+      0,
+      -1,
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      -1,
+      0,
+      2
+    ]
+  ],
+  "orbits": [
+    {
+      "cocharacter": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "orbit_size": 1,
+      "unbroken_roots": 72,
+      "rank": 6,
+      "abelian_rank": 0,
+      "components": [
+        {
+          "rank": 6,
+          "degrees": [
+            1,
+            1,
+            1,
+            2,
+            2,
+            3
+          ]
+        }
+      ],
+      "weights27": [
+        27,
+        0,
+        0
+      ],
+      "charged_multiplet_components": {
+        "matter": 243,
+        "conjugate": 162,
+        "net": 81
+      }
+    },
+    {
+      "cocharacter": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "orbit_size": 72,
+      "unbroken_roots": 30,
+      "rank": 5,
+      "abelian_rank": 1,
+      "components": [
+        {
+          "rank": 5,
+          "degrees": [
+            1,
+            1,
+            2,
+            2,
+            2
+          ]
+        }
+      ],
+      "weights27": [
+        15,
+        6,
+        6
+      ],
+      "charged_multiplet_components": {
+        "matter": 219,
+        "conjugate": 138,
+        "net": 81
+      }
+    },
+    {
+      "cocharacter": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "orbit_size": 240,
+      "unbroken_roots": 18,
+      "rank": 6,
+      "abelian_rank": 0,
+      "components": [
+        {
+          "rank": 2,
+          "degrees": [
+            1,
+            1
+          ]
+        },
+        {
+          "rank": 2,
+          "degrees": [
+            1,
+            1
+          ]
+        },
+        {
+          "rank": 2,
+          "degrees": [
+            1,
+            1
+          ]
+        }
+      ],
+      "weights27": [
+        9,
+        9,
+        9
+      ],
+      "charged_multiplet_components": {
+        "matter": 207,
+        "conjugate": 126,
+        "net": 81
+      }
+    },
+    {
+      "cocharacter": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "orbit_size": 270,
+      "unbroken_roots": 24,
+      "rank": 4,
+      "abelian_rank": 2,
+      "components": [
+        {
+          "rank": 4,
+          "degrees": [
+            1,
+            1,
+            1,
+            3
+          ]
+        }
+      ],
+      "weights27": [
+        9,
+        9,
+        9
+      ],
+      "charged_multiplet_components": {
+        "matter": 207,
+        "conjugate": 126,
+        "net": 81
+      }
+    },
+    {
+      "cocharacter": [
+        2,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "orbit_size": 72,
+      "unbroken_roots": 30,
+      "rank": 5,
+      "abelian_rank": 1,
+      "components": [
+        {
+          "rank": 5,
+          "degrees": [
+            1,
+            1,
+            2,
+            2,
+            2
+          ]
+        }
+      ],
+      "weights27": [
+        6,
+        6,
+        15
+      ],
+      "charged_multiplet_components": {
+        "matter": 201,
+        "conjugate": 120,
+        "net": 81
+      }
+    },
+    {
+      "cocharacter": [
+        1,
+        2,
+        0,
+        1,
+        0,
+        0
+      ],
+      "orbit_size": 72,
+      "unbroken_roots": 30,
+      "rank": 5,
+      "abelian_rank": 1,
+      "components": [
+        {
+          "rank": 5,
+          "degrees": [
+            1,
+            1,
+            2,
+            2,
+            2
+          ]
+        }
+      ],
+      "weights27": [
+        6,
+        15,
+        6
+      ],
+      "charged_multiplet_components": {
+        "matter": 201,
+        "conjugate": 120,
+        "net": 81
+      }
+    },
+    {
+      "cocharacter": [
+        2,
+        1,
+        0,
+        2,
+        0,
+        1
+      ],
+      "orbit_size": 1,
+      "unbroken_roots": 72,
+      "rank": 6,
+      "abelian_rank": 0,
+      "components": [
+        {
+          "rank": 6,
+          "degrees": [
+            1,
+            1,
+            1,
+            2,
+            2,
+            3
+          ]
+        }
+      ],
+      "weights27": [
+        0,
+        0,
+        27
+      ],
+      "charged_multiplet_components": {
+        "matter": 189,
+        "conjugate": 108,
+        "net": 81
+      }
+    },
+    {
+      "cocharacter": [
+        1,
+        2,
+        0,
+        1,
+        0,
+        2
+      ],
+      "orbit_size": 1,
+      "unbroken_roots": 72,
+      "rank": 6,
+      "abelian_rank": 0,
+      "components": [
+        {
+          "rank": 6,
+          "degrees": [
+            1,
+            1,
+            1,
+            2,
+            2,
+            3
+          ]
+        }
+      ],
+      "weights27": [
+        0,
+        27,
+        0
+      ],
+      "charged_multiplet_components": {
+        "matter": 189,
+        "conjugate": 108,
+        "net": 81
+      }
+    }
+  ],
+  "orbit_count": 8,
+  "order3_nonidentity": 728
+}
