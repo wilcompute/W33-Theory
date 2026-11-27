@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "replica_gap_small_refresh_coefficient": 0.14041666666666666,
+  "rows": [
+    {
+      "refresh_probability": 1.0,
+      "replica_perron_root": 0.88888888888889,
+      "replica_gap": 0.8888888888888891,
+      "gap_over_epsilon_squared": 0.8888888888888891,
+      "classical_label_length": 0.0,
+      "replica_relative_gap_length": 0.0,
+      "two_site_bulk_normalized_trace": 0.7901234567901263
+    },
+    {
+      "refresh_probability": 0.25,
+      "replica_perron_root": 0.8891348031545115,
+      "replica_gap": 0.2205699153063062,
+      "gap_over_epsilon_squared": 3.5291186449008993,
+      "classical_label_length": 3.476059496782207,
+      "replica_relative_gap_length": 3.5073517361893543,
+      "two_site_bulk_normalized_trace": 0.790277493969127
+    },
+    {
+      "refresh_probability": 0.05,
+      "replica_perron_root": 0.9069130038888584,
+      "replica_gap": 0.0030773002579420616,
+      "gap_over_epsilon_squared": 1.2309201031768244,
+      "classical_label_length": 19.495725746223673,
+      "replica_relative_gap_length": 294.2103162656402,
+      "two_site_bulk_normalized_trace": 0.7902777706595677
+    },
+    {
+      "refresh_probability": 0.01,
+      "replica_perron_root": 0.9802973677796847,
+      "replica_gap": 1.819934021052294e-05,
+      "gap_over_epsilon_squared": 0.1819934021052294,
+      "classical_label_length": 99.49916247342207,
+      "replica_relative_gap_length": 53863.945441352254,
+      "two_site_bulk_normalized_trace": 0.790277777515397
+    },
+    {
+      "refresh_probability": 0.002,
+      "replica_perron_root": 0.9960383872703382,
+      "replica_gap": 5.896438517449809e-07,
+      "gap_over_epsilon_squared": 0.14741096293624523,
+      "classical_label_length": 499.4998331664548,
+      "replica_relative_gap_length": 1689219.833310507,
+      "two_site_bulk_normalized_trace": 0.7902777777674511
+    },
+    {
+      "refresh_probability": 0.0005,
+      "replica_perron_root": 0.9990086474949386,
+      "replica_gap": 3.552846272736332e-08,
+      "gap_over_epsilon_squared": 0.14211385090945328,
+      "classical_label_length": 1999.4999583231336,
+      "replica_relative_gap_length": 28118545.613023978,
+      "two_site_bulk_normalized_trace": 0.7902777777771328
+    }
+  ],
+  "cycle_fugacity_ratio_after_bulk_normalization": {
+    "zero_refresh": "1/120",
+    "positive_fixed_refresh": "1"
+  }
+}
