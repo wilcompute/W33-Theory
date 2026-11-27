@@ -1,0 +1,187 @@
+{
+  "tower": {
+    "rows": [
+      {
+        "n": 1,
+        "order": 27,
+        "center": 3,
+        "conjugacy_classes": 11,
+        "irreps": {
+          "1": 9,
+          "3": 2
+        },
+        "double_rank": 105,
+        "double_dimensions": {
+          "1": 27,
+          "3": 78
+        },
+        "twist_order_census": {
+          "1": 53,
+          "3": 52
+        }
+      },
+      {
+        "n": 2,
+        "order": 81,
+        "center": 9,
+        "conjugacy_classes": 33,
+        "irreps": {
+          "1": 27,
+          "3": 6
+        },
+        "double_rank": 945,
+        "double_dimensions": {
+          "1": 243,
+          "3": 702
+        },
+        "twist_order_census": {
+          "1": 261,
+          "3": 360,
+          "9": 324
+        }
+      },
+      {
+        "n": 3,
+        "order": 243,
+        "center": 27,
+        "conjugacy_classes": 99,
+        "irreps": {
+          "1": 81,
+          "3": 18
+        },
+        "double_rank": 8505,
+        "double_dimensions": {
+          "1": 2187,
+          "3": 6318
+        },
+        "twist_order_census": {
+          "1": 1089,
+          "3": 1692,
+          "9": 2808,
+          "27": 2916
+        }
+      },
+      {
+        "n": 4,
+        "order": 729,
+        "center": 81,
+        "conjugacy_classes": 297,
+        "irreps": {
+          "1": 243,
+          "3": 54
+        },
+        "double_rank": 76545,
+        "double_dimensions": {
+          "1": 19683,
+          "3": 56862
+        },
+        "twist_order_census": {
+          "1": 4185,
+          "3": 6912,
+          "9": 13932,
+          "27": 25272,
+          "81": 26244
+        }
+      },
+      {
+        "n": 5,
+        "order": 2187,
+        "center": 243,
+        "conjugacy_classes": 891,
+        "irreps": {
+          "1": 729,
+          "3": 162
+        },
+        "double_rank": 688905,
+        "double_dimensions": {
+          "1": 177147,
+          "3": 511758
+        },
+        "twist_order_census": {
+          "1": 15309,
+          "3": 26244,
+          "9": 58320,
+          "27": 125388,
+          "81": 227448,
+          "243": 236196
+        }
+      },
+      {
+        "n": 6,
+        "order": 6561,
+        "center": 729,
+        "conjugacy_classes": 2673,
+        "irreps": {
+          "1": 2187,
+          "3": 486
+        },
+        "double_rank": 6200145,
+        "double_dimensions": {
+          "1": 1594323,
+          "3": 4605822
+        },
+        "twist_order_census": {
+          "1": 54189,
+          "3": 95256,
+          "9": 224532,
+          "27": 524880,
+          "81": 1128492,
+          "243": 2047032,
+          "729": 2125764
+        }
+      }
+    ],
+    "scope": "Untwisted Drinfeld doubles of G_n=C_(3^n) semidirect Heisenberg pullback; 2+1D topological model, no four-dimensional physical selection. Conjugacy class size1 or3; noncentral centralizers abelian. Twist convention character(g), inversion has same census."
+  },
+  "selection": {
+    "info": [
+      {
+        "name": "Golay",
+        "neighbors_detected_by_external_triples": 55,
+        "census": {
+          "4": 55
+        }
+      },
+      {
+        "name": "weight3",
+        "neighbors_detected_by_external_triples": 90,
+        "census": {
+          "4": 90
+        }
+      }
+    ],
+    "rows": [
+      {
+        "beta": 0,
+        "stationary_Golay": 0.32926829268292684,
+        "type_relaxation_gap": 0.6776859504132231,
+        "mean_steps_from_bad": 4.481481481481481
+      },
+      {
+        "beta": 0.5,
+        "stationary_Golay": 0.7838938139424702,
+        "type_relaxation_gap": 0.2846565337025926,
+        "mean_steps_from_bad": 4.481481481481481
+      },
+      {
+        "beta": 1,
+        "stationary_Golay": 0.9640323067263329,
+        "type_relaxation_gap": 0.2314657862717387,
+        "mean_steps_from_bad": 4.481481481481481
+      },
+      {
+        "beta": 2,
+        "stationary_Golay": 0.9993171168504829,
+        "type_relaxation_gap": 0.22329297888045155,
+        "mean_steps_from_bad": 4.481481481481481
+      },
+      {
+        "beta": 4,
+        "stationary_Golay": 0.9999997707617337,
+        "type_relaxation_gap": 0.22314054702012073,
+        "mean_steps_from_bad": 4.481481481481481
+      }
+    ],
+    "scope": "Classical Metropolis walk on maximal isotropic subspaces containing ones, uniform hyperplane neighbor, energy number of weight3 directions. Each good has55 bad neighbors (220 external triples /4); each bad has27 good neighbors (hyperplane excludes all4 triples; external new triple cannot meet all4 disjoint triples). Detailed balance and type gap exact. Supplied repulsive energy, not quantum Lindbladian or full-chain gap."
+  }
+}
