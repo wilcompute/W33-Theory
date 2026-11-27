@@ -1,0 +1,856 @@
+{
+  "status": "PASS",
+  "geometry": {
+    "punctures": [
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "automorphisms": [
+      {
+        "sem": 0,
+        "a": [
+          1,
+          0
+        ],
+        "b": [
+          0,
+          0
+        ],
+        "perm": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "sem": 0,
+        "a": [
+          2,
+          0
+        ],
+        "b": [
+          2,
+          2
+        ],
+        "perm": [
+          3,
+          2,
+          1,
+          0
+        ]
+      },
+      {
+        "sem": 0,
+        "a": [
+          0,
+          1
+        ],
+        "b": [
+          2,
+          0
+        ],
+        "perm": [
+          1,
+          3,
+          0,
+          2
+        ]
+      },
+      {
+        "sem": 0,
+        "a": [
+          0,
+          2
+        ],
+        "b": [
+          0,
+          2
+        ],
+        "perm": [
+          2,
+          0,
+          3,
+          1
+        ]
+      },
+      {
+        "sem": 1,
+        "a": [
+          1,
+          0
+        ],
+        "b": [
+          0,
+          2
+        ],
+        "perm": [
+          2,
+          3,
+          0,
+          1
+        ]
+      },
+      {
+        "sem": 1,
+        "a": [
+          2,
+          0
+        ],
+        "b": [
+          2,
+          0
+        ],
+        "perm": [
+          1,
+          0,
+          3,
+          2
+        ]
+      },
+      {
+        "sem": 1,
+        "a": [
+          0,
+          1
+        ],
+        "b": [
+          0,
+          0
+        ],
+        "perm": [
+          0,
+          2,
+          1,
+          3
+        ]
+      },
+      {
+        "sem": 1,
+        "a": [
+          0,
+          2
+        ],
+        "b": [
+          2,
+          2
+        ],
+        "perm": [
+          3,
+          1,
+          2,
+          0
+        ]
+      }
+    ],
+    "valuation_matrix": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        -1,
+        -1,
+        -1
+      ]
+    ],
+    "gram": [
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        1
+      ],
+      [
+        1,
+        1,
+        2
+      ]
+    ],
+    "covolume": 2,
+    "normalized_shortest": 1.122462048309373,
+    "shells": {
+      "0": 1,
+      "2": 12,
+      "4": 6,
+      "6": 24,
+      "8": 12,
+      "10": 24,
+      "12": 8,
+      "14": 48,
+      "16": 6,
+      "18": 36,
+      "20": 24
+    },
+    "shortest_vectors": [
+      [
+        -1,
+        0,
+        0,
+        1
+      ],
+      [
+        -1,
+        0,
+        1,
+        0
+      ],
+      [
+        -1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0,
+        1
+      ],
+      [
+        0,
+        -1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        -1
+      ],
+      [
+        0,
+        1,
+        -1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        -1
+      ],
+      [
+        1,
+        -1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        -1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        -1
+      ]
+    ],
+    "covariance": [
+      [
+        0.5,
+        -0.16666666666666666,
+        -0.16666666666666666,
+        -0.16666666666666666
+      ],
+      [
+        -0.16666666666666666,
+        0.5,
+        -0.16666666666666666,
+        -0.16666666666666666
+      ],
+      [
+        -0.16666666666666666,
+        -0.16666666666666666,
+        0.5,
+        -0.16666666666666666
+      ],
+      [
+        -0.16666666666666666,
+        -0.16666666666666666,
+        -0.16666666666666666,
+        0.5
+      ]
+    ],
+    "extra_invariant": [
+      1,
+      -1,
+      -1,
+      1
+    ],
+    "fourth_moments": [
+      0.833333333333333,
+      0.6666666666666666
+    ],
+    "scope": "Intrinsic equal-puncture valuation metric, not uniquely imposed by D4 or physical dynamics."
+  },
+  "rotor": {
+    "gap_lower": 6.768,
+    "rows": [
+      {
+        "N": 2,
+        "J": 0.01,
+        "finite_weyl_gap_lower": 6.648,
+        "local_norm_bound": 0.06,
+        "explicit_projected_interaction_gap_lower": 6.708
+      },
+      {
+        "N": 2,
+        "J": 0.05,
+        "finite_weyl_gap_lower": 6.167999999999999,
+        "local_norm_bound": 0.30000000000000004,
+        "explicit_projected_interaction_gap_lower": 6.468
+      },
+      {
+        "N": 2,
+        "J": 0.1,
+        "finite_weyl_gap_lower": 5.568,
+        "local_norm_bound": 0.6000000000000001,
+        "explicit_projected_interaction_gap_lower": 6.167999999999999
+      },
+      {
+        "N": 4,
+        "J": 0.01,
+        "finite_weyl_gap_lower": 6.528,
+        "local_norm_bound": 0.06,
+        "explicit_projected_interaction_gap_lower": 6.708
+      },
+      {
+        "N": 4,
+        "J": 0.05,
+        "finite_weyl_gap_lower": 5.568,
+        "local_norm_bound": 0.30000000000000004,
+        "explicit_projected_interaction_gap_lower": 6.468
+      },
+      {
+        "N": 4,
+        "J": 0.1,
+        "finite_weyl_gap_lower": 4.367999999999999,
+        "local_norm_bound": 0.6000000000000001,
+        "explicit_projected_interaction_gap_lower": 6.167999999999999
+      },
+      {
+        "N": 8,
+        "J": 0.01,
+        "finite_weyl_gap_lower": 6.288,
+        "local_norm_bound": 0.06,
+        "explicit_projected_interaction_gap_lower": 6.708
+      },
+      {
+        "N": 8,
+        "J": 0.05,
+        "finite_weyl_gap_lower": 4.367999999999999,
+        "local_norm_bound": 0.30000000000000004,
+        "explicit_projected_interaction_gap_lower": 6.468
+      },
+      {
+        "N": 8,
+        "J": 0.1,
+        "finite_weyl_gap_lower": 1.967999999999999,
+        "local_norm_bound": 0.6000000000000001,
+        "explicit_projected_interaction_gap_lower": 6.167999999999999
+      },
+      {
+        "N": 16,
+        "J": 0.01,
+        "finite_weyl_gap_lower": 5.808,
+        "local_norm_bound": 0.06,
+        "explicit_projected_interaction_gap_lower": 6.708
+      },
+      {
+        "N": 16,
+        "J": 0.05,
+        "finite_weyl_gap_lower": 1.967999999999999,
+        "local_norm_bound": 0.30000000000000004,
+        "explicit_projected_interaction_gap_lower": 6.468
+      },
+      {
+        "N": 16,
+        "J": 0.1,
+        "finite_weyl_gap_lower": -2.8320000000000016,
+        "local_norm_bound": 0.6000000000000001,
+        "explicit_projected_interaction_gap_lower": 6.167999999999999
+      },
+      {
+        "N": 32,
+        "J": 0.01,
+        "finite_weyl_gap_lower": 4.848,
+        "local_norm_bound": 0.06,
+        "explicit_projected_interaction_gap_lower": 6.708
+      },
+      {
+        "N": 32,
+        "J": 0.05,
+        "finite_weyl_gap_lower": -2.8320000000000016,
+        "local_norm_bound": 0.30000000000000004,
+        "explicit_projected_interaction_gap_lower": 6.468
+      },
+      {
+        "N": 32,
+        "J": 0.1,
+        "finite_weyl_gap_lower": -12.432000000000002,
+        "local_norm_bound": 0.6000000000000001,
+        "explicit_projected_interaction_gap_lower": 6.167999999999999
+      }
+    ],
+    "slab": [
+      {
+        "L": 4,
+        "k": 0,
+        "b": 0.19999999999999996,
+        "smallest_singular": 0.0015360149425910957,
+        "edge_energy": 0.0015360149425910957,
+        "bulk_min": 0.8,
+        "lower": 0.0015359999999999985,
+        "upper": 0.0015676754420070826,
+        "opposite_wall_trial_probability": 0.00006144015728680257
+      },
+      {
+        "L": 4,
+        "k": 0.2,
+        "b": 0.21993342215875833,
+        "smallest_singular": 0.0022265972244333433,
+        "edge_energy": 0.1986818077574223,
+        "bulk_min": 0.8049679303323228,
+        "lower": 0.0022265514144797073,
+        "upper": 0.002282443399254903,
+        "opposite_wall_trial_probability": 0.00010770046276250583
+      },
+      {
+        "L": 4,
+        "k": 0.5,
+        "b": 0.3224174381096272,
+        "smallest_singular": 0.009686826751577166,
+        "edge_energy": 0.4795233901265351,
+        "bulk_min": 0.8300403455518599,
+        "lower": 0.009682887347544349,
+        "upper": 0.010229745845984595,
+        "opposite_wall_trial_probability": 0.001006682785940554
+      },
+      {
+        "L": 4,
+        "k": 1,
+        "b": 0.6596976941318602,
+        "smallest_singular": 0.1157203584510726,
+        "edge_energy": 0.8493907343700048,
+        "bulk_min": 0.9076778490481875,
+        "lower": 0.10697289439236418,
+        "upper": 0.14496378992460182,
+        "opposite_wall_trial_probability": 0.04828687914039135
+      },
+      {
+        "L": 4,
+        "k": 1.5,
+        "b": 1.1292627983322971,
+        "smallest_singular": 0.45344927826778675,
+        "edge_energy": 1.095724644361803,
+        "bulk_min": 1.0058355329440887,
+        "lower": null,
+        "upper": null,
+        "opposite_wall_trial_probability": null
+      },
+      {
+        "L": 4,
+        "k": 3.141592653589793,
+        "b": 2.2,
+        "smallest_singular": 1.4484732864678334,
+        "edge_energy": 1.4484732864678334,
+        "bulk_min": 1.2000000000000002,
+        "lower": null,
+        "upper": null,
+        "opposite_wall_trial_probability": null
+      },
+      {
+        "L": 8,
+        "k": 0,
+        "b": 0.19999999999999996,
+        "smallest_singular": 0.000002457600000123046,
+        "edge_energy": 0.000002457600000123046,
+        "bulk_min": 0.8,
+        "lower": 0.0000024575999999999953,
+        "upper": 0.000002508277496618189,
+        "opposite_wall_trial_probability": 1.5728640000103028e-10
+      },
+      {
+        "L": 8,
+        "k": 0.2,
+        "b": 0.21993342215875833,
+        "smallest_singular": 0.000005209519353272528,
+        "edge_energy": 0.19866933086336336,
+        "bulk_min": 0.8049679303323228,
+        "lower": 0.000005209519352091535,
+        "upper": 0.000005340276642742948,
+        "opposite_wall_trial_probability": 5.89583128166798e-10
+      },
+      {
+        "L": 8,
+        "k": 0.5,
+        "b": 0.3224174381096272,
+        "smallest_singular": 0.00010463548996572068,
+        "edge_energy": 0.47942555002264525,
+        "bulk_min": 0.8300403455518599,
+        "lower": 0.00010463547988591555,
+        "upper": 0.00011053850317103203,
+        "opposite_wall_trial_probability": 1.1754119810340258e-7
+      },
+      {
+        "L": 8,
+        "k": 1,
+        "b": 0.6596976941318602,
+        "smallest_singular": 0.020368635183682822,
+        "edge_energy": 0.8417174701601583,
+        "bulk_min": 0.9076778490481875,
+        "lower": 0.02026066104925188,
+        "upper": 0.02697654209892805,
+        "opposite_wall_trial_probability": 0.0016721784737347032
+      },
+      {
+        "L": 8,
+        "k": 1.5,
+        "b": 1.1292627983322971,
+        "smallest_singular": 0.2851247293677152,
+        "edge_energy": 1.037445111606988,
+        "bulk_min": 1.0058355329440887,
+        "lower": null,
+        "upper": null,
+        "opposite_wall_trial_probability": null
+      },
+      {
+        "L": 8,
+        "k": 3.141592653589793,
+        "b": 2.2,
+        "smallest_singular": 1.290561558776242,
+        "edge_energy": 1.290561558776242,
+        "bulk_min": 1.2000000000000002,
+        "lower": null,
+        "upper": null,
+        "opposite_wall_trial_probability": null
+      },
+      {
+        "L": 16,
+        "k": 0,
+        "b": 0.19999999999999996,
+        "smallest_singular": 6.291455999999977e-12,
+        "edge_energy": 6.291455999999977e-12,
+        "bulk_min": 0.8,
+        "lower": 6.291455999999977e-12,
+        "upper": 6.421190391321511e-12,
+        "opposite_wall_trial_probability": 1.0307921510399927e-21
+      },
+      {
+        "L": 16,
+        "k": 0.2,
+        "b": 0.21993342215875833,
+        "smallest_singular": 2.8518554620171243e-11,
+        "edge_energy": 0.19866933079506122,
+        "bulk_min": 0.8049679303323228,
+        "lower": 2.8518554620171243e-11,
+        "upper": 2.923436133497858e-11,
+        "opposite_wall_trial_probability": 1.766870652591646e-20
+      },
+      {
+        "L": 16,
+        "k": 0.5,
+        "b": 0.3224174381096272,
+        "smallest_singular": 1.2218760516673678e-8,
+        "edge_energy": 0.4794255386042031,
+        "bulk_min": 0.8300403455518599,
+        "lower": 1.2218760516673645e-8,
+        "upper": 1.2908083284772396e-8,
+        "opposite_wall_trial_probability": 1.6028263449704405e-15
+      },
+      {
+        "L": 16,
+        "k": 1,
+        "b": 0.6596976941318602,
+        "smallest_singular": 0.0007268077101390766,
+        "edge_energy": 0.841471298692367,
+        "bulk_min": 0.9076778490481875,
+        "lower": 0.0007267973576075759,
+        "upper": 0.0009670897003894608,
+        "opposite_wall_trial_probability": 0.00000214903547145597
+      },
+      {
+        "L": 16,
+        "k": 1.5,
+        "b": 1.1292627983322971,
+        "smallest_singular": 0.19597502428829366,
+        "edge_energy": 1.0165640454221367,
+        "bulk_min": 1.0058355329440887,
+        "lower": null,
+        "upper": null,
+        "opposite_wall_trial_probability": null
+      },
+      {
+        "L": 16,
+        "k": 3.141592653589793,
+        "b": 2.2,
+        "smallest_singular": 1.2281100996515273,
+        "edge_energy": 1.2281100996515273,
+        "bulk_min": 1.2000000000000002,
+        "lower": null,
+        "upper": null,
+        "opposite_wall_trial_probability": null
+      },
+      {
+        "L": 32,
+        "k": 0,
+        "b": 0.19999999999999996,
+        "smallest_singular": 4.1231686041599706e-23,
+        "edge_energy": 4.1231686041599706e-23,
+        "bulk_min": 0.8,
+        "lower": 4.1231686041599706e-23,
+        "upper": 4.208191334856451e-23,
+        "opposite_wall_trial_probability": 4.4272185776902303e-44
+      },
+      {
+        "L": 32,
+        "k": 0.2,
+        "b": 0.21993342215875833,
+        "smallest_singular": 8.546478826640907e-22,
+        "edge_energy": 0.19866933079506122,
+        "bulk_min": 0.8049679303323228,
+        "lower": 8.546478826640907e-22,
+        "upper": 8.760992746211757e-22,
+        "opposite_wall_trial_probability": 1.5868072560779456e-41
+      },
+      {
+        "L": 32,
+        "k": 0.5,
+        "b": 0.3224174381096272,
+        "smallest_singular": 1.6661861408662052e-16,
+        "edge_energy": 0.479425538604203,
+        "bulk_min": 0.8300403455518599,
+        "lower": 1.6661861408662054e-16,
+        "upper": 1.760184222031834e-16,
+        "opposite_wall_trial_probability": 2.980431891753964e-31
+      },
+      {
+        "L": 32,
+        "k": 1,
+        "b": 0.6596976941318602,
+        "smallest_singular": 9.352609399263103e-7,
+        "edge_energy": 0.8414709848084161,
+        "bulk_min": 0.9076778490481875,
+        "lower": 9.352609398810759e-7,
+        "upper": 0.000001244474080423567,
+        "opposite_wall_trial_probability": 3.558621343478221e-12
+      },
+      {
+        "L": 32,
+        "k": 1.5,
+        "b": 1.1292627983322971,
+        "smallest_singular": 0.15407484904549307,
+        "edge_energy": 1.0093241835052869,
+        "bulk_min": 1.0058355329440887,
+        "lower": null,
+        "upper": null,
+        "opposite_wall_trial_probability": null
+      },
+      {
+        "L": 32,
+        "k": 3.141592653589793,
+        "b": 2.2,
+        "smallest_singular": 1.207874734354822,
+        "edge_energy": 1.207874734354822,
+        "bulk_min": 1.2000000000000002,
+        "lower": null,
+        "upper": null,
+        "opposite_wall_trial_probability": null
+      }
+    ],
+    "scope": "Uniform weak product-phase stability via known theorem for bounded rotor interactions; explicit projector-dressed even hopping alternative; free Wilson slab, not interacting selective mirror gapping."
+  },
+  "gravity": {
+    "checks": 5037,
+    "max_residual": 6.217248937900877e-15,
+    "samples": [
+      {
+        "L": 3,
+        "omega": 1.7320508075688772,
+        "continuum": 2.0943951023931953,
+        "ratio": 0.8269933431326881
+      },
+      {
+        "L": 4,
+        "omega": 1.414213562373095,
+        "continuum": 1.5707963267948966,
+        "ratio": 0.9003163161571061
+      },
+      {
+        "L": 7,
+        "omega": 0.8677674782351162,
+        "continuum": 0.8975979010256552,
+        "ratio": 0.9667663853085522
+      },
+      {
+        "L": 8,
+        "omega": 0.7653668647301796,
+        "continuum": 0.7853981633974483,
+        "ratio": 0.9744953584044327
+      },
+      {
+        "L": 16,
+        "omega": 0.3901806440322565,
+        "continuum": 0.39269908169872414,
+        "ratio": 0.9935868511442058
+      }
+    ],
+    "zero_mode": "homogeneous metric moduli separate",
+    "scope": "Staggered derivative Fourier quadratic ADM control, exact first-class linear constraints; no nonlinear closure or derived universal coupling."
+  },
+  "condensation": {
+    "probe_count": 130,
+    "classes": {
+      "vacuum": {
+        "count": 1,
+        "orthogonal_probes": 130,
+        "positive_hopping_energy": -130.0000000000001,
+        "negative_hopping_energy": -260
+      },
+      "singular": {
+        "count": 130,
+        "orthogonal_probes": 49,
+        "positive_hopping_energy": -201.23020456731717,
+        "negative_hopping_energy": -222.09919978527444
+      },
+      "nonsingular": {
+        "count": 234,
+        "orthogonal_probes": 40,
+        "positive_hopping_energy": -209.14467174146353,
+        "negative_hopping_energy": -217.88799976141604
+      }
+    },
+    "frustrated_ring_eigen_min": [
+      -1.0000000000000009,
+      -1.8793852415718166,
+      -1.879385241571817
+    ],
+    "unfrustrated_ring_eigen_min": [
+      -2,
+      -1.532088886237956,
+      -1.5320888862379556
+    ],
+    "selector_gap": 7.914467174146353,
+    "scope": "Exactly solvable annular topological-charge plus local probe ring Hamiltonian; supplied hopping sign, no bulk condensation."
+  },
+  "holonomy": {
+    "normalized_by": 729,
+    "rows": [
+      {
+        "spin": 0,
+        "eta": 1,
+        "ground_upper": -0.0042204003496569605,
+        "truncation_difference": 4.736341527311616e-13,
+        "exact_potential_min": -0.48148148148148145
+      },
+      {
+        "spin": 0,
+        "eta": 0.1,
+        "ground_upper": -0.03957953810311453,
+        "truncation_difference": 4.486459814767585e-12,
+        "exact_potential_min": -0.48148148148148145
+      },
+      {
+        "spin": 0,
+        "eta": 0.01,
+        "ground_upper": -0.20415053073813155,
+        "truncation_difference": 6.02476402100649e-11,
+        "exact_potential_min": -0.48148148148148145
+      },
+      {
+        "spin": 0,
+        "eta": 0.001,
+        "ground_upper": -0.3414575049644672,
+        "truncation_difference": 2.819180444646463e-10,
+        "exact_potential_min": -0.48148148148148145
+      },
+      {
+        "spin": 0,
+        "eta": 0.0001,
+        "ground_upper": -0.43128072044834176,
+        "truncation_difference": 2.640068719195199e-10,
+        "exact_potential_min": -0.48148148148148145
+      },
+      {
+        "spin": 0.5,
+        "eta": 1,
+        "ground_upper": -0.004119327145801718,
+        "truncation_difference": 1.5804024755539103e-13,
+        "exact_potential_min": -0.875
+      },
+      {
+        "spin": 0.5,
+        "eta": 0.1,
+        "ground_upper": -0.04290619986457884,
+        "truncation_difference": 1.5453333057635632e-12,
+        "exact_potential_min": -0.875
+      },
+      {
+        "spin": 0.5,
+        "eta": 0.01,
+        "ground_upper": -0.3514595111166573,
+        "truncation_difference": 2.7942759217580715e-11,
+        "exact_potential_min": -0.875
+      },
+      {
+        "spin": 0.5,
+        "eta": 0.001,
+        "ground_upper": -0.6850705948420466,
+        "truncation_difference": 9.299849779154101e-11,
+        "exact_potential_min": -0.875
+      },
+      {
+        "spin": 0.5,
+        "eta": 0.0001,
+        "ground_upper": -0.8126868587804288,
+        "truncation_difference": 1.495540713492005e-8,
+        "exact_potential_min": -0.875
+      }
+    ],
+    "periodic_max": 0.48148148148148145,
+    "antiperiodic_max": 0.875,
+    "lipschitz": 22.22222222222222,
+    "positive_interval_radius": 0.010833333333333332,
+    "scope": "Quantized flat gauge zero mode in supplied one-loop potential, variational Fourier truncation. No full nonperturbative gauge theory or chiral determinant phase."
+  }
+}
