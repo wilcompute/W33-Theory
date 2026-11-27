@@ -1,0 +1,60 @@
+{
+  "logical_dimension": 9,
+  "restricted_H27_F_e": 1.0,
+  "trinification_twirl_F_e": 0.03703703703703705,
+  "mixture": [
+    {
+      "probability": 0.001,
+      "F_e": 0.9990370370370371
+    },
+    {
+      "probability": 0.01,
+      "F_e": 0.9903703703703703
+    },
+    {
+      "probability": 0.05,
+      "F_e": 0.9518518518518518
+    },
+    {
+      "probability": 0.1,
+      "F_e": 0.9037037037037037
+    },
+    {
+      "probability": 1.0,
+      "F_e": 0.03703703703703705
+    }
+  ],
+  "local_phase_rows": [
+    {
+      "theta": 0.01,
+      "entanglement_fidelity": 0.9999555564197433,
+      "average_gate_fidelity": 0.999960000777769
+    },
+    {
+      "theta": 0.05,
+      "entanglement_fidelity": 0.9988894288644802,
+      "average_gate_fidelity": 0.9990004859780323
+    },
+    {
+      "theta": 0.1,
+      "entanglement_fidelity": 0.995564188072234,
+      "average_gate_fidelity": 0.9960077692650107
+    },
+    {
+      "theta": 0.25,
+      "entanglement_fidelity": 0.9725574983154168,
+      "average_gate_fidelity": 0.9753017484838752
+    },
+    {
+      "theta": 0.5,
+      "entanglement_fidelity": 0.8941447027476547,
+      "average_gate_fidelity": 0.9047302324728893
+    },
+    {
+      "theta": 1.0,
+      "entanglement_fidelity": 0.6331224387944253,
+      "average_gate_fidelity": 0.6698101949149827
+    }
+  ],
+  "scope": "For mixture of restricted H27 noise and complete SU3^3 twirl, fixed recovery is optimal: the twirl retains only three classical block labels of rank 3 on the code, so any recovery contributes at most 3/81 entanglement fidelity; the restricted branch contributes at most 1. The displayed mixture attains both bounds. Local coherent phase rows use fixed recovery only. Mixture probability is illustrative, not measured E6 noise."
+}

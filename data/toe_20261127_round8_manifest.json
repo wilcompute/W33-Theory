@@ -1,0 +1,17 @@
+{
+  "base_master": "5229e15ac5473490921f8bb3bf0dc1ed6df5d4cd",
+  "local_tests": "13 passed in 15.24s",
+  "files": {
+    "analysis/toe_20261127_round8.py": "e5a0e848e2e763325f0d76a173a1491391c6b303d17754ff1ad797fcb909da36",
+    "tests/test_toe_20261127_round8.py": "8a416776e1c772dda392e301e153736e8a10790b66558d42e174924af4871877",
+    ".github/workflows/toe-round8-20261127.yml": "3c1df60bd6f96056f91e1ecbbc8e9211870c3c42a9b826d1bd62961bb9ef473e",
+    "analysis/2026-11-27_round8_E6_E8_MIC_H27_causal_arithmetic_compiler.md": "5814dfdea93001b17bcfb0a6826ee4f01c2805640b0923c495659cb593185fb9",
+    "data/toe_20261127_round8_causal.json": "4fb26efc7fe309ca8151da217663015c54283ddfd1015a0f5214227861d572b2",
+    "data/toe_20261127_round8_compiler.json": "7580f699c63d155fb8a9b734329dc084698e21c0389a01054e27d72b9e3ea31a",
+    "data/toe_20261127_round8_e8_bridge.json": "37e3a29bfd4b3f1053eb67d118926ac43a5e4fb0474541e4af5483f713eac076",
+    "data/toe_20261127_round8_higgs.json": "163e173e98aac53c84b3a9e966f8affef64033764124de9e388edef9e6b09ff9",
+    "data/toe_20261127_round8_maxcuts.json": "3442fc987b5dec740aecb7c23bc208cb09e802d4f48c86bcc53bc56d1cd58547",
+    "data/toe_20261127_round8_mic.json": "fd1815cfa0e12cc9d2428e856a61255298893f1f3a12ea1a8ca547db3ed3ee4b",
+    "data/toe_20261127_round8_qec.json": "cc8bf205b859dceab7be0ab8e2106071c8cd1181e2cc09167d4e93be3795449e"
+  }
+}

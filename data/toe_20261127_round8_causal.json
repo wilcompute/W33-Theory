@@ -1,0 +1,139 @@
+{
+  "rows": [
+    {
+      "copies": 1,
+      "product": {
+        "N": 40,
+        "pairs": 287,
+        "ordering_fraction": 0.367948717948718,
+        "height": 4,
+        "N0": 160,
+        "N1": 0,
+        "N2": 49,
+        "BD2_reduced": -378
+      },
+      "ordinal_sum": {
+        "N": 40,
+        "pairs": 287,
+        "ordering_fraction": 0.367948717948718,
+        "height": 4,
+        "N0": 160,
+        "N1": 0,
+        "N2": 49,
+        "BD2_reduced": -378
+      },
+      "minkowski_mean_12": {
+        "ordering_fraction": 0.5275641025641026,
+        "height": 10.25,
+        "BD2_reduced": -4.5,
+        "N0": 95.58333333333333,
+        "N1": 59.916666666666664,
+        "N2": 46.5
+      }
+    },
+    {
+      "copies": 2,
+      "product": {
+        "N": 80,
+        "pairs": 901,
+        "ordering_fraction": 0.28512658227848103,
+        "height": 5,
+        "N0": 360,
+        "N1": 0,
+        "N2": 258,
+        "BD2_reduced": -1156
+      },
+      "ordinal_sum": {
+        "N": 80,
+        "pairs": 2174,
+        "ordering_fraction": 0.6879746835443038,
+        "height": 8,
+        "N0": 332,
+        "N1": 96,
+        "N2": 98,
+        "BD2_reduced": -396
+      },
+      "minkowski_mean_12": {
+        "ordering_fraction": 0.5052215189873418,
+        "height": 15.166666666666666,
+        "BD2_reduced": -12.5,
+        "N0": 247.0,
+        "N1": 164.25,
+        "N2": 127.75
+      }
+    },
+    {
+      "copies": 4,
+      "product": {
+        "N": 160,
+        "pairs": 3110,
+        "ordering_fraction": 0.24449685534591195,
+        "height": 7,
+        "N0": 760,
+        "N1": 80,
+        "N2": 716,
+        "BD2_reduced": -2472
+      },
+      "ordinal_sum": {
+        "N": 160,
+        "pairs": 10748,
+        "ordering_fraction": 0.8449685534591195,
+        "height": 16,
+        "N0": 676,
+        "N1": 288,
+        "N2": 196,
+        "BD2_reduced": -432
+      },
+      "minkowski_mean_12": {
+        "ordering_fraction": 0.5027319182389937,
+        "height": 21.916666666666668,
+        "BD2_reduced": -8.333333333333334,
+        "N0": 587.5833333333334,
+        "N1": 433.0833333333333,
+        "N2": 362.75
+      }
+    },
+    {
+      "copies": 8,
+      "product": {
+        "N": 320,
+        "pairs": 11452,
+        "ordering_fraction": 0.2243730407523511,
+        "height": 11,
+        "N0": 1560,
+        "N1": 240,
+        "N2": 1712,
+        "BD2_reduced": -5264
+      },
+      "ordinal_sum": {
+        "N": 320,
+        "pairs": 47096,
+        "ordering_fraction": 0.9227272727272727,
+        "height": 32,
+        "N0": 1364,
+        "N1": 672,
+        "N2": 392,
+        "BD2_reduced": -504
+      },
+      "minkowski_mean_12": {
+        "ordering_fraction": 0.4967835684430511,
+        "height": 31.416666666666668,
+        "BD2_reduced": -5.166666666666667,
+        "N0": 1405.0833333333333,
+        "N1": 1084.5833333333333,
+        "N2": 926.6666666666666
+      }
+    }
+  ],
+  "degree_matched_bipartite_BFS_mean_12": {
+    "ordering_fraction": 0.36688034188034185,
+    "height": 4.0,
+    "BD2_reduced": -308.5,
+    "N0": 160.0,
+    "N1": 11.0,
+    "N2": 36.25
+  },
+  "product_limit_order_fraction": 0.204375,
+  "ordinal_limit_order_fraction": 1.0,
+  "scope": "Two chosen growing poset models; both fail 1+1 Minkowski scaling. BD2 is interval combination up to overall convention. No graviton or continuum derivation."
+}

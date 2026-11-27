@@ -1,0 +1,319 @@
+{
+  "circle_word": "dbdbdbdbdbdb",
+  "theta": 1.7570566303714528,
+  "basis_rank": 15,
+  "basis_words": [
+    "abACBA",
+    "acbA",
+    "aBacBA",
+    "aBaBcba",
+    "BC",
+    "aBac",
+    "BacBa",
+    "ac",
+    "bACBa",
+    "AbaCBa",
+    "ABaCBA",
+    "AbCbACb",
+    "aBACb",
+    "abC",
+    "BaBcBaB"
+  ],
+  "basis_min_singular_value": 0.2585926101051354,
+  "exact_modular_basis_ranks": [
+    [
+      7,
+      15
+    ],
+    [
+      13,
+      14
+    ],
+    [
+      19,
+      15
+    ],
+    [
+      31,
+      15
+    ],
+    [
+      37,
+      15
+    ],
+    [
+      43,
+      15
+    ]
+  ],
+  "circle_powers_max": 8192,
+  "maximum_phase_gap": 0.005358403115700128,
+  "exact_cos_theta": "-5/27",
+  "rational_circle_pq": [
+    26569,
+    95010
+  ],
+  "rigorous_angular_cover_bound": 5.820332716544031e-05,
+  "rational_circle_examples": [
+    {
+      "trotter_steps": 1,
+      "operator_norm_error": 0.011716272987190756,
+      "analytic_worst_phase_bound": 0.09302838534254153,
+      "powers": [
+        34644,
+        -23487,
+        -9201,
+        -15273,
+        -31018,
+        -16049,
+        42293,
+        -20662,
+        41753,
+        -40033,
+        7742,
+        23419,
+        -27889,
+        -5060,
+        -30099
+      ],
+      "primitive_gate_count": 4423614
+    },
+    {
+      "trotter_steps": 2,
+      "operator_norm_error": 0.005893580225369907,
+      "analytic_worst_phase_bound": 0.047823767582493175,
+      "powers": [
+        17322,
+        12262,
+        18899,
+        -31136,
+        -15509,
+        -32030,
+        44646,
+        -10331,
+        44882,
+        -43516,
+        -43634,
+        -11790,
+        -37444,
+        44975,
+        -38549
+      ],
+      "primitive_gate_count": 10726500
+    },
+    {
+      "trotter_steps": 4,
+      "operator_norm_error": 0.002946766579921107,
+      "analytic_worst_phase_bound": 0.0265310335636914,
+      "powers": [
+        8661,
+        -41374,
+        -14050,
+        31937,
+        -31254,
+        31490,
+        -25182,
+        -28665,
+        -25064,
+        25747,
+        -21817,
+        41610,
+        28783,
+        45987,
+        -43280
+      ],
+      "primitive_gate_count": 21355848
+    },
+    {
+      "trotter_steps": 8,
+      "operator_norm_error": 0.002002644587282528,
+      "analytic_worst_phase_bound": 0.01850381627673533,
+      "powers": [
+        28336,
+        -20687,
+        40480,
+        39468,
+        -15627,
+        15745,
+        -12591,
+        -38338,
+        34973,
+        -11132,
+        -34408,
+        20805,
+        37891,
+        46999,
+        25865
+      ],
+      "primitive_gate_count": 40642320
+    },
+    {
+      "trotter_steps": 16,
+      "operator_norm_error": 0.0016116278945373214,
+      "analytic_worst_phase_bound": 0.019728507078146922,
+      "powers": [
+        14168,
+        13156,
+        20240,
+        -27771,
+        -31819,
+        -15627,
+        -29795,
+        28336,
+        -6519,
+        41939,
+        -17204,
+        -13603,
+        42951,
+        46999,
+        -10567
+      ],
+      "primitive_gate_count": 69255648
+    }
+  ],
+  "example_target_log_coefficients": [
+    -0.029389564600088895,
+    -0.027985842601907434,
+    -0.04225457054343793,
+    -0.04147770009986531,
+    -0.03321610087236427,
+    -0.06617788915251578,
+    -0.03655388817728507,
+    -0.059418187137052235,
+    -0.08620080933681946,
+    0.011415448640986169,
+    0.03623703462624597,
+    -0.07138368048525882,
+    0.009848868838301342,
+    0.0006629255434926119,
+    -0.07680781712295698
+  ],
+  "examples": [
+    {
+      "trotter_steps": 1,
+      "powers": [
+        801,
+        7320,
+        919,
+        919,
+        7885,
+        143,
+        354,
+        8121,
+        826,
+        7978,
+        7742,
+        7227,
+        7978,
+        0,
+        7792
+      ],
+      "operator_norm_error": 0.012653105500262938,
+      "analytic_bound_using_actual_phase_errors": 0.11254083438466458,
+      "worst_circle_bound": 0.13234337370281088,
+      "ideal_trotter_error": 0.011754614708939976,
+      "primitive_gate_count": 792210
+    },
+    {
+      "trotter_steps": 2,
+      "powers": [
+        7202,
+        7202,
+        7767,
+        7767,
+        683,
+        7885,
+        683,
+        801,
+        919,
+        3483,
+        4377,
+        354,
+        7531,
+        0,
+        7438
+      ],
+      "operator_norm_error": 0.011161777677176986,
+      "analytic_bound_using_actual_phase_errors": 0.07122792714034906,
+      "worst_circle_bound": 0.12645374440303186,
+      "ideal_trotter_error": 0.005894091682587506,
+      "primitive_gate_count": 1538508
+    },
+    {
+      "trotter_steps": 4,
+      "powers": [
+        7649,
+        5625,
+        118,
+        118,
+        7649,
+        683,
+        7649,
+        7202,
+        7767,
+        7531,
+        7978,
+        683,
+        0,
+        0,
+        4731
+      ],
+      "operator_norm_error": 0.025764154565529912,
+      "analytic_bound_using_actual_phase_errors": 0.10690028204229826,
+      "worst_circle_bound": 0.1837909873047688,
+      "ideal_trotter_error": 0.0029501296377082422,
+      "primitive_gate_count": 3138984
+    },
+    {
+      "trotter_steps": 8,
+      "powers": [
+        565,
+        8096,
+        565,
+        565,
+        565,
+        7649,
+        565,
+        7649,
+        118,
+        0,
+        7531,
+        7649,
+        0,
+        0,
+        7649
+      ],
+      "operator_norm_error": 0.053311942814911036,
+      "analytic_bound_using_actual_phase_errors": 0.18340786385473956,
+      "worst_circle_bound": 0.3330237238588901,
+      "ideal_trotter_error": 0.0014756971258735529,
+      "primitive_gate_count": 4721136
+    },
+    {
+      "trotter_steps": 16,
+      "powers": [
+        8096,
+        8096,
+        8096,
+        8096,
+        8096,
+        565,
+        8096,
+        565,
+        565,
+        0,
+        0,
+        565,
+        0,
+        0,
+        565
+      ],
+      "operator_norm_error": 0.08996986597037833,
+      "analytic_bound_using_actual_phase_errors": 0.3160303691817677,
+      "worst_circle_bound": 0.6487683223424565,
+      "ideal_trotter_error": 0.0007379893556037233,
+      "primitive_gate_count": 9871392
+    }
+  ],
+  "scope": "Convergent constructive Trotter/power compiler, not efficient Solovay-Kitaev. Rational phase bound certified via Taylor brackets; Trotter coefficient norms and target logarithm in example computed numerically. Small target benchmark only."
+}

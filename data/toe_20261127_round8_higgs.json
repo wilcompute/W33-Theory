@@ -1,0 +1,58 @@
+{
+  "perturbative_E6_gauge_anomaly": "zero: vectorlike Higgs sector and no rank-3 symmetric invariant of E6 Lie algebra for optional chiral 27_M",
+  "H27_mixed_determinant_test": "triplet X and Z determinant 1; full discrete anomaly not audited",
+  "full_Higgs_fields": 248,
+  "full_holomorphic_Hessian_rank": 215,
+  "nullity": 33,
+  "broken_complex_gauge_dimension": 33,
+  "rank_by_SO10_sector": {
+    "singlet_and_mediator": 14,
+    "ten_plets": 60,
+    "adjoint_45": 45,
+    "spinors_families_1_2": 64,
+    "spinors_family0_and_adjoint": 32
+  },
+  "dimension_by_SO10_sector": {
+    "singlet_and_mediator": 15,
+    "ten_plets": 60,
+    "adjoint_45": 45,
+    "spinors_families_1_2": 64,
+    "spinors_family0_and_adjoint": 64
+  },
+  "charge_family_mass_coefficients": {
+    "4": [
+      "0",
+      "3",
+      "3"
+    ],
+    "1": [
+      "1/6",
+      "19/6",
+      "19/6"
+    ],
+    "-2": [
+      "1/3",
+      "10/3",
+      "10/3"
+    ]
+  },
+  "matter_optional_10_family_matrix": [
+    [
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0
+    ]
+  ],
+  "matter_optional_10_family_det": -2,
+  "scope": "Analytic block-rank certificate by SO10 branching, gauge Ward identity and invariant trace pairing, not a brute-force 248x248 E6 generator evaluation. Higgs-only isolated local orbit, unbroken SO10 not SM; optional 3 chiral families are input, matter singlets and spinors massless at this stage, discrete anomaly not audited."
+}

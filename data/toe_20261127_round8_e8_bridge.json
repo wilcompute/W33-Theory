@@ -1,0 +1,31 @@
+{
+  "E8_branching_dimensions": [
+    78,
+    8,
+    81,
+    81
+  ],
+  "H27_mediators_are_eight_nontrivial_characters": true,
+  "trace_pairing_coefficients": {
+    "(0, 1)": "1",
+    "(0, 2)": "1",
+    "(1, 0)": "1",
+    "(1, 1)": "-1/2 - sqrt(3)*I/2",
+    "(1, 2)": "-1/2 + sqrt(3)*I/2",
+    "(2, 0)": "1",
+    "(2, 1)": "-1/2 + sqrt(3)*I/2",
+    "(2, 2)": "-1/2 - sqrt(3)*I/2"
+  },
+  "SU3_restored_effective_quartic": "-(v^T u)^2/3",
+  "E8_basic_invariant_degrees": [
+    2,
+    8,
+    12,
+    14,
+    18,
+    20,
+    24,
+    30
+  ],
+  "scope": "Representation matching only. The chosen mediator mass uses unweighted opposite-character pairing, not SU3 trace pairing. Restoring SU3 in this singlet model yields only a function of the invariant bilinear and reinstates family flat directions (for nonzero B, modulo E6 U1). A single E8 adjoint commuting chiral superfield has no cubic invariant; E8 gauge dynamics or multiple fields are not excluded."
+}
