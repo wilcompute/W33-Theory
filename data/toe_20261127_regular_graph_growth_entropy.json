@@ -1,0 +1,105 @@
+{
+  "status": "PASS",
+  "radii": [
+    2,
+    4,
+    6
+  ],
+  "fixed_seeds": true,
+  "rows": [
+    {
+      "side": 16,
+      "n": 256,
+      "periodic_square_lattice": {
+        "mean_ball_counts": [
+          13.0,
+          41.0,
+          85.0
+        ],
+        "laplacian_gap": 0.15224093497742605,
+        "partition_at_radius_8": {
+          "blocks": 7,
+          "max_block": 113,
+          "cut_edges": 119
+        }
+      },
+      "random_degree_four": {
+        "mean_ball_counts": [
+          16.75,
+          122.04166666666667,
+          255.04166666666666
+        ],
+        "laplacian_gap": 0.5368065310000495,
+        "partition_at_radius_8": {
+          "blocks": 1,
+          "max_block": 256,
+          "cut_edges": 0
+        }
+      },
+      "leading_asymptotic_entropy_per_vertex_excess_over_log_n_factorial": 4.111996084160375
+    },
+    {
+      "side": 32,
+      "n": 1024,
+      "periodic_square_lattice": {
+        "mean_ball_counts": [
+          13.0,
+          41.0,
+          85.0
+        ],
+        "laplacian_gap": 0.038429439193539215,
+        "partition_at_radius_8": {
+          "blocks": 35,
+          "max_block": 113,
+          "cut_edges": 466
+        }
+      },
+      "random_degree_four": {
+        "mean_ball_counts": [
+          16.875,
+          148.79166666666666,
+          779.0833333333334
+        ],
+        "laplacian_gap": 0.5560734545708772,
+        "partition_at_radius_8": {
+          "blocks": 12,
+          "max_block": 1011,
+          "cut_edges": 48
+        }
+      },
+      "leading_asymptotic_entropy_per_vertex_excess_over_log_n_factorial": 5.518401030918063
+    },
+    {
+      "side": 64,
+      "n": 4096,
+      "periodic_square_lattice": {
+        "mean_ball_counts": [
+          13.0,
+          41.0,
+          85.0
+        ],
+        "laplacian_gap": 0.009630546655605872,
+        "partition_at_radius_8": {
+          "blocks": 120,
+          "max_block": 113,
+          "cut_edges": 1883
+        }
+      },
+      "random_degree_four": {
+        "mean_ball_counts": [
+          17.0,
+          159.08333333333334,
+          1233.6666666666667
+        ],
+        "laplacian_gap": 0.5451391842076069,
+        "partition_at_radius_8": {
+          "blocks": 179,
+          "max_block": 2739,
+          "cut_edges": 2657
+        }
+      },
+      "leading_asymptotic_entropy_per_vertex_excess_over_log_n_factorial": 6.910230435208447
+    }
+  ],
+  "leading_log_probability_coefficient_for_uniform_polynomial_growth": -1
+}
