@@ -1,0 +1,29 @@
+{
+  "code": "[[3,1,2]]_3",
+  "single_site_nonidentity_errors": 24,
+  "syndrome_multiplicities": {
+    "0,1": 3,
+    "0,2": 3,
+    "1,0": 3,
+    "1,1": 3,
+    "1,2": 3,
+    "2,0": 3,
+    "2,1": 3,
+    "2,2": 3
+  },
+  "all_ninth_root_transversal_candidates": 531441,
+  "preserving_assignments": 27,
+  "logical_phases_mod9": {
+    "0,0,0": 3,
+    "0,6,3": 3,
+    "0,3,6": 3,
+    "0,6,0": 3,
+    "0,3,3": 3,
+    "0,0,6": 3,
+    "0,3,0": 3,
+    "0,0,3": 3,
+    "0,6,6": 3
+  },
+  "independent_erasure_success": "1-3e^2+2e^3",
+  "scope": "known-location one erasure; unknown-location errors detected but not corrected; diagonal product ninth-root phases only"
+}
