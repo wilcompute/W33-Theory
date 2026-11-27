@@ -1,0 +1,28 @@
+{
+  "restriction": {
+    "memX": 3,
+    "memZ": 4,
+    "procX": 3,
+    "procZ": 4
+  },
+  "locations": 180,
+  "faults": 7434,
+  "accepted_single": 288,
+  "bad_single": 0,
+  "total_distinct_location_fault_pairs": 27352152,
+  "accepted_pairs": 85938,
+  "bad_accepted_pairs": 432,
+  "bad_readout": 432,
+  "bad_data": 0,
+  "witness": {
+    "locations": [
+      44,
+      164
+    ],
+    "logical": [
+      2,
+      0
+    ]
+  },
+  "scope": "Weight-eight memory-to-processor joint Z measurement only, 3 rounds, postselect zero verifier, unanimous readout and ideal final CSS syndrome. Arbitrary true eigenvalue, not full teleportation or noisy final syndrome. Pair counts unweighted over Pauli labels."
+}
