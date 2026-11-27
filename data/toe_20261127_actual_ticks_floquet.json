@@ -1,0 +1,323 @@
+{
+  "ticks": {
+    "actual_120_tick_commutator_trace_numerators_over81": {
+      "commuting:81,0": 4680,
+      "noncommuting:27,0": 9720
+    },
+    "sum_by_class": {
+      "commuting": [
+        379080,
+        0
+      ],
+      "noncommuting": [
+        262440,
+        0
+      ]
+    },
+    "nonidentity_Weyl_commutator_counts": [
+      2080,
+      2160,
+      2160
+    ],
+    "annealed": [
+      {
+        "t": 0.01,
+        "ordinary_C": 0.020100005040002922,
+        "uniform_nonidentity_Weyl_commutator_positive_C": 0.00025251569055629425,
+        "conditional_noncommuting_positive_C": 0.010125751563988192,
+        "unconditional_ratio": 0.012562966529298818,
+        "conditional_ratio": 0.5037686082086037
+      },
+      {
+        "t": 0.1,
+        "ordinary_C": 0.21005403109326362,
+        "uniform_nonidentity_Weyl_commutator_positive_C": 0.002749144789241437,
+        "conditional_noncommuting_positive_C": 0.11326602453026494,
+        "unconditional_ratio": 0.013087798291387332,
+        "conditional_ratio": 0.5392232843176193
+      },
+      {
+        "t": 0.35,
+        "ordinary_C": 0.8323516458190088,
+        "uniform_nonidentity_Weyl_commutator_positive_C": 0.011359301186113616,
+        "conditional_noncommuting_positive_C": 0.5384249934395684,
+        "unconditional_ratio": 0.01364723821136487,
+        "conditional_ratio": 0.6468720235541489
+      },
+      {
+        "t": 0.7,
+        "ordinary_C": 2.1278981016535203,
+        "uniform_nonidentity_Weyl_commutator_positive_C": 0.02227733127989601,
+        "conditional_noncommuting_positive_C": 1.6926492473721837,
+        "unconditional_ratio": 0.010469172025946646,
+        "conditional_ratio": 0.7954559694643654
+      }
+    ],
+    "scope": "Exact Eisenstein trace of U_a U_b U_a† U_b† for all 14400 elementary Clifford tick pairs. Weyl commutator labels instead give central shifts, with negative averaged coherent phase. Annealed Gaussian loop label average produces positive but non-matching coupling; no natural loop multiplicities or full path integral derived."
+  },
+  "floquet": {
+    "rows": [
+      {
+        "a": 0.3,
+        "b": 0.3,
+        "q": 0.4,
+        "energy": 0.1174891661326955,
+        "mass": 0,
+        "velocity_estimate": 0.2937229153317387,
+        "exact_gapless_speed": 0.29552020666133955
+      },
+      {
+        "a": 0.3,
+        "b": 0.3,
+        "q": 0.2,
+        "energy": 0.059014147081119586,
+        "mass": 0,
+        "velocity_estimate": 0.2950707354055979,
+        "exact_gapless_speed": 0.29552020666133955
+      },
+      {
+        "a": 0.3,
+        "b": 0.3,
+        "q": 0.1,
+        "energy": 0.029540782976400455,
+        "mass": 0,
+        "velocity_estimate": 0.29540782976400454,
+        "exact_gapless_speed": 0.29552020666133955
+      },
+      {
+        "a": 0.3,
+        "b": 0.3,
+        "q": 0.05,
+        "energy": 0.014774605593620609,
+        "mass": 0,
+        "velocity_estimate": 0.29549211187241214,
+        "exact_gapless_speed": 0.29552020666133955
+      },
+      {
+        "a": 0.3,
+        "b": 0.3,
+        "q": 0.025,
+        "energy": 0.007387829573231463,
+        "mass": 0,
+        "velocity_estimate": 0.2955131829292585,
+        "exact_gapless_speed": 0.29552020666133955
+      },
+      {
+        "a": 0.8,
+        "b": 0.8,
+        "q": 0.4,
+        "energy": 0.28600712126399797,
+        "mass": 0,
+        "velocity_estimate": 0.7150178031599949,
+        "exact_gapless_speed": 0.7173560908995228
+      },
+      {
+        "a": 0.8,
+        "b": 0.8,
+        "q": 0.2,
+        "energy": 0.14335493896539614,
+        "mass": 0,
+        "velocity_estimate": 0.7167746948269806,
+        "exact_gapless_speed": 0.7173560908995228
+      },
+      {
+        "a": 0.8,
+        "b": 0.8,
+        "q": 0.1,
+        "energy": 0.07172109396855268,
+        "mass": 0,
+        "velocity_estimate": 0.7172109396855267,
+        "exact_gapless_speed": 0.7173560908995228
+      },
+      {
+        "a": 0.8,
+        "b": 0.8,
+        "q": 0.05,
+        "energy": 0.035865990772397875,
+        "mass": 0,
+        "velocity_estimate": 0.7173198154479574,
+        "exact_gapless_speed": 0.7173560908995228
+      },
+      {
+        "a": 0.8,
+        "b": 0.8,
+        "q": 0.025,
+        "energy": 0.017933675570213223,
+        "mass": 0,
+        "velocity_estimate": 0.7173470228085289,
+        "exact_gapless_speed": 0.7173560908995228
+      },
+      {
+        "a": 1.5707963267948966,
+        "b": 1.5707963267948966,
+        "q": 0.4,
+        "energy": 0.3999999999999997,
+        "mass": 0,
+        "velocity_estimate": 0.9999999999999992,
+        "exact_gapless_speed": 1
+      },
+      {
+        "a": 1.5707963267948966,
+        "b": 1.5707963267948966,
+        "q": 0.2,
+        "energy": 0.2,
+        "mass": 0,
+        "velocity_estimate": 1,
+        "exact_gapless_speed": 1
+      },
+      {
+        "a": 1.5707963267948966,
+        "b": 1.5707963267948966,
+        "q": 0.1,
+        "energy": 0.09999999999999945,
+        "mass": 0,
+        "velocity_estimate": 0.9999999999999944,
+        "exact_gapless_speed": 1
+      },
+      {
+        "a": 1.5707963267948966,
+        "b": 1.5707963267948966,
+        "q": 0.05,
+        "energy": 0.049999999999999274,
+        "mass": 0,
+        "velocity_estimate": 0.9999999999999855,
+        "exact_gapless_speed": 1
+      },
+      {
+        "a": 1.5707963267948966,
+        "b": 1.5707963267948966,
+        "q": 0.025,
+        "energy": 0.024999999999998423,
+        "mass": 0,
+        "velocity_estimate": 0.9999999999999368,
+        "exact_gapless_speed": 1
+      },
+      {
+        "a": 0.8,
+        "b": 0.6,
+        "q": 0.4,
+        "energy": 0.3236140700297977,
+        "mass": 0.20000000000000007,
+        "velocity_estimate": 0.6360329508035076,
+        "exact_gapless_speed": null
+      },
+      {
+        "a": 0.8,
+        "b": 0.6,
+        "q": 0.2,
+        "energy": 0.23723056580410173,
+        "mass": 0.20000000000000007,
+        "velocity_estimate": 0.6379330166979565,
+        "exact_gapless_speed": null
+      },
+      {
+        "a": 0.8,
+        "b": 0.6,
+        "q": 0.1,
+        "energy": 0.20994193932292993,
+        "mass": 0.20000000000000007,
+        "velocity_estimate": 0.6384056615250807,
+        "exact_gapless_speed": null
+      },
+      {
+        "a": 0.8,
+        "b": 0.6,
+        "q": 0.05,
+        "energy": 0.20253217326521092,
+        "mass": 0.20000000000000007,
+        "velocity_estimate": 0.6385236745898734,
+        "exact_gapless_speed": null
+      },
+      {
+        "a": 0.8,
+        "b": 0.6,
+        "q": 0.025,
+        "energy": 0.20063609805616836,
+        "mass": 0.20000000000000007,
+        "velocity_estimate": 0.6385531685983605,
+        "exact_gapless_speed": null
+      }
+    ],
+    "scatter": [
+      {
+        "L": 8,
+        "period": 8,
+        "central_phase": 0
+      },
+      {
+        "L": 12,
+        "period": 12,
+        "central_phase": 0
+      }
+    ],
+    "lock": [
+      {
+        "v1": 1,
+        "v2": 2,
+        "g": 0.5,
+        "k": 0.1,
+        "omega_low": 0.15740092313017615,
+        "omega_high": 1.0125339250601773,
+        "low_speed": 1.5740092313017613,
+        "limit_low_speed": 1.5811388300841898,
+        "high_gap": 1
+      },
+      {
+        "v1": 1,
+        "v2": 2,
+        "g": 0.5,
+        "k": 0.05,
+        "omega_low": 0.07896795361251505,
+        "omega_high": 1.003127141643696,
+        "low_speed": 1.5793590722503008,
+        "limit_low_speed": 1.5811388300841898,
+        "high_gap": 1
+      },
+      {
+        "v1": 1,
+        "v2": 2,
+        "g": 0.5,
+        "k": 0.025,
+        "omega_low": 0.039517351815656916,
+        "omega_high": 1.0007813841721265,
+        "low_speed": 1.5806940726262766,
+        "limit_low_speed": 1.5811388300841898,
+        "high_gap": 1
+      },
+      {
+        "v1": 0.5,
+        "v2": 3,
+        "g": 2,
+        "k": 0.1,
+        "omega_low": 0.21394284658667276,
+        "omega_high": 2.011648194489879,
+        "low_speed": 2.1394284658667275,
+        "limit_low_speed": 2.1505813167606567,
+        "high_gap": 2
+      },
+      {
+        "v1": 0.5,
+        "v2": 3,
+        "g": 2,
+        "k": 0.05,
+        "omega_low": 0.10738991105799779,
+        "omega_high": 2.002896005039442,
+        "low_speed": 2.1477982211599556,
+        "limit_low_speed": 2.1505813167606567,
+        "high_gap": 2
+      },
+      {
+        "v1": 0.5,
+        "v2": 3,
+        "g": 2,
+        "k": 0.025,
+        "omega_low": 0.0537471468937044,
+        "omega_high": 2.0007229928705237,
+        "low_speed": 2.1498858757481756,
+        "limit_low_speed": 2.1505813167606567,
+        "high_gap": 2
+      }
+    ],
+    "scope": "Coherent staggered swap circuit from supplied pair exchange, exact one-excitation quasienergy. Full-swap two-direction collision toy has ballistic basis trajectories with central phases; supplied counterpropagating registers and collision rule, no full gauge/tensor criticality. Gaussian locking removes one gapless mode, not universal speed alignment."
+  }
+}
