@@ -1,0 +1,148 @@
+{
+  "lines": 40,
+  "stabilizer_rays": 360,
+  "rays_per_tick": 12,
+  "commuting_other_tick_labels": 36,
+  "noncommuting_tick_labels": 81,
+  "rows": [
+    {
+      "r": 2,
+      "lower": 4,
+      "upper": 16,
+      "asymptotic_bound": 42
+    },
+    {
+      "r": 3,
+      "lower": 4,
+      "upper": 16,
+      "asymptotic_bound": 25.93931022920578
+    },
+    {
+      "r": 4,
+      "lower": 4,
+      "upper": 8,
+      "asymptotic_bound": 16.666666666666664
+    },
+    {
+      "r": 5,
+      "lower": 4,
+      "upper": 5.333333333333333,
+      "asymptotic_bound": 11.313103409735259
+    },
+    {
+      "r": 6,
+      "lower": 4,
+      "upper": 5.333333333333333,
+      "asymptotic_bound": 8.222222222222221
+    },
+    {
+      "r": 7,
+      "lower": 4,
+      "upper": 5.333333333333333,
+      "asymptotic_bound": 6.43770113657842
+    },
+    {
+      "r": 8,
+      "lower": 4,
+      "upper": 5.333333333333333,
+      "asymptotic_bound": 5.407407407407407
+    },
+    {
+      "r": 9,
+      "lower": 4,
+      "upper": 4.81256704552614,
+      "asymptotic_bound": 4.81256704552614
+    },
+    {
+      "r": 10,
+      "lower": 4,
+      "upper": 4.469135802469136,
+      "asymptotic_bound": 4.469135802469136
+    },
+    {
+      "r": 11,
+      "lower": 4,
+      "upper": 4.270855681842047,
+      "asymptotic_bound": 4.270855681842047
+    },
+    {
+      "r": 12,
+      "lower": 4,
+      "upper": 4.156378600823046,
+      "asymptotic_bound": 4.156378600823046
+    },
+    {
+      "r": 13,
+      "lower": 4,
+      "upper": 4.090285227280682,
+      "asymptotic_bound": 4.090285227280682
+    },
+    {
+      "r": 14,
+      "lower": 4,
+      "upper": 4.0521262002743486,
+      "asymptotic_bound": 4.0521262002743486
+    },
+    {
+      "r": 15,
+      "lower": 4,
+      "upper": 4.030095075760228,
+      "asymptotic_bound": 4.030095075760228
+    },
+    {
+      "r": 16,
+      "lower": 4,
+      "upper": 4.017375400091449,
+      "asymptotic_bound": 4.017375400091449
+    },
+    {
+      "r": 17,
+      "lower": 4,
+      "upper": 4.010031691920076,
+      "asymptotic_bound": 4.010031691920076
+    },
+    {
+      "r": 18,
+      "lower": 4,
+      "upper": 4.005791800030483,
+      "asymptotic_bound": 4.005791800030483
+    },
+    {
+      "r": 19,
+      "lower": 4,
+      "upper": 4.003343897306692,
+      "asymptotic_bound": 4.003343897306692
+    },
+    {
+      "r": 20,
+      "lower": 4,
+      "upper": 4.001930600010161,
+      "asymptotic_bound": 4.001930600010161
+    },
+    {
+      "r": 21,
+      "lower": 4,
+      "upper": 4.001114632435564,
+      "asymptotic_bound": 4.001114632435564
+    },
+    {
+      "r": 22,
+      "lower": 4,
+      "upper": 4.000643533336721,
+      "asymptotic_bound": 4.000643533336721
+    },
+    {
+      "r": 23,
+      "lower": 4,
+      "upper": 4.000371544145188,
+      "asymptotic_bound": 4.000371544145188
+    },
+    {
+      "r": 24,
+      "lower": 4,
+      "upper": 4.00021451111224,
+      "asymptotic_bound": 4.00021451111224
+    }
+  ],
+  "scope": "Analytical norm bound 4 <= ||M_r|| <= 4+114*3^-r/2. A direct sum of tick ranges has Gram diagonal I; commuting off-diagonals shared stabilizer ray, each ray repeated 3 times per row; noncommuting blocks norm 3^-r/2. Ray overlaps <=3^-r/2 give row quadratic bound. Monotonicity M_(r+1)<=M_r tensor I. M4 bound8 from four pairwise nonorthogonal isotropic replica directions, M5 max16/3. Incidence independently verified."
+}
