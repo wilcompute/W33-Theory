@@ -1,0 +1,60 @@
+{
+  "topology": {
+    "cocycle_checks": 6561,
+    "pachner_checks": {
+      "1-5": 82000,
+      "2-4": 1000,
+      "3-3": 1000
+    },
+    "T4": {
+      "untwisted": 531441,
+      "twisted": 82161
+    },
+    "circle_reduction": {
+      "zero_holonomy_sectors": 6561,
+      "nonzero_holonomy_sectors": 945,
+      "dimension_census": {
+        "1": 243,
+        "3": 702
+      },
+      "radical_histogram": {
+        "9": 78,
+        "81": 3
+      },
+      "number_of_nonzero_holonomies": 80
+    }
+  },
+  "index": {
+    "cover_euler": -18,
+    "quotient_euler": -6,
+    "index": -3,
+    "c2_pairings": [
+      36,
+      36
+    ],
+    "intersection_numbers": [
+      0,
+      9,
+      9,
+      0
+    ],
+    "c3": [
+      0,
+      0,
+      0,
+      -8,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      -8,
+      0,
+      0,
+      0
+    ]
+  }
+}
