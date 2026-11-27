@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "seeded_controls": [
+    {
+      "n": 257,
+      "defects": 3,
+      "tested_radius": 3,
+      "shift_root_cases": 96,
+      "grid_balls": 66,
+      "max_defect_neighborhood_size": 257
+    },
+    {
+      "n": 257,
+      "defects": 5,
+      "tested_radius": 3,
+      "shift_root_cases": 96,
+      "grid_balls": 56,
+      "max_defect_neighborhood_size": 257
+    },
+    {
+      "n": 4093,
+      "defects": 3,
+      "tested_radius": 6,
+      "shift_root_cases": 96,
+      "grid_balls": 92,
+      "max_defect_neighborhood_size": 1260
+    },
+    {
+      "n": 4093,
+      "defects": 5,
+      "tested_radius": 6,
+      "shift_root_cases": 96,
+      "grid_balls": 75,
+      "max_defect_neighborhood_size": 2040
+    },
+    {
+      "n": 65537,
+      "defects": 3,
+      "tested_radius": 6,
+      "shift_root_cases": 96,
+      "grid_balls": 96,
+      "max_defect_neighborhood_size": 1260
+    },
+    {
+      "n": 65537,
+      "defects": 5,
+      "tested_radius": 6,
+      "shift_root_cases": 96,
+      "grid_balls": 94,
+      "max_defect_neighborhood_size": 2100
+    }
+  ],
+  "uniform_shift_bad_ball_bound": "O_k((r+1)^(max(2,k+1))/n), for 2r+1<n"
+}
