@@ -1,0 +1,129 @@
+{
+  "clock": {
+    "cochain_checks": 59049,
+    "primitive": "a(g1) b(g2) carry(g3,g4) mod3; delta primitive = a cup carry cup carry",
+    "H27_exponent": 3,
+    "monopole_census": {
+      "0": 141,
+      "1": 50,
+      "2": 1,
+      "-1": 50,
+      "-2": 1
+    },
+    "flat_Z9_face_lifts_per_Z3_closed_cube": 243,
+    "total_lifts": 59049,
+    "fit": [
+      {
+        "mu": 0.1,
+        "optimal_even_mod3_minimax_error": 0.15000000000000002,
+        "rms": 0.09718253158075502,
+        "nonzero": 102
+      },
+      {
+        "mu": 1,
+        "optimal_even_mod3_minimax_error": 1.5,
+        "rms": 0.9718253158075508,
+        "nonzero": 102
+      },
+      {
+        "mu": 2,
+        "optimal_even_mod3_minimax_error": 3,
+        "rms": 1.9436506316151017,
+        "nonzero": 102
+      }
+    ],
+    "scope": "Bosonic order-three group cohomology inflow representative; not complete spin eta anomaly identification. H27 cannot realize nonsplit cyclic Z9 by subgroup or quotient. Uniform lift sum gives no suppression; j mod3 cannot distinguish +1 from -2. Independent edge lift global constraints not simulated."
+  },
+  "golay": {
+    "hist": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        264,
+        0,
+        0,
+        440,
+        0,
+        0,
+        24
+      ],
+      [
+        1,
+        0,
+        0,
+        8,
+        0,
+        0,
+        240,
+        0,
+        0,
+        464,
+        0,
+        0,
+        16
+      ]
+    ],
+    "rows": [
+      {
+        "t": -0.99,
+        "x": -0.49253731343283585,
+        "log_annealed_ratio_competitor_over_Golay": -0.40545444168993655,
+        "preferred": "Golay"
+      },
+      {
+        "t": -0.75,
+        "x": -0.3333333333333333,
+        "log_annealed_ratio_competitor_over_Golay": -0.2832087366925834,
+        "preferred": "Golay"
+      },
+      {
+        "t": -0.5,
+        "x": -0.2,
+        "log_annealed_ratio_competitor_over_Golay": -0.06664580106639562,
+        "preferred": "Golay"
+      },
+      {
+        "t": -0.1,
+        "x": -0.034482758620689655,
+        "log_annealed_ratio_competitor_over_Golay": -0.00032811075547859017,
+        "preferred": "Golay"
+      },
+      {
+        "t": 0.1,
+        "x": 0.03225806451612903,
+        "log_annealed_ratio_competitor_over_Golay": 0.0002684743141976524,
+        "preferred": "weight3"
+      },
+      {
+        "t": 0.5,
+        "x": 0.14285714285714285,
+        "log_annealed_ratio_competitor_over_Golay": 0.022806148427161173,
+        "preferred": "weight3"
+      },
+      {
+        "t": 1,
+        "x": 0.25,
+        "log_annealed_ratio_competitor_over_Golay": 0.10601240616331087,
+        "preferred": "weight3"
+      },
+      {
+        "t": 4,
+        "x": 0.5714285714285714,
+        "log_annealed_ratio_competitor_over_Golay": 0.05961195086744189,
+        "preferred": "weight3"
+      },
+      {
+        "t": 20,
+        "x": 0.8695652173913043,
+        "log_annealed_ratio_competitor_over_Golay": 0.0008631824901327514,
+        "preferred": "weight3"
+      }
+    ],
+    "formula": "<K(t)>=(1+t/3)^12 W_C(t/(3+t)); W_bad-W_G=8x^3(1-x^3)^3",
+    "scope": "Exact expectation of positive full shared transfer for -1<t; -log of expectation, not expectation of -log operator. Negative t selects Golay among two enumerator classes but sign supplied; no global Hamiltonian vacuum proof."
+  }
+}
