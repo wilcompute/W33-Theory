@@ -1,0 +1,23 @@
+function tempered(){
+const m=x=>(x%3+3)%3,sg=x=>m(x)===2?-1:m(x),A=(v,s)=>{if(!v)throw Error(s)},L=3,T=6,V=T*L**3,plus=Array.from({length:V},(_,v)=>Array.from({length:4},(_,d)=>{let a=d===0?1:T*L**(d-1),len=d===0?T:L;return v+(Math.floor(v/a)%len===len-1?1-len:1)*a})),pairs=[],trip=[];
+for(let a=0;a<4;a++)for(let b=a+1;b<4;b++){pairs.push([a,b]);for(let c=b+1;c<4;c++)trip.push([a,b,c])}
+let pi=(v,a,b)=>6*v+pairs.findIndex(p=>p[0]===a&&p[1]===b),pl=[],cu=[],lp=Array.from({length:4*V},()=>[]),pc=Array.from({length:6*V},()=>[]),B=new Int8Array(6*V);
+for(let v=0;v<V;v++)for(let [a,b] of pairs){let p=pl.length,ls=[[4*v+a,1],[4*plus[v][a]+b,1],[4*plus[v][b]+a,-1],[4*v+b,-1]];pl.push(ls);for(let [l,s] of ls)lp[l].push([p,s]);if(a===1&&b===2&&Math.floor(v/T)%L===0&&Math.floor(v/(T*L))%L===0)B[p]=1}
+for(let v=0;v<V;v++)for(let [a,b,c] of trip){let k=cu.length,ps=[[pi(plus[v][a],b,c),1],[pi(v,b,c),-1],[pi(plus[v][b],a,c),-1],[pi(v,a,c),1],[pi(plus[v][c],a,b),1],[pi(v,a,b),-1]];cu.push(ps);for(let [p,s] of ps)pc[p].push([k,s]);A(ps.reduce((s,[p,z])=>s+z*B[p],0)===0,"closed")}
+let links=lp.map(ls=>{let cs=[...new Set(ls.flatMap(([p])=>pc[p].map(x=>x[0])))];return {p:Int32Array.from(ls.map(x=>x[0])),s:Int8Array.from(ls.map(x=>x[1])),c:Int32Array.from(cs),inc:ls.map(([p])=>pc[p].map(([c,z])=>[cs.indexOf(c),z]))}});
+let beta=.4,mu=6*.15796197116476024,rows=[],n=7,grid=Array.from({length:n},(_,i)=>i/(n-1)),pW=.6;
+for(let chain=0;chain<2;chain++){let seed=8181+chain*193,rng=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296};
+function make(id){let E=Int8Array.from({length:4*V},()=>chain?0:Math.floor(rng()*3)),F=[0,1].map(h=>Int8Array.from(pl,(ls,p)=>sg(h*B[p]+ls.reduce((s,[l,z])=>s+z*E[l],0)))),J=F.map(f=>Int8Array.from(cu,ps=>ps.reduce((s,[p,z])=>s+z*f[p],0)/3)),en=F.map((f,h)=>pW*f.filter(Boolean).length+mu*J[h].reduce((s,x)=>s+x*x,0));return {id,E,F,J,en}}
+let states=grid.map((_,i)=>make(i)),sw=Array(n-1).fill(0),attempt=sw.slice(),samples=grid.map(()=>[]),changes=new Int8Array(12),df=new Int8Array(48),de=[0,0],travel=grid.map(()=>new Set()),cnt=0;
+function update(state,t){let {E,F,J,en}=state;for(let l=0;l<E.length;l++){let d=rng()<.5?1:-1,{p,s,c,inc}=links[l],nc=c.length;df.fill(0);de[0]=de[1]=0;
+for(let k=0;k<6;k++)for(let h=0;h<2;h++){let f=sg(F[h][p[k]]+s[k]*d),v=f-F[h][p[k]];changes[6*h+k]=f;de[h]+=pW*(+(f!==0)-+(F[h][p[k]]!==0));for(let [j,z] of inc[k])df[24*h+j]+=z*v}
+for(let h=0;h<2;h++)for(let j=0;j<nc;j++){let x=df[24*h+j];A(x%3===0,"Bianchi");let v=J[h][c[j]]+x/3;de[h]+=mu*(v*v-J[h][c[j]]**2)}
+let delta=(1-t)*de[0]+t*de[1];if(delta<=0||rng()<Math.exp(-delta)){E[l]=m(E[l]+d);for(let h=0;h<2;h++){en[h]+=de[h];for(let k=0;k<6;k++)F[h][p[k]]=changes[6*h+k];for(let j=0;j<nc;j++)J[h][c[j]]+=df[24*h+j]/3}}}}
+for(let sweep=0;sweep<300;sweep++){for(let i=0;i<n;i++)update(states[i],grid[i]);for(let i=sweep%2;i<n-1;i+=2){let a=states[i],b=states[i+1],delta=(grid[i+1]-grid[i])*((a.en[1]-a.en[0])-(b.en[1]-b.en[0]));attempt[i]++;if(delta<=0||rng()<Math.exp(-delta)){states[i]=b;states[i+1]=a;sw[i]++}}
+for(let i=0;i<n;i++)travel[states[i].id].add(i);
+if(sweep%50===0)for(let a of states)for(let h=0;h<2;h++){A(a.F[h].every((f,p)=>f===sg(h*B[p]+pl[p].reduce((s,[l,z])=>s+z*a.E[l],0))),"flux");A(a.J[h].every((x,c)=>3*x===cu[c].reduce((s,[p,z])=>s+z*a.F[h][p],0)),"current");A(Math.abs(a.en[h]-pW*a.F[h].filter(Boolean).length-mu*a.J[h].reduce((s,x)=>s+x*x,0))<1e-7,"energy")}
+if(sweep>=100&&sweep%2===0)for(let i=0;i<n;i++)samples[i].push(states[i].en[1]-states[i].en[0])}
+let means=samples.map(s=>s.reduce((a,b)=>a+b,0)/s.length),blocks=Array.from({length:10},(_,j)=>samples.map(s=>s.slice(j*10,j*10+10).reduce((a,b)=>a+b,0)/10)),integrate=a=>a.reduce((s,x,i)=>s+x*(i===0||i===n-1?1:i%2?4:2),0)/(3*(n-1)),value=integrate(means),se=Math.sqrt(blocks.reduce((s,b)=>s+(integrate(b)-value)**2,0)/90);rows.push({chain,means,simpson:value,block_se:se,left_sum:means.slice(0,-1).reduce((a,b)=>a+b,0)/(n-1),right_sum:means.slice(1).reduce((a,b)=>a+b,0)/(n-1),swap_rates:sw.map((x,i)=>x/attempt[i]),replica_stage_coverage:travel.map(s=>s.size)})}
+return {L,T,grid,rows,scope:"Typed local updates and replica exchange for full-action linear flux bridge. Two initial conditions, 300 sweeps per replica, 100 burn, 100 measurements, descriptive block SE; expected left/right sums bracket exact integral only at exact equilibrium means. No controlled larger-volume or photon pole."}
+}
+console.log(JSON.stringify(tempered(),null,2));
