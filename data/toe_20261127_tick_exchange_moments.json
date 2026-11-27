@@ -1,0 +1,55 @@
+{
+  "tick_count": 120,
+  "pauli_contraction": 0.325,
+  "channel_eigenvalues": [
+    [
+      1,
+      1
+    ],
+    [
+      0.325,
+      80
+    ]
+  ],
+  "exact_moment_basis_checks": [
+    81,
+    729
+  ],
+  "M1": "40 I",
+  "M2": "13 I + 3 SWAP",
+  "M3": "4 I + sum transpositions + 9 P",
+  "projector_rank": 9,
+  "projector_S3_character": [
+    9,
+    1,
+    9
+  ],
+  "projector_irreps": {
+    "trivial": 5,
+    "sign": 4,
+    "standard": 0
+  },
+  "M3_spectrum": [
+    {
+      "e": 1,
+      "n": 80
+    },
+    {
+      "e": 4,
+      "n": 480
+    },
+    {
+      "e": 7,
+      "n": 160
+    },
+    {
+      "e": 10,
+      "n": 4
+    },
+    {
+      "e": 16,
+      "n": 5
+    }
+  ],
+  "scope": "projector moment exchange construction, all rates uniform; supplied interactions and register tensor product; no spontaneous chirality, Lorentz or compactification claim"
+}
