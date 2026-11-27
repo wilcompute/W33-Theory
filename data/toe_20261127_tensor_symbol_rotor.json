@@ -1,0 +1,711 @@
+{
+  "symbols": [
+    {
+      "type": "X",
+      "degree": 0,
+      "prime": 0,
+      "variables": 6,
+      "rank": 6,
+      "nullity": 0,
+      "monomials": [
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "type": "X",
+      "degree": 1,
+      "prime": 0,
+      "variables": 18,
+      "rank": 10,
+      "nullity": 8,
+      "monomials": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "type": "X",
+      "degree": 2,
+      "prime": 0,
+      "variables": 36,
+      "rank": 15,
+      "nullity": 21,
+      "monomials": [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "type": "Z",
+      "degree": 0,
+      "prime": 0,
+      "variables": 6,
+      "rank": 6,
+      "nullity": 0,
+      "monomials": [
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "type": "Z",
+      "degree": 1,
+      "prime": 0,
+      "variables": 18,
+      "rank": 18,
+      "nullity": 0,
+      "monomials": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "type": "Z",
+      "degree": 2,
+      "prime": 0,
+      "variables": 36,
+      "rank": 30,
+      "nullity": 6,
+      "monomials": [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "type": "X",
+      "degree": 0,
+      "prime": 3,
+      "variables": 6,
+      "rank": 6,
+      "nullity": 0,
+      "monomials": [
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "type": "X",
+      "degree": 1,
+      "prime": 3,
+      "variables": 18,
+      "rank": 10,
+      "nullity": 8,
+      "monomials": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "type": "X",
+      "degree": 2,
+      "prime": 3,
+      "variables": 36,
+      "rank": 15,
+      "nullity": 21,
+      "monomials": [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "type": "Z",
+      "degree": 0,
+      "prime": 3,
+      "variables": 6,
+      "rank": 6,
+      "nullity": 0,
+      "monomials": [
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "type": "Z",
+      "degree": 1,
+      "prime": 3,
+      "variables": 18,
+      "rank": 18,
+      "nullity": 0,
+      "monomials": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "type": "Z",
+      "degree": 2,
+      "prime": 3,
+      "variables": 36,
+      "rank": 30,
+      "nullity": 6,
+      "monomials": [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "momentum_ranks": [
+    {
+      "k": [
+        1,
+        0,
+        0
+      ],
+      "rankX": 5,
+      "rankZ": 3,
+      "rankGauge": 3,
+      "pairing": 2
+    },
+    {
+      "k": [
+        2,
+        0,
+        0
+      ],
+      "rankX": 5,
+      "rankZ": 3,
+      "rankGauge": 3,
+      "pairing": 2
+    },
+    {
+      "k": [
+        0,
+        1,
+        0
+      ],
+      "rankX": 5,
+      "rankZ": 3,
+      "rankGauge": 3,
+      "pairing": 2
+    },
+    {
+      "k": [
+        1,
+        1,
+        0
+      ],
+      "rankX": 5,
+      "rankZ": 3,
+      "rankGauge": 3,
+      "pairing": 2
+    },
+    {
+      "k": [
+        2,
+        1,
+        0
+      ],
+      "rankX": 5,
+      "rankZ": 3,
+      "rankGauge": 3,
+      "pairing": 2
+    },
+    {
+      "k": [
+        0,
+        2,
+        0
+      ],
+      "rankX": 5,
+      "rankZ": 3,
+      "rankGauge": 3,
+      "pairing": 2
+    },
+    {
+      "k": [
+        1,
+        2,
+        0
+      ],
+      "rankX": 5,
+      "rankZ": 3,
+      "rankGauge": 3,
+      "pairing": 2
+    },
+    {
+      "k": [
+        2,
+        2,
+        0
+      ],
+      "rankX": 5,
+      "rankZ": 3,
+      "rankGauge": 3,
+      "pairing": 2
+    },
+    {
+      "k": [
+        0,
+        0,
+        1
+      ],
+      "rankX": 5,
+      "rankZ": 3,
+      "rankGauge": 3,
+      "pairing": 2
+    },
+    {
+      "k": [
+        1,
+        0,
+        1
+      ],
+      "rankX": 5,
+      "rankZ": 3,
+      "rankGauge": 3,
+      "pairing": 2
+    },
+    {
+      "k": [
+        2,
+        0,
+        1
+      ],
+      "rankX": 5,
+      "rankZ": 3,
+      "rankGauge": 3,
+      "pairing": 2
+    },
+    {
+      "k": [
+        0,
+        1,
+        1
+      ],
+      "rankX": 5,
+      "rankZ": 3,
+      "rankGauge": 3,
+      "pairing": 2
+    },
+    {
+      "k": [
+        1,
+        1,
+        1
+      ],
+      "rankX": 5,
+      "rankZ": 3,
+      "rankGauge": 3,
+      "pairing": 2
+    },
+    {
+      "k": [
+        2,
+        1,
+        1
+      ],
+      "rankX": 5,
+      "rankZ": 3,
+      "rankGauge": 3,
+      "pairing": 2
+    },
+    {
+      "k": [
+        0,
+        2,
+        1
+      ],
+      "rankX": 5,
+      "rankZ": 3,
+      "rankGauge": 3,
+      "pairing": 2
+    },
+    {
+      "k": [
+        1,
+        2,
+        1
+      ],
+      "rankX": 5,
+      "rankZ": 3,
+      "rankGauge": 3,
+      "pairing": 2
+    },
+    {
+      "k": [
+        2,
+        2,
+        1
+      ],
+      "rankX": 5,
+      "rankZ": 3,
+      "rankGauge": 3,
+      "pairing": 2
+    },
+    {
+      "k": [
+        0,
+        0,
+        2
+      ],
+      "rankX": 5,
+      "rankZ": 3,
+      "rankGauge": 3,
+      "pairing": 2
+    },
+    {
+      "k": [
+        1,
+        0,
+        2
+      ],
+      "rankX": 5,
+      "rankZ": 3,
+      "rankGauge": 3,
+      "pairing": 2
+    },
+    {
+      "k": [
+        2,
+        0,
+        2
+      ],
+      "rankX": 5,
+      "rankZ": 3,
+      "rankGauge": 3,
+      "pairing": 2
+    },
+    {
+      "k": [
+        0,
+        1,
+        2
+      ],
+      "rankX": 5,
+      "rankZ": 3,
+      "rankGauge": 3,
+      "pairing": 2
+    },
+    {
+      "k": [
+        1,
+        1,
+        2
+      ],
+      "rankX": 5,
+      "rankZ": 3,
+      "rankGauge": 3,
+      "pairing": 2
+    },
+    {
+      "k": [
+        2,
+        1,
+        2
+      ],
+      "rankX": 5,
+      "rankZ": 3,
+      "rankGauge": 3,
+      "pairing": 2
+    },
+    {
+      "k": [
+        0,
+        2,
+        2
+      ],
+      "rankX": 5,
+      "rankZ": 3,
+      "rankGauge": 3,
+      "pairing": 2
+    },
+    {
+      "k": [
+        1,
+        2,
+        2
+      ],
+      "rankX": 5,
+      "rankZ": 3,
+      "rankGauge": 3,
+      "pairing": 2
+    },
+    {
+      "k": [
+        2,
+        2,
+        2
+      ],
+      "rankX": 5,
+      "rankZ": 3,
+      "rankGauge": 3,
+      "pairing": 2
+    }
+  ],
+  "spectrum": [
+    {
+      "n": 3,
+      "k": 0.5,
+      "gap": 0.16946743773748726,
+      "gap_over_k3": 1.3557395018998981,
+      "ground": 0.02717210049274527,
+      "sweeps": 3
+    },
+    {
+      "n": 3,
+      "k": 0.25,
+      "gap": 0.0439090733522792,
+      "gap_over_k3": 2.8101806945458687,
+      "ground": 0.0018254499381767902,
+      "sweeps": 3
+    },
+    {
+      "n": 3,
+      "k": 0.125,
+      "gap": 0.011133518201533969,
+      "gap_over_k3": 5.700361319185392,
+      "ground": 0.0001159582886836265,
+      "sweeps": 2
+    },
+    {
+      "n": 9,
+      "k": 0.5,
+      "gap": 0.10997808307526394,
+      "gap_over_k3": 0.8798246646021115,
+      "ground": 0.054092662091301154,
+      "sweeps": 5
+    },
+    {
+      "n": 9,
+      "k": 0.25,
+      "gap": 0.02152328245061455,
+      "gap_over_k3": 1.3774900768393312,
+      "ground": 0.004869435923171994,
+      "sweeps": 5
+    },
+    {
+      "n": 9,
+      "k": 0.125,
+      "gap": 0.00524554740598765,
+      "gap_over_k3": 2.685720271865677,
+      "ground": 0.00033805019744506166,
+      "sweeps": 4
+    },
+    {
+      "n": 27,
+      "k": 0.5,
+      "gap": 0.11574470039824288,
+      "gap_over_k3": 0.925957603185943,
+      "ground": 0.06021008420530234,
+      "sweeps": 6
+    },
+    {
+      "n": 27,
+      "k": 0.25,
+      "gap": 0.013693335221277289,
+      "gap_over_k3": 0.8763734541617465,
+      "ground": 0.007289794864878533,
+      "sweeps": 7
+    },
+    {
+      "n": 27,
+      "k": 0.125,
+      "gap": 0.002028044214009776,
+      "gap_over_k3": 1.0383586375730054,
+      "ground": 0.0007796324479929892,
+      "sweeps": 7
+    },
+    {
+      "n": 81,
+      "k": 0.5,
+      "gap": 0.12195697423429475,
+      "gap_over_k3": 0.975655793874358,
+      "ground": 0.06174095712659458,
+      "sweeps": 9
+    },
+    {
+      "n": 81,
+      "k": 0.25,
+      "gap": 0.014959711317075422,
+      "gap_over_k3": 0.957421524292827,
+      "ground": 0.007649003325033306,
+      "sweeps": 9
+    },
+    {
+      "n": 81,
+      "k": 0.125,
+      "gap": 0.0017857785492302125,
+      "gap_over_k3": 0.9143186172058688,
+      "ground": 0.0009364666355356368,
+      "sweeps": 9
+    }
+  ],
+  "scope": "homogeneous local-symbol constraints over R (floating rank for tiny integer matrices) and F3 (exact); finite rotor mode toy, not full local interacting tensor lattice or graviton phase"
+}
