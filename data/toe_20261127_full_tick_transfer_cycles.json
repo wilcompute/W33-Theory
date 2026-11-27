@@ -1,0 +1,119 @@
+{
+  "status": "PASS",
+  "single_site_thermal_eigenvalue_s": 0.5,
+  "trace_projector_overlap_histogram": {
+    "3": 120,
+    "0": 240,
+    "1": 14040
+  },
+  "shared_label_overlap_product_max": 0.6666666666666666,
+  "operator_log_nonlocality": [
+    {
+      "sites_per_component": 8,
+      "energy_difference_lower_bound": -6.3312626206987765
+    },
+    {
+      "sites_per_component": 24,
+      "energy_difference_lower_bound": 0.1561791090318554
+    },
+    {
+      "sites_per_component": 64,
+      "energy_difference_lower_bound": 16.37478343335843
+    },
+    {
+      "sites_per_component": 128,
+      "energy_difference_lower_bound": 42.32455035228096
+    }
+  ],
+  "power_two_wilson_weighted_cycles": [
+    {
+      "n": 6,
+      "cycle_weight": 0.18137599855186923,
+      "connected_probability": 0.9425382695461957
+    },
+    {
+      "n": 8,
+      "cycle_weight": 0.14375473138130074,
+      "connected_probability": 0.8748712739799955
+    },
+    {
+      "n": 64,
+      "cycle_weight": 0.0032446844232328275,
+      "connected_probability": 0.8041875666566596
+    },
+    {
+      "n": 512,
+      "cycle_weight": 0.003054372602043689,
+      "connected_probability": 0.8390918805367972
+    },
+    {
+      "n": 4096,
+      "cycle_weight": 0.003054372602043689,
+      "connected_probability": 0.8380975954360442
+    }
+  ],
+  "power_two_asymptotic_fugacity": 0.0030543726020436884,
+  "power_two_asymptotic_connected_decay_exponent": 0.0015271863010218442,
+  "direct_thermal_trace_checks": [
+    {
+      "length": 1,
+      "power": 0.5,
+      "bulk_normalized_trace": 1.0146118723545763
+    },
+    {
+      "length": 1,
+      "power": 1.0,
+      "bulk_normalized_trace": 0.9999999999999999
+    },
+    {
+      "length": 1,
+      "power": 1.5,
+      "bulk_normalized_trace": 0.9565852469524005
+    },
+    {
+      "length": 1,
+      "power": 2.0,
+      "bulk_normalized_trace": 0.8888888888888885
+    },
+    {
+      "length": 2,
+      "power": 0.5,
+      "bulk_normalized_trace": 1.0294120778898015
+    },
+    {
+      "length": 2,
+      "power": 1.0,
+      "bulk_normalized_trace": 0.9999999999999988
+    },
+    {
+      "length": 2,
+      "power": 1.5,
+      "bulk_normalized_trace": 0.9151223911096723
+    },
+    {
+      "length": 2,
+      "power": 2.0,
+      "bulk_normalized_trace": 0.7902777777777734
+    },
+    {
+      "length": 3,
+      "power": 0.5,
+      "bulk_normalized_trace": 1.0444012321217084
+    },
+    {
+      "length": 3,
+      "power": 1.0,
+      "bulk_normalized_trace": 0.999999999999997
+    },
+    {
+      "length": 3,
+      "power": 1.5,
+      "bulk_normalized_trace": 0.8755247003601269
+    },
+    {
+      "length": 3,
+      "power": 2.0,
+      "bulk_normalized_trace": 0.7027520576131727
+    }
+  ]
+}
