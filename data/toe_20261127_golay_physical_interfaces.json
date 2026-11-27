@@ -1,0 +1,192 @@
+[
+  {
+    "first": "processor",
+    "physical_sites": 51,
+    "logical_supports": [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        2,
+        6,
+        7,
+        8,
+        10
+      ]
+    ],
+    "checks": [
+      {
+        "type": "X",
+        "weight": 18
+      },
+      {
+        "type": "X",
+        "weight": 27
+      },
+      {
+        "type": "X",
+        "weight": 27
+      },
+      {
+        "type": "Z",
+        "weight": 6
+      },
+      {
+        "type": "Z",
+        "weight": 6
+      },
+      {
+        "type": "Z",
+        "weight": 6
+      },
+      {
+        "type": "Z",
+        "weight": 6
+      },
+      {
+        "type": "X",
+        "weight": 6
+      },
+      {
+        "type": "X",
+        "weight": 6
+      },
+      {
+        "type": "X",
+        "weight": 6
+      },
+      {
+        "type": "X",
+        "weight": 6
+      },
+      {
+        "type": "Z",
+        "weight": 6
+      },
+      {
+        "type": "Z",
+        "weight": 6
+      },
+      {
+        "type": "Z",
+        "weight": 6
+      },
+      {
+        "type": "Z",
+        "weight": 6
+      }
+    ],
+    "terminal_rank": {
+      "X": 15,
+      "Z": 34
+    },
+    "gadgets": 48,
+    "locations": 3480,
+    "single_faults": 144444,
+    "accepted_single": 5508,
+    "malignant_single": 0,
+    "total_pairs": 10426589052,
+    "accepted_pairs": 16605306,
+    "malignant_pairs": 0,
+    "ambiguous_signatures": 0,
+    "scope": "Actual 15 chosen full-support CSS stabilizers, verified cat circuits with Pauli faults at every listed operation, three parity rounds. Ideal terminal full CSS syndrome; no data idles outside gates or loss. Quotient by full stabilizer spaces plus measured joint Z. No full T roundtrip; Golay logical X and Z share the selected weight-five support."
+  },
+  {
+    "first": "memory",
+    "physical_sites": 251,
+    "logical_supports": [
+      [
+        0,
+        3,
+        14,
+        44
+      ],
+      [
+        2,
+        6,
+        7,
+        8,
+        10
+      ]
+    ],
+    "checks": [
+      {
+        "type": "X",
+        "weight": 12
+      },
+      {
+        "type": "X",
+        "weight": 12
+      },
+      {
+        "type": "X",
+        "weight": 12
+      },
+      {
+        "type": "Z",
+        "weight": 3
+      },
+      {
+        "type": "Z",
+        "weight": 3
+      },
+      {
+        "type": "Z",
+        "weight": 3
+      },
+      {
+        "type": "Z",
+        "weight": 3
+      },
+      {
+        "type": "X",
+        "weight": 6
+      },
+      {
+        "type": "X",
+        "weight": 6
+      },
+      {
+        "type": "X",
+        "weight": 6
+      },
+      {
+        "type": "X",
+        "weight": 6
+      },
+      {
+        "type": "Z",
+        "weight": 6
+      },
+      {
+        "type": "Z",
+        "weight": 6
+      },
+      {
+        "type": "Z",
+        "weight": 6
+      },
+      {
+        "type": "Z",
+        "weight": 6
+      }
+    ],
+    "terminal_rank": {
+      "X": 44,
+      "Z": 125
+    },
+    "gadgets": 48,
+    "locations": 2328,
+    "single_faults": 95484,
+    "accepted_single": 3780,
+    "malignant_single": 0,
+    "total_pairs": 4555004604,
+    "accepted_pairs": 7733304,
+    "malignant_pairs": 0,
+    "ambiguous_signatures": 0,
+    "scope": "Actual 15 chosen full-support CSS stabilizers, verified cat circuits with Pauli faults at every listed operation, three parity rounds. Ideal terminal full CSS syndrome; no data idles outside gates or loss. Quotient by full stabilizer spaces plus measured joint Z. No full T roundtrip; Golay logical X and Z share the selected weight-five support."
+  }
+]
