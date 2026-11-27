@@ -1,0 +1,54 @@
+{
+  "integer_trial": {
+    "numerator": "123845660296",
+    "denominator": "60340665339",
+    "rayleigh": 2.0524410793321963
+  },
+  "block_top": 2.0524595505555445,
+  "residual": 7.188921217551944e-13,
+  "schmidt": [
+    {
+      "cut": 1,
+      "bond_rank": 9,
+      "entropy_nats": 2.197224577336212,
+      "largest_weight": 0.11111111111111041,
+      "largest_gram_block": 1,
+      "discarded_weight_top16": 0
+    },
+    {
+      "cut": 2,
+      "bond_rank": 81,
+      "entropy_nats": 4.394449154672422,
+      "largest_weight": 0.012345679012345602,
+      "largest_gram_block": 1,
+      "discarded_weight_top16": 0.8024691358024649
+    },
+    {
+      "cut": 3,
+      "bond_rank": 729,
+      "entropy_nats": 2.4410345047994957,
+      "largest_weight": 0.10800653280552347,
+      "largest_gram_block": 9,
+      "discarded_weight_top16": 0.027447294565302805
+    },
+    {
+      "cut": 4,
+      "bond_rank": 81,
+      "entropy_nats": 4.394449154672422,
+      "largest_weight": 0.012345679012345604,
+      "largest_gram_block": 1,
+      "discarded_weight_top16": 0.8024691358024649
+    },
+    {
+      "cut": 5,
+      "bond_rank": 9,
+      "entropy_nats": 2.1972245773362102,
+      "largest_weight": 0.1111111111111103,
+      "largest_gram_block": 1,
+      "discarded_weight_top16": 0
+    }
+  ],
+  "thermodynamic_satisfaction_lower": 0.3461887395594813,
+  "thermodynamic_satisfaction_upper": 0.4074074074074074,
+  "scope": "Six-register zero affine sector trial vector. Twirl each block by common Weyl to make every one-register marginal I/9; both cross-block triples then expectation 1/81. Upper bound by grouping triples of consecutive projectors and overlap norm 1/9. Bounds on thermodynamic energy density, not a phase or gap proof. Schmidt ranks numerical threshold."
+}
