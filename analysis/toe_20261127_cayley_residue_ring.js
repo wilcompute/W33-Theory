@@ -1,0 +1,22 @@
+function cayley(p=101){
+const m=x=>(x%p+p)%p,A=(v,s)=>{if(!v)throw Error(s)},inv=x=>{for(let j=1;j<p;j++)if(m(x*j)===1)return j;throw Error('zero inverse')},com=(n,k)=>{if(n<0)return [];if(k===1)return [[n]];let a=[];for(let i=0;i<=n;i++)for(let r of com(n-i,k-1))a.push([i,...r]);return a},key=v=>v.join(','),plus=(a,b)=>a.map((x,i)=>x+b[i]),unit=i=>Array.from({length:11},(_,j)=>+(i===j)),charge=v=>((v[4]+2*v[5]-v[8]-2*v[9])%3+3)%3;
+const mons=(k,dx=0,dy=0)=>com(k,3).flatMap(([a,b,c])=>com(3*a+c+dx,4).flatMap(x=>com(3*b+c+dy,4).map(y=>[a,b,c,...x,...y])));
+let deriv=[];for(let i=0;i<4;i++){let x=unit(3+i),y=unit(7+i);deriv.push({delta:[1,1,0],terms:[[3,plus(unit(0),plus(x,x))],[1,plus(unit(2),y)]]},{delta:[1,0,1],terms:[[3,plus(unit(1),plus(y,y))],[1,plus(unit(2),x)]]})}
+for(let j=0;j<3;j++){let terms=[];for(let i=0;i<4;i++){let x=unit(3+i),y=unit(7+i);terms.push([1,j===0?plus(x,plus(x,x)):j===1?plus(y,plus(y,y)):plus(x,y)])}deriv.push({delta:[0,j===0?-3:j===2?-1:0,j===1?-3:j===2?-1:0],terms})}
+function ring(k){
+let M=mons(k),N=M.length,D=new Map(M.map((v,i)=>[key(v),i])),par=Array.from({length:N},(_,i)=>i),w=Array(N).fill(1),dead=new Set(),find=i=>{if(par[i]!==i){let q=par[i],r=find(q);w[i]=m(w[i]*w[q]);par[i]=r}return par[i]},rels=[],count=0;
+for(let g of deriv){let [d,dx,dy]=g.delta;for(let v of mons(k-d,dx,dy)){let R=g.terms.map(([c,u])=>[D.get(key(plus(v,u))),c]);A(R.every(x=>x[0]!==undefined),'grade');if(R.length===2){let [[i,a],[j,b]]=R,ri=find(i),rj=find(j),c=m(-b*w[j]*inv(m(a*w[i])));if(ri!==rj){par[ri]=rj;w[ri]=c;if(dead.has(ri))dead.add(rj)}else if(c!==1)dead.add(ri)}else rels.push(R);count++}}
+let roots=[...new Set(M.map((_,i)=>find(i)))].filter(i=>!dead.has(i)),map=new Map(roots.map((i,j)=>[i,j])),pivs=new Map();
+function reduce(R){while(R.size){let j=Math.min(...R.keys()),v=R.get(j),row=pivs.get(j);if(!row)break;for(let [l,c] of row){let z=m((R.get(l)||0)-v*c);if(z)R.set(l,z);else R.delete(l)}}return R}
+for(let R of rels){let B=new Map();for(let [i,c] of R){let r=find(i);if(dead.has(r))continue;let j=map.get(r),z=m((B.get(j)||0)+c*w[i]);if(z)B.set(j,z);else B.delete(j)}reduce(B);if(B.size){let j=Math.min(...B.keys()),u=inv(B.get(j));pivs.set(j,new Map([...B].map(([l,c])=>[l,m(c*u)])))}}
+let free=roots.map((_,i)=>i).filter(i=>!pivs.has(i)),fi=new Map(free.map((i,j)=>[i,j])),B=free.map(i=>M[roots[i]]),order=[...pivs.keys()].sort((a,b)=>a-b);
+function project(v){let i=D.get(key(v)),r=find(i);if(dead.has(r))return Array(free.length).fill(0);let R=new Map([[map.get(r),w[i]]]);for(let j of order){let v=R.get(j);if(!v)continue;for(let [l,c] of pivs.get(j)){let z=m((R.get(l)||0)-v*c);if(z)R.set(l,z);else R.delete(l)}}let out=Array(free.length).fill(0);for(let [j,c] of R){A(fi.has(j),'free');out[fi.get(j)]=c}return out}
+return {basis:B,project,summary:{k,monomials:N,relations:count,binomial_classes:roots.length,rank:pivs.size,dimension:B.length,charges:[0,1,2].map(c=>B.filter(v=>charge(v)===c).length)}}
+}
+let R1=ring(1),R2=ring(2),R3=ring(3);let rows=[R1.summary,R2.summary,R3.summary];A(R1.basis.length===23&&R3.basis.length===1,'outer Hodge');
+let B=R1.basis,allowed=B.map((v,i)=>charge(v)===0?i:-1).filter(i=>i>=0),Y=[];for(let i=0;i<23;i++)for(let j=i;j<23;j++)for(let k=j;k<23;k++){let v=R3.project(plus(plus(B[i],B[j]),B[k]))[0];if(v){A((charge(B[i])+charge(B[j])+charge(B[k]))%3===0,'charge');Y.push([i,j,k,v])}}
+let rank=M=>{M=M.map(r=>r.slice());let r=0;for(let j=0;j<M[0].length;j++){let k=M.findIndex((x,i)=>i>=r&&x[j]);if(k<0)continue;[M[r],M[k]]=[M[k],M[r]];let u=inv(M[r][j]);M[r]=M[r].map(x=>m(x*u));for(let i=r+1;i<M.length;i++){let f=M[i][j];M[i]=M[i].map((x,k)=>m(x-f*M[r][k]))}r++}return r};
+let ranks=allowed.map(h=>rank(allowed.map(i=>allowed.map(j=>R3.project(plus(plus(B[i],B[j]),B[h]))[0])))),generic=rank(allowed.map(i=>allowed.map(j=>m(allowed.reduce((s,h,k)=>s+(k+1)*R3.project(plus(plus(B[i],B[j]),B[h]))[0],0))))),pairing=rank(B.map(x=>R2.basis.map(y=>R3.project(plus(x,y))[0])));
+return {prime:p,graded_dimensions:rows,basis:B,invariant_basis:allowed,nonzero_unordered_cubics:Y.length,cubics:Y,invariant_contraction_ranks:ranks,generic_invariant_contraction_rank:generic,degree1_degree2_pairing_rank:pairing,scope:'unsaturated Cayley Jacobian ring mod prime; radical and extra degree2 dimension retained; not yet certified physical B-model residue'}
+}
+console.log(JSON.stringify([cayley(101),cayley(103)],null,2));
