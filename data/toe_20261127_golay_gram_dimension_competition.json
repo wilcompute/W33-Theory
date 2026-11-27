@@ -1,0 +1,271 @@
+{
+  "gram": {
+    "distance_valencies": [
+      1,
+      121,
+      3630,
+      32670,
+      88209,
+      59049
+    ],
+    "rows": [
+      {
+        "j": 0,
+        "adjacency_eigenvalue": 121,
+        "multiplicity": 1,
+        "gram_eigenvalue_numerator": 6998400,
+        "gram_eigenvalue_denominator": 59049
+      },
+      {
+        "j": 1,
+        "adjacency_eigenvalue": 39,
+        "multiplicity": 2541,
+        "gram_eigenvalue_numerator": 622080,
+        "gram_eigenvalue_denominator": 59049
+      },
+      {
+        "j": 2,
+        "adjacency_eigenvalue": 9,
+        "multiplicity": 89298,
+        "gram_eigenvalue_numerator": 103680,
+        "gram_eigenvalue_denominator": 59049
+      },
+      {
+        "j": 3,
+        "adjacency_eigenvalue": -9,
+        "multiplicity": 89298,
+        "gram_eigenvalue_numerator": 0,
+        "gram_eigenvalue_denominator": 59049
+      },
+      {
+        "j": 4,
+        "adjacency_eigenvalue": -39,
+        "multiplicity": 2541,
+        "gram_eigenvalue_numerator": 0,
+        "gram_eigenvalue_denominator": 59049
+      },
+      {
+        "j": 5,
+        "adjacency_eigenvalue": -121,
+        "multiplicity": 1,
+        "gram_eigenvalue_numerator": 0,
+        "gram_eigenvalue_denominator": 59049
+      }
+    ],
+    "full_code_state_span_rank": 91840,
+    "Golay_distance_census_from_Golay": [
+      1,
+      66,
+      1430,
+      11220,
+      28809,
+      18954
+    ],
+    "Golay_span_rank_lower": 29438,
+    "Golay_span_rank_upper": 91840,
+    "scope": "Uses established split dual polar graph intersection array; exact Gram polynomial and equitable quotient. Rank of all 183680 two-copy states exact. Golay-only span bounded by second moment, not computed exactly. Any Hamiltonian dark on all Golay targets has at least this degeneracy."
+  },
+  "dimension": {
+    "rows": [
+      {
+        "d": 1,
+        "low": -0.07078467677995362,
+        "high": 0.6238107165367311,
+        "weight": -6.450461195707172,
+        "quadrature_difference": 2.577133617620575e-9
+      },
+      {
+        "d": 2,
+        "low": 0.06893941989804404,
+        "high": 0.6594019071794036,
+        "weight": -6.387200812099904,
+        "quadrature_difference": 1.278821049055523e-9
+      },
+      {
+        "d": 3,
+        "low": 0.1124884328990601,
+        "high": 0.6711096948791023,
+        "weight": -6.373631650093842,
+        "quadrature_difference": 8.474932977620142e-10
+      },
+      {
+        "d": 4,
+        "low": 0.1323441723533857,
+        "high": 0.67682406735266,
+        "weight": -6.371208156466444,
+        "quadrature_difference": 6.333200630592728e-10
+      },
+      {
+        "d": 5,
+        "low": 0.14348926057938988,
+        "high": 0.6801938608272734,
+        "weight": -6.371470826534565,
+        "quadrature_difference": 5.054473506405088e-10
+      },
+      {
+        "d": 6,
+        "low": 0.1505854551942142,
+        "high": 0.6824131175014577,
+        "weight": -6.372374809431935,
+        "quadrature_difference": 4.204985248890125e-10
+      },
+      {
+        "d": 7,
+        "low": 0.15549200235280902,
+        "high": 0.6839842135763636,
+        "weight": -6.373366128705209,
+        "quadrature_difference": 3.599788245267632e-10
+      },
+      {
+        "d": 8,
+        "low": 0.15908511216460713,
+        "high": 0.6851545916712607,
+        "weight": -6.374290580218785,
+        "quadrature_difference": 3.146793936537051e-10
+      },
+      {
+        "d": 9,
+        "low": 0.16182948538470135,
+        "high": 0.6860600854761941,
+        "weight": -6.375112398607837,
+        "quadrature_difference": 2.7950164405154965e-10
+      },
+      {
+        "d": 10,
+        "low": 0.16399397733384632,
+        "high": 0.6867814158738571,
+        "weight": -6.375832226737032,
+        "quadrature_difference": 2.513984576069106e-10
+      },
+      {
+        "d": 11,
+        "low": 0.1657448008323037,
+        "high": 0.6873695496502249,
+        "weight": -6.376461094005338,
+        "quadrature_difference": 2.2842772118281118e-10
+      },
+      {
+        "d": 12,
+        "low": 0.16719020406172058,
+        "high": 0.6878582446928951,
+        "weight": -6.37701183474379,
+        "quadrature_difference": 2.0930235322680346e-10
+      },
+      {
+        "d": 13,
+        "low": 0.16840370134042895,
+        "high": 0.6882707445855507,
+        "weight": -6.37749634183422,
+        "quadrature_difference": 1.9313395327458238e-10
+      },
+      {
+        "d": 14,
+        "low": 0.16943696670458686,
+        "high": 0.6886235748725463,
+        "weight": -6.377924848611703,
+        "quadrature_difference": 1.7927770379344565e-10
+      },
+      {
+        "d": 15,
+        "low": 0.17032738285388477,
+        "high": 0.6889288058561738,
+        "weight": -6.378305910000083,
+        "quadrature_difference": 1.672857408152595e-10
+      },
+      {
+        "d": 16,
+        "low": 0.1711026620718742,
+        "high": 0.6891954587860428,
+        "weight": -6.378646601644806,
+        "quadrature_difference": 1.567895813181508e-10
+      },
+      {
+        "d": 17,
+        "low": 0.17178378330354988,
+        "high": 0.6894304112107672,
+        "weight": -6.378952762197023,
+        "quadrature_difference": 1.4753198662731393e-10
+      },
+      {
+        "d": 18,
+        "low": 0.17238692013576412,
+        "high": 0.6896389978938209,
+        "weight": -6.3792292185309165,
+        "quadrature_difference": 1.3931156228608188e-10
+      },
+      {
+        "d": 19,
+        "low": 0.1729247422142297,
+        "high": 0.6898254203630146,
+        "weight": -6.379479976987457,
+        "quadrature_difference": 1.3195744497096484e-10
+      },
+      {
+        "d": 20,
+        "low": 0.17340731543873864,
+        "high": 0.689993032596329,
+        "weight": -6.379708379647075,
+        "quadrature_difference": 1.2533929449887182e-10
+      },
+      {
+        "d": 21,
+        "low": 0.17384273819158963,
+        "high": 0.6901445444445401,
+        "weight": -6.379917229870633,
+        "quadrature_difference": 1.1935341603930283e-10
+      },
+      {
+        "d": 22,
+        "low": 0.1742375996956057,
+        "high": 0.6902821691566844,
+        "weight": -6.380108892480027,
+        "quadrature_difference": 1.1391265708482479e-10
+      },
+      {
+        "d": 23,
+        "low": 0.1745973159347157,
+        "high": 0.6904077321408774,
+        "weight": -6.380285373604626,
+        "quadrature_difference": 1.0895018220935526e-10
+      },
+      {
+        "d": 24,
+        "low": 0.1749263796682812,
+        "high": 0.690522752344193,
+        "weight": -6.380448384437086,
+        "quadrature_difference": 1.0439837883069458e-10
+      }
+    ],
+    "increment_ratios": [
+      3.9258056320957655,
+      3.719661999178269,
+      3.4747016485545577,
+      3.3073505275520665,
+      3.1975547026044224,
+      3.1230089852325946,
+      3.0700419184743333,
+      3.0308028670565754,
+      3.0006942119140736,
+      2.9769137036647253,
+      2.9576793362158402,
+      2.941812350292209,
+      2.9285052962891767,
+      2.9171879562027674,
+      2.907446838743362,
+      2.8989751115559197,
+      2.8915404539945095,
+      2.8849638178893624,
+      2.879105032886917,
+      2.8738528240013808,
+      2.8691177468337794,
+      2.864827093924097,
+      2.8609211606278993
+    ],
+    "selected_rank": 4,
+    "adjacent_ratio_interval": [
+      3.3073505275520665,
+      3.4747016485545577
+    ],
+    "scope": "Supplied competing determinant weights 3 logdet(lambda+.2)-10 logdet(lambda+1), normalized hopping. Finite candidate ranks1..24, numerical quadrature convergence not certified global. Extensive logweight dominates O(log p) history entropy for fixed rank candidates. Ratios and masses chosen to illustrate interior selection; not physical derivation."
+  }
+}
