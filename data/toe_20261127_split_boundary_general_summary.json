@@ -1,0 +1,239 @@
+{
+  "status": "server Python executed all six prime and five genus checks; theorem proof in note",
+  "prime_checks": [
+    {
+      "p": 2,
+      "planes": 6,
+      "null_vectors": 10,
+      "fixed_dim": 5,
+      "orbit_sizes": [
+        {
+          "size": 1,
+          "multiplicity": 1
+        },
+        {
+          "size": 3,
+          "multiplicity": 3
+        },
+        {
+          "size": 6,
+          "multiplicity": 1
+        }
+      ]
+    },
+    {
+      "p": 3,
+      "planes": 8,
+      "null_vectors": 33,
+      "fixed_dim": 7,
+      "orbit_sizes": [
+        {
+          "size": 1,
+          "multiplicity": 1
+        },
+        {
+          "size": 8,
+          "multiplicity": 4
+        },
+        {
+          "size": 24,
+          "multiplicity": 2
+        }
+      ]
+    },
+    {
+      "p": 5,
+      "planes": 12,
+      "null_vectors": 145,
+      "fixed_dim": 11,
+      "orbit_sizes": [
+        {
+          "size": 1,
+          "multiplicity": 1
+        },
+        {
+          "size": 24,
+          "multiplicity": 6
+        },
+        {
+          "size": 120,
+          "multiplicity": 4
+        }
+      ]
+    },
+    {
+      "p": 7,
+      "planes": 16,
+      "null_vectors": 385,
+      "fixed_dim": 15,
+      "orbit_sizes": [
+        {
+          "size": 1,
+          "multiplicity": 1
+        },
+        {
+          "size": 48,
+          "multiplicity": 8
+        },
+        {
+          "size": 336,
+          "multiplicity": 6
+        }
+      ]
+    },
+    {
+      "p": 11,
+      "planes": 24,
+      "null_vectors": 1441,
+      "fixed_dim": 23,
+      "orbit_sizes": [
+        {
+          "size": 1,
+          "multiplicity": 1
+        },
+        {
+          "size": 120,
+          "multiplicity": 12
+        },
+        {
+          "size": 1320,
+          "multiplicity": 10
+        }
+      ]
+    },
+    {
+      "p": 13,
+      "planes": 28,
+      "null_vectors": 2353,
+      "fixed_dim": 27,
+      "orbit_sizes": [
+        {
+          "size": 1,
+          "multiplicity": 1
+        },
+        {
+          "size": 168,
+          "multiplicity": 14
+        },
+        {
+          "size": 2184,
+          "multiplicity": 12
+        }
+      ]
+    }
+  ],
+  "genus_checks": [
+    {
+      "p": 2,
+      "g": 1,
+      "fixed_dim": 5,
+      "orbits": [
+        {
+          "size": 1,
+          "multiplicity": 1
+        },
+        {
+          "size": 3,
+          "multiplicity": 3
+        },
+        {
+          "size": 6,
+          "multiplicity": 1
+        }
+      ]
+    },
+    {
+      "p": 2,
+      "g": 2,
+      "fixed_dim": 6,
+      "orbits": [
+        {
+          "size": 1,
+          "multiplicity": 1
+        },
+        {
+          "size": 15,
+          "multiplicity": 3
+        },
+        {
+          "size": 120,
+          "multiplicity": 1
+        },
+        {
+          "size": 90,
+          "multiplicity": 1
+        }
+      ]
+    },
+    {
+      "p": 2,
+      "g": 3,
+      "fixed_dim": 6,
+      "orbits": [
+        {
+          "size": 1,
+          "multiplicity": 1
+        },
+        {
+          "size": 63,
+          "multiplicity": 3
+        },
+        {
+          "size": 2016,
+          "multiplicity": 1
+        },
+        {
+          "size": 1890,
+          "multiplicity": 1
+        }
+      ]
+    },
+    {
+      "p": 3,
+      "g": 1,
+      "fixed_dim": 7,
+      "orbits": [
+        {
+          "size": 1,
+          "multiplicity": 1
+        },
+        {
+          "size": 8,
+          "multiplicity": 4
+        },
+        {
+          "size": 24,
+          "multiplicity": 2
+        }
+      ]
+    },
+    {
+      "p": 3,
+      "g": 2,
+      "fixed_dim": 8,
+      "orbits": [
+        {
+          "size": 1,
+          "multiplicity": 1
+        },
+        {
+          "size": 80,
+          "multiplicity": 4
+        },
+        {
+          "size": 2160,
+          "multiplicity": 2
+        },
+        {
+          "size": 1920,
+          "multiplicity": 1
+        }
+      ]
+    }
+  ],
+  "USD_ternary": {
+    "one_copy": "0",
+    "two_copy": "16/27",
+    "three_copy": "208/243"
+  }
+}
