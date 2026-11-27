@@ -1,0 +1,373 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "rank": 2,
+      "exact_four_site_commuting_orbit_census": {
+        "1": 42,
+        "2": 59,
+        "3": 18,
+        "4": 1
+      },
+      "component_crossover": [
+        {
+          "c": 0.25,
+          "prime_limit": 0.7484502219430084,
+          "finite": [
+            {
+              "n": 31,
+              "probability": 0.772488707186237
+            },
+            {
+              "n": 127,
+              "probability": 0.7553352239557296
+            },
+            {
+              "n": 509,
+              "probability": 0.7504970008664318
+            },
+            {
+              "n": 4093,
+              "probability": 0.7487474377487027
+            }
+          ]
+        },
+        {
+          "c": 1.0,
+          "prime_limit": 0.3745829154705152,
+          "finite": [
+            {
+              "n": 31,
+              "probability": 0.41626723657352793
+            },
+            {
+              "n": 127,
+              "probability": 0.3865223941977354
+            },
+            {
+              "n": 509,
+              "probability": 0.3781235301145945
+            },
+            {
+              "n": 4093,
+              "probability": 0.37511182574408664
+            }
+          ]
+        },
+        {
+          "c": 4.0,
+          "prime_limit": 0.06090216852733595,
+          "finite": [
+            {
+              "n": 31,
+              "probability": 0.08406480224297626
+            },
+            {
+              "n": 127,
+              "probability": 0.06736292922903472
+            },
+            {
+              "n": 509,
+              "probability": 0.06280488347149876
+            },
+            {
+              "n": 4093,
+              "probability": 0.06119719484731631
+            }
+          ]
+        }
+      ],
+      "prime_geometry": {
+        "prime_size": 65537,
+        "relation_radius": 8,
+        "checked": 128,
+        "without_relation": 128,
+        "fraction_short_relation_union_bound": 0.002197232097898897
+      },
+      "heat_controls": [
+        {
+          "time": 0.3,
+          "enumerated_return": 0.4660167845114702,
+          "predicted_return": 0.4660167845114702
+        },
+        {
+          "time": 1.7,
+          "enumerated_return": 0.21427769688049422,
+          "predicted_return": 0.2142776968804942
+        },
+        {
+          "time": 8.0,
+          "enumerated_return": 0.20000210622081938,
+          "predicted_return": 0.20000210622081938
+        },
+        {
+          "prime": 509,
+          "alpha": 0.5,
+          "scaled_mean_return": 1.1569602033865405,
+          "scaled_infinite_grid_return": 0.15923320968002921,
+          "continuum_scaled_limit": 1.1591549430918953
+        },
+        {
+          "prime": 4093,
+          "alpha": 0.5,
+          "scaled_mean_return": 1.158881528306848,
+          "scaled_infinite_grid_return": 0.15916466574351065,
+          "continuum_scaled_limit": 1.1591549430918953
+        },
+        {
+          "prime": 65537,
+          "alpha": 0.5,
+          "scaled_mean_return": 1.159137863446091,
+          "scaled_infinite_grid_return": 0.15915555021634759,
+          "continuum_scaled_limit": 1.1591549430918953
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "exact_four_site_commuting_orbit_census": {
+        "1": 210,
+        "2": 251,
+        "3": 42,
+        "4": 1
+      },
+      "component_crossover": [
+        {
+          "c": 0.25,
+          "prime_limit": 0.9339047061288405,
+          "finite": [
+            {
+              "n": 31,
+              "probability": 0.9388465453858661
+            },
+            {
+              "n": 127,
+              "probability": 0.9351184776737199
+            },
+            {
+              "n": 509,
+              "probability": 0.9342078188563252
+            },
+            {
+              "n": 4093,
+              "probability": 0.9339424593636667
+            }
+          ]
+        },
+        {
+          "c": 1.0,
+          "prime_limit": 0.7746464935670602,
+          "finite": [
+            {
+              "n": 31,
+              "probability": 0.7893769839237161
+            },
+            {
+              "n": 127,
+              "probability": 0.7782409843944821
+            },
+            {
+              "n": 509,
+              "probability": 0.775542846060155
+            },
+            {
+              "n": 4093,
+              "probability": 0.7747580827728974
+            }
+          ]
+        },
+        {
+          "c": 4.0,
+          "prime_limit": 0.4358205014925869,
+          "finite": [
+            {
+              "n": 31,
+              "probability": 0.4605084710457097
+            },
+            {
+              "n": 127,
+              "probability": 0.44175785581314636
+            },
+            {
+              "n": 509,
+              "probability": 0.4372965720480366
+            },
+            {
+              "n": 4093,
+              "probability": 0.4360040665171936
+            }
+          ]
+        }
+      ],
+      "prime_geometry": {
+        "prime_size": 65537,
+        "relation_radius": 8,
+        "checked": 128,
+        "without_relation": 128,
+        "fraction_short_relation_union_bound": 0.012695118787860293
+      },
+      "heat_controls": [
+        {
+          "time": 0.3,
+          "enumerated_return": 0.3671762157434446,
+          "predicted_return": 0.3671762157434446
+        },
+        {
+          "time": 1.7,
+          "enumerated_return": 0.20456153704266605,
+          "predicted_return": 0.20456153704266608
+        },
+        {
+          "time": 8.0,
+          "enumerated_return": 0.20000061149312304,
+          "predicted_return": 0.20000061149312298
+        },
+        {
+          "prime": 509,
+          "alpha": 0.5,
+          "scaled_mean_return": 1.0637418906308294,
+          "scaled_infinite_grid_return": 0.0638712261059191,
+          "continuum_scaled_limit": 1.063493635934241
+        },
+        {
+          "prime": 4093,
+          "alpha": 0.5,
+          "scaled_mean_return": 1.0635713454897004,
+          "scaled_infinite_grid_return": 0.06358694070025112,
+          "continuum_scaled_limit": 1.063493635934241
+        },
+        {
+          "prime": 65537,
+          "alpha": 0.5,
+          "scaled_mean_return": 1.063507320589225,
+          "scaled_infinite_grid_return": 0.0635082898668573,
+          "continuum_scaled_limit": 1.063493635934241
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "exact_four_site_commuting_orbit_census": {
+        "1": 930,
+        "2": 995,
+        "3": 90,
+        "4": 1
+      },
+      "component_crossover": [
+        {
+          "c": 0.25,
+          "prime_limit": 0.9844082497932574,
+          "finite": [
+            {
+              "n": 31,
+              "probability": 0.9855370947972932
+            },
+            {
+              "n": 127,
+              "probability": 0.9846858822154503
+            },
+            {
+              "n": 509,
+              "probability": 0.9844774246259574
+            },
+            {
+              "n": 4093,
+              "probability": 0.9844169112455861
+            }
+          ]
+        },
+        {
+          "c": 1.0,
+          "prime_limit": 0.9402176681136617,
+          "finite": [
+            {
+              "n": 31,
+              "probability": 0.9443865031988414
+            },
+            {
+              "n": 127,
+              "probability": 0.9412408015554308
+            },
+            {
+              "n": 509,
+              "probability": 0.9404724676210934
+            },
+            {
+              "n": 4093,
+              "probability": 0.9402495652191761
+            }
+          ]
+        },
+        {
+          "c": 4.0,
+          "prime_limit": 0.7949072085116063,
+          "finite": [
+            {
+              "n": 31,
+              "probability": 0.8073820732033463
+            },
+            {
+              "n": 127,
+              "probability": 0.7979474161481949
+            },
+            {
+              "n": 509,
+              "probability": 0.7956631314973293
+            },
+            {
+              "n": 4093,
+              "probability": 0.7950017712178135
+            }
+          ]
+        }
+      ],
+      "prime_geometry": {
+        "prime_size": 65537,
+        "relation_radius": 8,
+        "checked": 128,
+        "without_relation": 126,
+        "fraction_short_relation_union_bound": 0.055663213146772056
+      },
+      "heat_controls": [
+        {
+          "time": 0.3,
+          "enumerated_return": 0.30211467147221543,
+          "predicted_return": 0.3021146714722154
+        },
+        {
+          "time": 1.7,
+          "enumerated_return": 0.20133349894643565,
+          "predicted_return": 0.20133349894643562
+        },
+        {
+          "time": 8.0,
+          "enumerated_return": 0.20000016202210472,
+          "predicted_return": 0.20000016202210477
+        },
+        {
+          "prime": 509,
+          "alpha": 0.5,
+          "scaled_mean_return": 1.0258603772586943,
+          "scaled_infinite_grid_return": 0.025911291095852454,
+          "continuum_scaled_limit": 1.0253302959105843
+        },
+        {
+          "prime": 4093,
+          "alpha": 0.5,
+          "scaled_mean_return": 1.0255243847062756,
+          "scaled_infinite_grid_return": 0.025530622351530596,
+          "continuum_scaled_limit": 1.0253302959105843
+        },
+        {
+          "prime": 65537,
+          "alpha": 0.5,
+          "scaled_mean_return": 1.0253795270623072,
+          "scaled_infinite_grid_return": 0.025379914323160755,
+          "continuum_scaled_limit": 1.0253302959105843
+        }
+      ]
+    }
+  ],
+  "component_weight_scale": "c/n^(rank-1)",
+  "scope": "Pairwise commuting permutations already imposed. Geometry conditional on one orbit."
+}
