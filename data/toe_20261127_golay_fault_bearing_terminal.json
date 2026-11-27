@@ -1,0 +1,86 @@
+{
+  "first": "golay",
+  "physical_sites": 11,
+  "logical_support": [
+    2,
+    6,
+    7,
+    8,
+    10
+  ],
+  "logical_X": [
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    2,
+    2,
+    2,
+    0,
+    2
+  ],
+  "logical_Z": [
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    0,
+    1
+  ],
+  "checks": [
+    {
+      "type": "X",
+      "weight": 6
+    },
+    {
+      "type": "X",
+      "weight": 6
+    },
+    {
+      "type": "X",
+      "weight": 6
+    },
+    {
+      "type": "X",
+      "weight": 6
+    },
+    {
+      "type": "Z",
+      "weight": 6
+    },
+    {
+      "type": "Z",
+      "weight": 6
+    },
+    {
+      "type": "Z",
+      "weight": 6
+    },
+    {
+      "type": "Z",
+      "weight": 6
+    }
+  ],
+  "terminal_rank": {
+    "X": 5,
+    "Z": 5
+  },
+  "gadgets": 564,
+  "locations": 2561,
+  "single_faults": 87622,
+  "accepted_single": 4258,
+  "malignant_single": 0,
+  "total_pairs": 3835652020,
+  "accepted_pairs": 9836304,
+  "malignant_pairs": 0,
+  "ambiguous_signatures": 283,
+  "correctable_output_classes": 3609,
+  "scope": "Golay nondestructive X readout with two full fault-bearing terminal syndrome rounds and one idle Pauli location per data site after every gadget. Acceptance uses recorded check outcomes, parity agreement and flags ONLY, no ideal terminal syndrome. Bad means parity offset or residual not equivalent to weight<=2 modulo stabilizers and measured X; residual correctability is mathematical diagnostic, not implemented recovery. Ideal encoded input, no initial errors, no intra-gadget idles, no loss."
+}
