@@ -75,9 +75,9 @@
         "correct": 0.9999994503299011,
         "flag": 5.496700989124966e-7,
         "silent": 6.440802134540063e-17,
-        "unclassified_tail": 0
+        "unclassified_tail": 4.617690494942255e-18
       },
-      "outer_failure_upper": 3.816946758661288e-13
+      "outer_failure_upper": 3.7783419210197563e-13
     },
     {
       "name": "memory",
@@ -92,9 +92,9 @@
         "correct": 0.9999999998350992,
         "flag": 1.545947091540844e-10,
         "silent": 1.030612071954159e-11,
-        "unclassified_tail": 0
+        "unclassified_tail": 4.617690494942255e-18
       },
-      "outer_failure_upper": 0
+      "outer_failure_upper": 9.443639534594087e-17
     },
     {
       "name": "memory",
@@ -109,9 +109,9 @@
         "correct": 0.9999453290118456,
         "flag": 0.00005467098705458003,
         "silent": 6.400330438702015e-13,
-        "unclassified_tail": 4.597401301957948e-13
+        "unclassified_tail": 4.596949442288488e-13
       },
-      "outer_failure_upper": 3.6820573057205763e-7
+      "outer_failure_upper": 3.682057261605055e-7
     },
     {
       "name": "memory",
@@ -126,9 +126,9 @@
         "correct": 0.9999998359891527,
         "flag": 1.5376153845937714e-7,
         "silent": 1.0248849131493533e-8,
-        "unclassified_tail": 4.597401301957948e-13
+        "unclassified_tail": 4.596949442288488e-13
       },
-      "outer_failure_upper": 9.341960538478133e-11
+      "outer_failure_upper": 9.341564079220142e-11
     },
     {
       "name": "memory",
@@ -143,9 +143,9 @@
         "correct": 0.9986656369890604,
         "flag": 0.001334361213956149,
         "silent": 3.8894264336807837e-10,
-        "unclassified_tail": 1.408040802051919e-9
+        "unclassified_tail": 1.4080407203966318e-9
       },
-      "outer_failure_upper": 0.0042720359634008664
+      "outer_failure_upper": 0.004272035963397215
     },
     {
       "name": "memory",
@@ -160,9 +160,9 @@
         "correct": 0.99997998632613,
         "flag": 0.000018762593116076104,
         "silent": 0.000001249672713141636,
-        "unclassified_tail": 1.408040802051919e-9
+        "unclassified_tail": 1.4080407203966318e-9
       },
-      "outer_failure_upper": 0.000001402894355240214
+      "outer_failure_upper": 0.0000014028943463034794
     },
     {
       "name": "memory",
@@ -177,9 +177,9 @@
         "correct": 0.9948202825096849,
         "flag": 0.005179667543936287,
         "silent": 6.00745243768177e-9,
-        "unclassified_tail": 4.393892641088306e-8
+        "unclassified_tail": 4.393892633616101e-8
       },
-      "outer_failure_upper": 0.12956329389228716
+      "outer_failure_upper": 0.12956329389228555
     },
     {
       "name": "memory",
@@ -194,9 +194,9 @@
         "correct": 0.9998446453932022,
         "flag": 0.00014562064708940615,
         "silent": 0.000009690020781980698,
-        "unclassified_tail": 4.393892641088306e-8
+        "unclassified_tail": 4.393892633616101e-8
       },
-      "outer_failure_upper": 0.00008927202478303808
+      "outer_failure_upper": 0.00008927202477455061
     },
     {
       "name": "processor",
@@ -211,9 +211,9 @@
         "correct": 0.9999994503299011,
         "flag": 5.496700989124966e-7,
         "silent": 6.440802134540063e-17,
-        "unclassified_tail": 0
+        "unclassified_tail": 4.617690494942255e-18
       },
-      "outer_failure_upper": 5.551115123125783e-16
+      "outer_failure_upper": 8.343195710370167e-21
     },
     {
       "name": "processor",
@@ -228,9 +228,9 @@
         "correct": 0.9999999998350992,
         "flag": 1.545947091540844e-10,
         "silent": 1.030612071954159e-11,
-        "unclassified_tail": 0
+        "unclassified_tail": 4.617690494942255e-18
       },
-      "outer_failure_upper": 0
+      "outer_failure_upper": 8.284865846309687e-20
     },
     {
       "name": "processor",
@@ -245,9 +245,9 @@
         "correct": 0.9999453290118456,
         "flag": 0.00005467098705458003,
         "silent": 6.400330438702015e-13,
-        "unclassified_tail": 4.597401301957948e-13
+        "unclassified_tail": 4.596949442288488e-13
       },
-      "outer_failure_upper": 8.160139230994901e-13
+      "outer_failure_upper": 8.152566878725992e-13
     },
     {
       "name": "processor",
@@ -262,9 +262,9 @@
         "correct": 0.9999998359891527,
         "flag": 1.5376153845937714e-7,
         "silent": 1.0248849131493533e-8,
-        "unclassified_tail": 4.597401301957948e-13
+        "unclassified_tail": 4.596949442288488e-13
       },
-      "outer_failure_upper": 8.260059303211165e-14
+      "outer_failure_upper": 8.194485963063816e-14
     },
     {
       "name": "processor",
@@ -279,9 +279,9 @@
         "correct": 0.9986656369890604,
         "flag": 0.001334361213956149,
         "silent": 3.8894264336807837e-10,
-        "unclassified_tail": 1.408040802051919e-9
+        "unclassified_tail": 1.4080407203966318e-9
       },
-      "outer_failure_upper": 2.7890069009828267e-7
+      "outer_failure_upper": 2.7890069030704294e-7
     },
     {
       "name": "processor",
@@ -296,9 +296,9 @@
         "correct": 0.99997998632613,
         "flag": 0.000018762593116076104,
         "silent": 0.000001249672713141636,
-        "unclassified_tail": 1.408040802051919e-9
+        "unclassified_tail": 1.4080407203966318e-9
       },
-      "outer_failure_upper": 1.2338799981748139e-9
+      "outer_failure_upper": 1.2338785329442834e-9
     },
     {
       "name": "processor",
@@ -313,9 +313,9 @@
         "correct": 0.9948202825096849,
         "flag": 0.005179667543936287,
         "silent": 6.00745243768177e-9,
-        "unclassified_tail": 4.393892641088306e-8
+        "unclassified_tail": 4.393892633616101e-8
       },
-      "outer_failure_upper": 0.00005670907740040754
+      "outer_failure_upper": 0.00005670907740212877
     },
     {
       "name": "processor",
@@ -330,9 +330,9 @@
         "correct": 0.9998446453932022,
         "flag": 0.00014562064708940615,
         "silent": 0.000009690020781980698,
-        "unclassified_tail": 4.393892641088306e-8
+        "unclassified_tail": 4.393892633616101e-8
       },
-      "outer_failure_upper": 8.002159668230036e-8
+      "outer_failure_upper": 8.002159541216738e-8
     }
   ],
   "scope": "Ideal inner Golay syndrome, full Pauli union-support bounded decoder, flags when leader union exceeds radius. Exact enumerated all weight<=4 labels; >=5 conservatively counted as silent error for upper bound. Outer ideal errors-and-erasures decoder guaranteed when 2t+s<d. No physical fault-bearing syndrome or gate synthesis; ideal concatenated storage/output benchmark, not T/CCZ circuit simulation."
