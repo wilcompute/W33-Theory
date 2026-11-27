@@ -1,0 +1,354 @@
+{
+  "cells": {
+    "H27_commutator_counts": [
+      297,
+      216,
+      216
+    ],
+    "rows": [
+      {
+        "t": 0.1,
+        "g": 0,
+        "abelian_Z": 2.809674836071919,
+        "H27_Z": 24.525772868934947
+      },
+      {
+        "t": 0.1,
+        "g": 1,
+        "abelian_Z": 2.809674836071919,
+        "H27_Z": 10.048374180359595
+      },
+      {
+        "t": 0.1,
+        "g": 2,
+        "abelian_Z": 2.809674836071919,
+        "H27_Z": 8.439774326073444
+      },
+      {
+        "t": 0.1,
+        "g": 3,
+        "abelian_Z": 2.809674836071919,
+        "H27_Z": 8.261041008930539
+      },
+      {
+        "t": 0.1,
+        "g": 4,
+        "abelian_Z": 2.809674836071919,
+        "H27_Z": 8.241181751470215
+      },
+      {
+        "t": 0.1,
+        "g": 5,
+        "abelian_Z": 2.809674836071919,
+        "H27_Z": 8.238975167307958
+      },
+      {
+        "t": 0.1,
+        "g": 6,
+        "abelian_Z": 2.809674836071919,
+        "H27_Z": 8.238729991289928
+      },
+      {
+        "t": 0.1,
+        "g": 7,
+        "abelian_Z": 2.809674836071919,
+        "H27_Z": 8.238702749510148
+      },
+      {
+        "t": 0.1,
+        "g": 8,
+        "abelian_Z": 2.809674836071919,
+        "H27_Z": 8.238699722645729
+      },
+      {
+        "t": 1,
+        "g": 0,
+        "abelian_Z": 1.7357588823428847,
+        "H27_Z": 10.5648654704575
+      },
+      {
+        "t": 1,
+        "g": 1,
+        "abelian_Z": 1.7357588823428847,
+        "H27_Z": 4.6787944117144225
+      },
+      {
+        "t": 1,
+        "g": 2,
+        "abelian_Z": 1.7357588823428847,
+        "H27_Z": 4.024786516298526
+      },
+      {
+        "t": 1,
+        "g": 3,
+        "abelian_Z": 1.7357588823428847,
+        "H27_Z": 3.952118972363426
+      },
+      {
+        "t": 1,
+        "g": 4,
+        "abelian_Z": 1.7357588823428847,
+        "H27_Z": 3.9440448008150817
+      },
+      {
+        "t": 1,
+        "g": 5,
+        "abelian_Z": 1.7357588823428847,
+        "H27_Z": 3.943147670643043
+      },
+      {
+        "t": 1,
+        "g": 6,
+        "abelian_Z": 1.7357588823428847,
+        "H27_Z": 3.943047989512816
+      },
+      {
+        "t": 1,
+        "g": 7,
+        "abelian_Z": 1.7357588823428847,
+        "H27_Z": 3.9430369138316803
+      },
+      {
+        "t": 1,
+        "g": 8,
+        "abelian_Z": 1.7357588823428847,
+        "H27_Z": 3.943035683200443
+      },
+      {
+        "t": 4,
+        "g": 0,
+        "abelian_Z": 1.0366312777774684,
+        "H27_Z": 1.4762066111070886
+      },
+      {
+        "t": 4,
+        "g": 1,
+        "abelian_Z": 1.0366312777774684,
+        "H27_Z": 1.1831563888873418
+      },
+      {
+        "t": 4,
+        "g": 2,
+        "abelian_Z": 1.0366312777774684,
+        "H27_Z": 1.1505952530851475
+      },
+      {
+        "t": 4,
+        "g": 3,
+        "abelian_Z": 1.0366312777774684,
+        "H27_Z": 1.146977349107126
+      },
+      {
+        "t": 4,
+        "g": 4,
+        "abelian_Z": 1.0366312777774684,
+        "H27_Z": 1.1465753597762347
+      },
+      {
+        "t": 4,
+        "g": 5,
+        "abelian_Z": 1.0366312777774684,
+        "H27_Z": 1.1465306942950246
+      },
+      {
+        "t": 4,
+        "g": 6,
+        "abelian_Z": 1.0366312777774684,
+        "H27_Z": 1.1465257314637791
+      },
+      {
+        "t": 4,
+        "g": 7,
+        "abelian_Z": 1.0366312777774684,
+        "H27_Z": 1.1465251800380851
+      },
+      {
+        "t": 4,
+        "g": 8,
+        "abelian_Z": 1.0366312777774684,
+        "H27_Z": 1.1465251187685637
+      }
+    ],
+    "moves": [
+      {
+        "t": 0.1,
+        "original": [
+          2.809674836071919,
+          0.09516258196404048,
+          0.09516258196404048
+        ],
+        "refined": [
+          2.8096748360719195,
+          0.09516258196404041,
+          0.09516258196404043
+        ],
+        "unnormalized_fixed_face_weight_change": [
+          -0.32803839470848306,
+          0.1640191973542418,
+          0.1640191973542418
+        ]
+      },
+      {
+        "t": 0.5,
+        "original": [
+          2.213061319425267,
+          0.3934693402873666,
+          0.3934693402873666
+        ],
+        "refined": [
+          2.213061319425266,
+          0.39346934028736635,
+          0.39346934028736635
+        ],
+        "unnormalized_fixed_face_weight_change": [
+          -0.7668009991284073,
+          0.3834004995642035,
+          0.3834004995642035
+        ]
+      },
+      {
+        "t": 2,
+        "original": [
+          1.2706705664732254,
+          0.8646647167633873,
+          0.8646647167633873
+        ],
+        "refined": [
+          1.2706705664732252,
+          0.8646647167633873,
+          0.8646647167633872
+        ],
+        "unnormalized_fixed_face_weight_change": [
+          -0.26571306211989243,
+          0.13285653105994644,
+          0.13285653105994644
+        ]
+      }
+    ],
+    "scope": "Exact two-dimensional heat-kernel lattice gauge partition on connected orientable closed surfaces, normalized Haar measure. 1-3 area subdivision and 2-2 fixed total area follow central convolution. No geometry entropy or genus-changing amplitudes derived. For abelian Z3 normalized partition independent of genus; H27 distinguishes genus but favors sphere in equal prior comparison."
+  },
+  "wall": {
+    "rows": [
+      {
+        "N": 4,
+        "m": 0.5,
+        "momentum_pi_coordinates": 0,
+        "min_singular": 0.047393793871537436,
+        "bound": 0.05423261445466404
+      },
+      {
+        "N": 4,
+        "m": 2.5,
+        "momentum_pi_coordinates": 1,
+        "min_singular": 1.740385760806971,
+        "bound": 1.5
+      },
+      {
+        "N": 4,
+        "m": 4.5,
+        "momentum_pi_coordinates": 2,
+        "min_singular": 3.7163642063300304,
+        "bound": 3.5
+      },
+      {
+        "N": 4,
+        "m": 6.5,
+        "momentum_pi_coordinates": 3,
+        "min_singular": 5.708034032745141,
+        "bound": 5.5
+      },
+      {
+        "N": 8,
+        "m": 0.5,
+        "momentum_pi_coordinates": 0,
+        "min_singular": 0.0029299446037995853,
+        "bound": 0.0033829375433966137
+      },
+      {
+        "N": 8,
+        "m": 2.5,
+        "momentum_pi_coordinates": 1,
+        "min_singular": 1.585574852516682,
+        "bound": 1.5
+      },
+      {
+        "N": 8,
+        "m": 4.5,
+        "momentum_pi_coordinates": 2,
+        "min_singular": 3.5723047256434097,
+        "bound": 3.5
+      },
+      {
+        "N": 8,
+        "m": 6.5,
+        "momentum_pi_coordinates": 3,
+        "min_singular": 5.568165471247885,
+        "bound": 5.5
+      },
+      {
+        "N": 12,
+        "m": 0.5,
+        "momentum_pi_coordinates": 0,
+        "min_singular": 0.00018310556443153943,
+        "bound": 0.00021143198964697463
+      },
+      {
+        "N": 12,
+        "m": 2.5,
+        "momentum_pi_coordinates": 1,
+        "min_singular": 1.5433557233460724,
+        "bound": 1.5
+      },
+      {
+        "N": 12,
+        "m": 4.5,
+        "momentum_pi_coordinates": 2,
+        "min_singular": 3.535625449425062,
+        "bound": 3.5
+      },
+      {
+        "N": 12,
+        "m": 6.5,
+        "momentum_pi_coordinates": 3,
+        "min_singular": 5.533318072465597,
+        "bound": 5.5
+      },
+      {
+        "N": 16,
+        "m": 0.5,
+        "momentum_pi_coordinates": 0,
+        "min_singular": 0.0000114440908392856,
+        "bound": 0.000013214498960651509
+      },
+      {
+        "N": 16,
+        "m": 2.5,
+        "momentum_pi_coordinates": 1,
+        "min_singular": 1.526095141310422,
+        "bound": 1.5
+      },
+      {
+        "N": 16,
+        "m": 4.5,
+        "momentum_pi_coordinates": 2,
+        "min_singular": 3.521119972382279,
+        "bound": 3.5
+      },
+      {
+        "N": 16,
+        "m": 6.5,
+        "momentum_pi_coordinates": 3,
+        "min_singular": 5.5196688006514565,
+        "bound": 5.5
+      }
+    ],
+    "anomaly": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "SU2_doublets": 4,
+    "scope": "Supplied 4D spatial Wilson/domain-wall benchmark. H=sin k·sigma tau_z plus SSH offdiagonal B=m(k)I-shift. Both boundaries carry opposite chirality; only k=0 has m<1 for m0=.5. Does not gap mirror, derive extra dimension or gravity. SM anomaly check per 16 including neutral singlet, not proof lattice regulator."
+  }
+}
