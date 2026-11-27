@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "majorants_first_five": [
+    1,
+    2,
+    6,
+    26,
+    150
+  ],
+  "tick_majorants_first_five": [
+    "1/3",
+    "4/9",
+    "20/27",
+    "44/27",
+    "380/81"
+  ],
+  "convergent_tick_series": [
+    {
+      "t": 0.1,
+      "seam_constant": 0.0024911967598323995,
+      "partial_sum_70": 0.002491196759832425
+    },
+    {
+      "t": 0.4,
+      "seam_constant": 0.058857173182844974,
+      "partial_sum_70": 0.058857173182844925
+    },
+    {
+      "t": 0.8,
+      "seam_constant": 0.47824981390753074,
+      "partial_sum_70": 0.4782498139075307
+    },
+    {
+      "t": 1.0,
+      "seam_constant": 1.2704000790944516,
+      "partial_sum_70": 1.2704000787943643
+    }
+  ],
+  "commutator_frobenius_norm": 3.999999999999999,
+  "factor_probe_seam_norm": 4.6318089675892695,
+  "changed_window_bound": 9.8,
+  "factor_probe_cycle_weight": 0.36652471224524263,
+  "factor_probe_thermal": [
+    {
+      "beta": 0.25,
+      "log_split_over_ring": -0.1267668180289112,
+      "connected_probability": 0.9489337714668088
+    },
+    {
+      "beta": 1.0,
+      "log_split_over_ring": -0.47152097066503273,
+      "connected_probability": 0.9632781326962873
+    },
+    {
+      "beta": 3.0,
+      "log_split_over_ring": -2.0411712220562617,
+      "connected_probability": 0.9921286251845084
+    }
+  ]
+}
