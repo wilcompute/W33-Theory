@@ -1,0 +1,116 @@
+{
+  "original_two_qubit_magic_rays": 36,
+  "qutrit_magic_after_known_support_relabel": 27,
+  "qutrit_stabilizer_after_relabel": 9,
+  "wigner": {
+    "0": {
+      "numerators_over18": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        6,
+        6
+      ],
+      "l1": 1
+    },
+    "1": {
+      "numerators_over18": [
+        -2,
+        -2,
+        0,
+        0,
+        4,
+        4,
+        4,
+        4,
+        6
+      ],
+      "l1": 1.4444444444444444
+    }
+  },
+  "reflection_injection": {
+    "branch_count": 3,
+    "branch_probability": 0.3333333333333333,
+    "projective_group": "C2 x C2",
+    "transition": [
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        3,
+        2
+      ],
+      [
+        3,
+        0,
+        1
+      ],
+      [
+        2,
+        1,
+        0
+      ]
+    ],
+    "expected_raw_resources": 3,
+    "survival": [
+      {
+        "n": 0,
+        "probability_not_yet_hit": 1
+      },
+      {
+        "n": 1,
+        "probability_not_yet_hit": 0.6666666666666666
+      },
+      {
+        "n": 2,
+        "probability_not_yet_hit": 0.4444444444444444
+      },
+      {
+        "n": 3,
+        "probability_not_yet_hit": 0.2962962962962962
+      },
+      {
+        "n": 4,
+        "probability_not_yet_hit": 0.19753086419753083
+      },
+      {
+        "n": 5,
+        "probability_not_yet_hit": 0.13168724279835387
+      },
+      {
+        "n": 6,
+        "probability_not_yet_hit": 0.08779149519890257
+      },
+      {
+        "n": 7,
+        "probability_not_yet_hit": 0.05852766346593505
+      },
+      {
+        "n": 8,
+        "probability_not_yet_hit": 0.03901844231062336
+      }
+    ]
+  },
+  "projective40_uniform_reflection_parity_by_logical_coset": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "scope": "known support, ideal optical mode relabeling and qutrit diagonal Clifford; not a free conversion in two-qubit resource theory, no protected raw ray preparation or logical reflection implementation"
+}
