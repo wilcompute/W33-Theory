@@ -1,0 +1,55 @@
+{
+  "encoder_gates": 77,
+  "encoder_gate_census": {
+    "sum": 71,
+    "swap": 3,
+    "scale": 3
+  },
+  "checks_per_verification": 20,
+  "check_locations_per_verification": 1100,
+  "rows": [
+    {
+      "p": 0.0001,
+      "loss": 0,
+      "trials": 4000,
+      "counts": {
+        "success": 3245,
+        "resource_reject": 375,
+        "data_check_reject": 380
+      }
+    },
+    {
+      "p": 0.001,
+      "loss": 0,
+      "trials": 4000,
+      "counts": {
+        "resource_reject": 2625,
+        "data_check_reject": 892,
+        "success": 483
+      }
+    },
+    {
+      "p": 0.001,
+      "loss": 0.01,
+      "trials": 4000,
+      "counts": {
+        "resource_reject": 2566,
+        "success": 453,
+        "data_check_reject": 850,
+        "data_loss_reject": 131
+      }
+    },
+    {
+      "p": 0.005,
+      "loss": 0.01,
+      "trials": 4000,
+      "counts": {
+        "resource_reject": 3973,
+        "data_check_reject": 25,
+        "data_loss_reject": 2
+      }
+    }
+  ],
+  "forced_bare_magic_Z": "accepted logical failure",
+  "scope": "Actual Clifford encoder from bare T^7|+>, independent Pauli faults at preparations and encoder gates; resource postselection with two full noisy verified-cat syndrome rounds and inter-gadget idles. Inverse transversal SUM, magic destructive readout with trit noise and located erasures, data loss rejection, noisy terminal checks and transversal quadratic feedforward. Final logical result evaluated with ideal CSS recovery as diagnostic, not physically executed. Clean encoded input, no initial data errors or within-gadget idles; resource bare non-Clifford fault is undetectable. No projective magic-state factory or complete outer T/CCZ trajectory."
+}
