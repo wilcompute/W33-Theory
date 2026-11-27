@@ -1,0 +1,119 @@
+{
+  "center": {
+    "order": 729,
+    "center": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        3
+      ],
+      [
+        0,
+        0,
+        4
+      ],
+      [
+        0,
+        0,
+        5
+      ],
+      [
+        0,
+        0,
+        6
+      ],
+      [
+        0,
+        0,
+        7
+      ],
+      [
+        0,
+        0,
+        8
+      ]
+    ],
+    "derived_size": 9,
+    "orders": {
+      "1": 1,
+      "3": 26,
+      "9": 702
+    },
+    "nontrivial_center_fiber_orders": {
+      "9": 54
+    },
+    "commutator_checks": 531441,
+    "repChecks": 19683,
+    "central_anomaly_before": [
+      6,
+      0
+    ],
+    "central_anomaly_after": [
+      0,
+      0
+    ],
+    "scope": "H(Z9) -> H(F3) reduction. Kernel order27, preimage of center C3² × C9. Minimal order729 among class-two 3-groups with an order9 commutator [a,b]: a,b independent mod center to order9 by commuting with b,a, center >=9. No proof of full anomaly extension or E6 embedding; 48 uniform-charge fields only representation of center, not of H27."
+  },
+  "golay": {
+    "weight6_directions": 132,
+    "rank": 6,
+    "supports": 132,
+    "full_rank_six_subsets": 792,
+    "reverse_reachability_levels": [
+      1,
+      24,
+      264,
+      440
+    ],
+    "rows": [
+      {
+        "n": 1,
+        "worst_survival": 1
+      },
+      {
+        "n": 5,
+        "worst_survival": 0.988173748504327
+      },
+      {
+        "n": 10,
+        "worst_survival": 0.9609231846385702
+      },
+      {
+        "n": 20,
+        "worst_survival": 0.907110309979388
+      },
+      {
+        "n": 50,
+        "worst_survival": 0.763006061746341
+      },
+      {
+        "n": 100,
+        "worst_survival": 0.5718837504621669
+      },
+      {
+        "n": 200,
+        "worst_survival": 0.32126786965667864
+      },
+      {
+        "n": 500,
+        "worst_survival": 0.056956842299498614
+      }
+    ],
+    "scope": "Constructive code-specific six-site syndrome pumping with uniform choice of check and one of six sites. Correct nonzero syndrome by local Pauli. Exact absorbing graph for each CSS syndrome sector; four independent sectors for two copies. No supplied stabilizer-free universal selector: permutation-invariant dynamics dark on all Golay states cannot have nontrivial jumps <=6 because some code has full-rank marginal on each given support."
+  }
+}
