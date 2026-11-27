@@ -1,0 +1,22 @@
+{
+  "check_weight": 6,
+  "repetitions": 3,
+  "locations": 132,
+  "enumerated_faults": 5394,
+  "accepted": 540,
+  "rejected": 4854,
+  "accepted_residual_weight": {
+    "0": 216,
+    "1": 324
+  },
+  "malignant": 0,
+  "by": {
+    "prep": 264,
+    "F": 24,
+    "SUM": 3600,
+    "MZ": 30,
+    "CZ": 1440,
+    "MX": 36
+  },
+  "scope": "one fixed weight-six Z stabilizer, ideal code input, independent single Pauli after each listed location or classical readout error; accept only zero verifier and syndrome outcomes; no idle/loss/multiple faults or full interleaved round threshold"
+}
