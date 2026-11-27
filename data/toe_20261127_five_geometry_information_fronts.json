@@ -1,0 +1,1509 @@
+{
+  "status": "PASS",
+  "dimension": {
+    "rows": [
+      {
+        "d": 3,
+        "g": 0.5,
+        "energies": [
+          1499435.8104164524,
+          14943.581041645224,
+          144.35810416452242,
+          0.9358104164522437,
+          -0.04141895835477563,
+          -0.005491895835477563
+        ]
+      },
+      {
+        "d": 3,
+        "g": 1,
+        "energies": [
+          1498871.6208329045,
+          14887.162083290448,
+          138.71620832904483,
+          0.37162083290448744,
+          -0.09783791670955126,
+          -0.011133791670955125
+        ]
+      },
+      {
+        "d": 3,
+        "g": 2,
+        "energies": [
+          1497743.241665809,
+          14774.324166580898,
+          127.43241665808972,
+          -0.7567583341910251,
+          -0.2106758334191025,
+          -0.02241758334191025
+        ]
+      },
+      {
+        "d": 3,
+        "g": 4,
+        "energies": [
+          1495486.483331618,
+          14548.648333161795,
+          104.86483331617947,
+          -3.0135166683820502,
+          -0.43635166683820503,
+          -0.04498516668382051
+        ]
+      },
+      {
+        "d": 4,
+        "g": 0.5,
+        "energies": [
+          1500000,
+          15000,
+          149.99999999999997,
+          1.5,
+          0.015,
+          0.00015000000000000001
+        ]
+      },
+      {
+        "d": 4,
+        "g": 1,
+        "energies": [
+          1000000,
+          10000,
+          99.99999999999999,
+          1,
+          0.01,
+          0.0001
+        ]
+      },
+      {
+        "d": 4,
+        "g": 2,
+        "energies": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "d": 4,
+        "g": 4,
+        "energies": [
+          -2000000,
+          -20000,
+          -199.99999999999997,
+          -2,
+          -0.02,
+          -0.0002
+        ]
+      },
+      {
+        "d": 5,
+        "g": 0.5,
+        "energies": [
+          -373626389.0318375,
+          -351126.38903183746,
+          -126.1263890318375,
+          2.1238736109681624,
+          0.024623873610968162,
+          0.00024962387361096816
+        ]
+      },
+      {
+        "d": 5,
+        "g": 1,
+        "energies": [
+          -749752778.063675,
+          -727252.7780636749,
+          -502.25277806367495,
+          1.7477472219363248,
+          0.024247747221936327,
+          0.0002492477472219363
+        ]
+      },
+      {
+        "d": 5,
+        "g": 2,
+        "energies": [
+          -1502005556.12735,
+          -1479505.5561273498,
+          -1254.5055561273498,
+          0.9954944438726498,
+          0.023495494443872653,
+          0.00024849549444387267
+        ]
+      },
+      {
+        "d": 5,
+        "g": 4,
+        "energies": [
+          -3006511112.2547,
+          -2984011.1122546997,
+          -2759.0111122546996,
+          -0.5090111122547003,
+          0.0219909888877453,
+          0.0002469909888877453
+        ]
+      },
+      {
+        "d": 6,
+        "g": 0.5,
+        "energies": [
+          -249996999999.99997,
+          -24970000,
+          -2199.9999999999995,
+          2.75,
+          0.029974999999999998,
+          0.0002999975
+        ]
+      },
+      {
+        "d": 6,
+        "g": 1,
+        "energies": [
+          -499996999999.99994,
+          -49970000,
+          -4699.999999999999,
+          2.5,
+          0.029949999999999997,
+          0.00029999499999999995
+        ]
+      },
+      {
+        "d": 6,
+        "g": 2,
+        "energies": [
+          -999996999999.9999,
+          -99970000,
+          -9699.999999999998,
+          2,
+          0.0299,
+          0.00029999
+        ]
+      },
+      {
+        "d": 6,
+        "g": 4,
+        "energies": [
+          -1999996999999.9998,
+          -199970000,
+          -19699.999999999996,
+          1,
+          0.0298,
+          0.00029998
+        ]
+      },
+      {
+        "d": 7,
+        "g": 0.5,
+        "energies": [
+          -150450552112735.03,
+          -1504470556.12735,
+          -14695.0555612735,
+          3.349549444387265,
+          0.03499849549444388,
+          0.0003499999849549444
+        ]
+      },
+      {
+        "d": 7,
+        "g": 1,
+        "energies": [
+          -300901107725470.06,
+          -3008976112.2547,
+          -29740.111122547,
+          3.1990988887745297,
+          0.03499699098888775,
+          0.0003499999699098889
+        ]
+      },
+      {
+        "d": 7,
+        "g": 2,
+        "energies": [
+          -601802218950940.1,
+          -6017987224.5094,
+          -59830.222245094,
+          2.89819777754906,
+          0.03499398197777549,
+          0.00034999993981977775
+        ]
+      },
+      {
+        "d": 7,
+        "g": 4,
+        "energies": [
+          -1203604441401880.2,
+          -12036009449.0188,
+          -120010.444490188,
+          2.29639555509812,
+          0.03498796395555098,
+          0.0003499998796395555
+        ]
+      },
+      {
+        "d": 8,
+        "g": 0.5,
+        "energies": [
+          -83333333329333330,
+          -83333293333.33331,
+          -82933.3333333333,
+          3.9166666666666665,
+          0.03999991666666667,
+          0.00039999999991666667
+        ]
+      },
+      {
+        "d": 8,
+        "g": 1,
+        "energies": [
+          -166666666662666660,
+          -166666626666.66663,
+          -166266.6666666666,
+          3.8333333333333335,
+          0.03999983333333333,
+          0.00039999999983333337
+        ]
+      },
+      {
+        "d": 8,
+        "g": 2,
+        "energies": [
+          -333333333329333300,
+          -333333293333.33325,
+          -332933.3333333332,
+          3.6666666666666665,
+          0.03999966666666667,
+          0.00039999999966666667
+        ]
+      },
+      {
+        "d": 8,
+        "g": 4,
+        "energies": [
+          -666666666662666600,
+          -666666626666.6665,
+          -666266.6666666664,
+          3.3333333333333335,
+          0.03999933333333333,
+          0.0003999999993333334
+        ]
+      }
+    ],
+    "hydrogen": [
+      {
+        "g": 0.1,
+        "E": -0.0025000000000000005
+      },
+      {
+        "g": 1,
+        "E": -0.25
+      },
+      {
+        "g": 5,
+        "E": -6.25
+      }
+    ],
+    "hardy_4_critical_g": 1,
+    "dimension_intersection": [
+      3
+    ],
+    "maxwell": [
+      {
+        "spatial_dimension": 2,
+        "dual_potential_degree": 0,
+        "conformal_weight": -1
+      },
+      {
+        "spatial_dimension": 3,
+        "dual_potential_degree": 1,
+        "conformal_weight": 0
+      },
+      {
+        "spatial_dimension": 4,
+        "dual_potential_degree": 2,
+        "conformal_weight": 1
+      },
+      {
+        "spatial_dimension": 5,
+        "dual_potential_degree": 3,
+        "conformal_weight": 2
+      },
+      {
+        "spatial_dimension": 6,
+        "dual_potential_degree": 4,
+        "conformal_weight": 3
+      },
+      {
+        "spatial_dimension": 7,
+        "dual_potential_degree": 5,
+        "conformal_weight": 4
+      }
+    ],
+    "scope": "Continuum unregularized Gauss potential, quadratic nonrelativistic kinetic energy and finite lattice Green function imposed. Gaussian controls do not prove sharp Hardy. Maxwell conformal scaling is for a supplied relativistic one-form."
+  },
+  "chirality": {
+    "N": 24,
+    "rows": [
+      {
+        "m": -1,
+        "degree": 0,
+        "quadrature": 9.209864693273169e-8,
+        "min_sample_gap": 1.0666585689816557,
+        "corner_mass_histogram": {
+          "-1": 1,
+          "-3": 4,
+          "-5": 6,
+          "-7": 4,
+          "-9": 1
+        }
+      },
+      {
+        "m": 1,
+        "degree": 1,
+        "quadrature": 0.9999991638013807,
+        "min_sample_gap": 1.0004390460007846,
+        "corner_mass_histogram": {
+          "1": 1,
+          "-1": 4,
+          "-3": 6,
+          "-5": 4,
+          "-7": 1
+        }
+      },
+      {
+        "m": 3,
+        "degree": -3,
+        "quadrature": -2.999996654943864,
+        "min_sample_gap": 1.0169663487573017,
+        "corner_mass_histogram": {
+          "1": 4,
+          "3": 1,
+          "-1": 6,
+          "-3": 4,
+          "-5": 1
+        }
+      },
+      {
+        "m": 5,
+        "degree": 3,
+        "quadrature": 2.999996654943869,
+        "min_sample_gap": 1.0169663487573017,
+        "corner_mass_histogram": {
+          "1": 6,
+          "3": 4,
+          "5": 1,
+          "-1": 4,
+          "-3": 1
+        }
+      },
+      {
+        "m": 7,
+        "degree": -1,
+        "quadrature": -0.9999991638015856,
+        "min_sample_gap": 1.0004390460007846,
+        "corner_mass_histogram": {
+          "1": 4,
+          "3": 6,
+          "5": 4,
+          "7": 1,
+          "-1": 1
+        }
+      },
+      {
+        "m": 9,
+        "degree": 0,
+        "quadrature": -9.209864676927601e-8,
+        "min_sample_gap": 1.0666585689816557,
+        "corner_mass_histogram": {
+          "1": 1,
+          "3": 4,
+          "5": 6,
+          "7": 4,
+          "9": 1
+        }
+      }
+    ],
+    "scope": "4D supplied free Wilson Hamiltonian; oriented map degree, C2 sign depends on gamma and occupied-band convention. No interacting mirror gapping or dynamical fourth dimension."
+  },
+  "category": {
+    "bosons_including_vacuum": 261,
+    "boundaries": 80,
+    "boundary_size": 27,
+    "projective_lines": 130,
+    "ordered_intersection_histogram": {
+      "1": 2160,
+      "3": 3120,
+      "9": 1040,
+      "27": 80
+    },
+    "Gram_spectrum": {
+      "0": 40,
+      "32/3": 1,
+      "16/9": 39
+    },
+    "rank": 40,
+    "transversality_spectrum": {
+      "3": 39,
+      "27": 1,
+      "-3": 39,
+      "-27": 1
+    },
+    "orthogonal_transform": "(4N-J)/12",
+    "scope": "Untwisted D(F3^3), uniform subgroup vectors in C^729. Not physical Witting rays or a native gate."
+  },
+  "information_geometry": {
+    "rows": [
+      {
+        "type": "rook",
+        "transfer_square_histogram": {
+          "0": 1056,
+          "1": 576,
+          "4": 144,
+          "16": 288,
+          "25": 192,
+          "100": 48
+        },
+        "trace_K2": 676608,
+        "trace_K3": 125835264,
+        "gaussian_Fisher_trace_square": 0.16131591796875,
+        "edge_resistance": 0.3125,
+        "gaussian_Fisher_trace": 2.34375,
+        "pairInteractions": [
+          {
+            "transfer_numerator_squared": 0,
+            "count": 528,
+            "logdet_mixed_response": 0,
+            "tree_joint_probability": 0.09765625
+          },
+          {
+            "transfer_numerator_squared": 1,
+            "count": 288,
+            "logdet_mixed_response": -0.0005670541688663845,
+            "tree_joint_probability": 0.0966796875
+          },
+          {
+            "transfer_numerator_squared": 4,
+            "count": 72,
+            "logdet_mixed_response": -0.002270148534539146,
+            "tree_joint_probability": 0.09375
+          },
+          {
+            "transfer_numerator_squared": 16,
+            "count": 144,
+            "logdet_mixed_response": -0.009111680351255843,
+            "tree_joint_probability": 0.08203125
+          },
+          {
+            "transfer_numerator_squared": 25,
+            "count": 96,
+            "logdet_mixed_response": -0.014273722212453582,
+            "tree_joint_probability": 0.0732421875
+          }
+        ]
+      },
+      {
+        "type": "shrikhande",
+        "transfer_square_histogram": {
+          "0": 768,
+          "1": 960,
+          "4": 48,
+          "16": 288,
+          "25": 192,
+          "100": 48
+        },
+        "trace_K2": 675456,
+        "trace_K3": 125641728,
+        "gaussian_Fisher_trace_square": 0.161041259765625,
+        "edge_resistance": 0.3125,
+        "gaussian_Fisher_trace": 2.34375,
+        "pairInteractions": [
+          {
+            "transfer_numerator_squared": 0,
+            "count": 384,
+            "logdet_mixed_response": 0,
+            "tree_joint_probability": 0.09765625
+          },
+          {
+            "transfer_numerator_squared": 1,
+            "count": 480,
+            "logdet_mixed_response": -0.0005670541688663845,
+            "tree_joint_probability": 0.0966796875
+          },
+          {
+            "transfer_numerator_squared": 4,
+            "count": 24,
+            "logdet_mixed_response": -0.002270148534539146,
+            "tree_joint_probability": 0.09375
+          },
+          {
+            "transfer_numerator_squared": 16,
+            "count": 144,
+            "logdet_mixed_response": -0.009111680351255843,
+            "tree_joint_probability": 0.08203125
+          },
+          {
+            "transfer_numerator_squared": 25,
+            "count": 96,
+            "logdet_mixed_response": -0.014273722212453582,
+            "tree_joint_probability": 0.0732421875
+          }
+        ]
+      }
+    ],
+    "scope": "Gaussian scalar field on mean-zero vertex space. Fisher response of edge conductances distinguishes scalar-cospectral graphs. Spanning-tree pair probability follows transfer-current theorem. Not Einstein dynamics."
+  },
+  "codes": {
+    "rows": [
+      {
+        "p": 7,
+        "d": 2,
+        "a": [
+          1,
+          3
+        ],
+        "basis": [
+          [
+            3,
+            -1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "dual_numerators": [
+          [
+            2,
+            -1
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "physical_qutrits": 14,
+        "logical_qutrits": 2,
+        "dZ_exact": 3,
+        "shortest_relation": [
+          1,
+          2
+        ],
+        "dX_lower": 2,
+        "dX_upper": 3,
+        "X_witness_weights": [
+          3,
+          4
+        ],
+        "ranks": [
+          6,
+          6
+        ],
+        "max_string_defects": 2
+      },
+      {
+        "p": 13,
+        "d": 2,
+        "a": [
+          1,
+          4
+        ],
+        "basis": [
+          [
+            4,
+            -1
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "dual_numerators": [
+          [
+            3,
+            -1
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "physical_qutrits": 26,
+        "logical_qutrits": 2,
+        "dZ_exact": 4,
+        "shortest_relation": [
+          1,
+          3
+        ],
+        "dX_lower": 3,
+        "dX_upper": 4,
+        "X_witness_weights": [
+          4,
+          5
+        ],
+        "ranks": [
+          12,
+          12
+        ],
+        "max_string_defects": 2
+      },
+      {
+        "p": 31,
+        "d": 2,
+        "a": [
+          1,
+          6
+        ],
+        "basis": [
+          [
+            6,
+            -1
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "dual_numerators": [
+          [
+            5,
+            -1
+          ],
+          [
+            1,
+            6
+          ]
+        ],
+        "physical_qutrits": 62,
+        "logical_qutrits": 2,
+        "dZ_exact": 6,
+        "shortest_relation": [
+          1,
+          5
+        ],
+        "dX_lower": 5,
+        "dX_upper": 6,
+        "X_witness_weights": [
+          6,
+          7
+        ],
+        "ranks": [
+          30,
+          30
+        ],
+        "max_string_defects": 2
+      },
+      {
+        "p": 127,
+        "d": 2,
+        "a": [
+          1,
+          12
+        ],
+        "basis": [
+          [
+            12,
+            -1
+          ],
+          [
+            7,
+            10
+          ]
+        ],
+        "dual_numerators": [
+          [
+            10,
+            -7
+          ],
+          [
+            1,
+            12
+          ]
+        ],
+        "physical_qutrits": 254,
+        "logical_qutrits": 2,
+        "dZ_exact": 13,
+        "shortest_relation": [
+          12,
+          -1
+        ],
+        "dX_lower": 8,
+        "dX_upper": 13,
+        "X_witness_weights": [
+          17,
+          13
+        ],
+        "ranks": null,
+        "max_string_defects": 2
+      },
+      {
+        "p": 509,
+        "d": 2,
+        "a": [
+          1,
+          23
+        ],
+        "basis": [
+          [
+            23,
+            -1
+          ],
+          [
+            3,
+            22
+          ]
+        ],
+        "dual_numerators": [
+          [
+            22,
+            -3
+          ],
+          [
+            1,
+            23
+          ]
+        ],
+        "physical_qutrits": 1018,
+        "logical_qutrits": 2,
+        "dZ_exact": 24,
+        "shortest_relation": [
+          23,
+          -1
+        ],
+        "dX_lower": 21,
+        "dX_upper": 24,
+        "X_witness_weights": [
+          25,
+          24
+        ],
+        "ranks": null,
+        "max_string_defects": 2
+      },
+      {
+        "p": 7,
+        "d": 3,
+        "a": [
+          1,
+          2,
+          4
+        ],
+        "basis": [
+          [
+            2,
+            -1,
+            0
+          ],
+          [
+            0,
+            2,
+            -1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "dual_numerators": [
+          [
+            3,
+            -1,
+            -2
+          ],
+          [
+            1,
+            2,
+            -3
+          ],
+          [
+            1,
+            2,
+            4
+          ]
+        ],
+        "physical_qutrits": 21,
+        "logical_qutrits": 3,
+        "dZ_exact": 3,
+        "shortest_relation": [
+          2,
+          -1,
+          0
+        ],
+        "dX_lower": 3,
+        "dX_upper": 6,
+        "X_witness_weights": [
+          6,
+          6,
+          7
+        ],
+        "ranks": [
+          6,
+          12
+        ],
+        "max_string_defects": 2
+      },
+      {
+        "p": 13,
+        "d": 3,
+        "a": [
+          1,
+          3,
+          9
+        ],
+        "basis": [
+          [
+            3,
+            -1,
+            0
+          ],
+          [
+            0,
+            3,
+            -1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "dual_numerators": [
+          [
+            4,
+            -1,
+            -3
+          ],
+          [
+            1,
+            3,
+            -4
+          ],
+          [
+            1,
+            3,
+            9
+          ]
+        ],
+        "physical_qutrits": 39,
+        "logical_qutrits": 3,
+        "dZ_exact": 3,
+        "shortest_relation": [
+          1,
+          1,
+          1
+        ],
+        "dX_lower": 4,
+        "dX_upper": 8,
+        "X_witness_weights": [
+          8,
+          8,
+          13
+        ],
+        "ranks": [
+          12,
+          24
+        ],
+        "max_string_defects": 2
+      },
+      {
+        "p": 31,
+        "d": 3,
+        "a": [
+          1,
+          4,
+          16
+        ],
+        "basis": [
+          [
+            4,
+            -1,
+            0
+          ],
+          [
+            0,
+            4,
+            -1
+          ],
+          [
+            3,
+            3,
+            1
+          ]
+        ],
+        "dual_numerators": [
+          [
+            7,
+            -3,
+            -12
+          ],
+          [
+            1,
+            4,
+            -15
+          ],
+          [
+            1,
+            4,
+            16
+          ]
+        ],
+        "physical_qutrits": 93,
+        "logical_qutrits": 3,
+        "dZ_exact": 3,
+        "shortest_relation": [
+          1,
+          0,
+          -2
+        ],
+        "dX_lower": 5,
+        "dX_upper": 20,
+        "X_witness_weights": [
+          22,
+          20,
+          21
+        ],
+        "ranks": [
+          30,
+          60
+        ],
+        "max_string_defects": 2
+      },
+      {
+        "p": 127,
+        "d": 3,
+        "a": [
+          1,
+          6,
+          36
+        ],
+        "basis": [
+          [
+            6,
+            -1,
+            0
+          ],
+          [
+            0,
+            6,
+            -1
+          ],
+          [
+            1,
+            3,
+            3
+          ]
+        ],
+        "dual_numerators": [
+          [
+            21,
+            -1,
+            -6
+          ],
+          [
+            3,
+            18,
+            -19
+          ],
+          [
+            1,
+            6,
+            36
+          ]
+        ],
+        "physical_qutrits": 381,
+        "logical_qutrits": 3,
+        "dZ_exact": 7,
+        "shortest_relation": [
+          6,
+          -1,
+          0
+        ],
+        "dX_lower": 19,
+        "dX_upper": 28,
+        "X_witness_weights": [
+          28,
+          40,
+          43
+        ],
+        "ranks": null,
+        "max_string_defects": 2
+      },
+      {
+        "p": 509,
+        "d": 3,
+        "a": [
+          1,
+          8,
+          64
+        ],
+        "basis": [
+          [
+            8,
+            -1,
+            0
+          ],
+          [
+            0,
+            8,
+            -1
+          ],
+          [
+            5,
+            7,
+            7
+          ]
+        ],
+        "dual_numerators": [
+          [
+            63,
+            -5,
+            -40
+          ],
+          [
+            7,
+            56,
+            -61
+          ],
+          [
+            1,
+            8,
+            64
+          ]
+        ],
+        "physical_qutrits": 1527,
+        "logical_qutrits": 3,
+        "dZ_exact": 9,
+        "shortest_relation": [
+          8,
+          -1,
+          0
+        ],
+        "dX_lower": 27,
+        "dX_upper": 73,
+        "X_witness_weights": [
+          108,
+          124,
+          73
+        ],
+        "ranks": null,
+        "max_string_defects": 2
+      },
+      {
+        "p": 7,
+        "d": 4,
+        "a": [
+          1,
+          2,
+          4,
+          1
+        ],
+        "basis": [
+          [
+            2,
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            -1,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            -1
+          ],
+          [
+            1,
+            1,
+            1,
+            0
+          ]
+        ],
+        "dual_numerators": [
+          [
+            3,
+            -1,
+            -2,
+            -4
+          ],
+          [
+            1,
+            2,
+            -3,
+            -6
+          ],
+          [
+            0,
+            0,
+            0,
+            -7
+          ],
+          [
+            1,
+            2,
+            4,
+            8
+          ]
+        ],
+        "physical_qutrits": 28,
+        "logical_qutrits": 4,
+        "dZ_exact": 2,
+        "shortest_relation": [
+          1,
+          0,
+          0,
+          -1
+        ],
+        "dX_lower": 3,
+        "dX_upper": 7,
+        "X_witness_weights": [
+          10,
+          12,
+          7,
+          14
+        ],
+        "ranks": [
+          6,
+          18
+        ],
+        "max_string_defects": 2
+      },
+      {
+        "p": 13,
+        "d": 4,
+        "a": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "basis": [
+          [
+            2,
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            -1,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            -1
+          ],
+          [
+            1,
+            0,
+            1,
+            1
+          ]
+        ],
+        "dual_numerators": [
+          [
+            6,
+            -1,
+            -2,
+            -4
+          ],
+          [
+            3,
+            6,
+            -1,
+            -2
+          ],
+          [
+            1,
+            2,
+            4,
+            -5
+          ],
+          [
+            1,
+            2,
+            4,
+            8
+          ]
+        ],
+        "physical_qutrits": 52,
+        "logical_qutrits": 4,
+        "dZ_exact": 3,
+        "shortest_relation": [
+          2,
+          -1,
+          0,
+          0
+        ],
+        "dX_lower": 5,
+        "dX_upper": 12,
+        "X_witness_weights": [
+          13,
+          12,
+          12,
+          15
+        ],
+        "ranks": [
+          12,
+          36
+        ],
+        "max_string_defects": 2
+      },
+      {
+        "p": 31,
+        "d": 4,
+        "a": [
+          1,
+          3,
+          9,
+          27
+        ],
+        "basis": [
+          [
+            3,
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            -1,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            -1
+          ],
+          [
+            1,
+            1,
+            0,
+            1
+          ]
+        ],
+        "dual_numerators": [
+          [
+            10,
+            -1,
+            -3,
+            -9
+          ],
+          [
+            3,
+            9,
+            -4,
+            -12
+          ],
+          [
+            1,
+            3,
+            9,
+            -4
+          ],
+          [
+            1,
+            3,
+            9,
+            27
+          ]
+        ],
+        "physical_qutrits": 124,
+        "logical_qutrits": 4,
+        "dZ_exact": 3,
+        "shortest_relation": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "dX_lower": 8,
+        "dX_upper": 17,
+        "X_witness_weights": [
+          23,
+          28,
+          17,
+          40
+        ],
+        "ranks": [
+          30,
+          90
+        ],
+        "max_string_defects": 2
+      },
+      {
+        "p": 127,
+        "d": 4,
+        "a": [
+          1,
+          4,
+          16,
+          64
+        ],
+        "basis": [
+          [
+            4,
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            -1,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            -1
+          ],
+          [
+            3,
+            3,
+            3,
+            1
+          ]
+        ],
+        "dual_numerators": [
+          [
+            31,
+            -3,
+            -12,
+            -48
+          ],
+          [
+            7,
+            28,
+            -15,
+            -60
+          ],
+          [
+            1,
+            4,
+            16,
+            -63
+          ],
+          [
+            1,
+            4,
+            16,
+            64
+          ]
+        ],
+        "physical_qutrits": 508,
+        "logical_qutrits": 4,
+        "dZ_exact": 3,
+        "shortest_relation": [
+          1,
+          0,
+          0,
+          -2
+        ],
+        "dX_lower": 13,
+        "dX_upper": 84,
+        "X_witness_weights": [
+          94,
+          110,
+          84,
+          85
+        ],
+        "ranks": null,
+        "max_string_defects": 2
+      },
+      {
+        "p": 509,
+        "d": 4,
+        "a": [
+          1,
+          5,
+          25,
+          125
+        ],
+        "basis": [
+          [
+            5,
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            5,
+            -1,
+            0
+          ],
+          [
+            0,
+            0,
+            5,
+            -1
+          ],
+          [
+            4,
+            1,
+            0,
+            4
+          ]
+        ],
+        "dual_numerators": [
+          [
+            101,
+            -4,
+            -20,
+            -100
+          ],
+          [
+            20,
+            100,
+            -9,
+            -45
+          ],
+          [
+            4,
+            20,
+            100,
+            -9
+          ],
+          [
+            1,
+            5,
+            25,
+            125
+          ]
+        ],
+        "physical_qutrits": 2036,
+        "logical_qutrits": 4,
+        "dZ_exact": 6,
+        "shortest_relation": [
+          5,
+          -1,
+          0,
+          0
+        ],
+        "dX_lower": 57,
+        "dX_upper": 133,
+        "X_witness_weights": [
+          225,
+          174,
+          133,
+          156
+        ],
+        "ranks": null,
+        "max_string_defects": 2
+      }
+    ],
+    "scope": "Cubical flat covers supplied. Exact dZ and certified dX bounds, not exhaustive dX optimization. Fixed d, random prime cover tightness gives typical exponents; constant Z energy barrier."
+  }
+}
