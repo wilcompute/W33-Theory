@@ -1,0 +1,319 @@
+{
+  "rows": [
+    {
+      "n": 1,
+      "q": 3,
+      "census": {
+        "3": 2
+      },
+      "representations": [
+        {
+          "k": 0,
+          "s": 1,
+          "failed_elements": 2,
+          "byOrder": {
+            "3": 2
+          },
+          "min_copies_for_all_cyclic_restrictions": 3
+        },
+        {
+          "k": 0,
+          "s": 2,
+          "failed_elements": 2,
+          "byOrder": {
+            "3": 2
+          },
+          "min_copies_for_all_cyclic_restrictions": 3
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "q": 9,
+      "census": {
+        "3": 2,
+        "9": 4
+      },
+      "representations": [
+        {
+          "k": 0,
+          "s": 1,
+          "failed_elements": 6,
+          "byOrder": {
+            "3": 6
+          },
+          "min_copies_for_all_cyclic_restrictions": 3
+        },
+        {
+          "k": 0,
+          "s": 2,
+          "failed_elements": 6,
+          "byOrder": {
+            "3": 6
+          },
+          "min_copies_for_all_cyclic_restrictions": 3
+        },
+        {
+          "k": 1,
+          "s": 1,
+          "failed_elements": 60,
+          "byOrder": {
+            "3": 6,
+            "9": 54
+          },
+          "min_copies_for_all_cyclic_restrictions": 9
+        },
+        {
+          "k": 1,
+          "s": 2,
+          "failed_elements": 60,
+          "byOrder": {
+            "3": 6,
+            "9": 54
+          },
+          "min_copies_for_all_cyclic_restrictions": 9
+        },
+        {
+          "k": 2,
+          "s": 1,
+          "failed_elements": 60,
+          "byOrder": {
+            "3": 6,
+            "9": 54
+          },
+          "min_copies_for_all_cyclic_restrictions": 9
+        },
+        {
+          "k": 2,
+          "s": 2,
+          "failed_elements": 60,
+          "byOrder": {
+            "3": 6,
+            "9": 54
+          },
+          "min_copies_for_all_cyclic_restrictions": 9
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "q": 27,
+      "census": {
+        "3": 6,
+        "27": 12
+      },
+      "representations": [
+        {
+          "k": 0,
+          "s": 1,
+          "failed_elements": 6,
+          "byOrder": {
+            "3": 6
+          },
+          "min_copies_for_all_cyclic_restrictions": 3
+        },
+        {
+          "k": 0,
+          "s": 2,
+          "failed_elements": 6,
+          "byOrder": {
+            "3": 6
+          },
+          "min_copies_for_all_cyclic_restrictions": 3
+        },
+        {
+          "k": 1,
+          "s": 1,
+          "failed_elements": 222,
+          "byOrder": {
+            "3": 6,
+            "9": 54,
+            "27": 162
+          },
+          "min_copies_for_all_cyclic_restrictions": 27
+        },
+        {
+          "k": 1,
+          "s": 2,
+          "failed_elements": 222,
+          "byOrder": {
+            "3": 6,
+            "9": 54,
+            "27": 162
+          },
+          "min_copies_for_all_cyclic_restrictions": 27
+        },
+        {
+          "k": 2,
+          "s": 1,
+          "failed_elements": 222,
+          "byOrder": {
+            "3": 6,
+            "9": 54,
+            "27": 162
+          },
+          "min_copies_for_all_cyclic_restrictions": 27
+        },
+        {
+          "k": 2,
+          "s": 2,
+          "failed_elements": 222,
+          "byOrder": {
+            "3": 6,
+            "9": 54,
+            "27": 162
+          },
+          "min_copies_for_all_cyclic_restrictions": 27
+        },
+        {
+          "k": 3,
+          "s": 1,
+          "failed_elements": 168,
+          "byOrder": {
+            "3": 6,
+            "27": 162
+          },
+          "min_copies_for_all_cyclic_restrictions": 3
+        },
+        {
+          "k": 3,
+          "s": 2,
+          "failed_elements": 168,
+          "byOrder": {
+            "3": 6,
+            "27": 162
+          },
+          "min_copies_for_all_cyclic_restrictions": 3
+        },
+        {
+          "k": 4,
+          "s": 1,
+          "failed_elements": 222,
+          "byOrder": {
+            "3": 6,
+            "9": 54,
+            "27": 162
+          },
+          "min_copies_for_all_cyclic_restrictions": 27
+        },
+        {
+          "k": 4,
+          "s": 2,
+          "failed_elements": 222,
+          "byOrder": {
+            "3": 6,
+            "9": 54,
+            "27": 162
+          },
+          "min_copies_for_all_cyclic_restrictions": 27
+        },
+        {
+          "k": 5,
+          "s": 1,
+          "failed_elements": 222,
+          "byOrder": {
+            "3": 6,
+            "9": 54,
+            "27": 162
+          },
+          "min_copies_for_all_cyclic_restrictions": 27
+        },
+        {
+          "k": 5,
+          "s": 2,
+          "failed_elements": 222,
+          "byOrder": {
+            "3": 6,
+            "9": 54,
+            "27": 162
+          },
+          "min_copies_for_all_cyclic_restrictions": 27
+        },
+        {
+          "k": 6,
+          "s": 1,
+          "failed_elements": 168,
+          "byOrder": {
+            "3": 6,
+            "27": 162
+          },
+          "min_copies_for_all_cyclic_restrictions": 3
+        },
+        {
+          "k": 6,
+          "s": 2,
+          "failed_elements": 168,
+          "byOrder": {
+            "3": 6,
+            "27": 162
+          },
+          "min_copies_for_all_cyclic_restrictions": 3
+        },
+        {
+          "k": 7,
+          "s": 1,
+          "failed_elements": 222,
+          "byOrder": {
+            "3": 6,
+            "9": 54,
+            "27": 162
+          },
+          "min_copies_for_all_cyclic_restrictions": 27
+        },
+        {
+          "k": 7,
+          "s": 2,
+          "failed_elements": 222,
+          "byOrder": {
+            "3": 6,
+            "9": 54,
+            "27": 162
+          },
+          "min_copies_for_all_cyclic_restrictions": 27
+        },
+        {
+          "k": 8,
+          "s": 1,
+          "failed_elements": 222,
+          "byOrder": {
+            "3": 6,
+            "9": 54,
+            "27": 162
+          },
+          "min_copies_for_all_cyclic_restrictions": 27
+        },
+        {
+          "k": 8,
+          "s": 2,
+          "failed_elements": 222,
+          "byOrder": {
+            "3": 6,
+            "9": 54,
+            "27": 162
+          },
+          "min_copies_for_all_cyclic_restrictions": 27
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "q": 81,
+      "census": {
+        "3": 6,
+        "9": 12,
+        "81": 36
+      }
+    },
+    {
+      "n": 5,
+      "q": 243,
+      "census": {
+        "3": 6,
+        "9": 12,
+        "27": 36,
+        "243": 108
+      }
+    }
+  ],
+  "scope": "Necessary cyclic-subgroup anomaly restrictions for untwisted Spin x G_n. Uses eigencharges of monomial irreps and Hsieh Eq1.2; no sufficiency for full nonabelian spin bordism. Central commutator Z3 acts on each triplet by common nontrivial charge, so no individual triplet passes."
+}
