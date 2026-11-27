@@ -1,0 +1,77 @@
+{
+  "encoder_gate_census": {
+    "sum": 844,
+    "swap": 19,
+    "scale": 18
+  },
+  "full_plus_state_stabilizers": 40,
+  "one_round_cat_locations": 3048,
+  "gadget_types": [
+    {
+      "type": "X",
+      "w": 27,
+      "locations": 212,
+      "labels": 8938,
+      "flagfree": 3462,
+      "max_residual_weight_mod_measured_stabilizer": 1
+    },
+    {
+      "type": "X",
+      "w": 18,
+      "locations": 140,
+      "labels": 5878,
+      "flagfree": 2310,
+      "max_residual_weight_mod_measured_stabilizer": 1
+    },
+    {
+      "type": "X",
+      "w": 13,
+      "locations": 100,
+      "labels": 4178,
+      "flagfree": 1670,
+      "max_residual_weight_mod_measured_stabilizer": 1
+    },
+    {
+      "type": "Z",
+      "w": 6,
+      "locations": 44,
+      "labels": 1798,
+      "flagfree": 774,
+      "max_residual_weight_mod_measured_stabilizer": 1
+    },
+    {
+      "type": "Z",
+      "w": 8,
+      "locations": 60,
+      "labels": 2478,
+      "flagfree": 1030,
+      "max_residual_weight_mod_measured_stabilizer": 1
+    },
+    {
+      "type": "Z",
+      "w": 9,
+      "locations": 68,
+      "labels": 2818,
+      "flagfree": 1158,
+      "max_residual_weight_mod_measured_stabilizer": 1
+    },
+    {
+      "type": "Z",
+      "w": 10,
+      "locations": 76,
+      "labels": 3158,
+      "flagfree": 1286,
+      "max_residual_weight_mod_measured_stabilizer": 1
+    }
+  ],
+  "phase_fault_pairs": 3120,
+  "distinct_weight4_closed_Z": 260,
+  "weight4_logical_Z": 260,
+  "logical_supports": 130,
+  "logical_phase_census": {
+    "1": 130,
+    "2": 130
+  },
+  "transfer_basis_outcomes": 27,
+  "scope": "Projective |+_L> preparation includes logical X in full stabilizer-state verification before transversal T. Exact single-fault argument: encoder fault detected or stabilizer-equivalent with ideal verification; any single fault inside one verified-cat gadget leaves at most one data site modulo measured stabilizer when flags clear. Transversal T preserves support even for non-Pauli conjugation. With ideal final CSS recovery, a single fault in preparation/checks/T layer correctable; full physical verification schedule not simulated, random initial stabilizer outcomes assumed zero for encoded state; no faults in transfer or recovery. Ideal joint Z parity and source X readout transfer checked. Exact minimum-weight logical Z census gives leading 260(p/2)^4 under independent symmetric phase errors and ideal code-space postselection after T. No complete fault-tolerant factory."
+}
