@@ -1,0 +1,2245 @@
+{
+  "baseline": "5229e15ac5473490921f8bb3bf0dc1ed6df5d4cd",
+  "window_utc": [
+    "2026-11-20T15:22:00Z",
+    "2026-11-27T15:22:00Z"
+  ],
+  "count": 279,
+  "full_diff_review": false,
+  "commits": [
+    {
+      "sha": "5229e15ac5473490921f8bb3bf0dc1ed6df5d4cd",
+      "parents": [
+        "c69beb5bdfaf228f2434af096347b12f8e983eea"
+      ],
+      "date": "2026-11-23T18:27:06Z",
+      "message": "Pass 12733: explicit evidence factors (A-escape ~ B' ~ 0.05 > hybrid ~ 0.006, bino freeze-in tuned); matter on the SM brane keeps the window but needs a brane baryon symmetry; Belle 2026 caps minimal mesogenesis at m_psi < 2.5 GeV; y' floor figure; page v11\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "c69beb5bdfaf228f2434af096347b12f8e983eea",
+      "parents": [
+        "439a1713d33fed167e882ab87d02f4d1e51206d5"
+      ],
+      "date": "2026-11-23T18:24:08Z",
+      "message": "Pass 12733 reserved: hybrid with matter on the SM brane, brane-localised proton decay, explicit evidence factors incl. DM production, y' floor figure, 2026 data check for B' (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "439a1713d33fed167e882ab87d02f4d1e51206d5",
+      "parents": [
+        "32f24b7850012eb20144dbb0205ebcd59ea43e33"
+      ],
+      "date": "2026-11-23T18:22:34Z",
+      "message": "Pass 12732: orbifold KK X,Y put hybrid proton decay at 1e33-1e34 yr unless matter sits on the SM brane (corrects 'no signal'); bino freeze-in at T_RH ~ M/24; y' floor ~ 0.40 N^-1/4, falsifier (sum y^4)^1/4 < 0.35; A's SUSY escape needs m_saxion >~ 1e6-1e8; end-to-end evidence (hybrid leads, none above SM); page v10\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "32f24b7850012eb20144dbb0205ebcd59ea43e33",
+      "parents": [
+        "7aee5f473901a5cb7f7f51b85a26739420f8eb19"
+      ],
+      "date": "2026-11-23T18:20:24Z",
+      "message": "Pass 12732 reserved: bino freeze-in for the hybrid, proton decay from orbifold KK X/Y, refereeing the y' floor (families, chiralities), saxion cosmology for A, end-to-end evidence update (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "7aee5f473901a5cb7f7f51b85a26739420f8eb19",
+      "parents": [
+        "6f467a775ce52312e95dd1bdb64dcac6727852ee"
+      ],
+      "date": "2026-11-23T18:18:52Z",
+      "message": "Pass 12731: two-loop orbifold window for the hybrid (|delta| <= 0.1 for Lambda R >~ 10, M12 ~ 1e17), freeze-in higgsino does not fit the hybrid (needs mu >~ 8e10), E6 internal Z3s cannot protect, A's escape needs a SUSY flat direction; draft note on the y' floor and B'; page v9\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "6f467a775ce52312e95dd1bdb64dcac6727852ee",
+      "parents": [
+        "f8a16eac80fb62d8eb0055677e0fc90f15942a49"
+      ],
+      "date": "2026-11-23T18:16:08Z",
+      "message": "Pass 12731 reserved: two-loop orbifold window, hybrid higgsino freeze-in, trinification Z3 protection, resonance-free PQ for A, draft note on B' and the y' floor (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "f8a16eac80fb62d8eb0055677e0fc90f15942a49",
+      "parents": [
+        "127bba082943c505025dfa27656e5c1f78de9f3b"
+      ],
+      "date": "2026-11-23T18:14:21Z",
+      "message": "Pass 12730: hybrid orbifold window on the published threshold (mismatch cancels at Lambda R ~ 6.7, < 0.1 for 3-14, consistent with protection at 10-14); B' does not explain low N_eff (Delta ~ -0.06); A's large-field escape needs a resonance-free model; first-layer bits beat uniform ternary at a lower budget; prior-art map; heavy higgsino DM for the hybrid; page v8\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "127bba082943c505025dfa27656e5c1f78de9f3b",
+      "parents": [
+        "8919348f77e49f563c5177d9b46d46ba8e8c36ef"
+      ],
+      "date": "2026-11-23T17:58:29Z",
+      "message": "Pass 12730 reserved: orbifold sign mapping for the hybrid, PQ field relaxation for A, precise N_eff for B', allocation-aware ternary QAT, systematic prior-art search (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "8919348f77e49f563c5177d9b46d46ba8e8c36ef",
+      "parents": [
+        "116684b308590fb9b6f7178ff7549aed83d13d09"
+      ],
+      "date": "2026-11-23T17:55:53Z",
+      "message": "Pass 12729: orbifold numbers of 12724-12727 withdrawn, literature formula gives +(6/7)ln(Lambda R)/2pi = +0.3..0.6 (route reopened); A below B' on the tuned route, untuned escape with a near-Planck PQ field during inflation; B' 6-7 MeV reheating partly lowers N_eff; automatic precision allocation rediscovers the first-layer rule; page v7\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "116684b308590fb9b6f7178ff7549aed83d13d09",
+      "parents": [
+        "c537f21b809adfe5691fc0e30eeb09bd0604f344"
+      ],
+      "date": "2026-11-23T17:46:17Z",
+      "message": "Pass 12729 reserved: A with a large PQ field during inflation, Bayesian update with ACT, low reheating and N_eff in B', Hall-Nomura orbifold comparison, automatic per-matrix precision allocation (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "c537f21b809adfe5691fc0e30eeb09bd0604f344",
+      "parents": [
+        "02eed009e0002797a4ef014454d411c54a3a2afe"
+      ],
+      "date": "2026-11-23T16:34:00Z",
+      "message": "Pass 12728: A's low-scale rescue clashes with ACT n_s (generic models 4.7-6.5 sigma low; needs a tuned hilltop); threshold sign convention passes the Hisano-Murayama-Yanagida check; fp first layer removes 52% of the ternary gap at 4 layers; B' coupled component cannot address N_eff; year-by-year test forecast and page timeline\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "02eed009e0002797a4ef014454d411c54a3a2afe",
+      "parents": [
+        "ef9dd787ec8e13e4b5f86256d91d3d69845a0e76"
+      ],
+      "date": "2026-11-23T16:23:37Z",
+      "message": "Pass 12728 reserved: low-scale inflation n_s for A, threshold-sign validation, 4-layer ternary with fp first layer on code, B' coupled component, experiment timeline forecast (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "ef9dd787ec8e13e4b5f86256d91d3d69845a0e76",
+      "parents": [
+        "bc6bf8f1d3513f1f87967417bdc3d2b4838fde26"
+      ],
+      "date": "2026-11-23T15:47:35Z",
+      "message": "Pass 12727 follow-up: status test accepts later passes (through_pass >= 12726)\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "bc6bf8f1d3513f1f87967417bdc3d2b4838fde26",
+      "parents": [
+        "3f01301443e4277b4057661ad2d86368c21bc0c4"
+      ],
+      "date": "2026-11-23T15:46:55Z",
+      "message": "Pass 12727: fp32 first layer cuts the ternary gap ~75% on prose and code; A's rescue needs H_I < 1.4e5 GeV (isocurvature); B' dark fifth force 2 beta^2 f ~ 0.04 (safe); radiative brane terms deepen the SO(10) orbifold deficit (-1.9); status/page refresh\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "3f01301443e4277b4057661ad2d86368c21bc0c4",
+      "parents": [
+        "e0d2ab24edcf45e6e7226eea69e09fbce8ff73ab"
+      ],
+      "date": "2026-11-23T15:35:40Z",
+      "message": "Pass 12727 reserved: isocurvature bound for A's near-pi misalignment, dark-sector fifth force of B's coupled component, ternary QAT with a full-precision first layer (prose vs code), radiative brane kinetic terms, status refresh (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "e0d2ab24edcf45e6e7226eea69e09fbce8ff73ab",
+      "parents": [
+        "17c27b75001c45e5d5497f01cbf16d23d10eb560"
+      ],
+      "date": "2026-11-23T15:34:36Z",
+      "message": "Pass 12726: A rescued by pre-inflation misalignment at theta_i = 0.992 pi; mesogenesis supplies <= 86% of B' DM; O(1) brane kinetic terms repair the SO(10) orbifold; ternary hurts most in the first layer and compounds on code; data-driven summary page (build_toe_status.py)\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "17c27b75001c45e5d5497f01cbf16d23d10eb560",
+      "parents": [
+        "abfcddce58924063cca88280b1ba18cbd0e73010"
+      ],
+      "date": "2026-11-23T15:28:42Z",
+      "message": "Pass 12726 reserved: rescuing A by pre-inflation misalignment, B' second DM component vs mesogenesis, brane kinetic terms for the SO(10) orbifold, per-layer ternary sensitivity on code vs prose, data-driven summary page (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "abfcddce58924063cca88280b1ba18cbd0e73010",
+      "parents": [
+        "c2a583ece7ca7999a836cec1005e773381622a72"
+      ],
+      "date": "2026-11-23T15:20:28Z",
+      "message": "Pass 12725: partially coupled B' dark sector (20% second component, beta 0.3) fits DESI (chi2 3.0) with sigma8 unchanged; SO(10) orbifold KK thresholds overshoot at M_sR >= 10; FCC falsifier y' < 0.40; M_t = 172.80 leaves A's axion at 19% of DM (m_a ~ 230 ueV); ternary gap widens with width on code; y' floor appears new; summary page published\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "c2a583ece7ca7999a836cec1005e773381622a72",
+      "parents": [
+        "06f73e451f2eed89587a0fb6bad97058986bdbd7"
+      ],
+      "date": "2026-11-23T15:09:51Z",
+      "message": "Pass 12725 reserved: SO(10) orbifold KK thresholds, partially coupled two-component dark sector (DESI + S8), ternary scaling on a code corpus, FCC-era y' floor, shareable programme summary page (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "06f73e451f2eed89587a0fb6bad97058986bdbd7",
+      "parents": [
+        "dff7a57f5c3936108c8bb01168f898c3ef92bd04"
+      ],
+      "date": "2026-11-23T15:08:23Z",
+      "message": "Pass 12724: y' floor 0.40 (95% 0.35-0.47) -> robust falsifier y' < 0.35; DM-coupled quintessence raises sigma8 by 1-8% (corrects 12723's S8 claim); orbifold KK thresholds allow only M_sR ~ 10-15; psi <= 80% of B' DM; fixed-corpus ternary gap ~ width^-0.59\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "dff7a57f5c3936108c8bb01168f898c3ef92bd04",
+      "parents": [
+        "450256ba784f79a1287d0809ece7d228a2cd19ed"
+      ],
+      "date": "2026-11-23T14:59:37Z",
+      "message": "Pass 12724 reserved: B' two-component dark matter, Monte Carlo y' floor, orbifold KK thresholds, linear growth S8/fsigma8 with coupled quintessence, fixed-corpus ternary scaling points (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "450256ba784f79a1287d0809ece7d228a2cd19ed",
+      "parents": [
+        "1fb8d98ac4c09fccc2a7153825f22e874e90fc30"
+      ],
+      "date": "2026-11-23T14:56:56Z",
+      "message": "Pass 12723: DM-coupled quintessence fits DESI (chi2 2.0, phantom crossing) in static-radius B'; energy flows DM->DE so the dark baryon cannot be all DM, S8 eased; universal y' floor 0.41 falsifies the quartic-zero + VLQ class; ternary char-LM gap ~ width^-0.58 (0.31 bpc at d=96); Belle II covers 62-89% of B' by ~2042; mild flavour escape; orbifold DT window 10 < M*R < 100\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "1fb8d98ac4c09fccc2a7153825f22e874e90fc30",
+      "parents": [
+        "06fdefe691963d7401c2d8c4b7f9874d0edbffa5"
+      ],
+      "date": "2026-11-23T14:40:19Z",
+      "message": "Pass 12723 reserved: 126-type flavour escape for the light-triplet hybrid vs DESI, coupled quintessence and apparent phantom crossing in static-radius B', orbifold doublet-triplet splitting window, Belle II exclusion curve for B', width-96 ternary char-LM (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "06fdefe691963d7401c2d8c4b7f9874d0edbffa5",
+      "parents": [
+        "fc04b4e535f264913f9dc6493c62e2bb443aab5c"
+      ],
+      "date": "2026-11-23T14:16:13Z",
+      "message": "Pass 12722: light-5+5bar hybrid disfavoured (seesaw-induced triplet couplings + proton stability force sum m_nu >= 0.08 eV > DESI 0.064; y' moves onto B' at ~0.50); d-type triplet allowed at 1.74 TeV; thawing quintessence recovers dchi2 = 2.2 of DESI; ternary char-LM gap 0.43 bpc at d=64\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "fc04b4e535f264913f9dc6493c62e2bb443aab5c",
+      "parents": [
+        "d2f6481d8d11692c76bc9a78ce8b1d9b11d86915"
+      ],
+      "date": "2026-11-23T14:09:15Z",
+      "message": "Pass 12722 reserved: seesaw-induced couplings of the TeV pseudo-Goldstone triplets vs proton decay and DESI neutrino mass, VLB limits, wider ternary char-LM, y' with the light 5+5bar, thawing quintessence vs DESI DR2 (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "d2f6481d8d11692c76bc9a78ce8b1d9b11d86915",
+      "parents": [
+        "3a6477682cc69ba19cd942fea0957dd5eb88c0f2"
+      ],
+      "date": "2026-11-23T14:03:36Z",
+      "message": "Pass 12721: uncoupled accidental symmetry leaves Q+U + a complete vectorlike 5+5bar (Higgs doublets + triplets) that unifies (delta +0.25); a second 45' leaves (3,2)5/6 and fails (delta -2.15); TeV triplets need |y_qq y_ql| < 2e-25; ternary char-LM between binary and 2-bit (3.42 vs 2.97 bpc fp32); ions fail qutrit break-even; Casimir quintessence needs 2e-8 tuning at R <= 0.2 um; decision-table snapshot\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "3a6477682cc69ba19cd942fea0957dd5eb88c0f2",
+      "parents": [
+        "13e2f29cb84c9bc5e05f5a761ba04b83c250ea49"
+      ],
+      "date": "2026-11-23T13:55:12Z",
+      "message": "Pass 12721 reserved: second-45 Higgs splitting by Goldstone counting, ternary character-level LM on repo text, trapped-ion qudit fidelities, Casimir quintessence at R <= 0.2 um, dated decision-table snapshot (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "13e2f29cb84c9bc5e05f5a761ba04b83c250ea49",
+      "parents": [
+        "887ac8f3b8037bc02afb70035157c4ee79e555eb"
+      ],
+      "date": "2026-11-23T13:38:58Z",
+      "message": "Pass 12720: SO(10)_45 x U(16) leaves exactly Q+U + doublet pair + d^c triplets (explicit 16 spinor), but the HbarSigma^2H coupling lifts all of them; curriculum (2-bit warm start or annealed threshold) makes ternary transformers match fp32 on the hard seed with 45% zeros; SM vacuum 2.7-4.5 sigma from stability; qutrit codes need f < sqrt(log2 3)\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "887ac8f3b8037bc02afb70035157c4ee79e555eb",
+      "parents": [
+        "c57da62bcd816f8a050959234b502e4c22027f8e"
+      ],
+      "date": "2026-11-23T13:11:27Z",
+      "message": "Pass 12720 reserved: unified pseudo-Goldstone Higgs + Q+U (SO(10)_45 x U(16) with the H45^2H coupling, explicit 16 spinor), vacuum stability with new inputs and FCC timeline, dark-dimension DESI papers vs G variation, ternary curriculum, qutrit hardware error rates (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "c57da62bcd816f8a050959234b502e4c22027f8e",
+      "parents": [
+        "96175032d241a36b535ce76b4521507df6d56c74"
+      ],
+      "date": "2026-11-23T13:09:23Z",
+      "message": "Pass 12719: toponium-corrected M_t = 172.80 lowers mu0 to 2.5e10, P(stable) ~1e-3, y' -0.01 for B' and hybrid; DESI-rate radion violates lunar ranging 38x; Dimopoulos-Wilczek splitting conflicts with discrete Goldstone protection (no-go for all Z_N); gauge mediation keeps hybrid y' sharp; PGB quark decay regimes by Z10 dimension; qudit codes; harder ternary transformer test; novelty check vs Tavartkiladze 2018\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "96175032d241a36b535ce76b4521507df6d56c74",
+      "parents": [
+        "3a7e9cfd6baebada3698bbaf9c61f2ccaaa2efe5"
+      ],
+      "date": "2026-11-23T12:52:16Z",
+      "message": "Pass 12719 reserved: harder ternary transformer test, A-terms by mediation, pseudo-Goldstone quark decays and lifetimes, Dimopoulos-Wilczek doublet-triplet splitting with the Z10 table, qudit error-correction economy (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "3a7e9cfd6baebada3698bbaf9c61f2ccaaa2efe5",
+      "parents": [
+        "8f5d33027dc99eb3a1389dd62f018fb2c83efbfa"
+      ],
+      "date": "2026-11-23T12:50:47Z",
+      "message": "Pass 12718: 24 anomaly-free Z10 assignments make the hybrid consistent (quality to dim 11, BBN-safe PGB decay, no dim-5 proton decay); VL-squark mixing lowers hybrid y' by up to 0.037; optimal flash levels 8->4->3->2 with lifetime (ternary at ~3e4 cycles); 2-layer ternary transformer (numpy autodiff) trains but task saturates; programme decision table\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "8f5d33027dc99eb3a1389dd62f018fb2c83efbfa",
+      "parents": [
+        "426a94e753c379330f71d55df928335315ec6ddc"
+      ],
+      "date": "2026-11-23T12:42:11Z",
+      "message": "Pass 12718 reserved: 2-layer ternary transformer (numpy autodiff), vectorlike-squark threshold at M_SS, whole-hybrid Z10 charge table with anomaly and PGB-decay operator, flash endurance, programme decision table (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "426a94e753c379330f71d55df928335315ec6ddc",
+      "parents": [
+        "99242ba566b4f14a0b774e41686603db52fb51a2"
+      ],
+      "date": "2026-11-23T12:37:48Z",
+      "message": "Pass 12717: renormalisable 45+54 B-L vacuum (30 Goldstones, rest O(m)) fixes unification; brane separation protects SO(10) if 1/L <~ M*/31 (not in B's dark dimension); hybrid proton decay ~4e36 yr (no Hyper-K signal); flash: binary best per read, more levels per cell; ternary attention matches fp32 with 50% zeros, binary fails\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "99242ba566b4f14a0b774e41686603db52fb51a2",
+      "parents": [
+        "824562c4e36eb00323f052221ed2f2f784bad753"
+      ],
+      "date": "2026-11-23T12:35:30Z",
+      "message": "Pass 12717 reserved: brane-separated protection of the accidental SO(10), renormalisable 45+54 B-L vacuum, proton decay in the hybrid, multi-level flash with near-capacity codes, ternary attention block (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "824562c4e36eb00323f052221ed2f2f784bad753",
+      "parents": [
+        "b55b9cbbb9906bebb7323907994f0e17f7f514a4"
+      ],
+      "date": "2026-11-23T12:32:08Z",
+      "message": "Pass 12716: gauged-SO(10) GIFT leaves exactly Q+U (30+21-33 = 18); only Z10 with (HbarH)^5 protects it to dim 11; Planck-suppressed quartic spoils unification unless cutoff ~1e17; FCC odds ~45:1 hybrid vs B'; ternary crossbars and Hamming codes do not beat binary per op / per SNR\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "b55b9cbbb9906bebb7323907994f0e17f7f514a4",
+      "parents": [
+        "2ca693b1e3ddff5d681b4834bb7db96e60dfd326"
+      ],
+      "date": "2026-11-23T12:29:27Z",
+      "message": "Pass 12716 reserved: discrete-symmetry protection of the accidental SO(10) (charge search), gauged-SO(10) GIFT count, unification with the pseudo-Goldstone spectrum, ternary in-memory crossbar energy, FCC posterior odds, ternary vs binary Hamming codes (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "2ca693b1e3ddff5d681b4834bb7db96e60dfd326",
+      "parents": [
+        "3cccb110620d20dd6f39b1f01a57e97722f4ae18"
+      ],
+      "date": "2026-11-23T12:25:52Z",
+      "message": "Pass 12715: explicit SO(10)-invariant W realises pseudo-Goldstone Q+U (30 zero modes, 18 uneaten; Goldstone quality: no SO(10)-violating ops below dim 11); hybrid vs B' separate 2.3-6.5 sigma in (M_VL, y'); signed-digit ternary multiplier 6 carry-free levels vs 8+CPA binary; ternary NNs win below 0.073 pJ/bit memory energy\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "3cccb110620d20dd6f39b1f01a57e97722f4ae18",
+      "parents": [
+        "741cb30214c02fa198a98f7e25240ebc24df8b96"
+      ],
+      "date": "2026-11-23T12:24:20Z",
+      "message": "Pass 12715 reserved: explicit SO(10)-symmetric superpotential for pseudo-Goldstone Q+U (zero modes, Goldstone quality), hybrid vs B' in the (M_VL, y') plane at FCC-hh, signed-digit ternary multiplier depth, ternary NN energy with arithmetic (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "741cb30214c02fa198a98f7e25240ebc24df8b96",
+      "parents": [
+        "c04e322801af3561f46d0e21c18924aa63c08df4"
+      ],
+      "date": "2026-11-23T12:22:14Z",
+      "message": "Pass 12714: hybrid's light Q+U as pseudo-Goldstones of an accidental SO(10) broken along B-L (30 broken -> eaten (3,2)-5/6, uneaten exactly Q+U, no e^c); M_SS^2/M_GUT ~ 2.4 TeV explains the TeV scale and predicts a y'-M_VL correlation; inclusive Belle II covers 56-100% of B'; carry-free signed-digit ternary addition; mixed precision: bits only in the first layer\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "c04e322801af3561f46d0e21c18924aa63c08df4",
+      "parents": [
+        "4abb3ab205d8b42fa114a9af5725b43cd308a7bb"
+      ],
+      "date": "2026-11-23T12:11:29Z",
+      "message": "Pass 12714 reserved: pseudo-Goldstone light Q+U from an accidental SO(10) broken along B-L (GIFT-type), TeV scale as M_SS^2/M_GUT, signed-digit ternary adder, inclusive Belle II reach for B', per-layer mixed-precision ternary networks (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "4abb3ab205d8b42fa114a9af5725b43cd308a7bb",
+      "parents": [
+        "ec0f14616c8c4b49d4638f5d40536de9bb06ae14"
+      ],
+      "date": "2026-11-23T12:09:06Z",
+      "message": "Pass 12713: no missing-partner splitting via 24/75/200 leaves exactly Q+u^c light (Freudenthal engine; corrects 12712's GMPM reading); Belle II exclusive reach 1e-7 tests 17% of B' (1e-9 needed); ternary weights on the energy-accuracy front (48 pJ/weight memory-bound); balanced-ternary carry chains 3.5x shorter; FCC y' sizes the dark dimension to a factor ~3\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "ec0f14616c8c4b49d4638f5d40536de9bb06ae14",
+      "parents": [
+        "46872bb40b7660a30ca0c5561e1bebe7f9e4ff99"
+      ],
+      "date": "2026-11-23T12:04:17Z",
+      "message": "Pass 12713 reserved: end-to-end ternary inference energy, E6 embedding of the generalised missing partner, exclusive-fraction caveat for Belle II vs B', balanced-ternary carry chains, inverting an FCC y' into the dark-dimension size (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "46872bb40b7660a30ca0c5561e1bebe7f9e4ff99",
+      "parents": [
+        "10a2e8109861e5b62d6be02dc7f870153bfbe141"
+      ],
+      "date": "2026-11-23T12:02:54Z",
+      "message": "Pass 12712: binary beats ternary 2.5x in on-chip energy but PAM3 is the link optimum in a narrow band (GDDR7/USB4v2); exact RS spectrum puts warped-B'/hybrid degeneracy at kL=6.46; Belle II at 1e-7 tests all of B'; ternary QAT between binary and 2-bit with 44% zeros; missing-partner candidate for light Q+U\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "10a2e8109861e5b62d6be02dc7f870153bfbe141",
+      "parents": [
+        "3d3960de484d85dea32ba4682544343aad3ce51f"
+      ],
+      "date": "2026-11-23T12:00:27Z",
+      "message": "Pass 12712 reserved: energy per bit for binary/ternary/PAM links, light Q+U mechanisms in E6 (literature + structure), exact RS graviton spectrum for the warped B', Belle II + FCC forecast for B', quantisation-aware ternary training (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "3d3960de484d85dea32ba4682544343aad3ce51f",
+      "parents": [
+        "63eebe841b2773b2cc4dff7bf3ea9ed522b8c70b"
+      ],
+      "date": "2026-11-23T11:57:56Z",
+      "message": "Pass 12711 (exploration): ternary beats binary only above swing/noise ~9 and when cost scales with levels; device-dominated cost favours 4-8 levels; ternary NN weights win by 46% zeros (multiplication-free), not by SQNR per bit (+0.15-0.3 dB)\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "63eebe841b2773b2cc4dff7bf3ea9ed522b8c70b",
+      "parents": [
+        "fb1e6355ca56b51f1ff73b7a695ce1f6db9b7d48"
+      ],
+      "date": "2026-11-23T11:56:52Z",
+      "message": "Pass 12711 reserved: exploration - when does ternary beat binary? radix economy with noise (PAM-r capacity per cost vs SNR) and ternary vs binary weight quantization per bit (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "fb1e6355ca56b51f1ff73b7a695ce1f6db9b7d48",
+      "parents": [
+        "cd18800cf4be9bbf15c952d3b6c827d1102d14db"
+      ],
+      "date": "2026-11-23T11:56:13Z",
+      "message": "Pass 12710: B' dark dimension >=1e8 below lab-gravity reach; B' y' needs mediator portal |lambda_HY| <~ 0.04; warped throat makes B' degenerate with the hybrid (kL~7, UV brane); hybrid evidence 0.1-0.75 with a symmetry, ~1e-27 tuned; flag face-pairings of W33 tetrahedra never give a 3-manifold\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "cd18800cf4be9bbf15c952d3b6c827d1102d14db",
+      "parents": [
+        "1000c199d04879821fbbe3d030c8c01d8994833b"
+      ],
+      "date": "2026-11-23T11:51:35Z",
+      "message": "Pass 12710 reserved: Casimir-range gravity vs B', B' mesogenesis mediator and its Higgs portal, hybrid in the evidence table, warped-throat species scale, face-pairing W33 tetrahedra into a closed 3-manifold (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "1000c199d04879821fbbe3d030c8c01d8994833b",
+      "parents": [
+        "1377e7534ca21e60cd6051e57ebfc257ff1d72d0"
+      ],
+      "date": "2026-11-23T11:48:42Z",
+      "message": "Pass 12709: B' survives via Dark_CP mesogenesis (A_CP Br >~ 0.5-1.4e-7, Belle II testable; corrects 12708's 1e-4); W33 tetrahedral complex uniformly curved (Banchoff -2, not a pseudomanifold); stability needs M_t <= 170.98, P(stable) ~1% today, FCC-ee 18 sigma; evidence update: no preference over SM\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "1377e7534ca21e60cd6051e57ebfc257ff1d72d0",
+      "parents": [
+        "9b3431001d72013e17727a7c381d985ab8686384"
+      ],
+      "date": "2026-11-23T11:46:29Z",
+      "message": "Pass 12709 reserved: B' vs Belle B->Lambda+missing and Dark_CP mesogenesis, discrete curvature of the W33 tetrahedral complex, warped-cascade status, FCC-ee vacuum-stability forecast, Bayesian evidence update of 12698 (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "9b3431001d72013e17727a7c381d985ab8686384",
+      "parents": [
+        "1133125199aa6709b050dd55cafbb06fff62fdb4"
+      ],
+      "date": "2026-11-23T11:42:57Z",
+      "message": "Pass 12708: d-wave KK-graviton suppression reproduced (Gamma ~ p^5) behind B's revision; MS-bar top mass leaves vacuum stability open (mu0 4.8e8..stable); M_VL threshold confirmed (numeric CW, PV 1/3); ATLAS kappa = sqrt2 sin theta_L by width consistency; B' untested; ternary radix/simplex note with W33 clique complex Betti (1,81,0,0) cited to BT545-551\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "1133125199aa6709b050dd55cafbb06fff62fdb4",
+      "parents": [
+        "24bbc48fb05e68ef20f60733cc7f58c200262441"
+      ],
+      "date": "2026-11-23T11:39:33Z",
+      "message": "Pass 12708 reserved: d-wave KK-graviton threshold check, MS-bar top-mass route, threshold cross-checks (PV, numeric CW, gauge), kappa-width consistency for single T, B-mesogenesis status for B' (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "24bbc48fb05e68ef20f60733cc7f58c200262441",
+      "parents": [
+        "7aa75ef3f3e82bf628b910cfe02a0c2089bf5b2d"
+      ],
+      "date": "2026-11-23T11:30:53Z",
+      "message": "Pass 12707: dark-graviton DM excluded in a flat dark dimension (2610.01825) moves B to R 0.009-0.2 um and y' = 0.488-0.505 (gap to hybrid 0.018-0.035, FCC 3-15 sigma); one-loop M_VL threshold (CW + field renormalisation) adds +0.006-0.009 to y'; top-mass scheme widens mu0 to 1e10-4e11; single-T does not beat 1.74 TeV; MeV reheating fits B-mesogenesis (B'); shared input card\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "7aa75ef3f3e82bf628b910cfe02a0c2089bf5b2d",
+      "parents": [
+        "3b390e1fd1486c048490dc72186202613dc4c1c8"
+      ],
+      "date": "2026-11-23T11:30:38Z",
+      "message": "Pass 12707 reserved: fresh-input audit (shared input card, top-mass scheme, one-loop M_VL threshold), B after the dark-graviton exclusion (2610.01825), single-T vs B, MeV reheating and B-mesogenesis (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "3b390e1fd1486c048490dc72186202613dc4c1c8",
+      "parents": [
+        "cca3a43175aa785e1d09dacb684bc21f60c737d9"
+      ],
+      "date": "2026-11-23T10:26:05Z",
+      "message": "Pass 12706 reserved: E6 650+78 full mass matrix (Goldstones and leftover light states), SO(10) 45+210+54 lifting the octet+triplet, MFV-leptogenesis predictions for A (phases, 0nubb), three-scenario decision table with FCC, summary page update (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "cca3a43175aa785e1d09dacb684bc21f60c737d9",
+      "parents": [
+        "5afb4f0786e8a4c92fd9360b03c87b5edc145bca"
+      ],
+      "date": "2026-11-23T01:19:48Z",
+      "message": "Pass 12705: real E6 from the cubic norm: a 650 alone never leaves only Q+U light, 650+78 (non-psi) does; SO(10) 45+210 leftovers are a massless (8,1,0)+(1,3,0) that spoils unification unless lifted to >~1e16; MFV tree splitting makes A's leptogenesis work (7-9%); verified dark-graviton bound gives B y' 0.522-0.530\n\nClaude track. e6 computed as the 78-dimensional derivation algebra of N = detA+detB+detC-tr(ABC). The 17 SM-invariant 27b.27 operators split as 1+5+11. Both 650 cubic invariants and the 78.78.650 and 650.650.78 couplings are included. Unbroken dims 46/38/24/22 match Babu-Bajc-Susic.\nSO(10): the full 255-field gradient vanishes and the Hessian matches finite differences; the extra zero modes are identified from Cartan weights.\nCorrects Pass 12704: the dark-graviton bound is eq. (4.14) of 2307.11048, verified verbatim from the PDF.\nAdds a cross-track addendum for 12702-12705 and request question 5.\nPrior art cited: Cirigliano-Isidori-Porretti hep-ph/0607068, Branco et al. hep-ph/0609067, Babu-Bajc-Susic 2305.16398. The data JSON was force-added with shell git; the commit itself goes through GitKraken.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "5afb4f0786e8a4c92fd9360b03c87b5edc145bca",
+      "parents": [
+        "2c60ef76a2494135176c3eb7ee4159b63523b380"
+      ],
+      "date": "2026-11-23T00:30:23Z",
+      "message": "Pass 12705 reserved: E6 650+78 vacua from the cubic norm (light Q+U test), SO(10) 45+210 vacuum mass matrix, MFV tree splitting for A's N, dark-graviton bounds verified from the paper, cross-track summary 12699-12704 (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "2c60ef76a2494135176c3eb7ee4159b63523b380",
+      "parents": [
+        "28c0435b29d8fc09aaf701dc125569a3c9663fe9"
+      ],
+      "date": "2026-11-23T00:17:48Z",
+      "message": "Pass 12704: SO(10) 45+210 vacua leave exactly Q+U light (a 210 alone never does); A's leptogenesis works for O(2) breaking 1e-12 < dM/M < 1e-5 or tan beta >= 1.6-3 with tau PQ charge; dark-graviton DM narrows B to y' 0.51-0.53; FCC separates B from the hybrid at 4-10 sigma for M_SS >= 3e9-3e10\n\nClaude track. Explicit Gamma-matrix SO(10): 210 has 3 SM singlets and 45 has 2; the invariants reproduce the minimal-SO(10) form. All six 210-only vacua fail to isolate Q+U; real 45+210 vacua (p, a, <45> along T3R) give Q=U=0 with d^c, L, e^c, nu^c heavy. In E6 this would need a non-psi 78 VEV or a second 650.\nCorrects Pass 12701: A needs dM/M <~ 1e-5, not 1e-4-1e-3.\nPrior art cited: Pass 12696 (b+tau E/N 8/3), Gonzalo-Montero-Obied-Vafa 2209.09249, Law-Smith-Obied-Prabhu-Vafa 2307.11048. The data JSON was force-added with shell git; the commit itself goes through GitKraken.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "28c0435b29d8fc09aaf701dc125569a3c9663fe9",
+      "parents": [
+        "ef88f7c2a7e85c643c010510e6562e664150bde2"
+      ],
+      "date": "2026-11-23T00:07:09Z",
+      "message": "Pass 12704 reserved: SO(10) 210 vacua and a light Q+U, tau on the enhanced doublet for A (tan beta, E/N), tree-level N splitting window, dark-dimension graviton DM for B, FCC-ee+hh forecast (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "ef88f7c2a7e85c643c010510e6562e664150bde2",
+      "parents": [
+        "84a2f030550effe835af76f5d579bbf31a3acb57"
+      ],
+      "date": "2026-11-22T23:29:13Z",
+      "message": "Pass 12703: a light Q+U needs the SU(5) 75 inside the E6 650 (acts as (1,-1,-3); regular 650 vacua do not unify); two-loop VL terms move y' by +0.002 (PyR@TE 3); B and the hybrid overlap in y' unless M_SS >~ 3e9; radiative-only O(2) leptogenesis for A gives eta_B <= 1.8e-10 (needs y_tau >= 1.8x SM); a790aef review\n\nClaude track. Corrects two Pass 12702 claims: (a) the >5 sigma y' separation of B and the hybrid holds only for M_SS >~ 3e9 GeV; (b) radiative splitting fixes the effective CP phase at O(y_tau^2 ln/16pi^2), so A's leptogenesis falls short by 3.4x with the SM tau Yukawa.\nPrior art cited: Babu-Bajc-Susic 2305.16398, PyR@TE 3 (2007.12700), Gonzalez Felipe-Joaquim-Nobre hep-ph/0311029, Eot-Wash 2002.11761. The data JSON was force-added with shell git (gitignored); the commit itself goes through GitKraken.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "84a2f030550effe835af76f5d579bbf31a3acb57",
+      "parents": [
+        "54202383a68f2d8b62f86981bd4355e2d8b20105"
+      ],
+      "date": "2026-11-22T23:11:52Z",
+      "message": "Pass 12703 reserved: E6 650 singlet VEVs for a light Q+U, two-loop vectorlike terms in lambda, SO(2) flavour model for A's degenerate N, short-range gravity vs B, review of a790aef (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "54202383a68f2d8b62f86981bd4355e2d8b20105",
+      "parents": [
+        "cc4b01327c89ca8ebe7db150cf6cad55e00800e5",
+        "a790aef2cd0c79da81c0b1f2e0c37a657575c597"
+      ],
+      "date": "2026-11-22T20:32:41Z",
+      "message": "Merge remote-tracking branch 'origin-https/master' into HEAD"
+    },
+    {
+      "sha": "cc4b01327c89ca8ebe7db150cf6cad55e00800e5",
+      "parents": [
+        "e9b0aee9b95be0096f7487ce99d0dbe534c159e7"
+      ],
+      "date": "2026-11-22T20:32:32Z",
+      "message": "Pass 12702: E6-SUSY + top-partner hybrid survives two loops (delta +0.26, y' = 0.46 +- 0.02 at 1.74 TeV vs B's 0.51), tau_p ~1e37 so no proton decay at Hyper-K; renormalizable 27bar.27.(1+78) masses cannot make Q+U light without e^c (needs a 650); radiative splitting puts A's degenerate N at Delta M/Gamma ~ ln(Lambda/M)/pi\n\n(1)+(4) two-loop Weyl-fermion B_ij formula validated against SM B_ij; VL Q+U at 1-10 TeV: y' 0.478-0.423 for mu_0 = 1e10, delta +0.33..+0.04, M12 2.8-4.6e16; y' band at 1.74 TeV: 0.439-0.496 over mu_0 1e9-1e11, +-0.015 from Mt, +-0.016 from alpha_s. (2) rows (1,Y,chi,psi) of Q, u^c, e^c rank 2: Q = u^c = 0 forces m(e^c) = 0 (sympy); 17 SM-invariant 27bar.27 masses vs <= 6 from 1+78; other track's F/D-flat branch (7af60ca6b) along U(1)_psi gives complete SO(10) multiplets. (3) Delta M/Gamma 2.9/6.7/8.3 for Lambda = f_a/M_GUT/M_Pl, sin phi ~1e-5-1e-4; pseudo-Dirac degeneracy raises Vissani by M/Delta M. (5) d=5 K+ nubar suppressed ~1e14. Request note updated with question 4. GitKraken MCP commit; push via shell (detached worktree).\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "a790aef2cd0c79da81c0b1f2e0c37a657575c597",
+      "parents": [
+        "e9b0aee9b95be0096f7487ce99d0dbe534c159e7"
+      ],
+      "date": "2026-11-22T20:30:31Z",
+      "message": "Execute five TOE fronts: H27 9D correctable code, renormalizable mediator vacuum, 4-layer W33 Hasse, minimal16 optical orbit and compiler controls"
+    },
+    {
+      "sha": "e9b0aee9b95be0096f7487ce99d0dbe534c159e7",
+      "parents": [
+        "7af60ca6b817331b2a73a5a952b72e45e2af6edc"
+      ],
+      "date": "2026-11-22T20:29:25Z",
+      "message": "Pass 12702 reserved: two-loop hybrid (E6-SUSY + vectorlike top partner) unification and y-prime map, E6 Cartan obstruction for a light Q+U, radiative-resonant leptogenesis for A, LHC-compatible top-partner masses, proton decay channels (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "7af60ca6b817331b2a73a5a952b72e45e2af6edc",
+      "parents": [
+        "6d687a9bf8245ae96e0ab571391cc2fee4625447"
+      ],
+      "date": "2026-11-22T19:46:21Z",
+      "message": "Prove optimal 16-effect Witting MIC and sharp 80-edge W33 Hasse cut; test E6 twirl, flat moduli and beam compiler"
+    },
+    {
+      "sha": "6d687a9bf8245ae96e0ab571391cc2fee4625447",
+      "parents": [
+        "3e5cd5b1c60742840be1fe20438d45af5d3653c3"
+      ],
+      "date": "2026-11-22T19:42:20Z",
+      "message": "Pass 12701: A natural with quasi-degenerate N at 1.2e7 GeV (dM/M ~1e-4, Delta 10); split-SUSY ceiling 5e7 GeV (Giudice-Romanino RGEs); TeV vectorlike Q+U (B's top-partner content) restores MSSM-level unification for high-scale SUSY and keeps the quartic zero at 1e10 for y' = 0.48; two-loop unification + tau_p; corrects 12700 two-loop sign\n\n(1) eps needed vs Davidson-Ibarra: enhancement 1e3-1e4 at M = 1.24e7 (Vissani Delta = 10). (2) split one-loop RGEs (hep-ph/0406088 eqs 56-60, 68; lambda_ours = lambda_GR/2, SM limit checked) on two-loop SM: tan beta 2.89/1.96/1.46 at 1e5/1e6/1e7, none >= 1e8; ceiling 1e7.71. (3) 197 incomplete E6-piece spectra with M_GUT > 3e15: best one-loop delta -0.68 (Q+U at 1 TeV, M_GUT 1.7e16); other track's fd9c87e47 16/10 states are complete SU(5) multiplets and cannot repair; Q+U keeps lambda > 0 to M_Pl for y' <= 0.4, zero at 1e10 for y' = 0.478. (4) two-loop (B_ij, d_u from hep-ph/0406088): SM -4.92, MSSM +0.16, high-scale -3.40, split -0.58; tau_p 2e35 (MSSM), 1.5e35 (split). Corrects Pass 12700: two-loop MSSM shift is +0.8 (note, script string and certificate note fixed). Cross-track summary addendum 12699-12701. GitKraken MCP commit; push via shell (detached worktree).\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "3e5cd5b1c60742840be1fe20438d45af5d3653c3",
+      "parents": [
+        "686ca4d6d5b98ad645e249363a837582ab71bcf6",
+        "fd9c87e472ae84bff3019210470474c07f95cf11"
+      ],
+      "date": "2026-11-22T19:36:57Z",
+      "message": "Merge remote-tracking branch 'origin-https/master' into HEAD"
+    },
+    {
+      "sha": "686ca4d6d5b98ad645e249363a837582ab71bcf6",
+      "parents": [
+        "b53e7c94b48d16be1ebd1d0056bc0903ce15e307"
+      ],
+      "date": "2026-11-22T19:36:38Z",
+      "message": "Pass 12701 reserved: split-SUSY tan beta bridge (Giudice-Romanino RGEs), leptogenesis options for A under the Vissani bound, E6 incomplete-multiplet unification repair, two-loop unification + proton lifetime, cross-track summary v2 (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "fd9c87e472ae84bff3019210470474c07f95cf11",
+      "parents": [
+        "b53e7c94b48d16be1ebd1d0056bc0903ce15e307"
+      ],
+      "date": "2026-11-22T18:43:05Z",
+      "message": "Prove Witting 18/19-effect IC POVMs, exact E6 grade leakage and spinor barrier; benchmark 153M gates and Lorentzian nulls"
+    },
+    {
+      "sha": "b53e7c94b48d16be1ebd1d0056bc0903ce15e307",
+      "parents": [
+        "2be4f3f40ef9f441db723ce33fb05763b8aa70c3"
+      ],
+      "date": "2026-11-22T18:38:45Z",
+      "message": "Pass 12700: stop mixing lowers the E6-SUSY ceiling (5.4e10 at Xt=0, 2e8 at maximal; 1.7e11 at -1 sigma Mt); A's boundedness set by 2HDM quartics alone (240/240); SUSY at 1e10 does not unify (delta a3^-1 = -4.1); naturalness ledger: A with thermal leptogenesis Delta >= 7e5 (Vissani), B ~4\n\n(1) Delta_lambda_stop = 3 yt^4/(8 pi^2)[Xt^2 - Xt^4/12] >= 0 for Xt^2 <= 12, so mixing lowers the M_SS ceiling; tan beta 1.26 at 1e10 reproduced; consistent with published high-scale MSSM bound ~1e11. (2) 240-point scan of V4(H1,H2,sigma): numeric BFB on the 10-sphere agrees with analytic 2HDM conditions everywhere; Delta_H2 = 10 at m_H2 = 6.4 TeV, 2.4e9 at Pass 12699's 1e8 point. (3) one loop: MSSM 1 TeV -0.62, high-scale SUSY 1e10 -4.10, split -1.17. (4) Vissani delta mu^2 = m_nu M^3/(4 pi^2 v^2): M_N = 5e8 -> Delta 6.7e5; B's VL top partner 3.8. PQ quality cited from PASS12603_12608, not re-derived. Other track silent since 12699. GitKraken MCP commit; push via shell (detached worktree).\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "2be4f3f40ef9f441db723ce33fb05763b8aa70c3",
+      "parents": [
+        "f981bf890b431e9296f6c81ca892eced9880e880"
+      ],
+      "date": "2026-11-22T18:25:16Z",
+      "message": "Pass 12700 reserved: threshold-corrected tan beta bridge, completion A 2HDM+sigma stability/tuning scan, gauge unification with SUSY at 1e10 GeV, fresh direction, summary refresh (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "f981bf890b431e9296f6c81ca892eced9880e880",
+      "parents": [
+        "6e9f44a5b2367a9b63d6f4dfc7bf9c8680f2eda5"
+      ],
+      "date": "2026-11-22T16:26:45Z",
+      "message": "Pass 12699: neither completion explains Belle II K nu nu or 95 GeV hints; A's DFSZ-type potential consistent (bounded below, m_H2 ~1e8 GeV); B soft-lepton toy MC 82% acceptance at pT>7; DFSZ-reach haloscopes cover A's b-only axion 8x faster; E6-SUSY bridge: M_SS < 5e10 GeV with tan beta 1.1-1.5; request note to other track\n\n(1) B->K a needs f_a/C_bs ~2.1e8 GeV (QCD axion excluded), A gives 1e-13; no 95 GeV state in A or B. (2) explicit couplings: quartic min on sphere 1e-10 > 0, m_H2 1e8 GeV, induced v2 5e-5 GeV. (3) toy MC with CT18NNLO threshold weights, Michel W* leptons boosted: median pT 13.5 GeV; acceptance 0.89/0.82/0.67/0.43 at pT>5/7/10/15. (4) b-only scan time 0.13x DFSZ. (5) tree-level lambda(M_SS) = (g^2+g'^2)/8 cos^2 2beta: tan beta 1.47 (1e9), 1.26 (1e10), 1.13 (1e10.5), none >= 1e11. REQUEST_E6_INTERMEDIATE_SCALE_SUSY.md poses doublet/tan beta questions to the E6 track. GitKraken MCP commit; push via shell (detached worktree).\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "6e9f44a5b2367a9b63d6f4dfc7bf9c8680f2eda5",
+      "parents": [
+        "a2c311090a1319c3c3fdf5a378e665fa167ba843"
+      ],
+      "date": "2026-11-22T16:24:44Z",
+      "message": "Pass 12699 reserved: anomaly scout vs A/B, A's DFSZ-type potential, toy MC soft-lepton acceptance for B, haloscope forecast for A, E6-SUSY high-scale tan beta bridge (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "a2c311090a1319c3c3fdf5a378e665fa167ba843",
+      "parents": [
+        "4b472f43dfc6824064d0f2e942e34de03fb71320"
+      ],
+      "date": "2026-11-22T16:10:14Z",
+      "message": "Pass 12698: evidence with explanatory credit is prior-driven (boundary 0.2-1.7, A 0.04-0.33, B ~0.01-0.1 after trials) - no robust preference over the SM; MeV ALP freeze-in falls 400-2000x short; long-lived triplet excluded to ~1.9 TeV; lattice Delta_R^V halves the Cabibbo gap (1.3 sigma) but needs 8x more; cross-track summary 12684-12698\n\n(1) numerical evidences with explicit priors: raw B vs SM boundary 13.5, A 2.6 (4.8 P-ACT), B 0.10; dy'/dm_t = -0.038/GeV from three runs; with SM m_t prior 15/5/2 GeV and 8-scale trials: boundary 1.7/0.56/0.23, A 0.33/0.11/0.04. (2) Primakoff freeze-in zeta ~1e-9 GeV vs 1.7e-6 needed. (3) stop-like R-hadron 1.34 TeV + ln(21)/slope = +561 GeV -> 1.9 TeV (fermion/scalar ratio 7 assumed). (4) lattice Delta_R^V 0.02439(18) -> V_ud 0.97386, gap 1.3 sigma, needs -0.0015 more (8x unc). Sources: Ma et al 2308.16755, ALP triangle literature. GitKraken MCP commit; push via shell (detached worktree).\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "4b472f43dfc6824064d0f2e942e34de03fb71320",
+      "parents": [
+        "a28dd1b094f87c069aeb09a8dde9cd9941c5f31c"
+      ],
+      "date": "2026-11-22T16:08:45Z",
+      "message": "Exact 153M fourth-stage Witting gates; construct 81-to-132 E6/H27 bridge, lift ten-plet Higgs masses, reject causal kinetic gap and synthesize 20/30/39 optical POVMs"
+    },
+    {
+      "sha": "a28dd1b094f87c069aeb09a8dde9cd9941c5f31c",
+      "parents": [
+        "0bd8c3d4b4535ebd054a059b86c46706c7f95c47"
+      ],
+      "date": "2026-11-22T16:06:31Z",
+      "message": "Pass 12698 reserved: Bayesian evidence with explanatory credit, MeV ALP gap, long-lived triplet limits, Delta_R^V vs Cabibbo gap, cross-track summary of 12684-12698 (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "0bd8c3d4b4535ebd054a059b86c46706c7f95c47",
+      "parents": [
+        "7939d654de51c306fb54779b7716f25615427d64"
+      ],
+      "date": "2026-11-22T15:56:26Z",
+      "message": "Pass 12697: A's PQ doublet decouples (m_H2 ~ sqrt(lambda) f_a, DFSZ tuning); EW precision allows theta_t < 0.18, theta_b < 0.06 so B's decay regime is unconstrained; no clean keV-particle candidate; Cabibbo gap needs Ft -6.0 s = 14x new ab initio delta_NS error; BIC Bayes factors B 0.38, A 0.14, Planck 0.06, SMASH 0.03\n\n(1) m_H2 1e5-1e9 GeV for lambda 1e-12..1e-4; anomaly coefficients unchanged; tuning (125/m_H2)^2. (2) Delta T ~ T_SM theta^2 (2 ln r - 2): theta_t max 0.18 at 1.74 TeV; Zbb theta_b max 0.06; cascade boundary 1.1e-4 inside. (3) MeV ALP g 4e-10..3e-9 GeV^-1 (SN1987A/BBN triangle); modulus 1.6 TeV, gravitino 3.1 TeV (hadronic, excluded). (4) V_ud 0+ 0.97361(30) vs neutron 0.97456(44): 1.8 sigma, Ft -0.195% (-6.0 s) vs delta_NS(10C) -0.422(14)% (Gennari PRL 2025). (5) BIC n=7. Sources: 2405.19281, 2405.18464, 2511.05446. GitKraken MCP commit; push via shell (detached worktree).\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "7939d654de51c306fb54779b7716f25615427d64",
+      "parents": [
+        "c4be9ca26c4f54ed44741e30334d5926f4796f2a"
+      ],
+      "date": "2026-11-22T15:54:18Z",
+      "message": "Pass 12697 reserved: A's PQ doublet decoupling, B mixing vs T and Zbb, keV-particle candidates, superallowed corrections, combined Bayes-factor ranking (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "c4be9ca26c4f54ed44741e30334d5926f4796f2a",
+      "parents": [
+        "a314470b5132746fb922f9a4088dfcf16c841adc"
+      ],
+      "date": "2026-11-22T15:41:39Z",
+      "message": "Pass 12696: PQ charge scan - b-only third-family charge gives A a flavour-safe, N_DW=1, visible axion (E/N 2/3, g 0.65 KSVZ); FCC-hh measures B's y' to +-0.001-0.003; keV-window particle needs tau 1e3-5e4 s, zeta ~1e-6 GeV; Cabibbo anomaly needs Ft -5.2 s (2.8 sigma); status ledger\n\n(1) scan of integer charges [-2,2] on x_u, x_d, x_e (light families neutral) + optional KSVZ quark: 460 N_DW=1, 352 third-family with g >= 0.5 KSVZ; b-only E/N 2/3 g 0.65; b,tau opposite E/N -4/3 g 1.69; b,tau same 8/3 g 0.39 (anomaly bookkeeping; 2HDM consistency unchecked). (2) 2.4 pb x 30/ab x eps, 5% resolution: delta y' 0.0026 (eps 1e-3), 0.0008 (1e-2). (3) t = 1.32 s (MeV/T)^2: 1.5e3-4.7e4 s; rho_X/rho_gamma 0.064; zeta_X 0.9-5e-6 GeV. (4) Ft 3072.24(1.85) -> -5.2 s. Summary page v3 updated. GitKraken MCP commit; push via shell (detached worktree).\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "a314470b5132746fb922f9a4088dfcf16c841adc",
+      "parents": [
+        "d1770a85630102e85577631608e8a42fe06a7d49"
+      ],
+      "date": "2026-11-22T15:41:13Z",
+      "message": "Prove Witting 3-stage 7.79M gate count, Hesse SIC/MUB minimal 30-effect POVM; falsify E6 81D bridge and audit Higgs, causal and photonic resources"
+    },
+    {
+      "sha": "d1770a85630102e85577631608e8a42fe06a7d49",
+      "parents": [
+        "20a54b5bf940c02ba18da2b8c1cf6e3757650065"
+      ],
+      "date": "2026-11-22T15:39:48Z",
+      "message": "Pass 12696 reserved: PQ charge scan (flavour-safe, N_DW=1, visible), FCC-hh y prime precision, keV-window decaying particle, superallowed Ft shift, summary page update (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "20a54b5bf940c02ba18da2b8c1cf6e3757650065",
+      "parents": [
+        "c720f295dd64a309ee9b471fe79c4b50c8583e06"
+      ],
+      "date": "2026-11-22T15:38:08Z",
+      "message": "Pass 12695: A's PQ-neutral light flavon needs v_F >~ 1.8 TeV (eps_K); HL-LHC can only exclude B to ~2.1 TeV (discovery 1.69 < limit 1.74); third-family axion E/N = 5/3, g_agg 0.13x KSVZ (3300x haloscope time), N_DW = 2; keV entropy window explains CMB N_eff only; neutron V_ud satisfies CKM unitarity, Cabibbo anomaly is superallowed-only\n\n(1) (d s)^2 ~ m_d m_s/v_F^4 vs Lambda 1.6e5 TeV -> v_F > 1.8 TeV. (2) CMS projections 1.85 TeV excl / 1.44 TeV disc + 202 GeV cascade shift: M_VL excl ~2.10, disc ~1.69 TeV; Michel soft-lepton E>5 GeV 98%. (3) E/N: t,b only 5/3 (g ratio 0.13, time x3300, N_DW 2); t,b,tau 8/3 (0.39, x44). (4) window T 5.3-30 keV; D/H pull at F 1.048: PRIMAT +5.8, PArthENoPE +1.9 sigma. (5) N_eff 2.85 -> SO 3.9 sigma, S4 6.5 sigma. (6) |V_ud|^2 tau_n(1+3gA^2) = 4908.6 s: bottle+PERKEO V_ud 0.97456(44), unitarity -0.5 (Kl3) / +0.6 (Kmu2); beam -5.1 sigma; superallowed+Kl3 -3.1 sigma. Sources: CMS FTR-22-002, FTR-16-005. GitKraken MCP commit; push via shell (detached worktree).\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "c720f295dd64a309ee9b471fe79c4b50c8583e06",
+      "parents": [
+        "21ffcd146e76840886f35ef332a009aba55de158"
+      ],
+      "date": "2026-11-22T15:35:17Z",
+      "message": "Pass 12695 reserved: light-flavon K-mixing bound, HL-LHC triplet reach and soft-lepton spectrum, third-family axion E/N and N_DW, keV entropy window, N_eff forecasts, V_ud from neutron decay and CKM unitarity (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "21ffcd146e76840886f35ef332a009aba55de158",
+      "parents": [
+        "75ee39e90627f9f533a9c30f52c990915a8288e7"
+      ],
+      "date": "2026-11-22T15:28:51Z",
+      "message": "Pass 12694: third-generation PQ charges make A's flavour NA62/Belle II-safe; B triplet soft-lepton tag (34% of pairs); deuterium tension is PRIMAT-vs-PArthENoPE (1.85 vs 0.15 sigma); PKS 0605-085 coincidence 27% chance; robust helium mixture keeps N_eff ~2.85; W mass without CDF 80363.6+-7.5 (+0.8 sigma vs SM), CDF 5.8 sigma outlier\n\n(1) C_sd ~ V_td V_ts 3.6e-4 -> BR(K->pi a) 4.5e-16; C_bs ~ 0.041 -> BR(B->K a) 1.3e-13 at f_a 1e11. (2) P(>=1 soft lepton) BB 0.39, T'T' 0.63 -> 0.34 overall, ~4400 HL-LHC pairs. (3) D/H PRIMAT 2.439(37) +1.85 sigma, PArthENoPE 2.51(11) +0.15 vs Cooke 2.527(30). (4) 4FGL density x 0.1 duty: P(flaring within 2.4 deg) 0.27, 1.5 deg 0.12. (5) Gaussian-outlier mixture (tau 0.01, P_out 0.1-0.2): Y_p 0.2441-0.2442, N_eff 2.84-2.85 +- 0.14-0.16; EMPRESS outlier prob 0.26-0.42. (6) W mass six measurements chi2 34.5/5; without CDF 80363.6+-7.5 chi2 0.6/4, +0.8 sigma vs SM 80356+-6; CDF +5.8 sigma vs rest. Sources: Dzhatdoev 2502.11434, KM3NeT ICRC 2025 candidate list. GitKraken MCP commit; push via shell (detached worktree).\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "75ee39e90627f9f533a9c30f52c990915a8288e7",
+      "parents": [
+        "f194456adcee9fabc3cf524d261efdf7a14579cd"
+      ],
+      "date": "2026-11-22T15:26:39Z",
+      "message": "Pass 12694 reserved: third-generation PQ flavour for A, soft-lepton tags for B triplet, deuterium nuclear-rate sets, KM3NeT source candidates, helium mixture model, W mass without CDF (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "f194456adcee9fabc3cf524d261efdf7a14579cd",
+      "parents": [
+        "d139268f37328a800c848ffcb528ea11d9f6440b"
+      ],
+      "date": "2026-11-22T15:18:50Z",
+      "message": "Pass 12693: low-N_eff hint has no surviving simple mechanism (post-BBN entropy +5.8 sigma in D/H, low T_RH raises Y_p, xi_e fixes helium only); triplet cascades raise B's limit to M_VL > 1.74 TeV; no simple FN assignment passes flavour + NA62 (A needs a separate flavour sector); KM3NeT-only flux cannot be cosmogenic; EMPRESS -2.25 sigma outlier, ACT+He N_eff 2.85+-0.10\n\n(1) F=(3.044/N_eff)^(3/4)=1.048, D/H 2.26e-5 vs Cooke 2.527(30) -> +5.8 sigma; low reheating raises Y_p (2501.01369, T_RH>5.96 MeV, N_eff>2.98); xi_e~0.014 for helium, dN_eff 1e-4. (2) 3x rate with sigma slope 1.72/100 GeV -> +202 GeV: lightest T > 1.69 TeV, M_VL > 1.74 TeV; long-lived only for mixing < 1.1e-8. (3) C_sd ~ (1/2)|dXQ eps^dXQ + dXd eps^dXd|: only (1,1) fits V_us and m_d/m_s, C_sd 0.22 > 0.09. (4) cosmogenic f_p: joint flux 0.075-0.75, KM3NeT-only 5.8-58. (5) chi2 5.39/3, Birge 1.34, EMPRESS -2.25 sigma; inflated N_eff(He) 2.83+-0.16; with ACT 2.85+-0.10 (-2.0 sigma). GitKraken MCP commit; push via shell (detached worktree).\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "d139268f37328a800c848ffcb528ea11d9f6440b",
+      "parents": [
+        "12bc444afd568b5db36384a672e1d043ae2548a3"
+      ],
+      "date": "2026-11-22T15:18:29Z",
+      "message": "Execute five further TOE fronts and Witting tomography: exact two-D Hessian census, E6 cubic and local vacuum lift, causal arrow and phase readout"
+    },
+    {
+      "sha": "12bc444afd568b5db36384a672e1d043ae2548a3",
+      "parents": [
+        "f9a1fad90a995c3c4e5b12990cb67310c26f157a"
+      ],
+      "date": "2026-11-22T15:16:05Z",
+      "message": "Pass 12693 reserved: low-N_eff mechanisms vs deuterium, VLQ triplet effective limits, aligned FN flavour for A, proton fraction for KM3NeT, EMPRESS consistency (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "f9a1fad90a995c3c4e5b12990cb67310c26f157a",
+      "parents": [
+        "6f726ee343bdab51cbf807676d567946135b9660"
+      ],
+      "date": "2026-11-22T15:13:58Z",
+      "message": "Pass 12692: EW fits cannot decide Cs vs Rb alpha (1e-9 vs 1e-4); KM3NeT at joint flux = 2.2 sigma fluctuation; axiflavon in completion A needs |C_sd| < 0.09 (NA62); VLQ triplet ~13k HL-LHC pairs, cascades dominate for mixing < 1.1e-4; helium + ACT both give N_eff ~ 2.85 (hint, EMPRESS-dependent)\n\n(1) Cs-Rb relative alpha 1.2e-9 vs Delta alpha_had 1e-4; M_W shift 2e-8 GeV. (2) joint-fit flux 7.5e-10 vs KM3NeT-only 5.8e-8: 0.013 expected events, P>=1 1.3% (2.2 sigma). (3) BR(K->pi a) formula, NA62/Toni 2025 f_a/|C_sd| > 1.1e12: lattice window needs |C_sd| < 0.091; Cabibbo-size 0.22 -> m_a < 24 ueV, excluded. (4) LO QCD x CT18NNLO via parton (LHAPDF public set), ttbar validation LO 491 pb (K 1.70); per-state 1.45 fb at 14 TeV, 2.4 pb at 100 TeV for 1.65 TeV; internal W* width 1.8e-5 GeV vs mixing decays -> crossover theta 1.1e-4 (compressed signatures). (5) Y_p(tau) with dlnY/dlntau 0.73: bottle preferred mildly; helium all-four 0.2439+-0.0015 -> N_eff 2.83+-0.12 at bottle tau, matching ACT 2.86+-0.13 (combined ~2.3 sigma low); without EMPRESS 2.96+-0.13. GitKraken MCP commit; push via shell (detached worktree).\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "6f726ee343bdab51cbf807676d567946135b9660",
+      "parents": [
+        "23e2b949f3b08000204aff5a38caf7f1f460f8a9"
+      ],
+      "date": "2026-11-22T15:08:16Z",
+      "message": "Pass 12692 reserved: alpha vs EW fits, KM3NeT flux vs IceCube EHE limit, axiflavon flavour sector for A, VLQ triplet production/decay regimes, neutron lifetime vs BBN helium (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "23e2b949f3b08000204aff5a38caf7f1f460f8a9",
+      "parents": [
+        "35edc366ce2b0b3a29fe230a32c024aaf055db25"
+      ],
+      "date": "2026-11-22T15:00:46Z",
+      "message": "Passes 12690-12691: VLQ triplet splitting = y' v/sqrt2 (88.8 GeV, compressed); completion A + thermal leptogenesis needs xi >~ 10; no family breaking in either completion; three anomalies reduced: alpha(g-2) sides with Rb vs Cs (4 sigma), KM3NeT tension mostly spectral (counting 1.5 sigma), g_A backs bottle neutron lifetime (beam -4.6 sigma)\n\n12690: exact Delta M(T'-T) = y' v/sqrt2 for equal Dirac masses, B in the middle with ~44 GeV gaps (off-shell internal decays); y' resolution 0.011-0.029 for 2-5 GeV mass resolution. N_R running vs ACT running quartic: M_N 1e9 needs cancellation 110x (xi=1), 1.3 (xi=10), 0.013 (xi=100). 12691: alpha^-1 from a_e 137.035999166(15) (reproduces Fan et al.); Delta a_e Cs -4.1 sigma, Rb +1.75 to +2.1 sigma; C5 dispute ~0.3 sigma. KM3NeT p = 1/(1+r): r=15 -> 1.5 sigma; quoted 2.5/3.1 sigma need effective r ~160/1000. Neutron: tau_SM(g_A PERKEO III) 878.4+-0.7 s, bottle +0.9 sigma, beam -4.6 sigma; dark branching 1.16% unsupported. Sources: Fan 2209.13084, Palmisano/Brdar KM3NeT analyses, CERN Courier PSI 2025, J-PARC 2412.19519. GitKraken MCP commit; push via shell (detached worktree).\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "35edc366ce2b0b3a29fe230a32c024aaf055db25",
+      "parents": [
+        "4c50125ec03b55f5049aa429515080c65a7a5448"
+      ],
+      "date": "2026-11-22T14:58:01Z",
+      "message": "Execute five TOE fronts plus Witting 27/12/1 phase-site theorem, exact sparse H27 map and 24x Hessian coset compiler"
+    },
+    {
+      "sha": "4c50125ec03b55f5049aa429515080c65a7a5448",
+      "parents": [
+        "165a0cca172468120fb20ac55260532c49320e7e"
+      ],
+      "date": "2026-11-22T14:57:24Z",
+      "message": "Pass 12691 reserved: three new directions from literature search (alpha/electron g-2, KM3NeT 220 PeV, neutron lifetime) (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "165a0cca172468120fb20ac55260532c49320e7e",
+      "parents": [
+        "d29303f5aed3c264bf41591170138bcf88c574eb"
+      ],
+      "date": "2026-11-22T14:57:22Z",
+      "message": "Pass 12690 reserved: completion follow-ups (VLQ y prime at colliders, graviton DM line, leptogenesis cap in A, family breaking, summary page) (Claude track). Empty commit via shell git.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "d29303f5aed3c264bf41591170138bcf88c574eb",
+      "parents": [
+        "60adbe5660d7a6aab41f2f1513b590929d357beb"
+      ],
+      "date": "2026-11-22T14:36:30Z",
+      "message": "Pass 12689: completion B (dark dimension + VL top partner) predicts a radius-independent Yukawa y' = 0.51 +- 0.02 (T-T' split ~90 GeV) over R = 0.1-30 um; completion A extra scalar ~5e8 GeV, N_DW = 1, no isocurvature; A-vs-B prediction matrix\n\ny'(1.65 TeV) for lambda(M_5)=0 at M_t 172.57: 0.494 (0.1 um) to 0.529 (30 um); graviton-DM T_i ~ 0.3-2 GeV over the range (Omega ~ T_i^3 R/M_Pl, 2209.09249). Matrix of discriminators: haloscope 45-65 ueV (A) vs micron fifth force / VLQ triplet (B); top mass predicted only in A. Parallel review: 273 other-track commits (Witting photonics, H27, plaquettes, E6 audits) do not touch this thread; fc0971f0e E6/H27 chirality gate consistent with P12683. GitKraken MCP commit; push via shell (detached worktree).\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
+    },
+    {
+      "sha": "60adbe5660d7a6aab41f2f1513b590929d357beb",
+      "parents": [
+        "80bd973f91eabbb824f7a450e25c3ff93ebe9786"
+      ],
+      "date": "2026-11-22T14:30:44Z",
+      "message": "Freeze six independently verified Witting operational numerics with CI and physics caveats"
+    },
+    {
+      "sha": "80bd973f91eabbb824f7a450e25c3ff93ebe9786",
+      "parents": [
+        "b431f01c6fd94df0e720085878ca8238ec0fd611"
+      ],
+      "date": "2026-11-22T14:28:19Z",
+      "message": "Correct detector confusion description and add robust POVM calibration error certificate"
+    },
+    {
+      "sha": "b431f01c6fd94df0e720085878ca8238ec0fd611",
+      "parents": [
+        "1b52b251658f42972fb88373f94f3e4d18e1577f"
+      ],
+      "date": "2026-11-22T14:28:06Z",
+      "message": "Run 23 optical capacity gauge and calibration regressions in CI"
+    },
+    {
+      "sha": "1b52b251658f42972fb88373f94f3e4d18e1577f",
+      "parents": [
+        "7e09c3479f67dcf2f0f552776fe6a38b204231fd"
+      ],
+      "date": "2026-11-22T14:27:57Z",
+      "message": "Add conservative detector calibration-norm tolerance regression"
+    },
+    {
+      "sha": "7e09c3479f67dcf2f0f552776fe6a38b204231fd",
+      "parents": [
+        "bb23d420bfac90047fe185a141ce80e9d7826412"
+      ],
+      "date": "2026-11-22T14:27:48Z",
+      "message": "Derive sufficient operator-norm calibration tolerance for lossy Witting entanglement certification"
+    },
+    {
+      "sha": "bb23d420bfac90047fe185a141ce80e9d7826412",
+      "parents": [
+        "a969f2de3a1ae3d8e482851a456bc0519426dc64"
+      ],
+      "date": "2026-11-22T14:26:51Z",
+      "message": "Document six operational Witting results with strict null models and reproducible optical and gauge constraints"
+    },
+    {
+      "sha": "a969f2de3a1ae3d8e482851a456bc0519426dc64",
+      "parents": [
+        "008ae133b5265065a86e88f5a9482bc37c905bca"
+      ],
+      "date": "2026-11-22T14:25:40Z",
+      "message": "Reproduce six operational Witting falsifiers and 22 regressions in isolated CI"
+    },
+    {
+      "sha": "008ae133b5265065a86e88f5a9482bc37c905bca",
+      "parents": [
+        "1a87958b7c06f6310a5f4f817c0bea3ef2138e60"
+      ],
+      "date": "2026-11-22T14:25:30Z",
+      "message": "Add optical-loss fake-purity negative controls to six-front regression suite"
+    },
+    {
+      "sha": "1a87958b7c06f6310a5f4f817c0bea3ef2138e60",
+      "parents": [
+        "23c30f04f20828f6c2a80d8b9e8152045cb053f5"
+      ],
+      "date": "2026-11-22T14:25:20Z",
+      "message": "Demonstrate uncalibrated path-dependent photonic loss can fake Witting purity moments"
+    },
+    {
+      "sha": "23c30f04f20828f6c2a80d8b9e8152045cb053f5",
+      "parents": [
+        "fda0084314fa4a69cc4a83d7164bcf49119b0cc5"
+      ],
+      "date": "2026-11-22T14:24:13Z",
+      "message": "Add isolated CI for five operational Witting falsifiers and 20 regressions"
+    },
+    {
+      "sha": "fda0084314fa4a69cc4a83d7164bcf49119b0cc5",
+      "parents": [
+        "fba097512f22614a46e07072eed69e51c61a65a4"
+      ],
+      "date": "2026-11-22T14:24:01Z",
+      "message": "Fix regression assertions to match explicit scoped disclaimer text"
+    },
+    {
+      "sha": "fba097512f22614a46e07072eed69e51c61a65a4",
+      "parents": [
+        "e2eb841b21bdc3a63749bd1e7e1197addc55667f"
+      ],
+      "date": "2026-11-22T14:23:47Z",
+      "message": "Regress five new Witting optical, 4to9 capacity, gauge, collision and detector falsifiers"
+    },
+    {
+      "sha": "e2eb841b21bdc3a63749bd1e7e1197addc55667f",
+      "parents": [
+        "a86eb28287740f27b862436a80af4ef1b580c0f6"
+      ],
+      "date": "2026-11-22T14:23:15Z",
+      "message": "Verify compressed Witting detector fidelity variance under symmetric calibrated label crosstalk"
+    },
+    {
+      "sha": "a86eb28287740f27b862436a80af4ef1b580c0f6",
+      "parents": [
+        "f87a379c77f2cbaf2afad66aa1027a06ae454340"
+      ],
+      "date": "2026-11-22T14:22:33Z",
+      "message": "Quantify Witting third-moment collision resources and genuine five-MUB negative controls"
+    },
+    {
+      "sha": "f87a379c77f2cbaf2afad66aa1027a06ae454340",
+      "parents": [
+        "d189433136c6f2f6c922ac4a3955eb4ccd4e46c4"
+      ],
+      "date": "2026-11-22T14:21:48Z",
+      "message": "Derive separable PPT bound and loss-aware confidence budgets for full Witting optical POVM"
+    },
+    {
+      "sha": "d189433136c6f2f6c922ac4a3955eb4ccd4e46c4",
+      "parents": [
+        "dbfc75798a3d3b5529f2e16326c4de720491af55"
+      ],
+      "date": "2026-11-22T14:20:51Z",
+      "message": "Extend W33 Z2 dynamics to three plaquettes, certify Gauss algebra and graph-isomorphic null control"
+    },
+    {
+      "sha": "dbfc75798a3d3b5529f2e16326c4de720491af55",
+      "parents": [
+        "e2e61e912ff091c0ddca940526e8ca0cc43b002e"
+      ],
+      "date": "2026-11-22T14:20:06Z",
+      "message": "Certify positive quantum capacity of native Witting channel under 30% rail dephasing"
+    },
+    {
+      "sha": "e2e61e912ff091c0ddca940526e8ca0cc43b002e",
+      "parents": [
+        "49b24ce8cbf9db9efc7a2871a59f76cf02bb9a92"
+      ],
+      "date": "2026-11-22T14:13:38Z",
+      "message": "Clarify four fixed Witting gates are minimal only in rank-one phase-gate class"
+    },
+    {
+      "sha": "49b24ce8cbf9db9efc7a2871a59f76cf02bb9a92",
+      "parents": [
+        "45e4379118e1c20816dab825b42546bd3c7ae983"
+      ],
+      "date": "2026-11-22T14:13:36Z",
+      "message": "Clarify four fixed Witting gates are minimal only in rank-one phase-gate class"
+    },
+    {
+      "sha": "45e4379118e1c20816dab825b42546bd3c7ae983",
+      "parents": [
+        "4d2c5f67a1c0957a53aa1f2e09335e03a104702d"
+      ],
+      "date": "2026-11-22T14:13:00Z",
+      "message": "Freeze six-front TOE proof/falsifier outcome manifest with precise scope and repo overlap"
+    },
+    {
+      "sha": "4d2c5f67a1c0957a53aa1f2e09335e03a104702d",
+      "parents": [
+        "1d95cf0c2837d22665eadc8cdd35101afc1efc2f"
+      ],
+      "date": "2026-11-22T14:12:44Z",
+      "message": "Document six independently checked TOE fronts: exact fixed-gate SU4 density and five physics falsification gates"
+    },
+    {
+      "sha": "1d95cf0c2837d22665eadc8cdd35101afc1efc2f",
+      "parents": [
+        "975f62e3bbfbbb1729864abef188c4e3f514932d"
+      ],
+      "date": "2026-11-22T14:12:41Z",
+      "message": "Freeze native Witting 4-to-9 rail-dephasing capacity witness separately from cloning proxy"
+    },
+    {
+      "sha": "975f62e3bbfbbb1729864abef188c4e3f514932d",
+      "parents": [
+        "d1d2c18ed57f15d9f0755970a1f4c8421e1cf841"
+      ],
+      "date": "2026-11-22T14:12:30Z",
+      "message": "Add actual Witting 4-to-9 coherent-information dephasing test and separate proxy boundaries"
+    },
+    {
+      "sha": "d1d2c18ed57f15d9f0755970a1f4c8421e1cf841",
+      "parents": [
+        "18e7a04c73bc5e9f1f800ecb1cf713e4cc90406d"
+      ],
+      "date": "2026-11-22T14:12:15Z",
+      "message": "Run actual routed Witting 4-to-9 capacity witness with five other finite fronts"
+    },
+    {
+      "sha": "18e7a04c73bc5e9f1f800ecb1cf713e4cc90406d",
+      "parents": [
+        "a5b0654431dadb282cd5ff42d2391049f41eb3ab"
+      ],
+      "date": "2026-11-22T14:12:04Z",
+      "message": "Regress actual Witting 4-to-9 dephasing separately from identity-to-EB proxy"
+    },
+    {
+      "sha": "a5b0654431dadb282cd5ff42d2391049f41eb3ab",
+      "parents": [
+        "ddc4ef0e2ab241302582dfd85c10d64a481384b9"
+      ],
+      "date": "2026-11-22T14:11:51Z",
+      "message": "Bound coherence on actual routed Witting 4-to-9 photonic channel under rail dephasing"
+    },
+    {
+      "sha": "ddc4ef0e2ab241302582dfd85c10d64a481384b9",
+      "parents": [
+        "9a173a58f7e47ef8af96524f8723103c59c901b5"
+      ],
+      "date": "2026-11-22T14:11:48Z",
+      "message": "Extend six-front exact research CI to one-photon scaling no-go and all 11 tests"
+    },
+    {
+      "sha": "9a173a58f7e47ef8af96524f8723103c59c901b5",
+      "parents": [
+        "0e96f0a018236e255ce2174645e447d66b23c94e"
+      ],
+      "date": "2026-11-22T14:11:28Z",
+      "message": "Test sixth TOE frontier one-photon general register exponential mode and mesh scaling"
+    },
+    {
+      "sha": "0e96f0a018236e255ce2174645e447d66b23c94e",
+      "parents": [
+        "ff3755d850c1355e116da85f2bbd354cdd6e45c7"
+      ],
+      "date": "2026-11-22T14:11:18Z",
+      "message": "Add sixth frontier: exponential one-photon generic register mode-resource scaling falsifier"
+    },
+    {
+      "sha": "ff3755d850c1355e116da85f2bbd354cdd6e45c7",
+      "parents": [
+        "c186e6d8eaba5d732cb86efc7ef1e01e1e735b6f"
+      ],
+      "date": "2026-11-22T14:10:23Z",
+      "message": "CI execute ten rigorous Witting discrete gates, H27, causal, optics and E6 five-front tests"
+    },
+    {
+      "sha": "c186e6d8eaba5d732cb86efc7ef1e01e1e735b6f",
+      "parents": [
+        "fc0971f0eb871ad3d98cc8f4610b683d2626cba0"
+      ],
+      "date": "2026-11-22T14:09:51Z",
+      "message": "Regress 10 exact Witting density, H27 representation, causal, optics and E6 anomaly controls"
+    },
+    {
+      "sha": "fc0971f0eb871ad3d98cc8f4610b683d2626cba0",
+      "parents": [
+        "41be874b28c3f3392c1e92233025d367b2876ea2"
+      ],
+      "date": "2026-11-22T14:09:32Z",
+      "message": "Audit E6 27 chiral SU5 branching and H27 Schur enforced flavor mass degeneracy"
+    },
+    {
+      "sha": "41be874b28c3f3392c1e92233025d367b2876ea2",
+      "parents": [
+        "a32a9b6d4f1a744c1d9d97e8d769eb7eae3db071"
+      ],
+      "date": "2026-11-22T14:09:17Z",
+      "message": "Bound SU4 discrete-word packing and optical control resource costs without overstating hardware gain"
+    },
+    {
+      "sha": "a32a9b6d4f1a744c1d9d97e8d769eb7eae3db071",
+      "parents": [
+        "8fe00e3bd8e76b9d42d9de10aaddaf2f4409fb9f"
+      ],
+      "date": "2026-11-22T14:09:03Z",
+      "message": "Falsify W33 graph-only Lorentzian causality with exact 1620 four-cycle Hasse-orientation counterexamples"
+    },
+    {
+      "sha": "8fe00e3bd8e76b9d42d9de10aaddaf2f4409fb9f",
+      "parents": [
+        "b6850aab94ca9a9c14c84f8a3cb4f9b91a175b4e"
+      ],
+      "date": "2026-11-22T14:08:50Z",
+      "message": "Report five reproducible Witting physical-continuation fronts with quantitative negative controls"
+    },
+    {
+      "sha": "b6850aab94ca9a9c14c84f8a3cb4f9b91a175b4e",
+      "parents": [
+        "9bbb895841edb4389e43c7568df13574f39714bc"
+      ],
+      "date": "2026-11-22T14:08:47Z",
+      "message": "Verify exact H27 center Fourier sectors on new Witting 27-orbit and E6 representation obstruction"
+    },
+    {
+      "sha": "9bbb895841edb4389e43c7568df13574f39714bc",
+      "parents": [
+        "280f7ec39ac20b9b4d4ba3e3e591e2751befd8d6"
+      ],
+      "date": "2026-11-22T14:08:27Z",
+      "message": "Prove four fixed Witting gates generate dense SU4 by algebraic trace and 224-rank adjoint certificate"
+    },
+    {
+      "sha": "280f7ec39ac20b9b4d4ba3e3e591e2751befd8d6",
+      "parents": [
+        "7620198112bd97ac2d66c71727a4120bfe99ba9e"
+      ],
+      "date": "2026-11-22T14:07:02Z",
+      "message": "Freeze five independently evaluated Witting physical-continuation certificates and physical caveats"
+    },
+    {
+      "sha": "7620198112bd97ac2d66c71727a4120bfe99ba9e",
+      "parents": [
+        "4eeaee5b164b89f8529793dceb0d0ac14ff433d1"
+      ],
+      "date": "2026-11-22T14:06:25Z",
+      "message": "CI independently verify fivefront Witting optical gauge cloning detector and design research"
+    },
+    {
+      "sha": "4eeaee5b164b89f8529793dceb0d0ac14ff433d1",
+      "parents": [
+        "0f082d0343d9e296c28c8597095326cb11359cf3"
+      ],
+      "date": "2026-11-22T14:06:11Z",
+      "message": "Match physical-scope regression to explicit QCD experiment disclaimer"
+    },
+    {
+      "sha": "0f082d0343d9e296c28c8597095326cb11359cf3",
+      "parents": [
+        "46093973c5773aa63379ccc33805c90258564890"
+      ],
+      "date": "2026-11-22T14:06:00Z",
+      "message": "Regression-test five Witting optics gauge detector cloning and 3-design fronts"
+    },
+    {
+      "sha": "46093973c5773aa63379ccc33805c90258564890",
+      "parents": [
+        "2eb24fe7b69f6d759ff47b9b3c0abe541b646c13"
+      ],
+      "date": "2026-11-22T14:05:19Z",
+      "message": "Search 50000 25-outcome Witting layouts balancing entanglement variance, chart privacy and drift"
+    },
+    {
+      "sha": "2eb24fe7b69f6d759ff47b9b3c0abe541b646c13",
+      "parents": [
+        "6a883a719011fb56343a4a35b71108efa57d401e"
+      ],
+      "date": "2026-11-22T14:04:41Z",
+      "message": "Simulate two adjacent W33 plaquettes with exact Gauss laws and matter-pair creation"
+    },
+    {
+      "sha": "6a883a719011fb56343a4a35b71108efa57d401e",
+      "parents": [
+        "b0e9180c4d76a90b4994c788517b766e9b895e97"
+      ],
+      "date": "2026-11-22T14:04:16Z",
+      "message": "Compile exact 4-to-40 Witting Naimark isometry and calibrated finite-shot entanglement bounds"
+    },
+    {
+      "sha": "b0e9180c4d76a90b4994c788517b766e9b895e97",
+      "parents": [
+        "a56f4a8c27c70970f5ed337a57cbb2b0856e1d75"
+      ],
+      "date": "2026-11-22T14:03:56Z",
+      "message": "Prove ququart Witting proxy capacity vanishes before entanglement breaking using universal cloning"
+    },
+    {
+      "sha": "a56f4a8c27c70970f5ed337a57cbb2b0856e1d75",
+      "parents": [
+        "4d029dd01d6f9410fd6f43f85cca9e165e1b1c7c"
+      ],
+      "date": "2026-11-22T14:03:37Z",
+      "message": "Verify known Witting 3-design and derive third spectral moment from collision statistics"
+    },
+    {
+      "sha": "4d029dd01d6f9410fd6f43f85cca9e165e1b1c7c",
+      "parents": [
+        "c275d532a0091f2c470aacbec251c1ffad41d5ec"
+      ],
+      "date": "2026-11-22T13:58:03Z",
+      "message": "Publish exact H27 Witting polar pencil, 216 Hesse quotient, A4 group and physical boundaries"
+    },
+    {
+      "sha": "c275d532a0091f2c470aacbec251c1ffad41d5ec",
+      "parents": [
+        "37ebf78658b04e7061c111bef61ab6380b4dd09e"
+      ],
+      "date": "2026-11-22T13:57:37Z",
+      "message": "Extend exact Witting CI to H27 polar pencil and Hessian 216/A4 quotient, 12 tests"
+    },
+    {
+      "sha": "37ebf78658b04e7061c111bef61ab6380b4dd09e",
+      "parents": [
+        "1c7a06ff3ae907b800b6a9f5b3d7b4577c43f1d1"
+      ],
+      "date": "2026-11-22T13:57:10Z",
+      "message": "Freeze exact nine-cell Hesse 216 and four-line A4 quotient certificate"
+    },
+    {
+      "sha": "1c7a06ff3ae907b800b6a9f5b3d7b4577c43f1d1",
+      "parents": [
+        "add39431496e460bbb8f2d312afc2a7d82753360"
+      ],
+      "date": "2026-11-22T13:57:00Z",
+      "message": "Test exact Hessian H27 quotient on nine Hesse cells and A4 polar line action"
+    },
+    {
+      "sha": "add39431496e460bbb8f2d312afc2a7d82753360",
+      "parents": [
+        "15a70d6b3d96bbf7d8b0f9a72602cb7a91bd3a58"
+      ],
+      "date": "2026-11-22T13:56:49Z",
+      "message": "Prove exact Witting H27 central quotient 27 to nine Hesse cells and A4 pencil action"
+    },
+    {
+      "sha": "15a70d6b3d96bbf7d8b0f9a72602cb7a91bd3a58",
+      "parents": [
+        "eb134a74b8758d8499f10a2ac26405bb1ff4bc5a"
+      ],
+      "date": "2026-11-22T13:55:26Z",
+      "message": "Freeze exact H27 polar Witting 1+four 3-line+27 orbit certificate"
+    },
+    {
+      "sha": "eb134a74b8758d8499f10a2ac26405bb1ff4bc5a",
+      "parents": [
+        "55f0614e9a28e71495fd756ca829dc35bacb4e00"
+      ],
+      "date": "2026-11-22T13:55:15Z",
+      "message": "Regress exact Heisenberg 27-orbit, four Witting polar lines, SRG pair counts"
+    },
+    {
+      "sha": "55f0614e9a28e71495fd756ca829dc35bacb4e00",
+      "parents": [
+        "2c7117dd446cadb98a486593d6e6e50c9bae4d0c"
+      ],
+      "date": "2026-11-22T13:54:51Z",
+      "message": "Prove exact H27 Witting polar pencil 1+four 3-lines+27 regular orbit"
+    },
+    {
+      "sha": "2c7117dd446cadb98a486593d6e6e50c9bae4d0c",
+      "parents": [
+        "a0fe9e44ac60b371cb3a6339998a31eebf8606b7"
+      ],
+      "date": "2026-11-22T13:53:23Z",
+      "message": "Use exact mathematical invariants rather than JSON byte formatting in Witting H27 CI"
+    },
+    {
+      "sha": "a0fe9e44ac60b371cb3a6339998a31eebf8606b7",
+      "parents": [
+        "373f61023a7bfe3ed340c0e8766d629b696b3a72"
+      ],
+      "date": "2026-11-22T13:53:07Z",
+      "message": "Add generic MUB 2-design control disproving W33-exclusive coincidence law"
+    },
+    {
+      "sha": "373f61023a7bfe3ed340c0e8766d629b696b3a72",
+      "parents": [
+        "c9a6334734a4b35316baac72b2429aa0e8b7d7b9"
+      ],
+      "date": "2026-11-22T13:52:53Z",
+      "message": "Run non-Witting ququart MUB control alongside Schmidt and W33 dynamic CI"
+    },
+    {
+      "sha": "c9a6334734a4b35316baac72b2429aa0e8b7d7b9",
+      "parents": [
+        "79ea72e4367a2e3296121c71cb81bfea2e5d9715"
+      ],
+      "date": "2026-11-22T13:52:43Z",
+      "message": "Add generic MUB negative-control tests to distinguish 2-design from W33-specific physics"
+    },
+    {
+      "sha": "79ea72e4367a2e3296121c71cb81bfea2e5d9715",
+      "parents": [
+        "321a98155f282c169d9437f0b853c35225ca4d39"
+      ],
+      "date": "2026-11-22T13:52:37Z",
+      "message": "CI replay exact minimal Witting control, Hessian group, and H27 certificates"
+    },
+    {
+      "sha": "321a98155f282c169d9437f0b853c35225ca4d39",
+      "parents": [
+        "310aecb2e1554ff168e470bc1a479cf806c98229"
+      ],
+      "date": "2026-11-22T13:52:35Z",
+      "message": "Document exact Witting one-phase controller with H27, prior-art boundary and TOE falsifiers"
+    },
+    {
+      "sha": "310aecb2e1554ff168e470bc1a479cf806c98229",
+      "parents": [
+        "4a5180cdeb2b1f7bc6cc7302bcaef4c7312d30cc"
+      ],
+      "date": "2026-11-22T13:52:33Z",
+      "message": "Falsify W33-exclusive entanglement-witness inference with generic ququart MUB 2-design"
+    },
+    {
+      "sha": "4a5180cdeb2b1f7bc6cc7302bcaef4c7312d30cc",
+      "parents": [
+        "c2b5439000f5126a6e1803424e0816b7e56c2ad0"
+      ],
+      "date": "2026-11-22T13:51:16Z",
+      "message": "Derive calibrated Witting Schmidt witnesses and exact dynamical W33 Gauss-loop falsifiers"
+    },
+    {
+      "sha": "c2b5439000f5126a6e1803424e0816b7e56c2ad0",
+      "parents": [
+        "1fce204fe1dc6d3138a7ff3560fd62156498ecf2"
+      ],
+      "date": "2026-11-22T13:50:46Z",
+      "message": "Freeze exact normal H27 torsor inside Hessian Witting phase controller"
+    },
+    {
+      "sha": "1fce204fe1dc6d3138a7ff3560fd62156498ecf2",
+      "parents": [
+        "15fd540385b10fdaf61053d6997e6c97f85c733c"
+      ],
+      "date": "2026-11-22T13:50:38Z",
+      "message": "Test Heisenberg 27 regular orbit and one-phase controllability bridge"
+    },
+    {
+      "sha": "15fd540385b10fdaf61053d6997e6c97f85c733c",
+      "parents": [
+        "2213cc8c7f20020f6ee8052c6e00ecb38ba6c08a"
+      ],
+      "date": "2026-11-22T13:50:29Z",
+      "message": "Identify exact Heisenberg H27 normal regular Witting orbit in Hessian control subgroup"
+    },
+    {
+      "sha": "2213cc8c7f20020f6ee8052c6e00ecb38ba6c08a",
+      "parents": [
+        "ecb265d2bf863e2549aa2042abfedc3ad21ef919"
+      ],
+      "date": "2026-11-22T13:49:04Z",
+      "message": "Run CI checks for Schmidt witnesses, dynamic gauge loop and dual-frame tomography"
+    },
+    {
+      "sha": "ecb265d2bf863e2549aa2042abfedc3ad21ef919",
+      "parents": [
+        "4a79c1090e9855113a14c6234735524c9e9fac88"
+      ],
+      "date": "2026-11-22T13:49:01Z",
+      "message": "Freeze exact order-648 Hessian action and 27-ray one-phase U4 control certificate"
+    },
+    {
+      "sha": "4a79c1090e9855113a14c6234735524c9e9fac88",
+      "parents": [
+        "9b9596dbf53cc6e79810176e4ccc4a683108f3a2"
+      ],
+      "date": "2026-11-22T13:48:47Z",
+      "message": "Extend Schmidt and Gauss suite with exact 40-vs-25 tomography precision regressions"
+    },
+    {
+      "sha": "9b9596dbf53cc6e79810176e4ccc4a683108f3a2",
+      "parents": [
+        "7cd9868ae8b35425d60e59799fe96068883fe758"
+      ],
+      "date": "2026-11-22T13:48:44Z",
+      "message": "Regress exact Hessian 648 mirror orbit and one-phase U4 Lie span"
+    },
+    {
+      "sha": "7cd9868ae8b35425d60e59799fe96068883fe758",
+      "parents": [
+        "c3e7a16d9ad474953b67324a01021e4f793f06e6"
+      ],
+      "date": "2026-11-22T13:48:35Z",
+      "message": "Certify one-tunable-phase Witting U4 control via exact Hessian 648 action"
+    },
+    {
+      "sha": "c3e7a16d9ad474953b67324a01021e4f793f06e6",
+      "parents": [
+        "73c98fdbaf6b3275949418a79f25ede7dafbc64c"
+      ],
+      "date": "2026-11-22T13:48:16Z",
+      "message": "Quantify exact three-class Witting fidelity estimator and 25-bin tomography variance cost"
+    },
+    {
+      "sha": "73c98fdbaf6b3275949418a79f25ede7dafbc64c",
+      "parents": [
+        "0c62e782737150c11a69b01353a96779b49849b1"
+      ],
+      "date": "2026-11-22T13:46:40Z",
+      "message": "Regress 2-design Schmidt witnesses and Gauss-constrained dynamic W33 loop"
+    },
+    {
+      "sha": "0c62e782737150c11a69b01353a96779b49849b1",
+      "parents": [
+        "c82cabfdcc4c80bd1cbc785289e220de967337b4"
+      ],
+      "date": "2026-11-22T13:46:21Z",
+      "message": "Extend W33 AB sign to Gauss-constrained dynamical Z2 matter-link quantum model"
+    },
+    {
+      "sha": "c82cabfdcc4c80bd1cbc785289e220de967337b4",
+      "parents": [
+        "1a0fef7811e78198338832779d4dc5f69bb137d8"
+      ],
+      "date": "2026-11-22T13:45:57Z",
+      "message": "Certify Witting 40-outcome Schmidt thresholds, compressed counterexamples and EB boundary"
+    },
+    {
+      "sha": "1a0fef7811e78198338832779d4dc5f69bb137d8",
+      "parents": [
+        "eced2e4a524f3a1cd026531ba67e958fac4b7c0c"
+      ],
+      "date": "2026-11-22T13:44:57Z",
+      "message": "Freeze six-prime exact Lie witness for four Witting controllability generators"
+    },
+    {
+      "sha": "eced2e4a524f3a1cd026531ba67e958fac4b7c0c",
+      "parents": [
+        "0adaa17a2549effe0ca2a7081585640d937693aa"
+      ],
+      "date": "2026-11-22T13:44:40Z",
+      "message": "Test minimal four-Witting U4 Lie certificate and negative controls"
+    },
+    {
+      "sha": "0adaa17a2549effe0ca2a7081585640d937693aa",
+      "parents": [
+        "348a8c88a037943498bb25b0afed6512d954843c"
+      ],
+      "date": "2026-11-22T13:44:29Z",
+      "message": "Implement exact six-prime modular Lie certificate for minimal Witting U4 controllability"
+    },
+    {
+      "sha": "348a8c88a037943498bb25b0afed6512d954843c",
+      "parents": [
+        "0c8ea1babab5b23b3c068ed89238d0d816921ee2"
+      ],
+      "date": "2026-11-22T13:44:11Z",
+      "message": "Prove four Witting projector controls are minimal for U4 via exact modular Lie witness"
+    },
+    {
+      "sha": "0c8ea1babab5b23b3c068ed89238d0d816921ee2",
+      "parents": [
+        "9595792e9520825e1c0f658a558643b9ad2d2fe0"
+      ],
+      "date": "2026-11-22T13:37:15Z",
+      "message": "CI compile 40 four-mode reflection circuits along with five experimental falsifiers"
+    },
+    {
+      "sha": "9595792e9520825e1c0f658a558643b9ad2d2fe0",
+      "parents": [
+        "f25319da7c4739a7b5d8d06bcff5f470df6986c7"
+      ],
+      "date": "2026-11-22T13:37:05Z",
+      "message": "Test 40 compiled optical Witting ray reflections and switch pair predictions"
+    },
+    {
+      "sha": "f25319da7c4739a7b5d8d06bcff5f470df6986c7",
+      "parents": [
+        "686c6b4ac8ed0f75335188f8036b45223e68d2c0"
+      ],
+      "date": "2026-11-22T13:36:54Z",
+      "message": "Compile all 40 Witting quantum-switch reflections with at most four Givens rotations"
+    },
+    {
+      "sha": "686c6b4ac8ed0f75335188f8036b45223e68d2c0",
+      "parents": [
+        "79f6f1b005e1253f07b9ddb64fa079419dfade01"
+      ],
+      "date": "2026-11-22T13:36:43Z",
+      "message": "Reconcile 307 weekly commits and document independently certified phase gate TOE frontier"
+    },
+    {
+      "sha": "79f6f1b005e1253f07b9ddb64fa079419dfade01",
+      "parents": [
+        "d94b87d0f8a0870e54f1365266364e6df018eb5b"
+      ],
+      "date": "2026-11-22T13:36:13Z",
+      "message": "Extend Witting research note with distinct exact entropy and spectral phase optima"
+    },
+    {
+      "sha": "d94b87d0f8a0870e54f1365266364e6df018eb5b",
+      "parents": [
+        "165e5f5c67715d91cefe88cbb4537f269ef73674"
+      ],
+      "date": "2026-11-22T13:35:42Z",
+      "message": "Reconcile 307 weekly commit diffs across prior fullpatch audit and 47 direct reviews"
+    },
+    {
+      "sha": "165e5f5c67715d91cefe88cbb4537f269ef73674",
+      "parents": [
+        "4a8c7af4580b04f5b94edb3dfc4e06d6da38d88d"
+      ],
+      "date": "2026-11-22T13:35:38Z",
+      "message": "Research five 2026 experiments and derive Witting switch, entropy, Bell, gauge and Klein falsifiers"
+    },
+    {
+      "sha": "4a8c7af4580b04f5b94edb3dfc4e06d6da38d88d",
+      "parents": [
+        "ca4857bc70a5add923c78587fe66dea58c4919ea"
+      ],
+      "date": "2026-11-22T13:34:35Z",
+      "message": "Freeze experiment-led Witting switch, entropy, Bell, AB and Klein witnesses"
+    },
+    {
+      "sha": "ca4857bc70a5add923c78587fe66dea58c4919ea",
+      "parents": [
+        "c932998329818921f66a7f2e0628c1a8e4d896ad"
+      ],
+      "date": "2026-11-22T13:34:06Z",
+      "message": "Archive complete 307-commit seven-day inventory with explicit diff-review boundary"
+    },
+    {
+      "sha": "c932998329818921f66a7f2e0628c1a8e4d896ad",
+      "parents": [
+        "5ee812ec915665155203ea4f60cd631541b4089f"
+      ],
+      "date": "2026-11-22T13:33:49Z",
+      "message": "CI verify 2026 experimental Witting five-front source and 20 regressions"
+    },
+    {
+      "sha": "5ee812ec915665155203ea4f60cd631541b4089f",
+      "parents": [
+        "c3910f6471a1df3638a2d2b618449298d4659ba1"
+      ],
+      "date": "2026-11-22T13:33:32Z",
+      "message": "Add 20 experimental Witting switch QRNG Bell AB and Klein regression tests"
+    },
+    {
+      "sha": "c3910f6471a1df3638a2d2b618449298d4659ba1",
+      "parents": [
+        "0c9737e50c7b261211b5b1b2c807191adcec9dd7"
+      ],
+      "date": "2026-11-22T13:33:31Z",
+      "message": "Normalize equivalent SymPy rational expressions in entropy certificate"
+    },
+    {
+      "sha": "0c9737e50c7b261211b5b1b2c807191adcec9dd7",
+      "parents": [
+        "c3f23f4657b5e1f71a4f54c18dba6b0ca5c18d9d"
+      ],
+      "date": "2026-11-22T13:32:59Z",
+      "message": "Test five experiment-driven Witting switch entropy Bell gauge and Klein controls"
+    },
+    {
+      "sha": "c3f23f4657b5e1f71a4f54c18dba6b0ca5c18d9d",
+      "parents": [
+        "dde22928da08e8cdd440c583674380e2d43030a3"
+      ],
+      "date": "2026-11-22T13:32:29Z",
+      "message": "Extend isolated exact CI to operator entropy phase extrema"
+    },
+    {
+      "sha": "dde22928da08e8cdd440c583674380e2d43030a3",
+      "parents": [
+        "a4633ec514c91952ea92d911c0f0a4a0e81702fe"
+      ],
+      "date": "2026-11-22T13:32:15Z",
+      "message": "Freeze exact operator entanglement and phase-optimality results"
+    },
+    {
+      "sha": "a4633ec514c91952ea92d911c0f0a4a0e81702fe",
+      "parents": [
+        "429867fa09e55f63299a95e237bc733a106a9880"
+      ],
+      "date": "2026-11-22T13:32:06Z",
+      "message": "Test exact phase separation between spectrum crossing and entanglement extrema"
+    },
+    {
+      "sha": "429867fa09e55f63299a95e237bc733a106a9880",
+      "parents": [
+        "839ce8dad04370c9ed68bf5e1295a93d249bf925"
+      ],
+      "date": "2026-11-22T13:31:53Z",
+      "message": "Derive distinct exact phase extrema for Witting operator entanglement and purity"
+    },
+    {
+      "sha": "839ce8dad04370c9ed68bf5e1295a93d249bf925",
+      "parents": [
+        "5dc2b8615a31b967c3d688ab09556143758ad6ab"
+      ],
+      "date": "2026-11-22T13:30:22Z",
+      "message": "Add isolated CI for exact Witting all-phase gate resource certificates"
+    },
+    {
+      "sha": "5dc2b8615a31b967c3d688ab09556143758ad6ab",
+      "parents": [
+        "c7cb2b46c3d4d26aac4df962ee2d32131b4d80c9"
+      ],
+      "date": "2026-11-22T13:30:12Z",
+      "message": "Document all-phase Witting gate approximate-synthesis no-go with physical caveats"
+    },
+    {
+      "sha": "c7cb2b46c3d4d26aac4df962ee2d32131b4d80c9",
+      "parents": [
+        "409e6f751383d06eafc2cd922d763c1a03f8e3eb"
+      ],
+      "date": "2026-11-22T13:29:38Z",
+      "message": "Freeze exact all-phase Witting operator Schmidt and fidelity laws"
+    },
+    {
+      "sha": "409e6f751383d06eafc2cd922d763c1a03f8e3eb",
+      "parents": [
+        "fa4f8391e49cedd5fe7798393b6edabf7cf31404"
+      ],
+      "date": "2026-11-22T13:29:27Z",
+      "message": "Test exact Witting all-phase Schmidt polynomial and tetrahedral crossing"
+    },
+    {
+      "sha": "fa4f8391e49cedd5fe7798393b6edabf7cf31404",
+      "parents": [
+        "abac677156ba8557cf53cd99cdccc12cdadbe287"
+      ],
+      "date": "2026-11-22T13:29:00Z",
+      "message": "Derive exact all-phase Witting Schmidt spectrum and robust entangler fidelity law"
+    },
+    {
+      "sha": "abac677156ba8557cf53cd99cdccc12cdadbe287",
+      "parents": [
+        "c78b9fa4258ff50e26c0768415d541706d39b29f"
+      ],
+      "date": "2026-11-22T13:27:32Z",
+      "message": "Freeze exact Witting gate-fidelity process and diamond-norm resource ceilings"
+    },
+    {
+      "sha": "c78b9fa4258ff50e26c0768415d541706d39b29f",
+      "parents": [
+        "2aa9ec53db818a346682798908d3c86157bc7828"
+      ],
+      "date": "2026-11-22T13:27:19Z",
+      "message": "Add exact regression tests for approximate Witting gate resource lower bound"
+    },
+    {
+      "sha": "2aa9ec53db818a346682798908d3c86157bc7828",
+      "parents": [
+        "b16296299a2b1add941a81b15d0f4eca94d9db54"
+      ],
+      "date": "2026-11-22T13:27:05Z",
+      "message": "Prove exact Witting approximate gate fidelity obstruction from Schmidt spectrum"
+    },
+    {
+      "sha": "b16296299a2b1add941a81b15d0f4eca94d9db54",
+      "parents": [
+        "1ea23a5168a82a64c35874afefaedc6be5d198f9"
+      ],
+      "date": "2026-11-21T16:36:28Z",
+      "message": "Derive five physically constrained Witting results and rigorous photonic no-go bounds"
+    },
+    {
+      "sha": "1ea23a5168a82a64c35874afefaedc6be5d198f9",
+      "parents": [
+        "c1fa0974a88ce26f55d76f284d191fc231e1134d"
+      ],
+      "date": "2026-11-21T16:34:50Z",
+      "message": "Freeze independently tested Witting pair, loss, drift and nonlocal gate lower bounds"
+    },
+    {
+      "sha": "c1fa0974a88ce26f55d76f284d191fc231e1134d",
+      "parents": [
+        "9c919f8e04177bba8d1f8a476daee5aed3d05e46"
+      ],
+      "date": "2026-11-21T16:34:02Z",
+      "message": "Include exact Witting operator-Schmidt rank lower bound in isolated CI"
+    },
+    {
+      "sha": "9c919f8e04177bba8d1f8a476daee5aed3d05e46",
+      "parents": [
+        "05d861b61ed8683fc99d9c26c62acc2e43dec546"
+      ],
+      "date": "2026-11-21T16:33:49Z",
+      "message": "Regress Witting OSR8 gate lower bound and phase dependence"
+    },
+    {
+      "sha": "05d861b61ed8683fc99d9c26c62acc2e43dec546",
+      "parents": [
+        "89fcac503f7b66b045a8312b3790b8c38b556730"
+      ],
+      "date": "2026-11-21T16:33:38Z",
+      "message": "Prove rank-eight nonlocal Witting chart gates require at least three rank-two entanglers"
+    },
+    {
+      "sha": "89fcac503f7b66b045a8312b3790b8c38b556730",
+      "parents": [
+        "87ef6baace7120a4cef50b47345177817117f62e"
+      ],
+      "date": "2026-11-21T16:32:30Z",
+      "message": "Isolate CI for two-photon rigidity, pump-covariant pair production and drift robustness"
+    },
+    {
+      "sha": "87ef6baace7120a4cef50b47345177817117f62e",
+      "parents": [
+        "3cc700858d2716817e23194d110db291310ad0de"
+      ],
+      "date": "2026-11-21T16:32:14Z",
+      "message": "Regress two-photon impossibility, pumped sector pairs, drift and Kraus-gauge refinement"
+    },
+    {
+      "sha": "3cc700858d2716817e23194d110db291310ad0de",
+      "parents": [
+        "057e82050adf8783455ddf8b1574311496a97773"
+      ],
+      "date": "2026-11-21T16:31:38Z",
+      "message": "Falsify Witting 25-bin calibration under finite-shot heterogeneous drift"
+    },
+    {
+      "sha": "057e82050adf8783455ddf8b1574311496a97773",
+      "parents": [
+        "fc7f294e9ae41a5bf181de84ff779cbabd6f17f8"
+      ],
+      "date": "2026-11-21T16:31:07Z",
+      "message": "Model physical two-photon no-bunching barrier and invariant pumped Witting pair creation"
+    },
+    {
+      "sha": "fc7f294e9ae41a5bf181de84ff779cbabd6f17f8",
+      "parents": [
+        "076a1ea8bc91f60e8f7f75b30aaece6d3cd64c5f"
+      ],
+      "date": "2026-11-21T16:30:35Z",
+      "message": "Refine Witting optical decoder U5 Kraus gauges with 400 local Lie steps"
+    },
+    {
+      "sha": "076a1ea8bc91f60e8f7f75b30aaece6d3cd64c5f",
+      "parents": [
+        "16b48cfda5bd947ae9dfd1b21b150c284ea396ac"
+      ],
+      "date": "2026-11-21T16:11:00Z",
+      "message": "Freeze independent sampled Kraus-gauge optical hardware results"
+    },
+    {
+      "sha": "16b48cfda5bd947ae9dfd1b21b150c284ea396ac",
+      "parents": [
+        "fc67ce05964914c9d2e2e32595284c6f192c0752"
+      ],
+      "date": "2026-11-21T16:10:47Z",
+      "message": "Explain Kraus-gauge optical loss optimization and correction of naive crossover"
+    },
+    {
+      "sha": "fc67ce05964914c9d2e2e32595284c6f192c0752",
+      "parents": [
+        "00e7e50941b426d68180854cd9becdb91702a698"
+      ],
+      "date": "2026-11-21T16:10:02Z",
+      "message": "Run Kraus-gauge hardware search in Witting optical CI"
+    },
+    {
+      "sha": "00e7e50941b426d68180854cd9becdb91702a698",
+      "parents": [
+        "156a2157a6defbd71a11c233321345a29a318846"
+      ],
+      "date": "2026-11-21T16:09:51Z",
+      "message": "Regression-test loss-preserving Kraus-gauge searches"
+    },
+    {
+      "sha": "156a2157a6defbd71a11c233321345a29a318846",
+      "parents": [
+        "b7e7cd094c61aef0b6d218c3a48128f45112ede2"
+      ],
+      "date": "2026-11-21T16:09:36Z",
+      "message": "Use physical 9D input density for Kraus gauge channel invariance check"
+    },
+    {
+      "sha": "b7e7cd094c61aef0b6d218c3a48128f45112ede2",
+      "parents": [
+        "ce6ada316300be54a25a526a28c7a58c9fd3a088"
+      ],
+      "date": "2026-11-21T16:09:17Z",
+      "message": "Verify actual channel invariance under Kraus gauge, not just trace preservation"
+    },
+    {
+      "sha": "ce6ada316300be54a25a526a28c7a58c9fd3a088",
+      "parents": [
+        "cedd563148062cec80f5336f9314ee8a3b512d47"
+      ],
+      "date": "2026-11-21T16:09:03Z",
+      "message": "Optimize optical loss via quantum-channel Kraus gauge freedom"
+    },
+    {
+      "sha": "cedd563148062cec80f5336f9314ee8a3b512d47",
+      "parents": [
+        "9b5363668aaeda3ae3fb2c34fcd46b5087dc3814"
+      ],
+      "date": "2026-11-21T16:07:50Z",
+      "message": "Run optical mesh loss crossover alongside rank-five CI"
+    },
+    {
+      "sha": "9b5363668aaeda3ae3fb2c34fcd46b5087dc3814",
+      "parents": [
+        "d4f5e548485cadf18950f1e28c1d7d97e8d794c0"
+      ],
+      "date": "2026-11-21T16:07:41Z",
+      "message": "Test decoder Reck mesh loss crossover and survival-conditioned distinction"
+    },
+    {
+      "sha": "d4f5e548485cadf18950f1e28c1d7d97e8d794c0",
+      "parents": [
+        "b69607c0b3b1ec3511b422a8c1fecae3aba5d807"
+      ],
+      "date": "2026-11-21T16:07:29Z",
+      "message": "Quantify insertion-loss crossover between Petz and optimal Witting decoder meshes"
+    },
+    {
+      "sha": "b69607c0b3b1ec3511b422a8c1fecae3aba5d807",
+      "parents": [
+        "80c163670757a70290c2387e2c2c0d1501597a04"
+      ],
+      "date": "2026-11-21T16:06:01Z",
+      "message": "Report rank-five optical decoder optimality and calibrated photon costs"
+    },
+    {
+      "sha": "80c163670757a70290c2387e2c2c0d1501597a04",
+      "parents": [
+        "75659667a07c9d5171701f3e495a1e8dea800249"
+      ],
+      "date": "2026-11-21T16:03:57Z",
+      "message": "Add isolated CI for Witting rank-five decoder and optical resource falsifiers"
+    },
+    {
+      "sha": "75659667a07c9d5171701f3e495a1e8dea800249",
+      "parents": [
+        "edf3bd4329f4b0baa77ac3f56e9a884f139089a6"
+      ],
+      "date": "2026-11-21T16:03:11Z",
+      "message": "Freeze independent SDP decoder optical and calibration falsifier data"
+    },
+    {
+      "sha": "edf3bd4329f4b0baa77ac3f56e9a884f139089a6",
+      "parents": [
+        "8d329ff590988f77303b758b14941ec0960c6808"
+      ],
+      "date": "2026-11-21T16:02:30Z",
+      "message": "Check hardware disclaimer without false negative"
+    },
+    {
+      "sha": "8d329ff590988f77303b758b14941ec0960c6808",
+      "parents": [
+        "d04a9cd192a3e4e52a88fe7fd7f48dfe11c3a61a"
+      ],
+      "date": "2026-11-21T16:02:22Z",
+      "message": "Regression-test rank-five decoder, optical rails and 25-bin nuisance Fisher bounds"
+    },
+    {
+      "sha": "d04a9cd192a3e4e52a88fe7fd7f48dfe11c3a61a",
+      "parents": [
+        "bd33fa2fb813aff72fc776c4ae42e55968de8fbb"
+      ],
+      "date": "2026-11-21T16:01:41Z",
+      "message": "Construct rank-five near-optimal decoder and five independent Witting hardware falsifiers"
+    },
+    {
+      "sha": "bd33fa2fb813aff72fc776c4ae42e55968de8fbb",
+      "parents": [
+        "d4837d45ad3ac5557ee49c41830cc73abcb4034d"
+      ],
+      "date": "2026-11-21T15:47:39Z",
+      "message": "Document tested relational Witting dynamics, Petz dilation and detector Pareto design"
+    },
+    {
+      "sha": "d4837d45ad3ac5557ee49c41830cc73abcb4034d",
+      "parents": [
+        "7f90563d642ecadc5c56454f79b223957410b6a7"
+      ],
+      "date": "2026-11-21T15:45:56Z",
+      "message": "Freeze independent six-front Witting mathematical and numerical witnesses"
+    },
+    {
+      "sha": "7f90563d642ecadc5c56454f79b223957410b6a7",
+      "parents": [
+        "9fe5ad537dc208e8864203b8279afe382f039f26"
+      ],
+      "date": "2026-11-21T15:45:03Z",
+      "message": "Add 14 Witting relational, detector, optical and phase regression tests"
+    },
+    {
+      "sha": "9fe5ad537dc208e8864203b8279afe382f039f26",
+      "parents": [
+        "2f832bfd7a78ea405d22b52409ba748bb03cbfed"
+      ],
+      "date": "2026-11-21T15:44:39Z",
+      "message": "Fix array iterator use in independent Witting geometry check"
+    },
+    {
+      "sha": "2f832bfd7a78ea405d22b52409ba748bb03cbfed",
+      "parents": [
+        "0a39ebc501d6641e30b57d7e7de6689ef036f231"
+      ],
+      "date": "2026-11-21T15:44:01Z",
+      "message": "Certify relational Witting sector dynamics, Pareto detector and 10-mode Petz dilation"
+    },
+    {
+      "sha": "0a39ebc501d6641e30b57d7e7de6689ef036f231",
+      "parents": [
+        "775f79d120d48ae46f72c8bae8f44c465bbe25a2"
+      ],
+      "date": "2026-11-21T15:36:54Z",
+      "message": "Record five-front numerical results and workstation sync handoff"
+    },
+    {
+      "sha": "775f79d120d48ae46f72c8bae8f44c465bbe25a2",
+      "parents": [
+        "15384767cbde00457146d917e00f080c533886ff"
+      ],
+      "date": "2026-11-21T15:36:31Z",
+      "message": "Fix research report Markdown inline code formatting"
+    },
+    {
+      "sha": "15384767cbde00457146d917e00f080c533886ff",
+      "parents": [
+        "850e85d2b189f108e4956db5129463f6eebe2cc4"
+      ],
+      "date": "2026-11-21T15:35:57Z",
+      "message": "Document calibrated Witting Fisher, SDP recovery, four-qubit compiler and privacy MILP"
+    },
+    {
+      "sha": "850e85d2b189f108e4956db5129463f6eebe2cc4",
+      "parents": [
+        "83b736e8371abc7f7ab885105a928c50eda82881"
+      ],
+      "date": "2026-11-21T15:33:15Z",
+      "message": "Record Witting triangle phases and invalid magnitude-only control"
+    },
+    {
+      "sha": "83b736e8371abc7f7ab885105a928c50eda82881",
+      "parents": [
+        "ba6ab74b73bcb0be0926991fdb93c5bab88e3492"
+      ],
+      "date": "2026-11-21T15:32:06Z",
+      "message": "Add Witting defect controls and critical Gauss-ring benchmark"
+    },
+    {
+      "sha": "ba6ab74b73bcb0be0926991fdb93c5bab88e3492",
+      "parents": [
+        "1e45ad2f66a975bd86b3e0ea1c5f0d4f1d88f43f"
+      ],
+      "date": "2026-11-21T15:11:11Z",
+      "message": "Certify blinded Witting detector no-go Petz recovery and Gauss dynamics"
+    },
+    {
+      "sha": "1e45ad2f66a975bd86b3e0ea1c5f0d4f1d88f43f",
+      "parents": [
+        "4b5547b61f9052d2fd37e79592137b2214b4b7af"
+      ],
+      "date": "2026-11-21T15:00:32Z",
+      "message": "Prove single-photon Witting hidden-sector decoder and coherent capacity witnesses"
+    },
+    {
+      "sha": "4b5547b61f9052d2fd37e79592137b2214b4b7af",
+      "parents": [
+        "47af4e9a2796a9e30c741e8c25d2de5b781f9958"
+      ],
+      "date": "2026-11-21T14:25:24Z",
+      "message": "Certify positive Witting quantum capacity and six broader falsifiers"
+    },
+    {
+      "sha": "47af4e9a2796a9e30c741e8c25d2de5b781f9958",
+      "parents": [
+        "49ec61c41fbd0518123890d3ab802c8045eb4f1e"
+      ],
+      "date": "2026-11-21T14:14:55Z",
+      "message": "Prove full 45D complementarity of Witting deck and two-copy operators"
+    },
+    {
+      "sha": "49ec61c41fbd0518123890d3ab802c8045eb4f1e",
+      "parents": [
+        "79704c11e3e669a43948ededf2f45ce9bc98426f"
+      ],
+      "date": "2026-11-21T14:10:31Z",
+      "message": "Certify tight Witting photon frame and coherent nine-level channel"
+    },
+    {
+      "sha": "79704c11e3e669a43948ededf2f45ce9bc98426f",
+      "parents": [
+        "aaecaf0a33cc0317b232e664dd0124a5a1c83a5c"
+      ],
+      "date": "2026-11-21T13:46:01Z",
+      "message": "Simplify Witting eight-port loss benchmark implementation"
+    },
+    {
+      "sha": "aaecaf0a33cc0317b232e664dd0124a5a1c83a5c",
+      "parents": [
+        "b47deee97d55adc1fa5ba43bc36d2aadd1183689"
+      ],
+      "date": "2026-11-21T13:45:11Z",
+      "message": "Certify 24D Witting photon-coincidence kernel and five physical falsifiers"
+    },
+    {
+      "sha": "b47deee97d55adc1fa5ba43bc36d2aadd1183689",
+      "parents": [
+        "f0c8801464df329bc67fe951a7d7e98f2f3f1b08"
+      ],
+      "date": "2026-11-21T13:17:55Z",
+      "message": "Certify 27 Witting 5chart decks and finitegeometry mirror"
+    },
+    {
+      "sha": "f0c8801464df329bc67fe951a7d7e98f2f3f1b08",
+      "parents": [
+        "733f71a1c0b33aa502c98da51a4e0ed865875839"
+      ],
+      "date": "2026-11-21T13:04:00Z",
+      "message": "Certify Hermitian45 Witting Pauli double-SIC dictionary"
+    },
+    {
+      "sha": "733f71a1c0b33aa502c98da51a4e0ed865875839",
+      "parents": [
+        "a814f71eb65df66a7d43d4a5a241be573d534a70"
+      ],
+      "date": "2026-11-21T12:48:46Z",
+      "message": "G2-reflections-preserve-only-fixed-hexagon-lines"
+    },
+    {
+      "sha": "a814f71eb65df66a7d43d4a5a241be573d534a70",
+      "parents": [
+        "b2db30e57d10e710acb04956b984607b9c070b07"
+      ],
+      "date": "2026-11-21T12:44:53Z",
+      "message": "Prove odd-even Cayley-hexagon projection branch and nucleus dichotomy"
+    },
+    {
+      "sha": "b2db30e57d10e710acb04956b984607b9c070b07",
+      "parents": [
+        "80ece3246e55187c8f3d53af031a87b6aa1b51eb"
+      ],
+      "date": "2026-11-21T01:52:23Z",
+      "message": "Freeze independently tested fivefront vacuum, projection, phase and tomography certificate"
+    },
+    {
+      "sha": "80ece3246e55187c8f3d53af031a87b6aa1b51eb",
+      "parents": [
+        "e3306268f5a9bf7fdef9840a5995c3b695f88201"
+      ],
+      "date": "2026-11-21T01:52:04Z",
+      "message": "Document five executed TOE gates, corrected exact binomial test and physical boundaries"
+    },
+    {
+      "sha": "e3306268f5a9bf7fdef9840a5995c3b695f88201",
+      "parents": [
+        "3b0b30d79528173f17aa051bc0f36620701e5b9b"
+      ],
+      "date": "2026-11-21T01:50:54Z",
+      "message": "Regress exact size/power and avoid invalid 410-shot confidence claim"
+    },
+    {
+      "sha": "3b0b30d79528173f17aa051bc0f36620701e5b9b",
+      "parents": [
+        "8cfb0eb567a5b2fbf1984066fb5ed4f9d9edbef7"
+      ],
+      "date": "2026-11-21T01:50:47Z",
+      "message": "Correct Wigner shot comparison using exact controlled binomial tests"
+    },
+    {
+      "sha": "8cfb0eb567a5b2fbf1984066fb5ed4f9d9edbef7",
+      "parents": [
+        "e4e842eb78e70ba2871b9ed1f6a6f3a1b04b48a9"
+      ],
+      "date": "2026-11-21T01:49:11Z",
+      "message": "Regress 28 finite vacuum, G2, tomography, coherent phase, and continuum gates"
+    },
+    {
+      "sha": "e4e842eb78e70ba2871b9ed1f6a6f3a1b04b48a9",
+      "parents": [
+        "41f2b1a986a3b6f2bc638f4fd323ad2990589c2f"
+      ],
+      "date": "2026-11-21T01:48:55Z",
+      "message": "Test W33 chart action, all G2 projection centers, parity efficiency, E8 phase and metric limits"
+    },
+    {
+      "sha": "41f2b1a986a3b6f2bc638f4fd323ad2990589c2f",
+      "parents": [
+        "8dbcfe74faac61880e86d7c76a7e13a9e880a314"
+      ],
+      "date": "2026-11-21T01:39:31Z",
+      "message": "Freeze tested octonionic G2 and Witting mereology evidence"
+    },
+    {
+      "sha": "8dbcfe74faac61880e86d7c76a7e13a9e880a314",
+      "parents": [
+        "704855cf0915187456f607874d2e192d195a961c"
+      ],
+      "date": "2026-11-21T01:39:17Z",
+      "message": "Document fivefront Witting mereology, octonionic G2, Radon and symmetry falsifiers"
+    },
+    {
+      "sha": "704855cf0915187456f607874d2e192d195a961c",
+      "parents": [
+        "444045a729c2312d724d2ca4675ae6de55c90ee5"
+      ],
+      "date": "2026-11-21T01:38:35Z",
+      "message": "Test octonion G2 geometry, quantum mereology, Radon tomography and symmetry no-go"
+    },
+    {
+      "sha": "444045a729c2312d724d2ca4675ae6de55c90ee5",
+      "parents": [
+        "f2e4859b23ac955550bd34f02799d4a9679aec1c"
+      ],
+      "date": "2026-11-21T01:38:20Z",
+      "message": "Construct octonionic G2 hexagon and Witting state-chart/Radon quantum tests"
+    },
+    {
+      "sha": "f2e4859b23ac955550bd34f02799d4a9679aec1c",
+      "parents": [
+        "1fdca044ea47729af2626311d8fa6430104261c3"
+      ],
+      "date": "2026-11-21T01:27:17Z",
+      "message": "Map Witting rays to two-qutrit Wigner lines and all Clifford reflections"
+    },
+    {
+      "sha": "1fdca044ea47729af2626311d8fa6430104261c3",
+      "parents": [
+        "87564cb96873bf1d19190a26ff6b4f1cb0d2bada"
+      ],
+      "date": "2026-11-21T01:10:55Z",
+      "message": "Freeze six-label W33 and Q43 dual minimal-motif mathematical certificate"
+    },
+    {
+      "sha": "87564cb96873bf1d19190a26ff6b4f1cb0d2bada",
+      "parents": [
+        "c62b523f21f53f5a9f5a3f82e52853b62eee8cdd"
+      ],
+      "date": "2026-11-21T01:09:47Z",
+      "message": "Document six-point cospectral dual obstruction, odd-q proof and TOE limits"
+    },
+    {
+      "sha": "c62b523f21f53f5a9f5a3f82e52853b62eee8cdd",
+      "parents": [
+        "ec410b5d611fc3b2dc92ac1e3a092afbae94a2e3"
+      ],
+      "date": "2026-11-21T01:09:12Z",
+      "message": "Correct false W(3,3) self-duality assertion in Cartan geometry certificate"
+    },
+    {
+      "sha": "ec410b5d611fc3b2dc92ac1e3a092afbae94a2e3",
+      "parents": [
+        "ce5c5027d32eeb0efe727c8b71a4ff47b17afe09"
+      ],
+      "date": "2026-11-21T01:09:10Z",
+      "message": "Correct false W(3,3) self-duality assertion in Cartan geometry certificate"
+    },
+    {
+      "sha": "ce5c5027d32eeb0efe727c8b71a4ff47b17afe09",
+      "parents": [
+        "5d9ebc0bd338d99c087941d9b4a766df3309263c"
+      ],
+      "date": "2026-11-21T01:08:51Z",
+      "message": "Regress all five-vertex motif counts and odd-q K33 dual obstruction"
+    },
+    {
+      "sha": "5d9ebc0bd338d99c087941d9b4a766df3309263c",
+      "parents": [
+        "d0373dcf103f2d5a53c7d9b78d8d61f162f02d4b"
+      ],
+      "date": "2026-11-21T01:08:38Z",
+      "message": "Prove six-label W33/dual motif separator and 45 qutrit tensor frames"
+    },
+    {
+      "sha": "d0373dcf103f2d5a53c7d9b78d8d61f162f02d4b",
+      "parents": [
+        "beb04757b873d39e224b9fdba912f6f57e5b413e"
+      ],
+      "date": "2026-11-21T00:54:06Z",
+      "message": "Survey exceptional cubics, fusion 2-categories and W33 higher cohomology symmetry breaking"
+    },
+    {
+      "sha": "beb04757b873d39e224b9fdba912f6f57e5b413e",
+      "parents": [
+        "2ea1624ca3e858df17e29684f6223f12845e9a6f"
+      ],
+      "date": "2026-11-21T00:39:04Z",
+      "message": "Publish fully readable deep-five causal witness, tests and frozen numerical certificates"
+    },
+    {
+      "sha": "2ea1624ca3e858df17e29684f6223f12845e9a6f",
+      "parents": [
+        "1d997c21f0775c5e9e2f6adc24b207ae192577e8"
+      ],
+      "date": "2026-11-21T00:37:54Z",
+      "message": "Document verified deep-five source archive, checksums and replay commands"
+    },
+    {
+      "sha": "1d997c21f0775c5e9e2f6adc24b207ae192577e8",
+      "parents": [
+        "d4ca196977f93c2939f921698fb08f5e82c49083"
+      ],
+      "date": "2026-11-21T00:37:28Z",
+      "message": "Archive verified deep-five causal witness, gauge, optical and calibration source with regressions"
+    },
+    {
+      "sha": "d4ca196977f93c2939f921698fb08f5e82c49083",
+      "parents": [
+        "03523a2d1f8a18369ecbce73b4d109bf04e6ee22"
+      ],
+      "date": "2026-11-21T00:35:29Z",
+      "message": "Add exact causal witness, W33 coupling nonselection and five-front numerical findings"
+    },
+    {
+      "sha": "03523a2d1f8a18369ecbce73b4d109bf04e6ee22",
+      "parents": [
+        "88127950882918101708ecb9189cd2b3d3498c71"
+      ],
+      "date": "2026-11-21T00:17:46Z",
+      "message": "Test five TOE fronts: 18-mode optics, E6 anomaly kernel, calibrated CPTP controls and causal process"
+    },
+    {
+      "sha": "88127950882918101708ecb9189cd2b3d3498c71",
+      "parents": [
+        "36e7454040ba6938102178c7d2bd5defc491f46c"
+      ],
+      "date": "2026-11-20T23:58:02Z",
+      "message": "Test one-ensemble center certificate, E6 flux anomalies and 4D index resolution"
+    },
+    {
+      "sha": "36e7454040ba6938102178c7d2bd5defc491f46c",
+      "parents": [
+        "7417089287cc1cb0a1e718bcbdafe2f76127aa80"
+      ],
+      "date": "2026-11-20T23:37:09Z",
+      "message": "Reduce two-qutrit symplectic switch calibration to six phases with nonlinear holdout"
+    },
+    {
+      "sha": "7417089287cc1cb0a1e718bcbdafe2f76127aa80",
+      "parents": [
+        "b1065f344ce3d46d516f40ee0275bd1866f0dbdd"
+      ],
+      "date": "2026-11-20T23:33:29Z",
+      "message": "Certify W33 temporal-order commutators, projective triple chirality and SIC centrality"
+    },
+    {
+      "sha": "b1065f344ce3d46d516f40ee0275bd1866f0dbdd",
+      "parents": [
+        "142d3e65d4ecf864edaf7fe622a002ad4651bb96"
+      ],
+      "date": "2026-11-20T23:22:01Z",
+      "message": "Falsify terminal-boundary assumption: exact 640 plus 64 last-round CSS fault ambiguities"
+    },
+    {
+      "sha": "142d3e65d4ecf864edaf7fe622a002ad4651bb96",
+      "parents": [
+        "f9685d73c897f1fde12b15667aff5defb388ea37"
+      ],
+      "date": "2026-11-20T23:20:16Z",
+      "message": "Test five TOE gates: ternary syndrome spacetime, chiral index, causal density, SU3 Ramsey and memory confidence"
+    },
+    {
+      "sha": "f9685d73c897f1fde12b15667aff5defb388ea37",
+      "parents": [
+        "e2fd2f362d765f43a0fa9e5c08105cb72e7ef50c"
+      ],
+      "date": "2026-11-20T23:05:41Z",
+      "message": "Freeze independently reproduced graph-girth/repetition CSS certificates"
+    },
+    {
+      "sha": "e2fd2f362d765f43a0fa9e5c08105cb72e7ef50c",
+      "parents": [
+        "064ee1e36b67e602f8b65618bb57b6fa728b0f15"
+      ],
+      "date": "2026-11-20T23:05:03Z",
+      "message": "Unify graph girth and repetition length into exact balanced ternary CSS family"
+    },
+    {
+      "sha": "064ee1e36b67e602f8b65618bb57b6fa728b0f15",
+      "parents": [
+        "293fb0405a58a2e3fa9901c029a524ffe32cbc26"
+      ],
+      "date": "2026-11-20T23:03:43Z",
+      "message": "Audit 638-qutrit single-error syndrome uniqueness and H27/SU3 center quotient; add six-front consistency review"
+    },
+    {
+      "sha": "293fb0405a58a2e3fa9901c029a524ffe32cbc26",
+      "parents": [
+        "31d247e0c3d04ec828ced9c22f7a454005d0ce2c"
+      ],
+      "date": "2026-11-20T23:02:27Z",
+      "message": "Execute five TOE stress tests and certify adjustable Levi qutrit distance dial"
+    }
+  ]
+}
