@@ -1,0 +1,460 @@
+{
+  "status": "PASS",
+  "determinant": {
+    "zeta4": 1.082323233710861,
+    "alternating_ratio": -0.8750000000002245,
+    "short_axis_coefficient": 0.21932454224637404,
+    "rows": [
+      {
+        "real_scalars": 0,
+        "dirac_fermions": 1,
+        "periodic_logZ_coefficient": -2,
+        "antiperiodic_logZ_coefficient": 1.75,
+        "logZ_sum_dominant": 1.75
+      },
+      {
+        "real_scalars": 0,
+        "dirac_fermions": 2,
+        "periodic_logZ_coefficient": -4,
+        "antiperiodic_logZ_coefficient": 3.5,
+        "logZ_sum_dominant": 3.5
+      },
+      {
+        "real_scalars": 0,
+        "dirac_fermions": 4,
+        "periodic_logZ_coefficient": -8,
+        "antiperiodic_logZ_coefficient": 7,
+        "logZ_sum_dominant": 7
+      },
+      {
+        "real_scalars": 1,
+        "dirac_fermions": 1,
+        "periodic_logZ_coefficient": -1.5,
+        "antiperiodic_logZ_coefficient": 2.25,
+        "logZ_sum_dominant": 2.25
+      },
+      {
+        "real_scalars": 1,
+        "dirac_fermions": 2,
+        "periodic_logZ_coefficient": -3.5,
+        "antiperiodic_logZ_coefficient": 4,
+        "logZ_sum_dominant": 4
+      },
+      {
+        "real_scalars": 1,
+        "dirac_fermions": 4,
+        "periodic_logZ_coefficient": -7.5,
+        "antiperiodic_logZ_coefficient": 7.5,
+        "logZ_sum_dominant": 7.5
+      },
+      {
+        "real_scalars": 4,
+        "dirac_fermions": 1,
+        "periodic_logZ_coefficient": 0,
+        "antiperiodic_logZ_coefficient": 3.75,
+        "logZ_sum_dominant": 3.75
+      },
+      {
+        "real_scalars": 4,
+        "dirac_fermions": 2,
+        "periodic_logZ_coefficient": -2,
+        "antiperiodic_logZ_coefficient": 5.5,
+        "logZ_sum_dominant": 5.5
+      },
+      {
+        "real_scalars": 4,
+        "dirac_fermions": 4,
+        "periodic_logZ_coefficient": -6,
+        "antiperiodic_logZ_coefficient": 9,
+        "logZ_sum_dominant": 9
+      },
+      {
+        "real_scalars": 8,
+        "dirac_fermions": 1,
+        "periodic_logZ_coefficient": 2,
+        "antiperiodic_logZ_coefficient": 5.75,
+        "logZ_sum_dominant": 5.75
+      },
+      {
+        "real_scalars": 8,
+        "dirac_fermions": 2,
+        "periodic_logZ_coefficient": 0,
+        "antiperiodic_logZ_coefficient": 7.5,
+        "logZ_sum_dominant": 7.5
+      },
+      {
+        "real_scalars": 8,
+        "dirac_fermions": 4,
+        "periodic_logZ_coefficient": -4,
+        "antiperiodic_logZ_coefficient": 11,
+        "logZ_sum_dominant": 11
+      }
+    ],
+    "discrete_Z9_holonomy": [
+      0.9999999999888574,
+      0.7073616826705185,
+      0.10379515317788736,
+      -0.48148148148159853,
+      -0.8289894833106833,
+      -0.8289894833106833,
+      -0.4814814814815992,
+      0.10379515317788693,
+      0.7073616826705182
+    ],
+    "holonomy_mean": 0.00015241578901155814,
+    "scope": "4D Euclidean fixed-volume flat torus, positive masses, vectorlike Dirac absolute determinant, real boson. Leading short-cycle contribution; gauge ghost counting separate, no full chiral measure."
+  },
+  "ternary_code": {
+    "rows": [
+      {
+        "L": 3,
+        "physical_qutrits": 54,
+        "logical_qutrits": 10,
+        "weight": 10,
+        "maximum_defects": 8,
+        "final_defects": 0,
+        "projection_weight": 3,
+        "rank_check": {
+          "rank_per_check": 22,
+          "k": 10
+        }
+      },
+      {
+        "L": 9,
+        "physical_qutrits": 1458,
+        "logical_qutrits": 34,
+        "weight": 100,
+        "maximum_defects": 13,
+        "final_defects": 0,
+        "projection_weight": 9,
+        "rank_check": {
+          "rank_per_check": 712,
+          "k": 34
+        }
+      },
+      {
+        "L": 27,
+        "physical_qutrits": 39366,
+        "logical_qutrits": 106,
+        "weight": 1000,
+        "maximum_defects": 19,
+        "final_defects": 0,
+        "projection_weight": 27,
+        "rank_check": null
+      },
+      {
+        "L": 81,
+        "physical_qutrits": 1062882,
+        "logical_qutrits": 322,
+        "weight": 10000,
+        "maximum_defects": 24,
+        "final_defects": 0,
+        "projection_weight": 81,
+        "rank_check": null
+      },
+      {
+        "L": 243,
+        "physical_qutrits": 28697814,
+        "logical_qutrits": 970,
+        "weight": 100000,
+        "maximum_defects": 30,
+        "final_defects": 0,
+        "projection_weight": 243,
+        "rank_check": null
+      }
+    ],
+    "monomial_digit_count": 10,
+    "F9_affine_roots": [
+      [
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    ],
+    "scope": "Translation invariant qutrit CSS polynomial model; charge no-binomial test on infinite lattice, not general finite-width logical no-string theorem or thermal stability."
+  },
+  "polarity": {
+    "projective_forms": 364,
+    "degenerate": 130,
+    "nondegenerate": 234,
+    "pfaffian_classes": {
+      "1": 117,
+      "2": 117
+    },
+    "pair_intersection_histogram": {
+      "10": 12636,
+      "13": 9360,
+      "16": 5265
+    },
+    "byClass": {
+      "same:13": 9360,
+      "opposite:16": 5265,
+      "same:10": 4212,
+      "opposite:10": 8424
+    },
+    "selected_isotropic_lines": 40,
+    "ferromagnet_two_site_symmetric_block": [
+      {
+        "h": 0,
+        "ground_energy_symmetric_block": -1,
+        "aligned_probability": 1
+      },
+      {
+        "h": 0.1,
+        "ground_energy_symmetric_block": -1.0021310752844172,
+        "aligned_probability": 0.999475701331068
+      },
+      {
+        "h": 0.5,
+        "ground_energy_symmetric_block": -1.0924500327042048,
+        "aligned_probability": 0.5462250163521023
+      },
+      {
+        "h": 1,
+        "ground_energy_symmetric_block": -2.016811394121702,
+        "aligned_probability": 0.03280249971398147
+      },
+      {
+        "h": 2,
+        "ground_energy_symmetric_block": -4.011353047500164,
+        "aligned_probability": 0.015066328070573953
+      },
+      {
+        "h": 4,
+        "ground_energy_symmetric_block": -8.009754417103292,
+        "aligned_probability": 0.01113047754831853
+      }
+    ],
+    "scope": "Chosen order-parameter register with invariant ferromagnet; no anyon condensation of nonbosonic selector, no dynamical preference between Pfaffian sectors."
+  },
+  "gravity": {
+    "axial_tensor_rank": 3,
+    "augmented_tensor_rank": 6,
+    "axial_TT_rank": 1,
+    "augmented_TT_rank": 2,
+    "scalar_shear_susceptibility": [
+      {
+        "nu": 0,
+        "plus": 0.03098646452835996,
+        "cross": 0.008228470082308896,
+        "mixed": -3.683024741024254e-20
+      },
+      {
+        "nu": 0.5,
+        "plus": 0.030650072011676036,
+        "cross": 0.008129758109406873,
+        "mixed": 2.889323497856336e-20
+      },
+      {
+        "nu": 1,
+        "plus": 0.02968818942380879,
+        "cross": 0.007849739210134488,
+        "mixed": -2.2116971400528953e-20
+      },
+      {
+        "nu": 2,
+        "plus": 0.026421505672838786,
+        "cross": 0.006920106939982952,
+        "mixed": -1.6099900315959516e-19
+      },
+      {
+        "nu": 4,
+        "plus": 0.018519032201064517,
+        "cross": 0.004768857921505328,
+        "mixed": 3.66733894570473e-20
+      }
+    ],
+    "scope": "Homogeneous q=0 shear control in cubic oscillator lattice, distinct finite-spacing vertices; no general diffeo Ward identity or induced graviton. Bare stiffness tuning required."
+  },
+  "rotor": {
+    "pair_gram_diagonal": 16,
+    "pair_gram_checks": 100,
+    "rotor_dimension": 11,
+    "fermion_dimension_truncated": 529,
+    "full_truncated_dimension": 5819,
+    "rows": [
+      {
+        "rotor_gap": 0.5,
+        "g": 0.1,
+        "ground": -0.22169905660283018,
+        "next": -0.03017851452243797,
+        "gap": 0.1915205420803922,
+        "vector_multiplicity": 10,
+        "pair_probability": 0.23500052999840998
+      },
+      {
+        "rotor_gap": 0.5,
+        "g": 0.5,
+        "ground": -1.7655644370746373,
+        "next": -0.43007352543677213,
+        "gap": 1.3354909116378653,
+        "vector_multiplicity": 10,
+        "pair_probability": 0.4379826327053958
+      },
+      {
+        "rotor_gap": 0.5,
+        "g": 1,
+        "ground": -3.7578048854703496,
+        "next": -1.0393796958227626,
+        "gap": 2.7184251896475873,
+        "vector_multiplicity": 10,
+        "pair_probability": 0.46881085692240976
+      },
+      {
+        "rotor_gap": 0.5,
+        "g": 2,
+        "ground": -7.753905296791061,
+        "next": -2.2921447637772325,
+        "gap": 5.461760533013829,
+        "vector_multiplicity": 10,
+        "pair_probability": 0.4843826238111394
+      },
+      {
+        "rotor_gap": 1,
+        "g": 0.1,
+        "ground": -0.1403124237432849,
+        "next": -0.015751878329105073,
+        "gap": 0.12456054541417982,
+        "vector_multiplicity": 10,
+        "pair_probability": 0.10956559527848486
+      },
+      {
+        "rotor_gap": 1,
+        "g": 0.5,
+        "ground": -1.5615528128088303,
+        "next": -0.3062257748298549,
+        "gap": 1.2553270379789754,
+        "vector_multiplicity": 10,
+        "pair_probability": 0.3787321874818335
+      },
+      {
+        "rotor_gap": 1,
+        "g": 1,
+        "ground": -3.5311288741492746,
+        "next": -0.8601470508735443,
+        "gap": 2.6709818232757305,
+        "vector_multiplicity": 10,
+        "pair_probability": 0.4379826327053958
+      },
+      {
+        "rotor_gap": 1,
+        "g": 2,
+        "ground": -7.515609770940699,
+        "next": -2.078759391645525,
+        "gap": 5.436850379295175,
+        "vector_multiplicity": 10,
+        "pair_probability": 0.46881085692240976
+      },
+      {
+        "rotor_gap": 2,
+        "g": 0.1,
+        "ground": -0.07703296142690097,
+        "next": -0.007968253468332298,
+        "gap": 0.06906470795856867,
+        "vector_multiplicity": 10,
+        "pair_probability": 0.035761654557370404
+      },
+      {
+        "rotor_gap": 2,
+        "g": 0.5,
+        "ground": -1.2360679774997898,
+        "next": -0.18321595661992318,
+        "gap": 1.0528520208798666,
+        "vector_multiplicity": 10,
+        "pair_probability": 0.27639320225002106
+      },
+      {
+        "rotor_gap": 2,
+        "g": 1,
+        "ground": -3.1231056256176606,
+        "next": -0.6124515496597098,
+        "gap": 2.5106540759579508,
+        "vector_multiplicity": 10,
+        "pair_probability": 0.3787321874818335
+      },
+      {
+        "rotor_gap": 2,
+        "g": 2,
+        "ground": -7.062257748298549,
+        "next": -1.7202941017470885,
+        "gap": 5.341963646551461,
+        "vector_multiplicity": 10,
+        "pair_probability": 0.4379826327053958
+      },
+      {
+        "rotor_gap": 4,
+        "g": 0.1,
+        "ground": -0.03960780543711406,
+        "next": -0.003996007980055616,
+        "gap": 0.03561179745705845,
+        "vector_multiplicity": 10,
+        "pair_probability": 0.009709662154539944
+      },
+      {
+        "rotor_gap": 4,
+        "g": 0.5,
+        "ground": -0.8284271247461903,
+        "next": -0.09761769634030326,
+        "gap": 0.730809428405887,
+        "vector_multiplicity": 10,
+        "pair_probability": 0.14644660940672627
+      },
+      {
+        "rotor_gap": 4,
+        "g": 1,
+        "ground": -2.4721359549995796,
+        "next": -0.36643191323984636,
+        "gap": 2.1057040417597332,
+        "vector_multiplicity": 10,
+        "pair_probability": 0.27639320225002106
+      },
+      {
+        "rotor_gap": 4,
+        "g": 2,
+        "ground": -6.246211251235321,
+        "next": -1.2249030993194197,
+        "gap": 5.0213081519159015,
+        "vector_multiplicity": 10,
+        "pair_probability": 0.3787321874818335
+      }
+    ],
+    "two_site_gap_bound": [
+      {
+        "J": 0,
+        "lower_bound": 2.6709818232757305
+      },
+      {
+        "J": 0.25,
+        "lower_bound": 2.1709818232757305
+      },
+      {
+        "J": 0.5,
+        "lower_bound": 1.6709818232757305
+      }
+    ],
+    "scope": "Exactly diagonalized symmetry-preserving projected on-site rotor (l<=1) and 0,1,2 fermions, no Weyl hopping or full rotor. Two-site perturbation bound, no thermodynamic gap."
+  }
+}
