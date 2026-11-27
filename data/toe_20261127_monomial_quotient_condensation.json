@@ -1,0 +1,677 @@
+{
+  "larger_symmetry": {
+    "order": 648,
+    "element_order_histogram": {
+      "1": 1,
+      "2": 45,
+      "3": 98,
+      "4": 162,
+      "6": 198,
+      "9": 144
+    },
+    "free_order3_elements": 84,
+    "free_types": {
+      "diagonal": 12,
+      "three_cycle": 72
+    },
+    "free_cyclic_subgroups": 42,
+    "commuting_pairs": 408,
+    "order9_elementary_candidates": 19,
+    "free_elementary_order9": 0,
+    "free_cyclic_order9": 0,
+    "conjugacy_orbits": [
+      {
+        "size": 6,
+        "example": {
+          "p": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "v": [
+            2,
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "size": 36,
+        "example": {
+          "p": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "v": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "scope": "simultaneous projective monomial/contragredient action at lambda=1; not full Aut(X)"
+  },
+  "electric_condensation": {
+    "surviving_parent_sectors": 29,
+    "confined_or_absent_parent_sectors": 76,
+    "child_sectors": 9,
+    "child_lift_count": [
+      5,
+      5,
+      5,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "vacuum_algebra_dimension": 9,
+    "branches": [
+      {
+        "parent": {
+          "flux": [
+            0,
+            0,
+            0
+          ],
+          "kind": "linear",
+          "a": 0,
+          "b": 0,
+          "d": 1
+        },
+        "outputs": [
+          {
+            "flux": 0,
+            "charge": 0,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            0,
+            0,
+            0
+          ],
+          "kind": "linear",
+          "a": 1,
+          "b": 0,
+          "d": 1
+        },
+        "outputs": [
+          {
+            "flux": 0,
+            "charge": 1,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            0,
+            0,
+            0
+          ],
+          "kind": "linear",
+          "a": 2,
+          "b": 0,
+          "d": 1
+        },
+        "outputs": [
+          {
+            "flux": 0,
+            "charge": 2,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            0,
+            0,
+            0
+          ],
+          "kind": "linear",
+          "a": 0,
+          "b": 1,
+          "d": 1
+        },
+        "outputs": [
+          {
+            "flux": 0,
+            "charge": 0,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            0,
+            0,
+            0
+          ],
+          "kind": "linear",
+          "a": 1,
+          "b": 1,
+          "d": 1
+        },
+        "outputs": [
+          {
+            "flux": 0,
+            "charge": 1,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            0,
+            0,
+            0
+          ],
+          "kind": "linear",
+          "a": 2,
+          "b": 1,
+          "d": 1
+        },
+        "outputs": [
+          {
+            "flux": 0,
+            "charge": 2,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            0,
+            0,
+            0
+          ],
+          "kind": "linear",
+          "a": 0,
+          "b": 2,
+          "d": 1
+        },
+        "outputs": [
+          {
+            "flux": 0,
+            "charge": 0,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            0,
+            0,
+            0
+          ],
+          "kind": "linear",
+          "a": 1,
+          "b": 2,
+          "d": 1
+        },
+        "outputs": [
+          {
+            "flux": 0,
+            "charge": 1,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            0,
+            0,
+            0
+          ],
+          "kind": "linear",
+          "a": 2,
+          "b": 2,
+          "d": 1
+        },
+        "outputs": [
+          {
+            "flux": 0,
+            "charge": 2,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            0,
+            0,
+            0
+          ],
+          "kind": "schrodinger",
+          "c": 1,
+          "d": 3
+        },
+        "outputs": [
+          {
+            "flux": 0,
+            "charge": 0,
+            "multiplicity": 1
+          },
+          {
+            "flux": 0,
+            "charge": 1,
+            "multiplicity": 1
+          },
+          {
+            "flux": 0,
+            "charge": 2,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            0,
+            0,
+            0
+          ],
+          "kind": "schrodinger",
+          "c": 2,
+          "d": 3
+        },
+        "outputs": [
+          {
+            "flux": 0,
+            "charge": 0,
+            "multiplicity": 1
+          },
+          {
+            "flux": 0,
+            "charge": 1,
+            "multiplicity": 1
+          },
+          {
+            "flux": 0,
+            "charge": 2,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            1,
+            0,
+            0
+          ],
+          "kind": "noncentral",
+          "t": 0,
+          "c": 0,
+          "d": 3
+        },
+        "outputs": [
+          {
+            "flux": 1,
+            "charge": 0,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            1,
+            0,
+            0
+          ],
+          "kind": "noncentral",
+          "t": 0,
+          "c": 1,
+          "d": 3
+        },
+        "outputs": [
+          {
+            "flux": 1,
+            "charge": 0,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            1,
+            0,
+            0
+          ],
+          "kind": "noncentral",
+          "t": 0,
+          "c": 2,
+          "d": 3
+        },
+        "outputs": [
+          {
+            "flux": 1,
+            "charge": 0,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            1,
+            0,
+            0
+          ],
+          "kind": "noncentral",
+          "t": 1,
+          "c": 0,
+          "d": 3
+        },
+        "outputs": [
+          {
+            "flux": 1,
+            "charge": 1,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            1,
+            0,
+            0
+          ],
+          "kind": "noncentral",
+          "t": 1,
+          "c": 1,
+          "d": 3
+        },
+        "outputs": [
+          {
+            "flux": 1,
+            "charge": 1,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            1,
+            0,
+            0
+          ],
+          "kind": "noncentral",
+          "t": 1,
+          "c": 2,
+          "d": 3
+        },
+        "outputs": [
+          {
+            "flux": 1,
+            "charge": 1,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            1,
+            0,
+            0
+          ],
+          "kind": "noncentral",
+          "t": 2,
+          "c": 0,
+          "d": 3
+        },
+        "outputs": [
+          {
+            "flux": 1,
+            "charge": 2,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            1,
+            0,
+            0
+          ],
+          "kind": "noncentral",
+          "t": 2,
+          "c": 1,
+          "d": 3
+        },
+        "outputs": [
+          {
+            "flux": 1,
+            "charge": 2,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            1,
+            0,
+            0
+          ],
+          "kind": "noncentral",
+          "t": 2,
+          "c": 2,
+          "d": 3
+        },
+        "outputs": [
+          {
+            "flux": 1,
+            "charge": 2,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            2,
+            0,
+            0
+          ],
+          "kind": "noncentral",
+          "t": 0,
+          "c": 0,
+          "d": 3
+        },
+        "outputs": [
+          {
+            "flux": 2,
+            "charge": 0,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            2,
+            0,
+            0
+          ],
+          "kind": "noncentral",
+          "t": 0,
+          "c": 1,
+          "d": 3
+        },
+        "outputs": [
+          {
+            "flux": 2,
+            "charge": 0,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            2,
+            0,
+            0
+          ],
+          "kind": "noncentral",
+          "t": 0,
+          "c": 2,
+          "d": 3
+        },
+        "outputs": [
+          {
+            "flux": 2,
+            "charge": 0,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            2,
+            0,
+            0
+          ],
+          "kind": "noncentral",
+          "t": 1,
+          "c": 0,
+          "d": 3
+        },
+        "outputs": [
+          {
+            "flux": 2,
+            "charge": 2,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            2,
+            0,
+            0
+          ],
+          "kind": "noncentral",
+          "t": 1,
+          "c": 1,
+          "d": 3
+        },
+        "outputs": [
+          {
+            "flux": 2,
+            "charge": 2,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            2,
+            0,
+            0
+          ],
+          "kind": "noncentral",
+          "t": 1,
+          "c": 2,
+          "d": 3
+        },
+        "outputs": [
+          {
+            "flux": 2,
+            "charge": 2,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            2,
+            0,
+            0
+          ],
+          "kind": "noncentral",
+          "t": 2,
+          "c": 0,
+          "d": 3
+        },
+        "outputs": [
+          {
+            "flux": 2,
+            "charge": 1,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            2,
+            0,
+            0
+          ],
+          "kind": "noncentral",
+          "t": 2,
+          "c": 1,
+          "d": 3
+        },
+        "outputs": [
+          {
+            "flux": 2,
+            "charge": 1,
+            "multiplicity": 1
+          }
+        ]
+      },
+      {
+        "parent": {
+          "flux": [
+            2,
+            0,
+            0
+          ],
+          "kind": "noncentral",
+          "t": 2,
+          "c": 2,
+          "d": 3
+        },
+        "outputs": [
+          {
+            "flux": 2,
+            "charge": 1,
+            "multiplicity": 1
+          }
+        ]
+      }
+    ]
+  }
+}
