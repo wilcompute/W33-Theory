@@ -1,0 +1,283 @@
+{
+  "instruction": {
+    "T_round_trip": {
+      "branches": 81,
+      "basis_checks": 243,
+      "physical_T_power": 7,
+      "scope": "Ideal logical parity teleportations with selected source reset in X eigenstate and correction before T, return to same memory logical subsystem."
+    },
+    "CCZ_frame_tests": 19683,
+    "T_frame_clifford": [
+      {
+        "shift": 0,
+        "global_zeta9_exponent": 0,
+        "quadratic": 0,
+        "linear": 0
+      },
+      {
+        "shift": 1,
+        "global_zeta9_exponent": 1,
+        "quadratic": 1,
+        "linear": 1
+      },
+      {
+        "shift": 2,
+        "global_zeta9_exponent": 8,
+        "quadratic": 2,
+        "linear": 1
+      }
+    ],
+    "interface_support_erasure": {
+      "patterns": 256,
+      "correctable": 225,
+      "uncorrectable": 31,
+      "independent_loss_examples": [
+        {
+          "p": 0.001,
+          "fail": 1.9999999999990003e-12
+        },
+        {
+          "p": 0.01,
+          "fail": 1.9999999900000002e-8
+        },
+        {
+          "p": 0.05,
+          "fail": 0.000012499960937500003
+        },
+        {
+          "p": 0.1,
+          "fail": 0.00019999000000000004
+        }
+      ],
+      "scope": "Only loss on two selected weight-four supports; restricted syndrome kernels from earlier exact rank certificate. No ancilla loss recovery, no loss elsewhere, no FT claim."
+    },
+    "postselection_budget": {
+      "joint_Z_rounds": 3,
+      "locations_per_joint_parity": 180,
+      "additional_source_X_measurements": "required on both legs",
+      "T_data_gates": 40
+    },
+    "scope": "Ideal end-to-end logical T and Clifford frame certificates. Does not simulate the noisy end-to-end instruction."
+  },
+  "geometry": {
+    "rows": [
+      {
+        "matter_beta": 0.1,
+        "beta": 0.265,
+        "mu": 0,
+        "gauge_log_torus_over_rook": -0.0061324272990406214,
+        "matter_log_torus_over_rook": -8.418046669890064e-8,
+        "total": -0.00613251147950732,
+        "torus_probability_equal_graph_prior": 0.4984668769348891
+      },
+      {
+        "matter_beta": 0.1,
+        "beta": 0.265,
+        "mu": 1,
+        "gauge_log_torus_over_rook": 1.3165389430757282,
+        "matter_log_torus_over_rook": -8.418046669890064e-8,
+        "total": 1.3165388588952616,
+        "torus_probability_equal_graph_prior": 0.7886052864750046
+      },
+      {
+        "matter_beta": 0.1,
+        "beta": 0.37,
+        "mu": 0,
+        "gauge_log_torus_over_rook": -0.024691036683726963,
+        "matter_log_torus_over_rook": -8.418046669890064e-8,
+        "total": -0.02469112086419366,
+        "torus_probability_equal_graph_prior": 0.49382753336853435
+      },
+      {
+        "matter_beta": 0.1,
+        "beta": 0.37,
+        "mu": 1,
+        "gauge_log_torus_over_rook": 1.1297311162822776,
+        "matter_log_torus_over_rook": -8.418046669890064e-8,
+        "total": 1.129731032101811,
+        "torus_probability_equal_graph_prior": 0.7557892586063643
+      },
+      {
+        "matter_beta": 0.1,
+        "beta": 0.512,
+        "mu": 0,
+        "gauge_log_torus_over_rook": -0.09507585819581799,
+        "matter_log_torus_over_rook": -8.418046669890064e-8,
+        "total": -0.09507594237628468,
+        "torus_probability_equal_graph_prior": 0.476248903085413
+      },
+      {
+        "matter_beta": 0.1,
+        "beta": 0.512,
+        "mu": 1,
+        "gauge_log_torus_over_rook": 0.8225702739078642,
+        "matter_log_torus_over_rook": -8.418046669890064e-8,
+        "total": 0.8225701897273975,
+        "torus_probability_equal_graph_prior": 0.6947816475185703
+      },
+      {
+        "matter_beta": 0.5,
+        "beta": 0.265,
+        "mu": 0,
+        "gauge_log_torus_over_rook": -0.0061324272990406214,
+        "matter_log_torus_over_rook": -0.00029329021845643527,
+        "total": -0.0064257175174970566,
+        "torus_probability_equal_graph_prior": 0.498393576148038
+      },
+      {
+        "matter_beta": 0.5,
+        "beta": 0.265,
+        "mu": 1,
+        "gauge_log_torus_over_rook": 1.3165389430757282,
+        "matter_log_torus_over_rook": -0.00029329021845643527,
+        "total": 1.3162456528572717,
+        "torus_probability_equal_graph_prior": 0.7885564028431441
+      },
+      {
+        "matter_beta": 0.5,
+        "beta": 0.37,
+        "mu": 0,
+        "gauge_log_torus_over_rook": -0.024691036683726963,
+        "matter_log_torus_over_rook": -0.00029329021845643527,
+        "total": -0.0249843269021834,
+        "torus_probability_equal_graph_prior": 0.49375424316316074
+      },
+      {
+        "matter_beta": 0.5,
+        "beta": 0.37,
+        "mu": 1,
+        "gauge_log_torus_over_rook": 1.1297311162822776,
+        "matter_log_torus_over_rook": -0.00029329021845643527,
+        "total": 1.1294378260638211,
+        "torus_probability_equal_graph_prior": 0.7557351369653031
+      },
+      {
+        "matter_beta": 0.5,
+        "beta": 0.512,
+        "mu": 0,
+        "gauge_log_torus_over_rook": -0.09507585819581799,
+        "matter_log_torus_over_rook": -0.00029329021845643527,
+        "total": -0.09536914841427442,
+        "torus_probability_equal_graph_prior": 0.4761757674875615
+      },
+      {
+        "matter_beta": 0.5,
+        "beta": 0.512,
+        "mu": 1,
+        "gauge_log_torus_over_rook": 0.8225702739078642,
+        "matter_log_torus_over_rook": -0.00029329021845643527,
+        "total": 0.8222769836894077,
+        "torus_probability_equal_graph_prior": 0.6947194666631882
+      },
+      {
+        "matter_beta": 1,
+        "beta": 0.265,
+        "mu": 0,
+        "gauge_log_torus_over_rook": -0.0061324272990406214,
+        "matter_log_torus_over_rook": -0.0003184084201416692,
+        "total": -0.00645083571918229,
+        "torus_probability_equal_graph_prior": 0.4983872966626904
+      },
+      {
+        "matter_beta": 1,
+        "beta": 0.265,
+        "mu": 1,
+        "gauge_log_torus_over_rook": 1.3165389430757282,
+        "matter_log_torus_over_rook": -0.0003184084201416692,
+        "total": 1.3162205346555864,
+        "torus_probability_equal_graph_prior": 0.7885522147243473
+      },
+      {
+        "matter_beta": 1,
+        "beta": 0.37,
+        "mu": 0,
+        "gauge_log_torus_over_rook": -0.024691036683726963,
+        "matter_log_torus_over_rook": -0.0003184084201416692,
+        "total": -0.025009445103868634,
+        "torus_probability_equal_graph_prior": 0.4937479645935728
+      },
+      {
+        "matter_beta": 1,
+        "beta": 0.37,
+        "mu": 1,
+        "gauge_log_torus_over_rook": 1.1297311162822776,
+        "matter_log_torus_over_rook": -0.0003184084201416692,
+        "total": 1.1294127078621359,
+        "torus_probability_equal_graph_prior": 0.7557305001270485
+      },
+      {
+        "matter_beta": 1,
+        "beta": 0.512,
+        "mu": 0,
+        "gauge_log_torus_over_rook": -0.09507585819581799,
+        "matter_log_torus_over_rook": -0.0003184084201416692,
+        "total": -0.09539426661595965,
+        "torus_probability_equal_graph_prior": 0.47616950219783183
+      },
+      {
+        "matter_beta": 1,
+        "beta": 0.512,
+        "mu": 1,
+        "gauge_log_torus_over_rook": 0.8225702739078642,
+        "matter_log_torus_over_rook": -0.0003184084201416692,
+        "total": 0.8222518654877226,
+        "torus_probability_equal_graph_prior": 0.6947141394601754
+      },
+      {
+        "matter_beta": 2,
+        "beta": 0.265,
+        "mu": 0,
+        "gauge_log_torus_over_rook": -0.0061324272990406214,
+        "matter_log_torus_over_rook": -0.000003165050065695502,
+        "total": -0.006135592349106317,
+        "torus_probability_equal_graph_prior": 0.49846610672473457
+      },
+      {
+        "matter_beta": 2,
+        "beta": 0.265,
+        "mu": 1,
+        "gauge_log_torus_over_rook": 1.3165389430757282,
+        "matter_log_torus_over_rook": -0.000003165050065695502,
+        "total": 1.3165357780256626,
+        "torus_probability_equal_graph_prior": 0.7886047728720547
+      },
+      {
+        "matter_beta": 2,
+        "beta": 0.37,
+        "mu": 0,
+        "gauge_log_torus_over_rook": -0.024691036683726963,
+        "matter_log_torus_over_rook": -0.000003165050065695502,
+        "total": -0.024694201733792658,
+        "torus_probability_equal_graph_prior": 0.49382676326852837
+      },
+      {
+        "matter_beta": 2,
+        "beta": 0.37,
+        "mu": 1,
+        "gauge_log_torus_over_rook": 1.1297311162822776,
+        "matter_log_torus_over_rook": -0.000003165050065695502,
+        "total": 1.129727951232212,
+        "torus_probability_equal_graph_prior": 0.7557886899640986
+      },
+      {
+        "matter_beta": 2,
+        "beta": 0.512,
+        "mu": 0,
+        "gauge_log_torus_over_rook": -0.09507585819581799,
+        "matter_log_torus_over_rook": -0.000003165050065695502,
+        "total": -0.09507902324588369,
+        "torus_probability_equal_graph_prior": 0.47624813460603305
+      },
+      {
+        "matter_beta": 2,
+        "beta": 0.512,
+        "mu": 1,
+        "gauge_log_torus_over_rook": 0.8225702739078642,
+        "matter_log_torus_over_rook": -0.000003165050065695502,
+        "total": 0.8225671088577985,
+        "torus_probability_equal_graph_prior": 0.6947809941886329
+      }
+    ],
+    "scope": "Two candidate graphs with equal prior and factorized two-excitation swap matter and gauge partition factors; no dynamical matter-gauge coupling. Matter spectra independently diagonalized and checked against trace sixth moments."
+  }
+}
