@@ -1,0 +1,880 @@
+{
+  "geometry": {
+    "group_order": 27,
+    "center": [
+      0,
+      1,
+      2
+    ],
+    "subgroup_orders": {
+      "1": 1,
+      "3": 13,
+      "9": 4,
+      "27": 1
+    },
+    "free_subgroups": [
+      [
+        0
+      ],
+      [
+        0,
+        3,
+        6
+      ],
+      [
+        0,
+        4,
+        8
+      ],
+      [
+        0,
+        5,
+        7
+      ],
+      [
+        0,
+        9,
+        18
+      ],
+      [
+        0,
+        10,
+        20
+      ],
+      [
+        0,
+        11,
+        19
+      ],
+      [
+        0,
+        12,
+        25
+      ],
+      [
+        0,
+        13,
+        24
+      ],
+      [
+        0,
+        14,
+        26
+      ],
+      [
+        0,
+        15,
+        23
+      ],
+      [
+        0,
+        16,
+        22
+      ],
+      [
+        0,
+        17,
+        21
+      ]
+    ],
+    "maximal_free_subgroups": [
+      [
+        0,
+        3,
+        6
+      ],
+      [
+        0,
+        4,
+        8
+      ],
+      [
+        0,
+        5,
+        7
+      ],
+      [
+        0,
+        9,
+        18
+      ],
+      [
+        0,
+        10,
+        20
+      ],
+      [
+        0,
+        11,
+        19
+      ],
+      [
+        0,
+        12,
+        25
+      ],
+      [
+        0,
+        13,
+        24
+      ],
+      [
+        0,
+        14,
+        26
+      ],
+      [
+        0,
+        15,
+        23
+      ],
+      [
+        0,
+        16,
+        22
+      ],
+      [
+        0,
+        17,
+        21
+      ]
+    ],
+    "conjugacy_classes": [
+      [
+        "0,3,6",
+        "0,5,7",
+        "0,4,8"
+      ],
+      [
+        "0,9,18",
+        "0,10,20",
+        "0,11,19"
+      ],
+      [
+        "0,12,25",
+        "0,13,24",
+        "0,14,26"
+      ],
+      [
+        "0,15,23",
+        "0,16,22",
+        "0,17,21"
+      ]
+    ],
+    "degree3_invariant_orbits": [
+      [
+        "0,0,0,3"
+      ],
+      [
+        "0,0,3,0",
+        "0,3,0,0",
+        "3,0,0,0"
+      ],
+      [
+        "1,1,1,0"
+      ]
+    ],
+    "eigen_checks": [
+      {
+        "g": [
+          0,
+          1,
+          0
+        ],
+        "support": 1,
+        "eigenvectors": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "g": [
+          0,
+          1,
+          1
+        ],
+        "support": 1,
+        "eigenvectors": [
+          2,
+          0,
+          1
+        ]
+      },
+      {
+        "g": [
+          0,
+          1,
+          2
+        ],
+        "support": 1,
+        "eigenvectors": [
+          1,
+          2,
+          0
+        ]
+      },
+      {
+        "g": [
+          0,
+          2,
+          0
+        ],
+        "support": 1,
+        "eigenvectors": [
+          0,
+          2,
+          1
+        ]
+      },
+      {
+        "g": [
+          0,
+          2,
+          1
+        ],
+        "support": 1,
+        "eigenvectors": [
+          1,
+          0,
+          2
+        ]
+      },
+      {
+        "g": [
+          0,
+          2,
+          2
+        ],
+        "support": 1,
+        "eigenvectors": [
+          2,
+          1,
+          0
+        ]
+      },
+      {
+        "g": [
+          1,
+          0,
+          0
+        ],
+        "support": 3,
+        "eigenvectors": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "g": [
+          1,
+          0,
+          1
+        ],
+        "support": 3,
+        "eigenvectors": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            1
+          ]
+        ]
+      },
+      {
+        "g": [
+          1,
+          0,
+          2
+        ],
+        "support": 3,
+        "eigenvectors": [
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "g": [
+          1,
+          1,
+          0
+        ],
+        "support": 3,
+        "eigenvectors": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            2,
+            2
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "g": [
+          1,
+          1,
+          1
+        ],
+        "support": 3,
+        "eigenvectors": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            2,
+            2
+          ]
+        ]
+      },
+      {
+        "g": [
+          1,
+          1,
+          2
+        ],
+        "support": 3,
+        "eigenvectors": [
+          [
+            0,
+            2,
+            2
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "g": [
+          1,
+          2,
+          0
+        ],
+        "support": 3,
+        "eigenvectors": [
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "g": [
+          1,
+          2,
+          1
+        ],
+        "support": 3,
+        "eigenvectors": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            2,
+            0
+          ]
+        ]
+      },
+      {
+        "g": [
+          1,
+          2,
+          2
+        ],
+        "support": 3,
+        "eigenvectors": [
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ]
+      },
+      {
+        "g": [
+          2,
+          0,
+          0
+        ],
+        "support": 3,
+        "eigenvectors": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            1
+          ]
+        ]
+      },
+      {
+        "g": [
+          2,
+          0,
+          1
+        ],
+        "support": 3,
+        "eigenvectors": [
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "g": [
+          2,
+          0,
+          2
+        ],
+        "support": 3,
+        "eigenvectors": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "g": [
+          2,
+          1,
+          0
+        ],
+        "support": 3,
+        "eigenvectors": [
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "g": [
+          2,
+          1,
+          1
+        ],
+        "support": 3,
+        "eigenvectors": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ]
+      },
+      {
+        "g": [
+          2,
+          1,
+          2
+        ],
+        "support": 3,
+        "eigenvectors": [
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            0
+          ]
+        ]
+      },
+      {
+        "g": [
+          2,
+          2,
+          0
+        ],
+        "support": 3,
+        "eigenvectors": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            2
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "g": [
+          2,
+          2,
+          1
+        ],
+        "support": 3,
+        "eigenvectors": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            2
+          ]
+        ]
+      },
+      {
+        "g": [
+          2,
+          2,
+          2
+        ],
+        "support": 3,
+        "eigenvectors": [
+          [
+            0,
+            2,
+            2
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ]
+      }
+    ],
+    "cover": {
+      "euler": -18,
+      "h11": 14,
+      "h21": 23
+    },
+    "quotient": {
+      "euler": -6,
+      "index": -3,
+      "h11": 6,
+      "h21": 9
+    },
+    "smoothness": "positive real diagonal coefficients: critical common support implies sum d_i^3=0, impossible",
+    "fixed_center_witness": "x=(1,-1,0,0), y=(1,1,c,0), c^3=-2 for triplet pairing 1",
+    "flat_Z3_4_connection_counts": {
+      "cover": 1,
+      "each_quotient": 81
+    }
+  },
+  "dynamics": {
+    "postnikov": {
+      "flat_classes": 9,
+      "liftable": 3,
+      "classes": [
+        {
+          "lens": 0,
+          "circle": 0,
+          "obstruction": [
+            0,
+            0
+          ],
+          "lift": true
+        },
+        {
+          "lens": 0,
+          "circle": 1,
+          "obstruction": [
+            0,
+            0
+          ],
+          "lift": true
+        },
+        {
+          "lens": 0,
+          "circle": 2,
+          "obstruction": [
+            0,
+            0
+          ],
+          "lift": true
+        },
+        {
+          "lens": 1,
+          "circle": 0,
+          "obstruction": [
+            1,
+            0
+          ],
+          "lift": false
+        },
+        {
+          "lens": 1,
+          "circle": 1,
+          "obstruction": [
+            1,
+            1
+          ],
+          "lift": false
+        },
+        {
+          "lens": 1,
+          "circle": 2,
+          "obstruction": [
+            1,
+            2
+          ],
+          "lift": false
+        },
+        {
+          "lens": 2,
+          "circle": 0,
+          "obstruction": [
+            1,
+            0
+          ],
+          "lift": false
+        },
+        {
+          "lens": 2,
+          "circle": 1,
+          "obstruction": [
+            1,
+            2
+          ],
+          "lift": false
+        },
+        {
+          "lens": 2,
+          "circle": 2,
+          "obstruction": [
+            1,
+            1
+          ],
+          "lift": false
+        }
+      ],
+      "T4_lift_classes": 81,
+      "T4_homotopy_cardinality": 729,
+      "lens_times_circle_homotopy_cardinality": 3
+    },
+    "gauge": {
+      "local_states": 12,
+      "nontrivial_hopping_transitions": 6,
+      "plaquettes": 6,
+      "gauss_commutation": true,
+      "dispersion": [
+        {
+          "a": 0.2,
+          "E": 0.9060648588013615,
+          "target": 0.8831760866327847,
+          "error": 0.022888772168576765,
+          "doubler_masses": [
+            0.7,
+            10.7,
+            20.7,
+            30.7
+          ]
+        },
+        {
+          "a": 0.1,
+          "E": 0.8946454623694718,
+          "target": 0.8831760866327847,
+          "error": 0.01146937573668716,
+          "doubler_masses": [
+            0.7,
+            20.7,
+            40.7,
+            60.7
+          ]
+        },
+        {
+          "a": 0.05,
+          "E": 0.88891669302172,
+          "target": 0.8831760866327847,
+          "error": 0.005740606388935365,
+          "doubler_masses": [
+            0.7,
+            40.7,
+            80.7,
+            120.7
+          ]
+        },
+        {
+          "a": 0.025,
+          "E": 0.8860478283942697,
+          "target": 0.8831760866327847,
+          "error": 0.0028717417614849694,
+          "doubler_masses": [
+            0.7,
+            80.7,
+            160.7,
+            240.7
+          ]
+        }
+      ]
+    },
+    "two_form": {
+      "open_cube_faces": 6,
+      "gauge_rank": 5,
+      "curvature_rank": 1,
+      "massless_polarizations": 1,
+      "graviton_polarizations": 2
+    }
+  }
+}
