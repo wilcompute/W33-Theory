@@ -1,0 +1,182 @@
+{
+  "gauge": {
+    "min_positive_mu_numeric": 0.08601621186627138,
+    "analytic_condition": "(1-exp(-4mu))/(1-exp(-mu)) <= 2(1+cos(2pi/9)); necessary, saturated on 0 and ±1 at onset",
+    "rows": [
+      {
+        "mu": 0.01,
+        "positive_clock_distribution": null,
+        "error": null
+      },
+      {
+        "mu": 0.05,
+        "positive_clock_distribution": null,
+        "error": null
+      },
+      {
+        "mu": 0.1,
+        "positive_clock_distribution": [
+          0.6099076363171001,
+          0.38351179251640377,
+          0.00658057116649613,
+          0,
+          0
+        ],
+        "error": 7.771561172376096e-16
+      },
+      {
+        "mu": 0.2,
+        "positive_clock_distribution": [
+          0.45689566515828434,
+          0.45159975761710547,
+          0.09150457722461025,
+          0,
+          0
+        ],
+        "error": 5.551115123125783e-17
+      },
+      {
+        "mu": 0.5,
+        "positive_clock_distribution": [
+          0.06634111415962403,
+          0.7954057173477609,
+          0,
+          0.13825316849261504,
+          0
+        ],
+        "error": 1.1102230246251565e-16
+      },
+      {
+        "mu": 1,
+        "positive_clock_distribution": [
+          0.08053756647998538,
+          0.5900844125274178,
+          0,
+          0.32937802099259683,
+          0
+        ],
+        "error": 2.220446049250313e-16
+      },
+      {
+        "mu": 2,
+        "positive_clock_distribution": [
+          0.23121288724847425,
+          0.227887696938288,
+          0,
+          0.5408994158132377,
+          0
+        ],
+        "error": 6.001059024707267e-17
+      },
+      {
+        "mu": 4,
+        "positive_clock_distribution": [
+          0.3194483096251423,
+          0.030917693816963507,
+          0,
+          0.6496339965578941,
+          0
+        ],
+        "error": 9.71445146547012e-17
+      }
+    ],
+    "local_carry_transitions": 7290,
+    "scope": "Positive distribution of coherent clock phase labels, not a thermal trace of unitary. Ancilla prepared in sqrt probabilities, controlled phase, unprepare/postselect; weights chosen to match target. Exact local flux updates for arbitrary opposite face pair, not full spacetime matter evolution or photon pole."
+  },
+  "refinement": {
+    "rows": [
+      {
+        "t": 0.1,
+        "C": 1.4936909228830901,
+        "J": -1.260431079412684,
+        "K": 0.2869306201364881,
+        "series_refinement_t": 0.2
+      },
+      {
+        "t": 0.5,
+        "C": 0.2623837780507077,
+        "J": -0.5259607156103461,
+        "K": 0.01980263825050736,
+        "series_refinement_t": 1
+      },
+      {
+        "t": 1,
+        "C": 0.0433658956738466,
+        "J": -0.22529750113731753,
+        "K": -0.015406570537710182,
+        "series_refinement_t": 2
+      },
+      {
+        "t": 2,
+        "C": 0.000970467628036889,
+        "J": -0.03555627024642786,
+        "K": -0.0030227234818450965,
+        "series_refinement_t": 4
+      },
+      {
+        "t": 4,
+        "C": 3.374089907595117e-7,
+        "J": -0.0006705800927107146,
+        "K": -0.000011613644476888974,
+        "series_refinement_t": 8
+      }
+    ],
+    "four": [
+      {
+        "a": 0.5,
+        "b": 0.5,
+        "left": 0.017578125,
+        "right": 0.017578125
+      },
+      {
+        "a": 0.5,
+        "b": 1,
+        "left": 0.0703125,
+        "right": 0.0703125
+      },
+      {
+        "a": 0.5,
+        "b": 2,
+        "left": 0.28125,
+        "right": 0.28125
+      },
+      {
+        "a": 1,
+        "b": 0.5,
+        "left": 0.0703125,
+        "right": 0.0703125
+      },
+      {
+        "a": 1,
+        "b": 1,
+        "left": 0.28125,
+        "right": 0.28125
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "left": 1.125,
+        "right": 1.125
+      },
+      {
+        "a": 2,
+        "b": 0.5,
+        "left": 0.28125,
+        "right": 0.28125
+      },
+      {
+        "a": 2,
+        "b": 1,
+        "left": 1.125,
+        "right": 1.125
+      },
+      {
+        "a": 2,
+        "b": 2,
+        "left": 4.5,
+        "right": 4.5
+      }
+    ],
+    "scope": "Exact induced pair and triple interactions of Z3 internal edge integration; log expands in equality classes, not a closed repeated 3D RG. 4D 3-3 circuit of two orthogonal equilateral triangles, equal flat total 4-volume. Two internal triangle fluxes on disjoint edge sets independently uniform; their heat kernel ratio varies for any finite coupling, no constant normalization. No gravitational fluctuation determinant or continuum tensor modes."
+  }
+}
