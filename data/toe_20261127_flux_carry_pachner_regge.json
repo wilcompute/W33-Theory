@@ -1,0 +1,689 @@
+{
+  "lifts": {
+    "carry_checks": 1458,
+    "rows": [
+      {
+        "clock_order": 3,
+        "classes": {
+          "0": [
+            -2,
+            -1,
+            0,
+            1,
+            2
+          ]
+        },
+        "distinguishes_signed": false,
+        "distinguishes_squared": false
+      },
+      {
+        "clock_order": 6,
+        "classes": {
+          "0": [
+            -2,
+            0,
+            2
+          ],
+          "3": [
+            -1,
+            1
+          ]
+        },
+        "distinguishes_signed": false,
+        "distinguishes_squared": false
+      },
+      {
+        "clock_order": 9,
+        "classes": {
+          "0": [
+            0
+          ],
+          "3": [
+            -2,
+            1
+          ],
+          "6": [
+            -1,
+            2
+          ]
+        },
+        "distinguishes_signed": false,
+        "distinguishes_squared": false
+      },
+      {
+        "clock_order": 12,
+        "classes": {
+          "0": [
+            0
+          ],
+          "3": [
+            1
+          ],
+          "6": [
+            -2,
+            2
+          ],
+          "9": [
+            -1
+          ]
+        },
+        "distinguishes_signed": false,
+        "distinguishes_squared": true
+      },
+      {
+        "clock_order": 15,
+        "classes": {
+          "0": [
+            0
+          ],
+          "3": [
+            1
+          ],
+          "6": [
+            2
+          ],
+          "9": [
+            -2
+          ],
+          "12": [
+            -1
+          ]
+        },
+        "distinguishes_signed": true,
+        "distinguishes_squared": true
+      },
+      {
+        "clock_order": 18,
+        "classes": {
+          "0": [
+            0
+          ],
+          "3": [
+            1
+          ],
+          "6": [
+            2
+          ],
+          "12": [
+            -2
+          ],
+          "15": [
+            -1
+          ]
+        },
+        "distinguishes_signed": true,
+        "distinguishes_squared": true
+      },
+      {
+        "clock_order": 21,
+        "classes": {
+          "0": [
+            0
+          ],
+          "3": [
+            1
+          ],
+          "6": [
+            2
+          ],
+          "15": [
+            -2
+          ],
+          "18": [
+            -1
+          ]
+        },
+        "distinguishes_signed": true,
+        "distinguishes_squared": true
+      },
+      {
+        "clock_order": 24,
+        "classes": {
+          "0": [
+            0
+          ],
+          "3": [
+            1
+          ],
+          "6": [
+            2
+          ],
+          "18": [
+            -2
+          ],
+          "21": [
+            -1
+          ]
+        },
+        "distinguishes_signed": true,
+        "distinguishes_squared": true
+      },
+      {
+        "clock_order": 27,
+        "classes": {
+          "0": [
+            0
+          ],
+          "3": [
+            1
+          ],
+          "6": [
+            2
+          ],
+          "21": [
+            -2
+          ],
+          "24": [
+            -1
+          ]
+        },
+        "distinguishes_signed": true,
+        "distinguishes_squared": true
+      },
+      {
+        "clock_order": 30,
+        "classes": {
+          "0": [
+            0
+          ],
+          "3": [
+            1
+          ],
+          "6": [
+            2
+          ],
+          "24": [
+            -2
+          ],
+          "27": [
+            -1
+          ]
+        },
+        "distinguishes_signed": true,
+        "distinguishes_squared": true
+      }
+    ],
+    "quotient_clock_fourier": {
+      "a": 5.96237534269849,
+      "b": -0.4779209447613687,
+      "max_error": 0
+    },
+    "scope": "Reversible modular addition of supplied principal-lift increments into three ternary digits; the quotient j can then be read on a Z9 clock. Direct total-flux Z9 aliases charges; Z27 first ternary power sufficient. Fourier coefficients fitted, not dynamically derived."
+  },
+  "pachner": {
+    "boundary_assignments": 19683,
+    "classes": {
+      "0,1": 729,
+      "1,1": 729,
+      "2,1": 729,
+      "0,2": 4374,
+      "1,2": 4374,
+      "2,2": 4374,
+      "0,3": 1458,
+      "1,3": 1458,
+      "2,3": 1458
+    },
+    "witness": {
+      "0,1": {
+        "edge_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "d": [
+          0,
+          0,
+          0
+        ]
+      },
+      "1,1": {
+        "edge_values": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "d": [
+          0,
+          0,
+          0
+        ]
+      },
+      "2,1": {
+        "edge_values": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "d": [
+          0,
+          0,
+          0
+        ]
+      },
+      "0,2": {
+        "edge_values": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "d": [
+          1,
+          0,
+          0
+        ]
+      },
+      "1,2": {
+        "edge_values": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "d": [
+          1,
+          0,
+          0
+        ]
+      },
+      "2,2": {
+        "edge_values": [
+          2,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "d": [
+          1,
+          0,
+          0
+        ]
+      },
+      "0,3": {
+        "edge_values": [
+          0,
+          0,
+          2,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "d": [
+          2,
+          1,
+          0
+        ]
+      },
+      "1,3": {
+        "edge_values": [
+          1,
+          0,
+          2,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "d": [
+          2,
+          1,
+          0
+        ]
+      },
+      "2,3": {
+        "edge_values": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "d": [
+          2,
+          1,
+          0
+        ]
+      }
+    },
+    "rows": [
+      {
+        "t": 0.1,
+        "values": [
+          {
+            "F": 0,
+            "distinct_offsets": 1,
+            "old": 2.809674836071919,
+            "new_after_flat_normalization": 2.809674836071919,
+            "ratio": 1
+          },
+          {
+            "F": 1,
+            "distinct_offsets": 1,
+            "old": 0.09516258196404048,
+            "new_after_flat_normalization": 2.809674836071919,
+            "ratio": 29.524995834325132
+          },
+          {
+            "F": 2,
+            "distinct_offsets": 1,
+            "old": 0.09516258196404048,
+            "new_after_flat_normalization": 2.809674836071919,
+            "ratio": 29.524995834325132
+          },
+          {
+            "F": 0,
+            "distinct_offsets": 2,
+            "old": 2.809674836071919,
+            "new_after_flat_normalization": 0.09848721382790553,
+            "ratio": 0.035052886748132076
+          },
+          {
+            "F": 1,
+            "distinct_offsets": 2,
+            "old": 0.09516258196404048,
+            "new_after_flat_normalization": 0.09848721382790553,
+            "ratio": 1.03493633521967
+          },
+          {
+            "F": 2,
+            "distinct_offsets": 2,
+            "old": 0.09516258196404048,
+            "new_after_flat_normalization": 0.09848721382790553,
+            "ratio": 1.03493633521967
+          },
+          {
+            "F": 0,
+            "distinct_offsets": 3,
+            "old": 2.809674836071919,
+            "new_after_flat_normalization": 0.00966860638373011,
+            "ratio": 0.0034411833923271196
+          },
+          {
+            "F": 1,
+            "distinct_offsets": 3,
+            "old": 0.09516258196404048,
+            "new_after_flat_normalization": 0.00966860638373011,
+            "ratio": 0.10160092532360702
+          },
+          {
+            "F": 2,
+            "distinct_offsets": 3,
+            "old": 0.09516258196404048,
+            "new_after_flat_normalization": 0.00966860638373011,
+            "ratio": 0.10160092532360702
+          }
+        ]
+      },
+      {
+        "t": 0.5,
+        "values": [
+          {
+            "F": 0,
+            "distinct_offsets": 1,
+            "old": 2.213061319425267,
+            "new_after_flat_normalization": 2.213061319425267,
+            "ratio": 1
+          },
+          {
+            "F": 1,
+            "distinct_offsets": 1,
+            "old": 0.3934693402873666,
+            "new_after_flat_normalization": 2.213061319425267,
+            "ratio": 5.624482247610395
+          },
+          {
+            "F": 2,
+            "distinct_offsets": 1,
+            "old": 0.3934693402873666,
+            "new_after_flat_normalization": 2.213061319425267,
+            "ratio": 5.624482247610395
+          },
+          {
+            "F": 0,
+            "distinct_offsets": 2,
+            "old": 2.213061319425267,
+            "new_after_flat_normalization": 0.4705742977775742,
+            "ratio": 0.21263500186238968
+          },
+          {
+            "F": 1,
+            "distinct_offsets": 2,
+            "old": 0.3934693402873666,
+            "new_after_flat_normalization": 0.4705742977775742,
+            "ratio": 1.1959617931956141
+          },
+          {
+            "F": 2,
+            "distinct_offsets": 2,
+            "old": 0.3934693402873666,
+            "new_after_flat_normalization": 0.4705742977775742,
+            "ratio": 1.1959617931956141
+          },
+          {
+            "F": 0,
+            "distinct_offsets": 3,
+            "old": 2.213061319425267,
+            "new_after_flat_normalization": 0.20753683212865526,
+            "ratio": 0.09377816615698326
+          },
+          {
+            "F": 1,
+            "distinct_offsets": 3,
+            "old": 0.3934693402873666,
+            "new_after_flat_normalization": 0.20753683212865526,
+            "ratio": 0.5274536307634102
+          },
+          {
+            "F": 2,
+            "distinct_offsets": 3,
+            "old": 0.3934693402873666,
+            "new_after_flat_normalization": 0.20753683212865526,
+            "ratio": 0.5274536307634102
+          }
+        ]
+      },
+      {
+        "t": 1,
+        "values": [
+          {
+            "F": 0,
+            "distinct_offsets": 1,
+            "old": 1.7357588823428847,
+            "new_after_flat_normalization": 1.7357588823428847,
+            "ratio": 1
+          },
+          {
+            "F": 1,
+            "distinct_offsets": 1,
+            "old": 0.6321205588285577,
+            "new_after_flat_normalization": 1.7357588823428847,
+            "ratio": 2.7459301206079796
+          },
+          {
+            "F": 2,
+            "distinct_offsets": 1,
+            "old": 0.6321205588285577,
+            "new_after_flat_normalization": 1.7357588823428847,
+            "ratio": 2.7459301206079796
+          },
+          {
+            "F": 0,
+            "distinct_offsets": 2,
+            "old": 1.7357588823428847,
+            "new_after_flat_normalization": 0.8628126998025465,
+            "ratio": 0.4970809647466376
+          },
+          {
+            "F": 1,
+            "distinct_offsets": 2,
+            "old": 0.6321205588285577,
+            "new_after_flat_normalization": 0.8628126998025465,
+            "ratio": 1.3649495934786653
+          },
+          {
+            "F": 2,
+            "distinct_offsets": 2,
+            "old": 0.6321205588285577,
+            "new_after_flat_normalization": 0.8628126998025465,
+            "ratio": 1.3649495934786653
+          },
+          {
+            "F": 0,
+            "distinct_offsets": 3,
+            "old": 1.7357588823428847,
+            "new_after_flat_normalization": 0.6297741340968265,
+            "ratio": 0.3628235122419612
+          },
+          {
+            "F": 1,
+            "distinct_offsets": 3,
+            "old": 0.6321205588285577,
+            "new_after_flat_normalization": 0.6297741340968265,
+            "ratio": 0.9962880107299792
+          },
+          {
+            "F": 2,
+            "distinct_offsets": 3,
+            "old": 0.6321205588285577,
+            "new_after_flat_normalization": 0.6297741340968265,
+            "ratio": 0.9962880107299792
+          }
+        ]
+      },
+      {
+        "t": 2,
+        "values": [
+          {
+            "F": 0,
+            "distinct_offsets": 1,
+            "old": 1.2706705664732254,
+            "new_after_flat_normalization": 1.2706705664732254,
+            "ratio": 1
+          },
+          {
+            "F": 1,
+            "distinct_offsets": 1,
+            "old": 0.8646647167633873,
+            "new_after_flat_normalization": 1.2706705664732254,
+            "ratio": 1.469552928248997
+          },
+          {
+            "F": 2,
+            "distinct_offsets": 1,
+            "old": 0.8646647167633873,
+            "new_after_flat_normalization": 1.2706705664732254,
+            "ratio": 1.469552928248997
+          },
+          {
+            "F": 0,
+            "distinct_offsets": 2,
+            "old": 1.2706705664732254,
+            "new_after_flat_normalization": 1.1369416227924483,
+            "ratio": 0.8947571878902139
+          },
+          {
+            "F": 1,
+            "distinct_offsets": 2,
+            "old": 0.8646647167633873,
+            "new_after_flat_normalization": 1.1369416227924483,
+            "ratio": 1.3148930455359018
+          },
+          {
+            "F": 2,
+            "distinct_offsets": 2,
+            "old": 0.8646647167633873,
+            "new_after_flat_normalization": 1.1369416227924483,
+            "ratio": 1.3148930455359018
+          },
+          {
+            "F": 0,
+            "distinct_offsets": 3,
+            "old": 1.2706705664732254,
+            "new_after_flat_normalization": 1.0827905486643887,
+            "ratio": 0.852141048383373
+          },
+          {
+            "F": 1,
+            "distinct_offsets": 3,
+            "old": 0.8646647167633873,
+            "new_after_flat_normalization": 1.0827905486643887,
+            "ratio": 1.252266372932956
+          },
+          {
+            "F": 2,
+            "distinct_offsets": 3,
+            "old": 0.8646647167633873,
+            "new_after_flat_normalization": 1.0827905486643887,
+            "ratio": 1.252266372932956
+          }
+        ]
+      }
+    ],
+    "geom": [
+      {
+        "h": 0.4,
+        "flat_internal_edge": 0.8,
+        "volume": 0.11547005383792515,
+        "deficit": -8.881784197001252e-16,
+        "Regge_length_action_second_derivative": -6.235382911334852
+      },
+      {
+        "h": 0.8,
+        "flat_internal_edge": 1.6,
+        "volume": 0.2309401076758503,
+        "deficit": -8.881784197001252e-16,
+        "Regge_length_action_second_derivative": -12.47076583887896
+      },
+      {
+        "h": 1.2,
+        "flat_internal_edge": 2.4,
+        "volume": 0.3464101615137754,
+        "deficit": -8.881784197001252e-16,
+        "Regge_length_action_second_derivative": -18.706148798841582
+      }
+    ],
+    "scope": "3D bipyramid 2-3 move, same boundary gauge weights canceled. Internal face heat kernels fail closure after any constant normalization at fixed coupling; boundary-dependent effective weights needed. Euclidean Regge flat stationary length with boundary term, not gauge-gravity unification."
+  }
+}
