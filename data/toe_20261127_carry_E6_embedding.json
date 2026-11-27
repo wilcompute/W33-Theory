@@ -1,0 +1,220 @@
+{
+  "rows": [
+    {
+      "n": 1,
+      "q": 3,
+      "kernel": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "scalar27": [
+        {
+          "g": [
+            0,
+            0,
+            0
+          ],
+          "phase_exponent": 0
+        },
+        {
+          "g": [
+            0,
+            0,
+            1
+          ],
+          "phase_exponent": 2
+        },
+        {
+          "g": [
+            0,
+            0,
+            2
+          ],
+          "phase_exponent": 1
+        }
+      ],
+      "cyclic_anomaly_failures": 0,
+      "restricted": {
+        "3": 26
+      }
+    },
+    {
+      "n": 2,
+      "q": 9,
+      "kernel": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "scalar27": [
+        {
+          "g": [
+            0,
+            0,
+            0
+          ],
+          "phase_exponent": 0
+        },
+        {
+          "g": [
+            0,
+            0,
+            1
+          ],
+          "phase_exponent": 6
+        },
+        {
+          "g": [
+            0,
+            0,
+            2
+          ],
+          "phase_exponent": 3
+        }
+      ],
+      "cyclic_anomaly_failures": 0,
+      "restricted": {
+        "3": 26,
+        "9": 54
+      }
+    },
+    {
+      "n": 3,
+      "q": 27,
+      "kernel": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "scalar27": [
+        {
+          "g": [
+            0,
+            0,
+            0
+          ],
+          "phase_exponent": 0
+        },
+        {
+          "g": [
+            0,
+            0,
+            1
+          ],
+          "phase_exponent": 18
+        },
+        {
+          "g": [
+            0,
+            0,
+            2
+          ],
+          "phase_exponent": 9
+        }
+      ],
+      "cyclic_anomaly_failures": 0,
+      "restricted": {
+        "3": 26,
+        "9": 54,
+        "27": 162
+      }
+    },
+    {
+      "n": 4,
+      "q": 81,
+      "kernel": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "scalar27": [
+        {
+          "g": [
+            0,
+            0,
+            0
+          ],
+          "phase_exponent": 0
+        },
+        {
+          "g": [
+            0,
+            0,
+            1
+          ],
+          "phase_exponent": 54
+        },
+        {
+          "g": [
+            0,
+            0,
+            2
+          ],
+          "phase_exponent": 27
+        }
+      ],
+      "cyclic_anomaly_failures": 0,
+      "restricted": {
+        "3": 26,
+        "9": 54,
+        "27": 162,
+        "81": 486
+      }
+    },
+    {
+      "n": 5,
+      "q": 243,
+      "kernel": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "scalar27": [
+        {
+          "g": [
+            0,
+            0,
+            0
+          ],
+          "phase_exponent": 0
+        },
+        {
+          "g": [
+            0,
+            0,
+            1
+          ],
+          "phase_exponent": 162
+        },
+        {
+          "g": [
+            0,
+            0,
+            2
+          ],
+          "phase_exponent": 81
+        }
+      ],
+      "cyclic_anomaly_failures": 0,
+      "restricted": {
+        "3": 26,
+        "9": 54,
+        "27": 162,
+        "81": 486,
+        "243": 1458
+      }
+    }
+  ],
+  "scope": "Faithful monomial SU6 representation rho_(+1,+) direct sum rho_(-1,+). Standard compact simply connected E6 embedding of SU6 with 27 = wedge²6 + 2 conjugate6. All cyclic restrictions on 27 pass. E6 center pulls back precisely to commutator Z3, which has an actual order3 subgroup; 48 uniformly center charged fermions remain anomalous there. Distinct from previous anomaly-free abelianization charge pullback; no physical E6 breaking or full nonabelian global anomaly proof."
+}
