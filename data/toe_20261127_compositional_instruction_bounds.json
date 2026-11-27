@@ -1,0 +1,89 @@
+{
+  "tChecks": 177147,
+  "ccz": 1331,
+  "ideal_T_basis_branches": 243,
+  "counts": [
+    {
+      "route": "memory-processor-memory",
+      "parity": 6936,
+      "sourceX": 6180,
+      "transversal": 40,
+      "total": 13156,
+      "bounds": [
+        {
+          "p": 0.000001,
+          "no_fault_lower_bound_acceptance": 0.9869301554134087,
+          "unconditional_at_least_three_faults": 3.7569767370870303e-7,
+          "conditional_failure_upper_bound_if_stage_assumptions_hold": 3.806730107981446e-7
+        },
+        {
+          "p": 0.00001,
+          "no_fault_lower_bound_acceptance": 0.8767260932450011,
+          "unconditional_at_least_three_faults": 0.00034389113099895477,
+          "conditional_failure_upper_bound_if_stage_assumptions_hold": 0.0003922446630122761
+        },
+        {
+          "p": 0.0001,
+          "no_fault_lower_bound_acceptance": 0.26829563671682144,
+          "unconditional_at_least_three_faults": 0.1464870367149306,
+          "conditional_failure_upper_bound_if_stage_assumptions_hold": 0.5459911257131013
+        }
+      ]
+    },
+    {
+      "route": "memory-Golay-processor-Golay-memory",
+      "parity": 11616,
+      "sourceX": 8508,
+      "transversal": 40,
+      "total": 20164,
+      "bounds": [
+        {
+          "p": 0.000001,
+          "no_fault_lower_bound_acceptance": 0.9800379240245752,
+          "unconditional_at_least_three_faults": 0.0000013457074340273396,
+          "conditional_failure_upper_bound_if_stage_assumptions_hold": 0.0000013731177141606154
+        },
+        {
+          "p": 0.00001,
+          "no_fault_lower_bound_acceptance": 0.817388310973597,
+          "unconditional_at_least_three_faults": 0.0011753847571586982,
+          "conditional_failure_upper_bound_if_stage_assumptions_hold": 0.0014379759795667853
+        },
+        {
+          "p": 0.0001,
+          "no_fault_lower_bound_acceptance": 0.13312046261775062,
+          "unconditional_at_least_three_faults": 0.3277627037502057,
+          "conditional_failure_upper_bound_if_stage_assumptions_hold": 1
+        }
+      ]
+    },
+    {
+      "route": "three independent memory blocks CCZ round-trip",
+      "parity": 20808,
+      "sourceX": 18540,
+      "transversal": 40,
+      "total": 39388,
+      "bounds": [
+        {
+          "p": 0.000001,
+          "no_fault_lower_bound_acceptance": 0.9613776033213721,
+          "unconditional_at_least_three_faults": 0.000009887616103447777,
+          "conditional_failure_upper_bound_if_stage_assumptions_hold": 0.000010284841324873797
+        },
+        {
+          "p": 0.00001,
+          "no_fault_lower_bound_acceptance": 0.6744336553429328,
+          "unconditional_at_least_three_faults": 0.007601732825969722,
+          "conditional_failure_upper_bound_if_stage_assumptions_hold": 0.011271283343807078
+        },
+        {
+          "p": 0.0001,
+          "no_fault_lower_bound_acceptance": 0.01946773200303237,
+          "unconditional_at_least_three_faults": 0.7528061113137767,
+          "conditional_failure_upper_bound_if_stage_assumptions_hold": 1
+        }
+      ]
+    }
+  ],
+  "scope": "Compositional conditional certificate only: each stage independently postselected on ideal terminal syndrome with ideal state preparation/reset and Pauli correction; faults at listed circuit locations only, transversal faults restricted to support of gate. Any accepted <=2 faults in parity/readout stages trivial modulo measured observable and stabilizers per prior separate audits. Transversal support <=2 per block cannot cause logical effect after ideal projection, by code distance. No physical noisy terminal or idle locations, full optical noise, or simulated noisy end-to-end state. Bounds use independent location fault probability and no-fault acceptance, not measured logical rates."
+}
