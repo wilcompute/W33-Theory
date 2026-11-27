@@ -1,0 +1,159 @@
+{
+  "ideal_T_phase_checks": 72,
+  "correction": [
+    {
+      "power": 1,
+      "outcome": 0,
+      "quadratic": 0,
+      "linear": 0
+    },
+    {
+      "power": 1,
+      "outcome": 1,
+      "quadratic": 2,
+      "linear": 2
+    },
+    {
+      "power": 1,
+      "outcome": 2,
+      "quadratic": 1,
+      "linear": 2
+    },
+    {
+      "power": 2,
+      "outcome": 0,
+      "quadratic": 0,
+      "linear": 0
+    },
+    {
+      "power": 2,
+      "outcome": 1,
+      "quadratic": 1,
+      "linear": 1
+    },
+    {
+      "power": 2,
+      "outcome": 2,
+      "quadratic": 2,
+      "linear": 1
+    },
+    {
+      "power": 3,
+      "outcome": 0,
+      "quadratic": 0,
+      "linear": 0
+    },
+    {
+      "power": 3,
+      "outcome": 1,
+      "quadratic": 0,
+      "linear": 0
+    },
+    {
+      "power": 3,
+      "outcome": 2,
+      "quadratic": 0,
+      "linear": 0
+    },
+    {
+      "power": 4,
+      "outcome": 0,
+      "quadratic": 0,
+      "linear": 0
+    },
+    {
+      "power": 4,
+      "outcome": 1,
+      "quadratic": 2,
+      "linear": 2
+    },
+    {
+      "power": 4,
+      "outcome": 2,
+      "quadratic": 1,
+      "linear": 2
+    },
+    {
+      "power": 5,
+      "outcome": 0,
+      "quadratic": 0,
+      "linear": 0
+    },
+    {
+      "power": 5,
+      "outcome": 1,
+      "quadratic": 1,
+      "linear": 1
+    },
+    {
+      "power": 5,
+      "outcome": 2,
+      "quadratic": 2,
+      "linear": 1
+    },
+    {
+      "power": 6,
+      "outcome": 0,
+      "quadratic": 0,
+      "linear": 0
+    },
+    {
+      "power": 6,
+      "outcome": 1,
+      "quadratic": 0,
+      "linear": 0
+    },
+    {
+      "power": 6,
+      "outcome": 2,
+      "quadratic": 0,
+      "linear": 0
+    },
+    {
+      "power": 7,
+      "outcome": 0,
+      "quadratic": 0,
+      "linear": 0
+    },
+    {
+      "power": 7,
+      "outcome": 1,
+      "quadratic": 2,
+      "linear": 2
+    },
+    {
+      "power": 7,
+      "outcome": 2,
+      "quadratic": 1,
+      "linear": 2
+    },
+    {
+      "power": 8,
+      "outcome": 0,
+      "quadratic": 0,
+      "linear": 0
+    },
+    {
+      "power": 8,
+      "outcome": 1,
+      "quadratic": 1,
+      "linear": 1
+    },
+    {
+      "power": 8,
+      "outcome": 2,
+      "quadratic": 2,
+      "linear": 1
+    }
+  ],
+  "CCZ_basis_checks": 27,
+  "componentChecks": 528,
+  "transversal_SUM_single_fault_labels": 880,
+  "transversal_SUM_distinct_location_pair_labels": 352000,
+  "accepted_malignant_with_ideal_recovery": 0,
+  "outer_T_resources": 40,
+  "outer_CCZ_resources": 280,
+  "physical_SUM_for_T_injection": 440,
+  "physical_SUM_for_CCZ_injections_only": 3080,
+  "scope": "Inner Golay injection: prepare encoded T^e|+>, apply inverse transversal SUM from data into magic block, measure magic Z with perfect classical syndrome correction; ideal data Pauli recovery before conditional quadratic Clifford. All one/two post-SUM faults on distinct transversal locations correctable by exact component-factorization. Ideal encoded inputs, resource prep, recovery and Clifford feedforward; no noisy preparation, check extraction or correction circuit. CCZ synthesized by seven T phases on linear sums via logical Clifford operations; counts exclude those additional Clifford gates."
+}
