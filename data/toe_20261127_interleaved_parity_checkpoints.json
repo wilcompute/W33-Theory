@@ -1,0 +1,74 @@
+[
+  {
+    "restriction": {
+      "memX": 3,
+      "memZ": 4,
+      "procX": 3,
+      "procZ": 4
+    },
+    "locations": 180,
+    "faults": 7434,
+    "accepted_single": 288,
+    "bad_single": 0,
+    "total_distinct_location_fault_pairs": 27352152,
+    "accepted_pairs": 82914,
+    "bad_accepted_pairs": 0,
+    "bad_readout": 0,
+    "bad_data": 0,
+    "witness": null,
+    "rounds": 3,
+    "checkpoints": true,
+    "scope": "Weight-eight parity measurement, ideal intermediate full CSS syndrome projections after every round if checkpoints true, no faults on checkpoints, arbitrary true eigenvalue, postselected; not full noisy FT."
+  },
+  {
+    "restriction": {
+      "memX": 3,
+      "memZ": 4,
+      "procX": 3,
+      "procZ": 4
+    },
+    "locations": 300,
+    "faults": 12390,
+    "accepted_single": 480,
+    "bad_single": 0,
+    "total_distinct_location_fault_pairs": 76289340,
+    "accepted_pairs": 184270,
+    "bad_accepted_pairs": 0,
+    "bad_readout": 0,
+    "bad_data": 0,
+    "witness": null,
+    "rounds": 5,
+    "checkpoints": true,
+    "scope": "Weight-eight parity measurement, ideal intermediate full CSS syndrome projections after every round if checkpoints true, no faults on checkpoints, arbitrary true eigenvalue, postselected; not full noisy FT."
+  },
+  {
+    "restriction": {
+      "memX": 3,
+      "memZ": 4,
+      "procX": 3,
+      "procZ": 4
+    },
+    "locations": 300,
+    "faults": 12390,
+    "accepted_single": 480,
+    "bad_single": 0,
+    "total_distinct_location_fault_pairs": 76289340,
+    "accepted_pairs": 192190,
+    "bad_accepted_pairs": 432,
+    "bad_readout": 432,
+    "bad_data": 0,
+    "witness": {
+      "locations": [
+        44,
+        284
+      ],
+      "logical": [
+        2,
+        0
+      ]
+    },
+    "rounds": 5,
+    "checkpoints": false,
+    "scope": "Weight-eight parity measurement, ideal intermediate full CSS syndrome projections after every round if checkpoints true, no faults on checkpoints, arbitrary true eigenvalue, postselected; not full noisy FT."
+  }
+]
