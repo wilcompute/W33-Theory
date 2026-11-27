@@ -1,0 +1,76 @@
+{
+  "common_padded_length": 12,
+  "hop_amplitude": 0.7586944942947255,
+  "loop_amplitude": 0.03637501572761087,
+  "mu": 0.9999999999999984,
+  "rows": [
+    {
+      "wilson_copies": 1,
+      "beta": 0.07407407407407396,
+      "mu": 0.9999999999999984,
+      "within_published_interval": false
+    },
+    {
+      "wilson_copies": 2,
+      "beta": 0.14814814814814792,
+      "mu": 0.9999999999999984,
+      "within_published_interval": false
+    },
+    {
+      "wilson_copies": 3,
+      "beta": 0.22222222222222188,
+      "mu": 0.9999999999999984,
+      "within_published_interval": false
+    },
+    {
+      "wilson_copies": 4,
+      "beta": 0.29629629629629584,
+      "mu": 0.9999999999999984,
+      "within_published_interval": true
+    },
+    {
+      "wilson_copies": 5,
+      "beta": 0.3703703703703698,
+      "mu": 0.9999999999999984,
+      "within_published_interval": true
+    },
+    {
+      "wilson_copies": 6,
+      "beta": 0.44444444444444375,
+      "mu": 0.9999999999999984,
+      "within_published_interval": true
+    },
+    {
+      "wilson_copies": 7,
+      "beta": 0.5185185185185177,
+      "mu": 0.9999999999999984,
+      "within_published_interval": false
+    },
+    {
+      "wilson_copies": 8,
+      "beta": 0.5925925925925917,
+      "mu": 0.9999999999999984,
+      "within_published_interval": false
+    },
+    {
+      "wilson_copies": 9,
+      "beta": 0.6666666666666656,
+      "mu": 0.9999999999999984,
+      "within_published_interval": false
+    },
+    {
+      "wilson_copies": 10,
+      "beta": 0.7407407407407396,
+      "mu": 0.9999999999999984,
+      "within_published_interval": false
+    }
+  ],
+  "unpadded": {
+    "single_face_coeff": -0.7802430781644121,
+    "same_sign_pair_coeff": -0.46339516088155525,
+    "difference_pair_coeff": 0.14814814814814792,
+    "required_same_sign_pair": -1.5604861563288241,
+    "required_difference_pair": 1.5604861563288241
+  },
+  "scope": "Padding supplied via neutral inverse pairs; Wilson multiplicity 4-6 chosen by comparison with published numerical interval at mu=1, not derived or predicted. Auxiliary Gaussian action positive definite for r<1. No new phase simulation."
+}
