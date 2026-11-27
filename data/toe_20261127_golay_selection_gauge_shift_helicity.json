@@ -1,0 +1,362 @@
+{
+  "selection": {
+    "rows": [
+      {
+        "name": "Golay",
+        "hist": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          264,
+          0,
+          0,
+          440,
+          0,
+          0,
+          24
+        ],
+        "subsets": [
+          {
+            "n": 1,
+            "sumMoment": 120,
+            "minimumEntropy": 0,
+            "dimensionCensus": {
+              "0": 1
+            },
+            "meanEntropyLog9": 0
+          },
+          {
+            "n": 12,
+            "sumMoment": 480,
+            "minimumEntropy": 1,
+            "dimensionCensus": {
+              "0": 12
+            },
+            "meanEntropyLog9": 1
+          },
+          {
+            "n": 66,
+            "sumMoment": 880.0000000000008,
+            "minimumEntropy": 2,
+            "dimensionCensus": {
+              "0": 66
+            },
+            "meanEntropyLog9": 2
+          },
+          {
+            "n": 220,
+            "sumMoment": 977.7777777777801,
+            "minimumEntropy": 3,
+            "dimensionCensus": {
+              "0": 220
+            },
+            "meanEntropyLog9": 3
+          },
+          {
+            "n": 495,
+            "sumMoment": 733.3333333333383,
+            "minimumEntropy": 4,
+            "dimensionCensus": {
+              "0": 495
+            },
+            "meanEntropyLog9": 4
+          },
+          {
+            "n": 792,
+            "sumMoment": 391.11111111110796,
+            "minimumEntropy": 5,
+            "dimensionCensus": {
+              "0": 792
+            },
+            "meanEntropyLog9": 5
+          },
+          {
+            "n": 924,
+            "sumMoment": 195.55555555555398,
+            "minimumEntropy": 4,
+            "dimensionCensus": {
+              "0": 792,
+              "1": 132
+            },
+            "meanEntropyLog9": 5.714285714285714
+          },
+          {
+            "n": 792,
+            "sumMoment": 130.37037037036924,
+            "minimumEntropy": 5,
+            "dimensionCensus": {
+              "1": 792
+            },
+            "meanEntropyLog9": 5
+          },
+          {
+            "n": 495,
+            "sumMoment": 81.48148148148084,
+            "minimumEntropy": 4,
+            "dimensionCensus": {
+              "2": 495
+            },
+            "meanEntropyLog9": 4
+          },
+          {
+            "n": 220,
+            "sumMoment": 36.213991769547135,
+            "minimumEntropy": 3,
+            "dimensionCensus": {
+              "3": 220
+            },
+            "meanEntropyLog9": 3
+          },
+          {
+            "n": 66,
+            "sumMoment": 10.864197530864203,
+            "minimumEntropy": 2,
+            "dimensionCensus": {
+              "4": 66
+            },
+            "meanEntropyLog9": 2
+          },
+          {
+            "n": 12,
+            "sumMoment": 1.9753086419753083,
+            "minimumEntropy": 1,
+            "dimensionCensus": {
+              "5": 12
+            },
+            "meanEntropyLog9": 1
+          },
+          {
+            "n": 1,
+            "sumMoment": 0.1646090534979424,
+            "minimumEntropy": 0,
+            "dimensionCensus": {
+              "6": 1
+            },
+            "meanEntropyLog9": 0
+          }
+        ]
+      },
+      {
+        "name": "weight3",
+        "hist": [
+          1,
+          0,
+          0,
+          8,
+          0,
+          0,
+          240,
+          0,
+          0,
+          464,
+          0,
+          0,
+          16
+        ],
+        "subsets": [
+          {
+            "n": 1,
+            "sumMoment": 120,
+            "minimumEntropy": 0,
+            "dimensionCensus": {
+              "0": 1
+            },
+            "meanEntropyLog9": 0
+          },
+          {
+            "n": 12,
+            "sumMoment": 480,
+            "minimumEntropy": 1,
+            "dimensionCensus": {
+              "0": 12
+            },
+            "meanEntropyLog9": 1
+          },
+          {
+            "n": 66,
+            "sumMoment": 880.0000000000008,
+            "minimumEntropy": 2,
+            "dimensionCensus": {
+              "0": 66
+            },
+            "meanEntropyLog9": 2
+          },
+          {
+            "n": 220,
+            "sumMoment": 1013.3333333333358,
+            "minimumEntropy": 1,
+            "dimensionCensus": {
+              "0": 216,
+              "1": 4
+            },
+            "meanEntropyLog9": 2.963636363636364
+          },
+          {
+            "n": 495,
+            "sumMoment": 840.0000000000066,
+            "minimumEntropy": 2,
+            "dimensionCensus": {
+              "0": 459,
+              "1": 36
+            },
+            "meanEntropyLog9": 3.8545454545454545
+          },
+          {
+            "n": 792,
+            "sumMoment": 533.3333333333305,
+            "minimumEntropy": 3,
+            "dimensionCensus": {
+              "0": 648,
+              "1": 144
+            },
+            "meanEntropyLog9": 4.636363636363637
+          },
+          {
+            "n": 924,
+            "sumMoment": 302.22222222221984,
+            "minimumEntropy": 2,
+            "dimensionCensus": {
+              "0": 486,
+              "1": 432,
+              "2": 6
+            },
+            "meanEntropyLog9": 5.038961038961039
+          },
+          {
+            "n": 792,
+            "sumMoment": 177.7777777777763,
+            "minimumEntropy": 3,
+            "dimensionCensus": {
+              "1": 648,
+              "2": 144
+            },
+            "meanEntropyLog9": 4.636363636363637
+          },
+          {
+            "n": 495,
+            "sumMoment": 93.33333333333263,
+            "minimumEntropy": 2,
+            "dimensionCensus": {
+              "2": 459,
+              "3": 36
+            },
+            "meanEntropyLog9": 3.8545454545454545
+          },
+          {
+            "n": 220,
+            "sumMoment": 37.53086419753068,
+            "minimumEntropy": 1,
+            "dimensionCensus": {
+              "3": 216,
+              "4": 4
+            },
+            "meanEntropyLog9": 2.963636363636364
+          },
+          {
+            "n": 66,
+            "sumMoment": 10.864197530864203,
+            "minimumEntropy": 2,
+            "dimensionCensus": {
+              "4": 66
+            },
+            "meanEntropyLog9": 2
+          },
+          {
+            "n": 12,
+            "sumMoment": 1.9753086419753083,
+            "minimumEntropy": 1,
+            "dimensionCensus": {
+              "5": 12
+            },
+            "meanEntropyLog9": 1
+          },
+          {
+            "n": 1,
+            "sumMoment": 0.1646090534979424,
+            "minimumEntropy": 0,
+            "dimensionCensus": {
+              "6": 1
+            },
+            "meanEntropyLog9": 0
+          }
+        ]
+      }
+    ],
+    "third_moment_sum_difference": 35.55555555555566,
+    "connected_action_difference_coefficient": "-8/27",
+    "scope": "Two explicit self-dual code states (two copies of uniform code superposition) on12 registers. All local subset shortened dimensions and entropy in units log9 exactly determined. Third square-free connected action coefficient favors weight-three sector for positive uniform coupling; not global ground state or complete thermal Hamiltonian."
+  },
+  "gauge": {
+    "rows": [
+      {
+        "t": 0.1,
+        "maxShift": 0,
+        "monopoleShift": 4,
+        "configurations_changing_charge_squared": 102
+      },
+      {
+        "t": 1,
+        "maxShift": 0,
+        "monopoleShift": 4,
+        "configurations_changing_charge_squared": 102
+      },
+      {
+        "t": 4,
+        "maxShift": 0,
+        "monopoleShift": 4,
+        "configurations_changing_charge_squared": 102
+      }
+    ],
+    "scope": "Actual shared-tick K expectation on product rank-three mixed face-eigenstates of one common Pauli direction. Uniform outcome label enforces global ternary flux shift symmetry, so cannot reproduce Wilson+positive monopole penalty except trivial coefficients (all-zero vs all-one, and other orbits); integer lift or nonuniform/anchored history needed."
+  },
+  "helicity": {
+    "rows": [
+      {
+        "spin": 0.5,
+        "generator_eigenvalues": [
+          -0.5,
+          0.5
+        ],
+        "extremal_speed_relative_to_spin_half": 1,
+        "required_angle_factor_for_equal_speed": 1
+      },
+      {
+        "spin": 1,
+        "generator_eigenvalues": [
+          -1,
+          0,
+          1
+        ],
+        "extremal_speed_relative_to_spin_half": 2,
+        "required_angle_factor_for_equal_speed": 0.5
+      },
+      {
+        "spin": 1.5,
+        "generator_eigenvalues": [
+          -1.5,
+          -0.5,
+          0.5,
+          1.5
+        ],
+        "extremal_speed_relative_to_spin_half": 3,
+        "required_angle_factor_for_equal_speed": 0.3333333333333333
+      },
+      {
+        "spin": 2,
+        "generator_eigenvalues": [
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ],
+        "extremal_speed_relative_to_spin_half": 4,
+        "required_angle_factor_for_equal_speed": 0.25
+      }
+    ],
+    "scope": "Representation-theoretic obstruction for one common SU2 rotation angle in spin representations, physical extremal helicity projection assumed. Does not forbid different microscopic representations, tuned generators or interacting common light cone. Canonical gradient mixing eigenvelocities coincide only if kinetic-normalized matrix scalar."
+  }
+}
