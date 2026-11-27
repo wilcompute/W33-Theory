@@ -1,0 +1,10 @@
+function centerAnomalies(){
+const m=(x,n=9)=>(x%n+n)%n,A=(v,s)=>{if(!v)throw Error(s)},gcd=(a,b)=>b?gcd(b,a%b):Math.abs(a),lcm=(a,b)=>a*b/gcd(a,b),G=Array.from({length:729},(_,i)=>[i%9,Math.floor(i/9)%9,Math.floor(i/81)]),rows=[];
+function charges(g,s,k,l){let d=9/gcd(s,9),[x,y,z]=g,shift=m(x,d),len=d/gcd(shift,d),used=new Set(),out=[];for(let a=0;a<d;a++){if(used.has(a))continue;let b=a,sum=0;do{used.add(b);sum+=k*x+l*y+s*(z-y*(b+x));b=m(b+x,d)}while(b!==a);A(sum%len===0,'cycle phase integral');for(let j=0;j<len;j++)out.push(m(sum/len+9*j/len))}return out}
+for(let s=0;s<9;s++){let d=9/gcd(s,9),n=9/d;for(let k=0;k<n;k++)for(let l=0;l<n;l++){let failures=0,min=1,orders={};for(let g of G){let ord=g.reduce((a,x)=>lcm(a,9/gcd(9,x)),1);if(ord===1)continue;let e=charges(g,s,k,l);A(e.length===d&&e.every(x=>x%(9/ord)===0),'eigencharges');let c=e.map(x=>x/(9/ord)),u=m((ord*ord+3*ord+2)*c.reduce((a,x)=>a+x**3,0),6*ord),v=m(2*c.reduce((a,x)=>a+x,0),ord);if(u||v){failures++;orders[ord]=(orders[ord]||0)+1}min=lcm(min,lcm(6*ord/gcd(6*ord,u),ord/gcd(ord,v)))}rows.push({s,k,l,d,failures,orders,min_copies:min})}}
+A(rows.reduce((a,r)=>a+r.d**2,0)===729,'irrep sizes');let inflated=rows.filter(r=>r.d===3&&r.k===0&&r.l===0);A(inflated.length===2&&inflated.every(r=>!r.failures),'inflated triplet');
+let census={};for(let r of rows){let k=r.d+":"+r.min_copies;census[k]=(census[k]||0)+1}
+let E8central=[];for(let z=0;z<9;z++){let ex=[...Array(80).fill(0),...Array(84).fill(m(3*z)),...Array(84).fill(m(-3*z))];E8central.push({z,acts_trivially:ex.every(x=>!x),distinct_exponents:[...new Set(ex)]})}A(E8central.filter(x=>x.acts_trivially).length===3,'E8 kernel');
+return {census,inflated,rows,E8central,scope:"Irreps of H(Z9) by central character, monomial cycle spectra, cyclic Spin anomaly necessary conditions. Inflated H(F3) triplets pass every cyclic restriction, not full nonabelian spin bordism. E8 SU9 branching central action confirms kernel on primitive center cube."}
+}
+console.log(JSON.stringify(centerAnomalies(),null,2));
