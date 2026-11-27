@@ -1,0 +1,192 @@
+{
+  "counts": [
+    {
+      "r": 1,
+      "projectors": "0",
+      "reflections": "0",
+      "identity_numerator": "40",
+      "trace": "360",
+      "trace_squared": "14400"
+    },
+    {
+      "r": 2,
+      "projectors": "0",
+      "reflections": "1",
+      "identity_numerator": "39",
+      "trace": "1080",
+      "trace_squared": "15120"
+    },
+    {
+      "r": 3,
+      "projectors": "1",
+      "reflections": "3",
+      "identity_numerator": "36",
+      "trace": "3240",
+      "trace_squared": "17280"
+    },
+    {
+      "r": 4,
+      "projectors": "4",
+      "reflections": "9",
+      "identity_numerator": "27",
+      "trace": "9720",
+      "trace_squared": "23760"
+    },
+    {
+      "r": 5,
+      "projectors": "10",
+      "reflections": "30",
+      "identity_numerator": "0",
+      "trace": "29160",
+      "trace_squared": "43200"
+    },
+    {
+      "r": 6,
+      "projectors": "31",
+      "reflections": "90",
+      "identity_numerator": "-81",
+      "trace": "87480",
+      "trace_squared": "101520"
+    },
+    {
+      "r": 7,
+      "projectors": "112",
+      "reflections": "252",
+      "identity_numerator": "-324",
+      "trace": "262440",
+      "trace_squared": "276480"
+    },
+    {
+      "r": 8,
+      "projectors": "364",
+      "reflections": "729",
+      "identity_numerator": "-1053",
+      "trace": "787320",
+      "trace_squared": "801360"
+    },
+    {
+      "r": 9,
+      "projectors": "1093",
+      "reflections": "2187",
+      "identity_numerator": "-3240",
+      "trace": "2361960",
+      "trace_squared": "2376000"
+    },
+    {
+      "r": 10,
+      "projectors": "3280",
+      "reflections": "6561",
+      "identity_numerator": "-9801",
+      "trace": "7085880",
+      "trace_squared": "7099920"
+    },
+    {
+      "r": 11,
+      "projectors": "9922",
+      "reflections": "19602",
+      "identity_numerator": "-29484",
+      "trace": "21257640",
+      "trace_squared": "21271680"
+    },
+    {
+      "r": 12,
+      "projectors": "29767",
+      "reflections": "58806",
+      "identity_numerator": "-88533",
+      "trace": "63772920",
+      "trace_squared": "63786960"
+    },
+    {
+      "r": 13,
+      "projectors": "88816",
+      "reflections": "176904",
+      "identity_numerator": "-265680",
+      "trace": "191318760",
+      "trace_squared": "191332800"
+    },
+    {
+      "r": 14,
+      "projectors": "265720",
+      "reflections": "531441",
+      "identity_numerator": "-797121",
+      "trace": "573956280",
+      "trace_squared": "573970320"
+    },
+    {
+      "r": 15,
+      "projectors": "797161",
+      "reflections": "1594323",
+      "identity_numerator": "-2391444",
+      "trace": "1721868840",
+      "trace_squared": "1721882880"
+    },
+    {
+      "r": 16,
+      "projectors": "2391484",
+      "reflections": "4782969",
+      "identity_numerator": "-7174413",
+      "trace": "5165606520",
+      "trace_squared": "5165620560"
+    },
+    {
+      "r": 17,
+      "projectors": "7172266",
+      "reflections": "14351094",
+      "identity_numerator": "-21523320",
+      "trace": "15496819560",
+      "trace_squared": "15496833600"
+    },
+    {
+      "r": 18,
+      "projectors": "21516799",
+      "reflections": "43053282",
+      "identity_numerator": "-64570041",
+      "trace": "46490458680",
+      "trace_squared": "46490472720"
+    },
+    {
+      "r": 19,
+      "projectors": "64563520",
+      "reflections": "129146724",
+      "identity_numerator": "-193710204",
+      "trace": "139471376040",
+      "trace_squared": "139471390080"
+    },
+    {
+      "r": 20,
+      "projectors": "193710244",
+      "reflections": "387420489",
+      "identity_numerator": "-581130693",
+      "trace": "418414128120",
+      "trace_squared": "418414142160"
+    }
+  ],
+  "tests": [
+    {
+      "r": 3,
+      "columns": 729,
+      "dimension": 729,
+      "expanded_terms": 360
+    },
+    {
+      "r": 4,
+      "columns": 6561,
+      "dimension": 6561,
+      "expanded_terms": 1080
+    },
+    {
+      "r": 5,
+      "columns": 64,
+      "dimension": 59049,
+      "expanded_terms": 3240
+    },
+    {
+      "r": 6,
+      "columns": 64,
+      "dimension": 531441,
+      "expanded_terms": 9720
+    }
+  ],
+  "formula": "3^(r-1) M_r=(40-N_r)I+9 sum_{anisotropic [a] in 1^perp}R_a+81 sum_{isotropic [a] in 1^perp}Pi_a, N_r=(3^(r-1)-1)/2",
+  "scope": "All-order algebraic formula from Weyl expansion, exact column verification for r3,4 and samples r5,6; shared-label model not physical dynamics selection."
+}
