@@ -1,0 +1,281 @@
+{
+  "radicals": [
+    {
+      "n": 3,
+      "nullity": 1
+    },
+    {
+      "n": 4,
+      "nullity": 0
+    },
+    {
+      "n": 5,
+      "nullity": 0
+    },
+    {
+      "n": 6,
+      "nullity": 1
+    },
+    {
+      "n": 7,
+      "nullity": 0
+    },
+    {
+      "n": 8,
+      "nullity": 1
+    },
+    {
+      "n": 9,
+      "nullity": 2
+    },
+    {
+      "n": 10,
+      "nullity": 1
+    },
+    {
+      "n": 11,
+      "nullity": 0
+    },
+    {
+      "n": 12,
+      "nullity": 1
+    },
+    {
+      "n": 13,
+      "nullity": 0
+    },
+    {
+      "n": 14,
+      "nullity": 0
+    },
+    {
+      "n": 15,
+      "nullity": 1
+    },
+    {
+      "n": 16,
+      "nullity": 0
+    },
+    {
+      "n": 17,
+      "nullity": 1
+    },
+    {
+      "n": 18,
+      "nullity": 2
+    },
+    {
+      "n": 19,
+      "nullity": 1
+    },
+    {
+      "n": 20,
+      "nullity": 0
+    },
+    {
+      "n": 21,
+      "nullity": 1
+    },
+    {
+      "n": 22,
+      "nullity": 0
+    },
+    {
+      "n": 23,
+      "nullity": 0
+    },
+    {
+      "n": 24,
+      "nullity": 1
+    },
+    {
+      "n": 25,
+      "nullity": 0
+    },
+    {
+      "n": 26,
+      "nullity": 1
+    },
+    {
+      "n": 27,
+      "nullity": 2
+    },
+    {
+      "n": 28,
+      "nullity": 1
+    },
+    {
+      "n": 29,
+      "nullity": 0
+    },
+    {
+      "n": 30,
+      "nullity": 1
+    },
+    {
+      "n": 31,
+      "nullity": 0
+    },
+    {
+      "n": 32,
+      "nullity": 0
+    },
+    {
+      "n": 33,
+      "nullity": 1
+    },
+    {
+      "n": 34,
+      "nullity": 0
+    },
+    {
+      "n": 35,
+      "nullity": 1
+    },
+    {
+      "n": 36,
+      "nullity": 2
+    },
+    {
+      "n": 37,
+      "nullity": 1
+    },
+    {
+      "n": 38,
+      "nullity": 0
+    },
+    {
+      "n": 39,
+      "nullity": 1
+    }
+  ],
+  "affine_sectors": [
+    {
+      "n": 3,
+      "sector": 0,
+      "lambda": 1.0000000000000002,
+      "residual": 1.6653345369377348e-16,
+      "it": 0
+    },
+    {
+      "n": 3,
+      "sector": 1,
+      "lambda": 0,
+      "residual": 0,
+      "it": 0
+    },
+    {
+      "n": 3,
+      "sector": 2,
+      "lambda": 0,
+      "residual": 0,
+      "it": 0
+    },
+    {
+      "n": 3,
+      "sector": 3,
+      "lambda": 0,
+      "residual": 0,
+      "it": 0
+    },
+    {
+      "n": 3,
+      "sector": 4,
+      "lambda": 0,
+      "residual": 0,
+      "it": 0
+    },
+    {
+      "n": 3,
+      "sector": 5,
+      "lambda": 0,
+      "residual": 0,
+      "it": 0
+    },
+    {
+      "n": 3,
+      "sector": 6,
+      "lambda": 0,
+      "residual": 0,
+      "it": 0
+    },
+    {
+      "n": 3,
+      "sector": 7,
+      "lambda": 0,
+      "residual": 0,
+      "it": 0
+    },
+    {
+      "n": 3,
+      "sector": 8,
+      "lambda": 0,
+      "residual": 0,
+      "it": 0
+    },
+    {
+      "n": 6,
+      "sector": 0,
+      "lambda": 2.0524595505554997,
+      "residual": 7.39299925302354e-11,
+      "it": 35
+    },
+    {
+      "n": 6,
+      "sector": 1,
+      "lambda": 1.2846169792010234,
+      "residual": 6.997356931161347e-11,
+      "it": 47
+    },
+    {
+      "n": 6,
+      "sector": 2,
+      "lambda": 1.2846169792010234,
+      "residual": 6.997354704079269e-11,
+      "it": 47
+    },
+    {
+      "n": 6,
+      "sector": 3,
+      "lambda": 1.2846169792010234,
+      "residual": 6.997356412775898e-11,
+      "it": 47
+    },
+    {
+      "n": 6,
+      "sector": 4,
+      "lambda": 1.2846169792010231,
+      "residual": 6.997357733258001e-11,
+      "it": 47
+    },
+    {
+      "n": 6,
+      "sector": 5,
+      "lambda": 1.2846169792010167,
+      "residual": 6.997358186229361e-11,
+      "it": 47
+    },
+    {
+      "n": 6,
+      "sector": 6,
+      "lambda": 1.2846169792010231,
+      "residual": 6.997358708260576e-11,
+      "it": 47
+    },
+    {
+      "n": 6,
+      "sector": 7,
+      "lambda": 1.2846169792010236,
+      "residual": 6.997354709187312e-11,
+      "it": 47
+    },
+    {
+      "n": 6,
+      "sector": 8,
+      "lambda": 1.284616979201023,
+      "residual": 6.997360389450833e-11,
+      "it": 47
+    }
+  ],
+  "scope": "All distinct affine syndrome cosets for n3 and n6. For n4,5,7 full rank implies all orbits unitarily equivalent. Perron method starts positive, numerical maximum in each sector."
+}
