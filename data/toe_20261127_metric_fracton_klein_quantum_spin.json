@@ -1,0 +1,296 @@
+{
+  "status": "PASS",
+  "moduli": [
+    {
+      "name": "cubic",
+      "shortest": 1,
+      "negative_logdet_shape": 0.6283964069323313,
+      "truncation_values": [
+        0.6283964069296445,
+        0.6283964069323313,
+        0.6283964069323313
+      ],
+      "shortest_pair_lower": 0.1292356758110918,
+      "twisted_shape_costs": [
+        0.6283964069323313,
+        0.05997020852500415,
+        0.05997020852500244,
+        -0.1446153439451689,
+        0.059970208525002414,
+        -0.14461534394516878,
+        -0.14461534394516934,
+        -0.26840736212055843
+      ],
+      "mean_twisted_cost": 0.013256704818909379,
+      "double_mass_cost_over_8": 0.013256704818913393
+    },
+    {
+      "name": "FCC",
+      "shortest": 1.122462048309373,
+      "negative_logdet_shape": 0.588756511737372,
+      "truncation_values": [
+        0.5887565117131398,
+        0.588756511737372,
+        0.588756511737372
+      ],
+      "shortest_pair_lower": 0.07737159048688338,
+      "twisted_shape_costs": [
+        0.588756511737372,
+        -0.03283953613029518,
+        -0.03283953613029544,
+        -0.12294816930881944,
+        -0.03283953613029547,
+        -0.1229481693088194,
+        -0.1229481693088194,
+        -0.03283953613029547
+      ],
+      "mean_twisted_cost": 0.011069232411216516,
+      "double_mass_cost_over_8": 0.011069232411222797
+    },
+    {
+      "name": "BCC",
+      "shortest": 1.0911236359717211,
+      "negative_logdet_shape": 0.5893295713592918,
+      "truncation_values": [
+        0.5893295713119446,
+        0.5893295713592918,
+        0.5893295713592918
+      ],
+      "shortest_pair_lower": 0.08794764425725875,
+      "twisted_shape_costs": [
+        0.5893295713592918,
+        -0.050751919921275784,
+        -0.050751919921275764,
+        -0.050751919921275764,
+        -0.05075191992127577,
+        -0.050751919921275764,
+        -0.050751919921275625,
+        -0.19583524570086086
+      ],
+      "mean_twisted_cost": 0.011122850766347052,
+      "double_mass_cost_over_8": 0.011122850766349536
+    },
+    {
+      "name": "rectangular_0.8",
+      "shortest": 0.8,
+      "negative_logdet_shape": 0.7254055860063287,
+      "truncation_values": [
+        0.7254055858308608,
+        0.7254055860063287,
+        0.7254055860063287
+      ],
+      "shortest_pair_lower": 0.32634904282389493,
+      "twisted_shape_costs": [
+        0.7254055860063287,
+        -0.2546003043850449,
+        0.28488457638475345,
+        -0.3180710736907345,
+        0.28488457638475345,
+        -0.31807107369073445,
+        0.11403267944830153,
+        -0.3648562343732252
+      ],
+      "mean_twisted_cost": 0.019201091510549766,
+      "double_mass_cost_over_8": 0.019201091510554623
+    },
+    {
+      "name": "rectangular_0.6",
+      "shortest": 0.6,
+      "negative_logdet_shape": 1.315913924320133,
+      "truncation_values": [
+        1.3159138884370964,
+        1.3159139243201268,
+        1.315913924320133
+      ],
+      "shortest_pair_lower": 0.9764852300397091,
+      "twisted_shape_costs": [
+        1.315913924320133,
+        -0.9189160863256441,
+        1.0038345097785288,
+        -0.9257878775624153,
+        1.003834509778529,
+        -0.9257878775624153,
+        0.8662505093733791,
+        -0.9318993296691819
+      ],
+      "mean_twisted_cost": 0.06093028526636417,
+      "double_mass_cost_over_8": 0.0609302852663663
+    },
+    {
+      "name": "rectangular_0.4",
+      "shortest": 0.4,
+      "negative_logdet_shape": 4.581981723954956,
+      "truncation_values": [
+        4.581973670256125,
+        4.581981723664484,
+        4.581981723954956
+      ],
+      "shortest_pair_lower": 4.022602071390938,
+      "twisted_shape_costs": [
+        4.581981723954956,
+        -3.7425434585005166,
+        4.4054941531066545,
+        -3.742575620208198,
+        4.4054941531066545,
+        -3.742575620208198,
+        4.312376561103563,
+        -3.74260740833397
+      ],
+      "mean_twisted_cost": 0.3418805605026181,
+      "double_mass_cost_over_8": 0.34188056050262655
+    },
+    {
+      "name": "rectangular_0.25",
+      "shortest": 0.25,
+      "negative_logdet_shape": 21.10990653600931,
+      "truncation_values": [
+        21.109367473218523,
+        21.109905818766418,
+        21.10990653600931
+      ],
+      "shortest_pair_lower": 18.53421170497035,
+      "twisted_shape_costs": [
+        21.10990653600931,
+        -16.98588916227192,
+        21.03196170473439,
+        -16.98588916241776,
+        21.03196170473439,
+        -16.98588916241776,
+        20.98222333180757,
+        -16.98588916256237
+      ],
+      "mean_twisted_cost": 2.0265620784519816,
+      "double_mass_cost_over_8": 2.026562078451912
+    }
+  ],
+  "fracton": [
+    {
+      "L": 2,
+      "physical_qubits": 16,
+      "weight": 4,
+      "maximum_defects": 4,
+      "final_defects": 0,
+      "projection_weight": 2,
+      "recursive_bound": 16
+    },
+    {
+      "L": 4,
+      "physical_qubits": 128,
+      "weight": 16,
+      "maximum_defects": 6,
+      "final_defects": 0,
+      "projection_weight": 4,
+      "recursive_bound": 28
+    },
+    {
+      "L": 8,
+      "physical_qubits": 1024,
+      "weight": 64,
+      "maximum_defects": 8,
+      "final_defects": 0,
+      "projection_weight": 8,
+      "recursive_bound": 40
+    },
+    {
+      "L": 16,
+      "physical_qubits": 8192,
+      "weight": 256,
+      "maximum_defects": 10,
+      "final_defects": 0,
+      "projection_weight": 16,
+      "recursive_bound": 52
+    },
+    {
+      "L": 32,
+      "physical_qubits": 65536,
+      "weight": 1024,
+      "maximum_defects": 12,
+      "final_defects": 0,
+      "projection_weight": 32,
+      "recursive_bound": 64
+    },
+    {
+      "L": 64,
+      "physical_qubits": 524288,
+      "weight": 4096,
+      "maximum_defects": 14,
+      "final_defects": 0,
+      "projection_weight": 64,
+      "recursive_bound": 76
+    },
+    {
+      "L": 128,
+      "physical_qubits": 4194304,
+      "weight": 16384,
+      "maximum_defects": 16,
+      "final_defects": 0,
+      "projection_weight": 128,
+      "recursive_bound": 88
+    }
+  ],
+  "representation": {
+    "generators": 40,
+    "lines": 130,
+    "equivariant_boundary_checks": 3200,
+    "ordered_pair_orbits": [
+      40,
+      480,
+      1080
+    ],
+    "irreducible_dimensions": [
+      1,
+      15,
+      24
+    ],
+    "orthogonal_transition_eigenvalues": {
+      "+1": 25,
+      "-1": 15
+    },
+    "trace": 10,
+    "scope": "Exact Sp4(3) action via projective symplectic polarity and exterior square. Not a Witting ray intertwiner."
+  },
+  "quantum_response": {
+    "rows": [
+      {
+        "type": "rook",
+        "mass_squared": 1,
+        "trace": 0.4224094194162247,
+        "trace_square": 0.005346237480737304,
+        "diagonal": 0.00880019623783802
+      },
+      {
+        "type": "shrikhande",
+        "mass_squared": 1,
+        "trace": 0.4224094194162247,
+        "trace_square": 0.005340733802725963,
+        "diagonal": 0.00880019623783802
+      }
+    ],
+    "TT_angular_average": 0.06666666666666768,
+    "TT_expected": 0.06666666666666667,
+    "scope": "Massive graph harmonic ground state QFI; separate 4D free scalar shear two-particle continuum rho(s) proportional s², not graviton pole."
+  },
+  "spin10": {
+    "even_states": 16,
+    "odd_states": 16,
+    "charges_in_sixY": {
+      "0": 1,
+      "1": 6,
+      "2": 3,
+      "6": 1,
+      "-4": 3,
+      "-3": 2
+    },
+    "mass_matrices": 10,
+    "exact_clifford_checks": 1600,
+    "cubic_cartan_residual": 0,
+    "trace_Y6": 0,
+    "trace_Y6_cubed": 0,
+    "SU3_cubic": 0,
+    "SU3_squared_Y6": 0,
+    "SU2_squared_Y6": 0,
+    "SU2_doublets": 4,
+    "mass_target": "S9",
+    "scope": "Fixed real vector mass full rank, Spin(10) covariant Clifford construction; no proof fluctuating vector creates symmetric gapped phase or QCA."
+  }
+}
