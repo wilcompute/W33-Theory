@@ -1,0 +1,516 @@
+{
+  "status": "PASS",
+  "charge": {
+    "L": 3,
+    "code": [
+      54,
+      10,
+      6
+    ],
+    "error_half_counts": [
+      1,
+      108,
+      5724,
+      198432
+    ],
+    "syndrome_classes": 203569,
+    "collisionHist": {
+      "6": 720
+    },
+    "logical_membership_checks": 1,
+    "witness": [
+      [
+        27,
+        2
+      ],
+      [
+        28,
+        1
+      ],
+      [
+        31,
+        2
+      ],
+      [
+        32,
+        1
+      ],
+      [
+        33,
+        1
+      ],
+      [
+        35,
+        2
+      ]
+    ],
+    "unit_rank_F3": 3,
+    "unit_rank_F9": 6,
+    "augmentation_dimension_first_order": 3,
+    "scope": "Exact CSS distance L3 via collision enumeration and X/Z inversion+swap equivalence; charge-ring units recover rank, not metric."
+  },
+  "rotor": {
+    "complex_modes": 32,
+    "fock_dimension": 4294967296,
+    "rotor": "untruncated L2(S9)",
+    "fixed_n_ground_energy": "-16g",
+    "fixed_n_gap": "g",
+    "overlap": "((1+t)/2)^8",
+    "gradient_norm_squared": 36,
+    "laplacian_norm_squared": 1710,
+    "orthogonal_laplacian_norm_squared": 414,
+    "clifford_checks": 1600,
+    "trace_checks": 100,
+    "rows": [
+      {
+        "g_over_kappa": 100,
+        "trial_energy_shift": 36,
+        "first_excited_lower_shift": 22.68,
+        "gap_lower": -13.32
+      },
+      {
+        "g_over_kappa": 200,
+        "trial_energy_shift": 36,
+        "first_excited_lower_shift": 33.84,
+        "gap_lower": -2.1599999999999966
+      },
+      {
+        "g_over_kappa": 248,
+        "trial_energy_shift": 36,
+        "first_excited_lower_shift": 36,
+        "gap_lower": 0
+      },
+      {
+        "g_over_kappa": 249,
+        "trial_energy_shift": 36,
+        "first_excited_lower_shift": 36.036144578313255,
+        "gap_lower": 0.03614457831325524
+      },
+      {
+        "g_over_kappa": 300,
+        "trial_energy_shift": 36,
+        "first_excited_lower_shift": 37.56,
+        "gap_lower": 1.5600000000000023
+      },
+      {
+        "g_over_kappa": 500,
+        "trial_energy_shift": 36,
+        "first_excited_lower_shift": 40.536,
+        "gap_lower": 4.536000000000001
+      },
+      {
+        "g_over_kappa": 1000,
+        "trial_energy_shift": 36,
+        "first_excited_lower_shift": 42.768,
+        "gap_lower": 6.768000000000001
+      },
+      {
+        "g_over_kappa": 10000,
+        "trial_energy_shift": 36,
+        "first_excited_lower_shift": 44.7768,
+        "gap_lower": 8.776800000000001
+      }
+    ],
+    "scope": "Analytic minmax bound for full on-site rotor and full Fock, not numerical diagonalization or Weyl boundary."
+  },
+  "tensor": {
+    "symbols": [
+      {
+        "p": [
+          1,
+          0,
+          0
+        ],
+        "isotropic": false,
+        "scalar_dof": 5,
+        "vector_dof": 3,
+        "linear_GR_dof": 2
+      },
+      {
+        "p": [
+          2,
+          0,
+          0
+        ],
+        "isotropic": false,
+        "scalar_dof": 5,
+        "vector_dof": 3,
+        "linear_GR_dof": 2
+      },
+      {
+        "p": [
+          0,
+          1,
+          0
+        ],
+        "isotropic": false,
+        "scalar_dof": 5,
+        "vector_dof": 3,
+        "linear_GR_dof": 2
+      },
+      {
+        "p": [
+          1,
+          1,
+          0
+        ],
+        "isotropic": false,
+        "scalar_dof": 5,
+        "vector_dof": 3,
+        "linear_GR_dof": 2
+      },
+      {
+        "p": [
+          2,
+          1,
+          0
+        ],
+        "isotropic": false,
+        "scalar_dof": 5,
+        "vector_dof": 3,
+        "linear_GR_dof": 2
+      },
+      {
+        "p": [
+          0,
+          2,
+          0
+        ],
+        "isotropic": false,
+        "scalar_dof": 5,
+        "vector_dof": 3,
+        "linear_GR_dof": 2
+      },
+      {
+        "p": [
+          1,
+          2,
+          0
+        ],
+        "isotropic": false,
+        "scalar_dof": 5,
+        "vector_dof": 3,
+        "linear_GR_dof": 2
+      },
+      {
+        "p": [
+          2,
+          2,
+          0
+        ],
+        "isotropic": false,
+        "scalar_dof": 5,
+        "vector_dof": 3,
+        "linear_GR_dof": 2
+      },
+      {
+        "p": [
+          0,
+          0,
+          1
+        ],
+        "isotropic": false,
+        "scalar_dof": 5,
+        "vector_dof": 3,
+        "linear_GR_dof": 2
+      },
+      {
+        "p": [
+          1,
+          0,
+          1
+        ],
+        "isotropic": false,
+        "scalar_dof": 5,
+        "vector_dof": 3,
+        "linear_GR_dof": 2
+      },
+      {
+        "p": [
+          2,
+          0,
+          1
+        ],
+        "isotropic": false,
+        "scalar_dof": 5,
+        "vector_dof": 3,
+        "linear_GR_dof": 2
+      },
+      {
+        "p": [
+          0,
+          1,
+          1
+        ],
+        "isotropic": false,
+        "scalar_dof": 5,
+        "vector_dof": 3,
+        "linear_GR_dof": 2
+      },
+      {
+        "p": [
+          1,
+          1,
+          1
+        ],
+        "isotropic": true,
+        "scalar_dof": 5,
+        "vector_dof": 3,
+        "linear_GR_dof": 2
+      },
+      {
+        "p": [
+          2,
+          1,
+          1
+        ],
+        "isotropic": true,
+        "scalar_dof": 5,
+        "vector_dof": 3,
+        "linear_GR_dof": 2
+      },
+      {
+        "p": [
+          0,
+          2,
+          1
+        ],
+        "isotropic": false,
+        "scalar_dof": 5,
+        "vector_dof": 3,
+        "linear_GR_dof": 2
+      },
+      {
+        "p": [
+          1,
+          2,
+          1
+        ],
+        "isotropic": true,
+        "scalar_dof": 5,
+        "vector_dof": 3,
+        "linear_GR_dof": 2
+      },
+      {
+        "p": [
+          2,
+          2,
+          1
+        ],
+        "isotropic": true,
+        "scalar_dof": 5,
+        "vector_dof": 3,
+        "linear_GR_dof": 2
+      },
+      {
+        "p": [
+          0,
+          0,
+          2
+        ],
+        "isotropic": false,
+        "scalar_dof": 5,
+        "vector_dof": 3,
+        "linear_GR_dof": 2
+      },
+      {
+        "p": [
+          1,
+          0,
+          2
+        ],
+        "isotropic": false,
+        "scalar_dof": 5,
+        "vector_dof": 3,
+        "linear_GR_dof": 2
+      },
+      {
+        "p": [
+          2,
+          0,
+          2
+        ],
+        "isotropic": false,
+        "scalar_dof": 5,
+        "vector_dof": 3,
+        "linear_GR_dof": 2
+      },
+      {
+        "p": [
+          0,
+          1,
+          2
+        ],
+        "isotropic": false,
+        "scalar_dof": 5,
+        "vector_dof": 3,
+        "linear_GR_dof": 2
+      },
+      {
+        "p": [
+          1,
+          1,
+          2
+        ],
+        "isotropic": true,
+        "scalar_dof": 5,
+        "vector_dof": 3,
+        "linear_GR_dof": 2
+      },
+      {
+        "p": [
+          2,
+          1,
+          2
+        ],
+        "isotropic": true,
+        "scalar_dof": 5,
+        "vector_dof": 3,
+        "linear_GR_dof": 2
+      },
+      {
+        "p": [
+          0,
+          2,
+          2
+        ],
+        "isotropic": false,
+        "scalar_dof": 5,
+        "vector_dof": 3,
+        "linear_GR_dof": 2
+      },
+      {
+        "p": [
+          1,
+          2,
+          2
+        ],
+        "isotropic": true,
+        "scalar_dof": 5,
+        "vector_dof": 3,
+        "linear_GR_dof": 2
+      },
+      {
+        "p": [
+          2,
+          2,
+          2
+        ],
+        "isotropic": true,
+        "scalar_dof": 5,
+        "vector_dof": 3,
+        "linear_GR_dof": 2
+      }
+    ],
+    "isotropic_symbols": 8,
+    "scalar_charge_dof": 5,
+    "vector_charge_dof": 3,
+    "linear_GR_dof": 2,
+    "ternary_charge_first_order_dipole_violation": [
+      1,
+      2,
+      2
+    ],
+    "scope": "Constraint-symbol linear algebra F3, not finite lattice Hamiltonian or graviton dispersion; usual real continuum mode counts same."
+  },
+  "condensation": {
+    "original_anyons": 729,
+    "doubled_anyons": 531441,
+    "condensate_order": 3,
+    "unconfined_before_quotient": 177147,
+    "remaining_anyons": 59049,
+    "single_layer_surviving_labels": 243,
+    "projective_bosons": 130,
+    "selector_histogram": {
+      "40": 234,
+      "49": 130
+    },
+    "pfaffian_histogram": {
+      "0:49": 130,
+      "1:40": 117,
+      "2:40": 117
+    },
+    "examples": {
+      "0:49": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "1:40": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "2:40": [
+        1,
+        0,
+        2,
+        1,
+        0,
+        0
+      ]
+    },
+    "SRG_pair_checks": 182520,
+    "scope": "Algebraically admissible diagonal boson condensation in D x reverse D; W33 in surviving single-layer bosonic probes. No dynamical sector preference or Hamiltonian."
+  },
+  "holonomy": {
+    "charges_actual": [
+      3,
+      -6,
+      12
+    ],
+    "multiplicity_per_27": [
+      16,
+      10,
+      1
+    ],
+    "weyl_components": 729,
+    "rows": [
+      {
+        "spin": 0,
+        "continuous_mean": -6.909334215876584e-13,
+        "continuous_max_estimate": {
+          "x": 0.6666666666666666,
+          "value": 351.00000000000034
+        },
+        "stationary_roots": [
+          0.33333333333333337,
+          0.6666666666666667
+        ],
+        "Z9_values_for_actual_charges_3n": [
+          -729,
+          350.99999999999994,
+          351.00000000000034
+        ],
+        "Z9_max": 351.00000000000034,
+        "unshifted": -729
+      },
+      {
+        "spin": 0.5,
+        "continuous_mean": -1.123497128663331e-12,
+        "continuous_max_estimate": {
+          "x": 0,
+          "value": 637.875
+        },
+        "stationary_roots": [
+          0.33333333333333337,
+          0.6666666666666667
+        ],
+        "Z9_values_for_actual_charges_3n": [
+          637.875,
+          -307.12499999999983,
+          -307.1250000000003
+        ],
+        "Z9_max": 637.875,
+        "unshifted": 637.875
+      }
+    ],
+    "scope": "Leading absolute chiral determinant coefficient on fixed-volume flat torus, normalized per Weyl; no phase, nonflat gauge configurations, or anomaly-complete integral."
+  }
+}
