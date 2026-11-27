@@ -1,0 +1,459 @@
+{
+  "higher_prime_symmetry_family": [
+    {
+      "p": 2,
+      "complex_dimension": 1,
+      "smooth": false,
+      "witness": "x=y=(1,i,0)"
+    },
+    {
+      "p": 3,
+      "complex_dimension": 3,
+      "smooth": true,
+      "reason": "positive d_i^3 cannot sum to zero on nonempty common support"
+    },
+    {
+      "p": 5,
+      "complex_dimension": 7,
+      "smooth": false,
+      "singular_support": 3,
+      "root_order": 15,
+      "x_exponents": [
+        0,
+        1,
+        2
+      ],
+      "y_exponents": [
+        0,
+        4,
+        8
+      ],
+      "exact_sum": "sum all (p-2) roots of unity = 0",
+      "numerical_sum_residual": 4.0029660424867215e-16
+    },
+    {
+      "p": 7,
+      "complex_dimension": 11,
+      "smooth": false,
+      "singular_support": 5,
+      "root_order": 35,
+      "x_exponents": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "y_exponents": [
+        0,
+        6,
+        12,
+        18,
+        24
+      ],
+      "exact_sum": "sum all (p-2) roots of unity = 0",
+      "numerical_sum_residual": 2.482534153247273e-16
+    },
+    {
+      "p": 11,
+      "complex_dimension": 19,
+      "smooth": false,
+      "singular_support": 9,
+      "root_order": 99,
+      "x_exponents": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "y_exponents": [
+        0,
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80
+      ],
+      "exact_sum": "sum all (p-2) roots of unity = 0",
+      "numerical_sum_residual": 7.850462293418876e-16
+    },
+    {
+      "p": 13,
+      "complex_dimension": 23,
+      "smooth": false,
+      "singular_support": 11,
+      "root_order": 143,
+      "x_exponents": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "y_exponents": [
+        0,
+        12,
+        24,
+        36,
+        48,
+        60,
+        72,
+        84,
+        96,
+        108,
+        120
+      ],
+      "exact_sum": "sum all (p-2) roots of unity = 0",
+      "numerical_sum_residual": 5.9787339602818175e-16
+    },
+    {
+      "p": 17,
+      "complex_dimension": 31,
+      "smooth": false,
+      "singular_support": 15,
+      "root_order": 255,
+      "x_exponents": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "y_exponents": [
+        0,
+        16,
+        32,
+        48,
+        64,
+        80,
+        96,
+        112,
+        128,
+        144,
+        160,
+        176,
+        192,
+        208,
+        224
+      ],
+      "exact_sum": "sum all (p-2) roots of unity = 0",
+      "numerical_sum_residual": 2.094764613337708e-15
+    },
+    {
+      "p": 19,
+      "complex_dimension": 35,
+      "smooth": false,
+      "singular_support": 17,
+      "root_order": 323,
+      "x_exponents": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "y_exponents": [
+        0,
+        18,
+        36,
+        54,
+        72,
+        90,
+        108,
+        126,
+        144,
+        162,
+        180,
+        198,
+        216,
+        234,
+        252,
+        270,
+        288
+      ],
+      "exact_sum": "sum all (p-2) roots of unity = 0",
+      "numerical_sum_residual": 1.4936523181711916e-15
+    }
+  ],
+  "twisted_determinants": [
+    {
+      "mass": 0.1,
+      "quotient": "axis",
+      "logdet_density": [
+        0.5321124524242428,
+        1.3198990751266357,
+        1.3198990751266357
+      ],
+      "cover_density": 1.0573035342258381,
+      "trivial_difference": -0.5251910818015953,
+      "nontrivial_difference": 0.2625955409007976
+    },
+    {
+      "mass": 0.1,
+      "quotient": "diagonal",
+      "logdet_density": [
+        0.6857757123767609,
+        1.2430674451503767,
+        1.2430674451503767
+      ],
+      "cover_density": 1.0573035342258381,
+      "trivial_difference": -0.3715278218490772,
+      "nontrivial_difference": 0.1857639109245386
+    },
+    {
+      "mass": 0.5,
+      "quotient": "axis",
+      "logdet_density": [
+        0.9647313561971047,
+        1.395042722005423,
+        1.395042722005423
+      ],
+      "cover_density": 1.2516056000693168,
+      "trivial_difference": -0.28687424387221205,
+      "nontrivial_difference": 0.14343712193610614
+    },
+    {
+      "mass": 0.5,
+      "quotient": "diagonal",
+      "logdet_density": [
+        1.110048348954141,
+        1.3223842256269047,
+        1.3223842256269047
+      ],
+      "cover_density": 1.2516056000693168,
+      "trivial_difference": -0.1415572511151757,
+      "nontrivial_difference": 0.07077862555758796
+    },
+    {
+      "mass": 1,
+      "quotient": "axis",
+      "logdet_density": [
+        1.310478637252609,
+        1.5888704080293572,
+        1.5888704080293572
+      ],
+      "cover_density": 1.4960731511037746,
+      "trivial_difference": -0.18559451385116565,
+      "nontrivial_difference": 0.0927972569255826
+    },
+    {
+      "mass": 1,
+      "quotient": "diagonal",
+      "logdet_density": [
+        1.4348377012382585,
+        1.5266908760365325,
+        1.5266908760365325
+      ],
+      "cover_density": 1.4960731511037746,
+      "trivial_difference": -0.0612354498655161,
+      "nontrivial_difference": 0.03061772493275794
+    },
+    {
+      "mass": 2,
+      "quotient": "axis",
+      "logdet_density": [
+        1.9489519597996439,
+        2.0903925904455205,
+        2.0903925904455205
+      ],
+      "cover_density": 2.0432457135635618,
+      "trivial_difference": -0.09429375376391791,
+      "nontrivial_difference": 0.04714687688195873
+    },
+    {
+      "mass": 2,
+      "quotient": "diagonal",
+      "logdet_density": [
+        2.0282130584526956,
+        2.0507620411189946,
+        2.0507620411189946
+      ],
+      "cover_density": 2.0432457135635613,
+      "trivial_difference": -0.015032655110865711,
+      "nontrivial_difference": 0.0075163275554333
+    },
+    {
+      "mass": 5,
+      "quotient": "axis",
+      "logdet_density": [
+        3.341378839318697,
+        3.3765892919772402,
+        3.3765892919772402
+      ],
+      "cover_density": 3.364852474424392,
+      "trivial_difference": -0.023473635105695223,
+      "nontrivial_difference": 0.011736817552848056
+    },
+    {
+      "mass": 5,
+      "quotient": "diagonal",
+      "logdet_density": [
+        3.3639972158320175,
+        3.36528010372058,
+        3.36528010372058
+      ],
+      "cover_density": 3.364852474424392,
+      "trivial_difference": -0.0008552585923746747,
+      "nontrivial_difference": 0.00042762929618778145
+    },
+    {
+      "mass": 10,
+      "quotient": "axis",
+      "logdet_density": [
+        4.637761851785071,
+        4.647426186674672,
+        4.647426186674672
+      ],
+      "cover_density": 4.644204741711472,
+      "trivial_difference": -0.006442889926400852,
+      "nontrivial_difference": 0.003221444963200426
+    },
+    {
+      "mass": 10,
+      "quotient": "diagonal",
+      "logdet_density": [
+        4.6441418753145,
+        4.644236174909958,
+        4.644236174909958
+      ],
+      "cover_density": 4.644204741711472,
+      "trivial_difference": -0.00006286639697172802,
+      "nontrivial_difference": 0.00003143319848586401
+    }
+  ],
+  "Wilson_scalar_coefficients": [
+    {
+      "kind": "identity",
+      "w27": [
+        27,
+        0,
+        0
+      ],
+      "adj0": 78,
+      "scalar_27_coefficient": 27,
+      "scalar_78_coefficient": 78
+    },
+    {
+      "kind": "central_1",
+      "w27": [
+        0,
+        27,
+        0
+      ],
+      "adj0": 78,
+      "scalar_27_coefficient": -13.5,
+      "scalar_78_coefficient": 78
+    },
+    {
+      "kind": "central_2",
+      "w27": [
+        0,
+        0,
+        27
+      ],
+      "adj0": 78,
+      "scalar_27_coefficient": -13.5,
+      "scalar_78_coefficient": 78
+    },
+    {
+      "kind": "A5_neutral15",
+      "w27": [
+        15,
+        6,
+        6
+      ],
+      "adj0": 36,
+      "scalar_27_coefficient": 9,
+      "scalar_78_coefficient": 15
+    },
+    {
+      "kind": "A5_neutral6_a",
+      "w27": [
+        6,
+        15,
+        6
+      ],
+      "adj0": 36,
+      "scalar_27_coefficient": -4.5,
+      "scalar_78_coefficient": 15
+    },
+    {
+      "kind": "A5_neutral6_b",
+      "w27": [
+        6,
+        6,
+        15
+      ],
+      "adj0": 36,
+      "scalar_27_coefficient": -4.5,
+      "scalar_78_coefficient": 15
+    },
+    {
+      "kind": "A2^3",
+      "w27": [
+        9,
+        9,
+        9
+      ],
+      "adj0": 24,
+      "scalar_27_coefficient": 0,
+      "scalar_78_coefficient": -3
+    },
+    {
+      "kind": "D4",
+      "w27": [
+        9,
+        9,
+        9
+      ],
+      "adj0": 30,
+      "scalar_27_coefficient": 0,
+      "scalar_78_coefficient": 6
+    }
+  ],
+  "symmetric_moduli": {
+    "degree3_invariants": 1,
+    "pairing_invariants": 1,
+    "coordinate_endomorphism_invariants": 1,
+    "polynomial_deformation_invariants": 0,
+    "cubic_surface_lines": 27,
+    "line_orbits": 1,
+    "cover_invariant_Kahler_rank": 2
+  }
+}
