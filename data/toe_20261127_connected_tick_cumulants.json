@@ -1,0 +1,132 @@
+{
+  "census": [
+    {
+      "n": 2,
+      "tuples": 25,
+      "partitions": 2,
+      "zero": 21,
+      "nonzero": {
+        "1/360": 4
+      }
+    },
+    {
+      "n": 3,
+      "tuples": 125,
+      "partitions": 5,
+      "zero": 121,
+      "nonzero": {
+        "1/1080": 4
+      }
+    },
+    {
+      "n": 4,
+      "tuples": 625,
+      "partitions": 15,
+      "zero": 589,
+      "nonzero": {
+        "19/64800": 12,
+        "-1/129600": 24
+      }
+    },
+    {
+      "n": 5,
+      "tuples": 3125,
+      "partitions": 52,
+      "zero": 3025,
+      "nonzero": {
+        "1/10800": 20,
+        "-1/388800": 80
+      }
+    },
+    {
+      "n": 6,
+      "tuples": 15625,
+      "partitions": 203,
+      "zero": 15141,
+      "nonzero": {
+        "1/38880": 4,
+        "101/3888000": 40,
+        "-1/1166400": 80,
+        "-1/1296000": 360
+      }
+    }
+  ],
+  "examples": [
+    {
+      "labels": [
+        1,
+        2
+      ],
+      "coefficient": "1/360"
+    },
+    {
+      "labels": [
+        1,
+        1,
+        1
+      ],
+      "coefficient": "1/1080"
+    },
+    {
+      "labels": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "coefficient": "19/64800"
+    },
+    {
+      "labels": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "coefficient": "-1/129600"
+    },
+    {
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "coefficient": "1/10800"
+    },
+    {
+      "labels": [
+        1,
+        1,
+        1,
+        3,
+        4
+      ],
+      "coefficient": "-1/388800"
+    },
+    {
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "coefficient": "1/38880"
+    },
+    {
+      "labels": [
+        1,
+        2,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coefficient": "-1/1296000"
+    }
+  ],
+  "scope": "Square-free coefficient of log of the multivariate shared-label generating operator. Each valid partition block must be same projective direction and balanced mod3, with normalized Weyl coefficient 1/(40*3^|B|). No identity legs at connected order >=2. This is not entire univariate log, which includes repeated-site powers."
+}
