@@ -1,0 +1,407 @@
+{
+  "status": "PASS",
+  "scope": "Uniform index-p covers; rank and flatness imposed. Numerical spectral sums, exact covariance identity proved separately.",
+  "controls": [
+    {
+      "p": 3,
+      "d": 2,
+      "alpha": 0.13,
+      "beta": 0.7,
+      "projective_covariance": 0.00039231965084451925,
+      "primal_covariance": 0.0003923196508446303,
+      "spectral_covariance": 0.00039231965084455075
+    },
+    {
+      "p": 3,
+      "d": 2,
+      "alpha": 0.5,
+      "beta": 0.5,
+      "projective_covariance": 0.00012068311589374936,
+      "primal_covariance": 0.00012068311589330527,
+      "spectral_covariance": 0.00012068311589365343
+    },
+    {
+      "p": 3,
+      "d": 2,
+      "alpha": 0.5,
+      "beta": 1,
+      "projective_covariance": 0.0000013555617964233768,
+      "primal_covariance": 0.0000013555617963678657,
+      "spectral_covariance": 0.0000013555617963770515
+    },
+    {
+      "p": 3,
+      "d": 3,
+      "alpha": 0.13,
+      "beta": 0.7,
+      "projective_covariance": 0.0026096489586659583,
+      "primal_covariance": 0.002609648958666,
+      "spectral_covariance": 0.00260964895866597
+    },
+    {
+      "p": 3,
+      "d": 3,
+      "alpha": 0.5,
+      "beta": 0.5,
+      "projective_covariance": 0.001312263595320995,
+      "primal_covariance": 0.001312263595321106,
+      "spectral_covariance": 0.001312263595321082
+    },
+    {
+      "p": 3,
+      "d": 3,
+      "alpha": 0.5,
+      "beta": 1,
+      "projective_covariance": 0.00005938210850525705,
+      "primal_covariance": 0.00005938210850575665,
+      "spectral_covariance": 0.0000593821085053403
+    },
+    {
+      "p": 3,
+      "d": 4,
+      "alpha": 0.13,
+      "beta": 0.7,
+      "projective_covariance": 0.003359681720560115,
+      "primal_covariance": 0.0033596817205592266,
+      "spectral_covariance": 0.003359681720560161
+    },
+    {
+      "p": 3,
+      "d": 4,
+      "alpha": 0.5,
+      "beta": 0.5,
+      "projective_covariance": 0.0019081786171359291,
+      "primal_covariance": 0.0019081786171359916,
+      "spectral_covariance": 0.0019081786171359551
+    },
+    {
+      "p": 3,
+      "d": 4,
+      "alpha": 0.5,
+      "beta": 1,
+      "projective_covariance": 0.00014415960415735396,
+      "primal_covariance": 0.00014415960415803397,
+      "spectral_covariance": 0.00014415960415739207
+    },
+    {
+      "p": 5,
+      "d": 2,
+      "alpha": 0.13,
+      "beta": 0.7,
+      "projective_covariance": 0.002647234726407932,
+      "primal_covariance": 0.00264723472640771,
+      "spectral_covariance": 0.0026472347264078007
+    },
+    {
+      "p": 5,
+      "d": 2,
+      "alpha": 0.5,
+      "beta": 0.5,
+      "projective_covariance": 0.0008662258591547456,
+      "primal_covariance": 0.0008662258591547456,
+      "spectral_covariance": 0.0008662258591547208
+    },
+    {
+      "p": 5,
+      "d": 2,
+      "alpha": 0.5,
+      "beta": 1,
+      "projective_covariance": 0.00002766775056595172,
+      "primal_covariance": 0.000027667750566173765,
+      "spectral_covariance": 0.000027667750566007744
+    },
+    {
+      "p": 5,
+      "d": 3,
+      "alpha": 0.13,
+      "beta": 0.7,
+      "projective_covariance": 0.012945777412560366,
+      "primal_covariance": 0.012945777412561199,
+      "spectral_covariance": 0.01294577741256029
+    },
+    {
+      "p": 5,
+      "d": 3,
+      "alpha": 0.5,
+      "beta": 0.5,
+      "projective_covariance": 0.006377304202573236,
+      "primal_covariance": 0.0063773042025732085,
+      "spectral_covariance": 0.006377304202573161
+    },
+    {
+      "p": 5,
+      "d": 3,
+      "alpha": 0.5,
+      "beta": 1,
+      "projective_covariance": 0.0008200570304218446,
+      "primal_covariance": 0.0008200570304222055,
+      "spectral_covariance": 0.0008200570304218169
+    },
+    {
+      "p": 5,
+      "d": 4,
+      "alpha": 0.13,
+      "beta": 0.7,
+      "projective_covariance": 0.010411261403427897,
+      "primal_covariance": 0.010411261403426408,
+      "spectral_covariance": 0.010411261403427732
+    },
+    {
+      "p": 5,
+      "d": 4,
+      "alpha": 0.5,
+      "beta": 0.5,
+      "projective_covariance": 0.005644782373770429,
+      "primal_covariance": 0.0056447823737659775,
+      "spectral_covariance": 0.00564478237377024
+    },
+    {
+      "p": 5,
+      "d": 4,
+      "alpha": 0.5,
+      "beta": 1,
+      "projective_covariance": 0.0010523172965677188,
+      "primal_covariance": 0.0010523172965679617,
+      "spectral_covariance": 0.001052317296567495
+    },
+    {
+      "p": 7,
+      "d": 2,
+      "alpha": 0.13,
+      "beta": 0.7,
+      "projective_covariance": 0.009472248543100359,
+      "primal_covariance": 0.009472248543100026,
+      "spectral_covariance": 0.009472248543099844
+    },
+    {
+      "p": 7,
+      "d": 2,
+      "alpha": 0.5,
+      "beta": 0.5,
+      "projective_covariance": 0.0037082577895410918,
+      "primal_covariance": 0.0037082577895408697,
+      "spectral_covariance": 0.0037082577895410284
+    },
+    {
+      "p": 7,
+      "d": 2,
+      "alpha": 0.5,
+      "beta": 1,
+      "projective_covariance": 0.0002699378737577307,
+      "primal_covariance": 0.00026993787375739764,
+      "spectral_covariance": 0.00026993787375768663
+    },
+    {
+      "p": 7,
+      "d": 3,
+      "alpha": 0.13,
+      "beta": 0.7,
+      "projective_covariance": 0.029135010877629056,
+      "primal_covariance": 0.02913501087762982,
+      "spectral_covariance": 0.02913501087762873
+    },
+    {
+      "p": 7,
+      "d": 3,
+      "alpha": 0.5,
+      "beta": 0.5,
+      "projective_covariance": 0.014478045321087887,
+      "primal_covariance": 0.014478045321085764,
+      "spectral_covariance": 0.014478045321087816
+    },
+    {
+      "p": 7,
+      "d": 3,
+      "alpha": 0.5,
+      "beta": 1,
+      "projective_covariance": 0.0033139073419922588,
+      "primal_covariance": 0.0033139073419927723,
+      "spectral_covariance": 0.003313907341992253
+    },
+    {
+      "p": 7,
+      "d": 4,
+      "alpha": 0.13,
+      "beta": 0.7,
+      "projective_covariance": 0.017169404336185794,
+      "primal_covariance": 0.017169404336188077,
+      "spectral_covariance": 0.017169404336185433
+    },
+    {
+      "p": 7,
+      "d": 4,
+      "alpha": 0.5,
+      "beta": 0.5,
+      "projective_covariance": 0.00904921982060909,
+      "primal_covariance": 0.0090492198206098,
+      "spectral_covariance": 0.009049219820608944
+    },
+    {
+      "p": 7,
+      "d": 4,
+      "alpha": 0.5,
+      "beta": 1,
+      "projective_covariance": 0.0025160521139560976,
+      "primal_covariance": 0.002516052113959555,
+      "spectral_covariance": 0.0025160521139560095
+    }
+  ],
+  "rows": [
+    {
+      "p": 31,
+      "d": 2,
+      "alpha": 0.5,
+      "beta": 1,
+      "N": 32,
+      "mean": 1.124200978465154,
+      "variance": 0.10079668211963279,
+      "covariance": 0.04421385483115822,
+      "median": 1.0006264171835393,
+      "max": 2.230343316820289
+    },
+    {
+      "p": 127,
+      "d": 2,
+      "alpha": 0.5,
+      "beta": 1,
+      "N": 128,
+      "mean": 1.150411437168755,
+      "variance": 0.28382007553936406,
+      "covariance": 0.16614230849524236,
+      "median": 1.0000932349930847,
+      "max": 4.500295985554811
+    },
+    {
+      "p": 509,
+      "d": 2,
+      "alpha": 0.5,
+      "beta": 1,
+      "N": 510,
+      "mean": 1.1569602033865396,
+      "variance": 0.48782369580521145,
+      "covariance": 0.30852249080682104,
+      "median": 1.0000600821287065,
+      "max": 9.002760894699788
+    },
+    {
+      "p": 2039,
+      "d": 2,
+      "alpha": 0.5,
+      "beta": 1,
+      "N": 2040,
+      "mean": 1.1586062401483217,
+      "variance": 0.6972169244755588,
+      "covariance": 0.4561284154296312,
+      "median": 1.00006624607532,
+      "max": 18.015458081952197
+    },
+    {
+      "p": 11,
+      "d": 3,
+      "alpha": 0.5,
+      "beta": 1,
+      "N": 133,
+      "mean": 1.0554528903854938,
+      "variance": 0.030299167524107672,
+      "covariance": 0.01078965334666561,
+      "median": 1.001464936713167,
+      "max": 2.0307929975737378
+    },
+    {
+      "p": 31,
+      "d": 3,
+      "alpha": 0.5,
+      "beta": 1,
+      "N": 993,
+      "mean": 1.0629591056429648,
+      "variance": 0.06504509690759214,
+      "covariance": 0.03308315694034111,
+      "median": 1.0004449888090114,
+      "max": 3.9899412244502015
+    },
+    {
+      "p": 61,
+      "d": 3,
+      "alpha": 0.5,
+      "beta": 1,
+      "N": 3783,
+      "mean": 1.0637722101147569,
+      "variance": 0.08015571882031051,
+      "covariance": 0.04356501004075894,
+      "median": 1.0002734172346797,
+      "max": 6.233827164440415
+    },
+    {
+      "p": 127,
+      "d": 3,
+      "alpha": 0.5,
+      "beta": 1,
+      "N": 16257,
+      "mean": 1.0638937453276052,
+      "variance": 0.09079140407144042,
+      "covariance": 0.0510533149414641,
+      "median": 1.0002379243567012,
+      "max": 10.130686717487771
+    },
+    {
+      "p": 251,
+      "d": 3,
+      "alpha": 0.5,
+      "beta": 1,
+      "N": 63253,
+      "mean": 1.0638314503141257,
+      "variance": 0.0970501306465763,
+      "covariance": 0.05546029509648432,
+      "median": 1.000195682395879,
+      "max": 15.924817494850284
+    },
+    {
+      "p": 5,
+      "d": 4,
+      "alpha": 0.5,
+      "beta": 1,
+      "N": 156,
+      "mean": 1.022844346403716,
+      "variance": 0.00564478237377024,
+      "covariance": 0.001052317296567495,
+      "median": 1.0017238105531003,
+      "max": 1.4616039267398897
+    },
+    {
+      "p": 11,
+      "d": 4,
+      "alpha": 0.5,
+      "beta": 1,
+      "N": 1464,
+      "mean": 1.0271089651116314,
+      "variance": 0.013318212852864579,
+      "covariance": 0.004904835539169397,
+      "median": 1.0010258036368422,
+      "max": 2.5256043563350907
+    },
+    {
+      "p": 23,
+      "d": 4,
+      "alpha": 0.5,
+      "beta": 1,
+      "N": 12720,
+      "mean": 1.0272133863844422,
+      "variance": 0.017340216286310203,
+      "covariance": 0.007603218675084162,
+      "median": 1.0004288707974345,
+      "max": 4.316488909160104
+    },
+    {
+      "p": 43,
+      "d": 4,
+      "alpha": 0.5,
+      "beta": 1,
+      "N": 81400,
+      "mean": 1.026879084722472,
+      "variance": 0.018760168298047716,
+      "covariance": 0.008598198721874978,
+      "median": 1.0002867350824118,
+      "max": 6.840050879356973
+    }
+  ]
+}
