@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "all_graphs": [
+    {
+      "n": 3,
+      "graphs": 8,
+      "worst_log_error": 0.04316015267625713,
+      "path_trace_pseudoinverse": 1.3333333333333335
+    },
+    {
+      "n": 4,
+      "graphs": 64,
+      "worst_log_error": 0.036232305197309814,
+      "path_trace_pseudoinverse": 2.5000000000000004
+    },
+    {
+      "n": 5,
+      "graphs": 1024,
+      "worst_log_error": 0.03048028156467037,
+      "path_trace_pseudoinverse": 4.000000000000001
+    }
+  ],
+  "flat_cover_check": {
+    "n": 5,
+    "commuting_pairs": 840,
+    "total_variation": 0.001795398035462413,
+    "connected_ideal": 0.8869948670671437,
+    "connected_local": 0.8865917151564955
+  },
+  "fixed_mass_controls": [
+    {
+      "cycle_length": 8,
+      "massive_bulk_normalized_weight": 0.35846978599021345
+    },
+    {
+      "cycle_length": 32,
+      "massive_bulk_normalized_weight": 0.9201102384796734
+    },
+    {
+      "cycle_length": 128,
+      "massive_bulk_normalized_weight": 0.9999944489689071
+    },
+    {
+      "cycle_length": 512,
+      "massive_bulk_normalized_weight": 1.0
+    }
+  ],
+  "holonomy_controls": [
+    {
+      "holonomy_turns": 0.0,
+      "determinant_ratio": 0.009999882025849774
+    },
+    {
+      "holonomy_turns": 0.3333333333333333,
+      "determinant_ratio": 0.9999524817089602
+    }
+  ],
+  "uniform_error": "0 <= c*log(q)-log(Z) <= (delta-epsilon)*n^2/6"
+}
