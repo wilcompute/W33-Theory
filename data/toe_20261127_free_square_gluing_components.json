@@ -1,0 +1,144 @@
+{
+  "status": "PASS",
+  "exact_commuting_orbit_censuses": {
+    "2": {
+      "1": 3,
+      "2": 1
+    },
+    "3": {
+      "1": 8,
+      "2": 9,
+      "3": 1
+    },
+    "4": {
+      "1": 42,
+      "2": 59,
+      "3": 18,
+      "4": 1
+    },
+    "5": {
+      "1": 144,
+      "2": 450,
+      "3": 215,
+      "4": 30,
+      "5": 1
+    }
+  },
+  "prime_window": [
+    {
+      "c": 0.25,
+      "prime_limit": 0.7484502219432638,
+      "finite": [
+        {
+          "n": 31,
+          "probability": 0.772488707186237
+        },
+        {
+          "n": 127,
+          "probability": 0.7553352239557295
+        },
+        {
+          "n": 509,
+          "probability": 0.7504970008664318
+        },
+        {
+          "n": 4093,
+          "probability": 0.7487474377487027
+        }
+      ]
+    },
+    {
+      "c": 1.0,
+      "prime_limit": 0.37458291547077127,
+      "finite": [
+        {
+          "n": 31,
+          "probability": 0.41626723657352793
+        },
+        {
+          "n": 127,
+          "probability": 0.3865223941977353
+        },
+        {
+          "n": 509,
+          "probability": 0.3781235301145945
+        },
+        {
+          "n": 4093,
+          "probability": 0.3751118257440866
+        }
+      ]
+    },
+    {
+      "c": 4.0,
+      "prime_limit": 0.06090216852736304,
+      "finite": [
+        {
+          "n": 31,
+          "probability": 0.08406480224297624
+        },
+        {
+          "n": 127,
+          "probability": 0.06736292922903472
+        },
+        {
+          "n": 509,
+          "probability": 0.06280488347149875
+        },
+        {
+          "n": 4093,
+          "probability": 0.06119719484731631
+        }
+      ]
+    }
+  ],
+  "nearby_composite_controls": [
+    {
+      "n": 4093,
+      "divisor_factor": 1.0002443195699975,
+      "connected_probability": 0.3751118257440866
+    },
+    {
+      "n": 4094,
+      "divisor_factor": 1.5828041035661944,
+      "connected_probability": 0.46331062274535995
+    },
+    {
+      "n": 4095,
+      "divisor_factor": 2.1333333333333333,
+      "connected_probability": 0.5522785210729281
+    },
+    {
+      "n": 4092,
+      "divisor_factor": 2.627565982404692,
+      "connected_probability": 0.5793817543450339
+    }
+  ],
+  "prime_geometry_controls": [
+    {
+      "prime_size": 31,
+      "relation_radius": 2,
+      "fraction_short_relation": 0.125,
+      "union_bound": 0.375
+    },
+    {
+      "prime_size": 127,
+      "relation_radius": 4,
+      "fraction_short_relation": 0.09375,
+      "union_bound": 0.3125
+    },
+    {
+      "prime_size": 509,
+      "relation_radius": 6,
+      "fraction_short_relation": 0.047058823529411764,
+      "union_bound": 0.16470588235294117
+    },
+    {
+      "prime_size": 4093,
+      "relation_radius": 12,
+      "fraction_short_relation": 0.02247191011235955,
+      "union_bound": 0.07620908646800195
+    }
+  ],
+  "scope": "Both permutations free. Prime window conditions on exact zero commutator; weight is per joint orbit."
+}
