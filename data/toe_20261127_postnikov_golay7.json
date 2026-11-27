@@ -1,0 +1,62 @@
+{
+  "higher": {
+    "group_order": 243,
+    "cocycle_triples": 14348907,
+    "postnikov_census": [
+      10476459,
+      1936224,
+      1936224
+    ],
+    "degree4_checks": 20000,
+    "scope": "Crossed module Z9 -> H(Z9), map u to central z=3u, trivial action. pi1=H(Z9)/<z^3>, pi2=Z3. Postnikov beta(c) for the Z3 central extension; nontrivial by order27 commutator obstruction to lifting c to Z9. Not an E8 2-group or full spin anomaly cancellation."
+  },
+  "golay": {
+    "weight6_sign_census": {
+      "0": 22,
+      "3": 220,
+      "6": 22
+    },
+    "seven_site_directions": 77,
+    "quotient_basis_pair_count": 531441,
+    "number_of_orthogonal_directions_census": {
+      "0": 1008,
+      "2": 3360,
+      "3": 30240,
+      "5": 25200,
+      "6": 75600,
+      "8": 102480,
+      "9": 95760,
+      "10": 75600,
+      "11": 73976,
+      "12": 45360,
+      "20": 560,
+      "25": 168,
+      "26": 280,
+      "27": 840,
+      "28": 840,
+      "30": 168,
+      "77": 1
+    },
+    "common_kernel_computational_witness": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "scope": "Seven-site reduced support is rank 3^5 per copy, projector onto X(v),Z(v) fixed spaces for one shortened line. Orbit under coordinate permutations realizes all listed sign types. Basis vectors with no compatible line lie in common kernel if present; absence does not prove full span. No universal preparation claimed."
+  }
+}
