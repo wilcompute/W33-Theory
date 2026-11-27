@@ -1,0 +1,33 @@
+{
+  "basis_columns": 6561,
+  "terms_per_column": 1080,
+  "trace_M4": 9720,
+  "reflection_vectors": [
+    [
+      1,
+      1,
+      -1,
+      -1
+    ],
+    [
+      1,
+      -1,
+      1,
+      -1
+    ],
+    [
+      1,
+      -1,
+      -1,
+      1
+    ]
+  ],
+  "formula": "M4 = I + (1/3) sum_6 S_ij + 3 sum_4 Pi_ijk + (1/3) sum_3 R_s",
+  "reflection_action": "q_i -> q_i+s_i sum_j s_j q_j over F3, separately on both qutrit coordinates",
+  "reflection_trace": 729,
+  "reflection_eigenmultiplicity": {
+    "plus": 3645,
+    "minus": 2916
+  },
+  "scope": "Exact fourth tick moment identity in Eisenstein integers. R_s are orthogonal involutive permutations, preserve sum of replica coordinates, mutually commute; no proof of physical four-body dynamics beyond assumed shared-label ensemble."
+}
