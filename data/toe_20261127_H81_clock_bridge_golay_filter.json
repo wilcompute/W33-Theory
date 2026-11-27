@@ -1,0 +1,303 @@
+{
+  "bridge": {
+    "order": 81,
+    "assoc_checks": 531441,
+    "center": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        0
+      ],
+      [
+        6,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        3,
+        0,
+        1
+      ],
+      [
+        6,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        3,
+        0,
+        2
+      ],
+      [
+        6,
+        0,
+        2
+      ]
+    ],
+    "derived": [
+      "0,0,0",
+      "0,0,1",
+      "0,0,2"
+    ],
+    "element_order_census": {
+      "1": 1,
+      "3": 26,
+      "9": 54
+    },
+    "projections": {
+      "H27_kernel": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          0
+        ]
+      ],
+      "Z9_kernel": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          2
+        ]
+      ]
+    },
+    "representation_kernels": [
+      [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          6,
+          0,
+          2
+        ]
+      ]
+    ],
+    "irreducible_dimensions": {
+      "1": 27,
+      "3": 6
+    },
+    "faithful_direct_sum_dimension": 6,
+    "scope": "Pullback H27 ×_{Z3} Z9, two independent central factors. Three monomial irreps with positive commutator character verified; conjugates provide other three. Anomaly pulled back from Z9 vanishes by functoriality if representation factors via original common charge. Not dynamical gauging or full mixed anomaly audit."
+  },
+  "filter": {
+    "per_trial": {
+      "Golay": 0.03292181069958846,
+      "weight3": 0.021947873799725636,
+      "likelihood_ratio": 1.5000000000000002
+    },
+    "rows": [
+      {
+        "n": 0,
+        "posterior_Golay": 0.3292682926829268,
+        "overall_acceptance": 1
+      },
+      {
+        "n": 1,
+        "posterior_Golay": 0.4240837696335079,
+        "overall_acceptance": 0.025561243266753634
+      },
+      {
+        "n": 2,
+        "posterior_Golay": 0.5248380129589634,
+        "overall_acceptance": 0.0006799736069639643
+      },
+      {
+        "n": 3,
+        "posterior_Golay": 0.6236099230111207,
+        "overall_acceptance": 0.000018840309582128215
+      },
+      {
+        "n": 4,
+        "posterior_Golay": 0.7130746657971961,
+        "overall_acceptance": 5.424375656765219e-7
+      },
+      {
+        "n": 5,
+        "posterior_Golay": 0.7884869607018389,
+        "overall_acceptance": 1.615005341249573e-8
+      },
+      {
+        "n": 6,
+        "posterior_Golay": 0.8482954790328839,
+        "overall_acceptance": 4.942026156969279e-10
+      },
+      {
+        "n": 7,
+        "posterior_Golay": 0.8934769780144958,
+        "overall_acceptance": 1.5447298502230832e-11
+      },
+      {
+        "n": 8,
+        "posterior_Golay": 0.9263702301453247,
+        "overall_acceptance": 4.904955016595082e-13
+      },
+      {
+        "n": 9,
+        "posterior_Golay": 0.9496784315967985,
+        "overall_acceptance": 1.5751675545422012e-14
+      },
+      {
+        "n": 10,
+        "posterior_Golay": 0.9658799631416363,
+        "overall_acceptance": 5.098752001957972e-16
+      },
+      {
+        "n": 11,
+        "posterior_Golay": 0.9769916265780213,
+        "overall_acceptance": 1.659510167312532e-17
+      },
+      {
+        "n": 12,
+        "posterior_Golay": 0.9845425340020683,
+        "overall_acceptance": 5.421506581410696e-19
+      },
+      {
+        "n": 13,
+        "posterior_Golay": 0.9896416513942562,
+        "overall_acceptance": 1.7756616724929885e-20
+      },
+      {
+        "n": 14,
+        "posterior_Golay": 0.9930705082323742,
+        "overall_acceptance": 5.825615467620765e-22
+      },
+      {
+        "n": 15,
+        "posterior_Golay": 0.9953696434824597,
+        "overall_acceptance": 1.9134680766461517e-23
+      },
+      {
+        "n": 16,
+        "posterior_Golay": 0.9969083238006264,
+        "overall_acceptance": 6.289760428596595e-25
+      },
+      {
+        "n": 17,
+        "posterior_Golay": 0.9979367562398754,
+        "overall_acceptance": 2.0685690406774122e-26
+      },
+      {
+        "n": 18,
+        "posterior_Golay": 0.9986235575144604,
+        "overall_acceptance": 6.805420202871515e-28
+      },
+      {
+        "n": 19,
+        "posterior_Golay": 0.9990819504621777,
+        "overall_acceptance": 2.2394395982568292e-29
+      },
+      {
+        "n": 20,
+        "posterior_Golay": 0.9993877796252412,
+        "overall_acceptance": 7.37038450291613e-31
+      }
+    ],
+    "scope": "Operational complement-projector postselection: choose uniform tick and accept every site rejecting P_a; probabilities exact via transfer expectation at t=-1. Independent fresh copies of same hidden code needed; not repeat filtering one collapsed state; not a ground-state selector."
+  }
+}
