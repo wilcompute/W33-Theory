@@ -1,0 +1,178 @@
+[
+  {
+    "first": "processor",
+    "physical_sites": 40,
+    "actual_gadgets": 135,
+    "locations": 16996,
+    "idles": 5400,
+    "terminal_rank": {
+      "X": 10,
+      "Z": 29
+    },
+    "rows": [
+      {
+        "faults": 1,
+        "trials": 30000,
+        "accepted": 2786,
+        "badParity": 0,
+        "beyondWeightOne": 0,
+        "rawWeightCensus": {
+          "0": 1438,
+          "1": 1207,
+          "6": 83,
+          "8": 14,
+          "9": 14,
+          "11": 1,
+          "13": 2,
+          "18": 18,
+          "27": 9
+        },
+        "witness": null
+      },
+      {
+        "faults": 2,
+        "trials": 30000,
+        "accepted": 266,
+        "badParity": 0,
+        "beyondWeightOne": 49,
+        "rawWeightCensus": {
+          "0": 80,
+          "1": 112,
+          "2": 49,
+          "6": 11,
+          "7": 5,
+          "8": 2,
+          "10": 2,
+          "11": 1,
+          "18": 1,
+          "19": 1,
+          "27": 2
+        },
+        "witness": {
+          "F": [
+            {
+              "j": 118,
+              "after": true,
+              "x": [
+                [
+                  16,
+                  2
+                ]
+              ],
+              "z": [
+                [
+                  16,
+                  1
+                ]
+              ],
+              "flag": "",
+              "r": 0
+            },
+            {
+              "j": 123,
+              "after": true,
+              "x": [
+                [
+                  24,
+                  1
+                ]
+              ],
+              "z": [
+                [
+                  24,
+                  2
+                ]
+              ],
+              "flag": "",
+              "r": 0
+            }
+          ],
+          "v": {
+            "parity": 0,
+            "correctableByWeightOne": false,
+            "rawWeight": 2
+          }
+        }
+      }
+    ],
+    "scope": "Sampled independent uniform distinct fault locations and uniform nonidentity label per location, clean input, two full terminal CSS rounds, inter-gadget idles. Acceptance only recorded checks and flags. Weight-one equivalence modulo stabilizers and measured X is conservative diagnostic, not implemented correction or proof of malignant logical error. No within-gadget idles or loss."
+  },
+  {
+    "first": "memory",
+    "physical_sites": 240,
+    "actual_gadgets": 336,
+    "locations": 93624,
+    "idles": 80640,
+    "terminal_rank": {
+      "X": 39,
+      "Z": 120
+    },
+    "rows": [
+      {
+        "faults": 1,
+        "trials": 30000,
+        "accepted": 6337,
+        "badParity": 0,
+        "beyondWeightOne": 0,
+        "rawWeightCensus": {
+          "0": 259,
+          "1": 6010,
+          "3": 46,
+          "12": 22
+        },
+        "witness": null
+      },
+      {
+        "faults": 2,
+        "trials": 30000,
+        "accepted": 1397,
+        "badParity": 0,
+        "beyondWeightOne": 1233,
+        "rawWeightCensus": {
+          "0": 6,
+          "1": 131,
+          "2": 1234,
+          "4": 20,
+          "12": 2,
+          "13": 4
+        },
+        "witness": {
+          "F": [
+            {
+              "j": 291,
+              "after": true,
+              "x": [
+                [
+                  209,
+                  2
+                ]
+              ],
+              "z": [],
+              "flag": "",
+              "r": 0
+            },
+            {
+              "j": 324,
+              "after": true,
+              "x": [
+                [
+                  166,
+                  2
+                ]
+              ],
+              "z": [],
+              "flag": "",
+              "r": 0
+            }
+          ],
+          "v": {
+            "parity": 0,
+            "correctableByWeightOne": false,
+            "rawWeight": 2
+          }
+        }
+      }
+    ],
+    "scope": "Sampled independent uniform distinct fault locations and uniform nonidentity label per location, clean input, two full terminal CSS rounds, inter-gadget idles. Acceptance only recorded checks and flags. Weight-one equivalence modulo stabilizers and measured X is conservative diagnostic, not implemented correction or proof of malignant logical error. No within-gadget idles or loss."
+  }
+]
