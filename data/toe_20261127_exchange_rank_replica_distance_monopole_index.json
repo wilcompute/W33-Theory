@@ -1,0 +1,182 @@
+{
+  "exchange": {
+    "spectrum": [
+      [
+        45,
+        0.13333333333333333
+      ],
+      [
+        36,
+        0.08333333333333333
+      ]
+    ],
+    "positive_parity_numerators": [
+      "7920",
+      "2589120",
+      "718974720",
+      "189673528320",
+      "49118023249920",
+      "12630373951979520",
+      "3238991731706757120",
+      "829743483316929822720",
+      "212470491729134034616320",
+      "54398061882658312861777920",
+      "13926465441960528092615147520",
+      "3565231313141895191709477765120",
+      "912704832164325169077626307870720",
+      "233652998634067243283872334814904320",
+      "59815223810321214280671317712615505920",
+      "15312702911442230855851857334429569515520",
+      "3920052506929211099098075477613969795973120",
+      "1003533497933878041369107322269176267769118720",
+      "256904581087072778590491474500909124548894392320",
+      "65767573319890631319165817472232735884516964433920",
+      "16836498826052001617706449272891580386436342895083520",
+      "4310143705085312414132851013860244578927703781141381120",
+      "1103396789063439978018009859548222612205492167972193566720",
+      "282469578056400634372610524044344988724605995000881553080320",
+      "72312211988054562399388294155352317113499134720225677588561920",
+      "18511926269503567974243403303770193181055778488377773462671851520",
+      "4739053125049073401406311245765169454350279293024710006443993989120",
+      "1213197600018178790760015678915883380313671499014325761649662461214720",
+      "310578585605215370434564013802466145360299903747667394982313590070968320",
+      "79508117914991294831248387533431333212236775359402853115472279058167889920"
+    ],
+    "scope": "M2/120 parity-signed determinant has strictly positive coefficients in negative even-moment expansion, hence increases with d by convex order. No interior selector for this candidate; parity not derived physical statistics."
+  },
+  "replica": {
+    "sign_polynomial": [
+      1053,
+      -27,
+      13
+    ],
+    "den": 12960,
+    "restricted_cross_frobenius_squared": 15225,
+    "rank_lower": 45255,
+    "rank_upper": 60479,
+    "scope": "Full Gram kernel negative adjacency spectral subspace; bipartite sign matrix cross block U orthogonal. Kernel supported on Golay iff restricted U has singular value1; multiplicity bounded by Frobenius norm squared. At least one relation by equitable quotient. Distance exactly2 by global X,Z stabilizers and transposition weight2 cross overlap. One erasure correctable, not arbitrary one-site error."
+  },
+  "monopole": {
+    "fractional": [
+      {
+        "n": 1,
+        "copies": 16,
+        "index_census": {
+          "0": 10,
+          "1": 10,
+          "2": 2,
+          "-1": 5
+        },
+        "index": 9
+      },
+      {
+        "n": -2,
+        "copies": 10,
+        "index_census": {
+          "0": 10,
+          "1": 2,
+          "-2": 5,
+          "-1": 10
+        },
+        "index": -18
+      },
+      {
+        "n": 4,
+        "copies": 1,
+        "index_census": {
+          "0": 5,
+          "1": 10,
+          "2": 10,
+          "3": 2
+        },
+        "index": 36
+      }
+    ],
+    "net_index": 0,
+    "cartan_anomaly_matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "ordinary": [
+      {
+        "charge": 3,
+        "copies": 16,
+        "channels": 1296
+      },
+      {
+        "charge": -6,
+        "copies": 10,
+        "channels": 1620
+      },
+      {
+        "charge": 12,
+        "copies": 1,
+        "channels": 324
+      }
+    ],
+    "total_channels": 3240,
+    "rotational_index": 0,
+    "scope": "Angular S2 Dirac indices in supplied U1 flux1/9 and SU6 cocharacter (1,1,1,1,1,-5)/3; matter indices integral, perturbative 2D anomalies cancel. Genuine unit Wilson requires integral ordinary monopole flux. No dynamical monopole or full global anomaly proof."
+  }
+}
