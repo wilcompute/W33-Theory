@@ -109,7 +109,7 @@ def compiler():
     ranks=[]
     for prime in (7,13,19,31,37,43):
         gg={}
-        for j,t in zip((5,26,33),('a','b','c')):gg[t],gg[t.upper()]=E.reflection(j,prime)
+        for j,t in zip((5,26,33),('a','b','c')):gg[t],gg[t.upper()]=E.reflect(j,prime)
         gg['d']=E.pi_phase(36,prime)[0]
         def mulword(w):
             M=np.eye(4,dtype=np.int64)

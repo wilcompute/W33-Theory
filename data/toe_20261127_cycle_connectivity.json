@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "model": "labeled simple degree-two graphs with q per cycle",
+  "n8_counts": [
+    2520,
+    672,
+    315
+  ],
+  "n8_two_token_heat_traces": [
+    8.004358080432644,
+    8.19730944001359,
+    8.078514726703242
+  ],
+  "n8_matter_and_gauge_connected_probability": 0.8723445296315866,
+  "fixed_q": 0.36652471224524263,
+  "n8_zero_temperature_matter_first_probability": 0.6989749003112199,
+  "fixed_q_scan": [
+    {
+      "n": 8,
+      "probability": 0.8744656374330095,
+      "asymptotic": 0.8298192504561815,
+      "upper_with_fixed_two_token_matter": 1.0
+    },
+    {
+      "n": 128,
+      "probability": 0.5007167826909436,
+      "asymptotic": 0.49924490390561427,
+      "upper_with_fixed_two_token_matter": 1.0
+    },
+    {
+      "n": 2048,
+      "probability": 0.30041607005950377,
+      "asymptotic": 0.30036116170925997,
+      "upper_with_fixed_two_token_matter": 1.0
+    },
+    {
+      "n": 32768,
+      "probability": 0.18070862019768488,
+      "asymptotic": 0.18070655655684434,
+      "upper_with_fixed_two_token_matter": 1.0
+    },
+    {
+      "n": 524288,
+      "probability": 0.10871872616011247,
+      "asymptotic": 0.1087186485656253,
+      "upper_with_fixed_two_token_matter": 0.8033287666013502
+    }
+  ],
+  "crossover_scan": [
+    {
+      "n": 8,
+      "q": 0.9617966939259757,
+      "probability": 0.7263727091604679
+    },
+    {
+      "n": 128,
+      "q": 0.41219858311113244,
+      "probability": 0.4608201158933366
+    },
+    {
+      "n": 2048,
+      "q": 0.2623081892525388,
+      "probability": 0.42083372543944214
+    },
+    {
+      "n": 32768,
+      "q": 0.19235933878519512,
+      "probability": 0.4049600154490883
+    },
+    {
+      "n": 524288,
+      "q": 0.15186263588304877,
+      "probability": 0.39639013599660644
+    }
+  ],
+  "crossover_limit": 0.36787944117144233,
+  "matter_bound": "e^(-4b) P_gauge <= P_gauge+two-token <= e^(4b) P_gauge, fixed b>=0"
+}
