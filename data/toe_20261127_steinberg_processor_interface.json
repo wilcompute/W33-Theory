@@ -1,0 +1,75 @@
+{
+  "memory": {
+    "edges": 240,
+    "triangles": 160,
+    "rankX": 39,
+    "rankZ": 120,
+    "k": 81,
+    "weight3_cocycle_candidates": 160,
+    "weight4_cycle_candidates": 3240,
+    "low_weight_X_span_mod_stabilizer": 81,
+    "low_weight_Z_span_mod_stabilizer": 81,
+    "pairing_rank": 81,
+    "selected_X": [
+      {
+        "edge": [
+          0,
+          1
+        ],
+        "c": 2
+      },
+      {
+        "edge": [
+          0,
+          2
+        ],
+        "c": 2
+      },
+      {
+        "edge": [
+          0,
+          3
+        ],
+        "c": 2
+      }
+    ],
+    "selected_Z": [
+      {
+        "edge": [
+          0,
+          1
+        ],
+        "c": 2
+      },
+      {
+        "edge": [
+          0,
+          13
+        ],
+        "c": 1
+      },
+      {
+        "edge": [
+          1,
+          4
+        ],
+        "c": 2
+      },
+      {
+        "edge": [
+          4,
+          13
+        ],
+        "c": 2
+      }
+    ]
+  },
+  "interface": {
+    "joint_Z_weight": 8,
+    "selected_memory_X_weight": 3,
+    "processor_X_weight": 40,
+    "phase_branches": 27,
+    "reverse_interface_joint_X_weight_upper": 43,
+    "scope": "ideal logical Pauli measurement, selected logical subsystem with commuting complement; full verified circuit and Golay interface not executed"
+  }
+}
