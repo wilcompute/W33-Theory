@@ -1,0 +1,50 @@
+[
+  {
+    "restriction": {
+      "memX": 3,
+      "memZ": 4,
+      "procX": 3,
+      "procZ": 4
+    },
+    "locations": 246,
+    "faults": 7710,
+    "accepted_single": 288,
+    "bad_single": 0,
+    "total_distinct_location_fault_pairs": 29441172,
+    "accepted_pairs": 83634,
+    "bad_accepted_pairs": 0,
+    "bad_readout": 0,
+    "bad_data": 0,
+    "witness": null,
+    "single_fault_signature_classes": 1495,
+    "ambiguous_single_fault_signatures": 0,
+    "conflicting_faults": 0,
+    "rounds": 3,
+    "checkpoints": true,
+    "scope": "Weight-eight parity circuit with eight data idle Pauli locations and 14 independent syndrome-coordinate readout fault locations per checkpoint; ideal projective CSS extraction and terminal syndrome. No ancilla circuit faults on checkpoints or external data; compressed syndrome readout noise is phenomenological. Pair counts unweighted."
+  },
+  {
+    "restriction": {
+      "memX": 3,
+      "memZ": 4,
+      "procX": 3,
+      "procZ": 4
+    },
+    "locations": 410,
+    "faults": 12850,
+    "accepted_single": 480,
+    "bad_single": 0,
+    "total_distinct_location_fault_pairs": 82093120,
+    "accepted_pairs": 185470,
+    "bad_accepted_pairs": 0,
+    "bad_readout": 0,
+    "bad_data": 0,
+    "witness": null,
+    "single_fault_signature_classes": 2491,
+    "ambiguous_single_fault_signatures": 0,
+    "conflicting_faults": 0,
+    "rounds": 5,
+    "checkpoints": true,
+    "scope": "Weight-eight parity circuit with eight data idle Pauli locations and 14 independent syndrome-coordinate readout fault locations per checkpoint; ideal projective CSS extraction and terminal syndrome. No ancilla circuit faults on checkpoints or external data; compressed syndrome readout noise is phenomenological. Pair counts unweighted."
+  }
+]

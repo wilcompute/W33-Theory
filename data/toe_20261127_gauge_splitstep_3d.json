@@ -1,0 +1,296 @@
+{
+  "free_nodes": [
+    {
+      "k": [
+        0,
+        0,
+        0
+      ],
+      "quasienergy": 0,
+      "chirality": 1
+    },
+    {
+      "k": [
+        2,
+        0,
+        0
+      ],
+      "quasienergy": "pi",
+      "chirality": 1
+    },
+    {
+      "k": [
+        0,
+        2,
+        0
+      ],
+      "quasienergy": "pi",
+      "chirality": 1
+    },
+    {
+      "k": [
+        2,
+        2,
+        0
+      ],
+      "quasienergy": 0,
+      "chirality": 1
+    },
+    {
+      "k": [
+        1,
+        1,
+        1
+      ],
+      "quasienergy": "pi",
+      "chirality": -1
+    },
+    {
+      "k": [
+        3,
+        1,
+        1
+      ],
+      "quasienergy": 0,
+      "chirality": -1
+    },
+    {
+      "k": [
+        1,
+        3,
+        1
+      ],
+      "quasienergy": 0,
+      "chirality": -1
+    },
+    {
+      "k": [
+        3,
+        3,
+        1
+      ],
+      "quasienergy": "pi",
+      "chirality": -1
+    },
+    {
+      "k": [
+        0,
+        0,
+        2
+      ],
+      "quasienergy": "pi",
+      "chirality": 1
+    },
+    {
+      "k": [
+        2,
+        0,
+        2
+      ],
+      "quasienergy": 0,
+      "chirality": 1
+    },
+    {
+      "k": [
+        0,
+        2,
+        2
+      ],
+      "quasienergy": 0,
+      "chirality": 1
+    },
+    {
+      "k": [
+        2,
+        2,
+        2
+      ],
+      "quasienergy": "pi",
+      "chirality": 1
+    },
+    {
+      "k": [
+        1,
+        1,
+        3
+      ],
+      "quasienergy": 0,
+      "chirality": -1
+    },
+    {
+      "k": [
+        3,
+        1,
+        3
+      ],
+      "quasienergy": "pi",
+      "chirality": -1
+    },
+    {
+      "k": [
+        1,
+        3,
+        3
+      ],
+      "quasienergy": "pi",
+      "chirality": -1
+    },
+    {
+      "k": [
+        3,
+        3,
+        3
+      ],
+      "quasienergy": 0,
+      "chirality": -1
+    }
+  ],
+  "node_counts": {
+    "zero": 8,
+    "pi": 8
+  },
+  "chirality_sums": [
+    0,
+    0
+  ],
+  "disp": [
+    {
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "h": 0.1,
+      "epsilon_over_h": 0.9999999999999944
+    },
+    {
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "h": 0.025,
+      "epsilon_over_h": 0.9999999999999368
+    },
+    {
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "h": 0.00625,
+      "epsilon_over_h": 1.0000000000011382
+    },
+    {
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "h": 0.1,
+      "epsilon_over_h": 0.9999999999999944
+    },
+    {
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "h": 0.025,
+      "epsilon_over_h": 0.9999999999999368
+    },
+    {
+      "direction": [
+        0,
+        1,
+        0
+      ],
+      "h": 0.00625,
+      "epsilon_over_h": 1.0000000000011382
+    },
+    {
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "h": 0.1,
+      "epsilon_over_h": 0.9999999999999944
+    },
+    {
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "h": 0.025,
+      "epsilon_over_h": 0.9999999999999368
+    },
+    {
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "h": 0.00625,
+      "epsilon_over_h": 1.0000000000011382
+    },
+    {
+      "direction": [
+        1,
+        1,
+        1
+      ],
+      "h": 0.1,
+      "epsilon_over_h": 1.0185184528946916
+    },
+    {
+      "direction": [
+        1,
+        1,
+        1
+      ],
+      "h": 0.025,
+      "epsilon_over_h": 1.0047651784596872
+    },
+    {
+      "direction": [
+        1,
+        1,
+        1
+      ],
+      "h": 0.00625,
+      "epsilon_over_h": 1.0011999230223687
+    },
+    {
+      "direction": [
+        1,
+        2,
+        3
+      ],
+      "h": 0.1,
+      "epsilon_over_h": 1.0109771534271077
+    },
+    {
+      "direction": [
+        1,
+        2,
+        3
+      ],
+      "h": 0.025,
+      "epsilon_over_h": 1.002833457497175
+    },
+    {
+      "direction": [
+        1,
+        2,
+        3
+      ],
+      "h": 0.00625,
+      "epsilon_over_h": 1.0007139958269455
+    }
+  ],
+  "conditional_stream_checks": 126,
+  "plaquette_checks": 5184,
+  "scope": "3D two-component split-step free Weyl benchmark, embedded in a qutrit subspace if desired. Gauge-dressed conditional shifts permute basis and preserve Z3 Gauss with fixed compensating charge; rotated coin layers onsite, plaquette rotations commute with Gauss. No many-body dispersion, gravity or common renormalized speed."
+}
