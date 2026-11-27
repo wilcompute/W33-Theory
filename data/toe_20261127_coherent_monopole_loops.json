@@ -1,0 +1,41 @@
+{
+  "commutator_checks": 12,
+  "flux_assignments": 243,
+  "loops_per_cube": {
+    "untwisted_single_faces": 6,
+    "untwisted_sum_pairs": 30,
+    "twisted_difference_pairs": 60,
+    "total": 96
+  },
+  "rows": [
+    {
+      "loop_amplitude": 0.01,
+      "cos_coefficient": -0.020100005040002897,
+      "mu": 0.27135006804003914,
+      "constant": -0.12066403027201854,
+      "max_residual": 9.71445146547012e-17
+    },
+    {
+      "loop_amplitude": 0.1,
+      "cos_coefficient": -0.21005403109326348,
+      "mu": 2.835729419759057,
+      "constant": -1.3243562079089257,
+      "max_residual": 3.9968028886505635e-15
+    },
+    {
+      "loop_amplitude": 0.35,
+      "cos_coefficient": -0.8323516458190087,
+      "mu": 11.236747218556618,
+      "constant": -7.798671766040409,
+      "max_residual": 1.2434497875801753e-14
+    },
+    {
+      "loop_amplitude": 0.7,
+      "cos_coefficient": -2.127898101653521,
+      "mu": 28.72662437232253,
+      "constant": -39.65194928176282,
+      "max_residual": 2.1316282072803006e-14
+    }
+  ],
+  "scope": "Exact engineered auxiliary oriented-loop determinant identity. Pair of central twists implemented by Weyl commutators; loop inventory, auxiliaries and amplitude supplied, not selected by tick dynamics."
+}
