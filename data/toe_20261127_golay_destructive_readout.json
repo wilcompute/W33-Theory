@@ -1,0 +1,119 @@
+{
+  "syndrome_classes": 243,
+  "weight_le2_correctable": 243,
+  "enumerated_errors": 177147,
+  "logical_error_weight_census": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      22,
+      0,
+      0
+    ],
+    [
+      220,
+      0,
+      0
+    ],
+    [
+      0,
+      660,
+      660
+    ],
+    [
+      1980,
+      1650,
+      1650
+    ],
+    [
+      4752,
+      5016,
+      5016
+    ],
+    [
+      10824,
+      9372,
+      9372
+    ],
+    [
+      13200,
+      14520,
+      14520
+    ],
+    [
+      14190,
+      14025,
+      14025
+    ],
+    [
+      9020,
+      9570,
+      9570
+    ],
+    [
+      4400,
+      3432,
+      3432
+    ],
+    [
+      440,
+      804,
+      804
+    ]
+  ],
+  "located_erasure_patterns": 2048,
+  "erasure_failure_by_weight": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    66,
+    396,
+    330,
+    165,
+    55,
+    11,
+    1
+  ],
+  "erasure_total_by_weight": [
+    1,
+    11,
+    55,
+    165,
+    330,
+    462,
+    462,
+    330,
+    165,
+    55,
+    11,
+    1
+  ],
+  "rows": [
+    {
+      "p": 0.001,
+      "destructive_readout_error": 1.638897332609151e-7,
+      "erasure_failure": 6.599934148357066e-14
+    },
+    {
+      "p": 0.01,
+      "destructive_readout_error": 0.0001542050554745801,
+      "erasure_failure": 6.593547076588002e-9
+    },
+    {
+      "p": 0.05,
+      "destructive_readout_error": 0.01465895190851984,
+      "erasure_failure": 0.0000201646537109375
+    },
+    {
+      "p": 0.1,
+      "destructive_readout_error": 0.08274668543378909,
+      "erasure_failure": 0.0006074848000000002
+    }
+  ],
+  "scope": "Punctured Golay [[11,1,5]] CSS ideal destructive X or Z measurement, symmetric independent trit readout errors and independent located erasures on data. Separate error models, not circuit-level teleportation. No state prep or postselection overhead."
+}
