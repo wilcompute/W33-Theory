@@ -1,0 +1,74 @@
+{
+  "checks": [
+    {
+      "type": "X",
+      "weight": 12
+    },
+    {
+      "type": "X",
+      "weight": 12
+    },
+    {
+      "type": "X",
+      "weight": 12
+    },
+    {
+      "type": "Z",
+      "weight": 3
+    },
+    {
+      "type": "Z",
+      "weight": 3
+    },
+    {
+      "type": "Z",
+      "weight": 3
+    },
+    {
+      "type": "Z",
+      "weight": 3
+    },
+    {
+      "type": "X",
+      "weight": 18
+    },
+    {
+      "type": "X",
+      "weight": 27
+    },
+    {
+      "type": "X",
+      "weight": 27
+    },
+    {
+      "type": "Z",
+      "weight": 6
+    },
+    {
+      "type": "Z",
+      "weight": 6
+    },
+    {
+      "type": "Z",
+      "weight": 6
+    },
+    {
+      "type": "Z",
+      "weight": 6
+    }
+  ],
+  "terminal_rank": {
+    "X": 49,
+    "Z": 149
+  },
+  "gadgets": 45,
+  "locations": 3468,
+  "single_faults": 144150,
+  "accepted_single": 5472,
+  "malignant_single": 0,
+  "total_pairs": 10384175532,
+  "accepted_pairs": 16477440,
+  "malignant_pairs": 0,
+  "ambiguous_signatures": 0,
+  "scope": "Actual 14 chosen full-support CSS stabilizers, verified cat circuits with Pauli faults at every listed operation, three parity rounds. Ideal terminal full CSS syndrome; no data idles outside gates or loss. Quotient by full stabilizer spaces plus measured joint Z. No full T roundtrip."
+}
