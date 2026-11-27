@@ -1,0 +1,160 @@
+{
+  "results": [
+    {
+      "n": 1,
+      "kind": "rook",
+      "dimension": 16,
+      "traces": [
+        16,
+        96,
+        672,
+        4992,
+        38400,
+        301056,
+        2383872,
+        18972672,
+        151388160,
+        1209532416
+      ]
+    },
+    {
+      "n": 1,
+      "kind": "shrikhande",
+      "dimension": 16,
+      "traces": [
+        16,
+        96,
+        672,
+        4992,
+        38400,
+        301056,
+        2383872,
+        18972672,
+        151388160,
+        1209532416
+      ]
+    },
+    {
+      "n": 2,
+      "kind": "rook",
+      "dimension": 120,
+      "traces": [
+        120,
+        1344,
+        16512,
+        215232,
+        2927616,
+        41086464,
+        590226432,
+        8630393856,
+        127931707392,
+        1916816879616
+      ]
+    },
+    {
+      "n": 2,
+      "kind": "shrikhande",
+      "dimension": 120,
+      "traces": [
+        120,
+        1344,
+        16512,
+        215232,
+        2927616,
+        41086464,
+        590218752,
+        8629791744,
+        127904323584,
+        1915869253632
+      ]
+    },
+    {
+      "n": 3,
+      "kind": "rook",
+      "dimension": 560,
+      "traces": [
+        560,
+        8736,
+        146400,
+        2585472,
+        47565312,
+        904068096,
+        17643614208,
+        351874102272,
+        7144721940480,
+        147264631590912
+      ]
+    },
+    {
+      "n": 3,
+      "kind": "shrikhande",
+      "dimension": 560,
+      "traces": [
+        560,
+        8736,
+        146400,
+        2585472,
+        47565312,
+        904068096,
+        17643561984,
+        351868833792,
+        7144410157056,
+        147250442969088
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "n": 1,
+      "first_difference": -1,
+      "trace_differences": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "leading_partition_preference": "undetermined"
+    },
+    {
+      "n": 2,
+      "first_difference": 6,
+      "trace_differences": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7680,
+        602112,
+        27383808,
+        947625984
+      ],
+      "leading_partition_preference": "rook"
+    },
+    {
+      "n": 3,
+      "first_difference": 6,
+      "trace_differences": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        52224,
+        5268480,
+        311783424,
+        14188621824
+      ],
+      "leading_partition_preference": "rook"
+    }
+  ],
+  "scope": "Exact integer trace moments for identical hard-core excitations of the same swap Hamiltonian. First nonzero trace difference determines sufficiently high-temperature restricted partition preference, not full Gibbs graph ensemble or unique topology."
+}
