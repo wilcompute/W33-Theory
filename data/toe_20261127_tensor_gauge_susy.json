@@ -1,0 +1,123 @@
+{
+  "tensor": [
+    {
+      "L": 2,
+      "N": 8,
+      "qudits": 48,
+      "rankX": 21,
+      "rankZ": 7,
+      "logical": 20,
+      "commutator_checks": 192,
+      "semisimple": true
+    },
+    {
+      "L": 3,
+      "N": 27,
+      "qudits": 162,
+      "rankX": 75,
+      "rankZ": 23,
+      "logical": 64,
+      "commutator_checks": 2187,
+      "semisimple": false
+    },
+    {
+      "L": 4,
+      "N": 64,
+      "qudits": 384,
+      "rankX": 189,
+      "rankZ": 63,
+      "logical": 132,
+      "commutator_checks": 12288,
+      "semisimple": true
+    },
+    {
+      "L": 5,
+      "N": 125,
+      "qudits": 750,
+      "rankX": 372,
+      "rankZ": 124,
+      "logical": 254,
+      "commutator_checks": 46875,
+      "semisimple": true
+    }
+  ],
+  "dispersion": [
+    {
+      "k": 0.2,
+      "curvature_squared_frequency": 0.03986684431751674,
+      "curvature_bilinear_frequency": 0.1996668332936563,
+      "ratio_z2": 0.19933422158758368,
+      "ratio_z1": 0.9983341664682815
+    },
+    {
+      "k": 0.1,
+      "curvature_squared_frequency": 0.009991669443948468,
+      "curvature_bilinear_frequency": 0.09995833854135666,
+      "ratio_z2": 0.09991669443948467,
+      "ratio_z1": 0.9995833854135666
+    },
+    {
+      "k": 0.05,
+      "curvature_squared_frequency": 0.002499479210067507,
+      "curvature_bilinear_frequency": 0.049994791829424665,
+      "ratio_z2": 0.049989584201350135,
+      "ratio_z1": 0.9998958365884932
+    },
+    {
+      "k": 0.025,
+      "curvature_squared_frequency": 0.0006249674485948276,
+      "curvature_bilinear_frequency": 0.024999348963419578,
+      "ratio_z2": 0.0249986979437931,
+      "ratio_z1": 0.9999739585367831
+    }
+  ],
+  "scalar_superpartner_proxy": [
+    {
+      "boson_mass": 0.5,
+      "fermion_mass": 0.5,
+      "net_difference": 0
+    },
+    {
+      "boson_mass": 0.5,
+      "fermion_mass": 1,
+      "net_difference": -0.1012797300210464
+    },
+    {
+      "boson_mass": 0.5,
+      "fermion_mass": 2,
+      "net_difference": -0.19258049010829414
+    },
+    {
+      "boson_mass": 1,
+      "fermion_mass": 0.5,
+      "net_difference": 0.1012797300210464
+    },
+    {
+      "boson_mass": 1,
+      "fermion_mass": 1,
+      "net_difference": 0
+    },
+    {
+      "boson_mass": 1,
+      "fermion_mass": 2,
+      "net_difference": -0.09130076008724775
+    },
+    {
+      "boson_mass": 2,
+      "fermion_mass": 0.5,
+      "net_difference": 0.19258049010829414
+    },
+    {
+      "boson_mass": 2,
+      "fermion_mass": 1,
+      "net_difference": 0.09130076008724775
+    },
+    {
+      "boson_mass": 2,
+      "fermion_mass": 2,
+      "net_difference": 0
+    }
+  ],
+  "flat_six_dimensional_mode_supertrace": 0,
+  "flat_six_dimensional_torsion_weight": 0
+}
