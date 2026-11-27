@@ -1,0 +1,183 @@
+{
+  "tensor": [
+    {
+      "L": 2,
+      "sites": 8,
+      "physical_qutrits": 48,
+      "rankX": 21,
+      "rankScalar": 7,
+      "rankDoubleCurl": 21,
+      "original_logicals": 20,
+      "closed_logicals": 6,
+      "checks": 1152,
+      "curvature_weight_histogram": {
+        "8": 24,
+        "14": 24
+      },
+      "independent_projector_parent_gap": 1
+    },
+    {
+      "L": 3,
+      "sites": 27,
+      "physical_qutrits": 162,
+      "rankX": 75,
+      "rankScalar": 23,
+      "rankDoubleCurl": 69,
+      "original_logicals": 64,
+      "closed_logicals": 18,
+      "checks": 13122,
+      "curvature_weight_histogram": {
+        "10": 81,
+        "15": 81
+      },
+      "independent_projector_parent_gap": 1
+    },
+    {
+      "L": 4,
+      "sites": 64,
+      "physical_qutrits": 384,
+      "rankX": 189,
+      "rankScalar": 63,
+      "rankDoubleCurl": 189,
+      "original_logicals": 132,
+      "closed_logicals": 6,
+      "checks": 73728,
+      "curvature_weight_histogram": {
+        "10": 192,
+        "15": 192
+      },
+      "independent_projector_parent_gap": 1
+    }
+  ],
+  "holomorphic": {
+    "cover": [
+      [
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        14,
+        23,
+        0
+      ],
+      [
+        0,
+        23,
+        14,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1
+      ]
+    ],
+    "trivial": [
+      [
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        6,
+        9,
+        0
+      ],
+      [
+        0,
+        9,
+        6,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1
+      ]
+    ],
+    "nontrivial": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        4,
+        7,
+        0
+      ],
+      [
+        0,
+        7,
+        4,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "chi_Omega_cover": [
+      0,
+      9,
+      -9,
+      0
+    ],
+    "chi_Omega_quotient": [
+      0,
+      3,
+      -3,
+      0
+    ],
+    "chi_Omega_twisted": [
+      0,
+      3,
+      -3,
+      0
+    ],
+    "BCOV_zero_mode_weights": {
+      "cover": -13,
+      "trivial": 3,
+      "nontrivial": -8
+    },
+    "torsion_relation": "log T_p(E_chi)=log T_(3-p)(E_conjugate_chi); BCOV weighted sum reduces to log T_1 - 3 log T_0 for real/trivial twists"
+  },
+  "radial": [
+    {
+      "R": 0.25,
+      "einstein_frame_integrand": -883456106.5758791
+    },
+    {
+      "R": 0.5,
+      "einstein_frame_integrand": -37456.027427932306
+    },
+    {
+      "R": 1,
+      "einstein_frame_integrand": -0.7604851441826707
+    },
+    {
+      "R": 2,
+      "einstein_frame_integrand": -0.000005613393076114923
+    },
+    {
+      "R": 4,
+      "einstein_frame_integrand": -4.264441991395824e-12
+    },
+    {
+      "R": 8,
+      "einstein_frame_integrand": -3.998052545713162e-22
+    }
+  ],
+  "scope": "commuting-projector tensor Hamiltonian exact gapped control; uniform-scale matched scalar-like soft mass potential monotonic, not full string stabilization"
+}
