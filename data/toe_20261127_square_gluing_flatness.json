@@ -1,0 +1,262 @@
+{
+  "status": "PASS",
+  "small_exact_defect_censuses": {
+    "3": {
+      "0": 3,
+      "3": 3
+    },
+    "4": {
+      "0": 4,
+      "3": 16,
+      "4": 4
+    },
+    "5": {
+      "0": 5,
+      "3": 50,
+      "4": 25,
+      "5": 40
+    },
+    "6": {
+      "0": 6,
+      "3": 120,
+      "4": 90,
+      "5": 288,
+      "6": 216
+    },
+    "7": {
+      "0": 7,
+      "3": 245,
+      "4": 245,
+      "5": 1176,
+      "6": 1764,
+      "7": 1603
+    },
+    "8": {
+      "0": 8,
+      "3": 448,
+      "4": 560,
+      "5": 3584,
+      "6": 8064,
+      "7": 14656,
+      "8": 13000
+    }
+  },
+  "critical_window": [
+    {
+      "offset": -0.5,
+      "limit": 0.0,
+      "defect_density_limit": 0.3934693402873666,
+      "flat_probability_decay_rate_per_site": 0.10653065971263342,
+      "finite_size": [
+        {
+          "n": 8,
+          "probability": 0.5278521000581211,
+          "mean_defect_fraction": 0.23203441265737312,
+          "negative_log_flat_probability_per_site": 0.07986739350516037
+        },
+        {
+          "n": 64,
+          "probability": 0.0036063694175969365,
+          "mean_defect_fraction": 0.3640844172949623,
+          "negative_log_flat_probability_per_site": 0.08789146428423616
+        },
+        {
+          "n": 512,
+          "probability": 1.974429305015904e-23,
+          "mean_defect_fraction": 0.39041056405983376,
+          "negative_log_flat_probability_per_site": 0.1021077690268602
+        },
+        {
+          "n": 4096,
+          "probability": 8.549176573010389e-189,
+          "mean_defect_fraction": 0.3930922754121586,
+          "negative_log_flat_probability_per_site": 0.10572332705195656
+        },
+        {
+          "n": 32768,
+          "probability": 0.0,
+          "mean_defect_fraction": 0.39342228636548093,
+          "negative_log_flat_probability_per_site": 0.10639800380972766
+        }
+      ]
+    },
+    {
+      "offset": 0.0,
+      "limit": 0.0,
+      "defect_density_limit": 0.0,
+      "flat_probability_decay_rate_per_site": 0.0,
+      "finite_size": [
+        {
+          "n": 8,
+          "probability": 0.87339878733599,
+          "mean_defect_fraction": 0.05402024549493777,
+          "negative_log_flat_probability_per_site": 0.016920378296528617
+        },
+        {
+          "n": 64,
+          "probability": 0.6976567871302759,
+          "mean_defect_fraction": 0.027762276114940584,
+          "negative_log_flat_probability_per_site": 0.005625437595791903
+        },
+        {
+          "n": 512,
+          "probability": 0.5635174021237688,
+          "mean_defect_fraction": 0.009820631483070292,
+          "negative_log_flat_probability_per_site": 0.0011202286401795528
+        },
+        {
+          "n": 4096,
+          "probability": 0.46709923177502083,
+          "mean_defect_fraction": 0.0031497421900268958,
+          "negative_log_flat_probability_per_site": 0.0001858431533556197
+        },
+        {
+          "n": 32768,
+          "probability": 0.39724027777715915,
+          "mean_defect_fraction": 0.0009842861118945561,
+          "negative_log_flat_probability_per_site": 2.817425377439507e-05
+        }
+      ]
+    },
+    {
+      "offset": 0.1,
+      "limit": 0.7372929173759466,
+      "defect_density_limit": 0.0,
+      "flat_probability_decay_rate_per_site": 0.0,
+      "finite_size": [
+        {
+          "n": 8,
+          "probability": 0.9063202973953378,
+          "mean_defect_fraction": 0.03924505703285578,
+          "negative_log_flat_probability_per_site": 0.012295313285241328
+        },
+        {
+          "n": 64,
+          "probability": 0.7979700906034601,
+          "mean_defect_fraction": 0.015631033434246874,
+          "negative_log_flat_probability_per_site": 0.003526315041898901
+        },
+        {
+          "n": 512,
+          "probability": 0.7506065658649899,
+          "mean_defect_fraction": 0.0031944033116537976,
+          "negative_log_flat_probability_per_site": 0.0005603000875601824
+        },
+        {
+          "n": 4096,
+          "probability": 0.7392653781154596,
+          "mean_defect_fraction": 0.0004591292780056881,
+          "negative_log_flat_probability_per_site": 7.375447220346074e-05
+        },
+        {
+          "n": 32768,
+          "probability": 0.7375466891694238,
+          "mean_defect_fraction": 5.874232779103802e-05,
+          "negative_log_flat_probability_per_site": 9.290340741687518e-06
+        }
+      ]
+    },
+    {
+      "offset": 0.5,
+      "limit": 0.9489356400860351,
+      "defect_density_limit": 0.0,
+      "flat_probability_decay_rate_per_site": 0.0,
+      "finite_size": [
+        {
+          "n": 8,
+          "probability": 0.9727062787863302,
+          "mean_defect_fraction": 0.010873007820361193,
+          "negative_log_flat_probability_per_site": 0.0034591392649407325
+        },
+        {
+          "n": 64,
+          "probability": 0.9532205635849771,
+          "mean_defect_fraction": 0.0026317500926993703,
+          "negative_log_flat_probability_per_site": 0.0007485775121716261
+        },
+        {
+          "n": 512,
+          "probability": 0.9495124100648328,
+          "mean_defect_fraction": 0.00036685567867473883,
+          "negative_log_flat_probability_per_site": 0.00010118491935559977
+        },
+        {
+          "n": 4096,
+          "probability": 0.9490084873560146,
+          "mean_defect_fraction": 4.653950722188881e-05,
+          "negative_log_flat_probability_per_site": 1.277771897926192e-05
+        },
+        {
+          "n": 32768,
+          "probability": 0.9489447579960696,
+          "mean_defect_fraction": 5.828324474417472e-06,
+          "negative_log_flat_probability_per_site": 1.5992643072149159e-06
+        }
+      ]
+    },
+    {
+      "offset": 1.0,
+      "limit": 0.9903972557415457,
+      "defect_density_limit": 0.0,
+      "flat_probability_decay_rate_per_site": 0.0,
+      "finite_size": [
+        {
+          "n": 8,
+          "probability": 0.9941731978183398,
+          "mean_defect_fraction": 0.002250814749401989,
+          "negative_log_flat_probability_per_site": 0.0007304805282690024
+        },
+        {
+          "n": 64,
+          "probability": 0.9909543169781644,
+          "mean_defect_fraction": 0.0004539685123963259,
+          "negative_log_flat_probability_per_site": 0.00014198193152581675
+        },
+        {
+          "n": 512,
+          "probability": 0.9904685601573191,
+          "mean_defect_fraction": 6.021996807699953e-05,
+          "negative_log_flat_probability_per_site": 1.870538033817651e-05
+        },
+        {
+          "n": 4096,
+          "probability": 0.9904061958774945,
+          "mean_defect_fraction": 7.583891819250061e-06,
+          "negative_log_flat_probability_per_site": 2.353545199440503e-06
+        },
+        {
+          "n": 32768,
+          "probability": 0.9903983736837202,
+          "mean_defect_fraction": 9.488720243125233e-07,
+          "negative_log_flat_probability_per_site": 2.9443417765514677e-07
+        }
+      ]
+    }
+  ],
+  "flat_geometry": [
+    {
+      "n": 257,
+      "test_relation_radius": 5,
+      "fraction_short_relations": 0.07392996108949416,
+      "max_shortest_relation": 22,
+      "example_slope": 69,
+      "example_gap": 0.15734381196753477
+    },
+    {
+      "n": 4093,
+      "test_relation_radius": 12,
+      "fraction_short_relations": 0.02223308086977767,
+      "max_shortest_relation": 89,
+      "example_slope": 88,
+      "example_gap": 0.009559031120966122
+    },
+    {
+      "n": 65537,
+      "test_relation_radius": 27,
+      "fraction_short_relations": 0.007003677312052733,
+      "max_shortest_relation": 361,
+      "example_slope": 4344,
+      "example_gap": 0.0005989127023731111
+    }
+  ]
+}
