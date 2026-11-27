@@ -1,0 +1,180 @@
+{
+  "tensor": {
+    "ward_checks": 8208,
+    "max_residual": 1.0658141036401503e-14,
+    "dispersion": [
+      {
+        "Akin": 1,
+        "Bpot": 1,
+        "p": 0.4,
+        "continuous_time_lattice_frequency": 0.39733866159012243,
+        "split_step_frequency": 0.3973648041661357,
+        "phase_speed": 0.9934120104153391,
+        "target_speed": 1
+      },
+      {
+        "Akin": 1,
+        "Bpot": 1,
+        "p": 0.2,
+        "continuous_time_lattice_frequency": 0.1996668332936563,
+        "split_step_frequency": 0.19967015014515255,
+        "phase_speed": 0.9983507507257627,
+        "target_speed": 1
+      },
+      {
+        "Akin": 1,
+        "Bpot": 1,
+        "p": 0.1,
+        "continuous_time_lattice_frequency": 0.09995833854135666,
+        "split_step_frequency": 0.09995875469214985,
+        "phase_speed": 0.9995875469214984,
+        "target_speed": 1
+      },
+      {
+        "Akin": 1,
+        "Bpot": 1,
+        "p": 0.05,
+        "continuous_time_lattice_frequency": 0.049994791829424665,
+        "split_step_frequency": 0.04999484389663057,
+        "phase_speed": 0.9998968779326114,
+        "target_speed": 1
+      },
+      {
+        "Akin": 1,
+        "Bpot": 4,
+        "p": 0.4,
+        "continuous_time_lattice_frequency": 0.7946773231802449,
+        "split_step_frequency": 0.7948865753377101,
+        "phase_speed": 1.9872164383442752,
+        "target_speed": 2
+      },
+      {
+        "Akin": 1,
+        "Bpot": 4,
+        "p": 0.2,
+        "continuous_time_lattice_frequency": 0.3993336665873126,
+        "split_step_frequency": 0.39936020497045643,
+        "phase_speed": 1.996801024852282,
+        "target_speed": 2
+      },
+      {
+        "Akin": 1,
+        "Bpot": 4,
+        "p": 0.1,
+        "continuous_time_lattice_frequency": 0.19991667708271332,
+        "split_step_frequency": 0.19992000640133295,
+        "phase_speed": 1.9992000640133294,
+        "target_speed": 2
+      },
+      {
+        "Akin": 1,
+        "Bpot": 4,
+        "p": 0.05,
+        "continuous_time_lattice_frequency": 0.09998958365884933,
+        "split_step_frequency": 0.09999000020001043,
+        "phase_speed": 1.9998000040002086,
+        "target_speed": 2
+      },
+      {
+        "Akin": 0.5,
+        "Bpot": 3,
+        "p": 0.4,
+        "continuous_time_lattice_frequency": 0.48663848798810055,
+        "split_step_frequency": 0.48668651923379674,
+        "phase_speed": 1.2167162980844919,
+        "target_speed": 1.224744871391589
+      },
+      {
+        "Akin": 0.5,
+        "Bpot": 3,
+        "p": 0.2,
+        "continuous_time_lattice_frequency": 0.24454093006340494,
+        "split_step_frequency": 0.24454702364535397,
+        "phase_speed": 1.2227351182267698,
+        "target_speed": 1.224744871391589
+      },
+      {
+        "Akin": 0.5,
+        "Bpot": 3,
+        "p": 0.1,
+        "continuous_time_lattice_frequency": 0.12242346248135078,
+        "split_step_frequency": 0.12242422700347222,
+        "phase_speed": 1.2242422700347222,
+        "target_speed": 1.224744871391589
+      },
+      {
+        "Akin": 0.5,
+        "Bpot": 3,
+        "p": 0.05,
+        "continuous_time_lattice_frequency": 0.06123086488937797,
+        "split_step_frequency": 0.061230960543077556,
+        "phase_speed": 1.224619210861551,
+        "target_speed": 1.224744871391589
+      }
+    ],
+    "scope": "Real linearized first-class tensor Hamiltonian, supplied DeWitt kinetic and double-curl bilinear; exact momentum-symbol constraints, not finite ternary microscopic derivation or matched light cone."
+  },
+  "magnon": {
+    "W33_adjacency": [
+      [
+        12,
+        1
+      ],
+      [
+        2,
+        24
+      ],
+      [
+        -4,
+        15
+      ]
+    ],
+    "W33_one_magnon": [
+      [
+        0,
+        1
+      ],
+      [
+        10,
+        24
+      ],
+      [
+        16,
+        15
+      ]
+    ],
+    "chain": [
+      {
+        "n": 8,
+        "k": 0.7853981633974483,
+        "one_magnon_gap": 0.5857864376269049,
+        "ratio_gap_to_k2": 0.9496412035517835
+      },
+      {
+        "n": 16,
+        "k": 0.39269908169872414,
+        "one_magnon_gap": 0.15224093497742652,
+        "ratio_gap_to_k2": 0.9872148307666584
+      },
+      {
+        "n": 32,
+        "k": 0.19634954084936207,
+        "one_magnon_gap": 0.03842943919353914,
+        "ratio_gap_to_k2": 0.9967913640449618
+      },
+      {
+        "n": 64,
+        "k": 0.09817477042468103,
+        "one_magnon_gap": 0.009630546655606143,
+        "ratio_gap_to_k2": 0.9991970675392224
+      },
+      {
+        "n": 128,
+        "k": 0.04908738521234052,
+        "one_magnon_gap": 0.00240908758965519,
+        "ratio_gap_to_k2": 0.9997992185115868
+      }
+    ],
+    "scope": "For supplied exchange Hamiltonian J sum(I-S), one differing local state gives graph Laplacian exactly. The shared-tick two-register effective action has positive ferromagnetic J; extending to graph as sum of pair terms is assumed. Magnon z=2, not a relativistic mode."
+  }
+}
