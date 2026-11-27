@@ -1,0 +1,160 @@
+{
+  "cumulant": {
+    "scale": 129600,
+    "rows": [
+      {
+        "sector": "4",
+        "negative_reflections": 0,
+        "multiplicity": 315,
+        "numerator": 768
+      },
+      {
+        "sector": "4",
+        "negative_reflections": 3,
+        "multiplicity": 180,
+        "numerator": -1392
+      },
+      {
+        "sector": "31",
+        "negative_reflections": 1,
+        "multiplicity": 1620,
+        "numerator": 336
+      },
+      {
+        "sector": "31",
+        "negative_reflections": 2,
+        "multiplicity": 1350,
+        "numerator": -384
+      },
+      {
+        "sector": "22",
+        "negative_reflections": 0,
+        "multiplicity": 720,
+        "numerator": 714
+      },
+      {
+        "sector": "22",
+        "negative_reflections": 3,
+        "multiplicity": 360,
+        "numerator": -1446
+      },
+      {
+        "sector": "211",
+        "negative_reflections": 1,
+        "multiplicity": 1080,
+        "numerator": 300
+      },
+      {
+        "sector": "211",
+        "negative_reflections": 2,
+        "multiplicity": 810,
+        "numerator": -420
+      },
+      {
+        "sector": "1111",
+        "negative_reflections": 0,
+        "multiplicity": 90,
+        "numerator": 660
+      },
+      {
+        "sector": "1111",
+        "negative_reflections": 3,
+        "multiplicity": 36,
+        "numerator": -1500
+      }
+    ],
+    "parity_signed_even_moments": [
+      "1152519840",
+      "2661793908266880",
+      "5166028085778797207040",
+      "10429222273770022824783329280",
+      "21428465970163457801580713935626240",
+      "44307121708071024930239967669100810567680",
+      "91884712300846543014894357972239830204402237440",
+      "190943772770437184280958211415975233967808234932142080"
+    ],
+    "scope": "Fourth connected cumulant via centered Weyl expansion and pair subtraction. Joint spectral projectors from eight commuting reflections and S4 characters; trace exact via fixed configurations on two ternary copies. Parity signs are formal, not physical spin statistics."
+  },
+  "gapping": {
+    "right": [
+      1,
+      1,
+      1,
+      1,
+      4
+    ],
+    "left": [
+      -2,
+      -2,
+      -2,
+      -2,
+      -2
+    ],
+    "basis": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0,
+        3,
+        -1,
+        -1,
+        -1,
+        -2
+      ],
+      [
+        -1,
+        1,
+        0,
+        0,
+        0,
+        -1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        -1,
+        0,
+        1,
+        0,
+        0,
+        -1,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        -1,
+        0,
+        0,
+        1,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        -2,
+        0,
+        0,
+        0,
+        1,
+        -2,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "null_checks": 25,
+    "blocks": 324,
+    "total_null_vectors": 1620,
+    "scope": "Ordinary unit monopole angular channels grouped into 324 sets of five right and five left. Householder H=I-wwT/4 maps r to l; lattice graph is saturated since intersection of rational graph with integer lattice. Neutral and pairwise null with K=diag(I,-I); bosonization candidate interactions, not proof of physical defect gapping or preservation of E6 flavor/rotations. No enforced gaplessness from U1 anomaly alone."
+  }
+}
