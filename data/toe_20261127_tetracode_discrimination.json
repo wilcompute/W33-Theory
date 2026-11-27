@@ -1,0 +1,26 @@
+[
+  {
+    "copies": 1,
+    "optimal_USD": "0",
+    "optimal_minimum_error_success": 0.8303418012614794,
+    "dual_slack_min_eigenvalue": -8.559016799704054e-17
+  },
+  {
+    "copies": 2,
+    "optimal_USD": "16/27",
+    "optimal_minimum_error_success": 0.987491745118794,
+    "dual_slack_min_eigenvalue": -8.326672684688674e-17
+  },
+  {
+    "copies": 3,
+    "optimal_USD": "208/243",
+    "optimal_minimum_error_success": 0.9986263631989352,
+    "dual_slack_min_eigenvalue": -8.326672684688674e-17
+  },
+  {
+    "copies": 4,
+    "optimal_USD": "2080/2187",
+    "optimal_minimum_error_success": 0.9998475609614297,
+    "dual_slack_min_eigenvalue": -5.551115123125783e-17
+  }
+]
