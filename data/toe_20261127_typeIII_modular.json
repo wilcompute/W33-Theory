@@ -1,0 +1,25 @@
+{
+  "factor_sectors": 105,
+  "spins": {
+    "1:0": 27,
+    "3:0": 26,
+    "3:1": 26,
+    "3:2": 26
+  },
+  "full_spins": {
+    "1:0": 135,
+    "1:1": 54,
+    "1:2": 54,
+    "3:0": 234,
+    "3:1": 234,
+    "3:2": 234
+  },
+  "full_sectors": 945,
+  "verlinde_nonzero": {
+    "1": 23895,
+    "3": 234
+  },
+  "flux_compatible_checks": 56187,
+  "max_multiplicity": 3,
+  "modular_residual": 1.998403138390458e-15
+}
