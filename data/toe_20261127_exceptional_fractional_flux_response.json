@@ -1,0 +1,117 @@
+{
+  "axes": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "cup_pairing": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "cocycle_checks": 1944,
+  "matter_checks": 9565938,
+  "flux_backgrounds": 531441,
+  "magnetic_response_order_census": {
+    "1": 1,
+    "3": 728,
+    "9": 530712
+  },
+  "example": {
+    "b": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "w2": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "eta": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "phase_exponent_mod9": 1
+  },
+  "minimum_normalized_charge_square_sum": 72,
+  "trace_physical_charge_square": 17496,
+  "one_loop_abelian_beta_coefficient": 11664,
+  "scope": "On T4, background b mod9 with b mod3=-w2, closed integral sheets. Fractional U1 flux b/9 (chosen convention); magnetic background large shift eta yields exp(2pi i <eta,b>/9) when magnetic one-form conserved (no dynamical monopoles). Transformation in electric-covariant convention, not full anomaly class modulo counterterms. No physical matter selection or UV completion. Minimal charge-square sum in restricted ansatz N27: n^2+n-2>=0; equality n=1,-2 fails cubic; next allowed gap18 -> sum squares>=72, attained."
+}
