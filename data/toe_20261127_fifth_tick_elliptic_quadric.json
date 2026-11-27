@@ -1,0 +1,87 @@
+{
+  "replica_points": 40,
+  "isotropic": [
+    [
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      1
+    ]
+  ],
+  "anisotropic_norm_counts": [
+    15,
+    15
+  ],
+  "isotropic_nonorthogonal_pairs": 45,
+  "trial_nonzero_amplitudes": 81,
+  "integer_norm_squared": 180,
+  "exact_projector_sum_max": 2,
+  "reflection_invariance_checks": 2430,
+  "exact_M5_max": "16/3",
+  "formula": "M5=(1/9)sum_30 R + sum_10 Pi; both upper bounds saturated by the same state",
+  "scope": "Replica PG(3,3) elliptic quadric, not identification with original symplectic W33 geometry; norm of fifth raw moment exact."
+}
