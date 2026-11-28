@@ -1,0 +1,69 @@
+{
+  "source": {
+    "N": 40,
+    "ops": {
+      "sum": 844,
+      "swap": 19,
+      "scale": 18
+    },
+    "checks": 40,
+    "cat_locations": 3048,
+    "cat_fault_labels": 126660,
+    "flag_free_labels": 51568,
+    "max_residual_weight": 1,
+    "preparation_locations": 40,
+    "inter_check_idles": 1640
+  },
+  "target": {
+    "N": 11,
+    "ops": {
+      "sum": 67,
+      "swap": 0,
+      "scale": 0
+    },
+    "checks": 11,
+    "cat_locations": 476,
+    "cat_fault_labels": 19438,
+    "flag_free_labels": 8386,
+    "max_residual_weight": 1,
+    "preparation_locations": 11,
+    "inter_check_idles": 132
+  },
+  "injection": {
+    "checks": 10,
+    "cat_locations": 440,
+    "cat_fault_labels": 17980,
+    "flag_free_labels": 7740,
+    "max_residual_weight": 1,
+    "SUM_locations": 11,
+    "SUM_fault_labels": 880,
+    "destructive_readout_locations": 11,
+    "readout_single_component_cases": 23,
+    "inter_check_idles": 121,
+    "feedforward_locations_upper": 11,
+    "modeled_locations": 594
+  },
+  "transfer_locations": 6811,
+  "transversal_T_locations": 40,
+  "total_modeled_locations_excluding_ideal_checkpoints": 13740,
+  "no_fault_acceptance_examples": [
+    {
+      "p": 0.000001,
+      "probability": 0.9863539561807101
+    },
+    {
+      "p": 0.00001,
+      "probability": 0.8716209089827575
+    },
+    {
+      "p": 0.0001,
+      "probability": 0.25307517384161227
+    },
+    {
+      "p": 0.001,
+      "probability": 0.000001071046250056826
+    }
+  ],
+  "CCZ_basis_checks": 27,
+  "scope": "Compositional restricted single-fault certificate, not fully fault-bearing circuit. Verify full source and target stabilizer state before non-Clifford generation; accepted encoder fault is stabilizer equivalent with ideal subsequent verification, accepted single cat fault leaves weight<=1 modulo measured stabilizer. Source transversal T preserves support; transfer accepts/corrects one incoming supported Pauli (previous exhaustive initial idle cases), hence arbitrary one-site operator by linearity on accepted branches. Transfer ideal terminal recovery and ideal logical Pauli correction produce exact resource. Injection layer transversal inverse SUM and readout, one-site fault support and CSS correction; terminal data check flag-free single faults at most weight1, transversal feedforward preserves support, final ideal CSS recovery. Clean encoded computational input; no faulty ideal checkpoints, intra-gadget idles, encoder inter-gate idles, loss, simultaneous prep/transfer faults or full outer T/CCZ execution. Gate cost treats SUM,SWAP,scaling and transversal correction as one location each, includes inter-check idles; no cost for ideal checkpoints. No-fault probability is lower bound on accepted correct in this model, not actual throughput."
+}
