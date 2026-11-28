@@ -1,0 +1,361 @@
+{
+  "status": "PASS",
+  "native": {
+    "hist": {
+      "13": 2880,
+      "1111": 360
+    },
+    "loops": 3240,
+    "triangle_group": 12,
+    "basepaths": 486,
+    "adjacent_transports": [
+      3
+    ],
+    "edges": 540,
+    "flag_adjacency": {
+      "3": 15,
+      "9": 24,
+      "27": 1,
+      "-1": 81,
+      "-3": 24,
+      "-9": 15
+    },
+    "augmentation_adjacency": {
+      "9": 24,
+      "-1": 81,
+      "-9": 15
+    },
+    "augmentation_laplacian": {
+      "18": 24,
+      "28": 81,
+      "36": 15
+    },
+    "exact_annihilator_roots": [
+      3,
+      9,
+      27,
+      -1,
+      -3,
+      -9
+    ],
+    "exact_trace_moments": [
+      160,
+      0,
+      4320,
+      25920,
+      790560,
+      14878080
+    ]
+  },
+  "mirror": {
+    "paraunitary_checks": 38,
+    "residual": 2.220446049250313e-16,
+    "orbitals": 8,
+    "rows": [
+      {
+        "L": 4,
+        "M": 0.5,
+        "k": 1.173749739213613,
+        "ratio_pi": 0.3736161458973391,
+        "residual": 3.3306690738754696e-16
+      },
+      {
+        "L": 4,
+        "M": 1,
+        "k": 1.404782061060414,
+        "ratio_pi": 0.44715601796917126,
+        "residual": 1.1102230246251565e-16
+      },
+      {
+        "L": 4,
+        "M": 2,
+        "k": 1.6436024989080074,
+        "ratio_pi": 0.5231749243588018,
+        "residual": 0
+      },
+      {
+        "L": 4,
+        "M": 4,
+        "k": 1.8765848994879573,
+        "ratio_pi": 0.597335525770232,
+        "residual": 5.551115123125783e-17
+      },
+      {
+        "L": 4,
+        "M": 8,
+        "k": 2.092106634292878,
+        "ratio_pi": 0.6659382246461194,
+        "residual": 6.938893903907228e-17
+      },
+      {
+        "L": 8,
+        "M": 0.5,
+        "k": 1.1737876237043308,
+        "ratio_pi": 0.37362820490526766,
+        "residual": 1.1102230246251565e-16
+      },
+      {
+        "L": 8,
+        "M": 1,
+        "k": 1.4049022000235056,
+        "ratio_pi": 0.4471942593888392,
+        "residual": 0
+      },
+      {
+        "L": 8,
+        "M": 2,
+        "k": 1.643868820112231,
+        "ratio_pi": 0.5232596970310065,
+        "residual": 2.220446049250313e-16
+      },
+      {
+        "L": 8,
+        "M": 4,
+        "k": 1.8770238504913648,
+        "ratio_pi": 0.5974752482141669,
+        "residual": 1.1102230246251565e-16
+      },
+      {
+        "L": 8,
+        "M": 8,
+        "k": 2.092682376239549,
+        "ratio_pi": 0.6661214889996354,
+        "residual": 5.551115123125783e-17
+      },
+      {
+        "L": 16,
+        "M": 0.5,
+        "k": 1.1737876262098124,
+        "ratio_pi": 0.3736282057027872,
+        "residual": 5.551115123125783e-16
+      },
+      {
+        "L": 16,
+        "M": 1,
+        "k": 1.404902227916502,
+        "ratio_pi": 0.44719426826745573,
+        "residual": 1.1102230246251565e-16
+      },
+      {
+        "L": 16,
+        "M": 2,
+        "k": 1.6438689750079947,
+        "ratio_pi": 0.5232597463358595,
+        "residual": 0
+      },
+      {
+        "L": 16,
+        "M": 4,
+        "k": 1.8770243374457194,
+        "ratio_pi": 0.597475403216552,
+        "residual": 1.3877787807814457e-16
+      },
+      {
+        "L": 16,
+        "M": 8,
+        "k": 2.0926833676778065,
+        "ratio_pi": 0.6661218045842344,
+        "residual": 9.71445146547012e-17
+      },
+      {
+        "L": 32,
+        "M": 0.5,
+        "k": 1.1737876262098124,
+        "ratio_pi": 0.3736282057027872,
+        "residual": 5.551115123125783e-16
+      },
+      {
+        "L": 32,
+        "M": 1,
+        "k": 1.4049022279165033,
+        "ratio_pi": 0.4471942682674561,
+        "residual": 2.7755575615628914e-16
+      },
+      {
+        "L": 32,
+        "M": 2,
+        "k": 1.643868975008047,
+        "ratio_pi": 0.5232597463358761,
+        "residual": 5.551115123125783e-17
+      },
+      {
+        "L": 32,
+        "M": 4,
+        "k": 1.8770243374463171,
+        "ratio_pi": 0.5974754032167423,
+        "residual": 2.7755575615628914e-17
+      },
+      {
+        "L": 32,
+        "M": 8,
+        "k": 2.0926833676807366,
+        "ratio_pi": 0.666121804585167,
+        "residual": 1.8041124150158794e-16
+      }
+    ]
+  },
+  "higgs": {
+    "ranks": [
+      1,
+      364,
+      11011,
+      33880,
+      11011,
+      364,
+      1
+    ],
+    "dim": 1996024,
+    "degrees": [
+      364,
+      122,
+      44,
+      26,
+      44,
+      122,
+      364
+    ],
+    "max": 364,
+    "inc": [
+      364,
+      44044,
+      440440,
+      440440,
+      44044,
+      364
+    ],
+    "total_rank_edges": 969696,
+    "examples": [
+      {
+        "theta": 0.05,
+        "one_site_selector_probability_lower": 0.9975,
+        "two_site_same_selector_probability_lower": 0.995,
+        "dressed_gap_lower": 3
+      },
+      {
+        "theta": 0.1,
+        "one_site_selector_probability_lower": 0.99,
+        "two_site_same_selector_probability_lower": 0.98,
+        "dressed_gap_lower": 3
+      },
+      {
+        "theta": 0.2,
+        "one_site_selector_probability_lower": 0.96,
+        "two_site_same_selector_probability_lower": 0.9199999999999999,
+        "dressed_gap_lower": 3
+      },
+      {
+        "theta": 0.3,
+        "one_site_selector_probability_lower": 0.91,
+        "two_site_same_selector_probability_lower": 0.8200000000000001,
+        "dressed_gap_lower": 3
+      },
+      {
+        "theta": 0.5,
+        "one_site_selector_probability_lower": 0.75,
+        "two_site_same_selector_probability_lower": 0.5,
+        "dressed_gap_lower": 3
+      }
+    ],
+    "torus_ground_degeneracy": 13817466,
+    "topological_entropy_per_selected_sector": 5.493061443340549
+  },
+  "geometry": {
+    "predS": 0.06860416666666667,
+    "predB": -0.012697916666666665,
+    "rows": [
+      {
+        "t": 0.1,
+        "scalar_error": 0.00014588922539991722,
+        "magnetic_error": 0.00010532695250249462
+      },
+      {
+        "t": 0.01,
+        "scalar_error": 0.000001453362976980288,
+        "magnetic_error": 0.000001043831315576324
+      },
+      {
+        "t": 0.001,
+        "scalar_error": 1.4533055106569215e-8,
+        "magnetic_error": 1.0437378661007357e-8
+      },
+      {
+        "t": 0.0001,
+        "scalar_error": 1.4561941930057998e-10,
+        "magnetic_error": 1.0437337626123533e-10
+      }
+    ],
+    "cov": [
+      {
+        "det": 1,
+        "scalar_residual": 2.7755575615628914e-17,
+        "magnetic_residual": 1.3877787807814457e-17
+      },
+      {
+        "det": 1,
+        "scalar_residual": 5.551115123125783e-17,
+        "magnetic_residual": 6.938893903907228e-18
+      },
+      {
+        "det": 1,
+        "scalar_residual": 0,
+        "magnetic_residual": 0
+      }
+    ],
+    "gradient_identity_checks": 324,
+    "ward_witness": {
+      "phi": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "pi": [
+        1,
+        3,
+        0,
+        0
+      ],
+      "xi": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "delta": [
+        -0.5,
+        0,
+        0,
+        0
+      ],
+      "dp": [
+        0,
+        -0.5,
+        0,
+        0.5
+      ],
+      "gradient_derivative": 0,
+      "kinetic_derivative": 0.75
+    }
+  },
+  "e8": {
+    "characters": {
+      "24": 120,
+      "248": 1,
+      "-8": 135
+    },
+    "singular_subspaces_by_rank": [
+      1,
+      135,
+      1575,
+      2025,
+      270
+    ],
+    "even_roots": 112,
+    "odd_roots": 128,
+    "periodic_fermion_log_hessian": 720,
+    "antiperiodic_fermion_log_hessian": 1080,
+    "periodic_gauge_log_hessian": -720,
+    "combined_anti_one_adj_Weyl_log_hessian": 360,
+    "Wilson_penalty_scaled_lambda_threshold": 0.11398633159763
+  }
+}
