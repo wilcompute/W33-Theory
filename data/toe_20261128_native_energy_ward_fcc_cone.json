@@ -1,0 +1,247 @@
+{
+  "graphs_checked": 1024,
+  "connected_kernel_dimension_histogram": {
+    "1": 327,
+    "2": 300,
+    "3": 40,
+    "4": 50,
+    "6": 10,
+    "10": 1
+  },
+  "examples": {
+    "1": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ]
+    ],
+    "2": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ]
+    ],
+    "4": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "6": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "10": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ]
+    ]
+  },
+  "FCC_neighbor_induced_wedge_pairs": 42,
+  "FCC_wedge_connected": true,
+  "spectra": [
+    {
+      "L": 8,
+      "bare": 1.1506211272279883,
+      "photon_dressed": 1.143392543810295,
+      "tensor_dressed": 1.1447177399941062,
+      "photon_completed_square": 1.149148998881216,
+      "tensor_completed_square": 1.1494183231783488
+    },
+    {
+      "L": 16,
+      "bare": 1.0407165699960113,
+      "photon_dressed": 1.0352744733812165,
+      "tensor_dressed": 1.0398092349117685,
+      "photon_completed_square": 1.040489896266962,
+      "tensor_completed_square": 1.0406786986305232
+    },
+    {
+      "L": 32,
+      "bare": 1.0103755815800615,
+      "photon_dressed": 1.005261069768606,
+      "tensor_dressed": 1.010174758286845,
+      "photon_completed_square": 1.010325384338599,
+      "tensor_completed_square": 1.0103736058080952
+    },
+    {
+      "L": 64,
+      "bare": 1.0026062458657905,
+      "photon_dressed": 0.9975685087446577,
+      "tensor_dressed": 1.0025575575609067,
+      "photon_completed_square": 1.0025940743046118,
+      "tensor_completed_square": 1.002606127938385
+    },
+    {
+      "L": 128,
+      "bare": 1.0006523344811182,
+      "photon_dressed": 0.9956334972043102,
+      "tensor_dressed": 1.0006402556727367,
+      "photon_completed_square": 1.000649314810884,
+      "tensor_completed_square": 1.0006523271954784
+    },
+    {
+      "L": 256,
+      "bare": 1.0001631319509192,
+      "photon_dressed": 0.9951490016540456,
+      "tensor_dressed": 1.000160118053829,
+      "photon_completed_square": 1.0001623784786329,
+      "tensor_completed_square": 1.0001631314968844
+    }
+  ],
+  "all_zone_upper_f": 42.71484375,
+  "scope": "For H=sum(I-S_e), H_g=sum g_e(I-S_e), commutator coefficients vanish iff g equal along induced wedges; contributions from closed triangles telescope. Checked all labelled graphs n5 by integer coefficient rank (permutation representation faithful for q>=5). FCC local wedge graph connected => only common edge coefficient for conserved weighted bond energy on connected infinite lattice (formal local commutator). No universal stress tensor or Lorentz derivation. Parallel FCC f=16 det(M)^2 p^T M p, physical axial k_phys=(q,0,0). Dressed oscillator matrices with g=.2,Omega2 are positive throughout BZ using f<=42.715; completing square supplies compensating diagonal term and restores common limiting slope, not derived microscopic counterterm or explicit auxiliary full-field action. Quadratic modal test only."
+}
