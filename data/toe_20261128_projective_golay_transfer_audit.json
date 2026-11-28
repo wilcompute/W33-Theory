@@ -1,0 +1,68 @@
+{
+  "n": 51,
+  "checks": 52,
+  "cat_locations": 3592,
+  "census": {
+    "clean": {
+      "tested": 1,
+      "rejected": 0,
+      "accepted": 1,
+      "malignant": 0
+    },
+    "cat": {
+      "tested": 148916,
+      "rejected": 139244,
+      "accepted": 9672,
+      "malignant": 0
+    },
+    "idle": {
+      "tested": 21624,
+      "rejected": 12768,
+      "accepted": 8856,
+      "malignant": 0
+    },
+    "source_readout": {
+      "tested": 80,
+      "rejected": 0,
+      "accepted": 80,
+      "malignant": 0
+    }
+  },
+  "total": 170621,
+  "erasures": {
+    "source": [
+      {
+        "k": 1,
+        "count": 40
+      },
+      {
+        "k": 2,
+        "count": 780
+      },
+      {
+        "k": 3,
+        "count": 9880
+      }
+    ],
+    "target": [
+      {
+        "k": 1,
+        "count": 11
+      },
+      {
+        "k": 2,
+        "count": 55
+      },
+      {
+        "k": 3,
+        "count": 165
+      },
+      {
+        "k": 4,
+        "count": 330
+      }
+    ]
+  },
+  "mixed_source_one_erasure_one_flip": 3120,
+  "scope": "Exact single-location Pauli signatures for three joint Z_source Z_target^-1 cats, full independent source/target CSS postselection, inter-gadget idles, source MX readout flips. Source initially arbitrary clean logical state, target clean |+_L>; parity label s=a-b and source Fourier label t imply correction X^s Z^t in time order (Z^t X^s operator). Decoder uses ideal target terminal syndromes and source destructive classical syndrome; final correction noiseless. Erasure combinatorics certifies source X-logical readout on up to3 erased positions and target X logical outside up to4 erased positions (target full recovery also needs Z; gX=gZ and logicals proportional). Not noisy encoding or active recovery, combined faults or full factory threshold."
+}
