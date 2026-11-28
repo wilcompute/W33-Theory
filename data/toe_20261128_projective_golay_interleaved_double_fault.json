@@ -1,0 +1,19 @@
+{
+  "singles": {
+    "tested": 337628,
+    "accepted": 24104,
+    "malignant": 0
+  },
+  "locations": 13195,
+  "measurement_signature_classes": 40635,
+  "distinct_location_pair_labels": 56985282036,
+  "measurement_pass_pairs": 296774262,
+  "accepted_pairs": 247387406,
+  "malignant_pairs": 0,
+  "witness": null,
+  "decoder": {
+    "source_radius": 1,
+    "target_component_radius": 2
+  },
+  "scope": "Interleave full source and target Z check sets between successive joint parity measurements. Exact additive Clifford fault signatures; aggregate by all flag and repeated-parity/CSS measurement outcomes plus terminal syndrome and logical phases. Count complementary signatures, subtract same-location ordered products then divide by2. Source radius1 destructive decoder, target ideal component radius2 Golay recovery. Clean encoded inputs, no loss, no recovery or feedback noise; not composed factory or full noisy instruction. Distinct faults may lie in same gadget at different locations."
+}
