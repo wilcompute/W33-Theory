@@ -1,0 +1,848 @@
+{
+  "status": "PASS",
+  "fcc": {
+    "checks": 2793,
+    "max_residual": 5.4569682106375694e-12,
+    "photon_residual": 1.7053025658242404e-13,
+    "min_metric_eigenvalue": 0.2613358861029488,
+    "dispersion_ratio_to_static_metric": [
+      1.0681091226347255,
+      8.735357876853584
+    ],
+    "samples": [
+      {
+        "L": 3,
+        "omega": 2.0625,
+        "continuum": 1.8137993642342176,
+        "ratio": 1.1371158468074463
+      },
+      {
+        "L": 4,
+        "omega": 1.530931089239486,
+        "continuum": 1.3603495231756633,
+        "ratio": 1.1253953951963824
+      },
+      {
+        "L": 5,
+        "omega": 1.193941865365017,
+        "continuum": 1.0882796185405306,
+        "ratio": 1.0970910830492147
+      },
+      {
+        "L": 7,
+        "omega": 0.8222463513011637,
+        "continuum": 0.7773425846718076,
+        "ratio": 1.057765736130762
+      },
+      {
+        "L": 8,
+        "omega": 0.711361542300061,
+        "continuum": 0.6801747615878316,
+        "ratio": 1.0458511289648935
+      },
+      {
+        "L": 12,
+        "omega": 0.46330252819158807,
+        "continuum": 0.4534498410585544,
+        "ratio": 1.0217282844559679
+      }
+    ],
+    "detM0": 0.25,
+    "scope": "Local staggered linear ADM and matched Maxwell with supplied common metric kernel, z=1; not nonlinear or dynamically universal."
+  },
+  "selector": {
+    "classes": [
+      {
+        "r": 0,
+        "n": 130,
+        "count": 1
+      },
+      {
+        "r": 1,
+        "n": 40,
+        "count": 234
+      },
+      {
+        "r": 1,
+        "n": 49,
+        "count": 130
+      },
+      {
+        "r": 2,
+        "n": 10,
+        "count": 2106
+      },
+      {
+        "r": 2,
+        "n": 13,
+        "count": 3120
+      },
+      {
+        "r": 2,
+        "n": 16,
+        "count": 5265
+      },
+      {
+        "r": 2,
+        "n": 22,
+        "count": 520
+      },
+      {
+        "r": 3,
+        "n": 1,
+        "count": 2340
+      },
+      {
+        "r": 3,
+        "n": 4,
+        "count": 22100
+      },
+      {
+        "r": 3,
+        "n": 7,
+        "count": 9360
+      },
+      {
+        "r": 3,
+        "n": 13,
+        "count": 80
+      },
+      {
+        "r": 4,
+        "n": 0,
+        "count": 2106
+      },
+      {
+        "r": 4,
+        "n": 1,
+        "count": 3120
+      },
+      {
+        "r": 4,
+        "n": 2,
+        "count": 5265
+      },
+      {
+        "r": 4,
+        "n": 4,
+        "count": 520
+      },
+      {
+        "r": 5,
+        "n": 0,
+        "count": 234
+      },
+      {
+        "r": 5,
+        "n": 1,
+        "count": 130
+      },
+      {
+        "r": 6,
+        "n": 0,
+        "count": 1
+      }
+    ],
+    "thermal": [
+      {
+        "registers": 1,
+        "beta_t": 0.3412163980701859,
+        "beta_delta": 0.01831020481113521,
+        "mu_over_delta": 59.999999999999844,
+        "W33_probability": 0.01640752858930097,
+        "rank_probability": [
+          0.00004048244037508271,
+          0.024137937664116624,
+          0.41267336072217886,
+          0.5045432568925896,
+          0.057953181865742685,
+          0.0006511802068661188,
+          6.002081318783478e-7
+        ]
+      },
+      {
+        "registers": 2,
+        "beta_t": 0.4368390561574843,
+        "beta_delta": 0.03662040962227042,
+        "mu_over_delta": 59.999999999999844,
+        "W33_probability": 0.04611597800625389,
+        "rank_probability": [
+          0.00006569227636218446,
+          0.06454246486923126,
+          0.6216400729724798,
+          0.3014746589922518,
+          0.012230396630611682,
+          0.000046699818481255056,
+          1.4440581825312796e-8
+        ]
+      },
+      {
+        "registers": 4,
+        "beta_t": 0.5646718053047104,
+        "beta_delta": 0.07324081924454062,
+        "mu_over_delta": 60.00000000000002,
+        "W33_probability": 0.1822022493331798,
+        "rank_probability": [
+          0.00008651578790749293,
+          0.2345633149230164,
+          0.7110918493989679,
+          0.053985524911286734,
+          0.00027267482346453716,
+          1.2015117590582463e-7,
+          4.180576050495578e-12
+        ]
+      },
+      {
+        "registers": 8,
+        "beta_t": 0.7414839753213203,
+        "beta_delta": 0.14648163848908125,
+        "mu_over_delta": 60.00000000000002,
+        "W33_probability": 0.672682991360895,
+        "rank_probability": [
+          0.00003549029183079548,
+          0.7726812497043374,
+          0.22686918187824842,
+          0.0004140459552140924,
+          3.2170180874155175e-8,
+          1.8827669856670132e-13,
+          8.286880809663161e-20
+        ]
+      },
+      {
+        "registers": 16,
+        "beta_t": 0.9992462959794344,
+        "beta_delta": 0.29296327697816293,
+        "mu_over_delta": 59.999999999999936,
+        "W33_probability": 0.9591451624053267,
+        "rank_probability": [
+          6.247387517832627e-7,
+          0.9972974711799178,
+          0.002701901419260946,
+          2.6620693181000794e-9,
+          4.7496368580344026e-17,
+          4.853016484413491e-26,
+          3.4061321173031894e-36
+        ]
+      },
+      {
+        "registers": 32,
+        "beta_t": 1.4051743822328322,
+        "beta_delta": 0.5859265539563254,
+        "mu_over_delta": 59.99999999999998,
+        "W33_probability": 0.9971597756986018,
+        "rank_probability": [
+          9.899398755167564e-11,
+          0.9999997226220765,
+          2.772789306300236e-7,
+          6.69967823354946e-20,
+          5.58099088428604e-35,
+          1.6704843975481865e-51,
+          2.94262490307378e-69
+        ]
+      },
+      {
+        "registers": 64,
+        "beta_t": 2.1106720961039223,
+        "beta_delta": 1.1718531079126504,
+        "mu_over_delta": 60,
+        "W33_probability": 0.9999853998570191,
+        "rank_probability": [
+          2.3062036266203558e-18,
+          0.9999999999999959,
+          5.0815250712315204e-15,
+          7.680578565527898e-41,
+          8.607408837198773e-71,
+          1.9190804878480624e-102,
+          2.0377449531258472e-135
+        ]
+      },
+      {
+        "registers": 128,
+        "beta_t": 3.4528707885617145,
+        "beta_delta": 2.3437062158253,
+        "mu_over_delta": 60.00000000000002,
+        "W33_probability": 0.9999999996162927,
+        "rank_probability": [
+          1.2445829306149586e-33,
+          0.9999999999999994,
+          2.624529207528953e-30,
+          3.606277316727536e-82,
+          3.314654377125192e-142,
+          2.8237347853516833e-204,
+          9.716910246694127e-268
+        ]
+      }
+    ],
+    "quantum": [
+      {
+        "h": 0,
+        "energy": -30,
+        "W33_probability": 1,
+        "low_band_gap_bound": 9,
+        "sector_bound": 1
+      },
+      {
+        "h": 0.1,
+        "energy": -30.000403088683495,
+        "W33_probability": 0.9999872730633078,
+        "low_band_gap_bound": 8.6,
+        "sector_bound": 0.9777777777777777
+      },
+      {
+        "h": 1,
+        "energy": -30.04036342257438,
+        "W33_probability": 0.9987145038700042,
+        "low_band_gap_bound": 5,
+        "sector_bound": 0.7777777777777778
+      },
+      {
+        "h": 3,
+        "energy": -30.36695609491732,
+        "W33_probability": 0.9875822916098022,
+        "low_band_gap_bound": -3,
+        "sector_bound": 0.33333333333333337
+      },
+      {
+        "h": 4,
+        "energy": -30.657389159296233,
+        "W33_probability": 0.9768124723022191,
+        "low_band_gap_bound": -7,
+        "sector_bound": 0.11111111111111116
+      },
+      {
+        "h": 5,
+        "energy": -31.035826780995645,
+        "W33_probability": 0.9619505523983988,
+        "low_band_gap_bound": -11,
+        "sector_bound": 0
+      },
+      {
+        "h": 10,
+        "energy": -34.247957862041275,
+        "W33_probability": 0.834102447239297,
+        "low_band_gap_bound": -31,
+        "sector_bound": 0
+      },
+      {
+        "h": 20,
+        "energy": -45.31750724386538,
+        "W33_probability": 0.5927050795310711,
+        "low_band_gap_bound": -71,
+        "sector_bound": 0
+      }
+    ],
+    "one_register_beta_interval": [
+      0.29617037068069973,
+      0.4368390561574843
+    ],
+    "scope": "Entropy rank penalty from Weyl projector traces, effective ring partition and supplied all-to-all adjacent-rank local mixing, not native tick-derived."
+  },
+  "mirror": {
+    "rows": [
+      {
+        "L": 4,
+        "m0": -1,
+        "n_pi": 0,
+        "multiplicity": 1,
+        "chirality_relative": 1,
+        "prob_target_wall": 1,
+        "prob_mirror_wall": 0,
+        "rotor_coupling_amplitude": 0,
+        "nonzero_singular_min": 1,
+        "residual": 0
+      },
+      {
+        "L": 4,
+        "m0": -1,
+        "n_pi": 1,
+        "multiplicity": 3,
+        "chirality_relative": -1,
+        "prob_target_wall": 0.011764705882352941,
+        "prob_mirror_wall": 0.7529411764705882,
+        "rotor_coupling_amplitude": 1.7354436625492493,
+        "nonzero_singular_min": 1.4736257582079004,
+        "residual": 0
+      },
+      {
+        "L": 4,
+        "m0": -1,
+        "n_pi": 2,
+        "multiplicity": 3,
+        "chirality_relative": 1,
+        "prob_target_wall": 0.00022888532845044635,
+        "prob_mirror_wall": 0.9375143053330283,
+        "rotor_coupling_amplitude": 3.8730128950635385,
+        "nonzero_singular_min": 3.367958691924178,
+        "residual": 0
+      },
+      {
+        "L": 4,
+        "m0": -1,
+        "n_pi": 3,
+        "multiplicity": 1,
+        "chirality_relative": -1,
+        "prob_target_wall": 0.00002083810873325137,
+        "prob_mirror_wall": 0.972222801058576,
+        "rotor_coupling_amplitude": 5.9160815442409795,
+        "nonzero_singular_min": 5.339917473684535,
+        "residual": 0
+      },
+      {
+        "L": 4,
+        "m0": -0.8,
+        "n_pi": 0,
+        "multiplicity": 1,
+        "chirality_relative": 1,
+        "prob_target_wall": 0.9600024576062917,
+        "prob_mirror_wall": 0.00006144015728680258,
+        "rotor_coupling_amplitude": 0.0015676754420070826,
+        "nonzero_singular_min": 0.8701478538302448,
+        "residual": 6.938893903907228e-18
+      },
+      {
+        "L": 4,
+        "m0": -0.8,
+        "n_pi": 1,
+        "multiplicity": 3,
+        "chirality_relative": -1,
+        "prob_target_wall": 0.0070103856901090915,
+        "prob_mirror_wall": 0.794836856547543,
+        "rotor_coupling_amplitude": 1.961379714815596,
+        "nonzero_singular_min": 1.651886849266375,
+        "residual": 1.1102230246251565e-16
+      },
+      {
+        "L": 4,
+        "m0": -0.8,
+        "n_pi": 2,
+        "multiplicity": 3,
+        "chirality_relative": 1,
+        "prob_target_wall": 0.00017185551914577162,
+        "prob_mirror_wall": 0.9433203999727404,
+        "rotor_coupling_amplitude": 4.079236675594975,
+        "nonzero_singular_min": 3.56374845324877,
+        "residual": 1.1102230246251565e-16
+      },
+      {
+        "L": 4,
+        "m0": -0.8,
+        "n_pi": 3,
+        "multiplicity": 1,
+        "chirality_relative": -1,
+        "prob_target_wall": 0.00001714756757457459,
+        "prob_mirror_wall": 0.9739858779283965,
+        "rotor_coupling_amplitude": 6.11882481752563,
+        "nonzero_singular_min": 5.5382195616720375,
+        "residual": 2.7755575615628914e-17
+      },
+      {
+        "L": 8,
+        "m0": -1,
+        "n_pi": 0,
+        "multiplicity": 1,
+        "chirality_relative": 1,
+        "prob_target_wall": 1,
+        "prob_mirror_wall": 0,
+        "rotor_coupling_amplitude": 0,
+        "nonzero_singular_min": 1,
+        "residual": 0
+      },
+      {
+        "L": 8,
+        "m0": -1,
+        "n_pi": 1,
+        "multiplicity": 3,
+        "chirality_relative": -1,
+        "prob_target_wall": 0.00004577706569008927,
+        "prob_mirror_wall": 0.7500114442664226,
+        "rotor_coupling_amplitude": 1.7320640222190664,
+        "nonzero_singular_min": 1.1421391640053558,
+        "residual": 0
+      },
+      {
+        "L": 8,
+        "m0": -1,
+        "n_pi": 2,
+        "multiplicity": 3,
+        "chirality_relative": 1,
+        "prob_target_wall": 3.492459655621196e-9,
+        "prob_mirror_wall": 0.9375000002182787,
+        "rotor_coupling_amplitude": 3.8729833466582915,
+        "nonzero_singular_min": 3.099832856769814,
+        "residual": 0
+      },
+      {
+        "L": 8,
+        "m0": -1,
+        "n_pi": 3,
+        "multiplicity": 1,
+        "chirality_relative": -1,
+        "prob_target_wall": 1.2406464529265523e-11,
+        "prob_mirror_wall": 0.972222222222567,
+        "rotor_coupling_amplitude": 5.916079783100665,
+        "nonzero_singular_min": 5.090525081940424,
+        "residual": 1.1102230246251565e-16
+      },
+      {
+        "L": 8,
+        "m0": -0.8,
+        "n_pi": 0,
+        "multiplicity": 1,
+        "chirality_relative": 1,
+        "prob_target_wall": 0.9600000000062915,
+        "prob_mirror_wall": 1.572864000010303e-10,
+        "rotor_coupling_amplitude": 0.000002508277496618189,
+        "nonzero_singular_min": 0.8188090051993111,
+        "residual": 2.168404344971009e-19
+      },
+      {
+        "L": 8,
+        "m0": -0.8,
+        "n_pi": 1,
+        "multiplicity": 3,
+        "chirality_relative": -1,
+        "prob_target_wall": 0.000012751749520666478,
+        "prob_mirror_wall": 0.7933910644110579,
+        "rotor_coupling_amplitude": 1.9595950478988053,
+        "nonzero_singular_min": 1.3322650100300386,
+        "residual": 6.938893903907228e-18
+      },
+      {
+        "L": 8,
+        "m0": -0.8,
+        "n_pi": 2,
+        "multiplicity": 3,
+        "chirality_relative": 1,
+        "prob_target_wall": 1.7748623450170226e-9,
+        "prob_mirror_wall": 0.9433106576969875,
+        "rotor_coupling_amplitude": 4.079215611091778,
+        "nonzero_singular_min": 3.298395356367273,
+        "residual": 1.734723475976807e-18
+      },
+      {
+        "L": 8,
+        "m0": -0.8,
+        "n_pi": 3,
+        "multiplicity": 1,
+        "chirality_relative": -1,
+        "prob_target_wall": 7.853600544452728e-12,
+        "prob_mirror_wall": 0.9739854318420358,
+        "rotor_coupling_amplitude": 6.118823416311984,
+        "nonzero_singular_min": 5.28998051006429,
+        "residual": 1.1102230246251565e-16
+      },
+      {
+        "L": 16,
+        "m0": -1,
+        "n_pi": 0,
+        "multiplicity": 1,
+        "chirality_relative": 1,
+        "prob_target_wall": 1,
+        "prob_mirror_wall": 0,
+        "rotor_coupling_amplitude": 0,
+        "nonzero_singular_min": 1,
+        "residual": 0
+      },
+      {
+        "L": 16,
+        "m0": -1,
+        "n_pi": 1,
+        "multiplicity": 3,
+        "chirality_relative": -1,
+        "prob_target_wall": 6.98491931124239e-10,
+        "prob_mirror_wall": 0.7500000001746228,
+        "rotor_coupling_amplitude": 1.7320508077705143,
+        "nonzero_singular_min": 1.037718111235936,
+        "residual": 0
+      },
+      {
+        "L": 16,
+        "m0": -1,
+        "n_pi": 2,
+        "multiplicity": 3,
+        "chirality_relative": 1,
+        "prob_target_wall": 8.131516293641286e-19,
+        "prob_mirror_wall": 0.9375000000000003,
+        "rotor_coupling_amplitude": 3.8729833462074175,
+        "nonzero_singular_min": 3.025511156279903,
+        "residual": 0
+      },
+      {
+        "L": 16,
+        "m0": -1,
+        "n_pi": 3,
+        "multiplicity": 1,
+        "chirality_relative": -1,
+        "prob_target_wall": 4.397724631880413e-24,
+        "prob_mirror_wall": 0.9722222222222222,
+        "rotor_coupling_amplitude": 5.916079783099616,
+        "nonzero_singular_min": 5.023004741702046,
+        "residual": 3.469446951953614e-18
+      },
+      {
+        "L": 16,
+        "m0": -0.8,
+        "n_pi": 0,
+        "multiplicity": 1,
+        "chirality_relative": 1,
+        "prob_target_wall": 0.96,
+        "prob_mirror_wall": 1.0307921510399932e-21,
+        "rotor_coupling_amplitude": 6.421190391321512e-12,
+        "nonzero_singular_min": 0.8047893437656266,
+        "residual": 6.938893903907228e-18
+      },
+      {
+        "L": 16,
+        "m0": -0.8,
+        "n_pi": 1,
+        "multiplicity": 3,
+        "chirality_relative": -1,
+        "prob_target_wall": 4.234532184477674e-11,
+        "prob_mirror_wall": 0.7933884297608154,
+        "rotor_coupling_amplitude": 1.9595917942373475,
+        "nonzero_singular_min": 1.2347245709978345,
+        "residual": 1.1102230246251565e-16
+      },
+      {
+        "L": 16,
+        "m0": -0.8,
+        "n_pi": 2,
+        "multiplicity": 3,
+        "chirality_relative": 1,
+        "prob_target_wall": 1.8931107831053625e-19,
+        "prob_mirror_wall": 0.9433106575963719,
+        "rotor_coupling_amplitude": 4.079215610874228,
+        "nonzero_singular_min": 3.2251207178356696,
+        "residual": 2.7755575615628914e-17
+      },
+      {
+        "L": 16,
+        "m0": -0.8,
+        "n_pi": 3,
+        "multiplicity": 1,
+        "chirality_relative": -1,
+        "prob_target_wall": 1.6474102967895907e-24,
+        "prob_mirror_wall": 0.9739854318418313,
+        "rotor_coupling_amplitude": 6.118823416311342,
+        "nonzero_singular_min": 5.222859611649536,
+        "residual": 1.1102230246251565e-16
+      },
+      {
+        "L": 32,
+        "m0": -1,
+        "n_pi": 0,
+        "multiplicity": 1,
+        "chirality_relative": 1,
+        "prob_target_wall": 1,
+        "prob_mirror_wall": 0,
+        "rotor_coupling_amplitude": 0,
+        "nonzero_singular_min": 1,
+        "residual": 0
+      },
+      {
+        "L": 32,
+        "m0": -1,
+        "n_pi": 1,
+        "multiplicity": 3,
+        "chirality_relative": -1,
+        "prob_target_wall": 1.626303258728257e-19,
+        "prob_mirror_wall": 0.7500000000000001,
+        "rotor_coupling_amplitude": 1.7320508075688774,
+        "nonzero_singular_min": 1.0095846142405362,
+        "residual": 0
+      },
+      {
+        "L": 32,
+        "m0": -1,
+        "n_pi": 2,
+        "multiplicity": 3,
+        "chirality_relative": 1,
+        "prob_target_wall": 4.4081038155835797e-38,
+        "prob_mirror_wall": 0.9375000000000003,
+        "rotor_coupling_amplitude": 3.8729833462074175,
+        "nonzero_singular_min": 3.0064135089209576,
+        "residual": 0
+      },
+      {
+        "L": 32,
+        "m0": -1,
+        "n_pi": 3,
+        "multiplicity": 1,
+        "chirality_relative": -1,
+        "prob_target_wall": 5.525709125099349e-49,
+        "prob_mirror_wall": 0.9722222222222222,
+        "rotor_coupling_amplitude": 5.916079783099616,
+        "nonzero_singular_min": 5.00577499293902,
+        "residual": 3.469446951953614e-18
+      },
+      {
+        "L": 32,
+        "m0": -0.8,
+        "n_pi": 0,
+        "multiplicity": 1,
+        "chirality_relative": 1,
+        "prob_target_wall": 0.96,
+        "prob_mirror_wall": 4.4272185776902303e-44,
+        "rotor_coupling_amplitude": 4.20819133485645e-23,
+        "nonzero_singular_min": 0.8012029139557103,
+        "residual": 6.938893903907228e-18
+      },
+      {
+        "L": 32,
+        "m0": -0.8,
+        "n_pi": 1,
+        "multiplicity": 3,
+        "chirality_relative": -1,
+        "prob_target_wall": 4.669599692964007e-22,
+        "prob_mirror_wall": 0.7933884297520662,
+        "rotor_coupling_amplitude": 1.9595917942265428,
+        "nonzero_singular_min": 1.2087957654799812,
+        "residual": 2.7755575615628914e-17
+      },
+      {
+        "L": 32,
+        "m0": -0.8,
+        "n_pi": 2,
+        "multiplicity": 3,
+        "chirality_relative": 1,
+        "prob_target_wall": 2.1537670896092537e-39,
+        "prob_mirror_wall": 0.9433106575963719,
+        "rotor_coupling_amplitude": 4.079215610874228,
+        "nonzero_singular_min": 3.2063138174473105,
+        "residual": 2.7755575615628914e-17
+      },
+      {
+        "L": 32,
+        "m0": -0.8,
+        "n_pi": 3,
+        "multiplicity": 1,
+        "chirality_relative": -1,
+        "prob_target_wall": 7.248826618505256e-50,
+        "prob_mirror_wall": 0.9739854318418313,
+        "rotor_coupling_amplitude": 6.118823416311342,
+        "nonzero_singular_min": 5.205738121464118,
+        "residual": 1.1102230246251565e-16
+      }
+    ],
+    "nodes": 8,
+    "net_chirality": 0,
+    "scope": "Full-rotor atomic strong-coupling projection on one chiral wall orbital of Wilson slab; exact free complement, no finite-g many-body pole proof."
+  },
+  "calculus": {
+    "rows": [
+      {
+        "N": 3,
+        "offdiagonal_units": 6,
+        "Lie_dimension": 8,
+        "rounds": 0,
+        "commutator_Leibniz_residual": 0,
+        "scalar_physical_phase_dimension": 0
+      },
+      {
+        "N": 4,
+        "offdiagonal_units": 12,
+        "Lie_dimension": 15,
+        "rounds": 1,
+        "commutator_Leibniz_residual": 0,
+        "scalar_physical_phase_dimension": 0
+      },
+      {
+        "N": 5,
+        "offdiagonal_units": 20,
+        "Lie_dimension": 24,
+        "rounds": 1,
+        "commutator_Leibniz_residual": 0,
+        "scalar_physical_phase_dimension": 0
+      },
+      {
+        "N": 7,
+        "offdiagonal_units": 42,
+        "Lie_dimension": 48,
+        "rounds": 2,
+        "commutator_Leibniz_residual": 0,
+        "scalar_physical_phase_dimension": 0
+      },
+      {
+        "N": 9,
+        "offdiagonal_units": 72,
+        "Lie_dimension": 80,
+        "rounds": 2,
+        "commutator_Leibniz_residual": 0,
+        "scalar_physical_phase_dimension": 0
+      },
+      {
+        "N": 12,
+        "offdiagonal_units": 132,
+        "Lie_dimension": 143,
+        "rounds": 3,
+        "commutator_Leibniz_residual": 0,
+        "scalar_physical_phase_dimension": 0
+      }
+    ],
+    "assoc": [
+      {
+        "K": 1,
+        "left": null,
+        "right": 1,
+        "truncated_vector_bracket_Jacobi_coefficient": 0
+      },
+      {
+        "K": 2,
+        "left": null,
+        "right": 2,
+        "truncated_vector_bracket_Jacobi_coefficient": -5
+      },
+      {
+        "K": 4,
+        "left": null,
+        "right": 4,
+        "truncated_vector_bracket_Jacobi_coefficient": -27
+      },
+      {
+        "K": 8,
+        "left": null,
+        "right": 8,
+        "truncated_vector_bracket_Jacobi_coefficient": -119
+      },
+      {
+        "K": 16,
+        "left": null,
+        "right": 16,
+        "truncated_vector_bracket_Jacobi_coefficient": -495
+      }
+    ],
+    "scope": "Exact inner derivations in matrix algebra; unrestricted closure overgauges scalar; projected Fourier product nonassociative and truncated vector bracket Jacobi failure."
+  },
+  "twist": {
+    "rows": [
+      {
+        "spin": 0,
+        "grid_max": 58.5,
+        "maximizer": 0.3333333333333333,
+        "upper": 58.550625000000004,
+        "upper_num": "1864866447360000000000000",
+        "upper_den": "31850496000000000000000"
+      },
+      {
+        "spin": 0.5,
+        "grid_max": 30.375,
+        "maximizer": 0,
+        "upper": 30.425625000000004,
+        "upper_num": "969071247360000000000000",
+        "upper_den": "31850496000000000000000"
+      }
+    ],
+    "neutral_complete_sets": 46,
+    "neutral_extra_trivial_twist": 7,
+    "total_neutral_Dirac": 375,
+    "previous": 5848,
+    "ratio": 0.06412448700410396,
+    "suppression": [
+      60,
+      33.75
+    ],
+    "minimum_margin": 0.4493749999999963,
+    "exact_identity_checks": 24001,
+    "scope": "Free massless all-shape bound via existing E6 multiplet twists and asymmetric neutral twist population, no physical derivation of backgrounds."
+  }
+}
