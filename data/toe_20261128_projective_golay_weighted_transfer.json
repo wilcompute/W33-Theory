@@ -1,0 +1,105 @@
+{
+  "singles": {
+    "tested": 337628,
+    "accepted": 24104,
+    "malignant": 0,
+    "weighted_accepted": 140516
+  },
+  "locations": 13195,
+  "parity_readout_weight": 9,
+  "accepted_single_location_equivalent": 1756.45,
+  "accepted_pair_location_equivalent": 1141470.0471875,
+  "distinct_location_pairs": 87047415,
+  "malignant_readout_triples": 1458,
+  "probabilities": [
+    {
+      "p": 1e-7,
+      "acceptance_lower": 0.9988567948986065,
+      "acceptance_upper": 0.9988567952810334,
+      "conditional_failure_lower": 1.8221804683323234e-19,
+      "conditional_failure_upper": 3.828646600437286e-10,
+      "accepted_0_1_2": [
+        0.9986813700921643,
+        0.00017541340679117886,
+        1.139965098637388e-8
+      ],
+      "unclassified_tail": 3.8242696735764106e-10
+    },
+    {
+      "p": 0.000001,
+      "acceptance_lower": 0.9886262199777508,
+      "acceptance_upper": 0.9886265990156996,
+      "conditional_failure_lower": 1.8193071668076287e-16,
+      "conditional_failure_upper": 3.833984936348167e-7,
+      "accepted_0_1_2": [
+        0.9868916658682794,
+        0.0017334275999419393,
+        0.0000011265095294255477
+      ],
+      "unclassified_tail": 3.790379488299312e-7
+    },
+    {
+      "p": 0.00001,
+      "acceptance_lower": 0.8918776784928995,
+      "acceptance_upper": 0.8922245364577961,
+      "conditional_failure_lower": 1.7901975571570036e-13,
+      "conditional_failure_upper": 0.00038875636201808074,
+      "accepted_0_1_2": [
+        0.8763842350265536,
+        0.015393404830172201,
+        0.00010003863617373375
+      ],
+      "unclassified_tail": 0.00034685796489660126
+    },
+    {
+      "p": 0.00005,
+      "acceptance_lower": 0.5638515009527586,
+      "acceptance_upper": 0.5932761596240003,
+      "conditional_failure_lower": 1.9854220969958188e-11,
+      "conditional_failure_upper": 0.049596900522498766,
+      "accepted_0_1_2": [
+        0.5169720363162238,
+        0.04540404686172466,
+        0.0014754177748101816
+      ],
+      "unclassified_tail": 0.02942465867124164
+    },
+    {
+      "p": 0.0001,
+      "acceptance_lower": 0.31724851656533015,
+      "acceptance_upper": 0.46464207439364447,
+      "conditional_failure_lower": 1.0485739757744834e-10,
+      "conditional_failure_upper": 0.31721956738563145,
+      "accepted_0_1_2": [
+        0.26725126935458415,
+        0.046946043810166954,
+        0.0030512034005790467
+      ],
+      "unclassified_tail": 0.1473935578283143
+    },
+    {
+      "p": 0.001,
+      "acceptance_lower": 0.000007209422366544966,
+      "acceptance_upper": 0.9998198034273167,
+      "conditional_failure_lower": 3.378053158840187e-13,
+      "conditional_failure_upper": 0.9999927892782862,
+      "accepted_0_1_2": [
+        0.0000018476390896344564,
+        0.0000032485342132016428,
+        0.0000021132490637088664
+      ],
+      "unclassified_tail": 0.9998125940049502
+    }
+  ],
+  "measurement_signature_classes": 40635,
+  "distinct_location_pair_labels": 56985282036,
+  "measurement_pass_pairs": 296774262,
+  "accepted_pairs": 247387406,
+  "malignant_pairs": 0,
+  "witness": null,
+  "decoder": {
+    "source_radius": 1,
+    "target_component_radius": 2
+  },
+  "scope": "Independent identical location error probability p; conditional uniform nonidentity Pauli/readout labels per location (8,80,2). Integer weight scale80 per label, 6400 per pair. All zero/one/two-fault accepted branches correct; lower acceptance sum exact through weight2, remaining weight>=3 bounded by positive binomial tail. Explicit triple of same-signed parity cat MX readout flips changes common parity, accepted with no other errors, gives cubic lower bound. Conditional failure upper tail/(base+tail) and lower witness/(base+tail). Clean inputs, ideal terminal decoder, no physical loss, no recovery faults; transfer only, not full factory."
+}
