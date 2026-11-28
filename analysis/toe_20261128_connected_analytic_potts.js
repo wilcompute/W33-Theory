@@ -1,0 +1,10 @@
+function connectedModel(){
+const A=(v,s)=>{if(!v)throw Error(s)},rows=[];
+let lo=0,hi=2;for(let k=0;k<80;k++){let x=(lo+hi)/2;if(Math.exp(x)-1-x<1)lo=x;else hi=x}let radius=(lo+hi)/4;
+const fac=[1n];for(let i=1;i<=36;i++)fac.push(fac[i-1]*BigInt(i));let moments=[1n],c=[0n];
+for(let n=1;n<=36;n++){let mn=2n**BigInt(n)+2n*(-1n)**BigInt(n);moments.push(mn);let cn=mn*120n**BigInt(n-1);for(let k=1;k<n;k++)cn-=fac[n-1]/(fac[k-1]*fac[n-k])*c[k]*moments[n-k]*120n**BigInt(n-k-1);c.push(cn)}
+A(c[1]===0n&&c[2]===720n&&c[3]===86400n,"scalar cumulants");
+let a=-1,b=0;for(let i=0;i<80;i++){let y=(a+b)/2;if(y*y*y+117*y+2>0)b=y;else a=y}let y=(a+b)/2,re=-y/2,abs=Math.sqrt(-2/y),im=Math.sqrt(abs*abs-re*re),rho=Math.hypot(Math.log(abs),Math.atan2(im,re)),rhoNeg=Math.hypot(Math.log(-y),Math.PI);
+for(let t of [0,1,2,3]){let same=1+t*t/180,diff=1-t*t/360,J=Math.log(same/diff),influence=(same-diff)/(same+diff);rows.push({t,same,diff,J,influence,degree6:6*influence,degree12:12*influence})}
+return {operator_log_scaled_radius_lower:radius,scalar_limit_zero:{negative_root:y,complex_roots:[re,im],nearest_log_zero_radius:Math.min(rho,rhoNeg),negative_branch_radius:rhoNeg},scalar_cumulants:c.slice(1).map((v,i)=>({n:i+1,numerator:v.toString(),denominator:(120n**BigInt(i+1)).toString()})),pair_model:rows,scope:"K_r=E_a tensor_i(I+z_i X_a), norm X<=2/3, linear term zero, log converges whenever exp(S)-1-S<1 with S=(2/3)sum |z_i|; scaled z_i=3x/r gives radius above. Conditional expectation onto one Weyl direction before log gives scalar uniform eigenconfiguration F_r=(117+(1+2x/r)^r+2(1-x/r)^r)/120, limit F=(117+exp(2x)+2exp(-x))/120. Its cumulants and nearest zeros are scalar, not full operator spectrum. Applying the dephased two-site weight independently on graph edges yields ferromagnetic 3-state Potts, with Dobrushin influence <=tanh(J/2); at t in [0,3] (positive original factors), max degree12 satisfies contraction 4/9, no spontaneous symmetry breaking in this supplied pair model. Shared global tick alone permutation invariant, cannot distinguish spatial graphs. No physical RG or native dimension selection."}}
+console.log(JSON.stringify(connectedModel(),null,2));
