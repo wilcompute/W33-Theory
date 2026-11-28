@@ -1,0 +1,84 @@
+{
+  "sourceCover": {
+    "cost": 68,
+    "rows": [
+      [
+        1,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        0,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "targetCover": {
+    "cost": 68,
+    "rows": [
+      [
+        0,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        0,
+        2
+      ]
+    ]
+  },
+  "singles": {
+    "tested": 183524,
+    "accepted": 19040,
+    "malignant": 0
+  },
+  "locations": 6811,
+  "measurement_signature_classes": 19871,
+  "distinct_location_pair_labels": 16834398348,
+  "measurement_pass_pairs": 185249586,
+  "accepted_pairs": 135923754,
+  "malignant_pairs": 0,
+  "witness": null,
+  "decoder": {
+    "source_radius": 1,
+    "target_component_radius": 2
+  },
+  "scope": "Compact interleaved source/target Z checks covering logical parity support, chosen by minimum-cost set cover over up-to-three basis row combinations. This schedule is tested by full pair audit, not assumed sufficient. Exact additive Clifford fault signatures; aggregate by all flag and repeated-parity/CSS measurement outcomes plus terminal syndrome and logical phases. Count complementary signatures, subtract same-location ordered products then divide by2. Source radius1 destructive decoder, target ideal component radius2 Golay recovery. Clean encoded inputs, no loss, no recovery or feedback noise; not composed factory or full noisy instruction. Distinct faults may lie in same gadget at different locations."
+}
