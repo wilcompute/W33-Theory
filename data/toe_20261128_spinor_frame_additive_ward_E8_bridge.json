@@ -1,0 +1,609 @@
+{
+  "status": "PASS",
+  "spin": {
+    "group_products": 576,
+    "block_checks": 1600,
+    "adjacency": {
+      "3": 60,
+      "-9": 20
+    },
+    "laplacian": {
+      "24": 60,
+      "36": 20
+    },
+    "quaternionic_frame": {
+      "lines": 40,
+      "dimension": 10,
+      "nonzero_overlap": 0.3333333333333333,
+      "frame_bound": 4
+    },
+    "cover": {
+      "vertices": 960,
+      "edges": 12960,
+      "cycle_rank": 12001,
+      "connected": true,
+      "central_minus_shortest": 4,
+      "central_path": [
+        [
+          0,
+          [
+            1,
+            0,
+            0,
+            1
+          ]
+        ],
+        [
+          1,
+          [
+            1,
+            0,
+            0,
+            1
+          ]
+        ],
+        [
+          5,
+          [
+            2,
+            0,
+            0,
+            2
+          ]
+        ],
+        [
+          15,
+          [
+            0,
+            1,
+            2,
+            0
+          ]
+        ],
+        [
+          0,
+          [
+            2,
+            0,
+            0,
+            2
+          ]
+        ]
+      ],
+      "closed_walks": [
+        {
+          "length": 1,
+          "central_minus": 0,
+          "central_plus": 0
+        },
+        {
+          "length": 2,
+          "central_minus": 0,
+          "central_plus": 27
+        },
+        {
+          "length": 3,
+          "central_minus": 0,
+          "central_plus": 54
+        },
+        {
+          "length": 4,
+          "central_minus": 648,
+          "central_plus": 2349
+        },
+        {
+          "length": 5,
+          "central_minus": 12960,
+          "central_plus": 17820
+        },
+        {
+          "length": 6,
+          "central_minus": 412776,
+          "central_plus": 546183
+        }
+      ],
+      "voltage_gap_upper": [
+        {
+          "L": 8,
+          "upper": 0.0006101942058613592
+        },
+        {
+          "L": 16,
+          "upper": 0.00015858430726815262
+        },
+        {
+          "L": 32,
+          "upper": 0.00004003066582660327
+        },
+        {
+          "L": 64,
+          "upper": 0.000010031819432923066
+        },
+        {
+          "L": 128,
+          "upper": 0.000002509466239224156
+        }
+      ]
+    }
+  },
+  "mirror": {
+    "rows": [
+      {
+        "L": 4,
+        "alpha": -1,
+        "k": 1.6436024989080074,
+        "helicity": 1,
+        "residual": 0
+      },
+      {
+        "L": 4,
+        "alpha": -0.5,
+        "k": 1.8765848994879573,
+        "helicity": 1,
+        "residual": 5.551115123125783e-17
+      },
+      {
+        "L": 4,
+        "alpha": -0.1,
+        "k": 2.3383788438891058,
+        "helicity": 1,
+        "residual": 6.938893903907228e-18
+      },
+      {
+        "L": 4,
+        "alpha": 0,
+        "k": 3.141592653589793,
+        "helicity": "both at corner"
+      },
+      {
+        "L": 4,
+        "alpha": 0.1,
+        "k": 2.3383788438891058,
+        "helicity": -1,
+        "residual": 6.938893903907228e-18
+      },
+      {
+        "L": 4,
+        "alpha": 0.5,
+        "k": 1.8765848994879573,
+        "helicity": -1,
+        "residual": 5.551115123125783e-17
+      },
+      {
+        "L": 4,
+        "alpha": 1,
+        "k": 1.6436024989080074,
+        "helicity": -1,
+        "residual": 0
+      },
+      {
+        "L": 8,
+        "alpha": -1,
+        "k": 1.643868820112231,
+        "helicity": 1,
+        "residual": 2.220446049250313e-16
+      },
+      {
+        "L": 8,
+        "alpha": -0.5,
+        "k": 1.8770238504913648,
+        "helicity": 1,
+        "residual": 1.1102230246251565e-16
+      },
+      {
+        "L": 8,
+        "alpha": -0.1,
+        "k": 2.3390230335310926,
+        "helicity": 1,
+        "residual": 6.938893903907228e-17
+      },
+      {
+        "L": 8,
+        "alpha": 0,
+        "k": 3.141592653589793,
+        "helicity": "both at corner"
+      },
+      {
+        "L": 8,
+        "alpha": 0.1,
+        "k": 2.3390230335310926,
+        "helicity": -1,
+        "residual": 6.938893903907228e-17
+      },
+      {
+        "L": 8,
+        "alpha": 0.5,
+        "k": 1.8770238504913648,
+        "helicity": -1,
+        "residual": 1.1102230246251565e-16
+      },
+      {
+        "L": 8,
+        "alpha": 1,
+        "k": 1.643868820112231,
+        "helicity": -1,
+        "residual": 2.220446049250313e-16
+      },
+      {
+        "L": 16,
+        "alpha": -1,
+        "k": 1.6438689750079947,
+        "helicity": 1,
+        "residual": 0
+      },
+      {
+        "L": 16,
+        "alpha": -0.5,
+        "k": 1.8770243374457194,
+        "helicity": 1,
+        "residual": 1.3877787807814457e-16
+      },
+      {
+        "L": 16,
+        "alpha": -0.1,
+        "k": 2.3390246279195965,
+        "helicity": 1,
+        "residual": 4.163336342344337e-17
+      },
+      {
+        "L": 16,
+        "alpha": 0,
+        "k": 3.141592653589793,
+        "helicity": "both at corner"
+      },
+      {
+        "L": 16,
+        "alpha": 0.1,
+        "k": 2.3390246279195965,
+        "helicity": -1,
+        "residual": 4.163336342344337e-17
+      },
+      {
+        "L": 16,
+        "alpha": 0.5,
+        "k": 1.8770243374457194,
+        "helicity": -1,
+        "residual": 1.3877787807814457e-16
+      },
+      {
+        "L": 16,
+        "alpha": 1,
+        "k": 1.6438689750079947,
+        "helicity": -1,
+        "residual": 0
+      },
+      {
+        "L": 32,
+        "alpha": -1,
+        "k": 1.643868975008047,
+        "helicity": 1,
+        "residual": 5.551115123125783e-17
+      },
+      {
+        "L": 32,
+        "alpha": -0.5,
+        "k": 1.8770243374463171,
+        "helicity": 1,
+        "residual": 2.7755575615628914e-17
+      },
+      {
+        "L": 32,
+        "alpha": -0.1,
+        "k": 2.339024627929331,
+        "helicity": 1,
+        "residual": 5.551115123125783e-17
+      },
+      {
+        "L": 32,
+        "alpha": 0,
+        "k": 3.141592653589793,
+        "helicity": "both at corner"
+      },
+      {
+        "L": 32,
+        "alpha": 0.1,
+        "k": 2.339024627929331,
+        "helicity": -1,
+        "residual": 5.551115123125783e-17
+      },
+      {
+        "L": 32,
+        "alpha": 0.5,
+        "k": 1.8770243374463171,
+        "helicity": -1,
+        "residual": 2.7755575615628914e-17
+      },
+      {
+        "L": 32,
+        "alpha": 1,
+        "k": 1.643868975008047,
+        "helicity": -1,
+        "residual": 5.551115123125783e-17
+      }
+    ],
+    "active_auxiliary_spectrum": [
+      -2,
+      2
+    ],
+    "scope": "Balanced spin-independent auxiliary inverse expectation alpha/2; at least one crossing or corner zero in atomic projection."
+  },
+  "higgs": {
+    "null_points": 130,
+    "rank2_superspaces": 121,
+    "rank1_to_complement_norm_bound": 0.07361407146689156,
+    "rank0_removal_weight": 0.3333333333333333,
+    "coset_density_numerator": [
+      [
+        3,
+        0,
+        0
+      ],
+      [
+        0,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        3
+      ]
+    ],
+    "coset_density_denominator": 9,
+    "results": [
+      {
+        "norm": 1,
+        "hist": {
+          "10": 36,
+          "13": 40,
+          "16": 45
+        },
+        "second_order_per_vertex_over_h_squared": 0.000020313581194664397
+      },
+      {
+        "norm": 2,
+        "hist": {
+          "10": 36,
+          "13": 40,
+          "16": 45
+        },
+        "second_order_per_vertex_over_h_squared": 0.000020313581194664397
+      }
+    ],
+    "rows": [
+      {
+        "h": 0.1,
+        "defect_density_upper": 0.000002736539082405059,
+        "misaligned_bonds_per_vertex_upper": 0.0000020295998194504186
+      },
+      {
+        "h": 0.5,
+        "defect_density_upper": 0.00007500389644197394,
+        "misaligned_bonds_per_vertex_upper": 0.000053127759979731545
+      },
+      {
+        "h": 1,
+        "defect_density_upper": 0.0003386894698707886,
+        "misaligned_bonds_per_vertex_upper": 0.00022579297991385906
+      },
+      {
+        "h": 2,
+        "defect_density_upper": 0.0017694796793249364,
+        "misaligned_bonds_per_vertex_upper": 0.0010321964796062128
+      },
+      {
+        "h": 3,
+        "defect_density_upper": 0.005419031517932617,
+        "misaligned_bonds_per_vertex_upper": 0.002709515758966309
+      },
+      {
+        "h": 5,
+        "defect_density_upper": 0.03386894698707887,
+        "misaligned_bonds_per_vertex_upper": 0.011289648995692953
+      },
+      {
+        "h": 8,
+        "defect_density_upper": 1,
+        "misaligned_bonds_per_vertex_upper": 0.11560600571589584
+      }
+    ],
+    "scope": "Additive perturbation, variational bounds valid any finite volume, perturbative coefficient for fixed volume, no uniform gap proof."
+  },
+  "ward": {
+    "linear_ward_checks": 4374,
+    "nonuniform_gradient_checks": 1458,
+    "nonuniform_gradient_residual": 2.220446049250313e-16,
+    "curvature": [
+      [
+        -0.25,
+        0.5,
+        -0.25,
+        0,
+        0,
+        0
+      ],
+      [
+        -0.5,
+        0.25,
+        0,
+        0,
+        0,
+        0.25
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "curvature_symmetric_part": [
+      [
+        -0.5,
+        0,
+        -0.25,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0.5,
+        0,
+        0,
+        0,
+        0.25
+      ],
+      [
+        -0.25,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0.25,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "max_integrability_defect": 0.5,
+    "scope": "Local nearest-neighbor inverse kinetic metric repairs first order. Exact gradient connection is curved, cannot extend kinetic K(0)=I with fixed generators."
+  },
+  "e8": {
+    "types": [
+      {
+        "rank": 0,
+        "count": 1,
+        "fixed_roots": {
+          "240": 1
+        },
+        "adjoint_trivial": 248,
+        "adjoint_each_nontrivial": null,
+        "periodic_suppression_for_d_equals_r": null,
+        "antiperiodic_suppression_for_d_equals_r": null
+      },
+      {
+        "rank": 1,
+        "count": 135,
+        "fixed_roots": {
+          "112": 135
+        },
+        "adjoint_trivial": 120,
+        "adjoint_each_nontrivial": 128,
+        "periodic_suppression_for_d_equals_r": 56,
+        "antiperiodic_suppression_for_d_equals_r": 68
+      },
+      {
+        "rank": 2,
+        "count": 1575,
+        "fixed_roots": {
+          "48": 1575
+        },
+        "adjoint_trivial": 56,
+        "adjoint_each_nontrivial": 64,
+        "periodic_suppression_for_d_equals_r": 24,
+        "antiperiodic_suppression_for_d_equals_r": 38
+      },
+      {
+        "rank": 3,
+        "count": 2025,
+        "fixed_roots": {
+          "16": 2025
+        },
+        "adjoint_trivial": 24,
+        "adjoint_each_nontrivial": 32,
+        "periodic_suppression_for_d_equals_r": 8,
+        "antiperiodic_suppression_for_d_equals_r": 23
+      },
+      {
+        "rank": 4,
+        "count": 270,
+        "fixed_roots": {
+          "0": 270
+        },
+        "adjoint_trivial": 8,
+        "adjoint_each_nontrivial": 16,
+        "periodic_suppression_for_d_equals_r": 0,
+        "antiperiodic_suppression_for_d_equals_r": 15.5
+      }
+    ],
+    "rank3_extensions": {
+      "2": 2025
+    },
+    "dual_polar": {
+      "vertices": 270,
+      "edges": 2025,
+      "families": [
+        135,
+        135
+      ],
+      "intersection_array": {
+        "0": "15,0",
+        "1": "14,1",
+        "2": "12,3",
+        "3": "8,7",
+        "4": "0,15"
+      },
+      "spectrum": {
+        "0": 168,
+        "6": 50,
+        "15": 1,
+        "-6": 50,
+        "-15": 1
+      }
+    },
+    "periodic_adjoint_only_no_go": {
+      "fermion_log_hessian": 720,
+      "boson_log_hessian": -720,
+      "rank3_fermion_suppression": 8,
+      "rank3_boson_suppression": -8
+    }
+  }
+}
