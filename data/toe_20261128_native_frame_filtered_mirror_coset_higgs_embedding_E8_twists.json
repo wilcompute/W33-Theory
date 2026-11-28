@@ -1,0 +1,605 @@
+{
+  "status": "PASS",
+  "native": {
+    "points": 40,
+    "local_stabilizer": 648,
+    "local_permutation_group": 216,
+    "pair_orbits": [
+      {
+        "size": 12,
+        "diagonal": true,
+        "commuting": true
+      },
+      {
+        "size": 24,
+        "diagonal": false,
+        "commuting": true
+      },
+      {
+        "size": 108,
+        "diagonal": false,
+        "commuting": false
+      }
+    ],
+    "line_action_order": 12,
+    "edge_stabilizer": 54,
+    "edge_joint_action_order": 9,
+    "edge_joint_permutations": [
+      "0,1,2,3;0,1,2,3",
+      "0,2,3,1;0,1,2,3",
+      "0,3,1,2;0,1,2,3",
+      "0,1,2,3;0,2,3,1",
+      "0,2,3,1;0,2,3,1",
+      "0,3,1,2;0,2,3,1",
+      "0,1,2,3;0,3,1,2",
+      "0,2,3,1;0,3,1,2",
+      "0,3,1,2;0,3,1,2"
+    ],
+    "left_action": 3,
+    "right_action": 3,
+    "max_equivariant_frame_map_rank": 1,
+    "local_gram_eigenspaces": [
+      {
+        "multiplicity": 1,
+        "eigenvalue": "a+2b+9c"
+      },
+      {
+        "multiplicity": 3,
+        "eigenvalue": "a+2b-3c"
+      },
+      {
+        "multiplicity": 8,
+        "eigenvalue": "a-b"
+      }
+    ],
+    "fcc_root_dot_values": [
+      -2,
+      -1,
+      0,
+      1,
+      2
+    ],
+    "graph_spectrum": {
+      "2": 24,
+      "12": 1,
+      "-4": 15
+    },
+    "scope": "Native local A3 difference lattice but no faithful neighbor shell or invertible equivariant edge transport; no kernel derivation."
+  },
+  "mirror": {
+    "rows": [
+      {
+        "L": 4,
+        "n_pi": 0,
+        "filter_squared": 1,
+        "free_corner_gap": 0,
+        "lower_bound": 0,
+        "multiplicity": 1
+      },
+      {
+        "L": 4,
+        "n_pi": 1,
+        "filter_squared": 0,
+        "free_corner_gap": 1.255477065298107,
+        "lower_bound": 1,
+        "multiplicity": 3
+      },
+      {
+        "L": 4,
+        "n_pi": 2,
+        "filter_squared": 0,
+        "free_corner_gap": 3.219888500413377,
+        "lower_bound": 3,
+        "multiplicity": 3
+      },
+      {
+        "L": 4,
+        "n_pi": 3,
+        "filter_squared": 0,
+        "free_corner_gap": 5.209559242423556,
+        "lower_bound": 5,
+        "multiplicity": 1
+      },
+      {
+        "L": 8,
+        "n_pi": 0,
+        "filter_squared": 1,
+        "free_corner_gap": 0,
+        "lower_bound": 0,
+        "multiplicity": 1
+      },
+      {
+        "L": 8,
+        "n_pi": 1,
+        "filter_squared": 0,
+        "free_corner_gap": 1.0951235699420203,
+        "lower_bound": 1,
+        "multiplicity": 3
+      },
+      {
+        "L": 8,
+        "n_pi": 2,
+        "filter_squared": 0,
+        "free_corner_gap": 3.07412210663782,
+        "lower_bound": 3,
+        "multiplicity": 3
+      },
+      {
+        "L": 8,
+        "n_pi": 3,
+        "filter_squared": 0,
+        "free_corner_gap": 5.0689075477809835,
+        "lower_bound": 5,
+        "multiplicity": 1
+      },
+      {
+        "L": 16,
+        "n_pi": 0,
+        "filter_squared": 1,
+        "free_corner_gap": 0,
+        "lower_bound": 0,
+        "multiplicity": 1
+      },
+      {
+        "L": 16,
+        "n_pi": 1,
+        "filter_squared": 0,
+        "free_corner_gap": 1.0300329037089178,
+        "lower_bound": 1,
+        "multiplicity": 3
+      },
+      {
+        "L": 16,
+        "n_pi": 2,
+        "filter_squared": 0,
+        "free_corner_gap": 3.0217712218332657,
+        "lower_bound": 3,
+        "multiplicity": 3
+      },
+      {
+        "L": 16,
+        "n_pi": 3,
+        "filter_squared": 0,
+        "free_corner_gap": 5.0199257821914784,
+        "lower_bound": 5,
+        "multiplicity": 1
+      },
+      {
+        "L": 32,
+        "n_pi": 0,
+        "filter_squared": 1,
+        "free_corner_gap": 0,
+        "lower_bound": 0,
+        "multiplicity": 1
+      },
+      {
+        "L": 32,
+        "n_pi": 1,
+        "filter_squared": 0,
+        "free_corner_gap": 1.0084997646568843,
+        "lower_bound": 1,
+        "multiplicity": 3
+      },
+      {
+        "L": 32,
+        "n_pi": 2,
+        "filter_squared": 0,
+        "free_corner_gap": 3.005911943363656,
+        "lower_bound": 3,
+        "multiplicity": 3
+      },
+      {
+        "L": 32,
+        "n_pi": 3,
+        "filter_squared": 0,
+        "free_corner_gap": 5.005365755267275,
+        "lower_bound": 5,
+        "multiplicity": 1
+      }
+    ],
+    "filter": "product_i (1+exp(ik_i))/2",
+    "CAR_self": 0.125,
+    "CAR_axial_neighbor": 0.0625,
+    "normalized_CAR_neighbor": 0.5,
+    "sampled_max_squared_filter": 0.5768553757596342,
+    "power_filters": [
+      {
+        "m": 1,
+        "max_squared_filter_outside_wall_band": 0.5787037037037038,
+        "axial_squared_filter_at_half": 0.9387912809451863
+      },
+      {
+        "m": 2,
+        "max_squared_filter_outside_wall_band": 0.3348979766803842,
+        "axial_squared_filter_at_half": 0.8813290691787037
+      },
+      {
+        "m": 4,
+        "max_squared_filter_outside_wall_band": 0.11215665478461515,
+        "axial_squared_filter_at_half": 0.7767409281794002
+      },
+      {
+        "m": 8,
+        "max_squared_filter_outside_wall_band": 0.012579115212475334,
+        "axial_squared_filter_at_half": 0.6033264695089962
+      }
+    ],
+    "scope": "Local filtered Yukawa vertices absent at unwanted corners; not canonical independent rotors or finite-coupling gapping proof."
+  },
+  "higgs": {
+    "equivariance_checks": 2349,
+    "dimension": 13,
+    "states": [
+      {
+        "u": 0,
+        "v": 0,
+        "a": 0
+      },
+      {
+        "u": 0,
+        "v": 1,
+        "a": 0
+      },
+      {
+        "u": 0,
+        "v": 2,
+        "a": 0
+      },
+      {
+        "u": 1,
+        "v": 0,
+        "a": 0
+      },
+      {
+        "u": 1,
+        "v": 1,
+        "a": 0
+      },
+      {
+        "u": 1,
+        "v": 1,
+        "a": 1
+      },
+      {
+        "u": 1,
+        "v": 1,
+        "a": 2
+      },
+      {
+        "u": 1,
+        "v": 2,
+        "a": 0
+      },
+      {
+        "u": 2,
+        "v": 0,
+        "a": 0
+      },
+      {
+        "u": 2,
+        "v": 1,
+        "a": 0
+      },
+      {
+        "u": 2,
+        "v": 2,
+        "a": 0
+      },
+      {
+        "u": 2,
+        "v": 2,
+        "a": 1
+      },
+      {
+        "u": 2,
+        "v": 2,
+        "a": 2
+      }
+    ],
+    "rows": [
+      {
+        "h": 0,
+        "ground": -59.99999999999999,
+        "gap": 4.999999999999993,
+        "both_W33": 0.9999999999999998
+      },
+      {
+        "h": 0.1,
+        "ground": -60.00020204243403,
+        "gap": 4.999725852254713,
+        "both_W33": 0.9999938764064937
+      },
+      {
+        "h": 1,
+        "ground": -60.02042608447034,
+        "gap": 4.972812376915826,
+        "both_W33": 0.9993698710148519
+      },
+      {
+        "h": 3,
+        "ground": -60.20113534715159,
+        "gap": 4.77460445198426,
+        "both_W33": 0.9928615249842145
+      },
+      {
+        "h": 5,
+        "ground": -60.67229558897049,
+        "gap": 4.523537817877269,
+        "both_W33": 0.9692798552713099
+      },
+      {
+        "h": 10,
+        "ground": -65.04671480731858,
+        "gap": 6.917955294215858,
+        "both_W33": 0.6903604166778747
+      },
+      {
+        "h": 20,
+        "ground": -86.25191677708148,
+        "gap": 19.700345898895463,
+        "both_W33": 0.26941158733439924
+      }
+    ],
+    "scope": "Coset-Higgs rank-changing equivariant isometries; 13D gauge invariant two-site control; restricted types, not thermodynamic spontaneous order."
+  },
+  "embedding": {
+    "rows": [
+      {
+        "n": 4,
+        "noncommuting_pairs": 4,
+        "curvature_residual": 0,
+        "numerical_derivative_residual": 1.1013412404281553e-13,
+        "physical_phase_dimension": 8
+      },
+      {
+        "n": 6,
+        "noncommuting_pairs": 6,
+        "curvature_residual": 0,
+        "numerical_derivative_residual": 1.1013412404281553e-13,
+        "physical_phase_dimension": 12
+      },
+      {
+        "n": 8,
+        "noncommuting_pairs": 8,
+        "curvature_residual": 0,
+        "numerical_derivative_residual": 1.1013412404281553e-13,
+        "physical_phase_dimension": 16
+      },
+      {
+        "n": 10,
+        "noncommuting_pairs": 10,
+        "curvature_residual": 0,
+        "numerical_derivative_residual": 1.1013412404281553e-13,
+        "physical_phase_dimension": 20
+      }
+    ],
+    "scope": "Local parameterized scalar matter, Abelian flat constraints and finite-depth invertible shear dressing; not nonlinear gravity."
+  },
+  "stabilization": {
+    "rows": [
+      {
+        "a": 0,
+        "b": 0,
+        "upper": [
+          {
+            "grid_max": 58.5,
+            "upper": 58.550625000000004,
+            "num": "1864866447360000000000000",
+            "den": "31850496000000000000000"
+          },
+          {
+            "grid_max": 30.375,
+            "upper": 30.425625000000004,
+            "num": "969071247360000000000000",
+            "den": "31850496000000000000000"
+          }
+        ],
+        "best": {
+          "x": 105,
+          "y": 90,
+          "components": 735,
+          "neutral_Weyl": 735,
+          "complex_scalar": 0,
+          "periodic_suppression": 60,
+          "anti_suppression": 31.875
+        }
+      },
+      {
+        "a": 0,
+        "b": 1,
+        "upper": [
+          {
+            "grid_max": 57.64124717728656,
+            "upper": 57.67499717728655,
+            "num": "1836977266895176560960000",
+            "den": "31850496000000000000000"
+          },
+          {
+            "grid_max": 21.355559492856877,
+            "upper": 21.389309492856874,
+            "num": "681260116444999925760000",
+            "den": "31850496000000000000000"
+          }
+        ],
+        "best": {
+          "x": 99,
+          "y": 80,
+          "components": 686,
+          "neutral_Weyl": 659,
+          "complex_scalar": 27,
+          "periodic_suppression": 59,
+          "anti_suppression": 23.375
+        }
+      },
+      {
+        "a": 1,
+        "b": 0,
+        "upper": [
+          {
+            "grid_max": 47.07487418924865,
+            "upper": 47.11706168924865,
+            "num": "1500701784865167600000000",
+            "den": "31850496000000000000000"
+          },
+          {
+            "grid_max": 6.934342281413735,
+            "upper": 6.976529781413735,
+            "num": "222205933896799052160000",
+            "den": "31850496000000000000000"
+          }
+        ],
+        "best": {
+          "x": 76,
+          "y": 55,
+          "components": 488,
+          "neutral_Weyl": 461,
+          "complex_scalar": 27,
+          "periodic_suppression": 48.5,
+          "anti_suppression": 9.125
+        }
+      },
+      {
+        "a": 1,
+        "b": 1,
+        "upper": [
+          {
+            "grid_max": 36.18,
+            "upper": 36.2053125,
+            "num": "1153157160960000000000000",
+            "den": "31850496000000000000000"
+          },
+          {
+            "grid_max": 14.765625,
+            "upper": 14.790937499999998,
+            "num": "471098695680000000000000",
+            "den": "31850496000000000000000"
+          }
+        ],
+        "best": {
+          "x": 64,
+          "y": 53,
+          "components": 489,
+          "neutral_Weyl": 435,
+          "complex_scalar": 54,
+          "periodic_suppression": 37.5,
+          "anti_suppression": 16.875
+        }
+      },
+      {
+        "a": 2,
+        "b": 0,
+        "upper": [
+          {
+            "grid_max": 39.18672,
+            "upper": 39.22047,
+            "num": "1249191422853120000000000",
+            "den": "31850496000000000000000"
+          },
+          {
+            "grid_max": 33.75,
+            "upper": 33.78375,
+            "num": "1076029194240000000000000",
+            "den": "31850496000000000000000"
+          }
+        ],
+        "best": {
+          "x": 78,
+          "y": 75,
+          "components": 657,
+          "neutral_Weyl": 603,
+          "complex_scalar": 54,
+          "periodic_suppression": 40.5,
+          "anti_suppression": 34.875
+        }
+      },
+      {
+        "a": 2,
+        "b": 1,
+        "upper": [
+          {
+            "grid_max": 19.5,
+            "upper": 19.516875,
+            "num": "621622149120000000000000",
+            "den": "31850496000000000000000"
+          },
+          {
+            "grid_max": 19.5,
+            "upper": 19.516875,
+            "num": "621622149120000000000000",
+            "den": "31850496000000000000000"
+          }
+        ],
+        "best": {
+          "x": 42,
+          "y": 42,
+          "components": 417,
+          "neutral_Weyl": 336,
+          "complex_scalar": 81,
+          "periodic_suppression": 21,
+          "anti_suppression": 21
+        }
+      }
+    ],
+    "best": {
+      "a": 2,
+      "b": 1,
+      "upper": [
+        {
+          "grid_max": 19.5,
+          "upper": 19.516875,
+          "num": "621622149120000000000000",
+          "den": "31850496000000000000000"
+        },
+        {
+          "grid_max": 19.5,
+          "upper": 19.516875,
+          "num": "621622149120000000000000",
+          "den": "31850496000000000000000"
+        }
+      ],
+      "best": {
+        "x": 42,
+        "y": 42,
+        "components": 417,
+        "neutral_Weyl": 336,
+        "complex_scalar": 81,
+        "periodic_suppression": 21,
+        "anti_suppression": 21
+      }
+    },
+    "E8": {
+      "roots": 240,
+      "characters": [
+        248,
+        -8,
+        -8,
+        -8,
+        -8,
+        -8,
+        -8,
+        -8
+      ],
+      "multiplicities": [
+        24,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32
+      ],
+      "Weyl_suppression": [
+        8,
+        23
+      ],
+      "neutral_decomposition": {
+        "adjoint": 1,
+        "regular_eight": 10,
+        "trivial": 8
+      }
+    },
+    "previous_Weyl_equivalent": 750,
+    "scope": "Certified free per-ray upper bounds; supplied spin-correlated charged scalars and neutral Weyl twists. E8 adjoint spectral representation, not derived matter."
+  }
+}
