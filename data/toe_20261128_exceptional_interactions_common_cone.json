@@ -1,0 +1,333 @@
+{
+  "interactions": {
+    "rows": [
+      {
+        "n": 2,
+        "solutions": 0,
+        "examples": []
+      },
+      {
+        "n": 4,
+        "solutions": 0,
+        "examples": []
+      },
+      {
+        "n": 6,
+        "solutions": 4,
+        "examples": [
+          {
+            "counts": [
+              0,
+              0,
+              0,
+              2,
+              1,
+              3
+            ],
+            "net": [
+              -2,
+              -1,
+              -3
+            ],
+            "angular_singlets": "27"
+          },
+          {
+            "counts": [
+              0,
+              1,
+              2,
+              2,
+              0,
+              1
+            ],
+            "net": [
+              -2,
+              1,
+              1
+            ],
+            "angular_singlets": "27"
+          },
+          {
+            "counts": [
+              2,
+              0,
+              1,
+              0,
+              1,
+              2
+            ],
+            "net": [
+              2,
+              -1,
+              -1
+            ],
+            "angular_singlets": "27"
+          },
+          {
+            "counts": [
+              2,
+              1,
+              3,
+              0,
+              0,
+              0
+            ],
+            "net": [
+              2,
+              1,
+              3
+            ],
+            "angular_singlets": "27"
+          }
+        ]
+      },
+      {
+        "n": 8,
+        "solutions": 6,
+        "examples": [
+          {
+            "counts": [
+              0,
+              0,
+              1,
+              4,
+              0,
+              3
+            ],
+            "net": [
+              -4,
+              0,
+              -2
+            ],
+            "angular_singlets": "330"
+          },
+          {
+            "counts": [
+              0,
+              1,
+              0,
+              0,
+              3,
+              4
+            ],
+            "net": [
+              0,
+              -2,
+              -4
+            ],
+            "angular_singlets": "10218"
+          },
+          {
+            "counts": [
+              0,
+              3,
+              4,
+              0,
+              1,
+              0
+            ],
+            "net": [
+              0,
+              2,
+              4
+            ],
+            "angular_singlets": "10218"
+          },
+          {
+            "counts": [
+              1,
+              0,
+              0,
+              1,
+              2,
+              4
+            ],
+            "net": [
+              0,
+              -2,
+              -4
+            ],
+            "angular_singlets": "1247"
+          },
+          {
+            "counts": [
+              1,
+              2,
+              4,
+              1,
+              0,
+              0
+            ],
+            "net": [
+              0,
+              2,
+              4
+            ],
+            "angular_singlets": "1247"
+          },
+          {
+            "counts": [
+              4,
+              0,
+              3,
+              0,
+              0,
+              1
+            ],
+            "net": [
+              4,
+              0,
+              2
+            ],
+            "angular_singlets": "330"
+          }
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "name": "delta-contracted sextic",
+        "fields": [
+          "A-",
+          "A-",
+          "B+",
+          "C+",
+          "C+",
+          "C-"
+        ],
+        "deltaPairs": [
+          [
+            "A-",
+            "B+"
+          ],
+          [
+            "A-",
+            "C+"
+          ],
+          [
+            "C-",
+            "C+"
+          ]
+        ],
+        "charge": 0,
+        "spin_singlets": "27",
+        "right": 3,
+        "left": 3
+      },
+      {
+        "name": "two cubic tensors plus left density",
+        "fields": [
+          "A+",
+          "A+",
+          "A+",
+          "A+",
+          "C+",
+          "C+",
+          "C+",
+          "C-"
+        ],
+        "cubicGroups": [
+          [
+            "A+",
+            "A+",
+            "C+"
+          ],
+          [
+            "A+",
+            "A+",
+            "C+"
+          ]
+        ],
+        "charge": 0,
+        "spin_singlets": "330",
+        "right": 4,
+        "left": 4
+      },
+      {
+        "name": "two cubic tensors plus right density",
+        "fields": [
+          "B+",
+          "B+",
+          "C+",
+          "C+",
+          "C+",
+          "C+",
+          "A+",
+          "A-"
+        ],
+        "cubicGroups": [
+          [
+            "B+",
+            "C+",
+            "C+"
+          ],
+          [
+            "B+",
+            "C+",
+            "C+"
+          ]
+        ],
+        "charge": 0,
+        "spin_singlets": "1247",
+        "right": 4,
+        "left": 4
+      }
+    ],
+    "cubic_spin_half_multiplicities": [
+      "1",
+      "1"
+    ],
+    "scope": "Gauge-neutral, E6-invariant contractions (Kronecker deltas or symmetric cubic on 27), angular SU2 scalars and equal right/left field counts. Distinct flavor copies avoid antisymmetry cancellation; B single flavor appears only in separate cubic factors and can choose distinct angular/flavor components, but octic B example nonvanishing after antisymmetrization not explicitly verified. Sextic delta construction uses distinct A,C copies and one B, nonzero. Free 1+1 scaling dimension3 sextic, 4 octic; irrelevant in bulk at weak coupling, not a gapping proof. Boundary scaling/dynamics distinct."
+  },
+  "continuum": {
+    "rows": [
+      {
+        "L": 16,
+        "p": 0.3901806440322565,
+        "photon": 0.9522514666109725,
+        "tensor": 0.9928565916671763,
+        "undressed": 1
+      },
+      {
+        "L": 32,
+        "p": 0.1960342806591212,
+        "photon": 0.9535234214881868,
+        "tensor": 0.9982524319740332,
+        "undressed": 1
+      },
+      {
+        "L": 64,
+        "p": 0.09813534865483603,
+        "photon": 0.9538356381398031,
+        "tensor": 0.9995654859834293,
+        "undressed": 1
+      },
+      {
+        "L": 128,
+        "p": 0.049082457045824576,
+        "photon": 0.9539133344076468,
+        "tensor": 0.9998915198576709,
+        "undressed": 1
+      },
+      {
+        "L": 256,
+        "p": 0.02454307657143985,
+        "photon": 0.9539327361520128,
+        "tensor": 0.9999728892328101,
+        "undressed": 1
+      },
+      {
+        "L": 512,
+        "p": 0.01227176929830895,
+        "photon": 0.953937585193663,
+        "tensor": 0.9999932228874107,
+        "undressed": 1
+      }
+    ],
+    "limits": {
+      "photon": 0.9539392014169457,
+      "tensor": 1
+    },
+    "scope": "Quadratic gauge-invariant benchmark in physical transverse sectors: auxiliary vector couples to photon magnetic field (one derivative), auxiliary symmetric tensor to linearized spatial curvature (two derivatives). Both gapped auxiliaries supplied gap2 and equal coupling .6. Schur complement shifts photon leading gradient, tensor only k^4. Independent symmetry-allowed coefficients. Not actual Spin10 rotor integration, nonlinear gravity, stress tensor universality or microscopic RG."
+  }
+}
