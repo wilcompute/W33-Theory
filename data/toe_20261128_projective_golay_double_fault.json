@@ -1,0 +1,50 @@
+{
+  "singles": {
+    "tested": 170620,
+    "accepted": 18608,
+    "malignant": 0
+  },
+  "locations": 6335,
+  "measurement_signature_classes": 17961,
+  "distinct_location_pair_labels": 14549892628,
+  "measurement_pass_pairs": 176952656,
+  "accepted_pairs": 127631064,
+  "malignant_pairs": 14136,
+  "witness": {
+    "locations": [
+      {
+        "kind": "idle",
+        "stage": 0,
+        "site": 0
+      },
+      {
+        "kind": "cat",
+        "gadget": 3,
+        "op": 156
+      }
+    ],
+    "measurement_signature": "14:1;",
+    "features": [
+      [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "logical": 1
+  },
+  "decoder": {
+    "source_radius": 1,
+    "target_component_radius": 2
+  },
+  "scope": "Exact additive Clifford fault signatures; aggregate by all flag and repeated-parity/CSS measurement outcomes plus terminal syndrome and logical phases. Count complementary signatures, subtract same-location ordered products then divide by2. Source radius1 destructive decoder, target ideal component radius2 Golay recovery. Clean encoded inputs, no loss, no recovery or feedback noise; not composed factory or full noisy instruction. Distinct faults may lie in same gadget at different locations."
+}
