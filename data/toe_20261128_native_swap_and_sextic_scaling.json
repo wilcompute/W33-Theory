@@ -1,0 +1,263 @@
+{
+  "dynamics": {
+    "rows": [
+      {
+        "name": "K3,3",
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        "gap": 3,
+        "moments": [
+          "531441",
+          "531441",
+          "5255361",
+          "13653441",
+          "124053201",
+          "508965201",
+          "4481781921",
+          "24768044001",
+          "221056192881",
+          "1492225973361",
+          "13656387682881",
+          "103960183996161"
+        ],
+        "temps": [
+          {
+            "beta": 0.01,
+            "Z": 490799.78732842207,
+            "absolute_tail_bound": 1.5498434426325867e-142
+          },
+          {
+            "beta": 0.05,
+            "Z": 360196.41716614406,
+            "absolute_tail_bound": 4.716771393330199e-100
+          },
+          {
+            "beta": 0.1,
+            "Z": 249513.24597418046,
+            "absolute_tail_bound": 6.986005023212874e-82
+          },
+          {
+            "beta": 0.25,
+            "Z": 93841.50186578232,
+            "absolute_tail_bound": 3.483174021549887e-58
+          },
+          {
+            "beta": 0.5,
+            "Z": 26271.60881109578,
+            "absolute_tail_bound": 8.796550267090423e-41
+          },
+          {
+            "beta": 1,
+            "Z": 5878.164823327204,
+            "absolute_tail_bound": 2.444606323383706e-24
+          },
+          {
+            "beta": 2,
+            "Z": 3103.259009920743,
+            "absolute_tail_bound": 8.379372985029186e-10
+          }
+        ]
+      },
+      {
+        "name": "triangular prism",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        "gap": 2,
+        "moments": [
+          "531441",
+          "531441",
+          "5255361",
+          "14353281",
+          "137583441",
+          "568970001",
+          "5373378081",
+          "28727972001",
+          "271202683761",
+          "1726570430001",
+          "16326575881281",
+          "116838730784961"
+        ],
+        "temps": [
+          {
+            "beta": 0.01,
+            "Z": 490799.89912857325,
+            "absolute_tail_bound": 1.5498434426325867e-142
+          },
+          {
+            "beta": 0.05,
+            "Z": 360208.0728653661,
+            "absolute_tail_bound": 4.716771393330199e-100
+          },
+          {
+            "beta": 0.1,
+            "Z": 249586.16280259463,
+            "absolute_tail_bound": 6.986005023212874e-82
+          },
+          {
+            "beta": 0.25,
+            "Z": 94356.43272936868,
+            "absolute_tail_bound": 3.483174021549887e-58
+          },
+          {
+            "beta": 0.5,
+            "Z": 27360.435897186242,
+            "absolute_tail_bound": 8.796550267090423e-41
+          },
+          {
+            "beta": 1,
+            "Z": 6702.170712941828,
+            "absolute_tail_bound": 2.444606323383706e-24
+          },
+          {
+            "beta": 2,
+            "Z": 3256.7098835844226,
+            "absolute_tail_bound": 8.379372985029186e-10
+          }
+        ]
+      }
+    ],
+    "comparisons": [
+      {
+        "beta": 0.01,
+        "prism_over_K33": 1.0000002277917677
+      },
+      {
+        "beta": 0.05,
+        "prism_over_K33": 1.0000323592869518
+      },
+      {
+        "beta": 0.1,
+        "prism_over_K33": 1.0002922363024436
+      },
+      {
+        "beta": 0.25,
+        "prism_over_K33": 1.0054872402225918
+      },
+      {
+        "beta": 0.5,
+        "prism_over_K33": 1.0414450098553005
+      },
+      {
+        "beta": 1,
+        "prism_over_K33": 1.140180807170394
+      },
+      {
+        "beta": 2,
+        "prism_over_K33": 1.0494482971524826
+      }
+    ],
+    "ground_dimension": 3003,
+    "scope": "H=sum_edges(I-S), derived up to positive scale and shift from native M2 or -log M2. Exact permutation algebra moments and positive exponential-series tail. Both connected cubic graphs share ground Sym^6(C9); exact gap equals graph Laplacian gap by Aldous interchange theorem, since one-magnon sector realizes bound. Local one-magnon dispersion quadratic at small k on periodic lattice, not relativistic. Finite-temperature graph-dependent trace favors prism at tested beta, no graph ensemble measure or thermodynamic dimension selection."
+  },
+  "scaling": {
+    "rows": [
+      {
+        "net": [
+          -2,
+          1,
+          1
+        ],
+        "R": 0.006172839506172839,
+        "L": 0.0006172839506172839,
+        "free": 3,
+        "minimum_under_species_forward_scattering": 2.9993827160493827
+      },
+      {
+        "net": [
+          2,
+          1,
+          3
+        ],
+        "R": 0.006172839506172839,
+        "L": 0.005555555555555556,
+        "free": 3,
+        "minimum_under_species_forward_scattering": 2.9944444444444445
+      }
+    ],
+    "copy_resolved_lower_bound": 2.962962962962963,
+    "affine_levels": {
+      "E6": 360,
+      "rotationSU2": 9450
+    },
+    "central_charge_each_chirality": {
+      "free": 1620,
+      "E6": 75.48387096774194,
+      "SU2": 2.9993652137113838,
+      "U1": 1,
+      "remaining": 1540.5167638185467
+    },
+    "scope": "Each six-field component with distinct channels has free scaling dimension3. Symmetry-invariant total species density interactions act only on three normalized uniform bosons, with K signature(2,1). Remaining neutral bosons unchanged; Lorentz boosts preserve R-L, Euclidean norm >=|R-L|. Even arbitrary positive Gaussian density couplings among those modes cannot make sextics bulk-relevant. Copy-resolved bound applies if all six distinct copy/channel factors and uniform copy currents, or repeated factors with net counts requiring separate audit; not general non-Abelian current interactions. Equal affine levels use fundamental index T(27)=3 and SU2 index j(j+1)(2j+1)/3; coset count for free embedding, not a gap proof."
+  }
+}
